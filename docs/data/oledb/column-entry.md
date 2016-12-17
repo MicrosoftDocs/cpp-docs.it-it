@@ -1,0 +1,83 @@
+---
+title: "COLUMN_ENTRY | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/05/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "COLUMN_ENTRY"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "COLUMN_ENTRY (macro)"
+ms.assetid: a10aef29-6d70-49ec-b572-5b5c4abe1b46
+caps.latest.revision: 9
+caps.handback.revision: 9
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+---
+# COLUMN_ENTRY
+[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+
+Rappresenta un'associazione nel rowset a una determinata colonna nel rowset.  
+  
+## Sintassi  
+  
+```  
+  
+COLUMN_ENTRY(  
+nOrdinal  
+,   
+data  
+ )  
+  
+```  
+  
+#### Parametri  
+ Vedere [DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx)*in OLE DB Programmer's Reference*.  
+  
+ `nOrdinal`  
+ \[in\] numero di colonne.  
+  
+ `data`  
+ \[in\] il membro dati corrispondente al record utente.  
+  
+## Note  
+ La macro di `COLUMN_ENTRY` viene utilizzata nelle posizioni seguenti:  
+  
+-   Tra [BEGIN\_COLUMN\_MAP](../../data/oledb/begin-column-map.md) e macro di [END\_COLUMN\_MAP](../../data/oledb/end-column-map.md).  
+  
+-   Tra [BEGIN\_ACCESSOR](../../data/oledb/begin-accessor.md) e macro di [END\_ACCESSOR](../../data/oledb/end-accessor.md).  
+  
+-   Tra [BEGIN\_PARAM\_MAP](../../data/oledb/begin-param-map.md) e macro di [END\_PARAM\_MAP](../../data/oledb/end-param-map.md).  
+  
+## Esempio  
+ Vedere gli esempi in macro argomenti, in [BEGIN\_COLUMN\_MAP](../../data/oledb/begin-column-map.md) e in [BEGIN\_ACCESSOR\_MAP](../../data/oledb/begin-accessor-map.md).  
+  
+## Requisiti  
+ **Intestazione:** atldbcli.h  
+  
+## Vedere anche  
+ [Macro e funzioni globali per modelli consumer OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
+ [BEGIN\_ACCESSOR](../../data/oledb/begin-accessor.md)   
+ [BEGIN\_ACCESSOR\_MAP](../../data/oledb/begin-accessor-map.md)   
+ [BEGIN\_COLUMN\_MAP](../../data/oledb/begin-column-map.md)   
+ [COLUMN\_ENTRY\_EX](../../data/oledb/column-entry-ex.md)   
+ [COLUMN\_ENTRY\_PS](../../data/oledb/column-entry-ps.md)   
+ [COLUMN\_ENTRY\_PS\_LENGTH](../../data/oledb/column-entry-ps-length.md)   
+ [COLUMN\_ENTRY\_LENGTH](../../data/oledb/column-entry-length.md)   
+ [COLUMN\_ENTRY\_LENGTH\_STATUS](../../data/oledb/column-entry-length-status.md)   
+ [COLUMN\_ENTRY\_PS\_LENGTH\_STATUS](../../data/oledb/column-entry-ps-length-status.md)   
+ [COLUMN\_ENTRY\_STATUS](../../data/oledb/column-entry-status.md)   
+ [COLUMN\_ENTRY\_PS\_STATUS](../../data/oledb/column-entry-ps-status.md)   
+ [COLUMN\_ENTRY\_TYPE](../../data/oledb/column-entry-type.md)   
+ [COLUMN\_ENTRY\_TYPE\_SIZE](../../data/oledb/column-entry-type-size.md)   
+ [END\_ACCESSOR](../../data/oledb/end-accessor.md)   
+ [END\_ACCESSOR\_MAP](../../data/oledb/end-accessor-map.md)   
+ [END\_COLUMN\_MAP](../../data/oledb/end-column-map.md)

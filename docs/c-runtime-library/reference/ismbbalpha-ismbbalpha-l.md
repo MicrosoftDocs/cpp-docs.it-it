@@ -1,0 +1,97 @@
+---
+title: "_ismbbalpha, _ismbbalpha_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/14/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+apiname: 
+  - "_ismbbalpha"
+  - "_ismbbalpha_l"
+apilocation: 
+  - "msvcrt.dll"
+  - "msvcr80.dll"
+  - "msvcr90.dll"
+  - "msvcr100.dll"
+  - "msvcr100_clr0400.dll"
+  - "msvcr110.dll"
+  - "msvcr110_clr0400.dll"
+  - "msvcr120.dll"
+  - "msvcr120_clr0400.dll"
+  - "ucrtbase.dll"
+  - "api-ms-win-crt-multibyte-l1-1-0.dll"
+apitype: "DLLExport"
+f1_keywords: 
+  - "ismbbalpha"
+  - "ismbbalpha_l"
+  - "_ismbbalpha"
+  - "_ismbbalpha_l"
+dev_langs: 
+  - "C++"
+  - "C"
+helpviewer_keywords: 
+  - "ismbbalpha (funzione)"
+  - "ismbbalpha_l (funzione)"
+  - "_ismbbalpha (funzione)"
+  - "_ismbbalpha_l (funzione)"
+ms.assetid: 8e54cb92-fc2b-41f5-8ab4-b22ac8aa9ad0
+caps.latest.revision: 18
+caps.handback.revision: 18
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+---
+# _ismbbalpha, _ismbbalpha_l
+[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+
+Determina se un carattere multibyte specificato corrisponde ad alfa.  
+  
+## Sintassi  
+  
+```  
+int _ismbbalpha(  
+   unsigned int c   
+);  
+int _ismbbalpha_l(  
+   unsigned int c   
+);  
+```  
+  
+#### Parametri  
+ `c`  
+ Valore Integer da testare.  
+  
+ `locale`  
+ Impostazioni locali da usare.  
+  
+## Valore restituito  
+ `_ismbbalpha` restituisce un valore diverso da zero se l'espressione:  
+  
+```  
+isalpha || _ismbbkalnum  
+```  
+  
+ è diverso da zero per `c` oppure zero in caso contrario.`_ismbbalpha` usa le impostazioni locali correnti per qualsiasi impostazione del carattere dipendente dalle impostazioni locali.`_ismbbalpha_l` è identico, ma usa le impostazioni locali che gli vengono passate.  
+  
+## Requisiti  
+  
+|Routine|Intestazione obbligatoria|  
+|-------------|-------------------------------|  
+|`_ismbbalpha`|\<mbctype.h\>|  
+|`_ismbbalpha_l`|\<mbctype.h\>|  
+  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
+  
+## Librerie  
+ Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
+  
+## Equivalente .NET Framework  
+ Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Esempi di platform invoke](../Topic/Platform%20Invoke%20Examples.md).  
+  
+## Vedere anche  
+ [Classificazione per byte](../../c-runtime-library/byte-classification.md)   
+ [Routines \_ismbb](../../c-runtime-library/ismbb-routines.md)

@@ -1,0 +1,53 @@
+---
+title: "Struttura NCCALCSIZE_PARAMS | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/05/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "NCCALCSIZE_PARAMS"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "NCCALCSIZE_PARAMS (struttura)"
+ms.assetid: 3424cd9f-806a-4089-82fb-414187589edf
+caps.latest.revision: 13
+caps.handback.revision: 13
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+---
+# Struttura NCCALCSIZE_PARAMS
+[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+
+Il `NCCALCSIZE_PARAMS` struttura contiene informazioni che un'applicazione può utilizzare durante l'elaborazione di `WM_NCCALCSIZE` per calcolare la dimensione, posizione e contenuto valido dell'area client di una finestra di messaggio.  
+  
+## <a name="syntax"></a>Sintassi  
+  
+```  
+ 
+    typedef struct tagNCCALCSIZE_PARAMS {  
+    RECT rgrc[3];  
+    PWINDOWPOS lppos;  
+} NCCALCSIZE_PARAMS;  
+```  
+  
+#### <a name="parameters"></a>Parametri  
+ *rgrc*  
+ Specifica una matrice di rettangoli. Il primo contiene le nuove coordinate di una finestra che è stato spostato o ridimensionato. Il secondo contiene le coordinate della finestra prima che è stata spostata o ridimensionata. La terza contiene le coordinate dell'area client di una finestra prima che è stata spostata o ridimensionata. Se la finestra è una finestra figlio, le coordinate sono relative l'area client della finestra padre. Se la finestra è una finestra di primo livello, le coordinate sono relative allo schermo.  
+  
+ *lppos*  
+ Punta a un [WINDOWPOS](../../mfc/reference/windowpos-structure1.md) struttura che contiene i valori di dimensioni e la posizione specificati nell'operazione che ha causato la finestra per essere spostato o ridimensionato.  
+  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** winuser. h  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Strutture, stili, callback e mappe messaggi](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CWnd::OnNcCalcSize](../../mfc/reference/cwnd-class.md#OnNcCalcSize)
+
