@@ -1,0 +1,1 @@
+Questo argomento è incluso per motivi di completezza. Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella VC\atlmfc\src\mfc dell'installazione di Visual Studio.

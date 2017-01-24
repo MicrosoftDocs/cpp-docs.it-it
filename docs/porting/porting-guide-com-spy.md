@@ -1,0 +1,175 @@
+---
+title: "Guida al porting: COM Spy | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/05/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "C++"
+ms.assetid: 24aa0d52-4014-4acb-8052-f4e2e4bbc3bb
+caps.latest.revision: 10
+caps.handback.revision: 4
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+---
+# Guida al porting: COM Spy
+[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+
+Questo argomento è il secondo di una serie di articoli che illustrano il processo di aggiornamento di progetti Visual C\+\+ creati con versioni precedenti alla versione più recente di Visual Studio.  Il codice di esempio usato in questo argomento è stato compilato per l'ultima volta con Visual Studio 2005.  
+  
+## COM Spy  
+ COM Spy è un programma che monitora e registra l'attività dei componenti serviti su un computer.  I componenti serviti sono componenti COM\+ che vengono eseguiti in un sistema e possono essere usati dai computer nella stessa rete.  Vengono gestiti dalla funzionalità di Servizi componenti nel Pannello di controllo di Windows.  
+  
+### Passaggio 1.Conversione del file di progetto  
+ Il file di progetto viene convertito facilmente e produce un report di migrazione  contenente alcune voci che informano sui possibili problemi da affrontare.  Ecco uno dei problemi segnalati \(notare che in questo argomento i messaggi di errore vengono talvolta abbreviati per migliorare la leggibilità, ad esempio rimuovendo i percorsi completi\):  
+  
+  **ComSpyAudit\\ComSpyAudit.vcproj: MSB8012: $\(TargetPath\) \('C:\\Users\\UserName\\Desktop\\spy\\spy\\ComSpyAudit\\.  \\XP32\_DEBUG\\ComSpyAudit.dll'\) non corrisponde al valore della proprietà OutputFile di Librarian'.  \\XP32\_DEBUG\\ComSpyAudit.dll' \('C:\\Users\\UserName\\Desktop\\spy\\spy\\XP32\_DEBUG\\ComSpyAudit.dll'\) nella configurazione del progetto 'Unicode Debug&#124;Win32'.  È possibile che il progetto non venga compilato correttamente.  Per risolvere il problema, accertarsi che il valore della proprietà $\(TargetPath\) corrisponda al valore specificato in %\(Lib.OutputFile\).**  Uno dei problemi frequenti riscontrati durante l'aggiornamento di progetti è che potrebbe essere necessario esaminare l'impostazione di OutputFile del linker nella finestra di dialogo delle proprietà del progetto.  Per i progetti creati con versioni precedenti a Visual Studio 2010, OutputFile è un'impostazione che, se impostata su un valore non standard, crea problemi con la procedura guidata di conversione automatica.  In questo caso i percorsi dei file di output sono stati impostati su una cartella non standard, ovvero XP32\_DEBUG.  Per saperne di più su questo errore, è stato consultato un [post di blog](http://blogs.msdn.com/b/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx) correlato all'aggiornamento di progetti di Visual C\+\+ 2010, vale a dire l'aggiornamento che ha comportato il significativo passaggio da vcbuild a msbuild.  In base a queste informazioni, il valore predefinito per l'impostazione OutputFile quando si crea un nuovo progetto è $\(OutDir\)$\(TargetName\)$\(TargetExt\), che però non viene impostato durante la conversione perché nei progetti convertiti non è possibile verificare che tutto sia corretto.  Provare comunque a specificare questo valore per OutputFile e verificare se funziona.  In caso affermativo, sarà possibile procedere.  Se non esistono motivi specifici per usare una cartella di output non standard, è consigliabile usare il percorso standard.  In questo caso, è stato scelto di mantenere il percorso di output non standard durante il processo di porting e di aggiornamento. $\(OutDir\) risolve la cartella XP32\_DEBUG nella configurazione di Debug e la cartella ReleaseU per la configurazione di tipo Versione.  
+  
+### Passaggio 2.Preparazione della compilazione  
+ Durante la compilazione del progetto di cui è stato eseguito il porting si verifica un certo numero di errori e di avvisi.  
+  
+ ComSpyCtl non viene compilato a causa di questo errore del compilatore:  
+  
+  **atlcom.h\(611\): errore C2664: 'HRESULT CComSpy::IPersistStreamInit\_Save\(LPSTREAM,BOOL,ATL::ATL\_PROPMAP\_ENTRY \*\)': impossibile convertire l'argomento 3 da 'const ATL::ATL\_PROPMAP\_ENTRY \*' a 'ATL::ATL\_PROPMAP\_ENTRY \*'**  
+**atlcom.h\(611\): nota: La conversione comporta la perdita dei qualificatori**  
+**atlcom.h\(608\): nota: durante la compilazione della funzione membro 'HRESULT ATL::IPersistStreamInitImpl\<CComSpy\>::Save\(LPSTREAM,BOOL\)' della classe template**  
+**\\spy\\spy\\comspyctl\\ccomspy.h\(28\): nota: vedere il riferimento all'istanza 'ATL::IPersistStreamInitImpl\<CComSpy\>' della classe template di cui è in corso la compilazione** L'errore fa riferimento al metodo Save nella classe IPersistStreamInitImpl in atlcom.h.  
+  
+```  
+STDMETHOD(Save)(_Inout_ LPSTREAM pStm, _In_ BOOL fClearDirty)  
+{  
+T* pT = static_cast<T*>(this);  
+ATLTRACE(atlTraceCOM, 2, _T("IPersistStreamInitImpl::Save\n"));  
+return pT->IPersistStreamInit_Save(pStm, fClearDirty, T::GetPropertyMap());  
+}  
+```  
+  
+ Il problema è che una conversione accettata in una versione precedente del compilatore non è più valida.  Per garantire la conformità allo standard C\+\+, una parte del codice consentito in precedenza non è più consentita.  In questo caso, è preferibile non passare un puntatore di tipo non const a una funzione che prevede un puntatore di tipo const.  La soluzione consiste nell'individuare la dichiarazione di IPersistStreamInit\_Save nella classe CComSpy e aggiungere il modificatore const al terzo parametro.  
+  
+```  
+HRESULT CComSpy::IPersistStreamInit_Save(LPSTREAM pStm, BOOL /* fClearDirty */, const ATL_PROPMAP_ENTRY* pMap)  
+  
+```  
+  
+ È inoltre necessario apportare una modifica simile a IPersistStreamInit\_Load.  
+  
+```  
+HRESULT IPersistStreamInit_Load(LPSTREAM pStm, const ATL_PROPMAP_ENTRY* pMap);  
+```  
+  
+ L'errore successivo riguarda la registrazione.  
+  
+  **errore MSB3073: uscita del comando "regsvr32 \/s \/c "C:\\Users\\username\\Desktop\\spy\\spy\\ComSpyCtl\\.  \\XP32\_DEBUG\\ComSpyCtl.lib"**  
+**errore MSB3073: echo regsvr32 exec.  time \> ".  \\XP32\_DEBUG\\regsvr32.trg"**  
+**errore MSB3073:**  
+**errore MSB3073: :VCEnd" con codice 3.**  Questo comando di registrazione post\-compilazione non è più necessario.  È invece sufficiente rimuovere il comando di compilazione personalizzato e specificare di registrare l'output nelle impostazioni del linker.  
+  
+### Gestione degli avvisi  
+ Il progetto genera l'avviso seguente del linker.  
+  
+  **avviso LNK4075: '\/EDITANDCONTINUE' ignorato a causa della specifica di '\/SAFESEH'** L'opzione del compilatore \/SAFESEH non è utile in modalità debug, mentre lo è \/EDITANDCONTINUE, di conseguenza in questo caso la correzione consiste nel disattivare \/SAFESEH solo per le configurazioni di tipo Debug.  A questo scopo, è stata aperta la finestra di dialogo delle proprietà relativa al progetto che ha generato l'errore ed è stata impostata innanzitutto la configurazione su Debug \(ovvero su Debug Unicode\), quindi nella sezione delle impostazioni avanzate del linker, è stata reimpostata la proprietà Immagine con gestori eccezioni sicuri su No \(\/SAFESEH:NO\).  
+  
+ Il compilatore avverte che PROP\_ENTRY\_EX è deprecato,  di conseguenza non è sicuro e deve essere sostituito con PROP\_ENTRY\_TYPE\_EX.  
+  
+```  
+BEGIN_PROPERTY_MAP(CComSpy)  
+PROP_ENTRY_EX( "LogFile", DISPID_LOGFILE, CLSID_ComSpyPropPage, IID_IComSpy)  
+PROP_ENTRY_EX( "ShowGridLines", DISPID_GRIDLINES, CLSID_ComSpyPropPage, IID_IComSpy)  
+PROP_ENTRY_EX( "Audit", DISPID_AUDIT, CLSID_ComSpyPropPage, IID_IComSpy)  
+PROP_ENTRY_EX( "ColWidth", DISPID_COLWIDTH, CLSID_ComSpyPropPage, IID_IComSpy)  
+PROP_PAGE(CLSID_StockFontPage)  
+END_PROPERTY_MAP()  
+```  
+  
+ Il codice in ccomspy.h è stato modificato di conseguenza, aggiungendo se necessario i tipi COM.  
+  
+```  
+BEGIN_PROPERTY_MAP(CComSpy)  
+PROP_ENTRY_TYPE_EX( "LogFile", DISPID_LOGFILE, CLSID_ComSpyPropPage, IID_IComSpy, VT_BSTR)  
+PROP_ENTRY_TYPE_EX( "ShowGridLines", DISPID_GRIDLINES, CLSID_ComSpyPropPage, IID_IComSpy, VT_BOOL)  
+PROP_ENTRY_TYPE_EX( "Audit", DISPID_AUDIT, CLSID_ComSpyPropPage, IID_IComSpy, VT_BOOL)  
+PROP_ENTRY_TYPE_EX( "ColWidth", DISPID_COLWIDTH, CLSID_ComSpyPropPage, IID_IComSpy, VT_UINT)  
+PROP_PAGE(CLSID_StockFontPage)  
+END_PROPERTY_MAP()  
+```  
+  
+ Ed ecco finalmente gli ultimi avvisi, che sono anche quelli causati da controlli di conformità più stringenti del compilatore:  
+  
+  **\\spy\\comspyctl\\usersub.h\(70\): avviso C4457: se si dichiara 'var', il parametro della funzione verrà nascosto**  
+**\\spy\\comspyctl\\usersub.h\(48\): nota: vedere la dichiarazione di 'var'**  
+**\\spy\\comspyctl\\usersub.h\(94\): avviso C4018: '\<': errata corrispondenza tra signed e unsigned**  
+ **ComSpy.cpp**  
+**\\spy\\comspyctl\\comspy.cpp\(186\): avviso C4457: se si dichiara 'bHandled', il parametro della funzione verrà nascosto**  
+**\\spy\\spy\\comspyctl\\comspy.cpp\(177\): nota: vedere la dichiarazione di 'bHandled'** L'avviso C4018 proviene dal codice seguente:  
+  
+```  
+for (i=0;i<lCount;i++)  
+    CoTaskMemFree(pKeys[i]);  
+```  
+  
+ Il problema è che i è dichiarato come UINT e lCount è dichiarato come long, da cui deriva l'errata corrispondenza tra signed e unsigned.  Modificare il tipo di lCount in UINT sarebbe scomodo perché questo ottiene il relativo valore da IMtsEventInfo::get\_Count, che usa il tipo long e non è incluso nel codice utente.  A questo punto viene aggiunto un cast al codice.  In un cast numerico come questo è corretto anche un cast di tipo C, ma il tipo consigliato è static\_cast.  
+  
+```  
+for (i=0;i<static_cast<UINT>(lCount);i++)  
+    CoTaskMemFree(pKeys[i]);  
+```  
+  
+ Questi avvisi si verificano in casi in cui una variabile è stata dichiarata in una funzione che contiene un parametro con lo stesso nome e questo causa codice potenzialmente poco chiaro.  Per risolvere il problema, sono stati modificati i nomi delle variabili locali.  
+  
+```  
+  
+```  
+  
+### Passaggio 3.Test e debug  
+ Per testare l'app, sono stati prima esaminati tutti i vari menu e comandi e quindi è stata chiusa l'applicazione.  L'unico problema riscontrato è stata un'asserzione di debug alla chiusura dell'app.  Il problema si è presentato nel distruttore di CWindowImpl, una classe di base dell'oggetto CSpyCon, ovvero il componente COM principale dell'applicazione.  L'errore di asserzione si è verificato nel codice seguente in atlwin.h.  
+  
+```  
+virtual ~CWindowImplRoot()  
+{  
+#ifdef _DEBUG  
+if(m_hWnd != NULL)// should be cleared in WindowProc  
+{  
+ATLTRACE(atlTraceWindowing, 0, _T("ERROR - Object deleted before window was destroyed\n"));  
+ATLASSERT(FALSE);  
+}  
+#endif //_DEBUG  
+}  
+```  
+  
+ hWnd è in genere impostato su zero nella funzione WindowProc, ma questo non si è verificato perché invece della funzione WindowProc predefinita è stato chiamato un gestore personalizzato per il messaggio Windows \(WM\_SYSCOMMAND\) che chiude la finestra  e tale gestore non ha impostato hWnd su zero.  Dando un'occhiata al codice simile nella classe CWnd di MFC è possibile notare che durante l'eliminazione di una finestra viene chiamato OnNcDestroy e, in MFC, la documentazione consiglia che durante l'override di CWnd::OnNcDestroy, è necessario chiamare la versione di base di NcDestroy per garantire l'esecuzione delle operazioni di pulizia corrette, tra cui la separazione dell'handle dalla finestra, vale a dire l'impostazione di hWnd su zero.  È possibile che questa asserzione sia stata attivata anche nella versione originale dell'esempio, dal momento che lo stesso codice dell'asserzione era presente nella versione precedente di atlwin.h.  
+  
+ Per testare la funzionalità dell'app, è stato creato un componente servito che usa il modello di progetto ATL e si è scelto di aggiungere il supporto COM\+ nella Creazione guidata progetto ATL.  Anche se non si è mai lavorato prima con componenti serviti, non è difficile crearne uno e registrarne uno nel sistema o nella rete per renderlo disponibile per altre app.  L'app COM Spy viene usata per monitorare l'attività di componenti servizi per finalità diagnostiche.  
+  
+ È stata quindi aggiunta una classe, è stato scelto Oggetto ATL ed è stato specificato Dog come nome dell'oggetto,  aggiungendo l'implementazione in dog.h e dog.cpp.  
+  
+```  
+STDMETHODIMP CDog::Wag(LONG* lDuration)  
+{  
+    // TODO: Add your implementation code here  
+    *lDuration = 100l;  
+    return S_OK;  
+}  
+```  
+  
+ In seguito l'oggetto è stato compilato e registrato \(eseguendo Visual Studio come amministratore\) e infine attivato nel Pannello di controllo di Windows tramite l'applicazione Componente servito.  È stato creato un progetto Windows Forms C\#, è stato trascinato un pulsante nel form dalla casella degli strumenti ed è stato fatto doppio clic su di esso per un gestore eventi clic.  È stato infine aggiunto il codice seguente per creare un'istanza del componente Dog.  
+  
+```  
+private void button1_Click(object sender, EventArgs e)  
+{  
+    ATLProjectLib.Dog dog1 = new ATLProjectLib.Dog();  
+    dog1.Wag();  
+}  
+```  
+  
+ Il codice è stato eseguito senza problemi e, con COM Spy in esecuzione e configurato per il monitoraggio del componente Dog, sono apparsi numerosi dati relativi all'attività.  
+  
+## Vedere anche  
+ [Porting e aggiornamento: esempi e case study](../porting/porting-and-upgrading-examples-and-case-studies.md)   
+ [Esempio successivo: Spy\+\+](../porting/porting-guide-spy-increment.md)   
+ [Esempio precedente: MFC Scribble](../porting/porting-guide-mfc-scribble.md)

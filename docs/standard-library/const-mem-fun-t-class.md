@@ -1,0 +1,69 @@
+---
+title: "Classe const_mem_fun_t | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/05/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "const_mem_fun_t"
+  - "std.const_mem_fun_t"
+  - "xfunctional/std::const_mem_fun_t"
+  - "std::const_mem_fun_t"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "const_mem_fun_t (classe)"
+ms.assetid: f169d381-019b-4a0e-a9a3-54da6d948270
+caps.latest.revision: 20
+caps.handback.revision: 10
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+---
+# Classe const_mem_fun_t
+[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+
+Una classe di adattatori che consente a una funzione membro const che non accetta argomenti di chiamare gli operatori come oggetto funzione unario una volta inizializzata con un argomento di riferimento.  
+  
+## Sintassi  
+  
+```  
+template<class Result, class Type>  
+   class const_mem_fun_t : public unary_function <Type *, Result>   
+   {  
+   explicit const_mem_fun_t( Result ( Type::* _Pm )( ) const );  
+   Result operator()(  
+      const Type* _Pleft  
+   ) const;  
+   };  
+```  
+  
+#### Parametri  
+ `_Pm`  
+ Un puntatore a una funzione membro di classe **Tipo** da convertire in un oggetto funzione.  
+  
+ `_Pleft`  
+ L'oggetto che la funzione membro di `_Pm` viene chiamata a.  
+  
+## Valore restituito  
+ Una funzione unaria adattabile.  
+  
+## Note  
+ La classe modello archivia una copia di `_Pm`, che deve essere un puntatore a una funzione membro di una **Tipo**, in un oggetto membro privato.  Definisce la relativa funzione membro `operator()` come restituire \(`_Pleft`\-\>\* `_Pm`\) \(\) **const**.  
+  
+## Esempio  
+ Il costruttore di `const_mem_fun_t` non viene in genere utilizzato direttamente; la funzione di supporto `mem_fun` viene utilizzata per adattare le funzioni membro.  Vedere [mem\_fun](../Topic/mem_fun%20Function.md) per un esempio di come utilizzare gli adattatori di funzione membro.  
+  
+## Requisiti  
+ **Intestazione:** \<funzionale\>  
+  
+ **Spazio dei nomi:** std  
+  
+## Vedere anche  
+ [Sicurezza dei thread nella libreria standard C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Libreria di modelli standard](../misc/standard-template-library.md)
