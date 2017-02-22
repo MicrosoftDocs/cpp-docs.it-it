@@ -1,8 +1,7 @@
 ---
 title: "CComControl Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "proprietà predefinite, ATL"
 ms.assetid: 55368c27-bd16-45a7-b701-edb36157c8e8
 caps.latest.revision: 22
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # CComControl Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Utilizzo dei registri | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: ce58e2cf-afd3-4068-980e-28a209298265
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Utilizzo dei registri
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

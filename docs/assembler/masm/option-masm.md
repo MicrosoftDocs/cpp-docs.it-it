@@ -1,8 +1,7 @@
 ---
 title: "OPTION (MASM) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "OPTION directive"
 ms.assetid: 8e10dabd-e36f-4586-ab01-ada96736b0bd
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # OPTION (MASM)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

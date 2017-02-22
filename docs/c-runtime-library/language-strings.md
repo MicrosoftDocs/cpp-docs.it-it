@@ -1,8 +1,7 @@
 ---
 title: "Stringhe relative a lingue | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,15 +12,14 @@ f1_keywords:
   - "c.strings"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "stringhe relative a lingue"
 ms.assetid: bbee63b1-af0b-4e44-9eaf-dd3e265c05fd
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # Stringhe relative a lingue
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

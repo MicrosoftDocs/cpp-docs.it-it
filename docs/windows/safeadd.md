@@ -1,8 +1,7 @@
 ---
 title: "SafeAdd | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "SafeAdd (funzione)"
 ms.assetid: 3f82b91d-59fe-4ee1-873b-d056182fa8be
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "ghogen"
 ms.author: "ghogen"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # SafeAdd
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

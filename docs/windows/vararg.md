@@ -1,8 +1,7 @@
 ---
 title: "vararg | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "vararg attribute"
 ms.assetid: 20fc3244-18e9-411c-990e-d5b4fa29a570
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # vararg
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

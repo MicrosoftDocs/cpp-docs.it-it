@@ -1,8 +1,7 @@
 ---
 title: "Descrizione dell&#39;architettura documento/visualizzazione | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "visualizzazioni, aggiornamento"
 ms.assetid: 4e7f65dc-b166-45d8-bcd5-9bb0d399b946
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Descrizione dell&#39;architettura documento/visualizzazione
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

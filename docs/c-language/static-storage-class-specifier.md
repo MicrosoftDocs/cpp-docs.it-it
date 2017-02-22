@@ -1,8 +1,7 @@
 ---
 title: "Identificatori di classi di archiviazione static | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,17 +10,16 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "identificatori di classi di archiviazione statici"
   - "variabili statiche, identificatore"
   - "classi di archiviazione, statiche"
 ms.assetid: 9bce361e-919b-46b9-8148-40d7ab0eb024
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Identificatori di classi di archiviazione static
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

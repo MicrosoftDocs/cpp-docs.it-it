@@ -1,8 +1,7 @@
 ---
 title: "_pgmptr, _wpgmptr | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,7 +15,6 @@ f1_keywords:
   - "_wpgmptr"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_pgmptr (funzione)"
   - "_wpgmptr (funzione)"
@@ -24,10 +22,10 @@ helpviewer_keywords:
   - "wpgmptr (funzione)"
 ms.assetid: 4d44b515-0eff-4136-8bc4-684195f218f5
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # _pgmptr, _wpgmptr
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

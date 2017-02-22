@@ -1,8 +1,7 @@
 ---
 title: "Utilizzo di CTabCtrl | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "controlli delle schede, utilizzo"
 ms.assetid: 6bda6798-0085-4c09-a5ea-fe0e97af5c95
 caps.latest.revision: 13
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Utilizzo di CTabCtrl
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

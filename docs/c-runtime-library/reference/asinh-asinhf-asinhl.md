@@ -1,8 +1,7 @@
 ---
 title: "asinh, asinhf, asinhl | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -34,10 +33,10 @@ dev_langs:
   - "C++"
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
 caps.latest.revision: 7
-caps.handback.revision: 5
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # asinh, asinhf, asinhl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

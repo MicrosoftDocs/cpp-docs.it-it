@@ -1,8 +1,7 @@
 ---
 title: "_variant_t::Detach | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "VARIANT (oggetto), detatch"
 ms.assetid: c348ac08-62cf-4657-a16f-974a79c12158
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # _variant_t::Detach
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

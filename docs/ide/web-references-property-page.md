@@ -1,8 +1,7 @@
 ---
 title: "Pagina delle propriet&#224; Riferimenti Web | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "Riferimenti Web, proprietà"
 ms.assetid: b80f7c77-af88-4551-9943-99748ebacf09
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Pagina delle propriet&#224; Riferimenti Web
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

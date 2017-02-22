@@ -1,8 +1,7 @@
 ---
 title: "__readdr | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "__readdr (funzione intrinseca)"
 ms.assetid: 061b05da-c85e-4052-b392-106f14bb84f1
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # __readdr
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

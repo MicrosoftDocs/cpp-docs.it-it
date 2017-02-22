@@ -1,8 +1,7 @@
 ---
 title: "Classe is_rvalue_reference | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "is_rvalue_reference"
 ms.assetid: 40a97072-7b5c-4274-9154-298d3dcf064a
 caps.latest.revision: 16
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # Classe is_rvalue_reference
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

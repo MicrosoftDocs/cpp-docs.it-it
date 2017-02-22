@@ -1,8 +1,7 @@
 ---
 title: "code_seg | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,16 +13,15 @@ f1_keywords:
   - "vc-pragma.code_seg"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "code_seg (pragma)"
   - "pragma, code_seg"
 ms.assetid: bf4faac1-a511-46a6-8d9e-456851d97d56
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # code_seg
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

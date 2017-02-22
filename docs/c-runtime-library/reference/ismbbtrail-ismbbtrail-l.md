@@ -1,8 +1,7 @@
 ---
 title: "_ismbbtrail, _ismbbtrail_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,7 +31,6 @@ f1_keywords:
   - "ismbbtrail_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "ismbbtrail_l (funzione)"
   - "_ismbbtrail (funzione)"
@@ -40,10 +38,10 @@ helpviewer_keywords:
   - "ismbbtrail (funzione)"
 ms.assetid: dfdd0292-960b-4c1d-bf11-146e0fc80247
 caps.latest.revision: 22
-caps.handback.revision: 22
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # _ismbbtrail, _ismbbtrail_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

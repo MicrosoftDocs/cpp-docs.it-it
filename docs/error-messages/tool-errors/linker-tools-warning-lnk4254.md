@@ -1,8 +1,7 @@
 ---
 title: "Avviso degli strumenti del linker LNK4254 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "LNK4254"
 ms.assetid: 6f41dfb3-ca21-40d3-bac7-b637e578efa4
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Avviso degli strumenti del linker LNK4254
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

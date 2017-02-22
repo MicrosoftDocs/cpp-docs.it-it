@@ -1,8 +1,7 @@
 ---
 title: "Inizializzazione delle parti di un oggetto CStatusBarCtrl | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "barre di stato, modalità semplice"
 ms.assetid: 60e8f285-d2d8-424a-a6ea-2fc548370303
 caps.latest.revision: 12
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Inizializzazione delle parti di un oggetto CStatusBarCtrl
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

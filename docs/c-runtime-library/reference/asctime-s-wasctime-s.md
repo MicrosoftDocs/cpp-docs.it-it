@@ -1,8 +1,7 @@
 ---
 title: "asctime_s, _wasctime_s | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,7 +30,6 @@ f1_keywords:
   - "_tasctime_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_tasctime_s (funzione)"
   - "_wasctime_s (funzione)"
@@ -42,10 +40,10 @@ helpviewer_keywords:
   - "wasctime_s (funzione)"
 ms.assetid: 17ad9b2b-a459-465d-976a-42822897688a
 caps.latest.revision: 29
-caps.handback.revision: 27
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 29
 ---
 # asctime_s, _wasctime_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

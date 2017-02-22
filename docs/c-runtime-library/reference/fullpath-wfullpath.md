@@ -1,8 +1,7 @@
 ---
 title: "_fullpath, _wfullpath | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,7 +31,6 @@ f1_keywords:
   - "_fullpath"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_fullpath (funzione)"
   - "_wfullpath (funzione)"
@@ -42,10 +40,10 @@ helpviewer_keywords:
   - "wfullpath (funzione)"
 ms.assetid: 4161ec17-0d22-45dd-b07d-0222553afae9
 caps.latest.revision: 18
-caps.handback.revision: 16
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # _fullpath, _wfullpath
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

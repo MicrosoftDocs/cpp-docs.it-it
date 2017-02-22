@@ -1,8 +1,7 @@
 ---
 title: "CFileTime Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "shared classes, CFileTime"
 ms.assetid: 1a358a65-1383-4124-b0d4-59b026e6860f
 caps.latest.revision: 18
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # CFileTime Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

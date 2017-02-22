@@ -1,8 +1,7 @@
 ---
 title: "CCommand::Open | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "Open (metodo)"
 ms.assetid: 4c9b8f31-faf3-452d-9a29-3d3e5f54d6f8
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # CCommand::Open
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

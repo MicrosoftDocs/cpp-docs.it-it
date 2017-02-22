@@ -1,8 +1,7 @@
 ---
 title: "isspace, iswspace, _isspace_l, _iswspace_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -33,7 +32,6 @@ f1_keywords:
   - "isspace"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_isspace_l (funzione)"
   - "_istspace (funzione)"
@@ -45,10 +43,10 @@ helpviewer_keywords:
   - "iswspace_l (funzione)"
 ms.assetid: b851e0c0-36bb-4dac-a1a3-533540939035
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # isspace, iswspace, _isspace_l, _iswspace_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

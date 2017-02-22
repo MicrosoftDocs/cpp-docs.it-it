@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livello 1) C4395 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4395"
 ms.assetid: 8051469a-3a39-4677-80f7-1300fbffe8ea
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Avviso del compilatore (livello 1) C4395
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

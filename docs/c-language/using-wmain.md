@@ -1,8 +1,7 @@
 ---
 title: "Utilizzo di wmain | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,15 +10,14 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "wmain (funzione)"
 ms.assetid: d0300812-adc4-40c6-bba3-b2da25468c80
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Utilizzo di wmain
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

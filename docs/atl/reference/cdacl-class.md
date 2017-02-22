@@ -1,8 +1,7 @@
 ---
 title: "CDacl Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "CDacl class"
 ms.assetid: 2dc76616-6362-4967-b6cf-e2d39ca37ddd
 caps.latest.revision: 23
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # CDacl Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

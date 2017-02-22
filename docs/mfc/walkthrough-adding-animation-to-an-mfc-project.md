@@ -1,8 +1,7 @@
 ---
 title: "Procedura dettagliata: aggiunta di animazione a un progetto MFC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "MFC, animazione"
 ms.assetid: 004f832c-9fd5-4f88-9ca9-ae65dececdc2
 caps.latest.revision: 18
-caps.handback.revision: 14
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # Procedura dettagliata: aggiunta di animazione a un progetto MFC
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

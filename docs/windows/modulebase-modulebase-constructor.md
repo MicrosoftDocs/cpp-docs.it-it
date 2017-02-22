@@ -1,8 +1,7 @@
 ---
 title: "Costruttore ModuleBase::ModuleBase | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "ModuleBase, costruttore"
 ms.assetid: f5aeb035-b938-45d9-aed2-3b5b75921191
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Costruttore ModuleBase::ModuleBase
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

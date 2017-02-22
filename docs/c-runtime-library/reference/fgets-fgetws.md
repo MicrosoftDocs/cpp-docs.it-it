@@ -1,8 +1,7 @@
 ---
 title: "fgets, fgetws | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,7 +30,6 @@ f1_keywords:
   - "fgets"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_fgetts (funzione)"
   - "fgets (funzione)"
@@ -41,10 +39,10 @@ helpviewer_keywords:
   - "flussi, lettura"
 ms.assetid: ad549bb5-df98-4ccd-a53f-95114e60c4fc
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # fgets, fgetws
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

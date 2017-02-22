@@ -1,8 +1,7 @@
 ---
 title: "&lt; funzionalit&#224; &gt; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "functional (intestazione)"
 ms.assetid: 7dd463e8-a29f-49bc-aedd-8fa53b54bfbc
 caps.latest.revision: 27
-caps.handback.revision: 27
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 27
 ---
 # &lt; funzionalit&#224; &gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

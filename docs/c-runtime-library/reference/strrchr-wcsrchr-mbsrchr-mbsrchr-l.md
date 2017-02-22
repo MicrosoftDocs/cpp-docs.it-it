@@ -1,8 +1,7 @@
 ---
 title: "strrchr, wcsrchr, _mbsrchr, _mbsrchr_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,6 +23,7 @@ apilocation:
   - "msvcr110_clr0400.dll"
   - "msvcr120.dll"
   - "msvcr120_clr0400.dll"
+  - "ntdll.dll"
   - "ucrtbase.dll"
   - "api-ms-win-crt-multibyte-l1-1-0.dll"
 apitype: "DLLExport"
@@ -35,7 +35,6 @@ f1_keywords:
   - "_mbsrchr"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_ftcsrchr (funzione)"
   - "_mbsrchr (funzione)"
@@ -52,10 +51,10 @@ helpviewer_keywords:
   - "wcsrchr (funzione)"
 ms.assetid: 75cf2664-758e-49bb-bf6b-8a139cd474d2
 caps.latest.revision: 28
-caps.handback.revision: 28
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 28
 ---
 # strrchr, wcsrchr, _mbsrchr, _mbsrchr_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Shrinking or Stretching Part of an Image (Image Editor for Icons) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C++"
 helpviewer_keywords: 
   - "bitmaps [C++], shrinking"
   - "images [C++], stretching"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "images [C++], shrinking"
 ms.assetid: c5f58e2c-6b6e-4fb3-9784-76483b2440af
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Shrinking or Stretching Part of an Image (Image Editor for Icons)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

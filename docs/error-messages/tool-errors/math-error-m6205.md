@@ -1,8 +1,7 @@
 ---
 title: "Errore matematico M6205 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "M6205"
 ms.assetid: fd28e7c9-a463-4a9c-a863-cc9e75315550
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Errore matematico M6205
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

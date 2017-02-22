@@ -1,8 +1,7 @@
 ---
 title: "Procedura: eseguire il debug di una build di rilascio | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "build di rilascio, debug"
 ms.assetid: d333e4d1-4e6c-4384-84a9-cb549702da25
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Procedura: eseguire il debug di una build di rilascio
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

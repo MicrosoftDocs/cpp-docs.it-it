@@ -1,8 +1,7 @@
 ---
 title: "Procedura: Usare la classe combinable per migliorare le prestazioni | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "miglioramento delle prestazioni in parallelo con combinable [Runtime di concorrenza]"
 ms.assetid: fa730580-1c94-4b2d-8aec-57c91dc0497e
 caps.latest.revision: 17
-caps.handback.revision: 14
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # Procedura: Usare la classe combinable per migliorare le prestazioni
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

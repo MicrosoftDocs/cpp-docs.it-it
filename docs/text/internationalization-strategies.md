@@ -1,8 +1,7 @@
 ---
 title: "Strategie di internazionalizzazione | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "API Windows [C++], strategie di programmazione internazionale"
 ms.assetid: b09d9854-0709-4b9a-a00c-b0b8bc4199b1
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "ghogen"
 ms.author: "ghogen"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Strategie di internazionalizzazione
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

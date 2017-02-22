@@ -1,8 +1,7 @@
 ---
 title: "_umask_s | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,7 +28,6 @@ f1_keywords:
   - "_umask_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_umask_s (funzione)"
   - "autorizzazioni di file [C++]"
@@ -39,10 +37,10 @@ helpviewer_keywords:
   - "umask_s (funzione)"
 ms.assetid: 70898f61-bf2b-4d8d-8291-0ccaa6d33145
 caps.latest.revision: 17
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # _umask_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

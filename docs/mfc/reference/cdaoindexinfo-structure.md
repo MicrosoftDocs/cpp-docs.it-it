@@ -1,8 +1,7 @@
 ---
 title: "Struttura CDaoIndexInfo | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "DAO (Data Access Objects), raccolta di indici"
 ms.assetid: 251d8285-78ce-4716-a0b3-ccc3395fc437
 caps.latest.revision: 13
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # Struttura CDaoIndexInfo
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "MAPI | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/13/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "messaggistica, applicazioni client"
 ms.assetid: 193449f7-b131-4ab0-9301-8d4f6cd1e7c4
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # MAPI
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

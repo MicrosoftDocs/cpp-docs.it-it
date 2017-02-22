@@ -1,8 +1,7 @@
 ---
 title: "Aligning Groups of Controls | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,15 +10,14 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C++"
 helpviewer_keywords: 
   - "controls [C++], aligning"
 ms.assetid: a4f49a73-4a17-44b3-8568-aa35f646b5cf
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Aligning Groups of Controls
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

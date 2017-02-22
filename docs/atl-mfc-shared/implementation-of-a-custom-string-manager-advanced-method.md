@@ -1,8 +1,7 @@
 ---
 title: "Implementation of a Custom String Manager (Advanced Method) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "IAtlStringMgr class, utilizzo"
 ms.assetid: 64ab7da9-47c1-4c4a-9cd7-4cc37e7f3f57
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Implementation of a Custom String Manager (Advanced Method)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

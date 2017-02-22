@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3923 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3923"
 ms.assetid: db8838e9-6344-4cd6-83e0-a8abeb12c4c0
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Errore del compilatore C3923
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

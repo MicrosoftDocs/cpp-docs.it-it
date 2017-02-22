@@ -1,8 +1,7 @@
 ---
 title: "TN053: routine DFX personalizzate per le classi database DAO | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "TN053"
 ms.assetid: fdcf3c51-4fa8-4517-9222-58aaa4f25cac
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # TN053: routine DFX personalizzate per le classi database DAO
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

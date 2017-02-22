@@ -1,8 +1,7 @@
 ---
 title: "Eccezioni: rilascio di oggetti nelle eccezioni | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "gestione eccezioni try-catch, distruzione di oggetti"
 ms.assetid: 3b14b4ee-e789-4ed2-b8e3-984950441d97
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Eccezioni: rilascio di oggetti nelle eccezioni
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

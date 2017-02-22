@@ -1,8 +1,7 @@
 ---
 title: "Struct steady_clock | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ dev_langs:
   - "C++"
 ms.assetid: 970d12ec-fc80-4391-a2f7-b57b2aec668d
 caps.latest.revision: 14
-caps.handback.revision: 5
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # Struct steady_clock
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

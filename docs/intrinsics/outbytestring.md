@@ -1,8 +1,7 @@
 ---
 title: "__outbytestring | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "outsb (istruzione)"
 ms.assetid: c9150661-9c18-427f-bae8-710bba6ed78c
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # __outbytestring
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

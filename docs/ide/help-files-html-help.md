@@ -1,8 +1,7 @@
 ---
 title: "File della Guida (HTML) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "tipi di file [C++], file della Guida HTML"
 ms.assetid: d30a1b1b-318f-4a78-8b60-93da53a224a8
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # File della Guida (HTML)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

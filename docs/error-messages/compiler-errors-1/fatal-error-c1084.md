@@ -1,8 +1,7 @@
 ---
 title: "Errore irreversibile C1084 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C1084"
 ms.assetid: b2f273ef-3a14-4d5f-8ce0-7a11a0388fe6
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Errore irreversibile C1084
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

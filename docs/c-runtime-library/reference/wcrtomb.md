@@ -1,8 +1,7 @@
 ---
 title: "wcrtomb | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,7 +27,6 @@ f1_keywords:
   - "wcrtomb"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "caratteri, conversione"
   - "caratteri multibyte"
@@ -36,10 +34,10 @@ helpviewer_keywords:
   - "caratteri wide, conversione"
 ms.assetid: 717f1b21-2705-4b7f-b6d0-82adc5224340
 caps.latest.revision: 26
-caps.handback.revision: 24
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # wcrtomb
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

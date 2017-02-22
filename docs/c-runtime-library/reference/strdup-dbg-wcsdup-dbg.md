@@ -1,8 +1,7 @@
 ---
 title: "_strdup_dbg, _wcsdup_dbg | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,7 +30,6 @@ f1_keywords:
   - "wcsdup_dbg"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_strdup_dbg (funzione)"
   - "_wcsdup_dbg (funzione)"
@@ -43,10 +41,10 @@ helpviewer_keywords:
   - "wcsdup_dbg (funzione)"
 ms.assetid: 681db70c-d124-43ab-b83e-5eeea9035097
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # _strdup_dbg, _wcsdup_dbg
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

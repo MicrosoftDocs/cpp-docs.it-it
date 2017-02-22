@@ -1,8 +1,7 @@
 ---
 title: "&lt;new&gt; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "nuova intestazione"
 ms.assetid: 218e2a15-34e8-4ef3-9122-1e90eccf8559
 caps.latest.revision: 18
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # &lt;new&gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

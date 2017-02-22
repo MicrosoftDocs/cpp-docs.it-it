@@ -1,8 +1,7 @@
 ---
 title: "TN025: creazione di documenti, visualizzazioni e frame | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "TN025"
 ms.assetid: 09254d72-6e1d-43db-80e9-693887dbeda2
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # TN025: creazione di documenti, visualizzazioni e frame
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

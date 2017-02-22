@@ -1,8 +1,7 @@
 ---
 title: "_rotr8, _rotr16 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "_rotr8 intrinsic"
 ms.assetid: dfbd2c82-82b4-427a-ad52-51609027ebff
 caps.latest.revision: 17
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # _rotr8, _rotr16
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

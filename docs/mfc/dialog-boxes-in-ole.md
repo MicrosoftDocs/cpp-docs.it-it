@@ -1,8 +1,7 @@
 ---
 title: "Finestre di dialogo in OLE | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "OLE (finestre di dialogo), informazioni sulle finestre di dialogo OLE"
 ms.assetid: 73c41eb8-738a-4d02-9212-d3395bb09a3a
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Finestre di dialogo in OLE
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

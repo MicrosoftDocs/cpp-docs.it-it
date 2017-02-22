@@ -1,8 +1,7 @@
 ---
 title: "Spazio dei nomi Concurrency::direct3d | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "spazi dei nomi direct3d"
 ms.assetid: 9566a2f1-4d5f-43e4-a3ac-676643d38420
 caps.latest.revision: 15
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Spazio dei nomi Concurrency::direct3d
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

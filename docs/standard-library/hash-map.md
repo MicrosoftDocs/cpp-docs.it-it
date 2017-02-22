@@ -1,8 +1,7 @@
 ---
 title: "&lt;hash_map&gt; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "hash_map (intestazione)"
 ms.assetid: 0765708a-a668-42a2-9800-654c857bdcc2
 caps.latest.revision: 27
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 27
 ---
 # &lt;hash_map&gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

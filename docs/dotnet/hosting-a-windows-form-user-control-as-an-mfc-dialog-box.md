@@ -1,8 +1,7 @@
 ---
 title: "Hosting di un controllo utente Windows Form come finestra di dialogo MFC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Windows Form [C++], hosting come finestra di dialogo MFC"
 ms.assetid: 0434a9d7-8b14-48e6-ad69-9ba9a684677a
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # Hosting di un controllo utente Windows Form come finestra di dialogo MFC
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

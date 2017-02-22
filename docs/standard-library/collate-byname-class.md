@@ -1,8 +1,7 @@
 ---
 title: "Classe collate_byname | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "collate_byname (classe)"
 ms.assetid: 3dc380df-867c-4763-b60e-ba62a8e63ca7
 caps.latest.revision: 24
-caps.handback.revision: 24
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # Classe collate_byname
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

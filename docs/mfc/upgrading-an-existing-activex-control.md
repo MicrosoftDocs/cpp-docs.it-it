@@ -1,8 +1,7 @@
 ---
 title: "Aggiornamento di un controllo ActiveX esistente | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "aggiornamento di controlli ActiveX"
 ms.assetid: 4d12ddfa-b491-4f9f-a0b7-b51458e05651
 caps.latest.revision: 15
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Aggiornamento di un controllo ActiveX esistente
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "TN043: routine RFX | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "TN043"
 ms.assetid: f552d0c1-2c83-4389-b472-42c9940aa713
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # TN043: routine RFX
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

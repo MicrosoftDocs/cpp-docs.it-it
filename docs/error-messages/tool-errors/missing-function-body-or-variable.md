@@ -1,8 +1,7 @@
 ---
 title: "Codice di funzione o variabile mancante | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "variabili, mancante"
 ms.assetid: 1a88d809-b14f-46a4-97c4-3e48beb418f2
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Codice di funzione o variabile mancante
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

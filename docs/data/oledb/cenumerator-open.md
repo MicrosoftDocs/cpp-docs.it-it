@@ -1,8 +1,7 @@
 ---
 title: "CEnumerator::Open | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "Open (metodo)"
 ms.assetid: b22821a0-257a-4543-ad0c-2649d4ac092e
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # CEnumerator::Open
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Classe Scheduler | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Scheduler (classe)"
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
 caps.latest.revision: 19
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # Classe Scheduler
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

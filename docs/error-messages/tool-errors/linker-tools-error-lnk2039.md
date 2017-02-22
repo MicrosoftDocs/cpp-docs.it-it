@@ -1,8 +1,7 @@
 ---
 title: "Errore degli strumenti del linker LNK2039 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "LNK2039"
 ms.assetid: eaa296bd-4901-41f6-8410-6d03ee827144
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Errore degli strumenti del linker LNK2039
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

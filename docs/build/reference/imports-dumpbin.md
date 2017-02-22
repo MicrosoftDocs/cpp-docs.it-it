@@ -1,8 +1,7 @@
 ---
 title: "/IMPORTS (DUMPBIN) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "-IMPORTS (opzione di dumpbin)"
 ms.assetid: 6a296216-2b1b-40f8-8736-cd4553a22456
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # /IMPORTS (DUMPBIN)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

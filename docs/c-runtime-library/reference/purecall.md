@@ -1,8 +1,7 @@
 ---
 title: "_purecall | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,6 +20,7 @@ apilocation:
   - "msvcr110_clr0400.dll"
   - "msvcr120.dll"
   - "msvcr120_clr0400.dll"
+  - "ntoskrnl.exe"
   - "ucrtbase.dll"
 apitype: "DLLExport"
 f1_keywords: 
@@ -33,10 +33,10 @@ helpviewer_keywords:
   - "purecall (funzione)"
 ms.assetid: 56135d9b-3403-4e22-822d-e714523801cc
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # _purecall
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

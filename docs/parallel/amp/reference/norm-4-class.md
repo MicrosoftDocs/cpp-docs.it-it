@@ -1,8 +1,7 @@
 ---
 title: "Classe norm_4 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -279,10 +278,10 @@ dev_langs:
   - "C++"
 ms.assetid: d628b2bf-2cdb-4dbb-95c6-cd778f5e991f
 caps.latest.revision: 10
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Classe norm_4
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

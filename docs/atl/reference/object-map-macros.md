@@ -1,8 +1,7 @@
 ---
 title: "Object Map Macros | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 680087f4-9894-41dd-a79c-6f337e1f13c1
 caps.latest.revision: 16
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # Object Map Macros
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

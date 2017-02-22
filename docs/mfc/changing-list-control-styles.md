@@ -1,8 +1,7 @@
 ---
 title: "Modifica degli stili del controllo List | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "stili, CListCtrl"
 ms.assetid: be74a005-0795-417c-9056-f6342aa74b26
 caps.latest.revision: 12
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Modifica degli stili del controllo List
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

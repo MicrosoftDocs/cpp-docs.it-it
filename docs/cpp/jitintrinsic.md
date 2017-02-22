@@ -1,8 +1,7 @@
 ---
 title: "jitintrinsic | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "jitintrinsic __declspec (modificatore)"
 ms.assetid: 23dbe416-7ef6-442b-b16d-9a81aab04fa6
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # jitintrinsic
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

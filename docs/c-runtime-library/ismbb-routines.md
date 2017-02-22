@@ -1,8 +1,7 @@
 ---
 title: "Routines _ismbb | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,16 +22,15 @@ f1_keywords:
   - "ismbb"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_ismbb (routine)"
   - "ismbb (routine)"
 ms.assetid: d63c232e-3fe4-4844-aafd-2133846ece4b
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # Routines _ismbb
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

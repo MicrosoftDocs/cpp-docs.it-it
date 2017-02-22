@@ -1,8 +1,7 @@
 ---
 title: "Manifest Resources | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "resources [Visual Studio], manifest"
 ms.assetid: 8615334c-22a0-44c0-93e0-5924528c9917
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Manifest Resources
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

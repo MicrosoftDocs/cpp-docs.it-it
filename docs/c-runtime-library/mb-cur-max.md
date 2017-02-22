@@ -1,8 +1,7 @@
 ---
 title: "MB_CUR_MAX | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,15 +12,14 @@ f1_keywords:
   - "MB_CUR_MAX"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "MB_CUR_MAX (costante)"
 ms.assetid: fab22609-c14d-4c19-991c-bd09ff30e604
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # MB_CUR_MAX
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

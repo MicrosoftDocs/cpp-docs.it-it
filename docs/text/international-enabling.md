@@ -1,8 +1,7 @@
 ---
 title: "Abilitazione di risorse internazionali | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "Unicode [C++], abilitazione"
 ms.assetid: b077f4ca-5865-40ef-a46e-d9e4d686ef21
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "ghogen"
 ms.author: "ghogen"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Abilitazione di risorse internazionali
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

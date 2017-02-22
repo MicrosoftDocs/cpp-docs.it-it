@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livello 4) C4239 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4239"
 ms.assetid: a23dc16a-649e-4870-9a24-275de1584fcd
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Avviso del compilatore (livello 4) C4239
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

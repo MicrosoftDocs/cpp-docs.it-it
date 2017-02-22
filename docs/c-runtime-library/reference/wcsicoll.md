@@ -1,8 +1,7 @@
 ---
 title: "wcsicoll | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,15 +26,14 @@ f1_keywords:
   - "wcsicoll"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "wcsicoll (funzione)"
 ms.assetid: d049022d-cf60-467f-842b-9a508d9aeaff
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # wcsicoll
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

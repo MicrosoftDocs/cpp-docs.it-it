@@ -1,8 +1,7 @@
 ---
 title: "Limitazioni sulla funzione main | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "main (funzione), restrizioni sull'utilizzo"
 ms.assetid: 7b3df731-344b-44a8-850c-11cbcbfbfa83
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Limitazioni sulla funzione main
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Errore della riga di comando D8045 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "D8045"
 ms.assetid: 01c8808c-bac1-4b4d-8a90-b595f95e9318
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Errore della riga di comando D8045
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

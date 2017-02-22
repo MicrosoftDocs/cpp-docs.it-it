@@ -1,8 +1,7 @@
 ---
 title: "calloc | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,16 +27,15 @@ f1_keywords:
   - "calloc"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "allocazione di memoria, matrici"
   - "calloc (funzione)"
 ms.assetid: 17bb79a1-98cf-4096-90cb-1f9365cd6829
 caps.latest.revision: 17
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # calloc
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

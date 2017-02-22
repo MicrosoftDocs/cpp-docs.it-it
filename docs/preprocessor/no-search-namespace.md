@@ -1,8 +1,7 @@
 ---
 title: "no_search_namespace | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,15 +12,14 @@ f1_keywords:
   - "no_search_namespace"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "no_search_namespace (attributo)"
 ms.assetid: 482dc4a7-5acf-456a-a995-ef4ddd5f6018
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # no_search_namespace
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

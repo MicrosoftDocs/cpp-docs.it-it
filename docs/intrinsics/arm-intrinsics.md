@@ -1,8 +1,7 @@
 ---
 title: "Oggetti intrinseci ARM | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -1942,10 +1941,10 @@ helpviewer_keywords:
   - "intrinseci, ARM"
 ms.assetid: d3d7dadd-7bd5-4508-8bff-371a66913e20
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Oggetti intrinseci ARM
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

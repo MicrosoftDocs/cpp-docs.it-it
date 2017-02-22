@@ -1,8 +1,7 @@
 ---
 title: "Removing Space Between Buttons on a Toolbar | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,16 +10,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C++"
 helpviewer_keywords: 
   - "Toolbar editor, spacing toolbar buttons"
   - "toolbar buttons (in Toolbar editor), space between buttons"
 ms.assetid: 3bbbacec-cd42-4c35-9ea5-de62daa4041d
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Removing Space Between Buttons on a Toolbar
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

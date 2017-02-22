@@ -1,8 +1,7 @@
 ---
 title: "high_property_prefixes | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,15 +12,14 @@ f1_keywords:
   - "high_property_prefixes"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "high_property_prefixes (attributo)"
 ms.assetid: 91c6cc2b-19b6-4aba-8831-d9e5cccb58b5
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # high_property_prefixes
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

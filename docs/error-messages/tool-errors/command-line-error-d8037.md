@@ -1,8 +1,7 @@
 ---
 title: "Errore della riga di comando D8037 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "D8037"
 ms.assetid: acddaaa0-bd84-426f-a37b-8f680b379c9d
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # Errore della riga di comando D8037
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

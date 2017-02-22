@@ -1,8 +1,7 @@
 ---
 title: "CComCachedTearOffObject Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "CComCachedTearOffObject class"
 ms.assetid: ae19507d-a1de-4dbc-a988-da9f75a50c95
 caps.latest.revision: 19
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # CComCachedTearOffObject Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

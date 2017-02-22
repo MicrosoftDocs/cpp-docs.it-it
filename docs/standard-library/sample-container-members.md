@@ -1,8 +1,7 @@
 ---
 title: "Membri contenitore di esempio | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "classi contenitore"
 ms.assetid: dc5a1998-a31b-4adf-b888-8abe5b87a4e0
 caps.latest.revision: 9
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Membri contenitore di esempio
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

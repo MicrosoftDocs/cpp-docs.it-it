@@ -1,8 +1,7 @@
 ---
 title: "CComAutoDeleteCriticalSection Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "CComAutoDeleteCriticalSection class"
 ms.assetid: 2396dbea-1c60-4841-b50e-c4e18af311a3
 caps.latest.revision: 17
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # CComAutoDeleteCriticalSection Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

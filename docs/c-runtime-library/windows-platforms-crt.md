@@ -1,8 +1,7 @@
 ---
 title: "Piattaforme Windows (CRT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.programs"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "compatibilità con versioni precedenti [C++], librerie di runtime del linguaggio C"
   - "compatibilità [C++], librerie di runtime del linguaggio C"
@@ -23,10 +21,10 @@ helpviewer_keywords:
   - "Unicode [C++], piattaforme Win32"
 ms.assetid: 0aacaf45-6dc4-4908-bd52-57abac7b39f6
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # Piattaforme Windows (CRT)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

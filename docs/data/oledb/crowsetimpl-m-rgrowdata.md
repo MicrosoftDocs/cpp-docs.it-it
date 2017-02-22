@@ -1,8 +1,7 @@
 ---
 title: "CRowsetImpl::m_rgRowData | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "m_rgRowData"
 ms.assetid: e4e75ca7-12e8-4a0b-94e8-e395c21385b2
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # CRowsetImpl::m_rgRowData
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

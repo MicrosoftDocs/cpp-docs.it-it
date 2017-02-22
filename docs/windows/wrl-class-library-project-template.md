@@ -1,8 +1,7 @@
 ---
 title: "Modello di progetto di libreria di classi di WRL | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 628b0852-89e5-44f8-bf58-a09762bda15c
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Modello di progetto di libreria di classi di WRL
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

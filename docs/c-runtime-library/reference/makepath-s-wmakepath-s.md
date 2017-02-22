@@ -1,8 +1,7 @@
 ---
 title: "_makepath_s, _wmakepath_s | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,7 +31,6 @@ f1_keywords:
   - "wmakepath_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_makepath_s (funzione)"
   - "wmakepath_s (funzione)"
@@ -41,10 +39,10 @@ helpviewer_keywords:
   - "makepath_s (funzione)"
 ms.assetid: 4405e43c-3d63-4697-bb80-9b8dcd21d027
 caps.latest.revision: 29
-caps.handback.revision: 29
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 29
 ---
 # _makepath_s, _wmakepath_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

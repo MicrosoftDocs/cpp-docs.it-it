@@ -1,8 +1,7 @@
 ---
 title: "Cenni preliminari sulla compilazione di file di informazioni di visualizzazione | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "bsc (file), informazioni su file bsc"
 ms.assetid: b5c12832-51f6-4953-8044-4264dd0fb242
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Cenni preliminari sulla compilazione di file di informazioni di visualizzazione
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

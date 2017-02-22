@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2036 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2036"
 ms.assetid: 895821a9-65d1-44b5-bde1-dae827f3e486
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Errore del compilatore C2036
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Classe di archiviazione | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "collegamento esterno, identificatori di classi di archiviazione"
   - "identificatori di funzioni, classe di archiviazione"
@@ -22,10 +20,10 @@ helpviewer_keywords:
   - "classi di archiviazione"
 ms.assetid: 39a79ba6-edf5-42b6-8e45-f94227603dd6
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Classe di archiviazione
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

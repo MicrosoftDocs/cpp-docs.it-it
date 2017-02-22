@@ -1,8 +1,7 @@
 ---
 title: "Pagina delle propriet&#224; delle risorse gestite | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "pagina delle proprietà Risorse gestite"
 ms.assetid: 80b80384-ee55-494d-9f0e-907bb98cfc19
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Pagina delle propriet&#224; delle risorse gestite
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

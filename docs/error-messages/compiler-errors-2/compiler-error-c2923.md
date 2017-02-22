@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2923 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2923"
 ms.assetid: 6b92933b-13ef-4124-99d9-b89f9fdae030
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Errore del compilatore C2923
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

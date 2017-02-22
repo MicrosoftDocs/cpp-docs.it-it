@@ -1,8 +1,7 @@
 ---
 title: "I/O flusso Unicode in modalit&#224; testo e binaria | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.io"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "I/O [CRT], flusso unicode"
   - "routine I/O di flussi"
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "Unicode, routine I/O di flussi"
 ms.assetid: 68be0c3e-a9e6-4fd5-b34a-1b5207f0e7d6
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # I/O flusso Unicode in modalit&#224; testo e binaria
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

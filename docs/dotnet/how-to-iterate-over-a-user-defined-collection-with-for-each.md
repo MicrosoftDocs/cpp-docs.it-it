@@ -1,8 +1,7 @@
 ---
 title: "Procedura: scorrere una raccolta definita dall&#39;utente con for each | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "raccolte, scorrimento"
 ms.assetid: 0efd9e3c-d7bb-4f6c-9938-e0e65d191433
 caps.latest.revision: 8
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Procedura: scorrere una raccolta definita dall&#39;utente con for each
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Utilizzo delle funzioni di accesso | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "rowset [C++], funzioni di accesso"
 ms.assetid: 6ce484a6-fbbe-40de-8ff9-5cddcd78d283
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Utilizzo delle funzioni di accesso
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

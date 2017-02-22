@@ -1,8 +1,7 @@
 ---
 title: "set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,7 +30,6 @@ f1_keywords:
   - "_set_thread_local_invalid_parameter_handler"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "gestore di parametri non validi"
   - "set_invalid_parameter_handler (funzione)"
@@ -39,10 +37,10 @@ helpviewer_keywords:
   - "funzione _set_thread_local_invalid_parameter_handler"
 ms.assetid: c0e67934-1a41-4016-ad8e-972828f3ac11
 caps.latest.revision: 27
-caps.handback.revision: 27
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 27
 ---
 # set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

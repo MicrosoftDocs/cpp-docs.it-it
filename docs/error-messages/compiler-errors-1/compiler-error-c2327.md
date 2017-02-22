@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2327 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2327"
 ms.assetid: 95278c95-d1f9-4487-ad27-53311f5e8112
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Errore del compilatore C2327
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

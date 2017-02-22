@@ -1,8 +1,7 @@
 ---
 title: "CDataSource::OpenWithServiceComponents | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "OpenWithServiceComponents (metodo)"
 ms.assetid: 49c1d037-36ae-4fde-8e54-ced623abe1a9
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # CDataSource::OpenWithServiceComponents
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

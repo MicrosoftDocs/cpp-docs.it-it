@@ -1,8 +1,7 @@
 ---
 title: "Porting e aggiornamento: esempi e case study | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: d48bbff9-1ea7-467f-8c8b-758601f01573
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Porting e aggiornamento: esempi e case study
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

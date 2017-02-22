@@ -1,8 +1,7 @@
 ---
 title: "Errore irreversibile C1037 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C1037"
 ms.assetid: 79103bca-ccfb-42e7-aef9-9b90c15b162f
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Errore irreversibile C1037
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

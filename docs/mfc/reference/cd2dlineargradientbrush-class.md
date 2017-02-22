@@ -1,8 +1,7 @@
 ---
 title: "Classe CD2DLinearGradientBrush | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "CD2DLinearGradientBrush (classe)"
 ms.assetid: d4be9ff9-0ea8-45e6-9b8d-f3bc5673cbac
 caps.latest.revision: 17
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # Classe CD2DLinearGradientBrush
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

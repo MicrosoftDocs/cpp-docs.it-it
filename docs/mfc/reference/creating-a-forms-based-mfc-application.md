@@ -1,8 +1,7 @@
 ---
 title: "Creazione di un&#39;applicazione MFC basata su form | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "applicazioni basate su form"
 ms.assetid: 048d2f7d-b60d-4386-ad8e-71d49af9c05e
 caps.latest.revision: 12
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Creazione di un&#39;applicazione MFC basata su form
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Errore di compilazione progetto PRJ0002 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "PRJ0002"
 ms.assetid: 1c820b1f-9a24-4681-80ed-4fcbfd7caa00
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Errore di compilazione progetto PRJ0002
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3536 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3536"
 ms.assetid: 8d866075-866b-49eb-9979-ee27b308f7e3
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Errore del compilatore C3536
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

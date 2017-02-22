@@ -1,8 +1,7 @@
 ---
 title: "Comportamento definito dall&#39;implementazione | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "ANSI [C++], C standard"
   - "comportamento definito dall'implementazione"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "Visual C, portabilità di Microsoft C"
 ms.assetid: c9f50670-23cb-401f-8ad7-136972012eb9
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Comportamento definito dall&#39;implementazione
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

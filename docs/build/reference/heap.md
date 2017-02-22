@@ -1,8 +1,7 @@
 ---
 title: "/HEAP | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "/HEAP (opzione editbin)"
 ms.assetid: 6ce759b5-75b7-44ff-a5fd-3a83a0ba9a48
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # /HEAP
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

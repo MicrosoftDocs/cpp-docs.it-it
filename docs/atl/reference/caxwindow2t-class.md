@@ -1,8 +1,7 @@
 ---
 title: "CAxWindow2T Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "CAxWindow2 class"
 ms.assetid: b87bc943-7991-4537-b902-2138d7f4d837
 caps.latest.revision: 22
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # CAxWindow2T Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

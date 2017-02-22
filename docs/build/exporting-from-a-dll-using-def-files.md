@@ -1,8 +1,7 @@
 ---
 title: "Esportazione da una DLL tramite i file DEF | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "esportazione di DLL [C++], DEF (file)"
 ms.assetid: 9d31eda2-184e-47de-a2ee-a93ebd603f8e
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Esportazione da una DLL tramite i file DEF
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

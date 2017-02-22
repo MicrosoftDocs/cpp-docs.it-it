@@ -1,8 +1,7 @@
 ---
 title: "realloc | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,7 +30,6 @@ f1_keywords:
   - "_frealloc"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_brealloc (funzione)"
   - "realloc (funzione)"
@@ -44,10 +42,10 @@ helpviewer_keywords:
   - "riallocare blocchi di memoria"
 ms.assetid: 2b2239de-810b-4b11-9438-32ab0a244185
 caps.latest.revision: 20
-caps.handback.revision: 18
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # realloc
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

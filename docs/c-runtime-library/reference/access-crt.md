@@ -1,8 +1,7 @@
 ---
 title: "access (CRT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,15 +26,14 @@ f1_keywords:
   - "access"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "access (funzione)"
 ms.assetid: 65197793-bd0a-41c3-9c29-18de2d95d9a6
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # access (CRT)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

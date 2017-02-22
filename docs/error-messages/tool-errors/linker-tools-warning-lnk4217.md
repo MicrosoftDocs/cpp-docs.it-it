@@ -1,8 +1,7 @@
 ---
 title: "Avviso degli strumenti del linker LNK4217 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "LNK4217"
 ms.assetid: 280dc03e-5933-4e8d-bb8c-891fbe788738
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Avviso degli strumenti del linker LNK4217
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

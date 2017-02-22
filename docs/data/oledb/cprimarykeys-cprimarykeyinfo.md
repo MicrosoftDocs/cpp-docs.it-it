@@ -1,8 +1,7 @@
 ---
 title: "CPrimaryKeys, CPrimaryKeyInfo | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -43,10 +42,10 @@ helpviewer_keywords:
   - "TABLE_SCHEMA"
 ms.assetid: c27b97a4-a156-4f66-89e3-95f85d7d6281
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # CPrimaryKeys, CPrimaryKeyInfo
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

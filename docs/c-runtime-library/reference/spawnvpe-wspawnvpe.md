@@ -1,8 +1,7 @@
 ---
 title: "_spawnvpe, _wspawnvpe | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,7 +31,6 @@ f1_keywords:
   - "_wspawnvpe"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_spawnvpe (funzione)"
   - "_wspawnvpe (funzione)"
@@ -43,10 +41,10 @@ helpviewer_keywords:
   - "wspawnvpe (funzione)"
 ms.assetid: 3db6394e-a955-4837-97a1-fab1db1e6092
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # _spawnvpe, _wspawnvpe
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

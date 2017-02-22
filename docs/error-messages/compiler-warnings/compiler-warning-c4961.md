@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore C4961 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4961"
 ms.assetid: fe22d99f-5a12-45d3-a7cf-867773a71e16
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Avviso del compilatore C4961
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

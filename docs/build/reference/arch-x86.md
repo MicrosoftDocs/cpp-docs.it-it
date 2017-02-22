@@ -1,8 +1,7 @@
 ---
 title: "/arch (x86) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 9dd5a75d-06e4-4674-aade-33228486078d
 caps.latest.revision: 33
-caps.handback.revision: 33
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 33
 ---
 # /arch (x86)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

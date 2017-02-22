@@ -1,8 +1,7 @@
 ---
 title: "Classe future_error | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ dev_langs:
   - "C++"
 ms.assetid: 6071c545-ac2a-49ef-9967-07b0125da861
 caps.latest.revision: 13
-caps.handback.revision: 3
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Classe future_error
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livello 1) C4420 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4420"
 ms.assetid: 44a37754-7ddd-4764-a5f7-d33e05c20091
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Avviso del compilatore (livello 1) C4420
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

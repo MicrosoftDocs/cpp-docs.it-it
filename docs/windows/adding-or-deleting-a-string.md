@@ -1,8 +1,7 @@
 ---
 title: "Adding or Deleting a String | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "string tables, adding strings"
 ms.assetid: 077077b4-0f4b-4633-92d6-60b321164cab
 caps.latest.revision: 11
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Adding or Deleting a String
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

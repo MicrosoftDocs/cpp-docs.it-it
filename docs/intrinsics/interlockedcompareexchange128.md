@@ -1,8 +1,7 @@
 ---
 title: "_InterlockedCompareExchange128 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "_InterlockedCompareExchange128 (funzione intrinseca)"
 ms.assetid: f05918fc-716a-4f6d-b746-1456d6b96c56
 caps.latest.revision: 17
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # _InterlockedCompareExchange128
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2171 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2171"
 ms.assetid: a80343b5-ab3f-4413-b6f1-3ce9d7e519e5
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Errore del compilatore C2171
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

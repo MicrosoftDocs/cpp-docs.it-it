@@ -1,8 +1,7 @@
 ---
 title: "Intervalli dei tipi di dati | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -56,10 +55,10 @@ helpviewer_keywords:
   - "unsigned long int"
 ms.assetid: 3691ceca-05fb-4b82-b1ae-5c4618cda91a
 caps.latest.revision: 25
-caps.handback.revision: 25
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # Intervalli dei tipi di dati
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

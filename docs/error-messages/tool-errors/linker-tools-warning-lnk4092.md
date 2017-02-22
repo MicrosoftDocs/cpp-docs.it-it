@@ -1,8 +1,7 @@
 ---
 title: "Avviso degli strumenti del linker LNK4092 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "LNK4092"
 ms.assetid: d569ec47-a338-40e1-940b-8a8061459acb
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Avviso degli strumenti del linker LNK4092
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

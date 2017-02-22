@@ -1,8 +1,7 @@
 ---
 title: "execl | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,15 +26,14 @@ f1_keywords:
   - "execl"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "execl (funzione)"
 ms.assetid: 10f24c52-7ff5-4a61-abcb-fce6d9553f23
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # execl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

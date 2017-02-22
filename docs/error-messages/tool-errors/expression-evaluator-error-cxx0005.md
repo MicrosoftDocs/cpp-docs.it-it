@@ -1,8 +1,7 @@
 ---
 title: "Errore dell‘analizzatore di espressioni CXX0005 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "CXX0005"
 ms.assetid: b88e83e4-10aa-4e9c-94d3-92aa8c688748
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Errore dell‘analizzatore di espressioni CXX0005
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

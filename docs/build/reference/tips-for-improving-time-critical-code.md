@@ -1,8 +1,7 @@
 ---
 title: "Suggerimenti per il miglioramento del codice critico | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -41,10 +40,10 @@ helpviewer_keywords:
   - "threading [C++], prestazioni"
 ms.assetid: 3e95a8cc-6239-48d1-9d6d-feb701eccb54
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Suggerimenti per il miglioramento del codice critico
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

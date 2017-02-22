@@ -1,8 +1,7 @@
 ---
 title: "Menu e risorse: aggiunte di contenitori | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,10 +26,10 @@ helpviewer_keywords:
   - "VK_ESCAPE (tasto)"
 ms.assetid: 425448be-8ca0-412e-909a-a3a9ce845288
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Menu e risorse: aggiunte di contenitori
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

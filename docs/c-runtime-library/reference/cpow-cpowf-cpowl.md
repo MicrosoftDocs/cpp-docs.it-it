@@ -1,8 +1,7 @@
 ---
 title: "cpow, cpowf, cpowl | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -35,7 +34,6 @@ f1_keywords:
   - "complex/cpowf"
   - "complex/copwl"
 dev_langs: 
-  - "C"
   - "C++"
 helpviewer_keywords: 
   - "funzione cpow"
@@ -43,10 +41,10 @@ helpviewer_keywords:
   - "funzione complesso/cpowl"
 ms.assetid: 83fe2187-22b7-4295-ab16-4d77abdbb80b
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # cpow, cpowf, cpowl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

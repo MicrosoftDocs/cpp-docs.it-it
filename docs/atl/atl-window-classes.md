@@ -1,8 +1,7 @@
 ---
 title: "Classi di finestra ATL | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "finestre [C++], creazione di superclassi"
 ms.assetid: 1d12b708-de3e-49d5-9e41-42fe4769fa62
 caps.latest.revision: 10
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Classi di finestra ATL
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

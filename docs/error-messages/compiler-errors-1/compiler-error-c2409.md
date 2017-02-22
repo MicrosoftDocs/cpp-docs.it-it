@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2409 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2409"
 ms.assetid: 5d4aa952-0752-4412-b5c2-050dde0636f4
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Errore del compilatore C2409
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

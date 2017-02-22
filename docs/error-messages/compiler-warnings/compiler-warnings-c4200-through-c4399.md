@@ -1,8 +1,7 @@
 ---
-title: "Avviso del compilatores C4200 Through C4584 | Microsoft Docs"
+title: "Compilatores C4200 Through C4399 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -45,10 +44,10 @@ dev_langs:
   - "C++"
 ms.assetid: 170248db-7bf2-4823-92d9-437b04c1290d
 caps.latest.revision: 19
-caps.handback.revision: 17
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # Avviso del compilatores C4200 Through C4584
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

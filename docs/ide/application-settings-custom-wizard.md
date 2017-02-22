@@ -1,8 +1,7 @@
 ---
 title: "Impostazioni applicazione, Creazione guidata personalizzata | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Creazione guidata personalizzata, impostazioni applicazione"
 ms.assetid: 3e0e0dbc-8848-4fca-a23a-d947a1a93f2a
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Impostazioni applicazione, Creazione guidata personalizzata
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

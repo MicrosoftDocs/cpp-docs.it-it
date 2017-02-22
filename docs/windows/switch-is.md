@@ -1,8 +1,7 @@
 ---
 title: "switch_is | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "switch_is attribute"
 ms.assetid: f1fffe5d-12d2-4e0f-8803-ccb715177d2d
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # switch_is
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

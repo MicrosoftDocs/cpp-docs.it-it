@@ -1,8 +1,7 @@
 ---
 title: "CCheckConstraints, CCheckConstraintInfo | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -39,10 +38,10 @@ helpviewer_keywords:
   - "m_szSchema"
 ms.assetid: e53e79a5-01e5-42b7-aa8c-164aec94b011
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # CCheckConstraints, CCheckConstraintInfo
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Convenzioni | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,16 +10,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "preprocessore"
   - "preprocessore, convenzioni"
 ms.assetid: 469ce448-dc6c-4d0e-ba2b-e2e7a10155e1
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Convenzioni
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

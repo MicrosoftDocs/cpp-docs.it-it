@@ -1,8 +1,7 @@
 ---
 title: "Introduzione a COM | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "COM"
 ms.assetid: 120735d9-db71-4ad3-a730-ce576ea2354e
 caps.latest.revision: 11
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Introduzione a COM
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

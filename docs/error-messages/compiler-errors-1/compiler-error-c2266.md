@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2266 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2266"
 ms.assetid: 5c267a67-d5a1-4ad7-b6f7-a156510aee35
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Errore del compilatore C2266
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

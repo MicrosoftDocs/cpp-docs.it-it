@@ -1,8 +1,7 @@
 ---
 title: "Errori di NMAKE da U1000 a U4011 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ dev_langs:
   - "C++"
 ms.assetid: 9dbe2e12-88ca-4df4-b935-17756112bb79
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Errori di NMAKE da U1000 a U4011
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

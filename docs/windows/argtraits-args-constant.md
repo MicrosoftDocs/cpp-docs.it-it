@@ -1,8 +1,7 @@
 ---
 title: "Costante ArgTraits::args | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "args (costante)"
 ms.assetid: a68100ab-254b-4571-a0bc-946f1633a46b
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Costante ArgTraits::args
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

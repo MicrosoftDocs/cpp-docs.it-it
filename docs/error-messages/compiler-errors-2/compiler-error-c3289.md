@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3289 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3289"
 ms.assetid: 3c1c623b-7fcf-43ab-a89a-8722532a8d29
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Errore del compilatore C3289
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

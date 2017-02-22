@@ -1,8 +1,7 @@
 ---
 title: "Puntatori based (C) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "__based (parola chiave) [C]"
   - "indirizzamento di base"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "puntatori, based"
 ms.assetid: b5446920-89e0-4e2f-91f3-1f2a769a08e8
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Puntatori based (C)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

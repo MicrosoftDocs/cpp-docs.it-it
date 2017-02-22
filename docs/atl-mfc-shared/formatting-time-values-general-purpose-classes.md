@@ -1,8 +1,7 @@
 ---
 title: "Formatting Time Values: General-Purpose Classes | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "time [C++], formattazione"
 ms.assetid: 7fcfee24-f874-4a4d-95b3-adc19a0f2df0
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Formatting Time Values: General-Purpose Classes
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

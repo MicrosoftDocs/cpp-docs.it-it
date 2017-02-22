@@ -1,8 +1,7 @@
 ---
 title: "PROVIDER_COLUMN_ENTRY | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "PROVIDER_COLUMN_ENTRY (macro)"
 ms.assetid: 7921cfc1-aa9c-493e-8fc4-9d4294cafe72
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # PROVIDER_COLUMN_ENTRY
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

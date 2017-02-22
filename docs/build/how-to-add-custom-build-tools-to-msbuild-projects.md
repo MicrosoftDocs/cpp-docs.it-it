@@ -1,8 +1,7 @@
 ---
 title: "Procedura: aggiungere uno strumento di compilazione personalizzato a progetti MSBuild | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "msbuild (c++), procedura: aggiunta di strumenti di compilazione personalizzata"
 ms.assetid: de03899a-371d-4396-9bf9-34f45a65e909
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Procedura: aggiungere uno strumento di compilazione personalizzato a progetti MSBuild
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

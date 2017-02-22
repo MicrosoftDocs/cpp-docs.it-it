@@ -1,8 +1,7 @@
 ---
 title: "CWinApp: classe Application | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "WinMain (metodo), in MFC"
 ms.assetid: 935822bb-d463-481b-a5f6-9719d68ed1d5
 caps.latest.revision: 13
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # CWinApp: classe Application
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Viewing a Menu as a Pop-up Menu | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "menus, pop-up"
 ms.assetid: 220a16dd-a6e8-4362-af85-68fbfce2870e
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Viewing a Menu as a Pop-up Menu
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

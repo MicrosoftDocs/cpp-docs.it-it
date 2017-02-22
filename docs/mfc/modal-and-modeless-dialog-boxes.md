@@ -1,8 +1,7 @@
 ---
 title: "Finestre di dialogo modali e non modali | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "finestre di dialogo non modali"
 ms.assetid: e83df336-5994-4b8f-8233-7942f997315b
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Finestre di dialogo modali e non modali
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

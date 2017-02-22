@@ -1,8 +1,7 @@
 ---
 title: "div | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,7 +27,6 @@ f1_keywords:
   - "div"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "div (funzione)"
   - "divisione di integer"
@@ -37,10 +35,10 @@ helpviewer_keywords:
   - "calcolo di resti"
 ms.assetid: 8ae80d97-54fd-499e-b14c-e30993b58119
 caps.latest.revision: 15
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # div
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

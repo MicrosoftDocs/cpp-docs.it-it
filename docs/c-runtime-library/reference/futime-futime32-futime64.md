@@ -1,8 +1,7 @@
 ---
 title: "_futime, _futime32, _futime64 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -33,7 +32,6 @@ f1_keywords:
   - "_futime64"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_futime (funzione)"
   - "futime32 (funzione)"
@@ -44,10 +42,10 @@ helpviewer_keywords:
   - "_futime32 (funzione)"
 ms.assetid: b942ce8f-5cc7-4fa8-ab47-de5965eded53
 caps.latest.revision: 21
-caps.handback.revision: 19
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # _futime, _futime32, _futime64
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

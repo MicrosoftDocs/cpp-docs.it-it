@@ -1,8 +1,7 @@
 ---
 title: "Finestra di dialogo Inserisci controllo ActiveX | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "Controlli ActiveX [C++], aggiunta a finestre di dialogo"
 ms.assetid: 06638ea3-0726-40da-a989-9b89292d0e3d
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Finestra di dialogo Inserisci controllo ActiveX
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

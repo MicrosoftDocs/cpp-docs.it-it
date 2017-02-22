@@ -1,8 +1,7 @@
 ---
 title: "Procedura: progettare la sicurezza dell&#39;eccezione | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
 caps.latest.revision: 20
-caps.handback.revision: 20
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # Procedura: progettare la sicurezza dell&#39;eccezione
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "IF (MASM) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "IF directive"
 ms.assetid: 82e43712-4f0c-4bf6-90ce-0663e81af707
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # IF (MASM)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

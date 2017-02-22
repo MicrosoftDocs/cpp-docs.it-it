@@ -1,8 +1,7 @@
 ---
 title: "Composite Control Global Functions | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "controlli composti, funzioni globali"
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
 caps.latest.revision: 20
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # Composite Control Global Functions
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

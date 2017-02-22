@@ -1,8 +1,7 @@
 ---
 title: "/MAPINFO (Include informazioni in file MAP) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "-MAPINFO (opzione del linker)"
 ms.assetid: 533d2bce-f9b7-4fea-ae1c-0b4864c9d10b
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # /MAPINFO (Include informazioni in file MAP)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "CManualAccessor::AddParameterEntry | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "AddParameterEntry (metodo)"
 ms.assetid: 9048b164-052b-41b1-a861-227fc529e0b5
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # CManualAccessor::AddParameterEntry
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

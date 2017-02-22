@@ -1,8 +1,7 @@
 ---
 title: "Costanti Integer C | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,15 +10,14 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "costanti Integer"
 ms.assetid: fcf6b83c-2038-49ec-91ca-3d5ca1f83037
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Costanti Integer C
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

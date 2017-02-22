@@ -1,8 +1,7 @@
 ---
 title: "IRowsetChangeImpl::DeleteRows | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "DeleteRows (metodo)"
 ms.assetid: 462ad4f1-3b2a-4134-9733-be65708aa1d9
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # IRowsetChangeImpl::DeleteRows
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "&lt;cerrno&gt; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "cerrno (intestazione)"
 ms.assetid: c618f95c-ad4b-4a6f-825b-8727322ec77a
 caps.latest.revision: 18
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # &lt;cerrno&gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

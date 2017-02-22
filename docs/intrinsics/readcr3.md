@@ -1,8 +1,7 @@
 ---
 title: "__readcr3 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "__readcr3 (funzione intrinseca)"
 ms.assetid: e24392c3-cad7-4788-8f31-94bf2e9e0053
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # __readcr3
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

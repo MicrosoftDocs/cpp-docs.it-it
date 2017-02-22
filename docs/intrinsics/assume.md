@@ -1,8 +1,7 @@
 ---
 title: "__assume | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "__assume keyword [C++]"
 ms.assetid: d8565123-b132-44b1-8235-5a8c8bff85a7
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # __assume
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

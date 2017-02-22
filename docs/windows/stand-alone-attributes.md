@@ -1,8 +1,7 @@
 ---
 title: "Stand-Alone Attributes | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "attributes [C++], standalone"
 ms.assetid: 0d72e84e-236c-43b3-ac9a-d9b91fcd6794
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Stand-Alone Attributes
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

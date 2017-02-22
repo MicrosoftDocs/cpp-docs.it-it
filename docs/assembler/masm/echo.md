@@ -1,8 +1,7 @@
 ---
 title: "ECHO | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "ECHO directive"
 ms.assetid: 68b912cc-6bd3-4f22-88cb-00a1aa17ecaf
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # ECHO
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

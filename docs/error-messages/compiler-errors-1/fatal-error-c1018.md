@@ -1,8 +1,7 @@
 ---
 title: "Errore irreversibile C1018 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C1018"
 ms.assetid: 2ceb8a99-30b2-4b80-bf42-e9f3305b3c52
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Errore irreversibile C1018
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

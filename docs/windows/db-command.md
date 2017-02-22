@@ -1,8 +1,7 @@
 ---
 title: "db_command | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "db_command (attributo)"
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # db_command
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

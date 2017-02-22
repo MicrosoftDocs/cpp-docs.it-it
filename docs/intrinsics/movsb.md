@@ -1,8 +1,7 @@
 ---
 title: "__movsb | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "__movsb (funzione intrinseca)"
 ms.assetid: ba5469f6-f797-4cd2-bee8-74c7666c26d4
 caps.latest.revision: 15
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # __movsb
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

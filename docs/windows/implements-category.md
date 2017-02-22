@@ -1,8 +1,7 @@
 ---
 title: "implements_category | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "implements_category attribute"
 ms.assetid: fb162df3-1ebe-43dc-a084-668d7ef8c03f
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # implements_category
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

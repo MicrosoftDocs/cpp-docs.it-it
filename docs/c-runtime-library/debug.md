@@ -1,8 +1,7 @@
 ---
 title: "_DEBUG | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,16 +13,15 @@ f1_keywords:
   - "DEBUG"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_DEBUG (macro)"
   - "DEBUG (macro)"
 ms.assetid: a9901568-4846-4731-a404-399d947e2e7a
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # _DEBUG
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

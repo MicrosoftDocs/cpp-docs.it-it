@@ -1,8 +1,7 @@
 ---
 title: "ccos, ccosf, ccosl | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -35,7 +34,6 @@ f1_keywords:
   - "complex/ccosf"
   - "complex/ccosl"
 dev_langs: 
-  - "C"
   - "C++"
 helpviewer_keywords: 
   - "funzione ccos"
@@ -43,10 +41,10 @@ helpviewer_keywords:
   - "funzione ccosl"
 ms.assetid: 4ab936ac-ff85-49ac-9418-2b69cf5d4696
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # ccos, ccosf, ccosl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

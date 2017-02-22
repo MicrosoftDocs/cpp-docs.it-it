@@ -1,8 +1,7 @@
 ---
 title: "Tipi di DLL | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "DLL MFC [C++], tipi"
 ms.assetid: f6a30db9-6138-4b2c-90cc-a17855e499a6
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Tipi di DLL
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

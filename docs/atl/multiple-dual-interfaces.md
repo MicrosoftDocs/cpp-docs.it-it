@@ -1,8 +1,7 @@
 ---
 title: "Multiple Dual Interfaces | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "multiple dual interfaces, exposing with ATL"
 ms.assetid: 7fea86e6-247f-4063-be6e-85588a9e3719
 caps.latest.revision: 11
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Multiple Dual Interfaces
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

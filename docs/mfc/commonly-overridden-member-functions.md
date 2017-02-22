@@ -1,8 +1,7 @@
 ---
 title: "Funzioni membro comunemente sottoposte a override | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "override, membri di classe di finestra di dialogo"
 ms.assetid: 78eb566c-e361-4c86-8db5-c7e2791b249a
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Funzioni membro comunemente sottoposte a override
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

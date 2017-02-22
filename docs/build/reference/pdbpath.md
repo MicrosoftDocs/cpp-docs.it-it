@@ -1,8 +1,7 @@
 ---
 title: "/PDBPATH | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "-PDBPATH (opzione dumpbin)"
 ms.assetid: ccf67dcd-0b23-4250-ad47-06c48acbe82b
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # /PDBPATH
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

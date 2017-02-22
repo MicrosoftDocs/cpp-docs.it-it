@@ -1,8 +1,7 @@
 ---
 title: "PROVIDER_COLUMN_ENTRY_LENGTH | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "PROVIDER_COLUMN_ENTRY_LENGTH (macro)"
 ms.assetid: b4a67246-c049-4622-bb65-242cc8cae4be
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # PROVIDER_COLUMN_ENTRY_LENGTH
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "&lt;ctime&gt; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "ctime (intestazione)"
 ms.assetid: c1f7d4a4-4bfe-4e35-92cb-f63dbd3c39a8
 caps.latest.revision: 17
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # &lt;ctime&gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

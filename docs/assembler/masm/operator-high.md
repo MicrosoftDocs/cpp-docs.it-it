@@ -1,8 +1,7 @@
 ---
 title: "operator HIGH | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "HIGH operator"
 ms.assetid: 1deea1af-5cba-4477-aab9-21891250cdfc
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # operator HIGH
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

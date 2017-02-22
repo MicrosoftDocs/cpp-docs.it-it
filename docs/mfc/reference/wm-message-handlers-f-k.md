@@ -1,8 +1,7 @@
 ---
 title: "WM_ Message Handlers: F - K | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -40,10 +39,10 @@ helpviewer_keywords:
   - "WM_ (messaggi)"
 ms.assetid: 0e7de191-1499-499f-859c-62742797808e
 caps.latest.revision: 15
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # WM_ Message Handlers: F - K
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

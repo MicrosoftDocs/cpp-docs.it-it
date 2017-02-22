@@ -1,8 +1,7 @@
 ---
 title: "Importazione di chiamate di funzione tramite __declspec(dllimport) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "importazione di chiamate di funzioni [C++]"
 ms.assetid: 6b53c616-0c6d-419a-8e2a-d2fff20510b3
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Importazione di chiamate di funzione tramite __declspec(dllimport)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

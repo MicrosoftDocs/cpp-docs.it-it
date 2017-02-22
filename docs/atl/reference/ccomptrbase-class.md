@@ -1,8 +1,7 @@
 ---
 title: "CComPtrBase Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "CComPtrBase class"
 ms.assetid: 6dbe9543-dee8-4a97-b02f-dd3a25f4a1a0
 caps.latest.revision: 19
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # CComPtrBase Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "_getcwd, _wgetcwd | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -34,7 +33,6 @@ f1_keywords:
   - "_tgetcwd"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "getcwd (funzione)"
   - "directory di lavoro"
@@ -45,10 +43,10 @@ helpviewer_keywords:
   - "utilizzo di directory [C++], corrente"
 ms.assetid: 888dc8c6-5595-4071-be55-816b38e3e739
 caps.latest.revision: 24
-caps.handback.revision: 24
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # _getcwd, _wgetcwd
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

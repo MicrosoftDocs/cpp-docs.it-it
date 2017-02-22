@@ -1,8 +1,7 @@
 ---
 title: "__thiscall | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "__thiscall (parola chiave) [C++]"
 ms.assetid: a6a22dd2-0101-4885-b33b-22f6057965df
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # __thiscall
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

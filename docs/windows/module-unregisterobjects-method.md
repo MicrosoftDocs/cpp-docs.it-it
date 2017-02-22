@@ -1,8 +1,7 @@
 ---
 title: "Metodo Module::UnregisterObjects | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "UnregisterObjects (metodo)"
 ms.assetid: 3d8119a7-991d-45e9-b8c5-ed36c0be0332
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Metodo Module::UnregisterObjects
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

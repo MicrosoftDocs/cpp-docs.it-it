@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2116 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2116"
 ms.assetid: 0089a23f-e6bd-4956-9b58-3bcca09ab5ad
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Errore del compilatore C2116
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

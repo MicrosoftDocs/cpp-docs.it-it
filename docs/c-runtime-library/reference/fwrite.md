@@ -1,8 +1,7 @@
 ---
 title: "fwrite | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,16 +27,15 @@ f1_keywords:
   - "fwrite"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "fwrite (funzione)"
   - "flussi, scrittura di dati"
 ms.assetid: 7afacf3a-72d7-4a50-ba2e-bea1ab9f4124
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # fwrite
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

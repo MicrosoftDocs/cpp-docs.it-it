@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livello 1) C4393 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4393"
 ms.assetid: 353a0539-d1ea-4c1b-8849-c9b321ec9842
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Avviso del compilatore (livello 1) C4393
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

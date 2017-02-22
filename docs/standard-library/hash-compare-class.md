@@ -1,8 +1,7 @@
 ---
 title: "Classe hash_compare | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "hash_compare (classe)"
 ms.assetid: d502bb59-de57-4585-beb9-00e3a998c0af
 caps.latest.revision: 21
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # Classe hash_compare
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

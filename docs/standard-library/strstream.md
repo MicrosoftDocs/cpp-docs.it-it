@@ -1,8 +1,7 @@
 ---
 title: "&lt;strstream&gt; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "strstream (intestazione)"
 ms.assetid: eaa9d0d4-d217-4f28-8a68-9b9ad7b1c0f5
 caps.latest.revision: 20
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # &lt;strstream&gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

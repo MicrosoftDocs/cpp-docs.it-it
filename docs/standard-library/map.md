@@ -1,8 +1,7 @@
 ---
 title: "&lt; map &gt; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "map (intestazione)"
 ms.assetid: bbf76680-7362-456e-88fa-ecda93561b6a
 caps.latest.revision: 20
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # &lt; map &gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

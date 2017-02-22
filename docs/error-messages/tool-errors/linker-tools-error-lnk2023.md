@@ -1,8 +1,7 @@
 ---
 title: "Errore degli strumenti del linker LNK2023 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "LNK2023"
 ms.assetid: c99e35a8-739a-4a20-a715-29b8c3744703
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Errore degli strumenti del linker LNK2023
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

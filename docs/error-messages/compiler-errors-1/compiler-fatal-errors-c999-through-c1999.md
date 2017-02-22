@@ -1,8 +1,7 @@
 ---
 title: "Errori del compilatore irreversibili da C999 a C1999 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -93,10 +92,10 @@ dev_langs:
   - "C++"
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # Errori del compilatore irreversibili da C999 a C1999
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

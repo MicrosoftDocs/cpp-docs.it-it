@@ -1,8 +1,7 @@
 ---
 title: "_alloca | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,17 +27,16 @@ f1_keywords:
   - "alloca"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_alloca (funzione)"
   - "alloca (funzione)"
   - "allocazione di memoria, stack"
 ms.assetid: 74488eb1-b71f-4515-88e1-cdd03b6f8225
 caps.latest.revision: 23
-caps.handback.revision: 21
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # _alloca
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

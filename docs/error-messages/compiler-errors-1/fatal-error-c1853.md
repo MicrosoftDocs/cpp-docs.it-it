@@ -1,8 +1,7 @@
 ---
 title: "Errore irreversibile C1853 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C1853"
 ms.assetid: ceb9b4a5-92bf-4573-8a9f-3109cc7743ce
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Errore irreversibile C1853
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

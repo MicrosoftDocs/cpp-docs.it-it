@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore di risorse RC2135 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "RC2135"
 ms.assetid: 1509a0fa-1cb7-4654-bcb3-ad5ac973e659
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Errore del compilatore di risorse RC2135
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

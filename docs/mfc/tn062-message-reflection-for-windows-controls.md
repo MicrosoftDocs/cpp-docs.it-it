@@ -1,8 +1,7 @@
 ---
 title: "TN062: reflection messaggi per controlli Windows | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -38,10 +37,10 @@ helpviewer_keywords:
   - "WM_NOTIFY (messaggio)"
 ms.assetid: 53efb0ba-fcda-4fa0-a3c7-14e0b78fb494
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # TN062: reflection messaggi per controlli Windows
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

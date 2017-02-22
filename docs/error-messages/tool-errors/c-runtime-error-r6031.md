@@ -1,8 +1,7 @@
 ---
-title: "Errore R6031 del linguaggio C in fase di esecuzione  | Microsoft Docs"
+title: "R6031 errore di Runtime C | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "R6031"
 ms.assetid: 805d4cd1-cb2f-43fe-87e6-e7bd5b7329c5
 caps.latest.revision: 5
-caps.handback.revision: 3
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Errore R6031 del linguaggio C in fase di esecuzione 
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

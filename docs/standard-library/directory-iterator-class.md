@@ -1,8 +1,7 @@
 ---
 title: "Classe directory_iterator | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -34,10 +33,10 @@ dev_langs:
   - "C++"
 ms.assetid: dca2ecf8-3e69-4644-a83d-705061e10cc8
 caps.latest.revision: 19
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # Classe directory_iterator
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

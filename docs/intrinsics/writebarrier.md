@@ -1,8 +1,7 @@
 ---
 title: "_WriteBarrier | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "WriteBarrier (intrinseco)"
 ms.assetid: a5ffdad9-0ca1-4eb7-b2f3-0f092c4bf4b5
 caps.latest.revision: 23
-caps.handback.revision: 23
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # _WriteBarrier
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

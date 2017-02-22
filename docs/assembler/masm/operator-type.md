@@ -1,8 +1,7 @@
 ---
 title: "operator TYPE | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "TYPE operator"
 ms.assetid: 5e714381-4a58-4323-88f8-512b01b2e155
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # operator TYPE
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

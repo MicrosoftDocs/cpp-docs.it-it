@@ -1,8 +1,7 @@
 ---
 title: "Creazione di un progetto makefile | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "file di progetto [C++], progetti Makefile"
 ms.assetid: dd077af3-97a8-48fb-baaa-cf7e07ddef61
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Creazione di un progetto makefile
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

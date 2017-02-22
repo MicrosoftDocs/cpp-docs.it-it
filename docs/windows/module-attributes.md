@@ -1,8 +1,7 @@
 ---
 title: "Module Attributes | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "attributes [C++], reference topics"
 ms.assetid: 46d135dc-613f-4810-90a4-e155ab8ed91a
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Module Attributes
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Struttura identity | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "struttura di identità"
 ms.assetid: 990756fd-7969-4b39-ad7e-0878e8dac8fd
 caps.latest.revision: 15
-caps.handback.revision: 5
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Struttura identity
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

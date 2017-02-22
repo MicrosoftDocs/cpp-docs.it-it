@@ -1,8 +1,7 @@
 ---
 title: "auto_gcroot::auto_gcroot | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "auto_gcroot::auto_gcroot"
 ms.assetid: 27faa42a-64ea-4d31-836f-073a55145735
 caps.latest.revision: 12
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # auto_gcroot::auto_gcroot
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

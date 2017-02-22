@@ -1,8 +1,7 @@
 ---
 title: "Classe IRowsetUpdateImpl | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "provider aggiornabili, aggiornamento posticipato"
 ms.assetid: f85af76b-ab6f-4f8b-8f4a-337c9679d68f
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Classe IRowsetUpdateImpl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

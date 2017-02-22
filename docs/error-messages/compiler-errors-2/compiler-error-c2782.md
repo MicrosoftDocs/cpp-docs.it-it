@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2782 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2782"
 ms.assetid: 8b685422-294d-4f64-9f3d-c14eaf03a93d
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Errore del compilatore C2782
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "_get_timezone | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,17 +28,16 @@ f1_keywords:
   - "get_timezone"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "fusi orari"
   - "get_timezone (funzione)"
   - "_get_timezone (funzione)"
 ms.assetid: 30ab0838-0ae9-4a2f-bfe6-a49ee443b21e
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # _get_timezone
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

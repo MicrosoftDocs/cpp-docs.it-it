@@ -1,8 +1,7 @@
 ---
 title: "Avviso degli strumenti del linker LNK4105 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "LNK4105"
 ms.assetid: 6c7bebf4-4ea6-4533-a6ed-e563d43abbd7
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Avviso degli strumenti del linker LNK4105
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

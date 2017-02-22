@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2199 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2199"
 ms.assetid: 6a92a1b7-7906-49e6-a31f-e8bffbc7706a
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Errore del compilatore C2199
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Errore irreversibile C1382 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C1382"
 ms.assetid: 7a100f8c-3179-4927-a2f1-98de4c753850
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Errore irreversibile C1382
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

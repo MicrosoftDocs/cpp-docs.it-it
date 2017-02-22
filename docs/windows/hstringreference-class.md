@@ -1,8 +1,7 @@
 ---
 title: "Classe HStringReference | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ dev_langs:
   - "C++"
 ms.assetid: 9bf823b1-17eb-4ac4-8c5d-27d27c7a4150
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # Classe HStringReference
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

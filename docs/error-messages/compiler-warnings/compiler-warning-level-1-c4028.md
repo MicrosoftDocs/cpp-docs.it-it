@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livello 1) C4028 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4028"
 ms.assetid: c3e8b70b-e870-416c-a285-bba5f71dbfc6
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Avviso del compilatore (livello 1) C4028
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

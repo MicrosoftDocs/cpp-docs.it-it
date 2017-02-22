@@ -1,8 +1,7 @@
 ---
 title: "finally | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "finally (parola chiave) [C++]"
 ms.assetid: b55f3c8e-1af0-43e8-bcfb-99c3685d2578
 caps.latest.revision: 9
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # finally
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

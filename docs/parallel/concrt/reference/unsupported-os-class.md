@@ -1,8 +1,7 @@
 ---
 title: "Classe unsupported_os | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "unsupported_os (classe)"
 ms.assetid: 6fa57636-341b-4b51-84cc-261d283ff736
 caps.latest.revision: 20
-caps.handback.revision: 14
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # Classe unsupported_os
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

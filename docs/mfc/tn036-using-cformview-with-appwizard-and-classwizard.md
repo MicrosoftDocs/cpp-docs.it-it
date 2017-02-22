@@ -1,8 +1,7 @@
 ---
 title: "TN036: utilizzo di CFormView con AppWizard e ClassWizard | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "TN036"
 ms.assetid: dd54053f-ae80-4d23-9180-c7d07ddf2290
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # TN036: utilizzo di CFormView con AppWizard e ClassWizard
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

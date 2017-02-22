@@ -1,8 +1,7 @@
 ---
 title: "_gcvt_s | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,7 +28,6 @@ f1_keywords:
   - "gcvt_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_CVTBUFSIZE"
   - "_gcvt_s (funzione)"
@@ -41,10 +39,10 @@ helpviewer_keywords:
   - "stringhe [C++], conversione da virgola mobile"
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
 caps.latest.revision: 30
-caps.handback.revision: 28
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 30
 ---
 # _gcvt_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

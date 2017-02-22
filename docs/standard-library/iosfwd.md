@@ -1,8 +1,7 @@
 ---
 title: "&lt;iosfwd&gt; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "iosfwd (intestazione)"
 ms.assetid: 964442eb-17f1-43ef-a0e0-c5bb77f9c187
 caps.latest.revision: 18
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # &lt;iosfwd&gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

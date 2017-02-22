@@ -1,8 +1,7 @@
 ---
 title: "Errore di compilazione progetto PRJ0035 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "PRJ0035"
 ms.assetid: 0667116d-338c-40a4-972c-da875f778cb5
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Errore di compilazione progetto PRJ0035
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

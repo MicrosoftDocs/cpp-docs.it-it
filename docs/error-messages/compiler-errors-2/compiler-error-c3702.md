@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3702 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3702"
 ms.assetid: 14fcc20e-4404-45d7-be54-e4f09332fa5a
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Errore del compilatore C3702
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

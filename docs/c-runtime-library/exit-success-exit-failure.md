@@ -1,8 +1,7 @@
 ---
 title: "EXIT_SUCCESS, EXIT_FAILURE | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,16 +13,15 @@ f1_keywords:
   - "EXIT_SUCCESS"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "EXIT_FAILURE (costante)"
   - "EXIT_SUCCESS (costante)"
 ms.assetid: ff2c82cb-c0bb-4556-a812-59aa278bfac5
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # EXIT_SUCCESS, EXIT_FAILURE
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

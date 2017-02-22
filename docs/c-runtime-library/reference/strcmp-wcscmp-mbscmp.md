@@ -1,8 +1,7 @@
 ---
 title: "strcmp, wcscmp, _mbscmp | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,6 +22,7 @@ apilocation:
   - "msvcr110_clr0400.dll"
   - "msvcr120.dll"
   - "msvcr120_clr0400.dll"
+  - "ntdll.dll"
   - "ucrtbase.dll"
   - "api-ms-win-crt-multibyte-l1-1-0.dll"
   - "api-ms-win-crt-string-l1-1-0.dll"
@@ -35,7 +35,6 @@ f1_keywords:
   - "_ftcscmp"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_ftcscmp (funzione)"
   - "_mbscmp (funzione)"
@@ -49,10 +48,10 @@ helpviewer_keywords:
   - "wcscmp (funzione)"
 ms.assetid: 5d216b57-7a5c-4cb3-abf0-0f4facf4396d
 caps.latest.revision: 24
-caps.handback.revision: 22
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # strcmp, wcscmp, _mbscmp
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

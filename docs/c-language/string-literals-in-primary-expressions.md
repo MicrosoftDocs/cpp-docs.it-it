@@ -1,8 +1,7 @@
 ---
 title: "Valori letterali stringa in espressioni primarie | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,15 +10,14 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "stringhe letterali, espressioni primarie"
 ms.assetid: 3ec31278-527b-40d2-8c83-6b09e2d81ca6
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Valori letterali stringa in espressioni primarie
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

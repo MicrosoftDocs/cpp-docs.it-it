@@ -1,8 +1,7 @@
 ---
 title: "_getdiskfree | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,7 +28,6 @@ f1_keywords:
   - "_getdiskfree"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_diskfree_t (tipo)"
   - "_getdiskfree (funzione)"
@@ -38,10 +36,10 @@ helpviewer_keywords:
   - "getdiskfree (funzione)"
 ms.assetid: 47a3f6cf-4816-452a-8f3d-1c3ae02a0f2a
 caps.latest.revision: 21
-caps.handback.revision: 19
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # _getdiskfree
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

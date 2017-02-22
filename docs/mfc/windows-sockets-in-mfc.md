@@ -1,8 +1,7 @@
 ---
 title: "Windows Sockets in MFC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "WSOCK32.DLL"
 ms.assetid: 1f3c476a-9c68-49fe-9a25-d22971a334d0
 caps.latest.revision: 12
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Windows Sockets in MFC
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

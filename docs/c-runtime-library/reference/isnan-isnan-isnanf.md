@@ -1,8 +1,7 @@
 ---
 title: "isNaN, isNaN, _isnanf | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -35,7 +34,6 @@ f1_keywords:
   - "_isnanf"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "NAN (non un numero)"
   - "_isnan (funzione)"
@@ -44,10 +42,10 @@ helpviewer_keywords:
   - "isnan (funzione)"
 ms.assetid: 391fbc5b-89a4-4fba-997e-68f1131caf82
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # isNaN, isNaN, _isnanf
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

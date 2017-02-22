@@ -1,8 +1,7 @@
 ---
 title: "Utilizzo di propriet&#224; di progetto | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "progetti [C++], proprietà"
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
 caps.latest.revision: 45
-caps.handback.revision: 45
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 45
 ---
 # Utilizzo di propriet&#224; di progetto
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Date and Time: Automation Support | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "ora [Visual Studio], Automation support"
 ms.assetid: 6eee94c4-943d-4ffc-bf7c-bdda89337ab0
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Date and Time: Automation Support
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

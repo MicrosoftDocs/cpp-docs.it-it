@@ -1,8 +1,7 @@
 ---
 title: "Binary Editor | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "Binary editor"
 ms.assetid: 2483c48b-1252-4dbc-826b-82e6c1a0e9cb
 caps.latest.revision: 14
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Binary Editor
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

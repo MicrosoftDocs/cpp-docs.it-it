@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2411 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2411"
 ms.assetid: 453317d3-0629-4b42-b8ea-3a0b39698ca5
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Errore del compilatore C2411
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

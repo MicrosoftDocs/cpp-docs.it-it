@@ -1,8 +1,7 @@
 ---
 title: "Struttura HANDLENullTraits | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "HANDLENullTraits (struttura)"
 ms.assetid: 88a29a14-c516-40cb-a0ca-ee897a668623
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Struttura HANDLENullTraits
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

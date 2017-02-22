@@ -1,8 +1,7 @@
 ---
 title: "Classe is_volatile | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "is_volatile"
 ms.assetid: 54922e8a-db4e-4cae-8931-b3352f0b8d3b
 caps.latest.revision: 19
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # Classe is_volatile
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

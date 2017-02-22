@@ -1,8 +1,7 @@
 ---
 title: "Funzioni virtuali private | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "funzioni virtual, private"
 ms.assetid: 04448086-bf72-44be-9c1f-dfda1744949e
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Funzioni virtuali private
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

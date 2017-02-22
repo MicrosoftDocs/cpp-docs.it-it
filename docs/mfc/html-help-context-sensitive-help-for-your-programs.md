@@ -1,8 +1,7 @@
 ---
 title: "Guida HTML: Guida sensibile al contesto per i programmi | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "HTML (Guida), sensibile al contesto"
 ms.assetid: f2eabbbb-0796-43f3-a483-5f7cf00f2e7c
 caps.latest.revision: 13
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Guida HTML: Guida sensibile al contesto per i programmi
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

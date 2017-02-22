@@ -1,8 +1,7 @@
 ---
 title: "&lt;unordered_set&gt; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "unordered_set (intestazione) [TR1]"
 ms.assetid: a3364d54-147d-4796-8728-9e62a2e4c226
 caps.latest.revision: 20
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # &lt;unordered_set&gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

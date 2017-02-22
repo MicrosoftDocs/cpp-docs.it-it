@@ -1,8 +1,7 @@
 ---
 title: "Messaggi WM_: S | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -48,10 +47,10 @@ helpviewer_keywords:
   - "WM_ (messaggi)"
 ms.assetid: 4b9aec79-a98f-4aa0-a3d9-110941b6dcbc
 caps.latest.revision: 14
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Messaggi WM_: S
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

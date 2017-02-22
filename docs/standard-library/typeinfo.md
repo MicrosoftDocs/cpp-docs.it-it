@@ -1,8 +1,7 @@
 ---
 title: "&lt;typeinfo&gt; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "typeinfo (intestazione)"
 ms.assetid: 97ebc4d0-0e0e-41c3-9787-fdef2e38e56f
 caps.latest.revision: 12
-caps.handback.revision: 2
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # &lt;typeinfo&gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

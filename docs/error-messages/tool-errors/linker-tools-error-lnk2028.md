@@ -1,8 +1,7 @@
 ---
 title: "Errore degli strumenti del linker LNK2028 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "LNK2028"
 ms.assetid: e2b03293-6066-464d-a050-ce747bcf7f0e
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Errore degli strumenti del linker LNK2028
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

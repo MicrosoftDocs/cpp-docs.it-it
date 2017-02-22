@@ -1,8 +1,7 @@
 ---
 title: "/link (passaggio delle opzioni al linker) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "Passa le opzioni al linker"
 ms.assetid: 16902a94-c094-4328-841f-3ac94ca04848
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # /link (passaggio delle opzioni al linker)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

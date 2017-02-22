@@ -1,8 +1,7 @@
 ---
 title: "Procedura: chiamare propriet&#224; e metodi del controllo Windows Form | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "controlli Windows Form [C++], proprietà"
 ms.assetid: 6e647d8a-fdaa-4aa1-b3fe-04f15cff8eb3
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Procedura: chiamare propriet&#224; e metodi del controllo Windows Form
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Convenzioni di denominazione delle librerie | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "librerie di codici oggetto, convenzioni di denominazione MFC"
 ms.assetid: 39fe7d93-5a14-4c6a-b16c-bf318fa01278
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Convenzioni di denominazione delle librerie
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

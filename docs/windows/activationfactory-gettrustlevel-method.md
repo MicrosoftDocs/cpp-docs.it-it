@@ -1,8 +1,7 @@
 ---
 title: "Metodo ActivationFactory::GetTrustLevel | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "GetTrustLevel (metodo)"
 ms.assetid: 31547ae6-d2ab-4039-923c-154d53fb1a8b
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # Metodo ActivationFactory::GetTrustLevel
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

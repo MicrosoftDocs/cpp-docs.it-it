@@ -1,8 +1,7 @@
 ---
 title: "Attribute Contexts | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "attributes [C++], contexts"
 ms.assetid: 3086351f-77a8-4048-99e9-3b6b041b9437
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Attribute Contexts
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

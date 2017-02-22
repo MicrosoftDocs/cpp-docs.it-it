@@ -1,8 +1,7 @@
 ---
 title: "CXMLAccessor::GetXMLRowData | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "GetXMLRowData (metodo)"
 ms.assetid: 156b66e3-42fd-491c-8943-38cf5e36f687
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # CXMLAccessor::GetXMLRowData
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

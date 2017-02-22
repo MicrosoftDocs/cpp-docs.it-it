@@ -1,8 +1,7 @@
 ---
 title: "Classe remove_all_extents | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "remove_all_extents"
 ms.assetid: 548dc536-82e7-423a-b8c1-443d66d9632e
 caps.latest.revision: 16
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # Classe remove_all_extents
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

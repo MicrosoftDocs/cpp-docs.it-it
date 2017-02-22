@@ -1,8 +1,7 @@
 ---
 title: "Implementing the Event Handling Interface | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "interfacce, event and event sink"
 ms.assetid: eb2a5b33-88dc-4ce3-bee0-c5c38ea050d7
 caps.latest.revision: 10
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Implementing the Event Handling Interface
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

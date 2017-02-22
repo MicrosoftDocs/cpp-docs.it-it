@@ -1,8 +1,7 @@
 ---
 title: "_com_ptr_t::_com_ptr_t | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "_com_ptr_t (metodo)"
 ms.assetid: 0c00620a-28d2-4f60-ae4a-1696be36137e
 caps.latest.revision: 9
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # _com_ptr_t::_com_ptr_t
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

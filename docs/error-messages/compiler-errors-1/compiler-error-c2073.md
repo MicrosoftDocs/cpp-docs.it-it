@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2073 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2073"
 ms.assetid: 57908234-be7a-4ce9-b0a7-8b1ad621865e
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Errore del compilatore C2073
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

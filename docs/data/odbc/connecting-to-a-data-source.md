@@ -1,8 +1,7 @@
 ---
 title: "Connessione a un&#39;origine dati | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "origini dati ODBC [C++], connessioni"
 ms.assetid: ef6c8c98-5979-43a8-9fb5-5bb06fc59f36
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Connessione a un&#39;origine dati
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

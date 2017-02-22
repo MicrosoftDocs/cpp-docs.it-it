@@ -1,8 +1,7 @@
 ---
 title: "Connection Point Global Functions | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "punti di connessione [C++], funzioni globali"
 ms.assetid: bcb4bf50-2155-4e20-b8bb-f2908b03a6e7
 caps.latest.revision: 20
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # Connection Point Global Functions
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "putch | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,15 +26,14 @@ f1_keywords:
   - "putch"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "putch (funzione)"
 ms.assetid: 81e733e5-770e-4c7a-b7e4-8e66da109f92
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # putch
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

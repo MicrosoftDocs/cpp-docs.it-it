@@ -1,8 +1,7 @@
 ---
 title: "CComEnum Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "CComEnum class"
 ms.assetid: bff7dd7b-eb6e-4d6e-96ed-2706e66c8b3b
 caps.latest.revision: 20
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # CComEnum Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "MFC e ATL | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 31b1a3a8-4154-4c4a-af10-fafc23ecdc5c
 caps.latest.revision: 8
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # MFC e ATL
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Avviso degli strumenti del linker LNK4210 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "LNK4210"
 ms.assetid: db48cff8-a2be-4a77-8d03-552b42c228fa
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Avviso degli strumenti del linker LNK4210
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

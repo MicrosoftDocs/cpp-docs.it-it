@@ -1,8 +1,7 @@
 ---
 title: "CTranslations, CTranslationInfo | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -37,10 +36,10 @@ helpviewer_keywords:
   - "m_szTargetSchema"
 ms.assetid: 19a64828-2d4c-42a0-8bfb-b010e334a9b3
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # CTranslations, CTranslationInfo
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

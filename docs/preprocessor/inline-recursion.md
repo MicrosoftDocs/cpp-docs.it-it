@@ -1,8 +1,7 @@
 ---
 title: "inline_recursion | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,16 +13,15 @@ f1_keywords:
   - "vc-pragma.inline_recursion"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "inline_recursion (pragma)"
   - "pragma, inline_recursion"
 ms.assetid: cfef5791-63b7-45ac-9574-623747b9b9c9
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # inline_recursion
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

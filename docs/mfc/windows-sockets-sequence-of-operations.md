@@ -1,8 +1,7 @@
 ---
 title: "Windows Sockets: sequenza di operazioni | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "Windows Sockets [C++], socket di flusso"
 ms.assetid: 43ce76f5-aad3-4247-b8a6-16cc7d012796
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Windows Sockets: sequenza di operazioni
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

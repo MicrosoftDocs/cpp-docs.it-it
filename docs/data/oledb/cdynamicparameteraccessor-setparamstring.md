@@ -1,8 +1,7 @@
 ---
 title: "CDynamicParameterAccessor::SetParamString | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "SetParamString (metodo)"
 ms.assetid: 77a38d23-7e33-4e5a-bda6-c12c4c3fe2e4
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # CDynamicParameterAccessor::SetParamString
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

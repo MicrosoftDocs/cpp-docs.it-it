@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3610 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3610"
 ms.assetid: 9349a348-9d37-4a00-9eab-481039268d31
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Errore del compilatore C3610
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

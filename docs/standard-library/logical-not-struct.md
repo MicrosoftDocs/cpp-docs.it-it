@@ -1,8 +1,7 @@
 ---
 title: "Struct logical_not | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "logical_not (struct)"
 ms.assetid: 892db678-31da-4540-974b-17b05efc0849
 caps.latest.revision: 21
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # Struct logical_not
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

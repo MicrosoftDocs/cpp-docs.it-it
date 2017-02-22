@@ -1,8 +1,7 @@
 ---
 title: "Procedura dettagliata: rimozione di lavoro da un thread dell&#39;interfaccia utente | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "thread di interfaccia utente, rimozione di lavoro [Runtime di concorrenza]"
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
 caps.latest.revision: 14
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Procedura dettagliata: rimozione di lavoro da un thread dell&#39;interfaccia utente
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

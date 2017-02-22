@@ -1,8 +1,7 @@
 ---
 title: "Inizializzazione di assembly misti | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "assembly misti [C++], inizializzazione"
 ms.assetid: bfab7d9e-f323-4404-bcb8-712b15f831eb
 caps.latest.revision: 24
-caps.handback.revision: 24
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # Inizializzazione di assembly misti
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

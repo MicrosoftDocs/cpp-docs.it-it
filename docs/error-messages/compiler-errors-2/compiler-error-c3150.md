@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3150 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3150"
 ms.assetid: c1ff28f5-52fe-4fd4-81d0-2e0ad8548631
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Errore del compilatore C3150
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

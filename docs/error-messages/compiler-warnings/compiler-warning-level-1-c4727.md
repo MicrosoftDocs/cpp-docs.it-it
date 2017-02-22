@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livello 1) C4727 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4727"
 ms.assetid: 991b0087-3a50-40f5-9cdb-cdc367cd472c
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # Avviso del compilatore (livello 1) C4727
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

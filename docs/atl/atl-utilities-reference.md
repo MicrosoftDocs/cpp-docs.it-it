@@ -1,8 +1,7 @@
 ---
 title: "Riferimenti sulle utilit&#224; ATL | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: dd8a2888-34f4-461e-9bf4-834218f9b95b
 caps.latest.revision: 8
-caps.handback.revision: 3
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # Riferimenti sulle utilit&#224; ATL
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

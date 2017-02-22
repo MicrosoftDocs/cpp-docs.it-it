@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore di risorse RW2002 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "RW2002"
 ms.assetid: b1d1a49b-b50b-4b0b-9f09-c7762e2dbe8f
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Errore del compilatore di risorse RW2002
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Funzione Move | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Move (funzione)"
 ms.assetid: c9525426-97e8-4d8c-9877-b689d8a0dc67
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Funzione Move
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

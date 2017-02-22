@@ -1,8 +1,7 @@
 ---
 title: "Costante ImplementsHelper::IidCount | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "IidCount (costante)"
 ms.assetid: 214cde76-8d2f-4f74-97e6-1af7ee8a08a4
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Costante ImplementsHelper::IidCount
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

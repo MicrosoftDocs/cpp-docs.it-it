@@ -1,8 +1,7 @@
 ---
 title: "TN022: implementazione di comandi standard | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -70,10 +69,10 @@ helpviewer_keywords:
   - "TN022"
 ms.assetid: a7883b46-23f7-4870-ac3a-804aed9258b5
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # TN022: implementazione di comandi standard
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

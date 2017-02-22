@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3356 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3356"
 ms.assetid: 6c1094f6-ac85-480a-b78b-e92fcf38641a
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Errore del compilatore C3356
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

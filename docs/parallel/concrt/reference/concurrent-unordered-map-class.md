@@ -1,8 +1,7 @@
 ---
 title: "Classe concurrent_unordered_map | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "concurrent_unordered_map (classe)"
 ms.assetid: b2d879dd-87ef-4af9-a266-a5443fd538b8
 caps.latest.revision: 13
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Classe concurrent_unordered_map
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

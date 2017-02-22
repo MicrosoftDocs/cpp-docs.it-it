@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livello 3) C4265 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4265"
 ms.assetid: 20547159-6f30-4cc4-83aa-927884c8bb4c
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Avviso del compilatore (livello 3) C4265
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

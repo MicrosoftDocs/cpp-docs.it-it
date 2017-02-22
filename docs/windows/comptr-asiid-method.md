@@ -1,8 +1,7 @@
 ---
 title: "Metodo ComPtr::AsIID | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "AsIID (metodo)"
 ms.assetid: d5a3cdb2-796d-4410-966a-847c0e8fb226
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Metodo ComPtr::AsIID
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Avviso degli strumenti del linker LNK4070 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "LNK4070"
 ms.assetid: f95f179a-fff9-427e-bd51-466b3934517f
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Avviso degli strumenti del linker LNK4070
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

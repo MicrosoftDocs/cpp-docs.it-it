@@ -1,8 +1,7 @@
 ---
 title: "const_seg | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,16 +13,15 @@ f1_keywords:
   - "const_seg_CPP"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "const_seg (pragma)"
   - "pragma, const_seg"
 ms.assetid: 1eb58ee2-fb0e-4a39-9621-699c8f5ef957
 caps.latest.revision: 12
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # const_seg
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

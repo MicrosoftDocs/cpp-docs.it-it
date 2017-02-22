@@ -1,8 +1,7 @@
 ---
 title: "Associating Menu Commands with Status Bar Text in MFC Applications | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "menus, status bar text"
 ms.assetid: 757c0e02-bc97-493f-bccd-6cc6887ebc64
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Associating Menu Commands with Status Bar Text in MFC Applications
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

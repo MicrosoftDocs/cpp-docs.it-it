@@ -1,8 +1,7 @@
 ---
 title: "How to: Create a Resource | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "resources [Visual Studio], creating"
 ms.assetid: aad44914-9145-45a3-a7d8-9de89b366716
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # How to: Create a Resource
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

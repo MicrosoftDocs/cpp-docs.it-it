@@ -1,8 +1,7 @@
 ---
 title: "Compiler Error C2384 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2384"
 ms.assetid: 8145f7ad-31b1-406d-ac43-0d557feab635
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Compiler Error C2384
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

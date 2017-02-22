@@ -1,8 +1,7 @@
 ---
 title: "BEGIN_PARAM_MAP | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "BEGIN_PARAM_MAP (macro)"
 ms.assetid: 32f3f70e-c7c6-4b80-ab98-e02c8eb3a894
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # BEGIN_PARAM_MAP
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

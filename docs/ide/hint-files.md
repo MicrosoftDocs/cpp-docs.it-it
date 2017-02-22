@@ -1,8 +1,7 @@
 ---
 title: "File dei suggerimenti | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "Visualizzazione classi, file dei suggerimenti"
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
 caps.latest.revision: 32
-caps.handback.revision: 32
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 32
 ---
 # File dei suggerimenti
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

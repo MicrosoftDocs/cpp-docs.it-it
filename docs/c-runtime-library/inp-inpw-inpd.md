@@ -1,8 +1,7 @@
 ---
 title: "_inp, _inpw, _inpd | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,7 +28,6 @@ f1_keywords:
   - "_inpd"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_inp (funzione)"
   - "_inpd (funzione)"
@@ -41,10 +39,10 @@ helpviewer_keywords:
   - "porte, routine I/O"
 ms.assetid: 5d9c2e38-fc85-4294-86d5-7282cc02d1b3
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # _inp, _inpw, _inpd
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "_getcwd_dbg, _wgetcwd_dbg | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,7 +31,6 @@ f1_keywords:
   - "wgetcwd_dbg"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_getcwd_dbg (funzione)"
   - "_wgetcwd_dbg (funzione)"
@@ -43,10 +41,10 @@ helpviewer_keywords:
   - "directory di lavoro"
 ms.assetid: 8d5d151f-d844-4aa6-a28c-1c11a22dc00d
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # _getcwd_dbg, _wgetcwd_dbg
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

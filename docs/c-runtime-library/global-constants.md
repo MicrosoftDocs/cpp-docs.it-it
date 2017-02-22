@@ -1,8 +1,7 @@
 ---
 title: "Costanti globali | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,15 +12,14 @@ f1_keywords:
   - "c.constants"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "costanti globali"
 ms.assetid: 778d86fd-3ca6-4d2b-b4c5-aee6dc1efe6b
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Costanti globali
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

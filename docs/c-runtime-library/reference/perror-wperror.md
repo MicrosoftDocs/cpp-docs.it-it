@@ -1,8 +1,7 @@
 ---
 title: "perror, _wperror | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,7 +30,6 @@ f1_keywords:
   - "perror"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_tperror (funzione)"
   - "_wperror (funzione)"
@@ -42,10 +40,10 @@ helpviewer_keywords:
   - "wperror (funzione)"
 ms.assetid: 34fce792-16fd-4673-9849-cd88b54b6cd5
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # perror, _wperror
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

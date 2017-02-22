@@ -1,8 +1,7 @@
 ---
 title: "Elapsed Time: General-Purpose Classes | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "ora, elapsed"
 ms.assetid: e5c5d3d2-ce1d-409e-875c-98848434e716
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Elapsed Time: General-Purpose Classes
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

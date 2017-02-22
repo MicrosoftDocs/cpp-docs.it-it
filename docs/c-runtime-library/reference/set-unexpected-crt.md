@@ -1,8 +1,7 @@
 ---
 title: "set_unexpected (CRT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,17 +26,16 @@ f1_keywords:
   - "set_unexpected"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "gestione eccezioni, chiusura"
   - "set_unexpected (funzione)"
   - "funzione non prevista"
 ms.assetid: ebcef032-4771-48e5-88aa-2a1ab8750aa6
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # set_unexpected (CRT)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

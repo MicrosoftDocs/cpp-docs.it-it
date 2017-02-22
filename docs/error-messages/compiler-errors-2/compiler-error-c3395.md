@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3395 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3395"
 ms.assetid: 26a9ebc9-ed97-47ce-b436-19aa2bcf6e50
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Errore del compilatore C3395
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

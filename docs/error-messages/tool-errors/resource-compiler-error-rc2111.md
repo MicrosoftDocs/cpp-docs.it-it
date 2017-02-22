@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore di risorse RC2111 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "RC2111"
 ms.assetid: 118cba57-82a4-4199-acf4-9d9561946218
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Errore del compilatore di risorse RC2111
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

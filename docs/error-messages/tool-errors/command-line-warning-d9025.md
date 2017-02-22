@@ -1,8 +1,7 @@
 ---
 title: "Avviso della riga di comando D9025 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "D9025"
 ms.assetid: 6edff72c-1508-46c2-99f4-0e4b3c5e60c9
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Avviso della riga di comando D9025
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

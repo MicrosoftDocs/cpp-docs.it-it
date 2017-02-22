@@ -1,8 +1,7 @@
 ---
 title: "Classe regex_iterator | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "regex_iterator (classe) [TR1]"
 ms.assetid: 0cfd8fd0-5a95-4f3c-bf8e-6ef028c423d3
 caps.latest.revision: 16
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # Classe regex_iterator
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

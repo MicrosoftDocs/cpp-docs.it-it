@@ -1,8 +1,7 @@
 ---
 title: "_heapset | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,7 +24,6 @@ f1_keywords:
   - "heapset"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_heapset (funzione)"
   - "controllo dell'heap"
@@ -34,10 +32,10 @@ helpviewer_keywords:
   - "heapset (funzione)"
 ms.assetid: 9667eeb0-55bc-4c19-af5f-d1fd0a142b3c
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # _heapset
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Nessun collegamento | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,16 +10,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "collegamento [C++], nessuno"
   - "nessun collegamento"
 ms.assetid: 5a413082-1034-4e04-b76b-8d14668bf434
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Nessun collegamento
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

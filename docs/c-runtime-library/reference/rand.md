@@ -1,8 +1,7 @@
 ---
 title: "rand | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,7 +27,6 @@ f1_keywords:
   - "rand"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "generazione di numeri pseudocasuali"
   - "numeri, generazione di numeri pseudocasuali"
@@ -38,10 +36,10 @@ helpviewer_keywords:
   - "numeri casuali, generazione"
 ms.assetid: 75d9df25-7aaf-4a88-b940-2775559634e8
 caps.latest.revision: 20
-caps.handback.revision: 18
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # rand
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Procedura: Creare agenti che usano criteri dell&#39;utilit&#224; di pianificazione specifici | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "creazione di agenti che usano criteri specifici [Runtime di concorrenza]"
 ms.assetid: 46a3e265-0777-4ec3-a142-967bafc49d67
 caps.latest.revision: 14
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Procedura: Creare agenti che usano criteri dell&#39;utilit&#224; di pianificazione specifici
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

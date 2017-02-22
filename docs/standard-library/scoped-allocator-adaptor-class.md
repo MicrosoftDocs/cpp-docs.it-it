@@ -1,8 +1,7 @@
 ---
 title: "Classe scoped_allocator_adaptor | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "Classe scoped_allocator_adaptor"
 ms.assetid: 0d9b06a1-9a4a-4669-9470-8805cae48e89
 caps.latest.revision: 10
-caps.handback.revision: 1
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Classe scoped_allocator_adaptor
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

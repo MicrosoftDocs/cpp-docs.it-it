@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2754 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2754"
 ms.assetid: 1cab66c5-da9d-4b81-b7fb-9cdc48ff1ccc
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Errore del compilatore C2754
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

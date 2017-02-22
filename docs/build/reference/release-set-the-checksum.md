@@ -1,8 +1,7 @@
 ---
 title: "/RELEASE (Imposta checksum) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "-RELEASE (opzione del linker)"
 ms.assetid: 93bcadf4-29ac-4824-914b-6997e3751d22
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # /RELEASE (Imposta checksum)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

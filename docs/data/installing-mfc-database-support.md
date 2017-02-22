@@ -1,8 +1,7 @@
 ---
 title: "Installazione del supporto di MFC per database | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "driver ODBC [C++], installazione"
 ms.assetid: a6c2fc84-9e0e-4f39-a464-0bcbc415b946
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Installazione del supporto di MFC per database
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

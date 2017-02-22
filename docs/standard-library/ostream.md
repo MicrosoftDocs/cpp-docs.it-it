@@ -1,8 +1,7 @@
 ---
 title: "&lt;ostream&gt; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "ostream (intestazione)"
 ms.assetid: 90c3b6fb-57cd-4ae7-99b8-8512f24a67d2
 caps.latest.revision: 20
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # &lt;ostream&gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

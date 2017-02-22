@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2048 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2048"
 ms.assetid: 44704726-85fc-42f0-afb9-194df8c4ca7c
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Errore del compilatore C2048
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

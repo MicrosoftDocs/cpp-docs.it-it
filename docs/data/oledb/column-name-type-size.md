@@ -1,8 +1,7 @@
 ---
 title: "COLUMN_NAME_TYPE_SIZE | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "COLUMN_NAME_TYPE_SIZE (macro)"
 ms.assetid: b10f8ef9-78ce-4ec9-b4cc-4278271a46dd
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # COLUMN_NAME_TYPE_SIZE
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

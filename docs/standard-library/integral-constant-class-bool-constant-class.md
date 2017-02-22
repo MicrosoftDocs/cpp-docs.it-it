@@ -1,8 +1,7 @@
 ---
 title: "integral_constant (classe), bool_constant (classe) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,10 +26,10 @@ helpviewer_keywords:
   - "bool_constant"
 ms.assetid: 11c002c6-4d31-4042-9341-f2543f43e108
 caps.latest.revision: 23
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # integral_constant (classe), bool_constant (classe)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

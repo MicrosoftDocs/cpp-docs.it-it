@@ -1,8 +1,7 @@
 ---
 title: "Adding Event Handlers for Dialog Box Controls | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "event handlers, for dialog box controls"
 ms.assetid: f9c70f24-ea6f-44df-82eb-78a2deaee769
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Adding Event Handlers for Dialog Box Controls
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

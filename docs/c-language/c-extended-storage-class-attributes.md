@@ -1,8 +1,7 @@
 ---
 title: "Attributi di classi di archiviazione estesi C | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "__declspec (parola chiave) [C]"
   - "attributi estesi"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "identificatori di classi di archiviazione, classi di archiviazione C"
 ms.assetid: 2580735c-f5bf-46ab-9468-0696893d82be
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Attributi di classi di archiviazione estesi C
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Gestione del pulsante Applica | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "finestre delle proprietà, pulsante Applica"
 ms.assetid: 7e977015-59b8-406f-b545-aad0bfd8d55b
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Gestione del pulsante Applica
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

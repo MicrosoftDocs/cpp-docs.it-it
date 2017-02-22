@@ -1,8 +1,7 @@
 ---
 title: "btowc | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,15 +27,14 @@ f1_keywords:
   - "btowc"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "btowc (funzione)"
 ms.assetid: 99a46e02-6f86-4569-af79-5feca012add8
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # btowc
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

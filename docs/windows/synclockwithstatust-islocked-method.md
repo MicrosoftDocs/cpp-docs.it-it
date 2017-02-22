@@ -1,8 +1,7 @@
 ---
 title: "Metodo SyncLockWithStatusT::IsLocked | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "IsLocked (metodo)"
 ms.assetid: e1b75b7b-c145-471a-aa5d-71abf31f5990
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Metodo SyncLockWithStatusT::IsLocked
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

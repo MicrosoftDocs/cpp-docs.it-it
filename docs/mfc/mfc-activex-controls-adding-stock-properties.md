@@ -1,8 +1,7 @@
 ---
 title: "Controlli ActiveX MFC: aggiunta di propriet&#224; predefinite | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "proprietà [MFC], aggiunta predefiniti"
 ms.assetid: 8b98c8c5-5b69-4366-87bf-0e61e6668ecb
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Controlli ActiveX MFC: aggiunta di propriet&#224; predefinite
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

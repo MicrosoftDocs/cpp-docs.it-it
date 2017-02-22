@@ -1,8 +1,7 @@
 ---
 title: "_com_error::Description | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "Description (metodo)"
 ms.assetid: 88191e24-4ee8-44a6-8c4c-3758e22e0548
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # _com_error::Description
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

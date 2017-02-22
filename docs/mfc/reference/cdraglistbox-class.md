@@ -1,8 +1,7 @@
 ---
 title: "CDragListBox Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "Windows [C++], caselle di riepilogo"
 ms.assetid: fee20b42-60ae-4aa9-83f9-5a3d9b96e33b
 caps.latest.revision: 24
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # CDragListBox Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

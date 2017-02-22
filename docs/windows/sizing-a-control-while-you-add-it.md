@@ -1,8 +1,7 @@
 ---
 title: "Sizing a Control While You Add It | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,16 +10,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C++"
 helpviewer_keywords: 
   - "dialog box controls, size"
   - "controls [C++], sizing"
 ms.assetid: 06b1dd2b-0ba1-4e1f-adc3-cb73679f765e
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Sizing a Control While You Add It
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

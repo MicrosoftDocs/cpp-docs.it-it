@@ -1,8 +1,7 @@
 ---
 title: "_aligned_offset_recalloc | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,16 +28,15 @@ f1_keywords:
   - "_aligned_offset_recalloc"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "aligned_offset_recalloc (funzione)"
   - "_aligned_offset_recalloc (funzione)"
 ms.assetid: a258f54e-eeb4-4853-96fc-007d710f98e9
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # _aligned_offset_recalloc
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
-title: "Classe CAccelerateDecelerateTransition | Microsoft Docs"
+title: "CAccelerateDecelerateTransition Class1 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,13 +14,13 @@ f1_keywords:
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
-  - "CAccelerateDecelerateTransition (classe)"
+  - "Classe CAccelerateDecelerateTransition"
 ms.assetid: b1f31ee8-bb11-4ccc-b124-365fb02b025c
 caps.latest.revision: 16
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # Classe CAccelerateDecelerateTransition
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

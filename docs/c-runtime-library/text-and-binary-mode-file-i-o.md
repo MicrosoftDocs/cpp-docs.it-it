@@ -1,8 +1,7 @@
 ---
 title: "I/O file modalit&#224; testo e binaria | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.io"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "accesso binario"
   - "accesso binario, I/O file modalità binaria"
@@ -27,10 +25,10 @@ helpviewer_keywords:
   - "conversione, modalità"
 ms.assetid: 3196e321-8b87-4609-b302-cd6f3c516051
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # I/O file modalit&#224; testo e binaria
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

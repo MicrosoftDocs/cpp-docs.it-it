@@ -1,8 +1,7 @@
 ---
 title: "Classe IRowsetLocateImpl | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "provider, segnalibri"
 ms.assetid: a8aa3149-7ce8-4976-a680-2da193fd3234
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Classe IRowsetLocateImpl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

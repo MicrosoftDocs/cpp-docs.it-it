@@ -1,8 +1,7 @@
 ---
 title: "Classe improper_lock | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "improper_lock (classe)"
 ms.assetid: 8f494942-7748-4a2a-8de2-23414bfe6346
 caps.latest.revision: 19
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # Classe improper_lock
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

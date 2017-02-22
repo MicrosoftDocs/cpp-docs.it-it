@@ -1,8 +1,7 @@
 ---
 title: "Memory Management with CStringT | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "stringhe [C++], gestione della memoria"
 ms.assetid: 88b8342d-19b5-48c4-9cf6-e4c44cece21e
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Memory Management with CStringT
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

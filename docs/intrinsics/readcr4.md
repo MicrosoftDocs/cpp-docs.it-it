@@ -1,8 +1,7 @@
 ---
 title: "__readcr4 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "__readcr4 (funzione intrinseca)"
 ms.assetid: b841a27b-fe0d-4ee9-b76b-f91d3eb061fa
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # __readcr4
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

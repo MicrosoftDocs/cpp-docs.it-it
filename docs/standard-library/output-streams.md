@@ -1,8 +1,7 @@
 ---
 title: "Flussi di output | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "flussi di output"
 ms.assetid: b49410e3-5caa-4153-9d0d-c4266408dc83
 caps.latest.revision: 12
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Flussi di output
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

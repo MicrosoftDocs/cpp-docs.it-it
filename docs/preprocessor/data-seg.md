@@ -1,8 +1,7 @@
 ---
 title: "data_seg | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,16 +13,15 @@ f1_keywords:
   - "vc-pragma.data_seg"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "data_seg (pragma)"
   - "pragma, data_seg"
 ms.assetid: 65c66466-4c98-494f-93af-106beb4caf78
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # data_seg
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

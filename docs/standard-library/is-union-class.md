@@ -1,8 +1,7 @@
 ---
 title: "Classe is_union | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "is_union"
 ms.assetid: 80eda256-40b8-4db5-9ac1-d58bb8032a3e
 caps.latest.revision: 19
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # Classe is_union
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

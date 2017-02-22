@@ -1,8 +1,7 @@
 ---
 title: "Classe single_link_registry | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "single_link_registry (classe)"
 ms.assetid: 09540a4e-c34e-4ff9-af49-21b8612b6ab3
 caps.latest.revision: 19
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # Classe single_link_registry
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "__min | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,7 +28,6 @@ f1_keywords:
   - "_min"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "__min (macro)"
   - "_min (macro)"
@@ -37,10 +35,10 @@ helpviewer_keywords:
   - "minimum (macro)"
 ms.assetid: 2037f26c-b48a-4a69-8870-22519f052a3c
 caps.latest.revision: 14
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # __min
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

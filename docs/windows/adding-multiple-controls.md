@@ -1,8 +1,7 @@
 ---
 title: "Adding Multiple Controls | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,16 +10,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C++"
 helpviewer_keywords: 
   - "controls [Visual Studio], adding multiple"
   - "dialog box controls, adding to dialog boxes"
 ms.assetid: cc100201-0669-4e74-bb08-f7134ddd03aa
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Adding Multiple Controls
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

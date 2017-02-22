@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3022 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3022"
 ms.assetid: 9f1d444c-6c6e-48d9-9346-69128390aa33
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Errore del compilatore C3022
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

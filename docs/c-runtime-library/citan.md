@@ -1,8 +1,7 @@
 ---
 title: "_CItan | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -30,10 +29,10 @@ helpviewer_keywords:
   - "_CItan intrinseco"
 ms.assetid: d1ea3113-50a2-45a6-b6bc-680fcdcc0928
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # _CItan
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

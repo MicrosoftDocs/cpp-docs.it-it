@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2352 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2352"
 ms.assetid: 0efad8cb-659f-4b3e-8f6f-9f8ec44d345c
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Errore del compilatore C2352
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

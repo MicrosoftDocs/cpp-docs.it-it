@@ -1,8 +1,7 @@
 ---
 title: "Classe is_trivially_copy_constructible | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "is_trivially_copy_constructible"
 ms.assetid: 4274cef5-afdd-4f2d-bc83-7562e7944ddf
 caps.latest.revision: 24
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # Classe is_trivially_copy_constructible
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

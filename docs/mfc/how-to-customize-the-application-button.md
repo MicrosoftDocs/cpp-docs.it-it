@@ -1,8 +1,7 @@
 ---
 title: "Procedura: personalizzare il pulsante dell&#39;applicazione | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "pulsante di applicazione, personalizzazione"
 ms.assetid: ebb11180-ab20-43df-a234-801feca9eb38
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Procedura: personalizzare il pulsante dell&#39;applicazione
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "isleadbyte, _isleadbyte_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,7 +30,6 @@ f1_keywords:
   - "isleadbyte"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "byte iniziali"
   - "_isleadbyte_l (funzione)"
@@ -40,10 +38,10 @@ helpviewer_keywords:
   - "isleadbyte (funzione)"
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
 caps.latest.revision: 20
-caps.handback.revision: 20
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # isleadbyte, _isleadbyte_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

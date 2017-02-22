@@ -1,8 +1,7 @@
 ---
 title: "Metodo HandleT::Detach | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Detach (metodo)"
 ms.assetid: f7df0f90-fafb-4d1b-a215-a6c62941f6b0
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # Metodo HandleT::Detach
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

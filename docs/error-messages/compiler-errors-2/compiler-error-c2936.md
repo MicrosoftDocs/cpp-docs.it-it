@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2936 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2936"
 ms.assetid: 5d1ba0fc-0c78-4a37-a83b-1ef8527763be
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Errore del compilatore C2936
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

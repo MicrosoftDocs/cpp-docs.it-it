@@ -1,8 +1,7 @@
 ---
-title: "Pixel/HIMETRIC Conversion Global Functions | Microsoft Docs"
+title: "Funzioni globali di conversione HIMETRIC pixel | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: ecb1b1b2-7e9d-4fbc-a855-16252d2d794c
 caps.latest.revision: 19
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # Pixel/HIMETRIC Conversion Global Functions
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

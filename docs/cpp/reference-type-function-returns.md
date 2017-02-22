@@ -1,8 +1,7 @@
 ---
 title: "Funzioni che restituiscono tipi di riferimento | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "funzioni [C++], tipi restituiti"
 ms.assetid: 5b73be1d-2dc7-41df-ab0a-adcba36f2ad1
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Funzioni che restituiscono tipi di riferimento
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

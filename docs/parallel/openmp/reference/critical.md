@@ -1,8 +1,7 @@
 ---
 title: "critical | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "critical OpenMP directive"
 ms.assetid: 2ab87d6d-5ca4-43ae-9f0a-1f517a6a2bab
 caps.latest.revision: 12
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # critical
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

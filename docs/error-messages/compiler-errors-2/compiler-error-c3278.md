@@ -1,8 +1,7 @@
 ---
 title: "Compiler Error C3278 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3278"
 ms.assetid: 56f818f5-85a6-4792-843b-54fe16327658
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Compiler Error C3278
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

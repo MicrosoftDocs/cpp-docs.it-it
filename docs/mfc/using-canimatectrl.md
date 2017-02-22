@@ -1,8 +1,7 @@
 ---
 title: "Utilizzo di CAnimateCtrl | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "controlli [MFC], animazione"
 ms.assetid: 696c0805-bef0-4e2e-a9e7-b37b9215b7f0
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Utilizzo di CAnimateCtrl
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

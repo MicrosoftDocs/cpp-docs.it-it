@@ -1,8 +1,7 @@
 ---
 title: "Codici di uscita di BSCMAKE | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "codici di uscita"
 ms.assetid: 1a5ca9d8-a217-43c8-9780-2a41d458b8c0
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Codici di uscita di BSCMAKE
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

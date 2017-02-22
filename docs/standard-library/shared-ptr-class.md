@@ -1,8 +1,7 @@
 ---
 title: "Classe shared_ptr | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,11 +21,11 @@ helpviewer_keywords:
   - "shared_ptr (classe)"
   - "shared_ptr (classe) [TR1]"
 ms.assetid: 1469fc51-c658-43f1-886c-f4530dd84860
-caps.latest.revision: 29
-caps.handback.revision: 20
+caps.latest.revision: 28
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 29
 ---
 # Classe shared_ptr
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

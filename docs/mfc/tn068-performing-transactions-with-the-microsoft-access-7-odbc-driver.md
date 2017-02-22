@@ -1,8 +1,7 @@
 ---
 title: "TN068: esecuzione di transazioni con il driver ODBC di Microsoft Access 7 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "transazioni, Microsoft Access"
 ms.assetid: d3f8f5d9-b118-4194-be36-a1aefb630c45
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # TN068: esecuzione di transazioni con il driver ODBC di Microsoft Access 7
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

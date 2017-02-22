@@ -1,8 +1,7 @@
 ---
 title: "Avviso CVT4001 di CVTRES | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "CVT4001"
 ms.assetid: 39c13bc2-92fa-4d79-8171-039b27329dcc
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Avviso CVT4001 di CVTRES
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Riepilogo di valori letterali stringa | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,13 +10,12 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 ms.assetid: d2693900-f4e2-4820-b7de-085d51827aee
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Riepilogo di valori letterali stringa
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

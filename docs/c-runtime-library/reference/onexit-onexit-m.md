@@ -1,8 +1,7 @@
 ---
 title: "_onexit, _onexit_m | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,7 +30,6 @@ f1_keywords:
   - "_onexit_m"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "onexit (funzione)"
   - "Registro di sistema, registrazione delle routine di uscita"
@@ -42,10 +40,10 @@ helpviewer_keywords:
   - "registrazione da chiamare all'uscita"
 ms.assetid: 45743298-0e2f-46cf-966d-1ca44babb443
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # _onexit, _onexit_m
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

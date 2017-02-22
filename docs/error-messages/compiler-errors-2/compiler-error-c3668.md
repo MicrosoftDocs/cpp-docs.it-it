@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3668 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3668"
 ms.assetid: 53a96698-bde4-4447-95b5-b5108291f60c
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Errore del compilatore C3668
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

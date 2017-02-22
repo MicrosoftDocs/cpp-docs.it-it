@@ -1,8 +1,7 @@
 ---
 title: "Creating a Menu | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "menus, creating"
 ms.assetid: 66f94448-9b97-4b73-bf97-10d4bf87cc65
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Creating a Menu
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

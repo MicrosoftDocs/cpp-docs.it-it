@@ -1,8 +1,7 @@
 ---
 title: "Puntatori const e volatile | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "volatile (parola chiave) [C++], e puntatori"
 ms.assetid: 0c92dc6c-400e-4342-b345-63ddfe649d7e
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Puntatori const e volatile
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

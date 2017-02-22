@@ -1,8 +1,7 @@
 ---
 title: "Aggiunta guidata classe da libreria dei tipi | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "COM (interfacce), aggiunta di classi"
 ms.assetid: 96152afd-9374-4649-a6ab-b0fa2a5592a3
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Aggiunta guidata classe da libreria dei tipi
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "localtime, _localtime32, _localtime64 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -34,7 +33,6 @@ f1_keywords:
   - "_localtime32"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "localtime32 (funzione)"
   - "_localtime32 (funzione)"
@@ -44,10 +42,10 @@ helpviewer_keywords:
   - "ora, conversione di valori"
 ms.assetid: 4260ec3d-43ee-4538-b998-402a282bb9b8
 caps.latest.revision: 28
-caps.handback.revision: 28
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 28
 ---
 # localtime, _localtime32, _localtime64
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

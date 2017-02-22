@@ -1,8 +1,7 @@
 ---
 title: "Supporto per le DLL a caricamento ritardato nel linker | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "caricamento ritardato di DLL, supporto del linker"
 ms.assetid: b2d7e449-2809-42b1-9c90-2c0ca5e31a14
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Supporto per le DLL a caricamento ritardato nel linker
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

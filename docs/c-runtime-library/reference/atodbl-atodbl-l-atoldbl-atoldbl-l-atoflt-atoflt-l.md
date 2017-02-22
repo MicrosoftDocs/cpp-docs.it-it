@@ -1,8 +1,7 @@
 ---
 title: "_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -44,7 +43,6 @@ f1_keywords:
   - "_atodbl"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_atodbl (funzione)"
   - "_atoldbl_l (funzione)"
@@ -61,10 +59,10 @@ helpviewer_keywords:
   - "_atodbl_l (funzione)"
 ms.assetid: 2d2530f4-4bd4-42e3-8083-f2d2fbc8432a
 caps.latest.revision: 22
-caps.handback.revision: 20
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # _atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

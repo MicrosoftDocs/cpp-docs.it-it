@@ -1,8 +1,7 @@
 ---
 title: "is_trivially_move_constructible (classe) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "is_trivially_move_constructible"
 ms.assetid: 740bdec7-65e5-47b3-b94f-a2479ceac3ec
 caps.latest.revision: 11
-caps.handback.revision: 1
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # is_trivially_move_constructible (classe)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

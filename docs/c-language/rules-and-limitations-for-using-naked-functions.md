@@ -1,8 +1,7 @@
 ---
 title: "Regole e limitazioni per l&#39;utilizzo di funzioni naked | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,15 +10,14 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "naked (funzioni)"
 ms.assetid: fdcb82b9-8ae1-489c-a248-1b477220df0a
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Regole e limitazioni per l&#39;utilizzo di funzioni naked
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Classe logic_error | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "logic_error (classe)"
 ms.assetid: b290d73d-94e1-4288-af86-2bb5d71f677a
 caps.latest.revision: 22
-caps.handback.revision: 22
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # Classe logic_error
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

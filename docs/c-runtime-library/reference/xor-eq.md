@@ -1,8 +1,7 @@
 ---
 title: "xor_eq | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,10 +30,10 @@ helpviewer_keywords:
   - "xor_eq (funzione)"
 ms.assetid: eca4b6b4-b77a-4d44-a09a-5a7e69fdb56c
 caps.latest.revision: 12
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # xor_eq
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

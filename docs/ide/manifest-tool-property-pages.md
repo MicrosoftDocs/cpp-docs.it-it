@@ -1,8 +1,7 @@
 ---
 title: "Pagine delle propriet&#224; dello strumento Manifesto | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "Strumento Manifesto (pagine delle proprietà)"
 ms.assetid: f33499c4-7733-42d9-80e3-8a5018786965
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Pagine delle propriet&#224; dello strumento Manifesto
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

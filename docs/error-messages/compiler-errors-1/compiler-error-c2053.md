@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2053 | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2053"
 ms.assetid: 13324c85-13a8-4996-bd42-a31bfe7ff80f
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Errore del compilatore C2053
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

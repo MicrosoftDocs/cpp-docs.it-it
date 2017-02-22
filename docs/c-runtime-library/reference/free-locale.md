@@ -1,8 +1,7 @@
 ---
 title: "_free_locale | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -30,7 +29,6 @@ f1_keywords:
   - "_free_locale"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "__free_locale (funzione)"
   - "_free_locale (funzione)"
@@ -38,10 +36,10 @@ helpviewer_keywords:
   - "impostazioni locali, rilascio"
 ms.assetid: 1f08d348-ab32-4028-a145-6cbd51b49af9
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # _free_locale
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

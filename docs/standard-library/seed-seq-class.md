@@ -1,8 +1,7 @@
 ---
 title: "Classe seed_seq | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/17/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "seed_seq (classe)"
 ms.assetid: cba114f7-9ac6-4f2f-b773-9c84805401d6
 caps.latest.revision: 19
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # Classe seed_seq
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

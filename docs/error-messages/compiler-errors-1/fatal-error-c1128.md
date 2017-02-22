@@ -1,8 +1,7 @@
 ---
 title: "Errore irreversibile C1128 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C1128"
 ms.assetid: 6f9580fd-ecef-48be-9780-dcf666704279
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Errore irreversibile C1128
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

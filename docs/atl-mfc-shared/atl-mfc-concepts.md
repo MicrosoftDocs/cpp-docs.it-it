@@ -1,8 +1,7 @@
 ---
 title: "ATL/MFC Concepts | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "MFC"
 ms.assetid: 4d973f56-8730-4e0b-9522-b5f43bc4548d
 caps.latest.revision: 7
-caps.handback.revision: 3
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # ATL/MFC Concepts
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

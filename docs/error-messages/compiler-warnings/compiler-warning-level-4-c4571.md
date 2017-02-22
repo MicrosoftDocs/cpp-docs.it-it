@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livello 4) C4571 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4571"
 ms.assetid: 07aa17bd-b15c-4266-824c-57cc445e8edd
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Avviso del compilatore (livello 4) C4571
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

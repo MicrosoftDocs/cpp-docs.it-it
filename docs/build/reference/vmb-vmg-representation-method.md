@@ -1,8 +1,7 @@
 ---
 title: "/vmb, /vmg (Metodo di rappresentazione) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "-vmg (opzione del compilatore) [C++]"
 ms.assetid: ecdb391c-7dab-40b1-916b-673d10889fd4
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # /vmb, /vmg (Metodo di rappresentazione)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

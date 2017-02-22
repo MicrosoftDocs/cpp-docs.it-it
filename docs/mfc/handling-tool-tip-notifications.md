@@ -1,8 +1,7 @@
 ---
 title: "Gestione delle notifiche delle descrizioni comandi | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "TOOLTIPTEXT (struttura)"
 ms.assetid: ddb93b5f-2e4f-4537-8053-3453c86e2bbb
 caps.latest.revision: 12
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Gestione delle notifiche delle descrizioni comandi
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

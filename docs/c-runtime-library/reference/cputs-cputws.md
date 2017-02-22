@@ -1,8 +1,7 @@
 ---
 title: "_cputs, _cputws | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,7 +30,6 @@ f1_keywords:
   - "_cputws"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_cputs (funzione)"
   - "_cputws (funzione)"
@@ -42,10 +40,10 @@ helpviewer_keywords:
   - "stringhe [C++], scrittura"
 ms.assetid: ec418484-0f8d-43ec-8d8b-198a556c659e
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # _cputs, _cputws
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

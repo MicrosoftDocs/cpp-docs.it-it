@@ -1,8 +1,7 @@
 ---
 title: "spawnve | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,15 +26,14 @@ f1_keywords:
   - "spawnve"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "spawnve (funzione)"
 ms.assetid: 39507df8-f15f-45fb-b2b6-01359272b147
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # spawnve
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

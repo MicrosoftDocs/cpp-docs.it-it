@@ -1,8 +1,7 @@
 ---
 title: "Riferimenti a NMAKE | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,11 +16,11 @@ helpviewer_keywords:
   - "pre-elaborazione di NMAKE"
   - "esecuzione di programmi [C++]"
 ms.assetid: 24fab6e3-7e43-4da4-957a-88afbbcf8661
-caps.latest.revision: 12
-caps.handback.revision: 9
+caps.latest.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Riferimenti a NMAKE
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "_bstr_t::Attach | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Attach (metodo)"
 ms.assetid: 8cad867e-40fc-435b-841f-0d412c2f58d3
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # _bstr_t::Attach
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

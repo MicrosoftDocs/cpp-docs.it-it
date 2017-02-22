@@ -1,8 +1,7 @@
 ---
 title: "_com_error::Error | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "Error (metodo)"
 ms.assetid: b53a15fd-198e-4276-afcd-13439c4807f7
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # _com_error::Error
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Tipo float | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "double (tipo di dati), tipo float"
   - "lunghezza esponente"
@@ -26,10 +24,10 @@ helpviewer_keywords:
   - "tipo float"
 ms.assetid: 706e332b-17a0-4a30-b7d8-5d6cd372524b
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Tipo float
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

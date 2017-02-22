@@ -1,8 +1,7 @@
 ---
 title: "Version Information Editor | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "resource editors, Version Information editor"
 ms.assetid: 772e6f19-f765-4cec-9521-0ad3eeb99f9b
 caps.latest.revision: 13
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Version Information Editor
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

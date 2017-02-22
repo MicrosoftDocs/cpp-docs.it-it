@@ -1,8 +1,7 @@
 ---
 title: "Pagine delle propriet&#224; MIDL: Avanzate | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,10 +26,10 @@ helpviewer_keywords:
   - "MIDL, pagina proprietà"
 ms.assetid: d1c92e01-f403-4ed6-ab45-4043a3c9c6bb
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Pagine delle propriet&#224; MIDL: Avanzate
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

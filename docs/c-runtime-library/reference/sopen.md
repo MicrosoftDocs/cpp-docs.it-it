@@ -1,8 +1,7 @@
 ---
 title: "sopen | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,15 +26,14 @@ f1_keywords:
   - "sopen"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "sopen (funzione)"
 ms.assetid: 1ce0b707-0c9e-4942-8467-ce7f6cd68acc
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # sopen
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

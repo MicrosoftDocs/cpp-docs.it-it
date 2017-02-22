@@ -1,8 +1,7 @@
 ---
 title: "CRect (classe) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "RECT (struttura)"
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
 caps.latest.revision: 24
-caps.handback.revision: 24
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # CRect (classe)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

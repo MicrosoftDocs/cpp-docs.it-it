@@ -1,8 +1,7 @@
 ---
 title: "Funzionalit&#224; delle classi di visualizzazione di record (accesso ai dati MFC) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "visualizzazioni di record, classi"
 ms.assetid: e7b2820f-09c4-483f-83c0-317e8be42bdf
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Funzionalit&#224; delle classi di visualizzazione di record (accesso ai dati MFC)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Elaborazione delle notifiche Header-Control | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "notifiche, elaborazione per CHeaderCtrl"
 ms.assetid: e6c6af7c-d458-4d33-85aa-48014ccde5f6
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Elaborazione delle notifiche Header-Control
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

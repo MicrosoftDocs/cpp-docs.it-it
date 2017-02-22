@@ -1,8 +1,7 @@
 ---
 title: "_seh_filter_dll, _seh_filter_exe | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -42,10 +41,10 @@ helpviewer_keywords:
   - "_seh_filter_exe (funzione)"
 ms.assetid: 747e5963-3a12-4bf5-b5c4-d4c1b6068e15
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # _seh_filter_dll, _seh_filter_exe
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

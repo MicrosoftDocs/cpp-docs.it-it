@@ -1,8 +1,7 @@
 ---
 title: "coclass | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "coclass attribute"
 ms.assetid: 42da6a10-3af9-4b43-9a1d-689d00b61eb3
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # coclass
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

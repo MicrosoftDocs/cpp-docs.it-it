@@ -1,8 +1,7 @@
 ---
 title: "_ismbblead, _ismbblead_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -34,7 +33,6 @@ f1_keywords:
   - "_istlead"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_ismbblead_l (funzione)"
   - "ismbblead (funzione)"
@@ -44,10 +42,10 @@ helpviewer_keywords:
   - "_istlead (funzione)"
 ms.assetid: 2abc6f75-ed5c-472e-bfd0-e905a1835ccf
 caps.latest.revision: 21
-caps.handback.revision: 21
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # _ismbblead, _ismbblead_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

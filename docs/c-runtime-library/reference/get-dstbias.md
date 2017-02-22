@@ -1,8 +1,7 @@
 ---
 title: "_get_dstbias | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,7 +30,6 @@ f1_keywords:
   - "get_dstbias"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "__dstbias"
   - "_get_dstbias (funzione)"
@@ -39,10 +37,10 @@ helpviewer_keywords:
   - "get_dstbias (funzione)"
 ms.assetid: e751358c-1ecc-411b-ae2c-81b2ec54ea45
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # _get_dstbias
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

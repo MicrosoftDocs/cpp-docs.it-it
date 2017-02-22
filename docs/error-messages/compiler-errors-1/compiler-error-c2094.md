@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2094 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2094"
 ms.assetid: 9e4f8f88-f189-46e7-91c9-481bacc7af87
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Errore del compilatore C2094
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

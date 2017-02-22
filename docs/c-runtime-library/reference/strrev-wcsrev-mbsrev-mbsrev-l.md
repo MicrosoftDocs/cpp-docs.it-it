@@ -1,8 +1,7 @@
 ---
 title: "_strrev, _wcsrev, _mbsrev, _mbsrev_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -38,7 +37,6 @@ f1_keywords:
   - "_mbsrev"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_ftcsrev (funzione)"
   - "_mbsrev (funzione)"
@@ -58,10 +56,10 @@ helpviewer_keywords:
   - "wcsrev (funzione)"
 ms.assetid: 87863e89-4fa0-421c-af48-25d8516fe72f
 caps.latest.revision: 25
-caps.handback.revision: 23
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # _strrev, _wcsrev, _mbsrev, _mbsrev_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3230 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3230"
 ms.assetid: 5ec53f25-59f6-4801-81e7-7b68bf04994d
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Errore del compilatore C3230
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

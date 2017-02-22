@@ -1,8 +1,7 @@
 ---
 title: "Classe checked_array_iterator | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "checked_array_iterator, sintassi"
 ms.assetid: 7f07185e-d588-4ae3-9c4f-84ec4aa25a28
 caps.latest.revision: 28
-caps.handback.revision: 21
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 28
 ---
 # Classe checked_array_iterator
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

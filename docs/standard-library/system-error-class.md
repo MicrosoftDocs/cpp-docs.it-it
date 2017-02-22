@@ -1,8 +1,7 @@
 ---
 title: "Classe system_error | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "system_error (classe)"
 ms.assetid: 2eeaacbb-8a4a-4ad7-943a-997901a77f32
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # Classe system_error
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

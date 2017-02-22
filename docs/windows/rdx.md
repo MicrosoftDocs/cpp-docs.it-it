@@ -1,8 +1,7 @@
 ---
 title: "rdx | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "rdx attribute"
 ms.assetid: ff8e4312-c1ad-4934-bdaa-86f54409651e
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # rdx
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Struttura dei programmi | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,17 +10,16 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "C, struttura dei programmi"
   - "struttura dei programmi [C++], C"
   - "programmi [C++], struttura"
 ms.assetid: b713b5a1-21a2-4e6f-9481-5f8594f1859e
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Struttura dei programmi
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

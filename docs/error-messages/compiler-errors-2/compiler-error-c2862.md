@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2862 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2862"
 ms.assetid: c04d8499-b799-48a1-9fb4-7902a0b0ac8e
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Errore del compilatore C2862
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

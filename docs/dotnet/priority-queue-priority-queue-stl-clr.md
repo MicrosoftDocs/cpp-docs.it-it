@@ -1,8 +1,7 @@
 ---
 title: "priority_queue::priority_queue (STL/CLR) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "priority_queue (membro) [STL/CLR]"
 ms.assetid: aab423d7-959e-48fd-9028-e9f45f43cb8a
 caps.latest.revision: 17
-caps.handback.revision: 15
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # priority_queue::priority_queue (STL/CLR)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

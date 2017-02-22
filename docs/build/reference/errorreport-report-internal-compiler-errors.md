@@ -1,8 +1,7 @@
 ---
 title: "/errorReport (Segnala gli errori interni del compilatore) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "-errorReport (opzione del compilatore) [C++]"
 ms.assetid: 819828f8-b0a5-412c-9c57-bf822f17e667
 caps.latest.revision: 21
-caps.handback.revision: 19
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # /errorReport (Segnala gli errori interni del compilatore)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

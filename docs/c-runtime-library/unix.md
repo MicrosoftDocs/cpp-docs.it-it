@@ -1,8 +1,7 @@
 ---
 title: "UNIX | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "unix"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "compatibilità con POSIX"
   - "nomi di file POSIX"
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "UNIX, compatibilità"
 ms.assetid: 40792414-7a5b-415d-bfa8-2bfb1ebb3731
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # UNIX
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

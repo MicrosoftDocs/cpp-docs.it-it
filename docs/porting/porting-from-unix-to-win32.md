@@ -1,8 +1,7 @@
 ---
 title: "Porting da UNIX a Win32 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "Windows API [C++], migrating from UNIX"
 ms.assetid: 3837e4fe-3f96-4f24-b2a1-7be94718a881
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Porting da UNIX a Win32
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

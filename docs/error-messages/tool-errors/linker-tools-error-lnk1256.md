@@ -1,8 +1,7 @@
 ---
 title: "Errore degli strumenti del linker LNK1256 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "LNK1256"
 ms.assetid: 55b64b2b-a56b-436c-a55e-ec9c6dcb050e
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Errore degli strumenti del linker LNK1256
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

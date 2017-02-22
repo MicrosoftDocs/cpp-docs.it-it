@@ -1,8 +1,7 @@
 ---
 title: "Classificazione di caratteri | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,16 +12,15 @@ f1_keywords:
   - "c.types.character"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "routine di classificazione di caratteri"
   - "caratteri, test"
 ms.assetid: 3b6c8f0b-9701-407a-b384-9086698773f5
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Classificazione di caratteri
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

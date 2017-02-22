@@ -1,8 +1,7 @@
 ---
 title: "Marshaling | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "marshalling, interoperabilità COM"
 ms.assetid: 40644b0a-1106-4fc8-9dfb-9bee9915d825
 caps.latest.revision: 10
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Marshaling
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

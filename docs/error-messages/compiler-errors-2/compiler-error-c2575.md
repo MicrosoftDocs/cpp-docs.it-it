@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2575 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2575"
 ms.assetid: 9eb45706-37ef-4481-b373-6d193ba13634
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Errore del compilatore C2575
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

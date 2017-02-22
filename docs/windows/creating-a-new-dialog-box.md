@@ -1,8 +1,7 @@
 ---
 title: "Creating a New Dialog Box | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "Dialog editor, creating dialog boxes"
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Creating a New Dialog Box
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

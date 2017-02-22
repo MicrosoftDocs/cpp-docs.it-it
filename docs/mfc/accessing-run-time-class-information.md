@@ -1,8 +1,7 @@
 ---
 title: "Accesso alle informazioni sulle classi di runtime | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,10 +26,10 @@ helpviewer_keywords:
   - "RUNTIME_CLASS (macro), utilizzo"
 ms.assetid: 3445a9af-0bd6-4496-95c3-aa59b964570b
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Accesso alle informazioni sulle classi di runtime
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

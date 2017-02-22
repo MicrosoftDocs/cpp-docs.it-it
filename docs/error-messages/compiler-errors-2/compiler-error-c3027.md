@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3027 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3027"
 ms.assetid: 6562a5c2-2f28-4b36-91ca-2a64c0f0501a
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Errore del compilatore C3027
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

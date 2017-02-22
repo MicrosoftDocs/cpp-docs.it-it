@@ -1,8 +1,7 @@
 ---
 title: "Funzioni vprintf | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,16 +20,15 @@ f1_keywords:
   - "vprintf"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "testo formattato [C++]"
   - "vprintf (funzione)"
 ms.assetid: 02ac7c51-eab1-4bf0-bf4c-77065e3fa744
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Funzioni vprintf
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

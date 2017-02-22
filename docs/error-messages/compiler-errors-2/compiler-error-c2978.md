@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2978 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2978"
 ms.assetid: 5e7bee82-e266-4ccd-ad2e-ee89606ec5bf
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Errore del compilatore C2978
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

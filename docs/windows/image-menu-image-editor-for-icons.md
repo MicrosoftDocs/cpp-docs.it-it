@@ -1,8 +1,7 @@
 ---
 title: "Menu Immagine (Editor di immagini per le icone) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,15 +12,14 @@ f1_keywords:
   - "vc.editors.bitmap"
 dev_langs: 
   - "C++"
-  - "C++"
 helpviewer_keywords: 
   - "Immagine (menu)"
 ms.assetid: ac2b4d53-1919-4fd1-a0af-d3c085c45af2
 caps.latest.revision: 8
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Menu Immagine (Editor di immagini per le icone)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

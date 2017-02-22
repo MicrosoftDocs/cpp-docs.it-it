@@ -1,8 +1,7 @@
 ---
 title: "code_seg (__declspec) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "code_seg __declspec (parola chiave)"
 ms.assetid: ad3c1105-15d3-4e08-b7b9-e4bd9d7b6aa0
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # code_seg (__declspec)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

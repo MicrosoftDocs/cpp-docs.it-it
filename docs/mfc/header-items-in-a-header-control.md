@@ -1,8 +1,7 @@
 ---
 title: "Elementi di intestazione in un controllo Header | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "elementi di intestazione in controlli intestazione"
 ms.assetid: ac79ef1f-a671-4ab2-93e9-b1aa016a48bf
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Elementi di intestazione in un controllo Header
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

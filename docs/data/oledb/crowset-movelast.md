@@ -1,8 +1,7 @@
 ---
 title: "CRowset::MoveLast | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "MoveLast (metodo)"
 ms.assetid: 81063578-ae9d-467b-8c88-81d8fc66e020
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # CRowset::MoveLast
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

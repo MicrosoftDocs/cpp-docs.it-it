@@ -1,8 +1,7 @@
 ---
 title: "__faststorefence | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "sfence instruction"
 ms.assetid: 6c6eb973-3cf0-4306-b3af-cfde9b0210a5
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # __faststorefence
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Classi di finestre di dialogo comuni OLE | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "classi di finestre di dialogo comuni OLE [C++]"
 ms.assetid: 706526ae-f94f-4909-a0f8-6b5fe954fd97
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Classi di finestre di dialogo comuni OLE
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

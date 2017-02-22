@@ -1,8 +1,7 @@
 ---
 title: "Ridistribuzione della libreria MFC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "ridistribuzione di librerie MFC"
 ms.assetid: 72714ce1-385e-4c1c-afa5-96b03e873866
 caps.latest.revision: 32
-caps.handback.revision: 29
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 29
 ---
 # Ridistribuzione della libreria MFC
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

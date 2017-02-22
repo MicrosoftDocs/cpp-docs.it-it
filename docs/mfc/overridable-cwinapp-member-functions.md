@@ -1,8 +1,7 @@
 ---
 title: "Funzioni membro CWinApp sottoponibili a override | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "override, funzioni sottoponibili a override in CWinApp"
 ms.assetid: 07183d5e-734b-45d9-a8b6-9dde4adac0b4
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Funzioni membro CWinApp sottoponibili a override
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

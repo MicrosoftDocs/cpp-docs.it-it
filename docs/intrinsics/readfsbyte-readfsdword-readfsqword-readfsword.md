@@ -1,8 +1,7 @@
 ---
 title: "__readfsbyte, __readfsdword, __readfsqword, __readfsword | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,10 +26,10 @@ helpviewer_keywords:
   - "__readfsqword (funzione intrinseca)"
 ms.assetid: f6ee7203-4179-402c-a464-0746c84ce6ac
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # __readfsbyte, __readfsdword, __readfsqword, __readfsword
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

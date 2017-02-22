@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2765 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2765"
 ms.assetid: 47ad86f3-a7e0-47ad-85ff-0f5534458cb9
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Errore del compilatore C2765
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

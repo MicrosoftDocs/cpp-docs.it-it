@@ -1,8 +1,7 @@
 ---
 title: "asin, asinf, asinl | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,7 +31,6 @@ f1_keywords:
   - "asinf"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "arcoseno (funzione)"
   - "asin (funzione)"
@@ -41,10 +39,10 @@ helpviewer_keywords:
   - "funzioni trigonometriche"
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # asin, asinf, asinl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

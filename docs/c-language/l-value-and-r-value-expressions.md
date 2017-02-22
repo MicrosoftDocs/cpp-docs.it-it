@@ -1,8 +1,7 @@
 ---
 title: "Espressioni L-Value e R-Value | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "valori L"
   - "espressioni di selezione membro"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "espressioni di indice"
 ms.assetid: b790303e-ec6f-4d0d-bc55-df42da267172
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Espressioni L-Value e R-Value
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

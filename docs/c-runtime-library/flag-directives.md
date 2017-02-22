@@ -1,8 +1,7 @@
 ---
 title: "Direttive flag | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,7 +20,6 @@ f1_keywords:
   - "c.flags"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "funzione printf per le direttive dei flag"
   - "campi per la specifica di formato per la funzione printf"
@@ -29,10 +27,10 @@ helpviewer_keywords:
   - "printf (funzione), campi di specifica di formato"
 ms.assetid: b00cbdc9-1e5c-4b30-9f56-c1ef8d383767
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Direttive flag
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

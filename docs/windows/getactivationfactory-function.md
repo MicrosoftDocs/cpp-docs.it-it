@@ -1,8 +1,7 @@
 ---
 title: "Funzione GetActivationFactory | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "GetActivationFactory (funzione)"
 ms.assetid: 5736d285-6beb-42aa-8788-e261c0010afe
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Funzione GetActivationFactory
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Classe is_polymorphic | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "is_polymorphic"
 ms.assetid: 4e1704db-d6f9-4154-a100-0ba02a373f20
 caps.latest.revision: 19
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # Classe is_polymorphic
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

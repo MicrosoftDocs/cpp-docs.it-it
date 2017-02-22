@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2055 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2055"
 ms.assetid: 6cec79cc-6bec-443f-9897-fbf5452718c7
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Errore del compilatore C2055
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "/GS (Controllo sicurezza buffer) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "buffer [C++], evitare i sovraccarichi"
 ms.assetid: 8d8a5ea1-cd5e-42e1-bc36-66e1cd7e731e
 caps.latest.revision: 40
-caps.handback.revision: 40
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 40
 ---
 # /GS (Controllo sicurezza buffer)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

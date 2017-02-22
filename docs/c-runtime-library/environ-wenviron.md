@@ -1,8 +1,7 @@
 ---
 title: "_environ, _wenviron | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,7 +15,6 @@ f1_keywords:
   - "_environ"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_environ (funzione)"
   - "_wenviron (funzione)"
@@ -25,10 +23,10 @@ helpviewer_keywords:
   - "wenviron (funzione)"
 ms.assetid: 7e639962-6536-47cd-8095-0cbe44a56e03
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # _environ, _wenviron
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

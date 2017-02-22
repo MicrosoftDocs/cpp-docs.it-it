@@ -1,8 +1,7 @@
 ---
 title: "abort | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,17 +27,16 @@ f1_keywords:
   - "Abort"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "abort (funzione)"
   - "interruzione processo corrente"
   - "processi, interruzione"
 ms.assetid: a797783b-40ed-4bdb-a2cd-14ffede39e8a
 caps.latest.revision: 24
-caps.handback.revision: 22
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # abort
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

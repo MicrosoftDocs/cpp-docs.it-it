@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3857 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3857"
 ms.assetid: 9f746d1e-9708-4945-bc29-3150d5371d3c
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Errore del compilatore C3857
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

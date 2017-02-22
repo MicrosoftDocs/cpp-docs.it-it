@@ -1,8 +1,7 @@
 ---
 title: "Disabling Guides | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "controls [C++], snap to guides/grid"
 ms.assetid: 51efa07b-8684-474e-a0b4-191ec5d91d1a
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Disabling Guides
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

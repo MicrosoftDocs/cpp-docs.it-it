@@ -1,8 +1,7 @@
 ---
 title: "Sviluppo di una funzione di supporto personalizzata | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "funzioni di supporto"
 ms.assetid: a845429d-68b1-4e14-aa88-f3f5343bd490
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Sviluppo di una funzione di supporto personalizzata
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

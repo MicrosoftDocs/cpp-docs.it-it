@@ -1,8 +1,7 @@
 ---
 title: "Funzione call_in_appdomain | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "call_in_appdomain (funzione)"
 ms.assetid: 9a1a5026-b76b-4cae-a3d4-29badeb9db9c
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Funzione call_in_appdomain
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

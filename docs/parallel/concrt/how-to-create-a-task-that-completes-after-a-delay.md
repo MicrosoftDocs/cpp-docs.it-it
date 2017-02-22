@@ -1,8 +1,7 @@
 ---
 title: "Procedura: Creare un&#39;attivit&#224; che viene completata dopo un ritardo | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "creare un'attività che viene completata dopo un ritardo, esempio [C++]"
 ms.assetid: 3fc0a194-3fdb-4eba-8b8a-b890981a985d
 caps.latest.revision: 9
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Procedura: Creare un&#39;attivit&#224; che viene completata dopo un ritardo
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "_access, _waccess | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -33,7 +32,6 @@ f1_keywords:
   - "_taccess"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_access (funzione)"
   - "_taccess (funzione)"
@@ -43,10 +41,10 @@ helpviewer_keywords:
   - "waccess (funzione)"
 ms.assetid: ba34f745-85c3-49e5-a7d4-3590bd249dd3
 caps.latest.revision: 27
-caps.handback.revision: 25
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 27
 ---
 # _access, _waccess
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

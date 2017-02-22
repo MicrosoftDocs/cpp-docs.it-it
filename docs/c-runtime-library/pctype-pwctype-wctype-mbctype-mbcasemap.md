@@ -1,8 +1,7 @@
 ---
 title: "_pctype, _pwctype, _wctype, _mbctype, _mbcasemap | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,7 +20,6 @@ f1_keywords:
   - "_pcwtype"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_wctype (funzione)"
   - "_pwctype (funzione)"
@@ -35,10 +33,10 @@ helpviewer_keywords:
   - "_mbcasemap (funzione)"
 ms.assetid: 7f5e1107-c43b-4b9b-b387-781e6d2373cb
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # _pctype, _pwctype, _wctype, _mbctype, _mbcasemap
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Membro dati ComPtr::ptr_ | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "ptr_ (membro dati)"
 ms.assetid: c84f9dda-8ff9-422d-91f2-1a41206bf9ad
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Membro dati ComPtr::ptr_
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3813 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3813"
 ms.assetid: ffdbc489-71bf-4cd6-988c-f824c9ab3ceb
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Errore del compilatore C3813
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

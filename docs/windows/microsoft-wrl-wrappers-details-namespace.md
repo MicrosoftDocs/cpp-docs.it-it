@@ -1,8 +1,7 @@
 ---
 title: "Spazio dei nomi Microsoft::WRL::Wrappers::Details | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "Details (spazio dei nomi)"
 ms.assetid: 6d3f04ac-9b53-4a82-a188-a85309ec34a4
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Spazio dei nomi Microsoft::WRL::Wrappers::Details
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "BEGIN_PROPSET_MAP | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "BEGIN_PROPSET_MAP (macro)"
 ms.assetid: c3a30618-6025-4d49-8688-a171294d2e93
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # BEGIN_PROPSET_MAP
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

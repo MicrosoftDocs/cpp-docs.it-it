@@ -1,8 +1,7 @@
 ---
 title: "Classe CAccessor | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "CAccessor (classe)"
 ms.assetid: b2ba959f-a686-46f3-8837-176248aef748
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Classe CAccessor
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "__movsd | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "movsd (istruzione)"
 ms.assetid: eb5cccf3-aa76-47f0-b9fc-eeca38fd943f
 caps.latest.revision: 14
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # __movsd
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

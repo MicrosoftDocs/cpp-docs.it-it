@@ -1,8 +1,7 @@
 ---
 title: "Sostituzione di macro | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "sostituzione di macro in NMAKE"
 ms.assetid: 47465cfe-fd92-49db-aebe-7c2d7ecceb73
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Sostituzione di macro
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
-title: "fegetenv | Microsoft Docs"
+title: "fegetenv1 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,16 +28,15 @@ f1_keywords:
   - "fegetenv"
   - "fenv/fegetenv"
 dev_langs: 
-  - "C"
   - "C++"
 helpviewer_keywords: 
   - "funzione fetegenv"
 ms.assetid: 68962421-6978-4b27-8e4c-ad1577830cf6
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # fegetenv
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

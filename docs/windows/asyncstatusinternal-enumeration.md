@@ -1,8 +1,7 @@
 ---
 title: "Enumerazione AsyncStatusInternal | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "AsyncStatusInternal (enumerazione)"
 ms.assetid: b783923f-3f1c-4487-9384-be572cbc62d7
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Enumerazione AsyncStatusInternal
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

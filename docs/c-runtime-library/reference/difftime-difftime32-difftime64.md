@@ -1,8 +1,7 @@
 ---
 title: "difftime, _difftime32, _difftime64 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -34,7 +33,6 @@ f1_keywords:
   - "difftime32"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_difftime32 (funzione)"
   - "difftime (funzione)"
@@ -44,10 +42,10 @@ helpviewer_keywords:
   - "difftime32 (funzione)"
 ms.assetid: 4cc0ac2b-fc7b-42c0-8283-8c9d10c566d0
 caps.latest.revision: 21
-caps.handback.revision: 21
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # difftime, _difftime32, _difftime64
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

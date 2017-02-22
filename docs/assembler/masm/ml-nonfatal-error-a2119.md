@@ -1,8 +1,7 @@
 ---
 title: "ML Nonfatal Error A2119 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "A2119"
 ms.assetid: 4d4ee6da-3a58-495c-a1da-c3a405c4c18d
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # ML Nonfatal Error A2119
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

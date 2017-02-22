@@ -1,8 +1,7 @@
 ---
 title: "Errore irreversibile C1308 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C1308"
 ms.assetid: 46177997-069e-433a-8e20-93c846d78ffd
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Errore irreversibile C1308
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

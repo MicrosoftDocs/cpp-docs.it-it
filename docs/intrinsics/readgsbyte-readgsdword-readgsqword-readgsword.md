@@ -1,8 +1,7 @@
 ---
 title: "__readgsbyte, __readgsdword, __readgsqword, __readgsword | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "__readgsbyte (funzione intrinseca)"
 ms.assetid: f822632d-854c-4558-a71b-cdfc3eea2236
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # __readgsbyte, __readgsdword, __readgsqword, __readgsword
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

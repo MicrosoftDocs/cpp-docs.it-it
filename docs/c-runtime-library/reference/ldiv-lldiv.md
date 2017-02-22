@@ -1,8 +1,7 @@
 ---
 title: "ldiv, lldiv | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -30,7 +29,6 @@ f1_keywords:
   - "lldiv"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "calcolo di quozienti"
   - "calcolo di resti"
@@ -40,10 +38,10 @@ helpviewer_keywords:
   - "calcolo di resti"
 ms.assetid: 68ab5d83-27a4-479c-9d52-d055eb139eca
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # ldiv, lldiv
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

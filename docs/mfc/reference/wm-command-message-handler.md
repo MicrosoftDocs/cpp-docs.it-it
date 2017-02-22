@@ -1,8 +1,7 @@
 ---
 title: "Gestore di messaggi WM_COMMAND | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "Windows ON_COMMAND (gestore messaggio)"
 ms.assetid: ec5b727c-b287-42f3-85b3-26776e0caac6
 caps.latest.revision: 11
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Gestore di messaggi WM_COMMAND
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livello 4) C4062 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4062"
 ms.assetid: 36d1c6ae-c917-4b08-bf30-2eb49ee94169
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Avviso del compilatore (livello 4) C4062
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

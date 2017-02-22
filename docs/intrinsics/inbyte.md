@@ -1,8 +1,7 @@
 ---
 title: "__inbyte | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "__inbyte (funzione intrinseca)"
 ms.assetid: 03b61799-2a08-474d-adc4-2cbf7c81a4d5
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # __inbyte
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

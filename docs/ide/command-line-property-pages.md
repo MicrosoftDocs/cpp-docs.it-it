@@ -1,8 +1,7 @@
 ---
 title: "Pagine delle propriet&#224; Riga di comando | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Riga di comando (pagine delle proprietà)"
 ms.assetid: e1721b6c-8b39-4b44-a41e-69b5bb470cc9
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Pagine delle propriet&#224; Riga di comando
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

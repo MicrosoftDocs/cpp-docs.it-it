@@ -1,8 +1,7 @@
 ---
 title: "Metodo Module::RegisterWinRTObject | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "RegisterWinRTObject (metodo)"
 ms.assetid: a2782c9c-b9c5-4e4b-9c8d-ef513aea20c5
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Metodo Module::RegisterWinRTObject
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

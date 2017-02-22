@@ -1,8 +1,7 @@
 ---
 title: "Istruzione __if_not_exists | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "__if_not_exists (parola chiave) [C++]"
 ms.assetid: a2f322d4-e96f-4a32-954e-4323d20c6e32
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Istruzione __if_not_exists
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

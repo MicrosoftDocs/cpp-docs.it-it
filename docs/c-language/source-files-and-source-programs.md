@@ -1,8 +1,7 @@
 ---
 title: "File e programmi di origine | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "file [C++], origine"
   - "programmi [C++], origine"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "programmi di origine"
 ms.assetid: 18bb2826-17da-48e5-92a2-10e649f1bc9f
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # File e programmi di origine
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

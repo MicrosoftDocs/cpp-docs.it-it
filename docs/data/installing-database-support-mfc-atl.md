@@ -1,8 +1,7 @@
 ---
 title: "Installazione del supporto per database (MFC/ATL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "installazione del supporto per database"
 ms.assetid: 3820ba96-4fb8-4405-83dd-bb3bc5998667
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Installazione del supporto per database (MFC/ATL)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

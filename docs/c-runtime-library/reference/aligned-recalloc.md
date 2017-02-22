@@ -1,8 +1,7 @@
 ---
 title: "_aligned_recalloc | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,16 +28,15 @@ f1_keywords:
   - "_aligned_recalloc"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "aligned_recalloc (funzione)"
   - "_aligned_recalloc (funzione)"
 ms.assetid: d3da3dcc-79ef-4273-8af5-ac7469420142
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # _aligned_recalloc
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

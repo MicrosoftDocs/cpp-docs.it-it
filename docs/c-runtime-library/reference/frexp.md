@@ -1,8 +1,7 @@
 ---
 title: "frexp | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,7 +28,6 @@ f1_keywords:
   - "_frexpl"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_frexpl (funzione)"
   - "esponente, numeri a virgola mobile"
@@ -39,10 +37,10 @@ helpviewer_keywords:
   - "mantisse, variabili a virgola mobile"
 ms.assetid: 9b020f2e-3967-45ec-a6a8-d467a071aa55
 caps.latest.revision: 13
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # frexp
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

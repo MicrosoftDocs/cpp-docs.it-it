@@ -1,8 +1,7 @@
 ---
 title: "Destinazioni multiple | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "NMAKE (programma), le destinazioni"
 ms.assetid: b609a179-0b9f-4b08-9930-998047588ae0
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Destinazioni multiple
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

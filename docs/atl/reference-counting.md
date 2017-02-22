@@ -1,8 +1,7 @@
 ---
 title: "Reference Counting | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "riferimenti, conteggio"
 ms.assetid: b1fd4514-6de6-429f-9e60-2777c0d07a3d
 caps.latest.revision: 10
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Reference Counting
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

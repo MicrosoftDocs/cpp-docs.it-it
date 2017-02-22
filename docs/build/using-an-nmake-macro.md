@@ -1,8 +1,7 @@
 ---
 title: "Utilizzo di una macro di NMAKE | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "NMAKE (macro), utilizzo"
 ms.assetid: 95c87fbc-76e6-48c0-8536-9bfe179f328e
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Utilizzo di una macro di NMAKE
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "File e flussi | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,16 +10,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "file [C++]"
   - "flussi"
 ms.assetid: f61e712b-eac9-4c28-bb18-97c3786ef387
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # File e flussi
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

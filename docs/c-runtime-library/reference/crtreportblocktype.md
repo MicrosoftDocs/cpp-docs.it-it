@@ -1,8 +1,7 @@
 ---
 title: "_CrtReportBlockType | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,7 +27,6 @@ f1_keywords:
   - "CrtReportBlockType"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "CrtReportBlockType (funzione)"
   - "BLOCK_SUBTYPE (macro)"
@@ -38,10 +36,10 @@ helpviewer_keywords:
   - "BLOCK_TYPE (macro)"
 ms.assetid: 0f4b9da7-bebb-4956-9541-b2581640ec6b
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # _CrtReportBlockType
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

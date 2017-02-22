@@ -1,8 +1,7 @@
 ---
 title: "Default Control Events | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C++"
 helpviewer_keywords: 
   - "Dialog editor, default control events"
   - "controls [C++], default control events"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "dialog box controls, events"
 ms.assetid: 75556b23-18f5-4390-97a4-2ecad3309741
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Default Control Events
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

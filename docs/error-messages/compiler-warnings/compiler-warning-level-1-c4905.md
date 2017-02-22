@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livello 1) C4905 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4905"
 ms.assetid: 40240bf4-b14e-4c22-aeb2-52f2851532f6
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Avviso del compilatore (livello 1) C4905
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

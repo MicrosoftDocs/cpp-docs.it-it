@@ -1,8 +1,7 @@
 ---
 title: "check_stack | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,17 +13,16 @@ f1_keywords:
   - "check_stack_CPP"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "check_stack (pragma)"
   - "pragma, check_stack"
   - "pragma, tabella di utilizzo di check_stack"
 ms.assetid: f18e20cc-9abb-48b7-ad62-8d384875b996
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # check_stack
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

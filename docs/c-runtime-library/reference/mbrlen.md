@@ -1,8 +1,7 @@
 ---
 title: "mbrlen | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,15 +27,14 @@ f1_keywords:
   - "mbrlen"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "mbrlen (funzione)"
 ms.assetid: dde8dee9-e091-4c4c-81b3-639808885ae1
 caps.latest.revision: 16
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # mbrlen
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "CMFCRibbonGallery Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "CMFCRibbonGallery class"
 ms.assetid: 9734c9c9-981c-4b3f-8c59-264fd41811b4
 caps.latest.revision: 28
-caps.handback.revision: 16
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 30
 ---
 # CMFCRibbonGallery Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

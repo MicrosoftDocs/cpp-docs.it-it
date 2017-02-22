@@ -1,8 +1,7 @@
 ---
 title: "Classe CWnd | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "windows [C++]"
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
 caps.latest.revision: 27
-caps.handback.revision: 17
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 29
 ---
 # Classe CWnd
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

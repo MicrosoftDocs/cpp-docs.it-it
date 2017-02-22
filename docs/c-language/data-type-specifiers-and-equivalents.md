@@ -1,8 +1,7 @@
 ---
 title: "Identificatori ed equivalenti di tipi di dati | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "tipi di dati [C++], equivalenti"
   - "tipi di dati [C++], identificatori"
@@ -24,10 +22,10 @@ helpviewer_keywords:
   - "estensione zero"
 ms.assetid: 0d4b515a-4f68-4786-83cf-a5d43c7cb6f3
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Identificatori ed equivalenti di tipi di dati
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

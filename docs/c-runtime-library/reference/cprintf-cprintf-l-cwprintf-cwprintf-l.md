@@ -1,8 +1,7 @@
 ---
 title: "_cprintf, _cprintf_l, _cwprintf, _cwprintf_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -40,7 +39,6 @@ f1_keywords:
   - "_cwprintf_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_cprintf (funzione)"
   - "_cprintf_l (funzione)"
@@ -57,10 +55,10 @@ helpviewer_keywords:
   - "tcprintf_l (funzione)"
 ms.assetid: 67ffefd4-45b3-4be0-9833-d8d26ac7c4e2
 caps.latest.revision: 34
-caps.handback.revision: 32
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 34
 ---
 # _cprintf, _cprintf_l, _cwprintf, _cwprintf_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

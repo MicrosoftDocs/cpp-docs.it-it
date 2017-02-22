@@ -1,8 +1,7 @@
 ---
 title: "Classe basic_fstream | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "basic_fstream (classe)"
 ms.assetid: 8473817e-42a4-430b-82b8-b476c86bcf8a
 caps.latest.revision: 24
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # Classe basic_fstream
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

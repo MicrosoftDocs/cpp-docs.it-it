@@ -1,8 +1,7 @@
 ---
 title: "Procedura dettagliata: utilizzo dei nuovi controlli Shell MFC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "controlli Shell (MFC)"
 ms.assetid: f0015caa-199d-4aaf-9501-5a239fce9095
 caps.latest.revision: 14
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Procedura dettagliata: utilizzo dei nuovi controlli Shell MFC
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Funzioni DDX (Dialog Data Exchange) per controlli OLE | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "OLE (controlli), funzioni DDX"
 ms.assetid: 7ef1f288-ff65-40d4-aad2-5497bc00bb27
 caps.latest.revision: 13
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # Funzioni DDX (Dialog Data Exchange) per controlli OLE
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

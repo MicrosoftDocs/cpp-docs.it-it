@@ -1,8 +1,7 @@
 ---
 title: "Utilizzo dei campi callback in un controllo selezione data e ora | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "DTN_FORMATQUERY (notifica)"
 ms.assetid: 404f4ba9-cba7-4718-9faa-bc6b274a723f
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Utilizzo dei campi callback in un controllo selezione data e ora
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

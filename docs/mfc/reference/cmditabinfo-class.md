@@ -1,8 +1,7 @@
 ---
 title: "CMDITabInfo Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "CMDITabInfo class, costruttore"
 ms.assetid: 988ae1b7-4f7f-4239-b88f-7e28b3291c5e
 caps.latest.revision: 37
-caps.handback.revision: 25
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 39
 ---
 # CMDITabInfo Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

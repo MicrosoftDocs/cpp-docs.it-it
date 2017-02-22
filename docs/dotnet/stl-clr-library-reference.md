@@ -1,8 +1,7 @@
 ---
 title: "Riferimenti della libreria STL/CLR | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "STL/CLR, ridistribuzione"
 ms.assetid: a9d9ca00-7bf2-48c1-b205-3ae6f8c25f82
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # Riferimenti della libreria STL/CLR
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

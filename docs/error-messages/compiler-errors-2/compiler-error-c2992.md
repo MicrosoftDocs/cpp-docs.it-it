@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2992 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2992"
 ms.assetid: 01b16447-43fe-4e91-9a5a-af884a166a31
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Errore del compilatore C2992
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

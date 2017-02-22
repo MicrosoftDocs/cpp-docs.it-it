@@ -1,8 +1,7 @@
 ---
 title: "Opening the Resource Editor for a Given Symbol | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "resource editors, resource symbols"
 ms.assetid: f715807b-5af2-4627-be25-be63b23fd097
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Opening the Resource Editor for a Given Symbol
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

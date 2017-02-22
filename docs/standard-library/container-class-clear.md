@@ -1,8 +1,7 @@
 ---
 title: "Container Class::clear | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "clear (metodo)"
 ms.assetid: 725f2717-5dc2-428f-a19a-05f046aafb2b
 caps.latest.revision: 8
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Container Class::clear
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

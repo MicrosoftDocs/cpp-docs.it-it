@@ -1,8 +1,7 @@
 ---
 title: "not_eq | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,10 +30,10 @@ helpviewer_keywords:
   - "not_eq (funzione)"
 ms.assetid: d87ad299-8b50-4393-a57f-06f70e1f23fb
 caps.latest.revision: 12
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # not_eq
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "__indword | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "__indword (funzione intrinseca)"
 ms.assetid: 1068d686-586e-4e36-b962-d1d7c3315260
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # __indword
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

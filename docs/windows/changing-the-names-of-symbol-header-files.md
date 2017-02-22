@@ -1,8 +1,7 @@
 ---
 title: "Changing the Names of Symbol Header Files | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "Resource.h"
 ms.assetid: b948284a-7899-402e-ab12-9f2c8480ca9d
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Changing the Names of Symbol Header Files
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

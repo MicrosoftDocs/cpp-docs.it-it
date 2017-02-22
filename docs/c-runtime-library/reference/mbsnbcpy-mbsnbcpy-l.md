@@ -1,8 +1,7 @@
 ---
 title: "_mbsnbcpy, _mbsnbcpy_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -33,7 +32,6 @@ f1_keywords:
   - "_mbsnbcpy_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_mbsnbcpy (funzione)"
   - "_mbsnbcpy_l (funzione)"
@@ -45,10 +43,10 @@ helpviewer_keywords:
   - "tcsncpy_l (funzione)"
 ms.assetid: 83d17b50-3cbf-4df9-bce8-3b6d52f85d04
 caps.latest.revision: 30
-caps.handback.revision: 30
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 30
 ---
 # _mbsnbcpy, _mbsnbcpy_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

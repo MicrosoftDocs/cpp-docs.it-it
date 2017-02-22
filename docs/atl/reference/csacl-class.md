@@ -1,8 +1,7 @@
 ---
 title: "CSacl Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "CSacl class"
 ms.assetid: 8624889b-aebc-4183-9d29-a20f07837f05
 caps.latest.revision: 22
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # CSacl Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

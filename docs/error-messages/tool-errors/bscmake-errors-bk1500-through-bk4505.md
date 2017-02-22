@@ -1,8 +1,7 @@
 ---
 title: "Errori di BSCMAKE da BK1500 a BK4505 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 3767baa6-e639-472e-99fd-7543fd945cd3
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Errori di BSCMAKE da BK1500 a BK4505
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

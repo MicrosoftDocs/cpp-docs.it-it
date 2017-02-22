@@ -1,8 +1,7 @@
 ---
 title: "Finestra di dialogo Regola colori (Editor di immagini per le icone) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "colori, immagine"
 ms.assetid: 534d0c2a-b3f6-4f09-9346-3bbf85bb3dd7
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Finestra di dialogo Regola colori (Editor di immagini per le icone)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

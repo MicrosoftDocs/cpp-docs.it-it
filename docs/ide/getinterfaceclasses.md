@@ -1,8 +1,7 @@
 ---
 title: "GetInterfaceClasses | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "GetInterfaceClasses (metodo)"
 ms.assetid: 712c112f-b4ff-43c4-ad49-c4f4c13c48bd
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # GetInterfaceClasses
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

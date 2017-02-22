@@ -1,8 +1,7 @@
 ---
 title: "__setusermatherr | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,10 +28,10 @@ helpviewer_keywords:
   - "__setusermatherr"
 ms.assetid: f306818d-381a-4d68-8739-71b92bacb5ea
 caps.latest.revision: 2
-caps.handback.revision: 2
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 2
 ---
 # __setusermatherr
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

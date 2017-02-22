@@ -1,8 +1,7 @@
 ---
 title: "Classe add_volatile | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "add_volatile"
 ms.assetid: cde57277-d764-402d-841e-97611ebaab14
 caps.latest.revision: 21
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # Classe add_volatile
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

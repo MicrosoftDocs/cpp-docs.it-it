@@ -1,8 +1,7 @@
 ---
 title: "cacosh, cacoshf, cacoshl | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -35,7 +34,6 @@ f1_keywords:
   - "complex/cacoshf"
   - "complex/cacoshl"
 dev_langs: 
-  - "C"
   - "C++"
 helpviewer_keywords: 
   - "funzione cacosh"
@@ -43,10 +41,10 @@ helpviewer_keywords:
   - "funzione cacoshl"
 ms.assetid: 83fd05eb-3587-4741-9be6-589a830a1703
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # cacosh, cacoshf, cacoshl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

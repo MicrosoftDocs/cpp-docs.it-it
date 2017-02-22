@@ -1,8 +1,7 @@
 ---
 title: "_fullpath_dbg, _wfullpath_dbg | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,7 +30,6 @@ f1_keywords:
   - "fullpath_dbg"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_fullpath_dbg (funzione)"
   - "_wfullpath_dbg (funzione)"
@@ -41,10 +39,10 @@ helpviewer_keywords:
   - "wfullpath_dbg (funzione)"
 ms.assetid: 81f72f85-07da-4f5c-866a-598e0fb03f6b
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # _fullpath_dbg, _wfullpath_dbg
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

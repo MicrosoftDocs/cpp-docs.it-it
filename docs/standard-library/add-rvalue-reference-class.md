@@ -1,8 +1,7 @@
 ---
 title: "Classe add_rvalue_reference | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "Classe add_rvalue_reference"
 ms.assetid: 76b0cb7c-1031-45d0-b409-f03ab0297580
 caps.latest.revision: 11
-caps.handback.revision: 5
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Classe add_rvalue_reference
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

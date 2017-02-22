@@ -1,8 +1,7 @@
 ---
 title: "__outword | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "out (istruzione)"
 ms.assetid: 995f8834-0f50-4b4f-a7a2-af0e7c371cda
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # __outword
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "/Gw (Ottimizza dati globali) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "-Gw (opzione del compilatore) [C++]"
 ms.assetid: 6f90f4e9-5eb8-4c47-886e-631278a5a4a9
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # /Gw (Ottimizza dati globali)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

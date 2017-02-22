@@ -1,8 +1,7 @@
 ---
 title: "__addfsbyte, __addfsword, __addfsdword | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "__addfsbyte (funzione intrinseca)"
 ms.assetid: 706c70df-6b52-4401-9268-2977ed8ad715
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # __addfsbyte, __addfsword, __addfsdword
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "IRowsetUpdateImpl::GetRowStatus | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "GetRowStatus (metodo)"
 ms.assetid: ce57e8be-5891-44d9-b3c5-59ffd3913678
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # IRowsetUpdateImpl::GetRowStatus
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

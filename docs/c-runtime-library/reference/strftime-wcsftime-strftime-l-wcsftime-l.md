@@ -1,8 +1,7 @@
 ---
 title: "strftime, wcsftime, _strftime_l, _wcsftime_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -33,7 +32,6 @@ f1_keywords:
   - "wcsftime"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_strftime_l (funzione)"
   - "strftime (funzione)"
@@ -44,10 +42,10 @@ helpviewer_keywords:
   - "stringhe di ora"
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
 caps.latest.revision: 22
-caps.handback.revision: 22
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # strftime, wcsftime, _strftime_l, _wcsftime_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

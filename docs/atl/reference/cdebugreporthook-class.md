@@ -1,8 +1,7 @@
 ---
 title: "CDebugReportHook Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "CDebugReportHook class"
 ms.assetid: 798076c3-6e63-4286-83b8-aa1bbcd0c20c
 caps.latest.revision: 22
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # CDebugReportHook Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2571 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2571"
 ms.assetid: c6522616-dee9-4d7d-9bf8-30a7e1deaadf
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Errore del compilatore C2571
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

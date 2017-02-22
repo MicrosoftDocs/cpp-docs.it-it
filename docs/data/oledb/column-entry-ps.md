@@ -1,8 +1,7 @@
 ---
 title: "COLUMN_ENTRY_PS | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "COLUMN_ENTRY_PS (macro)"
 ms.assetid: 563c12b0-3376-49d5-a14f-aa68d1e63a7a
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # COLUMN_ENTRY_PS
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

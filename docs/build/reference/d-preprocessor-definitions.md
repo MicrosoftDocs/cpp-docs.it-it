@@ -1,8 +1,7 @@
 ---
 title: "/D (definizioni preprocessore) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "simboli di definizione del preprocessore"
 ms.assetid: b53fdda7-8da1-474f-8811-ba7cdcc66dba
 caps.latest.revision: 22
-caps.handback.revision: 20
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # /D (definizioni preprocessore)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Errore degli strumenti del linker LNK2001 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "LNK2001"
 ms.assetid: dc1cf267-c984-486c-abd2-fd07c799f7ef
 caps.latest.revision: 21
-caps.handback.revision: 21
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # Errore degli strumenti del linker LNK2001
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

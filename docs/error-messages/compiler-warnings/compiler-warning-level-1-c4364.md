@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livello 1) C4364 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4364"
 ms.assetid: 1477634c-d60f-4570-ad16-1aaeae24ac7f
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Avviso del compilatore (livello 1) C4364
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

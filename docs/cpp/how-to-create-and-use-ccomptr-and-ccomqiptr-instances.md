@@ -1,8 +1,7 @@
 ---
 title: "Procedura: creare e utilizzare istanze CComPtr e CComQIPtr | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: b0356cfb-12cc-4ee8-b988-8311ed1ab5e0
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Procedura: creare e utilizzare istanze CComPtr e CComQIPtr
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

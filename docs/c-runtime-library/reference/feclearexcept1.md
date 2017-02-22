@@ -1,8 +1,7 @@
 ---
-title: "feclearexcept | Microsoft Docs"
+title: "feclearexcept1 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,16 +28,15 @@ f1_keywords:
   - "feclearexcept"
   - "fenv/feclearexcept"
 dev_langs: 
-  - "C"
   - "C++"
 helpviewer_keywords: 
   - "funzione feclearexcept"
 ms.assetid: ef419da3-c248-4432-b53c-8e7a475d9533
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # feclearexcept
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

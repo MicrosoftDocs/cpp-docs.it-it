@@ -1,8 +1,7 @@
 ---
 title: "ML and ML64 Command-Line Reference | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -65,10 +64,10 @@ helpviewer_keywords:
   - "/Ta MASM compiler option"
 ms.assetid: 712623c6-f77e-47ea-a945-089e57c50b40
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # ML and ML64 Command-Line Reference
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

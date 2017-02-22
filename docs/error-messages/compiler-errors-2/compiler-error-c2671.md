@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2671 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2671"
 ms.assetid: fc0ee40f-c8f3-408f-b89d-745d149c4169
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Errore del compilatore C2671
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

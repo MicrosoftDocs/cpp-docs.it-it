@@ -1,8 +1,7 @@
 ---
 title: "exp, expf | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,7 +30,6 @@ f1_keywords:
   - "exp"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "calcoli esponenziali"
   - "expf (funzione)"
@@ -39,10 +37,10 @@ helpviewer_keywords:
   - "exp (funzione)"
 ms.assetid: 7070016d-1143-407e-9e9a-6b059bb88867
 caps.latest.revision: 13
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # exp, expf
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

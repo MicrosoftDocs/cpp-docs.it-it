@@ -1,8 +1,7 @@
 ---
 title: "CSession::Close | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "Close (metodo)"
 ms.assetid: dc36c4c0-e588-4c0b-91d1-fc7dc5c8e7f4
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # CSession::Close
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

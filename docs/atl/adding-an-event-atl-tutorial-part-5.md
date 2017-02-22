@@ -1,8 +1,7 @@
 ---
 title: "Aggiunta di un evento (Esercitazione di ATL, parte 5) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 2de12022-3148-4ce3-8606-8a9d4274f0e9
 caps.latest.revision: 13
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Aggiunta di un evento (Esercitazione di ATL, parte 5)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

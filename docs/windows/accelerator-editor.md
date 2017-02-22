@@ -1,8 +1,7 @@
 ---
 title: "Accelerator Editor | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "Accelerator editor"
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
 caps.latest.revision: 12
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Accelerator Editor
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

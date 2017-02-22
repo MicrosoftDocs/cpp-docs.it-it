@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3492 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3492"
 ms.assetid: b1dc6342-9133-4b1f-a9c3-e8c65d20d121
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Errore del compilatore C3492
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

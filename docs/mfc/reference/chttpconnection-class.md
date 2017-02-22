@@ -1,8 +1,7 @@
 ---
 title: "CHttpConnection Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,10 +27,10 @@ helpviewer_keywords:
   - "server, connessione"
 ms.assetid: a402b662-c445-4988-800d-c8278551babe
 caps.latest.revision: 24
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # CHttpConnection Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

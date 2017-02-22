@@ -1,8 +1,7 @@
 ---
 title: "_ismbbkalnum, _ismbbkalnum_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,7 +31,6 @@ f1_keywords:
   - "_ismbbkalnum_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_ismbbkalnum_l (funzione)"
   - "ismbbkalnum_l (funzione)"
@@ -40,10 +38,10 @@ helpviewer_keywords:
   - "ismbbkalnum (funzione)"
 ms.assetid: e1d70e7b-29d0-469c-9d93-442b99de22ac
 caps.latest.revision: 19
-caps.handback.revision: 19
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # _ismbbkalnum, _ismbbkalnum_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

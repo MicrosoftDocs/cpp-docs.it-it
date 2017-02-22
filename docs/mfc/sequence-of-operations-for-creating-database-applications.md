@@ -1,8 +1,7 @@
 ---
 title: "Sequenza delle operazioni per la creazione di applicazioni database | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "MFC [C++], applicazioni database"
 ms.assetid: 9371da59-8536-43cd-8314-706ad320e2ec
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Sequenza delle operazioni per la creazione di applicazioni database
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

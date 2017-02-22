@@ -1,8 +1,7 @@
 ---
 title: "Classe CRestrictions | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "CRestrictions (classe)"
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Classe CRestrictions
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

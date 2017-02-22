@@ -1,8 +1,7 @@
 ---
 title: "Errore degli strumenti del linker LNK1140 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "LNK1140"
 ms.assetid: 468d7651-a7cd-47b9-aead-5bb2fab56121
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Errore degli strumenti del linker LNK1140
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

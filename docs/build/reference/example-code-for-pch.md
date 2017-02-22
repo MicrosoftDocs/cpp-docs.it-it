@@ -1,8 +1,7 @@
 ---
 title: "Codice di esempio per PCH | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ dev_langs:
   - "C++"
 ms.assetid: 4e3b97b2-e087-49a7-ab50-c6e8723a436e
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Codice di esempio per PCH
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

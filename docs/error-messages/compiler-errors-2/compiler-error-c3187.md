@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3187 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3187"
 ms.assetid: 9d2ebf55-1a6a-4087-bf5b-5274baae6351
 caps.latest.revision: 2
-caps.handback.revision: 2
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 2
 ---
 # Errore del compilatore C3187
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

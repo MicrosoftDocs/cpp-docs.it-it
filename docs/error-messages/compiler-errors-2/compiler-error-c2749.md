@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2749 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2749"
 ms.assetid: a81aef36-cdca-4d78-89d5-b72eff2500b2
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Errore del compilatore C2749
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

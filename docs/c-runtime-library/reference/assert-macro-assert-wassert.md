@@ -1,8 +1,7 @@
 ---
 title: "Macro assert, _assert, _wassert | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -33,17 +32,16 @@ f1_keywords:
   - "assert/_wassert"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "interruzione di programmi"
   - "assert (funzione)"
   - "assert (macro)"
 ms.assetid: a9ca031a-648b-47a6-bdf1-65fc7399dd40
 caps.latest.revision: 23
-caps.handback.revision: 23
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # Macro assert, _assert, _wassert
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

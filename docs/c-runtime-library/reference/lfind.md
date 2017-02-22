@@ -1,8 +1,7 @@
 ---
-title: "_lfind | Microsoft Docs"
+title: "lfind | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -26,23 +25,16 @@ apilocation:
 apitype: "DLLExport"
 f1_keywords: 
   - "lfind"
-  - "_lfind"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
-  - "_lfind (funzione)"
-  - "matrici [CRT], ricerca"
-  - "ricerca di chiavi nelle matrici"
   - "lfind (funzione)"
-  - "ricerca lineare"
-  - "ricerca, lineari"
 ms.assetid: a40ece70-1674-4b75-94bd-9f57cfff18f2
 caps.latest.revision: 20
-caps.handback.revision: 18
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # _lfind
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

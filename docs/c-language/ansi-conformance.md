@@ -1,8 +1,7 @@
 ---
 title: "Conformit&#224; ANSI | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,16 +10,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "ANSI [C++]"
   - "ANSI [C++], C standard"
 ms.assetid: c3a188c8-42bc-41fb-a78d-637f3175ade0
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Conformit&#224; ANSI
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

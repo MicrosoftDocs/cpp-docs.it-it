@@ -1,8 +1,7 @@
 ---
 title: "Collegamento interno | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,16 +10,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "collegamento interno"
   - "collegamento [C++], interne"
 ms.assetid: 80be7b51-c930-43db-94d6-4f09a64077bf
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Collegamento interno
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

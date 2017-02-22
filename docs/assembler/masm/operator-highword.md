@@ -1,8 +1,7 @@
 ---
 title: "operator HIGHWORD | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "HIGHWORD operator"
 ms.assetid: 6a3e4d60-e7b6-4cab-b4d7-d4cb7fb307c9
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # operator HIGHWORD
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

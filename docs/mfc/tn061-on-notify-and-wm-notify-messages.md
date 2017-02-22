@@ -1,8 +1,7 @@
 ---
 title: "TN061: messaggi ON_NOTIFY e WM_NOTIFY | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "WM_NOTIFY (messaggio)"
 ms.assetid: 04a96dde-7049-41df-9954-ad7bb5587caf
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # TN061: messaggi ON_NOTIFY e WM_NOTIFY
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
-title: "Struttura SYSTEMTIME | Microsoft Docs"
+title: "SYSTEMTIME Structure1 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "SYSTEMTIME (struttura)"
 ms.assetid: 9aaef4d6-de79-4fa1-8158-86b245ef5bff
 caps.latest.revision: 15
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # Struttura SYSTEMTIME
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3050 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3050"
 ms.assetid: ee090a0b-29cc-4215-a2f9-d82af79b8e82
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Errore del compilatore C3050
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

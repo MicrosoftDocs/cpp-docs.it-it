@@ -1,8 +1,7 @@
 ---
-title: "Errore R6002 del linguaggio C in fase di esecuzione  | Microsoft Docs"
+title: "Errore di Runtime di C da R6002 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,13 +13,13 @@ f1_keywords:
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
-  - "R6002"
+  - "RUNTIME DA R6002"
 ms.assetid: 8fbbe65a-9c43-459e-8342-e1f6d1cef7d0
 caps.latest.revision: 10
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Errore R6002 del linguaggio C in fase di esecuzione 
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

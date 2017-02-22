@@ -1,8 +1,7 @@
 ---
 title: "/GZ (Attiva controllo errori in fase di esecuzione dello stack frame) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "errori di build di rilascio"
 ms.assetid: b3efeeff-d5e3-4057-91c9-f6fc73d0270c
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # /GZ (Attiva controllo errori in fase di esecuzione dello stack frame)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

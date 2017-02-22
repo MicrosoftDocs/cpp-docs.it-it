@@ -1,8 +1,7 @@
 ---
 title: "__vmx_vmwrite | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "VMWRITE (istruzione)"
 ms.assetid: 88139792-fd3f-4210-97ca-9d84f43a0252
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # __vmx_vmwrite
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

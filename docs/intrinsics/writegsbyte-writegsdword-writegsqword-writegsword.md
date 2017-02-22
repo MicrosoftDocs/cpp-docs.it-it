@@ -1,8 +1,7 @@
 ---
 title: "__writegsbyte, __writegsdword, __writegsqword, __writegsword | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "__writegsdword (funzione intrinseca)"
 ms.assetid: 7746cf6d-2259-4139-9aab-c07dd75c8037
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # __writegsbyte, __writegsdword, __writegsqword, __writegsword
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

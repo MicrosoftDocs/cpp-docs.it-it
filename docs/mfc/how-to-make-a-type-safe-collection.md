@@ -1,8 +1,7 @@
 ---
 title: "Procedura: creazione di una raccolta indipendente dai tipi | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "raccolte indipendenti dai tipi"
 ms.assetid: 7230b2db-4283-4083-b098-eb231bf5b89e
 caps.latest.revision: 10
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Procedura: creazione di una raccolta indipendente dai tipi
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

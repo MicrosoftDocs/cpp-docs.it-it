@@ -1,8 +1,7 @@
 ---
 title: "Classe enable_if | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "enable_if"
 ms.assetid: c6b8d41c-a18f-4e30-a39e-b3aa0e8fd926
 caps.latest.revision: 28
-caps.handback.revision: 22
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 28
 ---
 # Classe enable_if
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

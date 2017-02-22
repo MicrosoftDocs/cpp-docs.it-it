@@ -1,8 +1,7 @@
 ---
 title: "_getdcwd_nolock, _wgetdcwd_nolock | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -33,7 +32,6 @@ f1_keywords:
   - "getdcwd_nolock"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_getdcwd_nolock (funzione)"
   - "_tgetdcwd_nolock (funzione)"
@@ -46,10 +44,10 @@ helpviewer_keywords:
   - "directory di lavoro"
 ms.assetid: d9bdf712-43f8-4173-8f9a-844e82beaa97
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # _getdcwd_nolock, _wgetdcwd_nolock
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Conflitti con il compilatore x86 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 8e47f0d3-afe0-42d9-9efa-de239ddd3a05
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Conflitti con il compilatore x86
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

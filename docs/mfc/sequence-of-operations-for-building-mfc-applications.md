@@ -1,8 +1,7 @@
 ---
 title: "Sequenza delle operazioni per la compilazione di applicazioni MFC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "applicazioni [MFC], sviluppo"
 ms.assetid: 6973c714-fe20-48c6-926b-de88356b3a3d
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Sequenza delle operazioni per la compilazione di applicazioni MFC
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

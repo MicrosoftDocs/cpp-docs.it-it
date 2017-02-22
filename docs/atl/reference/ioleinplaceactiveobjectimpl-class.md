@@ -1,8 +1,7 @@
 ---
 title: "IOleInPlaceActiveObjectImpl Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "IOleInPlaceActiveObjectImpl class"
 ms.assetid: 44e6cc6d-a2dc-4187-98e3-73cf0320dea9
 caps.latest.revision: 22
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # IOleInPlaceActiveObjectImpl Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

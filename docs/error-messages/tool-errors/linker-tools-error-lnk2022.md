@@ -1,8 +1,7 @@
 ---
 title: "Errore degli strumenti del linker LNK2022 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "LNK2022"
 ms.assetid: d2128c73-dde3-4b8e-a9b2-0a153acefb3b
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Errore degli strumenti del linker LNK2022
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

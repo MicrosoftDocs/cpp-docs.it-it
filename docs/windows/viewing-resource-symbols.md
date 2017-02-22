@@ -1,8 +1,7 @@
 ---
 title: "Viewing Resource Symbols | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "symbols, viewing"
 ms.assetid: 4bcc06d9-7d36-486a-8a37-71da0541643c
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Viewing Resource Symbols
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

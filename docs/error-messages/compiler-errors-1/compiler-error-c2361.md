@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2361 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2361"
 ms.assetid: efbdaeb9-891c-4f7d-97da-89088a8413f3
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Errore del compilatore C2361
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

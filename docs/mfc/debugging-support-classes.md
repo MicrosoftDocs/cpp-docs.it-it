@@ -1,8 +1,7 @@
 ---
 title: "Debug di classi di supporto | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "perdite di memoria, classi di debug MFC"
 ms.assetid: d79e084a-8326-4251-8700-4efac07c511e
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Debug di classi di supporto
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

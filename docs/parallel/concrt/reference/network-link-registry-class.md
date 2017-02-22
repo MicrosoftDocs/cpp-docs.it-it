@@ -1,8 +1,7 @@
 ---
 title: "Classe network_link_registry | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "network_link_registry (classe)"
 ms.assetid: 3e7b4097-09f1-4252-964e-b15b8f7f7fc6
 caps.latest.revision: 20
-caps.handback.revision: 14
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # Classe network_link_registry
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

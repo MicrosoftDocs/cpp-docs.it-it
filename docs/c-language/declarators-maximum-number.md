@@ -1,8 +1,7 @@
 ---
 title: "Dichiaratori: numero massimo | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,15 +10,14 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "dichiaratori, numero massimo"
 ms.assetid: f8410673-e11a-4830-89a3-3ffb7bb6562d
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Dichiaratori: numero massimo
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

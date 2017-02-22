@@ -1,8 +1,7 @@
 ---
 title: "cbrt, cbrtf, cbrtl | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -34,10 +33,10 @@ dev_langs:
   - "C++"
 ms.assetid: ab51d916-3db2-4beb-b46a-28b4062cd33f
 caps.latest.revision: 8
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # cbrt, cbrtf, cbrtl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

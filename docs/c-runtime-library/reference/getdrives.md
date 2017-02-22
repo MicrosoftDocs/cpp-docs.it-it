@@ -1,8 +1,7 @@
 ---
 title: "_getdrives | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,17 +28,16 @@ f1_keywords:
   - "_getdrives"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_getdrives (funzione)"
   - "unità disco"
   - "getdrives (funzione)"
 ms.assetid: 869bb51f-4209-4328-846e-3aadebaceb9c
 caps.latest.revision: 18
-caps.handback.revision: 16
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # _getdrives
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

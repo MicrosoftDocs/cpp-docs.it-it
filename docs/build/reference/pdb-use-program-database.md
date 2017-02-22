@@ -1,8 +1,7 @@
 ---
 title: "/PDB (Usa database di programma) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "-PDB (opzione del linker)"
 ms.assetid: d23db0ce-10cb-427a-bc60-d6b2a852723d
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # /PDB (Usa database di programma)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

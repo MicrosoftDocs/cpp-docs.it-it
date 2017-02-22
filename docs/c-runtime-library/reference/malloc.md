@@ -1,8 +1,7 @@
 ---
 title: "malloc | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,16 +27,15 @@ f1_keywords:
   - "malloc"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "malloc (funzione)"
   - "allocazione di memoria"
 ms.assetid: 144fcee2-be34-4a03-bb7e-ed6d4b99eea0
 caps.latest.revision: 22
-caps.handback.revision: 20
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # malloc
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

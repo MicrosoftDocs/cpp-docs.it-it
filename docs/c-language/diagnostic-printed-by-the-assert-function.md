@@ -1,8 +1,7 @@
 ---
 title: "Diagnostica stampata dalla funzione assert | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,13 +10,12 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 ms.assetid: 78b64200-520d-40da-9a61-71553f411d4f
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Diagnostica stampata dalla funzione assert
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

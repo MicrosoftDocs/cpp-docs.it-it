@@ -1,8 +1,7 @@
 ---
 title: "Trasporto delle eccezioni tra thread | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "spostare le eccezioni tra thread"
 ms.assetid: 5c95d57b-acf5-491f-8122-57c5df0edd98
 caps.latest.revision: 24
-caps.handback.revision: 24
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # Trasporto delle eccezioni tra thread
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

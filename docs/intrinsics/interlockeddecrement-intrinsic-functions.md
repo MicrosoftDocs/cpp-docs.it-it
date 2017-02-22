@@ -1,8 +1,7 @@
 ---
 title: "Funzioni intrinseche _InterlockedDecrement | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -55,10 +54,10 @@ helpviewer_keywords:
   - "InterlockedDecrement64_rel intrinseco"
 ms.assetid: 5268fce3-86b5-4b2b-b96c-2e531a3fb9b5
 caps.latest.revision: 23
-caps.handback.revision: 23
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # Funzioni intrinseche _InterlockedDecrement
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "AddCommonConfig | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "AddCommonConfig (metodo)"
 ms.assetid: 16abad93-6dd0-4daa-bf76-91eb6ffbdffa
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # AddCommonConfig
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

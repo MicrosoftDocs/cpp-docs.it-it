@@ -1,8 +1,7 @@
 ---
 title: "_lock | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,10 +30,10 @@ helpviewer_keywords:
   - "_lock (funzione)"
 ms.assetid: 29f77c37-30de-4b3d-91b6-030216e645a6
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # _lock
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

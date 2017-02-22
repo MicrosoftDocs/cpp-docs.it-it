@@ -1,8 +1,7 @@
 ---
 title: "Classe add_cv | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "add_cv"
 ms.assetid: a5572c78-a097-45d7-b476-ed4876889dea
 caps.latest.revision: 20
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # Classe add_cv
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

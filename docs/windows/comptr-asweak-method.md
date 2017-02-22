@@ -1,8 +1,7 @@
 ---
 title: "Metodo ComPtr::AsWeak | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "AsWeak (metodo)"
 ms.assetid: 23e29dcd-39cb-423f-abe6-6df4428213bf
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # Metodo ComPtr::AsWeak
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

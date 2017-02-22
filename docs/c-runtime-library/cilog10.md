@@ -1,8 +1,7 @@
 ---
 title: "_CIlog10 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -30,10 +29,10 @@ helpviewer_keywords:
   - "CIlog10 intrinseco"
 ms.assetid: 05d7fcaa-3cff-4cc5-8d44-015e7cacba24
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # _CIlog10
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

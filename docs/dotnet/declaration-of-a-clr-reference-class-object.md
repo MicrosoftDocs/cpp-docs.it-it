@@ -1,8 +1,7 @@
 ---
 title: "Dichiarazione di un oggetto classe di riferimento CLR | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "tipi [C++], tipi di riferimento"
 ms.assetid: 6d64f746-3715-4948-ada3-88859f4150e4
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Dichiarazione di un oggetto classe di riferimento CLR
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "ML Nonfatal Error A2050 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "A2050"
 ms.assetid: 16f3a58f-4bde-48f1-b0e3-2ed9612780a5
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # ML Nonfatal Error A2050
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Classe CMFCRibbonColorButton | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Classe CMFCRibbonColorButton"
 ms.assetid: 6b4b4ee3-8cc0-41b4-a4eb-93e8847008e1
 caps.latest.revision: 36
-caps.handback.revision: 24
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 38
 ---
 # Classe CMFCRibbonColorButton
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

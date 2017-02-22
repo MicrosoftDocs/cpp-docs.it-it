@@ -1,8 +1,7 @@
 ---
 title: "_filelength, _filelengthi64 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,7 +30,6 @@ f1_keywords:
   - "filelengthi64"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_filelength (funzione)"
   - "_filelengthi64 (funzione)"
@@ -41,10 +39,10 @@ helpviewer_keywords:
   - "lunghezze, file"
 ms.assetid: 3ab83d5a-543c-4079-b9d9-0abfc7da0275
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # _filelength, _filelengthi64
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

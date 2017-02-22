@@ -1,8 +1,7 @@
 ---
 title: "Specifica di convenzioni di chiamata | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,13 +10,12 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 ms.assetid: d6b23b76-eab5-4f6d-8731-9a89b6089d28
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Specifica di convenzioni di chiamata
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "CEnumeratorAccessor::m_bIsParent | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "m_bIsParent"
 ms.assetid: ab267905-d7d9-41cb-96ff-7be4d8875657
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # CEnumeratorAccessor::m_bIsParent
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

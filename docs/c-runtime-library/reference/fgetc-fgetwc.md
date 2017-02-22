@@ -1,8 +1,7 @@
 ---
 title: "fgetc, fgetwc | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,7 +30,6 @@ f1_keywords:
   - "fgetc"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_fgettc (funzione)"
   - "caratteri, lettura"
@@ -42,10 +40,10 @@ helpviewer_keywords:
   - "flussi, lettura di caratteri"
 ms.assetid: 13348b7b-dc86-421c-9d6c-611ca79c8338
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # fgetc, fgetwc
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

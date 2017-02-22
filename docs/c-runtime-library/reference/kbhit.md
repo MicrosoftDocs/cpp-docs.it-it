@@ -1,8 +1,7 @@
 ---
-title: "_kbhit | Microsoft Docs"
+title: "kbhit | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,27 +24,17 @@ apilocation:
   - "api-ms-win-crt-stdio-l1-1-0.dll"
 apitype: "DLLExport"
 f1_keywords: 
-  - "_kbhit"
   - "kbhit"
-  - "conio/_kbhit"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
-  - "_kbhit (funzione)"
-  - "console"
-  - "console, controllo"
   - "kbhit (funzione)"
-  - "input da tastiera"
-  - "tastiere, controllo input"
-  - "tastiere, input da tastiera"
-  - "input utente, controllo della tastiera"
 ms.assetid: e82a1cc9-bbec-4150-b678-a7e433220fe4
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # _kbhit
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

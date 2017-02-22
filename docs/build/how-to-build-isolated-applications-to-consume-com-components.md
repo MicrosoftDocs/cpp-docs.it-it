@@ -1,8 +1,7 @@
 ---
 title: "Procedura: compilare applicazioni isolate per l&#39;utilizzo di componenti COM | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "applicazioni isolate [C++]"
 ms.assetid: 04587547-1174-44ab-bd99-1292358fba20
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Procedura: compilare applicazioni isolate per l&#39;utilizzo di componenti COM
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

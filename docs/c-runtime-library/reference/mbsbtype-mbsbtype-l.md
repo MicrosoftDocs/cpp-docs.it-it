@@ -1,8 +1,7 @@
 ---
 title: "_mbsbtype, _mbsbtype_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,7 +31,6 @@ f1_keywords:
   - "_mbsbtype"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_mbsbtype (funzione)"
   - "_mbsbtype_l (funzione)"
@@ -40,10 +38,10 @@ helpviewer_keywords:
   - "mbsbtype_l (funzione)"
 ms.assetid: 0d5dd91a-d32d-4f98-ac57-98dfc9e98eac
 caps.latest.revision: 19
-caps.handback.revision: 19
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # _mbsbtype, _mbsbtype_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "/CLRSUPPORTLASTERROR (Mantiene l&#39;ultimo codice di errore per le chiamate PInvoke) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "-CLRSUPPORTLASTERROR (opzione del linker)"
 ms.assetid: b7057990-4154-4b1d-9fc9-6236f7be7575
 caps.latest.revision: 16
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # /CLRSUPPORTLASTERROR (Mantiene l&#39;ultimo codice di errore per le chiamate PInvoke)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

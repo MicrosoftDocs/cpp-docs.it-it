@@ -1,8 +1,7 @@
 ---
 title: "strerror_s, _strerror_s, _wcserror_s, __wcserror_s | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -37,7 +36,6 @@ f1_keywords:
   - "_strerror_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "__wcserror_s (funzione)"
   - "_strerror_s (funzione)"
@@ -51,10 +49,10 @@ helpviewer_keywords:
   - "wcserror_s (funzione)"
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
 caps.latest.revision: 21
-caps.handback.revision: 21
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # strerror_s, _strerror_s, _wcserror_s, __wcserror_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

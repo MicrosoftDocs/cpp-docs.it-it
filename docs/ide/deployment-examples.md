@@ -1,8 +1,7 @@
 ---
 title: "Esempi di distribuzione | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "esempi [C++], distribuzione"
 ms.assetid: a2904fea-2703-48dc-881b-5bfc1f11b67f
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # Esempi di distribuzione
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

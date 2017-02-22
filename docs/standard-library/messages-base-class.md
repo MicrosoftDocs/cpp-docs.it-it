@@ -1,8 +1,7 @@
 ---
 title: "Classe messages_base | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "messages_base (classe)"
 ms.assetid: 9aad38c6-4c13-445d-b096-364bd0836efb
 caps.latest.revision: 19
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # Classe messages_base
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

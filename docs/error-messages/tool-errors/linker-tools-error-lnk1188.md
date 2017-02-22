@@ -1,8 +1,7 @@
 ---
 title: "Errore degli strumenti del linker LNK1188 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "LNK1188"
 ms.assetid: 4af574b0-5b41-4580-9a37-52a634add995
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Errore degli strumenti del linker LNK1188
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

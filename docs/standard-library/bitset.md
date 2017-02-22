@@ -1,8 +1,7 @@
 ---
 title: "&lt;bitset&gt; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "bitset (intestazione)"
 ms.assetid: af30a9b9-489e-46e3-9d29-5f3ea07ae6dc
 caps.latest.revision: 19
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # &lt;bitset&gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

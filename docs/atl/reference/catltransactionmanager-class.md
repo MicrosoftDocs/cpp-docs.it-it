@@ -1,8 +1,7 @@
 ---
 title: "CAtlTransactionManager Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "CAtlTransactionManager class"
 ms.assetid: b01732dc-1d16-4b42-bfac-b137fca2b740
 caps.latest.revision: 25
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 28
 ---
 # CAtlTransactionManager Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

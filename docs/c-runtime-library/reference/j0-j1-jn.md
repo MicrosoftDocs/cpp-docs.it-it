@@ -1,8 +1,7 @@
 ---
 title: "j0, j1, jn | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,17 +30,16 @@ f1_keywords:
   - "j0"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "jn (funzione)"
   - "j1 (funzione)"
   - "j0 (funzione)"
 ms.assetid: ec8a9512-aacb-423c-a845-fc8927e6e21d
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # j0, j1, jn
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

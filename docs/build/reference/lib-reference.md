@@ -1,8 +1,7 @@
 ---
 title: "Riferimenti a LIB | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "librerie statiche, impostazione delle opzioni IDE"
 ms.assetid: ecc7f643-bbd4-47a3-8dc6-b360f880db91
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Riferimenti a LIB
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

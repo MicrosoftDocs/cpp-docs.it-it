@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2371 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2371"
 ms.assetid: d383993d-05ef-4e35-8129-3b58a6f7b7b7
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Errore del compilatore C2371
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

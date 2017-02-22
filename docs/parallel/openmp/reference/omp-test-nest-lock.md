@@ -1,8 +1,7 @@
 ---
 title: "omp_test_nest_lock | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "omp_test_nest_lock OpenMP function"
 ms.assetid: 4c909bbe-80e0-4100-aca6-d415d7dc5294
 caps.latest.revision: 12
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # omp_test_nest_lock
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

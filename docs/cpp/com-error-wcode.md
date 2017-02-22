@@ -1,8 +1,7 @@
 ---
 title: "_com_error::WCode | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "WCode (metodo)"
 ms.assetid: f3b21852-f8ea-4e43-bff1-11c2d35454c4
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # _com_error::WCode
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

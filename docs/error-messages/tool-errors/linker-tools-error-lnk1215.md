@@ -1,8 +1,7 @@
 ---
 title: "Errore degli strumenti del linker LNK1215 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "LNK1215"
 ms.assetid: 0774d8e6-f0c1-4efb-8723-7e1be6863d81
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Errore degli strumenti del linker LNK1215
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "UI Support Classes | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "interfacce utente, support classes"
 ms.assetid: 313dfc95-308a-4118-b919-5a3c3673b865
 caps.latest.revision: 10
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # UI Support Classes
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

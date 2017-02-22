@@ -1,8 +1,7 @@
 ---
 title: "&lt; numeric &gt; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "intestazione < numeric >"
 ms.assetid: 6d6ccb94-48cc-479b-b4a9-bd9c78d4896a
 caps.latest.revision: 23
-caps.handback.revision: 23
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # &lt; numeric &gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Classe CEnumerator | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "CEnumerator (classe)"
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # Classe CEnumerator
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

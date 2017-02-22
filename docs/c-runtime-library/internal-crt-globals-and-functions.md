@@ -1,8 +1,7 @@
 ---
 title: "Funzioni e globali CRT interni | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -825,10 +824,10 @@ helpviewer_keywords:
   - "__C_specific_handler"
 ms.assetid: 99a27f11-fa5a-449e-bfbb-aab578d1cc4f
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Funzioni e globali CRT interni
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

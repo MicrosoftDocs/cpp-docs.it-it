@@ -1,8 +1,7 @@
 ---
 title: "CBasePane Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -85,10 +84,10 @@ helpviewer_keywords:
   - "Serialize method"
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
 caps.latest.revision: 43
-caps.handback.revision: 32
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 44
 ---
 # CBasePane Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

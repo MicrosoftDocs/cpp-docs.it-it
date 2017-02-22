@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livello 3) C4996 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4996"
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
 caps.latest.revision: 34
-caps.handback.revision: 34
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 34
 ---
 # Avviso del compilatore (livello 3) C4996
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

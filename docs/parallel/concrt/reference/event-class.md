@@ -1,8 +1,7 @@
 ---
 title: "Classe event | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "event (classe)"
 ms.assetid: fba35a53-6568-4bfa-9aaf-07c0928cf73d
 caps.latest.revision: 22
-caps.handback.revision: 15
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # Classe event
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

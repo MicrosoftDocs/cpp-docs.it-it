@@ -1,8 +1,7 @@
 ---
 title: "componente | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,16 +13,15 @@ f1_keywords:
   - "component_CPP"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "component (pragma)"
   - "pragma, componente"
 ms.assetid: 7b66355e-3201-4c14-8190-f4a2a81a604a
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # componente
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

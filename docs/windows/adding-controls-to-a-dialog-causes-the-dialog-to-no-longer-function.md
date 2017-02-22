@@ -1,8 +1,7 @@
 ---
 title: "Adding Controls to a Dialog Causes the Dialog to No Longer Function | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -10,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
-  - "C++"
   - "C++"
 helpviewer_keywords: 
   - "controls [C++], troubleshooting"
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "InitCommonControls"
 ms.assetid: b2dd4574-ea59-4343-8d65-b387cead5da6
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Adding Controls to a Dialog Causes the Dialog to No Longer Function
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

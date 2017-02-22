@@ -1,8 +1,7 @@
 ---
 title: "fmod, fmodf | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,7 +30,6 @@ f1_keywords:
   - "fmodf"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "calcolo di resti a virgola mobile"
   - "fmodf (funzione)"
@@ -39,10 +37,10 @@ helpviewer_keywords:
   - "numeri a virgola mobile, calcolo dei resti"
 ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
 caps.latest.revision: 13
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # fmod, fmodf
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Messaggi di notifica del controllo Tree | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "struttura ad albero (controlli), messaggi di notifica"
 ms.assetid: ac7013b4-91dd-4668-bd75-439ca0680ef9
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Messaggi di notifica del controllo Tree
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

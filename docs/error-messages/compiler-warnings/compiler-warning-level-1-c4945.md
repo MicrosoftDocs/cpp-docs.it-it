@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livello 1) C4945 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4945"
 ms.assetid: 6d2079ea-dc59-4611-bc68-9a22c06f7587
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Avviso del compilatore (livello 1) C4945
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

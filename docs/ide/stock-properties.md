@@ -1,8 +1,7 @@
 ---
 title: "Propriet&#224; predefinite | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "proprietà predefinite, informazioni sulle proprietà predefinite"
 ms.assetid: a89fc454-0b8e-447a-9033-4c8af46a24d9
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Propriet&#224; predefinite
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

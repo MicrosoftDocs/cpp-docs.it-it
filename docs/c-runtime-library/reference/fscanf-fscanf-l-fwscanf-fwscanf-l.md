@@ -1,8 +1,7 @@
 ---
 title: "fscanf, _fscanf_l, fwscanf, _fwscanf_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -35,7 +34,6 @@ f1_keywords:
   - "_fscanf_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_fscanf_l (funzione)"
   - "_ftscanf (funzione)"
@@ -52,10 +50,10 @@ helpviewer_keywords:
   - "flussi [C++], lettura di dati formattati"
 ms.assetid: 9004e978-6c5f-4bb2-98fd-51e5948933f2
 caps.latest.revision: 24
-caps.handback.revision: 22
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # fscanf, _fscanf_l, fwscanf, _fwscanf_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

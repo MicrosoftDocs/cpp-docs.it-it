@@ -1,8 +1,7 @@
 ---
 title: "CRegKey Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "Registro di sistema, scrittura"
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
 caps.latest.revision: 25
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 28
 ---
 # CRegKey Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

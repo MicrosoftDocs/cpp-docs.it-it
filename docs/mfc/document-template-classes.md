@@ -1,8 +1,7 @@
 ---
 title: "Classi Document-Template | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "modelli di documento, classi"
 ms.assetid: 901749e9-8048-44a0-b5e2-361554650a73
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Classi Document-Template
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

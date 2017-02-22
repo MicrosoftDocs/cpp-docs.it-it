@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore C4972 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4972"
 ms.assetid: d18e8e65-b2ef-4d75-a207-fbd0c17c9060
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Avviso del compilatore C4972
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

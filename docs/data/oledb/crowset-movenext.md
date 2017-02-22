@@ -1,8 +1,7 @@
 ---
 title: "CRowset::MoveNext | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "MoveNext (metodo)"
 ms.assetid: 0df3288c-2bce-494f-99c0-6344b54a4adf
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # CRowset::MoveNext
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

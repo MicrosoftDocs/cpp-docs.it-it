@@ -1,8 +1,7 @@
 ---
 title: "CMFCTabToolTipInfo Structure | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "CMFCTabToolTipInfo struct"
 ms.assetid: 9c3b3fb9-1497-4d59-932b-0da9348dd5e2
 caps.latest.revision: 27
-caps.handback.revision: 16
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 29
 ---
 # CMFCTabToolTipInfo Structure
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

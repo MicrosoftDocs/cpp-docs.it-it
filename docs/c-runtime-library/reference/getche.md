@@ -1,8 +1,7 @@
 ---
 title: "getche | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,15 +26,14 @@ f1_keywords:
   - "getche"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "getche (funzione)"
 ms.assetid: 95e62bb8-eec0-4145-b2e8-f6406849af52
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # getche
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

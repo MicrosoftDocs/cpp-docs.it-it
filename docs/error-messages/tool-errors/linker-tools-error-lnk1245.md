@@ -1,8 +1,7 @@
 ---
 title: "Errore degli strumenti del linker LNK1245 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "LNK1245"
 ms.assetid: 179c8165-ffbb-44cd-9f24-5250f29577cc
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Errore degli strumenti del linker LNK1245
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

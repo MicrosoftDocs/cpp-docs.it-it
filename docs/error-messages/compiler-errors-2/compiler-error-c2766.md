@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2766 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2766"
 ms.assetid: 8032f4ca-6827-4f04-9c61-c44643c85cc4
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Errore del compilatore C2766
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

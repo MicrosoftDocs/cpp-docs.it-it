@@ -1,8 +1,7 @@
 ---
 title: "Appunti: quando utilizzare ogni meccanismo di appunti | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "Appunti OLE, linee guida"
 ms.assetid: fd071996-ef8c-488b-81bd-89057095a201
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Appunti: quando utilizzare ogni meccanismo di appunti
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

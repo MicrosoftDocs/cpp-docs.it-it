@@ -1,8 +1,7 @@
 ---
 title: "__readcr8 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "__readcr8 (funzione intrinseca)"
 ms.assetid: fce16953-87ff-4fbe-8081-7962b97ae46c
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # __readcr8
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

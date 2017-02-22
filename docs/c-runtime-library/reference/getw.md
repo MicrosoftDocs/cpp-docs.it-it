@@ -1,8 +1,7 @@
 ---
-title: "_getw | Microsoft Docs"
+title: "getw | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,20 +24,17 @@ apilocation:
   - "api-ms-win-crt-stdio-l1-1-0.dll"
 apitype: "DLLExport"
 f1_keywords: 
-  - "_getw"
+  - "getw"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
-  - "_getw (funzione)"
   - "getw (funzione)"
-  - "Integer, recupero da flussi"
 ms.assetid: ef75facc-b84e-470f-9f5f-8746c90822a0
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # _getw
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

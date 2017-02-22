@@ -1,8 +1,7 @@
 ---
 title: "Struttura once_flag | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ dev_langs:
   - "C++"
 ms.assetid: 71bfb88d-ca8c-4082-a6e1-ff52151e8629
 caps.latest.revision: 13
-caps.handback.revision: 3
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Struttura once_flag
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

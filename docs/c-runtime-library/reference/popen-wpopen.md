@@ -1,8 +1,7 @@
 ---
 title: "_popen, _wpopen | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -34,7 +33,6 @@ f1_keywords:
   - "_tpopen"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_popen (funzione)"
   - "_tpopen (funzione)"
@@ -45,10 +43,10 @@ helpviewer_keywords:
   - "wpopen (funzione)"
 ms.assetid: eb718ff2-c87d-4bd4-bd2e-ba317c3d6973
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # _popen, _wpopen
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

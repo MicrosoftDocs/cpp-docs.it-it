@@ -1,8 +1,7 @@
 ---
 title: "Descrizioni comandi | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "descrizioni comandi [C++], CFrameWnd"
 ms.assetid: 7f0bba86-7c55-4bf6-8455-687a4dcb2be8
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Descrizioni comandi
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

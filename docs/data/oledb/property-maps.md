@@ -1,8 +1,7 @@
 ---
 title: "Mappe delle propriet&#224; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "mappe di proprietà"
 ms.assetid: 44abde56-90ad-4612-854e-d2fa5426fa80
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Mappe delle propriet&#224;
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

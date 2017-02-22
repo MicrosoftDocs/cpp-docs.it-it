@@ -1,8 +1,7 @@
 ---
 title: "_unlink, _wunlink | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,7 +31,6 @@ f1_keywords:
   - "_wunlink"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_tunlink (funzione)"
   - "_unlink (funzione)"
@@ -44,10 +42,10 @@ helpviewer_keywords:
   - "wunlink (funzione)"
 ms.assetid: 5e4f5f1b-1e99-4391-9b18-9ac63c32fae8
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # _unlink, _wunlink
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

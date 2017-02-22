@@ -1,8 +1,7 @@
 ---
 title: "rmdir | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,15 +26,14 @@ f1_keywords:
   - "rmdir"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "rmdir (funzione)"
 ms.assetid: 03a0aff4-f66c-42a9-bee9-84c46f994952
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # rmdir
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

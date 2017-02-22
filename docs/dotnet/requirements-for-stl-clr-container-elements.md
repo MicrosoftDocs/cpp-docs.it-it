@@ -1,8 +1,7 @@
 ---
 title: "Requisiti degli elementi del contenitore STL/CLR | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "STL/CLR, contenitori"
 ms.assetid: 59ab240c-15bf-4701-a9f9-e7c56e5ab53f
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Requisiti degli elementi del contenitore STL/CLR
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

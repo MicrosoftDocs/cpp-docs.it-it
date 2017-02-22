@@ -1,8 +1,7 @@
 ---
 title: "Definizione di funzioni inline C con dllexport e dllimport | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "dllexport (attributo) [C++]"
   - "dllexport (attributo) [C++], funzioni inline"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "funzioni inline [C++], dllexport e dllimport"
 ms.assetid: 41418f7c-1c11-470b-bb2e-1f8269a239f0
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Definizione di funzioni inline C con dllexport e dllimport
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

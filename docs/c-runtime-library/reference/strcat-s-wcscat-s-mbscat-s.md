@@ -1,8 +1,7 @@
 ---
 title: "strcat_s, wcscat_s, _mbscat_s | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -33,7 +32,6 @@ f1_keywords:
   - "_mbscat_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_mbscat_s (funzione)"
   - "aggiunta di stringhe"
@@ -43,10 +41,10 @@ helpviewer_keywords:
   - "wcscat_s (funzione)"
 ms.assetid: 0f2f9901-c5c5-480b-98bc-f8f690792fc0
 caps.latest.revision: 30
-caps.handback.revision: 30
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 30
 ---
 # strcat_s, wcscat_s, _mbscat_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

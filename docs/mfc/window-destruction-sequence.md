@@ -1,8 +1,7 @@
 ---
 title: "Sequenza di distruzione di finestre | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "finestre [C++], eliminazione"
 ms.assetid: 2d819196-6240-415f-a308-db43745e616c
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Sequenza di distruzione di finestre
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

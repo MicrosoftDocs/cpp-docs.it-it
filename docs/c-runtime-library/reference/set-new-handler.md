@@ -1,8 +1,7 @@
 ---
 title: "_set_new_handler | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,7 +28,6 @@ f1_keywords:
   - "set_new_handler"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_set_new_handler (funzione)"
   - "gestione errori"
@@ -37,10 +35,10 @@ helpviewer_keywords:
   - "trasferimento del controllo al gestore errori"
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
 caps.latest.revision: 17
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # _set_new_handler
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

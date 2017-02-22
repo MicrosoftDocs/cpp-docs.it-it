@@ -1,8 +1,7 @@
 ---
 title: "auto_handle::get | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "auto_handle::get"
 ms.assetid: 8c75727b-8f21-44b3-be3e-7eb8858da4f7
 caps.latest.revision: 10
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # auto_handle::get
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

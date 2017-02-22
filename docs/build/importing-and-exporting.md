@@ -1,8 +1,7 @@
 ---
 title: "Importazione ed esportazione | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "importazione di DLL [C++]"
 ms.assetid: 7c44c2aa-2117-4cec-9615-a65bfd3f8f7b
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Importazione ed esportazione
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

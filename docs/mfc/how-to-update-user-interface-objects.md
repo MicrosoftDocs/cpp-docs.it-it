@@ -1,8 +1,7 @@
 ---
 title: "Procedura: aggiornare oggetti dell&#39;interfaccia utente | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "oggetti dell'interfaccia utente, aggiornamento"
 ms.assetid: 82f09773-c978-427b-b321-05a6143b7369
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Procedura: aggiornare oggetti dell&#39;interfaccia utente
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

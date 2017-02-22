@@ -1,8 +1,7 @@
 ---
 title: "__addgsbyte, __addgsword, __addgsdword, __addgsqword | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,10 +26,10 @@ helpviewer_keywords:
   - "__addgsbyte (funzione intrinseca)"
 ms.assetid: 4fa03e69-d849-49ed-ba37-1d3aa23c2a21
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # __addgsbyte, __addgsword, __addgsdword, __addgsqword
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

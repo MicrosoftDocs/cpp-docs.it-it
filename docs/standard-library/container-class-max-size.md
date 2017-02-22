@@ -1,8 +1,7 @@
 ---
 title: "Container Class::max_size | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "max_size (metodo)"
 ms.assetid: 56754753-9911-48fd-b463-ac06b2fa1aab
 caps.latest.revision: 8
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Container Class::max_size
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

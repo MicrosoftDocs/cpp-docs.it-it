@@ -1,8 +1,7 @@
 ---
 title: "_mm_stream_ss | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "_mm_stream_ss (funzione intrinseca)"
 ms.assetid: c53dffe9-0dfe-4063-85d3-e8987b870fce
 caps.latest.revision: 13
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # _mm_stream_ss
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

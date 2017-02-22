@@ -1,8 +1,7 @@
 ---
 title: "omp_set_num_threads | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "omp_set_num_threads OpenMP function"
 ms.assetid: dae0bf3f-cd7a-4413-89de-6149ac1f4fa7
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # omp_set_num_threads
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

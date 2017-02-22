@@ -1,8 +1,7 @@
 ---
 title: "Gestori di messaggi | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "gestione dei messaggi, funzioni del gestore messaggi"
 ms.assetid: 51bc4e76-dbe3-4cc2-b026-3199d56b2fa9
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Gestori di messaggi
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

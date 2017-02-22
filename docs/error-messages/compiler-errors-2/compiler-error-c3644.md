@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3644 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3644"
 ms.assetid: 2e3f6c41-3ec5-4a01-82bc-f11b61ebe68e
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Errore del compilatore C3644
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

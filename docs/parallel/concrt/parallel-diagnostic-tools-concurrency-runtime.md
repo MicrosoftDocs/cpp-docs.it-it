@@ -1,8 +1,7 @@
 ---
 title: "Strumenti di diagnostica in parallelo (runtime di concorrenza) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "strumenti di diagnostica in parallelo [Runtime di concorrenza]"
 ms.assetid: b1a3f1d2-f5df-4f29-852e-906b3d8341fc
 caps.latest.revision: 15
-caps.handback.revision: 14
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # Strumenti di diagnostica in parallelo (runtime di concorrenza)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

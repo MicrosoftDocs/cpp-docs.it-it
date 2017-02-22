@@ -1,8 +1,7 @@
 ---
 title: "CPathT Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "CPathT class"
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
 caps.latest.revision: 20
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # CPathT Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

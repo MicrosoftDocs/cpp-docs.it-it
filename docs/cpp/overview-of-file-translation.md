@@ -1,8 +1,7 @@
 ---
 title: "Cenni preliminari sulla conversione di file | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "fasi di conversione"
 ms.assetid: 5036c7b7-ccff-4e2c-b052-a9ea6c71af87
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Cenni preliminari sulla conversione di file
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

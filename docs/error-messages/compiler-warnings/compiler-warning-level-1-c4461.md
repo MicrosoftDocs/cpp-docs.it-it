@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livello 1) C4461 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4461"
 ms.assetid: 104ffecc-3dd4-4cb1-89a8-81154fbe46d9
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Avviso del compilatore (livello 1) C4461
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

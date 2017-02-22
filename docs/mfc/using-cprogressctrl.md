@@ -1,8 +1,7 @@
 ---
 title: "Utilizzo di CProgressCtrl | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "controlli di stato [C++], utilizzo"
 ms.assetid: 61473270-196b-41ab-bf2b-467f46673539
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Utilizzo di CProgressCtrl
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

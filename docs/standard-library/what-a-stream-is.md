@@ -1,8 +1,7 @@
 ---
 title: "Definizione di flusso | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "flussi [C++], classi iostream"
 ms.assetid: a7e661e9-6cd1-4543-a9a4-c58ee9fd32f3
 caps.latest.revision: 8
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Definizione di flusso
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

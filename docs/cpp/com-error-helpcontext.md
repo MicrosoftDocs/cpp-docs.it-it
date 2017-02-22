@@ -1,8 +1,7 @@
 ---
 title: "_com_error::HelpContext | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "HelpContext (metodo)"
 ms.assetid: 160d6443-9b68-4cf5-a540-50da951a5b2b
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # _com_error::HelpContext
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

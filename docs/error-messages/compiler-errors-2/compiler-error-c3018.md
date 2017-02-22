@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3018 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3018"
 ms.assetid: 685be45f-f116-43a8-a88d-05ab6616e2f1
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Errore del compilatore C3018
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

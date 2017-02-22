@@ -1,8 +1,7 @@
 ---
 title: "Metodo WeakRef::AsIID | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "AsIID (metodo)"
 ms.assetid: 94e87309-32da-4dbb-8233-e77313a1f448
 caps.latest.revision: 7
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Metodo WeakRef::AsIID
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

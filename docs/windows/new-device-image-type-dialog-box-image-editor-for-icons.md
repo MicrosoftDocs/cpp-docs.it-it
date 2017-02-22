@@ -1,8 +1,7 @@
 ---
 title: "Finestra di dialogo Nuovo tipo di immagine &lt;Dispositivo&gt; (Editor di immagini per le icone) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,15 +12,14 @@ f1_keywords:
   - "vc.editors.newimagetype"
 dev_langs: 
   - "C++"
-  - "C++"
 helpviewer_keywords: 
   - "Finestra di dialogo Nuovo tipo di immagine <Dispositivo>"
 ms.assetid: 9c1344f5-dea0-42cd-9042-b13032f72be2
 caps.latest.revision: 8
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Finestra di dialogo Nuovo tipo di immagine &lt;Dispositivo&gt; (Editor di immagini per le icone)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

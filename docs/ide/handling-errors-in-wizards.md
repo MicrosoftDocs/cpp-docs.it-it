@@ -1,8 +1,7 @@
 ---
 title: "Gestione degli errori nelle procedure guidate | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "JScript, errori nelle creazioni guidate personalizzate"
 ms.assetid: 13c99f41-7a7e-4cc7-9228-bfbfbd0a0272
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Gestione degli errori nelle procedure guidate
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

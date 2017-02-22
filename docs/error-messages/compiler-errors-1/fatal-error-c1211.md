@@ -1,8 +1,7 @@
 ---
 title: "Errore irreversibile C1211 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C1211"
 ms.assetid: df0ca70d-ec6e-4400-926a-b877e2599978
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Errore irreversibile C1211
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

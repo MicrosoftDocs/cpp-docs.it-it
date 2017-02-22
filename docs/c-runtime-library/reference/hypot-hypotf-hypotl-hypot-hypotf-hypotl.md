@@ -1,8 +1,7 @@
 ---
 title: "hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -38,7 +37,6 @@ f1_keywords:
   - "_hypotf"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_hypot (funzione)"
   - "calcolo di ipotenuse"
@@ -49,10 +47,10 @@ helpviewer_keywords:
   - "triangoli, calcolo dell'ipotenusa"
 ms.assetid: 6a13887f-bd53-43fc-9d77-5b42d6e49925
 caps.latest.revision: 17
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

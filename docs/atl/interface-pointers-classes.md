@@ -1,8 +1,7 @@
 ---
 title: "Interface Pointers Classes | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "puntatori, to interfaces"
 ms.assetid: 712617a1-17ae-4b5c-a32c-a48b758df7a6
 caps.latest.revision: 10
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Interface Pointers Classes
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

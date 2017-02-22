@@ -1,8 +1,7 @@
 ---
 title: "Prototipi di funzioni | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "tipi di dati [C], tipi restituiti dalla funzione"
   - "prototipi di funzioni"
@@ -20,10 +18,10 @@ helpviewer_keywords:
   - "prototipi [C++], funzione"
 ms.assetid: d152f8e6-971e-432c-93ca-5a91400653c2
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Prototipi di funzioni
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

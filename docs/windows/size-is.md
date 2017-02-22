@@ -1,8 +1,7 @@
 ---
 title: "size_is | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "size_is attribute"
 ms.assetid: 70192d09-f6c5-4d52-b3fe-303f8cb10aa5
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # size_is
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

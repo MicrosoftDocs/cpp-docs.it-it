@@ -1,8 +1,7 @@
 ---
-title: "mbrtoc16, mbrtoc32 | Microsoft Docs"
+title: "mbrtoc16, mbrtoc323 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,17 +31,16 @@ f1_keywords:
   - "uchar/mbrtoc16"
   - "uchar/mbrtoc32"
 dev_langs: 
-  - "C"
   - "C++"
 helpviewer_keywords: 
   - "mbrtoc16 (funzione)"
   - "mbrtoc32 (funzione)"
 ms.assetid: 099ade4d-56f7-4e61-8b45-493f1d7a64bd
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # mbrtoc16, mbrtoc32
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

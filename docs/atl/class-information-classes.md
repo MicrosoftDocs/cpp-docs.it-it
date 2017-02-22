@@ -1,8 +1,7 @@
 ---
 title: "Class Information Classes | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "class information, recupero"
 ms.assetid: 39365025-f24a-41ae-87ab-4ae8ed085b98
 caps.latest.revision: 10
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Class Information Classes
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

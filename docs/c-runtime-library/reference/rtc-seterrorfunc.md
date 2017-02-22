@@ -1,8 +1,7 @@
 ---
 title: "_RTC_SetErrorFunc | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,16 +27,15 @@ f1_keywords:
   - "_RTC_SetErrorFunc"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "RTC_SetErrorFunc (funzione)"
   - "_RTC_SetErrorFunc (funzione)"
 ms.assetid: b2292722-0d83-4092-83df-3d5b19880666
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # _RTC_SetErrorFunc
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

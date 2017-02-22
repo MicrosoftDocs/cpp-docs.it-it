@@ -1,8 +1,7 @@
 ---
 title: "/Os, /Ot (Ottimizza per dimensione codice, Ottimizza per velocit&#224; codice) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,10 +27,10 @@ helpviewer_keywords:
   - "ottimizzazione del codice macchina"
 ms.assetid: 9a340806-fa15-4308-892c-355d83cac0f2
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # /Os, /Ot (Ottimizza per dimensione codice, Ottimizza per velocit&#224; codice)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

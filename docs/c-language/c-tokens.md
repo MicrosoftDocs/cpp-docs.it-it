@@ -1,8 +1,7 @@
 ---
 title: "Token C | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,16 +10,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "token"
   - "unità di traduzione"
 ms.assetid: 05e5f6f1-b8ea-4f74-af17-c0b9b5dbd3b5
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Token C
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

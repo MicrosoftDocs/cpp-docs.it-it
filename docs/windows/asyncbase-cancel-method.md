@@ -1,8 +1,7 @@
 ---
 title: "Metodo AsyncBase::Cancel | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Cancel (metodo)"
 ms.assetid: 8bfebc63-3848-4629-bc89-aa538ed7e7ad
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # Metodo AsyncBase::Cancel
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

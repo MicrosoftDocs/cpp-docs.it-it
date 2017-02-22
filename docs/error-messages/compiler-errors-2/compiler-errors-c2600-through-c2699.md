@@ -1,8 +1,7 @@
 ---
 title: "Errori del compilatore da C2600 a C2699 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 73c6319f-cbea-4a2f-913b-90dc1af61f64
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Errori del compilatore da C2600 a C2699
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

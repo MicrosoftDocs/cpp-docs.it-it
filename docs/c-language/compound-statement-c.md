@@ -1,8 +1,7 @@
 ---
 title: "Istruzione composta (C) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,16 +10,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "istruzione composta"
   - "istruzioni, composito"
 ms.assetid: 32d1bf86-cbbc-42a9-ba3a-1be1c6c7754c
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Istruzione composta (C)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

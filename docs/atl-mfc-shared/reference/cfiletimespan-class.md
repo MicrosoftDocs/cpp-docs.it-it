@@ -1,8 +1,7 @@
 ---
 title: "CFileTimeSpan Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "shared classes, CFileTimeSpan"
 ms.assetid: 5856fb39-9c82-4027-8ccf-8760890491ec
 caps.latest.revision: 18
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # CFileTimeSpan Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

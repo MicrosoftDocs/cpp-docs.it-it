@@ -1,8 +1,7 @@
 ---
 title: "Analisi di argomenti della riga di comando C | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "riga di comando, analisi"
   - "virgolette doppie"
@@ -20,10 +18,10 @@ helpviewer_keywords:
   - "avvio (codice), analisi di argomenti della riga di comando"
 ms.assetid: ffce8037-2811-45c4-8db4-1ed787859c80
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Analisi di argomenti della riga di comando C
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

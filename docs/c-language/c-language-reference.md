@@ -1,8 +1,7 @@
 ---
 title: "Riferimenti del linguaggio C | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "C, riferimenti al linguaggio"
   - "riferimenti al linguaggio, C"
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "Visual C, riferimenti al linguaggio"
 ms.assetid: 3a306c30-8dd2-435b-bd1c-c143b02c0872
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Riferimenti del linguaggio C
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

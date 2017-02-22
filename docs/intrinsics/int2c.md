@@ -1,8 +1,7 @@
 ---
 title: "__int2c | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "__int2c (funzione intrinseca)"
 ms.assetid: aa20ff30-adef-42bb-8577-8010f3122f8e
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # __int2c
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

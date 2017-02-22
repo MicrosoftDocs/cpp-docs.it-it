@@ -1,8 +1,7 @@
 ---
 title: "BLOB_NAME_STATUS | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "BLOB_NAME_STATUS (macro)"
 ms.assetid: 4564e4a0-8e5e-436a-bd1e-012d2a1b8642
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # BLOB_NAME_STATUS
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

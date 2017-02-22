@@ -1,8 +1,7 @@
 ---
 title: "Classe extent | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "extent"
 ms.assetid: 6d16263d-90b2-4330-9ec7-b59ed898792d
 caps.latest.revision: 20
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # Classe extent
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "_ftime_s, _ftime32_s, _ftime64_s | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -35,7 +34,6 @@ f1_keywords:
   - "ftime64_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "ftime32_s (funzione)"
   - "ftime_s (funzione)"
@@ -47,10 +45,10 @@ helpviewer_keywords:
   - "_ftime32_s (funzione)"
 ms.assetid: d03080d9-a520-45be-aa65-504bdb197e8b
 caps.latest.revision: 24
-caps.handback.revision: 24
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # _ftime_s, _ftime32_s, _ftime64_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

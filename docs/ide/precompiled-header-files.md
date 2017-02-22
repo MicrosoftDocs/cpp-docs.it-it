@@ -1,8 +1,7 @@
 ---
 title: "File di intestazione precompilata | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/17/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "stdafx.cpp"
 ms.assetid: 8228d87a-5609-41f3-9697-b16094c000e5
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # File di intestazione precompilata
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

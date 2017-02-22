@@ -1,8 +1,7 @@
 ---
 title: "&lt; iomanip &gt; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "iomanip (intestazione)"
 ms.assetid: 3681c346-4763-4037-bba4-cf0dc3447974
 caps.latest.revision: 21
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # &lt; iomanip &gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Gruppi di pianificazione | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "gruppi di pianificazione"
 ms.assetid: 03523572-5891-4d17-89ce-fa795605f28b
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Gruppi di pianificazione
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

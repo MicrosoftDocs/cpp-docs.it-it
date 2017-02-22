@@ -1,8 +1,7 @@
 ---
 title: "Tipo per valori letterali stringa | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,16 +10,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "stringhe letterali, tipo"
   - "tipi [C], stringhe letterali"
 ms.assetid: f50a28af-20c1-4440-bdc6-564c86a309c8
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Tipo per valori letterali stringa
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

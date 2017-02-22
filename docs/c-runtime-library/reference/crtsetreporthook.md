@@ -1,8 +1,7 @@
 ---
 title: "_CrtSetReportHook | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,16 +27,15 @@ f1_keywords:
   - "CrtSetReportHook"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "CrtSetReportHook (funzione)"
   - "_CrtSetReportHook (funzione)"
 ms.assetid: 1ae7c64f-8c84-4797-9574-b59f00f7a509
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # _CrtSetReportHook
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

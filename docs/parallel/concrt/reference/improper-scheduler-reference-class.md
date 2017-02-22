@@ -1,8 +1,7 @@
 ---
 title: "Classe improper_scheduler_reference | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "improper_scheduler_reference (classe)"
 ms.assetid: 434a7512-7796-4255-92a7-f3bf71c6a7a7
 caps.latest.revision: 19
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # Classe improper_scheduler_reference
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

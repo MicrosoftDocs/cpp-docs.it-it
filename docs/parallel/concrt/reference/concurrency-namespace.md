@@ -1,8 +1,7 @@
 ---
 title: "Spazio dei nomi concurrency | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,10 +30,10 @@ helpviewer_keywords:
   - "Concurrency (spazio dei nomi)"
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
 caps.latest.revision: 37
-caps.handback.revision: 37
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 37
 ---
 # Spazio dei nomi concurrency
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

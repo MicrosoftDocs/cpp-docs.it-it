@@ -1,8 +1,7 @@
 ---
 title: "/APPCONTAINER | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "-APPCONTAINER (opzione editbin)"
 ms.assetid: 0ca4f1ec-c8de-4a37-b3e2-deda7af0bb88
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # /APPCONTAINER
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "_ltoa_s, _ltow_s | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,7 +30,6 @@ f1_keywords:
   - "ltow_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_ltoa_s (funzione)"
   - "_ltow_s (funzione)"
@@ -42,10 +40,10 @@ helpviewer_keywords:
   - "ltow_s (funzione)"
 ms.assetid: d7dc61ea-1ccd-412d-b262-555a58647386
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # _ltoa_s, _ltow_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

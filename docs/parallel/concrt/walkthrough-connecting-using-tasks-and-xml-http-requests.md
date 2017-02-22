@@ -1,8 +1,7 @@
 ---
 title: "Procedura dettagliata: Connessione tramite attivit&#224; e richieste HTTP XML | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "IXHR2 e attività, esempio"
 ms.assetid: e8e12d46-604c-42a7-abfd-b1d1bb2ed6b3
 caps.latest.revision: 16
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Procedura dettagliata: Connessione tramite attivit&#224; e richieste HTTP XML
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

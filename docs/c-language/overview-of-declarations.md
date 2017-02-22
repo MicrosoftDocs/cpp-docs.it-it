@@ -1,8 +1,7 @@
 ---
 title: "Cenni preliminari sulle dichiarazioni | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,16 +10,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "dichiarazioni, informazioni su dichiarazioni"
   - "qualificatori di tipo"
 ms.assetid: fcd2364c-c2a5-4fbf-9027-19dac4144cb5
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Cenni preliminari sulle dichiarazioni
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

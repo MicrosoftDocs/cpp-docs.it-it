@@ -1,8 +1,7 @@
 ---
 title: "IncludeCodeElementDeclaration | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "IncludeCodeElementDeclaration (metodo)"
 ms.assetid: 714e76e4-76bc-439a-982a-cf9d4ada7677
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # IncludeCodeElementDeclaration
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

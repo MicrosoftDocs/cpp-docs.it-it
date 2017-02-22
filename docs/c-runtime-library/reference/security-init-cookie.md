@@ -1,8 +1,7 @@
 ---
 title: "__security_init_cookie | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,7 +27,6 @@ f1_keywords:
   - "__security_init_cookie"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "__security_init_cookie (funzione)"
   - "cookie di sicurezza globale"
@@ -36,10 +34,10 @@ helpviewer_keywords:
   - "security_init_cookie (funzione)"
 ms.assetid: 32119905-0897-4a1c-84ca-bffd16c9b2af
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # __security_init_cookie
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

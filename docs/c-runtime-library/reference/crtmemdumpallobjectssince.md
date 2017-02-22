@@ -1,8 +1,7 @@
 ---
 title: "_CrtMemDumpAllObjectsSince | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,16 +27,15 @@ f1_keywords:
   - "_CrtMemDumpAllObjectsSince"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_CrtMemDumpAllObjectsSince (funzione)"
   - "CrtMemDumpAllObjectsSince (funzione)"
 ms.assetid: c48a447a-e6bb-475c-9271-a3021182a0dc
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # _CrtMemDumpAllObjectsSince
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

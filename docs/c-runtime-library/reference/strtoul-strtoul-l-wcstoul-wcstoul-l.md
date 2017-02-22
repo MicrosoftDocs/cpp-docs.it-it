@@ -1,8 +1,7 @@
 ---
 title: "strtoul, _strtoul_l, wcstoul, _wcstoul_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -33,7 +32,6 @@ f1_keywords:
   - "wcstoul"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_strtoul_l (funzione)"
   - "_tcstoul (funzione)"
@@ -46,10 +44,10 @@ helpviewer_keywords:
   - "wcstoul_l (funzione)"
 ms.assetid: 38f2afe8-8178-4e0b-8bbe-d5c6ad66e3ab
 caps.latest.revision: 21
-caps.handback.revision: 21
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # strtoul, _strtoul_l, wcstoul, _wcstoul_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "CRBMap Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "CRBMap class"
 ms.assetid: 658e94dc-e835-4356-aed1-1513e1f66969
 caps.latest.revision: 18
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # CRBMap Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

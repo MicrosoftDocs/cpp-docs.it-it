@@ -1,8 +1,7 @@
 ---
 title: "&lt;ratio&gt; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -42,10 +41,10 @@ dev_langs:
   - "C++"
 ms.assetid: 8543e912-2d84-45ea-b3c0-bd7bfacee405
 caps.latest.revision: 14
-caps.handback.revision: 4
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # &lt;ratio&gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

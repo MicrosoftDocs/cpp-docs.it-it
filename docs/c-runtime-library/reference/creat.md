@@ -1,8 +1,7 @@
 ---
 title: "creat | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,15 +26,14 @@ f1_keywords:
   - "creat"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "creat (funzione)"
 ms.assetid: 3aa6f0cc-5ae6-40d5-be94-0ab6f53c0c5b
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # creat
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

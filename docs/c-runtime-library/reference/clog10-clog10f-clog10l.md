@@ -1,8 +1,7 @@
 ---
 title: "clog10, clog10f, clog10l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -35,7 +34,6 @@ f1_keywords:
   - "complex/clog10f"
   - "complex/clog10l"
 dev_langs: 
-  - "C"
   - "C++"
 helpviewer_keywords: 
   - "funzione clog10"
@@ -43,10 +41,10 @@ helpviewer_keywords:
   - "funzione clog10l"
 ms.assetid: 2ddae00d-ef93-4441-add3-f4d58358401b
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # clog10, clog10f, clog10l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

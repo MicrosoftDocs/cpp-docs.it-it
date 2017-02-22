@@ -1,8 +1,7 @@
 ---
 title: "_dupenv_s_dbg, _wdupenv_s_dbg | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -30,7 +29,6 @@ f1_keywords:
   - "_wdupenv_s_dbg"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_tdupenv_s_dbg (funzione)"
   - "dupenv_s_dbg (funzione)"
@@ -41,10 +39,10 @@ helpviewer_keywords:
   - "_dupenv_s_dbg (funzione)"
 ms.assetid: e3d81148-e24e-46d0-a21d-fd87b5e6256c
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # _dupenv_s_dbg, _wdupenv_s_dbg
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

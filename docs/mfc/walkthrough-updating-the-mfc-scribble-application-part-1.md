@@ -1,8 +1,7 @@
 ---
 title: "Procedura dettagliata: aggiornamento dell&#39;applicazione MFC Scribble (parte 1) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "procedure dettagliate [C++], aggiornamento di applicazione esistente"
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
 caps.latest.revision: 54
-caps.handback.revision: 50
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 50
 ---
 # Procedura dettagliata: aggiornamento dell&#39;applicazione MFC Scribble (parte 1)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

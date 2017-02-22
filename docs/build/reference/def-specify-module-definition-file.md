@@ -1,8 +1,7 @@
 ---
 title: "/DEF (Specifica il file di definizione moduli) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "file di definizione moduli, specifica"
 ms.assetid: 6497fa68-65f0-48ca-8f66-b87166fc631a
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # /DEF (Specifica il file di definizione moduli)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

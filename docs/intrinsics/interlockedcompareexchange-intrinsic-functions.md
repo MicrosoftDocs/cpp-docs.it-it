@@ -1,8 +1,7 @@
 ---
 title: "_InterlockedCompareExchange Intrinsic Functions | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -59,10 +58,10 @@ helpviewer_keywords:
   - "InterlockedCompareExchange64_rel intrinsic"
 ms.assetid: c3ad79c0-a523-4930-a3a4-69a65d7d5c81
 caps.latest.revision: 26
-caps.handback.revision: 24
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # _InterlockedCompareExchange Intrinsic Functions
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

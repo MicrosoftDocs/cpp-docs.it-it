@@ -1,8 +1,7 @@
 ---
 title: "_get_terminate | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -30,17 +29,16 @@ f1_keywords:
   - "__get_terminate"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "__get_terminate (funzione)"
   - "_get_terminate (funzione)"
   - "get_terminate (funzione)"
 ms.assetid: c8f168c4-0ad5-4832-a522-dd1ef383c208
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # _get_terminate
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

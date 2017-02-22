@@ -1,8 +1,7 @@
 ---
 title: "Membri auto_gcroot | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: fb51ff14-a497-4f7a-8d7e-c3cfcaf9f8df
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Membri auto_gcroot
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

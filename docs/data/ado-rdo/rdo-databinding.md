@@ -1,8 +1,7 @@
 ---
 title: "Associazione dati RDO | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "RDO [C++], controlli ActiveX con associazione a dati"
 ms.assetid: ba42e410-4eb4-4a80-a7ed-f7f68881b2bc
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Associazione dati RDO
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "sqrt, sqrtf, sqrtl | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,7 +31,6 @@ f1_keywords:
   - "_sqrtl"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_sqrtl (funzione)"
   - "calcolo di radici quadrate"
@@ -42,10 +40,10 @@ helpviewer_keywords:
   - "radici quadrate, calcolo"
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
 caps.latest.revision: 18
-caps.handback.revision: 16
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # sqrt, sqrtf, sqrtl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

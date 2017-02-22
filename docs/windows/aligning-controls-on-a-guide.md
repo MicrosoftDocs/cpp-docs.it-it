@@ -1,8 +1,7 @@
 ---
 title: "Aligning Controls on a Guide | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -10,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
-  - "C++"
   - "C++"
 helpviewer_keywords: 
   - "DLUs (dialog units)"
@@ -26,10 +24,10 @@ helpviewer_keywords:
   - "controls [C++], snap to guides/grid"
 ms.assetid: 17db84ba-5288-4478-be57-afa748aa6447
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Aligning Controls on a Guide
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

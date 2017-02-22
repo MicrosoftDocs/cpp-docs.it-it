@@ -1,8 +1,7 @@
 ---
 title: "Operatori di addizione C | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "+ (operatore), operatori di addizione"
   - "operatori di addizione"
@@ -20,10 +18,10 @@ helpviewer_keywords:
   - "conversioni aritmetiche comuni"
 ms.assetid: bb8ac205-b061-41fc-8dd4-dab87c8b900c
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Operatori di addizione C
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Classe is_error_condition_enum | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "is_error_condition_enum (classe)"
 ms.assetid: 752bb87a-c61c-4304-9254-5aaf228b59c0
 caps.latest.revision: 15
-caps.handback.revision: 5
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Classe is_error_condition_enum
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

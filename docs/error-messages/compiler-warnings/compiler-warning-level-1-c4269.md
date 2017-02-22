@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livello 1) C4269 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4269"
 ms.assetid: 96c97bbc-068a-4b65-8cd8-4ed5dca04c15
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Avviso del compilatore (livello 1) C4269
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

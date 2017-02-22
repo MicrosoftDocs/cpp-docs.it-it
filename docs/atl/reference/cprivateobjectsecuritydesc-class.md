@@ -1,8 +1,7 @@
 ---
 title: "CPrivateObjectSecurityDesc Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "CPrivateObjectSecurityDesc class"
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
 caps.latest.revision: 20
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # CPrivateObjectSecurityDesc Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

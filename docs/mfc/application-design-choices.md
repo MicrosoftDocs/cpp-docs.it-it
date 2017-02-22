@@ -1,8 +1,7 @@
 ---
 title: "Scelte di progettazione delle applicazioni | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "applicazioni server, e applicazioni client su Internet"
 ms.assetid: 9b96172c-b4d4-4c69-bfb2-226ce0de6d08
 caps.latest.revision: 12
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Scelte di progettazione delle applicazioni
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

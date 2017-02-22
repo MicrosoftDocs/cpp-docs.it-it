@@ -1,8 +1,7 @@
 ---
 title: "Spazio dei nomi Windows::Foundation | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "Foundation (spazio dei nomi)"
 ms.assetid: 96a6b5e0-ddee-4b21-ae4e-da5feeb945c3
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Spazio dei nomi Windows::Foundation
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

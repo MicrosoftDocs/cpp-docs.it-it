@@ -1,8 +1,7 @@
 ---
 title: "Framework applicazione | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "applicazioni [MFC]"
 ms.assetid: 912684e6-4418-49dc-9877-a4cd19d69d20
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Framework applicazione
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "&lt;system_error&gt; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "system_error (intestazione)"
 ms.assetid: 5e046c6e-48d9-4740-8c8a-05f3727c1215
 caps.latest.revision: 15
-caps.handback.revision: 5
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # &lt;system_error&gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "_strtoi64, _wcstoi64, _strtoi64_l, _wcstoi64_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -38,7 +37,6 @@ f1_keywords:
   - "strtoi64_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_strtoi64 (funzione)"
   - "_strtoi64_l (funzione)"
@@ -51,10 +49,10 @@ helpviewer_keywords:
   - "wcstoi64_l (funzione)"
 ms.assetid: ea2abc50-7bfe-420e-a46b-703c3153593a
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # _strtoi64, _wcstoi64, _strtoi64_l, _wcstoi64_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

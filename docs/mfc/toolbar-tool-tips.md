@@ -1,8 +1,7 @@
 ---
 title: "Descrizioni comandi barra degli strumenti | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "aggiornamento dei messaggi della barra di stato"
 ms.assetid: d1696305-b604-4fad-9f09-638878371412
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Descrizioni comandi barra degli strumenti
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

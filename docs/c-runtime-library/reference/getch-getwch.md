@@ -1,8 +1,7 @@
 ---
 title: "_getch, _getwch | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,7 +30,6 @@ f1_keywords:
   - "_getwch"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_getch (funzione)"
   - "_getwch (funzione)"
@@ -41,10 +39,10 @@ helpviewer_keywords:
   - "getwch (funzione)"
 ms.assetid: cc116be7-cff2-4274-970f-5e7b18ccc05c
 caps.latest.revision: 26
-caps.handback.revision: 24
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # _getch, _getwch
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

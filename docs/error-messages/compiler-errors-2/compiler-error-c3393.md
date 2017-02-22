@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3393 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3393"
 ms.assetid: d57f7c69-0a02-4fe3-9e45-bc62644fd77c
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Errore del compilatore C3393
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

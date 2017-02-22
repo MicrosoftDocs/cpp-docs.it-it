@@ -1,8 +1,7 @@
 ---
 title: "_getch_nolock, _getwch_nolock | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -34,7 +33,6 @@ f1_keywords:
   - "gettch_nolock"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_getch_nolock (funzione)"
   - "_gettch_nolock (funzione)"
@@ -46,10 +44,10 @@ helpviewer_keywords:
   - "getwch_nolock (funzione)"
 ms.assetid: 9d248546-26ca-482c-b0c6-55812a987e83
 caps.latest.revision: 18
-caps.handback.revision: 16
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # _getch_nolock, _getwch_nolock
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

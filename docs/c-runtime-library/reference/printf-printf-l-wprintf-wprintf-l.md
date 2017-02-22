@@ -1,8 +1,7 @@
 ---
 title: "printf, _printf_l, wprintf, _wprintf_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,7 +31,6 @@ f1_keywords:
   - "wprintf"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_printf_l (funzione)"
   - "_tprintf (funzione)"
@@ -50,10 +48,10 @@ helpviewer_keywords:
   - "scrittura nella console"
 ms.assetid: 77a854ae-5b48-4865-89f4-f2dc5cf80f52
 caps.latest.revision: 24
-caps.handback.revision: 24
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # printf, _printf_l, wprintf, _wprintf_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

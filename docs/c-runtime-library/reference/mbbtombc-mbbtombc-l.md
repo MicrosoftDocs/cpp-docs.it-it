@@ -1,8 +1,7 @@
 ---
 title: "_mbbtombc, _mbbtombc_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,7 +31,6 @@ f1_keywords:
   - "mbbtombc"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_mbbtombc (funzione)"
   - "_mbbtombc_l (funzione)"
@@ -40,10 +38,10 @@ helpviewer_keywords:
   - "mbbtombc_l (funzione)"
 ms.assetid: 78593389-b0fc-43b6-8c1f-2a6bf702d64e
 caps.latest.revision: 19
-caps.handback.revision: 19
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # _mbbtombc, _mbbtombc_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Classe IRowsetNotifyImpl | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "IRowsetNotifyImpl (classe)"
 ms.assetid: fbfd0cb2-38ff-4b42-899a-8de902f834b8
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Classe IRowsetNotifyImpl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

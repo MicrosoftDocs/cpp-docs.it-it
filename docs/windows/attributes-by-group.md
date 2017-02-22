@@ -1,8 +1,7 @@
 ---
 title: "Attributes by Group | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "attributes [C++]"
 ms.assetid: 9f4dd43f-9909-43d6-91d2-05734643876e
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Attributes by Group
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

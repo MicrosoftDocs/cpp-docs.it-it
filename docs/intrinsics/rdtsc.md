@@ -1,8 +1,7 @@
 ---
 title: "__rdtsc | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "Read Time Stamp Counter (istruzione)"
 ms.assetid: e31d0e51-c9bb-42ca-bbe9-a81ffe662387
 caps.latest.revision: 17
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # __rdtsc
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

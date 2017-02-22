@@ -1,8 +1,7 @@
 ---
 title: "_aligned_malloc | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,16 +28,15 @@ f1_keywords:
   - "alligned_malloc"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_aligned_malloc (funzione)"
   - "aligned_malloc (funzione)"
 ms.assetid: fb788d40-ee94-4039-aa4d-97d73dab1ca0
 caps.latest.revision: 25
-caps.handback.revision: 23
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # _aligned_malloc
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

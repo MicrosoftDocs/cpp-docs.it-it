@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livello 1) C4910 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "C4910"
 ms.assetid: 67963560-fbca-4ca7-93db-06beaf7055f0
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # Avviso del compilatore (livello 1) C4910
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

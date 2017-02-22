@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2262 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2262"
 ms.assetid: 727d1c6e-53e8-40e5-b7b8-6a7ac2011727
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Errore del compilatore C2262
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

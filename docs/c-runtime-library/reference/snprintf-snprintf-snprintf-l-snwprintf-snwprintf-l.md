@@ -1,8 +1,7 @@
 ---
 title: "snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -42,7 +41,6 @@ f1_keywords:
   - "_snwprintf_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "snwprintf_l (funzione)"
   - "sntprintf_l (funzione)"
@@ -59,10 +57,10 @@ helpviewer_keywords:
   - "testo formattato [C++]"
 ms.assetid: 5976c9c8-876e-4ac9-a515-39f3f7fd0925
 caps.latest.revision: 35
-caps.handback.revision: 35
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 35
 ---
 # snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

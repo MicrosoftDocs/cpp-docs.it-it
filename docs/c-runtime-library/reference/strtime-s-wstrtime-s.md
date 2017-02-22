@@ -1,8 +1,7 @@
 ---
 title: "_strtime_s, _wstrtime_s | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,7 +31,6 @@ f1_keywords:
   - "_strtime_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_strtime_s (funzione)"
   - "_wstrtime_s (funzione)"
@@ -42,10 +40,10 @@ helpviewer_keywords:
   - "wstrtime_s (funzione)"
 ms.assetid: 42acf013-c334-485d-b610-84c0af8a46ec
 caps.latest.revision: 25
-caps.handback.revision: 23
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # _strtime_s, _wstrtime_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

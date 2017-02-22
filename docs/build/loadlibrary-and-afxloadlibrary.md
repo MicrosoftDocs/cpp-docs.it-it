@@ -1,8 +1,7 @@
 ---
 title: "LoadLibrary e AfxLoadLibrary | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "LoadLibrary (metodo)"
 ms.assetid: b4535d19-6243-4146-a31a-a5cca4c7c9e3
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # LoadLibrary e AfxLoadLibrary
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

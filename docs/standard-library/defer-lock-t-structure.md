@@ -1,8 +1,7 @@
 ---
 title: "Struttura defer_lock_t | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ dev_langs:
   - "C++"
 ms.assetid: 4c4588eb-ca51-4949-b5d1-8539cc4577ad
 caps.latest.revision: 13
-caps.handback.revision: 3
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Struttura defer_lock_t
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

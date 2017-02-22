@@ -1,8 +1,7 @@
 ---
 title: "ISessionPropertiesImpl::GetProperties | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "GetProperties (metodo)"
 ms.assetid: 48726c2a-9599-4fc5-9940-a932faef91ab
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # ISessionPropertiesImpl::GetProperties
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Classe basic_stringstream | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "basic_stringstream (classe)"
 ms.assetid: 49629814-ca37-45c5-931b-4ff894e6ebd2
 caps.latest.revision: 19
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # Classe basic_stringstream
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

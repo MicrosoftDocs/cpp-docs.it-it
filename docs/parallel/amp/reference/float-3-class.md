@@ -1,8 +1,7 @@
 ---
 title: "Classe float_3 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -85,10 +84,10 @@ helpviewer_keywords:
   - "amp_short_vectors/Concurrency::graphics::float_3"
 ms.assetid: 209df7a5-08d7-48b4-8ba5-77603642cdd8
 caps.latest.revision: 10
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Classe float_3
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

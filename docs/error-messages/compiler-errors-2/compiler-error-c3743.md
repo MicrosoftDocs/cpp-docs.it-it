@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3743 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3743"
 ms.assetid: 7ca9a76e-7b60-46d1-ab8b-18600cf1a306
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Errore del compilatore C3743
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

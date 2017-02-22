@@ -1,7 +1,7 @@
 ---
-title: "quick_exit | Microsoft Docs"
+title: "quick_exit1 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,16 +29,15 @@ f1_keywords:
   - "process/quick_exit"
   - "stdlib/quick_exit"
 dev_langs: 
-  - "C"
   - "C++"
 helpviewer_keywords: 
   - "funzione quick_exit"
 ms.assetid: ecfbdae6-01c4-45fa-aaeb-b368e1de2a9c
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # quick_exit
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

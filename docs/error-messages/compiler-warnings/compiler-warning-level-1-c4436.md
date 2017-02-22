@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livello 1) C4436 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 2b54a1fc-c9c6-4cc9-90be-faa44fc715d5
 caps.latest.revision: 2
-caps.handback.revision: 2
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 2
 ---
 # Avviso del compilatore (livello 1) C4436
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "memcmp, wmemcmp | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,6 +21,7 @@ apilocation:
   - "msvcr110_clr0400.dll"
   - "msvcr120.dll"
   - "msvcr120_clr0400.dll"
+  - "ntdll.dll"
   - "ucrtbase.dll"
 apitype: "DLLExport"
 f1_keywords: 
@@ -29,16 +29,15 @@ f1_keywords:
   - "wmemcmp"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "memcmp (funzione)"
   - "wmemcmp (funzione)"
 ms.assetid: 0c21c3e3-8ee4-40e5-add1-eb26d225fd8d
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # memcmp, wmemcmp
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

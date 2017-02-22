@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livello 1) C4027 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4027"
 ms.assetid: f30d57b9-20c4-4284-8686-566d9f0ca7fc
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Avviso del compilatore (livello 1) C4027
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

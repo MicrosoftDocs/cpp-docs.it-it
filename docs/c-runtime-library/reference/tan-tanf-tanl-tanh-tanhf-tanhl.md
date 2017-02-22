@@ -1,8 +1,7 @@
 ---
 title: "tan, tanf, tanl, tanh, tanhf, tanhl | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -40,7 +39,6 @@ f1_keywords:
   - "tanhl"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "tanl (funzione)"
   - "tanhl (funzione)"
@@ -56,10 +54,10 @@ helpviewer_keywords:
   - "funzioni iperboliche"
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
 caps.latest.revision: 16
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # tan, tanf, tanl, tanh, tanhf, tanhl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

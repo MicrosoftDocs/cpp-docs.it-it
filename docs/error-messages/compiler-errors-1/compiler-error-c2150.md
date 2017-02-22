@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2150 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2150"
 ms.assetid: 21e82a10-c1d4-4c0d-9dc6-c5d92ea42a31
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Errore del compilatore C2150
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

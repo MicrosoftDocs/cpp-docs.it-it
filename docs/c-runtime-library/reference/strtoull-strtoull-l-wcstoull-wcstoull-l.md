@@ -1,8 +1,7 @@
 ---
 title: "strtoull, _strtoull_l, wcstoull, _wcstoull_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -45,10 +44,10 @@ helpviewer_keywords:
   - "wcstoull (funzione)"
 ms.assetid: 36dac1cc-e901-40a0-8802-63562d6d01df
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # strtoull, _strtoull_l, wcstoull, _wcstoull_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "CComClassFactory2 Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "CComClassFactory2 class"
 ms.assetid: 19b66fd6-b9ed-47a0-822c-8132184f5a3e
 caps.latest.revision: 20
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # CComClassFactory2 Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

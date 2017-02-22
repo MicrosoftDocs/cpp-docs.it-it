@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3142 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3142"
 ms.assetid: 795137ad-d00a-4a9c-9665-0cd8bfb5da8b
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Errore del compilatore C3142
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Concetti principali della distribuzione | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "Windows Installer [C++]"
 ms.assetid: ebd7f246-ab54-40e8-87fa-dac02c0047b3
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Concetti principali della distribuzione
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

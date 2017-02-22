@@ -1,8 +1,7 @@
 ---
 title: "STUB | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "STUB (istruzione del file con estensione def)"
 ms.assetid: 0a3b9643-19ed-47e9-8173-ee16bc8ed056
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # STUB
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

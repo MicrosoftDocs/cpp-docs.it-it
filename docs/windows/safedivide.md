@@ -1,8 +1,7 @@
 ---
 title: "SafeDivide | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "SafeDivide (funzione)"
 ms.assetid: b5b27484-ad6e-46b1-ba9f-1c7120dd103b
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "ghogen"
 ms.author: "ghogen"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # SafeDivide
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

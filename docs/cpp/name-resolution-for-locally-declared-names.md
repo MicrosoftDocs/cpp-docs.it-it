@@ -1,8 +1,7 @@
 ---
 title: "Risoluzione dei nomi per nomi dichiarati in locale | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 743b88f3-de11-48f4-ae83-931449ea3886
 caps.latest.revision: 11
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Risoluzione dei nomi per nomi dichiarati in locale
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

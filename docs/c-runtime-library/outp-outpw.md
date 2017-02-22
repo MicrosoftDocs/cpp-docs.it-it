@@ -1,8 +1,7 @@
 ---
 title: "outp, outpw | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -26,16 +25,15 @@ f1_keywords:
   - "outpw"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "outp (funzione)"
   - "outpw (funzione)"
 ms.assetid: ab29dc04-e440-4c3f-83b1-420e65b5df75
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # outp, outpw
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

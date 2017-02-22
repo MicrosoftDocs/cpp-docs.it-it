@@ -1,8 +1,7 @@
 ---
 title: "Impostazione di propriet&#224; nel provider | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "proprietà [C++], provider OLE DB"
 ms.assetid: 26a8b493-7ec4-4686-96d0-9ad5d2bca5ac
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Impostazione di propriet&#224; nel provider
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

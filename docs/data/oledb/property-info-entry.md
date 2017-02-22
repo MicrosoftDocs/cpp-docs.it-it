@@ -1,8 +1,7 @@
 ---
 title: "PROPERTY_INFO_ENTRY | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "PROPERTY_INFO_ENTRY (macro)"
 ms.assetid: f7bd23d6-52b4-4d6a-aa9a-1fca9834c8dc
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # PROPERTY_INFO_ENTRY
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

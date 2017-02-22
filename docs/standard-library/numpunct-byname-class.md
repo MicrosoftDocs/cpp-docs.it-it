@@ -1,8 +1,7 @@
 ---
 title: "Classe numpunct_byname | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "numpunct_byname (classe)"
 ms.assetid: 18412924-e085-4771-b5e9-7a200cbdd7c0
 caps.latest.revision: 24
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # Classe numpunct_byname
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

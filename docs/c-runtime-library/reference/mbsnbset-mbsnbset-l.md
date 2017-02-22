@@ -1,8 +1,7 @@
 ---
 title: "_mbsnbset, _mbsnbset_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,7 +31,6 @@ f1_keywords:
   - "_mbsnbset_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_mbsnbset (funzione)"
   - "_mbsnbset_l (funzione)"
@@ -44,10 +42,10 @@ helpviewer_keywords:
   - "tcsnset_l (funzione)"
 ms.assetid: 8e46ef75-9a56-42d2-a522-a08450c67c19
 caps.latest.revision: 24
-caps.handback.revision: 24
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # _mbsnbset, _mbsnbset_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

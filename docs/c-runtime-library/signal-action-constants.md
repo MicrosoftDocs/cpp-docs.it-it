@@ -1,8 +1,7 @@
 ---
 title: "Costanti azione signal | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,17 +13,16 @@ f1_keywords:
   - "SIG_DFL"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "SIG_DFL (costante)"
   - "SIG_IGN (costante)"
   - "costanti azione signal"
 ms.assetid: c3cb4f15-d39e-4d9d-84f9-0d33e3eb5993
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Costanti azione signal
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

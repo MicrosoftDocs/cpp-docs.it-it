@@ -1,8 +1,7 @@
 ---
 title: "_bittestandset, _bittestandset64 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "bts instruction"
 ms.assetid: 6d6c8670-fea0-4c1c-9aad-2bb842715203
 caps.latest.revision: 16
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # _bittestandset, _bittestandset64
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

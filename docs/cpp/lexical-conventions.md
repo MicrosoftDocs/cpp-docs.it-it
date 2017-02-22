@@ -1,8 +1,7 @@
 ---
 title: "Convenzioni lessicali | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "convenzioni lessicali"
 ms.assetid: 03f9efff-bb95-45ef-9157-0a3fac809ccf
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Convenzioni lessicali
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

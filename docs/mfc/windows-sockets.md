@@ -1,8 +1,7 @@
 ---
 title: "Windows Sockets | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "Windows Sockets [C++]"
 ms.assetid: c077ec53-540d-4bfb-a1e0-bd6482ab9e19
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Windows Sockets
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

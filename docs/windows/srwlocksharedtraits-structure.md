@@ -1,8 +1,7 @@
 ---
 title: "Struttura SRWLockSharedTraits | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "SRWLockSharedTraits (struttura)"
 ms.assetid: 709cb51e-d70c-40b6-bdb4-d8eacf3af495
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # Struttura SRWLockSharedTraits
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

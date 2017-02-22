@@ -1,8 +1,7 @@
 ---
 title: "Errore irreversibile del compilatore di risorse RC1120 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "RC1120"
 ms.assetid: 4e462931-e42e-42e3-8bfc-847677194286
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Errore irreversibile del compilatore di risorse RC1120
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

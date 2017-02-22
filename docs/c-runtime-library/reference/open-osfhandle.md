@@ -1,8 +1,7 @@
 ---
 title: "_open_osfhandle | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,17 +28,16 @@ f1_keywords:
   - "open_osfhandle"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "open_osfhandle (funzione)"
   - "handle di file [C++], associazione"
   - "_open_osfhandle (funzione)"
 ms.assetid: 30d94df4-7868-4667-a401-9eb67ecb7855
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # _open_osfhandle
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

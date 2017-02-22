@@ -1,8 +1,7 @@
 ---
 title: "Classe hash_set | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "hash_set (classe)"
 ms.assetid: c765c06e-cbb6-48c2-93ca-d15468eb28d7
 caps.latest.revision: 22
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # Classe hash_set
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

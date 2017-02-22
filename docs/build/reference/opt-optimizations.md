@@ -1,8 +1,7 @@
 ---
 title: "/OPT (Ottimizzazioni) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,10 +27,10 @@ helpviewer_keywords:
   - "ottimizzazione, linker"
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
 caps.latest.revision: 23
-caps.handback.revision: 23
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # /OPT (Ottimizzazioni)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

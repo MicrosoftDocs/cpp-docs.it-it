@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore C4950 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4950"
 ms.assetid: 50226a5c-c664-4d09-ac59-e9e874ca244f
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Avviso del compilatore C4950
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

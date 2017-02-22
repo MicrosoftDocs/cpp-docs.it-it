@@ -1,8 +1,7 @@
 ---
 title: "Classi ODBC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "classi ODBC [C++]"
 ms.assetid: 6c40fca8-3033-4873-9abe-7f51725de0e0
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Classi ODBC
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

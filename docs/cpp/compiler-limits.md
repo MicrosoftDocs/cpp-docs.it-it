@@ -1,8 +1,7 @@
 ---
 title: "Limiti del compilatore | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "compilatore cl.exe, limiti per i costrutti di linguaggio"
 ms.assetid: f1fa59c6-55b4-414b-80c5-3df72952160d
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Limiti del compilatore
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

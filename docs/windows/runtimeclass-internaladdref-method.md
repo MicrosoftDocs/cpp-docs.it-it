@@ -1,8 +1,7 @@
 ---
 title: "Metodo RuntimeClass::InternalAddRef | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "InternalAddRef (metodo)"
 ms.assetid: b8ed7f93-83d8-47ec-988c-98fe65104e7a
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Metodo RuntimeClass::InternalAddRef
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

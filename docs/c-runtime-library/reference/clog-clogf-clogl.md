@@ -1,8 +1,7 @@
 ---
 title: "CLOG, clogf, clogl | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -35,7 +34,6 @@ f1_keywords:
   - "complex/clogf"
   - "complex/clogl"
 dev_langs: 
-  - "C"
   - "C++"
 helpviewer_keywords: 
   - "clog (funzione)"
@@ -43,10 +41,10 @@ helpviewer_keywords:
   - "funzione clogl"
 ms.assetid: 870b9b0b-6618-46f3-bfcf-da595cbd5e18
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # CLOG, clogf, clogl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

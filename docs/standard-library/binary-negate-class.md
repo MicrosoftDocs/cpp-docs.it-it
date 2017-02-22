@@ -1,8 +1,7 @@
 ---
 title: "Classe binary_negate | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "binary_negate (classe)"
 ms.assetid: 7b86f02c-af7e-4c7f-9df1-08addae4dd65
 caps.latest.revision: 20
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # Classe binary_negate
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

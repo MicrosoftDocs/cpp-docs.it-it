@@ -1,8 +1,7 @@
 ---
 title: "CWndClassInfo Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "CWndClassInfo class"
 ms.assetid: c36fe7e1-75f1-4cf5-a06f-9f59c43fe6fb
 caps.latest.revision: 22
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # CWndClassInfo Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

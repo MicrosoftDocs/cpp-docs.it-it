@@ -1,8 +1,7 @@
 ---
 title: "Creazione guidata progetto MakeFile | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "progetti Makefile, Creazione guidata progetto MakeFile"
 ms.assetid: 38219802-320d-4c48-a118-4792de8f3b2d
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Creazione guidata progetto MakeFile
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

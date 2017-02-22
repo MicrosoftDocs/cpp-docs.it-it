@@ -1,8 +1,7 @@
 ---
 title: "Errore matematico M6111 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "M6111"
 ms.assetid: c0fc13f8-33c8-4e3f-a440-126cc623441b
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Errore matematico M6111
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

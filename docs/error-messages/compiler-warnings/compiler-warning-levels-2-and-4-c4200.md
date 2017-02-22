@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livellos 2 and 4) C4200 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4200"
 ms.assetid: e44d6073-937f-42b7-acc1-65e802b475c6
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Avviso del compilatore (livellos 2 and 4) C4200
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Classe aligned_union | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "aligned_union"
 ms.assetid: 9931a44d-3a67-4f29-a0f6-d47a7cf560ac
 caps.latest.revision: 10
-caps.handback.revision: 2
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Classe aligned_union
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

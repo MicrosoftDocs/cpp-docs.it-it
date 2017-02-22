@@ -1,8 +1,7 @@
 ---
 title: "importidl | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "importidl attribute"
 ms.assetid: 4b0a4b55-6c57-4e6e-bc7b-a12cc8063941
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # importidl
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

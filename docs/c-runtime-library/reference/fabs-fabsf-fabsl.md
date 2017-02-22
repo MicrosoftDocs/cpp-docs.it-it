@@ -1,8 +1,7 @@
 ---
 title: "fabs, fabsf, fabsl | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -35,7 +34,6 @@ f1_keywords:
   - "math\fabsl"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "valori assoluti"
   - "fabsf (funzione)"
@@ -44,10 +42,10 @@ helpviewer_keywords:
   - "funzione fabsl"
 ms.assetid: 23bca210-f408-4f5e-b46b-0ccaaec31e36
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # fabs, fabsf, fabsl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

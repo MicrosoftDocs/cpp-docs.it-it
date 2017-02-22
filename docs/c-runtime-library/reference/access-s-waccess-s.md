@@ -1,8 +1,7 @@
 ---
 title: "_access_s, _waccess_s | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,7 +31,6 @@ f1_keywords:
   - "_access_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_access_s (funzione)"
   - "_taccess_s (funzione)"
@@ -42,10 +40,10 @@ helpviewer_keywords:
   - "waccess_s (funzione)"
 ms.assetid: fb3004fc-dcd3-4569-8b27-d817546e947e
 caps.latest.revision: 28
-caps.handback.revision: 26
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 28
 ---
 # _access_s, _waccess_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

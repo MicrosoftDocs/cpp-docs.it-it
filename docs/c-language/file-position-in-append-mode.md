@@ -1,8 +1,7 @@
 ---
 title: "Posizione file in modalit&#224; Append | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,15 +10,14 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "puntatori a file [C++], append (modalità)"
 ms.assetid: fca94e95-907c-4703-ad7d-2fcac1592168
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Posizione file in modalit&#224; Append
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

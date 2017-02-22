@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2325 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2325"
 ms.assetid: e6b0a186-3f2a-4adf-beae-fadd75492bf7
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Errore del compilatore C2325
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

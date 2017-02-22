@@ -1,8 +1,7 @@
 ---
 title: "CWorkerThread Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "CWorkerThread class"
 ms.assetid: be79a832-1345-4a36-a13e-a406cc65286f
 caps.latest.revision: 24
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 27
 ---
 # CWorkerThread Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

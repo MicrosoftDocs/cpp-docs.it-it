@@ -1,8 +1,7 @@
 ---
-title: "NORM, normf, norml | Microsoft Docs"
+title: "NORM, normf, norml1 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -35,7 +34,6 @@ f1_keywords:
   - "complex/normf"
   - "complex/norml"
 dev_langs: 
-  - "C"
   - "C++"
 helpviewer_keywords: 
   - "norm (funzione)"
@@ -43,10 +41,10 @@ helpviewer_keywords:
   - "funzione norml"
 ms.assetid: 9786ecfe-0019-4553-b378-0af6c691e15c
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # NORM, normf, norml
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

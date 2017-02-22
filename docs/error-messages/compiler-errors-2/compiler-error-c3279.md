@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3279 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3279"
 ms.assetid: 639afc20-984c-4a95-be35-8bf9409f02d5
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Errore del compilatore C3279
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

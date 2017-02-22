@@ -1,8 +1,7 @@
 ---
 title: "Prestazioni librerie multithread | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "librerie, multithreading"
   - "librerie multithread"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "threading [C++], prestazioni"
 ms.assetid: faa5d808-087c-463d-8f0d-8c478d137296
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Prestazioni librerie multithread
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

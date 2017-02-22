@@ -1,8 +1,7 @@
 ---
 title: "Container Class::value_type | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "value_type (typedef)"
 ms.assetid: e89d5a71-b48c-47fa-aa78-682243e6e97f
 caps.latest.revision: 8
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Container Class::value_type
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

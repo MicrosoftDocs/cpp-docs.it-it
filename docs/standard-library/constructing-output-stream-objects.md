@@ -1,8 +1,7 @@
 ---
 title: "Costruzione di oggetti di flusso di output | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "flusso di output (oggetti)"
 ms.assetid: 93c8eab6-610c-4f48-b76d-1d960cac7641
 caps.latest.revision: 9
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Costruzione di oggetti di flusso di output
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

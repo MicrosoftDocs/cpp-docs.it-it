@@ -1,8 +1,7 @@
 ---
 title: "CMFCRibbonSlider Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "CMFCRibbonSlider class"
 ms.assetid: 9351ac34-f234-4e42-91e2-763f1989c8ff
 caps.latest.revision: 43
-caps.handback.revision: 31
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 45
 ---
 # CMFCRibbonSlider Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

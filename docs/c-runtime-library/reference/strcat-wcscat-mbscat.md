@@ -1,8 +1,7 @@
 ---
 title: "strcat, wcscat, _mbscat | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -35,7 +34,6 @@ f1_keywords:
   - "wcscat"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_ftcscat (funzione)"
   - "_mbscat (funzione)"
@@ -51,10 +49,10 @@ helpviewer_keywords:
   - "wcscat (funzione)"
 ms.assetid: c89c4ef1-817a-44ff-a229-fe22d06ba78a
 caps.latest.revision: 23
-caps.handback.revision: 23
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # strcat, wcscat, _mbscat
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

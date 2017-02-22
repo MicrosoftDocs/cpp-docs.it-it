@@ -1,8 +1,7 @@
 ---
 title: "Elenco oggetti intrinseci x64 (amd64) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "intrinseci, x64"
 ms.assetid: a2b65471-f1db-426c-8464-eff4a3761dee
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Elenco oggetti intrinseci x64 (amd64)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

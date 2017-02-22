@@ -1,8 +1,7 @@
 ---
 title: "Funzione signal (C) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,15 +10,14 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "signal (funzione)"
 ms.assetid: d3ce419a-50b2-4233-bb50-99312293f9f3
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Funzione signal (C)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

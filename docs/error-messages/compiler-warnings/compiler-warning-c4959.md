@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore C4959 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4959"
 ms.assetid: 3a128f3e-4d8a-4565-ba1a-5d32fdeb5982
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Avviso del compilatore C4959
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

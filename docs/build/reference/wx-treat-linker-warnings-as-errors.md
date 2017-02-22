@@ -1,8 +1,7 @@
 ---
 title: "/WX (Considera gli avvisi del linker come errori) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "-WX (opzione del linker)"
 ms.assetid: e4ba97c7-93f7-43ae-a4bb-d866790926c9
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # /WX (Considera gli avvisi del linker come errori)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

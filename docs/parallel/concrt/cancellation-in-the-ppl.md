@@ -1,8 +1,7 @@
 ---
 title: "Annullamento nella libreria PPL | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "strutture ad albero del lavoro parallelo [Runtime di concorrenza]"
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
 caps.latest.revision: 31
-caps.handback.revision: 28
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 28
 ---
 # Annullamento nella libreria PPL
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

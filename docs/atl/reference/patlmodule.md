@@ -1,8 +1,7 @@
 ---
 title: "_pAtlModule | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "pAtlModule variable"
 ms.assetid: 0ecde3a9-3f4d-4c7b-bb54-713ce05c4777
 caps.latest.revision: 13
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # _pAtlModule
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

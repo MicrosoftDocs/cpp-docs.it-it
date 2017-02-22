@@ -1,8 +1,7 @@
 ---
 title: "Editing Binary Data | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "binary data"
 ms.assetid: 0fd429de-baf1-4871-b5e4-42bf868a3261
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Editing Binary Data
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Utilizzo di DLL di estensione per database, OLE e Sockets nelle DLL regolari | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "DLL [C++], regolare"
 ms.assetid: 9f1d14a7-9e2a-4760-b3b6-db014fcdb7ff
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Utilizzo di DLL di estensione per database, OLE e Sockets nelle DLL regolari
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

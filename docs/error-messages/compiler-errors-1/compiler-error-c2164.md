@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2164 | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2164"
 ms.assetid: 55df5024-68a8-45a8-ae6c-e6dba35318a2
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Errore del compilatore C2164
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

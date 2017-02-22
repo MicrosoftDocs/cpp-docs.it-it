@@ -1,8 +1,7 @@
 ---
 title: "SafeModulus | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "SafeModulus (funzione)"
 ms.assetid: ae5c81eb-5dcf-45a5-aa76-465fdfe68654
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "ghogen"
 ms.author: "ghogen"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # SafeModulus
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

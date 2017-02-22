@@ -1,8 +1,7 @@
 ---
 title: "Classe CAnimationTimerEventHandler | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "CAnimationTimerEventHandler (classe)"
 ms.assetid: 188dea3b-4b5e-4f6b-8df9-09d993a21619
 caps.latest.revision: 18
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # Classe CAnimationTimerEventHandler
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Costanti fseek, _lseek | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,17 +14,16 @@ f1_keywords:
   - "SEEK_CUR"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "SEEK_CUR (costante)"
   - "SEEK_END (costante)"
   - "SEEK_SET (costante)"
 ms.assetid: 9deeb13e-5aa3-4c33-80d8-721c80a4de9d
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Costanti fseek, _lseek
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

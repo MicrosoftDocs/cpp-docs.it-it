@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3704 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3704"
 ms.assetid: ee40ea35-a214-4dec-9489-d7f155dd0ac2
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Errore del compilatore C3704
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

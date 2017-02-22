@@ -1,8 +1,7 @@
 ---
 title: "NAME (MASM) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "NAME directive"
 ms.assetid: 7a7ab431-6ffe-4293-9b76-4a5e020c66da
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # NAME (MASM)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

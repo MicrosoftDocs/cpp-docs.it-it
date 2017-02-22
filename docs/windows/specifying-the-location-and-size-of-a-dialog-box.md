@@ -1,8 +1,7 @@
 ---
 title: "Specifying the Location and Size of a Dialog Box | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,16 +10,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C++"
 helpviewer_keywords: 
   - "dialog boxes, size"
   - "dialog boxes, positioning"
 ms.assetid: 2b7c495e-6595-4cfb-9664-80b2826d0851
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Specifying the Location and Size of a Dialog Box
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

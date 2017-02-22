@@ -1,8 +1,7 @@
 ---
 title: "_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -41,7 +40,6 @@ f1_keywords:
   - "mbslwr"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_ftcslwr (funzione)"
   - "_mbslwr (funzione)"
@@ -67,10 +65,10 @@ helpviewer_keywords:
   - "wcslwr_l (funzione)"
 ms.assetid: d279181d-2e7d-401f-ab44-6e7c2786a046
 caps.latest.revision: 36
-caps.handback.revision: 34
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 36
 ---
 # _strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Errore degli strumenti del linker LNK1164 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "LNK1164"
 ms.assetid: da89765c-affa-4f88-b170-6d6b19a577cf
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Errore degli strumenti del linker LNK1164
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

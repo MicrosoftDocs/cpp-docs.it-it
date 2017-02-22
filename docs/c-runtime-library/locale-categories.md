@@ -1,8 +1,7 @@
 ---
 title: "Categorie di impostazioni locali | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,7 +19,6 @@ f1_keywords:
   - "LC_ALL"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "LC_ALL (costante)"
   - "LC_COLLATE (costante)"
@@ -33,10 +31,10 @@ helpviewer_keywords:
   - "costanti locali"
 ms.assetid: 868f1493-fe5d-4722-acab-bfcd374a063a
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Categorie di impostazioni locali
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

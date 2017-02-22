@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2597 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2597"
 ms.assetid: 2e48127d-e3ff-4a40-8156-2863e45b1a38
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Errore del compilatore C2597
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

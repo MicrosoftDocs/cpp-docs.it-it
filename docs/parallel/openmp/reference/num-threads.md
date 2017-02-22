@@ -1,8 +1,7 @@
 ---
 title: "num_threads | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "num_threads OpenMP clause"
 ms.assetid: 09a56fc8-25c7-43e4-bbb5-71cb955d0b93
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # num_threads
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "_cexit, _c_exit | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,7 +31,6 @@ f1_keywords:
   - "cexit"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_c_exit (funzione)"
   - "_cexit (funzione)"
@@ -41,10 +39,10 @@ helpviewer_keywords:
   - "operazioni di pulizia durante i processi"
 ms.assetid: f3072045-9924-4b1a-9fef-b0dcd6d12663
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # _cexit, _c_exit
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

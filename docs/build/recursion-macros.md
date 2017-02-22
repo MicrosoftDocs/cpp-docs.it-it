@@ -1,8 +1,7 @@
 ---
 title: "Macro di ricorsione | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "macro di ricorsione"
 ms.assetid: c53e5ae7-619e-46b1-bdc2-86d8c7798b1d
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Macro di ricorsione
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

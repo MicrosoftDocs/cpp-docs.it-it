@@ -1,8 +1,7 @@
 ---
 title: "Assembler inline | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "assembly inline [C++]"
 ms.assetid: 7e13f18f-3628-4306-8b81-4a6d09c043fe
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Assembler inline
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

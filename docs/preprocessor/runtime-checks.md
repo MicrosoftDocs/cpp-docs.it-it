@@ -1,8 +1,7 @@
 ---
 title: "runtime_checks | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,16 +13,15 @@ f1_keywords:
   - "runtime_checks_CPP"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "runtime_checks (pragma)"
   - "pragma, runtime_checks"
 ms.assetid: ae50b43f-f88d-47ad-a2db-3389e9e7df5b
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # runtime_checks
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

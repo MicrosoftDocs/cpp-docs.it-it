@@ -1,8 +1,7 @@
 ---
 title: "Direttive di pre-elaborazione di makefile | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -50,10 +49,10 @@ helpviewer_keywords:
   - "UNDEF (direttiva)"
 ms.assetid: bcedeccb-d981-469d-b9e8-ab5d097fd8c2
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Direttive di pre-elaborazione di makefile
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

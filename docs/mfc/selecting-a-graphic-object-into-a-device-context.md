@@ -1,8 +1,7 @@
 ---
 title: "Selezione di un oggetto grafico in un contesto di dispositivo | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "SelectObject (metodo)"
 ms.assetid: cf54a330-63ef-421f-83eb-90ec7bd82eef
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Selezione di un oggetto grafico in un contesto di dispositivo
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

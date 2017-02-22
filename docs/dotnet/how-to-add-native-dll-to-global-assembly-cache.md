@@ -1,8 +1,7 @@
 ---
 title: "Procedura: aggiungere DLL native alla Global Assembly Cache | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "DLL native [C++]"
 ms.assetid: 25e8d78a-b197-4269-b4e9-237a544ab3c8
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Procedura: aggiungere DLL native alla Global Assembly Cache
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

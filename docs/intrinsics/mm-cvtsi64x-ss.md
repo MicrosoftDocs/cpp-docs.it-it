@@ -1,8 +1,7 @@
 ---
 title: "_mm_cvtsi64x_ss | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "_mm_cvtsi64x_ss (funzione intrinseca)"
 ms.assetid: 01e5d321-c18a-46fd-a6f6-324364514e1f
 caps.latest.revision: 14
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # _mm_cvtsi64x_ss
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

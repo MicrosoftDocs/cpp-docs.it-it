@@ -1,8 +1,7 @@
 ---
 title: "Interfacce, Creazione guidata controllo ATL | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Creazione guidata controllo ATL, interfacce"
 ms.assetid: 971eadcd-6a1e-46f2-b8fe-ee6b53dfe3ea
 caps.latest.revision: 13
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Interfacce, Creazione guidata controllo ATL
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

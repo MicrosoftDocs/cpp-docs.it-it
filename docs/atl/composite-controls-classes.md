@@ -1,8 +1,7 @@
 ---
 title: "Composite Controls Classes | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "controlli composti, C++"
 ms.assetid: 9e8d65c4-d631-4500-a28b-6d42c35aba26
 caps.latest.revision: 10
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Composite Controls Classes
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

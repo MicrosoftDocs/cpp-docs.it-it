@@ -1,8 +1,7 @@
 ---
 title: "Tipi di funzioni | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 7e33d5f4-dabb-406d-afb3-13777b995028
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Tipi di funzioni
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

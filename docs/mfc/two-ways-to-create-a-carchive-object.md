@@ -1,8 +1,7 @@
 ---
 title: "Due modi per creare un oggetto CArchive | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "archiviazione [C++], CArchive (classe)"
 ms.assetid: aefa28ce-b55c-40dc-9e42-5f038030985d
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Due modi per creare un oggetto CArchive
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

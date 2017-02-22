@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3033 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3033"
 ms.assetid: 8628b6bb-a650-4ed2-af13-57acd2f7ddbb
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Errore del compilatore C3033
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

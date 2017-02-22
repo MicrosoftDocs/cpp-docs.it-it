@@ -1,8 +1,7 @@
 ---
 title: "Classe remove_reference | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "remove_reference"
 ms.assetid: 294e1965-3ae3-46ee-bc42-4fdf60c24717
 caps.latest.revision: 20
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # Classe remove_reference
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

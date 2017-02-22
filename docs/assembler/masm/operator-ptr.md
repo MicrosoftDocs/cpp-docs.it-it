@@ -1,8 +1,7 @@
 ---
 title: "operator PTR | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "operator PTR"
 ms.assetid: df280f36-ca06-4578-b99d-0aa139b2b969
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # operator PTR
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

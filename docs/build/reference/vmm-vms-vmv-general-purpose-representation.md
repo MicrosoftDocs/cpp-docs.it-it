@@ -1,8 +1,7 @@
 ---
 title: "/vmm, /vms, /vmv (Rappresentazione generale) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -30,10 +29,10 @@ helpviewer_keywords:
   - "-vmv (opzione del compilatore) [C++]"
 ms.assetid: 0fcd7ae0-3031-4c62-a2a8-e154c8685dae
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # /vmm, /vms, /vmv (Rappresentazione generale)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
