@@ -1,8 +1,7 @@
 ---
 title: "feof | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,16 +27,15 @@ f1_keywords:
   - "feof"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "fine file, verifica per"
   - "feof (funzione)"
 ms.assetid: 09081eee-7c4b-4189-861f-2fad95d3ec6d
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # feof
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

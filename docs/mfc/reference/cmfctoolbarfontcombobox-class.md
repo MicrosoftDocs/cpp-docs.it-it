@@ -1,8 +1,7 @@
 ---
 title: "CMFCToolBarFontComboBox Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "CMFCToolBarFontComboBox class"
 ms.assetid: 25f8e08c-aadd-4cb5-9581-a99d49d444b1
 caps.latest.revision: 29
-caps.handback.revision: 18
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 31
 ---
 # CMFCToolBarFontComboBox Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

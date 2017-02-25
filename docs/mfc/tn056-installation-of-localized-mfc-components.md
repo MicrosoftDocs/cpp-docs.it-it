@@ -1,8 +1,7 @@
 ---
 title: "TN056: installazione di componenti MFC localizzati | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,10 +26,10 @@ helpviewer_keywords:
   - "TN056"
 ms.assetid: 0b582615-3bb1-4fc0-b569-d127d6deccd3
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # TN056: installazione di componenti MFC localizzati
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

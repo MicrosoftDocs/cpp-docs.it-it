@@ -1,8 +1,7 @@
 ---
 title: "ctanh, ctanhf, ctanhl | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -35,7 +34,6 @@ f1_keywords:
   - "complex/ctanhf"
   - "complex/ctanhl"
 dev_langs: 
-  - "C"
   - "C++"
 helpviewer_keywords: 
   - "funzione ctanh"
@@ -43,10 +41,10 @@ helpviewer_keywords:
   - "funzione ctanhf"
 ms.assetid: 807f2cd1-8740-4988-afff-5911c346385b
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # ctanh, ctanhf, ctanhl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

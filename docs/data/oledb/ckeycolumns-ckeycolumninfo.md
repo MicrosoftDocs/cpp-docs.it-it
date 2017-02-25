@@ -1,8 +1,7 @@
 ---
 title: "CKeyColumns, CKeyColumnInfo | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -55,10 +54,10 @@ helpviewer_keywords:
   - "TABLE_SCHEMA"
 ms.assetid: 40525a4f-a9cf-4e9f-886d-8a6ddd18a3d6
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # CKeyColumns, CKeyColumnInfo
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

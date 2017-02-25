@@ -1,8 +1,7 @@
 ---
 title: "_CrtSetReportMode | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,16 +27,15 @@ f1_keywords:
   - "CrtSetReportMode"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_CrtSetReportMode (funzione)"
   - "CrtSetReportMode (funzione)"
 ms.assetid: 3ecc6a12-afdd-4242-b046-8187ff6d4b36
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # _CrtSetReportMode
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

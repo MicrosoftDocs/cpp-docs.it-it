@@ -1,8 +1,7 @@
 ---
 title: "/LINKERMEMBER | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "-LINKERMEMBER (opzione dumpbin)"
 ms.assetid: c96868c1-d70e-4651-ae36-c55b58b16406
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # /LINKERMEMBER
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

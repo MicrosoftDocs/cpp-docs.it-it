@@ -1,8 +1,7 @@
 ---
 title: "Pagina delle propriet&#224; NMAKE | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "NMake (pagina delle proprietà)"
 ms.assetid: bd20cb52-9f1d-4240-b4fc-4f43205ac94b
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Pagina delle propriet&#224; NMAKE
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

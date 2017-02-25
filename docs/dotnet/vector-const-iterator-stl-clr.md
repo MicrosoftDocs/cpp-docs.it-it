@@ -1,8 +1,7 @@
 ---
 title: "vector::const_iterator (STL/CLR) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "const_iterator (membro) [STL/CLR]"
 ms.assetid: 09c0ae0b-248b-463c-8f57-59c77eba1eaa
 caps.latest.revision: 16
-caps.handback.revision: 14
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # vector::const_iterator (STL/CLR)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

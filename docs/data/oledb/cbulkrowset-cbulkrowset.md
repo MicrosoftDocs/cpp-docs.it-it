@@ -1,8 +1,7 @@
 ---
 title: "CBulkRowset::CBulkRowset | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "CBulkRowset (classe), costruttore"
 ms.assetid: 930e3562-63b6-4dd9-b248-8e8fb27d9c63
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # CBulkRowset::CBulkRowset
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "omp_set_dynamic | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "omp_set_dynamic OpenMP function"
 ms.assetid: 3845faf2-a0ca-45a5-ae70-2a7a6164f1e8
 caps.latest.revision: 12
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # omp_set_dynamic
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

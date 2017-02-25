@@ -1,8 +1,7 @@
 ---
 title: "Applicazioni Windows Store, Windows Runtime e C Run-Time | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 356d6d8d-76ee-4181-9ad0-6f24b2fede38
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Applicazioni Windows Store, Windows Runtime e C Run-Time
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

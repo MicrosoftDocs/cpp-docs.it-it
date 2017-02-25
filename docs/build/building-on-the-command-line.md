@@ -1,8 +1,7 @@
 ---
 title: "Compilazione dalla riga di comando | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "compilazione di codice sorgente [C++], riga di comando"
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
 caps.latest.revision: 22
-caps.handback.revision: 20
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # Compilazione dalla riga di comando
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

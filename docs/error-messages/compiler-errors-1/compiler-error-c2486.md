@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2486 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2486"
 ms.assetid: 436da349-6461-4e32-bfca-4f3e620108e2
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Errore del compilatore C2486
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

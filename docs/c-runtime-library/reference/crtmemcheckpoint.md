@@ -1,8 +1,7 @@
 ---
 title: "_CrtMemCheckpoint | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,16 +28,15 @@ f1_keywords:
   - "crtdbg/_CrtMemCheckpoint"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "CrtMemCheckpoint (funzione)"
   - "_CrtMemCheckpoint (funzione)"
 ms.assetid: f1bacbaa-5a0c-498a-ac7a-b6131d83dfbc
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # _CrtMemCheckpoint
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

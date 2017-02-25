@@ -1,8 +1,7 @@
 ---
 title: "Creating a Device Image (Image Editor for Icons) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "vc.editors.icon"
 dev_langs: 
   - "C++"
-  - "C++"
 helpviewer_keywords: 
   - "cursors [C++], creating"
   - "icons [C++], creating"
@@ -23,10 +21,10 @@ helpviewer_keywords:
   - "icons [C++], inserting"
 ms.assetid: 5a536928-32df-4ace-beb1-1521ce3b871f
 caps.latest.revision: 12
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Creating a Device Image (Image Editor for Icons)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

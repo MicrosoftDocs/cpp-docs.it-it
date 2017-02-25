@@ -1,8 +1,7 @@
 ---
 title: "CEnumeratorAccessor::m_nType | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "m_nType"
 ms.assetid: e01e5ab9-9aae-4191-87cc-4f7aa010ac4e
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # CEnumeratorAccessor::m_nType
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

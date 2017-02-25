@@ -1,8 +1,7 @@
 ---
 title: "fopen_s, _wfopen_s | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,7 +30,6 @@ f1_keywords:
   - "_wfopen_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_tfopen_s (funzione)"
   - "_wfopen_s (funzione)"
@@ -45,10 +43,10 @@ helpviewer_keywords:
   - "wfopen_s (funzione)"
 ms.assetid: c534857e-39ee-4a3f-bd26-dfe551ac96c3
 caps.latest.revision: 41
-caps.handback.revision: 39
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 41
 ---
 # fopen_s, _wfopen_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

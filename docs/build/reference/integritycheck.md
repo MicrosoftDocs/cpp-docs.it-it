@@ -1,8 +1,7 @@
 ---
 title: "/INTEGRITYCHECK | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "-INTEGRITYCHECK (opzione editbin)"
 ms.assetid: 2a293705-4396-421b-a5a5-693b4b867a85
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # /INTEGRITYCHECK
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

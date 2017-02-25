@@ -1,8 +1,7 @@
 ---
 title: "hash_multimap::const_reverse_iterator (STL/CLR) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "const_reverse_iterator (membro) [STL/CLR]"
 ms.assetid: 060a2bba-6d63-48ce-a8f7-deb061dfd489
 caps.latest.revision: 11
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # hash_multimap::const_reverse_iterator (STL/CLR)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

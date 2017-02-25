@@ -1,8 +1,7 @@
 ---
 title: "CSimpleStringT Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,11 +21,11 @@ helpviewer_keywords:
   - "shared classes, CSimpleStringT"
   - "stringhe [C++], ATL (classe)"
 ms.assetid: 15814fcb-5b8f-4425-a97e-3b61fc9b48d8
-caps.latest.revision: 19
-caps.handback.revision: 8
+caps.latest.revision: 17
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # CSimpleStringT Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

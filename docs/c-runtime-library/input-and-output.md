@@ -1,8 +1,7 @@
 ---
 title: "Input e output | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.io"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "I/O [CRT]"
   - "I/O [CRT], routine"
@@ -22,10 +20,10 @@ helpviewer_keywords:
   - "routine di output"
 ms.assetid: 1c177301-e341-4ca0-aedc-0a87fe1c75ae
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Input e output
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

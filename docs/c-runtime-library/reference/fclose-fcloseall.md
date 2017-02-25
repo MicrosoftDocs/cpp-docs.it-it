@@ -1,8 +1,7 @@
 ---
 title: "fclose, _fcloseall | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -30,17 +29,16 @@ f1_keywords:
   - "_fcloseall"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "fclose (funzione)"
   - "flussi, chiusura"
   - "_fcloseall (funzione)"
 ms.assetid: c3c6ea72-92c6-450a-a33e-3e568d2784a4
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # fclose, _fcloseall
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

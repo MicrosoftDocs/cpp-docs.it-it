@@ -1,8 +1,7 @@
 ---
 title: "Metodo AsyncBase::GetOnProgress | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "GetOnProgress (metodo)"
 ms.assetid: 286ddc9c-3e30-41a2-8e8b-e53d3fb0649d
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # Metodo AsyncBase::GetOnProgress
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

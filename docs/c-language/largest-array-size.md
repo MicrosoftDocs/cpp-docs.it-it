@@ -1,8 +1,7 @@
 ---
 title: "Dimensione di matrice massima | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,13 +10,12 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 ms.assetid: 4c782cf6-73f3-40b0-b306-229d22da4ee1
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Dimensione di matrice massima
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

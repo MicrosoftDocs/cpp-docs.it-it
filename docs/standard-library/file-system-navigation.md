@@ -1,8 +1,7 @@
 ---
 title: "Esplorazione del file system | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: f7cc5f5e-a541-4e00-87c7-a3769ef6096d
 caps.latest.revision: 14
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Esplorazione del file system
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

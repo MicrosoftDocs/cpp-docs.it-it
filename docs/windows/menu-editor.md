@@ -1,8 +1,7 @@
 ---
 title: "Menu Editor | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "menus, Menu editor"
 ms.assetid: 421fb215-6e12-4ec9-a3af-82d77f87bfa6
 caps.latest.revision: 13
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Menu Editor
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

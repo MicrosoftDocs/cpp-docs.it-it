@@ -1,8 +1,7 @@
 ---
 title: "__p__commode | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,10 +28,10 @@ helpviewer_keywords:
   - "__p__commode"
 ms.assetid: 4380acb8-e3e4-409c-a60f-6205ac5189ce
 caps.latest.revision: 2
-caps.handback.revision: 2
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 2
 ---
 # __p__commode
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

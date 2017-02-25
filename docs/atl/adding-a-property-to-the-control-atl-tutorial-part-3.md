@@ -1,8 +1,7 @@
 ---
 title: "Aggiunta di una propriet&#224; al controllo (Esercitazione di ATL, parte 3) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: f775fe34-103b-4f07-9999-400e987ee030
 caps.latest.revision: 15
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Aggiunta di una propriet&#224; al controllo (Esercitazione di ATL, parte 3)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

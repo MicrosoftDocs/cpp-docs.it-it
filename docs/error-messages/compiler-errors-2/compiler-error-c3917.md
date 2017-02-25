@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3917 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3917"
 ms.assetid: a24cd0c9-262f-46e5-9488-1c01f945933d
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Errore del compilatore C3917
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

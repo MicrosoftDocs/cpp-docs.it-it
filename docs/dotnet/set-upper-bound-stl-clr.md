@@ -1,8 +1,7 @@
 ---
 title: "set::upper_bound (STL/CLR) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "upper_bound (membro) [STL/CLR]"
 ms.assetid: 874d258a-990f-486f-ac7b-757a2f7c150a
 caps.latest.revision: 16
-caps.handback.revision: 14
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # set::upper_bound (STL/CLR)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2790 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2790"
 ms.assetid: 38d4fce1-ba00-413d-8bc1-e8aa43d7bc1f
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Errore del compilatore C2790
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

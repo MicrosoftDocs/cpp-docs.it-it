@@ -1,8 +1,7 @@
 ---
 title: "Nomi delle impostazioni locali, lingue e stringhe relative a paesi | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.strings"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "stringhe relative a paesi"
   - "localizzazione, impostazioni locali"
@@ -22,10 +20,10 @@ helpviewer_keywords:
   - "stringhe relative a lingue"
 ms.assetid: a0e5a0c5-5602-4da0-b65f-de3d6c8530a2
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Nomi delle impostazioni locali, lingue e stringhe relative a paesi
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

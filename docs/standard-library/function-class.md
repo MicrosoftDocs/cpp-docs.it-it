@@ -1,8 +1,7 @@
 ---
 title: "Classe function | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "function (classe) [TR1]"
 ms.assetid: 7b5ca76b-9ca3-4d89-8fcf-cad70a4aeae6
 caps.latest.revision: 26
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # Classe function
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

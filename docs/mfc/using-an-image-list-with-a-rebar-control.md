@@ -1,8 +1,7 @@
 ---
 title: "Utilizzo di un elenco immagini con un controllo Rebar | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "Rebar (controlli), elenchi di immagini"
 ms.assetid: 1a5836ac-019a-46aa-8741-b35c3376b839
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Utilizzo di un elenco immagini con un controllo Rebar
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

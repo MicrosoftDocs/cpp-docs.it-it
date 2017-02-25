@@ -1,8 +1,7 @@
 ---
 title: "Struct pointer_traits | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ dev_langs:
   - "C++"
 ms.assetid: 545aecf1-3561-4859-8b34-603c079fe1b3
 caps.latest.revision: 13
-caps.handback.revision: 2
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Struct pointer_traits
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

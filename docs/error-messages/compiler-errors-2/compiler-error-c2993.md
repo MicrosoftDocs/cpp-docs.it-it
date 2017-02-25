@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2993 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2993"
 ms.assetid: 4ffd2b78-654b-46aa-95a6-b62101cf91c8
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Errore del compilatore C2993
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

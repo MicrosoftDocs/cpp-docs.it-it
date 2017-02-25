@@ -1,8 +1,7 @@
 ---
 title: "Vantaggi dell&#39;utilizzo delle DLL | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "collegamenti [C++], dinamico e statico"
 ms.assetid: 8956c8ee-e7b3-446f-a0c6-462381747690
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Vantaggi dell&#39;utilizzo delle DLL
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

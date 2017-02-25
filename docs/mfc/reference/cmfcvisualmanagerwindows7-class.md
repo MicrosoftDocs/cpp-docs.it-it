@@ -1,8 +1,7 @@
 ---
 title: "CMFCVisualManagerWindows7 Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "CMFCVisualManagerWindows7 class"
 ms.assetid: e8d87df1-0c09-4b58-8ade-4e911f796e42
 caps.latest.revision: 21
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # CMFCVisualManagerWindows7 Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

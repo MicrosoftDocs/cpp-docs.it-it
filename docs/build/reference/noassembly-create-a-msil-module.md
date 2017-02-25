@@ -1,8 +1,7 @@
 ---
 title: "/NOASSEMBLY (Crea un modulo MSIL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "-NOASSEMBLY (opzione del linker)"
 ms.assetid: 3cea4e70-f451-4395-a626-1930b1b127fe
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # /NOASSEMBLY (Crea un modulo MSIL)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

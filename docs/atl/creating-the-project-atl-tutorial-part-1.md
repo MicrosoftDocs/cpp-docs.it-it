@@ -1,8 +1,7 @@
 ---
 title: "Creazione del progetto (Esercitazione di ATL, parte 1) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
 caps.latest.revision: 16
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Creazione del progetto (Esercitazione di ATL, parte 1)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Errore della riga di comando D8022 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "D8022"
 ms.assetid: eb18ec34-d32d-4636-a852-abf2063e886b
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Errore della riga di comando D8022
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

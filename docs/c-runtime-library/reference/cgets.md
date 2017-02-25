@@ -1,8 +1,7 @@
 ---
 title: "cgets | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,15 +26,14 @@ f1_keywords:
   - "cgets"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "cgets (funzione)"
 ms.assetid: 54faf257-5ed6-4301-be19-66d953e901fa
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # cgets
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

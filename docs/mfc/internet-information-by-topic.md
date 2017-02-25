@@ -1,8 +1,7 @@
 ---
 title: "Informazioni Internet per argomento | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "MFC, applicazioni Internet"
 ms.assetid: 93a8b6c9-d274-492a-90b3-cf43a77edb1d
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Informazioni Internet per argomento
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

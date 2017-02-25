@@ -1,8 +1,7 @@
 ---
 title: "Classe message_processor | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "message_processor (classe)"
 ms.assetid: 23afb052-daa7-44ed-bf24-d2513db748da
 caps.latest.revision: 16
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # Classe message_processor
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

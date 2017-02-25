@@ -1,8 +1,7 @@
 ---
 title: "Classe uniform_real_distribution | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "uniform_real_distribution (classe)"
 ms.assetid: 5cf906fd-0319-4984-b21b-98425cd7532d
 caps.latest.revision: 18
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # Classe uniform_real_distribution
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

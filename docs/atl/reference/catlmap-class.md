@@ -1,8 +1,7 @@
 ---
 title: "CAtlMap Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "CAtlMap class"
 ms.assetid: 5e2fe028-8e6d-4686-93df-1433d2080ec3
 caps.latest.revision: 21
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # CAtlMap Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

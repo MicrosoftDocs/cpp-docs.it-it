@@ -1,8 +1,7 @@
 ---
 title: "Using Contained Windows | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "windows [C++], ATL"
 ms.assetid: 7b3d79e5-b569-413f-9b98-df4f14efbe2b
 caps.latest.revision: 12
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Using Contained Windows
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

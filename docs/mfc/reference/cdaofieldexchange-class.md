@@ -1,8 +1,7 @@
 ---
 title: "CDaoFieldExchange Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "RFX (Trasferimento di campi di record), DAO classes"
 ms.assetid: 350a663e-92ff-44ab-ad53-d94efa2e5823
 caps.latest.revision: 23
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # CDaoFieldExchange Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

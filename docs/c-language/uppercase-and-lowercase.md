@@ -1,8 +1,7 @@
 ---
 title: "Caratteri maiuscoli e minuscoli | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,13 +10,12 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 ms.assetid: f33caa65-15ce-4b06-97a6-d19b3ab4d5ad
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Caratteri maiuscoli e minuscoli
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

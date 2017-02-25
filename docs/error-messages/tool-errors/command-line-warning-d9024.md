@@ -1,8 +1,7 @@
 ---
 title: "Avviso della riga di comando D9024 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "D9024"
 ms.assetid: daf4896d-223d-4af0-9b6d-89109cf3d1bb
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Avviso della riga di comando D9024
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

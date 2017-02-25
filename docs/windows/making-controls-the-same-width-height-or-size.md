@@ -1,8 +1,7 @@
 ---
 title: "Making Controls the Same Width, Height, or Size | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "controls [C++], sizing"
 ms.assetid: 94b50613-67e2-497b-a2b6-6d98dccfd345
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Making Controls the Same Width, Height, or Size
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

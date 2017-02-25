@@ -1,8 +1,7 @@
 ---
 title: "_strset_s, _strset_s_l, _wcsset_s, _wcsset_s_l, _mbsset_s, _mbsset_s_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -47,7 +46,6 @@ f1_keywords:
   - "_tcsset_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_mbsset_s (funzione)"
   - "_mbsset_s_l (funzione)"
@@ -69,10 +67,10 @@ helpviewer_keywords:
   - "wcsset_s_l (funzione)"
 ms.assetid: dceb2909-6b41-4792-acb7-888e45bb8b35
 caps.latest.revision: 21
-caps.handback.revision: 19
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # _strset_s, _strset_s_l, _wcsset_s, _wcsset_s_l, _mbsset_s, _mbsset_s_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

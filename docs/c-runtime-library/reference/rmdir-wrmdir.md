@@ -1,8 +1,7 @@
 ---
 title: "_rmdir, _wrmdir | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -33,7 +32,6 @@ f1_keywords:
   - "_wrmdir"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_rmdir (funzione)"
   - "_trmdir (funzione)"
@@ -45,10 +43,10 @@ helpviewer_keywords:
   - "wrmdir (funzione)"
 ms.assetid: 652c2a5a-b0ac-4493-864e-1edf484333c5
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # _rmdir, _wrmdir
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

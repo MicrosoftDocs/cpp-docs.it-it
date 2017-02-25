@@ -1,8 +1,7 @@
 ---
 title: "/DISASM | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "-DISASM (opzione dumpbin)"
 ms.assetid: 5f6d1fde-50ce-486d-9c1d-9372b7f7b533
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # /DISASM
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

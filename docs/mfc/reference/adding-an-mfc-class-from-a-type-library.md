@@ -1,8 +1,7 @@
 ---
 title: "Aggiunta di una classe MFC da una libreria dei tipi | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "librerie dei tipi, aggiunta di classi MFC da"
 ms.assetid: aba40476-3cfb-47af-990e-ae2e9e0d79cf
 caps.latest.revision: 13
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Aggiunta di una classe MFC da una libreria dei tipi
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

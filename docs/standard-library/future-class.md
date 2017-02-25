@@ -1,8 +1,7 @@
 ---
 title: "Classe future | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ dev_langs:
   - "C++"
 ms.assetid: 495e82c3-5341-4e37-87dd-b40107fbdfb6
 caps.latest.revision: 13
-caps.handback.revision: 2
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Classe future
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

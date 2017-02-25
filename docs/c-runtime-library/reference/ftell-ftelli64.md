@@ -1,8 +1,7 @@
 ---
 title: "ftell, _ftelli64 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -30,7 +29,6 @@ f1_keywords:
   - "ftell"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_ftelli64 (funzione)"
   - "puntatori a file [C++]"
@@ -39,10 +37,10 @@ helpviewer_keywords:
   - "ftelli64 (funzione)"
 ms.assetid: 40149cd8-65f2-42ff-b70c-68e3e918cdd7
 caps.latest.revision: 19
-caps.handback.revision: 17
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # ftell, _ftelli64
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

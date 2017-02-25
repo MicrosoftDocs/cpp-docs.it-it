@@ -1,8 +1,7 @@
 ---
 title: "__crtLCMapStringW | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,10 +27,10 @@ helpviewer_keywords:
   - "__crtLCMapStringW"
 ms.assetid: 45b4ac0e-438c-4fa3-b4d1-34195f4467d9
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # __crtLCMapStringW
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

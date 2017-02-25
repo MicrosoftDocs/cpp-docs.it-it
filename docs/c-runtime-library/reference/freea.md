@@ -1,8 +1,7 @@
 ---
 title: "_freea | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,17 +27,16 @@ f1_keywords:
   - "_freea"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_freea (funzione)"
   - "freea (funzione)"
   - "deallocazione di memoria"
 ms.assetid: dcd30584-dd9d-443b-8c4c-13237a1cecac
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # _freea
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

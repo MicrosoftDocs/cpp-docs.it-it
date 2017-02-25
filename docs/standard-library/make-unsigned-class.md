@@ -1,8 +1,7 @@
 ---
 title: "Classe make_unsigned | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "make_unsigned"
 ms.assetid: 7a6a3c4f-1a4c-47e8-9ee2-ac1f7b669353
 caps.latest.revision: 18
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # Classe make_unsigned
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

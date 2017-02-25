@@ -1,8 +1,7 @@
 ---
 title: "Personalizzazione dell&#39;elaborazione dalla riga di comando C | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_exec (funzione)"
   - "_setargv (funzione)"
@@ -24,10 +22,10 @@ helpviewer_keywords:
   - "soppressione elaborazione ambiente"
 ms.assetid: c20fa11d-b35b-4f3e-93b6-2cd5a1c3c993
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Personalizzazione dell&#39;elaborazione dalla riga di comando C
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

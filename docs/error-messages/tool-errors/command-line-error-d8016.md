@@ -1,8 +1,7 @@
 ---
 title: "Errore della riga di comando D8016 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "D8016"
 ms.assetid: eec51312-7471-4f92-94b2-d517cafc8ef5
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Errore della riga di comando D8016
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

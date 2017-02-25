@@ -1,8 +1,7 @@
 ---
 title: "Operatore dynamic_cast | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "dynamic_cast (parola chiave) [C++]"
 ms.assetid: f380ada8-6a18-4547-93c9-63407f19856b
 caps.latest.revision: 20
-caps.handback.revision: 18
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # Operatore dynamic_cast
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

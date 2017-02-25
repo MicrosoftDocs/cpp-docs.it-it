@@ -1,8 +1,7 @@
 ---
 title: "Tipi di documenti multipli, visualizzazioni e finestre cornice | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -26,10 +25,10 @@ helpviewer_keywords:
   - "finestre con separatore, statico"
 ms.assetid: c6b9e4e0-7c9c-45f1-a804-aeac39c9a128
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Tipi di documenti multipli, visualizzazioni e finestre cornice
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

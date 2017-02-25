@@ -1,8 +1,7 @@
 ---
 title: "CRowset::Insert | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "Insert (metodo)"
 ms.assetid: 6a64a1c3-10ac-4296-8685-0fd6fe63a13b
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # CRowset::Insert
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

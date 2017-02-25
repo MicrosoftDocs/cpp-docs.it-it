@@ -1,8 +1,7 @@
 ---
 title: "__stosq | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "__stosq (funzione intrinseca)"
 ms.assetid: 3ea28297-4369-4c2d-bf0c-91fa539ce209
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # __stosq
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Classe unique_ptr | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "unique_ptr (classe)"
 ms.assetid: acdf046b-831e-4a4a-83aa-6d4ee467db9a
 caps.latest.revision: 22
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # Classe unique_ptr
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Comportamento non standard | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "comportamento non standard, conformità e compatibilità"
 ms.assetid: a57dea27-dc79-4f64-8a83-017e84841773
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Comportamento non standard
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "memmove, wmemmove | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,6 +21,7 @@ apilocation:
   - "msvcr110_clr0400.dll"
   - "msvcr120.dll"
   - "msvcr120_clr0400.dll"
+  - "ntdll.dll"
   - "ucrtbase.dll"
 apitype: "DLLExport"
 f1_keywords: 
@@ -29,16 +29,15 @@ f1_keywords:
   - "wmemmove"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "memmove (funzione)"
   - "wmemmove (funzione)"
 ms.assetid: 3a906114-9cf3-40d7-bd99-ee452004f218
 caps.latest.revision: 21
-caps.handback.revision: 19
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # memmove, wmemmove
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

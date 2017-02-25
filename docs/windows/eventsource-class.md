@@ -1,8 +1,7 @@
 ---
 title: "Classe EventSource | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "EventSource (classe)"
 ms.assetid: 91f1c072-6af4-44e6-b6d8-ac6d0c688dde
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # Classe EventSource
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

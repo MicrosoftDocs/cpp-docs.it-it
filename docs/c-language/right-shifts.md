@@ -1,8 +1,7 @@
 ---
 title: "Spostamenti a destra | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,13 +10,12 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 ms.assetid: c878e97d-ea3c-4c6b-90a8-b1b24b2d5b19
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Spostamenti a destra
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "MMWORD | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "MMWORD directive"
 ms.assetid: b4c5a104-9078-4fb4-afc3-d1e63abe562a
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # MMWORD
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

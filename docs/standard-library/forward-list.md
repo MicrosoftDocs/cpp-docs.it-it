@@ -1,8 +1,7 @@
 ---
 title: "&lt;forward_list&gt; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "<forward_list>"
 ms.assetid: 8b4ab09e-1475-434a-b4e0-fdbc07a08b5b
 caps.latest.revision: 14
-caps.handback.revision: 4
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # &lt;forward_list&gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

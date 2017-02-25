@@ -1,8 +1,7 @@
 ---
 title: "Classe allocator_newdel | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "allocator_newdel (classe)"
 ms.assetid: 62666cd2-3afe-49f7-9dd1-9bbbb154da98
 caps.latest.revision: 18
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # Classe allocator_newdel
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

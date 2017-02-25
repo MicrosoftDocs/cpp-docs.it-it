@@ -1,8 +1,7 @@
 ---
 title: "_iob | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "iob (variabile globale)"
 ms.assetid: 008ed376-8078-4bbd-bc6c-0677c63d0ff1
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # _iob
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

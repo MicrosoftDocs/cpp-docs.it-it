@@ -1,8 +1,7 @@
 ---
 title: "_ungetc_nolock, _ungetwc_nolock | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -33,7 +32,6 @@ f1_keywords:
   - "_ungetwc_nolock"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_ungetc_nolock (funzione)"
   - "_ungettc_nolock (funzione)"
@@ -44,10 +42,10 @@ helpviewer_keywords:
   - "ungetwc_nolock (funzione)"
 ms.assetid: aa02d5c2-1be1-46d2-a8c4-b61269e9d465
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # _ungetc_nolock, _ungetwc_nolock
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

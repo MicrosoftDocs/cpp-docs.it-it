@@ -1,8 +1,7 @@
 ---
 title: "lock::lock | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "lock (costruttore)"
 ms.assetid: c9ad6c71-36ec-49c5-8ebd-f5c3a0cc94f0
 caps.latest.revision: 15
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # lock::lock
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

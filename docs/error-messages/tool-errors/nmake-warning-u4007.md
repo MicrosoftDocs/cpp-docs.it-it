@@ -1,8 +1,7 @@
 ---
 title: "Avviso U4007 di NMAKE  | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "U4007"
 ms.assetid: 61ec0417-6961-43c1-ade8-f9d6e93289e9
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Avviso U4007 di NMAKE 
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

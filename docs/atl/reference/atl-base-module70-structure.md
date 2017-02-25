@@ -1,8 +1,7 @@
 ---
 title: "_ATL_BASE_MODULE70 Structure | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "ATL_BASE_MODULE70 structure"
 ms.assetid: 4539282f-15b8-4d7c-aafa-a85dc56f4980
 caps.latest.revision: 15
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # _ATL_BASE_MODULE70 Structure
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

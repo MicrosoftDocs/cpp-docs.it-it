@@ -1,8 +1,7 @@
 ---
 title: "CSimpleRow::m_dwRef | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "m_dwRef"
 ms.assetid: 895f4141-280e-4190-b7df-14ed828e1498
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # CSimpleRow::m_dwRef
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

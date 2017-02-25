@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2410 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2410"
 ms.assetid: b69b2de1-56f3-4ebc-8913-04ac57ffe8a1
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Errore del compilatore C2410
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

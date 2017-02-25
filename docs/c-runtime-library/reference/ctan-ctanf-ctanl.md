@@ -1,8 +1,7 @@
 ---
 title: "Ctan, ctanf, ctanl | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -35,7 +34,6 @@ f1_keywords:
   - "complex/ctanf"
   - "complex/ctanl"
 dev_langs: 
-  - "C"
   - "C++"
 helpviewer_keywords: 
   - "funzione Ctan"
@@ -43,10 +41,10 @@ helpviewer_keywords:
   - "funzione ctanl"
 ms.assetid: d3cbd25c-1e93-4a6d-8154-da42921f7223
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Ctan, ctanf, ctanl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

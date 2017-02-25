@@ -1,8 +1,7 @@
 ---
 title: "STRUC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "STRUC directive"
 ms.assetid: 1c7c131e-b787-4902-8db7-3a2342e523f9
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # STRUC
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

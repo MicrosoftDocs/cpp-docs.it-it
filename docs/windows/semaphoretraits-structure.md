@@ -1,8 +1,7 @@
 ---
 title: "Struttura SemaphoreTraits | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "SemaphoreTraits (struttura)"
 ms.assetid: eddb8576-d063-409b-9201-cc87ca5d111e
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # Struttura SemaphoreTraits
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

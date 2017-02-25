@@ -1,8 +1,7 @@
 ---
 title: "__max | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,17 +27,16 @@ f1_keywords:
   - "__max"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "__max (macro)"
   - "max (macro)"
   - "maximum (macro)"
 ms.assetid: 05c936f6-0e22-45d6-a58d-4bc102e9dae2
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # __max
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

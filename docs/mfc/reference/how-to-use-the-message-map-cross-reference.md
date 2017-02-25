@@ -1,8 +1,7 @@
 ---
 title: "Procedura: utilizzare il riferimento incrociato alla mappa messaggi | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "finestre [C++], mappe messaggi"
 ms.assetid: 2e863d23-9e58-45ba-b5e4-a8ceefccd0c8
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Procedura: utilizzare il riferimento incrociato alla mappa messaggi
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

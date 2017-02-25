@@ -1,8 +1,7 @@
 ---
 title: "Procedura: Usare i gruppi di pianificazione per influenzare l&#39;ordine di esecuzione | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "utilizzo di gruppi di pianificazione [Runtime di concorrenza]"
 ms.assetid: 73124194-fc3a-491e-a23f-fbd7b5a4455c
 caps.latest.revision: 15
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Procedura: Usare i gruppi di pianificazione per influenzare l&#39;ordine di esecuzione
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "_get_unexpected | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,17 +28,16 @@ f1_keywords:
   - "get_unexpected"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "__get_unexpected (funzione)"
   - "_get_unexpected (funzione)"
   - "get_unexpected (funzione)"
 ms.assetid: a5f7a7a0-18e0-485e-953d-db291068a1e8
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # _get_unexpected
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

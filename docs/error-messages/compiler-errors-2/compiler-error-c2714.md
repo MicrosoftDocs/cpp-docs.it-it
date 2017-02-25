@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2714 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2714"
 ms.assetid: 401a5a42-660c-4bad-9d63-1a2d092bc489
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Errore del compilatore C2714
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

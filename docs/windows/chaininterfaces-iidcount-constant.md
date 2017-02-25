@@ -1,8 +1,7 @@
 ---
 title: "Costante ChainInterfaces::IidCount | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "IidCount (costante)"
 ms.assetid: d4a90aa0-513c-4e99-b978-e12149734936
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # Costante ChainInterfaces::IidCount
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

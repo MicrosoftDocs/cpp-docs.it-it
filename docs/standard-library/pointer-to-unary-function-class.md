@@ -1,8 +1,7 @@
 ---
 title: "Classe pointer_to_unary_function | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "pointer_to_unary_function (funzione)"
 ms.assetid: 05600207-b916-4759-beca-6b6facd2d6f6
 caps.latest.revision: 21
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # Classe pointer_to_unary_function
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

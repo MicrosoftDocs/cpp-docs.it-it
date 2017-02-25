@@ -1,8 +1,7 @@
 ---
 title: "Funzioni di ricerca dei nomi file | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,7 +19,6 @@ apilocation:
 apitype: "DLLExport"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "nomi file [C++], ricerca"
   - "_find (funzione)"
@@ -29,10 +27,10 @@ helpviewer_keywords:
   - "_wfind (funzione)"
 ms.assetid: 2bc2f8ef-44e4-4271-b3e8-666d36fde828
 caps.latest.revision: 26
-caps.handback.revision: 26
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # Funzioni di ricerca dei nomi file
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

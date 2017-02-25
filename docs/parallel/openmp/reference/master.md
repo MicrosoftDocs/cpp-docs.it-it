@@ -1,8 +1,7 @@
 ---
 title: "master | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "master OpenMP directive"
 ms.assetid: 559ed974-e02a-486e-a23f-31556429b2c4
 caps.latest.revision: 11
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # master
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

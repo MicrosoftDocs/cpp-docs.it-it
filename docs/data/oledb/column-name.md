@@ -1,8 +1,7 @@
 ---
 title: "COLUMN_NAME | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "COLUMN_NAME (macro)"
 ms.assetid: a213b9a0-2148-4a08-9111-d9fa8fdec462
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # COLUMN_NAME
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

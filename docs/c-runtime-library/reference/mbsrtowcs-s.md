@@ -1,8 +1,7 @@
 ---
 title: "mbsrtowcs_s | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,15 +27,14 @@ f1_keywords:
   - "mbsrtowcs_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "mbsrtowcs_s (funzione)"
 ms.assetid: 4ee084ec-b15d-4e5a-921d-6584ec3b5a60
 caps.latest.revision: 24
-caps.handback.revision: 24
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # mbsrtowcs_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

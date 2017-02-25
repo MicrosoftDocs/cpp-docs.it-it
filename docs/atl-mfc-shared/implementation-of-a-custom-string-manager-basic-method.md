@@ -1,8 +1,7 @@
 ---
 title: "Implementation of a Custom String Manager (Basic Method) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "IAtlStringMgr class, utilizzo"
 ms.assetid: eac5d13e-cbb4-4e82-b01e-f5f2dbcb962a
 caps.latest.revision: 12
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Implementation of a Custom String Manager (Basic Method)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

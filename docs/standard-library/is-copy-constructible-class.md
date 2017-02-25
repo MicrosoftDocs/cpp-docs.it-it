@@ -1,8 +1,7 @@
 ---
 title: "is_copy_constructible (classe) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "is_copy_constructible"
 ms.assetid: d8db9d4c-21ed-4884-bead-0b0b562de007
 caps.latest.revision: 13
-caps.handback.revision: 1
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # is_copy_constructible (classe)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

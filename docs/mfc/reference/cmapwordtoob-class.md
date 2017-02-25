@@ -1,8 +1,7 @@
 ---
 title: "CMapWordToOb Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "CMapWordToOb class"
 ms.assetid: 9c9bcd76-456f-4cf9-b03c-dd28b49d5e4f
 caps.latest.revision: 23
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # CMapWordToOb Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

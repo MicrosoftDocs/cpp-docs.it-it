@@ -1,8 +1,7 @@
 ---
 title: "IErrorRecordsImpl::AddErrorRecord | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "AddErrorRecord (metodo)"
 ms.assetid: b5f8e9ae-509d-454f-b511-4bda7e972607
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # IErrorRecordsImpl::AddErrorRecord
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

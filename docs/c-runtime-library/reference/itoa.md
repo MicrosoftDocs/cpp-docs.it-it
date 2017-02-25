@@ -1,8 +1,7 @@
 ---
 title: "itoa | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,15 +26,14 @@ f1_keywords:
   - "itoa"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "itoa (funzione)"
 ms.assetid: 1a824780-f3fc-48d4-86c4-d8c866eb7d87
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # itoa
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

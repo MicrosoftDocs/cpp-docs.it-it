@@ -1,8 +1,7 @@
 ---
 title: "CDaoException Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "eccezioni, in MFC DAO classes"
 ms.assetid: b2b01fa9-7ce2-42a1-842e-40f13dc50da4
 caps.latest.revision: 24
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # CDaoException Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

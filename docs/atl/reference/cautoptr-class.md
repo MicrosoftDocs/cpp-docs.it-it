@@ -1,8 +1,7 @@
 ---
 title: "CAutoPtr Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "CAutoPtr class"
 ms.assetid: 08988d53-4fb0-4711-bdfc-8ac29c63f410
 caps.latest.revision: 23
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # CAutoPtr Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

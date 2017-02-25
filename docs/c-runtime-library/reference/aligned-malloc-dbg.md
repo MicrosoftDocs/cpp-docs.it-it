@@ -1,8 +1,7 @@
 ---
 title: "_aligned_malloc_dbg | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -33,10 +32,10 @@ helpviewer_keywords:
   - "aligned_malloc_dbg (funzione)"
 ms.assetid: fb0429c3-685d-4826-9075-2515c5bdc5c6
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # _aligned_malloc_dbg
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

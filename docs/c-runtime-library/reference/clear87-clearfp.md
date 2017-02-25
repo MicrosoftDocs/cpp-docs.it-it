@@ -1,8 +1,7 @@
 ---
 title: "_clear87, _clearfp | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,7 +31,6 @@ f1_keywords:
   - "clear87"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_clear87 (funzione)"
   - "_clearfp (funzione)"
@@ -41,10 +39,10 @@ helpviewer_keywords:
   - "cancellazione della parola di stato a virgola mobile"
 ms.assetid: 72d24a70-7688-4793-ae09-c96d33fcca52
 caps.latest.revision: 17
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # _clear87, _clearfp
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Errori matematici da M6101 a M6205 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: bdf3dc2a-d993-4f53-b0f2-9604e4914127
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Errori matematici da M6101 a M6205
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

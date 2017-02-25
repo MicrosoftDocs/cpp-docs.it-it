@@ -1,8 +1,7 @@
 ---
 title: "managed, unmanaged | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,7 +15,6 @@ f1_keywords:
   - "vc-pragma.managed"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "managed (pragma)"
   - "pragma, gestito"
@@ -24,10 +22,10 @@ helpviewer_keywords:
   - "unmanaged (pragma)"
 ms.assetid: f072ddcc-e1ec-408a-8ce1-326ddb60e4a4
 caps.latest.revision: 15
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # managed, unmanaged
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

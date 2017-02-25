@@ -1,8 +1,7 @@
 ---
 title: "File di inclusione per il multithreading | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "threading [C++], file di inclusione"
 ms.assetid: 98d764f9-71f4-4da5-8f3a-8d2d26e96799
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # File di inclusione per il multithreading
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

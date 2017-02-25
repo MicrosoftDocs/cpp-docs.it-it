@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livello 1) C4313 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4313"
 ms.assetid: bcf64191-e2cf-452e-97b4-423fcec2d07c
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Avviso del compilatore (livello 1) C4313
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

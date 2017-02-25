@@ -1,8 +1,7 @@
 ---
 title: "Metodo AsyncBase::OnClose | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "OnClose (metodo)"
 ms.assetid: 96766450-c262-4611-8534-7d190b799142
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # Metodo AsyncBase::OnClose
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

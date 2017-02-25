@@ -1,8 +1,7 @@
 ---
 title: "CConstraintTableUsage, CConstraintTableUsageInfo | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -42,10 +41,10 @@ helpviewer_keywords:
   - "TABLE_SCHEMA"
 ms.assetid: 666b44de-3922-4c5e-ad17-d5ea27120174
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # CConstraintTableUsage, CConstraintTableUsageInfo
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

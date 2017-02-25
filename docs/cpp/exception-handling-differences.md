@@ -1,8 +1,7 @@
 ---
 title: "Differenze nella gestione eccezioni | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "classi wrapper, eccezione C"
 ms.assetid: f21d1944-4810-468e-b02a-9f77da4138c9
 caps.latest.revision: 11
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Differenze nella gestione eccezioni
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

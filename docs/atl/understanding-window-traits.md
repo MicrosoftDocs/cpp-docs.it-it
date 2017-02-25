@@ -1,8 +1,7 @@
 ---
 title: "Understanding Window Traits | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "window traits"
 ms.assetid: c90cf850-9e91-49da-9cf3-ad4efb30347d
 caps.latest.revision: 11
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Understanding Window Traits
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

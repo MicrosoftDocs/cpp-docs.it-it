@@ -1,8 +1,7 @@
 ---
-title: "_lsearch | Microsoft Docs"
+title: "lsearch | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,25 +24,17 @@ apilocation:
   - "api-ms-win-crt-utility-l1-1-0.dll"
 apitype: "DLLExport"
 f1_keywords: 
-  - "_lsearch"
   - "lsearch"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
-  - "_lsearch (funzione)"
-  - "matrici [CRT], ricerca"
-  - "chiavi, ricerca in matrici"
-  - "ricerche lineari"
   - "lsearch (funzione)"
-  - "ricerca, lineari"
-  - "valori, ricerca"
 ms.assetid: 8200f608-159a-46f0-923b-1a37ee1af7e0
 caps.latest.revision: 19
-caps.handback.revision: 17
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # _lsearch
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

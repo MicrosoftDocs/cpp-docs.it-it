@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2473 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2473"
 ms.assetid: 6bb7dbf5-b198-490f-860e-fd64d0c2a284
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Errore del compilatore C2473
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Cenni preliminari sul runtime di concorrenza | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "Runtime di concorrenza, requisiti"
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
 caps.latest.revision: 22
-caps.handback.revision: 19
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # Cenni preliminari sul runtime di concorrenza
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

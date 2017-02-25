@@ -1,8 +1,7 @@
 ---
 title: "Costruzione di oggetti di flusso di input | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "flusso di input (oggetti)"
 ms.assetid: ab94866e-6ffe-4f15-b4db-0bd23e636075
 caps.latest.revision: 8
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Costruzione di oggetti di flusso di input
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

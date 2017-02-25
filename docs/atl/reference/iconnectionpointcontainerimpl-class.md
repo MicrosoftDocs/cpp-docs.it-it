@@ -1,8 +1,7 @@
 ---
 title: "IConnectionPointContainerImpl Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "IConnectionPointContainerImpl class"
 ms.assetid: 10db5a8d-8be9-4d9d-8a82-8ab9ffe3e9d6
 caps.latest.revision: 19
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # IConnectionPointContainerImpl Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

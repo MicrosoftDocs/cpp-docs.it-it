@@ -1,8 +1,7 @@
 ---
 title: "_control87, _controlfp, __control87_2 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -36,7 +35,6 @@ f1_keywords:
   - "_control87_2"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "__control87_2 (funzione)"
   - "_control87 (funzione)"
@@ -50,10 +48,10 @@ helpviewer_keywords:
   - "numeri a virgola mobile, parola di controllo"
 ms.assetid: 0d09729d-d9a0-43d6-864c-43ff25e7e0c5
 caps.latest.revision: 34
-caps.handback.revision: 34
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 34
 ---
 # _control87, _controlfp, __control87_2
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

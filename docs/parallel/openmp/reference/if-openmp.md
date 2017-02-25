@@ -1,8 +1,7 @@
 ---
 title: "if (OpenMP) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "if OpenMP clause"
 ms.assetid: db5940b6-2414-4bf8-934d-3edd8393c0f8
 caps.latest.revision: 11
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # if (OpenMP)
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

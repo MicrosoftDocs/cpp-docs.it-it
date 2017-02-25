@@ -1,8 +1,7 @@
 ---
 title: "Struct output_iterator_tag | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "output_iterator_tag (struct)"
 ms.assetid: c23a4331-b069-4fa0-9c3a-1c9be7095553
 caps.latest.revision: 19
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # Struct output_iterator_tag
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

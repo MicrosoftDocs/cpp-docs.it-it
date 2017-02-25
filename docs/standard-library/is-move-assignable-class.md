@@ -1,8 +1,7 @@
 ---
 title: "is_move_assignable (classe) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "is_move_assignable"
 ms.assetid: f33137f2-0639-4912-8745-bc0f9fd18d28
 caps.latest.revision: 13
-caps.handback.revision: 3
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # is_move_assignable (classe)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "/SECTION (Specifica attributi di sezione) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "-SECTION (opzione del linker)"
 ms.assetid: 92b69d81-e421-462e-b46f-7d0dff9b9d16
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # /SECTION (Specifica attributi di sezione)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

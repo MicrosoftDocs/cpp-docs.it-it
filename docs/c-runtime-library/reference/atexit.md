@@ -1,8 +1,7 @@
 ---
 title: "atexit | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,16 +26,15 @@ f1_keywords:
   - "atexit"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "atexit (funzione)"
   - "elaborazione, uscita"
 ms.assetid: 92c156d2-8052-4e58-96dc-00128baac6f9
 caps.latest.revision: 12
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # atexit
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

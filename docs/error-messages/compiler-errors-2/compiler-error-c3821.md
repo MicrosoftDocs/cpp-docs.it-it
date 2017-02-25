@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3821 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3821"
 ms.assetid: 2b327c7a-5faf-443c-ae82-944fae25b4df
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Errore del compilatore C3821
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

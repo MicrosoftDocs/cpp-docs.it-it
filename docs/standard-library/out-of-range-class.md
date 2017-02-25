@@ -1,8 +1,7 @@
 ---
 title: "Classe out_of_range | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "out_of_range (classe)"
 ms.assetid: d0e14dc0-065e-4666-9ac9-51e52223c503
 caps.latest.revision: 25
-caps.handback.revision: 25
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # Classe out_of_range
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

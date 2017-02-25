@@ -1,8 +1,7 @@
 ---
 title: "_com_error::HelpFile | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "HelpFile (metodo)"
 ms.assetid: d2d3a0a1-6b62-4d52-a818-3cfae545a4af
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # _com_error::HelpFile
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

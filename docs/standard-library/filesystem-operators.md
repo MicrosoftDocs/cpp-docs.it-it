@@ -1,8 +1,7 @@
 ---
 title: "Operatori &lt;filesystem&gt; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,10 +31,10 @@ dev_langs:
   - "C++"
 ms.assetid: 102c4833-aa3b-41a8-8998-f5003c546bfd
 caps.latest.revision: 12
-caps.handback.revision: 3
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Operatori &lt;filesystem&gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

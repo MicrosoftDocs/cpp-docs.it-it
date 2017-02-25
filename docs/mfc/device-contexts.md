@@ -1,8 +1,7 @@
 ---
 title: "Contesti di dispositivo | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -43,10 +42,10 @@ helpviewer_keywords:
   - "finestre [C++], disegno diretto in"
 ms.assetid: d0cd51f1-f778-4c7e-bf50-d738d10433c7
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Contesti di dispositivo
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Documenti attivi su Internet | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "creazioni guidate applicazione [C++], documenti attivi"
 ms.assetid: a46bd8a0-e27a-4116-b1bf-dacdb7ae78d1
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Documenti attivi su Internet
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

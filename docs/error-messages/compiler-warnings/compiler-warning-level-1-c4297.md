@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livello 1) C4297 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4297"
 ms.assetid: ba92fcdc-9f70-4f60-abe6-281f9582ca59
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Avviso del compilatore (livello 1) C4297
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

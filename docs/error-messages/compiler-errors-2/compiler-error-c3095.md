@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3095 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3095"
 ms.assetid: cde725be-0936-40f6-9e57-e1d7d0710f83
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Errore del compilatore C3095
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

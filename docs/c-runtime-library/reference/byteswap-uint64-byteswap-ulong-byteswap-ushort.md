@@ -1,8 +1,7 @@
 ---
 title: "_byteswap_uint64, _byteswap_ulong, _byteswap_ushort | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -35,7 +34,6 @@ f1_keywords:
   - "byteswap_ushort"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_byteswap_uint64 (funzione)"
   - "_byteswap_ulong (funzione)"
@@ -48,10 +46,10 @@ helpviewer_keywords:
   - "scambio di byte"
 ms.assetid: 83bda211-f02f-4cf0-8a78-d6de1f175970
 caps.latest.revision: 14
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # _byteswap_uint64, _byteswap_ulong, _byteswap_ushort
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

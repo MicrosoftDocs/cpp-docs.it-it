@@ -1,8 +1,7 @@
 ---
 title: "CMFCRibbonPanel Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "CMFCRibbonPanel class"
 ms.assetid: 51d70749-1140-4386-b103-f14082049ba6
 caps.latest.revision: 34
-caps.handback.revision: 23
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 36
 ---
 # CMFCRibbonPanel Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

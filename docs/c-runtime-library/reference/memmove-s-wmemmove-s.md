@@ -1,8 +1,7 @@
 ---
 title: "memmove_s, wmemmove_s | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -30,16 +29,15 @@ f1_keywords:
   - "memmove_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "memmove_s (funzione)"
   - "wmemmove_s (funzione)"
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
 caps.latest.revision: 26
-caps.handback.revision: 26
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # memmove_s, wmemmove_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2784 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2784"
 ms.assetid: 3d761fe2-881c-48bd-afae-e2e714e20473
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Errore del compilatore C2784
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

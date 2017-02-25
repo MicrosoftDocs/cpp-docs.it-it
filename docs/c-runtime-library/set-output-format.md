@@ -1,8 +1,7 @@
 ---
 title: "_set_output_format | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,7 +24,6 @@ f1_keywords:
   - "_set_output_format"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_set_output_format (funzione)"
   - "_TWO_DIGIT_EXPONENT (costante)"
@@ -34,10 +32,10 @@ helpviewer_keywords:
   - "TWO_DIGIT_EXPONENT (costante)"
 ms.assetid: 1cb48df8-44b4-4400-bd27-287831d6b3ff
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # _set_output_format
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3869 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3869"
 ms.assetid: 85b2ad72-95c1-4ed6-9761-6ef66c3802b7
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # Errore del compilatore C3869
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

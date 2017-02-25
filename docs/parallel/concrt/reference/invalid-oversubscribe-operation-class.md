@@ -1,8 +1,7 @@
 ---
 title: "Classe invalid_oversubscribe_operation | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "invalid_oversubscribe_operation (classe)"
 ms.assetid: 0a9c5f08-d5e6-4ad0-90a9-517472b3ac28
 caps.latest.revision: 19
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # Classe invalid_oversubscribe_operation
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Changing the Properties of a String | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "strings [C++], properties"
 ms.assetid: 0a220434-f444-4405-9a64-d28d6b965687
 caps.latest.revision: 11
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Changing the Properties of a String
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

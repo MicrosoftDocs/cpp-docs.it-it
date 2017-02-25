@@ -1,8 +1,7 @@
 ---
 title: "PROC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "PROC directive"
 ms.assetid: ee5bb6b6-fa15-4d73-b0cf-e650178539a9
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # PROC
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

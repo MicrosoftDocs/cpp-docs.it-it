@@ -1,8 +1,7 @@
 ---
 title: "multiset::lower_bound (STL/CLR) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "lower_bound (membro) [STL/CLR]"
 ms.assetid: 5e3d1ba0-8b03-436e-b502-dbdb764f452b
 caps.latest.revision: 14
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # multiset::lower_bound (STL/CLR)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

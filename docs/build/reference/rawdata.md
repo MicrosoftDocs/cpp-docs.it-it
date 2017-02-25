@@ -1,8 +1,7 @@
 ---
 title: "/RAWDATA | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "-RAWDATA (opzione dumpbin)"
 ms.assetid: 41cba845-5e1f-415e-9fe4-604a52235983
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # /RAWDATA
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

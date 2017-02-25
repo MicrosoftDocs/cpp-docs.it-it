@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livello 1) C4342 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4342"
 ms.assetid: 47d4d5ab-069f-4cdc-98c3-10d649577a37
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Avviso del compilatore (livello 1) C4342
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

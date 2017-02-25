@@ -1,8 +1,7 @@
 ---
 title: "Utilizzo degli operatori di inserimento e controllo del formato | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "operatori di inserimento"
 ms.assetid: cdefe986-6548-4cd1-8a67-b431d7d36a1c
 caps.latest.revision: 8
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Utilizzo degli operatori di inserimento e controllo del formato
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

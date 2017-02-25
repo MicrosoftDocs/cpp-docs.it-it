@@ -1,8 +1,7 @@
 ---
 title: "Classe priority_queue | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "priority_queue (classe)"
 ms.assetid: 69fca9cc-a449-4be4-97b7-02ca5db9cbb2
 caps.latest.revision: 25
-caps.handback.revision: 25
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # Classe priority_queue
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

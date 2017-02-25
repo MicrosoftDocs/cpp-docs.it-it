@@ -1,8 +1,7 @@
 ---
 title: "SDI e MDI | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "Single Document Interface (SDI), applicazioni"
 ms.assetid: bb7239d9-4759-4f63-bfff-44a04b48c067
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # SDI e MDI
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

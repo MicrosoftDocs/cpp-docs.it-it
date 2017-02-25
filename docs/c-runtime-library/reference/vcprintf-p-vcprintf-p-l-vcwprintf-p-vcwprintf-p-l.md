@@ -1,8 +1,7 @@
 ---
 title: "_vcprintf_p, _vcprintf_p_l, _vcwprintf_p, _vcwprintf_p_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -37,7 +36,6 @@ f1_keywords:
   - "_vcwprintf_p_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_vcprintf_p (funzione)"
   - "_vcprintf_p_l (funzione)"
@@ -53,10 +51,10 @@ helpviewer_keywords:
   - "vtcprintf_p_l (funzione)"
 ms.assetid: 611024cc-90e7-41db-8e85-145ca95012b1
 caps.latest.revision: 20
-caps.handback.revision: 18
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # _vcprintf_p, _vcprintf_p_l, _vcwprintf_p, _vcwprintf_p_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

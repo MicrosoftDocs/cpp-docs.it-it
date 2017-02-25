@@ -1,8 +1,7 @@
 ---
 title: "CStringRefElementTraits Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "CStringRefElementTraits class"
 ms.assetid: cc15062d-5627-46cc-ac2b-1744afdc2dbd
 caps.latest.revision: 19
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # CStringRefElementTraits Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

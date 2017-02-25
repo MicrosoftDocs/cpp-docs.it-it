@@ -1,8 +1,7 @@
 ---
 title: "Using Replaceable Parameters (The Registrar&#39;s Preprocessor) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "%MODULE%"
 ms.assetid: 0b376994-84a6-4967-8d97-8c01dfc94efe
 caps.latest.revision: 12
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Using Replaceable Parameters (The Registrar&#39;s Preprocessor)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

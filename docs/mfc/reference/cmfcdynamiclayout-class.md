@@ -1,8 +1,7 @@
 ---
 title: "Classe CMFCDynamicLayout | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: c2df2976-f049-47fc-9cf0-abe3e01948bc
 caps.latest.revision: 16
-caps.handback.revision: 3
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # Classe CMFCDynamicLayout
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

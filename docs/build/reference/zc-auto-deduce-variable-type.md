@@ -1,8 +1,7 @@
 ---
 title: "/Zc:auto (deduzione del tipo di variabile) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "-Zc (opzioni del compilatore) (C++)"
 ms.assetid: 5f5bc102-44c3-4688-bbe1-080594dcee5c
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # /Zc:auto (deduzione del tipo di variabile)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

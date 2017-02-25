@@ -1,8 +1,7 @@
 ---
 title: "Confronto tra caratteri | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "MBCS [C++], caratteri (confronto)"
 ms.assetid: 18846e44-3e6e-40c4-9b42-3153fb15db20
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "ghogen"
 ms.author: "ghogen"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Confronto tra caratteri
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

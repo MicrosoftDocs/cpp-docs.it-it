@@ -1,8 +1,7 @@
 ---
 title: "Operatore ComPtr::operator Microsoft::WRL::Details::BoolType | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: cfba6521-fb30-4fb8-afb2-cfab1cb5e0b8
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Operatore ComPtr::operator Microsoft::WRL::Details::BoolType
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "isblank, iswblank, _isblank_l, _iswblank_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -38,10 +37,10 @@ dev_langs:
   - "C++"
 ms.assetid: 33ce96c0-f387-411a-8283-c3d2a69e56bd
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # isblank, iswblank, _isblank_l, _iswblank_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

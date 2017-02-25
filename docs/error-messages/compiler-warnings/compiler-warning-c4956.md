@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore C4956 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4956"
 ms.assetid: 9154f2d1-d49f-4e07-90d2-0e9bc028011a
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Avviso del compilatore C4956
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

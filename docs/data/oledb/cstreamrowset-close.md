@@ -1,8 +1,7 @@
 ---
 title: "CStreamRowset::Close | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "Close (metodo)"
 ms.assetid: 629b441d-978d-408c-8ef5-3a48125d8059
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # CStreamRowset::Close
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Utilizzo del controllo Toolbar | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "barre degli strumenti [C++], accesso a un controllo comune"
 ms.assetid: b19409d5-3831-42c7-80ae-195c49dc9085
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Utilizzo del controllo Toolbar
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

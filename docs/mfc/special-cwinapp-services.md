@@ -1,8 +1,7 @@
 ---
 title: "Servizi CWinApp speciali | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -41,10 +40,10 @@ helpviewer_keywords:
   - "Shell, registrazione dei tipi di file"
 ms.assetid: 0480cd01-f629-4249-b221-93432d95b431
 caps.latest.revision: 10
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Servizi CWinApp speciali
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

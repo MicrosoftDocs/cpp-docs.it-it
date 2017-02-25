@@ -1,8 +1,7 @@
 ---
 title: "Dipendenti dedotti e regole | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "regole, dedotti"
 ms.assetid: 9381e74a-53d9-445c-836d-0ff7ef6112d9
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Dipendenti dedotti e regole
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

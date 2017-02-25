@@ -1,8 +1,7 @@
 ---
 title: "strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -33,7 +32,6 @@ f1_keywords:
   - "wcsxfrm"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_strxfrm_l (funzione)"
   - "_tcsxfrm (funzione)"
@@ -47,10 +45,10 @@ helpviewer_keywords:
   - "wcsxfrm_l (funzione)"
 ms.assetid: 6ba8e1f6-4484-49aa-83b8-bc2373187d9e
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

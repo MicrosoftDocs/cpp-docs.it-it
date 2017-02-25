@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livello 3) C4191 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4191"
 ms.assetid: 576d3bc6-95b7-448a-af31-5d798452df09
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Avviso del compilatore (livello 3) C4191
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

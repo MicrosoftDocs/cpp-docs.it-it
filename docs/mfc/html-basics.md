@@ -1,8 +1,7 @@
 ---
 title: "Nozioni fondamentali su HTML | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "HTML, informazioni su HTML"
 ms.assetid: aab8ea9f-12d4-4bdd-a585-ac3124081a2a
 caps.latest.revision: 7
-caps.handback.revision: 3
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # Nozioni fondamentali su HTML
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

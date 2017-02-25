@@ -1,8 +1,7 @@
 ---
 title: "Errore degli strumenti del linker LNK2031 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "LNK2031"
 ms.assetid: 18ed4b6e-3e75-443c-bbd8-2f6030dc89ee
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Errore degli strumenti del linker LNK2031
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

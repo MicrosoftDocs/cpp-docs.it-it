@@ -1,8 +1,7 @@
 ---
 title: "Classe transformer | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "transformer (classe)"
 ms.assetid: eea71925-7043-4a92-bfd4-dbc0ece5d081
 caps.latest.revision: 22
-caps.handback.revision: 16
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # Classe transformer
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

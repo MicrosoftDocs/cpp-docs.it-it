@@ -1,8 +1,7 @@
 ---
 title: "Pagine delle propriet&#224; HLSL: Avanzate | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ dev_langs:
   - "C++"
 ms.assetid: a4f05aed-2c0e-4e7d-b7a4-bc2f228112c5
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "BrianPeek"
 ms.author: "brpeek"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Pagine delle propriet&#224; HLSL: Avanzate
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

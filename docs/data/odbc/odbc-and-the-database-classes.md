@@ -1,8 +1,7 @@
 ---
 title: "ODBC e classi di database | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "classi ODBC [C++], classi di database MFC"
 ms.assetid: b166f82d-6f85-4556-aac8-fb851235d22c
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # ODBC e classi di database
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

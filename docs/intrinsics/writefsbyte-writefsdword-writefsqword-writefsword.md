@@ -1,8 +1,7 @@
 ---
 title: "__writefsbyte, __writefsdword, __writefsqword, __writefsword | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,10 +26,10 @@ helpviewer_keywords:
   - "writefsword (funzione intrinseca)"
 ms.assetid: 23ac6e8e-bc91-4e90-a4c6-da02993637ad
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # __writefsbyte, __writefsdword, __writefsqword, __writefsword
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

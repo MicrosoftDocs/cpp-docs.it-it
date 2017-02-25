@@ -1,8 +1,7 @@
 ---
 title: "Convenzioni di iostream | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "libreria C++ standard, iostream"
 ms.assetid: 9fe5ded0-37a1-48d1-9671-c81ffc4760ad
 caps.latest.revision: 10
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Convenzioni di iostream
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

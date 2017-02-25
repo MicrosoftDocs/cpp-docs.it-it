@@ -1,8 +1,7 @@
 ---
 title: "Operators Reference | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "operators [MASM]"
 ms.assetid: c069cab7-d6b0-4f82-a6ce-0ca3fc7e6428
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Operators Reference
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

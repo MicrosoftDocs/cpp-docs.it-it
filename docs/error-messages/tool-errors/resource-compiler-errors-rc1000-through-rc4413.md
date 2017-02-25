@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore di risorses RC1000 through RC4413 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 0819f955-0561-491d-af3d-2453f4e2d035
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Errore del compilatore di risorses RC1000 through RC4413
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore di risorse RC2167 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "RC2167"
 ms.assetid: 9b24a8eb-367b-4ff6-8266-b0c215f32d6a
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Errore del compilatore di risorse RC2167
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

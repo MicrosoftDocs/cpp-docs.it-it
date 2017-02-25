@@ -1,8 +1,7 @@
 ---
 title: "SafeGreaterThanEquals | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "SafeGreaterThanEquals (funzione)"
 ms.assetid: 43312fa9-d925-4f9f-a352-a190c02b3005
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "ghogen"
 ms.author: "ghogen"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # SafeGreaterThanEquals
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

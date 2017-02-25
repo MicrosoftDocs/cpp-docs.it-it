@@ -1,8 +1,7 @@
 ---
 title: "float_control | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,16 +13,15 @@ f1_keywords:
   - "float_control_CPP"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "float_control (pragma)"
   - "pragma, float_control"
 ms.assetid: 4f4ba5cf-3707-413e-927d-5ecdbc0a9a43
 caps.latest.revision: 11
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # float_control
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "_get_osfhandle | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,7 +28,6 @@ f1_keywords:
   - "_get_osfhandle"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "sistemi operativi, recupero di handle di file"
   - "get_osfhandle (funzione)"
@@ -37,10 +35,10 @@ helpviewer_keywords:
   - "handle di file [C++], sistema operativo"
 ms.assetid: 0bdd728a-4fd8-410b-8c9f-01a121135196
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # _get_osfhandle
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "SafeInt::SafeInt | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "SafeInt (classe), costruttore"
 ms.assetid: 39e6f632-a396-40e6-9ece-cc3d4c5a78ef
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "ghogen"
 ms.author: "ghogen"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # SafeInt::SafeInt
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

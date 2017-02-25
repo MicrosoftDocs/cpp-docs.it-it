@@ -1,8 +1,7 @@
 ---
 title: "Client di automazione | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "librerie dei tipi, client di automazione"
 ms.assetid: 84e34a79-06f6-4752-a33b-ae0ede1d8ecf
 caps.latest.revision: 14
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Client di automazione
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

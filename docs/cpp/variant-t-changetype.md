@@ -1,8 +1,7 @@
 ---
 title: "_variant_t::ChangeType | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "VARIANT (oggetto), ChangeType"
 ms.assetid: 829d2eeb-3338-4a88-9dce-0ca145f47aac
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # _variant_t::ChangeType
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

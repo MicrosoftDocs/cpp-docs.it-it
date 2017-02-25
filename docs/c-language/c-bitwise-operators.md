@@ -1,8 +1,7 @@
 ---
 title: "Operatori bit per bit C | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "& (operatore), bit per bit (operatori)"
   - "^ (operatore)"
@@ -24,10 +22,10 @@ helpviewer_keywords:
   - "operatori [C], bit per bit"
 ms.assetid: e22127b1-9a2d-4876-b01d-c8f72cec3317
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Operatori bit per bit C
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

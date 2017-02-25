@@ -1,8 +1,7 @@
 ---
 title: "Fmax, fmaxf, fmaxl | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -35,7 +34,6 @@ f1_keywords:
   - "math/fmaxf"
   - "math/fmaxl"
 dev_langs: 
-  - "C"
   - "C++"
 helpviewer_keywords: 
   - "fmax (funzione)"
@@ -43,10 +41,10 @@ helpviewer_keywords:
   - "funzione fmaxl"
 ms.assetid: a773ccf7-495e-4a9a-8c6d-dfb53e341e35
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Fmax, fmaxf, fmaxl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

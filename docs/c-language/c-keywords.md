@@ -1,8 +1,7 @@
 ---
 title: "Parole chiave C | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,17 +10,16 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "parole chiave [C]"
   - "parole chiave specifiche di Microsoft"
   - "ridefinizione di parole chiave"
 ms.assetid: 2d932335-97bf-45cd-b367-4ae00db0ff42
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Parole chiave C
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

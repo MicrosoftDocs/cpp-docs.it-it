@@ -1,8 +1,7 @@
 ---
 title: "Attributed Programming Concepts | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "programming [C++], attributed programming"
 ms.assetid: 563e7e7c-65e1-44f4-b0b2-da04a6c1bc9e
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Attributed Programming Concepts
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

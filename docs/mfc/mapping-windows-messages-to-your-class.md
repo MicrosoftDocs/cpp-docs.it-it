@@ -1,8 +1,7 @@
 ---
 title: "Mapping di messaggi Windows a classi | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "messaggi Windows [C++], mapping in classi di finestre di dialogo"
 ms.assetid: a4c6fd1f-1d33-47c9-baa0-001755746d6d
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Mapping di messaggi Windows a classi
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

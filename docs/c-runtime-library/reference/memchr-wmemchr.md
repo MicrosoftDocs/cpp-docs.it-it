@@ -1,8 +1,7 @@
 ---
 title: "memchr, wmemchr | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,16 +28,15 @@ f1_keywords:
   - "wmemchr"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "memchr (funzione)"
   - "wmemchr (funzione)"
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
 caps.latest.revision: 19
-caps.handback.revision: 19
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # memchr, wmemchr
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

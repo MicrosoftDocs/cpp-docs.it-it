@@ -1,8 +1,7 @@
 ---
 title: "/Zc (Conformit&#224;) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "-Zc (opzioni del compilatore) [C++]"
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # /Zc (Conformit&#224;)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

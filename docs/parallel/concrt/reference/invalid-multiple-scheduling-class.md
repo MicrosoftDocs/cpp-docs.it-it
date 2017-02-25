@@ -1,8 +1,7 @@
 ---
 title: "Classe invalid_multiple_scheduling | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "invalid_multiple_scheduling (classe)"
 ms.assetid: e9a47cb7-a778-4df7-92b0-3752119fd4c7
 caps.latest.revision: 19
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # Classe invalid_multiple_scheduling
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

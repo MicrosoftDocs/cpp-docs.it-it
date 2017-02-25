@@ -1,8 +1,7 @@
 ---
 title: "_aligned_msize | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -34,10 +33,10 @@ helpviewer_keywords:
   - "aligned_msize (funzione)"
 ms.assetid: 10995edc-2110-4212-9ca9-5e0220a464f4
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # _aligned_msize
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

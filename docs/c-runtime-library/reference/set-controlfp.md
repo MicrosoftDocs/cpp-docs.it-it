@@ -1,8 +1,7 @@
 ---
 title: "_set_controlfp | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,17 +28,16 @@ f1_keywords:
   - "_set_controlfp"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_set_controlfp (funzione)"
   - "funzioni a virgola mobile, impostazione della parola di controllo"
   - "set_controlfp (funzione)"
 ms.assetid: e0689d50-f68a-4028-a9c1-fb23eedee4ad
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # _set_controlfp
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

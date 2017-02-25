@@ -1,8 +1,7 @@
 ---
 title: "Metodo ComPtr::GetAddressOf | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "GetAddressOf (metodo)"
 ms.assetid: 972a41d0-c2ef-4ae3-b2cd-77cc45156ac9
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Metodo ComPtr::GetAddressOf
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "ML Error Messages | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "MASM (Microsoft Macro Assembler), ML error messages"
 ms.assetid: e7e164b3-6d65-4b5b-8925-bfbebc043523
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # ML Error Messages
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "CMFCVisualManagerOffice2003 Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "CMFCVisualManagerOffice2003 class"
 ms.assetid: 115482cd-e349-450a-8dc4-c6023d092aab
 caps.latest.revision: 31
-caps.handback.revision: 19
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 33
 ---
 # CMFCVisualManagerOffice2003 Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

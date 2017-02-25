@@ -1,8 +1,7 @@
 ---
 title: "Utilizzo di linguaggio assembly in blocchi __asm | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "linguaggio dell'assembly [C++], funzionalità"
 ms.assetid: ad699356-1d16-4984-871f-c5fd7797c1fb
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Utilizzo di linguaggio assembly in blocchi __asm
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

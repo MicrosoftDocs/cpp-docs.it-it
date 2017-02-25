@@ -1,8 +1,7 @@
 ---
 title: "Avviso di compilazione progetto PRJ0018 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "PRJ0018"
 ms.assetid: 1a3d9e40-6a35-4a74-b6ba-8079f7a82217
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Avviso di compilazione progetto PRJ0018
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

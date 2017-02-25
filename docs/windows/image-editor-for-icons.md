@@ -1,8 +1,7 @@
 ---
 title: "Image Editor for Icons | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "resource editors, Image editor"
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
 caps.latest.revision: 17
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Image Editor for Icons
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

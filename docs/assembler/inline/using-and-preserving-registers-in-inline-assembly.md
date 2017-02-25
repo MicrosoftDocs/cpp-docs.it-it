@@ -1,8 +1,7 @@
 ---
 title: "Utilizzo e conservazione di registri nell&#39;assembly inline | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "registri, assembly inline"
 ms.assetid: dbcd7360-6f3e-4b22-9ee2-9f65ca6f2543
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Utilizzo e conservazione di registri nell&#39;assembly inline
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

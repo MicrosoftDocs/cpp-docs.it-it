@@ -1,8 +1,7 @@
 ---
 title: "_set_new_mode | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,17 +28,16 @@ f1_keywords:
   - "_set_new_mode"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_set_new_mode (funzione)"
   - "modalità di gestione"
   - "set_new_mode (funzione)"
 ms.assetid: 4d14039a-e54e-4689-8c70-74a4b9834768
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # _set_new_mode
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Classe alignment_of | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "alignment_of"
 ms.assetid: 4141c59a-f94e-41c4-93fd-9ea578b27387
 caps.latest.revision: 22
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # Classe alignment_of
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

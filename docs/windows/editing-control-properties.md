@@ -1,8 +1,7 @@
 ---
 title: "Editing Control Properties | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,17 +10,16 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C++"
 helpviewer_keywords: 
   - "controls [C++], undoing changes"
   - "controls [C++], editing properties"
   - "dialog box controls, editing properties"
 ms.assetid: 9bdae21d-6dec-4344-a197-2ca4fc46d040
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Editing Control Properties
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

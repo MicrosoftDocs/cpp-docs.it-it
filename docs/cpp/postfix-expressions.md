@@ -1,8 +1,7 @@
 ---
 title: "Espressioni in forma suffissa | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "espressioni di suffissi"
 ms.assetid: 7ac62a57-06df-422f-b012-a75b37d7cb9b
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Espressioni in forma suffissa
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

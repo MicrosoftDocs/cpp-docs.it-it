@@ -1,8 +1,7 @@
 ---
 title: "/vd (Disabilita spostamenti costruttori) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,10 +26,10 @@ helpviewer_keywords:
   - "vtordisp (campi)"
 ms.assetid: 93258964-14d7-4b1c-9cbc-d6f4d74eab69
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # /vd (Disabilita spostamenti costruttori)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

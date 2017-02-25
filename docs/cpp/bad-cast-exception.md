@@ -1,8 +1,7 @@
 ---
 title: "Eccezione bad_cast | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "eccezioni, bad_cast"
 ms.assetid: 31eae1e7-d8d5-40a0-9fef-64a6a4fc9021
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Eccezione bad_cast
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

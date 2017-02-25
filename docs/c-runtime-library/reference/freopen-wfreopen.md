@@ -1,8 +1,7 @@
 ---
 title: "freopen, _wfreopen | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,7 +30,6 @@ f1_keywords:
   - "freopen"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_tfreopen (funzione)"
   - "_wfreopen (funzione)"
@@ -41,10 +39,10 @@ helpviewer_keywords:
   - "wfreopen (funzione)"
 ms.assetid: de4b73f8-1043-4d62-98ee-30d2022da885
 caps.latest.revision: 27
-caps.handback.revision: 25
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 27
 ---
 # freopen, _wfreopen
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Classe CD2DLayer | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "CD2DLayer (classe)"
 ms.assetid: 2f96378e-66bb-40d1-9661-6afe324de3c1
 caps.latest.revision: 18
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # Classe CD2DLayer
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

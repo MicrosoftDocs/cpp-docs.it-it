@@ -1,8 +1,7 @@
 ---
 title: "TN063: debug di DLL estensione Internet | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "TN063"
 ms.assetid: 7012d592-9d2f-491a-b417-48e5c2a7680f
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # TN063: debug di DLL estensione Internet
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

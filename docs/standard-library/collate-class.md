@@ -1,8 +1,7 @@
 ---
 title: "Classe collate | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "collate (classe)"
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
 caps.latest.revision: 18
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # Classe collate
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

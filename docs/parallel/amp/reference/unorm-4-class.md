@@ -1,8 +1,7 @@
 ---
 title: "Classe unorm_4 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -279,10 +278,10 @@ dev_langs:
   - "C++"
 ms.assetid: dd216a9d-95f7-4978-8e78-6cb9c781a7e9
 caps.latest.revision: 10
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Classe unorm_4
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

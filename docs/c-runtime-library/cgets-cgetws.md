@@ -1,8 +1,7 @@
 ---
 title: "_cgets, _cgetws | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,7 +26,6 @@ f1_keywords:
   - "_cgets"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_cgets (funzione)"
   - "_cgetws (funzione)"
@@ -37,10 +35,10 @@ helpviewer_keywords:
   - "stringhe [C++], recupero dalla console"
 ms.assetid: 4d5e134a-58c3-4f62-befd-5d235b0212f4
 caps.latest.revision: 32
-caps.handback.revision: 32
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 32
 ---
 # _cgets, _cgetws
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

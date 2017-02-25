@@ -1,8 +1,7 @@
 ---
 title: "nullptr | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "nullptr (parola chiave) [C++]"
 ms.assetid: e9d80ea6-2506-4eb5-b47b-2349df085832
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # nullptr
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

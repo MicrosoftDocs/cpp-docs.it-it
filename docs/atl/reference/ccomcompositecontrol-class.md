@@ -1,8 +1,7 @@
 ---
 title: "CComCompositeControl Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "controlli composti, CComCompositeControl class"
 ms.assetid: 1304b931-27e8-4fbc-be8e-bb226ad887fb
 caps.latest.revision: 21
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # CComCompositeControl Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

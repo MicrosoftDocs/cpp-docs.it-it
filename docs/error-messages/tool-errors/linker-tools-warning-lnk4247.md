@@ -1,8 +1,7 @@
 ---
 title: "Avviso degli strumenti del linker LNK4247 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "LNK4247"
 ms.assetid: 085d7fdf-9eaf-4641-8473-6eaadd073c7b
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Avviso degli strumenti del linker LNK4247
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

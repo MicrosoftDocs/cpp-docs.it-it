@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3459 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3459"
 ms.assetid: 3d290a20-d313-4c07-9bd8-c5c159cb169f
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Errore del compilatore C3459
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

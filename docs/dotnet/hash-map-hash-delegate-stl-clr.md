@@ -1,8 +1,7 @@
 ---
 title: "hash_map::hash_delegate (STL/CLR) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "hash_delegate (membro) [STL/CLR]"
 ms.assetid: ae451fbe-a10c-457f-9b54-94dd9d93e8c4
 caps.latest.revision: 16
-caps.handback.revision: 14
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # hash_map::hash_delegate (STL/CLR)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

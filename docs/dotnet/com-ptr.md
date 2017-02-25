@@ -1,8 +1,7 @@
 ---
 title: "com::ptr | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "com::ptr"
 ms.assetid: ee302e3c-8fed-4875-a372-2e55003718d3
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # com::ptr
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

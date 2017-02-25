@@ -1,8 +1,7 @@
 ---
 title: "Procedura dettagliata: Uso della classe join per impedire un deadlock | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "join (classe), esempio"
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
 caps.latest.revision: 16
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Procedura dettagliata: Uso della classe join per impedire un deadlock
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

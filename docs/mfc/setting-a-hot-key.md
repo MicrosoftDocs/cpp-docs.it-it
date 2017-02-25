@@ -1,8 +1,7 @@
 ---
 title: "Impostazione di un tasto di scelta rapida | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "tasti di scelta rapida [C++], tasti di scelta"
 ms.assetid: 6f3bc141-e346-4dce-9ca7-3e6b2c453f3f
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Impostazione di un tasto di scelta rapida
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

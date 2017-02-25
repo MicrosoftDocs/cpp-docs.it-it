@@ -1,8 +1,7 @@
 ---
 title: "ATL Archetypes | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "ATL, archetypes"
 ms.assetid: 809fb0af-c0f4-4cc0-b5bc-afe3de5d9722
 caps.latest.revision: 9
-caps.handback.revision: 3
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # ATL Archetypes
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

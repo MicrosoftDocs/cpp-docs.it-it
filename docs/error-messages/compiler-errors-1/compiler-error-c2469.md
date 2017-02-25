@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2469 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2469"
 ms.assetid: 3814bdff-581a-4d3e-8b47-8de6887cea69
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Errore del compilatore C2469
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

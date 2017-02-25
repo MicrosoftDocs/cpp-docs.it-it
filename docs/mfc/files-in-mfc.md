@@ -1,8 +1,7 @@
 ---
 title: "File in MFC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "serializzazione [C++], MFC (file)"
 ms.assetid: ae25e2c5-2859-4679-ab97-438824e93ce1
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # File in MFC
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Classe basic_regex | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "basic_regex (classe) [TR1]"
 ms.assetid: 8a18c6b4-f22a-4cfd-bc16-b4267867ebc3
 caps.latest.revision: 21
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # Classe basic_regex
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

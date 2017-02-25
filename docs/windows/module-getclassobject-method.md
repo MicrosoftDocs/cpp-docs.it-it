@@ -1,8 +1,7 @@
 ---
 title: "Metodo Module::GetClassObject | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "GetClassObject (metodo)"
 ms.assetid: 95b0de1b-f728-4f96-9f44-f6ea71ce56e4
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Metodo Module::GetClassObject
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

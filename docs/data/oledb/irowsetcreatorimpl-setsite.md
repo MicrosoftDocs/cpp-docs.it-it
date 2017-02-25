@@ -1,8 +1,7 @@
 ---
 title: "IRowsetCreatorImpl::SetSite | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "SetSite (metodo)"
 ms.assetid: e92e63d5-93e4-4ee0-9ef7-bb6583cc8091
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # IRowsetCreatorImpl::SetSite
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

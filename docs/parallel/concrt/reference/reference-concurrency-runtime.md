@@ -1,8 +1,7 @@
 ---
 title: "Riferimento (runtime di concorrenza) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -463,11 +462,11 @@ helpviewer_keywords:
   - "HRESULT (typedef)"
   - "LPSECURITY_ATTRIBUTES (typedef)"
 ms.assetid: a057c776-7caa-4605-8f33-9815cf6f9b27
-caps.latest.revision: 16
-caps.handback.revision: 10
+caps.latest.revision: 15
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # Riferimento (runtime di concorrenza)
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Finding Binary Data | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "ASCII characters, finding in binary data"
 ms.assetid: 1675b19c-66e3-4040-82c2-5dde4b1793f8
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Finding Binary Data
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

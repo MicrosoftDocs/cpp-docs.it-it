@@ -1,8 +1,7 @@
 ---
 title: "Adding Commands to a Menu | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "menu items"
 ms.assetid: 1523a755-0ab5-42f8-9e98-bb9881564431
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Adding Commands to a Menu
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

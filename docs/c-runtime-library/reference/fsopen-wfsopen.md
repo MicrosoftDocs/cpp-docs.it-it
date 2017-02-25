@@ -1,8 +1,7 @@
 ---
 title: "_fsopen, _wfsopen | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -34,7 +33,6 @@ f1_keywords:
   - "_fsopen"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_fsopen (funzione)"
   - "_tfsopen (funzione)"
@@ -47,10 +45,10 @@ helpviewer_keywords:
   - "wfsopen (funzione)"
 ms.assetid: 5e4502ab-48a9-4bee-a263-ebac8d638dec
 caps.latest.revision: 20
-caps.handback.revision: 18
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # _fsopen, _wfsopen
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

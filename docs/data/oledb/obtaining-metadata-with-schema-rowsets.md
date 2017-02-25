@@ -1,8 +1,7 @@
 ---
 title: "Recupero di metadati con i rowset dello schema | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "rowset schema, recupero di metadati del provider OLE DB"
 ms.assetid: 6b448461-82fb-4acf-816b-3cbb0ca1d186
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Recupero di metadati con i rowset dello schema
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

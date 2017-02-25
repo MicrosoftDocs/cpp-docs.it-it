@@ -1,8 +1,7 @@
 ---
 title: "CRowset::GetDataHere | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "GetDataHere (metodo)"
 ms.assetid: 2fe2a987-1c4c-4299-876e-0591caf63af4
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # CRowset::GetDataHere
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Multithreading: creazione di thread dell&#39;interfaccia utente | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "interfaccia utente (thread) [C++]"
 ms.assetid: 446925c1-db59-46ea-ae5b-d5ae5d5b91d8
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Multithreading: creazione di thread dell&#39;interfaccia utente
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

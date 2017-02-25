@@ -1,8 +1,7 @@
 ---
 title: "CMFCPropertyGridFontProperty Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "CMFCPropertyGridFontProperty::OnClickButton method"
 ms.assetid: 83693f33-bbd3-4fcb-a9ad-fa79fcf2ca24
 caps.latest.revision: 23
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # CMFCPropertyGridFontProperty Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

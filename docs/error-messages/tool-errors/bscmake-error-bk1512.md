@@ -1,8 +1,7 @@
 ---
 title: "Errore BK1512 di BSCMAKE | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "BK1512"
 ms.assetid: 0a626ff3-63db-4797-abe4-31545ce2c2c1
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Errore BK1512 di BSCMAKE
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Pagine delle propriet&#224; COM ATL | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "proprietà (pagine), COM"
 ms.assetid: 663c7caa-2e5e-4b5c-b8ea-fd434ceb1654
 caps.latest.revision: 13
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Pagine delle propriet&#224; COM ATL
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

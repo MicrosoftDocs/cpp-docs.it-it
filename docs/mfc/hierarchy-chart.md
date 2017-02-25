@@ -1,8 +1,7 @@
 ---
 title: "Grafico delle gerarchie | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "modelli a oggetti, MFC"
 ms.assetid: 19d70341-e391-4a72-94c6-35755ce975d4
 caps.latest.revision: 15
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Grafico delle gerarchie
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

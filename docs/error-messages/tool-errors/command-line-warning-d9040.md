@@ -1,8 +1,7 @@
 ---
 title: "Avviso della riga di comando D9040 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "D9040"
 ms.assetid: 415e7f04-c1bd-4ac1-924a-03efa4645140
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Avviso della riga di comando D9040
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

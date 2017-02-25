@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2316 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2316"
 ms.assetid: 9ad08eb5-060b-4eb0-8d66-0dc134f7bf67
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Errore del compilatore C2316
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

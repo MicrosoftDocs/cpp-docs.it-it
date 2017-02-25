@@ -1,8 +1,7 @@
 ---
 title: "Impostazione delle variabili di percorso e di ambiente per la compilazione dalla riga di comando | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,10 +27,10 @@ helpviewer_keywords:
   - "VCVARS32.bat (file)"
 ms.assetid: 99389528-deb5-43b9-b99a-03c8773ebaf4
 caps.latest.revision: 17
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Impostazione delle variabili di percorso e di ambiente per la compilazione dalla riga di comando
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

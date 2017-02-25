@@ -1,8 +1,7 @@
 ---
 title: "/Fe (Specifica file EXE) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "rinomina file (opzione del compilatore) [C++]"
 ms.assetid: 49f594fd-5e94-45fe-a1bf-7c9f2abb6437
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # /Fe (Specifica file EXE)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

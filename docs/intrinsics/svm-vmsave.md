@@ -1,8 +1,7 @@
 ---
 title: "__svm_vmsave | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "__svm_vmsave (funzione intrinseca)"
 ms.assetid: 617a60bd-8514-4ba1-8066-bcf4dd481030
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # __svm_vmsave
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

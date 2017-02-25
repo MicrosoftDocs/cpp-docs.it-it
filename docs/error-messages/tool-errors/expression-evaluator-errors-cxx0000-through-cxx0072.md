@@ -1,8 +1,7 @@
 ---
 title: "Errori dell&#39;analizzatore di espressioni da CXX0000 a CXX0072 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: a47a9866-7fb2-4b21-978c-2b77402c7105
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Errori dell&#39;analizzatore di espressioni da CXX0000 a CXX0072
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

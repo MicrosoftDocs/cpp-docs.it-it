@@ -1,8 +1,7 @@
 ---
 title: "&lt;ciso646&gt; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "ciso646 (intestazione)"
 ms.assetid: 9d570924-d299-4225-9a58-8c4c820f5903
 caps.latest.revision: 19
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # &lt;ciso646&gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

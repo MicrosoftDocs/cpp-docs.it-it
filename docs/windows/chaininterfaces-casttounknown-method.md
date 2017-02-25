@@ -1,8 +1,7 @@
 ---
 title: "Metodo ChainInterfaces::CastToUnknown | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "CastToUnknown (metodo)"
 ms.assetid: a6a58555-e5b0-4773-aba0-959d9d362c6b
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # Metodo ChainInterfaces::CastToUnknown
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

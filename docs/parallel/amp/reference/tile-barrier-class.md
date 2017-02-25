@@ -1,8 +1,7 @@
 ---
 title: "Classe tile_barrier | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "tile_barrier (classe)"
 ms.assetid: b4ccdccb-0032-4e11-b7bd-dc9d43445dee
 caps.latest.revision: 17
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # Classe tile_barrier
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

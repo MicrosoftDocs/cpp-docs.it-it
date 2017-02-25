@@ -1,8 +1,7 @@
 ---
 title: "putchar, putwchar | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,7 +30,6 @@ f1_keywords:
   - "_puttchar"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_puttchar (funzione)"
   - "caratteri, scrittura"
@@ -40,10 +38,10 @@ helpviewer_keywords:
   - "output standard, scrittura"
 ms.assetid: 93657c7f-cca1-4032-8e3a-cd6ab6193748
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # putchar, putwchar
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

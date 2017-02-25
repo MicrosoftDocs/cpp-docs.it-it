@@ -1,8 +1,7 @@
 ---
 title: "Classe bad_weak_ptr | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "bad_weak_ptr (classe) [TR1]"
 ms.assetid: a09336d5-7237-4480-ab6b-3787e0e6025e
 caps.latest.revision: 20
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # Classe bad_weak_ptr
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

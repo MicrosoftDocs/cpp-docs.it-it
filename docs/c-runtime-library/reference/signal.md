@@ -1,8 +1,7 @@
 ---
 title: "signal | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,15 +27,14 @@ f1_keywords:
   - "signal"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "signal (funzione)"
 ms.assetid: 094118de-d789-4063-b4f4-cffcc80bf29d
 caps.latest.revision: 26
-caps.handback.revision: 24
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # signal
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

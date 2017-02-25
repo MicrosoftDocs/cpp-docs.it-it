@@ -1,8 +1,7 @@
 ---
 title: "Classe regex_token_iterator | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "regex_token_iterator (classe) [TR1]"
 ms.assetid: a213ba48-8e4e-4b6b-871a-2637acf05f15
 caps.latest.revision: 15
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Classe regex_token_iterator
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

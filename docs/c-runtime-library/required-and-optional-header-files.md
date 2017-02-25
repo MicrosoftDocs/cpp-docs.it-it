@@ -1,8 +1,7 @@
 ---
 title: "File di intestazione obbligatori e facoltativi | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,16 +12,15 @@ f1_keywords:
   - "c.headers"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "file di intestazione, richiesti al runtime"
   - "file di inclusione, richiesti al runtime"
 ms.assetid: f64d0bf5-e2c3-4b42-97d0-443b3d901d9f
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # File di intestazione obbligatori e facoltativi
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

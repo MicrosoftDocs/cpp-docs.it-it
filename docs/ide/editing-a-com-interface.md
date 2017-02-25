@@ -1,8 +1,7 @@
 ---
 title: "Modifica di un&#39;interfaccia COM | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "proprietà [C++], aggiunta a interfacce COM"
 ms.assetid: 6c2909e0-af2d-4a37-bb39-ed372e6129cf
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Modifica di un&#39;interfaccia COM
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

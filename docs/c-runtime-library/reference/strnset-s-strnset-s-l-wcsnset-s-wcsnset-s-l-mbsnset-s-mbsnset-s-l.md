@@ -1,8 +1,7 @@
 ---
 title: "_strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -47,7 +46,6 @@ f1_keywords:
   - "wcsnset_s_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_mbsnset_s (funzione)"
   - "_mbsnset_s_l (funzione)"
@@ -66,10 +64,10 @@ helpviewer_keywords:
   - "wcsnset_s (funzione)"
 ms.assetid: 9cf1b321-b5cb-4469-b285-4c07cfbd8813
 caps.latest.revision: 27
-caps.handback.revision: 25
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 27
 ---
 # _strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

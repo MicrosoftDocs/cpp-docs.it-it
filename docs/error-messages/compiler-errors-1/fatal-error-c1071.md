@@ -1,8 +1,7 @@
 ---
 title: "Errore irreversibile C1071 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C1071"
 ms.assetid: 489f1786-370e-4ecd-af67-538fe6e5bd4e
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Errore irreversibile C1071
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

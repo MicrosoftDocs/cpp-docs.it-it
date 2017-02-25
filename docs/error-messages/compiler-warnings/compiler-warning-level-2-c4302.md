@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livello 2) C4302 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4302"
 ms.assetid: f5e1c939-e134-4cca-ba1e-9b15a81549ae
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Avviso del compilatore (livello 2) C4302
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

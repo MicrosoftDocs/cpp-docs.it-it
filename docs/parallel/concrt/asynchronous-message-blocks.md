@@ -1,8 +1,7 @@
 ---
 title: "Blocchi dei messaggi asincroni | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "join greedy [Runtime di concorrenza]"
 ms.assetid: 79c456c0-1692-480c-bb67-98f2434c1252
 caps.latest.revision: 36
-caps.handback.revision: 36
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 36
 ---
 # Blocchi dei messaggi asincroni
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

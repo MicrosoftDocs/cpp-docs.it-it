@@ -1,8 +1,7 @@
 ---
 title: "embedded_idl | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,15 +12,14 @@ f1_keywords:
   - "embedded_idl"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "embedded_idl (attributo)"
 ms.assetid: f1c1c2e8-3872-4172-8795-8d1288a20452
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # embedded_idl
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

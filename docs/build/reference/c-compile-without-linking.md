@@ -1,8 +1,7 @@
 ---
 title: "/c (Compila senza collegamenti) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "disattivazione di collegamenti"
 ms.assetid: 8017fc3d-e5dd-4668-a1f7-3120daa95d20
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # /c (Compila senza collegamenti)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

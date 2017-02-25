@@ -1,8 +1,7 @@
 ---
 title: "Costanti signal | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,7 +17,6 @@ f1_keywords:
   - "SIGSEGV"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "SIGABRT (costante)"
   - "SIGFPE (costante)"
@@ -29,10 +27,10 @@ helpviewer_keywords:
   - "SIGTERM (costante)"
 ms.assetid: a3b39281-dae7-4e44-8d68-e6a610c669dd
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Costanti signal
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

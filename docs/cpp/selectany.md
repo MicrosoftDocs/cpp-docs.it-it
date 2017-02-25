@@ -1,8 +1,7 @@
 ---
 title: "selectany | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "selectany __declspec (parola chiave)"
 ms.assetid: 9c353017-5a42-4f50-b741-bd13da1ce84d
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # selectany
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

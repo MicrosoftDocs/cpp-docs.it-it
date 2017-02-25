@@ -1,8 +1,7 @@
 ---
 title: "&lt;array&gt; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "array (intestazione) [TR1]"
 ms.assetid: 084147c1-e805-478e-8201-76846020f187
 caps.latest.revision: 21
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # &lt;array&gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

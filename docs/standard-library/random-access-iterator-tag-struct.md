@@ -1,8 +1,7 @@
 ---
 title: "Struct random_access_iterator_tag | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "random_access_iterator_tag (struct)"
 ms.assetid: 59f5b741-c5b4-459c-ad0a-3b67cddeea23
 caps.latest.revision: 23
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # Struct random_access_iterator_tag
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

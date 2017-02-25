@@ -1,8 +1,7 @@
 ---
 title: "wcstombs_s, _wcstombs_s_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -30,7 +29,6 @@ f1_keywords:
   - "_wcstombs_s_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "wcstombs_s (funzione)"
   - "conversione di stringhe, caratteri wide"
@@ -41,10 +39,10 @@ helpviewer_keywords:
   - "conversione di stringhe, stringhe di caratteri multibyte"
 ms.assetid: 105f2d33-221a-4f6d-864c-23c1865c42af
 caps.latest.revision: 31
-caps.handback.revision: 31
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 31
 ---
 # wcstombs_s, _wcstombs_s_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

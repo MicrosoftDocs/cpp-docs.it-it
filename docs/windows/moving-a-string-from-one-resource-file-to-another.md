@@ -1,8 +1,7 @@
 ---
 title: "Moving a String from One Resource File to Another | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "String editor, moving strings between files"
 ms.assetid: 94f8ee81-9b4c-4788-ba95-68c58db38029
 caps.latest.revision: 12
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Moving a String from One Resource File to Another
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

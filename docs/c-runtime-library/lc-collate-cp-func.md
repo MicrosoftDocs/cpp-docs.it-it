@@ -1,8 +1,7 @@
 ---
 title: "___lc_collate_cp_func | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,10 +27,10 @@ helpviewer_keywords:
   - "___lc_collate_cp_func"
 ms.assetid: 46ccc084-7ac9-4e5d-9138-e12cb5845615
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # ___lc_collate_cp_func
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

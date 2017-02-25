@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livello 4) C4505 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4505"
 ms.assetid: 068716a0-7dd2-40af-abf4-478f893b48c5
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Avviso del compilatore (livello 4) C4505
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

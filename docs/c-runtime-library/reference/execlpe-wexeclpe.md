@@ -1,8 +1,7 @@
 ---
 title: "_execlpe, _wexeclpe | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,7 +31,6 @@ f1_keywords:
   - "_execlpe"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_execlpe (funzione)"
   - "_wexeclpe (funzione)"
@@ -40,10 +38,10 @@ helpviewer_keywords:
   - "wexeclpe (funzione)"
 ms.assetid: 07b861da-3e7e-4f1d-bb80-ad69b55e5162
 caps.latest.revision: 21
-caps.handback.revision: 21
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # _execlpe, _wexeclpe
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

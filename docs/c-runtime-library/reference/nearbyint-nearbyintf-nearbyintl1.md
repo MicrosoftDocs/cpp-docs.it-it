@@ -1,8 +1,7 @@
 ---
-title: "nearbyint, nearbyintf, nearbyintl | Microsoft Docs"
+title: "nearbyint, nearbyintf, nearbyintl1 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -35,7 +34,6 @@ f1_keywords:
   - "math/narbyintf"
   - "math/narbyintl"
 dev_langs: 
-  - "C"
   - "C++"
 helpviewer_keywords: 
   - "nearbyint (funzione)"
@@ -43,10 +41,10 @@ helpviewer_keywords:
   - "funzione nearbyintl"
 ms.assetid: dd39cb68-96b0-434b-820f-6ff2ea65584f
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # nearbyint, nearbyintf, nearbyintl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

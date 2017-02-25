@@ -1,8 +1,7 @@
 ---
 title: "Struttura hash | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ dev_langs:
   - "C++"
 ms.assetid: e5a41202-ef3b-45d0-b3a7-4c2dbdc0487a
 caps.latest.revision: 13
-caps.handback.revision: 3
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Struttura hash
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

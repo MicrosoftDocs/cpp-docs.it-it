@@ -1,8 +1,7 @@
 ---
 title: "Modifica dell&#39;ereditariet&#224; di RMyProviderRowset | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "RMyProviderRowset"
 ms.assetid: 33089c90-98a4-43e7-8e67-d4bb137e267e
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Modifica dell&#39;ereditariet&#224; di RMyProviderRowset
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

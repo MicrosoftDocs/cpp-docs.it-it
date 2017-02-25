@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livello 4) C4019 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4019"
 ms.assetid: 4ecfe85d-673f-4334-8154-36fe7f0b3444
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Avviso del compilatore (livello 4) C4019
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

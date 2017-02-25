@@ -1,8 +1,7 @@
 ---
 title: "Operatori address-of e di riferimento indiretto | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "& (operatore), address-of (operatore)"
   - "* (operatore)"
@@ -27,10 +25,10 @@ helpviewer_keywords:
   - "operatori [C++], riferimento indiretto"
 ms.assetid: 10d62b00-12ba-4ea9-a2d5-09ac29ca2232
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Operatori address-of e di riferimento indiretto
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "/LTCG (Generazione di codice in fase di collegamento) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "-LTCG (opzione del linker)"
 ms.assetid: 788c6f52-fdb8-40c2-90af-4026ea2cf2e2
 caps.latest.revision: 22
-caps.handback.revision: 22
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # /LTCG (Generazione di codice in fase di collegamento)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

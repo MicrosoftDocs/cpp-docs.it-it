@@ -1,8 +1,7 @@
 ---
 title: "Moving a Toolbar Button | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "Toolbar editor, moving buttons"
 ms.assetid: 7625f2ce-8ac4-4428-a3f8-a95bfdf6f95f
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Moving a Toolbar Button
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livello 4) C4681 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4681"
 ms.assetid: a4e6d85f-3e21-4b45-a551-c23d3c554d3f
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Avviso del compilatore (livello 4) C4681
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

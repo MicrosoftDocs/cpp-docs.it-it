@@ -1,8 +1,7 @@
 ---
 title: "CMFCFontComboBox Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "CMFCFontComboBox::PreTranslateMessage method"
 ms.assetid: 9a53fb0c-7b45-486d-8187-2a4c723d9fbb
 caps.latest.revision: 29
-caps.handback.revision: 18
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 31
 ---
 # CMFCFontComboBox Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

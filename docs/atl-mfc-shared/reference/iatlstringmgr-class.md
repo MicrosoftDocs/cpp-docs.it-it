@@ -1,8 +1,7 @@
 ---
 title: "IAtlStringMgr Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "shared classes, IAtlStringMgr"
 ms.assetid: 722f0346-a770-4aa7-8f94-177be8dba823
 caps.latest.revision: 16
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # IAtlStringMgr Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

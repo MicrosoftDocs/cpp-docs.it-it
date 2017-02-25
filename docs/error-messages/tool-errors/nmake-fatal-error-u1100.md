@@ -1,8 +1,7 @@
 ---
 title: "Errore irreversibile U1100 di NMAKE  | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "U1100"
 ms.assetid: c71910a7-c581-4d9c-a38c-d2d557d56289
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Errore irreversibile U1100 di NMAKE 
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

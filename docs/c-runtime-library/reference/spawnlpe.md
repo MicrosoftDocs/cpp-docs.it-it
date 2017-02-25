@@ -1,8 +1,7 @@
 ---
 title: "spawnlpe | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,15 +26,14 @@ f1_keywords:
   - "spawnlpe"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "spawnlpe (funzione)"
 ms.assetid: 379143a7-f3d0-41de-83cc-2b4321146390
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # spawnlpe
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

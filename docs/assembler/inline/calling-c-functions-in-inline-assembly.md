@@ -1,8 +1,7 @@
 ---
-title: "Chiamata di funzioni C in assembly inline | Microsoft Docs"
+title: "Chiamata di funzioni C++ in assembly inline | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,17 +12,17 @@ dev_langs:
   - "C++"
 helpviewer_keywords: 
   - "__asm (parola chiave) [C++], funzioni chiamanti"
-  - "chiamate di funzione, funzioni C"
+  - "chiamate di funzione, funzioni C++"
   - "chiamate di funzione, assembly inline"
-  - "funzioni [C], chiamata in assembly inline"
+  - "funzioni [C++], chiamata in assembly inline"
   - "assembly inline, funzioni chiamanti"
-  - "Visual C, funzioni"
+  - "Visual C++, funzioni"
 ms.assetid: f8a8d568-d175-4e23-9b24-36ef60a4cab3
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Chiamata di funzioni C in assembly inline
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

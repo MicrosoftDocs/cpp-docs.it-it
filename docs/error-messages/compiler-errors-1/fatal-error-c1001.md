@@ -1,8 +1,7 @@
 ---
 title: "Errore irreversibile C1001 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C1001"
 ms.assetid: 5736cdb3-22c8-4fad-aa85-d5e0d2b232f4
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Errore irreversibile C1001
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

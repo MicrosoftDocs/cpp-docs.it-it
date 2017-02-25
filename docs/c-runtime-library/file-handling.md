@@ -1,8 +1,7 @@
 ---
 title: "Gestione di file | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,17 +12,16 @@ f1_keywords:
   - "c.files"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "file [C++], gestione"
   - "file [C++], modifica"
   - "file [C++], apertura"
 ms.assetid: 48119e2e-e94f-4602-b08b-b72440f731d8
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # Gestione di file
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

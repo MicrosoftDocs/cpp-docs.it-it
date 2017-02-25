@@ -1,8 +1,7 @@
 ---
 title: "API ANSI deprecate | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/09/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "MFC, metodi deprecati ANSI"
 ms.assetid: c7c5a6fd-95e4-4bee-b3d5-d3826c30947d
 caps.latest.revision: 8
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # API ANSI deprecate
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

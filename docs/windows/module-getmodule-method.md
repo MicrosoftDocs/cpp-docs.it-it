@@ -1,8 +1,7 @@
 ---
 title: "Metodo Module::GetModule | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "GetModule (metodo)"
 ms.assetid: 78b5fd68-8131-4ef9-8b6c-20f8c7b36992
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Metodo Module::GetModule
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

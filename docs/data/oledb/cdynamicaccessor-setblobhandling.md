@@ -1,8 +1,7 @@
 ---
 title: "CDynamicAccessor::SetBlobHandling | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "SetBlobHandling (metodo)"
 ms.assetid: fa8b0bb3-a21b-4d64-aeef-e79bf61d079c
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # CDynamicAccessor::SetBlobHandling
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

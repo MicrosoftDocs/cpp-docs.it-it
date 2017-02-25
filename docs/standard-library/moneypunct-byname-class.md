@@ -1,8 +1,7 @@
 ---
 title: "Classe moneypunct_byname | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "moneypunct_byname (classe)"
 ms.assetid: e8a544d2-6aee-420d-b513-deb385c9b416
 caps.latest.revision: 22
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # Classe moneypunct_byname
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2534 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2534"
 ms.assetid: 481f9f54-5b51-4aa0-8eea-218f10807705
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Errore del compilatore C2534
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

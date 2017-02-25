@@ -1,8 +1,7 @@
 ---
 title: "Compilazione veloce | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "prestazioni, compilatore cl.exe"
 ms.assetid: 5fead136-ba69-40c8-8e25-236f89d5990a
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Compilazione veloce
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

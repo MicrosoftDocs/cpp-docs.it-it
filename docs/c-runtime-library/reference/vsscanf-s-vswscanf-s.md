@@ -1,8 +1,7 @@
 ---
 title: "vsscanf_s, vswscanf_s | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,10 +31,10 @@ dev_langs:
   - "C++"
 ms.assetid: 7b732e68-c6f4-4579-8917-122f5a7876e1
 caps.latest.revision: 6
-caps.handback.revision: 4
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # vsscanf_s, vswscanf_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

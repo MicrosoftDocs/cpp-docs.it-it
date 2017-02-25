@@ -1,8 +1,7 @@
 ---
 title: "&lt;exception&gt; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "intestazione di eccezione"
 ms.assetid: 28900768-5dd7-4834-b907-5e37ab3407db
 caps.latest.revision: 20
-caps.handback.revision: 20
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # &lt;exception&gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "CEditView Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "visualizzazioni, classi"
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
 caps.latest.revision: 25
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 27
 ---
 # CEditView Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

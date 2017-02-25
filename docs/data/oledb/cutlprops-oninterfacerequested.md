@@ -1,8 +1,7 @@
 ---
 title: "CUtlProps::OnInterfaceRequested | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "OnInterfaceRequested (metodo)"
 ms.assetid: a5e1a879-cff3-4e01-b902-2249a152984f
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # CUtlProps::OnInterfaceRequested
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

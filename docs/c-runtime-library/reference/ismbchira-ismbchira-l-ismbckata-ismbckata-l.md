@@ -1,8 +1,7 @@
 ---
 title: "_ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -38,7 +37,6 @@ f1_keywords:
   - "_ismbchira"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_ismbchira (funzione)"
   - "_ismbchira_l (funzione)"
@@ -52,10 +50,10 @@ helpviewer_keywords:
   - "Katakana"
 ms.assetid: 2db388a2-be31-489b-81c8-f6bf3f0582d3
 caps.latest.revision: 20
-caps.handback.revision: 20
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # _ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

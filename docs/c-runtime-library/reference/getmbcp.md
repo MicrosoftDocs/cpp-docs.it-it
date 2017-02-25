@@ -1,8 +1,7 @@
 ---
 title: "_getmbcp | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,17 +28,16 @@ f1_keywords:
   - "getmbcp"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_getmbcp (funzione)"
   - "tabelle codici, rilevamento"
   - "getmbcp (funzione)"
 ms.assetid: 2db202d4-5c3d-4871-a0b8-ceb0b79ee7bb
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # _getmbcp
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

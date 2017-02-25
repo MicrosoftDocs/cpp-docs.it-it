@@ -1,8 +1,7 @@
 ---
 title: "Classe istream_iterator | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "istream_iterator (classe)"
 ms.assetid: fb52a8cd-7f71-48d1-b73e-4b064e2a8d16
 caps.latest.revision: 18
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # Classe istream_iterator
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

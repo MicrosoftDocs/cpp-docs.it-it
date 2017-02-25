@@ -1,8 +1,7 @@
 ---
 title: "Implementazione guidata punto di connessione | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Implementazione guidata punto di connessione [C++]"
 ms.assetid: c117f6c6-30f0-4adb-82b4-b1f34e0f0fa8
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Implementazione guidata punto di connessione
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Errore irreversibile C1021 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C1021"
 ms.assetid: e23171f4-ca6b-40c0-a913-a2edc6fa3766
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Errore irreversibile C1021
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

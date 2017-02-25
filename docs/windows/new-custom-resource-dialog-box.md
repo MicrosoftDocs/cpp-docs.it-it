@@ -1,8 +1,7 @@
 ---
 title: "Finestra di dialogo Nuova risorsa personalizzata | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "Tipo di risorsa personalizzata (finestra di dialogo)"
 ms.assetid: 8216e29d-27ca-4aed-8036-d55fa4468ea2
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Finestra di dialogo Nuova risorsa personalizzata
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

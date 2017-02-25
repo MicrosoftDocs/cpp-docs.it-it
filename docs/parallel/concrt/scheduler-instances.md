@@ -1,8 +1,7 @@
 ---
 title: "Istanze dell&#39;utilit&#224; di pianificazione | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "istanze dell'utilità di pianificazione"
 ms.assetid: 4819365f-ef99-49cc-963e-50a2a35a8d6b
 caps.latest.revision: 7
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Istanze dell&#39;utilit&#224; di pianificazione
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

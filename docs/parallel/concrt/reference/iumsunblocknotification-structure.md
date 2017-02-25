@@ -1,8 +1,7 @@
 ---
 title: "Struttura IUMSUnblockNotification | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "IUMSUnblockNotification (struttura)"
 ms.assetid: eaca9529-c1cc-472b-8ec6-722a1ff0fa2a
 caps.latest.revision: 19
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # Struttura IUMSUnblockNotification
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

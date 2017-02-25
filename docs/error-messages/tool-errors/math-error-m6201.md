@@ -1,8 +1,7 @@
 ---
 title: "Errore matematico M6201 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "M6201"
 ms.assetid: 4041c331-d9aa-4dd4-b565-7dbe0218538c
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Errore matematico M6201
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

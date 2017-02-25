@@ -1,8 +1,7 @@
 ---
 title: "Errore irreversibile U1056 di NMAKE  | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "U1056"
 ms.assetid: da855728-b69e-413c-83ed-df912126215e
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Errore irreversibile U1056 di NMAKE 
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

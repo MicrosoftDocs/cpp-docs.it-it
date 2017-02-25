@@ -1,8 +1,7 @@
 ---
 title: "Classe task_completion_event | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "task_completion_event (classe)"
 ms.assetid: fb19ed98-f245-48dc-9ba5-487ba879b28a
 caps.latest.revision: 11
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Classe task_completion_event
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

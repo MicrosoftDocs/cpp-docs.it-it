@@ -1,8 +1,7 @@
 ---
 title: "Errore matematico M6101 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "M6101"
 ms.assetid: 8c8d5097-d725-4a2c-92e9-fcf28c871d74
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Errore matematico M6101
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

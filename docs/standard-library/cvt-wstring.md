@@ -1,8 +1,7 @@
 ---
-title: "&lt;cvt/wstring&gt; | Microsoft Docs"
+title: "&lt;cvt-wstring&gt;&lt;/cvt-wstring&gt; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "cvt/wstring (intestazione)"
 ms.assetid: d78b04bb-9ac0-4adb-8ffe-3aefb9b14c2d
 caps.latest.revision: 23
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # &lt;cvt/wstring&gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

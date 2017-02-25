@@ -1,8 +1,7 @@
 ---
 title: "Classe istrstream | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "istrstream (classe)"
 ms.assetid: c2d41c75-bd2c-4437-bd77-5939ce1b97af
 caps.latest.revision: 20
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # Classe istrstream
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

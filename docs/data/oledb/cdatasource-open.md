@@ -1,8 +1,7 @@
 ---
 title: "CDataSource::Open | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "Open (metodo)"
 ms.assetid: a6d28bd1-799a-48ed-8993-5f82d1705b77
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # CDataSource::Open
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

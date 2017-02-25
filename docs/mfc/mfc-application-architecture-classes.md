@@ -1,8 +1,7 @@
 ---
 title: "Classi architettura dell&#39;applicazione MFC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "MFC [C++], classi"
 ms.assetid: 71b2de54-b44d-407e-9c71-9baf954e18d9
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Classi architettura dell&#39;applicazione MFC
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

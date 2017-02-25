@@ -1,8 +1,7 @@
 ---
 title: "strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -39,7 +38,6 @@ f1_keywords:
   - "_tcsncpy_s_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_mbsnbcpy_s (funzione)"
   - "_mbsnbcpy_s_l (funzione)"
@@ -57,10 +55,10 @@ helpviewer_keywords:
   - "wcsncpy_s_l (funzione)"
 ms.assetid: a971c800-94d1-4d88-92f3-a2fe236a4546
 caps.latest.revision: 47
-caps.handback.revision: 45
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 47
 ---
 # strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

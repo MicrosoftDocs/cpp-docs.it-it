@@ -1,8 +1,7 @@
 ---
 title: "Finestra di dialogo Carica tavolozza (Editor di immagini per le icone) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "Carica tavolozza (finestra di dialogo)"
 ms.assetid: a1b17203-3e02-4498-91de-4ed089156df1
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Finestra di dialogo Carica tavolozza (Editor di immagini per le icone)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
-title: "Errore R6030 del linguaggio C in fase di esecuzione  | Microsoft Docs"
+title: "R6030 del linguaggio in errore di Runtime C | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,13 +13,13 @@ f1_keywords:
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
-  - "R6030"
+  - "R6030 DEL LINGUAGGIO IN"
 ms.assetid: 0238a6c3-a033-4046-8adc-f8f99d961153
 caps.latest.revision: 9
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Errore R6030 del linguaggio C in fase di esecuzione 
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "_mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -38,7 +37,6 @@ f1_keywords:
   - "_mbctoupper_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_mbctolower (funzione)"
   - "_mbctolower_l (funzione)"
@@ -54,10 +52,10 @@ helpviewer_keywords:
   - "totupper (funzione)"
 ms.assetid: 787fab71-3224-4ed7-bc93-4dcd8023fc54
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # _mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

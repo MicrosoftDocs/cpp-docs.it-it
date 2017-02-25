@@ -1,8 +1,7 @@
 ---
 title: "for each, in | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "for each (parola chiave) [C++]"
 ms.assetid: 0c3a364b-2747-43f3-bb8d-b7d3b7023f79
 caps.latest.revision: 24
-caps.handback.revision: 22
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # for each, in
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

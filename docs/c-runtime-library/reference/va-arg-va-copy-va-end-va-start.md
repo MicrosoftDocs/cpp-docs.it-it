@@ -1,8 +1,7 @@
 ---
 title: "va_arg, va_copy, va_end, va_start | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -36,7 +35,6 @@ f1_keywords:
   - "va_end"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "elenchi di argomenti variabili, l'accesso"
   - "va_start (macro)"
@@ -49,10 +47,10 @@ helpviewer_keywords:
   - "va_copy (macro)"
 ms.assetid: a700dbbd-bfe5-4077-87b6-3a07af74a907
 caps.latest.revision: 20
-caps.handback.revision: 20
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # va_arg, va_copy, va_end, va_start
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

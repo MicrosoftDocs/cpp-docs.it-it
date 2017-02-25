@@ -1,8 +1,7 @@
 ---
 title: "Membro dati FactoryCache::factory | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "factory (membro dati)"
 ms.assetid: a8c68ace-71ef-48a4-b5e6-b0f4a070060a
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Membro dati FactoryCache::factory
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

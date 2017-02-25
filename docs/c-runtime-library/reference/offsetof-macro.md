@@ -1,8 +1,7 @@
 ---
 title: "Macro offsetof | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,16 +24,15 @@ f1_keywords:
   - "offsetof"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "offsetof (macro)"
   - "membri di struttura, offset"
 ms.assetid: f3b4eb16-a882-4d38-afc9-eebd976a7352
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Macro offsetof
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

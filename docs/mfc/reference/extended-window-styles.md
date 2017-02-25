@@ -1,8 +1,7 @@
 ---
 title: "Stili finestra estesi | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -59,10 +58,10 @@ helpviewer_keywords:
   - "WS_EX_WINDOWEDGE (costante)"
 ms.assetid: d18e6c69-0a01-49ed-b58a-55b3802b47c1
 caps.latest.revision: 14
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Stili finestra estesi
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

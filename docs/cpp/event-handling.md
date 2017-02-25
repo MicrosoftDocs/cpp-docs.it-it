@@ -1,8 +1,7 @@
 ---
 title: "Gestione di eventi | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "funzioni intrinseche, gestione eventi"
 ms.assetid: 82de3f9a-2d88-470c-9527-8a5b54c8ced4
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Gestione di eventi
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

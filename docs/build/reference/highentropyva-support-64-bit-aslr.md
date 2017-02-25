@@ -1,8 +1,7 @@
 ---
 title: "/HIGHENTROPYVA (supporta ASLR a 64 bit) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: fe35f9f7-d28e-4694-9aeb-a79db06168e0
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # /HIGHENTROPYVA (supporta ASLR a 64 bit)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

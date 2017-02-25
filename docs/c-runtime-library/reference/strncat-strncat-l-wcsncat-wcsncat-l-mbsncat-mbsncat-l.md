@@ -1,8 +1,7 @@
 ---
 title: "strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -44,7 +43,6 @@ f1_keywords:
   - "_tcsncat"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_ftcsncat (funzione)"
   - "_mbsncat (funzione)"
@@ -68,11 +66,11 @@ helpviewer_keywords:
   - "tcsnccat_l (funzione)"
   - "wcsncat (funzione)"
 ms.assetid: de67363b-68c6-4ca5-91e3-478610ad8159
-caps.latest.revision: 29
-caps.handback.revision: 27
+caps.latest.revision: 27
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 29
 ---
 # strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Classe is_base_of | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "is_base_of"
 ms.assetid: 436f6213-1d4c-4ffc-a588-fc7c4887dd86
 caps.latest.revision: 19
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # Classe is_base_of
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

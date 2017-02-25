@@ -1,8 +1,7 @@
 ---
 title: "Semplificazione dell&#39;accesso ai dati con gli attributi del database | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,10 +28,10 @@ helpviewer_keywords:
   - "consumer OLE DB [C++], attributi database"
 ms.assetid: 560d2456-e307-4cb7-ba7b-4d0ed674697f
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Semplificazione dell&#39;accesso ai dati con gli attributi del database
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

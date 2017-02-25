@@ -1,8 +1,7 @@
 ---
 title: "Gestori di messaggi WM_: A - C | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -46,10 +45,10 @@ helpviewer_keywords:
   - "WM_ (messaggi)"
 ms.assetid: 4e315896-d646-4b87-b0ab-41a4a753b045
 caps.latest.revision: 16
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # Gestori di messaggi WM_: A - C
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

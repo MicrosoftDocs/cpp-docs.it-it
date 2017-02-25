@@ -1,8 +1,7 @@
 ---
 title: "/Yd (Inserisce le informazioni di debug nel file oggetto) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "-Yd (opzione del compilatore) [C++]"
 ms.assetid: c5a699fe-65ce-461e-964c-7f5eb2a8320a
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # /Yd (Inserisce le informazioni di debug nel file oggetto)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

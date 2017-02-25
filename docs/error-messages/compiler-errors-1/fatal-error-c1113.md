@@ -1,8 +1,7 @@
 ---
 title: "Errore irreversibile C1113 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C1113"
 ms.assetid: 1c7c3ce7-2827-4822-9c63-0abc8615ea39
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Errore irreversibile C1113
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

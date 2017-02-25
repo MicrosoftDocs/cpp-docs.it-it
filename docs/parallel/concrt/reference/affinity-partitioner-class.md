@@ -1,8 +1,7 @@
 ---
 title: "Classe affinity_partitioner | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "affinity_partitioner (classe)"
 ms.assetid: 31bf7bb1-bd01-491c-9760-d9d60edfccad
 caps.latest.revision: 9
-caps.handback.revision: 3
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Classe affinity_partitioner
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

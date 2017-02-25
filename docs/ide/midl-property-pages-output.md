@@ -1,8 +1,7 @@
 ---
 title: "Pagine delle propriet&#224; MIDL: Output | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "MIDL, pagina proprietà"
 ms.assetid: b850b21b-ed38-46dd-a712-807e8eabd9aa
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Pagine delle propriet&#224; MIDL: Output
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

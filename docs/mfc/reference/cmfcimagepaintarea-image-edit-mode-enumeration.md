@@ -1,8 +1,7 @@
 ---
 title: "Enumerazione CMFCImagePaintArea::IMAGE_EDIT_MODE | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "IMAGE_EDIT_MODE (metodo di enumerazione)"
 ms.assetid: e51db66a-fa1c-4766-9dac-a25b595f871a
 caps.latest.revision: 15
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # Enumerazione CMFCImagePaintArea::IMAGE_EDIT_MODE
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

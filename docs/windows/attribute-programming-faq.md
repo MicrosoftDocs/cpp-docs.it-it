@@ -1,8 +1,7 @@
 ---
 title: "Attribute Programming FAQ | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "FAQs (frequently asked questions), attributed programming [C++]"
 ms.assetid: a1b8349f-7f51-43c4-95ea-4edb6e5f243f
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Attribute Programming FAQ
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

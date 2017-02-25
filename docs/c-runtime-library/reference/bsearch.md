@@ -1,8 +1,7 @@
 ---
 title: "bsearch | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,16 +27,15 @@ f1_keywords:
   - "bsearch"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "matrici [CRT], ricerca binaria"
   - "bsearch (funzione)"
 ms.assetid: e0ad2f47-e7dd-49ed-8288-870457a14a2c
 caps.latest.revision: 22
-caps.handback.revision: 22
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # bsearch
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Creazione guidata componente ASP ATL | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "Creazione guidata componente ASP ATL"
 ms.assetid: 5a5cb904-dbbf-44ea-ad3d-2ddd14c1d3c5
 caps.latest.revision: 13
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Creazione guidata componente ASP ATL
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

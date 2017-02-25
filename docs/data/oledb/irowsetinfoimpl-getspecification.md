@@ -1,8 +1,7 @@
 ---
 title: "IRowsetInfoImpl::GetSpecification | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "GetSpecification (metodo)"
 ms.assetid: 8e14289d-9cca-4df7-a9e0-f4ef03c61e30
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # IRowsetInfoImpl::GetSpecification
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

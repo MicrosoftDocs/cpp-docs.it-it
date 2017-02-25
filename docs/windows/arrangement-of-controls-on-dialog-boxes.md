@@ -1,8 +1,7 @@
 ---
 title: "Arrangement of Controls on Dialog Boxes | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Dialog editor, arranging controls"
 ms.assetid: 832491cf-98af-42e5-a854-2cb135fd45c6
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Arrangement of Controls on Dialog Boxes
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

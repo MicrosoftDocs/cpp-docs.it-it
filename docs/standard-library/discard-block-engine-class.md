@@ -1,8 +1,7 @@
 ---
 title: "Classe discard_block_engine | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "discard_block_engine (classe)"
 ms.assetid: aa84808e-38fe-4fa0-9f73-d5b9a653345b
 caps.latest.revision: 18
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # Classe discard_block_engine
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

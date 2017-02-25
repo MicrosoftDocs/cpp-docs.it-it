@@ -1,8 +1,7 @@
 ---
 title: "Migrazione da OpenMP al runtime di concorrenza | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "OpenMP, migrazione al runtime di concorrenza"
 ms.assetid: 9bab7bb1-e45d-44b2-8509-3b226be2c93b
 caps.latest.revision: 12
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Migrazione da OpenMP al runtime di concorrenza
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

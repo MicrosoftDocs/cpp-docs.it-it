@@ -1,8 +1,7 @@
 ---
 title: "How to: Add MFC Support to Resource Script Files | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "resource script files, adding MFC support"
 ms.assetid: 599dfe9d-ad26-4e34-899c-49b56599e37f
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # How to: Add MFC Support to Resource Script Files
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

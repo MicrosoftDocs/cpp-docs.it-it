@@ -1,8 +1,7 @@
 ---
 title: "Errore irreversibile C1307 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C1307"
 ms.assetid: 6f77d3d4-ba8a-476c-b540-aff19eb4efc4
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Errore irreversibile C1307
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

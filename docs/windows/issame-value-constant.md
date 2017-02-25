@@ -1,8 +1,7 @@
 ---
 title: "Costante IsSame::value | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "value (costante)"
 ms.assetid: ee72deff-54a2-4482-9967-49a86d07f834
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Costante IsSame::value
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "setjmp | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,17 +26,16 @@ f1_keywords:
   - "setjmp"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "programmi [C++], salvataggio degli stati"
   - "stato corrente"
   - "setjmp (funzione)"
 ms.assetid: 684a8b27-e8eb-455b-b4a8-733ca1cbd7d2
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # setjmp
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

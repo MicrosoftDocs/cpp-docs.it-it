@@ -1,8 +1,7 @@
 ---
 title: "Elenco di esempi di finestre di dialogo | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "applicazioni di esempio [MFC], finestre di dialogo"
 ms.assetid: 3fc7dd7c-d758-4c43-96bb-0ea638ca1ad7
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Elenco di esempi di finestre di dialogo
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2488 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2488"
 ms.assetid: cd435909-43e4-43c6-a57c-5d02468ef75f
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Errore del compilatore C2488
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

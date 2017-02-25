@@ -1,8 +1,7 @@
 ---
 title: "IRunnableObjectImpl Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "IRunnableObjectImpl class"
 ms.assetid: 305c7c3b-889e-49dd-aca1-34379c1b9931
 caps.latest.revision: 20
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # IRunnableObjectImpl Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

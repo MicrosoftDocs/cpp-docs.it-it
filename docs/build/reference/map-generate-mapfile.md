@@ -1,8 +1,7 @@
 ---
 title: "/MAP (Genera file MAP) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -26,10 +25,10 @@ helpviewer_keywords:
   - "file MAP, specifica del nome file"
 ms.assetid: 9ccce53d-4e36-43da-87b0-7603ddfdea63
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # /MAP (Genera file MAP)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

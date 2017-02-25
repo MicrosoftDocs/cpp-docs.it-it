@@ -1,8 +1,7 @@
 ---
 title: "Elementi friend di modelli | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,11 +12,11 @@ dev_langs:
   - "C++"
 ms.assetid: 077acea5-0d0f-4b33-916d-1211797e5e28
 caps.latest.revision: 14
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
 robots: noindex,nofollow
+caps.handback.revision: 9
 ---
 # Elementi friend di modelli
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

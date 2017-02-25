@@ -1,8 +1,7 @@
 ---
 title: "How to: Search for Symbols in Resources | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "resources [Visual Studio], searching for symbols"
 ms.assetid: 6efef8e8-d0d4-4c49-b895-314974e7791a
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # How to: Search for Symbols in Resources
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

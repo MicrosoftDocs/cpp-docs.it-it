@@ -1,8 +1,7 @@
 ---
 title: "Errore irreversibile C1189 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C1189"
 ms.assetid: 2e5c8a78-edd4-411c-b619-558a96be148a
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Errore irreversibile C1189
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

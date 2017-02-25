@@ -1,8 +1,7 @@
 ---
 title: "Riferimento a ERRLOOK | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "Ricerca errori (strumento)"
 ms.assetid: 6040ffc1-2355-4a45-8998-84cbcba4ca91
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Riferimento a ERRLOOK
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

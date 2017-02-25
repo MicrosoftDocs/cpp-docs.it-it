@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2715 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2715"
 ms.assetid: c81567a7-5b65-468f-aaf9-835f91e468e4
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Errore del compilatore C2715
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

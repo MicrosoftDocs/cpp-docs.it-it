@@ -1,8 +1,7 @@
 ---
 title: "Procedura dettagliata: Creazione di un agente del flusso di dati | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "agenti del flusso di dati, creazione [Runtime di concorrenza]"
 ms.assetid: 9db5ce3f-c51b-4de1-b79b-9ac2a0cbd130
 caps.latest.revision: 16
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Procedura dettagliata: Creazione di un agente del flusso di dati
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

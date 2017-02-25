@@ -1,8 +1,7 @@
 ---
 title: "CCommand::Unprepare | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "Unprepare (metodo)"
 ms.assetid: 4fe59988-fe51-4c7c-a156-72b68e3d642b
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # CCommand::Unprepare
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

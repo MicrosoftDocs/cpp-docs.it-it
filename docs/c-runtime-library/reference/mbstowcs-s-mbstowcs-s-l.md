@@ -1,8 +1,7 @@
 ---
 title: "mbstowcs_s, _mbstowcs_s_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -30,17 +29,16 @@ f1_keywords:
   - "mbstowcs_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_mbstowcs_s_l (funzione)"
   - "mbstowcs_s (funzione)"
   - "mbstowcs_s_l (funzione)"
 ms.assetid: 2fbda953-6918-498f-b440-3e7b21ed65a4
 caps.latest.revision: 31
-caps.handback.revision: 31
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 31
 ---
 # mbstowcs_s, _mbstowcs_s_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

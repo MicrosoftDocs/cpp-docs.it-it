@@ -1,8 +1,7 @@
 ---
 title: "Controlli ActiveX MFC: implementazione di propriet&#224; avanzate | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "proprietà [MFC], controlli ActiveX"
 ms.assetid: ec2e6759-5a8e-41d8-a275-99af8ff6f32e
 caps.latest.revision: 12
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Controlli ActiveX MFC: implementazione di propriet&#224; avanzate
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

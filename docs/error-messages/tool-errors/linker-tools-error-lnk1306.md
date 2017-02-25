@@ -1,8 +1,7 @@
 ---
 title: "Errore degli strumenti del linker LNK1306 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "LNK1306"
 ms.assetid: fad1df6a-0bd9-412f-b0d1-7c9bc749c584
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Errore degli strumenti del linker LNK1306
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

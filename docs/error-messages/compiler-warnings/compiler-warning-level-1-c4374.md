@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livello 1) C4374 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4374"
 ms.assetid: 4ac9aaec-d815-4b6e-825f-fa872092dd3b
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Avviso del compilatore (livello 1) C4374
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

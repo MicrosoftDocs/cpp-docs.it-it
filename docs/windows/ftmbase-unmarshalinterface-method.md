@@ -1,8 +1,7 @@
 ---
 title: "Metodo FtmBase::UnmarshalInterface | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "UnmarshalInterface (metodo)"
 ms.assetid: 6850a621-e9a6-4001-bc1e-bd5d1b121adc
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # Metodo FtmBase::UnmarshalInterface
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livello 1) C4033 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4033"
 ms.assetid: 189a9ec3-ff6d-49dd-b9b2-530b28bbb7c9
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Avviso del compilatore (livello 1) C4033
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

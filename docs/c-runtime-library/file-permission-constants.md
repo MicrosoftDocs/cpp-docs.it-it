@@ -1,8 +1,7 @@
 ---
 title: "Costanti di autorizzazione file | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,7 +13,6 @@ f1_keywords:
   - "_S_IREAD"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_S_IREAD (costante)"
   - "_S_IWRITE (costante)"
@@ -24,10 +22,10 @@ helpviewer_keywords:
   - "S_IWRITE (costante)"
 ms.assetid: 593cad33-31d1-44d2-8941-8af7d210c88c
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Costanti di autorizzazione file
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

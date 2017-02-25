@@ -1,8 +1,7 @@
 ---
 title: "Chiamata di funzioni DLL da applicazioni Visual Basic | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "funzioni [C++], chiamata di funzioni DLL da Visual Basic"
 ms.assetid: 282f7fbf-a0f2-4b9f-b277-1982710be56c
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Chiamata di funzioni DLL da applicazioni Visual Basic
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

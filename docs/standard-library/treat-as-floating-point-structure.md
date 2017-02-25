@@ -1,8 +1,7 @@
 ---
 title: "Struttura treat_as_floating_point | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ dev_langs:
   - "C++"
 ms.assetid: d0a2161c-bbb2-4924-8961-7568d5ad5434
 caps.latest.revision: 13
-caps.handback.revision: 4
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Struttura treat_as_floating_point
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

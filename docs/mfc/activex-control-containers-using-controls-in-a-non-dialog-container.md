@@ -1,8 +1,7 @@
 ---
 title: "Contenitori di controlli ActiveX: utilizzo di controlli in un contenitore diverso da una finestra di dialogo | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "CreateControl (metodo)"
 ms.assetid: 46f195b0-b8ca-4409-8cca-fbfaf2c9ab9f
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Contenitori di controlli ActiveX: utilizzo di controlli in un contenitore diverso da una finestra di dialogo
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

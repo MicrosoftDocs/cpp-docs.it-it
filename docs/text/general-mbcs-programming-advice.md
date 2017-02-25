@@ -1,8 +1,7 @@
 ---
 title: "Suggerimenti generali sulla programmazione MBCS | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "MS Shell Dlg"
 ms.assetid: 7b541235-f3e5-4af0-b2c2-a0112cd5fbfb
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "ghogen"
 ms.author: "ghogen"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Suggerimenti generali sulla programmazione MBCS
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

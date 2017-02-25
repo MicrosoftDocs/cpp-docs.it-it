@@ -1,8 +1,7 @@
 ---
 title: "/SWAPRUN | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "-SWAPRUN (opzione editbin)"
 ms.assetid: 6eefd7f3-ca47-48e3-8509-323d27cf4ae7
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # /SWAPRUN
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

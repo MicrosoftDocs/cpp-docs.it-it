@@ -1,8 +1,7 @@
 ---
 title: "creazione guidata personalizzata | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "progetti Visual C++, creazioni guidate personalizzate"
 ms.assetid: 4723f9b7-188f-4677-a728-af95e7e79ea8
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # creazione guidata personalizzata
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

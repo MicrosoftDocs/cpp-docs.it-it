@@ -1,8 +1,7 @@
 ---
 title: "Mappe eventi DHTML | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "macro, mappa eventi DHTML"
 ms.assetid: 9a2c8ae7-7216-4a5e-bc60-6b98695be0c6
 caps.latest.revision: 14
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Mappe eventi DHTML
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

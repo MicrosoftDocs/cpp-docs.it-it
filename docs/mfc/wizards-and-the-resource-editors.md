@@ -1,8 +1,7 @@
 ---
 title: "Procedure guidate ed editor risorse | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "procedure guidate [MFC]"
 ms.assetid: f5dd4d13-9dc1-4a49-b6bf-5b3cb45fa8ba
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Procedure guidate ed editor risorse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

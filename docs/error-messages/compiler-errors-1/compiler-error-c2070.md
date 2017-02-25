@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2070 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2070"
 ms.assetid: 4c8dea63-1227-4aba-be26-2462537f86fb
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Errore del compilatore C2070
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

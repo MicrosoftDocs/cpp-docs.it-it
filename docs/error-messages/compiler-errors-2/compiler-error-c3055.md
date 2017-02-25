@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3055 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3055"
 ms.assetid: 60446ee0-18dd-48fc-9059-f0a14229dce8
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Errore del compilatore C3055
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

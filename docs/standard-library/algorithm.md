@@ -1,8 +1,7 @@
 ---
 title: "&lt;algorithm&gt; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "libreria C++ standard, algoritmi"
 ms.assetid: 19f97711-7a67-4a65-8fd1-9a2bd3ca327d
 caps.latest.revision: 23
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # &lt;algorithm&gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

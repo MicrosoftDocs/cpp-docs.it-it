@@ -1,8 +1,7 @@
 ---
 title: "omp_get_max_threads | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "omp_get_max_threads OpenMP function"
 ms.assetid: f47c3725-3e40-469f-8bc8-a1e47f264cc3
 caps.latest.revision: 10
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # omp_get_max_threads
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

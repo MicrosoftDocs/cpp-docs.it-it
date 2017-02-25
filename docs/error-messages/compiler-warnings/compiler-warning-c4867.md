@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore C4867 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4867"
 ms.assetid: 8a257d70-c3a7-462d-b285-e57c952a8bf7
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # Avviso del compilatore C4867
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

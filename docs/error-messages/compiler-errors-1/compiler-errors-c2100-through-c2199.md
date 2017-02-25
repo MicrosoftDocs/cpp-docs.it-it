@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatores C2100 through C2199 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 1ccab076-0954-4386-b959-d3112a6793ae
 caps.latest.revision: 12
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Errore del compilatores C2100 through C2199
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

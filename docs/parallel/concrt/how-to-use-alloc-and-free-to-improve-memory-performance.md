@@ -1,8 +1,7 @@
 ---
 title: "Procedura: Usare Alloc e Free per migliorare le prestazioni di memoria | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "utilizzo di Alloc e Free [Runtime di concorrenza]"
 ms.assetid: e1fab9e8-a97d-4104-bead-e95958db79f9
 caps.latest.revision: 14
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Procedura: Usare Alloc e Free per migliorare le prestazioni di memoria
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

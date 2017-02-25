@@ -1,8 +1,7 @@
 ---
 title: "Funzioni di importazione ed esportazione DLL | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "dichiarazione di funzioni, dllexport e dllimport"
   - "esportazioni di DLL [C++]"
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "attributi di classi di archiviazione estesi"
 ms.assetid: 08d164b9-770a-4e14-afeb-c6f21d9e33e4
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Funzioni di importazione ed esportazione DLL
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

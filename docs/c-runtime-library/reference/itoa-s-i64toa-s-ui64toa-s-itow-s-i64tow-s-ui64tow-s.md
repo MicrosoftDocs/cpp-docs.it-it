@@ -1,8 +1,7 @@
 ---
 title: "_itoa_s, _i64toa_s, _ui64toa_s, _itow_s, _i64tow_s, _ui64tow_s | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -49,7 +48,6 @@ f1_keywords:
   - "itot_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_i64toa_s (funzione)"
   - "_i64tot_s (funzione)"
@@ -70,10 +68,10 @@ helpviewer_keywords:
   - "ui64toa_s (funzione)"
 ms.assetid: eb746581-bff3-48b5-a973-bfc0a4478ecf
 caps.latest.revision: 28
-caps.handback.revision: 28
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 28
 ---
 # _itoa_s, _i64toa_s, _ui64toa_s, _itow_s, _i64tow_s, _ui64tow_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

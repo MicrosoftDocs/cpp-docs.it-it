@@ -1,8 +1,7 @@
 ---
 title: "Elementi dell&#39;interfaccia utente | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "MFC Feature Pack, architettura"
 ms.assetid: eead6827-9602-40a3-8038-8986e8207385
 caps.latest.revision: 28
-caps.handback.revision: 24
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # Elementi dell&#39;interfaccia utente
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Configurazione di programmi C++ 11 per Windows XP | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
 caps.latest.revision: 14
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Configurazione di programmi C++ 11 per Windows XP
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

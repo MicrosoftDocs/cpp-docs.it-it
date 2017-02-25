@@ -1,8 +1,7 @@
 ---
 title: "Modifica del codice del disegno (Esercitazione di ATL, parte 4) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "_ATL_MIN_CRT (macro)"
 ms.assetid: 08ff14e8-aa49-4139-a110-5d071939cf1e
 caps.latest.revision: 18
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Modifica del codice del disegno (Esercitazione di ATL, parte 4)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

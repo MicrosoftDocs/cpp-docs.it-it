@@ -1,8 +1,7 @@
 ---
 title: "acos, acosf, acosl | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -34,7 +33,6 @@ f1_keywords:
   - "math/acosl"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "acos (funzione)"
   - "acosf (funzione)"
@@ -43,10 +41,10 @@ helpviewer_keywords:
   - "funzioni trigonometriche"
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
 caps.latest.revision: 19
-caps.handback.revision: 17
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # acos, acosf, acosl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

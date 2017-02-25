@@ -1,8 +1,7 @@
 ---
 title: "File di comando di CL | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "file di comando, compilatore CL"
 ms.assetid: ec3cea06-2af0-4fe9-a94c-119c9d31b3a9
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # File di comando di CL
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

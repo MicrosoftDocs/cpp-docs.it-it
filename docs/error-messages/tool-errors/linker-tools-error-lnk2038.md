@@ -1,8 +1,7 @@
 ---
 title: "Errore degli strumenti del linker LNK2038 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "LNK2038"
 ms.assetid: b8d0fb35-eee6-4f52-b3c4-239cb4f65656
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Errore degli strumenti del linker LNK2038
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

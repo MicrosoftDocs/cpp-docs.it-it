@@ -1,8 +1,7 @@
 ---
 title: "Classe SchedulerPolicy | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "SchedulerPolicy (classe)"
 ms.assetid: bcebf51a-65f8-45a3-809b-d1ff93527dc4
 caps.latest.revision: 22
-caps.handback.revision: 16
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # Classe SchedulerPolicy
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

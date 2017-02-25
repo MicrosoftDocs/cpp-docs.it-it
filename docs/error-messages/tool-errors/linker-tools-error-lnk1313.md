@@ -1,8 +1,7 @@
 ---
 title: "Errore degli strumenti del linker LNK1313 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "LNK1313"
 ms.assetid: 5df0b72e-bb3f-428c-8d84-6084238f9827
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Errore degli strumenti del linker LNK1313
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

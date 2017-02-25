@@ -1,8 +1,7 @@
 ---
 title: "db_column | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "db_column attribute"
 ms.assetid: 58da4afc-f69c-4ae6-af9a-3f9515f56081
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # db_column
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

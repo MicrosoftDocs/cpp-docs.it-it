@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2106 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2106"
 ms.assetid: d5c91a2e-04e4-4770-8478-788b98c52a53
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Errore del compilatore C2106
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

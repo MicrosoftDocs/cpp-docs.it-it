@@ -1,8 +1,7 @@
 ---
 title: "longjmp | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,16 +26,15 @@ f1_keywords:
   - "longjmp"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "longjmp (funzione)"
   - "ripristino dell'ambiente dello stack e delle impostazioni locali di esecuzione"
 ms.assetid: 0e13670a-5130-45c1-ad69-6862505b7a2f
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # longjmp
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

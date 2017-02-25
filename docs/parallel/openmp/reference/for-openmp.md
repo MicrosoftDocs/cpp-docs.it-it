@@ -1,8 +1,7 @@
 ---
 title: "for (OpenMP) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "for OpenMP directive"
 ms.assetid: 8b54e034-9db2-4c1a-a2b1-72e14e930506
 caps.latest.revision: 13
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # for (OpenMP)
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

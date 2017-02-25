@@ -1,8 +1,7 @@
 ---
 title: "Modello a oggetti OLE DB | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "rowset, modello a oggetto OLE DB"
 ms.assetid: 1a274a25-c310-4430-a1ec-bd2bd8120eff
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Modello a oggetti OLE DB
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

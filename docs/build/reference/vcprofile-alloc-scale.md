@@ -1,8 +1,7 @@
 ---
 title: "VCPROFILE_ALLOC_SCALE | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "VCPROFILE_ALLOC_SCALE (variabile di ambiente)"
 ms.assetid: 5cb5ce27-f9b8-489b-b46c-d6e9bcab2d34
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # VCPROFILE_ALLOC_SCALE
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

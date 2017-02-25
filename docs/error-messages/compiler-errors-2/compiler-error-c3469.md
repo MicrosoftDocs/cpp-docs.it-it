@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3469 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3469"
 ms.assetid: e23b0e5c-c704-4e67-a868-bf02c2055d85
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Errore del compilatore C3469
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Classe concurrent_queue | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "concurrent_queue (classe)"
 ms.assetid: c2218996-d0ea-40e9-b002-e9a15b085f51
 caps.latest.revision: 21
-caps.handback.revision: 15
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # Classe concurrent_queue
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

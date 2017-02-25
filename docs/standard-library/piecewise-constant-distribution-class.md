@@ -1,8 +1,7 @@
 ---
 title: "Classe piecewise_constant_distribution | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "piecewise_constant_distribution (classe)"
 ms.assetid: 2c9a21fa-623e-4d63-b827-3f1556b6dedb
 caps.latest.revision: 23
-caps.handback.revision: 16
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # Classe piecewise_constant_distribution
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

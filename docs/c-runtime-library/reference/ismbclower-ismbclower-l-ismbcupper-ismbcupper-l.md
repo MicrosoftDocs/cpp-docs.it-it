@@ -1,8 +1,7 @@
 ---
 title: "_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,7 +31,6 @@ f1_keywords:
   - "_ismbclower"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_ismbclower (funzione)"
   - "_ismbclower_l (funzione)"
@@ -44,10 +42,10 @@ helpviewer_keywords:
   - "ismbcupper_l (funzione)"
 ms.assetid: 17d89587-65bc-477c-ba8f-a84e63cf59e7
 caps.latest.revision: 19
-caps.handback.revision: 19
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # _ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

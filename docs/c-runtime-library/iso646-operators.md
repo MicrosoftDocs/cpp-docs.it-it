@@ -1,8 +1,7 @@
 ---
 title: "Operatori ISO646 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 93e6d3e7-4889-4d8e-8dcb-c1a6b9bbe0f5
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # Operatori ISO646
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

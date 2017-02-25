@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore C4484 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4484"
 ms.assetid: 3d30e5b3-2297-45b7-a37a-1360056fdd0e
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Avviso del compilatore C4484
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

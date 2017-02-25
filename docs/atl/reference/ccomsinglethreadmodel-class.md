@@ -1,8 +1,7 @@
 ---
 title: "CComSingleThreadModel Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "single-threaded applications, ATL"
 ms.assetid: e5dc30c7-405a-4ba4-8ae9-51937243fce8
 caps.latest.revision: 19
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # CComSingleThreadModel Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

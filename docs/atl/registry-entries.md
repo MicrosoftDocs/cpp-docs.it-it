@@ -1,8 +1,7 @@
 ---
 title: "Registry Entries | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "Registro di sistema, ATL services entries"
 ms.assetid: 881989b7-61bb-459a-a13e-3bfcb33e184e
 caps.latest.revision: 10
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Registry Entries
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Aggiunta di colonne al controllo (visualizzazione dei rapporti) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "visualizzazioni, rapporto"
 ms.assetid: 7392c0d7-f8a5-4e7b-9ae7-b53dc9dd80ae
 caps.latest.revision: 12
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Aggiunta di colonne al controllo (visualizzazione dei rapporti)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

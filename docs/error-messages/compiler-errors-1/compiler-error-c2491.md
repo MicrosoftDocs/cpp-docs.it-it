@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2491 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2491"
 ms.assetid: 4e5a8f81-124e-402c-a5ec-d35a89b5469e
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Errore del compilatore C2491
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

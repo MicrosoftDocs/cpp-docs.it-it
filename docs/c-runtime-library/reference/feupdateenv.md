@@ -1,8 +1,7 @@
 ---
 title: "feupdateenv | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,16 +27,15 @@ f1_keywords:
   - "feupdateenv"
   - "fenv/feupdateenv"
 dev_langs: 
-  - "C"
   - "C++"
 helpviewer_keywords: 
   - "funzione feupdateenv"
 ms.assetid: 3d170042-dfd5-4e4f-a55f-038cf2296cc9
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # feupdateenv
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

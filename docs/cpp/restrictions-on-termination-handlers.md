@@ -1,8 +1,7 @@
 ---
 title: "Limitazioni ai gestori di terminazione | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "try-catch (parola chiave) [C++], gestori di terminazione"
 ms.assetid: 8b1cb481-303f-4e79-b409-57a002a9fa9e
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Limitazioni ai gestori di terminazione
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

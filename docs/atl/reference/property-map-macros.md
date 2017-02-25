@@ -1,8 +1,7 @@
 ---
 title: "Property Map Macros | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "mappe di proprietà"
 ms.assetid: 128bc742-2b98-4b97-a243-684dbb83db77
 caps.latest.revision: 17
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # Property Map Macros
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

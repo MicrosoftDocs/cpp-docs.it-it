@@ -1,8 +1,7 @@
 ---
 title: "Limiti sulle costanti a virgola mobile | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "intervalli, costanti a virgola mobile"
 ms.assetid: fc718652-1f4c-4ed8-af60-0e769637459c
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Limiti sulle costanti a virgola mobile
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Costanti modalit&#224; di conversione | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,7 +14,6 @@ f1_keywords:
   - "_O_RAW"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_O_BINARY (costante)"
   - "_O_RAW (costante)"
@@ -29,10 +27,10 @@ helpviewer_keywords:
   - "conversione, modalità"
 ms.assetid: a5993bf4-7e7a-47f9-83c3-e46332b85579
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Costanti modalit&#224; di conversione
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Errore dell‘analizzatore di espressioni CXX0026 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "CXX0026"
 ms.assetid: b5bc15f2-f179-4b87-ae88-a57e08e43bfa
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Errore dell‘analizzatore di espressioni CXX0026
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

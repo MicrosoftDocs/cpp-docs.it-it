@@ -1,8 +1,7 @@
 ---
 title: "Metodo WeakReference::DecrementStrongReference | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "DecrementStrongReference (metodo)"
 ms.assetid: 97d70d9f-41b8-4f8d-a6fa-4137cc4f9029
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Metodo WeakReference::DecrementStrongReference
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

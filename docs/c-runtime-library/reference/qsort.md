@@ -1,8 +1,7 @@
 ---
 title: "qsort | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,6 +20,7 @@ apilocation:
   - "msvcr110_clr0400.dll"
   - "msvcr120.dll"
   - "msvcr120_clr0400.dll"
+  - "ntdll.dll"
   - "ucrtbase.dll"
   - "api-ms-win-crt-utility-l1-1-0.dll"
 apitype: "DLLExport"
@@ -28,7 +28,6 @@ f1_keywords:
   - "qsort"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "qsort (funzione)"
   - "quick-sort (algoritmo)"
@@ -36,10 +35,10 @@ helpviewer_keywords:
   - "matrici [CRT], ordinamento"
 ms.assetid: d6cb33eb-d209-485f-8d41-229eb743c027
 caps.latest.revision: 19
-caps.handback.revision: 17
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # qsort
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

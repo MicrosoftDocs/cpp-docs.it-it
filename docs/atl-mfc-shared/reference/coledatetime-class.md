@@ -1,8 +1,7 @@
 ---
 title: "COleDateTime Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "time-only values"
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
 caps.latest.revision: 34
-caps.handback.revision: 26
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 35
 ---
 # COleDateTime Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

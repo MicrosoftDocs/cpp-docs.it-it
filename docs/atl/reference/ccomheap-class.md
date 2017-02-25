@@ -1,8 +1,7 @@
 ---
 title: "CComHeap Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "CComHeap class"
 ms.assetid: c74183ce-98ae-46fb-b186-93ea4cf0222b
 caps.latest.revision: 22
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # CComHeap Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

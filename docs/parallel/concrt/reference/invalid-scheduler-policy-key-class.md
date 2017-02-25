@@ -1,8 +1,7 @@
 ---
 title: "Classe invalid_scheduler_policy_key | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "invalid_scheduler_policy_key (classe)"
 ms.assetid: 6a7c42fe-9bc4-4a02-bebb-99fe9ef9817d
 caps.latest.revision: 19
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # Classe invalid_scheduler_policy_key
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

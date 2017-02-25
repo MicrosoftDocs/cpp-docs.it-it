@@ -1,8 +1,7 @@
 ---
 title: "Vincoli delle DLL a caricamento ritardato | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "DLL [C++], vincoli"
 ms.assetid: 0097ff65-550f-4a4e-8ac3-39bf6404f926
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Vincoli delle DLL a caricamento ritardato
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

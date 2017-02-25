@@ -1,8 +1,7 @@
 ---
 title: "Utilizzo dei modelli consumer OLE DB | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "applicazioni di esempio [C++], modelli OLE DB"
 ms.assetid: 526aa897-5961-4396-85cb-c84f77113551
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Utilizzo dei modelli consumer OLE DB
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

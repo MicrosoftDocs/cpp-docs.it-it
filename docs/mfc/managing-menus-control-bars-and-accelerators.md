@@ -1,8 +1,7 @@
 ---
 title: "Gestione di menu, barre di controllo e tasti di scelta rapida | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "oggetti dell'interfaccia utente, aggiornamento"
 ms.assetid: 97ca1997-06df-4373-b023-4f7ecd81047b
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Gestione di menu, barre di controllo e tasti di scelta rapida
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

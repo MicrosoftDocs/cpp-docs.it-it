@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore di risorse RC2144 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "RC2144"
 ms.assetid: 1b3ff39a-92cd-4a04-b1a3-b1fa6a805813
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Errore del compilatore di risorse RC2144
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "CMFCCaptionButton Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "CMFCCaptionButton class"
 ms.assetid: c5774b38-c0dd-414a-9ede-3b2f78f233ec
 caps.latest.revision: 28
-caps.handback.revision: 16
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 30
 ---
 # CMFCCaptionButton Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

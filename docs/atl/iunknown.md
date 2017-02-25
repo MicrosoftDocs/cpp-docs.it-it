@@ -1,8 +1,7 @@
 ---
 title: "IUnknown | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "IUnknown interface"
 ms.assetid: e6b85472-e54b-4b8c-b19f-4454d6c05a8f
 caps.latest.revision: 12
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # IUnknown
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

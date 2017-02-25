@@ -1,8 +1,7 @@
 ---
 title: "Classe regex_error | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "regex_error (classe) [TR1]"
 ms.assetid: 3333a1a3-ca6f-4612-84b2-1b4c7e3db5a4
 caps.latest.revision: 19
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # Classe regex_error
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore C4746 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 5e79ab46-6031-499a-a986-716c866b6c0e
 caps.latest.revision: 2
-caps.handback.revision: 2
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 2
 ---
 # Avviso del compilatore C4746
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

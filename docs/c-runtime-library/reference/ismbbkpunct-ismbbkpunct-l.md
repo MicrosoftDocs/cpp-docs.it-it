@@ -1,8 +1,7 @@
 ---
 title: "_ismbbkpunct, _ismbbkpunct_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,7 +31,6 @@ f1_keywords:
   - "_ismbbkpunct"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_ismbbkpunct_l (funzione)"
   - "ismbbkpunct_l (funzione)"
@@ -40,10 +38,10 @@ helpviewer_keywords:
   - "_ismbbkpunct (funzione)"
 ms.assetid: a04c59cd-5ca7-4296-bec0-2b0d7f04edd0
 caps.latest.revision: 19
-caps.handback.revision: 19
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # _ismbbkpunct, _ismbbkpunct_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

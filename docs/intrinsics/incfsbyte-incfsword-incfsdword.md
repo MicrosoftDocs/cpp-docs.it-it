@@ -1,8 +1,7 @@
 ---
 title: "__incfsbyte, __incfsword, __incfsdword | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "__incfsbyte (funzione intrinseca)"
 ms.assetid: 820457fb-e35e-42d3-bcb6-725da3281c64
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # __incfsbyte, __incfsword, __incfsdword
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

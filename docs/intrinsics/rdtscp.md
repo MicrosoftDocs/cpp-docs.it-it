@@ -1,8 +1,7 @@
 ---
 title: "__rdtscp | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "rdtscp (istruzione)"
 ms.assetid: f17d9a9c-88bb-44e0-b69d-d516bc1c93ee
 caps.latest.revision: 13
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # __rdtscp
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

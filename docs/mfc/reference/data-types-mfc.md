@@ -1,8 +1,7 @@
 ---
 title: "Tipi di dati (MFC) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -35,10 +34,10 @@ helpviewer_keywords:
   - "WPARAM (tipo di dati)"
 ms.assetid: 8954848b-2c01-4a4f-abf5-ee55f6a05eeb
 caps.latest.revision: 14
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Tipi di dati (MFC)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

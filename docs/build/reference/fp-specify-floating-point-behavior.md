@@ -1,8 +1,7 @@
 ---
 title: "/fp (Specifica il comportamento della virgola mobile) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "-fp (opzione del compilatore) [C++]"
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
 caps.latest.revision: 21
-caps.handback.revision: 21
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # /fp (Specifica il comportamento della virgola mobile)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

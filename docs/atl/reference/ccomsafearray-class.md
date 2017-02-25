@@ -1,8 +1,7 @@
 ---
 title: "Classe CComSafeArray | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Classe CComSafeArray"
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
 caps.latest.revision: 26
-caps.handback.revision: 14
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 29
 ---
 # Classe CComSafeArray
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

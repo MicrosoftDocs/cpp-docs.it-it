@@ -1,8 +1,7 @@
 ---
 title: "GetProcAddress | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "esportazioni ordinali [C++]"
 ms.assetid: 48d14ae0-47ea-4c5d-96b1-2c158f1a26af
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # GetProcAddress
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

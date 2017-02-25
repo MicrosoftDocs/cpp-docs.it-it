@@ -1,8 +1,7 @@
 ---
 title: "/Fx (Esegue il merge del codice) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "/Fx (opzione del compilatore) [C++]"
 ms.assetid: 14f0e301-3bab-45a3-bbdf-e7ce66f20560
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # /Fx (Esegue il merge del codice)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Classe CW2AEX | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "CW2AEX (classe)"
 ms.assetid: 44dc2cf5-dd30-440b-a9b9-b21b43f49843
 caps.latest.revision: 21
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # Classe CW2AEX
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

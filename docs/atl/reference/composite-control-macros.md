@@ -1,8 +1,7 @@
 ---
 title: "Composite Control Macros | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "controlli composti, macro"
 ms.assetid: 17f2dd5e-07e6-4aa6-b965-7a361c78c45e
 caps.latest.revision: 16
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # Composite Control Macros
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

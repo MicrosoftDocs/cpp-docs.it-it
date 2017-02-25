@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livello 1) C4462 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4462"
 ms.assetid: 4e20aca4-293e-4c75-a83d-961c27ab7840
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Avviso del compilatore (livello 1) C4462
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Adding Version Information for Another Language | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "version information, adding for languages"
 ms.assetid: 17f6273c-e1cc-441a-a3d8-f564341cbf20
 caps.latest.revision: 14
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Adding Version Information for Another Language
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

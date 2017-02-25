@@ -1,8 +1,7 @@
 ---
 title: "CDataSource::OpenFromFileName | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "OpenFromFileName (metodo)"
 ms.assetid: c4226de6-59da-4368-9c15-c5afab86f68b
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # CDataSource::OpenFromFileName
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Limitazioni di /clr | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "/clr (opzione del compilatore) [C++], restrizioni"
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
 caps.latest.revision: 27
-caps.handback.revision: 27
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 27
 ---
 # Limitazioni di /clr
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

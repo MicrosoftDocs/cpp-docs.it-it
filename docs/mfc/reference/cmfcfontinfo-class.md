@@ -1,8 +1,7 @@
 ---
 title: "CMFCFontInfo Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "CMFCFontInfo::CMFCFontInfo constructor"
 ms.assetid: f88329b2-d74e-4921-9441-a3bb6536a049
 caps.latest.revision: 26
-caps.handback.revision: 14
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 28
 ---
 # CMFCFontInfo Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Classe CArrayRowset | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "CArrayRowset (classe)"
 ms.assetid: 511427e1-73ca-4fd8-9ba1-ae9463557cb6
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Classe CArrayRowset
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

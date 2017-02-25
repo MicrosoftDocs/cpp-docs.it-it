@@ -1,8 +1,7 @@
 ---
 title: "Classe task_canceled | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "task_canceled (classe)"
 ms.assetid: c3f0b234-2cc1-435f-a48e-995f45b190be
 caps.latest.revision: 11
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Classe task_canceled
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "_CrtSetDebugFillThreshold | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,7 +27,6 @@ f1_keywords:
   - "CrtSetDebugFillThreshold"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_CrtSetDebugFillThreshold (funzione)"
   - "0xFD"
@@ -37,10 +35,10 @@ helpviewer_keywords:
   - "debug, comportamento di riempimento buffer"
 ms.assetid: 6cb360e8-56ae-4248-b17f-e28aee3e0ed7
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # _CrtSetDebugFillThreshold
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

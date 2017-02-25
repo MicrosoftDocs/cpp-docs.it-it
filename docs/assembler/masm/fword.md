@@ -1,8 +1,7 @@
 ---
 title: "FWORD | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "FWORD directive"
 ms.assetid: 8fd33d12-d49d-4e2a-80ac-0f55792e99be
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # FWORD
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

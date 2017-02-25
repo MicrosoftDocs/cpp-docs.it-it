@@ -1,8 +1,7 @@
 ---
 title: "CSimpleArray Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "CSimpleArray class"
 ms.assetid: ee0c9f39-b61c-4c18-bc43-4eada21dca3a
 caps.latest.revision: 20
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # CSimpleArray Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

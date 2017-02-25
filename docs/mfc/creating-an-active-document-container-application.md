@@ -1,8 +1,7 @@
 ---
 title: "Creazione di un&#39;applicazione contenitore di documenti attivi | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "MFC COM [C++], contenimento dei documenti attivi"
 ms.assetid: 14e2d022-a6c5-4249-8712-706b0f4433f7
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Creazione di un&#39;applicazione contenitore di documenti attivi
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

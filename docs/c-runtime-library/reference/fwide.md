@@ -1,8 +1,7 @@
 ---
 title: "fwide | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,10 +30,10 @@ helpviewer_keywords:
   - "fwide (funzione)"
 ms.assetid: a4641f5b-d74f-4946-95d5-53a64610d28d
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # fwide
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

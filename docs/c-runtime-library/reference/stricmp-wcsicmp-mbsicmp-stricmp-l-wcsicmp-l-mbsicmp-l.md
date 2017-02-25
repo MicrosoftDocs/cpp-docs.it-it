@@ -1,8 +1,7 @@
 ---
 title: "_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -26,6 +25,7 @@ apilocation:
   - "msvcr110_clr0400.dll"
   - "msvcr120.dll"
   - "msvcr120_clr0400.dll"
+  - "ntoskrnl.exe"
   - "ucrtbase.dll"
   - "api-ms-win-crt-multibyte-l1-1-0.dll"
   - "api-ms-win-crt-string-l1-1-0.dll"
@@ -44,7 +44,6 @@ f1_keywords:
   - "mbsicmp"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_fstricmp (funzione)"
   - "_ftcsicmp (funzione)"
@@ -67,10 +66,10 @@ helpviewer_keywords:
   - "wcsicmp_l (funzione)"
 ms.assetid: 0e1ee515-0d75-435a-a445-8875d4669b50
 caps.latest.revision: 28
-caps.handback.revision: 26
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 28
 ---
 # _stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

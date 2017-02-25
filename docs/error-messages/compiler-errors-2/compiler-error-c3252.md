@@ -1,8 +1,7 @@
 ---
 title: "Compiler Error C3252 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3252"
 ms.assetid: aa9ad096-e9ac-41c7-8ad9-b966751c7c75
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Compiler Error C3252
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

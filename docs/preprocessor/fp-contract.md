@@ -1,8 +1,7 @@
 ---
 title: "fp_contract | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,16 +13,15 @@ f1_keywords:
   - "fp_contract_CPP"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "fp_contract (pragma)"
   - "pragma, fp_contract"
 ms.assetid: 15b97338-6680-4287-ba2a-2dccc5b2ccf5
 caps.latest.revision: 12
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # fp_contract
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3765 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3765"
 ms.assetid: feadee7a-fcfb-402c-af2f-0e656f814a13
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Errore del compilatore C3765
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

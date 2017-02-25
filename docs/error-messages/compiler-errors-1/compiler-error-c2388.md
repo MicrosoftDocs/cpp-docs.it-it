@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2388 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2388"
 ms.assetid: 764ad2d7-cb04-425f-ba30-70989488c4a4
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Errore del compilatore C2388
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

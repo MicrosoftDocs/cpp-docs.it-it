@@ -1,8 +1,7 @@
 ---
 title: "Messaggi WM_: P - R | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -44,10 +43,10 @@ helpviewer_keywords:
   - "WM_ (messaggi)"
 ms.assetid: f46962e5-8329-4f1f-9b4d-fdad2a5ce1f8
 caps.latest.revision: 15
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # Messaggi WM_: P - R
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "csinh, csinhf, csinhl | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -35,7 +34,6 @@ f1_keywords:
   - "complex/csinhf"
   - "complex/csinhl"
 dev_langs: 
-  - "C"
   - "C++"
 helpviewer_keywords: 
   - "funzione csinh"
@@ -43,10 +41,10 @@ helpviewer_keywords:
   - "funzione csinhl"
 ms.assetid: cc616e55-d14d-4cd3-91f0-fbee03ce5edf
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # csinh, csinhf, csinhl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

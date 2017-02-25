@@ -1,8 +1,7 @@
 ---
 title: "operator LROFFSET | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "LROFFSET operator"
 ms.assetid: 61ab45d4-7a30-440d-9c11-2a9dfa6ae565
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # operator LROFFSET
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "__hook | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "gestori eventi, connessione di eventi"
 ms.assetid: f4cabb10-d293-4c0e-a1d2-4745ef9cc22c
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # __hook
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

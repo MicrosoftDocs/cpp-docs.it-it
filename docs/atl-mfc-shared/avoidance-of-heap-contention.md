@@ -1,8 +1,7 @@
 ---
 title: "Avoidance of Heap Contention | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "heap contention"
 ms.assetid: 797129d7-5f8c-4b0e-8974-bb93217e9ab5
 caps.latest.revision: 12
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Avoidance of Heap Contention
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

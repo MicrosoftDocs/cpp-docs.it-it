@@ -1,8 +1,7 @@
 ---
 title: "Errore irreversibile C1900 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C1900"
 ms.assetid: 3aaa583b-4c1a-45de-aa34-527d806f2cb5
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Errore irreversibile C1900
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "_free_dbg | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,7 +27,6 @@ f1_keywords:
   - "free_dbg"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "blocchi di memoria, deallocazione"
   - "liberazione di memoria"
@@ -36,10 +34,10 @@ helpviewer_keywords:
   - "free_dbg (funzione)"
 ms.assetid: fc5e8299-616d-48a0-b979-e037117278c6
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # _free_dbg
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

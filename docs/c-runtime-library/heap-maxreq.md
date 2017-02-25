@@ -1,8 +1,7 @@
 ---
 title: "_HEAP_MAXREQ | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,17 +13,16 @@ f1_keywords:
   - "_HEAP_MAXREQ"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_HEAP_MAXREQ (costanti)"
   - "heap (costanti)"
   - "HEAP_MAXREQ (costanti)"
 ms.assetid: c2dbc2ea-35ad-45d8-b459-d76ba0089ff7
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # _HEAP_MAXREQ
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2719 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2719"
 ms.assetid: ea6236d3-8286-45cc-9478-c84ad3dd3c8e
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Errore del compilatore C2719
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

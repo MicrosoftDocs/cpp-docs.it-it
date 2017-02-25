@@ -1,8 +1,7 @@
 ---
 title: "_scalb | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,17 +28,16 @@ f1_keywords:
   - "_scalb"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_scalb (funzione)"
   - "calcoli esponenziali"
   - "scalb (funzione)"
 ms.assetid: 148cf5a8-b405-44bf-a1f0-7487adba2421
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # _scalb
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

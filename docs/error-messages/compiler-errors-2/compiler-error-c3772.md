@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3772 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3772"
 ms.assetid: 63e938d4-088d-41cc-a562-5881a05b5710
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Errore del compilatore C3772
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "SBYTE (MASM) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "SBYTE directive"
 ms.assetid: ae9323cc-4ed5-45fa-9cd6-c241868e4cfd
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # SBYTE (MASM)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Spazio dei nomi Microsoft::WRL | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "WRL (spazio dei nomi)"
 ms.assetid: 01118a8f-f564-4859-b87e-9444848585a1
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Spazio dei nomi Microsoft::WRL
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

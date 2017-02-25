@@ -1,8 +1,7 @@
 ---
 title: "ConvertBSTRToString | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "ConvertBSTRToString (funzione)"
 ms.assetid: ab6ce555-3d75-4e9c-9cb8-ada6d8ce43b1
 caps.latest.revision: 11
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # ConvertBSTRToString
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

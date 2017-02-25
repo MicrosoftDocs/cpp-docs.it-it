@@ -1,8 +1,7 @@
 ---
 title: "Operazioni di flusso nei controlli Rich Edit | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "archiviazione di flussi e CRichEditCtrl"
 ms.assetid: 110b4684-1e76-4ca6-9ef0-5bc8b2d93c78
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Operazioni di flusso nei controlli Rich Edit
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

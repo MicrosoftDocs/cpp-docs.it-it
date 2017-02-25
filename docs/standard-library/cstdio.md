@@ -1,8 +1,7 @@
 ---
 title: "&lt;cstdio&gt; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "cstdio (intestazione)"
 ms.assetid: 838ca50b-dea5-4ee3-a39c-e7c23a6ee016
 caps.latest.revision: 19
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # &lt;cstdio&gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

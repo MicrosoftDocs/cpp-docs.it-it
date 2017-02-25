@@ -1,8 +1,7 @@
 ---
 title: "Errore irreversibile C1190 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C1190"
 ms.assetid: dee2266d-6c40-4f6e-91db-f01e65f8d2bc
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Errore irreversibile C1190
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

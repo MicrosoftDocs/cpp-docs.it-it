@@ -1,8 +1,7 @@
 ---
 title: "CSimpleArrayEqualHelper Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "CSimpleArrayEqualHelper class"
 ms.assetid: a2b55d89-78c9-42ef-842c-5304c6d20ad6
 caps.latest.revision: 19
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # CSimpleArrayEqualHelper Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

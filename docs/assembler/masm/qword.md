@@ -1,8 +1,7 @@
 ---
 title: "QWORD | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "QWORD directive"
 ms.assetid: 70fcad8f-db48-4cb0-9710-8feb58baab22
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # QWORD
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

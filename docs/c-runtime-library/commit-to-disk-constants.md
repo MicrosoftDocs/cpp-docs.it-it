@@ -1,8 +1,7 @@
 ---
 title: "Costanti di commit su disco | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,15 +12,14 @@ f1_keywords:
   - "vc.constants"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "costanti di commit su disco"
 ms.assetid: 0b903b23-b4fa-431e-a937-51d95f695ecf
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Costanti di commit su disco
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

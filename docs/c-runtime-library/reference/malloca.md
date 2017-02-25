@@ -1,8 +1,7 @@
 ---
 title: "_malloca | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,17 +27,16 @@ f1_keywords:
   - "_malloca"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_malloca (funzione)"
   - "malloca (funzione)"
   - "allocazione di memoria, stack"
 ms.assetid: 293992df-cfca-4bc9-b313-0a733a6bb936
 caps.latest.revision: 27
-caps.handback.revision: 27
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 27
 ---
 # _malloca
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

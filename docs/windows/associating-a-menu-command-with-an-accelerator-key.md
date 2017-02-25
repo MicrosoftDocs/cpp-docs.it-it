@@ -1,8 +1,7 @@
 ---
 title: "Associating a Menu Command with an Accelerator Key | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "menu commands, associating with keyboard shortcuts"
 ms.assetid: ad2de43f-b20a-4c9f-bda8-0420179da48c
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Associating a Menu Command with an Accelerator Key
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Compiler Error C2392 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2392"
 ms.assetid: 98ced473-6383-46ed-b79c-21857d65dcb2
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Compiler Error C2392
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

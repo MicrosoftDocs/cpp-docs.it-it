@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3665 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3665"
 ms.assetid: 893bb47e-8de1-43aa-af7d-fa47ad149ee9
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Errore del compilatore C3665
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Regole di uniformit&#224; per l&#39;utilizzo per singolo file delle intestazioni precompilate | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "file di intestazione precompilata, regole di coerenza"
 ms.assetid: afd49365-48bc-41f4-b700-fe8297b944a1
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Regole di uniformit&#224; per l&#39;utilizzo per singolo file delle intestazioni precompilate
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

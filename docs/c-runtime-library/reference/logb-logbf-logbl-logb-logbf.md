@@ -1,8 +1,7 @@
 ---
 title: "logb, logbf, logbl, _logb, _logbf | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -36,7 +35,6 @@ f1_keywords:
   - "logbf"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_logb (funzione)"
   - "_logbf (funzione)"
@@ -50,10 +48,10 @@ helpviewer_keywords:
   - "mantisse, variabili a virgola mobile"
 ms.assetid: 780c4daa-6fe6-4fbc-9412-4c1ba1a1766f
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # logb, logbf, logbl, _logb, _logbf
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

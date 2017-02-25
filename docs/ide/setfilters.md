@@ -1,8 +1,7 @@
 ---
 title: "SetFilters | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "SetFilters (metodo)"
 ms.assetid: ae934e1b-8ead-4c1d-a0f8-e9c80d182340
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # SetFilters
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

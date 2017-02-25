@@ -1,8 +1,7 @@
 ---
 title: "Programmi multithread | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "threading [C++], informazioni sul threading"
 ms.assetid: 02443596-f7e1-48d0-b3a4-39ee0e54e444
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Programmi multithread
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

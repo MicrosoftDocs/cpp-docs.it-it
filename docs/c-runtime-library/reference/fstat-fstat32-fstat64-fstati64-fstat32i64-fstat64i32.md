@@ -1,8 +1,7 @@
 ---
 title: "_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -44,7 +43,6 @@ f1_keywords:
   - "_fstat64i32"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_fstat64 (funzione)"
   - "fstati64 (funzione)"
@@ -61,10 +59,10 @@ helpviewer_keywords:
   - "fstat32i64 (funzione)"
 ms.assetid: 088f5e7a-9636-4cf7-ab8e-e28d2aa4280a
 caps.latest.revision: 23
-caps.handback.revision: 23
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # _fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

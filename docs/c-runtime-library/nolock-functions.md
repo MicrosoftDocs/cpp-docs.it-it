@@ -1,8 +1,7 @@
 ---
 title: "Funzioni _nolock | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,16 +10,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_nolock (funzioni)"
   - "nolock (funzioni)"
 ms.assetid: 7d651d87-38d2-4303-9897-fdb5f7a3e899
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Funzioni _nolock
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

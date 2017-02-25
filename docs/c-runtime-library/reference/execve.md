@@ -1,8 +1,7 @@
 ---
 title: "execve | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,15 +26,14 @@ f1_keywords:
   - "execve"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "execve (funzione)"
 ms.assetid: f28aabe4-fd76-422e-a0e4-80864736d245
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # execve
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

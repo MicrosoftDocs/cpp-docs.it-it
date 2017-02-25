@@ -1,8 +1,7 @@
 ---
 title: "CString Operations Relating to C-Style Strings | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -26,10 +25,10 @@ helpviewer_keywords:
   - "stringhe [C++], string operations"
 ms.assetid: 5048de8a-5298-4891-b8a0-c554b5a3ac1b
 caps.latest.revision: 17
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # CString Operations Relating to C-Style Strings
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

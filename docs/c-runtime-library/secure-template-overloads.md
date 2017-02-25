@@ -1,8 +1,7 @@
 ---
 title: "Overload di modelli sicuri | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,7 +14,6 @@ f1_keywords:
   - "_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES"
   - "_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES"
@@ -23,10 +21,10 @@ helpviewer_keywords:
   - "overload di modelli sicuri"
 ms.assetid: 562741d0-39c0-485e-8529-73d740f29f8f
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Overload di modelli sicuri
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

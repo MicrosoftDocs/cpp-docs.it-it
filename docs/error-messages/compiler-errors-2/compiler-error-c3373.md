@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3373 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3373"
 ms.assetid: 6e7586c3-1a15-4773-ad20-f90090a400dc
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Errore del compilatore C3373
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

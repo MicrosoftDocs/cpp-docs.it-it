@@ -1,8 +1,7 @@
 ---
 title: "_aligned_offset_malloc | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,16 +28,15 @@ f1_keywords:
   - "aligned_offset_malloc"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_aligned_offset_malloc (funzione)"
   - "aligned_offset_malloc (funzione)"
 ms.assetid: 447681a3-7c95-4655-86ba-fa3a4ca4c521
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # _aligned_offset_malloc
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

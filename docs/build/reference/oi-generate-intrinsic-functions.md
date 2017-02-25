@@ -1,8 +1,7 @@
 ---
 title: "/Oi (Genera funzioni intrinseche) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "-Oi (opzione del compilatore) [C++]"
 ms.assetid: fa4a3bf6-0ed8-481b-91c0-add7636132b4
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # /Oi (Genera funzioni intrinseche)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

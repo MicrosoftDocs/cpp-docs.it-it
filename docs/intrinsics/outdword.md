@@ -1,8 +1,7 @@
 ---
 title: "__outdword | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "__outdword (funzione intrinseca)"
 ms.assetid: ed1e4994-a84b-4759-8bf9-cd48fb073f4d
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # __outdword
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

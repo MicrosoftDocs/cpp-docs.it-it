@@ -1,8 +1,7 @@
 ---
 title: "Classe is_member_function_pointer | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "is_member_function_pointer"
 ms.assetid: 02e372c4-2714-40f2-b376-2e10ca91c8ed
 caps.latest.revision: 19
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # Classe is_member_function_pointer
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

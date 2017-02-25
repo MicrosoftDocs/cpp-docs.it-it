@@ -1,8 +1,7 @@
 ---
 title: "Classi ATL | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "classi [C++], ATL"
 ms.assetid: 7da42e2d-ac84-4506-92bd-502a86d68bdc
 caps.latest.revision: 26
-caps.handback.revision: 18
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 29
 ---
 # Classi ATL
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

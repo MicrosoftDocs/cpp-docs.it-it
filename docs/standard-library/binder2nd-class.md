@@ -1,8 +1,7 @@
 ---
 title: "Classe binder2nd | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "binder2nd (classe)"
 ms.assetid: b2a9c1d1-dfc4-4ca9-a10e-ae84e195a62d
 caps.latest.revision: 22
-caps.handback.revision: 16
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # Classe binder2nd
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

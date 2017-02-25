@@ -1,8 +1,7 @@
 ---
 title: "Classe CD2DSizeU | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "CD2DSizeU (classe)"
 ms.assetid: 6e679ba8-2112-43c3-8275-70b660856f02
 caps.latest.revision: 18
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # Classe CD2DSizeU
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

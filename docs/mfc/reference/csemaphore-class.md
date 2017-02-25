@@ -1,8 +1,7 @@
 ---
 title: "CSemaphore Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "synchronization objects, semafori"
 ms.assetid: 385fc7e4-8f86-4be2-85e1-d23b38c12f7f
 caps.latest.revision: 23
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # CSemaphore Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

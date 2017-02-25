@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3883 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3883"
 ms.assetid: cdd1c1f4-f268-4469-9c62-d52303114b0c
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Errore del compilatore C3883
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

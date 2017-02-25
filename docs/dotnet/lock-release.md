@@ -1,8 +1,7 @@
 ---
 title: "lock::release | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "lock::release"
 ms.assetid: b73d48fc-cf98-4b78-b39d-813d4a12fa84
 caps.latest.revision: 13
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # lock::release
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

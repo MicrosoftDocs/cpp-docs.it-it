@@ -1,8 +1,7 @@
 ---
 title: "_create_locale, _wcreate_locale | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,7 +31,6 @@ f1_keywords:
   - "__create_locale"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "__create_locale (funzione)"
   - "_create_locale (funzione)"
@@ -40,10 +38,10 @@ helpviewer_keywords:
   - "impostazioni locali, creazione"
 ms.assetid: ca362464-9f4a-4ec6-ab03-316c55c5be81
 caps.latest.revision: 23
-caps.handback.revision: 23
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # _create_locale, _wcreate_locale
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

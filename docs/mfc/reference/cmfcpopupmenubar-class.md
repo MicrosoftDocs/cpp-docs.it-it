@@ -1,8 +1,7 @@
 ---
 title: "Classe CMFCPopupMenuBar | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "CMFCPopupMenuBar (classe)"
 ms.assetid: 4c93c459-7f70-4240-8c63-280bb811e374
 caps.latest.revision: 32
-caps.handback.revision: 20
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 34
 ---
 # Classe CMFCPopupMenuBar
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

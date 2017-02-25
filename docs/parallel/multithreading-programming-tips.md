@@ -1,8 +1,7 @@
 ---
 title: "Multithreading: suggerimenti sulla programmazione | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,10 +26,10 @@ helpviewer_keywords:
   - "Windows (mappe di handle) [C++]"
 ms.assetid: ad14cc70-c91c-4c24-942f-13a75e58bf8a
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Multithreading: suggerimenti sulla programmazione
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

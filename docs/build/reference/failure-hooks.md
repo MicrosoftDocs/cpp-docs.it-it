@@ -1,8 +1,7 @@
 ---
 title: "Hook di errore | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "caricamento ritardato di DLL, errore di hook"
 ms.assetid: 12bb303b-ffe6-4471-bffe-9ef4f8bb2d30
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Hook di errore
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

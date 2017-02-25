@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livello 4) C4437 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: dc07e350-20eb-474c-a7ad-f841ae7ec339
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # Avviso del compilatore (livello 4) C4437
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

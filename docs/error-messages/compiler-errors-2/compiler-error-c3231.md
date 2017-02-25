@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3231 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3231"
 ms.assetid: fe5dc352-e634-45fa-9534-3da176294c98
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Errore del compilatore C3231
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

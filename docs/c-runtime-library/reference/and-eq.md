@@ -1,8 +1,7 @@
 ---
 title: "and_eq | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,10 +30,10 @@ helpviewer_keywords:
   - "and_eq (macro)"
 ms.assetid: 11091772-e359-4c2b-95c6-00841ac04354
 caps.latest.revision: 12
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # and_eq
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

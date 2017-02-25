@@ -1,8 +1,7 @@
 ---
 title: "Classe regex_traits&lt;wchar_t&gt; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "regex_traits<wchar_t> (classe)[TR1]"
 ms.assetid: 288d6fdb-fb8e-4a4d-904a-53916be7f95b
 caps.latest.revision: 17
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # Classe regex_traits&lt;wchar_t&gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

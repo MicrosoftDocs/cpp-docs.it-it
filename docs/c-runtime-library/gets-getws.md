@@ -1,8 +1,7 @@
 ---
 title: "gets, _getws | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,7 +26,6 @@ f1_keywords:
   - "_getws"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_getts (funzione)"
   - "_getws (funzione)"
@@ -39,10 +37,10 @@ helpviewer_keywords:
   - "flussi, recupero di linee"
 ms.assetid: 1ec2dd4b-f801-48ea-97c2-892590f16024
 caps.latest.revision: 32
-caps.handback.revision: 32
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 32
 ---
 # gets, _getws
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

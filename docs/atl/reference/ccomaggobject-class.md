@@ -1,8 +1,7 @@
 ---
 title: "CComAggObject Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "CComAggObject class"
 ms.assetid: 7aa90d69-d399-477b-880d-e2cdf0ef7881
 caps.latest.revision: 29
-caps.handback.revision: 17
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 32
 ---
 # CComAggObject Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

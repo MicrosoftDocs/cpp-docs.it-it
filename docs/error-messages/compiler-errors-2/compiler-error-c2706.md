@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2706 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2706"
 ms.assetid: e18da924-c42d-4b09-8e29-f4e0382d7dc6
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Errore del compilatore C2706
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2655 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2655"
 ms.assetid: beaefa6e-51b3-4df9-9150-960f3fbf40e0
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Errore del compilatore C2655
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

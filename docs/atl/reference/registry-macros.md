@@ -1,8 +1,7 @@
 ---
 title: "Registry Macros | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "Registro di sistema, ATL macros"
 ms.assetid: 3ee041da-c63b-42a4-89cf-2a4b2a6f81ae
 caps.latest.revision: 16
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # Registry Macros
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "/Y- (Ignora le opzioni di intestazioni precompilate) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "Y- (opzione del compilatore) [C++]"
 ms.assetid: cfaecb36-58db-46b8-b04d-cca6072b1b7a
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # /Y- (Ignora le opzioni di intestazioni precompilate)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

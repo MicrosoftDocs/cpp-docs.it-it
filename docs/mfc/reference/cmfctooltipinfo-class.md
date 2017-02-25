@@ -1,8 +1,7 @@
 ---
 title: "CMFCToolTipInfo Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "CMFCToolTipInfo class"
 ms.assetid: f9d3d7f8-1f08-4342-a7b2-683860e5d2a5
 caps.latest.revision: 27
-caps.handback.revision: 15
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 29
 ---
 # CMFCToolTipInfo Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

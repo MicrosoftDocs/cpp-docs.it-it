@@ -1,8 +1,7 @@
 ---
 title: "raw_interfaces_only | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,15 +12,14 @@ f1_keywords:
   - "raw_interfaces_only"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "raw_interfaces_only (attributo)"
 ms.assetid: 87056c6d-3f34-4248-af58-f5775a35bfb7
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # raw_interfaces_only
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "CCollations, CCollationInfo | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -47,10 +46,10 @@ helpviewer_keywords:
   - "m_szSchema"
 ms.assetid: d8b43c4d-9dd5-4043-b4c8-38c03bfa0c72
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # CCollations, CCollationInfo
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Controlli ActiveX MFC: argomenti avanzati | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "ThrowError (metodo)"
 ms.assetid: e9e34abb-8e2d-461e-bb9c-a1aec5dcecbd
 caps.latest.revision: 13
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Controlli ActiveX MFC: argomenti avanzati
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Metodo AsyncBase::OnStart | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "metodo OnStart"
 ms.assetid: 1e51f186-2918-4269-8e88-a7dfc3139c45
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # Metodo AsyncBase::OnStart
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Classe CD2DEllipse | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "CD2DEllipse (classe)"
 ms.assetid: e9f02f54-acf2-427e-b349-db50cd9a77df
 caps.latest.revision: 18
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # Classe CD2DEllipse
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "IAxWinHostWindow Interface | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "IAxWinHostWindow interface"
 ms.assetid: 9821c035-cd52-4c46-b58a-9278064f09b4
 caps.latest.revision: 21
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # IAxWinHostWindow Interface
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3094 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3094"
 ms.assetid: 10da9b7c-e72d-4013-9925-c83e1bb142db
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Errore del compilatore C3094
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

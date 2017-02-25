@@ -1,8 +1,7 @@
 ---
 title: "Classe CReversalTransition | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "CReversalTransition (classe)"
 ms.assetid: e89516be-2d07-4885-95a8-fc278f46e3ad
 caps.latest.revision: 18
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # Classe CReversalTransition
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

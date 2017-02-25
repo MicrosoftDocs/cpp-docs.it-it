@@ -1,8 +1,7 @@
 ---
 title: "_CIfmod | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -30,10 +29,10 @@ helpviewer_keywords:
   - "_CIfmod intrinseco"
 ms.assetid: 7c050653-7ec6-4810-b3a7-7a0057ea65ed
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # _CIfmod
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "char, wchar_t, char16_t, char32_t | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ dev_langs:
   - "C++"
 ms.assetid: 6b33e9f5-455b-4e49-8f12-a150cbfe2e5b
 caps.latest.revision: 2
-caps.handback.revision: 2
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 2
 ---
 # char, wchar_t, char16_t, char32_t
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

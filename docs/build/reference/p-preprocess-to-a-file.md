@@ -1,8 +1,7 @@
 ---
 title: "/P (Pre-elabora in un file) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "pre-elaborazione di file di output"
 ms.assetid: 123ee54f-8219-4a6f-9876-4227023d83fc
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # /P (Pre-elabora in un file)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

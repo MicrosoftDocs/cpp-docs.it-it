@@ -1,8 +1,7 @@
 ---
 title: "Mappe di connessione | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "mappe di connessione"
 ms.assetid: 1f25a9bc-6d09-4614-99cf-dc38e8ddfa73
 caps.latest.revision: 12
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Mappe di connessione
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

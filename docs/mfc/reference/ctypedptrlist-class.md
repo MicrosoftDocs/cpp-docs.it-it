@@ -1,8 +1,7 @@
 ---
 title: "CTypedPtrList Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "type-safe collections"
 ms.assetid: c273096e-1756-4340-864b-4a08b674a65e
 caps.latest.revision: 24
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # CTypedPtrList Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

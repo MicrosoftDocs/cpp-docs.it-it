@@ -1,8 +1,7 @@
 ---
 title: "Struttura AFX_GLOBAL_DATA | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "AFX_GLOBAL_DATA (costruttore)"
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
 caps.latest.revision: 30
-caps.handback.revision: 30
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 31
 ---
 # Struttura AFX_GLOBAL_DATA
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

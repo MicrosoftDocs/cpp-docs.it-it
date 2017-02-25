@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3470 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3470"
 ms.assetid: 170c7a9d-214d-41b1-8f15-d4a4fc38aaa5
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Errore del compilatore C3470
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "&lt; thread &gt; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ dev_langs:
   - "C++"
 ms.assetid: 0c858405-4efb-449d-bf76-70d3693c9234
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # &lt; thread &gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

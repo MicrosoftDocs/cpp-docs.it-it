@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livello 4) C4289 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4289"
 ms.assetid: 0dbd2863-4cde-4e16-894b-104a2d5fa724
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Avviso del compilatore (livello 4) C4289
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

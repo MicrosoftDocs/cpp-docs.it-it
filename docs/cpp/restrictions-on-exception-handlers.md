@@ -1,8 +1,7 @@
 ---
 title: "Limitazioni ai gestori di eccezioni | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "restrizioni, gestori eccezioni"
 ms.assetid: 31d63524-0e8c-419f-b87c-061f4c0ea470
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Limitazioni ai gestori di eccezioni
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

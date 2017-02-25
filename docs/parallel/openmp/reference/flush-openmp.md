@@ -1,8 +1,7 @@
 ---
 title: "flush (OpenMP) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "flush OpenMP directive"
 ms.assetid: 150ca46e-d4f7-4423-b0a4-838df40aeb67
 caps.latest.revision: 10
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # flush (OpenMP)
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

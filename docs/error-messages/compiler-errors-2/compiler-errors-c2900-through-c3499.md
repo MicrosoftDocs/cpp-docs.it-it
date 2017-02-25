@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatores C2900 Through C3499 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: e3440738-e11b-4878-9ae3-6bc6c53ba461
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # Errore del compilatores C2900 Through C3499
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

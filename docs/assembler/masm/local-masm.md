@@ -1,8 +1,7 @@
 ---
 title: "LOCAL (MASM) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "LOCAL directive"
 ms.assetid: 76147e2d-23ca-4f1e-8817-81428becd113
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # LOCAL (MASM)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "first_is | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "first_is attribute"
 ms.assetid: 89acbf56-3b38-4d44-83e8-1ce2f6f74ffd
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # first_is
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

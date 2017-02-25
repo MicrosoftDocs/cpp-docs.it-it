@@ -1,8 +1,7 @@
 ---
 title: "wcstombs, _wcstombs_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -30,7 +29,6 @@ f1_keywords:
   - "_wcstombs_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_wcstombs_l (funzione)"
   - "caratteri, conversione"
@@ -41,10 +39,10 @@ helpviewer_keywords:
   - "caratteri wide, conversione"
 ms.assetid: 91234252-9ea1-423a-af99-e9d0ce4a40e3
 caps.latest.revision: 30
-caps.handback.revision: 28
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 30
 ---
 # wcstombs, _wcstombs_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

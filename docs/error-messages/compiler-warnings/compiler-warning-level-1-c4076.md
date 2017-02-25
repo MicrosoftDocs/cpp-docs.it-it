@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livello 1) C4076 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4076"
 ms.assetid: 04581066-313a-4a11-bb60-721e6d038d75
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Avviso del compilatore (livello 1) C4076
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

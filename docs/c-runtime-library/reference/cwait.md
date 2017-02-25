@@ -1,8 +1,7 @@
 ---
-title: "_cwait | Microsoft Docs"
+title: "cwait | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,19 +24,17 @@ apilocation:
   - "api-ms-win-crt-process-l1-1-0.dll"
 apitype: "DLLExport"
 f1_keywords: 
-  - "_cwait"
+  - "cwait"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
-  - "_cwait (funzione)"
   - "cwait (funzione)"
 ms.assetid: d9b596b5-45f4-4e03-9896-3f383cb922b8
 caps.latest.revision: 23
-caps.handback.revision: 21
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # _cwait
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

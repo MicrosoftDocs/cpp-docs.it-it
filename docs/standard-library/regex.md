@@ -1,8 +1,7 @@
 ---
 title: "&lt;regex&gt; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "regex (intestazione) [TR1]"
 ms.assetid: 5dd4ef74-6063-4dbc-b692-1960bb736f0b
 caps.latest.revision: 23
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # &lt;regex&gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

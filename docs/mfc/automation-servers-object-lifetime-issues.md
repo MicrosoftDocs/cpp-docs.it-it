@@ -1,8 +1,7 @@
 ---
 title: "Server di automazione: problemi di durata degli oggetti | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "server, durata dell'automazione"
 ms.assetid: 342baacf-4015-4a0e-be2f-321424f1cb43
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Server di automazione: problemi di durata degli oggetti
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -38,7 +37,6 @@ f1_keywords:
   - "_copysignf"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_copysign (funzione)"
   - "_copysignf (funzione)"
@@ -48,10 +46,10 @@ helpviewer_keywords:
   - "copysignl (funzione)"
 ms.assetid: 009216d6-72a2-402d-aa6c-91d924b2c9e4
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

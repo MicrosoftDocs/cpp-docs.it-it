@@ -1,8 +1,7 @@
 ---
 title: "Fuso orario | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,15 +10,14 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "fusi orari"
 ms.assetid: ed46f7f2-1e76-493f-bb2f-58b9e6ccce85
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Fuso orario
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

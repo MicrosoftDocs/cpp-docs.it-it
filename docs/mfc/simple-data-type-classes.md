@@ -1,8 +1,7 @@
 ---
 title: "Classi del tipo di dati semplice | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "classi del tipo di dati semplice"
 ms.assetid: 0d591d68-0a33-49e9-8a6d-90c90de5c16a
 caps.latest.revision: 12
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Classi del tipo di dati semplice
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

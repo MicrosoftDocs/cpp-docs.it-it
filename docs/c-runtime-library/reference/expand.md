@@ -1,8 +1,7 @@
 ---
 title: "_expand | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -35,17 +34,16 @@ f1_keywords:
   - "_expand"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_expand (funzione)"
   - "expand (funzione)"
   - "blocchi di memoria, modifica delle dimensioni"
 ms.assetid: 4ac55410-39c8-45c7-bccd-3f1042ae2ed3
 caps.latest.revision: 22
-caps.handback.revision: 20
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # _expand
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "getcwd | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,15 +26,14 @@ f1_keywords:
   - "getcwd"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "getcwd (funzione)"
 ms.assetid: c740ab06-9ba0-4036-a025-ce3acded3ffe
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # getcwd
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

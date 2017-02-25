@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3057 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3057"
 ms.assetid: b0b2ba88-9c74-4bec-bf60-8fc72eade34c
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Errore del compilatore C3057
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

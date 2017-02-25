@@ -1,8 +1,7 @@
 ---
 title: "vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -30,6 +29,7 @@ apilocation:
   - "msvcr110_clr0400.dll"
   - "msvcr120.dll"
   - "msvcr120_clr0400.dll"
+  - "ntoskrnl.exe"
   - "ucrtbase.dll"
 apitype: "DLLExport"
 f1_keywords: 
@@ -46,7 +46,6 @@ f1_keywords:
   - "_vsnwprintf_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "vsntprintf (funzione)"
   - "_vsnwprintf_l (funzione)"
@@ -63,10 +62,10 @@ helpviewer_keywords:
   - "vsnwprintf (funzione)"
 ms.assetid: a97f92df-c2f8-4ea0-9269-76920d2d566a
 caps.latest.revision: 35
-caps.handback.revision: 35
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 35
 ---
 # vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

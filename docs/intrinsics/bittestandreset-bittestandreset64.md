@@ -1,8 +1,7 @@
 ---
 title: "_bittestandreset, _bittestandreset64 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "btr instruction"
 ms.assetid: 8dad63bb-a051-4cd7-a793-3357537dfeaf
 caps.latest.revision: 16
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # _bittestandreset, _bittestandreset64
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

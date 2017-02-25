@@ -1,8 +1,7 @@
 ---
 title: "DLL non MFC: cenni preliminari | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "DLL non MFC [C++]"
 ms.assetid: 1ed5d1ee-e20c-47d7-801d-87ea26a73842
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # DLL non MFC: cenni preliminari
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

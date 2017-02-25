@@ -1,8 +1,7 @@
 ---
 title: "/ALLOWBIND (prevenzione dell&#39;associazione di DLL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "impedire l'associazione di DLL"
 ms.assetid: 30e37e24-12e4-407e-988a-39d357403598
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # /ALLOWBIND (prevenzione dell&#39;associazione di DLL)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

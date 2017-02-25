@@ -1,8 +1,7 @@
 ---
 title: "_outp, _outpw, _outpd | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,7 +28,6 @@ f1_keywords:
   - "outpd"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_outp (funzione)"
   - "_outpd (funzione)"
@@ -45,10 +43,10 @@ helpviewer_keywords:
   - "parole, scrittura nelle porte"
 ms.assetid: c200fe22-41f6-46fd-b0be-ebb805b35181
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # _outp, _outpw, _outpd
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

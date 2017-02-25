@@ -1,8 +1,7 @@
 ---
 title: "Classe IGetDataSourceImpl | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "IGetDataSourceImpl (classe)"
 ms.assetid: d63f3178-d663-4f01-8c09-8aab2dd6805a
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Classe IGetDataSourceImpl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

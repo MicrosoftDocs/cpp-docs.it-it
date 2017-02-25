@@ -1,8 +1,7 @@
 ---
 title: "CRowsetImpl::ValidateCommandID | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "ValidateCommandID (metodo)"
 ms.assetid: cdde6088-41bc-4b8f-a32b-f36f7d9b5ec0
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # CRowsetImpl::ValidateCommandID
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "is_literal_type (classe) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "is_literal_type"
 ms.assetid: a03a4ebb-ee66-48d6-91bb-41cf72b2401f
 caps.latest.revision: 12
-caps.handback.revision: 2
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # is_literal_type (classe)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

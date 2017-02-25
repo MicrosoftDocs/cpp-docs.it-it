@@ -1,8 +1,7 @@
 ---
 title: "complex&lt;long double&gt; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "complex<long double> (funzione)"
 ms.assetid: 37591991-b385-46e9-b727-d534dbc10432
 caps.latest.revision: 20
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # complex&lt;long double&gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

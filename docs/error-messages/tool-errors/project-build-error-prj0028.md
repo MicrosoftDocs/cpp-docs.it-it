@@ -1,8 +1,7 @@
 ---
 title: "Errore di compilazione progetto PRJ0028 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "PRJ0028"
 ms.assetid: 0a6e0da7-cb3d-40b6-81a6-6196a9c2526b
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Errore di compilazione progetto PRJ0028
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

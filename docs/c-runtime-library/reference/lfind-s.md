@@ -1,8 +1,7 @@
 ---
 title: "_lfind_s | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,7 +28,6 @@ f1_keywords:
   - "_lfind_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_lfind_s (funzione)"
   - "matrici [CRT], ricerca"
@@ -39,10 +37,10 @@ helpviewer_keywords:
   - "ricerca, lineari"
 ms.assetid: f1d9581d-5c9d-4222-a31c-a6dfafefa40d
 caps.latest.revision: 26
-caps.handback.revision: 24
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # _lfind_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

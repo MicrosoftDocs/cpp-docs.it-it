@@ -1,8 +1,7 @@
 ---
 title: "Utilizzo delle funzioni di accesso manuali | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "funzioni di accesso manuali"
 ms.assetid: 29f00a89-0240-482b-8413-4120b9644672
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Utilizzo delle funzioni di accesso manuali
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

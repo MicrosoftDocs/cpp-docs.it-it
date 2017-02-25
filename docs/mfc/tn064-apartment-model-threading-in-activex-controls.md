@@ -1,8 +1,7 @@
 ---
 title: "TN064: threading di modello di apartment nei controlli ActiveX | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "TN064"
 ms.assetid: b2ab4c88-6954-48e2-9a74-01d4a60df073
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # TN064: threading di modello di apartment nei controlli ActiveX
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

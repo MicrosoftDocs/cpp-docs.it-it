@@ -1,8 +1,7 @@
 ---
 title: "_HAS_ITERATOR_DEBUGGING | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "_HAS_ITERATOR_DEBUGGING"
 ms.assetid: 90077dbb-8a76-4963-83a6-29f4854007a8
 caps.latest.revision: 7
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # _HAS_ITERATOR_DEBUGGING
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

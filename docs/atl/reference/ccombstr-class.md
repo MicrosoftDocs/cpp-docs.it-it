@@ -1,8 +1,7 @@
 ---
 title: "CComBSTR (classe) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "CComBSTR (classe)"
 ms.assetid: 8fea1879-a05e-47a5-a803-8dec60eaa534
 caps.latest.revision: 21
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # CComBSTR (classe)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

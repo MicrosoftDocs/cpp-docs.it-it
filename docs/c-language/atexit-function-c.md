@@ -1,8 +1,7 @@
 ---
 title: "Funzione atexit (C) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,15 +10,14 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "atexit (funzione)"
 ms.assetid: 9e1a761d-52f7-4581-a790-3ff97c80f931
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Funzione atexit (C)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

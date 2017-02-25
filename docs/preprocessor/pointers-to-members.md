@@ -1,8 +1,7 @@
 ---
 title: "pointers_to_members | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,7 +13,6 @@ f1_keywords:
   - "vc-pragma.pointers_to_members"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "membri di classi, puntatori"
   - "membri, puntatori"
@@ -22,10 +20,10 @@ helpviewer_keywords:
   - "pragma, pointers_to_members"
 ms.assetid: 8325428c-c90a-4aed-9e82-cb1dda23f4ca
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # pointers_to_members
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

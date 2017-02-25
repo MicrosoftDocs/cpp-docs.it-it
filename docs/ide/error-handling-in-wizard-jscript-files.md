@@ -1,8 +1,7 @@
 ---
 title: "Gestione degli errori nei file JScript della Creazione guidata personalizzata | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "gestione errori JScript per procedure guidate"
 ms.assetid: 6df3ba46-7ab6-484c-ac45-b08f4b6a5900
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Gestione degli errori nei file JScript della Creazione guidata personalizzata
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

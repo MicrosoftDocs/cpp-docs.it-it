@@ -1,8 +1,7 @@
 ---
 title: "Set di caratteri | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "set di caratteri di esecuzione di base (C++)"
 ms.assetid: 379a2af6-6422-425f-8352-ef0bca6c0d74
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Set di caratteri
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

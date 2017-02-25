@@ -1,8 +1,7 @@
 ---
 title: "pgomgr | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "ottimizzazioni PGO, pgomgr"
 ms.assetid: 74589126-df18-42c9-8739-26d60e148d6a
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # pgomgr
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

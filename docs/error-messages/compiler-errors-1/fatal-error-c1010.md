@@ -1,8 +1,7 @@
 ---
 title: "Errore irreversibile C1010 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C1010"
 ms.assetid: dfd035f1-a7a2-40bc-bc92-dc4d7f456767
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Errore irreversibile C1010
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

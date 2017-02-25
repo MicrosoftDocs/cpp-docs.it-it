@@ -1,8 +1,7 @@
 ---
 title: "sscanf, _sscanf_l, swscanf, _swscanf_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -35,7 +34,6 @@ f1_keywords:
   - "_swscanf_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_sscanf_l (funzione)"
   - "_stscanf (funzione)"
@@ -52,10 +50,10 @@ helpviewer_keywords:
   - "swscanf_l (funzione)"
 ms.assetid: c2dcf0d2-9798-499f-a4a8-06f7e2b9a80c
 caps.latest.revision: 26
-caps.handback.revision: 24
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # sscanf, _sscanf_l, swscanf, _swscanf_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

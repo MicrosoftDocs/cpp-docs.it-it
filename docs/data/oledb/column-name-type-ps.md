@@ -1,8 +1,7 @@
 ---
 title: "COLUMN_NAME_TYPE_PS | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "COLUMN_NAME_TYPE_PS (macro)"
 ms.assetid: 99df7e33-47fc-48ec-ad03-5fd03a190aa9
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # COLUMN_NAME_TYPE_PS
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

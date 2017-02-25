@@ -1,8 +1,7 @@
 ---
 title: "implementation_only | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,15 +12,14 @@ f1_keywords:
   - "implementation_only"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "implementation_only (attributo)"
 ms.assetid: d8cabc86-4425-45a0-9587-d57536980088
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # implementation_only
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

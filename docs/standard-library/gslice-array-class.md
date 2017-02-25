@@ -1,8 +1,7 @@
 ---
 title: "Classe gslice_array | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "gslice_array (classe)"
 ms.assetid: ad1b4514-b14a-4baf-a293-d5a8e8674c75
 caps.latest.revision: 20
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # Classe gslice_array
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

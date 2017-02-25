@@ -1,8 +1,7 @@
 ---
 title: "Selecting Controls | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "controls [C++], dominant"
 ms.assetid: 27f05450-4550-4229-9f4c-2c9e06365596
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Selecting Controls
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

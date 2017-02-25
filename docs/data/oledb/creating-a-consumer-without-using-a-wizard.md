@@ -1,8 +1,7 @@
 ---
 title: "Creazione di un consumer senza utilizzare una procedura guidata | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "OLE DB (consumer), creazione"
 ms.assetid: e8241cfe-5faf-48f8-9de3-241203de020b
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Creazione di un consumer senza utilizzare una procedura guidata
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

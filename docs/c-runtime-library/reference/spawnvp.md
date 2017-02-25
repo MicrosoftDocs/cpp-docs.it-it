@@ -1,8 +1,7 @@
 ---
 title: "spawnvp | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,15 +26,14 @@ f1_keywords:
   - "spawnvp"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "spawnvp (funzione)"
 ms.assetid: 25d3896d-1934-4453-ae8b-4fb5480a2657
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # spawnvp
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

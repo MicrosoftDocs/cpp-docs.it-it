@@ -1,8 +1,7 @@
 ---
 title: "CDataPathProperty Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "controlli OLE [C++], asincrono"
 ms.assetid: 1f96efdb-54e4-460b-862c-eba5d4103488
 caps.latest.revision: 24
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # CDataPathProperty Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Macro di nomi file | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "NMAKE (programma), macro nome file"
 ms.assetid: 20afd6b3-5b6c-4e33-9d01-309ce98ef9db
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Macro di nomi file
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

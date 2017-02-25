@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livello 3) C4522 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4522"
 ms.assetid: 7065dc27-0b6c-4e68-a345-c51cdb99a20b
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Avviso del compilatore (livello 3) C4522
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

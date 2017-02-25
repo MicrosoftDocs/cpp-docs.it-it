@@ -1,8 +1,7 @@
 ---
 title: "localtime_s, _localtime32_s, _localtime64_s | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -34,7 +33,6 @@ f1_keywords:
   - "_localtime64_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_localtime64_s (funzione)"
   - "localtime32_s (funzione)"
@@ -44,10 +42,10 @@ helpviewer_keywords:
   - "localtime_s (funzione)"
 ms.assetid: 842d1dc7-d6f8-41d3-b340-108d4b90df54
 caps.latest.revision: 23
-caps.handback.revision: 23
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # localtime_s, _localtime32_s, _localtime64_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

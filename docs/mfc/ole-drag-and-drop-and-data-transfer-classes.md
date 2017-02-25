@@ -1,8 +1,7 @@
 ---
 title: "Classi di trasferimento dati e trascinamento della selezione OLE | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "trascinamento della selezione OLE [C++], e classe di trasferimento dati"
 ms.assetid: c8ab2825-ed69-4b88-8ae6-f368b94726b8
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Classi di trasferimento dati e trascinamento della selezione OLE
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

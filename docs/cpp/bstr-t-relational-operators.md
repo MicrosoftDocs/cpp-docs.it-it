@@ -1,8 +1,7 @@
 ---
 title: "Operatori relazionali _bstr_t | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -40,10 +39,10 @@ helpviewer_keywords:
   - "operatori relazionali, _bstr_t (classe)"
 ms.assetid: e153da72-37c3-4d8a-b8eb-730d65da64dd
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Operatori relazionali _bstr_t
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Allocazione nello stack | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 098e51f2-eda6-40d0-b149-0b618aa48b47
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Allocazione nello stack
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

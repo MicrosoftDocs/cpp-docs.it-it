@@ -1,8 +1,7 @@
 ---
-title: "Errore R6026 del linguaggio C in fase di esecuzione  | Microsoft Docs"
+title: "R6026 errore di Runtime C | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "R6026"
 ms.assetid: 7ea751f8-fc20-46ab-99ef-84c95ca0b6b4
 caps.latest.revision: 7
-caps.handback.revision: 5
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Errore R6026 del linguaggio C in fase di esecuzione 
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

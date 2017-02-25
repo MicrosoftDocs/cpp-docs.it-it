@@ -1,8 +1,7 @@
 ---
 title: "Supporto dei rowset dello schema | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "rowset schema"
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Supporto dei rowset dello schema
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

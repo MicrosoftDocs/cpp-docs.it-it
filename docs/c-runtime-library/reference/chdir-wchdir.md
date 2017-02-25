@@ -1,8 +1,7 @@
 ---
 title: "_chdir, _wchdir | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -33,7 +32,6 @@ f1_keywords:
   - "wchdir"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_tchdir (funzione)"
   - "_chdir (funzione)"
@@ -44,10 +42,10 @@ helpviewer_keywords:
   - "Directory [C++], modifica"
 ms.assetid: 85e9393b-62ac-45d5-ab2a-fa2217f6152e
 caps.latest.revision: 22
-caps.handback.revision: 22
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # _chdir, _wchdir
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

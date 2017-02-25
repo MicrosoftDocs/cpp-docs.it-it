@@ -1,8 +1,7 @@
 ---
 title: "gets_s, _getws_s | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -30,7 +29,6 @@ f1_keywords:
   - "gets_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_getws_s (funzione)"
   - "sovraccarichi del buffer"
@@ -43,10 +41,10 @@ helpviewer_keywords:
   - "flussi, recupero di linee"
 ms.assetid: 5880c36f-122c-4061-a1a5-aeeced6fe58c
 caps.latest.revision: 29
-caps.handback.revision: 27
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 29
 ---
 # gets_s, _getws_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

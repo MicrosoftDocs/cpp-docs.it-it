@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2712 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2712"
 ms.assetid: f7d4ffcc-7ed2-459b-8067-a728ce647071
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Errore del compilatore C2712
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

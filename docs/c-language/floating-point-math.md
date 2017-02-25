@@ -1,8 +1,7 @@
 ---
 title: "Matematica a virgola mobile | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,13 +10,12 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 ms.assetid: 1ff2f7e9-f29a-4822-9b05-4b4267e80ba3
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Matematica a virgola mobile
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

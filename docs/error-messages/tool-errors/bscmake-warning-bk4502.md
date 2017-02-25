@@ -1,8 +1,7 @@
 ---
 title: "Avviso BK4502 di BSCMAKE | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "BK4502"
 ms.assetid: ee412ec8-df03-4cdb-91ee-5d609ded8691
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Avviso BK4502 di BSCMAKE
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

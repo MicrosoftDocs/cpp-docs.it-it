@@ -1,8 +1,7 @@
 ---
 title: "Classe add_const | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "add_const"
 ms.assetid: 1262a1eb-8c9c-4dd6-9f43-88ba280182f1
 caps.latest.revision: 19
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # Classe add_const
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

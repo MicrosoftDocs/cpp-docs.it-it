@@ -1,8 +1,7 @@
 ---
 title: "_get_heap_handle | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,7 +28,6 @@ f1_keywords:
   - "get_heap_handle"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "funzioni heap"
   - "allocazione di memoria, memoria heap"
@@ -37,10 +35,10 @@ helpviewer_keywords:
   - "get_heap_handle (funzione)"
 ms.assetid: a4d05049-8528-494a-8281-a470d1e1115c
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # _get_heap_handle
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

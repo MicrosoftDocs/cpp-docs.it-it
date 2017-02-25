@@ -1,8 +1,7 @@
 ---
 title: "rename_search_namespace | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,15 +12,14 @@ f1_keywords:
   - "rename_search_namespace"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "rename_search_namespace (attributo)"
 ms.assetid: 47c9d7fd-59dc-4c62-87a1-9011a0040167
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # rename_search_namespace
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

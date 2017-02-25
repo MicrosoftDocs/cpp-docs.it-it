@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore C4693 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4693"
 ms.assetid: 72d8db01-5e6f-4794-8731-76107e8f064a
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Avviso del compilatore C4693
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

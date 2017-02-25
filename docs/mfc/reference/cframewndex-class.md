@@ -1,8 +1,7 @@
 ---
 title: "CFrameWndEx Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "CFrameWndEx class"
 ms.assetid: 5830aca8-4a21-4f31-91f1-dd5477ffcc8d
 caps.latest.revision: 39
-caps.handback.revision: 26
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 41
 ---
 # CFrameWndEx Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

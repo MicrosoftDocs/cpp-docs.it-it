@@ -1,8 +1,7 @@
 ---
 title: "ARM Assembler Diagnostic Messages | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 52b38267-6023-4bdc-a0ef-863362f48eec
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # ARM Assembler Diagnostic Messages
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

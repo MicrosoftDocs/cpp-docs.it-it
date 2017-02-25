@@ -1,8 +1,7 @@
 ---
 title: "valori letterali chrono | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 1a9e23b1-256f-4570-8226-5fa7364fb032
 caps.latest.revision: 10
-caps.handback.revision: 1
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # valori letterali chrono
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Basic Mechanics of Attributes | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "attributes [C++], about attributes"
 ms.assetid: dc2069c3-b9f3-4a72-965c-4e5208ce8e34
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Basic Mechanics of Attributes
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

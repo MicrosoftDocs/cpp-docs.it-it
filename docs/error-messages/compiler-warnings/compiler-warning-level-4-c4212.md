@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livello 4) C4212 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4212"
 ms.assetid: df781ea1-182d-4f9f-9a31-55b6ce80c711
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Avviso del compilatore (livello 4) C4212
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

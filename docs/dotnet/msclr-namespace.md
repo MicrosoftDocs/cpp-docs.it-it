@@ -1,8 +1,7 @@
 ---
 title: "Spazio dei nomi msclr | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "Visual C++, spazi dei nomi"
 ms.assetid: 799460e2-9ae2-4b59-a81c-611df356834f
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Spazio dei nomi msclr
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

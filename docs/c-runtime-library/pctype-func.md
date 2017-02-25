@@ -1,8 +1,7 @@
 ---
 title: "__pctype_func | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,10 +27,10 @@ helpviewer_keywords:
   - "__pctype_func"
 ms.assetid: d52b8add-d07d-4516-a22f-e836cde0c57f
 caps.latest.revision: 2
-caps.handback.revision: 2
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 2
 ---
 # __pctype_func
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

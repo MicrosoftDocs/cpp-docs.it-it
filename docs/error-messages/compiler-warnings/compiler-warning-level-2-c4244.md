@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livello 2) C4244 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4244"
 ms.assetid: 2c19d157-21d1-42c2-a6c0-3f30f2ce3813
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Avviso del compilatore (livello 2) C4244
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

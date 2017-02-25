@@ -1,8 +1,7 @@
 ---
 title: "Errore di compilazione progetto PRJ0003 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "PRJ0003"
 ms.assetid: fc5a84bb-c6d3-41d6-8dd6-475455820778
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Errore di compilazione progetto PRJ0003
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

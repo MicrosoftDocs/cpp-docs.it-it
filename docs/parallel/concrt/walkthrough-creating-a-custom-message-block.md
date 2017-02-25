@@ -1,8 +1,7 @@
 ---
 title: "Procedura dettagliata: creazione di un blocco dei messaggi personalizzato | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "blocchi di messaggi personalizzati, creazione [Runtime di concorrenza]"
 ms.assetid: 4c6477ad-613c-4cac-8e94-2c9e63cd43a1
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # Procedura dettagliata: creazione di un blocco dei messaggi personalizzato
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

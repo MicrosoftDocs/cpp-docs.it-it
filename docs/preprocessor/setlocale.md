@@ -1,8 +1,7 @@
 ---
 title: "setlocale | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,16 +13,15 @@ f1_keywords:
   - "vc-pragma.setlocale"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "pragma, setlocale"
   - "setlocale (pragma)"
 ms.assetid: e60b43d9-fbdf-4c4e-ac85-805523a13b86
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # setlocale
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Errore irreversibile C1083 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C1083"
 ms.assetid: 97e52df3-e79c-4f85-8f1e-bbd1057d55e7
 caps.latest.revision: 23
-caps.handback.revision: 23
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # Errore irreversibile C1083
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

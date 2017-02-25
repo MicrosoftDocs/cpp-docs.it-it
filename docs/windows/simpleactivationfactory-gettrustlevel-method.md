@@ -1,8 +1,7 @@
 ---
 title: "Metodo SimpleActivationFactory::GetTrustLevel | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ dev_langs:
   - "C++"
 ms.assetid: 99aa9bc9-d954-4a6f-902b-4abe00e43039
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # Metodo SimpleActivationFactory::GetTrustLevel
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

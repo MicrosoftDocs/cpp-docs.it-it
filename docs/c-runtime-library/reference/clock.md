@@ -1,8 +1,7 @@
 ---
 title: "clock | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,7 +27,6 @@ f1_keywords:
   - "clock"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "calcolo del tempo processore utilizzato"
   - "clock (funzione)"
@@ -37,10 +35,10 @@ helpviewer_keywords:
   - "ora, calcolo processore"
 ms.assetid: 3e1853dd-498f-49ba-b06a-f2315f20904e
 caps.latest.revision: 15
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # clock
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

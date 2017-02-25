@@ -1,8 +1,7 @@
 ---
 title: "Classe CObject: domande frequenti | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "CObject (classe), domande frequenti"
 ms.assetid: 809a8b99-a2f8-4e16-8b4b-023c94f4125c
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Classe CObject: domande frequenti
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

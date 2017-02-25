@@ -1,8 +1,7 @@
 ---
 title: "Suggerimenti sulla programmazione MBCS | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "programmazione [C++], MBCS"
 ms.assetid: d8ad36b8-917f-474e-8adb-69462adecd17
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "ghogen"
 ms.author: "ghogen"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Suggerimenti sulla programmazione MBCS
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

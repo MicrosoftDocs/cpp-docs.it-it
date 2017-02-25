@@ -1,8 +1,7 @@
 ---
 title: "pgosweep | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "ottimizzazioni PGO, pgosweep"
 ms.assetid: f39dd3b7-1cd9-4c3b-8e8b-fb794744b757
 caps.latest.revision: 22
-caps.handback.revision: 22
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # pgosweep
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Classe ios_base | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "ios_base (classe)"
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
 caps.latest.revision: 21
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # Classe ios_base
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

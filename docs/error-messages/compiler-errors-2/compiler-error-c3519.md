@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3519 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3519"
 ms.assetid: ca24b2bc-7e90-4448-ae84-3fedddf9bca7
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Errore del compilatore C3519
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

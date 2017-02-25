@@ -1,8 +1,7 @@
 ---
 title: "ATL_DRAWINFO Structure | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "ATL_DRAWINFO structure"
 ms.assetid: dd2e2aa8-e8c5-403b-b4df-35c0f6f57fb7
 caps.latest.revision: 16
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # ATL_DRAWINFO Structure
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

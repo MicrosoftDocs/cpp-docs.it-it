@@ -1,8 +1,7 @@
 ---
 title: "Errore BK1513 di BSCMAKE | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "BK1513"
 ms.assetid: 9ba87c09-8d82-4c80-b0cf-a8de63dcf9da
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Errore BK1513 di BSCMAKE
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

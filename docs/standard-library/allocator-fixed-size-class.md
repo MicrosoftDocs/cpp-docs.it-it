@@ -1,8 +1,7 @@
 ---
 title: "Classe allocator_fixed_size | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "allocator_fixed_size (classe)"
 ms.assetid: 138f3ef8-b0b3-49c3-9486-58f2213c172f
 caps.latest.revision: 19
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # Classe allocator_fixed_size
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

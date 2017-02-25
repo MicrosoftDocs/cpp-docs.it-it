@@ -1,8 +1,7 @@
 ---
 title: "Metodo HString::MakeReference | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ dev_langs:
   - "C++"
 ms.assetid: 9e1fd2b2-66ad-4a50-b647-a20ab10e522f
 caps.latest.revision: 2
-caps.handback.revision: 2
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 2
 ---
 # Metodo HString::MakeReference
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

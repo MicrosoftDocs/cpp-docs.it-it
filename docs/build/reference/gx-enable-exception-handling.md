@@ -1,8 +1,7 @@
 ---
 title: "/GX (Attiva gestione eccezioni) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "-GX (opzione del compilatore) [C++]"
 ms.assetid: 933b43ba-de77-4ff8-a48b-7074de90bc1c
 caps.latest.revision: 16
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # /GX (Attiva gestione eccezioni)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

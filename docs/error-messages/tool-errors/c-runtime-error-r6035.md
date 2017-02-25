@@ -1,8 +1,7 @@
 ---
-title: "Errore di runtime R6035 del linguaggio C | Microsoft Docs"
+title: "R6035 errore di Runtime C | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "R6035"
 ms.assetid: f8fb50b8-18bf-4258-b96a-b0a9de468d16
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Errore di runtime R6035 del linguaggio C
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3071 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3071"
 ms.assetid: 69879e66-a60e-4058-9bbd-d5c5e2d8ee37
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Errore del compilatore C3071
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

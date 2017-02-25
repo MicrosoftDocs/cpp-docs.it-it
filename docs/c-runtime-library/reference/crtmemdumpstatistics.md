@@ -1,8 +1,7 @@
 ---
 title: "_CrtMemDumpStatistics | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,16 +27,15 @@ f1_keywords:
   - "_CrtMemDumpStatistics"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_CrtMemDumpStatistics (funzione)"
   - "CrtMemDumpStatistics (funzione)"
 ms.assetid: 27b9d731-3184-4a2d-b9a7-6566ab28a9fe
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # _CrtMemDumpStatistics
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

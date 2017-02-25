@@ -1,8 +1,7 @@
 ---
 title: "printf_s, _printf_s_l, wprintf_s, _wprintf_s_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,7 +30,6 @@ f1_keywords:
   - "printf_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_printf_s_l (funzione)"
   - "_tprintf_s (funzione)"
@@ -48,10 +46,10 @@ helpviewer_keywords:
   - "wprintf_s_l (funzione)"
 ms.assetid: 044ebb2e-5cc1-445d-bb4c-f084b405615b
 caps.latest.revision: 21
-caps.handback.revision: 21
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # printf_s, _printf_s_l, wprintf_s, _wprintf_s_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

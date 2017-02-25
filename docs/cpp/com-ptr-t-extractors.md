@@ -1,8 +1,7 @@
 ---
 title: "_com_ptr_t Extractors | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -37,10 +36,10 @@ helpviewer_keywords:
   - "operator->"
 ms.assetid: 194b9e0e-123c-49ff-a187-0a7fcd68145a
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # _com_ptr_t Extractors
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

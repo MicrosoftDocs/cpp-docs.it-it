@@ -1,8 +1,7 @@
 ---
 title: "Avviso degli strumenti del linker LNK4227 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "LNK4227"
 ms.assetid: 941a0414-9964-4e02-8487-f9daa42ef7f9
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Avviso degli strumenti del linker LNK4227
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

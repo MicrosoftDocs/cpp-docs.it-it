@@ -1,8 +1,7 @@
 ---
 title: "IDBSchemaRowsetImpl::SetRestrictions | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "SetRestrictions (metodo)"
 ms.assetid: 707d5065-b853-4d38-9b67-3066b4d3b279
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # IDBSchemaRowsetImpl::SetRestrictions
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "is_trivially_copyable (classe) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,15 +16,14 @@ f1_keywords:
   - "type_traits/std::is_trivially_copyable"
 dev_langs: 
   - "C++"
-  - "c++"
 helpviewer_keywords: 
   - "is_trivially_copyable"
 ms.assetid: 89a53bf8-036c-4108-91e1-fe34adbde8b3
 caps.latest.revision: 12
-caps.handback.revision: 2
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # is_trivially_copyable (classe)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Procedura: Usare Windows 10 SDK in un&#39;applicazione di Windows Desktop | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: eed6421e-9355-44a6-9582-3f1d453a6d44
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Procedura: Usare Windows 10 SDK in un&#39;applicazione di Windows Desktop
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

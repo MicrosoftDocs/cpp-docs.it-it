@@ -1,8 +1,7 @@
 ---
 title: "CFixedStringT Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "shared classes, CFixedStringT"
 ms.assetid: 6d4171ba-3104-493a-a6cc-d515f4ba9a4b
 caps.latest.revision: 17
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # CFixedStringT Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

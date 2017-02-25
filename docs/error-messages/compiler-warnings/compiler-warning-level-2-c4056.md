@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livello 2) C4056 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4056"
 ms.assetid: a3c3a9b8-ec30-452d-96cb-3694adcce789
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Avviso del compilatore (livello 2) C4056
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

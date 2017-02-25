@@ -1,8 +1,7 @@
 ---
 title: "Nomi file lunghi in un makefile | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "NMAKE (programma), nomi file lunghi"
 ms.assetid: 626d56fc-8879-46ba-9c2d-dd386c78cccc
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Nomi file lunghi in un makefile
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
-title: "log1p, log1pf, log1pl | Microsoft Docs"
+title: "log1p, log1pf, log1pl2 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -40,10 +39,10 @@ helpviewer_keywords:
   - "funzione log1pl"
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # log1p, log1pf, log1pl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

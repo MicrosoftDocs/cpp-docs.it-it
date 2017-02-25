@@ -1,8 +1,7 @@
 ---
 title: "_close | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,17 +27,16 @@ f1_keywords:
   - "_close"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_close (funzione)"
   - "close (funzione)"
   - "file [C++], chiusura"
 ms.assetid: 4708a329-8acf-4cd9-b7b0-a952e1897247
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # _close
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

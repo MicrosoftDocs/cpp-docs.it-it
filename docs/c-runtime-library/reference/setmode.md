@@ -1,8 +1,7 @@
 ---
 title: "_setmode | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,7 +27,6 @@ f1_keywords:
   - "_setmode"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_setmode (funzione)"
   - "conversione di file [C++], impostazione modalità"
@@ -38,10 +36,10 @@ helpviewer_keywords:
   - "Unicode [C++], output di console"
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
 caps.latest.revision: 23
-caps.handback.revision: 21
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # _setmode
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

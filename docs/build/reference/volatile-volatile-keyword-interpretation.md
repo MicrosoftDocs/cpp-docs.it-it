@@ -1,8 +1,7 @@
 ---
 title: "/volatile (interpretazione della parole chiave volatile) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "-volatile (opzione del compilatore) [C++]"
 ms.assetid: 9d08fcc6-5bda-44c8-8151-8d8d54f164b8
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # /volatile (interpretazione della parole chiave volatile)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

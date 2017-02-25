@@ -1,8 +1,7 @@
 ---
 title: "Membro dati Module::objectCount_ | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ dev_langs:
   - "C++"
 ms.assetid: 921ffa74-e3c1-4fb3-91a6-fa7654779d8f
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Membro dati Module::objectCount_
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

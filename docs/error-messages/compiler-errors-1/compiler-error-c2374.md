@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2374 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2374"
 ms.assetid: 73b51965-e91c-4e21-9732-f71c1449d22e
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Errore del compilatore C2374
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

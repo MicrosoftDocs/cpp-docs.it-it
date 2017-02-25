@@ -1,8 +1,7 @@
 ---
 title: "Classe runtime_exception | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "runtime_exception (classe)"
 ms.assetid: 8fe3ce2c-3d4c-4b9c-95e8-e592f37adefd
 caps.latest.revision: 10
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Classe runtime_exception
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

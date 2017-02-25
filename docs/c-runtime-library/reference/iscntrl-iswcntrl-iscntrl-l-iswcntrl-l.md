@@ -1,8 +1,7 @@
 ---
 title: "iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -36,7 +35,6 @@ f1_keywords:
   - "_istcntrl"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_iscntrl_l (funzione)"
   - "_istcntrl (funzione)"
@@ -47,10 +45,10 @@ helpviewer_keywords:
   - "iswcntrl (funzione)"
 ms.assetid: 616eebf9-aed4-49ba-ba2c-8677c8fe6fb5
 caps.latest.revision: 19
-caps.handback.revision: 19
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

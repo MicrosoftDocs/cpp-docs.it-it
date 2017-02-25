@@ -1,8 +1,7 @@
 ---
 title: "Selecting an Area of an Image (Image Editor for Icons) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "vc.editors.image.editing"
 dev_langs: 
   - "C++"
-  - "C++"
 helpviewer_keywords: 
   - "Image editor [C++], image selection"
   - "Image editor [C++], selecting images"
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "cursors [C++], selecting areas of"
 ms.assetid: 8b6ce4ad-eba1-4ece-86ba-cea92c3edff2
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Selecting an Area of an Image (Image Editor for Icons)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

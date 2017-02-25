@@ -1,8 +1,7 @@
 ---
 title: "/Tc, /Tp, /TC, /TP (Specifica il tipo di file di origine) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -26,10 +25,10 @@ helpviewer_keywords:
   - "-Tp (opzione del compilatore) [C++]"
 ms.assetid: 7d9d0a65-338b-427c-8b48-fff30e2f9d2b
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # /Tc, /Tp, /TC, /TP (Specifica il tipo di file di origine)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

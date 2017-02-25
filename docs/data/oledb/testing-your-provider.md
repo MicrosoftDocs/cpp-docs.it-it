@@ -1,8 +1,7 @@
 ---
 title: "Test del provider | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "test, provider OLE DB"
 ms.assetid: bf824fe4-81af-4ffb-beb3-4fa2928dc450
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Test del provider
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

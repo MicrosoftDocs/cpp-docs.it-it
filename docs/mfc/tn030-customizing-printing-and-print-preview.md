@@ -1,8 +1,7 @@
 ---
 title: "TN030: personalizzazione della stampa e dell&#39;anteprima di stampa | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "TN030"
 ms.assetid: 32744697-c91c-41b6-9a12-b8ec01e0d438
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # TN030: personalizzazione della stampa e dell&#39;anteprima di stampa
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

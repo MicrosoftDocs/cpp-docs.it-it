@@ -1,8 +1,7 @@
 ---
 title: "Errore irreversibile C1902 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C1902"
 ms.assetid: 2dc066cc-fcb1-4725-8bcb-9f44dd0905b7
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Errore irreversibile C1902
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

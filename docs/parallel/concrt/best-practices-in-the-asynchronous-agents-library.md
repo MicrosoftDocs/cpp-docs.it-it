@@ -1,8 +1,7 @@
 ---
 title: "Procedure consigliate nella libreria di agenti asincroni | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "operazioni da evitare, Libreria di agenti asincroni"
 ms.assetid: 85f52354-41eb-4b0d-98c5-f7344ee8a8cf
 caps.latest.revision: 15
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Procedure consigliate nella libreria di agenti asincroni
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

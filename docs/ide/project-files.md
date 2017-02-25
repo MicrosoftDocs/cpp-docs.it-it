@@ -1,8 +1,7 @@
 ---
 title: "File di progetto | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "progetti Visual C++, formato dei file di progetto"
 ms.assetid: 5261cf45-3136-40a6-899e-dc1339551401
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # File di progetto
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "_chgsign, _chgsignf, _chgsignl | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -33,7 +32,6 @@ f1_keywords:
   - "_chgsign"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_chgsign (funzione)"
   - "_chgsignf (funzione)"
@@ -41,10 +39,10 @@ helpviewer_keywords:
   - "chgsign (funzione)"
 ms.assetid: a6646f8e-213d-4564-8617-f43bc66f989f
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # _chgsign, _chgsignf, _chgsignl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

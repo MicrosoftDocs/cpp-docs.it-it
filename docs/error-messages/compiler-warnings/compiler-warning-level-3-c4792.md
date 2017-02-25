@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livello 3) C4792 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4792"
 ms.assetid: c047ce69-a622-44e1-9425-d41aa9261c61
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Avviso del compilatore (livello 3) C4792
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

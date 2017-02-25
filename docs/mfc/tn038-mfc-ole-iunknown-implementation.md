@@ -1,8 +1,7 @@
 ---
 title: "TN038: implementazione di IUnknown MFC/OLE | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,10 +28,10 @@ helpviewer_keywords:
   - "TN038"
 ms.assetid: 19d946ba-beaf-4881-85c6-0b598d7f6f11
 caps.latest.revision: 12
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # TN038: implementazione di IUnknown MFC/OLE
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

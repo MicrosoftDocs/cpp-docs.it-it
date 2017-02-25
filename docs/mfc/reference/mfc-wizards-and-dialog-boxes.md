@@ -1,8 +1,7 @@
 ---
 title: "Finestre di dialogo e procedure guidate MFC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 2fae0a2c-d147-4468-a547-f7b85df767a1
 caps.latest.revision: 8
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Finestre di dialogo e procedure guidate MFC
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

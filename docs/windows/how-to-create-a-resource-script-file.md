@@ -1,8 +1,7 @@
 ---
 title: "How to: Create a Resource Script File | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "resource script files, creating"
 ms.assetid: 82be732a-cdcd-4a58-8de7-976d1418f86b
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # How to: Create a Resource Script File
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

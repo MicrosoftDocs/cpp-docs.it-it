@@ -1,8 +1,7 @@
 ---
 title: "Creazione guidata controllo ATL | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "comandi [] ATL, aggiunta ai progetti"
 ms.assetid: 991f8e72-ffbc-4382-a4ce-e255acfba5b6
 caps.latest.revision: 17
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # Creazione guidata controllo ATL
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

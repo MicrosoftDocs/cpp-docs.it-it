@@ -1,8 +1,7 @@
 ---
 title: "Formattazione CString e visualizzazione finestre di messaggio | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "oggetti CString, formattazione e finestre di messaggio"
 ms.assetid: d1068cf4-9cc5-4952-b9e7-d612c53cbc28
 caps.latest.revision: 14
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Formattazione CString e visualizzazione finestre di messaggio
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

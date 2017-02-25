@@ -1,8 +1,7 @@
 ---
 title: "Procedura dettagliata: creazione di una rete per l&#39;elaborazione di immagini | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "reti per l'elaborazione di immagini, creazione [Runtime di concorrenza]"
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
 caps.latest.revision: 15
-caps.handback.revision: 14
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # Procedura dettagliata: creazione di una rete per l&#39;elaborazione di immagini
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

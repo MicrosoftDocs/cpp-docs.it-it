@@ -1,8 +1,7 @@
 ---
 title: "Classe progress_reporter | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "progress_reporter (classe)"
 ms.assetid: b836efab-2d05-4649-b6fa-d15236f1f813
 caps.latest.revision: 11
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Classe progress_reporter
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

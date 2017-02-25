@@ -1,8 +1,7 @@
 ---
 title: "catanh, catanhf, catanhl | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -35,7 +34,6 @@ f1_keywords:
   - "complex/catanhf"
   - "complex/catanhl"
 dev_langs: 
-  - "C"
   - "C++"
 helpviewer_keywords: 
   - "funzione catanh"
@@ -43,10 +41,10 @@ helpviewer_keywords:
   - "funzione catanhl"
 ms.assetid: 1b6021cb-647a-41b4-9d7f-919cc8b57b86
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # catanh, catanhf, catanhl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

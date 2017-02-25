@@ -1,8 +1,7 @@
 ---
 title: "Classe Semaphore | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Semaphore (classe)"
 ms.assetid: ded53526-17b4-4381-9c60-ea5e77363db6
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Classe Semaphore
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

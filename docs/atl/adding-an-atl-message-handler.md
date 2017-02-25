@@ -1,8 +1,7 @@
 ---
 title: "Aggiunta di un gestore messaggi ATL | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "windows [C++], ATL"
 ms.assetid: cdea38a1-0d9b-4f8d-bbd5-b4f063fb3eeb
 caps.latest.revision: 10
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Aggiunta di un gestore messaggi ATL
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "ML Fatal Error A1009 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "A1009"
 ms.assetid: f7a962a6-4280-485e-95cb-2ab8922c66c2
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # ML Fatal Error A1009
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

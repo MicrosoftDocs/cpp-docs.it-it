@@ -1,8 +1,7 @@
 ---
 title: "Procedura: scorrere le matrici con for each | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "matrici [C++], iterazione con for each"
 ms.assetid: ddc88ce2-69e1-44fc-af84-5b6f62fcb9e3
 caps.latest.revision: 11
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Procedura: scorrere le matrici con for each
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

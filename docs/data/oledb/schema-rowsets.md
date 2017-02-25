@@ -1,8 +1,7 @@
 ---
 title: "Rowset dello schema | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "rowset schema, definizione"
 ms.assetid: 0716a065-230c-4c20-bb53-98870e79ea29
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Rowset dello schema
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Sintassi delle espressioni lambda | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "espressioni lambda [C++], sintassi"
 ms.assetid: 5d6154a4-f34d-4a15-970d-7e7de45f54e9
 caps.latest.revision: 26
-caps.handback.revision: 24
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # Sintassi delle espressioni lambda
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "_ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -38,7 +37,6 @@ f1_keywords:
   - "ismbclegal"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_ismbclegal (funzione)"
   - "_ismbclegal_l (funzione)"
@@ -54,10 +52,10 @@ helpviewer_keywords:
   - "istlegal_l (funzione)"
 ms.assetid: 31bf1ea5-b56f-4e28-b21e-b49a2cf93ffc
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # _ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

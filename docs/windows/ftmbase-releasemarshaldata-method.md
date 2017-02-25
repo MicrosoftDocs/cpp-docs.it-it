@@ -1,8 +1,7 @@
 ---
 title: "Metodo FtmBase::ReleaseMarshalData | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "ReleaseMarshalData (metodo)"
 ms.assetid: a94f9940-183a-4fde-8504-d223f346a0a9
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # Metodo FtmBase::ReleaseMarshalData
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

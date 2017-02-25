@@ -1,8 +1,7 @@
 ---
 title: "Errore irreversibile U1035 di NMAKE  | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "U1035"
 ms.assetid: 68f0cc59-007e-4109-ac30-7ac4ac447e6d
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Errore irreversibile U1035 di NMAKE 
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

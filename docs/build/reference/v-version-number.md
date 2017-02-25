@@ -1,8 +1,7 @@
 ---
 title: "/V (Numero versione) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "numeri di versione, specifica per OBJ"
 ms.assetid: 3e93fb7a-5dfd-49a6-bd49-3dca8052e0f3
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # /V (Numero versione)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

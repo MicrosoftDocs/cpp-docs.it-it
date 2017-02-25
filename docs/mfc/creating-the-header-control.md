@@ -1,8 +1,7 @@
 ---
 title: "Creazione del controllo Header | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "controlli intestazione, creazione"
 ms.assetid: 7864d9d2-4a2c-4622-b58b-7b110a1e28d2
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Creazione del controllo Header
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

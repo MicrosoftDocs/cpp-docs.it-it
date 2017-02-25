@@ -1,8 +1,7 @@
 ---
 title: "Modifica del comportamento di un controllo in fase di esecuzione | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "ActiveX (controlli) [C++], comportamento di runtime"
 ms.assetid: 78b44b0f-0d5a-4da0-8aa2-595f5789c634
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Modifica del comportamento di un controllo in fase di esecuzione
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

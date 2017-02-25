@@ -1,8 +1,7 @@
 ---
 title: "omp_unset_nest_lock | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "omp_unset_nest_lock OpenMP function"
 ms.assetid: 1721d061-3f9c-45d7-b479-a665cd0a121d
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # omp_unset_nest_lock
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

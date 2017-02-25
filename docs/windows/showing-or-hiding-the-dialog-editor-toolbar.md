@@ -1,8 +1,7 @@
 ---
 title: "Attivazione o disattivazione della visualizzazione della barra degli strumenti dell&#39;editor finestre | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "Editor di finestre, attivazione o disattivazione della visualizzazione della barra degli strumenti"
 ms.assetid: 93c255e1-90eb-48b6-8602-450acda75bed
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Attivazione o disattivazione della visualizzazione della barra degli strumenti dell&#39;editor finestre
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

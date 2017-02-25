@@ -1,8 +1,7 @@
 ---
 title: "Come MFC agevola la creazione di applicazioni Client Internet | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "MFC, applicazioni Internet"
 ms.assetid: 94437b3f-f15c-437d-b5fd-264a2efec9ab
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Come MFC agevola la creazione di applicazioni Client Internet
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

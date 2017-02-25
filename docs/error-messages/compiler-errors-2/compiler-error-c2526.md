@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2526 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2526"
 ms.assetid: 0f8c554c-f990-457e-bcae-b6f273481825
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Errore del compilatore C2526
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

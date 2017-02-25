@@ -1,8 +1,7 @@
 ---
 title: "Menu File in un&#39;applicazione database MFC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "applicazioni database [C++], comandi menu File"
 ms.assetid: 92dafb75-c1b3-4860-80a0-87a83bfc36f2
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Menu File in un&#39;applicazione database MFC
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

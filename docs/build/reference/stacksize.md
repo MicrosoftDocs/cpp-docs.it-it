@@ -1,8 +1,7 @@
 ---
 title: "STACKSIZE | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "STACKSIZE (istruzione) file .def"
 ms.assetid: 4d8c79bd-1cb4-4e4d-90f2-b5a7a4d20e7a
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # STACKSIZE
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

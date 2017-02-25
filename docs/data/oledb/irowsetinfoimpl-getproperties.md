@@ -1,8 +1,7 @@
 ---
 title: "IRowsetInfoImpl::GetProperties | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "GetProperties (metodo)"
 ms.assetid: 62c12063-28e0-4a06-ad4d-21c5c1e9ccea
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # IRowsetInfoImpl::GetProperties
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

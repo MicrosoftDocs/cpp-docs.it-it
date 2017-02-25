@@ -1,8 +1,7 @@
 ---
 title: "BEGIN_ACCESSOR_MAP | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "BEGIN_ACCESSOR_MAP (macro)"
 ms.assetid: e6d6e3a4-62fa-4e49-8c53-caf8c9d20091
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # BEGIN_ACCESSOR_MAP
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

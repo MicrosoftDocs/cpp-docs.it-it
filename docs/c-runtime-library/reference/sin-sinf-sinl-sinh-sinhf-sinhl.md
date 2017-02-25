@@ -1,8 +1,7 @@
 ---
 title: "sin, sinf, sinl, sinh, sinhf, sinhl | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -39,7 +38,6 @@ f1_keywords:
   - "_sinhl"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_sinhl (funzione)"
   - "_sinl (funzione)"
@@ -54,10 +52,10 @@ helpviewer_keywords:
   - "funzioni trigonometriche"
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
 caps.latest.revision: 16
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # sin, sinf, sinl, sinh, sinhf, sinhl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

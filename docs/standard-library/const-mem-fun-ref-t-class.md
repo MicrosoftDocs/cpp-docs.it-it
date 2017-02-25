@@ -1,8 +1,7 @@
 ---
 title: "Classe const_mem_fun_ref_t | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "const_mem_fun_ref_t (classe)"
 ms.assetid: 316ddbaa-9f46-4931-8eba-ea4ca66360ef
 caps.latest.revision: 20
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # Classe const_mem_fun_ref_t
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livellos 3 and 4) C4244 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4244"
 ms.assetid: f116bb09-c479-4b4e-a647-fe629a1383f6
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # Avviso del compilatore (livellos 3 and 4) C4244
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

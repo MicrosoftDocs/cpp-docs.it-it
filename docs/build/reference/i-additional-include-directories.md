@@ -1,8 +1,7 @@
 ---
 title: "/I (Directory di inclusione aggiuntive) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "impostazione delle directory di inclusione"
 ms.assetid: 3e9add2a-5ed8-4d15-ad79-5b411e313a49
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # /I (Directory di inclusione aggiuntive)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

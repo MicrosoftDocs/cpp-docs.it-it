@@ -1,8 +1,7 @@
 ---
 title: "Utilizzo di operatori in blocchi __asm | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "parentesi quadre [ ], __asm (blocchi)"
 ms.assetid: a26ccfd4-40ae-4a61-952f-c417982aa8dd
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Utilizzo di operatori in blocchi __asm
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

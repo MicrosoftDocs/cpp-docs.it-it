@@ -1,8 +1,7 @@
 ---
 title: "SafeMultiply | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "SafeMultiply (funzione)"
 ms.assetid: 81d988a5-fac7-4930-8c37-c24fa8e2c853
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "ghogen"
 ms.author: "ghogen"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # SafeMultiply
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

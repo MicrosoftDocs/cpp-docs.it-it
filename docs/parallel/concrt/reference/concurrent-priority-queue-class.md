@@ -1,8 +1,7 @@
 ---
 title: "Classe concurrent_priority_queue | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "concurrent_priority_queue (classe)"
 ms.assetid: 3e740381-0f4e-41fc-8b66-ad0bb55f17a3
 caps.latest.revision: 9
-caps.handback.revision: 3
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Classe concurrent_priority_queue
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

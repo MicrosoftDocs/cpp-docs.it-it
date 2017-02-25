@@ -1,8 +1,7 @@
 ---
 title: "strstr, wcsstr, _mbsstr, _mbsstr_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,6 +23,7 @@ apilocation:
   - "msvcr110_clr0400.dll"
   - "msvcr120.dll"
   - "msvcr120_clr0400.dll"
+  - "ntdll.dll"
   - "ucrtbase.dll"
   - "api-ms-win-crt-multibyte-l1-1-0.dll"
 apitype: "DLLExport"
@@ -36,7 +36,6 @@ f1_keywords:
   - "_tcsstr"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_fstrstr (funzione)"
   - "_ftcsstr (funzione)"
@@ -54,10 +53,10 @@ helpviewer_keywords:
   - "wcsstr (funzione)"
 ms.assetid: 03d70c3f-2473-45cb-a5f8-b35beeb2748a
 caps.latest.revision: 32
-caps.handback.revision: 30
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 32
 ---
 # strstr, wcsstr, _mbsstr, _mbsstr_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

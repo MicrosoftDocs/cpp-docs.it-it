@@ -1,8 +1,7 @@
 ---
 title: "Errore dell‘analizzatore di espressioni CXX0066 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "CXX0066"
 ms.assetid: 1321e4e1-b441-424b-9e76-c208d4a6f6ea
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Errore dell‘analizzatore di espressioni CXX0066
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

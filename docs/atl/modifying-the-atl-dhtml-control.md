@@ -1,8 +1,7 @@
 ---
 title: "Modifying the ATL DHTML Control | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "HTML (controlli), modifica"
 ms.assetid: c053f35f-8629-4600-9595-721f5956777a
 caps.latest.revision: 11
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Modifying the ATL DHTML Control
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

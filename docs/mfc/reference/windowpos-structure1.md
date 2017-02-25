@@ -1,8 +1,7 @@
 ---
-title: "Struttura WINDOWPOS | Microsoft Docs"
+title: "WINDOWPOS Structure1 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "WINDOWPOS (struttura)"
 ms.assetid: a4ea7cd9-c4c2-4480-9c55-cbbff72195e1
 caps.latest.revision: 11
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Struttura WINDOWPOS
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

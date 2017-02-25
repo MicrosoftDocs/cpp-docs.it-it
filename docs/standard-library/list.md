@@ -1,8 +1,7 @@
 ---
 title: "&lt; elenco &gt; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "intestazione di elenco"
 ms.assetid: 2345823b-5612-44d8-95d3-aa96ed076d17
 caps.latest.revision: 20
-caps.handback.revision: 20
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # &lt; elenco &gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "_CrtGetReportHook | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,16 +27,15 @@ f1_keywords:
   - "_CrtGetReportHook"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "CrtGetReportHook (funzione)"
   - "_CrtGetReportHook (funzione)"
 ms.assetid: 922758ed-7edd-4359-9c92-0535192dc11a
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # _CrtGetReportHook
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

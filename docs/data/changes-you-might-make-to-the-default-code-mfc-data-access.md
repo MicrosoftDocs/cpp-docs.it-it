@@ -1,8 +1,7 @@
 ---
 title: "Modifiche che &#232; possibile apportare al codice predefinito (accesso ai dati MFC) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "visualizzazioni di record [C++], personalizzazione di codice predefinito"
 ms.assetid: 9992ed37-a6bf-45a5-a572-5c14e42b6628
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Modifiche che &#232; possibile apportare al codice predefinito (accesso ai dati MFC)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

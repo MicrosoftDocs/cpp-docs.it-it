@@ -1,8 +1,7 @@
 ---
 title: "IDispEventSimpleImpl Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "IDispEventSimpleImpl class"
 ms.assetid: 971d82b7-a921-47fa-a4d8-909bed377ab0
 caps.latest.revision: 27
-caps.handback.revision: 15
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 30
 ---
 # IDispEventSimpleImpl Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

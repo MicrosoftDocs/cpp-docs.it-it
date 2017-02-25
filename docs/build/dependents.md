@@ -1,8 +1,7 @@
 ---
 title: "Dipendenti | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "NMAKE (programma), dipendenti"
 ms.assetid: 0a7b4499-ac6e-4c99-a304-027dd3818ab2
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Dipendenti
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

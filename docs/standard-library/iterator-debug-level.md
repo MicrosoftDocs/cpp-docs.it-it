@@ -1,8 +1,7 @@
 ---
 title: "_ITERATOR_DEBUG_LEVEL | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "_ITERATOR_DEBUG_LEVEL"
 ms.assetid: 718549cd-a9a9-4ab3-867b-aac00b321e67
 caps.latest.revision: 6
-caps.handback.revision: 5
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # _ITERATOR_DEBUG_LEVEL
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

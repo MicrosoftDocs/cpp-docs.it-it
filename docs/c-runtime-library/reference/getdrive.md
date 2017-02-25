@@ -1,8 +1,7 @@
 ---
 title: "_getdrive | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,7 +28,6 @@ f1_keywords:
   - "getdrive"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_getdrive (funzione)"
   - "unità disco corrente"
@@ -37,10 +35,10 @@ helpviewer_keywords:
   - "getdrive (funzione)"
 ms.assetid: e40631a0-8f1a-4897-90ac-e1037ff30bca
 caps.latest.revision: 19
-caps.handback.revision: 17
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # _getdrive
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

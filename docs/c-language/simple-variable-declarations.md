@@ -1,8 +1,7 @@
 ---
 title: "Dichiarazioni di variabili semplici | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,16 +10,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "dichiarazione di variabili, semplici"
   - "variabili non tipizzate"
 ms.assetid: b07adf9d-9e79-4b64-8a34-e6fe1c7eccec
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Dichiarazioni di variabili semplici
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

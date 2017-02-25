@@ -1,8 +1,7 @@
 ---
 title: "Disegno di classi strumento | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "classi di output dello schermo"
 ms.assetid: e907bd89-38b5-47c9-b76a-95e0bf3bb41d
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Disegno di classi strumento
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

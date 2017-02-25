@@ -1,8 +1,7 @@
 ---
 title: "Changing the Caption Property of Multiple Strings | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "string tables, changing caption of multiple strings"
 ms.assetid: 82ac4389-fd9c-4794-a18f-c6bf5b253bd7
 caps.latest.revision: 12
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Changing the Caption Property of Multiple Strings
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

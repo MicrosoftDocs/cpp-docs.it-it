@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livello 1) C4251 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4251"
 ms.assetid: a9992038-f0c2-4fc4-a9be-4509442cbc1e
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # Avviso del compilatore (livello 1) C4251
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

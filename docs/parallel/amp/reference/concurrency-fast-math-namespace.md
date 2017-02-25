@@ -1,8 +1,7 @@
 ---
 title: "Spazio dei nomi Concurrency::fast_math | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ dev_langs:
   - "C++"
 ms.assetid: 54fed939-9902-49db-9f29-e98fd9821508
 caps.latest.revision: 9
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Spazio dei nomi Concurrency::fast_math
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

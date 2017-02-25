@@ -1,8 +1,7 @@
 ---
 title: "Errore degli strumenti del linker LNK1179 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "LNK1179"
 ms.assetid: 4b1536d7-0d3d-4f29-a9c1-6fa5cf6cb665
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Errore degli strumenti del linker LNK1179
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

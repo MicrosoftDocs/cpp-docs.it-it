@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2289 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2289"
 ms.assetid: cb41a29e-1b06-47dc-bfce-8d73bd63a0df
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Errore del compilatore C2289
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

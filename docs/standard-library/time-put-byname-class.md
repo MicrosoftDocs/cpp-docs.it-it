@@ -1,8 +1,7 @@
 ---
 title: "Classe time_put_byname | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "time_put_byname (classe)"
 ms.assetid: e08c2348-64d2-4ace-98b1-1496e14c7b1a
 caps.latest.revision: 25
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # Classe time_put_byname
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

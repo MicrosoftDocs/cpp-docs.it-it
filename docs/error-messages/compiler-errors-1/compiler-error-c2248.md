@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2248 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2248"
 ms.assetid: 7a3ba0e8-d3b9-4bb9-95db-81ef17e31d23
 caps.latest.revision: 22
-caps.handback.revision: 22
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # Errore del compilatore C2248
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

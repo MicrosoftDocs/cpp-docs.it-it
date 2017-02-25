@@ -1,8 +1,7 @@
 ---
 title: "Controllo Error Message Edit | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "messaggio di errore (controllo di modifica)"
 ms.assetid: 79320694-c30e-4c37-bb94-6cb36c32d4e6
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Controllo Error Message Edit
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

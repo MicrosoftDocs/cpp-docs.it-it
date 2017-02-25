@@ -1,8 +1,7 @@
 ---
 title: "_strdate, _wstrdate | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -33,7 +32,6 @@ f1_keywords:
   - "strdate"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "strdate (funzione)"
   - "date, copia"
@@ -45,10 +43,10 @@ helpviewer_keywords:
   - "copia di date"
 ms.assetid: de8e4097-58f8-42ba-9dcd-cb4d9a9f1696
 caps.latest.revision: 26
-caps.handback.revision: 24
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # _strdate, _wstrdate
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

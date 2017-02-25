@@ -1,8 +1,7 @@
 ---
 title: "_aligned_recalloc_dbg | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -33,10 +32,10 @@ helpviewer_keywords:
   - "aligned_recalloc_dbg (funzione)"
 ms.assetid: 55c3c27e-561c-4d6b-9bf9-1e34cc556e4b
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # _aligned_recalloc_dbg
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

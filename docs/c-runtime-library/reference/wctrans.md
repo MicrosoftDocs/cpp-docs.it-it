@@ -1,8 +1,7 @@
 ---
 title: "wctrans | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,7 +27,6 @@ f1_keywords:
   - "wctrans"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "codici carattere, wctrans"
   - "caratteri, codici"
@@ -36,10 +34,10 @@ helpviewer_keywords:
   - "wctrans (funzione)"
 ms.assetid: 215404bf-6d60-489c-9ae9-880e6b586162
 caps.latest.revision: 13
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # wctrans
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

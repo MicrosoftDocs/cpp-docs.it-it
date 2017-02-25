@@ -1,8 +1,7 @@
 ---
 title: "_strnextc, _wcsnextc, _mbsnextc, _mbsnextc_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -42,7 +41,6 @@ f1_keywords:
   - "wcsnextc"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_mbsnextc (funzione)"
   - "_mbsnextc_l (funzione)"
@@ -56,10 +54,10 @@ helpviewer_keywords:
   - "wcsnextc (funzione)"
 ms.assetid: e3086173-9eb5-4540-a23a-5d866bd05340
 caps.latest.revision: 20
-caps.handback.revision: 20
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # _strnextc, _wcsnextc, _mbsnextc, _mbsnextc_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

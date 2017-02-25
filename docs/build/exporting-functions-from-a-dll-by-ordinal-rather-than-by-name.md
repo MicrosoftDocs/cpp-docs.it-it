@@ -1,8 +1,7 @@
 ---
 title: "Esportazione di funzioni da una DLL in base al numero ordinale anzich&#233; al nome | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "esportazioni ordinali [C++]"
 ms.assetid: 679719fd-d965-4df3-9f7a-7d86ad831702
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Esportazione di funzioni da una DLL in base al numero ordinale anzich&#233; al nome
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

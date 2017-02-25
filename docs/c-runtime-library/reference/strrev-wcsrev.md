@@ -1,8 +1,7 @@
 ---
 title: "strrev, wcsrev | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,16 +28,15 @@ f1_keywords:
   - "wcsrev"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "strrev (funzione)"
   - "wcsrev (funzione)"
 ms.assetid: 89e05854-a9ce-4fb7-993d-a9831cd7edf2
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # strrev, wcsrev
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

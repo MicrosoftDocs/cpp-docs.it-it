@@ -1,8 +1,7 @@
 ---
 title: "_CrtDbgReport, _CrtDbgReportW | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,7 +30,6 @@ f1_keywords:
   - "_CrtDbgReport"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "report di debug"
   - "_CrtDbgReport (funzione)"
@@ -40,10 +38,10 @@ helpviewer_keywords:
   - "_CrtDbgReportW (funzione)"
 ms.assetid: 6e581fb6-f7fb-4716-9432-f0145d639ecc
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # _CrtDbgReport, _CrtDbgReportW
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

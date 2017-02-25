@@ -1,8 +1,7 @@
 ---
 title: "Toolbar (Image Editor for Icons) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,7 +13,6 @@ f1_keywords:
   - "vc.editors.icon"
 dev_langs: 
   - "C++"
-  - "C++"
 helpviewer_keywords: 
   - "Graphics toolbar"
   - "Image editor [C++], toolbar"
@@ -23,10 +21,10 @@ helpviewer_keywords:
   - "Option selector, Image editor"
 ms.assetid: a0af4209-6273-4106-a7c1-0edecc9b5755
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Toolbar (Image Editor for Icons)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

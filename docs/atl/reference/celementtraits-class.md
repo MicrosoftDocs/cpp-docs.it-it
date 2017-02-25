@@ -1,8 +1,7 @@
 ---
 title: "CElementTraits Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "CElementTraits class"
 ms.assetid: 496528e5-7f80-4b45-be0c-6f646feb43c5
 caps.latest.revision: 17
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # CElementTraits Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

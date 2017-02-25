@@ -1,8 +1,7 @@
 ---
 title: "bss_seg | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,16 +13,15 @@ f1_keywords:
   - "bss_seg_CPP"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "bss_seg (pragma)"
   - "pragma, bss_seg"
 ms.assetid: 755f0154-de51-4778-97d3-c9b24e445079
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # bss_seg
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

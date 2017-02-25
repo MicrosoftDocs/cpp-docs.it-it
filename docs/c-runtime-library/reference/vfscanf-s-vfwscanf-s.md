@@ -1,8 +1,7 @@
 ---
 title: "vfscanf_s, vfwscanf_s | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -30,13 +29,12 @@ f1_keywords:
   - "_vftscanf_s"
 dev_langs: 
   - "C++"
-  - "C"
 ms.assetid: 9b0133f0-9a18-4581-b24b-3b72683ad432
 caps.latest.revision: 6
-caps.handback.revision: 4
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # vfscanf_s, vfwscanf_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

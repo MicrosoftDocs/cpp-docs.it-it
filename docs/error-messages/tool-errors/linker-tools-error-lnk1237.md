@@ -1,8 +1,7 @@
 ---
 title: "Errore degli strumenti del linker LNK1237 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "LNK1237"
 ms.assetid: 8722ffa8-096a-4bb0-85f9-f3aa0e10872a
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Errore degli strumenti del linker LNK1237
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

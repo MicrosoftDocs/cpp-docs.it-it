@@ -1,8 +1,7 @@
 ---
 title: "strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -39,7 +38,6 @@ f1_keywords:
   - "_mbslen"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_ftcslen (funzione)"
   - "_mbslen (funzione)"
@@ -60,10 +58,10 @@ helpviewer_keywords:
   - "wcslen (funzione)"
 ms.assetid: 16462f2a-1e0f-4eb3-be55-bf1c83f374c2
 caps.latest.revision: 32
-caps.handback.revision: 30
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 32
 ---
 # strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

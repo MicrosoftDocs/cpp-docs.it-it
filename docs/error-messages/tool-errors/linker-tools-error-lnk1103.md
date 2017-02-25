@@ -1,8 +1,7 @@
 ---
 title: "Errore degli strumenti del linker LNK1103 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "LNK1103"
 ms.assetid: c8e9bc54-6a71-471c-899e-6f98122ee3c4
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Errore degli strumenti del linker LNK1103
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "__debugbreak | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "punti di interruzione, __debugbreak intrinsic"
 ms.assetid: 1d1e1c0c-891a-4613-ae4b-d790094ba830
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # __debugbreak
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

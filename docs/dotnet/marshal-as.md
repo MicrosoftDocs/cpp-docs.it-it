@@ -1,8 +1,7 @@
 ---
 title: "marshal_as | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "marshal_as (modello) [C++]"
 ms.assetid: 2ed717da-2b11-41e5-981d-47d251771989
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # marshal_as
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

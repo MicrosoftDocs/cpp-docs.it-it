@@ -1,8 +1,7 @@
 ---
 title: "Procedura: caricare una risorsa Ribbon da un&#39;applicazione MFC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "barra multifunzione (risorsa), caricamento"
 ms.assetid: 1c76bb8f-6345-414a-9f3f-128815ceadc5
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Procedura: caricare una risorsa Ribbon da un&#39;applicazione MFC
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

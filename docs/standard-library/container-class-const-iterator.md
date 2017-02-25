@@ -1,8 +1,7 @@
 ---
 title: "Container Class::const_iterator | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "const_iterator (metodo)"
 ms.assetid: e68c9e30-fc4c-4c2e-8724-06d1fe8b8ccb
 caps.latest.revision: 8
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Container Class::const_iterator
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

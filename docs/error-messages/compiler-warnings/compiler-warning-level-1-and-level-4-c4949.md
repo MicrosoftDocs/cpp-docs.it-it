@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livelli 1 e 4) C4949 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4949"
 ms.assetid: 34f45a05-c115-49cb-9f67-0bd4f0735d9b
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Avviso del compilatore (livelli 1 e 4) C4949
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

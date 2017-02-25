@@ -1,8 +1,7 @@
 ---
 title: "__lzcnt16, __lzcnt, __lzcnt64 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "__lzcnt64 (funzione intrinseca)"
 ms.assetid: 412113e7-052e-46e5-8bfa-d5ad72abc10e
 caps.latest.revision: 14
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # __lzcnt16, __lzcnt, __lzcnt64
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

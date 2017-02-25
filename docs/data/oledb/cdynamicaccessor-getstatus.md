@@ -1,8 +1,7 @@
 ---
 title: "CDynamicAccessor::GetStatus | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "GetStatus (metodo)"
 ms.assetid: 8f1aba69-5c2c-4ca7-ad84-7b4b27995eb8
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # CDynamicAccessor::GetStatus
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

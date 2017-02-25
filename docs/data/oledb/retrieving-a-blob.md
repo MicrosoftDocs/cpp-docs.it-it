@@ -1,8 +1,7 @@
 ---
 title: "Recupero di un BLOB | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "recupero di BLOB"
 ms.assetid: 2893eb0a-5c05-4016-8914-1e40ccbaf0b3
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Recupero di un BLOB
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

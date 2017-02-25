@@ -1,8 +1,7 @@
 ---
 title: "Procedura dettagliata: moltiplicazione di matrici | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
 caps.latest.revision: 16
-caps.handback.revision: 15
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Procedura dettagliata: moltiplicazione di matrici
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

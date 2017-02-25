@@ -1,8 +1,7 @@
 ---
 title: "Concetti di base per l&#39;utilizzo delle eccezioni gestite | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "Visual C++, gestione di eccezioni gestite"
 ms.assetid: 40ce8931-1ecc-491a-815f-733b23fcba35
 caps.latest.revision: 21
-caps.handback.revision: 21
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # Concetti di base per l&#39;utilizzo delle eccezioni gestite
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

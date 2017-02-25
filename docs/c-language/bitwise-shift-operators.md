@@ -1,8 +1,7 @@
 ---
 title: "Operatori di spostamento bit per bit | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "operatori shift bit per bit"
   - "operatori [C++], bit per bit"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "operatori di spostamento, bit per bit"
 ms.assetid: d0485785-5c72-47e1-a7c0-0adde03ade23
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Operatori di spostamento bit per bit
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

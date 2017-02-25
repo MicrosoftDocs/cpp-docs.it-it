@@ -1,8 +1,7 @@
 ---
 title: "_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -35,7 +34,6 @@ f1_keywords:
   - "ftprintf_p"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_fprintf_p (funzione)"
   - "_fprintf_p_l (funzione)"
@@ -53,10 +51,10 @@ helpviewer_keywords:
   - "flussi, stampa di dati formattati"
 ms.assetid: 46b082e1-45ba-4383-9ee4-97015aa50bc6
 caps.latest.revision: 20
-caps.handback.revision: 18
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # _fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

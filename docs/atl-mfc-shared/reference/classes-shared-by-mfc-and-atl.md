@@ -1,8 +1,7 @@
 ---
 title: "Classi condivise da MFC e ATL | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "classi condivise, le classi"
 ms.assetid: ca8b4b6b-744d-430b-b31f-d5b2f17bf210
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Classi condivise da MFC e ATL
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

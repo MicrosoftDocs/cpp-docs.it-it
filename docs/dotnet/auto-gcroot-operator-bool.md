@@ -1,8 +1,7 @@
 ---
 title: "auto_gcroot::operator bool | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "operatore bool"
 ms.assetid: 87d38498-4221-4de8-8d02-c2dd2e6274ec
 caps.latest.revision: 15
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # auto_gcroot::operator bool
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Metodo ComPtr::Detach | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Detach (metodo)"
 ms.assetid: b9016775-1ade-4581-be1f-0d6f9c2ca658
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Metodo ComPtr::Detach
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

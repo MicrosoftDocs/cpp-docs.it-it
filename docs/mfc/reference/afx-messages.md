@@ -1,8 +1,7 @@
 ---
 title: "Messaggi AFX | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -75,10 +74,10 @@ helpviewer_keywords:
   - "AFX (messaggi)"
 ms.assetid: 3d601f3c-af6d-47d3-8553-34f1318fa74f
 caps.latest.revision: 24
-caps.handback.revision: 16
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # Messaggi AFX
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

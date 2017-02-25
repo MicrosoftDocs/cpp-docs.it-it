@@ -1,8 +1,7 @@
 ---
 title: "Classe match_results | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "match_results (classe) [TR1]"
 ms.assetid: b504fdca-e5dd-429d-9960-6e27c9167fa6
 caps.latest.revision: 16
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # Classe match_results
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

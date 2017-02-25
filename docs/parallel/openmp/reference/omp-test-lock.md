@@ -1,8 +1,7 @@
 ---
 title: "omp_test_lock | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "omp_test_lock OpenMP function"
 ms.assetid: 314ca85e-0749-4c16-800f-b0f36fed256d
 caps.latest.revision: 12
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # omp_test_lock
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

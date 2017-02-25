@@ -1,8 +1,7 @@
 ---
 title: "Compiler Warning (level 4) C4121 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4121"
 ms.assetid: 8c5b85c9-2543-426b-88bc-319c50158c7e
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Compiler Warning (level 4) C4121
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

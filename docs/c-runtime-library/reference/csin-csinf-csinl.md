@@ -1,8 +1,7 @@
 ---
 title: "csin, csinf, csinl | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -35,7 +34,6 @@ f1_keywords:
   - "complex/csinf"
   - "complex/csinl"
 dev_langs: 
-  - "C"
   - "C++"
 helpviewer_keywords: 
   - "funzione csin"
@@ -43,10 +41,10 @@ helpviewer_keywords:
   - "funzione csinl"
 ms.assetid: 3ed475e8-9aae-42ba-a25c-7ae656a0fd4d
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # csin, csinf, csinl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

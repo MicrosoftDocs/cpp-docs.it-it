@@ -1,8 +1,7 @@
 ---
 title: "Filosofia di progettazione classi generale | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "API Windows [C++], e MFC"
 ms.assetid: e6861ae0-1581-4d9c-9ddf-63f9afcdb913
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Filosofia di progettazione classi generale
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

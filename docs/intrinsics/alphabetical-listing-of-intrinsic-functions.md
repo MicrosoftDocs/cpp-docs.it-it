@@ -1,8 +1,7 @@
 ---
 title: "Elenco alfabetico di funzioni intrinseche | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "intrinsics, alphabetical list"
 ms.assetid: 178f88a2-7e8e-43ac-b55e-ef3298bef895
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Elenco alfabetico di funzioni intrinseche
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

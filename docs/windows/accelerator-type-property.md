@@ -1,8 +1,7 @@
 ---
 title: "Propriet&#224; Type dei tasti di scelta rapida | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "VIRTKEY"
 ms.assetid: 8c349bc4-e6ad-43fa-959e-f29168af35b8
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Propriet&#224; Type dei tasti di scelta rapida
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

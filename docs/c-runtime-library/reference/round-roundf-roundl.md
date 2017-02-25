@@ -1,8 +1,7 @@
 ---
 title: "round, roundf, roundl | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -38,10 +37,10 @@ helpviewer_keywords:
   - "roundl (funzione)"
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
 caps.latest.revision: 6
-caps.handback.revision: 4
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # round, roundf, roundl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

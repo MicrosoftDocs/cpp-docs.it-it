@@ -1,8 +1,7 @@
 ---
 title: "Compatibilit&#224; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,17 +12,16 @@ f1_keywords:
   - "c.programs"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "compatibilità"
   - "compatibilità, librerie di runtime del linguaggio C"
   - "CRT, compatibilità"
 ms.assetid: 346709cb-edda-4909-9a19-3d253eddb6b7
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # Compatibilit&#224;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "/MANIFEST (Crea manifesto dell&#39;assembly syde-by-side) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "-MANIFEST (opzione del linker)"
 ms.assetid: 98c52e1e-712c-4f49-b149-4d0a3501b600
 caps.latest.revision: 20
-caps.handback.revision: 20
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # /MANIFEST (Crea manifesto dell&#39;assembly syde-by-side)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

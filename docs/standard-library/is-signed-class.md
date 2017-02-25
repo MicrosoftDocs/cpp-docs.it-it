@@ -1,8 +1,7 @@
 ---
 title: "Classe is_signed | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "is_signed"
 ms.assetid: 20ae44d9-22ad-4fbd-b26a-f18c62689451
 caps.latest.revision: 19
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # Classe is_signed
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

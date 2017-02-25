@@ -1,8 +1,7 @@
 ---
 title: "Errore irreversibile C1020 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C1020"
 ms.assetid: 42f429e2-5e3b-4086-a10d-b99e032e51c5
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Errore irreversibile C1020
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

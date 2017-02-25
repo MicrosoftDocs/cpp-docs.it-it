@@ -1,8 +1,7 @@
 ---
 title: "Testing a Dialog Box | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,17 +10,16 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C++"
 helpviewer_keywords: 
   - "Test Dialog command"
   - "testing, dialog boxes"
   - "dialog boxes, testing"
 ms.assetid: 45034ee9-c554-4f4b-8c46-6ddefdee8951
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Testing a Dialog Box
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

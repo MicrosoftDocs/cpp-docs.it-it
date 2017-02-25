@@ -1,8 +1,7 @@
 ---
 title: "Override delle impostazioni predefinite dei servizi di un provider | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "provider di servizi [OLE DB]"
 ms.assetid: 08e366c0-74d8-463b-93a6-d58a8dc195f8
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Override delle impostazioni predefinite dei servizi di un provider
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "ICommandImpl::Execute | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "Execute (metodo)"
 ms.assetid: 033e0d4e-256b-4eed-9215-70e0bebb768c
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # ICommandImpl::Execute
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

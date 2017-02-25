@@ -1,8 +1,7 @@
 ---
 title: "conj, conjf, conjl | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -35,7 +34,6 @@ f1_keywords:
   - "complex/conjf"
   - "complex/conjl"
 dev_langs: 
-  - "C"
   - "C++"
 helpviewer_keywords: 
   - "conj (funzione)"
@@ -43,10 +41,10 @@ helpviewer_keywords:
   - "funzione conjl"
 ms.assetid: 792fccfa-19c6-4890-99f9-a3b89effccd6
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # conj, conjf, conjl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

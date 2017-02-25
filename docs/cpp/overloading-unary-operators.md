@@ -1,8 +1,7 @@
 ---
 title: "Overload degli operatori unari | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "operatori unari, plus"
 ms.assetid: 7683ef08-42a4-4283-928f-d3dd4f3ab4c0
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Overload degli operatori unari
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

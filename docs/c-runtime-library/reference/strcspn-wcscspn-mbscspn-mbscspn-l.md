@@ -1,8 +1,7 @@
 ---
 title: "strcspn, wcscspn, _mbscspn, _mbscspn_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -36,7 +35,6 @@ f1_keywords:
   - "_tcscspn"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_ftcscspn (funzione)"
   - "_mbscspn (funzione)"
@@ -51,10 +49,10 @@ helpviewer_keywords:
   - "wcscspn (funzione)"
 ms.assetid: f73f51dd-b533-4e46-ba29-d05c553708a6
 caps.latest.revision: 24
-caps.handback.revision: 22
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # strcspn, wcscspn, _mbscspn, _mbscspn_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

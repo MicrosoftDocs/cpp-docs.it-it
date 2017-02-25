@@ -1,8 +1,7 @@
 ---
 title: "Classe numeric_limits | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "numeric_limits (classe)"
 ms.assetid: 9e817177-0e91-48e6-b680-0531c4b26625
 caps.latest.revision: 26
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # Classe numeric_limits
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

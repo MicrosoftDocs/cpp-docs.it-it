@@ -1,8 +1,7 @@
 ---
 title: "isdigit, iswdigit, _isdigit_l, _iswdigit_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -36,7 +35,6 @@ f1_keywords:
   - "_istdigit_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "iswdigit (funzione)"
   - "iswdigit_l (funzione)"
@@ -50,10 +48,10 @@ helpviewer_keywords:
   - "_isdigit_l (funzione)"
 ms.assetid: 350b0093-843a-47b0-954e-c1776e8a3853
 caps.latest.revision: 19
-caps.handback.revision: 19
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # isdigit, iswdigit, _isdigit_l, _iswdigit_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

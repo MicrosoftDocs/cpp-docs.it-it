@@ -1,8 +1,7 @@
 ---
 title: "File inline in un makefile | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "NMAKE (programma), inline (file)"
 ms.assetid: ff48a64f-773d-410c-9726-f867ad4c8030
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # File inline in un makefile
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "__super | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "__super (parola chiave) [C++]"
 ms.assetid: f0957c31-9256-405b-b402-cad182404b5f
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # __super
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

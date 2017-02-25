@@ -1,8 +1,7 @@
 ---
 title: "Opzioni, Creazione guidata oggetto semplice ATL | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Creazione guidata oggetto semplice ATL, opzioni"
 ms.assetid: 125fe179-942d-4181-8b82-33e92e1fd779
 caps.latest.revision: 14
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # Opzioni, Creazione guidata oggetto semplice ATL
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

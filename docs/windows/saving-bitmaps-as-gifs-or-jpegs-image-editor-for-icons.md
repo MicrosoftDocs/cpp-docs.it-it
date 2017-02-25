@@ -1,8 +1,7 @@
 ---
 title: "Saving Bitmaps as GIFs or JPEGs (Image Editor for Icons) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -12,7 +11,6 @@ ms.topic: "article"
 f1_keywords: 
   - "vc.editors.image.editing"
 dev_langs: 
-  - "C++"
   - "C++"
 helpviewer_keywords: 
   - ".gif files, saving bitmaps as"
@@ -27,10 +25,10 @@ helpviewer_keywords:
   - "images [C++], converting formats"
 ms.assetid: 115df69f-10fb-4e6f-906b-853c1e4a54af
 caps.latest.revision: 12
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Saving Bitmaps as GIFs or JPEGs (Image Editor for Icons)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

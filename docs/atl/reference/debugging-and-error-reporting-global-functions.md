@@ -1,8 +1,7 @@
 ---
 title: "Debugging and Error Reporting Global Functions | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "funzioni [ATL], segnalazione di errori"
 ms.assetid: 11339c02-98cd-428d-b3b9-7deeb155a6a3
 caps.latest.revision: 17
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # Debugging and Error Reporting Global Functions
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

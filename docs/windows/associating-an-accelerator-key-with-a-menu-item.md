@@ -1,8 +1,7 @@
 ---
 title: "Associating an Accelerator Key with a Menu Item | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "keyboard shortcuts, menu association"
 ms.assetid: 15087bdd-3481-4ea9-9481-49f31845be70
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Associating an Accelerator Key with a Menu Item
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

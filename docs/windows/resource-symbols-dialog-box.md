@@ -1,8 +1,7 @@
 ---
 title: "Finestra di dialogo Simboli risorsa | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "Cambia simbolo (finestra di dialogo)"
 ms.assetid: 9706cde3-1f48-4fcd-bedb-2b03b455e3c1
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Finestra di dialogo Simboli risorsa
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

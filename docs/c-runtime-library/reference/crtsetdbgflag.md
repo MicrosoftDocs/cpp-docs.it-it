@@ -1,8 +1,7 @@
 ---
 title: "_CrtSetDbgFlag | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -38,7 +37,6 @@ f1_keywords:
   - "CRTDBG_REPORT_FLAG"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_CRTDBG_ALLOC_MEM_DF (macro)"
   - "_CRTDBG_CHECK_ALWAYS_DF (macro)"
@@ -62,10 +60,10 @@ helpviewer_keywords:
   - "CrtSetDbgFlag (funzione)"
 ms.assetid: b5657ffb-6178-4cbf-9886-1af904ede94c
 caps.latest.revision: 19
-caps.handback.revision: 19
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # _CrtSetDbgFlag
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

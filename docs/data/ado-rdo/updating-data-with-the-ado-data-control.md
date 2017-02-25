@@ -1,8 +1,7 @@
 ---
 title: "Aggiornamento dei dati con il controllo dati ADO | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "ADO [C++], controlli dati"
 ms.assetid: 8bec34b9-93dd-4872-b023-55ac011ccff5
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Aggiornamento dei dati con il controllo dati ADO
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

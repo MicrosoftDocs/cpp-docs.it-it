@@ -1,8 +1,7 @@
 ---
 title: "Struttura TOOLTIPTEXT | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "TOOLTIPTEXT (struttura)"
 ms.assetid: 547591bf-80f5-400e-a2a7-0708cfffbb5d
 caps.latest.revision: 13
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Struttura TOOLTIPTEXT
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

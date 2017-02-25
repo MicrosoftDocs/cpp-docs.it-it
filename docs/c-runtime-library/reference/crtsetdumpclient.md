@@ -1,8 +1,7 @@
 ---
 title: "_CrtSetDumpClient | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,16 +27,15 @@ f1_keywords:
   - "CrtSetDumpClient"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_CrtSetDumpClient (funzione)"
   - "CrtSetDumpClient (funzione)"
 ms.assetid: f3dd06d0-c331-4a12-b68d-25378d112033
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # _CrtSetDumpClient
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

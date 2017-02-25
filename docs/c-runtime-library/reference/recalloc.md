@@ -1,8 +1,7 @@
 ---
 title: "_recalloc | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,16 +28,15 @@ f1_keywords:
   - "recalloc"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_recalloc (funzione)"
   - "recalloc (funzione)"
 ms.assetid: 1db8305a-3f03-418c-8844-bf9149f63046
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # _recalloc
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

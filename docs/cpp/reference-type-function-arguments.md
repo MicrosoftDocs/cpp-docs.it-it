@@ -1,8 +1,7 @@
 ---
 title: "Argomenti di funzione di tipo Reference | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "passaggio di parametri, argomenti di tipo di riferimento"
 ms.assetid: 0a70e831-9e76-46c0-821d-aeba13d73cc0
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Argomenti di funzione di tipo Reference
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

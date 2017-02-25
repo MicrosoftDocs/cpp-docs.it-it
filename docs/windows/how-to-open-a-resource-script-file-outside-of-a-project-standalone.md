@@ -1,8 +1,7 @@
 ---
 title: "How to: Open a Resource Script File Outside of a Project (Standalone) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "resource script files, viewing resources"
 ms.assetid: bc350c60-178d-4c5d-9a7e-6576b0c936e4
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # How to: Open a Resource Script File Outside of a Project (Standalone)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

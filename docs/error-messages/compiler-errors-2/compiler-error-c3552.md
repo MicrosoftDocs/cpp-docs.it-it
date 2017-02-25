@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3552 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3552"
 ms.assetid: 83401524-1bf1-44c0-8aca-a6eb35c4224c
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Errore del compilatore C3552
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Record utente | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "record utente, descrizione"
 ms.assetid: 9c0d2864-2738-4f62-a750-1016d9c3523f
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Record utente
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

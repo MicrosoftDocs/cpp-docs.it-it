@@ -1,8 +1,7 @@
 ---
 title: "Errore degli strumenti del linker LNK1301 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "LNK1301"
 ms.assetid: 760da428-7182-4b25-b20a-de90d4b9a9cd
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Errore degli strumenti del linker LNK1301
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

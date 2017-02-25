@@ -1,8 +1,7 @@
 ---
 title: "Properties and Property Pages Classes | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "proprietà (pagine), classi"
 ms.assetid: 31616f98-69f8-48b2-8d58-b8e7d1c2b2d8
 caps.latest.revision: 14
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Properties and Property Pages Classes
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

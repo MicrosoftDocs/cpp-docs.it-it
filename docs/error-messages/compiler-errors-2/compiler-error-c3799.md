@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3799 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3799"
 ms.assetid: 336a2811-9370-4e6e-b03b-325bda470805
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Errore del compilatore C3799
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

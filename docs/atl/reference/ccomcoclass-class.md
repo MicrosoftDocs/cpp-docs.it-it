@@ -1,8 +1,7 @@
 ---
 title: "CComCoClass Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "CComCoClass class"
 ms.assetid: 67cfefa4-8df9-47fa-ad58-2d1a1ae25762
 caps.latest.revision: 19
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # CComCoClass Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

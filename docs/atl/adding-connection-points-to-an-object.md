@@ -1,8 +1,7 @@
 ---
 title: "Adding Connection Points to an Object | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "Implement Connection Point ATL wizard"
 ms.assetid: 843531be-4a36-4db0-9d54-e029b1a72a8b
 caps.latest.revision: 12
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Adding Connection Points to an Object
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

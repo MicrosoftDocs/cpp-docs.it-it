@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livello 1) C4291 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4291"
 ms.assetid: c2b95dea-38f2-4609-9104-707c30798da4
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Avviso del compilatore (livello 1) C4291
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

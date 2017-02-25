@@ -1,8 +1,7 @@
 ---
 title: "Stringhe modello documento, Creazione guidata aggiunta classe MFC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Creazione guidata aggiunta classe MFC, stringhe controllo documenti"
 ms.assetid: 14e1c834-5e79-4dbd-811f-ec8f0a9cdcb2
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Stringhe modello documento, Creazione guidata aggiunta classe MFC
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

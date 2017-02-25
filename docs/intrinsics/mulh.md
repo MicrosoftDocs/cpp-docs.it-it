@@ -1,8 +1,7 @@
 ---
 title: "__mulh | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "__mulh (funzione intrinseca)"
 ms.assetid: cd2ab093-9ef6-404d-ac34-0bee033882f3
 caps.latest.revision: 14
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # __mulh
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

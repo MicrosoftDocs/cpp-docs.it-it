@@ -1,8 +1,7 @@
 ---
 title: "Trigrammi | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "? (simbolo), trigramma"
   - "?? (trigramma)"
@@ -27,10 +25,10 @@ helpviewer_keywords:
   - "trigrammi"
 ms.assetid: 617f76ec-b8e8-4cfe-916c-4bc32cbd9aeb
 caps.latest.revision: 8
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Trigrammi
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Viewing and Editing Resources in a Resource Editor | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "resources [Visual Studio], editing"
 ms.assetid: ba8bdc07-3f60-43c7-aa5c-d5dd11f0966e
 caps.latest.revision: 12
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Viewing and Editing Resources in a Resource Editor
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

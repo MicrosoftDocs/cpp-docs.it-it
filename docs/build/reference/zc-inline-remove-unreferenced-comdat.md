@@ -1,8 +1,7 @@
 ---
 title: "/Zc:inline (rimuovere COMDAT senza riferimenti) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "-Zc (opzioni del compilatore) (C++)"
 ms.assetid: a4c94224-1d73-4bea-a9d5-4fa73dc924df
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # /Zc:inline (rimuovere COMDAT senza riferimenti)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

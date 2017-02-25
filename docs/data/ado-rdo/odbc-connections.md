@@ -1,8 +1,7 @@
 ---
 title: "Connessioni ODBC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "ODBC, connessione"
 ms.assetid: c9df2fa6-d9e2-4335-b885-724662968691
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Connessioni ODBC
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Archiviazione locale di thread (TLS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/09/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "TLS [C++]"
 ms.assetid: 80801907-d792-45ca-b776-df0cf2e9f197
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Archiviazione locale di thread (TLS)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

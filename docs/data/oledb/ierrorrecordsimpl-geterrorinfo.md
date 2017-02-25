@@ -1,8 +1,7 @@
 ---
 title: "IErrorRecordsImpl::GetErrorInfo | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "GetErrorInfo (metodo)"
 ms.assetid: 44d0872f-f25f-4102-8f7f-a2cfb3eeb1a0
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # IErrorRecordsImpl::GetErrorInfo
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

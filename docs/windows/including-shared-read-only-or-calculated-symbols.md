@@ -1,8 +1,7 @@
 ---
 title: "Including Shared (Read-Only) or Calculated Symbols | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "shared symbols"
 ms.assetid: 32b77faf-a066-4371-a072-9a5b84c0766d
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Including Shared (Read-Only) or Calculated Symbols
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

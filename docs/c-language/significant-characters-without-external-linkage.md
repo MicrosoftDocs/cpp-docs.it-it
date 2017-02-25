@@ -1,8 +1,7 @@
 ---
 title: "Caratteri significativi senza collegamento esterno | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,13 +10,12 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 ms.assetid: 396cfb36-391a-4aa9-885d-20198d4dc2ec
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Caratteri significativi senza collegamento esterno
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

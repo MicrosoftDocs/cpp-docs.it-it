@@ -1,8 +1,7 @@
 ---
 title: "/DEBUG (Genera informazioni di debug) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -26,11 +25,11 @@ helpviewer_keywords:
   - "pdb (file), generazione di informazioni di debug"
   - "database di programma [C++]"
 ms.assetid: 1af389ae-3f8b-4d76-a087-1cdf861e9103
-caps.latest.revision: 11
-caps.handback.revision: 10
+caps.latest.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # /DEBUG (Genera informazioni di debug)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

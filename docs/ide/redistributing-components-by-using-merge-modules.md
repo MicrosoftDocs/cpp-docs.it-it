@@ -1,8 +1,7 @@
 ---
 title: "Ridistribuzione di componenti tramite modelli unione | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "ridistribuzione di applicazioni, utilizzo di moduli di unione"
 ms.assetid: 93b84211-bf9b-4a78-9f22-474ac2ef7840
 caps.latest.revision: 21
-caps.handback.revision: 21
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # Ridistribuzione di componenti tramite modelli unione
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

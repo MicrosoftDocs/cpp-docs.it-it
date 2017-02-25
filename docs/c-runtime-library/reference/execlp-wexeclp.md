@@ -1,8 +1,7 @@
 ---
 title: "_execlp, _wexeclp | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,7 +30,6 @@ f1_keywords:
   - "_execlp"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_execlp (funzione)"
   - "_wexeclp (funzione)"
@@ -39,10 +37,10 @@ helpviewer_keywords:
   - "wexeclp (funzione)"
 ms.assetid: 7b179163-4bcd-4d6a-8baf-68f886791928
 caps.latest.revision: 22
-caps.handback.revision: 22
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # _execlp, _wexeclp
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

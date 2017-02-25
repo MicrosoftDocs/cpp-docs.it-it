@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livello 4) C4204 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4204"
 ms.assetid: 298d2880-6737-448e-b711-15572d540200
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Avviso del compilatore (livello 4) C4204
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

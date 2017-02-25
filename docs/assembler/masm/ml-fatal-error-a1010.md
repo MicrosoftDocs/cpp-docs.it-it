@@ -1,8 +1,7 @@
 ---
 title: "ML Fatal Error A1010 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "A1010"
 ms.assetid: 9e0b5241-67f4-4740-8701-3b2d2d1ad9e4
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # ML Fatal Error A1010
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Classe independent_bits_engine | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "independent_bits_engine (classe)"
 ms.assetid: 889e9a82-f457-49a7-9d2e-26e0fc3cd907
 caps.latest.revision: 17
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # Classe independent_bits_engine
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

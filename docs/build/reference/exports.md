@@ -1,8 +1,7 @@
 ---
-title: "EXPORTS | Microsoft Docs"
+title: "/EXPORTS | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -10,17 +9,19 @@ ms.technology:
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
-  - "EXPORTS"
+  - "/exports"
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
-  - "EXPORTS (istruzione) file .def"
+  - "/EXPORTS (opzione di dumpbin)"
+  - "EXPORTS (opzione dumpbin)"
+  - "-EXPORTS (opzione dumpbin)"
 ms.assetid: dbcd7579-b855-44c4-bd27-931e157657f7
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # EXPORTS
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

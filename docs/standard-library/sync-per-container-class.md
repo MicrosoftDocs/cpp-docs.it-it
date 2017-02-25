@@ -1,8 +1,7 @@
 ---
 title: "Classe sync_per_container | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "sync_per_container (classe)"
 ms.assetid: 0b4b2904-b668-4d94-a422-d4f919cbffab
 caps.latest.revision: 21
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # Classe sync_per_container
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

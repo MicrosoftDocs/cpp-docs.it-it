@@ -1,8 +1,7 @@
 ---
 title: "CArrayRowset::operator | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "operator[], matrici"
 ms.assetid: 3bb8c310-cc1e-46e8-9711-9b565488acaa
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # CArrayRowset::operator
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

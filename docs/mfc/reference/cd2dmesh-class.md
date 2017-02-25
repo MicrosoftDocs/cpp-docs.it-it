@@ -1,8 +1,7 @@
 ---
 title: "Classe CD2DMesh | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "CD2DMesh (classe)"
 ms.assetid: 11a2c78a-1367-40e8-a34f-44aa0509a4c9
 caps.latest.revision: 17
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # Classe CD2DMesh
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

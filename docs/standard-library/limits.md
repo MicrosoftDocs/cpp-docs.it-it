@@ -1,8 +1,7 @@
 ---
 title: "&lt;limits&gt; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "limits (intestazione)"
 ms.assetid: e07d6379-5b00-4a3d-a789-40d41538b59e
 caps.latest.revision: 18
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # &lt;limits&gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

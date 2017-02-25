@@ -1,8 +1,7 @@
 ---
 title: "/Zc:wchar_t (Tipo nativo wchar_t) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "-Zc (opzioni del compilatore) [C++]"
 ms.assetid: b0de5a84-da72-4e5a-9a4e-541099f939e0
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # /Zc:wchar_t (Tipo nativo wchar_t)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Classi di supporto COM del compilatore | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "COM, supporto del compilatore"
 ms.assetid: 6d800d9b-b902-4033-9639-740a30b06f88
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Classi di supporto COM del compilatore
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Errore dell‘analizzatore di espressioni CXX0064 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "CXX0064"
 ms.assetid: aa509e71-0616-41ca-a94e-6c376b041e57
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Errore dell‘analizzatore di espressioni CXX0064
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "main: avvio del programma | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "wmain (funzione)"
 ms.assetid: f9581cd6-93f7-4bcd-99ec-d07c3c107dd4
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # main: avvio del programma
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

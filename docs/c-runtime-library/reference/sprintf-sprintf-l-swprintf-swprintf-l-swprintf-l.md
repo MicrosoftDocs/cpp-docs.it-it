@@ -1,8 +1,7 @@
 ---
 title: "sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,6 +24,7 @@ apilocation:
   - "msvcr110_clr0400.dll"
   - "msvcr120.dll"
   - "msvcr120_clr0400.dll"
+  - "ntdll.dll"
   - "ucrtbase.dll"
 apitype: "DLLExport"
 f1_keywords: 
@@ -38,7 +38,6 @@ f1_keywords:
   - "stprintf_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "__swprintf_l (funzione)"
   - "_CRT_NON_CONFORMING_SWPRINTFS"
@@ -56,10 +55,10 @@ helpviewer_keywords:
   - "swprintf_l (funzione)"
 ms.assetid: f6efe66f-3563-4c74-9455-5411ed939b81
 caps.latest.revision: 36
-caps.handback.revision: 34
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 36
 ---
 # sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

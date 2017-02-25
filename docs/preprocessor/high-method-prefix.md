@@ -1,8 +1,7 @@
 ---
 title: "high_method_prefix | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,15 +12,14 @@ f1_keywords:
   - "high_method_prefix"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "high_method_prefix (attributo)"
 ms.assetid: cacebf09-12f5-4919-ad40-939e206e340c
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # high_method_prefix
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

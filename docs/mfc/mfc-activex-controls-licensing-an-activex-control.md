@@ -1,8 +1,7 @@
 ---
 title: "Controlli ActiveX MFC: licenze di un controllo ActiveX | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "VerifyUserLicense (metodo)"
 ms.assetid: cacd9e45-701a-4a1f-8f1f-b0b39f6ac303
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Controlli ActiveX MFC: licenze di un controllo ActiveX
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

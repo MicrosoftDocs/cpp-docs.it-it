@@ -1,8 +1,7 @@
 ---
 title: "Classe nested_scheduler_missing_detach | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "nested_scheduler_missing_detach (classe)"
 ms.assetid: 65d3f277-6d43-4160-97ef-caf8b26c1641
 caps.latest.revision: 19
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # Classe nested_scheduler_missing_detach
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

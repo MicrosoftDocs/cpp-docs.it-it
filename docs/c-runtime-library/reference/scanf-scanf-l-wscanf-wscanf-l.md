@@ -1,8 +1,7 @@
 ---
 title: "scanf, _scanf_l, wscanf, _wscanf_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -35,7 +34,6 @@ f1_keywords:
   - "_tscanf_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_scanf_l (funzione)"
   - "_tscanf (funzione)"
@@ -52,10 +50,10 @@ helpviewer_keywords:
   - "wscanf_l (funzione)"
 ms.assetid: 73eac607-117f-4be4-9ff0-4afd9cf3c848
 caps.latest.revision: 25
-caps.handback.revision: 23
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # scanf, _scanf_l, wscanf, _wscanf_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

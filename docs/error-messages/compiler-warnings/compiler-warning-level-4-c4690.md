@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livello 4) C4690 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4690"
 ms.assetid: 080a0ea1-458b-477b-a37a-4a34c94709ff
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Avviso del compilatore (livello 4) C4690
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

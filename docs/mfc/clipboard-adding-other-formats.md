@@ -1,8 +1,7 @@
 ---
 title: "Appunti: aggiunta di altri formati | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "registrazione di formati di dati degli Appunti personalizzati"
 ms.assetid: aea58159-65ed-4385-aeaa-3d9d5281903b
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Appunti: aggiunta di altri formati
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

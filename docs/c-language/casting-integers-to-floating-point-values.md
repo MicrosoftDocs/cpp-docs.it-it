@@ -1,8 +1,7 @@
 ---
 title: "Cast da valori Integer a valori a virgola mobile | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,15 +10,14 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Integer, cast a valori a virgola mobile"
 ms.assetid: 81fd5b7d-15eb-4c11-a8c8-e1621ff54fd3
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Cast da valori Integer a valori a virgola mobile
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

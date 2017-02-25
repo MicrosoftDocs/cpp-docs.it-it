@@ -1,8 +1,7 @@
 ---
 title: "How to: Include Resources at Compile Time | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "include directive (#include)"
 ms.assetid: 357e93c2-0a29-42f9-806f-882f688b8924
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # How to: Include Resources at Compile Time
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

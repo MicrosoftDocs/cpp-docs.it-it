@@ -1,8 +1,7 @@
 ---
 title: "CAtlModuleT Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "CAtlModuleT class"
 ms.assetid: 9b74d02f-9117-47b1-a05e-c5945f83dd2b
 caps.latest.revision: 19
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # CAtlModuleT Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

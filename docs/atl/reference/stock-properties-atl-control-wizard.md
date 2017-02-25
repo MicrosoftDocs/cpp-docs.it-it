@@ -1,8 +1,7 @@
 ---
 title: "Propriet&#224; predefinite, Creazione guidata controllo ATL | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ dev_langs:
   - "C++"
 ms.assetid: b27b0e60-08a6-43f4-ba6e-0a4e45147693
 caps.latest.revision: 13
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Propriet&#224; predefinite, Creazione guidata controllo ATL
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

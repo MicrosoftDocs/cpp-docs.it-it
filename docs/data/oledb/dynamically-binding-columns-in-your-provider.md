@@ -1,8 +1,7 @@
 ---
 title: "Associazione dinamica di colonne nel provider | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "provider [C++], associazione dinamica di colonne"
 ms.assetid: 45e811e3-f5a7-4627-98cc-bf817c4e556e
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Associazione dinamica di colonne nel provider
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

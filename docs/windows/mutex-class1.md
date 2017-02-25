@@ -1,8 +1,7 @@
 ---
 title: "Classe Mutex | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Mutex (classe)"
 ms.assetid: 682a0963-721c-46a2-8871-000e9997505b
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Classe Mutex
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

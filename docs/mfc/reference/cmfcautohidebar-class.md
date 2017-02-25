@@ -1,8 +1,7 @@
 ---
 title: "CMFCAutoHideBar Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "CMFCAutoHideToolBar class"
 ms.assetid: 54c8d84f-de64-4efd-8a47-3ea0ade40a70
 caps.latest.revision: 35
-caps.handback.revision: 23
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 37
 ---
 # CMFCAutoHideBar Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

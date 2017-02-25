@@ -1,8 +1,7 @@
 ---
 title: "/Ge (Attiva ricerche dello stack) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "stack, ricerche dello stack"
 ms.assetid: 4b54deae-4e3c-4bfa-95f3-ba23590f7258
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # /Ge (Attiva ricerche dello stack)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

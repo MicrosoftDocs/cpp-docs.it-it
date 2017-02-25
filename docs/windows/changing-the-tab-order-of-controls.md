@@ -1,8 +1,7 @@
 ---
 title: "Changing the Tab Order of Controls | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -10,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
-  - "C++"
   - "C++"
 helpviewer_keywords: 
   - "controls [C++], tab order"
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "dialog box controls, tab order"
 ms.assetid: e2cee764-4367-42d7-9563-65a68f76f5ff
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Changing the Tab Order of Controls
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Deleting a Toolbar Button | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,16 +10,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C++"
 helpviewer_keywords: 
   - "toolbar buttons (in Toolbar editor), deleting"
   - "Toolbar editor, deleting buttons"
 ms.assetid: 0888cb9b-6804-4717-93d0-3437bbc6241c
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Deleting a Toolbar Button
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3761 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3761"
 ms.assetid: 0c16f093-7a78-4838-b90b-0c67ef6e9270
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Errore del compilatore C3761
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

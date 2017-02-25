@@ -1,8 +1,7 @@
 ---
 title: "/Wp64 (Rileva errori di portabilit&#224; a 64 bit) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "-Wp64 (opzione del compilatore) [C++]"
 ms.assetid: 331ae5aa-e627-4d03-8f63-dd2c2d76dadd
 caps.latest.revision: 21
-caps.handback.revision: 21
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # /Wp64 (Rileva errori di portabilit&#224; a 64 bit)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

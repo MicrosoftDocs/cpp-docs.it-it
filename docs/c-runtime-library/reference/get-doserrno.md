@@ -1,8 +1,7 @@
 ---
 title: "_get_doserrno | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,16 +28,15 @@ f1_keywords:
   - "get_doserrno"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_get_doserrno (funzione)"
   - "get_doserrno (funzione)"
 ms.assetid: 7fec7be3-6e39-4181-846b-8ef24489361c
 caps.latest.revision: 19
-caps.handback.revision: 19
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # _get_doserrno
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

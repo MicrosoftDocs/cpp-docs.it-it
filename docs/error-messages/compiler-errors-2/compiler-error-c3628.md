@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3628 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3628"
 ms.assetid: 0ff5a4a4-fcc9-47a0-a4d8-8af9cf2815f6
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Errore del compilatore C3628
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

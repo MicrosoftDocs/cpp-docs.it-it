@@ -1,8 +1,7 @@
 ---
 title: "/VERSION (Informazioni sulla versione) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "numeri di versione, specifica nei file EXE"
 ms.assetid: b86d0e86-dca6-4316-aee2-d863ccb9f223
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # /VERSION (Informazioni sulla versione)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

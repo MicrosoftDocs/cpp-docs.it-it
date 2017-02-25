@@ -1,8 +1,7 @@
 ---
 title: "auto_gcroot::reset | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "reset (metodo)"
 ms.assetid: dd58467f-3885-4a15-99fb-ed6dd5d19622
 caps.latest.revision: 13
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # auto_gcroot::reset
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

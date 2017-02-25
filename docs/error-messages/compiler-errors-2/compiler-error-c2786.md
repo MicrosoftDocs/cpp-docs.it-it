@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C2786 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2786"
 ms.assetid: 6676d8c0-86dd-4a39-bdda-b75a35f4d137
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Errore del compilatore C2786
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

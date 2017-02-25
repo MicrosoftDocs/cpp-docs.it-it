@@ -1,8 +1,7 @@
 ---
 title: "_mbbtype, _mbbtype_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,7 +31,6 @@ f1_keywords:
   - "_mbbtype"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_mbbtype (funzione)"
   - "_mbbtype_l (funzione)"
@@ -40,10 +38,10 @@ helpviewer_keywords:
   - "mbbtype_l (funzione)"
 ms.assetid: b8e34b40-842a-4298-aa39-0bd2d8e51c2a
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # _mbbtype, _mbbtype_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

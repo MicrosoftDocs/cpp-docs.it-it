@@ -1,8 +1,7 @@
 ---
 title: "Classe is_reference | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "is_reference"
 ms.assetid: 3d9e631f-3092-430c-843e-e914ab58c257
 caps.latest.revision: 20
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # Classe is_reference
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "_bittest, _bittest64 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,11 +20,11 @@ helpviewer_keywords:
   - "_bittest64 intrinsic"
   - "bt instruction"
 ms.assetid: 15e62afb-abea-4ee7-a6b1-13efa2034937
-caps.latest.revision: 19
-caps.handback.revision: 16
+caps.latest.revision: 18
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # _bittest, _bittest64
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

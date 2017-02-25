@@ -1,8 +1,7 @@
 ---
 title: "_heapadd | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,7 +24,6 @@ f1_keywords:
   - "_heapadd"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_heapadd (funzione)"
   - "heapadd (funzione)"
@@ -33,10 +31,10 @@ helpviewer_keywords:
   - "memoria, aggiunta agli heap"
 ms.assetid: 4d691fe2-2763-49f4-afb1-62738b7cd3ff
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # _heapadd
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3721 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3721"
 ms.assetid: c696ca38-3e00-4875-abbe-7bce0f46930e
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Errore del compilatore C3721
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "isalnum, iswalnum, _isalnum_l, _iswalnum_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -36,7 +35,6 @@ f1_keywords:
   - "_istalnum"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_isalnum_l (funzione)"
   - "_ismbcalnum_l (funzione)"
@@ -48,10 +46,10 @@ helpviewer_keywords:
   - "iswalnum (funzione)"
 ms.assetid: 0dc51306-ade8-4944-af27-e4176fc89093
 caps.latest.revision: 20
-caps.handback.revision: 20
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # isalnum, iswalnum, _isalnum_l, _iswalnum_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

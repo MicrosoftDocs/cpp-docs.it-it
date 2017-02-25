@@ -1,8 +1,7 @@
 ---
 title: "__readpmc | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "rdpmc (istruzione)"
 ms.assetid: 14ed45a6-28b6-4635-8437-a597c04b43d4
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # __readpmc
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

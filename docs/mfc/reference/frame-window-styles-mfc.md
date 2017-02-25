@@ -1,8 +1,7 @@
 ---
 title: "Stili Frame-Window (MFC) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "stili, finestre"
 ms.assetid: d21f270e-a088-4962-a2ae-8c03334b5a06
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Stili Frame-Window (MFC)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

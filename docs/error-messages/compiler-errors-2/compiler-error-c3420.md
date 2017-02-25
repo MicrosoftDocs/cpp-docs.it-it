@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3420 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3420"
 ms.assetid: 99b53c77-f36b-4574-9199-b53111becccb
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # Errore del compilatore C3420
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

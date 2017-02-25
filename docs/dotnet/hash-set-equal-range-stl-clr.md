@@ -1,8 +1,7 @@
 ---
 title: "hash_set::equal_range (STL/CLR) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "equal_range (membro) [STL/CLR]"
 ms.assetid: 502af4c5-f71e-44cf-a180-21e9da4b50ff
 caps.latest.revision: 17
-caps.handback.revision: 15
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # hash_set::equal_range (STL/CLR)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

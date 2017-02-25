@@ -1,8 +1,7 @@
 ---
 title: "_spawnve, _wspawnve | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,7 +31,6 @@ f1_keywords:
   - "spawnve"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_spawnve (funzione)"
   - "_wspawnve (funzione)"
@@ -43,10 +41,10 @@ helpviewer_keywords:
   - "wspawnve (funzione)"
 ms.assetid: 26d1713d-b551-4f21-a07b-e9891a2ae6cf
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # _spawnve, _wspawnve
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

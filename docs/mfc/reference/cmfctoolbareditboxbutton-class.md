@@ -1,8 +1,7 @@
 ---
 title: "CMFCToolBarEditBoxButton Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -37,10 +36,10 @@ helpviewer_keywords:
   - "SetACCData method"
 ms.assetid: b21d9b67-6bf7-4ca9-bd62-b237756e0ab3
 caps.latest.revision: 28
-caps.handback.revision: 16
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 30
 ---
 # CMFCToolBarEditBoxButton Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

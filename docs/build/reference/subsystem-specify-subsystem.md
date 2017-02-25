@@ -1,8 +1,7 @@
 ---
 title: "/SUBSYSTEM (Specifica il sottosistema) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "specifiche di sottosistema"
 ms.assetid: d7b133cf-cf22-4da8-ab46-6552702c0b9b
 caps.latest.revision: 25
-caps.handback.revision: 25
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # /SUBSYSTEM (Specifica il sottosistema)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

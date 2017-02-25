@@ -1,8 +1,7 @@
 ---
 title: "ATL/MFC Shared Classes | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,10 +31,10 @@ helpviewer_keywords:
   - "shared classes, MFC e ATL"
 ms.assetid: e13aaac3-21ec-4f4d-8834-432b40fde544
 caps.latest.revision: 12
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # ATL/MFC Shared Classes
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

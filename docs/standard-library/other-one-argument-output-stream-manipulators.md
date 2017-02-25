@@ -1,8 +1,7 @@
 ---
 title: "Altri manipolatori di flusso di output a un solo argomento | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "flussi di output, manipolatori a uno solo argomento"
 ms.assetid: e381dee8-6b16-4cef-805a-4a6a1d2b696b
 caps.latest.revision: 11
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Altri manipolatori di flusso di output a un solo argomento
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

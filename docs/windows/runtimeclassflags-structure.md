@@ -1,8 +1,7 @@
 ---
 title: "Struttura RuntimeClassFlags | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "RuntimeClassFlags (struttura)"
 ms.assetid: 7098d605-bd14-4d51-82f4-3def8296a938
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Struttura RuntimeClassFlags
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

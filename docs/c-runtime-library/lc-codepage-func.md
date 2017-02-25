@@ -1,8 +1,7 @@
 ---
 title: "___lc_codepage_func | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,10 +28,10 @@ helpviewer_keywords:
   - "___lc_codepage_func"
 ms.assetid: 6a663bd0-5a63-4a2f-9507-872ec1582aae
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # ___lc_codepage_func
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

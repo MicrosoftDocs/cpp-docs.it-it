@@ -1,8 +1,7 @@
 ---
 title: "Creazione di finestre | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "finestre [C++], creazione"
 ms.assetid: f5ff91a6-4069-47d7-9177-1e6c80d3792c
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Creazione di finestre
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

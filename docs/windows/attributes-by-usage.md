@@ -1,8 +1,7 @@
 ---
 title: "Attributes by Usage | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "attributes [C++]"
 ms.assetid: 8be2de10-b1ff-4ca4-a114-75318408593c
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Attributes by Usage
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "_lrotl, _lrotr | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,7 +31,6 @@ f1_keywords:
   - "_lrotl"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_lrotl (funzione)"
   - "_lrotr (funzione)"
@@ -43,10 +41,10 @@ helpviewer_keywords:
   - "rotazione di bit"
 ms.assetid: d42f295b-35f9-49d2-9ee4-c66896ffe68e
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # _lrotl, _lrotr
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

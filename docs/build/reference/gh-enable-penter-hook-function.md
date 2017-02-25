@@ -1,8 +1,7 @@
 ---
 title: "/Gh (Attiva funzione hook _penter) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "-Gh (opzione del compilatore) [C++]"
 ms.assetid: 1510a082-8a0e-486e-a309-6add814b494f
 caps.latest.revision: 18
-caps.handback.revision: 16
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # /Gh (Attiva funzione hook _penter)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

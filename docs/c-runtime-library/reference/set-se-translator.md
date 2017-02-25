@@ -1,8 +1,7 @@
 ---
 title: "_set_se_translator | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,17 +27,16 @@ f1_keywords:
   - "set_se_translator"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_set_se_translator (funzione)"
   - "gestione eccezioni, modifica"
   - "set_se_translator (funzione)"
 ms.assetid: 280842bc-d72a-468b-a565-2d3db893ae0f
 caps.latest.revision: 21
-caps.handback.revision: 19
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # _set_se_translator
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

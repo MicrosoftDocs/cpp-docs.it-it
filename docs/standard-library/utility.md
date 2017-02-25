@@ -1,8 +1,7 @@
 ---
 title: "&lt;utility&gt; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "utility (intestazione)"
 ms.assetid: c4491103-5da9-47a1-9c2b-ed8bc64b0599
 caps.latest.revision: 18
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # &lt;utility&gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Funzionalit&#224; di sicurezza in CRT | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,7 +14,6 @@ f1_keywords:
   - "_CRT_SECURE_NO_WARNINGS"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_CRT_NONSTDC_NO_DEPRECATE"
   - "_CRT_NONSTDC_NO_WARNINGS"
@@ -36,10 +34,10 @@ helpviewer_keywords:
   - "CRT con sicurezza avanzata"
 ms.assetid: d9568b08-9514-49cd-b3dc-2454ded195a3
 caps.latest.revision: 23
-caps.handback.revision: 23
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # Funzionalit&#224; di sicurezza in CRT
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

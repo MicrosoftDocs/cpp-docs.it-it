@@ -1,8 +1,7 @@
 ---
 title: "Tipo restituito | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "tipi di dati [C++], tipi restituiti dalla funzione"
   - "tipi restituiti dalla funzione"
@@ -22,10 +20,10 @@ helpviewer_keywords:
   - "valori restituiti [C++], routine di funzione"
 ms.assetid: 3e5b8a97-b341-48c5-8be8-8986980ef586
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Tipo restituito
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

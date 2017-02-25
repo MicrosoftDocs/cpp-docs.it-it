@@ -1,8 +1,7 @@
 ---
 title: "API WRL chiave per categoria | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 7367bacf-6b7c-4ecd-a0ce-a662db46fc66
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # API WRL chiave per categoria
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

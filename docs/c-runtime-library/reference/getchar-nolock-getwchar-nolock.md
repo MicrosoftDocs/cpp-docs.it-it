@@ -1,8 +1,7 @@
 ---
 title: "_getchar_nolock, _getwchar_nolock | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,7 +30,6 @@ f1_keywords:
   - "getchar_nolock"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_getchar_nolock (funzione)"
   - "_getwchar_nolock (funzione)"
@@ -41,10 +39,10 @@ helpviewer_keywords:
   - "input standard, lettura"
 ms.assetid: dc49ba60-0647-4ae9-aa9a-a0618b1666de
 caps.latest.revision: 16
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # _getchar_nolock, _getwchar_nolock
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

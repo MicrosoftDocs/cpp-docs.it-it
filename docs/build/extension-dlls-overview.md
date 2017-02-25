@@ -1,8 +1,7 @@
 ---
 title: "DLL di estensione: cenni preliminari | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "versioni DLL condivise [C++]"
 ms.assetid: eb5e10b7-d615-4bc7-908d-e3e99b7b1d5f
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # DLL di estensione: cenni preliminari
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

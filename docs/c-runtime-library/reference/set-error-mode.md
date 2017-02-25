@@ -1,8 +1,7 @@
 ---
 title: "_set_error_mode | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,16 +28,15 @@ f1_keywords:
   - "_set_error_mode"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_set_error_mode (funzione)"
   - "set_error_mode (funzione)"
 ms.assetid: f0807be5-73d1-4a32-a701-3c9bdd139c5c
 caps.latest.revision: 21
-caps.handback.revision: 19
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # _set_error_mode
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

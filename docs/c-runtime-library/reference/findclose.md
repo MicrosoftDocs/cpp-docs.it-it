@@ -1,8 +1,7 @@
 ---
 title: "_findclose | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,16 +28,15 @@ f1_keywords:
   - "findclose"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_findclose (funzione)"
   - "findclose (funzione)"
 ms.assetid: 9216c573-0878-444c-b5d7-cdaf16fb9163
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # _findclose
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

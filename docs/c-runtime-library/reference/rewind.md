@@ -1,8 +1,7 @@
 ---
 title: "rewind | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,7 +27,6 @@ f1_keywords:
   - "rewind"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "puntatori a file [C++]"
   - "puntatori a file [C++], riposizionamento"
@@ -36,10 +34,10 @@ helpviewer_keywords:
   - "rewind (funzione)"
 ms.assetid: 1a460ce1-28d8-4b5e-83a6-633dca29c28a
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # rewind
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

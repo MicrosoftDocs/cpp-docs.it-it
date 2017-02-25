@@ -1,8 +1,7 @@
 ---
 title: "Specifica della larghezza per printf | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,16 +18,15 @@ apilocation:
 apitype: "DLLExport"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "printf (funzione), campi di specifica di formato"
   - "printf (funzione), specifica della larghezza"
 ms.assetid: 8b4a1b1e-bf6e-414f-a1b6-a9b6f1b6ce92
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Specifica della larghezza per printf
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

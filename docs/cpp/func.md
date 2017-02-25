@@ -1,8 +1,7 @@
 ---
 title: "__func__ | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ dev_langs:
   - "C++"
 ms.assetid: a5299b8d-f0ee-4af2-91dd-8fb165e68798
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # __func__
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Mappe sink di evento | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "mappe sink di evento"
 ms.assetid: a9757eb2-5f4a-45ec-a2cd-ce5eec85b16f
 caps.latest.revision: 14
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Mappe sink di evento
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

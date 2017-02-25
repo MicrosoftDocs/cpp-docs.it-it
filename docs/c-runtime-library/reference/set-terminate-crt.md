@@ -1,8 +1,7 @@
 ---
 title: "set_terminate (CRT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,17 +27,16 @@ f1_keywords:
   - "set_terminate"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "gestione eccezioni, chiusura"
   - "set_terminate (funzione)"
   - "terminate (funzione)"
 ms.assetid: 3ff1456a-7898-44bc-9266-a328a80b6006
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # set_terminate (CRT)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

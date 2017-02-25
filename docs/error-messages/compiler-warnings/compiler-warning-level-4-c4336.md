@@ -1,8 +1,7 @@
 ---
 title: "Avviso del compilatore (livello 4) C4336 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4336"
 ms.assetid: 93f199dd-d6dd-42c0-82d8-c12d101a7235
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Avviso del compilatore (livello 4) C4336
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

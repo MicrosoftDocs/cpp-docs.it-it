@@ -1,8 +1,7 @@
 ---
 title: "Struttura IResourceManager | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "IResourceManager (struttura)"
 ms.assetid: 3dd5ec2c-fe53-4121-ae77-1bc1d1167ff4
 caps.latest.revision: 20
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # Struttura IResourceManager
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "_fflush_nolock | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,7 +28,6 @@ f1_keywords:
   - "_fflush_nolock"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_fflush_nolock (funzione)"
   - "fflush_nolock (funzione)"
@@ -37,10 +35,10 @@ helpviewer_keywords:
   - "flussi, svuotamento"
 ms.assetid: 5e33c4a1-b10c-4001-ad01-210757919291
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # _fflush_nolock
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "_atoi64, _atoi64_l, _wtoi64, _wtoi64_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -41,7 +40,6 @@ f1_keywords:
   - "atoi64_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "tstoi64 (funzione)"
   - "wtoi64 (funzione)"
@@ -58,10 +56,10 @@ helpviewer_keywords:
   - "_atoi64 (funzione)"
 ms.assetid: 2c3e30fd-545d-4222-8364-0c5905df9526
 caps.latest.revision: 24
-caps.handback.revision: 22
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # _atoi64, _atoi64_l, _wtoi64, _wtoi64_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

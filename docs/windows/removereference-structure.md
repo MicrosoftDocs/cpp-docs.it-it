@@ -1,8 +1,7 @@
 ---
 title: "Struttura RemoveReference | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "RemoveReference (struttura)"
 ms.assetid: 43ff91bb-815a-440e-b9fb-7dcbb7c863af
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Struttura RemoveReference
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Errore del compilatore C3206 | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3206"
 ms.assetid: d62995b5-e349-4418-bbe8-8a5e776ca7b0
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Errore del compilatore C3206
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

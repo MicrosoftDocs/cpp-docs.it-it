@@ -1,8 +1,7 @@
 ---
 title: "Classe IDBSchemaRowsetImpl | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "IDBSchemaRowsetImpl (classe)"
 ms.assetid: bd7bf0d7-a1c6-4afa-88e3-cfdbdf560703
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Classe IDBSchemaRowsetImpl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

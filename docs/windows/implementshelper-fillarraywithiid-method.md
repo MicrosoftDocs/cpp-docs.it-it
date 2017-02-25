@@ -1,8 +1,7 @@
 ---
 title: "Metodo ImplementsHelper::FillArrayWithIid | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "FillArrayWithIid (metodo)"
 ms.assetid: f60035ee-b7d6-4a08-966d-f88c646944c3
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Metodo ImplementsHelper::FillArrayWithIid
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

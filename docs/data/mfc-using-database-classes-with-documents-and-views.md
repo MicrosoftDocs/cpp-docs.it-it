@@ -1,8 +1,7 @@
 ---
 title: "MFC: utilizzo di classi di database con documenti e viste | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -30,10 +29,10 @@ helpviewer_keywords:
   - "visualizzazioni [C++], applicazioni database"
 ms.assetid: 83979974-fc63-46ac-b162-e8403a572e2c
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # MFC: utilizzo di classi di database con documenti e viste
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

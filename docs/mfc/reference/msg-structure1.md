@@ -1,8 +1,7 @@
 ---
-title: "Struttura MSG | Microsoft Docs"
+title: "MSG Structure1 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "MSG (struttura)"
 ms.assetid: dc166d27-9423-41f1-9599-5ba76d2f0138
 caps.latest.revision: 11
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Struttura MSG
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

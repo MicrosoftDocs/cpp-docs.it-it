@@ -1,8 +1,7 @@
 ---
 title: "Classe codecvt_byname | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "codecvt_byname (classe)"
 ms.assetid: b63b6c04-f60c-47b9-8e30-a933f24a8ffb
 caps.latest.revision: 24
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # Classe codecvt_byname
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

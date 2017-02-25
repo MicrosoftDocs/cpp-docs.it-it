@@ -1,8 +1,7 @@
 ---
 title: "TN051: utilizzo di CTL3D attuale e futuro | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "TN051"
 ms.assetid: ab517a13-a137-4a60-8039-be92a632b76b
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # TN051: utilizzo di CTL3D attuale e futuro
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

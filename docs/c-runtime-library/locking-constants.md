@@ -1,8 +1,7 @@
 ---
 title: "Costanti _locking | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,7 +16,6 @@ f1_keywords:
   - "_LK_UNLCK"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_LK_LOCK (costante)"
   - "_LK_NBLCK (costante)"
@@ -31,10 +29,10 @@ helpviewer_keywords:
   - "LK_UNLCK (costante)"
 ms.assetid: c3dc92c8-60e3-4d29-9f50-5d217627c8ad
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Costanti _locking
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

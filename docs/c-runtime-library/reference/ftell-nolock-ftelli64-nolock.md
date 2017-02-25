@@ -1,8 +1,7 @@
 ---
 title: "_ftell_nolock, _ftelli64_nolock | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,7 +31,6 @@ f1_keywords:
   - "_ftell_nolock"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_ftell_nolock (funzione)"
   - "_ftelli64_nolock (funzione)"
@@ -41,10 +39,10 @@ helpviewer_keywords:
   - "ftelli64_nolock (funzione)"
 ms.assetid: 84e68b0a-32f8-4c4a-90ad-3f2387685ede
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # _ftell_nolock, _ftelli64_nolock
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

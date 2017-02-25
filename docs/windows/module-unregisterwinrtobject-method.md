@@ -1,8 +1,7 @@
 ---
 title: "Metodo Module::UnregisterWinRTObject | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "UnregisterWinRTObject (metodo)"
 ms.assetid: 32334aa7-2293-40d2-9a89-4b02e2e31f3c
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Metodo Module::UnregisterWinRTObject
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

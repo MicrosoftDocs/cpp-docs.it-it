@@ -1,8 +1,7 @@
 ---
-title: "&lt;cvt/wbuffer&gt; | Microsoft Docs"
+title: "&lt;cvt-wbuffer&gt;&lt;/cvt-wbuffer&gt; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "cvt/wbuffer (intestazione)"
 ms.assetid: 6e6eb44c-1bc4-4d8c-a4bd-b39c753ce725
 caps.latest.revision: 17
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # &lt;cvt/wbuffer&gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

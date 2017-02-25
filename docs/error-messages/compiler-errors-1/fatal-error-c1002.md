@@ -1,8 +1,7 @@
 ---
 title: "Errore irreversibile C1002 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C1002"
 ms.assetid: bd6d274a-c7b4-43af-8bf2-23c5e442aa22
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Errore irreversibile C1002
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

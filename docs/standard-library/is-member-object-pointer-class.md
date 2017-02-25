@@ -1,8 +1,7 @@
 ---
 title: "Classe is_member_object_pointer | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "is_member_object_pointer"
 ms.assetid: 64f9cdf3-4621-4310-a076-a7bc986926b9
 caps.latest.revision: 19
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # Classe is_member_object_pointer
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

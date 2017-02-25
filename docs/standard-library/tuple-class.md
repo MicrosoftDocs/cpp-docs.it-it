@@ -1,8 +1,7 @@
 ---
 title: "Classe tuple | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "tuple (classe) [TR1]"
 ms.assetid: c38749be-ae4d-41f3-98ea-6aa3250de9a3
 caps.latest.revision: 19
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # Classe tuple
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

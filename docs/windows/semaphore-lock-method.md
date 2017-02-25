@@ -1,8 +1,7 @@
 ---
 title: "Metodo Semaphore::Lock | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Lock (metodo)"
 ms.assetid: 0eef6ede-dc7d-4f09-a6c8-2f7d39d65bfa
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Metodo Semaphore::Lock
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

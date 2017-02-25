@@ -1,8 +1,7 @@
 ---
 title: "Controlli ActiveX MFC: aggiunta di un&#39;altra pagina delle propriet&#224; personalizzata | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "pagine delle proprietà [C++], controlli ActiveX MFC"
 ms.assetid: fcf7e119-9f29-41a9-908d-e9b1607e08af
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Controlli ActiveX MFC: aggiunta di un&#39;altra pagina delle propriet&#224; personalizzata
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

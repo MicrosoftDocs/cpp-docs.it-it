@@ -1,8 +1,7 @@
 ---
 title: "BLOB_NAME_LENGTH | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "BLOB_NAME_LENGTH (macro)"
 ms.assetid: 38150260-a127-486d-a7ab-0d01b731b6fd
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # BLOB_NAME_LENGTH
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

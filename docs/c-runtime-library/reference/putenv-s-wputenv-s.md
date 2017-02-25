@@ -1,8 +1,7 @@
 ---
 title: "_putenv_s, _wputenv_s | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,7 +30,6 @@ f1_keywords:
   - "_putenv_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_putenv_s (funzione)"
   - "_wputenv_s (funzione)"
@@ -42,10 +40,10 @@ helpviewer_keywords:
   - "wputenv_s (funzione)"
 ms.assetid: fbf51225-a8da-4b9b-9d7c-0b84ef72df18
 caps.latest.revision: 20
-caps.handback.revision: 20
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # _putenv_s, _wputenv_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

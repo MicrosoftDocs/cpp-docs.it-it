@@ -1,8 +1,7 @@
 ---
 title: "Controls: General Support Classes | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "general support classes"
 ms.assetid: cf73f1d2-7542-48e3-b8c8-9d3abf29f85b
 caps.latest.revision: 12
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Controls: General Support Classes
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

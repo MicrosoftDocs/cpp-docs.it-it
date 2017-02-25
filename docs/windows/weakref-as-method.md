@@ -1,8 +1,7 @@
 ---
 title: "Metodo WeakRef::As | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "As (metodo)"
 ms.assetid: 7173da62-b3fe-44d6-aea4-1aa97e69b221
 caps.latest.revision: 6
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Metodo WeakRef::As
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
