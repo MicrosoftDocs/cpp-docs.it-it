@@ -14,11 +14,11 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: de91b1fe4ba92fa1472fef69a1551c9571c8b8be
+ms.sourcegitcommit: 220ecd24c6056737d0338cc584663e4664ac81b1
+ms.openlocfilehash: bdde9bfb68c156ec7709329ae7fe038793915ec9
 
 ---
-Visual C++ in Visual Studio 2015
+Visual C++ in Visual Studio 2017
 
 
 <!--HONumber=Feb17_HO4-->
