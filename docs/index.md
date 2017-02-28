@@ -5,6 +5,7 @@ description: Informazioni su come usare C++ per lo sviluppo di applicazioni, ser
 translationtype: Human Translation
 ms.sourcegitcommit: fa2cdbf2d54994784bfc8a0bd0e542b3f5de309b
 ms.openlocfilehash: a4623b2ccb2ea1f10b8060afa691c20d22a9c181
+ms.lasthandoff: 02/24/2017
 
 ---
 <div id="main" class="v2">
@@ -114,7 +115,7 @@ ms.openlocfilehash: a4623b2ccb2ea1f10b8060afa691c20d22a9c181
                                 </a>
                             </li>
                             <li>
-                                <a href="/cpp/linux/download-install-and-setup-the-linux-development-workload">
+                                <a href="/cpp/linux">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -133,7 +134,7 @@ ms.openlocfilehash: a4623b2ccb2ea1f10b8060afa691c20d22a9c181
                                 </a>
                             </li>
                             <li>
-                                <a href="/visualstudio/cross-platform/visual-cpp-for-cross-platform-mobile-development">
+                                <a href="/visualstudio/cross-platform/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -463,8 +464,3 @@ ms.openlocfilehash: a4623b2ccb2ea1f10b8060afa691c20d22a9c181
         </ul>
     </div>
 </div>
-
-
-<!--HONumber=Feb17_HO4-->
-
-
