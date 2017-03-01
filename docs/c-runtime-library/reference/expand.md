@@ -1,56 +1,72 @@
 ---
-title: "_expand | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_expand"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-heap-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_bexpand"
-  - "fexpand"
-  - "expand"
-  - "nexpand"
-  - "_fexpand"
-  - "_nexpand"
-  - "bexpand"
-  - "_expand"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_expand (funzione)"
-  - "expand (funzione)"
-  - "blocchi di memoria, modifica delle dimensioni"
+title: _expand | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _expand
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-heap-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _bexpand
+- fexpand
+- expand
+- nexpand
+- _fexpand
+- _nexpand
+- bexpand
+- _expand
+dev_langs:
+- C++
+helpviewer_keywords:
+- memory blocks, changing size
+- _expand function
+- expand function
 ms.assetid: 4ac55410-39c8-45c7-bccd-3f1042ae2ed3
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# _expand
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: d02e1ae2ec08a3fcd93700acb84c918f83088b1f
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="expand"></a>_expand
 Modifica la dimensione di un blocco di memoria.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 void *_expand(   
@@ -59,41 +75,41 @@ void *_expand(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `memblock`  
- Puntatore al blocco di memoria allocato precedentemente.  
+ Puntatore al blocco di memoria allocato in precedenza.  
   
  `size`  
  Nuova dimensione in byte.  
   
-## Valore restituito  
- `_expand` restituisce un puntatore void al blocco di memoria riallocato.  `_expand`, a differenza di `realloc`, non può spostare un blocco per modificare le sue dimensioni.  Pertanto, se vi è memoria sufficiente ad espandere il blocco senza spostarlo, il parametro `memblock` a `_expand` è uguale al valore restituito.  
+## <a name="return-value"></a>Valore restituito  
+ `_expand` restituisce un puntatore a void al blocco di memoria riallocato. `_expand`, a differenza di `realloc`, non può spostare un blocco per modificarne le dimensioni. Pertanto, se vi è memoria sufficiente per espandere il blocco senza spostarlo, il parametro `memblock` in `_expand` è identico al valore restituito.  
   
- `_expand` restituisce `NULL` quando viene rilevato un errore durante l'operazione.  Ad esempio, se `_expand` viene utilizzato per ridurre un blocco di memoria, potrebbe rilevare il danneggiamento di un blocco nell'heap oppure un puntatore di blocco non valido e ritorna `NULL`.  
+ `_expand` restituisce `NULL` quando viene rilevato un errore durante l'operazione. Ad esempio, se `_expand` viene usato per la compattazione di un blocco di memoria, potrebbe rilevare il danneggiamento dell'heap di piccoli blocchi o un puntatore di blocco non valido e restituire `NULL`.  
   
- Se la memoria disponibile non è sufficiente per espandere il blocco alla dimensione specificata senza spostarlo, la funzione restituisce `NULL`.  `_expand` non restituisce mai un blocco espanso ad una dimensione minore di quella richiesta.  Se si verifica un errore, `errno` indica la natura dell'errore.  Per ulteriori informazioni su `errno`, vedere [errno, \_doserrno, \_sys\_errlist, and \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Se la memoria disponibile non è sufficiente per espandere il blocco alla dimensione specificata senza spostarlo, la funzione restituisce `NULL`. `_expand` non restituisce mai un blocco espanso a dimensioni minori di quelle richieste. Se si verifica un errore, `errno` indica la natura dell'errore. Per altre informazioni su `errno`, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
- I valore restituito punta ad uno spazio di memoria che garantisce l'allineamento adeguato per l'archiviazione di qualsiasi tipo di oggetto.  Per controllare la nuova dimensione dell'elemento, utilizzare `_msize`.  Per ottenere un puntatore a un tipo diverso da `void`, utilizzare un cast di tipo sul valore restituito.  
+ Il valore restituito punta a uno spazio di archiviazione che garantisce il corretto allineamento per l'archiviazione di qualsiasi tipo di oggetto. Per verificare le nuove dimensioni dell'elemento, usare `_msize`. Per ottenere un puntatore a un tipo diverso da `void`, usare un cast del tipo sul valore restituito.  
   
-## Note  
- La funzione `_expand` cambia la dimensione ad un blocco di memoria precedentemente allocato tentando di espandere o contrarre il blocco senza spostarne la posizione nell'heap.  Il parametro `memblock` punta all'inizio del blocco .  Il parametro `size` fornisce la nuova dimensione del blocco, in byte.  Il contenuto del blocco è invariato fino alla più corta delle nuove e vecchie dimensioni.  `memblock` non deve essere un blocco che è stato liberato.  
+## <a name="remarks"></a>Note  
+ La funzione `_expand` modifica le dimensioni di un blocco di memoria allocato in precedenza cercando di espandere o comprimere il blocco senza spostarne la posizione nell'heap. Il parametro `memblock` punta all'inizio del blocco. Il parametro `size` specifica le nuove dimensioni del blocco, in byte. Il contenuto del blocco rimane invariato fino alla dimensione nuova o alla precedente, a seconda di quale delle due è la più breve. `memblock` non deve essere un blocco liberato.  
   
 > [!NOTE]
->  Sulle piattaforme a 64 bit, `_expand` potrebbe non contrarre il blocco se la nuova dimensione è inferiore alla dimensione corrente; in particolare, se il blocco è minore di 16K nella dimensione e quindi allocato nell'heap inferiore di frammentazione , `_expand` lascia invariato il blocco e restituisce `memblock`.  
+>  Su piattaforme a 64 bit, `_expand` potrebbe non contrarre il blocco se la nuova dimensione è minore rispetto alla dimensione corrente. In particolare se il blocco è inferiore a 16 KB e quindi allocato nell'heap a bassa frammentazione, `_expand` lascia il blocco invariato e restituisce `memblock`.  
   
- Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime del linguaggio C, `_expand` viene identificato come [\_expand\_dbg](../../c-runtime-library/reference/expand-dbg.md).  Per ulteriori informazioni su come viene gestito l'heap durante il processo di debug, vedere [L'heap di debug CRT](../Topic/CRT%20Debug%20Heap%20Details.md).  
+ Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime di C, `_expand` viene risolto in [_realloc_dbg](../../c-runtime-library/reference/expand-dbg.md). Per altre informazioni su come viene gestito l'heap durante il processo di debug, vedere [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (Informazioni dettagliate sull'heap di debug CRT).  
   
- Questa funzione convalida i parametri.  Se `memblock` è un puntatore a null, questa funzione richiama un gestore di parametro non valido, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).  Se l'esecuzione può continuare, `errno` viene impostato su `EINVAL` e la funzione restituisce `NULL`.  Se `size` è maggiore di `_HEAP_MAXREQ`, `errno` è impostato su `ENOMEM` e la funzione restituisce `NULL`.  
+ Questa funzione convalida i relativi parametri. Se `memblock` è un puntatore Null, questa funzione richiama il gestore di parametri non validi, come descritto in [Parameter Validation](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, `errno` viene impostato su `EINVAL` e la funzione restituisce `NULL`. Se `size` è maggiore di `_HEAP_MAXREQ`, `errno` è impostato su `ENOMEM` e la funzione restituisce `NULL`.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Funzione|Intestazione obbligatoria|  
-|--------------|-------------------------------|  
-|`_expand`|\<malloc.h\>|  
+|--------------|---------------------|  
+|`_expand`|\<malloc.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'Introduzione.  
+ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_expand.c  
@@ -121,16 +137,19 @@ int main( void )
 }  
 ```  
   
-  **Allocate a 512 element buffer**  
-**Allocated 512 bytes at 002C12BC**  
-**Expanded block to 1024 bytes at 002C12BC**   
-## Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione standard C, utilizzare `PInvoke`. Per ulteriori informazioni, vedere [Esempi di Invocazione della Piattaforma](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+Allocate a 512 element buffer  
+Allocated 512 bytes at 002C12BC  
+Expanded block to 1024 bytes at 002C12BC  
+```  
   
-## Vedere anche  
- [Allocazione di memoria](../../c-runtime-library/memory-allocation.md)   
+## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
+ Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Memory Allocation](../../c-runtime-library/memory-allocation.md)  (Allocazione di memoria)  
  [calloc](../../c-runtime-library/reference/calloc.md)   
  [free](../../c-runtime-library/reference/free.md)   
  [malloc](../../c-runtime-library/reference/malloc.md)   
- [\_msize](../../c-runtime-library/reference/msize.md)   
+ [_msize](../../c-runtime-library/reference/msize.md)   
  [realloc](../../c-runtime-library/reference/realloc.md)

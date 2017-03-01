@@ -1,75 +1,91 @@
 ---
-title: "_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_fstat32"
-  - "_fstat64"
-  - "_fstati64"
-  - "_fstat"
-  - "_fstat64i32"
-  - "_fstat32i64"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-filesystem-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_fstat32i64"
-  - "fstat"
-  - "fstat64i32"
-  - "_fstat64"
-  - "_fstati64"
-  - "fstat64"
-  - "_fstat32"
-  - "fstat32i64"
-  - "fstati64"
-  - "_fstat"
-  - "fstat32"
-  - "_fstat64i32"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fstat64 (funzione)"
-  - "fstati64 (funzione)"
-  - "_fstat64i32 (funzione)"
-  - "_fstat32i64 (funzione)"
-  - "_fstat32 (funzione)"
-  - "informazioni sui file"
-  - "fstat64i32 (funzione)"
-  - "fstat32 (funzione)"
-  - "fstat (funzione)"
-  - "fstat64 (funzione)"
-  - "_fstat (funzione)"
-  - "_fstati64 (funzione)"
-  - "fstat32i64 (funzione)"
+title: _fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _fstat32
+- _fstat64
+- _fstati64
+- _fstat
+- _fstat64i32
+- _fstat32i64
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-filesystem-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _fstat32i64
+- fstat
+- fstat64i32
+- _fstat64
+- _fstati64
+- fstat64
+- _fstat32
+- fstat32i64
+- fstati64
+- _fstat
+- fstat32
+- _fstat64i32
+dev_langs:
+- C++
+helpviewer_keywords:
+- _fstat64 function
+- fstati64 function
+- _fstat64i32 function
+- _fstat32i64 function
+- _fstat32 function
+- file information
+- fstat64i32 function
+- fstat32 function
+- fstat function
+- fstat64 function
+- _fstat function
+- _fstati64 function
+- fstat32i64 function
 ms.assetid: 088f5e7a-9636-4cf7-ab8e-e28d2aa4280a
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# _fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: b84c039c715c8c7a45a84a37c1a1fd34db988403
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32"></a>_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
 Ottiene informazioni su un file aperto.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 int _fstat(   
@@ -98,18 +114,18 @@ int _fstat64i32(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `fd`  
  Descrittore di file del file aperto.  
   
  `buffer`  
- Puntatore alla struttura per archiviare i risultati.  
+ Puntatore alla struttura per l'archiviazione dei risultati.  
   
-## Valore restituito  
- Restituisce 0 se si ottengono le informazioni sullo stato dei file. Un valore restituito di –1 indica un errore. Se il descrittore del file non è valido o `buffer` è `NULL`, viene richiamato il gestore di parametro non valido, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, `errno` è impostato su `EBADF`, nel caso di un descrittore di file non valido o a `EINVAL`, se `buffer` è `NULL`.  
+## <a name="return-value"></a>Valore restituito  
+ Restituisce 0 se si ottengono le informazioni sullo stato dei file. Un valore restituito di –1 indica un errore. Se il descrittore del file non è valido o se `buffer` è `NULL`, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, `errno` viene impostato su `EBADF`, nel caso di un descrittore di file non valido, oppure su `EINVAL` se `buffer` è `NULL`.  
   
-## Note  
- Il `_fstat` funzione Ottiene informazioni sul file aperto associato `fd` e lo archivia nella struttura a cui puntata `buffer`. Il `_stat` struttura, definita in SYS\\Stat.h, contiene i campi seguenti.  
+## <a name="remarks"></a>Note  
+ La funzione `_fstat` ottiene informazioni sul file aperto associato a `fd` e le archivia nella struttura a cui punta `buffer`. La struttura `_stat`, definita in SYS\Stat.h, contiene i campi seguenti.  
   
  `st_atime`  
  Ora dell'ultimo accesso al file.  
@@ -118,10 +134,10 @@ int _fstat64i32(
  Ora di creazione del file.  
   
  `st_dev`  
- Se un dispositivo, `fd`; in caso contrario, 0.  
+ Nel caso di un dispositivo `fd`; in caso contrario, 0.  
   
  `st_mode`  
- Maschera di bit per informazioni sulla modalità di file. Il `_S_IFCHR` bit viene impostato se `fd` fa riferimento a un dispositivo. Il `_S_IFREG` bit viene impostato se `fd` fa riferimento a un file normale. I bit di lettura\/scrittura vengono impostati in base alla modalità di autorizzazione del file.`_S_IFCHR` e altre costanti sono definite in SYS\\Stat.h.  
+ Maschera di bit per informazioni sulla modalità di file. Viene impostato il bit `_S_IFCHR` se `fd` fa riferimento a un dispositivo. Viene impostato il bit `_S_IFREG` se `fd` fa riferimento a un file ordinario. I bit di lettura/scrittura vengono impostati in base alla modalità di autorizzazione del file. `_S_IFCHR` e altre costanti sono definite in SYS\Stat.h.  
   
  `st_mtime`  
  Ora dell'ultima modifica del file.  
@@ -130,25 +146,25 @@ int _fstat64i32(
  Sempre 1 nel file system non NTFS.  
   
  `st_rdev`  
- Se un dispositivo, `fd`; in caso contrario, 0.  
+ Nel caso di un dispositivo `fd`; in caso contrario, 0.  
   
  `st_size`  
- Dimensioni del file in byte.  
+ Dimensioni del file, in byte.  
   
- Se `fd` fa riferimento a un dispositivo, il `st_atime`, `st_ctime`, `st_mtime`, e `st_size` i campi non sono significativi.  
+ Se `fd` fa riferimento a un dispositivo, i campi `st_atime`, `st_ctime`, `st_mtime` e `st_size` non sono significativi.  
   
- Poiché Stat.h utilizza il [dev\_t](../../c-runtime-library/standard-types.md) digitare, definito in Types.h, è necessario includere Types.h prima Stat.h nel codice.  
+ Dato che Stat.h usa il tipo [dev_t](../../c-runtime-library/standard-types.md) definito in Types.h, è necessario includere Types.h prima di Stat.h nel codice.  
   
- `_fstat64`, che utilizza il `__stat64` struttura, consente le date di creazione di file può essere espresso backup tramite 23:59:59, 31 dicembre 3000 UTC; mentre le altre funzioni rappresentano solo una data tramite 23:59:59 18 gennaio 2038 UTC. Mezzanotte del 1 gennaio 1970, è il limite inferiore dell'intervallo di date per tutte queste funzioni.  
+ `_fstat64`, che usa la struttura `__stat64`, consente di esprimere le date di creazione di file fino alle 23.59.59 del 31 dicembre 3000 UTC, mentre le altre funzioni rappresentano solo le date fino alle 23.59.59 del 18 gennaio 2038 UTC. La mezzanotte del 1 gennaio 1970 è il limite inferiore dell'intervallo di date per tutte queste funzioni.  
   
- Le variazioni di queste funzioni supportano tipi in fase di 32 bit o 64 bit e le lunghezze di file a 32 bit o 64 bit. Il primo suffisso numerico \(`32` o `64`\) indica le dimensioni del tipo time usato; il secondo suffisso è `i32` o `i64`, che indica se le dimensioni del file sono rappresentate come intero a 32 bit o 64 bit.  
+ Le variazioni di queste funzioni supportano tipi time a 32 o 64 bit e lunghezze di file a 32 o a 64 bit. Il primo suffisso numerico (`32` o `64`) indica le dimensioni del tipo time usato; il secondo suffisso è `i32` o `i64`, che indica se le dimensioni del file sono rappresentate come intero a 32 bit o 64 bit.  
   
- `_fstat` equivale a `_fstat64i32`, e `struct``_stat` contiene l'ora a 64 bit. Ciò è vero, a meno che `_USE_32BIT_TIME_T` è definito, nel qual caso è attivo, il comportamento precedente `_fstat` utilizza un tempo a 32 bit, e `struct``_stat` contiene l'ora a 32 bit. Lo stesso vale per `_fstati64`.  
+ `_fstat` equivale a `_fstat64i32` e `struct``_stat` contiene un'ora a 64 bit. Questo vale a meno che non sia stato definito `_USE_32BIT_TIME_T` , nel qual caso è attivo il comportamento precedente; `_fstat` usa un'ora a 32 bit e `struct``_stat` contiene un'ora a 32 bit. Lo stesso vale per `_fstati64`.  
   
-### Variazioni tipo time e tipo lunghezza file di \_stat  
+### <a name="time-type-and-file-length-type-variations-of-stat"></a>Variazioni tipo time e tipo lunghezza file di _stat  
   
-|Funzioni|\_USE\_32BIT\_TIME\_T definito?|Tipo time|Tipo lunghezza file|  
-|--------------|-------------------------------------|---------------|-------------------------|  
+|Funzioni|_USE_32BIT_TIME_T definito?|Tipo time|Tipo lunghezza file|  
+|---------------|------------------------------------|---------------|----------------------|  
 |`_fstat`|Non definito|64 bit|32 bit|  
 |`_fstat`|Definito|32 bit|32 bit|  
 |`_fstat32`|Non interessato dalla definizione macro|32 bit|32 bit|  
@@ -158,20 +174,20 @@ int _fstat64i32(
 |`_fstat32i64`|Non interessato dalla definizione macro|32 bit|64 bit|  
 |`_fstat64i32`|Non interessato dalla definizione macro|64 bit|32 bit|  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Funzione|Intestazione obbligatoria|  
-|--------------|-------------------------------|  
-|`_fstat`|\< sys\/stat.h \> e \< sys\/types.h \>|  
-|`_fstat32`|\< sys\/stat.h \> e \< sys\/types.h \>|  
-|`_fstat64`|\< sys\/stat.h \> e \< sys\/types.h \>|  
-|`_fstati64`|\< sys\/stat.h \> e \< sys\/types.h \>|  
-|`_fstat32i64`|\< sys\/stat.h \> e \< sys\/types.h \>|  
-|`_fstat64i32`|\< sys\/stat.h \> e \< sys\/types.h \>|  
+|--------------|---------------------|  
+|`_fstat`|\<sys/stat.h> e \<sys/types.h>|  
+|`_fstat32`|\<sys/stat.h> e \<sys/types.h>|  
+|`_fstat64`|\<sys/stat.h> e \<sys/types.h>|  
+|`_fstati64`|\<sys/stat.h> e \<sys/types.h>|  
+|`_fstat32i64`|\<sys/stat.h> e \<sys/types.h>|  
+|`_fstat64i32`|\<sys/stat.h> e \<sys/types.h>|  
   
- Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_fstat.c  
@@ -232,15 +248,16 @@ int main( void )
 ```  
   
 ```Output  
-Dimensione del file: modifica 16: mer maggio 07 25:15:11 2003  
+File size     : 16  
+Time modified : Wed May 07 15:25:11 2003  
 ```  
   
-## Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Esempi di platform invoke](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
+ Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Gestione di file](../../c-runtime-library/file-handling.md)   
- [\_access, \_waccess](../../c-runtime-library/reference/access-waccess.md)   
- [\_chmod, \_wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
- [\_filelength, \_filelengthi64](../../c-runtime-library/reference/filelength-filelengthi64.md)   
- [Funzioni \_stat, \_wstat](../../c-runtime-library/reference/stat-functions.md)
+ [_access, _waccess](../../c-runtime-library/reference/access-waccess.md)   
+ [_chmod, _wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
+ [_filelength, _filelengthi64](../../c-runtime-library/reference/filelength-filelengthi64.md)   
+ [Funzioni _stat, _wstat](../../c-runtime-library/reference/stat-functions.md)

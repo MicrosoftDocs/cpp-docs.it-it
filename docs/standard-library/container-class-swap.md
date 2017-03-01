@@ -1,43 +1,57 @@
 ---
-title: "Container Class::swap | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "swap (metodo)"
+title: Container Class::swap | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- swap method
 ms.assetid: 898c219c-bc8e-4d14-a149-6240426c693f
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Container Class::swap
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
+ms.openlocfilehash: 33ec601dcc8d32b85c2c38ed3fc5a07842a056fc
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="container-classswap"></a>Container Class::swap
 > [!NOTE]
->  Questo argomento è nella documentazione di Visual C\+\+ come esempio non funzionale di contenitori utilizzati nella libreria C\+\+ standard.  Per ulteriori informazioni, vedere [I contenitori STL](../standard-library/stl-containers.md).  
+>  Questo argomento è incluso nella documentazione di Visual C++ come esempio non funzionante dei contenitori usati nella libreria standard di C++. Per altre informazioni, vedere [C++ Standard Library Containers](../standard-library/stl-containers.md) (Contenitori della libreria standard di C++).  
   
- Scambia le sequenze controllate tra **\*this** e `_Right`.  
+Scambia le sequenze controllate tra **\*this** e il relativo argomento.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      void swap(  
-   Container& _Right  
-);  
+void swap(Container& right);
 ```  
   
-## Note  
- Se **get\_allocator \=\=** `_Right`**.get\_allocator**, agisce nel tempo costante.  In caso contrario, viene eseguita una serie di assegnazioni dell'elemento e il costruttore chiama proporzionale al numero di elementi delle due sequenze archiviate.  
+## <a name="remarks"></a>Note  
+Se **\*this.get\_allocator ==** _right_**.get_allocator**, esegue uno scambio in tempo costante. In caso contrario, esegue un numero di assegnazioni di elementi e chiamate al costruttore proporzionale al numero di elementi nelle due sequenze controllate.  
   
-## Vedere anche  
- [Classe contenitore di esempio](../standard-library/sample-container-class.md)
+## <a name="see-also"></a>Vedere anche  
+[Sample Container Class](../standard-library/sample-container-class.md) (Classe contenitore di esempio)
+

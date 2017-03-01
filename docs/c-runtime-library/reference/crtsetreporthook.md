@@ -1,48 +1,65 @@
 ---
-title: "_CrtSetReportHook | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_CrtSetReportHook"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_CrtSetReportHook"
-  - "CrtSetReportHook"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CrtSetReportHook (funzione)"
-  - "_CrtSetReportHook (funzione)"
+title: _CrtSetReportHook | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _CrtSetReportHook
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _CrtSetReportHook
+- CrtSetReportHook
+dev_langs:
+- C++
+helpviewer_keywords:
+- CrtSetReportHook function
+- _CrtSetReportHook function
 ms.assetid: 1ae7c64f-8c84-4797-9574-b59f00f7a509
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# _CrtSetReportHook
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 0815dc124612d4f7d3acd3df147bbfb4e3a5fda0
+ms.lasthandoff: 02/24/2017
 
-Installa una funzione di segnalazione definita dal client agganciandola al processo di creazione di report di debug della fase di runtime del linguaggio C \(solo versione di debug\).  
+---
+# <a name="crtsetreporthook"></a>_CrtSetReportHook
+Installa la funzione per la creazione di report definita dal client per eseguire l'hook nel processo di creazione di report sul debug del runtime di C (solo versione di debug).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 _CRT_REPORT_HOOK _CrtSetReportHook(   
@@ -50,47 +67,47 @@ _CRT_REPORT_HOOK _CrtSetReportHook(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `reportHook`  
- Nuova funzione di segnalazione definita dal client per associarsi al processo di creazione di report di debug della fase di runtime del linguaggio C.  
+ Nuova funzione per la creazione di report definita dal client per eseguire l'hook nel processo di creazione di report sul debug del runtime di C.  
   
-## Valore restituito  
- Restituisce la funzione di segnalazione precedente definita dal client.  
+## <a name="return-value"></a>Valore restituito  
+ Restituisce la funzione per la creazione di report precedente definita dal client.  
   
-## Note  
- `_CrtSetReportHook` consente ad un'applicazione di utilizzare la propria funzione di segnalazione nel processo di debug della libreria di runtime del linguaggio C.  Pertanto, ogni volta che [\_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) viene chiamato per generare un report di debug, viene chiamata per prima la funzione di segnalazione dell'applicazione.  Questa funzionalità consente a un'applicazione di eseguire operazioni quali report di debug di filtro in modo da concentrarsi su tipi specifici di allocazione o inviare un rapporto in destinazioni non disponibili tramite `_CrtDbgReport`.  Quando [\_DEBUG](../../c-runtime-library/debug.md) non è definito, le chiamate a `_CrtSetReportHook` vengono rimosse durante la pre\-elaborazione.  
+## <a name="remarks"></a>Note  
+ `_CrtSetReportHook` consente a un'applicazione di usare la propria funzione per la creazione di report nel processo di creazione di report sulla libreria di debug del runtime di C. Di conseguenza, ogni volta che viene chiamato [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) per generare un report di debug, la funzione per la creazione di report viene chiamata prima. Questa funzionalità abilita un'applicazione a eseguire operazioni, ad esempio il filtraggio di report di debug, in modo che possa usare solo i tipi specifici di allocazioni o inviare un report a destinazioni non disponibili tramite `_CrtDbgReport`. Quando [_DEBUG](../../c-runtime-library/debug.md) non è definito, le chiamate a `_CrtSetReportHook` vengono rimosse durante la pre-elaborazione.  
   
- Per una versione più avanzata di `_CrtSetReportHook`, vedere [\_CrtSetReportHook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md).  
+ Per una versione più affidabile di `_CrtSetReportHook`, vedere [_CrtSetReportHook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md).  
   
- La funzione `_CrtSetReportHook` installa la nuova funzione di segnalazione definita dal client specificata in `reportHook` e restituisce l'hook precedente definito dal client.  Nell'esempio seguente viene illustrato come dovrebbe essere il prototipo di un report di hook definito dal client:  
+ La funzione `_CrtSetReportHook` installa la nuova funzione per la creazione di report definita dal client specificata in `reportHook` e restituisce l'hook precedente definito dal client. L'esempio seguente illustra come un hook di report definito dal client debba avere un prototipo:  
   
 ```  
 int YourReportHook( int reportType, char *message, int *returnValue );  
 ```  
   
- dove `reportType` è il tipo di report di debug \(`_CRT_WARN`, `_CRT_ERROR`, o `_CRT_ASSERT`\), `message` è il messaggio utente di debug completamente assemblato da includere nel report e `returnValue` è il valore specificato dalla funzione di segnalazione definita dal client che deve essere restituito da `_CrtDbgReport`.  Per una descrizione completa dei tipi di report disponibili, vedere la funzione [\_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md).  
+ dove `reportType` è il tipo di report di debug (`_CRT_WARN`, `_CRT_ERROR`, o `_CRT_ASSERT`), `message` è il messaggio utente di debug completamente assemblato per essere incluso nel report e `returnValue` è il valore specificato dalla funzione per la creazione di report definita dal client che deve essere restituito dalla funzione `_CrtDbgReport`. Per una descrizione completa dei tipi di report disponibili, vedere la funzione [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md).  
   
- Se la funzione di segnalazione definita dal client gestisce completamente il messaggio di debug in modo che non sia necessario alcun report ulteriore, la funzione deve restituire `TRUE`.  Quando la funzione restituisce `FALSE`, `_CrtDbgReport` viene richiamato per generare un report di debug utilizzando le impostazioni correnti per il tipo, modalità e file di report.  Inoltre, specificando il valore restituito da `_CrtDbgReport` in `returnValue`, l'applicazione può controllare anche quando si verifica un'interruzione di debug.  Per una descrizione completa su come è configurato e generato il report di debug, vedere `_CrtSetReportMode`, [\_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md)e `_CrtDbgReport`.  
+ Se la funzione per la creazione di report definita dal client gestisce completamente il messaggio di debug in modo che non sia necessario alcun report aggiuntivo, la funzione deve restituire `TRUE`. Quando la funzione restituisce `FALSE`, viene chiamato `_CrtDbgReport` per generare il report di debug usando le impostazioni correnti per tipo di report, modalità e file. In aggiunta, specificando il valore restituito `_CrtDbgReport` in `returnValue`, l'applicazione può anche controllare se si verifica un'interruzione di debug. Per una descrizione completa della modalità di configurazione e generazione del report di debug, vedere `_CrtSetReportMode`, [_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md) e `_CrtDbgReport`.  
   
- Per ulteriori informazioni sull'utilizzo di altre funzioni di runtime hook e per la scrittura delle funzioni hook definite dal client, consultare [Scrittura di funzioni hook di debug](../Topic/Debug%20Hook%20Function%20Writing.md).  
+ Per informazioni sull'uso di altre funzioni di runtime capaci di eseguire l'hook e sulla scrittura delle funzioni di hook definite dal client, vedere [Writing Your Own Debug Hook Functions](/visualstudio/debugger/debug-hook-function-writing) (Scrittura di funzioni hook di debug).  
   
 > [!NOTE]
->  Se l'applicazione viene compilata con `/clr` e la funzione di segnalazione viene chiamata dopo che l'applicazione ha terminato l'esecuzione del main, CLR genererà un'eccezione se la funzione di segnalazione richiama una qualsiasi funzione CRT.  
+>  Se l'applicazione viene compilata con `/clr` e la funzione per la creazione di report viene chiamata dopo che l'applicazione è uscita, CLR genererà un'eccezione se la funzione per la creazione di report chiama le funzioni CRT.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`_CrtSetReportHook`|\<crtdbg.h\>|  
+|-------------|---------------------|  
+|`_CrtSetReportHook`|\<crtdbg.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
-## Librerie  
- Solo versioni di debug di [Librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Librerie  
+ Solo le versioni di debug delle [librerie di runtime di C](../../c-runtime-library/crt-library-features.md).  
   
-## Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione standard C, utilizzare `PInvoke`. Per ulteriori informazioni, vedere [Esempi di Invocazione della Piattaforma](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
+ Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Routine di debug](../../c-runtime-library/debug-routines.md)   
- [\_CrtGetReportHook](../../c-runtime-library/reference/crtgetreporthook.md)
+ [_CrtGetReportHook](../../c-runtime-library/reference/crtgetreporthook.md)

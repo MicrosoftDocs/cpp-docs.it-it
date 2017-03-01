@@ -1,55 +1,68 @@
 ---
-title: "Classe is_arithmetic | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "is_arithmetic"
-  - "std.tr1.is_arithmetic"
-  - "std::tr1::is_arithmetic"
-  - "std.is_arithmetic"
-  - "std::is_arithmetic"
-  - "type_traits/std::is_arithmetic"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "is_arithmetic (classe) [TR1]"
-  - "is_arithmetic"
+title: Classe is_arithmetic | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- is_arithmetic
+- std::is_arithmetic
+- type_traits/std::is_arithmetic
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_arithmetic class
+- is_arithmetic
 ms.assetid: ea427b7e-0141-4a04-848f-561054c53001
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# Classe is_arithmetic
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: 254e2e518bda4e8ecc82470218323c9f27691ee8
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="isarithmetic-class"></a>Classe is_arithmetic
 Verifica se il tipo è aritmetico.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-template<class Ty>  
-    struct is_arithmetic;  
+template <class Ty>  
+struct is_arithmetic;  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `Ty`  
  Tipo su cui eseguire una query.  
   
-## Note  
+## <a name="remarks"></a>Note  
  Un'istanza del predicato di tipo contiene true se il tipo `Ty` è un tipo aritmetico, ovvero un tipo integrale o un tipo a virgola mobile oppure un form `cv-qualified` di uno di essi; in caso contrario, contiene false.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-```  
-// std_tr1__type_traits__is_arithmetic.cpp   
+```cpp  
+// std__type_traits__is_arithmetic.cpp   
 // compile with: /EHsc   
 #include <type_traits>   
 #include <iostream>   
@@ -70,18 +83,21 @@ int main()
   
     return (0);   
     }  
-  
 ```  
   
-  **is\_arithmetic\<trivial\> \=\= false**  
-**is\_arithmetic\<int\> \=\= true**  
-**is\_arithmetic\<float\> \=\= true**   
-## Requisiti  
- **Intestazione:** \<type\_traits\>  
+```Output  
+is_arithmetic<trivial> == false  
+is_arithmetic<int> == true  
+is_arithmetic<float> == true  
+```  
+  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<type_traits>  
   
  **Spazio dei nomi:** std  
   
-## Vedere anche  
- [\<type\_traits\>](../standard-library/type-traits.md)   
- [Classe is\_floating\_point](../standard-library/is-floating-point-class.md)   
- [Classe is\_integral](../standard-library/is-integral-class.md)
+## <a name="see-also"></a>Vedere anche  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [Classe is_floating_point](../standard-library/is-floating-point-class.md)   
+ [Classe is_integral](../standard-library/is-integral-class.md)
+

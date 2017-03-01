@@ -1,49 +1,65 @@
 ---
-title: "_findclose | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_findclose"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-filesystem-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_findclose"
-  - "findclose"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_findclose (funzione)"
-  - "findclose (funzione)"
+title: _findclose | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _findclose
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-filesystem-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _findclose
+- findclose
+dev_langs:
+- C++
+helpviewer_keywords:
+- _findclose function
+- findclose function
 ms.assetid: 9216c573-0878-444c-b5d7-cdaf16fb9163
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# _findclose
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 75a2b674f392b19bb37f26c977e8b79de7e715bb
+ms.lasthandoff: 02/24/2017
 
-Chiude il punto di controllo della ricerca specificato e rilascia le risorse collegate.  
+---
+# <a name="findclose"></a>_findclose
+Chiude l'handle di ricerca specificato e rilascia le risorse associate.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 int _findclose(   
@@ -51,24 +67,24 @@ int _findclose(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `handle`  
- Individuare il punto di controllo restituito da una chiamata precedente a `_findfirst`.  
+ Handle di ricerca restituito da una chiamata precedente a `_findfirst`.  
   
-## Valore restituito  
- In caso di successo, `_findclose` restituisce 0.  In caso contrario, restituisce \-1 ed imposta `errno` a `ENOENT`, ad indicare che possono essere trovati ulteriori file corrispondenti.  
+## <a name="return-value"></a>Valore restituito  
+ Se l'esito è positivo, `_findclose` restituisce 0. In caso contrario, restituisce –&1; e imposta `errno` su `ENOENT`, che indica che non sono stati trovati altri file corrispondenti.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Funzione|Intestazione obbligatoria|  
-|--------------|-------------------------------|  
-|`_findclose`|\<io.h\>|  
+|--------------|---------------------|  
+|`_findclose`|\<io.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
   
-## Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione standard C, utilizzare `PInvoke`. Per ulteriori informazioni, vedere [Esempi di Invocazione della Piattaforma](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
+ Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
-## Vedere anche  
- [Chiamate di sistema](../../c-runtime-library/system-calls.md)   
- [Funzioni di ricerca dei nomi file](../../c-runtime-library/filename-search-functions.md)
+## <a name="see-also"></a>Vedere anche  
+ [System Calls](../../c-runtime-library/system-calls.md)  (Chiamate di sistema)  
+ [Filename Search Functions](../../c-runtime-library/filename-search-functions.md) (Funzioni di ricerca dei nomi file)

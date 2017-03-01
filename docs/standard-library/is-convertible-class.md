@@ -1,58 +1,71 @@
 ---
-title: "Classe is_convertible | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "is_convertible"
-  - "std.tr1.is_convertible"
-  - "std::tr1::is_convertible"
-  - "std.is_convertible"
-  - "std::is_convertible"
-  - "type_traits/std::is_convertible"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "is_convertible (classe) [TR1]"
-  - "is_convertible"
+title: Classe is_convertible | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- is_convertible
+- std::is_convertible
+- type_traits/std::is_convertible
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_convertible class
+- is_convertible
 ms.assetid: 75614008-1894-42ea-bd57-974399628536
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# Classe is_convertible
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: 381fa9297dd9fad3efd84078a000fea65af0abfd
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="isconvertible-class"></a>Classe is_convertible
 Verifica se il tipo è convertibile in un altro tipo.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-template<class From, class To>  
-    struct is_convertible;  
+template <class From, class To>  
+struct is_convertible;  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `From`  
  Tipo da cui eseguire la conversione.  
   
  `Ty`  
  Tipo in cui eseguire la conversione.  
   
-## Note  
+## <a name="remarks"></a>Note  
  Un'istanza del tipo predicato contiene true se l'espressione `To to = from;`, dove `from` è un oggetto di tipo `From`, è in formato corretto.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-```  
-// std_tr1__type_traits__is_convertible.cpp   
+```cpp  
+// std__type_traits__is_convertible.cpp   
 // compile with: /EHsc   
 #include <type_traits>   
 #include <iostream>   
@@ -76,14 +89,18 @@ int main()
   
 ```  
   
-  **is\_convertible\<trivial, int\> \=\= false**  
-**is\_convertible\<trivial, trivial\> \=\= true**  
-**is\_convertible\<char, int\> \=\= true**   
-## Requisiti  
- **Intestazione:** \<type\_traits\>  
+```Output  
+is_convertible<trivial, int> == false  
+is_convertible<trivial, trivial> == true  
+is_convertible<char, int> == true  
+```  
+  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<type_traits>  
   
  **Spazio dei nomi:** std  
   
-## Vedere anche  
- [\<type\_traits\>](../standard-library/type-traits.md)   
- [Classe is\_base\_of](../standard-library/is-base-of-class.md)
+## <a name="see-also"></a>Vedere anche  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [Classe is_base_of](../standard-library/is-base-of-class.md)
+

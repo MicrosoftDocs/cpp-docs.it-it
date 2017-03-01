@@ -1,74 +1,87 @@
 ---
-title: "Struct plus | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "xfunctional/std::plus"
-  - "std.plus"
-  - "plus"
-  - "std::plus"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "plus (classe)"
-  - "plus (struct)"
+title: Struct plus | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- xfunctional/std::plus
+- std.plus
+- plus
+- std::plus
+dev_langs:
+- C++
+helpviewer_keywords:
+- plus class
+- plus struct
 ms.assetid: 4594abd5-b2f2-4fac-9b6b-fc9a2723f8cf
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# Struct plus
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: 65dd34958f89d80608cf21b360d76f0c26cda38a
+ms.lasthandoff: 02/24/2017
 
-Un oggetto funzione predefinito che esegue l'operazione di addizione \(`operator+` binario\) sui suoi argomenti.  
+---
+# <a name="plus-struct"></a>Struct plus
+Oggetto funzione predefinito che esegue l'operazione di addizione (`operator+` binario) negli argomenti.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
-```  
-template<class Type = void>  
-   struct plus : public binary_function <Type, Type, Type>   
-   {  
-      Type operator()(  
-         const Type& Left,   
-         const Type& Right  
-      ) const;  
-   };  
-  
-// specialized transparent functor for operator+  
-template<> struct plus<void>  
-   {  
-   template<class Type1, class Type2>  
-      auto operator()(Type1&& Left, Type2&& Right) const  
-      -> decltype(std::forward<Type1>(Left)  
-         + std::forward<Type2>(Right));  
-   };  
-  
+```
+template <class Type = void>
+struct plus : public binary_function <Type, Type, Type>  
+{
+    Type operator()(const Type& Left, const Type& Right) const;
+};
+
+// specialized transparent functor for operator+
+template <>  
+struct plus<void>  
+{
+  template <class T, class U>
+  auto operator()(T&& Left, U&& Right) const`
+    -> decltype(std::forward<T>(Left) + std::forward<U>(Right));
+ };
 ```  
   
-#### Parametri  
- `Type`, `Type1`, `Type2`  
- Un tipo che supporti un `operator+` binario che accetta gli operandi dei tipi specificati o derivati.  
+#### <a name="parameters"></a>Parametri  
+ `Type`, `T`, `U`  
+ Tipo che supporta un `operator+` binario che accetta gli operandi dei tipi specificati o dedotti.  
   
  `Left`  
- L'operando a sinistra dell'operazione di addizione.  Il modello non specializzato accetta un argomento di riferimento a lvalue di tipo `Type`.  Il modello specializzato perfeziona l'inoltro degli argomenti di riferimento a rvalue e lvalue di tipo derivato `Type1`.  
+ Operando sinistro dell'operatore di addizione. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo `Type`. Il modello specializzato esegue un inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto `T`.  
   
  `Right`  
- L'operando a destra dell'operazione di addizione.  Il modello non specializzato accetta un argomento di riferimento a lvalue di tipo `Type`.  Il modello specializzato perfeziona l'inoltro degli argomenti di riferimento a rvalue e lvalue di tipo derivato `Type2`.  
+ Operando destro dell'operatore di addizione. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo `Type`. Il modello specializzato esegue un inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto `U`.  
   
-## Valore restituito  
- Il risultato di `Left` `+` `Right`.  Il modello specializzato perfeziona l'inoltro del risultato, il cui tipo è restituito da `operator+` binario.  
+## <a name="return-value"></a>Valore restituito  
+ Risultato di `Left``+``Right`. Il modello specializzato esegue un inoltro perfetto del risultato, con il tipo restituito dall'operatore `operator+` binario.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-```  
+```cpp  
 // functional_plus.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -109,16 +122,22 @@ int main( )
       cout << *Iter3 << " ";  
    cout << ")" << endl;  
 }  
+\* Output:   
+The vector v1 = ( 0 4 8 12 16 20 )  
+The vector v2 = ( -4 -6 -8 -10 -12 -14 )  
+The element-wise sums are: ( -4 -2 0 2 4 6 )  
+*\  
 ```  
   
-  **The vector v1 \= \( 0 4 8 12 16 20 \)**  
-**The vector v2 \= \( \-4 \-6 \-8 \-10 \-12 \-14 \)**  
-**The element\-wise sums are: \( \-4 \-2 0 2 4 6 \)**   
-## Requisiti  
- **Intestazione:** \<funzionale\>  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<functional>  
   
  **Spazio dei nomi:** std  
   
-## Vedere anche  
- [Sicurezza dei thread nella libreria standard C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Libreria di modelli standard](../misc/standard-template-library.md)
+## <a name="see-also"></a>Vedere anche  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)  (Sicurezza dei thread nella libreria standard C++)  
+ [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

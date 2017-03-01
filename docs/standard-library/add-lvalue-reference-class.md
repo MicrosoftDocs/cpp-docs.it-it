@@ -1,54 +1,70 @@
 ---
-title: "Classe add_lvalue_reference | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::add_lvalue_reference"
-  - "add_lvalue_reference"
-  - "type_traits/std::add_lvalue_reference"
-  - "std.add_lvalue_reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "add_lvalue_reference"
+title: Classe add_lvalue_reference | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std::add_lvalue_reference
+- add_lvalue_reference
+- type_traits/std::add_lvalue_reference
+- std.add_lvalue_reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- add_lvalue_reference
 ms.assetid: 9933afc2-ad0d-465d-98fe-7d547fa3efe2
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# Classe add_lvalue_reference
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: a201572ed85d5bcf15435743ac0f8db8f08ede4b
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="addlvaluereference-class"></a>Classe add_lvalue_reference
 Crea un riferimento al tipo dal tipo.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-template<class T>  
-    struct add_lvalue_reference;  
-  
-template<class T>  
-    using add_lvalue_reference_t = typename add_lvalue_reference<T>::type;  
+template <class T>  
+struct add_lvalue_reference;  
+ 
+template <class T>  
+using add_lvalue_reference_t = typename add_lvalue_reference<T>::type;  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `T`  
  Tipo da modificare.  
   
-## Note  
+## <a name="remarks"></a>Note  
  Un’istanza del modificatore del tipo contiene un tipo modificato che è `T` se `T` è un riferimento lvalue; in caso contrario `T&`.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-```  
+```cpp  
 #include <type_traits>   
 #include <iostream>   
   
@@ -65,12 +81,16 @@ int main()
 }  
 ```  
   
-  **add\_lvalue\_reference\_t\<int\> \=\= int**   
-## Requisiti  
- **Intestazione:** \<type\_traits\>  
+```Output  
+add_lvalue_reference_t<int> == int  
+```  
+  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<type_traits>  
   
  **Spazio dei nomi:** std  
   
-## Vedere anche  
- [\<type\_traits\>](../standard-library/type-traits.md)   
- [Classe remove\_reference](../standard-library/remove-reference-class.md)
+## <a name="see-also"></a>Vedere anche  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [Classe remove_reference](../standard-library/remove-reference-class.md)
+

@@ -1,28 +1,45 @@
 ---
-title: "&lt;allocators&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "allocators (intestazione)"
+title: Allocatori | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- allocators
+- C++ Standard Library, allocators
 ms.assetid: ac95023b-9e7d-49f5-861a-bf7a9a340746
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# Allocatori
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 74e453298857b94c2c4eb62c5387d4e727f7bb7c
+ms.lasthandoff: 02/24/2017
 
-Gli allocatori vengono usati dalla libreria di modelli standard per gestire l'allocazione e la deallocazione di elementi archiviati in contenitori.  Tutti i contenitori STL, a eccezione di std::array, hanno un parametro di modello di tipo `allocator<Type>`, dove `Type` rappresenta il tipo di elemento del contenitore.  Ad esempio, la classe vector viene dichiarata come segue:  
+---
+# <a name="allocators"></a>Allocatori
+Gli allocatori vengono usati dalla libreria standard C++ per gestire l'allocazione e la deallocazione di elementi archiviati in contenitori. Tutti i contenitori dalla libreria standard C++, a eccezione di std::array, hanno un parametro di modello di tipo `allocator<Type>`, dove `Type` rappresenta il tipo di elemento del contenitore. Ad esempio, la classe vector viene dichiarata come segue:  
   
 ```  
 template <  
@@ -32,29 +49,29 @@ template <
 class vector  
 ```  
   
- La Libreria di modelli Standard fornisce un'implementazione predefinita per un allocatore.  In C\+\+ 11 e versioni successive, l'allocatore predefinito viene aggiornato in modo da esporre un'interfaccia più piccola. Il nuovo allocatore viene chiamato *allocatore minimo*.  In particolare, il membro `construct()` dell'allocatore minimo supporta la semantica di spostamento, che consente di migliorare notevolmente le prestazioni.  Nella maggior parte dei casi, l'allocatore predefinito dovrebbe essere sufficiente.  In C\+\+ 11 tutti i tipi e le funzioni della a libreria standard che accettano un parametro di tipo allocatore supportano l'iinterfaccia dell'allocatore minimo, tra cui `std::function`, `shared_ptr, allocate_shared()` e `basic_string`.  Per altre informazioni sull'allocatore predefinito, vedere [Classe allocator](../standard-library/allocator-class.md).  
+ La libreria standard C++ offre un'implementazione predefinita per un allocatore. In C++11 e versioni successive, l'allocatore predefinito viene aggiornato in modo da esporre un'interfaccia più piccola. Il nuovo allocatore viene chiamato *allocatore minimo*. In particolare, il membro `construct()` dell'allocatore minimo supporta la semantica di spostamento, che consente di migliorare notevolmente le prestazioni. Nella maggior parte dei casi, l'allocatore predefinito dovrebbe essere sufficiente. In C++&11; tutti i tipi e le funzioni della a libreria standard che accettano un parametro di tipo allocatore supportano l'iinterfaccia dell'allocatore minimo, tra cui `std::function`, `shared_ptr, allocate_shared()` e `basic_string`.  Per altre informazioni sull'allocatore predefinito, vedere [Classe allocator](../standard-library/allocator-class.md).  
   
-## Scrittura di un codificatore personalizzato \(C\+\+11\)  
- L'allocatore predefinito usa `new` e `delete` per allocare e deallocare la memoria.  Se si vuole usare un altro metodo di allocazione della memoria, ad esempio l'uso di memoria condivisa, è necessario creare un allocatore personale.  Se si usa C\+\+ 11 ed è necessario scrivere un nuovo allocatore personalizzato, renderlo un allocatore minimo se possibile.  Anche se è già stato implementato un allocatore obsoleto, provare a modificarlo in modo che diventi un *allocatore minimo* per sfruttare il più efficiente metodo `construct()` che verrà visualizzato automaticamente.  
+## <a name="writing-your-own-allocator-c11"></a>Scrittura di un codificatore personalizzato (C++11)  
+ L'allocatore predefinito usa `new` e `delete` per allocare e deallocare la memoria. Se si vuole usare un altro metodo di allocazione della memoria, ad esempio l'uso di memoria condivisa, è necessario creare un allocatore personale. Se si usa C++&11; ed è necessario scrivere un nuovo allocatore personalizzato, renderlo un allocatore minimo se possibile. Anche se è già stato implementato un allocatore obsoleto, provare a modificarlo in modo che diventi un *allocatore minimo* per sfruttare il più efficiente metodo `construct()` che verrà visualizzato automaticamente.  
   
- Un allocatore minimo richiede molto meno boilerplate e consente di concentrarsi sulle funzioni membro `allocate` e `deallocate` che eseguono tutto il lavoro.  Durante la creazione di un allocatore minimo, non implementare i membri tranne quelli illustrati nell'esempio riportato di seguito:  
+ Un allocatore minimo richiede molto meno boilerplate e consente di concentrarsi sulle funzioni membro `allocate` e `deallocate` che eseguono tutto il lavoro. Durante la creazione di un allocatore minimo, non implementare i membri tranne quelli illustrati nell'esempio riportato di seguito:  
   
-1.  un costruttore di copia di conversione \(vedere l'esempio\)  
+1.  un costruttore di copia di conversione (vedere l'esempio)  
   
-2.  operator\=\=  
+2.  operator==  
   
-3.  operator\!\=  
+3.  operator!=  
   
 4.  allocate  
   
 5.  deallocate  
   
- Il membro `construct()` predefinito di C\+\+11 che verrà fornito eseguire l'inoltro perfetto e abilita la semantica di spostamento; in molti casi, è molto più efficiente rispetto alla versione precedente.  
+ Il membro `construct()` predefinito di C++11 che verrà fornito eseguire l'inoltro perfetto e abilita la semantica di spostamento; in molti casi, è molto più efficiente rispetto alla versione precedente.  
   
 > [!WARNING]
->  In fase di compilazione, STL usa la classe allocator\_traits per trovare i membri esplicitamente forniti dall'utente e fornisce un'implementazione predefinita per gli eventuali membri non presenti.  Non interferiscono con questo meccanismo fornendo una specializzazione di allocator\_traits per l'allocatore.  
+>  In fase di compilazione, la libreria standard C++ usa la classe allocator_traits per trovare i membri specificati esplicitamente dall'utente e offre un'implementazione predefinita per gli eventuali membri non presenti. Non interferiscono con questo meccanismo fornendo una specializzazione di allocator_traits per l'allocatore.  
   
- L'esempio seguente mostra un'implementazione minima di un allocatore che usa `malloc` e `free`.  Si noti l'uso del nuovo tipo di eccezione `std::bad_array_new_length` che viene generato se la dimensione della matrice è minore di zero o maggiore della dimensione massima consentita.  
+ L'esempio seguente mostra un'implementazione minima di un allocatore che usa `malloc` e `free`. Si noti l'uso del nuovo tipo di eccezione `std::bad_array_new_length` che viene generato se la dimensione della matrice è minore di zero o maggiore della dimensione massima consentita.  
   
 ```  
 #pragma once  
@@ -65,7 +82,7 @@ template <class T>
 struct Mallocator  
 {  
     typedef T value_type;  
-    Mallocator() noexcept {} //default ctor not required by STL  
+    Mallocator() noexcept {} //default ctor not required by C++ Standard Library  
   
     // A converting copy constructor:  
     template<class U> Mallocator(const Mallocator<U>&) noexcept {}  
@@ -104,8 +121,8 @@ void Mallocator<T>::deallocate(T * const p, size_t) const noexcept
 }  
 ```  
   
-## Scrittura di un codificatore personalizzato \(C\+\+03\)  
- In C \+ \+ 03, qualsiasi allocatore usato con i contenitori STL deve implementare le definizioni dei tipi seguenti:  
+## <a name="writing-your-own-allocator-c03"></a>Scrittura di un codificatore personalizzato (C++03)  
+ In C++03 qualsiasi allocatore usato con i contenitori della libreria standard C++ deve implementare le definizioni dei tipi seguenti:  
   
 |||  
 |-|-|  
@@ -114,7 +131,7 @@ void Mallocator<T>::deallocate(T * const p, size_t) const noexcept
 |`difference_type`|`size_type`|  
 |`pointer`|`value_type`|  
   
- In aggiunta, qualsiasi allocatore usato con i contenitori STL deve implementare i metodi seguenti:  
+ Inoltre, qualsiasi allocatore usato con i contenitori della libreria standard C++ deve implementare i metodi seguenti:  
   
 |||  
 |-|-|  
@@ -125,7 +142,12 @@ void Mallocator<T>::deallocate(T * const p, size_t) const noexcept
 |`allocate`|`operator!=`|  
 |`construct`||  
   
- Per altre informazioni sulle definizioni dei tipi e sui metodi di tipo, vedere [Classe allocator](../standard-library/allocator-class.md).  
+ Per altre informazioni sulle definizioni dei tipi e sui metodi, vedere [Classe allocator](../standard-library/allocator-class.md).  
   
-## Vedere anche  
- [Libreria di modelli standard](../misc/standard-template-library.md)
+## <a name="see-also"></a>Vedere anche  
+ [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+
+
+
+
+

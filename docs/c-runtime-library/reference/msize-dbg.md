@@ -1,49 +1,66 @@
 ---
-title: "_msize_dbg | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_msize_dbg"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_msize_dbg"
-  - "msize_dbg"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "blocchi di memoria"
-  - "_msize_dbg (funzione)"
-  - "msize_dbg (funzione)"
+title: _msize_dbg | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _msize_dbg
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _msize_dbg
+- msize_dbg
+dev_langs:
+- C++
+helpviewer_keywords:
+- memory blocks
+- _msize_dbg function
+- msize_dbg function
 ms.assetid: a333f4b6-f8a2-4e61-bb69-cb34063b8cef
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# _msize_dbg
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 07f6fe031d7b0b3065cfe50d1ed0307c20a55509
+ms.lasthandoff: 02/24/2017
 
-Calcola le dimensioni di un blocco di memoria nell'heap \(solo versione di debug\).  
+---
+# <a name="msizedbg"></a>_msize_dbg
+Calcola le dimensioni di un blocco di memoria nell'heap (solo versione di debug).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -53,35 +70,35 @@ Calcola le dimensioni di un blocco di memoria nell'heap \(solo versione di debug
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `userData`  
- Puntatore al blocco di memoria per il quale determinare la dimensione.  
+ Puntatore al blocco di memoria per il quale determinare le dimensioni.  
   
  *blockType*  
- Tipo di blocco di memoria specificato: `_CLIENT_BLOCK` o **\_NORMAL\_BLOCK**.  
+ Tipo del blocco di memoria specificato: `_CLIENT_BLOCK` o **NORMAL_BLOCK**.  
   
-## Valore restituito  
- Al termine, `_msize_dbg` restituisce la dimensione in byte del blocco di memoria specificato; in caso contrario restituisce NULL.  
+## <a name="return-value"></a>Valore restituito  
+ In caso di esito positivo, `_msize_dbg` restituisce le dimensioni (in byte) del blocco di memoria specificato. Inn caso contrario, restituisce NULL.  
   
-## Note  
- `_msize_dbg` è una versione di debug della funzione \_[msize](../../c-runtime-library/reference/msize.md).  Quando [\_DEBUG](../../c-runtime-library/debug.md) non è definito, ogni chiamata a `_msize_dbg` viene ridotta ad una chiamata a `_msize`.  Sia `_msize` che `_msize_dbg` calcola le dimensioni di un blocco di memoria nell'heap di base, ma `_msize_dbg` aggiunge due funzionalità di debug: include i buffer presenti da entrambi i lati della parte del blocco di memoria nella dimensione restituita e consente di eseguire calcoli di dimensioni per i tipi di blocco specifici.  
+## <a name="remarks"></a>Note  
+ `_msize_dbg` è una versione di debug della funzione _[msize](../../c-runtime-library/reference/msize.md). Quando [_DEBUG](../../c-runtime-library/debug.md) non è definito, ogni chiamata a `_msize_dbg` viene ridotta a una chiamata a `_msize`. Sia `_msize` che `_msize_dbg` calcolano le dimensioni di un blocco di memoria nell'heap di base, ma `_msize_dbg` aggiunge due funzionalità di debug: include i buffer su entrambi i lati della parte utente del blocco di memoria nelle dimensioni restituite e consente i calcoli delle dimensioni per tipi di blocchi specifici.  
   
- Per informazioni su come i blocchi di memoria allocati, vengono inizializzati e vengono gestiti nella versione di debug dell'heap di base, vedere [Informazioni dettagliate sull'heap di debug CRT](../Topic/CRT%20Debug%20Heap%20Details.md).  Per informazioni sui tipi di blocchi di allocazione e su come vengono utilizzati, consultare [Tipi di blocchi sull'heap di debug](../Topic/CRT%20Debug%20Heap%20Details.md#BKMK_Types_of_blocks_on_the_debug_heap).  Per informazioni sulle differenze tra chiamare una funzione standard dell'heap e la versione di debug in una build di debug di un'applicazione, consultare [Versioni di debug di funzioni di allocazione heap](../Topic/Debug%20Versions%20of%20Heap%20Allocation%20Functions.md).  
+ Per informazioni sulle modalità di allocazione, inizializzazione e gestione dei blocchi di memoria nella versione di debug dell'heap di base, vedere [Informazioni dettagliate sull'heap di debug CRT](/visualstudio/debugger/crt-debug-heap-details). Per informazioni sui tipi di blocchi di allocazione e su come vengono usati, vedere [Tipi di blocchi sull'heap di debug](/visualstudio/debugger/crt-debug-heap-details). Per informazioni sulle differenze tra chiamare una funzione standard dell'heap e la sua versione di debug nella build di debug di un'applicazione, vedere [Versioni di debug di funzioni di allocazione heap](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).  
   
- Questa funzione convalida il parametro.  Se `memblock` è un puntatore null, `_msize` richiama un gestore di parametro non valido, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).  Se l'errore viene gestito, la funzione imposta `errno` a `EINVAL` e restituisce \-1.  
+ Questa funzione convalida il relativo parametro. Se `memblock` è un puntatore Null, `_msize` richiama il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'errore viene gestito, la funzione imposta `errno` su `EINVAL` e restituisce -1.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`_msize_dbg`|\<crtdbg.h\>|  
+|-------------|---------------------|  
+|`_msize_dbg`|\<crtdbg.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
-## Librerie  
- Solo versioni di debug di [Librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Librerie  
+ Solo le versioni di debug delle [librerie di runtime di C](../../c-runtime-library/crt-library-features.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_msize_dbg.c  
@@ -133,16 +150,16 @@ int main( void )
 }  
 ```  
   
-## Output  
+## <a name="output"></a>Output  
   
 ```  
 Size of block after _malloc_dbg of 40 longs: 160  
 Size of block after _realloc_dbg of 40 more longs: 320  
 ```  
   
-## Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione standard C, utilizzare `PInvoke`. Per ulteriori informazioni, vedere [Esempi di Invocazione della Piattaforma](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
+ Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Routine di debug](../../c-runtime-library/debug-routines.md)   
- [\_malloc\_dbg](../../c-runtime-library/reference/malloc-dbg.md)
+ [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)

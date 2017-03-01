@@ -1,61 +1,77 @@
 ---
-title: "_mbsnbset, _mbsnbset_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mbsnbset"
-  - "_mbsnbset_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "mbsnbset"
-  - "mbsnbset_l"
-  - "_mbsnbset"
-  - "_mbsnbset_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_mbsnbset (funzione)"
-  - "_mbsnbset_l (funzione)"
-  - "_tcsnset (funzione)"
-  - "_tcsnset_l (funzione)"
-  - "mbsnbset (funzione)"
-  - "mbsnbset_l (funzione)"
-  - "tcsnset (funzione)"
-  - "tcsnset_l (funzione)"
+title: _mbsnbset, _mbsnbset_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mbsnbset
+- _mbsnbset_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- mbsnbset
+- mbsnbset_l
+- _mbsnbset
+- _mbsnbset_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- tcsnset function
+- _tcsnset_l function
+- _mbsnbset function
+- _tcsnset function
+- _mbsnbset_l function
+- mbsnbset_l function
+- tcsnset_l function
+- mbsnbset function
 ms.assetid: 8e46ef75-9a56-42d2-a522-a08450c67c19
 caps.latest.revision: 24
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# _mbsnbset, _mbsnbset_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: a9db88e2797e5828a007c21fd7f7fdde135ff4bf
+ms.lasthandoff: 02/24/2017
 
-Imposta i primi `n` byte di una stringa di caratteri multibyte a un carattere specificato.  Sono disponibili versioni più sicure di queste funzioni; vedere [\_mbsnbset\_s, \_mbsnbset\_s\_l](../../c-runtime-library/reference/mbsnbset-s-mbsnbset-s-l.md).  
+---
+# <a name="mbsnbset-mbsnbsetl"></a>_mbsnbset, _mbsnbset_l
+Imposta i primi `n` byte di una stringa di caratteri multibyte su un carattere specificato. Sono disponibili versioni più sicure di queste funzioni. Vedere [_mbsnbset_s, _mbsnbset_s_l](../../c-runtime-library/reference/mbsnbset-s-mbsnbset-s-l.md).  
   
 > [!IMPORTANT]
->  Questa API non può essere utilizzata nelle applicazioni che vengono eseguite in Windows Runtime.  Per ulteriori informazioni, vedere [Funzioni CRT non supportate con \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere l'articolo relativo alle [funzioni CRT non supportate con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 unsigned char *_mbsnbset(  
@@ -71,50 +87,50 @@ unsigned char *_mbsnbset_l(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `str`  
  Stringa da modificare.  
   
  `c`  
- Impostazione a byte singolo o a caratteri multibyte.  
+ Impostazione di caratteri a un byte singolo o multibyte.  
   
  `count`  
  Numero di byte da impostare.  
   
  `locale`  
- Impostazioni locali da utilizzare.  
+ Impostazioni locali da usare.  
   
-## Valore restituito  
+## <a name="return-value"></a>Valore restituito  
  `_mbsnbset` restituisce un puntatore alla stringa modificata.  
   
-## Note  
- Le funzioni `_mbsnbset` e `_mbsnbset_l` impostano, al massimo, i primi `count` byte di `str` a `c`.  Se `count` è maggiore della lunghezza di `str`, la lunghezza di `str` viene utilizzata al posto di `count`.  Se `c` è un carattere multibyte e non può essere impostato interamente nell'ultimo byte specificato da `count`, l'ultimo byte viene riempito con un carattere vuoto.  `_mbsnbset` e `_mbsnbset_l`non applica un null di terminazione alla fine di `str`.  
+## <a name="remarks"></a>Note  
+ Le funzioni `_mbsnbset` e `_mbsnbset_l` impostano al massimo i primi `count` byte di `str` su `c`. Se `count` è maggiore della lunghezza di `str`, la lunghezza di `str` viene usata invece di `count`. Se `c` è un carattere multibyte e non può essere interamente impostato nell'ultimo byte specificato da `count`, l'ultimo byte viene riempito con un carattere vuoto. `_mbsnbset` e `_mbsnbset_l` non inseriscono un Null di terminazione alla fine di `str`.  
   
- `_mbsnbset` e `_mbsnbset_l`è simile a `_mbsnset`, con la differenza che imposta i `count` byte anziché i `count` caratteri di `c`.  
+ `_mbsnbset` e `_mbsnbset_l` sono simili a `_mbsnset`, ma impostano `count` byte invece di `count` caratteri di `c`.  
   
- Se `str` è `NULL` o `count` è zero, questa funzione genera un'eccezione di parametro non valido come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).  Se l'esecuzione può continuare, `errno` viene impostato su `EINVAL` e la funzione restituisce `NULL`.  Inoltre, se `c` non è un carattere multibyte valido, `errno` è impostato su `EINVAL` ed, invece, viene utilizzato uno spazio.  
+ Se `str` è `NULL` o `count` è zero, questa funzione genera un'eccezione di parametro non valido, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, `errno` viene impostato su `EINVAL` e la funzione restituisce `NULL`. Inoltre, se `c` non è un carattere multibyte valido, `errno` viene impostato su `EINVAL` e in alternativa viene usato uno spazio.  
   
- Il valore di output è interessato dall'impostazione dell'impostazione di categoria `LC_CTYPE` delle impostazioni locali; vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) per ulteriori informazioni.  La versione `_mbsnbset` di questa funzione utilizza le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali; la versione `_mbsnbset_l` è identica ad eccezione che utilizza il parametro delle impostazioni locali che gli sono state passate.  Per ulteriori informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ La configurazione dell'impostazione della categoria `LC_CTYPE` delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). La versione `_mbsnbset` di questa funzione usa le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. La versione `_mbsnbset_l` è identica, ad eccezione del fatto che usa il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
   
- **Nota sulla sicurezza** Questa API comporta una potenziale minaccia determinata da un problema di sovraccarico del buffer.  Problemi di sovraccarico del buffer sono un metodo frequente di attacco al sistema, con conseguente elevazione dei privilegi non autorizzata.  Per ulteriori informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
+ **Nota sulla sicurezza** Questa API è esposta a una potenziale minaccia dovuta a un problema di sovraccarico del buffer. I problemi di sovraccarico del buffer sono usati spesso come metodo di attacco di sistema e provocano un'elevazione dei privilegi non autorizzata. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
   
-### Mapping di routine su testo generico  
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
-|Routine Tchar.h|\_UNICODE e \_MBCS non definiti|\_MBCS definito|\_UNICODE definito|  
-|---------------------|-------------------------------------|---------------------|------------------------|  
+|Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tcsnset`|`_strnset`|`_mbsnbset`|`_wcsnset`|  
 |`_tcsnset_l`|`_strnset_l`|`_mbsnbset_l`|`_wcsnset_l`|  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`_mbsnbset`|\<mbstring.h\>|  
-|`_mbsnbset_l`|\<mbstring.h\>|  
+|-------------|---------------------|  
+|`_mbsnbset`|\<mbstring.h>|  
+|`_mbsnbset_l`|\<mbstring.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_mbsnbset.c  
@@ -133,18 +149,18 @@ int main( void )
 }  
 ```  
   
-## Output  
+## <a name="output"></a>Output  
   
 ```  
 Before: This is a test  
 After:  **** is a test  
 ```  
   
-## Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione standard C, utilizzare `PInvoke`. Per ulteriori informazioni, vedere [Esempi di Invocazione della Piattaforma](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
+ Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md)   
- [\_mbsnbcat, \_mbsnbcat\_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
- [\_strnset, \_strnset\_l, \_wcsnset, \_wcsnset\_l, \_mbsnset, \_mbsnset\_l](../../c-runtime-library/reference/strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)   
- [\_strset, \_strset\_l, \_wcsset, \_wcsset\_l, \_mbsset, \_mbsset\_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)
+ [_mbsnbcat, _mbsnbcat_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
+ [_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l](../../c-runtime-library/reference/strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)   
+ [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)

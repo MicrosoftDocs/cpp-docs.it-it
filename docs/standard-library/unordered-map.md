@@ -1,55 +1,72 @@
 ---
-title: "&lt;unordered_map&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "<unordered_map>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "unordered_map (intestazione) [TR1]"
+title: '&lt;unordered_map&gt; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- <unordered_map>
+dev_langs:
+- C++
+helpviewer_keywords:
+- unordered_map header
 ms.assetid: eb90ecb2-250a-4be1-83d2-f66b2917edde
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# &lt;unordered_map&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 491992306060125ab91d64560113f7f8a3b740b1
+ms.openlocfilehash: 4a90e1c2db038980309e98aed5fb0802dcb5a594
+ms.lasthandoff: 02/24/2017
 
-Definisce le classi modello [unordered\_map](../standard-library/unordered-map-class.md) e [unordered\_multimap](../standard-library/unordered-multimap-class.md) del contenitore e i rispettivi modelli di supporto.  
+---
+# <a name="ltunorderedmapgt"></a>&lt;unordered_map&gt;
+Definisce le classi modello di contenitore [unordered_map](../standard-library/unordered-map-class.md) e [unordered_multimap](../standard-library/unordered-multimap-class.md) e i relativi modelli di supporto.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 #include <unordered_map>  
 ```  
   
-### Classi  
+### <a name="classes"></a>Classi  
   
 |||  
 |-|-|  
-|[Classe unordered\_map](../standard-library/unordered-map-class.md)|Gli archivi hash alla tabella {chiave, mappata} di coppie.|  
-|[Classe unordered\_multimap](../standard-library/unordered-multimap-class.md)|Gli archivi hash alla tabella {chiave, mappata} di coppie.|  
+|[Classe unordered_map](../standard-library/unordered-map-class.md)|Archivia la tabella hash di coppie {key, mapped}.|  
+|[Classe unordered_multimap](../standard-library/unordered-multimap-class.md)|Archivia la tabella hash di coppie {key, mapped}.|  
   
-### Funzioni  
+### <a name="functions"></a>Funzioni  
   
 |||  
 |-|-|  
-|[operator\!\= \(unordered\_map\)](../Topic/operator!=%20\(unordered_map\).md)|Test se il unordered\_map a sinistra dell'operatore non è uguale all'oggetto di unordered\_map a destra.|  
-|[operator\=\= \(unordered\_map\)](../Topic/operator==%20\(unordered_map\).md)|Test se il unordered\_map a sinistra dell'operatore è uguale all'oggetto di unordered\_map a destra.|  
-|[Funzione swap \(unordered\_map\)](../Topic/swap%20Function%20\(unordered_map\).md)|Scambia due mappe.|  
-|[operator\!\= \(unordered\_multimap\)](../Topic/operator!=%20\(unordered_multimap\).md)|Test se il unordered\_multimap a sinistra dell'operatore non è uguale all'oggetto di unordered\_multimap a destra.|  
-|[operator\=\= \(unordered\_multimap\)](../Topic/operator==%20\(unordered_multimap\).md)|Test se il unordered\_multimap a sinistra dell'operatore è uguale all'oggetto di unordered\_multimap a destra.|  
-|[Funzione swap \(unordered\_multimap\)](../Topic/swap%20Function%20\(unordered_multimap\).md)|Scambia due multimaps.|  
+|[operator!=](../standard-library/unordered-map-operators.md#operator_neq)|Verifica se l'oggetto unordered_map a sinistra dell'operatore non è uguale all'oggetto unordered_map a destra.|  
+|[operator==](../standard-library/unordered-map-operators.md#operator_eq_eq)|Verifica se l'oggetto unordered_map a sinistra dell'operatore è uguale all'oggetto unordered_map a destra.|  
+|[Funzione swap (unordered_map)](../standard-library/unordered-map-functions.md#swap_function)|Scambia due oggetti map.|  
+|[operator!=](../standard-library/unordered-map-operators.md#operator_neq)|Verifica se l'oggetto unordered_multimap a sinistra dell'operatore non è uguale all'oggetto unordered_multimap a destra.|  
+|[operator==](../standard-library/unordered-map-operators.md#operator_eq_eq)|Verifica se l'oggetto unordered_multimap a sinistra dell'operatore è uguale all'oggetto unordered_multimap a destra.|  
+|[Funzione swap (unordered_map)](../standard-library/unordered-map-functions.md#swap_function)|Scambia due oggetti multimap.|  
   
-## Vedere anche  
- [Classe unordered\_multiset](../standard-library/unordered-multiset-class.md)   
- [Classe unordered\_set](../standard-library/unordered-set-class.md)
+## <a name="see-also"></a>Vedere anche  
+ [Classe unordered_multiset](../standard-library/unordered-multiset-class.md)   
+ [Classe unordered_set](../standard-library/unordered-set-class.md)
+

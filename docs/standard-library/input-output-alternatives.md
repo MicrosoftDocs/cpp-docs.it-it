@@ -1,42 +1,60 @@
 ---
-title: "Alternative di input/output | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "I/O [C++], alternative"
+title: Alternative di input/output | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- I/O [C++], alternatives
 ms.assetid: 9f8401c7-d90d-4285-8918-63573df74a80
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Alternative di input/output
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 45cec9f7c4c45ef12c7d22a7c3c311f7ce3f4cb5
+ms.lasthandoff: 02/24/2017
 
-Visual C\+\+ include diverse alternative per la programmazione dei\/O:  
+---
+# <a name="inputoutput-alternatives"></a>Alternative di input/output
+Visual C++ offre diverse alternative per la programmazione I/O:  
   
--   Libreria di runtime del linguaggio C diretta, I\/O privo.  
+-   I/O senza buffer diretto della libreria di runtime C  
   
--   Flusso I\/O della libreria di runtime C ANSI.  
+-   I/O di flusso della libreria di runtime C ANSI  
   
--   Console e rende I\/O diretto.  
+-   I/O diretto su console e porta  
   
--   La libreria MFC.  
+-   Libreria Microsoft Foundation Class (MFC)  
   
--   La libreria C\+\+ standard Microsoft.  
+-   Libreria standard Microsoft C++  
   
- Le classi iostream sono utili per buffering, il testo formattato I\/O.  Sono inoltre utili per privo o il binario I\/O se è necessario disporre dell'interfaccia di programmazione in c\+\+ e si decide di non utilizzare la libreria MFC \(Microsoft Foundation Class \(MFC\).  Le classi iostream rappresentano un'alternativa orientata a oggetti dei\/O funzioni di runtime del linguaggio C.  
+ Le classi iostream sono utili per l'I/O del testo formattato nel buffer. Sono utili anche per l'I/O senza buffer o binario se si ha necessità di un'interfaccia di programmazione C++ e si decide di non usare la libreria Microsoft Foundation Class (MFC). Le classi iostream rappresentano un I/O orientato agli oggetti alternativo alle funzioni di runtime C.  
   
- È possibile utilizzare le classi iostream con il sistema operativo Microsoft Windows.  Il funzionamento dei flussi di file e delle stringhe senza restrizioni, ma gli oggetti flusso `cin`modalità di carattere, `cout`, `cerr` e `clog` non è coerente con l'interfaccia utente grafica di windows.  È inoltre possibile derivare classi personalizzate del flusso che interagiscono direttamente con l'ambiente Windows.  
+ È possibile usare le classi iostream con il sistema operativo Microsoft Windows. I flussi di stringhe e file funzionano senza limitazioni, ma gli oggetti di flusso in modalità carattere `cin`, `cout`, `cerr` e `clog` non sono coerenti con l'interfaccia utente grafica di Windows. È anche possibile derivare classi di flusso personalizzate in grado di interagire direttamente con l'ambiente Windows.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Definizione di flusso](../standard-library/what-a-stream-is.md)
+
+

@@ -1,47 +1,70 @@
 ---
-title: "lsearch | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_lsearch"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-utility-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "lsearch"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lsearch (funzione)"
+title: _lsearch | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _lsearch
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-utility-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _lsearch
+- lsearch
+dev_langs:
+- C++
+helpviewer_keywords:
+- _lsearch function
+- values, searching for
+- keys, finding in arrays
+- arrays [CRT], searching
+- linear searches
+- searching, linear
+- lsearch function
 ms.assetid: 8200f608-159a-46f0-923b-1a37ee1af7e0
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
----
-# _lsearch
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 05248645487edfc46b8adc5754bf99e46ee6911f
+ms.lasthandoff: 02/24/2017
 
-Esegue una ricerca lineare di un valore; aggiunge alla fine dell'elenco se non viene trovata corrispondenza.  È disponibile una versione più sicura di questa funzione; vedere [\_lsearch\_s](../../c-runtime-library/reference/lsearch-s.md).  
+---
+# <a name="lsearch"></a>_lsearch
+Esegue una ricerca lineare di un valore; aggiunge alla fine dell'elenco se non viene trovato. È disponibile una versione più sicura di questa funzione. Vedere [_lsearch_s](../../c-runtime-library/reference/lsearch-s.md).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 void *_lsearch(  
@@ -53,41 +76,41 @@ void *_lsearch(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `key`  
- Oggetto da ricercare.  
+ Oggetto da cercare.  
   
  `base`  
- Puntatore alla base dell'array da cercare.  
+ Puntatore alla base della matrice da cercare.  
   
  `num`  
- Numero di elementi  
+ Numero di elementi.  
   
  `width`  
- Grandezza di ogni elemento della matrice.  
+ Larghezza di ogni elemento della matrice.  
   
  `compare`  
- Puntatore alla routine di confronto.  Il primo parametro è un puntatore alla chiave per la ricerca.  Il secondo parametro è un puntatore ad un elemento dell'array da confrontare con la chiave.  
+ Puntatore alla routine di confronto. Il primo parametro è un puntatore alla chiave per la ricerca. Il secondo parametro è un puntatore a un elemento della matrice da confrontare con la chiave.  
   
-## Valore restituito  
- Se la chiave viene trovata, `_lsearch` restituisce un puntatore all'elemento alla `base` dell'array che corrisponde a `key`.  Se la chiave non viene trovata, `_lsearch` restituisce un puntatore all'elemento appena aggiunto alla fine dell'array.  
+## <a name="return-value"></a>Valore restituito  
+ Se la chiave viene trovata, `_lsearch` restituisce un puntatore all'elemento della matrice in `base` che corrisponde a `key`. Se la chiave non viene trovata, `_lsearch` restituisce un puntatore all'elemento appena aggiunto alla fine della matrice.  
   
-## Note  
- La funzione `_lsearch` esegue una ricerca lineare del valore `key` in un array di `num` elementi, ognuno di `width` byte.  A differenza di `bsearch`, `_lsearch` non richiede che l'array sia ordinato.  Se `key` non viene trovato, `_lsearch` lo aggiunge alla fine dell'array e incrementa `num`.  
+## <a name="remarks"></a>Note  
+ La funzione `_lsearch` esegue una ricerca lineare del valore `key` in una matrice di `num` elementi, ognuno di `width` byte. A differenza di `bsearch`, `_lsearch` non richiede che la matrice sia ordinata. Se `key` non viene trovato, `_lsearch` lo aggiunge alla fine della matrice e incrementa `num`.  
   
- L'argomento `compare` è un puntatore a una routine fornita dall'utente che confronta due elementi di un array e restituisce un valore che specifica la loro relazione.  `_lsearch` chiama la routine `compare` una o più volte durante la ricerca, passando i puntatori a due elementi di array ad ogni chiamata.  `compare` deve confrontare gli elementi e restituire un valore diverso da zero \(che indica che gli elementi sono differenti\) o 0 \(che indica che gli elementi sono identici\).  
+ L'argomento `compare` è un puntatore a una routine fornita dall'utente che confronta due elementi di matrice e restituisce un valore che specifica la relazione. `_lsearch` chiama la routine `compare` una o più volte durante la ricerca, passando i puntatori a due elementi di matrice per ogni chiamata. `compare` deve confrontare gli elementi e restituire un valore diverso da zero (che indica che gli elementi sono diversi) o 0 (che indica che gli elementi sono identici).  
   
- Questa funzione convalida i parametri.  Se `compare`, `key` o `num` è `NULL`, o se `base` è NULL e \*`num` è diverso da zero, o se `width` è minore di zero, viene richiamato il gestore di parametro non valido, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).  Se l'esecuzione può continuare, `errno` viene impostato su `EINVAL` e la funzione restituisce `NULL`.  
+ Questa funzione convalida i relativi parametri. Se `compare`, `key` o `num` è `NULL` o se `base` è NULL e *`num` è diverso da zero o se `width` è minore di zero, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, `errno` viene impostato su `EINVAL` e la funzione restituisce `NULL`.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`_lsearch`|\<search.h\>|  
+|-------------|---------------------|  
+|`_lsearch`|\<search.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_lsearch.c  
@@ -124,13 +147,16 @@ int compare(const void *arg1, const void *arg2 )
 }  
 ```  
   
-  **elenco delle parole prima di \_lsearch: hello thanks bye**  
-**elenco delle parole dopo \_lsearch: hello thanks bye extra**   
-## Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione standard C, utilizzare `PInvoke`. Per ulteriori informazioni, vedere [Esempi di Invocazione della Piattaforma](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+wordlist before _lsearch: hello thanks bye  
+wordlist after _lsearch: hello thanks bye extra  
+```  
   
-## Vedere anche  
+## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
+ Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
+  
+## <a name="see-also"></a>Vedere anche  
  [Ricerca e ordinamento](../../c-runtime-library/searching-and-sorting.md)   
  [bsearch](../../c-runtime-library/reference/bsearch.md)   
- [\_lfind](../../c-runtime-library/reference/lfind.md)   
- [\_lsearch\_s](../../c-runtime-library/reference/lsearch-s.md)
+ [_lfind](../../c-runtime-library/reference/lfind.md)   
+ [_lsearch_s](../../c-runtime-library/reference/lsearch-s.md)

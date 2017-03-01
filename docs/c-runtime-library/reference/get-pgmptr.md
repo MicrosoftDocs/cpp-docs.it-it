@@ -1,78 +1,94 @@
 ---
-title: "_get_pgmptr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_get_pgmptr"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "get_pgmptr"
-  - "_get_pgmptr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_get_pgmptr (funzione)"
-  - "_pgmptr (variabile globale)"
-  - "get_pgmptr (funzione)"
-  - "pgmptr (variabile globale)"
+title: _get_pgmptr | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _get_pgmptr
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- get_pgmptr
+- _get_pgmptr
+dev_langs:
+- C++
+helpviewer_keywords:
+- get_pgmptr function
+- _get_pgmptr function
+- pgmptr global variable
+- _pgmptr global variable
 ms.assetid: 29f16a9f-a685-4721-add3-7fad4f67eece
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# _get_pgmptr
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: f119e7680f53f37a75b5e2e54263094e1b48a402
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="getpgmptr"></a>_get_pgmptr
 Ottiene il valore corrente della variabile globale `_pgmptr`.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-errno_t _get_pgmptr(   
-   char **pValue   
+errno_t _get_pgmptr(   
+   char **pValue   
 );  
 ```  
   
-#### Parametri  
- \[out\] `pValue`  
- Un puntatore a una stringa da riempire con il valore corrente della variabile `_pgmptr`.  
+#### <a name="parameters"></a>Parametri  
+ [out] `pValue`  
+ Puntatore a una stringa in cui inserire il valore corrente della variabile `_pgmptr`.  
   
-## Valore restituito  
- Restituisce zero se ha esito positivo; un codice di errore in caso di fallimento.  Se `pValue` è `NULL`, viene richiamato il gestore di parametro non valido, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).  Se l'esecuzione può continuare, la funzione imposta `errno` e imposta `EINVAL` su `EINVAL`.  
+## <a name="return-value"></a>Valore restituito  
+ Restituisce zero se ha esito positivo; un codice di errore se ha esito negativo. Se `pValue` è `NULL`, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta `errno` su`EINVAL` e restituisce `EINVAL`.  
   
-## Note  
- La variabile globale `_pgmptr`contiene il percorso completo del file eseguibile associato al processo.  Per ulteriori informazioni, vedere [\_pgmptr, \_wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md).  
+## <a name="remarks"></a>Note  
+ La variabile globale `_pgmptr` contiene il percorso completo del file eseguibile associato al processo. Per altre informazioni, vedere [_pgmptr, _wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md).  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`_get_pgmptr`|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`_get_pgmptr`|\<stdlib.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
-## Equivalente in NET Framework  
- Non applicabile.  Per chiamare la funzione standard C, utilizzare `PInvoke`.  Per ulteriori informazioni, vedere [Esempi di Invocazione della Piattaforma](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente in NET Framework  
+ Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
-## Vedere anche  
- [\_get\_wpgmptr](../../c-runtime-library/reference/get-wpgmptr.md)
+## <a name="see-also"></a>Vedere anche  
+ [_get_wpgmptr](../../c-runtime-library/reference/get-wpgmptr.md)

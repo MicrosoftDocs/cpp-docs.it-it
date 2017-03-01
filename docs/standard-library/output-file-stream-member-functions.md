@@ -1,72 +1,98 @@
 ---
-title: "Funzioni membro del flussi di file di output | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "flussi di output, funzioni membro"
+title: Funzioni membro del flusso di file di output | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- output streams, member functions
 ms.assetid: 38aaf710-8035-4a34-a0c4-123a5327f28a
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Funzioni membro del flussi di file di output
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
+ms.openlocfilehash: 62d10faef9b1958f0ad5cee7b8ff2b4e491c617a
+ms.lasthandoff: 02/24/2017
 
-Le funzioni membro flusso di output hanno tre tipi: quelli che sono equivalenti ai manipolatori, quelle che eseguono le operazioni di scrittura non formattato e quelli che modificano nello stato del flusso e non hanno manipolatore o l'operatore equivalente di inserimento.  Per sequenziale, output formattato, è possibile utilizzare solo gli operatori e i manipolatori di inserimento.  Per l'output binario di accesso casuale del disco, si utilizzano altre funzioni membro, con o senza gli operatori di inserimento.  
+---
+# <a name="output-file-stream-member-functions"></a>Funzioni membro del flussi di file di output
+Le funzioni membro del flusso di output sono di tre tipi: quelle equivalenti a manipolatori, quelle che eseguono operazioni di scrittura non formattate e quelle che modificano lo stato del flusso e non hanno un manipolatore o un operatore di inserimento equivalente . Per l'output formattato e sequenziale, è possibile usare solo operatori di inserimento e manipolatori. Per l'output del disco binario ad accesso casuale, usare altre funzioni membro, con o senza operatori di inserimento.  
   
-## La funzione open per flussi di output  
- Per utilizzare un flusso del file di output \([ofstream](../Topic/ofstream.md)\), è necessario associare il flusso con un file su disco nel costruttore specifico o funzione di **apri**.  Se si utilizza la funzione di **apri**, è possibile riutilizzare lo stesso oggetto flusso attraverso una serie di file.  In entrambi i casi, gli argomenti che descrivono il file sono identici.  
+## <a name="the-open-function-for-output-streams"></a>Funzione open per flussi di output  
+ Per usare un flusso di file di output ([ofstream](../standard-library/basic-ofstream-class.md)), è necessario associare tale flusso a un file su disco specifico nel costruttore o alla funzione **open**. Se si usa la funzione **open**, è possibile riusare lo stesso oggetto di flusso con una serie di file. In entrambi i casi, gli argomenti che descrivono i file sono gli stessi.  
   
- Quando si apre il file associato a un flusso di output, specificare in genere un flag di **open\_mode**.  È possibile combinare questi flag, definiti come enumeratori nella classe di `ios`, con l'operazione OR bit per bit \( &#124; operatore\).  Vedere [ios\_base::openmode](../Topic/ios_base::openmode.md) per un elenco di enumeratori.  
+ Quando si apre il file associato a un flusso di output, in genere si specifica un flag **open_mode**. È possibile combinare questi flag, definiti come enumeratori nella classe `ios`, con l'operatore Bitwise-OR ( &#124; ). Per un elenco di enumeratori, vedere [ios_base::openmode](../standard-library/ios-base-class.md#ios_base__openmode).  
   
- Tre situazioni comuni del flusso di output include le opzioni di modi:  
+ Tre situazioni di flusso di output comuni impiegano opzioni di modalità:  
   
--   Creare un file.  Se il file esiste già, la versione precedente viene eliminato.  
+-   Creazione di un file. Se il file esiste già, la versione precedente viene eliminata.  
   
-    ```  
-    ostream ofile( "FILENAME" );  // Default is ios::out  
-    ofstream ofile( "FILENAME", ios::out ); // Equivalent to above  
-    ```  
-  
--   Aggiungendo i record a un file esistente oppure per creare uno se non esiste.  
-  
-    ```  
-    ofstream ofile( "FILENAME", ios::app );  
-    ```  
-  
--   Aprendo due file, uno alla volta, nello stesso flusso.  
-  
-    ```  
-    ofstream ofile();  
-    ofile.open( "FILE1", ios::in );  
-    // Do some output  
-    ofile.close(); // FILE1 closed  
-    ofile.open( "FILE2", ios::in );  
-    // Do some more output  
-    ofile.close(); // FILE2 closed  
-    // When ofile goes out of scope it is destroyed.  
-    ```  
-  
-## La funzione inserita  
- La funzione di **put** scrive un carattere nel flusso di output.  Le due istruzioni sono identiche per impostazione predefinita, ma il secondo saranno interessate dagli argomenti del formato del flusso:  
-  
-```  
-cout.put( 'A' ); // Exactly one character written  
-cout << 'A'; // Format arguments 'width' and 'fill' apply   
+ ```  
+    ostream ofile("FILENAME");
+// Default is ios::out  
+    ofstream ofile("FILENAME", ios::out);
+
+// Equivalent to above  
 ```  
   
-## La funzione di scrittura  
- La funzione di **scrivere** scrive un blocco di memoria in un flusso del file di output.  L'argomento di lunghezza specifica il numero di byte scritto.  In questo esempio viene creato un flusso del file di output e scrive il valore binario della struttura di `Date` :  
+-   Aggiunta di record a un file esistente o creazione di un record se non esiste.  
+  
+ ```  
+    ofstream ofile("FILENAME", ios::app);
+```  
+  
+-   Apertura di due file, uno alla volta, nello stesso flusso.  
+  
+ ```  
+    ofstream ofile();
+ofile.open("FILE1",
+    ios::in);
+// Do some output  
+    ofile.close();
+
+// FILE1 closed  
+    ofile.open("FILE2",
+    ios::in);
+// Do some more output  
+    ofile.close();
+
+// FILE2 closed  // When ofile goes out of scope it is destroyed.  
+```  
+  
+## <a name="the-put-function"></a>Funzione put  
+ La funzione **put** scrive un carattere nel flusso di output. Le due istruzioni seguenti sono uguali per impostazione predefinita, ma la seconda è influenzata dagli argomenti format del flusso:  
+  
+```  
+cout.put('A');
+
+// Exactly one character written  
+cout <<'A'; // Format arguments 'width' and 'fill' apply   
+```  
+  
+## <a name="the-write-function"></a>Funzione write  
+ La funzione **write** scrive un blocco di memoria in un flusso di file di output. L'argomento length specifica il numero di byte scritti. In questo esempio viene creato un flusso di file di output in cui viene scritto il valore binario della struttura `Date`:  
   
 ```  
 // write_function.cpp  
@@ -87,53 +113,55 @@ int main( )
 }  
 ```  
   
- La funzione di **scrivere** non termina quando raggiunge un carattere null, pertanto la struttura di classe completa viene scritta.  La funzione accetta due argomenti: un puntatore di `char` e un numero di caratteri da scrivere.  Si noti il cast richiesto a **Carattere a destra esteso** prima che l'indirizzo dell'oggetto della struttura.  
+ La funzione **write** non si arresta quando raggiunge un carattere null, pertanto viene scritta la struttura di classe completa. La funzione accetta due argomenti: un puntatore `char` e un conteggio di caratteri da scrivere. Si noti il cast necessario per **char\*** prima dell'indirizzo dell'oggetto di struttura.  
   
-## Le funzioni di tellp e di seekp  
- Un flusso del file di output mantiene un puntatore interno che indica la posizione in cui i dati devono essere scritti avanti.  La funzione membro di `seekp` quindi il puntatore e pertanto fornisce output a accesso casuale di file su disco.  La funzione membro di `tellp` restituisce la posizione del file.  Per esempi che utilizzano gli equivalenti del flusso di input a `seekp` e a `tellp`, vedere [Le funzioni di tellg e di seekg](../standard-library/input-stream-member-functions.md).  
+## <a name="the-seekp-and-tellp-functions"></a>Funzioni seekp e tellp  
+ Un flusso di file di output mantiene un puntatore interno che punta alla posizione in cui verranno successivamente scritti i dati. La funzione membro `seekp` imposta questo puntatore, garantendo pertanto l'output di file su disco ad accesso casuale. La funzione membro `tellp` restituisce la posizione del file. Per esempi che usano gli equivalenti del flusso di input di `seekp` e `tellp`, vedere [Le funzioni di tellg e di seekg](../standard-library/input-stream-member-functions.md).  
   
-## La funzione close per flussi di output  
- La funzione membro di **chiudi** chiude il file su disco associato a un flusso del file di output.  Il file deve essere chiusa per completare tutto l'output del disco.  Se necessario, il distruttore di `ofstream` chiude il file automaticamente, ma è possibile utilizzare la funzione di **chiudi** se è necessario aprire un altro file per lo stesso oggetto flusso.  
+## <a name="the-close-function-for-output-streams"></a>Funzione close per flussi di output  
+ La funzione membro **close** chiude il file su disco associato a un flusso di file di output. Per completare tutto l'output del disco, è necessario chiudere il file. Se necessario, il distruttore `ofstream` chiude automaticamente il file, ma è possibile usare la funzione **close** se è necessario aprire un altro file per lo stesso oggetto di flusso.  
   
- Il distruttore del flusso di output chiude automaticamente il file di un flusso solo se il costruttore o la funzione membro di **apri** apra il file.  Se si passa al costruttore un descrittore del file per un file già aperto o si utilizza la funzione membro di **allega**, è necessario chiudere il file in modo esplicito.  
+ Il distruttore del flusso di output chiude automaticamente un file del flusso solo se il costruttore o la funzione membro **open** ha aperto il file. Se viene passato al costruttore un descrittore di file per un file già aperto o viene usata la funzione membro **attach**, è necessario chiudere il file in modo esplicito.  
   
-##  <a name="vclrferrorprocessingfunctionsanchor10"></a> Funzioni di elaborazione di errore  
- Utilizzare queste funzioni membro per verificare gli errori mentre la scrittura in un flusso:  
+##  <a name="a-namevclrferrorprocessingfunctionsanchor10a-error-processing-functions"></a><a name="vclrferrorprocessingfunctionsanchor10"></a> Funzioni per l'elaborazione degli errori  
+ Usare queste funzioni membro per verificare gli errori durante la scrittura in un flusso:  
   
 |Funzione|Valore restituito|  
-|--------------|-----------------------|  
-|[non corretto](../Topic/basic_ios::bad.md)|Restituisce **true** se è presente un errore irreversibile.|  
-|[non riuscito](../Topic/basic_ios::fail.md)|Restituisce **true** se è presente un errore irreversibile o uno stato "previsto", ad esempio un errore di conversione, o se il file non viene trovato.  L'elaborazione può riattivare spesso dopo una chiamata a **cancellare** con un argomento zero.|  
-|[buon](../Topic/basic_ios::good.md)|Restituisce **true** se non esiste una condizione di errore irreversibile \(o else\) e il flag di fine file non è impostato.|  
-|[EOF](../Topic/basic_ios::eof.md)|Restituisce **true** stato di fine file.|  
-|[clear](../Topic/basic_ios::clear.md)|Impostare uno stato di errore interno.  Se viene chiamato con argomenti predefiniti, rimuove tutti i bit degli errori.|  
-|[rdstate](../Topic/basic_ios::rdstate.md)|Restituisce lo stato di errore corrente.|  
+|--------------|------------------|  
+|[bad](http://msdn.microsoft.com/Library/4038d331-e9c9-48b0-bf49-c6505744469c)|Restituisce **true** se è presente un errore irreversibile.|  
+|[fail](http://msdn.microsoft.com/Library/619f1b36-1e72-4551-8b48-888ae4e370d2)|Restituisce **true** se è presente un errore irreversibile o una condizione "prevista", ad esempio un errore di conversione, o se è impossibile trovare il file. L'elaborazione può spesso riprendere dopo una chiamata a **clear** con un argomento con valore zero.|  
+|[good](http://msdn.microsoft.com/Library/77f0aa17-2ae1-48ae-8040-592d301e3972)|Restituisce **true** se non è presente alcuna condizione di errore (errore irreversibile o altro errore) e non è impostato il flag di fine file.|  
+|[eof](http://msdn.microsoft.com/Library/3087f631-1268-49cd-86cf-ff4108862329)|Restituisce **true** in caso di condizione di fine file.|  
+|[clear](http://msdn.microsoft.com/Library/dc172694-1267-45f8-8f5c-e822e16fc271)|Imposta lo stato di errore interno. Se chiamato con gli argomenti predefiniti, cancella tutti i bit di errore.|  
+|[rdstate](http://msdn.microsoft.com/Library/e235e4e2-7e95-4777-a160-3938d263dd9c)|Restituisce lo stato di errore corrente.|  
   
- L'operatore di **\!** viene sottoposto a overload per eseguire la stessa funzione di **non riuscito**.  Pertanto l'espressione:  
-  
-```  
-if( !cout)...  
-```  
-  
- equivale a:  
+ L'operatore **!** viene sottoposto a overload per eseguire la stessa funzione della funzione **fail**. Pertanto, l'espressione:  
   
 ```  
-if( cout.fail() )...  
-```  
-  
- L'operatore di **void\*\(\)** viene sottoposto a overload per essere l'opposto dell'operatore di **\!** ; pertanto l'espressione:  
-  
-```  
-if( cout)...  
+if(!cout)...  
 ```  
   
  equivale a:  
   
 ```  
-if( !cout.fail() )...  
+if(cout.fail())...  
 ```  
   
- L'operatore di **void\*\(\)** non equivale a **good** perché non test per il fine del file.  
+ L'operatore **void\*()** viene sottoposto a overload per essere l'opposto dell'operatore **!**; pertanto, l'espressione:  
   
-## Vedere anche  
- [Flussi di output](../standard-library/output-streams.md)
+```  
+if(cout)...  
+```  
+  
+ è uguale a:  
+  
+```  
+if(!cout.fail())...  
+```  
+  
+ L'operatore **void\*()** non è equivalente a **good** in quanto non verifica la fine del file.  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Output Streams](../standard-library/output-streams.md) (Flussi di output)
+
+

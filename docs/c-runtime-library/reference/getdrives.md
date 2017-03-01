@@ -1,73 +1,90 @@
 ---
-title: "_getdrives | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_getdrives"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-filesystem-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "getdrives"
-  - "_getdrives"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_getdrives (funzione)"
-  - "unità disco"
-  - "getdrives (funzione)"
+title: _getdrives | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _getdrives
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-filesystem-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- getdrives
+- _getdrives
+dev_langs:
+- C++
+helpviewer_keywords:
+- _getdrives function
+- getdrives function
+- disk drives
 ms.assetid: 869bb51f-4209-4328-846e-3aadebaceb9c
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# _getdrives
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: b8052d82a223402849b6ba48ce5f6621a7d27ed9
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="getdrives"></a>_getdrives
 Restituisce una maschera di bit che rappresenta le unità disco attualmente disponibili.  
   
 > [!IMPORTANT]
->  Questa API non può essere usata nelle applicazioni eseguite in [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  Per altre informazioni, vedere l'argomento relativo alle [funzioni CRT non supportate con \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Questa API non può essere usata nelle applicazioni eseguite in [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]. Per altre informazioni, vedere l'articolo relativo alle [funzioni CRT non supportate con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 unsigned long _getdrives( void );  
 ```  
   
-## Valore restituito  
- Se la funzione viene completata con successo, il valore restituito è una maschera di bit che rappresenta le unità disco attualmente disponibili.  Il bit alla posizione 0 \(il bit meno significativo\) rappresenta l'unità A, alla posizione 1 l'unità B, alla posizione 2 l'unità C e così via.  Se la funzione ha esito negativo, il valore restituito è zero.  Per ottenere informazioni estese sull'errore, chiamare `GetLastError`.  
+## <a name="return-value"></a>Valore restituito  
+ Se la funzione viene completata con successo, il valore restituito è una maschera di bit che rappresenta le unità disco attualmente disponibili. Il bit alla posizione 0 (il bit meno significativo) rappresenta l'unità A, alla posizione 1 l'unità B, alla posizione 2 l'unità C e così via. Se la funzione ha esito negativo, il valore restituito è zero. Per ottenere informazioni estese sull'errore, chiamare `GetLastError`.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`_getdrives`|\<direct.h\>|  
+|-------------|---------------------|  
+|`_getdrives`|\<direct.h>|  
   
  Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
-// crt_getdrives.c  
+  
+      // crt_getdrives.c  
 // This program retrives and lists out  
 // all the logical drives that are   
 // currently mounted on the machine.  
@@ -102,13 +119,16 @@ int main(int argc, char* argv[]) {
 }  
 ```  
   
-  **Vengono usate le seguenti unità logiche:**  
-**R:**  
-**C:**  
-**D:**  
-**E:**   
-## Equivalente in NET Framework  
- Non applicabile.  Per chiamare la funzione C standard, usare `PInvoke`.  Per altre informazioni, vedere [Platform Invoke Examples](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+The following logical drives are being used:  
+A:  
+C:  
+D:  
+E:  
+```  
   
-## Vedere anche  
- [Controllo Directory](../../c-runtime-library/directory-control.md)
+## <a name="net-framework-equivalent"></a>Equivalente in NET Framework  
+ Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Controllo delle directory](../../c-runtime-library/directory-control.md)

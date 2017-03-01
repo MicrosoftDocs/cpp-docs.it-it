@@ -1,36 +1,52 @@
 ---
-title: "&lt; vector &gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "<vector>"
-  - "std.<vector>"
-  - "std::<vector>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "vector (intestazione)"
+title: '&lt;vector&gt; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- <vector>
+- std.<vector>
+- std::<vector>
+dev_langs:
+- C++
+helpviewer_keywords:
+- vector header
 ms.assetid: c1431ad8-c0b6-4dbb-89c4-5f651e432d7f
 caps.latest.revision: 25
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 25
----
-# &lt; vector &gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: 99aa5d5df1367dfb6e6f6c0b9333783240a12690
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="ltvectorgt"></a>&lt;vector&gt;
 Definisce il vettore della classe modello del contenitore e diversi modelli di supporto.  
   
  L'oggetto `vector` è un contenitore che consente di organizzare gli elementi di un determinato tipo in una sequenza lineare. Consente l'accesso casuale veloce a qualsiasi elemento e aggiunte e rimozioni dinamiche nella sequenza. L'oggetto `vector`è il contenitore preferito per una sequenza quando le prestazioni di accesso casuale sono scarse.  
   
- Per ulteriori informazioni sulla classe `vector`, vedere [classe vector](vector%20Class.md). Per informazioni sulla specializzazione `vector<bool>`, vedere [vector \< bool> classe](../standard-library/vector-bool-class.md).  
+ Per altre informazioni sulla classe `vector`, vedere [Classe vector](../standard-library/vector-class.md). Per informazioni sulla specializzazione `vector<bool>`, vedere [Classe vector\<bool>](../standard-library/vector-bool-class.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -99,32 +115,33 @@ void swap (
   
 |||  
 |-|-|  
-|[operatore! =](../Topic/%3Cvector%3E%20operators.md#operator_neq)|Verifica se l'oggetto vettore a sinistra dell'operatore non è uguale all'oggetto vettore a destra.|  
-|[operatore <](../Topic/%3Cvector%3E%20operators.md#operator_lt_)|Verifica se l'oggetto vettore a sinistra dell'operatore è minore dell'oggetto vettore a destra.|  
-|[operatore \< =](../Topic/%3Cvector%3E%20operators.md#operator_lt__eq)|Verifica se l'oggetto vettore a sinistra dell'operatore è minore o uguale all'oggetto vettore a destra.|  
-|[operatore = =](../Topic/%3Cvector%3E%20operators.md#operator_eq_eq)|Verifica se l'oggetto vettore a sinistra dell'operatore è uguale all'oggetto vettore a destra.|  
-|[operatore >](../Topic/%3Cvector%3E%20operators.md#operator_gt_)|Verifica se l'oggetto vettore a sinistra dell'operatore è maggiore dell'oggetto vettore a destra.|  
-|[operatore > =](../Topic/%3Cvector%3E%20operators.md#operator_gt__eq)|Verifica se l'oggetto vettore a sinistra dell'operatore è maggiore o uguale all'oggetto vettore a destra.|  
+|[operator! =](../standard-library/vector-operators.md#operator_neq)|Verifica se l'oggetto vettore a sinistra dell'operatore non è uguale all'oggetto vettore a destra.|  
+|[operator<](../standard-library/vector-operators.md#operator_lt_)|Verifica se l'oggetto vettore a sinistra dell'operatore è minore dell'oggetto vettore a destra.|  
+|[operator\<=](../standard-library/vector-operators.md#operator_lt__eq)|Verifica se l'oggetto vettore a sinistra dell'operatore è minore o uguale all'oggetto vettore a destra.|  
+|[operator==](../standard-library/vector-operators.md#operator_eq_eq)|Verifica se l'oggetto vettore a sinistra dell'operatore è uguale all'oggetto vettore a destra.|  
+|[operator>](../standard-library/vector-operators.md#operator_gt_)|Verifica se l'oggetto vettore a sinistra dell'operatore è maggiore dell'oggetto vettore a destra.|  
+|[operator>=](../standard-library/vector-operators.md#operator_gt__eq)|Verifica se l'oggetto vettore a sinistra dell'operatore è maggiore o uguale all'oggetto vettore a destra.|  
   
 ### <a name="classes"></a>Classi  
   
 |||  
 |-|-|  
-|[Classe Vector](vector%20Class.md)|Classe modello di contenitori di sequenza che organizzano gli elementi di un determinato tipo in una disposizione lineare e consentono l'accesso casuale veloce a qualsiasi elemento.|  
+|[Classe vector](../standard-library/vector-class.md)|Classe modello di contenitori di sequenza che organizzano gli elementi di un determinato tipo in una disposizione lineare e consentono l'accesso casuale veloce a qualsiasi elemento.|  
   
 ### <a name="specializations"></a>Specializzazioni  
   
 |||  
 |-|-|  
-|[Vector \< bool> (classe)](../standard-library/vector-bool-class.md)|Specializzazione completa del vettore della classe modello per gli elementi di tipo `bool` con un allocatore per il tipo sottostante usato dalla specializzazione.|  
+|[Classe vector\<bool>](../standard-library/vector-bool-class.md)|Specializzazione completa del vettore della classe modello per gli elementi di tipo `bool` con un allocatore per il tipo sottostante usato dalla specializzazione.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** \< vettore>  
+ **Intestazione:** \<vector>  
   
  **Spazio dei nomi:** std  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)   
- [Sicurezza dei thread nella libreria Standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Libreria di modelli standard](../misc/standard-template-library.md)
+ [Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+
 

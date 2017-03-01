@@ -1,61 +1,129 @@
 ---
-title: "Classe weibull_distribution | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.tr1.weibull_distribution"
-  - "weibull_distribution"
-  - "tr1::weibull_distribution"
-  - "std::tr1::weibull_distribution"
-  - "tr1.weibull_distribution"
-  - "random/std::tr1::weibull_distribution"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "weibull_distribution (classe)"
+title: Classe weibull_distribution | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- weibull_distribution
+- std::weibull_distribution
+- random/std::weibull_distribution
+- std::weibull_distribution::reset
+- random/std::weibull_distribution::reset
+- std::weibull_distribution::a
+- random/std::weibull_distribution::a
+- std::weibull_distribution::b
+- random/std::weibull_distribution::b
+- std::weibull_distribution::param
+- random/std::weibull_distribution::param
+- std::weibull_distribution::min
+- random/std::weibull_distribution::min
+- std::weibull_distribution::max
+- random/std::weibull_distribution::max
+- std::weibull_distribution::operator()
+- random/std::weibull_distribution::operator()
+- std::weibull_distribution::param_type
+- random/std::weibull_distribution::param_type
+- std::weibull_distribution::param_type::a
+- random/std::weibull_distribution::param_type::a
+- std::weibull_distribution::param_type::b
+- random/std::weibull_distribution::param_type::b
+- std::weibull_distribution::param_type::operator==
+- random/std::weibull_distribution::param_type::operator==
+- std::weibull_distribution::param_type::operator!=
+- random/std::weibull_distribution::param_type::operator!=
+dev_langs:
+- C++
+helpviewer_keywords:
+- weibull_distribution class
 ms.assetid: f20b49d3-1b9a-41af-8db4-baf800eaa02b
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# Classe weibull_distribution
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 491992306060125ab91d64560113f7f8a3b740b1
+ms.openlocfilehash: 265754b7593a9654eab6f377d34d95268f1b9454
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="weibulldistribution-class"></a>Classe weibull_distribution
 Genera una distribuzione di Weibull.  
   
-## Sintassi  
-  
+## <a name="syntax"></a>Sintassi  
 ```  
-template<class RealType = double> class weibull_distribution { public:     // types     typedef RealType result_type;     struct param_type;     // constructor and reset functions     explicit weibull_distribution(RealType a = 1.0, RealType b = 1.0);     explicit weibull_distribution(const param_type& parm);     void reset();     // generating functions     template<class URNG>     result_type operator()(URNG& gen);     template<class URNG>     result_type operator()(URNG& gen, const param_type& parm);     // property functions     RealType a() const;     RealType b() const;     param_type param() const;     void param(const param_type& parm);     result_type min() const;     result_type max() const; };  
-```  
+class weibull_distribution  
+   {  
+   public: 
+    // types  
+   typedef RealType result_type;  
+   struct param_type; 
+
+    // constructor and reset functions  
+   explicit weibull_distribution(result_type a = 1.0, result_type b = 1.0);
+   explicit weibull_distribution(const param_type& parm);
+   void reset();
+
+   // generating functions  
+   template <class URNG>  
+      result_type operator()(URNG& gen);
+   template <class URNG>  
+      result_type operator()(URNG& gen, const param_type& parm);
+   
+   // property functions  
+   result_type a() const;
+   result_type b() const;
+   param_type param() const;
+   void param(const param_type& parm);
+   result_type min() const;
+   result_type max() const;
+   };  
+```   
+#### <a name="parameters"></a>Parametri  
+*RealType*  
+Tipo di risultato a virgola mobile. Per impostazione predefinita, `double`. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).  
   
-#### Parametri  
- `RealType`  
- Tipo di risultato a virgola mobile. Per impostazione predefinita, `double`.  Per informazioni sui tipi possibili, vedere [\<random\>](../standard-library/random.md).  
-  
-## Note  
- La classe di modelli descrive una distribuzione che produce valori di un tipo integrale specificato dall'utente o di tipo `double` se non è specificato alcun valore, distribuiti in base alla distribuzione di Weibull.  La tabella seguente include collegamenti ad articoli relativi ai singoli membri.  
+## <a name="remarks"></a>Note  
+La classe modello descrive una distribuzione che produce valori di un tipo a virgola mobile specificato dall'utente, o di tipo `double` se non ne viene specificato alcuno, distribuiti in base alla distribuzione di Weibull. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.  
   
 ||||  
 |-|-|-|  
-|[weibull\_distribution::weibull\_distribution](../Topic/weibull_distribution::weibull_distribution.md)|`weibull_distribution::a`|`weibull_distribution::param`|  
-|`weibull_distribution::operator()`|`weibull_distribution::b`|[weibull\_distribution::param\_type](../Topic/weibull_distribution::param_type.md)|  
+|[weibull_distribution::weibull_distribution](#weibull_distribution__weibull_distribution)|`weibull_distribution::a`|`weibull_distribution::param`|  
+|`weibull_distribution::operator()`|`weibull_distribution::b`|[weibull_distribution::param_type](#weibull_distribution__param_type)|  
   
- Le funzioni di proprietà `a()` e `b()` restituiscono i valori rispettivi per i parametri di distribuzione archiviati `a` e `b`.  
+Le funzioni di proprietà `a()` e `b()` restituiscono i valori rispettivi per i parametri di distribuzione archiviati *a* e *b*.  
   
- Per altre informazioni sulle classi di distribuzione e i rispettivi membri, vedere [\<random\>](../standard-library/random.md).  
+Il membro di proprietà `param()` imposta o restituisce il pacchetto di parametri di distribuzione archiviato `param_type`.  
+
+Le funzioni membro `min()` e `max()` restituiscono rispettivamente il minor risultato possibile e il maggior risultato possibile.  
   
- Per informazioni dettagliate sulla distribuzione di Weibull, vedere l'articolo di Wolfram MathWorld relativo alla [Distribuzione di Weibull](http://go.microsoft.com/fwlink/?LinkId=401115).  
+La funzione membro `reset()` rimuove gli eventuali valori memorizzati nella cache, in modo che il risultato della successiva chiamata a `operator()` non dipenda da alcun valore ottenuto dal motore prima della chiamata.  
   
-## Esempio  
+Le funzioni membro `operator()` restituiscono il successivo valore generato basato sul motore URNG, dal pacchetto di parametri corrente o da quello specificato.
+  
+Per altre informazioni sulle classi di distribuzione e sui rispettivi membri, vedere [\<random>](../standard-library/random.md).  
+  
+Per informazioni dettagliate sulla distribuzione di Weibull, vedere l'articolo di Wolfram MathWorld [Weibull Distribution](http://go.microsoft.com/fwlink/LinkId=401115) (Distribuzione Weibull).  
+  
+## <a name="example"></a>Esempio  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -115,61 +183,117 @@ int main()
   
 ```  
   
-## Output  
+## <a name="output"></a>Output  
  Prima esecuzione:  
   
-```  
+```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
 Enter a floating point value for the 'a' distribution parameter (must be greater than zero): 1  
 Enter a floating point value for the 'b' distribution parameter (must be greater than zero): 1  
 Enter an integer value for the sample count: 10  
-  
+ 
 min() == 0  
 max() == 1.79769e+308  
 a() == 1.0000000000  
 b() == 1.0000000000  
 Distribution for 10 samples:  
-          1:   0.0936880533  
-          2:   0.1225944894  
-          3:   0.6443593183  
-          4:   0.6551171649  
-          5:   0.7313457551  
-          6:   0.7313557977  
-          7:   0.7590097389  
-          8:   1.4466885214  
-          9:   1.6434088411  
-         10:   2.1201210996  
+    1: 0.0936880533  
+    2: 0.1225944894  
+    3: 0.6443593183  
+    4: 0.6551171649  
+    5: 0.7313457551  
+    6: 0.7313557977  
+    7: 0.7590097389  
+    8: 1.4466885214  
+    9: 1.6434088411  
+    10: 2.1201210996  
 ```  
   
  Seconda esecuzione:  
   
-```  
+```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
 Enter a floating point value for the 'a' distribution parameter (must be greater than zero): .5  
 Enter a floating point value for the 'b' distribution parameter (must be greater than zero): 5.5  
 Enter an integer value for the sample count: 10  
-  
+ 
 min() == 0  
 max() == 1.79769e+308  
 a() == 0.5000000000  
 b() == 5.5000000000  
 Distribution for 10 samples:  
-          1:   0.0482759823  
-          2:   0.0826617486  
-          3:   2.2835941207  
-          4:   2.3604817485  
-          5:   2.9417663742  
-          6:   2.9418471657  
-          7:   3.1685268104  
-          8:  11.5109922290  
-          9:  14.8543594043  
-         10:  24.7220241239  
+    1: 0.0482759823  
+    2: 0.0826617486  
+    3: 2.2835941207  
+    4: 2.3604817485  
+    5: 2.9417663742  
+    6: 2.9418471657  
+    7: 3.1685268104  
+    8: 11.5109922290  
+    9: 14.8543594043  
+    10: 24.7220241239  
 ```  
   
-## Requisiti  
- **Intestazione:** \<random\>  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<random>  
   
  **Spazio dei nomi:** std  
   
-## Vedere anche  
- [\<random\>](../standard-library/random.md)
+##  <a name="a-nameweibulldistributionweibulldistributiona--weibulldistributionweibulldistribution"></a><a name="weibull_distribution__weibull_distribution"></a>  weibull_distribution::weibull_distribution  
+  
+```  
+explicit weibull_distribution(result_type a = 1.0, result_type b = 1.0);
+explicit weibull_distribution(const param_type& parm);
+```  
+  
+### <a name="parameters"></a>Parametri  
+*a*  
+Parametro di distribuzione `a`.  
+  
+*b*  
+Parametro di distribuzione `b`.  
+  
+*parm*  
+Struttura `param_type` usata per costruire la distribuzione.  
+  
+### <a name="remarks"></a>Note  
+ **Precondizione:** `0.0 < a` e `0.0 < b`  
+  
+ Il primo costruttore crea un oggetto il cui valore `a` archiviato include il valore *a* e il cui valore `b` archiviato include il valore *b*.  
+  
+ Il secondo costruttore crea un oggetto i cui parametri archiviati sono inizializzati da *parm*. È possibile ottenere e impostare i parametri correnti di una distribuzione esistente chiamando la funzione membro `param()`.  
+  
+##  <a name="a-nameweibulldistributionparamtypea--weibulldistributionparamtype"></a><a name="weibull_distribution__param_type"></a>  weibull_distribution::param_type  
+ Archivia i parametri della distribuzione.  
+```  
+struct param_type {  
+   typedef weibull_distribution<result_type> distribution_type;  
+   param_type(result_type a = 1.0, result_type b = 1.0);
+   result_type a() const;
+   result_type b() const;
+
+   bool operator==(const param_type& right) const;
+   bool operator!=(const param_type& right) const;
+   };  
+```
+### <a name="parameters"></a>Parametri  
+*a*  
+Parametro di distribuzione `a`.  
+  
+*b*  
+Parametro di distribuzione `b`.  
+  
+*right*  
+Oggetto `param_type` da confrontare con questo oggetto.  
+  
+### <a name="remarks"></a>Note  
+**Precondizione:** `0.0 < a` e `0.0 < b`  
+  
+Questa struttura può essere passata al costruttore di classe della distribuzione durante la creazione di istanze, alla funzione membro `param()` per impostare i parametri archiviati di una distribuzione esistente e a `operator()` per l'uso in sostituzione dei parametri archiviati.  
+  
+## <a name="see-also"></a>Vedere anche  
+ [\<random>](../standard-library/random.md)
+
+
+
+

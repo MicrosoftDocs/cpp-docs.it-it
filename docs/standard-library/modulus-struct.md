@@ -1,78 +1,90 @@
 ---
-title: "Struct modulus | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "modulus"
-  - "std::modulus"
-  - "xfunctional/std::modulus"
-  - "std.modulus"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "modulus (classe)"
-  - "modulus (struct)"
+title: Struct modulus | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- modulus
+- std::modulus
+- xfunctional/std::modulus
+- std.modulus
+dev_langs:
+- C++
+helpviewer_keywords:
+- modulus class
+- modulus struct
 ms.assetid: 86d342f7-b7b1-46a4-b0bb-6b7ae827369b
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# Struct modulus
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: 430f1f9c0fcc58e3b4bfef167356960eb132b3f7
+ms.lasthandoff: 02/24/2017
 
-Un oggetto funzione predefinito che esegue l'operazione di divisione di modulo \(`operator%`\) sui suoi argomenti.  
+---
+# <a name="modulus-struct"></a>Struct modulus
+Oggetto funzione predefinito che esegue l'operazione di divisione modulo ( `operator%`) negli argomenti.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
-```  
-template<class Type = void>  
-   struct modulus : public binary_function <Type, Type, Type>   
-   {  
-      Type operator()(  
-         const Type& Left,   
-         const Type& Right   
-         ) const;  
-   };  
-  
-// specialized transparent functor for operator%  
-template<>  
-   struct modulus<void>  
-   {  
-      template<class Type1, class Type2>  
-      auto operator()(Type1&& Left, Type2&& Right) const  
-      -> decltype(std::forward<Type1>(Left)  
-         % std::forward<Type2>(Right));  
-   };  
-  
+```
+template <class Type = void>
+struct modulus : public binary_function <Type, Type, Type>  
+{
+    Type operator()(const Type& Left, const Type& Right) const;
+};
+
+// specialized transparent functor for operator%
+template <>
+struct modulus<void>  
+{
+  template <class T, class U>
+  auto operator()(T&& Left, U&& Right) const`
+    -> decltype(std::forward<T>(Left) % std::forward<U>(Right));
+};
 ```  
   
-#### Parametri  
- `Type`, `Type1`, `Type2`  
- Qualsiasi tipo che supporti `operator%` che accetta gli operandi dei tipi specificati o derivati.  
+#### <a name="parameters"></a>Parametri  
+ `Type`, `T`, `U`  
+ Qualsiasi tipo che supporta un `operator%` che accetta gli operandi dei tipi specificati o dedotti.  
   
  `Left`  
- L'operando a sinistra dell'operazione di modulo.  Il modello non specializzato accetta un argomento di riferimento a lvalue di tipo `Type`.  Il modello specializzato perfeziona l'inoltro degli argomenti di riferimento a rvalue e lvalue di tipo derivato `Type1`.  
+ Operando sinistro dell'operazione modulo. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo `Type`. Il modello specializzato esegue un inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto `T`.  
   
  `Right`  
- L'operando a destra dell'operazione di modulo.  Il modello non specializzato accetta un argomento di riferimento a lvalue di tipo `Type`.  Il modello specializzato perfeziona l'inoltro degli argomenti di riferimento a rvalue e lvalue di tipo derivato `Type2`.  
+ Operando destro dell'operazione modulo. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo `Type`. Il modello specializzato esegue un inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto `U`.  
   
-## Valore restituito  
- Il risultato di `Left` `%` `Right`.  Il modello specializzato perfeziona l'inoltro del risultato, il cui tipo è restituito da `operator%`.  
+## <a name="return-value"></a>Valore restituito  
+ Risultato di `Left``%``Right`. Il modello specializzato esegue un inoltro perfetto del risultato, con il tipo restituito da `operator%`.  
   
-## Note  
- La funzione `modulus` è limitata ai tipi integrali per i tipi di dati di base, o ai tipi definiti dall'utente che implementano `operator%`.  
+## <a name="remarks"></a>Note  
+ Il funtore `modulus` è limitato ai tipi integrali per i tipi di dati di base o ai tipi definiti dall'utente che implementano `operator%`.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-```  
+```cpp  
 // functional_modulus.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -118,17 +130,23 @@ int main( )
       cout << *Iter3 << " ";  
    cout << ")" << endl;  
 }  
+/* Output:  
+The vector v1 = ( 5 10 15 20 25 30 )  
+The vector v2 = ( 3 6 9 12 15 18 )  
+The element-wise remainders of the modular division  
+ are: ( 2 4 6 8 10 12 )  
+ */  
 ```  
   
-  **The vector v1 \= \( 5 10 15 20 25 30 \)**  
-**Il vettore v2 \= \( 3 6 9 12 15 18 \)**  
-**The element\-wise remainders of the modular division**  
- **are: \( 2 4 6 8 10 12 \)**   
-## Requisiti  
- **Intestazione:** \<funzionale\>  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<functional>  
   
  **Spazio dei nomi:** std  
   
-## Vedere anche  
- [Sicurezza dei thread nella libreria standard C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Libreria di modelli standard](../misc/standard-template-library.md)
+## <a name="see-also"></a>Vedere anche  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)  (Sicurezza dei thread nella libreria standard C++)  
+ [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

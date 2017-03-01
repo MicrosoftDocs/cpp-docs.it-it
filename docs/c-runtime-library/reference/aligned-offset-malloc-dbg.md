@@ -1,48 +1,65 @@
 ---
-title: "_aligned_offset_malloc_dbg | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_aligned_offset_malloc_dbg"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_aligned_offset_malloc_dbg"
-  - "aligned_offset_malloc_dbg"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_aligned_offset_malloc_dbg (funzione)"
-  - "aligned_offset_malloc_dbg (funzione)"
+title: _aligned_offset_malloc_dbg | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _aligned_offset_malloc_dbg
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _aligned_offset_malloc_dbg
+- aligned_offset_malloc_dbg
+dev_langs:
+- C++
+helpviewer_keywords:
+- _aligned_offset_malloc_dbg function
+- aligned_offset_malloc_dbg function
 ms.assetid: 6c242307-c59e-4d63-aae5-d8cbec8e021c
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# _aligned_offset_malloc_dbg
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
+ms.openlocfilehash: 67f314989e0069902ae983805a4f8ce839307ea5
+ms.lasthandoff: 02/24/2017
 
-Alloca memoria sul limite di allineamento specificato \(solo per versione di debug\).  
+---
+# <a name="alignedoffsetmallocdbg"></a>_aligned_offset_malloc_dbg
+Alloca la memoria in un limite di allineamento specificato (solo versione di debug).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 void * _aligned_offset_malloc_dbg(  
@@ -54,53 +71,53 @@ void * _aligned_offset_malloc_dbg(
 );  
 ```  
   
-#### Parametri  
- \[in\] `size`  
- La dimensione dell'allocazione di memoria richiesta.  
+#### <a name="parameters"></a>Parametri  
+ [in] `size`  
+ Dimensione dell'allocazione di memoria richiesta.  
   
- \[in\] `alignment`  
- Il valore di allineamento, che deve essere una potenza intera di 2.  
+ [in] `alignment`  
+ Valore di allineamento, che deve essere una potenza intera di 2.  
   
- \[in\] `offset`  
- L'offset dell'allocazione di memoria per forzare l'allineamento.  
+ [in] `offset`  
+ Offset nell'allocazione di memoria per imporre l'allineamento.  
   
- \[in\] `filename`  
+ [in] `filename`  
  Puntatore al nome del file di origine che ha richiesto l'operazione di allocazione o NULL.  
   
- \[in\] `linenumber`  
- Numero di riga del codice sorgente in cui è stata richiesta l'operazione di allocazione o NULL.  
+ [in] `linenumber`  
+ Numero di riga nel file di origine in cui è stata richiesta l'operazione di allocazione o NULL.  
   
-## Valore restituito  
- Un puntatore al blocco di memoria allocato o `NULL` se l'operazione ha esito negativo.  
+## <a name="return-value"></a>Valore restituito  
+ Puntatore al blocco di memoria allocato o `NULL` se l'operazione non è riuscita.  
   
-## Note  
- `_aligned_offset_malloc_dbg` è una versione di debug della funzione [\_aligned\_offset\_malloc](../../c-runtime-library/reference/aligned-offset-malloc.md).  Quando [\_DEBUG](../../c-runtime-library/debug.md) non è definito, ogni chiamata a `_aligned_offset_malloc_dbg` viene ridotta ad una chiamata a `_aligned_offset_malloc`.  Sia `_aligned_offset_malloc` che `_aligned_offset_malloc_dbg` allocano un blocco di memoria nell'heap di base, ma `_aligned_offset_malloc_dbg` offre diverse funzionalità di debug: buffer presenti da entrambi i lati della parte del blocco da verificare per le perdite, un parametro di tipo del blocco per registrare i tipi specifici di allocazioni e informazioni sul `filename`\/`linenumber` per determinare l'origine delle richieste di allocazione.  
+## <a name="remarks"></a>Note  
+ `_aligned_offset_malloc_dbg` è una versione di debug della funzione [_aligned_offset_malloc](../../c-runtime-library/reference/aligned-offset-malloc.md). Quando [_DEBUG](../../c-runtime-library/debug.md) non è definito, ogni chiamata a `_aligned_offset_malloc_dbg` viene ridotta a una chiamata a `_aligned_offset_malloc`. Sia `_aligned_offset_malloc` che `_aligned_offset_malloc_dbg` allocano un blocco di memoria nell'heap di base, ma `_aligned_offset_malloc_dbg` contiene diverse funzionalità di debug: buffer presenti a entrambi i lati della porzione utente del blocco in cui verificare la presenza di perdite, un parametro di tipo blocco per tenere traccia di tipi specifici di allocazioni e informazioni su `filename`/`linenumber` per determinare l'origine delle richieste di allocazione.  
   
- `_aligned_offset_malloc_dbg` assegna il blocco di memoria con più spazio rispetto a `size` richiesto.  Lo spazio aggiuntivo viene utilizzato dal gestore dell'heap di debug per collegare i blocchi di memoria di debug e per fornire l'applicazione con informazioni di intestazione di debug e sovrascrivere i buffer.  Quando il blocco è allocato, una parte di esso viene riempita con il valore 0xCD e ognuno dei buffer sovrascritti viene riempito con 0xFD.  
+ `_aligned_offset_malloc_dbg` alloca il blocco di memoria con una quantità di spazio appena superiore a quella richiesta da `size`. Lo spazio aggiuntivo viene usato dal gestore dell'heap di debug per collegare i blocchi di memoria di debug e per fornire all'applicazione informazioni di intestazione di debug e buffer di sovrascrittura. Quando il blocco è allocato, la porzione utente del blocco viene riempita con il valore 0xCD e ciascuno dei buffer di sovrascrittura viene riempito con 0xFD.  
   
- `_aligned_offset_malloc_dbg` è utile nelle situazioni in cui l'allineamento è necessario in un elemento annidato; ad esempio, se l'allineamento è necessario in una classe annidata.  
+ `_aligned_offset_malloc_dbg` è utile nelle situazioni in cui è necessario l'allineamento in un elemento annidato, ad esempio, nel caso in cui è stato necessario l'allineamento in una classe annidata.  
   
- `_aligned_offset_malloc_dbg` si basa su `malloc`; per ulteriori informazioni, consultare [malloc](../../c-runtime-library/reference/malloc.md).  
+ `_aligned_offset_malloc_dbg` è basato su `malloc`; per altre informazioni, vedere [malloc](../../c-runtime-library/reference/malloc.md).  
   
- Questa funzione imposta `errno` in `ENOMEM` se non è riuscita l'allocazione della memoria o se la dimensione richiesta è maggiore di `_HEAP_MAXREQ`.  Per ulteriori informazioni su `errno`, vedere [errno, \_doserrno, \_sys\_errlist, and \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  Inoltre, `_aligned_offset_malloc` convalida i suoi parametri.  Se `alignment` non è una potenza di 2 o se `offset` è maggiore o uguale a `size` e diverso da zero, questa funzione chiama il gestore del parametro non valido, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).  Se l'esecuzione può continuare, questa funzione restituisce `NULL` e imposta `errno` su `EINVAL`.  
+ La funzione imposta `errno` su `ENOMEM` se l'allocazione di memoria non riesce o se la dimensione richiesta è maggiore di `_HEAP_MAXREQ`. Per altre informazioni su `errno`, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). `_aligned_offset_malloc`, inoltre, convalida i propri parametri. Se `alignment` non è una potenza di 2 o `offset` è maggiore o uguale a `size` e diverso da zero, la funzione richiama il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce `NULL` e imposta `errno` su `EINVAL`.  
   
- Per informazioni su come i blocchi di memoria allocati, vengono inizializzati e vengono gestiti nella versione di debug dell'heap di base, vedere [Informazioni dettagliate sull'heap di debug CRT](../Topic/CRT%20Debug%20Heap%20Details.md).  
+ Per informazioni sulle modalità di allocazione, inizializzazione e gestione dei blocchi di memoria nella versione di debug dell'heap di base, vedere [Informazioni dettagliate sull'heap di debug CRT](/visualstudio/debugger/crt-debug-heap-details).  
   
- Per informazioni sui tipi di blocchi di allocazione e su come vengono utilizzati, consultare [Tipi di blocchi sull'heap di debug](../Topic/CRT%20Debug%20Heap%20Details.md#BKMK_Types_of_blocks_on_the_debug_heap).  
+ Per informazioni sui tipi di blocchi di allocazione e su come vengono usati, vedere [Tipi di blocchi sull'heap di debug](/visualstudio/debugger/crt-debug-heap-details).  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`_aligned_offset_malloc_dbg`|\<crtdbg.h\>|  
+|-------------|---------------------|  
+|`_aligned_offset_malloc_dbg`|\<crtdbg.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
-## Librerie  
- Solo versioni di debug di [Librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Librerie  
+ Solo le versioni di debug delle [librerie di runtime di C](../../c-runtime-library/crt-library-features.md).  
   
-## Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione standard C, utilizzare `PInvoke`. Per ulteriori informazioni, vedere [Esempi di Invocazione della Piattaforma](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
+ Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Routine di debug](../../c-runtime-library/debug-routines.md)

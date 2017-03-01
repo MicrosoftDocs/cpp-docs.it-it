@@ -1,78 +1,94 @@
 ---
-title: "Classe is_placeholder | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "is_placeholder"
-  - "std.tr1.is_placeholder"
-  - "functional/std::tr1::is_placeholder"
-  - "std::tr1::is_placeholder"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "is_placeholder (classe) [TR1]"
+title: Classe is_placeholder | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- is_placeholder
+- std::is_placeholder
+- functional/std::is_placeholder
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_placeholder class
 ms.assetid: 2b21a792-96d1-4bb8-b911-0db796510835
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# Classe is_placeholder
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
+ms.openlocfilehash: a3624a752a500410ad906ba43a6c65310ba1cb41
+ms.lasthandoff: 02/24/2017
 
-Verificare se il tipo è un segnaposto.  
+---
+# <a name="isplaceholder-class"></a>Classe is_placeholder
+Verifica se il tipo è un segnaposto.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
-```  
-template<class Ty>  
-    struct is_placeholder {  
-    static const int value;  
-    };  
-```  
+struct is_placeholder {  
+   static const int value;  
+   };  
   
-## Note  
- Il valore costante `value` è 0 se il tipo `Ty` non è un segnaposto; in caso contrario, il valore è il percorso dell'argomento di chiamata di funzione che associa a.  Viene utilizzato per determinare il valore `N` per l'ennesimo segnaposto `_N`.  
+## <a name="remarks"></a>Note  
+ Il valore costante `value` è 0 se il tipo `Ty` non è un segnaposto; in caso contrario, il relativo valore corrisponde alla posizione dell'argomento della chiamata di funzione a cui è associato. Usarlo per determinare il valore `N` per l'ennesimo segnaposto `_N`.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-```  
-// std_tr1__functional__is_placeholder.cpp   
+```cpp  
+// std__functional__is_placeholder.cpp   
 // compile with: /EHsc   
 #include <functional>   
 #include <iostream>   
   
 using namespace std::placeholders;   
   
-template<class Expr>   
-    void test_for_placeholder(const Expr&)   
-    {   
-    std::cout << std::is_placeholder<Expr>::value << std::endl;   
-    }   
-  
-int main()   
-    {   
-    test_for_placeholder(3.0);   
-    test_for_placeholder(_3);   
-  
-    return (0);   
-    }  
-  
+template<class Expr>
+void test_for_placeholder(const Expr&)
+{
+    std::cout << std::is_placeholder<Expr>::value << std::endl;
+}
+
+int main()
+{
+    test_for_placeholder(3.0);
+    test_for_placeholder(_3);
+
+    return (0);
+}  
 ```  
   
-  **0**  
-**3**   
-## Requisiti  
- **Intestazione:** \<funzionale\>  
+```Output  
+0  
+3  
+```  
+  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<functional>  
   
  **Spazio dei nomi:** std  
   
-## Vedere anche  
- [Oggetto \_1](../standard-library/1-object.md)
+## <a name="see-also"></a>Vedere anche  
+ [Oggetto _1](../standard-library/1-object.md)
+
+

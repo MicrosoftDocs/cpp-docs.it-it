@@ -1,75 +1,87 @@
 ---
-title: "Struct multiplies | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::multiplies"
-  - "multiplies"
-  - "xfunctional/std::multiplies"
-  - "std.multiplies"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "multiplies (classe)"
-  - "multiplies (struct)"
+title: Struct multiplies | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std::multiplies
+- multiplies
+- xfunctional/std::multiplies
+- std.multiplies
+dev_langs:
+- C++
+helpviewer_keywords:
+- multiplies class
+- multiplies struct
 ms.assetid: ec85e8af-70ad-44ad-90f0-d961a5847864
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# Struct multiplies
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: 10f5a34631f713218873d508e41a793b7851bf7c
+ms.lasthandoff: 02/24/2017
 
-Una funzione oggetto predefinita che esegue una operazione di moltiplicazione \(`operator*` binario\) sui suoi argomenti.  
+---
+# <a name="multiplies-struct"></a>Struct multiplies
+Oggetto funzione predefinito che esegue l'operazione di moltiplicazione (`operator*` binario) sugli argomenti.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
-```  
-template<class Type = void>  
-   struct multiplies : public binary_function <Type, Type, Type>   
-   {  
-      Type operator()(  
-         const Type& Left,   
-         const Type& Right  
-      ) const;  
-   };  
-  
-// specialized transparent functor for operator*  
-template<>  
-   struct multiplies<void>  
-   {  
-      template<class Type1, class Type2>  
-      auto operator()(Type1&& Left, Type2&& Right) const  
-         -> decltype(std::forward<Type1>(Left)  
-            * std::forward<Type2>(Right));  
-   };  
-  
+```
+template <class Type = void>
+struct multiplies : public binary_function <Type, Type, Type>  
+{
+    Type operator()(const Type& Left, const Type& Right) const;
+};
+
+// specialized transparent functor for operator*
+template <>
+struct multiplies<void>  
+{
+  template <class T, class U>
+  auto operator()(T&& Left, U&& Right) const`
+    -> decltype(std::forward<T>(Left) * std::forward<U>(Right));
+ };
 ```  
   
-#### Parametri  
- `Type`, `Type1`, `Type2`  
- Un tipo che supporti un `operator*` binario che accetta gli operandi dei tipi specificati o derivati.  
+#### <a name="parameters"></a>Parametri  
+ `Type`, `T`, `U`  
+ Tipo che supporta un `operator*` binario che accetta gli operandi dei tipi specificati o dedotti.  
   
  `Left`  
- L'operando sinistro dell'operazione di moltiplicazione.  Il modello non specializzato accetta un argomento di riferimento a lvalue di tipo `Type`.  Il modello specializzato perfeziona l'inoltro degli argomenti di riferimento a rvalue e lvalue di tipo derivato `Type1`.  
+ Operando sinistro dell'operatore di moltiplicazione. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo `Type`. Il modello specializzato esegue un inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto `T`.  
   
  `Right`  
- L'operando destro dell'operazione di moltiplicazione.  Il modello non specializzato accetta un argomento di riferimento a lvalue di tipo `Type`.  Il modello specializzato perfeziona l'inoltro degli argomenti di riferimento a rvalue e lvalue di tipo derivato `Type2`.  
+ Operando destro dell'operatore di moltiplicazione. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo `Type`. Il modello specializzato esegue un inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto `U`.  
   
-## Valore restituito  
- Il risultato di `Left` `*` `Right`.  Il modello specializzato perfeziona l'inoltro del risultato, il cui tipo è restituito da `operator*`.  
+## <a name="return-value"></a>Valore restituito  
+ Risultato di `Left``*``Right`. Il modello specializzato esegue un inoltro perfetto del risultato, con il tipo restituito da `operator*`.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-```  
+```cpp  
 // functional_multiplies.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -115,17 +127,23 @@ int main( )
       cout << *Iter3 << " ";  
    cout << ")" << endl;  
 }  
+\* Output:   
+The vector v1 = ( 2 4 6 8 10 12 )  
+The vector v2 = ( 3 6 9 12 15 18 )  
+The element-wise products of vectors V1 & v2  
+ are: ( 6 24 54 96 150 216 )  
+*\  
 ```  
   
-  **Il vettore v1 \= \( 2 4 6 8 10 12 \)**  
-**Il vettore v2 \= \( 3 6 9 12 15 18 \)**  
-**I prodotti tra gli elementi dei vettori V1 & v2**  
- **sono: \( 6 24 54 96 150 216 \)**   
-## Requisiti  
- **Intestazione:** \<funzionale\>  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<functional>  
   
  **Spazio dei nomi:** std  
   
-## Vedere anche  
- [Sicurezza dei thread nella libreria standard C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Libreria di modelli standard](../misc/standard-template-library.md)
+## <a name="see-also"></a>Vedere anche  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)  (Sicurezza dei thread nella libreria standard C++)  
+ [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

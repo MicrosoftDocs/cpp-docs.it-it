@@ -1,69 +1,88 @@
 ---
-title: "&lt;hash_set&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "<hash_set>"
-  - "std.<hash_set>"
-  - "std::<hash_set>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "hash_set (intestazione)"
+title: '&lt;hash_set&gt; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- <hash_set>
+- std.<hash_set>
+- std::<hash_set>
+dev_langs:
+- C++
+helpviewer_keywords:
+- hash_set header
 ms.assetid: 6b556967-c808-4869-9b4d-f9e030864435
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# &lt;hash_set&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: cd8ab51b229f1c62cd6f3dd1862920d683834975
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="lthashsetgt"></a>&lt;hash_set&gt;
 > [!NOTE]
->  Questa intestazione è obsoleta. L'alternativa è [\<unordered\_set\>](../standard-library/unordered-set.md).  
+>  Questa intestazione è obsoleta. L'alternativa è [<unordered_set>](../standard-library/unordered-set.md).  
   
- Definisce le classi modello del contenitore hash\_set e hash\_multiset e i rispettivi modelli di supporto.  
+ Definisce le classi modello del contenitore hash_set e hash_multiset e i rispettivi modelli di supporto.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 #include <hash_set>  
   
 ```  
   
-## Note  
- In Visual C\+\+ .NET 2003 i membri dei file di intestazione [\<hash\_map\>](../standard-library/hash-map.md) e [\<hash\_set\>](#vclrfhash_set_header_file) non si trovano più nello spazio dei nomi std, ma sono stati spostati nello spazio dei nomi stdext. Per ulteriori informazioni, vedere [lo spazio dei nomi stdext](../standard-library/stdext-namespace.md).  
+## <a name="remarks"></a>Note  
   
-### Operatori  
+### <a name="operators"></a>Operatori  
   
-|Versione di hash\_set|Versione di hash\_multiset|Descrizione|  
-|---------------------------|--------------------------------|-----------------|  
-|[operator\!\= \(hash\_set\)](../Topic/operator!=%20\(hash_set\).md)|[operator\!\= \(hash\_multiset\)](../Topic/operator!=%20\(hash_multiset\).md)|Verifica se l'oggetto hash\_set o hash\_multiset a sinistra dell'operatore non è uguale all'oggetto hash\_set o hash\_multiset a destra.|  
-|[operator\=\= \(hash\_set\)](http://msdn.microsoft.com/it-it/791b95bd-f917-4716-aea6-add50badbfac)|[operator\=\= \(hash\_multiset\)](http://msdn.microsoft.com/it-it/cfa9aa0c-d5f6-403a-9441-35c2a4cee0fb)|Verifica se l'oggetto hash\_set o hash\_multiset a sinistra dell'operatore è uguale all'oggetto hash\_set o hash\_multiset a destra.|  
+|Versione di hash_set|Versione di hash_multiset|Descrizione|  
+|-----------------------|----------------------------|-----------------|  
+|[operator!= (hash_set)](../standard-library/hash-set-operators.md#operator_neq)|[operator!= (hash_multiset)](../standard-library/hash-set-operators.md#operator_neq__hash_multiset_)|Verifica se l'oggetto hash_set o hash_multiset a sinistra dell'operatore non è uguale all'oggetto hash_set o hash_multiset a destra.|  
+|[operator== (hash_set)](http://msdn.microsoft.com/en-us/791b95bd-f917-4716-aea6-add50badbfac)|[operator== (hash_multiset)](http://msdn.microsoft.com/en-us/cfa9aa0c-d5f6-403a-9441-35c2a4cee0fb)|Verifica se l'oggetto hash_set o hash_multiset a sinistra dell'operatore è uguale all'oggetto hash_set o hash_multiset a destra.|  
   
-### Funzioni di modello specializzate  
+### <a name="specialized-template-functions"></a>Funzioni di modello specializzate  
   
-|Versione di hash\_set|Versione di hash\_multiset|Descrizione|  
-|---------------------------|--------------------------------|-----------------|  
-|[swap \(hash\_set\)](../Topic/swap%20\(hash_set\).md)|[swap \(hash\_multiset\)](../Topic/swap%20\(hash_multiset\).md)|Scambia gli elementi di due oggetti hash\_set o hash\_multiset.|  
+|Versione di hash_set|Versione di hash_multiset|Descrizione|  
+|-----------------------|----------------------------|-----------------|  
+|[swap (hash_set)](../standard-library/hash-set-functions.md#swap)|[swap (hash_multiset)](../standard-library/hash-set-functions.md#swap__hash_multiset_)|Scambia gli elementi di due oggetti hash_set o hash_multiset.|  
   
-### Classi  
+### <a name="classes"></a>Classi  
   
 |||  
 |-|-|  
-|[Classe hash\_compare](../standard-library/hash-compare-class.md)|Descrive un oggetto che può essere usato da uno qualsiasi dei contenitori associativi hash, hash\_map, hash\_multimap, hash\_set o hash\_multiset, come oggetto del parametro **Traits** predefinito per l'ordinamento e l'hashing degli elementi contenuti.|  
-|[Classe hash\_set](../standard-library/hash-set-class.md)|Usata per l'archiviazione e il recupero rapido di dati da una raccolta in cui i valori degli elementi contenuti sono univoci e vengono usati come valori delle chiavi.|  
-|[Classe hash\_multiset](../standard-library/hash-multiset-class.md)|Usata per l'archiviazione e il recupero rapido di dati da una raccolta in cui i valori degli elementi contenuti sono univoci e vengono usati come valori delle chiavi.|  
+|[Classe hash_compare](../standard-library/hash-compare-class.md)|Descrive un oggetto che può essere usato da uno qualsiasi dei contenitori associativi hash, hash_map, hash_multimap, hash_set o hash_multiset, come oggetto del parametro **Traits** predefinito per l'ordinamento e l'hashing degli elementi contenuti.|  
+|[Classe hash_set](../standard-library/hash-set-class.md)|Usata per l'archiviazione e il recupero rapido di dati da una raccolta in cui i valori degli elementi contenuti sono univoci e vengono usati come valori delle chiavi.|  
+|[Classe hash_multiset](../standard-library/hash-multiset-class.md)|Usata per l'archiviazione e il recupero rapido di dati da una raccolta in cui i valori degli elementi contenuti sono univoci e vengono usati come valori delle chiavi.|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)   
- [Sicurezza dei thread nella libreria standard C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Libreria di modelli standard](../misc/standard-template-library.md)
+ [Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+
+
+
+
