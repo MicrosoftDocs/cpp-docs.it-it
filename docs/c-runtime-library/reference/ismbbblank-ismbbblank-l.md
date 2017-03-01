@@ -1,47 +1,63 @@
 ---
-title: "_ismbbblank, _ismbbblank_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_ismbbblank_l"
-  - "_ismbbblank"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-apitype: "DLLExport"
-dev_langs: 
-  - "C++"
+title: _ismbbblank, _ismbbblank_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _ismbbblank_l
+- _ismbbblank
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+apitype: DLLExport
+dev_langs:
+- C++
 ms.assetid: d21b2e41-7206-41f5-85bb-9c9ab4f3e21b
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# _ismbbblank, _ismbbblank_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
+ms.openlocfilehash: 748dd47c43ae2f07a7a6b0d828775c4122062b6c
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="ismbbblank-ismbbblankl"></a>_ismbbblank, _ismbbblank_l
 Determina se un particolare carattere multibyte è un carattere vuoto.  
   
 > [!IMPORTANT]
->  Questa API non può essere utilizzata nelle applicazioni che vengono eseguite in Windows Runtime.  Per ulteriori informazioni, vedere [Funzioni CRT non supportate con \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere l'articolo relativo alle [funzioni CRT non supportate con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 int _ismbbblank(  
@@ -53,28 +69,28 @@ int _ismbbblank_l(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `c`  
- Integer da testare.  
+ Valore Integer da testare.  
   
  `locale`  
- Impostazioni locali da utilizzare.  
+ Impostazioni locali da usare.  
   
-## Valore restituito  
- `_ismbbblank` restituisce un valore diverso da zero se `c` rappresenta un carattere di spazio \(0x20\), un carattere di tabulazione orizzontale \(0x09\) o un carattere specifico delle impostazioni locali utilizzato per separare le parole all'interno di una riga di testo per il quale `isspace` è true; in caso contrario, restituisce 0.  `_ismbbblank` utilizza le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali.  `_ismbbblank_l` è identico, con la differenza che utilizza l'impostazione locale che viene passata.  Per ulteriori informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+## <a name="return-value"></a>Valore restituito  
+ `_ismbbblank` restituisce un valore diverso da zero se `c` rappresenta un carattere di spazio (0x20), un carattere di tabulazione orizzontale (0x09) o un carattere specifico delle impostazioni locali usato per separare le parole all'interno di una riga di testo per cui `isspace` è true. In caso contrario, restituisce 0. `_ismbbblank` usa le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. `_ismbbblank_l` è identica, ma usa le impostazioni locali passate. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`_ismbbblank`|\<mbctype.h\>|  
-|`_ismbbblank_l`|\<mbctype.h\>|  
+|-------------|---------------------|  
+|`_ismbbblank`|\<mbctype.h>|  
+|`_ismbbblank_l`|\<mbctype.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
-## Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione standard C, utilizzare `PInvoke`. Per ulteriori informazioni, vedere [Esempi di Invocazione della Piattaforma](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
+ Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classificazione per byte](../../c-runtime-library/byte-classification.md)   
- [Routines \_ismbb](../../c-runtime-library/ismbb-routines.md)
+ [Routine _ismbb](../../c-runtime-library/ismbb-routines.md)

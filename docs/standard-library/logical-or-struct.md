@@ -1,78 +1,90 @@
 ---
-title: "Struct logical_or | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.logical_or"
-  - "std::logical_or"
-  - "logical_or"
-  - "xfunctional/std::logical_or"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "logical_or (classe)"
-  - "logical_or (struct)"
+title: Struct logical_or | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std.logical_or
+- std::logical_or
+- logical_or
+- xfunctional/std::logical_or
+dev_langs:
+- C++
+helpviewer_keywords:
+- logical_or class
+- logical_or struct
 ms.assetid: ec8143f8-5755-4e7b-8025-507fb6bf6911
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# Struct logical_or
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: 4928eb5d79877dd4d1e2c1a1c0f25dbc29e4ec1b
+ms.lasthandoff: 02/24/2017
 
-Un oggetto funzione predefinito che esegue l'operazione di disgiunzione logica \(`operator||`\) sui relativi argomenti.  
+---
+# <a name="logicalor-struct"></a>Struct logical_or
+Oggetto funzione predefinito che esegue l'operazione di disgiunzione logica ( `operator||`) negli argomenti.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
-```  
-template<class Type = void>  
-   struct logical_or : public binary_function<Type, Type, bool>   
-   {  
-      bool operator()(  
-         const Type& Left,   
-         const Type& Right  
-      ) const;  
-   };  
-  
-// specialized transparent functor for operator||  
-template<>  
-   struct logical_or<void>  
-   {  
-      template<class Type1, class Type2>  
-      auto operator()(Type1&& Left, Type2&& Right) const  
-         -> decltype(std::forward<Type1>(Left)  
-            || std::forward<Type2>(Right));  
-   };  
-  
+```
+template <class Type = void>
+struct logical_or : public binary_function<Type, Type, bool>  
+{
+    bool operator()(const Type& Left, const Type& Right) const;
+ };
+
+// specialized transparent functor for operator||
+template <>
+struct logical_or<void>  
+{
+  template <class T, class U>
+  auto operator()(T&& Left, U&& Right) const`
+    -> decltype(std::forward<T>(Left) || std::forward<U>(Right));
+ };
 ```  
   
-#### Parametri  
- `Type`, `Type1`, `Type2`  
- Qualsiasi tipo che supporti `operator||` che accetta gli operandi dei tipi specificati di derivati.  
+#### <a name="parameters"></a>Parametri  
+ `Type`, `T`, `U`  
+ Qualsiasi tipo che supporta un `operator||` che accetta gli operandi dei tipi specificati o dedotti.  
   
  `Left`  
- L'operando a sinistra dell'operazione logica di disgiunzione.  Il modello non specializzato accetta un argomento di riferimento a lvalue di tipo `Type`.  Il modello specializzato perfeziona l'inoltro degli argomenti di riferimento a rvalue e lvalue di tipo derivato `Type1`.  
+ Operando sinistro dell'operazione di disgiunzione logica. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo `Type`. Il modello specializzato esegue un inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto `T`.  
   
  `Right`  
- L'operando a destra dell'operazione logica di disgiunzione.  Il modello non specializzato accetta un argomento di riferimento a lvalue di tipo `Type`.  Il modello specializzato perfeziona l'inoltro degli argomenti di riferimento a rvalue e lvalue di tipo derivato `Type2`.  
+ Operando destro dell'operazione di disgiunzione logica. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo `Type`. Il modello specializzato esegue un inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto `U`.  
   
-## Valore restituito  
- Il risultato di `Left` `||` `Right`.  Il modello specializzato perfeziona l'inoltro del risultato, il cui tipo è restituito da `operator||`.  
+## <a name="return-value"></a>Valore restituito  
+ Risultato di `Left``||``Right`. Il modello specializzato esegue un inoltro perfetto del risultato, con il tipo restituito da `operator||`.  
   
-## Note  
- Per i tipi definiti dall'utente, non c'è corto circuito nella valutazione dell'operando.  Entrambi gli argomenti vengono valutati da `operator||`.  
+## <a name="remarks"></a>Note  
+ Per i tipi definiti dall'utente, non si verifica alcun corto circuito nella valutazione degli operandi. Entrambi gli argomenti vengono valutati da `operator||`.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-```  
+```cpp  
 // functional_logical_or.cpp  
 // compile with: /EHsc  
 #include <deque>  
@@ -119,19 +131,26 @@ int main( )
       cout << *iter3 << " ";  
    cout << ")" << endl;  
 }  
+\* Output:   
+Original deque:  
+ d1 = ( true true false false true false false )  
+Original deque:  
+ d2 = ( false false false true true true true )  
+The deque which is the disjuction of d1 & d2 is:  
+ d3 = ( true true false true true true true )  
+*\  
+  
 ```  
   
-  **Cosa originale:**  
- **d1 \= \( true true false false true false false \)**  
-**Cosa originale:**  
- **d2 \= \( false false false true true true true \)**  
-**La coda che è la disgiunzione tra d1 & d2 è:**  
- **d3 \= \( true true false true true true true \)**   
-## Requisiti  
- **Intestazione:** \<funzionale\>  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<functional>  
   
  **Spazio dei nomi:** std  
   
-## Vedere anche  
- [Sicurezza dei thread nella libreria standard C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Libreria di modelli standard](../misc/standard-template-library.md)
+## <a name="see-also"></a>Vedere anche  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)  (Sicurezza dei thread nella libreria standard C++)  
+ [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+
+
+
+
