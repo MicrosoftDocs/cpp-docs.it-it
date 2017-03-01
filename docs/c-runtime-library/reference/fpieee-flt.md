@@ -1,51 +1,68 @@
 ---
-title: "_fpieee_flt | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_fpieee_flt"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fpieee_flt"
-  - "_fpieee_flt"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fpieee_flt (funzione)"
-  - "gestione delle eccezioni, a virgola mobile"
-  - "gestione eccezioni di virgola mobile"
-  - "fpieee_flt (funzione)"
+title: _fpieee_flt | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _fpieee_flt
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fpieee_flt
+- _fpieee_flt
+dev_langs:
+- C++
+helpviewer_keywords:
+- _fpieee_flt function
+- exception handling, floating-point
+- floating-point exception handling
+- fpieee_flt function
 ms.assetid: 2bc4801e-0eed-4e73-b518-215da8cc9740
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# _fpieee_flt
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 54718c64d7a6720ac0601792bfec5ffb196a9716
+ms.lasthandoff: 02/24/2017
 
-Richiama un gestore delle trap definito dall'utente per le eccezioni a virgola mobile IEEE.  
+---
+# <a name="fpieeeflt"></a>_fpieee_flt
+Richiama un gestore di trap definito dall'utente per le eccezioni a virgola mobile IEEE.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 int _fpieee_flt(   
@@ -55,42 +72,42 @@ int _fpieee_flt(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `excCode`  
  Codice dell'eccezione.  
   
  `excInfo`  
- Puntatore ad una struttura di informazioni sulle eccezioni di Windows NT.  
+ Puntatore a una struttura di informazioni sulle eccezioni di Windows NT.  
   
  `handler`  
- Puntatore alla routine del gestore delle trap IEEE dell'utente.  
+ Puntatore alla routine del gestore di trap IEEE dell'utente.  
   
-## Valore restituito  
- Il valore di ritorno di `_fpieee_flt` è il valore restituito da `handler`.  Come tale, la routine di filtro IEEE può essere utilizzata nella clausola di eccezione di un meccanismo strutturato per la gestione delle eccezioni \(SEH, Structured Exception\-Handling\).  
+## <a name="return-value"></a>Valore restituito  
+ Il valore di ritorno di `_fpieee_flt` è il valore restituito da `handler`. Come tale, la routine di filtro IEEE può essere utilizzata nella clausola di eccezione di un meccanismo di gestione delle eccezioni strutturata (SEH).  
   
-## Note  
- La funzione `_fpieee_flt` invoca un gestore di trap definito dall'utente per le eccezioni a virgola mobile IEEE e gli fornisce tutte le informazioni rilevanti.  Questa routine svolge la funzione di filtro eccezioni nel meccanismo SEH, il quale invoca il gestore delle eccezioni personale quando necessario.  
+## <a name="remarks"></a>Note  
+ La funzione `_fpieee_flt` richiama un gestore di trap definito dall'utente per le eccezioni a virgola mobile IEEE e fornisce tutte le informazioni rilevanti. Questa routine svolge la funzione di un filtro eccezioni nel meccanismo SEH, il quale richiama il proprio gestore delle eccezioni IEE quando necessario.  
   
- La struttura `_FPIEEE_RECORD`, definita in Fpieee.h, contiene informazioni relative ad un'eccezione a virgola mobile IEEE.  Questa struttura viene passata al gestore di trap definito dall'utente da `_fpieee_flt`.  
+ La struttura `_FPIEEE_RECORD`, definita in Fpieee.h, contiene informazioni relative a un'eccezione a virgola mobile IEEE. Questa struttura viene passata al gestore di trap definito dall'utente da `_fpieee_flt`.  
   
-|Campo \_FPIEEE\_RECORD|Descrizione|  
+|Campo _FPIEEE_RECORD|Descrizione|  
 |----------------------------|-----------------|  
-|`unsigned int RoundingMode`, `unsigned int Precision`|Questi campi contengono informazioni sull'ambiente a virgola mobile al momento in cui si è verificata l'eccezione.|  
-|`unsigned int Operation`|Indica il tipo di operazione che ha causato la trap.  Se il tipo è un confronto \(`_FpCodeCompare`\), è possibile specificare uno dei valori speciali `_FPIEEE_COMPARE_RESULT` \(come definito in Fpieee.h\) nel campo `Result.Value`.  Il tipo di conversione \(`_FpCodeConvert`\) indica che la trap si è verificata durante un'operazione di conversione a virgola mobile.  È possibile osservare i tipi `Operand1` e `Result` per determinare il tipo di conversione che viene tentata.|  
-|`_FPIEEE_VALUE Operand1`, `_FPIEEE_VALUE Operand2`, `_FPIEEE_VALUE Result`|Queste strutture indicano i tipi ed i valori del risultato e degli operandi proposti:<br /><br /> `OperandValid` Flag che indica se il valore di risposta è valido.<br /><br /> `Format` Tipo di dati del valore corrispondente.  Il tipo di formato potrebbe essere restituito anche se il valore corrispondente non è valido.<br /><br /> `Value` Risultato o valore dei dati dell'operando.|  
-|`_FPIEEE_EXCEPTION_FLAGS Cause`, `_FPIEEE_EXCEPTION_FLAGS Enable`, `_FPIEEE_EXCEPTION_FLAGS Status`|\_FPIEEE\_EXCEPTION\_FLAGS contiene un campo di bit per ciascun tipo di eccezione a virgola mobile.<br /><br /> Esiste una corrispondenza tra questi campi e gli argomenti utilizzati per mascherare le eccezioni fornite a [\_controlfp](../../c-runtime-library/reference/control87-controlfp-control87-2.md).<br /><br /> Il significato esatto di ogni bit dipende dal contesto:<br /><br /> `Cause` Ogni set di bit indica la particolare eccezione generata.<br /><br /> `Enable` Ogni set di bit indica che l'eccezione specifica è attualmente smascherata.<br /><br /> `Status` Ogni set di bit indica che l'eccezione specifica è attualmente in sospeso.  Questo include le eccezioni che non sono state generate in quanto sono state mascherate da `_controlfp`.|  
+|`unsigned int RoundingMode`, `unsigned int Precision`|Questi campi contengono informazioni sull'ambiente a virgola mobile nel momento in cui si è verificata l'eccezione.|  
+|`unsigned int Operation`|Indica il tipo di operazione che ha causato il trap. Se il tipo è un confronto (`_FpCodeCompare`), è possibile fornire uno dei valori speciali `_FPIEEE_COMPARE_RESULT` (come definito in Fpieee.h) nel campo `Result.Value`. Il tipo di conversione (`_FpCodeConvert`) indica che il trap si è verificato durante un'operazione di conversione a virgola mobile. È possibile osservare i tipi `Operand1` e `Result` per determinare il tipo di conversione tentata.|  
+|`_FPIEEE_VALUE Operand1`, `_FPIEEE_VALUE Operand2`, `_FPIEEE_VALUE Result`|Queste strutture indicano i tipi e i valori del risultato e degli operandi proposti:<br /><br /> `OperandValid` Flag che indica se il valore di risposta è valido.<br /><br /> `Format` Tipo di dati del valore corrispondente. Il tipo di formato potrebbe essere restituito anche se il valore corrispondente non è valido.<br /><br /> `Value` Risultato o valore dei dati dell'operando.|  
+|`_FPIEEE_EXCEPTION_FLAGS Cause`, `_FPIEEE_EXCEPTION_FLAGS Enable`, `_FPIEEE_EXCEPTION_FLAGS Status`|_FPIEEE_EXCEPTION_FLAGS contiene un campo di bit per ciascun tipo di eccezione a virgola mobile.<br /><br /> Esiste una corrispondenza tra questi campi e gli argomenti usati per mascherare le eccezioni fornite a [_controlfp](../../c-runtime-library/reference/control87-controlfp-control87-2.md).<br /><br /> Il significato esatto di ogni bit dipende dal contesto:<br /><br /> `Cause` Ogni bit del set indica la particolare eccezione generata.<br /><br /> `Enable` Ogni bit del set indica che l'eccezione specifica è attualmente non mascherata.<br /><br /> `Status` Ogni bit del set indica che l'eccezione specifica è attualmente in sospeso. Questo include le eccezioni che non sono state generate in quanto sono state mascherate da `_controlfp`.|  
   
- Le eccezioni in sospeso disabilitate vengono generate quando esse vengono abilitate.  Questo può determinare un comportamento indefinito durante l'utilizzo di `_fpieee_flt` come filtro eccezioni.  Chiamare sempre [\_clearfp](../../c-runtime-library/reference/clear87-clearfp.md) prima di abilitare le eccezioni a virgola mobile.  
+ Le eccezioni in sospeso disabilitate vengono generate quando vengono abilitate. Questo può determinare un comportamento indefinito quando si usa `_fpieee_flt` come filtro per le eccezioni. Chiamare sempre [_clearfp](../../c-runtime-library/reference/clear87-clearfp.md) prima di abilitare le eccezioni a virgola mobile.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Funzione|Intestazione obbligatoria|  
-|--------------|-------------------------------|  
-|`_fpieee_flt`|\<fpieee.h\>|  
+|--------------|---------------------|  
+|`_fpieee_flt`|\<fpieee.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_fpieee.c  
@@ -157,10 +174,10 @@ int main( void )
 }  
 ```  
   
-## Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione standard C, utilizzare `PInvoke`. Per ulteriori informazioni, vedere [Esempi di Invocazione della Piattaforma](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
+ Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
-## Vedere anche  
- [Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)   
- [\_control87, \_controlfp, \_\_control87\_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md)   
- [\_controlfp\_s](../../c-runtime-library/reference/controlfp-s.md)
+## <a name="see-also"></a>Vedere anche  
+ [Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)   
+ [_control87, _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md)   
+ [_controlfp_s](../../c-runtime-library/reference/controlfp-s.md)

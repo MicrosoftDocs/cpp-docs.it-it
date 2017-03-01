@@ -1,48 +1,64 @@
 ---
-title: "setbuf | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "setbuf"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "setbuf"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "setbuf (funzione)"
-  - "memorizzazione nel buffer del flusso"
+title: setbuf | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- setbuf
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- setbuf
+dev_langs:
+- C++
+helpviewer_keywords:
+- setbuf function
+- stream buffering
 ms.assetid: 13beda22-7b56-455d-8a6c-f2eb636885b9
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# setbuf
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: ce7ea86029a99b5727fa1d7bd033044431a1fbff
+ms.lasthandoff: 02/24/2017
 
-Controlla la memorizzazione nel buffer del flusso.  Questa funzione è deprecata; usare invece [setvbuf](../../c-runtime-library/reference/setvbuf.md).  
+---
+# <a name="setbuf"></a>setbuf
+Controlla il buffering del flusso. Questa funzione è deprecata. In alternativa, usare [setvbuf](../../c-runtime-library/reference/setvbuf.md).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 void setbuf(  
@@ -51,27 +67,27 @@ void setbuf(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `stream`  
- Puntatore alla struttura `FILE`.  
+ Puntatore alla struttura `FILE` .  
   
  `buffer`  
  Buffer allocato dall'utente.  
   
-## Note  
- La funzione `setbuf` controlla il buffer per `stream`.  L'argomento `stream` deve fare riferimento a un file aperto che non è stato letto o scritto.  Se l'argomento `buffer` è `NULL`, il flusso è senza buffer.  In caso contrario, il buffer deve puntare a una matrice di caratteri di lunghezza `BUFSIZ`, dove `BUFSIZ` è la dimensione del buffer come definito in. STDIO.H.  Il buffer definito dall'utente, anziché un buffer allocato predefinito per il flusso specificato, viene utilizzato per il buffering di I\/O.  Il flusso `stderr` è senza buffer per impostazione predefinita, ma è possibile utilizzare `setbuf` per assegnare buffer su `stderr`.  
+## <a name="remarks"></a>Note  
+ La funzione `setbuf` controlla il buffering per `stream`. L'argomento `stream` deve fare riferimento a un file aperto che non è stato letto o scritto. Se l'argomento `buffer` è `NULL`, il buffering del flusso viene annullato. In caso contrario, il buffer deve puntare a una matrice di caratteri di lunghezza `BUFSIZ`, dove `BUFSIZ` è la dimensione del buffer, come definita in STDIO.H. Per il buffering di I/O viene usato il buffer specificato dall'utente, invece del buffer allocato dal sistema predefinito per il flusso specificato. Il buffering del flusso `stderr` viene annullato per impostazione predefinita, ma è possibile usare `setbuf` per assegnare buffer a `stderr`.  
   
- `setbuf` è stato sostituito da [setvbuf](../../c-runtime-library/reference/setvbuf.md), che è la procedura consigliata per il nuovo codice.  `setbuf` viene mantenuto per compatibilità con il codice esistente.  
+ La funzione `setbuf` è stata sostituita da [setvbuf](../../c-runtime-library/reference/setvbuf.md), ovvero la routine preferita per il nuovo codice. `setbuf` viene mantenuta per compatibilità con il codice esistente.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`setbuf`|\<stdio.h\>|  
+|-------------|---------------------|  
+|`setbuf`|\<stdio.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'Introduzione.  
+ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_setbuf.c  
@@ -105,14 +121,17 @@ int main( void )
 }  
 ```  
   
-  **stream1 impostato sul buffer definito dall'utente a: 0012FCDC**  
-**memorizzazione nel buffer di stream2 disabilitata**   
-## Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione standard C, utilizzare `PInvoke`. Per ulteriori informazioni, vedere [Esempi di Invocazione della Piattaforma](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+stream1 set to user-defined buffer at: 0012FCDC  
+stream2 buffering disabled  
+```  
   
-## Vedere anche  
- [I\/O di flusso](../../c-runtime-library/stream-i-o.md)   
- [fclose, \_fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
+## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
+ Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
+  
+## <a name="see-also"></a>Vedere anche  
+ [I/O di flusso](../../c-runtime-library/stream-i-o.md)   
+ [fclose, _fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
  [fflush](../../c-runtime-library/reference/fflush.md)   
- [fopen, \_wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
+ [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
  [setvbuf](../../c-runtime-library/reference/setvbuf.md)

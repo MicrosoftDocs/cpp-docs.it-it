@@ -1,69 +1,85 @@
 ---
-title: "_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_ismbstrail"
-  - "_ismbslead_l"
-  - "_ismbslead"
-  - "_ismbstrail_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_ismbslead"
-  - "ismbs"
-  - "ismbslead_l"
-  - "_ismbs"
-  - "ismbstrail_l"
-  - "ismbslead"
-  - "_ismbstrail"
-  - "_ismbstrail_l"
-  - "ismbstrail"
-  - "_ismbslead_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ismbslead (funzione)"
-  - "_ismbslead_l (funzione)"
-  - "_ismbstrail (funzione)"
-  - "_ismbstrail_l (funzione)"
-  - "ismbslead (funzione)"
-  - "ismbslead_l (funzione)"
-  - "ismbstrail (funzione)"
-  - "ismbstrail_l (funzione)"
+title: _ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _ismbstrail
+- _ismbslead_l
+- _ismbslead
+- _ismbstrail_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _ismbslead
+- ismbs
+- ismbslead_l
+- _ismbs
+- ismbstrail_l
+- ismbslead
+- _ismbstrail
+- _ismbstrail_l
+- ismbstrail
+- _ismbslead_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- ismbstrail function
+- _ismbslead function
+- ismbslead function
+- ismbslead_l function
+- _ismbstrail function
+- _ismbslead_l function
+- ismbstrail_l function
+- _ismbstrail_l function
 ms.assetid: 86d2cd7a-3cff-443a-b713-14cc17a231e9
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# _ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: e0f3aa666b38966699cbf8a98032318f9eb938e5
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="ismbslead-ismbstrail-ismbsleadl-ismbstraill"></a>_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
 Esegue test sensibili al contesto per i byte iniziali e finali della stringa con caratteri multibyte e determina se un puntatore di una data sottostringa punta a un byte iniziale o finale.  
   
 > [!IMPORTANT]
->  Questa API non può essere usata nelle applicazioni eseguite in [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  Per altre informazioni, vedere l'argomento relativo alle [funzioni CRT non supportate con \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Questa API non può essere usata nelle applicazioni eseguite in [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]. Per altre informazioni, vedere l'articolo relativo alle [funzioni CRT non supportate con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 int _ismbslead(  
@@ -86,7 +102,7 @@ int _ismbstrail_l(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `str`  
  Puntatore all'inizio della stringa o al precedente byte iniziale noto.  
   
@@ -96,32 +112,32 @@ int _ismbstrail_l(
  `locale`  
  Impostazioni locali da usare.  
   
-## Valore restituito  
- `_ismbslead` restituisce \-1 se il carattere è un byte iniziale e `_ismbstrail` restituisce \-1 se il carattere è un byte finale.  Se le stringhe di input sono valide ma non rappresentano un byte iniziale o finale, queste funzioni restituiscono zero.  Se l'argomento è `NULL`, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).  Se l'esecuzione può continuare, queste funzioni restituiscono `NULL` e impostano `errno` su `EINVAL`.  
+## <a name="return-value"></a>Valore restituito  
+ `_ismbslead` restituisce -1 se il carattere è un byte iniziale e `_ismbstrail` restituisce -1 se il carattere è un byte finale. Se le stringhe di input sono valide ma non rappresentano un byte iniziale o finale, queste funzioni restituiscono zero. Se l'argomento è `NULL`, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono `NULL` e impostano `errno` su `EINVAL`.  
   
-## Note  
+## <a name="remarks"></a>Note  
  `_ismbslead` e `_ismbstrail` sono più lenti delle versioni `_ismbblead` e `_ismbbtrail` perché prendono in considerazione il contesto della stringa.  
   
- Le versioni di queste funzioni che presentano il suffisso `_l` sono identiche ad eccezione del fatto che, per il comportamento dipendente dalle impostazioni locali, usano le impostazioni locali passate anziché quelle correnti.  Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ Le versioni di queste funzioni che presentano il suffisso `_l` sono identiche ad eccezione del fatto che, per il comportamento dipendente dalle impostazioni locali, usano le impostazioni locali passate anziché quelle correnti. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|Intestazione facoltativa|  
-|-------------|-------------------------------|------------------------------|  
-|`_ismbslead`|\<mbctype.h\> o \<mbstring.h\>|\<ctype.h\>,\* \<limits.h\>, \<stdlib.h\>|  
-|`_ismbstrail`|\<mbctype.h\> o \<mbstring.h\>|\<ctype.h\>,\* \<limits.h\>, \<stdlib.h\>|  
-|`_ismbslead_l`|\<mbctype.h\> o \<mbstring.h\>|\<ctype.h\>,\* \<limits.h\>, \<stdlib.h\>|  
-|`_ismbstrail_l`|\<mbctype.h\> o \<mbstring.h\>|\<ctype.h\>,\* \<limits.h\>, \<stdlib.h\>|  
+|-------------|---------------------|---------------------|  
+|`_ismbslead`|\<mbctype.h> o \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|  
+|`_ismbstrail`|\<mbctype.h> o \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|  
+|`_ismbslead_l`|\<mbctype.h> o \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|  
+|`_ismbstrail_l`|\<mbctype.h> o \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|  
   
- \* Per le costanti manifesto per le condizioni di test.  
+ \* Per le costanti manifeste per le condizioni di test.  
   
  Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
-## Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
+ Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classificazione di caratteri](../../c-runtime-library/character-classification.md)   
- [Routines \_ismbc](../../c-runtime-library/ismbc-routines.md)   
- [is, isw Routines](../../c-runtime-library/is-isw-routines.md)   
- [Routines \_ismbb](../../c-runtime-library/ismbb-routines.md)
+ [Routine _ismbc](../../c-runtime-library/ismbc-routines.md)   
+ [Routine is, isw](../../c-runtime-library/is-isw-routines.md)   
+ [Routine _ismbb](../../c-runtime-library/ismbb-routines.md)

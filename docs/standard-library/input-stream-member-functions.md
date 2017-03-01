@@ -1,59 +1,76 @@
 ---
-title: "Funzioni membro del flusso di input | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "flusso di input (oggetti)"
-  - "flussi di input, funzioni membro"
+title: Funzioni membro del flusso di input | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- input stream objects
+- input streams, member functions
 ms.assetid: b4b9465d-0da9-4ccf-859d-72a68418982e
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Funzioni membro del flusso di input
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: d270a9790f33fe5258108663f9618f0da1ed5b37
+ms.lasthandoff: 02/24/2017
 
-Le funzioni membro flusso di input vengono utilizzate per l'input del disco.  Le funzioni membro includono:  
+---
+# <a name="input-stream-member-functions"></a>Funzioni membro del flusso di input
+Le funzioni membro del flusso di input vengono usate per l'input del disco. Sono incluse le funzioni membro seguenti:  
   
--   [La funzione open per flussi di input](#vclrftheopenfunctionforinputstreamsanchor11)  
+- [Funzione open per flussi di input](#vclrftheopenfunctionforinputstreamsanchor11)  
   
--   [La funzione get](#vclrfthegetfunctionanchor12)  
+- [Funzione get](#vclrfthegetfunctionanchor12)  
   
--   [La funzione di getline](#vclrfthegetlinefunctionanchor13)  
+- [Funzione getline](#vclrfthegetlinefunctionanchor13)  
   
--   [La funzione lettura](#vclrfthereadfunctionanchor14)  
+- [Funzione read](#vclrfthereadfunctionanchor14)  
   
--   [Le funzioni di tellg e di seekg](#vclrftheseekgandtellgfunctionsanchor7)  
+- [Funzioni seekg e tellg](#vclrftheseekgandtellgfunctionsanchor7)  
   
--   [La funzione close per flussi di input](#vclrftheclosefunctionforinputstreamsanchor15)  
+- [Funzione close per flussi di input](#vclrftheclosefunctionforinputstreamsanchor15)  
   
-##  <a name="vclrftheopenfunctionforinputstreamsanchor11"></a> La funzione open per flussi di input  
- Se si utilizza un flusso del file di input \(ifstream\), è necessario associare il flusso con un file su disco specifico.  È possibile eseguire questa operazione nel costruttore, oppure utilizzare la funzione di **apri**.  In entrambi i casi, gli argomenti sono uguali.  
+##  <a name="a-namevclrftheopenfunctionforinputstreamsanchor11a-the-open-function-for-input-streams"></a><a name="vclrftheopenfunctionforinputstreamsanchor11"></a> Funzione open per flussi di input  
+ Se si usa un flusso di file di input (ifstream), è necessario associare tale flusso a uno specifico file su disco. È possibile eseguire questa operazione nel costruttore oppure usare la funzione **open**. In entrambi i casi, gli argomenti sono identici.  
   
- In genere si specifica un flag di [ios\_base::openmode](../Topic/ios_base::openmode.md) quando si apre il file associato a un flusso di input \(predefinita è **ios::in**\).  Per un elenco di flag di **open\_mode**, vedere [La funzione open](#vclrftheopenfunctionforinputstreamsanchor11).  I contrassegni possono essere combinati con OR bit per bit \( &#124; operatore\).  
+ In genere si specifica un flag [ios_base::openmode](../standard-library/ios-base-class.md#ios_base__openmode) quando si apre il file associato a un flusso di input (la modalità predefinita è **ios::in**). Per un elenco dei flag **open_mode**, vedere la sezione relativa alla [funzione open](#vclrftheopenfunctionforinputstreamsanchor11). I flag possono essere combinati con l'operatore OR ( &#124; ) bit per bit.  
   
- Per leggere un file, è necessario utilizzare la funzione membro di **non riuscito** per determinare se esiste:  
+ Per leggere un file, usare prima la funzione membro **fail** per determinare se esiste:  
   
 ```  
-istream ifile( "FILENAME" );  
-if ( ifile.fail() )  
+istream ifile("FILENAME");
+
+if (ifile.fail())  
 // The file does not exist ...  
 ```  
   
-##  <a name="vclrfthegetfunctionanchor12"></a> La funzione get  
- Funziona senza formato di funzione membro di **get** come operatore di **\>\>** con due eccezioni.  Innanzitutto, la funzione di **get** include spazi vuoti, mentre estrattore esclude spazi vuoti quando il flag di [skipws](../Topic/skipws.md) è impostato su \(impostazione predefinita\).  In secondo luogo, la funzione di **get** è meno probabile che un flusso di output associato \(`cout`, ad esempio per essere arrossitoe.  
+##  <a name="a-namevclrfthegetfunctionanchor12a-the-get-function"></a><a name="vclrfthegetfunctionanchor12"></a> Funzione get  
+ La funzione membro **get** non formattata ha un funzionamento simile all'operatore **>>** con due eccezioni. In primo luogo, la funzione **get** include spazi vuoti, mentre l'estrattore esclude gli spazi vuoti quando è impostato il flag **skipws** (impostazione predefinita). In secondo luogo, è meno probabile che la funzione **get** determini lo scaricamento di un flusso di output correlato, ad esempio `cout`.  
   
- Una variazione della funzione di **get** specifica un indirizzo del buffer e il numero massimo di caratteri da leggere.  Ciò è utile per limitare il numero di caratteri inviato a una variabile specifica, poiché in questo esempio seguente:  
+ Una variante della funzione **get** specifica un indirizzo di buffer e il numero massimo di caratteri da leggere. Questa caratteristica è utile per limitare il numero di caratteri inviati a una variabile specifica, come mostrato in questo esempio:  
   
 ```  
 // ioo_get_function.cpp  
@@ -72,22 +89,22 @@ int main()
 }  
 ```  
   
-### Input  
+### <a name="input"></a>Input  
   
 ```  
 1234  
 ```  
   
-### Esempio di output  
+### <a name="sample-output"></a>Esempio di output  
   
 ```  
 1234  
 ```  
   
-##  <a name="vclrfthegetlinefunctionanchor13"></a> La funzione di getline  
- La funzione membro di **getline** è simile alla funzione di **get**.  Entrambe le funzioni consentono un terzo argomento che specifica il carattere di terminazione di input.  Il valore predefinito è il carattere di nuova riga.  Entrambe le funzioni riserva un carattere al carattere di terminazione obbligatorio.  Tuttavia, **get** del carattere di terminazione nel flusso e **getline** rimuove il carattere di terminazione.  
+##  <a name="a-namevclrfthegetlinefunctionanchor13a-the-getline-function"></a><a name="vclrfthegetlinefunctionanchor13"></a> Funzione getline  
+ La funzione membro **getline** è simile alla funzione **get**. Entrambe le funzioni accettano un terzo argomento che specifica il carattere di terminazione per l'input. Il valore predefinito è il carattere di nuova riga. Entrambe le funzioni riservano un singolo carattere per il carattere di terminazione obbligatorio. Tuttavia, **get** lascia il carattere di terminazione nel flusso, mentre **getline** lo rimuove.  
   
- Nell'esempio seguente viene specificato un carattere di terminazione per il flusso di input:  
+ L'esempio seguente specifica un carattere di terminazione per il flusso di input:  
   
 ```  
 // getline_func.cpp  
@@ -104,16 +121,16 @@ int main( )
 }  
 ```  
   
-### Input  
+### <a name="input"></a>Input  
   
 ```  
 test  
 ```  
   
-##  <a name="vclrfthereadfunctionanchor14"></a> La funzione lettura  
- La funzione membro di **leggere** legge i byte da un file in una determinata area di memoria.  L'argomento di lunghezza determina il numero di byte letti.  Se non si include tale argomento, leggere si arresta quando il fine del file fisico viene raggiunto o, nel caso di un file di " text\-mode ", quando un carattere incorporato di `EOF` viene letto.  
+##  <a name="a-namevclrfthereadfunctionanchor14a-the-read-function"></a><a name="vclrfthereadfunctionanchor14"></a> Funzione read  
+ La funzione membro **read** legge i byte da un file in un'area di memoria specificata. L'argomento length determina il numero di byte letti. Se non si include tale argomento, la lettura si interrompe quando viene raggiunta la fine di file fisica o, nel caso di un file in modalità testo, quando viene letto un carattere `EOF` incorporato.  
   
- In questo esempio vengono letti un record binario da un file payroll in una struttura:  
+ Questo esempio legge un record binario da un file degli stipendi in una struttura:  
   
 ```  
 #include <fstream>  
@@ -139,10 +156,10 @@ int main()
 }  
 ```  
   
- Il programma si presuppone che i record di dati vengano formattati esattamente come specificato dalla struttura senza il ritorno a capo di terminazione o i caratteri di avanzamento riga.  
+ Il programma presuppone che i record di dati siano formattati esattamente come specificato dalla struttura senza caratteri finali di ritorno a capo o di avanzamento riga.  
   
-##  <a name="vclrftheseekgandtellgfunctionsanchor7"></a> Le funzioni di tellg e di seekg  
- I flussi di file di input è previsto un puntatore interno al percorso nel file in cui i dati devono essere letti avanti.  Impostare questo puntatore alla funzione di `seekg`, come illustrato di seguito:  
+##  <a name="a-namevclrftheseekgandtellgfunctionsanchor7a-the-seekg-and-tellg-functions"></a><a name="vclrftheseekgandtellgfunctionsanchor7"></a> Funzioni seekg e tellg  
+ I flussi di file di input mantengono un puntatore interno alla posizione nel file in cui dovrà essere eseguita la successiva lettura di dati. Questo puntatore viene impostato con la funzione `seekg`, come illustrato di seguito:  
   
 ```  
 #include <iostream>  
@@ -168,9 +185,9 @@ int main( )
 }  
 ```  
   
- Per utilizzare `seekg` per implementare sistemi di gestione dati orientati a record, multiply il formato dei record a lunghezza fissa per il numero di record per ottenere la posizione di byte relativo alla fine del file e quindi utilizzare l'oggetto di **get** per leggere il record.  
+ Per usare `seekg` per implementare sistemi di gestione dei dati orientati ai record, moltiplicare per il numero di record la dimensione dei record a lunghezza fissa in modo da ottenere la posizione di byte relativa alla fine del file e quindi usare l'oggetto **get** per leggere il record.  
   
- La funzione membro di `tellg` restituisce la posizione corrente del file per leggere.  Questo valore è di tipo `streampos`, `typedef` definito \<in iostream\>.  Nell'esempio seguente viene letto un file e visualizzare i messaggi che mostrano le posizioni degli spazi.  
+ La funzione membro `tellg` restituisce la posizione nel file corrente per la lettura. Questo valore è di tipo `streampos`, un `typedef` definito in \<iostream>. L'esempio seguente legge un file e visualizza i messaggi che mostrano le posizioni degli spazi.  
   
 ```  
 #include <fstream>  
@@ -195,8 +212,10 @@ int main( )
 }  
 ```  
   
-##  <a name="vclrftheclosefunctionforinputstreamsanchor15"></a> La funzione close per flussi di input  
- La funzione membro di **chiudi** chiude il file su disco associato a un flusso del file di input e libera l'handle di file del sistema operativo.  Il distruttore di [ifstream](../standard-library/basic-ifstream-class.md) chiude il file automaticamente, ma è possibile utilizzare la funzione di **chiudi** se è necessario aprire un altro file per lo stesso oggetto flusso.  
+##  <a name="a-namevclrftheclosefunctionforinputstreamsanchor15a-the-close-function-for-input-streams"></a><a name="vclrftheclosefunctionforinputstreamsanchor15"></a> Funzione close per flussi di input  
+ La funzione membro **close** chiude il file su disco associato a un flusso di file di input e rilascia l'handle di file del sistema operativo. Il distruttore [ifstream](../standard-library/basic-ifstream-class.md) chiude automaticamente il file, ma è possibile usare la funzione **close** se è necessario aprire un altro file per lo stesso oggetto di flusso.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Flussi di input](../standard-library/input-streams.md)
+
+

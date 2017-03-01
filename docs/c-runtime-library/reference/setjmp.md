@@ -1,48 +1,65 @@
 ---
-title: "setjmp | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "setjmp"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "setjmp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "programmi [C++], salvataggio degli stati"
-  - "stato corrente"
-  - "setjmp (funzione)"
+title: setjmp | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- setjmp
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- setjmp
+dev_langs:
+- C++
+helpviewer_keywords:
+- programs [C++], saving states
+- current state
+- setjmp function
 ms.assetid: 684a8b27-e8eb-455b-b4a8-733ca1cbd7d2
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# setjmp
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: d13a24974a6c722301c6361a13f9d9178cd70220
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="setjmp"></a>setjmp
 Salva lo stato corrente del programma.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 int setjmp(  
@@ -50,39 +67,39 @@ int setjmp(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `env`  
- Variabile in cui viene archiviato l'ambiente.  
+ Variabile in cui è archiviato l'ambiente.  
   
-## Valore restituito  
- Restituisce 0 dopo aver salvato l'ambiente dello stack.  Se `setjmp` ritorna come risultato di una chiamata di `longjmp`, restituisce l'oggetto `value` di `longjmp`, o se l'argomento `value` di `longjmp` è 0, `setjmp` restituisce 1.  Nessun ritorno di errore.  
+## <a name="return-value"></a>Valore restituito  
+ Restituisce 0 dopo aver salvato l'ambiente dello stack. Se `setjmp` restituisce come risultato di una chiamata `longjmp`, restituisce l'argomento `value` di `longjmp`, o se l'argomento `value` di `longjmp` è 0, `setjmp` restituisce 1. Non vi è restituzione di errori.  
   
-## Note  
- La funzione `setjmp` salva un ambiente dello stack, che successivamente è possibile ripristinare, utilizzando `longjmp`.  Quando `setjmp` e `longjmp` vengono utilizzate insieme, offrono un metodo per eseguire `goto` non in locale.  In genere vengono utilizzate per passare il controllo di esecuzione alla gestione degli errori o al codice di ripristino in una routine chiamata in precedenza senza utilizzare le convenzioni normali di chiamata o restituzione.  
+## <a name="remarks"></a>Note  
+ La funzione `setjmp` salva un ambiente dello stack che successivamente è possibile ripristinare utilizzando `longjmp`. Quando `setjmp` e `longjmp` vengono utilizzate insieme, offrono un metodo per eseguire `goto` non in locale. In genere vengono utilizzate per passare il controllo di esecuzione alla gestione degli errori o al codice di ripristino in una routine chiamata in precedenza senza utilizzare le convenzioni normali di chiamata o restituzione.  
   
- Una chiamata a `setjmp` salva l'ambiente corrente dello stack in `env`.  Una chiamata successiva a `longjmp` ripristina l'ambiente salvato e ritorna il controllo al punto immediatamente successivo alla corrispondente chiamata `setjmp`.  Tutti i valori di tutte le variabili \(eccetto le variabili del registro\), accessibili al controllo di ricevimento di routine, contengono i valori che avevano quando `longjmp` è stato chiamato.  
+ Una chiamata a `setjmp` salva l'ambiente corrente dello stack in `env`. Una chiamata successiva a `longjmp` ripristina l'ambiente salvato e restituisce il controllo al punto immediatamente successivo alla corrispondente chiamata `setjmp`. Tutte le variabili (eccetto le variabili di registro) accessibili al controllo di ricezione di routine contengono i valori che avevano quando `longjmp` è stato chiamato.  
   
  Non è possibile utilizzare `setjmp` per passare dal codice nativo al codice gestito.  
   
- **Nota** `setjmp` e `longjmp` non supportano la semantica di oggetti C\+\+.  In programmi C\+\+, utilizzare il meccanismo di gestione delle eccezioni C\+\+.  
+ **Nota** `setjmp` e `longjmp` non supportano la semantica degli oggetti C++. In programmi C++, utilizzare il meccanismo di gestione delle eccezioni C++.  
   
- Per ulteriori informazioni, vedere [Utilizzo di setjmp e longjmp](../../cpp/using-setjmp-longjmp.md).  
+ Per altre informazioni, vedere [Uso di setjmp e longjmp](../../cpp/using-setjmp-longjmp.md).  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`setjmp`|\<setjmp.h\>|  
+|-------------|---------------------|  
+|`setjmp`|\<setjmp.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'Introduzione.  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
-## Esempio  
- Vedere un esempio per [\_fpreset](../../c-runtime-library/reference/fpreset.md).  
+## <a name="example"></a>Esempio  
+ Vedere l'esempio per [_fpreset](../../c-runtime-library/reference/fpreset.md).  
   
-## Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione standard C, utilizzare `PInvoke`. Per ulteriori informazioni, vedere [Esempi di Invocazione della Piattaforma](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
+ Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
-## Vedere anche  
- [Controllo processo e ambiente](../../c-runtime-library/process-and-environment-control.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Controllo di processi e ambiente](../../c-runtime-library/process-and-environment-control.md)   
  [longjmp](../../c-runtime-library/reference/longjmp.md)   
- [\_setjmp3](../../c-runtime-library/setjmp3.md)
+ [_setjmp3](../../c-runtime-library/setjmp3.md)

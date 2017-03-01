@@ -1,60 +1,77 @@
 ---
-title: "Struttura identity | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::identity"
-  - "utility/std::identity"
-  - "identity"
-  - "std.identity"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classe di identità"
-  - "struttura di identità"
+title: Struttura identity | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std::identity
+- utility/std::identity
+- identity
+- std.identity
+dev_langs:
+- C++
+helpviewer_keywords:
+- identity class
+- identity structure
 ms.assetid: 990756fd-7969-4b39-ad7e-0878e8dac8fd
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# Struttura identity
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: a7404d2c1a785fd66489421fd7b9689260e0986d
+ms.lasthandoff: 02/24/2017
 
-Una struttura che fornisce una definizione di tipo come parametro di modello.  
+---
+# <a name="identity-structure"></a>Struttura identity
+Struct che fornisce una definizione di tipo come parametro di modello.  
   
-## Sintassi  
-  
+## <a name="syntax"></a>Sintassi  
 ```  
-template<class Type>  
-   struct identity {  
-      typedef Type type;  
-      Type operator()(const Type& _Left) const;  
+struct identity {
+   typedef Type type;
+   Type operator()(const Type& left) const;
    };  
 ```  
-  
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|`_Left`|Il valore da individuare.|  
+|`left`|Valore da identificare.|  
   
-## Note  
- La classe contiene la definizione di tipo public `type`, che corrisponde al tipo di parametro di modello.  Viene utilizzata insieme alla funzione [forward](../Topic/forward.md) del modello per garantire che un parametro di funzione con il tipo desiderato.  
+## <a name="remarks"></a>Note  
+ La classe contiene la definizione di tipo pubblico `type`, che equivale al tipo di parametro di modello. Viene usata insieme alla funzione modello [forward](../standard-library/utility-functions.md#forward) per garantire che un parametro di funzione abbia il tipo desiderato.  
   
- Per la compatibilità con il codice precedente, la classe definisce anche la funzione di identità `operator()` che restituisce il relativo argomento `_Left`.  
+ Per compatibilità con il codice meno recente, la classe definisce anche la funzione di identità `operator()` che restituisce il relativo argomento `left`.  
   
-## Requisiti  
- utilità \<di**Intestazione:** \>  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<utility>  
   
  **Spazio dei nomi:** std  
   
-## Vedere anche  
- [\<utility\>](../standard-library/utility.md)
+## <a name="see-also"></a>Vedere anche  
+ [\<utility>](../standard-library/utility.md)
+
+
+
+

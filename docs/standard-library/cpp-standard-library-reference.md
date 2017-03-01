@@ -1,51 +1,59 @@
 ---
-title: "Riferimento per la libreria standard C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "libraries, C++ standard"
-  - "Libreria standard di C++"
-  - "Libreria standard di C++, riferimenti"
-  - "librerie dei modelli"
+title: Riferimento per la libreria standard C++ | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- C++ Standard Library, reference
+- C++ Standard Library
+- template libraries
+- libraries, Standard C++
 ms.assetid: a37d3ba3-58af-47c7-9ee2-441ccd7b77ee
 caps.latest.revision: 19
-caps.handback.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Riferimento per la libreria standard C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 73761e1f2d4eed0e12ab42d0f1b3a6dec0d66b10
+ms.lasthandoff: 02/24/2017
 
-Un programma C\+\+ può chiamare un numero elevato di funzioni da questa implementazione conforme della Libreria C\+\+ standard.  Queste funzioni eseguono servizi essenziali, ad esempio di input e output e forniscono implementazioni efficienti delle operazioni di uso più comune.  
+---
+# <a name="c-standard-library-reference"></a>Riferimento per la libreria standard C++
+Un programma C++ può chiamare un numero elevato di funzioni da questa implementazione conforme della libreria standard di C++. Queste funzioni eseguono servizi essenziali, ad esempio di input e output e forniscono implementazioni efficienti delle operazioni di uso più comune.  
   
- Per altre informazioni sulle librerie di runtime di Visual C\+\+, vedere [Funzionalità libreria CRT](../c-runtime-library/crt-library-features.md).  
+ Per altre informazioni sulle librerie di runtime di Visual C++, vedere [CRT Library Features](../c-runtime-library/crt-library-features.md) (Funzionalità libreria CRT).  
   
-## In questa sezione  
- [Panoramica di STL](../standard-library/cpp-standard-library-overview.md)  
- Contiene una panoramica sull'implementazione Microsoft della libreria C\+\+ standard.  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Panoramica sulla libreria standard C++](../standard-library/cpp-standard-library-overview.md)  
+ Contiene una panoramica sull'implementazione Microsoft della libreria standard di C++.  
   
- [Programmazione di iostream](../standard-library/iostream-programming.md)  
+ [iostream Programming](../standard-library/iostream-programming.md) (Programmazione di iostream)  
  Contiene una panoramica sulla programmazione di iostream.  
   
- [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)  
- Contiene collegamenti ad argomenti di riferimento relativi alla libreria C\+\+ standard.  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md) (Riferimento file di intestazione)  
+ Contiene collegamenti ad argomenti di riferimento relativi alla libreria standard di C++ con esempi di codice.  
   
-## Sezioni correlate  
- [Visual C\+\+ Reference](http://msdn.microsoft.com/it-it/1ba03b5c-8229-4f63-b08c-6c12141d6ab1)  
- Contiene collegamenti ad argomenti in cui sono descritti i riferimenti ai linguaggi C e C\+\+, le librerie fornite con Visual C\+\+, il modello a oggetti estensibilità di Visual C\+\+ e Microsoft Macro Assembler \(MASM\).  
-  
- [NIB: Samples Included in Visual C\+\+](http://msdn.microsoft.com/it-it/c9ec56b3-2bbd-49b4-8a4c-9ed4b78b7a84)  
- Vengono forniti collegamenti a codice di esempio in cui vengono illustrate le funzionalità di Visual C\+\+ e le librerie e le tecnologie supportate.  
-  
-## Vedere anche  
- [Visual C\+\+ Libraries Reference](http://msdn.microsoft.com/it-it/fec23c40-10c0-4857-9cdc-33a3b99b30ae)
+
+

@@ -1,58 +1,70 @@
 ---
-title: "Struct binary_function | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.binary_function"
-  - "functional/std::binary_function"
-  - "std::binary_function"
-  - "binary_function"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "binary_function (classe)"
+title: Struct binary_function | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std.binary_function
+- functional/std::binary_function
+- std::binary_function
+- binary_function
+dev_langs:
+- C++
+helpviewer_keywords:
+- binary_function class
 ms.assetid: 79b6d53d-644c-4add-b0ba-3a5f40f69c60
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# Struct binary_function
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
+ms.openlocfilehash: 7fa7e543bbf51583c34ade759112a6e101a06f46
+ms.lasthandoff: 02/24/2017
 
-Una struttura di base vuoto che definisce i tipi che possono essere ereditati dalle classi derivate che fornisce un oggetto funzione binario.  
+---
+# <a name="binaryfunction-struct"></a>Struct binary_function
+Struct di base vuoto che definisce i tipi che possono essere ereditati dalle classi derivate che specificano un oggetto funzione binaria.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
+```    
+struct binary_function {
+   typedef Arg1 first_argument_type;
+   typedef Arg2 second_argument_type;
+   typedef Result result_type;    
+   };  
+ ```  
+## <a name="remarks"></a>Note  
+ Lo struct modello serve come base per le classi che definiscono una funzione membro del form:  
   
-```  
+ **result_type operator()**( **constfirst_argument_type&**,  
   
-   template<class Arg1, class Arg2, class Result>  
-struct binary_function {  
-   typedef Arg1 first_argument_type;  
-   typedef Arg2 second_argument_type;  
-   typedef Result result_type;  
-};  
-```  
+ **const second_argument_type&** ) **const**  
   
-## Note  
- La struttura del modello funge da base per le classi che definiscono una funzione membro del form:  
+ Tutte le funzioni binarie possono fare riferimento al primo tipo di argomento come **first_argument_type**, al secondo tipo di argomento come **second_argument_type**e al tipo restituito come ***result_type***.  
   
- **result\_type operator\(\)**\( **const first\_argument\_type&**,  
+## <a name="example"></a>Esempio  
   
- **const second\_argument\_type&** \) **const**  
-  
- Tutte queste funzioni binarie possono fare riferimento al primo tipo di argomento viene illustrato come **first\_argument\_type**, al secondo tipo di argomento viene illustrato come **second\_argument\_type** e il relativo tipo restituito come ***result\_type***.  
-  
-## Esempio  
-  
-```  
+```cpp  
 // functional_binary_function.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -103,17 +115,23 @@ int main( )
       cout << *Iter3 << " ";  
    cout << ")" << endl;  
 }  
+\* Output:   
+The vector v1 = ( 11 5.5 3.66667 2.75 2.2 1.83333 )  
+The vector v2 = ( -0 -2 -4 -6 -8 -10 )  
+The element-wise averages are: ( 5.5 1.75 -0.166667 -1.625 -2.9 -4.08333 )  
+*\  
+  
 ```  
   
-  **The vector v1 \= \( 11 5.5 3.66667 2.75 2.2 1.83333 \)**  
-**The vector v2 \= \( \-0 \-2 \-4 \-6 \-8 \-10 \)**  
-**Le medie come elemento sono: \(5,5 1,75 \-0,166667 \-1,625 \-2,9 \-4,08333\)**   
-## Requisiti  
- **Intestazione:** \<funzionale\>  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<functional>  
   
  **Spazio dei nomi:** std  
   
-## Vedere anche  
- [Esempio di struttura binary\_function](../misc/binary-function-structure-sample.md)   
- [Sicurezza dei thread nella libreria standard C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Libreria di modelli standard](../misc/standard-template-library.md)
+## <a name="see-also"></a>Vedere anche  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)  (Sicurezza dei thread nella libreria standard C++)  
+ [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

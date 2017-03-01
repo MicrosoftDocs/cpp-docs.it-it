@@ -1,53 +1,69 @@
 ---
-title: "_resetstkoflw | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_resetstkoflw"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "resetstkoflw"
-  - "_resetstkoflw"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_resetstkoflw (funzione)"
-  - "resetstkoflw (funzione)"
-  - "overflow dello stack"
-  - "stack, recupero"
+title: _resetstkoflw | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _resetstkoflw
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- resetstkoflw
+- _resetstkoflw
+dev_langs:
+- C++
+helpviewer_keywords:
+- resetstkoflw function
+- stack overflow
+- stack, recovering
+- _resetstkoflw function
 ms.assetid: 319529cd-4306-4d22-810b-2063f3ad9e14
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# _resetstkoflw
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
+ms.openlocfilehash: 23b9a848acb3e1dcd5003fb9369de2c1daf55ce9
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="resetstkoflw"></a>_resetstkoflw
 Recupera dall'overflow dello stack.  
   
 > [!IMPORTANT]
->  Questa API non può essere utilizzata nelle applicazioni che vengono eseguite in Windows Runtime.  Per ulteriori informazioni, vedere [Funzioni CRT non supportate con \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere l'articolo relativo alle [funzioni CRT non supportate con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -55,39 +71,39 @@ int _resetstkoflw ( void );
   
 ```  
   
-## Valore restituito  
- Diverso da zero se la funzione ha esito positivo, zero se non riesce.  
+## <a name="return-value"></a>Valore restituito  
+ Diverso da zero se la funzione ha esito positivo, zero se ha esito negativo.  
   
-## Note  
- La funzione `_resetstkoflw` consente di recuperare da una condizione di overflow dello stack, consentendo a un programma di continuare invece di restituire un errore di eccezione irreversibile.  Se la funzione `_resetstkoflw` non viene chiamata, dopo l'eccezione precedente non è presente alcun guard page.  Al successivo overflow dello stack non ci sarà alcuna eccezione e il processo terminerà senza alcun avviso.  
+## <a name="remarks"></a>Note  
+ La funzione `_resetstkoflw` esegue il ripristino da una condizione di overflow dello stack, consentendo di continuare l'esecuzione di un programma anziché interromperlo con un errore di eccezione irreversibile. Se la funzione `_resetstkoflw` non viene chiamata, dopo l'eccezione precedente non è presente alcuna pagina di protezione. La volta successiva che si verifica un overflow dello stack, non verrà generata alcuna eccezione e il processo viene terminato senza avvisi.  
   
- Se un thread in un'applicazione genera un'eccezione **EXCEPTION\_STACK\_OVERFLOW**, il thread ha lasciato il relativo stack in uno stato danneggiato.  Ciò si differenzia da altre eccezioni come **EXCEPTION\_ACCESS\_VIOLATION** o **EXCEPTION\_INT\_DIVIDE\_BY\_ZERO**, in cui lo stack non è danneggiato.  Lo stack è impostato su un valore arbitrario piccolo quando il programma viene caricato per la prima volta.  Lo stack poi cresce su richiesta per soddisfare le esigenze del thread.  Ciò viene implementato inserendo una pagina con accesso di PAGE\_GUARD alla fine dello stack corrente.  Per ulteriori informazioni, vedere [Creazione di Guard Pages](http://msdn.microsoft.com/library/windows/desktop/aa366549).  
+ Se un thread in un'applicazione causa un'eccezione **EXCEPTION_STACK_OVERFLOW**, il thread ha lasciato il relativo stack in uno stato danneggiato. Ciò si differenzia da altre eccezioni come **EXCEPTION_ACCESS_VIOLATION** o **EXCEPTION_INT_DIVIDE_BY_ZERO**, in cui lo stack non è danneggiato. Lo stack è impostato su un valore arbitrario piccolo quando il programma viene caricato per la prima volta. Lo stack poi cresce su richiesta per soddisfare le esigenze del thread. Ciò viene implementato inserendo una pagina con accesso PAGE_GUARD alla fine dello stack corrente. Per altre informazioni, vedere [Creating Guard Pages](http://msdn.microsoft.com/library/windows/desktop/aa366549) (Creazione di guard page).  
   
  Quando il codice porta il puntatore dello stack a puntare a un indirizzo di questa pagina, si verifica un'eccezione e il sistema esegue le tre seguenti cose:  
   
--   Rimuove la protezione di PAGE\_GUARD nella pagina di protezione in modo che la thread possa leggere e scrivere dati in memoria.  
+-   Rimuove la protezione di PAGE_GUARD nella pagina di protezione in modo che il thread possa leggere e scrivere dati in memoria.  
   
--   Alloca una nuova pagina guard che è localizzata una pagina sotto all'ultima.  
+-   Alloca una nuova pagina di protezione che è localizzata una pagina sotto l'ultima.  
   
 -   Riesegue l'istruzione che ha generato l'eccezione.  
   
- In questo modo, il sistema può aumentare la dimensione dello stack per il thread automaticamente.  Ogni thread in un processo ha una dimensione dello stack massima.  La dimensione dello stack viene impostata in fase di compilazione da [\/STACK \(Allocazioni stack\)](../../build/reference/stack-stack-allocations.md), o dall'istruzione [STACKSIZE](../../build/reference/stacksize.md) nel file .def per il progetto.  
+ In questo modo, il sistema può aumentare automaticamente la dimensione dello stack per il thread. Ogni thread in un processo ha una dimensione dello stack massima. La dimensione dello stack viene impostata in fase di compilazione dall'istruzione [/STACK (Allocazioni stack)](../../build/reference/stack-stack-allocations.md) o [STACKSIZE](../../build/reference/stacksize.md) nel file con estensione def per il progetto.  
   
  Quando la dimensione dello stack massima viene superata, il sistema esegue le tre cose seguenti:  
   
--   Rimuove la protezione di PAGE\_GUARD nella pagina di protezione, come descritto in precedenza.  
+-   Rimuove la protezione di PAGE_GUARD nella pagina di protezione, come descritto in precedenza.  
   
--   Tenta di allocare una nuova pagina guard sotto all'ultima.  Tuttavia, questo fallisce perché la dimensione dello stack massima è stata superata.  
+-   Tenta di allocare una nuova pagina di protezione sotto l'ultima. Tuttavia, questo ha esito negativo perché la dimensione dello stack massima è stata superata.  
   
 -   Genera un'eccezione in modo che il thread possa gestirla nel blocco di eccezioni.  
   
- Si noti che, a questo punto, lo stack non ha più una pagina guard.  La volta successiva che il programma aumenta lo stack fino all'estremità, in cui deve esserci una pagina guard, il programma scrive oltre la fine dello stack e provoca una violazione di accesso.  
+ Si noti che, a questo punto, lo stack non ha più una pagina di protezione. La volta successiva che il programma aumenta lo stack fino alla fine, in cui deve esserci una pagina di protezione, il programma scrive oltre la fine dello stack e provoca una violazione di accesso.  
   
- Chiamare `_resetstkoflw` per ripristinare la pagina di protezione ogni volta che il ripristino viene eseguito dopo un'eccezione di overflow dello stack.  Questa funzione può essere chiamata dalla parte principale di un blocco `__except` o all'esterno di un blocco **\_\_except** .  Tuttavia, esistono alcune limitazioni sui casi in cui devono essere utilizzati.  `_resetstkoflw` non deve mai essere chiamato da:  
+ Chiamare `_resetstkoflw` per ripristinare la pagina di protezione ogni volta che il ripristino viene eseguito dopo un'eccezione di overflow dello stack. Questa funzione può essere chiamata dall'interno della parte principale di un blocco `__except` o dall'esterno di un blocco **__except**. Tuttavia, esistono alcune limitazioni sui casi in cui deve essere utilizzata. `_resetstkoflw` non deve mai essere chiamato da:  
   
 -   Un'espressione di filtro.  
   
--   Una funzione filtro.  
+-   Una funzione di filtro.  
   
 -   Una funzione chiamata da una funzione di filtro.  
   
@@ -95,28 +111,28 @@ int _resetstkoflw ( void );
   
 -   Un blocco `__finally`.  
   
- A questi punti, lo stack non è ancora sufficientemente rilassato.  
+ A questi punti, lo stack non è ancora sufficientemente svuotato.  
   
- Le eccezioni di overflow dello stack vengono generate come eccezioni strutturate, non eccezioni C\+\+, pertanto `_resetstkoflw` non è utile in un ordinario blocco **catch** in quanto non afferra un'eccezione di overflow dello stack.  Tuttavia, se [\_set\_se\_translator](../../c-runtime-library/reference/set-se-translator.md) viene utilizzato per implementare un convertitore di eccezioni strutturate che genera eccezioni C\+\+ \(come nel secondo esempio\), verrà generata un'eccezione di overflow dello stack in un'eccezione C\+\+ che può essere gestita dal blocco catch C\+\+.  
+ Le eccezioni di overflow dello stack vengono generate come eccezioni strutturate, non eccezioni C++, pertanto `_resetstkoflw` non è utile in un blocco **catch** ordinario in quanto non rileverà un'eccezione di overflow dello stack. Tuttavia, se si usa [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md) per implementare un convertitore di eccezioni strutturate che genera eccezioni C++ (come nel secondo esempio), per un'eccezione di overflow dello stack viene restituita un'eccezione C++ che può essere gestita da un blocco catch C++.  
   
- Non è sicuro chiamare **\_resetstkoflw** nel blocco catch C\+\+ che viene raggiunto da un'eccezione generata dalla funzione di conversione delle eccezioni strutturate.  In questo caso, lo spazio dello stack non viene liberato e il puntatore dello stack non viene reimpostato fino all'esterno del blocco catch, anche se i distruttori sono stati chiamati per tutti gli oggetti distruttibili prima del blocco catch.  Questa funzione non deve essere chiamata finché lo spazio dello stack non è libero e il puntatore dello stack non è stato reimpostato.  Pertanto, deve essere chiamata solo dopo l'uscita dal blocco catch.  Nel blocco catch bisognerebbe utilizzare uno spazio di stack il più piccolo possibile, poiché un overflow dello stack che si verifica nel blocco catch il quale sta cercando di recuperare da un overflow dello stack precedente non reversibile e può determinare che un programma non risponda più come overflow nel blocco catch, genera un'eccezione che a sua volta è gestita dallo stesso blocco catch.  
+ Non è sicuro chiamare **_resetstkoflw** in un blocco catch C++ che viene raggiunto da un'eccezione generata dalla funzione del convertitore di eccezioni strutturate. In questo caso, lo spazio dello stack non viene liberato e il puntatore dello stack non viene reimpostato fino all'esterno del blocco catch, anche se i distruttori sono stati chiamati per tutti gli oggetti distruttibili prima del blocco catch. Questa funzione non deve essere chiamata finché lo spazio dello stack non è libero e il puntatore dello stack non è stato reimpostato. Pertanto, deve essere chiamata solo dopo l'uscita dal blocco catch. Nel blocco catch è consigliabile utilizzare uno spazio di stack il più piccolo possibile, poiché un overflow dello stack che si verifica nel blocco catch che sta tentando di risolvere un overflow dello stack precedente non è reversibile e il programma può smettere di rispondere dal momento che l'overflow nel blocco catch genera un'eccezione che, a sua volta, è gestita dallo stesso blocco catch.  
   
- Esistono situazioni in cui **\_resetstkoflw** può avere esito negativo anche se utilizzato in una posizione corretta, ad esempio in un blocco **\_\_except** .  Se, anche dopo lo svolgimento dello stack, non esiste ancora sufficientemente spazio disponibile per eseguire **\_resetstkoflw** senza scrivere nell'ultima pagina dello stack, **\_resetstkoflw** non riesce a reimpostare l'ultima pagina dello stack come pagina di protezione e ritorna 0, che indica fallimento.  Di conseguenza, l'utilizzo sicuro di questa funzione deve includere il controllo del valore restituito anziché presupporre che lo stack sia sicuro da utilizzare.  
+ Esistono situazioni in cui la funzione **_resetstkoflw** può avere esito negativo anche se usata in una posizione corretta, ad esempio in un blocco **__except**. Se, anche dopo la rimozione dello stack, non esiste ancora spazio dello stack sufficiente per eseguire **_resetstkoflw** senza scrivere nell'ultima pagina dello stack, **_resetstkoflw** non riesce a reimpostare l'ultima pagina dello stack come guard page e restituisce 0, a indicare una condizione di errore. Di conseguenza, l'utilizzo sicuro di questa funzione deve includere la verifica del valore restituito anziché supporre che lo stack sia sicuro da utilizzare.  
   
- La gestione delle eccezioni strutturate non rileva un'eccezione `STATUS_STACK_OVERFLOW` quando l'applicazione viene compilata con `/clr` o `/clr:pure` \(vedere [\/clr \(Compilazione Common Language Runtime\)](../../build/reference/clr-common-language-runtime-compilation.md)\).  
+ Gestione delle eccezioni strutturate non rileva un `STATUS_STACK_OVERFLOW` eccezione quando l'applicazione viene compilata con `/clr` (vedere [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)).  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`_resetstkoflw`|\<malloc.h\>|  
+|-------------|---------------------|  
+|`_resetstkoflw`|\<malloc.h>|  
   
- Per ulteriori informazioni di compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
- **Librerie:** Tutte le versioni di [Funzionalità libreria CRT](../../c-runtime-library/crt-library-features.md).  
+ **Librerie:** tutte le versioni delle [funzionalità della libreria CRT](../../c-runtime-library/crt-library-features.md).  
   
-## Esempio  
- L'esempio riportato di seguito mostra il modo d'uso raccomandato della funzione `_resetstkoflw`.  
+## <a name="example"></a>Esempio  
+ L'esempio riportato di seguito mostra l'utilizzo consigliato della funzione `_resetstkoflw`.  
   
 ```  
 // crt_resetstkoflw.c  
@@ -185,7 +201,7 @@ int main(int ac)
 }  
 ```  
   
-## Esempio di output  
+## <a name="sample-output"></a>Esempio di output  
  Senza argomenti del programma:  
   
 ```  
@@ -219,10 +235,10 @@ loop #10
 resetting stack overflow  
 ```  
   
-### Descrizione  
- Nell'esempio seguente viene illustrato l'utilizzo raccomandato di `_resetstkoflw` in un programma in cui le eccezioni strutturate vengono convertite in eccezioni C\+\+.  
+### <a name="description"></a>Descrizione  
+ Nell'esempio seguente viene illustrato l'utilizzo raccomandato di `_resetstkoflw` in un programma in cui le eccezioni strutturate vengono convertite in eccezioni C++.  
   
-### Codice  
+### <a name="code"></a>Codice  
   
 ```  
 // crt_resetstkoflw2.cpp  
@@ -304,7 +320,7 @@ int main ( )
 }  
 ```  
   
-## Esempio di output  
+## <a name="sample-output"></a>Esempio di output  
   
 ```  
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24  
@@ -312,8 +328,8 @@ Stack overflow!
 Recovered from stack overflow and allocated 100,000 bytes using _alloca.  
 ```  
   
-## Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione standard C, utilizzare `PInvoke`. Per ulteriori informazioni, vedere [Esempi di Invocazione della Piattaforma](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
+ Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
-## Vedere anche  
- [\_alloca](../../c-runtime-library/reference/alloca.md)
+## <a name="see-also"></a>Vedere anche  
+ [_alloca](../../c-runtime-library/reference/alloca.md)

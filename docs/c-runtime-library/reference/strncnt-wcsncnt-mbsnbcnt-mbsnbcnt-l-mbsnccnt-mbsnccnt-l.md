@@ -1,79 +1,95 @@
 ---
-title: "_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mbsnbcnt_l"
-  - "_mbsnccnt"
-  - "_wcsncnt"
-  - "_strncnt"
-  - "_mbsnccnt_l"
-  - "_mbsnbcnt"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_mbsnbcnt"
-  - "wcsncnt"
-  - "_tcsnbcnt"
-  - "_mbsnccnt"
-  - "_ftcsnbcnt"
-  - "mbsnbcnt"
-  - "strncnt"
-  - "mbsnbcnt_l"
-  - "mbsnccnt_l"
-  - "mbsnccnt"
-  - "_strncnt"
-  - "_wcsncnt"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_mbsnbcnt (funzione)"
-  - "_mbsnbcnt_l (funzione)"
-  - "_mbsnccnt (funzione)"
-  - "_mbsnccnt_l (funzione)"
-  - "_strncnt (funzione)"
-  - "_tcsnbcnt (funzione)"
-  - "_wcsncnt (funzione)"
-  - "mbsnbcnt (funzione)"
-  - "mbsnbcnt_l (funzione)"
-  - "mbsnccnt (funzione)"
-  - "mbsnccnt_l (funzione)"
-  - "strncnt (funzione)"
-  - "tcsnbcnt (funzione)"
-  - "wcsncnt (funzione)"
+title: _strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mbsnbcnt_l
+- _mbsnccnt
+- _wcsncnt
+- _strncnt
+- _mbsnccnt_l
+- _mbsnbcnt
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _mbsnbcnt
+- wcsncnt
+- _tcsnbcnt
+- _mbsnccnt
+- _ftcsnbcnt
+- mbsnbcnt
+- strncnt
+- mbsnbcnt_l
+- mbsnccnt_l
+- mbsnccnt
+- _strncnt
+- _wcsncnt
+dev_langs:
+- C++
+helpviewer_keywords:
+- _strncnt function
+- _mbsnbcnt function
+- _mbsnbcnt_l function
+- _mbsnccnt_l function
+- mbsnbcnt_l function
+- mbsnbcnt function
+- tcsnbcnt function
+- mbsnccnt_l function
+- strncnt function
+- _tcsnbcnt function
+- mbsnccnt function
+- wcsncnt function
+- _mbsnccnt function
+- _wcsncnt function
 ms.assetid: 2a022e9e-a307-4acb-a66b-e56e5357f848
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# _strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: de740ec295489829d236e2249f92ef98de655ad0
+ms.lasthandoff: 02/24/2017
 
-Restituisce il numero di caratteri o di byte in un conteggio specificato.  
+---
+# <a name="strncnt-wcsncnt-mbsnbcnt-mbsnbcntl-mbsnccnt-mbsnccntl"></a>_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l
+Restituisce il numero di caratteri o byte entro un numero specificato.  
   
 > [!IMPORTANT]
->  `_mbsnbcnt`, `_mbsnbcnt_l`, `_mbsnccnt`, e `_mbsnccnt_l` non possono essere usati in applicazioni eseguite in Windows Runtime.  Per ulteriori informazioni, vedere [Funzioni CRT non supportate con \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+> Non è possibile usare  `_mbsnbcnt`, `_mbsnbcnt_l`, `_mbsnccnt` e `_mbsnccnt_l` in applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere l'articolo relativo alle [funzioni CRT non supportate con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 size_t _strncnt(  
@@ -105,7 +121,7 @@ size_t _mbsnccnt_l(
   
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `str`  
  Stringa da esaminare.  
   
@@ -113,46 +129,46 @@ size_t _mbsnccnt_l(
  Numero di caratteri o byte da esaminare in `str`.  
   
  `locale`  
- Impostazioni locali da utilizzare.  
+ Impostazioni locali da usare.  
   
-## Valore restituito  
- `_mbsnbcnt` e `_mbsnbcnt_l` restituiscono il numero di byte trovato nel primo `count` di caratteri multibyte di `str`.  `_mbsnccnt` e `_mbsnccnt_l` restituiscono il numero di caratteri trovati nel primo `count` di byte di `str`.  Se un carattere null viene visualizzato prima che la revisione di `str` sia stata completata, restituiscono il numero di byte o caratteri trovati prima del carattere null.  Se `str` è minore di `count` caratteri o byte, restituiscono il numero di caratteri o byte nella stringa.  Se `count` è minore di zero, restituiscono 0.  Nelle versioni precedenti, queste funzioni avevano un valore di ritorno di tipo `int` anziché `size_t`.  
+## <a name="return-value"></a>Valore restituito  
+ `_mbsnbcnt` e `_mbsnbcnt_l` restituiscono il numero di byte trovati entro i primi `count` caratteri multibyte di `str`. `_mbsnccnt` e `_mbsnccnt_l` restituiscono il numero di caratteri trovati entro i primi `count` byte di `str`. Se viene rilevato un carattere NULL prima di completare l'esame di `str`, queste funzioni restituiscono il numero di byte o caratteri trovati prima del carattere NULL. Se `str` contiene meno di `count` caratteri o byte, le funzioni restituiscono il numero di caratteri o byte nella stringa. Se `count` è minore di zero, le funzioni restituiscono 0. Nelle versioni precedenti, il valore restituito di queste funzioni è di tipo `int` anziché `size_t`.  
   
- `_strncnt` restituisce il numero di caratteri nei primi `count` byte della stringa a un byte `str`.  `_wcsncnt` restituisce il numero di caratteri nei primi `count` caratteri wide della stringa con caratteri estesi `str`.  
+ `_strncnt` restituisce il numero di caratteri nei primi `count` byte della stringa a byte singolo `str`. `_wcsncnt` restituisce il numero di caratteri nei primi `count` caratteri wide della stringa a caratteri wide `str`.  
   
-## Note  
- `_mbsnbcnt` e `_mbsnbcnt_l` contano il numero di byte trovato nel primo `count` di caratteri multibyte di `str`.  `_mbsnbcnt` e `_mbsnbcnt_l` sostituiscono `mtob` e devono essere utilizzati al posto di `mtob`.  
+## <a name="remarks"></a>Note  
+ `_mbsnbcnt` e `_mbsnbcnt_l` conteggiano il numero di byte trovati entro i primi `count` caratteri multibyte di `str`. `_mbsnbcnt` e `_mbsnbcnt_l` sostituiscono `mtob` e dovrebbero essere usate al posto di `mtob`.  
   
- `_mbsnccnt` e `_mbsnccnt_l` contano il numero di caratteri trovati nel primo `count` di byte di `str`.  Se `_mbsnccnt` e `_mbsnccnt_l` incontrano un valore NULL nel secondo byte di un carattere a doppio byte, il primo byte viene considerato come NULL e non è incluso nel conteggio di valore restituito.  `_mbsnccnt` e `_mbsnccnt_l` sostituiscono `btom` e devono essere utilizzati al posto di `btom`.  
+ `_mbsnccnt` e `_mbsnccnt_l` conteggiano il numero di caratteri trovati entro i primi `count` byte di `str`. Se `_mbsnccnt` e `_mbsnccnt_l` rilevato un valore NULL nel secondo byte di un carattere DBCS, anche il primo byte viene considerato NULL e non viene incluso nel valore del conteggio restituito. `_mbsnccnt` e `_mbsnccnt_l` sostituiscono `btom` e dovrebbero essere usate al posto di `btom`.  
   
- Se `str` è un puntatore null o `count` è 0, queste funzioni invocano il gestore di parametri non validi come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md), `errno` è impostato su `EINVAL` e la funzione restituisce 0.  
+ Se `str` è un puntatore Null o se `count` è 0, queste funzioni richiamano il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md), `errno` viene impostato su `EINVAL` e la funzione restituisce 0.  
   
- Il valore di output è interessato dall'impostazione dell'impostazione di categoria `LC_CTYPE` delle impostazioni locali; vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) per ulteriori informazioni.  Le versioni di queste funzioni senza il suffisso `_l` utilizzano le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali; le versioni con il suffisso `_l` sono identiche, ad eccezione del fatto che utilizzano il parametro delle impostazioni locali che viene passato.  Per ulteriori informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ La configurazione dell'impostazione della categoria `LC_CTYPE` delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso `_l` usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso `_l` sono identiche ma usano il parametro passato relativo alle impostazioni locali. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
   
-### Mapping di routine su testo generico  
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
-|Routine|\_UNICODE e \_MBCS non definiti|\_MBCS definito|\_UNICODE definito|  
-|-------------|-------------------------------------|---------------------|------------------------|  
+|Routine|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
+|-------------|--------------------------------------|--------------------|-----------------------|  
 |`_tcsnbcnt`|`_strncnt`|`_mbsnbcnt`|`_wcsncnt`|  
 |`_tcsnccnt`|`_strncnt`|`_mbsnbcnt`|`n/a`|  
 |`_wcsncnt`|`n/a`|`n/a`|`_mbsnbcnt`|  
 |`_wcsncnt`|`n/a`|`n/a`|`_mbsnccnt`|  
 |`n/a`|`n/a`|`_mbsnbcnt_l`|`_mbsnccnt_l`|  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`_mbsnbcnt`|\<mbstring.h\>|  
-|`_mbsnbcnt_l`|\<mbstring.h\>|  
-|`_mbsnccnt`|\<mbstring.h\>|  
-|`_mbsnccnt_l`|\<mbstring.h\>|  
-|`_strncnt`|\<tchar.h\>|  
-|`_wcsncnt`|\<tchar.h\>|  
+|-------------|---------------------|  
+|`_mbsnbcnt`|\<mbstring.h>|  
+|`_mbsnbcnt_l`|\<mbstring.h>|  
+|`_mbsnccnt`|\<mbstring.h>|  
+|`_mbsnccnt_l`|\<mbstring.h>|  
+|`_strncnt`|\<tchar.h>|  
+|`_wcsncnt`|\<tchar.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_mbsnbcnt.c  
@@ -173,17 +189,17 @@ int main( void )
 }  
 ```  
   
-## Output  
+## <a name="output"></a>Output  
   
 ```  
 The first 10 characters are single-byte.  
 ```  
   
-## Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione standard C, utilizzare `PInvoke`. Per ulteriori informazioni, vedere [Esempi di Invocazione della Piattaforma](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
+ Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md)   
  [Impostazioni locali](../../c-runtime-library/locale.md)   
  [Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [\_mbsnbcat, \_mbsnbcat\_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)
+ [_mbsnbcat, _mbsnbcat_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)

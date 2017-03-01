@@ -1,32 +1,48 @@
 ---
-title: "Classe overflow_error | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::overflow_error"
-  - "std.overflow_error"
-  - "overflow_error"
-  - "stdexcept/std::overflow_error"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "overflow_error (classe)"
+title: Classe overflow_error | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std::overflow_error
+- std.overflow_error
+- overflow_error
+- stdexcept/std::overflow_error
+dev_langs:
+- C++
+helpviewer_keywords:
+- overflow_error class
 ms.assetid: bae7128d-e36b-4a45-84f1-2f89da441d20
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# Classe overflow_error
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: cee19153e5110b82758c8e1d77be085accda568d
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="overflowerror-class"></a>Classe overflow_error
 La classe funge da classe di base per tutte le eccezioni generate per segnalare un overflow aritmetico.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -42,11 +58,11 @@ public:
 ```  
   
 ## <a name="remarks"></a>Note  
- Il valore restituito da [cosa](../standard-library/exception-class1.md) è una copia di **messaggio**`.`[dati](../standard-library/basic-string-class.md#basic_string__data).  
+ Il valore restituito da [what](../standard-library/exception-class.md) è una copia di **message**`.`[data](../standard-library/basic-string-class.md#basic_string__data).  
   
 ## <a name="example"></a>Esempio  
   
-```  
+```cpp  
 // overflow_error.cpp  
 // compile with: /EHsc /GR  
 #include <bitset>  
@@ -76,11 +92,12 @@ Type class std::overflow_error
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** \< stdexcept>  
+ **Intestazione:** \<stdexcept>  
   
  **Spazio dei nomi:** std  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe runtime_error](../standard-library/runtime-error-class.md)   
- [Sicurezza dei thread nella libreria Standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
 

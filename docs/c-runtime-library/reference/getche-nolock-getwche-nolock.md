@@ -1,90 +1,106 @@
 ---
-title: "_getche_nolock, _getwche_nolock | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_getche_nolock"
-  - "_getwche_nolock"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_getche_nolock"
-  - "_gettche_nolock"
-  - "_getwche_nolock"
-  - "getche_nolock"
-  - "getwche_nolock"
-  - "gettche_nolock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_getche_nolock (funzione)"
-  - "_gettche_nolock (funzione)"
-  - "_getwche_nolock (funzione)"
-  - "caratteri, recupero dalla console"
-  - "console, lettura"
-  - "getche_nolock (funzione)"
-  - "gettche_nolock (funzione)"
-  - "getwche_nolock (funzione)"
+title: _getche_nolock, _getwche_nolock | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _getche_nolock
+- _getwche_nolock
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _getche_nolock
+- _gettche_nolock
+- _getwche_nolock
+- getche_nolock
+- getwche_nolock
+- gettche_nolock
+dev_langs:
+- C++
+helpviewer_keywords:
+- characters, getting from console
+- _gettche_nolock function
+- getwche_nolock function
+- _getche_nolock function
+- getche_nolock function
+- console, reading from
+- _getwche_nolock function
+- gettche_nolock function
 ms.assetid: 9e853ad4-4d8a-4442-9ae5-da4b434f0b8c
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# _getche_nolock, _getwche_nolock
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 71fd00e8a887335f288a3d8a44fb136d88bfe30d
+ms.lasthandoff: 02/24/2017
 
-Ottiene un carattere dalla console, con echo e senza bloccare la thread.  
+---
+# <a name="getchenolock-getwchenolock"></a>_getche_nolock, _getwche_nolock
+Ottiene un carattere dalla console e lo visualizza (echo) senza bloccare il thread.  
   
 > [!IMPORTANT]
->  Questa API non può essere utilizzata nelle applicazioni che vengono eseguite in Windows Runtime.  Per ulteriori informazioni, vedere [Funzioni CRT non supportate con \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere l'articolo relativo alle [funzioni CRT non supportate con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 int _getche_nolock( void );  
 wint_t _getwche_nolock( void );  
 ```  
   
-## Valore restituito  
- Restituisce il carattere letto.  Nessun ritorno di errore.  
+## <a name="return-value"></a>Valore restituito  
+ Restituisce il carattere letto. Non vi è restituzione di errori.  
   
-## Note  
- `_getche_nolock` e `_getwche_nolock` sono identiche a `_getche` e `_getwche` ad eccezione del fatto che non proteggono dalle interferenze da parte di altre thread.  Potrebbero essere più veloci perché non comportano un sovraccarico che blocca altri thread.  Utilizzare queste funzioni solo in contesti thread\-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.  
+## <a name="remarks"></a>Note  
+ `_getche_nolock` e `_getwche_nolock` sono identiche a `_getche` e a `_getwche`, ad eccezione del fatto che non sono protette da interferenze da parte di altri thread. Potrebbero essere più veloci perché non comportano un sovraccarico che blocca altri thread. Utilizzare queste funzioni solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.  
   
-### Mapping di routine su testo generico  
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
-|Routine Tchar.h|\_UNICODE e \_MBCS non definiti|\_MBCS definito|\_UNICODE definito|  
-|---------------------|-------------------------------------|---------------------|------------------------|  
+|Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_gettche_nolock`|`_getche_nolock`|`_getch_nolock`|`_getwche_nolock`|  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`_getche_nolock`|\<conio.h\>|  
-|`_getwche_nolock`|\<conio.h\> o \<wchar.h\>|  
+|-------------|---------------------|  
+|`_getche_nolock`|\<conio.h>|  
+|`_getwche_nolock`|\<conio.h> o \<wchar.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_getche_nolock.c  
@@ -112,12 +128,16 @@ int main( void )
 }  
 ```  
   
-  **`abcdey`Type 'Y' when finished typing keys: Y**   
-## Equivalente in NET Framework  
- Non applicabile.  Per chiamare la funzione standard C, utilizzare `PInvoke`.  Per ulteriori informazioni, vedere [Esempi di Invocazione della Piattaforma](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
   
-## Vedere anche  
- [I\/O console e porta](../../c-runtime-library/console-and-port-i-o.md)   
- [\_cgets, \_cgetws](../../c-runtime-library/cgets-cgetws.md)   
+abcdeyType 'Y' when finished typing keys: Y  
+```  
+  
+## <a name="net-framework-equivalent"></a>Equivalente in NET Framework  
+ Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
+  
+## <a name="see-also"></a>Vedere anche  
+ [I/O su console e porta](../../c-runtime-library/console-and-port-i-o.md)   
+ [_cgets, _cgetws](../../c-runtime-library/cgets-cgetws.md)   
  [getc, getwc](../../c-runtime-library/reference/getc-getwc.md)   
- [\_ungetch, \_ungetwch, \_ungetch\_nolock, \_ungetwch\_nolock](../../c-runtime-library/reference/ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)
+ [_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock](../../c-runtime-library/reference/ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)

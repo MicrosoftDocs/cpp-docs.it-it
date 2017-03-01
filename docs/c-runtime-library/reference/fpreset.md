@@ -1,69 +1,85 @@
 ---
-title: "_fpreset | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_fpreset"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_fpreset"
-  - "fpreset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fpreset (funzione)"
-  - "numeri a virgola mobile, reimpostazione pacchetto matematica"
-  - "fpreset (funzione)"
+title: _fpreset | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _fpreset
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _fpreset
+- fpreset
+dev_langs:
+- C++
+helpviewer_keywords:
+- fpreset function
+- floating-point numbers, resetting math package
+- _fpreset function
 ms.assetid: f31c6a04-b464-4f07-a7c4-42133360e328
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# _fpreset
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
+ms.openlocfilehash: 0d5bf6ef97700e010a6565eccf7087a613adf9c3
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="fpreset"></a>_fpreset
 Reimposta il pacchetto a virgola mobile.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 void _fpreset( void );  
 ```  
   
-## Note  
- La funzione `_fpreset` reinizializza il pacchetto matematico a virgola mobile.  `_fpreset` viene in genere utilizzato con le funzioni `signal`, `system`, o `_spawn` o `_exec`.  Se un programma intercetta segnali di errore a virgola mobile \(`SIGFPE`\) con `signal`, esso in modo sicuro il recupera gli errori a virgola mobile invocando `_fpreset` e utilizzando `longjmp`.  
+## <a name="remarks"></a>Note  
+ La funzione `_fpreset` reinizializza il pacchetto per le operazioni matematiche a virgola mobile. `_fpreset` viene in genere usata con `signal`, `system` o con le funzioni `_exec` o `_spawn`. Se un programma intercetta segnali di errore a virgola mobile (`SIGFPE`) con `signal`, è possibile eseguire in modo sicuro il ripristino dagli errori a virgola mobile richiamando `_fpreset` e usando `longjmp`.  
   
- Questa funzione è deprecata durante la compilazione con [\/clr \(Compilazione Common Language Runtime\)](../../build/reference/clr-common-language-runtime-compilation.md) o `/clr:pure` poiché il common language runtime supporta solamente la precisione a virgola mobile predefinita.  
+ Questa funzione è deprecata durante la compilazione con [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) perché common language runtime supporta solo la precisione a virgola mobile predefinita.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Funzione|Intestazione obbligatoria|  
-|--------------|-------------------------------|  
-|`_fpreset`|\<float.h\>|  
+|--------------|---------------------|  
+|`_fpreset`|\<float.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_fpreset.c  
@@ -172,11 +188,14 @@ void fpcheck( void )
 }  
 ```  
   
-  **Dividing    5 by    0...**  
-**Error 131: Divide by zero**   
-## Vedere anche  
- [Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)   
- [Funzioni \_exec, \_wexec](../../c-runtime-library/exec-wexec-functions.md)   
+```Output  
+Dividing    5 by    0...  
+Error 131: Divide by zero  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)   
+ [Funzioni _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md)   
  [signal](../../c-runtime-library/reference/signal.md)   
- [Funzioni \_spawn, \_wspawn](../../c-runtime-library/spawn-wspawn-functions.md)   
- [system, \_wsystem](../../c-runtime-library/reference/system-wsystem.md)
+ [Funzioni _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)   
+ [system, _wsystem](../../c-runtime-library/reference/system-wsystem.md)

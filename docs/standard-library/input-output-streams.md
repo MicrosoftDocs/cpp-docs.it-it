@@ -1,46 +1,66 @@
 ---
-title: "Flussi di input/output | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "I/O [C++], flusso"
-  - "I/O di flusso"
+title: Flussi di input/output | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- I/O [C++], stream
+- stream I/O
 ms.assetid: 21a97566-91a7-42d6-b2f8-a4c16bc926f1
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Flussi di input/output
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 4fdfb4ece713c071a4b740127428c16303c0ab10
+ms.lasthandoff: 02/24/2017
 
-`basic_iostream`, che è definito nel file di intestazione \<istream\>, è la classe che il modello per gli oggetti che gestiscono venga introdotta che restituito ai flussi in base a carattere dei\/O.  
+---
+# <a name="inputoutput-streams"></a>Flussi di input/output
+`basic_iostream`, che è definito nel file di intestazione \<istream>, è il modello di classe per gli oggetti che gestiscono i flussi di I/O basati su caratteri sia di input che di output.  
   
- Esistono due typedef che definiscono le specializzazioni caratteri specifiche di `basic_iostream` e possono rendere il codice più facile da leggere: `iostream` \(non confondere con iostream \<\>del file di intestazione\) è un flusso I\/O basato su `basic_iostream<char>`; `wiostream` è un flusso I\/O basato su `basic_iostream<wchar_t>`.  
+ I typedef che definiscono le specializzazioni di `basic_iostream` specifiche dei caratteri sono due e consentono di creare codice più leggibile: `iostream` (da non confondere con il file di intestazione \<iostream>) è un flusso di I/O basato su `basic_iostream<char>`, mentre `wiostream` è un flusso di /O basato su `basic_iostream<wchar_t>`.  
   
- Per ulteriori informazioni, vedere [Classe basic\_iostream](../standard-library/basic-iostream-class.md), [iostream](../Topic/iostream.md) e [wiostream](../Topic/wiostream.md).  
+ Per altre informazioni, vedere [Classe basic_iostream](../standard-library/basic-iostream-class.md), [iostream](../standard-library/basic-iostream-class.md) e [wiostream](../standard-library/basic-iostream-class.md).  
   
- Derivazione da `basic_iostream` è il modello `basic_fstream`della classe, che viene utilizzato per la trasmissione dei dati di tipo carattere a e dai file.  
+ Da `basic_iostream` deriva il modello di classe `basic_fstream`, che viene usato per trasmettere sotto forma di flusso i dati di tipo carattere da e verso i file.  
   
- Ci sono anche typedef che forniscono le specializzazioni caratteri specifiche di `basic_fstream`.  Vengono `fstream`, un flusso I\/O di file basato su `char` e `wfstream`, un flusso I\/O di file basato su `wchar_t`.  Per ulteriori informazioni, vedere [Classe basic\_fstream](../standard-library/basic-fstream-class.md), [fstream](../Topic/fstream.md) e [wfstream](../Topic/wfstream.md).  Utilizzando questi typedef richiede all'inclusione di fstream \<\>del file di intestazione.  
+ Sono disponibili anche typedef che forniscono specializzazioni di `basic_fstream` specifiche dei caratteri. Si tratta di `fstream`, un flusso di I/O di file basato su `char`, e di `wfstream`, un flusso di I/O di file basato su `wchar_t`. Per altre informazioni, vedere [Classe basic_fstream](../standard-library/basic-fstream-class.md), [fstream](../standard-library/basic-fstream-class.md) e [wfstream](../standard-library/basic-fstream-class.md). L'uso di questi typedef richiede l'inclusione del file di intestazione \<fstream>.  
   
 > [!NOTE]
->  Quando un oggetto di `basic_fstream` viene utilizzato per eseguire I\/O di file, sebbene il buffer sottostante contenga le posizioni separatamente definite per leggere e scrivere, l'input corrente e le attuali posizioni di output sono associati set e pertanto, leggendo i movimenti di dati il percorso di output.  
+>  Quando per eseguire l'I/O di file viene usato un oggetto `basic_fstream`, anche se il buffer sottostante contiene posizioni designate separatamente per la lettura e la scrittura, le posizioni di input e output correnti sono collegate tra loro, pertanto la lettura di alcuni dati sposta la posizione di output.  
   
- Il modello `basic_stringstream` della classe e la specializzazione comune, `stringstream`, vengono spesso utilizzati per utilizzare gli oggetti flussi I\/O per inserire ed estrarre i dati di tipo carattere.  Per ulteriori informazioni, vedere [Classe basic\_stringstream](../standard-library/basic-stringstream-class.md).  
+ Il modello di classe `basic_stringstream` e la relativa specializzazione comune, `stringstream`, vengono spesso usati per gestire gli oggetti di flusso di I/O allo scopo di inserire ed estrarre dati di tipo carattere. Per altre informazioni, vedere [Classe basic_stringstream](../standard-library/basic-stringstream-class.md).  
   
-## Vedere anche  
- [stringstream](../Topic/stringstream.md)   
- [Classe basic\_stringstream](../standard-library/basic-stringstream-class.md)   
- [\<sstream\>](../standard-library/sstream.md)   
+## <a name="see-also"></a>Vedere anche  
+ [stringstream](../standard-library/basic-stringstream-class.md)   
+ [Classe basic_stringstream](../standard-library/basic-stringstream-class.md)   
+ [\<sstream>](../standard-library/sstream.md)   
  [Programmazione di iostream](../standard-library/iostream-programming.md)   
- [Libreria standard C\+\+](../standard-library/cpp-standard-library-reference.md)
+ [Libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

@@ -1,40 +1,56 @@
 ---
-title: "Overload dell&#39;operatore &lt;&lt; per classi personalizzate | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operatore <<, overload di classi personali"
-  - "operator<<, overload di classi personali"
+title: Overload dell&quot;operatore &lt;&lt; per classi personalizzate | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- operator<<, overloading for your own classes
+- operator <<, overloading for your own classes
 ms.assetid: ad1d2c49-d84e-48a8-9c09-121f28b10bf0
 caps.latest.revision: 12
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Overload dell&#39;operatore &lt;&lt; per classi personalizzate
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 22eb3fbef373c2e80989c49887cfa8b3c9eadc61
+ms.lasthandoff: 02/24/2017
 
-I flussi di output utilizzano l'operatore di inserimento \(`<<`\) per i tipi standard.  È inoltre possibile eseguire l'overload dell'operatore di `<<` per classi personalizzate.  
+---
+# <a name="overloading-the-ltlt-operator-for-your-own-classes"></a>Overload dell'operatore &lt;&lt; per classi personalizzate
+I flussi di input usano l'operatore di inserimento (`<<`) per i tipi standard. È possibile eseguire l'overload dell'operatore `<<` per le classi personalizzate.  
   
-## Esempio  
- Nell'esempio di funzione di `write` è illustrato l'utilizzo di una struttura di `Date`.  Una data è un candidato ideale per la classe c\+\+ in cui i membri dati \(mese, il giorno e l'anno\) sono nascosti dalla visualizzazione.  Un flusso di output è la destinazione logica per la visualizzazione deuna struttura di questo tipo.  Questo codice viene visualizzata una data utilizzando l'oggetto di `cout` :  
+## <a name="example"></a>Esempio  
+ L'esempio di funzione `write` ha illustrato l'uso di una struttura `Date`. La data rappresenta il candidato ideale per una classe C++ nella quale i membri dati (mese, giorno e anno) sono nascosti nella visualizzazione. Un flusso di output è la destinazione logica per la visualizzazione di tale struttura. Questo codice visualizza una data usando l'oggetto `cout`:  
   
 ```  
-Date dt( 1, 2, 92 );  
-cout << dt;  
+Date dt(1, 2, 92);
+
+cout <<dt;  
 ```  
   
- Per ottenere `cout` per accettare un oggetto di `Date` dopo l'operatore di inserimento, overload l'operatore di inserimento riconosca un oggetto di `ostream` a sinistra e `Date` a destra.  La funzione di overload degli operatori di `<<` deve essere dichiarata come friend di classe `Date` pertanto può accedere ai dati privati in un oggetto di `Date`.  
+ Per fare in modo che `cout` accetti un oggetto `Date` dopo l'operatore di inserimento, eseguire l'overload dell'operatore di inserimento in modo che riconosca un oggetto `ostream` a sinistra e un oggetto `Date` a destra. La funzione dell'operatore `<<` in overload deve quindi essere dichiarata come Friend della classe `Date` in modo che possa accedere ai dati privati all'interno di un oggetto `Date`.  
   
 ```  
 // overload_date.cpp  
@@ -66,13 +82,18 @@ int main()
 }  
 ```  
   
-  **5\/6\/92**   
-## Note  
- L'operatore di overload restituisce un riferimento all'oggetto originale di `ostream`, è possibile combinare gli inserimenti:  
-  
-```  
-cout << "The date is" << dt << flush;  
+```Output  
+5/6/92  
 ```  
   
-## Vedere anche  
- [Flussi di output](../standard-library/output-streams.md)
+## <a name="remarks"></a>Note  
+ L'operatore in overload restituisce un riferimento all'oggetto `ostream` originale, pertanto è possibile combinare gli inserimenti:  
+  
+```  
+cout <<"The date is" <<dt <<flush;  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Output Streams](../standard-library/output-streams.md) (Flussi di output)
+
+

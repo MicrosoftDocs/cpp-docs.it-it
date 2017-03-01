@@ -1,63 +1,79 @@
 ---
-title: "_mbccpy, _mbccpy_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mbccpy"
-  - "_mbccpy_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_mbccpy"
-  - "tccpy"
-  - "ftccpy"
-  - "mbccpy"
-  - "_tccpy"
-  - "_ftccpy"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_mbccpy (funzione)"
-  - "_mbccpy_l (funzione)"
-  - "_tccpy (funzione)"
-  - "_tccpy_l (funzione)"
-  - "mbccpy (funzione)"
-  - "mbccpy_l (funzione)"
-  - "tccpy (funzione)"
-  - "tccpy_l (funzione)"
+title: _mbccpy, _mbccpy_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mbccpy
+- _mbccpy_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _mbccpy
+- tccpy
+- ftccpy
+- mbccpy
+- _tccpy
+- _ftccpy
+dev_langs:
+- C++
+helpviewer_keywords:
+- _tccpy function
+- _tccpy_l function
+- tccpy_l function
+- tccpy function
+- mbccpy function
+- _mbccpy_l function
+- _mbccpy function
+- mbccpy_l function
 ms.assetid: 13f4de6e-7792-41ac-b319-dd9b135433aa
 caps.latest.revision: 24
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# _mbccpy, _mbccpy_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 32a0f8249bf3a3e2296fa6c6f41b807cd7c15294
+ms.lasthandoff: 02/24/2017
 
-Copia un carattere multibyte da una stringa in un'altra stringa.  Sono disponibili versioni più sicure di queste funzioni; vedere [\_mbccpy\_s, \_mbccpy\_s\_l](../../c-runtime-library/reference/mbccpy-s-mbccpy-s-l.md).  
+---
+# <a name="mbccpy-mbccpyl"></a>_mbccpy, _mbccpy_l
+Copia un carattere multibyte da una stringa in un'altra stringa. Sono disponibili versioni più sicure di queste funzioni. Vedere [_mbccpy_s, _mbccpy_s_l](../../c-runtime-library/reference/mbccpy-s-mbccpy-s-l.md).  
   
 > [!IMPORTANT]
->  Questa API non può essere utilizzata nelle applicazioni che vengono eseguite in Windows Runtime.  Per ulteriori informazioni, vedere [Funzioni CRT non supportate con \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere l'articolo relativo alle [funzioni CRT non supportate con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 void _mbccpy(  
@@ -71,45 +87,45 @@ void _mbccpy_l(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `dest`  
- Copiare la destinazione.  
+ Destinazione della copia.  
   
  `src`  
  Caratteri multibyte da copiare.  
   
  `locale`  
- Impostazioni locali da utilizzare.  
+ Impostazioni locali da usare.  
   
-## Note  
+## <a name="remarks"></a>Note  
  La funzione `_mbccpy` copia un carattere multibyte da `src` a `dest`.  
   
- Questa funzione convalida i parametri.  Se `_mbccpy` viene passato come puntatore null per `dest` o `src`, il gestore di parametri non validi viene invocato, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).  Se all'esecuzione è permesso continuare, `errno` è impostato su `EINVAL`.  
+ Questa funzione convalida i relativi parametri. Se alla funzione `_mbccpy` viene passato un puntatore Null per `dest` o `src`, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, `errno` viene impostato su `EINVAL`.  
   
- `_mbccpy` utilizza le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali.  `_mbccpy_l` è identico a `_mbccpy` se non che `_mbccpy_l` utilizza le impostazioni locali passate per qualsiasi comportamento dipendente dalle impostazioni locali.  Per ulteriori informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ `_mbccpy` usa le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. La funzione `_mbccpy_l` è identica a `_mbccpy`, ma `_mbccpy_l` usa le impostazioni locali passate per qualsiasi comportamento dipendente dalle impostazioni locali. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
   
- **Nota sulla sicurezza** Utilizza una stringa con terminazione null.  La stringa con terminazione null non deve superare la dimensione del buffer di destinazione.  Per ulteriori informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).  Problemi di sovraccarico del buffer sono un metodo frequente di attacco al sistema, con conseguente elevazione dei privilegi non autorizzata.  
+ **Nota sulla sicurezza** Usare una stringa con terminazione Null. Le dimensioni della stringa con terminazione Null non devono essere superiori a quelle del buffer di destinazione. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795). I problemi di sovraccarico del buffer sono usati spesso come metodo di attacco di sistema e provocano un'elevazione dei privilegi non autorizzata.  
   
-### Mapping di routine su testo generico  
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
-|Routine Tchar.h|\_UNICODE e \_MBCS non definiti|\_MBCS definito|\_UNICODE definito|  
-|---------------------|-------------------------------------|---------------------|------------------------|  
-|`_tccpy`|Mapping della macro o della funzione inline|`_mbccpy`|Mapping della macro o della funzione inline|  
-|`_tccpy_l`|n\/d|`_mbccpy_l`|n\/d|  
+|Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
+|`_tccpy`|Mapping a una macro o a una funzione inline|`_mbccpy`|Mapping a una macro o a una funzione inline|  
+|`_tccpy_l`|n/d|`_mbccpy_l`|n/d|  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`_mbccpy`|\<mbctype.h\>|  
-|`_mbccpy_l`|\<mbctype.h\>|  
+|-------------|---------------------|  
+|`_mbccpy`|\<mbctype.h>|  
+|`_mbccpy_l`|\<mbctype.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
-## Equivalente in NET Framework  
- Non applicabile.  Per chiamare la funzione standard C, utilizzare `PInvoke`.  Per ulteriori informazioni, vedere [Esempi di Invocazione della Piattaforma](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente in NET Framework  
+ Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Impostazioni locali](../../c-runtime-library/locale.md)   
  [Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [\_mbclen, mblen, \_mblen\_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)
+ [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)

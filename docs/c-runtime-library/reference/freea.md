@@ -1,49 +1,66 @@
 ---
-title: "_freea | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_freea"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "freea"
-  - "_freea"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_freea (funzione)"
-  - "freea (funzione)"
-  - "deallocazione di memoria"
+title: _freea | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _freea
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- freea
+- _freea
+dev_langs:
+- C++
+helpviewer_keywords:
+- _freea function
+- freea function
+- memory deallocation
 ms.assetid: dcd30584-dd9d-443b-8c4c-13237a1cecac
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# _freea
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: b8310730b9b1c700402cc8d6d35eea3abc893dfe
+ms.lasthandoff: 02/24/2017
 
-Rilascia o libera un blocco di memoria.  
+---
+# <a name="freea"></a>_freea
+Dealloca o libera un blocco di memoria.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 void _freea(   
@@ -51,46 +68,46 @@ void _freea(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `memblock`  
  Blocco di memoria precedentemente allocata da liberare.  
   
-## Valore restituito  
+## <a name="return-value"></a>Valore restituito  
  Nessuno.  
   
-## Note  
- La funzione `_freea` dealloca un blocco di memoria \(`memblock`\) precedentemente allocato da una chiamata a [\_malloca](../../c-runtime-library/reference/malloca.md).  `_freea` controlla se la memoria è stata allocata nell'heap o nello stack.  Se è stata allocata sullo stack, `_freea` non esegue alcuna operazione.  Se è stata allocata nell'heap, il numero di byte liberati equivale al numero di byte richiesto quando il blocco è stato allocato.  Se `memblock` è `NULL`, il puntatore viene ignorato e `_freea` terminerà immediatamente.  Il tentativo di liberare un puntatore non valido \(un puntatore a un blocco di memoria che non è stato allocato da `_malloca`\) potrebbe influire sulle richieste di allocazione successive e provocare errori.  
+## <a name="remarks"></a>Note  
+ La funzione `_freea` dealloca un blocco di memoria (`memblock`) precedentemente allocato da una chiamata a [_malloca](../../c-runtime-library/reference/malloca.md). `_freea` controlla se la memoria è stata allocata nell'heap o nello stack. Se è stata allocata nello stack, `_freea` non esegue alcuna operazione. Se è stata allocata nell'heap, il numero di byte liberati è equivalente al numero di byte richiesto quando il blocco è stato allocato. Se `memblock` è `NULL`, il puntatore viene ignorato e `_freea` terminerà immediatamente. Il tentativo di liberare un puntatore non valido (un puntatore a un blocco di memoria non allocato da `_malloca`) potrebbe influire sulle richieste di allocazione successive e causare errori.  
   
- \_`freea` chiama internamente `free` se rileva che è allocata la memoria nell'heap.  Se la memoria è nell'heap o nello stack è determinato da un marcatore inserito nella memoria all'indirizzo immediatamente precedente alla memoria allocata.  
+ _`freea` chiama `free` internamente se rileva che la memoria viene allocata nell'heap. Se la memoria è nell'heap o lo stack è determinato da un indicatore posizionato nella memoria in corrispondenza dell'indirizzo che precede immediatamente la memoria allocata.  
   
- Se si verifica un errore nella liberazione della memoria, `errno` viene fornito con informazioni dal sistema operativo sulla natura dell'errore.  Per ulteriori informazioni, vedere [errno, \_doserrno, \_sys\_errlist, and \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Se si verifica un errore nel liberare la memoria, `errno` viene impostato con informazioni dal sistema operativo sulla natura dell'errore. Per altre informazioni vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
- Dopo che un blocco di memoria è stato liberato, [\_heapmin](../../c-runtime-library/reference/heapmin.md) riduce la quantità di memoria libera nell'heap mediante l'unione delle aree inutilizzate e rilasciandole nuovamente al sistema operativo.  La memoria liberata che non viene rilasciata al sistema operativo viene ripristinata al pool libero ed è disponibile nuovamente per l'allocazione.  
+ Dopo che un blocco di memoria è stato liberato, [_heapmin](../../c-runtime-library/reference/heapmin.md) riduce la quantità di memoria libera nell'heap unendo le aree inutilizzate e rilasciandole nuovamente al sistema operativo. La memoria liberata che non viene rilasciata al sistema operativo viene ripristinata al pool libero ed è disponibile nuovamente per l'allocazione.  
   
- Una chiamata a `_freea` deve associare a tutte le chiamate a `_malloca`.  È anche un errore chiamare due volte `_freea` sulla stessa memoria.  Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime del linguaggio C, in particolare con le funzionalità di [\_malloc\_dbg](../../c-runtime-library/reference/malloc-dbg.md) definendo `_CRTDBG_MAP_ALLOC`, è più facile trovare le chiamate mancanti o duplicate a `_freea`.  Per ulteriori informazioni su come viene gestito l'heap durante il processo di debug, vedere [L'heap di debug CRT](../Topic/CRT%20Debug%20Heap%20Details.md).  
+ Una chiamata a `_freea` deve accompagnare tutte le chiamate a `_malloca`. È anche un errore chiamare `_freea` due volte sulla stessa memoria. Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime C, in particolare con le funzionalità [malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md) abilitate definendo `_CRTDBG_MAP_ALLOC`, è più facile trovare chiamate mancanti o duplicate a `_freea`. Per altre informazioni su come viene gestito l'heap durante il processo di debug, vedere [Informazioni dettagliate sull'heap di debug CRT](/visualstudio/debugger/crt-debug-heap-details).  
   
- `_freea` è contrassegnato `__declspec(noalias)`, pertanto si garantisce che la funzione non modifichi variabili globali.  Per ulteriori informazioni, vedere [noalias](../../cpp/noalias.md).  
+ `_freea` è contrassegnato `__declspec(noalias)`, pertanto si garantisce che la funzione non modifichi le variabili globali. Per altre informazioni, vedere [noalias](../../cpp/noalias.md).  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Funzione|Intestazione obbligatoria|  
-|--------------|-------------------------------|  
-|`_freea`|\<stdlib.h\> e \<malloc.h\>|  
+|--------------|---------------------|  
+|`_freea`|\<stdlib.h> e \<malloc.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
-## Esempio  
- Vedere l'esempio per [\_malloca](../../c-runtime-library/reference/malloca.md).  
+## <a name="example"></a>Esempio  
+ Vedere l'esempio per [_malloca](../../c-runtime-library/reference/malloca.md).  
   
-## Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione standard C, utilizzare `PInvoke`. Per ulteriori informazioni, vedere [Esempi di Invocazione della Piattaforma](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
+ Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Allocazione di memoria](../../c-runtime-library/memory-allocation.md)   
- [\_malloca](../../c-runtime-library/reference/malloca.md)   
+ [_malloca](../../c-runtime-library/reference/malloca.md)   
  [calloc](../../c-runtime-library/reference/calloc.md)   
  [malloc](../../c-runtime-library/reference/malloc.md)   
- [\_malloc\_dbg](../../c-runtime-library/reference/malloc-dbg.md)   
+ [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)   
  [realloc](../../c-runtime-library/reference/realloc.md)   
- [\_free\_dbg](../../c-runtime-library/reference/free-dbg.md)   
- [\_heapmin](../../c-runtime-library/reference/heapmin.md)
+ [_free_dbg](../../c-runtime-library/reference/free-dbg.md)   
+ [_heapmin](../../c-runtime-library/reference/heapmin.md)

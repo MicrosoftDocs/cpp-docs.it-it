@@ -1,55 +1,68 @@
 ---
-title: "Classe is_union | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "is_union"
-  - "std::tr1::is_union"
-  - "std.tr1.is_union"
-  - "std.is_union"
-  - "std::is_union"
-  - "type_traits/std::is_union"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "is_union (classe) [TR1]"
-  - "is_union"
+title: Classe is_union | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- is_union
+- std::is_union
+- type_traits/std::is_union
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_union class
+- is_union
 ms.assetid: 80eda256-40b8-4db5-9ac1-d58bb8032a3e
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# Classe is_union
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
+ms.openlocfilehash: 199424ecb9e5eadb9dca78efd2fd9af7d2c272cb
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="isunion-class"></a>Classe is_union
 Verifica se il tipo è un'unione.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-template<class Ty>  
-    struct is_union;  
+template <class Ty>  
+struct is_union;  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `Ty`  
  Tipo su cui eseguire una query.  
   
-## Note  
+## <a name="remarks"></a>Note  
  Un'istanza del predicato di tipo contiene true se il tipo `Ty` è un tipo di unione o un form `cv-qualified` di un tipo di unione; in caso contrario, contiene false.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-```  
-// std_tr1__type_traits__is_union.cpp   
+```cpp  
+// std__type_traits__is_union.cpp   
 // compile with: /EHsc   
 #include <type_traits>   
 #include <iostream>   
@@ -79,14 +92,18 @@ int main()
   
 ```  
   
-  **is\_union\<trivial\> \=\= false**  
-**is\_union\<int\> \=\= false**  
-**is\_union\<ints\> \=\= true**   
-## Requisiti  
- **Intestazione:** \<type\_traits\>  
+```Output  
+is_union<trivial> == false  
+is_union<int> == false  
+is_union<ints> == true  
+```  
+  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<type_traits>  
   
  **Spazio dei nomi:** std  
   
-## Vedere anche  
- [\<type\_traits\>](../standard-library/type-traits.md)   
- [Classe is\_class](../standard-library/is-class-class.md)
+## <a name="see-also"></a>Vedere anche  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [Classe is_class](../standard-library/is-class-class.md)
+

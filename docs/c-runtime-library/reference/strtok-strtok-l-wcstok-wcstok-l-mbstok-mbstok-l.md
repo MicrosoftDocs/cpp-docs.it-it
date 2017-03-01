@@ -1,74 +1,90 @@
 ---
-title: "strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mbstok_l"
-  - "_mbstok"
-  - "wcstok"
-  - "_mbstok"
-  - "strtok"
-  - "_wcstok_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_mbstok"
-  - "strtok"
-  - "_tcstok"
-  - "wcstok"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_mbstok (funzione)"
-  - "_mbstok_l (funzione)"
-  - "_strtok_l (funzione)"
-  - "_tcstok (funzione)"
-  - "_tcstok_l (funzione)"
-  - "_wcstok_l (funzione)"
-  - "mbstok (funzione)"
-  - "mbstok_l (funzione)"
-  - "stringhe [C++], ricerca"
-  - "strtok (funzione)"
-  - "strtok_l (funzione)"
-  - "tcstok (funzione)"
-  - "tcstok_l (funzione)"
-  - "token, ricerca in stringhe"
-  - "wcstok (funzione)"
-  - "wcstok_l (funzione)"
+title: strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mbstok_l
+- _mbstok
+- wcstok
+- _mbstok
+- strtok
+- _wcstok_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _mbstok
+- strtok
+- _tcstok
+- wcstok
+dev_langs:
+- C++
+helpviewer_keywords:
+- mbstok_l function
+- strings [C++], searching
+- tcstok function
+- _tcstok function
+- _strtok_l function
+- strtok function
+- mbstok function
+- wcstok_l function
+- _mbstok function
+- tcstok_l function
+- tokens, finding in strings
+- _mbstok_l function
+- wcstok function
+- _wcstok_l function
+- _tcstok_l function
+- strtok_l function
 ms.assetid: 904cb734-f0d7-4d77-ba81-4791ddf461ae
 caps.latest.revision: 34
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 34
----
-# strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: d203033a5cb07ca4e6888cca7cbf4bba1b1da9da
+ms.lasthandoff: 02/24/2017
 
-Cerca il token seguente in una stringa, utilizzando l'impostazione locale corrente o un'impostazione locale specifica che gli è stata passata.  Sono disponibili versioni più sicure di queste funzioni; vedere [strtok\_s, \_strtok\_s\_l, wcstok\_s, \_wcstok\_s\_l, \_mbstok\_s, \_mbstok\_s\_l](../../c-runtime-library/reference/strtok-s-strtok-s-l-wcstok-s-wcstok-s-l-mbstok-s-mbstok-s-l.md).  
+---
+# <a name="strtok-strtokl-wcstok-wcstokl-mbstok-mbstokl"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
+Trova il token successivo in una stringa, usando le impostazioni locali correnti o le impostazioni locali specificate passate. Sono disponibili versioni più sicure di queste funzioni; vedere [strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l](../../c-runtime-library/reference/strtok-s-strtok-s-l-wcstok-s-wcstok-s-l-mbstok-s-mbstok-s-l.md).  
   
 > [!IMPORTANT]
->  `_mbstok` e `_mbstok_l` non possono essere utilizzate nelle applicazioni che vengono eseguite in Windows Runtime.  Per ulteriori informazioni, vedere [Funzioni CRT non supportate con \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbstok` e `_mbstok_l` non possono essere usati nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere l'articolo relativo alle [funzioni CRT non supportate con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 char *strtok(  
@@ -90,50 +106,50 @@ unsigned char *_mbstok(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `strToken`  
- Stringa contenente token o più token.  
+ Stringa contenente il token o i token.  
   
  `strDelimit`  
- Set di caratteri delimitatori.  
+ Set di caratteri di delimitazione.  
   
  `locale`  
- Impostazioni locali da utilizzare.  
+ Impostazioni locali da usare.  
   
-## Valore restituito  
- Restituisce un puntatore al token seguente disponibile in `strToken`.  Restituisce `NULL` quando non vengono trovati ulteriori token.  Ogni chiamata modifica `strToken` sostituendo un carattere `NULL` per il primo delimitatore che si verifica dopo aver restituito il token.  
+## <a name="return-value"></a>Valore restituito  
+ Restituisce un puntatore al successivo token trovato in `strToken`. Restituiscono `NULL` quando non vengono trovati ulteriori token. Ogni chiamata modifica `strToken` sostituendo un carattere `NULL` per il primo delimitatore individuato dopo il token restituito.  
   
-## Note  
- La funzione `strtok` trova il token seguente in `strToken`.  Il set di caratteri in `strDelimit` specifica i delimitatori possibili del token che si trovano in `strToken` sulla chiamata corrente.  `wcstok` e `_mbstok` sono versioni a caratteri di tipo "wide" e di caratteri multibyte di `strtok`.  Gli argomenti e il valore restituito di `wcstok` sono stringhe di caratteri di tipo "wide", quelli di `_mbstok` sono stringhe di caratteri multibyte.  Altrimenti queste tre funzioni si comportano in modo identico.  
+## <a name="remarks"></a>Note  
+ La funzione `strtok` trova il token successivo in `strToken`. Il set di caratteri in `strDelimit` specifica i possibili delimitatori del token da trovare in `strToken` per la chiamata corrente. `wcstok` e `_mbstok` sono le versioni a caratteri wide e a caratteri multibyte di `strtok`. Gli argomenti e il valore restituito di `wcstok` sono stringhe con caratteri wide, mentre quelli di `_mbstok` sono stringhe con caratteri multibyte. A parte ciò, queste tre funzioni si comportano in modo identico.  
   
 > [!IMPORTANT]
->  Queste funzioni comportano un rischio potenziale causato da un problema di sovraccarico del buffer.  Problemi di sovraccarico del buffer sono un metodo frequente di attacco al sistema, con conseguente elevazione dei privilegi non autorizzata.  Per ulteriori informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
+>  Queste funzioni possono incorrere in una minaccia potenziale dovuta a un problema di sovraccarico del buffer. I problemi di sovraccarico del buffer sono usati spesso come metodo di attacco di sistema e provocano un'elevazione dei privilegi non autorizzata. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
   
- La prima chiamata alla funzione `strtok`, ignora i delimitatori iniziali e restituisce un puntatore al primo token in `strToken`, terminando il token con un carattere null.  Più token possono essere suddivisi al di fuori della rimanenza di `strToken` da una serie di chiamate a `strtok`.  Ogni chiamata a `strtok`modifica `strToken` inserendo un carattere null dopo il `token` restituito dalla chiamata.  Per leggere il token successivo da `strToken`, chiamare `strtok` con un valore `NULL` per l'argomento `strToken`.  L'argomento `NULL` `strToken` fa in modo che `strtok` cerchi il token successivo nel `strToken` modificato.  L'argomento `strDelimit` può assumere qualsiasi valore da una chiamata all'altra, così che il set dei delimitatori possa cambiare.  
+ Nella prima chiamata a `strtok` la funzione ignora i delimitatori iniziali e restituisce un puntatore al primo token in `strToken`, aggiungendo un carattere Null di terminazione al token. Possono essere suddivisi altri token dal resto di `strToken` tramite una serie di chiamate a `strtok`. Ogni chiamata a `strtok` modifica `strToken` inserendo un carattere Null dopo il `token` restituito dalla chiamata. Per leggere il token successivo da `strToken`, chiamare `strtok` con un valore `NULL` per l'argomento `strToken`. Se l'argomento `strToken` è `NULL`, `strtok` cerca il token successivo nella versione modificata di `strToken`. L'argomento `strDelimit` può accettare qualsiasi valore da una chiamata alla successiva, quindi il set di delimitatori può variare.  
   
- Il valore di output è interessato dall'impostazione dell'impostazione di categoria `LC_CTYPE` delle impostazioni locali; vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) per ulteriori informazioni.  Le versioni di queste funzioni senza il suffisso `_l` utilizzano le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali; le versioni con il suffisso `_l` sono identiche, ad eccezione del fatto che utilizzano il parametro delle impostazioni locali che viene passato.  Per ulteriori informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ La configurazione dell'impostazione della categoria `LC_CTYPE` delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso `_l` usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso `_l` sono identiche ma usano il parametro passato relativo alle impostazioni locali. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
   
 > [!NOTE]
->  Ogni funzione utilizza una variabile statica di thread locale per analizzare la stringa in token.  Pertanto, più thread possono chiamare simultaneamente queste funzioni senza avere effetti indesiderati.  Tuttavia, in un unica thread, interfogliare chiamate ad una di queste funzioni produce con molta probabilità un danneggiamento dei dati e risultati imprecisi.  Durante l'analisi di stringhe diverse, completare l'analisi di una stringa prima di iniziare ad analizzare la seguente.  Inoltre, si consideri il potenziale pericolo nell'effettuare una chiama di queste funzioni all'interno di un ciclo dove vengono chiamate altre funzioni.  Se la funzione viene completata con una di queste funzioni, una sequenza interfogliata di chiamate comporterà il danneggiamento dei dati.  
+>  Ogni funzione usa una variabile statica thread-local per la suddivisione della stringa in token. Più thread possono quindi chiamare contemporaneamente queste funzioni senza effetti indesiderati. Tuttavia, all'interno di un singolo thread, è molto probabile che l'esecuzione interleaved di chiamate a una di queste funzioni causi il danneggiamento dei dati e risultati non accurati. Quando si analizzano stringhe diverse, completare l'analisi di una stringa prima di iniziare ad analizzare la successiva. Tenere anche conto del potenziale pericolo quando si chiama una di queste funzioni da un ciclo in cui viene chiamata un'altra funzione. Se l'altra funzione usa una di queste funzioni, ne risulterà una sequenza interleaved di chiamate con conseguente danneggiamento dei dati.  
   
-### Mapping di routine su testo generico  
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
-|Routine TCHAR.H|\_UNICODE & \_MBCS non definiti|\_MBCS definito|\_UNICODE definito|  
-|---------------------|-------------------------------------|---------------------|------------------------|  
+|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcstok`|`strtok`|`_mbstok`|`wcstok`|  
 |`_tcstok`|`_strtok_l`|`_mbstok_l`|`_wcstok_l`|  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`strtok`|\<string.h\>|  
-|`wcstok`|\<string.h\> o \<wchar.h\>|  
-|`_mbstok`, `_mbstok_l`|\<mbstring.h\>|  
+|-------------|---------------------|  
+|`strtok`|\<string.h>|  
+|`wcstok`|\<string.h> o \<wchar.h>|  
+|`_mbstok`, `_mbstok_l`|\<mbstring.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_strtok.c  
@@ -167,21 +183,24 @@ int main( void )
 }  
 ```  
   
-  **Token:**  
- **A**  
- **string**  
- **of**  
- **token**  
- **e**  
- **some**  
- **more**  
- **token**   
-## Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione standard C, utilizzare `PInvoke`. Per ulteriori informazioni, vedere [Esempi di Invocazione della Piattaforma](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+Tokens:  
+ A  
+ string  
+ of  
+ tokens  
+ and  
+ some  
+ more  
+ tokens  
+```  
   
-## Vedere anche  
+## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
+ Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
+  
+## <a name="see-also"></a>Vedere anche  
  [Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md)   
  [Impostazioni locali](../../c-runtime-library/locale.md)   
  [Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [strcspn, wcscspn, \_mbscspn, \_mbscspn\_l](../../c-runtime-library/reference/strcspn-wcscspn-mbscspn-mbscspn-l.md)   
- [strspn, wcsspn, \_mbsspn, \_mbsspn\_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)
+ [strcspn, wcscspn, _mbscspn, _mbscspn_l](../../c-runtime-library/reference/strcspn-wcscspn-mbscspn-mbscspn-l.md)   
+ [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)

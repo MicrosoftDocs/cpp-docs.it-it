@@ -1,114 +1,132 @@
 ---
-title: "_CrtSetDbgFlag | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_CrtSetDbgFlag"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_CRTDBG_REPORT_FLAG"
-  - "_CRTDBG_CHECK_EVERY_16_DF"
-  - "_CRTDBG_CHECK_DEFAULT_DF"
-  - "CRTDBG_CHECK_DEFAULT_DF"
-  - "CRTDBG_CHECK_EVERY_128_DF"
-  - "CRTDBG_CHECK_EVERY_1024_DF"
-  - "_CRTDBG_CHECK_EVERY_128_DF"
-  - "CrtSetDbgFlag"
-  - "CRTDBG_CHECK_EVERY_16_DF"
-  - "_CRTDBG_CHECK_EVERY_1024_DF"
-  - "_CrtSetDbgFlag"
-  - "CRTDBG_REPORT_FLAG"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_CRTDBG_ALLOC_MEM_DF (macro)"
-  - "_CRTDBG_CHECK_ALWAYS_DF (macro)"
-  - "_CRTDBG_CHECK_CRT_DF (macro)"
-  - "_CRTDBG_CHECK_DEFAULT_DF (macro)"
-  - "_CRTDBG_CHECK_EVERY_1024_DF (macro)"
-  - "_CRTDBG_CHECK_EVERY_128_DF (macro)"
-  - "_CRTDBG_CHECK_EVERY_16_DF (macro)"
-  - "_CRTDBG_DELAY_FREE_MEM_DF (macro)"
-  - "_CRTDBG_REPORT_FLAG (macro)"
-  - "_CrtSetDbgFlag (funzione)"
-  - "CRTDBG_ALLOC_MEM_DF (macro)"
-  - "CRTDBG_CHECK_ALWAYS_DF (macro)"
-  - "CRTDBG_CHECK_CRT_DF (macro)"
-  - "CRTDBG_CHECK_DEFAULT_DF (macro)"
-  - "CRTDBG_CHECK_EVERY_1024_DF (macro)"
-  - "CRTDBG_CHECK_EVERY_128_DF (macro)"
-  - "CRTDBG_CHECK_EVERY_16_DF (macro)"
-  - "CRTDBG_DELAY_FREE_MEM_DF (macro)"
-  - "CRTDBG_REPORT_FLAG (macro)"
-  - "CrtSetDbgFlag (funzione)"
+title: _CrtSetDbgFlag | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _CrtSetDbgFlag
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _CRTDBG_REPORT_FLAG
+- _CRTDBG_CHECK_EVERY_16_DF
+- _CRTDBG_CHECK_DEFAULT_DF
+- CRTDBG_CHECK_DEFAULT_DF
+- CRTDBG_CHECK_EVERY_128_DF
+- CRTDBG_CHECK_EVERY_1024_DF
+- _CRTDBG_CHECK_EVERY_128_DF
+- CrtSetDbgFlag
+- CRTDBG_CHECK_EVERY_16_DF
+- _CRTDBG_CHECK_EVERY_1024_DF
+- _CrtSetDbgFlag
+- CRTDBG_REPORT_FLAG
+dev_langs:
+- C++
+helpviewer_keywords:
+- _CRTDBG_CHECK_EVERY_16_DF macro
+- CRTDBG_CHECK_EVERY_16_DF macro
+- _CRTDBG_CHECK_ALWAYS_DF macro
+- _CRTDBG_CHECK_DEFAULT_DF macro
+- CRTDBG_ALLOC_MEM_DF macro
+- CRTDBG_CHECK_ALWAYS_DF macro
+- _CRTDBG_ALLOC_MEM_DF macro
+- _CRTDBG_REPORT_FLAG macro
+- _CRTDBG_CHECK_EVERY_128_DF macro
+- CRTDBG_REPORT_FLAG macro
+- _CRTDBG_CHECK_EVERY_1024_DF macro
+- CRTDBG_CHECK_DEFAULT_DF macro
+- CRTDBG_CHECK_EVERY_1024_DF macro
+- _CrtSetDbgFlag function
+- CrtSetDbgFlag function
+- _CRTDBG_DELAY_FREE_MEM_DF macro
+- CRTDBG_CHECK_EVERY_128_DF macro
+- CRTDBG_DELAY_FREE_MEM_DF macro
+- CRTDBG_CHECK_CRT_DF macro
+- _CRTDBG_CHECK_CRT_DF macro
 ms.assetid: b5657ffb-6178-4cbf-9886-1af904ede94c
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# _CrtSetDbgFlag
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: d6ed7ff3e28028e3e4b46055e51c32037b0b5a15
+ms.lasthandoff: 02/24/2017
 
-Recupera o modifica lo stato del flag **\_crtDbgFlag** per controllare il comportamento di allocazione del gestore dell'heap di debug \(solo versione di debug\).  
+---
+# <a name="crtsetdbgflag"></a>_CrtSetDbgFlag
+Recupera o modifica lo stato del flag **_crtDbgFlag** per controllare il comportamento di allocazione del gestore dell'heap di debug (solo versione di debug).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
-int _CrtSetDbgFlag(     int newFlag  );  
+      int _CrtSetDbgFlag(   
+   int newFlag   
+);  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `newFlag`  
- Nuovo stato per **\_crtDbgFlag**.  
+ Nuovo stato per **_crtDbgFlag**.  
   
-## Valore restituito  
- Restituisce lo stato precedente di **\_crtDbgFlag**.  
+## <a name="return-value"></a>Valore restituito  
+ Restituisce lo stato precedente di **_crtDbgFlag**.  
   
-## Note  
- La funzione `_CrtSetDbgFlag` consente all'applicazione di controllare il modo in cui il gestore dell'heap di debug tiene traccia delle allocazioni di memoria modificando i campi in bit del flag **\_crtDbgFlag**.  Impostando i bit \(ON\), l'applicazione può comunicare al gestore dell'heap di debug di eseguire operazioni di debug speciali, tra cui verificare le eventuali perdite di memoria alla chiusura dell'applicazione, segnalare le perdite rilevate, simulare condizioni di poca memoria specificando che i blocchi di memoria liberati devono rimanere nell'elenco collegato dell'heap e verificare l'integrità dell'heap ispezionando ogni blocco di memoria a ogni richiesta di allocazione.  Quando [\_DEBUG](../../c-runtime-library/debug.md) non è definito, le chiamate a `_CrtSetDbgFlag` vengono rimosse durante la pre\-elaborazione.  
+## <a name="remarks"></a>Note  
+ La funzione `_CrtSetDbgFlag` consente all'applicazione di controllare il modo in cui il gestore dell'heap di debug tiene traccia delle allocazioni di memoria modificando i campi in bit del flag **_crtDbgFlag**. Impostando i bit (ON), l'applicazione può comunicare al gestore dell'heap di debug di eseguire operazioni di debug speciali, tra cui verificare le eventuali perdite di memoria alla chiusura dell'applicazione, segnalare le perdite rilevate, simulare condizioni di poca memoria specificando che i blocchi di memoria liberati devono rimanere nell'elenco collegato dell'heap e verificare l'integrità dell'heap ispezionando ogni blocco di memoria a ogni richiesta di allocazione. Quando [_DEBUG](../../c-runtime-library/debug.md) non è definito, le chiamate a `_CrtSetDbgFlag` vengono rimosse durante la pre-elaborazione.  
   
- La tabella seguente contiene un elenco dei campi di bit per **\_crtDbgFlag** e ne descrive il comportamento.  Poiché l'impostazione dei bit produce un aumento dell'output di diagnostica e una riduzione della velocità di esecuzione del programma, per impostazione predefinita questi bit non sono impostati \(OFF\).  Per altre informazioni su questi campi di bit, vedere [Funzioni per la creazione di report sullo stato dello heap](../Topic/CRT%20Debug%20Heap%20Details.md#BKMK_Heap_State_Reporting_Functions).  
+ La tabella seguente contiene un elenco dei campi di bit per **_crtDbgFlag** e ne descrive il comportamento. Poiché l'impostazione dei bit produce un aumento dell'output di diagnostica e una riduzione della velocità di esecuzione del programma, per impostazione predefinita questi bit non sono impostati (OFF). Per altre informazioni su questi campi di bit, vedere [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details) (Funzioni per la creazione di report sullo stato dell'heap).  
   
 |Campo di bit|Impostazione predefinita|Descrizione|  
-|------------------|------------------------------|-----------------|  
-|**\_CRTDBG\_ALLOC\_MEM\_DF**|ON|ON: attiva le allocazioni dell'heap di debug e l'uso di identificatori del tipo di blocco di memoria, ad esempio `_CLIENT_BLOCK`.  OFF: aggiunge le nuove allocazioni all'elenco collegato dell'heap, ma imposta il tipo di blocco su **\_IGNORE\_BLOCK**.<br /><br /> È anche possibile usare in combinazione le macro del controllo frequenza heap.|  
-|**\_CRTDBG\_CHECK\_ALWAYS\_DF**|OFF|ON: chiama [\_CrtCheckMemory](../../c-runtime-library/reference/crtcheckmemory.md) a ogni richiesta di allocazione e deallocazione.  OFF: la funzione `_CrtCheckMemory` deve essere chiamata in modo esplicito.<br /><br /> Quando viene impostato questo flag, le macro del controllo frequenza heap non hanno alcun effetto.|  
-|`_CRTDBG_CHECK_CRT_DF`|OFF|ON: include i tipi `_CRT_BLOCK` nelle operazioni di rilevamento di perdite e differenze tra gli stati della memoria.  OFF: la memoria usata internamente dalla libreria di runtime viene ignorata da queste operazioni.<br /><br /> È anche possibile usare in combinazione le macro del controllo frequenza heap.|  
-|**\_CRTDBG\_DELAY\_FREE\_MEM\_DF**|OFF|ON: mantiene i blocchi di memoria liberati nell'elenco collegato dell'heap, assegna loro il tipo **\_FREE\_BLOCK** e li riempie con il valore byte 0xDD.  OFF: non mantiene i blocchi di memoria liberati nell'elenco collegato dell'heap.<br /><br /> È anche possibile usare in combinazione le macro del controllo frequenza heap.|  
-|`_CRTDBG_LEAK_CHECK_DF`|OFF|ON: esegue il controllo automatico delle perdite all'uscita del programma mediante una chiamata a [\_CrtDumpMemoryLeaks](../../c-runtime-library/reference/crtdumpmemoryleaks.md) e genera un report di errore se l'applicazione non ha liberato tutta la memoria allocata.  OFF: non esegue automaticamente il controllo delle perdite di memoria all'uscita del programma.<br /><br /> È anche possibile usare in combinazione le macro del controllo frequenza heap.|  
+|---------------|-------------|-----------------|  
+|**_CRTDBG_ALLOC_MEM_DF**|ON|ON: attiva le allocazioni dell'heap di debug e l'uso di identificatori del tipo di blocco di memoria, ad esempio `_CLIENT_BLOCK`. OFF: aggiunge le nuove allocazioni all'elenco collegato dell'heap, ma imposta il tipo di blocco su **_IGNORE_BLOCK**.<br /><br /> È anche possibile usare in combinazione le macro del controllo frequenza heap.|  
+|**_CRTDBG_CHECK_ALWAYS_DF**|OFF|ON: chiama [_CrtCheckMemory](../../c-runtime-library/reference/crtcheckmemory.md) a ogni richiesta di allocazione e deallocazione. OFF: la funzione `_CrtCheckMemory` deve essere chiamata in modo esplicito.<br /><br /> Quando viene impostato questo flag, le macro del controllo frequenza heap non hanno alcun effetto.|  
+|`_CRTDBG_CHECK_CRT_DF`|OFF|ON: include i tipi `_CRT_BLOCK` nelle operazioni di rilevamento di perdite e differenze tra gli stati della memoria. OFF: la memoria usata internamente dalla libreria di runtime viene ignorata da queste operazioni.<br /><br /> È anche possibile usare in combinazione le macro del controllo frequenza heap.|  
+|**_CRTDBG_DELAY_FREE_MEM_DF**|OFF|ON: mantiene i blocchi di memoria liberati nell'elenco collegato dell'heap, assegna loro il tipo **_FREE_BLOCK** e li riempie con il valore byte 0xDD. OFF: non mantiene i blocchi di memoria liberati nell'elenco collegato dell'heap.<br /><br /> È anche possibile usare in combinazione le macro del controllo frequenza heap.|  
+|`_CRTDBG_LEAK_CHECK_DF`|OFF|ON: esegue il controllo automatico delle perdite all'uscita del programma mediante una chiamata a [_CrtDumpMemoryLeaks](../../c-runtime-library/reference/crtdumpmemoryleaks.md) e genera un report di errore se l'applicazione non ha liberato tutta la memoria allocata. OFF: non esegue automaticamente il controllo delle perdite di memoria all'uscita del programma.<br /><br /> È anche possibile usare in combinazione le macro del controllo frequenza heap.|  
   
  **Macro di controllo della frequenza dell'heap**  
   
- È possibile specificare quanto spesso la libreria di runtime C debba eseguire la convalida dell'heap di debug \(`_CrtCheckMemory`\) in base al numero di chiamate a `malloc`, `realloc`, **free** e `_msize`.  
+ È possibile specificare quanto spesso la libreria di runtime di C debba eseguire la convalida dell'heap per il debug (`_CrtCheckMemory`) in base al numero di chiamate a `malloc`, `realloc`, **free** e `_msize`.  
   
- `_CrtSetDbgFlag` cerca quindi un valore nei 16 bit superiori del parametro `newFlag`.  Il valore specificato è il numero di chiamate a `malloc`, `realloc`, **free** e `_msize` tra le chiamate a `_CrtCheckMemory`.  A questo scopo sono disponibili quattro macro predefinite.  
+ `_CrtSetDbgFlag` cerca quindi un valore nei 16 bit superiori del parametro `newFlag`. Il valore specificato è il numero di chiamate a `malloc`, `realloc`,**free** e `_msize` tra le chiamate a `_CrtCheckMemory`. A questo scopo sono disponibili quattro macro predefinite.  
   
-|Macro|Numero di chiamate malloc, realloc, free e \_msize tra le chiamate a \_CrtCheckMemory|  
-|-----------|-------------------------------------------------------------------------------------------|  
-|\_CRTDBG\_CHECK\_EVERY\_16\_DF|16|  
-|\_CRTDBG\_CHECK\_EVERY\_128\_DF|128|  
-|\_CRTDBG\_CHECK\_EVERY\_1024\_DF|1024|  
-|\_CRTDBG\_CHECK\_DEFAULT\_DF|0 \(per impostazione predefinita, nessun controllo dell'heap\)|  
+|Macro|Numero di chiamate malloc, realloc, free e _msize tra le chiamate a _CrtCheckMemory|  
+|-----------|------------------------------------------------------------------------------------------|  
+|_CRTDBG_CHECK_EVERY_16_DF|16|  
+|_CRTDBG_CHECK_EVERY_128_DF|128|  
+|_CRTDBG_CHECK_EVERY_1024_DF|1024|  
+|_CRTDBG_CHECK_DEFAULT_DF|0 (per impostazione predefinita, nessun controllo dell'heap)|  
   
  Per impostazione predefinita, la funzione `_CrtCheckMemory` viene chiamata ogni 1.024 chiamate a `malloc`, `realloc`, **free** e `_msize`.  
   
@@ -131,19 +149,19 @@ _CrtSetDbgFlag(tmp);
 }  
 ```  
   
- Quando si specifica \_CRTDBG\_CHECK\_ALWAYS\_DF, i 16 bit superiori del parametro `newFlag` vengono ignorati.  In questo caso, la funzione `_CrtCheckMemory` viene chiamata a ogni chiamata a `malloc`, `realloc`, **free** e `_msize`.  
+ Quando si specifica _CRTDBG_CHECK_ALWAYS_DF, i 16 bit superiori del parametro `newFlag` vengono ignorati. In questo caso, la funzione `_CrtCheckMemory` viene chiamata a ogni chiamata a `malloc`, `realloc`, **free** e `_msize`.  
   
- `newFlag` è il nuovo stato da applicare a **\_crtDbgFlag** ed è una combinazione dei valori per ognuno dei campi di bit.  
+ `newFlag` è il nuovo stato da applicare a **_crtDbgFlag** ed è una combinazione dei valori per ognuno dei campi di bit.  
   
-### Per modificare uno più campi di bit e creare un nuovo stato per il flag  
+### <a name="to-change-one-or-more-of-these-bit-fields-and-create-a-new-state-for-the-flag"></a>Per modificare uno più campi di bit e creare un nuovo stato per il flag  
   
-1.  Chiamare `_CrtSetDbgFlag` con `newFlag` uguale a `_CRTDBG_REPORT_FLAG` per ottenere lo stato corrente di **\_crtDbgFlag** e archiviare il valore restituito in una variabile temporanea.  
+1.  Chiamare `_CrtSetDbgFlag` con `newFlag` uguale a `_CRTDBG_REPORT_FLAG` per ottenere lo stato corrente di **_crtDbgFlag** e archiviare il valore restituito in una variabile temporanea.  
   
-2.  Attivare eventuali bit eseguendo un'operazione `OR` tra la variabile temporanea e le corrispondenti maschere di bit \(rappresentate nel codice dell'applicazione da costanti manifesto\).  
+2.  Attivare eventuali bit eseguendo un'operazione `OR` tra la variabile temporanea e le corrispondenti maschere di bit (rappresentate nel codice dell'applicazione da costanti manifesto).  
   
-3.  Disattivare gli altri bit eseguendo un'operazione **AND** tra la variabile e un operatore  bit per bit delle maschere di bit appropriate.  
+3.  Disattivare gli altri bit eseguendo un'operazione **AND** tra la variabile e un operatore **NOT** bit per bit delle maschere di bit appropriate.  
   
-4.  Chiamare `_CrtSetDbgFlag` con `newFlag` impostato sul valore archiviato nella variabile temporanea per creare il nuovo stato di **\_crtDbgFlag**.  
+4.  Chiamare `_CrtSetDbgFlag` con `newFlag` impostato sul valore archiviato nella variabile temporanea per creare il nuovo stato di **_crtDbgFlag**.  
   
  Il codice seguente illustra come simulare condizioni di memoria insufficiente mantenendo i blocchi di memoria liberati nell'elenco collegato dell'heap e impedire che la funzione `_CrtCheckMemory` venga chiamata a ogni richiesta di allocazione:  
   
@@ -164,24 +182,24 @@ tmpFlag &= ~_CRTDBG_CHECK_ALWAYS_DF;
 _CrtSetDbgFlag( tmpFlag );  
 ```  
   
- Per una panoramica sulla gestione della memoria e l'heap di debug, vedere [Informazioni dettagliate sull'heap di debug CRT](../Topic/CRT%20Debug%20Heap%20Details.md).  
+ Per una panoramica sulla gestione della memoria e l'heap per il debug, vedere [Informazioni dettagliate sull'heap di debug CRT](/visualstudio/debugger/crt-debug-heap-details).  
   
- Per disabilitare un flag con la funzione `_CrtSetDbgFlag` è necessario usare la variabile **AND** con l'operatore bit per bit **NOT** della maschera di bit.  
+ Per disabilitare un flag con la funzione `_CrtSetDbgFlag`, è necessario usare la variabile **AND** con l'operatore bit per bit **NOT** della maschera di bit.  
   
- Se `newFlag` non è un valore valido, questa funzione richiama il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).  Se l'esecuzione può continuare, la funzione imposta `errno` su `EINVAL` e restituisce lo stato precedente di `_crtDbgFlag`.  
+ Se `newFlag` non è un valore valido, questa funzione richiama il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta `errno` su `EINVAL` e restituisce lo stato precedente di `_crtDbgFlag`.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`_CrtSetDbgFlag`|\<crtdbg.h\>|  
+|-------------|---------------------|  
+|`_CrtSetDbgFlag`|\<crtdbg.h>|  
   
- Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
-## Librerie  
- Solo versioni di debug delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Librerie  
+ Solo le versioni di debug delle [librerie di runtime di C](../../c-runtime-library/crt-library-features.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_crtsetdflag.c  
@@ -259,10 +277,10 @@ int main( )
 }  
 ```  
   
-## Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Esempi di platform invoke](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
+ Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Routine di debug](../../c-runtime-library/debug-routines.md)   
- [\_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)   
- [\_CrtCheckMemory](../../c-runtime-library/reference/crtcheckmemory.md)
+ [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)   
+ [_CrtCheckMemory](../../c-runtime-library/reference/crtcheckmemory.md)

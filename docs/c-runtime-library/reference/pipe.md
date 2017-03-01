@@ -1,54 +1,71 @@
 ---
-title: "_pipe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_pipe"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "pipe"
-  - "_pipe"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_pipe (funzione)"
-  - "pipe (funzione)"
-  - "pipe"
-  - "pipe, creazione"
+title: _pipe | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _pipe
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- pipe
+- _pipe
+dev_langs:
+- C++
+helpviewer_keywords:
+- pipes, creating
+- _pipe function
+- pipes
+- pipe function
 ms.assetid: 8d3e9800-4041-44b5-9e93-2df0b0354a75
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# _pipe
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 0e45008d3f55c11cfa7da2aa4db9ca1277a6f77f
+ms.lasthandoff: 02/24/2017
 
-Crea una pipe per la lettura e la scrittura.  
+---
+# <a name="pipe"></a>_pipe
+Crea un pipe per la lettura e la scrittura.  
   
 > [!IMPORTANT]
->  Questa API non può essere utilizzata nelle applicazioni eseguite in [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  Per ulteriori informazioni, vedere [Funzioni CRT non supportate con \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Questa API non può essere usata nelle applicazioni eseguite in [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]. Per altre informazioni, vedere l'articolo relativo alle [funzioni CRT non supportate con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -59,9 +76,9 @@ int textmode
 );  
 ```  
   
-#### Parametri  
- `pfds`\[2\]  
- L'array da utilizzare legge e scrive descrittori di file.  
+#### <a name="parameters"></a>Parametri  
+ `pfds`[2]  
+ Matrice per contenere i descrittori di file in lettura e scrittura.  
   
  `psize`  
  Quantità di memoria da riservare.  
@@ -69,53 +86,54 @@ int textmode
  `textmode`  
  Modalità file.  
   
-## Valore restituito  
- Restituisce 0 in caso di esito positivo.  Restituisce –1 per indicare un errore.  Sull'errore, `errno` è impostata su uno dei valori seguenti:  
+## <a name="return-value"></a>Valore restituito  
+ Restituisce 0 in caso di esito positivo. Restituisce -1 per indicare un errore. In caso di errore, `errno` viene impostato su uno di questi valori:  
   
--   `EMFILE`, che indica che non vi sono ulteriori descrittori di file disponibili.  
+-   `EMFILE`, che indica che non sono disponibili altri descrittori di file.  
   
--   `ENFILE`, che indica un overflow di sistema\-file\-tabella.  
+-   `ENFILE`, che indica un overflow della tabella dei file di sistema.  
   
--   `EINVAL`, che indica che l'array `pfds` è un puntatore a null o che un valore non valido è stato passato a `textmode`.  
+-   `EINVAL`, che indica che la matrice `pfds` è un puntatore Null o che è stato passato un valore non valido per `textmode`.  
   
- Per ulteriori informazioni su questi e altri codici restituiti, vedere [errno, \_doserrno, \_sys\_errlist, and \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Per altre informazioni su questi e altri codici restituiti, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Note  
- La funzione `_pipe` crea una *pipe*, ovvero un canale I\/O artificiale che un programma utilizza per passare informazioni ad altri programmi.  Una pipe è simile ad un file in quanto contiene un puntatore ad un file, un descrittore di file, o entrambi, e può essere letto o scritto utilizzando le funzioni di input e output della libreria Standard.  Tuttavia, una pipe non rappresentano uno specifico file o un dispositivo.  Invece, rappresenta uno spazio di memoria temporaneo che è indipendente dalla memoria riservata al programma e che è controllata completamente dal sistema operativo.  
+## <a name="remarks"></a>Note  
+ La funzione `_pipe` crea una *pipe*, ovvero un canale di I/O artificiale usato da un programma per passare informazioni ad altri programmi. Una pipe è simile a un file perché ha un puntatore di file, un descrittore di file o entrambi, e può essere letta o scritta tramite le funzioni di input e output della libreria standard. Tuttavia, una pipe non rappresenta un file o un dispositivo specifico. Rappresenta invece uno spazio di archiviazione temporaneo in memoria, indipendente della memoria propria del programma e interamente controllato dal sistema operativo.  
   
- `_pipe` è simile a `_open` ma apre la pipe per la lettura e la scrittura e restituisce due descrittori del file anziché uno.  Il programma può utilizzare entrambi i lati della pipe o chiudere quello che non è necessario.  Ad esempio, il processore dei comandi di Windows crea una pipe quando si esegue un comando come `PROGRAM1 | PROGRAM2`.  
+ `_pipe` è simile a `_open` ma apre la pipe per la lettura e la scrittura e restituisce due descrittori di file invece di uno. Il programma può usare entrambi i lati della pipe o chiudere quello non necessario. Ad esempio, il processore dei comandi di Windows crea una pipe quando esegue un comando come `PROGRAM1 | PROGRAM2`.  
   
- Il descrittore dell'output standard di `PROGRAM1` è collegato al descrittore di scrittura della pipe.  Il descrittore di input standard di `PROGRAM2` è connesso al descrittore di lettura della pipe.  In questo modo si evita di dover creare file temporanei per passare informazioni ad altri programmi.  
+ Il descrittore di output standard di `PROGRAM1` viene collegato al descrittore di scrittura della pipe. Il descrittore di input standard di `PROGRAM2` viene collegato al descrittore di lettura della pipe. Viene così eliminata la necessità di creare file temporanei per il passaggio di informazioni ad altri programmi.  
   
- La funzione `_pipe` restituisce due descrittori del file alle pipe nell'argomento `pfds`.  L'elemento `pfds`\[0\] contiene il descrittore di lettura, l'elemento `pfds`\[1\] contiene il descrittore di scrittura.  I descrittori del file della pipe vengono utilizzati come gli altri descrittori del file. \(Le funzioni di input e di output di basso livello `_read` e `_write` possono leggere e scrivere le pipe\). Per rilevare la fine della pipe, verificare che la funzione `_read` restituisca 0 come numero di byte letti.  
+ La funzione `_pipe` restituisce due descrittori di file alla pipe nell'argomento `pfds`. L'elemento `pfds`[0] contiene il descrittore di lettura e l'elemento `pfds`[1] contiene il descrittore di scrittura. I descrittori di file della pipe vengono usato nello stesso modo di altri descrittori di file. (Le funzioni di output e input di basso livello `_read` e `_write` possono leggere e scrivere in una pipe.) Per rilevare la condizione di fine della pipe, verificare se è presente una richiesta `_read` che restituisce 0 come numero di byte letti.  
   
- L'argomento `psize` specifica la quantità di memoria, in byte, da riservare alla pipe.  L'argomento `textmode` specifica la modalità di traduzione della pipe.  La costante manifesto `_O_TEXT` specifica una conversione del testo e, la costante `_O_BINARY` specifica la conversione binaria. \(Vedere [fopen, \_wfopen](../../c-runtime-library/reference/fopen-wfopen.md) per una descrizione del testo e della modalità binaria.\) Se l'argomento `textmode` è 0, `_pipe` utilizza la modalità di traduzione predefinita specificata dalla variabile di modalità predefinita [\_fmode](../../c-runtime-library/fmode.md).  
+ L'argomento `psize` specifica la quantità di memoria, in byte, da riservare per la pipe. L'argomento `textmode` specifica la modalità di conversione per la pipe. La costante manifesta `_O_TEXT` specifica una conversione di testo e la costante `_O_BINARY` specifica una conversione binaria. (Per una descrizione delle modalità testo e binaria, vedere [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md).) Se l'argomento `textmode` è 0, `_pipe` usa la modalità di conversione predefinita specificata dalla variabile della modalità predefinita [_fmode](../../c-runtime-library/fmode.md).  
   
- Nei programmi multithread, non viene eseguito alcun blocco.  I descrittori del file restituiti sono già aperti e non dovrebbero essere utilizzati da alcun thread prima che la chiamata a `_pipe` sia stata completata.  
+ Nei programmi multithreading, non viene eseguito alcun blocco. I descrittori di file restituiti sono appena aperti e nessun thread deve farvi riferimento fino al completamento della chiamata `_pipe`.  
   
- Per utilizzare la funzione `_pipe` per comunicare tra un processo padre e un processo figlio, ogni processo deve disporre di un unico descrittore aperto sulla pipe.  I descrittori devono essere opposti: se il padre dispone di un descrittore di lettura aperto, il figlio deve disporre di un descrittore di scrittura aperto.  Il modo più semplice per ottenere questo risultato consiste nel fare `OR` \(  `|`\) il flag `_O_NOINHERIT` con `textmode`.  Quindi, utilizzare `_dup` o `_dup2` per creare una copia ereditabile del descrittore della pipe da passare al figlio.  Chiudere il descrittore originale e quindi generare il processo figlio.  Una volta terminata la chiamata alla funzione di generazione del processo figlio, chiudere il descrittore duplicato nel processo padre.  Per ulteriori informazioni, vedere l'esempio 2 più avanti in questo articolo.  
+ Per usare la funzione `_pipe` per la comunicazione tra un processo padre e un processo figlio, ogni processo deve avere un solo descrittore aperto sulla pipe. I descrittori devono essere opposti: se il padre ha un descrittore di lettura aperto, il figlio deve avere un descrittore di scrittura aperto. Il modo più semplice per ottenere questo risultato consiste nel combinare il flag `_O_NOINHERIT` con `textmode` usando `OR` (`|`) . Usare quindi `_dup` o `_dup2` per creare una copia ereditabile del descrittore della pipe che si vuole passare al processo figlio. Chiudere il descrittore originale e quindi generare il processo figlio. Al completamento della chiamata di generazione, chiudere il descrittore duplicato nel processo padre. Per altre informazioni, vedere l'esempio 2 in questo articolo.  
   
- Nel sistema operativo Windows, una pipe viene distrutta quando tutti i suoi descrittori sono stati chiusi. \(Se tutti i descrittori di lettura sulla pipe sono stati scritti, allora scrivere sulla pipe causa un errore.\) Tutte le operazioni di scrittura e di lettura su una pipe attendono finché vi sono dati sufficienti o spazio sufficiente nel buffer per completare la richiesta di I\/O.  
+ Nel sistema operativo Windows, una pipe viene eliminata quando tutti i relativi descrittori sono stati chiusi. (Se sono stati chiusi tutti i descrittori di lettura della pipe, la scrittura sulla pipe causa un errore.) Tutte operazioni lettura e scrittura sulla pipe attendono che siano disponibili dati sufficienti o spazio sufficiente nel buffer per completare la richiesta di I/O.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|Intestazione facoltativa|  
-|-------------|-------------------------------|------------------------------|  
-|`_pipe`|\<io.h\>|\<fcntl.h\>,1 \<errno.h\>2|  
+|-------------|---------------------|---------------------|  
+|`_pipe`|\<io.h>|\<fcntl.h>,1 \<errno.h>2|  
   
- 1 Per le definizioni di `_O_BINARY` e `_O_TEXT`.  
+ 1 Per le definizioni `_O_BINARY` e `_O_TEXT`.  
   
- 2 definizioni `errno`.  
+ 2 Definizioni `errno`.  
   
- Per ulteriori informazioni di compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
-## Librerie  
- Tutte le versioni delle [Librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Librerie  
+ Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
   
-## Esempio 1  
+## <a name="example-1"></a>Esempio 1  
   
 ```  
-// crt_pipe.c  
+  
+      // crt_pipe.c  
 /* This program uses the _pipe function to pass streams of  
  * text to spawned processes.  
  */  
@@ -198,7 +216,7 @@ int main( int argc, char *argv[] )
 }  
 ```  
   
-## Esempio di output  
+## <a name="sample-output"></a>Esempio di output  
   
 ```  
 Son, what is the square root of 1000?  
@@ -219,8 +237,8 @@ Son, what is the square root of 8000?
 Dad, the square root of 8000 is 89.44.  
 ```  
   
-## Esempio 2  
- Si tratta di un'applicazione base di filtraggio.  Genera l'applicazione crt\_pipe\_beeper dopo aver creato una pipe che ridireziona l'stdout dell'applicazione generata verso il filtro.  Il filtro rimuove i caratteri ASCII 7 \(beep\).  
+## <a name="example-2"></a>Esempio 2  
+ Questa è una semplice applicazione di filtro. Genera crt_pipe_beeper per l'applicazione dopo la creazione di una pipe che indirizza stdout dell'applicazione generata al filtro. Il filtro rimuove i caratteri ASCII 7 (campanello).  
   
 ```  
 // crt_pipe_beeper.c  
@@ -239,7 +257,7 @@ int main()
 }  
 ```  
   
- L'applicazione di filtro attuale:  
+ Applicazione di filtro effettiva:  
   
 ```  
 // crt_pipe_BeepFilter.C  
@@ -334,7 +352,7 @@ int main(int argc, char** argv)
 }  
 ```  
   
-## Output  
+## <a name="output"></a>Output  
   
 ```  
 This is speaker beep number 1...  
@@ -349,9 +367,9 @@ This is speaker beep number 9...
 This is speaker beep number 10...  
 ```  
   
-## Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione standard C, utilizzare `PInvoke`. Per ulteriori informazioni, vedere [Platform Invoke Examples](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
+ Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
-## Vedere anche  
- [Controllo processo e ambiente](../../c-runtime-library/process-and-environment-control.md)   
- [\_open, \_wopen](../../c-runtime-library/reference/open-wopen.md)
+## <a name="see-also"></a>Vedere anche  
+ [Controllo di processi e ambiente](../../c-runtime-library/process-and-environment-control.md)   
+ [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)

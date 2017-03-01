@@ -1,48 +1,65 @@
 ---
-title: "calloc | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "calloc"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-heap-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "calloc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "allocazione di memoria, matrici"
-  - "calloc (funzione)"
+title: calloc | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- calloc
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-heap-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- calloc
+dev_langs:
+- C++
+helpviewer_keywords:
+- memory allocation, arrays
+- calloc function
 ms.assetid: 17bb79a1-98cf-4096-90cb-1f9365cd6829
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# calloc
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 574d1e8a48de3aa380b6d51ba71c28a953572013
+ms.lasthandoff: 02/24/2017
 
-Alloca un array in memoria con gli elementi inizializzati a 0.  
+---
+# <a name="calloc"></a>calloc
+Alloca una matrice in memoria con elementi inizializzati a 0.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 void *calloc(   
@@ -51,42 +68,42 @@ void *calloc(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `num`  
- Numero di elementi  
+ Numero di elementi.  
   
  `size`  
  Lunghezza in byte di ogni elemento.  
   
-## Valore restituito  
- `calloc` restituisce un puntatore allo spazio allocato.  Lo spazio di memoria puntato da un valore di ritorno garantisce l'archiviazione di ogni tipo di oggetto.  Per ottenere un puntatore a un tipo diverso da `void`, utilizzare un cast di tipo sul valore restituito.  
+## <a name="return-value"></a>Valore restituito  
+ `calloc` restituisce un puntatore allo spazio allocato. Lo spazio di archiviazione a cui punta il valore restituito garantisce il corretto allineamento per l'archiviazione di qualsiasi tipo di oggetto. Per ottenere un puntatore a un tipo diverso da `void`, usare un cast del tipo sul valore restituito.  
   
-## Note  
- La funzione `calloc` alloca spazio di memoria per un array di elementi `num`, ognuno con byte di lunghezza `size`.  Ogni elemento viene inizializzato a 0.  
+## <a name="remarks"></a>Note  
+ La funzione `calloc` alloca spazio di archiviazione per una matrice di elementi `num`, ognuno lungo `size` byte. Ogni elemento viene inizializzato a 0.  
   
- `calloc` imposta `errno` a `ENOMEM` se un'allocazione della memoria fallisce o se la quantità di memoria richiesta supera `_HEAP_MAXREQ`.  Per informazioni su questi e altri codici di errore, vedere [errno, \_doserrno, \_sys\_errlist, and \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ `calloc` imposta `errno` su `ENOMEM` se un'allocazione di memoria ha esito negativo o se la quantità di memoria richiesta supera `_HEAP_MAXREQ`. Per informazioni su questo e altri codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
- La funzione `malloc` richiama `calloc` per utilizzare la funzione C\+\+ [\_set\_new\_mode](../../c-runtime-library/reference/set-new-mode.md) per impostare la nuova modalità di gestione.  La nuova modalità del gestore indica che, in caso di errore, `malloc` deve richiamare la nuova routine del gestore come imposto da [\_set\_new\_handler](../../c-runtime-library/reference/set-new-handler.md).  Per impostazione predefinita, `malloc` non richiama la nuova routine di gestione in caso di errore nell'allocare memoria.  È possibile eseguire l'override di questo comportamento predefinito in modo che, quando `calloc` non riesce ad allocare memoria, `malloc` richiami la nuova routine del gestore allo stesso modo di come accade con l'operatore `new` quando si verifica il medesimo errore.  Per eseguire l'override del comportamento predefinito, chiamare  
+ `calloc` chiama `malloc` per usare la funzione [_set_new_mode](../../c-runtime-library/reference/set-new-mode.md) di C++ per impostare la nuova modalità del gestore. La nuova modalità del gestore indica se, in caso di errore, `malloc` deve chiamare la routine del nuovo gestore come impostato da [set_new_handler](../../c-runtime-library/reference/set-new-handler.md). Per impostazione predefinita, `malloc` non chiama la routine del nuovo gestore in caso di errore di allocazione della memoria. È possibile eseguire l'override di questo comportamento predefinito in modo che, quando `calloc` non riesce ad allocare memoria, `malloc` chiami la routine del nuovo gestore, come fa l'operatore `new` quando non riesce per lo stesso motivo. Per eseguire l'override del comportamento predefinito, chiamare  
   
 ```  
 _set_new_mode(1)  
 ```  
   
- all'inizio del programma, o collegare con NEWMODE.OBJ \(vedere [Opzioni collegamento](../../c-runtime-library/link-options.md)\).  
+ all'inizio del programma o collegarsi a NEWMODE.OBJ (vedere [Opzioni di collegamento](../../c-runtime-library/link-options.md)).  
   
- Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime del linguaggio C, `calloc` viene identificato come [\_calloc\_dbg](../../c-runtime-library/reference/calloc-dbg.md).  Per ulteriori informazioni su come viene gestito l'heap durante il processo di debug, vedere [L'heap di debug CRT](../Topic/CRT%20Debug%20Heap%20Details.md).  
+ Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime C, `calloc` viene risolto in [_realloc_dbg](../../c-runtime-library/reference/calloc-dbg.md). Per altre informazioni su come viene gestito l'heap durante il processo di debug, vedere [Informazioni dettagliate sull'heap di debug CRT](/visualstudio/debugger/crt-debug-heap-details).  
   
- `calloc` è contrassegnata in `__declspec(noalias)` e `__declspec(restrict)`, pertanto la funzione garantisce che le variabili globali non vengono modificate, e che il puntatore restituito è già utilizzato.  Per ulteriori informazioni, vedere [noalias](../../cpp/noalias.md) e [limiti](../../cpp/restrict.md).  
+ `calloc` è contrassegnato come `__declspec(noalias)` e `__declspec(restrict)` e questo garantisce che la funzione non modifichi le variabili globali e il puntatore restituito non venga associato a un alias. Per altre informazioni, vedere [noalias](../../cpp/noalias.md) e [restrict](../../cpp/restrict.md).  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`calloc`|\<stdlib.h\> e \<malloc.h\>|  
+|-------------|---------------------|  
+|`calloc`|\<stdlib.h> e \<malloc.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_calloc.c  
@@ -109,11 +126,14 @@ int main( void )
 }  
 ```  
   
-  **Allocati 40 long integer**   
-## Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione standard C, utilizzare `PInvoke`. Per ulteriori informazioni, vedere [Esempi di Invocazione della Piattaforma](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+Allocated 40 long integers  
+```  
   
-## Vedere anche  
+## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
+ Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
+  
+## <a name="see-also"></a>Vedere anche  
  [Allocazione di memoria](../../c-runtime-library/memory-allocation.md)   
  [free](../../c-runtime-library/reference/free.md)   
  [malloc](../../c-runtime-library/reference/malloc.md)   

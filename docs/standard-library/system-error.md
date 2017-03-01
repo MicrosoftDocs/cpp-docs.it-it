@@ -1,89 +1,109 @@
 ---
-title: "&lt;system_error&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.<system_error>"
-  - "std::<system_error>"
-  - "<system_error>"
-  - "system_error"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "system_error (intestazione)"
+title: '&lt;system_error&gt; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std.<system_error>
+- std::<system_error>
+- <system_error>
+- system_error
+dev_langs:
+- C++
+helpviewer_keywords:
+- system_error header
 ms.assetid: 5e046c6e-48d9-4740-8c8a-05f3727c1215
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# &lt;system_error&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: ad53550cce165587057910e3cd4c77427fb1cd55
+ms.lasthandoff: 02/24/2017
 
-Includere l'intestazione `<system_error>` per definire la classe `system_error` di eccezione e i modelli correlati per elaborare gli errori di sistema di basso livello.  
+---
+# <a name="ltsystemerrorgt"></a>&lt;system_error&gt;
+Includere l'intestazione `<system_error>` per definire la classe di eccezione `system_error` e i modelli correlati per l'elaborazione degli errori di sistema di basso livello.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 #include <system_error>  
 ```  
   
-### Oggetti  
+### <a name="objects"></a>Oggetti  
   
 |||  
 |-|-|  
-|[generic\_category](../Topic/generic_category.md)|Rappresenta la categoria degli errori generici.|  
-|[system\_category](../Topic/system_category.md)|Rappresenta la categoria per gli errori causati dagli overflow di basso livello di sistema.|  
+|[generic_category](../standard-library/system-error-functions.md#generic_category)|Rappresenta la categoria di errori generici.|  
+|[system_category](../standard-library/system-error-functions.md#system_category)|Rappresenta la categoria di errori causati da un overflow di basso livello del sistema.|  
   
-### Definizioni typedef  
-  
-|||  
-|-|-|  
-|[generic\_errno](../Topic/generic_errno.md)|Un tipo che rappresenta un'enumerazione che fornisce i nomi simbolici per tutte le macro di codice di errore definito da POSIX in `<errno.h>`.|  
-  
-### Funzioni  
+### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
-|[make\_error\_code](../Topic/make_error_code.md)|Crea un oggetto `error_code`.|  
-|[make\_error\_condition](../Topic/make_error_condition.md)|Crea un oggetto `error_condition`.|  
+|[generic_errno](../standard-library/system-error-typedefs.md#generic_errno)|Tipo che rappresenta l'enumerazione che fornisce i nomi simbolici per tutte le macro di codice di errore definite da Posix in `<errno.h>`.|  
   
-### Operatori  
-  
-|||  
-|-|-|  
-|[operatore\=\=](../Topic/operator==%20\(%3Csystem_error%3E\).md)|Verifica se l'oggetto a sinistra dell'operatore è uguale all'oggetto sul lato destro.|  
-|[operatore\!\=](../Topic/operator!=%20\(%3Csystem_error%3E\).md)|Verifica se l'oggetto a sinistra dell'operatore non è uguale all'oggetto sul lato destro.|  
-|[l'operatore ':?'\<](../Topic/operator%3C%20\(%3Csystem_error%3E\).md)|Verifica se un oggetto è inferiore all'oggetto passato per il confronto.|  
-  
-### Enumerazioni  
+### <a name="functions"></a>Funzioni  
   
 |||  
 |-|-|  
-|[errc](../Topic/errc%20Enumeration.md)|Fornisce i nomi simbolici per tutte le macro di codice di errore definite da POSIX in `<errno.h>`.|  
+|[make_error_code](../standard-library/system-error-functions.md#make_error_code)|Crea un oggetto `error_code`.|  
+|[make_error_condition](../standard-library/system-error-functions.md#make_error_condition)|Crea un oggetto `error_condition`.|  
   
-### Classi e strutture  
+### <a name="operators"></a>Operatori  
   
 |||  
 |-|-|  
-|[error\_category](../standard-library/error-category-class.md)|Rappresenta tale classe astratta, comune per gli oggetti che descrive una categoria di codici di errore.|  
-|[error\_code](../standard-library/error-code-class.md)|Rappresenta gli errori del sistema di basso livello che sono specifici.|  
-|[error\_condition](../standard-library/error-condition-class.md)|Rappresenta i codici errore definiti dall'utente.|  
-|[is\_error\_code\_enum](../standard-library/is-error-code-enum-class.md)|Rappresenta un predicato di digitare test per l'enumerazione [Classe error\_code](../standard-library/error-code-class.md).|  
-|[is\_error\_condition\_enum](../standard-library/is-error-condition-enum-class.md)|Rappresenta un predicato di digitare test per l'enumerazione [Classe error\_condition](../standard-library/error-condition-class.md).|  
-|[system\_error](../standard-library/system-error-class.md)|Rappresenta la classe base per tutte le eccezioni generate per segnalare un overflow di basso livello di sistema.|  
+|[operator==](../standard-library/system-error-operators.md#operator_eq_eq)|Verifica se l'oggetto a sinistra dell'operatore è uguale all'oggetto a destra.|  
+|[operator!=](../standard-library/system-error-operators.md#operator_neq)|Verifica se l'oggetto a sinistra dell'operatore non è uguale all'oggetto a destra.|  
+|[operator<](../standard-library/system-error-operators.md#operator_lt_)|Verifica se un oggetto è più piccolo dell'oggetto passato per il confronto.|  
   
-## Requisiti  
- **Intestazione:** \<system\_error\>  
+### <a name="enumerations"></a>Enumerazioni  
+  
+|||  
+|-|-|  
+|[errc](../standard-library/system-error-enums.md#errc_enumeration)|Fornisce i nomi simbolici per tutte le macro di codice di errore definite da POSIX in `<errno.h>`.|  
+  
+### <a name="classes-and-structs"></a>Classi e struct  
+  
+|||  
+|-|-|  
+|[error_category](../standard-library/error-category-class.md)|Rappresenta la base comune astratta per gli oggetti che descrive una categoria di codici di errore.|  
+|[error_code](../standard-library/error-code-class.md)|Rappresenta gli errori di sistema di basso livello che sono specifici dell'implementazione.|  
+|[error_condition](../standard-library/error-condition-class.md)|Rappresenta i codici di errore definiti dall'utente.|  
+|[is_error_code_enum](../standard-library/is-error-code-enum-class.md)|Rappresenta un predicato di tipo che verifica l'enumerazione della classe [error_code](../standard-library/error-code-class.md).|  
+|[is_error_condition_enum](../standard-library/is-error-condition-enum-class.md)|Rappresenta un predicato di tipo che verifica l'enumerazione per la classe [error_condition](../standard-library/error-condition-class.md).|  
+|[system_error](../standard-library/system-error-class.md)|Rappresenta la classe di base per tutte le eccezioni generate per segnalare un overflow di basso livello del sistema.|  
+  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<system_error>  
   
  **Spazio dei nomi:** std  
   
-## Vedere anche  
- [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)
+## <a name="see-also"></a>Vedere anche  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md) (Riferimento file di intestazione)
+
+
+
+

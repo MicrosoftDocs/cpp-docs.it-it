@@ -1,74 +1,90 @@
 ---
-title: "_cprintf, _cprintf_l, _cwprintf, _cwprintf_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_cwprintf_l"
-  - "_cprintf_l"
-  - "_cwprintf"
-  - "_cprintf"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_cwprintf"
-  - "cwprintf"
-  - "tcprintf"
-  - "_tcprintf"
-  - "_cprintf"
-  - "cwprintf_l"
-  - "tcprintf_l"
-  - "_tcprintf_l"
-  - "cprintf_l"
-  - "_cprintf_l"
-  - "_cwprintf_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_cprintf (funzione)"
-  - "_cprintf_l (funzione)"
-  - "_cwprintf (funzione)"
-  - "_cwprintf_l (funzione)"
-  - "_tcprintf (funzione)"
-  - "_tcprintf_l (funzione)"
-  - "caratteri, stampa nella console"
-  - "cprintf_l (funzione)"
-  - "cwprintf (funzione)"
-  - "cwprintf_l (funzione)"
-  - "stampa di caratteri nella console"
-  - "tcprintf (funzione)"
-  - "tcprintf_l (funzione)"
+title: _cprintf, _cprintf_l, _cwprintf, _cwprintf_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _cwprintf_l
+- _cprintf_l
+- _cwprintf
+- _cprintf
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _cwprintf
+- cwprintf
+- tcprintf
+- _tcprintf
+- _cprintf
+- cwprintf_l
+- tcprintf_l
+- _tcprintf_l
+- cprintf_l
+- _cprintf_l
+- _cwprintf_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- _cprintf_l function
+- _cwprintf_l function
+- cwprintf function
+- cprintf_l function
+- characters, printing to console
+- printing characters to console
+- _tcprintf_l function
+- tcprintf function
+- _tcprintf function
+- tcprintf_l function
+- _cwprintf function
+- cwprintf_l function
+- _cprintf function
 ms.assetid: 67ffefd4-45b3-4be0-9833-d8d26ac7c4e2
 caps.latest.revision: 34
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 34
----
-# _cprintf, _cprintf_l, _cwprintf, _cwprintf_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: d761621d23ab97d951199e7790e71f224394f92c
+ms.lasthandoff: 02/24/2017
 
-Formatta e stampa nella console.  Le versioni più sicure sono disponibili; vedere [\_cprintf\_s, \_cprintf\_s\_l, \_cwprintf\_s, \_cwprintf\_s\_l](../../c-runtime-library/reference/cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md).  
+---
+# <a name="cprintf-cprintfl-cwprintf-cwprintfl"></a>_cprintf, _cprintf_l, _cwprintf, _cwprintf_l
+Formatta e stampa nella console. Sono disponibili versioni più sicure, vedere [cprintf_s, _cprintf_s_l, cwprintf_s, _cwprintf_s_l](../../c-runtime-library/reference/cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md).  
   
 > [!IMPORTANT]
->  Questa API non può essere utilizzata nelle applicazioni che vengono eseguite in Windows Runtime.  Per ulteriori informazioni, vedere [Funzioni CRT non supportate con \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere l'articolo relativo alle [funzioni CRT non supportate con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 int _cprintf(   
@@ -91,7 +107,7 @@ int _cwprintf_l(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `format`  
  Stringa di controllo del formato.  
   
@@ -99,53 +115,77 @@ int _cwprintf_l(
  Parametri facoltativi.  
   
  `locale`  
- Impostazioni locali da utilizzare.  
+ Impostazioni locali da usare.  
   
-## Valore restituito  
- Il numero di caratteri da stampare.  
+## <a name="return-value"></a>Valore restituito  
+ Numero di caratteri stampati.  
   
-## Note  
- Queste funzioni `` formattano e stampano una stringa di caratteri e i valori direttamente nella console, utilizzando la funzione `_putch` \(`_putwch` per `_cwprintf`\) per i caratteri di output.  Ogni funzione `argument` \(se presente\) viene convertita e restituita in base al formato specificato in `format`.  Il formato con lo stesso form e funzione del parametro `format` per la funzione [printf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  A differenza `fprintf`, `printf` e delle funzioni `sprintf`, né `_cprintf` e né `_cwprintf` convertono nell'output combinazioni di caratteri di avanzamento in caratteri di ritorno a capo \(CR\-LE\).  
+## <a name="remarks"></a>Note  
+ Queste funzioni formattano e stampano una serie di caratteri e valori direttamente sulla console, usando la funzione `_putch` (`_putwch` per `_cwprintf`) per i caratteri di output. Ogni funzione `argument` (se presente) viene convertita e restituita in base al formato specificato in `format`. Il formato ha la stessa forma e funzione del parametro `format` per la funzione [printf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). A differenza delle funzioni `fprintf`, `printf` e `sprintf`, né `_cprintf` né `_cwprintf` convertono, nell'output, combinazioni di caratteri di avanzamento di riga in caratteri di ritorno a capo (CR-LF).  
   
- Una differenza importante è che `_cwprintf` visualizzare i caratteri Unicode quando si utilizza Windows NT.  A differenza di `_cprintf`, `_cwprintf` utilizza le impostazioni locali correnti della console.  
+ Una differenza importante è che `_cwprintf` visualizza i caratteri Unicode se usato in Windows NT. A differenza di `_cprintf`, `_cwprintf` utilizza le impostazioni locali correnti della console.  
   
- Le versioni di queste funzioni con il suffisso `_l` sono identiche ad eccezione che utilizzano il parametro delle impostazioni locali passato in ingresso invece di utilizzare le impostazioni locali correnti.  
+ Le versioni di queste funzioni con il suffisso `_l` sono identiche ad eccezione per il fatto che usano il parametro delle impostazioni locali passato al posto di quelle correnti.  
   
- `_cprintf` convalida i parametro `format`.  Se `format` è un puntatore a null, la funzione richiama il gestore di parametro non valido, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).  Se l'esecuzione può continuare, la funzione restituisce \-1 e imposta `errno` su `EINVAL`.  
+ `_cprintf` convalida il parametro `format`. Se `format` è un puntatore Null, questa funzione richiama il gestore di parametri non validi, come descritto in [Parameter Validation](../../c-runtime-library/parameter-validation.md) (Convalida dei parametri). Se l'esecuzione può continuare, la funzione restituisce -1 e imposta `errno` su `EINVAL`.  
   
 > [!IMPORTANT]
 >  Assicurarsi che `format` non sia una stringa definita dall'utente.  
   
-### Mapping di routine su testo generico  
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
-|Routine Tchar.h|\_UNICODE e \_MBCS non definiti|\_MBCS definito|\_UNICODE definito|  
-|---------------------|-------------------------------------|---------------------|------------------------|  
+|Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tcprintf`|`_cprintf`|`_cprintf`|`_cwprintf`|  
 |`_tcprintf_l`|`_cprintf_l`|`_cprintf_l`|`_cwprintf_l`|  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`_cprintf`,`_cprintf_l`|\<conio.h\>|  
-|`_cwprintf`, `_cwprintf_l`|\<conio.h\>|  
+|-------------|---------------------|  
+|`_cprintf`,`_cprintf_l`|\<conio.h>|  
+|`_cwprintf`, `_cwprintf_l`|\<conio.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
-  **\-16 001d   62511  A Test**   
-## Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione standard C, utilizzare `PInvoke`. Per ulteriori informazioni, vedere [Esempi di Invocazione della Piattaforma](../Topic/Platform%20Invoke%20Examples.md).  
+```  
+// crt_cprintf.c  
+// compile with: /c  
+// This program displays some variables to the console.  
   
-## Vedere anche  
- [I\/O console e porta](../../c-runtime-library/console-and-port-i-o.md)   
- [\_cscanf, \_cscanf\_l, \_cwscanf, \_cwscanf\_l](../../c-runtime-library/reference/cscanf-cscanf-l-cwscanf-cwscanf-l.md)   
- [fprintf, \_fprintf\_l, fwprintf, \_fwprintf\_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [printf, \_printf\_l, wprintf, \_wprintf\_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [sprintf, \_sprintf\_l, swprintf, \_swprintf\_l, \_\_swprintf\_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [vfprintf, \_vfprintf\_l, vfwprintf, \_vfwprintf\_l](../../c-runtime-library/reference/vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md)   
- [\_cprintf\_s, \_cprintf\_s\_l, \_cwprintf\_s, \_cwprintf\_s\_l](../../c-runtime-library/reference/cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md)   
- [\_cprintf\_p, \_cprintf\_p\_l, \_cwprintf\_p, \_cwprintf\_p\_l](../../c-runtime-library/reference/cprintf-p-cprintf-p-l-cwprintf-p-cwprintf-p-l.md)   
- [Sintassi per la specifica del formato: funzioni printf wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)
+#include <conio.h>  
+  
+int main( void )  
+{  
+    int         i = -16,  
+                h = 29;  
+    unsigned    u = 62511;  
+    char        c = 'A';  
+    char        s[] = "Test";  
+  
+    // Note that console output does not translate \n as  
+    // standard output does. Use \r\n instead.  
+    //  
+    _cprintf( "%d  %.4x  %u  %c %s\r\n", i, h, u, c, s );  
+}  
+```  
+  
+```Output  
+-16  001d  62511  A Test  
+```  
+  
+## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
+ Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
+  
+## <a name="see-also"></a>Vedere anche  
+ [I/O su console e porta](../../c-runtime-library/console-and-port-i-o.md)   
+ [_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](../../c-runtime-library/reference/cscanf-cscanf-l-cwscanf-cwscanf-l.md)   
+ [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
+ [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [vfprintf, _vfprintf_l, vfwprintf, _vfwprintf_l](../../c-runtime-library/reference/vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md)   
+ [_cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l](../../c-runtime-library/reference/cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md)   
+ [_cprintf_p, _cprintf_p_l, _cwprintf_p, _cwprintf_p_l](../../c-runtime-library/reference/cprintf-p-cprintf-p-l-cwprintf-p-cwprintf-p-l.md)   
+ [Format Specification Syntax: printf and wprintf Functions](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) (Sintassi per la specifica del formato: funzioni printf e wprintf)

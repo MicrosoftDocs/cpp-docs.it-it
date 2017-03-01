@@ -1,70 +1,86 @@
 ---
-title: "va_arg, va_copy, va_end, va_start | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "va_arg"
-  - "va_end"
-  - "va_copy"
-  - "va_start"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "va_arg"
-  - "va_start"
-  - "va_list"
-  - "va_alist"
-  - "va_dcl"
-  - "va_copy"
-  - "va_end"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "elenchi di argomenti variabili, l'accesso"
-  - "va_start (macro)"
-  - "va_arg (macro)"
-  - "va_end (macro)"
-  - "argomenti [C++], elenchi di argomenti"
-  - "va_list (macro)"
-  - "va_dcl (macro)"
-  - "va_alist (macro)"
-  - "va_copy (macro)"
+title: va_arg, va_copy, va_end, va_start | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- va_arg
+- va_end
+- va_copy
+- va_start
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- va_arg
+- va_start
+- va_list
+- va_alist
+- va_dcl
+- va_copy
+- va_end
+dev_langs:
+- C++
+helpviewer_keywords:
+- variable argument lists, accessing
+- va_start macro
+- va_arg macro
+- va_end macro
+- arguments [C++], argument lists
+- va_list macro
+- va_dcl macro
+- va_alist macro
+- va_copy macro
 ms.assetid: a700dbbd-bfe5-4077-87b6-3a07af74a907
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# va_arg, va_copy, va_end, va_start
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
+ms.openlocfilehash: 5caea89460070402fc8dc5b38912e290d4c5798d
+ms.lasthandoff: 02/24/2017
 
-Elenchi di accessi argomento variabile.  
+---
+# <a name="vaarg-vacopy-vaend-vastart"></a>va_arg, va_copy, va_end, va_start
+Accede a elenchi di argomenti variabili.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      type va_arg(  
+type va_arg(  
    va_list arg_ptr,  
    type   
-);void va_copy(  
+);
+void va_copy(  
    va_list dest,  
    va_list src  
 ); // (ISO C99 and later)  
@@ -77,7 +93,7 @@ void va_start(
 ); // (ANSI C89 and later)  
 void va_start(  
    arg_ptr   
-);  // (Pre-ANSI C89 standardization version)  
+);  // (deprecated Pre-ANSI C89 standardization version)  
 ```  
   
 #### <a name="parameters"></a>Parametri  
@@ -88,36 +104,36 @@ void va_start(
  Puntatore all'elenco di argomenti.  
   
  `dest`  
- Puntatore all'elenco di argomenti per l'inizializzazione `src`  
+ Puntatore all'elenco di argomenti da inizializzare da `src`.  
   
  `src`  
- Puntatore all'elenco di argomenti in cui copiare inizializzato `dest`.  
+ Puntatore all'elenco inizializzato di argomenti da copiare in `dest`.  
   
  `prev_param`  
  Parametro che precede il primo argomento facoltativo.  
   
 ## <a name="return-value"></a>Valore restituito  
- `va_arg` Restituisce l'argomento corrente. `va_copy`, `va_start` e `va_end` non restituiscono valori.  
+ `va_arg` restituisce l'argomento corrente. `va_copy`, `va_start` e `va_end` non restituiscono valori.  
   
 ## <a name="remarks"></a>Note  
- Il `va_arg`, `va_copy`, `va_end`, e `va_start` macro offrono un modo portabile per accedere agli argomenti a una funzione quando la funzione accetta un numero variabile di argomenti. Esistono due versioni delle macro: macro definite in STDARG. H è conforme a ISO C99 standard; macro definite in VARARGS. H sono deprecate, ma vengono mantenuti per compatibilità con il codice che è stato scritto prima il C89 ANSI standard.  
+ Le macro `va_arg`, `va_copy`, `va_end` e `va_start` offrono un modo portabile per accedere agli argomenti di una funzione quando la funzione accetta un numero variabile di argomenti. Esistono due versioni delle macro: le macro definite in STDARG.H conformi allo standard ISO C99 e le macro definite in VARARGS.H che sono deprecate, ma vengono mantenute per compatibilità con le versioni precedenti del codice scritto prima dello standard ANSI C89.  
   
- Queste macro presuppongono che la funzione accetta un numero fisso di argomenti obbligatori, seguito da un numero variabile di argomenti facoltativi. Gli argomenti obbligatori vengono dichiarati come parametri comuni per la funzione e sono accessibili tramite i nomi dei parametri. Gli argomenti facoltativi sono accessibili tramite le macro in STDARG. H (o VARARGS. H per codice che è stato scritto prima lo standard ANSI C89), che imposta un puntatore al primo argomento facoltativo nell'elenco di argomenti, recupera gli argomenti nell'elenco e reimposta il puntatore del mouse al termine dell'elaborazione degli argomenti.  
+ Queste macro presuppongono che la funzione accetti un numero fisso di argomenti obbligatori, seguito da un numero variabile di argomenti facoltativi. Gli argomenti obbligatori vengono dichiarati come parametri comuni per la funzione e sono accessibili tramite i nomi dei parametri. Gli argomenti facoltativi sono accessibili tramite le macro in STDARG.H (o VARARGS.H per il codice scritto prima dello standard ANSI C89), che impostano un puntatore al primo argomento facoltativo nell'elenco di argomenti, recuperano gli argomenti dall'elenco e reimpostano il puntatore al termine dell'elaborazione degli argomenti.  
   
- C standard macro, definite in STDARG. H, vengono usate come segue:  
+ Le macro standard C, definite in STDARG. H, vengono usate come segue:  
   
--   `va_start` imposta `arg_ptr` per il primo argomento facoltativo nell'elenco di argomenti passati alla funzione. L'argomento `arg_ptr` deve avere il `va_list` tipo. L'argomento `prev_param` è il nome del parametro obbligatorio che precede il primo argomento facoltativo nell'elenco di argomenti. Se `prev_param` viene dichiarata con la classe di archiviazione, il comportamento della macro non è definito. `va_start` prima è necessario utilizzare `va_arg` viene utilizzato per la prima volta.  
+-   `va_start` imposta `arg_ptr` sul primo argomento facoltativo nell'elenco di argomenti passati alla funzione. L'argomento `arg_ptr` deve essere di tipo `va_list`. L'argomento `prev_param` è il nome del parametro obbligatorio che precede il primo argomento facoltativo nell'elenco di argomenti. Se `prev_param` viene dichiarata con la classe di archiviazione nel registro, il comportamento della macro non è definito. È necessario usare `va_start` prima di usare `va_arg` per la prima volta.  
   
--   `va_arg` Recupera un valore di `type` dal percorso specificato da `arg_ptr`, e incrementa `arg_ptr` in modo da puntare all'argomento successivo nell'elenco utilizzando la dimensione di `type` per determinare quando si avvia l'argomento successivo. `va_arg` può essere utilizzato qualsiasi numero di volte in cui nella funzione per recuperare gli argomenti nell'elenco.  
+-   `va_arg` recupera un valore di `type` dal percorso specificato da `arg_ptr` e incrementa `arg_ptr` in modo che punti all'argomento successivo nell'elenco usando le dimensioni di `type` per determinare dove inizia l'argomento successivo. È possibile usare `va_arg` un qualsiasi numero di volte nella funzione per recuperare gli argomenti dall'elenco.  
   
--   `va_copy` Crea una copia di un elenco di argomenti nello stato corrente. Il `src` parametro deve essere già stato inizializzato con `va_start`; potrebbero essere stati aggiornato con `va_arg` chiama, ma è necessario non sono state reimpostate con `va_end`. L'argomento successivo verrà recuperato da `va_arg` da `dest` corrisponde all'argomento successivo che viene recuperato dalla `src`.  
+-   `va_copy` crea una copia di un elenco di argomenti nello stato corrente. Il parametro `src` deve essere già stato inizializzato con `va_start`. Potrebbe essere stato aggiornato con chiamate a `va_arg`, ma non deve essere stato reimpostato con `va_end`. L'argomento successivo che viene recuperato da `va_arg` da `dest` corrisponde all'argomento successivo recuperato da `src`.  
   
--   Dopo che tutti gli argomenti sono stati recuperati, `va_end` Reimposta il puntatore **NULL**. `va_end` deve essere chiamato per ogni elenco di argomenti che viene inizializzato con `va_start` o `va_copy` prima che la funzione restituisce.  
+-   Dopo aver recuperato tutti gli argomenti, `va_end` reimposta il puntatore su **NULL**. È necessario chiamare `va_end` per ogni elenco di argomenti inizializzato con `va_start` o `va_copy` prima che la funzione restituisca il controllo.  
   
 > [!NOTE]
->  Le macro in VARARGS. H sono deprecati e viene mantenuta solo per garantire la compatibilità con il codice che è stato scritto prima lo standard ANSI C89. In tutti gli altri casi, utilizzare le macro in STDARGS. H.  
+>  Le macro in VARARGS.H sono deprecate e vengono mantenute solo per garantire la compatibilità con il codice scritto prima dello standard ANSI C89. In tutti gli altri casi, usare le macro in STDARGS.H.  
   
- Quando vengono compilati utilizzando [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md), i programmi che utilizzano queste macro potrebbero generare risultati imprevisti a causa delle differenze tra sistemi di tipi nativi e common language runtime (CLR). Considerare questo programma:  
+ Quando vengono compilati con [/clr (Compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md), i programmi che usano queste macro potrebbero generare risultati imprevisti a causa delle differenze tra i sistemi dei tipi nativi e CLR (Common Language Runtime). Si consideri questo programma:  
   
 ```  
 #include <stdio.h>  
@@ -138,6 +154,8 @@ void testit (int i, ...)
         char *s = va_arg(argptr, char*);  
         printf("%s\n", s);  
     }  
+
+    va_end(argptr);  
 }  
   
 int main()  
@@ -147,7 +165,7 @@ int main()
 }  
 ```  
   
- Si noti che `testit` prevede che il secondo parametro sia un `int` o `char*`. Gli argomenti passati sono 0xffffffff (un `unsigned int`, non un `int`) e `NULL` (in realtà un `int`, non un `char*`). Quando il programma viene compilato per il codice nativo, produce il seguente output:  
+ Notare che `testit` si aspetta che il secondo parametro sia `int` o `char*`. Gli argomenti passati sono 0xffffffff (`unsigned int`, non `int`) e `NULL` (in effetti `int` e non `char*`). Quando il programma viene compilato per il codice nativo, produce il seguente output:  
   
 ```Output  
 -1  
@@ -155,23 +173,13 @@ int main()
 (null)  
 ```  
   
- Tuttavia, quando il programma viene compilato mediante **/clr: pure**, il tipo non corrisponde causano la generazione di un'eccezione. La soluzione consiste nell'utilizzare cast espliciti:  
-  
-```  
-int main()  
-{  
-   testit( 0, (int)0xFFFFFFFF ); // cast unsigned to int  
-   testit( 1, (char*)NULL );     // cast int to char*  
-}  
-```  
-  
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** \< stdio. h > e \< stdarg. h >  
+ **Intestazione:** \<stdio.h> e \<stdarg.h>  
   
- **Intestazione obsoleto:** \< varargs >  
+ **Intestazione deprecata:** \<varargs.h>  
   
 ## <a name="libraries"></a>Librerie  
- Tutte le versioni di [librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
+ Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
   
 ## <a name="example"></a>Esempio  
   
@@ -248,4 +256,4 @@ Deviation is: 0.000000
   
 ## <a name="see-also"></a>Vedere anche  
  [Accesso agli argomenti](../../c-runtime-library/argument-access.md)   
- [vfprintf, vfprintf_l, vfwprintf, vfwprintf_l](../../c-runtime-library/reference/vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md)
+ [vfprintf, _vfprintf_l, vfwprintf, _vfwprintf_l](../../c-runtime-library/reference/vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md)

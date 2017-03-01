@@ -1,104 +1,120 @@
 ---
-title: "Classe seed_seq | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "tr1::seed_seq"
-  - "std::tr1::seed_seq"
-  - "tr1.seed_seq"
-  - "seed_seq"
-  - "std.tr1.seed_seq"
-  - "random/std::tr1::seed_seq"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "seed_seq (classe)"
+title: Classe seed_seq | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- seed_seq
+- std::seed_seq
+- random/std::seed_seq
+- std::seed_seq::result_type
+- random/std::seed_seq::result_type
+- std::seed_seq::generate
+- random/std::seed_seq::generate
+- std::seed_seq::size
+- random/std::seed_seq::size
+- std::seed_seq::param
+- random/std::seed_seq::param
+dev_langs:
+- C++
+helpviewer_keywords:
+- seed_seq class
 ms.assetid: cba114f7-9ac6-4f2f-b773-9c84805401d6
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# Classe seed_seq
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
+ms.openlocfilehash: b637e311971b71564244f9bbdcfc37973a514710
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="seedseq-class"></a>Classe seed_seq
 Archivia un vettore di valori Integer non firmati che può fornire un valore di inizializzazione casuale per un motore di numeri casuali.  
   
-## Sintassi  
-  
+## <a name="syntax"></a>Sintassi  
 ```  
 class seed_seq  
-{  
+   {  
 public:  
-    // types  
-    typedef unsigned int result_type;  
-  
-    // constructors  
-    seed_seq();  
-  
-    template<class T>  
-    seed_seq(initializer_list<T> initlist);  
-  
-    template<class InputIterator>  
-    seed_seq(InputIterator begin, InputIterator end);  
-  
-    // generating functions  
-    template<class RandomAccessIterator>  
-    void generate(RandomAccessIterator begin, RandomAccessIterator end);  
-  
-    // property functions  
-    size_t size() const;  
-  
-    template<class OutputIterator>  
-    void param(OutputIterator dest) const;  
-  
-    // no copy functions  
-    seed_seq(const seed_seq&) = delete;  
-    void operator=(const seed_seq&) = delete;  
-};  
+   // types  
+   typedef unsigned int result_type;  
+
+   // constructors  
+   seed_seq();
+   template <class T>  
+      seed_seq(initializer_list<T> initlist);
+   template <class InputIterator>  
+      seed_seq(InputIterator begin, InputIterator end);
+
+   // generating functions  
+   template <class RandomAccessIterator>  
+      void generate(RandomAccessIterator begin, RandomAccessIterator end);
+
+   // property functions  
+   size_t size() const;
+   template <class OutputIterator>  
+      void param(OutputIterator dest) const;
+
+   // no copy functions  
+   seed_seq(const seed_seq&) = delete;  
+   void operator=(const seed_seq&) = delete;  
+   };  
 ```  
-  
-## Tipi  
+## <a name="types"></a>Tipi  
  `typedef unsigned int result_type;`   
-Tipo degli elementi della sequenza di inizializzazione. Un tipo unsigned integer a 32 bit.  
+Tipo degli elementi della sequenza di seeding. Tipo Unsigned Integer a 32 bit.  
   
-## Costruttori  
+## <a name="constructors"></a>Costruttori  
  `seed_seq();`   
-Costruttore predefinito, inizializzato per una sequenza interna vuota.  
+Costruttore predefinito, inizializzato in modo da avere una sequenza interna vuota.  
   
  `template<class T>`   
  `seed_seq(initializer_list<T> initlist);`   
-Utilizza `initlist` per impostare la sequenza interna.  
-`T` deve essere un tipo integer.  
+Usa `initlist` per impostare la sequenza interna.                   
+`T` deve essere un tipo Integer.  
   
  `template<class InputIterator>`   
  `seed_seq(InputIterator begin, InputIterator end);`   
-Inizializza la sequenza interna usando tutti gli elementi nell'intervallo di iteratore di input specificato.  
-`iterator_traits<InputIterator>::value_type` deve essere un tipo integer.  
+Inizializza la sequenza interna usando tutti gli elementi nell'intervallo dell'iteratore di input specificato.                  
+`iterator_traits<InputIterator>::value_type` deve essere un tipo Integer.  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Generazione di funzioni  
- `template<class RandomAccessIterator> void generate(RandomAccessIterator begin, RandomAccessIterator end);`   
-Popola gli elementi della sequenza specificata usando un algoritmo interno. Questo algoritmo è influenzato dalla sequenza interna con cui `seed_seq` è stato inizializzato.  
+### <a name="generating-functions"></a>Generazione di funzioni  
+ `template<class RandomAccessIterator> void generate(RandomAccessIterator begin,          RandomAccessIterator end);`   
+Popola gli elementi della sequenza specificata usando un algoritmo interno. Questo algoritmo è influenzato dalla sequenza interna con cui è stato inizializzato `seed_seq`.                          
 Non esegue alcuna operazione se `begin == end`.  
   
-### Funzioni delle proprietà  
+### <a name="property-functions"></a>Funzioni delle proprietà  
  `size_t size() const;`   
-Restituisce il numero di elementi di `seed_seq`.  
+Restituisce il numero di elementi nel `seed_seq`.  
   
  `template<class OutputIterator> void param(OutputIterator dest) const;`   
 Copia la sequenza interna nell'iteratore di output `dest`.  
   
-## Esempio  
- L'esempio di codice seguente usa i tre costruttori e genera output dalle istanze di `seed_seq` risultanti in caso di assegnazione a una matrice. Per un esempio che utilizza `seed_seq` con un generatore di numeri casuali, vedere [\<random\>](../standard-library/random.md).  
+## <a name="example"></a>Esempio  
+ L'esempio di codice seguente usa i tre costruttori e genera output dalle istanze di `seed_seq` risultanti in caso di assegnazione a una matrice. Per un esempio d'uso di `seed_seq` con un generatore di numeri casuali, vedere [\<random>](../standard-library/random.md).  
   
 ```cpp  
 #include <iostream>  
@@ -136,20 +152,45 @@ int main()
 }  
 ```  
   
-## Output  
-  
 ```Output  
+seed_seq::size(): 0  
+seed_seq::param():  
+Generating a sequence of 5 elements into an array:  
+505382999  
+163489202  
+3932644188  
+763126080  
+73937346  
   
-seed_seq::Size(): seed_seq::param() 0: generazione di una sequenza di 5 elementi in una matrice: 505382999 163489202 3932644188 763126080 73937346 seed_seq::size(): seed_seq::param() 3: 1701 1729 1791 generazione di una sequenza di 5 elementi in una matrice: 1730669648 1954224479 2809786021 1172893117 2393473414 seed_seq::size(): seed_seq::param() 7: generazione di una sequenza di 5 elementi in una matrice 65 32 66 32 67 32 68 : 3139879222 3775111734 1084804564 2485037668 1985355432  
+seed_seq::size(): 3  
+seed_seq::param(): 1701 1729 1791  
+Generating a sequence of 5 elements into an array:  
+1730669648  
+1954224479  
+2809786021  
+1172893117  
+2393473414  
+  
+seed_seq::size(): 7  
+seed_seq::param(): 65 32 66 32 67 32 68  
+Generating a sequence of 5 elements into an array:  
+3139879222  
+3775111734  
+1084804564  
+2485037668  
+1985355432  
 ```  
   
-## Note  
- Funzioni membro di questa classe non generano eccezioni.  
+## <a name="remarks"></a>Note  
+ Le funzioni membro di questa classe non generano eccezioni.  
   
-## Requisiti  
- **Intestazione:** \<random\>  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<random>  
   
  **Spazio dei nomi:** std  
   
-## Vedere anche  
- [\<random\>](../standard-library/random.md)
+## <a name="see-also"></a>Vedere anche  
+ [\<random>](../standard-library/random.md)
+
+
+

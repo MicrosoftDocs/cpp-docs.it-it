@@ -1,78 +1,90 @@
 ---
-title: "Struct not_equal_to | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.not_equal_to"
-  - "std::not_equal_to"
-  - "not_equal_to"
-  - "xfunctional/std::not_equal_to"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "not_equal_to (funzione)"
-  - "not_equal_to (struct)"
+title: Struct not_equal_to | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std.not_equal_to
+- std::not_equal_to
+- not_equal_to
+- xfunctional/std::not_equal_to
+dev_langs:
+- C++
+helpviewer_keywords:
+- not_equal_to function
+- not_equal_to struct
 ms.assetid: 333fce09-4f51-44e0-ba26-533bccffd485
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# Struct not_equal_to
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: 741c899479f89845a2be8e68e133a48b7d99e7c3
+ms.lasthandoff: 02/24/2017
 
-Un predicato binario che esegue l'operazione di disuguaglianza \(`operator!=`\) sui suoi argomenti.  
+---
+# <a name="notequalto-struct"></a>Struct not_equal_to
+Predicato binario che esegue l'operazione di disuguaglianza ( `operator!=`) sugli argomenti.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
-```  
-template<class Type = void>  
-   struct not_equal_to : public binary_function<Type, Type, bool>   
-   {  
-      bool operator()(  
-         const Type& Left,   
-         const Type& Right  
-      ) const;  
-   };  
-  
-// specialized transparent functor for operator!=  
-template<>  
-   struct not_equal_to<void>  
-   {  
-      template<class Type1, class Type2>  
-      auto operator()(Type1&& Left, Type2&& Right) const  
-      -> decltype(std::forward<Type1>(Left)  
-         != std::forward<Type2>(Right));  
-   };  
-  
+```
+template <class Type = void>
+struct not_equal_to : public binary_function<Type, Type, bool>  
+{
+    bool operator()(const Type& Left, const Type& Right) const;
+};
+
+// specialized transparent functor for operator!=
+template <>
+struct not_equal_to<void>  
+{
+  template <class T, class U>
+  auto operator()(T&& Left, U&& Right) const`
+    -> decltype(std::forward<T>(Left) != std::forward<U>(Right));
+};
 ```  
   
-#### Parametri  
- `Type`, `Type1`, `Type2`  
- Qualsiasi tipo che supporti `operator!=` che accetta gli operandi dei tipi specificati di derivati.  
+#### <a name="parameters"></a>Parametri  
+ `Type`, `T`, `U`  
+ Qualsiasi tipo che supporta un `operator!=` che accetta gli operandi dei tipi specificati o dedotti.  
   
  `Left`  
- L'operando a sinistra dell'operazione di disuguaglianza.  Il modello non specializzato accetta un argomento di riferimento a lvalue di tipo `Type`.  Il modello specializzato perfeziona l'inoltro degli argomenti di riferimento a rvalue e lvalue di tipo derivato `Type1`.  
+ Operando sinistro dell'operatore di disuguaglianza. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo `Type`. Il modello specializzato esegue un inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto `T`.  
   
  `Right`  
- L'operando a destra dell'operazione di disuguaglianza.  Il modello non specializzato accetta un argomento di riferimento a lvalue di tipo `Type`.  Il modello specializzato perfeziona l'inoltro degli argomenti di riferimento a rvalue e lvalue di tipo derivato `Type2`.  
+ Operando destro dell'operatore di disuguaglianza. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo `Type`. Il modello specializzato esegue un inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto `U`.  
   
-## Valore restituito  
- Il risultato di `Left` `!=` `Right`.  Il modello specializzato perfeziona l'inoltro del risultato, il cui tipo è restituito da `operator!=`.  
+## <a name="return-value"></a>Valore restituito  
+ Risultato di `Left``!=``Right`. Il modello specializzato esegue un inoltro perfetto del risultato, con il tipo restituito da `operator!=`.  
   
-## Note  
- Gli oggetti di tipo `Type` devono essere confrontabili per l'uguaglianza.  È quindi necessario che `operator!=` definito sul set di oggetti soddisfi le proprietà matematiche di una relazione di equivalenza.  Tutti i tipi numerici e di puntatore incorporati soddisfano questo requisito.  
+## <a name="remarks"></a>Note  
+ Gli oggetti di tipo `Type` devono essere confrontabili in termini di uguaglianza. È necessario che l'operatore `operator!=` definito nel set di oggetti soddisfi le proprietà matematiche di una relazione di equivalenza. Tutti i tipi di puntatore e numerici incorporati soddisfano questo requisito.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-```  
+```cpp  
 // functional_not_equal_to.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -121,16 +133,22 @@ int main( )
       cout << *Iter3 << " ";  
    cout << ")" << endl;  
 }  
+/* Output:  
+The vector v1 = ( 0 1 4 5 8 9 )  
+The vector v2 = ( -0 1 -4 5 -8 9 )  
+The result of the element-wise not_equal_to comparsion  
+between v1 & v2 is: ( 0 0 1 0 1 0 )  
+*/  
 ```  
   
-  **The vector v1 \= \( 0 1 4 5 8 9 \)**  
-**The vector v2 \= \( \-0 1 \-4 5 \-8 9 \)**  
-**The result of the element\-wise not\_equal\_to comparsion**  
-**between v1 & v2 is: \( 0 0 1 0 1 0 \)**   
-## Requisiti  
- **Intestazione:** \<funzionale\>  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<functional>  
   
  **Spazio dei nomi:** std  
   
-## Vedere anche  
- [Libreria di modelli standard](../misc/standard-template-library.md)
+## <a name="see-also"></a>Vedere anche  
+ [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

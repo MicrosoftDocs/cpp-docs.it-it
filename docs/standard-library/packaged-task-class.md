@@ -1,68 +1,231 @@
 ---
-title: "Classe packaged_task | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "future/std::packaged_task"
-dev_langs: 
-  - "C++"
+title: Classe packaged_task | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- future/std::packaged_task
+dev_langs:
+- C++
 ms.assetid: 0a72cbe3-f22a-4bfe-8e50-dcb268c98780
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Classe packaged_task
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: acc0ecd4edaf1e58977dcbdeb483d497a72bc4c8
+ms.openlocfilehash: a54b1c9788ef60f63aafafc9125b09c449fde1b0
+ms.lasthandoff: 02/24/2017
 
-Viene descritto *un provider asincrono* che è un wrapper di chiamata della cui firma di chiamata è `Ty(ArgTypes...)`.  Lo *stato collegato asincrono* utilizza una copia del relativo oggetto chiamabile oltre al risultato potenziale.  
+---
+# <a name="packagedtask-class"></a>Classe packaged_task
+Descrive un *provider asincrono* che è un wrapper di chiamata la cui firma di chiamata è `Ty(ArgTypes...)`. Lo *stato asincrono associato* contiene una copia dell'oggetto chiamabile oltre al potenziale risultato.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
+```
+template <class>
+class packaged_task;
 ```  
-template<class>  
-class packaged_task;  
-```  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Costruttori pubblici  
+### <a name="public-constructors"></a>Costruttori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore packaged\_task::packaged\_task](../Topic/packaged_task::packaged_task%20Constructor.md)|Costruisce un oggetto `packaged_task`.|  
-|[Distruttore packaged\_task::~packaged\_task](../Topic/packaged_task::~packaged_task%20Destructor.md)|Elimina un oggetto `packaged_task`.|  
+|[Costruttore packaged_task::packaged_task](#packaged_task__packaged_task_constructor)|Costruisce un oggetto `packaged_task`.|  
+|[Distruttore packaged_task::~packaged_task](#packaged_task___dtorpackaged_task_destructor)|Elimina un oggetto `packaged_task`.|  
   
-### Metodi pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[Metodo packaged\_task::get\_future](../Topic/packaged_task::get_future%20Method.md)|Restituisce un oggetto di [futuro](../standard-library/future-class.md) con lo stesso stato asincrono collegato.|  
-|[Metodo packaged\_task::make\_ready\_at\_thread\_exit](../Topic/packaged_task::make_ready_at_thread_exit%20Method.md)|Chiama l'oggetto chiamabile archiviato nello stato collegato asincrono e di archiviare il valore restituito.|  
-|[Metodo packaged\_task::reset](../Topic/packaged_task::reset%20Method.md)|Sostituisce lo stato asincrono collegato.|  
-|[Metodo packaged\_task::swap](../Topic/packaged_task::swap%20Method.md)|Scambia lo stato asincrono collegato con quello di un oggetto specificato.|  
-|[Metodo packaged\_task::valid](../Topic/packaged_task::valid%20Method.md)|Specifica se l'oggetto dispone di uno stato asincrono collegato.|  
-  
-### Operatori pubblici  
+### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Operatore packaged\_task::operator\=](../Topic/packaged_task::operator=%20Operator.md)|Trasferisce uno stato asincrono collegato da un oggetto specificato.|  
-|[Operatore packaged\_task::operator\(\)](../Topic/packaged_task::operator\(\)%20Operator.md)|Chiama l'oggetto chiamabile archiviato nello stato collegato asincrono, atomico di archiviare il valore restituito e imposta lo stato *su pronto*.|  
-|[Operatore packaged\_task::operator bool](../Topic/packaged_task::operator%20bool%20Operator.md)|Specifica se l'oggetto dispone di uno stato asincrono collegato.|  
+|[packaged_task::get_future](#packaged_task__get_future_method)|Restituisce un oggetto [future](../standard-library/future-class.md) con lo stesso stato asincrono associato.|  
+|[packaged_task::make_ready_at_thread_exit](#packaged_task__make_ready_at_thread_exit_method)|Chiama l'oggetto chiamabile archiviato nello stato asincrono associato e archivia il valore restituito in modo atomico.|  
+|[packaged_task::reset](#packaged_task__reset_method)|Restituisce lo stato asincrono associato.|  
+|[packaged_task::swap](#packaged_task__swap_method)|Scambia lo stato asincrono associato con quello di un oggetto specificato.|  
+|[packaged_task::valid](#packaged_task__valid_method)|Specifica se l'oggetto ha uno stato asincrono associato.|  
   
-## Requisiti  
+### <a name="public-operators"></a>Operatori pubblici  
+  
+|Nome|Descrizione|  
+|----------|-----------------|  
+|[packaged_task::operator=](#packaged_task__operator_eq)|Trasferisce lo stato asincrono associato da un oggetto specificato.|  
+|[packaged_task::operator()](#packaged_task__operator__)|Chiama l'oggetto chiamabile archiviato nello stato asincrono associato, archivia il valore restituito in modo atomico e imposta lo stato su *ready*.|  
+|[Bool packaged_task::operator](#packaged_task__operator_bool)|Specifica se l'oggetto ha uno stato asincrono associato.|  
+  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** future  
   
  **Spazio dei nomi:** std  
   
-## Vedere anche  
+##  <a name="a-namepackagedtaskgetfuturemethoda--packagedtaskgetfuture"></a><a name="packaged_task__get_future_method"></a>  packaged_task::get_future  
+ Restituisce un oggetto di tipo `future<Ty>` con lo stesso *stato asincrono associato*.  
+  
+```
+future<Ty> get_future();
+```  
+  
+### <a name="remarks"></a>Note  
+ Se l'oggetto `packaged_task` non ha uno stato asincrono associato, il metodo genera un [future_error](../standard-library/future-error-class.md) con codice di errore `no_state`.  
+  
+ Se questo metodo è già stato chiamato per un oggetto `packaged_task` con lo stesso stato asincrono associato, il metodo genera un `future_error` con codice di errore `future_already_retrieved`.  
+  
+##  <a name="a-namepackagedtaskmakereadyatthreadexitmethoda--packagedtaskmakereadyatthreadexit"></a><a name="packaged_task__make_ready_at_thread_exit_method"></a>  packaged_task::make_ready_at_thread_exit  
+ Chiama l'oggetto chiamabile archiviato nello *stato asincrono associato* e archivia il valore restituito in modo atomico.  
+  
+```
+void make_ready_at_thread_exit(ArgTypes... args);
+```  
+  
+### <a name="remarks"></a>Note  
+ Se l'oggetto `packaged_task` non ha uno stato asincrono associato, il metodo genera un [future_error](../standard-library/future-error-class.md) con codice di errore `no_state`.  
+  
+ Se questo metodo o [make_ready_at_thread_exit](#packaged_task__make_ready_at_thread_exit_method) è già stato chiamato per un oggetto `packaged_task` con lo stesso stato asincrono associato, il metodo genera un `future_error` con codice di errore `promise_already_satisfied`.  
+  
+ In caso contrario, questo operatore chiama `INVOKE(fn, args..., Ty)`, dove *fn* è l'oggetto chiamabile archiviato nello stato asincrono associato. I valori restituiti vengono archiviato in modo atomico come risultato restituito dello stato asincrono associato.  
+  
+ A differenza di [packaged_task::operator()](#packaged_task__operator__), lo stato associato asincrono non viene impostato su `ready` finché tutti gli oggetti locali del thread chiamante non sono stati eliminati definitivamente. In genere, i thread bloccati sullo stato associato asincrono non vengono sbloccati finché non si esce dal thread chiamante.  
+  
+##  <a name="a-namepackagedtaskoperatoreqa--packagedtaskoperator"></a><a name="packaged_task__operator_eq"></a>  packaged_task::operator=  
+ Trasferisce lo *stato asincrono associato* da un oggetto specificato.  
+  
+```
+packaged_task& operator=(packaged_task&& Right);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `Right`  
+ Oggetto `packaged_task`.  
+  
+### <a name="return-value"></a>Valore restituito  
+ `*this`  
+  
+### <a name="remarks"></a>Note  
+ Dopo l'operazione, `Right` non ha un più uno stato asincrono associato.  
+  
+##  <a name="a-namepackagedtaskoperatora--packagedtaskoperator"></a><a name="packaged_task__operator__"></a>  packaged_task::operator()  
+ Chiama l'oggetto chiamabile archiviato nello *stato asincrono associato*, archivia il valore restituito in modo atomico e imposta lo stato su *ready*.  
+  
+```
+void operator()(ArgTypes... args);
+```  
+  
+### <a name="remarks"></a>Note  
+ Se l'oggetto `packaged_task` non ha uno stato asincrono associato, il metodo genera un [future_error](../standard-library/future-error-class.md) con codice di errore `no_state`.  
+  
+ Se questo metodo o [make_ready_at_thread_exit](#packaged_task__make_ready_at_thread_exit_method) è già stato chiamato per un oggetto `packaged_task` con lo stesso stato asincrono associato, il metodo genera un `future_error` con codice di errore `promise_already_satisfied`.  
+  
+ In caso contrario, questo operatore chiama `INVOKE(fn, args..., Ty)`, dove *fn* è l'oggetto chiamabile archiviato nello stato asincrono associato. I valori restituiti vengono archiviato in modo atomico come risultato restituito dello stato asincrono associato e lo stato viene impostato su ready. Di conseguenza, i thread bloccati sullo stato asincrono associato vengono sbloccati.  
+  
+##  <a name="a-namepackagedtaskoperatorboola--packagedtaskoperator-bool"></a><a name="packaged_task__operator_bool"></a>  Bool packaged_task::operator  
+ Specifica se l'oggetto ha uno `associated asynchronous state`.  
+  
+```
+operator bool() const noexcept;
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ `true` se l'oggetto ha uno stato asincrono associato; in caso contrario, `false`.  
+  
+##  <a name="a-namepackagedtaskpackagedtaskconstructora--packagedtaskpackagedtask-constructor"></a><a name="packaged_task__packaged_task_constructor"></a>  Costruttore packaged_task::packaged_task  
+ Costruisce un oggetto `packaged_task`.  
+  
+```
+packaged_task() noexcept;
+packaged_task(packaged_task&& Right) noexcept;
+template <class Fn>
+   explicit packaged_task(Fn&& fn);
+
+template <class Fn, class Alloc>
+   explicit packaged_task(
+      allocator_arg_t, const Alloc& alloc, Fn&& fn);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `Right`  
+ Oggetto `packaged_task`.  
+  
+ `alloc`  
+ Allocatore di memoria. Per altre informazioni, vedere [\<allocators>](../standard-library/allocators-header.md).  
+  
+ `fn`  
+ Oggetto funzione.  
+  
+### <a name="remarks"></a>Note  
+ Il primo costruttore costruisce un oggetto `packaged_task` che non ha uno *stato asincrono associato*.  
+  
+ Il secondo costruttore crea un oggetto `packaged_task` e trasferisce lo stato asincrono associato da `Right`. Dopo l'operazione, `Right` non ha un più uno stato asincrono associato.  
+  
+ Il terzo costruttore crea un oggetto `packaged_task` con una copia di `fn` memorizzata nello stato asincrono associato.  
+  
+ Il quarto costruttore crea un oggetto `packaged_task` con una copia di `fn` memorizzata nello stato asincrono associato e utilizza `alloc` per l'allocazione della memoria.  
+  
+##  <a name="a-namepackagedtaskdtorpackagedtaskdestructora--packagedtaskpackagedtask-destructor"></a><a name="packaged_task___dtorpackaged_task_destructor"></a>  Distruttore packaged_task::~packaged_task  
+ Elimina un oggetto `packaged_task`.  
+  
+```
+~packaged_task();
+```  
+  
+### <a name="remarks"></a>Note  
+ Se lo *stato asincrono associato* non è *ready*, il distruttore archivia un'eccezione [future_error](../standard-library/future-error-class.md) con un codice di errore `broken_promise` come risultato nello stato asincrono associato e tutti i thread bloccati sullo stato asincrono associato vengono sbloccati.  
+  
+##  <a name="a-namepackagedtaskresetmethoda--packagedtaskreset"></a><a name="packaged_task__reset_method"></a>  packaged_task::reset  
+ Usa un nuovo *stato asincrono associato* per sostituire lo stato asincrono associato esistente.  
+  
+```
+void reset();
+```  
+  
+### <a name="remarks"></a>Note  
+ In pratica, questo metodo esegue `*this = packaged_task(move(fn))`, dove *fn* è l'oggetto funzione archiviato nello stato asincrono associato per l'oggetto. Lo stato dell'oggetto viene quindi deselezionato ed è possibile chiamare [get_future](#packaged_task__get_future_method), [operator()](#packaged_task__operator__) e [make_ready_at_thread_exit](#packaged_task__make_ready_at_thread_exit_method) come per un oggetto appena costruito.  
+  
+##  <a name="a-namepackagedtaskswapmethoda--packagedtaskswap"></a><a name="packaged_task__swap_method"></a>  packaged_task::swap  
+ Scambia lo stato asincrono associato con quello di un oggetto specificato.  
+  
+```
+void swap(packaged_task& Right) noexcept;
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `Right`  
+ Oggetto `packaged_task`.  
+  
+##  <a name="a-namepackagedtaskvalidmethoda--packagedtaskvalid"></a><a name="packaged_task__valid_method"></a>  packaged_task::valid  
+ Specifica se l'oggetto ha uno `associated asynchronous state`.  
+  
+```
+bool valid() const;
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ `true` se l'oggetto ha uno stato asincrono associato; in caso contrario, `false`.  
+  
+## <a name="see-also"></a>Vedere anche  
  [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)   
- [\<future\>](../standard-library/future.md)
+ [\<future>](../standard-library/future.md)
+
+
+
+

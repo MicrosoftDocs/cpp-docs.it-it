@@ -1,30 +1,46 @@
 ---
-title: "File di output binari | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "dati binari, file di output binari"
-  - "file [C++], file di output binari"
-  - "I/O [C++], file di output binari"
+title: File di output binari | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- I/O [C++], binary output files
+- files [C++], binary output files
+- binary data, binary output files
 ms.assetid: 180954af-8cd6-444b-9a76-2f630a3389d8
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# File di output binari
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
+ms.openlocfilehash: f566da8ea00f0a52db3539c81bb3d19d6fc9da99
+ms.lasthandoff: 02/24/2017
 
-I flussi sono stati originariamente progettate per il testo, pertanto la modalità di output predefinito è testo.  In modalità testo, il carattere di nuova riga esadecimale \(10\) si espande a un ritorno a capo\-avanzamento shopping \(solo per 16 bit\).  L'espansione può causare problemi, come illustrato di seguito:  
+---
+# <a name="binary-output-files"></a>File di output binari
+I flussi erano originariamente progettati per il testo, quindi la modalità di output predefinita è testo. In modalità testo, il carattere di nuova riga (10 esadecimale) si espande in un ritorno a capo -avanzamento riga (solo 16-bit). L'espansione può causare problemi, come illustrato di seguito:  
   
 ```  
 // binary_output_files.cpp  
@@ -39,7 +55,7 @@ int main( )
 }  
 ```  
   
- È possibile che questo programma per restituire la sequenza di byte {99, 0, 10, 0}; al contrario, restituisce {99, 0, 13, 10, 0}, che causa problemi per un programma che accetta l'input binario.  Se è necessario un binario di restituire true, in cui i caratteri vengono scritti non convertiti, è possibile specificare il binario restituito tramite l'argomento del costruttore modalità di [ofstream](../Topic/ofstream.md) :  
+ L'output previsto del programma potrebbe essere la sequenza di byte {99, 0, 10, 0}, invece il programma restituisce {99, 0, 13, 10, 0}, causando problemi se un programma è in attesa di un input binario. Se è necessario un output binario true, in cui i caratteri vengono scritti senza essere convertiti, è possibile specificare l'output binario usando l'argomento openmode del costruttore [ofstream](../standard-library/basic-ofstream-class.md#basic_ofstream__basic_ofstream):  
   
 ```  
 // binary_output_files2.cpp  
@@ -57,5 +73,7 @@ int main()
 }  
 ```  
   
-## Vedere anche  
- [Flussi di output](../standard-library/output-streams.md)
+## <a name="see-also"></a>Vedere anche  
+ [Output Streams](../standard-library/output-streams.md) (Flussi di output)
+
+

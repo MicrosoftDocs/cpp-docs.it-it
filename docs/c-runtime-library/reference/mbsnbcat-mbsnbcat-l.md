@@ -1,61 +1,77 @@
 ---
-title: "_mbsnbcat, _mbsnbcat_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mbsnbcat_l"
-  - "_mbsnbcat"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "mbsnbcat"
-  - "mbsnbcat_l"
-  - "_mbsnbcat"
-  - "_mbsnbcat_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_mbsnbcat (funzione)"
-  - "_mbsnbcat_l (funzione)"
-  - "_tcsncat (funzione)"
-  - "_tcsncat_l (funzione)"
-  - "mbsnbcat (funzione)"
-  - "mbsnbcat_l (funzione)"
-  - "tcsncat (funzione)"
-  - "tcsncat_l (funzione)"
+title: _mbsnbcat, _mbsnbcat_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mbsnbcat_l
+- _mbsnbcat
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- mbsnbcat
+- mbsnbcat_l
+- _mbsnbcat
+- _mbsnbcat_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- tcsncat_l function
+- _tcsncat function
+- mbsnbcat_l function
+- mbsnbcat function
+- _mbsnbcat_l function
+- _tcsncat_l function
+- _mbsnbcat function
+- tcsncat function
 ms.assetid: aa0f1d30-0ddd-48d1-88eb-c6884b20fd91
 caps.latest.revision: 29
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 29
----
-# _mbsnbcat, _mbsnbcat_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 412e739b9a336cf98dcf08cba9a477625613cbfc
+ms.lasthandoff: 02/24/2017
 
-Aggiunge, al massimo, il primo byte `n` di una stringa di caratteri multibyte ad un altro.  Sono disponibili versioni più sicure di queste funzioni; vedere [\_mbsnbcat\_s, \_mbsnbcat\_s\_l](../../c-runtime-library/reference/mbsnbcat-s-mbsnbcat-s-l.md).  
+---
+# <a name="mbsnbcat-mbsnbcatl"></a>_mbsnbcat, _mbsnbcat_l
+Aggiunge al massimo i primi `n` byte di una stringa di caratteri multibyte a un'altra. Sono disponibili versioni più sicure di queste funzioni. Vedere [_mbsnbcat_s, _mbsnbcat_s_l](../../c-runtime-library/reference/mbsnbcat-s-mbsnbcat-s-l.md).  
   
 > [!IMPORTANT]
->  Questa API non può essere utilizzata nelle applicazioni che vengono eseguite in Windows Runtime.  Per ulteriori informazioni, vedere [Funzioni CRT non supportate con \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere l'articolo relativo alle [funzioni CRT non supportate con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 unsigned char *_mbsnbcat(  
@@ -84,58 +100,58 @@ unsigned char *_mbsnbcat_l(
 ); // C++ only  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `dest`  
- Stringa di destinazione a caratteri multibyte con terminazione null.  
+ Stringa di destinazione di caratteri multibyte con terminazione Null.  
   
  `src`  
- Stringa di origine con caratteri multibyte con terminazione null.  
+ Stringa di origine di caratteri multibyte con terminazione Null.  
   
  `count`  
- Numero di byte della `src` da aggiungere a `dest`.  
+ Numero di byte `src` da aggiungere a `dest`.  
   
  `locale`  
- Impostazioni locali da utilizzare.  
+ Impostazioni locali da usare.  
   
-## Valore restituito  
- `_mbsnbcat` restituisce un puntatore alla stringa di destinazione.  Nessun valore restituito è riservato per indicare un errore.  
+## <a name="return-value"></a>Valore restituito  
+ `_mbsnbcat` restituisce un puntatore alla stringa di destinazione. Nessun valore restituito è riservato per indicare un errore.  
   
-## Note  
- La funzione `_mbsnbcat` aggiunge, al massimo, il primo byte `count` `src` a `dest`.  Se il byte immediatamente prima del carattere null in `dest` è un byte di apertura, il byte iniziale di `src` sovrascrive il byte di apertura.  In caso contrario, il byte iniziale `src` sovrascrive il carattere di terminazione null di `dest`.  Se un byte null viene visualizzato in `src` prima che il byte `count` vengano aggiunti, \_`mbsnbcat` aggiunge tutti i byte da `src` fino al carattere null.  Se `count` è maggiore della lunghezza di `src`, la lunghezza `src` viene utilizzata al posto di `count`.  La stringa risultante termina con un carattere null.  Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.  
+## <a name="remarks"></a>Note  
+ La funzione `_mbsnbcat` aggiunge a `dest`, al massimo, i primi `count` byte di `src`. Se il byte immediatamente prima del carattere Null in `dest` è un byte di apertura, il byte iniziale di `src` sovrascrive questo byte di apertura. In caso contrario, il byte iniziale di `src` sovrascrive il carattere di terminazione Null di `dest`. In presenza di un byte Null in `src` prima dell'aggiunta di `count` byte, _`mbsnbcat` aggiunge tutti i byte da `src` fino al carattere Null. Se `count` è maggiore della lunghezza di `src`, la lunghezza di `src` viene usata invece di `count`. La stringa risultante termina con un carattere Null. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.  
   
- Il valore di output è interessato dall'impostazione dell'impostazione di categoria `LC_CTYPE` delle impostazioni locali; vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) per ulteriori informazioni.  La versione `_mbsnbcat` della funzione utilizza le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali; la versione `_mbsnbcat_l` è identica ad eccezione che utilizza il parametro delle impostazioni locali che gli sono state passate.  Per ulteriori informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ La configurazione dell'impostazione della categoria `LC_CTYPE` delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). La versione `_mbsnbcat` della funzione usa le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. La versione `_mbsnbcat_l` è identica, ad eccezione del fatto che usa il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
   
- **Nota sulla sicurezza** Utilizza una stringa con terminazione null.  La stringa con terminazione null non deve superare la dimensione del buffer di destinazione.  Per ulteriori informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
+ **Nota sulla sicurezza** Usare una stringa con terminazione Null. Le dimensioni della stringa con terminazione Null non devono essere superiori a quelle del buffer di destinazione. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
   
- Se `dest` o `src` è `NULL`, la funzione genera un errore di parametro non valido, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).  Se l'errore viene gestito, la funzione restituisce `EINVAL` e imposta `errno` a `EINVAL`.  
+ Se `dest` o `src` è `NULL`, la funziona genera un errore di parametro non valido, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'errore viene gestito, la funzione restituisce `EINVAL` e imposta `errno` su `EINVAL`.  
   
- In C\+\+, queste funzioni presentano overload dei modelli che richiamano le relative controparti sicure e più recenti.  Per ulteriori informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ queste funzioni presentano overload di modello che richiamano le relative controparti più recenti e sicure. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).  
   
-### Mapping di routine su testo generico  
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
-|Routine Tchar.h|\_UNICODE e \_MBCS non definiti|\_MBCS definito|\_UNICODE definito|  
-|---------------------|-------------------------------------|---------------------|------------------------|  
+|Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tcsncat`|[strncat](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)|`_mbsnbcat`|[wcsncat](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)|  
 |`_tcsncat_l`|`_strncat_l`|`_mbsnbcat_l`|`_wcsncat_l`|  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`_mbsnbcat`|\<mbstring.h\>|  
-|`_mbsnbcat_l`|\<mbstring.h\>|  
+|-------------|---------------------|  
+|`_mbsnbcat`|\<mbstring.h>|  
+|`_mbsnbcat_l`|\<mbstring.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
-## Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione standard C, utilizzare `PInvoke`. Per ulteriori informazioni, vedere [Esempi di Invocazione della Piattaforma](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
+ Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md)   
- [\_mbsnbcmp, \_mbsnbcmp\_l](../../c-runtime-library/reference/mbsnbcmp-mbsnbcmp-l.md)   
- [\_strncnt, \_wcsncnt, \_mbsnbcnt, \_mbsnbcnt\_l, \_mbsnccnt, \_mbsnccnt\_l](../../c-runtime-library/reference/strncnt-wcsncnt-mbsnbcnt-mbsnbcnt-l-mbsnccnt-mbsnccnt-l.md)   
- [\_mbsnbcpy, \_mbsnbcpy\_l](../../c-runtime-library/reference/mbsnbcpy-mbsnbcpy-l.md)   
- [\_mbsnbicmp, \_mbsnbicmp\_l](../../c-runtime-library/reference/mbsnbicmp-mbsnbicmp-l.md)   
- [\_mbsnbset, \_mbsnbset\_l](../../c-runtime-library/reference/mbsnbset-mbsnbset-l.md)   
- [strncat, \_strncat\_l, wcsncat, \_wcsncat\_l, \_mbsncat, \_mbsncat\_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)   
- [\_mbsnbcat\_s, \_mbsnbcat\_s\_l](../../c-runtime-library/reference/mbsnbcat-s-mbsnbcat-s-l.md)
+ [_mbsnbcmp, _mbsnbcmp_l](../../c-runtime-library/reference/mbsnbcmp-mbsnbcmp-l.md)   
+ [_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l](../../c-runtime-library/reference/strncnt-wcsncnt-mbsnbcnt-mbsnbcnt-l-mbsnccnt-mbsnccnt-l.md)   
+ [_mbsnbcpy, _mbsnbcpy_l](../../c-runtime-library/reference/mbsnbcpy-mbsnbcpy-l.md)   
+ [_mbsnbicmp, _mbsnbicmp_l](../../c-runtime-library/reference/mbsnbicmp-mbsnbicmp-l.md)   
+ [_mbsnbset, _mbsnbset_l](../../c-runtime-library/reference/mbsnbset-mbsnbset-l.md)   
+ [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)   
+ [_mbsnbcat_s, _mbsnbcat_s_l](../../c-runtime-library/reference/mbsnbcat-s-mbsnbcat-s-l.md)
