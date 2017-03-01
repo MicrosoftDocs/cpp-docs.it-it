@@ -1,33 +1,49 @@
 ---
-title: "CType &lt; char &gt; (classe) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ctype<char>"
-  - "locale/std::ctype<char>"
-  - "std::ctype<char>"
-  - "std.ctype<char>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classe CType < char >"
+title: Classe ctype&lt;char&gt; | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ctype<char>
+- locale/std::ctype<char>
+- std::ctype<char>
+- std.ctype<char>
+dev_langs:
+- C++
+helpviewer_keywords:
+- ctype<char> class
 ms.assetid: ee30acb4-a743-405e-b3d4-13602092da84
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# CType &lt; char &gt; (classe)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
+ms.openlocfilehash: 0acae30ecbe670c87179f4cc2f5a2b8066ef3a4c
+ms.lasthandoff: 02/24/2017
 
-La classe è una specializzazione esplicita della classe modello **ctype \< CharType**> digitare `char`, che descrive un oggetto che può essere utilizzato come facet delle impostazioni locali per caratterizzare le varie proprietà di un carattere di tipo `char`.  
+---
+# <a name="ctypeltchargt-class"></a>Classe ctype&lt;char&gt;
+Classe che rappresenta una specializzazione esplicita della classe modello **ctype\<CharType**> per il tipo `char`, che descrive un oggetto che può essere usato come facet delle impostazioni locali per caratterizzare le varie proprietà di un carattere di tipo `char`.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -130,29 +146,30 @@ protected:
 ```  
   
 ## <a name="remarks"></a>Note  
- La specializzazione esplicita è diversa dalla classe di modello in diversi modi:  
+ La specializzazione esplicita è diversa dalla classe di modello in vari modi:  
   
--   Un oggetto della classe ctype < `char`> Archivia un puntatore al primo elemento di una tabella di maschera ctype, una matrice di UCHAR_MAX + 1 elementi di tipo **ctype_base::mask**. Archivia inoltre un oggetto booleano che indica se la matrice deve essere eliminata (utilizzando `operator delete[]`) quando la funzione ctype \< **Elem**> oggetto viene eliminato.  
+-   Un oggetto della classe ctype< `char`> archivia un puntatore al primo elemento di una tabella di maschera ctype, una matrice di elementi UCHAR_MAX + 1 di tipo **ctype_base::mask**. Archivia anche un oggetto booleano che indica se la matrice deve essere eliminata (tramite `operator delete[]`) quando l'oggetto di ctype\< **Elem**> viene eliminato.  
   
--   Il relativo costruttore pubblico unico consente di specificare **scheda**, la tabella, maschera ctype e **CANC**, l'oggetto Boolean che è true se la matrice deve essere eliminato quando la funzione ctype < `char`> oggetto viene distrutto, nonché refs il parametro-conteggio dei riferimenti.  
+-   Il relativo costruttore pubblico unico consente di specificare **tab**, la tabella, maschera ctype e **del**, l'oggetto Boolean che è true se la matrice deve essere eliminata quando l'oggetto di ctype< `char`> viene eliminato definitivamente, nonché i riferimenti al parametro reference-count.  
   
--   La funzione membro protetta **tabella** restituisce la tabella maschera ctype stored.  
+-   La funzione membro protetto **table** restituisce la tabella della maschera ctype archiviata.  
   
--   L'oggetto membro statico **table_size** Specifica il numero minimo di elementi in una tabella di maschera ctype.  
+-   L'oggetto membro statico **table_size** specifica il numero minimo di elementi in una tabella di maschera ctype.  
   
--   La funzione membro statica protetto **classic_table**(restituisce la tabella maschera ctype appropriato per le impostazioni locali "C".  
+-   La funzione membro protetto statica **classic_table**( restituisce la tabella maschera ctype appropriata per le impostazioni locali "C".  
   
--   Nessuna funzione membro virtuale protetta [do_is](../standard-library/ctype-class.md#ctype__do_is), [do_scan_is](../standard-library/ctype-class.md#ctype__do_scan_is), o [do_scan_not](../standard-library/ctype-class.md#ctype__do_scan_not). Le funzioni membro pubbliche corrispondenti eseguono le operazioni equivalenti se stessi.  
+-   Non ci sono funzioni membro virtuale protetto [do_is](../standard-library/ctype-class.md#ctype__do_is), [do_scan_is](../standard-library/ctype-class.md#ctype__do_scan_is) o [do_scan_not](../standard-library/ctype-class.md#ctype__do_scan_not). Le funzioni membro pubblico corrispondenti eseguono direttamente le operazioni equivalenti.  
   
- Le funzioni membro [do_narrow](../standard-library/ctype-class.md#ctype__do_narrow) e [do_widen](../standard-library/ctype-class.md#ctype__do_widen) copiare elementi inalterati.  
+ Le funzioni membro [do_narrow](../standard-library/ctype-class.md#ctype__do_narrow) e [do_widen](../standard-library/ctype-class.md#ctype__do_widen) copiano elementi non modificati.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** \< impostazioni locali>  
+ **Intestazione:** \<locale>  
   
  **Spazio dei nomi:** std  
   
 ## <a name="see-also"></a>Vedere anche  
- [Classe facet](../Topic/facet%20Class.md)   
- [Classe ctype_base](../standard-library/ctype-base-class.md)   
- [Sicurezza dei thread nella libreria Standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [facet Class](http://msdn.microsoft.com/Library/dd4f12f5-cb1b-457f-af56-2fb204216ec1)   
+ [ctype_base Class](../standard-library/ctype-base-class.md)   
+ [Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
 

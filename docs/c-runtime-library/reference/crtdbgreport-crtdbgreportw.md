@@ -1,51 +1,68 @@
 ---
-title: "_CrtDbgReport, _CrtDbgReportW | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_CrtDbgReport"
-  - "_CrtDbgReportW"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "CrtDbgReport"
-  - "CrtDbgReportW"
-  - "_CrtDbgReportW"
-  - "_CrtDbgReport"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "report di debug"
-  - "_CrtDbgReport (funzione)"
-  - "CrtDbgReport (funzione)"
-  - "CrtDbgReportW (funzione)"
-  - "_CrtDbgReportW (funzione)"
+title: _CrtDbgReport, _CrtDbgReportW | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _CrtDbgReport
+- _CrtDbgReportW
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- CrtDbgReport
+- CrtDbgReportW
+- _CrtDbgReportW
+- _CrtDbgReport
+dev_langs:
+- C++
+helpviewer_keywords:
+- debug reporting
+- _CrtDbgReport function
+- CrtDbgReport function
+- CrtDbgReportW function
+- _CrtDbgReportW function
 ms.assetid: 6e581fb6-f7fb-4716-9432-f0145d639ecc
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# _CrtDbgReport, _CrtDbgReportW
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 6bfbae9b083563f0f9a6b0c30e02fb79f413d52d
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="crtdbgreport-crtdbgreportw"></a>_CrtDbgReport, _CrtDbgReportW
 Genera un rapporto con un messaggio di debug e lo invia tre possibili destinazioni (solo versione di debug).  
   
 ## <a name="syntax"></a>Sintassi  
@@ -89,12 +106,12 @@ int _CrtDbgReportW(
  Argomenti di sostituzione facoltativi usati da `format`.  
   
 ## <a name="return-value"></a>Valore restituito  
- Per tutte le destinazioni del rapporto, `_CrtDbgReport` e `_CrtDbgReportW` restituiscono –1 se si verifica un errore e 0 se non si verificano errori. Tuttavia, quando la destinazione del rapporto è una finestra di messaggio di debug e l'utente fa clic il **ripetere** pulsante, queste funzioni restituiscono 1. Se l'utente sceglie il **Abort** pulsante nella finestra di messaggio di Debug, queste funzioni immediatamente interrotta e non restituiscono un valore.  
+ Per tutte le destinazioni del rapporto, `_CrtDbgReport` e `_CrtDbgReportW` restituiscono –1 se si verifica un errore e 0 se non si verificano errori. Tuttavia, quando la destinazione del report è una finestra di messaggio di debug e l'utente fa clic sul pulsante **Riprova**, queste funzioni restituiscono 1. Se l'utente fa clic sul pulsante **Interrompi** nella finestra di messaggio di debug, queste funzioni vengono interrotte immediatamente e non restituiscono nessun valore.  
   
- Il [rpt, rptf](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) chiamata di macro di debug `_CrtDbgReport` per il debug di generare rapporti. Le versioni a caratteri wide di queste macro, nonché [Assert &#91; E &#93;](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md), `_RPTW``n` e `_RPTFW``n`, utilizzare `_CrtDbgReportW` per il debug di generare rapporti. Quando `_CrtDbgReport` o `_CrtDbgReportW` restituiscono 1, queste macro avviano il debugger JIT (just-in-time), purché il debug sia abilitato.  
+ Le macro di debug [_RPT, _RPTF](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) eseguono una chiamata a `_CrtDbgReport` per generare i relativi report di debug. Le versioni a caratteri wide di queste macro, nonché [_ASSERT&#91;E&#93;](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md), `_RPTW``n` e `_RPTFW``n` usano `_CrtDbgReportW` per generare i report di debug. Quando `_CrtDbgReport` o `_CrtDbgReportW` restituiscono 1, queste macro avviano il debugger JIT (just-in-time), purché il debug sia abilitato.  
   
 ## <a name="remarks"></a>Note  
- `_CrtDbgReport` e `_CrtDbgReportW` possono inviare il rapporto di debug a tre destinazioni diverse: un file di rapporto di debug, un monitor di debug (ovvero il debugger [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]) o a una finestra di messaggio di debug. Due funzioni di configurazione, [CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) e [crtsetreportfile](../../c-runtime-library/reference/crtsetreportfile.md), vengono utilizzati per specificare la destinazione o le destinazioni per ogni tipo di report. Queste funzioni consentono alle destinazioni per la creazione dei rapporti per ogni tipo di rapporto di essere controllate separatamente. È ad esempio possibile specificare che un `reportType` di `_CRT_WARN` possa essere inviato solo al monitor di debug, mentre un `reportType` di `_CRT_ASSERT` sia inviato a una finestra di messaggio di debug e a un file di rapporto definito dall'utente.  
+ `_CrtDbgReport` e `_CrtDbgReportW` possono inviare il rapporto di debug a tre destinazioni diverse: un file di rapporto di debug, un monitor di debug (ovvero il debugger [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]) o a una finestra di messaggio di debug. Vengono usate due funzioni di configurazione, [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) e [_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md), per specificare la destinazione o le destinazioni per ogni tipo di report. Queste funzioni consentono alle destinazioni per la creazione dei rapporti per ogni tipo di rapporto di essere controllate separatamente. È ad esempio possibile specificare che un `reportType` di `_CRT_WARN` possa essere inviato solo al monitor di debug, mentre un `reportType` di `_CRT_ASSERT` sia inviato a una finestra di messaggio di debug e a un file di rapporto definito dall'utente.  
   
  `_CrtDbgReportW` è la versione a caratteri wide di `_CrtDbgReport`. Tutti gli output e i parametri di stringa sono espressi in stringhe a caratteri wide, per il resto è identico alla versione a un byte.  
   
@@ -104,15 +121,15 @@ int _CrtDbgReportW(
   
 |Modalità rapporto|File di rapporto|Comportamento di `_CrtDbgReport`, `_CrtDbgReportW`|  
 |-----------------|-----------------|------------------------------------------------|  
-|`_CRTDBG_MODE_DEBUG`|Non applicabile|Scrive un messaggio mediante Windows [OutputDebugString](http://msdn.microsoft.com/library/windows/desktop/aa363362.aspx) API.|  
-|`_CRTDBG_MODE_WNDW`|Non applicabile|Chiama Windows [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) API per creare la finestra di messaggio per visualizzare il messaggio insieme a **Abort**, **ripetere**, e **Ignora** pulsanti. Se un utente fa clic su **Abort**, `_CrtDbgReport` o `_CrtDbgReport` immediatamente interrotto. Se un utente fa clic su **ripetere**, restituisce 1. Se un utente fa clic su **Ignora**, l'esecuzione continua e `_CrtDbgReport` e `_CrtDbgReportW` restituiscono 0. Si noti che facendo clic su **Ignora** quando una condizione di errore esiste spesso risultati "comportamento indefinito".|  
-|`_CRTDBG_MODE_FILE`|`__HFILE`|Scrive il messaggio in fornito dall'utente `HANDLE`, utilizzando le finestre [WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747.aspx) API e non verifica la validità dell'handle di file; l'applicazione è responsabile dell'apertura del file di report e passando un handle di file valido.|  
+|`_CRTDBG_MODE_DEBUG`|Non applicabile|Scrive un messaggio tramite l'API [OutputDebugString](http://msdn.microsoft.com/library/windows/desktop/aa363362.aspx) di Windows.|  
+|`_CRTDBG_MODE_WNDW`|Non applicabile|Esegue una chiamata all'API[MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) di Windows per creare la finestra in cui visualizzare il messaggio nonché i pulsanti **Interrompi**, **Riprova** e **Ignora**. Se un utente fa clic su **Interrompi**, `_CrtDbgReport` o `_CrtDbgReport` viene immediatamente interrotto. Se un utente fa clic su **Riprova**, viene restituito 1. Se un utente fa clic su **Ignora**, l'esecuzione continua e `_CrtDbgReport` e `_CrtDbgReportW` restituiscono 0. Si noti che quando si fa clic su **Ignora** in presenza di una condizione di errore, spesso si determina un "comportamento indefinito".|  
+|`_CRTDBG_MODE_FILE`|`__HFILE`|Scrive un messaggio nell'`HANDLE` specificato dall'utente, usando l'API [WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747.aspx) di Windows e non verifica la validità dell'handle di file. L'applicazione è responsabile dell'apertura del file del report e del passaggio di un handle di file valido.|  
 |`_CRTDBG_MODE_FILE`|`_CRTDBG_FILE_STDERR`|Scrive il messaggio in `stderr`.|  
 |`_CRTDBG_MODE_FILE`|`_CRTDBG_FILE_STDOUT`|Scrive il messaggio in `stdout`.|  
   
- Il rapporto può essere inviato a una, due o tre destinazioni o a nessuna destinazione. Per ulteriori informazioni su come specificare la modalità di report e il file di report, vedere il [CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) e [crtsetreportfile](../../c-runtime-library/reference/crtsetreportfile.md) funzioni. Per ulteriori informazioni sull'utilizzo delle macro di debug e funzioni di report, vedere [macro per il Reporting](../Topic/Macros%20for%20Reporting.md).  
+ Il rapporto può essere inviato a una, due o tre destinazioni o a nessuna destinazione. Per altre informazioni su come specificare le modalità report e il file del report, vedere le funzioni [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) e [_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md). Per altre informazioni sull'uso delle macro di debug e delle funzioni per la creazione di report, vedere [Macros for Reporting](/visualstudio/debugger/macros-for-reporting) (Macro per la creazione di report).  
   
- Se l'applicazione necessita di maggiore flessibilità rispetto a quelle fornite da `_CrtDbgReport` e `_CrtDbgReportW`, è possibile scrivere una funzione di reporting e agganciarla nel reporting meccanismo con la libreria di run-time C di [CrtSetReportHook](../../c-runtime-library/reference/crtsetreporthook.md) (funzione).  
+ Se l'applicazione richiede maggiore flessibilità di quella offerta da `_CrtDbgReport` e `_CrtDbgReportW`, è possibile scrivere una funzione per la creazione di report personalizzata ed eseguire l'hook al meccanismo di creazione di report della libreria di runtime di usando la funzione [_CrtSetReportHook](../../c-runtime-library/reference/crtsetreporthook.md).  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -121,10 +138,10 @@ int _CrtDbgReportW(
 |`_CrtDbgReport`|\<crtdbg.h>|  
 |`_CrtDbgReportW`|\<crtdbg.h>|  
   
- `_CrtDbgReport` e `_CrtDbgReportW` sono estensioni Microsoft. Per altre informazioni, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
+ `_CrtDbgReport` e `_CrtDbgReportW` sono estensioni Microsoft. Per altre informazioni, vedere [Compatibility](../../c-runtime-library/compatibility.md).  
   
 ## <a name="libraries"></a>Librerie  
- Le versioni di debug [librerie di runtime C](../../c-runtime-library/crt-library-features.md) solo.  
+ Solo le versioni di debug delle [librerie di runtime di C](../../c-runtime-library/crt-library-features.md).  
   
 ## <a name="example"></a>Esempio  
   
@@ -139,21 +156,21 @@ int main(int argc, char *argv[]) {
 }  
 ```  
   
- Vedere [crt_dbg2](http://msdn.microsoft.com/it-it/21e1346a-6a17-4f57-b275-c76813089167) per un esempio di come modificare la funzione di report.  
+ Per un esempio su come modificare la funzione per la creazione di report, vedere [crt_dbg2](http://msdn.microsoft.com/en-us/21e1346a-6a17-4f57-b275-c76813089167).  
   
 ## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
   
--   [System::Diagnostics::debug::Write](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.write.aspx)  
+-   [System::Diagnostics::Debug::Write](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.write.aspx)  
   
--   [System::Diagnostics::debug::WriteLine](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writeline.aspx)  
+-   [System::Diagnostics::Debug::Writeline](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writeline.aspx)  
   
--   [System::Diagnostics::debug::WriteIf](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writeif.aspx)  
+-   [System::Diagnostics::Debug::WriteIf](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writeif.aspx)  
   
--   [System::Diagnostics::debug::WriteLineIf](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writelineif.aspx)  
+-   [System::Diagnostics::Debug::WriteLineIf](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writelineif.aspx)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Routine di debug](../../c-runtime-library/debug-routines.md)   
- [CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md)   
- [Crtsetreportfile](../../c-runtime-library/reference/crtsetreportfile.md)   
- [printf, printf_l, wprintf, wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [DEBUG](../../c-runtime-library/debug.md)
+ [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md)   
+ [_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md)   
+ [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [_DEBUG](../../c-runtime-library/debug.md)

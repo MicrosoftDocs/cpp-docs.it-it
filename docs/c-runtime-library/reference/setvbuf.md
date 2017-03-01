@@ -1,49 +1,65 @@
 ---
-title: "setvbuf | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "setvbuf"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "setvbuf"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controllo della memorizzazione nel buffer del flusso"
-  - "setvbuf (funzione)"
-  - "memorizzazione nel buffer del flusso"
+title: setvbuf | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- setvbuf
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- setvbuf
+dev_langs:
+- C++
+helpviewer_keywords:
+- controlling stream buffering
+- stream buffering
+- setvbuf function
 ms.assetid: 6aa5aa37-3408-4fa0-992f-87f9f9c4baea
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# setvbuf
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 34e35686b96ae6a2d0b27639d2d23b6d242fe4d4
+ms.lasthandoff: 02/24/2017
 
-Controlla il buffering del flusso e la dimensione del buffer.  
+---
+# <a name="setvbuf"></a>setvbuf
+Controlla il buffering del flusso e le dimensioni del buffer.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 int setvbuf(  
@@ -54,9 +70,9 @@ int setvbuf(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `stream`  
- Puntatore alla struttura `FILE`.  
+ Puntatore alla struttura `FILE` .  
   
  `buffer`  
  Buffer allocato dall'utente.  
@@ -65,41 +81,41 @@ int setvbuf(
  Modalità di buffering.  
   
  `size`  
- Dimensioni del buffer in byte.  Intervallo valido: 2 \<\= `size` \<\= INT\_MAX \(2147483647\).  Internamente, il valore fornito per `size` viene arrotondato per difetto al multiplo di 2 più vicino.  
+ Dimensioni del buffer in byte. Intervallo consentito: 2 <= `size` <= INT_MAX (2147483647). Internamente, il valore specificato per `size` viene arrotondato per difetto al multiplo di 2 più prossimo.  
   
-## Valore restituito  
+## <a name="return-value"></a>Valore restituito  
  Restituisce 0 in caso di esito positivo.  
   
- Se `stream` è `NULL`, o se `mode` o `size` non è all'interno di una modifica valida, il gestore di parametro non valido viene richiamato, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).  Se l'esecuzione può continuare, questa funzione restituisce \-1 ed imposta `errno` a `EINVAL`.  
+ Se `stream` è `NULL` oppure se `mode` o `size` non corrisponde a una modifica valida, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione restituisce -1 e imposta `errno` su `EINVAL`.  
   
- Per ulteriori informazioni su questi, e altri, codici di errore vedere [\_doserrno, errno, \_sys\_errlist, and \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .  
+ Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Note  
- La funzione `setvbuf` consente al programma di controllare sia il buffer che la dimensione del buffer per `stream`.  `stream` deve fare riferimento ad un file aperto non sottoposto ad un'operazione di I\/O da quando è stato aperto.  La matrice puntata da `buffer` viene utilizzata come il buffer, a meno che non sia `NULL`, nel qual caso `setvbuf` utilizza un buffer allocato automaticamente della lunghezza di `size`\/2 \* 2 byte.  
+## <a name="remarks"></a>Note  
+ La funzione `setvbuf` consente al programma di controllare sia il buffering che le dimensioni del buffer per `stream`. `stream` deve fare riferimento a un file aperto su cui non è stata eseguita un'operazione di I/O dopo l'apertura. La matrice a cui punta `buffer` viene usata come buffer, a meno che non sia `NULL`, nel qual caso `setvbuf` usa un buffer allocato automaticamente con una lunghezza pari a `size`/2 * 2 byte.  
   
- La modalità deve essere `_IOFBF`, `_IOLBF`, o `_IONBF`.  Se `mode` è `_IOFBF` o `_IOLBF`, quindi `size` viene utilizzato come la dimensione del buffer.  Se `mode` è `_IONBF`, il flusso è privo di buffer e `size` e `buffer` vengono ignorati.  I valori per `mode` e i relativi significati sono:  
+ La modalità deve essere `_IOFBF`, `_IOLBF` o `_IONBF`. Se `mode` è `_IOFBF` o `_IOLBF`, viene usato `size` come dimensioni del buffer. Se `mode` è `_IONBF`, viene annullato il buffering del flusso e `size` e `buffer` vengono ignorati. I valori per `mode` e i rispettivi significati sono:  
   
  `_IOFBF`  
- Buffer completo; ovvero `buffer` viene utilizzato come il buffer e `size` viene utilizzato come la dimensione del buffer.  Se `buffer` è `NULL`, viene utilizzato automaticamente un buffer di lunghezza `size` byte.  
+ Buffering completo, ovvero `buffer` viene usato come buffer e `size` viene usato come dimensioni del buffer. Se `buffer` è `NULL`, viene usato un buffer allocato automaticamente con lunghezza di `size` byte.  
   
  `_IOLBF`  
- Per alcuni sistemi, questo fornisce la linea di buffering.  Tuttavia, per Win32, il comportamento sarà uguale a `_IOFBF` \- Buffer Completo.  
+ Per alcuni sistemi, viene così fornito il buffering di riga. Tuttavia, per Win32, il comportamento è lo stesso di `_IOFBF` - buffering completo.  
   
  `_IONBF`  
- Nessun buffer viene utilizzato, indipendentemente da `buffer` o da `size`.  
+ Non viene usato alcun buffer, indipendentemente da `buffer` o `size`.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`setvbuf`|\<stdio.h\>|  
+|-------------|---------------------|  
+|`setvbuf`|\<stdio.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'Introduzione.  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
-## Librerie  
- Tutte le versioni delle [Librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Librerie  
+ Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_setvbuf.c  
@@ -131,14 +147,17 @@ int main( void )
 }  
 ```  
   
-  **'stream1' now has a buffer of 1024 bytes**  
-**'stream2' now has no buffer**   
-## Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione standard C, utilizzare `PInvoke`. Per ulteriori informazioni, vedere [Esempi di Invocazione della Piattaforma](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+'stream1' now has a buffer of 1024 bytes  
+'stream2' now has no buffer  
+```  
   
-## Vedere anche  
- [I\/O di flusso](../../c-runtime-library/stream-i-o.md)   
- [fclose, \_fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
+## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
+ Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
+  
+## <a name="see-also"></a>Vedere anche  
+ [I/O di flusso](../../c-runtime-library/stream-i-o.md)   
+ [fclose, _fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
  [fflush](../../c-runtime-library/reference/fflush.md)   
- [fopen, \_wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
+ [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
  [setbuf](../../c-runtime-library/reference/setbuf.md)

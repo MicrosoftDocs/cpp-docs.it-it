@@ -1,55 +1,68 @@
 ---
-title: "Classe is_signed | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "is_signed"
-  - "std.tr1.is_signed"
-  - "std::tr1::is_signed"
-  - "std.is_signed"
-  - "std::is_signed"
-  - "type_traits/std::is_signed"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "is_signed (classe) [TR1]"
-  - "is_signed"
+title: Classe is_signed | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- is_signed
+- std::is_signed
+- type_traits/std::is_signed
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_signed class
+- is_signed
 ms.assetid: 20ae44d9-22ad-4fbd-b26a-f18c62689451
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# Classe is_signed
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
+ms.openlocfilehash: e42e2f5ee1ffe76ffddb89b841c87a9e30e27bc3
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="issigned-class"></a>Classe is_signed
 Verificare se il tipo è un intero con segno.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-template<class Ty>  
-    struct is_signed;  
+template <class Ty>  
+struct is_signed;  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `Ty`  
  Tipo su cui eseguire una query.  
   
-## Note  
+## <a name="remarks"></a>Note  
  Un'istanza del tipo predicato contiene true se il tipo `Ty` è un tipo integrale signed o un tipo integrale signed `cv-qualified`; in caso contrario, contiene false.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-```  
-// std_tr1__type_traits__is_signed.cpp   
+```cpp  
+// std__type_traits__is_signed.cpp   
 // compile with: /EHsc   
 #include <type_traits>   
 #include <iostream>   
@@ -75,15 +88,19 @@ int main()
   
 ```  
   
-  **is\_signed\<trivial\> \=\= false**  
-**is\_signed\<int\> \=\= true**  
-**is\_signed\<unsigned int\> \=\= false**  
-**is\_signed\<float\> \=\= false**   
-## Requisiti  
- **Intestazione:** \<type\_traits\>  
+```Output  
+is_signed<trivial> == false  
+is_signed<int> == true  
+is_signed<unsigned int> == false  
+is_signed<float> == false  
+```  
+  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<type_traits>  
   
  **Spazio dei nomi:** std  
   
-## Vedere anche  
- [\<type\_traits\>](../standard-library/type-traits.md)   
- [Classe is\_unsigned](../standard-library/is-unsigned-class.md)
+## <a name="see-also"></a>Vedere anche  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [Classe is_unsigned](../standard-library/is-unsigned-class.md)
+

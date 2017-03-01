@@ -1,61 +1,127 @@
 ---
-title: "Classe lognormal_distribution | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.tr1.lognormal_distribution"
-  - "tr1.lognormal_distribution"
-  - "tr1::lognormal_distribution"
-  - "std::tr1::lognormal_distribution"
-  - "lognormal_distribution"
-  - "random/std::tr1::lognormal_distribution"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lognormal_distribution (classe)"
+title: Classe lognormal_distribution | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- lognormal_distribution
+- std::lognormal_distribution
+- random/std::lognormal_distribution
+- std::lognormal_distribution::reset
+- random/std::lognormal_distribution::reset
+- std::lognormal_distribution::m
+- random/std::lognormal_distribution::m
+- std::lognormal_distribution::s
+- random/std::lognormal_distribution::s
+- std::lognormal_distribution::param
+- random/std::lognormal_distribution::param
+- std::lognormal_distribution::min
+- random/std::lognormal_distribution::min
+- std::lognormal_distribution::max
+- random/std::lognormal_distribution::max
+- std::lognormal_distribution::operator()
+- random/std::lognormal_distribution::operator()
+- std::lognormal_distribution::param_type
+- random/std::lognormal_distribution::param_type
+- std::lognormal_distribution::param_type::m
+- random/std::lognormal_distribution::param_type::m
+- std::lognormal_distribution::param_type::s
+- random/std::lognormal_distribution::param_type::s
+- std::lognormal_distribution::param_type::operator==
+- random/std::lognormal_distribution::param_type::operator==
+- std::lognormal_distribution::param_type::operator!=
+- random/std::lognormal_distribution::param_type::operator!=
+dev_langs:
+- C++
+helpviewer_keywords:
+- lognormal_distribution class
 ms.assetid: f2d6a431-6c3a-4370-b12e-4adb4ddf6cc4
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# Classe lognormal_distribution
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
+ms.openlocfilehash: 9e3e74b396e0f5026cc69c6cf4e2ca7cf5215ad5
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="lognormaldistribution-class"></a>Classe lognormal_distribution
 Genera una distribuzione lognormale.  
   
-## Sintassi  
-  
+## <a name="syntax"></a>Sintassi  
 ```  
-template<class RealType = double> class lognormal_distribution { public:     // types     typedef RealType result_type;     struct param_type;     // constructor and reset functions     explicit lognormal_distribution(RealType m = 0.0, RealType s = 1.0);     explicit lognormal_distribution(const param_type& parm);     void reset();     // generating functions     template<class URNG>     result_type operator()(URNG& gen);     template<class URNG>     result_type operator()(URNG& gen, const param_type& parm);     // property functions     RealType m() const;     RealType s() const;     param_type param() const;     void param(const param_type& parm);     result_type min() const;     result_type max() const; };  
+template <class RealType = double>  
+class lognormal_distribution  
+   {  
+public:  
+   // types  
+   typedef RealType result_type;  
+   struct param_type;  
+   // constructor and reset functions  
+   explicit lognormal_distribution(result_type m = 0.0, result_type s = 1.0);
+   explicit lognormal_distribution(const param_type& parm);
+   void reset();
+   // generating functions  
+   template <class URNG>  
+   result_type operator()(URNG& gen);
+   template <class URNG>  
+   result_type operator()(URNG& gen, const param_type& parm);
+   // property functions  
+   result_type m() const;
+   result_type s() const;
+   param_type param() const;
+   void param(const param_type& parm);
+   result_type min() const;
+   result_type max() const;
+   };  
 ```  
+### <a name="parameters"></a>Parametri  
+*RealType*  
+Tipo di risultato a virgola mobile. Per impostazione predefinita, `double`. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).  
   
-#### Parametri  
- `RealType`  
- Tipo di risultato a virgola mobile. Per impostazione predefinita, `double`.  Per informazioni sui tipi possibili, vedere [\<random\>](../standard-library/random.md).  
-  
-## Note  
- La classe di modelli descrive una distribuzione che produce valori di un tipo integrale specificato dall'utente o di tipo `double` se non è specificato alcun valore, distribuiti in base alla distribuzione lognormale.  La tabella seguente include collegamenti ad articoli relativi ai singoli membri.  
+## <a name="remarks"></a>Note  
+La classe di modelli descrive una distribuzione che produce valori di un tipo integrale specificato dall'utente o di tipo `double` se non è specificato alcun valore, distribuiti in base alla distribuzione lognormale. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.  
   
 ||||  
 |-|-|-|  
-|[lognormal\_distribution::lognormal\_distribution](../Topic/lognormal_distribution::lognormal_distribution.md)|`lognormal_distribution::m`|`lognormal_distribution::param`|  
-|`lognormal_distribution::operator()`|`lognormal_distribution::s`|[lognormal\_distribution::param\_type](../Topic/lognormal_distribution::param_type.md)|  
+|[lognormal_distribution::lognormal_distribution](#lognormal_distribution__lognormal_distribution)|`lognormal_distribution::m`|`lognormal_distribution::param`|  
+|`lognormal_distribution::operator()`|`lognormal_distribution::s`|[lognormal_distribution::param_type](#lognormal_distribution__param_type)|  
   
- Le funzioni di proprietà `m()` e `s()` restituiscono i valori rispettivi per i parametri di distribuzione archiviati `m` e `s`, rispettivamente.  
+Le funzioni di proprietà `m()` e `s()` restituiscono i valori per i parametri di distribuzione archiviati, rispettivamente *m* e *s*.  
   
- Per altre informazioni sulle classi di distribuzione e i rispettivi membri, vedere [\<random\>](../standard-library/random.md).  
+Il membro di proprietà `param()` imposta o restituisce il pacchetto di parametri di distribuzione archiviati `param_type`.  
+
+Le funzioni membro `min()` e `max()` restituiscono rispettivamente il minor risultato possibile e il maggior risultato possibile.  
   
- Per informazioni dettagliate sulla distribuzione lognormale, vedere l'articolo di Wolfram MathWorld relativo alla [Distribuzione lognormale](http://go.microsoft.com/fwlink/?LinkId=400917).  
+La funzione membro `reset()` rimuove gli eventuali valori memorizzati nella cache, in modo che il risultato della successiva chiamata a `operator()` non dipenda da alcun valore ottenuto dal motore prima della chiamata.  
   
-## Esempio  
+Le funzioni membro `operator()` restituiscono il successivo valore generato basato sul motore URNG, dal pacchetto di parametri corrente o da quello specificato.
+  
+Per altre informazioni sulle classi di distribuzione e sui rispettivi membri, vedere [\<random>](../standard-library/random.md).  
+  
+Per informazioni dettagliate sulla distribuzione LogNormal, vedere l'articolo di Wolfram MathWorld [LogNormal Distribution](http://go.microsoft.com/fwlink/LinkId=400917) (Distribuzione LogNormal).  
+  
+## <a name="example"></a>Esempio  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -114,38 +180,91 @@ int main()
   
     test(m_dist, s_dist, samples);  
 }  
-  
 ```  
   
-## Output  
-  
-```  
+```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
 Enter a floating point value for the 'm' distribution parameter: 0  
 Enter a floating point value for the 's' distribution parameter (must be greater than zero): 1  
 Enter an integer value for the sample count: 10  
-  
+ 
 min() == -1.79769e+308  
 max() == 1.79769e+308  
 m() == 0.0000000000  
 s() == 1.0000000000  
 Distribution for 10 samples:  
-          1:   0.3862809339  
-          2:   0.4128865601  
-          3:   0.4490576787  
-          4:   0.4862035428  
-          5:   0.5930607126  
-          6:   0.8190778771  
-          7:   0.8902379317  
-          8:   2.8332911667  
-          9:   5.1359445565  
-         10:   5.4406507912  
+    1: 0.3862809339  
+    2: 0.4128865601  
+    3: 0.4490576787  
+    4: 0.4862035428  
+    5: 0.5930607126  
+    6: 0.8190778771  
+    7: 0.8902379317  
+    8: 2.8332911667  
+    9: 5.1359445565  
+    10: 5.4406507912  
 ```  
   
-## Requisiti  
- **Intestazione:** \<random\>  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<random>  
   
  **Spazio dei nomi:** std  
   
-## Vedere anche  
- [\<random\>](../standard-library/random.md)
+##  <a name="a-namelognormaldistributionlognormaldistributiona--lognormaldistributionlognormaldistribution"></a><a name="lognormal_distribution__lognormal_distribution"></a>  lognormal_distribution::lognormal_distribution  
+ Costruisce la distribuzione.  
+  
+```  
+explicit lognormal_distribution(RealType m = 0.0, RealType s = 1.0);
+explicit lognormal_distribution(const param_type& parm);
+```  
+  
+### <a name="parameters"></a>Parametri  
+*m*  
+Parametro di distribuzione `m`.  
+  
+*s*  
+Parametro di distribuzione `s`.  
+  
+*parm*  
+Struttura `param_type` usata per costruire la distribuzione.  
+  
+### <a name="remarks"></a>Note  
+**Precondizione:** `0.0 < s`  
+  
+Il primo costruttore crea un oggetto il cui valore `m` archiviato include il valore *m* e il cui valore `s` archiviato include il valore *s*.  
+  
+Il secondo costruttore crea un oggetto i cui parametri archiviati sono inizializzati da *parm*. È possibile ottenere e impostare i parametri correnti di una distribuzione esistente chiamando la funzione membro `param()`.  
+  
+##  <a name="a-namelognormaldistributionparamtypea--lognormaldistributionparamtype"></a><a name="lognormal_distribution__param_type"></a>  lognormal_distribution::param_type  
+Archivia i parametri della distribuzione.  
+  
+```  
+struct param_type {  
+   typedef lognormal_distribution<result_type> distribution_type;  
+   param_type(result_type m = 0.0, result_type s = 1.0);
+   result_type m() const;
+   result_type s() const;
+
+   bool operator==(const param_type& right) const;
+   bool operator!=(const param_type& right) const;
+};  
+```    
+### <a name="parameters"></a>Parametri  
+*m*  
+Parametro di distribuzione `m`.  
+  
+*s*  
+Parametro di distribuzione `s`.  
+  
+*right*  
+Struttura `param_type` usata per il confronto.  
+  
+### <a name="remarks"></a>Note  
+**Precondizione:** `0.0 < s`  
+  
+Questa struttura può essere passata al costruttore di classe della distribuzione durante la creazione di istanze, alla funzione membro `param()` per impostare i parametri archiviati di una distribuzione esistente e a `operator()` per l'uso in sostituzione dei parametri archiviati.  
+  
+## <a name="see-also"></a>Vedere anche  
+[\<random>](../standard-library/random.md)
+
+

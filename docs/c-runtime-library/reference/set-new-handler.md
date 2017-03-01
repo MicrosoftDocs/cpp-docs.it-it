@@ -1,51 +1,67 @@
 ---
-title: "_set_new_handler | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_set_new_handler"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_set_new_handler"
-  - "set_new_handler"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_set_new_handler (funzione)"
-  - "gestione errori"
-  - "set_new_handler (funzione)"
-  - "trasferimento del controllo al gestore errori"
+title: _set_new_handler | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _set_new_handler
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _set_new_handler
+- set_new_handler
+dev_langs:
+- C++
+helpviewer_keywords:
+- _set_new_handler function
+- set_new_handler function
+- error handling
+- transferring control to error handler
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# _set_new_handler
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 9939a9c3586367f048a173fb75e17d5c9f67c387
+ms.lasthandoff: 02/24/2017
 
-Trasferisce il controllo al meccanismo di gestione degli errori se l'operatore `new` non riesce ad allocare memoria.  
+---
+# <a name="setnewhandler"></a>_set_new_handler
+Trasferisce il controllo al meccanismo di gestione degli errori se l'operatore `new` non riesce ad allocare la memoria.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 _PNH _set_new_handler(  
@@ -53,21 +69,21 @@ _PNH _set_new_handler(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `pNewHandler`  
- Puntatore alla funzione che gestisce la memoria fornita all'applicazione.  Un argomento di 0 indica che il nuovo gestore deve essere rimosso.  
+ Puntatore alla funzione di gestione della memoria fornita dall'applicazione. Un argomento 0 causa la rimozione del nuovo gestore.  
   
-## Valore restituito  
- Restituisce un puntatore alla funzione precedente di gestione delle eccezioni registrata da `_set_new_handler`, in modo che la funzione precedente possa essere ripristinata in un secondo momento.  Se nessuna funzione precedente è stata impostata, il valore restituito può essere utilizzato per ripristinare il comportamento predefinito, questo valore può essere `NULL`.  
+## <a name="return-value"></a>Valore restituito  
+ Restituisce un puntatore alla funzione di gestione delle eccezioni precedente registrata da `_set_new_handler`, in modo che la funzione precedente possa essere ripristinata in un secondo momento. Se non è stata impostata alcuna funzione precedente, il valore restituito può essere usato per ripristinare il comportamento predefinito. Questo valore può essere `NULL`.  
   
-## Note  
- La funzione C\+\+ `_set_new_handler` specifica una funzione di gestione delle eccezioni che prende il controllo se l'operatore `new` non riesce ad allocare memoria.  Se `new` non riesce, il sistema runtime chiama automaticamente la funzione di gestione delle eccezioni che è stata passata come argomento a `_set_new_handler`.  `_PNH`, definita in New.h, è un puntatore a una funzione che restituisce un `int` e accetta un argomento di tipo `size_t`.  Utilizzare `size_t` per specificare la quantità di spazio da allocare in memoria.  
+## <a name="remarks"></a>Note  
+ La funzione C++ `_set_new_handler` viene usata per specificare una funzione di gestione delle eccezioni che deve assumere il controllo se l'operatore `new` non riesce ad allocare memoria. Se `new` ha esito negativo, il sistema di runtime chiama automaticamente la funzione di gestione delle eccezioni passata come argomento di `_set_new_handler`. `_PNH`, definito in New.h, è un puntatore a una funzione che restituisce il tipo `int` e accetta un argomento di tipo `size_t`. Usare `size_t` per specificare la quantità di spazio da allocare.  
   
- Non esiste un gestore predefinito.  
+ Non è previsto alcun gestore predefinito.  
   
- `_set_new_handler` è essenzialmente un garbage collection.  Il sistema di runtime riprova l'allocazione ogni volta che la funzione restituisce un valore diverso da zero e avrà esito negativo altrimenti.  
+ `_set_new_handler` è fondamentalmente uno schema di garbage collection. Il sistema di runtime ritenta l'allocazione ogni volta che la funzione restituisce un valore diverso da zero e non riesce se la funzione restituisce 0.  
   
- Un'occorrenza della funzione `_set_new_handler` nei registri del programma, la funzione di gestione delle eccezioni specificata nella lista degli argomenti con il sistema di runtime:  
+ Un'occorrenza della funzione `_set_new_handler` in un programma registra la funzione di gestione delle eccezioni specificata nell'elenco di argomenti con il sistema di runtime:  
   
 ```  
 #include <new.h>  
@@ -82,7 +98,7 @@ int main( void )
 }  
 ```  
   
- È possibile salvare l'indirizzo dell'ultima funzione passata alla funzione `_set_new_handler` e reintegrarlo in seguito:  
+ È possibile salvare l'indirizzo dell'ultima funzione passata alla funzione `_set_new_handler` e crearne un'altra istanza in seguito:  
   
 ```  
 _PNH old_handler = _set_new_handler( my_handler );  
@@ -91,30 +107,30 @@ _PNH old_handler = _set_new_handler( my_handler );
    // Code that requires old_handler  
 ```  
   
- La funzione C\+\+ [\_set\_new\_mode](../../c-runtime-library/reference/set-new-mode.md) imposta la nuova modalità di gestione per la funzione [malloc](../../c-runtime-library/reference/malloc.md).  La nuova modalità di gestione indica che, in caso di errore, `malloc` deve richiamare la nuova routine di gestione come impostato da `_set_new_handler`.  Per impostazione predefinita, `malloc` non richiama la nuova routine di gestione in caso di errore nell'allocare memoria.  È possibile eseguire l'override di questo comportamento predefinito affinché, quando `malloc` non riesce ad allocare memoria, `malloc` chiami la nuova routine del gestore allo stesso modo di come avviene con l'operatore `new` quando si verifica il medesimo errore.  Per eseguire l'override del comportamento predefinito, chiamare:  
+ La funzione C++ [_set_new_mode](../../c-runtime-library/reference/set-new-mode.md) imposta la nuova modalità del gestore per [malloc](../../c-runtime-library/reference/malloc.md). La nuova modalità del gestore indica se, in caso di errore, `malloc` deve chiamare la routine del nuovo gestore come impostato da `_set_new_handler`. Per impostazione predefinita, `malloc` non chiama la routine del nuovo gestore in caso di errore di allocazione della memoria. È possibile eseguire l'override di questo comportamento predefinito in modo che, quando `malloc` non riesce ad allocare memoria, `malloc` chiami la routine del nuovo gestore, come fa l'operatore `new` quando non riesce per lo stesso motivo. Per eseguire l'override del comportamento predefinito, chiamare:  
   
 ```  
 _set_new_mode(1)  
 ```  
   
- all'inizio del programma programma o collegare con Newmode.obj.  
+ all'inizio del programma o collegare con Newmode.obj.  
   
- Se viene fornito un `operator new`definito dall'utente, le nuove funzioni di gestione non vengono richiamate automaticamente in caso di errore.  
+ Se viene specificato un `operator new` definito dall'utente, le funzioni del nuovo gestore non vengono chiamate automaticamente in caso di errore.  
   
- Per ulteriori informazioni, vedere [nuovo](../../cpp/new-operator-cpp.md) e [elimina](../../cpp/delete-operator-cpp.md) in *Riferimenti al linguaggio C\+\+*.  
+ Per altre informazioni, vedere [new](../../cpp/new-operator-cpp.md) e [delete](../../cpp/delete-operator-cpp.md) in *Riferimenti al linguaggio C++*.  
   
- Esiste un unico gestore `_set_new_handler` per tutte le DLL collegate in modo dinamico o gli eseguibili; anche se si chiama `_set_new_handler` il gestore può solo essere sostituito da un altro o eventualmente sostituire uno già impostato da qualche DLL o eseguibile.  
+ È disponibile un unico gestore `_set_new_handler` per tutti i file DLL o eseguibili collegati in modo dinamico. Anche se si chiama `_set_new_handler`, è possibile che il gestore sia sostituito da un altro o che si stia sostituendo un gestore impostato da un altro file DLL o eseguibile.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`_set_new_handler`|\<new.h\>|  
+|-------------|---------------------|  
+|`_set_new_handler`|\<new.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
-## Esempio  
- In questo esempio, quando l'allocazione ha esito negativo, il controllo viene trasferito a MyNewHandler.  L'argomento passato a MyNewHandler è il numero di byte necessari.  Il valore restituito da MyNewHandler è un flag che indica se l'allocazione deve essere ripetuta: un valore diverso da zero indica che l'allocazione deve essere ripetuta e un valore zero indica che l'allocazione non è riuscita.  
+## <a name="example"></a>Esempio  
+ In questo esempio, quando l'allocazione ha esito negativo, il controllo viene trasferito a MyNewHandler. L'argomento passato a MyNewHandler è il numero di byte richiesto. Il valore restituito da MyNewHandler è un flag che indica se deve essere ritentata l'allocazione. Un valore diverso da zero indica che deve essere ritentata allocazione e il valore zero indica che l'allocazione non è riuscita.  
   
 ```  
 // crt_set_new_handler.cpp  
@@ -155,14 +171,18 @@ int main()
 }  
 ```  
   
-  **Allocazione non riuscita.  Coalescenza dell'heap.**  
-**Questa applicazione ha richiesto all'ambiente di Runtime di terminare alla maniera usuale.**  
-**Prego contattare il supporto dell'applicazione per maggiori informazioni.**    
-## Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione standard C, utilizzare `PInvoke`. Per ulteriori informazioni, vedere [Esempi di Invocazione della Piattaforma](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+Allocation failed. Coalescing heap.  
   
-## Vedere anche  
- [Allocazione di memoria](../../c-runtime-library/memory-allocation.md)   
+This application has requested the Runtime to terminate it in an unusual way.  
+Please contact the application's support team for more information.  
+```  
+  
+## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
+ Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Memory Allocation](../../c-runtime-library/memory-allocation.md)  (Allocazione di memoria)  
  [calloc](../../c-runtime-library/reference/calloc.md)   
  [free](../../c-runtime-library/reference/free.md)   
  [realloc](../../c-runtime-library/reference/realloc.md)

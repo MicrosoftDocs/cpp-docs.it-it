@@ -1,79 +1,95 @@
 ---
-title: "_tzset | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_tzset"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-time-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_tzset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_tzset (funzione)"
-  - "variabili di ambiente di tempo"
-  - "variabili di ambiente, l'impostazione tempo"
+title: _tzset | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _tzset
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-time-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _tzset
+dev_langs:
+- C++
+helpviewer_keywords:
+- _tzset function
+- time environment variables
+- environment variables, setting time
 ms.assetid: 3f6ed537-b414-444d-b272-5dd377481930
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# _tzset
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: d52530de55147945f12f664d882ce0cda18f8e17
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="tzset"></a>_tzset
 Impostare le variabili di ambiente di tempo.  
   
 > [!IMPORTANT]
->  Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate con \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere l'articolo relativo alle                  [funzioni CRT non supportate con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 void _tzset( void );  
 ```  
   
-## Note  
- La funzione `_tzset` usa l'impostazione corrente della variabile di ambiente `TZ` per assegnare valori a tre variabili globali: `_daylight`, `_timezone` e `_tzname`. Queste variabili vengono usate dalle funzioni [\_ftime](../../c-runtime-library/reference/ftime-ftime32-ftime64.md) e [localtime](../../c-runtime-library/reference/localtime-localtime32-localtime64.md) per apportare correzioni dall'ora UTC \(Coordinated Universal Time\) all'ora locale e dalla funzione `time` per calcolare l'ora UTC dall'ora di sistema. Usare la sintassi seguente per impostare la variabile di ambiente `TZ`:  
+## <a name="remarks"></a>Note  
+ La funzione `_tzset` usa l'impostazione corrente della variabile di ambiente `TZ` per assegnare valori a tre variabili globali: `_daylight`, `_timezone`e `_tzname`. Queste variabili vengono usate dalle funzioni [_ftime](../../c-runtime-library/reference/ftime-ftime32-ftime64.md) e [localtime](../../c-runtime-library/reference/localtime-localtime32-localtime64.md) per apportare correzioni dall'ora UTC (Coordinated Universal Time) all'ora locale e dalla funzione `time` per calcolare l'ora UTC dall'ora di sistema. Usare la sintassi seguente per impostare la variabile di ambiente `TZ` :  
   
- `set` `TZ`\=`tzn`\[\+ &#124; –\]`hh`\[`:``mm`\[`:``ss`\] \]\[`dzn`\]  
+ `set` `TZ`=`tzn`[+ &#124; –]`hh`[`:``mm`[`:``ss`] ][`dzn`]  
   
  `tzn`  
  Nome del fuso orario di tre lettere, ad esempio PST. È necessario specificare l'offset corretto dall'ora locale all'ora UTC.  
   
  `hh`  
- La differenza in ore tra l'ora UTC e l'ora locale. Segno più \(\+\) facoltativo per i valori positivi.  
+ La differenza in ore tra l'ora UTC e l'ora locale. Segno più (+) facoltativo per i valori positivi.  
   
  `mm`  
- Minuti. Separato da `hh` da due punti \(`:`\).  
+ Minuti. Separato da `hh` da due punti (`:`).  
   
  `ss`  
- Secondi. Separato da `mm` da due punti \(`:`\).  
+ Secondi. Separato da `mm` da due punti (`:`).  
   
  `dzn`  
- Fuso orario con l'ora legale di tre lettere, ad esempio PDT. Se l'ora legale non è mai attiva nella località, impostare `TZ` senza un valore per `dzn`. La libreria di runtime C presupporrà le regole relative agli Stati Uniti per implementare il calcolo dell'ora legale \(DST\).  
+ Fuso orario con l'ora legale di tre lettere, ad esempio PDT. Se l'ora legale non è mai attiva nella località, impostare `TZ` senza un valore per `dzn`. La libreria di runtime C presupporrà le regole relative agli Stati Uniti per implementare il calcolo dell'ora legale (DST).  
   
 > [!NOTE]
->  Prestare attenzione nel calcolare il segno della differenza di tempo. Dal momento che la differenza di tempo è l'offset dall'ora locale all'ora UTC \(anziché viceversa\), il relativo segno potrebbe essere l'opposto di quanto ci si potrebbe intuitivamente aspettare. Per i fusi orari avanti rispetto all'ora UTC, la differenza di tempo è negativa; per quelli che sono indietro rispetto all'ora UTC, la differenza è positiva.  
+>  Prestare attenzione nel calcolare il segno della differenza di tempo. Dal momento che la differenza di tempo è l'offset dall'ora locale all'ora UTC (anziché viceversa), il relativo segno potrebbe essere l'opposto di quanto ci si potrebbe intuitivamente aspettare. Per i fusi orari avanti rispetto all'ora UTC, la differenza di tempo è negativa; per quelli che sono indietro rispetto all'ora UTC, la differenza è positiva.  
   
  Ad esempio, per impostare la variabile di ambiente `TZ` in modo che corrisponda al fuso orario corrente in Germania, immettere quanto segue nella riga di comando:  
   
@@ -81,30 +97,30 @@ void _tzset( void );
 set TZ=GST-1GDT  
 ```  
   
- Questo comando usa GST per indicare l'ora solare tedesca, presuppone che l'ora UTC sia un'ora indietro rispetto alla Germania \(o, in altre parole, che la Germania sia un'ora avanti rispetto all'ora UTC\) e presuppone che la Germania osservi l'ora legale.  
+ Questo comando usa GST per indicare l'ora solare tedesca, presuppone che l'ora UTC sia un'ora indietro rispetto alla Germania (o, in altre parole, che la Germania sia un'ora avanti rispetto all'ora UTC) e presuppone che la Germania osservi l'ora legale.  
   
- Se il valore `TZ` non viene impostato, \_`tzset` prova a usare le informazioni sul fuso orario specificate dal sistema operativo. Nel sistema operativo Windows, queste informazioni vengono specificate nell'applicazione Data\/Ora nel Pannello di controllo. Se `_tzset` non riesce a ottenere questa informazioni, per impostazione predefinita usa PST8PDT, che indica il fuso orario Pacifico \(Stati Uniti\).  
+ Se il valore `TZ` non viene impostato, _`tzset` prova a usare le informazioni sul fuso orario specificate dal sistema operativo. Nel sistema operativo Windows, queste informazioni vengono specificate nell'applicazione Data/Ora nel Pannello di controllo. Se `_tzset` non riesce a ottenere questa informazioni, per impostazione predefinita usa PST8PDT, che indica il fuso orario Pacifico (Stati Uniti).  
   
- In base al valore della variabile di ambiente `TZ`, i valori seguenti vengono assegnati alle variabili globali `_daylight`, `_timezone` e `_tzname` quando `_tzset` viene chiamato:  
+ In base al valore della variabile di ambiente `TZ` , i valori seguenti vengono assegnati alle variabili globali `_daylight`, `_timezone`e `_tzname` quando `_tzset` viene chiamato:  
   
 |Variabile globale|Descrizione|Valore predefinito|  
-|-----------------------|-----------------|------------------------|  
-|`_daylight`|Valore diverso da zero se è specificato un fuso orario con l'ora legale nell'impostazione `TZ`; in caso contrario, 0.|1|  
-|`_timezone`|La differenza in secondi tra l'ora locale e l'ora UTC.|28800 \(28800 secondi equivale a 8 ore\)|  
-|`_tzname`\[0\]|Valore stringa del nome del fuso orario dalla variabile di ambiente `TZ`; vuoto se `TZ` non è stato impostato.|PST|  
-|`_tzname`\[1\]|Valore di stringa del fuso orario con l'ora legale; vuoto se il fuso orario con l'ora legale viene omesso dalla variabile di ambiente `TZ`.|PDT|  
+|---------------------|-----------------|-------------------|  
+|`_daylight`|Valore diverso da zero se è specificato un fuso orario con l'ora legale nell'impostazione `TZ` ; in caso contrario, 0.|1|  
+|`_timezone`|La differenza in secondi tra l'ora locale e l'ora UTC.|28800 (28800 secondi equivale a 8 ore)|  
+|`_tzname`[0]|Valore stringa del nome del fuso orario dalla variabile di ambiente `TZ` ; vuoto se `TZ` non è stato impostato.|PST|  
+|`_tzname`[1]|Valore di stringa del fuso orario con l'ora legale; vuoto se il fuso orario con l'ora legale viene omesso dalla variabile di ambiente `TZ` .|PDT|  
   
- I valori predefiniti illustrati nella tabella precedente per `_daylight` e la matrice `_tzname` corrispondono a "PST8PDT". Se la zona DST viene omessa dalla variabile di ambiente `TZ`, il valore di `_daylight` è 0 e le funzioni `_ftime`, `gmtime` e `localtime` restituiscono 0 per i flag DST.  
+ I valori predefiniti illustrati nella tabella precedente per `_daylight` e la matrice `_tzname` corrispondono a "PST8PDT". Se la zona DST viene omessa dalla variabile di ambiente `TZ` , il valore di `_daylight` è 0 e le funzioni `_ftime`, `gmtime`e `localtime` restituiscono 0 per i flag DST.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`_tzset`|\<time.h\>|  
+|-------------|---------------------|  
+|`_tzset`|\<time.h>|  
   
  Per altre informazioni, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_tzset.cpp  
@@ -134,17 +150,19 @@ int main( void )
 ```  
   
 ```Output  
-_daylight = 1 _timezone = 28800 _tzname[0] = Pacific Standard Time  
+_daylight = 1  
+_timezone = 28800  
+_tzname[0] = Pacific Standard Time  
 ```  
   
-## Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Esempi di platform invoke](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
+ Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
-## Vedere anche  
- [Gestione dell'ora](../../c-runtime-library/time-management.md)   
- [asctime, \_wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
- [\_ftime, \_ftime32, \_ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
- [gmtime, \_gmtime32, \_gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
- [localtime, \_localtime32, \_localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
- [time, \_time32, \_time64](../../c-runtime-library/reference/time-time32-time64.md)   
- [\_utime, \_utime32, \_utime64, \_wutime, \_wutime32, \_wutime64](../../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md)
+## <a name="see-also"></a>Vedere anche  
+ [Gestione del tempo](../../c-runtime-library/time-management.md)   
+ [asctime, _wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
+ [_ftime, _ftime32, _ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
+ [gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
+ [localtime, _localtime32, _localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
+ [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)   
+ [_utime, _utime32, _utime64, _wutime, _wutime32, _wutime64](../../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md)

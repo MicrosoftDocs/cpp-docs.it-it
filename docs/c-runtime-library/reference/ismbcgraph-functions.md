@@ -1,87 +1,102 @@
 ---
-title: "_ismbcgraph, _ismbcgraph_l, _ismbcprint, _ismbcprint_l, _ismbcpunct, _ismbcpunct_l, _ismbcblank, _ismbcblank_l, _ismbcspace, _ismbcspace_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_ismbcpunct_l"
-  - "_ismbcblank"
-  - "_ismbcprint"
-  - "_ismbcgraph_l"
-  - "_ismbcblank_l"
-  - "_ismbcpunct"
-  - "_ismbcprint_l"
-  - "_ismbcspace_l"
-  - "_ismbcspace"
-  - "_ismbcgraph"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_ismbcspace"
-  - "_ismbcgraph"
-  - "_ismbcpunct"
-  - "ismbcspace_l"
-  - "ismbcgraph"
-  - "_ismbcgraph_l"
-  - "_ismbcprint"
-  - "_ismbcspace_l"
-  - "ismbcprint"
-  - "ismbcgraph_l"
-  - "ismbcspace"
-  - "ismbcpunct"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "_ismbcgraph (funzione)"
-  - "_ismbcgraph_l (funzione)"
-  - "_ismbcprint (funzione)"
-  - "_ismbcprint_l (funzione)"
-  - "_ismbcpunct (funzione)"
-  - "_ismbcpunct_l (funzione)"
-  - "_ismbcspace (funzione)"
-  - "_ismbcspace_l (funzione)"
-  - "ismbcgraph (funzione)"
-  - "ismbcgraph_l (funzione)"
-  - "ismbcprint (funzione)"
-  - "ismbcprint_l (funzione)"
-  - "ismbcpunct (funzione)"
-  - "ismbcpunct_l (funzione)"
-  - "ismbcspace (funzione)"
-  - "ismbcspace_l (funzione)"
+title: _ismbcgraph, _ismbcgraph_l, _ismbcprint, _ismbcprint_l, _ismbcpunct, _ismbcpunct_l, _ismbcblank, _ismbcblank_l, _ismbcspace, _ismbcspace_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _ismbcpunct_l
+- _ismbcblank
+- _ismbcprint
+- _ismbcgraph_l
+- _ismbcblank_l
+- _ismbcpunct
+- _ismbcprint_l
+- _ismbcspace_l
+- _ismbcspace
+- _ismbcgraph
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _ismbcspace
+- _ismbcgraph
+- _ismbcpunct
+- ismbcspace_l
+- ismbcgraph
+- _ismbcgraph_l
+- _ismbcprint
+- _ismbcspace_l
+- ismbcprint
+- ismbcgraph_l
+- ismbcspace
+- ismbcpunct
+dev_langs:
+- C++
+helpviewer_keywords:
+- ismbcspace_l function
+- _ismbcprint_l function
+- ismbcspace function
+- ismbcpunct function
+- _ismbcspace_l function
+- _ismbcprint function
+- ismbcprint function
+- _ismbcgraph function
+- ismbcgraph_l function
+- _ismbcpunct_l function
+- ismbcpunct_l function
+- ismbcprint_l function
+- _ismbcpunct function
+- ismbcgraph function
+- _ismbcgraph_l function
+- _ismbcspace function
 ms.assetid: 8e0a5f47-ba64-4411-92a3-3c525d16e3be
 caps.latest.revision: 21
-caps.handback.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _ismbcgraph, _ismbcgraph_l, _ismbcprint, _ismbcprint_l, _ismbcpunct, _ismbcpunct_l, _ismbcblank, _ismbcblank_l, _ismbcspace, _ismbcspace_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: eeeab09167f3330ab06dc664fd0163206b6b6ff8
+ms.lasthandoff: 02/24/2017
 
-Determina se il carattere è un carattere grafico, un carattere visualizzato, un carattere di punteggiatura, o uno spazio.  
+---
+# <a name="ismbcgraph-ismbcgraphl-ismbcprint-ismbcprintl-ismbcpunct-ismbcpunctl-ismbcblank-ismbcblankl-ismbcspace-ismbcspacel"></a>_ismbcgraph, _ismbcgraph_l, _ismbcprint, _ismbcprint_l, _ismbcpunct, _ismbcpunct_l, _ismbcblank, _ismbcblank_l, _ismbcspace, _ismbcspace_l
+Determina se un carattere è un carattere grafico, un carattere di visualizzazione, un carattere di punteggiatura o un carattere spazio.  
   
 > [!IMPORTANT]
->  Questa API non può essere utilizzata nelle applicazioni eseguite in [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  Per ulteriori informazioni, vedere[Funzioni CRT non supportate con \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Questa API non può essere usata nelle applicazioni eseguite in [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]. Per altre informazioni, vedere [Funzioni CRT non supportate con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 int _ismbcgraph(  
@@ -121,61 +136,61 @@ int _ismbcspace_l(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `c`  
  Carattere da determinare.  
   
  `locale`  
- Impostazioni locali da utilizzare.  
+ Impostazioni locali da usare.  
   
-## Valore restituito  
- Ognuna di queste routine restituisce un valore diverso da zero se il carattere soddisfa la condizione di test, o 0 in caso contrario.  Se `c` \<\=255 e c'è una corrispondente routine `_ismbb`, \(ad esempio `_ismbcalnum` corrisponde a `_ismbbalnum`\), il risultato è il valore restituito della corrispondente routine `_ismbb`.  
+## <a name="return-value"></a>Valore restituito  
+ Ognuna di queste routine restituisce un valore diverso da zero se il carattere soddisfa la condizione di test oppure 0 in caso contrario. Se `c` <= 255 ed è presente una routine `_ismbb` corrispondente (ad esempio, `_ismbcalnum` corrisponde a `_ismbbalnum`), il risultato è il valore restituito della routine `_ismbb` corrispondente.  
   
- Le versioni di queste funzioni sono identiche, a parte il fatto che quelle che hanno il suffisso `_l` utilizzano le impostazioni locali passate per il loro comportamento dipendente dalle impostazioni locali, anziché le impostazioni locali correnti.  Per ulteriori informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ Le versioni di queste funzioni sono identiche, ad eccezione del fatto che quelle con il suffisso `_l` usano le impostazioni locali passate per il comportamento dipendente dalle impostazioni locali, invece delle impostazioni locali correnti. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
   
-## Note  
- Ognuna di queste funzioni verifica un carattere multibyte specificato per una determinata condizione.  
+## <a name="remarks"></a>Note  
+ Ognuna di queste funzioni testa una particolare condizione su un determinato carattere multibyte.  
   
-|Routine|Condizione di test|Esempio di tabella di codici 932|  
-|-------------|------------------------|--------------------------------------|  
-|`_ismbcgraph`|Grafico|Restituisce un valore diverso da zero se e solo se `c` è una rappresentazione a un byte singolo di qualsiasi carattere ASCII o di un carattere katakana stampabile ad eccezione di uno spazio vuoto \( \).|  
-|`_ismbcprint`|Stampabile|Restituisce un valore diverso da zero se e solo se `c` è una rappresentazione a un byte di qualsiasi carattere ASCII o di un carattere katakana stampabile incluso uno spazio vuoto \( \).|  
-|`_ismbcpunct`|Punteggiatura|Restituisce un valore diverso da zero se e solo se `c` è una rappresentazione a singolo byte di qualsiasi carattere ASCII o di un carattere di punteggiatura katakana.|  
-|`_ismbcblank`|Spazio o tabulazione orizzontale|Ritorna un valore diverso da zero se e solo se `c` è uno spazio o un carattere di tabulazione orizzontale: `c`\=0x20 o `c`\=0x09.|  
-|`_ismbcspace`|Spazio|Restituisce un valore diverso da zero se e solo se `c` è uno spazio bianco: `c`\=0x20 o 0x09\=\<`c`\<\=0x0D.|  
+|Routine|Condizione di test|Esempio della tabella codici 932|  
+|-------------|--------------------|---------------------------|  
+|`_ismbcgraph`|Carattere grafico|Restituisce un valore diverso da zero se e solo se `c` è una rappresentazione a byte singolo di qualsiasi carattere stampabile ASCII o katakana, ad eccezione dello spazio ( ).|  
+|`_ismbcprint`|Carattere stampabile|Restituisce un valore diverso da zero se e solo se `c` è una rappresentazione a byte singolo di qualsiasi carattere stampabile ASCII o katakana, incluso lo spazio ( ).|  
+|`_ismbcpunct`|Punctuation|Restituisce un valore diverso da zero se e solo se `c` è una rappresentazione a byte singolo di qualsiasi carattere di punteggiatura ASCII o katakana.|  
+|`_ismbcblank`|Spazio o tabulazione orizzontale|Restituisce un valore diverso da zero se e solo se `c` è un carattere spazio o di tabulazione orizzontale: `c`=0x20 o `c`=0x09.|  
+|`_ismbcspace`|Spazio vuoto|Restituisce un valore diverso da zero se e solo se `c` è un carattere spazio: `c`=0x20 o 0x09<=`c`<=0x0D.|  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`_ismbcgraph`|\<mbstring.h\>|  
-|`_ismbcgraph_l`|\<mbstring.h\>|  
-|`_ismbcprint`|\<mbstring.h\>|  
-|`_ismbcprint_l`|\<mbstring.h\>|  
-|`_ismbcpunct`|\<mbstring.h\>|  
-|`_ismbcpunct_l`|\<mbstring.h\>|  
-|`_ismbcblank`|\<mbstring.h\>|  
-|`_ismbcblank_l`|\<mbstring.h\>|  
-|`_ismbcspace`|\<mbstring.h\>|  
-|`_ismbcspace_l`|\<mbstring.h\>|  
+|-------------|---------------------|  
+|`_ismbcgraph`|\<mbstring.h>|  
+|`_ismbcgraph_l`|\<mbstring.h>|  
+|`_ismbcprint`|\<mbstring.h>|  
+|`_ismbcprint_l`|\<mbstring.h>|  
+|`_ismbcpunct`|\<mbstring.h>|  
+|`_ismbcpunct_l`|\<mbstring.h>|  
+|`_ismbcblank`|\<mbstring.h>|  
+|`_ismbcblank_l`|\<mbstring.h>|  
+|`_ismbcspace`|\<mbstring.h>|  
+|`_ismbcspace_l`|\<mbstring.h>|  
   
- Per ulteriori informazioni di compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
-## Librerie  
- Tutte le versioni delle [Librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Librerie  
+ Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
   
-## Equivalente .NET Framework  
+## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
   
 -   [System::Char::IsPunctuation](https://msdn.microsoft.com/en-us/library/system.char.ispunctuation.aspx)  
   
 -   [System::Char::IsWhiteSpace](https://msdn.microsoft.com/en-us/library/system.char.iswhitespace.aspx)  
   
--   Per `_ismbcgraph` e `_ismbcprint`: Non applicabile. Per chiamare la funzione standard C, utilizzare `PInvoke`. Per ulteriori informazioni, vedere [Platform Invoke Examples](../Topic/Platform%20Invoke%20Examples.md).  
+-   Per `_ismbcgraph` e `_ismbcprint`: non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classificazione di caratteri](../../c-runtime-library/character-classification.md)   
  [Impostazioni locali](../../c-runtime-library/locale.md)   
  [Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [Routines \_ismbc](../../c-runtime-library/ismbc-routines.md)   
- [is, isw Routines](../../c-runtime-library/is-isw-routines.md)   
- [Routines \_ismbb](../../c-runtime-library/ismbb-routines.md)
+ [Routine _ismbc](../../c-runtime-library/ismbc-routines.md)   
+ [Routine is, isw](../../c-runtime-library/is-isw-routines.md)   
+ [Routine _ismbb](../../c-runtime-library/ismbb-routines.md)

@@ -1,59 +1,75 @@
 ---
-title: "time, _time32, _time64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "time"
-  - "_time64"
-  - "_time32"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-time-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "time"
-  - "_time64"
-  - "time/time"
-  - "time/_time32"
-  - "time/_time64"
-  - "_time32"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "time32 (funzione)"
-  - "_time32 (funzione)"
-  - "_time64 (funzione)"
-  - "funzioni ora"
-  - "ora di sistema"
-  - "time64 (funzione)"
+title: time, _time32, _time64 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- time
+- _time64
+- _time32
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-time-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- time
+- _time64
+- time/time
+- time/_time32
+- time/_time64
+- _time32
+dev_langs:
+- C++
+helpviewer_keywords:
+- time32 function
+- _time32 function
+- _time64 function
+- time functions
+- system time
+- time64 function
 ms.assetid: 280e00f2-2b93-4ece-94cd-e048484c6cc7
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# time, _time32, _time64
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 377ebdd79e201a2b7a017eb3ce34c6ced0062702
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="time-time32-time64"></a>time, _time32, _time64
 Ottiene l'ora di sistema.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 time_t time(  
@@ -67,29 +83,29 @@ __time64_t _time64(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `timer`  
  Puntatore al percorso di archiviazione per l'ora.  
   
-## Valore restituito  
- Restituisce il tempo in secondi trascorso dalla mezzanotte del 1° gennaio 1970 oppure \-1 in caso di errore.  
+## <a name="return-value"></a>Valore restituito  
+ Restituisce il tempo in secondi trascorso dalla mezzanotte del 1° gennaio 1970 oppure -1 in caso di errore.  
   
-## Note  
- La funzione `time` restituisce il numero di secondi trascorsi dalla mezzanotte \(00.00.00\) del 1° gennaio 1970 nel formato UTC \(Coordinated Universal Time\), in base all'orologio di sistema. Il valore restituito viene archiviato nel percorso specificato da `timer`. Questo parametro può essere `NULL`; in questo caso, il valore restituito non viene archiviato.  
+## <a name="remarks"></a>Note  
+ La funzione `time` restituisce il numero di secondi trascorsi dalla mezzanotte (00.00.00) del 1 gennaio 1970 nel formato UTC (Coordinated Universal Time), in base all'orologio di sistema. Il valore restituito viene archiviato nella posizione specificata da `timer`. Questo parametro può essere `NULL` e in questo caso il valore restituito non viene archiviato.  
   
- `time` è un wrapper per `_time64` e `time_t` è, per impostazione predefinita, equivalente a `__time64_t`. Se è necessario forzare il compilatore in modo che interpreti `time_t` come il vecchio `time_t` a 32 bit, è possibile definire `_USE_32BIT_TIME_T`. Questa operazione non è consigliabile perché l'applicazione potrebbe non riuscire dopo il 18 gennaio 2038. L'uso di questa macro non è consentito su piattaforme a 64 bit.  
+ `time` è un wrapper per `_time64` e `time_t` equivale a `__time64_t` per impostazione predefinita. Se è necessario forzare il compilatore in modo che interpreti `time_t` come il vecchio `time_t` a 32 bit, è possibile definire `_USE_32BIT_TIME_T`. Questa operazione non è consigliabile perché l'applicazione potrebbe non riuscire dopo il 18 gennaio 2038. L'uso di questa macro non è consentito su piattaforme a 64 bit.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`time`, `_time32`, `_time64`|C: \<time.h\>; C\+\+: \<ctime\> o \<time.h\>|  
+|-------------|---------------------|  
+|`time`, `_time32`, `_time64`|C: \<time.h>, C++: \<ctime> o \<time.h>|  
   
- Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-```c  
+```C  
 // crt_times.c  
 // compile with: /W3  
 // This program demonstrates these time and date functions:  
@@ -224,19 +240,31 @@ int main()
 ```  
   
 ```Output  
-OS time:            13:51:23 OS date:            04/25/03 Time in seconds since UTC 1/1/70:   1051303883 UNIX time and date:         Fri Apr 25 13:51:23 2003 Coordinated universal time:      Fri Apr 25 20:51:23 2003 12-hour time:            01:51:23 PM Plus milliseconds:         552 Zone difference in hours from UTC:   8 Time zone name:            Pacific Standard Time Daylight savings:         YES Christmas            Sat Dec 25 12:00:00 1993 Today is Friday, day 25 of April in the year 2003.  
+OS time:            13:51:23  
+OS date:            04/25/03  
+Time in seconds since UTC 1/1/70:   1051303883  
+UNIX time and date:         Fri Apr 25 13:51:23 2003  
+Coordinated universal time:      Fri Apr 25 20:51:23 2003  
+12-hour time:            01:51:23 PM  
+Plus milliseconds:         552  
+Zone difference in hours from UTC:   8  
+Time zone name:            Pacific Standard Time  
+Daylight savings:         YES  
+Christmas            Sat Dec 25 12:00:00 1993  
+  
+Today is Friday, day 25 of April in the year 2003.  
 ```  
   
-## Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Esempi di platform invoke](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
+ Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
-## Vedere anche  
- [Gestione dell'ora](../../c-runtime-library/time-management.md)   
- [asctime, \_wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
- [asctime\_s, \_wasctime\_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
- [\_ftime, \_ftime32, \_ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
- [gmtime, \_gmtime32, \_gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
- [gmtime\_s, \_gmtime32\_s, \_gmtime64\_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)   
- [localtime, \_localtime32, \_localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
- [localtime\_s, \_localtime32\_s, \_localtime64\_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)   
- [\_utime, \_utime32, \_utime64, \_wutime, \_wutime32, \_wutime64](../../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md)
+## <a name="see-also"></a>Vedere anche  
+ [Gestione del tempo](../../c-runtime-library/time-management.md)   
+ [asctime, _wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
+ [asctime_s, _wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
+ [_ftime, _ftime32, _ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
+ [gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
+ [gmtime_s, _gmtime32_s, _gmtime64_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)   
+ [localtime, _localtime32, _localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
+ [localtime_s, _localtime32_s, _localtime64_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)   
+ [_utime, _utime32, _utime64, _wutime, _wutime32, _wutime64](../../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md)

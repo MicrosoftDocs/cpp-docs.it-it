@@ -1,55 +1,68 @@
 ---
-title: "Classe is_polymorphic | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.tr1.is_polymorphic"
-  - "is_polymorphic"
-  - "std::tr1::is_polymorphic"
-  - "std.is_polymorphic"
-  - "std::is_polymorphic"
-  - "type_traits/std::is_polymorphic"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "is_polymorphic (classe) [TR1]"
-  - "is_polymorphic"
+title: Classe is_polymorphic | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- is_polymorphic
+- std::is_polymorphic
+- type_traits/std::is_polymorphic
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_polymorphic class
+- is_polymorphic
 ms.assetid: 4e1704db-d6f9-4154-a100-0ba02a373f20
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# Classe is_polymorphic
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
+ms.openlocfilehash: bf02c7042b7b2a2535ab9d81116d4d97b557c21b
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="ispolymorphic-class"></a>Classe is_polymorphic
 Verifica se il tipo ha una funzione virtuale.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-template<class Ty>  
-    struct is_polymorphic;  
+template <class Ty>  
+struct is_polymorphic;  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `Ty`  
  Tipo su cui eseguire una query.  
   
-## Note  
+## <a name="remarks"></a>Note  
  Un'istanza del predicato di tipo contiene true se il tipo `Ty` è una classe dichiara o eredita una funzione virtuale; in caso contrario, contiene false.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-```  
-// std_tr1__type_traits__is_polymorphic.cpp   
+```cpp  
+// std__type_traits__is_polymorphic.cpp   
 // compile with: /EHsc   
 #include <type_traits>   
 #include <iostream>   
@@ -92,13 +105,17 @@ int main()
   
 ```  
   
-  **is\_polymorphic\<trivial\> \=\= false**  
-**is\_polymorphic\<throws\> \=\= true**   
-## Requisiti  
- **Intestazione:** \<type\_traits\>  
+```Output  
+is_polymorphic<trivial> == false  
+is_polymorphic<throws> == true  
+```  
+  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<type_traits>  
   
  **Spazio dei nomi:** std  
   
-## Vedere anche  
- [\<type\_traits\>](../standard-library/type-traits.md)   
- [Classe is\_abstract](../standard-library/is-abstract-class.md)
+## <a name="see-also"></a>Vedere anche  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [Classe is_abstract](../standard-library/is-abstract-class.md)
+

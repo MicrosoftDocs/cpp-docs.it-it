@@ -1,64 +1,80 @@
 ---
-title: "_isctype, iswctype, _isctype_l, _iswctype_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_isctype_l"
-  - "iswctype"
-  - "_iswctype_l"
-  - "_isctype"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "iswctype"
-  - "_isctype"
-  - "_isctype_l"
-  - "_iswctype"
-  - "isctype"
-  - "iswctype_l"
-  - "isctype_l"
-  - "_iswctype_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_isctype (funzione)"
-  - "_isctype_l (funzione)"
-  - "_iswctype (funzione)"
-  - "_iswctype_l (funzione)"
-  - "isctype (funzione)"
-  - "isctype_l (funzione)"
-  - "iswctype (funzione)"
-  - "iswctype_l (funzione)"
+title: _isctype, iswctype, _isctype_l, _iswctype_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _isctype_l
+- iswctype
+- _iswctype_l
+- _isctype
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- iswctype
+- _isctype
+- _isctype_l
+- _iswctype
+- isctype
+- iswctype_l
+- isctype_l
+- _iswctype_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- isctype_l function
+- iswctype_l function
+- iswctype function
+- _isctype function
+- _isctype_l function
+- _iswctype_l function
+- isctype function
+- _iswctype function
 ms.assetid: cf7509b7-12fc-4d95-8140-ad2eb98173d3
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# _isctype, iswctype, _isctype_l, _iswctype_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: e6c2e9cfb27b0f49475baf5997462078339cd346
+ms.lasthandoff: 02/24/2017
 
-Eseguire il test `c` per la proprietà specificata dall'argomento `desc`.  Per ogni valore valido di `desc`, esiste un'equivalente routine di classificazione a caratteri di tipo "wide".  
+---
+# <a name="isctype-iswctype-isctypel-iswctypel"></a>_isctype, iswctype, _isctype_l, _iswctype_l
+Esegue il test di `c` per la proprietà specificata dall'argomento `desc`. Per ogni valore valido di `desc`, esiste un'equivalente routine di classificazione a caratteri wide.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 int _isctype(  
@@ -81,46 +97,46 @@ int _iswctype_l(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `c`  
- Integer da testare.  
+ Valore Integer da testare.  
   
  `desc`  
- Proprietà da verificare.  In genere viene recuperato utilizzando ctype o [wctype](../../c-runtime-library/reference/wctype.md).  
+ Proprietà da testare. In genere viene recuperata usando ctype o [wctype](../../c-runtime-library/reference/wctype.md).  
   
  `locale`  
  Le impostazioni locali da utilizzare per qualsiasi test dipendente dalle impostazioni locali.  
   
-## Valore restituito  
- `_isctype` e `iswctype` restituiscono un valore diverso da zero se `c` dispone della proprietà specificata da `desc` nelle impostazioni locali correnti oppure 0 in caso contrario.  Le versioni di queste funzioni con il suffisso `_l` sono identiche ma utilizzano le impostazioni locali passate anziché le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali.  Per ulteriori informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+## <a name="return-value"></a>Valore restituito  
+ `_isctype` e `iswctype` restituiscono un valore diverso da zero se `c` dispone della proprietà specificata da `desc` nelle impostazioni locali correnti oppure 0 in caso contrario. Le versioni di queste funzioni che presentano il suffisso `_l` sono identiche ad eccezione del fatto che, per il comportamento dipendente dalle impostazioni locali, usano le impostazioni locali passate anziché quelle correnti. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
   
- Il comportamento di `_isctype` e `_isctype_l` non viene definito se `c` non è EOF o è compreso nell'intervallo tra 0 e 0xFF, inclusi.  Quando una libreria di debug CRT viene utilizzata e `c` non è uno di questi valori, le funzioni generano un'asserzione.  
+ Il comportamento di `_isctype` e `_isctype_l` è indefinito se `c` non è EOF o non è compreso nell'intervallo da 0 a 0xFF, inclusi. Quando si usa una libreria di debug CRT e `c` non è uno di questi valori, le funzioni generano un'asserzione.  
   
-### Mapping di routine su testo generico  
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
-|Routine Tchar.h|\_UNICODE e \_MBCS non definiti|\_MBCS definito|\_UNICODE definito|  
-|---------------------|-------------------------------------|---------------------|------------------------|  
+|Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`n/a`|`_isctype`|`n/a`|`_iswctype`|  
 |`n/a`|`_isctype_l`|`n/a`|`_iswctype_l`|  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`_isctype`|\<ctype.h\>|  
-|`iswctype`|\<ctype.h\> o \<wchar.h\>|  
-|`_isctype_l`|\<ctype.h\>|  
-|`_iswctype_l`|\<ctype.h\> o \<wchar.h\>|  
+|-------------|---------------------|  
+|`_isctype`|\<ctype.h>|  
+|`iswctype`|\<ctype.h> o \<wchar.h>|  
+|`_isctype_l`|\<ctype.h>|  
+|`_iswctype_l`|\<ctype.h> o \<wchar.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
-## Librerie  
- Tutte le versioni delle [Librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Librerie  
+ Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
   
-## Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione standard C, utilizzare `PInvoke`. Per ulteriori informazioni, vedere [Esempi di Invocazione della Piattaforma](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
+ Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classificazione di caratteri](../../c-runtime-library/character-classification.md)   
  [Impostazioni locali](../../c-runtime-library/locale.md)   
- [is, isw Routines](../../c-runtime-library/is-isw-routines.md)
+ [Routine is, isw](../../c-runtime-library/is-isw-routines.md)

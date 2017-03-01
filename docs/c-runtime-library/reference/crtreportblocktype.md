@@ -1,52 +1,69 @@
 ---
-title: "_CrtReportBlockType | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_CrtReportBlockType"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_CrtReportBlockType"
-  - "CrtReportBlockType"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CrtReportBlockType (funzione)"
-  - "BLOCK_SUBTYPE (macro)"
-  - "_CrtReportBlockType (funzione)"
-  - "_BLOCK_TYPE (macro)"
-  - "_BLOCK_SUBTYPE (macro)"
-  - "BLOCK_TYPE (macro)"
+title: _CrtReportBlockType | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _CrtReportBlockType
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _CrtReportBlockType
+- CrtReportBlockType
+dev_langs:
+- C++
+helpviewer_keywords:
+- CrtReportBlockType function
+- BLOCK_SUBTYPE macro
+- _CrtReportBlockType function
+- _BLOCK_TYPE macro
+- _BLOCK_SUBTYPE macro
+- BLOCK_TYPE macro
 ms.assetid: 0f4b9da7-bebb-4956-9541-b2581640ec6b
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# _CrtReportBlockType
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 79724d6f719c3c482e25622ffbaa636f98517cdc
+ms.lasthandoff: 02/24/2017
 
-Restituisce il tipo di blocco\/sottotipo associato a un dato puntatore di blocco dell'heap di debug.  
+---
+# <a name="crtreportblocktype"></a>_CrtReportBlockType
+Restituisce il tipo/sottotipo di blocco associato a un puntatore di blocco dell'heap di debug specificato.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -55,30 +72,30 @@ Restituisce il tipo di blocco\/sottotipo associato a un dato puntatore di blocco
 };  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  *pBlock*  
- Puntatore a un blocco valido dell'heap di debug.  
+ Puntatore a un blocco di heap per il debug valido.  
   
-## Valore restituito  
- Una volta passato un puntatore valido dell'heap di debug, la funzione `_CrtReportBlockType` restituisce il tipo di blocco e il sottotipo sotto forma di un `int`.  Una volta passato un puntatore non valido, la funzione restituisce \-1.  
+## <a name="return-value"></a>Valore restituito  
+ Se viene passato un puntatore di heap per il debug valido, la funzione `_CrtReportBlockType` restituisce il tipo e il sottotipo di blocco sotto forma di `int`. Se viene passato un puntatore non valido, la funzione restituisce -1.  
   
-## Note  
- Per estrarre il tipo e il sottotipo restituiti da `_CrtReportBlockType`, utilizzare le macro **\_BLOCK\_TYPE** e **\_BLOCK\_SUBTYPE** \(entrambi definiti in Crtdbg.h\) sul valore restituito.  
+## <a name="remarks"></a>Note  
+ Per estrarre il tipo e sottotipo restituito da `_CrtReportBlockType`, usare le macro **_BLOCK_TYPE** e **_BLOCK_SUBTYPE** (entrambe definite in Crtdbg.h) sul valore restituito.  
   
- Per informazioni sui tipi di blocchi di allocazione e su come vengono utilizzati, vedere [Tipi di blocchi sull'heap di debug](../Topic/CRT%20Debug%20Heap%20Details.md#BKMK_Types_of_blocks_on_the_debug_heap).  
+ Per informazioni sui tipi di blocchi di allocazione e su come vengono usati, vedere [Tipi di blocchi sull'heap di debug](/visualstudio/debugger/crt-debug-heap-details).  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`_CrtReportBlockType`|\<crtdbg.h\>|  
+|-------------|---------------------|  
+|`_CrtReportBlockType`|\<crtdbg.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
-## Librerie  
- Solo versioni di debug di [Librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Librerie  
+ Solo le versioni di debug delle [librerie di runtime di C](../../c-runtime-library/crt-library-features.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_crtreportblocktype.cpp  
@@ -118,7 +135,7 @@ int main(void)
 }  
 ```  
   
-## Esempio di output  
+## <a name="sample-output"></a>Esempio di output  
   
 ```  
 Dumper found block at 00314F78: type 4, subtype 3  
@@ -137,8 +154,8 @@ crt_crtreportblocktype.cpp(27) : {52} normal block at 0x00314EC8, 10 bytes long.
 Object dump complete.  
 ```  
   
-## Vedere anche  
- [\_CrtDoForAllClientObjects](../../c-runtime-library/reference/crtdoforallclientobjects.md)   
- [\_CrtSetDumpClient](../../c-runtime-library/reference/crtsetdumpclient.md)   
- [\_CrtMemDumpAllObjectsSince](../../c-runtime-library/reference/crtmemdumpallobjectssince.md)   
- [\_CrtDumpMemoryLeaks](../../c-runtime-library/reference/crtdumpmemoryleaks.md)
+## <a name="see-also"></a>Vedere anche  
+ [_CrtDoForAllClientObjects](../../c-runtime-library/reference/crtdoforallclientobjects.md)   
+ [_CrtSetDumpClient](../../c-runtime-library/reference/crtsetdumpclient.md)   
+ [_CrtMemDumpAllObjectsSince](../../c-runtime-library/reference/crtmemdumpallobjectssince.md)   
+ [_CrtDumpMemoryLeaks](../../c-runtime-library/reference/crtdumpmemoryleaks.md)

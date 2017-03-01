@@ -1,55 +1,68 @@
 ---
-title: "Classe rank | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::tr1::rank"
-  - "std.tr1.rank"
-  - "rank"
-  - "std.rank"
-  - "std::rank"
-  - "type_traits/std::rank"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rank (classe) [TR1]"
-  - "rank"
+title: Classe rank | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- rank
+- std::rank
+- type_traits/std::rank
+dev_langs:
+- C++
+helpviewer_keywords:
+- rank class
+- rank
 ms.assetid: bc9f1b8f-800f-46ca-b6f4-d8579ed5406a
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# Classe rank
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: f0e7b22e4fbd6f54d390adfe70f7bfb99e4bc5df
+ms.openlocfilehash: d5b88cb6002d0a96ea84c92877df1083d7e2c4f5
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="rank-class"></a>Classe rank
 Ottiene il numero di dimensioni della matrice.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-template<class Ty>  
-    struct rank;  
+template <class Ty>  
+struct rank;  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `Ty`  
  Tipo su cui eseguire una query.  
   
-## Note  
+## <a name="remarks"></a>Note  
  La query di tipo contiene il valore del numero di dimensioni di tipo matrice `Ty`, oppure 0 se `Ty` non è un tipo di matrice.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-```  
-// std_tr1__type_traits__rank.cpp   
+```cpp  
+// std__type_traits__rank.cpp   
 // compile with: /EHsc   
 #include <type_traits>   
 #include <iostream>   
@@ -69,14 +82,17 @@ int main()
 ```  
   
 ```Output  
-numero di dimensioni < int > = = numero di dimensioni < int [5] > 0 = = 1 rango < int [5] [10] > = = 2  
+rank<int> == 0  
+rank<int[5]> == 1  
+rank<int[5][10]> == 2  
 ```  
   
-## Requisiti  
- **Intestazione:** \<type\_traits\>  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<type_traits>  
   
  **Spazio dei nomi:** std  
   
-## Vedere anche  
- [\<type\_traits\>](../standard-library/type-traits.md)   
+## <a name="see-also"></a>Vedere anche  
+ [<type_traits>](../standard-library/type-traits.md)   
  [Classe extent](../standard-library/extent-class.md)
+

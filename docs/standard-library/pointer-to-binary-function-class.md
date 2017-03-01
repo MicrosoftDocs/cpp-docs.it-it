@@ -1,76 +1,92 @@
 ---
-title: "Classe pointer_to_binary_function | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::pointer_to_binary_function"
-  - "xfunctional/std::pointer_to_binary_function"
-  - "pointer_to_binary_function"
-  - "std.pointer_to_binary_function"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pointer_to_binary_function (classe)"
-  - "pointer_to_binary_function (funzione)"
+title: Classe pointer_to_binary_function | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std::pointer_to_binary_function
+- xfunctional/std::pointer_to_binary_function
+- pointer_to_binary_function
+- std.pointer_to_binary_function
+dev_langs:
+- C++
+helpviewer_keywords:
+- pointer_to_binary_function function
+- pointer_to_binary_function class
 ms.assetid: fb50599f-bcb3-4076-a669-6dcc3eb189a5
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# Classe pointer_to_binary_function
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 9a806934810286e22fdea70c2af982de10f48ee5
+ms.lasthandoff: 02/24/2017
 
-Converte un puntatore a funzione binario in funzione binaria adattabile.  
+---
+# <a name="pointertobinaryfunction-class"></a>Classe pointer_to_binary_function
+Converte un puntatore a funzione binaria in una funzione binaria adattabile.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
-```  
-template<class Arg1, class Arg2, class Result>  
-   class pointer_to_binary_function   
-   : public binary_function <Arg1, Arg2, Result>   
-   {  
-   public:  
-   explicit pointer_to_binary_function(  
-      Result (*_pfunc )( Arg1, Arg2 )   
-   );  
-   Result operator()(  
-      Arg1 _Left,   
-      Arg2 _Right  
-   ) const;  
-   };  
+```
+template <class Arg1, class Arg2, class Result>
+class pointer_to_binary_function
+    : public binary_function <Arg1, Arg2, Result>
+{
+public:
+    explicit pointer_to_binary_function(
+        Result(*pfunc)(Arg1, Arg2));
+    Result operator()(Arg1 left, Arg2 right) const;
+};
 ```  
   
-#### Parametri  
- `_pfunc`  
- La funzione binaria da convertire.  
+#### <a name="parameters"></a>Parametri  
+ `pfunc`  
+ Funzione binaria da convertire.  
   
- `_Left`  
- L'oggetto a sinistra con *il \*\_pfunc* viene chiamato su.  
+ `left`  
+ Oggetto sinistro su cui viene chiamata la funzione *\*pfunc*.  
   
- `_Right`  
- L'operando di oggetto che *il \*\_pfunc* viene chiamato su.  
+ `right`  
+ Oggetto destro su cui viene chiamata la funzione *\*pfunc*.  
   
-## Valore restituito  
- La classe modello archivia una copia di **\_pfunc**.  Definisce la relativa funzione membro `operator()` come restituire \(\***\_pfunc**\)\(\_*Left*, \_*Right*\).  
+## <a name="return-value"></a>Valore restituito  
+ La classe modello archivia una copia di **pfunc**. Definisce la relativa funzione membro `operator()` che restituisce (\* **pfunc**)(_ *Left*, \_ *Right*).  
   
-## Note  
- Un puntatore a funzione binario è un oggetto funzione e può essere passato a qualsiasi algoritmo di una libreria di modelli standard che previsto una funzione binaria come parametro, ma non è adattabile.  Per utilizzarlo con un adattatore, come associare un valore o con un invertitore, deve essere provvisto con i tipi annidati **first\_argument\_type**, **second\_argument\_type** e **result\_type** che consentono tale adattamento.  La conversione da `pointer_to_binary_function` modo gli adattatori di funzione per utilizzare i puntatori a funzione binari.  
+## <a name="remarks"></a>Note  
+ Un puntatore a funzione binaria è un oggetto funzione e può essere passato a qualsiasi algoritmo della libreria standard C++ che prevede una funzione binaria come parametro, ma non è adattabile. Per usarlo con un adattatore, ad esempio in associazione a un valore o con un negator, deve essere fornito con i tipi annidati **first_argument_type**, **second_argument_type** e **result_type** che rendono possibile tale adattamento. La conversione da `pointer_to_binary_function` consente il funzionamento degli adattatori di funzione con i puntatori a funzione binaria.  
   
-## Esempio  
- Il costruttore di `pointer_to_binary_function` viene utilizzata raramente direttamente.  Vedere funzione di supporto [ptr\_fun](../Topic/ptr_fun%20Function.md) per un esempio di come dichiarare e utilizzare il predicato dell'adattatore di `pointer_to_binary_function`.  
+## <a name="example"></a>Esempio  
+ Il costruttore di `pointer_to_binary_function` viene usato di rado in modo diretto. Vedere la funzione helper [ptr_fun](../standard-library/functional-functions.md#ptr_fun_function) per indicazioni su come dichiarare e usare il predicato dell'adattatore `pointer_to_binary_function`.  
   
-## Requisiti  
- **Intestazione:** \<funzionale\>  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<functional>  
   
  **Spazio dei nomi:** std  
   
-## Vedere anche  
- [Libreria di modelli standard](../misc/standard-template-library.md)
+## <a name="see-also"></a>Vedere anche  
+ [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

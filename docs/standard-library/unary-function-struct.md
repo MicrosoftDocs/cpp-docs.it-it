@@ -1,53 +1,66 @@
 ---
-title: "Struct unary_function | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.unary_function"
-  - "unary_function"
-  - "functional/std::unary_function"
-  - "std::unary_function"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "unary_function (classe)"
+title: Struct unary_function | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std.unary_function
+- unary_function
+- functional/std::unary_function
+- std::unary_function
+dev_langs:
+- C++
+helpviewer_keywords:
+- unary_function class
 ms.assetid: 04c2fbdc-c1f6-48ed-b6cc-292a6d484627
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# Struct unary_function
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
+ms.openlocfilehash: 3b7f2da8315046e7ed39f73e76832940f5ba199b
+ms.lasthandoff: 02/24/2017
 
-Una struttura di base vuoto che definisce i tipi che possono essere ereditati dalle classi derivate che fornisce un oggetto funzione unario.  
+---
+# <a name="unaryfunction-struct"></a>Struct unary_function
+Struct di base vuoto che definisce i tipi che possono essere ereditati dalle classi derivate che specificano un oggetto funzione unaria.  
   
-## Sintassi  
-  
+## <a name="syntax"></a>Sintassi  
 ```  
-  
-   template<class Arg, class Result>  
-struct unary_function {  
-   typedef Arg argument_type;  
-   typedef Result result_type;  
+struct unary_function 
+{
+   typedef Arg argument_type;
+   typedef Result result_type;
 };  
-```  
+``` 
+## <a name="remarks"></a>Note  
+ Lo struct modello serve come base per le classi che definiscono una funzione membro del form **result_type**`operator()`( **constargument_type&**) **const**.  
   
-## Note  
- La struttura del modello funge da base per le classi che definiscono una funzione membro del form **result\_type** `operator()`\(**const argument\_type&**\) **const**.  
+ Tutte le funzioni unarie derivate possono fare riferimento a un unico argomento come **argument_type** e al tipo restituito come **result_type**.  
   
- Tutte queste funzioni unarie derivate possono fare riferimento al tipo di argomento solo come **argument\_type** e il relativo tipo restituito come **result\_type**.  
+## <a name="example"></a>Esempio  
   
-## Esempio  
-  
-```  
+```cpp  
 // functional_unary_function.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -89,16 +102,21 @@ int main()
     cout << "The number of elements in v1 greater than 10 is: "  
          << result1 << "." << endl;  
 }  
+\* Output:   
+The vector v1 = ( 0 5 10 15 20 25 )  
+The number of elements in v1 greater than 10 is: 3.  
+*\  
 ```  
   
-  **The vector v1 \= \( 0 5 10 15 20 25 \)**  
-**Il numero di elementi in v1 maggiore di 10 è: 3.**   
-## Requisiti  
- **Intestazione:** \<funzionale\>  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<functional>  
   
  **Spazio dei nomi:** std  
   
-## Vedere anche  
- [Struttura unary\_function\<\>](../misc/unary-function-angles-structure.md)   
- [Sicurezza dei thread nella libreria standard C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Libreria di modelli standard](../misc/standard-template-library.md)
+## <a name="see-also"></a>Vedere anche  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)  (Sicurezza dei thread nella libreria standard C++)  
+ [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

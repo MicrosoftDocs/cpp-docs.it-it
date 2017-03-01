@@ -1,47 +1,64 @@
 ---
-title: "Supporto degli iteratori di debug | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "supporto degli iteratori di debug"
-  - "iteratori incompatibili"
-  - "iteratori, supporto degli iteratori di debug"
-  - "iteratori, incompatibili"
-  - "librerie protette"
-  - "librerie protette, libreria C++ standard"
-  - "libreria C++ standard protetta"
-  - "libreria C++ standard, supporto degli iteratori di debug"
+title: Supporto degli iteratori di debug | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Safe Libraries
+- Safe Libraries, C++ Standard Library
+- Safe C++ Standard Library
+- C++ Standard Library, debug iterator support
+- iterators, debug iterator support
+- iterators, incompatible
+- incompatible iterators
+- debug iterator support
 ms.assetid: f3f5bd15-4be8-4d64-a4d0-8bc0761c68b6
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# Supporto degli iteratori di debug
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 9e2bfb1095c28ea3592c5af2b89cb2fbeddcb60c
+ms.openlocfilehash: 37f3450fbd320105781fa5398e838d3a8e317879
+ms.lasthandoff: 02/24/2017
 
-La libreria di runtime di Visual C\+\+ rileva l'utilizzo inappropriato iteratore e le asserzioni e visualizzare una finestra di dialogo in fase di esecuzione.  Per abilitare il supporto iteratori di debug, è necessario utilizzare una versione di debug della libreria di runtime c per compilare il programma.  Per ulteriori informazioni, vedere [Funzionalità libreria CRT](../c-runtime-library/crt-library-features.md).  Per informazioni su come utilizzare gli iteratori, vedere [Iteratori verificati](../standard-library/checked-iterators.md).  
+---
+# <a name="debug-iterator-support"></a>Debug Iterator Support
+La libreria di runtime di Visual C++ rileva l'uso non corretto dell'iteratore, esegue un'asserzione e visualizza una finestra di dialogo in fase di esecuzione. Per abilitare il supporto degli iteratori di debug, è necessario usare le versioni di debug della libreria standard C++ e della libreria di runtime C per compilare il programma. Per altre informazioni, vedere [Funzionalità libreria CRT](../c-runtime-library/crt-library-features.md). Per informazioni sull'uso degli iteratori verificati, vedere [Iteratori verificati](../standard-library/checked-iterators.md).  
   
- Lo standard C\+\+ viene descritto come le funzioni membro possono riordinare gli iteratori a un contenitore a diventare non validi.  Due esempi sono:  
+ Lo standard C++ descrive in che modo le funzioni membro possono far diventare non validi gli iteratori per un contenitore. Di seguito sono riportati due esempi:  
   
--   Elimina elemento da un contenitore determina gli iteratori all'elemento a diventare non validi.  
+-   La cancellazione di un elemento da un contenitore fa sì che gli iteratori per l'elemento non siano più validi.  
   
--   L'aumento delle dimensioni di [vettore](../standard-library/vector.md) \(push o inserimento\) determina gli iteratori in `vector` a diventare non validi.  
+-   L'aumento delle dimensioni di un [vettore](../standard-library/vector.md) eseguendo il push o l'inserimento fa sì che gli iteratori nel `vector` non siano più validi.  
   
-## Esempio  
- Se si compila il programma in modalità di debug, in fase di esecuzione asserirà e terminerà.  
+## <a name="example"></a>Esempio  
+Se si compila il programma di esempio in modalità di debug, in fase di esecuzione esegue un'asserzione e viene terminato.  
   
 ```cpp  
-/* compile with /EHsc /MDd */  
+// iterator_debugging_0.cpp  
+// compile by using /EHsc /MDd  
 #include <vector>  
 #include <iostream>  
   
@@ -58,25 +75,21 @@ int main() {
    std::vector<int>::iterator j = v.end();  
    --j;  
   
-   std::cout<<*j<<'\n';  
+   std::cout << *j << '\n';  
   
    v.insert(i,25);   
   
-   std::cout<<*j<<'\n'; // Using an old iterator after an insert  
+   std::cout << *j << '\n'; // Using an old iterator after an insert  
 }  
-  
 ```  
   
-## Esempio  
- È possibile utilizzare il simbolo [\_HAS\_ITERATOR\_DEBUGGING](../standard-library/has-iterator-debugging.md) per disabilitare la funzionalità di debug iteratori in una build di debug.  Il seguente programma non assert, ma ancora i trigger hanno un comportamento indefinito.  
-  
-> [!IMPORTANT]
->  Utilizzo `_ITERATOR_DEBUG_LEVEL` controllare `_HAS_ITERATOR_DEBUGGING`.  Per ulteriori informazioni, vedere [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md).  
+## <a name="example"></a>Esempio  
+È possibile usare la macro del preprocessore [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) per disattivare la funzionalità di debug dell'iteratore in una build di debug. Questo programma non esegue asserzioni, ma attiva un comportamento non definito.  
   
 ```cpp  
-// iterator_debugging.cpp  
-// compile with: /EHsc /MDd  
-#define _HAS_ITERATOR_DEBUGGING 0  
+// iterator_debugging_1.cpp  
+// compile by using: /EHsc /MDd  
+#define _ITERATOR_DEBUG_LEVEL 0  
 #include <vector>  
 #include <iostream>  
   
@@ -93,23 +106,28 @@ int main() {
    std::vector<int>::iterator j = v.end();  
    --j;  
   
-   std::cout<<*j<<'\n';  
+   std::cout << *j << '\n';  
   
    v.insert(i,25);   
   
-   std::cout<<*j<<'\n'; // Using an old iterator after an insert  
+   std::cout << *j << '\n'; // Using an old iterator after an insert  
 }  
 ```  
   
-  **20**  
-**\-572662307**   
-## Esempio  
- Un'asserzione si verifica anche se si tenta di utilizzare un iteratore prima che venga inizializzato, come illustrato di seguito:  
+```Output  
+20  
+-572662307  
+```  
+  
+## <a name="example"></a>Esempio  
+Un'asserzione si verifica anche se si tenta di usare un iteratore prima che sia inizializzato, come illustrato di seguito:  
   
 ```cpp  
-/* compile with /EHsc /MDd */  
+// iterator_debugging_2.cpp  
+// compile by using: /EHsc /MDd  
 #include <string>  
 using namespace std;  
+  
 int main() {  
    string::iterator i1, i2;  
    if (i1 == i2)  
@@ -117,11 +135,12 @@ int main() {
 }  
 ```  
   
-## Esempio  
- Nell'esempio di codice causa un'asserzione poiché i due iteratori all'algoritmo di [for\_each](../Topic/for_each.md) sono incompatibili.  Gli algoritmi controllano per determinare se gli iteratori forniti a esse siano facendo riferimento allo stesso contenitore.  
+## <a name="example"></a>Esempio  
+L'esempio di codice seguente genera un'asserzione poiché i due iteratori per l'algoritmo [for_each](../standard-library/algorithm-functions.md#for_each) sono incompatibili. Gli algoritmi tentano di verificare se gli iteratori specificati fanno riferimento allo stesso contenitore.  
   
 ```cpp  
-/* compile with /EHsc /MDd */  
+// iterator_debugging_3.cpp  
+// compile by using /EHsc /MDd  
 #include <algorithm>  
 #include <vector>  
 using namespace std;  
@@ -137,20 +156,20 @@ int main()
     v2.push_back(10);  
     v2.push_back(20);  
   
-    // The next line will assert because v1 and v2 are  
+    // The next line asserts because v1 and v2 are  
     // incompatible.  
     for_each(v1.begin(), v2.end(), [] (int& elem) { elem *= 2; } );  
 }  
 ```  
   
- Si noti che in questo esempio viene utilizzata l'espressione lambda `[] (int& elem) { elem *= 2; }` anziché un functor.  Sebbene questa scelta sono rilevanti ai fini dell'errore \- che un assert like functor causerebbe lo stesso errore \- lambda è una soluzione molto utile eseguire attività compresseoggetto function.  Per ulteriori informazioni sulle espressioni lambda, vedere [Espressioni lambda](../cpp/lambda-expressions-in-cpp.md).  
+Si noti che in questo esempio si usa l'espressione lambda `[] (int& elem) { elem *= 2; }` anziché un funtore. Sebbene questa scelta non influisca sull'errore di asserzione (un funtore simile causerebbe lo stesso errore), le espressioni lambda sono un modo molto utile per eseguire attività degli oggetti funzione Compact. Per altre informazioni sulle espressioni lambda, vedere [Espressioni lambda in C++](../cpp/lambda-expressions-in-cpp.md).  
   
-## Esempio  
- Il debug dell'iteratore che controlla inoltre possibile causa una variabile di iteratore dichiarata in un ciclo di `for` per all'ambito quando l'ambito del ciclo di `for` termina.  
+## <a name="example"></a>Esempio  
+I controlli degli iteratori di debug causano anche l'esclusione dall'ambito di una variabile di iteratore dichiarata in un ciclo `for` al termine dell'ambito del ciclo `for`.  
   
 ```cpp  
-// debug_iterator.cpp  
-// compile with: /EHsc /MDd  
+// iterator_debugging_4.cpp  
+// compile by using: /EHsc /MDd  
 #include <vector>  
 #include <iostream>  
 int main() {  
@@ -160,20 +179,21 @@ int main() {
    v.push_back(15);  
    v.push_back(20);  
   
-   for (std::vector<int>::iterator i = v.begin() ; i != v.end(); ++i)  
-   ;  
+   for (std::vector<int>::iterator i = v.begin(); i != v.end(); ++i)  
+      ;   // do nothing  
    --i;   // C2065  
 }  
 ```  
   
-## Esempio  
- Gli iteratori di debug hanno distruttori complesse.  Se un distruttore non funziona, per qualsiasiasi motivo, le violazioni di accesso e l'alterazione dei dati potrebbero verificarsi.  Si consideri l'esempio seguente:  
+## <a name="example"></a>Esempio  
+Gli iteratori di debug hanno distruttori non semplici. Se un distruttore per qualsiasi motivo non viene eseguito, possono verificarsi violazioni di accesso e danneggiamento dei dati. Si consideri l'esempio seguente:  
   
 ```cpp  
-/* compile with: /EHsc /MDd */  
+// iterator_debugging_5.cpp  
+// compile by using: /EHsc /MDd  
 #include <vector>  
 struct base {  
-   // FIX: uncomment the next line  
+   // TO FIX: uncomment the next line  
    // virtual ~base() {}  
 };  
   
@@ -191,5 +211,10 @@ int main() {
 }  
 ```  
   
-## Vedere anche  
- [Panoramica di STL](../standard-library/cpp-standard-library-overview.md)
+## <a name="see-also"></a>Vedere anche  
+[Panoramica sulla libreria standard C++](../standard-library/cpp-standard-library-overview.md)
+
+
+
+
+

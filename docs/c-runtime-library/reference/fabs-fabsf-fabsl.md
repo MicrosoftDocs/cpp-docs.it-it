@@ -1,58 +1,74 @@
 ---
-title: "fabs, fabsf, fabsl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fabsf"
-  - "fabs"
-  - "fabsl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fabs"
-  - "fabsf"
-  - "fabsl"
-  - "math\fabs"
-  - "math\fabsf"
-  - "math\fabsl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "valori assoluti"
-  - "fabsf (funzione)"
-  - "calcolo di valori assoluti"
-  - "fabs (funzione)"
-  - "funzione fabsl"
+title: fabs, fabsf, fabsl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- fabsf
+- fabs
+- fabsl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fabs
+- fabsf
+- fabsl
+- "math\fabs"
+- "math\fabsf"
+- "math\fabsl"
+dev_langs:
+- C++
+helpviewer_keywords:
+- absolute values
+- fabsf function
+- calculating absolute values
+- fabs function
+- fabsl function
 ms.assetid: 23bca210-f408-4f5e-b46b-0ccaaec31e36
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# fabs, fabsf, fabsl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 46bccd261b7727318d571ba7795bdcb1c53d6669
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="fabs-fabsf-fabsl"></a>fabs, fabsf, fabsl
 Calcola il valore assoluto dell'argomento a virgola mobile.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 double fabs(   
@@ -72,33 +88,32 @@ long double fabsl(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `x`  
  Valore a virgola mobile.  
   
-## Valore restituito  
- Il `fabs` funzioni restituiscono il valore assoluto dell'argomento `x`. Non vi è restituzione di errori.  
+## <a name="return-value"></a>Valore restituito  
+ Le funzioni `fabs` restituiscono il valore assoluto dell'argomento `x`. Non vi è restituzione di errori.  
   
 |Input|Eccezione SEH|Eccezione Matherr|  
 |-----------|-------------------|-----------------------|  
-|± QNAN,IND|none|\_DOMAIN|  
+|± QNAN,IND|none|_DOMAIN|  
   
-## Note  
- C\+\+ consente l'overload, pertanto è possibile chiamare gli overload di `fabs` Se si include l'intestazione \< cmath \>. In un programma C, `fabs` sempre accetta e restituisce un valore double.  
+## <a name="remarks"></a>Note  
+ C++ consente l'overload, pertanto è possibile chiamare gli overload di `fabs` se si include l'intestazione \<cmath>. In un programma C, `fabs` accetta e restituisce sempre un double.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-|Funzione|Intestazione obbligatoria C|Intestazione obbligatoria di C\+\+|  
-|--------------|---------------------------------|----------------------------------------|  
-|`fabs`, `fabsf`, `fabsl`|\<math.h\>|\< cmath \> o \< Math. h \>|  
+|Funzione|Intestazione C obbligatoria|Intestazione C++ obbligatoria|  
+|--------------|-----------------------|---------------------------|  
+|`fabs`, `fabsf`, `fabsl`|\<math.h>|\<cmath> o \<math.h>|  
   
- Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Vedere l'esempio per [abs](../../c-runtime-library/reference/abs-labs-llabs-abs64.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)   
- [Abs, laboratori, llabs, abs64](../../c-runtime-library/reference/abs-labs-llabs-abs64.md)   
- [\_cabs](../../c-runtime-library/reference/cabs.md)   
- [labs, llabs](../../misc/labs-llabs.md)
+ [abs, labs, llabs, _abs64](../../c-runtime-library/reference/abs-labs-llabs-abs64.md)   
+ [_cabs](../../c-runtime-library/reference/cabs.md)   

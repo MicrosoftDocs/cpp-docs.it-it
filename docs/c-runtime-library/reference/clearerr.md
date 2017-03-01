@@ -1,49 +1,65 @@
 ---
-title: "clearerr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "clearerr"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "clearerr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "clearerr (funzione)"
-  - "indicatore di errore per flussi"
-  - "reimpostazione indicatore di errore per flussi"
+title: clearerr | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- clearerr
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- clearerr
+dev_langs:
+- C++
+helpviewer_keywords:
+- error indicator for streams
+- resetting stream error indicator
+- clearerr function
 ms.assetid: a9711cd4-3335-43d4-a018-87bbac5b3bac
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# clearerr
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 78dcc9fba6fe013005540a72df80b58c127d39da
+ms.lasthandoff: 02/24/2017
 
-Reimposta l'indicatore di errore per un flusso.  È disponibile una versione più sicura di questa funzione; vedere [clearerr\_s](../../c-runtime-library/reference/clearerr-s.md).  
+---
+# <a name="clearerr"></a>clearerr
+Reimposta l'indicatore di errore per un flusso. È disponibile una versione più sicura di questa funzione, vedere [clearerr_s](../../c-runtime-library/reference/clearerr-s.md).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 void clearerr(  
@@ -51,26 +67,26 @@ void clearerr(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `stream`  
- Puntatore alla struttura `FILE`.  
+ Puntatore alla struttura `FILE` .  
   
-## Note  
- La funzione di `clearerr` reimposta l'indicatore di errore e l'indicatore di fine file per `stream`.  Gli indicatori di errore non vengono eliminati automaticamente; una volta che viene settato l'indicatore di errore per un flusso specifico, le operazioni su tale flusso continuano a restituire un errore finché non viene chiamato `clearerr`, `fseek`, `fsetpos`, o `rewind`.  
+## <a name="remarks"></a>Note  
+ La funzione `clearerr` reimposta l'indicatore di errore e l'indicatore di fine del file per `stream`. Gli indicatori di errore non vengono automaticamente cancellati. Dopo aver impostato l'indicatore di errore per un flusso specificato, le operazioni eseguite su tale flusso continuano a restituire un valore di errore finché non si chiama `clearerr`, `fseek`, `fsetpos` o `rewind`.  
   
- Se `stream` è `NULL`, viene richiamato il gestore di parametro non valido, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).  Se l'esecuzione può continuare, la funzione imposta `errno` su `EINVAL` e termina.  Per ulteriori informazioni su `errno` e sui codici di errore, consultare [costanti di errno](../../c-runtime-library/errno-constants.md).  
+ Se `stream` è `NULL`, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta `errno` su `EINVAL` e restituisce. Per altre informazioni su `errno` e i codici di errore, vedere [Costanti errno](../../c-runtime-library/errno-constants.md).  
   
- È disponibile una versione più sicura di questa funzione; consultare [clearerr\_s](../../c-runtime-library/reference/clearerr-s.md).  
+ È disponibile una versione più sicura di questa funzione, vedere [clearerr_s](../../c-runtime-library/reference/clearerr-s.md).  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`clearerr`|\<stdio.h\>|  
+|-------------|---------------------|  
+|`clearerr`|\<stdio.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'Introduzione.  
+ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_clearerr.c  
@@ -104,16 +120,26 @@ int main( void )
 }  
 ```  
   
-  **`n` `n`Scrive l'errore: No error**  
-**L'input genera un errore? n**  
-**Nessun errore di lettura**   
-## Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione standard C, utilizzare `PInvoke`. Per ulteriori informazioni, vedere [Esempi di Invocazione della Piattaforma](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
   
-## Vedere anche  
+n  
+  
+```  
+  
+```Output  
+  
+      nWrite error: No error  
+Will input cause an error? n  
+No read error  
+```  
+  
+## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
+ Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
+  
+## <a name="see-also"></a>Vedere anche  
  [Gestione degli errori](../../c-runtime-library/error-handling-crt.md)   
- [I\/O di flusso](../../c-runtime-library/stream-i-o.md)   
- [\_eof](../../c-runtime-library/reference/eof.md)   
+ [I/O di flusso](../../c-runtime-library/stream-i-o.md)   
+ [_eof](../../c-runtime-library/reference/eof.md)   
  [feof](../../c-runtime-library/reference/feof.md)   
  [ferror](../../c-runtime-library/reference/ferror.md)   
- [perror, \_wperror](../../c-runtime-library/reference/perror-wperror.md)
+ [perror, _wperror](../../c-runtime-library/reference/perror-wperror.md)

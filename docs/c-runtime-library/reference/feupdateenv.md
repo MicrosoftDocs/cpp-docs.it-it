@@ -1,48 +1,64 @@
 ---
-title: "feupdateenv | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "feupdateenv"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "HeaderDef"
-f1_keywords: 
-  - "feupdateenv"
-  - "fenv/feupdateenv"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "funzione feupdateenv"
+title: feupdateenv | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- feupdateenv
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: HeaderDef
+f1_keywords:
+- feupdateenv
+- fenv/feupdateenv
+dev_langs:
+- C++
+helpviewer_keywords:
+- feupdateenv function
 ms.assetid: 3d170042-dfd5-4e4f-a55f-038cf2296cc9
 caps.latest.revision: 3
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 3
----
-# feupdateenv
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 170e385a5741ced5612c060a7a537a05b4668432
+ms.lasthandoff: 02/24/2017
 
-Salva le eccezioni a virgola mobile attualmente generate, Ripristina lo stato dell'ambiente a virgola mobile specificati e genera quindi le eccezioni a virgola mobile e salvate.  
+---
+# <a name="feupdateenv"></a>feupdateenv
+Salva le eccezioni a virgola mobile attualmente generate, ripristina lo stato dell'ambiente a virgola mobile specificato e genera quindi le eccezioni a virgola mobile salvate.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 int feupdateenv(  
@@ -50,27 +66,27 @@ int feupdateenv(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `penv`  
- Puntatore a un `fenv_t` oggetto che contiene un ambiente a virgola mobile come impostato da una chiamata a [fegetenv](../Topic/fegetenv2.md) o [feholdexcept](../Topic/feholdexcept1.md). È inoltre possibile specificare l'ambiente a virgola mobile e di avvio predefinito utilizzando la macro FE\_DFL\_ENV.  
+ Puntatore a un oggetto `fenv_t` che contiene un ambiente a virgola mobile impostato da una chiamata a [fegetenv](http://msdn.microsoft.com/Library/61df848d-6ba8-4c6e-be35-216436fe7736) o a [feholdexcept](http://msdn.microsoft.com/Library/c286ace3-ec39-482a-be8b-f998d31003d9). È anche possibile specificare l'ambiente a virgola mobile di avvio predefinito tramite la macro FE_DFL_ENV.  
   
-## Valore restituito  
- Restituisce 0 se tutte le operazioni completate correttamente. In caso contrario, restituisce un valore diverso da zero.  
+## <a name="return-value"></a>Valore restituito  
+ Restituisce 0 se tutte le operazioni sono state completate correttamente.        In caso contrario, viene restituito un valore diverso da zero.  
   
-## Note  
- Il `feupdateenv` funzione consente di eseguire più azioni. Innanzitutto, archivia i flag di stato generato eccezioni a virgola mobile corrente nel servizio di archiviazione automatica. Quindi, viene impostato l'ambiente corrente a virgola mobile e dal valore archiviato nel `fenv_t` oggetto a cui puntava `penv`. Se `penv` non FE\_DFL\_ENV o non fa riferimento a un oggetto valido `fenv_t` dell'oggetto, il successivo comportamento è indefinito. Infine, `feupdateenv` Genera le eccezioni a virgola mobile e archiviate localmente.  
+## <a name="remarks"></a>Note  
+ La funzione `feupdateenv` esegue più azioni. Archivia prima i flag di stato delle eccezioni a virgola mobile attualmente generati in un'archiviazione automatica. Quindi imposta l'ambiente a virgola mobile corrente dal valore archiviato nell'oggetto `fenv_t` a cui punta `penv`. Se `penv` non è FE_DFL_ENV oppure non punta a un oggetto `fenv_t` valido, il successivo comportamento non è definito. Infine, `feupdateenv` genera le eccezioni a virgola mobile archiviate localmente.  
   
- Per utilizzare questa funzione, è necessario disattivare le ottimizzazioni a virgola mobile che potrebbero impedire l'accesso utilizzando il `#pragma fenv_access(on)` direttiva prima della chiamata. Per altre informazioni, vedere [fenv\_access](../../preprocessor/fenv-access.md).  
+ Per usare questa funzione, è necessario disattivare le ottimizzazioni a virgola mobile che potrebbero impedire l'accesso tramite la direttiva `#pragma fenv_access(on)` prima della chiamata. Per altre informazioni, vedere [fenv_access](../../preprocessor/fenv-access.md).  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-|Funzione|Intestazione C|Intestazione C\+\+|  
-|--------------|--------------------|------------------------|  
-|`feupdateenv`|\<fenv.h\>|\<cfenv\>|  
+|Funzione|Intestazione C|Intestazione C++|  
+|--------------|--------------|------------------|  
+|`feupdateenv`|\<fenv.h>|\<cfenv>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [fegetenv](../../c-runtime-library/reference/fegetenv1.md)   
  [feclearexcept](../../c-runtime-library/reference/feclearexcept1.md)   
  [feholdexcept](../../c-runtime-library/reference/feholdexcept2.md)   
