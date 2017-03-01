@@ -1,70 +1,86 @@
 ---
-title: "CDragListBox Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CDragListBox"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDragListBox class"
-  - "drag list box [C++]"
-  - "dragging list items"
-  - "caselle di riepilogo"
-  - "Windows [C++], caselle di riepilogo"
+title: Classe CDragListBox | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CDragListBox
+dev_langs:
+- C++
+helpviewer_keywords:
+- drag list box [C++]
+- dragging list items
+- CDragListBox class
+- Windows [C++], list boxes
+- list boxes
 ms.assetid: fee20b42-60ae-4aa9-83f9-5a3d9b96e33b
 caps.latest.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 26
----
-# CDragListBox Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 4fafe461008e3545243d693e0d9e34acd57163e0
+ms.openlocfilehash: 3010fd9a363aa1ca1c946a6fe967a7ba415649d4
+ms.lasthandoff: 02/24/2017
 
-Oltre a fornire la funzionalità di una casella di riepilogo di Windows, la classe consente `CDragListBox` l'utente agli elementi della casella di riepilogo di spostamento, ad esempio nomi file, nella casella di riepilogo.  
+---
+# <a name="cdraglistbox-class"></a>Classe CDragListBox
+Oltre a fornire la funzionalità di una casella di riepilogo di Windows, la `CDragListBox` classe consente all'utente di spostare gli elementi di casella di riepilogo, ad esempio nomi di file, nella casella di riepilogo.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 class CDragListBox : public CListBox  
 ```  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Costruttori pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[CDragListBox::CDragListBox](../Topic/CDragListBox::CDragListBox.md)|Costruisce un oggetto `CDragListBox`.|  
-  
-### Metodi pubblici  
+### <a name="public-constructors"></a>Costruttori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CDragListBox::BeginDrag](../Topic/CDragListBox::BeginDrag.md)|Chiamato dal framework quando un'operazione di trascinamento viene avviato.|  
-|[CDragListBox::CancelDrag](../Topic/CDragListBox::CancelDrag.md)|Chiamato dal framework durante un'operazione di trascinamento è stata annullata.|  
-|[CDragListBox::Dragging](../Topic/CDragListBox::Dragging.md)|Chiamato dal framework durante un'operazione di trascinamento.|  
-|[CDragListBox::DrawInsert](../Topic/CDragListBox::DrawInsert.md)|Consente di disegnare la guida di inserimento della casella di riepilogo di trascinamento.|  
-|[CDragListBox::Dropped](../Topic/CDragListBox::Dropped.md)|Chiamato dal framework dopo che è stato rilasciato.|  
-|[CDragListBox::ItemFromPt](../Topic/CDragListBox::ItemFromPt.md)|Restituisce le coordinate dell'elemento trascinato.|  
+|[CDragListBox::CDragListBox](#cdraglistbox)|Costruisce un oggetto `CDragListBox`.|  
   
-## Note  
- Le caselle di riepilogo con questa funzionalità consente agli utenti necessitano gli elementi di un elenco in qualsiasi modo è più utile essi.  Per impostazione predefinita, la casella di riepilogo sposterà l'elemento nella nuova posizione nell'elenco.  Tuttavia, gli oggetti `CDragListBox` possono essere personalizzati agli elementi della copia anziché spostarli.  
+### <a name="public-methods"></a>Metodi pubblici  
   
- Il controllo casella di riepilogo associato alla classe `CDragListBox` non deve avere **LBS\_SORT** o lo stile **LBS\_MULTIPLESELECT**.  Per una descrizione degli stili casella di riepilogo, vedere [Stili della casella di riepilogo](../../mfc/reference/list-box-styles.md).  
+|Nome|Descrizione|  
+|----------|-----------------|  
+|[CDragListBox::BeginDrag](#begindrag)|Chiamato dal framework quando si avvia un'operazione di trascinamento.|  
+|[CDragListBox::CancelDrag](#canceldrag)|Chiamato dal framework quando è stata annullata un'operazione di trascinamento.|  
+|[CDragListBox::Dragging](#dragging)|Chiamato dal framework durante un'operazione di trascinamento.|  
+|[CDragListBox::DrawInsert](#drawinsert)|Disegna la Guida di inserimento della casella di riepilogo di trascinamento.|  
+|[CDragListBox::Dropped](#dropped)|Chiamato dal framework dopo l'elemento è stato eliminato.|  
+|[CDragListBox::ItemFromPt](#itemfrompt)|Restituisce le coordinate dell'elemento da trascinare.|  
   
- Per utilizzare una casella di riepilogo di trascinamento in una finestra di dialogo esistente dell'applicazione, aggiungere un controllo casella di riepilogo al modello di finestra di dialogo utilizzando l'editor finestre di dialogo e quindi assegnare una variabile membro \(la categoria `Control` e di variabile `CDragListBox`\) che corrisponde al controllo casella di riepilogo nel modello di finestra di dialogo.  
+## <a name="remarks"></a>Note  
+ Le caselle di riepilogo con questa funzionalità consentono agli utenti di ordinare gli elementi in un elenco in qualsiasi modo, è molto utile. Per impostazione predefinita, la casella di riepilogo sposterà l'elemento nella nuova posizione nell'elenco. Tuttavia, `CDragListBox` gli oggetti possono essere personalizzati per copiare gli elementi anziché spostarli.  
   
- Per ulteriori informazioni sull'assegnazione i controlli a variabili membro, vedere [Raccorci per la definizione delle variabili membro per i controlli della finestra di dialogo](../../mfc/defining-member-variables-for-dialog-controls.md).  
+ Controllo casella di riepilogo è associato il `CDragListBox` classe non può disporre di **LBS_SORT** o **LBS_MULTIPLESELECT** stile. Per una descrizione di stili casella di riepilogo, vedere [casella di riepilogo stili](../../mfc/reference/list-box-styles.md).  
   
-## Gerarchia di ereditarietà  
+ Per utilizzare una casella di riepilogo trascinare in una finestra di dialogo esistente dell'applicazione, aggiungere un controllo casella di riepilogo al modello di finestra di dialogo utilizzando la finestra di dialogo e quindi assegnare una variabile membro (della categoria `Control` e il tipo di variabile `CDragListBox`) corrispondente al controllo casella di riepilogo nel modello di finestra di dialogo.  
+  
+ Per ulteriori informazioni sull'assegnazione controlli alle variabili membro, vedere [scelta rapida per la definizione di variabili membro per i controlli di finestra di dialogo](../../windows/defining-member-variables-for-dialog-controls.md).  
+  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -75,11 +91,125 @@ class CDragListBox : public CListBox
   
  `CDragListBox`  
   
-## Requisiti  
- **Header:** afxcmn.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** afxcmn.h  
   
-## Vedere anche  
- [Esempio TSTCON MFC](../../top/visual-cpp-samples.md)   
- [CListBox Class](../../mfc/reference/clistbox-class.md)   
+##  <a name="a-namebegindraga--cdraglistboxbegindrag"></a><a name="begindrag"></a>CDragListBox::BeginDrag  
+ Chiamato dal framework quando si verifica un evento che potrebbe iniziare un'operazione di trascinamento, ad esempio premendo il pulsante sinistro del mouse.  
+  
+```  
+virtual BOOL BeginDrag(CPoint pt);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `pt`  
+ Oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) oggetto che contiene le coordinate dell'elemento da trascinare.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Diverso da zero se il trascinamento è consentito, in caso contrario 0.  
+  
+### <a name="remarks"></a>Note  
+ Eseguire l'override di questa funzione se si vuole controllare cosa succede quando si avvia un'operazione di trascinamento. L'implementazione predefinita consente di acquisire il mouse e rimane in modalità di trascinamento fino a quando l'utente fa clic sul pulsante sinistro o destro del mouse o preme ESC, momento in cui viene annullata l'operazione di trascinamento.  
+  
+##  <a name="a-namecanceldraga--cdraglistboxcanceldrag"></a><a name="canceldrag"></a>CDragListBox::CancelDrag  
+ Chiamato dal framework quando è stata annullata un'operazione di trascinamento.  
+  
+```  
+virtual void CancelDrag(CPoint pt);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `pt`  
+ Oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) oggetto che contiene le coordinate dell'elemento da trascinare.  
+  
+### <a name="remarks"></a>Note  
+ Eseguire l'override della funzione per gestire qualsiasi elaborazione speciale per il controllo casella di riepilogo.  
+  
+##  <a name="a-namecdraglistboxa--cdraglistboxcdraglistbox"></a><a name="cdraglistbox"></a>CDragListBox::CDragListBox  
+ Costruisce un oggetto `CDragListBox`.  
+  
+```  
+CDragListBox();
+```  
+  
+##  <a name="a-namedragginga--cdraglistboxdragging"></a><a name="dragging"></a>CDragListBox::Dragging  
+ Chiamato dal framework quando un elemento di casella di riepilogo viene trascinato all'interno di `CDragListBox` oggetto.  
+  
+```  
+virtual UINT Dragging(CPoint pt);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `pt`  
+ Oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) oggetto che contiene gli assi x e y del cursore coordinate dello schermo.  
+  
+### <a name="return-value"></a>Valore restituito  
+ L'ID di risorsa del cursore da visualizzare. Sono possibili i seguenti valori:  
+  
+- `DL_COPYCURSOR`Indica che l'elemento verrà copiato.  
+  
+- `DL_MOVECURSOR`Indica che l'elemento verrà spostato.  
+  
+- `DL_STOPCURSOR`Indica che la destinazione di rilascio corrente non è accettabile.  
+  
+### <a name="remarks"></a>Note  
+ Il comportamento predefinito restituisce `DL_MOVECURSOR`. Eseguire l'override di questa funzione se si desidera fornire funzionalità aggiuntive.  
+  
+##  <a name="a-namedrawinserta--cdraglistboxdrawinsert"></a><a name="drawinsert"></a>CDragListBox::DrawInsert  
+ Chiamato dal framework per creare la Guida di inserimento prima dell'elemento con l'indice indicato.  
+  
+```  
+virtual void DrawInsert(int nItem);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `nItem`  
+ Indice in base zero del punto di inserimento.  
+  
+### <a name="remarks"></a>Note  
+ Un valore di - 1 viene cancellata la Guida di inserimento. Eseguire l'override di questa funzione per modificare l'aspetto o il comportamento della Guida di inserimento.  
+  
+##  <a name="a-namedroppeda--cdraglistboxdropped"></a><a name="dropped"></a>CDragListBox::Dropped  
+ Chiamato dal framework quando viene eliminato un elemento all'interno di un `CDragListBox` oggetto.  
+  
+```  
+virtual void Dropped(
+    int nSrcIndex,  
+    CPoint pt);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ *nSrcIndex*  
+ Specifica l'indice in base zero della stringa di rilasciarlo.  
+  
+ `pt`  
+ Oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) oggetto che contiene le coordinate del sito di destinazione.  
+  
+### <a name="remarks"></a>Note  
+ Il comportamento predefinito consente di copiare l'elemento casella di riepilogo e i relativi dati nella nuova posizione e quindi Elimina l'elemento originale. Eseguire l'override di questa funzione per personalizzare il comportamento predefinito, ad esempio abilitando le copie degli elementi di casella di elenco da trascinare in altre posizioni all'interno dell'elenco.  
+  
+##  <a name="a-nameitemfrompta--cdraglistboxitemfrompt"></a><a name="itemfrompt"></a>CDragListBox::ItemFromPt  
+ Questa funzione per recuperare l'indice in base zero dell'elemento casella di elenco nella chiamata `pt`.  
+  
+```  
+int ItemFromPt(
+    CPoint pt,  
+    BOOL bAutoScroll = TRUE) const;  
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `pt`  
+ Oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) che contiene le coordinate di un punto all'interno della casella di elenco.  
+  
+ *bAutoScroll*  
+ Diverso da zero se è consentito lo scorrimento, in caso contrario 0.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Indice in base zero dell'elemento di casella di elenco di trascinamento.  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Esempio TSTCON](../../visual-cpp-samples.md)   
+ [CListBox (classe)](../../mfc/reference/clistbox-class.md)   
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
- [CListBox Class](../../mfc/reference/clistbox-class.md)
+ [CListBox (classe)](../../mfc/reference/clistbox-class.md)
+

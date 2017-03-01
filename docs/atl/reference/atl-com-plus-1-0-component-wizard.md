@@ -1,83 +1,100 @@
 ---
-title: "Creazione guidata componente ATL COM+ 1.0 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "vc.codewiz.class.atl.mts.overview"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Creazione guidata componente ATL COM+ 1.0"
-  - "Progetti ATL, aggiunta di componenti"
+title: Creazione guidata 1.0 componente ATL COM + | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- vc.codewiz.class.atl.mts.overview
+dev_langs:
+- C++
+helpviewer_keywords:
+- ATL projects, adding components
+- ATL COM+ 1.0 Component Wizard
 ms.assetid: 11670681-8671-4122-96a4-2e52f8dadce0
 caps.latest.revision: 13
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Creazione guidata componente ATL COM+ 1.0
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 2729975c5e823965f4f5c16d5bfe317ce10a3670
+ms.lasthandoff: 02/24/2017
 
-È possibile utilizzare questa procedura guidata per aggiungere al progetto un oggetto che supporta i servizi COM\+ 1.0, incluse le transazioni.  
+---
+# <a name="atl-com-10-component-wizard"></a>Creazione guidata componente ATL COM+ 1.0
+Utilizzare questa procedura guidata per aggiungere un oggetto al progetto che supporta i servizi di COM+ 1.0, incluse le transazioni.  
   
- È possibile specificare se l'oggetto supporta le interfacce duali e l'automazione.  È inoltre possibile definire il supporto per l'interfaccia di informazioni sugli errori, il controllo di oggetti avanzato, le transazioni e l'accodamento asincrono dei messaggi.  
+ È possibile specificare se l'oggetto supporta le interfacce duali e automazione. È inoltre possibile indicare il supporto per l'interfaccia di informazioni sugli errori, controllo di oggetti avanzato, transazioni e accodamento asincrono.  
   
-## Note  
- A partire da [!INCLUDE[vs_orcas_long](../../atl/reference/includes/vs_orcas_long_md.md)], lo script della registrazione prodotto da questa procedura guidata registrerà i componenti COM in **HKEY\_CURRENT\_USER** invece di **HKEY\_LOCAL\_MACHINE**.  Per modificare questo comportamento, impostare l'opzione **Registra componente per tutti gli utenti** della procedura guidata ATL.  
+## <a name="remarks"></a>Note  
+ A partire da [!INCLUDE[vs_orcas_long](../../atl/reference/includes/vs_orcas_long_md.md)], lo script di registrazione generato dalla procedura guidata registrerà i componenti COM in **HKEY_CURRENT_USER** anziché **HKEY_LOCAL_MACHINE**. Per modificare questo comportamento, impostare il **Registra componente per tutti gli utenti** opzione della creazione guidata.  
   
-## Nomi  
- È possibile specificare il nome dell'oggetto, dell'interfaccia e delle classi da aggiungere al progetto.  Ad eccezione di **Nome breve**, il testo di tutte le altre caselle può essere modificato in modo indipendente.  Se si cambia il testo in **Nome breve**, la modifica avrà effetto sui nomi specificati in tutte le altre caselle di questa schermata.  Se si cambia il nome specificato in **Coclasse** nella sezione COM, le modifiche si rifletteranno sui nomi presenti nelle caselle **Tipo** e **ProgID**, mentre il nome specificato in**Interfaccia** non verrà modificato.  Grazie a questo comportamento di denominazione, tutti i nomi sono facilmente identificabili nel corso dello sviluppo del controllo.  
+## <a name="names"></a>Nomi  
+ Specificare i nomi per le classi da aggiungere al progetto, l'interfaccia e l'oggetto. Ad eccezione di **nome breve**, tutte le altre caselle possono essere modificati indipendentemente dagli altri. Se si modifica il testo per **nome breve**, la modifica viene riflessa nei nomi di tutte le altre caselle in questa pagina. Se si modifica il **coclasse** nome nella sezione COM, la modifica viene riflessa nella **tipo** e **ProgID** caselle, ma il **interfaccia** nome non cambia. Questo comportamento di denominazione è progettato per rendere facilmente identificabile tutti i nomi della durante lo sviluppo del controllo.  
   
  **Nome breve**  
- Consente di impostare il nome abbreviato per l'oggetto.  Attraverso questo nome vengono definiti i nomi specificati nelle caselle `Class` e `Coclass`, **.cpp file** e **.h file**, **Interfaccia Tipo** e **ProgID**, a meno che tali campi non vengano modificati singolarmente.  
+ Imposta il nome abbreviato per l'oggetto. Il nome fornito determina la `Class` e `Coclass` nomi, il **. cpp** e **file con estensione h** nomi, il **interfaccia** nome, il **tipo** nomi e **ProgID**, a meno che non vengano modificati singolarmente questi campi.  
   
- **File H**  
- Consente di impostare il nome del file di intestazione per la classe del nuovo oggetto.  Per impostazione predefinita, il nome si basa su quello specificato in **Nome breve**.  Fare clic sul pulsante con i puntini di sospensione per salvare il nome file nella posizione desiderata o per aggiungere la dichiarazione di classe a un file esistente.  Se si sceglie un file esistente, questo non verrà salvato nella posizione selezionata finché non si sceglie **Fine** all'interno della procedura guidata.  
+ **file con estensione h**  
+ Imposta il nome del file di intestazione per la nuova classe dell'oggetto. Per impostazione predefinita, questo nome è basato sul nome fornito in **nome breve**. Fare clic sul pulsante con puntini di sospensione per salvare il nome del file nel percorso prescelto o per aggiungere la dichiarazione di classe a un file esistente. Se si sceglie un file esistente, il non verrà salvato nella posizione selezionata finché non si sceglie **fine** nella procedura guidata.  
   
- Il file non viene sovrascritto.  Se si seleziona il nome di un file esistente, quando si sceglie **Fine** nella procedura guidata viene chiesto di indicare se aggiungere la dichiarazione di classe al contenuto del file.  Scegliere **Sì** per aggiungere il file oppure **No** per tornare alla procedura guidata e specificare un altro nome file.  
+ La procedura guidata non sovrascrive un file. Se si seleziona il nome di un file esistente, quando si fa clic su **fine**, verrà richiesto di indicare se la dichiarazione di classe al contenuto del file. Fare clic su **Sì** per aggiungere il file, fare clic su **n** per tornare alla procedura guidata e specificare un altro nome di file.  
   
  **Classe**  
- Consente di impostare il nome della classe da creare.  Tale nome è basato sul nome specificato in **Nome breve**, preceduto da "C", il prefisso standard per un nome di classe.  
+ Imposta il nome della classe da creare. Questo nome è basato sul nome fornito in **nome breve**, preceduto da "C", il prefisso standard per un nome di classe.  
   
- **File CPP**  
- Consente di impostare il nome del file di implementazione per la classe del nuovo oggetto.  Per impostazione predefinita, questo nome si basa su quello specificato in **Nome breve**.  Fare clic sul pulsante con i puntini di sospensione per salvare il nome file nella posizione desiderata.  Il file non verrà salvato nella posizione selezionata finché non si sceglie **Fine** all'interno della procedura guidata.  
+ **file con estensione cpp**  
+ Imposta il nome del file di implementazione per la nuova classe dell'oggetto. Per impostazione predefinita, questo nome è basato sul nome fornito in **nome breve**. Fare clic sul pulsante con puntini di sospensione per salvare il nome del file nel percorso desiderato. Il file non viene salvato nel percorso selezionato fino a quando non si fa clic su **fine** nella procedura guidata.  
   
- Il file non viene sovrascritto.  Se si seleziona il nome di un file esistente, quando si sceglie **Fine** nella procedura guidata viene chiesto di indicare se aggiungere l'implementazione della classe al termine del contenuto del file.  Scegliere **Sì** per aggiungere il file oppure **No** per tornare alla procedura guidata e specificare un altro nome file.  
+ La procedura guidata non sovrascrive un file. Se si seleziona il nome di un file esistente, quando si fa clic su **fine**, verrà richiesto di indicare se è necessario aggiungere l'implementazione della classe in base al contenuto del file. Fare clic su **Sì** per aggiungere il file, fare clic su **n** per tornare alla procedura guidata e specificare un altro nome di file.  
   
  **Con attributi**  
- Consente di specificare se l'oggetto utilizza gli attributi.  Se si aggiunge un oggetto a un progetto ATL con attributi, questa opzione è selezionata e non può essere modificata.  A un progetto creato con supporto degli attributi è quindi possibile aggiungere solo oggetti con attributi.  
+ Indica se l'oggetto utilizza gli attributi. Se si aggiunge un oggetto a un progetto ATL con attributo, questa opzione è selezionata e non può essere modificata. Vale a dire, è possibile aggiungere solo oggetti con attributi a un progetto creato con il supporto di attributo.  
   
- Se si seleziona questa opzione per un progetto ATL senza supporto degli attributi, verrà chiesto di specificare se aggiungere tale supporto al progetto.  
+ Se si seleziona questa opzione per un progetto ATL che non dispone di supporto attributo, verrà chiesto di specificare se si desidera aggiungere il supporto di attributo per il progetto.  
   
- Per impostazione predefinita, qualsiasi oggetto aggiunto successivamente alla selezione di questa opzione viene designato come oggetto con attributi \(casella di controllo selezionata\).  È possibile deselezionare questa casella per aggiungere un oggetto che non utilizza gli attributi.  
+ Tutti gli oggetti che aggiunti dopo l'impostazione di questa opzione vengono designati come attributi per impostazione predefinita (la casella di controllo è selezionata). È possibile deselezionare questa casella per aggiungere un oggetto che non utilizza gli attributi.  
   
- Per ulteriori informazioni, vedere [Impostazioni applicazione, Creazione guidata progetto ATL](../../atl/reference/application-settings-atl-project-wizard.md) e [Meccanismi fondamentali degli attributi](../../windows/basic-mechanics-of-attributes.md).  
+ Vedere [le impostazioni dell'applicazione, creazione guidata progetto ATL](../../atl/reference/application-settings-atl-project-wizard.md) e [meccanismi fondamentali degli attributi](../../windows/basic-mechanics-of-attributes.md) per ulteriori informazioni.  
   
-### COM  
- È possibile specificare informazioni sulle funzionalità COM per l'oggetto.  
+### <a name="com"></a>COM  
+ Fornisce informazioni sulle funzionalità COM per l'oggetto.  
   
  **Coclasse**  
- Consente di impostare il nome della classe Component che contiene un elenco di interfacce supportate dall'oggetto.  
+ Imposta il nome della classe del componente che contiene un elenco di interfacce supportate dall'oggetto.  
   
 > [!NOTE]
->  Se si crea il progetto utilizzando gli attributi o se si indica in questa schermata della procedura guidata che il componente COM\+ 1.0 utilizza gli attributi, non è possibile modificare questa opzione poiché ATL non include l'attributo `coclass`.  
+>  Se si crea il progetto utilizzando gli attributi, o se questa pagina della procedura guidata si indica che il componente COM+ 1.0 utilizza gli attributi, è possibile modificare questa opzione poiché ATL non include il `coclass` attributo.  
   
  **Type**  
- Consente di impostare la descrizione dell'oggetto che verrà visualizzata nel Registro di sistema.  
+ Imposta la descrizione dell'oggetto che verrà visualizzato nel Registro di sistema  
   
  **Interfaccia**  
- Consente di impostare l'interfaccia creata per l'oggetto,  la quale contiene i metodi personalizzati.  
+ Imposta l'interfaccia creata per l'oggetto. Questa interfaccia contiene i metodi personalizzati.  
   
  **ProgID**  
- Consente di impostare il nome che può essere utilizzato dai contenitori al posto del CLSID dell'oggetto.  
+ Imposta il nome che è possono utilizzare contenitori anziché il CLSID dell'oggetto.  
   
-## Vedere anche  
- [ATL COM\+ 1.0 Component](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)
+## <a name="see-also"></a>Vedere anche  
+ [Componente ATL COM+ 1.0](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)
+
+

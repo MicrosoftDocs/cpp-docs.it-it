@@ -1,37 +1,55 @@
 ---
-title: "Errore del compilatore C2393 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2393"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2393"
+title: Errore del compilatore C2393 | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2393
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2393
 ms.assetid: 4bd95728-e813-4ce8-844a-c6ebe235ca82
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Errore del compilatore C2393
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
+ms.openlocfilehash: 078454c9824a734863796ab5810056147d17879c
+ms.lasthandoff: 02/24/2017
 
-'simbolo': impossibile allocare il simbolo per dominio di applicazione nel segmento 'segmento'  
+---
+# <a name="compiler-error-c2393"></a>Errore del compilatore C2393
+'simbolo': simbolo per ogni dominio di applicazione non possa essere allocata nel segmento 'segmento'  
   
- L'utilizzo di variabili [appdomain](../../cpp/appdomain.md) presuppone che la compilazione venga eseguita con **\/clr:pure** o **\/clr:safe**, ma in un'immagine di tipo pure o safe non possono essere inclusi segmenti di dati.  
+ Il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono deprecate in Visual Studio 2015.  
   
- Per ulteriori informazioni, vedere [\/clr \(Compilazione Common Language Runtime\)](../../build/reference/clr-common-language-runtime-compilation.md).  
+ L'utilizzo di [appdomain](../../cpp/appdomain.md) variabili implica che si esegue la compilazione con **/clr: pure** o **/CLR: safe**, e un'immagine pura o safe non può contenere segmenti di dati.  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore C2393:  
+ Vedere [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) per ulteriori informazioni.  
+  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene generato l'errore C2393.  
   
 ```  
 // C2393.cpp  

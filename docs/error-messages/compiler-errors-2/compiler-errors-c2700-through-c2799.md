@@ -1,26 +1,42 @@
 ---
-title: "Errore del compilatores C2700 Through C2799 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
+title: Compilatore da errori del compilatore C2700 C2799 | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs:
+- C++
 ms.assetid: 6ee257bb-94bc-42b9-af2c-3c73926afba4
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Errore del compilatores C2700 Through C2799
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
+ms.openlocfilehash: fd86815cb1f3ef215805bdb96449cb8b7a9b322a
+ms.lasthandoff: 02/24/2017
 
-Gli articoli in questa parte della documentazione contengono informazioni su una sottosezione degli errori del compilatore di Visual C\+\+.  È possibile accedere alle informazioni qui o nella finestra **Output** in Visual Studio è possibile selezionare un numero di errore e quindi scegliere il tasto F1.  
+---
+# <a name="compiler-errors-c2700-through-c2799"></a>Compilatore da errori del compilatore C2700 C2799
+Gli articoli in questa parte della documentazione contengono informazioni su una sottosezione degli errori del compilatore di Visual C++. È possibile accedere alle informazioni qui; in alternativa, nella finestra **Output** in Visual Studio è possibile selezionare un numero di errore e quindi premere F1.  
   
  [Errore del compilatore C2701](../../error-messages/compiler-errors-2/compiler-error-c2701.md)  
   
@@ -48,10 +64,6 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
   
  [Errore del compilatore C2715](../../error-messages/compiler-errors-2/compiler-error-c2715.md)  
   
- [Errore del compilatore C2716](../Topic/Compiler%20Error%20C2716.md)  
-  
- [Errore del compilatore C2717](../Topic/Compiler%20Error%20C2717.md)  
-  
  [Errore del compilatore C2718](../../error-messages/compiler-errors-2/compiler-error-c2718.md)  
   
  [Errore del compilatore C2719](../../error-messages/compiler-errors-2/compiler-error-c2719.md)  
@@ -69,8 +81,6 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
  [Errore del compilatore C2725](../../error-messages/compiler-errors-2/compiler-error-c2725.md)  
   
  [Errore del compilatore C2726](../../error-messages/compiler-errors-2/compiler-error-c2726.md)  
-  
- [Errore del compilatore C2727](../Topic/Compiler%20Error%20C2727.md)  
   
  [Errore del compilatore C2728](../../error-messages/compiler-errors-2/compiler-error-c2728.md)  
   

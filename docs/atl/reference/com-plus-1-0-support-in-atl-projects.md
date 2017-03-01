@@ -1,43 +1,60 @@
 ---
-title: "Supporto di COM+ 1.0 in progetti ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "vc.appwiz.ATL.MTS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL (progetti), supporto COM+ 1.0"
+title: COM+ 1.0 supporta in ATL (progetti) | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- vc.appwiz.ATL.MTS
+dev_langs:
+- C++
+helpviewer_keywords:
+- ATL projects, COM+ 1.0 support
 ms.assetid: 51fb08ac-d632-4657-a4e0-d3f989f0b6f8
 caps.latest.revision: 10
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Supporto di COM+ 1.0 in progetti ATL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 7521c1dae6fd29b8b951d23fe33c91179d4b46ed
+ms.lasthandoff: 02/24/2017
 
-È possibile utilizzare la [Creazione guidata progetto ATL](../../atl/reference/creating-an-atl-project.md) per creare un progetto dotato di supporto di base dei componenti COM\+ 1.0.  
+---
+# <a name="com-10-support-in-atl-projects"></a>COM+ 1.0 supporta in ATL (progetti)
+È possibile utilizzare il [Creazione guidata progetto ATL](../../atl/reference/creating-an-atl-project.md) per creare un progetto con il supporto di base per i componenti COM+ 1.0.  
   
- COM\+ 1.0 è progettato per lo sviluppo di applicazioni distribuite basate su componenti.  Fornisce inoltre un'infrastruttura di runtime per la distribuzione e la gestione di tali applicazioni.  
+ COM+ 1.0 è progettato per lo sviluppo di applicazioni distribuite basate su componenti. Fornisce inoltre un'infrastruttura di runtime per la distribuzione e la gestione di queste applicazioni.  
   
- Se si seleziona la casella di controllo **Supporto COM\+ 1.0**, lo script di compilazione viene modificato nella fase di collegamento.  In particolare, il progetto COM\+ 1.0 viene collegato alle seguenti librerie:  
+ Se si seleziona il **supporto COM+ 1.0** casella di controllo, la procedura guidata consente di modificare lo script di compilazione in fase di collegamento. In particolare, di COM+ 1.0 collegamenti del progetto per le librerie seguenti:  
   
--   comsvcs.lib  
+-   Comsvcs.lib  
   
 -   Mtxguid.lib  
   
- Se si seleziona la casella di controllo **Supporto COM\+ 1.0**, è inoltre possibile selezionare **Supporto registrazione componenti**.  La funzionalità di registrazione dei componenti consente all'oggetto COM\+ 1.0 di ottenere un elenco dei componenti ed effettuarne o annullarne la registrazione, singolarmente o globalmente.  
+ Se si seleziona il **supporto COM+ 1.0** casella di controllo, è inoltre possibile selezionare **supporto registrazione componenti**. La registrazione del componente consente all'oggetto COM+ 1.0 ottenere un elenco dei componenti, registrare i componenti o annullare la registrazione di componenti (singolarmente o in una sola volta).  
   
-## Vedere anche  
- [Fundamentals of ATL COM Objects](../../atl/fundamentals-of-atl-com-objects.md)   
- [Programmazione con il codice runtime C e ATL](../../atl/programming-with-atl-and-c-run-time-code.md)   
- [Configurazioni predefinite di progetti ATL](../../atl/reference/default-atl-project-configurations.md)
+## <a name="see-also"></a>Vedere anche  
+ [Nozioni fondamentali di oggetti COM ATL](../../atl/fundamentals-of-atl-com-objects.md)   
+ [Programmazione con codice di runtime C e ATL](../../atl/programming-with-atl-and-c-run-time-code.md)   
+ [Configurazioni predefinite progetto ATL](../../atl/reference/default-atl-project-configurations.md)
+
+

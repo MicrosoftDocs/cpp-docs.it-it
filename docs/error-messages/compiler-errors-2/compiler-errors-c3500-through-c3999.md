@@ -1,26 +1,43 @@
 ---
-title: "Errore del compilatores C3500 through C3999 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
+title: C3500 errori del compilatore C3999 | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs:
+- C++
 ms.assetid: bd6f23ad-b300-4e07-8e35-9661cab1585f
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Errore del compilatores C3500 through C3999
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
+ms.openlocfilehash: ec3dba4995e0df05a1871c73abfbbee5c24b5266
+ms.lasthandoff: 02/24/2017
 
-Gli articoli in questa parte della documentazione contengono informazioni su una sottosezione degli errori del compilatore di Visual C\+\+. È possibile accedere alle informazioni qui; in alternativa, nella finestra **Output** in Visual Studio è possibile selezionare un numero di errore e quindi premere F1.  
+---
+# <a name="compiler-errors-c3500-through-c3999"></a>C3500 errori del compilatore C3999
+Gli articoli in questa parte della documentazione contengono informazioni su una sottosezione degli errori del compilatore di Visual C++. È possibile accedere alle informazioni qui; in alternativa, nella finestra **Output** in Visual Studio è possibile selezionare un numero di errore e quindi premere F1.  
   
  [Errore del compilatore C3500](../../error-messages/compiler-errors-2/compiler-error-c3500.md)  
   
@@ -48,11 +65,9 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
   
  [Errore del compilatore C3533](../../error-messages/compiler-errors-2/compiler-error-c3533.md)  
   
- [Errore del compilatore C3534](../Topic/Compiler%20Error%20C3534.md)  
-  
  [Errore del compilatore C3535](../../error-messages/compiler-errors-2/compiler-error-c3535.md)  
   
- [Errore del compilatore C3536](../../error-messages/compiler-errors-2/compiler-error-c3536.md)  
+ [Errore C3536 di errore del compilatore](../../error-messages/compiler-errors-2/compiler-error-c3536.md)  
   
  [Errore del compilatore C3537](../../error-messages/compiler-errors-2/compiler-error-c3537.md)  
   
@@ -64,7 +79,7 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
   
  [Errore del compilatore C3541](../../error-messages/compiler-errors-2/compiler-error-c3541.md)  
   
- [Compiler Error C3550](../../error-messages/compiler-errors-2/compiler-error-c3550.md)  
+ [C3550 errore del compilatore](../../error-messages/compiler-errors-2/compiler-error-c3550.md)  
   
  [Errore del compilatore C3603](../../error-messages/compiler-errors-2/compiler-error-c3603.md)  
   
@@ -75,8 +90,6 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
  [Errore del compilatore C3611](../../error-messages/compiler-errors-2/compiler-error-c3611.md)  
   
  [Errore del compilatore C3612](../../error-messages/compiler-errors-2/compiler-error-c3612.md)  
-  
- [Errore del compilatore C3616](../Topic/Compiler%20Error%20C3616.md)  
   
  [Errore del compilatore C3618](../../error-messages/compiler-errors-2/compiler-error-c3618.md)  
   
@@ -139,8 +152,6 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
  [Errore del compilatore C3656](../../error-messages/compiler-errors-2/compiler-error-c3656.md)  
   
  [Errore del compilatore C3657](../../error-messages/compiler-errors-2/compiler-error-c3657.md)  
-  
- [Errore del compilatore C3658](../Topic/Compiler%20Error%20C3658.md)  
   
  [Errore del compilatore C3661](../../error-messages/compiler-errors-2/compiler-error-c3661.md)  
   
@@ -218,8 +229,6 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
   
  [Errore del compilatore C3728](../../error-messages/compiler-errors-2/compiler-error-c3728.md)  
   
- [Errore del compilatore C3730](../Topic/Compiler%20Error%20C3730.md)  
-  
  [Errore del compilatore C3731](../../error-messages/compiler-errors-2/compiler-error-c3731.md)  
   
  [Errore del compilatore C3732](../../error-messages/compiler-errors-2/compiler-error-c3732.md)  
@@ -286,8 +295,6 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
   
  [Errore del compilatore C3800](../../error-messages/compiler-errors-2/compiler-error-c3800.md)  
   
- [Errore del compilatore C3802](../Topic/Compiler%20Error%20C3802.md)  
-  
  [Errore del compilatore C3803](../../error-messages/compiler-errors-2/compiler-error-c3803.md)  
   
  [Errore del compilatore C3804](../../error-messages/compiler-errors-2/compiler-error-c3804.md)  
@@ -300,13 +307,9 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
   
  [Errore del compilatore C3809](../../error-messages/compiler-errors-2/compiler-error-c3809.md)  
   
- [Errore del compilatore C3811](../Topic/Compiler%20Error%20C3811.md)  
-  
  [Errore del compilatore C3812](../../error-messages/compiler-errors-2/compiler-error-c3812.md)  
   
  [Errore del compilatore C3813](../../error-messages/compiler-errors-2/compiler-error-c3813.md)  
-  
- [Errore del compilatore C3814](../Topic/Compiler%20Error%20C3814.md)  
   
  [Errore del compilatore C3815](../../error-messages/compiler-errors-2/compiler-error-c3815.md)  
   
@@ -316,19 +319,11 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
   
  [Errore del compilatore C3818](../../error-messages/compiler-errors-2/compiler-error-c3818.md)  
   
- [Errore del compilatore C3819](../Topic/Compiler%20Error%20C3819.md)  
-  
  [Errore del compilatore C3821](../../error-messages/compiler-errors-2/compiler-error-c3821.md)  
-  
- [Errore del compilatore C3822](../Topic/Compiler%20Error%20C3822.md)  
-  
- [Errore del compilatore C3823](../Topic/Compiler%20Error%20C3823.md)  
   
  [Errore del compilatore C3824](../../error-messages/compiler-errors-2/compiler-error-c3824.md)  
   
  [Errore del compilatore C3825](../../error-messages/compiler-errors-2/compiler-error-c3825.md)  
-  
- [Errore del compilatore C3826](../Topic/Compiler%20Error%20C3826.md)  
   
  [Errore del compilatore C3828](../../error-messages/compiler-errors-2/compiler-error-c3828.md)  
   
@@ -347,8 +342,6 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
  [Errore del compilatore C3838](../../error-messages/compiler-errors-2/compiler-error-c3838.md)  
   
  [Errore del compilatore C3839](../../error-messages/compiler-errors-2/compiler-error-c3839.md)  
-  
- [Errore del compilatore C3840](../Topic/Compiler%20Error%20C3840.md)  
   
  [Errore del compilatore C3842](../../error-messages/compiler-errors-2/compiler-error-c3842.md)  
   
@@ -396,7 +389,7 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
   
  [Errore del compilatore C3872](../../error-messages/compiler-errors-2/compiler-error-c3872.md)  
   
- [Errore del compilatore C3873](../../error-messages/compiler-errors-2/compiler-error-c3873.md)  
+ [C3873 errore del compilatore](../../error-messages/compiler-errors-2/compiler-error-c3873.md)  
   
  [Errore del compilatore C3874](../../error-messages/compiler-errors-2/compiler-error-c3874.md)  
   
@@ -460,8 +453,5 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
   
  [Errore del compilatore C3920](../../error-messages/compiler-errors-2/compiler-error-c3920.md)  
   
- [Errore del compilatore C3921](../Topic/Compiler%20Error%20C3921.md)  
-  
  [Errore del compilatore C3923](../../error-messages/compiler-errors-2/compiler-error-c3923.md)  
-  
- [Errore del compilatore C3996](../Topic/Compiler%20Error%20C3996.md)
+

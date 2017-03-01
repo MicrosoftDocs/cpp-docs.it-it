@@ -1,62 +1,78 @@
 ---
-title: "Struttura CDaoWorkspaceInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDaoWorkspaceInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDaoWorkspaceInfo (struttura)"
-  - "DAO (Data Access Objects), raccolta Aree di lavoro"
+title: Struttura CDaoWorkspaceInfo | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDaoWorkspaceInfo
+dev_langs:
+- C++
+helpviewer_keywords:
+- CDaoWorkspaceInfo structure
+- DAO (Data Access Objects), Workspaces collection
 ms.assetid: a1f4b25e-f9c6-4196-b075-d1df99c54124
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# Struttura CDaoWorkspaceInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 44c1ce365a1eecdb2a500998c082c6a9245dffb2
+ms.lasthandoff: 02/24/2017
 
-La struttura di `CDaoWorkspaceInfo` contiene informazioni su un'area di lavoro definito per l'accesso al database di \(DAO\) data access objects.  
+---
+# <a name="cdaoworkspaceinfo-structure"></a>Struttura CDaoWorkspaceInfo
+Il `CDaoWorkspaceInfo` struttura contiene informazioni su un'area di lavoro definito per l'accesso al database data access Object (DAO).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      struct CDaoWorkspaceInfo  
+struct CDaoWorkspaceInfo  
 {  
-   CString m_strName;           // Primary  
-   CString m_strUserName;       // Secondary  
-   BOOL m_bIsolateODBCTrans;    // All  
+    CString m_strName;           // Primary  
+    CString m_strUserName;       // Secondary  
+    BOOL m_bIsolateODBCTrans;    // All  
 };  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `m_strName`  
- In modo univoco assegnare all'oggetto dell'area di lavoro.  Per recuperare direttamente il valore di questa proprietà, chiamare la funzione membro di [GetName](../Topic/CDaoQueryDef::GetName.md) l'oggetto pulsante querydef.  Per ulteriori informazioni, vedere l'argomento "proprietà name" nella Guida di DAO.  
+ Identifica in modo univoco l'oggetto workspace. Per recuperare direttamente il valore di questa proprietà, chiamare l'oggetto querydef [GetName](../../mfc/reference/cdaoquerydef-class.md#getname) funzione membro. Per ulteriori informazioni, vedere l'argomento "Proprietà di nome" nella Guida di DAO.  
   
- *m\_strUserName*  
- Un valore che rappresenta il proprietario di un oggetto area di lavoro.  Per informazioni correlate, vedere l'argomento "proprietà username" nella Guida di DAO.  
+ *m_strUserName*  
+ Un valore che rappresenta il proprietario di un oggetto workspace. Per informazioni correlate, vedere l'argomento "Proprietà UserName" nella Guida di DAO.  
   
- *m\_bIsolateODBCTrans*  
- Un valore che indica se più transazioni che includono lo stesso database ODBC è isolato.  Per ulteriori informazioni, vedere [CDaoWorkspace::SetIsolateODBCTrans](../Topic/CDaoWorkspace::SetIsolateODBCTrans.md).  Per informazioni correlate, vedere l'argomento "proprietà di IsolateODBCTrans" nella Guida di DAO.  
+ *m_bIsolateODBCTrans*  
+ Un valore che indica se più transazioni che implicano lo stesso database ODBC sono isolate. Per ulteriori informazioni, vedere [CDaoWorkspace::SetIsolateODBCTrans](../../mfc/reference/cdaoworkspace-class.md#setisolateodbctrans). Per informazioni correlate, vedere l'argomento "Proprietà IsolateODBCTrans" nella Guida di DAO.  
   
-## Note  
- L'area di lavoro è un oggetto di classe [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md).  I riferimenti a principale, secondario e a tutti su indicano quali le informazioni restituite dalla funzione membro di [GetWorkspaceInfo](../Topic/CDaoWorkspace::GetWorkspaceInfo.md) nella classe `CDaoWorkspace`.  
+## <a name="remarks"></a>Note  
+ L'area di lavoro è un oggetto della classe [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md). I riferimenti a primario, secondario e tutti sopra indicano la modalità in cui vengono restituite le informazioni dal [funzione membro GetWorkspaceInfo](../../mfc/reference/cdaoworkspace-class.md#getworkspaceinfo) funzione membro nella classe `CDaoWorkspace`.  
   
- Le informazioni recuperate dalla funzione membro di [CDaoWorkspace::GetWorkspaceInfo](../Topic/CDaoWorkspace::GetWorkspaceInfo.md) vengono archiviate in una struttura di `CDaoWorkspaceInfo`.  `CDaoWorkspaceInfo` definisce anche una funzione membro di `Dump` nelle build di debug.  È possibile utilizzare `Dump` per eseguire il dump del contenuto di un oggetto di `CDaoWorkspaceInfo`.  
+ Le informazioni recuperate dal [CDaoWorkspace::GetWorkspaceInfo](../../mfc/reference/cdaoworkspace-class.md#getworkspaceinfo) funzione membro viene archiviata in una `CDaoWorkspaceInfo` struttura. `CDaoWorkspaceInfo`definisce inoltre un `Dump` si basa la funzione membro in modalità debug. È possibile utilizzare `Dump` per scaricare il contenuto di un `CDaoWorkspaceInfo` oggetto.  
   
-## Requisiti  
- **Intestazione:** afxdao.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** afxdao. h  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Strutture, stili, callback e mappe messaggi](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDaoWorkspace Class](../../mfc/reference/cdaoworkspace-class.md)
+ [CDaoWorkspace (classe)](../../mfc/reference/cdaoworkspace-class.md)
+

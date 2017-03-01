@@ -1,26 +1,43 @@
 ---
-title: "Errori del compilatore da C2600 a C2699 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
+title: L&quot;errore C2600 errori del compilatore C2699 | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs:
+- C++
 ms.assetid: 73c6319f-cbea-4a2f-913b-90dc1af61f64
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Errori del compilatore da C2600 a C2699
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
+ms.openlocfilehash: 12cc69faf19d2332b6507242213d54bcd6a6e198
+ms.lasthandoff: 02/24/2017
 
-Gli articoli in questa parte della documentazione contengono informazioni su una sottosezione degli errori del compilatore di Visual C\+\+.  È possibile accedere alle informazioni qui o nella finestra **Output** in Visual Studio è possibile selezionare un numero di errore e quindi scegliere il tasto F1.  
+---
+# <a name="compiler-errors-c2600-through-c2699"></a>Errori del compilatore da C2600 a C2699
+Gli articoli in questa parte della documentazione contengono informazioni su una sottosezione degli errori del compilatore di Visual C++. È possibile accedere alle informazioni qui; in alternativa, nella finestra **Output** in Visual Studio è possibile selezionare un numero di errore e quindi premere F1.  
   
  [Errore del compilatore C2600](../../error-messages/compiler-errors-2/compiler-error-c2600.md)  
   
@@ -43,14 +60,6 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
  [Errore del compilatore C2617](../../error-messages/compiler-errors-2/compiler-error-c2617.md)  
   
  [Errore del compilatore C2619](../../error-messages/compiler-errors-2/compiler-error-c2619.md)  
-  
- [Compiler Error C2620](http://msdn.microsoft.com/it-it/896fb9b4-d333-49d6-88d0-560f1df20b2d)  
-  
- [Compiler Error C2621](http://msdn.microsoft.com/it-it/87b17f17-8fd1-4d94-8851-41d715f7d6e9)  
-  
- [Compiler Error C2622](http://msdn.microsoft.com/it-it/25432ec8-9ddf-4af2-bbb0-c3ff89e54fa8)  
-  
- [Compiler Error C2623](http://msdn.microsoft.com/it-it/3af76b8c-2697-4517-b400-df580c9a04ba)  
   
  [Errore del compilatore C2624](../../error-messages/compiler-errors-2/compiler-error-c2624.md)  
   
@@ -171,7 +180,5 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
  [Errore del compilatore C2695](../../error-messages/compiler-errors-2/compiler-error-c2695.md)  
   
  [Errore del compilatore C2696](../../error-messages/compiler-errors-2/compiler-error-c2696.md)  
-  
- [Errore del compilatore C2697](../Topic/Compiler%20Error%20C2697.md)  
   
  [Errore del compilatore C2698](../../error-messages/compiler-errors-2/compiler-error-c2698.md)

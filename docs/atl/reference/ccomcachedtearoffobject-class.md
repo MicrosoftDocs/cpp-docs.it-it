@@ -1,84 +1,100 @@
 ---
-title: "CComCachedTearOffObject Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL::CComCachedTearOffObject"
-  - "ATL.CComCachedTearOffObject"
-  - "ATL.CComCachedTearOffObject<contained>"
-  - "CComCachedTearOffObject"
-  - "ATL::CComCachedTearOffObject<contained>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cache, ATL cached tear-off objects"
-  - "CComCachedTearOffObject class"
+title: Classe CComCachedTearOffObject | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL::CComCachedTearOffObject
+- ATL.CComCachedTearOffObject
+- ATL.CComCachedTearOffObject<contained>
+- CComCachedTearOffObject
+- ATL::CComCachedTearOffObject<contained>
+dev_langs:
+- C++
+helpviewer_keywords:
+- cache, ATL cached tear-off objects
+- CComCachedTearOffObject class
 ms.assetid: ae19507d-a1de-4dbc-a988-da9f75a50c95
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# CComCachedTearOffObject Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
+ms.openlocfilehash: 96f040c732c5545a9b8febb32fcb1636f0fe4a40
+ms.lasthandoff: 02/24/2017
 
-Questa classe implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) per un un'interfaccia tear\-off.  
+---
+# <a name="ccomcachedtearoffobject-class"></a>Classe CComCachedTearOffObject
+Questa classe implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) per un'interfaccia tear-off.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
+```
+template
+ <class contained>
+class CComCachedTearOffObject : public
+    IUnknown,
+public CComObjectRootEx<contained
+ ::_ThreadModel::ThreadModelNoCS>
 ```  
   
-      template <  
-   class contained  
->  
-class CComCachedTearOffObject : public IUnknown,  
-   public CComObjectRootEx< contained::_ThreadModel::ThreadModelNoCS >  
-```  
-  
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `contained`  
- Il sradichi la classe, derivata da `CComTearOffObjectBase` e le interfacce che si desidera che il sradicano l'oggetto di supporto.  
+ La classe tear-off, derivata da `CComTearOffObjectBase` e le interfacce si desidera che l'oggetto a comparsa per il supporto.  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Costruttori pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[CComCachedTearOffObject::CComCachedTearOffObject](../Topic/CComCachedTearOffObject::CComCachedTearOffObject.md)|Costruttore.|  
-|[CComCachedTearOffObject::~CComCachedTearOffObject](../Topic/CComCachedTearOffObject::~CComCachedTearOffObject.md)|Il distruttore.|  
-  
-### Metodi pubblici  
+### <a name="public-constructors"></a>Costruttori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CComCachedTearOffObject::AddRef](../Topic/CComCachedTearOffObject::AddRef.md)|Incrementa il conteggio dei riferimenti per un oggetto `CComCachedTearOffObject`.|  
-|[CComCachedTearOffObject::FinalConstruct](../Topic/CComCachedTearOffObject::FinalConstruct.md)|Chiama `m_contained::FinalConstruct` \(il metodo delle classi di sradicamento\).|  
-|[CComCachedTearOffObject::FinalRelease](../Topic/CComCachedTearOffObject::FinalRelease.md)|Chiama `m_contained::FinalRelease` \(il metodo delle classi di sradicamento\).|  
-|[CComCachedTearOffObject::QueryInterface](../Topic/CComCachedTearOffObject::QueryInterface.md)|Restituisce un puntatore a `IUnknown` dell'oggetto `CComCachedTearOffObject`, o a un'interfaccia richiesta sul sradichi la classe \(classe `contained`\).|  
-|[CComCachedTearOffObject::Release](../Topic/CComCachedTearOffObject::Release.md)|Decrementa il conteggio dei riferimenti per un oggetto `CComCachedTearOffObject` e lo stato eliminato se il conteggio dei riferimenti è 0.|  
+|[CComCachedTearOffObject::CComCachedTearOffObject](#ccomcachedtearoffobject)|Costruttore.|  
+|[CComCachedTearOffObject:: ~ CComCachedTearOffObject](#dtor)|Distruttore.|  
   
-### Membri dati pubblici  
+### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CComCachedTearOffObject::m\_contained](../Topic/CComCachedTearOffObject::m_contained.md)|Un oggetto `CComContainedObject` derivato dal sradica la classe \(classe `contained`\).|  
+|[CComCachedTearOffObject::AddRef](#addref)|Incrementa il conteggio dei riferimenti per un `CComCachedTearOffObject` oggetto.|  
+|[CComCachedTearOffObject::FinalConstruct](#finalconstruct)|Chiamate di `m_contained::FinalConstruct` (comparsa del metodo della classe).|  
+|[CComCachedTearOffObject::FinalRelease](#finalrelease)|Chiamate di `m_contained::FinalRelease` (comparsa del metodo della classe).|  
+|[CComCachedTearOffObject::QueryInterface](#queryinterface)|Restituisce un puntatore al `IUnknown` di `CComCachedTearOffObject` oggetto, o all'interfaccia richiesta sulla classe tear-off (la classe `contained`).|  
+|[CComCachedTearOffObject::Release](#release)|Decrementa il conteggio dei riferimenti per un `CComCachedTearOffObject` dell'oggetto viene distrutto, se il conteggio dei riferimenti è 0.|  
   
-## Note  
- Implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) di`CComCachedTearOffObject` per un un'interfaccia tear\-off.  Questa classe differisce da `CComTearOffObject` in quanto `CComCachedTearOffObject` dispone di un proprio **IUnknown**, separati da **IUnknown** dell'oggetto proprietario \(il proprietario è l'oggetto per il quale lo sradicamento sta creando\).  `CComCachedTearOffObject` mantiene il relativo conteggio dei riferimenti al relativo **IUnknown** e si elimina una volta che il conteggio dei riferimenti è zero.  Tuttavia, se eseguire una query per i suoi un'interfaccia tear\-off, il conteggio dei riferimenti **IUnknown** dell'oggetto proprietario viene incrementato.  
+### <a name="public-data-members"></a>Membri dati pubblici  
   
- Se l'oggetto `CComCachedTearOffObject` che implementa lo sradicamento è già stata creata un'istanza e un'interfaccia tear\-off viene eseguita una query per inoltre, lo stesso oggetto `CComCachedTearOffObject` viene riutilizzato.  Al contrario, se un un'interfaccia tear\-off implementata da `CComTearOffObject` viene eseguita una query di nuovo per l'oggetto proprietario, un altro `CComTearOffObject` verrà creata un'istanza.  
+|Nome|Descrizione|  
+|----------|-----------------|  
+|[CComCachedTearOffObject::m_contained](#m_contained)|Oggetto `CComContainedObject` oggetto derivato dalla classe tear-off (la classe `contained`).|  
   
- La classe proprietario deve implementare `FinalRelease` e chiamare **Release** su **IUnknown** memorizzato nella cache per `CComCachedTearOffObject`, che decrementare il conteggio dei riferimenti.  In questo modo `FinalRelease` di `CComCachedTearOffObject` venga chiamata e per eliminare lo sradicamento.  
+## <a name="remarks"></a>Note  
+ `CComCachedTearOffObject`implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) per un'interfaccia tear-off. Questa classe è diverso da `CComTearOffObject` in `CComCachedTearOffObject` dispone di propri **IUnknown**distinta dell'oggetto proprietario **IUnknown** (il proprietario è l'oggetto per cui viene creata il tear-off). `CComCachedTearOffObject`mantiene la relativa il conteggio dei riferimenti nel relativo **IUnknown** e si elimina automaticamente quando il conteggio dei riferimenti è zero. Tuttavia, se esegue una query per uno qualsiasi dei relativi tear-off interfacce, il conteggio dei riferimenti dell'oggetto proprietario **IUnknown** verrà incrementato.  
   
-## Gerarchia di ereditarietà  
+ Se il `CComCachedTearOffObject` oggetto che implementa la tear-off è già creata un'istanza e l'interfaccia tear-off viene eseguita una query per nuovamente lo stesso `CComCachedTearOffObject` oggetto viene riutilizzato. Al contrario, se un'interfaccia tear-off implementato da un `CComTearOffObject` viene nuovamente richiesto tramite l'oggetto proprietario, un altro `CComTearOffObject` verrà creata un'istanza.  
+  
+ La classe proprietario deve implementare `FinalRelease` e chiamare **versione** su memorizzato nella cache **IUnknown** per il `CComCachedTearOffObject`, che ridurrà il conteggio dei riferimenti. In questo modo `CComCachedTearOffObject`del `FinalRelease` chiamare ed eliminare tear-off.  
+  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `CComObjectRootBase`  
   
  [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)  
@@ -87,10 +103,107 @@ class CComCachedTearOffObject : public IUnknown,
   
  `CComCachedTearOffObject`  
   
-## Requisiti  
- **Header:** atlcom.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** atlcom. h  
   
-## Vedere anche  
- [CComTearOffObject Class](../../atl/reference/ccomtearoffobject-class.md)   
- [CComObjectRootEx Class](../../atl/reference/ccomobjectrootex-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+##  <a name="a-nameaddrefa--ccomcachedtearoffobjectaddref"></a><a name="addref"></a>CComCachedTearOffObject::AddRef  
+ Incrementa il conteggio dei riferimenti di `CComCachedTearOffObject` oggetto di 1.  
+  
+```
+STDMETHOD_(ULONG, AddRef)();
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ Un valore che può essere utile per la diagnostica e test.  
+  
+##  <a name="a-nameccomcachedtearoffobjecta--ccomcachedtearoffobjectccomcachedtearoffobject"></a><a name="ccomcachedtearoffobject"></a>CComCachedTearOffObject::CComCachedTearOffObject  
+ Costruttore.  
+  
+```
+CComCachedTearOffObject(void* pv);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `pv`  
+ [in] Puntatore al **IUnknown** di `CComCachedTearOffObject`.  
+  
+### <a name="remarks"></a>Note  
+ Inizializza il `CComContainedObject` membro, [m_contained](#m_contained).  
+  
+##  <a name="a-namedtora--ccomcachedtearoffobjectccomcachedtearoffobject"></a><a name="dtor"></a>CComCachedTearOffObject:: ~ CComCachedTearOffObject  
+ Distruttore.  
+  
+```
+~CComCachedTearOffObject();
+```  
+  
+### <a name="remarks"></a>Note  
+ Libera tutte le risorse allocate e chiama [FinalRelease](#finalrelease).  
+  
+##  <a name="a-namefinalconstructa--ccomcachedtearoffobjectfinalconstruct"></a><a name="finalconstruct"></a>CComCachedTearOffObject::FinalConstruct  
+ Chiamate **m_contained::FinalConstruct** creare `m_contained`, `CComContainedObject` <  `contained`> oggetto utilizzato per accedere all'interfaccia implementata dalla classe tear-off.  
+  
+```
+HRESULT FinalConstruct();
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ Un valore `HRESULT` standard.  
+  
+##  <a name="a-namefinalreleasea--ccomcachedtearoffobjectfinalrelease"></a><a name="finalrelease"></a>CComCachedTearOffObject::FinalRelease  
+ Chiamate **m_contained::FinalRelease** per liberare `m_contained`, `CComContainedObject` <  `contained`> oggetto.  
+  
+```
+void FinalRelease();
+```  
+  
+##  <a name="a-namemcontaineda--ccomcachedtearoffobjectmcontained"></a><a name="m_contained"></a>CComCachedTearOffObject::m_contained  
+ Oggetto [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) oggetto derivato dalla classe tear-off.  
+  
+```
+CcomContainedObject <contained> m_contained;
+```     
+  
+### <a name="parameters"></a>Parametri  
+ `contained`  
+ [in] La classe tear-off, derivata da `CComTearOffObjectBase` e le interfacce si desidera che l'oggetto a comparsa per il supporto.  
+  
+### <a name="remarks"></a>Note  
+ I metodi `m_contained` eredita vengono utilizzati per accedere all'interfaccia tear-off nella classe tear-off tramite l'oggetto memorizzato nella cache a comparsa `QueryInterface`, `FinalConstruct`, e `FinalRelease`.  
+  
+##  <a name="a-namequeryinterfacea--ccomcachedtearoffobjectqueryinterface"></a><a name="queryinterface"></a>CComCachedTearOffObject::QueryInterface  
+ Recupera un puntatore all'interfaccia richiesta.  
+  
+```
+STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `iid`  
+ [in] GUID dell'interfaccia richiesta.  
+  
+ `ppvObject`  
+ [out] Un puntatore al puntatore a interfaccia identificato dal `iid`, o **NULL** se l'interfaccia non viene trovato.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Un valore `HRESULT` standard.  
+  
+### <a name="remarks"></a>Note  
+ Se l'interfaccia richiesta **IUnknown**, restituisce un puntatore per il `CComCachedTearOffObject`del proprio **IUnknown** e incrementa il conteggio dei riferimenti. In caso contrario, esegue una query per l'interfaccia di classe tear-off utilizzando il [InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) metodo ereditato da `CComObjectRootEx`.  
+
+  
+##  <a name="a-namereleasea--ccomcachedtearoffobjectrelease"></a><a name="release"></a>CComCachedTearOffObject::Release  
+ Decrementa il conteggio dei riferimenti di 1 e, se il conteggio dei riferimenti è 0, Elimina il `CComCachedTearOffObject` oggetto.  
+  
+```
+STDMETHOD_(ULONG, Release)();
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ Nelle build di debug non restituisce sempre 0. Restituisce un valore che può essere utile per la diagnostica o test nelle build di debug.  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Classe CComTearOffObject](../../atl/reference/ccomtearoffobject-class.md)   
+ [CComObjectRootEx (classe)](../../atl/reference/ccomobjectrootex-class.md)   
+ [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
+

@@ -1,26 +1,42 @@
 ---
-title: "Errore del compilatores C2800 Through C2899 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
+title: Errori del compilatore da C2800 a C2899 | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs:
+- C++
 ms.assetid: e5de1e92-746a-4315-a331-c5d9efb76dbb
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Errore del compilatores C2800 Through C2899
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
+ms.openlocfilehash: 06061d98a0bdbbd69c8fe2fb05c75c7b301e4072
+ms.lasthandoff: 02/24/2017
 
-Gli articoli in questa parte della documentazione contengono informazioni su una sottosezione degli errori del compilatore di Visual C\+\+.  È possibile accedere alle informazioni qui o nella finestra **Output** in Visual Studio è possibile selezionare un numero di errore e quindi scegliere il tasto F1.  
+---
+# <a name="compiler-errors-c2800-through-c2899"></a>Errori del compilatore da C2800 a C2899
+Gli articoli in questa parte della documentazione contengono informazioni su una sottosezione degli errori del compilatore di Visual C++. È possibile accedere alle informazioni qui; in alternativa, nella finestra **Output** in Visual Studio è possibile selezionare un numero di errore e quindi premere F1.  
   
  [Errore del compilatore C2800](../../error-messages/compiler-errors-2/compiler-error-c2800.md)  
   
@@ -65,8 +81,6 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
  [Errore del compilatore C2824](../../error-messages/compiler-errors-2/compiler-error-c2824.md)  
   
  [Errore del compilatore C2825](../../error-messages/compiler-errors-2/compiler-error-c2825.md)  
-  
- [Errore del compilatore C2826](../Topic/Compiler%20Error%20C2826.md)  
   
  [Errore del compilatore C2827](../../error-messages/compiler-errors-2/compiler-error-c2827.md)  
   
@@ -128,8 +142,6 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
   
  [Errore del compilatore C2865](../../error-messages/compiler-errors-2/compiler-error-c2865.md)  
   
- [Errore del compilatore C2866](../Topic/Compiler%20Error%20C2866.md)  
-  
  [Errore del compilatore C2867](../../error-messages/compiler-errors-2/compiler-error-c2867.md)  
   
  [Errore del compilatore C2868](../../error-messages/compiler-errors-2/compiler-error-c2868.md)  
@@ -185,5 +197,4 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
  [Errore del compilatore C2897](../../error-messages/compiler-errors-2/compiler-error-c2897.md)  
   
  [Errore del compilatore C2898](../../error-messages/compiler-errors-2/compiler-error-c2898.md)  
-  
- [Errore del compilatore C2899](../../error-messages/compiler-errors-2/compiler-error-c2899.md)
+

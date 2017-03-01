@@ -1,72 +1,88 @@
 ---
-title: "Struttura CDaoErrorInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDaoErrorInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDaoErrorInfo (struttura)"
-  - "DAO (Data Access Objects), raccolta di errori"
+title: Struttura CDaoErrorInfo | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDaoErrorInfo
+dev_langs:
+- C++
+helpviewer_keywords:
+- CDaoErrorInfo structure
+- DAO (Data Access Objects), Errors collection
 ms.assetid: cd37ef71-b0b3-401d-bc2b-540c9147f532
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# Struttura CDaoErrorInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 3a3b33f6a7b95edcb2476b03356d32e74d1b8954
+ms.lasthandoff: 02/24/2017
 
-La struttura di `CDaoErrorInfo` contiene informazioni su un oggetto error definito per gli oggetti di accesso ai dati \(DAO\).  
+---
+# <a name="cdaoerrorinfo-structure"></a>Struttura CDaoErrorInfo
+Il `CDaoErrorInfo` struttura contiene informazioni su un oggetto di errore definito per l'accesso oggetti DAO (data).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      struct CDaoErrorInfo  
+struct CDaoErrorInfo  
 {  
-   long m_lErrorCode;  
-   CString m_strSource;  
-   CString m_strDescription;  
-   CString m_strHelpFile;  
-   long m_lHelpContext;  
+    long m_lErrorCode;  
+    CString m_strSource;  
+    CString m_strDescription;  
+    CString m_strHelpFile;  
+    long m_lHelpContext;  
 };  
 ```  
   
-#### Parametri  
- *m\_lErrorCode*  
- Un codice di errore numerico di DAO.  Vedere l'argomento "errori intercettabili di accesso ai dati" nella Guida di DAO.  
+#### <a name="parameters"></a>Parametri  
+ *m_lErrorCode*  
+ Un codice di errore numerico DAO. Vedere l'argomento "Dati accesso errori intercettabili" nella Guida di DAO.  
   
- *m\_strSource*  
- Il nome dell'oggetto o dell'applicazione originariamente generato l'errore.  La proprietà di origine specifica un'espressione stringa che rappresenta l'oggetto che ha generato l'errore; l'espressione corrisponde in genere al nome della classe dell'oggetto.  Per informazioni dettagliate, vedere l'argomento "proprietà di origine" nella Guida di DAO.  
+ *m_strSource*  
+ Il nome dell'oggetto o dell'applicazione che ha generato l'errore. La proprietà Source specifica un'espressione stringa che rappresenta l'oggetto che ha generato l'errore. l'espressione è in genere il nome dell'oggetto classe. Per informazioni dettagliate, vedere l'argomento "Proprietà Source" nella Guida di DAO.  
   
- *m\_strDescription*  
- Una stringa descrittiva associata a un errore.  Per informazioni dettagliate, vedere l'argomento "proprietà description" nella Guida di DAO.  
+ *m_strDescription*  
+ Una stringa descrittiva associata a un errore. Per informazioni dettagliate, vedere l'argomento "Proprietà Description" nella Guida di DAO.  
   
- *m\_strHelpFile*  
- Il percorso completo di un file della Guida di Microsoft Windows.  Per informazioni dettagliate, vedere l'argomento "HelpContext, proprietà HelpFile di" nella Guida di DAO.  
+ *m_strHelpFile*  
+ Il percorso completo di un file della Guida di Microsoft Windows. Per informazioni dettagliate, vedere l'argomento "Proprietà HelpContext, HelpFile" nella Guida di DAO.  
   
- *m\_lHelpContext*  
- Un ID di contesto per un argomento in un file della Guida di Microsoft Windows.  Per informazioni dettagliate, vedere l'argomento "HelpContext, proprietà HelpFile di" nella Guida di DAO.  
+ *m_lHelpContext*  
+ Un ID di contesto per un argomento in un file della Guida di Microsoft Windows. Per informazioni dettagliate, vedere l'argomento "Proprietà HelpContext, HelpFile" nella Guida di DAO.  
   
-## Note  
- MFC non incapsula gli oggetti errori di DAO in una classe.  Al contrario, la classe di [CDaoException](../../mfc/reference/cdaoexception-class.md) fornisce un'interfaccia per accedere alla raccolta degli errori contenuta nell'oggetto di DAO **DBEngine** , l'oggetto che contiene anche tutte le aree di lavoro.  Quando un'operazione di DAO MFC consente di generare un oggetto `CDaoException` che catch, MFC riempie una struttura di `CDaoErrorInfo` e la archiviate nel membro di [m\_pErrorInfo](../Topic/CDaoException::m_pErrorInfo.md) dell'oggetto eccezione. Se si sceglie di chiamare direttamente le API DAO, è necessario chiamare la funzione membro di [GetErrorInfo](../Topic/CDaoException::GetErrorInfo.md) l'oggetto eccezione manualmente per riempire `m_pErrorInfo`\).  
+## <a name="remarks"></a>Note  
+ MFC non include oggetti errore DAO in una classe. Al contrario, il [CDaoException](../../mfc/reference/cdaoexception-class.md) classe fornisce un'interfaccia per accedere alla raccolta di errori contenuta nell'oggetto DAO **DBEngine** object, oggetto contenente tutte le aree di lavoro. Quando un'operazione DAO MFC genera una `CDaoException` oggetto che viene intercettata, MFC riempie un `CDaoErrorInfo` struttura e la archivia in dell'oggetto eccezione [m_pErrorInfo](../../mfc/reference/cdaoexception-class.md#m_perrorinfo) membro. (Se si sceglie di chiamare direttamente DAO, è necessario chiamare l'oggetto eccezione [GetErrorInfo](../../mfc/reference/cdaoexception-class.md#geterrorinfo) funzione membro per riempire `m_pErrorInfo`.)  
   
- Per ulteriori informazioni sulla gestione degli errori di DAO, vedere l'articolo [Eccezioni: Eccezioni di database](../../mfc/exceptions-database-exceptions.md).  Per informazioni correlate, vedere l'argomento "oggetto error" nella Guida di DAO.  
+ Per ulteriori informazioni sulla gestione degli errori DAO, vedere l'articolo [eccezioni: eccezioni di Database](../../mfc/exceptions-database-exceptions.md). Per informazioni correlate, vedere l'argomento "Errore oggetto" nella Guida di DAO.  
   
- Le informazioni recuperate dalla funzione membro di [CDaoException::GetErrorInfo](../Topic/CDaoException::GetErrorInfo.md) vengono archiviate in una struttura di `CDaoErrorInfo`.  Esaminare il membro dati di [m\_pErrorInfo](../Topic/CDaoException::m_pErrorInfo.md) da un oggetto di `CDaoException` rilevate in un gestore eccezioni, o la chiamata `GetErrorInfo` da un oggetto di `CDaoException` creati in modo esplicito per controllare gli errori che possono verificarsi durante la chiamata diretta a DAO collega.  `CDaoErrorInfo` definisce anche una funzione membro di `Dump` nelle build di debug.  È possibile utilizzare `Dump` per eseguire il dump del contenuto di un oggetto di `CDaoErrorInfo`.  
+ Le informazioni recuperate dal [CDaoException:: GetErrorInfo](../../mfc/reference/cdaoexception-class.md#geterrorinfo) funzione membro viene archiviata in una `CDaoErrorInfo` struttura. Esaminare il [m_pErrorInfo](../../mfc/reference/cdaoexception-class.md#m_perrorinfo) membro dati da un `CDaoException` oggetto che viene intercettata in un gestore eccezioni o chiamata `GetErrorInfo` da un `CDaoException` che l'oggetto creato in modo esplicito per controllare gli errori che potrebbero essersi verificati durante una chiamata diretta alle interfacce DAO. `CDaoErrorInfo`definisce inoltre un `Dump` si basa la funzione membro in modalità debug. È possibile utilizzare `Dump` per scaricare il contenuto di un `CDaoErrorInfo` oggetto.  
   
-## Requisiti  
- **Intestazione:** afxdao.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** afxdao. h  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Strutture, stili, callback e mappe messaggi](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDaoException Class](../../mfc/reference/cdaoexception-class.md)
+ [Classe CDaoException](../../mfc/reference/cdaoexception-class.md)
+

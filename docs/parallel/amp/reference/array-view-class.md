@@ -1,29 +1,45 @@
 ---
-title: "Classe array_view | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "amp/Concurrency::array_view"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "array_view (classe)"
+title: Classe array_view | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- amp/Concurrency::array_view
+dev_langs:
+- C++
+helpviewer_keywords:
+- array_view class
 ms.assetid: 7e7ec9bc-05a2-4372-b05d-752b50006c5a
 caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# Classe array_view
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: ec096dbcd485b9360d07d1b56511b13c13d1b4cf
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="arrayview-class"></a>Classe array_view
 Rappresenta una visualizzazione N-dimensionale sui dati contenuti in un altro contenitore.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -55,58 +71,58 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore array_view:: array_view](#array_view__array_view_constructor)|Inizializza una nuova istanza della classe `array_view`. Nessun costruttore predefinito per `array<T,N>`. Tutti i costruttori sono limitati per l'esecuzione sulla CPU solo e non possono essere eseguiti una destinazione di Direct3D.|  
-|[array_view:: ~ array_view distruttore](#array_view___dtorarray_view_destructor)|Elimina il `array_view` oggetto.|  
+|[Costruttore array_view](#ctor)|Inizializza una nuova istanza della classe `array_view`. Nessun costruttore predefinito per `array<T,N>`. Tutti i costruttori sono limitati per l'esecuzione sulla CPU solo e non possono essere eseguiti una destinazione di Direct3D.|  
+|[~ array_view distruttore](#ctor)|Elimina il `array_view` oggetto.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Metodo array_view:: copy_to](#array_view__copy_to_method)|Copia il contenuto di `array_view` oggetto nella destinazione specificata chiamando `copy(*this, dest)`.|  
-|[Metodo array_view:: data](#array_view__data_method)|Restituisce un puntatore ai dati non elaborati di `array_view`.|  
-|[Metodo array_view:: discard_data](#array_view__discard_data_method)|Elimina i dati correnti sottostanti questa vista.|  
-|[Metodo array_view:: get_extent](#array_view__get_extent_method)|Restituisce l'oggetto di estensione dell'oggetto array_view.|  
-|[Metodo array_view:: get_ref](#array_view__get_ref_method)|Restituisce un riferimento all'elemento indicizzato.|  
-|[Metodo array_view:: get_source_accelerator_view](#array_view__get_source_accelerator_view_method)|Restituisce il [accelerator_view](../../../parallel/amp/reference/accelerator-view-class.md) in cui l'origine dati di `array_view` si trova.|  
-|[Metodo array_view:: Refresh](#array_view__refresh_method)|Notifica di `array_view` oggetto memoria associata è stata modificata all'esterno di `array_view` interfaccia. Una chiamata a questo metodo esegue il rendering di tutte le informazioni memorizzate nella cache non aggiornati.|  
-|[Metodo array_view:: reinterpret_as](#array_view__reinterpret_as_method)|Restituisce una matrice unidimensionale che contiene tutti gli elementi di `array_view` oggetto.|  
-|[Metodo array_view:: Section](#array_view__section_method)|Restituisce una sottosezione del `array_view` oggetto che si trova l'origine specificata e, facoltativamente, che ha l'estensione specificata.|  
-|[Metodo array_view:: Synchronize](#array_view__synchronize_method)|Consente di sincronizzare le modifiche apportate al `array_view` oggetto dati di origine.|  
-|[Metodo array_view:: synchronize_async](#array_view__synchronize_async_method)|In modo asincrono consente di sincronizzare le modifiche apportate al [array_view](../../../parallel/amp/reference/array-view-class.md) oggetto dati di origine.|  
-|[Metodo array_view:: synchronize_to](#array_view__synchronize_to_method)|Consente di sincronizzare le modifiche apportate al `array_view` oggetto all'oggetto [accelerator_view](../../../parallel/amp/reference/accelerator-view-class.md).|  
-|[Metodo array_view:: synchronize_to_async](#array_view__synchronize_to_async_method)|In modo asincrono consente di sincronizzare le modifiche apportate al `array_view` oggetto all'oggetto [accelerator_view](../../../parallel/amp/reference/accelerator-view-class.md).|  
-|[Metodo array_view:: view_as](#array_view__view_as_method)|Produce un `array_view` oggetto di un ordine di priorità diversi utilizzando questo `array_view` dati dell'oggetto.|  
+|[copy_to (metodo)](#copy_to)|Copia il contenuto di `array_view` oggetto nella destinazione specificata chiamando `copy(*this, dest)`.|  
+|[dati (metodo)](#data)|Restituisce un puntatore ai dati non elaborati di `array_view`.|  
+|[discard_data (metodo)](#discard_data)|Elimina i dati correnti sottostanti questa vista.|  
+|[get_extent (metodo)](#get_extent)|Restituisce l'oggetto di estensione dell'oggetto array_view.|  
+|[get_ref (metodo)](#get_ref)|Restituisce un riferimento all'elemento indicizzato.|  
+|[get_source_accelerator_view (metodo)](#get_source_accelerator_view)|Restituisce il [accelerator_view](accelerator-view-class.md) in cui l'origine dati di `array_view` si trova.|  
+|[Metodo Refresh](#refresh)|Notifica il `array_view` oggetto memoria associata è stata modificata all'esterno di `array_view` interfaccia. Una chiamata a questo metodo esegue il rendering di tutte le informazioni memorizzate nella cache non aggiornati.|  
+|[reinterpret_as (metodo)](#reinterpret_as)|Restituisce una matrice unidimensionale che contiene tutti gli elementi di `array_view` oggetto.|  
+|[sezione (metodo)](#section)|Restituisce una sottosezione del `array_view` oggetto che si trova l'origine specificata e, facoltativamente, che ha l'estensione specificata.|  
+|[Synchronize (metodo)](#synchronize)|Consente di sincronizzare le modifiche apportate al `array_view` oggetto dati di origine.|  
+|[synchronize_async (metodo)](#synchronize_async)|In modo asincrono consente di sincronizzare le modifiche apportate al `array_view` oggetto dati di origine.|  
+|[synchronize_to (metodo)](#synchronize_to)|Consente di sincronizzare le modifiche apportate al `array_view` oggetto all'oggetto [accelerator_view](accelerator-view-class.md).|  
+|[synchronize_to_async (metodo)](#synchronize_to_async)|In modo asincrono consente di sincronizzare le modifiche apportate al `array_view` oggetto all'oggetto [accelerator_view](accelerator-view-class.md).|  
+|[view_as (metodo)](#view_as)|Produce un `array_view` oggetto di un ordine di priorità diversi utilizzando questo `array_view` dati dell'oggetto.|  
   
 ### <a name="public-operators"></a>Operatori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[array_view::operator() (operatore)](#array_view__operator___operator)|Restituisce il valore dell'elemento specificato dal parametro o parametri.|  
-|[array_view:: operator [] (operatore)](#array_view__operator_at_operator)|Restituisce l'elemento specificato dai parametri.|  
-|[array_view:: operator = (operatore)](#array_view__operator_eq_operator)|Copia il contenuto dell'oggetto specificato `array_view` specificato in questo oggetto.|  
+|[Operatore operator)](#operator_call)|Restituisce il valore dell'elemento specificato dal parametro o parametri.|  
+|[operator [] (operatore)](#operator_at)|Restituisce l'elemento specificato dai parametri.|  
+|[operatore = (operatore)](#operator_eq)|Copia il contenuto dell'oggetto specificato `array_view` specificato in questo oggetto.|  
   
 ### <a name="public-constants"></a>Costanti pubbliche  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costante array_view:: rank](#array_view__rank_constant)|Archivia il rango di `array_view` oggetto.|  
+|[Rank (costante)](#rank)|Archivia il rango di `array_view` oggetto.|  
   
 ### <a name="data-members"></a>Membri di dati  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Membro dati array_view:: extent](#array_view__extent_data_member)|Ottiene l'oggetto `extent` che definisce la forma dell'oggetto `array_view`.|  
-|[Membro dati array_view:: source_accelerator_view](#array_view__source_accelerator_view_data_member)|Ottiene il [accelerator_view](../../../parallel/amp/reference/accelerator-view-class.md) in cui l'origine dati di `array_view` Trova|  
-|[array_view:: value_type (membro dati)](#array_view__value_type_data_member)|Il tipo del valore di `array_view` e la matrice associata.|  
+|[extent (membro dati)](#extent)|Ottiene l'oggetto `extent` che definisce la forma dell'oggetto `array_view`.|  
+|[source_accelerator_view (membro dati)](#source_accelerator_view)|Ottiene il [accelerator_view](accelerator-view-class.md) in cui l'origine dati di `array_view` trova|  
+|[value_type (membro dati)](#value_type)|Il tipo del valore di `array_view` e la matrice associata.|  
   
 ## <a name="remarks"></a>Note  
- La `array_view` classe rappresenta una visualizzazione dei dati contenuti in un [matrice](../../../parallel/amp/reference/array-class.md) oggetto o una sottosezione di un `array` oggetto.  
+ Il `array_view` classe rappresenta una visualizzazione dei dati contenuti in un [matrice](array-class.md) oggetto o una sottosezione di un `array` oggetto.  
   
  È possibile accedere il `array_view` dell'oggetto in cui si trovano i dati di origine (locale) o su un tasto di scelta rapida diversi o in un dominio di coerenza (in modalità remota). Quando si accede all'oggetto in modalità remota, le viste vengono copiate e memorizzati nella cache in base alle esigenze. Ad eccezione degli effetti della memorizzazione nella cache automatica, `array_view` oggetti dispongono di un profilo di prestazioni simile a quelle di `array` oggetti. Si verifica una riduzione delle prestazioni quando si accede ai dati tramite le viste.  
   
  Esistono tre scenari di utilizzo remoto:  
   
--   Una vista a un puntatore di memoria di sistema viene passata per mezzo di un [parallel_for_each](concurrency%20namespace%20functions.md#parallel_for_each) chiamata a un tasto di scelta rapida e accessibili sul tasto di scelta rapida.  
+-   Una vista a un puntatore di memoria di sistema viene passata per mezzo di un [parallel_for_each](../../../parallel/concrt/reference/concurrency-namespace-functions.md#parallel_for_each) chiamata a un tasto di scelta rapida e accessibili sul tasto di scelta rapida.  
   
 -   Una vista in una matrice a cui si trova su un acceleratore viene passata per mezzo di un `parallel_for_each` chiamata a un altro acceleratore di cui si accede non esiste.  
   
@@ -122,7 +138,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
   
 -   Tutti gli accessi ben sincronizzati alla sovrapposizione `array_view` oggetti stesso tasto di scelta rapida in una singola `array` oggetto sono stati creati alias tramite il `array` oggetto. Provocare un totale si verifica-prima relazione secondo l'ordine del programma. Non esiste nessuna memorizzazione nella cache. Se il `array_view` gli oggetti sono in esecuzione su diversi tasti di scelta rapida, l'ordine di accesso è definito, la creazione di una race condition.  
   
- Quando si crea un `array_view` dell'oggetto utilizzando un puntatore in memoria di sistema, è necessario modificare la visualizzazione `array_view` oggetto solo tramite il `array_view` puntatore. In alternativa, è necessario chiamare `refresh()` su uno del `array_view` oggetti associati al puntatore di sistema, se la memoria nativa sottostante viene modificata direttamente, anziché tramite il `array_view` oggetto.  
+ Quando si crea un `array_view` oggetto utilizzando un puntatore in memoria di sistema, è necessario modificare la visualizzazione `array_view` oggetto solo tramite il `array_view` puntatore. In alternativa, è necessario chiamare `refresh()` su uno del `array_view` oggetti associati al puntatore di sistema, se la memoria nativa sottostante viene modificata direttamente, anziché tramite il `array_view` oggetto.  
   
  Notifica a entrambe le azioni di `array_view` dell'oggetto che la memoria nativa sottostante viene modificata e che tutte le copie che si trovano su un tasto di scelta rapida sono aggiornate. Se si seguono queste linee guida, le viste basate su puntatore sono identiche a quelli forniti alle visualizzazioni di matrici di dati in parallelo.  
   
@@ -138,15 +154,17 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="a-namearrayviewdtorarrayviewdestructora-arrayviewarrayview-destructor"></a><a name="array_view___dtorarray_view_destructor"></a>  array_view:: ~ array_view distruttore  
- Elimina il [array_view](../../../parallel/amp/reference/array-view-class.md) oggetto.  
+##  <a name="a-namedtora-arrayview"></a><a name="dtor"></a>~ array_view 
+
+ Elimina il `array_view` oggetto.  
   
 ```  
 ~array_view()restrict(amp,cpu);
 ```  
   
-##  <a name="a-namearrayviewarrayviewconstructora-arrayviewarrayview-constructor"></a><a name="array_view__array_view_constructor"></a>  Costruttore array_view:: array_view  
- Inizializza una nuova istanza di [array_view](../../../parallel/amp/reference/array-view-class.md) (classe).  
+##  <a name="a-namectora-arrayview"></a><a name="ctor"></a>array_view 
+
+ Inizializza una nuova istanza della classe `array_view`.  
   
 ```  
 array_view(
@@ -364,8 +382,9 @@ array_view(
  `_Src`  
  Un puntatore ai dati di origine che verranno copiati nella nuova matrice.  
   
-##  <a name="a-namearrayviewcopytomethoda-arrayviewcopyto-method"></a><a name="array_view__copy_to_method"></a>  Metodo array_view:: copy_to  
- Copia il contenuto di [array_view](../../../parallel/amp/reference/array-view-class.md) all'oggetto di destinazione specificato chiamando `copy(*this, dest)`.  
+##  <a name="a-namecopytoa-copyto"></a><a name="copy_to"></a>copy_to 
+
+ Copia il contenuto di `array_view` all'oggetto di destinazione specificato chiamando `copy(*this, dest)`.  
   
 ```  
 void copy_to(
@@ -383,8 +402,9 @@ void copy_to(
  `_Dest`  
  Oggetto da copiare.  
   
-##  <a name="a-namearrayviewdatamethoda-arrayviewdata-method"></a><a name="array_view__data_method"></a>  Metodo array_view:: data  
- Restituisce un puntatore ai dati non elaborati di [array_view](../../../parallel/amp/reference/array-view-class.md).  
+##  <a name="a-namedataa-data"></a><a name="data"></a>dati 
+
+ Restituisce un puntatore ai dati non elaborati di `array_view`.  
   
 ```  
 value_type* data() const restrict(amp,
@@ -398,31 +418,35 @@ const value_type* data() const restrict(amp,
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore ai dati non elaborati di `array_view`.  
   
-##  <a name="a-namearrayviewdiscarddatamethoda-arrayviewdiscarddata-method"></a><a name="array_view__discard_data_method"></a>  Metodo array_view:: discard_data  
+##  <a name="a-namediscarddataa-discarddata"></a><a name="discard_data"></a>discard_data 
+
  Elimina i dati correnti sottostanti questa vista. Si tratta di un hint di ottimizzazione per la fase di esecuzione utilizzato per evitare di copiare il contenuto corrente della visualizzazione in una destinazione `accelerator_view` che è possibile accedervi in e il suo utilizzo è consigliato se il contenuto esistente non è necessaria. Questo metodo è no-op quando utilizzati in un contesto Restrict (amp)  
   
 ```  
 void discard_data() const restrict(cpu);
 ```  
   
-##  <a name="a-namearrayviewextentdatamembera-arrayviewextent-data-member"></a><a name="array_view__extent_data_member"></a>  Membro dati array_view:: extent  
+##  <a name="a-nameextenta-extent"></a><a name="extent"></a>extent 
+
  Ottiene l'oggetto `extent` che definisce la forma dell'oggetto `array_view`.  
   
 ```  
 __declspec(property(get= get_extent)) Concurrency::extent<_Rank> extent;  
 ```  
   
-##  <a name="a-namearrayviewgetextentmethoda-arrayviewgetextent-method"></a><a name="array_view__get_extent_method"></a>  Metodo array_view:: get_extent  
- Restituisce il [extent](../../../parallel/amp/reference/extent-class-cpp-amp.md) oggetto di [array_view](../../../parallel/amp/reference/array-view-class.md) oggetto.  
+##  <a name="a-namegetextenta-getextent"></a><a name="get_extent"></a>get_extent 
+
+ Restituisce il [extent](extent-class.md) oggetto di `array_view` oggetto.  
   
 ```  
 Concurrency::extent<_Rank> get_extent() const restrict(cpu, amp);
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Il `extent` dell'oggetto di `array_view` oggetto  
+ Il `extent` oggetto di `array_view` oggetto  
   
-##  <a name="a-namearrayviewgetrefmethoda-arrayviewgetref-method"></a><a name="array_view__get_ref_method"></a>  Metodo array_view:: get_ref  
+##  <a name="a-namegetrefa-getref"></a><a name="get_ref"></a>get_ref 
+
  Ottenere un riferimento all'elemento indicizzato da index. A differenza di altri indicizzazione operatori per l'accesso a array_view sulla CPU, questo metodo non sincronizza in modo implicito il contenuto di questo array_view alla CPU. Dopo l'accesso a array_view in una posizione remota o l'esecuzione di un'operazione di copia che interessano questo array_view gli utenti sono responsabili per sincronizzare l'array_view alla CPU in modo esplicito prima di chiamare questo metodo. In caso contrario, genera un comportamento indefinito.  
   
 ```  
@@ -437,7 +461,8 @@ value_type& get_ref(
 ### <a name="return-value"></a>Valore restituito  
  Riferimento all'elemento indicizzato da Index  
   
-##  <a name="a-namearrayviewgetsourceacceleratorviewmethoda-arrayviewgetsourceacceleratorview-method"></a><a name="array_view__get_source_accelerator_view_method"></a>  Metodo array_view:: get_source_accelerator_view  
+##  <a name="a-namegetsourceacceleratorviewa-getsourceacceleratorview"></a><a name="get_source_accelerator_view"></a>get_source_accelerator_view 
+
  Restituisce il accelerator_view in cui si trova l'origine dati di array_view. Se il array_view non dispone di un'origine dati, questa API viene generata una runtime_exception  
   
 ```  
@@ -448,7 +473,8 @@ accelerator_view get_source_accelerator_view() const;
   
 ### <a name="return-value"></a>Valore restituito  
   
-##  <a name="a-namearrayviewoperatoroperatora-arrayviewoperator-operator"></a><a name="array_view__operator___operator"></a>  array_view::operator() (operatore)  
+##  <a name="a-nameoperatorcalla-operator"></a><a name="operator_call"></a>operator) 
+
  Restituisce il valore dell'elemento specificato dal parametro o parametri.  
   
 ```  
@@ -494,7 +520,8 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 ### <a name="return-value"></a>Valore restituito  
  Il valore dell'elemento specificato dal parametro o parametri.  
   
-##  <a name="a-namearrayviewoperatoratoperatora-arrayviewoperator-operator"></a><a name="array_view__operator_at_operator"></a>  array_view:: operator [] (operatore)  
+##  <a name="a-nameoperatorata-operator"></a><a name="operator_at"></a>operator] 
+
  Restituisce l'elemento specificato dai parametri.  
   
 ```  
@@ -516,8 +543,9 @@ value_type& operator[] (
 ### <a name="return-value"></a>Valore restituito  
  Il valore dell'elemento in corrispondenza dell'indice o un `array_view` proiettati sulla dimensione più significativo.  
   
-##  <a name="a-namearrayviewoperatoreqoperatora-arrayviewoperator-operator"></a><a name="array_view__operator_eq_operator"></a>  array_view:: operator = (operatore)  
- Copia il contenuto dell'oggetto specificato [array_view](../../../parallel/amp/reference/array-view-class.md) a questo oggetto.  
+##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>operatore = 
+
+ Copia il contenuto dell'oggetto specificato `array_view` a questo oggetto.  
   
 ```  
 array_view& operator= (
@@ -535,22 +563,65 @@ array_view& operator= (
 ### <a name="return-value"></a>Valore restituito  
  Un riferimento a questo `array_view` oggetto.  
   
-##  <a name="a-namearrayviewrankconstanta-arrayviewrank-constant"></a><a name="array_view__rank_constant"></a>  Costante array_view:: rank  
- Archivia il rango di [array_view](../../../parallel/amp/reference/array-view-class.md) oggetto.  
+##  <a name="a-nameranka-rank"></a><a name="rank"></a>numero di dimensioni 
+
+ Archivia il rango di `array_view` oggetto.  
   
 ```  
 static const int rank = _Rank;  
 ```  
   
-##  <a name="a-namearrayviewrefreshmethoda-arrayviewrefresh-method"></a><a name="array_view__refresh_method"></a>  Metodo array_view:: Refresh  
- Notifica il [array_view](../../../parallel/amp/reference/array-view-class.md) oggetto memoria associata è stata modificata all'esterno di `array_view` interfaccia. Una chiamata a questo metodo esegue il rendering di tutte le informazioni memorizzate nella cache non aggiornati.  
+##  <a name="a-namerefresha-refresh"></a><a name="refresh"></a>aggiornamento 
+
+ Notifica il `array_view` oggetto memoria associata è stata modificata all'esterno di `array_view` interfaccia. Una chiamata a questo metodo esegue il rendering di tutte le informazioni memorizzate nella cache non aggiornati.  
   
 ```  
 void refresh() const restrict(cpu);
 ```  
+## <a name="a-namereinterpretasa-reinterpretas"></a><a name="reinterpret_as"></a>reinterpret_as 
+
+Reinterpreta array_view tramite un array_view unidimensionale, che l'opzione può disporre di un tipo di valore diverso da array_view di origine.  
   
-##  <a name="a-namearrayviewsectionmethoda-arrayviewsection-method"></a><a name="array_view__section_method"></a>  Metodo array_view:: Section  
- Restituisce una sottosezione del [array_view](../../../parallel/amp/reference/array-view-class.md) oggetto che si trova l'origine specificata e, facoltativamente, che ha l'estensione specificata.  
+### <a name="syntax"></a>Sintassi  
+  
+```  
+template <  
+    typename _Value_type2  
+>  
+array_view< _Value_type2, _Rank> reinterpret_as() const restrict(amp,cpu);  
+  
+template <  
+    typename _Value_type2  
+>  
+array_view<const _Value_type2, _Rank> reinterpret_as() const restrict(amp,cpu);  
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `_Value_type2`  
+ Il tipo di dati del nuovo `array_view` oggetto.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Un `array_view` oggetto o const `array_view` oggetto che si basa su questo `array_view`, con il tipo di elemento convertito da `T` a `_Value_type2`, e il numero di dimensioni ridotte da *N* su 1.  
+  
+### <a name="remarks"></a>Note  
+ A volte è utile visualizzare una matrice multidimensionale come una matrice unidimensionale, lineare, che potrebbe avere un tipo di valore diverso rispetto a matrice di origine. È possibile ottenere questo risultato in un `array_view` utilizzando questo metodo.  
+  
+**Avviso** Reinterpeting oggetto array_view utilizzando un tipo di valore diverso è un'operazione potenzialmente non sicura. Questa funzionalità deve essere utilizzata con cautela.  
+  
+ Di seguito è riportato un esempio:  
+  
+```cpp  
+struct RGB { float r; float g; float b; };  
+  
+array<RGB,3>  a = ...;   
+array_view<float,1> v = a.reinterpret_as<float>();   
+  
+assert(v.extent == 3*a.extent);  
+```  
+    
+##  <a name="a-namesectiona-section"></a><a name="section"></a>sezione 
+
+ Restituisce una sottosezione del `array_view` oggetto che si trova l'origine specificata e, facoltativamente, che ha l'estensione specificata.  
   
 ```  
 array_view section(
@@ -598,10 +669,10 @@ array_view section(
  Il componente meno significativo dell'ambito di questa sezione.  
   
  `_Ext`  
- Il [extent](../../../parallel/amp/reference/extent-class-cpp-amp.md) oggetto che specifica il grado della sezione. L'origine è 0.  
+ Il [extent](extent-class.md) oggetto che specifica il grado della sezione. L'origine è 0.  
   
  `_Idx`  
- Il [indice](../../../parallel/amp/reference/index-class.md) oggetto che specifica il percorso dell'origine. La sottosezione è il resto dell'estensione.  
+ Il [indice](index-class.md) oggetto che specifica il percorso dell'origine. La sottosezione è il resto dell'estensione.  
   
  `_I0`  
  Il componente più significativo dell'origine di questa sezione.  
@@ -616,22 +687,24 @@ array_view section(
  Il numero di dimensioni della sezione.  
   
  `_Section_extent`  
- Il [extent](../../../parallel/amp/reference/extent-class-cpp-amp.md) oggetto che specifica il grado della sezione.  
+ Il [extent](extent-class.md) oggetto che specifica il grado della sezione.  
   
  `_Section_origin`  
- Il [indice](../../../parallel/amp/reference/index-class.md) oggetto che specifica il percorso dell'origine.  
+ Il [indice](index-class.md) oggetto che specifica il percorso dell'origine.  
   
 ### <a name="return-value"></a>Valore restituito  
  Una sottosezione del `array_view` oggetto che si trova l'origine specificata e, facoltativamente, che ha l'estensione specificata. Quando solo il `index` oggetto è specificato, la sottosezione contiene tutti gli elementi dell'extent associati con gli indici che superano gli indici degli elementi del `index` oggetto.  
   
-##  <a name="a-namearrayviewsourceacceleratorviewdatamembera-arrayviewsourceacceleratorview-data-member"></a><a name="array_view__source_accelerator_view_data_member"></a>  Membro dati array_view:: source_accelerator_view  
+##  <a name="a-namesourceacceleratorviewa-sourceacceleratorview"></a><a name="source_accelerator_view"></a>source_accelerator_view 
+
  Ottiene il accelerator_view di origine che è associato questo array_view.  
   
 ```  
 __declspec(property(get= get_source_accelerator_view)) accelerator_view source_accelerator_view;  
 ```  
   
-##  <a name="a-namearrayviewsynchronizemethoda-arrayviewsynchronize-method"></a><a name="array_view__synchronize_method"></a>  Metodo array_view:: Synchronize  
+##  <a name="a-namesynchronizea-synchronize"></a><a name="synchronize"></a>la sincronizzazione 
+
  Consente di sincronizzare le modifiche apportate al `array_view` oggetto dati di origine.  
   
 ```  
@@ -643,10 +716,11 @@ void synchronize() const restrict(cpu);
   
 ### <a name="parameters"></a>Parametri  
  `_Access_type`  
- Previsto dal [access_type](concurrency%20namespace%20enums.md#access_type) nella destinazione [accelerator_view](../../../parallel/amp/reference/accelerator-view-class.md). Questo parametro ha un valore predefinito di `access_type_read`.  
+ Previsto dal [access_type](concurrency-namespace-enums-amp.md#access_type) nella destinazione [accelerator_view](accelerator-view-class.md). Questo parametro ha un valore predefinito di `access_type_read`.  
   
-##  <a name="a-namearrayviewsynchronizeasyncmethoda-arrayviewsynchronizeasync-method"></a><a name="array_view__synchronize_async_method"></a>  Metodo array_view:: synchronize_async  
- In modo asincrono consente di sincronizzare le modifiche apportate al [array_view](../../../parallel/amp/reference/array-view-class.md) oggetto dati di origine.  
+##  <a name="a-namesynchronizeasynca-synchronizeasync"></a><a name="synchronize_async"></a>synchronize_async 
+
+ In modo asincrono consente di sincronizzare le modifiche apportate al `array_view` oggetto dati di origine.  
   
 ```  
 concurrency::completion_future synchronize_async(access_type _Access_type = access_type_read) const restrict(cpu);
@@ -657,12 +731,13 @@ concurrency::completion_future synchronize_async() const restrict(cpu);
   
 ### <a name="parameters"></a>Parametri  
  `_Access_type`  
- Previsto dal [access_type](concurrency%20namespace%20enums.md#access_type) nella destinazione [accelerator_view](../../../parallel/amp/reference/accelerator-view-class.md). Questo parametro ha un valore predefinito di `access_type_read`.  
+ Previsto dal [access_type](concurrency-namespace-enums-amp.md#access_type) nella destinazione [accelerator_view](accelerator-view-class.md). Questo parametro ha un valore predefinito di `access_type_read`.  
   
 ### <a name="return-value"></a>Valore restituito  
  Una future in base al quale attendere il completamento dell'operazione.  
   
-##  <a name="a-namearrayviewsynchronizetomethoda-arrayviewsynchronizeto-method"></a><a name="array_view__synchronize_to_method"></a>  Metodo array_view:: synchronize_to  
+##  <a name="a-namesynchronizetoa-synchronizeto"></a><a name="synchronize_to"></a>synchronize_to 
+
  Consente di sincronizzare le modifiche apportate a questo array_view a accelerator_view specificato.  
   
 ```  
@@ -682,7 +757,8 @@ void synchronize_to(
  `_Access_type`  
  Access_type desiderato in accelerator_view di destinazione. Questo parametro ha un valore predefinito di access_type_read.  
   
-##  <a name="a-namearrayviewsynchronizetoasyncmethoda-arrayviewsynchronizetoasync-method"></a><a name="array_view__synchronize_to_async_method"></a>  Metodo array_view:: synchronize_to_async  
+##  <a name="a-namesynchronizetoasynca-synchronizetoasync"></a><a name="synchronize_to_async"></a>synchronize_to_async 
+
  In modo asincrono consente di sincronizzare le modifiche apportate a questo array_view a accelerator_view specificato.  
   
 ```  
@@ -705,14 +781,16 @@ concurrency::completion_future synchronize_to_async(
 ### <a name="return-value"></a>Valore restituito  
  Una future in base al quale attendere il completamento dell'operazione.  
   
-##  <a name="a-namearrayviewvaluetypedatamembera-arrayviewvaluetype-data-member"></a><a name="array_view__value_type_data_member"></a>  array_view:: value_type (membro dati)  
+##  <a name="a-namevaluetypea-valuetype"></a><a name="value_type"></a>value_type 
+
  Il tipo di valore di array_view e la matrice associata.  
   
 ```  
 typedef typenamevalue_type value_type;  
 ```  
   
-##  <a name="a-namearrayviewviewasmethoda-arrayviewviewas-method"></a><a name="array_view__view_as_method"></a>  Metodo array_view:: view_as  
+##  <a name="a-nameviewasa-viewas"></a><a name="view_as"></a>view_as 
+
  Reinterpreta questo `array_view` come un `array_view` di un numero di dimensioni diversa.  
   
 ```  
@@ -738,10 +816,11 @@ array_view<const value_type,_New_rank> view_as(
  La modifica della forma `extent`.  
   
  `value_type`  
- Il tipo di dati degli elementi di entrambi originale [matrice](../../../parallel/amp/reference/array-class.md) oggetto e il valore restituito `array_view` oggetto.  
+ Il tipo di dati degli elementi di entrambi originale [matrice](array-class.md) oggetto e il valore restituito `array_view` oggetto.  
   
 ### <a name="return-value"></a>Valore restituito  
- Il [array_view](../../../parallel/amp/reference/array-view-class.md) oggetto costruito.  
+ Il `array_view` oggetto costruito.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Spazio dei nomi Concurrency (C++ AMP)](../../../parallel/amp/reference/concurrency-namespace-cpp-amp.md)
+ [Concorrenza Namespace (C++ AMP)](concurrency-namespace-cpp-amp.md)
+

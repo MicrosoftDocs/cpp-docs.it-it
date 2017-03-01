@@ -1,26 +1,42 @@
 ---
-title: "Errore del compilatores C2900 Through C3499 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
+title: C2900 errori del compilatore C3499 | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs:
+- C++
 ms.assetid: e3440738-e11b-4878-9ae3-6bc6c53ba461
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# Errore del compilatores C2900 Through C3499
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
+ms.openlocfilehash: be14b38a2d4220436c4dd2fc62355a438a0c7b6e
+ms.lasthandoff: 02/24/2017
 
-Gli articoli in questa parte della documentazione contengono informazioni su una sottosezione degli errori del compilatore di Visual C\+\+.  È possibile accedere alle informazioni qui o nella finestra **Output** in Visual Studio è possibile selezionare un numero di errore e quindi scegliere il tasto F1.  
+---
+# <a name="compiler-errors-c2900-through-c3499"></a>C2900 errori del compilatore C3499
+Gli articoli in questa parte della documentazione contengono informazioni su una sottosezione degli errori del compilatore di Visual C++. È possibile accedere alle informazioni qui; in alternativa, nella finestra **Output** in Visual Studio è possibile selezionare un numero di errore e quindi premere F1.  
   
  [Errore del compilatore C2906](../../error-messages/compiler-errors-2/compiler-error-c2906.md)  
   
@@ -36,11 +52,11 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
   
  [Errore del compilatore C2918](../../error-messages/compiler-errors-2/compiler-error-c2918.md)  
   
- [Compiler Error C2919](../../error-messages/compiler-errors-2/compiler-error-c2919.md)  
+ [Errore del compilatore C2919](../../error-messages/compiler-errors-2/compiler-error-c2919.md)  
   
- [Compiler Error C2920](../../error-messages/compiler-errors-2/compiler-error-c2920.md)  
+ [Errore del compilatore C2920](../../error-messages/compiler-errors-2/compiler-error-c2920.md)  
   
- [Errore del compilatore C2921](../../error-messages/compiler-errors-2/compiler-errors-c2900-through-c3499.md)  
+ [Errore del compilatore C2921](../../error-messages/compiler-errors-2/compiler-error-c2921.md)  
   
  [Errore del compilatore C2947](../../error-messages/compiler-errors-2/compiler-error-c2947.md)  
   
@@ -53,6 +69,8 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
  [Errore del compilatore C2958](../../error-messages/compiler-errors-2/compiler-error-c2958.md)  
   
  [Errore del compilatore C2959](../../error-messages/compiler-errors-2/compiler-error-c2959.md)  
+  
+ [Errore del compilatore C2962](../../error-messages/compiler-errors-2/compiler-error-c2962.md)  
   
  [Errore del compilatore C2970](../../error-messages/compiler-errors-2/compiler-error-c2970.md)  
   
@@ -94,7 +112,7 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
   
  [Errore del compilatore C3083](../../error-messages/compiler-errors-2/compiler-error-c3083.md)  
   
- [Compiler Error C3099](../../error-messages/compiler-errors-2/compiler-error-c3099.md)  
+ [Errore del compilatore C3099](../../error-messages/compiler-errors-2/compiler-error-c3099.md)  
   
  [Errore del compilatore C3101](../../error-messages/compiler-errors-2/compiler-error-c3101.md)  
   
@@ -122,9 +140,7 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
   
  [Errore del compilatore C3174](../../error-messages/compiler-errors-2/compiler-error-c3174.md)  
   
- [Errore del compilatore C3186](../../error-messages/compiler-errors-2/compiler-error-c3186.md)  
-  
- [Errore del compilatore C3187](../../error-messages/compiler-errors-2/compiler-error-c3187.md)  
+ [C3187 errore del compilatore](../../error-messages/compiler-errors-2/compiler-error-c3187.md)  
   
  [Errore del compilatore C3200](../../error-messages/compiler-errors-2/compiler-error-c3200.md)  
   
@@ -132,7 +148,7 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
   
  [Errore del compilatore C3203](../../error-messages/compiler-errors-2/compiler-error-c3203.md)  
   
- [Compiler Error C3209](../../error-messages/compiler-errors-2/compiler-error-c3209.md)  
+ [Errore del compilatore C3209](../../error-messages/compiler-errors-2/compiler-error-c3209.md)  
   
  [Errore del compilatore C3210](../../error-messages/compiler-errors-2/compiler-error-c3210.md)  
   
@@ -150,7 +166,7 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
   
  [Errore del compilatore C3241](../../error-messages/compiler-errors-2/compiler-error-c3241.md)  
   
- [Compiler Error C3252](../../error-messages/compiler-errors-2/compiler-error-c3252.md)  
+ [Errore del compilatore C3252](../../error-messages/compiler-errors-2/compiler-error-c3252.md)  
   
  [Errore del compilatore C3253](../../error-messages/compiler-errors-2/compiler-error-c3253.md)  
   
@@ -166,15 +182,15 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
   
  [Errore del compilatore C3277](../../error-messages/compiler-errors-2/compiler-error-c3277.md)  
   
- [Compiler Error C3278](../../error-messages/compiler-errors-2/compiler-error-c3278.md)  
+ [Errore del compilatore C3278](../../error-messages/compiler-errors-2/compiler-error-c3278.md)  
   
- [Compiler Error C3282](../../error-messages/compiler-errors-2/compiler-error-c3282.md)  
+ [Errore del compilatore C3282](../../error-messages/compiler-errors-2/compiler-error-c3282.md)  
   
  [Errore del compilatore C3288](../../error-messages/compiler-errors-2/compiler-error-c3288.md)  
   
  [Errore del compilatore C3352](../../error-messages/compiler-errors-2/compiler-error-c3352.md)  
   
- [Compiler Error C3353](../../error-messages/compiler-errors-2/compiler-error-c3353.md)  
+ [Errore del compilatore C3353](../../error-messages/compiler-errors-2/compiler-error-c3353.md)  
   
  [Errore del compilatore C3364](../../error-messages/compiler-errors-2/compiler-error-c3364.md)  
   
@@ -186,9 +202,9 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
   
  [Errore del compilatore C3381](../../error-messages/compiler-errors-2/compiler-error-c3381.md)  
   
- [Compiler Error C3386](../../error-messages/compiler-errors-2/compiler-error-c3386.md)  
+ [Errore del compilatore C3386](../../error-messages/compiler-errors-2/compiler-error-c3386.md)  
   
- [Compiler Error C3387](../../error-messages/compiler-errors-2/compiler-error-c3387.md)  
+ [C3387 errore del compilatore](../../error-messages/compiler-errors-2/compiler-error-c3387.md)  
   
  [Errore del compilatore C3389](../../error-messages/compiler-errors-2/compiler-error-c3389.md)  
   
@@ -202,14 +218,14 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
   
  [Errore del compilatore C3417](../../error-messages/compiler-errors-2/compiler-error-c3417.md)  
   
- [Compiler Error C3450](../../error-messages/compiler-errors-2/compiler-error-c3450.md)  
+ [Errore del compilatore C3450](../../error-messages/compiler-errors-2/compiler-error-c3450.md)  
   
  [Errore del compilatore C3451](../../error-messages/compiler-errors-2/compiler-error-c3451.md)  
   
- [Compiler Error C3456](../../error-messages/compiler-errors-2/compiler-error-c3456.md)  
+ [Errore del compilatore C3456](../../error-messages/compiler-errors-2/compiler-error-c3456.md)  
   
  [Errore del compilatore C3466](../../error-messages/compiler-errors-2/compiler-error-c3466.md)  
   
- [Errore del compilatore C3487](../../error-messages/compiler-errors-2/compiler-error-c3487.md)  
+ [C3487 errore del compilatore](../../error-messages/compiler-errors-2/compiler-error-c3487.md)  
   
- [Compiler Error C3498](../../error-messages/compiler-errors-2/compiler-error-c3498.md)
+ [C3498 errore del compilatore](../../error-messages/compiler-errors-2/compiler-error-c3498.md)
