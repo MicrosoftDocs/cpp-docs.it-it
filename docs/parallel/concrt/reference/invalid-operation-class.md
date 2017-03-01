@@ -1,57 +1,88 @@
 ---
-title: "Classe invalid_operation | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "concrt/concurrency::invalid_operation"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "invalid_operation (classe)"
+title: Classe invalid_operation | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concrt/concurrency::invalid_operation
+dev_langs:
+- C++
+helpviewer_keywords:
+- invalid_operation class
 ms.assetid: 26ba07dc-fcdf-44cb-b748-a31d35205b52
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# Classe invalid_operation
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 0484e149409b2515f60b2e9aa34a85d5381e05a5
+ms.lasthandoff: 02/24/2017
 
-Questa classe viene descritta un'eccezione generata quando un'operazione non valida viene eseguita che con maggiore precisione non è descritta da un altro tipo di eccezione generata nel runtime di concorrenza.  
+---
+# <a name="invalidoperation-class"></a>Classe invalid_operation
+Questa classe descrive un'eccezione generata quando viene eseguita un'operazione non valida non più descritta in maniera accurata da un altro tipo di eccezione generata dal runtime di concorrenza.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
+```
+class invalid_operation : public std::exception;
 ```  
-class invalid_operation : public std::exception;  
-```  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Costruttori pubblici  
+### <a name="public-constructors"></a>Costruttori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore invalid\_operation::invalid\_operation](../Topic/invalid_operation::invalid_operation%20Constructor.md)|Di overload.  Costruisce un oggetto `invalid_operation`.|  
+|[Costruttore invalid_operation](#ctor)|Di overload. Costruisce un oggetto `invalid_operation`.|  
   
-## Note  
- I vari metodi che generano tale eccezione documenteranno di solito in quali circostanze ne eseguiranno la generazione.  
+## <a name="remarks"></a>Note  
+ Nei vari metodi che generano tale eccezione vengono di solito documentate le circostanze nelle quali verrà generata.  
   
-## Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `exception`  
   
  `invalid_operation`  
   
-## Requisiti  
- **Header:** concrt.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** concrt  
   
- Concorrenza di**Spazio dei nomi:**  
+ **Spazio dei nomi:** Concurrency  
   
-## Vedere anche  
- [Spazio dei nomi concurrency](../../../parallel/concrt/reference/concurrency-namespace.md)
+##  <a name="a-namectora-invalidoperation"></a><a name="ctor"></a>invalid_operation 
+
+ Costruisce un oggetto `invalid_operation`.  
+  
+```
+explicit _CRTIMP invalid_operation(_In_z_ const char* _Message) throw();
+
+invalid_operation() throw();
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `_Message`  
+ Messaggio descrittivo dell'errore.  
+  
+## <a name="see-also"></a>Vedere anche  
+ [concorrenza Namespace](concurrency-namespace.md)
+

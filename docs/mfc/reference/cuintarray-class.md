@@ -1,103 +1,123 @@
 ---
-title: "CUIntArray Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CUIntArray"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "matrici [C++], indicizzati"
-  - "CUIntArray class"
-  - "indexed arrays"
-  - "INT"
-  - "UINT"
-  - "WORD data type"
+title: Classe CUIntArray | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CUIntArray
+dev_langs:
+- C++
+helpviewer_keywords:
+- INT
+- UINT
+- indexed arrays
+- arrays [C++], indexed
+- WORD data type
+- CUIntArray class
 ms.assetid: d71f3d8f-ef9f-4e48-9b69-7782c0e2ddf7
 caps.latest.revision: 23
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 25
----
-# CUIntArray Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 901ec011c6371b9c6a58ed71343480fe9a6ffe88
+ms.lasthandoff: 02/24/2017
 
-Supporta le matrici di interi senza segno.  
+---
+# <a name="cuintarray-class"></a>Classe CUIntArray
+Supporta matrici di Unsigned Integer.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 class CUIntArray : public CObject  
 ```  
   
-## Membri  
- Le funzioni membro `CUIntArray` sono simili alle funzioni membro di classe [CObArray](../../mfc/reference/cobarray-class.md).  A causa di questa somiglianze, è possibile utilizzare la documentazione di riferimento `CObArray` per le specifiche di funzione membro.  Per visualizzare un puntatore `CObject` come un parametro di funzione o valore restituito, sostituire **uint**.  
+## <a name="members"></a>Membri  
+ Le funzioni membro di `CUIntArray` sono simili alle funzioni membro della classe [CObArray](../../mfc/reference/cobarray-class.md). Grazie a questa somiglianza, per le specifiche delle funzioni membro è possibile usare la documentazione di riferimento di `CObArray`. Ovunque sia visualizzato un `CObject` puntatore come parametro della funzione o valore restituito, sostituire con un **UINT**.  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
- ad esempio, converte a  
+ ad esempio, si converte in  
   
  `UINT CUIntArray::GetAt( int <nIndex> ) const;`  
   
-### Costruttori pubblici  
+### <a name="public-constructors"></a>Costruttori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CObArray::CObArray](../Topic/CObArray::CObArray.md)|Crea una matrice vuota.|  
+|[CObArray::CObArray](../../mfc/reference/cobarray-class.md#cobarray)|Costruisce una matrice vuota.|  
   
-### Metodi pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[CObArray::Add](../Topic/CObArray::Add.md)|Aggiungere un elemento alla fine della matrice, ingrandito la matrice se necessario.|  
-|[CObArray::Append](../Topic/CObArray::Append.md)|Aggiunge un'altra matrice alla matrice, ingrandito la matrice se necessario.|  
-|[CObArray::Copy](../Topic/CObArray::Copy.md)|Copia un'altra matrice alla matrice, ingrandito la matrice se necessario.|  
-|[CObArray::ElementAt](../Topic/CObArray::ElementAt.md)|Restituisce un riferimento temporaneo al puntatore dell'elemento nella matrice.|  
-|[CObArray::FreeExtra](../Topic/CObArray::FreeExtra.md)|Libera la memoria inutilizzata sul limite superiore corrente.|  
-|[CObArray::GetAt](../Topic/CObArray::GetAt.md)|Restituisce il valore a un indice specificato.|  
-|[CObArray::GetCount](../Topic/CObArray::GetCount.md)|Ottiene il numero di elementi nella matrice.|  
-|[CObArray::GetData](../Topic/CObArray::GetData.md)|Consente l'accesso a elementi nella matrice.  Può essere **NULL**.|  
-|[CObArray::GetSize](../Topic/CObArray::GetSize.md)|Ottiene il numero di elementi nella matrice.|  
-|[CObArray::GetUpperBound](../Topic/CObArray::GetUpperBound.md)|Restituisce il maggiore indice valido.|  
-|[CObArray::InsertAt](../Topic/CObArray::InsertAt.md)|Inserire un elemento \(o tutti gli elementi in un'altra matrice\) a un indice specificato.|  
-|[CObArray::IsEmpty](../Topic/CObArray::IsEmpty.md)|Determina se la matrice è vuota.|  
-|[CObArray::RemoveAll](../Topic/CObArray::RemoveAll.md)|Rimuove tutti gli elementi della matrice.|  
-|[CObArray::RemoveAt](../Topic/CObArray::RemoveAt.md)|Rimuove un elemento a un valore specifico.|  
-|[CObArray::SetAt](../Topic/CObArray::SetAt.md)|Imposta il valore di indice specificato; matrice non consentita per lo sviluppo.|  
-|[CObArray::SetAtGrow](../Topic/CObArray::SetAtGrow.md)|Imposta il valore di indice specificato; ingrandito la matrice se necessario.|  
-|[CObArray::SetSize](../Topic/CObArray::SetSize.md)|Imposta il numero di elementi da includere nella matrice.|  
-  
-### Operatori pubblici  
+### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CObArray::operator](../Topic/CObArray::operator.md)|Imposta o ottiene l'elemento all'indice specificato.|  
+|[CObArray::Add](../../mfc/reference/cobarray-class.md#add)|Aggiunge un elemento alla fine della matrice; se necessario, aumenta le dimensioni della matrice.|  
+|[CObArray::Append](../../mfc/reference/cobarray-class.md#append)|Accoda alla matrice un'altra matrice; se necessario, aumenta le dimensioni della matrice.|  
+|[CObArray::Copy](../../mfc/reference/cobarray-class.md#copy)|Copia nella matrice un'altra matrice; se necessario, aumenta le dimensioni della matrice.|  
+|[CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)|Restituisce un riferimento temporaneo al puntatore dell'elemento nella matrice.|  
+|[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Libera tutta la memoria non utilizzata oltre limite il superiore corrente.|  
+|[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|Restituisce il valore in corrispondenza di un indice specificato.|  
+|[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|Ottiene il numero di elementi nella matrice.|  
+|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Consente l'accesso a tutti gli elementi nella matrice. Può essere **NULL**.|  
+|[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|Ottiene il numero di elementi nella matrice.|  
+|[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Restituisce il massimo indice valido.|  
+|[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|Inserisce un elemento (o tutti gli elementi di un'altra matrice) in corrispondenza di un indice specificato.|  
+|[CObArray::IsEmpty](../../mfc/reference/cobarray-class.md#isempty)|Determina se la matrice è vuota.|  
+|[CObArray::RemoveAll](../../mfc/reference/cobarray-class.md#removeall)|Rimuove tutti gli elementi dalla matrice.|  
+|[CObArray::RemoveAt](../../mfc/reference/cobarray-class.md#removeat)|Rimuove un elemento in corrispondenza di un indice specificato.|  
+|[CObArray::SetAt](../../mfc/reference/cobarray-class.md#setat)|Imposta il valore per un indice specificato; l'aumento di dimensioni della matrice non è consentito.|  
+|[CObArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)|Imposta il valore per un indice specificato; se necessario, aumenta le dimensioni della matrice.|  
+|[CObArray::SetSize](../../mfc/reference/cobarray-class.md#setsize)|Imposta il numero di elementi che la matrice deve contenere.|  
   
-## Note  
- Intero senza segno, o **uint**, differisce dalle parole e dai primi quattro byte in quanto la dimensione fisica **uint** può variare a seconda dell'ambiente operativo di destinazione.  **uint** È la stessa dimensione come primi quattro byte.  
+### <a name="public-operators"></a>Operatori pubblici  
   
- `CUIntArray` include la macro [IMPLEMENT\_DYNAMIC](../Topic/IMPLEMENT_DYNAMIC.md) per l'accesso il tipo di runtime ed eseguire il dump a [CDumpContext](../../mfc/reference/cdumpcontext-class.md) un oggetto.  Se è necessario un dump di singoli elementi Integer senza segno, è necessario impostare la profondità del contesto di dump a 1 o superiore.  Matrici di interi senza segno non possono essere serializzati.  
+|Nome|Descrizione|  
+|----------|-----------------|  
+|[[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|Imposta o ottiene l'elemento in corrispondenza dell'indice specificato.|  
+  
+## <a name="remarks"></a>Note  
+ Un intero senza segno, o **UINT**, differisce da parole e Double Word in cui la dimensione fisica di un **UINT** può cambiare a seconda della destinazione ambiente operativo. Oggetto **UINT** è la stessa dimensione una parola doppia.  
+  
+ `CUIntArray`incorpora il [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic) (macro) per supportare l'accesso del tipo in fase di esecuzione e il dump di un [CDumpContext](../../mfc/reference/cdumpcontext-class.md) oggetto. Se è necessario un dump di intero senza segno a singoli elementi, è necessario impostare la profondità del contesto di dump a 1 o superiore. Matrici di interi senza segno non possono essere serializzate.  
   
 > [!NOTE]
->  Prima di utilizzo di una matrice, utilizzare `SetSize` per stabilire le dimensioni e per allocare memoria per.  Se non si utilizza `SetSize`, aggiungere elementi alla matrice in modo che venga ridistribuito e alla copia di frequente.  Il frequente riallocazione e copiare sono inefficaci e possono frammentare la memoria.  
+>  Prima di usare una matrice, usare `SetSize` per determinarne le dimensioni e allocare la necessaria memoria. Se non si usa `SetSize`, l'aggiunta di elementi alla matrice ne causa la riallocazione e la copia frequente. Le operazioni di riallocazione e copia frequenti sono inefficienti e possono frammentare la memoria.  
   
- Per ulteriori informazioni su l `CUIntArray`, vedere l'articolo [Raccolte](../../mfc/collections.md).  
+ Per ulteriori informazioni sull'utilizzo di `CUIntArray`, vedere l'articolo [raccolte](../../mfc/collections.md).  
   
-## Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CUIntArray`  
   
-## Requisiti  
- **Header:** afxcoll.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** afxcoll. h  
   
-## Vedere anche  
- [CObject Class](../../mfc/reference/cobject-class.md)   
+## <a name="see-also"></a>Vedere anche  
+ [CObject (classe)](../../mfc/reference/cobject-class.md)   
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)
+
+
+
+

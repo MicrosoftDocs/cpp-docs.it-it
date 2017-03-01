@@ -1,66 +1,82 @@
 ---
-title: "CMFCToolBarFontSizeComboBox Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CMFCToolBarFontSizeComboBox"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMFCToolBarFontSizeComboBox class"
+title: Classe CMFCToolBarFontSizeComboBox | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CMFCToolBarFontSizeComboBox
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMFCToolBarFontSizeComboBox class
 ms.assetid: 72e0c44c-6a0e-4194-a71f-ab64e3afb9b5
 caps.latest.revision: 26
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 28
----
-# CMFCToolBarFontSizeComboBox Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 9dddb563617a708bdc8b2193fa5ee8bd10321828
+ms.lasthandoff: 02/24/2017
 
-Un pulsante della barra degli strumenti contenente un controllo casella combinata che consente all'utente di selezionare una dimensione del carattere.  
+---
+# <a name="cmfctoolbarfontsizecombobox-class"></a>Classe CMFCToolBarFontSizeComboBox
+Un pulsante della barra degli strumenti contenente un controllo casella combinata che consente all'utente di selezionare una dimensione.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 class CMFCToolBarFontSizeComboBox : public CMFCToolBarComboBoxButton  
 ```  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Costruttori protetti  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[CMFCToolBarFontSizeComboBox::CMFCToolBarFontSizeComboBox](../Topic/CMFCToolBarFontSizeComboBox::CMFCToolBarFontSizeComboBox.md)|Costruisce un oggetto `CMFCToolBarFontSizeComboBox`.|  
-  
-### Metodi pubblici  
+### <a name="protected-constructors"></a>Costruttori protetti  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CMFCToolBarFontSizeComboBox::GetTwipSize](../Topic/CMFCToolBarFontSizeComboBox::GetTwipSize.md)|Restituisce la dimensione del carattere selezionata in twips.|  
-|[CMFCToolBarFontSizeComboBox::RebuildFontSizes](../Topic/CMFCToolBarFontSizeComboBox::RebuildFontSizes.md)|Compila l'elenco della casella combinata di tutte le dimensioni dei caratteri supportati per un determinato tipo di carattere.|  
-|[CMFCToolBarFontSizeComboBox::SetTwipSize](../Topic/CMFCToolBarFontSizeComboBox::SetTwipSize.md)|Imposta la dimensione del carattere in twips.|  
+|[CMFCToolBarFontSizeComboBox::CMFCToolBarFontSizeComboBox](#cmfctoolbarfontsizecombobox)|Costruisce un oggetto `CMFCToolBarFontSizeComboBox`.|  
   
-## Note  
- È possibile utilizzare un oggetto `CMFCToolBarFontSizeComboBox` insieme a un oggetto [CMFCToolBarFontComboBox Class](../../mfc/reference/cmfctoolbarfontcombobox-class.md) per consentire a un utente di selezionare un tipo di carattere e la dimensione del carattere.  
+### <a name="public-methods"></a>Metodi pubblici  
   
- È possibile aggiungere un pulsante della casella combinata della dimensione del carattere una barra degli strumenti come aggiungere un pulsante della casella combinata di carattere.  Per ulteriori informazioni, vedere [CMFCToolBarFontComboBox Class](../../mfc/reference/cmfctoolbarfontcombobox-class.md).  
+|Nome|Descrizione|  
+|----------|-----------------|  
+|[CMFCToolBarFontSizeComboBox::GetTwipSize](#gettwipsize)|Restituisce la dimensione del tipo di carattere selezionato in twip.|  
+|[CMFCToolBarFontSizeComboBox::RebuildFontSizes](#rebuildfontsizes)|Riempie l'elenco della casella combinata con tutte le dimensioni dei caratteri supportate per un tipo di carattere specificata.|  
+|[CMFCToolBarFontSizeComboBox::SetTwipSize](#settwipsize)|Imposta le dimensioni del carattere in twip.|  
   
- Quando l'utente seleziona una nuova il carattere in un oggetto `CMFCToolBarFontComboBox`, è possibile riempire la casella combinata della dimensione del carattere di dimensioni supportate per tale tipo di carattere utilizzando il metodo [CMFCToolBarFontSizeComboBox::RebuildFontSizes](../Topic/CMFCToolBarFontSizeComboBox::RebuildFontSizes.md).  
+## <a name="remarks"></a>Note  
+ È possibile utilizzare un `CMFCToolBarFontSizeComboBox` oggetto insieme con un [CMFCToolBarFontComboBox classe](../../mfc/reference/cmfctoolbarfontcombobox-class.md) sull'oggetto per consentire all'utente di selezionare un tipo di carattere.  
   
-## Esempio  
- Nell'esempio seguente viene illustrato come utilizzare i vari metodi della classe `CMFCToolBarFontSizeComboBox` per configurare un oggetto `CMFCToolBarFontSizeComboBox`.  Nell'esempio viene illustrato come recuperare la dimensione del carattere, in twips, dalla casella di testo, definire la casella combinata della dimensione del carattere con tutte le dimensioni corrette di carattere specificata e specifica la dimensione del carattere in twips.  Questo frammento di codice fa parte [Esempio di cuscinetto di Word](../../top/visual-cpp-samples.md).  
+ Come aggiungere un pulsante della casella combinata tipo di carattere, è possibile aggiungere un pulsante della casella combinata dimensioni del carattere di una barra degli strumenti. Per ulteriori informazioni, vedere [CMFCToolBarFontComboBox classe](../../mfc/reference/cmfctoolbarfontcombobox-class.md).  
   
- [!code-cpp[NVC_MFC_WordPad#8](../../mfc/reference/codesnippet/CPP/cmfctoolbarfontsizecombobox-class_1.cpp)]  
+ Quando l'utente seleziona un nuovo tipo di carattere in un `CMFCToolBarFontComboBox` dell'oggetto, è possibile compilare la casella combinata dimensioni carattere con le dimensioni supportate per il tipo di carattere utilizzando il [CMFCToolBarFontSizeComboBox::RebuildFontSizes](#rebuildfontsizes) metodo.  
   
-## Gerarchia di ereditarietà  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come utilizzare metodi diversi di `CMFCToolBarFontSizeComboBox` (classe) per configurare un `CMFCToolBarFontSizeComboBox` oggetto. Nell'esempio viene illustrato come recuperare le dimensioni del carattere, in twip, dalla casella di testo, compilare la casella combinata dimensioni carattere con tutte le dimensioni valide del tipo di carattere specificato e specificare le dimensioni del carattere in twip. Questo frammento di codice fa parte di [esempio riempimento Word](../../visual-cpp-samples.md).  
+  
+ [!code-cpp[NVC_MFC_WordPad n.&8;](../../mfc/reference/codesnippet/cpp/cmfctoolbarfontsizecombobox-class_1.cpp)]  
+  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)  
@@ -69,15 +85,64 @@ class CMFCToolBarFontSizeComboBox : public CMFCToolBarComboBoxButton
   
  [CMFCToolBarFontSizeComboBox](../../mfc/reference/cmfctoolbarfontsizecombobox-class.md)  
   
-## Requisiti  
- **intestazione:** afxtoolbarfontcombobox.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** afxtoolbarfontcombobox.h  
   
-## Vedere anche  
+##  <a name="a-namecmfctoolbarfontsizecomboboxa--cmfctoolbarfontsizecomboboxcmfctoolbarfontsizecombobox"></a><a name="cmfctoolbarfontsizecombobox"></a>CMFCToolBarFontSizeComboBox::CMFCToolBarFontSizeComboBox  
+ Costruisce un oggetto `CMFCToolBarFontSizeComboBox`.  
+  
+```  
+CMFCToolBarFontSizeComboBox();
+```  
+  
+##  <a name="a-namegettwipsizea--cmfctoolbarfontsizecomboboxgettwipsize"></a><a name="gettwipsize"></a>CMFCToolBarFontSizeComboBox::GetTwipSize  
+ Recupera le dimensioni del carattere, in twip, dalla casella di testo di una casella combinata di dimensioni del carattere.  
+  
+```  
+int GetTwipSize() const;  
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ Se il valore restituito è positivo, è la dimensione del carattere in twip. È -1 se la casella di testo della casella combinata è vuota. Se si verifica un errore, è -2.  
+  
+##  <a name="a-namerebuildfontsizesa--cmfctoolbarfontsizecomboboxrebuildfontsizes"></a><a name="rebuildfontsizes"></a>CMFCToolBarFontSizeComboBox::RebuildFontSizes  
+ Riempie una casella combinata di dimensioni del carattere con tutte le dimensioni valide del tipo di carattere specificato.  
+  
+```  
+void RebuildFontSizes(const CString& strFontName);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `[in] strFontName`  
+ Specifica un nome di carattere.  
+  
+### <a name="remarks"></a>Note  
+ Chiamare questa funzione quando si desidera sincronizzare tra la selezione di una casella combinata tipo di carattere e una casella combinata dimensioni del carattere, ad esempio un [CMFCToolBarFontComboBox classe](../../mfc/reference/cmfctoolbarfontcombobox-class.md).  
+  
+##  <a name="a-namesettwipsizea--cmfctoolbarfontsizecomboboxsettwipsize"></a><a name="settwipsize"></a>CMFCToolBarFontSizeComboBox::SetTwipSize  
+ Arrotonda specificato dimensioni (in twip) a quella più vicino, e quindi viene selezionato nella casella combinata con tale valore.  
+  
+```  
+void SetTwipSize(int nSize);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in] `nSize`  
+ Specifica le dimensioni del carattere (twip) per impostare.  
+  
+### <a name="remarks"></a>Note  
+ È possibile recuperare le dimensioni del carattere valido precedente in un secondo momento chiamando la [CMFCToolBarFontSizeComboBox::GetTwipSize](#gettwipsize) metodo.  
+  
+## <a name="see-also"></a>Vedere anche  
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
  [Classi](../../mfc/reference/mfc-classes.md)   
- [CMFCToolBar Class](../../mfc/reference/cmfctoolbar-class.md)   
- [CMFCToolBarButton Class](../../mfc/reference/cmfctoolbarbutton-class.md)   
- [CMFCToolBarComboBoxButton Class](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)   
- [CMFCFontInfo Class](../../mfc/reference/cmfcfontinfo-class.md)   
- [CMFCToolBar::ReplaceButton](../Topic/CMFCToolBar::ReplaceButton.md)   
- [Procedura dettagliata: inserimento di controlli nelle barre degli strumenti](../../mfc/walkthrough-putting-controls-on-toolbars.md)
+ [Classe CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)   
+ [Classe CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)   
+ [Classe CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)   
+ [Classe CMFCFontInfo](../../mfc/reference/cmfcfontinfo-class.md)   
+ [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)   
+ [Procedura dettagliata: Inserimento di controlli nelle barre degli strumenti](../../mfc/walkthrough-putting-controls-on-toolbars.md)
+
+
+
+

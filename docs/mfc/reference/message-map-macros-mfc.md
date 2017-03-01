@@ -1,68 +1,87 @@
 ---
-title: "Macro della mappa messaggi (MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.messages"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "demarcazione di messaggi Windows"
-  - "macro della mappa messaggi"
-  - "intervalli della mappa messaggi"
-  - "macro di mapping di messaggi"
-  - "mappe messaggi [C++], dichiarazione e demarcazione"
-  - "mappe messaggi [C++], macro"
-  - "intervalli, mappa messaggi"
-  - "messaggi Windows [C++], dichiarazione"
+title: Macro della mappa (MFC) del messaggio | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.messages
+dev_langs:
+- C++
+helpviewer_keywords:
+- message map macros
+- Windows messages [C++], declaration
+- demarcating Windows messages
+- message maps [C++], macros
+- message maps [C++], declaration and demarcation
+- message mapping macros
+- ranges, message map
+- message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Macro della mappa messaggi (MFC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
+ms.openlocfilehash: f890e0675be58c8e20e313bea54b4145e2ce0bf3
+ms.lasthandoff: 02/24/2017
 
-Per supportare le mappe messaggi, MFC fornisce le seguenti macro:  
+---
+# <a name="message-map-macros-mfc"></a>Macro della mappa messaggi (MFC)
+Per supportare le mappe dei messaggi, MFC fornisce le seguenti macro:  
   
-### Macro di dichiarazione e di delimitazione della mappa messaggi  
-  
-|||  
-|-|-|  
-|[DECLARE\_MESSAGE\_MAP](../Topic/DECLARE_MESSAGE_MAP.md)|Indica che una mappa messaggi verranno utilizzate nella classe per eseguire il mapping di messaggi a funzioni \(deve essere utilizzato nella dichiarazione di classe\).|  
-|[BEGIN\_MESSAGE\_MAP](../Topic/BEGIN_MESSAGE_MAP.md)|Iniziare la definizione di una mappa messaggi \(che sarà utilizzato nell'implementazione della classe.|  
-|[END\_MESSAGE\_MAP](../Topic/END_MESSAGE_MAP.md)|Termina la definizione di una mappa messaggi \(che sarà utilizzato nell'implementazione della classe.|  
-  
-### Macro di mapping Messaggio\-  
+### <a name="message-map-declaration-and-demarcation-macros"></a>Mappa messaggi dichiarazione e delimitazione della macro  
   
 |||  
 |-|-|  
-|[ON\_COMMAND](../Topic/ON_COMMAND.md)|Indica quale funzione gestirà un messaggio di comando specificato.|  
-|[ON\_CONTROL](../Topic/ON_CONTROL.md)|Indica quale funzione gestirà un messaggio di notifica del controllo specificato.|  
-|[ON\_MESSAGE](../Topic/ON_MESSAGE.md)|Indica quale funzione gestirà un messaggio definito dall'utente.|  
-|[ON\_OLECMD](../Topic/ON_OLECMD.md)|Indica quale funzione gestisce un comando di menu da un DocObject o dal relativo contenitore.|  
-|[ON\_REGISTERED\_MESSAGE](../Topic/ON_REGISTERED_MESSAGE.md)|Indica quale funzione gestirà un messaggio definito dall'utente registrato.|  
-|[ON\_REGISTERED\_THREAD\_MESSAGE](../Topic/ON_REGISTERED_THREAD_MESSAGE.md)|Indica quale funzione gestirà un messaggio definito dall'utente registrato quando si dispone di una classe di `CWinThread`.|  
-|[ON\_THREAD\_MESSAGE](../Topic/ON_THREAD_MESSAGE.md)|Indica quale funzione gestirà un messaggio definito dall'utente quando è una classe di `CWinThread`.|  
-|[ON\_UPDATE\_COMMAND\_UI](../Topic/ON_UPDATE_COMMAND_UI.md)|Indica quale funzione gestirà un messaggio di comando specificato update dell'interfaccia utente.|  
+|[DECLARE_MESSAGE_MAP](http://msdn.microsoft.com/library/c225e7e0-a81b-495c-97f9-3e0aa1f65036)|Dichiara che una mappa di messaggi da utilizzare in una classe per il mapping di messaggi a funzioni (deve essere utilizzata nella dichiarazione di classe).|  
+|[BEGIN_MESSAGE_MAP](http://msdn.microsoft.com/library/d9201e18-04e0-4639-9810-f15768627fc2)|Inizia la definizione di una mappa messaggi (deve essere utilizzata nell'implementazione della classe).|  
+|[END_MESSAGE_MAP](http://msdn.microsoft.com/library/40f611f1-a3b4-4097-b683-091bf7cfab8b)|Termina la definizione di una mappa messaggi (deve essere utilizzata nell'implementazione della classe).|  
   
-### Macro di intervallo della mappa messaggi  
+### <a name="message-mapping-macros"></a>Macro di Mapping di messaggi  
   
 |||  
 |-|-|  
-|[ON\_COMMAND\_RANGE](../Topic/ON_COMMAND_RANGE.md)|Indica quale funzione gestirà l'intervallo di ID di comandi specificati nei primi due parametri alla macro.|  
-|[ON\_UPDATE\_COMMAND\_UI\_RANGE](../Topic/ON_UPDATE_COMMAND_UI_RANGE.md)|Indica il gestore aggiornamento gestirà l'intervallo di ID di comandi specificati nei primi due parametri alla macro.|  
-|[ON\_CONTROL\_RANGE](../Topic/ON_CONTROL_RANGE.md)|Indica quale funzione gestirà le notifiche dall'intervallo di controllo ID specificato nel secondo e il terzo parametro alla macro.  Il primo parametro è un messaggio di notifica del controllo, come **BN\_CLICKED**.|  
+|[ON_COMMAND](http://msdn.microsoft.com/library/f24f8bda-2cf4-49d5-aa3d-6f2e6bb003f2)|Indica quale funzione che gestirà un messaggio di comando specificato.|  
+|[ON_CONTROL](http://msdn.microsoft.com/library/2cb7ebdf-296b-4606-b191-3449835003db)|Indica quale funzione che gestirà un messaggio di notifica del controllo specificato.|  
+|[ON_MESSAGE](http://msdn.microsoft.com/library/e2faeb13-9f6e-4c0d-9f6d-b2e141a0db1e)|Indica quale funzione che gestirà un messaggio definito dall'utente.|  
+|[ON_OLECMD](http://msdn.microsoft.com/library/6c86327c-3d48-42ac-9dae-e0ccd3a81793)|Indica quale funzione che gestirà un comando di menu da DocObject o il relativo contenitore.|  
+|[ON_REGISTERED_MESSAGE](http://msdn.microsoft.com/library/93c1c068-ae8c-4e04-8a60-a603800ab57d)|Indica quale funzione che gestirà un messaggio definito dall'utente registrato.|  
+|[ON_REGISTERED_THREAD_MESSAGE](http://msdn.microsoft.com/library/3f598bc2-b2f0-410f-8ba0-7714502170f3)|Indica quale funzione che gestirà un messaggio definito dall'utente registrato quando si dispone di un `CWinThread` (classe).|  
+|[ON_THREAD_MESSAGE](http://msdn.microsoft.com/library/f718f47a-d5b1-4514-914b-e3fe2d919003)|Indica quale funzione che gestirà un messaggio definito dall'utente quando si dispone di un `CWinThread` (classe).|  
+|[ON_UPDATE_COMMAND_UI](http://msdn.microsoft.com/library/c4de3c21-2d2e-4b89-a4ce-d0c0e2d9edc4)|Indica quale funzione che gestirà un messaggio di comando di aggiornamento dell'interfaccia utente specificato.|  
   
- Per ulteriori informazioni sulle mappe messaggi, le macro della dichiarazione della mappa messaggi e di delimitazione e macro di mapping messaggio\-, vedere [Mappe messaggi](../../mfc/reference/message-maps-mfc.md) e [Argomenti di mapping e di gestione dei messaggi](../../mfc/message-handling-and-mapping.md).  Per ulteriori informazioni sugli intervalli della mappa messaggi, vedere [Gestori per gli intervalli della mappa messaggi](../../mfc/handlers-for-message-map-ranges.md).  
+### <a name="message-map-range-macros"></a>Macro della mappa messaggi intervallo  
   
-## Vedere anche  
+|||  
+|-|-|  
+|[ON_COMMAND_RANGE](http://msdn.microsoft.com/library/c52719fc-dd6e-48c9-af79-383f48d608e0)|Indica quale funzione che gestirà l'intervallo di ID di comando specificati nei primi due parametri alla macro.|  
+|[ON_UPDATE_COMMAND_UI_RANGE](http://msdn.microsoft.com/library/b7105bf1-44ad-4b00-b947-31478f964729)|Indica che il gestore di aggiornamento consente di gestire l'intervallo di ID di comando specificati nei primi due parametri alla macro.|  
+|[ON_CONTROL_RANGE](http://msdn.microsoft.com/library/46f0e1bb-569b-4b8b-9b80-89701d1cd7fd)|Indica quale funzione che gestirà le notifiche da un intervallo di ID specificato nel secondo e terzo parametro per la macro di controllo. Il primo parametro è un messaggio di notifica del controllo, ad esempio **BN_CLICKED**.|  
+  
+ Per ulteriori informazioni su mappe messaggi, la dichiarazione della mappa messaggi e delimitazione della macro e le macro di mapping di messaggi, vedere [mappe messaggi](../../mfc/reference/message-maps-mfc.md) e [la gestione dei messaggi e gli argomenti di Mapping](../../mfc/message-handling-and-mapping.md). Per ulteriori informazioni sugli intervalli della mappa messaggi, vedere [gestori per intervalli della mappa messaggi](../../mfc/handlers-for-message-map-ranges.md).  
+  
+## <a name="see-also"></a>Vedere anche  
  [Mappe messaggi](../../mfc/reference/message-maps-mfc.md)
+
+
+

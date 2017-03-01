@@ -1,47 +1,63 @@
 ---
-title: "Errore irreversibile C1092 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1092"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1092"
+title: Errore irreversibile C1092 | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1092
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1092
 ms.assetid: bcaa87f0-fbfc-4a33-844b-3b9f5d67f279
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Errore irreversibile C1092
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 6cad5222fb0d97594d5b13b5cf8903eb2934ee88
+ms.openlocfilehash: 6d93fd662b638126e21d5f5f034138c0e6f0e0ad
+ms.lasthandoff: 02/24/2017
 
-Modifica e continuazione non supporta le modifiche ai tipi di dati. Richiesta compilazione  
+---
+# <a name="fatal-error-c1092"></a>Errore irreversibile C1092
+Con Modifica e continuazione non sono supportate le modifiche ai tipi di dati. È richiesta la compilazione  
   
- Dall'ultima compilazione riuscita è stato modificato o aggiunto un tipo di dati.  
+ È stato modificato o aggiunto un tipo di dati dall'ultima compilazione ha esito positivo.  
   
--   Nella funzione Modifica e continuazione non sono supportate le modifiche ai tipi di dati esistenti, incluse le definizioni di classi, strutture o enumeratori.  Interrompere il debug e compilare l'applicazione.  
+-   Modifica e continuazione non supporta le modifiche ai tipi di dati esistenti, comprese le definizioni di classe, struct o enum. È necessario interrompere il debug e compilare l'applicazione.  
   
--   Nella funzione Modifica e continuazione non è supportata l'aggiunta di nuovi tipi di dati se un file di database di programma, come vc*x*0.pdb \(dove *x* rappresenta la versione principale di Visual C\+\+ in uso\), è di sola lettura.  Per aggiungere un tipo di dati, è necessario che il file PDB venga aperto in scrittura nel compilatore.  
+-   Modifica e continuazione non supporta l'aggiunta di nuovi tipi di dati se un file di database di programma, ad esempio vc*x*=&0;. pdb (dove *x* è il numero di versione principale di Visual C++ in uso) è di sola lettura. Per aggiungere tipi di dati, il compilatore deve aprire il file con estensione PDB in modalità scrittura.  
   
-### Per correggere questo errore senza terminare la sessione di debug corrente  
+### <a name="to-remove-this-error-without-ending-the-current-debug-session"></a>Per correggere l'errore senza terminare la sessione di debug corrente  
   
-1.  Modificare il tipo di dati riportandolo allo stato precedente all'errore.  
+1.  Modificare il tipo di dati allo stato precedente all'errore.  
   
 2.  Scegliere **Applica modifiche del codice** dal menu **Debug**.  
   
-### Per correggere l'errore senza modificare il codice sorgente  
+### <a name="to-remove-this-error-without-changing-your-source-code"></a>Per rimuovere questo errore senza modificare il codice sorgente  
   
-1.  Scegliere **Termina debug** dal menu **Debug**.  
+1.  Scegliere **Arresta debug** dal menu **Debug**.  
   
-2.  Scegliere **Compila** dal menu **Compila**.  
+2.  Scegliere **Compila** dal menu **Compilazione**.  
   
- Per ulteriori informazioni, vedere [Modifiche del codice supportate](../Topic/Supported%20Code%20Changes%20\(C++\).md).
+ Per ulteriori informazioni, vedere il [modifiche al codice supportate](/visualstudio/debugger/supported-code-changes-cpp).

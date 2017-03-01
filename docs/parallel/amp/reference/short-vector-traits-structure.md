@@ -1,34 +1,51 @@
 ---
-title: "Struttura short_vector_traits | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "amp_short_vectors/Concurrency::graphics::short_vector_traits"
-dev_langs: 
-  - "C++"
+title: Struttura short_vector_traits | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- amp_short_vectors/Concurrency::graphics::short_vector_traits
+dev_langs:
+- C++
 ms.assetid: cd9492da-9e02-4a6e-9d50-b61252cdb460
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Struttura short_vector_traits
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 22ba62ab8b3b4f9d14953dbab3edd8228ea85193
+ms.openlocfilehash: aa123da5dfb5675a4b44d386224bf17e79df40a3
+ms.lasthandoff: 02/24/2017
 
-short\_vector\_traits consente il recupero della lunghezza del vettore sottostante e il tipo scalare di un vettore di tipo short o di tipo scalare  
+---
+# <a name="shortvectortraits-structure"></a>Struttura short_vector_traits
+short_vector_traits consente il recupero di un tipo scalare e un tipo scalare di un tipo di short vector o la lunghezza del vettore sottostante  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-template<  
-   typename _Type  
+template<
+    typename T  
 >  
 struct short_vector_traits;  
 template<>  
@@ -81,36 +98,49 @@ template<>
 struct short_vector_traits<double_4>;  
 ```  
   
-#### Parametri  
- `_Type`  
+#### <a name="parameters"></a>Parametri  
+ `T`  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Typedef pubblici  
+### <a name="public-typedefs"></a>Typedef pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
 |`value_type`||  
   
-### Costruttori pubblici  
+### <a name="public-constructors"></a>Costruttori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore short\_vector\_traits::short\_vector\_traits](../Topic/short_vector_traits::short_vector_traits%20Constructor.md)||  
+|[Costruttore short_vector_traits:: short_vector_traits](#ctor)||  
   
-### Costanti pubbliche  
+### <a name="public-constants"></a>Costanti pubbliche  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costante short\_vector\_traits::size](../Topic/short_vector_traits::size%20Constant.md)||  
+|[Costante short_vector_traits:: Size](#size)||  
   
-## Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `short_vector_traits`  
   
-## Requisiti  
- **Intestazione:** amp\_short\_vectors.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** amp_short_vectors.h  
   
- **Spazio dei nomi:** Concurrency::graphics  
+ **Namespace:** Concurrency:: Graphics  
   
-## Vedere anche  
- [Spazio dei nomi Concurrency::graphics](../../../parallel/amp/reference/concurrency-graphics-namespace.md)
+##  <a name="a-namectora--shortvectortraitsshortvectortraits-constructor"></a><a name="ctor"></a>Costruttore short_vector_traits:: short_vector_traits  
+  
+```  
+short_vector_traits();
+```  
+  
+##  <a name="a-namesizea--shortvectortraitssize-constant"></a><a name="size"></a>Costante short_vector_traits:: Size  
+  
+```  
+static int const size = 1;  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Concurrency:: Graphics Namespace](concurrency-graphics-namespace.md)
+

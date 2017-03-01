@@ -1,67 +1,226 @@
 ---
-title: "Struttura IScheduler | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "concrtrm/concurrency::IScheduler"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IScheduler (struttura)"
+title: IScheduler (struttura) | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concrtrm/concurrency::IScheduler
+dev_langs:
+- C++
+helpviewer_keywords:
+- IScheduler structure
 ms.assetid: 471de85a-2b1a-4b6d-ab81-2eff2737161e
 caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# Struttura IScheduler
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
+ms.openlocfilehash: fd8733bdcf113497b82cb2559eaba5a6a4a15165
+ms.lasthandoff: 02/24/2017
 
-Un'interfaccia a un'astrazione di un'utilità di pianificazione del lavoro.  Gestione risorse del runtime di concorrenza utilizza tale interfaccia per comunicare con le utilità di pianificazione del lavoro.  
+---
+# <a name="ischeduler-structure"></a>Struttura IScheduler
+Un'interfaccia a un'astrazione di un'utilità di pianificazione del lavoro. Gestione risorse del runtime di concorrenza usa tale interfaccia per comunicare con le utilità di pianificazione del lavoro.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
+```
+struct IScheduler;
 ```  
-struct IScheduler;  
-```  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Metodi pubblici  
+### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Metodo IScheduler::AddVirtualProcessors](../Topic/IScheduler::AddVirtualProcessors%20Method.md)|Consente di offrire a un'utilità di pianificazione un set di radici del processore virtuale per l'utilizzo.  Ogni interfaccia `IVirtualProcessorRoot` rappresenta il diritto di eseguire un solo thread che possa eseguire lavoro per conto dell'utilità di pianificazione.|  
-|[Metodo IScheduler::GetId](../Topic/IScheduler::GetId%20Method.md)|Consente di restituire un identificatore univoco per l'utilità di pianificazione.|  
-|[Metodo IScheduler::GetPolicy](../Topic/IScheduler::GetPolicy%20Method.md)|Consente di restituire una copia dei criteri dell'utilità di pianificazione.  Per ulteriori informazioni sui criteri dell'utilità di pianificazione, vedere [SchedulerPolicy](../../../parallel/concrt/reference/schedulerpolicy-class.md).|  
-|[Metodo IScheduler::NotifyResourcesExternallyBusy](../Topic/IScheduler::NotifyResourcesExternallyBusy%20Method.md)|Notifica a questa utilità di pianificazione che i thread di hardware rappresentati dal set di radici del processore virtuale nella matrice `ppVirtualProcessorRoots` sono ora utilizzati da altre utilità di pianificazione.|  
-|[Metodo IScheduler::NotifyResourcesExternallyIdle](../Topic/IScheduler::NotifyResourcesExternallyIdle%20Method.md)|Notifica a questa utilità di pianificazione che i thread di hardware rappresentati dal set di radici del processore virtuale nella matrice `ppVirtualProcessorRoots` non sono utilizzati da altre utilità di pianificazione.|  
-|[Metodo IScheduler::RemoveVirtualProcessors](../Topic/IScheduler::RemoveVirtualProcessors%20Method.md)|Inizia la rimozione di radici del processore virtuale che sono state allocate precedentemente a questa utilità di pianificazione.|  
-|[Metodo IScheduler::Statistics](../Topic/IScheduler::Statistics%20Method.md)|Consente di fornire informazioni correlate alle frequenze di arrivo e completamento delle attività, nonché modificare la lunghezza della coda per un'utilità di pianificazione.|  
+|[Metodo IScheduler:: AddVirtualProcessors](#addvirtualprocessors)|Fornisce un'utilità di pianificazione con un insieme di radici del processore virtuale per l'utilizzo. Ogni `IVirtualProcessorRoot` interfaccia rappresenta il diritto di eseguire un thread singolo che può eseguire operazioni per conto di utilità di pianificazione.|  
+|[Metodo IScheduler:: GetID](#getid)|Restituisce un identificatore univoco per l'utilità di pianificazione.|  
+|[Metodo IScheduler:: GetPolicy](#getpolicy)|Restituisce una copia dei criteri dell'utilità di pianificazione. Per ulteriori informazioni sui criteri dell'utilità di pianificazione, vedere [SchedulerPolicy](schedulerpolicy-class.md).|  
+|[Metodo IScheduler:: NotifyResourcesExternallyBusy](#notifyresourcesexternallybusy)|Notifica all'utilità di pianificazione che i thread di hardware rappresentati dal set di radici del processore virtuale nella matrice `ppVirtualProcessorRoots` ora utilizzati da altre utilità di pianificazione.|  
+|[Metodo IScheduler:: NotifyResourcesExternallyIdle](#notifyresourcesexternallyidle)|Notifica all'utilità di pianificazione che i thread di hardware rappresentati dal set di radici del processore virtuale nella matrice `ppVirtualProcessorRoots` non vengono utilizzati da altre utilità di pianificazione.|  
+|[Metodo IScheduler:: RemoveVirtualProcessors](#removevirtualprocessors)|Avvia la rimozione di radici del processore virtuale che sono stati precedentemente allocato all'utilità di pianificazione.|  
+|[Metodo IScheduler:: STATISTICS](#statistics)|Fornisce informazioni relative alla velocità di arrivo e il completamento delle attività e modifica della lunghezza della coda per un'utilità di pianificazione.|  
   
-## Note  
- Se si implementa un'utilità di pianificazione personalizzata che comunica con il gestore risorse, è necessario fornire un'implementazione dell'interfaccia `IScheduler`.  Questa interfaccia corrisponde a un'entità finale di un canale bidirezionale di comunicazione tra un'utilità di pianificazione e Gestione risorse.  L'altra entità finale viene rappresentata dalle interfacce `IResourceManager` e `ISchedulerProxy` implementate da Gestione risorse.  
+## <a name="remarks"></a>Note  
+ Se si implementa un'utilità di pianificazione personalizzata che comunica con Gestione risorse, è necessario fornire un'implementazione del `IScheduler` interfaccia. Questa interfaccia è un'estremità di un canale di comunicazione tra un'utilità di pianificazione e Gestione risorse di bidirezionale. L'altra estremità è rappresentata dal `IResourceManager` e `ISchedulerProxy` le interfacce implementate dal gestore delle risorse.  
   
-## Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `IScheduler`  
   
-## Requisiti  
- **Header:** concrtrm.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** concrtrm. h  
   
- Concorrenza di**Spazio dei nomi:**  
+ **Spazio dei nomi:** Concurrency  
   
-## Vedere anche  
- [Spazio dei nomi concurrency](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [Enumerazione PolicyElementKey](../Topic/PolicyElementKey%20Enumeration.md)   
- [Classe SchedulerPolicy](../../../parallel/concrt/reference/schedulerpolicy-class.md)   
- [Struttura IExecutionContext](../../../parallel/concrt/reference/iexecutioncontext-structure.md)   
- [Struttura IThreadProxy](../../../parallel/concrt/reference/ithreadproxy-structure.md)   
- [Struttura IVirtualProcessorRoot](../../../parallel/concrt/reference/ivirtualprocessorroot-structure.md)   
- [Struttura IResourceManager](../../../parallel/concrt/reference/iresourcemanager-structure.md)
+##  <a name="a-nameaddvirtualprocessorsa--ischeduleraddvirtualprocessors-method"></a><a name="addvirtualprocessors"></a>Metodo IScheduler:: AddVirtualProcessors  
+ Fornisce un'utilità di pianificazione con un insieme di radici del processore virtuale per l'utilizzo. Ogni `IVirtualProcessorRoot` interfaccia rappresenta il diritto di eseguire un thread singolo che può eseguire operazioni per conto di utilità di pianificazione.  
+  
+```
+virtual void AddVirtualProcessors(
+    _In_reads_(count) IVirtualProcessorRoot** ppVirtualProcessorRoots,
+    unsigned int count) = 0;
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `ppVirtualProcessorRoots`  
+ Matrice di `IVirtualProcessorRoot` le radici di interfacce che rappresentano il processore virtuale da aggiungere all'utilità di pianificazione.  
+  
+ `count`  
+ Il numero di `IVirtualProcessorRoot` interfacce nella matrice.  
+  
+### <a name="remarks"></a>Note  
+ Richiama il gestore delle risorse di `AddVirtualProcessor` metodo per concedere a un insieme di radici del processore virtuale iniziale per un'utilità di pianificazione. Anche possibile richiamare il metodo per aggiungere le radici del processore virtuale per l'utilità di pianificazione quando eseguito il ribilanciamento delle risorse tra le utilità di pianificazione.  
+  
+##  <a name="a-namegetida--ischedulergetid-method"></a><a name="getid"></a>Metodo IScheduler:: GetID  
+ Restituisce un identificatore univoco per l'utilità di pianificazione.  
+  
+```
+virtual unsigned int GetId() const = 0;
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ Un identificatore univoco di tipo integer.  
+  
+### <a name="remarks"></a>Note  
+ Si consiglia di utilizzare il [GetSchedulerId](concurrency-namespace-functions.md) funzione per ottenere un identificatore univoco per l'oggetto che implementa il `IScheduler` interfaccia, prima di utilizzare l'interfaccia come parametro ai metodi forniti da Gestione risorse. Devono restituire lo stesso identificatore quando il `GetId` funzione viene richiamata.  
+  
+ Un identificatore ottenuto da un'origine diversa potrebbe causare un comportamento indefinito.  
+  
+##  <a name="a-namegetpolicya--ischedulergetpolicy-method"></a><a name="getpolicy"></a>Metodo IScheduler:: GetPolicy  
+ Restituisce una copia dei criteri dell'utilità di pianificazione. Per ulteriori informazioni sui criteri dell'utilità di pianificazione, vedere [SchedulerPolicy](schedulerpolicy-class.md).  
+  
+```
+virtual SchedulerPolicy GetPolicy() const = 0;
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ Una copia dei criteri dell'utilità di pianificazione.  
+  
+##  <a name="a-namenotifyresourcesexternallybusya--ischedulernotifyresourcesexternallybusy-method"></a><a name="notifyresourcesexternallybusy"></a>Metodo IScheduler:: NotifyResourcesExternallyBusy  
+ Notifica all'utilità di pianificazione che i thread di hardware rappresentati dal set di radici del processore virtuale nella matrice `ppVirtualProcessorRoots` ora utilizzati da altre utilità di pianificazione.  
+  
+```
+virtual void NotifyResourcesExternallyBusy(
+    _In_reads_(count) IVirtualProcessorRoot** ppVirtualProcessorRoots,
+    unsigned int count) = 0;
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `ppVirtualProcessorRoots`  
+ Matrice di `IVirtualProcessorRoot` le interfacce associate al thread di hardware in cui altre utilità di pianificazione sono diventate occupato.  
+  
+ `count`  
+ Il numero di `IVirtualProcessorRoot` interfacce nella matrice.  
+  
+### <a name="remarks"></a>Note  
+ È possibile che un thread di hardware specifico da assegnare a più utilità di pianificazione allo stesso tempo. Una ragione potrebbe essere che non vi siano abbastanza thread di hardware sul sistema per soddisfare la concorrenza minima per tutte le utilità di pianificazione, senza la condivisione delle risorse. Un'altra possibilità è che le risorse siano temporaneamente assegnate alle altre utilità di pianificazione quando l'utilità di pianificazione proprietaria è non in uso, in tutte le sue radici del processore virtuale su tale thread hardware in corso la disattivazione.  
+  
+ Il livello di abbonamento di un thread di hardware è indicato il numero di thread sottoscritti e attivato le radici del processore virtuale associate al thread di hardware. Dal punto di vista dell'utilità di pianificazione specifica, il livello di abbonamento esterno di un thread di hardware è la parte di altre utilità di pianificazione contribuiscono alla sottoscrizione. Le notifiche che le risorse sono esternamente occupate vengono inviate a un'utilità di pianificazione quando si sposta il livello di sottoscrizione esterno per un thread di hardware da zero a un territorio positivo.  
+  
+ Le notifiche tramite questo metodo vengono inviate solo a utilità di pianificazione che dispongono di un criterio in cui il valore per il `MinConcurrency` è uguale al valore di chiave dei criteri di `MaxConcurrency` chiave dei criteri. Per ulteriori informazioni sui criteri dell'utilità di pianificazione, vedere [SchedulerPolicy](schedulerpolicy-class.md).  
+  
+ Un'utilità di pianificazione che qualifica le notifiche Ottiene un set di notifiche iniziali quando viene creato, che viene informato se le risorse che sono state appena assegnate sono esternamente inattivo o meno.  
+  
+##  <a name="a-namenotifyresourcesexternallyidlea--ischedulernotifyresourcesexternallyidle-method"></a><a name="notifyresourcesexternallyidle"></a>Metodo IScheduler:: NotifyResourcesExternallyIdle  
+ Notifica all'utilità di pianificazione che i thread di hardware rappresentati dal set di radici del processore virtuale nella matrice `ppVirtualProcessorRoots` non vengono utilizzati da altre utilità di pianificazione.  
+  
+```
+virtual void NotifyResourcesExternallyIdle(
+    _In_reads_(count) IVirtualProcessorRoot** ppVirtualProcessorRoots,
+    unsigned int count) = 0;
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `ppVirtualProcessorRoots`  
+ Matrice di `IVirtualProcessorRoot` le interfacce associate al thread di hardware in cui altre utilità di pianificazione sono diventate inattive.  
+  
+ `count`  
+ Il numero di `IVirtualProcessorRoot` interfacce nella matrice.  
+  
+### <a name="remarks"></a>Note  
+ È possibile che un thread di hardware specifico da assegnare a più utilità di pianificazione allo stesso tempo. Una ragione potrebbe essere che non vi siano abbastanza thread di hardware sul sistema per soddisfare la concorrenza minima per tutte le utilità di pianificazione, senza la condivisione delle risorse. Un'altra possibilità è che le risorse siano temporaneamente assegnate alle altre utilità di pianificazione quando l'utilità di pianificazione proprietaria è non in uso, in tutte le sue radici del processore virtuale su tale thread hardware in corso la disattivazione.  
+  
+ Il livello di abbonamento di un thread di hardware è indicato il numero di thread sottoscritti e attivato le radici del processore virtuale associate al thread di hardware. Dal punto di vista dell'utilità di pianificazione specifica, il livello di abbonamento esterno di un thread di hardware è la parte di altre utilità di pianificazione contribuiscono alla sottoscrizione. Le notifiche che le risorse sono esternamente occupate vengono inviate a un'utilità di pianificazione quando il livello di sottoscrizione esterno per un thread di hardware scende a zero da un valore positivo precedente.  
+  
+ Le notifiche tramite questo metodo vengono inviate solo a utilità di pianificazione che dispongono di un criterio in cui il valore per il `MinConcurrency` è uguale al valore di chiave dei criteri di `MaxConcurrency` chiave dei criteri. Per ulteriori informazioni sui criteri dell'utilità di pianificazione, vedere [SchedulerPolicy](schedulerpolicy-class.md).  
+  
+ Un'utilità di pianificazione che qualifica le notifiche Ottiene un set di notifiche iniziali quando viene creato, che viene informato se le risorse che sono state appena assegnate sono esternamente inattivo o meno.  
+  
+##  <a name="a-nameremovevirtualprocessorsa--ischedulerremovevirtualprocessors-method"></a><a name="removevirtualprocessors"></a>Metodo IScheduler:: RemoveVirtualProcessors  
+ Avvia la rimozione di radici del processore virtuale che sono stati precedentemente allocato all'utilità di pianificazione.  
+  
+```
+virtual void RemoveVirtualProcessors(
+    _In_reads_(count) IVirtualProcessorRoot** ppVirtualProcessorRoots,
+    unsigned int count) = 0;
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `ppVirtualProcessorRoots`  
+ Matrice di `IVirtualProcessorRoot` interfacce che rappresentano le radici del processore virtuale da rimuovere.  
+  
+ `count`  
+ Il numero di `IVirtualProcessorRoot` interfacce nella matrice.  
+  
+### <a name="remarks"></a>Note  
+ Richiama il gestore delle risorse di `RemoveVirtualProcessors` metodo per riprendere un insieme di radici del processore virtuale da un'utilità di pianificazione. L'utilità di pianificazione deve richiamare il [rimuovere](iexecutionresource-structure.md#remove) metodo su ogni interfaccia quando avviene con le radici del processore virtuale. Non utilizzare un `IVirtualProcessorRoot` interfaccia dopo che è stato richiamato il `Remove` metodo su di esso.  
+  
+ Il parametro `ppVirtualProcessorRoots` punta a una matrice di interfacce. Tra l'insieme di radici del processore virtuale da rimuovere, non sono mai state attivate le radici possono essere restituite utilizzando immediatamente il `Remove` metodo. Le radici che sono state attivate ed eseguono il lavoro, o sono state disattivate e sono in attesa di lavoro in entrata, devono essere restituite in modo asincrono. L'utilità di pianificazione deve verificare ogni tentativo di eliminare la radice del processore virtuale al più presto. La rimozione ritardata delle radici del processore virtuale può comportare l'oversubscription non intenzionale in utilità di pianificazione.  
+  
+##  <a name="a-namestatisticsa--ischedulerstatistics-method"></a><a name="statistics"></a>Metodo IScheduler:: STATISTICS  
+ Fornisce informazioni relative alla velocità di arrivo e il completamento delle attività e modifica della lunghezza della coda per un'utilità di pianificazione.  
+  
+```
+virtual void Statistics(
+    _Out_ unsigned int* pTaskCompletionRate,
+    _Out_ unsigned int* pTaskArrivalRate,
+    _Out_ unsigned int* pNumberOfTasksEnqueued) = 0;
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `pTaskCompletionRate`  
+ Il numero di attività che sono stati completati dall'utilità di pianificazione dall'ultima chiamata a questo metodo.  
+  
+ `pTaskArrivalRate`  
+ Il numero di attività arrivate nell'utilità di pianificazione dall'ultima chiamata a questo metodo.  
+  
+ `pNumberOfTasksEnqueued`  
+ Numero totale di attività in tutte le code dell'utilità di pianificazione.  
+  
+### <a name="remarks"></a>Note  
+ Questo metodo viene richiamato dal gestore delle risorse per raggruppare le statistiche per un'utilità di pianificazione. Le statistiche qui raccolte verranno utilizzate per guidare gli algoritmi di feedback dinamico per determinare quando è opportuno assegnare più risorse all'utilità di pianificazione e quando sottrarre risorse. I valori forniti dall'utilità di pianificazione possono essere ottimistici e non necessariamente in modo da riflettere il numero corrente in modo accurato.  
+  
+ È necessario implementare questo metodo se si desidera che in Gestione risorse venga utilizzato un feedback in merito all'arrivo delle attività per determinare come bilanciare la risorsa tra la propria utilità di pianificazione e le altre registrate con Gestione risorse. Se si sceglie di non raccogliere le statistiche, è possibile impostare la chiave di criterio `DynamicProgressFeedback` sul valore `DynamicProgressFeedbackDisabled` in criteri dell'utilità di pianificazione e la risorsa gestore non richiamerà questo metodo nell'utilità di pianificazione.  
+  
+ In assenza di informazioni statistiche, il gestore di risorse utilizzerà i livelli di abbonamento thread hardware per le decisioni risorse allocazione e la migrazione. Per ulteriori informazioni sui livelli di sottoscrizione, vedere [IExecutionResource:: CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel).  
+  
+## <a name="see-also"></a>Vedere anche  
+ [concorrenza Namespace](concurrency-namespace.md)   
+ [PolicyElementKey (enumerazione)](concurrency-namespace-enums.md)   
+ [SchedulerPolicy (classe)](schedulerpolicy-class.md)   
+ [IExecutionContext (struttura)](iexecutioncontext-structure.md)   
+ [IThreadProxy (struttura)](ithreadproxy-structure.md)   
+ [IVirtualProcessorRoot (struttura)](ivirtualprocessorroot-structure.md)   
+ [IResourceManager (struttura)](iresourcemanager-structure.md)
+

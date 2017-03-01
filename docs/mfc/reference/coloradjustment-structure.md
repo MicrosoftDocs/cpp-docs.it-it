@@ -1,44 +1,59 @@
 ---
-title: "Struttura COLORADJUSTMENT | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "COLORADJUSTMENT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COLORADJUSTMENT (struttura)"
+title: Struttura COLORADJUSTMENT | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- COLORADJUSTMENT
+dev_langs:
+- C++
+helpviewer_keywords:
+- COLORADJUSTMENT structure
 ms.assetid: 67fc4e63-0e0e-4fcb-8c45-aa5ebfefa013
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Struttura COLORADJUSTMENT
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 7f88877fa009abf4e811ba0a99b7e0e1683f998a
+ms.lasthandoff: 02/24/2017
 
-La struttura di `COLORADJUSTMENT` definisce i valori di regolazione dei colori utilizzati da funzioni di windows `StretchBlt` e di **StretchDIBits** quando la modalità di `StretchBlt` è **HALFTONE**.  
+---
+# <a name="coloradjustment-structure"></a>Struttura COLORADJUSTMENT
+Il `COLORADJUSTMENT` struttura definisce i valori di regolazione di colore utilizzati da Windows `StretchBlt` e **StretchDIBits** funzioni quando il `StretchBlt` modalità è **dei mezzitoni**.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      typedef struct  tagCOLORADJUSTMENT {    /* ca */  
-    WORD  caSize;  
-    WORD  caFlags;  
-    WORD  caIlluminantIndex;  
-    WORD  caRedGamma;  
-    WORD  caGreenGamma;  
-    WORD  caBlueGamma;  
-    WORD  caReferenceBlack;  
-    WORD  caReferenceWhite;  
+typedef struct  tagCOLORADJUSTMENT {    /* ca */  
+    WORD caSize;  
+    WORD caFlags;  
+    WORD caIlluminantIndex;  
+    WORD caRedGamma;  
+    WORD caGreenGamma;  
+    WORD caBlueGamma;  
+    WORD caReferenceBlack;  
+    WORD caReferenceWhite;  
     SHORT caContrast;  
     SHORT caBrightness;  
     SHORT caColorfulness;  
@@ -46,76 +61,79 @@ La struttura di `COLORADJUSTMENT` definisce i valori di regolazione dei colori u
 } COLORADJUSTMENT;  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  *caSize*  
  Specifica la dimensione della struttura in byte.  
   
  *caFlags*  
- Specifica come l'immagine di output deve essere preparata.  Questo membro è stato impostato a **NULL** o a qualsiasi combinazione dei seguenti valori:  
+ Specifica come deve essere preparato l'immagine di output. Questo membro può essere impostato su **NULL** o qualsiasi combinazione dei valori seguenti:  
   
--   **CA\_NEGATIVE** specifica se il segno negativo dell'immagine originale da visualizzare.  
+- **CA_NEGATIVE** specifica che deve essere visualizzato il corrispondente negativo dell'immagine originale.  
   
--   **CA\_LOG\_FILTER** specifica che una funzione logaritmica deve essere applicato a densità finale dei colori di output.  Questo aumento del contrasto di colore quando la luminanza è bassa.  
+- **CA_LOG_FILTER** specifica che una funzione logaritmica deve essere applicata per la densità dei colori output finale. Quando la luminosità è bassa aumenterà il contrasto.  
   
  *caIlluminantIndex*  
- Specifica la luminanza di una sorgente di luce in cui l'oggetto image verrà visualizzato.  Il membro può essere impostata su uno dei seguenti valori:  
+ Specifica la luminosità della sorgente di luce in cui viene visualizzato l'oggetto immagine. Questo membro può essere impostato su uno dei valori seguenti:  
   
--   **ILLUMINANT\_EQUAL\_ENERGY**  
+- **ILLUMINANT_EQUAL_ENERGY**  
   
--   **ILLUMINANT\_A**  
+- **ILLUMINANT_A**  
   
--   **ILLUMINANT\_B**  
+- **ILLUMINANT_B**  
   
--   **ILLUMINANT\_C**  
+- **ILLUMINANT_C**  
   
--   **ILLUMINANT\_D50**  
+- **ILLUMINANT_D50**  
   
--   **ILLUMINANT\_D55**  
+- **ILLUMINANT_D55**  
   
--   **ILLUMINANT\_D65**  
+- **ILLUMINANT_D65**  
   
--   **ILLUMINANT\_D75**  
+- **ILLUMINANT_D75**  
   
--   **ILLUMINANT\_F2**  
+- **ILLUMINANT_F2**  
   
--   **ILLUMINANT\_TURNGSTEN**  
+- **ILLUMINANT_TURNGSTEN**  
   
--   **ILLUMINANT\_DAYLIGHT**  
+- **ILLUMINANT_DAYLIGHT**  
   
--   **ILLUMINANT\_FLUORESCENT**  
+- **ILLUMINANT_FLUORESCENT**  
   
--   **ILLUMINANT\_NTSC**  
+- **ILLUMINANT_NTSC**  
   
  *caRedGamma*  
- Specifica l'ennesimo valore della gamma\- correzione del consumo energetico per il rosso primario dei colori di origine.  Il valore deve essere compreso tra 2.500 e 65.000.  Il valore 10.000 indica che non gamma\- correzione.  
+ Specifica il valore di correzione gamma ennesima potenza per rosso primario di colori di origine. Il valore deve essere compreso tra 2500 a 65.000. Un valore pari a 10.000 non significa nessuna correzione gamma.  
   
  *caGreenGamma*  
- Specifica l'ennesimo valore della gamma\- correzione del consumo energetico per il verde primario dei colori di origine.  Il valore deve essere compreso tra 2.500 e 65.000.  Il valore 10.000 indica che non gamma\- correzione.  
+ Specifica il valore di correzione gamma ennesima potenza per l'elemento primario verde di colori di origine. Il valore deve essere compreso tra 2500 a 65.000. Un valore pari a 10.000 non significa nessuna correzione gamma.  
   
  *caBlueGamma*  
- Specifica l'ennesimo valore della gamma\- correzione del consumo energetico per il colore blu primario dei colori di origine.  Il valore deve essere compreso tra 2.500 e 65.000.  Il valore 10.000 indica che non gamma\- correzione.  
+ Specifica il valore di correzione gamma ennesima potenza per blu primario di colori di origine. Il valore deve essere compreso tra 2500 a 65.000. Un valore pari a 10.000 non significa nessuna correzione gamma.  
   
  *caReferenceBlack*  
- Specifica il riferimento nero dei colori di origine.  Tutti i colori utilizzati più scuri di seguito vengono considerati come nero.  Il valore deve essere compreso tra 0 e 4.000.  
+ Specifica il colore nero riferimento per i colori di origine. I colori più scuri a questo vengono considerati come nero. Il valore deve essere nell'intervallo da 0 a 4.000.  
   
  *caReferenceWhite*  
- Specifica il riferimento bianco per i colori di origine.  Tutti i colori che sono più semplici di seguito vengono considerati come bianco.  Il valore deve essere compreso tra 6.000 e 10.000.  
+ Specifica il riferimento bianco per i colori di origine. I colori chiari rispetto a questa vengono considerati come vuoti. Il valore deve essere compreso tra 6.000 a 10.000.  
   
  *caContrast*  
- Specifica la quantità di contrasto all'oggetto di origine.  Il valore deve essere compreso tra \-100 e 100.  Un valore 0 non significa regolazione di contrasto.  
+ Specifica la quantità di contrasto da applicare all'oggetto di origine. Il valore deve essere compreso tra -100 e 100. Il valore 0 non significa nessuna regolazione contrasto.  
   
  *caBrightness*  
- Specifica la quantità di luminosità all'oggetto di origine.  Il valore deve essere compreso tra \-100 e 100.  Un valore 0 non significa regolazione di luminosità.  
+ Specifica la quantità di luminosità da applicare all'oggetto di origine. Il valore deve essere compreso tra -100 e 100. Il valore 0 non significa nessuna regolazione della luminosità.  
   
  *caColorfulness*  
- Specifica la quantità di colorfulness all'oggetto di origine.  Il valore deve essere compreso tra \-100 e 100.  Un valore 0 non significa regolazione di colorfulness.  
+ Specifica la quantità di colorfulness da applicare all'oggetto di origine. Il valore deve essere compreso tra -100 e 100. Il valore 0 non significa nessuna regolazione colorfulness.  
   
  *caRedGreenTint*  
- Specifica la quantità di regolazione rossa o verde a tinta all'oggetto di origine.  Il valore deve essere compreso tra \-100 e 100.  I numeri positivi si regolerebbero in rosso e i numeri negativi vengono modificati in verde.  Un 0 non significa regolazione di tinta.  
+ Specifica la quantità di regolazione rosso o verde tonalità da applicare all'oggetto di origine. Il valore deve essere compreso tra -100 e 100. I numeri positivi sarebbero regolare verso il rosso e modificare i numeri negativi verso il verde. 0 non significa nessuna regolazione tonalità.  
   
-## Requisiti  
- **File di intestazione:** wingdi.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** WinGDI. h  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Strutture, stili, callback e mappe messaggi](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDC::GetColorAdjustment](../Topic/CDC::GetColorAdjustment.md)
+ [CDC::GetColorAdjustment](../../mfc/reference/cdc-class.md#getcoloradjustment)
+
+
+

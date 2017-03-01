@@ -1,38 +1,54 @@
 ---
-title: "Errore del compilatore C3149 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3149"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3149"
+title: Errore del compilatore C3149 | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3149
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3149
 ms.assetid: cf6e2616-2f06-46da-8a8a-d449cb481c51
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Errore del compilatore C3149
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 555b3a7ac8e0d1e5de8eacd763c9ee63101e5b78
+ms.lasthandoff: 02/24/2017
 
-'tipo': tipo non utilizzabile qui senza un 'carattere' di primo livello  
+---
+# <a name="compiler-error-c3149"></a>Errore del compilatore C3149
+'tipo': Impossibile utilizzare questo tipo senza un livello superiore 'char'  
   
  Una dichiarazione non è stata specificata correttamente.  
   
- È possibile, ad esempio, che sia stato definito un tipo CLR in ambito globale e si sia tentato di creare una variabile del tipo come parte della definizione.  Poiché le variabili globali dei tipi CLR non sono consentite, verrà generato l'errore C3149.  
+ Ad esempio, potrebbe avere definito un tipo CLR in ambito globale e ha tentato di creare una variabile del tipo come parte della definizione. Poiché non sono consentite le variabili globali dei tipi CLR, il compilatore genererà C3149.  
   
- Per correggerlo, dichiarare le variabili dei tipi CLR all'interno di una definizione di funzione o di tipo.  
+ Per risolvere questo errore, dichiarare le variabili di tipi CLR all'interno di una definizione di funzione o un tipo.  
   
- Il seguente codice di esempio genera l'errore C3149:  
+ Nell'esempio seguente viene generato l'errore C3149:  
   
 ```  
 // C3149.cpp  
@@ -45,7 +61,7 @@ int main() {
 }  
 ```  
   
- Il seguente codice di esempio genera l'errore C3149:  
+ Nell'esempio seguente viene generato l'errore C3149:  
   
 ```  
 // C3149b.cpp  
@@ -54,20 +70,4 @@ delegate int MyDelegate(const int, int);
 void Test1(MyDelegate m) {}   // C3149  
 void Test2(MyDelegate ^ m) {}   // OK  
 ```  
-  
- **Estensioni gestite per C\+\+**  
-  
- Un oggetto gestito non è stato utilizzato correttamente.  
-  
- Il seguente codice di esempio genera l'errore C3149:  
-  
-```  
-// C3149c.cpp  
-// compile with: /clr:oldSyntax  
-__gc class A {};  
-  
-int main() {  
-   A a = new A;   // C3149  
-   A *a = new A;   // OK  
-}  
-```
+

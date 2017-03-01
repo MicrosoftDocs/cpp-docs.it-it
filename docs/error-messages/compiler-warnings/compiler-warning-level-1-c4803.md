@@ -1,41 +1,55 @@
 ---
-title: "Avviso del compilatore (livello 1) C4803 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4803"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4803"
+title: Compilatore avviso (livello 1) C4803 | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4803
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4803
 ms.assetid: 2552f3a6-c418-49f4-98a2-a929857be658
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Avviso del compilatore (livello 1) C4803
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 2581d4240306e88d75fe5fcc0249371005853b7e
+ms.lasthandoff: 02/24/2017
 
-'metodo': il metodo di generazione ha una classe di memoria diversa da quella dell'evento, 'evento'  
+---
+# <a name="compiler-warning-level-1-c4803"></a>Avviso del compilatore (livello 1) C4803
+'metodo': il metodo raise ha una classe di archiviazione diverso da quello dell'evento, 'event'  
   
- I metodi di un evento devono avere la stessa classe di memoria della dichiarazione dell'evento.  I metodi dell'evento vengono impostati in modo che le classi di memoria corrispondano.  
+Metodi di evento devono avere la stessa classe di archiviazione della dichiarazione dell'evento. Il compilatore consente di modificare i metodi dell'evento in modo che le classi di archiviazione sono uguali.  
   
- L'avviso può essere generato se una classe implementa un evento da un'interfaccia.  La compilazione non prevede la generazione implicita di un metodo di generazione per un evento in un'interfaccia.  Quando si implementa tale interfaccia in una classe, viene generato in modo implicito un metodo di generazione non virtual e, di conseguenza, viene visualizzato l'avviso.  
+Il problema può verificarsi se si dispone di una classe che implementa un evento da un'interfaccia. Il compilatore non genera in modo implicito un metodo di generazione di un evento in un'interfaccia. Quando si implementa tale interfaccia in una classe, il compilatore di generare in modo implicito un metodo di generazione e tale metodo non è virtuale, pertanto il messaggio di avviso. Per ulteriori informazioni sugli eventi, vedere [evento](../../windows/event-cpp-component-extensions.md).  
   
- Per informazioni sulla disattivazione di un avviso, vedere pragma [warning](../../preprocessor/warning.md).  
+Vedere [avviso](../../preprocessor/warning.md) pragma per informazioni su come disattivare un avviso.  
   
-## Esempio  
- L'errore C4803 può essere generato utilizzando **\/clr**.  Per ulteriori informazioni sull'utilizzo degli eventi, vedere [event](../../windows/event-cpp-component-extensions.md).  
-  
- Nell'esempio seguente viene generato l'errore C4803:  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente genera l'errore C4803.  
   
 ```  
 // C4803.cpp  
@@ -74,42 +88,4 @@ int main() {
    ep->E1();  
 }  
 ```  
-  
-## Esempio  
- L'errore C4803 può essere generato utilizzando **\/clr:oldSyntax**.  Nell'esempio seguente viene generato l'errore C4803:  
-  
-```  
-// C4803_b.cpp  
-// compile with: /clr:oldSyntax /W1  
-using namespace System;  
-  
-public __delegate void Del();  
-  
-__gc struct E {  
-   Del* _pd1;  
-   virtual __event void add_E1(Del* pd1) {  
-      _pd1 = dynamic_cast<Del*> (Delegate::Combine(_pd1, pd1));  
-   }  
-  
-   virtual __event void remove_E1(Del* pd1) {  
-      _pd1 = dynamic_cast<Del*> (Delegate::Remove(_pd1, pd1));  
-   }  
-  
-   __event void raise_E1 () {   // C4803, add virtual  
-      if (_pd1)  
-         _pd1->Invoke();  
-   }  
-  
-   void func() {  
-      Console::WriteLine("In E::func()");  
-   }  
-};  
-  
-int main() {  
-   E* ep = new E;  
-   ep->E1 += new Del(ep, &E::func);  
-   ep->E1();  
-   ep->E1 -= new Del(ep, &E::func);  
-   ep->E1();  
-}  
-```
+

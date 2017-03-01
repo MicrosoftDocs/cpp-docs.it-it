@@ -1,61 +1,105 @@
 ---
-title: "Struttura DispatchState | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "concrtrm/concurrency::DispatchState"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DispatchState (struttura)"
+title: DispatchState (struttura) | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concrtrm/concurrency::DispatchState
+dev_langs:
+- C++
+helpviewer_keywords:
+- DispatchState structure
 ms.assetid: 8c52546e-1650-48a0-985f-7e4a0fc26a90
 caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# Struttura DispatchState
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
+ms.openlocfilehash: 46c2219464e57da4931596e970199549405d02ec
+ms.lasthandoff: 02/24/2017
 
-La struttura `DispatchState` è utilizzata per trasferire lo stato al metodo `IExecutionContext::Dispatch`.  Descrive le circostanze in cui il metodo `Dispatch` viene richiamato su un'interfaccia `IExecutionContext`.  
+---
+# <a name="dispatchstate-structure"></a>Struttura DispatchState
+La struttura `DispatchState` è usata per trasferire lo stato al metodo `IExecutionContext::Dispatch`. Descrive le circostanze in cui il metodo `Dispatch` viene richiamato su un'interfaccia `IExecutionContext`.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
+```
+struct DispatchState;
 ```  
-struct DispatchState;  
-```  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Costruttori pubblici  
+### <a name="public-constructors"></a>Costruttori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore DispatchState::DispatchState](../Topic/DispatchState::DispatchState%20Constructor.md)|Costruisce un nuovo oggetto `DispatchState`.|  
+|[Costruttore DispatchState:: DispatchState](#ctor)|Costruisce un nuovo oggetto `DispatchState`.|  
   
-### Membri dati pubblici  
+### <a name="public-data-members"></a>Membri dati pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Membro dati DispatchState::m\_dispatchStateSize](../Topic/DispatchState::m_dispatchStateSize%20Data%20Member.md)|Dimensione della struttura utilizzata per il controllo delle versioni.|  
-|[Membro dati DispatchState::m\_fIsPreviousContextAsynchronouslyBlocked](../Topic/DispatchState::m_fIsPreviousContextAsynchronouslyBlocked%20Data%20Member.md)|Consente di indicare se questo contesto ha inserito il metodo `Dispatch` perché quello precedente è bloccato in modo asincrono.  Viene utilizzato solo sul contesto di pianificazione UMS e viene impostato sul valore `0` per tutti gli altri contesti di esecuzione.|  
-|[Membro dati DispatchState::m\_reserved](../Topic/DispatchState::m_reserved%20Data%20Member.md)|Bit riservati per il passaggio di informazioni future.|  
+|[Membro dati DispatchState:: M_dispatchstatesize](#m_dispatchstatesize)|Dimensione della struttura, viene utilizzato per il controllo delle versioni.|  
+|[Membro dati DispatchState:: M_fispreviouscontextasynchronouslyblocked](#m_fispreviouscontextasynchronouslyblocked)|Indica se questo contesto è stato attivato il `Dispatch` metodo perché il contesto precedente bloccato in modo asincrono. Viene utilizzato solo nel contesto di pianificazione UMS e viene impostata sul valore `0` per tutti gli altri contesti di esecuzione.|  
+|[Membro dati DispatchState:: M_reserved](#m_reserved)|Bit riservati per il passaggio di informazioni future.|  
   
-## Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `DispatchState`  
   
-## Requisiti  
- **Header:** concrtrm.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** concrtrm. h  
   
- Concorrenza di**Spazio dei nomi:**  
+ **Spazio dei nomi:** Concurrency  
   
-## Vedere anche  
- [Spazio dei nomi concurrency](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [Metodo IExecutionContext::Dispatch](../Topic/IExecutionContext::Dispatch%20Method.md)
+##  <a name="a-namectora--dispatchstatedispatchstate-constructor"></a><a name="ctor"></a>Costruttore DispatchState:: DispatchState  
+ Costruisce un nuovo oggetto `DispatchState`.  
+  
+```
+DispatchState();
+```  
+  
+##  <a name="a-namemdispatchstatesizea--dispatchstatemdispatchstatesize-data-member"></a><a name="m_dispatchstatesize"></a>Membro dati DispatchState:: M_dispatchstatesize  
+ Dimensione della struttura, viene utilizzato per il controllo delle versioni.  
+  
+```
+unsigned long m_dispatchStateSize;
+```  
+  
+##  <a name="a-namemfispreviouscontextasynchronouslyblockeda--dispatchstatemfispreviouscontextasynchronouslyblocked-data-member"></a><a name="m_fispreviouscontextasynchronouslyblocked"></a>Membro dati DispatchState:: M_fispreviouscontextasynchronouslyblocked  
+ Indica se questo contesto è stato attivato il `Dispatch` metodo perché il contesto precedente bloccato in modo asincrono. Viene utilizzato solo nel contesto di pianificazione UMS e viene impostata sul valore `0` per tutti gli altri contesti di esecuzione.  
+  
+```
+unsigned int m_fIsPreviousContextAsynchronouslyBlocked : 1;
+```  
+  
+##  <a name="a-namemreserveda--dispatchstatemreserved-data-member"></a><a name="m_reserved"></a>Membro dati DispatchState:: M_reserved  
+ Bit riservati per il passaggio di informazioni future.  
+  
+```
+unsigned int m_reserved : 31;
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [concorrenza Namespace](concurrency-namespace.md)
+

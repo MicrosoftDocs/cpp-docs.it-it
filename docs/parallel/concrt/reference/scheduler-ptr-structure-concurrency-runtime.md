@@ -1,63 +1,117 @@
 ---
-title: "Struttura scheduler_ptr (runtime di concorrenza) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "pplinterface/concurrency::scheduler_ptr"
-dev_langs: 
-  - "C++"
+title: Struttura scheduler_ptr | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- pplinterface/concurrency::scheduler_ptr
+dev_langs:
+- C++
 ms.assetid: e88c84af-c306-476d-aef1-f42a0fa0a80f
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Struttura scheduler_ptr (runtime di concorrenza)
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
+ms.openlocfilehash: 022b5fafc437a8103fe17967a9a5ea54d5b82a39
+ms.lasthandoff: 02/24/2017
 
-Rappresenta un puntatore a un'utilità di pianificazione.  Questa classe esiste per consentire la specifica di una durata condivisa utilizzando shared\_ptr o semplicemente un riferimento normale utilizzando il puntatore non elaborato.  
+---
+# <a name="schedulerptr-structure"></a>Struttura scheduler_ptr
+Rappresenta un puntatore a un'utilità di pianificazione. Questa classe esiste per consentire di specificare una durata condivisa utilizzando shared_ptr o semplicemente un riferimento normale utilizzando il puntatore raw.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
+```
+struct scheduler_ptr;
 ```  
-struct scheduler_ptr;  
-```  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Costruttori pubblici  
+### <a name="public-constructors"></a>Costruttori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore scheduler\_ptr::scheduler\_ptr \(runtime di concorrenza\)](../Topic/scheduler_ptr::scheduler_ptr%20Constructor%20\(Concurrency%20Runtime\).md)|Di overload.  Crea un puntatore dell'utilità di pianificazione da shared\_ptr all'utilità di pianificazione|  
+|[Costruttore scheduler_ptr:: scheduler_ptr](#ctor)|Di overload. Crea un puntatore dell'utilità di pianificazione da shared_ptr all'utilità di pianificazione|  
   
-### Metodi pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[Metodo scheduler\_ptr::get \(runtime di concorrenza\)](../Topic/scheduler_ptr::get%20Method%20\(Concurrency%20Runtime\).md)|Restituisce il puntatore non elaborato all'utilità di pianificazione|  
-  
-### Operatori pubblici  
+### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Operatore scheduler\_ptr::operator bool \(runtime di concorrenza\)](../Topic/scheduler_ptr::operator%20bool%20Operator%20\(Concurrency%20Runtime\).md)|Verificare se il puntatore dell'utilità di pianificazione è diverso da Null|  
-|[Operatore scheduler\_ptr::operator\-\> \(runtime di concorrenza\)](../Topic/scheduler_ptr::operator-%3E%20Operator%20\(Concurrency%20Runtime\).md)|Comportarsi come un puntatore|  
+|[Metodo scheduler_ptr:: Get](#get)|Restituisce il puntatore raw all'utilità di pianificazione|  
   
-## Gerarchia di ereditarietà  
+### <a name="public-operators"></a>Operatori pubblici  
+  
+|Nome|Descrizione|  
+|----------|-----------------|  
+|[Operatore scheduler_ptr:: operator bool](#operator_bool)|Verificare se il puntatore dell'utilità di pianificazione è diverso da null|  
+|[scheduler_ptr:: operator -&gt; (operatore)](#operator_ptr)|Comportarsi come un puntatore|  
+  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `scheduler_ptr`  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** pplinterface.h  
   
- **Spazio dei nomi:** concorrenza  
+ **Spazio dei nomi:** Concurrency  
   
-## Vedere anche  
- [Spazio dei nomi concurrency](../../../parallel/concrt/reference/concurrency-namespace.md)
+##  <a name="a-namegeta--schedulerptrget-method"></a><a name="get"></a>Metodo scheduler_ptr:: Get  
+ Restituisce il puntatore raw all'utilità di pianificazione  
+  
+```
+scheduler_interface* get() const;
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+  
+##  <a name="a-nameoperatorboola--schedulerptroperator-bool"></a><a name="operator_bool"></a>scheduler_ptr:: operator bool   
+ Verificare se il puntatore dell'utilità di pianificazione è diverso da null  
+  
+' ' operatore bool() const.
+```  
+  
+##  <a name="operator_ptr"></a>  scheduler_ptr::operator-&gt;   
+ Behave like a pointer  
+  
+```
+scheduler_interface * operator->() const.
+```  
+  
+### Return Value  
+  
+##  <a name="ctor"></a>  scheduler_ptr::scheduler_ptr Constructor  
+ Creates a scheduler pointer from shared_ptr to scheduler  
+  
+```
+esplicita scheduler_ptr(std::shared_ptr<scheduler_interface> scheduler);</scheduler_interface>
+
+esplicita scheduler_ptr (_In_opt_ scheduler_interface * pScheduler);
+```  
+  
+### Parameters  
+ `scheduler`  
+ `pScheduler`  
+  
+## See Also  
+ [concurrency Namespace](concurrency-namespace.md)
+

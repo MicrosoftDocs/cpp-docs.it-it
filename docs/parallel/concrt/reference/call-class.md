@@ -1,82 +1,230 @@
 ---
-title: "Classe call | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "agents/concurrency::call"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "call (classe)"
+title: Classe Call | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concurrency::call
+- agents/concurrency::call
+dev_langs:
+- C++
+helpviewer_keywords:
+- call class
 ms.assetid: 1521970a-1e9c-4b0c-a681-d18e40976f49
 caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# Classe call
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 19244e5527207f852256e646abd18ad298fb28cd
+ms.openlocfilehash: b3cfec104346b212217a6854af2390c412c9e015
+ms.lasthandoff: 02/24/2017
 
-Un blocco della messaggistica `call` è un oggetto `target_block` multi\-origine ordinato che richiama una funzione specificata quando riceve un messaggio.  
+---
+# <a name="call-class"></a>Classe call
+Un blocco della messaggistica `call` è un oggetto `target_block` multi-origine ordinato che richiama una funzione specificata quando riceve un messaggio.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
+```
+template<class T, class _FunctorType = std::function<void(T const&)>>
+class call : public target_block<multi_link_registry<ISource<T>>>;
 ```  
-template<  
-   class _Type,  
-   class _FunctorType = std::tr1::function<void(_Type const&)>  
->  
-class call : public target_block<multi_link_registry<ISource<_Type>>>;  
-```  
   
-#### Parametri  
- `_Type`  
- Tipo di payload dei messaggi propagati in questo blocco.  
+#### <a name="parameters"></a>Parametri  
+ `T`  
+ Il tipo di payload dei messaggi propagati in questo blocco.  
   
  `_FunctorType`  
- Firma di funzioni accettabili da questo blocco.  
+ La firma di funzioni che questo blocco può accettare.  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Costruttori pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[Costruttore call::call](../Topic/call::call%20Constructor.md)|Di overload.  Costruisce un blocco della messaggistica `call`.|  
-|[Distruttore call::~call](../Topic/call::~call%20Destructor.md)|Distrugge il blocco della messaggistica `call`.|  
-  
-### Metodi protetti  
+### <a name="public-constructors"></a>Costruttori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Metodo call::process\_input\_messages](../Topic/call::process_input_messages%20Method.md)|Consente di eseguire la funzione di chiamata sui messaggi di input.|  
-|[Metodo call::process\_message](../Topic/call::process_message%20Method.md)|Consente di elaborare un messaggio che è stato accettato dal blocco della messaggistica `call`.|  
-|[Metodo call::propagate\_message](../Topic/call::propagate_message%20Method.md)|Consente di passare in modo asincrono un messaggio da un blocco `ISource` a quello della messaggistica `call`.  Viene richiamato dal metodo `propagate` se chiamato da un blocco di origine.|  
-|[Metodo call::send\_message](../Topic/call::send_message%20Method.md)|Consente di passare in modo sincrono un messaggio da un blocco `ISource` a quello della messaggistica `call`.  Viene richiamato dal metodo `send` se chiamato da un blocco di origine.|  
-|[Metodo call::supports\_anonymous\_source](../Topic/call::supports_anonymous_source%20Method.md)|Consente di eseguire l'override del metodo `supports_anonymous_source` per indicare che questo blocco può accettare messaggi offerti da un'origine non collegata. \(Override di [ITarget::supports\_anonymous\_source](../Topic/ITarget::supports_anonymous_source%20Method.md)\).|  
+|[chiamata di costruttore](#ctor)|Di overload. Costruisce un `call` blocco della messaggistica.|  
+|[~ chiamata del distruttore](#dtor)|Elimina il `call` blocco della messaggistica.|  
   
-## Note  
- Per ulteriori informazioni, vedere [Blocchi dei messaggi asincroni](../../../parallel/concrt/asynchronous-message-blocks.md).  
+### <a name="protected-methods"></a>Metodi protetti  
   
-## Gerarchia di ereditarietà  
- [ITarget](../../../parallel/concrt/reference/itarget-class.md)  
+|Nome|Descrizione|  
+|----------|-----------------|  
+|[process_input_messages (metodo)](#process_input_messages)|Esegue la chiamata di funzione nei messaggi di input.|  
+|[process_message (metodo)](#process_message)|Elabora un messaggio che è stato accettato dal `call` blocco della messaggistica.|  
+|[propagate_message (metodo)](#propagate_message)|Passare in modo asincrono un messaggio da un `ISource` questo blocco `call` blocco della messaggistica. Viene richiamato dal `propagate` metodo, quando viene chiamato da un blocco di origine.|  
+|[send_message (metodo)](#send_message)|Passare in modo sincrono un messaggio da un `ISource` questo blocco `call` blocco della messaggistica. Viene richiamato dal `send` metodo, quando viene chiamato da un blocco di origine.|  
+|[supports_anonymous_source (metodo)](#supports_anonymous_source)|Esegue l'override del metodo `supports_anonymous_source` per indicare che questo blocco può accettare messaggi offerti da un'origine non collegata. (Esegue l'override di [ITarget:: Supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|  
   
- [target\_block](../../../parallel/concrt/reference/target-block-class.md)  
+## <a name="remarks"></a>Note  
+ Per ulteriori informazioni, vedere [blocchi dei messaggi asincroni](../../../parallel/concrt/asynchronous-message-blocks.md).  
+  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
+ [ITarget](itarget-class.md)  
+  
+ [target_block](target-block-class.md)  
   
  `call`  
   
-## Requisiti  
- **Header:** agents.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** agents.h  
   
- **Spazio dei nomi:** concorrenza  
+ **Spazio dei nomi:** Concurrency  
   
-## Vedere anche  
- [Spazio dei nomi concurrency](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [Classe transformer](../../../parallel/concrt/reference/transformer-class.md)
+##  <a name="a-namectora-call"></a><a name="ctor"></a>chiamata 
+
+ Costruisce un `call` blocco della messaggistica.  
+  
+```
+call(
+    _Call_method const& _Func);
+
+call(
+    _Call_method const& _Func,
+    filter_method const& _Filter);
+
+call(
+    Scheduler& _PScheduler,
+    _Call_method const& _Func);
+
+call(
+    Scheduler& _PScheduler,
+    _Call_method const& _Func,
+    filter_method const& _Filter);
+
+call(
+    ScheduleGroup& _PScheduleGroup,
+    _Call_method const& _Func);
+
+call(
+    ScheduleGroup& _PScheduleGroup,
+    _Call_method const& _Func,
+    filter_method const& _Filter);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `_Func`  
+ Una funzione che sarà richiamata per ogni messaggio accettato.  
+  
+ `_Filter`  
+ Una funzione di filtro che determina se accettare messaggi offerti.  
+  
+ `_PScheduler`  
+ Il `Scheduler` entro il quale la propagazione delle attività per il `call` blocco della messaggistica.  
+  
+ `_PScheduleGroup`  
+ Il `ScheduleGroup` entro il quale la propagazione delle attività per il `call` blocco della messaggistica. L'oggetto `Scheduler` usato è previsto dal gruppo di pianificazione.  
+  
+### <a name="remarks"></a>Note  
+ Se non si specificano i parametri `_PScheduler` o `_PScheduleGroup` , il runtime usa l'utilità di pianificazione predefinita.  
+  
+ Il tipo di `_Call_method` è un funtore con firma `void (T const &)` che viene richiamato da questo `call` blocco della messaggistica per elaborare un messaggio.  
+  
+ Il tipo di `filter_method` è un funtore con firma `bool (T const &)` che viene richiamato da questo `call` blocco della messaggistica per determinare se è necessario accettare un messaggio offerto.  
+  
+##  <a name="a-namedtora-call"></a><a name="dtor"></a>~ chiamare 
+
+ Elimina il `call` blocco della messaggistica.  
+  
+```
+~call();
+```  
+  
+##  <a name="a-nameprocessinputmessagesa-processinputmessages"></a><a name="process_input_messages"></a>process_input_messages 
+
+ Esegue la chiamata di funzione nei messaggi di input.  
+  
+```
+virtual void process_input_messages(_Inout_ message<T>* _PMessage);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `_PMessage`  
+  
+##  <a name="a-nameprocessmessagea-processmessage"></a><a name="process_message"></a>process_message 
+
+ Elabora un messaggio che è stato accettato dal `call` blocco della messaggistica.  
+  
+```
+virtual void process_message(_Inout_ message<T>* _PMessage);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `_PMessage`  
+ Puntatore al messaggio che deve essere gestito.  
+  
+##  <a name="a-namepropagatemessagea-propagatemessage"></a><a name="propagate_message"></a>propagate_message 
+
+ Passare in modo asincrono un messaggio da un `ISource` questo blocco `call` blocco della messaggistica. Viene richiamato dal `propagate` metodo, quando viene chiamato da un blocco di origine.  
+  
+```
+virtual message_status propagate_message(
+    _Inout_ message<T>* _PMessage,
+    _Inout_ ISource<T>* _PSource);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `_PMessage`  
+ Puntatore all'oggetto `message`.  
+  
+ `_PSource`  
+ Puntatore al blocco di origine del messaggio di offerta.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Oggetto [message_status](concurrency-namespace-enums.md) indicazione di ciò che la destinazione ha deciso di fare con il messaggio.  
+  
+##  <a name="a-namesendmessagea-sendmessage"></a><a name="send_message"></a>send_message 
+
+ Passare in modo sincrono un messaggio da un `ISource` questo blocco `call` blocco della messaggistica. Viene richiamato dal `send` metodo, quando viene chiamato da un blocco di origine.  
+  
+```
+virtual message_status send_message(
+    _Inout_ message<T>* _PMessage,
+    _Inout_ ISource<T>* _PSource);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `_PMessage`  
+ Puntatore all'oggetto `message`.  
+  
+ `_PSource`  
+ Puntatore al blocco di origine del messaggio di offerta.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Oggetto [message_status](concurrency-namespace-enums.md) indicazione di ciò che la destinazione ha deciso di fare con il messaggio.  
+  
+##  <a name="a-namesupportsanonymoussourcea-supportsanonymoussource"></a><a name="supports_anonymous_source"></a>supports_anonymous_source 
+
+ Esegue l'override del metodo `supports_anonymous_source` per indicare che questo blocco può accettare messaggi offerti da un'origine non collegata.  
+  
+```
+virtual bool supports_anonymous_source();
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ `true` poiché tramite il blocco non vengono posticipati i messaggi offerti.  
+  
+## <a name="see-also"></a>Vedere anche  
+ [concorrenza Namespace](concurrency-namespace.md)   
+ [Classe Transformer](transformer-class.md)
+

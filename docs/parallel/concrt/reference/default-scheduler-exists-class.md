@@ -1,55 +1,85 @@
 ---
-title: "Classe default_scheduler_exists | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "concrt/concurrency::default_scheduler_exists"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "default_scheduler_exists (classe)"
+title: Classe default_scheduler_exists | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concrt/concurrency::default_scheduler_exists
+dev_langs:
+- C++
+helpviewer_keywords:
+- default_scheduler_exists class
 ms.assetid: f6e575e2-4e0f-455a-9e06-54f462ce0c1c
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# Classe default_scheduler_exists
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 527d02e6b79d86c8a194fffa30351efc944db441
+ms.lasthandoff: 02/24/2017
 
-Questa classe viene descritta un'eccezione generata quando il metodo di `Scheduler::SetDefaultSchedulerPolicy` viene chiamato quando già esisteva un'utilità di pianificazione predefinita nel processo.  
+---
+# <a name="defaultschedulerexists-class"></a>Classe default_scheduler_exists
+Questa classe descrive un'eccezione generata quando il metodo `Scheduler::SetDefaultSchedulerPolicy` viene chiamato quando esiste già un'utilità di pianificazione predefinita all'interno del processo.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
+```
+class default_scheduler_exists : public std::exception;
 ```  
-class default_scheduler_exists : public std::exception;  
-```  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Costruttori pubblici  
+### <a name="public-constructors"></a>Costruttori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore default\_scheduler\_exists::default\_scheduler\_exists](../Topic/default_scheduler_exists::default_scheduler_exists%20Constructor.md)|Di overload.  Costruisce un oggetto `default_scheduler_exists`.|  
+|[Costruttore default_scheduler_exists](#ctor)|Di overload. Costruisce un oggetto `default_scheduler_exists`.|  
   
-## Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `exception`  
   
  `default_scheduler_exists`  
   
-## Requisiti  
- **Header:** concrt.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** concrt  
   
- Concorrenza di**Spazio dei nomi:**  
+ **Spazio dei nomi:** Concurrency  
   
-## Vedere anche  
- [Spazio dei nomi concurrency](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [Metodo Scheduler::SetDefaultSchedulerPolicy](../Topic/Scheduler::SetDefaultSchedulerPolicy%20Method.md)
+##  <a name="a-namectora-defaultschedulerexists"></a><a name="ctor"></a>default_scheduler_exists 
+
+ Costruisce un oggetto `default_scheduler_exists`.  
+  
+```
+explicit _CRTIMP default_scheduler_exists(_In_z_ const char* _Message) throw();
+
+default_scheduler_exists() throw();
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `_Message`  
+ Messaggio descrittivo dell'errore.  
+  
+## <a name="see-also"></a>Vedere anche  
+ [concorrenza Namespace](concurrency-namespace.md)
+

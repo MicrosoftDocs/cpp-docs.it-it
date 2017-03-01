@@ -1,52 +1,69 @@
 ---
-title: "Spazio dei nomi Concurrency::graphics::direct3d | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "amp_graphics/Concurrency::graphics::direct3d"
-  - "amp_short_vectors/Concurrency::graphics::direct3d"
-dev_langs: 
-  - "C++"
+title: Namespace Concurrency::Graphics::Direct3D | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- amp_graphics/Concurrency::graphics::direct3d
+- amp_short_vectors/Concurrency::graphics::direct3d
+dev_langs:
+- C++
 ms.assetid: be283331-07cf-46e4-91a1-e8aa85d4ec8e
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Spazio dei nomi Concurrency::graphics::direct3d
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: a17faa4f0d6bcc29c9d249fd99dd3a5df3b29884
+ms.lasthandoff: 02/24/2017
 
-Fornisce i metodi [get\_texture](../Topic/get_texture%20Function.md) e [make\_texture](../Topic/make_texture%20Function.md).  
+---
+# <a name="concurrencygraphicsdirect3d-namespace"></a>Spazio dei nomi Concurrency::graphics::direct3d
+Fornisce la [get_texture](concurrency-graphics-direct3d-namespace-functions.md#get_texture) e [make_texture](concurrency-graphics-direct3d-namespace-functions.md#make_texture) metodi.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 namespace direct3d;  
 ```  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Funzioni  
+### <a name="functions"></a>Funzioni  
   
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[Funzione get\_sampler](../Topic/get_sampler%20Function.md)|Ottenere l'interfaccia dello stato campionatore Direct3D nella visualizzazione dell'acceleratore fornita che rappresenta l'oggetto campionatore specificato.|  
-|[Funzione get\_texture](../Topic/get_texture%20Function.md)|Ottiene l'interfaccia di trama Direct3Dche sottostante all'oggetto [trama](../../../parallel/amp/reference/texture-class.md) specificato.|  
-|[Funzione make\_sampler](../Topic/make_sampler%20Function.md)|Creare un campionatore da un puntatore all'interfaccia dello stato del campionatore Direct3D.|  
-|[Funzione make\_texture](../Topic/make_texture%20Function.md)|Crea una [trama](../../../parallel/amp/reference/texture-class.md) utilizzando i parametri specificati.|  
-|[Funzione msad4](../Topic/msad4%20Function.md)|Confronta un valore di riferimento di 4 byte e un valore di origine di 8 byte e accumula un vettore di 4 somme.|  
+|Nome<br /><br /> Descrizione|  
+|--------------------------|  
+|[Funzione get_sampler](concurrency-graphics-direct3d-namespace-functions.md#get_sampler)<br /><br /> Ottenere l'interfaccia Direct3D campionatore stato determinato tasto di scelta rapida consente di visualizzare che rappresenta l'oggetto specificato campionatore.|  
+|[Funzione get_texture](concurrency-graphics-direct3d-namespace-functions.md#get_texture)<br /><br /> Ottiene l'interfaccia di trama Direct3D sottostante specificato [trama](texture-class.md) oggetto.|  
+|[Funzione make_sampler](concurrency-graphics-direct3d-namespace-functions.md#make_sampler)<br /><br /> Creare un campionatore da un puntatore a interfaccia Direct3D campionatore dello stato.|  
+|[Funzione make_texture](concurrency-graphics-direct3d-namespace-functions.md#make_texture)<br /><br /> Crea un [trama](texture-class.md) oggetto utilizzando i parametri specificati.|  
+|[Funzione msad4](concurrency-graphics-direct3d-namespace-functions.md#msad4)<br /><br /> Confronta un valore di riferimento di 4 byte e un valore di origine a 8 byte e accumula un vettore di 4 somme.|  
   
-## Requisiti  
- **Intestazione:** amp\_graphics.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** amp_graphics.h  
   
- **Spazio dei nomi** Concurrency::graphics  
+ **Namespace:** Concurrency:: Graphics  
   
-## Vedere anche  
- [Spazio dei nomi Concurrency::graphics](../../../parallel/amp/reference/concurrency-graphics-namespace.md)
+## <a name="see-also"></a>Vedere anche  
+ [Concurrency:: Graphics Namespace](concurrency-graphics-namespace.md)
+

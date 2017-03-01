@@ -1,59 +1,96 @@
 ---
-title: "Classe scheduler_worker_creation_error | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "concrt/concurrency::scheduler_worker_creation_error"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "scheduler_worker_creation_error (classe)"
+title: Classe scheduler_worker_creation_error | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concrt/concurrency::scheduler_worker_creation_error
+dev_langs:
+- C++
+helpviewer_keywords:
+- scheduler_worker_creation_error class
 ms.assetid: 4aec1c3e-c32a-41b2-899d-2d898f23b3c7
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Classe scheduler_worker_creation_error
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: c880ed65ef9e01c7eebdd2de45598a41763da57c
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="schedulerworkercreationerror-class"></a>Classe scheduler_worker_creation_error
 Questa classe descrive un'eccezione generata a causa di un errore nella creazione di un contesto di esecuzione del lavoro nel runtime di concorrenza.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
+```
+class scheduler_worker_creation_error : public scheduler_resource_allocation_error;
 ```  
-class scheduler_worker_creation_error : public scheduler_resource_allocation_error;  
-```  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Costruttori pubblici  
+### <a name="public-constructors"></a>Costruttori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore scheduler\_worker\_creation\_error::scheduler\_worker\_creation\_error](../Topic/scheduler_worker_creation_error::scheduler_worker_creation_error%20Constructor.md)|Di overload.  Costruisce un oggetto `scheduler_worker_creation_error`.|  
+|[Costruttore scheduler_worker_creation_error](#ctor)|Di overload. Costruisce un oggetto `scheduler_worker_creation_error`.|  
   
-## Note  
- Questa eccezione viene generata tipicamente nel caso in cui si verifichi un fallimento in una chiamata al sistema operativo per creare contesti di esecuzione dall'interno del runtime di concorrenza.  I contesti di esecuzione sono thread che eseguono attività nel runtime di concorrenza.  Il codice di errore generalmente restituito da una chiamata al metodo Win32 `GetLastError` viene convertito in un valore di tipo `HRESULT` e può essere recuperato utilizzando il metodo della classe base `get_error_code`.  
+## <a name="remarks"></a>Note  
+ Questa eccezione viene generata soprattutto nel caso in cui una chiamata al sistema operativo per creare contesti di esecuzione nel runtime di concorrenza abbia esito negativo. I contesti di esecuzione sono thread tramite cui vengono eseguite attività nel runtime di concorrenza. Il codice di errore generalmente restituito da una chiamata al metodo Win32 `GetLastError` viene convertito in un valore di tipo `HRESULT` e può essere recuperato utilizzando il metodo della classe base `get_error_code`.  
   
-## Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `exception`  
   
- [scheduler\_resource\_allocation\_error](../../../parallel/concrt/reference/scheduler-resource-allocation-error-class.md)  
+ [scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md)  
   
  `scheduler_worker_creation_error`  
   
-## Requisiti  
- **Header:** concrt.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** concrt  
   
- **Spazio dei nomi:** concorrenza  
+ **Spazio dei nomi:** Concurrency  
   
-## Vedere anche  
- [Spazio dei nomi concurrency](../../../parallel/concrt/reference/concurrency-namespace.md)
+##  <a name="a-namectora-schedulerworkercreationerror"></a><a name="ctor"></a>scheduler_worker_creation_error 
+
+ Costruisce un oggetto `scheduler_worker_creation_error`.  
+  
+```
+scheduler_worker_creation_error(
+    _In_z_ const char* _Message,
+    HRESULT _Hresult) throw();
+
+explicit _CRTIMP scheduler_worker_creation_error(
+    HRESULT _Hresult) throw();
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `_Message`  
+ Messaggio descrittivo dell'errore.  
+  
+ `_Hresult`  
+ Il `HRESULT` valore di errore che ha causato l'eccezione.  
+  
+## <a name="see-also"></a>Vedere anche  
+ [concorrenza Namespace](concurrency-namespace.md)
+

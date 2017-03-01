@@ -1,124 +1,1027 @@
 ---
-title: "CMFCRibbonPanel Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CMFCRibbonPanel"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMFCRibbonPanel class"
+title: Classe CMFCRibbonPanel | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CMFCRibbonPanel
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMFCRibbonPanel class
 ms.assetid: 51d70749-1140-4386-b103-f14082049ba6
 caps.latest.revision: 34
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 36
----
-# CMFCRibbonPanel Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 1f833e1fa59f733734da321718d5db73377fa4bd
+ms.lasthandoff: 02/24/2017
 
-Implementa un pannello che contiene un set di elementi della barra multifunzione.  Quando il pannello viene tracciato, visualizzare tutti gli elementi come possibili, in base alla dimensione del pannello.  
+---
+# <a name="cmfcribbonpanel-class"></a>Classe CMFCRibbonPanel
+Implementa un riquadro contenente un set di elementi della barra multifunzione. Quando il pannello viene disegnato, visualizza tutti gli elementi possibili in base alle proprie dimensioni.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 class CMFCRibbonPanel : public CObject  
 ```  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Costruttori protetti  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[CMFCRibbonPanel::CMFCRibbonPanel](../Topic/CMFCRibbonPanel::CMFCRibbonPanel.md)|Costrutti e inizializza un oggetto `CMFCRibbonPanel`.|  
-  
-### Metodi pubblici  
+### <a name="protected-constructors"></a>Costruttori protetti  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CMFCRibbonPanel::Add](../Topic/CMFCRibbonPanel::Add.md)|Aggiunge un elemento barra multifunzione al pannello.|  
-|[CMFCRibbonPanel::AddSeparator](../Topic/CMFCRibbonPanel::AddSeparator.md)|Aggiunge un separatore al pannello della barra multifunzione.|  
-|[CMFCRibbonPanel::AddToolBar](../Topic/CMFCRibbonPanel::AddToolBar.md)|Aggiunge una barra degli strumenti nel pannello della barra multifunzione.|  
-|[CMFCRibbonPanel::FindByData](../Topic/CMFCRibbonPanel::FindByData.md)||  
-|[CMFCRibbonPanel::FindByID](../Topic/CMFCRibbonPanel::FindByID.md)|Restituisce un elemento identificato da un ID di comando|  
-|[CMFCRibbonPanel::GetCaptionHeight](../Topic/CMFCRibbonPanel::GetCaptionHeight.md)||  
-|[CMFCRibbonPanel::GetCount](../Topic/CMFCRibbonPanel::GetCount.md)|Restituisce il numero di elementi nel pannello della barra multifunzione.|  
-|[CMFCRibbonPanel::GetData](../Topic/CMFCRibbonPanel::GetData.md)|Restituisce i dati definiti dall'utente associati al pannello.|  
-|[CMFCRibbonPanel::GetDefaultButton](../Topic/CMFCRibbonPanel::GetDefaultButton.md)||  
-|[CMFCRibbonPanel::GetDroppedDown](../Topic/CMFCRibbonPanel::GetDroppedDown.md)||  
-|[CMFCRibbonPanel::GetElement](../Topic/CMFCRibbonPanel::GetElement.md)|Restituisce l'elemento barra multifunzione posizionato all'indice specificato.|  
-|[CMFCRibbonPanel::GetElements](../Topic/CMFCRibbonPanel::GetElements.md)|Recupera tutti gli elementi contenuti nel pannello della barra multifunzione.|  
-|[CMFCRibbonPanel::GetElementsByID](../Topic/CMFCRibbonPanel::GetElementsByID.md)||  
-|[CMFCRibbonPanel::GetFocused](../Topic/CMFCRibbonPanel::GetFocused.md)|Restituisce un elemento con stato attivo.|  
-|[CMFCRibbonPanel::GetGalleryRect](../Topic/CMFCRibbonPanel::GetGalleryRect.md)|Restituisce un rettangolo di delimitazione dell'elemento della raccolta.|  
-|[CMFCRibbonPanel::GetHighlighted](../Topic/CMFCRibbonPanel::GetHighlighted.md)||  
-|[CMFCRibbonPanel::GetIndex](../Topic/CMFCRibbonPanel::GetIndex.md)||  
-|[CMFCRibbonPanel::GetItemIDsList](../Topic/CMFCRibbonPanel::GetItemIDsList.md)||  
-|[CMFCRibbonPanel::GetName](../Topic/CMFCRibbonPanel::GetName.md)||  
-|[CMFCRibbonPanel::GetParentButton](../Topic/CMFCRibbonPanel::GetParentButton.md)||  
-|[CMFCRibbonPanel::GetParentCategory](../Topic/CMFCRibbonPanel::GetParentCategory.md)|Restituisce la categoria padre del pannello della barra multifunzione.|  
-|[CMFCRibbonPanel::GetParentMenuBar](../Topic/CMFCRibbonPanel::GetParentMenuBar.md)||  
-|[CMFCRibbonPanel::GetPreferedMenuLocation](../Topic/CMFCRibbonPanel::GetPreferedMenuLocation.md)||  
-|[CMFCRibbonPanel::GetPressed](../Topic/CMFCRibbonPanel::GetPressed.md)||  
-|[CMFCRibbonPanel::GetRect](../Topic/CMFCRibbonPanel::GetRect.md)||  
-|[CMFCRibbonPanel::GetVisibleElements](../Topic/CMFCRibbonPanel::GetVisibleElements.md)|Ottiene una matrice di elementi visibili.|  
-|[CMFCRibbonPanel::HasElement](../Topic/CMFCRibbonPanel::HasElement.md)||  
-|[CMFCRibbonPanel::HitTest](../Topic/CMFCRibbonPanel::HitTest.md)||  
-|[CMFCRibbonPanel::HitTestEx](../Topic/CMFCRibbonPanel::HitTestEx.md)||  
-|[CMFCRibbonPanel::Insert](../Topic/CMFCRibbonPanel::Insert.md)|Inserisce un elemento barra multifunzione nella posizione specificata.|  
-|[CMFCRibbonPanel::InsertSeparator](../Topic/CMFCRibbonPanel::InsertSeparator.md)|Inserisce un separatore la posizione specificata.|  
-|[CMFCRibbonPanel::IsCenterColumnVert](../Topic/CMFCRibbonPanel::IsCenterColumnVert.md)|Specifica se tutti gli elementi panel devono essere centrato \(allineato\) verticalmente, la colonna.|  
-|[CMFCRibbonPanel::IsCollapsed](../Topic/CMFCRibbonPanel::IsCollapsed.md)||  
-|[CMFCRibbonPanel::IsHighlighted](../Topic/CMFCRibbonPanel::IsHighlighted.md)||  
-|[CMFCRibbonPanel::IsJustifyColumns](../Topic/CMFCRibbonPanel::IsJustifyColumns.md)|Specifica se tutte le colonne del pannello hanno la stessa larghezza.|  
-|[CMFCRibbonPanel::IsMainPanel](../Topic/CMFCRibbonPanel::IsMainPanel.md)||  
-|[CMFCRibbonPanel::IsMenuMode](../Topic/CMFCRibbonPanel::IsMenuMode.md)||  
-|[CMFCRibbonPanel::MakeGalleryItemVisible](../Topic/CMFCRibbonPanel::MakeGalleryItemVisible.md)|Scorre la raccolta per preparare l'elemento specificato della barra multifunzione visibile.|  
-|[CMFCRibbonPanel::OnKey](../Topic/CMFCRibbonPanel::OnKey.md)||  
-|[CMFCRibbonPanel::RecalcWidths](../Topic/CMFCRibbonPanel::RecalcWidths.md)||  
-|[CMFCRibbonPanel::Remove](../Topic/CMFCRibbonPanel::Remove.md)|Elimina ed eventualmente elimina un elemento posizionato all'indice specificato.|  
-|[CMFCRibbonPanel::RemoveAll](../Topic/CMFCRibbonPanel::RemoveAll.md)|Rimuove tutti gli elementi dal pannello della barra multifunzione.|  
-|[CMFCRibbonPanel::Replace](../Topic/CMFCRibbonPanel::Replace.md)|Sostituisce un elemento a un altro in base ai rispettivi valori di indice.|  
-|[CMFCRibbonPanel::ReplaceByID](../Topic/CMFCRibbonPanel::ReplaceByID.md)|Sostituisce un elemento a un altro in base a un ID di comando|  
-|[CMFCRibbonPanel::SetCenterColumnVert](../Topic/CMFCRibbonPanel::SetCenterColumnVert.md)|Nel pannello per allineare gli elementi in verticale, dalla colonna.|  
-|[CMFCRibbonPanel::SetData](../Topic/CMFCRibbonPanel::SetData.md)|Dati definiti dall'utente di associare al pannello della barra multifunzione.|  
-|[CMFCRibbonPanel::SetElementMenu](../Topic/CMFCRibbonPanel::SetElementMenu.md)|Assegna un menu di scelta rapida all'elemento che dispone dell'ID di comando|  
-|[CMFCRibbonPanel::SetElementRTC](../Topic/CMFCRibbonPanel::SetElementRTC.md)|Aggiunge un elemento barra multifunzione specificato da informazioni fornite classi di runtime al pannello della barra multifunzione.|  
-|[CMFCRibbonPanel::SetElementRTCByID](../Topic/CMFCRibbonPanel::SetElementRTCByID.md)|Aggiunge un elemento barra multifunzione specificato da informazioni fornite classi di runtime al pannello della barra multifunzione.|  
-|[CMFCRibbonPanel::SetFocused](../Topic/CMFCRibbonPanel::SetFocused.md)|Imposta lo stato attivo sull'elemento specificato della barra multifunzione.|  
-|[CMFCRibbonPanel::SetJustifyColumns](../Topic/CMFCRibbonPanel::SetJustifyColumns.md)|Abilita o disabilita il motivo della colonna.|  
-|[CMFCRibbonPanel::SetKeys](../Topic/CMFCRibbonPanel::SetKeys.md)|Imposta il tasto di scelta rapida per visualizzare il riquadro della barra multifunzione.|  
-|[CMFCRibbonPanel::ShowPopup](../Topic/CMFCRibbonPanel::ShowPopup.md)||  
+|[CMFCRibbonPanel::CMFCRibbonPanel](#cmfcribbonpanel)|Costruisce e inizializza un oggetto `CMFCRibbonPanel`.|  
   
-## Note  
- I pannelli della barra multifunzione sono raggruppamenti logici delle attività correlate creati all'interno di categorie della barra multifunzione.  Come la dimensione della barra multifunzione, il layout del pannello viene aggiornato automaticamente per visualizzare tutti gli elementi possibile.  
+### <a name="public-methods"></a>Metodi pubblici  
   
- È possibile ottenere i pannelli della barra multifunzione che è contenuto in una categoria della barra multifunzione chiamando il metodo [CMFCRibbonCategory::GetPanel](../Topic/CMFCRibbonCategory::GetPanel.md).  
+|Nome|Descrizione|  
+|----------|-----------------|  
+|[CMFCRibbonPanel::Add](#add)|Aggiunge un elemento della barra multifunzione al pannello.|  
+|[CMFCRibbonPanel::AddSeparator](#addseparator)|Aggiunge un separatore al pannello della barra multifunzione.|  
+|[CMFCRibbonPanel::AddToolBar](#addtoolbar)|Aggiunge una barra degli strumenti al pannello della barra multifunzione.|  
+|[CMFCRibbonPanel::FindByData](#findbydata)||  
+|[CMFCRibbonPanel::FindByID](#findbyid)|Restituisce un elemento identificato da un ID di comando specificato.|  
+|[CMFCRibbonPanel::GetCaptionHeight](#getcaptionheight)||  
+|[CMFCRibbonPanel::GetCount](#getcount)|Restituisce il numero di elementi nel pannello della barra multifunzione.|  
+|[CMFCRibbonPanel::GetData](#getdata)|Restituisce i dati definiti dall'utente associati al pannello.|  
+|[CMFCRibbonPanel::GetDefaultButton](#getdefaultbutton)||  
+|[CMFCRibbonPanel::GetDroppedDown](#getdroppeddown)||  
+|[CMFCRibbonPanel::GetElement](#getelement)|Restituisce l'elemento della barra multifunzione che si trova in corrispondenza dell'indice specificato.|  
+|[CMFCRibbonPanel::GetElements](#getelements)|Recupera tutti gli elementi contenuti nel pannello della barra multifunzione.|  
+|[CMFCRibbonPanel::GetElementsByID](#getelementsbyid)||  
+|[CMFCRibbonPanel::GetFocused](#getfocused)|Restituisce un elemento con stato attivo.|  
+|[CMFCRibbonPanel::GetGalleryRect](#getgalleryrect)|Restituisce un rettangolo di delimitazione dell'elemento della raccolta.|  
+|[CMFCRibbonPanel::GetHighlighted](#gethighlighted)||  
+|[CMFCRibbonPanel::GetIndex](#getindex)||  
+|[CMFCRibbonPanel::GetItemIDsList](#getitemidslist)||  
+|[CMFCRibbonPanel::GetName](#getname)||  
+|[CMFCRibbonPanel::GetParentButton](#getparentbutton)||  
+|[CMFCRibbonPanel::GetParentCategory](#getparentcategory)|Restituisce la categoria padre del pannello della barra multifunzione.|  
+|[CMFCRibbonPanel::GetParentMenuBar](#getparentmenubar)||  
+|[CMFCRibbonPanel::GetPreferedMenuLocation](#getpreferedmenulocation)||  
+|[CMFCRibbonPanel::GetPressed](#getpressed)||  
+|[CMFCRibbonPanel::GetRect](#getrect)||  
+|[CMFCRibbonPanel::GetVisibleElements](#getvisibleelements)|Ottiene una matrice di elementi visibili.|  
+|[CMFCRibbonPanel::HasElement](#haselement)||  
+|[CMFCRibbonPanel::HitTest](#hittest)||  
+|[CMFCRibbonPanel::HitTestEx](#hittestex)||  
+|[CMFCRibbonPanel::Insert](#insert)|Inserisce un elemento della barra multifunzione nella posizione specificata.|  
+|[CMFCRibbonPanel::InsertSeparator](#insertseparator)|Inserisce un separatore in una posizione specificata.|  
+|[CMFCRibbonPanel::IsCenterColumnVert](#iscentercolumnvert)|Specifica se tutti gli elementi panel devono essere centrati (allineato) in verticale, dalla colonna.|  
+|[CMFCRibbonPanel::IsCollapsed](#iscollapsed)||  
+|[CMFCRibbonPanel::IsHighlighted](#ishighlighted)||  
+|[CMFCRibbonPanel::IsJustifyColumns](#isjustifycolumns)|Specifica se tutte le colonne di pannello dispongono della stessa larghezza.|  
+|[CMFCRibbonPanel::IsMainPanel](#ismainpanel)||  
+|[CMFCRibbonPanel::IsMenuMode](#ismenumode)||  
+|[CMFCRibbonPanel::MakeGalleryItemVisible](#makegalleryitemvisible)|Scorre la raccolta per rendere visibile l'elemento specificato della barra multifunzione.|  
+|[CMFCRibbonPanel::OnKey](#onkey)||  
+|[CMFCRibbonPanel::RecalcWidths](#recalcwidths)||  
+|[CMFCRibbonPanel::Remove](#remove)|Rimuove e facoltativamente elimina un elemento in corrispondenza dell'indice specificato.|  
+|[CMFCRibbonPanel::RemoveAll](#removeall)|Rimuove tutti gli elementi dal pannello della barra multifunzione.|  
+|[CMFCRibbonPanel::Replace](#replace)|Sostituisce un elemento con un altro in base ai valori di indice corrispondente.|  
+|[CMFCRibbonPanel::ReplaceByID](#replacebyid)|Sostituisce un elemento con altro in base a un ID di comando specificato.|  
+|[CMFCRibbonPanel::SetCenterColumnVert](#setcentercolumnvert)|Ordina il pannello per allineare gli elementi verticalmente, dalla colonna.|  
+|[CMFCRibbonPanel::SetData](#setdata)|Associa i dati definiti dall'utente con il pannello della barra multifunzione.|  
+|[CMFCRibbonPanel::SetElementMenu](#setelementmenu)|Assegna un menu di scelta rapida per l'elemento con l'ID di comando specificato.|  
+|[CMFCRibbonPanel::SetElementRTC](#setelementrtc)|Aggiunge un elemento della barra multifunzione specificato da informazioni sulla classe di runtime fornito al pannello della barra multifunzione.|  
+|[CMFCRibbonPanel::SetElementRTCByID](#setelementrtcbyid)|Aggiunge un elemento della barra multifunzione specificato da informazioni sulla classe di runtime fornito al pannello della barra multifunzione.|  
+|[CMFCRibbonPanel::SetFocused](#setfocused)|Imposta lo stato attivo per l'elemento specificato della barra multifunzione.|  
+|[CMFCRibbonPanel::SetJustifyColumns](#setjustifycolumns)|Abilita o disabilita l'allineamento della colonna.|  
+|[CMFCRibbonPanel::SetKeys](#setkeys)|Imposta il tasto di scelta rapida che consente di visualizzare il pannello della barra multifunzione.|  
+|[CMFCRibbonPanel::ShowPopup](#showpopup)||  
   
-## Esempio  
- Nell'esempio seguente viene illustrato come configurare un oggetto `CMFCRibbonPanel` utilizzando i diversi metodi nella classe `CMFCRibbonPanel`.  L'esempio mostra come impostare la scelta rapida per visualizzare il riquadro della barra multifunzione, linea verticale gli elementi nel pannello della colonna e consentono il motivo della colonna.  Questo frammento di codice fa parte [Esempio 2007 demo di MS Office](../../top/visual-cpp-samples.md).  
+## <a name="remarks"></a>Note  
+ Pannelli della barra multifunzione sono raggruppamenti logici di attività correlate che create all'interno delle categorie della barra multifunzione. Come le dimensioni delle modifiche della barra multifunzione, il layout del pannello corregge automaticamente per visualizzare tutti gli elementi possibili.  
   
- [!code-cpp[NVC_MFC_MSOffice2007Demo#10](../../mfc/reference/codesnippet/CPP/cmfcribbonpanel-class_1.cpp)]  
+ È possibile ottenere una barra multifunzione riquadri in cui è contenuto in una categoria della barra multifunzione tramite la chiamata di [CMFCRibbonCategory::GetPanel](../../mfc/reference/cmfcribboncategory-class.md#getpanel) metodo.  
   
-## Gerarchia di ereditarietà  
+## <a name="example"></a>Esempio  
+ Nell'esempio riportato di seguito viene illustrato come configurare un `CMFCRibbonPanel` oggetto tramite i vari metodi di `CMFCRibbonPanel` (classe). Nell'esempio viene illustrato come impostare il tasto di scelta rapida che consente di visualizzare il pannello della barra multifunzione, allineare gli elementi nel pannello in senso verticale dalla colonna e attivare l'allineamento della colonna. Questo frammento di codice fa parte di [esempio MS Office 2007 Demo](../../visual-cpp-samples.md).  
+  
+ [!code-cpp[NVC_MFC_MSOffice2007Demo&#10;](../../mfc/reference/codesnippet/cpp/cmfcribbonpanel-class_1.cpp)]  
+  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md)  
   
-## Requisiti  
- **intestazione:** afxRibbonPanel.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** afxRibbonPanel.h  
   
-## Vedere anche  
+##  <a name="a-nameadda--cmfcribbonpaneladd"></a><a name="add"></a>CMFCRibbonPanel::Add  
+ Aggiunge l'elemento della barra multifunzione specificata alla matrice di elementi della barra multifunzione che è contenuta nel pannello della barra multifunzione.  
+  
+```  
+virtual void Add(CMFCRibbonBaseElement* pElem);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in, out] `pElem`  
+ Puntatore a un elemento della barra multifunzione.  
+  
+### <a name="remarks"></a>Note  
+  
+##  <a name="a-nameaddseparatora--cmfcribbonpaneladdseparator"></a><a name="addseparator"></a>CMFCRibbonPanel::AddSeparator  
+ Aggiunge un separatore al pannello della barra multifunzione.  
+  
+```  
+virtual void AddSeparator();
+```  
+  
+### <a name="remarks"></a>Note  
+ Chiamare questo metodo per aggiungere un separatore al pannello della barra multifunzione. Verrà aggiunto il separatore accanto all'elemento della barra multifunzione che è stata aggiunta dalla chiamata precedente a [CMFCRibbonPanel::Add](#add). Per inserire un separatore in una determinata posizione, chiamare [CMFCRibbonPanel::InsertSeparator](#insertseparator).  
+  
+##  <a name="a-nameaddtoolbara--cmfcribbonpaneladdtoolbar"></a><a name="addtoolbar"></a>CMFCRibbonPanel::AddToolBar  
+ Aggiunge una barra degli strumenti al pannello della barra multifunzione.  
+  
+```  
+CMFCRibbonButtonsGroup* AddToolBar(
+UINT uiToolbarResID,  
+UINT uiColdResID = 0,  
+UINT uiHotResID = 0,  
+UINT uiDisabledResID = 0);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in] `uiToolbarResID`  
+ Specifica l'ID risorsa della barra degli strumenti da aggiungere.  
+  
+ [in] `uiColdResID`  
+ Specifica l'ID risorsa delle immagini a freddo della barra degli strumenti.  
+  
+ [in] `uiHotResID`  
+ Specifica l'ID risorsa delle immagini a caldo della barra degli strumenti.  
+  
+ [in] `uiDisabledResID`  
+ Specifica l'ID risorsa delle immagini disabilitato della barra degli strumenti.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Chiamare questo metodo per aggiungere una barra degli strumenti al pannello della barra multifunzione. Verrà aggiunta la barra degli strumenti accanto all'elemento della barra multifunzione aggiunto dalla chiamata precedente a [CMFCRibbonPanel::Add](#add).  
+  
+### <a name="remarks"></a>Note  
+ Per ulteriori informazioni sulle barre degli strumenti, le immagini a caldo, immagini a freddo e immagini disabilitate, vedere [CMFCToolBar classe](../../mfc/reference/cmfctoolbar-class.md).  
+  
+##  <a name="a-namecmfcribbonpanela--cmfcribbonpanelcmfcribbonpanel"></a><a name="cmfcribbonpanel"></a>CMFCRibbonPanel::CMFCRibbonPanel  
+ Costruisce e Inizializza un [CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md) oggetto.  
+  
+```  
+CMFCRibbonPanel(
+LPCTSTR lpszName = NULL,  
+HICON hIcon = NULL);  
+  
+CMFCRibbonPanel(CMFCRibbonGallery* pPaletteButton);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in] `lpszName`  
+ Il nome del pannello della barra multifunzione.  
+  
+ [in] `hIcon`  
+ Handle per l'icona del pulsante predefinito per il pannello della barra multifunzione.  
+  
+ [in] `pPaletteButton`  
+ Puntatore a una raccolta della barra multifunzione per il pannello della barra multifunzione.  
+  
+##  <a name="a-namefindbydataa--cmfcribbonpanelfindbydata"></a><a name="findbydata"></a>CMFCRibbonPanel::FindByData  
+ Recupera l'elemento della barra multifunzione associato i dati specificati.  
+  
+```  
+CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData) const;  
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in] `dwData`  
+ I dati associati a un elemento della barra multifunzione.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Puntatore a un elemento della barra multifunzione se il metodo ha esito positivo; in caso contrario `NULL`.  
+  
+### <a name="remarks"></a>Note  
+  
+##  <a name="a-namefindbyida--cmfcribbonpanelfindbyid"></a><a name="findbyid"></a>CMFCRibbonPanel::FindByID  
+ Recupera l'elemento della barra multifunzione identificato dall'ID di comando specificato.  
+  
+```  
+CMFCRibbonBaseElement* FindByID(UINT uiCmdID) const;  
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in] `uiCmdID`  
+ L'ID di comando di un elemento della barra multifunzione.  
+  
+### <a name="return-value"></a>Valore restituito  
+ L'elemento della barra multifunzione che è identificato dall'ID di comando specificato; in caso contrario `NULL` se nessun elemento della barra multifunzione viene identificato con l'ID di comando specificato.  
+  
+##  <a name="a-namegetcaptionheighta--cmfcribbonpanelgetcaptionheight"></a><a name="getcaptionheight"></a>CMFCRibbonPanel::GetCaptionHeight  
+ Recupera l'altezza della didascalia per il pannello della barra multifunzione.  
+  
+```  
+int GetCaptionHeight() const;  
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ L'altezza, in pixel, di una didascalia per il pannello della barra multifunzione.  
+  
+### <a name="remarks"></a>Note  
+  
+##  <a name="a-namegetcounta--cmfcribbonpanelgetcount"></a><a name="getcount"></a>CMFCRibbonPanel::GetCount  
+ Recupera il numero di elementi della barra multifunzione contenute nel pannello della barra multifunzione.  
+  
+```  
+int GetCount() const;  
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ Il numero di elementi della barra multifunzione contenute nel pannello della barra multifunzione.  
+  
+##  <a name="a-namegetdataa--cmfcribbonpanelgetdata"></a><a name="getdata"></a>CMFCRibbonPanel::GetData  
+ Restituisce i dati definiti dall'utente associati al pannello.  
+  
+```  
+DWORD_PTR GetData() const;  
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ I dati definiti dall'utente associati al pannello.  
+  
+##  <a name="a-namegetdefaultbuttona--cmfcribbonpanelgetdefaultbutton"></a><a name="getdefaultbutton"></a>CMFCRibbonPanel::GetDefaultButton  
+ Recupera il pulsante predefinito per il pannello della barra multifunzione.  
+  
+```  
+CMFCRibbonButton& GetDefaultButton();
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ Il pulsante predefinito per il pannello della barra multifunzione.  
+  
+### <a name="remarks"></a>Note  
+ Il pulsante predefinito viene visualizzato quando un pannello della barra multifunzione dispone di spazio sufficiente per visualizzarne gli elementi della barra multifunzione.  
+  
+##  <a name="a-namegetdroppeddowna--cmfcribbonpanelgetdroppeddown"></a><a name="getdroppeddown"></a>CMFCRibbonPanel::GetDroppedDown  
+ Recupera un puntatore a un elemento della barra multifunzione se viene visualizzato il menu a comparsa.  
+  
+```  
+CMFCRibbonBaseElement* GetDroppedDown() const;  
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ Puntatore all'elemento della barra multifunzione con il relativo menu a comparsa eliminato in caso contrario `NULL` se nessun elemento della barra multifunzione dispone il menu a comparsa a discesa.  
+  
+### <a name="remarks"></a>Note  
+ Solo gli elementi della barra multifunzione sono contenuti nel pannello della barra multifunzione vengono testati.  
+  
+##  <a name="a-namegetelementa--cmfcribbonpanelgetelement"></a><a name="getelement"></a>CMFCRibbonPanel::GetElement  
+ Restituisce l'elemento della barra multifunzione che si trova in corrispondenza dell'indice specificato.  
+  
+```  
+CMFCRibbonBaseElement* GetElement(int nIndex) const;  
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in] `nIndex`  
+ Specifica l'indice in base zero dell'elemento da recuperare.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Un puntatore valido per l'elemento della barra multifunzione base si trova nella posizione `nIndex` nel pannello della barra multifunzione, o `NULL` se non esiste nessun elemento in corrispondenza dell'indice specificato.  
+  
+##  <a name="a-namegetelementsa--cmfcribbonpanelgetelements"></a><a name="getelements"></a>CMFCRibbonPanel::GetElements  
+ Recupera tutti gli elementi della barra multifunzione sono contenuti nel pannello della barra multifunzione.  
+  
+```  
+void GetElements(CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [out] `arElements`  
+ Matrice da riempire con tutti gli elementi della barra multifunzione sono contenuti nel pannello della barra multifunzione.  
+  
+### <a name="remarks"></a>Note  
+  
+##  <a name="a-namegetelementsbyida--cmfcribbonpanelgetelementsbyid"></a><a name="getelementsbyid"></a>CMFCRibbonPanel::GetElementsByID  
+ Aggiunge gli elementi della barra multifunzione con l'ID di comando specificato nella matrice specificata.  
+  
+```  
+void GetElementsByID(
+UINT uiCmdID,  
+CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in] `uiCmdID`  
+ ID di comando per un elemento della barra multifunzione.  
+  
+ [in] `arElements`  
+ Matrice di elementi della barra multifunzione.  
+  
+### <a name="remarks"></a>Note  
+ Solo gli elementi della barra multifunzione sono contenuti nel pannello della barra multifunzione vengono testati.  
+  
+##  <a name="a-namegethighlighteda--cmfcribbonpanelgethighlighted"></a><a name="gethighlighted"></a>CMFCRibbonPanel::GetHighlighted  
+ Recupera l'elemento della barra multifunzione è evidenziato nel pannello della barra multifunzione.  
+  
+```  
+CMFCRibbonBaseElement* GetHighlighted() const;  
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ Puntatore all'elemento della barra multifunzione che è evidenziato nel pannello della barra multifunzione.  
+  
+### <a name="remarks"></a>Note  
+  
+##  <a name="a-namegetindexa--cmfcribbonpanelgetindex"></a><a name="getindex"></a>CMFCRibbonPanel::GetIndex  
+ Recupera l'indice in base zero dell'elemento della barra multifunzione specificato dalla matrice di elementi della barra multifunzione contenute nel pannello della barra multifunzione.  
+  
+```  
+virtual int GetIndex(CMFCRibbonBaseElement* pElem) const;  
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in] `pElem`  
+ Puntatore a un elemento della barra multifunzione.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Indice in base zero dell'elemento della barra multifunzione specificato se il metodo ha esito positivo; in caso contrario-1.  
+  
+### <a name="remarks"></a>Note  
+  
+##  <a name="a-namegetitemidslista--cmfcribbonpanelgetitemidslist"></a><a name="getitemidslist"></a>CMFCRibbonPanel::GetItemIDsList  
+ Recupera l'ID di comando per tutti gli elementi della barra multifunzione nel pannello della barra multifunzione.  
+  
+```  
+void GetItemIDsList(CList<UINT, UINT>& lstItems) const;  
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [out] `lstItems`  
+ L'elenco di ID di comando per gli elementi della barra multifunzione sono contenuti nel pannello della barra multifunzione.  
+  
+### <a name="remarks"></a>Note  
+  
+##  <a name="a-namegetnamea--cmfcribbonpanelgetname"></a><a name="getname"></a>CMFCRibbonPanel::GetName  
+ Recupera il nome del pannello della barra multifunzione.  
+  
+```  
+LPCTSTR GetName() const;  
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ Il nome del pannello della barra multifunzione.  
+  
+### <a name="remarks"></a>Note  
+  
+##  <a name="a-namegetparentbuttona--cmfcribbonpanelgetparentbutton"></a><a name="getparentbutton"></a>CMFCRibbonPanel::GetParentButton  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+CMFCRibbonBaseElement* GetParentButton() const;  
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+  
+### <a name="remarks"></a>Note  
+  
+##  <a name="a-namegetparentcategorya--cmfcribbonpanelgetparentcategory"></a><a name="getparentcategory"></a>CMFCRibbonPanel::GetParentCategory  
+ Restituisce la categoria padre del pannello della barra multifunzione.  
+  
+```  
+CMFCRibbonCategory* GetParentCategory() const;  
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ Puntatore alla categoria della barra multifunzione che contiene il pannello della barra multifunzione.  
+  
+##  <a name="a-namegetparentmenubara--cmfcribbonpanelgetparentmenubar"></a><a name="getparentmenubar"></a>CMFCRibbonPanel::GetParentMenuBar  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+CMFCRibbonPanelMenuBar* GetParentMenuBar() const;  
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+  
+### <a name="remarks"></a>Note  
+  
+##  <a name="a-namegetpreferedmenulocationa--cmfcribbonpanelgetpreferedmenulocation"></a><a name="getpreferedmenulocation"></a>CMFCRibbonPanel::GetPreferedMenuLocation  
+ Recupera il rettangolo di visualizzazione preferita per il menu a comparsa del pannello della barra multifunzione.  
+  
+```  
+virtual BOOL GetPreferedMenuLocation(CRect& rect);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [out] `rect`  
+ Questo parametro non viene usato.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Restituisce sempre `FALSE`.  
+  
+### <a name="remarks"></a>Note  
+ Questo metodo restituisce sempre `FALSE`. Eseguire l'override di questo metodo per recuperare il rettangolo di visualizzazione preferita per il menu a comparsa del pannello della barra multifunzione.  
+  
+##  <a name="a-namegetpresseda--cmfcribbonpanelgetpressed"></a><a name="getpressed"></a>CMFCRibbonPanel::GetPressed  
+ Recupera un puntatore a un elemento della barra multifunzione nel pannello della barra multifunzione se l'utente preme attualmente.  
+  
+```  
+CMFCRibbonBaseElement* GetPressed() const;  
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ Un puntatore a un elemento della barra multifunzione se l'utente preme attualmente. in caso contrario `NULL`.  
+  
+### <a name="remarks"></a>Note  
+  
+##  <a name="a-namegetrecta--cmfcribbonpanelgetrect"></a><a name="getrect"></a>CMFCRibbonPanel::GetRect  
+ Recupera il rettangolo di visualizzazione per il pannello della barra multifunzione.  
+  
+```  
+const CRect& GetRect() const;  
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ Il rettangolo di visualizzazione per il pannello della barra multifunzione.  
+  
+### <a name="remarks"></a>Note  
+  
+##  <a name="a-namehaselementa--cmfcribbonpanelhaselement"></a><a name="haselement"></a>CMFCRibbonPanel::HasElement  
+ Indica se il pannello della barra multifunzione contiene l'elemento specificato della barra multifunzione.  
+  
+```  
+BOOL HasElement(const CMFCRibbonBaseElement* pElem) const;  
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in] `pElem`  
+ Puntatore a un elemento della barra multifunzione.  
+  
+### <a name="return-value"></a>Valore restituito  
+ `TRUE`Se il pannello della barra multifunzione contiene l'elemento specificato della barra multifunzione. in caso contrario `FALSE`.  
+  
+### <a name="remarks"></a>Note  
+  
+##  <a name="a-namehighlighta--cmfcribbonpanelhighlight"></a><a name="highlight"></a>CMFCRibbonPanel::Highlight  
+ Imposta il colore di evidenziazione per il pannello della barra multifunzione selezionati e per l'elemento della barra multifunzione specificato dal punto.  
+  
+```  
+virtual void Highlight(
+BOOL bHighlight,  
+CPoint point);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in] `bHighlight`  
+ `TRUE`per evidenziare il pannello della barra multifunzione. `FALSE` a deseleziona pannello della barra multifunzione.  
+  
+ [in] `point`  
+ Le coordinate x e y del puntatore, rispetto all'angolo superiore sinistro della finestra.  
+  
+### <a name="remarks"></a>Note  
+  
+##  <a name="a-namehittesta--cmfcribbonpanelhittest"></a><a name="hittest"></a>CMFCRibbonPanel::HitTest  
+ Recupera un elemento della barra multifunzione se il punto specificato si trova in essa contenuti.  
+  
+```  
+virtual CMFCRibbonBaseElement* HitTest(
+CPoint point,  
+BOOL bCheckPanelCaption = FALSE);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in] `point`  
+ Le coordinate x e y del puntatore, rispetto all'angolo superiore sinistro della finestra.  
+  
+ [in] `bCheckPanelCaption`  
+ `TRUE`Per testare la didascalia del pannello della barra multifunzione; in caso contrario `FALSE`.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Puntatore a un elemento della barra multifunzione se il punto specificato si trova in tale ambiente. in caso contrario `NULL`.  
+  
+### <a name="remarks"></a>Note  
+ Solo gli elementi della barra multifunzione sono contenuti nel pannello della barra multifunzione vengono testati.  
+  
+##  <a name="a-namehittestexa--cmfcribbonpanelhittestex"></a><a name="hittestex"></a>CMFCRibbonPanel::HitTestEx  
+ Recupera l'indice in base zero dell'elemento della barra multifunzione che è il punto specificato che si trova in essa contenuti.  
+  
+```  
+virtual int HitTestEx(CPoint point) const;  
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in] `point`  
+ Le coordinate x e y del puntatore, rispetto all'angolo superiore sinistro della finestra.  
+  
+### <a name="return-value"></a>Valore restituito  
+ L'indice in base zero dell'elemento della barra multifunzione che è il punto specificato che si trova in tale ambiente. in caso contrario-1.  
+  
+### <a name="remarks"></a>Note  
+ Solo gli elementi della barra multifunzione sono contenuti nel pannello della barra multifunzione vengono testati.  
+  
+##  <a name="a-nameinserta--cmfcribbonpanelinsert"></a><a name="insert"></a>CMFCRibbonPanel::Insert  
+ Inserisce l'elemento della barra multifunzione specificato nella posizione specificata nella matrice di elementi della barra multifunzione che è contenuta nel pannello della barra multifunzione.  
+  
+```  
+virtual BOOL Insert(
+CMFCRibbonBaseElement* pElem,  
+int nIndex);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in, out] `pElem`  
+ Puntatore a un elemento della barra multifunzione.  
+  
+ [in] `nIndex`  
+ Valore in base zero, compreso tra -1 e il numero di elementi della barra multifunzione che sono contenuti nella matrice.  
+  
+### <a name="return-value"></a>Valore restituito  
+ `TRUE`Se l'elemento della barra multifunzione è stata inserita correttamente. in caso contrario `FALSE`.  
+  
+### <a name="remarks"></a>Note  
+ Se il valore di `nIndex` è -1, o se `nIndex` è uguale al numero di elementi della barra multifunzione nella matrice, l'elemento specificato della barra multifunzione viene aggiunto alla fine della matrice. Se il valore di `nIndex` è compreso nell'intervallo, il metodo avrà esito negativo.  
+  
+##  <a name="a-nameinsertseparatora--cmfcribbonpanelinsertseparator"></a><a name="insertseparator"></a>CMFCRibbonPanel::InsertSeparator  
+ Inserisce un separatore in una posizione specificata.  
+  
+```  
+virtual BOOL InsertSeparator(int nIndex);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in] `nIndex`  
+ Specifica l'indice in base zero in cui viene inserito il separatore.  
+  
+### <a name="return-value"></a>Valore restituito  
+ `TRUE`Se è stato inserito il separatore; in caso contrario, `FALSE`.  
+  
+### <a name="remarks"></a>Note  
+ Chiamare questo metodo per inserire un separatore in corrispondenza della posizione specificata da `nIndex`. Per inserire un separatore accanto all'elemento della barra multifunzione aggiunto di recente, chiamare [CMFCRibbonPanel::AddSeparator](#addseparator).  
+  
+##  <a name="a-nameiscentercolumnverta--cmfcribbonpaneliscentercolumnvert"></a><a name="iscentercolumnvert"></a>CMFCRibbonPanel::IsCenterColumnVert  
+ Indica se le posizioni verticale degli elementi della barra multifunzione sono centrate all'interno il rettangolo di visualizzazione.  
+  
+```  
+BOOL IsCenterColumnVert() const;  
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ `TRUE`Se le posizioni verticale di elementi della barra multifunzione sono centrati all'interno il rettangolo di visualizzazione; in caso contrario `FALSE`.  
+  
+##  <a name="a-nameiscollapseda--cmfcribbonpaneliscollapsed"></a><a name="iscollapsed"></a>CMFCRibbonPanel::IsCollapsed  
+ Indica se le dimensioni di visualizzazione del pannello della barra multifunzione sono ridotta a icona in direzione orizzontale.  
+  
+```  
+BOOL IsCollapsed() const;  
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ `TRUE`Se le dimensioni di visualizzazione del pannello della barra multifunzione sono ridotta a icona nella direzione orizzontale. in caso contrario `FALSE`.  
+  
+### <a name="remarks"></a>Note  
+ Quando un pannello della barra multifunzione è compresso, Visualizza solo il pulsante predefinito, il nome e una freccia a discesa.  
+  
+##  <a name="a-nameishighlighteda--cmfcribbonpanelishighlighted"></a><a name="ishighlighted"></a>CMFCRibbonPanel::IsHighlighted  
+ Indica se la visualizzazione del pannello della barra multifunzione è evidenziata.  
+  
+```  
+BOOL IsHighlighted() const;  
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ `TRUE`Se la visualizzazione del pannello della barra multifunzione è evidenziata. in caso contrario `FALSE`.  
+  
+### <a name="remarks"></a>Note  
+ La visualizzazione di un pannello della barra multifunzione viene evidenziata quando il puntatore si trova su di esso.  
+  
+##  <a name="a-nameisjustifycolumnsa--cmfcribbonpanelisjustifycolumns"></a><a name="isjustifycolumns"></a>CMFCRibbonPanel::IsJustifyColumns  
+ Indica se le dimensioni di visualizzazione di elementi della barra multifunzione che si trovano nella stessa colonna nel pannello della barra multifunzione sono impostate sulla stessa larghezza.  
+  
+```  
+BOOL IsJustifyColumns() const;  
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ `TRUE`Se le dimensioni di visualizzazione di elementi della barra multifunzione che sono nella stessa colonna nel pannello della barra multifunzione vengono impostati sulla stessa larghezza; in caso contrario `FALSE`.  
+  
+##  <a name="a-nameismainpanela--cmfcribbonpanelismainpanel"></a><a name="ismainpanel"></a>CMFCRibbonPanel::IsMainPanel  
+ Indica se il pannello della barra multifunzione è il pannello principale della barra multifunzione.  
+  
+```  
+virtual BOOL IsMainPanel() const;  
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ Restituisce sempre `FALSE`.  
+  
+### <a name="remarks"></a>Note  
+ Questo metodo restituisce sempre `FALSE`. Eseguire l'override di questo metodo per indicare se il pannello della barra multifunzione è il pannello principale della barra multifunzione.  
+  
+ Quando l'utente seleziona il pulsante dell'applicazione, verrà visualizzato il pannello principale della barra multifunzione.  
+  
+##  <a name="a-nameismenumodea--cmfcribbonpanelismenumode"></a><a name="ismenumode"></a>CMFCRibbonPanel::IsMenuMode  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+BOOL IsMenuMode() const;  
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+  
+### <a name="remarks"></a>Note  
+  
+##  <a name="a-nameonkeya--cmfcribbonpanelonkey"></a><a name="onkey"></a>CMFCRibbonPanel::OnKey  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual BOOL OnKey(UINT nChar);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in] `nChar`  
+  
+### <a name="return-value"></a>Valore restituito  
+  
+### <a name="remarks"></a>Note  
+  
+##  <a name="a-namerecalcwidthsa--cmfcribbonpanelrecalcwidths"></a><a name="recalcwidths"></a>CMFCRibbonPanel::RecalcWidths  
+ Ricalcola la larghezza di ogni configurazione di layout per il pannello della barra multifunzione.  
+  
+```  
+virtual void RecalcWidths(
+CDC* pDC,  
+int nHeight);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in] `pDC`  
+ Puntatore a un contesto di dispositivo per il pannello della barra multifunzione.  
+  
+ [in] `nHeight`  
+ Altezza del pannello della barra multifunzione.  
+  
+### <a name="remarks"></a>Note  
+ Un pannello della barra multifunzione modifiche della configurazione di layout come le modifiche apportate alla larghezza disponibile.  
+  
+##  <a name="a-nameremovea--cmfcribbonpanelremove"></a><a name="remove"></a>CMFCRibbonPanel::Remove  
+ Rimuove e facoltativamente elimina un elemento in corrispondenza dell'indice specificato.  
+  
+```  
+BOOL Remove(
+int nIndex,  
+BOOL bDelete = TRUE);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in] `nIndex`  
+ Specifica l'indice in base zero dell'elemento che viene rimosso dal pannello della barra multifunzione.  
+  
+ [in] `bDelete`  
+ `TRUE`Per eliminare l'elemento viene rimosso; in caso contrario, `FALSE`.  
+  
+### <a name="return-value"></a>Valore restituito  
+ `TRUE`Se l'elemento è stato rimosso ed eliminato (se `bDelete` è `TRUE`); `FALSE` se l'elemento non è stato rimosso o se è presente alcun elemento della barra multifunzione non disponibile all'indirizzo `nIndex`.  
+  
+### <a name="remarks"></a>Note  
+ Chiamare questo metodo per rimuovere un elemento dal pannello della barra multifunzione.  
+  
+##  <a name="a-nameremovealla--cmfcribbonpanelremoveall"></a><a name="removeall"></a>CMFCRibbonPanel::RemoveAll  
+ Elimina tutti gli elementi della barra multifunzione dal pannello della barra multifunzione.  
+  
+```  
+void RemoveAll();
+```  
+  
+### <a name="remarks"></a>Note  
+ Tutti gli elementi della barra multifunzione vengono eliminati dal pannello della barra multifunzione e distrutti.  
+  
+##  <a name="a-namereplacea--cmfcribbonpanelreplace"></a><a name="replace"></a>CMFCRibbonPanel::Replace  
+ Sostituisce un elemento con un altro in base al relativo valore di indice.  
+  
+```  
+BOOL Replace(
+int nIndex,  
+CMFCRibbonBaseElement* pElem);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in] `nIndex`  
+ Specifica l'indice in base zero dell'elemento da sostituire.  
+  
+ [in] [out]`pElem`  
+ Un puntatore valido per l'elemento che sostituisce l'elemento originale.  
+  
+### <a name="return-value"></a>Valore restituito  
+ `TRUE`Se l'elemento della barra multifunzione originale è stato sostituito correttamente dal nuovo elemento della barra multifunzione. `FALSE` se l'elemento della barra multifunzione non è stata sostituita o se non esiste nessun elemento in corrispondenza dell'indice specificato.  
+  
+### <a name="remarks"></a>Note  
+ Per sostituire un elemento della barra multifunzione dall'ID di comando, chiamare [CMFCRibbonPanel::ReplaceByID](#replacebyid).  
+  
+##  <a name="a-namereplacebyida--cmfcribbonpanelreplacebyid"></a><a name="replacebyid"></a>CMFCRibbonPanel::ReplaceByID  
+ Sostituisce un elemento con altro in base a un ID di comando specificato.  
+  
+```  
+BOOL ReplaceByID(
+UINT uiCmdID,  
+CMFCRibbonBaseElement* pElem);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in] `uiCmdID`  
+ Specifica l'ID di comando dell'elemento da sostituire.  
+  
+ [in] [out]`pElem`  
+ Un puntatore valido per l'elemento che sostituirà l'elemento originale.  
+  
+### <a name="return-value"></a>Valore restituito  
+ `TRUE`Se l'elemento della barra multifunzione originale è stato sostituito correttamente dal nuovo elemento della barra multifunzione. `FALSE` se l'elemento della barra multifunzione non è stata sostituita o se non esiste effettivamente alcun elemento con l'ID di comando specificato.  
+  
+### <a name="remarks"></a>Note  
+ Per sostituire un elemento della barra multifunzione in base alla posizione, chiamare [CMFCRibbonPanel::Replace](#replace).  
+  
+##  <a name="a-namesetcentercolumnverta--cmfcribbonpanelsetcentercolumnvert"></a><a name="setcentercolumnvert"></a>CMFCRibbonPanel::SetCenterColumnVert  
+ Abilita o disabilita la centratura delle posizioni verticale degli elementi della barra multifunzione entro il rettangolo di visualizzazione.  
+  
+```  
+void SetCenterColumnVert(BOOL bSet = TRUE);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in] `bSet`  
+ `TRUE`Per allineare al centro le posizioni verticale degli elementi della barra multifunzione entro il rettangolo di visualizzazione; `FALSE` di disabilitare questa funzionalità.  
+  
+### <a name="remarks"></a>Note  
+  
+##  <a name="a-namesetdataa--cmfcribbonpanelsetdata"></a><a name="setdata"></a>CMFCRibbonPanel::SetData  
+ Associa i dati definiti dall'utente con il pannello della barra multifunzione.  
+  
+```  
+void SetData(DWORD_PTR dwData);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in] `dwData`  
+ Specifica i dati definiti dall'utente da impostare.  
+  
+### <a name="remarks"></a>Note  
+ Chiamare questo metodo per associare i dati definiti dall'utente con il pannello della barra multifunzione.  
+  
+##  <a name="a-namesetelementmenua--cmfcribbonpanelsetelementmenu"></a><a name="setelementmenu"></a>CMFCRibbonPanel::SetElementMenu  
+ Assegna un menu di scelta rapida per l'elemento con l'ID di comando specificato.  
+  
+```  
+BOOL SetElementMenu(
+UINT uiCmdID,  
+HMENU hMenu,  
+BOOL bIsDefautCommand = FALSE,  
+BOOL bRightAlign = FALSE);
+
+ 
+BOOL SetElementMenu(
+UINT uiCmdID,  
+UINT uiMenuResID,  
+BOOL bIsDefautCommand = FALSE,  
+BOOL bRightAlign = FALSE);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in] `uiCmdID`  
+ Specifica l'ID di comando dell'elemento della barra multifunzione in cui viene aggiunto il menu.  
+  
+ [in] `hMenu`  
+ Specifica l'handle per il menu di Windows per aggiungere al pannello della barra multifunzione.  
+  
+ [in] `bIsDefautCommand`  
+ `TRUE`Per specificare che il comando associato all'elemento della barra multifunzione deve essere eseguito se si seleziona l'elemento della barra multifunzione. In questo caso, il menu viene aperto solo quando l'utente fa clic sulla freccia accanto all'elemento della barra multifunzione. `FALSE`Per specificare che il comando associato all'elemento della barra multifunzione non deve essere eseguito se si seleziona l'elemento della barra multifunzione. In questo caso, indipendentemente dalla quale l'utente fa clic sull'elemento viene visualizzato il menu di scelta rapida.  
+  
+ [in] `bRightAlign`  
+ `TRUE`Per specificare che il menu di scelta rapida è allineato a destra; in caso contrario, `FALSE`.  
+  
+ [in] `uiMenuResID`  
+ Specifica l'ID di risorsa del menu da aggiungere al pannello della barra multifunzione.  
+  
+### <a name="return-value"></a>Valore restituito  
+ `TRUE`Se il menu è stato assegnato all'elemento della barra multifunzione; in caso contrario, `FALSE`.  
+  
+### <a name="remarks"></a>Note  
+ Chiamare questo metodo per assegnare un menu di scelta rapida per l'elemento della barra multifunzione con l'ID di comando specificato.  
+  
+##  <a name="a-namesetelementrtca--cmfcribbonpanelsetelementrtc"></a><a name="setelementrtc"></a>CMFCRibbonPanel::SetElementRTC  
+ Aggiunge l'elemento della barra multifunzione specificati tramite le informazioni sulla classe di runtime fornito al pannello della barra multifunzione.  
+  
+```  
+CMFCRibbonBaseElement* SetElementRTC(
+int nIndex,  
+CRuntimeClass* pRTC);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in] `nIndex`  
+ Specifica l'indice in base zero dell'elemento della barra multifunzione da aggiungere.  
+  
+ [in] [out]`pRTC`  
+ Puntatore alle informazioni di classe di runtime per l'elemento della barra multifunzione che viene aggiunto al pannello della barra multifunzione.  
+  
+### <a name="return-value"></a>Valore restituito  
+ L'elemento della barra multifunzione che è stato creato utilizzando le informazioni sulla classe di runtime specificato.  
+  
+### <a name="remarks"></a>Note  
+ Se si desidera aggiungere un elemento personalizzato (ad esempio, un pulsante del colore) al pannello della barra multifunzione, è necessario specificare informazioni sulle classi di runtime dell'elemento personalizzato. La barra multifunzione memorizza queste informazioni, crea l'elemento personalizzato e sostituisce un elemento esistente che si trova, identificato da, l'ID del comando specificato. La barra multifunzione, quindi, restituisce un puntatore all'elemento appena creato.  
+  
+##  <a name="a-namesetelementrtcbyida--cmfcribbonpanelsetelementrtcbyid"></a><a name="setelementrtcbyid"></a>CMFCRibbonPanel::SetElementRTCByID  
+ Aggiunge un elemento della barra multifunzione che è specificato da informazioni sulla classe di runtime fornito al pannello della barra multifunzione.  
+  
+```  
+CMFCRibbonBaseElement* SetElementRTCByID(
+UINT uiCmdID,  
+CRuntimeClass* pRTC);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in] `uiCmdID`  
+ Specifica l'ID di comando dell'elemento della barra multifunzione da aggiungere.  
+  
+ [in] [out]`pRTC`  
+ Un puntatore alle informazioni sulla classe di runtime associati all'elemento della barra multifunzione che viene aggiunto al pannello della barra multifunzione.  
+  
+### <a name="return-value"></a>Valore restituito  
+ L'elemento della barra multifunzione che è stato creato utilizzando le informazioni sulla classe di runtime specificato.  
+  
+### <a name="remarks"></a>Note  
+ Se si desidera aggiungere un elemento personalizzato (ad esempio, un pulsante del colore) al pannello della barra multifunzione, è necessario specificare informazioni sulle classi di runtime dell'elemento personalizzato. Archivia le informazioni della barra multifunzione, crea l'elemento personalizzato e sostituisce un elemento esistente che si trova l'ID di comando specificato. Viene quindi restituito un puntatore all'elemento appena creato.  
+  
+### <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come utilizzare il `SetElementRTCByID` metodo:  
+  
+```  
+ 
+// Load and add toolbar with standard buttons. This toolbar  
+// should display a custom color button with id ID_CHAR_COLOR:  
+ 
+pPanel->AddToolBar(IDR_MAINFRAME,
+    IDB_MAINFRAME256);
+
+CMFCRibbonColorButton* pColorButton = 
+(CMFCRibbonColorButton*)pPanel->SetElementRTCByID(
+ID_CHAR_COLOR,
+    RUNTIME_CLASS (CMFCRibbonColorButton));
+
+ 
+// SetElementRTCByID sets runtime class and returns a pointer  
+// to the newly created custom button,
+    which can be set up immediately:  
+pColorButton->EnableAutomaticButton(_T("Automatic"),
+    RGB (0,
+    0,
+    0));  
+```  
+  
+##  <a name="a-namesetjustifycolumnsa--cmfcribbonpanelsetjustifycolumns"></a><a name="setjustifycolumns"></a>CMFCRibbonPanel::SetJustifyColumns  
+ Attiva o disattiva la regolazione della larghezza del elementi della barra multifunzione nella stessa colonna.  
+  
+```  
+void SetJustifyColumns(BOOL bSet = TRUE);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in] `bSet`  
+ `TRUE`Per regolare la larghezza degli elementi della barra multifunzione nella stessa colonna per la larghezza dell'elemento della barra multifunzione più grande nella colonna. `FALSE` per disabilitare questa regolazione della larghezza.  
+  
+### <a name="remarks"></a>Note  
+ Quando questa funzionalità è abilitata in un pannello della barra multifunzione, le larghezze di elementi della barra multifunzione nella stessa colonna verranno regolate la larghezza dell'elemento più grande della barra multifunzione nella stessa colonna.  
+  
+##  <a name="a-namesetkeysa--cmfcribbonpanelsetkeys"></a><a name="setkeys"></a>CMFCRibbonPanel::SetKeys  
+ Imposta il suggerimento per il pulsante predefinito per il pannello della barra multifunzione.  
+  
+```  
+void SetKeys(LPCTSTR lpszKeys);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in] `lpszKeys`  
+ Suggerimento per il pulsante predefinito per il pannello della barra multifunzione.  
+  
+### <a name="remarks"></a>Note  
+ Il pulsante predefinito viene visualizzato quando un pannello della barra multifunzione dispone di spazio sufficiente per visualizzarne gli elementi della barra multifunzione.  
+  
+##  <a name="a-nameshowpopupa--cmfcribbonpanelshowpopup"></a><a name="showpopup"></a>CMFCRibbonPanel::ShowPopup  
+ Crea e visualizza un menu a comparsa del pannello della barra multifunzione.  
+  
+```  
+CMFCRibbonPanelMenu* ShowPopup(CMFCRibbonDefaultPanelButton* pButton = NULL);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in] `pButton`  
+ Puntatore al pulsante predefinito per il pannello della barra multifunzione.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Puntatore al menu a comparsa del pannello della barra multifunzione se il metodo ha esito positivo; in caso contrario `NULL`.  
+  
+### <a name="remarks"></a>Note  
+ Menu a comparsa del pannello della barra multifunzione è disponibile solo quando la visualizzazione del pannello della barra multifunzione è compresso.  
+  
+##  <a name="a-namesetfocuseda--cmfcribbonpanelsetfocused"></a><a name="setfocused"></a>CMFCRibbonPanel::SetFocused  
+ Imposta lo stato attivo per l'elemento specificato della barra multifunzione.  
+  
+```  
+void SetFocused(CMFCRibbonBaseElement* pNewFocus);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `pNewFocus`  
+ Un puntatore a un elemento della barra multifunzione che riceve lo stato attivo.  
+  
+### <a name="remarks"></a>Note  
+  
+##  <a name="a-namemakegalleryitemvisiblea--cmfcribbonpanelmakegalleryitemvisible"></a><a name="makegalleryitemvisible"></a>CMFCRibbonPanel::MakeGalleryItemVisible  
+ Scorre la raccolta per rendere visibile l'elemento specificato della barra multifunzione.  
+  
+```  
+void MakeGalleryItemVisible(CMFCRibbonBaseElement* pItem);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `pItem`  
+ Un puntatore a un elemento della barra multifunzione da visualizzare.  
+  
+### <a name="remarks"></a>Note  
+  
+##  <a name="a-nameiswindows7looka--cmfcribbonpaneliswindows7look"></a><a name="iswindows7look"></a>CMFCRibbonPanel::IsWindows7Look  
+ Indica se la barra multifunzione padre dispone di Windows 7 Cerca (pulsante piccola applicazione rettangolare).  
+  
+```  
+BOOL IsWindows7Look() const;  
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ `TRUE`Se la barra multifunzione padre con Windows 7 Cerca; in caso contrario `FALSE`.  
+  
+### <a name="remarks"></a>Note  
+  
+##  <a name="a-namegetvisibleelementsa--cmfcribbonpanelgetvisibleelements"></a><a name="getvisibleelements"></a>CMFCRibbonPanel::GetVisibleElements  
+ Recupera una matrice di elementi visibili.  
+  
+```  
+void GetVisibleElements(
+CArray<CMFCRibbonBaseElement*,  
+CMFCRibbonBaseElement*>& arElements);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `arElements`  
+ Quando la funzione termina, questo parametro contiene una matrice di elementi visibili.  
+  
+### <a name="remarks"></a>Note  
+  
+##  <a name="a-namegetgalleryrecta--cmfcribbonpanelgetgalleryrect"></a><a name="getgalleryrect"></a>CMFCRibbonPanel::GetGalleryRect  
+ Restituisce un rettangolo di delimitazione di un elemento della raccolta.  
+  
+```  
+CRect GetGalleryRect();
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ Dimensioni e posizione dell'elemento della raccolta all'interno di questo pannello.  
+  
+### <a name="remarks"></a>Note  
+  
+##  <a name="a-namegetfocuseda--cmfcribbonpanelgetfocused"></a><a name="getfocused"></a>CMFCRibbonPanel::GetFocused  
+ Restituisce un elemento con stato attivo.  
+  
+```  
+CMFCRibbonBaseElement* GetFocused() const;  
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ Un puntatore a un elemento con stato attivo o `NULL`.  
+  
+### <a name="remarks"></a>Note  
+  
+## <a name="see-also"></a>Vedere anche  
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
  [Classi](../../mfc/reference/mfc-classes.md)   
- [CObject Class](../../mfc/reference/cobject-class.md)   
- [CMFCRibbonCategory Class](../../mfc/reference/cmfcribboncategory-class.md)   
- [CMFCRibbonBaseElement Class](../../mfc/reference/cmfcribbonbaseelement-class.md)
+ [CObject (classe)](../../mfc/reference/cobject-class.md)   
+ [Classe CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md)   
+ [Classe CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)
+

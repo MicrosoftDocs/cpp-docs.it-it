@@ -1,63 +1,91 @@
 ---
-title: "Classe invalid_multiple_scheduling | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "concrt/concurrency::invalid_multiple_scheduling"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "invalid_multiple_scheduling (classe)"
+title: Classe invalid_multiple_scheduling | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concrt/concurrency::invalid_multiple_scheduling
+dev_langs:
+- C++
+helpviewer_keywords:
+- invalid_multiple_scheduling class
 ms.assetid: e9a47cb7-a778-4df7-92b0-3752119fd4c7
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# Classe invalid_multiple_scheduling
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 762648e65a7fcbda29daf31412e42bbd0e63f3d6
+ms.lasthandoff: 02/24/2017
 
-Questa classe viene descritta un'eccezione generata quando un oggetto di `task_handle` viene pianificata più volte utilizzando il metodo di `run` di oggetto di `structured_task_group` o di `task_group` senza una corrispondente chiamata ai metodi di `run_and_wait` o di `wait` .  
+---
+# <a name="invalidmultiplescheduling-class"></a>Classe invalid_multiple_scheduling
+Questa classe descrive un'eccezione generata quando un oggetto `task_handle` è pianificato più volte usando il metodo `run` di un oggetto `task_group` o `structured_task_group` senza una chiamata intermedia a uno dei metodi `wait` o `run_and_wait`.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
+```
+class invalid_multiple_scheduling : public std::exception;
 ```  
-class invalid_multiple_scheduling : public std::exception;  
-```  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Costruttori pubblici  
+### <a name="public-constructors"></a>Costruttori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore invalid\_multiple\_scheduling::invalid\_multiple\_scheduling](../Topic/invalid_multiple_scheduling::invalid_multiple_scheduling%20Constructor.md)|Di overload.  Costruisce un oggetto `invalid_multiple_scheduling`.|  
+|[Costruttore invalid_multiple_scheduling](#ctor)|Di overload. Costruisce un oggetto `invalid_multiple_scheduling`.|  
   
-## Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `exception`  
   
  `invalid_multiple_scheduling`  
   
-## Requisiti  
- **Header:** concrt.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** concrt  
   
- Concorrenza di**Spazio dei nomi:**  
+ **Spazio dei nomi:** Concurrency  
   
-## Vedere anche  
- [Spazio dei nomi concurrency](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [Classe task\_handle](../../../parallel/concrt/reference/task-handle-class.md)   
- [Classe task\_group](../Topic/task_group%20Class.md)   
- [Metodo task\_group::run](../Topic/task_group::run%20Method.md)   
- [Metodo task\_group::wait](../Topic/task_group::wait%20Method.md)   
- [Metodo task\_group::run\_and\_wait](../Topic/task_group::run_and_wait%20Method.md)   
- [Classe structured\_task\_group](../../../parallel/concrt/reference/structured-task-group-class.md)   
- [Metodo structured\_task\_group::run](../Topic/structured_task_group::run%20Method.md)   
- [Metodo structured\_task\_group::wait](../Topic/structured_task_group::wait%20Method.md)   
- [Metodo structured\_task\_group::run\_and\_wait](../Topic/structured_task_group::run_and_wait%20Method.md)
+##  <a name="a-namectora-invalidmultiplescheduling"></a><a name="ctor"></a>invalid_multiple_scheduling 
+
+ Costruisce un oggetto `invalid_multiple_scheduling`.  
+  
+```
+explicit _CRTIMP invalid_multiple_scheduling(_In_z_ const char* _Message) throw();
+
+invalid_multiple_scheduling() throw();
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `_Message`  
+ Messaggio descrittivo dell'errore.  
+  
+## <a name="see-also"></a>Vedere anche  
+ [concorrenza Namespace](concurrency-namespace.md)   
+ [Classe task_handle](task-handle-class.md)   
+ [Classe task_group](task-group-class.md)   
+ [Run (metodo)](task-group-class.md)   
+ [Wait (metodo)](task-group-class.md)   
+ [run_and_wait (metodo)](task-group-class.md)   
+ [Classe structured_task_group](structured-task-group-class.md)
+

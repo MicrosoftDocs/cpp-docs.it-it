@@ -1,36 +1,52 @@
 ---
-title: "Errore del compilatore C2976 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2976"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2976"
+title: Errore del compilatore C2976 | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2976
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2976
 ms.assetid: d9bf9836-325e-4f72-a7e3-a67cf19d32e7
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Errore del compilatore C2976
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: d691eba50403819e1a468b850995f4ae55a3731f
+ms.lasthandoff: 02/24/2017
 
-'identificatore': argomenti di tipo insufficienti  
+---
+# <a name="compiler-error-c2976"></a>Errore del compilatore C2976
+'identificatore': numero insufficiente di argomenti di tipo  
   
- In un tipo generico o in un modello mancano uno o più argomenti effettivi.  Controllare la dichiarazione generica o di modello per individuare il numero corretto di parametri.  
+ Un modello o generica mancano uno o più argomenti effettivi. Controllare la dichiarazione generica o di modello per trovare il numero corretto di parametri.  
   
- Questo errore può essere causato dagli argomenti di modello mancanti nei componenti STL.  
+ Questo errore può essere causato dalla mancanza di argomenti di modello nei componenti della libreria Standard C++.  
   
- Il seguente codice di esempio genera l'errore C2976:  
+ Nell'esempio seguente viene generato l'errore C2976:  
   
 ```  
 // C2976.cpp  
@@ -44,7 +60,7 @@ int main() {
 }  
 ```  
   
- L'errore C2976 può verificarsi anche quando si utilizzano i generics:  
+ C2976 può verificarsi anche quando si utilizzano i generics:  
   
 ```  
 // C2976b.cpp  

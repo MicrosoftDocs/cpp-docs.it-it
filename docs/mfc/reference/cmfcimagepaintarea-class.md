@@ -1,68 +1,84 @@
 ---
-title: "CMFCImagePaintArea Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CMFCImagePaintArea"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMFCImagePaintArea class"
+title: Classe CMFCImagePaintArea | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CMFCImagePaintArea
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMFCImagePaintArea class
 ms.assetid: c59eec22-f15a-4e58-8c4d-4a18a41f4452
 caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# CMFCImagePaintArea Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: c16fd9605474e57f167646ddc9bc91d235d1cba5
+ms.lasthandoff: 02/24/2017
 
-Fornisce l'area racchiuso da utilizzare per modificare un'immagine in una finestra di dialogo dell'editor di immagini.  
+---
+# <a name="cmfcimagepaintarea-class"></a>Classe CMFCImagePaintArea
+Fornisce l'area dell'immagine che consente di modificare un'immagine in una finestra di dialogo editor di immagini.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 class CMFCImagePaintArea : public CButton  
 ```  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Costruttori pubblici  
-  
-|||  
-|-|-|  
-|Nome|Descrizione|  
-|[CMFCImagePaintArea::CMFCImagePaintArea](../Topic/CMFCImagePaintArea::CMFCImagePaintArea.md)|Costruisce un oggetto `CMFCImagePaintArea`.|  
-|`CMFCImagePaintArea::~CMFCImagePaintArea`|Distruttore|  
-  
-### Metodi pubblici  
+### <a name="public-constructors"></a>Costruttori pubblici  
   
 |||  
 |-|-|  
 |Nome|Descrizione|  
-|[CMFCImagePaintArea::GetMode](../Topic/CMFCImagePaintArea::GetMode.md)|Recupera la modalità di disegno corrente.|  
-|[CMFCImagePaintArea::SetBitmap](../Topic/CMFCImagePaintArea::SetBitmap.md)|L'immagine bitmap per l'area racchiuso.|  
-|[CMFCImagePaintArea::SetColor](../Topic/CMFCImagePaintArea::SetColor.md)|Imposta il colore di disegno corrente.|  
-|[CMFCImagePaintArea::SetMode](../Topic/CMFCImagePaintArea::SetMode.md)|Imposta la modalità di disegno corrente.|  
+|[CMFCImagePaintArea::CMFCImagePaintArea](#cmfcimagepaintarea)|Costruisce un oggetto `CMFCImagePaintArea`.|  
+|`CMFCImagePaintArea::~CMFCImagePaintArea`|Distruttore.|  
   
-### Note  
- Questa classe non è destinata a essere utilizzata direttamente dal codice.  
+### <a name="public-methods"></a>Metodi pubblici  
   
- Il framework utilizza questa classe per visualizzare l'area racchiuso in una finestra di dialogo dell'editor di immagini.  Per ulteriori informazioni sulla finestra di dialogo dell'editor di immagini, vedere [CMFCImageEditorDialog Class](../../mfc/reference/cmfcimageeditordialog-class.md).  
+|||  
+|-|-|  
+|Nome|Descrizione|  
+|[CMFCImagePaintArea::GetMode](#getmode)|Recupera la modalità di disegno corrente.|  
+|[CMFCImagePaintArea::SetBitmap](#setbitmap)|Imposta l'immagine bitmap per l'area dell'immagine.|  
+|[CMFCImagePaintArea::SetColor](#setcolor)|Imposta il colore corrente.|  
+|[CMFCImagePaintArea::SetMode](#setmode)|Imposta la modalità di disegno corrente.|  
   
-## Esempio  
- Nell'esempio seguente viene illustrato come costruire un oggetto con la classe `CMFCImagePaintArea`, imposta il colore di disegno corrente, imposta la modalità di disegno corrente e l'immagine bitmap per l'area racchiuso.  
+### <a name="remarks"></a>Note  
+ Questa classe non deve essere utilizzato direttamente dal codice.  
   
- [!code-cpp[NVC_MFC_RibbonApp#37](../../mfc/reference/codesnippet/CPP/cmfcimagepaintarea-class_1.cpp)]  
+ Il framework utilizza questa classe per visualizzare l'area dell'immagine in una finestra di dialogo editor di immagini. Per ulteriori informazioni nella finestra di dialogo dell'editor di immagini, vedere [CMFCImageEditorDialog classe](../../mfc/reference/cmfcimageeditordialog-class.md).  
   
-## Gerarchia di ereditarietà  
+## <a name="example"></a>Esempio  
+ Nell'esempio riportato di seguito viene illustrato come creare un oggetto della `CMFCImagePaintArea` classe, impostare colori di disegno, impostare la modalità di disegno corrente e l'immagine bitmap per l'area dell'immagine corrente.  
+  
+ [!code-cpp[NVC_MFC_RibbonApp&#37;](../../mfc/reference/codesnippet/cpp/cmfcimagepaintarea-class_1.cpp)]  
+  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -73,10 +89,85 @@ class CMFCImagePaintArea : public CButton
   
  [CMFCImagePaintArea](../../mfc/reference/cmfcimagepaintarea-class.md)  
   
-## Requisiti  
- **intestazione:** afximagepaintarea.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** afximagepaintarea.h  
   
-## Vedere anche  
+##  <a name="a-namecmfcimagepaintareaa--cmfcimagepaintareacmfcimagepaintarea"></a><a name="cmfcimagepaintarea"></a>CMFCImagePaintArea::CMFCImagePaintArea  
+ Costruisce un oggetto `CMFCImagePaintArea`.  
+  
+```  
+CMFCImagePaintArea(CMFCImageEditorDialog* pParentDlg);
+```  
+  
+### <a name="parameters"></a>Parametri  
+  
+|||  
+|-|-|  
+|Parametro|Descrizione|  
+|[in] `pParentDlg`|Puntatore alla finestra di dialogo che è l'elemento padre dell'editor di immagini.|  
+  
+##  <a name="a-namegetmodea--cmfcimagepaintareagetmode"></a><a name="getmode"></a>CMFCImagePaintArea::GetMode  
+ Recupera la modalità di disegno corrente.  
+  
+```  
+IMAGE_EDIT_MODE GetMode() const;  
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ Un [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) valore che specifica la modalità di disegno corrente.  
+  
+##  <a name="a-namesetbitmapa--cmfcimagepaintareasetbitmap"></a><a name="setbitmap"></a>CMFCImagePaintArea::SetBitmap  
+ Imposta l'immagine bitmap per l'area dell'immagine.  
+  
+```  
+void SetBitmap(CBitmap* pBitmap);
+```  
+  
+### <a name="parameters"></a>Parametri  
+  
+|||  
+|-|-|  
+|Parametro|Descrizione|  
+|[in] `pBitmap`|La nuova immagine bitmap da visualizzare.|  
+  
+### <a name="remarks"></a>Note  
+ Se `pBitmap` è `NULL`, questo metodo imposta le dimensioni dell'area di disegno modificabile su zero. In caso contrario, imposta le dimensioni dell'area di disegno modificabili per le dimensioni dell'immagine bitmap specificata.  
+  
+##  <a name="a-namesetcolora--cmfcimagepaintareasetcolor"></a><a name="setcolor"></a>CMFCImagePaintArea::SetColor  
+ Imposta il colore corrente.  
+  
+```  
+void SetColor(COLORREF color);
+```  
+  
+### <a name="parameters"></a>Parametri  
+  
+|||  
+|-|-|  
+|Parametro|Descrizione|  
+|[in] `color`|Il nuovo colore.|  
+  
+### <a name="remarks"></a>Note  
+ Quando si seleziona un colore dalla barra tavolozza editor di immagini o colori, il framework chiama questo metodo per aggiornare il colore corrente. Il colore iniziale è nero (un `COLORREF` il valore 0).  
+  
+ Il colore viene utilizzato nella finestra di dialogo dell'editor di immagini per tutte le modalità di disegno, ad eccezione di `IMAGE_EDIT_MODE_COLOR`. Per ulteriori informazioni sulle modalità di disegno, vedere [enumerazione cmfcimagepaintarea:: Image_edit_mode](cmfcimagepaintarea-image-edit-mode-enumeration.md).  
+  
+##  <a name="a-namesetmodea--cmfcimagepaintareasetmode"></a><a name="setmode"></a>CMFCImagePaintArea::SetMode  
+ Imposta la modalità di disegno corrente.  
+  
+```  
+void SetMode(IMAGE_EDIT_MODE mode);
+```  
+  
+### <a name="parameters"></a>Parametri  
+  
+|||  
+|-|-|  
+|Parametro|Descrizione|  
+|[in] `mode`|Un [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) valore che specifica la modalità di disegno corrente.|  
+  
+## <a name="see-also"></a>Vedere anche  
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
  [Classi](../../mfc/reference/mfc-classes.md)   
- [CMFCImageEditorDialog Class](../../mfc/reference/cmfcimageeditordialog-class.md)
+ [Classe di CMFCImageEditorDialog](../../mfc/reference/cmfcimageeditordialog-class.md)
+

@@ -1,84 +1,102 @@
 ---
-title: "Modifica stili | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ES_READONLY"
-  - "ES_WANTRETURN"
-  - "ES_UPPERCASE"
-  - "ES_NUMBER"
-  - "ES_AUTOHSCROLL"
-  - "ES_LOWERCASE"
-  - "ES_RIGHT"
-  - "ES_MULTILINE"
-  - "ES_PASSWORD"
-  - "ES_NOHIDESEL"
-  - "ES_OEMCONVERT"
-  - "ES_LEFT"
-  - "ES_CENTER"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "stili di modifica [MFC]"
-  - "ES_AUTOHSCROLL (costante)"
-  - "ES_AUTOVSCROLL (costante)"
-  - "ES_CENTER (costante)"
-  - "ES_LEFT (costante)"
-  - "ES_LOWERCASE (costante)"
-  - "ES_MULTILINE (costante)"
-  - "ES_NOHIDESEL (costante)"
-  - "ES_NUMBER (costante)"
-  - "ES_OEMCONVERT (costante)"
-  - "ES_PASSWORD (costante)"
-  - "ES_READONLY (costante)"
-  - "ES_RIGHT (costante)"
-  - "ES_UPPERCASE (costante)"
-  - "ES_WANTRETURN (costante)"
+title: Modifica stili | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ES_READONLY
+- ES_WANTRETURN
+- ES_UPPERCASE
+- ES_NUMBER
+- ES_AUTOHSCROLL
+- ES_LOWERCASE
+- ES_RIGHT
+- ES_MULTILINE
+- ES_PASSWORD
+- ES_NOHIDESEL
+- ES_OEMCONVERT
+- ES_LEFT
+- ES_CENTER
+dev_langs:
+- C++
+helpviewer_keywords:
+- ES_WANTRETURN constant
+- edit styles [MFC]
+- ES_RIGHT constant
+- ES_READONLY constant
+- ES_PASSWORD constant
+- ES_MULTILINE constant
+- ES_LEFT constant
+- ES_AUTOVSCROLL constant
+- ES_OEMCONVERT constant
+- ES_LOWERCASE constant
+- ES_NUMBER constant
+- ES_UPPERCASE constant
+- ES_NOHIDESEL constant
+- ES_AUTOHSCROLL constant
+- ES_CENTER constant
 ms.assetid: e6291dd6-f2cb-4ce2-ac31-32272526625c
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Modifica stili
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 275e0d2dede038bdbe9061bc8051408442aa70bf
+ms.lasthandoff: 02/24/2017
 
--   Scorre di**ES\_AUTOHSCROLL**automaticamente un testo alla destra di 10 caratteri quando gli utenti un carattere alla fine della riga.  Quando si preme INVIO, il controllo scorre il testo alla posizione 0.  
+---
+# <a name="edit-styles"></a>Modifica stili
+-   **ES_AUTOHSCROLL** scorre automaticamente in testo a destra di 10 caratteri quando l'utente digita un carattere alla fine della riga. Quando l'utente preme il tasto INVIO, il controllo scorre tutto il testo nella posizione 0.  
   
--   Scorre di**ES\_AUTOVSCROLL**automaticamente il testo che in una pagina quando l'utente preme INVIO nell'ultima riga.  
+-   **ES_AUTOVSCROLL** scorre automaticamente il testo in alto di una pagina quando l'utente preme INVIO, l'ultima riga.  
   
--   I centri di**ES\_CENTER**il testo in un controllo di modifica a riga singola o su più righe.  
+-   **ES_CENTER** Center testo in una riga singola o multiriga controllo di modifica.  
   
--   **ES\_LEFT** allinea a sinistra del testo in un controllo di modifica a riga singola o su più righe.  
+-   **ES_LEFT** sinistra-Allinea il testo in una riga singola o multiriga controllo edit.  
   
--   **ES\_LOWERCASE** converte tutti i caratteri in minuscolo mentre vengono digitati nel controllo di modifica.  
+-   **ES_LOWERCASE** converte tutti i caratteri in lettere minuscole quando vengono digitati nel controllo di modifica.  
   
--   **ES\_MULTILINE** definisce un controllo di modifica a più righe. L'impostazione predefinita è una singola riga.\) Se lo stile di **ES\_AUTOVSCROLL** viene specificato, il controllo di modifica mostra le righe possibile e scorre verticalmente quando l'utente preme INVIO.  Se **ES\_AUTOVSCROLL** non viene fornito, il controllo di modifica mostra le righe possibile e emette un segnale acustico se INVIO viene raggiunto quando non più riga può essere visualizzato.  Se lo stile di **ES\_AUTOHSCROLL** viene specificato, il controllo di modifica a più righe automaticamente scorre orizzontalmente quando il cursore viene posizionato dopo il bordo destro del controllo.  Per iniziare una nuova riga, sarà necessario premere INVIO.  Se **ES\_AUTOHSCROLL** non viene fornito, il controllo esegue automaticamente il wrapping delle parole va a capo se necessario; una nuova riga viene avviata se INVIO viene premuto.  Il percorso di ritorno a capo automatico è determinata dalla dimensioni della finestra.  Se le modifiche delle dimensioni della finestra, le modifiche percorso di ritorno a capo automatico e il testo viene visualizzata.  I controlli di modifica a più righe possono contenere barre di scorrimento.  Un controllo di modifica con le barre di scorrimento l'elaborazione dei messaggi della barra di scorrimento.  I controlli di modifica senza barre di scorrimento scorrono come descritto in precedenza e elaborano tutti i messaggi di scorrimento inviati dalla finestra padre.  
+-   **ES_MULTILINE** indica un controllo di modifica più righe. (Il valore predefinito è l'unica riga). Se il **ES_AUTOVSCROLL** lo stile è specificato, il controllo di modifica Mostra il numero di righe possibili e scorre in senso verticale quando l'utente preme il tasto INVIO. Se **ES_AUTOVSCROLL** non è specificato, il controllo di modifica Mostra il numero di righe e segnali acustici se si preme INVIO quando nessun più righe possono essere visualizzate. Se il **ES_AUTOHSCROLL** lo stile è specificato, il controllo di modifica multiriga scorre automaticamente in senso orizzontale quando il cursore va oltre il bordo destro del controllo. Per avviare una nuova riga, l'utente deve premere INVIO. Se **ES_AUTOHSCROLL** non è specificato, il controllo automaticamente a capo le parole all'inizio della riga successiva quando necessario; una nuova riga viene avviata anche se si preme INVIO. La posizione del ritorno a capo automatico è determinata dalla dimensione della finestra. Se le dimensioni della finestra viene modificato, viene visualizzata di nuovo le modifiche della posizione ritorno a capo automatico e il testo. Controlli di modifica più righe possono avere barre di scorrimento. Un controllo di modifica con barre di scorrimento elabora i propri messaggi della barra di scorrimento. Modificare i controlli senza scorrimento barre di scorrimento come descritto in precedenza ed elaborare i messaggi di scorrimento inviati dalla finestra padre.  
   
--   **ES\_NOHIDESEL** in genere, un controllo di modifica nasconde la selezione quando il controllo perde lo stato attivo per l'input e inverte la selezione quando il controllo riceve lo stato attivo per l'input.  Specificando **ES\_NOHIDESEL** elimina questa azione predefinita.  
+-   **ES_NOHIDESEL** in genere, un controllo di modifica consente di nascondere la selezione quando il controllo perde lo stato attivo e inverte la selezione quando il controllo riceve lo stato attivo. Specifica di **ES_NOHIDESEL** Elimina l'azione predefinita.  
   
--   **ES\_NUMBER** consente solo cifre da inserire nel controllo di modifica.  
+-   **ES_NUMBER** consente solo cifre deve essere immesso nel controllo di modifica.  
   
--   Il testo di**ES\_OEMCONVERT**inserito nel controllo di modifica viene convertito dal set di caratteri ANSI in set di caratteri OEM e quindi nuovamente ad ANSI.  In questo modo la conversione di carattere appropriata quando l'applicazione chiama la funzione Windows di `AnsiToOem` per convertire una stringa ANSI nel controllo di modifica in caratteri OEM.  Questo stile è particolarmente utile per i controlli di modifica che contengono nomi del file.  
+-   **ES_OEMCONVERT** il testo immesso nel controllo di modifica viene convertito dal set di caratteri ANSI per il set di caratteri OEM e quindi di nuovo ad ANSI. In questo modo corretta conversione dei caratteri quando l'applicazione chiama il `AnsiToOem` funzione per convertire una stringa ANSI nel controllo di modifica in caratteri OEM di Windows. Questo stile è particolarmente utile per i controlli di modifica che contengono i nomi di file.  
   
--   **ES\_PASSWORD** visualizzare tutti i caratteri come un asterisco \(**\***\) come vengono immessi nel controllo di modifica.  Un'applicazione può utilizzare la funzione membro di `SetPasswordChar` per modificare il carattere che visualizza.  
+-   **ES_PASSWORD** Visualizza tutti i caratteri come un asterisco (**\***) quando vengono digitati nel controllo di modifica. Un'applicazione può utilizzare il `SetPasswordChar` funzione membro per modificare il carattere che viene visualizzato.  
   
--   **ES\_READONLY** impossibilità di immettere o modificare il testo nel controllo di modifica.  
+-   **ES_READONLY** impedisce all'utente di inserire o la modifica del testo nel controllo di modifica.  
   
--   **ES\_RIGHT** Diritto\- allineare il testo in un controllo di modifica a riga singola o su più righe.  
+-   **ES_RIGHT** testo viene allineato a destra in una riga singola o multiriga controllo di modifica.  
   
--   **ES\_UPPERCASE** converte tutti i caratteri in maiuscolo mentre vengono digitati nel controllo di modifica.  
+-   **ES_UPPERCASE** converte tutti i caratteri in maiuscolo quando vengono digitati nel controllo di modifica.  
   
--   **ES\_WANTRETURN** specifica che un ritorno a capo viene inserito quando l'utente preme il tasto INVIO quando fornisce il testo in un controllo di modifica a più righe in una finestra di dialogo.  Se questo stile, premere il tasto INVIO ha lo stesso effetto di premere il pulsante predefinito delle finestre di dialogo.  Questo stile non ha effetto su un controllo di modifica a riga singola.  
+-   **ES_WANTRETURN** specifica inserire un ritorno a capo quando l'utente preme il tasto INVIO durante l'immissione del testo in un controllo di modifica più righe in una finestra di dialogo. Senza questo stile, premendo il tasto INVIO ha lo stesso effetto premendo il pulsante di comando finestra di dialogo predefinita caselle. Questo stile non ha alcun effetto su una riga singola controllo edit.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Stili utilizzati da MFC](../../mfc/reference/styles-used-by-mfc.md)   
- [CEdit::Create](../Topic/CEdit::Create.md)   
- [Edit Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb775464)
+ [CEdit::Create](../../mfc/reference/cedit-class.md#create)   
+ [Modifica degli stili del controllo](http://msdn.microsoft.com/library/windows/desktop/bb775464)
+
+

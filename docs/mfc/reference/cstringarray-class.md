@@ -1,42 +1,58 @@
 ---
-title: "CStringArray Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CStringArray"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "matrici [C++], stringhe"
-  - "CStringArray class"
-  - "string arrays"
-  - "stringhe [C++], raccolte"
+title: Classe CStringArray | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CStringArray
+dev_langs:
+- C++
+helpviewer_keywords:
+- string arrays
+- arrays [C++], strings
+- CStringArray class
+- strings [C++], collections
 ms.assetid: 6c637e06-bba8-4c08-b0fc-cf8cb067ce34
 caps.latest.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 26
----
-# CStringArray Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 6f6ef1f6bdef74540948520cc27d6c10b143216c
+ms.lasthandoff: 02/24/2017
 
-Supporta matrici di oggetti [CString](../../atl-mfc-shared/using-cstring.md).  
+---
+# <a name="cstringarray-class"></a>Classe CStringArray
+Supporta matrici di [CString](../../atl-mfc-shared/using-cstring.md) oggetti.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 class CStringArray : public CObject  
 ```  
   
-## Membri  
- Le funzioni membro di `CStringArray` sono simili alle funzioni membro della classe [CObArray](../../mfc/reference/cobarray-class.md).  Grazie a questa somiglianza, per le specifiche delle funzioni membro è possibile usare la documentazione di riferimento di `CObArray`.  Ogni volta che un puntatore `CObject` appare come valore restituito, sostituire con un oggetto [CString](../../atl-mfc-shared/using-cstring.md) \(non un puntatore [CString](../../atl-mfc-shared/using-cstring.md)\).  Ogni volta che un puntatore `CObject` appare come parametro di funzione, sostituire con un `LPCTSTR`.  
+## <a name="members"></a>Membri  
+ Le funzioni membro di `CStringArray` sono simili alle funzioni membro della classe [CObArray](../../mfc/reference/cobarray-class.md). Grazie a questa somiglianza, per le specifiche delle funzioni membro è possibile usare la documentazione di riferimento di `CObArray`. Ovunque sia visualizzato un `CObject` puntatore come valore restituito, sostituire con un [CString](../../atl-mfc-shared/using-cstring.md) oggetto (non un [CString](../../atl-mfc-shared/using-cstring.md) puntatore). Ogni volta che un puntatore `CObject` appare come parametro di funzione, sostituire con un `LPCTSTR`.  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
@@ -52,60 +68,64 @@ class CStringArray : public CObject
   
  `void SetAt( int <nIndex>, LPCTSTR <newElement> )`  
   
-### Costruttori pubblici  
+### <a name="public-constructors"></a>Costruttori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CObArray::CObArray](../Topic/CObArray::CObArray.md)|Costruisce una matrice vuota.|  
+|[CObArray::CObArray](../../mfc/reference/cobarray-class.md#cobarray)|Costruisce una matrice vuota.|  
   
-### Metodi pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[CObArray::Add](../Topic/CObArray::Add.md)|Aggiunge un elemento alla fine della matrice; se necessario, aumenta le dimensioni della matrice.|  
-|[CObArray::Append](../Topic/CObArray::Append.md)|Accoda alla matrice un'altra matrice; se necessario, aumenta le dimensioni della matrice.|  
-|[CObArray::Copy](../Topic/CObArray::Copy.md)|Copia nella matrice un'altra matrice; se necessario, aumenta le dimensioni della matrice.|  
-|[CObArray::ElementAt](../Topic/CObArray::ElementAt.md)|Restituisce un riferimento temporaneo al puntatore dell'elemento nella matrice.|  
-|[CObArray::FreeExtra](../Topic/CObArray::FreeExtra.md)|Libera tutta la memoria non utilizzata oltre limite il superiore corrente.|  
-|[CObArray::GetAt](../Topic/CObArray::GetAt.md)|Restituisce il valore in corrispondenza di un indice specificato.|  
-|[CObArray::GetCount](../Topic/CObArray::GetCount.md)|Ottiene il numero di elementi nella matrice.|  
-|[CObArray::GetData](../Topic/CObArray::GetData.md)|Consente l'accesso a tutti gli elementi nella matrice.  Può essere **NULL**.|  
-|[CObArray::GetSize](../Topic/CObArray::GetSize.md)|Ottiene il numero di elementi nella matrice.|  
-|[CObArray::GetUpperBound](../Topic/CObArray::GetUpperBound.md)|Restituisce il massimo indice valido.|  
-|[CObArray::InsertAt](../Topic/CObArray::InsertAt.md)|Inserisce un elemento \(o tutti gli elementi di un'altra matrice\) in corrispondenza di un indice specificato.|  
-|[CObArray::IsEmpty](../Topic/CObArray::IsEmpty.md)|Determina se la matrice è vuota.|  
-|[CObArray::RemoveAll](../Topic/CObArray::RemoveAll.md)|Rimuove tutti gli elementi dalla matrice.|  
-|[CObArray::RemoveAt](../Topic/CObArray::RemoveAt.md)|Rimuove un elemento in corrispondenza di un indice specificato.|  
-|[CObArray::SetAt](../Topic/CObArray::SetAt.md)|Imposta il valore per un indice specificato; l'aumento di dimensioni della matrice non è consentito.|  
-|[CObArray::SetAtGrow](../Topic/CObArray::SetAtGrow.md)|Imposta il valore per un indice specificato; se necessario, aumenta le dimensioni della matrice.|  
-|[CObArray::SetSize](../Topic/CObArray::SetSize.md)|Imposta il numero di elementi che la matrice deve contenere.|  
-  
-### Operatori pubblici  
+### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CObArray::operator](../Topic/CObArray::operator.md)|Imposta o ottiene l'elemento in corrispondenza dell'indice specificato.|  
+|[CObArray::Add](../../mfc/reference/cobarray-class.md#add)|Aggiunge un elemento alla fine della matrice; se necessario, aumenta le dimensioni della matrice.|  
+|[CObArray::Append](../../mfc/reference/cobarray-class.md#append)|Accoda alla matrice un'altra matrice; se necessario, aumenta le dimensioni della matrice.|  
+|[CObArray::Copy](../../mfc/reference/cobarray-class.md#copy)|Copia nella matrice un'altra matrice; se necessario, aumenta le dimensioni della matrice.|  
+|[CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)|Restituisce un riferimento temporaneo al puntatore dell'elemento nella matrice.|  
+|[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Libera tutta la memoria non utilizzata oltre limite il superiore corrente.|  
+|[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|Restituisce il valore in corrispondenza di un indice specificato.|  
+|[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|Ottiene il numero di elementi nella matrice.|  
+|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Consente l'accesso a tutti gli elementi nella matrice. Può essere **NULL**.|  
+|[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|Ottiene il numero di elementi nella matrice.|  
+|[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Restituisce il massimo indice valido.|  
+|[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|Inserisce un elemento (o tutti gli elementi di un'altra matrice) in corrispondenza di un indice specificato.|  
+|[CObArray::IsEmpty](../../mfc/reference/cobarray-class.md#isempty)|Determina se la matrice è vuota.|  
+|[CObArray::RemoveAll](../../mfc/reference/cobarray-class.md#removeall)|Rimuove tutti gli elementi dalla matrice.|  
+|[CObArray::RemoveAt](../../mfc/reference/cobarray-class.md#removeat)|Rimuove un elemento in corrispondenza di un indice specificato.|  
+|[CObArray::SetAt](../../mfc/reference/cobarray-class.md#setat)|Imposta il valore per un indice specificato; l'aumento di dimensioni della matrice non è consentito.|  
+|[CObArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)|Imposta il valore per un indice specificato; se necessario, aumenta le dimensioni della matrice.|  
+|[CObArray::SetSize](../../mfc/reference/cobarray-class.md#setsize)|Imposta il numero di elementi che la matrice deve contenere.|  
   
-## Note  
- `CStringArray` incorpora la macro `IMPLEMENT_SERIAL` per supportare la serializzazione e il dump dei relativi elementi.  Se una matrice di oggetti `CString` viene memorizzata in un archivio, con un operatore di inserimento di overload o con la funzione membro `Serialize`, ogni elemento viene serializzato a turno.  
+### <a name="public-operators"></a>Operatori pubblici  
+  
+|Nome|Descrizione|  
+|----------|-----------------|  
+|[[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|Imposta o ottiene l'elemento in corrispondenza dell'indice specificato.|  
+  
+## <a name="remarks"></a>Note  
+ `CStringArray` incorpora la macro `IMPLEMENT_SERIAL` per supportare la serializzazione e il dump dei relativi elementi. Se una matrice di oggetti `CString` viene memorizzata in un archivio, con un operatore di inserimento di overload o con la funzione membro `Serialize`, ogni elemento viene serializzato a turno.  
   
 > [!NOTE]
->  Prima di usare una matrice, usare `SetSize` per determinarne le dimensioni e allocare la necessaria memoria.  Se non si usa `SetSize`, l'aggiunta di elementi alla matrice ne causa la riallocazione e la copia frequente.  Le operazioni di riallocazione e copia frequenti sono inefficienti e possono frammentare la memoria.  
+>  Prima di usare una matrice, usare `SetSize` per determinarne le dimensioni e allocare la necessaria memoria. Se non si usa `SetSize`, l'aggiunta di elementi alla matrice ne causa la riallocazione e la copia frequente. Le operazioni di riallocazione e copia frequenti sono inefficienti e possono frammentare la memoria.  
   
  Se è necessario un dump di singoli elementi di tipo stringa nella matrice, è necessario impostare la profondità del contesto di dump a 1 o superiore.  
   
  Quando una matrice `CString` viene eliminata o i relativi elementi vengono rimossi, viene liberata la memoria di stringa appropriata.  
   
- Per altre informazioni sull'uso di `CStringArray`, vedere l'articolo [Raccolte](../../mfc/collections.md).  
+ Per ulteriori informazioni sull'utilizzo di `CStringArray`, vedere l'articolo [raccolte](../../mfc/collections.md).  
   
-## Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CStringArray`  
   
-## Requisiti  
- **Intestazione:** afxcoll.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** afxcoll. h  
   
-## Vedere anche  
- [CObject Class](../../mfc/reference/cobject-class.md)   
+## <a name="see-also"></a>Vedere anche  
+ [CObject (classe)](../../mfc/reference/cobject-class.md)   
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)
+
+
+
+

@@ -1,38 +1,55 @@
 ---
-title: "Errore del compilatore C2259 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2259"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2259"
+title: Errore del compilatore C2259 | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2259
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2259
 ms.assetid: e458236f-bdea-4786-9aa6-a98d8bffa5f4
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# Errore del compilatore C2259
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 0837d8f5e48ccf0de0ba8630801667da2ddb6bfa
+ms.lasthandoff: 02/24/2017
 
-'classe': impossibile creare un'istanza di classe astratta  
+---
+# <a name="compiler-error-c2259"></a>Errore del compilatore C2259
+'classe': Impossibile creare un'istanza di classe astratta  
   
- Viene dichiarata un'istanza di una struttura o di una classe astratta.  
+ Codice dichiara un'istanza di una struttura o una classe astratta.  
   
- Non è possibile creare un'istanza di una classe o una struttura con una o più funzioni virtuali pure.  Per creare un'istanza degli oggetti di una classe derivata, quest'ultima deve eseguire l'override di ogni funzione virtuale pura.  
+ Non è possibile creare una classe o struttura con uno o più funzioni virtuali pure. Per creare istanze di oggetti di una classe derivata, la classe derivata deve eseguire l'override di ogni funzione virtuale pura.  
   
- Per ulteriori informazioni, vedere [Classi astratte implicite](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Implicitly_abstract_classes).  
+ Per ulteriori informazioni, vedere [classi implicitamente astratte](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Implicitly_abstract_classes).  
   
- Il seguente codice di esempio genera l'errore C2259:  
+ Nell'esempio seguente genera l'errore C2259:  
   
 ```  
 // C2259.cpp  
@@ -51,17 +68,17 @@ A a;  // C2259, A inherits func() as pure virtual
 B b;  // OK, B defines func()  
 ```  
   
- Quando si deriva da un'interfaccia e i metodi di quest'ultima vengono implementati nella classe derivata con autorizzazioni di accesso diverse da quelle pubbliche, è possibile che venga visualizzato l'errore C2259.  Questa situazione si verifica perché l'accesso previsto dal compilatore per i metodi dell'interfaccia implementati nella classe derivata è di tipo pubblico.  Quando vengono implementate le funzioni membro per un'interfaccia con autorizzazioni di accesso più restrittive, il compilatore non le considera implementazioni per i metodi definiti nell'interfaccia. La classe derivata diviene pertanto una classe astratta.  
+ Quando si deriva da un'interfaccia e implementano i metodi dell'interfaccia della classe derivata con autorizzazioni di accesso sono pubblici, potrebbe essere visualizzato l'errore C2259.  Ciò si verifica perché il compilatore prevede i metodi di interfaccia implementati nella classe derivata per avere accesso pubblico. Quando si implementano le funzioni membro per un'interfaccia con le autorizzazioni di accesso più restrittive, il compilatore non considera le implementazioni per i metodi definiti nell'interfaccia, che consente a sua volta derivata una classe astratta.  
   
  Esistono due possibili soluzioni per il problema:  
   
--   Rendere pubbliche le autorizzazioni di accesso per i metodi implementati.  
+-   Verificare le autorizzazioni di accesso pubblico per i metodi implementati.  
   
--   Utilizzare l'operatore di risoluzione dell'ambito per i metodi di interfaccia implementati nella classe derivata per qualificare il nome dei metodi implementati con il nome dell'interfaccia.  
+-   Utilizzare l'operatore di risoluzione dell'ambito per i metodi di interfaccia implementati nella classe derivata per qualificare il nome del metodo implementato con il nome dell'interfaccia.  
   
- L'errore C2259 può inoltre verificarsi in seguito alle operazioni di conformità eseguite in Visual C\+\+ 2005, **\/Zc:wchar\_t** è ora attivata per impostazione predefinita.  In tal caso è possibile risolvere l'errore C2599 eseguendo la compilazione con **\/Zc:wchar\_t\-**, per ottenere il comportamento dalle versioni precedenti o, preferibilmente, aggiornando i tipi in modo da renderli compatibili.  Per ulteriori informazioni, vedere [\/Zc:wchar\_t \(Tipo nativo wchar\_t\)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).  
+ L'errore C2259 può inoltre verificarsi in seguito a operazioni di conformità è stata eseguita in Visual C++ 2005, **/Zc: wchar_t** è ora attivata per impostazione predefinita. In questo caso, può essere risolto eseguendo la compilazione con C2599 **/Zc:wchar_t-**, per ottenere il comportamento delle versioni precedenti o, preferibilmente, aggiornando i tipi in modo che siano compatibili. Per altre informazioni, vedere [/Zc:wchar_t (Tipo nativo wchar_t)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).  
   
- Il seguente codice di esempio genera l'errore C2259:  
+ Nell'esempio seguente genera l'errore C2259:  
   
 ```  
 // C2259b.cpp  
@@ -99,7 +116,7 @@ public:
 MyClass4 y;  
 ```  
   
- Il seguente codice di esempio genera l'errore C2259:  
+ Nell'esempio seguente genera l'errore C2259:  
   
 ```  
 // C2259c.cpp  
@@ -121,25 +138,4 @@ int main() {
    MyDerivedClass^ instance = gcnew MyDerivedClass; // C2259  
 }  
 ```  
-  
- Il seguente codice di esempio genera l'errore C2259:  
-  
-```  
-// C2259d.cpp  
-// compile with: /clr:oldSyntax  
-public __gc __interface MyInterface {  
-   void MyMethod();  
-};  
-  
-__gc class MyDerivedClass : public MyInterface {  
-// Uncomment the following line to resolve.  
-// public:  
-   void MyMethod() {};  
-   // or the following line  
-   // void MyInterface::MyMethod() {};  
-};  
-  
-int main() {  
-   MyDerivedClass *instance = new MyDerivedClass();   // C2259  
-}  
-```
+

@@ -1,129 +1,232 @@
 ---
-title: "Classe norm_2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "amp_short_vectors/Concurrency::graphics::norm_2::set_x"
-  - "amp_short_vectors/Concurrency::graphics::norm_2::set_xy"
-  - "amp_short_vectors/Concurrency::graphics::norm_2::g"
-  - "amp_short_vectors/Concurrency::graphics::norm_2::get_yx"
-  - "amp_short_vectors/Concurrency::graphics::norm_2::set_yx"
-  - "amp_short_vectors/Concurrency::graphics::norm_2::operator-="
-  - "amp_short_vectors/Concurrency::graphics::norm_2::operator/="
-  - "amp_short_vectors/Concurrency::graphics::norm_2::operator*="
-  - "amp_short_vectors/Concurrency::graphics::norm_2::yx"
-  - "amp_short_vectors/Concurrency::graphics::norm_2::y"
-  - "amp_short_vectors/Concurrency::graphics::norm_2::xy"
-  - "amp_short_vectors/Concurrency::graphics::norm_2::operator++"
-  - "amp_short_vectors/Concurrency::graphics::norm_2::operator-"
-  - "amp_short_vectors/Concurrency::graphics::norm_2::rg"
-  - "amp_short_vectors/Concurrency::graphics::norm_2::operator="
-  - "amp_short_vectors/Concurrency::graphics::norm_2::get_y"
-  - "amp_short_vectors/Concurrency::graphics::norm_2::r"
-  - "amp_short_vectors/Concurrency::graphics::norm_2::get_x"
-  - "amp_short_vectors/Concurrency::graphics::norm_2::get_xy"
-  - "amp_short_vectors/Concurrency::graphics::norm_2::gr"
-  - "amp_short_vectors/Concurrency::graphics::norm_2::set_y"
-  - "amp_short_vectors/Concurrency::graphics::norm_2::x"
-  - "amp_short_vectors/Concurrency::graphics::norm_2::operator+="
-  - "amp_short_vectors/Concurrency::graphics::norm_2"
-  - "amp_short_vectors/Concurrency::graphics::norm_2::operator--"
-dev_langs: 
-  - "C++"
+title: Classe norm_2 | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- amp_short_vectors/Concurrency::graphics::norm_2::set_x
+- amp_short_vectors/Concurrency::graphics::norm_2::set_xy
+- amp_short_vectors/Concurrency::graphics::norm_2::g
+- amp_short_vectors/Concurrency::graphics::norm_2::get_yx
+- amp_short_vectors/Concurrency::graphics::norm_2::set_yx
+- amp_short_vectors/Concurrency::graphics::norm_2::operator-=
+- amp_short_vectors/Concurrency::graphics::norm_2::operator/=
+- amp_short_vectors/Concurrency::graphics::norm_2::operator*=
+- amp_short_vectors/Concurrency::graphics::norm_2::yx
+- amp_short_vectors/Concurrency::graphics::norm_2::y
+- amp_short_vectors/Concurrency::graphics::norm_2::xy
+- amp_short_vectors/Concurrency::graphics::norm_2::operator++
+- amp_short_vectors/Concurrency::graphics::norm_2::operator-
+- amp_short_vectors/Concurrency::graphics::norm_2::rg
+- amp_short_vectors/Concurrency::graphics::norm_2::operator=
+- amp_short_vectors/Concurrency::graphics::norm_2::get_y
+- amp_short_vectors/Concurrency::graphics::norm_2::r
+- amp_short_vectors/Concurrency::graphics::norm_2::get_x
+- amp_short_vectors/Concurrency::graphics::norm_2::get_xy
+- amp_short_vectors/Concurrency::graphics::norm_2::gr
+- amp_short_vectors/Concurrency::graphics::norm_2::set_y
+- amp_short_vectors/Concurrency::graphics::norm_2::x
+- amp_short_vectors/Concurrency::graphics::norm_2::operator+=
+- amp_short_vectors/Concurrency::graphics::norm_2
+- amp_short_vectors/Concurrency::graphics::norm_2::operator--
+dev_langs:
+- C++
 ms.assetid: 80703f9b-61f4-414a-93fd-bc774f7d3393
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Classe norm_2
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 7ff9cb756ca17633aa90e2f35c6f6f02da6cc884
+ms.lasthandoff: 02/24/2017
 
-Rappresenta un breve vettore di due numeri normali.  
+---
+# <a name="norm2-class"></a>Classe norm_2
+Rappresenta uno short vector di due numeri normali.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 class norm_2;  
 ```  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Typedef pubblici  
+### <a name="public-typedefs"></a>Typedef pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
 |`value_type`||  
   
-### Costruttori pubblici  
+### <a name="public-constructors"></a>Costruttori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore norm\_2::norm\_2](../Topic/norm_2::norm_2%20Constructor.md)|Di overload.  Il costruttore predefinito, inizializza tutti gli elementi a 0.|  
+|[Costruttore norm_2](#ctor)|Di overload. Predefinito costruttore inizializza tutti gli elementi con 0.|  
   
-### Metodi pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|Metodo norm\_2::get\_x||  
-|Metodo norm\_2::get\_xy||  
-|Metodo norm\_2::get\_y||  
-|Metodo norm\_2::get\_yx||  
-|Metodo norm\_2::ref\_g||  
-|Metodo norm\_2::ref\_r||  
-|Metodo norm\_2::ref\_x||  
-|Metodo norm\_2::ref\_y||  
-|Metodo norm\_2::set\_x||  
-|Metodo norm\_2::set\_xy||  
-|Metodo norm\_2::set\_y||  
-|Metodo norm\_2::set\_yx||  
-  
-### Operatori pubblici  
+### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|Operatore norm\_2::operator\-||  
-|Operatore norm\_2::operator\-\-||  
-|Operatore norm\_2::operator\*\=||  
-|Operatore norm\_2::operator\/\=||  
-|Operatore norm\_2::operator\+\+||  
-|Operatore norm\_2::operator\+\=||  
-|Operatore norm\_2::operator\=||  
-|Operatore norm\_2::operator\-\=||  
+|norm_2::get_X (metodo)||  
+|norm_2::get_xy (metodo)||  
+|norm_2::get_y (metodo)||  
+|norm_2::get_yx (metodo)||  
+|norm_2::ref_g (metodo)||  
+|norm_2::ref_r (metodo)||  
+|norm_2::ref_x (metodo)||  
+|norm_2::ref_y (metodo)||  
+|norm_2::set_X (metodo)||  
+|norm_2::set_xy (metodo)||  
+|norm_2::set_y (metodo)||  
+|norm_2::set_yx (metodo)||  
   
-### Costanti pubbliche  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[Costante norm\_2::size](../Topic/norm_2::size%20Constant.md)||  
-  
-### Membri dati pubblici  
+### <a name="public-operators"></a>Operatori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|Membro Dati di norm\_2::g||  
-|Membro Dati di norm\_2::gr||  
-|Membro Dati di norm\_2::r||  
-|Membro Dati di norm\_2::rg||  
-|Membro Dati di norm\_2::x||  
-|Membro Dati di norm\_2::xy||  
-|Membro Dati di norm\_2::y||  
-|Membro Dati di norm\_2::yx||  
+|norm_2::operator-(operatore)||  
+|norm_2::operator - operatore||  
+|norm_2::operator * = (operatore)||  
+|norm_2::operator / = (operatore)||  
+|norm_2::operator + + (operatore)||  
+|norm_2::operator + = (operatore)||  
+|norm_2::operator = (operatore)||  
+|norm_2::operator-= (operatore)||  
   
-## Gerarchia di ereditarietà  
+### <a name="public-constants"></a>Costanti pubbliche  
+  
+|Nome|Descrizione|  
+|----------|-----------------|  
+|[dimensioni (costante)](#norm_2__size)||  
+  
+### <a name="public-data-members"></a>Membri dati pubblici  
+  
+|Nome|Descrizione|  
+|----------|-----------------|  
+|Membro dati norm_2::g||  
+|Membro dati norm_2::GR||  
+|Membro dati norm_2::r||  
+|Membro dati norm_2::RG||  
+|Membro dati norm_2::x||  
+|Membro dati norm_2::XY||  
+|Membro dati norm_2::y||  
+|Membro dati norm_2::YX||  
+  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `norm_2`  
   
-## Requisiti  
- **Intestazione:** amp\_short\_vectors.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** amp_short_vectors.h  
   
- **Spazio dei nomi** Concurrency::graphics  
+ **Namespace:** Concurrency:: Graphics  
   
-## Vedere anche  
- [Spazio dei nomi Concurrency::graphics](../../../parallel/amp/reference/concurrency-graphics-namespace.md)
+##  <a name="a-namectora-norm2"></a><a name="ctor"></a>norm_2 
+
+ Predefinito costruttore inizializza tutti gli elementi con 0.  
+  
+```  
+norm_2() restrict(amp,
+    cpu);
+
+ 
+norm_2(
+    norm _V0,  
+    norm _V1) restrict(amp,
+    cpu);
+
+ 
+norm_2(
+    float _V0,  
+    float _V1) restrict(amp,
+    cpu);
+
+ 
+norm_2(
+    unorm _V0,  
+    unorm _V1) restrict(amp,
+    cpu);
+
+ 
+norm_2(
+    norm _V) restrict(amp,
+    cpu);
+
+ 
+explicit norm_2(
+    float _V) restrict(amp,
+    cpu);
+
+ 
+norm_2(
+    const norm_2& _Other) restrict(amp,
+    cpu);
+
+ 
+explicit inline norm_2(
+    const uint_2& _Other) restrict(amp,
+    cpu);
+
+ 
+explicit inline norm_2(
+    const int_2& _Other) restrict(amp,
+    cpu);
+
+ 
+explicit inline norm_2(
+    const float_2& _Other) restrict(amp,
+    cpu);
+
+ 
+explicit inline norm_2(
+    const unorm_2& _Other) restrict(amp,
+    cpu);
+
+ 
+explicit inline norm_2(
+    const double_2& _Other) restrict(amp,
+    cpu);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `_V0`  
+ Il valore per inizializzare l'elemento 0.  
+  
+ `_V1`  
+ Il valore per inizializzare l'elemento 1.  
+  
+ `_V`  
+ Il valore per l'inizializzazione.  
+  
+ `_Other`  
+ Utilizzato per inizializzare l'oggetto.  
+  
+##  <a name="a-namenorm2sizea-size"></a><a name="norm_2__size"></a>dimensioni 
+
+```  
+static const int size = 2;  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Concurrency:: Graphics Namespace](concurrency-graphics-namespace.md)
+

@@ -1,79 +1,95 @@
 ---
-title: "CMFCRibbonCustomizePropertyPage Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "GetThisClass"
-  - "CMFCRibbonCustomizePropertyPage::CreateObject"
-  - "CMFCRibbonCustomizePropertyPage"
-  - "CMFCRibbonCustomizePropertyPage::~CMFCRibbonCustomizePropertyPage"
-  - "CMFCRibbonCustomizePropertyPage.GetThisClass"
-  - "CMFCRibbonCustomizePropertyPage.CreateObject"
-  - "~CMFCRibbonCustomizePropertyPage"
-  - "CreateObject"
-  - "CMFCRibbonCustomizePropertyPage.~CMFCRibbonCustomizePropertyPage"
-  - "CMFCRibbonCustomizePropertyPage::GetThisClass"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "~CMFCRibbonCustomizePropertyPage destructor"
-  - "CMFCRibbonCustomizePropertyPage class"
-  - "CMFCRibbonCustomizePropertyPage class, distruttore"
-  - "CreateObject method"
-  - "GetThisClass method"
+title: Classe CMFCRibbonCustomizePropertyPage | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- GetThisClass
+- CMFCRibbonCustomizePropertyPage::CreateObject
+- CMFCRibbonCustomizePropertyPage
+- CMFCRibbonCustomizePropertyPage::~CMFCRibbonCustomizePropertyPage
+- CMFCRibbonCustomizePropertyPage.GetThisClass
+- CMFCRibbonCustomizePropertyPage.CreateObject
+- ~CMFCRibbonCustomizePropertyPage
+- CreateObject
+- CMFCRibbonCustomizePropertyPage.~CMFCRibbonCustomizePropertyPage
+- CMFCRibbonCustomizePropertyPage::GetThisClass
+dev_langs:
+- C++
+helpviewer_keywords:
+- ~CMFCRibbonCustomizePropertyPage destructor
+- CMFCRibbonCustomizePropertyPage class, destructor
+- GetThisClass method
+- CreateObject method
+- CMFCRibbonCustomizePropertyPage class
 ms.assetid: ea32a99a-dfbe-401e-8975-aa191552532f
 caps.latest.revision: 26
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 28
----
-# CMFCRibbonCustomizePropertyPage Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 83323142441de13140383152a32122bf1644003f
+ms.lasthandoff: 02/24/2017
 
-Implementa una pagina personalizzata per la finestra di dialogo **Personalizza** nelle applicazioni basate sulla barra multifunzione.  
+---
+# <a name="cmfcribboncustomizepropertypage-class"></a>Classe CMFCRibbonCustomizePropertyPage
+Implementa una pagina personalizzata per il **Personalizza** la finestra di dialogo nelle applicazioni basate su nastro.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage  
 ```  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Costruttori pubblici  
-  
-|||  
-|-|-|  
-|Nome|Descrizione|  
-|[CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage](../Topic/CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage.md)|Costruisce un oggetto `CMFCRibbonCustomizePropertyPage`.|  
-|`CMFCRibbonCustomizePropertyPage::~CMFCRibbonCustomizePropertyPage`|Distruttore|  
-  
-### Metodi pubblici  
+### <a name="public-constructors"></a>Costruttori pubblici  
   
 |||  
 |-|-|  
 |Nome|Descrizione|  
-|[CMFCRibbonCustomizePropertyPage::AddCustomCategory](../Topic/CMFCRibbonCustomizePropertyPage::AddCustomCategory.md)|Aggiunge una categoria personalizzata alla casella combinata **Comandi**.|  
-|`CMFCRibbonCustomizePropertyPage::CreateObject`|Utilizzato dal framework di creare un'istanza dinamica di questo tipo della classe.|  
-|`CMFCRibbonCustomizePropertyPage::GetThisClass`|Utilizzato dal framework per ottenere un puntatore all'oggetto [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) associato a questo tipo della classe.|  
-|[CMFCRibbonCustomizePropertyPage::OnOK](../Topic/CMFCRibbonCustomizePropertyPage::OnOK.md)|Chiamato dal sistema quando un utente fa clic **OK** nella finestra di dialogo **Personalizza**.|  
+|[CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage](#cmfcribboncustomizepropertypage)|Costruisce un oggetto `CMFCRibbonCustomizePropertyPage`.|  
+|`CMFCRibbonCustomizePropertyPage::~CMFCRibbonCustomizePropertyPage`|Distruttore.|  
   
-## Note  
- Se si desidera aggiungere controlli personalizzati alla finestra di dialogo **Personalizza**, è necessario gestire il messaggio di AFX\_WM\_ON\_RIBBON\_CUSTOMIZE.  Nel gestore messaggi, creare un'istanza di un oggetto `CMFCRibbonCustomizePropertyPage` nello stack.  Creare un elenco dei controlli personalizzati e quindi chiamare `AddCustomCategory` per aggiungere la nuova pagina nella finestra di dialogo **Personalizza**.  
+### <a name="public-methods"></a>Metodi pubblici  
   
-## Esempio  
- Nell'esempio seguente viene illustrato come costruire un oggetto `CMFCRibbonCustomizePropertyPage` e aggiungere una categoria personalizzata.  
+|||  
+|-|-|  
+|Nome|Descrizione|  
+|[CMFCRibbonCustomizePropertyPage::AddCustomCategory](#addcustomcategory)|Aggiunge una categoria personalizzata per il **comandi** casella combinata.|  
+|`CMFCRibbonCustomizePropertyPage::CreateObject`|Usato dal framework per creare un'istanza dinamica di questo tipo di classe.|  
+|`CMFCRibbonCustomizePropertyPage::GetThisClass`|Utilizzato dal framework per ottenere un puntatore al [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) oggetto associato a questo tipo di classe.|  
+|[CMFCRibbonCustomizePropertyPage::OnOK](#onok)|Chiamato dal sistema quando un utente fa clic **OK** sul **Personalizza** la finestra di dialogo.|  
   
- [!code-cpp[NVC_MFC_RibbonApp#22](../../mfc/reference/codesnippet/CPP/cmfcribboncustomizepropertypage-class_1.cpp)]  
+## <a name="remarks"></a>Note  
+ Se si desidera aggiungere comandi personalizzati per il **Personalizza** la finestra di dialogo, è necessario gestire il messaggio AFX_WM_ON_RIBBON_CUSTOMIZE. Nel gestore dei messaggi, creare un'istanza di un `CMFCRibbonCustomizePropertyPage` oggetto nello stack. Creare un elenco di comandi personalizzati e quindi chiamare `AddCustomCategory` per aggiungere la nuova pagina per il **Personalizza** la finestra di dialogo.  
   
-## Gerarchia di ereditarietà  
+## <a name="example"></a>Esempio  
+ Nell'esempio riportato di seguito viene illustrato come costruire un `CMFCRibbonCustomizePropertyPage` oggetto e per aggiungere una categoria personalizzata.  
+  
+ [!code-cpp[NVC_MFC_RibbonApp&#22;](../../mfc/reference/codesnippet/cpp/cmfcribboncustomizepropertypage-class_1.cpp)]  
+  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -88,9 +104,51 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
   
  [CMFCRibbonCustomizePropertyPage](../../mfc/reference/cmfcribboncustomizepropertypage-class.md)  
   
-## Requisiti  
- **intestazione:** afxribboncustomizedialog.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** afxribboncustomizedialog.h  
   
-## Vedere anche  
+##  <a name="a-nameaddcustomcategorya--cmfcribboncustomizepropertypageaddcustomcategory"></a><a name="addcustomcategory"></a>CMFCRibbonCustomizePropertyPage::AddCustomCategory  
+ Aggiunge una categoria personalizzata per il **comandi** casella combinata.  
+  
+```  
+void AddCustomCategory(
+    LPCTSTR lpszName,  
+    const CList<UINT, UINT>& lstIDS);
+```  
+  
+### <a name="parameters"></a>Parametri  
+  
+|||  
+|-|-|  
+|Parametro|Descrizione|  
+|[in] `lpszName`|Specifica il nome di categoria personalizzata.|  
+|[in] `lstIDS`|Contiene l'ID di comando della barra multifunzione da visualizzare nella categoria personalizzata.|  
+  
+### <a name="remarks"></a>Note  
+ Questo metodo aggiunge una categoria denominata `lpszName` per il **comandi** casella combinata. Quando l'utente seleziona la categoria, i comandi specificati `lstIDS` vengono visualizzati nell'elenco di comandi.  
+  
+##  <a name="a-namecmfcribboncustomizepropertypagea--cmfcribboncustomizepropertypagecmfcribboncustomizepropertypage"></a><a name="cmfcribboncustomizepropertypage"></a>CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage  
+ Costruisce un oggetto `CMFCRibbonCustomizePropertyPage`.  
+  
+```  
+CMFCRibbonCustomizePropertyPage(CMFCRibbonBar* pRibbonBar = NULL);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in] `pRibbonBar`  
+ Un puntatore a un controllo della barra multifunzione per i quali le opzioni per personalizzare.  
+  
+##  <a name="a-nameonoka--cmfcribboncustomizepropertypageonok"></a><a name="onok"></a>CMFCRibbonCustomizePropertyPage::OnOK  
+ Calleld dal sistema quando un utente fa clic su **OK** sul **Personalizza** la finestra di dialogo.  
+  
+```  
+virtual void OnOK();
+```  
+  
+### <a name="remarks"></a>Note  
+ L'implementazione predefinita applica le opzioni selezionate durante la **Personalizza** la finestra di dialogo per la barra di accesso rapido.  
+  
+## <a name="see-also"></a>Vedere anche  
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
  [Classi](../../mfc/reference/mfc-classes.md)
+

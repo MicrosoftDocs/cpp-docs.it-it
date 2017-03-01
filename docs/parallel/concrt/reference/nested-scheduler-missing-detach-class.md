@@ -1,60 +1,89 @@
 ---
-title: "Classe nested_scheduler_missing_detach | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "concrt/concurrency::nested_scheduler_missing_detach"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "nested_scheduler_missing_detach (classe)"
+title: Classe nested_scheduler_missing_detach | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concrt/concurrency::nested_scheduler_missing_detach
+dev_langs:
+- C++
+helpviewer_keywords:
+- nested_scheduler_missing_detach class
 ms.assetid: 65d3f277-6d43-4160-97ef-caf8b26c1641
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# Classe nested_scheduler_missing_detach
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 0079fea0b157e194947931f88d1cb500167cb6e2
+ms.lasthandoff: 02/24/2017
 
-Questa classe descrive un'eccezione generata quando il runtime di concorrenza rileva che non è sta eseguita la chiamata al metodo `CurrentScheduler::Detach` su un contesto allegato a una seconda utilità di pianificazione attraverso il metodo `Attach` dell'oggetto `Scheduler`.  
+---
+# <a name="nestedschedulermissingdetach-class"></a>Classe nested_scheduler_missing_detach
+Questa classe descrive un'eccezione generata quando il runtime di concorrenza rileva che non è stata eseguita la chiamata al metodo `CurrentScheduler::Detach` su un contesto allegato a una seconda utilità di pianificazione mediante il metodo `Attach` dell'oggetto `Scheduler`.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
+```
+class nested_scheduler_missing_detach : public std::exception;
 ```  
-class nested_scheduler_missing_detach : public std::exception;  
-```  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Costruttori pubblici  
+### <a name="public-constructors"></a>Costruttori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore nested\_scheduler\_missing\_detach::nested\_scheduler\_missing\_detach](../Topic/nested_scheduler_missing_detach::nested_scheduler_missing_detach%20Constructor.md)|Di overload.  Costruisce un oggetto `nested_scheduler_missing_detach`.|  
+|[Costruttore nested_scheduler_missing_detach](#ctor)|Di overload. Costruisce un oggetto `nested_scheduler_missing_detach`.|  
   
-## Note  
- Questa eccezione viene generata solo quando si annida un'utilità di pianificazione in un'altra chiamando il metodo `Attach` di un oggetto `Scheduler` su un contesto già di proprietà o collegato a un'altra utilità di pianificazione.  Il runtime di concorrenza genera opportunisticamente questa eccezione quando può rilevare lo scenario come aiuto all'individuazione del problema.  Non tutte le istanze di trascurare di chiamare il metodo `CurrentScheduler::Detach` generano questa eccezione.  
+## <a name="remarks"></a>Note  
+ Questa eccezione viene generata solo quando si annida un'utilità di pianificazione in un'altra chiamando il metodo `Attach` di un oggetto `Scheduler` su un contesto che è già di proprietà o è collegato a un'altra utilità di pianificazione. Il Runtime di concorrenza genera questa eccezione in base alle esigenze quando in grado di rilevare lo scenario come ausilio per individuare il problema. Non tutte le istanze di trascurare di chiamare il `CurrentScheduler::Detach` metodo viene sicuramente generano questa eccezione.  
   
-## Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `exception`  
   
  `nested_scheduler_missing_detach`  
   
-## Requisiti  
- **Header:** concrt.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** concrt  
   
- **Spazio dei nomi:** concorrenza  
+ **Spazio dei nomi:** Concurrency  
   
-## Vedere anche  
- [Spazio dei nomi concurrency](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [Classe Scheduler](../../../parallel/concrt/reference/scheduler-class.md)   
- [Metodo CurrentScheduler::Detach](../Topic/CurrentScheduler::Detach%20Method.md)   
- [Metodo Scheduler::Attach](../Topic/Scheduler::Attach%20Method.md)
+##  <a name="a-namectora-nestedschedulermissingdetach"></a><a name="ctor"></a>nested_scheduler_missing_detach 
+
+ Costruisce un oggetto `nested_scheduler_missing_detach`.  
+  
+```
+explicit _CRTIMP nested_scheduler_missing_detach(_In_z_ const char* _Message) throw();
+
+nested_scheduler_missing_detach() throw();
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `_Message`  
+ Messaggio descrittivo dell'errore.  
+  
+## <a name="see-also"></a>Vedere anche  
+ [concorrenza Namespace](concurrency-namespace.md)   
+ [Scheduler (classe)](scheduler-class.md)
+

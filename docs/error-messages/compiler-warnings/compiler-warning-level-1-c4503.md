@@ -1,38 +1,54 @@
 ---
-title: "Avviso del compilatore (livello 1) C4503 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4503"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4503"
+title: Compilatore (livello 1) avviso C4503 | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4503
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4503
 ms.assetid: 7c5a98ae-5b6d-41d8-b881-12d3ffd5e392
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Avviso del compilatore (livello 1) C4503
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: f999fcb73860bfd2fabb3484e78f313a32240dee
+ms.lasthandoff: 02/24/2017
 
-'identificatore': lunghezza nome decorato superata. Nome troncato  
+---
+# <a name="compiler-warning-level-1-c4503"></a>Avviso del compilatore (livello 1) C4503
+'identificatore': lunghezza nome decorato superata, nome troncato  
   
- Il nome decorato ha una lunghezza superiore al limite del compilatore \(4096 caratteri\) ed è stato troncato.  Per evitare la visualizzazione dell'avviso e il troncamento, ridurre il numero di argomenti o la lunghezza dei nomi degli identificatori utilizzati.  
+ Il nome decorato supera il limite del compilatore (4096) e sono stato troncato. Per evitare questo avviso e il troncamento, ridurre il numero di argomenti o lunghezza del nome di identificatori utilizzati.  
   
- Questo avviso verrà ad esempio generato se nel codice sono contenuti ripetutamente modelli specializzati in modelli,  quale una mappa di mappe della libreria C\+\+ standard.  In questo caso, è possibile trasformare i typedef in un tipo, ad esempio una struttura, contenente la mappa.  
+ Una situazione in cui verrà generato questo avviso è quando il codice contiene modelli specializzati in modelli più volte.  Ad esempio, una mappa di mappe (dalla libreria C++ Standard).  In questo caso, è possibile rendere i typedef in un tipo (ad esempio struct) che contiene la mappa.  
   
- La ristrutturazione del codice non è tuttavia obbligatoria.  Un'applicazione che genera l'avviso C4503 può essere distribuita, ma se vengono generati errori in fase di collegamento, sarà più difficile determinare il tipo del simbolo interessato dall'errore.  Sarà più complesso anche il debug, poiché risulterà difficile anche eseguire il mapping tra il nome del simbolo e quello del tipo.  Il troncamento del nome non influisce tuttavia sulla correttezza del programma.  
+ È possibile, tuttavia, decidere di non ristrutturare il codice.  È possibile fornire un'applicazione che viene generato l'errore C4503, ma se si verificano errori in fase di collegamento su un simbolo troncato, sarà più difficile determinare il tipo del simbolo nel messaggio di errore.  Il debug anche risulterà più difficile; il debugger avrà difficoltà mapping nome del simbolo per nome.  Tuttavia, la correttezza del programma, è interessata da nome troncato.  
   
- Il seguente codice di esempio genera l'errore C4503:  
+ Nell'esempio seguente viene generato l'errore C4503:  
   
 ```  
 // C4503.cpp  
@@ -50,7 +66,7 @@ typedef std::map<std::string, WebAppTest> Hello;
 Hello MyWAT;  
 ```  
   
- Nell'esempio riportato di seguito viene illustrato un modo per riscrivere il codice che consente di evitare la visualizzazione dell'avviso.  
+ Nell'esempio seguente viene illustrato un modo per riscrivere il codice per risolvere C4503:  
   
 ```  
 // C4503b.cpp  

@@ -1,74 +1,92 @@
 ---
-title: "WM_ Message Handlers: F - K | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ON_WM_FONTCHANGE"
-  - "ON_WM_ICONERASEBKGND"
-  - "ON_WM_KEYDOWN"
-  - "ON_WM_GETMINMAXINFO"
-  - "ON_WM_KEYUP"
-  - "ON_WM_HSCROLL"
-  - "ON_WM_KILLFOCUS"
-  - "ON_WM_HSCROLLCLIPBOARD"
-  - "ON_WM_GETDLGCODE"
-  - "ON_WM_HELPINFO"
-  - "ON_WM_INITMENUPOPUP"
-  - "ON_WM_INITMENU"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ON_WM_FONTCHANGE"
-  - "ON_WM_GETDLGCODE"
-  - "ON_WM_GETMINMAXINFO"
-  - "ON_WM_HELPINFO"
-  - "ON_WM_HSCROLL"
-  - "ON_WM_HSCROLLCLIPBOARD"
-  - "ON_WM_ICONERASEBKGND"
-  - "ON_WM_INITMENU"
-  - "ON_WM_INITMENUPOPUP"
-  - "ON_WM_KEYDOWN"
-  - "ON_WM_KEYUP"
-  - "ON_WM_KILLFOCUS"
-  - "WM_ (messaggi)"
+title: 'Gestori messaggi WM _: F - K | Documenti di Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ON_WM_FONTCHANGE
+- ON_WM_ICONERASEBKGND
+- ON_WM_KEYDOWN
+- ON_WM_GETMINMAXINFO
+- ON_WM_KEYUP
+- ON_WM_HSCROLL
+- ON_WM_KILLFOCUS
+- ON_WM_HSCROLLCLIPBOARD
+- ON_WM_GETDLGCODE
+- ON_WM_HELPINFO
+- ON_WM_INITMENUPOPUP
+- ON_WM_INITMENU
+dev_langs:
+- C++
+helpviewer_keywords:
+- ON_WM_HELPINFO
+- ON_WM_KILLFOCUS
+- ON_WM_GETMINMAXINFO
+- ON_WM_KEYUP
+- ON_WM_HSCROLL
+- ON_WM_INITMENUPOPUP
+- ON_WM_FONTCHANGE
+- ON_WM_ICONERASEBKGND
+- ON_WM_GETDLGCODE
+- ON_WM_HSCROLLCLIPBOARD
+- ON_WM_INITMENU
+- WM_ messages
+- ON_WM_KEYDOWN
 ms.assetid: 0e7de191-1499-499f-859c-62742797808e
 caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# WM_ Message Handlers: F - K
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 7f803a7e73491abfabf9dba19288dcb44d1b68d7
+ms.lasthandoff: 02/24/2017
 
-Le seguenti voci della mappa sulla sinistra corrispondono ai prototipi di funzione sulla destra:  
+---
+# <a name="wm-message-handlers-f---k"></a>WM_ Message Handlers: F - K
+Le seguenti voci della mappa a sinistra corrispondono ai prototipi di funzione a destra:  
   
 |Voce della mappa|Prototipo di funzione|  
-|----------------------|---------------------------|  
-|ON\_WM\_FONTCHANGE\(\)|afx\_msg void [OnFontChange](../Topic/CWnd::OnFontChange.md)\(\);|  
-|ON\_WM\_GETDLGCODE\(\)|afx\_msg UINT [OnGetDlgCode](../Topic/CWnd::OnGetDlgCode.md)\(\);|  
-|ON\_WM\_GETMINMAXINFO\(\)|afx\_msg void [OnGetMinMaxInfo](../Topic/CWnd::OnGetMinMaxInfo.md)\(LPPOINT\);|  
-|ON\_WM\_HELPINFO\(\)|afx\_msg BOOL [OnHelpInfo](../Topic/CWnd::OnHelpInfo.md)\(HELPINFO\*\);|  
-|ON\_WM\_HOTKEY\(\)|afx\_msg void [OnHotKey](../Topic/CWnd::OnHotKey.md)\(UINT, UINT, UINT\);|  
-|ON\_WM\_HSCROLL\(\)|afx\_msg void [OnHScroll](../Topic/CWnd::OnHScroll.md)\(UINT, UINT, CWnd\*\);|  
-|ON\_WM\_HSCROLLCLIPBOARD\(\)|afx\_msg void [OnHScrollClipboard](../Topic/CWnd::OnHScrollClipboard.md)\(CWnd\*, UINT, UINT\);|  
-|ON\_WM\_ICONERASEBKGND\(\)|afx\_msg void [OnIconEraseBkgnd](../Topic/CWnd::OnIconEraseBkgnd.md)\(CDC\*\);|  
-|ON\_WM\_INITMENU\(\)|afx\_msg void [OnInitMenu](../Topic/CWnd::OnInitMenu.md)\(CMenu\*\);|  
-|ON\_WM\_INITMENUPOPUP\(\)|afx\_msg void [OnInitMenuPopup](../Topic/CWnd::OnInitMenuPopup.md)\(CMenu\*, UINT, BOOL\);|  
-|ON\_WM\_INPUT\(\)|afx\_msg void [OnRawInput](../Topic/CWnd::OnRawInput.md)\(UINT, HRAWINPUT\);|  
-|ON\_WM\_INPUT\_DEVICE\_CHANGE\(\)|afx\_msg void [OnInputDeviceChange](../Topic/CWnd::OnInputDeviceChange.md)\(unsigned short\);|  
-|ON\_WM\_INPUTLANGCHANGE\(\)|afx\_msg void [OnInputLangChange](../Topic/CWnd::OnInputLangChange.md)\(BYTE, UINT\);|  
-|ON\_WM\_INPUTLANGCHANGEREQUEST\(\)|afx\_msg void [OnInputLangChangeRequest](../Topic/CWnd::OnInputLangChangeRequest.md)\(UINT, HKL\);|  
-|ON\_WM\_KEYDOWN\(\)|afx\_msg void [OnKeyDown](../Topic/CWnd::OnKeyDown.md)\(UINT, UINT, UINT\);|  
-|ON\_WM\_KEYUP\(\)|afx\_msg void [OnKeyUp](../Topic/CWnd::OnKeyUp.md)\(UINT, UINT, UINT\);|  
-|ON\_WM\_KILLFOCUS\(\)|afx\_msg void [OnKillFocus](../Topic/CWnd::OnKillFocus.md)\(CWnd\*\);|  
+|---------------|------------------------|  
+|ON_WM_FONTCHANGE()|afx_msg void [OnFontChange](../../mfc/reference/cwnd-class.md#onfontchange)().|  
+|ON_WM_GETDLGCODE()|afx_msg UINT [OnGetDlgCode](../../mfc/reference/cwnd-class.md#ongetdlgcode)().|  
+|ON_WM_GETMINMAXINFO()|afx_msg void [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)(LPPOINT);|  
+|ON_WM_HELPINFO()|afx_msg BOOL [OnHelpInfo](../../mfc/reference/cwnd-class.md#onhelpinfo)(HELPINFO *);|  
+|ON_WM_HOTKEY()|afx_msg void [OnHotKey](../../mfc/reference/cwnd-class.md#onhotkey)(UINT, UINT, UINT);|  
+|ON_WM_HSCROLL()|afx_msg void [OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)(UINT, UINT, CWnd *);|  
+|ON_WM_HSCROLLCLIPBOARD()|afx_msg void [OnHScrollClipboard](../../mfc/reference/cwnd-class.md#onhscrollclipboard)(CWnd *, UINT, UINT);|  
+|ON_WM_ICONERASEBKGND()|afx_msg void [OnIconEraseBkgnd](../../mfc/reference/cwnd-class.md#oniconerasebkgnd)(CDC *);|  
+|ON_WM_INITMENU()|afx_msg void [OnInitMenu](../../mfc/reference/cwnd-class.md#oninitmenu)(CMenu *);|  
+|ON_WM_INITMENUPOPUP()|afx_msg void [OnInitMenuPopup](../../mfc/reference/cwnd-class.md#oninitmenupopup)(CMenu *, UINT, BOOL);|  
+|ON_WM_INPUT()|afx_msg void [OnRawInput](../../mfc/reference/cwnd-class.md#onrawinput)(UINT, HRAWINPUT);|  
+|ON_WM_INPUT_DEVICE_CHANGE()|afx_msg void [OnInputDeviceChange](../../mfc/reference/cwnd-class.md#oninputdevicechange)(unsigned short);|  
+|ON_WM_INPUTLANGCHANGE()|afx_msg void [OnInputLangChange](../../mfc/reference/cwnd-class.md#oninputlangchange)(BYTE, UINT);|  
+|ON_WM_INPUTLANGCHANGEREQUEST()|afx_msg void [OnInputLangChangeRequest](../../mfc/reference/cwnd-class.md#oninputlangchangerequest)(UINT, HKL);|  
+|ON_WM_KEYDOWN()|afx_msg void [OnKeyDown](../../mfc/reference/cwnd-class.md#onkeydown)(UINT, UINT, UINT);|  
+|ON_WM_KEYUP()|afx_msg void [su tasto su](../../mfc/reference/cwnd-class.md#onkeyup)(UINT, UINT, UINT);|  
+|ON_WM_KILLFOCUS()|afx_msg void [OnKillFocus](../../mfc/reference/cwnd-class.md#onkillfocus)(CWnd *);|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Mappe messaggi](../../mfc/reference/message-maps-mfc.md)   
- [Gestori per messaggi WM\_](../../mfc/reference/handlers-for-wm-messages.md)
+ [Gestori per messaggi WM _](../../mfc/reference/handlers-for-wm-messages.md)
+
+

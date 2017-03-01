@@ -1,64 +1,77 @@
 ---
-title: "CPrimitiveElementTraits Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL.CPrimitiveElementTraits<T>"
-  - "CPrimitiveElementTraits"
-  - "ATL.CPrimitiveElementTraits"
-  - "ATL::CPrimitiveElementTraits<T>"
-  - "ATL::CPrimitiveElementTraits"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CPrimitiveElementTraits class"
+title: Classe CPrimitiveElementTraits | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL.CPrimitiveElementTraits<T>
+- CPrimitiveElementTraits
+- ATL.CPrimitiveElementTraits
+- ATL::CPrimitiveElementTraits<T>
+- ATL::CPrimitiveElementTraits
+dev_langs:
+- C++
+helpviewer_keywords:
+- CPrimitiveElementTraits class
 ms.assetid: 21c1cea8-2c5a-486c-b65c-85490f3ed4e6
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# CPrimitiveElementTraits Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
+ms.openlocfilehash: 44e3849ebf2de09bc9b62e28df0f70bf52ac95e6
+ms.lasthandoff: 02/24/2017
 
-Questa classe fornisce i metodi e funzioni per una classe di raccolte composta dei tipi di dati primitivi.  
+---
+# <a name="cprimitiveelementtraits-class"></a>Classe CPrimitiveElementTraits
+Questa classe fornisce metodi predefiniti e comporre funzioni per una classe di raccolte di tipi di dati primitivi.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
+```
+template <typename T>  
+class CPrimitiveElementTraits : public CDefaultElementTraits<T>
 ```  
   
-      template<  
-   typename T  
-> class CPrimitiveElementTraits :   
-   public CDefaultElementTraits< T >  
-```  
-  
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `T`  
- Il tipo di dati da archiviare nell'oggetto classe di raccolte.  
+ Il tipo di dati da archiviare nell'oggetto classe di insiemi.  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Typedef pubblici  
+### <a name="public-typedefs"></a>Typedef pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CPrimitiveElementTraits::INARGTYPE](../Topic/CPrimitiveElementTraits::INARGTYPE.md)|Il tipo di dati da utilizzare per l'aggiunta di elementi all'oggetto classe di raccolte.|  
-|[CPrimitiveElementTraits::OUTARGTYPE](../Topic/CPrimitiveElementTraits::OUTARGTYPE.md)|Il tipo di dati da utilizzare per recuperare gli elementi dall'oggetto classe di raccolte.|  
+|[CPrimitiveElementTraits::INARGTYPE](#inargtype)|Il tipo di dati da utilizzare per l'aggiunta di elementi per l'oggetto di classe di raccolta.|  
+|[CPrimitiveElementTraits::OUTARGTYPE](#outargtype)|Il tipo di dati da utilizzare per recuperare elementi dall'oggetto classe di insiemi.|  
   
-## Note  
- Questa classe fornisce funzioni statiche predefinite e metodi per lo spostamento, la copia, confrontare e l'hashing degli elementi di tipo di dati primitivi archiviati in una classe di raccolte oggetto.  
+## <a name="remarks"></a>Note  
+ Questa classe fornisce funzioni statiche predefiniti e metodi per lo spostamento, copia, il confronto e hashing gli elementi di tipo di dati primitivi archiviati in un oggetto classe di raccolta.  
   
- Per ulteriori informazioni, vedere [Classi di raccolte ATL](../../atl/atl-collection-classes.md).  
+ Per ulteriori informazioni, vedere [classi Collection ATL](../../atl/atl-collection-classes.md).  
   
-## Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)  
   
  [CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)  
@@ -69,9 +82,24 @@ Questa classe fornisce i metodi e funzioni per una classe di raccolte composta d
   
  `CPrimitiveElementTraits`  
   
-## Requisiti  
- **Header:** atlcoll.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** atlcoll. h  
   
-## Vedere anche  
- [CDefaultElementTraits Class](../../atl/reference/cdefaultelementtraits-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+##  <a name="a-nameinargtypea--cprimitiveelementtraitsinargtype"></a><a name="inargtype"></a>CPrimitiveElementTraits::INARGTYPE  
+ Il tipo di dati da utilizzare per l'aggiunta di elementi per l'oggetto di classe di raccolta.  
+  
+```
+typedef T INARGTYPE;
+```  
+  
+##  <a name="a-nameoutargtypea--cprimitiveelementtraitsoutargtype"></a><a name="outargtype"></a>CPrimitiveElementTraits::OUTARGTYPE  
+ Il tipo di dati da utilizzare per recuperare elementi dall'oggetto classe di insiemi.  
+  
+```
+typedef T& OUTARGTYPE;
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Classe CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)   
+ [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
+
