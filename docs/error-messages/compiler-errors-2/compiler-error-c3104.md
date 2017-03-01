@@ -1,39 +1,55 @@
 ---
-title: "Errore del compilatore C3104 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3104"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3104"
+title: Errore del compilatore C3104 | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3104
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3104
 ms.assetid: b5648d47-e5d3-4b45-a3c0-f46e04eae731
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# Errore del compilatore C3104
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 5df018fe26e66ed480ed2464c19c876adfac8dd1
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="compiler-error-c3104"></a>Errore del compilatore C3104
 argomento non valido per l'attributo  
   
- È stato specificato un argomento non valido per un attributo.  
+ È stato specificato un argomento non valido a un attributo.  
   
- Per ulteriori informazioni, vedere [Attribute Parameter Types](../../windows/attribute-parameter-types-cpp-component-extensions.md).  
+ Vedere [tipi di parametro di attributo](../../windows/attribute-parameter-types-cpp-component-extensions.md) per ulteriori informazioni.  
   
- Questo errore può essere generato in seguito alle operazioni di conformità eseguite dal compilatore per Visual C\+\+ 2005: quando si passano matrici gestite ad attributi personalizzati, il tipo di matrice non viene più dedotto dall'elenco di inizializzazione aggregata.  Il compilatore richiede la specifica del tipo di matrice e dell'elenco di inizializzatori.  
+ Questo errore può essere generato come risultato di operazioni eseguite per Visual C++ 2005 conformità: durante il passaggio di matrici gestite agli attributi personalizzati, il tipo della matrice non viene dedotto dall'elenco di inizializzazione aggregata. Il compilatore richiede di specificare il tipo di matrice, nonché l'elenco di inizializzatori.  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore C3104:  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene generato l'errore C3104.  
   
 ```  
 // C3104a.cpp  
@@ -52,8 +68,8 @@ public ref struct ABC : public Attribute {
 ref struct AStruct{};  
 ```  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore C3104:  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene generato l'errore C3104.  
   
 ```  
 // C3104b.cpp  
@@ -79,27 +95,4 @@ ref class B {};
 [A(0)]  
 ref class B {};  
 ```  
-  
-## Esempio  
- Nell'esempio seguente viene generato l'errore C3104:  
-  
-```  
-// C3104c.cpp  
-// compile with: /clr:oldSyntax /c  
-using namespace System;  
-  
-[ attribute(Class) ]  
-public __gc class AnotherAttr {  
-public:  
-   AnotherAttr(Object* arr __gc[]) : var0(arr) {}  
-   Object* var1 __gc[];  
-   Object* var0 __gc[];  
-};  
-  
-[ AnotherAttr( { __box(3.14159), S"pi" }, var1 = { S"a", S"b" } ) ]   // C3104  
-public __gc class Class1 {};  
-  
-// OK  
-[ AnotherAttr( new Object * __gc[] {__box(3.14159), S"pi" }, var1 = new Object * __gc[] { S"a", S"b" } ) ]  
-public __gc class Class2 {};  
-```
+

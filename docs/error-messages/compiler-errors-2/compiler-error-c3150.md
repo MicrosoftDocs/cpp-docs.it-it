@@ -1,43 +1,48 @@
 ---
-title: "Errore del compilatore C3150 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3150"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3150"
+title: Errore del compilatore C3150 | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3150
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3150
 ms.assetid: c1ff28f5-52fe-4fd4-81d0-2e0ad8548631
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Errore del compilatore C3150
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: e0531a471bbaf43ad82b2c51ac11dd0a4aeff54c
+ms.lasthandoff: 02/24/2017
 
-'elemento': 'attributo' può essere utilizzato solo con una classe, una struttura, un'interfaccia, una matrice o un puntatore  
+---
+# <a name="compiler-error-c3150"></a>Errore del compilatore C3150
+'element': 'attributo' può essere applicato solo a una classe, interfaccia, matrice o puntatore  
   
- [\_\_gc](../../misc/gc.md) può essere utilizzato solo su una classe, un'interfaccia o una matrice.  
+`__gc`può essere utilizzato solo in una classe, interfaccia o matrice.  
   
- L'errore C3150 può essere generato solo utilizzando **\/clr:oldSyntax**.  
-  
- Il seguente codice di esempio genera l'errore C3150:  
-  
-```  
-// C3150.cpp  
-// compile with: /clr:oldSyntax  
-#using <mscorlib.dll>  
-  
-__gc void f()   // C3150; function cannot be managed  
-{  
-}  
-```
+ C3150 è raggiungibile tramite l'opzione del compilatore obsoleta **oldSyntax**.  
+

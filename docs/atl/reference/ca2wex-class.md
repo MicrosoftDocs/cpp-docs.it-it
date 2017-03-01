@@ -1,110 +1,177 @@
 ---
-title: "Classe CA2WEX | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATLCONV/CA2WEX"
-  - "ATL.CA2WEX"
-  - "ATL.CA2WEX<t_nBufferLength>"
-  - "ATL::CA2WEX"
-  - "ATL::CA2WEX<t_nBufferLength>"
-  - "CA2WEX"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CA2WEX (classe)"
+title: Classe CA2WEX | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATLCONV/CA2WEX
+- ATL.CA2WEX
+- ATL.CA2WEX<t_nBufferLength>
+- ATL::CA2WEX
+- ATL::CA2WEX<t_nBufferLength>
+- CA2WEX
+dev_langs:
+- C++
+helpviewer_keywords:
+- CA2WEX class
 ms.assetid: 317d9ffb-e84f-47e8-beda-57e28fb19124
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# Classe CA2WEX
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 7c1029d0d9cb1abb1980f97c9541e2c1ce40b539
+ms.lasthandoff: 02/24/2017
 
-Questa classe viene utilizzata da macro per la conversione delle stringhe `CA2TEX`, `CA2CTEX`, `CT2WEX`e `CT2CWEX`e il typedef **CA2W**.  
+---
+# <a name="ca2wex-class"></a>Classe CA2WEX
+Questa classe viene utilizzata per le macro di conversione di stringhe `CA2TEX`, `CA2CTEX`, `CT2WEX`, e `CT2CWEX`e il typedef **CA2W**.  
   
 > [!IMPORTANT]
 >  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
+```
+template <int t_nBufferLength = 128>
+class CA2WEX
 ```  
   
-      template<  
-int t_nBufferLength= 128  
->  
-class CA2WEX  
-```  
-  
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `t_nBufferLength`  
- La dimensione del buffer utilizzato nel processo di conversione.  La lunghezza predefinita è di 128 byte.  
+ Le dimensioni del buffer utilizzato nel processo di traduzione. La lunghezza predefinita è 128 byte.  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Costruttori pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[CA2WEX::CA2WEX](../Topic/CA2WEX::CA2WEX.md)|Costruttore.|  
-|[CA2WEX::~CA2WEX](../Topic/CA2WEX::~CA2WEX.md)|Il distruttore.|  
-  
-### Operatori pubblici  
+### <a name="public-constructors"></a>Costruttori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CA2WEX::operator LPWSTR](../Topic/CA2WEX::operator%20LPWSTR.md)|Operatore di conversione.|  
+|[CA2WEX::CA2WEX](#ca2wex)|Costruttore.|  
+|[CA2WEX:: ~ CA2WEX](#dtor)|Distruttore.|  
   
-### Membri dati pubblici  
+### <a name="public-operators"></a>Operatori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CA2WEX::m\_psz](../Topic/CA2WEX::m_psz.md)|Il membro dati di memorizzare la stringa di origine.|  
-|[CA2WEX::m\_szBuffer](../Topic/CA2WEX::m_szBuffer.md)|Il buffer statico, utilizzato per archiviare la stringa convertita.|  
+|[CA2WEX::operator LPWSTR](#operator_lpwstr)|Operatore di conversione.|  
   
-## Note  
- A meno che aggiuntivo la funzionalità sia necessaria, utilizzare `CA2TEX`, `CA2CTEX`, `CT2WEX`, `CT2CWEX`, o **CA2W** nel codice.  
+### <a name="public-data-members"></a>Membri dati pubblici  
   
- Questa classe contiene un buffer statico a dimensione fissa utilizzato per archiviare il risultato della conversione.  Se il risultato è troppo grande per inserire nel buffer statico, la classe alloca memoria utilizzando `malloc`, liberando memoria quando l'oggetto area di validità.  In questo modo, a differenza delle macro di conversione di testo disponibili nelle versioni precedenti di ATL, questa classe è protetta da utilizzare nei cicli e non supererà lo stack.  
+|Nome|Descrizione|  
+|----------|-----------------|  
+|[CA2WEX::m_psz](#m_psz)|Il membro dati che archivia la stringa di origine.|  
+|[CA2WEX::m_szBuffer](#m_szbuffer)|Il buffer statico, utilizzato per archiviare la stringa convertita.|  
   
- Se la classe tenta di allocare memoria nell'heap e i non riesce, chiamerà `AtlThrow` con un argomento **E\_OUTOFMEMORY**.  
+## <a name="remarks"></a>Note  
+ A meno che non è necessaria la funzionalità aggiuntiva, utilizzare `CA2TEX`, `CA2CTEX`, `CT2WEX`, `CT2CWEX`, o **CA2W** nel codice.  
   
- Per impostazione predefinita, le classi di conversione ATL e le macro utilizzano la tabella codici ANSI del thread corrente per la conversione.  Se si desidera eseguire l'override di questo comportamento per una specifica conversione, specificare la tabella codici come secondo parametro al costruttore per la classe.  
+ Questa classe contiene un buffer statico di dimensione fissa viene utilizzato per archiviare il risultato della conversione. Se il risultato è troppo grande per il buffer statico, la classe alloca memoria con `malloc`, liberando la memoria quando l'oggetto esce dall'ambito. Ciò garantisce che, a differenza del testo macro di conversione disponibili nelle versioni precedenti di ATL, questa classe è sicura per l'uso nei cicli e che non sarà un overflow dello stack.  
   
- Le macro seguenti sono basate su questa classe:  
+ Se la classe tenta di allocare memoria nell'heap di ha esito negativo, verrà eseguita una chiamata `AtlThrow` con un argomento di **E_OUTOFMEMORY**.  
   
--   `CA2TEX`  
+ Per impostazione predefinita, le classi di conversione ATL e le macro utilizzano la tabella codici ANSI del thread corrente per la conversione. Se si desidera ignorare il comportamento per una conversione specifica, specificare la tabella codici come secondo parametro per il costruttore della classe.  
   
--   `CA2CTEX`  
+ In questa classe si basano le seguenti macro:  
   
--   `CT2WEX`  
+- `CA2TEX`  
   
--   `CT2CWEX`  
+- `CA2CTEX`  
   
- Il typedef seguente è basato sulla classe:  
+- `CT2WEX`  
   
--   **CA2W**  
+- `CT2CWEX`  
   
- Per una descrizione di tali macro di conversione di testo, vedere [Macro per la conversione delle stringhe MFC e ATL](../Topic/ATL%20and%20MFC%20String%20Conversion%20Macros.md).  
+ La seguente dichiarazione typedef è basato sulla classe:  
   
-## Esempio  
- Vedere [Macro per la conversione delle stringhe MFC e ATL](../Topic/ATL%20and%20MFC%20String%20Conversion%20Macros.md) per un esempio di utilizzo di queste macro per la conversione delle stringhe.  
+- **CA2W**  
   
-## Requisiti  
- **Header:** atlconv.h  
+ Per una descrizione di queste macro di conversione di testo, vedere [macro di conversione di stringhe MFC e ATL](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863).  
   
-## Vedere anche  
+## <a name="example"></a>Esempio  
+ Vedere [macro di conversione di stringhe MFC e ATL](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863) per un esempio dell'utilizzo di queste macro di conversione di stringhe.  
+  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** atlconv. h  
+  
+##  <a name="a-nameca2wexa--ca2wexca2wex"></a><a name="ca2wex"></a>CA2WEX::CA2WEX  
+ Costruttore.  
+  
+```
+CA2WEX(LPCSTR psz, UINT nCodePage) throw(...);
+CA2WEX(LPCSTR psz) throw(...);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `psz`  
+ La stringa di testo da convertire.  
+  
+ `nCodePage`  
+ La tabella codici utilizzata per eseguire la conversione. Vedere la descrizione del parametro pagina codice per il [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] funzione [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072) per ulteriori dettagli.  
+  
+### <a name="remarks"></a>Note  
+ Consente di allocare il buffer utilizzato nel processo di conversione.  
+  
+##  <a name="a-namedtora--ca2wexca2wex"></a><a name="dtor"></a>CA2WEX:: ~ CA2WEX  
+ Distruttore.  
+  
+```
+~CA2WEX() throw();
+```  
+  
+### <a name="remarks"></a>Note  
+ Consente di liberare il buffer allocato.  
+  
+##  <a name="a-namempsza--ca2wexmpsz"></a><a name="m_psz"></a>CA2WEX::m_psz  
+ Il membro dati che archivia la stringa di origine.  
+  
+```
+LPWSTR m_psz;
+```  
+  
+##  <a name="a-namemszbuffera--ca2wexmszbuffer"></a><a name="m_szbuffer"></a>CA2WEX::m_szBuffer  
+ Il buffer statico, utilizzato per archiviare la stringa convertita.  
+  
+```
+wchar_t m_szBuffer[t_nBufferLength];
+```  
+  
+##  <a name="a-nameoperatorlpwstra--ca2wexoperator-lpwstr"></a><a name="operator_lpwstr"></a>CA2WEX::operator LPWSTR  
+ Operatore di conversione.  
+  
+```  
+operator LPWSTR() const throw();
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ Restituisce la stringa di testo come tipo **LPWSTR.**  
+  
+## <a name="see-also"></a>Vedere anche  
  [Classe CA2AEX](../../atl/reference/ca2aex-class.md)   
  [Classe CA2CAEX](../../atl/reference/ca2caex-class.md)   
  [Classe CW2AEX](../../atl/reference/cw2aex-class.md)   
  [Classe CW2CWEX](../../atl/reference/cw2cwex-class.md)   
  [Classe CW2WEX](../../atl/reference/cw2wex-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+ [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
+

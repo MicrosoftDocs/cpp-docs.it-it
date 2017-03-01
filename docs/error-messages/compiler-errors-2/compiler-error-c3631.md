@@ -1,53 +1,48 @@
 ---
-title: "Errore del compilatore C3631 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3631"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3631"
+title: Errore del compilatore C3631 | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3631
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3631
 ms.assetid: 88cbd2d5-6fef-4940-be34-d8cbe816d3da
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Errore del compilatore C3631
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 3ed04a7f8a7070471ea97fb583af386c7922f6f6
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="compiler-error-c3631"></a>Errore del compilatore C3631
 'function': impossibile eseguire l'overload di eventi gestiti o WinRT  
   
  Non è possibile eseguire l'overload di un evento gestito o WinRT.  
   
-## Esempio  
- C3631 è raggiungibile solo usando **\/clr:oldSyntax**.  
-  
- L'esempio seguente genera l'errore C3631.  
-  
-```  
-// C3631.cpp  
-// compile with: /clr:oldSyntax /c  
-  
-public __gc struct S2 {  
-   __event void func1();     
-   __event void func1(int);   // C3631 delete second declaration of func1  
-};  
-  
-public __gc struct S1 {  
-   __delegate void del1();  
-   __delegate void del2();  
-   __event int add_myE(del1*) { return 0; }     
-   __event int remove_myE(del1*) { return 0; }     
-   __event int add_myE(del2*) { return 0; }   // C3631  
-   __event int remove_myE(del2*) { return 0; }   // C3631  
-};  
-```
+ C3631 è raggiungibile tramite l'opzione del compilatore obsoleta **oldSyntax**.  
+

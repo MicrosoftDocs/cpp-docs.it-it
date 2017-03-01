@@ -1,80 +1,101 @@
 ---
-title: "_ATL_BASE_MODULE70 Structure | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::_ATL_BASE_MODULE70"
-  - "ATL._ATL_BASE_MODULE70"
-  - "_ATL_BASE_MODULE70"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ATL_BASE_MODULE70 structure"
-  - "ATL_BASE_MODULE70 structure"
+title: Struttura _ATL_BASE_MODULE70 | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::_ATL_BASE_MODULE70
+- ATL._ATL_BASE_MODULE70
+- _ATL_BASE_MODULE70
+dev_langs:
+- C++
+helpviewer_keywords:
+- ATL_BASE_MODULE70 structure
+- _ATL_BASE_MODULE70 structure
 ms.assetid: 4539282f-15b8-4d7c-aafa-a85dc56f4980
 caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# _ATL_BASE_MODULE70 Structure
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 347e7bf7cd9173fb2815f44fc052ec23ab4055a6
+ms.openlocfilehash: 7456d441d7b3fb74f404f29c893c492feab10ed9
+ms.lasthandoff: 02/24/2017
 
-Utilizzato da alcun progetto che utilizza ATL.  
+---
+# <a name="atlbasemodule70-structure"></a>Struttura _ATL_BASE_MODULE70
+Utilizzato da qualsiasi progetto che utilizza ATL.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
+```
+struct _ATL_BASE_MODULE70 {
+    UINT cbSize;
+    HINSTANCE m_hInst;
+    HINSTANCE m_hInstResource;
+    bool m_bNT5orWin98;
+    DWORD dwAtlBuildVer;
+    GUID* pguidVer;
+    CRITICAL_SECTION m_csResource;
+    CSimpleArray<HINSTANCE> m_rgResourceInstance;
+};
 ```  
   
-      struct _ATL_BASE_MODULE70{  
-   UINT cbSize;  
-   HINSTANCE m_hInst;  
-   HINSTANCE m_hInstResource;  
-   bool m_bNT5orWin98;  
-   DWORD dwAtlBuildVer;  
-   GUID* pguidVer;  
-   CRITICAL_SECTION m_csResource;  
-   CSimpleArray<HINSTANCE> m_rgResourceInstance;  
-};  
-```  
-  
-## Membri  
+## <a name="members"></a>Membri  
  `cbSize`  
- La dimensione della struttura, utilizzata per controllare la versione.  
+ La dimensione della struttura, utilizzata per il controllo delle versioni.  
   
  `m_hInst`  
- **hInstance** per questo modulo \(EXE o DLL\).  
+ Il **hInstance** per il modulo (exe o dll).  
   
  `m_hInstResource`  
- Handle di risorse predefinite dell'istanza.  
+ Handle di risorsa istanza predefinita.  
   
- **m\_bNT5orWin98**  
- Informazioni sulla versione del sistema operativo.  Utilizzato internamente da ATL.  
+ **m_bNT5orWin98**  
+ Informazioni sulla versione del sistema operativo. Utilizzato internamente da ATL.  
   
  **dwAtlBuildVer**  
- Archivia la versione ATL.  Attualmente 0x0700.  
+ Archivia la versione di ATL. Attualmente 0x0700.  
   
  **pguidVer**  
- Il GUID interno ATL.  
+ GUID interno ATL.  
   
- **m\_csResource**  
- Utilizzato per sincronizzare l'accesso alla matrice **m\_rgResourceInstance**.  Utilizzato internamente da ATL.  
+ **m_csResource**  
+ Utilizzato per sincronizzare l'accesso per il **m_rgResourceInstance** matrice. Utilizzato internamente da ATL.  
   
- **m\_rgResourceInstance**  
- Matrice impiegata per trovare le risorse in tutte le istanze delle risorse di cui ATL è presente.  Utilizzato internamente da ATL.  
+ **m_rgResourceInstance**  
+ Matrice usata per eseguire la ricerca di risorse in tutte le istanze di risorse di cui è compatibile con ATL. Utilizzato internamente da ATL.  
   
-## Note  
- [\_ATL\_BASE\_MODULE](../Topic/_ATL_BASE_MODULE.md) viene definito come typedef `_ATL_BASE_MODULE70`.  
+## <a name="remarks"></a>Note  
+ [_ATL_BASE_MODULE](atl-typedefs.md#_atl_base_module) è definito come typedef di `_ATL_BASE_MODULE70`.  
   
-## Requisiti  
- **Header:** atlcore.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** atlcore. h  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Strutture](../../atl/reference/atl-structures.md)
+
+
+
+
+
+

@@ -1,36 +1,52 @@
 ---
-title: "Errore del compilatore C3379 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3379"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3379"
+title: Errore del compilatore C3379 | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3379
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3379
 ms.assetid: a66c2c4e-091c-4426-9cde-7c4cfb2ffce1
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Errore del compilatore C3379
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 16c62e48a0190096e04dc4ccf0c17ca66c2f4094
+ms.lasthandoff: 02/24/2017
 
-'classe': la dichiarazione di una classe annidata non può includere un identificatore di accesso assembly  
+---
+# <a name="compiler-error-c3379"></a>Errore del compilatore C3379
+'classe': una classe annidata non può avere un identificatore di accesso assembly come parte della relativa dichiarazione  
   
- Quando applicate a un tipo gestito, ad esempio una classe o uno struct, le parole chiave [public](../../cpp/public-cpp.md) e [private](../../cpp/private-cpp.md) indicano se la classe verrà esposta tramite i metadati dell'assembly.  La parola chiave `public` o `private` non può essere applicata a una classe annidata che erediterà l'accesso all'assembly della classe contenitore.  
+ Quando applicato a un tipo gestito, ad esempio di classe o struttura, il [pubblica](../../cpp/public-cpp.md) e [privata](../../cpp/private-cpp.md) parole chiave indicano se la classe verrà esposta tramite i metadati dell'assembly. `public`o `private` non può essere applicato a una classe annidata, che erediterà l'accesso all'assembly della classe contenitore.  
   
- Quando vengono utilizzate con [\/clr](../../build/reference/clr-common-language-runtime-compilation.md), le parole chiave `ref` e `value` indicano che una classe è gestita \(vedere [Classes and Structs](../../windows/classes-and-structs-cpp-component-extensions.md)\).  
+ Se utilizzato con [/clr](../../build/reference/clr-common-language-runtime-compilation.md), `ref` e `value` parole chiave indicano che una classe è gestita (vedere [classi e struct](../../windows/classes-and-structs-cpp-component-extensions.md)).  
   
- Il seguente codice di esempio genera l'errore C3379:  
+ Nell'esempio seguente viene generato l'errore C3379:  
   
 ```  
 // C3379a.cpp  
@@ -58,32 +74,4 @@ int main() {
    Console::WriteLine(myBA->ii);  
 }  
 ```  
-  
- Il seguente codice di esempio genera l'errore C3379:  
-  
-```  
-// C3379b.cpp  
-// compile with: /clr:oldSyntax  
-#using <mscorlib.dll>  
-  
-public __gc class A {  
-public:  
-   static int i = 9;  
-  
-   public __gc class BA {   // C3379  
-   // try the following line instead  
-   // __gc class BA {  
-   public:  
-      static int ii = 8;  
-   };  
-};  
-  
-int main() {  
-  
-   A *myA = new A;  
-   Console::WriteLine(myA->i);  
-  
-   A::BA *myBA = new A::BA;  
-   Console::WriteLine(myBA->ii);  
-}  
-```
+

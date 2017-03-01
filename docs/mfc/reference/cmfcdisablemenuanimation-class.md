@@ -1,80 +1,107 @@
 ---
-title: "CMFCDisableMenuAnimation Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CMFCDisableMenuAnimation"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMFCDisableMenuAnimation class"
+title: Classe CMFCDisableMenuAnimation | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CMFCDisableMenuAnimation
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMFCDisableMenuAnimation class
 ms.assetid: c6eb07da-c382-43d6-8028-007f2320e50e
 caps.latest.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# CMFCDisableMenuAnimation Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: ea0be944ca70d6f8317fd4bc60fdd50ecc714438
+ms.lasthandoff: 02/24/2017
 
-Disabilita l'animazione di menu di scelta rapida.  
+---
+# <a name="cmfcdisablemenuanimation-class"></a>Classe CMFCDisableMenuAnimation
+Disabilita l'animazione del menu a comparsa.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 class CMFCDisableMenuAnimation  
 ```  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Costruttori pubblici  
+### <a name="public-constructors"></a>Costruttori pubblici  
   
 |||  
 |-|-|  
 |Nome|Descrizione|  
 |`CMFCDisableMenuAnimation::CMFCDisableMenuAnimation`|Costruisce un oggetto `CMFCDisableMenuAnimation`.|  
-|`CMFCDisableMenuAnimation::~CMFCDisableMenuAnimation`|Distruttore|  
+|`CMFCDisableMenuAnimation::~CMFCDisableMenuAnimation`|Distruttore.|  
   
-### Metodi pubblici  
-  
-|||  
-|-|-|  
-|Nome|Descrizione|  
-|[CMFCDisableMenuAnimation::Restore](../Topic/CMFCDisableMenuAnimation::Restore.md)|Ripristino dell'animazione precedente che il framework utilizzato per visualizzare un menu di scelta rapida.|  
-  
-### Membri di dati  
+### <a name="public-methods"></a>Metodi pubblici  
   
 |||  
 |-|-|  
 |Nome|Descrizione|  
-|`CMFCDisableMenuAnimation::m_animType`|Archivia il tipo di animazione precedente del menu di scelta rapida.|  
+|[CMFCDisableMenuAnimation::Restore](#restore)|Ripristina l'animazione precedente che il framework utilizzato per visualizzare un menu a comparsa.|  
   
-### Note  
- Utilizzare questa classe di supporto per disabilitare temporaneamente l'animazione di menu di scelta rapida \(ad esempio, quando si sviluppa il mouse o i comandi da tastiera\).  
+### <a name="data-members"></a>Membri di dati  
   
- Un oggetto `CMFCDisableMenuAnimation` disabilita l'animazione di menu di scelta rapida di vita.  Il costruttore consente l'animazione corrente del menu di scelta rapida nel campo `m_animType` e set che l'animazione corrente tipi a `CMFCPopupMenu::NO_ANIMATION`.  Il distruttore ripristina il tipo di animazione precedente.  
+|||  
+|-|-|  
+|Nome|Descrizione|  
+|`CMFCDisableMenuAnimation::m_animType`|Archivia il tipo di animazione menu a comparsa precedente.|  
   
- È possibile creare un oggetto `CMFCDisableMenuAnimation` nello stack per disabilitare l'animazione di menu di scelta rapida di una singola funzione.  Se si desidera disabilitare l'animazione di menu di scelta rapida tra le funzioni, creare un oggetto `CMFCDisableMenuAnimation` nell'heap e quindi eliminarlo quando si desidera ripristinare l'animazione di menu di scelta rapida.  
+### <a name="remarks"></a>Note  
+ Utilizzare la classe helper per disabilitare temporaneamente l'animazione del menu a comparsa (ad esempio, quando si elaborano i comandi del mouse o tastiera).  
   
-## Esempio  
- Di seguito viene illustrato come utilizzare lo stack per disabilitare temporaneamente animazione dei menu.  
+ Oggetto `CMFCDisableMenuAnimation` oggetto Disabilita animazione del menu a comparsa durante la relativa durata. Il costruttore archivia il tipo di animazione corrente dal menu a comparsa nel `m_animType` campo e imposta il tipo di animazione corrente per `CMFCPopupMenu::NO_ANIMATION`. Il distruttore Ripristina il tipo di animazione precedente.  
   
- [!code-cpp[NVC_MFC_Misc#1](../../mfc/reference/codesnippet/CPP/cmfcdisablemenuanimation-class_1.h)]  
+ È possibile creare un `CMFCDisableMenuAnimation` oggetto nello stack per disattivare l'animazione del menu a comparsa in una singola funzione. Se si desidera disabilitare l'animazione dei menu di scelta rapida tra le funzioni, creare un `CMFCDisableMenuAnimation` dell'oggetto nell'heap e quindi eliminarlo quando si desidera ripristinare l'animazione del menu a comparsa.  
   
-## Gerarchia di ereditarietà  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come utilizzare lo stack per disabilitare temporaneamente l'animazione dei menu.  
+  
+ [!code-cpp[NVC_MFC_Misc n.&1;](../../mfc/reference/codesnippet/cpp/cmfcdisablemenuanimation-class_1.h)]  
+  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CMFCDisableMenuAnimation](../../mfc/reference/cmfcdisablemenuanimation-class.md)  
   
-## Requisiti  
- **intestazione:** afxpopupmenu.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** afxpopupmenu.h  
   
-## Vedere anche  
+##  <a name="a-namerestorea--cmfcdisablemenuanimationrestore"></a><a name="restore"></a>CMFCDisableMenuAnimation::Restore  
+ Ripristina l'animazione precedente che il framework utilizzato per visualizzare un menu a comparsa.  
+  
+```  
+void Restore ();
+```  
+  
+### <a name="remarks"></a>Note  
+ Questo metodo viene chiamato dal `CMFCDisableMenuAnimation` distruttore per ripristinare l'animazione precedente che il framework utilizzato per visualizzare un menu a comparsa.  
+  
+## <a name="see-also"></a>Vedere anche  
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
  [Classi](../../mfc/reference/mfc-classes.md)   
- [CMFCPopupMenu Class](../../mfc/reference/cmfcpopupmenu-class.md)
+ [Classe CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)
+

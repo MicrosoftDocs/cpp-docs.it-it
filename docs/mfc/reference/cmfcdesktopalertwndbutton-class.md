@@ -1,75 +1,91 @@
 ---
-title: "CMFCDesktopAlertWndButton Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CMFCDesktopAlertWndButton"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMFCDesktopAlertWndButton class"
+title: Classe CMFCDesktopAlertWndButton | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CMFCDesktopAlertWndButton
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMFCDesktopAlertWndButton class
 ms.assetid: df39a0c8-0c39-4ab0-8c64-78c5b2c4ecaf
 caps.latest.revision: 23
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 25
----
-# CMFCDesktopAlertWndButton Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 52294143c6caf5a8e0458c152540c41f7df78c57
+ms.lasthandoff: 02/24/2017
 
-Consente i pulsanti da aggiungere a una finestra di dialogo di avviso del desktop.  
+---
+# <a name="cmfcdesktopalertwndbutton-class"></a>Classe CMFCDesktopAlertWndButton
+Consente di pulsanti da aggiungere alla finestra di dialogo di avviso del desktop.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 class CMFCDesktopAlertWndButton : public CMFCButton  
 ```  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Costruttori pubblici  
+### <a name="public-constructors"></a>Costruttori pubblici  
   
 |||  
 |-|-|  
 |Nome|Descrizione|  
 |`CMFCDesktopAlertWndButton::CMFCDesktopAlertWndButton`|Costruttore predefinito.|  
-|`CMFCDesktopAlertWndButton::~CMFCDesktopAlertWndButton`|Distruttore|  
+|`CMFCDesktopAlertWndButton::~CMFCDesktopAlertWndButton`|Distruttore.|  
   
-### Metodi pubblici  
-  
-|||  
-|-|-|  
-|Nome|Descrizione|  
-|[CMFCDesktopAlertWndButton::IsCaptionButton](../Topic/CMFCDesktopAlertWndButton::IsCaptionButton.md)|Determina se il pulsante viene visualizzato nell'area della barra del titolo della finestra di avviso.|  
-|[CMFCDesktopAlertWndButton::IsCloseButton](../Topic/CMFCDesktopAlertWndButton::IsCloseButton.md)|Determina se il pulsante chiudere la finestra di avviso.|  
-  
-### Membri di dati  
+### <a name="public-methods"></a>Metodi pubblici  
   
 |||  
 |-|-|  
 |Nome|Descrizione|  
-|`CMFCDesktopAlertWndButton::m_bIsCaptionButton`|Valore booleano che specifica se il pulsante viene visualizzato nell'area della barra del titolo della finestra di avviso.|  
-|`CMFCDesktopAlertWndButton::m_bIsCloseButton`|Valore booleano che specifica se il pulsante chiudere la finestra di avviso.|  
+|[CMFCDesktopAlertWndButton::IsCaptionButton](#iscaptionbutton)|Determina se il pulsante viene visualizzato nell'area della didascalia della finestra di dialogo avviso.|  
+|[CMFCDesktopAlertWndButton::IsCloseButton](#isclosebutton)|Determina se il pulsante consente di chiudere la finestra di dialogo avviso.|  
   
-### Note  
- Per impostazione predefinita, il costruttore imposta i membri dati `m_bIsCloseButton` e `m_bIsCaptionButton` a `FALSE`.  L'oggetto `CMFCDesktopAlertDialog` padre imposta `m_bIsCaptionButton` a `TRUE` se il pulsante è posizionato nell'area della barra del titolo della finestra di avviso.  La classe `CMFCDesktopAlertDialog` crea un oggetto `CMFCDesktopAlertWndButton` che funge da pulsante che consente di chiudere la finestra di avviso e imposta `m_bIsCloseButton` a `TRUE`.  
+### <a name="data-members"></a>Membri di dati  
   
- Aggiungere gli oggetti `CMFCDesktopAlertWndButton` a un oggetto `CMFCDesktopAlertDialog` come aggiungere qualsiasi pulsante.  Per ulteriori informazioni su `CMFCDesktopAlertDialog`, vedere [CMFCDesktopAlertDialog Class](../../mfc/reference/cmfcdesktopalertdialog-class.md).  
+|||  
+|-|-|  
+|Nome|Descrizione|  
+|`CMFCDesktopAlertWndButton::m_bIsCaptionButton`|Valore booleano che specifica se il pulsante viene visualizzato nell'area della didascalia della finestra di dialogo avviso.|  
+|`CMFCDesktopAlertWndButton::m_bIsCloseButton`|Valore booleano che specifica se il pulsante chiude la finestra di dialogo avviso.|  
   
-## Esempio  
- Il seguente esempio viene illustrato come utilizzare il metodo `SetImage` nella classe `CMFCDesktopAlertWndButton`.  Questo frammento di codice fa parte [Esempio di demo del desktop](../../top/visual-cpp-samples.md).  
+### <a name="remarks"></a>Note  
+ Per impostazione predefinita, il costruttore imposta la `m_bIsCaptionButton` e `m_bIsCloseButton` i membri dati `FALSE`. L'elemento padre `CMFCDesktopAlertDialog` set di oggetti `m_bIsCaptionButton` per `TRUE` se il pulsante è posizionato nell'area della didascalia della finestra di dialogo avviso. Il `CMFCDesktopAlertDialog` classe crea un `CMFCDesktopAlertWndButton` oggetto che funge da pulsante che consente di chiudere la finestra di dialogo Avviso casella e imposta `m_bIsCloseButton` a `TRUE`.  
   
- [!code-cpp[NVC_MFC_DesktopAlertDemo#4](../../mfc/reference/codesnippet/CPP/cmfcdesktopalertwndbutton-class_1.h)]  
-[!code-cpp[NVC_MFC_DesktopAlertDemo#5](../../mfc/reference/codesnippet/CPP/cmfcdesktopalertwndbutton-class_2.cpp)]  
+ Aggiungere `CMFCDesktopAlertWndButton` oggetti in un `CMFCDesktopAlertDialog` l'oggetto, come aggiungere un pulsante. Per ulteriori informazioni su `CMFCDesktopAlertDialog`, vedere [CMFCDesktopAlertDialog classe](../../mfc/reference/cmfcdesktopalertdialog-class.md).  
   
-## Gerarchia di ereditarietà  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come utilizzare il `SetImage` metodo la `CMFCDesktopAlertWndButton` classe. Questo frammento di codice fa parte di [esempio dimostrativo avviso Desktop](../../visual-cpp-samples.md).  
+  
+ [!code-cpp[NVC_MFC_DesktopAlertDemo n.&4;](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndbutton-class_1.h)]  
+[!code-cpp[NVC_MFC_DesktopAlertDemo n.&5;](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndbutton-class_2.cpp)]  
+  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -82,10 +98,31 @@ class CMFCDesktopAlertWndButton : public CMFCButton
   
  [CMFCDesktopAlertWndButton](../../mfc/reference/cmfcdesktopalertwndbutton-class.md)  
   
-## Requisiti  
- **intestazione:** afxdesktopalertwnd.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** afxdesktopalertwnd.h  
   
-## Vedere anche  
+##  <a name="a-nameiscaptionbuttona--cmfcdesktopalertwndbuttoniscaptionbutton"></a><a name="iscaptionbutton"></a>CMFCDesktopAlertWndButton::IsCaptionButton  
+ Determina se il pulsante viene visualizzato nell'area della didascalia della finestra di dialogo avviso.  
+  
+```  
+BOOL IsCaptionButton() const;  
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ Diverso da zero se il pulsante viene visualizzato nell'area della didascalia della finestra di dialogo Avviso; in caso contrario, 0.  
+  
+##  <a name="a-nameisclosebuttona--cmfcdesktopalertwndbuttonisclosebutton"></a><a name="isclosebutton"></a>CMFCDesktopAlertWndButton::IsCloseButton  
+ Determina se il pulsante consente di chiudere la finestra di dialogo avviso.  
+  
+```  
+BOOL IsCloseButton() const;  
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ Diverso da zero se il pulsante consente di chiudere la finestra di dialogo Avviso; in caso contrario, 0.  
+  
+## <a name="see-also"></a>Vedere anche  
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
  [Classi](../../mfc/reference/mfc-classes.md)   
- [CMFCDesktopAlertDialog Class](../../mfc/reference/cmfcdesktopalertdialog-class.md)
+ [Classe CMFCDesktopAlertDialog](../../mfc/reference/cmfcdesktopalertdialog-class.md)
+

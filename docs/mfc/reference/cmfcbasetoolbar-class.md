@@ -1,68 +1,84 @@
 ---
-title: "CMFCBaseToolBar Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CMFCBaseToolBar::CreateObject"
-  - "~CMFCBaseToolBar"
-  - "CMFCBaseToolBar"
-  - "CMFCBaseToolBar::CMFCBaseToolBar"
-  - "CMFCBaseToolBar::~CMFCBaseToolBar"
-  - "CMFCBaseToolBar.~CMFCBaseToolBar"
-  - "CreateObject"
-  - "CMFCBaseToolBar.CMFCBaseToolBar"
-  - "CMFCBaseToolBar.CreateObject"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "~CMFCBaseToolBar destructor"
-  - "CMFCBaseToolBar class"
-  - "CMFCBaseToolBar class, costruttore"
-  - "CMFCBaseToolBar class, distruttore"
-  - "CreateObject method"
+title: Classe CMFCBaseToolBar | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CMFCBaseToolBar::CreateObject
+- ~CMFCBaseToolBar
+- CMFCBaseToolBar
+- CMFCBaseToolBar::CMFCBaseToolBar
+- CMFCBaseToolBar::~CMFCBaseToolBar
+- CMFCBaseToolBar.~CMFCBaseToolBar
+- CreateObject
+- CMFCBaseToolBar.CMFCBaseToolBar
+- CMFCBaseToolBar.CreateObject
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMFCBaseToolBar class, constructor
+- CMFCBaseToolBar class, destructor
+- ~CMFCBaseToolBar destructor
+- CreateObject method
+- CMFCBaseToolBar class
 ms.assetid: 5d79206d-55e4-46f8-b1b8-042e34d7f9da
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# CMFCBaseToolBar Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: f608b23c0dbee3ec0e2d2b234612365e3c2461b0
+ms.lasthandoff: 02/24/2017
 
-Classe base per le barre degli strumenti.  
+---
+# <a name="cmfcbasetoolbar-class"></a>Classe CMFCBaseToolBar
+Classe di base per le barre degli strumenti.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 class CMFCBaseToolBar : public CPane  
 ```  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Costruttori pubblici  
+### <a name="public-constructors"></a>Costruttori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
 |`CMFCBaseToolBar::CMFCBaseToolBar`|Costruttore predefinito.|  
-|`CMFCBaseToolBar::~CMFCBaseToolBar`|Distruttore|  
+|`CMFCBaseToolBar::~CMFCBaseToolBar`|Distruttore.|  
   
-### Metodi pubblici  
+### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|`CMFCBaseToolBar::CreateObject`|Utilizzato dal framework di creare un'istanza dinamica di questo tipo della classe.|  
-|[CMFCBaseToolBar::GetDockingMode](../Topic/CMFCBaseToolBar::GetDockingMode.md)|Restituisce la modalità di ancoraggio.  \(Override [CBasePane::GetDockingMode](../Topic/CBasePane::GetDockingMode.md)\).|  
-|[CMFCBaseToolBar::GetMinSize](../Topic/CMFCBaseToolBar::GetMinSize.md)|Restituisce la dimensione minima di una barra degli strumenti.  \(Override [CPane::GetMinSize](../Topic/CPane::GetMinSize.md)\).|  
-|[CMFCBaseToolBar::OnAfterChangeParent](../Topic/CMFCBaseToolBar::OnAfterChangeParent.md)|Chiamato dal framework dopo le modifiche del padre del riquadro.  \(Override [CBasePane::OnAfterChangeParent](../Topic/CBasePane::OnAfterChangeParent.md)\).|  
+|`CMFCBaseToolBar::CreateObject`|Usato dal framework per creare un'istanza dinamica di questo tipo di classe.|  
+|[CMFCBaseToolBar::GetDockingMode](#getdockingmode)|Restituisce la modalità di ancoraggio. (Esegue l'override di [CBasePane::GetDockingMode](../../mfc/reference/cbasepane-class.md#getdockingmode).)|  
+|[CMFCBaseToolBar::GetMinSize](#getminsize)|Restituisce la dimensione minima di una barra degli strumenti. (Esegue l'override di [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).)|  
+|[CMFCBaseToolBar::OnAfterChangeParent](#onafterchangeparent)|Chiamato dal framework dopo aver modificato padre del riquadro. (Esegue l'override di [CBasePane::OnAfterChangeParent](../../mfc/reference/cbasepane-class.md#onafterchangeparent).)|  
   
-## Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -75,9 +91,42 @@ class CMFCBaseToolBar : public CPane
   
  [CMFCBaseToolBar](../../mfc/reference/cmfcbasetoolbar-class.md)  
   
-## Requisiti  
- **intestazione:** afxbasetoolbar.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** afxbasetoolbar.h  
   
-## Vedere anche  
+##  <a name="a-namegetdockingmodea--cmfcbasetoolbargetdockingmode"></a><a name="getdockingmode"></a>CMFCBaseToolBar::GetDockingMode  
+ Restituisce la modalità di ancoraggio.  
+  
+```  
+virtual AFX_DOCK_TYPE GetDockingMode() const;  
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ La modalità di ancoraggio.  
+  
+##  <a name="a-namegetminsizea--cmfcbasetoolbargetminsize"></a><a name="getminsize"></a>CMFCBaseToolBar::GetMinSize  
+ Restituisce la dimensione minima di una barra degli strumenti.  
+  
+```  
+virtual void GetMinSize(CSize& size) const;  
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [out] `size`  
+ La dimensione minima di una barra degli strumenti.  
+  
+##  <a name="a-nameonafterchangeparenta--cmfcbasetoolbaronafterchangeparent"></a><a name="onafterchangeparent"></a>CMFCBaseToolBar::OnAfterChangeParent  
+ Chiamato dal framework dopo aver modificato padre del riquadro.  
+  
+```  
+virtual void OnAfterChangeParent(CWnd* pWndOldParent);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in] `pWndOldParent`  
+ Puntatore alla finestra padre precedente.  
+  
+## <a name="see-also"></a>Vedere anche  
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
  [Classi](../../mfc/reference/mfc-classes.md)
+

@@ -1,96 +1,116 @@
 ---
-title: "CMapPtrToWord Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CMapPtrToWord"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "16-bit word mapping"
-  - "CMapPtrToWord class"
+title: Classe CMapPtrToWord | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CMapPtrToWord
+dev_langs:
+- C++
+helpviewer_keywords:
+- 16-bit word mapping
+- CMapPtrToWord class
 ms.assetid: 4631c6b6-d49f-49d9-adc0-1e0491e32d7b
 caps.latest.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# CMapPtrToWord Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: a1e9604aab0a0488533cacba851d200b87d634b3
+ms.lasthandoff: 02/24/2017
 
-Mapping di supporta le parole a 16 bit impostati dai puntatori a void.  
+---
+# <a name="cmapptrtoword-class"></a>Classe CMapPtrToWord
+Supporta mappe di parole a 16 bit con chiave fornita da puntatori void.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 class CMapPtrToWord : public CObject  
 ```  
   
-## Membri  
- Le funzioni membro `CMapPtrToWord` sono simili alle funzioni membro di classe [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md).  A causa di questa somiglianze, è possibile utilizzare la documentazione di riferimento `CMapStringToOb` per le specifiche di funzione membro.  Per visualizzare un puntatore `CObject` come un parametro di funzione o valore restituito, **WORD**sostitutivo.  Per visualizzare `CString` o un puntatore **const** a `char` come un parametro di funzione o valore restituito, sostituire un puntatore a `void`.  
+## <a name="members"></a>Membri  
+ Le funzioni membro di `CMapPtrToWord` sono simili alle funzioni membro della classe [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Grazie a questa somiglianza, per le specifiche delle funzioni membro è possibile usare la documentazione di riferimento di `CMapStringToOb`. Ovunque sia visualizzato un `CObject` puntatore come parametro della funzione o valore restituito, sostituire **WORD**. Ovunque sia visualizzato un `CString` o **const** puntatore a `char` come parametro della funzione o valore restituito, sostituire un puntatore a `void`.  
   
  `BOOL CMapStringToOb::Lookup( const char* <key>,`  
   
  `CObject*& <rValue> ) const;`  
   
- ad esempio, converte a  
+ ad esempio, si converte in  
   
  `BOOL CMapPtrToWord::Lookup( const void* <key>, WORD& <rValue> ) const;`  
   
-### Costruttori pubblici  
+### <a name="public-constructors"></a>Costruttori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CMapStringToOb::CMapStringToOb](../Topic/CMapStringToOb::CMapStringToOb.md)|Costruttore.|  
+|[CMapStringToOb::CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|Costruttore.|  
   
-### Metodi pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[CMapStringToOb::GetCount](../Topic/CMapStringToOb::GetCount.md)|Restituisce il numero di elementi in questa mappa.|  
-|[CMapStringToOb::GetHashTableSize](../Topic/CMapStringToOb::GetHashTableSize.md)|Determina il numero corrente degli elementi nella tabella hash.|  
-|[CMapStringToOb::GetNextAssoc](../Topic/CMapStringToOb::GetNextAssoc.md)|Ottiene l'elemento seguente per l'iterazione.|  
-|[CMapStringToOb::GetSize](../Topic/CMapStringToOb::GetSize.md)|Restituisce il numero di elementi in questa mappa.|  
-|[CMapStringToOb::GetStartPosition](../Topic/CMapStringToOb::GetStartPosition.md)|Restituisce la posizione del primo elemento.|  
-|[CMapStringToOb::HashKey](../Topic/CMapStringToOb::HashKey.md)|Calcola il valore hash della chiave specificata.|  
-|[CMapStringToOb::InitHashTable](../Topic/CMapStringToOb::InitHashTable.md)|Inizializza la tabella hash.|  
-|[CMapStringToOb::IsEmpty](../Topic/CMapStringToOb::IsEmpty.md)|Test per lo stato del Vuoto\- mapping \(alcun elemento\).|  
-|[CMapStringToOb::Lookup](../Topic/CMapStringToOb::Lookup.md)|Cerca un puntatore a void base alla chiave del puntatore a void.  Il valore del puntatore, non l'entità che indica, viene utilizzato per il confronto principale.|  
-|[CMapStringToOb::LookupKey](../Topic/CMapStringToOb::LookupKey.md)|Restituisce un riferimento alla chiave associata al valore della chiave specificato.|  
-|[CMapStringToOb::RemoveAll](../Topic/CMapStringToOb::RemoveAll.md)|Rimuove tutti gli elementi da questa mappa.|  
-|[CMapStringToOb::RemoveKey](../Topic/CMapStringToOb::RemoveKey.md)|Rimuove un elemento specificato da una chiave.|  
-|[CMapStringToOb::SetAt](../Topic/CMapStringToOb::SetAt.md)|Inserisce un elemento nella mappa, sostituire un elemento esistente se una chiave corrispondente viene trovata.|  
-  
-### Operatori pubblici  
+### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CMapStringToOb::operator](../Topic/CMapStringToOb::operator.md)|Inserisce un elemento nel mapping alla sostituzione dell'operatore per `SetAt`.|  
+|[CMapStringToOb::GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|Restituisce il numero di elementi nella mappa.|  
+|[CMapStringToOb::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|Determina il numero corrente di elementi nella tabella hash.|  
+|[CMapStringToOb::GetNextAssoc](../../mfc/reference/cmapstringtoob-class.md#getnextassoc)|Ottiene l'elemento successivo per l'iterazione.|  
+|[CMapStringToOb::GetSize](../../mfc/reference/cmapstringtoob-class.md#getsize)|Restituisce il numero di elementi nella mappa.|  
+|[CMapStringToOb::GetStartPosition](../../mfc/reference/cmapstringtoob-class.md#getstartposition)|Restituisce la posizione del primo elemento.|  
+|[CMapStringToOb::HashKey](../../mfc/reference/cmapstringtoob-class.md#hashkey)|Calcola il valore hash di una chiave specificata.|  
+|[CMapStringToOb::InitHashTable](../../mfc/reference/cmapstringtoob-class.md#inithashtable)|Inizializza la tabella hash.|  
+|[CMapStringToOb::IsEmpty](../../mfc/reference/cmapstringtoob-class.md#isempty)|Verifica se la condizione mappa vuota (nessun elemento).|  
+|[CMapStringToOb::Lookup](../../mfc/reference/cmapstringtoob-class.md#lookup)|Cerca un puntatore void in base alla chiave di un puntatore void. Il valore del puntatore, non l'entità cui fa riferimento, viene utilizzato per il confronto delle chiavi.|  
+|[CMapStringToOb::LookupKey](../../mfc/reference/cmapstringtoob-class.md#lookupkey)|Restituisce un riferimento alla chiave associata al valore di chiave specificato.|  
+|[CMapStringToOb::RemoveAll](../../mfc/reference/cmapstringtoob-class.md#removeall)|Rimuove tutti gli elementi da questa mappa.|  
+|[CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey)|Rimuove un elemento specificato da una chiave.|  
+|[CMapStringToOb::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat)|Inserisce un elemento nella mappa. sostituisce un elemento esistente se viene trovata una chiave corrispondente.|  
   
-## Note  
- `CMapWordToPtr` include la macro `IMPLEMENT_DYNAMIC` per l'accesso il tipo di runtime ed eseguire il dump a `CDumpContext` un oggetto.  Se è necessario un dump di singoli elementi di mapping, è necessario impostare la profondità del contesto di dump a 1 o superiore.  
+### <a name="public-operators"></a>Operatori pubblici  
   
- i mapping Puntatore a Word non possono essere serializzati.  
+|Nome|Descrizione|  
+|----------|-----------------|  
+|[[CMapStringToOb::operator]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Inserisce un elemento nella mappa, la sostituzione di operatore per `SetAt`.|  
   
- Quando un oggetto `CMapPtrToWord` viene eliminato, oppure quando gli elementi vengono rimossi, puntatori e le parole vengono rimossi.  Le entità fatto riferimento dai puntatori principali non vengono rimosse.  
+## <a name="remarks"></a>Note  
+ `CMapWordToPtr` include la macro `IMPLEMENT_DYNAMIC` per supportare l'accesso del tipo in fase di esecuzione ed eseguire l'operazione di dump dell'oggetto `CDumpContext`. Se è necessario un dump di singoli elementi della mappa, è necessario impostare la profondità del contesto di dump a 1 o superiore.  
   
- Per ulteriori informazioni su `CMapPtrToWord`, vedere l'articolo [Raccolte](../../mfc/collections.md).  
+ Puntatore a word esegue il mapping non può essere serializzato.  
   
-## Gerarchia di ereditarietà  
+ Quando un `CMapPtrToWord` oggetto viene eliminato oppure quando gli elementi vengono rimossi, vengono eliminati i puntatori e i termini. Le entità a cui fa riferimento il chiave puntatori non vengono rimossi.  
+  
+ Per ulteriori informazioni su `CMapPtrToWord`, vedere l'articolo [raccolte](../../mfc/collections.md).  
+  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CMapPtrToWord`  
   
-## Requisiti  
- **Header:** afxcoll.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** afxcoll. h  
   
-## Vedere anche  
- [CObject Class](../../mfc/reference/cobject-class.md)   
+## <a name="see-also"></a>Vedere anche  
+ [CObject (classe)](../../mfc/reference/cobject-class.md)   
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)
+
+
+
+

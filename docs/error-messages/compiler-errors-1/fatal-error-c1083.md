@@ -1,29 +1,45 @@
 ---
-title: "Errore irreversibile C1083 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1083"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1083"
+title: Errore irreversibile C1083 | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1083
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1083
 ms.assetid: 97e52df3-e79c-4f85-8f1e-bbd1057d55e7
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# Errore irreversibile C1083
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 6cc89e4278c03f0dc24c4358cf6a53ec25f3b327
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="fatal-error-c1083"></a>Errore irreversibile C1083
 Impossibile aprire il file tipofile: 'file': messaggio  
   
  Il compilatore genera un errore C1083 quando non trova un file. Di seguito sono riportate le cause più comuni di questo errore.  
@@ -36,7 +52,7 @@ Impossibile aprire il file tipofile: 'file': messaggio
 #include <algorithms.h>  
 ```  
   
- potrebbe non trovare il file richiesto. È disponibile un file di intestazione della libreria di C++ denominato algorithms che non presenta un'estensione h. Non viene trovato tramite questa direttiva `include`. Per risolvere il problema, verificare che sia stato immesso il nome del file corretto.  
+ potrebbe non trovare il file richiesto. È un libreria Standard C++ file di intestazione denominato algorithms che non dispone di un'estensione di file con estensione h. Non viene trovato tramite questa direttiva `include`. Per risolvere il problema, verificare che sia stato immesso il nome del file corretto.  
   
  Alcune intestazioni della libreria di runtime C risiedono in una sottodirectory della directory include standard. Per includere sys\types.h, ad esempio, è necessario includere il nome della sottodirectory sys nella direttiva include:  
   
@@ -56,7 +72,7 @@ Impossibile aprire il file tipofile: 'file': messaggio
   
  Anche quando i file di intestazione sono elencati in **Esplora** come parte di un progetto, i file vengono trovati solo dal compilatore quando vengono definiti da un `include` o `import` (direttiva) e sono situati in un percorso di ricerca di directory. Tipi diversi di compilazioni possono usare percorsi di ricerca diversi. Il **/X** opzione del compilatore può essere utilizzata per escludere directory dal percorso di ricerca di file di inclusione. In questo modo, compilazioni diverse possono utilizzare file di inclusione diversi con lo stesso nome, ma archiviati in directory diverse. Si tratta di un'alternativa alla compilazione condizionale utilizzando i comandi del preprocessore. Per ulteriori informazioni sui **/X** l'opzione del compilatore, vedere [x (Ignore Standard Include Paths)](../../build/reference/x-ignore-standard-include-paths.md).  
   
- Quando il compilatore viene richiamato sulla riga di comando, vengono spesso usate variabili di ambiente per specificare i percorsi di ricerca. Se il percorso di ricerca descritto dal **INCLUDE** variabile di ambiente non è impostata correttamente, viene generato un errore C1083. Per ulteriori informazioni su come utilizzare le variabili di ambiente, vedere [procedura: utilizzare variabili di ambiente in una Build](../Topic/How%20to:%20Use%20Environment%20Variables%20in%20a%20Build.md).  
+ Quando il compilatore viene richiamato sulla riga di comando, vengono spesso usate variabili di ambiente per specificare i percorsi di ricerca. Se il percorso di ricerca descritto dal **INCLUDE** variabile di ambiente non è impostata correttamente, viene generato un errore C1083. Per ulteriori informazioni su come utilizzare le variabili di ambiente, vedere [procedura: utilizzare variabili di ambiente in una Build](http://msdn.microsoft.com/Library/7f9e4469-8865-4b59-aab3-3ff26bd36e77).  
   
  Per risolvere il problema, correggere il percorso usato dal compilatore per trovare il file importato o incluso. Un nuovo progetto utilizza i percorsi di ricerca predefiniti. Potrebbe essere necessario modificare il percorso per aggiungere una directory per il progetto. Se si compila dalla riga di comando, impostare il **INCLUDE** variabile di ambiente o **/I** l'opzione del compilatore per specificare il percorso del file. Per impostare il percorso di directory di inclusione in Visual Studio, aprire il progetto **pagine delle proprietà** finestra di dialogo espandere **le proprietà di configurazione** e **directory di VC + +**, quindi modificare il **directory di inclusione** valore. Per ulteriori informazioni sulle directory per utente e per ogni progetto cercate dal compilatore in Visual Studio, vedere [pagina delle proprietà directory di VC + +](../../ide/vcpp-directories-property-page.md). Per ulteriori informazioni sui **/I** l'opzione del compilatore, vedere [/I (directory di inclusione aggiuntive)](../../build/reference/i-additional-include-directories.md).  
   
@@ -70,9 +86,9 @@ Impossibile aprire il file tipofile: 'file': messaggio
   
  **Cause aggiuntive**  
   
--   Il file utilizza il codice gestito, ma l'opzione del compilatore **/clr** non è specificato. Per ulteriori informazioni, vedere [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).  
+-   Il file utilizza il codice gestito, ma l'opzione del compilatore **/clr** non è specificato. Per altre informazioni, vedere [/clr (Compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).  
   
--   Il file viene compilato utilizzando un altro **/analyze** impostazione dell'opzione del compilatore rispetto a quella utilizzata per precompilare le intestazioni. (Quando le intestazioni per un progetto vengono precompilate, tutte dovrebbero utilizzare le stesse **/analyze** impostazioni.) Per ulteriori informazioni, vedere [/analyze (analisi codice)](../../build/reference/analyze-code-analysis.md).  
+-   Il file viene compilato utilizzando un altro **/ANALYZE** impostazione dell'opzione del compilatore rispetto a quella utilizzata per precompilare le intestazioni. (Quando le intestazioni per un progetto vengono precompilate, tutte dovrebbero utilizzare le stesse **/ANALYZE** impostazioni.) Per altre informazioni, vedere [/analyze (Analisi codice)](../../build/reference/analyze-code-analysis.md).  
   
 -   Il file, la directory o il disco è di sola lettura.  
   
@@ -92,4 +108,4 @@ Impossibile aprire il file tipofile: 'file': messaggio
  Per informazioni su come compilare progetti C/C++ nell'IDE o sulla riga di comando e informazioni sull'impostazione delle variabili di ambiente, vedere [compilazione di programmi C/C++](../../build/building-c-cpp-programs.md).
  
  ## <a name="see-also"></a>Vedere anche
- [Proprietà di MSBuild](MSBuild%20Properties.md)
+ [Proprietà di MSBuild](/visualstudio/msbuild/msbuild-properties)

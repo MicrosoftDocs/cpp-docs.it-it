@@ -1,75 +1,284 @@
 ---
-title: "Classe agent | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "agents/concurrency::agent"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "agent (classe)"
+title: Classe Agent | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- agents/concurrency::agent
+dev_langs:
+- C++
+helpviewer_keywords:
+- agent class
 ms.assetid: 1b09e3d2-5e37-4966-b016-907ef1512456
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# Classe agent
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 640e1d66a879e8eb73428b50339d6a325cfd7cb2
+ms.lasthandoff: 02/24/2017
 
-Classe destinata all'utilizzo come classe di base per tutti gli agenti indipendenti.  Viene utilizzato per nascondere lo stato da altri agenti e per interagire utilizzando il passaggio dei messaggi.  
+---
+# <a name="agent-class"></a>Classe agent
+Classe destinata a essere usata come classe di base per tutti gli agenti indipendenti. Consente di nascondere lo stato ad altri agenti e di interagire attraverso il passaggio di messaggi.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
+```
+class agent;
 ```  
-class agent;  
-```  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Costruttori pubblici  
+### <a name="public-constructors"></a>Costruttori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore agent::agent](../Topic/agent::agent%20Constructor.md)|Di overload.  Costruisce un agente.|  
-|[Distruttore agent::~agent](../Topic/agent::~agent%20Destructor.md)|Distrugge l'agente.|  
+|[agente di costruttore](#ctor)|Di overload. Costruisce un agente.|  
+|[~ agente distruttore](#dtor)|Elimina l'agente.|  
   
-### Metodi pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[Metodo agent::cancel](../Topic/agent::cancel%20Method.md)|Sposta un agente dallo stato `agent_created` o `agent_runnable` allo stato `agent_canceled`.|  
-|[Metodo agent::start](../Topic/agent::start%20Method.md)|Sposta un agente dallo stato `agent_created` allo stato `agent_runnable` e lo pianifica per l'esecuzione.|  
-|[Metodo agent::status](../Topic/agent::status%20Method.md)|Un'origine sincrona di informazioni sullo stato dall'agente.|  
-|[Metodo agent::status\_port](../Topic/agent::status_port%20Method.md)|Un'origine asincrona di informazioni sullo stato dall'agente.|  
-|[Metodo agent::wait](../Topic/agent::wait%20Method.md)|Consente di attendere un agente per completare la relativa attività.|  
-|[Metodo agent::wait\_for\_all](../Topic/agent::wait_for_all%20Method.md)|Consente di attendere tutti gli agenti specificati per completare le proprie attività.|  
-|[Metodo agent::wait\_for\_one](../Topic/agent::wait_for_one%20Method.md)|Consente di attendere uno degli agenti specificati per completare la relativa attività.|  
-  
-### Metodi protetti  
+### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Metodo agent::done](../Topic/agent::done%20Method.md)|Sposta un agente allo stato `agent_done`, indicando che l'agente è stato completato.|  
-|[Metodo agent::run](../Topic/agent::run%20Method.md)|Consente di rappresentare l'attività principale di un agente.  È necessario eseguire l'override di `run` in una classe derivata e di specificare cosa deve eseguire l'agente dopo il suo avvio.|  
+|[Cancel (metodo)](#cancel)|Sposta un agente da uno di `agent_created` o `agent_runnable` stati dal `agent_canceled` dello stato.|  
+|[Start (metodo)](#start)|Sposta un agente dal `agent_created` allo stato di `agent_runnable` di stato e si pianifica l'esecuzione.|  
+|[stato (metodo)](#status)|Un'origine sincrona di informazioni sullo stato dall'agente.|  
+|[status_port (metodo)](#status_port)|Un'origine asincrona di informazioni sullo stato dall'agente.|  
+|[Wait (metodo)](#wait)|In attesa di un agente completare l'attività.|  
+|[wait_for_all (metodo)](#wait_for_all)|Attende che tutti gli agenti specificati per completare le attività.|  
+|[wait_for_one (metodo)](#wait_for_one)|Attende che uno degli agenti per completare l'attività specificate.|  
   
-## Note  
- Per ulteriori informazioni, vedere [Agenti asincroni](../../../parallel/concrt/asynchronous-agents.md).  
+### <a name="protected-methods"></a>Metodi protetti  
   
-## Gerarchia di ereditarietà  
+|Nome|Descrizione|  
+|----------|-----------------|  
+|[Done (metodo)](#done)|Sposta un agente nel `agent_done` stato, che indica che l'agente è stato completato.|  
+|[Run (metodo)](#run)|Rappresenta l'attività principale di un agente. `run`deve essere sottoposto a override in una classe derivata e specificare cosa deve eseguire l'agente dopo che è stato avviato.|  
+  
+## <a name="remarks"></a>Note  
+ Per ulteriori informazioni, vedere [agenti asincroni](../../../parallel/concrt/asynchronous-agents.md).  
+  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `agent`  
   
-## Requisiti  
- **Header:** agents.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** agents.h  
   
- Concorrenza di**Spazio dei nomi:**  
+ **Spazio dei nomi:** Concurrency  
   
-## Vedere anche  
- [Spazio dei nomi concurrency](../../../parallel/concrt/reference/concurrency-namespace.md)
+##  <a name="a-namectora-agent"></a><a name="ctor"></a>agente 
+
+ Costruisce un agente.  
+  
+```
+agent();
+
+agent(Scheduler& _PScheduler);
+
+agent(ScheduleGroup& _PGroup);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `_PScheduler`  
+ Il `Scheduler` dell'oggetto in cui è pianificata l'attività di esecuzione dell'agente.  
+  
+ `_PGroup`  
+ Il `ScheduleGroup` dell'oggetto in cui è pianificata l'attività di esecuzione dell'agente. L'oggetto `Scheduler` usato è previsto dal gruppo di pianificazione.  
+  
+### <a name="remarks"></a>Note  
+ Il runtime utilizza l'utilità di pianificazione predefinita se non si specifica il `_PScheduler` o `_PGroup` parametri.  
+  
+##  <a name="a-namedtora-agent"></a><a name="dtor"></a>~ agent 
+
+ Elimina l'agente.  
+  
+```
+virtual ~agent();
+```  
+  
+### <a name="remarks"></a>Note  
+ È un errore distruggere un agente che non è in uno stato finale (sia `agent_done` o `agent_canceled`). Questo può essere evitato l'attesa per l'agente raggiunga uno stato finale nel distruttore di una classe che eredita la `agent` classe.  
+  
+##  <a name="a-namecancela-cancel"></a><a name="cancel"></a>Annulla 
+
+ Sposta un agente da uno di `agent_created` o `agent_runnable` stati dal `agent_canceled` dello stato.  
+  
+```
+bool cancel();
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ `true`Se l'agente è stata annullata, `false` in caso contrario. Impossibile annullare un agente se è già avviato o è già stata completata.  
+  
+##  <a name="a-namedonea-done"></a><a name="done"></a>operazione eseguita 
+
+ Sposta un agente nel `agent_done` stato, che indica che l'agente è stato completato.  
+  
+```
+bool done();
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ `true`Se l'agente viene spostato il `agent_done` stato `false` in caso contrario. Impossibile spostare un agente che è stato annullato per il `agent_done` dello stato.  
+  
+### <a name="remarks"></a>Note  
+ Questo metodo deve essere chiamato alla fine di `run` metodo, quando si conosce l'esecuzione dell'agente è stata completata.  
+  
+##  <a name="a-nameruna-run"></a><a name="run"></a>Correre 
+
+ Rappresenta l'attività principale di un agente. `run`deve essere sottoposto a override in una classe derivata e specificare cosa deve eseguire l'agente dopo che è stato avviato.  
+  
+```
+virtual void run() = 0;
+```  
+  
+### <a name="remarks"></a>Note  
+ Lo stato dell'agente viene modificato in `agent_started` destro del mouse prima che venga richiamato questo metodo. Il metodo deve richiamare `done` sull'agente dotato di uno stato appropriato prima della restituzione e non può generare eccezioni.  
+  
+##  <a name="a-namestarta-start"></a><a name="start"></a>inizio 
+
+ Sposta un agente dal `agent_created` allo stato di `agent_runnable` di stato e si pianifica l'esecuzione.  
+  
+```
+bool start();
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ `true`Se l'agente è stato avviato correttamente, `false` in caso contrario. Impossibile avviare un agente che è stato annullato.  
+  
+##  <a name="a-namestatusa-status"></a><a name="status"></a>stato 
+
+ Un'origine sincrona di informazioni sullo stato dall'agente.  
+  
+```
+agent_status status();
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ Restituisce lo stato corrente dell'agente. Si noti che questo stato restituito potrebbe cambiare immediatamente dopo la restituzione.  
+  
+##  <a name="a-namestatusporta-statusport"></a><a name="status_port"></a>status_port 
+
+ Un'origine asincrona di informazioni sullo stato dall'agente.  
+  
+```
+ISource<agent_status>* status_port();
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ Restituisce un'origine dei messaggi che può inviare messaggi sullo stato corrente dell'agente.  
+  
+##  <a name="a-namewaita-wait"></a><a name="wait"></a>attesa 
+
+ In attesa di un agente completare l'attività.  
+  
+```
+static agent_status __cdecl wait(
+    _Inout_ agent* _PAgent,
+    unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `_PAgent`  
+ Puntatore all'agente di attesa.  
+  
+ `_Timeout`  
+ Il tempo massimo di attesa, espresso in millisecondi.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Il `agent_status` dell'agente durante l'attesa viene completata. Può trattarsi di `agent_canceled` o `agent_done`.  
+  
+### <a name="remarks"></a>Note  
+ Un'attività dell'agente viene completata quando l'agente immette il `agent_canceled` o `agent_done` stati.  
+  
+ Se il parametro `_Timeout` ha un valore diverso dalla costante `COOPERATIVE_TIMEOUT_INFINITE`, l'eccezione [operation_timed_out](operation-timed-out-class.md) viene generata se il periodo di tempo specificato scade prima che l'agente ha completato la sua attività.  
+  
+##  <a name="a-namewaitforalla-waitforall"></a><a name="wait_for_all"></a>wait_for_all 
+
+ Attende che tutti gli agenti specificati per completare le attività.  
+  
+```
+static void __cdecl wait_for_all(
+    size_t count,
+    _In_reads_(count) agent** _PAgents,
+    _Out_writes_opt_(count) agent_status* _PStatus = NULL,
+    unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `count`  
+ Il numero di puntatori agente presenti nella matrice `_PAgents`.  
+  
+ `_PAgents`  
+ Una matrice di puntatori agli agenti da attendere.  
+  
+ `_PStatus`  
+ Un puntatore a una matrice di stati dell'agente. Ogni valore di stato rappresenterà lo stato dell'agente corrispondente quando il metodo restituisce.  
+  
+ `_Timeout`  
+ Il tempo massimo di attesa, espresso in millisecondi.  
+  
+### <a name="remarks"></a>Note  
+ Un'attività dell'agente viene completata quando l'agente immette il `agent_canceled` o `agent_done` stati.  
+  
+ Se il parametro `_Timeout` ha un valore diverso dalla costante `COOPERATIVE_TIMEOUT_INFINITE`, l'eccezione [operation_timed_out](operation-timed-out-class.md) viene generata se il periodo di tempo specificato scade prima che l'agente ha completato la sua attività.  
+  
+##  <a name="a-namewaitforonea-waitforone"></a><a name="wait_for_one"></a>wait_for_one 
+
+ Attende che uno degli agenti per completare l'attività specificate.  
+  
+```
+static void __cdecl wait_for_one(
+    size_t count,
+    _In_reads_(count) agent** _PAgents,
+    agent_status& _Status,
+    size_t& _Index,
+    unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `count`  
+ Il numero di puntatori agente presenti nella matrice `_PAgents`.  
+  
+ `_PAgents`  
+ Una matrice di puntatori agli agenti da attendere.  
+  
+ `_Status`  
+ Un riferimento a una variabile in cui verrà inserito lo stato dell'agente.  
+  
+ `_Index`  
+ Un riferimento a una variabile in cui verrà collocato l'indice dell'agente.  
+  
+ `_Timeout`  
+ Il tempo massimo di attesa, espresso in millisecondi.  
+  
+### <a name="remarks"></a>Note  
+ Un'attività dell'agente viene completata quando l'agente immette il `agent_canceled` o `agent_done` stati.  
+  
+ Se il parametro `_Timeout` ha un valore diverso dalla costante `COOPERATIVE_TIMEOUT_INFINITE`, l'eccezione [operation_timed_out](operation-timed-out-class.md) viene generata se il periodo di tempo specificato scade prima che l'agente ha completato la sua attività.  
+  
+## <a name="see-also"></a>Vedere anche  
+ [concorrenza Namespace](concurrency-namespace.md)
+

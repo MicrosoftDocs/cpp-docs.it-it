@@ -1,128 +1,225 @@
 ---
-title: "Classe unorm_2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::operator+="
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::y"
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::set_y"
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::x"
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::get_yx"
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::operator--"
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::set_xy"
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::operator*="
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::xy"
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::get_y"
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::operator="
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::set_x"
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::rg"
-  - "amp_short_vectors/Concurrency::graphics::unorm_2"
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::operator-="
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::operator/="
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::get_xy"
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::set_yx"
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::yx"
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::gr"
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::r"
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::operator-"
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::get_x"
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::g"
-  - "amp_short_vectors/Concurrency::graphics::unnorm_2::operator++"
-dev_langs: 
-  - "C++"
+title: Classe unorm_2 | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- amp_short_vectors/Concurrency::graphics::unnorm_2::operator+=
+- amp_short_vectors/Concurrency::graphics::unnorm_2::y
+- amp_short_vectors/Concurrency::graphics::unnorm_2::set_y
+- amp_short_vectors/Concurrency::graphics::unnorm_2::x
+- amp_short_vectors/Concurrency::graphics::unnorm_2::get_yx
+- amp_short_vectors/Concurrency::graphics::unnorm_2::operator--
+- amp_short_vectors/Concurrency::graphics::unnorm_2::set_xy
+- amp_short_vectors/Concurrency::graphics::unnorm_2::operator*=
+- amp_short_vectors/Concurrency::graphics::unnorm_2::xy
+- amp_short_vectors/Concurrency::graphics::unnorm_2::get_y
+- amp_short_vectors/Concurrency::graphics::unnorm_2::operator=
+- amp_short_vectors/Concurrency::graphics::unnorm_2::set_x
+- amp_short_vectors/Concurrency::graphics::unnorm_2::rg
+- amp_short_vectors/Concurrency::graphics::unorm_2
+- amp_short_vectors/Concurrency::graphics::unnorm_2::operator-=
+- amp_short_vectors/Concurrency::graphics::unnorm_2::operator/=
+- amp_short_vectors/Concurrency::graphics::unnorm_2::get_xy
+- amp_short_vectors/Concurrency::graphics::unnorm_2::set_yx
+- amp_short_vectors/Concurrency::graphics::unnorm_2::yx
+- amp_short_vectors/Concurrency::graphics::unnorm_2::gr
+- amp_short_vectors/Concurrency::graphics::unnorm_2::r
+- amp_short_vectors/Concurrency::graphics::unnorm_2::operator-
+- amp_short_vectors/Concurrency::graphics::unnorm_2::get_x
+- amp_short_vectors/Concurrency::graphics::unnorm_2::g
+- amp_short_vectors/Concurrency::graphics::unnorm_2::operator++
+dev_langs:
+- C++
 ms.assetid: 62e88ea7-e29f-4f62-95ce-61a1f39f5e34
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Classe unorm_2
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 8c4e7cd3040e9d9d6d3c3a5a915118fbc815aebf
+ms.lasthandoff: 02/24/2017
 
-Rappresenta un breve vettore di due numeri normali senza segno.  
+---
+# <a name="unorm2-class"></a>Classe unorm_2
+Rappresenta uno short vector di due numeri normale senza segno.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 class unorm_2;  
 ```  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Typedef pubblici  
+### <a name="public-typedefs"></a>Typedef pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
 |`value_type`||  
   
-### Costruttori pubblici  
+### <a name="public-constructors"></a>Costruttori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore unorm\_2::unorm\_2](../Topic/unorm_2::unorm_2%20Constructor.md)|Di overload.  Il costruttore predefinito, inizializza tutti gli elementi a 0.|  
+|[Costruttore unorm_2](#ctor)|Di overload. Predefinito costruttore inizializza tutti gli elementi con 0.|  
   
-### Metodi pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|Metodo di unorm\_2::get\_x||  
-|Metodo di unorm\_2::get\_xy||  
-|Metodo di unorm\_2::get\_y||  
-|Metodo di unorm\_2::get\_yx||  
-|Metodo di unorm\_2::ref\_g||  
-|Metodo di unorm\_2::ref\_r||  
-|Metodo di unorm\_2::ref\_x||  
-|Metodo di unorm\_2::ref\_y||  
-|Metodo di unorm\_2::set\_x||  
-|Metodo di unorm\_2::set\_xy||  
-|Metodo di unorm\_2::set\_y||  
-|Metodo di unorm\_2::set\_yx||  
-  
-### Operatori pubblici  
+### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|Operatore unorm\_2::operator\-\-||  
-|Operatore unorm\_2::operator\*||  
-|Operatore unorm\_2::operator\/\=||  
-|Operatore unorm\_2::operator\+\+||  
-|Operatore unorm\_2::operator\+\=||  
-|Operatore unorm\_2::operator\=||  
-|Operatore unorm\_2::operator\-\=||  
+|unorm_2::get_X (metodo)||  
+|unorm_2::get_xy (metodo)||  
+|unorm_2::get_y (metodo)||  
+|unorm_2::get_yx (metodo)||  
+|Metodo unorm_2::ref_g||  
+|Metodo unorm_2::ref_r||  
+|Metodo unorm_2::ref_x||  
+|Metodo unorm_2::ref_y||  
+|unorm_2::set_X (metodo)||  
+|unorm_2::set_xy (metodo)||  
+|unorm_2::set_y (metodo)||  
+|unorm_2::set_yx (metodo)||  
   
-### Costanti pubbliche  
+### <a name="public-operators"></a>Operatori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|Costante unorm\_2::size||  
+|unorm_2::operator - operatore||  
+|unorm_2::operator * = (operatore)||  
+|unorm_2::operator / = (operatore)||  
+|unorm_2::operator + + (operatore)||  
+|unorm_2::operator + = (operatore)||  
+|unorm_2::operator = (operatore)||  
+|unorm_2::operator-= (operatore)||  
   
-### Membri dati pubblici  
+### <a name="public-constants"></a>Costanti pubbliche  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|Membro Dati di unorm\_2::g||  
-|Membro Dati di unorm\_2::gr||  
-|Membro Dati di unorm\_2::r||  
-|Membro Dati di unorm\_2::rg||  
-|Membro Dati di unorm\_2::x||  
-|Membro Dati di unorm\_2::xy||  
-|Membro Dati di unorm\_2::y||  
-|Membro Dati di unorm\_2::yx||  
+|Costante unorm_2::size||  
   
-## Gerarchia di ereditarietà  
+### <a name="public-data-members"></a>Membri dati pubblici  
+  
+|Nome|Descrizione|  
+|----------|-----------------|  
+|Membro dati unorm_2::g||  
+|Membro dati unorm_2::GR||  
+|Membro dati unorm_2::r||  
+|Membro dati unorm_2::RG||  
+|Membro dati unorm_2::x||  
+|Membro dati unorm_2::XY||  
+|Membro dati unorm_2::y||  
+|Membro dati unorm_2::YX||  
+  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `unorm_2`  
   
-## Requisiti  
- **Intestazione:** amp\_short\_vectors.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** amp_short_vectors.h  
   
- **Spazio dei nomi** Concurrency::graphics  
+ **Namespace:** Concurrency:: Graphics  
   
-## Vedere anche  
- [Spazio dei nomi Concurrency::graphics](../../../parallel/amp/reference/concurrency-graphics-namespace.md)
+##  <a name="a-namectora-unorm2"></a><a name="ctor"></a>unorm_2 
+
+ Predefinito costruttore inizializza tutti gli elementi con 0.  
+  
+```  
+unorm_2() restrict(amp,
+    cpu);
+
+ 
+unorm_2(
+    unorm _V0,  
+    unorm _V1) restrict(amp,
+    cpu);
+
+ 
+unorm_2(
+    float _V0,  
+    float _V1) restrict(amp,
+    cpu);
+
+ 
+unorm_2(
+    unorm _V) restrict(amp,
+    cpu);
+
+ 
+explicit unorm_2(
+    float _V) restrict(amp,
+    cpu);
+
+ 
+unorm_2(
+    const unorm_2& _Other) restrict(amp,
+    cpu);
+
+ 
+explicit inline unorm_2(
+    const uint_2& _Other) restrict(amp,
+    cpu);
+
+ 
+explicit inline unorm_2(
+    const int_2& _Other) restrict(amp,
+    cpu);
+
+ 
+explicit inline unorm_2(
+    const float_2& _Other) restrict(amp,
+    cpu);
+
+ 
+explicit inline unorm_2(
+    const norm_2& _Other) restrict(amp,
+    cpu);
+
+ 
+explicit inline unorm_2(
+    const double_2& _Other) restrict(amp,
+    cpu);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `_V0`  
+ Il valore per inizializzare l'elemento 0.  
+  
+ `_V1`  
+ Il valore per inizializzare l'elemento 1.  
+  
+ `_V`  
+ Il valore per l'inizializzazione.  
+  
+ `_Other`  
+ Utilizzato per inizializzare l'oggetto.  
+  
+##  <a name="a-nameunorm2sizea-size"></a><a name="unorm_2__size"></a>dimensioni 
+
+```  
+static const int size = 2;  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Concurrency:: Graphics Namespace](concurrency-graphics-namespace.md)
+

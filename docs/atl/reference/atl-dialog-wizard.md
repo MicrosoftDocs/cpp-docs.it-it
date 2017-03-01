@@ -1,51 +1,69 @@
 ---
-title: "Creazione guidata finestra di dialogo ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "vc.codewiz.class.atl.dlg.overview"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Creazione guidata finestra di dialogo ATL"
-  - "Progetti ATL, aggiunta di risorse finestra di dialogo"
+title: Creazione guidata finestra ATL | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- vc.codewiz.class.atl.dlg.overview
+dev_langs:
+- C++
+helpviewer_keywords:
+- ATL projects, adding dialog resources
+- ATL Dialog Wizard
 ms.assetid: b0b9ace5-83c9-40d3-82c3-eb6293f10583
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Creazione guidata finestra di dialogo ATL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 4fafe461008e3545243d693e0d9e34acd57163e0
+ms.openlocfilehash: 43540b1b86dbbf1777e7d5a7f6d8dec5dc618334
+ms.lasthandoff: 02/24/2017
 
-Utilizzando questa procedura guidata è possibile inserire nel progetto un oggetto finestra di dialogo ATL, derivato da [CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md).  Una finestra di dialogo derivata da `CAxDialogImpl` può contenere controlli ActiveX.  
+---
+# <a name="atl-dialog-wizard"></a>Creazione guidata finestra di dialogo ATL
+Questa procedura guidata consente di inserire nel progetto di un oggetto finestra di dialogo ATL, derivato da [CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md). Una finestra di dialogo derivata da `CAxDialogImpl` può contenere controlli ActiveX.  
   
- Viene creata una risorsa finestra di dialogo con pulsanti **OK** e **Annulla** predefiniti.  Per modificare questa risorsa e aggiungere controlli ActiveX è possibile utilizzare l'[Editor finestre](../../mfc/dialog-editor.md) in Visualizzazione risorse.  
+ La procedura guidata crea una risorsa finestra di dialogo predefinito **OK** e **Annulla** pulsanti. È possibile modificare la risorsa finestra di dialogo e aggiungere i controlli ActiveX utilizzando il [Editor finestre](../../windows/dialog-editor.md) in visualizzazione risorse.  
   
- Nel file di intestazione vengono inseriti una [mappa messaggi](../../atl/message-maps-atl.md) e dichiarazioni per la gestione di eventi Click predefiniti.  Per ulteriori informazioni sulle finestre di dialogo ATL, vedere [Implementazione di una finestra di dialogo](../../atl/implementing-a-dialog-box.md).  
+ Nel file di intestazione vengono inseriti un [mappa messaggi](../../atl/message-maps-atl.md) e dichiarazioni per il valore predefinito di gestione degli eventi click. Vedere [implementazione di una finestra di dialogo](../../atl/implementing-a-dialog-box.md) per ulteriori informazioni sulle finestre di dialogo ATL.  
   
  **Nome breve**  
- Consente di impostare il nome breve per l'oggetto finestra di dialogo ATL.  Il nome specificato determina il nome della classe e i nomi dei file CPP e H, a meno che questi campi non vengano modificati singolarmente.  
+ Imposta il nome abbreviato per l'oggetto finestra di dialogo ATL. Il nome fornito determina il nome della classe e i nomi dei file (con estensione cpp e h), a meno che non vengano modificati singolarmente questi campi.  
   
  `Class`  
- Consente di impostare il nome della classe da creare.  Tale nome è basato sul nome specificato in **Nome breve**, preceduto da "C", il prefisso standard per un nome di classe.  
+ Imposta il nome della classe da creare. Questo nome è basato sul nome fornito in **nome breve**, preceduto da "C", il prefisso standard per un nome di classe.  
   
- **File H**  
- Consente di impostare il nome del file di intestazione per la classe del nuovo oggetto.  Per impostazione predefinita, questo nome si basa su quello specificato in **Nome breve**.  Fare clic sul pulsante con i puntini di sospensione per salvare il nome file nella posizione desiderata o per aggiungere la dichiarazione di classe a un file esistente.  Se si sceglie un file esistente, questo non verrà salvato nella posizione selezionata finché non si sceglie **Fine** all'interno della procedura guidata.  
+ **file con estensione h**  
+ Imposta il nome del file di intestazione per la nuova classe dell'oggetto. Per impostazione predefinita, questo nome è basato sul nome fornito in **nome breve**. Fare clic sul pulsante con puntini di sospensione per salvare il nome del file nel percorso prescelto o per aggiungere la dichiarazione di classe a un file esistente. Se si sceglie un file esistente, il non verrà salvato nella posizione selezionata finché non si sceglie **fine** nella procedura guidata.  
   
- Il file non viene sovrascritto.  Se si seleziona il nome di un file esistente, quando si sceglie **Fine** nella procedura guidata viene chiesto di indicare se aggiungere la dichiarazione di classe al contenuto del file.  Scegliere **Sì** per aggiungere il file oppure **No** per tornare alla procedura guidata e specificare un altro nome file.  
+ La procedura guidata non sovrascrive un file. Se si seleziona il nome di un file esistente, quando si fa clic su **fine**, verrà richiesto di indicare se la dichiarazione di classe al contenuto del file. Fare clic su **Sì** per aggiungere il file, fare clic su **n** per tornare alla procedura guidata e specificare un altro nome di file.  
   
- **File CPP**  
- Consente di impostare il nome del file di implementazione per la classe del nuovo oggetto.  Per impostazione predefinita, questo nome si basa su quello specificato in **Nome breve**.  Fare clic sul pulsante con i puntini di sospensione per salvare il nome file nella posizione desiderata.  Il file non verrà salvato nella posizione selezionata finché non si sceglie **Fine** all'interno della procedura guidata.  
+ **file con estensione cpp**  
+ Imposta il nome del file di implementazione per la nuova classe dell'oggetto. Per impostazione predefinita, questo nome è basato sul nome fornito in **nome breve**. Fare clic sul pulsante con puntini di sospensione per salvare il nome del file nel percorso desiderato. Il file non viene salvato nel percorso selezionato fino a quando non si fa clic su **fine** nella procedura guidata.  
   
- Il file non viene sovrascritto.  Se si seleziona il nome di un file esistente, quando si sceglie **Fine** nella procedura guidata viene chiesto di indicare se aggiungere l'implementazione della classe al termine del contenuto del file.  Scegliere **Sì** per aggiungere il file oppure **No** per tornare alla procedura guidata e specificare un altro nome file.  
+ La procedura guidata non sovrascrive un file. Se si seleziona il nome di un file esistente, quando si fa clic su **fine**, verrà richiesto di indicare se è necessario aggiungere l'implementazione della classe in base al contenuto del file. Fare clic su **Sì** per aggiungere il file, fare clic su **n** per tornare alla procedura guidata e specificare un altro nome di file.  
   
-## Vedere anche  
- [ATL Dialog Box](../../atl/reference/adding-an-atl-dialog-box.md)
+## <a name="see-also"></a>Vedere anche  
+ [La finestra di dialogo ATL](../../atl/reference/adding-an-atl-dialog-box.md)
+
+

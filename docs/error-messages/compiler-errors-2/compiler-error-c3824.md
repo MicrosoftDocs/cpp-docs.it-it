@@ -1,34 +1,51 @@
 ---
-title: "Errore del compilatore C3824 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3824"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3824"
+title: Errore del compilatore C3824 | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3824
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3824
 ms.assetid: b6c6adf1-0a29-401c-a06e-616fd50d4c37
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Errore del compilatore C3824
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 546edbeccfee84e91018d0801f0c1ebc7a53a537
+ms.lasthandoff: 02/24/2017
 
-'membro': questo tipo non può apparire in questo contesto \(parametro di funzione, tipo restituito o membro statico\)  
+---
+# <a name="compiler-error-c3824"></a>Errore del compilatore C3824
+'membro': questo tipo non può apparire in questo contesto (parametro di funzione, il tipo restituito o un membro statico)  
   
- I puntatori di blocco non possono essere parametri di funzione, tipi restituiti o valori `static` dichiarati.  
+ Puntatori di blocco non possono essere parametri di funzione, tipi restituiti o dichiarate `static`.  
   
- Il seguente codice di esempio genera l'errore C3824:  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene generato l'errore C3824:  
   
 ```  
 // C3824a.cpp  
@@ -38,22 +55,4 @@ void func() {
    pin_ptr<int> b; // OK  
 }  
 ```  
-  
- **Estensioni gestite per C\+\+**  
-  
- I puntatori locali dichiarati con la parola chiave `__pin` non possono essere dichiarati `static` e non possono essere puntatori interni.  
-  
- Il seguente codice di esempio genera l'errore C3824:  
-  
-```  
-// C3824b.cpp  
-// compile with: /clr:oldSyntax /c  
-#using <mscorlib.dll>  
-  
-__gc struct A {};  
-  
-void func() {  
-   static A __pin* a;   // C3824  
-   A __pin* b;   // OK  
-}  
-```
+

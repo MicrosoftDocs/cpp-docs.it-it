@@ -1,61 +1,77 @@
 ---
-title: "CMFCSpinButtonCtrl Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CMFCSpinButtonCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMFCSpinButtonCtrl class"
+title: Classe CMFCSpinButtonCtrl | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CMFCSpinButtonCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMFCSpinButtonCtrl class
 ms.assetid: 8773f259-4d3f-4bca-a71c-09e0c71bc843
 caps.latest.revision: 25
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 27
----
-# CMFCSpinButtonCtrl Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: c1832062461f2ed53df07a72428089179ed493ab
+ms.lasthandoff: 02/24/2017
 
-La classe `CMFCSpinButtonCtrl` supporta un gestore visualizzazione che estrae un controllo pulsante di selezione.  
+---
+# <a name="cmfcspinbuttonctrl-class"></a>Classe CMFCSpinButtonCtrl
+La `CMFCSpinButtonCtrl` classe supporta un gestore visualizzazione che disegna un controllo pulsante di selezione.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 class CMFCSpinButtonCtrl : public CSpinButtonCtrl  
 ```  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Costruttori pubblici  
+### <a name="public-constructors"></a>Costruttori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
 |`CMFCSpinButtonCtrl::CMFCSpinButtonCtrl`|Costruttore predefinito.|  
-|`CMFCSpinButtonCtrl::~CMFCSpinButtonCtrl`|Distruttore|  
+|`CMFCSpinButtonCtrl::~CMFCSpinButtonCtrl`|Distruttore.|  
   
-### Metodi pubblici  
+### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CMFCSpinButtonCtrl::OnDraw](../Topic/CMFCSpinButtonCtrl::OnDraw.md)|Aggiorna il controllo corrente del pulsante di selezione.|  
+|[CMFCSpinButtonCtrl::OnDraw](#ondraw)|Ridisegna il controllo pulsante di selezione corrente.|  
   
-## Note  
- Per utilizzare un gestore visualizzazione per disegnare un pulsante di selezione controlli nell'applicazione, sostituire tutte le istanze della classe `CSpinButtonCtrl` alla classe `CMFCSpinButtonCtrl`.  
+## <a name="remarks"></a>Note  
+ Per utilizzare un gestore visualizzazione per disegnare un controllo pulsante di selezione nell'applicazione, sostituire tutte le istanze di `CSpinButtonCtrl` classe con la `CMFCSpinButtonCtrl` classe.  
   
-## Esempio  
- Nell'esempio seguente viene illustrato come creare un oggetto classe `CMFCSpinButtonCtrl` e utilizzare il metodo `Create`.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come creare un oggetto di `CMFCSpinButtonCtrl` classe e utilizzare il relativo `Create` metodo.  
   
- [!code-cpp[NVC_MFC_RibbonApp#25](../../mfc/reference/codesnippet/CPP/cmfcspinbuttonctrl-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp&#25;](../../mfc/reference/codesnippet/cpp/cmfcspinbuttonctrl-class_1.cpp)]  
   
-## Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -66,10 +82,25 @@ class CMFCSpinButtonCtrl : public CSpinButtonCtrl
   
  [CMFCSpinButtonCtrl](../../mfc/reference/cmfcspinbuttonctrl-class.md)  
   
-## Requisiti  
- **intestazione:** afxspinbuttonctrl.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** afxspinbuttonctrl.h  
   
-## Vedere anche  
+##  <a name="a-nameondrawa--cmfcspinbuttonctrlondraw"></a><a name="ondraw"></a>CMFCSpinButtonCtrl::OnDraw  
+ Ridisegna il controllo pulsante di selezione corrente.  
+  
+```  
+virtual void OnDraw(CDC* pDC);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in] `pDC`  
+ Puntatore a un contesto di dispositivo.  
+  
+### <a name="remarks"></a>Note  
+ Il framework chiama la `CMFCSpinButtonCtrl::OnPaint` metodo per gestire il [CWnd::OnPaint](../../mfc/reference/cwnd-class.md#onpaint) messaggio e che metodo chiama a sua volta ciò `CMFCSpinButtonCtrl::OnDraw` metodo. Eseguire l'override di questo metodo per personalizzare il modo in cui che il framework crea il controllo pulsante di selezione.  
+  
+## <a name="see-also"></a>Vedere anche  
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
  [Classi](../../mfc/reference/mfc-classes.md)   
- [CMFCVisualManager Class](../../mfc/reference/cmfcvisualmanager-class.md)
+ [Classe CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)
+

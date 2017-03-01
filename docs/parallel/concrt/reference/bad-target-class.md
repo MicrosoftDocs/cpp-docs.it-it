@@ -1,58 +1,92 @@
 ---
-title: "Classe bad_target | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "concrt/concurrency::bad_target"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bad_target (classe)"
+title: Classe bad_target | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concrt/concurrency::bad_target
+dev_langs:
+- C++
+helpviewer_keywords:
+- bad_target class
 ms.assetid: e6dcddbf-9217-4fac-ac7f-7b8b4781d2f5
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# Classe bad_target
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: a22ebb69195dcea91799dc1c2e301a578dd227bc
+ms.lasthandoff: 02/24/2017
 
-Questa classe viene descritta un'eccezione generata quando un blocco di messaggistica viene fornito un puntatore a una destinazione non valido per l'operazione eseguita.  
+---
+# <a name="badtarget-class"></a>Classe bad_target
+Questa classe descrive un'eccezione generata quando un blocco della messaggistica riceve un puntatore a una destinazione non valida per l'operazione eseguita.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
+```
+class bad_target : public std::exception;
 ```  
-class bad_target : public std::exception;  
-```  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Costruttori pubblici  
+### <a name="public-constructors"></a>Costruttori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore bad\_target::bad\_target](../Topic/bad_target::bad_target%20Constructor.md)|Di overload.  Costruisce un oggetto `bad_target`.|  
+|[Costruttore bad_target](#ctor)|Di overload. Costruisce un oggetto `bad_target`.|  
   
-## Note  
- Questa eccezione viene generata in genere per i motivi come il tentativo di una destinazione a utilizzare un messaggio riservato per una destinazione diversa o come il rilascio di una prenotazione che non contiene.  
+## <a name="remarks"></a>Note  
+ Questa eccezione viene generata in genere per motivi, ad esempio una destinazione, il tentativo di utilizzo di un messaggio che è riservato per una destinazione diversa o rilasciare una prenotazione che non contiene.  
   
-## Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `exception`  
   
  `bad_target`  
   
-## Requisiti  
- **Header:** concrt.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** concrt  
   
- Concorrenza di**Spazio dei nomi:**  
+ **Spazio dei nomi:** Concurrency  
   
-## Vedere anche  
- [Spazio dei nomi concurrency](../../../parallel/concrt/reference/concurrency-namespace.md)   
+##  <a name="a-namectora-badtarget"></a><a name="ctor"></a>bad_target 
+
+ Costruisce un oggetto `bad_target`.  
+  
+```
+explicit _CRTIMP bad_target(_In_z_ const char* _Message) throw();
+
+bad_target() throw();
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `_Message`  
+ Messaggio descrittivo dell'errore.  
+  
+## <a name="see-also"></a>Vedere anche  
+ [concorrenza Namespace](concurrency-namespace.md)   
  [Blocchi dei messaggi asincroni](../../../parallel/concrt/asynchronous-message-blocks.md)
+
+
+
+

@@ -1,148 +1,1327 @@
 ---
-title: "CComControlBase Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CComControlBase"
-  - "ATL.CComControlBase"
-  - "ATL::CComControlBase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CComControlBase class"
+title: Classe CComControlBase | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CComControlBase
+- ATL.CComControlBase
+- ATL::CComControlBase
+dev_langs:
+- C++
+helpviewer_keywords:
+- CComControlBase class
 ms.assetid: 3d1bf022-acf2-4092-8283-ff8cee6332f3
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# CComControlBase Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 988528a3658dee930df2cac6fd1a4add87302509
+ms.lasthandoff: 02/24/2017
 
-Questa classe fornisce metodi per creare e gestire i controlli ATL.  
+---
+# <a name="ccomcontrolbase-class"></a>Classe CComControlBase
+Questa classe fornisce metodi per la creazione e gestione dei controlli ATL.  
   
 > [!IMPORTANT]
 >  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
+```
+class ATL_NO_VTABLE CComControlBase
 ```  
   
-class ATL_NO_VTABLE CComControlBase  
+## <a name="members"></a>Membri  
   
+### <a name="public-typedefs"></a>Typedef pubblici  
+  
+|Nome|Descrizione|  
+|----------|-----------------|  
+|[CComControlBase::AppearanceType](#appearancetype)|Eseguire l'override di `m_nAppearance` proprietà predefinite non è di tipo `short`.|  
+  
+### <a name="public-constructors"></a>Costruttori pubblici  
+  
+|Nome|Descrizione|  
+|----------|-----------------|  
+|[CComControlBase::CComControlBase](#ccomcontrolbase)|Costruttore.|  
+|[CComControlBase:: ~ CComControlBase](#dtor)|Distruttore.|  
+  
+### <a name="public-methods"></a>Metodi pubblici  
+  
+|Nome|Descrizione|  
+|----------|-----------------|  
+|[CComControlBase::ControlQueryInterface](#controlqueryinterface)|Recupera un puntatore all'interfaccia richiesta.|  
+|[CComControlBase::DoesVerbActivate](#doesverbactivate)|Verifica che il `iVerb` parametro utilizzato dal `IOleObjectImpl::DoVerb` sia attiva l'interfaccia utente del controllo ( `iVerb` è uguale a `OLEIVERB_UIACTIVATE`), definisce l'azione eseguita quando l'utente fa doppio clic sul controllo ( `iVerb` è uguale a `OLEIVERB_PRIMARY`), viene visualizzato il controllo ( `iVerb` è uguale a `OLEIVERB_SHOW`), o attiva il controllo ( `iVerb` è uguale a **OLEIVERB_INPLACEACTIVATE**).|  
+|[CComControlBase::DoesVerbUIActivate](#doesverbuiactivate)|Verifica che il `iVerb` parametro utilizzato dal `IOleObjectImpl::DoVerb` causa l'interfaccia utente del controllo attivare e restituisce **TRUE**.|  
+|[CComControlBase::DoVerbProperties](#doverbproperties)|Visualizza le pagine delle proprietà del controllo.|  
+|[CComControlBase::FireViewChange](#fireviewchange)|Chiamare questo metodo per indicare il contenitore di ridisegnare il controllo, o inviare una notifica dei sink di notifica registrata la visualizzazione del controllo è stato modificato.|  
+|[CComControlBase:: GetAmbientAppearance](#getambientappearance)|Recupera **DISPID_AMBIENT_APPEARANCE**, l'aspetto corrente impostazione per il controllo: 0 per flat e 1 per 3D.|  
+|[CComControlBase::GetAmbientAutoClip](#getambientautoclip)|Recupera **DISPID_AMBIENT_AUTOCLIP**, un flag che indica se il contenitore supporta il ridimensionamento automatico dell'area di visualizzazione del controllo.|  
+|[CComControlBase::GetAmbientBackColor](#getambientbackcolor)|Recupera **DISPID_AMBIENT_BACKCOLOR**, il colore di sfondo dell'ambiente per tutti i controlli, definito dal contenitore.|  
+|[CComControlBase::GetAmbientCharSet](#getambientcharset)|Recupera **DISPID_AMBIENT_CHARSET**, imposta il carattere di ambiente per tutti i controlli, definiti dal contenitore.|  
+|[CComControlBase::GetAmbientCodePage](#getambientcodepage)|Recupera **DISPID_AMBIENT_CODEPAGE**, imposta il carattere di ambiente per tutti i controlli, definiti dal contenitore.|  
+|[CComControlBase:: GetAmbientDisplayAsDefault](#getambientdisplayasdefault)|Recupera **DISPID_AMBIENT_DISPLAYASDEFAULT**, un flag **TRUE** se il contenitore è contrassegnato come il controllo del sito come pulsante predefinito e pertanto un controllo pulsante deve disegnarsi con una cornice più spessa.|  
+|[CComControlBase::GetAmbientDisplayName](#getambientdisplayname)|Recupera **DISPID_AMBIENT_DISPLAYNAME**, il nome di contenitore è fornito per il controllo.|  
+|[CComControlBase::GetAmbientFont](#getambientfont)|Recupera un puntatore al contenitore dell'ambiente `IFont` interfaccia.|  
+|[CComControlBase::GetAmbientFontDisp](#getambientfontdisp)|Recupera un puntatore al contenitore dell'ambiente **IFontDisp** interfaccia dispatch.|  
+|[CComControlBase::GetAmbientForeColor](#getambientforecolor)|Recupera **DISPID_AMBIENT_FORECOLOR**, il colore di primo piano dell'ambiente per tutti i controlli, definito dal contenitore.|  
+|[CComControlBase::GetAmbientLocaleID](#getambientlocaleid)|Recupera **DISPID_AMBIENT_LOCALEID**, l'identificatore della lingua utilizzata dal contenitore.|  
+|[CComControlBase::GetAmbientMessageReflect](#getambientmessagereflect)|Recupera **DISPID_AMBIENT_MESSAGEREFLECT**, un flag che indica se il contenitore desidera ricevere messaggi di finestra (ad esempio `WM_DRAWITEM`) come eventi.|  
+|[CComControlBase::GetAmbientPalette](#getambientpalette)|Recupera **DISPID_AMBIENT_PALETTE**, utilizzato per accedere al contenitore `HPALETTE`.|  
+|[CComControlBase::GetAmbientProperty](#getambientproperty)|Recupera la proprietà contenitore specificata da `id`.|  
+|[CComControlBase::GetAmbientRightToLeft](#getambientrighttoleft)|Recupera **DISPID_AMBIENT_RIGHTTOLEFT**, la direzione in cui viene visualizzato contenuto dal contenitore.|  
+|[CComControlBase::GetAmbientScaleUnits](#getambientscaleunits)|Recupera **DISPID_AMBIENT_SCALEUNITS**, unità ambiente del contenitore (ad esempio pollici o centimetri) per le etichette consente di visualizzare.|  
+|[CComControlBase::GetAmbientShowGrabHandles](#getambientshowgrabhandles)|Recupera **DISPID_AMBIENT_SHOWGRABHANDLES**, un flag che indica se il contenitore consente il controllo da visualizzare quadratini di ridimensionamento per se stesso quando sono attive.|  
+|[CComControlBase::GetAmbientShowHatching](#getambientshowhatching)|Recupera **DISPID_AMBIENT_SHOWHATCHING**, un flag che indica se il contenitore consente il controllo verrà visualizzato con un motivo tratteggiato quando l'interfaccia utente è attivo.|  
+|[CComControlBase::GetAmbientSupportsMnemonics](#getambientsupportsmnemonics)|Recupera **DISPID_AMBIENT_SUPPORTSMNEMONICS**, un flag che indica se il contenitore supporta tasti di scelta da tastiera.|  
+|[CComControlBase::GetAmbientTextAlign](#getambienttextalign)|Recupera **DISPID_AMBIENT_TEXTALIGN**, l'allineamento del testo preferito dal contenitore: 0 per l'allineamento generale (numeri, testo a destra a sinistra), 1 per l'allineamento a sinistra, 2 per l'allineamento al centro e 3 per l'allineamento a destra.|  
+|[CComControlBase::GetAmbientTopToBottom](#getambienttoptobottom)|Recupera **DISPID_AMBIENT_TOPTOBOTTOM**, la direzione in cui viene visualizzato contenuto dal contenitore.|  
+|[CComControlBase::GetAmbientUIDead](#getambientuidead)|Recupera **DISPID_AMBIENT_UIDEAD**, un flag che indica se il contenitore richieda il controllo di rispondere alle azioni dell'interfaccia utente.|  
+|[CComControlBase::GetAmbientUserMode](#getambientusermode)|Recupera **DISPID_AMBIENT_USERMODE**, un flag che indica se il contenitore è in modalità di esecuzione ( **TRUE**) o in modalità progettazione ( **FALSE**).|  
+|[CComControlBase::GetDirty](#getdirty)|Restituisce il valore del membro dati `m_bRequiresSave`.|  
+|[CComControlBase::GetZoomInfo](#getzoominfo)|Recupera gli assi x e y valori del numeratore e del denominatore del fattore di zoom per il controllo è attivato per la modifica in loco.|  
+|[CComControlBase::InPlaceActivate](#inplaceactivate)|Fa sì che il controllo per la transizione dallo stato inattivo per qualsiasi stato il verbo in `iVerb` indica.|  
+|[CComControlBase::InternalGetSite](#internalgetsite)|Chiamare questo metodo per eseguire una query il sito del controllo per un puntatore a interfaccia identificato.|  
+|[CComControlBase:: OnDraw](#ondraw)|Eseguire l'override di questo metodo per disegnare il controllo.|  
+|[CComControlBase::OnDrawAdvanced](#ondrawadvanced)|Il valore predefinito **oggetto OnDrawAdvanced** prepara un contesto di dispositivo normalizzato per il disegno, quindi chiama la classe di controllo `OnDraw` metodo.|  
+|[CComControlBase::OnKillFocus](#onkillfocus)|Verifica che il controllo è attivo sul posto e dispone di un sito di controllo valido, quindi informa il contenitore che il controllo ha perso lo stato attivo.|  
+|[CComControlBase::OnMouseActivate](#onmouseactivate)|Verifica che l'interfaccia utente è in modalità utente, quindi attiva il controllo.|  
+|[CComControlBase::OnPaint](#onpaint)|Prepara il contenitore per il disegno, ottiene l'area client del controllo, quindi chiama la classe di controllo `OnDraw` metodo.|  
+|[CComControlBase::OnSetFocus](#onsetfocus)|Verifica che il controllo è attivo sul posto e dispone di un sito di controllo valido, quindi informa il contenitore del controllo ha acquisito lo stato attivo.|  
+|[CComControlBase::PreTranslateAccelerator](#pretranslateaccelerator)|Eseguire l'override di questo metodo per fornire la propria tastiera gestori di tasti di scelta rapida.|  
+|[CComControlBase::SendOnClose](#sendonclose)|Notifica a sink consultivi tutti registrato con il titolare di notifica che il controllo è stata chiusa.|  
+|[CComControlBase::SendOnDataChange](#sendondatachange)|Notifica a sink consultivi tutti registrato con il titolare di notifica che i dati del controllo sono stato modificato.|  
+|[CComControlBase::SendOnRename](#sendonrename)|Notifica a sink consultivi tutti registrato con il titolare di notifica che il controllo dispone di un nuovo moniker.|  
+|[CComControlBase::SendOnSave](#sendonsave)|Notifica a sink consultivi tutti registrato con il titolare di notifica che il controllo è stato salvato.|  
+|[CComControlBase::SendOnViewChange](#sendonviewchange)|Notifica a che tutti i sink consultivo che ha modificato la visualizzazione del controllo.|  
+|[CComControlBase::SetControlFocus](#setcontrolfocus)|Imposta o rimuove lo stato attivo da o verso il controllo.|  
+|[CComControlBase::SetDirty](#setdirty)|Imposta il membro dati `m_bRequiresSave` sul valore `bDirty`.|  
+  
+### <a name="public-data-members"></a>Membri dati pubblici  
+  
+|Nome|Descrizione|  
+|----------|-----------------|  
+|[CComControlBase::m_bAutoSize](#m_bautosize)|Flag che indica che il controllo non può essere qualsiasi altra dimensione.|  
+|[CComControlBase::m_bDrawFromNatural](#m_bdrawfromnatural)|Flag che indica se `IDataObjectImpl::GetData` e `CComControlBase::GetZoomInfo` deve impostare le dimensioni del controllo da `m_sizeNatural` anziché da `m_sizeExtent`.|  
+|[CComControlBase::m_bDrawGetDataInHimetric](#m_bdrawgetdatainhimetric)|Flag che indica se `IDataObjectImpl::GetData` devono utilizzare unità HIMETRIC e non pixel durante il disegno.|  
+|[CComControlBase::m_bInPlaceActive](#m_binplaceactive)|Flag che indica che il controllo è attivo sul posto.|  
+|[CComControlBase::m_bInPlaceSiteEx](#m_binplacesiteex)|Flag che indica il contenitore supporta il **IOleInPlaceSiteEx** interfaccia e OCX96 controllano le funzionalità, ad esempio i controlli privi di finestra e sfarfallio.|  
+|[CComControlBase::m_bNegotiatedWnd](#m_bnegotiatedwnd)|Flag che indica se il controllo ha negoziato con il contenitore sul supporto per le funzionalità di controllo OCX96 (ad esempio i controlli privi di finestra e sfarfallio) e se il controllo è finestre o privi di finestra.|  
+|[CComControlBase::m_bRecomposeOnResize](#m_brecomposeonresize)|Flag che indica che il controllo richiede per ricomporre relativa presentazione quando il contenitore di dimensioni di visualizzazione del controllo.|  
+|[CComControlBase::m_bRequiresSave](#m_brequiressave)|Flag che indica che il controllo è stato modificato dall'ultimo salvataggio.|  
+|[CComControlBase::m_bResizeNatural](#m_bresizenatural)|Flag che indica il controllo desidera ridimensionare estensione naturale (le dimensioni fisiche non in scala) quando il contenitore cambia dimensioni di visualizzazione del controllo.|  
+|[CComControlBase::m_bUIActive](#m_buiactive)|Flag che indica l'interfaccia del controllo utente, ad esempio menu e barre degli strumenti, è attivo.|  
+|[CComControlBase::m_bUsingWindowRgn](#m_busingwindowrgn)|Flag che indica che il controllo sta utilizzando l'area della finestra fornito dal contenitore.|  
+|[CComControlBase::m_bWasOnceWindowless](#m_bwasoncewindowless)|Flag che indica il controllo è stata privi di finestra, ma può o non siano privi di finestra ora.|  
+|[CComControlBase](#m_bwindowonly)|Flag che indica che il controllo deve essere finestra, anche se il contenitore supporta i controlli privi di finestra.|  
+|[CComControlBase::m_bWndLess](#m_bwndless)|Flag che indica che il controllo è privi di finestra.|  
+|[CComControlBase::m_hWndCD](#m_hwndcd)|Contiene un riferimento all'handle della finestra associato al controllo.|  
+|[CComControlBase::m_nFreezeEvents](#m_nfreezeevents)|Un conteggio del numero di volte in cui il contenitore è bloccata eventi (ha rifiutati di accettare eventi) senza un corrispondente Sblocca di eventi (accettazione di eventi).|  
+|[CComControlBase::m_rcPos](#m_rcpos)|La posizione in pixel del controllo, espressa in coordinate del contenitore.|  
+|[CComControlBase::m_sizeExtent](#m_sizeextent)|L'estensione del controllo in unità HIMETRIC (ogni unità corrisponde a 0,01 millimetri) per una visualizzazione specifica.|  
+|[CComControlBase::m_sizeNatural](#m_sizenatural)|La dimensione fisica del controllo in unità HIMETRIC (ogni unità corrisponde a 0,01 millimetri).|  
+|[CComControlBase::m_spAdviseSink](#m_spadvisesink)|Un puntatore diretto per la connessione consultiva sul contenitore (il contenitore [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513)).|  
+|[CComControlBase::m_spAmbientDispatch](#m_spambientdispatch)|Oggetto `CComDispatchDriver` oggetto che consente di recuperare e impostare le proprietà del contenitore tramite un `IDispatch` puntatore.|  
+|[CComControlBase::m_spClientSite](#m_spclientsite)|Puntatore al sito di client del controllo all'interno del contenitore.|  
+|[CComControlBase::m_spDataAdviseHolder](#m_spdataadviseholder)|Fornisce uno standard conservare le connessioni consultive tra gli oggetti dati e sink di notifica.|  
+|[CComControlBase::m_spInPlaceSite](#m_spinplacesite)|Un puntatore al contenitore [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461), o [IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300) puntatore a interfaccia.|  
+|[CComControlBase::m_spOleAdviseHolder](#m_spoleadviseholder)|Fornisce un'implementazione standard di un modo per contenere le connessioni consultive.|  
+  
+## <a name="remarks"></a>Note  
+ Questa classe fornisce metodi per la creazione e gestione dei controlli ATL. [Classe CComControl](../../atl/reference/ccomcontrol-class.md) deriva da `CComControlBase`. Quando si crea un controllo di controllo Standard o DHTML mediante la creazione guidata controllo ATL, la procedura guidata verrà automaticamente derivare la classe da `CComControlBase`.  
+  
+ Per ulteriori informazioni sulla creazione di un controllo, vedere il [esercitazione di ATL](../../atl/active-template-library-atl-tutorial.md). Per ulteriori informazioni sulla creazione guidata progetto ATL, vedere l'articolo [creazione di un progetto ATL](../../atl/reference/creating-an-atl-project.md).  
+  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** atlctl. h  
+  
+##  <a name="a-nameappearancetypea--ccomcontrolbaseappearancetype"></a><a name="appearancetype"></a>CComControlBase::AppearanceType  
+ Eseguire l'override di **m_nAppearance** proprietà predefinite non è di tipo **breve**.  
+  
+```
+typedef short AppearanceType;
 ```  
   
-## Membri  
+### <a name="remarks"></a>Note  
+ Creazione guidata controllo ATL aggiunge **m_nAppearance** stock proprietà di tipo short. Eseguire l'override `AppearanceType` se si utilizza un tipo di dati diversi.  
   
-### Typedef pubblici  
+##  <a name="a-nameccomcontrolbasea--ccomcontrolbaseccomcontrolbase"></a><a name="ccomcontrolbase"></a>CComControlBase::CComControlBase  
+ Costruttore.  
   
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[CComControlBase::AppearanceType](../Topic/CComControlBase::AppearanceType.md)|Override se la proprietà di azione `m_nAppearance` non è di tipo `short`.|  
+```
+CComControlBase(HWND& h);
+```  
   
-### Costruttori pubblici  
+### <a name="parameters"></a>Parametri  
+ `h`  
+ L'handle della finestra associata al controllo.  
   
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[CComControlBase::CComControlBase](../Topic/CComControlBase::CComControlBase.md)|Costruttore.|  
-|[CComControlBase::~CComControlBase](../Topic/CComControlBase::~CComControlBase.md)|Il distruttore.|  
+### <a name="remarks"></a>Note  
+ Inizializza la dimensione in unità HIMETRIC 5080 X 5080 (2x "2") e inizializza il `CComControlBase` valori membro dati **NULL** o **FALSE**.  
   
-### Metodi pubblici  
+##  <a name="a-namedtora--ccomcontrolbaseccomcontrolbase"></a><a name="dtor"></a>CComControlBase:: ~ CComControlBase  
+ Distruttore.  
   
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[CComControlBase::ControlQueryInterface](../Topic/CComControlBase::ControlQueryInterface.md)|Recupera un puntatore a un'interfaccia richiesta.|  
-|[CComControlBase::DoesVerbActivate](../Topic/CComControlBase::DoesVerbActivate.md)|I controlli che il parametro `iVerb` utilizzato da `IOleObjectImpl::DoVerb` uno attiva l'interfaccia utente del controllo \(`iVerb` equivale a `OLEIVERB_UIACTIVATE`\), definisce le azioni eseguite quando l'utente fa doppio clic sul controllo \(`iVerb` equivale a `OLEIVERB_PRIMARY`\), visualizzare il controllo \(`iVerb` equivale a `OLEIVERB_SHOW`, oppure attiva il controllo \(`iVerb` equivale a **OLEIVERB\_INPLACEACTIVATE**\).|  
-|[CComControlBase::DoesVerbUIActivate](../Topic/CComControlBase::DoesVerbUIActivate.md)|I controlli che il parametro `iVerb` utilizzato da `IOleObjectImpl::DoVerb` genera l'interfaccia utente del controllo per attivare e restituisce **TRUE**.|  
-|[CComControlBase::DoVerbProperties](../Topic/CComControlBase::DoVerbProperties.md)|Visualizza le pagine delle proprietà del controllo.|  
-|[CComControlBase::FireViewChange](../Topic/CComControlBase::FireViewChange.md)|Chiamare questo metodo per indicare il contenitore di ridisegnare il controllo, o aggiornare i sink di notifica registrati nella visualizzazione del controllo è stato modificato.|  
-|[CComControlBase::GetAmbientAppearance](../Topic/CComControlBase::GetAmbientAppearance.md)|Recupera **DISPID\_AMBIENT\_APPEARANCE**, l'impostazione corrente dell'aspetto del controllo: 0 per il piano e 1 per tridimensionale.|  
-|[CComControlBase::GetAmbientAutoClip](../Topic/CComControlBase::GetAmbientAutoClip.md)|Recupera **DISPID\_AMBIENT\_AUTOCLIP**, un flag che indica se il contenitore supporta l'area di visualizzazione automatica dell'area di visualizzazione del controllo.|  
-|[CComControlBase::GetAmbientBackColor](../Topic/CComControlBase::GetAmbientBackColor.md)|Recupera **DISPID\_AMBIENT\_BACKCOLOR**, il colore di sfondo di ambiente per tutti i controlli, definito dal contenitore.|  
-|[CComControlBase::GetAmbientCharSet](../Topic/CComControlBase::GetAmbientCharSet.md)|Recupera **DISPID\_AMBIENT\_CHARSET**, il set di caratteri di ambiente per tutti i controlli, definito dal contenitore.|  
-|[CComControlBase::GetAmbientCodePage](../Topic/CComControlBase::GetAmbientCodePage.md)|Recupera **DISPID\_AMBIENT\_CODEPAGE**, il set di caratteri di ambiente per tutti i controlli, definito dal contenitore.|  
-|[CComControlBase::GetAmbientDisplayAsDefault](../Topic/CComControlBase::GetAmbientDisplayAsDefault.md)|Recupera **DISPID\_AMBIENT\_DISPLAYASDEFAULT**, un flag che è **TRUE** se il contenitore ha contrassegnato il controllo in questo sito per essere un pulsante predefinito e pertanto il pulsante deve possibile disegnare con un frame più spesso.|  
-|[CComControlBase::GetAmbientDisplayName](../Topic/CComControlBase::GetAmbientDisplayName.md)|Recupera **DISPID\_AMBIENT\_DISPLAYNAME**, il nome del contenitore ha fornito al controllo.|  
-|[CComControlBase::GetAmbientFont](../Topic/CComControlBase::GetAmbientFont.md)|Recupera un puntatore a interfaccia di ambiente `IFont` del contenitore.|  
-|[CComControlBase::GetAmbientFontDisp](../Topic/CComControlBase::GetAmbientFontDisp.md)|Recupera un puntatore a interfaccia dispatch di ambiente **IFontDisp** del contenitore.|  
-|[CComControlBase::GetAmbientForeColor](../Topic/CComControlBase::GetAmbientForeColor.md)|Recupera **DISPID\_AMBIENT\_FORECOLOR**, il colore di primo piano di ambiente per tutti i controlli, definito dal contenitore.|  
-|[CComControlBase::GetAmbientLocaleID](../Topic/CComControlBase::GetAmbientLocaleID.md)|Recupera **DISPID\_AMBIENT\_LOCALEID**, l'identificatore del linguaggio utilizzato dal contenitore.|  
-|[CComControlBase::GetAmbientMessageReflect](../Topic/CComControlBase::GetAmbientMessageReflect.md)|Recupera **DISPID\_AMBIENT\_MESSAGEREFLECT**, un flag che indica se il contenitore desidera ricevere i messaggi della finestra \(come `WM_DRAWITEM`\) come eventi.|  
-|[CComControlBase::GetAmbientPalette](../Topic/CComControlBase::GetAmbientPalette.md)|Recupera **DISPID\_AMBIENT\_PALETTE**, utilizzato per accedere `HPALETTE`del contenitore.|  
-|[CComControlBase::GetAmbientProperty](../Topic/CComControlBase::GetAmbientProperty.md)|Recupera la proprietà del contenitore specificato da `id`.|  
-|[CComControlBase::GetAmbientRightToLeft](../Topic/CComControlBase::GetAmbientRightToLeft.md)|Recupera **DISPID\_AMBIENT\_RIGHTTOLEFT**, la direzione in cui il contenuto visualizzato dal contenitore.|  
-|[CComControlBase::GetAmbientScaleUnits](../Topic/CComControlBase::GetAmbientScaleUnits.md)|Recupera **DISPID\_AMBIENT\_SCALEUNITS**, le unità di ambiente del contenitore quali i pollici o cm\) per le visualizzazioni di contrassegno.|  
-|[CComControlBase::GetAmbientShowGrabHandles](../Topic/CComControlBase::GetAmbientShowGrabHandles.md)|Recupera **DISPID\_AMBIENT\_SHOWGRABHANDLES**, un flag che indica se il contenitore consente il controllo a maniglie di visualizzazione per se stesso quando attivo.|  
-|[CComControlBase::GetAmbientShowHatching](../Topic/CComControlBase::GetAmbientShowHatching.md)|Recupera **DISPID\_AMBIENT\_SHOWHATCHING**, un flag che indica se il contenitore consente del controllo viene visualizzato con un modello tratteggiato quando l'interfaccia utente è attiva.|  
-|[CComControlBase::GetAmbientSupportsMnemonics](../Topic/CComControlBase::GetAmbientSupportsMnemonics.md)|Recupera **DISPID\_AMBIENT\_SUPPORTSMNEMONICS**, un flag che indica se il contenitore supporta i tasti di scelta rapida.|  
-|[CComControlBase::GetAmbientTextAlign](../Topic/CComControlBase::GetAmbientTextAlign.md)|Recupera **DISPID\_AMBIENT\_TEXTALIGN**, l'allineamento del testo desiderato dal contenitore: 0 per l'allineamento generale \(numeri a destra, testo a sinistra\), 1 per l'allineamento sinistro, 2 per allineamento centrale e 3 per destra allineamento.|  
-|[CComControlBase::GetAmbientTopToBottom](../Topic/CComControlBase::GetAmbientTopToBottom.md)|Recupera **DISPID\_AMBIENT\_TOPTOBOTTOM**, la direzione in cui il contenuto visualizzato dal contenitore.|  
-|[CComControlBase::GetAmbientUIDead](../Topic/CComControlBase::GetAmbientUIDead.md)|Recupera **DISPID\_AMBIENT\_UIDEAD**, un flag che indica se il contenitore desidera un controllo per rispondere alle azioni dell'interfaccia utente.|  
-|[CComControlBase::GetAmbientUserMode](../Topic/CComControlBase::GetAmbientUserMode.md)|Recupera **DISPID\_AMBIENT\_USERMODE**, un flag che indica se il contenitore è in modalità di esecuzione \(**TRUE**\) o in modalità progettazione \(**FALSE**\).|  
-|[CComControlBase::GetDirty](../Topic/CComControlBase::GetDirty.md)|Restituisce il valore del membro dati `m_bRequiresSave`.|  
-|[CComControlBase::GetZoomInfo](../Topic/CComControlBase::GetZoomInfo.md)|Recupera i valori x e y del numeratore e un denominatore del fattore di zoom per un controllo abilitato per la modifica sul posto.|  
-|[CComControlBase::InPlaceActivate](../Topic/CComControlBase::InPlaceActivate.md)|Causa il controllo per la transizione dallo stato inattivo a qualsiasi stato il verbo in `iVerb` indica.|  
-|[CComControlBase::InternalGetSite](../Topic/CComControlBase::InternalGetSite.md)|Chiamare questo metodo per eseguire una query sul sito del controllo per un puntatore a un'interfaccia identificata.|  
-|[CComControlBase::OnDraw](../Topic/CComControlBase::OnDraw.md)|Eseguire l'override di questo metodo per estrarre il controllo.|  
-|[CComControlBase::OnDrawAdvanced](../Topic/CComControlBase::OnDrawAdvanced.md)|**OnDrawAdvanced** predefinito rende un contesto di dispositivo normalizzato per disegnare, quindi chiama il metodo `OnDraw` della classe del controllo.|  
-|[CComControlBase::OnKillFocus](../Topic/CComControlBase::OnKillFocus.md)|I controlli che il controllo è attivo sul posto e ha un sito valido del controllo, è possibile indicare al contenitore che il controllo ha perde lo stato attivo.|  
-|[CComControlBase::OnMouseActivate](../Topic/CComControlBase::OnMouseActivate.md)|I controlli che l'interfaccia utente è in modalità utente, quest'ultima attiva il controllo.|  
-|[CComControlBase::OnPaint](../Topic/CComControlBase::OnPaint.md)|Prepara il contenitore per il disegno, ottiene l'area client del controllo, quindi chiama il metodo `OnDraw` della classe del controllo.|  
-|[CComControlBase::OnSetFocus](../Topic/CComControlBase::OnSetFocus.md)|I controlli che il controllo è attivo sul posto e ha un sito valido del controllo, è possibile indicare al contenitore che il controllo che presenta lo stato attivo.|  
-|[CComControlBase::PreTranslateAccelerator](../Topic/CComControlBase::PreTranslateAccelerator.md)|Eseguire l'override di questo metodo per fornire i propri gestori del tasto di scelta rapida.|  
-|[CComControlBase::SendOnClose](../Topic/CComControlBase::SendOnClose.md)|Notifica a tutti i sink consultivi registrati con il supporto di consigliare che il controllo è stato chiuso.|  
-|[CComControlBase::SendOnDataChange](../Topic/CComControlBase::SendOnDataChange.md)|Notifica a tutti i sink consultivi registrati con il supporto di consigliare che i dati del controllo sono stati modificati.|  
-|[CComControlBase::SendOnRename](../Topic/CComControlBase::SendOnRename.md)|Notifica a tutti i sink consultivi registrati con il supporto di consigliare che il controllo ha un nuovo moniker.|  
-|[CComControlBase::SendOnSave](../Topic/CComControlBase::SendOnSave.md)|Notifica a tutti i sink consultivi registrati con il supporto di consigliare che il controllo è stato salvato.|  
-|[CComControlBase::SendOnViewChange](../Topic/CComControlBase::SendOnViewChange.md)|Notifica a tutti i sink consultivi registrati nella visualizzazione del controllo è stato modificato.|  
-|[CComControlBase::SetControlFocus](../Topic/CComControlBase::SetControlFocus.md)|Consente di impostare o rimuovere lo stato attivo a o dal controllo.|  
-|[CComControlBase::SetDirty](../Topic/CComControlBase::SetDirty.md)|Imposta il membro dati `m_bRequiresSave` al valore in `bDirty`.|  
+```
+~CComControlBase();
+```  
   
-### Membri dati pubblici  
+### <a name="remarks"></a>Note  
+ Se il controllo con finestra, `~CComControlBase` distrugge chiamando [DestroyWindow](http://msdn.microsoft.com/library/windows/desktop/ms632682).  
   
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[CComControlBase::m\_bAutoSize](../Topic/CComControlBase::m_bAutoSize.md)|Il flag che indica il controllo non può essere qualsiasi altra dimensione.|  
-|[CComControlBase::m\_bDrawFromNatural](../Topic/CComControlBase::m_bDrawFromNatural.md)|Contrassegnare indica che `IDataObjectImpl::GetData` e `CComControlBase::GetZoomInfo` devono impostare la dimensione del controllo da `m_sizeNatural` anziché da `m_sizeExtent`.|  
-|[CComControlBase::m\_bDrawGetDataInHimetric](../Topic/CComControlBase::m_bDrawGetDataInHimetric.md)|Contrassegnare indica che `IDataObjectImpl::GetData` deve utilizzare unità e non i pixel di HIMETRIC quando si disegna.|  
-|[CComControlBase::m\_bInPlaceActive](../Topic/CComControlBase::m_bInPlaceActive.md)|Il flag che indica il controllo è attivo sul posto.|  
-|[CComControlBase::m\_bInPlaceSiteEx](../Topic/CComControlBase::m_bInPlaceSiteEx.md)|Il flag che indica il contenitore supporta le funzionalità dell'interfaccia e del controllo OCX96 **IOleInPlaceSiteEx**, ad esempio controlli privi di finestra e senza sfarfallio.|  
-|[CComControlBase::m\_bNegotiatedWnd](../Topic/CComControlBase::m_bNegotiatedWnd.md)|Contrassegnare indica se il controllo di negoziazione con il contenitore su supporto per le funzionalità del controllo OCX96 \(come controlli senza sfarfallio e senza finestra\) e se il controllo è compilazione o senza finestra.|  
-|[CComControlBase::m\_bRecomposeOnResize](../Topic/CComControlBase::m_bRecomposeOnResize.md)|Il flag che indica il controllo desidera ricomporre la presentazione quando il contenitore modificare le dimensioni di visualizzazione del controllo.|  
-|[CComControlBase::m\_bRequiresSave](../Topic/CComControlBase::m_bRequiresSave.md)|Il flag che indica il controllo è stato modificato da quando è stato salvato per ultima.|  
-|[CComControlBase::m\_bResizeNatural](../Topic/CComControlBase::m_bResizeNatural.md)|Il flag che indica il controllo desidera ridimensionare il relativo ambito naturale \(la dimensione fisica non ridimensionata\) quando il contenitore modificare le dimensioni di visualizzazione del controllo.|  
-|[CComControlBase::m\_bUIActive](../Topic/CComControlBase::m_bUIActive.md)|Contrassegnare indica dell'interfaccia utente del controllo, ad esempio menu e barre degli strumenti, è attiva.|  
-|[CComControlBase::m\_bUsingWindowRgn](../Topic/CComControlBase::m_bUsingWindowRgn.md)|Il flag che indica il controllo utilizza l'area della finestra contenitore\- fornita.|  
-|[CComControlBase::m\_bWasOnceWindowless](../Topic/CComControlBase::m_bWasOnceWindowless.md)|Il flag che indica il controllo è stato senza finestra, ma può essere senza finestra ora.|  
-|[CComControlBase::m\_bWindowOnly](../Topic/CComControlBase::m_bWindowOnly.md)|Il flag che indica il controllo deve essere compilazione, anche se il contenitore supporta i controlli privi di finestra.|  
-|[CComControlBase::m\_bWndLess](../Topic/CComControlBase::m_bWndLess.md)|Il flag che indica il controllo è senza finestra.|  
-|[CComControlBase::m\_hWndCD](../Topic/CComControlBase::m_hWndCD.md)|Contiene un riferimento all'handle della finestra associato al controllo.|  
-|[CComControlBase::m\_nFreezeEvents](../Topic/CComControlBase::m_nFreezeEvents.md)|Un conteggio del numero di volte il contenitore ha bloccato eventi \(rifiutati per accettare eventi\) senza un sblocca corrispondente degli eventi \(accettazione di eventi\).|  
-|[CComControlBase::m\_rcPos](../Topic/CComControlBase::m_rcPos.md)|La posizione in pixel del controllo, espressi in coordinate del contenitore.|  
-|[CComControlBase::m\_sizeExtent](../Topic/CComControlBase::m_sizeExtent.md)|L'ambito del controllo in unità di HIMETRIC \(ogni unità è 0,01 millimetri\) per una determinata visualizzazione.|  
-|[CComControlBase::m\_sizeNatural](../Topic/CComControlBase::m_sizeNatural.md)|La dimensione fisica del controllo in unità di HIMETRIC \(ogni unità è 0,01 millimetri\).|  
-|[CComControlBase::m\_spAdviseSink](../Topic/CComControlBase::m_spAdviseSink.md)|Un puntatore diretto alla connessione consultiva sul contenitore \( [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513)del contenitore\).|  
-|[CComControlBase::m\_spAmbientDispatch](../Topic/CComControlBase::m_spAmbientDispatch.md)|Un oggetto `CComDispatchDriver` che consente di recuperare e impostare le proprietà del contenitore tramite un puntatore `IDispatch`.|  
-|[CComControlBase::m\_spClientSite](../Topic/CComControlBase::m_spClientSite.md)|Un puntatore al sito client del controllo nel contenitore.|  
-|[CComControlBase::m\_spDataAdviseHolder](../Topic/CComControlBase::m_spDataAdviseHolder.md)|Consente di uno standard per utilizzare le connessioni consultive tra gli oggetti dati e i sink di notifica.|  
-|[CComControlBase::m\_spInPlaceSite](../Topic/CComControlBase::m_spInPlaceSite.md)|Un puntatore a un puntatore a interfaccia [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461), o [IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300) del contenitore.|  
-|[CComControlBase::m\_spOleAdviseHolder](../Topic/CComControlBase::m_spOleAdviseHolder.md)|Fornisce un'implementazione standard di come utilizzare connessioni consultive.|  
+##  <a name="a-namecontrolqueryinterfacea--ccomcontrolbasecontrolqueryinterface"></a><a name="controlqueryinterface"></a>CComControlBase::ControlQueryInterface  
+ Recupera un puntatore all'interfaccia richiesta.  
   
-## Note  
- Questa classe fornisce metodi per creare e gestire i controlli ATL.  [classe di CComControl](../../atl/reference/ccomcontrol-class.md) deriva da `CComControlBase`.  Quando si crea un controllo standard o il controllo DHTML utilizzando la creazione guidata controllo ATL, la procedura guidata automaticamente derivare la classe da `CComControlBase`.  
+```
+virtual HRESULT ControlQueryInterface(const IID& iid,
+    void** ppv);
+```  
   
- Per ulteriori informazioni sulla creazione di un controllo, vedere [L'esercitazione ATL](../../atl/active-template-library-atl-tutorial.md).  Per ulteriori informazioni sulla creazione guidata progetto ATL, vedere l'articolo [Creazione di un progetto ATL](../../atl/reference/creating-an-atl-project.md).  
+### <a name="parameters"></a>Parametri  
+ `iid`  
+ GUID dell'interfaccia richiesta.  
   
-## Requisiti  
- **Header:** atlctl.h  
+ `ppv`  
+ Un puntatore al puntatore a interfaccia identificato dal `iid`, o **NULL** se l'interfaccia non viene trovato.  
   
-## Vedere anche  
- [CComControl Class](../../atl/reference/ccomcontrol-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+### <a name="remarks"></a>Note  
+ Gestisce solo le interfacce nella tabella di mappe COM.  
+  
+### <a name="example"></a>Esempio  
+ [!code-cpp[NVC_ATL_COM&#15;](../../atl/codesnippet/cpp/ccomcontrolbase-class_1.cpp)]  
+  
+##  <a name="a-namedoesverbactivatea--ccomcontrolbasedoesverbactivate"></a><a name="doesverbactivate"></a>CComControlBase::DoesVerbActivate  
+ Verifica che il `iVerb` parametro utilizzato dal `IOleObjectImpl::DoVerb` sia attiva l'interfaccia utente del controllo ( `iVerb` è uguale a `OLEIVERB_UIACTIVATE`), definisce l'azione eseguita quando l'utente fa doppio clic sul controllo ( `iVerb` è uguale a `OLEIVERB_PRIMARY`), viene visualizzato il controllo ( `iVerb` è uguale a `OLEIVERB_SHOW`), o attiva il controllo ( `iVerb` è uguale a **OLEIVERB_INPLACEACTIVATE**).  
+  
+```
+BOOL DoesVerbActivate(LONG iVerb);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `iVerb`  
+ Valore che indica l'azione che deve essere eseguito da `DoVerb`.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Restituisce **TRUE** se `iVerb` è uguale a `OLEIVERB_UIACTIVATE`, `OLEIVERB_PRIMARY`, `OLEIVERB_SHOW`, o **OLEIVERB_INPLACEACTIVATE**; in caso contrario, restituisce **FALSE**.  
+  
+### <a name="remarks"></a>Note  
+ È possibile eseguire l'override di questo metodo per definire il proprio verbo di attivazione.  
+  
+##  <a name="a-namedoesverbuiactivatea--ccomcontrolbasedoesverbuiactivate"></a><a name="doesverbuiactivate"></a>CComControlBase::DoesVerbUIActivate  
+ Verifica che il `iVerb` parametro utilizzato dal `IOleObjectImpl::DoVerb` causa l'interfaccia utente del controllo attivare e restituisce **TRUE**.  
+  
+```
+BOOL DoesVerbUIActivate(LONG iVerb);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `iVerb`  
+ Valore che indica l'azione che deve essere eseguito da `DoVerb`.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Restituisce **TRUE** se `iVerb` è uguale a `OLEIVERB_UIACTIVATE`, `OLEIVERB_PRIMARY`, `OLEIVERB_SHOW`, o **OLEIVERB_INPLACEACTIVATE**. In caso contrario, il metodo restituisce **FALSE**.  
+  
+##  <a name="a-namedoverbpropertiesa--ccomcontrolbasedoverbproperties"></a><a name="doverbproperties"></a>CComControlBase::DoVerbProperties  
+ Visualizza le pagine delle proprietà del controllo.  
+  
+```
+HRESULT DoVerbProperties(LPCRECT /* prcPosRect */, HWND hwndParent);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `prcPosRec`  
+ Riservato.  
+  
+ *hwndParent*  
+ Handle della finestra che contiene il controllo.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Uno dei valori di HRESULT standard.  
+  
+### <a name="example"></a>Esempio  
+ [!code-cpp[NVC_ATL_COM&#19;](../../atl/codesnippet/cpp/ccomcontrolbase-class_2.cpp)]  
+  
+ [!code-cpp[NVC_ATL_COM&#20;](../../atl/codesnippet/cpp/ccomcontrolbase-class_3.h)]  
+  
+##  <a name="a-namefireviewchangea--ccomcontrolbasefireviewchange"></a><a name="fireviewchange"></a>CComControlBase::FireViewChange  
+ Chiamare questo metodo per indicare il contenitore di ridisegnare il controllo, o inviare una notifica dei sink di notifica registrata la visualizzazione del controllo è stato modificato.  
+  
+```
+HRESULT FireViewChange();
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ Uno dei valori di HRESULT standard.  
+  
+### <a name="remarks"></a>Note  
+ Se il controllo è attivo (membro dati classe controllo [CComControlBase::m_bInPlaceActive](#m_binplaceactive) è **TRUE**), notifica al contenitore che si desidera ridisegnare l'intero controllo. Se il controllo è inattivo, invia una notifica di registrare il controllo sink di notifica (tramite il membro dati di controllo della classe [CComControlBase::m_spAdviseSink](#m_spadvisesink)) che ha modificato la visualizzazione del controllo.  
+  
+### <a name="example"></a>Esempio  
+ [!code-cpp[NVC_ATL_COM NUMERO&21;](../../atl/codesnippet/cpp/ccomcontrolbase-class_4.cpp)]  
+  
+##  <a name="a-namegetambientappearancea--ccomcontrolbasegetambientappearance"></a><a name="getambientappearance"></a>CComControlBase:: GetAmbientAppearance  
+ Recupera **DISPID_AMBIENT_APPEARANCE**, l'aspetto corrente impostazione per il controllo: 0 per flat e 1 per 3D.  
+  
+```
+HRESULT GetAmbientAppearance(short& nAppearance);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `nAppearance`  
+ La proprietà **DISPID_AMBIENT_APPEARANCE**.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Uno dei valori di HRESULT standard.  
+  
+### <a name="example"></a>Esempio  
+ [!code-cpp[NVC_ATL_COM&#22;](../../atl/codesnippet/cpp/ccomcontrolbase-class_5.h)]  
+  
+##  <a name="a-namegetambientautoclipa--ccomcontrolbasegetambientautoclip"></a><a name="getambientautoclip"></a>CComControlBase::GetAmbientAutoClip  
+ Recupera **DISPID_AMBIENT_AUTOCLIP**, un flag che indica se il contenitore supporta il ridimensionamento automatico dell'area di visualizzazione del controllo.  
+  
+```
+HRESULT GetAmbientAutoClip(BOOL& bAutoClip);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ *bAutoClip*  
+ La proprietà **DISPID_AMBIENT_AUTOCLIP**.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Uno dei valori di HRESULT standard.  
+  
+##  <a name="a-namegetambientbackcolora--ccomcontrolbasegetambientbackcolor"></a><a name="getambientbackcolor"></a>CComControlBase::GetAmbientBackColor  
+ Recupera **DISPID_AMBIENT_BACKCOLOR**, il colore di sfondo dell'ambiente per tutti i controlli, definito dal contenitore.  
+  
+```
+HRESULT GetAmbientBackColor(OLE_COLOR& BackColor);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ *BackColor*  
+ La proprietà **DISPID_AMBIENT_BACKCOLOR**.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Uno dei valori di HRESULT standard.  
+  
+##  <a name="a-namegetambientcharseta--ccomcontrolbasegetambientcharset"></a><a name="getambientcharset"></a>CComControlBase::GetAmbientCharSet  
+ Recupera **DISPID_AMBIENT_CHARSET**, imposta il carattere di ambiente per tutti i controlli, definiti dal contenitore.  
+  
+```
+HRESULT GetAmbientCharSet(BSTR& bstrCharSet);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ *bstrCharSet*  
+ La proprietà **DISPID_AMBIENT_CHARSET**.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Restituisce S_OK esito positivo o un errore HRESULT in caso di errore.  
+  
+##  <a name="a-namegetambientcodepagea--ccomcontrolbasegetambientcodepage"></a><a name="getambientcodepage"></a>CComControlBase::GetAmbientCodePage  
+ Recupera **DISPID_AMBIENT_CODEPAGE**, la tabella codici di ambiente per tutti i controlli, definito dal contenitore.  
+  
+```
+HRESULT GetAmbientCodePage(ULONG& ulCodePage);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ *ulCodePage*  
+ La proprietà **DISPID_AMBIENT_CODEPAGE**.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Restituisce S_OK esito positivo o un errore HRESULT in caso di errore.  
+  
+##  <a name="a-namegetambientdisplayasdefaulta--ccomcontrolbasegetambientdisplayasdefault"></a><a name="getambientdisplayasdefault"></a>CComControlBase:: GetAmbientDisplayAsDefault  
+ Recupera **DISPID_AMBIENT_DISPLAYASDEFAULT**, un flag **TRUE** se il contenitore è contrassegnato come il controllo del sito come pulsante predefinito e pertanto un controllo pulsante deve disegnarsi con una cornice più spessa.  
+  
+```
+HRESULT GetAmbientDisplayAsDefault(BOOL& bDisplayAsDefault);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `bDisplayAsDefault`  
+ La proprietà **DISPID_AMBIENT_DISPLAYASDEFAULT**.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Uno dei valori di HRESULT standard.  
+  
+##  <a name="a-namegetambientdisplaynamea--ccomcontrolbasegetambientdisplayname"></a><a name="getambientdisplayname"></a>CComControlBase::GetAmbientDisplayName  
+ Recupera **DISPID_AMBIENT_DISPLAYNAME**, il nome di contenitore è fornito per il controllo.  
+  
+```
+HRESULT GetAmbientDisplayName(BSTR& bstrDisplayName);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ *bstrDisplayName*  
+ La proprietà **DISPID_AMBIENT_DISPLAYNAME**.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Uno dei valori di HRESULT standard.  
+  
+##  <a name="a-namegetambientfonta--ccomcontrolbasegetambientfont"></a><a name="getambientfont"></a>CComControlBase::GetAmbientFont  
+ Recupera un puntatore al contenitore dell'ambiente `IFont` interfaccia.  
+  
+```
+HRESULT GetAmbientFont(IFont** ppFont);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `ppFont`  
+ Un puntatore al contenitore dell'ambiente [IFont](http://msdn.microsoft.com/library/windows/desktop/ms680673) interfaccia.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Uno dei valori di HRESULT standard.  
+  
+### <a name="remarks"></a>Note  
+ Se la proprietà **NULL**, il puntatore si trova **NULL**. Se il puntatore non è **NULL**, il chiamante deve rilasciare il puntatore del mouse.  
+  
+##  <a name="a-namegetambientfontdispa--ccomcontrolbasegetambientfontdisp"></a><a name="getambientfontdisp"></a>CComControlBase::GetAmbientFontDisp  
+ Recupera un puntatore al contenitore dell'ambiente **IFontDisp** interfaccia dispatch.  
+  
+```
+HRESULT GetAmbientFontDisp(IFontDisp** ppFont);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `ppFont`  
+ Un puntatore al contenitore dell'ambiente [IFontDisp](http://msdn.microsoft.com/library/windows/desktop/ms692695) interfaccia dispatch.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Restituisce S_OK esito positivo o un errore HRESULT in caso di errore.  
+  
+### <a name="remarks"></a>Note  
+ Se la proprietà **NULL**, il puntatore si trova **NULL**. Se il puntatore non è **NULL**, il chiamante deve rilasciare il puntatore del mouse.  
+  
+##  <a name="a-namegetambientforecolora--ccomcontrolbasegetambientforecolor"></a><a name="getambientforecolor"></a>CComControlBase::GetAmbientForeColor  
+ Recupera **DISPID_AMBIENT_FORECOLOR**, il colore di primo piano dell'ambiente per tutti i controlli, definito dal contenitore.  
+  
+```
+HRESULT GetAmbientForeColor(OLE_COLOR& ForeColor);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ *Colore primo piano*  
+ La proprietà **DISPID_AMBIENT_FORECOLOR**.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Uno dei valori di HRESULT standard.  
+  
+##  <a name="a-namegetambientlocaleida--ccomcontrolbasegetambientlocaleid"></a><a name="getambientlocaleid"></a>CComControlBase::GetAmbientLocaleID  
+ Recupera **DISPID_AMBIENT_LOCALEID**, l'identificatore della lingua utilizzata dal contenitore.  
+  
+```
+HRESULT GetAmbientLocaleID(LCID& lcid);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `lcid`  
+ La proprietà **DISPID_AMBIENT_LOCALEID**.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Uno dei valori di HRESULT standard.  
+  
+### <a name="remarks"></a>Note  
+ Il controllo è possibile utilizzare questo identificatore per adattare l'interfaccia utente in lingue diverse.  
+  
+##  <a name="a-namegetambientmessagereflecta--ccomcontrolbasegetambientmessagereflect"></a><a name="getambientmessagereflect"></a>CComControlBase::GetAmbientMessageReflect  
+ Recupera **DISPID_AMBIENT_MESSAGEREFLECT**, un flag che indica se il contenitore desidera ricevere messaggi di finestra (ad esempio `WM_DRAWITEM`) come eventi.  
+  
+```
+HRESULT GetAmbientMessageReflect(BOOL& bMessageReflect);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `bMessageReflect`  
+ La proprietà **DISPID_AMBIENT_MESSAGEREFLECT**.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Uno dei valori di HRESULT standard.  
+  
+##  <a name="a-namegetambientpalettea--ccomcontrolbasegetambientpalette"></a><a name="getambientpalette"></a>CComControlBase::GetAmbientPalette  
+ Recupera **DISPID_AMBIENT_PALETTE**, utilizzato per accedere al contenitore `HPALETTE`.  
+  
+```
+HRESULT GetAmbientPalette(HPALETTE& hPalette);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `hPalette`  
+ La proprietà **DISPID_AMBIENT_PALETTE**.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Uno dei valori di HRESULT standard.  
+  
+##  <a name="a-namegetambientpropertya--ccomcontrolbasegetambientproperty"></a><a name="getambientproperty"></a>CComControlBase::GetAmbientProperty  
+ Recupera la proprietà contenitore specificata da `dispid`.  
+  
+```
+HRESULT GetAmbientProperty(DISPID dispid, VARIANT& var);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `dispid`  
+ Identificatore della proprietà contenitore da recuperare.  
+  
+ `var`  
+ Variabile per la ricezione della proprietà.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Uno dei valori di HRESULT standard.  
+  
+### <a name="remarks"></a>Note  
+ ATL ha fornito un set di funzioni di supporto per recuperare le proprietà specifiche, ad esempio, [CComControlBase::GetAmbientBackColor](#getambientbackcolor). Se non è disponibile alcun metodo adatto, utilizzare `GetAmbientProperty`.  
+  
+##  <a name="a-namegetambientrighttolefta--ccomcontrolbasegetambientrighttoleft"></a><a name="getambientrighttoleft"></a>CComControlBase::GetAmbientRightToLeft  
+ Recupera **DISPID_AMBIENT_RIGHTTOLEFT**, la direzione in cui viene visualizzato contenuto dal contenitore.  
+  
+```
+HRESULT GetAmbientRightToLeft(BOOL& bRightToLeft);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ *bRightToLeft*  
+ La proprietà **DISPID_AMBIENT_RIGHTTOLEFT**. Impostare su **TRUE** se il contenuto viene visualizzato da destra a sinistra, **FALSE** se viene visualizzata a sinistra a destra.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Restituisce S_OK esito positivo o un errore HRESULT in caso di errore.  
+  
+##  <a name="a-namegetambientscaleunitsa--ccomcontrolbasegetambientscaleunits"></a><a name="getambientscaleunits"></a>CComControlBase::GetAmbientScaleUnits  
+ Recupera **DISPID_AMBIENT_SCALEUNITS**, unità ambiente del contenitore (ad esempio pollici o centimetri) per le etichette consente di visualizzare.  
+  
+```
+HRESULT GetAmbientScaleUnits(BSTR& bstrScaleUnits);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ *bstrScaleUnits*  
+ La proprietà **DISPID_AMBIENT_SCALEUNITS**.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Uno dei valori di HRESULT standard.  
+  
+##  <a name="a-namegetambientshowgrabhandlesa--ccomcontrolbasegetambientshowgrabhandles"></a><a name="getambientshowgrabhandles"></a>CComControlBase::GetAmbientShowGrabHandles  
+ Recupera **DISPID_AMBIENT_SHOWGRABHANDLES**, un flag che indica se il contenitore consente il controllo da visualizzare quadratini di ridimensionamento per se stesso quando sono attive.  
+  
+```
+HRESULT GetAmbientShowGrabHandles(BOOL& bShowGrabHandles);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ *bShowGrabHandles*  
+ La proprietà **DISPID_AMBIENT_SHOWGRABHANDLES**.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Uno dei valori di HRESULT standard.  
+  
+##  <a name="a-namegetambientshowhatchinga--ccomcontrolbasegetambientshowhatching"></a><a name="getambientshowhatching"></a>CComControlBase::GetAmbientShowHatching  
+ Recupera **DISPID_AMBIENT_SHOWHATCHING**, un flag che indica se il contenitore consente il controllo verrà visualizzato con un motivo tratteggiato quando l'interfaccia utente del controllo è attivo.  
+  
+```
+HRESULT GetAmbientShowHatching(BOOL& bShowHatching);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ *bShowHatching*  
+ La proprietà **DISPID_AMBIENT_SHOWHATCHING**.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Uno dei valori di HRESULT standard.  
+  
+##  <a name="a-namegetambientsupportsmnemonicsa--ccomcontrolbasegetambientsupportsmnemonics"></a><a name="getambientsupportsmnemonics"></a>CComControlBase::GetAmbientSupportsMnemonics  
+ Recupera **DISPID_AMBIENT_SUPPORTSMNEMONICS**, un flag che indica se il contenitore supporta tasti di scelta da tastiera.  
+  
+```
+HRESULT GetAmbientSupportsMnemonics(BOOL& bSupportsMnemonics);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ *bSupportsMnemonics*  
+ La proprietà **DISPID_AMBIENT_SUPPORTSMNEMONICS**.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Uno dei valori di HRESULT standard.  
+  
+##  <a name="a-namegetambienttextaligna--ccomcontrolbasegetambienttextalign"></a><a name="getambienttextalign"></a>CComControlBase::GetAmbientTextAlign  
+ Recupera **DISPID_AMBIENT_TEXTALIGN**, l'allineamento del testo preferito dal contenitore: 0 per l'allineamento generale (numeri, testo a destra a sinistra), 1 per l'allineamento a sinistra, 2 per l'allineamento al centro e 3 per l'allineamento a destra.  
+  
+```
+HRESULT GetAmbientTextAlign(short& nTextAlign);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ *nTextAlign*  
+ La proprietà **DISPID_AMBIENT_TEXTALIGN**.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Uno dei valori di HRESULT standard.  
+  
+##  <a name="a-namegetambienttoptobottoma--ccomcontrolbasegetambienttoptobottom"></a><a name="getambienttoptobottom"></a>CComControlBase::GetAmbientTopToBottom  
+ Recupera **DISPID_AMBIENT_TOPTOBOTTOM**, la direzione in cui viene visualizzato contenuto dal contenitore.  
+  
+```
+HRESULT GetAmbientTopToBottom(BOOL& bTopToBottom);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ *bTopToBottom*  
+ La proprietà **DISPID_AMBIENT_TOPTOBOTTOM**. Impostare su **TRUE** se il testo viene visualizzato dall'alto verso il basso, **FALSE** se viene visualizzato dal basso in alto.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Restituisce S_OK esito positivo o un errore HRESULT in caso di errore.  
+  
+##  <a name="a-namegetambientuideada--ccomcontrolbasegetambientuidead"></a><a name="getambientuidead"></a>CComControlBase::GetAmbientUIDead  
+ Recupera **DISPID_AMBIENT_UIDEAD**, un flag che indica se il contenitore richieda il controllo di rispondere alle azioni dell'interfaccia utente.  
+  
+```
+HRESULT GetAmbientUIDead(BOOL& bUIDead);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ *bUIDead*  
+ La proprietà **DISPID_AMBIENT_UIDEAD**.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Uno dei valori di HRESULT standard.  
+  
+### <a name="remarks"></a>Note  
+ Se **TRUE**, il controllo potrebbe non rispondere. Questo flag si applica indipendentemente dal fatto di **DISPID_AMBIENT_USERMODE** flag. Vedere [CComControlBase::GetAmbientUserMode](#getambientusermode).  
+  
+##  <a name="a-namegetambientusermodea--ccomcontrolbasegetambientusermode"></a><a name="getambientusermode"></a>CComControlBase::GetAmbientUserMode  
+ Recupera **DISPID_AMBIENT_USERMODE**, un flag che indica se il contenitore è in modalità di esecuzione ( **TRUE**) o in modalità progettazione ( **FALSE**).  
+  
+```
+HRESULT GetAmbientUserMode(BOOL& bUserMode);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `bUserMode`  
+ La proprietà **DISPID_AMBIENT_USERMODE**.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Uno dei valori di HRESULT standard.  
+  
+##  <a name="a-namegetdirtya--ccomcontrolbasegetdirty"></a><a name="getdirty"></a>CComControlBase::GetDirty  
+ Restituisce il valore del membro dati `m_bRequiresSave`.  
+  
+```
+BOOL GetDirty();
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ Restituisce il valore del membro dati [m_bRequiresSave](#m_brequiressave).  
+  
+### <a name="remarks"></a>Note  
+ Questo valore viene impostato utilizzando [CComControlBase::SetDirty](#setdirty).  
+  
+##  <a name="a-namegetzoominfoa--ccomcontrolbasegetzoominfo"></a><a name="getzoominfo"></a>CComControlBase::GetZoomInfo  
+ Recupera gli assi x e y valori del numeratore e del denominatore del fattore di zoom per il controllo è attivato per la modifica in loco.  
+  
+```
+void GetZoomInfo(ATL_DRAWINFO& di);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `di`  
+ Struttura che conterrà il fattore di zoom numeratore e del denominatore. Per ulteriori informazioni, vedere [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md).  
+  
+### <a name="remarks"></a>Note  
+ Il fattore di zoom è la percentuale delle dimensioni fisiche del controllo alle dimensioni correnti.  
+  
+##  <a name="a-nameinplaceactivatea--ccomcontrolbaseinplaceactivate"></a><a name="inplaceactivate"></a>CComControlBase::InPlaceActivate  
+ Fa sì che il controllo per la transizione dallo stato inattivo per qualsiasi stato il verbo in `iVerb` indica.  
+  
+```
+HRESULT InPlaceActivate(LONG iVerb, const RECT* prcPosRect = NULL);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `iVerb`  
+ Valore che indica l'azione che deve essere eseguito da [IOleObjectImpl::DoVerb](../../atl/reference/ioleobjectimpl-class.md#doverb).  
+  
+ *prcPosRect*  
+ Puntatore alla posizione del controllo sul posto.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Uno dei valori di HRESULT standard.  
+  
+### <a name="remarks"></a>Note  
+ Prima dell'attivazione, questo metodo controlla che il controllo dispone di un sito client, controlla la quantità del controllo è visibile e ottiene la posizione del controllo nella finestra padre. Dopo aver attivato il controllo, questo metodo attiva l'interfaccia utente del controllo e indica al contenitore di rendere visibile il controllo.  
+  
+ Questo metodo recupera un `IOleInPlaceSite`, **IOleInPlaceSiteEx**, o **IOleInPlaceSiteWindowless** puntatore a interfaccia per il controllo e viene memorizzato nel membro dati della classe control [CComControlBase::m_spInPlaceSite](#m_spinplacesite). I membri dati della classe controllo [CComControlBase::m_bInPlaceSiteEx](#m_binplacesiteex), [CComControlBase::m_bWndLess](#m_bwndless), [CComControlBase::m_bWasOnceWindowless](#m_bwasoncewindowless), e [CComControlBase::m_bNegotiatedWnd](#m_bnegotiatedwnd) impostato su true come appropriato.  
+  
+##  <a name="a-nameinternalgetsitea--ccomcontrolbaseinternalgetsite"></a><a name="internalgetsite"></a>CComControlBase::InternalGetSite  
+ Chiamare questo metodo per eseguire una query il sito del controllo per un puntatore a interfaccia identificato.  
+  
+```
+HRESULT InternalGetSite(REFIID riid, void** ppUnkSite);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `riid`  
+ L'IID del puntatore a interfaccia che deve essere restituito in `ppUnkSite`.  
+  
+ `ppUnkSite`  
+ Indirizzo della variabile puntatore che riceve il puntatore di interfaccia richiesto `riid`.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Restituisce S_OK esito positivo o un errore HRESULT in caso di errore.  
+  
+### <a name="remarks"></a>Note  
+ Se il sito supporta l'interfaccia richiesta `riid`, viene restituito il puntatore per mezzo di `ppUnkSite`. In caso contrario, `ppUnkSite` è impostato su NULL.  
+  
+##  <a name="a-namembautosizea--ccomcontrolbasembautosize"></a><a name="m_bautosize"></a>CComControlBase::m_bAutoSize  
+ Flag che indica che il controllo non può essere qualsiasi altra dimensione.  
+  
+```
+unsigned m_bAutoSize:1;
+```  
+  
+### <a name="remarks"></a>Note  
+ Questo flag viene controllato dal `IOleObjectImpl::SetExtent` e, se **TRUE**, la funzione restituire **E_FAIL**.  
+  
+> [!NOTE]
+>  Per utilizzare il membro dati nella classe del controllo, è necessario dichiararla come un membro dati nella classe del controllo. La classe di controllo non erediterà il membro dati dalla classe di base perché è dichiarato all'interno di un'unione nella classe di base.  
+  
+ Se si aggiunge il **il ridimensionamento automatico** opzione il [proprietà predefinite](../../atl/reference/stock-properties-atl-control-wizard.md) scheda della creazione guidata controllo ATL, la procedura guidata crea il membro dati nella classe del controllo, crea put e automaticamente ai metodi get per la proprietà e supporta [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) per notificare automaticamente il contenitore quando la proprietà modificata.  
+  
+##  <a name="a-namembdrawfromnaturala--ccomcontrolbasembdrawfromnatural"></a><a name="m_bdrawfromnatural"></a>CComControlBase::m_bDrawFromNatural  
+ Flag che indica se `IDataObjectImpl::GetData` e `CComControlBase::GetZoomInfo` deve impostare le dimensioni del controllo da `m_sizeNatural` anziché da `m_sizeExtent`.  
+  
+```
+unsigned m_bDrawFromNatural:1;
+```  
+  
+### <a name="remarks"></a>Note  
+  
+> [!NOTE]
+>  Per utilizzare il membro dati nella classe del controllo, è necessario dichiararla come un membro dati nella classe del controllo. La classe di controllo non erediterà il membro dati dalla classe di base perché è dichiarato all'interno di un'unione nella classe di base.  
+  
+##  <a name="a-namembdrawgetdatainhimetrica--ccomcontrolbasembdrawgetdatainhimetric"></a><a name="m_bdrawgetdatainhimetric"></a>CComControlBase::m_bDrawGetDataInHimetric  
+ Flag che indica se `IDataObjectImpl::GetData` devono utilizzare unità HIMETRIC e non pixel durante il disegno.  
+  
+```
+unsigned m_bDrawGetDataInHimetric:1;
+```  
+  
+### <a name="remarks"></a>Note  
+ Ogni unità logica HIMETRIC corrisponde a 0,01 millimetri.  
+  
+> [!NOTE]
+>  Per utilizzare il membro dati nella classe del controllo, è necessario dichiararla come un membro dati nella classe del controllo. La classe di controllo non erediterà il membro dati dalla classe di base perché è dichiarato all'interno di un'unione nella classe di base.  
+  
+##  <a name="a-namembinplaceactivea--ccomcontrolbasembinplaceactive"></a><a name="m_binplaceactive"></a>CComControlBase::m_bInPlaceActive  
+ Flag che indica che il controllo è attivo sul posto.  
+  
+```
+unsigned m_bInPlaceActive:1;
+```  
+  
+### <a name="remarks"></a>Note  
+ Ciò significa che il controllo è visibile e la finestra, se presente, è visibile, ma il relativo menu e barre degli strumenti potrebbero non essere attivi. Il `m_bUIActive` flag indica l'interfaccia utente del controllo, ad esempio menu, inoltre è attivo.  
+  
+> [!NOTE]
+>  Per utilizzare il membro dati nella classe del controllo, è necessario dichiararla come un membro dati nella classe del controllo. La classe di controllo non erediterà il membro dati dalla classe di base perché è dichiarato all'interno di un'unione nella classe di base.  
+  
+##  <a name="a-namembinplacesiteexa--ccomcontrolbasembinplacesiteex"></a><a name="m_binplacesiteex"></a>CComControlBase::m_bInPlaceSiteEx  
+ Flag che indica il contenitore supporta il **IOleInPlaceSiteEx** interfaccia e OCX96 controllano le funzionalità, ad esempio i controlli privi di finestra e sfarfallio.  
+  
+```
+unsigned m_bInPlaceSiteEx:1;
+```  
+  
+### <a name="remarks"></a>Note  
+  
+> [!NOTE]
+>  Per utilizzare il membro dati nella classe del controllo, è necessario dichiararla come un membro dati nella classe del controllo. La classe di controllo non erediterà il membro dati dalla classe di base perché è dichiarato all'interno di un'unione nella classe di base.  
+  
+ Il membro dati `m_spInPlaceSite` punta a un [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461), o [IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300) interfaccia, a seconda del valore di `m_bWndLess` e `m_bInPlaceSiteEx` flag. (Membro dati `m_bNegotiatedWnd` deve essere **TRUE** per il `m_spInPlaceSite` puntatore è valido.)  
+  
+ Se `m_bWndLess` è **FALSE** e `m_bInPlaceSiteEx` è **TRUE**, `m_spInPlaceSite` è un **IOleInPlaceSiteEx** puntatore a interfaccia. Vedere [m_spInPlaceSite](#m_spinplacesite) per una tabella che mostra le relazioni tra questi tre membri dati.  
+  
+##  <a name="a-namembnegotiatedwnda--ccomcontrolbasembnegotiatedwnd"></a><a name="m_bnegotiatedwnd"></a>CComControlBase::m_bNegotiatedWnd  
+ Flag che indica se il controllo ha negoziato con il contenitore sul supporto per le funzionalità di controllo OCX96 (ad esempio i controlli privi di finestra e sfarfallio) e se il controllo è finestre o privi di finestra.  
+  
+```
+unsigned m_bNegotiatedWnd:1;
+```  
+  
+### <a name="remarks"></a>Note  
+  
+> [!NOTE]
+>  Per utilizzare il membro dati nella classe del controllo, è necessario dichiararla come un membro dati nella classe del controllo. La classe di controllo non erediterà il membro dati dalla classe di base perché è dichiarato all'interno di un'unione nella classe di base.  
+  
+ Il `m_bNegotiatedWnd` flag deve essere **TRUE** per il `m_spInPlaceSite` puntatore è valido.  
+  
+##  <a name="a-namembrecomposeonresizea--ccomcontrolbasembrecomposeonresize"></a><a name="m_brecomposeonresize"></a>CComControlBase::m_bRecomposeOnResize  
+ Flag che indica che il controllo richiede per ricomporre relativa presentazione quando il contenitore di dimensioni di visualizzazione del controllo.  
+  
+```
+unsigned m_bRecomposeOnResize:1;
+```  
+  
+### <a name="remarks"></a>Note  
+  
+> [!NOTE]
+>  Per utilizzare il membro dati nella classe del controllo, è necessario dichiararla come un membro dati nella classe del controllo. La classe di controllo non erediterà il membro dati dalla classe di base perché è dichiarato all'interno di un'unione nella classe di base.  
+  
+ Questo flag viene controllato dal [IOleObjectImpl::SetExtent](../../atl/reference/ioleobjectimpl-class.md#setextent) e, se **TRUE**, `SetExtent` notifica al contenitore delle modifiche di visualizzazione. Se questo flag è impostato, il **OLEMISC_RECOMPOSEONRESIZE** bit di [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) enumerazione deve inoltre essere impostato.  
+  
+##  <a name="a-namembrequiressavea--ccomcontrolbasembrequiressave"></a><a name="m_brequiressave"></a>CComControlBase::m_bRequiresSave  
+ Flag che indica che il controllo è stato modificato dall'ultimo salvataggio.  
+  
+```
+unsigned m_bRequiresSave:1;
+```  
+  
+### <a name="remarks"></a>Note  
+ Il valore di `m_bRequiresSave` possono essere impostati con [CComControlBase::SetDirty](#setdirty) e recuperati con [CComControlBase::GetDirty](#getdirty).  
+  
+> [!NOTE]
+>  Per utilizzare il membro dati nella classe del controllo, è necessario dichiararla come un membro dati nella classe del controllo. La classe di controllo non erediterà il membro dati dalla classe di base perché è dichiarato all'interno di un'unione nella classe di base.  
+  
+##  <a name="a-namembresizenaturala--ccomcontrolbasembresizenatural"></a><a name="m_bresizenatural"></a>CComControlBase::m_bResizeNatural  
+ Flag che indica il controllo desidera ridimensionare estensione naturale (le dimensioni fisiche non in scala) quando il contenitore cambia dimensioni di visualizzazione del controllo.  
+  
+```
+unsigned m_bResizeNatural:1;
+```  
+  
+### <a name="remarks"></a>Note  
+ Questo flag viene controllato dal `IOleObjectImpl::SetExtent` e, se **TRUE**, le dimensioni passato `SetExtent` viene assegnato a `m_sizeNatural`.  
+  
+ La dimensione passato `SetExtent` viene sempre assegnato al `m_sizeExtent`, indipendentemente dal valore di `m_bResizeNatural`.  
+  
+> [!NOTE]
+>  Per utilizzare il membro dati nella classe del controllo, è necessario dichiararla come un membro dati nella classe del controllo. La classe di controllo non erediterà il membro dati dalla classe di base perché è dichiarato all'interno di un'unione nella classe di base.  
+  
+##  <a name="a-namembuiactivea--ccomcontrolbasembuiactive"></a><a name="m_buiactive"></a>CComControlBase::m_bUIActive  
+ Flag che indica l'interfaccia del controllo utente, ad esempio menu e barre degli strumenti, è attivo.  
+  
+```
+unsigned m_bUIActive:1;
+```  
+  
+### <a name="remarks"></a>Note  
+ Il `m_bInPlaceActive` flag indica che il controllo è attivo, ma non che la relativa interfaccia utente è attivo.  
+  
+> [!NOTE]
+>  Per utilizzare il membro dati nella classe del controllo, è necessario dichiararla come un membro dati nella classe del controllo. La classe di controllo non erediterà il membro dati dalla classe di base perché è dichiarato all'interno di un'unione nella classe di base.  
+  
+##  <a name="a-namembusingwindowrgna--ccomcontrolbasembusingwindowrgn"></a><a name="m_busingwindowrgn"></a>CComControlBase::m_bUsingWindowRgn  
+ Flag che indica che il controllo sta utilizzando l'area della finestra fornito dal contenitore.  
+  
+```
+unsigned m_bUsingWindowRgn:1;
+```  
+  
+### <a name="remarks"></a>Note  
+  
+> [!NOTE]
+>  Per utilizzare il membro dati nella classe del controllo, è necessario dichiararla come un membro dati nella classe del controllo. La classe di controllo non erediterà il membro dati dalla classe di base perché è dichiarato all'interno di un'unione nella classe di base.  
+  
+##  <a name="a-namembwasoncewindowlessa--ccomcontrolbasembwasoncewindowless"></a><a name="m_bwasoncewindowless"></a>CComControlBase::m_bWasOnceWindowless  
+ Flag che indica il controllo è stata privi di finestra, ma può o non siano privi di finestra ora.  
+  
+```
+unsigned m_bWasOnceWindowless:1;
+```  
+  
+### <a name="remarks"></a>Note  
+  
+> [!NOTE]
+>  Per utilizzare il membro dati nella classe del controllo, è necessario dichiararla come un membro dati nella classe del controllo. La classe di controllo non erediterà il membro dati dalla classe di base perché è dichiarato all'interno di un'unione nella classe di base.  
+  
+##  <a name="a-namembwindowonlya--ccomcontrolbasembwindowonly"></a><a name="m_bwindowonly"></a>CComControlBase  
+ Flag che indica che il controllo deve essere finestra, anche se il contenitore supporta i controlli privi di finestra.  
+  
+```
+unsigned m_bWindowOnly:1;
+```  
+  
+### <a name="remarks"></a>Note  
+  
+> [!NOTE]
+>  Per utilizzare il membro dati nella classe del controllo, è necessario dichiararla come un membro dati nella classe del controllo. La classe di controllo non erediterà il membro dati dalla classe di base perché è dichiarato all'interno di un'unione nella classe di base.  
+  
+##  <a name="a-namembwndlessa--ccomcontrolbasembwndless"></a><a name="m_bwndless"></a>CComControlBase::m_bWndLess  
+ Flag che indica che il controllo è privi di finestra.  
+  
+```
+unsigned m_bWndLess:1;
+```  
+  
+### <a name="remarks"></a>Note  
+  
+> [!NOTE]
+>  Per utilizzare il membro dati nella classe del controllo, è necessario dichiararla come un membro dati nella classe del controllo. La classe di controllo non erediterà il membro dati dalla classe di base perché è dichiarato all'interno di un'unione nella classe di base.  
+  
+ Il membro dati `m_spInPlaceSite` punta a un [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461), o [IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300) interfaccia, a seconda del valore di `m_bWndLess` e [CComControlBase::m_bInPlaceSiteEx](#m_binplacesiteex) flag. (Membro dati [CComControlBase::m_bNegotiatedWnd](#m_bnegotiatedwnd) deve essere **TRUE** per il [CComControlBase::m_spInPlaceSite](#m_spinplacesite) puntatore è valido.)  
+  
+ Se `m_bWndLess` è **TRUE**, `m_spInPlaceSite` è un **IOleInPlaceSiteWindowless** puntatore a interfaccia. Vedere [CComControlBase::m_spInPlaceSite](#m_spinplacesite) per una tabella che mostra le relazioni tra i membri di dati completezza.  
+  
+##  <a name="a-namemhwndcda--ccomcontrolbasemhwndcd"></a><a name="m_hwndcd"></a>CComControlBase::m_hWndCD  
+ Contiene un riferimento all'handle della finestra associato al controllo.  
+  
+```
+HWND& m_hWndCD;
+```  
+  
+### <a name="remarks"></a>Note  
+  
+> [!NOTE]
+>  Per utilizzare il membro dati nella classe del controllo, è necessario dichiararla come un membro dati nella classe del controllo. La classe di controllo non erediterà il membro dati dalla classe di base perché è dichiarato all'interno di un'unione nella classe di base.  
+  
+##  <a name="a-namemnfreezeeventsa--ccomcontrolbasemnfreezeevents"></a><a name="m_nfreezeevents"></a>CComControlBase::m_nFreezeEvents  
+ Un conteggio del numero di volte in cui il contenitore è bloccata eventi (ha rifiutati di accettare eventi) senza un corrispondente Sblocca di eventi (accettazione di eventi).  
+  
+```
+short m_nFreezeEvents;
+```  
+  
+### <a name="remarks"></a>Note  
+  
+> [!NOTE]
+>  Per utilizzare il membro dati nella classe del controllo, è necessario dichiararla come un membro dati nella classe del controllo. La classe di controllo non erediterà il membro dati dalla classe di base perché è dichiarato all'interno di un'unione nella classe di base.  
+  
+##  <a name="a-namemrcposa--ccomcontrolbasemrcpos"></a><a name="m_rcpos"></a>CComControlBase::m_rcPos  
+ La posizione in pixel del controllo, espressa in coordinate del contenitore.  
+  
+```
+RECT m_rcPos;
+```  
+  
+### <a name="remarks"></a>Note  
+  
+> [!NOTE]
+>  Per utilizzare il membro dati nella classe del controllo, è necessario dichiararla come un membro dati nella classe del controllo. La classe di controllo non erediterà il membro dati dalla classe di base perché è dichiarato all'interno di un'unione nella classe di base.  
+  
+##  <a name="a-namemsizeextenta--ccomcontrolbasemsizeextent"></a><a name="m_sizeextent"></a>CComControlBase::m_sizeExtent  
+ L'estensione del controllo in unità HIMETRIC (ogni unità corrisponde a 0,01 millimetri) per una visualizzazione specifica.  
+  
+```
+SIZE m_sizeExtent;
+```  
+  
+### <a name="remarks"></a>Note  
+  
+> [!NOTE]
+>  Per utilizzare il membro dati nella classe del controllo, è necessario dichiararla come un membro dati nella classe del controllo. La classe di controllo non erediterà il membro dati dalla classe di base perché è dichiarato all'interno di un'unione nella classe di base.  
+  
+ Questa dimensione, è necessario per la visualizzazione. Dimensioni fisiche del controllo sono specificata nel `m_sizeNatural` (membro dati) e viene risolto.  
+  
+ È possibile convertire le dimensioni in pixel con la funzione globale [AtlHiMetricToPixel](http://msdn.microsoft.com/library/00c3af58-7298-4082-9a2e-5b68a8cec6fd).  
+  
+##  <a name="a-namemsizenaturala--ccomcontrolbasemsizenatural"></a><a name="m_sizenatural"></a>CComControlBase::m_sizeNatural  
+ La dimensione fisica del controllo in unità HIMETRIC (ogni unità corrisponde a 0,01 millimetri).  
+  
+```
+SIZE m_sizeNatural;
+```  
+  
+### <a name="remarks"></a>Note  
+  
+> [!NOTE]
+>  Per utilizzare il membro dati nella classe del controllo, è necessario dichiararla come un membro dati nella classe del controllo. La classe di controllo non erediterà il membro dati dalla classe di base perché è dichiarato all'interno di un'unione nella classe di base.  
+  
+ Questa dimensione è fissa, mentre le dimensioni in `m_sizeExtent` viene ridimensionato per la visualizzazione.  
+  
+ È possibile convertire le dimensioni in pixel con la funzione globale [AtlHiMetricToPixel](http://msdn.microsoft.com/library/00c3af58-7298-4082-9a2e-5b68a8cec6fd).  
+  
+##  <a name="a-namemspadvisesinka--ccomcontrolbasemspadvisesink"></a><a name="m_spadvisesink"></a>CComControlBase::m_spAdviseSink  
+ Un puntatore diretto per la connessione consultiva sul contenitore (il contenitore [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513)).  
+  
+```
+CComPtr<IAdviseSink>
+    m_spAdviseSink;
+```     
+  
+### <a name="remarks"></a>Note  
+  
+> [!NOTE]
+>  Per utilizzare il membro dati nella classe del controllo, è necessario dichiararla come un membro dati nella classe del controllo. La classe di controllo non erediterà il membro dati dalla classe di base perché è dichiarato all'interno di un'unione nella classe di base.  
+  
+##  <a name="a-namemspambientdispatcha--ccomcontrolbasemspambientdispatch"></a><a name="m_spambientdispatch"></a>CComControlBase::m_spAmbientDispatch  
+ Oggetto `CComDispatchDriver` oggetto che consente di recuperare e impostare le proprietà di un oggetto tramite un `IDispatch` puntatore.  
+  
+```
+CComDispatchDriver m_spAmbientDispatch;
+```  
+  
+### <a name="remarks"></a>Note  
+  
+> [!NOTE]
+>  Per utilizzare il membro dati nella classe del controllo, è necessario dichiararla come un membro dati nella classe del controllo. La classe di controllo non erediterà il membro dati dalla classe di base perché è dichiarato all'interno di un'unione nella classe di base.  
+  
+##  <a name="a-namemspclientsitea--ccomcontrolbasemspclientsite"></a><a name="m_spclientsite"></a>CComControlBase::m_spClientSite  
+ Puntatore al sito di client del controllo all'interno del contenitore.  
+  
+```
+CComPtr<IOleClientSite>
+    m_spClientSite;
+```     
+  
+### <a name="remarks"></a>Note  
+  
+> [!NOTE]
+>  Per utilizzare il membro dati nella classe del controllo, è necessario dichiararla come un membro dati nella classe del controllo. La classe di controllo non erediterà il membro dati dalla classe di base perché è dichiarato all'interno di un'unione nella classe di base.  
+  
+##  <a name="a-namemspdataadviseholdera--ccomcontrolbasemspdataadviseholder"></a><a name="m_spdataadviseholder"></a>CComControlBase::m_spDataAdviseHolder  
+ Fornisce uno standard conservare le connessioni consultive tra gli oggetti dati e sink di notifica.  
+  
+```
+CComPtr<IDataAdviseHolder>
+    m_spDataAdviseHolder;
+```     
+  
+### <a name="remarks"></a>Note  
+  
+> [!NOTE]
+>  Per utilizzare il membro dati nella classe del controllo, è necessario dichiararla come un membro dati nella classe del controllo. La classe di controllo non erediterà il membro dati dalla classe di base perché è dichiarato all'interno di un'unione nella classe di base.  
+  
+ Un oggetto dati è un controllo che può trasferire i dati e che implementa [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421), i cui metodi specificano il supporto di formato e il trasferimento dei dati.  
+  
+ L'interfaccia `m_spDataAdviseHolder` implementa il [IDataObject::DAdvise](http://msdn.microsoft.com/library/windows/desktop/ms692579) e [IDataObject::DUnadvise](http://msdn.microsoft.com/library/windows/desktop/ms692448) metodi per creare ed eliminare le connessioni consultive al contenitore. Il contenitore del controllo deve implementare un sink di notifica mediante il supporto di [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513) interfaccia.  
+  
+##  <a name="a-namemspinplacesitea--ccomcontrolbasemspinplacesite"></a><a name="m_spinplacesite"></a>CComControlBase::m_spInPlaceSite  
+ Un puntatore al contenitore [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461), o [IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300) puntatore a interfaccia.  
+  
+```
+CComPtr<IOleInPlaceSiteWindowless>
+    m_spInPlaceSite;
+```     
+  
+### <a name="remarks"></a>Note  
+  
+> [!NOTE]
+>  Per utilizzare il membro dati nella classe del controllo, è necessario dichiararla come un membro dati nella classe del controllo. La classe di controllo non erediterà il membro dati dalla classe di base perché è dichiarato all'interno di un'unione nella classe di base.  
+  
+ Il `m_spInPlaceSite` puntatore è valido solo se il [m_bNegotiatedWnd](#m_bnegotiatedwnd) flag **TRUE**.  
+  
+ Nella tabella seguente viene illustrato come il `m_spInPlaceSite` dipende dal tipo di puntatore il [m_bWndLess](#m_bwndless) e [m_bInPlaceSiteEx](#m_binplacesiteex) flag membro dati:  
+  
+|Tipo m_spInPlaceSite|m_bWndLess valore|m_bInPlaceSiteEx valore|  
+|---------------------------|-----------------------|-----------------------------|  
+|**IOleInPlaceSiteWindowless**|**TRUE**|**TRUE** o **FALSE**|  
+|**IOleInPlaceSiteEx**|**FALSE**|**TRUE**|  
+|`IOleInPlaceSite`|**FALSE**|**FALSE**|  
+  
+##  <a name="a-namemspoleadviseholdera--ccomcontrolbasemspoleadviseholder"></a><a name="m_spoleadviseholder"></a>CComControlBase::m_spOleAdviseHolder  
+ Fornisce un'implementazione standard di un modo per contenere le connessioni consultive.  
+  
+```
+CComPtr<IOleAdviseHolder>
+    m_spOleAdviseHolder;
+```     
+  
+### <a name="remarks"></a>Note  
+  
+> [!NOTE]
+>  Per utilizzare il membro dati nella classe del controllo, è necessario dichiararla come un membro dati nella classe del controllo. La classe di controllo non erediterà il membro dati dalla classe di base perché è dichiarato all'interno di un'unione nella classe di base.  
+  
+ L'interfaccia `m_spOleAdviseHolder` implementa il [IOleObject::Advise](http://msdn.microsoft.com/library/windows/desktop/ms686573) e [IOleObject::Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms693749) metodi per creare ed eliminare le connessioni consultive al contenitore. Il contenitore del controllo deve implementare un sink di notifica mediante il supporto di [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513) interfaccia.  
+  
+##  <a name="a-nameondrawa--ccomcontrolbaseondraw"></a><a name="ondraw"></a>CComControlBase:: OnDraw  
+ Eseguire l'override di questo metodo per disegnare il controllo.  
+  
+```
+virtual HRESULT OnDraw(ATL_DRAWINFO& di);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `di`  
+ Un riferimento di [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md) struttura che contiene informazioni sul disegno, ad esempio l'aspetto di disegno, i limiti del controllo, e se il disegno è ottimizzato o non.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Un valore `HRESULT` standard.  
+  
+### <a name="remarks"></a>Note  
+ Il valore predefinito `OnDraw` Elimina o Ripristina il contesto di dispositivo non ha alcun effetto, a seconda del flag impostati nel [CComControlBase::OnDrawAdvanced](#ondrawadvanced).  
+  
+ Un `OnDraw` metodo viene aggiunto automaticamente alla classe del controllo quando si crea il controllo con la creazione guidata controllo ATL. Valore predefinito della procedura guidata `OnDraw` Disegna un rettangolo con etichetta "ATL 8.0".  
+  
+### <a name="example"></a>Esempio  
+ Vedere l'esempio per [CComControlBase:: GetAmbientAppearance](#getambientappearance).  
+  
+##  <a name="a-nameondrawadvanceda--ccomcontrolbaseondrawadvanced"></a><a name="ondrawadvanced"></a>CComControlBase::OnDrawAdvanced  
+ Il valore predefinito `OnDrawAdvanced` prepara un contesto di dispositivo normalizzato per il disegno, quindi chiama la classe di controllo `OnDraw` metodo.  
+  
+```
+virtual HRESULT OnDrawAdvanced(ATL_DRAWINFO& di);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `di`  
+ Un riferimento di [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md) struttura che contiene informazioni sul disegno, ad esempio l'aspetto di disegno, i limiti del controllo, e se il disegno è ottimizzato o non.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Un valore `HRESULT` standard.  
+  
+### <a name="remarks"></a>Note  
+ Eseguire l'override di questo metodo se si desidera accettare il contesto di dispositivo passato dal contenitore senza normalizzazione.  
+  
+ Vedere [CComControlBase:: OnDraw](#ondraw) per ulteriori dettagli.  
+  
+##  <a name="a-nameonkillfocusa--ccomcontrolbaseonkillfocus"></a><a name="onkillfocus"></a>CComControlBase::OnKillFocus  
+ Verifica che il controllo è attivo sul posto e dispone di un sito di controllo valido, quindi informa il contenitore che il controllo ha perso lo stato attivo.  
+  
+```
+LRESULT OnKillFocus(UINT /* nMsg */,
+    WPARAM /* wParam */,
+    LPARAM /* lParam */,
+    BOOL& bHandled);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `nMsg`  
+ Riservato.  
+  
+ `wParam`  
+ Riservato.  
+  
+ `lParam`  
+ Riservato.  
+  
+ `bHandled`  
+ Flag che indica se la finestra di messaggio è stato gestito correttamente. Il valore predefinito è `FALSE`.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Restituisce sempre 1.  
+  
+##  <a name="a-nameonmouseactivatea--ccomcontrolbaseonmouseactivate"></a><a name="onmouseactivate"></a>CComControlBase::OnMouseActivate  
+ Verifica che l'interfaccia utente è in modalità utente, quindi attiva il controllo.  
+  
+```
+LRESULT OnMouseActivate(UINT /* nMsg */,
+    WPARAM /* wParam */,
+    LPARAM /* lParam */,
+    BOOL& bHandled);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `nMsg`  
+ Riservato.  
+  
+ `wParam`  
+ Riservato.  
+  
+ `lParam`  
+ Riservato.  
+  
+ `bHandled`  
+ Flag che indica se la finestra di messaggio è stato gestito correttamente. Il valore predefinito è `FALSE`.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Restituisce sempre 1.  
+  
+##  <a name="a-nameonpainta--ccomcontrolbaseonpaint"></a><a name="onpaint"></a>CComControlBase::OnPaint  
+ Prepara il contenitore per il disegno, ottiene l'area client del controllo, quindi chiama la classe di controllo `OnDrawAdvanced` metodo.  
+  
+```
+LRESULT OnPaint(UINT /* nMsg */,
+    WPARAM wParam,
+    LPARAM /* lParam */,
+    BOOL& /* lResult */);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `nMsg`  
+ Riservato.  
+  
+ `wParam`  
+ Un HDC esistente.  
+  
+ `lParam`  
+ Riservato.  
+  
+ `lResult`  
+ Riservato.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Restituisce sempre zero.  
+  
+### <a name="remarks"></a>Note  
+ Se `wParam` non è NULL, `OnPaint` si presuppone che contiene un HDC valido e viene utilizzato al posto di [CComControlBase::m_hWndCD](#m_hwndcd).  
+  
+##  <a name="a-nameonsetfocusa--ccomcontrolbaseonsetfocus"></a><a name="onsetfocus"></a>CComControlBase::OnSetFocus  
+ Verifica che il controllo è attivo sul posto e dispone di un sito di controllo valido, quindi informa il contenitore del controllo ha acquisito lo stato attivo.  
+  
+```
+LRESULT OnSetFocus(UINT /* nMsg */,
+    WPARAM /* wParam */,
+    LPARAM /* lParam */,
+    BOOL& bHandled);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `nMsg`  
+ Riservato.  
+  
+ `wParam`  
+ Riservato.  
+  
+ `lParam`  
+ Riservato.  
+  
+ `bHandled`  
+ Flag che indica se la finestra di messaggio è stato gestito correttamente. Il valore predefinito è `FALSE`.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Restituisce sempre 1.  
+  
+### <a name="remarks"></a>Note  
+ Invia una notifica al contenitore che il controllo ha ricevuto lo stato attivo.  
+  
+##  <a name="a-namepretranslateacceleratora--ccomcontrolbasepretranslateaccelerator"></a><a name="pretranslateaccelerator"></a>CComControlBase::PreTranslateAccelerator  
+ Eseguire l'override di questo metodo per fornire la propria tastiera gestori di tasti di scelta rapida.  
+  
+```
+BOOL PreTranslateAccelerator(LPMSG /* pMsg */,
+    HRESULT& /* hRet */);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `pMsg`  
+ Riservato.  
+  
+ *hRet*  
+ Riservato.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Per impostazione predefinita restituisce **FALSE**.  
+  
+##  <a name="a-namesendonclosea--ccomcontrolbasesendonclose"></a><a name="sendonclose"></a>CComControlBase::SendOnClose  
+ Notifica a sink consultivi tutti registrato con il titolare di notifica che il controllo è stata chiusa.  
+  
+```
+HRESULT SendOnClose();
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ Restituisce S_OK esito positivo o un errore HRESULT in caso di errore.  
+  
+### <a name="remarks"></a>Note  
+ Invia una notifica che il controllo ha chiuso il sink consultivi.  
+  
+##  <a name="a-namesendondatachangea--ccomcontrolbasesendondatachange"></a><a name="sendondatachange"></a>CComControlBase::SendOnDataChange  
+ Notifica a sink consultivi tutti registrato con il titolare di notifica che i dati del controllo sono stato modificato.  
+  
+```
+HRESULT SendOnDataChange(DWORD advf = 0);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ *ADVF*  
+ Flag che specificano di notifica come la chiamata a [IAdviseSink::OnDataChange](http://msdn.microsoft.com/library/windows/desktop/ms687283) viene effettuata. I valori sono compresi il [ADVF](http://msdn.microsoft.com/library/windows/desktop/ms693742) enumerazione.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Restituisce S_OK esito positivo o un errore HRESULT in caso di errore.  
+  
+##  <a name="a-namesendonrenamea--ccomcontrolbasesendonrename"></a><a name="sendonrename"></a>CComControlBase::SendOnRename  
+ Notifica a sink consultivi tutti registrato con il titolare di notifica che il controllo dispone di un nuovo moniker.  
+  
+```
+HRESULT SendOnRename(IMoniker* pmk);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ *PMK*  
+ Puntatore al nuovo moniker del controllo.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Restituisce S_OK esito positivo o un errore HRESULT in caso di errore.  
+  
+### <a name="remarks"></a>Note  
+ Invia una notifica che il moniker per il controllo è stato modificato.  
+  
+##  <a name="a-namesendonsavea--ccomcontrolbasesendonsave"></a><a name="sendonsave"></a>CComControlBase::SendOnSave  
+ Notifica a sink consultivi tutti registrato con il titolare di notifica che il controllo è stato salvato.  
+  
+```
+HRESULT SendOnSave();
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ Restituisce S_OK esito positivo o un errore HRESULT in caso di errore.  
+  
+### <a name="remarks"></a>Note  
+ Invia una notifica, il controllo è salvati solo i dati.  
+  
+##  <a name="a-namesendonviewchangea--ccomcontrolbasesendonviewchange"></a><a name="sendonviewchange"></a>CComControlBase::SendOnViewChange  
+ Notifica a che tutti i sink consultivo che ha modificato la visualizzazione del controllo.  
+  
+```
+HRESULT SendOnViewChange(DWORD dwAspect, LONG lindex = -1);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `dwAspect`  
+ L'aspetto o la vista del controllo.  
+  
+ *lindex*  
+ La parte della vista che è stato modificato. Solo -1 è valido.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Restituisce S_OK esito positivo o un errore HRESULT in caso di errore.  
+  
+### <a name="remarks"></a>Note  
+ `SendOnViewChange`chiamate [IAdviseSink::OnViewChange](http://msdn.microsoft.com/library/windows/desktop/ms694337). L'unico valore di *lindex* attualmente supportato è -1, che indica che l'intera vista è di particolare interesse.  
+  
+##  <a name="a-namesetcontrolfocusa--ccomcontrolbasesetcontrolfocus"></a><a name="setcontrolfocus"></a>CComControlBase::SetControlFocus  
+ Imposta o rimuove lo stato attivo da o verso il controllo.  
+  
+```
+BOOL SetControlFocus(BOOL bGrab);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ *bGrab*  
+ Se **TRUE**, imposta lo stato attivo al controllo chiamante. Se **FALSE**, rimuove lo stato attivo dal controllo chiamante, purché abbia lo stato attivo.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Restituisce **TRUE** se il controllo riceve lo stato attivo; in caso contrario, **FALSE**.  
+  
+### <a name="remarks"></a>Note  
+ Per un controllo con finestra, la funzione API Windows [SetFocus](http://msdn.microsoft.com/library/windows/desktop/ms646312) viene chiamato. Per un controllo senza finestra, [IOleInPlaceSiteWindowless::SetFocus](http://msdn.microsoft.com/library/windows/desktop/ms679745) viene chiamato. Tramite questa chiamata, un controllo senza finestra Ottiene lo stato attivo e può rispondere a messaggi di finestra.  
+  
+##  <a name="a-namesetdirtya--ccomcontrolbasesetdirty"></a><a name="setdirty"></a>CComControlBase::SetDirty  
+ Imposta il membro dati `m_bRequiresSave` sul valore `bDirty`.  
+  
+```
+void SetDirty(BOOL bDirty);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `bDirty`  
+ Valore del membro dati [CComControlBase::m_bRequiresSave](#m_brequiressave).  
+  
+### <a name="remarks"></a>Note  
+ **SetDirty(TRUE)** deve essere chiamato per flag che il controllo è stato modificato dopo l'ultimo salvataggio. Il valore di `m_bRequiresSave` viene recuperata con [CComControlBase::GetDirty](#getdirty).  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Classe CComControl](../../atl/reference/ccomcontrol-class.md)   
+ [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
+

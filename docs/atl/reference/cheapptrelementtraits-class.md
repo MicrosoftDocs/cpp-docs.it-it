@@ -1,71 +1,82 @@
 ---
-title: "CHeapPtrElementTraits Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL.CHeapPtrElementTraits"
-  - "CHeapPtrElementTraits"
-  - "ATL::CHeapPtrElementTraits"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CHeapPtrElementTraits class"
+title: Classe CHeapPtrElementTraits | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL.CHeapPtrElementTraits
+- CHeapPtrElementTraits
+- ATL::CHeapPtrElementTraits
+dev_langs:
+- C++
+helpviewer_keywords:
+- CHeapPtrElementTraits class
 ms.assetid: 910e0e06-3c8b-4242-bf00-b57eb74fbc77
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# CHeapPtrElementTraits Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
+ms.openlocfilehash: cf442a47a8f7f56a9563b73d03224165248232d5
+ms.lasthandoff: 02/24/2017
 
-Questa classe fornisce metodi, funzioni statiche e i typedef utili quando crea raccolte di puntatori heap.  
+---
+# <a name="cheapptrelementtraits-class"></a>Classe CHeapPtrElementTraits
+Questa classe fornisce metodi e funzioni statiche typedef utile durante la creazione di raccolte di puntatori di heap.  
   
 > [!IMPORTANT]
 >  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
+```
+template<typename T, class Allocator = ATL::CCRTAllocator>  
+class CHeapPtrElementTraits : 
+   public CDefaultElementTraits<ATL::CHeapPtr<T, Allocator>>
 ```  
   
-      template<  
-typename T,  
-class Allocator= ATL::CCRTAllocator  
->  
-class CHeapPtrElementTraits : public CDefaultElementTraits<  
-ATL::CHeapPtr< T, Allocator>  
->  
-```  
-  
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `T`  
- Il tipo di oggetto da archiviare nella classe di raccolte.  
+ Il tipo di oggetto da archiviare nella classe di raccolta.  
   
  `Allocator`  
- La classe di allocazione della memoria da utilizzare.  l'impostazione predefinita è [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).  
+ La classe di allocazione di memoria da utilizzare. Il valore predefinito è [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Typedef pubblici  
+### <a name="public-typedefs"></a>Typedef pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CHeapPtrElementTraits::INARGTYPE](../Topic/CHeapPtrElementTraits::INARGTYPE.md)|Il tipo di dati da utilizzare per l'aggiunta di elementi all'oggetto classe di raccolte.|  
-|[CHeapPtrElementTraits::OUTARGTYPE](../Topic/CHeapPtrElementTraits::OUTARGTYPE.md)|Il tipo di dati da utilizzare per recuperare gli elementi dall'oggetto classe di raccolte.|  
+|[CHeapPtrElementTraits::INARGTYPE](#inargtype)|Il tipo di dati da utilizzare per l'aggiunta di elementi per l'oggetto di classe di raccolta.|  
+|[CHeapPtrElementTraits::OUTARGTYPE](#outargtype)|Il tipo di dati da utilizzare per recuperare elementi dall'oggetto classe di insiemi.|  
   
-## Note  
- Questa classe fornisce metodi, funzioni statiche e i typedef per il supporto della creazione di oggetti della classe di raccolte che contengono puntatori heap.  La classe `CHeapPtrList` deriva da `CHeapPtrElementTraits`.  
+## <a name="remarks"></a>Note  
+ Questa classe fornisce metodi e funzioni statiche TypeDef per consentire la creazione di oggetti di classe di raccolta che contengono puntatori di heap. La classe `CHeapPtrList` deriva da `CHeapPtrElementTraits`.  
   
- Per ulteriori informazioni, vedere [Classi di raccolte ATL](../../atl/atl-collection-classes.md).  
+ Per ulteriori informazioni, vedere [classi Collection ATL](../../atl/atl-collection-classes.md).  
   
-## Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)  
   
  [CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)  
@@ -76,10 +87,25 @@ ATL::CHeapPtr< T, Allocator>
   
  `CHeapPtrElementTraits`  
   
-## Requisiti  
- **Header:** atlcoll.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** atlcoll. h  
   
-## Vedere anche  
- [CDefaultElementTraits Class](../../atl/reference/cdefaultelementtraits-class.md)   
- [CComHeapPtr Class](../../atl/reference/ccomheapptr-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+##  <a name="a-nameinargtypea--cheapptrelementtraitsinargtype"></a><a name="inargtype"></a>CHeapPtrElementTraits::INARGTYPE  
+ Il tipo di dati da utilizzare per l'aggiunta di elementi per l'oggetto di classe di raccolta.  
+  
+```
+typedef CHeapPtr<T, Allocator>& INARGTYPE;
+```  
+  
+##  <a name="a-nameoutargtypea--cheapptrelementtraitsoutargtype"></a><a name="outargtype"></a>CHeapPtrElementTraits::OUTARGTYPE  
+ Il tipo di dati da utilizzare per recuperare elementi dall'oggetto classe di insiemi.  
+  
+```
+typedef T *& OUTARGTYPE;
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Classe CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)   
+ [Classe template CComHeapPtr](../../atl/reference/ccomheapptr-class.md)   
+ [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
+
