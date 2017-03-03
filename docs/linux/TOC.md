@@ -1,0 +1,5 @@
+# [Scaricare, installare e configurare il carico di lavoro per lo sviluppo di applicazioni Linux](download-install-and-setup-the-linux-development-workload.md)
+# [Creare un nuovo progetto Linux](create-a-new-linux-project.md)
+# [Configurare un progetto Linux](configure-a-linux-project.md)
+# [Connettersi al computer Linux remoto](connect-to-your-remote-linux-computer.md)
+# [Distribuire, eseguire ed eseguire il debug del progetto Linux](deploy-run-and-debug-your-linux-project.md)
