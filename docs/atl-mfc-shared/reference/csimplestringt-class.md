@@ -40,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 791b9ec18cc71fe19f633c12afdc48c835c2bf14
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: e273aff69b9c8dbea4fb829798b2e9d58351b9dd
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="csimplestringt-class"></a>Classe CSimpleStringT
@@ -269,7 +269,7 @@ explicit CSimpleStringT(IAtlStringMgr* pStringMgr) throw();
  Costruisce un nuovo oggetto `CSimpleStringT`. Poiché i costruttori di copiano i dati di input in nuova risorsa di archiviazione allocato, possono comportare eccezioni di memoria.  
   
 ### <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato l'utilizzo di `CSimpleStringT::CSimpleStringT` utilizzando la libreria ATL `typedef``CSimpleString`. `CSimpleString`è una specializzazione di modello di classe `CSimpleStringT`.  
+ Nell'esempio seguente viene illustrato l'utilizzo di `CSimpleStringT::CSimpleStringT` utilizzando la libreria ATL `typedef` `CSimpleString`. `CSimpleString`è una specializzazione di modello di classe `CSimpleStringT`.  
   
 ```cpp  
 CSimpleString s1(pMgr);

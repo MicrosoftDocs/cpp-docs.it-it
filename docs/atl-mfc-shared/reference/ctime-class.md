@@ -37,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 5ac891241f29df515864c01fc449197f39bbaedd
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: 56b8b5c3574a7a53a4e259412b1b1326973bcac9
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="ctime-class"></a>CTime (classe)
@@ -183,13 +183,13 @@ CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
 ### <a name="remarks"></a>Note  
  Ogni costruttore è descritta di seguito:  
   
-- **CTime (); **Costruisce un valore non inizializzato `CTime` oggetto. Questo costruttore consente di definire `CTime` matrici dell'oggetto. È necessario inizializzare tali matrici con tempi validi prima di utilizzare.  
+- **CTime(); ** Costruisce un valore non inizializzato `CTime` oggetto. Questo costruttore consente di definire `CTime` matrici dell'oggetto. È necessario inizializzare tali matrici con tempi validi prima di utilizzare.  
   
-- **CTime (const CTime /); **Costruisce un `CTime` da un altro oggetto `CTime` valore.  
+- **CTime (const CTime /); ** Costruisce un `CTime` da un altro oggetto `CTime` valore.  
   
-- **CTime (__time64_t); **Costruisce un `CTime` dell'oggetto da un **__time64_t** tipo. Questo costruttore prevede un'ora UTC e converte il risultato di un'ora locale prima di archiviare il risultato.  
+- **CTime (__time64_t); ** Costruisce un `CTime` dell'oggetto da un **__time64_t** tipo. Questo costruttore prevede un'ora UTC e converte il risultato di un'ora locale prima di archiviare il risultato.  
   
-- **CTime (int, int,...); **Costruisce un `CTime` oggetto dai componenti di ora locale in cui ogni componente vincolato a intervalli seguenti:  
+- **CTime (int, int,...); ** Costruisce un `CTime` oggetto dai componenti di ora locale in cui ogni componente vincolato a intervalli seguenti:  
   
     |Componente|Intervallo|  
     |---------------|-----------|  
@@ -202,11 +202,11 @@ CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
   
      Questo costruttore effettua la conversione appropriata in formato UTC. La versione di Debug della libreria di classi Microsoft Foundation asserzioni se uno o più dei componenti di ora sono non compreso nell'intervallo. È necessario convalidare gli argomenti prima di chiamare. Questo costruttore prevede un'ora locale.  
   
-- `CTime`( **WORD, WORD** ) **;** Costruisce un `CTime` oggetto dai valori di data e ora MS-DOS specificati. Questo costruttore prevede un'ora locale.  
+- **CTime (WORD, WORD) ** Costruisce un `CTime` oggetto dai valori di data e ora MS-DOS specificati. Questo costruttore prevede un'ora locale.  
   
-- `CTime`( **const SYSTEMTIME&** ) **;** Costruisce un `CTime` dell'oggetto da un `SYSTEMTIME` struttura. Questo costruttore prevede un'ora locale.  
+- **CTime (const SYSTEMTIME /); ** Costruisce un `CTime` dell'oggetto da un `SYSTEMTIME` struttura. Questo costruttore prevede un'ora locale.  
   
-- `CTime`( **const FILETIME&** ) **;** Costruisce un `CTime` dell'oggetto da un `FILETIME` struttura. Non è probabile che si utilizzerà `CTime``FILETIME` direttamente l'inizializzazione. Se si utilizza un `CFile` oggetto per modificare un file, `CFile::GetStatus` recupera il timestamp di file per l'utente attraverso un `CTime` oggetto inizializzato con un `FILETIME` struttura. Questo costruttore utilizza un tempo basato su UTC e converte automaticamente il valore di ora locale prima di archiviare il risultato.  
+- **CTime (const FILETIME /); ** Costruisce un `CTime` dell'oggetto da un `FILETIME` struttura. Non è probabile che si utilizzerà `CTime FILETIME` direttamente l'inizializzazione. Se si utilizza un `CFile` oggetto per modificare un file, `CFile::GetStatus` recupera il timestamp di file per l'utente attraverso un `CTime` oggetto inizializzato con un `FILETIME` struttura. Questo costruttore utilizza un tempo basato su UTC e converte automaticamente il valore di ora locale prima di archiviare il risultato.  
   
     > [!NOTE]
     >  Il costruttore utilizzando **DBTIMESTAMP** parametro è disponibile solo quando OleDb. h è incluso.  
@@ -286,7 +286,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
  Archivia il tempo risultante nella struttura `dbts` a cui viene fatto riferimento. Il **DBTIMESTAMP** struttura dati inizializzato da questa funzione avrà relativo **frazione** membro impostato su zero.  
   
 ### <a name="example"></a>Esempio  
- [!code-cpp[# NVC_ATLMFC_Utilities&150;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_4.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities&#150;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_4.cpp)]  
   
 ##  <a name="a-namegetassystemtimea--ctimegetassystemtime"></a><a name="getassystemtime"></a>CTime::GetAsSystemTime  
  Chiamare questa funzione membro per convertire le informazioni sull'ora archiviati nel `CTime` oggetto compatibili Win32 [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struttura.  

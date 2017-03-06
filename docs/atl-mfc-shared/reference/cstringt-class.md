@@ -39,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 9660db5ff0d41a31f7d2a4e824df4e4bdf6a00e6
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: 961dc75623ec04993d118e46e1d4ba73a9aadcec
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="cstringt-class"></a>Classe CstringT
@@ -165,7 +165,7 @@ public CSimpleStringT<BaseType,
   
  Se si utilizza un'applicazione ATL:  
   
- `CString`, `CStringA`, e `CStringW` vengono esportate dalla DLL MFC (MFC90. DLL), mai dalla DLL dell'utente. In questo modo si evita la `CStringT` da multiply viene definito.  
+ `CString`, `CStringA`, e `CStringW` vengono esportate dalla DLL MFC (MFC90. DLL), mai dalla DLL dell'utente. In questo modo si evita la `CStringT` da definito più volte.  
   
 > [!NOTE]
 >  Se si riscontrano errori del linker quando si esporta un `CString`-classe derivata da un'estensione MFC DLL in Visual C++ .NET 2002 e sono applicati per risolvere il problema come descritto nell'articolo della Knowledge Base, Q309801 "Linking errori quando si importa Classes" (Q309801), è necessario rimuovere il codice di soluzione, poiché questo è stato risolto in Visual C++ .NET 2003. È possibile trovare articoli della Knowledge Base nel CD di MSDN Library o all'indirizzo [http://support.microsoft.com/support/](http://support.microsoft.com/support).  
@@ -967,7 +967,7 @@ CStringT& operator+=(const VARIANT& var);
 >  Sebbene sia possibile creare `CStringT` istanze che contengono caratteri null incorporati, è consigliabile su di esso. La chiamata di metodi e gli operatori su `CStringT` oggetti che contengono caratteri null incorporati possono produrre risultati imprevisti.  
   
 ### <a name="example"></a>Esempio  
- [!code-cpp[NVC_ATLMFC_Utilities&#141;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_25.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities n.&141;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_25.cpp)]  
   
 ##  <a name="a-nameoperatoreqeqa--cstringtoperator-"></a><a name="operator_eq_eq"></a>CStringT::operator = =  
  Determina se due stringhe sono uguali.  
@@ -1340,7 +1340,7 @@ CStringT SpanIncluding(PCXSTR pszCharSet) const;
  Una stringa interpretata come un set di caratteri.  
   
 ### <a name="return-value"></a>Valore restituito  
- Una sottostringa che contiene i caratteri nella stringa in `pszCharSet`, a partire dal primo carattere nella stringa e termina quando viene trovato un carattere nella stringa di cui non si trova in `pszCharSet.``SpanIncluding` restituisce una sottostringa vuota se il primo carattere nella stringa non è incluso nel set specificato.  
+ Una sottostringa che contiene i caratteri nella stringa in `pszCharSet`, a partire dal primo carattere nella stringa e termina quando viene trovato un carattere nella stringa di cui non si trova in `pszCharSet`. `SpanIncluding`Restituisce una sottostringa vuota se il primo carattere nella stringa non è incluso nel set specificato.  
   
 ### <a name="remarks"></a>Note  
  Se il primo carattere della stringa non è nel set di caratteri, quindi `SpanIncluding` restituisce una stringa vuota. In caso contrario, restituisce una sequenza di caratteri consecutivi che si trovano nel set.  
