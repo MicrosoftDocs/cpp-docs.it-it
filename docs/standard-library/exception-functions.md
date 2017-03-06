@@ -1,0 +1,290 @@
+---
+title: Funzioni &lt;exception&gt; | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+ms.assetid: c09ac569-5e35-4fe8-872d-ca5810274dd7
+caps.latest.revision: 12
+manager: ghogen
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 08d2a2161a2596cebb27175c55023d5313c7b908
+ms.lasthandoff: 02/24/2017
+
+---
+# <a name="ltexceptiongt-functions"></a>Funzioni &lt;exception&gt;
+||||  
+|-|-|-|  
+|[current_exception](#current_exception)|[get_terminate](#get_terminate)|[get_unexpected](#get_unexpected)|  
+|[make_exception_ptr](#make_exception_ptr)|[rethrow_exception](#rethrow_exception)|[set_terminate](#set_terminate)|  
+|[set_unexpected](#set_unexpected)|[terminate](#terminate)|[uncaught_exception](#uncaught_exception)|  
+|[unexpected](#unexpected)|  
+  
+##  <a name="a-namecurrentexceptiona--currentexception"></a><a name="current_exception"></a>  current_exception  
+ Ottiene un puntatore intelligente all'eccezione corrente.  
+  
+```cpp  
+exception_ptr current_exception();
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ Oggetto [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) che punta all'eccezione corrente.  
+  
+### <a name="remarks"></a>Note  
+ Chiama la funzione `current_exception` in un blocco catch. Se è in corso un'eccezione e il blocco catch riesce a rilevarla, la funzione `current_exception` restituisce un oggetto `exception_ptr` che fa riferimento a tale eccezione. In caso contrario, la funzione restituisce un oggetto `exception_ptr` Null.  
+  
+ La funzione `current_exception` acquisisce l'eccezione in corso, indipendentemente dal fatto che l'istruzione `catch` specifichi o meno un'istruzione [exception-declaration](../cpp/try-throw-and-catch-statements-cpp.md).  
+  
+ Il distruttore dell'eccezione corrente viene chiamato alla fine del blocco `catch` se non si rigenera l'eccezione. Tuttavia, anche se si chiama la funzione `current_exception` nel distruttore, la funzione restituisce un oggetto `exception_ptr` che fa riferimento all'eccezione corrente.  
+  
+ Le chiamate successive alla funzione `current_exception` restituiscono oggetti `exception_ptr` che fanno riferimento a copie diverse dell'eccezione corrente. Di conseguenza, gli oggetti vengono considerati diversi perché fanno riferimento a copie diverse, anche se le copie presentano lo stesso valore binario.  
+  
+##  <a name="a-namemakeexceptionptra--makeexceptionptr"></a><a name="make_exception_ptr"></a>  make_exception_ptr  
+ Crea un oggetto [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) contenente la copia di un'eccezione.  
+  
+```cpp  
+template <class E>  
+exception_ptr make_exception_ptr(E Except);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `Except`  
+ Classe con l'eccezione da copiare. In genere, è possibile specificare un oggetto della [classe exception`make_exception_ptr` come argomento della funzione ](../standard-library/exception-class.md), anche se qualsiasi oggetto classe può essere l'argomento.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Un oggetto [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) che punta a una copia dell'eccezione corrente per `Except`.  
+  
+### <a name="remarks"></a>Note  
+ Chiamare la funzione `make_exception_ptr` equivale a generare una eccezione C++, rilevarla in un blocco catch, quindi chiamare la funzione [current_exception](../standard-library/exception-functions.md#current_exception) per restituire un oggetto `exception_ptr` che fa riferimento a tale eccezione. L'implementazione Microsoft della funzione `make_exception_ptr` è più efficiente della generazione e del rilevamento di un'eccezione.  
+  
+ In genere un'applicazione non richiede la funzione `make_exception_ptr` e se ne sconsiglia l'utilizzo.  
+  
+##  <a name="a-namerethrowexceptiona--rethrowexception"></a><a name="rethrow_exception"></a>  rethrow_exception  
+ Genera un'eccezione passata come parametro.  
+  
+```cpp  
+void rethrow_exception(exception_ptr P);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `P`  
+ Eccezione rilevata da generare nuovamente. Se `P` è un'eccezione [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) null, la funzione genera [std::bad_exception](../standard-library/bad-exception-class.md).  
+  
+### <a name="remarks"></a>Note  
+ Dopo aver archiviato un'eccezione intercettata in un oggetto `exception_ptr`, il thread principale può elaborare l'oggetto. Nel thread principale, chiamare la funzione `rethrow_exception` insieme all'oggetto `exception_ptr` come suo argomento. La funzione `rethrow_exception` estrae l'eccezione dall'oggetto `exception_ptr`, quindi genera l'eccezione nel contesto del thread principale.  
+  
+##  <a name="a-namegetterminatea--getterminate"></a><a name="get_terminate"></a>  get_terminate  
+ Ottiene la funzione `terminate_handler` corrente.  
+  
+```cpp  
+terminate_handler get_terminate();
+```  
+  
+##  <a name="a-namesetterminatea--setterminate"></a><a name="set_terminate"></a>  set_terminate  
+ Crea un nuovo `terminate_handler` da chiamare al termine del programma.  
+  
+```  
+terminate_handler set_terminate(terminate_handler fnew) throw();
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `fnew`  
+ Funzione da chiamare alla chiusura.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Indirizzo della funzione precedente chiamata alla chiusura.  
+  
+### <a name="remarks"></a>Note  
+ La funzione stabilisce un nuovo oggetto [terminate_handler](../standard-library/exception-typedefs.md#terminate_handler) come la funzione * `fnew`. Di conseguenza, `fnew` non deve essere un puntatore null. La funzione restituisce l'indirizzo del gestore di terminazione precedente.  
+  
+### <a name="example"></a>Esempio  
+  
+```cpp  
+// exception_set_terminate.cpp  
+// compile with: /EHsc  
+#include <exception>  
+#include <iostream>  
+  
+using namespace std;  
+  
+void termfunction()  
+{  
+    cout << "My terminate function called." << endl;  
+    abort();  
+}  
+  
+int main()  
+{  
+    terminate_handler oldHandler = set_terminate(termfunction);  
+  
+    // Throwing an unhandled exception would also terminate the program  
+    // or we could explicitly call terminate();  
+  
+    //throw bad_alloc();  
+    terminate();  
+}  
+  
+```  
+  
+##  <a name="a-namegetunexpecteda--getunexpected"></a><a name="get_unexpected"></a>  get_unexpected  
+ Ottiene la funzione `unexpected_handler` corrente.  
+  
+```cpp  
+unexpected_handler get_unexpected();
+```  
+  
+##  <a name="a-namesetunexpecteda--setunexpected"></a><a name="set_unexpected"></a>  set_unexpected  
+ Stabilisce un nuovo `unexpected_handler` quando viene rilevata un'eccezione imprevista.  
+  
+```  
+unexpected_handler set_unexpected(unexpected_handler fnew) throw();
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `fnew`  
+ Funzione da chiamare quando viene rilevata un'eccezione imprevista.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Indirizzo dell'oggetto `unexpected_handler` precedente.  
+  
+### <a name="remarks"></a>Note  
+ `fnew` non deve essere un puntatore null.  
+  
+ Lo standard C++ richiede che venga chiamato `unexpected` quando una funzione genera un'eccezione che non si trova nell'elenco throw. L'implementazione corrente non supporta questa condizione. Nell'esempio seguente viene chiamato direttamente `unexpected`, che a sua volta chiama `unexpected_handler`.  
+  
+### <a name="example"></a>Esempio  
+  
+```cpp  
+// exception_set_unexpected.cpp  
+// compile with: /EHsc  
+#include <exception>  
+#include <iostream>  
+  
+using namespace std;  
+  
+void uefunction()  
+{  
+    cout << "My unhandled exception function called." << endl;  
+    terminate(); // this is what unexpected() calls by default  
+}  
+  
+int main()  
+{  
+    unexpected_handler oldHandler = set_unexpected(uefunction);  
+  
+    unexpected(); // library function to force calling the   
+                  // current unexpected handler  
+}  
+  
+```  
+  
+##  <a name="a-nameterminatea--terminate"></a><a name="terminate"></a>  terminate  
+ Chiama un gestore di terminazione.  
+  
+```  
+void terminate();
+```  
+  
+### <a name="remarks"></a>Note  
+ La funzione chiama un gestore di terminazione, una funzione di tipo `void`. Se la funzione **terminate** viene chiamata direttamente dal programma, il gestore di terminazione è quello impostato più di recente da una chiamata a [set_terminate](../standard-library/exception-functions.md#set_terminate). Se la funzione **terminate** viene chiamata per altre ragioni durante la valutazione di un'espressione throw, il gestore di terminazione è quello attivo subito dopo la valutazione dell'espressione throw.  
+  
+ Un gestore di terminazione potrebbe non restituire risultati al relativo chiamante. All'avvio del programma, il gestore di terminazione è una funzione che chiama **abort**.  
+  
+### <a name="example"></a>Esempio  
+  Vedere [set_unexpected](../standard-library/exception-functions.md#set_unexpected) per un esempio dell'utilizzo di **terminate**.  
+  
+##  <a name="a-nameuncaughtexceptiona--uncaughtexception"></a><a name="uncaught_exception"></a>  uncaught_exception  
+ Restituisce `true` solo se un'eccezione generata è in corso di elaborazione.  
+  
+```  
+bool uncaught_exception();
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ Restituisce `true` dopo aver completato la valutazione di un'espressione throw e prima di aver completato l'inizializzazione della dichiarazione di eccezione del gestore corrispondente o aver chiamato la funzione [unexpected](../standard-library/exception-functions.md#unexpected) come risultato dell'espressione throw. In particolare `uncaught_exception` restituirà `true` in seguito alla chiamata da un distruttore richiamato durante la rimozione di un'eccezione. Nei dispositivi la funzione `uncaught_exception` è supportata solo in Windows CE 5.00 e versioni successive, comprese le piattaforme Windows Mobile 2005.  
+  
+### <a name="example"></a>Esempio  
+  
+```cpp  
+// exception_uncaught_exception.cpp  
+// compile with: /EHsc  
+#include <exception>  
+#include <iostream>  
+#include <string>  
+  
+class Test   
+{  
+public:  
+   Test( std::string msg ) : m_msg( msg )   
+   {  
+      std::cout << "In Test::Test(\"" << m_msg << "\")" << std::endl;  
+   }  
+   ~Test( )   
+   {  
+      std::cout << "In Test::~Test(\"" << m_msg << "\")" << std::endl  
+         << "        std::uncaught_exception( ) = "  
+         << std::uncaught_exception( )  
+         << std::endl;  
+   }  
+private:  
+    std::string m_msg;  
+};  
+  
+// uncaught_exception will be true in the destructor   
+// for the object created inside the try block because   
+// the destructor is being called as part of the unwind.  
+  
+int main( void )  
+   {  
+      Test t1( "outside try block" );  
+      try   
+      {  
+         Test t2( "inside try block" );  
+         throw 1;  
+      }  
+      catch (...) {  
+   }  
+}  
+```  
+  
+```Output  
+In Test::Test("outside try block")  
+In Test::Test("inside try block")  
+In Test::~Test("inside try block")  
+        std::uncaught_exception( ) = 1  
+In Test::~Test("outside try block")  
+        std::uncaught_exception( ) = 0  
+```  
+  
+##  <a name="a-nameunexpecteda--unexpected"></a><a name="unexpected"></a>  unexpected  
+ Chiama il gestore imprevisto.  
+  
+```  
+void unexpected();
+```  
+  
+### <a name="remarks"></a>Note  
+ Lo standard C++ richiede che venga chiamato `unexpected` quando una funzione genera un'eccezione che non si trova nell'elenco throw. L'implementazione corrente non supporta questa condizione. Nell'esempio la funzione `unexpected` viene chiamata direttamente e a sua volta chiama il gestore imprevisto.  
+  
+ La funzione chiama un gestore imprevisto, una funzione di tipo `void`. Se la funzione `unexpected` viene chiamata direttamente dal programma, il gestore imprevisto è quello impostato più di recente da una chiamata a [set_unexpected](../standard-library/exception-functions.md#set_unexpected).  
+  
+ Un gestore imprevisto potrebbe non restituire risultati al relativo chiamante. Potrebbe terminare l'esecuzione in uno dei modi seguenti:  
+  
+-   Generando un oggetto di un tipo elencato nella specifica di eccezione o un oggetto di qualsiasi tipo, se il gestore imprevisto viene chiamato direttamente dal programma.  
+  
+-   Generando un oggetto di tipo [bad_exception](../standard-library/bad-exception-class.md).  
+  
+-   Chiamando la funzione [terminate](../standard-library/exception-functions.md#terminate), **abort** o **exit**( `int`).  
+  
+ All'avvio del programma, il gestore imprevisto è una funzione che chiama [terminate](../standard-library/exception-functions.md#terminate).  
+  
+### <a name="example"></a>Esempio  
+  Vedere [set_unexpected](../standard-library/exception-functions.md#set_unexpected) per un esempio dell'uso di **unexpected**.  
+  
+## <a name="see-also"></a>Vedere anche  
+ [\<exception>](../standard-library/exception.md)
+
+
