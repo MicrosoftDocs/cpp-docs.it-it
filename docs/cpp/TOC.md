@@ -238,7 +238,7 @@
 #### [Combinazione di eccezioni C (strutturate) e C++](mixing-c-structured-and-cpp-exceptions.md)
 ##### [Uso di setjmp-longjmp](using-setjmp-longjmp.md)
 ##### [Differenze nella gestione eccezioni](exception-handling-differences.md)
-### [Gestione strutturata delle eccezioni (C-C++)](structured-exception-handling-c-cpp.md)
+### [Gestione strutturata delle eccezioni (C/C++)](structured-exception-handling-c-cpp.md)
 #### [Scrittura di un gestore di eccezioni](writing-an-exception-handler.md)
 ##### [Istruzione try-except](try-except-statement.md)
 ##### [Scrittura di un filtro eccezioni](writing-an-exception-filter.md)

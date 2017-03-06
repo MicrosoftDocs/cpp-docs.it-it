@@ -1,4 +1,4 @@
-# [Errori di compilazione in C-C++](c-cpp-build-errors.md)
+# [Errori di compilazione in C/C++](c-cpp-build-errors.md)
 # [Errori del compilatore irreversibili da C999 a C1999](compiler-fatal-errors-c999-through-c1999.md)
 ## [Errore irreversibile C999](fatal-error-c999.md)
 ## [Errore irreversibile C1001](fatal-error-c1001.md)
