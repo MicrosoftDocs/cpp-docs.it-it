@@ -170,7 +170,7 @@
 # [Panoramiche delle famiglie di funzioni](function-family-overviews.md)
 ## [Funzioni _exec, _wexec](exec-wexec-functions.md)
 ## [Funzioni di ricerca dei nomi file](filename-search-functions.md)
-## [Format Specification Syntax: printf and wprintf Functions](format-specification-syntax-printf-and-wprintf-functions.md) (Sintassi per la specifica del formato: funzioni printf e wprintf)
+## [Sintassi per la specifica del formato: funzioni printf e wprintf](format-specification-syntax-printf-and-wprintf-functions.md)
 ## [Campi per la specifica di formato: funzioni scanf e wscanf](format-specification-fields-scanf-and-wscanf-functions.md)
 ## [Routine is, isw](is-isw-routines.md)
 ## [Routine _ismbb](ismbb-routines.md)
