@@ -1,39 +1,55 @@
 ---
-title: "_crtDbgFlag | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_crtDbgFlag"
-  - "crtDbgFlag"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_crtDbgFlag (costante)"
-  - "crtDbgFlag (costante)"
-  - "heap di debug, flag di controllo"
-  - "heap di debug, rilevamento memoria"
-  - "abilitare i flag di rilevazione allocazione memoria"
-  - "allocazione di memoria, flag di rilevamento"
-  - "memoria, rilevamento sull'heap di debug"
+title: _crtDbgFlag | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _crtDbgFlag
+- crtDbgFlag
+dev_langs:
+- C++
+helpviewer_keywords:
+- memory allocation, tracking flag
+- crtDbgFlag constant
+- _crtDbgFlag constant
+- debug heap, tracking memory on
+- debug heap, control flags
+- enable memory allocation tracking flag
+- memory, tracking on the debug heap
 ms.assetid: 9e7adb47-8ab9-4e19-81d5-e2f237979973
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# _crtDbgFlag
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 4f4c3a874d59095d620a04d5ebb6ac88e2bdfa66
+ms.lasthandoff: 02/24/2017
 
-Il flag **\_crtDbgFlag** è costituito da cinque campi di bit che controllano come viene eseguito il monitoraggio, la verifica, la creazione di report e il dump delle allocazioni di memoria nella versione di debug dell'heap.  I campi di bit del flag vengono impostati tramite la funzione [\_CrtSetDbgFlag](../c-runtime-library/reference/crtsetdbgflag.md).  Questo flag e i relativi campi di bit vengono dichiarati in Crtdbg.h.  Questo flag è disponibile solo se è stato definito il flag [\_DEBUG](../c-runtime-library/debug.md) nell'applicazione.  
+---
+# <a name="crtdbgflag"></a>_crtDbgFlag
+Il flag **_crtDbgFlag** è costituito da cinque campi di bit che controllano il monitoraggio, la verifica, la creazione di report e il dump delle allocazioni di memoria nella versione di debug dell'heap. I campi di bit del flag vengono impostati mediante la funzione [_CrtSetDbgFlag](../c-runtime-library/reference/crtsetdbgflag.md). Questo flag e i relativi campi di bit vengono dichiarati in Crtdbg.h. Questo flag è disponibile solo se è stato definito il flag [_DEBUG](../c-runtime-library/debug.md) nell'applicazione.  
   
- Per altre informazioni su come usare questo flag con altre funzioni di debug, vedere [Funzioni per la creazione di report sullo stato dello heap](../Topic/CRT%20Debug%20Heap%20Details.md#BKMK_Heap_State_Reporting_Functions).  
+ Per altre informazioni sull'uso di questo flag con altre funzioni di debug, vedere [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details) (Funzioni per la creazione di report sullo stato dell'heap).  
   
-## Vedere anche  
- [Flag di controllo](../c-runtime-library/control-flags.md)
+## <a name="see-also"></a>Vedere anche  
+ [flag di controllo](../c-runtime-library/control-flags.md)

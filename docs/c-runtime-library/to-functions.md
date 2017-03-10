@@ -1,88 +1,104 @@
 ---
-title: "Funzioni to | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apilocation: 
-  - "msvcr120.dll"
-  - "msvcr90.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr80.dll"
-  - "msvcr100.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "To"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "maiuscole e minuscole, conversione"
-  - "caratteri, conversione"
-  - "minuscole, conversione di stringhe"
-  - "conversione di stringhe, maiuscole e minuscole"
-  - "conversione di stringhe, in caratteri diversi"
-  - "to (funzioni)"
-  - "maiuscole, conversione di stringhe"
+title: Funzioni to | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apilocation:
+- msvcr120.dll
+- msvcr90.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr80.dll
+- msvcr100.dll
+apitype: DLLExport
+f1_keywords:
+- To
+dev_langs:
+- C++
+helpviewer_keywords:
+- to functions
+- string conversion, to different characters
+- string conversion, case
+- lowercase, converting strings
+- uppercase, converting strings
+- case, converting
+- characters, converting
 ms.assetid: f636a4c6-8c9f-4be2-baac-064f9dbae300
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Funzioni to
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 0f4efaf826da7a2ff1ef5b9f21bc5e846751211b
+ms.lasthandoff: 02/24/2017
 
-Ognuna delle funzioni **to** e della macro associate, se presenti, converte un singolo carattere in un altro carattere.  
+---
+# <a name="to-functions"></a>Funzioni to
+Ognuna delle funzioni **to** e le relative macro associate, se presenti, convertono un singolo carattere in un altro carattere.  
   
 |||  
 |-|-|  
-|[\_\_toascii](../c-runtime-library/reference/toascii-toascii.md)|[toupper, \_toupper, towupper](../c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l.md)|  
-|[tolower, \_tolower, towlower](../c-runtime-library/reference/tolower-tolower-towlower-tolower-l-towlower-l.md)||  
+|[__toascii](../c-runtime-library/reference/toascii-toascii.md)|[toupper, _toupper, towupper](../c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l.md)|  
+|[tolower, _tolower, towlower](../c-runtime-library/reference/tolower-tolower-towlower-tolower-l-towlower-l.md)||  
   
-## Note  
- Le funzioni **to** e le conversioni macro sono indicati di seguito.  
+## <a name="remarks"></a>Osservazioni  
+ Le conversioni delle funzioni **to** e delle macro sono le seguenti.  
   
 |Routine|Macro|Descrizione|  
 |-------------|-----------|-----------------|  
 |`__toascii`|`__toascii`|Converte `c` in un carattere ASCII|  
-|`tolower`|`tolower`|Converte `c`, se necessario, in minuscolo|  
+|`tolower`|`tolower`|Converte `c` in minuscolo se appropriato|  
 |`_tolower`|`_tolower`|Converte `c` in minuscolo|  
-|`towlower`|None|Converte `c` nel corrispondente carattere wide in minuscolo|  
-|`toupper`|`toupper`|Converte `c`, se necessario, in maiuscolo|  
+|`towlower`|Nessuno|Converte `c` nella lettera minuscola con carattere wide corrispondente|  
+|`toupper`|`toupper`|Converte `c` in maiuscolo se appropriato|  
 |`_toupper`|`_toupper`|Converte `c` in maiuscolo|  
-|`towupper`|None|Converte c nel corrispondente carattere wide in maiuscolo|  
+|`towupper`|Nessuno|Converte c nella lettera maiuscola con carattere wide corrispondente|  
   
- Per utilizzare le versioni di funzione delle routine **to** definite anche come macro, rimuovere le definizioni di macro con le direttive `#undef` o non includere CTYPE.H.  Se si utilizza l'opzione del compilatore \/Za, il compilatore utilizza la versione di funzione di `toupper` o di `tolower`.  Le dichiarazioni delle funzioni di `tolower` e di `toupper` sono in STDLIB.H.  
+ Per usare le versioni funzione delle routine **to** definite anche come macro, rimuovere le definizioni di macro con le direttive `#undef` o non includere CTYPE.H. Se si usa l'opzione del compilatore /Za, il compilatore usa la versione funzione di `toupper` o `tolower`. Le dichiarazioni delle funzioni `toupper` e `tolower` sono in STDLIB.H.  
   
- La routine di `__toascii` imposta tutti i 7 bit meno significativi di `c` su 0, in modo che il valore convertito rappresenti un carattere del set di caratteri ASCII.  Se `c` rappresenta già un carattere ASCII, `c` resta invariato.  
+ La routine `__toascii` imposta tutti i bit tranne i 7 bit di ordine inferiore di `c` su 0, in modo che il valore convertito rappresenti un carattere nel set di caratteri ASCII. Se `c` rappresenta già un carattere ASCII, `c` rimane invariato.  
   
- Le routine `toupper` e `tolower` :  
+ Le routine `tolower` e `toupper`:  
   
--   Sono dipendenti dalla categoria `LC_CTYPE` delle impostazioni locali correnti \(`tolower` chiama `isupper` e `toupper` chiama `islower`\).  
+-   Sono dipendenti dalla categoria `LC_CTYPE` delle impostazioni locali correnti (`tolower` chiama `isupper` e `toupper` chiama `islower`).  
   
--   Convertire `c` se `c` rappresenta una lettera convertibile nell'appropriato minuscolo\/maiuscolo nelle impostazioni locali correnti e esiste il caso opposto per tali impostazioni.  In caso contrario, `c` resta invariato.  
+-   Convertono `c` se `c` rappresenta una lettera convertibile con la combinazione di maiuscole/minuscole appropriata nelle impostazioni locali correnti ed esiste la combinazione di maiuscole/minuscole opposta per tali impostazioni locali. In caso contrario, `c` non viene modificato.  
   
- Le routine `_toupper` e `_tolower` :  
+ Le routine `_tolower` e `_toupper`:  
   
--   Sono indipendenti dalle impostazioni locali, le versioni molto più veloci di `tolower` e **toupper.**  
+-   Sono versioni indipendenti dalle impostazioni locali e molto più veloci di `tolower` e **toupper**.  
   
--   Possono essere utilizzate solo quando **isascii\(**`c`**\)** e **isupper\(**`c`**\)** o **islower\(**`c`**\)**, sono, rispettivamente, diverse da zero.  
+-   Possono essere usate solo quando **isascii(**`c`**)** e rispettivamente **isupper(**`c`**)** o **islower(**`c`**)** sono diversi da zero.  
   
--   Si ottengono risultati indefiniti se `c` non è un carattere alfabetico ASCII maiuscolo\/minuscolo appropriato per la conversione.  
+-   Hanno risultati indefiniti se `c` non è una lettera ASCII con la combinazione di maiuscole/minuscole appropriata per la conversione.  
   
- Le funzioni `towupper` e `towlower` restituiscono una copia convertita di `c` se e solo se entrambe le condizioni seguenti sono diverse da zero.  In caso contrario, `c` resta invariato.  
+ Le funzioni `towlower` e `towupper` restituiscono una copia convertita di `c` se e solo se entrambe le condizioni seguenti sono diverse da zero. In caso contrario, `c` non viene modificato.  
   
--   `c` è un tipo di carattere maiuscolo\/minuscolo appropriato \(ovvero per il quale `iswupper` o **iswlower**, rispettivamente, sono diverse da zero\).  
+-   `c` è un carattere wide con la combinazione di maiuscole/minuscole appropriata (ovvero, per cui `iswupper` o **iswlower** è rispettivamente diverso da zero).  
   
--   È presente un carattere di tipo wide corrispondente per la destinazione maiuscolo\/minuscolo \(ovvero per il quale `iswlower` o **iswupper**, rispettivamente, sono diverse da zero\).  
+-   È disponibile un carattere wide corrispondente con la combinazione di maiuscole/minuscole di destinazione (ovvero, per cui `iswlower` o **iswupper** è rispettivamente diverso da zero).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_toupper.c  
@@ -115,9 +131,12 @@ int main( void )
 }  
 ```  
   
-  **Some of THESE letters are Capitals.**  
-**sOME OF these LETTERS ARE cAPITALS.**   
-## Vedere anche  
+```Output  
+Some of THESE letters are Capitals.  
+sOME OF these LETTERS ARE cAPITALS.  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
  [Conversione dei dati](../c-runtime-library/data-conversion.md)   
  [Impostazioni locali](../c-runtime-library/locale.md)   
- [is, isw Routines](../c-runtime-library/is-isw-routines.md)
+ [Routine is, isw](../c-runtime-library/is-isw-routines.md)
