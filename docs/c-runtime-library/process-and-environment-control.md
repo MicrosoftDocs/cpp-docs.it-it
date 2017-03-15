@@ -1,0 +1,115 @@
+---
+title: Controllo processo e ambiente | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.programs
+dev_langs:
+- C++
+helpviewer_keywords:
+- processes, stopping
+- processes, administrative tasks
+- parent process
+- processes, starting
+- environment control routines
+- process control routines
+ms.assetid: 7fde74c3-c2a6-4d15-84b8-092160d60c3e
+caps.latest.revision: 9
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: d5198dcef7d24d2755c21b90802b19e809c5b8da
+ms.lasthandoff: 02/24/2017
+
+---
+# <a name="process-and-environment-control"></a>Controllo processo e ambiente
+Le routine di controllo dei processi consentono di avviare, arrestare e gestire i processi dall'interno di un programma, mentre le routine di controllo dell'ambiente consentono di ottenere e modificare le informazioni relative all'ambiente del sistema operativo.  
+  
+### <a name="process-and-environment-control-functions"></a>Funzioni di controllo dei processi e dell'ambiente  
+  
+|Routine|Uso|Equivalente .NET Framework|  
+|-------------|---------|-------------------------------|  
+|[abort](../c-runtime-library/reference/abort.md)|Interrompe il processo senza svuotare i buffer né chiamare funzioni registrate da `atexit` e `_onexit`|Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Esempi di platform invoke](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[assert](../c-runtime-library/reference/assert-macro-assert-wassert.md)|Verifica la presenza di errori logici|[System::Diagnostics::Debug::Assert](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.assert.aspx)|  
+|Macro [_ASSERT, _ASSERTE](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)|Simile a `assert`, ma è disponibile solo nelle versioni di debug delle librerie di runtime|[System::Diagnostics::Debug::Assert](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.assert.aspx)|  
+|[atexit](../c-runtime-library/reference/atexit.md)|Routine di pianificazione per l'esecuzione alla chiusura del programma|[System::Diagnostics::Process::Exited](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.exited.aspx)|  
+|[_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)|Crea un nuovo thread in un processo del sistema operativo Windows|[System::Threading::Thread::Start](https://msdn.microsoft.com/en-us/library/system.threading.thread.start.aspx)|  
+|[_cexit](../c-runtime-library/reference/cexit-c-exit.md)|Esegue le routine di terminazione di `exit`, ad esempio lo svuotamento del buffer, e quindi restituisce il controllo al programma chiamante senza terminare il processo|[System::Diagnostics::Process::CloseMainWindow](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.closemainwindow.aspx)|  
+|[_c_exit](../c-runtime-library/reference/cexit-c-exit.md)|Esegue le routine di terminazione di `_exit` e quindi restituisce il controllo al programma chiamante senza terminare il processo|[System::Diagnostics::Process::CloseMainWindow](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.closemainwindow.aspx)|  
+|[_cwait](../c-runtime-library/reference/cwait.md)|Attende fino alla terminazione di un altro processo|[System::Diagnostics::Process::WaitForExit](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.waitforexit.aspx)|  
+|[_endthread, _endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)|Termina un thread del sistema operativo Windows|Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Esempi di platform invoke](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[_execl, _wexecl](../c-runtime-library/reference/execl-wexecl.md)|Esegue un nuovo processo con un elenco di argomenti|[Classe System::Diagnostics::Process](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx), [Classe System::Diagnostics::ProcessStartInfo](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)|  
+|[_execle, _wexecle](../c-runtime-library/reference/execle-wexecle.md)|Esegue un nuovo processo con un elenco di argomenti e l'ambiente specificato|[Classe System::Diagnostics::Process](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx), [Classe System::Diagnostics::ProcessStartInfo](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)|  
+|[_execlp, _wexeclp](../c-runtime-library/reference/execlp-wexeclp.md)|Esegue un nuovo processo usando la variabile `PATH` e un elenco di argomenti|[Classe System::Diagnostics::Process](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx), [Classe System::Diagnostics::ProcessStartInfo](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)|  
+|[_execlpe, _wexeclpe](../c-runtime-library/reference/execlpe-wexeclpe.md)|Esegue un nuovo processo usando la variabile `PATH`, l'ambiente specificato e un elenco di argomenti|[Classe System::Diagnostics::Process](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx), [Classe System::Diagnostics::ProcessStartInfo](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)|  
+|[_execv, _wexecv](../c-runtime-library/reference/execv-wexecv.md)|Esegue un nuovo processo con una matrice di argomenti|[Classe System::Diagnostics::Process](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx), [Classe System::Diagnostics::ProcessStartInfo](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)|  
+|[_execve, _wexecve](../c-runtime-library/reference/execve-wexecve.md)|Esegue un nuovo processo con una matrice di argomenti e l'ambiente specificato|[Classe System::Diagnostics::Process](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx), [Classe System::Diagnostics::ProcessStartInfo](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)|  
+|[_execvp, _wexecvp](../c-runtime-library/reference/execvp-wexecvp.md)|Esegue un nuovo processo usando la variabile `PATH` e una matrice di argomenti|[Classe System::Diagnostics::Process](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx), [Classe System::Diagnostics::ProcessStartInfo](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)|  
+|[_execvpe, _wexecvpe](../c-runtime-library/reference/execvpe-wexecvpe.md)|Esegue un nuovo processo usando la variabile `PATH`, l'ambiente specificato e una matrice di argomenti|[Classe System::Diagnostics::Process](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx), [Classe System::Diagnostics::ProcessStartInfo](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)|  
+|[exit](../c-runtime-library/reference/exit-exit-exit.md)|Chiama le funzioni registrate da `atexit` e `_onexit`, svuota tutti i buffer, chiude tutti i file aperti e termina il processo|[System::Diagnostics::Process::Kill](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.kill.aspx)|  
+|[_exit](../c-runtime-library/reference/exit-exit-exit.md)|Termina il processo immediatamente, senza chiamare `atexit` o `_onexit` oppure senza svuotare il buffer|[System::Diagnostics::Process::Kill](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.kill.aspx)|  
+|[getenv, _wgetenv](../c-runtime-library/reference/getenv-wgetenv.md), [getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md)|Ottiene il valore della variabile di ambiente|[System::Environment::GetEnvironmentVariable](https://msdn.microsoft.com/en-us/library/system.environment.getenvironmentvariable.aspx)|  
+|[_getpid](../c-runtime-library/reference/getpid.md)|Ottiene il numero dell'ID del processo|[System::Diagnostics::Process::Id](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.id.aspx)|  
+|[longjmp](../c-runtime-library/reference/longjmp.md)|Ripristina l'ambiente dello stack salvato; usarla per eseguire un `goto` non locale|Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Esempi di platform invoke](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[_onexit](../c-runtime-library/reference/onexit-onexit-m.md)|Pianifica le routine per l'esecuzione alla chiusura del programma; usarla per assicurare la compatibilità con Microsoft C/C++ 7.0 e versioni precedenti|[System::Diagnostics::Process::Exited](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.exited.aspx)|  
+|[_pclose](../c-runtime-library/reference/pclose.md)|Attende un nuovo processore dei comandi e chiude il flusso sulla pipe collegata|Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Esempi di platform invoke](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[perror, _wperror](../c-runtime-library/reference/perror-wperror.md)|Stampa un messaggio di errore|Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Esempi di platform invoke](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[_pipe](../c-runtime-library/reference/pipe.md)|Crea una pipe per la lettura e la scrittura|Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Esempi di platform invoke](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[_popen, _wpopen](../c-runtime-library/reference/popen-wpopen.md)|Crea una pipe ed esegue il comando|Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Esempi di platform invoke](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[_putenv, _wputenv](../c-runtime-library/reference/putenv-wputenv.md), [_putenv_s, _wputenv_s](../c-runtime-library/reference/putenv-s-wputenv-s.md)|Aggiunge o modifica il valore della variabile di ambiente|Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Esempi di platform invoke](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[raise](../c-runtime-library/reference/raise.md)|Invia un segnale al processo chiamante|Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Esempi di platform invoke](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[setjmp](../c-runtime-library/reference/setjmp.md)|Salva l'ambiente dello stack; usarla per eseguire un `goto` non locale|Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Esempi di platform invoke](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[signal](../c-runtime-library/reference/signal.md)|Gestisce un segnale di interruzione|Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Esempi di platform invoke](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[_spawnl, _wspawnl](../c-runtime-library/reference/spawnl-wspawnl.md)|Crea ed esegue il nuovo processo con l'elenco di argomenti specificato|[Classe System::Diagnostics::Process](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx), [Classe System::Diagnostics::ProcessStartInfo](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)|  
+|[_spawnle, _wspawnle](../c-runtime-library/reference/spawnle-wspawnle.md)|Crea ed esegue il nuovo processo con l'elenco di argomenti e l'ambiente specificati|[Classe System::Diagnostics::Process](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx), [Classe System::Diagnostics::ProcessStartInfo](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)|  
+|[_spawnlp, _wspawnlp](../c-runtime-library/reference/spawnlp-wspawnlp.md)|Crea ed esegue un nuovo processo usando la variabile `PATH` e l'elenco di argomenti specificato|[Classe System::Diagnostics::Process](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx), [Classe System::Diagnostics::ProcessStartInfo](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)|  
+|[_spawnlpe, _wspawnlpe](../c-runtime-library/reference/spawnlpe-wspawnlpe.md)|Crea ed esegue un nuovo processo usando la variabile `PATH`, l'ambiente specificato e un elenco di argomenti|[Classe System::Diagnostics::Process](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx), [Classe System::Diagnostics::ProcessStartInfo](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)|  
+|[_spawnv, _wspawnv](../c-runtime-library/reference/spawnv-wspawnv.md)|Crea ed esegue il nuovo processo con la matrice di argomenti specificata|[Classe System::Diagnostics::Process](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx), [Classe System::Diagnostics::ProcessStartInfo](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)|  
+|[_spawnve, _wspawnve](../c-runtime-library/reference/spawnve-wspawnve.md)|Crea ed esegue il nuovo processo con l'ambiente specificato e una matrice di argomenti|[Classe System::Diagnostics::Process](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx), [Classe System::Diagnostics::ProcessStartInfo](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)|  
+|[_spawnvp, _wspawnvp](../c-runtime-library/reference/spawnvp-wspawnvp.md)|Crea ed esegue un nuovo processo usando la variabile `PATH` e la matrice di argomenti specificata|[Classe System::Diagnostics::Process](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx), [Classe System::Diagnostics::ProcessStartInfo](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)|  
+|[_spawnvpe, _wspawnvpe](../c-runtime-library/reference/spawnvpe-wspawnvpe.md)|Crea ed esegue un nuovo processo usando la variabile `PATH`, l'ambiente specificato e una matrice di argomenti|[Classe System::Diagnostics::Process](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx), [Classe System::Diagnostics::ProcessStartInfo](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)|  
+|[system, _wsystem](../c-runtime-library/reference/system-wsystem.md)|Esegue un comando del sistema operativo|[Classe System::Diagnostics::ProcessStartInfo](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx), [Classe System::Diagnostics::Process](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx)|  
+  
+ Nel sistema operativo Windows, il processo figlio è equivalente al processo padre. Qualsiasi processo può usare `_cwait` per attendere un altro processo di cui è noto l'ID.  
+  
+ La differenza tra le famiglie `_exec` e `_spawn` consiste nel fatto che una funzione `_spawn` può restituire il controllo dal nuovo processo al processo chiamante. In una funzione `_spawn`,sia il processo chiamante che il nuovo processo sono presenti in memoria, a meno che non sia specificato `_P_OVERLAY`. In una funzione `_exec`, il nuovo processo si sovrappone al processo chiamante, in modo che il controllo non torni a quest'ultimo a meno che non si verifichi un errore durante il tentativo di avviare l'esecuzione del nuovo processo.  
+  
+ Le differenze tra le funzioni della famiglia `_exec`, come tra quelle della famiglia `_spawn`, includono il metodo di individuazione del file da eseguire come nuovo processo, il modo in cui gli argomenti vengono passati al nuovo processo e il metodo di impostazione dell'ambiente, come illustrato nella tabella seguente. Usare una funzione che passa un elenco di argomenti quando il numero di argomenti è costante o è noto in fase di esecuzione. Usare una funzione che passa un puntatore a una matrice contenente gli argomenti quando il numero di argomenti viene determinato in fase di esecuzione. Le informazioni riportate nella tabella seguente vengono applicate anche alle controparti con caratteri wide delle funzioni `_spawn` e `_exec`.  
+  
+### <a name="spawn-and-exec-function-families"></a>Famiglie di funzioni _spawn e _exec  
+  
+|Funzioni|Uso della variabile PATH per individuare il file|Convenzione per il passaggio degli argomenti|Impostazioni dell'ambiente|  
+|---------------|--------------------------------------|----------------------------------|--------------------------|  
+|`_execl, _spawnl`|No|Elenco|Ereditate dal processo chiamante|  
+|`_execle, _spawnle`|No|Elenco|Puntatore alla tabella dell'ambiente per il nuovo processo passato come ultimo argomento|  
+|`_execlp, _spawnlp`|Sì|Elenco|Ereditate dal processo chiamante|  
+|`_execlpe, _spawnlpe`|Sì|Elenco|Puntatore alla tabella dell'ambiente per il nuovo processo passato come ultimo argomento|  
+|`_execv, _spawnv`|No|Matrice|Ereditate dal processo chiamante|  
+|`_execve, _spawnve`|No|Matrice|Puntatore alla tabella dell'ambiente per il nuovo processo passato come ultimo argomento|  
+|`_execvp, _spawnvp`|Sì|Matrice|Ereditate dal processo chiamante|  
+|`_execvpe, _spawnvpe`|Sì|Matrice|Puntatore alla tabella dell'ambiente per il nuovo processo passato come ultimo argomento|  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Routine di runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)

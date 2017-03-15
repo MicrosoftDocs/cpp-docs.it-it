@@ -1,0 +1,29 @@
+---
+title: "R6030 del linguaggio in errore di Runtime C | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "error-reference"
+f1_keywords: 
+  - "R6030"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "R6030 DEL LINGUAGGIO IN"
+ms.assetid: 0238a6c3-a033-4046-8adc-f8f99d961153
+caps.latest.revision: 9
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+caps.handback.revision: 9
+---
+# Errore R6030 del linguaggio C in fase di esecuzione 
+[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+
+CRT non inizializzata  
+  
+ Questo errore si verifica quando si utilizza la CRT senza che sia stato eseguito il relativo codice di avvio.  È possibile che venga visualizzato questo errore se si utilizza l'opzione [\/ENTRY](../../build/reference/entry-entry-point-symbol.md) del linker per eseguire l'override dell'indirizzo di avvio predefinito, in genere **mainCRTStartup**, **wmainCRTStartup** per un eseguibile da console, **WinMainCRTStartup** o **wWinMainCRTStartup** per un eseguibile Windows oppure **\_DllMainCRTStartup** per una DLL.  Il runtime C non verrà inizializzato a meno che all'avvio non venga chiamata una delle funzioni sopra riportate.

@@ -1,0 +1,274 @@
+---
+title: Classe poisson_distribution | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- poisson_distribution
+- std::poisson_distribution
+- random/std::poisson_distribution
+- std::poisson_distribution::reset
+- random/std::poisson_distribution::reset
+- std::poisson_distribution::mean
+- random/std::poisson_distribution::mean
+- std::poisson_distribution::param
+- random/std::poisson_distribution::param
+- std::poisson_distribution::min
+- random/std::poisson_distribution::min
+- std::poisson_distribution::max
+- random/std::poisson_distribution::max
+- std::poisson_distribution::operator()
+- random/std::poisson_distribution::operator()
+- std::poisson_distribution::param_type
+- random/std::poisson_distribution::param_type
+- std::poisson_distribution::param_type::mean
+- random/std::poisson_distribution::param_type::mean
+- std::poisson_distribution::param_type::operator==
+- random/std::poisson_distribution::param_type::operator==
+- std::poisson_distribution::param_type::operator!=
+- random/std::poisson_distribution::param_type::operator!=
+dev_langs:
+- C++
+helpviewer_keywords:
+- poisson_distribution class
+ms.assetid: 09614281-349a-45f7-8e95-c0196be0a937
+caps.latest.revision: 19
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
+ms.openlocfilehash: 021eaec1ec55add912234f78bac0b9762b4a3444
+ms.lasthandoff: 02/24/2017
+
+---
+# <a name="poissondistribution-class"></a>Classe poisson_distribution
+Genera una distribuzione di Poisson.  
+  
+## <a name="syntax"></a>Sintassi  
+  
+```  
+template<class IntType = int>
+class poisson_distribution  
+   {  
+public:  
+   // types  
+   typedef IntType result_type;  
+   struct param_type;  
+   
+   // constructors and reset functions  
+   explicit poisson_distribution(double mean = 1.0);
+   explicit poisson_distribution(const param_type& parm);
+   void reset();
+   
+   // generating functions  
+   template <class URNG>  
+   result_type operator()(URNG& gen);
+   template <class URNG>  
+   result_type operator()(URNG& gen, const param_type& parm);
+   
+   // property functions  
+   double mean() const;
+   param_type param() const;
+   void param(const param_type& parm);
+   result_type min() const;
+   result_type max() const;
+   };  
+``` 
+  
+#### <a name="parameters"></a>Parametri  
+*IntType*  
+Tipo di risultati Integer. Per impostazione predefinita, `int`. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).  
+  
+## <a name="remarks"></a>Note  
+La classe di modelli descrive una distribuzione che produce valori di un tipo integrale specificato dall'utente con una distribuzione di Poisson. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.  
+  
+||||  
+|-|-|-|  
+|[poisson_distribution::poisson_distribution](#poisson_distribution__poisson_distribution)|`poisson_distribution::mean`|`poisson_distribution::param`|  
+|`poisson_distribution::operator()`||[poisson_distribution::param_type](#poisson_distribution__param_type)|  
+  
+La funzione di proprietà `mean()` restituisce il valore per il parametro di distribuzione archiviato *mean*.  
+  
+Il membro di proprietà `param()` imposta o restituisce il pacchetto del parametro di distribuzione archiviato `param_type`.  
+
+Le funzioni membro `min()` e `max()` restituiscono rispettivamente il minor risultato possibile e il maggior risultato possibile.  
+  
+La funzione membro `reset()` rimuove gli eventuali valori memorizzati nella cache, in modo che il risultato della successiva chiamata a `operator()` non dipenda da alcun valore ottenuto dal motore prima della chiamata.  
+  
+Le funzioni membro `operator()` restituiscono il successivo valore generato basato sul motore URNG, dal pacchetto di parametri corrente o da quello specificato.
+  
+Per altre informazioni sulle classi di distribuzione e sui rispettivi membri, vedere [\<random>](../standard-library/random.md).  
+  
+Per informazioni dettagliate sulla distribuzione di Poisson, vedere l'articolo di Wolfram MathWorld relativo alla [Distribuzione di Poisson](http://go.microsoft.com/fwlink/LinkId=401112).  
+  
+## <a name="example"></a>Esempio  
+  
+```cpp  
+// compile with: /EHsc /W4  
+#include <random>   
+#include <iostream>  
+#include <iomanip>  
+#include <string>  
+#include <map>  
+  
+void test(const double p, const int s) {  
+  
+    // uncomment to use a non-deterministic generator  
+    //    std::random_device gen;  
+    std::mt19937 gen(1701);  
+  
+    std::poisson_distribution<> distr(p);  
+  
+    std::cout << std::endl;  
+    std::cout << "min() == " << distr.min() << std::endl;  
+    std::cout << "max() == " << distr.max() << std::endl;  
+    std::cout << "p() == " << std::fixed << std::setw(11) << std::setprecision(10) << distr.mean() << std::endl;  
+  
+    // generate the distribution as a histogram  
+    std::map<int, int> histogram;  
+    for (int i = 0; i < s; ++i) {  
+        ++histogram[distr(gen)];  
+    }  
+  
+    // print results  
+    std::cout << "Distribution for " << s << " samples:" << std::endl;  
+    for (const auto& elem : histogram) {  
+        std::cout << std::setw(5) << elem.first << ' ' << std::string(elem.second, ':') << std::endl;  
+    }  
+    std::cout << std::endl;  
+}  
+  
+int main()  
+{  
+    double p_dist = 1.0;  
+  
+    int samples = 100;  
+  
+    std::cout << "Use CTRL-Z to bypass data entry and run using default values." << std::endl;  
+    std::cout << "Enter a floating point value for the 'mean' distribution parameter (must be greater than zero): ";  
+    std::cin >> p_dist;  
+    std::cout << "Enter an integer value for the sample count: ";  
+    std::cin >> samples;  
+  
+    test(p_dist, samples);  
+}  
+  
+```  
+  
+Primo test:  
+  
+```Output  
+Use CTRL-Z to bypass data entry and run using default values.
+Enter a floating point value for the 'mean' distribution parameter (must be greater than zero): 1
+Enter an integer value for the sample count: 100
+min() == 0
+max() == 2147483647
+p() == 1.0000000000
+Distribution for 100 samples:
+    0 ::::::::::::::::::::::::::::::
+    1 ::::::::::::::::::::::::::::::::::::::
+    2 :::::::::::::::::::::::
+    3 ::::::::
+    5 :  
+```  
+  
+Secondo test:  
+  
+```Output  
+Use CTRL-Z to bypass data entry and run using default values.
+Enter a floating point value for the 'mean' distribution parameter (must be greater than zero): 10
+Enter an integer value for the sample count: 100
+min() == 0
+max() == 2147483647
+p() == 10.0000000000
+Distribution for 100 samples:
+    3 :
+    4 ::
+    5 ::
+    6 ::::::::
+    7 ::::
+    8 ::::::::
+    9 ::::::::::::::
+   10 ::::::::::::
+   11 ::::::::::::::::
+   12 :::::::::::::::
+   13 ::::::::
+   14 ::::::
+   15 :
+   16 ::
+   17 :  
+```  
+  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<random>  
+  
+ **Spazio dei nomi:** std  
+  
+##  <a name="a-namepoissondistributionpoissondistributiona--poissondistributionpoissondistribution"></a><a name="poisson_distribution__poisson_distribution"></a>  poisson_distribution::poisson_distribution  
+Costruisce la distribuzione.  
+  
+```  
+explicit poisson_distribution(RealType mean = 1.0);
+explicit binomial_distribution(const param_type& parm);
+```  
+  
+### <a name="parameters"></a>Parametri  
+*mean*  
+Parametro di distribuzione `mean`.  
+  
+*parm*  
+Struttura di parametri usata per costruire la distribuzione.  
+  
+### <a name="remarks"></a>Note  
+ **Precondizione:**`0.0 < mean`  
+  
+Il primo costruttore costruisce un oggetto il cui valore `mean` archiviato include il valore *mean*.  
+  
+Il secondo costruttore costruisce un oggetto i cui parametri archiviati sono inizializzati da *parm*. È possibile ottenere e impostare i parametri correnti di una distribuzione esistente chiamando la funzione membro `param()`.  
+  
+##  <a name="a-namepoissondistributionparamtypea--poissondistributionparamtype"></a><a name="poisson_distribution__param_type"></a>  poisson_distribution::param_type  
+Archivia i parametri della distribuzione.  
+  
+```    
+struct param_type {  
+   typedef poisson_distribution<IntType> distribution_type;  
+   param_type(double mean = 1.0);
+   double mean() const;
+     
+   bool operator==(const param_type& right) const;
+   bool operator!=(const param_type& right) const;
+   };  
+```  
+  
+### <a name="parameters"></a>Parametri  
+Per [poisson_distribution](#poisson_distribution__poisson_distribution) vedere i parametri del costruttore.  
+  
+### <a name="remarks"></a>Note  
+ **Precondizione:** `0.0 < mean`  
+  
+Questa struttura può essere passata al costruttore di classe della distribuzione durante la creazione di istanze, alla funzione membro `param()` per impostare i parametri archiviati di una distribuzione esistente e a `operator()` per l'uso in sostituzione dei parametri archiviati.  
+  
+## <a name="see-also"></a>Vedere anche  
+ [\<random>](../standard-library/random.md)
+
+

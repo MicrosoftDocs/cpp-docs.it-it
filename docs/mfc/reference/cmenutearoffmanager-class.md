@@ -1,0 +1,221 @@
+---
+title: Classe CMenuTearOffManager | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CMenuTearOffManager
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMenuTearOffManager class
+ms.assetid: ab7ca272-ce42-4678-95f7-6ad75038f5a0
+caps.latest.revision: 31
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 53677bbea54e428e5f080f5c1f73c576abcf99a5
+ms.lasthandoff: 02/24/2017
+
+---
+# <a name="cmenutearoffmanager-class"></a>Classe CMenuTearOffManager
+Gestisce i menu con barra a comparsa. Un menu con barra a comparsa è un menu collocato nella barra dei menu. L'utente può rimuovere un menu con barra a comparsa dalla barra dei menu, rendendolo mobile.  
+  
+## <a name="syntax"></a>Sintassi  
+  
+```  
+class CMenuTearOffManager : public CObject  
+```  
+  
+## <a name="members"></a>Membri  
+  
+### <a name="public-constructors"></a>Costruttori pubblici  
+  
+|Nome|Descrizione|  
+|----------|-----------------|  
+|[CMenuTearOffManager::CMenuTearOffManager](#cmenutearoffmanager)|Costruisce un oggetto `CMenuTearOffManager`.|  
+  
+### <a name="public-methods"></a>Metodi pubblici  
+  
+|Nome|Descrizione|  
+|----------|-----------------|  
+|[CMenuTearOffManager::Build](#build)||  
+|[CMenuTearOffManager::GetRegPath](#getregpath)||  
+|[CMenuTearOffManager::Initialize](#initialize)|Inizializza un `CMenuTearOffManager` oggetto.|  
+|[CMenuTearOffManager::IsDynamicID](#isdynamicid)||  
+|[CMenuTearOffManager::Parse](#parse)||  
+|[CMenuTearOffManager::Reset](#reset)||  
+|[CMenuTearOffManager::SetInUse](#setinuse)||  
+|[CMenuTearOffManager::SetupTearOffMenus](#setuptearoffmenus)||  
+  
+## <a name="remarks"></a>Note  
+ Per utilizzare i menu a comparsa nell'applicazione, è necessario un `CMenuTearOffManager` oggetto. Nella maggior parte dei casi, non creare o inizializzare un `CMenuTearOffManager` direttamente l'oggetto. Questa operazione viene eseguita automaticamente quando si chiama il [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus) (funzione).  
+  
+## <a name="example"></a>Esempio  
+ Nell'esempio riportato di seguito viene illustrato come creare e inizializzare un `CMenuTearOffManager` oggetto chiamando il `CWinAppEX::EnableTearOffMenus` metodo. Questo frammento di codice fa parte di [esempio riempimento Word](../../visual-cpp-samples.md).  
+  
+ [!code-cpp[NVC_MFC_WordPad&#12;](../../mfc/reference/codesnippet/cpp/cmenutearoffmanager-class_1.cpp)]  
+  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
+ [CObject](../../mfc/reference/cobject-class.md)  
+  
+ `CMenuTearOffManager`   
+  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** afxmenutearoffmanager.h  
+  
+##  <a name="a-namebuilda--cmenutearoffmanagerbuild"></a><a name="build"></a>CMenuTearOffManager::Build  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+void Build(
+    UINT uiTearOffBarID,  
+    CString& strText);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in] `uiTearOffBarID`  
+ [in] `strText`  
+  
+### <a name="remarks"></a>Note  
+  
+##  <a name="a-namecmenutearoffmanagera--cmenutearoffmanagercmenutearoffmanager"></a><a name="cmenutearoffmanager"></a>CMenuTearOffManager::CMenuTearOffManager  
+ Costruisce un [CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md) oggetto.  
+  
+```  
+CMenuTearOffManager();
+```  
+  
+### <a name="remarks"></a>Note  
+ Nella maggior parte dei casi, non è necessario creare un `CMenuTearOffManager` manualmente. Il framework dell'applicazione crea il `CMenuTearOffManager` oggetto quando si chiama [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus).  
+  
+##  <a name="a-namegetregpatha--cmenutearoffmanagergetregpath"></a><a name="getregpath"></a>CMenuTearOffManager::GetRegPath  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+LPCTSTR GetRegPath() const;  
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+  
+### <a name="remarks"></a>Note  
+  
+##  <a name="a-nameinitializea--cmenutearoffmanagerinitialize"></a><a name="initialize"></a>CMenuTearOffManager::Initialize  
+ Inizializza un [CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md) oggetto.  
+  
+```  
+BOOL Initialize(
+    LPCTSTR lpszRegEntry,  
+    UINT uiTearOffMenuFirst,  
+    UINT uiTearOffMenuLast);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in] `lpszRegEntry`  
+ Stringa che contiene il percorso di una voce del Registro di sistema. Le applicazioni vengono archiviate le impostazioni per le barre tear-off in questa voce del Registro di sistema.  
+  
+ [in] `uiTearOffMenuFirst`  
+ Il primo ID di menu per un menu a comparsa.  
+  
+ [in] `uiTearOffMenuLast`  
+ L'ultimo ID di menu per un menu a comparsa.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Diverso da zero se ha esito positivo; in caso contrario 0.  
+  
+### <a name="remarks"></a>Note  
+ L'intervallo di ID di menu da `uiTearOffMenuFirst` per `uiTearOffMenuLast` deve essere un intervallo continuo. L'intervallo definisce il numero di menu a comparsa che possono essere visualizzati nello stesso momento nell'applicazione.  
+  
+##  <a name="a-nameisdynamicida--cmenutearoffmanagerisdynamicid"></a><a name="isdynamicid"></a>CMenuTearOffManager::IsDynamicID  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+BOOL IsDynamicID(UINT uiID) const;  
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in] `uiID`  
+  
+### <a name="return-value"></a>Valore restituito  
+  
+### <a name="remarks"></a>Note  
+  
+##  <a name="a-nameparsea--cmenutearoffmanagerparse"></a><a name="parse"></a>CMenuTearOffManager::Parse  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+UINT Parse(CString& str);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in] `str`  
+  
+### <a name="return-value"></a>Valore restituito  
+  
+### <a name="remarks"></a>Note  
+  
+##  <a name="a-namereseta--cmenutearoffmanagerreset"></a><a name="reset"></a>CMenuTearOffManager::Reset  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+void Reset(HMENU hmenu);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in] `hmenu`  
+  
+### <a name="remarks"></a>Note  
+  
+##  <a name="a-namesetinusea--cmenutearoffmanagersetinuse"></a><a name="setinuse"></a>CMenuTearOffManager::SetInUse  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+void SetInUse(
+    UINT uiCmdId,  
+    BOOL bUse = TRUE);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in] `uiCmdId`  
+ [in] `bUse`  
+  
+### <a name="remarks"></a>Note  
+  
+##  <a name="a-namesetuptearoffmenusa--cmenutearoffmanagersetuptearoffmenus"></a><a name="setuptearoffmenus"></a>CMenuTearOffManager::SetupTearOffMenus  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+void SetupTearOffMenus(HMENU hMenu);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in] `hMenu`  
+  
+### <a name="remarks"></a>Note  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
+ [Classi](../../mfc/reference/mfc-classes.md)   
+ [Classe CWinAppEx](../../mfc/reference/cwinappex-class.md)
+

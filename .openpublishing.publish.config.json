@@ -27,6 +27,15 @@
       "url": "https://github.com/Microsoft/templates.docs.msft.it-it",
       "branch": "master",
       "branch_mapping": {}
+    },
+    {
+       "path_to_root": "_repo.en-us",
+       "url": "https://github.com/Microsoft/vcppdocs",
+       "branch": "master",
+       "branch_mapping": {
+         "master": "master",
+         "live": "live"
+       }
     }
   ]
 }
