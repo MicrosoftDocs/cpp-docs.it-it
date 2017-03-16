@@ -27,9 +27,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a769a69a788c2c7ae1fd9854afe89d1feccf9278
-ms.openlocfilehash: bc9ac2892eb9372586f101d706e744e60ebda3ce
-ms.lasthandoff: 03/02/2017
+ms.sourcegitcommit: d4b97ed874b145f9c6d9a9536476243bba0fd1c1
+ms.openlocfilehash: b26df320266a1465e214c70c29c7077d04ffb4b9
+ms.lasthandoff: 03/06/2017
 
 ---
    
@@ -343,5 +343,5 @@ void f(ClassLibrary1::Class1 ^r1, ClassLibrary1::Class2 ^r2)
 ```
 
 ## <a name="see-also"></a>Vedere anche  
-[Conformità al linguaggio Visual C/C++](c-cpp-language-conformance.md)  
+[Conformità al linguaggio di Visual C++](visual-cpp-language-conformance.md)  
 
