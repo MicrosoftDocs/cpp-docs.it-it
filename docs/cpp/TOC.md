@@ -399,7 +399,6 @@
 ## [Comportamento non standard](nonstandard-behavior.md)
 ### [Limiti del compilatore](compiler-limits.md)
 # [C++ (C++ moderno)](welcome-back-to-cpp-modern-cpp.md)
-## [Supporto delle funzionalità C++11-14-17 (C++ moderno)](support-for-cpp11-14-17-features-modern-cpp.md)
 ## [Sistema di tipi C++ (C++ moderno)](cpp-type-system-modern-cpp.md)
 ### [Tipi di valore (C++ moderno)](value-types-modern-cpp.md)
 ### [Conversioni di tipi e indipendenza dai tipi (C++ moderno)](type-conversions-and-type-safety-modern-cpp.md)
