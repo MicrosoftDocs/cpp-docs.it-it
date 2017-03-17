@@ -8,8 +8,7 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords:
-- CMFCDragFrameImpl
+f1_keywords: = "CMFCDragFrameImpl"
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -59,7 +58,7 @@ class CMFCDragFrameImpl
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxdragframeimpl.h  
   
-##  <a name="a-nameenddrawdragframea--cmfcdragframeimplenddrawdragframe"></a><a name="enddrawdragframe"></a>CMFCDragFrameImpl::EndDrawDragFrame  
+##  <a name="enddrawdragframe"></a>CMFCDragFrameImpl::EndDrawDragFrame  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -71,7 +70,7 @@ void EndDrawDragFrame(BOOL bClearInternalRects = TRUE);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameinita--cmfcdragframeimplinit"></a><a name="init"></a>CMFCDragFrameImpl::Init  
+##  <a name="init"></a>CMFCDragFrameImpl::Init  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -83,7 +82,7 @@ void Init(CWnd* pDraggedWnd);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namemovedragframea--cmfcdragframeimplmovedragframe"></a><a name="movedragframe"></a>CMFCDragFrameImpl::MoveDragFrame  
+##  <a name="movedragframe"></a>CMFCDragFrameImpl::MoveDragFrame  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -95,7 +94,7 @@ void MoveDragFrame(BOOL bForceMove = FALSE);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameplacetabpredockinga--cmfcdragframeimplplacetabpredocking"></a><a name="placetabpredocking"></a>CMFCDragFrameImpl::PlaceTabPreDocking  
+##  <a name="placetabpredocking"></a>CMFCDragFrameImpl::PlaceTabPreDocking  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -113,7 +112,7 @@ void PlaceTabPreDocking(CWnd* pCBarToPlaceOn);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameremovetabpredockinga--cmfcdragframeimplremovetabpredocking"></a><a name="removetabpredocking"></a>CMFCDragFrameImpl::RemoveTabPreDocking  
+##  <a name="removetabpredocking"></a>CMFCDragFrameImpl::RemoveTabPreDocking  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -125,7 +124,7 @@ void RemoveTabPreDocking(CDockablePane* pOldTargetBar = NULL);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameresetstatea--cmfcdragframeimplresetstate"></a><a name="resetstate"></a>CMFCDragFrameImpl::ResetState  
+##  <a name="resetstate"></a>CMFCDragFrameImpl::ResetState  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  

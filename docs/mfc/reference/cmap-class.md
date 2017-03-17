@@ -10,6 +10,23 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMap
+- AFXTEMPL/CMap
+- AFXTEMPL/CMap::CPair
+- AFXTEMPL/CMap::CMap
+- AFXTEMPL/CMap::GetCount
+- AFXTEMPL/CMap::GetHashTableSize
+- AFXTEMPL/CMap::GetNextAssoc
+- AFXTEMPL/CMap::GetSize
+- AFXTEMPL/CMap::GetStartPosition
+- AFXTEMPL/CMap::InitHashTable
+- AFXTEMPL/CMap::IsEmpty
+- AFXTEMPL/CMap::Lookup
+- AFXTEMPL/CMap::PGetFirstAssoc
+- AFXTEMPL/CMap::PGetNextAssoc
+- AFXTEMPL/CMap::PLookup
+- AFXTEMPL/CMap::RemoveAll
+- AFXTEMPL/CMap::RemoveKey
+- AFXTEMPL/CMap::SetAt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -125,7 +142,7 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxtempl.h  
   
-##  <a name="a-namecmapa--cmapcmap"></a><a name="cmap"></a>CMap::CMap  
+##  <a name="cmap"></a>CMap::CMap  
  Costruisce una mappa vuota.  
   
 ```  
@@ -142,7 +159,7 @@ CMap(INT_PTR nBlockSize = 10);
 ### <a name="example"></a>Esempio  
  [!code-cpp[&#56; NVC_MFCCollections](../../mfc/codesnippet/cpp/cmap-class_1.cpp)]  
   
-##  <a name="a-namecpaira--cmapcpair"></a><a name="cpair"></a>CMap::CPair  
+##  <a name="cpair"></a>CMap::CPair  
  Contiene un valore di chiave e il valore dell'oggetto associato.  
   
 ### <a name="remarks"></a>Note  
@@ -159,7 +176,7 @@ CMap(INT_PTR nBlockSize = 10);
 ### <a name="example"></a>Esempio  
  Per un esempio di utilizzo, vedere l'esempio per [CMap::PLookup](#plookup).  
   
-##  <a name="a-namegetcounta--cmapgetcount"></a><a name="getcount"></a>CMap::GetCount  
+##  <a name="getcount"></a>CMap::GetCount  
  Recupera il numero di elementi nella mappa.  
   
 ```  
@@ -172,7 +189,7 @@ INT_PTR GetCount() const;
 ### <a name="example"></a>Esempio  
  Vedere l'esempio per [CMap::Lookup](#lookup).  
   
-##  <a name="a-namegethashtablesizea--cmapgethashtablesize"></a><a name="gethashtablesize"></a>CMap::GetHashTableSize  
+##  <a name="gethashtablesize"></a>CMap::GetHashTableSize  
  Determina il numero di elementi nella tabella hash per la mappa.  
   
 ```  
@@ -185,7 +202,7 @@ UINT GetHashTableSize() const;
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCCollections&#57;](../../mfc/codesnippet/cpp/cmap-class_2.cpp)]  
   
-##  <a name="a-namegetnextassoca--cmapgetnextassoc"></a><a name="getnextassoc"></a>CMap::GetNextAssoc  
+##  <a name="getnextassoc"></a>CMap::GetNextAssoc  
  Recupera l'elemento della mappa in `rNextPosition`, quindi Aggiorna `rNextPosition` per fare riferimento all'elemento successivo nella mappa.  
   
 ```  
@@ -219,7 +236,7 @@ void GetNextAssoc(
 ### <a name="example"></a>Esempio  
  Vedere l'esempio per [CMap::SetAt](#setat).  
   
-##  <a name="a-namegetsizea--cmapgetsize"></a><a name="getsize"></a>CMap::GetSize  
+##  <a name="getsize"></a>CMap::GetSize  
  Restituisce il numero di elementi della mappa.  
   
 ```  
@@ -235,7 +252,7 @@ INT_PTR GetSize() const;
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCCollections&#58;](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]  
   
-##  <a name="a-namegetstartpositiona--cmapgetstartposition"></a><a name="getstartposition"></a>CMap::GetStartPosition  
+##  <a name="getstartposition"></a>CMap::GetStartPosition  
  Inizia un'iterazione mappa restituendo un **posizione** che può essere passato a un `GetNextAssoc` chiamare.  
   
 ```  
@@ -251,7 +268,7 @@ POSITION GetStartPosition() const;
 ### <a name="example"></a>Esempio  
  Vedere l'esempio per [CMap::SetAt](#setat).  
   
-##  <a name="a-nameinithashtablea--cmapinithashtable"></a><a name="inithashtable"></a>CMap::InitHashTable  
+##  <a name="inithashtable"></a>CMap::InitHashTable  
  Inizializza la tabella hash.  
   
 ```  
@@ -271,7 +288,7 @@ void InitHashTable(UINT hashSize, BOOL  bAllocNow = TRUEÂ);
 ### <a name="example"></a>Esempio  
  Vedere l'esempio per [CMap::Lookup](#lookup).  
   
-##  <a name="a-nameisemptya--cmapisempty"></a><a name="isempty"></a>CMap::IsEmpty  
+##  <a name="isempty"></a>CMap::IsEmpty  
  Determina se la mappa è vuota.  
   
 ```  
@@ -284,7 +301,7 @@ BOOL IsEmpty() const;
 ### <a name="example"></a>Esempio  
  Vedere l'esempio per [CMap::RemoveAll](#removeall).  
   
-##  <a name="a-namelookupa--cmaplookup"></a><a name="lookup"></a>CMap::Lookup  
+##  <a name="lookup"></a>CMap::Lookup  
  Cerca il valore mappato a una determinata chiave.  
   
 ```  
@@ -313,7 +330,7 @@ BOOL Lookup(ARG_KEY key, VALUE& rValue) const;
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCCollections&#58;](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]  
   
-##  <a name="a-nameoperatorata--cmapoperator--"></a><a name="operator_at"></a>[CMap::operator]  
+##  <a name="operator_at"></a>[CMap::operator]  
  Per sostituire pratico di `SetAt` funzione membro.  
   
 ```  
@@ -338,7 +355,7 @@ VALUE& operator[](arg_key key);
 ### <a name="example"></a>Esempio  
  Vedere l'esempio per [CMap::Lookup](#lookup).  
   
-##  <a name="a-namepgetfirstassoca--cmappgetfirstassoc"></a><a name="pgetfirstassoc"></a>CMap::PGetFirstAssoc  
+##  <a name="pgetfirstassoc"></a>CMap::PGetFirstAssoc  
  Restituisce la prima voce dell'oggetto mappa.  
   
 ```  
@@ -354,7 +371,7 @@ const CPair* PGetFirstAssoc() const;Â CPair* PGetFirstAssoc();
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCCollections&#59;](../../mfc/codesnippet/cpp/cmap-class_4.cpp)]  
   
-##  <a name="a-namepgetnextassoca--cmappgetnextassoc"></a><a name="pgetnextassoc"></a>CMap::PGetNextAssoc  
+##  <a name="pgetnextassoc"></a>CMap::PGetNextAssoc  
  Recupera l'elemento della mappa a cui puntata `pAssocRec`.  
   
 ```  
@@ -376,7 +393,7 @@ CPair *PGetNextAssoc(const CPair* pAssocRet);
 ### <a name="example"></a>Esempio  
  Vedere l'esempio per [CMap::PGetFirstAssoc](#pgetfirstassoc).  
   
-##  <a name="a-nameplookupa--cmapplookup"></a><a name="plookup"></a>CMap::PLookup  
+##  <a name="plookup"></a>CMap::PLookup  
  Trova il valore mappato a una determinata chiave.  
   
 ```  

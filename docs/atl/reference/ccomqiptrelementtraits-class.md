@@ -9,9 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComQIPtrElementTraits
 - CComQIPtrElementTraits
-- ATL::CComQIPtrElementTraits
+- ATLCOLL/ATL::CComQIPtrElementTraits
+- ATLCOLL/ATL::CComQIPtrElementTraits::INARGTYPE
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +86,7 @@ class CComQIPtrElementTraits :
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlcoll. h  
   
-##  <a name="a-nameinargtypea--ccomqiptrelementtraitsinargtype"></a><a name="inargtype"></a>CComQIPtrElementTraits::INARGTYPE  
+##  <a name="inargtype"></a>CComQIPtrElementTraits::INARGTYPE  
  Il tipo di dati da utilizzare per l'aggiunta di elementi per l'oggetto di classe di raccolta.  
   
 ```

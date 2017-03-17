@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSplitterWndEx
+- AFXSPLITTERWNDEX/CSplitterWndEx
+- AFXSPLITTERWNDEX/CSplitterWndEx::OnDrawSplitter
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -83,7 +85,7 @@ class CSplitterWndEx : public CSplitterWnd
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxsplitterwndex.h  
   
-##  <a name="a-nameondrawsplittera--csplitterwndexondrawsplitter"></a><a name="ondrawsplitter"></a>CSplitterWndEx::OnDrawSplitter  
+##  <a name="ondrawsplitter"></a>CSplitterWndEx::OnDrawSplitter  
  Chiamato dal framework per creare una finestra con separatore.  
   
 ```  

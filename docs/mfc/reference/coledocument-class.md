@@ -10,6 +10,30 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleDocument
+- AFXOLE/COleDocument
+- AFXOLE/COleDocument::COleDocument
+- AFXOLE/COleDocument::AddItem
+- AFXOLE/COleDocument::ApplyPrintDevice
+- AFXOLE/COleDocument::EnableCompoundFile
+- AFXOLE/COleDocument::GetInPlaceActiveItem
+- AFXOLE/COleDocument::GetNextClientItem
+- AFXOLE/COleDocument::GetNextItem
+- AFXOLE/COleDocument::GetNextServerItem
+- AFXOLE/COleDocument::GetPrimarySelectedItem
+- AFXOLE/COleDocument::GetStartPosition
+- AFXOLE/COleDocument::HasBlankItems
+- AFXOLE/COleDocument::OnShowViews
+- AFXOLE/COleDocument::RemoveItem
+- AFXOLE/COleDocument::UpdateModifiedFlag
+- AFXOLE/COleDocument::OnEditChangeIcon
+- AFXOLE/COleDocument::OnEditConvert
+- AFXOLE/COleDocument::OnEditLinks
+- AFXOLE/COleDocument::OnFileSendMail
+- AFXOLE/COleDocument::OnUpdateEditChangeIcon
+- AFXOLE/COleDocument::OnUpdateEditLinksMenu
+- AFXOLE/COleDocument::OnUpdateObjectVerbMenu
+- AFXOLE/COleDocument::OnUpdatePasteLinkMenu
+- AFXOLE/COleDocument::OnUpdatePasteMenu
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -116,7 +140,7 @@ class COleDocument : public CDocument
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** AFXOLE. h  
   
-##  <a name="a-nameadditema--coledocumentadditem"></a><a name="additem"></a>COleDocument::AddItem  
+##  <a name="additem"></a>COleDocument::AddItem  
  Chiamare questa funzione per aggiungere un elemento nel documento.  
   
 ```  
@@ -130,7 +154,7 @@ virtual void AddItem(CDocItem* pItem);
 ### <a name="remarks"></a>Note  
  Non è necessario chiamare questa funzione in modo esplicito quando viene chiamato di `COleClientItem` o `COleServerItem` costruttore che accetta un puntatore a un documento.  
   
-##  <a name="a-nameapplyprintdevicea--coledocumentapplyprintdevice"></a><a name="applyprintdevice"></a>COleDocument::ApplyPrintDevice  
+##  <a name="applyprintdevice"></a>COleDocument::ApplyPrintDevice  
  Chiamare questa funzione per modificare il dispositivo di destinazione di stampa per tutti incorporato [COleClientItem](../../mfc/reference/coleclientitem-class.md) gli elementi nel documento contenitore dell'applicazione.  
   
 ```  
@@ -157,14 +181,14 @@ BOOL ApplyPrintDevice(const PRINTDLG* ppd);
   
  Per ulteriori informazioni, vedere il [DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613) nella struttura di [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namecoledocumenta--coledocumentcoledocument"></a><a name="coledocument"></a>COleDocument::COleDocument  
+##  <a name="coledocument"></a>COleDocument::COleDocument  
  Costruisce un oggetto `COleDocument`.  
   
 ```  
 COleDocument();
 ```  
   
-##  <a name="a-nameenablecompoundfilea--coledocumentenablecompoundfile"></a><a name="enablecompoundfile"></a>COleDocument::EnableCompoundFile  
+##  <a name="enablecompoundfile"></a>COleDocument::EnableCompoundFile  
  Chiamare questa funzione se si desidera archiviare il documento utilizzando il formato dei file compositi.  
   
 ```  
@@ -182,7 +206,7 @@ void EnableCompoundFile(BOOL bEnable = TRUE);
   
  Dopo che il supporto di file composto è abilitato o disabilitato per un documento, l'impostazione non può essere modificata nel corso della durata del documento.  
   
-##  <a name="a-namegetinplaceactiveitema--coledocumentgetinplaceactiveitem"></a><a name="getinplaceactiveitem"></a>COleDocument::GetInPlaceActiveItem  
+##  <a name="getinplaceactiveitem"></a>COleDocument::GetInPlaceActiveItem  
  Chiamata questa funzione per ottenere OLE elemento che è attivo sul posto nella finestra cornice contenente la vista identificata da `pWnd`.  
   
 ```  
@@ -196,7 +220,7 @@ virtual COleClientItem* GetInPlaceActiveItem(CWnd* pWnd);
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore a singola, sul posto active elemento OLE; **NULL** se non vi è alcun elemento OLE nello stato è "attivo sul posto".  
   
-##  <a name="a-namegetnextclientitema--coledocumentgetnextclientitem"></a><a name="getnextclientitem"></a>COleDocument::GetNextClientItem  
+##  <a name="getnextclientitem"></a>COleDocument::GetNextClientItem  
  Chiamare questa funzione ripetutamente per accedere a tutti gli elementi client all'interno del documento.  
   
 ```  
@@ -216,7 +240,7 @@ COleClientItem* GetNextClientItem(POSITION& pos) const;
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCOleContainer n.&1;](../../mfc/codesnippet/cpp/coledocument-class_1.cpp)]  
   
-##  <a name="a-namegetnextitema--coledocumentgetnextitem"></a><a name="getnextitem"></a>COleDocument::GetNextItem  
+##  <a name="getnextitem"></a>COleDocument::GetNextItem  
  Chiamare questa funzione ripetutamente per accedere a tutti gli elementi nel documento.  
   
 ```  
@@ -236,7 +260,7 @@ virtual CDocItem* GetNextItem(POSITION& pos) const;
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCOleContainer n.&2;](../../mfc/codesnippet/cpp/coledocument-class_2.cpp)]  
   
-##  <a name="a-namegetnextserveritema--coledocumentgetnextserveritem"></a><a name="getnextserveritem"></a>COleDocument::GetNextServerItem  
+##  <a name="getnextserveritem"></a>COleDocument::GetNextServerItem  
  Chiamare questa funzione ripetutamente per accedere a tutti gli elementi server nel documento.  
   
 ```  
@@ -256,7 +280,7 @@ COleServerItem* GetNextServerItem(POSITION& pos) const;
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCOleServer n.&2;](../../mfc/codesnippet/cpp/coledocument-class_3.cpp)]  
   
-##  <a name="a-namegetprimaryselecteditema--coledocumentgetprimaryselecteditem"></a><a name="getprimaryselecteditem"></a>COleDocument::GetPrimarySelectedItem  
+##  <a name="getprimaryselecteditem"></a>COleDocument::GetPrimarySelectedItem  
  Chiamato dal framework per recuperare l'elemento OLE selezionato nella visualizzazione specificata.  
   
 ```  
@@ -273,7 +297,7 @@ virtual COleClientItem* GetPrimarySelectedItem(CView* pView);
 ### <a name="remarks"></a>Note  
  L'implementazione predefinita cerca elementi per un singolo elemento selezionato nell'elenco dell'OLE contenuto e restituisce un puntatore a esso. Se non esiste nessun elemento selezionato, o se è presente più di un elemento selezionato, la funzione restituisce **NULL**. È necessario eseguire l'override di `CView::IsSelected` funzione membro nella classe di visualizzazione per questa funzione lavorare. Eseguire l'override di questa funzione se si dispone di un metodo di archiviazione dei contenuti elementi OLE.  
   
-##  <a name="a-namegetstartpositiona--coledocumentgetstartposition"></a><a name="getstartposition"></a>COleDocument::GetStartPosition  
+##  <a name="getstartposition"></a>COleDocument::GetStartPosition  
  Chiamare questa funzione per ottenere la posizione del primo elemento nel documento.  
   
 ```  
@@ -286,7 +310,7 @@ virtual POSITION GetStartPosition() const;
 ### <a name="remarks"></a>Note  
  Passare il valore restituito per `GetNextItem`, `GetNextClientItem`, o `GetNextServerItem`.  
   
-##  <a name="a-namehasblankitemsa--coledocumenthasblankitems"></a><a name="hasblankitems"></a>COleDocument::HasBlankItems  
+##  <a name="hasblankitems"></a>COleDocument::HasBlankItems  
  Chiamare questa funzione per determinare se il documento contiene elementi vuoti.  
   
 ```  
@@ -299,7 +323,7 @@ BOOL HasBlankItems() const;
 ### <a name="remarks"></a>Note  
  Un elemento vuoto è un rettangolo di cui è vuoto.  
   
-##  <a name="a-nameoneditchangeicona--coledocumentoneditchangeicon"></a><a name="oneditchangeicon"></a>COleDocument::OnEditChangeIcon  
+##  <a name="oneditchangeicon"></a>COleDocument::OnEditChangeIcon  
  Visualizza la finestra di dialogo Modifica dell'icona OLE e viene modificata l'icona che rappresenta l'elemento OLE selezionato per l'icona che l'utente seleziona nella finestra di dialogo.  
   
 ```  
@@ -309,7 +333,7 @@ afx_msg void OnEditChangeIcon();
 ### <a name="remarks"></a>Note  
  `OnEditChangeIcon`Crea e avvia un `COleChangeIconDialog` la finestra di dialogo di modifica dell'icona.  
   
-##  <a name="a-nameoneditconverta--coledocumentoneditconvert"></a><a name="oneditconvert"></a>COleDocument::OnEditConvert  
+##  <a name="oneditconvert"></a>COleDocument::OnEditConvert  
  Visualizza la finestra di dialogo OLE convertire e converte o attiva l'elemento OLE attualmente selezionato in base alle selezioni dell'utente nella finestra di dialogo.  
   
 ```  
@@ -321,7 +345,7 @@ afx_msg void OnEditConvert();
   
  Un esempio di conversione converte un documento Microsoft Word in un documento di WordPad.  
   
-##  <a name="a-nameoneditlinksa--coledocumentoneditlinks"></a><a name="oneditlinks"></a>COleDocument::OnEditLinks  
+##  <a name="oneditlinks"></a>COleDocument::OnEditLinks  
  Visualizza la finestra di dialogo Modifica/collegamenti OLE.  
   
 ```  
@@ -331,7 +355,7 @@ afx_msg void OnEditLinks();
 ### <a name="remarks"></a>Note  
  `OnEditLinks`Crea e avvia un `COleLinksDialog` la finestra di dialogo collegamenti che consente all'utente di modificare gli oggetti collegati.  
   
-##  <a name="a-nameonfilesendmaila--coledocumentonfilesendmail"></a><a name="onfilesendmail"></a>COleDocument::OnFileSendMail  
+##  <a name="onfilesendmail"></a>COleDocument::OnFileSendMail  
  Invia un messaggio tramite l'host della posta elettronica residenti (se presente) con il documento come allegato.  
   
 ```  
@@ -345,7 +369,7 @@ afx_msg void OnFileSendMail();
   
  Per ulteriori informazioni, vedere il [MAPI argomenti](../../mfc/mapi.md) e [supporto MAPI in MFC](../../mfc/mapi-support-in-mfc.md) articoli...  
   
-##  <a name="a-nameonshowviewsa--coledocumentonshowviews"></a><a name="onshowviews"></a>COleDocument::OnShowViews  
+##  <a name="onshowviews"></a>COleDocument::OnShowViews  
  Il framework chiama questa funzione dopo la visibilità del documento le modifiche di stato.  
   
 ```  
@@ -359,7 +383,7 @@ virtual void OnShowViews(BOOL bVisible);
 ### <a name="remarks"></a>Note  
  La versione predefinita di questa funzione non esegue alcuna operazione. Eseguirne l'override se l'applicazione deve eseguire qualsiasi elaborazione speciale quando cambia la visibilità del documento.  
   
-##  <a name="a-nameonupdateeditchangeicona--coledocumentonupdateeditchangeicon"></a><a name="onupdateeditchangeicon"></a>COleDocument::OnUpdateEditChangeIcon  
+##  <a name="onupdateeditchangeicon"></a>COleDocument::OnUpdateEditChangeIcon  
  Chiamato dal framework per aggiornare il comando di modifica dell'icona del menu Modifica.  
   
 ```  
@@ -373,7 +397,7 @@ afx_msg void OnUpdateEditChangeIcon(CCmdUI* pCmdUI);
 ### <a name="remarks"></a>Note  
  `OnUpdateEditChangeIcon`Aggiorna l'interfaccia utente del comando a seconda del fatto nel documento è presente un'icona valida. Eseguire l'override di questa funzione per modificare il comportamento.  
   
-##  <a name="a-nameonupdateeditlinksmenua--coledocumentonupdateeditlinksmenu"></a><a name="onupdateeditlinksmenu"></a>COleDocument::OnUpdateEditLinksMenu  
+##  <a name="onupdateeditlinksmenu"></a>COleDocument::OnUpdateEditLinksMenu  
  Chiamato dal framework per aggiornare il comando collegamenti del menu Modifica.  
   
 ```  
@@ -387,7 +411,7 @@ afx_msg void OnUpdateEditLinksMenu(CCmdUI* pCmdUI);
 ### <a name="remarks"></a>Note  
  A partire dal primo elemento OLE nel documento, `OnUpdateEditLinksMenu` accede ogni elemento, verifica se l'elemento è un collegamento e, se si tratta di un collegamento, abilita il comando collegamenti. Eseguire l'override di questa funzione per modificare il comportamento.  
   
-##  <a name="a-nameonupdateobjectverbmenua--coledocumentonupdateobjectverbmenu"></a><a name="onupdateobjectverbmenu"></a>COleDocument::OnUpdateObjectVerbMenu  
+##  <a name="onupdateobjectverbmenu"></a>COleDocument::OnUpdateObjectVerbMenu  
  Chiamato dal framework per aggiornare il *ObjectName* comando dal menu Modifica e il sottomenu verbo accessibili dal *ObjectName* comando, dove *ObjectName* è il nome dell'oggetto OLE incorporato nel documento.  
   
 ```  
@@ -401,7 +425,7 @@ afx_msg void OnUpdateObjectVerbMenu(CCmdUI* pCmdUI);
 ### <a name="remarks"></a>Note  
  `OnUpdateObjectVerbMenu`gli aggiornamenti di *ObjectName* interfaccia utente del comando a seconda se un oggetto valido presente nel documento. Se è presente un oggetto, il *ObjectName* comando dal menu Modifica è abilitato. Se questo comando di menu è selezionato, viene visualizzato il sottomenu verbo. Il sottomenu verbo contiene tutti i comandi di verbi disponibili per l'oggetto, ad esempio modifica delle proprietà e così via. Eseguire l'override di questa funzione per modificare il comportamento.  
   
-##  <a name="a-nameonupdatepastelinkmenua--coledocumentonupdatepastelinkmenu"></a><a name="onupdatepastelinkmenu"></a>COleDocument::OnUpdatePasteLinkMenu  
+##  <a name="onupdatepastelinkmenu"></a>COleDocument::OnUpdatePasteLinkMenu  
  Chiamato dal framework per determinare se un elemento OLE collegato può essere incollato dagli Appunti.  
   
 ```  
@@ -415,7 +439,7 @@ afx_msg void OnUpdatePasteLinkMenu(CCmdUI* pCmdUI);
 ### <a name="remarks"></a>Note  
  Il comando Incolla speciale è abilitato o disabilitato a seconda se l'elemento può essere incollato nel documento o No.  
   
-##  <a name="a-nameonupdatepastemenua--coledocumentonupdatepastemenu"></a><a name="onupdatepastemenu"></a>COleDocument::OnUpdatePasteMenu  
+##  <a name="onupdatepastemenu"></a>COleDocument::OnUpdatePasteMenu  
  Chiamato dal framework per determinare se un elemento OLE incorporato può essere incollato dagli Appunti.  
   
 ```  
@@ -429,7 +453,7 @@ afx_msg void OnUpdatePasteMenu(CCmdUI* pCmdUI);
 ### <a name="remarks"></a>Note  
  Il comando Incolla e il pulsante vengono abilitate o disabilitate a seconda se l'elemento può essere incollato nel documento o No.  
   
-##  <a name="a-nameremoveitema--coledocumentremoveitem"></a><a name="removeitem"></a>COleDocument::RemoveItem  
+##  <a name="removeitem"></a>COleDocument::RemoveItem  
  Chiamare questa funzione per rimuovere un elemento dal documento.  
   
 ```  
@@ -443,7 +467,7 @@ virtual void RemoveItem(CDocItem* pItem);
 ### <a name="remarks"></a>Note  
  In genere non occorre chiamare questa funzione in modo esplicito. viene chiamato per i distruttori per `COleClientItem` e `COleServerItem`.  
   
-##  <a name="a-nameupdatemodifiedflaga--coledocumentupdatemodifiedflag"></a><a name="updatemodifiedflag"></a>COleDocument::UpdateModifiedFlag  
+##  <a name="updatemodifiedflag"></a>COleDocument::UpdateModifiedFlag  
  Chiamare questa funzione per contrassegnare il documento come modificato se uno qualsiasi degli elementi OLE contenuti sono stato modificato.  
   
 ```  

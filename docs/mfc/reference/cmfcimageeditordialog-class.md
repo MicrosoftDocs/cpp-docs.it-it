@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCImageEditorDialog
+- AFXIMAGEEDITORDIALOG/CMFCImageEditorDialog
+- AFXIMAGEEDITORDIALOG/CMFCImageEditorDialog::CMFCImageEditorDialog
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +91,7 @@ class CMFCImageEditorDialog : public CDialogEx
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afximageeditordialog.h  
   
-##  <a name="a-namecmfcimageeditordialoga--cmfcimageeditordialogcmfcimageeditordialog"></a><a name="cmfcimageeditordialog"></a>CMFCImageEditorDialog::CMFCImageEditorDialog  
+##  <a name="cmfcimageeditordialog"></a>CMFCImageEditorDialog::CMFCImageEditorDialog  
  Costruisce un oggetto `CMFCImageEditorDialog`.  
   
 ```  

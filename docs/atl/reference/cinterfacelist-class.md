@@ -9,9 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CInterfaceList
-- ATL.CInterfaceList
 - CInterfaceList
+- ATLCOLL/ATL::CInterfaceList
+- ATLCOLL/ATL::CInterfaceList::CInterfaceList
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +81,7 @@ class CInterfaceList
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlcoll. h  
   
-##  <a name="a-namecinterfacelista--cinterfacelistcinterfacelist"></a><a name="cinterfacelist"></a>CInterfaceList::CInterfaceList  
+##  <a name="cinterfacelist"></a>CInterfaceList::CInterfaceList  
  Il costruttore per l'elenco di interfacce.  
   
 ```

@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CStringData
+- ATLSIMPSTR/ATL::CStringData
+- ATLSIMPSTR/ATL::AddRef
+- ATLSIMPSTR/ATL::data
+- ATLSIMPSTR/ATL::IsLocked
+- ATLSIMPSTR/ATL::IsShared
+- ATLSIMPSTR/ATL::Lock
+- ATLSIMPSTR/ATL::Release
+- ATLSIMPSTR/ATL::Unlock
+- ATLSIMPSTR/ATL::nAllocLength
+- ATLSIMPSTR/ATL::nDataLength
+- ATLSIMPSTR/ATL::nRefs
+- ATLSIMPSTR/ATL::pStringMgr
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -98,7 +110,7 @@ struct CStringData
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlsimpstr.h  
   
-##  <a name="a-nameaddrefa--cstringdataaddref"></a><a name="addref"></a>CStringData::AddRef  
+##  <a name="addref"></a>CStringData::AddRef  
  Incrementa il conteggio dei riferimenti dell'oggetto stringa.  
   
 ```
@@ -111,7 +123,7 @@ void AddRef() throw();
 > [!NOTE]
 >  Non chiamare questo metodo in una stringa con un conteggio dei riferimenti negativo, poiché un numero negativo indica che il buffer di stringa viene bloccato.  
   
-##  <a name="a-namedataa--cstringdatadata"></a><a name="data"></a>CStringData::data  
+##  <a name="data"></a>CStringData::data  
  Restituisce un puntatore al buffer di caratteri di un oggetto stringa.  
   
 ```
@@ -127,7 +139,7 @@ void* data() throw();
 > [!NOTE]
 >  Il buffer non è allocato dal `CStringData` oggetto ma dal gestore di stringa quando necessario. Durante l'allocazione, il buffer viene aggiunto all'oggetto dati stringa.  
   
-##  <a name="a-nameislockeda--cstringdataislocked"></a><a name="islocked"></a>CStringData::IsLocked  
+##  <a name="islocked"></a>CStringData::IsLocked  
  Determina se il buffer di caratteri è bloccato.  
   
 ```
@@ -140,7 +152,7 @@ bool IsLocked() const throw();
 ### <a name="remarks"></a>Note  
  Chiamare questa funzione per determinare se il buffer di caratteri di un oggetto string è attualmente bloccato.  
   
-##  <a name="a-nameisshareda--cstringdataisshared"></a><a name="isshared"></a>CStringData::IsShared  
+##  <a name="isshared"></a>CStringData::IsShared  
  Determina se il buffer di caratteri è condiviso.  
   
 ```
@@ -153,7 +165,7 @@ bool IsShared() const throw();
 ### <a name="remarks"></a>Note  
  Chiamare questa funzione per determinare se il buffer di caratteri di un oggetto dati di stringa è attualmente condivisa tra più oggetti stringa.  
   
-##  <a name="a-namelocka--cstringdatalock"></a><a name="lock"></a>CStringData::Lock  
+##  <a name="lock"></a>CStringData::Lock  
  Blocca il buffer di caratteri dell'oggetto stringa associato.  
   
 ```
@@ -166,7 +178,7 @@ void Lock() throw();
 > [!NOTE]
 >  È possibile bloccare un buffer di caratteri solo se il buffer non è condiviso da più oggetti stringa.  
   
-##  <a name="a-namenalloclengtha--cstringdatanalloclength"></a><a name="nalloclength"></a>CStringData::nAllocLength  
+##  <a name="nalloclength"></a>CStringData::nAllocLength  
  Lunghezza del buffer di caratteri allocato.  
   
 ```
@@ -176,7 +188,7 @@ int nAllocLength;
 ### <a name="remarks"></a>Note  
  Archivia la lunghezza del buffer di dati allocati in `XCHAR`s (escluso a terminazione null).  
   
-##  <a name="a-namendatalengtha--cstringdatandatalength"></a><a name="ndatalength"></a>CStringData::nDataLength  
+##  <a name="ndatalength"></a>CStringData::nDataLength  
  Lunghezza corrente dell'oggetto stringa.  
   
 ```
@@ -186,7 +198,7 @@ int nDataLength;
 ### <a name="remarks"></a>Note  
  Archivia la lunghezza dei dati attualmente in uso in `XCHAR`s (escluso a terminazione null).  
   
-##  <a name="a-namenrefsa--cstringdatanrefs"></a><a name="nrefs"></a>CStringData::nRefs  
+##  <a name="nrefs"></a>CStringData::nRefs  
  Conteggio dei riferimenti dell'oggetto dati stringa.  
   
 ```
@@ -196,7 +208,7 @@ long nRefs;
 ### <a name="remarks"></a>Note  
  Archivia il conteggio dei riferimenti dell'oggetto dati stringa. Questo contatore indica il numero di oggetti stringa superiore che sono associati all'oggetto dati di stringa. Un valore negativo indica che l'oggetto dati di stringa è attualmente bloccato.  
   
-##  <a name="a-namepstringmgra--cstringdatapstringmgr"></a><a name="pstringmgr"></a>CStringData::pStringMgr  
+##  <a name="pstringmgr"></a>CStringData::pStringMgr  
  Il gestore della memoria dell'oggetto stringa associato.  
   
 ```
@@ -206,7 +218,7 @@ IAtlStringMgr* pStringMgr;
 ### <a name="remarks"></a>Note  
  Archivia il gestore della memoria per l'oggetto stringa associato. Per ulteriori informazioni su stringhe e i gestori di memoria, vedere [gestione della memoria e CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
-##  <a name="a-namereleasea--cstringdatarelease"></a><a name="release"></a>CStringData::Release  
+##  <a name="release"></a>CStringData::Release  
  Decrementa il conteggio dei riferimenti dell'oggetto dati stringa.  
   
 ```
@@ -220,7 +232,7 @@ void Release() throw();
   
  [!code-cpp[&#104; NVC_ATLMFC_Utilities](../../atl-mfc-shared/codesnippet/cpp/cstringdata-class_1.cpp)]  
   
-##  <a name="a-nameunlocka--cstringdataunlock"></a><a name="unlock"></a>CStringData::Unlock  
+##  <a name="unlock"></a>CStringData::Unlock  
  Sblocca il buffer di caratteri dell'oggetto stringa associato.  
   
 ```

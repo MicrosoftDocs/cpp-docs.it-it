@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CInvalidArgException
+- AFX/CInvalidArgException
+- AFX/CInvalidArgException::CInvalidArgException
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -73,7 +75,7 @@ class CInvalidArgException : public CSimpleException
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afx.h  
   
-##  <a name="a-namecinvalidargexceptiona--cinvalidargexceptioncinvalidargexception"></a><a name="cinvalidargexception"></a>CInvalidArgException::CInvalidArgException  
+##  <a name="cinvalidargexception"></a>CInvalidArgException::CInvalidArgException  
  Costruttore.  
   
 ```  

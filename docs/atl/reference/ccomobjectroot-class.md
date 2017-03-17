@@ -10,6 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComObjectRoot
+- atlcom/ATL::CComObjectRoot
 dev_langs:
 - C++
 helpviewer_keywords:

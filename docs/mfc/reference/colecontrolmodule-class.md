@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- COleControlModule
+- OleControlModule
 dev_langs:
 - C++
 helpviewer_keywords:

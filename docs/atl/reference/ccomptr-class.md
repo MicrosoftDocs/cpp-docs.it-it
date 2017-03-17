@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComPtr
+- ATLBASE/ATL::CComPtr
+- ATLBASE/ATL::CComPtr::CComPtr
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +88,7 @@ class CComPtr
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlbase. h  
   
-##  <a name="a-nameccomptra--ccomptrccomptr"></a><a name="ccomptr"></a>CComPtr::CComPtr  
+##  <a name="ccomptr"></a>CComPtr::CComPtr  
  Costruttore.  
   
 ```
@@ -102,7 +104,7 @@ CComPtr (const CComPtr<T>& lp) throw ();
  `T`  
  Un'interfaccia COM.  
   
-##  <a name="a-nameoperatoreqa--ccomptroperator-"></a><a name="operator_eq"></a>CComPtr::operator =  
+##  <a name="operator_eq"></a>CComPtr::operator =  
  Operatore di assegnazione.  
   
 ```

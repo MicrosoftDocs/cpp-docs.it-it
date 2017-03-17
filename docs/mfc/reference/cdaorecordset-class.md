@@ -10,6 +10,87 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDaoRecordset
+- AFXDAO/CDaoRecordset
+- AFXDAO/CDaoRecordset::CDaoRecordset
+- AFXDAO/CDaoRecordset::AddNew
+- AFXDAO/CDaoRecordset::CanAppend
+- AFXDAO/CDaoRecordset::CanBookmark
+- AFXDAO/CDaoRecordset::CancelUpdate
+- AFXDAO/CDaoRecordset::CanRestart
+- AFXDAO/CDaoRecordset::CanScroll
+- AFXDAO/CDaoRecordset::CanTransact
+- AFXDAO/CDaoRecordset::CanUpdate
+- AFXDAO/CDaoRecordset::Close
+- AFXDAO/CDaoRecordset::Delete
+- AFXDAO/CDaoRecordset::DoFieldExchange
+- AFXDAO/CDaoRecordset::Edit
+- AFXDAO/CDaoRecordset::FillCache
+- AFXDAO/CDaoRecordset::Find
+- AFXDAO/CDaoRecordset::FindFirst
+- AFXDAO/CDaoRecordset::FindLast
+- AFXDAO/CDaoRecordset::FindNext
+- AFXDAO/CDaoRecordset::FindPrev
+- AFXDAO/CDaoRecordset::GetAbsolutePosition
+- AFXDAO/CDaoRecordset::GetBookmark
+- AFXDAO/CDaoRecordset::GetCacheSize
+- AFXDAO/CDaoRecordset::GetCacheStart
+- AFXDAO/CDaoRecordset::GetCurrentIndex
+- AFXDAO/CDaoRecordset::GetDateCreated
+- AFXDAO/CDaoRecordset::GetDateLastUpdated
+- AFXDAO/CDaoRecordset::GetDefaultDBName
+- AFXDAO/CDaoRecordset::GetDefaultSQL
+- AFXDAO/CDaoRecordset::GetEditMode
+- AFXDAO/CDaoRecordset::GetFieldCount
+- AFXDAO/CDaoRecordset::GetFieldInfo
+- AFXDAO/CDaoRecordset::GetFieldValue
+- AFXDAO/CDaoRecordset::GetIndexCount
+- AFXDAO/CDaoRecordset::GetIndexInfo
+- AFXDAO/CDaoRecordset::GetLastModifiedBookmark
+- AFXDAO/CDaoRecordset::GetLockingMode
+- AFXDAO/CDaoRecordset::GetName
+- AFXDAO/CDaoRecordset::GetParamValue
+- AFXDAO/CDaoRecordset::GetPercentPosition
+- AFXDAO/CDaoRecordset::GetRecordCount
+- AFXDAO/CDaoRecordset::GetSQL
+- AFXDAO/CDaoRecordset::GetType
+- AFXDAO/CDaoRecordset::GetValidationRule
+- AFXDAO/CDaoRecordset::GetValidationText
+- AFXDAO/CDaoRecordset::IsBOF
+- AFXDAO/CDaoRecordset::IsDeleted
+- AFXDAO/CDaoRecordset::IsEOF
+- AFXDAO/CDaoRecordset::IsFieldDirty
+- AFXDAO/CDaoRecordset::IsFieldNull
+- AFXDAO/CDaoRecordset::IsFieldNullable
+- AFXDAO/CDaoRecordset::IsOpen
+- AFXDAO/CDaoRecordset::Move
+- AFXDAO/CDaoRecordset::MoveFirst
+- AFXDAO/CDaoRecordset::MoveLast
+- AFXDAO/CDaoRecordset::MoveNext
+- AFXDAO/CDaoRecordset::MovePrev
+- AFXDAO/CDaoRecordset::Open
+- AFXDAO/CDaoRecordset::Requery
+- AFXDAO/CDaoRecordset::Seek
+- AFXDAO/CDaoRecordset::SetAbsolutePosition
+- AFXDAO/CDaoRecordset::SetBookmark
+- AFXDAO/CDaoRecordset::SetCacheSize
+- AFXDAO/CDaoRecordset::SetCacheStart
+- AFXDAO/CDaoRecordset::SetCurrentIndex
+- AFXDAO/CDaoRecordset::SetFieldDirty
+- AFXDAO/CDaoRecordset::SetFieldNull
+- AFXDAO/CDaoRecordset::SetFieldValue
+- AFXDAO/CDaoRecordset::SetFieldValueNull
+- AFXDAO/CDaoRecordset::SetLockingMode
+- AFXDAO/CDaoRecordset::SetParamValue
+- AFXDAO/CDaoRecordset::SetParamValueNull
+- AFXDAO/CDaoRecordset::SetPercentPosition
+- AFXDAO/CDaoRecordset::Update
+- AFXDAO/CDaoRecordset::m_bCheckCacheForDirtyFields
+- AFXDAO/CDaoRecordset::m_nFields
+- AFXDAO/CDaoRecordset::m_nParams
+- AFXDAO/CDaoRecordset::m_pDAORecordset
+- AFXDAO/CDaoRecordset::m_pDatabase
+- AFXDAO/CDaoRecordset::m_strFilter
+- AFXDAO/CDaoRecordset::m_strSort
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -193,7 +274,7 @@ class CDaoRecordset : public CObject
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxdao. h  
   
-##  <a name="a-nameaddnewa--cdaorecordsetaddnew"></a><a name="addnew"></a>CDaoRecordset:: AddNew  
+##  <a name="addnew"></a>CDaoRecordset:: AddNew  
  Chiamare questa funzione membro per aggiungere un nuovo record a un recordset di tipo tabella o dynaset.  
   
 ```  
@@ -231,7 +312,7 @@ virtual void AddNew();
   
  Per informazioni correlate, vedere gli argomenti "Metodo AddNew", "Metodo CancelUpdate", "Proprietà LastModified" e "Proprietà EditMode" nella Guida di DAO.  
   
-##  <a name="a-namecanappenda--cdaorecordsetcanappend"></a><a name="canappend"></a>CDaoRecordset::CanAppend  
+##  <a name="canappend"></a>CDaoRecordset::CanAppend  
  Chiamare questa funzione membro per determinare se il recordset aperto in precedenza consente di aggiungere nuovi record tramite la chiamata di [AddNew](#addnew) funzione membro.  
   
 ```  
@@ -244,7 +325,7 @@ BOOL CanAppend() const;
 ### <a name="remarks"></a>Note  
  Per informazioni correlate, vedere l'argomento "Metodo Append" nella Guida di DAO.  
   
-##  <a name="a-namecanbookmarka--cdaorecordsetcanbookmark"></a><a name="canbookmark"></a>CDaoRecordset:: CanBookmark  
+##  <a name="canbookmark"></a>CDaoRecordset:: CanBookmark  
  Chiamare questa funzione membro per determinare se il recordset aperto in precedenza consente di contrassegnare singoli record utilizzando i segnalibri.  
   
 ```  
@@ -259,7 +340,7 @@ BOOL CanBookmark();
   
  Per informazioni correlate, vedere l'argomento "Proprietà supporta" nella Guida di DAO.  
   
-##  <a name="a-namecancelupdatea--cdaorecordsetcancelupdate"></a><a name="cancelupdate"></a>CDaoRecordset::CancelUpdate  
+##  <a name="cancelupdate"></a>CDaoRecordset::CancelUpdate  
  Il `CancelUpdate` funzione membro Annulla eventuali aggiornamenti in sospeso a causa di un [modificare](#edit) o [AddNew](#addnew) operazione.  
   
 ```  
@@ -276,7 +357,7 @@ virtual void CancelUpdate();
   
  Per informazioni correlate, vedere l'argomento "Metodo CancelUpdate" nella Guida di DAO.  
   
-##  <a name="a-namecanrestarta--cdaorecordsetcanrestart"></a><a name="canrestart"></a>CDaoRecordset::CanRestart  
+##  <a name="canrestart"></a>CDaoRecordset::CanRestart  
  Chiamare questa funzione membro per determinare se il recordset è possibile riavviare la query (per aggiornare i record) chiamando il **Requery** funzione membro.  
   
 ```  
@@ -293,7 +374,7 @@ BOOL CanRestart();
   
  Per informazioni correlate, vedere l'argomento "Proprietà riavviabili" nella Guida di DAO.  
   
-##  <a name="a-namecanscrolla--cdaorecordsetcanscroll"></a><a name="canscroll"></a>CDaoRecordset::CanScroll  
+##  <a name="canscroll"></a>CDaoRecordset::CanScroll  
  Chiamare questa funzione membro per determinare se il recordset consente lo scorrimento.  
   
 ```  
@@ -308,7 +389,7 @@ BOOL CanScroll() const;
   
  Per informazioni correlate, vedere l'argomento "Posizionamento del Record corrente puntatore con DAO" nella Guida di DAO.  
   
-##  <a name="a-namecantransacta--cdaorecordsetcantransact"></a><a name="cantransact"></a>CDaoRecordset::CanTransact  
+##  <a name="cantransact"></a>CDaoRecordset::CanTransact  
  Chiamare questa funzione membro per determinare se il recordset consente alle transazioni.  
   
 ```  
@@ -321,7 +402,7 @@ BOOL CanTransact();
 ### <a name="remarks"></a>Note  
  Per informazioni correlate, vedere l'argomento "Proprietà Transactions" nella Guida di DAO.  
   
-##  <a name="a-namecanupdatea--cdaorecordsetcanupdate"></a><a name="canupdate"></a>CDaoRecordset::CanUpdate  
+##  <a name="canupdate"></a>CDaoRecordset::CanUpdate  
  Chiamare questa funzione membro per determinare se il recordset può essere aggiornato.  
   
 ```  
@@ -336,7 +417,7 @@ BOOL CanUpdate() const;
   
  Per informazioni correlate, vedere gli argomenti "Metodo AddNew", "Modifica metodo", "Metodo Delete", "Metodo di aggiornamento" e "Proprietà aggiornabile" nella Guida di DAO.  
   
-##  <a name="a-namecdaorecordseta--cdaorecordsetcdaorecordset"></a><a name="cdaorecordset"></a>CDaoRecordset::CDaoRecordset  
+##  <a name="cdaorecordset"></a>CDaoRecordset::CDaoRecordset  
  Costruisce un oggetto `CDaoRecordset`.  
   
 ```  
@@ -355,7 +436,7 @@ CDaoRecordset(CDaoDatabase* pDatabase = NULL);
   
  Passare **NULL** al costruttore del recordset per avere un `CDaoDatabase` oggetto creato e collegato automaticamente per l'utente. Questo è un collegamento utile che non richiede la creazione e connessione un `CDaoDatabase` oggetto prima della creazione del recordset. Se il `CDaoDatabase` oggetto non è aperto, un [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) inoltre essere creato l'oggetto che utilizza l'area di lavoro predefinito. Per ulteriori informazioni, vedere [CDaoDatabase::CDaoDatabase](../../mfc/reference/cdaodatabase-class.md#cdaodatabase).  
   
-##  <a name="a-nameclosea--cdaorecordsetclose"></a><a name="close"></a>CDaoRecordset::Close  
+##  <a name="close"></a>CDaoRecordset::Close  
  Chiusura di un `CDaoRecordset` oggetto lo rimuove dalla raccolta di set di record aperti nel database associato.  
   
 ```  
@@ -371,7 +452,7 @@ virtual void Close();
   
  Per informazioni correlate, vedere l'argomento "Close (metodo)" nella Guida di DAO.  
   
-##  <a name="a-namedeletea--cdaorecordsetdelete"></a><a name="delete"></a>CDaoRecordset::Delete  
+##  <a name="delete"></a>CDaoRecordset::Delete  
  Chiamare questa funzione membro per eliminare il record corrente in un oggetto recordset di tipo dynaset o tabella tipo aperto.  
   
 ```  
@@ -392,7 +473,7 @@ virtual void Delete();
   
  Per informazioni correlate, vedere gli argomenti "Metodo AddNew", "Modifica metodo", "Metodo Delete", "Metodo di aggiornamento" e "Proprietà aggiornabile" nella Guida di DAO.  
   
-##  <a name="a-namedofieldexchangea--cdaorecordsetdofieldexchange"></a><a name="dofieldexchange"></a>CDaoRecordset::DoFieldExchange  
+##  <a name="dofieldexchange"></a>CDaoRecordset::DoFieldExchange  
  Il framework chiama questa funzione membro per scambiare automaticamente i dati tra i membri dati di campo dell'oggetto recordset e le colonne corrispondenti del record corrente nell'origine dati.  
   
 ```  
@@ -412,7 +493,7 @@ virtual void DoFieldExchange(CDaoFieldExchange* pFX);
   
  [!code-cpp[NVC_MFCDatabase n.&2;](../../mfc/codesnippet/cpp/cdaorecordset-class_2.cpp)]  
   
-##  <a name="a-nameedita--cdaorecordsetedit"></a><a name="edit"></a>CDaoRecordset:: Edit  
+##  <a name="edit"></a>CDaoRecordset:: Edit  
  Chiamare questa funzione membro per consentire la modifica al record corrente.  
   
 ```  
@@ -452,7 +533,7 @@ virtual void Edit();
   
  Per informazioni correlate, vedere gli argomenti "Metodo AddNew", "Modifica metodo", "Metodo Delete", "Metodo di aggiornamento" e "Proprietà aggiornabile" nella Guida di DAO.  
   
-##  <a name="a-namefillcachea--cdaorecordsetfillcache"></a><a name="fillcache"></a>CDaoRecordset:: FillCache  
+##  <a name="fillcache"></a>CDaoRecordset:: FillCache  
  Chiamare questa funzione membro per memorizzare nella cache un numero specificato di record dal recordset.  
   
 ```  
@@ -481,7 +562,7 @@ void FillCache(
   
  Per informazioni correlate, vedere l'argomento "Metodo FillCache" nella Guida di DAO.  
   
-##  <a name="a-namefinda--cdaorecordsetfind"></a><a name="find"></a>CDaoRecordset::Find  
+##  <a name="find"></a>CDaoRecordset::Find  
  Chiamare questa funzione membro per individuare una determinata stringa in un recordset di tipo dynaset o snapshot utilizzando un operatore di confronto.  
   
 ```  
@@ -520,7 +601,7 @@ virtual BOOL Find(
   
  Per informazioni correlate, vedere l'argomento "FindFirst, FindLast, FindNext e FindPrevious metodi" nella Guida di DAO.  
   
-##  <a name="a-namefindfirsta--cdaorecordsetfindfirst"></a><a name="findfirst"></a>CDaoRecordset::FindFirst  
+##  <a name="findfirst"></a>CDaoRecordset::FindFirst  
  Chiamare questa funzione membro per trovare il primo record che soddisfano una condizione specificata.  
   
 ```  
@@ -570,7 +651,7 @@ BOOL FindFirst(LPCTSTR lpszFilter);
   
  Per informazioni correlate, vedere l'argomento "FindFirst, FindLast, FindNext e FindPrevious metodi" nella Guida di DAO.  
   
-##  <a name="a-namefindlasta--cdaorecordsetfindlast"></a><a name="findlast"></a>CDaoRecordset::FindLast  
+##  <a name="findlast"></a>CDaoRecordset::FindLast  
  Chiamare questa funzione membro per trovare l'ultimo record che soddisfano una condizione specificata.  
   
 ```  
@@ -608,7 +689,7 @@ BOOL FindLast(LPCTSTR lpszFilter);
   
  Per informazioni correlate, vedere l'argomento "FindFirst, FindLast, FindNext e FindPrevious metodi" nella Guida di DAO.  
   
-##  <a name="a-namefindnexta--cdaorecordsetfindnext"></a><a name="findnext"></a>CDaoRecordset::FindNext  
+##  <a name="findnext"></a>CDaoRecordset::FindNext  
  Chiamare questa funzione membro per trovare il record successivo che corrisponde a una condizione specificata.  
   
 ```  
@@ -646,7 +727,7 @@ BOOL FindNext(LPCTSTR lpszFilter);
   
  Per informazioni correlate, vedere l'argomento "FindFirst, FindLast, FindNext e FindPrevious metodi" nella Guida di DAO.  
   
-##  <a name="a-namefindpreva--cdaorecordsetfindprev"></a><a name="findprev"></a>CDaoRecordset::FindPrev  
+##  <a name="findprev"></a>CDaoRecordset::FindPrev  
  Chiamare questa funzione membro per trovare il record precedente che corrisponde a una condizione specificata.  
   
 ```  
@@ -684,7 +765,7 @@ BOOL FindPrev(LPCTSTR lpszFilter);
   
  Per informazioni correlate, vedere l'argomento "FindFirst, FindLast, FindNext e FindPrevious metodi" nella Guida di DAO.  
   
-##  <a name="a-namegetabsolutepositiona--cdaorecordsetgetabsoluteposition"></a><a name="getabsoluteposition"></a>CDaoRecordset::GetAbsolutePosition  
+##  <a name="getabsoluteposition"></a>CDaoRecordset::GetAbsolutePosition  
  Restituisce il numero del record corrente dell'oggetto recordset.  
   
 ```  
@@ -707,7 +788,7 @@ long GetAbsolutePosition();
   
  Per informazioni correlate, vedere l'argomento "Proprietà AbsolutePosition" nella Guida di DAO.  
   
-##  <a name="a-namegetbookmarka--cdaorecordsetgetbookmark"></a><a name="getbookmark"></a>CDaoRecordset:: GetBookmark  
+##  <a name="getbookmark"></a>CDaoRecordset:: GetBookmark  
  Chiamare questa funzione membro per ottenere il valore del segnalibro in un determinato record.  
   
 ```  
@@ -727,7 +808,7 @@ COleVariant GetBookmark();
   
  Per informazioni correlate, vedere l'argomento "Proprietà Bookmark" nella Guida di DAO.  
   
-##  <a name="a-namegetcachesizea--cdaorecordsetgetcachesize"></a><a name="getcachesize"></a>CDaoRecordset::GetCacheSize  
+##  <a name="getcachesize"></a>CDaoRecordset::GetCacheSize  
  Chiamare questa funzione membro per ottenere il numero di record memorizzati nella cache.  
   
 ```  
@@ -744,7 +825,7 @@ long GetCacheSize();
   
  Per informazioni correlate, vedere l'argomento "Proprietà CacheSize e CacheStart" nella Guida di DAO.  
   
-##  <a name="a-namegetcachestarta--cdaorecordsetgetcachestart"></a><a name="getcachestart"></a>CDaoRecordset::GetCacheStart  
+##  <a name="getcachestart"></a>CDaoRecordset::GetCacheStart  
  Chiamare questa funzione membro per ottenere il valore del segnalibro del primo record del recordset da memorizzare nella cache.  
   
 ```  
@@ -762,7 +843,7 @@ COleVariant GetCacheStart();
   
  Per informazioni correlate, vedere l'argomento "Proprietà CacheSize e CacheStart" nella Guida di DAO.  
   
-##  <a name="a-namegetcurrentindexa--cdaorecordsetgetcurrentindex"></a><a name="getcurrentindex"></a>CDaoRecordset::GetCurrentIndex  
+##  <a name="getcurrentindex"></a>CDaoRecordset::GetCurrentIndex  
  Chiamare questa funzione membro per determinare l'indice attualmente in uso in un tipo di tabella indicizzato `CDaoRecordset` oggetto.  
   
 ```  
@@ -779,7 +860,7 @@ CString GetCurrentIndex();
   
  Per informazioni correlate, vedere l'argomento "Oggetto indice" e la definizione "indice corrente" nella Guida di DAO.  
   
-##  <a name="a-namegetdatecreateda--cdaorecordsetgetdatecreated"></a><a name="getdatecreated"></a>CDaoRecordset::GetDateCreated  
+##  <a name="getdatecreated"></a>CDaoRecordset::GetDateCreated  
  Chiamare questa funzione membro per recuperare la data e ora di che creazione di una tabella di base.  
   
 ```  
@@ -794,7 +875,7 @@ COleDateTime GetDateCreated();
   
  Per informazioni correlate, vedere l'argomento "Proprietà DateCreated e LastUpdated" nella Guida di DAO.  
   
-##  <a name="a-namegetdatelastupdateda--cdaorecordsetgetdatelastupdated"></a><a name="getdatelastupdated"></a>CDaoRecordset::GetDateLastUpdated  
+##  <a name="getdatelastupdated"></a>CDaoRecordset::GetDateLastUpdated  
  Chiamare questa funzione membro per recuperare la data e ora che dell'ultimo aggiornamento dello schema.  
   
 ```  
@@ -809,7 +890,7 @@ COleDateTime GetDateLastUpdated();
   
  Per informazioni correlate, vedere l'argomento "Proprietà DateCreated e LastUpdated" nella Guida di DAO.  
   
-##  <a name="a-namegetdefaultdbnamea--cdaorecordsetgetdefaultdbname"></a><a name="getdefaultdbname"></a>CDaoRecordset::GetDefaultDBName  
+##  <a name="getdefaultdbname"></a>CDaoRecordset::GetDefaultDBName  
  Chiamare questa funzione membro per determinare il nome del database per il recordset.  
   
 ```  
@@ -826,7 +907,7 @@ virtual CString GetDefaultDBName();
   
  [!code-cpp[NVC_MFCDatabase n.&4;](../../mfc/codesnippet/cpp/cdaorecordset-class_4.cpp)]  
   
-##  <a name="a-namegetdefaultsqla--cdaorecordsetgetdefaultsql"></a><a name="getdefaultsql"></a>CDaoRecordset::GetDefaultSQL  
+##  <a name="getdefaultsql"></a>CDaoRecordset::GetDefaultSQL  
  Il framework chiama questa funzione membro per ottenere l'istruzione SQL predefinita su cui è basato il recordset.  
   
 ```  
@@ -843,7 +924,7 @@ virtual CString GetDefaultSQL();
   
  Se si passa una stringa SQL null a [aprire](#open), quindi questa funzione viene chiamata per determinare il nome della tabella o SQL per il recordset.  
   
-##  <a name="a-namegeteditmodea--cdaorecordsetgeteditmode"></a><a name="geteditmode"></a>CDaoRecordset::GetEditMode  
+##  <a name="geteditmode"></a>CDaoRecordset::GetEditMode  
  Chiamare questa funzione membro per determinare lo stato della modifica, ovvero uno dei valori seguenti:  
   
 ```  
@@ -863,7 +944,7 @@ short GetEditMode();
   
  Per informazioni correlate, vedere l'argomento "Proprietà EditMode" nella Guida di DAO.  
   
-##  <a name="a-namegetfieldcounta--cdaorecordsetgetfieldcount"></a><a name="getfieldcount"></a>CDaoRecordset::GetFieldCount  
+##  <a name="getfieldcount"></a>CDaoRecordset::GetFieldCount  
  Chiamare questa funzione membro per recuperare il numero di campi (colonne) definiti nell'oggetto recordset.  
   
 ```  
@@ -876,7 +957,7 @@ short GetFieldCount();
 ### <a name="remarks"></a>Note  
  Per informazioni correlate, vedere l'argomento "Proprietà Count" nella Guida di DAO.  
   
-##  <a name="a-namegetfieldinfoa--cdaorecordsetgetfieldinfo"></a><a name="getfieldinfo"></a>CDaoRecordset::GetFieldInfo  
+##  <a name="getfieldinfo"></a>CDaoRecordset::GetFieldInfo  
  Chiamare questa funzione membro per ottenere informazioni sui campi in un recordset.  
   
 ```  
@@ -918,7 +999,7 @@ void GetFieldInfo(
   
  Per informazioni correlate, vedere l'argomento "Proprietà Attributes" nella Guida di DAO.  
   
-##  <a name="a-namegetfieldvaluea--cdaorecordsetgetfieldvalue"></a><a name="getfieldvalue"></a>CDaoRecordset:: GetFieldValue  
+##  <a name="getfieldvalue"></a>CDaoRecordset:: GetFieldValue  
  Chiamare questa funzione membro per recuperare i dati in un recordset.  
   
 ```  
@@ -960,7 +1041,7 @@ virtual COleVariant GetFieldValue(int nIndex);
   
  Per informazioni correlate, vedere gli argomenti "Campo oggetto" e "Valore proprietà" nella Guida di DAO.  
   
-##  <a name="a-namegetindexcounta--cdaorecordsetgetindexcount"></a><a name="getindexcount"></a>CDaoRecordset::GetIndexCount  
+##  <a name="getindexcount"></a>CDaoRecordset::GetIndexCount  
  Chiamare questa funzione membro per determinare il numero di indici disponibili nell'oggetto recordset di tipo di tabella.  
   
 ```  
@@ -975,7 +1056,7 @@ short GetIndexCount();
   
  Per informazioni correlate, vedere l'argomento "Proprietà Attributes" nella Guida di DAO.  
   
-##  <a name="a-namegetindexinfoa--cdaorecordsetgetindexinfo"></a><a name="getindexinfo"></a>CDaoRecordset::GetIndexInfo  
+##  <a name="getindexinfo"></a>CDaoRecordset::GetIndexInfo  
  Chiamare questa funzione membro per ottenere diversi tipi di informazioni su un indice definito nella tabella di base sottostante un oggetto recordset.  
   
 ```  
@@ -1017,7 +1098,7 @@ void GetIndexInfo(
   
  Per informazioni correlate, vedere l'argomento "Proprietà Attributes" nella Guida di DAO.  
   
-##  <a name="a-namegetlastmodifiedbookmarka--cdaorecordsetgetlastmodifiedbookmark"></a><a name="getlastmodifiedbookmark"></a>CDaoRecordset::GetLastModifiedBookmark  
+##  <a name="getlastmodifiedbookmark"></a>CDaoRecordset::GetLastModifiedBookmark  
  Chiamare questa funzione membro per recuperare il segnalibro del record più recente aggiunti o aggiornati.  
   
 ```  
@@ -1034,7 +1115,7 @@ COleVariant GetLastModifiedBookmark();
   
  Per informazioni correlate, vedere l'argomento "Proprietà LastModified" nella Guida di DAO.  
   
-##  <a name="a-namegetlockingmodea--cdaorecordsetgetlockingmode"></a><a name="getlockingmode"></a>CDaoRecordset::GetLockingMode  
+##  <a name="getlockingmode"></a>CDaoRecordset::GetLockingMode  
  Chiamare questa funzione membro per determinare il tipo di blocco attivo per il recordset.  
   
 ```  
@@ -1053,7 +1134,7 @@ BOOL GetLockingMode();
   
  Per informazioni correlate, vedere gli argomenti "Proprietà LockEdits" e "Blocco comportamento nelle applicazioni multiutente" nella Guida di DAO.  
   
-##  <a name="a-namegetnamea--cdaorecordsetgetname"></a><a name="getname"></a>CDaoRecordset::GetName  
+##  <a name="getname"></a>CDaoRecordset::GetName  
  Chiamare questa funzione membro per recuperare il nome dell'oggetto recordset.  
   
 ```  
@@ -1068,7 +1149,7 @@ CString GetName();
   
  Per informazioni correlate, vedere l'argomento "Proprietà di nome" nella Guida di DAO.  
   
-##  <a name="a-namegetparamvaluea--cdaorecordsetgetparamvalue"></a><a name="getparamvalue"></a>CDaoRecordset::GetParamValue  
+##  <a name="getparamvalue"></a>CDaoRecordset::GetParamValue  
  Chiamare questa funzione membro per recuperare il valore corrente del parametro specificato memorizzato nell'oggetto DAOParameter sottostante.  
   
 ```  
@@ -1091,7 +1172,7 @@ virtual COleVariant GetParamValue(LPCTSTR lpszName);
   
  Per informazioni correlate, vedere l'argomento "Parametro oggetto" nella Guida di DAO.  
   
-##  <a name="a-namegetpercentpositiona--cdaorecordsetgetpercentposition"></a><a name="getpercentposition"></a>CDaoRecordset:: GetPercentPosition  
+##  <a name="getpercentposition"></a>CDaoRecordset:: GetPercentPosition  
  Quando si utilizza un tipo dynaset o recordset di tipo snapshot, se si chiama `GetPercentPosition` prima di popolare completamente il recordset, la quantità di spostamento è correlata al numero di record è possibile accedere come indicato dalla chiamata [GetRecordCount](#getrecordcount).  
   
 ```  
@@ -1108,7 +1189,7 @@ float GetPercentPosition();
   
  Per informazioni correlate, vedere l'argomento "Proprietà PercentPosition" nella Guida di DAO.  
   
-##  <a name="a-namegetrecordcounta--cdaorecordsetgetrecordcount"></a><a name="getrecordcount"></a>CDaoRecordset::GetRecordCount  
+##  <a name="getrecordcount"></a>CDaoRecordset::GetRecordCount  
  Chiamare questa funzione membro per scoprire il numero di record in un recordset è stato eseguito.  
   
 ```  
@@ -1133,7 +1214,7 @@ long GetRecordCount();
   
  Per informazioni correlate, vedere l'argomento "Proprietà RecordCount" nella Guida di DAO.  
   
-##  <a name="a-namegetsqla--cdaorecordsetgetsql"></a><a name="getsql"></a>CDaoRecordset::GetSQL  
+##  <a name="getsql"></a>CDaoRecordset::GetSQL  
  Chiamare questa funzione membro per ottenere l'istruzione SQL utilizzata per selezionare i record del recordset quando è stato aperto.  
   
 ```  
@@ -1153,7 +1234,7 @@ CString GetSQL() const;
   
  Per informazioni correlate, vedere l'argomento "Proprietà SQL" nella Guida di DAO.  
   
-##  <a name="a-namegettypea--cdaorecordsetgettype"></a><a name="gettype"></a>CDaoRecordset::GetType  
+##  <a name="gettype"></a>CDaoRecordset::GetType  
  Chiamare questa funzione membro dopo l'apertura del recordset per determinare il tipo dell'oggetto recordset.  
   
 ```  
@@ -1172,7 +1253,7 @@ short GetType();
 ### <a name="remarks"></a>Note  
  Per informazioni correlate, vedere l'argomento "Proprietà di tipo" nella Guida di DAO.  
   
-##  <a name="a-namegetvalidationrulea--cdaorecordsetgetvalidationrule"></a><a name="getvalidationrule"></a>CDaoRecordset::GetValidationRule  
+##  <a name="getvalidationrule"></a>CDaoRecordset::GetValidationRule  
  Chiamare questa funzione membro per determinare la regola utilizzata per convalidare i dati.  
   
 ```  
@@ -1189,7 +1270,7 @@ CString GetValidationRule();
   
  Per informazioni correlate, vedere l'argomento "Proprietà ValidationRule" nella Guida di DAO.  
   
-##  <a name="a-namegetvalidationtexta--cdaorecordsetgetvalidationtext"></a><a name="getvalidationtext"></a>CDaoRecordset::GetValidationText  
+##  <a name="getvalidationtext"></a>CDaoRecordset::GetValidationText  
  Chiamare questa funzione membro per recuperare il testo della proprietà messaggio di errore dell'oggetto campo sottostante.  
   
 ```  
@@ -1202,7 +1283,7 @@ CString GetValidationText();
 ### <a name="remarks"></a>Note  
  Per informazioni correlate, vedere l'argomento "Proprietà di messaggio di errore" nella Guida di DAO.  
   
-##  <a name="a-nameisbofa--cdaorecordsetisbof"></a><a name="isbof"></a>CDaoRecordset::IsBOF  
+##  <a name="isbof"></a>CDaoRecordset::IsBOF  
  Chiamare questa funzione membro prima che si passa da record per record sapere se sono stati superati prima del primo record del recordset.  
   
 ```  
@@ -1249,7 +1330,7 @@ BOOL IsBOF() const;
   
  Per informazioni correlate, vedere l'argomento "Proprietà BOF ed EOF" nella Guida di DAO.  
   
-##  <a name="a-nameisdeleteda--cdaorecordsetisdeleted"></a><a name="isdeleted"></a>CDaoRecordset::IsDeleted  
+##  <a name="isdeleted"></a>CDaoRecordset::IsDeleted  
  Chiamare questa funzione membro per determinare se è stato eliminato il record corrente.  
   
 ```  
@@ -1269,7 +1350,7 @@ BOOL IsDeleted() const;
   
  Per informazioni correlate, vedere gli argomenti "Metodo Delete", "Proprietà LastModified" e "Proprietà EditMode" nella Guida di DAO.  
   
-##  <a name="a-nameiseofa--cdaorecordsetiseof"></a><a name="iseof"></a>CDaoRecordset::IsEOF  
+##  <a name="iseof"></a>CDaoRecordset::IsEOF  
  Chiamare questa funzione membro durante lo scorrimento di record per record sapere se sono stati superati dell'ultimo record del recordset.  
   
 ```  
@@ -1316,7 +1397,7 @@ BOOL IsEOF() const;
   
  Per informazioni correlate, vedere l'argomento "Proprietà BOF ed EOF" nella Guida di DAO.  
   
-##  <a name="a-nameisfielddirtya--cdaorecordsetisfielddirty"></a><a name="isfielddirty"></a>CDaoRecordset::IsFieldDirty  
+##  <a name="isfielddirty"></a>CDaoRecordset::IsFieldDirty  
  Chiamare questa funzione membro per determinare se il membro dati di campo specificato di un dynaset è stato contrassegnato come "dirty" (modificata).  
   
 ```  
@@ -1335,7 +1416,7 @@ BOOL IsFieldDirty(void* pv);
   
  `IsFieldDirty`viene implementata tramite `DoFieldExchange`.  
   
-##  <a name="a-nameisfieldnulla--cdaorecordsetisfieldnull"></a><a name="isfieldnull"></a>CDaoRecordset::IsFieldNull  
+##  <a name="isfieldnull"></a>CDaoRecordset::IsFieldNull  
  Chiamare questa funzione membro per determinare se il membro dati di campo specificato di un recordset è stato contrassegnato come Null.  
   
 ```  
@@ -1360,7 +1441,7 @@ BOOL IsFieldNull(void* pv);
 > [!NOTE]
 >  Se si sta utilizzando l'associazione dinamica di record, senza la derivazione da `CDaoRecordset`, assicurarsi di utilizzare **VT_NULL** come illustrato nell'esempio.  
   
-##  <a name="a-nameisfieldnullablea--cdaorecordsetisfieldnullable"></a><a name="isfieldnullable"></a>CDaoRecordset::IsFieldNullable  
+##  <a name="isfieldnullable"></a>CDaoRecordset::IsFieldNullable  
  Chiamare questa funzione membro per determinare se il membro dati di campo specificato è "ammette valori null" (può essere impostata su un valore Null. C++ **NULL** non è uguale a Null, ovvero nella terminologia dei database, come "non having alcun valore").  
   
 ```  
@@ -1377,7 +1458,7 @@ BOOL IsFieldNullable(void* pv);
 ### <a name="remarks"></a>Note  
  Un campo che non può essere Null deve avere un valore. Se si tenta di impostare un campo su Null quando si aggiunge o aggiorna un record, l'origine dati rifiuta l'aggiunta o l'aggiornamento e **aggiornamento** genererà un'eccezione. L'eccezione si verifica quando si chiama **aggiornamento**, non quando si chiama `SetFieldNull`.  
   
-##  <a name="a-nameisopena--cdaorecordsetisopen"></a><a name="isopen"></a>CDaoRecordset::IsOpen  
+##  <a name="isopen"></a>CDaoRecordset::IsOpen  
  Chiamare questa funzione membro per determinare se il recordset è aperto.  
   
 ```  
@@ -1389,7 +1470,7 @@ BOOL IsOpen() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namembcheckcachefordirtyfieldsa--cdaorecordsetmbcheckcachefordirtyfields"></a><a name="m_bcheckcachefordirtyfields"></a>CDaoRecordset:: M_bcheckcachefordirtyfields  
+##  <a name="m_bcheckcachefordirtyfields"></a>CDaoRecordset:: M_bcheckcachefordirtyfields  
  Contiene un flag che indica se i campi memorizzati nella cache vengono contrassegnati automaticamente come dirty (modificati) e un valore Null.  
   
 ### <a name="remarks"></a>Note  
@@ -1397,7 +1478,7 @@ BOOL IsOpen() const;
   
  Impostare il membro dati prima di chiamare **aprire**. Questo meccanismo è principalmente per facilità d'uso. Prestazioni possono essere più lente a causa il doppio buffering dei campi quando vengono apportate modifiche.  
   
-##  <a name="a-namemnfieldsa--cdaorecordsetmnfields"></a><a name="m_nfields"></a>CDaoRecordset::m_nFields  
+##  <a name="m_nfields"></a>CDaoRecordset::m_nFields  
  Contiene il numero di membri dati di campo nella classe recordset e il numero di colonne selezionate dal recordset dall'origine dati.  
   
 ### <a name="remarks"></a>Note  
@@ -1410,7 +1491,7 @@ BOOL IsOpen() const;
   
  È possibile associare le colonne in modo dinamico per mezzo di `CDaoRecordset::GetFieldValue` e `CDaoRecordset::SetFieldValue`. In tal caso, non è necessaria incrementare il conteggio in `m_nFields` in modo da riflettere il numero di funzione DFX chiama `DoFieldExchange` funzione membro.  
   
-##  <a name="a-namemnparamsa--cdaorecordsetmnparams"></a><a name="m_nparams"></a>CDaoRecordset::m_nParams  
+##  <a name="m_nparams"></a>CDaoRecordset::m_nParams  
  Contiene il numero di membri dati di parametro nella classe recordset, il numero di parametri passata con la query del recordset.  
   
 ### <a name="remarks"></a>Note  
@@ -1423,7 +1504,7 @@ BOOL IsOpen() const;
   
  Per informazioni correlate, vedere l'argomento "Parametro oggetto" nella Guida di DAO.  
   
-##  <a name="a-namempdaorecordseta--cdaorecordsetmpdaorecordset"></a><a name="m_pdaorecordset"></a>CDaoRecordset::m_pDAORecordset  
+##  <a name="m_pdaorecordset"></a>CDaoRecordset::m_pDAORecordset  
  Contiene un puntatore all'interfaccia OLE per l'oggetto recordset DAO sottostante il `CDaoRecordset` oggetto.  
   
 ### <a name="remarks"></a>Note  
@@ -1431,7 +1512,7 @@ BOOL IsOpen() const;
   
  Per informazioni correlate, vedere l'argomento "Oggetto Recordset" nella Guida di DAO.  
   
-##  <a name="a-namempdatabasea--cdaorecordsetmpdatabase"></a><a name="m_pdatabase"></a>CDaoRecordset::m_pDatabase  
+##  <a name="m_pdatabase"></a>CDaoRecordset::m_pDatabase  
  Contiene un puntatore per il `CDaoDatabase` oggetto attraverso il quale il recordset è connesso a un'origine dati.  
   
 ### <a name="remarks"></a>Note  
@@ -1441,7 +1522,7 @@ BOOL IsOpen() const;
   
  Per informazioni correlate, vedere l'argomento "Oggetto di Database" nella Guida di DAO.  
   
-##  <a name="a-namemstrfiltera--cdaorecordsetmstrfilter"></a><a name="m_strfilter"></a>CDaoRecordset::m_strFilter  
+##  <a name="m_strfilter"></a>CDaoRecordset::m_strFilter  
  Contiene una stringa che viene utilizzata per costruire il **dove** clausola di un'istruzione SQL.  
   
 ### <a name="remarks"></a>Note  
@@ -1451,7 +1532,7 @@ BOOL IsOpen() const;
   
  Per informazioni correlate, vedere l'argomento "Proprietà Filter" nella Guida di DAO.  
   
-##  <a name="a-namemstrsorta--cdaorecordsetmstrsort"></a><a name="m_strsort"></a>CDaoRecordset::m_strSort  
+##  <a name="m_strsort"></a>CDaoRecordset::m_strSort  
  Contiene una stringa contenente il **ORDERBY** clausola di un'istruzione SQL senza le parole riservate **ORDERBY**.  
   
 ### <a name="remarks"></a>Note  
@@ -1463,7 +1544,7 @@ BOOL IsOpen() const;
   
  Per informazioni correlate, vedere l'argomento "Proprietà di ordinamento" nella Guida di DAO.  
   
-##  <a name="a-namemovea--cdaorecordsetmove"></a><a name="move"></a>CDaoRecordset:: Move  
+##  <a name="move"></a>CDaoRecordset:: Move  
  Chiamare questa funzione membro per posizionare il recordset `lRows` record del record corrente.  
   
 ```  
@@ -1492,7 +1573,7 @@ virtual void Move(long lRows);
   
  Per informazioni correlate, vedere gli argomenti "Metodo Move" e "MoveFirst, MoveLast, MoveNext e MovePrevious metodi" nella Guida di DAO.  
   
-##  <a name="a-namemovefirsta--cdaorecordsetmovefirst"></a><a name="movefirst"></a>CDaoRecordset::MoveFirst  
+##  <a name="movefirst"></a>CDaoRecordset::MoveFirst  
  Chiamare questa funzione membro per il primo record del recordset (se presente) del record corrente.  
   
 ```  
@@ -1520,7 +1601,7 @@ void MoveFirst();
   
  Per informazioni correlate, vedere gli argomenti "Metodo Move" e "MoveFirst, MoveLast, MoveNext e MovePrevious metodi" nella Guida di DAO.  
   
-##  <a name="a-namemovelasta--cdaorecordsetmovelast"></a><a name="movelast"></a>CDaoRecordset::MoveLast  
+##  <a name="movelast"></a>CDaoRecordset::MoveLast  
  Chiamare questa funzione membro per rendere l'ultimo record (se presente) dell'oggetto Recordset, il record corrente.  
   
 ```  
@@ -1545,7 +1626,7 @@ void MoveLast();
   
  Per informazioni correlate, vedere gli argomenti "Metodo Move" e "MoveFirst, MoveLast, MoveNext e MovePrevious metodi" nella Guida di DAO.  
   
-##  <a name="a-namemovenexta--cdaorecordsetmovenext"></a><a name="movenext"></a>CDaoRecordset::MoveNext  
+##  <a name="movenext"></a>CDaoRecordset::MoveNext  
  Chiamare questa funzione membro per rendere il successivo record del recordset, il record corrente.  
   
 ```  
@@ -1569,7 +1650,7 @@ void MoveNext();
   
  Per informazioni correlate, vedere gli argomenti "Metodo Move" e "MoveFirst, MoveLast, MoveNext e MovePrevious metodi" nella Guida di DAO.  
   
-##  <a name="a-namemovepreva--cdaorecordsetmoveprev"></a><a name="moveprev"></a>CDaoRecordset::MovePrev  
+##  <a name="moveprev"></a>CDaoRecordset::MovePrev  
  Chiamare questa funzione membro per rendere il record precedente del recordset, il record corrente.  
   
 ```  
@@ -1595,7 +1676,7 @@ void MovePrev();
   
  Per informazioni correlate, vedere gli argomenti "Metodo Move" e "MoveFirst, MoveLast, MoveNext e MovePrevious metodi" nella Guida di DAO.  
   
-##  <a name="a-nameopena--cdaorecordsetopen"></a><a name="open"></a>CDaoRecordset:: Open  
+##  <a name="open"></a>CDaoRecordset:: Open  
  È necessario chiamare questa funzione membro per recuperare i record del recordset.  
   
 ```  
@@ -1717,7 +1798,7 @@ virtual void Open(
   
  Per informazioni correlate, vedere l'argomento "Metodo OpenRecordset" nella Guida di DAO.  
   
-##  <a name="a-namerequerya--cdaorecordsetrequery"></a><a name="requery"></a>CDaoRecordset::Requery  
+##  <a name="requery"></a>CDaoRecordset::Requery  
  Chiamare questa funzione membro per ricompilare (aggiornamento) di un recordset.  
   
 ```  
@@ -1745,7 +1826,7 @@ virtual void Requery();
   
  Per informazioni correlate, vedere l'argomento "Metodo Requery" nella Guida di DAO.  
   
-##  <a name="a-nameseeka--cdaorecordsetseek"></a><a name="seek"></a>CDaoRecordset::Seek  
+##  <a name="seek"></a>CDaoRecordset::Seek  
  Chiamare questa funzione membro per individuare il record in un oggetto recordset di tipo tabella indicizzata che soddisfa i criteri specificati per l'oggetto indicizzano e verificare che il record corrente.  
   
 ```  
@@ -1806,7 +1887,7 @@ BOOL Seek(
   
  Per informazioni correlate, vedere l'argomento "Metodo Seek" nella Guida di DAO.  
   
-##  <a name="a-namesetabsolutepositiona--cdaorecordsetsetabsoluteposition"></a><a name="setabsoluteposition"></a>CDaoRecordset:: SetAbsolutePosition  
+##  <a name="setabsoluteposition"></a>CDaoRecordset:: SetAbsolutePosition  
  Imposta il numero di record relativo del record corrente dell'oggetto recordset.  
   
 ```  
@@ -1832,7 +1913,7 @@ void SetAbsolutePosition(long lPosition);
   
  Per informazioni correlate, vedere l'argomento "Proprietà AbsolutePosition" nella Guida di DAO.  
   
-##  <a name="a-namesetbookmarka--cdaorecordsetsetbookmark"></a><a name="setbookmark"></a>CDaoRecordset::SetBookmark  
+##  <a name="setbookmark"></a>CDaoRecordset::SetBookmark  
  Chiamare questa funzione membro per posizionare l'oggetto recordset sul record che contiene il segnalibro specificato.  
   
 ```  
@@ -1853,7 +1934,7 @@ void SetBookmark(COleVariant varBookmark);
   
  Per informazioni correlate, vedere gli argomenti "segnalibro" supporta proprietà e"nella Guida di DAO.  
   
-##  <a name="a-namesetcachesizea--cdaorecordsetsetcachesize"></a><a name="setcachesize"></a>CDaoRecordset:: SetCacheSize  
+##  <a name="setcachesize"></a>CDaoRecordset:: SetCacheSize  
  Chiamare questa funzione membro per impostare il numero di record da memorizzare nella cache.  
   
 ```  
@@ -1871,7 +1952,7 @@ void SetCacheSize(long lSize);
   
  Per informazioni correlate, vedere l'argomento "Proprietà CacheSize e CacheStart" nella Guida di DAO.  
   
-##  <a name="a-namesetcachestarta--cdaorecordsetsetcachestart"></a><a name="setcachestart"></a>CDaoRecordset:: SetCacheStart  
+##  <a name="setcachestart"></a>CDaoRecordset:: SetCacheStart  
  Chiamare questa funzione membro per specificare il segnalibro del primo record del recordset da memorizzare nella cache.  
   
 ```  
@@ -1895,7 +1976,7 @@ void SetCacheStart(COleVariant varBookmark);
   
  Per informazioni correlate, vedere l'argomento CacheSize, proprietà CacheStart"nella Guida di DAO.  
   
-##  <a name="a-namesetcurrentindexa--cdaorecordsetsetcurrentindex"></a><a name="setcurrentindex"></a>CDaoRecordset:: SetCurrentIndex  
+##  <a name="setcurrentindex"></a>CDaoRecordset:: SetCurrentIndex  
  Chiamare questa funzione membro per impostare un indice in un recordset di tipo di tabella.  
   
 ```  
@@ -1915,7 +1996,7 @@ void SetCurrentIndex(LPCTSTR lpszIndex);
   
  Per informazioni correlate, vedere l'argomento "Oggetto indice" e la definizione "indice corrente" nella Guida di DAO.  
   
-##  <a name="a-namesetfielddirtya--cdaorecordsetsetfielddirty"></a><a name="setfielddirty"></a>CDaoRecordset:: SetFieldDirty  
+##  <a name="setfielddirty"></a>CDaoRecordset:: SetFieldDirty  
  Chiamare questa funzione membro per contrassegnare un membro dati di campo del recordset come come unchanged o modificati.  
   
 ```  
@@ -1955,7 +2036,7 @@ void SetFieldDirty(
   
  `SetFieldDirty`viene implementata tramite `DoFieldExchange`.  
   
-##  <a name="a-namesetfieldnulla--cdaorecordsetsetfieldnull"></a><a name="setfieldnull"></a>CDaoRecordset::SetFieldNull  
+##  <a name="setfieldnull"></a>CDaoRecordset::SetFieldNull  
  Chiamare questa funzione membro per contrassegnare un membro dati di campo del recordset come Null, in particolare che non ha alcun valore, o non Null.  
   
 ```  
@@ -1991,7 +2072,7 @@ void SetFieldNull(
   
  imposterà solo **outputColumn** campi **NULL**; **param** campi non saranno interessati.  
   
-##  <a name="a-namesetfieldvaluea--cdaorecordsetsetfieldvalue"></a><a name="setfieldvalue"></a>CDaoRecordset::SetFieldValue  
+##  <a name="setfieldvalue"></a>CDaoRecordset::SetFieldValue  
  Chiamare questa funzione membro per impostare il valore di un campo, in base alla posizione ordinale o modificando il valore della stringa.  
   
 ```  
@@ -2035,7 +2116,7 @@ void SetFieldValue(
   
  Per informazioni correlate, vedere gli argomenti "Campo oggetto" e "Valore proprietà" nella Guida di DAO.  
   
-##  <a name="a-namesetfieldvaluenulla--cdaorecordsetsetfieldvaluenull"></a><a name="setfieldvaluenull"></a>CDaoRecordset::SetFieldValueNull  
+##  <a name="setfieldvaluenull"></a>CDaoRecordset::SetFieldValueNull  
  Chiamare questa funzione membro per impostare il campo su un valore Null.  
   
 ```  
@@ -2055,7 +2136,7 @@ void SetFieldValueNull(LPCTSTR lpszName);
   
  Per informazioni correlate, vedere gli argomenti "Campo oggetto" e "Valore proprietà" nella Guida di DAO.  
   
-##  <a name="a-namesetlockingmodea--cdaorecordsetsetlockingmode"></a><a name="setlockingmode"></a>CDaoRecordset::SetLockingMode  
+##  <a name="setlockingmode"></a>CDaoRecordset::SetLockingMode  
  Chiamare questa funzione membro per impostare il tipo di blocco per il recordset.  
   
 ```  
@@ -2077,7 +2158,7 @@ void SetLockingMode(BOOL bPessimistic);
   
  Quando si utilizzano origini dati ODBC, la modalità di blocco è sempre ottimistica.  
   
-##  <a name="a-namesetparamvaluea--cdaorecordsetsetparamvalue"></a><a name="setparamvalue"></a>CDaoRecordset::SetParamValue  
+##  <a name="setparamvalue"></a>CDaoRecordset::SetParamValue  
  Chiamare questa funzione membro per impostare il valore di un parametro del recordset in fase di esecuzione.  
   
 ```  
@@ -2106,7 +2187,7 @@ virtual void SetParamValue(
   
  Specificare il valore da impostare come un `COleVariant` oggetto. Per informazioni sull'impostazione il valore desiderato e digitare il `COleVariant` oggetto, vedere la classe [COleVariant](../../mfc/reference/colevariant-class.md). Si noti che se non si sta creando un recordset UNICODE, la `COleVariant` oggetto deve essere dichiarato in modo esplicito ANSI. Questa operazione può essere eseguita utilizzando il [COleVariant:: COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **,** `vtSrc` **)** form del costruttore con `vtSrc` impostato su `VT_BSTRT` (ANSI) o tramite il **COleVariant** funzione [SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **,** `vtSrc` **)** con `vtSrc` impostato su `VT_BSTRT`.  
   
-##  <a name="a-namesetparamvaluenulla--cdaorecordsetsetparamvaluenull"></a><a name="setparamvaluenull"></a>CDaoRecordset::SetParamValueNull  
+##  <a name="setparamvaluenull"></a>CDaoRecordset::SetParamValueNull  
  Chiamare questa funzione membro per impostare il parametro su un valore Null.  
   
 ```  
@@ -2124,7 +2205,7 @@ void SetParamValueNull(LPCTSTR lpszName);
 ### <a name="remarks"></a>Note  
  C++ **NULL** non è uguale a Null, ovvero nella terminologia dei database, come "non having alcun valore."  
   
-##  <a name="a-namesetpercentpositiona--cdaorecordsetsetpercentposition"></a><a name="setpercentposition"></a>CDaoRecordset:: SetPercentPosition  
+##  <a name="setpercentposition"></a>CDaoRecordset:: SetPercentPosition  
  Chiamare questa funzione membro per impostare un valore che cambia la posizione approssimativa del record corrente nell'oggetto recordset basato su una percentuale dei record del recordset.  
   
 ```  
@@ -2145,7 +2226,7 @@ void SetPercentPosition(float fPosition);
   
  Per informazioni correlate, vedere l'argomento "Proprietà PercentPosition" nella Guida di DAO.  
   
-##  <a name="a-nameupdatea--cdaorecordsetupdate"></a><a name="update"></a>CDaoRecordset::Update  
+##  <a name="update"></a>CDaoRecordset::Update  
  Chiamare questa funzione membro dopo una chiamata al `AddNew` o **modificare** funzione membro.  
   
 ```  

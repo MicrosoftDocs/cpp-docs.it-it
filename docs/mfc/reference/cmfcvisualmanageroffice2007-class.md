@@ -10,6 +10,119 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCVisualManagerOffice2007
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::AlwaysHighlight3DTabs
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::CleanStyle
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::GetCaptionBarTextColor
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::GetHighlightedMenuItemTextColor
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::GetMenuItemTextColor
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::GetNcBtnSize
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::GetRibbonBar
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::GetRibbonHyperlinkTextColor
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::GetRibbonPopupBorderSize
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::GetRibbonQuickAccessToolBarChevronOffset
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::GetRibbonQuickAccessToolBarRightMargin
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::GetRibbonQuickAccessToolBarTextColor
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::GetRibbonStatusBarTextColor
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::GetShowAllMenuItemsHeight
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::GetStatusBarPaneTextColor
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::GetTabFrameColors
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::GetTabHorzMargin
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::GetTabTextColor
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::GetToolbarButtonTextColor
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::GetToolbarDisabledTextColor
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::GetToolTipInfo
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::IsHighlightWholeMenuItem
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::IsLayeredRibbonKeyTip
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::IsOwnerDrawCaption
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::IsOwnerDrawMenuCheck
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::IsRibbonPresent
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawBarGripper
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawButtonBorder
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawButtonSeparator
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawCaptionBarInfoArea
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawCheckBoxEx
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawComboBorder
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawComboDropButton
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawDefaultRibbonImage
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawEditBorder
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawFloatingToolbarBorder
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawHeaderCtrlBorder
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawMenuBorder
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawMenuCheck
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawMenuItemButton
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawMenuLabel
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawMenuResizeBar
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawMenuScrollButton
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawMenuSystemButton
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawMiniFrameBorder
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawOutlookBarSplitter
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawOutlookPageButtonBorder
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawPaneCaption
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawPopupWindowCaption
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawPropertySheetListItem
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawRibbonApplicationButton
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawRibbonButtonBorder
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawRibbonButtonsGroup
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawRibbonCaption
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawRibbonCaptionButton
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawRibbonCategory
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawRibbonCategoryCaption
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawRibbonCategoryScroll
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawRibbonCategoryTab
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawRibbonCheckBoxOnList
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawRibbonDefaultPaneButton
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawRibbonDefaultPaneButtonIndicator
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawRibbonGalleryBorder
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawRibbonGalleryButton
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawRibbonKeyTip
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawRibbonMainPanelButtonBorder
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawRibbonMainPanelFrame
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawRibbonMenuCheckFrame
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawRibbonPanel
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawRibbonPanelCaption
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawRibbonProgressBar
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawRibbonRecentFilesFrame
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawRibbonSliderChannel
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawRibbonSliderThumb
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawRibbonSliderZoomButton
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawRibbonStatusBarPane
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawRibbonTabsFrame
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawScrollButtons
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawSeparator
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawShowAllMenuItems
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawStatusBarPaneBorder
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawStatusBarSizeBox
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawTab
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawTabsButtonBorder
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawTask
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawTasksGroupCaption
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnDrawTearOffCaption
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnEraseMDIClientArea
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnEraseTabsArea
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnEraseTabsButton
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnEraseTabsFrame
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnFillBarBackground
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnFillButtonInterior
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnFillCaptionBarButton
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnFillHighlightedArea
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnFillMiniFrameCaption
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnFillOutlookBarCaption
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnFillOutlookPageButton
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnFillPopupWindowBackground
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnFillRibbonButton
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnFillRibbonEdit
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnFillRibbonMainPanelButton
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnFillRibbonMenuFrame
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnFillRibbonQuickAccessToolBarPopup
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnFillTab
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnHighlightMenuItem
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnHighlightRarelyUsedMenuItems
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnNcActivate
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnNcPaint
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnSetWindowRegion
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::OnUpdateSystemColors
+- AFXVISUALMANAGEROFFICE2007/CMFCVisualManagerOffice2007::SetResourceHandle
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -193,7 +306,7 @@ class CMFCVisualManagerOffice2007 : public CMFCVisualManagerOffice2003
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxvisualmanageroffice2007.h  
   
-##  <a name="a-namealwayshighlight3dtabsa--cmfcvisualmanageroffice2007alwayshighlight3dtabs"></a><a name="alwayshighlight3dtabs"></a>CMFCVisualManagerOffice2007::AlwaysHighlight3DTabs  
+##  <a name="alwayshighlight3dtabs"></a>CMFCVisualManagerOffice2007::AlwaysHighlight3DTabs  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -204,7 +317,7 @@ virtual BOOL AlwaysHighlight3DTabs() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namecleanstylea--cmfcvisualmanageroffice2007cleanstyle"></a><a name="cleanstyle"></a>CMFCVisualManagerOffice2007::CleanStyle  
+##  <a name="cleanstyle"></a>CMFCVisualManagerOffice2007::CleanStyle  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -213,7 +326,7 @@ static void __stdcall CleanStyle();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetcaptionbartextcolora--cmfcvisualmanageroffice2007getcaptionbartextcolor"></a><a name="getcaptionbartextcolor"></a>CMFCVisualManagerOffice2007::GetCaptionBarTextColor  
+##  <a name="getcaptionbartextcolor"></a>CMFCVisualManagerOffice2007::GetCaptionBarTextColor  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -227,7 +340,7 @@ virtual COLORREF GetCaptionBarTextColor(CMFCCaptionBar* pBar);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegethighlightedmenuitemtextcolora--cmfcvisualmanageroffice2007gethighlightedmenuitemtextcolor"></a><a name="gethighlightedmenuitemtextcolor"></a>CMFCVisualManagerOffice2007::GetHighlightedMenuItemTextColor  
+##  <a name="gethighlightedmenuitemtextcolor"></a>CMFCVisualManagerOffice2007::GetHighlightedMenuItemTextColor  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -241,7 +354,7 @@ virtual COLORREF GetHighlightedMenuItemTextColor(CMFCToolBarMenuButton* pButton)
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetmenuitemtextcolora--cmfcvisualmanageroffice2007getmenuitemtextcolor"></a><a name="getmenuitemtextcolor"></a>CMFCVisualManagerOffice2007::GetMenuItemTextColor  
+##  <a name="getmenuitemtextcolor"></a>CMFCVisualManagerOffice2007::GetMenuItemTextColor  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -260,7 +373,7 @@ virtual COLORREF GetMenuItemTextColor(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetncbtnsizea--cmfcvisualmanageroffice2007getncbtnsize"></a><a name="getncbtnsize"></a>CMFCVisualManagerOffice2007::GetNcBtnSize  
+##  <a name="getncbtnsize"></a>CMFCVisualManagerOffice2007::GetNcBtnSize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -274,7 +387,7 @@ virtual CSize GetNcBtnSize(BOOL bSmall) const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetribbonbara--cmfcvisualmanageroffice2007getribbonbar"></a><a name="getribbonbar"></a>CMFCVisualManagerOffice2007::GetRibbonBar  
+##  <a name="getribbonbar"></a>CMFCVisualManagerOffice2007::GetRibbonBar  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -288,7 +401,7 @@ CMFCRibbonBar* GetRibbonBar(CWnd* pWnd) const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetribbonhyperlinktextcolora--cmfcvisualmanageroffice2007getribbonhyperlinktextcolor"></a><a name="getribbonhyperlinktextcolor"></a>CMFCVisualManagerOffice2007::GetRibbonHyperlinkTextColor  
+##  <a name="getribbonhyperlinktextcolor"></a>CMFCVisualManagerOffice2007::GetRibbonHyperlinkTextColor  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -302,7 +415,7 @@ virtual COLORREF GetRibbonHyperlinkTextColor(CMFCRibbonLinkCtrl* pHyperLink);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetribbonpopupbordersizea--cmfcvisualmanageroffice2007getribbonpopupbordersize"></a><a name="getribbonpopupbordersize"></a>CMFCVisualManagerOffice2007::GetRibbonPopupBorderSize  
+##  <a name="getribbonpopupbordersize"></a>CMFCVisualManagerOffice2007::GetRibbonPopupBorderSize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -316,7 +429,7 @@ virtual int GetRibbonPopupBorderSize(const CMFCRibbonPanelMenu* pPopup) const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetribbonquickaccesstoolbarchevronoffseta--cmfcvisualmanageroffice2007getribbonquickaccesstoolbarchevronoffset"></a><a name="getribbonquickaccesstoolbarchevronoffset"></a>CMFCVisualManagerOffice2007::GetRibbonQuickAccessToolBarChevronOffset  
+##  <a name="getribbonquickaccesstoolbarchevronoffset"></a>CMFCVisualManagerOffice2007::GetRibbonQuickAccessToolBarChevronOffset  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -327,7 +440,7 @@ virtual int GetRibbonQuickAccessToolBarChevronOffset();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetribbonquickaccesstoolbarrightmargina--cmfcvisualmanageroffice2007getribbonquickaccesstoolbarrightmargin"></a><a name="getribbonquickaccesstoolbarrightmargin"></a>CMFCVisualManagerOffice2007::GetRibbonQuickAccessToolBarRightMargin  
+##  <a name="getribbonquickaccesstoolbarrightmargin"></a>CMFCVisualManagerOffice2007::GetRibbonQuickAccessToolBarRightMargin  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -338,7 +451,7 @@ virtual int GetRibbonQuickAccessToolBarRightMargin();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetribbonquickaccesstoolbartextcolora--cmfcvisualmanageroffice2007getribbonquickaccesstoolbartextcolor"></a><a name="getribbonquickaccesstoolbartextcolor"></a>CMFCVisualManagerOffice2007::GetRibbonQuickAccessToolBarTextColor  
+##  <a name="getribbonquickaccesstoolbartextcolor"></a>CMFCVisualManagerOffice2007::GetRibbonQuickAccessToolBarTextColor  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -352,7 +465,7 @@ virtual COLORREF GetRibbonQuickAccessToolBarTextColor(BOOL bDisabled = FALSE);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetribbonstatusbartextcolora--cmfcvisualmanageroffice2007getribbonstatusbartextcolor"></a><a name="getribbonstatusbartextcolor"></a>CMFCVisualManagerOffice2007::GetRibbonStatusBarTextColor  
+##  <a name="getribbonstatusbartextcolor"></a>CMFCVisualManagerOffice2007::GetRibbonStatusBarTextColor  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -366,7 +479,7 @@ virtual COLORREF GetRibbonStatusBarTextColor(CMFCRibbonStatusBar* pStatusBar);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetshowallmenuitemsheighta--cmfcvisualmanageroffice2007getshowallmenuitemsheight"></a><a name="getshowallmenuitemsheight"></a>CMFCVisualManagerOffice2007::GetShowAllMenuItemsHeight  
+##  <a name="getshowallmenuitemsheight"></a>CMFCVisualManagerOffice2007::GetShowAllMenuItemsHeight  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -383,7 +496,7 @@ virtual int GetShowAllMenuItemsHeight(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetstatusbarpanetextcolora--cmfcvisualmanageroffice2007getstatusbarpanetextcolor"></a><a name="getstatusbarpanetextcolor"></a>CMFCVisualManagerOffice2007::GetStatusBarPaneTextColor  
+##  <a name="getstatusbarpanetextcolor"></a>CMFCVisualManagerOffice2007::GetStatusBarPaneTextColor  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -400,7 +513,7 @@ virtual COLORREF GetStatusBarPaneTextColor(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegettabframecolorsa--cmfcvisualmanageroffice2007gettabframecolors"></a><a name="gettabframecolors"></a>CMFCVisualManagerOffice2007::GetTabFrameColors  
+##  <a name="gettabframecolors"></a>CMFCVisualManagerOffice2007::GetTabFrameColors  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -429,7 +542,7 @@ virtual void GetTabFrameColors(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegettabhorzmargina--cmfcvisualmanageroffice2007gettabhorzmargin"></a><a name="gettabhorzmargin"></a>CMFCVisualManagerOffice2007::GetTabHorzMargin  
+##  <a name="gettabhorzmargin"></a>CMFCVisualManagerOffice2007::GetTabHorzMargin  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -443,7 +556,7 @@ virtual int GetTabHorzMargin(const CMFCBaseTabCtrl* pTabWnd);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegettabtextcolora--cmfcvisualmanageroffice2007gettabtextcolor"></a><a name="gettabtextcolor"></a>CMFCVisualManagerOffice2007::GetTabTextColor  
+##  <a name="gettabtextcolor"></a>CMFCVisualManagerOffice2007::GetTabTextColor  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -462,7 +575,7 @@ virtual COLORREF GetTabTextColor(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegettoolbarbuttontextcolora--cmfcvisualmanageroffice2007gettoolbarbuttontextcolor"></a><a name="gettoolbarbuttontextcolor"></a>CMFCVisualManagerOffice2007::GetToolbarButtonTextColor  
+##  <a name="gettoolbarbuttontextcolor"></a>CMFCVisualManagerOffice2007::GetToolbarButtonTextColor  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -479,7 +592,7 @@ virtual COLORREF GetToolbarButtonTextColor(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegettoolbardisabledtextcolora--cmfcvisualmanageroffice2007gettoolbardisabledtextcolor"></a><a name="gettoolbardisabledtextcolor"></a>CMFCVisualManagerOffice2007::GetToolbarDisabledTextColor  
+##  <a name="gettoolbardisabledtextcolor"></a>CMFCVisualManagerOffice2007::GetToolbarDisabledTextColor  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -490,7 +603,7 @@ virtual COLORREF GetToolbarDisabledTextColor();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegettooltipinfoa--cmfcvisualmanageroffice2007gettooltipinfo"></a><a name="gettooltipinfo"></a>CMFCVisualManagerOffice2007::GetToolTipInfo  
+##  <a name="gettooltipinfo"></a>CMFCVisualManagerOffice2007::GetToolTipInfo  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -507,7 +620,7 @@ virtual BOOL GetToolTipInfo(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameishighlightwholemenuitema--cmfcvisualmanageroffice2007ishighlightwholemenuitem"></a><a name="ishighlightwholemenuitem"></a>CMFCVisualManagerOffice2007::IsHighlightWholeMenuItem  
+##  <a name="ishighlightwholemenuitem"></a>CMFCVisualManagerOffice2007::IsHighlightWholeMenuItem  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -518,7 +631,7 @@ virtual BOOL IsHighlightWholeMenuItem();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameislayeredribbonkeytipa--cmfcvisualmanageroffice2007islayeredribbonkeytip"></a><a name="islayeredribbonkeytip"></a>CMFCVisualManagerOffice2007::IsLayeredRibbonKeyTip  
+##  <a name="islayeredribbonkeytip"></a>CMFCVisualManagerOffice2007::IsLayeredRibbonKeyTip  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -529,7 +642,7 @@ virtual BOOL IsLayeredRibbonKeyTip() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameisownerdrawcaptiona--cmfcvisualmanageroffice2007isownerdrawcaption"></a><a name="isownerdrawcaption"></a>CMFCVisualManagerOffice2007::IsOwnerDrawCaption  
+##  <a name="isownerdrawcaption"></a>CMFCVisualManagerOffice2007::IsOwnerDrawCaption  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -540,7 +653,7 @@ virtual BOOL IsOwnerDrawCaption();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameisownerdrawmenuchecka--cmfcvisualmanageroffice2007isownerdrawmenucheck"></a><a name="isownerdrawmenucheck"></a>CMFCVisualManagerOffice2007::IsOwnerDrawMenuCheck  
+##  <a name="isownerdrawmenucheck"></a>CMFCVisualManagerOffice2007::IsOwnerDrawMenuCheck  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -551,7 +664,7 @@ virtual BOOL IsOwnerDrawMenuCheck();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameisribbonpresenta--cmfcvisualmanageroffice2007isribbonpresent"></a><a name="isribbonpresent"></a>CMFCVisualManagerOffice2007::IsRibbonPresent  
+##  <a name="isribbonpresent"></a>CMFCVisualManagerOffice2007::IsRibbonPresent  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -565,7 +678,7 @@ BOOL IsRibbonPresent(CWnd* pWnd) const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawbargrippera--cmfcvisualmanageroffice2007ondrawbargripper"></a><a name="ondrawbargripper"></a>CMFCVisualManagerOffice2007::OnDrawBarGripper  
+##  <a name="ondrawbargripper"></a>CMFCVisualManagerOffice2007::OnDrawBarGripper  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -584,7 +697,7 @@ virtual void OnDrawBarGripper(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawbuttonbordera--cmfcvisualmanageroffice2007ondrawbuttonborder"></a><a name="ondrawbuttonborder"></a>CMFCVisualManagerOffice2007::OnDrawButtonBorder  
+##  <a name="ondrawbuttonborder"></a>CMFCVisualManagerOffice2007::OnDrawButtonBorder  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -603,7 +716,7 @@ virtual void OnDrawButtonBorder(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawbuttonseparatora--cmfcvisualmanageroffice2007ondrawbuttonseparator"></a><a name="ondrawbuttonseparator"></a>CMFCVisualManagerOffice2007::OnDrawButtonSeparator  
+##  <a name="ondrawbuttonseparator"></a>CMFCVisualManagerOffice2007::OnDrawButtonSeparator  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -624,7 +737,7 @@ virtual void OnDrawButtonSeparator(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawcaptionbarinfoareaa--cmfcvisualmanageroffice2007ondrawcaptionbarinfoarea"></a><a name="ondrawcaptionbarinfoarea"></a>CMFCVisualManagerOffice2007::OnDrawCaptionBarInfoArea  
+##  <a name="ondrawcaptionbarinfoarea"></a>CMFCVisualManagerOffice2007::OnDrawCaptionBarInfoArea  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -641,7 +754,7 @@ virtual void OnDrawCaptionBarInfoArea(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawcheckboxexa--cmfcvisualmanageroffice2007ondrawcheckboxex"></a><a name="ondrawcheckboxex"></a>CMFCVisualManagerOffice2007::OnDrawCheckBoxEx  
+##  <a name="ondrawcheckboxex"></a>CMFCVisualManagerOffice2007::OnDrawCheckBoxEx  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -664,7 +777,7 @@ virtual void OnDrawCheckBoxEx(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawcombobordera--cmfcvisualmanageroffice2007ondrawcomboborder"></a><a name="ondrawcomboborder"></a>CMFCVisualManagerOffice2007::OnDrawComboBorder  
+##  <a name="ondrawcomboborder"></a>CMFCVisualManagerOffice2007::OnDrawComboBorder  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -687,7 +800,7 @@ virtual void OnDrawComboBorder(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawcombodropbuttona--cmfcvisualmanageroffice2007ondrawcombodropbutton"></a><a name="ondrawcombodropbutton"></a>CMFCVisualManagerOffice2007::OnDrawComboDropButton  
+##  <a name="ondrawcombodropbutton"></a>CMFCVisualManagerOffice2007::OnDrawComboDropButton  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -710,7 +823,7 @@ virtual void OnDrawComboDropButton(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawdefaultribbonimagea--cmfcvisualmanageroffice2007ondrawdefaultribbonimage"></a><a name="ondrawdefaultribbonimage"></a>CMFCVisualManagerOffice2007::OnDrawDefaultRibbonImage  
+##  <a name="ondrawdefaultribbonimage"></a>CMFCVisualManagerOffice2007::OnDrawDefaultRibbonImage  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -731,7 +844,7 @@ virtual void OnDrawDefaultRibbonImage(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondraweditbordera--cmfcvisualmanageroffice2007ondraweditborder"></a><a name="ondraweditborder"></a>CMFCVisualManagerOffice2007::OnDrawEditBorder  
+##  <a name="ondraweditborder"></a>CMFCVisualManagerOffice2007::OnDrawEditBorder  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -752,7 +865,7 @@ virtual void OnDrawEditBorder(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawfloatingtoolbarbordera--cmfcvisualmanageroffice2007ondrawfloatingtoolbarborder"></a><a name="ondrawfloatingtoolbarborder"></a>CMFCVisualManagerOffice2007::OnDrawFloatingToolbarBorder  
+##  <a name="ondrawfloatingtoolbarborder"></a>CMFCVisualManagerOffice2007::OnDrawFloatingToolbarBorder  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -771,7 +884,7 @@ virtual void OnDrawFloatingToolbarBorder(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawheaderctrlbordera--cmfcvisualmanageroffice2007ondrawheaderctrlborder"></a><a name="ondrawheaderctrlborder"></a>CMFCVisualManagerOffice2007::OnDrawHeaderCtrlBorder  
+##  <a name="ondrawheaderctrlborder"></a>CMFCVisualManagerOffice2007::OnDrawHeaderCtrlBorder  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -792,7 +905,7 @@ virtual void OnDrawHeaderCtrlBorder(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawmenubordera--cmfcvisualmanageroffice2007ondrawmenuborder"></a><a name="ondrawmenuborder"></a>CMFCVisualManagerOffice2007::OnDrawMenuBorder  
+##  <a name="ondrawmenuborder"></a>CMFCVisualManagerOffice2007::OnDrawMenuBorder  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -809,7 +922,7 @@ virtual void OnDrawMenuBorder(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawmenuchecka--cmfcvisualmanageroffice2007ondrawmenucheck"></a><a name="ondrawmenucheck"></a>CMFCVisualManagerOffice2007::OnDrawMenuCheck  
+##  <a name="ondrawmenucheck"></a>CMFCVisualManagerOffice2007::OnDrawMenuCheck  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -830,7 +943,7 @@ virtual void OnDrawMenuCheck(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawmenuitembuttona--cmfcvisualmanageroffice2007ondrawmenuitembutton"></a><a name="ondrawmenuitembutton"></a>CMFCVisualManagerOffice2007::OnDrawMenuItemButton  
+##  <a name="ondrawmenuitembutton"></a>CMFCVisualManagerOffice2007::OnDrawMenuItemButton  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -851,7 +964,7 @@ virtual void OnDrawMenuItemButton(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawmenulabela--cmfcvisualmanageroffice2007ondrawmenulabel"></a><a name="ondrawmenulabel"></a>CMFCVisualManagerOffice2007::OnDrawMenuLabel  
+##  <a name="ondrawmenulabel"></a>CMFCVisualManagerOffice2007::OnDrawMenuLabel  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -868,7 +981,7 @@ virtual COLORREF OnDrawMenuLabel(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawmenuresizebara--cmfcvisualmanageroffice2007ondrawmenuresizebar"></a><a name="ondrawmenuresizebar"></a>CMFCVisualManagerOffice2007::OnDrawMenuResizeBar  
+##  <a name="ondrawmenuresizebar"></a>CMFCVisualManagerOffice2007::OnDrawMenuResizeBar  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -885,7 +998,7 @@ virtual void OnDrawMenuResizeBar(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawmenuscrollbuttona--cmfcvisualmanageroffice2007ondrawmenuscrollbutton"></a><a name="ondrawmenuscrollbutton"></a>CMFCVisualManagerOffice2007::OnDrawMenuScrollButton  
+##  <a name="ondrawmenuscrollbutton"></a>CMFCVisualManagerOffice2007::OnDrawMenuScrollButton  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -908,7 +1021,7 @@ virtual void OnDrawMenuScrollButton(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawmenusystembuttona--cmfcvisualmanageroffice2007ondrawmenusystembutton"></a><a name="ondrawmenusystembutton"></a>CMFCVisualManagerOffice2007::OnDrawMenuSystemButton  
+##  <a name="ondrawmenusystembutton"></a>CMFCVisualManagerOffice2007::OnDrawMenuSystemButton  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -929,7 +1042,7 @@ virtual void OnDrawMenuSystemButton(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawminiframebordera--cmfcvisualmanageroffice2007ondrawminiframeborder"></a><a name="ondrawminiframeborder"></a>CMFCVisualManagerOffice2007::OnDrawMiniFrameBorder  
+##  <a name="ondrawminiframeborder"></a>CMFCVisualManagerOffice2007::OnDrawMiniFrameBorder  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -948,7 +1061,7 @@ virtual void OnDrawMiniFrameBorder(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawoutlookbarsplittera--cmfcvisualmanageroffice2007ondrawoutlookbarsplitter"></a><a name="ondrawoutlookbarsplitter"></a>CMFCVisualManagerOffice2007::OnDrawOutlookBarSplitter  
+##  <a name="ondrawoutlookbarsplitter"></a>CMFCVisualManagerOffice2007::OnDrawOutlookBarSplitter  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -963,7 +1076,7 @@ virtual void OnDrawOutlookBarSplitter(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawoutlookpagebuttonbordera--cmfcvisualmanageroffice2007ondrawoutlookpagebuttonborder"></a><a name="ondrawoutlookpagebuttonborder"></a>CMFCVisualManagerOffice2007::OnDrawOutlookPageButtonBorder  
+##  <a name="ondrawoutlookpagebuttonborder"></a>CMFCVisualManagerOffice2007::OnDrawOutlookPageButtonBorder  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -982,7 +1095,7 @@ virtual void OnDrawOutlookPageButtonBorder(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawpanecaptiona--cmfcvisualmanageroffice2007ondrawpanecaption"></a><a name="ondrawpanecaption"></a>CMFCVisualManagerOffice2007::OnDrawPaneCaption  
+##  <a name="ondrawpanecaption"></a>CMFCVisualManagerOffice2007::OnDrawPaneCaption  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1005,7 +1118,7 @@ virtual COLORREF OnDrawPaneCaption(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawpopupwindowcaptiona--cmfcvisualmanageroffice2007ondrawpopupwindowcaption"></a><a name="ondrawpopupwindowcaption"></a>CMFCVisualManagerOffice2007::OnDrawPopupWindowCaption  
+##  <a name="ondrawpopupwindowcaption"></a>CMFCVisualManagerOffice2007::OnDrawPopupWindowCaption  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1024,7 +1137,7 @@ virtual COLORREF OnDrawPopupWindowCaption(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawpropertysheetlistitema--cmfcvisualmanageroffice2007ondrawpropertysheetlistitem"></a><a name="ondrawpropertysheetlistitem"></a>CMFCVisualManagerOffice2007::OnDrawPropertySheetListItem  
+##  <a name="ondrawpropertysheetlistitem"></a>CMFCVisualManagerOffice2007::OnDrawPropertySheetListItem  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1047,7 +1160,7 @@ virtual COLORREF OnDrawPropertySheetListItem(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawribbonapplicationbuttona--cmfcvisualmanageroffice2007ondrawribbonapplicationbutton"></a><a name="ondrawribbonapplicationbutton"></a>CMFCVisualManagerOffice2007::OnDrawRibbonApplicationButton  
+##  <a name="ondrawribbonapplicationbutton"></a>CMFCVisualManagerOffice2007::OnDrawRibbonApplicationButton  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1062,7 +1175,7 @@ virtual void OnDrawRibbonApplicationButton(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawribbonbuttonbordera--cmfcvisualmanageroffice2007ondrawribbonbuttonborder"></a><a name="ondrawribbonbuttonborder"></a>CMFCVisualManagerOffice2007::OnDrawRibbonButtonBorder  
+##  <a name="ondrawribbonbuttonborder"></a>CMFCVisualManagerOffice2007::OnDrawRibbonButtonBorder  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1077,7 +1190,7 @@ virtual void OnDrawRibbonButtonBorder(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawribbonbuttonsgroupa--cmfcvisualmanageroffice2007ondrawribbonbuttonsgroup"></a><a name="ondrawribbonbuttonsgroup"></a>CMFCVisualManagerOffice2007::OnDrawRibbonButtonsGroup  
+##  <a name="ondrawribbonbuttonsgroup"></a>CMFCVisualManagerOffice2007::OnDrawRibbonButtonsGroup  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1096,7 +1209,7 @@ virtual COLORREF OnDrawRibbonButtonsGroup(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawribboncaptiona--cmfcvisualmanageroffice2007ondrawribboncaption"></a><a name="ondrawribboncaption"></a>CMFCVisualManagerOffice2007::OnDrawRibbonCaption  
+##  <a name="ondrawribboncaption"></a>CMFCVisualManagerOffice2007::OnDrawRibbonCaption  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1115,7 +1228,7 @@ virtual void OnDrawRibbonCaption(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawribboncaptionbuttona--cmfcvisualmanageroffice2007ondrawribboncaptionbutton"></a><a name="ondrawribboncaptionbutton"></a>CMFCVisualManagerOffice2007::OnDrawRibbonCaptionButton  
+##  <a name="ondrawribboncaptionbutton"></a>CMFCVisualManagerOffice2007::OnDrawRibbonCaptionButton  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1130,7 +1243,7 @@ virtual void OnDrawRibbonCaptionButton(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawribboncategorya--cmfcvisualmanageroffice2007ondrawribboncategory"></a><a name="ondrawribboncategory"></a>CMFCVisualManagerOffice2007::OnDrawRibbonCategory  
+##  <a name="ondrawribboncategory"></a>CMFCVisualManagerOffice2007::OnDrawRibbonCategory  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1147,7 +1260,7 @@ virtual void OnDrawRibbonCategory(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawribboncategorycaptiona--cmfcvisualmanageroffice2007ondrawribboncategorycaption"></a><a name="ondrawribboncategorycaption"></a>CMFCVisualManagerOffice2007::OnDrawRibbonCategoryCaption  
+##  <a name="ondrawribboncategorycaption"></a>CMFCVisualManagerOffice2007::OnDrawRibbonCategoryCaption  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1164,7 +1277,7 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawribboncategoryscrolla--cmfcvisualmanageroffice2007ondrawribboncategoryscroll"></a><a name="ondrawribboncategoryscroll"></a>CMFCVisualManagerOffice2007::OnDrawRibbonCategoryScroll  
+##  <a name="ondrawribboncategoryscroll"></a>CMFCVisualManagerOffice2007::OnDrawRibbonCategoryScroll  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1179,7 +1292,7 @@ virtual void OnDrawRibbonCategoryScroll(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawribboncategorytaba--cmfcvisualmanageroffice2007ondrawribboncategorytab"></a><a name="ondrawribboncategorytab"></a>CMFCVisualManagerOffice2007::OnDrawRibbonCategoryTab  
+##  <a name="ondrawribboncategorytab"></a>CMFCVisualManagerOffice2007::OnDrawRibbonCategoryTab  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1198,7 +1311,7 @@ virtual COLORREF OnDrawRibbonCategoryTab(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawribboncheckboxonlista--cmfcvisualmanageroffice2007ondrawribboncheckboxonlist"></a><a name="ondrawribboncheckboxonlist"></a>CMFCVisualManagerOffice2007::OnDrawRibbonCheckBoxOnList  
+##  <a name="ondrawribboncheckboxonlist"></a>CMFCVisualManagerOffice2007::OnDrawRibbonCheckBoxOnList  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1219,7 +1332,7 @@ virtual void OnDrawRibbonCheckBoxOnList(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawribbondefaultpanebuttona--cmfcvisualmanageroffice2007ondrawribbondefaultpanebutton"></a><a name="ondrawribbondefaultpanebutton"></a>CMFCVisualManagerOffice2007::OnDrawRibbonDefaultPaneButton  
+##  <a name="ondrawribbondefaultpanebutton"></a>CMFCVisualManagerOffice2007::OnDrawRibbonDefaultPaneButton  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1234,7 +1347,7 @@ virtual void OnDrawRibbonDefaultPaneButton(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawribbondefaultpanebuttonindicatora--cmfcvisualmanageroffice2007ondrawribbondefaultpanebuttonindicator"></a><a name="ondrawribbondefaultpanebuttonindicator"></a>CMFCVisualManagerOffice2007::OnDrawRibbonDefaultPaneButtonIndicator  
+##  <a name="ondrawribbondefaultpanebuttonindicator"></a>CMFCVisualManagerOffice2007::OnDrawRibbonDefaultPaneButtonIndicator  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1255,7 +1368,7 @@ virtual void OnDrawRibbonDefaultPaneButtonIndicator(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawribbongallerybordera--cmfcvisualmanageroffice2007ondrawribbongalleryborder"></a><a name="ondrawribbongalleryborder"></a>CMFCVisualManagerOffice2007::OnDrawRibbonGalleryBorder  
+##  <a name="ondrawribbongalleryborder"></a>CMFCVisualManagerOffice2007::OnDrawRibbonGalleryBorder  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1272,7 +1385,7 @@ virtual void OnDrawRibbonGalleryBorder(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawribbongallerybuttona--cmfcvisualmanageroffice2007ondrawribbongallerybutton"></a><a name="ondrawribbongallerybutton"></a>CMFCVisualManagerOffice2007::OnDrawRibbonGalleryButton  
+##  <a name="ondrawribbongallerybutton"></a>CMFCVisualManagerOffice2007::OnDrawRibbonGalleryButton  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1287,7 +1400,7 @@ virtual void OnDrawRibbonGalleryButton(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawribbonkeytipa--cmfcvisualmanageroffice2007ondrawribbonkeytip"></a><a name="ondrawribbonkeytip"></a>CMFCVisualManagerOffice2007::OnDrawRibbonKeyTip  
+##  <a name="ondrawribbonkeytip"></a>CMFCVisualManagerOffice2007::OnDrawRibbonKeyTip  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1306,7 +1419,7 @@ virtual void OnDrawRibbonKeyTip(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawribbonmainpanelbuttonbordera--cmfcvisualmanageroffice2007ondrawribbonmainpanelbuttonborder"></a><a name="ondrawribbonmainpanelbuttonborder"></a>CMFCVisualManagerOffice2007::OnDrawRibbonMainPanelButtonBorder  
+##  <a name="ondrawribbonmainpanelbuttonborder"></a>CMFCVisualManagerOffice2007::OnDrawRibbonMainPanelButtonBorder  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1321,7 +1434,7 @@ virtual void OnDrawRibbonMainPanelButtonBorder(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawribbonmainpanelframea--cmfcvisualmanageroffice2007ondrawribbonmainpanelframe"></a><a name="ondrawribbonmainpanelframe"></a>CMFCVisualManagerOffice2007::OnDrawRibbonMainPanelFrame  
+##  <a name="ondrawribbonmainpanelframe"></a>CMFCVisualManagerOffice2007::OnDrawRibbonMainPanelFrame  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1338,7 +1451,7 @@ virtual void OnDrawRibbonMainPanelFrame(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawribbonmenucheckframea--cmfcvisualmanageroffice2007ondrawribbonmenucheckframe"></a><a name="ondrawribbonmenucheckframe"></a>CMFCVisualManagerOffice2007::OnDrawRibbonMenuCheckFrame  
+##  <a name="ondrawribbonmenucheckframe"></a>CMFCVisualManagerOffice2007::OnDrawRibbonMenuCheckFrame  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1355,7 +1468,7 @@ virtual void OnDrawRibbonMenuCheckFrame(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawribbonpanela--cmfcvisualmanageroffice2007ondrawribbonpanel"></a><a name="ondrawribbonpanel"></a>CMFCVisualManagerOffice2007::OnDrawRibbonPanel  
+##  <a name="ondrawribbonpanel"></a>CMFCVisualManagerOffice2007::OnDrawRibbonPanel  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1376,7 +1489,7 @@ virtual COLORREF OnDrawRibbonPanel(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawribbonpanelcaptiona--cmfcvisualmanageroffice2007ondrawribbonpanelcaption"></a><a name="ondrawribbonpanelcaption"></a>CMFCVisualManagerOffice2007::OnDrawRibbonPanelCaption  
+##  <a name="ondrawribbonpanelcaption"></a>CMFCVisualManagerOffice2007::OnDrawRibbonPanelCaption  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1393,7 +1506,7 @@ virtual void OnDrawRibbonPanelCaption(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawribbonprogressbara--cmfcvisualmanageroffice2007ondrawribbonprogressbar"></a><a name="ondrawribbonprogressbar"></a>CMFCVisualManagerOffice2007::OnDrawRibbonProgressBar  
+##  <a name="ondrawribbonprogressbar"></a>CMFCVisualManagerOffice2007::OnDrawRibbonProgressBar  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1414,7 +1527,7 @@ virtual void OnDrawRibbonProgressBar(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawribbonrecentfilesframea--cmfcvisualmanageroffice2007ondrawribbonrecentfilesframe"></a><a name="ondrawribbonrecentfilesframe"></a>CMFCVisualManagerOffice2007::OnDrawRibbonRecentFilesFrame  
+##  <a name="ondrawribbonrecentfilesframe"></a>CMFCVisualManagerOffice2007::OnDrawRibbonRecentFilesFrame  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1431,7 +1544,7 @@ virtual void OnDrawRibbonRecentFilesFrame(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawribbonsliderchannela--cmfcvisualmanageroffice2007ondrawribbonsliderchannel"></a><a name="ondrawribbonsliderchannel"></a>CMFCVisualManagerOffice2007::OnDrawRibbonSliderChannel  
+##  <a name="ondrawribbonsliderchannel"></a>CMFCVisualManagerOffice2007::OnDrawRibbonSliderChannel  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1448,7 +1561,7 @@ virtual void OnDrawRibbonSliderChannel(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawribbonsliderthumba--cmfcvisualmanageroffice2007ondrawribbonsliderthumb"></a><a name="ondrawribbonsliderthumb"></a>CMFCVisualManagerOffice2007::OnDrawRibbonSliderThumb  
+##  <a name="ondrawribbonsliderthumb"></a>CMFCVisualManagerOffice2007::OnDrawRibbonSliderThumb  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1471,7 +1584,7 @@ virtual void OnDrawRibbonSliderThumb(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawribbonsliderzoombuttona--cmfcvisualmanageroffice2007ondrawribbonsliderzoombutton"></a><a name="ondrawribbonsliderzoombutton"></a>CMFCVisualManagerOffice2007::OnDrawRibbonSliderZoomButton  
+##  <a name="ondrawribbonsliderzoombutton"></a>CMFCVisualManagerOffice2007::OnDrawRibbonSliderZoomButton  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1496,7 +1609,7 @@ virtual void OnDrawRibbonSliderZoomButton(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawribbonstatusbarpanea--cmfcvisualmanageroffice2007ondrawribbonstatusbarpane"></a><a name="ondrawribbonstatusbarpane"></a>CMFCVisualManagerOffice2007::OnDrawRibbonStatusBarPane  
+##  <a name="ondrawribbonstatusbarpane"></a>CMFCVisualManagerOffice2007::OnDrawRibbonStatusBarPane  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1515,7 +1628,7 @@ virtual COLORREF OnDrawRibbonStatusBarPane(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawribbontabsframea--cmfcvisualmanageroffice2007ondrawribbontabsframe"></a><a name="ondrawribbontabsframe"></a>CMFCVisualManagerOffice2007::OnDrawRibbonTabsFrame  
+##  <a name="ondrawribbontabsframe"></a>CMFCVisualManagerOffice2007::OnDrawRibbonTabsFrame  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1534,7 +1647,7 @@ virtual COLORREF OnDrawRibbonTabsFrame(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawscrollbuttonsa--cmfcvisualmanageroffice2007ondrawscrollbuttons"></a><a name="ondrawscrollbuttons"></a>CMFCVisualManagerOffice2007::OnDrawScrollButtons  
+##  <a name="ondrawscrollbuttons"></a>CMFCVisualManagerOffice2007::OnDrawScrollButtons  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1555,7 +1668,7 @@ virtual void OnDrawScrollButtons(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawseparatora--cmfcvisualmanageroffice2007ondrawseparator"></a><a name="ondrawseparator"></a>CMFCVisualManagerOffice2007::OnDrawSeparator  
+##  <a name="ondrawseparator"></a>CMFCVisualManagerOffice2007::OnDrawSeparator  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1574,7 +1687,7 @@ virtual void OnDrawSeparator(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawshowallmenuitemsa--cmfcvisualmanageroffice2007ondrawshowallmenuitems"></a><a name="ondrawshowallmenuitems"></a>CMFCVisualManagerOffice2007::OnDrawShowAllMenuItems  
+##  <a name="ondrawshowallmenuitems"></a>CMFCVisualManagerOffice2007::OnDrawShowAllMenuItems  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1591,7 +1704,7 @@ virtual void OnDrawShowAllMenuItems(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawstatusbarpanebordera--cmfcvisualmanageroffice2007ondrawstatusbarpaneborder"></a><a name="ondrawstatusbarpaneborder"></a>CMFCVisualManagerOffice2007::OnDrawStatusBarPaneBorder  
+##  <a name="ondrawstatusbarpaneborder"></a>CMFCVisualManagerOffice2007::OnDrawStatusBarPaneBorder  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1612,7 +1725,7 @@ virtual void OnDrawStatusBarPaneBorder(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawstatusbarsizeboxa--cmfcvisualmanageroffice2007ondrawstatusbarsizebox"></a><a name="ondrawstatusbarsizebox"></a>CMFCVisualManagerOffice2007::OnDrawStatusBarSizeBox  
+##  <a name="ondrawstatusbarsizebox"></a>CMFCVisualManagerOffice2007::OnDrawStatusBarSizeBox  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1629,7 +1742,7 @@ virtual void OnDrawStatusBarSizeBox(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawtaba--cmfcvisualmanageroffice2007ondrawtab"></a><a name="ondrawtab"></a>CMFCVisualManagerOffice2007::OnDrawTab  
+##  <a name="ondrawtab"></a>CMFCVisualManagerOffice2007::OnDrawTab  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1650,7 +1763,7 @@ virtual void OnDrawTab(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawtabsbuttonbordera--cmfcvisualmanageroffice2007ondrawtabsbuttonborder"></a><a name="ondrawtabsbuttonborder"></a>CMFCVisualManagerOffice2007::OnDrawTabsButtonBorder  
+##  <a name="ondrawtabsbuttonborder"></a>CMFCVisualManagerOffice2007::OnDrawTabsButtonBorder  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1671,7 +1784,7 @@ virtual void OnDrawTabsButtonBorder(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawtaska--cmfcvisualmanageroffice2007ondrawtask"></a><a name="ondrawtask"></a>CMFCVisualManagerOffice2007::OnDrawTask  
+##  <a name="ondrawtask"></a>CMFCVisualManagerOffice2007::OnDrawTask  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1692,7 +1805,7 @@ virtual void OnDrawTask(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawtasksgroupcaptiona--cmfcvisualmanageroffice2007ondrawtasksgroupcaption"></a><a name="ondrawtasksgroupcaption"></a>CMFCVisualManagerOffice2007::OnDrawTasksGroupCaption  
+##  <a name="ondrawtasksgroupcaption"></a>CMFCVisualManagerOffice2007::OnDrawTasksGroupCaption  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1713,7 +1826,7 @@ virtual void OnDrawTasksGroupCaption(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawtearoffcaptiona--cmfcvisualmanageroffice2007ondrawtearoffcaption"></a><a name="ondrawtearoffcaption"></a>CMFCVisualManagerOffice2007::OnDrawTearOffCaption  
+##  <a name="ondrawtearoffcaption"></a>CMFCVisualManagerOffice2007::OnDrawTearOffCaption  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1730,7 +1843,7 @@ virtual void OnDrawTearOffCaption(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonerasemdiclientareaa--cmfcvisualmanageroffice2007onerasemdiclientarea"></a><a name="onerasemdiclientarea"></a>CMFCVisualManagerOffice2007::OnEraseMDIClientArea  
+##  <a name="onerasemdiclientarea"></a>CMFCVisualManagerOffice2007::OnEraseMDIClientArea  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1747,7 +1860,7 @@ virtual BOOL OnEraseMDIClientArea(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonerasetabsareaa--cmfcvisualmanageroffice2007onerasetabsarea"></a><a name="onerasetabsarea"></a>CMFCVisualManagerOffice2007::OnEraseTabsArea  
+##  <a name="onerasetabsarea"></a>CMFCVisualManagerOffice2007::OnEraseTabsArea  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1764,7 +1877,7 @@ virtual void OnEraseTabsArea(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonerasetabsbuttona--cmfcvisualmanageroffice2007onerasetabsbutton"></a><a name="onerasetabsbutton"></a>CMFCVisualManagerOffice2007::OnEraseTabsButton  
+##  <a name="onerasetabsbutton"></a>CMFCVisualManagerOffice2007::OnEraseTabsButton  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1783,7 +1896,7 @@ virtual void OnEraseTabsButton(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonerasetabsframea--cmfcvisualmanageroffice2007onerasetabsframe"></a><a name="onerasetabsframe"></a>CMFCVisualManagerOffice2007::OnEraseTabsFrame  
+##  <a name="onerasetabsframe"></a>CMFCVisualManagerOffice2007::OnEraseTabsFrame  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1802,7 +1915,7 @@ virtual BOOL OnEraseTabsFrame(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonfillbarbackgrounda--cmfcvisualmanageroffice2007onfillbarbackground"></a><a name="onfillbarbackground"></a>CMFCVisualManagerOffice2007::OnFillBarBackground  
+##  <a name="onfillbarbackground"></a>CMFCVisualManagerOffice2007::OnFillBarBackground  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1823,7 +1936,7 @@ virtual void OnFillBarBackground(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonfillbuttoninteriora--cmfcvisualmanageroffice2007onfillbuttoninterior"></a><a name="onfillbuttoninterior"></a>CMFCVisualManagerOffice2007::OnFillButtonInterior  
+##  <a name="onfillbuttoninterior"></a>CMFCVisualManagerOffice2007::OnFillButtonInterior  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1842,7 +1955,7 @@ virtual void OnFillButtonInterior(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonfillcaptionbarbuttona--cmfcvisualmanageroffice2007onfillcaptionbarbutton"></a><a name="onfillcaptionbarbutton"></a>CMFCVisualManagerOffice2007::OnFillCaptionBarButton  
+##  <a name="onfillcaptionbarbutton"></a>CMFCVisualManagerOffice2007::OnFillCaptionBarButton  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1871,7 +1984,7 @@ virtual COLORREF OnFillCaptionBarButton(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonfillhighlightedareaa--cmfcvisualmanageroffice2007onfillhighlightedarea"></a><a name="onfillhighlightedarea"></a>CMFCVisualManagerOffice2007::OnFillHighlightedArea  
+##  <a name="onfillhighlightedarea"></a>CMFCVisualManagerOffice2007::OnFillHighlightedArea  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1890,7 +2003,7 @@ virtual void OnFillHighlightedArea(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonfillminiframecaptiona--cmfcvisualmanageroffice2007onfillminiframecaption"></a><a name="onfillminiframecaption"></a>CMFCVisualManagerOffice2007::OnFillMiniFrameCaption  
+##  <a name="onfillminiframecaption"></a>CMFCVisualManagerOffice2007::OnFillMiniFrameCaption  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1911,7 +2024,7 @@ virtual COLORREF OnFillMiniFrameCaption(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonfilloutlookbarcaptiona--cmfcvisualmanageroffice2007onfilloutlookbarcaption"></a><a name="onfilloutlookbarcaption"></a>CMFCVisualManagerOffice2007::OnFillOutlookBarCaption  
+##  <a name="onfilloutlookbarcaption"></a>CMFCVisualManagerOffice2007::OnFillOutlookBarCaption  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1928,7 +2041,7 @@ virtual void OnFillOutlookBarCaption(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonfilloutlookpagebuttona--cmfcvisualmanageroffice2007onfilloutlookpagebutton"></a><a name="onfilloutlookpagebutton"></a>CMFCVisualManagerOffice2007::OnFillOutlookPageButton  
+##  <a name="onfilloutlookpagebutton"></a>CMFCVisualManagerOffice2007::OnFillOutlookPageButton  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1949,7 +2062,7 @@ virtual void OnFillOutlookPageButton(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonfillpopupwindowbackgrounda--cmfcvisualmanageroffice2007onfillpopupwindowbackground"></a><a name="onfillpopupwindowbackground"></a>CMFCVisualManagerOffice2007::OnFillPopupWindowBackground  
+##  <a name="onfillpopupwindowbackground"></a>CMFCVisualManagerOffice2007::OnFillPopupWindowBackground  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1964,7 +2077,7 @@ virtual void OnFillPopupWindowBackground(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonfillribbonbuttona--cmfcvisualmanageroffice2007onfillribbonbutton"></a><a name="onfillribbonbutton"></a>CMFCVisualManagerOffice2007::OnFillRibbonButton  
+##  <a name="onfillribbonbutton"></a>CMFCVisualManagerOffice2007::OnFillRibbonButton  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1981,7 +2094,7 @@ virtual COLORREF OnFillRibbonButton(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonfillribbonedita--cmfcvisualmanageroffice2007onfillribbonedit"></a><a name="onfillribbonedit"></a>CMFCVisualManagerOffice2007::OnFillRibbonEdit  
+##  <a name="onfillribbonedit"></a>CMFCVisualManagerOffice2007::OnFillRibbonEdit  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2010,7 +2123,7 @@ virtual void OnFillRibbonEdit(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonfillribbonmainpanelbuttona--cmfcvisualmanageroffice2007onfillribbonmainpanelbutton"></a><a name="onfillribbonmainpanelbutton"></a>CMFCVisualManagerOffice2007::OnFillRibbonMainPanelButton  
+##  <a name="onfillribbonmainpanelbutton"></a>CMFCVisualManagerOffice2007::OnFillRibbonMainPanelButton  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2027,7 +2140,7 @@ virtual COLORREF OnFillRibbonMainPanelButton(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonfillribbonmenuframea--cmfcvisualmanageroffice2007onfillribbonmenuframe"></a><a name="onfillribbonmenuframe"></a>CMFCVisualManagerOffice2007::OnFillRibbonMenuFrame  
+##  <a name="onfillribbonmenuframe"></a>CMFCVisualManagerOffice2007::OnFillRibbonMenuFrame  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2044,7 +2157,7 @@ virtual void OnFillRibbonMenuFrame(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonfillribbonquickaccesstoolbarpopupa--cmfcvisualmanageroffice2007onfillribbonquickaccesstoolbarpopup"></a><a name="onfillribbonquickaccesstoolbarpopup"></a>CMFCVisualManagerOffice2007::OnFillRibbonQuickAccessToolBarPopup  
+##  <a name="onfillribbonquickaccesstoolbarpopup"></a>CMFCVisualManagerOffice2007::OnFillRibbonQuickAccessToolBarPopup  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2061,7 +2174,7 @@ virtual void OnFillRibbonQuickAccessToolBarPopup(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonfilltaba--cmfcvisualmanageroffice2007onfilltab"></a><a name="onfilltab"></a>CMFCVisualManagerOffice2007::OnFillTab  
+##  <a name="onfilltab"></a>CMFCVisualManagerOffice2007::OnFillTab  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2084,7 +2197,7 @@ virtual void OnFillTab(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonhighlightmenuitema--cmfcvisualmanageroffice2007onhighlightmenuitem"></a><a name="onhighlightmenuitem"></a>CMFCVisualManagerOffice2007::OnHighlightMenuItem  
+##  <a name="onhighlightmenuitem"></a>CMFCVisualManagerOffice2007::OnHighlightMenuItem  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2103,7 +2216,7 @@ virtual void OnHighlightMenuItem(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonhighlightrarelyusedmenuitemsa--cmfcvisualmanageroffice2007onhighlightrarelyusedmenuitems"></a><a name="onhighlightrarelyusedmenuitems"></a>CMFCVisualManagerOffice2007::OnHighlightRarelyUsedMenuItems  
+##  <a name="onhighlightrarelyusedmenuitems"></a>CMFCVisualManagerOffice2007::OnHighlightRarelyUsedMenuItems  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2118,7 +2231,7 @@ virtual void OnHighlightRarelyUsedMenuItems(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonncactivatea--cmfcvisualmanageroffice2007onncactivate"></a><a name="onncactivate"></a>CMFCVisualManagerOffice2007::OnNcActivate  
+##  <a name="onncactivate"></a>CMFCVisualManagerOffice2007::OnNcActivate  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2135,7 +2248,7 @@ virtual BOOL OnNcActivate(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonncpainta--cmfcvisualmanageroffice2007onncpaint"></a><a name="onncpaint"></a>CMFCVisualManagerOffice2007::OnNcPaint  
+##  <a name="onncpaint"></a>CMFCVisualManagerOffice2007::OnNcPaint  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2154,7 +2267,7 @@ virtual BOOL OnNcPaint(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonsetwindowregiona--cmfcvisualmanageroffice2007onsetwindowregion"></a><a name="onsetwindowregion"></a>CMFCVisualManagerOffice2007::OnSetWindowRegion  
+##  <a name="onsetwindowregion"></a>CMFCVisualManagerOffice2007::OnSetWindowRegion  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2171,7 +2284,7 @@ virtual BOOL OnSetWindowRegion(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonupdatesystemcolorsa--cmfcvisualmanageroffice2007onupdatesystemcolors"></a><a name="onupdatesystemcolors"></a>CMFCVisualManagerOffice2007::OnUpdateSystemColors  
+##  <a name="onupdatesystemcolors"></a>CMFCVisualManagerOffice2007::OnUpdateSystemColors  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2180,7 +2293,7 @@ virtual void OnUpdateSystemColors();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namesetresourcehandlea--cmfcvisualmanageroffice2007setresourcehandle"></a><a name="setresourcehandle"></a>CMFCVisualManagerOffice2007::SetResourceHandle  
+##  <a name="setresourcehandle"></a>CMFCVisualManagerOffice2007::SetResourceHandle  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  

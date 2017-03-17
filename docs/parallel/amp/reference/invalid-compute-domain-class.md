@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amprt/Concurrency::invalid_compute_domain
+- invalid_compute_domain
+- AMPRT/invalid_compute_domain
+- AMPRT/Concurrency::invalid_compute_domain::invalid_compute_domain
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -71,7 +73,7 @@ class invalid_compute_domain : public runtime_exception;
   
  **Spazio dei nomi:** Concurrency  
 
-## <a name="a-namectora-invalidcomputedomain"></a><a name="ctor"></a>invalid_compute_domain 
+## <a name="ctor"></a>invalid_compute_domain 
 
 Inizializza una nuova istanza della classe.  
   

@@ -9,9 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CAtlAutoThreadModuleT
-- ATL::CAtlAutoThreadModuleT
 - CAtlAutoThreadModuleT
+- ATLBASE/ATL::CAtlAutoThreadModuleT
+- ATLBASE/ATL::CAtlAutoThreadModuleT::GetDefaultThreads
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +88,7 @@ class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlbase. h  
   
-##  <a name="a-namegetdefaultthreadsa--catlautothreadmoduletgetdefaultthreads"></a><a name="getdefaultthreads"></a>CAtlAutoThreadModuleT::GetDefaultThreads  
+##  <a name="getdefaultthreads"></a>CAtlAutoThreadModuleT::GetDefaultThreads  
  Questa funzione statica dinamicamente calcola e restituisce il numero massimo di thread per il modulo EXE, in base al numero di processori.  
   
 ```

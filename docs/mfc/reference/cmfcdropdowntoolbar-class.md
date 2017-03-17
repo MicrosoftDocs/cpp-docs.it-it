@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCDropDownToolBar
+- AFXDROPDOWNTOOLBAR/CMFCDropDownToolBar
+- AFXDROPDOWNTOOLBAR/CMFCDropDownToolBar::AllowShowOnPaneMenu
+- AFXDROPDOWNTOOLBAR/CMFCDropDownToolBar::LoadBitmap
+- AFXDROPDOWNTOOLBAR/CMFCDropDownToolBar::LoadToolBar
+- AFXDROPDOWNTOOLBAR/CMFCDropDownToolBar::OnLButtonUp
+- AFXDROPDOWNTOOLBAR/CMFCDropDownToolBar::OnMouseMove
+- AFXDROPDOWNTOOLBAR/CMFCDropDownToolBar::OnSendCommand
+- AFXDROPDOWNTOOLBAR/CMFCDropDownToolBar::OnUpdateCmdUI
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -109,7 +117,7 @@ class CMFCDropDownToolBar : public CMFCToolBar
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxdropdowntoolbar.h  
   
-##  <a name="a-nameallowshowonpanemenua--cmfcdropdowntoolbarallowshowonpanemenu"></a><a name="allowshowonpanemenu"></a>CMFCDropDownToolBar::AllowShowOnPaneMenu  
+##  <a name="allowshowonpanemenu"></a>CMFCDropDownToolBar::AllowShowOnPaneMenu  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -120,7 +128,7 @@ virtual BOOL AllowShowOnPaneMenu() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameloadbitmapa--cmfcdropdowntoolbarloadbitmap"></a><a name="loadbitmap"></a>CMFCDropDownToolBar::LoadBitmap  
+##  <a name="loadbitmap"></a>CMFCDropDownToolBar::LoadBitmap  
  Carica le immagini della barra degli strumenti dalle risorse dell'applicazione.  
   
 ```  
@@ -160,7 +168,7 @@ virtual BOOL LoadBitmap(
   
  Chiamare il metodo `LoadBitmapEx` per caricare immagini aggiuntive dopo aver creato la barra degli strumenti.  
   
-##  <a name="a-nameloadtoolbara--cmfcdropdowntoolbarloadtoolbar"></a><a name="loadtoolbar"></a>CMFCDropDownToolBar::LoadToolBar  
+##  <a name="loadtoolbar"></a>CMFCDropDownToolBar::LoadToolBar  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -187,7 +195,7 @@ virtual BOOL LoadToolBar(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonlbuttonupa--cmfcdropdowntoolbaronlbuttonup"></a><a name="onlbuttonup"></a>CMFCDropDownToolBar::OnLButtonUp  
+##  <a name="onlbuttonup"></a>CMFCDropDownToolBar::OnLButtonUp  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -202,7 +210,7 @@ afx_msg void OnLButtonUp(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonmousemovea--cmfcdropdowntoolbaronmousemove"></a><a name="onmousemove"></a>CMFCDropDownToolBar::OnMouseMove  
+##  <a name="onmousemove"></a>CMFCDropDownToolBar::OnMouseMove  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -217,7 +225,7 @@ afx_msg void OnMouseMove(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonsendcommanda--cmfcdropdowntoolbaronsendcommand"></a><a name="onsendcommand"></a>CMFCDropDownToolBar::OnSendCommand  
+##  <a name="onsendcommand"></a>CMFCDropDownToolBar::OnSendCommand  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -231,7 +239,7 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonupdatecmduia--cmfcdropdowntoolbaronupdatecmdui"></a><a name="onupdatecmdui"></a>CMFCDropDownToolBar::OnUpdateCmdUI  
+##  <a name="onupdatecmdui"></a>CMFCDropDownToolBar::OnUpdateCmdUI  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  

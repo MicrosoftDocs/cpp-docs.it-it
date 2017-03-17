@@ -9,8 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxrendertarget/CD2DEllipse
 - CD2DEllipse
+- AFXRENDERTARGET/CD2DEllipse
+- AFXRENDERTARGET/CD2DEllipse::CD2DEllipse
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -65,7 +66,7 @@ class CD2DEllipse : public D2D1_ELLIPSE;
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxrendertarget. h  
   
-##  <a name="a-namecd2dellipsea--cd2dellipsecd2dellipse"></a><a name="cd2dellipse"></a>CD2DEllipse::CD2DEllipse  
+##  <a name="cd2dellipse"></a>CD2DEllipse::CD2DEllipse  
  Costruisce un oggetto CD2DEllipse da un oggetto CD2DRectF.  
   
 ```  

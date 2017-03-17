@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- CMFCComboEdit
+- CMFCToolBarComboBoxEdit
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxEdit
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxEdit::CMFCToolBarComboBoxEdit
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +83,7 @@ class CMFCToolBarComboBoxEdit : public CEdit
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxtoolbarcomboboxbutton.h  
   
-##  <a name="a-namecmfctoolbarcomboboxedita--cmfctoolbarcomboboxeditcmfctoolbarcomboboxedit"></a><a name="cmfctoolbarcomboboxedit"></a>CMFCToolBarComboBoxEdit::CMFCToolBarComboBoxEdit  
+##  <a name="cmfctoolbarcomboboxedit"></a>CMFCToolBarComboBoxEdit::CMFCToolBarComboBoxEdit  
  Costruisce un oggetto `CMFCToolBarComboBoxEdit`.  
   
 ```  

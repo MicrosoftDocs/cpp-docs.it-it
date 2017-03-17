@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMemoryException
+- AFX/CMemoryException
+- AFX/CMemoryException::CMemoryException
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -77,7 +79,7 @@ class CMemoryException : public CSimpleException
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afx.h  
   
-##  <a name="a-namecmemoryexceptiona--cmemoryexceptioncmemoryexception"></a><a name="cmemoryexception"></a>CMemoryException::CMemoryException  
+##  <a name="cmemoryexception"></a>CMemoryException::CMemoryException  
  Costruisce un oggetto `CMemoryException`.  
   
 ```  

@@ -9,11 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CAdapt
-- ATL.CAdapt<T>
-- ATL::CAdapt
-- ATL::CAdapt<T>
 - CAdapt
+- ATLCOMCLI/ATL::CAdapt
+- ATLCOMCLI/ATL::CAdapt::CAdapt
+- ATLCOMCLI/ATL::CAdapt::m_T
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +96,7 @@ class CAdapt
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlcomcli. h  
   
-##  <a name="a-namecadapta--cadaptcadapt"></a><a name="cadapt"></a>CAdapt::CAdapt  
+##  <a name="cadapt"></a>CAdapt::CAdapt  
  I costruttori consentono a un oggetto adattatore come predefinita costruito, copiati da un oggetto del tipo adattato o copiati da un altro oggetto adattatore.  
   
 ```
@@ -115,7 +114,7 @@ CAdapt(CAdapt<T>&& rSrCA) noexcept; // (Visual Studio 2017)
  *rSrCA*  
  Un oggetto adapter i cui dati contenuti devono essere copiati (o spostati) nell'oggetto scheda appena creata.  
   
-##  <a name="a-namemta--cadaptmt"></a><a name="m_t"></a>CAdapt::m_T  
+##  <a name="m_t"></a>CAdapt::m_T  
  Contiene i dati vengono adattati.  
   
 ```
@@ -125,7 +124,7 @@ T m_T;
 ### <a name="remarks"></a>Note  
  Questo **pubblica** membro dati è possibile accedere direttamente o indirettamente con [operator const T /](#operator_const_t_amp) e [operatore T /](#operator_t_amp).  
   
-##  <a name="a-nameoperatorconsttampa--cadaptoperator-const-tamp"></a><a name="operator_const_t_amp"></a>Const T CAdapt::operator&amp;  
+##  <a name="operator_const_t_amp"></a>Const T CAdapt::operator&amp;  
  Restituisce un **const** di riferimento per il [m_T](#m_t) membro, consentendo l'oggetto scheda deve essere trattato come se fosse un oggetto di tipo `T`.  
   
 ```  
@@ -135,7 +134,7 @@ operator const T&() const;
 ### <a name="return-value"></a>Valore restituito  
  Oggetto **const** fanno riferimento a `m_T`.  
   
-##  <a name="a-nameoperatortampa--cadaptoperator-tamp"></a><a name="operator_t_amp"></a>CAdapt::operator T&amp;  
+##  <a name="operator_t_amp"></a>CAdapt::operator T&amp;  
  Restituisce un riferimento di [m_T](#m_t) membro, consentendo l'oggetto scheda deve essere trattato come se fosse un oggetto di tipo `T`.  
   
 ```  
@@ -145,7 +144,7 @@ operator T&();
 ### <a name="return-value"></a>Valore restituito  
  Un riferimento a `m_T`.  
   
-##  <a name="a-nameoperatorlta--cadaptoperator-lt"></a><a name="operator_lt"></a>CAdapt::operator&lt;  
+##  <a name="operator_lt"></a>CAdapt::operator&lt;  
  Confronta un oggetto del tipo adattato con [m_T](#m_t).  
   
 ```
@@ -159,7 +158,7 @@ bool operator<(const T& rSrc) const;
 ### <a name="return-value"></a>Valore restituito  
  Il risultato del confronto tra `m_T` e `rSrc`.  
   
-##  <a name="a-nameoperatoreqa--cadaptoperator-"></a><a name="operator_eq"></a>CAdapt::operator =  
+##  <a name="operator_eq"></a>CAdapt::operator =  
  L'operatore di assegnazione assegna l'argomento `rSrc`, al membro dati [m_T](#m_t) e restituisce l'oggetto scheda corrente.  
   
 ```
@@ -178,7 +177,7 @@ Un riferimento a un oggetto da spostare.
 ### <a name="return-value"></a>Valore restituito  
  Un riferimento all'oggetto corrente.  
   
-##  <a name="a-nameoperatoreqeqa--cadaptoperator-"></a><a name="operator_eq_eq"></a>CAdapt::operator = =  
+##  <a name="operator_eq_eq"></a>CAdapt::operator = =  
  Confronta un oggetto del tipo adattato con [m_T](#m_t).  
   
 ```

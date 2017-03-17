@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CCommonDialog
+- AFXDLGS/CCommonDialog
+- AFXDLGS/CCommonDialog::CCommonDialog
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +97,7 @@ class CCommonDialog : public CDialog
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxdlgs. h  
   
-##  <a name="a-nameccommondialoga--ccommondialogccommondialog"></a><a name="ccommondialog"></a>CCommonDialog::CCommonDialog  
+##  <a name="ccommondialog"></a>CCommonDialog::CCommonDialog  
  Costruisce un oggetto `CCommonDialog`.  
   
 ```  

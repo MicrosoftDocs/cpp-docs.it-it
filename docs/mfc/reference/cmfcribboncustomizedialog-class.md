@@ -9,13 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- GetThisClass
 - CMFCRibbonCustomizeDialog
-- ~CMFCRibbonCustomizeDialog
-- CMFCRibbonCustomizeDialog::GetThisClass
-- CMFCRibbonCustomizeDialog.~CMFCRibbonCustomizeDialog
-- CMFCRibbonCustomizeDialog.GetThisClass
-- CMFCRibbonCustomizeDialog::~CMFCRibbonCustomizeDialog
+- AFXRIBBONCUSTOMIZEDIALOG/CMFCRibbonCustomizeDialog
+- AFXRIBBONCUSTOMIZEDIALOG/CMFCRibbonCustomizeDialog::CMFCRibbonCustomizeDialog
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +91,7 @@ class CMFCRibbonCustomizeDialog : public CMFCPropertySheet
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxribboncustomizedialog.h  
   
-##  <a name="a-namecmfcribboncustomizedialoga--cmfcribboncustomizedialogcmfcribboncustomizedialog"></a><a name="cmfcribboncustomizedialog"></a>CMFCRibbonCustomizeDialog::CMFCRibbonCustomizeDialog  
+##  <a name="cmfcribboncustomizedialog"></a>CMFCRibbonCustomizeDialog::CMFCRibbonCustomizeDialog  
  Costruisce un oggetto `CMFCRibbonCustomizeDialog`.  
   
 ```  

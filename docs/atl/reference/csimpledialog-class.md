@@ -9,10 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CSimpleDialog
-- CSimpleDialgo
 - CSimpleDialog
-- ATL.CSimpleDialog
+- ATLWIN/ATL::CSimpleDialog
+- ATLWIN/ATL::CSimpleDialog::DoModal
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +85,7 @@ class CSimpleDialog : public CDialogImplBase
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlwin. h  
   
-##  <a name="a-namedomodala--csimpledialogdomodal"></a><a name="domodal"></a>CSimpleDialog::DoModal  
+##  <a name="domodal"></a>CSimpleDialog::DoModal  
  Richiama una finestra di dialogo modale e restituisce il risultato della finestra di dialogo al termine.  
   
 ```

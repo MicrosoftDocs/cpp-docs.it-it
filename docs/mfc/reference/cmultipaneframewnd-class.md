@@ -10,6 +10,44 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMultiPaneFrameWnd
+- AFXMULTIPANEFRAMEWND/CMultiPaneFrameWnd
+- AFXMULTIPANEFRAMEWND/CMultiPaneFrameWnd::AddPane
+- AFXMULTIPANEFRAMEWND/CMultiPaneFrameWnd::AddRecentPane
+- AFXMULTIPANEFRAMEWND/CMultiPaneFrameWnd::AdjustLayout
+- AFXMULTIPANEFRAMEWND/CMultiPaneFrameWnd::AdjustPaneFrames
+- AFXMULTIPANEFRAMEWND/CMultiPaneFrameWnd::CalcExpectedDockedRect
+- AFXMULTIPANEFRAMEWND/CMultiPaneFrameWnd::CanBeAttached
+- AFXMULTIPANEFRAMEWND/CMultiPaneFrameWnd::CanBeDockedToPane
+- AFXMULTIPANEFRAMEWND/CMultiPaneFrameWnd::CheckGripperVisibility
+- AFXMULTIPANEFRAMEWND/CMultiPaneFrameWnd::CloseMiniFrame
+- AFXMULTIPANEFRAMEWND/CMultiPaneFrameWnd::ConvertToTabbedDocument
+- AFXMULTIPANEFRAMEWND/CMultiPaneFrameWnd::DockFrame
+- AFXMULTIPANEFRAMEWND/CMultiPaneFrameWnd::DockPane
+- AFXMULTIPANEFRAMEWND/CMultiPaneFrameWnd::DockRecentPaneToMainFrame
+- AFXMULTIPANEFRAMEWND/CMultiPaneFrameWnd::GetCaptionText
+- AFXMULTIPANEFRAMEWND/CMultiPaneFrameWnd::GetPaneContainerManager
+- AFXMULTIPANEFRAMEWND/CMultiPaneFrameWnd::GetFirstVisiblePane
+- AFXMULTIPANEFRAMEWND/CMultiPaneFrameWnd::GetPane
+- AFXMULTIPANEFRAMEWND/CMultiPaneFrameWnd::GetPaneCount
+- AFXMULTIPANEFRAMEWND/CMultiPaneFrameWnd::GetVisiblePaneCount
+- AFXMULTIPANEFRAMEWND/CMultiPaneFrameWnd::InsertPane
+- AFXMULTIPANEFRAMEWND/CMultiPaneFrameWnd::LoadState
+- AFXMULTIPANEFRAMEWND/CMultiPaneFrameWnd::OnDockToRecentPos
+- AFXMULTIPANEFRAMEWND/CMultiPaneFrameWnd::OnKillRollUpTimer
+- AFXMULTIPANEFRAMEWND/CMultiPaneFrameWnd::OnPaneRecalcLayout
+- AFXMULTIPANEFRAMEWND/CMultiPaneFrameWnd::OnSetRollUpTimer
+- AFXMULTIPANEFRAMEWND/CMultiPaneFrameWnd::OnShowPane
+- AFXMULTIPANEFRAMEWND/CMultiPaneFrameWnd::PaneFromPoint
+- AFXMULTIPANEFRAMEWND/CMultiPaneFrameWnd::RemoveNonValidPanes
+- AFXMULTIPANEFRAMEWND/CMultiPaneFrameWnd::RemovePane
+- AFXMULTIPANEFRAMEWND/CMultiPaneFrameWnd::ReplacePane
+- AFXMULTIPANEFRAMEWND/CMultiPaneFrameWnd::SaveState
+- AFXMULTIPANEFRAMEWND/CMultiPaneFrameWnd::Serialize
+- AFXMULTIPANEFRAMEWND/CMultiPaneFrameWnd::SetDockState
+- AFXMULTIPANEFRAMEWND/CMultiPaneFrameWnd::SetLastFocusedPane
+- AFXMULTIPANEFRAMEWND/CMultiPaneFrameWnd::SetPreDockState
+- AFXMULTIPANEFRAMEWND/CMultiPaneFrameWnd::StoreRecentDockSiteInfo
+- AFXMULTIPANEFRAMEWND/CMultiPaneFrameWnd::StoreRecentTabRelatedInfo
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -120,7 +158,7 @@ class CMultiPaneFrameWnd : public CPaneFrameWnd
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxMultiPaneFrameWnd.h  
   
-##  <a name="a-nameaddpanea--cmultipaneframewndaddpane"></a><a name="addpane"></a>CMultiPaneFrameWnd::AddPane  
+##  <a name="addpane"></a>CMultiPaneFrameWnd::AddPane  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -132,7 +170,7 @@ virtual void AddPane(CBasePane* pWnd);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameaddrecentpanea--cmultipaneframewndaddrecentpane"></a><a name="addrecentpane"></a>CMultiPaneFrameWnd::AddRecentPane  
+##  <a name="addrecentpane"></a>CMultiPaneFrameWnd::AddRecentPane  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -146,7 +184,7 @@ virtual BOOL AddRecentPane(CDockablePane* pBar);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameadjustlayouta--cmultipaneframewndadjustlayout"></a><a name="adjustlayout"></a>CMultiPaneFrameWnd::AdjustLayout  
+##  <a name="adjustlayout"></a>CMultiPaneFrameWnd::AdjustLayout  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -155,7 +193,7 @@ virtual void AdjustLayout();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameadjustpaneframesa--cmultipaneframewndadjustpaneframes"></a><a name="adjustpaneframes"></a>CMultiPaneFrameWnd::AdjustPaneFrames  
+##  <a name="adjustpaneframes"></a>CMultiPaneFrameWnd::AdjustPaneFrames  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -164,7 +202,7 @@ virtual void AdjustPaneFrames();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namecalcexpecteddockedrecta--cmultipaneframewndcalcexpecteddockedrect"></a><a name="calcexpecteddockedrect"></a>CMultiPaneFrameWnd::CalcExpectedDockedRect  
+##  <a name="calcexpecteddockedrect"></a>CMultiPaneFrameWnd::CalcExpectedDockedRect  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -185,7 +223,7 @@ virtual void CalcExpectedDockedRect(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namecanbeattacheda--cmultipaneframewndcanbeattached"></a><a name="canbeattached"></a>CMultiPaneFrameWnd::CanBeAttached  
+##  <a name="canbeattached"></a>CMultiPaneFrameWnd::CanBeAttached  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -196,7 +234,7 @@ virtual BOOL CanBeAttached() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namecanbedockedtopanea--cmultipaneframewndcanbedockedtopane"></a><a name="canbedockedtopane"></a>CMultiPaneFrameWnd::CanBeDockedToPane  
+##  <a name="canbedockedtopane"></a>CMultiPaneFrameWnd::CanBeDockedToPane  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -210,7 +248,7 @@ virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namecheckgrippervisibilitya--cmultipaneframewndcheckgrippervisibility"></a><a name="checkgrippervisibility"></a>CMultiPaneFrameWnd::CheckGripperVisibility  
+##  <a name="checkgrippervisibility"></a>CMultiPaneFrameWnd::CheckGripperVisibility  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -219,7 +257,7 @@ virtual void CheckGripperVisibility();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namecloseminiframea--cmultipaneframewndcloseminiframe"></a><a name="closeminiframe"></a>CMultiPaneFrameWnd::CloseMiniFrame  
+##  <a name="closeminiframe"></a>CMultiPaneFrameWnd::CloseMiniFrame  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -228,7 +266,7 @@ virtual void CloseMiniFrame();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameconverttotabbeddocumenta--cmultipaneframewndconverttotabbeddocument"></a><a name="converttotabbeddocument"></a>CMultiPaneFrameWnd::ConvertToTabbedDocument  
+##  <a name="converttotabbeddocument"></a>CMultiPaneFrameWnd::ConvertToTabbedDocument  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -237,7 +275,7 @@ virtual void ConvertToTabbedDocument();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namedockframea--cmultipaneframewnddockframe"></a><a name="dockframe"></a>CMultiPaneFrameWnd::DockFrame  
+##  <a name="dockframe"></a>CMultiPaneFrameWnd::DockFrame  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -254,7 +292,7 @@ virtual BOOL DockFrame(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namedockpanea--cmultipaneframewnddockpane"></a><a name="dockpane"></a>CMultiPaneFrameWnd::DockPane  
+##  <a name="dockpane"></a>CMultiPaneFrameWnd::DockPane  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -268,7 +306,7 @@ virtual BOOL DockPane(CDockablePane* pDockedBar);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namedockrecentpanetomainframea--cmultipaneframewnddockrecentpanetomainframe"></a><a name="dockrecentpanetomainframe"></a>CMultiPaneFrameWnd::DockRecentPaneToMainFrame  
+##  <a name="dockrecentpanetomainframe"></a>CMultiPaneFrameWnd::DockRecentPaneToMainFrame  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -280,7 +318,7 @@ virtual void DockRecentPaneToMainFrame(CDockablePane* pBar);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetcaptiontexta--cmultipaneframewndgetcaptiontext"></a><a name="getcaptiontext"></a>CMultiPaneFrameWnd::GetCaptionText  
+##  <a name="getcaptiontext"></a>CMultiPaneFrameWnd::GetCaptionText  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -291,7 +329,7 @@ virtual CString GetCaptionText();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetfirstvisiblepanea--cmultipaneframewndgetfirstvisiblepane"></a><a name="getfirstvisiblepane"></a>CMultiPaneFrameWnd::GetFirstVisiblePane  
+##  <a name="getfirstvisiblepane"></a>CMultiPaneFrameWnd::GetFirstVisiblePane  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -302,7 +340,7 @@ virtual CWnd* GetFirstVisiblePane() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetpanea--cmultipaneframewndgetpane"></a><a name="getpane"></a>CMultiPaneFrameWnd::GetPane  
+##  <a name="getpane"></a>CMultiPaneFrameWnd::GetPane  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -313,7 +351,7 @@ virtual CWnd* GetPane() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetpanecontainermanagera--cmultipaneframewndgetpanecontainermanager"></a><a name="getpanecontainermanager"></a>CMultiPaneFrameWnd::GetPaneContainerManager  
+##  <a name="getpanecontainermanager"></a>CMultiPaneFrameWnd::GetPaneContainerManager  
  Restituisce un riferimento all'oggetto manager contenitore interno.  
   
 ```  
@@ -326,7 +364,7 @@ CPaneContainerManager& GetPaneContainerManager();
 ### <a name="remarks"></a>Note  
  Questo metodo può essere utilizzato per accedere interno [CPaneContainerManager classe](../../mfc/reference/cpanecontainermanager-class.md) oggetto.  
   
-##  <a name="a-namegetpanecounta--cmultipaneframewndgetpanecount"></a><a name="getpanecount"></a>CMultiPaneFrameWnd::GetPaneCount  
+##  <a name="getpanecount"></a>CMultiPaneFrameWnd::GetPaneCount  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -337,7 +375,7 @@ virtual int GetPaneCount() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetvisiblepanecounta--cmultipaneframewndgetvisiblepanecount"></a><a name="getvisiblepanecount"></a>CMultiPaneFrameWnd::GetVisiblePaneCount  
+##  <a name="getvisiblepanecount"></a>CMultiPaneFrameWnd::GetVisiblePaneCount  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -348,7 +386,7 @@ virtual int GetVisiblePaneCount() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameinsertpanea--cmultipaneframewndinsertpane"></a><a name="insertpane"></a>CMultiPaneFrameWnd::InsertPane  
+##  <a name="insertpane"></a>CMultiPaneFrameWnd::InsertPane  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -367,7 +405,7 @@ virtual BOOL InsertPane(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameloadstatea--cmultipaneframewndloadstate"></a><a name="loadstate"></a>CMultiPaneFrameWnd::LoadState  
+##  <a name="loadstate"></a>CMultiPaneFrameWnd::LoadState  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -384,7 +422,7 @@ virtual BOOL LoadState(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondocktorecentposa--cmultipaneframewndondocktorecentpos"></a><a name="ondocktorecentpos"></a>CMultiPaneFrameWnd::OnDockToRecentPos  
+##  <a name="ondocktorecentpos"></a>CMultiPaneFrameWnd::OnDockToRecentPos  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -393,7 +431,7 @@ virtual void OnDockToRecentPos();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonkillrolluptimera--cmultipaneframewndonkillrolluptimer"></a><a name="onkillrolluptimer"></a>CMultiPaneFrameWnd::OnKillRollUpTimer  
+##  <a name="onkillrolluptimer"></a>CMultiPaneFrameWnd::OnKillRollUpTimer  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -402,7 +440,7 @@ virtual void OnKillRollUpTimer();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonpanerecalclayouta--cmultipaneframewndonpanerecalclayout"></a><a name="onpanerecalclayout"></a>CMultiPaneFrameWnd::OnPaneRecalcLayout  
+##  <a name="onpanerecalclayout"></a>CMultiPaneFrameWnd::OnPaneRecalcLayout  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -411,7 +449,7 @@ virtual void OnPaneRecalcLayout();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonsetrolluptimera--cmultipaneframewndonsetrolluptimer"></a><a name="onsetrolluptimer"></a>CMultiPaneFrameWnd::OnSetRollUpTimer  
+##  <a name="onsetrolluptimer"></a>CMultiPaneFrameWnd::OnSetRollUpTimer  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -420,7 +458,7 @@ virtual void OnSetRollUpTimer();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonshowpanea--cmultipaneframewndonshowpane"></a><a name="onshowpane"></a>CMultiPaneFrameWnd::OnShowPane  
+##  <a name="onshowpane"></a>CMultiPaneFrameWnd::OnShowPane  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -435,7 +473,7 @@ virtual void OnShowPane(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namepanefrompointa--cmultipaneframewndpanefrompoint"></a><a name="panefrompoint"></a>CMultiPaneFrameWnd::PaneFromPoint  
+##  <a name="panefrompoint"></a>CMultiPaneFrameWnd::PaneFromPoint  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -454,7 +492,7 @@ virtual CBasePane* PaneFromPoint(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameremovenonvalidpanesa--cmultipaneframewndremovenonvalidpanes"></a><a name="removenonvalidpanes"></a>CMultiPaneFrameWnd::RemoveNonValidPanes  
+##  <a name="removenonvalidpanes"></a>CMultiPaneFrameWnd::RemoveNonValidPanes  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -463,7 +501,7 @@ virtual void RemoveNonValidPanes();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameremovepanea--cmultipaneframewndremovepane"></a><a name="removepane"></a>CMultiPaneFrameWnd::RemovePane  
+##  <a name="removepane"></a>CMultiPaneFrameWnd::RemovePane  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -480,7 +518,7 @@ virtual void RemovePane(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namereplacepanea--cmultipaneframewndreplacepane"></a><a name="replacepane"></a>CMultiPaneFrameWnd::ReplacePane  
+##  <a name="replacepane"></a>CMultiPaneFrameWnd::ReplacePane  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -495,7 +533,7 @@ virtual void ReplacePane(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namesavestatea--cmultipaneframewndsavestate"></a><a name="savestate"></a>CMultiPaneFrameWnd::SaveState  
+##  <a name="savestate"></a>CMultiPaneFrameWnd::SaveState  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -512,7 +550,7 @@ virtual BOOL SaveState(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameserializea--cmultipaneframewndserialize"></a><a name="serialize"></a>CMultiPaneFrameWnd::Serialize  
+##  <a name="serialize"></a>CMultiPaneFrameWnd::Serialize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -524,7 +562,7 @@ virtual void Serialize(CArchive& ar);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namesetdockstatea--cmultipaneframewndsetdockstate"></a><a name="setdockstate"></a>CMultiPaneFrameWnd::SetDockState  
+##  <a name="setdockstate"></a>CMultiPaneFrameWnd::SetDockState  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -536,7 +574,7 @@ virtual void SetDockState(CDockingManager* pDockManager);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namesetlastfocusedpanea--cmultipaneframewndsetlastfocusedpane"></a><a name="setlastfocusedpane"></a>CMultiPaneFrameWnd::SetLastFocusedPane  
+##  <a name="setlastfocusedpane"></a>CMultiPaneFrameWnd::SetLastFocusedPane  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -548,7 +586,7 @@ void SetLastFocusedPane(HWND hwnd);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namesetpredockstatea--cmultipaneframewndsetpredockstate"></a><a name="setpredockstate"></a>CMultiPaneFrameWnd::SetPreDockState  
+##  <a name="setpredockstate"></a>CMultiPaneFrameWnd::SetPreDockState  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -567,7 +605,7 @@ virtual BOOL SetPreDockState(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namestorerecentdocksiteinfoa--cmultipaneframewndstorerecentdocksiteinfo"></a><a name="storerecentdocksiteinfo"></a>CMultiPaneFrameWnd::StoreRecentDockSiteInfo  
+##  <a name="storerecentdocksiteinfo"></a>CMultiPaneFrameWnd::StoreRecentDockSiteInfo  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -579,7 +617,7 @@ virtual void StoreRecentDockSiteInfo(CPane* pBar);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namestorerecenttabrelatedinfoa--cmultipaneframewndstorerecenttabrelatedinfo"></a><a name="storerecenttabrelatedinfo"></a>CMultiPaneFrameWnd::StoreRecentTabRelatedInfo  
+##  <a name="storerecenttabrelatedinfo"></a>CMultiPaneFrameWnd::StoreRecentTabRelatedInfo  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  

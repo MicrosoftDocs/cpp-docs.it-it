@@ -10,6 +10,49 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDockingPanesRow
+- AFXDOCKINGPANESROW/CDockingPanesRow
+- AFXDOCKINGPANESROW/CDockingPanesRow::AddPane
+- AFXDOCKINGPANESROW/CDockingPanesRow::AddPaneFromRow
+- AFXDOCKINGPANESROW/CDockingPanesRow::ArrangePanes
+- AFXDOCKINGPANESROW/CDockingPanesRow::CalcFixedLayout
+- AFXDOCKINGPANESROW/CDockingPanesRow::Create
+- AFXDOCKINGPANESROW/CDockingPanesRow::ExpandStretchedPanes
+- AFXDOCKINGPANESROW/CDockingPanesRow::ExpandStretchedPanesRect
+- AFXDOCKINGPANESROW/CDockingPanesRow::FixupVirtualRects
+- AFXDOCKINGPANESROW/CDockingPanesRow::GetAvailableLength
+- AFXDOCKINGPANESROW/CDockingPanesRow::GetAvailableSpace
+- AFXDOCKINGPANESROW/CDockingPanesRow::GetClientRect
+- AFXDOCKINGPANESROW/CDockingPanesRow::GetDockSite
+- AFXDOCKINGPANESROW/CDockingPanesRow::GetExtraSpace
+- AFXDOCKINGPANESROW/CDockingPanesRow::GetGroupFromPane
+- AFXDOCKINGPANESROW/CDockingPanesRow::GetID
+- AFXDOCKINGPANESROW/CDockingPanesRow::GetMaxPaneSize
+- AFXDOCKINGPANESROW/CDockingPanesRow::GetPaneCount
+- AFXDOCKINGPANESROW/CDockingPanesRow::GetPaneList
+- AFXDOCKINGPANESROW/CDockingPanesRow::GetRowAlignment
+- AFXDOCKINGPANESROW/CDockingPanesRow::GetRowHeight
+- AFXDOCKINGPANESROW/CDockingPanesRow::GetRowOffset
+- AFXDOCKINGPANESROW/CDockingPanesRow::GetVisibleCount
+- AFXDOCKINGPANESROW/CDockingPanesRow::GetWindowRect
+- AFXDOCKINGPANESROW/CDockingPanesRow::HasPane
+- AFXDOCKINGPANESROW/CDockingPanesRow::IsEmpty
+- AFXDOCKINGPANESROW/CDockingPanesRow::IsExclusiveRow
+- AFXDOCKINGPANESROW/CDockingPanesRow::IsHorizontal
+- AFXDOCKINGPANESROW/CDockingPanesRow::IsVisible
+- AFXDOCKINGPANESROW/CDockingPanesRow::Move
+- AFXDOCKINGPANESROW/CDockingPanesRow::MovePane
+- AFXDOCKINGPANESROW/CDockingPanesRow::OnResizePane
+- AFXDOCKINGPANESROW/CDockingPanesRow::RedrawAll
+- AFXDOCKINGPANESROW/CDockingPanesRow::RemovePane
+- AFXDOCKINGPANESROW/CDockingPanesRow::ReplacePane
+- AFXDOCKINGPANESROW/CDockingPanesRow::RepositionPanes
+- AFXDOCKINGPANESROW/CDockingPanesRow::Resize
+- AFXDOCKINGPANESROW/CDockingPanesRow::ResizeByPaneDivider
+- AFXDOCKINGPANESROW/CDockingPanesRow::ScreenToClient
+- AFXDOCKINGPANESROW/CDockingPanesRow::SetExtra
+- AFXDOCKINGPANESROW/CDockingPanesRow::ShowDockSiteRow
+- AFXDOCKINGPANESROW/CDockingPanesRow::ShowPane
+- AFXDOCKINGPANESROW/CDockingPanesRow::UpdateVisibleState
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -119,7 +162,7 @@ class CDockingPanesRow : public CObject
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxDockingPanesRow.h  
   
-##  <a name="a-nameaddpanea--cdockingpanesrowaddpane"></a><a name="addpane"></a>CDockingPanesRow::AddPane  
+##  <a name="addpane"></a>CDockingPanesRow::AddPane  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -138,7 +181,7 @@ virtual void AddPane(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameaddpanefromrowa--cdockingpanesrowaddpanefromrow"></a><a name="addpanefromrow"></a>CDockingPanesRow::AddPaneFromRow  
+##  <a name="addpanefromrow"></a>CDockingPanesRow::AddPaneFromRow  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -153,7 +196,7 @@ virtual void AddPaneFromRow(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namearrangepanesa--cdockingpanesrowarrangepanes"></a><a name="arrangepanes"></a>CDockingPanesRow::ArrangePanes  
+##  <a name="arrangepanes"></a>CDockingPanesRow::ArrangePanes  
  Organizza i riquadri in una riga in base al margine di ancoraggio e spaziatura dei parametri.  
   
 ```  
@@ -172,7 +215,7 @@ virtual void ArrangePanes(
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo per disporre i riquadri nella riga in cui verrà ancorata. Dopo aver chiamato questo metodo, è necessario chiamare `CDockingPanesRow::FixupVirtualRects(FALSE, NULL)`.  
   
-##  <a name="a-namecalcfixedlayouta--cdockingpanesrowcalcfixedlayout"></a><a name="calcfixedlayout"></a>CDockingPanesRow::CalcFixedLayout  
+##  <a name="calcfixedlayout"></a>CDockingPanesRow::CalcFixedLayout  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -189,7 +232,7 @@ virtual CSize CalcFixedLayout(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namecdockingpanesrowa--cdockingpanesrowcdockingpanesrow"></a><a name="cdockingpanesrow"></a>CDockingPanesRow::CDockingPanesRow  
+##  <a name="cdockingpanesrow"></a>CDockingPanesRow::CDockingPanesRow  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -206,7 +249,7 @@ CDockingPanesRow(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namecreatea--cdockingpanesrowcreate"></a><a name="create"></a>CDockingPanesRow::Create  
+##  <a name="create"></a>CDockingPanesRow::Create  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -217,7 +260,7 @@ virtual BOOL Create();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameexpandstretchedpanesa--cdockingpanesrowexpandstretchedpanes"></a><a name="expandstretchedpanes"></a>CDockingPanesRow::ExpandStretchedPanes  
+##  <a name="expandstretchedpanes"></a>CDockingPanesRow::ExpandStretchedPanes  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -226,7 +269,7 @@ void ExpandStretchedPanes();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameexpandstretchedpanesrecta--cdockingpanesrowexpandstretchedpanesrect"></a><a name="expandstretchedpanesrect"></a>CDockingPanesRow::ExpandStretchedPanesRect  
+##  <a name="expandstretchedpanesrect"></a>CDockingPanesRow::ExpandStretchedPanesRect  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -235,7 +278,7 @@ void ExpandStretchedPanesRect();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namefixupvirtualrectsa--cdockingpanesrowfixupvirtualrects"></a><a name="fixupvirtualrects"></a>CDockingPanesRow::FixupVirtualRects  
+##  <a name="fixupvirtualrects"></a>CDockingPanesRow::FixupVirtualRects  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -250,7 +293,7 @@ void FixupVirtualRects(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetavailablelengtha--cdockingpanesrowgetavailablelength"></a><a name="getavailablelength"></a>CDockingPanesRow::GetAvailableLength  
+##  <a name="getavailablelength"></a>CDockingPanesRow::GetAvailableLength  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -264,7 +307,7 @@ virtual int GetAvailableLength(BOOL bUseVirtualRect = FALSE) const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetavailablespacea--cdockingpanesrowgetavailablespace"></a><a name="getavailablespace"></a>CDockingPanesRow::GetAvailableSpace  
+##  <a name="getavailablespace"></a>CDockingPanesRow::GetAvailableSpace  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -276,7 +319,7 @@ virtual void GetAvailableSpace(CRect& rect);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetclientrecta--cdockingpanesrowgetclientrect"></a><a name="getclientrect"></a>CDockingPanesRow::GetClientRect  
+##  <a name="getclientrect"></a>CDockingPanesRow::GetClientRect  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -288,7 +331,7 @@ void GetClientRect(CRect& rect) const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetdocksitea--cdockingpanesrowgetdocksite"></a><a name="getdocksite"></a>CDockingPanesRow::GetDockSite  
+##  <a name="getdocksite"></a>CDockingPanesRow::GetDockSite  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -299,7 +342,7 @@ CDockSite* GetDockSite() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetextraspacea--cdockingpanesrowgetextraspace"></a><a name="getextraspace"></a>CDockingPanesRow::GetExtraSpace  
+##  <a name="getextraspace"></a>CDockingPanesRow::GetExtraSpace  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -310,7 +353,7 @@ int GetExtraSpace() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetgroupfrompanea--cdockingpanesrowgetgroupfrompane"></a><a name="getgroupfrompane"></a>CDockingPanesRow::GetGroupFromPane  
+##  <a name="getgroupfrompane"></a>CDockingPanesRow::GetGroupFromPane  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -325,7 +368,7 @@ void GetGroupFromPane(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetida--cdockingpanesrowgetid"></a><a name="getid"></a>CDockingPanesRow::GetID  
+##  <a name="getid"></a>CDockingPanesRow::GetID  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -336,7 +379,7 @@ int GetID() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetmaxpanesizea--cdockingpanesrowgetmaxpanesize"></a><a name="getmaxpanesize"></a>CDockingPanesRow::GetMaxPaneSize  
+##  <a name="getmaxpanesize"></a>CDockingPanesRow::GetMaxPaneSize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -350,7 +393,7 @@ int GetMaxPaneSize(BOOL bSkipHiddenBars = TRUE) const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetpanecounta--cdockingpanesrowgetpanecount"></a><a name="getpanecount"></a>CDockingPanesRow::GetPaneCount  
+##  <a name="getpanecount"></a>CDockingPanesRow::GetPaneCount  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -361,7 +404,7 @@ int GetPaneCount() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetpanelista--cdockingpanesrowgetpanelist"></a><a name="getpanelist"></a>CDockingPanesRow::GetPaneList  
+##  <a name="getpanelist"></a>CDockingPanesRow::GetPaneList  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -372,7 +415,7 @@ const CObList& GetPaneList() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetrowalignmenta--cdockingpanesrowgetrowalignment"></a><a name="getrowalignment"></a>CDockingPanesRow::GetRowAlignment  
+##  <a name="getrowalignment"></a>CDockingPanesRow::GetRowAlignment  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -383,7 +426,7 @@ DWORD GetRowAlignment() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetrowheighta--cdockingpanesrowgetrowheight"></a><a name="getrowheight"></a>CDockingPanesRow::GetRowHeight  
+##  <a name="getrowheight"></a>CDockingPanesRow::GetRowHeight  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -394,7 +437,7 @@ int GetRowHeight() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetrowoffseta--cdockingpanesrowgetrowoffset"></a><a name="getrowoffset"></a>CDockingPanesRow::GetRowOffset  
+##  <a name="getrowoffset"></a>CDockingPanesRow::GetRowOffset  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -405,7 +448,7 @@ int GetRowOffset() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetvisiblecounta--cdockingpanesrowgetvisiblecount"></a><a name="getvisiblecount"></a>CDockingPanesRow::GetVisibleCount  
+##  <a name="getvisiblecount"></a>CDockingPanesRow::GetVisibleCount  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -416,7 +459,7 @@ virtual int GetVisibleCount();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetwindowrecta--cdockingpanesrowgetwindowrect"></a><a name="getwindowrect"></a>CDockingPanesRow::GetWindowRect  
+##  <a name="getwindowrect"></a>CDockingPanesRow::GetWindowRect  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -428,7 +471,7 @@ void GetWindowRect(CRect& rect) const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namehaspanea--cdockingpanesrowhaspane"></a><a name="haspane"></a>CDockingPanesRow::HasPane  
+##  <a name="haspane"></a>CDockingPanesRow::HasPane  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -442,7 +485,7 @@ BOOL HasPane(CBasePane* pControlBar);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameisemptya--cdockingpanesrowisempty"></a><a name="isempty"></a>CDockingPanesRow::IsEmpty  
+##  <a name="isempty"></a>CDockingPanesRow::IsEmpty  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -453,7 +496,7 @@ virtual BOOL IsEmpty() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameisexclusiverowa--cdockingpanesrowisexclusiverow"></a><a name="isexclusiverow"></a>CDockingPanesRow::IsExclusiveRow  
+##  <a name="isexclusiverow"></a>CDockingPanesRow::IsExclusiveRow  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -464,7 +507,7 @@ virtual BOOL IsExclusiveRow() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameishorizontala--cdockingpanesrowishorizontal"></a><a name="ishorizontal"></a>CDockingPanesRow::IsHorizontal  
+##  <a name="ishorizontal"></a>CDockingPanesRow::IsHorizontal  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -475,7 +518,7 @@ bool IsHorizontal() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameisvisiblea--cdockingpanesrowisvisible"></a><a name="isvisible"></a>CDockingPanesRow::IsVisible  
+##  <a name="isvisible"></a>CDockingPanesRow::IsVisible  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -486,7 +529,7 @@ virtual BOOL IsVisible() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namemovea--cdockingpanesrowmove"></a><a name="move"></a>CDockingPanesRow::Move  
+##  <a name="move"></a>CDockingPanesRow::Move  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -498,7 +541,7 @@ virtual void Move(int nOffset);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namemovepanea--cdockingpanesrowmovepane"></a><a name="movepane"></a>CDockingPanesRow::MovePane  
+##  <a name="movepane"></a>CDockingPanesRow::MovePane  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -540,7 +583,7 @@ void MovePane(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonresizepanea--cdockingpanesrowonresizepane"></a><a name="onresizepane"></a>CDockingPanesRow::OnResizePane  
+##  <a name="onresizepane"></a>CDockingPanesRow::OnResizePane  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -552,7 +595,7 @@ virtual void OnResizePane(CBasePane* pControlBar);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameredrawalla--cdockingpanesrowredrawall"></a><a name="redrawall"></a>CDockingPanesRow::RedrawAll  
+##  <a name="redrawall"></a>CDockingPanesRow::RedrawAll  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -561,7 +604,7 @@ void RedrawAll();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameremovepanea--cdockingpanesrowremovepane"></a><a name="removepane"></a>CDockingPanesRow::RemovePane  
+##  <a name="removepane"></a>CDockingPanesRow::RemovePane  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -573,7 +616,7 @@ virtual void RemovePane(CPane* pControlBar);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namereplacepanea--cdockingpanesrowreplacepane"></a><a name="replacepane"></a>CDockingPanesRow::ReplacePane  
+##  <a name="replacepane"></a>CDockingPanesRow::ReplacePane  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -590,7 +633,7 @@ virtual BOOL ReplacePane(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namerepositionpanesa--cdockingpanesrowrepositionpanes"></a><a name="repositionpanes"></a>CDockingPanesRow::RepositionPanes  
+##  <a name="repositionpanes"></a>CDockingPanesRow::RepositionPanes  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -609,7 +652,7 @@ virtual void RepositionPanes(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameresizea--cdockingpanesrowresize"></a><a name="resize"></a>CDockingPanesRow::Resize  
+##  <a name="resize"></a>CDockingPanesRow::Resize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -623,7 +666,7 @@ virtual int Resize(int nOffset);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameresizebypanedividera--cdockingpanesrowresizebypanedivider"></a><a name="resizebypanedivider"></a>CDockingPanesRow::ResizeByPaneDivider  
+##  <a name="resizebypanedivider"></a>CDockingPanesRow::ResizeByPaneDivider  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -637,7 +680,7 @@ virtual int ResizeByPaneDivider(int);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namescreentoclienta--cdockingpanesrowscreentoclient"></a><a name="screentoclient"></a>CDockingPanesRow::ScreenToClient  
+##  <a name="screentoclient"></a>CDockingPanesRow::ScreenToClient  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -649,7 +692,7 @@ void ScreenToClient(CRect& rect) const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namesetextraa--cdockingpanesrowsetextra"></a><a name="setextra"></a>CDockingPanesRow::SetExtra  
+##  <a name="setextra"></a>CDockingPanesRow::SetExtra  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -664,7 +707,7 @@ void SetExtra(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameshowdocksiterowa--cdockingpanesrowshowdocksiterow"></a><a name="showdocksiterow"></a>CDockingPanesRow::ShowDockSiteRow  
+##  <a name="showdocksiterow"></a>CDockingPanesRow::ShowDockSiteRow  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -679,7 +722,7 @@ virtual void ShowDockSiteRow(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameshowpanea--cdockingpanesrowshowpane"></a><a name="showpane"></a>CDockingPanesRow::ShowPane  
+##  <a name="showpane"></a>CDockingPanesRow::ShowPane  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -698,7 +741,7 @@ virtual BOOL ShowPane(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameupdatevisiblestatea--cdockingpanesrowupdatevisiblestate"></a><a name="updatevisiblestate"></a>CDockingPanesRow::UpdateVisibleState  
+##  <a name="updatevisiblestate"></a>CDockingPanesRow::UpdateVisibleState  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  

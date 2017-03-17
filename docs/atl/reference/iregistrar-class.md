@@ -9,8 +9,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::IRegistrar
 - IRegistrar
+- ATLIFASE/ATL::IRegistrar
+- ATLIFASE/ATL::IRegistrar::ResourceRegisterSz
+- ATLIFASE/ATL::IRegistrar::ResourceUnregisterSz
+- ATLIFASE/ATL::IRegistrar::FileRegister
+- ATLIFASE/ATL::IRegistrar::FileUnregister
+- ATLIFASE/ATL::IRegistrar::StringRegister
+- ATLIFASE/ATL::IRegistrar::StringUnregister
+- ATLIFASE/ATL::IRegistrar::ResourceRegister
+- ATLIFASE/ATL::IRegistrar::ResourceUnregister
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -70,7 +78,7 @@ Vedere l'argomento [utilizzando parametri sostituibili (preprocessore del Regist
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlifase.h  
   
-##  <a name="a-nameresourceregistersza--iregistrarresourceregistersz"></a><a name="resourceregistersz"></a>IRegistrar::ResourceRegisterSz 
+##  <a name="resourceregistersz"></a>IRegistrar::ResourceRegisterSz 
  Registra la risorsa.  
   
 ```
@@ -82,7 +90,7 @@ virtual HRESULT STDMETHODCALLTYPE ResourceRegisterSz(
   
  
   
-##  <a name="a-nameresourceunregistersza--iregistrarresourceunregistersz"></a><a name="resourceunregistersz"></a>IRegistrar::ResourceUnregisterSz  
+##  <a name="resourceunregistersz"></a>IRegistrar::ResourceUnregisterSz  
  Annulla la registrazione della risorsa.
   
 ```
@@ -93,7 +101,7 @@ virtual HRESULT STDMETHODCALLTYPE ResourceUnregisterSz(
 ```  
   
   
-##  <a name="a-namefileregistera--iregistrarfileregister"></a><a name="fileregister"></a>IRegistrar::FileRegister  
+##  <a name="fileregister"></a>IRegistrar::FileRegister  
 Registra il file.
   
 ```
@@ -102,7 +110,7 @@ virtual HRESULT STDMETHODCALLTYPE FileRegister(
 ```  
   
   
-##  <a name="a-namefileunregistera--iregistrarfileunregister"></a><a name="fileunregister"></a>IRegistrar::FileUnregister  
+##  <a name="fileunregister"></a>IRegistrar::FileUnregister  
 Annulla la registrazione del file.
 
 ```
@@ -111,14 +119,14 @@ virtual HRESULT STDMETHODCALLTYPE FileUnregister(
 ```  
   
  
-##  <a name="a-namestringregistera--iregistrarstringregister"></a><a name="stringregister"></a>IRegistrar::StringRegister  
+##  <a name="stringregister"></a>IRegistrar::StringRegister  
   Registra i dati di stringa specificata.
 ```
 virtual HRESULT STDMETHODCALLTYPE StringRegister( 
     /* [in] */ _In_z_ LPCOLESTR data) = 0;
 ```  
   
-##  <a name="a-namestringunregistera--iregistrarstringunregister"></a><a name="stringunregister"></a>IRegistrar::StringUnregister
+##  <a name="stringunregister"></a>IRegistrar::StringUnregister
  Annulla la registrazione dei dati di tipo stringa specificata.  
   
 ```
@@ -127,7 +135,7 @@ virtualHRESULT STDMETHODCALLTYPE StringUnregister(
 ```  
 
   
-##  <a name="a-nameresourceregistera--iregistrarresourceregister"></a><a name="resourceregister"></a>IRegistrar::ResourceRegister  
+##  <a name="resourceregister"></a>IRegistrar::ResourceRegister  
  Registra la risorsa.  
   
 ```
@@ -138,7 +146,7 @@ virtual HRESULT STDMETHODCALLTYPE ResourceRegister(
 ```  
    
   
-##  <a name="a-nameresourceunregistera--iregistrarresourceunregister"></a><a name="resourceunregister"></a>IRegistrar::ResourceUnregister  
+##  <a name="resourceunregister"></a>IRegistrar::ResourceUnregister  
  Annulla la registrazione della risorsa.  
   
 ```

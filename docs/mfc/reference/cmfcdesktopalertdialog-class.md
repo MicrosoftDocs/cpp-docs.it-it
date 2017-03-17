@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCDesktopAlertDialog
+- AFXDESKTOPALERTDIALOG/CMFCDesktopAlertDialog
+- AFXDESKTOPALERTDIALOG/CMFCDesktopAlertDialog::CreateFromParams
+- AFXDESKTOPALERTDIALOG/CMFCDesktopAlertDialog::GetDlgSize
+- AFXDESKTOPALERTDIALOG/CMFCDesktopAlertDialog::HasFocus
+- AFXDESKTOPALERTDIALOG/CMFCDesktopAlertDialog::PreTranslateMessage
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +91,7 @@ class CMFCDesktopAlertDialog : public CDialogEx
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxDesktopAlertDialog.h  
   
-##  <a name="a-namecreatefromparamsa--cmfcdesktopalertdialogcreatefromparams"></a><a name="createfromparams"></a>CMFCDesktopAlertDialog::CreateFromParams  
+##  <a name="createfromparams"></a>CMFCDesktopAlertDialog::CreateFromParams  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -103,7 +108,7 @@ BOOL CreateFromParams(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetdlgsizea--cmfcdesktopalertdialoggetdlgsize"></a><a name="getdlgsize"></a>CMFCDesktopAlertDialog::GetDlgSize  
+##  <a name="getdlgsize"></a>CMFCDesktopAlertDialog::GetDlgSize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -114,7 +119,7 @@ CSize GetDlgSize();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namehasfocusa--cmfcdesktopalertdialoghasfocus"></a><a name="hasfocus"></a>CMFCDesktopAlertDialog::HasFocus  
+##  <a name="hasfocus"></a>CMFCDesktopAlertDialog::HasFocus  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -125,7 +130,7 @@ BOOL HasFocus() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namepretranslatemessagea--cmfcdesktopalertdialogpretranslatemessage"></a><a name="pretranslatemessage"></a>CMFCDesktopAlertDialog::PreTranslateMessage  
+##  <a name="pretranslatemessage"></a>CMFCDesktopAlertDialog::PreTranslateMessage  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  

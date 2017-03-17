@@ -9,11 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::IQuickActivateImpl
-- ATL::IQuickActivateImpl<T>
-- ATL.IQuickActivateImpl
-- ATL.IQuickActivateImpl<T>
 - IQuickActivateImpl
+- ATLCTL/ATL::IQuickActivateImpl
+- ATLCTL/ATL::IQuickActivateImpl::GetContentExtent
+- ATLCTL/ATL::IQuickActivateImpl::QuickActivate
+- ATLCTL/ATL::IQuickActivateImpl::SetContentExtent
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +86,7 @@ class ATL_NO_VTABLE IQuickActivateImpl : public IQuickActivate
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlctl. h  
   
-##  <a name="a-namegetcontentextenta--iquickactivateimplgetcontentextent"></a><a name="getcontentextent"></a>IQuickActivateImpl::GetContentExtent  
+##  <a name="getcontentextent"></a>IQuickActivateImpl::GetContentExtent  
  Recupera le dimensioni di visualizzazione corrente per un controllo in esecuzione.  
   
 ```
@@ -98,7 +98,7 @@ STDMETHOD(GetContentExtent)(LPSIZEL pSize);
   
  Vedere [IQuickActivate::GetContentExtent](http://msdn.microsoft.com/library/windows/desktop/ms693792) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namequickactivatea--iquickactivateimplquickactivate"></a><a name="quickactivate"></a>IQuickActivateImpl::QuickActivate  
+##  <a name="quickactivate"></a>IQuickActivateImpl::QuickActivate  
  Esegue l'inizializzazione rapida dei controlli da caricare.  
   
 ```
@@ -112,7 +112,7 @@ STDMETHOD(QuickActivate)(
   
  Vedere [IQuickActivate::QuickActivate](http://msdn.microsoft.com/library/windows/desktop/ms682421) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetcontentextenta--iquickactivateimplsetcontentextent"></a><a name="setcontentextent"></a>IQuickActivateImpl::SetContentExtent  
+##  <a name="setcontentextent"></a>IQuickActivateImpl::SetContentExtent  
  Indica al controllo di spazio di visualizzazione è assegnato il contenitore.  
   
 ```

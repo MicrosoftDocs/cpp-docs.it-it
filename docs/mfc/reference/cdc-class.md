@@ -10,6 +10,205 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDC
+- AFXWIN/CDC
+- AFXWIN/CDC::CDC
+- AFXWIN/CDC::AbortDoc
+- AFXWIN/CDC::AbortPath
+- AFXWIN/CDC::AddMetaFileComment
+- AFXWIN/CDC::AlphaBlend
+- AFXWIN/CDC::AngleArc
+- AFXWIN/CDC::Arc
+- AFXWIN/CDC::ArcTo
+- AFXWIN/CDC::Attach
+- AFXWIN/CDC::BeginPath
+- AFXWIN/CDC::BitBlt
+- AFXWIN/CDC::Chord
+- AFXWIN/CDC::CloseFigure
+- AFXWIN/CDC::CreateCompatibleDC
+- AFXWIN/CDC::CreateDC
+- AFXWIN/CDC::CreateIC
+- AFXWIN/CDC::DeleteDC
+- AFXWIN/CDC::DeleteTempMap
+- AFXWIN/CDC::Detach
+- AFXWIN/CDC::DPtoHIMETRIC
+- AFXWIN/CDC::DPtoLP
+- AFXWIN/CDC::Draw3dRect
+- AFXWIN/CDC::DrawDragRect
+- AFXWIN/CDC::DrawEdge
+- AFXWIN/CDC::DrawEscape
+- AFXWIN/CDC::DrawFocusRect
+- AFXWIN/CDC::DrawFrameControl
+- AFXWIN/CDC::DrawIcon
+- AFXWIN/CDC::DrawState
+- AFXWIN/CDC::DrawText
+- AFXWIN/CDC::DrawTextEx
+- AFXWIN/CDC::Ellipse
+- AFXWIN/CDC::EndDoc
+- AFXWIN/CDC::EndPage
+- AFXWIN/CDC::EndPath
+- AFXWIN/CDC::EnumObjects
+- AFXWIN/CDC::Escape
+- AFXWIN/CDC::ExcludeClipRect
+- AFXWIN/CDC::ExcludeUpdateRgn
+- AFXWIN/CDC::ExtFloodFill
+- AFXWIN/CDC::ExtTextOut
+- AFXWIN/CDC::FillPath
+- AFXWIN/CDC::FillRect
+- AFXWIN/CDC::FillRgn
+- AFXWIN/CDC::FillSolidRect
+- AFXWIN/CDC::FlattenPath
+- AFXWIN/CDC::FloodFill
+- AFXWIN/CDC::FrameRect
+- AFXWIN/CDC::FrameRgn
+- AFXWIN/CDC::FromHandle
+- AFXWIN/CDC::GetArcDirection
+- AFXWIN/CDC::GetAspectRatioFilter
+- AFXWIN/CDC::GetBkColor
+- AFXWIN/CDC::GetBkMode
+- AFXWIN/CDC::GetBoundsRect
+- AFXWIN/CDC::GetBrushOrg
+- AFXWIN/CDC::GetCharABCWidths
+- AFXWIN/CDC::GetCharABCWidthsI
+- AFXWIN/CDC::GetCharacterPlacement
+- AFXWIN/CDC::GetCharWidth
+- AFXWIN/CDC::GetCharWidthI
+- AFXWIN/CDC::GetClipBox
+- AFXWIN/CDC::GetColorAdjustment
+- AFXWIN/CDC::GetCurrentBitmap
+- AFXWIN/CDC::GetCurrentBrush
+- AFXWIN/CDC::GetCurrentFont
+- AFXWIN/CDC::GetCurrentPalette
+- AFXWIN/CDC::GetCurrentPen
+- AFXWIN/CDC::GetCurrentPosition
+- AFXWIN/CDC::GetDCBrushColor
+- AFXWIN/CDC::GetDCPenColor
+- AFXWIN/CDC::GetDeviceCaps
+- AFXWIN/CDC::GetFontData
+- AFXWIN/CDC::GetFontLanguageInfo
+- AFXWIN/CDC::GetGlyphOutline
+- AFXWIN/CDC::GetGraphicsMode
+- AFXWIN/CDC::GetHalftoneBrush
+- AFXWIN/CDC::GetKerningPairs
+- AFXWIN/CDC::GetLayout
+- AFXWIN/CDC::GetMapMode
+- AFXWIN/CDC::GetMiterLimit
+- AFXWIN/CDC::GetNearestColor
+- AFXWIN/CDC::GetOutlineTextMetrics
+- AFXWIN/CDC::GetOutputCharWidth
+- AFXWIN/CDC::GetOutputTabbedTextExtent
+- AFXWIN/CDC::GetOutputTextExtent
+- AFXWIN/CDC::GetOutputTextMetrics
+- AFXWIN/CDC::GetPath
+- AFXWIN/CDC::GetPixel
+- AFXWIN/CDC::GetPolyFillMode
+- AFXWIN/CDC::GetROP2
+- AFXWIN/CDC::GetSafeHdc
+- AFXWIN/CDC::GetStretchBltMode
+- AFXWIN/CDC::GetTabbedTextExtent
+- AFXWIN/CDC::GetTextAlign
+- AFXWIN/CDC::GetTextCharacterExtra
+- AFXWIN/CDC::GetTextColor
+- AFXWIN/CDC::GetTextExtent
+- AFXWIN/CDC::GetTextExtentExPointI
+- AFXWIN/CDC::GetTextExtentPointI
+- AFXWIN/CDC::GetTextFace
+- AFXWIN/CDC::GetTextMetrics
+- AFXWIN/CDC::GetViewportExt
+- AFXWIN/CDC::GetViewportOrg
+- AFXWIN/CDC::GetWindow
+- AFXWIN/CDC::GetWindowExt
+- AFXWIN/CDC::GetWindowOrg
+- AFXWIN/CDC::GetWorldTransform
+- AFXWIN/CDC::GradientFill
+- AFXWIN/CDC::GrayString
+- AFXWIN/CDC::HIMETRICtoDP
+- AFXWIN/CDC::HIMETRICtoLP
+- AFXWIN/CDC::IntersectClipRect
+- AFXWIN/CDC::InvertRect
+- AFXWIN/CDC::InvertRgn
+- AFXWIN/CDC::IsPrinting
+- AFXWIN/CDC::LineTo
+- AFXWIN/CDC::LPtoDP
+- AFXWIN/CDC::LPtoHIMETRIC
+- AFXWIN/CDC::MaskBlt
+- AFXWIN/CDC::ModifyWorldTransform
+- AFXWIN/CDC::MoveTo
+- AFXWIN/CDC::OffsetClipRgn
+- AFXWIN/CDC::OffsetViewportOrg
+- AFXWIN/CDC::OffsetWindowOrg
+- AFXWIN/CDC::PaintRgn
+- AFXWIN/CDC::PatBlt
+- AFXWIN/CDC::Pie
+- AFXWIN/CDC::PlayMetaFile
+- AFXWIN/CDC::PlgBlt
+- AFXWIN/CDC::PolyBezier
+- AFXWIN/CDC::PolyBezierTo
+- AFXWIN/CDC::PolyDraw
+- AFXWIN/CDC::Polygon
+- AFXWIN/CDC::Polyline
+- AFXWIN/CDC::PolylineTo
+- AFXWIN/CDC::PolyPolygon
+- AFXWIN/CDC::PolyPolyline
+- AFXWIN/CDC::PtVisible
+- AFXWIN/CDC::RealizePalette
+- AFXWIN/CDC::Rectangle
+- AFXWIN/CDC::RectVisible
+- AFXWIN/CDC::ReleaseAttribDC
+- AFXWIN/CDC::ReleaseOutputDC
+- AFXWIN/CDC::ResetDC
+- AFXWIN/CDC::RestoreDC
+- AFXWIN/CDC::RoundRect
+- AFXWIN/CDC::SaveDC
+- AFXWIN/CDC::ScaleViewportExt
+- AFXWIN/CDC::ScaleWindowExt
+- AFXWIN/CDC::ScrollDC
+- AFXWIN/CDC::SelectClipPath
+- AFXWIN/CDC::SelectClipRgn
+- AFXWIN/CDC::SelectObject
+- AFXWIN/CDC::SelectPalette
+- AFXWIN/CDC::SelectStockObject
+- AFXWIN/CDC::SetAbortProc
+- AFXWIN/CDC::SetArcDirection
+- AFXWIN/CDC::SetAttribDC
+- AFXWIN/CDC::SetBkColor
+- AFXWIN/CDC::SetBkMode
+- AFXWIN/CDC::SetBoundsRect
+- AFXWIN/CDC::SetBrushOrg
+- AFXWIN/CDC::SetColorAdjustment
+- AFXWIN/CDC::SetDCBrushColor
+- AFXWIN/CDC::SetDCPenColor
+- AFXWIN/CDC::SetGraphicsMode
+- AFXWIN/CDC::SetLayout
+- AFXWIN/CDC::SetMapMode
+- AFXWIN/CDC::SetMapperFlags
+- AFXWIN/CDC::SetMiterLimit
+- AFXWIN/CDC::SetOutputDC
+- AFXWIN/CDC::SetPixel
+- AFXWIN/CDC::SetPixelV
+- AFXWIN/CDC::SetPolyFillMode
+- AFXWIN/CDC::SetROP2
+- AFXWIN/CDC::SetStretchBltMode
+- AFXWIN/CDC::SetTextAlign
+- AFXWIN/CDC::SetTextCharacterExtra
+- AFXWIN/CDC::SetTextColor
+- AFXWIN/CDC::SetTextJustification
+- AFXWIN/CDC::SetViewportExt
+- AFXWIN/CDC::SetViewportOrg
+- AFXWIN/CDC::SetWindowExt
+- AFXWIN/CDC::SetWindowOrg
+- AFXWIN/CDC::SetWorldTransform
+- AFXWIN/CDC::StartDoc
+- AFXWIN/CDC::StartPage
+- AFXWIN/CDC::StretchBlt
+- AFXWIN/CDC::StrokeAndFillPath
+- AFXWIN/CDC::StrokePath
+- AFXWIN/CDC::TabbedTextOut
+- AFXWIN/CDC::TextOut
+- AFXWIN/CDC::TransparentBlt
+- AFXWIN/CDC::UpdateColors
+- AFXWIN/CDC::WidenPath
+- AFXWIN/CDC::m_hAttribDC
+- AFXWIN/CDC::m_hDC
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -312,7 +511,7 @@ class CDC : public CObject
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxwin.h  
   
-##  <a name="a-nameabortdoca--cdcabortdoc"></a><a name="abortdoc"></a>CDC::AbortDoc  
+##  <a name="abortdoc"></a>CDC::AbortDoc  
  Termina il processo di stampa corrente e Cancella tutto l'applicazione è scritta nel dispositivo dopo l'ultima chiamata al [StartDoc](#startdoc) funzione membro.  
   
 ```  
@@ -348,7 +547,7 @@ int AbortDoc();
 ### <a name="example"></a>Esempio  
   Vedere l'esempio per [CDC::StartDoc](#startdoc).  
   
-##  <a name="a-nameabortpatha--cdcabortpath"></a><a name="abortpath"></a>CDC::AbortPath  
+##  <a name="abortpath"></a>CDC::AbortPath  
  Chiude ed Elimina tutti i percorsi nel contesto di dispositivo.  
   
 ```  
@@ -361,7 +560,7 @@ BOOL AbortPath();
 ### <a name="remarks"></a>Note  
  Se è presente una parentesi aperta percorso nel contesto di dispositivo, viene chiusa la parentesi di percorso e il percorso viene eliminato. Se è presente un tracciato chiuso nel contesto di dispositivo, il percorso viene scartato.  
   
-##  <a name="a-nameaddmetafilecommenta--cdcaddmetafilecomment"></a><a name="addmetafilecomment"></a>CDC::AddMetaFileComment  
+##  <a name="addmetafilecomment"></a>CDC::AddMetaFileComment  
  Copia il commento da un buffer in un metafile in formato avanzato specificato.  
   
 ```  
@@ -383,7 +582,7 @@ BOOL AddMetaFileComment(
 ### <a name="remarks"></a>Note  
  Un commento può contenere informazioni riservate, ad esempio, l'origine dell'immagine e la data è stato creato. Un commento deve iniziare con una firma di un'applicazione, seguita dai dati. I commenti non devono contenere dati specifici di posizione. Dati specifici di posizione specificano il percorso di un record, e non deve essere incluso in quanto un metafile può essere incorporati all'interno di un altro metafile. Questa funzione può essere utilizzata solo con metafile avanzati.  
   
-##  <a name="a-namealphablenda--cdcalphablend"></a><a name="alphablend"></a>CDC::AlphaBlend  
+##  <a name="alphablend"></a>CDC::AlphaBlend  
  Chiamare questa funzione membro per visualizzare le bitmap con pixel trasparente o semitrasparente.  
   
 ```  
@@ -437,7 +636,7 @@ BOOL AlphaBlend(
 ### <a name="remarks"></a>Note  
  Vedere [AlphaBlend](http://msdn.microsoft.com/library/windows/desktop/dd183351) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] per ulteriori informazioni.  
   
-##  <a name="a-nameanglearca--cdcanglearc"></a><a name="anglearc"></a>CDC::AngleArc  
+##  <a name="anglearc"></a>CDC::AngleArc  
  Disegna un segmento di linea e un arco.  
   
 ```  
@@ -475,7 +674,7 @@ BOOL AngleArc(
   
  Se l'angolo di apertura è maggiore di 360 gradi dell'arco è sweep più volte. Questa funzione consente di disegnare linee mediante la penna corrente. Nella figura non viene riempita.  
   
-##  <a name="a-namearca--cdcarc"></a><a name="arc"></a>CDC::ARC  
+##  <a name="arc"></a>CDC::ARC  
  Disegna un arco ellittico.  
   
 ```  
@@ -541,7 +740,7 @@ BOOL Arc(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView&#29;](../../mfc/codesnippet/cpp/cdc-class_1.cpp)]  
   
-##  <a name="a-namearctoa--cdcarcto"></a><a name="arcto"></a>CDC::ArcTo  
+##  <a name="arcto"></a>CDC::ArcTo  
  Disegna un arco ellittico.  
   
 ```  
@@ -604,7 +803,7 @@ BOOL ArcTo(
   
  Una linea viene tracciata dalla posizione corrente al punto iniziale dell'arco. Se si verifica alcun errore, la posizione corrente è impostata per il punto finale dell'arco. L'arco viene disegnato utilizzando la penna corrente; non è compilato.  
   
-##  <a name="a-nameattacha--cdcattach"></a><a name="attach"></a>CDC::Attach  
+##  <a name="attach"></a>CDC::Attach  
  Utilizzare questa funzione membro per collegare un `hDC` per il `CDC` oggetto.  
   
 ```  
@@ -621,7 +820,7 @@ BOOL Attach(HDC hDC);
 ### <a name="remarks"></a>Note  
  Il `hDC` viene memorizzato in `m_hDC`, il contesto di dispositivo di output e in `m_hAttribDC`, il contesto di dispositivo di attributo.  
   
-##  <a name="a-namebeginpatha--cdcbeginpath"></a><a name="beginpath"></a>CDC:: BeginPath  
+##  <a name="beginpath"></a>CDC:: BeginPath  
  Verrà visualizzata una parentesi di percorso nel contesto di dispositivo.  
   
 ```  
@@ -639,7 +838,7 @@ BOOL BeginPath();
 ### <a name="example"></a>Esempio  
  [!code-cpp[&#30; NVC_MFCDocView](../../mfc/codesnippet/cpp/cdc-class_2.cpp)]  
   
-##  <a name="a-namebitblta--cdcbitblt"></a><a name="bitblt"></a>CDC::BitBlt  
+##  <a name="bitblt"></a>CDC::BitBlt  
  Copia una bitmap dal contesto del dispositivo di origine in tale contesto di dispositivo corrente.  
   
 ```  
@@ -700,14 +899,14 @@ BOOL BitBlt(
 ### <a name="example"></a>Esempio  
   Vedere l'esempio per [CDC::CreateCompatibleDC](#createcompatibledc).  
   
-##  <a name="a-namecdca--cdccdc"></a><a name="cdc"></a>CDC::CDC  
+##  <a name="cdc"></a>CDC::CDC  
  Costruisce un oggetto `CDC`.  
   
 ```  
 CDC();
 ```  
   
-##  <a name="a-namechorda--cdcchord"></a><a name="chord"></a>CDC::Chord  
+##  <a name="chord"></a>CDC::Chord  
  Crea una corda (una figura chiusa delimitata dall'intersezione di un'ellisse e un segmento di linea).  
   
 ```  
@@ -773,7 +972,7 @@ BOOL Chord(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView&#31;](../../mfc/codesnippet/cpp/cdc-class_3.cpp)]  
   
-##  <a name="a-nameclosefigurea--cdcclosefigure"></a><a name="closefigure"></a>CDC::CloseFigure  
+##  <a name="closefigure"></a>CDC::CloseFigure  
  Chiude una figura aperta in un percorso.  
   
 ```  
@@ -788,7 +987,7 @@ BOOL CloseFigure();
   
  Una figura in un percorso è aperta, a meno che non viene chiuso esplicitamente mediante questa funzione. (Figura può essere aperta anche se il punto corrente e il punto iniziale della figura sono uguali.) Una riga o una curva aggiunti per il percorso dopo `CloseFigure` inizia una nuova figura.  
   
-##  <a name="a-namecreatecompatibledca--cdccreatecompatibledc"></a><a name="createcompatibledc"></a>CDC::CreateCompatibleDC  
+##  <a name="createcompatibledc"></a>CDC::CreateCompatibleDC  
  Crea un contesto di dispositivo di memoria che è compatibile con il dispositivo specificato dal `pDC`.  
   
 ```  
@@ -812,7 +1011,7 @@ BOOL CreateCompatibleDC(CDC* pDC);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView n.&32;](../../mfc/codesnippet/cpp/cdc-class_4.cpp)]  
   
-##  <a name="a-namecreatedca--cdccreatedc"></a><a name="createdc"></a>CDC::CreateDC  
+##  <a name="createdc"></a>CDC::CreateDC  
  Crea un contesto di dispositivo per il dispositivo specificato.  
   
 ```  
@@ -844,7 +1043,7 @@ BOOL CreateDC(
   
  I nomi dei dispositivi rispettare queste convenzioni: un punto finale (.) è consigliata ma facoltativa. Windows consente di eliminare i due punti di interruzione in modo che viene eseguito il mapping di un nome di dispositivo che termina con un virgola per la stessa porta lo stesso nome senza due punti. I nomi di driver e la porta non devono contenere spazi iniziali o finali. Impossibile utilizzare funzioni GDI output con informazioni di contesto di informazioni.  
   
-##  <a name="a-namecreateica--cdccreateic"></a><a name="createic"></a>CDC::CreateIC  
+##  <a name="createic"></a>CDC::CreateIC  
  Crea un contesto di informazioni per il dispositivo specificato.  
   
 ```  
@@ -876,7 +1075,7 @@ BOOL CreateIC(
   
  I nomi dei dispositivi rispettare queste convenzioni: un punto finale (.) è consigliata ma facoltativa. Windows consente di eliminare i due punti di interruzione in modo che viene eseguito il mapping di un nome di dispositivo che termina con un virgola per la stessa porta lo stesso nome senza due punti. I nomi di driver e la porta non devono contenere spazi iniziali o finali. Impossibile utilizzare funzioni GDI output con informazioni di contesto di informazioni.  
   
-##  <a name="a-namedeletedca--cdcdeletedc"></a><a name="deletedc"></a>CDC::DeleteDC  
+##  <a name="deletedc"></a>CDC::DeleteDC  
  In generale, non chiamare questa funzione. il distruttore verrà farlo.  
   
 ```  
@@ -898,14 +1097,14 @@ BOOL DeleteDC();
 ### <a name="example"></a>Esempio  
   Vedere l'esempio per [CPrintDialog::GetPrinterDC](../../mfc/reference/cprintdialog-class.md#getprinterdc).  
   
-##  <a name="a-namedeletetempmapa--cdcdeletetempmap"></a><a name="deletetempmap"></a>CDC::DeleteTempMap  
+##  <a name="deletetempmap"></a>CDC::DeleteTempMap  
  Chiamato automaticamente dal `CWinApp` gestore tempo di inattività, `DeleteTempMap` elimina qualsiasi temporaneo `CDC` gli oggetti creati da `FromHandle`, ma non elimina gli handle del contesto di dispositivo ( `hDC`s) temporaneamente associato il `CDC` oggetti.  
   
 ```  
 static void PASCAL DeleteTempMap();
 ```  
   
-##  <a name="a-namedetacha--cdcdetach"></a><a name="detach"></a>CDC::Detach  
+##  <a name="detach"></a>CDC::Detach  
  Chiamare questa funzione per scollegare `m_hDC` (il contesto di dispositivo di output) dal `CDC` dell'oggetto e si impostano entrambe `m_hDC` e `m_hAttribDC` a **NULL**.  
   
 ```  
@@ -915,7 +1114,7 @@ HDC Detach();
 ### <a name="return-value"></a>Valore restituito  
  Un contesto di dispositivo Windows.  
   
-##  <a name="a-namedptohimetrica--cdcdptohimetric"></a><a name="dptohimetric"></a>CDC::DPtoHIMETRIC  
+##  <a name="dptohimetric"></a>CDC::DPtoHIMETRIC  
  Utilizzare questa funzione quando si assegnano **HIMETRIC** dimensioni OLE, la conversione di pixel in base al **HIMETRIC**.  
   
 ```  
@@ -929,7 +1128,7 @@ void DPtoHIMETRIC(LPSIZE lpSize) const;
 ### <a name="remarks"></a>Note  
  Se la modalità di mapping dell'oggetto di contesto di dispositivo è `MM_LOENGLISH`, `MM_HIENGLISH`, `MM_LOMETRIC`, o `MM_HIMETRIC`, quindi la conversione si basa sul numero di pixel in pollici fisica. Se la modalità di mapping è una delle altre modalità non limitata (ad esempio, `MM_TEXT`), quindi la conversione si basa sul numero di pixel in pollice logico.  
   
-##  <a name="a-namedptolpa--cdcdptolp"></a><a name="dptolp"></a>CDC::DPtoLP  
+##  <a name="dptolp"></a>CDC::DPtoLP  
  Converte l'unità di dispositivo in unità logiche.  
   
 ```  
@@ -957,7 +1156,7 @@ void DPtoLP(LPSIZE lpSize) const;
 ### <a name="remarks"></a>Note  
  La funzione esegue il mapping, le coordinate di ogni punto o una dimensione di una dimensione, dal sistema di coordinate di dispositivo nel sistema di coordinate logico del GDI. La conversione dipende la modalità di mapping corrente e le impostazioni delle origini ed extent per la finestra e del riquadro di visualizzazione del dispositivo.  
   
-##  <a name="a-namedraw3drecta--cdcdraw3drect"></a><a name="draw3drect"></a>CDC::Draw3dRect  
+##  <a name="draw3drect"></a>CDC::Draw3dRect  
  Chiamare questa funzione membro per disegnare un rettangolo tridimensionale.  
   
 ```  
@@ -1004,7 +1203,7 @@ void Draw3dRect(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView n.&33;](../../mfc/codesnippet/cpp/cdc-class_5.cpp)]  
   
-##  <a name="a-namedrawdragrecta--cdcdrawdragrect"></a><a name="drawdragrect"></a>CDC::DrawDragRect  
+##  <a name="drawdragrect"></a>CDC::DrawDragRect  
  Chiamare questa funzione membro ripetutamente per ridisegnare un rettangolo di trascinamento.  
   
 ```  
@@ -1041,7 +1240,7 @@ void DrawDragRect(
   
  La prima volta che chiama `DrawDragRect`, `lpRectLast` parametro deve essere **NULL**.  
   
-##  <a name="a-namedrawedgea--cdcdrawedge"></a><a name="drawedge"></a>CDC::DrawEdge  
+##  <a name="drawedge"></a>CDC::DrawEdge  
  Chiamare questa funzione membro per disegnare i bordi di un rettangolo del tipo specificato e lo stile.  
   
 ```  
@@ -1064,7 +1263,7 @@ BOOL DrawEdge(
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; in caso contrario 0.  
   
-##  <a name="a-namedrawescapea--cdcdrawescape"></a><a name="drawescape"></a>CDC::DrawEscape  
+##  <a name="drawescape"></a>CDC::DrawEscape  
  Accessi alla funzionalità di un video che non sono direttamente disponibili tramite la graphics device interface (GDI) di disegno.  
   
 ```  
@@ -1090,7 +1289,7 @@ int DrawEscape(
 ### <a name="remarks"></a>Note  
  Quando un'applicazione chiama `DrawEscape`, i dati identificati da `nInputSize` e `lpszInputData` viene passato direttamente al driver di visualizzazione specificata.  
   
-##  <a name="a-namedrawfocusrecta--cdcdrawfocusrect"></a><a name="drawfocusrect"></a>CDC::DrawFocusRect  
+##  <a name="drawfocusrect"></a>CDC::DrawFocusRect  
  Disegna un rettangolo con lo stile utilizzato per indicare che il rettangolo ha lo stato attivo.  
   
 ```  
@@ -1107,7 +1306,7 @@ void DrawFocusRect(LPCRECT lpRect);
 > [!CAUTION]
 > `DrawFocusRect`funziona solo in `MM_TEXT` modalità. In altre modalità, questa funzione non consente di disegnare correttamente il rettangolo di attivazione, ma non restituisce valori di errore.  
   
-##  <a name="a-namedrawframecontrola--cdcdrawframecontrol"></a><a name="drawframecontrol"></a>CDC::DrawFrameControl  
+##  <a name="drawframecontrol"></a>CDC::DrawFrameControl  
  Chiamare questa funzione membro per disegnare un controllo frame del tipo specificato e lo stile.  
   
 ```  
@@ -1186,7 +1385,7 @@ BOOL DrawFrameControl(
   
  [!code-cpp[NVC_MFCDocView&#34;](../../mfc/codesnippet/cpp/cdc-class_6.cpp)]  
   
-##  <a name="a-namedrawicona--cdcdrawicon"></a><a name="drawicon"></a>CDC::DrawIcon  
+##  <a name="drawicon"></a>CDC::DrawIcon  
  Disegna un'icona sul dispositivo rappresentato dall'oggetto corrente `CDC` oggetto.  
   
 ```  
@@ -1225,7 +1424,7 @@ BOOL DrawIcon(
 ### <a name="example"></a>Esempio  
   Vedere l'esempio per [CWnd::IsIconic](../../mfc/reference/cwnd-class.md#isiconic).  
   
-##  <a name="a-namedrawstatea--cdcdrawstate"></a><a name="drawstate"></a>CDC::DrawState  
+##  <a name="drawstate"></a>CDC::DrawState  
  Chiamare questa funzione membro per visualizzare un'immagine e applicare un effetto visivo per indicare uno stato, ad esempio disattivato o allo stato predefinito.  
   
 > [!NOTE]
@@ -1345,7 +1544,7 @@ BOOL DrawState(
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; in caso contrario 0.  
   
-##  <a name="a-namedrawtexta--cdcdrawtext"></a><a name="drawtext"></a>CDC  
+##  <a name="drawtext"></a>CDC  
  Chiamare questa funzione membro per formattare il testo nel rettangolo. Per specificare ulteriori opzioni di formattazione, utilizzare [CDC::DrawTextEx](#drawtextex).  
   
 ```  
@@ -1397,7 +1596,7 @@ int DrawText(
   
  Il colore del testo può essere impostato dallo [CDC::SetTextColor](#settextcolor).  
   
-##  <a name="a-namedrawtextexa--cdcdrawtextex"></a><a name="drawtextex"></a>CDC::DrawTextEx  
+##  <a name="drawtextex"></a>CDC::DrawTextEx  
  Formati di testo nel rettangolo.  
   
 ```  
@@ -1443,7 +1642,7 @@ int DrawTextEx(
   
  Il colore del testo può essere impostato dallo [CDC::SetTextColor](#settextcolor).  
   
-##  <a name="a-nameellipsea--cdcellipse"></a><a name="ellipse"></a>CDC::Ellipse  
+##  <a name="ellipse"></a>CDC::Ellipse  
  Disegna un ellisse.  
   
 ```  
@@ -1482,7 +1681,7 @@ BOOL Ellipse(LPCRECT lpRect);
   
  Se la larghezza o l'altezza del rettangolo di delimitazione è 0, non viene disegnata alcun ellisse.  
   
-##  <a name="a-nameenddoca--cdcenddoc"></a><a name="enddoc"></a>CDC::EndDoc  
+##  <a name="enddoc"></a>CDC::EndDoc  
  Termina un processo di stampa tramito una chiamata al [StartDoc](#startdoc) funzione membro.  
   
 ```  
@@ -1502,7 +1701,7 @@ int EndDoc();
 ### <a name="example"></a>Esempio  
   Vedere l'esempio per [CDC::StartDoc](#startdoc).  
   
-##  <a name="a-nameendpagea--cdcendpage"></a><a name="endpage"></a>CDC::EndPage  
+##  <a name="endpage"></a>CDC::EndPage  
  Informare il dispositivo che l'applicazione ha completato la scrittura in una pagina.  
   
 ```  
@@ -1520,7 +1719,7 @@ int EndPage();
 ### <a name="example"></a>Esempio  
   Vedere l'esempio per [CDC::StartDoc](#startdoc).  
   
-##  <a name="a-nameendpatha--cdcendpath"></a><a name="endpath"></a>CDC::EndPath  
+##  <a name="endpath"></a>CDC::EndPath  
  Chiude una parentesi di percorso e seleziona il percorso definito parentesi nel contesto di dispositivo.  
   
 ```  
@@ -1533,7 +1732,7 @@ BOOL EndPath();
 ### <a name="example"></a>Esempio  
   Vedere l'esempio per [CDC:: BeginPath](#beginpath).  
   
-##  <a name="a-nameenumobjectsa--cdcenumobjects"></a><a name="enumobjects"></a>CDC:: EnumObjects  
+##  <a name="enumobjects"></a>CDC:: EnumObjects  
  Enumera le penne e pennelli disponibili in un contesto di dispositivo.  
   
 ```  
@@ -1576,7 +1775,7 @@ int EnumObjects(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView&#35;](../../mfc/codesnippet/cpp/cdc-class_7.cpp)]  
   
-##  <a name="a-nameescapea--cdcescape"></a><a name="escape"></a>CDC::escape  
+##  <a name="escape"></a>CDC::escape  
  Questa funzione membro è praticamente obsoleta per la programmazione Win32.  
   
 ```  
@@ -1656,7 +1855,7 @@ int Escape(
   
  Utilizzare la prima versione, se l'applicazione utilizza i valori predefiniti di escape. Utilizzare la seconda versione, se l'applicazione definisce i valori di escape privato. Vedere [ExtEscape](http://msdn.microsoft.com/library/windows/desktop/dd162708) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] per ulteriori informazioni sulla versione del secondo.  
   
-##  <a name="a-nameexcludecliprecta--cdcexcludecliprect"></a><a name="excludecliprect"></a>CDC::ExcludeClipRect  
+##  <a name="excludecliprect"></a>CDC::ExcludeClipRect  
  Crea una nuova area di ritaglio costituito l'area di visualizzazione esistente meno il rettangolo specificato.  
   
 ```  
@@ -1699,7 +1898,7 @@ int ExcludeClipRect(LPCRECT lpRect);
 ### <a name="remarks"></a>Note  
  La larghezza del rettangolo specificato dal valore assoluto di `x2` – `x1`, non deve superare i 32.767 unità. Questo limite si applica l'altezza del rettangolo anche.  
   
-##  <a name="a-nameexcludeupdatergna--cdcexcludeupdatergn"></a><a name="excludeupdatergn"></a>CDC::ExcludeUpdateRgn  
+##  <a name="excludeupdatergn"></a>CDC::ExcludeUpdateRgn  
  Impedisce la creazione all'interno di aree non valide di una finestra per escludendo l'area di visualizzazione associata a un'area aggiornata nella finestra di `CDC` oggetto.  
   
 ```  
@@ -1721,7 +1920,7 @@ int ExcludeUpdateRgn(CWnd* pWnd);
   
 - **SIMPLEREGION** nell'area è presente alcun bordi sovrapposti.  
   
-##  <a name="a-nameextfloodfilla--cdcextfloodfill"></a><a name="extfloodfill"></a>CDC::ExtFloodFill  
+##  <a name="extfloodfill"></a>CDC::ExtFloodFill  
  Riempie un'area della superficie di visualizzazione con il pennello corrente.  
   
 ```  
@@ -1761,7 +1960,7 @@ BOOL ExtFloodFill(
   
  Solo i contesti di dispositivo di memoria e i dispositivi che supportano supporto per la tecnologia di visualizzazione raster `ExtFloodFill`. Per ulteriori informazioni, vedere il [GetDeviceCaps](#getdevicecaps) funzione membro.  
   
-##  <a name="a-nameexttextouta--cdcexttextout"></a><a name="exttextout"></a>CDC::ExtTextOut  
+##  <a name="exttextout"></a>CDC::ExtTextOut  
  Chiamare questa funzione membro per scrivere una stringa di caratteri all'interno di un'area rettangolare utilizzando il tipo di carattere attualmente selezionato.  
   
 ```  
@@ -1821,7 +2020,7 @@ BOOL ExtTextOut(
   
  Se `nOptions` è 0 e `lpRect` è **NULL**, la funzione scrive il testo nel contesto di dispositivo senza utilizzare un'area rettangolare. Per impostazione predefinita, la posizione corrente non viene utilizzata o aggiornata dalla funzione. Se un'applicazione deve aggiornare la posizione corrente quando chiama `ExtTextOut`, l'applicazione può chiamare il `CDC` funzione membro [SetTextAlign](#settextalign) con `nFlags` impostato su **TA_UPDATECP**. Quando questo flag è impostato, Windows ignora *x* e *y* sulle chiamate successive a `ExtTextOut` e utilizza invece la posizione corrente. Quando un'applicazione utilizza **TA_UPDATECP** per aggiornare la posizione corrente, `ExtTextOut` imposta la posizione corrente alla fine della riga di testo precedente o alla posizione specificata dall'ultimo elemento della matrice a cui puntata `lpDxWidths`, qualunque sia il maggiore.  
   
-##  <a name="a-namefillpatha--cdcfillpath"></a><a name="fillpath"></a>CDC::FillPath  
+##  <a name="fillpath"></a>CDC::FillPath  
  Chiude qualsiasi figure aperte nel percorso corrente e riempie l'area interna del percorso utilizzando il pennello corrente e la modalità di riempimento del poligono.  
   
 ```  
@@ -1834,7 +2033,7 @@ BOOL FillPath();
 ### <a name="remarks"></a>Note  
  Dopo aver riempito interna, il percorso verrà eliminato dal contesto del dispositivo.  
   
-##  <a name="a-namefillrecta--cdcfillrect"></a><a name="fillrect"></a>CDC::FillRect  
+##  <a name="fillrect"></a>CDC::FillRect  
  Chiamare questa funzione membro per riempire un rettangolo specificato utilizzando il pennello specificato.  
   
 ```  
@@ -1859,7 +2058,7 @@ void FillRect(
   
  `FillRect`è simile a [CDC::FillSolidRect](#fillsolidrect); tuttavia, `FillRect` accetta un pennello e pertanto può essere utilizzato per riempire il rettangolo con un colore a tinta unita, un colore retinato, pennelli tratteggiati o un modello. `FillSolidRect`utilizza solo colori a tinta unita (indicato da un **COLORREF** parametro). `FillRect`in genere è più lento `FillSolidRect`.  
   
-##  <a name="a-namefillrgna--cdcfillrgn"></a><a name="fillrgn"></a>CDC::FillRgn  
+##  <a name="fillrgn"></a>CDC::FillRgn  
  Riempie l'area specificata da `pRgn` con il pennello specificato da `pBrush`.  
   
 ```  
@@ -1884,7 +2083,7 @@ BOOL FillRgn(
 ### <a name="example"></a>Esempio  
   Vedere l'esempio per [CRgn::CreateRoundRectRgn](../../mfc/reference/crgn-class.md#createroundrectrgn).  
   
-##  <a name="a-namefillsolidrecta--cdcfillsolidrect"></a><a name="fillsolidrect"></a>CDC::FillSolidRect  
+##  <a name="fillsolidrect"></a>CDC::FillSolidRect  
  Chiamare questa funzione membro per riempire il rettangolo specificato con il colore a tinta unita specificato.  
   
 ```  
@@ -1925,7 +2124,7 @@ void FillSolidRect(
 > [!NOTE]
 >  Quando si chiama `FillSolidRect`, il colore di sfondo, che è stato impostato in precedenza con [SetBkColor](#setbkcolor), impostare il colore indicato da `clr`.  
   
-##  <a name="a-nameflattenpatha--cdcflattenpath"></a><a name="flattenpath"></a>CDC::FlattenPath  
+##  <a name="flattenpath"></a>CDC::FlattenPath  
  Trasforma le curve nel percorso selezionato nel contesto di dispositivo corrente e trasforma ogni curva in una sequenza di righe.  
   
 ```  
@@ -1935,7 +2134,7 @@ BOOL FlattenPath();
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se la funzione ha esito positivo; in caso contrario, 0.  
   
-##  <a name="a-namefloodfilla--cdcfloodfill"></a><a name="floodfill"></a>CDC::FloodFill  
+##  <a name="floodfill"></a>CDC::FloodFill  
  Riempie un'area della superficie di visualizzazione con il pennello corrente.  
   
 ```  
@@ -1965,7 +2164,7 @@ BOOL FloodFill(
   
  Il `ExtFloodFill` funzione fornisce funzionalità simili ma una maggiore flessibilità.  
   
-##  <a name="a-nameframerecta--cdcframerect"></a><a name="framerect"></a>CDC:: frameRect  
+##  <a name="framerect"></a>CDC:: frameRect  
  Disegna un bordo intorno al rettangolo specificato da `lpRect`.  
   
 ```  
@@ -1988,7 +2187,7 @@ void FrameRect(
   
  Bordo disegnato da `FrameRect` è nella stessa posizione di un bordo disegnato dal **rettangolo** funzione membro utilizzando le stesse coordinate (se **rettangolo** utilizza una penna di 1 unità logiche wide). L'interno del rettangolo non viene riempita da `FrameRect`.  
   
-##  <a name="a-nameframergna--cdcframergn"></a><a name="framergn"></a>CDC::FrameRgn  
+##  <a name="framergn"></a>CDC::FrameRgn  
  Disegna un bordo intorno all'area specificata da `pRgn` mediante il pennello specificato da `pBrush`.  
   
 ```  
@@ -2018,7 +2217,7 @@ BOOL FrameRgn(
 ### <a name="example"></a>Esempio  
   Vedere l'esempio per [CRgn::CombineRgn](../../mfc/reference/crgn-class.md#combinergn).  
   
-##  <a name="a-namefromhandlea--cdcfromhandle"></a><a name="fromhandle"></a>CDC::FromHandle  
+##  <a name="fromhandle"></a>CDC::FromHandle  
  Restituisce un puntatore a un `CDC` oggetto quando viene specificato un handle per un contesto di dispositivo.  
   
 ```  
@@ -2038,7 +2237,7 @@ static CDC* PASCAL FromHandle(HDC hDC);
 ### <a name="example"></a>Esempio  
   Vedere l'esempio per [CPrintDialog::GetPrinterDC](../../mfc/reference/cprintdialog-class.md#getprinterdc).  
   
-##  <a name="a-namegetarcdirectiona--cdcgetarcdirection"></a><a name="getarcdirection"></a>CDC::GetArcDirection  
+##  <a name="getarcdirection"></a>CDC::GetArcDirection  
  Restituisce la direzione di arco corrente per il contesto di dispositivo.  
   
 ```  
@@ -2057,7 +2256,7 @@ int GetArcDirection() const;
 ### <a name="remarks"></a>Note  
  Le funzioni arco e il rettangolo di usare la direzione dell'arco.  
   
-##  <a name="a-namegetaspectratiofiltera--cdcgetaspectratiofilter"></a><a name="getaspectratiofilter"></a>CDC::GetAspectRatioFilter  
+##  <a name="getaspectratiofilter"></a>CDC::GetAspectRatioFilter  
  Recupera l'impostazione per il filtro corrente le proporzioni.  
   
 ```  
@@ -2070,7 +2269,7 @@ CSize GetAspectRatioFilter() const;
 ### <a name="remarks"></a>Note  
  Il rapporto di formato è il rapporto formato dall'altezza e larghezza in pixel del dispositivo. Informazioni sulle proporzioni del dispositivo viene utilizzate nella creazione, selezione e visualizzazione di caratteri. Windows fornisce un filtro speciale, il filtro di rapporto di aspetto, per selezionare i caratteri per un particolare proporzioni da tutti i tipi di carattere disponibili. Il filtro utilizza le proporzioni specificata per il `SetMapperFlags` funzione membro.  
   
-##  <a name="a-namegetbkcolora--cdcgetbkcolor"></a><a name="getbkcolor"></a>CDC::GetBkColor  
+##  <a name="getbkcolor"></a>CDC::GetBkColor  
  Restituisce il colore di sfondo corrente.  
   
 ```  
@@ -2083,7 +2282,7 @@ COLORREF GetBkColor() const;
 ### <a name="remarks"></a>Note  
  Se la modalità in background è **OPACO**, il sistema utilizza il colore di sfondo per riempire i gap nelle righe con stile, gli spazi vuoti tra righe tratteggiate pennelli e background nelle celle di carattere. Il sistema utilizza anche il colore di sfondo durante la conversione di bitmap tra contesti di dispositivo monocromatico e colore.  
   
-##  <a name="a-namegetbkmodea--cdcgetbkmode"></a><a name="getbkmode"></a>CDC::GetBkMode  
+##  <a name="getbkmode"></a>CDC::GetBkMode  
  Restituisce la modalità in background.  
   
 ```  
@@ -2096,7 +2295,7 @@ int GetBkMode() const;
 ### <a name="remarks"></a>Note  
  La modalità in background definisce se il sistema rimuove i colori di sfondo esistente nell'area di disegno prima della creazione di testo, pennelli tratteggiate o qualsiasi stile della penna che non è una linea continua.  
   
-##  <a name="a-namegetboundsrecta--cdcgetboundsrect"></a><a name="getboundsrect"></a>CDC::GetBoundsRect  
+##  <a name="getboundsrect"></a>CDC::GetBoundsRect  
  Restituisce il rettangolo di delimitazione accumulato corrente per il contesto di dispositivo specificato.  
   
 ```  
@@ -2127,7 +2326,7 @@ UINT GetBoundsRect(
   
 - **DCB_DISABLE** accumulo di delimitazione è disattivata.  
   
-##  <a name="a-namegetbrushorga--cdcgetbrushorg"></a><a name="getbrushorg"></a>CDC::GetBrushOrg  
+##  <a name="getbrushorg"></a>CDC::GetBrushOrg  
  Recupera l'origine (in unità di dispositivo) del pennello attualmente selezionato per il contesto di dispositivo.  
   
 ```  
@@ -2140,7 +2339,7 @@ CPoint GetBrushOrg() const;
 ### <a name="remarks"></a>Note  
  L'origine pennello iniziale corrisponde a (0,0) dell'area client. Il valore restituito specifica il punto in unità di dispositivo di origine della finestra del desktop.  
   
-##  <a name="a-namegetcharacterplacementa--cdcgetcharacterplacement"></a><a name="getcharacterplacement"></a>CDC::GetCharacterPlacement  
+##  <a name="getcharacterplacement"></a>CDC::GetCharacterPlacement  
  Recupero di vari tipi di informazioni su una stringa di caratteri.  
   
 ```  
@@ -2185,7 +2384,7 @@ DWORD GetCharacterPlacement(
 ### <a name="remarks"></a>Note  
  Questa funzione membro emula la funzionalità della funzione [GetCharacterPlacement](http://msdn.microsoft.com/library/windows/desktop/dd144860\(v=vs.85\).aspx), come descritto nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetcharabcwidthsa--cdcgetcharabcwidths"></a><a name="getcharabcwidths"></a>CDC::GetCharABCWidths  
+##  <a name="getcharabcwidths"></a>CDC::GetCharABCWidths  
  Recupera le larghezze dei caratteri consecutivi in un intervallo specificato dal tipo di carattere TrueType corrente.  
   
 ```  
@@ -2229,7 +2428,7 @@ BOOL GetCharABCWidths(
   
  Per recuperare le larghezze dei caratteri in tipi di carattere non TrueType, le applicazioni devono utilizzare il [GetCharWidth](http://msdn.microsoft.com/library/windows/desktop/dd144861) funzione di Windows.  
   
-##  <a name="a-namegetcharabcwidthsia--cdcgetcharabcwidthsi"></a><a name="getcharabcwidthsi"></a>CDC::GetCharABCWidthsI  
+##  <a name="getcharabcwidthsi"></a>CDC::GetCharABCWidthsI  
  Recupera le larghezze, in unità logiche di indici di glifi consecutivi in un intervallo specificato dal tipo di carattere TrueType corrente.  
   
 ```  
@@ -2259,7 +2458,7 @@ BOOL GetCharABCWidthsI(
 ### <a name="remarks"></a>Note  
  Questa funzione membro emula la funzionalità della funzione [GetCharABCWidthsI](http://msdn.microsoft.com/library/windows/desktop/dd144859), come descritto nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetcharwidtha--cdcgetcharwidth"></a><a name="getcharwidth"></a>CDC::GetCharWidth  
+##  <a name="getcharwidth"></a>CDC::GetCharWidth  
  Recupera le larghezze dei singoli caratteri in un gruppo di caratteri consecutivo dal tipo di carattere corrente, utilizzando `m_hAttribDC`, il contesto di dispositivo di input.  
   
 ```  
@@ -2297,7 +2496,7 @@ BOOL GetCharWidth(
   
  Se non esiste un carattere nel gruppo di caratteri consecutivo in un particolare tipo di carattere, si verrà assegnato il valore di larghezza del carattere predefinito.  
   
-##  <a name="a-namegetcharwidthia--cdcgetcharwidthi"></a><a name="getcharwidthi"></a>CDC::GetCharWidthI  
+##  <a name="getcharwidthi"></a>CDC::GetCharWidthI  
  Recupera le larghezze, in coordinate logiche, di indici di glifi consecutivi in un intervallo specificato dal tipo di carattere corrente.  
   
 ```  
@@ -2327,7 +2526,7 @@ BOOL GetCharWidthI(
 ### <a name="remarks"></a>Note  
  Questa funzione membro emula la funzionalità della funzione [GetCharWidthI](http://msdn.microsoft.com/library/windows/desktop/dd144864), come descritto nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetclipboxa--cdcgetclipbox"></a><a name="getclipbox"></a>CDC::GetClipBox  
+##  <a name="getclipbox"></a>CDC::GetClipBox  
  Recupera le dimensioni del rettangolo di delimitazione tightest intorno al limite di ritaglio corrente.  
   
 ```  
@@ -2352,7 +2551,7 @@ virtual int GetClipBox(LPRECT lpRect) const;
 ### <a name="remarks"></a>Note  
  Le dimensioni vengono copiate nel buffer a cui puntata `lpRect`.  
   
-##  <a name="a-namegetcoloradjustmenta--cdcgetcoloradjustment"></a><a name="getcoloradjustment"></a>CDC::GetColorAdjustment  
+##  <a name="getcoloradjustment"></a>CDC::GetColorAdjustment  
  Recupera i valori di regolazione del colore per il contesto di dispositivo.  
   
 ```  
@@ -2366,7 +2565,7 @@ BOOL GetColorAdjustment(LPCOLORADJUSTMENT lpColorAdjust) const;
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se la funzione ha esito positivo; in caso contrario, 0.  
   
-##  <a name="a-namegetcurrentbitmapa--cdcgetcurrentbitmap"></a><a name="getcurrentbitmap"></a>CDC::GetCurrentBitmap  
+##  <a name="getcurrentbitmap"></a>CDC::GetCurrentBitmap  
  Restituisce un puntatore all'oggetto attualmente selezionato `CBitmap` oggetto.  
   
 ```  
@@ -2379,7 +2578,7 @@ CBitmap* GetCurrentBitmap() const;
 ### <a name="remarks"></a>Note  
  Questa funzione membro può restituire oggetti temporanei.  
   
-##  <a name="a-namegetcurrentbrusha--cdcgetcurrentbrush"></a><a name="getcurrentbrush"></a>CDC::GetCurrentBrush  
+##  <a name="getcurrentbrush"></a>CDC::GetCurrentBrush  
  Restituisce un puntatore all'oggetto attualmente selezionato `CBrush` oggetto.  
   
 ```  
@@ -2392,7 +2591,7 @@ CBrush* GetCurrentBrush() const;
 ### <a name="remarks"></a>Note  
  Questa funzione membro può restituire oggetti temporanei.  
   
-##  <a name="a-namegetcurrentfonta--cdcgetcurrentfont"></a><a name="getcurrentfont"></a>CDC::GetCurrentFont  
+##  <a name="getcurrentfont"></a>CDC::GetCurrentFont  
  Restituisce un puntatore all'oggetto attualmente selezionato `CFont` oggetto.  
   
 ```  
@@ -2405,7 +2604,7 @@ CFont* GetCurrentFont() const;
 ### <a name="remarks"></a>Note  
  Questa funzione membro può restituire oggetti temporanei.  
   
-##  <a name="a-namegetcurrentpalettea--cdcgetcurrentpalette"></a><a name="getcurrentpalette"></a>CDC::GetCurrentPalette  
+##  <a name="getcurrentpalette"></a>CDC::GetCurrentPalette  
  Restituisce un puntatore all'oggetto attualmente selezionato `CPalette` oggetto.  
   
 ```  
@@ -2418,7 +2617,7 @@ CPalette* GetCurrentPalette() const;
 ### <a name="remarks"></a>Note  
  Questa funzione membro può restituire oggetti temporanei.  
   
-##  <a name="a-namegetcurrentpena--cdcgetcurrentpen"></a><a name="getcurrentpen"></a>CDC::GetCurrentPen  
+##  <a name="getcurrentpen"></a>CDC::GetCurrentPen  
  Restituisce un puntatore all'oggetto attualmente selezionato `CPen` oggetto.  
   
 ```  
@@ -2431,7 +2630,7 @@ CPen* GetCurrentPen() const;
 ### <a name="remarks"></a>Note  
  Questa funzione membro può restituire oggetti temporanei.  
   
-##  <a name="a-namegetcurrentpositiona--cdcgetcurrentposition"></a><a name="getcurrentposition"></a>CDC::GetCurrentPosition  
+##  <a name="getcurrentposition"></a>CDC::GetCurrentPosition  
  Recupera la posizione corrente (in coordinate logiche).  
   
 ```  
@@ -2444,7 +2643,7 @@ CPoint GetCurrentPosition() const;
 ### <a name="remarks"></a>Note  
  È possibile impostare la posizione corrente con il `MoveTo` funzione membro.  
   
-##  <a name="a-namegetdcbrushcolora--cdcgetdcbrushcolor"></a><a name="getdcbrushcolor"></a>CDC::GetDCBrushColor  
+##  <a name="getdcbrushcolor"></a>CDC::GetDCBrushColor  
  Recupera il colore corrente del pennello.  
   
 ```  
@@ -2459,7 +2658,7 @@ COLORREF GetDCBrushColor() const;
 ### <a name="remarks"></a>Note  
  Questa funzione membro emula la funzionalità della funzione [GetDCBrushColor](http://msdn.microsoft.com/library/windows/desktop/dd144872), come descritto nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetdcpencolora--cdcgetdcpencolor"></a><a name="getdcpencolor"></a>CDC::GetDCPenColor  
+##  <a name="getdcpencolor"></a>CDC::GetDCPenColor  
  Recupera il colore corrente della penna.  
   
 ```  
@@ -2474,7 +2673,7 @@ COLORREF GetDCPenColor() const;
 ### <a name="remarks"></a>Note  
  Questa funzione membro utilizza la funzione Win32 [GetDCPenColor](http://msdn.microsoft.com/library/windows/desktop/dd144875), come descritto nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetdevicecapsa--cdcgetdevicecaps"></a><a name="getdevicecaps"></a>CDC:: GetDeviceCaps  
+##  <a name="getdevicecaps"></a>CDC:: GetDeviceCaps  
  Recupera un'ampia gamma di informazioni specifiche del dispositivo su dispositivo di visualizzazione.  
   
 ```  
@@ -2491,7 +2690,7 @@ int GetDeviceCaps(int nIndex) const;
 ### <a name="example"></a>Esempio  
   Vedere l'esempio per [CPrintDialog::GetDefaults](../../mfc/reference/cprintdialog-class.md#getdefaults).  
   
-##  <a name="a-namegetfontdataa--cdcgetfontdata"></a><a name="getfontdata"></a>CDC::GetFontData  
+##  <a name="getfontdata"></a>CDC::GetFontData  
  Recupera le informazioni di carattere metrica da un file ridimensionabili.  
   
 ```  
@@ -2527,7 +2726,7 @@ DWORD GetFontData(
   
  Se un'applicazione tenta di utilizzare questa funzione per recuperare le informazioni per un tipo di carattere TrueType non la `GetFontData` funzione membro restituisce –&1;.  
   
-##  <a name="a-namegetfontlanguageinfoa--cdcgetfontlanguageinfo"></a><a name="getfontlanguageinfo"></a>CDC::GetFontLanguageInfo  
+##  <a name="getfontlanguageinfo"></a>CDC::GetFontLanguageInfo  
  Restituisce informazioni sul tipo di carattere selezionato per il contesto di visualizzazione specificata.  
   
 ```  
@@ -2540,7 +2739,7 @@ DWORD GetFontLanguageInfo() const;
 ### <a name="remarks"></a>Note  
  Questa funzione membro emula la funzionalità della funzione [GetFontLanguageInfo](http://msdn.microsoft.com/library/windows/desktop/dd144886), come descritto nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetglyphoutlinea--cdcgetglyphoutline"></a><a name="getglyphoutline"></a>CDC::GetGlyphOutline  
+##  <a name="getglyphoutline"></a>CDC::GetGlyphOutline  
  Recupera la curva di struttura o una mappa di bit per carattere struttura nel tipo di carattere corrente.  
   
 ```  
@@ -2587,7 +2786,7 @@ DWORD GetGlyphOutline(
   
  Una struttura di un glifo viene restituita come una serie di distribuzioni. Ogni profilo è definito da un [TTPOLYGONHEADER](http://msdn.microsoft.com/library/windows/desktop/dd145158) structure seguita da tanti **TTPOLYCURVE** come necessari per descrivere le strutture. Tutti i punti vengono restituiti come [POINTFX](http://msdn.microsoft.com/library/windows/desktop/dd162806) strutture e rappresentano posizioni assolute, sposta non relativo. Il punto iniziale specificato per il **pfxStart** membro del [TTPOLYGONHEADER](http://msdn.microsoft.com/library/windows/desktop/dd145158) struttura è il punto in cui inizia la struttura di un contorno. Il [TTPOLYCURVE](http://msdn.microsoft.com/library/windows/desktop/dd145157) le strutture che seguono possono essere record polyline o i record di spline di tipo. Polyline record sono una serie di punti. linee tracciate tra i punti di descrivono la struttura del carattere. Spline di tipo record rappresentano le curve quadratiche utilizzate da TrueType (vale a dire b-spline quadratiche).  
   
-##  <a name="a-namegetgraphicsmodea--cdcgetgraphicsmode"></a><a name="getgraphicsmode"></a>CDC::GetGraphicsMode  
+##  <a name="getgraphicsmode"></a>CDC::GetGraphicsMode  
  Recupera la modalità grafica corrente per il contesto di dispositivo specificato.  
   
 ```  
@@ -2604,7 +2803,7 @@ int GetGraphicsMode() const;
 ### <a name="remarks"></a>Note  
  Questo metodo include la funzione GDI Windows [GetGraphicsMode](http://msdn.microsoft.com/library/windows/desktop/dd144892).  
   
-##  <a name="a-namegethalftonebrusha--cdcgethalftonebrush"></a><a name="gethalftonebrush"></a>CDC::GetHalftoneBrush  
+##  <a name="gethalftonebrush"></a>CDC::GetHalftoneBrush  
  Chiamare questa funzione membro per recuperare un pennello dei mezzitoni.  
   
 ```  
@@ -2619,7 +2818,7 @@ static CBrush* PASCAL GetHalftoneBrush();
   
  ![Dettagli di un tratto di penna con dithering](../../mfc/reference/media/vc318s1.gif "vc318s1")  
   
-##  <a name="a-namegetkerningpairsa--cdcgetkerningpairs"></a><a name="getkerningpairs"></a>CDC::GetKerningPairs  
+##  <a name="getkerningpairs"></a>CDC::GetKerningPairs  
  Recupera il carattere crenatura coppie per il tipo di carattere attualmente selezionato nel contesto di dispositivo specificato.  
   
 ```  
@@ -2638,7 +2837,7 @@ int GetKerningPairs(
 ### <a name="return-value"></a>Valore restituito  
  Specifica il numero di crenatura coppie recuperate o il numero totale di crenatura coppie nel tipo di carattere, se la funzione ha esito positivo. Se la funzione ha esito negativo o vi sono coppie crenatura per il tipo di carattere, viene restituito zero.  
   
-##  <a name="a-namegetlayouta--cdcgetlayout"></a><a name="getlayout"></a>CDC::getLayout  
+##  <a name="getlayout"></a>CDC::getLayout  
  Chiamare questa funzione membro per determinare il layout del testo e grafica per un contesto di dispositivo, ad esempio una stampante o un metafile.  
   
 ```  
@@ -2651,7 +2850,7 @@ DWORD GetLayout() const;
 ### <a name="remarks"></a>Note  
  Il layout predefinito da sinistra a destra.  
   
-##  <a name="a-namegetmapmodea--cdcgetmapmode"></a><a name="getmapmode"></a>CDC::GetMapMode  
+##  <a name="getmapmode"></a>CDC::GetMapMode  
  Recupera la modalità di mapping corrente.  
   
 ```  
@@ -2667,7 +2866,7 @@ int GetMapMode() const;
 > [!NOTE]
 >  Se si chiama [SetLayout](#setlayout) per modificare il controller di dominio al layout da destra a sinistra, **SetLayout** modifica automaticamente la modalità di mapping per `MM_ISOTROPIC`. Di conseguenza, qualsiasi chiamata successiva a `GetMapMode` restituirà `MM_ISOTROPIC`.  
   
-##  <a name="a-namegetmiterlimita--cdcgetmiterlimit"></a><a name="getmiterlimit"></a>CDC::GetMiterLimit  
+##  <a name="getmiterlimit"></a>CDC::GetMiterLimit  
  Restituisce il limite per il contesto di dispositivo.  
   
 ```  
@@ -2680,7 +2879,7 @@ float GetMiterLimit() const;
 ### <a name="remarks"></a>Note  
  Il limite smussatura viene utilizzato quando il disegno di linee geometriche con decorato join.  
   
-##  <a name="a-namegetnearestcolora--cdcgetnearestcolor"></a><a name="getnearestcolor"></a>CDC::GetNearestColor  
+##  <a name="getnearestcolor"></a>CDC::GetNearestColor  
  Restituisce il colore a tinta unita più adatto un colore logico specificato.  
   
 ```  
@@ -2697,7 +2896,7 @@ COLORREF GetNearestColor(COLORREF crColor) const;
 ### <a name="remarks"></a>Note  
  Il dispositivo specificato deve essere in grado di rappresentare questo colore.  
   
-##  <a name="a-namegetoutlinetextmetricsa--cdcgetoutlinetextmetrics"></a><a name="getoutlinetextmetrics"></a>CDC::GetOutlineTextMetrics  
+##  <a name="getoutlinetextmetrics"></a>CDC::GetOutlineTextMetrics  
  Recupera informazioni sulle metriche per tipi di carattere TrueType.  
   
 ```  
@@ -2722,7 +2921,7 @@ UINT GetOutlineTextMetrics(
 ### <a name="remarks"></a>Note  
  Il [OUTLINETEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd162755) struttura contiene la maggior parte delle informazioni di metrica del carattere fornite con il formato TrueType, tra cui un [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) struttura. I quattro membri di **OUTLINETEXTMETRIC** struttura sono puntatori alle stringhe. Applicazioni devono allocare spazio per queste stringhe oltre lo spazio richiesto per gli altri membri. Poiché non esiste alcun limite imposto di sistema per le dimensioni delle stringhe, il metodo più semplice di allocazione della memoria è per recuperare la dimensione necessaria specificando **NULL** per `lpotm` nella prima chiamata per il `GetOutlineTextMetrics` (funzione).  
   
-##  <a name="a-namegetoutputcharwidtha--cdcgetoutputcharwidth"></a><a name="getoutputcharwidth"></a>CDC::GetOutputCharWidth  
+##  <a name="getoutputcharwidth"></a>CDC::GetOutputCharWidth  
  Utilizza il contesto di dispositivo di output, `m_hDC`e recupera le larghezze dei singoli caratteri in un gruppo di caratteri consecutivo dal tipo di carattere corrente.  
   
 ```  
@@ -2752,7 +2951,7 @@ BOOL GetOutputCharWidth(
   
  Se non esiste un carattere nel gruppo di caratteri consecutivo in un particolare tipo di carattere, si verrà assegnato il valore di larghezza del carattere predefinito.  
   
-##  <a name="a-namegetoutputtabbedtextextenta--cdcgetoutputtabbedtextextent"></a><a name="getoutputtabbedtextextent"></a>CDC::GetOutputTabbedTextExtent  
+##  <a name="getoutputtabbedtextextent"></a>CDC::GetOutputTabbedTextExtent  
  Chiamare questa funzione membro per calcolare la larghezza e altezza di una stringa di caratteri utilizzando [m_hDC](#m_hdc), il contesto di dispositivo di output.  
   
 ```  
@@ -2796,7 +2995,7 @@ CSize GetOutputTabbedTextExtent(
   
  Se `nTabPositions` è 0 e `lpnTabStopPositions` è **NULL**, le schede vengono espanse in otto larghezze dei caratteri medio. Se `nTabPositions` è 1, le tabulazioni saranno separate per la distanza specificata dal primo valore nella matrice in cui `lpnTabStopPositions` punti. Se `lpnTabStopPositions` punti a più di un singolo valore, è impostato un punto di tabulazione per ogni valore nella matrice, fino al numero specificato da `nTabPositions`.  
   
-##  <a name="a-namegetoutputtextextenta--cdcgetoutputtextextent"></a><a name="getoutputtextextent"></a>CDC::GetOutputTextExtent  
+##  <a name="getoutputtextextent"></a>CDC::GetOutputTextExtent  
  Chiamare questa funzione membro per utilizzare il contesto di dispositivo di output, [m_hDC](#m_hdc)e calcolare la larghezza e altezza di una riga di testo utilizzando il tipo di carattere corrente.  
   
 ```  
@@ -2825,7 +3024,7 @@ CSize GetOutputTextExtent(const CString& str) const;
   
  Poiché alcuni dispositivi non inserire caratteri nelle matrici di cella normale (vale a dire che effettua la crenatura), la somma degli extent dei caratteri in una stringa non può essere uguale per l'estensione della stringa.  
   
-##  <a name="a-namegetoutputtextmetricsa--cdcgetoutputtextmetrics"></a><a name="getoutputtextmetrics"></a>CDC::GetOutputTextMetrics  
+##  <a name="getoutputtextmetrics"></a>CDC::GetOutputTextMetrics  
  Recupera le metriche per il tipo di carattere corrente utilizzando `m_hDC`, il contesto di dispositivo di output.  
   
 ```  
@@ -2839,7 +3038,7 @@ BOOL GetOutputTextMetrics(LPTEXTMETRIC lpMetrics) const;
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se la funzione ha esito positivo; in caso contrario, 0.  
   
-##  <a name="a-namegetpatha--cdcgetpath"></a><a name="getpath"></a>CDC::getPath  
+##  <a name="getpath"></a>CDC::getPath  
  Recupera le coordinate che definiscono gli endpoint delle righe e i punti di controllo di curve trovate nel percorso selezionato nel contesto di dispositivo.  
   
 ```  
@@ -2880,7 +3079,7 @@ int GetPath(
 ### <a name="example"></a>Esempio  
   Vedere l'esempio per [CDC:: BeginPath](#beginpath).  
   
-##  <a name="a-namegetpixela--cdcgetpixel"></a><a name="getpixel"></a>CDC::getPixel  
+##  <a name="getpixel"></a>CDC::getPixel  
  Recupera il valore di colore RGB del pixel nel punto specificato da *x* e *y*.  
   
 ```  
@@ -2911,7 +3110,7 @@ COLORREF GetPixel(POINT point) const;
   
  Il **GetPixel** funzione membro dispone di due form. Il primo accetta due valori delle coordinate; il secondo accetta una [punto](../../mfc/reference/point-structure1.md) struttura o un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) oggetto.  
   
-##  <a name="a-namegetpolyfillmodea--cdcgetpolyfillmode"></a><a name="getpolyfillmode"></a>CDC::GetPolyFillMode  
+##  <a name="getpolyfillmode"></a>CDC::GetPolyFillMode  
  Recupera la modalità di riempimento del poligono.  
   
 ```  
@@ -2924,7 +3123,7 @@ int GetPolyFillMode() const;
 ### <a name="remarks"></a>Note  
  Vedere il `SetPolyFillMode` una funzione membro per una descrizione delle modalità di riempimento del poligono.  
   
-##  <a name="a-namegetrop2a--cdcgetrop2"></a><a name="getrop2"></a>CDC::GetROP2  
+##  <a name="getrop2"></a>CDC::GetROP2  
  Recupera la modalità di disegno corrente.  
   
 ```  
@@ -2937,7 +3136,7 @@ int GetROP2() const;
 ### <a name="remarks"></a>Note  
  La modalità di disegno specifica come vengono combinati i colori della penna e l'area interna di oggetti con riempimento con colore già sulla superficie di visualizzazione.  
   
-##  <a name="a-namegetsafehdca--cdcgetsafehdc"></a><a name="getsafehdc"></a>CDC::GetSafeHdc  
+##  <a name="getsafehdc"></a>CDC::GetSafeHdc  
  Chiamare questa funzione membro per ottenere [m_hDC](#m_hdc), il contesto di dispositivo di output.  
   
 ```  
@@ -2950,7 +3149,7 @@ HDC GetSafeHdc() const;
 ### <a name="remarks"></a>Note  
  Questa funzione membro funziona anche con puntatori null.  
   
-##  <a name="a-namegetstretchbltmodea--cdcgetstretchbltmode"></a><a name="getstretchbltmode"></a>CDC::GetStretchBltMode  
+##  <a name="getstretchbltmode"></a>CDC::GetStretchBltMode  
  Recupera la modalità di adattamento bitmap corrente.  
   
 ```  
@@ -2965,7 +3164,7 @@ int GetStretchBltMode() const;
   
  Il **STRETCH_ANDSCANS** e **STRETCH_ORSCANS** modalità sono in genere utilizzata per mantenere pixel Bitmap monocromatica in primo piano. Il **STRETCH_DELETESCANS** modalità viene in genere utilizzata per mantenere colore nella bitmap a colori.  
   
-##  <a name="a-namegettabbedtextextenta--cdcgettabbedtextextent"></a><a name="gettabbedtextextent"></a>CDC::GetTabbedTextExtent  
+##  <a name="gettabbedtextextent"></a>CDC::GetTabbedTextExtent  
  Chiamare questa funzione membro per calcolare la larghezza e altezza di una stringa di caratteri utilizzando [m_hAttribDC](#m_hattribdc), il contesto di dispositivo di attributo.  
   
 ```  
@@ -3009,7 +3208,7 @@ CSize GetTabbedTextExtent(
   
  Se `nTabPositions` è 0 e `lpnTabStopPositions` è **NULL**, le schede vengono espanse in otto volte la media larghezza del carattere. Se `nTabPositions` è 1, le tabulazioni saranno separate per la distanza specificata dal primo valore nella matrice in cui `lpnTabStopPositions` punti. Se `lpnTabStopPositions` punti a più di un singolo valore, è impostato un punto di tabulazione per ogni valore nella matrice, fino al numero specificato da `nTabPositions`.  
   
-##  <a name="a-namegettextaligna--cdcgettextalign"></a><a name="gettextalign"></a>CDC::GetTextAlign  
+##  <a name="gettextalign"></a>CDC::GetTextAlign  
  Recupera lo stato dei flag di allineamento del testo per il contesto di dispositivo.  
   
 ```  
@@ -3050,7 +3249,7 @@ UINT GetTextAlign() const;
   
 3.  Per verificare l'uguaglianza di questo risultato e il flag.  
   
-##  <a name="a-namegettextcharacterextraa--cdcgettextcharacterextra"></a><a name="gettextcharacterextra"></a>CDC::GetTextCharacterExtra  
+##  <a name="gettextcharacterextra"></a>CDC::GetTextCharacterExtra  
  Recupera l'impostazione corrente per la quantità di spaziatura tra caratteri relativamente.  
   
 ```  
@@ -3065,7 +3264,7 @@ int GetTextCharacterExtra() const;
   
  Il valore predefinito per la quantità di spaziatura tra caratteri relativamente è 0.  
   
-##  <a name="a-namegettextcolora--cdcgettextcolor"></a><a name="gettextcolor"></a>CDC::GetTextColor  
+##  <a name="gettextcolor"></a>CDC::GetTextColor  
  Recupera il colore del testo corrente.  
   
 ```  
@@ -3078,7 +3277,7 @@ COLORREF GetTextColor() const;
 ### <a name="remarks"></a>Note  
  Il colore del testo è il colore di primo piano di caratteri disegnati con le funzioni membro di output di testo GDI [TextOut](#textout), [ExtTextOut](#exttextout), e [TabbedTextOut](#tabbedtextout).  
   
-##  <a name="a-namegettextextenta--cdcgettextextent"></a><a name="gettextextent"></a>CDC::GetTextExtent  
+##  <a name="gettextextent"></a>CDC::GetTextExtent  
  Chiamare questa funzione membro per calcolare la larghezza e altezza di una riga di testo utilizzando il tipo di carattere corrente per determinare le dimensioni.  
   
 ```  
@@ -3111,7 +3310,7 @@ CSize GetTextExtent(const CString& str) const;
   
  Poiché alcuni dispositivi non inserire caratteri nelle matrici di cella normale (vale a dire che effettua la crenatura), la somma degli extent dei caratteri in una stringa non può essere uguale per l'estensione della stringa.  
   
-##  <a name="a-namegettextextentexpointia--cdcgettextextentexpointi"></a><a name="gettextextentexpointi"></a>CDC::GetTextExtentExPointI  
+##  <a name="gettextextentexpointi"></a>CDC::GetTextExtentExPointI  
  Recupera il numero di caratteri in una stringa specificata che rientra in uno spazio specificato e riempie una matrice con l'estensione di testo per ognuno di tali caratteri.  
   
 ```  
@@ -3149,7 +3348,7 @@ BOOL GetTextExtentExPointI(
 ### <a name="remarks"></a>Note  
  Questa funzione membro emula la funzionalità della funzione [GetTextExtentExPointI](http://msdn.microsoft.com/library/windows/desktop/dd144936), come descritto nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegettextextentpointia--cdcgettextextentpointi"></a><a name="gettextextentpointi"></a>CDC::GetTextExtentPointI  
+##  <a name="gettextextentpointi"></a>CDC::GetTextExtentPointI  
  Recupera la larghezza e l'altezza della matrice specificata di indici di glifi.  
   
 ```  
@@ -3175,7 +3374,7 @@ BOOL GetTextExtentPointI(
 ### <a name="remarks"></a>Note  
  Questa funzione membro emula la funzionalità della funzione [GetTextExtentPointI](http://msdn.microsoft.com/library/windows/desktop/dd144939), come descritto nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegettextfacea--cdcgettextface"></a><a name="gettextface"></a>CDC::GetTextFace  
+##  <a name="gettextface"></a>CDC::GetTextFace  
  Chiamare questa funzione membro per copiare il nome del tipo di carattere corrente in un buffer.  
   
 ```  
@@ -3202,7 +3401,7 @@ int GetTextFace(CString& rString) const;
 ### <a name="remarks"></a>Note  
  Il nome del tipo di carattere viene copiato come una stringa con terminazione null.  
   
-##  <a name="a-namegettextmetricsa--cdcgettextmetrics"></a><a name="gettextmetrics"></a>CDC::GetTextMetrics  
+##  <a name="gettextmetrics"></a>CDC::GetTextMetrics  
  Recupera le metriche per il carattere corrente utilizzando il contesto di dispositivo di attributo.  
   
 ```  
@@ -3216,7 +3415,7 @@ BOOL GetTextMetrics(LPTEXTMETRIC lpMetrics) const;
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se la funzione ha esito positivo; in caso contrario, 0.  
   
-##  <a name="a-namegetviewportexta--cdcgetviewportext"></a><a name="getviewportext"></a>CDC::GetViewportExt  
+##  <a name="getviewportext"></a>CDC::GetViewportExt  
  Recupera gli ambiti x e y del riquadro di visualizzazione del contesto di dispositivo.  
   
 ```  
@@ -3226,7 +3425,7 @@ CSize GetViewportExt() const;
 ### <a name="return-value"></a>Valore restituito  
  Il x - e y-extent (in unità di dispositivo) come un `CSize` oggetto.  
   
-##  <a name="a-namegetviewportorga--cdcgetviewportorg"></a><a name="getviewportorg"></a>CDC::GetViewportOrg  
+##  <a name="getviewportorg"></a>CDC::GetViewportOrg  
  Recupera le coordinate x e y dell'origine del riquadro di visualizzazione associato al contesto di dispositivo.  
   
 ```  
@@ -3236,7 +3435,7 @@ CPoint GetViewportOrg() const;
 ### <a name="return-value"></a>Valore restituito  
  L'origine del riquadro di visualizzazione (nelle coordinate del dispositivo) come un `CPoint` oggetto.  
   
-##  <a name="a-namegetwindowa--cdcgetwindow"></a><a name="getwindow"></a>CDC::GetWindow  
+##  <a name="getwindow"></a>CDC::GetWindow  
  Restituisce la finestra associata al contesto di dispositivo di visualizzazione.  
   
 ```  
@@ -3249,7 +3448,7 @@ CWnd* GetWindow() const;
 ### <a name="remarks"></a>Note  
  Si tratta di una funzione avanzata. Questa funzione membro ad esempio, potrebbe non restituire la finestra di visualizzazione durante la stampa o in anteprima di stampa. Restituisce sempre la finestra di output associata. Le funzioni di output che utilizzano il controller di dominio specificato disegno in questa finestra.  
   
-##  <a name="a-namegetwindowexta--cdcgetwindowext"></a><a name="getwindowext"></a>CDC::GetWindowExt  
+##  <a name="getwindowext"></a>CDC::GetWindowExt  
  Recupera gli extent x e y della finestra associata al contesto di dispositivo.  
   
 ```  
@@ -3259,7 +3458,7 @@ CSize GetWindowExt() const;
 ### <a name="return-value"></a>Valore restituito  
  Il x - e y-extent (in unità logiche) come un `CSize` oggetto.  
   
-##  <a name="a-namegetwindoworga--cdcgetwindoworg"></a><a name="getwindoworg"></a>CDC::GetWindowOrg  
+##  <a name="getwindoworg"></a>CDC::GetWindowOrg  
  Recupera le coordinate x e y dell'origine della finestra associata al contesto di dispositivo.  
   
 ```  
@@ -3269,7 +3468,7 @@ CPoint GetWindowOrg() const;
 ### <a name="return-value"></a>Valore restituito  
  L'origine della finestra (espressa in coordinate logiche) come un `CPoint` oggetto.  
   
-##  <a name="a-namegetworldtransforma--cdcgetworldtransform"></a><a name="getworldtransform"></a>CDC::GetWorldTransform  
+##  <a name="getworldtransform"></a>CDC::GetWorldTransform  
  Recupera lo spazio mondo corrente alla trasformazione di spazio di paging.  
   
 ```  
@@ -3290,7 +3489,7 @@ BOOL GetWorldTransform(XFORM& rXform) const;
 ### <a name="remarks"></a>Note  
  Questo metodo include la funzione GDI Windows [GetWorldTransform](http://msdn.microsoft.com/library/windows/desktop/dd144953).  
   
-##  <a name="a-namegradientfilla--cdcgradientfill"></a><a name="gradientfill"></a>CDC::GradientFill  
+##  <a name="gradientfill"></a>CDC::GradientFill  
  Chiamare questa funzione membro per popolare strutture rettangolo e triangolo con colore graduale dissolvenza da un lato a altro.  
   
 ```  
@@ -3324,7 +3523,7 @@ BOOL GradientFill(
 ### <a name="remarks"></a>Note  
  Per ulteriori informazioni, vedere `GradientFill` nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegraystringa--cdcgraystring"></a><a name="graystring"></a>CDC:: graystring  
+##  <a name="graystring"></a>CDC:: graystring  
  Consente di disegnare disattivata (grigio) nella posizione specificata dalla scrittura del testo in una bitmap in memoria, la bitmap di attenuazione e quindi copiare la bitmap per la visualizzazione.  
   
 ```  
@@ -3383,7 +3582,7 @@ virtual BOOL GrayString(
   
  Quando il framework è in modalità di anteprima, una chiamata al `GrayString` funzione membro viene convertita in un `TextOut` chiamata e la funzione di callback non viene chiamato.  
   
-##  <a name="a-namehimetrictodpa--cdchimetrictodp"></a><a name="himetrictodp"></a>CDC::HIMETRICtoDP  
+##  <a name="himetrictodp"></a>CDC::HIMETRICtoDP  
  Utilizzare questa funzione per la conversione **HIMETRIC** dimensioni da OLE a pixel.  
   
 ```  
@@ -3397,7 +3596,7 @@ void HIMETRICtoDP(LPSIZE lpSize) const;
 ### <a name="remarks"></a>Note  
  Se la modalità di mapping dell'oggetto di contesto di dispositivo è `MM_LOENGLISH`, `MM_HIENGLISH`, `MM_LOMETRIC` o `MM_HIMETRIC`, quindi la conversione si basa sul numero di pixel in pollici fisica. Se la modalità di mapping è una delle altre modalità non limitata (ad esempio, `MM_TEXT`), quindi la conversione si basa sul numero di pixel in pollice logico.  
   
-##  <a name="a-namehimetrictolpa--cdchimetrictolp"></a><a name="himetrictolp"></a>CDC::HIMETRICtoLP  
+##  <a name="himetrictolp"></a>CDC::HIMETRICtoLP  
  Chiamare questa funzione per convertire **HIMETRIC** unità in unità logiche.  
   
 ```  
@@ -3413,7 +3612,7 @@ void HIMETRICtoLP(LPSIZE lpSize) const;
   
  La conversione viene eseguita prima convertendo il **HIMETRIC** unità in pixel, quindi la conversione di queste unità in unità logiche utilizzando unità mapping correnti del contesto di dispositivo. Si noti che gli extent della finestra del dispositivo e viewport influirà il risultato.  
   
-##  <a name="a-nameintersectcliprecta--cdcintersectcliprect"></a><a name="intersectcliprect"></a>CDC::IntersectClipRect  
+##  <a name="intersectcliprect"></a>CDC::IntersectClipRect  
  Crea una nuova area di ritaglio per formare l'intersezione tra l'area corrente e il rettangolo specificato da `x1`, `y1`, `x2`, e `y2`.  
   
 ```  
@@ -3456,7 +3655,7 @@ int IntersectClipRect(LPCRECT lpRect);
 ### <a name="remarks"></a>Note  
  GDI Ritaglia tutti gli output successivi per rientrare il nuovo limite. La larghezza e altezza non deve superare 32.767.  
   
-##  <a name="a-nameinvertrecta--cdcinvertrect"></a><a name="invertrect"></a>CDC::InvertRect  
+##  <a name="invertrect"></a>CDC::InvertRect  
  Inverte il contenuto del rettangolo specificato.  
   
 ```  
@@ -3475,7 +3674,7 @@ void InvertRect(LPCRECT lpRect);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView&#36;](../../mfc/codesnippet/cpp/cdc-class_8.cpp)]  
   
-##  <a name="a-nameinvertrgna--cdcinvertrgn"></a><a name="invertrgn"></a>CDC::InvertRgn  
+##  <a name="invertrgn"></a>CDC::InvertRgn  
  Inverte i colori nell'area specificata da `pRgn`.  
   
 ```  
@@ -3492,7 +3691,7 @@ BOOL InvertRgn(CRgn* pRgn);
 ### <a name="remarks"></a>Note  
  Monocromatici, la funzione consente di creare pixel bianco e nero e bianco pixel bianco. Sul monitor a colori l'inversione dipende dal modo in cui vengono generati i colori per la visualizzazione.  
   
-##  <a name="a-nameisprintinga--cdcisprinting"></a><a name="isprinting"></a>CDC::IsPrinting  
+##  <a name="isprinting"></a>CDC::IsPrinting  
  Determina se il contesto di dispositivo viene utilizzato per la stampa.  
   
 ```  
@@ -3502,7 +3701,7 @@ BOOL IsPrinting() const;
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se la `CDC` oggetto è una stampante controller di dominio; in caso contrario 0.  
   
-##  <a name="a-namelinetoa--cdclineto"></a><a name="lineto"></a>CDC::LineTo  
+##  <a name="lineto"></a>CDC::LineTo  
  Disegna una linea dalla posizione corrente fino a, ma non inclusi, il punto specificato da *x* e *y* (o `point`).  
   
 ```  
@@ -3532,7 +3731,7 @@ BOOL LineTo(POINT point);
 ### <a name="example"></a>Esempio  
   Vedere l'esempio per [CRect::CenterPoint](../../atl-mfc-shared/reference/crect-class.md#centerpoint).  
   
-##  <a name="a-namelptodpa--cdclptodp"></a><a name="lptodp"></a>CDC::LPtoDP  
+##  <a name="lptodp"></a>CDC::LPtoDP  
  Converte le unità logiche in unità di dispositivo.  
   
 ```  
@@ -3562,7 +3761,7 @@ void LPtoDP(LPSIZE lpSize) const;
   
  Le coordinate x e y dei punti sono numeri interi con segno a 2 byte compreso nell'intervallo tra -32.768 e 32.767. Nei casi in cui la modalità di mapping causare valori superiori a questi limiti, il sistema imposta i valori per -32.768 e 32.767, rispettivamente.  
   
-##  <a name="a-namelptohimetrica--cdclptohimetric"></a><a name="lptohimetric"></a>CDC::LPtoHIMETRIC  
+##  <a name="lptohimetric"></a>CDC::LPtoHIMETRIC  
  Chiamare questa funzione per convertire le unità logiche in **HIMETRIC** unità.  
   
 ```  
@@ -3578,7 +3777,7 @@ void LPtoHIMETRIC(LPSIZE lpSize) const;
   
  La conversione viene eseguita prima si convertono le unità logiche in pixel, l'utilizzo di unità mapping corrente del contesto di dispositivo, quindi la conversione di queste unità in **HIMETRIC** unità.  
   
-##  <a name="a-namemhattribdca--cdcmhattribdc"></a><a name="m_hattribdc"></a>CDC::m_hAttribDC  
+##  <a name="m_hattribdc"></a>CDC::m_hAttribDC  
  Il contesto di dispositivo di attributo per questo `CDC` oggetto.  
   
 ```  
@@ -3588,7 +3787,7 @@ HDC m_hAttribDC;
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, questo contesto di dispositivo è uguale a `m_hDC`. In generale, `CDC` chiamate GDI che richiedono informazioni dal contesto del dispositivo vengono indirizzate a `m_hAttribDC`. Vedere il [CDC](../../mfc/reference/cdc-class.md) descrizione per ulteriori informazioni sull'utilizzo di questi contesti di due dispositivo della classe.  
   
-##  <a name="a-namemhdca--cdcmhdc"></a><a name="m_hdc"></a>CDC::m_hDC  
+##  <a name="m_hdc"></a>CDC::m_hDC  
  Il contesto di dispositivo di output per questo `CDC` oggetto.  
   
 ```  
@@ -3598,7 +3797,7 @@ HDC m_hDC;
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, `m_hDC` è uguale a `m_hAttribDC`, altro contesto di dispositivo sottoposto a wrapping da `CDC`. In generale, `CDC` vedere chiamate GDI che creano l'output di `m_hDC` contesto di dispositivo. È possibile inizializzare `m_hDC` e `m_hAttribDC` in modo che punti a dispositivi diversi. Vedere il [CDC](../../mfc/reference/cdc-class.md) descrizione per ulteriori informazioni sull'utilizzo di questi contesti di due dispositivo della classe.  
   
-##  <a name="a-namemaskblta--cdcmaskblt"></a><a name="maskblt"></a>CDC::MaskBlt  
+##  <a name="maskblt"></a>CDC::MaskBlt  
  Combina i dati di colore per le bitmap di origine e di destinazione mediante la maschera specificata e l'operazione raster.  
   
 ```  
@@ -3660,7 +3859,7 @@ BOOL MaskBlt(
   
  Se i formati di colore di origine, modello e bitmap di destinazione sono diversi, questa funzione converte il modello di formato di origine e/o, in base al formato di destinazione. Se la maschera bitmap non è una bitmap monocromatica, si verifica un errore. Quando viene registrato un enhanced metafile si verifica un errore (e la funzione restituisce 0) se il contesto di dispositivo di origine identifica un contesto di dispositivo metafile avanzati. Non tutti i dispositivi supportano `MaskBlt`. Un'applicazione deve chiamare `GetDeviceCaps` per determinare se un dispositivo supporta questa funzione. Se non viene fornito alcun bitmap maschera, questa funzione si comporta esattamente come `BitBlt`, utilizzando il codice di operazione raster in primo piano. I pixel vengono spostati nella maschera bitmap mappa per il punto (0,0) nella mappa di bit del contesto di dispositivo di origine. Ciò risulta utile nei casi in cui una bitmap maschera contiene un set di maschere; un'applicazione può applicare facilmente uno di essi a un'attività di trasferimento maschera modificando gli offset dei pixel e dimensioni rettangolo inviato a `MaskBlt`.  
   
-##  <a name="a-namemodifyworldtransforma--cdcmodifyworldtransform"></a><a name="modifyworldtransform"></a>CDC::ModifyWorldTransform  
+##  <a name="modifyworldtransform"></a>CDC::ModifyWorldTransform  
  Modifica la trasformazione globale per un contesto di dispositivo utilizzando la modalità specificata.  
   
 ```  
@@ -3686,7 +3885,7 @@ BOOL ModifyWorldTransform(
 ### <a name="remarks"></a>Note  
  Questo metodo include la funzione GDI Windows [ModifyWorldTransform](http://msdn.microsoft.com/library/windows/desktop/dd145060).  
   
-##  <a name="a-namemovetoa--cdcmoveto"></a><a name="moveto"></a>CDC::MoveTo  
+##  <a name="moveto"></a>CDC::MoveTo  
  Sposta la posizione corrente per il punto specificato da *x* e *y* (o da `point`).  
   
 ```  
@@ -3713,7 +3912,7 @@ CPoint MoveTo(POINT point);
 ### <a name="example"></a>Esempio  
   Vedere l'esempio per [CRect::CenterPoint](../../atl-mfc-shared/reference/crect-class.md#centerpoint).  
   
-##  <a name="a-nameoffsetcliprgna--cdcoffsetcliprgn"></a><a name="offsetcliprgn"></a>CDC::OffsetClipRgn  
+##  <a name="offsetcliprgn"></a>CDC::OffsetClipRgn  
  Sposta l'area di visualizzazione del contesto del dispositivo degli offset specificati.  
   
 ```  
@@ -3748,7 +3947,7 @@ int OffsetClipRgn(SIZE size);
 ### <a name="remarks"></a>Note  
  La funzione consente di spostare l'area *x* unità lungo l'asse x e *y* unità lungo l'asse y.  
   
-##  <a name="a-nameoffsetviewportorga--cdcoffsetviewportorg"></a><a name="offsetviewportorg"></a>CDC::OffsetViewportOrg  
+##  <a name="offsetviewportorg"></a>CDC::OffsetViewportOrg  
  Modifica delle coordinate dell'origine del riquadro di visualizzazione rispetto alle coordinate dell'origine del riquadro di visualizzazione corrente.  
   
 ```  
@@ -3767,7 +3966,7 @@ virtual CPoint OffsetViewportOrg(
 ### <a name="return-value"></a>Valore restituito  
  L'origine del riquadro di visualizzazione precedente (nelle coordinate del dispositivo) come un `CPoint` oggetto.  
   
-##  <a name="a-nameoffsetwindoworga--cdcoffsetwindoworg"></a><a name="offsetwindoworg"></a>CDC::OffsetWindowOrg  
+##  <a name="offsetwindoworg"></a>CDC::OffsetWindowOrg  
  Modifica delle coordinate dell'origine della finestra rispetto alle coordinate dell'origine della finestra corrente.  
   
 ```  
@@ -3786,7 +3985,7 @@ CPoint OffsetWindowOrg(
 ### <a name="return-value"></a>Valore restituito  
  L'origine finestra precedente (in coordinate logiche) come un `CPoint` oggetto.  
   
-##  <a name="a-nameoperatorhdca--cdcoperator-hdc"></a><a name="operator_hdc"></a>CDC::operator HDC  
+##  <a name="operator_hdc"></a>CDC::operator HDC  
  Utilizzare questo operatore per recuperare l'handle del contesto di dispositivo di `CDC` oggetto.  
   
 ```  
@@ -3799,7 +3998,7 @@ operator HDC() const;
 ### <a name="remarks"></a>Note  
  È possibile utilizzare l'handle per chiamare direttamente le API di Windows.  
   
-##  <a name="a-namepaintrgna--cdcpaintrgn"></a><a name="paintrgn"></a>CDC::PaintRgn  
+##  <a name="paintrgn"></a>CDC::PaintRgn  
  Riempie l'area specificata da `pRgn` mediante il pennello corrente.  
   
 ```  
@@ -3813,7 +4012,7 @@ BOOL PaintRgn(CRgn* pRgn);
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se la funzione ha esito positivo; in caso contrario, 0.  
   
-##  <a name="a-namepatblta--cdcpatblt"></a><a name="patblt"></a>CDC::PatBlt  
+##  <a name="patblt"></a>CDC::PatBlt  
  Crea un modello di bit sul dispositivo.  
   
 ```  
@@ -3859,7 +4058,7 @@ BOOL PatBlt(
   
  Non tutti i contesti di dispositivo supportano il `PatBlt` (funzione). Per determinare se un contesto di dispositivo supporta `PatBlt`, chiamare il `GetDeviceCaps` funzione membro con il **RASTERCAPS** di indice e controllare il valore restituito per il **RC_BITBLT** flag.  
   
-##  <a name="a-namepiea--cdcpie"></a><a name="pie"></a>CDC::Pie  
+##  <a name="pie"></a>CDC::Pie  
  Disegna una forma a torta spicchio disegnando un arco ellittico con centro e due endpoint è unito da linee.  
   
 ```  
@@ -3927,7 +4126,7 @@ BOOL Pie(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView&#37;](../../mfc/codesnippet/cpp/cdc-class_9.cpp)]  
   
-##  <a name="a-nameplaymetafilea--cdcplaymetafile"></a><a name="playmetafile"></a>CDC::PlayMetaFile  
+##  <a name="playmetafile"></a>CDC::PlayMetaFile  
  Consente di riprodurre il contenuto del metafile specificato nel contesto del dispositivo.  
   
 ```  
@@ -3961,7 +4160,7 @@ BOOL PlayMetaFile(
   
  Gli stati del contesto del dispositivo di output vengono mantenuti da questa funzione. Qualsiasi oggetto creato, ma non eliminati nel metafile avanzato viene eliminato da questa funzione. Per interrompere questa funzione, un'applicazione può chiamare il **CancelDC** funzione di Windows da un altro thread di terminare l'operazione. In questo caso, la funzione restituisce zero.  
   
-##  <a name="a-nameplgblta--cdcplgblt"></a><a name="plgblt"></a>CDC::PlgBlt  
+##  <a name="plgblt"></a>CDC::PlgBlt  
  Esegue un trasferimento a blocchi di bit dei bit di dati relativi al colore dal rettangolo specificato nel contesto di dispositivo di origine al parallelogramma specificato nel contesto di dispositivo specificato.  
   
 ```  
@@ -4023,7 +4222,7 @@ BOOL PlgBlt(
   
  Se i contesti di dispositivo di origine e destinazione rappresentano periferiche incompatibili, `PlgBlt` restituisce un errore.  
   
-##  <a name="a-namepolybeziera--cdcpolybezier"></a><a name="polybezier"></a>CDC::PolyBezier  
+##  <a name="polybezier"></a>CDC::PolyBezier  
  Disegna una spline di Bzier uno o più.  
   
 ```  
@@ -4047,7 +4246,7 @@ BOOL PolyBezier(
   
  La posizione corrente non viene utilizzata né aggiornata mediante la `PolyBezier` (funzione). Nella figura non viene riempita. Questa funzione consente di disegnare linee mediante la penna corrente.  
   
-##  <a name="a-namepolybeziertoa--cdcpolybezierto"></a><a name="polybezierto"></a>CDC::PolyBezierTo  
+##  <a name="polybezierto"></a>CDC::PolyBezierTo  
  Disegna una spline di Bzier uno o più.  
   
 ```  
@@ -4072,7 +4271,7 @@ BOOL PolyBezierTo(
 ### <a name="example"></a>Esempio  
   Vedere l'esempio per [CDC:: BeginPath](#beginpath).  
   
-##  <a name="a-namepolydrawa--cdcpolydraw"></a><a name="polydraw"></a>CDC::PolyDraw  
+##  <a name="polydraw"></a>CDC::PolyDraw  
  Disegna una serie di segmenti di linea e Bzier spline.  
   
 ```  
@@ -4115,7 +4314,7 @@ BOOL PolyDraw(
 ### <a name="example"></a>Esempio  
   Vedere l'esempio per [CDC:: BeginPath](#beginpath).  
   
-##  <a name="a-namepolygona--cdcpolygon"></a><a name="polygon"></a>CDC::Polygon  
+##  <a name="polygon"></a>CDC::Polygon  
  Disegna un poligono composta da due o più punti (vertici) uniti da linee, utilizzando la penna corrente.  
   
 ```  
@@ -4142,7 +4341,7 @@ BOOL Polygon(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView&#38;](../../mfc/codesnippet/cpp/cdc-class_10.cpp)]  
   
-##  <a name="a-namepolylinea--cdcpolyline"></a><a name="polyline"></a>CDC::Polyline  
+##  <a name="polyline"></a>CDC::Polyline  
  Disegna una serie di segmenti lineari che connettono i punti specificati dalle `lpPoints`.  
   
 ```  
@@ -4166,7 +4365,7 @@ BOOL Polyline(
   
  Per ulteriori informazioni, vedere [polilinea](http://msdn.microsoft.com/library/windows/desktop/dd162815) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namepolylinetoa--cdcpolylineto"></a><a name="polylineto"></a>CDC::PolylineTo  
+##  <a name="polylineto"></a>CDC::PolylineTo  
  Disegna una o più linee rette.  
   
 ```  
@@ -4188,7 +4387,7 @@ BOOL PolylineTo(
 ### <a name="remarks"></a>Note  
  Viene tracciata una linea dalla posizione corrente al primo punto specificato dal `lpPoints` parametro mediante la penna corrente. Per ogni riga aggiuntiva, la funzione Disegna dal punto di fine della riga precedente al successivo punto specificato da `lpPoints`. `PolylineTo`Sposta la posizione corrente per il punto finale dell'ultima riga. Se i segmenti di linea tracciati da questa funzione formano una figura chiusa, la figura non viene riempita.  
   
-##  <a name="a-namepolypolygona--cdcpolypolygon"></a><a name="polypolygon"></a>CDC::PolyPolygon  
+##  <a name="polypolygon"></a>CDC::PolyPolygon  
  Crea due o più poligoni che vengono compilati utilizzando la modalità di riempimento del poligono.  
   
 ```  
@@ -4220,7 +4419,7 @@ BOOL PolyPolygon(
   
  La modalità di riempimento del poligono corrente può essere recuperata o impostata utilizzando il `GetPolyFillMode` e `SetPolyFillMode` funzioni membro.  
   
-##  <a name="a-namepolypolylinea--cdcpolypolyline"></a><a name="polypolyline"></a>CDC::PolyPolyline  
+##  <a name="polypolyline"></a>CDC::PolyPolyline  
  Consente di disegnare più serie di segmenti di linea collegati.  
   
 ```  
@@ -4246,7 +4445,7 @@ BOOL PolyPolyline(
 ### <a name="remarks"></a>Note  
  I segmenti di linea vengono disegnati con la penna corrente. Le figure formate dai segmenti non sono state compilate. La posizione corrente non viene utilizzata né aggiornata da questa funzione.  
   
-##  <a name="a-nameptvisiblea--cdcptvisible"></a><a name="ptvisible"></a>CDC::PtVisible  
+##  <a name="ptvisible"></a>CDC::PtVisible  
  Determina se il punto specificato si trova all'interno dell'area di ritaglio del contesto del dispositivo.  
   
 ```  
@@ -4270,7 +4469,7 @@ BOOL PtVisible(POINT point) const;
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se il punto specificato si trova all'interno dell'area di visualizzazione; in caso contrario 0.  
   
-##  <a name="a-namequeryaborta--cdcqueryabort"></a><a name="queryabort"></a>CDC::QueryAbort  
+##  <a name="queryabort"></a>CDC::QueryAbort  
  Chiama la funzione di interruzione installata per il [SetAbortProc](#setabortproc) funzione membro per un'applicazione di stampa e query se la stampa deve essere terminata.  
   
 ```  
@@ -4280,7 +4479,7 @@ BOOL QueryAbort() const;
 ### <a name="return-value"></a>Valore restituito  
  Il valore restituito è diverso da zero se la stampa deve continuare o se è presente alcuna procedura di interruzione. È 0 se il processo di stampa deve essere terminato. Viene fornito il valore restituito dalla funzione di interruzione.  
   
-##  <a name="a-namerealizepalettea--cdcrealizepalette"></a><a name="realizepalette"></a>CDC::RealizePalette  
+##  <a name="realizepalette"></a>CDC::RealizePalette  
  Esegue il mapping di voci della tavolozza logico corrente per la tavolozza di sistema.  
   
 ```  
@@ -4297,7 +4496,7 @@ UINT RealizePalette();
   
  Inoltre, Windows corrisponda ai colori richiesti da windows inattivi che chiama la funzione più vicino possibile ai colori disponibili. Questo riduce notevolmente modifiche indesiderate nei colori visualizzati nelle finestre non attive.  
   
-##  <a name="a-namerectanglea--cdcrectangle"></a><a name="rectangle"></a>CDC::Rectangle  
+##  <a name="rectangle"></a>CDC::Rectangle  
  Disegna un rettangolo utilizzando la penna corrente.  
   
 ```  
@@ -4337,7 +4536,7 @@ BOOL Rectangle(LPCRECT lpRect);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView&#39;](../../mfc/codesnippet/cpp/cdc-class_11.cpp)]  
   
-##  <a name="a-namerectvisiblea--cdcrectvisible"></a><a name="rectvisible"></a>CDC::RectVisible  
+##  <a name="rectvisible"></a>CDC::RectVisible  
  Determina se qualsiasi parte del rettangolo specificato si trova all'interno dell'area di ritaglio del contesto di visualizzazione.  
   
 ```  
@@ -4351,7 +4550,7 @@ virtual BOOL RectVisible(LPCRECT lpRect) const;
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se qualsiasi parte del rettangolo specificato si trova all'interno dell'area di visualizzazione; in caso contrario 0.  
   
-##  <a name="a-namereleaseattribdca--cdcreleaseattribdc"></a><a name="releaseattribdc"></a>CDC::ReleaseAttribDC  
+##  <a name="releaseattribdc"></a>CDC::ReleaseAttribDC  
  Chiamare questa funzione membro per impostare `m_hAttribDC` a **NULL**.  
   
 ```  
@@ -4361,7 +4560,7 @@ virtual void ReleaseAttribDC();
 ### <a name="remarks"></a>Note  
  Ciò non comporti un **scollegamento** si verifichi. Solo il contesto di dispositivo di output è collegato la `CDC` oggetto e solo può essere scollegato.  
   
-##  <a name="a-namereleaseoutputdca--cdcreleaseoutputdc"></a><a name="releaseoutputdc"></a>CDC::ReleaseOutputDC  
+##  <a name="releaseoutputdc"></a>CDC::ReleaseOutputDC  
  Chiamare questa funzione membro per impostare il `m_hDC` membro **NULL**.  
   
 ```  
@@ -4371,7 +4570,7 @@ virtual void ReleaseOutputDC();
 ### <a name="remarks"></a>Note  
  Questa funzione membro non può essere chiamata quando il contesto di dispositivo di output è associato ai `CDC` oggetto. Utilizzare il **scollegamento** funzione membro per scollegare il contesto di dispositivo di output.  
   
-##  <a name="a-nameresetdca--cdcresetdc"></a><a name="resetdc"></a>CDC::ResetDC  
+##  <a name="resetdc"></a>CDC::ResetDC  
  Chiamare questa funzione membro per aggiornare il contesto di dispositivo racchiuso il `CDC` oggetto.  
   
 ```  
@@ -4394,7 +4593,7 @@ BOOL ResetDC(const DEVMODE* lpDevMode);
   
  Prima di chiamare questa funzione membro, è necessario assicurarsi che tutti gli oggetti selezionati nel contesto di dispositivo (eccetto gli oggetti predefiniti) sono stati selezionati.  
   
-##  <a name="a-namerestoredca--cdcrestoredc"></a><a name="restoredc"></a>CDC::RestoreDC  
+##  <a name="restoredc"></a>CDC::RestoreDC  
  Ripristina il contesto di dispositivo allo stato precedente identificato da `nSavedDC`.  
   
 ```  
@@ -4413,7 +4612,7 @@ virtual BOOL RestoreDC(int nSavedDC);
   
  Lo stack può contenere le informazioni sullo stato per diversi contesti di dispositivo. Se il contesto specificato da `nSavedDC` non è presente nella parte superiore dello stack, `RestoreDC` Elimina tutte le informazioni sullo stato tra il contesto di dispositivo specificato dal parametro `nSavedDC` e la parte superiore dello stack. Le informazioni eliminate vengono perse.  
   
-##  <a name="a-nameroundrecta--cdcroundrect"></a><a name="roundrect"></a>CDC::RoundRect  
+##  <a name="roundrect"></a>CDC::RoundRect  
  Disegna un rettangolo con angoli arrotondati utilizzando la penna corrente.  
   
 ```  
@@ -4467,7 +4666,7 @@ BOOL RoundRect(
 ### <a name="example"></a>Esempio  
  [!code-cpp[&#40; NVC_MFCDocView](../../mfc/codesnippet/cpp/cdc-class_12.cpp)]  
   
-##  <a name="a-namesavedca--cdcsavedc"></a><a name="savedc"></a>CDC::SaveDC  
+##  <a name="savedc"></a>CDC::SaveDC  
  Salva lo stato corrente del contesto del dispositivo tramite la copia di informazioni sullo stato (ad esempio l'area di visualizzazione, gli oggetti selezionati e modalità di mapping) a uno stack di contesto gestito da Windows.  
   
 ```  
@@ -4482,7 +4681,7 @@ virtual int SaveDC();
   
  `SaveDC`può essere utilizzato qualsiasi numero di volte per salvare qualsiasi numero di stati di contesto di dispositivo.  
   
-##  <a name="a-namescaleviewportexta--cdcscaleviewportext"></a><a name="scaleviewportext"></a>CDC::ScaleViewportExt  
+##  <a name="scaleviewportext"></a>CDC::ScaleViewportExt  
  Modifica gli extent viewport relativi valori correnti.  
   
 ```  
@@ -4518,7 +4717,7 @@ virtual CSize ScaleViewportExt(
   
  Il nuovo extent viewport vengono calcolati moltiplicando gli extent correnti per il numeratore specificato e quindi dividendo per il denominatore specificato.  
   
-##  <a name="a-namescalewindowexta--cdcscalewindowext"></a><a name="scalewindowext"></a>CDC::ScaleWindowExt  
+##  <a name="scalewindowext"></a>CDC::ScaleWindowExt  
  Modifica gli extent finestra relativi valori correnti.  
   
 ```  
@@ -4554,7 +4753,7 @@ virtual CSize ScaleWindowExt(
   
  Il nuovo extent finestra vengono calcolati moltiplicando gli extent correnti per il numeratore specificato e quindi dividendo per il denominatore specificato.  
   
-##  <a name="a-namescrolldca--cdcscrolldc"></a><a name="scrolldc"></a>CDC::ScrollDC  
+##  <a name="scrolldc"></a>CDC::ScrollDC  
  Scorre un rettangolo di bit orizzontalmente e verticalmente.  
   
 ```  
@@ -4594,7 +4793,7 @@ BOOL ScrollDC(
   
  Un'applicazione deve usare il `ScrollWindow` funzione membro di classe `CWnd` quando è necessario scorrere l'intera area client di una finestra. In caso contrario, è necessario utilizzare `ScrollDC`.  
   
-##  <a name="a-nameselectclippatha--cdcselectclippath"></a><a name="selectclippath"></a>CDC::SelectClipPath  
+##  <a name="selectclippath"></a>CDC::SelectClipPath  
  Seleziona il percorso corrente come un'area di visualizzazione per il contesto di dispositivo, combinando la nuova area con un'area di ritaglio esistente utilizzando la modalità specificata.  
   
 ```  
@@ -4621,7 +4820,7 @@ BOOL SelectClipPath(int nMode);
 ### <a name="remarks"></a>Note  
  Il contesto di dispositivo identificato deve contenere un tracciato chiuso.  
   
-##  <a name="a-nameselectcliprgna--cdcselectcliprgn"></a><a name="selectcliprgn"></a>CDC::SelectClipRgn  
+##  <a name="selectcliprgn"></a>CDC::SelectClipRgn  
  Selezionare l'area specificata come area di ritaglio corrente per il contesto di dispositivo.  
   
 ```  
@@ -4672,7 +4871,7 @@ int SelectClipRgn(
   
  Le applicazioni che è necessario eseguire il ridimensionamento di oggetti grafici in GDI possono utilizzare il **GETSCALINGFACTOR** escape della stampante per determinare il fattore di scala. Questo fattore di scala influisce sul ridimensionamento. Se viene utilizzata un'area per ritagliare grafica, GDI divide le coordinate per il fattore di scala. Se l'area viene utilizzato per ridimensionare il testo, GDI non rende regolazione alcun ridimensionamento. Un fattore di scala pari a 1 determina le coordinate di essere diviso per 2. un fattore di scala di 2 fa sì che le coordinate di essere diviso per 4; E così via.  
   
-##  <a name="a-nameselectobjecta--cdcselectobject"></a><a name="selectobject"></a>CDC::SelectObject  
+##  <a name="selectobject"></a>CDC::SelectObject  
  Seleziona un oggetto nel contesto di dispositivo.  
   
 ```  
@@ -4723,7 +4922,7 @@ CGdiObject* SelectObject(CGdiObject* pObject);
   
  Per Windows 3.1 e versioni successive, il `SelectObject` funzione restituisce lo stesso valore se viene utilizzato in un metafile o non. Nelle versioni precedenti di Windows, `SelectObject` ha restituito un valore diverso da zero per il successo e 0 per esito negativo quando è stato utilizzato in un metafile.  
   
-##  <a name="a-nameselectpalettea--cdcselectpalette"></a><a name="selectpalette"></a>CDC::SelectPalette  
+##  <a name="selectpalette"></a>CDC::SelectPalette  
  Seleziona la tavolozza logica specificato da `pPalette` dell'oggetto selezionato tavolozza del contesto del dispositivo.  
   
 ```  
@@ -4747,7 +4946,7 @@ CPalette* SelectPalette(
   
  Un'applicazione è possibile selezionare una tavolozza logica in più di un contesto di dispositivo. Tuttavia, le modifiche apportate a una tavolozza logica influirà su tutti i contesti di dispositivo per cui è selezionata. Se un'applicazione consente di selezionare una tavolozza in più di un contesto di dispositivo, tutti i contesti di dispositivo devono appartenere allo stesso dispositivo fisico.  
   
-##  <a name="a-nameselectstockobjecta--cdcselectstockobject"></a><a name="selectstockobject"></a>CDC::SelectStockObject  
+##  <a name="selectstockobject"></a>CDC::SelectStockObject  
  Seleziona un [CGdiObject](../../mfc/reference/cgdiobject-class.md) oggetto che corrisponde a uno dei predefiniti azionarie penne, pennelli o tipi di carattere.  
   
 ```  
@@ -4795,7 +4994,7 @@ virtual CGdiObject* SelectStockObject(int nIndex);
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore per il `CGdiObject` oggetto che è stato sostituito se la funzione ha esito positivo. L'oggetto effettivo a cui puntata è un [CPen](../../mfc/reference/cpen-class.md), [CBrush](../../mfc/reference/cbrush-class.md), o [CFont](../../mfc/reference/cfont-class.md) oggetto. Se la chiamata ha esito negativo, il valore restituito è **NULL**.  
   
-##  <a name="a-namesetabortproca--cdcsetabortproc"></a><a name="setabortproc"></a>CDC:: SETABORTPROC  
+##  <a name="setabortproc"></a>CDC:: SETABORTPROC  
  Installa la procedura di interruzione per il processo di stampa.  
   
 ```  
@@ -4832,7 +5031,7 @@ int SetAbortProc(BOOL (CALLBACK* lpfn)(HDC, int));
   
  Si noti inoltre che tutte le funzioni di callback devono intercettare le eccezioni di Microsoft Foundation prima di tornare a Windows, poiché non possono essere generate eccezioni attraverso i limiti di callback. Per ulteriori informazioni sulle eccezioni, vedere l'articolo [eccezioni](../../mfc/exception-handling-in-mfc.md).  
   
-##  <a name="a-namesetarcdirectiona--cdcsetarcdirection"></a><a name="setarcdirection"></a>CDC::SetArcDirection  
+##  <a name="setarcdirection"></a>CDC::SetArcDirection  
  Imposta la direzione di disegno da utilizzare per le funzioni arco e il rettangolo.  
   
 ```  
@@ -4859,7 +5058,7 @@ int SetArcDirection(int nArcDirection);
 |`Chord`|`RoundRect`|  
 |**Ellisse**||  
   
-##  <a name="a-namesetattribdca--cdcsetattribdc"></a><a name="setattribdc"></a>CDC::SetAttribDC  
+##  <a name="setattribdc"></a>CDC::SetAttribDC  
  Chiamare questa funzione per impostare il contesto di dispositivo, attributo `m_hAttribDC`.  
   
 ```  
@@ -4873,7 +5072,7 @@ virtual void SetAttribDC(HDC hDC);
 ### <a name="remarks"></a>Note  
  Questa funzione membro non viene associato il contesto di dispositivo per il `CDC` oggetto. Solo il contesto di dispositivo di output è collegato a un `CDC` oggetto.  
   
-##  <a name="a-namesetbkcolora--cdcsetbkcolor"></a><a name="setbkcolor"></a>CDC::SetBkColor  
+##  <a name="setbkcolor"></a>CDC::SetBkColor  
  Imposta il colore di sfondo corrente per il colore specificato.  
   
 ```  
@@ -4892,7 +5091,7 @@ virtual COLORREF SetBkColor(COLORREF crColor);
   
  Se il dispositivo non può visualizzare il colore specificato, il sistema imposta il colore di sfondo sul colore fisico più vicino.  
   
-##  <a name="a-namesetbkmodea--cdcsetbkmode"></a><a name="setbkmode"></a>CDC::SetBkMode  
+##  <a name="setbkmode"></a>CDC::SetBkMode  
  Imposta la modalità in background.  
   
 ```  
@@ -4916,7 +5115,7 @@ int SetBkMode(int nBkMode);
 ### <a name="example"></a>Esempio  
   Vedere l'esempio per [CWnd::OnCtlColor](../../mfc/reference/cwnd-class.md#onctlcolor).  
   
-##  <a name="a-namesetboundsrecta--cdcsetboundsrect"></a><a name="setboundsrect"></a>CDC::SetBoundsRect  
+##  <a name="setboundsrect"></a>CDC::SetBoundsRect  
  Controlla l'accumulo di informazioni rettangolo di delimitazione per il contesto di dispositivo specificato.  
   
 ```  
@@ -4950,7 +5149,7 @@ UINT SetBoundsRect(
 ### <a name="remarks"></a>Note  
  Windows consente di mantenere un rettangolo di delimitazione per tutte le operazioni di disegno. Questo rettangolo può essere eseguita una query e reimpostare dall'applicazione. I limiti di disegno sono utili per invalidare la cache bitmap.  
   
-##  <a name="a-namesetbrushorga--cdcsetbrushorg"></a><a name="setbrushorg"></a>CDC::SetBrushOrg  
+##  <a name="setbrushorg"></a>CDC::SetBrushOrg  
  Specifica l'origine che GDI assegnerà il pennello successivo che consente di selezionare l'applicazione nel contesto di dispositivo.  
   
 ```  
@@ -4979,7 +5178,7 @@ CPoint SetBrushOrg(POINT point);
   
  Non utilizzare `SetBrushOrg` con scorte `CBrush` oggetti.  
   
-##  <a name="a-namesetcoloradjustmenta--cdcsetcoloradjustment"></a><a name="setcoloradjustment"></a>CDC::SetColorAdjustment  
+##  <a name="setcoloradjustment"></a>CDC::SetColorAdjustment  
  Imposta i valori di regolazione del colore per il contesto di dispositivo utilizzando i valori specificati.  
   
 ```  
@@ -4996,7 +5195,7 @@ BOOL SetColorAdjustment(const COLORADJUSTMENT* lpColorAdjust);
 ### <a name="remarks"></a>Note  
  I valori di regolazione del colore vengono utilizzati per regolare il colore della bitmap di origine per le chiamate all'input di `CDC::StretchBlt` funzione membro quando **dei mezzitoni** mode è impostato.  
   
-##  <a name="a-namesetdcbrushcolora--cdcsetdcbrushcolor"></a><a name="setdcbrushcolor"></a>CDC::SetDCBrushColor  
+##  <a name="setdcbrushcolor"></a>CDC::SetDCBrushColor  
  Imposta il colore corrente del pennello contesto (DC) di dispositivo per il valore di colore specificato.  
   
 ```  
@@ -5015,7 +5214,7 @@ COLORREF SetDCBrushColor(COLORREF crColor);
 ### <a name="remarks"></a>Note  
  Questo metodo emula la funzionalità della funzione [SetDCBrushColor](http://msdn.microsoft.com/library/windows/desktop/dd162969), come descritto nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetdcpencolora--cdcsetdcpencolor"></a><a name="setdcpencolor"></a>CDC::SetDCPenColor  
+##  <a name="setdcpencolor"></a>CDC::SetDCPenColor  
  Imposta il colore corrente della penna contesto (DC) dispositivo per il valore di colore specificato.  
   
 ```  
@@ -5032,7 +5231,7 @@ COLORREF SetDCPenColor(COLORREF crColor);
 ### <a name="remarks"></a>Note  
  Questa funzione membro utilizza la funzione Win32 [SetDCPenColor](http://msdn.microsoft.com/library/windows/desktop/dd162970), come descritto nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetgraphicsmodea--cdcsetgraphicsmode"></a><a name="setgraphicsmode"></a>CDC::SetGraphicsMode  
+##  <a name="setgraphicsmode"></a>CDC::SetGraphicsMode  
  Imposta la modalità grafica per il contesto di dispositivo specificato.  
   
 ```  
@@ -5051,7 +5250,7 @@ int SetGraphicsMode(int iMode);
 ### <a name="remarks"></a>Note  
  Questo metodo include la funzione GDI Windows [SetGraphicsMode](http://msdn.microsoft.com/library/windows/desktop/dd162977).  
   
-##  <a name="a-namesetlayouta--cdcsetlayout"></a><a name="setlayout"></a>CDC::setLayout  
+##  <a name="setlayout"></a>CDC::setLayout  
  Chiamare questa funzione membro per modificare il layout del testo e grafica per un contesto di dispositivo a destra a sinistra, del layout standard per lingue quali arabo ed ebraico.  
   
 ```  
@@ -5082,7 +5281,7 @@ DWORD SetLayout(DWORD dwLayout);
   
  Dopo aver modificato il layout con il **LAYOUT_RTL** flag, flag che specificano in genere a destra o sinistra sono invertiti. Per evitare confusione, è consigliabile definire nomi alternativi per i flag standard. Per un elenco di nomi di flag alternative suggerite, vedere [SetLayout](http://msdn.microsoft.com/library/windows/desktop/dd162979) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetmapmodea--cdcsetmapmode"></a><a name="setmapmode"></a>CDC::SetMapMode  
+##  <a name="setmapmode"></a>CDC::SetMapMode  
  Imposta la modalità di mapping.  
   
 ```  
@@ -5123,7 +5322,7 @@ virtual int SetMapMode(int nMapMode);
 ### <a name="example"></a>Esempio  
   Vedere l'esempio per [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc).  
   
-##  <a name="a-namesetmapperflagsa--cdcsetmapperflags"></a><a name="setmapperflags"></a>CDC::SetMapperFlags  
+##  <a name="setmapperflags"></a>CDC::SetMapperFlags  
  Modifica il metodo utilizzato da BizTalk mapper carattere durante la conversione di un tipo di carattere logica per un tipo di carattere fisico.  
   
 ```  
@@ -5144,7 +5343,7 @@ DWORD SetMapperFlags(DWORD dwFlag);
   
  Se nessun tipo di carattere fisico dispone di un rapporto che corrisponde la specifica del tipo di carattere logica, GDI sceglie un nuovo rapporto di aspetto e seleziona un tipo di carattere che corrisponde a questo nuovo rapporto di aspetto.  
   
-##  <a name="a-namesetmiterlimita--cdcsetmiterlimit"></a><a name="setmiterlimit"></a>CDC::SetMiterLimit  
+##  <a name="setmiterlimit"></a>CDC::SetMiterLimit  
  Imposta il limite per la lunghezza di join di giunzione per il contesto di dispositivo.  
   
 ```  
@@ -5161,7 +5360,7 @@ BOOL SetMiterLimit(float fMiterLimit);
 ### <a name="remarks"></a>Note  
  La lunghezza dell'angolo è definita come la distanza dall'intersezione dei lati del join all'interno dell'intersezione dei lati all'esterno del join. Il limite smussatura è il rapporto massimo consentito tra la lunghezza dell'angolo per lo spessore della linea. Il limite predefinito è 10.0.  
   
-##  <a name="a-namesetoutputdca--cdcsetoutputdc"></a><a name="setoutputdc"></a>CDC::SetOutputDC  
+##  <a name="setoutputdc"></a>CDC::SetOutputDC  
  Chiamare questa funzione membro per impostare il contesto di dispositivo di output, `m_hDC`.  
   
 ```  
@@ -5175,7 +5374,7 @@ virtual void SetOutputDC(HDC hDC);
 ### <a name="remarks"></a>Note  
  Questa funzione membro può essere chiamata solo quando un contesto di dispositivo non è stato collegato la `CDC` oggetto. La funzione membro imposta `m_hDC` ma non viene associato il contesto di dispositivo per il `CDC` oggetto.  
   
-##  <a name="a-namesetpixela--cdcsetpixel"></a><a name="setpixel"></a>CDC::SetPixel  
+##  <a name="setpixel"></a>CDC::SetPixel  
  Imposta i pixel nel punto specificato per la migliore approssimazione del colore specificato da `crColor`.  
   
 ```  
@@ -5211,7 +5410,7 @@ COLORREF SetPixel(
   
  Non tutti i dispositivi supportano la funzione `SetPixel`. Per determinare se un dispositivo supporta `SetPixel`, chiamare il `GetDeviceCaps` funzione membro con il **RASTERCAPS** di indice e controllare il valore restituito per il **RC_BITBLT** flag.  
   
-##  <a name="a-namesetpixelva--cdcsetpixelv"></a><a name="setpixelv"></a>CDC::SetPixelV  
+##  <a name="setpixelv"></a>CDC::SetPixelV  
  Imposta i pixel delle coordinate specificate per la migliore approssimazione del colore specificato.  
   
 ```  
@@ -5245,7 +5444,7 @@ BOOL SetPixelV(
 ### <a name="remarks"></a>Note  
  Il punto deve essere l'area di visualizzazione sia la parte visibile dell'area di dispositivo. Non tutti i dispositivi supportano la funzione membro. Per ulteriori informazioni, vedere il **RC_BITBLT** capacità di `CDC::GetDeviceCaps` funzione membro. `SetPixelV`è più veloce `SetPixel` perché non è necessario restituire il valore di colore del punto di disegnare effettivamente.  
   
-##  <a name="a-namesetpolyfillmodea--cdcsetpolyfillmode"></a><a name="setpolyfillmode"></a>CDC::SetPolyFillMode  
+##  <a name="setpolyfillmode"></a>CDC::SetPolyFillMode  
  Imposta la modalità di riempimento del poligono.  
   
 ```  
@@ -5264,7 +5463,7 @@ int SetPolyFillMode(int nPolyFillMode);
   
  Quando la modalità di riempimento del poligono è **VERTICI**, il sistema utilizza la direzione in cui è stata disegnata una figura per determinare se riempire un'area. Ogni segmento di linea in un poligono viene disegnato in senso orario o antiorario. Ogni volta che una linea immaginaria tracciata da un'area all'esterno di una figura passa attraverso un segmento di linea in senso orario, un numero viene incrementato. Quando la riga passa attraverso un segmento di linea in senso antiorario, il conteggio viene decrementato. L'area viene inserito se il conteggio è diverso da zero quando la riga raggiunge all'esterno della figura.  
   
-##  <a name="a-namesetrop2a--cdcsetrop2"></a><a name="setrop2"></a>CDC::SetROP2  
+##  <a name="setrop2"></a>CDC::SetROP2  
  Imposta la modalità di disegno corrente.  
   
 ```  
@@ -5317,7 +5516,7 @@ int SetROP2(int nDrawMode);
   
  La modalità di disegno è raster solo per i dispositivi; non si applica ai dispositivi di vettore. Modalità di disegno sono codici di operazione raster binari che rappresentano tutte le possibili combinazioni di due variabili, utilizzando gli operatori binari AND, OR e XOR (OR esclusivo) e l'operazione unaria NOT booleane.  
   
-##  <a name="a-namesetstretchbltmodea--cdcsetstretchbltmode"></a><a name="setstretchbltmode"></a>CDC::SetStretchBltMode  
+##  <a name="setstretchbltmode"></a>CDC::SetStretchBltMode  
  Imposta la modalità di adattamento di bitmap per la `StretchBlt` funzione membro.  
   
 ```  
@@ -5352,7 +5551,7 @@ int SetStretchBltMode(int nStretchMode);
   
  Modalità di adattamento aggiuntive possono anche essere disponibili a seconda delle funzionalità del driver di dispositivo.  
   
-##  <a name="a-namesettextaligna--cdcsettextalign"></a><a name="settextalign"></a>CDC::setTextAlign  
+##  <a name="settextalign"></a>CDC::setTextAlign  
  Imposta i flag di allineamento del testo.  
   
 ```  
@@ -5389,7 +5588,7 @@ UINT SetTextAlign(UINT nFlags);
 ### <a name="remarks"></a>Note  
  Il `TextOut` e `ExtTextOut` le funzioni membro utilizzare questi flag durante il posizionamento di una stringa di testo in un dispositivo o la visualizzazione. I flag di specificano la relazione tra un momento specifico e un rettangolo che racchiude il testo. Le coordinate di questo punto vengono passate come parametri per il `TextOut` funzione membro. Il rettangolo che racchiude il testo è formato dalle celle adiacenti carattere nella stringa di testo.  
   
-##  <a name="a-namesettextcharacterextraa--cdcsettextcharacterextra"></a><a name="settextcharacterextra"></a>CDC::SetTextCharacterExtra  
+##  <a name="settextcharacterextra"></a>CDC::SetTextCharacterExtra  
  Imposta la quantità di spaziatura tra caratteri relativamente.  
   
 ```  
@@ -5406,7 +5605,7 @@ int SetTextCharacterExtra(int nCharExtra);
 ### <a name="remarks"></a>Note  
  GDI aggiunge la spaziatura a ogni carattere, inclusi i caratteri di interruzione, quando si scrive una riga di testo nel contesto di dispositivo. Il valore predefinito per la quantità di spaziatura tra caratteri relativamente è 0.  
   
-##  <a name="a-namesettextcolora--cdcsettextcolor"></a><a name="settextcolor"></a>CDC::SetTextColor  
+##  <a name="settextcolor"></a>CDC::SetTextColor  
  Imposta il colore del testo per il colore specificato.  
   
 ```  
@@ -5428,7 +5627,7 @@ virtual COLORREF SetTextColor(COLORREF crColor);
 ### <a name="example"></a>Esempio  
   Vedere l'esempio per [CWnd::OnCtlColor](../../mfc/reference/cwnd-class.md#onctlcolor).  
   
-##  <a name="a-namesettextjustificationa--cdcsettextjustification"></a><a name="settextjustification"></a>CDC::SetTextJustification  
+##  <a name="settextjustification"></a>CDC::SetTextJustification  
  Aggiunge uno spazio per i caratteri di interruzione in una stringa.  
   
 ```  
@@ -5460,7 +5659,7 @@ int SetTextJustification(
   
  Dopo ogni riga è stata allineata, il termine di questo errore deve essere cancellato in modo da essere incorporate in riga successiva. Il termine può essere cancellato chiamando `SetTextJustification` con `nBreakExtra` impostato su 0.  
   
-##  <a name="a-namesetviewportexta--cdcsetviewportext"></a><a name="setviewportext"></a>CDC::SetViewportExt  
+##  <a name="setviewportext"></a>CDC::SetViewportExt  
  Imposta gli extent x e y del riquadro di visualizzazione del contesto del dispositivo.  
   
 ```  
@@ -5499,7 +5698,7 @@ CSize SetViewportExt(SIZE size);
 ### <a name="example"></a>Esempio  
   Vedere l'esempio per [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc).  
   
-##  <a name="a-namesetviewportorga--cdcsetviewportorg"></a><a name="setviewportorg"></a>CDC::SetViewportOrg  
+##  <a name="setviewportorg"></a>CDC::SetViewportOrg  
  Imposta l'origine del riquadro di visualizzazione del contesto del dispositivo.  
   
 ```  
@@ -5531,7 +5730,7 @@ CPoint SetViewportOrg(POINT point);
 ### <a name="example"></a>Esempio  
   Vedere l'esempio per [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc).  
   
-##  <a name="a-namesetwindowexta--cdcsetwindowext"></a><a name="setwindowext"></a>CDC::SetWindowExt  
+##  <a name="setwindowext"></a>CDC::SetWindowExt  
  Imposta gli extent x e y della finestra associata al contesto di dispositivo.  
   
 ```  
@@ -5577,7 +5776,7 @@ CSize SetWindowExt(SIZE size);
 ### <a name="example"></a>Esempio  
   Vedere l'esempio per [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc).  
   
-##  <a name="a-namesetwindoworga--cdcsetwindoworg"></a><a name="setwindoworg"></a>CDC::SetWindowOrg  
+##  <a name="setwindoworg"></a>CDC::SetWindowOrg  
  Imposta l'origine della finestra del contesto del dispositivo.  
   
 ```  
@@ -5606,7 +5805,7 @@ CPoint SetWindowOrg(POINT point);
   
  L'origine finestra contrassegna il punto nel sistema di coordinate logico da cui GDI esegue il mapping dell'origine del riquadro di visualizzazione, nel sistema di coordinate di dispositivo specificato da un punto di **SetWindowOrg** (funzione). GDI esegue il mapping di tutti gli altri punti seguendo la procedura necessaria per eseguire il mapping dell'origine finestra all'origine del viewport. Ad esempio, tutti i punti in un cerchio intorno al punto in corrispondenza dell'origine della finestra sarà un cerchio intorno al punto in corrispondenza dell'origine del riquadro di visualizzazione. Analogamente, tutti i punti in una riga che passa attraverso l'origine della finestra sarà in una riga che passa attraverso l'origine del riquadro di visualizzazione.  
   
-##  <a name="a-namesetworldtransforma--cdcsetworldtransform"></a><a name="setworldtransform"></a>CDC::SetWorldTransform  
+##  <a name="setworldtransform"></a>CDC::SetWorldTransform  
  Imposta una trasformazione bidimensionale lineare tra spazio mondo e pagina per il contesto di dispositivo specificato. Questa trasformazione può essere utilizzata per scalare, ruotare, inclinare o convertire l'output grafico.  
   
 ```  
@@ -5627,7 +5826,7 @@ BOOL SetWorldTransform(const XFORM& rXform);
 ### <a name="remarks"></a>Note  
  Questo metodo include la funzione GDI Windows [SetWorldTransform](http://msdn.microsoft.com/library/windows/desktop/dd145104).  
   
-##  <a name="a-namestartdoca--cdcstartdoc"></a><a name="startdoc"></a>CDC::StartDoc  
+##  <a name="startdoc"></a>CDC::StartDoc  
  Informa il driver di dispositivo avviato un nuovo processo di stampa e che tutte le successive `StartPage` e `EndPage` chiamate devono essere eseguito lo spooling sotto lo stesso processo fino a un `EndDoc` chiamata viene eseguita.  
   
 ```  
@@ -5659,7 +5858,7 @@ int StartDoc(LPCTSTR lpszDocName);
   
  [!code-cpp[NVC_MFCDocView n.&41;](../../mfc/codesnippet/cpp/cdc-class_13.cpp)]  
   
-##  <a name="a-namestartpagea--cdcstartpage"></a><a name="startpage"></a>CDC::StartPage  
+##  <a name="startpage"></a>CDC::StartPage  
  Chiamare questa funzione membro per preparare il driver della stampante per la ricezione dei dati.  
   
 ```  
@@ -5679,7 +5878,7 @@ int StartPage();
 ### <a name="example"></a>Esempio  
   Vedere l'esempio per [CDC::StartDoc](#startdoc).  
   
-##  <a name="a-namestretchblta--cdcstretchblt"></a><a name="stretchblt"></a>CDC::StretchBlt  
+##  <a name="stretchblt"></a>CDC::StretchBlt  
  Copia una bitmap da un rettangolo di origine in un rettangolo di destinazione, allungando o comprimendo la bitmap se necessario per adattarla alle dimensioni del rettangolo di destinazione.  
   
 ```  
@@ -5775,7 +5974,7 @@ BOOL StretchBlt(
   
  Non tutti i dispositivi supportano la funzione `StretchBlt`. Per determinare se un dispositivo supporta `StretchBlt`, chiamare il `GetDeviceCaps` funzione membro con il **RASTERCAPS** di indice e controllare il valore restituito per il **RC_STRETCHBLT** flag.  
   
-##  <a name="a-namestrokeandfillpatha--cdcstrokeandfillpath"></a><a name="strokeandfillpath"></a>CDC::StrokeAndFillPath  
+##  <a name="strokeandfillpath"></a>CDC::StrokeAndFillPath  
  Chiude figure aperte in un percorso, i tratti la struttura del percorso utilizzando la penna corrente e viene compilato interna utilizzando il pennello corrente.  
   
 ```  
@@ -5788,7 +5987,7 @@ BOOL StrokeAndFillPath();
 ### <a name="remarks"></a>Note  
  Il contesto di dispositivo deve contenere un tracciato chiuso. Il `StrokeAndFillPath` funzione membro ha lo stesso effetto di tutte le figure aperte nel percorso di chiusura e traccia e inserendo il percorso separatamente, ad eccezione del fatto che non si sovrappongono anche se l'area tracciata riempita la penna è ampia.  
   
-##  <a name="a-namestrokepatha--cdcstrokepath"></a><a name="strokepath"></a>CDC::StrokePath  
+##  <a name="strokepath"></a>CDC::StrokePath  
  Esegue il rendering nel percorso specificato utilizzando la penna corrente.  
   
 ```  
@@ -5801,7 +6000,7 @@ BOOL StrokePath();
 ### <a name="remarks"></a>Note  
  Il contesto di dispositivo deve contenere un tracciato chiuso.  
   
-##  <a name="a-nametabbedtextouta--cdctabbedtextout"></a><a name="tabbedtextout"></a>CDC::TabbedTextOut  
+##  <a name="tabbedtextout"></a>CDC::TabbedTextOut  
  Chiamare questa funzione membro per scrivere una stringa di caratteri nella posizione specificata, l'espansione di schede per i valori specificati nella matrice di posizioni di tabulazione.  
   
 ```  
@@ -5859,7 +6058,7 @@ CSize TabbedTextOut(
   
  Per impostazione predefinita, la posizione corrente non viene utilizzata o aggiornata dalla funzione. Se un'applicazione deve aggiornare la posizione corrente quando chiama la funzione, l'applicazione può chiamare il [SetTextAlign](#settextalign) funzione membro con `nFlags` impostato su **TA_UPDATECP**. Quando questo flag è impostato, Windows ignora i *x* e *y* parametri nelle chiamate successive a `TabbedTextOut`, utilizzando invece la posizione corrente.  
   
-##  <a name="a-nametextouta--cdctextout"></a><a name="textout"></a>CDC:: TextOut  
+##  <a name="textout"></a>CDC:: TextOut  
  Scrive una stringa di caratteri nella posizione specificata utilizzando il tipo di carattere attualmente selezionato.  
   
 ```  
@@ -5903,7 +6102,7 @@ BOOL TextOut(
 ### <a name="example"></a>Esempio  
   Vedere l'esempio per [CDC:: BeginPath](#beginpath).  
   
-##  <a name="a-nametransparentblta--cdctransparentblt"></a><a name="transparentblt"></a>CDC::TransparentBlt  
+##  <a name="transparentblt"></a>CDC::TransparentBlt  
  Chiamare questa funzione membro per il trasferimento di un blocco di bit di dati relativi al colore, che corrisponde a un rettangolo di pixel dal contesto di dispositivo di origine specificata, in un contesto di dispositivo di destinazione.  
   
 ```  
@@ -5959,7 +6158,7 @@ BOOL TransparentBlt(
   
  Per ulteriori informazioni, vedere [TransparentBlt](http://msdn.microsoft.com/library/windows/desktop/dd145141) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameupdatecolorsa--cdcupdatecolors"></a><a name="updatecolors"></a>CDC::UpdateColors  
+##  <a name="updatecolors"></a>CDC::UpdateColors  
  Gli aggiornamenti dell'area client di contesto di dispositivo abbinando corrente colori dell'area client per la tavolozza di sistema su base pixel per pixel.  
   
 ```  
@@ -5973,7 +6172,7 @@ void UpdateColors();
   
  Il `UpdateColors` funzione membro in genere gli aggiornamenti un'area client più rapidamente di ridisegnare l'area. Tuttavia, poiché la funzione esegue la conversione di colore in base al colore di ciascun pixel prima di modificare la tavolozza di sistema, ogni chiamata a questa funzione comporta la perdita di alcuni precisione di colore.  
   
-##  <a name="a-namewidenpatha--cdcwidenpath"></a><a name="widenpath"></a>CDC::WidenPath  
+##  <a name="widenpath"></a>CDC::WidenPath  
  Ridefinisce il percorso corrente dell'area che verrà disegnato se sono stato tracciato il percorso utilizzando la penna attualmente selezionata nel contesto di dispositivo.  
   
 ```  

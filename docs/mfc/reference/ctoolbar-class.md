@@ -10,6 +10,26 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CToolBar
+- AFXEXT/CToolBar
+- AFXEXT/CToolBar::CToolBar
+- AFXEXT/CToolBar::CommandToIndex
+- AFXEXT/CToolBar::Create
+- AFXEXT/CToolBar::CreateEx
+- AFXEXT/CToolBar::GetButtonInfo
+- AFXEXT/CToolBar::GetButtonStyle
+- AFXEXT/CToolBar::GetButtonText
+- AFXEXT/CToolBar::GetItemID
+- AFXEXT/CToolBar::GetItemRect
+- AFXEXT/CToolBar::GetToolBarCtrl
+- AFXEXT/CToolBar::LoadBitmap
+- AFXEXT/CToolBar::LoadToolBar
+- AFXEXT/CToolBar::SetBitmap
+- AFXEXT/CToolBar::SetButtonInfo
+- AFXEXT/CToolBar::SetButtons
+- AFXEXT/CToolBar::SetButtonStyle
+- AFXEXT/CToolBar::SetButtonText
+- AFXEXT/CToolBar::SetHeight
+- AFXEXT/CToolBar::SetSizes
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -149,7 +169,7 @@ class CToolBar : public CControlBar
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** AFXEXT  
   
-##  <a name="a-namecommandtoindexa--ctoolbarcommandtoindex"></a><a name="commandtoindex"></a>CToolBar::CommandToIndex  
+##  <a name="commandtoindex"></a>CToolBar::CommandToIndex  
  Questa funzione membro restituisce l'indice del primo pulsante barra degli strumenti, a partire dalla posizione 0, il cui ID di comando corrisponde `nIDFind`.  
   
 ```  
@@ -163,7 +183,7 @@ int CommandToIndex(UINT nIDFind) const;
 ### <a name="return-value"></a>Valore restituito  
  L'indice del pulsante o –&1; se nessun pulsante ha l'ID del comando specificato.  
   
-##  <a name="a-namecreatea--ctoolbarcreate"></a><a name="create"></a>CToolBar:: Create  
+##  <a name="create"></a>CToolBar:: Create  
  Questa funzione membro crea una barra degli strumenti di Windows (una finestra figlio) e associa il `CToolBar` oggetto.  
   
 ```  
@@ -210,7 +230,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView&#179;](../../mfc/codesnippet/cpp/ctoolbar-class_1.cpp)]  
   
-##  <a name="a-namecreateexa--ctoolbarcreateex"></a><a name="createex"></a>CToolBar:: CreateEx  
+##  <a name="createex"></a>CToolBar:: CreateEx  
  Chiamare questa funzione per creare una barra degli strumenti di Windows (una finestra figlio) che verrà associato il `CToolBar` oggetto.  
   
 ```  
@@ -253,7 +273,7 @@ virtual BOOL CreateEx(
 ### <a name="example"></a>Esempio  
  [!code-cpp[&#180; NVC_MFCDocView](../../mfc/codesnippet/cpp/ctoolbar-class_2.cpp)]  
   
-##  <a name="a-namectoolbara--ctoolbarctoolbar"></a><a name="ctoolbar"></a>CToolBar::CToolBar  
+##  <a name="ctoolbar"></a>CToolBar::CToolBar  
  Questa funzione membro costruisce un `CToolBar` dell'oggetto e imposta le dimensioni predefinite.  
   
 ```  
@@ -263,7 +283,7 @@ CToolBar();
 ### <a name="remarks"></a>Note  
  Chiamare il [crea](#create) funzione membro per creare la finestra degli strumenti.  
   
-##  <a name="a-namegetbuttoninfoa--ctoolbargetbuttoninfo"></a><a name="getbuttoninfo"></a>CToolBar::GetButtonInfo  
+##  <a name="getbuttoninfo"></a>CToolBar::GetButtonInfo  
  Questa funzione membro recupera l'ID di controllo, stile e indice dell'immagine del pulsante della barra degli strumenti o separatore nel percorso specificato da *nIndex.*  
   
 ```  
@@ -292,7 +312,7 @@ void GetButtonInfo(
   
  Se `nIndex` specifica un separatore, `iImage` è impostato sulla larghezza del separatore in pixel.  
   
-##  <a name="a-namegetbuttonstylea--ctoolbargetbuttonstyle"></a><a name="getbuttonstyle"></a>CToolBar:: GetButtonStyle  
+##  <a name="getbuttonstyle"></a>CToolBar:: GetButtonStyle  
  Chiamare questa funzione membro per recuperare lo stile di un pulsante o un separatore sulla barra degli strumenti.  
   
 ```  
@@ -309,7 +329,7 @@ UINT GetButtonStyle(int nIndex) const;
 ### <a name="remarks"></a>Note  
  Stile del pulsante determina l'aspetto del pulsante e la modalità di risposta all'input dell'utente. Vedere [SetButtonStyle](#setbuttonstyle) per esempi di stili dei pulsanti.  
   
-##  <a name="a-namegetbuttontexta--ctoolbargetbuttontext"></a><a name="getbuttontext"></a>CToolBar::GetButtonText  
+##  <a name="getbuttontext"></a>CToolBar::GetButtonText  
  Chiamare questa funzione membro per recuperare il testo visualizzato su un pulsante.  
   
 ```  
@@ -333,7 +353,7 @@ void GetButtonText(
 ### <a name="remarks"></a>Note  
  La seconda forma di questo membro funzione compila un `CString` oggetto con il testo della stringa.  
   
-##  <a name="a-namegetitemida--ctoolbargetitemid"></a><a name="getitemid"></a>CToolBar::GetItemID  
+##  <a name="getitemid"></a>CToolBar::GetItemID  
  Questa funzione membro restituisce l'ID di comando del pulsante o separatore specificato da `nIndex`.  
   
 ```  
@@ -350,7 +370,7 @@ UINT GetItemID(int nIndex) const;
 ### <a name="remarks"></a>Note  
  Separatori restituiscono **ID_SEPARATOR**.  
   
-##  <a name="a-namegetitemrecta--ctoolbargetitemrect"></a><a name="getitemrect"></a>CToolBar::GetItemRect  
+##  <a name="getitemrect"></a>CToolBar::GetItemRect  
  Questa funzione membro inserisce il `RECT` il cui indirizzo è contenuto nella struttura `lpRect` con le coordinate del pulsante o separatore specificato da `nIndex`.  
   
 ```  
@@ -374,7 +394,7 @@ virtual void GetItemRect(
 ### <a name="example"></a>Esempio  
   Vedere l'esempio per [CToolBar::SetSizes](#setsizes).  
   
-##  <a name="a-namegettoolbarctrla--ctoolbargettoolbarctrl"></a><a name="gettoolbarctrl"></a>CToolBar:: GetToolBarCtrl  
+##  <a name="gettoolbarctrl"></a>CToolBar:: GetToolBarCtrl  
  Questa funzione membro consente l'accesso diretto al controllo sottostante comune.  
   
 ```  
@@ -392,7 +412,7 @@ CToolBarCtrl& GetToolBarCtrl() const;
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocViewSDI&#15;](../../mfc/codesnippet/cpp/ctoolbar-class_3.cpp)]  
   
-##  <a name="a-nameloadbitmapa--ctoolbarloadbitmap"></a><a name="loadbitmap"></a>CToolBar::LoadBitmap  
+##  <a name="loadbitmap"></a>CToolBar::LoadBitmap  
  Chiamare questa funzione membro per caricare la bitmap specificata da `lpszResourceName` o `nIDResource`.  
   
 ```  
@@ -416,7 +436,7 @@ BOOL LoadBitmap(UINT nIDResource);
 > [!WARNING]
 > `CToolBar`supporta le bitmap con un massimo di 16 colori. Quando si carica un'immagine in un editor barra degli strumenti, Visual Studio automaticamente Converte l'immagine in una bitmap di 16 colori, se necessario e viene visualizzato un messaggio di avviso se l'immagine è stato convertito. Se si utilizza un'immagine con più di 16 colori (utilizzando un editor esterno per modificare l'immagine), l'applicazione potrebbe comportarsi in modo imprevisto.  
   
-##  <a name="a-nameloadtoolbara--ctoolbarloadtoolbar"></a><a name="loadtoolbar"></a>CToolBar::LoadToolBar  
+##  <a name="loadtoolbar"></a>CToolBar::LoadToolBar  
  Chiamare questa funzione membro per caricare la barra degli strumenti specificata da `lpszResourceName` o `nIDResource`.  
   
 ```  
@@ -440,7 +460,7 @@ BOOL LoadToolBar(UINT nIDResource);
 ### <a name="example"></a>Esempio  
   Vedere l'esempio per [CToolBar:: CreateEx](#createex).  
   
-##  <a name="a-namesetbitmapa--ctoolbarsetbitmap"></a><a name="setbitmap"></a>CToolBar::SetBitmap  
+##  <a name="setbitmap"></a>CToolBar::SetBitmap  
  Chiamare questa funzione membro per impostare l'immagine bitmap della barra degli strumenti.  
   
 ```  
@@ -457,7 +477,7 @@ BOOL SetBitmap(HBITMAP hbmImageWell);
 ### <a name="remarks"></a>Note  
  Ad esempio, chiamare `SetBitmap` per modificare l'immagine bitmap dopo che l'utente esegue un'azione in un documento che modifica l'azione di un pulsante.  
   
-##  <a name="a-namesetbuttoninfoa--ctoolbarsetbuttoninfo"></a><a name="setbuttoninfo"></a>CToolBar::  
+##  <a name="setbuttoninfo"></a>CToolBar::  
  Chiamare questa funzione membro per impostare l'ID di comando del pulsante, stile e il numero di immagine.  
   
 ```  
@@ -505,7 +525,7 @@ void SetButtonInfo(
   
  Per informazioni sui pulsanti e immagini bitmap, vedere il [CToolBar](../../mfc/reference/ctoolbar-class.md) panoramica e [CToolBar::LoadBitmap](#loadbitmap).  
   
-##  <a name="a-namesetbuttonsa--ctoolbarsetbuttons"></a><a name="setbuttons"></a>CToolBar::SetButtons  
+##  <a name="setbuttons"></a>CToolBar::SetButtons  
  Questa funzione membro imposta sul valore specificato dall'elemento corrispondente della matrice di ID di comando del pulsante di ogni barra degli strumenti `lpIDArray`.  
   
 ```  
@@ -531,7 +551,7 @@ BOOL SetButtons(
   
  Se `lpIDArray` è **NULL**, questa funzione consente di allocare spazio per il numero di elementi specificato da `nIDCount`. Utilizzare [utilizzando SetButtonInfo](#setbuttoninfo) per impostare gli attributi di ogni elemento.  
   
-##  <a name="a-namesetbuttonstylea--ctoolbarsetbuttonstyle"></a><a name="setbuttonstyle"></a>CToolBar::SetButtonStyle  
+##  <a name="setbuttonstyle"></a>CToolBar::SetButtonStyle  
  Chiamare questa funzione membro per impostare lo stile di un pulsante o un separatore o per raggruppare i pulsanti.  
   
 ```  
@@ -571,7 +591,7 @@ void SetButtonStyle(
 > [!NOTE]
 >  È inoltre possibile impostare gli stati dei pulsanti utilizzando la `nStyle` parametro; tuttavia, poiché gli stati dei pulsanti sono controllati dal [ON_UPDATE_COMMAND_UI](http://msdn.microsoft.com/library/c4de3c21-2d2e-4b89-a4ce-d0c0e2d9edc4) gestore, qualsiasi stato impostato utilizzando `SetButtonStyle` andranno perse durante l'elaborazione successiva inattivo. Vedere [come gli oggetti dell'interfaccia utente di aggiornamento](../../mfc/how-to-update-user-interface-objects.md) e [TN031: barre di controllo](../../mfc/tn031-control-bars.md) per ulteriori informazioni.  
   
-##  <a name="a-namesetbuttontexta--ctoolbarsetbuttontext"></a><a name="setbuttontext"></a>CToolBar::SetButtonText  
+##  <a name="setbuttontext"></a>CToolBar::SetButtonText  
  Chiamare questa funzione per impostare il testo su un pulsante.  
   
 ```  
@@ -593,7 +613,7 @@ BOOL SetButtonText(
 ### <a name="example"></a>Esempio  
   Vedere l'esempio per [CToolBar:: GetToolBarCtrl](#gettoolbarctrl).  
   
-##  <a name="a-namesetheighta--ctoolbarsetheight"></a><a name="setheight"></a>CToolBar::SetHeight  
+##  <a name="setheight"></a>CToolBar::SetHeight  
  Questa funzione membro imposta l'altezza della barra degli strumenti sul valore, in pixel, specificato in `cyHeight`.  
   
 ```  
@@ -609,7 +629,7 @@ void SetHeight(int cyHeight);
   
  Se questa funzione non viene chiamata, il framework utilizza le dimensioni del pulsante per determinare l'altezza della barra degli strumenti.  
   
-##  <a name="a-namesetsizesa--ctoolbarsetsizes"></a><a name="setsizes"></a>CToolBar::SetSizes  
+##  <a name="setsizes"></a>CToolBar::SetSizes  
  Chiamare questa funzione membro per impostare i pulsanti della barra degli strumenti per la dimensione, in pixel, specificato in *sizeButton*.  
   
 ```  

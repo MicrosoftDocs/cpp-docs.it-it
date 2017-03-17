@@ -9,11 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CAutoPtrList
 - CAutoPtrList
-- ATL.CAutoPtrList
-- ATL::CAutoPtrList<E>
-- ATL.CAutoPtrList<E>
+- ATLCOLL/ATL::CAutoPtrList
+- ATLCOLL/ATL::CAutoPtrList::CAutoPtrList
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -82,7 +80,7 @@ class CAutoPtrList :
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlcoll. h  
   
-##  <a name="a-namecautoptrlista--cautoptrlistcautoptrlist"></a><a name="cautoptrlist"></a>CAutoPtrList::CAutoPtrList  
+##  <a name="cautoptrlist"></a>CAutoPtrList::CAutoPtrList  
  Costruttore.  
   
 ```

@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonGalleryMenuButton
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGalleryMenuButton
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGalleryMenuButton::CMFCRibbonGalleryMenuButton
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGalleryMenuButton::CopyFrom
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGalleryMenuButton::CreatePopupMenu
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGalleryMenuButton::GetPalette
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGalleryMenuButton::HasButton
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGalleryMenuButton::IsEmptyMenuAllowed
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -103,7 +110,7 @@ ASSERT_VALID (pExButton);
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxRibbonPaletteGallery.h  
   
-##  <a name="a-namecopyfroma--cmfcribbongallerymenubuttoncopyfrom"></a><a name="copyfrom"></a>CMFCRibbonGalleryMenuButton::CopyFrom  
+##  <a name="copyfrom"></a>CMFCRibbonGalleryMenuButton::CopyFrom  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -115,7 +122,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namecmfcribbongallerymenubuttona--cmfcribbongallerymenubuttoncmfcribbongallerymenubutton"></a><a name="cmfcribbongallerymenubutton"></a>CMFCRibbonGalleryMenuButton::CMFCRibbonGalleryMenuButton  
+##  <a name="cmfcribbongallerymenubutton"></a>CMFCRibbonGalleryMenuButton::CMFCRibbonGalleryMenuButton  
  Costruisce e Inizializza un [CMFCRibbonGalleryMenuButton](../../mfc/reference/cmfcribbongallerymenubutton-class.md) oggetto.  
   
 ```  
@@ -161,7 +168,7 @@ CMFCRibbonGalleryMenuButton(
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo n.&8;](../../mfc/reference/codesnippet/cpp/cmfcribbongallerymenubutton-class_1.cpp)]  
   
-##  <a name="a-namecreatepopupmenua--cmfcribbongallerymenubuttoncreatepopupmenu"></a><a name="createpopupmenu"></a>CMFCRibbonGalleryMenuButton::CreatePopupMenu  
+##  <a name="createpopupmenu"></a>CMFCRibbonGalleryMenuButton::CreatePopupMenu  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -172,7 +179,7 @@ virtual CMFCPopupMenu* CreatePopupMenu();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetpalettea--cmfcribbongallerymenubuttongetpalette"></a><a name="getpalette"></a>CMFCRibbonGalleryMenuButton::GetPalette  
+##  <a name="getpalette"></a>CMFCRibbonGalleryMenuButton::GetPalette  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -183,7 +190,7 @@ CMFCRibbonGallery& GetPalette();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namehasbuttona--cmfcribbongallerymenubuttonhasbutton"></a><a name="hasbutton"></a>CMFCRibbonGalleryMenuButton::HasButton  
+##  <a name="hasbutton"></a>CMFCRibbonGalleryMenuButton::HasButton  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -194,7 +201,7 @@ virtual BOOL HasButton() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameisemptymenualloweda--cmfcribbongallerymenubuttonisemptymenuallowed"></a><a name="isemptymenuallowed"></a>CMFCRibbonGalleryMenuButton::IsEmptyMenuAllowed  
+##  <a name="isemptymenuallowed"></a>CMFCRibbonGalleryMenuButton::IsEmptyMenuAllowed  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  

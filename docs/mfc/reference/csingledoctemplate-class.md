@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSingleDocTemplate
+- AFXWIN/CSingleDocTemplate
+- AFXWIN/CSingleDocTemplate::CSingleDocTemplate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +90,7 @@ class CSingleDocTemplate : public CDocTemplate
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxwin.h  
   
-##  <a name="a-namecsingledoctemplatea--csingledoctemplatecsingledoctemplate"></a><a name="csingledoctemplate"></a>CSingleDocTemplate::CSingleDocTemplate  
+##  <a name="csingledoctemplate"></a>CSingleDocTemplate::CSingleDocTemplate  
  Costruisce un oggetto `CSingleDocTemplate`.  
   
 ```  
