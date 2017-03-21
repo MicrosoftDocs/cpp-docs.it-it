@@ -1,7 +1,7 @@
 ---
 title: "Novità di Visual C++ in Visual Studio | Microsoft Docs"
 ms.custom: 
-ms.date: 11/16/2016
+ms.date: 3/7/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -27,8 +27,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 39648d170fc189168d5f199fff8b3c2012456b82
-ms.openlocfilehash: 89fceaf02fe2b02bfe2ce6ff1de90bcd2bf66006
+ms.sourcegitcommit: d3ac5f5e54334e42ad48304d26a4f32b1b598459
+ms.openlocfilehash: dbed9eaf443d7392373d1eeba81bc0095c5bd1b4
+ms.lasthandoff: 03/07/2017
 
 ---
 
@@ -36,7 +37,7 @@ ms.openlocfilehash: 89fceaf02fe2b02bfe2ce6ff1de90bcd2bf66006
 
 In [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] sono stati inclusi numerosi aggiornamenti e correzioni per l'ambiente Visual C++. Sono stati corretti più di 250 bug e problemi nel compilatore e negli strumenti, molti dei quali sono stati segnalati dai clienti attraverso [Microsoft Connect](https://connect.microsoft.com/VisualStudio "Microsoft Connect"). Microsoft ringrazia i clienti per le segnalazioni inviate.  Per altre informazioni sulle novità in tutto Visual Studio, visitare la pagina [Novità in [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]](https://go.microsoft.com/fwlink/?linkid=834481).
 
-Il numero di versione del compilatore e degli strumenti in [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] è 14.10.24629. 
+<!--The compiler and tools version number in [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] is 14.10.24629. -->
 
 
 ## <a name="c-compiler"></a>Compilatore C++
@@ -63,8 +64,9 @@ In questa versione sono stati introdotti numerosi miglioramenti per l'ottimizzaz
 - Miglioramento della generazione del codice per i cicli: supporto della vettorializzazione automatica della divisione di interi costanti, migliore identificazione dei modelli memset.
 - Maggiore sicurezza del codice: è stata migliorata l'emissione della diagnostica del compilatore per i sovraccarichi del buffer e /guard:cf ora protegge le istruzioni switch che generano tabelle di collegamento.
 - Controllo delle versioni: il valore del preprocessore predefinito macro_MSC_VER ora viene monotonicamente aggiornato ad ogni aggiornamento del set di strumenti di Visual C++. Per altre informazioni, vedere il post relativo alla [versione del compilatore Visual C++](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/visual-c-compiler-version/).
-- Nuovo layout del set di strumenti: il compilatore e gli strumenti di compilazione correlati hanno un nuovo percorso e una nuova struttura di directory nel computer di sviluppo. Il nuovo layout consente installazioni side-by-side di più versioni del compilatore. Per altre informazioni, vedere il post relativo al [layout degli strumenti del compilatore in Visual Studio "15"](https://blogs.msdn.microsoft.com/vcblog/2016/10/07/compiler-tools-layout-in-visual-studio-15/).
-- Miglioramenti alla diagnostica: nella finestra di output ora appare la colonna in cui si verifica un errore. Per altre informazioni, vedere il post relativo ai [miglioramenti della diagnostica del compilatore C++ in VS "15" anteprima 5](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/c-compiler-diagnostics-improvements-in-vs-15-rc/).
+- Nuovo layout del set di strumenti: il compilatore e gli strumenti di compilazione correlati hanno un nuovo percorso e una nuova struttura di directory nel computer di sviluppo. Il nuovo layout consente installazioni side-by-side di più versioni del compilatore. Per altre informazioni, vedere il post [Compiler Tools Layout in Visual Studio "15"](https://blogs.msdn.microsoft.com/vcblog/2016/10/07/compiler-tools-layout-in-visual-studio-15/) (Layout degli strumenti del compilatore in Visual Studio "15").
+- Miglioramenti alla diagnostica: nella finestra di output ora appare la colonna in cui si verifica un errore. Per altre informazioni, vedere il post [C++ compiler diagnostics improvements in VS "15" Preview 5](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/c-compiler-diagnostics-improvements-in-vs-15-rc/) (Miglioramenti della diagnostica del compilatore C++ in VS "15" anteprima 5).
+- Quando si usano coroutine, la parola chiave sperimentale "yield" (disponibile sotto l'opzione /await) è stata rimossa. È necessario aggiornare il codice per l'uso di "co_yield". Per altre informazioni, vedere il blog del team di Visual C++. 
 
 ## <a name="c-libraries"></a>Librerie C++
 
@@ -89,6 +91,7 @@ In questa versione sono stati introdotti numerosi miglioramenti per l'ottimizzaz
 * Per aumentare la velocità effettiva del compilatore, le intestazioni della libreria standard C++ evitano di includere dichiarazioni per le funzioni intrinseche del compilatore non indispensabili.
 * Diagnostica del compilatore leggermente migliorata per le chiamate bind() non corrette.
 * Miglioramento delle prestazioni (più che triplicate) per i costruttori di spostamento di std::string/std::wstring
+* Per l'elenco completo dei miglioramenti apportati a STL, vedere [STL Fixes In VS 2017 RTM](https://blogs.msdn.microsoft.com/vcblog/2017/02/06/stl-fixes-in-vs-2017-rtm/) (Correzioni a STL in VS 2017 RTM).
 
 ### <a name="open-source-library-support"></a>Supporto librerie open source  
 Vcpkg è un strumento open source da riga di comando che semplifica notevolmente il processo di acquisizione e di creazione di librerie statiche e DLL C++ open source in Visual Studio. Per altre informazioni, vedere il post relativo agli [aggiornamenti Vcpkg e alla disponibilità del collegamento statico](https://blogs.msdn.microsoft.com/vcblog/2016/11/01/vcpkg-updates-static-linking-is-now-available/).
@@ -102,7 +105,12 @@ CPPRestSDK, un'API Web multipiattaforma per C++, è stato aggiornato alla versio
 * Annullamento dell'eliminazione dell'avviso valido C4640 relativo all'inizializzazione thread-safe di elementi statici locali in atlstr.h
 * L'inizializzazione thread-safe di elementi statici locali veniva disattivata automaticamente nel set di strumenti XP quando [si usava ATL e si compilava una DLL]. Questa procedura non è più necessaria. È possibile aggiungere /Zc:threadSafeInit- nelle impostazioni del progetto se si desidera disattivare l'inizializzazione thread-safe. 
 
+### <a name="visual-c-runtime"></a>Runtime di Visual C++
+* Nuova intestazione "cfguard.h" per i simboli di protezione del flusso di controllo. 
+
 ## <a name="c-ide"></a>IDE C++
+
+* Le prestazioni di modifica della configurazione sono ora migliori per i progetti nativi C++ e molto migliori per i progetti C++/CLI. La prima attivazione di una configurazione della soluzione è ora più veloce e tutte le attivazioni successive saranno quasi immediate.
 
 ### <a name="intellisense"></a>IntelliSense  
 * Il nuovo motore di database basato su SQLite viene ora usato per impostazione predefinita. Questo consente di velocizzare le operazioni di database come Vai a definizione e Trova tutti i riferimenti e migliorerà significativamente il tempo di analisi iniziale. L'impostazione è stata spostata in Strumenti > Opzioni > Editor di testo -> C/C++ -> Avanzate. Nelle versioni precedenti si trova in ...C/C++ > Sperimentale.
@@ -123,29 +131,28 @@ CPPRestSDK, un'API Web multipiattaforma per C++, è stato aggiornato alla versio
 
 * Trova tutti i riferimenti (MAIUSC+F12) ora consente di spostarsi con facilità, anche nelle codebase complesse. Offre funzioni avanzate di raggruppamento, filtro, ordinamento, ricerca all'interno dei risultati e, per alcuni linguaggi, colorazione, che agevolano notevolmente la comprensione dei riferimenti. Per C++ la nuova interfaccia utente include informazioni che indicano se è in corso la lettura o la scrittura in una variabile.
 
-* _**Novità della versione RC**_ La funzionalità IntelliSense "da punto a freccia" è passata dalla fase sperimentale alla fase avanzata ed è ora abilitata per impostazione predefinita. Anche le funzionalità di espansione ambito e di espansione precedenza dell'editor sono passate dalla fase sperimentale alla fase avanzata.
+* La funzionalità IntelliSense "da punto a freccia" è passata dalla fase sperimentale alla fase avanzata ed è ora abilitata per impostazione predefinita. Anche le funzionalità di espansione ambito e di espansione precedenza dell'editor sono passate dalla fase sperimentale alla fase avanzata.
 
-* _**Novità della versione RC**_ Le funzionalità di refactoring sperimentale Cambia firma ed Estrai funzione ora sono disponibili per impostazione predefinita.
+* Le funzionalità di refactoring sperimentale Cambia firma ed Estrai funzione ora sono disponibili per impostazione predefinita.
 
-* _**Novità della versione RC**_ È stata abilitata la nuova funzionalità sperimentale di caricamento più rapido per i progetti C++. Alla successiva apertura di un progetto C++, questo verrà caricato più velocemente e la volta successiva ciò avverrà in modo rapidissimo.
+* È stata abilitata la nuova funzionalità sperimentale per il caricamento più rapido dei progetti C++. Alla successiva apertura di un progetto C++, questo verrà caricato più velocemente e la volta successiva ciò avverrà in modo rapidissimo.
 
 Alcune di queste funzionalità sono usate anche in altri linguaggi e alcune sono specifiche di C++. Per altre informazioni su queste nuove funzionalità, vedere il post che [annuncia Visual Studio "15"](https://blogs.msdn.microsoft.com/visualstudio/2016/10/05/announcing-visual-studio-15-preview-5/). 
 
 ### <a name="support-for-non-msbuild-projects-with-open-folder"></a>Supporto per i progetti non MSBuild con Apri cartella
 Visual Studio 2017 introduce la funzionalità "Apri cartella", che consente di codificare, compilare ed eseguire il debug in un cartella contenente il codice sorgente senza dover creare soluzioni o progetti. Questo rende molto più semplice iniziare a usare Visual Studio anche se il progetto non è un progetto basato su MSBuild. Con "Apri cartella" è possibile accedere alle potenti funzionalità per la comprensione, la modifica, la compilazione e il debug del codice già offerte da Visual Studio per i progetti MSBuild. Per altre informazioni, vedere il [post sull'uso della codebase di C++ in Visual Studio con "Apri cartella"](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/bring-your-c-codebase-to-visual-studio-with-open-folder/).
 
-* _**Novità in RC**_ Miglioramenti all'esperienza Apri cartella.     
-È possibile personalizzare l'esperienza usando i file JSON seguenti:
+* Sono stati apportati miglioramenti all'esperienza Apri cartella. È possibile personalizzare l'esperienza usando i file JSON seguenti:
   -    CppProperties.json per personalizzare l'esperienza IntelliSense e di esplorazione.
   -    Tasks.json per personalizzare le procedure di compilazione. 
   -    Launch.json per personalizzare l'esperienza di debug.
 
 ### <a name="cmake-support-via-open-folder"></a>Supporto CMake con Apri cartella
-Visual Studio 2017 introduce il supporto per l'uso dei progetti CMake senza la conversione in file di progetto di MSBuild (con estensione vcxproj). Per altre informazioni, vedere il post sul [supporto CMake in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/cmake-support-in-visual-studio/). Se si aprono i progetti CMake con "Apri cartella", l'ambiente viene automaticamente configurato per la modifica, la compilazione e il debug in C++.
+Visual Studio 2017 introduce il supporto per l'uso dei progetti CMake senza la conversione in file di progetto di MSBuild (con estensione vcxproj). Per altre informazioni, vedere [CMake support in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/cmake-support-in-visual-studio/) (Supporto di CMake in Visual Studio) e [CMake support in Visual Studio 2017 – what's new in the RC.2 update](https://blogs.msdn.microsoft.com/vcblog/2016/12/20/cmake-support-in-visual-studio-2017-whats-new-in-the-rc-update/) (Supporto di CMake in Visual Studio 2017 - Novità dell'aggiornamento RC.2). Se si aprono i progetti CMake con "Apri cartella", l'ambiente viene automaticamente configurato per la modifica, la compilazione e il debug in C++.
 
-* _**Novità in RC**_ IntelliSense C++ funzionerà senza necessità di creare un file CppProperties.json nella cartella radice. È stato anche aggiunto un nuovo elenco a discesa per consentire agli utenti di passare facilmente tra le configurazioni fornite dai file CMake e CppProperties.json.
+* IntelliSense C++ funzionerà senza necessità di creare un file CppProperties.json nella cartella radice. È stato anche aggiunto un nuovo elenco a discesa per consentire agli utenti di passare facilmente tra le configurazioni fornite dai file CMake e CppProperties.json.
 
-* _**Novità in RC**_ Supporto per configurazione aggiuntiva tramite un file CMakeSettings.json che si trova nella stessa cartella del file CMakeLists.txt.
+* Supporto per configurazione aggiuntiva tramite un file CMakeSettings.json che si trova nella stessa cartella del file CMakeLists.txt.
 
   ![Apri cartella Cmake](media/cmake_cpp.png "Apri cartella Cmake")
 
@@ -153,7 +160,9 @@ Visual Studio 2017 introduce il supporto per l'uso dei progetti CMake senza la c
 ## <a name="c-installation-workloads"></a>Carichi di lavoro di installazione per C++ 
 
 ### <a name="windows-desktop-development-with-c"></a>Sviluppo per Windows Desktop con C++:  
-È ora disponibile un'esperienza più granulare per l'installazione del carico di lavoro per C++ originario. Sono stati aggiunti componenti selezionabili che consentono di installare solo gli strumenti necessari.  Si noti che le dimensioni di installazione indicate per i componenti elencati nell'interfaccia utente del programma di installazione non sono precise e sottovalutano la dimensione totale.  
+È ora disponibile un'esperienza più granulare per l'installazione del carico di lavoro per C++ originario. Sono stati aggiunti componenti selezionabili che consentono di installare solo gli strumenti necessari.  Si noti che le dimensioni di installazione indicate per i componenti elencati nell'interfaccia utente del programma di installazione non sono precise e sottovalutano la dimensione totale.
+
+Per creare progetti Win32 nel carico di lavoro per desktop C++, è necessario installare un set di strumenti e un SDK Windows. L'installazione dei componenti consigliati (selezionati) "Set di strumenti VC++ 2017 versione 141 (x86, x64)" e "Windows 10 SDK (10.0.14393)" ne garantirà il funzionamento. Se gli strumenti necessari non vengono installati, i progetti non verranno creati e la procedura guidata verrà interrotta.
 
 ### <a name="linux-development-with-c"></a>Sviluppo per Linux con C++:  
 L'estensione comune [Visual C++ for Linux Development](https://visualstudiogallery.msdn.microsoft.com/725025cf-7067-45c2-8d01-1e0fd359ae6e) ora fa parte di Visual Studio. Questa installazione include tutto il necessario per lo sviluppo e il debug di applicazioni C++ in esecuzione in un ambiente Linux.  
@@ -165,7 +174,7 @@ Usare tutta la potenza di C++ per compilare giochi professionali con tecnologia 
 Usando Visual Studio è ora possibile creare app per dispositivi mobili destinate ad Android e iOS ed eseguirne il debug.  
 
 ### <a name="universal-windows-apps"></a>App di Windows universale:  
-C++ viene fornito come componente facoltativo del carico di lavoro per lo sviluppo di app di Windows universale.  
+C++ viene fornito come componente facoltativo del carico di lavoro per lo sviluppo di app di Windows universale.  Attualmente l'aggiornamento di progetti C++ deve essere eseguito manualmente. Quando si apre un progetto UWP destinato a v140 in Visual Studio 2017, se Visual Studio 2015 non è installato è necessario selezionare il set di strumenti della piattaforma v141 nelle pagine delle proprietà del progetto.
 
 ## <a name="new-options-for-c-on-universal-windows-platform"></a>Nuove opzioni per C++ nella piattaforma UWP (Universal Windows Platform)
 Sono ora disponibili nuove opzioni per la scrittura e la creazione di pacchetti di applicazioni C++ per la piattaforma UWP e Windows Store: è possibile usare Desktop App Converter per creare un pacchetto dell'applicazione desktop esistente per la distribuzione nel Windows Store. Per altre informazioni, vedere i post relativi all'[uso del runtime di Visual C++ nel progetto Centennial](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project/) e al [trasferimento dell'app desktop sulla piattaforma UWP con Desktop Bridge](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root).
@@ -230,8 +239,4 @@ Diagnostica della grafica di Visual Studio è un set di strumenti per la registr
 
 
  
-
-
-<!--HONumber=Feb17_HO4-->
-
 

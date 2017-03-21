@@ -41,8 +41,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 220ecd24c6056737d0338cc584663e4664ac81b1
-ms.openlocfilehash: 014391806f47e7d39ffe09e30feecaabe26f6a36
+ms.sourcegitcommit: da3c2e6ce7247d3e8c9a401bc0a133cb8d46a970
+ms.openlocfilehash: 81a7d724a4a3b2e5aa7de47461d20cc3385896eb
+ms.lasthandoff: 03/15/2017
 
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ in Visual Studio
@@ -65,6 +66,9 @@ Il linguaggio di programmazione e gli strumenti di sviluppo di Visual Studio 201
  [Miglioramenti della conformità di C++ in Visual Studio 2017](cpp-conformance-improvements-2017.md) 
 Informazioni sui miglioramenti apportati alla conformità di C++ in Visual Studio 2017. 
 
+ [Conformità al linguaggio Visual C++](visual-cpp-language-conformance.md)  
+ Elenco dello stato di conformità a Visual C++ per funzionalità.
+
  [Cronologia delle modifiche di Visual C++ dal 2003 al 2015](porting/visual-cpp-change-history-2003-2015.md)  
  Informazioni sulle modifiche importanti nelle versioni precedenti.  
   
@@ -76,9 +80,6 @@ Informazioni sui miglioramenti apportati alla conformità di C++ in Visual Studi
   
  [Guida al porting e aggiornamento in Visual C++](porting/visual-cpp-porting-and-upgrading-guide.md)  
  Linee guida per il trasferimento di codice e l'aggiornamento di progetti in Visual C++ in Visual Studio 2017, incluso il trasferimento di codice C++ in Windows 10 e la piattaforma UWP (Universal Windows Platform).  
-  
- [Supporto delle funzionalità C++11/14/17 (C++ moderno)](cpp/support-for-cpp11-14-17-features-modern-cpp.md)  
- Informazioni sul supporto per le funzionalità C++11 e C++14 in Visual C++.  
   
  [Blog del team di Visual C++](http://blogs.msdn.com/b/vcblog/)  
  Altre informazioni sulle nuove funzionalità e sugli aggiornamenti più recenti degli sviluppatori di [!INCLUDE[vcprvc](build/includes/vcprvc_md.md)].  
@@ -183,9 +184,4 @@ App e componenti  [!INCLUDE[win8_appname_long](build/includes/win8_appname_long_
  [Riferimenti del linguaggio C](c-language/c-language-reference.md)   
  [Riferimenti della libreria di runtime C](c-runtime-library/c-run-time-library-reference.md)   
  [Intrinseci del compilatore e linguaggio assembly](intrinsics/compiler-intrinsics-and-assembly-language.md)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 
