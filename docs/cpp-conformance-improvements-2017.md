@@ -27,16 +27,16 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: d4b97ed874b145f9c6d9a9536476243bba0fd1c1
-ms.openlocfilehash: b26df320266a1465e214c70c29c7077d04ffb4b9
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: f9e63f47a8df69b52a6a12688e84602981d20dae
+ms.openlocfilehash: 2d86588df2b20861dff5b940d2f0c7c3afd857fb
+ms.lasthandoff: 03/21/2017
 
 ---
    
 # <a name="c-conformance-improvements-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>Miglioramenti della conformità di C++ in [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]
 
 ## <a name="new-language-features"></a>Nuove funzionalità del linguaggio  
-Con il supporto per la parola chiave constexpr generalizzata e NSDMI per le aggregazioni, il compilatore è ora completo per le funzionalità aggiunte nello Standard C++14. Si noti che il compilatore manca ancora di alcune funzionalità relative agli standard C++11 e C++98.
+Con il supporto per la parola chiave constexpr generalizzata e NSDMI per le aggregazioni, il compilatore è ora completo per le funzionalità aggiunte nello Standard C++14. Si noti che il compilatore manca ancora di alcune funzionalità relative agli standard C++11 e C++98. Vedere [Visual C++ Language Conformance](visual-cpp-language-conformance.md) (Conformità al linguaggio Visual C++) per una tabella che mostra lo stato corrente del compilatore.
 
 ### <a name="c11"></a>C++11:
 **Supporto per l'espressione SFINAE in altre librerie** Il compilatore Visual C++ continua a migliorare il supporto per l'espressione SFINAE, che è necessario per la deduzione e la sostituzione dell'argomento del modello dove le espressioni decltype e constexpr possono apparire come parametri del modello. Per altre informazioni, vedere il blog relativo ai [miglioramenti dell'espressione SFINAE in Visual Studio 2017 RC](https://blogs.msdn.microsoft.com/vcblog/2016/06/07/expression-sfinae-improvements-in-vs-2015-update-3). 
@@ -86,7 +86,7 @@ In Visual Studio 2015 il compilatore tratta erroneamente copy-list-initializatio
 
 ```cpp  
 // From http://www.open-std.org/jtc1/sc22/wg21/docs/cwg_closed.html#1228
-struct MyList {
+struct MyStore {
        explicit MyStore(int initialCapacity);
 };
 
@@ -273,6 +273,22 @@ constexpr bool test1 = IsCallable<int(), int>::value;
 static_assert(test1, "PASS1");
 constexpr bool test2 = !IsCallable<int*, int>::value;
 static_assert(test2, "PASS2");
+```
+### <a name="classes-declared-in-anonymous-namespaces"></a>Classi dichiarate in spazi dei nomi anonimi
+In base allo standard C++, una classe dichiarata all'interno di uno spazio dei nomi anonimo include un collegamento interno e pertanto non può essere esportata. In Visual Studio 2015 e versioni precedenti questa regola non viene applicata. In Visual Studio 2017 la regola viene applicata parzialmente. L'esempio seguente genera questo errore in Visual Studio 2017: "errore C2201: 'const `anonymous namespace'::S1::`vftable': per l'esportazione e l'importazione è necessario utilizzare il collegamento esterno."
+
+```cpp
+namespace
+{
+    struct __declspec(dllexport) S1 { virtual void f() {} }; //C2201
+}
+```
+
+### <a name="classes-declared-in-anonymous-namespaces"></a>Classi dichiarate in spazi dei nomi anonimi
+In base allo standard C++, una classe dichiarata all'interno di uno spazio dei nomi anonimo include un collegamento interno e pertanto non può essere esportata. In Visual Studio 2015 e versioni precedenti questa regola non viene applicata. In Visual Studio 2017 la regola viene applicata parzialmente. L'esempio seguente genera questo errore in Visual Studio 2017: "errore C2201: 'const `anonymous namespace'::S1::`vftable': per l'esportazione e l'importazione è necessario utilizzare il collegamento esterno."
+
+```cpp
+struct __declspec(dllexport) S1 { virtual void f() {} }; //C2201
 ```
 
 ### <a name="default-initializers-for-value-class-members-ccli"></a>Inizializzatori predefiniti per i membri della classe di valori (C++/CLI)
