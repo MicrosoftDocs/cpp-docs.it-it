@@ -9,7 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- pplcancellation_token/concurrency::cancellation_token
+- cancellation_token
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token::cancellation_token
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token::deregister_callback
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token::is_cancelable
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token::is_canceled
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token::none
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token::register_callback
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 93d5abe132203a53f3ffac8490fe32604e7e896e
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: d17505a117c0affd8106afad9004e6ec86602a26
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="cancellationtoken-class"></a>Classe cancellation_token
@@ -54,26 +61,26 @@ class cancellation_token;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore cancellation_token](#ctor)||  
+|[cancellation_token](#ctor)||  
 |[~ cancellation_token distruttore](#dtor)||  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[deregister_callback (metodo)](#deregister_callback)|Rimuove un callback registrato in precedenza tramite il metodo `register` in base all'oggetto `cancellation_token_registration` restituito al momento della registrazione.|  
-|[is_cancelable (metodo)](#is_cancelable)|Restituisce un'indicazione sull'eventuale possibilità di annullamento di questo token.|  
-|[is_canceled (metodo)](#is_canceled)|Restituisce `true` se il token è stato annullato.|  
-|[None (metodo)](#none)|Restituisce un token di annullamento che non può mai essere soggetto all'annullamento.|  
-|[register_callback (metodo)](#register_callback)|Registra una funzione di callback con il token. Il callback verrà eseguito se e quando il token viene annullato. Si noti che se il token è già stato annullato nel punto in cui viene chiamato questo metodo, il callback verrà eseguito immediatamente e in modo sincrono.|  
+|[deregister_callback](#deregister_callback)|Rimuove un callback registrato in precedenza tramite il metodo `register` in base all'oggetto `cancellation_token_registration` restituito al momento della registrazione.|  
+|[is_cancelable](#is_cancelable)|Restituisce un'indicazione sull'eventuale possibilità di annullamento di questo token.|  
+|[is_canceled](#is_canceled)|Restituisce `true` se il token è stato annullato.|  
+|[none](#none)|Restituisce un token di annullamento che non può mai essere soggetto all'annullamento.|  
+|[register_callback](#register_callback)|Registra una funzione di callback con il token. Il callback verrà eseguito se e quando il token viene annullato. Si noti che se il token è già stato annullato nel punto in cui viene chiamato questo metodo, il callback verrà eseguito immediatamente e in modo sincrono.|  
   
 ### <a name="public-operators"></a>Operatori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[operatore! = (operatore)](#operator_neq)||  
-|[operatore = (operatore)](#operator_eq)||  
-|[operatore Operator = =](#operator_eq_eq)||  
+|[operator!=](#operator_neq)||  
+|[operator=](#operator_eq)||  
+|[operator==](#operator_eq_eq)||  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `cancellation_token`  
@@ -83,13 +90,13 @@ class cancellation_token;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="a-namedtora-cancellationtoken"></a><a name="dtor"></a>~ cancellation_token 
+##  <a name="dtor"></a>~ cancellation_token 
 
 ```
 ~cancellation_token();
 ```  
   
-##  <a name="a-namectora-cancellationtoken"></a><a name="ctor"></a>cancellation_token 
+##  <a name="ctor"></a>cancellation_token 
 
 ```
 cancellation_token(const cancellation_token& _Src);
@@ -100,7 +107,7 @@ cancellation_token(cancellation_token&& _Src);
 ### <a name="parameters"></a>Parametri  
  `_Src`  
   
-##  <a name="a-namederegistercallbacka-deregistercallback"></a><a name="deregister_callback"></a>deregister_callback 
+##  <a name="deregister_callback"></a>deregister_callback 
 
  Rimuove un callback registrato in precedenza tramite il metodo `register` in base all'oggetto `cancellation_token_registration` restituito al momento della registrazione.  
   
@@ -112,7 +119,7 @@ void deregister_callback(const cancellation_token_registration& _Registration) c
  `_Registration`  
  L'oggetto `cancellation_token_registration` che corrisponde al callback di cui annullare la registrazione. Questo token deve essere stato restituito precedentemente da una chiamata al metodo `register`.  
   
-##  <a name="a-nameiscancelablea-iscancelable"></a><a name="is_cancelable"></a>is_cancelable 
+##  <a name="is_cancelable"></a>is_cancelable 
 
  Restituisce un'indicazione sull'eventuale possibilità di annullamento di questo token.  
   
@@ -123,7 +130,7 @@ bool is_cancelable() const;
 ### <a name="return-value"></a>Valore restituito  
  Indicazione che segnala se il token può essere annullato o meno.  
   
-##  <a name="a-nameiscanceleda-iscanceled"></a><a name="is_canceled"></a>is_canceled 
+##  <a name="is_canceled"></a>is_canceled 
 
  Restituisce `true` se il token è stato annullato.  
   
@@ -134,7 +141,7 @@ bool is_canceled() const;
 ### <a name="return-value"></a>Valore restituito  
  Valore è `true` se il token è stato annullato; in caso contrario, il valore è `false`.  
   
-##  <a name="a-namenonea-none"></a><a name="none"></a>Nessuno 
+##  <a name="none"></a>Nessuno 
 
  Restituisce un token di annullamento che non può mai essere soggetto all'annullamento.  
   
@@ -145,7 +152,7 @@ static cancellation_token none();
 ### <a name="return-value"></a>Valore restituito  
  Token di annullamento che non può essere annullato.  
   
-##  <a name="a-nameoperatorneqa-operator"></a><a name="operator_neq"></a>operatore! = 
+##  <a name="operator_neq"></a>operatore! = 
 
 ```
 bool operator!= (const cancellation_token& _Src) const;
@@ -156,7 +163,7 @@ bool operator!= (const cancellation_token& _Src) const;
   
 ### <a name="return-value"></a>Valore restituito  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>operatore = 
+##  <a name="operator_eq"></a>operatore = 
 
 ```
 cancellation_token& operator= (const cancellation_token& _Src);
@@ -169,7 +176,7 @@ cancellation_token& operator= (cancellation_token&& _Src);
   
 ### <a name="return-value"></a>Valore restituito  
   
-##  <a name="a-nameoperatoreqeqa-operator"></a><a name="operator_eq_eq"></a>operatore = = 
+##  <a name="operator_eq_eq"></a>operatore = = 
 
 ```
 bool operator== (const cancellation_token& _Src) const;
@@ -180,7 +187,7 @@ bool operator== (const cancellation_token& _Src) const;
   
 ### <a name="return-value"></a>Valore restituito  
   
-##  <a name="a-nameregistercallbacka-registercallback"></a><a name="register_callback"></a>register_callback 
+##  <a name="register_callback"></a>register_callback 
 
  Registra una funzione di callback con il token. Il callback verrà eseguito se e quando il token viene annullato. Si noti che se il token è già stato annullato nel punto in cui viene chiamato questo metodo, il callback verrà eseguito immediatamente e in modo sincrono.  
   
@@ -200,5 +207,5 @@ template<typename _Function>
  Oggetto `cancellation_token_registration` che può essere utilizzato nel metodo `deregister` per annullare la registrazione di un callback registrato in precedenza ed evitare che venga eseguito. Il metodo genererà un [invalid_operation](invalid-operation-class.md) eccezione se viene chiamato su un `cancellation_token` oggetto che è stato creato utilizzando il [cancellation_token:: None](#none) metodo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [concorrenza Namespace](concurrency-namespace.md)
+ [Spazio dei nomi concurrency](concurrency-namespace.md)
 

@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::message_not_found
+- message_not_found
+- CONCRT/concurrency::message_not_found
+- CONCRT/concurrency::message_not_found::message_not_found
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: dc9fe8db2e454581acdc1ef63c0915845f3ad90f
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 4dc29ff5a9836aa784efa15313efbf60569142d4
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="messagenotfound-class"></a>Classe message_not_found
@@ -54,7 +56,7 @@ class message_not_found : public std::exception;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore message_not_found](#ctor)|Di overload. Costruisce un oggetto `message_not_found`.|  
+|[message_not_found](#ctor)|Di overload. Costruisce un oggetto `message_not_found`.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `exception`  
@@ -66,7 +68,7 @@ class message_not_found : public std::exception;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="a-namectora-messagenotfound"></a><a name="ctor"></a>message_not_found 
+##  <a name="ctor"></a>message_not_found 
 
  Costruisce un oggetto `message_not_found`.  
   

@@ -1,66 +1,83 @@
 ---
-title: "CPtrList Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CPtrList"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CPtrList class"
-  - "generic lists"
-  - "elenchi, generic"
+title: Classe CPtrList | Documenti di Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CPtrList
+dev_langs:
+- C++
+helpviewer_keywords:
+- lists, generic
+- CPtrList class
+- generic lists
 ms.assetid: 4139a09c-4338-4f42-9eea-51336120b43c
 caps.latest.revision: 23
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 25
----
-# CPtrList Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 8158e0acce04ee78ea07da26332f53613489653f
+ms.lasthandoff: 03/17/2017
 
+---
+# <a name="cptrlist-class"></a>Classe CPtrList
 Supporta elenchi di puntatori void.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 class CPtrList : public CObject  
 ```  
   
-## Membri  
- Le funzioni membro di `CPtrList` sono simili alle funzioni membro di classe [CObList](../../mfc/reference/coblist-class.md).  A causa di questa somiglianze, è possibile utilizzare la documentazione di riferimento di `CObList` per le specifiche della funzione membro.  Ovunque sia visualizzato un puntatore `CObject` come parametro della funzione o valore restituito, sostituire un puntatore a `void`.  
+## <a name="members"></a>Membri  
+ Le funzioni membro di `CPtrList` sono simili alle funzioni membro della classe [CObList](../../mfc/reference/coblist-class.md). Grazie a questa somiglianza, per le specifiche delle funzioni membro è possibile usare la documentazione di riferimento di `CObList`. Ovunque sia visualizzato un puntatore `CObject` come parametro della funzione o valore restituito, sostituire un puntatore a `void`.  
   
  `CObject*& CObList::GetHead() const;`  
   
- ad esempio, converte a  
+ ad esempio, si converte in  
   
  `void*& CPtrList::GetHead() const;`  
   
-## Note  
- `CPtrList` include la macro `IMPLEMENT_DYNAMIC` per supportare l'accesso del tipo run\-time ed eseguire l'operazione di dump dell'oggetto `CDumpContext`.  Se è necessario un dump di singoli elementi dell'elenco dei puntatori, è necessario impostare la profondità del contesto di dump a 1 o superiore.  
+## <a name="remarks"></a>Note  
+ `CPtrList` include la macro `IMPLEMENT_DYNAMIC` per supportare l'accesso del tipo in fase di esecuzione ed eseguire l'operazione di dump dell'oggetto `CDumpContext`. Se è necessario un dump di singoli elementi dell'elenco di puntatori, è necessario impostare la profondità del contesto di dump su 1 o su un valore superiore.  
   
- Gli elenchi del puntatore non possono essere serializzati.  
+ Gli elenchi di puntatori non possono essere serializzati.  
   
- Quando un oggetto `CPtrList` viene eliminato, oppure quando gli elementi vengono rimossi, solo i puntatori vengono eliminati, non le entità che referenziano.  
+ Quando un oggetto `CPtrList` viene eliminato oppure quando gli elementi vengono rimossi, vengono eliminati solo i puntatori e non le entità che referenziano.  
   
- Per ulteriori informazioni sull'uso di `CPtrList`, consultare l'articolo [Raccolte](../../mfc/collections.md).  
+ Per ulteriori informazioni sull'utilizzo di `CPtrList`, vedere l'articolo [raccolte](../../mfc/collections.md).  
   
-## Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CPtrList`  
   
-## Requisiti  
- **Header:** afxcoll.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** afxcoll. h  
   
-## Vedere anche  
- [CObject Class](../../mfc/reference/cobject-class.md)   
+## <a name="see-also"></a>Vedere anche  
+ [CObject (classe)](../../mfc/reference/cobject-class.md)   
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
- [CObList Class](../../mfc/reference/coblist-class.md)
+ [Classe CObList](../../mfc/reference/coblist-class.md)
+

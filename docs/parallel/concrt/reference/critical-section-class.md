@@ -9,7 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::critical_section
+- critical_section
+- CONCRT/concurrency::critical_section
+- CONCRT/concurrency::critical_section::critical_section::scoped_lock Class
+- CONCRT/concurrency::critical_section::critical_section
+- CONCRT/concurrency::critical_section::lock
+- CONCRT/concurrency::critical_section::native_handle
+- CONCRT/concurrency::critical_section::try_lock
+- CONCRT/concurrency::critical_section::try_lock_for
+- CONCRT/concurrency::critical_section::unlock
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +42,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 20a150c1aedbd9d78c84187bf29e6284a248fbc7
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 58821589a4b7596b80179a77dfd6a5772531f053
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="criticalsection-class"></a>Classe critical_section
@@ -66,18 +74,18 @@ class critical_section;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore critical_section](#ctor)|Costruisce una nuova sezione critica.|  
+|[critical_section](#ctor)|Costruisce una nuova sezione critica.|  
 |[~ critical_section distruttore](#dtor)|Elimina una sezione critica.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[lock (metodo)](#lock)|Acquisisce la sezione critica.|  
-|[native_handle (metodo)](#native_handle)|Restituisce un handle nativo specifico di piattaforma, se presente.|  
-|[try_lock (metodo)](#try_lock)|Tenta di acquisire il blocco senza bloccarsi.|  
-|[try_lock_for (metodo)](#try_lock_for)|Tenta di acquisire il blocco senza bloccarsi per un numero specifico di millisecondi.|  
-|[Unlock (metodo)](#unlock)|Sblocca la sezione critica.|  
+|[lock](#lock)|Acquisisce la sezione critica.|  
+|[native_handle](#native_handle)|Restituisce un handle nativo specifico di piattaforma, se presente.|  
+|[try_lock](#try_lock)|Tenta di acquisire il blocco senza bloccarsi.|  
+|[try_lock_for](#try_lock_for)|Tenta di acquisire il blocco senza bloccarsi per un numero specifico di millisecondi.|  
+|[unlock](#unlock)|Sblocca la sezione critica.|  
   
 ## <a name="remarks"></a>Note  
  Per ulteriori informazioni, vedere [strutture di dati di sincronizzazione](../../../parallel/concrt/synchronization-data-structures.md).  
@@ -90,7 +98,7 @@ class critical_section;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="a-namectora-criticalsection"></a><a name="ctor"></a>critical_section 
+##  <a name="ctor"></a>critical_section 
 
  Costruisce una nuova sezione critica.  
   
@@ -98,7 +106,7 @@ class critical_section;
 critical_section();
 ```  
   
-##  <a name="a-namedtora-criticalsection"></a><a name="dtor"></a>~ critical_section 
+##  <a name="dtor"></a>~ critical_section 
 
  Elimina una sezione critica.  
   
@@ -109,7 +117,7 @@ critical_section();
 ### <a name="remarks"></a>Note  
  È previsto che il blocco non è più quando il distruttore viene eseguito. Consentire alla sezione critica di distruggere con il blocco ancora mantenuto causa un comportamento indefinito.  
   
-##  <a name="a-namelocka-lock"></a><a name="lock"></a>blocco 
+##  <a name="lock"></a>blocco 
 
  Acquisisce la sezione critica.  
   
@@ -122,7 +130,7 @@ void lock();
   
  Se il blocco è già utilizzato dal contesto di chiamata, un [improper_lock](improper-lock-class.md) verrà generata l'eccezione.  
   
-##  <a name="a-namenativehandlea-nativehandle"></a><a name="native_handle"></a>native_handle 
+##  <a name="native_handle"></a>native_handle 
 
  Restituisce un handle nativo specifico di piattaforma, se presente.  
   
@@ -136,14 +144,14 @@ native_handle_type native_handle();
 ### <a name="remarks"></a>Note  
  Oggetto `critical_section` oggetto non è associato a un handle nativo specifico di una piattaforma per il sistema operativo Windows. Il metodo restituisce semplicemente un riferimento all'oggetto stesso.  
   
-##  <a name="a-namecriticalsectionscopedlockclassa--criticalsectionscopedlock-class"></a><a name="critical_section__scoped_lock_class"></a>Classe critical_section:: scoped_lock  
+##  <a name="critical_section__scoped_lock_class"></a>Classe critical_section:: scoped_lock  
  Un'eccezione wrapper RAII sicuro per un `critical_section` oggetto.  
   
 ```
 class scoped_lock;
 ```  
   
-##  <a name="a-namecriticalsectionscopedlockctora-scopedlockscopedlock"></a><a name="critical_section__scoped_lock_ctor"></a>scoped_lock::scoped_lock 
+##  <a name="critical_section__scoped_lock_ctor"></a>scoped_lock::scoped_lock 
 
  Costruisce un `scoped_lock` dell'oggetto e acquisisce il `critical_section` oggetto passato nel `_Critical_section` parametro. Se la sezione critica viene mantenuta da un altro thread, questa chiamata verrà bloccata.  
   
@@ -155,7 +163,7 @@ explicit _CRTIMP scoped_lock(critical_section& _Critical_section);
  `_Critical_section`  
  La sezione critica da bloccare.  
   
-##  <a name="a-namecriticalsectionscopedlockdtora-scopedlockscopedlock"></a><a name="critical_section__scoped_lock_dtor"></a>scoped_lock:: ~ scoped_lock 
+##  <a name="critical_section__scoped_lock_dtor"></a>scoped_lock:: ~ scoped_lock 
 
  Elimina un `scoped_lock` dell'oggetto e rilascia la sezione critica fornita nel relativo costruttore.  
   
@@ -163,7 +171,7 @@ explicit _CRTIMP scoped_lock(critical_section& _Critical_section);
 ~scoped_lock();
 ```  
   
-##  <a name="a-nametrylocka-trylock"></a><a name="try_lock"></a>try_lock 
+##  <a name="try_lock"></a>try_lock 
 
  Tenta di acquisire il blocco senza bloccarsi.  
   
@@ -174,7 +182,7 @@ bool try_lock();
 ### <a name="return-value"></a>Valore restituito  
  Se è stato acquisito il blocco, il valore `true`; in caso contrario, il valore `false`.  
   
-##  <a name="a-nametrylockfora-trylockfor"></a><a name="try_lock_for"></a>try_lock_for 
+##  <a name="try_lock_for"></a>try_lock_for 
 
  Tenta di acquisire il blocco senza bloccarsi per un numero specifico di millisecondi.  
   
@@ -189,7 +197,7 @@ bool try_lock_for(unsigned int _Timeout);
 ### <a name="return-value"></a>Valore restituito  
  Se è stato acquisito il blocco, il valore `true`; in caso contrario, il valore `false`.  
   
-##  <a name="a-nameunlocka-unlock"></a><a name="unlock"></a>sbloccare 
+##  <a name="unlock"></a>sbloccare 
 
  Sblocca la sezione critica.  
   

@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ppl/concurrency::simple_partitioner
+- simple_partitioner
+- PPL/concurrency::simple_partitioner
+- PPL/concurrency::simple_partitioner::simple_partitioner
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: dc90df5ba9fbbf5566a26a014a6a2db2ae4a0459
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 08d378c841fd9181fe9a2cf918bde9fe3ebbdc32
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="simplepartitioner-class"></a>Classe simple_partitioner
@@ -54,7 +56,7 @@ class simple_partitioner;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore simple_partitioner](#ctor)|Costruisce un oggetto `simple_partitioner`.|  
+|[simple_partitioner](#ctor)|Costruisce un oggetto `simple_partitioner`.|  
 |[~ simple_partitioner distruttore](#dtor)|Elimina un oggetto `simple_partitioner`.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
@@ -65,7 +67,7 @@ class simple_partitioner;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="a-namedtora-simplepartitioner"></a><a name="dtor"></a>~ simple_partitioner 
+##  <a name="dtor"></a>~ simple_partitioner 
 
  Elimina un oggetto `simple_partitioner`.  
   
@@ -73,7 +75,7 @@ class simple_partitioner;
 ~simple_partitioner();
 ```  
   
-##  <a name="a-namectora-simplepartitioner"></a><a name="ctor"></a>simple_partitioner 
+##  <a name="ctor"></a>simple_partitioner 
 
  Costruisce un oggetto `simple_partitioner`.  
   
@@ -85,5 +87,5 @@ explicit simple_partitioner(_Size_type _Chunk_size);
  `_Chunk_size`  
   
 ## <a name="see-also"></a>Vedere anche  
- [concorrenza Namespace](concurrency-namespace.md)
+ [Spazio dei nomi concurrency](concurrency-namespace.md)
 

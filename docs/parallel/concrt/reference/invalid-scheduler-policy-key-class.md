@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::invalid_scheduler_policy_key
+- invalid_scheduler_policy_key
+- CONCRT/concurrency::invalid_scheduler_policy_key
+- CONCRT/concurrency::invalid_scheduler_policy_key::invalid_scheduler_policy_key
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: ba23cb216581862ed110cace9b7fff9024df6899
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: bc16ee5aceb8c81c7c745cf535a4cefb5d3b827e
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="invalidschedulerpolicykey-class"></a>Classe invalid_scheduler_policy_key
@@ -54,7 +56,7 @@ class invalid_scheduler_policy_key : public std::exception;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore invalid_scheduler_policy_key](#ctor)|Di overload. Costruisce un oggetto `invalid_scheduler_policy_key`.|  
+|[invalid_scheduler_policy_key](#ctor)|Di overload. Costruisce un oggetto `invalid_scheduler_policy_key`.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `exception`  
@@ -66,7 +68,7 @@ class invalid_scheduler_policy_key : public std::exception;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="a-namectora-invalidschedulerpolicykey"></a><a name="ctor"></a>invalid_scheduler_policy_key 
+##  <a name="ctor"></a>invalid_scheduler_policy_key 
 
  Costruisce un oggetto `invalid_scheduler_policy_key`.  
   
@@ -82,5 +84,5 @@ invalid_scheduler_policy_key() throw();
   
 ## <a name="see-also"></a>Vedere anche  
  [concorrenza Namespace](concurrency-namespace.md)   
- [SchedulerPolicy (classe)](schedulerpolicy-class.md)
+ [Classe SchedulerPolicy](schedulerpolicy-class.md)
 

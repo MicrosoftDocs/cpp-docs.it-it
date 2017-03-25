@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ppl/concurrency::task_handle
+- task_handle
+- PPL/concurrency::task_handle
+- PPL/concurrency::task_handle::task_handle
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: b113cf519f4326650dc1ed4d20dd2ed00921eda9
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 0fef1ef7b1c02287a0113eb80be413e4a17dc1a4
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="taskhandle-class"></a>Classe task_handle
@@ -61,14 +63,14 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore task_handle](#ctor)|Costruisce un nuovo oggetto `task_handle`. Il lavoro dell'attività viene eseguito richiamando la funzione specificata come parametro al costruttore.|  
+|[task_handle](#ctor)|Costruisce un nuovo oggetto `task_handle`. Il lavoro dell'attività viene eseguito richiamando la funzione specificata come parametro al costruttore.|  
 |[~ task_handle distruttore](#dtor)|Elimina il `task_handle` oggetto.|  
   
 ### <a name="public-operators"></a>Operatori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Operatore operator)](#task_handle__operator_call)|L'operatore di chiamata di funzione che il runtime richiama per eseguire il lavoro dell'handle di attività.|  
+|[operator)](#task_handle__operator_call)|L'operatore di chiamata di funzione che il runtime richiama per eseguire il lavoro dell'handle di attività.|  
   
 ## <a name="remarks"></a>Note  
  `task_handle`gli oggetti possono essere utilizzati in combinazione con un `structured_task_group` o un più generale `task_group` oggetto per scomporre il lavoro in attività in parallelo. Per ulteriori informazioni, vedere [parallelismo delle attività](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
@@ -87,7 +89,7 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="a-nametaskhandleoperatorcalla-operator"></a><a name="task_handle__operator_call"></a>operator) 
+##  <a name="task_handle__operator_call"></a>operator) 
 
  L'operatore di chiamata di funzione che il runtime richiama per eseguire il lavoro dell'handle di attività.  
   
@@ -97,7 +99,7 @@ void operator()() const;
  
 ```  
   
-##  <a name="a-nametaskhandlectora-taskhandle"></a><a name="task_handle__ctor"></a>task_handle 
+##  <a name="task_handle__ctor"></a>task_handle 
 
  Costruisce un nuovo oggetto `task_handle`. Il lavoro dell'attività viene eseguito richiamando la funzione specificata come parametro al costruttore.  
   
@@ -112,7 +114,7 @@ task_handle(const _Function& _Func);
 ### <a name="remarks"></a>Note  
  Il runtime crea una copia della funzione lavoro che viene passato al costruttore. Di conseguenza, le modifiche di stato che si verificano in una funzione dell'oggetto passato a un `task_handle` oggetto non verrà incluso nella copia dell'oggetto funzione.  
   
-##  <a name="a-namedtora-taskhandle"></a><a name="dtor"></a>~ task_handle 
+##  <a name="dtor"></a>~ task_handle 
 
  Elimina il `task_handle` oggetto.  
   

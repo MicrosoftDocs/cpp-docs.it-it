@@ -9,7 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amp/Concurrency::tile_barrier
+- tile_barrier
+- AMP/tile_barrier
+- AMP/Concurrency::tile_barrier::tile_barrier::tile_barrier
+- AMP/Concurrency::tile_barrier::tile_barrier::wait
+- AMP/Concurrency::tile_barrier::tile_barrier::wait_with_all_memory_fence
+- AMP/Concurrency::tile_barrier::tile_barrier::wait_with_global_memory_fence
+- AMP/Concurrency::tile_barrier::tile_barrier::wait_with_tile_static_memory_fence
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 7ace6bb366881f9e5a9678b3a005f3079542c9cd
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 247828a6de3a5820d75623ee438810b563f04519
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="tilebarrier-class"></a>Classe tile_barrier
@@ -60,10 +66,10 @@ class tile_barrier;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Wait (metodo)](#wait)|Indica tutti i thread nel gruppo di thread (riquadro) di arrestare l'esecuzione fino al completamento di tutti i thread nel tile in attesa.|  
-|[wait_with_all_memory_fence (metodo)](#wait_with_all_memory_fence)|Blocca l'esecuzione di tutti i thread in una sezione fino a quando non sono stati completati tutti gli accessi alla memoria e tutti i thread nel tile hanno raggiunto questa chiamata.|  
-|[wait_with_global_memory_fence (metodo)](#wait_with_global_memory_fence)|Blocca l'esecuzione di tutti i thread in una sezione fino a quando non sono stati completati tutti gli accessi alla memoria globale e tutti i thread nel tile hanno raggiunto questa chiamata.|  
-|[wait_with_tile_static_memory_fence (metodo)](#wait_with_tile_static_memory_fence)|Blocca l'esecuzione di tutti i thread in una sezione finché tutti `tile_static` gli accessi alla memoria sono state completate e tutti i thread nel tile hanno raggiunto questa chiamata.|  
+|[attesa](#wait)|Indica tutti i thread nel gruppo di thread (riquadro) di arrestare l'esecuzione fino al completamento di tutti i thread nel tile in attesa.|  
+|[wait_with_all_memory_fence](#wait_with_all_memory_fence)|Blocca l'esecuzione di tutti i thread in una sezione fino a quando non sono stati completati tutti gli accessi alla memoria e tutti i thread nel tile hanno raggiunto questa chiamata.|  
+|[wait_with_global_memory_fence](#wait_with_global_memory_fence)|Blocca l'esecuzione di tutti i thread in una sezione fino a quando non sono stati completati tutti gli accessi alla memoria globale e tutti i thread nel tile hanno raggiunto questa chiamata.|  
+|[wait_with_tile_static_memory_fence](#wait_with_tile_static_memory_fence)|Blocca l'esecuzione di tutti i thread in una sezione finché tutti `tile_static` gli accessi alla memoria sono state completate e tutti i thread nel tile hanno raggiunto questa chiamata.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `tile_barrier`  
@@ -73,7 +79,7 @@ class tile_barrier;
   
  **Spazio dei nomi:** Concurrency  
 
-## <a name="a-nametilebarrierctora--tilebarrier-constructor"></a><a name="tile_barrier__ctor"></a>Costruttore tile_barrier  
+## <a name="tile_barrier__ctor"></a>Costruttore tile_barrier  
  Inizializza una nuova istanza della classe copiando uno esistente.  
   
 ### <a name="syntax"></a>Sintassi 
@@ -87,7 +93,7 @@ tile_barrier(
  `_Other`  
  Il `tile_barrier` oggetto da copiare.  
 
-## <a name="a-namewaita--wait"></a><a name="wait"></a>attesa 
+## <a name="wait"></a>attesa 
 Indica tutti i thread nel gruppo di thread (riquadro) per arrestare l'esecuzione fino al completamento di tutti i thread nel tile in attesa.  
   
 ### <a name="syntax"></a>Sintassi 
@@ -96,7 +102,7 @@ Indica tutti i thread nel gruppo di thread (riquadro) per arrestare l'esecuzione
 void wait() const restrict(amp);  
 ```    
 
-## <a name="a-namewaitwithallmemoryfencea--waitwithallmemoryfence"></a><a name="wait_with_all_memory_fence"></a>wait_with_all_memory_fence   
+## <a name="wait_with_all_memory_fence"></a>wait_with_all_memory_fence   
 Blocca l'esecuzione di tutti i thread in una sezione fino a quando tutti i thread in un riquadro hanno raggiunto questa chiamata. In questo modo tutti gli accessi alla memoria sono visibili agli altri thread nel tile thread che sono state eseguite nell'ordine del programma.  
   
 ### <a name="syntax"></a>Sintassi 
@@ -106,7 +112,7 @@ void wait_with_all_memory_fence() const restrict(amp);
 ```  
   
 
-## <a name="a-namewaitwithglobalmemoryfencea--waitwithglobalmemoryfence"></a><a name="wait_with_global_memory_fence"></a>wait_with_global_memory_fence   
+## <a name="wait_with_global_memory_fence"></a>wait_with_global_memory_fence   
 Blocca l'esecuzione di tutti i thread in una sezione fino a quando tutti i thread in un riquadro hanno raggiunto questa chiamata. In questo modo tutti gli accessi alla memoria globale sono visibili agli altri thread nel tile thread che sono state eseguite nell'ordine del programma.  
   
 ### <a name="syntax"></a>Sintassi 
@@ -115,7 +121,7 @@ Blocca l'esecuzione di tutti i thread in una sezione fino a quando tutti i threa
 void wait_with_global_memory_fence() const  restrict(amp);  
 ```
 
-## <a name="a-namewaitwithtilestaticmemoryfencea--waitwithtilestaticmemoryfence"></a><a name="wait_with_tile_static_memory_fence"></a>wait_with_tile_static_memory_fence   
+## <a name="wait_with_tile_static_memory_fence"></a>wait_with_tile_static_memory_fence   
 Blocca l'esecuzione di tutti i thread in una sezione fino a quando tutti i thread in un riquadro hanno raggiunto questa chiamata. In questo modo `tile_static`memoria accessi sono visibili agli altri thread nel tile thread e sono stati eseguiti nell'ordine del programma.  
   
 ### <a name="syntax"></a>Sintassi 
@@ -125,5 +131,5 @@ void wait_with_tile_static_memory_fence() const restrict(amp);
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Concorrenza Namespace (C++ AMP)](concurrency-namespace-cpp-amp.md)
+ [Spazio dei nomi Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)
 

@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::improper_lock
+- improper_lock
+- CONCRT/concurrency::improper_lock
+- CONCRT/concurrency::improper_lock::improper_lock
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 5a68573b8963fed90a4346fd421ef479c35dc247
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 336cd222ee70253954905b1ea01144160eeb2f06
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="improperlock-class"></a>Classe improper_lock
@@ -54,7 +56,7 @@ class improper_lock : public std::exception;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore improper_lock](#ctor)|Di overload. Costruisce un oggetto `improper_lock exception`.|  
+|[improper_lock](#ctor)|Di overload. Costruisce un oggetto `improper_lock exception`.|  
   
 ## <a name="remarks"></a>Note  
  In genere, questa eccezione viene generata quando viene eseguito un tentativo di acquisire un blocco di non rientrante in modo ricorsivo nello stesso contesto.  
@@ -69,7 +71,7 @@ class improper_lock : public std::exception;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="a-namectora-improperlock"></a><a name="ctor"></a>improper_lock 
+##  <a name="ctor"></a>improper_lock 
 
  Costruisce un oggetto `improper_lock exception`.  
   

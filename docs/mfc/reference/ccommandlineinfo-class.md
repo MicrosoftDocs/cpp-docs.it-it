@@ -51,9 +51,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: cb8cd58e4e7cf0318b8826cf473739e26e730273
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: f9e63f47a8df69b52a6a12688e84602981d20dae
+ms.openlocfilehash: a5b104e4ad0a0b9ce1933e7d8057f4d0fae46b77
+ms.lasthandoff: 03/21/2017
 
 ---
 # <a name="ccommandlineinfo-class"></a>Classe CCommandLineInfo
@@ -83,8 +83,8 @@ class CCommandLineInfo : public CObject
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CCommandLineInfo::m_bRunAutomated](#m_brunautomated)|Indica la riga di comando **/Automation** opzione è stata trovata.|  
-|[CCommandLineInfo::m_bRunEmbedded](#m_brunembedded)|Indica la riga di comando **/incorporamento** opzione è stata trovata.|  
+|[CCommandLineInfo::m_bRunAutomated](#m_brunautomated)|Indica la riga di comando `/Automation` (opzione) è stato trovato.|  
+|[CCommandLineInfo::m_bRunEmbedded](#m_brunembedded)|Indica la riga di comando `/Embedding` (opzione) è stato trovato.|  
 |[CCommandLineInfo::m_bShowSplash](#m_bshowsplash)|Indica se deve essere visualizzata una schermata iniziale.|  
 |[CCommandLineInfo::m_nShellCommand](#m_nshellcommand)|Indica che la shell dei comandi per essere elaborati.|  
 |[CCommandLineInfo::m_strDriverName](#m_strdrivername)|Indica il driver nome se il comando della shell è Print. in caso contrario è vuota.|  
@@ -102,13 +102,13 @@ class CCommandLineInfo : public CObject
 |----------------------------|----------------------|  
 |*app*|Nuovo file.|  
 |*app* filename|Apre il file.|  
-|*app* **/p** filename|Stampare il file alla stampante predefinita.|  
-|*app* **quindi chiuso** porta driver della stampante filename|File di stampa per la stampante specificata.|  
-|*app* **/dde**|Avvio e await comando DDE.|  
-|*app* **/Automation**|Avviare come server di automazione OLE.|  
-|*app* **/ incorporamento**|Avviare per modificare un elemento OLE incorporato.|  
-|*app*  ** /registrazione**<br /><br /> *app* **/Regserver**|Informa l'applicazione per eseguire le operazioni di registrazione.|  
-|*app* **/ annullare la registrazione**<br /><br /> *app* **/Unregserver**|Informa l'applicazione per eseguire le operazioni di annullamento della registrazione.|  
+|*app* `/p` nome file|Stampare il file alla stampante predefinita.|  
+|*app* `/pt` porta driver della stampante filename|File di stampa per la stampante specificata.|  
+|*app*`/dde`|Avvio e await comando DDE.|  
+|*app*`/Automation`|Avviare come server di automazione OLE.|  
+|*app*`/Embedding`|Avviare per modificare un elemento OLE incorporato.|  
+|*app*`/Register`<br /><br /> *app*`/Regserver`|Informa l'applicazione per eseguire le operazioni di registrazione.|  
+|*app*`/Unregister`<br /><br /> *app*`/Unregserver`|Informa l'applicazione per eseguire le operazioni di annullamento della registrazione.|  
   
  Derivare una nuova classe da `CCommandLineInfo` per gestire altri flag e i valori dei parametri. Eseguire l'override [ParseParam](#parseparam) per gestire i flag di nuovo.  
   
@@ -128,7 +128,7 @@ CCommandLineInfo();
 ```  
   
 ### <a name="remarks"></a>Note  
- Il valore predefinito è per visualizzare la schermata iniziale ( `m_bShowSplash` **= TRUE**) e per eseguire il comando Nuovo dal menu File ( `m_nShellCommand` **= NewFile**).  
+ Il valore predefinito è per visualizzare la schermata iniziale ( `m_bShowSplash=TRUE`) e per eseguire il comando Nuovo dal menu File ( `m_nShellCommand` **= NewFile**).  
   
  Il framework chiama applicazione [ParseParam](#parseparam) per riempire i membri dati di questo oggetto.  
   
@@ -136,24 +136,24 @@ CCommandLineInfo();
  [!code-cpp[&#54; NVC_MFCDocView](../../mfc/codesnippet/cpp/ccommandlineinfo-class_1.cpp)]  
   
 ##  <a name="m_brunautomated"></a>CCommandLineInfo::m_bRunAutomated  
- Indica che il **/Automation** flag è stato trovato nella riga di comando.  
+ Indica che il `/Automation` flag è stato trovato nella riga di comando.  
   
 ```  
 BOOL m_bRunAutomated;  
 ```  
   
 ### <a name="remarks"></a>Note  
- Se **TRUE**, ciò significa avviate come server di automazione OLE.  
+ Se `TRUE`, ciò significa avviate come server di automazione OLE.  
   
 ##  <a name="m_brunembedded"></a>CCommandLineInfo::m_bRunEmbedded  
- Indica che il **/incorporamento** flag è stato trovato nella riga di comando.  
+ Indica che il `/Embedding` flag è stato trovato nella riga di comando.  
   
 ```  
 BOOL m_bRunEmbedded;  
 ```  
   
 ### <a name="remarks"></a>Note  
- Se **TRUE**, ciò significa che l'avvio per la modifica di un elemento OLE incorporato.  
+ Se `TRUE`, ciò significa che l'avvio per la modifica di un elemento OLE incorporato.  
   
 ##  <a name="m_bshowsplash"></a>CCommandLineInfo::m_bShowSplash  
  Indica che deve essere visualizzata la schermata iniziale.  
@@ -163,7 +163,7 @@ BOOL m_bShowSplash;
 ```  
   
 ### <a name="remarks"></a>Note  
- Se **TRUE**, ciò significa che la schermata iniziale per questa applicazione deve essere visualizzata durante l'avvio. L'implementazione predefinita di [ParseParam](#parseparam) imposta il membro dati **TRUE** se [m_nShellCommand](#m_nshellcommand) è uguale a **CCommandLineInfo::FileNew**.  
+ Se `TRUE`, ciò significa che la schermata iniziale per questa applicazione deve essere visualizzata durante l'avvio. L'implementazione predefinita di [ParseParam](#parseparam) imposta il membro dati `TRUE` se [m_nShellCommand](#m_nshellcommand) è uguale a `CCommandLineInfo::FileNew`.  
   
 ##  <a name="m_nshellcommand"></a>CCommandLineInfo::m_nShellCommand  
  Indica il comando di shell per questa istanza dell'applicazione.  
@@ -228,7 +228,7 @@ CString m_strDriverName;
 ```  
   
 ### <a name="remarks"></a>Note  
- Questo parametro viene in genere il nome del driver della stampante per un comando della shell di stampa. L'implementazione predefinita di [ParseParam](#parseparam) imposta il membro dati solo se il **quindi chiuso** flag è stato trovato nella riga di comando.  
+ Questo parametro viene in genere il nome del driver della stampante per un comando della shell di stampa. L'implementazione predefinita di [ParseParam](#parseparam) imposta il membro dati solo se il `/pt` flag è stato trovato nella riga di comando.  
   
 ##  <a name="m_strfilename"></a>CCommandLineInfo::m_strFileName  
  Archivia il valore del primo parametro di flag non nella riga di comando.  
@@ -248,7 +248,7 @@ CString m_strPortName;
 ```  
   
 ### <a name="remarks"></a>Note  
- Questo parametro viene in genere il nome della porta della stampante per un comando della shell di stampa. L'implementazione predefinita di [ParseParam](#parseparam) imposta il membro dati solo se il **quindi chiuso** flag è stato trovato nella riga di comando.  
+ Questo parametro viene in genere il nome della porta della stampante per un comando della shell di stampa. L'implementazione predefinita di [ParseParam](#parseparam) imposta il membro dati solo se il `/pt` flag è stato trovato nella riga di comando.  
   
 ##  <a name="m_strprintername"></a>CCommandLineInfo::m_strPrinterName  
  Archivia il valore del secondo parametro di flag non nella riga di comando.  
@@ -258,7 +258,7 @@ CString m_strPrinterName;
 ```  
   
 ### <a name="remarks"></a>Note  
- Questo parametro viene in genere il nome della stampante per un comando della shell di stampa. L'implementazione predefinita di [ParseParam](#parseparam) imposta il membro dati solo se il **quindi chiuso** flag è stato trovato nella riga di comando.  
+ Questo parametro viene in genere il nome della stampante per un comando della shell di stampa. L'implementazione predefinita di [ParseParam](#parseparam) imposta il membro dati solo se il `/pt` flag è stato trovato nella riga di comando.  
   
 ##  <a name="m_strrestartidentifier"></a>CCommandLineInfo::m_strRestartIdentifier  
  Univoco riavvia identificatore nella riga di comando.  
@@ -299,27 +299,27 @@ virtual void ParseParam(
  Indica se questo è l'ultimo parametro o flag nella riga di comando.  
   
 ### <a name="remarks"></a>Note  
- [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline) chiamate `ParseParam` una volta per ogni parametro o flag nella riga di comando, passando l'argomento `pszParam`. Se il primo carattere del parametro è un ' ** - **'o' ** / **', quindi viene rimosso e *bFlag* è impostato su **TRUE**. Durante l'analisi il parametro finale, `bLast` è impostato su **TRUE**.  
+ [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline) chiamate `ParseParam` una volta per ogni parametro o flag nella riga di comando, passando l'argomento `pszParam`. Se il primo carattere del parametro è un ' **-**'o' **/**', quindi viene rimosso e *bFlag* è impostato su `TRUE`. Durante l'analisi il parametro finale, `bLast` è impostato su `TRUE`.  
   
- L'implementazione predefinita di questa funzione riconosce i flag seguenti: **/p**, **quindi chiuso**, **/dde**, **/Automation**, e **/incorporamento**, come illustrato nella tabella seguente:  
+ L'implementazione predefinita di questa funzione riconosce i flag seguenti: `/p`, `/pt`, `/dde`, `/Automation`, e `/Embedding`, come illustrato nella tabella seguente:  
   
 |Argomento della riga di comando|Comando eseguito|  
 |----------------------------|----------------------|  
 |*app*|Nuovo file.|  
 |*app* filename|Apre il file.|  
-|*app* **/p** filename|Stampare il file alla stampante predefinita.|  
-|*app* **quindi chiuso** porta driver della stampante filename|File di stampa per la stampante specificata.|  
-|*app* **/dde**|Avvio e await comando DDE.|  
-|*app* **/Automation**|Avviare come server di automazione OLE.|  
-|*app* **/ incorporamento**|Avviare per modificare un elemento OLE incorporato.|  
-|*app*  ** /registrazione**<br /><br /> *app* **/Regserver**|Informa l'applicazione per eseguire le operazioni di registrazione.|  
-|*app* **/ annullare la registrazione**<br /><br /> *app* **/Unregserver**|Informa l'applicazione per eseguire le operazioni di annullamento della registrazione.|  
+|*app* `/p` nome file|Stampare il file alla stampante predefinita.|  
+|*app* `/pt` porta driver della stampante filename|File di stampa per la stampante specificata.|  
+|*app*`/dde`|Avvio e await comando DDE.|  
+|*app*`/Automation`|Avviare come server di automazione OLE.|  
+|*app*`/Embedding`|Avviare per modificare un elemento OLE incorporato.|  
+|*app*`/Register`<br /><br /> *app*`/Regserver`|Informa l'applicazione per eseguire le operazioni di registrazione.|  
+|*app*`/Unregister`<br /><br /> *app*`/Unregserver`|Informa l'applicazione per eseguire le operazioni di annullamento della registrazione.|  
   
- Queste informazioni vengono archiviate [m_bRunAutomated](#m_brunautomated), [m_bRunEmbedded](#m_brunembedded), e [m_nShellCommand](#m_nshellcommand). I flag sono contrassegnati mediante una barra ' ** / **'o trattino' ** - **'.  
+ Queste informazioni vengono archiviate [m_bRunAutomated](#m_brunautomated), [m_bRunEmbedded](#m_brunembedded), e [m_nShellCommand](#m_nshellcommand). I flag sono contrassegnati mediante una barra ' **/**'o trattino' **-**'.  
   
- L'implementazione predefinita di inserire il primo parametro di flag non in [m_strFileName](#m_strfilename). Nel caso del **quindi chiuso** flag, l'implementazione predefinita inserisce il secondo, terzo e quarto parametro di flag non in [m_strPrinterName](#m_strprintername), [m_strDriverName](#m_strdrivername), e [m_strPortName](#m_strportname), rispettivamente.  
+ L'implementazione predefinita di inserire il primo parametro di flag non in [m_strFileName](#m_strfilename). Nel caso del `/pt` flag, l'implementazione predefinita inserisce il secondo, terzo e quarto parametro di flag non in [m_strPrinterName](#m_strprintername), [m_strDriverName](#m_strdrivername), e [m_strPortName](#m_strportname), rispettivamente.  
   
- Imposta inoltre l'implementazione predefinita [m_bShowSplash](#m_bshowsplash) a **TRUE** solo in caso di un nuovo file. Nel caso di un nuovo file, l'utente ha effettuato l'operazione relativa all'applicazione stessa. In altri casi, incluse l'apertura di file esistenti mediante la shell, l'azione implica direttamente il file. In un punto di vista basate su documenti, la schermata iniziale non è necessario annunciare l'applicazione di avvio.  
+ Imposta inoltre l'implementazione predefinita [m_bShowSplash](#m_bshowsplash) a `TRUE` solo in caso di un nuovo file. Nel caso di un nuovo file, l'utente ha eseguito l'azione che interessano l'applicazione stessa. In altri casi, incluse l'apertura di file esistenti mediante la shell, l'azione utente comporta il file direttamente. In un punto di vista basate su documenti, la schermata iniziale non è necessario annunciare l'applicazione di avvio.  
   
  Eseguire l'override di questa funzione nella classe derivata per gestire gli altri valori di flag e il parametro.  
   

@@ -9,7 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::message_processor
+- message_processor
+- AGENTS/concurrency::message_processor
+- AGENTS/concurrency::message_processor::async_send
+- AGENTS/concurrency::message_processor::sync_send
+- AGENTS/concurrency::message_processor::wait
+- AGENTS/concurrency::message_processor::process_incoming_message
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 98f1c1072916c4cf3670e40ce0c6ddd1a17f1b63
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: dff934584179cc58d884be65fdb96cb6c646a4ac
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="messageprocessor-class"></a>Classe message_processor
@@ -65,15 +70,15 @@ class message_processor;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[async_send (metodo)](#async_send)|Quando sottoposto a override in una classe derivata, inserisce i messaggi il blocco in modo asincrono.|  
-|[sync_send (metodo)](#sync_send)|Quando sottoposto a override in una classe derivata, inserisce i messaggi il blocco in modo sincrono.|  
-|[Wait (metodo)](#wait)|Quando sottoposto a override in una classe derivata, attende per completare tutte le operazioni asincrone.|  
+|[async_send](#async_send)|Quando sottoposto a override in una classe derivata, inserisce i messaggi il blocco in modo asincrono.|  
+|[sync_send](#sync_send)|Quando sottoposto a override in una classe derivata, inserisce i messaggi il blocco in modo sincrono.|  
+|[attesa](#wait)|Quando sottoposto a override in una classe derivata, attende per completare tutte le operazioni asincrone.|  
   
 ### <a name="protected-methods"></a>Metodi protetti  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[process_incoming_message (metodo)](#process_incoming_message)|Quando sottoposto a override in una classe derivata, esegue l'elaborazione diretta dei messaggi nel blocco. Chiamato una volta ogni volta che viene aggiunto un nuovo messaggio e la coda risulta vuota.|  
+|[process_incoming_message](#process_incoming_message)|Quando sottoposto a override in una classe derivata, esegue l'elaborazione diretta dei messaggi nel blocco. Chiamato una volta ogni volta che viene aggiunto un nuovo messaggio e la coda risulta vuota.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `message_processor`  
@@ -83,7 +88,7 @@ class message_processor;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="a-nameasyncsenda-asyncsend"></a><a name="async_send"></a>async_send 
+##  <a name="async_send"></a>async_send 
 
  Quando sottoposto a override in una classe derivata, inserisce i messaggi il blocco in modo asincrono.  
   
@@ -98,7 +103,7 @@ virtual void async_send(_Inout_opt_ message<T>* _Msg) = 0;
 ### <a name="remarks"></a>Note  
  Le implementazioni del processore devono eseguire l'override di questo metodo.  
   
-##  <a name="a-nameprocessincomingmessagea-processincomingmessage"></a><a name="process_incoming_message"></a>process_incoming_message 
+##  <a name="process_incoming_message"></a>process_incoming_message 
 
  Quando sottoposto a override in una classe derivata, esegue l'elaborazione diretta dei messaggi nel blocco. Chiamato una volta ogni volta che viene aggiunto un nuovo messaggio e la coda risulta vuota.  
   
@@ -109,7 +114,7 @@ virtual void process_incoming_message() = 0;
 ### <a name="remarks"></a>Note  
  Le implementazioni del blocco di messaggio deve eseguire l'override di questo metodo.  
   
-##  <a name="a-namesyncsenda-syncsend"></a><a name="sync_send"></a>sync_send 
+##  <a name="sync_send"></a>sync_send 
 
  Quando sottoposto a override in una classe derivata, inserisce i messaggi il blocco in modo sincrono.  
   
@@ -124,7 +129,7 @@ virtual void sync_send(_Inout_opt_ message<T>* _Msg) = 0;
 ### <a name="remarks"></a>Note  
  Le implementazioni del processore devono eseguire l'override di questo metodo.  
   
-##  <a name="a-namewaita-wait"></a><a name="wait"></a>attesa 
+##  <a name="wait"></a>attesa 
 
  Quando sottoposto a override in una classe derivata, attende per completare tutte le operazioni asincrone.  
   

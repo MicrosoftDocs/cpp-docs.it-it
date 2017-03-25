@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: c09719412e38a4f056eabc39a66a684caa0659d4
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: d9b49f65d8b862a7b85cdf3e09137f326fa8a1fa
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="invalidschedulerpolicythreadspecification-class"></a>Classe invalid_scheduler_policy_thread_specification
@@ -54,7 +54,7 @@ class invalid_scheduler_policy_thread_specification : public std::exception;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[costruttore invalid_scheduler_policy_thread_specification] (non valido-utilità di pianificazione-criteri-valore-class.md #ctor|Di overload. Costruisce un oggetto `invalid_scheduler_policy_value`.|  
+|[invalid_scheduler_policy_thread_specification] (non valido-utilità di pianificazione-criteri-valore-class.md #ctor|Di overload. Costruisce un oggetto `invalid_scheduler_policy_value`.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `exception`  
@@ -65,7 +65,7 @@ class invalid_scheduler_policy_thread_specification : public std::exception;
  **Intestazione:** concrt  
   
  **Spazio dei nomi:** Concurrency  
-##  <a name="a-namectora-invalidschedulerpolicythreadspecification"></a><a name="ctor"></a>invalid_scheduler_policy_thread_specification 
+##  <a name="ctor"></a>invalid_scheduler_policy_thread_specification 
 
  Costruisce un oggetto `invalid_scheduler_policy_value`.  
   
@@ -81,5 +81,5 @@ invalid_scheduler_policy_thread_specification() throw();
 
 ## <a name="see-also"></a>Vedere anche  
  [concorrenza Namespace](concurrency-namespace.md)   
- [SchedulerPolicy (classe)](schedulerpolicy-class.md)
+ [Classe SchedulerPolicy](schedulerpolicy-class.md)
 

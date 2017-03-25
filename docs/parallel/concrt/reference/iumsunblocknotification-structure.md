@@ -9,7 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IUMSUnblockNotification
+- IUMSUnblockNotification
+- CONCRTRM/concurrency::IUMSUnblockNotification
+- CONCRTRM/concurrency::IUMSUnblockNotification::IUMSUnblockNotification::GetContext
+- CONCRTRM/concurrency::IUMSUnblockNotification::IUMSUnblockNotification::GetNextUnblockNotification
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 6fba6c36987107e2e8100c8b296c279592220682
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: ee9c1ada7718b948e5a038852bfa5514127324b1
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="iumsunblocknotification-structure"></a>Struttura IUMSUnblockNotification
@@ -54,8 +57,8 @@ struct IUMSUnblockNotification;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Metodo IUMSUnblockNotification:: GetContext](#getcontext)|Restituisce il `IExecutionContext` interfaccia per il contesto di esecuzione associato al proxy di thread che è stato sbloccato. Quando il contesto di esecuzione sottostante è stato riprogrammato tramite una chiamata a questo metodo restituisce il `IThreadProxy::SwitchTo` (metodo), questa interfaccia non è più valida.|  
-|[Metodo IUMSUnblockNotification:: GetNextUnblockNotification](#getnextunblocknotification)|Restituisce il successivo `IUMSUnblockNotification` interfaccia nella catena restituita dal metodo `IUMSCompletionList::GetUnblockNotifications`.|  
+|[IUMSUnblockNotification:: GetContext](#getcontext)|Restituisce il `IExecutionContext` interfaccia per il contesto di esecuzione associato al proxy di thread che è stato sbloccato. Quando il contesto di esecuzione sottostante è stato riprogrammato tramite una chiamata a questo metodo restituisce il `IThreadProxy::SwitchTo` (metodo), questa interfaccia non è più valida.|  
+|[IUMSUnblockNotification:: GetNextUnblockNotification](#getnextunblocknotification)|Restituisce il successivo `IUMSUnblockNotification` interfaccia nella catena restituita dal metodo `IUMSCompletionList::GetUnblockNotifications`.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `IUMSUnblockNotification`  
@@ -65,7 +68,7 @@ struct IUMSUnblockNotification;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="a-namegetcontexta--iumsunblocknotificationgetcontext-method"></a><a name="getcontext"></a>Metodo IUMSUnblockNotification:: GetContext  
+##  <a name="getcontext"></a>Metodo IUMSUnblockNotification:: GetContext  
  Restituisce il `IExecutionContext` interfaccia per il contesto di esecuzione associato al proxy di thread che è stato sbloccato. Quando il contesto di esecuzione sottostante è stato riprogrammato tramite una chiamata a questo metodo restituisce il `IThreadProxy::SwitchTo` (metodo), questa interfaccia non è più valida.  
   
 ```
@@ -75,7 +78,7 @@ virtual IExecutionContext* GetContext() = 0;
 ### <a name="return-value"></a>Valore restituito  
  Un `IExecutionContext` interfaccia per il contesto di esecuzione per un proxy del thread che è stato sbloccato.  
   
-##  <a name="a-namegetnextunblocknotificationa--iumsunblocknotificationgetnextunblocknotification-method"></a><a name="getnextunblocknotification"></a>Metodo IUMSUnblockNotification:: GetNextUnblockNotification  
+##  <a name="getnextunblocknotification"></a>Metodo IUMSUnblockNotification:: GetNextUnblockNotification  
  Restituisce il successivo `IUMSUnblockNotification` interfaccia nella catena restituita dal metodo `IUMSCompletionList::GetUnblockNotifications`.  
   
 ```
@@ -88,5 +91,5 @@ virtual IUMSUnblockNotification* GetNextUnblockNotification() = 0;
 ## <a name="see-also"></a>Vedere anche  
  [concorrenza Namespace](concurrency-namespace.md)   
  [IUMSScheduler (struttura)](iumsscheduler-structure.md)   
- [IUMSCompletionList (struttura)](iumscompletionlist-structure.md)
+ [Struttura IUMSCompletionList](iumscompletionlist-structure.md)
 

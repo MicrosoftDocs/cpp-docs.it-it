@@ -9,7 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::network_link_registry
+- network_link_registry
+- AGENTS/concurrency::network_link_registry
+- AGENTS/concurrency::network_link_registry::add
+- AGENTS/concurrency::network_link_registry::begin
+- AGENTS/concurrency::network_link_registry::contains
+- AGENTS/concurrency::network_link_registry::count
+- AGENTS/concurrency::network_link_registry::remove
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 8b39ab676db0072d279ee4058693769ef6f7eb3f
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 28c13f1e2bf80624da3a7aba441944c051790d27
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="networklinkregistry-class"></a>Classe network_link_registry
@@ -68,11 +74,11 @@ class network_link_registry;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Metodo Add](#add)|Quando sottoposto a override in una classe derivata, aggiunge un collegamento per il `network_link_registry` oggetto.|  
-|[Begin (metodo)](#begin)|Quando sottoposto a override in una classe derivata, restituisce un iteratore al primo elemento di `network_link_registry` oggetto.|  
-|[Contains (metodo)](#contains)|Quando sottoposto a override in una classe derivata, Cerca il `network_link_registry` oggetto per un blocco specificato.|  
-|[Count (metodo)](#count)|Quando sottoposto a override in una classe derivata, restituisce il numero di elementi di `network_link_registry` oggetto.|  
-|[Remove (metodo)](#remove)|Quando sottoposto a override in una classe derivata, rimuove un blocco specificato da di `network_link_registry` oggetto.|  
+|[add](#add)|Quando sottoposto a override in una classe derivata, aggiunge un collegamento per il `network_link_registry` oggetto.|  
+|[begin](#begin)|Quando sottoposto a override in una classe derivata, restituisce un iteratore al primo elemento di `network_link_registry` oggetto.|  
+|[contiene](#contains)|Quando sottoposto a override in una classe derivata, Cerca il `network_link_registry` oggetto per un blocco specificato.|  
+|[count](#count)|Quando sottoposto a override in una classe derivata, restituisce il numero di elementi di `network_link_registry` oggetto.|  
+|[remove](#remove)|Quando sottoposto a override in una classe derivata, rimuove un blocco specificato da di `network_link_registry` oggetto.|  
   
 ## <a name="remarks"></a>Note  
  Il `network link registry` non è sicuro per l'accesso simultaneo.  
@@ -85,7 +91,7 @@ class network_link_registry;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="a-nameadda-add"></a><a name="add"></a>aggiungere 
+##  <a name="add"></a>aggiungere 
 
  Quando sottoposto a override in una classe derivata, aggiunge un collegamento per il `network_link_registry` oggetto.  
   
@@ -97,7 +103,7 @@ virtual void add(_EType _Link) = 0;
  `_Link`  
  Un puntatore a un blocco da aggiungere.  
   
-##  <a name="a-namebegina-begin"></a><a name="begin"></a>iniziare 
+##  <a name="begin"></a>iniziare 
 
  Quando sottoposto a override in una classe derivata, restituisce un iteratore al primo elemento di `network_link_registry` oggetto.  
   
@@ -111,7 +117,7 @@ virtual iterator begin() = 0;
 ### <a name="remarks"></a>Note  
  Lo stato finale dell'iteratore è indicato da un `NULL` collegamento.  
   
-##  <a name="a-namecontainsa-contains"></a><a name="contains"></a>contiene 
+##  <a name="contains"></a>contiene 
 
  Quando sottoposto a override in una classe derivata, Cerca il `network_link_registry` oggetto per un blocco specificato.  
   
@@ -126,7 +132,7 @@ virtual bool contains(_EType _Link) = 0;
 ### <a name="return-value"></a>Valore restituito  
  `true`Se il blocco è stato trovato, `false` in caso contrario.  
   
-##  <a name="a-namecounta-count"></a><a name="count"></a>conteggio 
+##  <a name="count"></a>conteggio 
 
  Quando sottoposto a override in una classe derivata, restituisce il numero di elementi di `network_link_registry` oggetto.  
   
@@ -137,7 +143,7 @@ virtual size_t count() = 0;
 ### <a name="return-value"></a>Valore restituito  
  Il numero di elementi di `network_link_registry` oggetto.  
   
-##  <a name="a-nameremovea-remove"></a><a name="remove"></a>rimuovere 
+##  <a name="remove"></a>rimuovere 
 
  Quando sottoposto a override in una classe derivata, rimuove un blocco specificato da di `network_link_registry` oggetto.  
   

@@ -8,6 +8,16 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sampler
+- AMP_GRAPHICS/sampler
+- AMP_GRAPHICS/concurrency::sampler::graphics::sampler
+- AMP_GRAPHICS/concurrency::sampler::graphics::get_address_mode
+- AMP_GRAPHICS/concurrency::sampler::graphics::get_border_color
+- AMP_GRAPHICS/concurrency::sampler::graphics::get_filter_mode
+- AMP_GRAPHICS/concurrency::sampler::graphics::address_mode
+- AMP_GRAPHICS/concurrency::sampler::graphics::border_color
+- AMP_GRAPHICS/concurrency::sampler::graphics::filter_mode
 dev_langs:
 - C++
 ms.assetid: 9a6a9807-497d-402d-b092-8c4d86275b80
@@ -30,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 090e05e294646b7571a3d06ca8ed23583a306756
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: f81208e40cb2a211b714af1efe801e81cd567374
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="sampler-class"></a>Classe sampler
@@ -56,23 +66,23 @@ class sampler;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[get_address_mode (metodo)](#get_address_mode)|Restituisce il `address_mode` che è associato l'oggetto campionatore.|  
-|[get_border_color (metodo)](#get_border_color)|Restituisce il colore del bordo con l'oggetto campionatore associato.|  
-|[get_filter_mode (metodo)](#get_filter_mode)|Restituisce il `filter_mode` che è associato l'oggetto campionatore.|  
+|[get_address_mode](#get_address_mode)|Restituisce il `address_mode` che è associato l'oggetto campionatore.|  
+|[get_border_color](#get_border_color)|Restituisce il colore del bordo con l'oggetto campionatore associato.|  
+|[get_filter_mode](#get_filter_mode)|Restituisce il `filter_mode` che è associato l'oggetto campionatore.|  
   
 ### <a name="public-operators"></a>Operatori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[operatore = (operatore)](#operator_eq)|Di overload. Operatore di assegnazione.|  
+|[operator=](#operator_eq)|Di overload. Operatore di assegnazione.|  
   
 ### <a name="public-data-members"></a>Membri dati pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[address_mode (membro dati)](#address_mode)|Ottiene la modalità di indirizzamento di `sampler` oggetto.|  
-|[border_color (membro dati)](#border_color)|Ottiene il colore del bordo di `sampler` oggetto.|  
-|[filter_mode (membro dati)](#filter_mode)|Ottiene la modalità di filtro del `sampler` oggetto.|  
+|[address_mode](#address_mode)|Ottiene la modalità di indirizzamento di `sampler` oggetto.|  
+|[border_color](#border_color)|Ottiene il colore del bordo di `sampler` oggetto.|  
+|[filter_mode](#filter_mode)|Ottiene la modalità di filtro del `sampler` oggetto.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `sampler`  
@@ -82,7 +92,7 @@ class sampler;
   
  **Namespace:** Concurrency:: Graphics  
   
-##  <a name="a-namectora-sampler"></a><a name="ctor"></a>campionatore 
+##  <a name="ctor"></a>campionatore 
 
  Costruisce un'istanza di [classe sampler](sampler-class.md).  
   
@@ -139,7 +149,7 @@ sampler(// [6] move constructor
  [6] costruttore di spostamento  
  Il `sampler` oggetti da spostare nel nuovo `sampler` istanza.  
   
-##  <a name="a-nameaddressmodea-addressmode"></a><a name="address_mode"></a>address_mode 
+##  <a name="address_mode"></a>address_mode 
 
  Ottiene la modalità di indirizzamento di `sampler` oggetto.  
   
@@ -147,7 +157,7 @@ sampler(// [6] move constructor
 __declspec(property(get= get_address_mode)) Concurrency::graphics::address_mode address_mode;  
 ```  
   
-##  <a name="a-namebordercolora-bordercolor"></a><a name="border_color"></a>border_color 
+##  <a name="border_color"></a>border_color 
 
  Ottiene il colore del bordo di `sampler` oggetto.  
   
@@ -155,7 +165,7 @@ __declspec(property(get= get_address_mode)) Concurrency::graphics::address_mode 
 __declspec(property(get= get_border_color)) Concurrency::graphics::float_4 border_color;  
 ```  
   
-##  <a name="a-namefiltermodea-filtermode"></a><a name="filter_mode"></a>filter_mode 
+##  <a name="filter_mode"></a>filter_mode 
 
  Ottiene la modalità di filtro del `sampler` oggetto.  
   
@@ -163,7 +173,7 @@ __declspec(property(get= get_border_color)) Concurrency::graphics::float_4 borde
 __declspec(property(get= get_filter_mode)) Concurrency::graphics::filter_mode filter_mode;  
 ```  
   
-##  <a name="a-namegetaddressmodea-getaddressmode"></a><a name="get_address_mode"></a>get_address_mode 
+##  <a name="get_address_mode"></a>get_address_mode 
 
  Restituisce la modalità di filtro che è configurata per l'oggetto `sampler`.  
   
@@ -174,7 +184,7 @@ Concurrency::graphics::address_mode get_address_mode() const __GPU;
 ### <a name="return-value"></a>Valore restituito  
  La modalità di indirizzamento che è configurata per il campionatore.  
   
-##  <a name="a-namegetbordercolora-getbordercolor"></a><a name="get_border_color"></a>get_border_color 
+##  <a name="get_border_color"></a>get_border_color 
 
  Restituisce il colore del bordo che è configurato per l'oggetto `sampler`.  
   
@@ -185,7 +195,7 @@ Concurrency::graphics::float_4 get_border_color() const restrict(amp, cpu);
 ### <a name="return-value"></a>Valore restituito  
  Float_4 che contiene il colore del bordo.  
   
-##  <a name="a-namegetfiltermodea-getfiltermode"></a><a name="get_filter_mode"></a>get_filter_mode 
+##  <a name="get_filter_mode"></a>get_filter_mode 
 
  Restituisce la modalità di filtro che è configurata per l'oggetto `sampler`.  
   
@@ -196,7 +206,7 @@ Concurrency::graphics::filter_mode get_filter_mode() const restrict(amp, cpu);
 ### <a name="return-value"></a>Valore restituito  
  La modalità di filtro che è configurata per il campionatore.  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>operatore = 
+##  <a name="operator_eq"></a>operatore = 
 
  Assegna il valore di un altro oggetto campionatore di un campionatore esistente.  
   
@@ -221,5 +231,5 @@ sampler& operator= (// [2] move assingment operator sampler&& _Other) restrict(a
  Un riferimento a questa istanza di prova.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Concurrency:: Graphics Namespace](concurrency-graphics-namespace.md)
+ [Spazio dei nomi Concurrency::graphics](concurrency-graphics-namespace.md)
 

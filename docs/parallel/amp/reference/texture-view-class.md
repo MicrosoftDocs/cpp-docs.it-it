@@ -8,6 +8,18 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- texture_view
+- AMP_GRAPHICS/texture_view
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::texture_view
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::gather_alpha
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::gather_blue
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::gather_green
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::gather_red
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::get
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::sample
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::set
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::value_type
 dev_langs:
 - C++
 ms.assetid: 6ec2e289-1626-4727-9592-07981cf1d27d
@@ -30,9 +42,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 7d3206aea6a6f1e3033e157b3b99a6b3486cb2ac
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 4896b3ee55a5955c33e1c2652eb73851e4ec5a64
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="textureview-class"></a>Classe texture_view
@@ -41,23 +53,16 @@ Fornisce accesso in lettura e scrittura per una trama. `texture_view`può essere
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-template <
-    typename value_type,  
-    int _Rank  
->  
+template<typename value_type,int _Rank>  
 class texture_view;  
  
-template <
-    typename value_type,  
-    int _Rank  
->  
-class texture_view : public details::_Texture_base<value_type, _Rank>;  
+template<typename value_type, int _Rank>  
+class texture_view 
+   : public details::_Texture_base<value_type, _Rank>;  
  
-template <
-    typename value_type,  
-    int _Rank  
->  
-class texture_view<const value_type, _Rank> : public details::_Texture_base<value_type, _Rank>;  
+template<typename value_type, int _Rank>  
+class texture_view<const value_type, _Rank> 
+   : public details::_Texture_base<value_type, _Rank>;  
 ```  
   
 #### <a name="parameters"></a>Parametri  
@@ -88,27 +93,27 @@ class texture_view<const value_type, _Rank> : public details::_Texture_base<valu
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[gather_alpha (metodo)](#gather_alpha)|Di overload. Campionamento della trama corrispondenza delle coordinate specificate utilizzando la configurazione di campionamento specificata e restituisce i componenti di alpha (w) delle quattro texel campionati.|  
-|[gather_blue (metodo)](#gather_blue)|Di overload. Campionamento della trama corrispondenza delle coordinate specificate utilizzando la configurazione di campionamento specificata e restituisce i componenti di blu (z) delle quattro texel campionati.|  
-|[gather_green (metodo)](#gather_green)|Di overload. Campionamento della trama corrispondenza delle coordinate specificate utilizzando la configurazione di campionamento specificata e restituisce i componenti di colore verde (y) delle quattro texel campionati.|  
-|[gather_red (metodo)](#gather_red)|Di overload. Campionamento della trama corrispondenza delle coordinate specificate utilizzando la configurazione di campionamento specificata e restituisce i componenti di colore rosso (x) delle quattro texel campionati.|  
-|[Get (metodo)](#get)|Di overload. Ottiene il valore dell'elemento in base all'indice.|  
-|[esempio (metodo)](#sample)|Di overload. Esempi di trama di coordinate specificate e a livello di dettaglio utilizzando la configurazione di campionamento specificata.|  
-|[Metodo set](#set)|Imposta il valore di un elemento in base all'indice.|  
+|[gather_alpha](#gather_alpha)|Di overload. Campionamento della trama corrispondenza delle coordinate specificate utilizzando la configurazione di campionamento specificata e restituisce i componenti di alpha (w) delle quattro texel campionati.|  
+|[gather_blue](#gather_blue)|Di overload. Campionamento della trama corrispondenza delle coordinate specificate utilizzando la configurazione di campionamento specificata e restituisce i componenti di blu (z) delle quattro texel campionati.|  
+|[gather_green](#gather_green)|Di overload. Campionamento della trama corrispondenza delle coordinate specificate utilizzando la configurazione di campionamento specificata e restituisce i componenti di colore verde (y) delle quattro texel campionati.|  
+|[gather_red](#gather_red)|Di overload. Campionamento della trama corrispondenza delle coordinate specificate utilizzando la configurazione di campionamento specificata e restituisce i componenti di colore rosso (x) delle quattro texel campionati.|  
+|[get](#get)|Di overload. Ottiene il valore dell'elemento in base all'indice.|  
+|[esempio](#sample)|Di overload. Esempi di trama di coordinate specificate e a livello di dettaglio utilizzando la configurazione di campionamento specificata.|  
+|[set](#set)|Imposta il valore di un elemento in base all'indice.|  
   
 ### <a name="public-operators"></a>Operatori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Operatore operator)](#operator__)|Di overload. Ottiene il valore dell'elemento in base all'indice.|  
-|[operator [] (operatore)](#operator_at)|Di overload. Ottiene il valore dell'elemento in base all'indice.|  
-|[operatore = (operatore)](#operator_eq)|Di overload. Operatore di assegnazione.|  
+|[operator)](#operator_call)|Di overload. Ottiene il valore dell'elemento in base all'indice.|  
+|[operator]](#operator_at)|Di overload. Ottiene il valore dell'elemento in base all'indice.|  
+|[operator=](#operator_eq)|Di overload. Operatore di assegnazione.|  
   
 ### <a name="public-data-members"></a>Membri dati pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[value_type (membro dati)](#value_type)|Il tipo di valore degli elementi del `texture_view`.|  
+|[value_type](#value_type)|Il tipo di valore degli elementi del `texture_view`.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `_Texture_base`  
@@ -120,7 +125,7 @@ class texture_view<const value_type, _Rank> : public details::_Texture_base<valu
   
  **Namespace:** Concurrency:: Graphics  
   
-##  <a name="a-namedtora-textureview"></a><a name="dtor"></a>~ texture_view 
+##  <a name="dtor"></a>~ texture_view 
 
  Elimina il `texture_view` istanza.  
   
@@ -128,7 +133,7 @@ class texture_view<const value_type, _Rank> : public details::_Texture_base<valu
 ~texture_view() restrict(amp, cpu);
 ```  
   
-##  <a name="a-namectora-textureview"></a><a name="ctor"></a>texture_view 
+##  <a name="ctor"></a>texture_view 
 
  Costruisce un `texture_view` istanza.  
   
@@ -190,7 +195,7 @@ texture_view(// [7] copy constructor
  `_Mip_levels`  
  Il numero di livelli di mipmap accessibili tramite il `texture_view`.  
   
-##  <a name="a-namegatherreda-gatherred"></a><a name="gather_red"></a>gather_red 
+##  <a name="gather_red"></a>gather_red 
 
  Campionamento della trama corrispondenza delle coordinate specificate utilizzando la configurazione di campionamento specificata e restituisce i componenti di colore rosso (x) delle quattro texel campionati.  
   
@@ -220,7 +225,7 @@ const gather_return_type gather_red(
 ### <a name="return-value"></a>Valore restituito  
  Uno short vector 4 dimensioni contenente il componente rosso (x) di 4 valori di texel campionati.  
   
-##  <a name="a-namegathergreena-gathergreen"></a><a name="gather_green"></a>gather_green 
+##  <a name="gather_green"></a>gather_green 
 
  Campionamento della trama corrispondenza delle coordinate specificate utilizzando la configurazione di campionamento specificata e restituisce i componenti di colore verde (y) delle quattro texel campionati.  
   
@@ -250,7 +255,7 @@ const gather_return_type gather_green(
 ### <a name="return-value"></a>Valore restituito  
  Uno short vector 4 dimensioni contenente il componente verde (y) di 4 valori di texel campionati.  
   
-##  <a name="a-namegatherbluea-gatherblue"></a><a name="gather_blue"></a>gather_blue 
+##  <a name="gather_blue"></a>gather_blue 
 
  Campionamento della trama corrispondenza delle coordinate specificate utilizzando la configurazione di campionamento specificata e restituisce i componenti di blu (z) delle quattro texel campionati.  
   
@@ -280,7 +285,7 @@ const gather_return_type gather_blue(
 ### <a name="return-value"></a>Valore restituito  
  Uno short vector 4 dimensioni contenente il componente rosso (x) di 4 valori di texel campionati.  
   
-##  <a name="a-namegatheralphaa-gatheralpha"></a><a name="gather_alpha"></a>gather_alpha 
+##  <a name="gather_alpha"></a>gather_alpha 
 
  Campionamento della trama corrispondenza delle coordinate specificate utilizzando la configurazione di campionamento specificata e restituisce i componenti di alpha (w) delle quattro texel campionati.  
   
@@ -310,7 +315,7 @@ const gather_return_type gather_alpha(
 ### <a name="return-value"></a>Valore restituito  
  Una classificazione 4 breve vettore che contiene il valore alfa di componente di 4 valori di texel campionati (w).  
   
-##  <a name="a-namegeta-get"></a><a name="get"></a>Ottieni 
+##  <a name="get"></a>Ottieni 
 
  Ottiene il valore dell'elemento in corrispondenza dell'indice specificato.  
   
@@ -334,7 +339,7 @@ value_type get(
 ### <a name="return-value"></a>Valore restituito  
  Valore dell'elemento.  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>operatore = 
+##  <a name="operator_eq"></a>operatore = 
 
  Assegna una vista della trama stessa specificato `texture_view` a questo `texture_view` istanza.  
   
@@ -362,7 +367,7 @@ texture_view<const value_type, _Rank>& operator= (// [3] copy constructor
 ### <a name="return-value"></a>Valore restituito  
  Un riferimento a questo `texture_view` istanza.  
   
-##  <a name="a-nameoperatorata-operator"></a><a name="operator_at"></a>operator] 
+##  <a name="operator_at"></a>operator] 
 
  Restituisce il valore dell'elemento in base all'indice.  
   
@@ -389,7 +394,7 @@ value_type operator[] (int _I0) const restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Il valore dell'elemento indicizzato da `_Index`.  
   
-##  <a name="a-nameoperatora-operator"></a><a name="operator__"></a>operator) 
+##  <a name="operator_call"></a>operator) 
 
  Restituisce il valore dell'elemento in base all'indice.  
   
@@ -447,7 +452,7 @@ value_type operator() (
 ### <a name="return-value"></a>Valore restituito  
  Il valore dell'elemento indicizzato da `_Index`.  
   
-##  <a name="a-namesamplea-sample"></a><a name="sample"></a>esempio 
+##  <a name="sample"></a>esempio 
 
  Esempi di trama di coordinate specificate e a livello di dettaglio utilizzando la configurazione di campionamento specificata.  
   
@@ -486,7 +491,7 @@ value_type sample(
 ### <a name="return-value"></a>Valore restituito  
  Il valore del campione interpolato.  
   
-##  <a name="a-nameseta-set"></a><a name="set"></a>set 
+##  <a name="set"></a>set 
 
  Imposta il valore dell'elemento in corrispondenza dell'indice specificato sul valore specificato.  
   
@@ -503,7 +508,7 @@ void set(
  `value`  
  Il valore su cui impostare l'elemento.  
   
-##  <a name="a-namevaluetypea-valuetype"></a><a name="value_type"></a>value_type 
+##  <a name="value_type"></a>value_type 
 
  Il tipo di valore degli elementi del texture_view.  
   
@@ -512,5 +517,5 @@ typedef typename const value_type value_type;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Concurrency:: Graphics Namespace](concurrency-graphics-namespace.md)
+ [Spazio dei nomi Concurrency::graphics](concurrency-graphics-namespace.md)
 

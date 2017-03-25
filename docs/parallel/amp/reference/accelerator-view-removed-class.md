@@ -9,11 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amprt/Concurrency::accelerator_view_removed
+- accelerator_view_removed
+- AMPRT/accelerator_view_removed
+- AMPRT/Concurrency::accelerator_view_removed:accelerator_view_removed
+- AMPRT/Concurrency::accelerator_view_removed:get_view_removed_reason
 dev_langs:
 - C++
 helpviewer_keywords:
-- amprt/Concurrency::accelerator_view_removed Class
+- AMPRT/Concurrency::accelerator_view_removed:accelerator_view_removed Class
 ms.assetid: 262446de-311c-454e-a5ed-e2aaced0d88a
 caps.latest.revision: 6
 author: mikeblome
@@ -35,9 +38,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 6e7a56a3315dc38a9e7def2144f3a2f8efd363fc
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: c45eb8192266999c8771f6788de16859fe7a12c8
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="acceleratorviewremoved-class"></a>Classe accelerator_view_removed
@@ -61,7 +64,7 @@ class accelerator_view_removed : public runtime_exception;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[get_view_removed_reason (metodo)](#get_view_removed_reason)|Restituisce un codice di errore HRESULT che indica la causa del `accelerator_view` rimozione dell'oggetto.|  
+|[get_view_removed_reason](#get_view_removed_reason)|Restituisce un codice di errore HRESULT che indica la causa del `accelerator_view` rimozione dell'oggetto.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `exception`  
@@ -75,7 +78,7 @@ class accelerator_view_removed : public runtime_exception;
   
  **Spazio dei nomi:** Concurrency  
 
-## <a name="a-namectora-acceleratorviewremoved"></a><a name="ctor"></a>accelerator_view_removed 
+## <a name="ctor"></a>accelerator_view_removed 
 
 Inizializza una nuova istanza di [accelerator_view_removed](accelerator-view-removed-class.md) (classe).  
   
@@ -100,7 +103,7 @@ explicit accelerator_view_removed(
 ### <a name="return-value"></a>Valore restituito  
  Una nuova istanza della classe accelerator_view_removed.  
   
-## <a name="a-namegetviewremovedreasonmethoda-getviewremovedreason"></a><a name="get_view_removed_reason_method"></a>get_view_removed_reason 
+## <a name="get_view_removed_reason_method"></a>get_view_removed_reason 
 
 Restituisce un codice di errore HRESULT che indica la causa del `accelerator_view` rimozione dell'oggetto.  
   
@@ -112,5 +115,5 @@ HRESULT get_view_removed_reason() const throw();
   
  
 ## <a name="see-also"></a>Vedere anche  
- [Concorrenza Namespace (C++ AMP)](concurrency-namespace-cpp-amp.md)
+ [Spazio dei nomi Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)
 

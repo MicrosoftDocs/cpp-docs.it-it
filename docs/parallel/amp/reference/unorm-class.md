@@ -9,8 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amp_short_vectors/Concurrency::graphics::unorm
-- amp/Concurrency::graphics::unorm
+- unorm
+- AMP_SHORT_VECTORS/unorm
+- AMP_SHORT_VECTORS/Concurrency::graphics::unorm Constructor
 dev_langs:
 - C++
 ms.assetid: bc30bd20-6452-4d5f-9158-3b11c4c16ed2
@@ -34,13 +35,13 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: aae5de80bed3b2d3d5c15285c2d12f2f6771a251
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 6817568b7dc111776033e935fd2ba3ad5dc4a69a
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="unorm-class"></a>Classe unorm
-Rappresenta un numero unorm. Ogni elemento è a virgola mobile punto numero compreso nell'intervallo [0,0 f, 1.0 f].  
+Rappresenta un numero unorm. Ogni elemento è a virgola mobile scegliere numero compreso nell'intervallo [0,0 f, 1.0 f].  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -60,14 +61,14 @@ class unorm;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|unorm::operator - operatore||  
-|float unorm::operator (operatore)|Operatore di conversione. Convertire il numero di unorm mobile valore.|  
-|unorm::operator * = (operatore)||  
-|unorm::operator / = (operatore)||  
-|unorm::operator + + (operatore)||  
-|unorm::operator + = (operatore)||  
-|unorm::operator = (operatore)||  
-|unorm::operator-= (operatore)||  
+|unorm::operator:||  
+|float unorm::operator|Operatore di conversione. Convertire il numero di unorm mobile valore.|  
+|unorm::operator * =||  
+|unorm::operator / =||  
+|unorm::operator + +||  
+|+ = unorm::operator||  
+|unorm::operator =||  
+|unorm::operator =||  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `unorm`  
@@ -77,7 +78,7 @@ class unorm;
   
  **Namespace:** Concurrency:: Graphics  
   
-##  <a name="a-namectora-unorm"></a><a name="ctor"></a>unorm 
+##  <a name="ctor"></a>unorm 
 
  Costruttore predefinito. Inizializzare a 0,0 f.  
   
@@ -125,5 +126,5 @@ inline explicit unorm(
  L'oggetto di norma utilizzato per inizializzare.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Concurrency:: Graphics Namespace](concurrency-graphics-namespace.md)
+ [Spazio dei nomi Concurrency::graphics](concurrency-graphics-namespace.md)
 

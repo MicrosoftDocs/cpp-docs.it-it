@@ -56,9 +56,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 05707bd43a8f9b89a93c0da0011c46d67361fc84
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 4bc5d2138d3ec8e9a0b173d2a60847e92bb8a3b9
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="float2-class"></a>Classe float_2
@@ -88,31 +88,31 @@ class float_2;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|float_2::get_X (metodo)||  
-|float_2::get_xy (metodo)||  
-|float_2::get_y (metodo)||  
-|float_2::get_yx (metodo)||  
-|float_2::ref_g (metodo)||  
-|float_2::ref_r (metodo)||  
-|float_2::ref_x (metodo)||  
-|float_2::ref_y (metodo)||  
-|float_2::set_X (metodo)||  
-|float_2::set_xy (metodo)||  
-|float_2::set_y (metodo)||  
-|float_2::set_yx (metodo)||  
+|float_2::get_X||  
+|float_2::get_xy||  
+|float_2::get_y||  
+|float_2::get_yx||  
+|float_2::ref_g||  
+|float_2::ref_r||  
+|float_2::ref_x||  
+|float_2::ref_y||  
+|float_2::set_X||  
+|float_2::set_xy||  
+|float_2::set_y||  
+|float_2::set_yx||  
   
 ### <a name="public-operators"></a>Operatori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|float_2::operator-(operatore)||  
-|float_2::operator - operatore||  
-|float_2::operator * = (operatore)||  
-|float_2::operator / = (operatore)||  
-|float_2::operator + + (operatore)||  
-|float_2::operator + = (operatore)||  
-|float_2::operator = (operatore)||  
-|float_2::operator-= (operatore)||  
+|float_2::operator-||  
+|float_2::operator:||  
+|float_2::operator * =||  
+|float_2::operator / =||  
+|float_2::operator + +||  
+|+ = float_2::operator||  
+|float_2::operator =||  
+|float_2::operator =||  
   
 ### <a name="public-constants"></a>Costanti pubbliche  
   
@@ -124,14 +124,14 @@ class float_2;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|Membro dati float_2::g||  
-|Membro dati float_2::GR||  
-|Membro dati float_2::r||  
-|Membro dati float_2::RG||  
-|Membro dati float_2::x||  
-|Membro dati float_2::XY||  
-|Membro dati float_2::y||  
-|Membro dati float_2::YX||  
+|float_2::g||  
+|float_2::GR||  
+|float_2::r||  
+|float_2::RG||  
+|float_2::x||  
+|float_2::XY||  
+|float_2::y||  
+|float_2::YX||  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `float_2`  
@@ -141,7 +141,7 @@ class float_2;
   
  **Namespace:** Concurrency:: Graphics  
   
-##  <a name="a-namectora-float2"></a><a name="ctor"></a>float_2 
+##  <a name="ctor"></a>float_2 
 
  Predefinito costruttore inizializza tutti gli elementi con 0.  
   
@@ -204,12 +204,12 @@ explicit inline float_2(
  `_Other`  
  Utilizzato per inizializzare l'oggetto.  
   
-##  <a name="a-namefloat2sizea-size"></a><a name="float_2__size"></a>dimensioni 
+##  <a name="float_2__size"></a>dimensioni 
 
 ```  
 static const int size = 2;  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Concurrency:: Graphics Namespace](concurrency-graphics-namespace.md)
+ [Spazio dei nomi Concurrency::graphics](concurrency-graphics-namespace.md)
 

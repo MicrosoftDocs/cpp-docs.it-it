@@ -6,24 +6,31 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- amp_graphics/Concurrency::graphics::direct3d::get_sampler
+- amp_graphics/Concurrency::graphics::direct3d::make_sampler
+- amp_graphics/Concurrency::graphics::direct3d::make_texture
+dev_langs:
+- C++
 ms.assetid: 11ee1d42-333e-4ae9-95ac-4cf68c06d13d
 caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: aa7e91237eaa9ced297e2c5748359c23bb436df8
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 63cf872bd5ade28115a0eac92304554f125c8dd5
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Funzioni dello spazio dei nomi Concurrency::Graphics::Direct3D
 ||||  
 |-|-|-|  
-|[Funzione get_sampler](#get_sampler)|[Funzione get_texture](#get_texture)|[Funzione make_sampler](#make_sampler)|  
-|[Funzione make_texture](#make_texture)|[Funzione msad4](#msad4)|  
-  
-##  <a name="a-namegetsamplera--getsampler-function"></a><a name="get_sampler"></a>Funzione get_sampler  
+|[get_sampler](#get_sampler)|[get_texture](#get_texture)|[make_sampler](#make_sampler)|  
+|[make_texture](#make_texture)|[msad4](#msad4)|  
+
+ 
+##  <a name="get_sampler"></a>get_sampler  
  Ottenere l'interfaccia D3D campionatore stato determinato tasto di scelta rapida consente di visualizzare che rappresenta l'oggetto specificato campionatore.  
   
 ```  
@@ -42,7 +49,7 @@ IUnknown* get_sampler(
 ### <a name="return-value"></a>Valore restituito  
  Puntatore a interfaccia IUnknown corrispondente allo stato campionatore D3D che rappresenta il campionatore specificato.  
   
-##  <a name="a-namegettexturea--gettexture-function"></a><a name="get_texture"></a>Funzione get_texture  
+##  <a name="get_texture"></a>get_texture  
  Ottiene l'interfaccia di trama Direct3D sottostante specificato [trama](texture-class.md) oggetto.  
   
 ```  
@@ -85,7 +92,7 @@ _Ret_ IUnknown *get_texture(
 ### <a name="return-value"></a>Valore restituito  
  Puntatore a interfaccia IUnknown corrispondente a trama Direct3D sottostante la trama.  
   
-##  <a name="a-namemakesamplera--makesampler-function"></a><a name="make_sampler"></a>Funzione make_sampler  
+##  <a name="make_sampler"></a>make_sampler  
  Creare un campionatore da un puntatore a interfaccia D3D campionatore dello stato.  
   
 ```  
@@ -99,7 +106,7 @@ sampler make_sampler(_In_ IUnknown* _D3D_sampler) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Un campionatore rappresenta lo stato di campionatore D3D fornito.  
   
-##  <a name="a-namemaketexturea--maketexture-function"></a><a name="make_texture"></a>Funzione make_texture  
+##  <a name="make_texture"></a>make_texture  
  Crea un [trama](texture-class.md) oggetto utilizzando i parametri specificati.  
   
 ```  
@@ -132,7 +139,7 @@ texture<value_type, _Rank> make_texture(
 ### <a name="return-value"></a>Valore restituito  
  Una trama utilizzando la trama D3D fornita.  
   
-##  <a name="a-namemsad4a--msad4-function"></a><a name="msad4"></a>Funzione msad4  
+##  <a name="msad4"></a>msad4  
  Confronta un valore di riferimento di 4 byte e un valore di origine a 8 byte e accumula un vettore di 4 somme. Ogni somma corrisponde alla somma mascherata delle differenze assolute di allineamenti diversi byte tra il valore di riferimento e il valore di origine.  
   
 ```  
@@ -154,7 +161,12 @@ inline uint4 msad4(
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce un vettore di 4 somme. Ogni somma corrisponde alla somma mascherata delle differenze assolute di allineamenti diversi byte tra il valore di riferimento e il valore di origine.  
+
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** amp_graphics.h  
   
+ **Namespace:** Concurrency::graphics::direct3d 
+
 ## <a name="see-also"></a>Vedere anche  
- [Namespace Concurrency::Graphics::Direct3D](concurrency-graphics-direct3d-namespace.md)
+ [Spazio dei nomi Concurrency::graphics::direct3d](concurrency-graphics-direct3d-namespace.md)
 

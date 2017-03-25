@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IUMSCompletionList
+- IUMSCompletionList
+- CONCRTRM/concurrency::IUMSCompletionList
+- CONCRTRM/concurrency::IUMSCompletionList::IUMSCompletionList::GetUnblockNotifications
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 25023c27244669092e0f57fe59bdb190fd2f2afb
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 65655e4e03a7b187e0bbadbd576bc088bb57f7c8
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="iumscompletionlist-structure"></a>Struttura IUMSCompletionList
@@ -54,7 +56,7 @@ struct IUMSCompletionList;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Metodo IUMSCompletionList:: GetUnblockNotifications](#getunblocknotifications)|Recupera una catena di `IUMSUnblockNotification` interfacce che rappresentano i contesti di esecuzione il cui thread associati proxy sono stati sbloccati dall'ultima volta in cui questo metodo è stato richiamato.|  
+|[IUMSCompletionList:: GetUnblockNotifications](#getunblocknotifications)|Recupera una catena di `IUMSUnblockNotification` interfacce che rappresentano i contesti di esecuzione il cui thread associati proxy sono stati sbloccati dall'ultima volta in cui questo metodo è stato richiamato.|  
   
 ## <a name="remarks"></a>Note  
  Un'utilità di pianificazione deve essere straordinariamente accurata sulle azioni da eseguire dopo l'utilizzo di questa interfaccia per gli elementi dall'elenco di completamento di rimozione dalla coda. Gli elementi devono essere inseriti nell'elenco dell'utilità di pianificazione di contesti eseguibili e accessibili in genere appena possibile. È anche possibile che uno degli elementi rimossi dalla coda è stato assegnato la proprietà di un blocco arbitrario. L'utilità di pianificazione non può rendere chiamate di funzione arbitrario che possono bloccarsi tra la chiamata a elementi di rimozione dalla coda e la posizione di tali elementi in un elenco che sono in genere accessibili dall'utilità di pianificazione.  
@@ -67,7 +69,7 @@ struct IUMSCompletionList;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="a-namegetunblocknotificationsa--iumscompletionlistgetunblocknotifications-method"></a><a name="getunblocknotifications"></a>Metodo IUMSCompletionList:: GetUnblockNotifications  
+##  <a name="getunblocknotifications"></a>Metodo IUMSCompletionList:: GetUnblockNotifications  
  Recupera una catena di `IUMSUnblockNotification` interfacce che rappresentano i contesti di esecuzione il cui thread associati proxy sono stati sbloccati dall'ultima volta in cui questo metodo è stato richiamato.  
   
 ```
@@ -83,5 +85,5 @@ virtual IUMSUnblockNotification *GetUnblockNotifications() = 0;
 ## <a name="see-also"></a>Vedere anche  
  [concorrenza Namespace](concurrency-namespace.md)   
  [IUMSScheduler (struttura)](iumsscheduler-structure.md)   
- [IUMSUnblockNotification (struttura)](iumsunblocknotification-structure.md)
+ [Struttura IUMSUnblockNotification](iumsunblocknotification-structure.md)
 

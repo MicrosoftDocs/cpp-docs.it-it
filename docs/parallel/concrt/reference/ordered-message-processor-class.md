@@ -9,7 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::ordered_message_processor
+- ordered_message_processor
+- AGENTS/concurrency::ordered_message_processor
+- AGENTS/concurrency::ordered_message_processor::ordered_message_processor
+- AGENTS/concurrency::ordered_message_processor::async_send
+- AGENTS/concurrency::ordered_message_processor::initialize
+- AGENTS/concurrency::ordered_message_processor::initialize_batched_processing
+- AGENTS/concurrency::ordered_message_processor::sync_send
+- AGENTS/concurrency::ordered_message_processor::wait
+- AGENTS/concurrency::ordered_message_processor::process_incoming_message
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +42,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: a9653c8eb5f05e56fd7812d334575e62dc101d63
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 1c3147001db16b610992d2501ed12ad4bd001fc9
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="orderedmessageprocessor-class"></a>Classe ordered_message_processor
@@ -65,24 +73,24 @@ class ordered_message_processor : public message_processor<T>;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore ordered_message_processor](#ctor)|Costruisce un oggetto `ordered_message_processor`.|  
+|[ordered_message_processor](#ctor)|Costruisce un oggetto `ordered_message_processor`.|  
 |[~ ordered_message_processor distruttore](#dtor)|Elimina il `ordered_message_processor` oggetto.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[async_send (metodo)](#async_send)|Le code dei messaggi e avvia un'attività di elaborazione, se non è già stato fatto in modo asincrono. (Esegue l'override di [message_processor:: async_send](message-processor-class.md#async_send).)|  
-|[Initialize (metodo)](#initialize)|Inizializza il `ordered_message_processor` oggetto con il gruppo di funzione, utilità di pianificazione e pianificazione di callback appropriata.|  
-|[initialize_batched_processing (metodo)](#initialize_batched_processing)|Inizializza l'elaborazione batch dei messaggi|  
-|[sync_send (metodo)](#sync_send)|In modo sincrono accoda i messaggi e viene avviata un'attività di elaborazione, se non è già stato fatto. (Esegue l'override di [message_processor:: sync_send](message-processor-class.md#sync_send).)|  
-|[Wait (metodo)](#wait)|Attesa di rotazione specifico del processore utilizzata nei distruttori di blocchi di messaggi per assicurarsi che tutte le attività di elaborazione asincrona dispongano di tempo per il completamento prima di eliminare il blocco. (Esegue l'override di [message_processor:: Wait](message-processor-class.md#wait).)|  
+|[async_send](#async_send)|Le code dei messaggi e avvia un'attività di elaborazione, se non è già stato fatto in modo asincrono. (Esegue l'override di [message_processor:: async_send](message-processor-class.md#async_send).)|  
+|[inizializzare](#initialize)|Inizializza il `ordered_message_processor` oggetto con il gruppo di funzione, utilità di pianificazione e pianificazione di callback appropriata.|  
+|[initialize_batched_processing](#initialize_batched_processing)|Inizializza l'elaborazione batch dei messaggi|  
+|[sync_send](#sync_send)|In modo sincrono accoda i messaggi e viene avviata un'attività di elaborazione, se non è già stato fatto. (Esegue l'override di [message_processor:: sync_send](message-processor-class.md#sync_send).)|  
+|[attesa](#wait)|Attesa di rotazione specifico del processore utilizzata nei distruttori di blocchi di messaggi per assicurarsi che tutte le attività di elaborazione asincrona dispongano di tempo per il completamento prima di eliminare il blocco. (Esegue l'override di [message_processor:: Wait](message-processor-class.md#wait).)|  
   
 ### <a name="protected-methods"></a>Metodi protetti  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[process_incoming_message (metodo)](#process_incoming_message)|La funzione di elaborazione che viene chiamata in modo asincrono. Rimuove dalla coda di messaggi e inizia l'elaborazione. (Esegue l'override di [message_processor:: process_incoming_message](message-processor-class.md#process_incoming_message).)|  
+|[process_incoming_message](#process_incoming_message)|La funzione di elaborazione che viene chiamata in modo asincrono. Rimuove dalla coda di messaggi e inizia l'elaborazione. (Esegue l'override di [message_processor:: process_incoming_message](message-processor-class.md#process_incoming_message).)|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [message_processor](message-processor-class.md)  
@@ -94,7 +102,7 @@ class ordered_message_processor : public message_processor<T>;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="a-nameasyncsenda-asyncsend"></a><a name="async_send"></a>async_send 
+##  <a name="async_send"></a>async_send 
 
  Le code dei messaggi e avvia un'attività di elaborazione, se non è già stato fatto in modo asincrono.  
   
@@ -106,7 +114,7 @@ virtual void async_send(_Inout_opt_ message<T>* _Msg);
  `_Msg`  
  Un puntatore a un messaggio.  
   
-##  <a name="a-nameinitializea-initialize"></a><a name="initialize"></a>inizializzare 
+##  <a name="initialize"></a>inizializzare 
 
  Inizializza il `ordered_message_processor` oggetto con il gruppo di funzione, utilità di pianificazione e pianificazione di callback appropriata.  
   
@@ -127,7 +135,7 @@ void initialize(
  `_Handler`  
  Funtore gestore richiamato durante il callback.  
   
-##  <a name="a-nameinitializebatchedprocessinga-initializebatchedprocessing"></a><a name="initialize_batched_processing"></a>initialize_batched_processing 
+##  <a name="initialize_batched_processing"></a>initialize_batched_processing 
 
  Inizializza l'elaborazione batch dei messaggi  
   
@@ -144,7 +152,7 @@ virtual void initialize_batched_processing(
  `_Propagator`  
  Funtore propagazione richiamato durante il callback.  
   
-##  <a name="a-namectora-orderedmessageprocessor"></a><a name="ctor"></a>ordered_message_processor 
+##  <a name="ctor"></a>ordered_message_processor 
 
  Costruisce un oggetto `ordered_message_processor`.  
   
@@ -155,7 +163,7 @@ ordered_message_processor();
 ### <a name="remarks"></a>Note  
  Questo `ordered_message_processor` non pianificherà gestori asincroni o sincroni fino a quando il `initialize` viene chiamata la funzione.  
   
-##  <a name="a-namedtora-orderedmessageprocessor"></a><a name="dtor"></a>~ ordered_message_processor 
+##  <a name="dtor"></a>~ ordered_message_processor 
 
  Elimina il `ordered_message_processor` oggetto.  
   
@@ -166,7 +174,7 @@ virtual ~ordered_message_processor();
 ### <a name="remarks"></a>Note  
  Attende che tutte le operazioni asincrone in sospeso prima di eliminare il processore.  
   
-##  <a name="a-nameprocessincomingmessagea-processincomingmessage"></a><a name="process_incoming_message"></a>process_incoming_message 
+##  <a name="process_incoming_message"></a>process_incoming_message 
 
  La funzione di elaborazione che viene chiamata in modo asincrono. Rimuove dalla coda di messaggi e inizia l'elaborazione.  
   
@@ -174,7 +182,7 @@ virtual ~ordered_message_processor();
 virtual void process_incoming_message();
 ```  
   
-##  <a name="a-namesyncsenda-syncsend"></a><a name="sync_send"></a>sync_send 
+##  <a name="sync_send"></a>sync_send 
 
  In modo sincrono accoda i messaggi e viene avviata un'attività di elaborazione, se non è già stato fatto.  
   
@@ -186,7 +194,7 @@ virtual void sync_send(_Inout_opt_ message<T>* _Msg);
  `_Msg`  
  Un puntatore a un messaggio.  
   
-##  <a name="a-namewaita-wait"></a><a name="wait"></a>attesa 
+##  <a name="wait"></a>attesa 
 
  Attesa di rotazione specifico del processore utilizzata nei distruttori di blocchi di messaggi per assicurarsi che tutte le attività di elaborazione asincrona dispongano di tempo per il completamento prima di eliminare il blocco.  
   
@@ -195,5 +203,5 @@ virtual void wait();
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [concorrenza Namespace](concurrency-namespace.md)
+ [Spazio dei nomi concurrency](concurrency-namespace.md)
 

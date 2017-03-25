@@ -9,8 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- SchedulerPolicy
 - concrt/concurrency::SchedulerPolicy
-- concrtrm/concurrency::SchedulerPolicy
+- concrt/concurrency::SchedulerPolicy::SchedulerPolicy
+- concrt/concurrency::SchedulerPolicy::GetPolicyValue
+- concrt/concurrency::SchedulerPolicy::SetConcurrencyLimits
+- concrt/concurrency::SchedulerPolicy::SetPolicyValue
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 68707be387590cf04745d5a53872558d7af8da8c
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: a00f7d9cafbd84fc3bbf6b10f322fad6166110cd
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="schedulerpolicy-class"></a>Classe SchedulerPolicy
@@ -55,25 +59,25 @@ class SchedulerPolicy;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore SchedulerPolicy](#ctor)|Di overload. Costruisce un nuovo criterio dell'utilità di pianificazione e la popola con i valori per [chiavi dei criteri](concurrency-namespace-enums.md) supportato dal Runtime di concorrenza le utilità di pianificazione e Gestione risorse.|  
+|[SchedulerPolicy](#ctor)|Di overload. Costruisce un nuovo criterio dell'utilità di pianificazione e la popola con i valori per [chiavi dei criteri](concurrency-namespace-enums.md) supportato dal Runtime di concorrenza le utilità di pianificazione e Gestione risorse.|  
 |[~ Distruttore SchedulerPolicy](#dtor)|Elimina un criterio dell'utilità di pianificazione.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[GetPolicyValue (metodo)](#getpolicyvalue)|Recupera il valore della chiave di criteri fornito come il `key` parametro.|  
-|[SetConcurrencyLimits (metodo)](#setconcurrencylimits)|Consente di impostare contemporaneamente il `MinConcurrency` e `MaxConcurrency` criteri di `SchedulerPolicy` oggetto.|  
-|[SetPolicyValue (metodo)](#setpolicyvalue)|Imposta il valore della chiave di criteri fornito come il `key` parametro e restituisce il valore precedente.|  
+|[GetPolicyValue](#getpolicyvalue)|Recupera il valore della chiave di criteri fornito come il `key` parametro.|  
+|[SetConcurrencyLimits](#setconcurrencylimits)|Consente di impostare contemporaneamente il `MinConcurrency` e `MaxConcurrency` criteri di `SchedulerPolicy` oggetto.|  
+|[SetPolicyValue](#setpolicyvalue)|Imposta il valore della chiave di criteri fornito come il `key` parametro e restituisce il valore precedente.|  
   
 ### <a name="public-operators"></a>Operatori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[operatore = (operatore)](#operator_eq)|Assegna i criteri dell'utilità di pianificazione di un altro criterio dell'utilità di pianificazione.|  
+|[operator=](#operator_eq)|Assegna i criteri dell'utilità di pianificazione di un altro criterio dell'utilità di pianificazione.|  
   
 ## <a name="remarks"></a>Note  
- Per ulteriori informazioni sui criteri che possono essere controllate utilizzando la `SchedulerPolicy` , vedere [PolicyElementKey (enumerazione)](concurrency-namespace-enums.md).  
+ Per ulteriori informazioni sui criteri che possono essere controllate utilizzando la `SchedulerPolicy` , vedere [PolicyElementKey](concurrency-namespace-enums.md).  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `SchedulerPolicy`  
@@ -83,7 +87,7 @@ class SchedulerPolicy;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="a-namegetpolicyvaluea-getpolicyvalue"></a><a name="getpolicyvalue"></a>GetPolicyValue 
+##  <a name="getpolicyvalue"></a>GetPolicyValue 
 
  Recupera il valore della chiave di criteri fornito come il `key` parametro.  
   
@@ -101,7 +105,7 @@ unsigned int GetPolicyValue(PolicyElementKey key) const;
 ### <a name="remarks"></a>Note  
  Il metodo genererà [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) per una chiave di criterio non valido.  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>operatore = 
+##  <a name="operator_eq"></a>operatore = 
 
  Assegna i criteri dell'utilità di pianificazione di un altro criterio dell'utilità di pianificazione.  
   
@@ -119,7 +123,7 @@ SchedulerPolicy& operator= (const SchedulerPolicy& _RhsPolicy);
 ### <a name="remarks"></a>Note  
  Spesso, il modo più semplice per definire nuovi criteri dell'utilità di pianificazione consiste nel copiare i criteri esistenti e nel modificarli tramite i metodi `SetPolicyValue` o `SetConcurrencyLimits`.  
   
-##  <a name="a-namectora-schedulerpolicy"></a><a name="ctor"></a>SchedulerPolicy 
+##  <a name="ctor"></a>SchedulerPolicy 
 
  Costruisce un nuovo criterio dell'utilità di pianificazione e la popola con i valori per [chiavi dei criteri](concurrency-namespace-enums.md) supportato dal Runtime di concorrenza le utilità di pianificazione e Gestione risorse.  
   
@@ -148,7 +152,7 @@ SchedulerPolicy(
   
  Il terzo costruttore è un costruttore di copia. Spesso, il modo più semplice per definire nuovi criteri dell'utilità di pianificazione consiste nel copiare i criteri esistenti e nel modificarli tramite i metodi `SetPolicyValue` o `SetConcurrencyLimits`.  
   
-##  <a name="a-namedtora-schedulerpolicy"></a><a name="dtor"></a>~ SchedulerPolicy 
+##  <a name="dtor"></a>~ SchedulerPolicy 
 
  Elimina un criterio dell'utilità di pianificazione.  
   
@@ -156,7 +160,7 @@ SchedulerPolicy(
 ~SchedulerPolicy();
 ```  
   
-##  <a name="a-namesetconcurrencylimitsa-setconcurrencylimits"></a><a name="setconcurrencylimits"></a>SetConcurrencyLimits 
+##  <a name="setconcurrencylimits"></a>SetConcurrencyLimits 
 
  Consente di impostare contemporaneamente il `MinConcurrency` e `MaxConcurrency` criteri di `SchedulerPolicy` oggetto.  
   
@@ -178,7 +182,7 @@ void SetConcurrencyLimits(
   
  Il metodo può generare [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) per altri valori non validi.  
   
-##  <a name="a-namesetpolicyvaluea-setpolicyvalue"></a><a name="setpolicyvalue"></a>SetPolicyValue 
+##  <a name="setpolicyvalue"></a>SetPolicyValue 
 
  Imposta il valore della chiave di criteri fornito come il `key` parametro e restituisce il valore precedente.  
   
@@ -207,7 +211,7 @@ unsigned int SetPolicyValue(
   
 ## <a name="see-also"></a>Vedere anche  
  [concorrenza Namespace](concurrency-namespace.md)   
- [PolicyElementKey (enumerazione)](concurrency-namespace-enums.md)   
+ [PolicyElementKey](concurrency-namespace-enums.md)   
  [CurrentScheduler (classe)](currentscheduler-class.md)   
  [Scheduler (classe)](scheduler-class.md)   
  [Utilità di pianificazione](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)

@@ -9,7 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amp_graphics/Concurrency::graphics::writeonly_texture_view
+- writeonly_texture_view
+- AMP_GRAPHICS/writeonly_texture_view
+- AMP_GRAPHICS/Concurrency::graphics::writeonly_texture_view
+- AMP_GRAPHICS/Concurrency::graphics::writeonly_texture_view::set
+- AMP_GRAPHICS/Concurrency::graphics::rank Constant
 dev_langs:
 - C++
 ms.assetid: 8d117ad3-0a1c-41ae-b29c-7c95fdd4d04d
@@ -32,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: a40aa0cb433b6daee19af7fdea7c6421b61c1b4c
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 5a051b8db98e36ced89783bfa1de2ab5f514c6bc
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="writeonlytextureview-class"></a>Classe writeonly_texture_view
@@ -83,13 +87,13 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Metodo set](#set)|Imposta il valore dell'elemento in corrispondenza dell'indice specificato.|  
+|[set](#set)|Imposta il valore dell'elemento in corrispondenza dell'indice specificato.|  
   
 ### <a name="public-operators"></a>Operatori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[operatore = (operatore)](#operator_eq)|Copia l'oggetto specificato `writeonly_texture_view` a questo oggetto.|  
+|[operator=](#operator_eq)|Copia l'oggetto specificato `writeonly_texture_view` a questo oggetto.|  
   
 ### <a name="public-constants"></a>Costanti pubbliche  
   
@@ -107,7 +111,7 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
   
  **Namespace:** Concurrency:: Graphics  
   
-##  <a name="a-namedtora-writeonlytextureview"></a><a name="dtor"></a>~ writeonly_texture_view 
+##  <a name="dtor"></a>~ writeonly_texture_view 
 
  Elimina il `writeonly_texture_view` oggetto.  
   
@@ -115,7 +119,7 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
 ~writeonly_texture_view() restrict(amp,cpu);
 ```  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>operatore = 
+##  <a name="operator_eq"></a>operatore = 
 
  Copia l'oggetto specificato `writeonly_texture_view` a questo oggetto.  
   
@@ -131,7 +135,7 @@ writeonly_texture_view<value_type, _Rank>& operator= (
 ### <a name="return-value"></a>Valore restituito  
  Un riferimento a questo `writeonly_texture_view` oggetto.  
   
-##  <a name="a-nameranka-rank"></a><a name="rank"></a>numero di dimensioni 
+##  <a name="rank"></a>numero di dimensioni 
 
  Ottiene il rango di `writeonly_texture_view` oggetto.  
   
@@ -139,7 +143,7 @@ writeonly_texture_view<value_type, _Rank>& operator= (
 static const int rank = _Rank;  
 ```  
   
-##  <a name="a-nameseta-set"></a><a name="set"></a>set 
+##  <a name="set"></a>set 
 
  Imposta il valore dell'elemento in corrispondenza dell'indice specificato.  
   
@@ -156,7 +160,7 @@ void set(
  `value`  
  Nuovo valore dell'elemento.  
   
-##  <a name="a-namectora-writeonlytextureview"></a><a name="ctor"></a>writeonly_texture_view 
+##  <a name="ctor"></a>writeonly_texture_view 
 
  Inizializza una nuova istanza della classe `writeonly_texture_view`.  
   
@@ -182,5 +186,5 @@ writeonly_texture_view(
  La trama che viene utilizzata per creare il `writeonly_texture_view`.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Concurrency:: Graphics Namespace](concurrency-graphics-namespace.md)
+ [Spazio dei nomi Concurrency::graphics](concurrency-graphics-namespace.md)
 

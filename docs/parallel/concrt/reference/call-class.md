@@ -9,8 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concurrency::call
-- agents/concurrency::call
+- call
+- AGENTS/concurrency::call
+- AGENTS/concurrency::call::call
+- AGENTS/concurrency::call::process_input_messages
+- AGENTS/concurrency::call::process_message
+- AGENTS/concurrency::call::propagate_message
+- AGENTS/concurrency::call::send_message
+- AGENTS/concurrency::call::supports_anonymous_source
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 19244e5527207f852256e646abd18ad298fb28cd
-ms.openlocfilehash: b3cfec104346b212217a6854af2390c412c9e015
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 894540410e2768be1cb679b5108fc8c694ca02d3
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="call-class"></a>Classe call
@@ -63,18 +69,18 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[chiamata di costruttore](#ctor)|Di overload. Costruisce un `call` blocco della messaggistica.|  
+|[chiamata](#ctor)|Di overload. Costruisce un `call` blocco della messaggistica.|  
 |[~ chiamata del distruttore](#dtor)|Elimina il `call` blocco della messaggistica.|  
   
 ### <a name="protected-methods"></a>Metodi protetti  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[process_input_messages (metodo)](#process_input_messages)|Esegue la chiamata di funzione nei messaggi di input.|  
-|[process_message (metodo)](#process_message)|Elabora un messaggio che è stato accettato dal `call` blocco della messaggistica.|  
-|[propagate_message (metodo)](#propagate_message)|Passare in modo asincrono un messaggio da un `ISource` questo blocco `call` blocco della messaggistica. Viene richiamato dal `propagate` metodo, quando viene chiamato da un blocco di origine.|  
-|[send_message (metodo)](#send_message)|Passare in modo sincrono un messaggio da un `ISource` questo blocco `call` blocco della messaggistica. Viene richiamato dal `send` metodo, quando viene chiamato da un blocco di origine.|  
-|[supports_anonymous_source (metodo)](#supports_anonymous_source)|Esegue l'override del metodo `supports_anonymous_source` per indicare che questo blocco può accettare messaggi offerti da un'origine non collegata. (Esegue l'override di [ITarget:: Supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|  
+|[process_input_messages](#process_input_messages)|Esegue la chiamata di funzione nei messaggi di input.|  
+|[process_message](#process_message)|Elabora un messaggio che è stato accettato dal `call` blocco della messaggistica.|  
+|[propagate_message](#propagate_message)|Passare in modo asincrono un messaggio da un `ISource` questo blocco `call` blocco della messaggistica. Viene richiamato dal `propagate` metodo, quando viene chiamato da un blocco di origine.|  
+|[send_message](#send_message)|Passare in modo sincrono un messaggio da un `ISource` questo blocco `call` blocco della messaggistica. Viene richiamato dal `send` metodo, quando viene chiamato da un blocco di origine.|  
+|[supports_anonymous_source](#supports_anonymous_source)|Esegue l'override del metodo `supports_anonymous_source` per indicare che questo blocco può accettare messaggi offerti da un'origine non collegata. (Esegue l'override di [ITarget:: Supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|  
   
 ## <a name="remarks"></a>Note  
  Per ulteriori informazioni, vedere [blocchi dei messaggi asincroni](../../../parallel/concrt/asynchronous-message-blocks.md).  
@@ -91,7 +97,7 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="a-namectora-call"></a><a name="ctor"></a>chiamata 
+##  <a name="ctor"></a>chiamata 
 
  Costruisce un `call` blocco della messaggistica.  
   
@@ -142,7 +148,7 @@ call(
   
  Il tipo di `filter_method` è un funtore con firma `bool (T const &)` che viene richiamato da questo `call` blocco della messaggistica per determinare se è necessario accettare un messaggio offerto.  
   
-##  <a name="a-namedtora-call"></a><a name="dtor"></a>~ chiamare 
+##  <a name="dtor"></a>~ chiamare 
 
  Elimina il `call` blocco della messaggistica.  
   
@@ -150,7 +156,7 @@ call(
 ~call();
 ```  
   
-##  <a name="a-nameprocessinputmessagesa-processinputmessages"></a><a name="process_input_messages"></a>process_input_messages 
+##  <a name="process_input_messages"></a>process_input_messages 
 
  Esegue la chiamata di funzione nei messaggi di input.  
   
@@ -161,7 +167,7 @@ virtual void process_input_messages(_Inout_ message<T>* _PMessage);
 ### <a name="parameters"></a>Parametri  
  `_PMessage`  
   
-##  <a name="a-nameprocessmessagea-processmessage"></a><a name="process_message"></a>process_message 
+##  <a name="process_message"></a>process_message 
 
  Elabora un messaggio che è stato accettato dal `call` blocco della messaggistica.  
   
@@ -173,7 +179,7 @@ virtual void process_message(_Inout_ message<T>* _PMessage);
  `_PMessage`  
  Puntatore al messaggio che deve essere gestito.  
   
-##  <a name="a-namepropagatemessagea-propagatemessage"></a><a name="propagate_message"></a>propagate_message 
+##  <a name="propagate_message"></a>propagate_message 
 
  Passare in modo asincrono un messaggio da un `ISource` questo blocco `call` blocco della messaggistica. Viene richiamato dal `propagate` metodo, quando viene chiamato da un blocco di origine.  
   
@@ -193,7 +199,7 @@ virtual message_status propagate_message(
 ### <a name="return-value"></a>Valore restituito  
  Oggetto [message_status](concurrency-namespace-enums.md) indicazione di ciò che la destinazione ha deciso di fare con il messaggio.  
   
-##  <a name="a-namesendmessagea-sendmessage"></a><a name="send_message"></a>send_message 
+##  <a name="send_message"></a>send_message 
 
  Passare in modo sincrono un messaggio da un `ISource` questo blocco `call` blocco della messaggistica. Viene richiamato dal `send` metodo, quando viene chiamato da un blocco di origine.  
   
@@ -213,7 +219,7 @@ virtual message_status send_message(
 ### <a name="return-value"></a>Valore restituito  
  Oggetto [message_status](concurrency-namespace-enums.md) indicazione di ciò che la destinazione ha deciso di fare con il messaggio.  
   
-##  <a name="a-namesupportsanonymoussourcea-supportsanonymoussource"></a><a name="supports_anonymous_source"></a>supports_anonymous_source 
+##  <a name="supports_anonymous_source"></a>supports_anonymous_source 
 
  Esegue l'override del metodo `supports_anonymous_source` per indicare che questo blocco può accettare messaggi offerti da un'origine non collegata.  
   
@@ -226,5 +232,5 @@ virtual bool supports_anonymous_source();
   
 ## <a name="see-also"></a>Vedere anche  
  [concorrenza Namespace](concurrency-namespace.md)   
- [Classe Transformer](transformer-class.md)
+ [Classe transformer](transformer-class.md)
 
