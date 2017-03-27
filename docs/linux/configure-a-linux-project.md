@@ -27,9 +27,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: dff1e9e03911f65dfcffcd078e0739224f73f4aa
-ms.openlocfilehash: b110994cab92d2151f63912d2b08af56059b82d7
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 1683c03c522b0b332ced9e93188c65e996ac633d
+ms.openlocfilehash: ec7ec2a7f5f0393f00efb6d662494e7be2a3f696
+ms.lasthandoff: 03/22/2017
 
 ---
 
@@ -71,7 +71,7 @@ Una volta copiati i file, usare **Directory di VC++** nelle proprietà del proge
 ## <a name="copy-sources"></a>Copia origini
 Durante la compilazione, i file origine del computer di sviluppo vengono copiati nel computer Linux dove vengono poi compilati.  Per impostazione predefinita, tutti i file di origine del progetto di Visual Studio vengono copiati nel percorso impostato sopra.  Tuttavia,è anche possibile aggiungere file di origine aggiuntivi all'elenco oppure disabilitare totalmente la copia di file di origine. Quest'ultima è l'impostazione predefinita per i progetti makefile.
 
-* **Origini da copiare** determina quali file di origine vengono copiati nel computer remoto.  Per impostazione predefinita, il comando **@(SourcesToCopyRemotely)** copia tutti i file nel progetto.
+* **Origini da copiare** determina quali file di origine vengono copiati nel computer remoto.  Per impostazione predefinita, **@(SourcesToCopyRemotely)** corrisponde a tutti i file di codice sorgente nel progetto, ma non include i file di asset o risorsa, ad esempio le immagini.
 
 * L'opzione **Copia origini** può essere attivata e disattivata per attivare e disattivare la copia dei file di origine nel computer remoto.
 
