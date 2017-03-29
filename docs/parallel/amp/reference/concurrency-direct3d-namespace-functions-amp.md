@@ -24,7 +24,8 @@ f1_keywords:
 - amp/Concurrency::direct3d::smoothstep
 - amp/Concurrency::direct3d::step
 - amp/Concurrency::direct3d::umin
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
 caps.latest.revision: 9
 author: mikeblome
