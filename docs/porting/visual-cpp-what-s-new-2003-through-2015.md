@@ -24,6 +24,7 @@ translation.priority.mt:
 translationtype: Human Translation
 ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
 ms.openlocfilehash: c6ac9fb7400bd0c37d1da5a0c6bd66ccbf7abd6c
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++: novità dalla versione 2003 alla 2015
@@ -44,7 +45,7 @@ In Visual C++ 2015 e versioni successive i miglioramenti apportati in modo costa
   
 -   [Miglioramenti della conformità in Update 3](#VS_Update3)  
   
-##  <a name="a-namevsrtma-conformance-improvements-in-visual-c-2015"></a><a name="VS_RTM"></a>Miglioramenti della conformità in Visual C++ 2015  
+##  <a name="VS_RTM"></a>Miglioramenti della conformità in Visual C++ 2015  
   
 -   /Zc:forScope- option  
   
@@ -527,7 +528,7 @@ In Visual C++ 2015 e versioni successive i miglioramenti apportati in modo costa
   
      Sia in [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] che in [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] il compilatore genera un costruttore di copia per una classe se tale classe ha un costruttore di spostamento definito dall'utente, ma nessun costruttore di copia definito dall'utente. In Dev14, questo costruttore di copia generato in modo implicito è contrassegnato come "= delete".  
   
-##  <a name="a-namevsupdate1a-conformance-improvements-in-update-1"></a><a name="VS_Update1"></a> Miglioramenti della conformità in Update 1  
+##  <a name="VS_Update1"></a> Miglioramenti della conformità in Update 1  
   
 -   **Classi base virtuali private ed ereditarietà indiretta**  
   
@@ -605,7 +606,7 @@ In Visual C++ 2015 e versioni successive i miglioramenti apportati in modo costa
   
      Inoltre, nonostante il compilatore non fornisca una diagnostica specifica, il formato dell'operatore new inline viene considerato non valido.  
   
--   **Chiamata di 'operator *type*()' (conversione definita dall'utente) in tipi non classe**  
+-   **Chiamata di 'operator*type*()' (conversione definita dall'utente) in tipi non classe**  
   
      Le versioni precedenti del compilatore consentivano di chiamare 'operator *type*()' su tipi non classe ignorandolo senza avvisare. Questo comportamento precedente creava un rischio di generazione di codice errato senza avvisare, determinando un comportamento imprevedibile in fase di esecuzione. Il compilatore non accetta più il codice scritto in questo modo e genera invece l'errore del compilatore C2228.  
   
@@ -1038,7 +1039,7 @@ In Visual C++ 2015 e versioni successive i miglioramenti apportati in modo costa
     }  
     ```  
   
-##  <a name="a-namevsupdate2a-conformance-improvements-in-update-2"></a><a name="VS_Update2"></a> Miglioramenti della conformità in Update 2  
+##  <a name="VS_Update2"></a> Miglioramenti della conformità in Update 2  
   
 -   **Errori e avvisi aggiuntivi potrebbero essere generati in seguito a un supporto parziale per l'espressione SFINAE**  
   
@@ -1129,7 +1130,7 @@ In Visual C++ 2015 e versioni successive i miglioramenti apportati in modo costa
     };  
     ```  
   
--   `volatile` Le variabili membro ** impediscono i costruttori e gli operatori di assegnazione definiti in modo implicito**  
+-   `volatile` Le variabili membro **impediscono i costruttori e gli operatori di assegnazione definiti in modo implicito**  
   
      Le versioni precedenti del compilatore consentivano a una classe con variabili membro `volatile` di generare automaticamente costruttori di copia/spostamento predefiniti e operatori di assegnazione di copia/spostamento predefiniti. Questo comportamento precedente non era corretto e non è conforme allo standard C++. Ora il compilatore presuppone che una classe con variabili membro volatili includa operatori di costruzione e di assegnazione non semplici e, di conseguenza, impedisce la generazione automatica delle implementazioni predefinite di questi operatori.  Quando questa classe è un membro di un'unione (o un'unione anonima all'interno di una classe), i costruttori di copia/spostamento e gli operatori di assegnazione di copia/spostamento dell'unione (o della classe che contiene l'unione anonima) vengono definiti in modo implicito come eliminati. Il tentativo di costruire o copiare l'unione (o la classe che contiene l'unione anonima) senza definirli in modo esplicito è un errore e, di conseguenza, il compilatore genera l'errore C2280.  
   
@@ -1303,7 +1304,7 @@ In Visual C++ 2015 e versioni successive i miglioramenti apportati in modo costa
   
      La correzione del codice scritto in questo modo potrebbe richiedere lo spostamento delle definizioni dell'operatore da un file di intestazione a un file di origine corrispondente.  
   
-##  <a name="a-namevsupdate3a-conformance-improvements-in-update-3"></a><a name="VS_Update3"></a> Miglioramenti della conformità in Update 3  
+##  <a name="VS_Update3"></a> Miglioramenti della conformità in Update 3  
   
 -   **std::is_convertable ora rileva l'assegnazione automatica** (libreria standard)  
   
@@ -1542,8 +1543,3 @@ In Visual C++ 2015 e versioni successive i miglioramenti apportati in modo costa
     cl /c /Wall /Ycc.h -I.. X.cpp  
     cl /c /Wall /Yuc.h -I.. Z.cpp  
     ```
-
-
-<!--HONumber=Feb17_HO4-->
-
-
