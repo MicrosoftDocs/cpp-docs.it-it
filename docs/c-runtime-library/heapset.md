@@ -51,9 +51,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 38da17243a00f703313007a0721ccb44b5f3eb75
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 0bcd8094d0b07927c8f85baf81d6ae834d283d9d
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="heapset"></a>_heapset
@@ -145,9 +145,6 @@ int main( void )
 ```Output  
 OK - heap is fine  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Esempi di platform invoke](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Allocazione di memoria](../c-runtime-library/memory-allocation.md)   

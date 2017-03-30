@@ -58,9 +58,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 54325f60b0d1714cab68f17152609a8980bc2a60
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: b0dabfdf6540a09a08f7b7a3dec05fd5aa9d07fa
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="inp-inpw-inpd"></a>_inp, _inpw, _inpd
@@ -110,9 +110,6 @@ unsigned long _inpd(
   
 ## <a name="libraries"></a>Librerie  
  Tutte le versioni delle [librerie di runtime C](../c-runtime-library/crt-library-features.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Esempi di platform invoke](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Console e porta I/O](../c-runtime-library/console-and-port-i-o.md)   
