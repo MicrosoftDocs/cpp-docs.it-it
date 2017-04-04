@@ -103,7 +103,7 @@ class queue
   
  **Spazio dei nomi:** std  
   
-##  <a name="a-namequeuebacka--queueback"></a><a name="queue__back"></a>  queue::back  
+##  <a name="queue__back"></a>  queue::back  
  Restituisce un riferimento all'ultimo elemento aggiunto di recente alla fine dell'oggetto queue.  
   
 ```  
@@ -146,7 +146,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namequeuecontainertypea--queuecontainertype"></a><a name="queue__container_type"></a>  queue::container_type  
+##  <a name="queue__container_type"></a>  queue::container_type  
  Tipo che fornisce il contenitore di base da adattare.  
   
 ```  
@@ -161,7 +161,7 @@ typedef Container container_type;
 ### <a name="example"></a>Esempio  
   Vedere l'esempio relativo a [queue](#queue__queue) per indicazioni su come dichiarare e usare `container_type`.  
   
-##  <a name="a-namequeueemptya--queueempty"></a><a name="queue__empty"></a>  queue::empty  
+##  <a name="queue__empty"></a>  queue::empty  
  Verifica se un oggetto queue è vuoto.  
   
 ```  
@@ -205,7 +205,7 @@ The queue q1 is not empty.
 The queue q2 is empty.  
 ```  
   
-##  <a name="a-namequeuefronta--queuefront"></a><a name="queue__front"></a>  queue::front  
+##  <a name="queue__front"></a>  queue::front  
  Restituisce un riferimento al primo elemento all'inizio dell'oggetto queue.  
   
 ```  
@@ -254,7 +254,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namequeuepopa--queuepop"></a><a name="queue__pop"></a>  queue::pop  
+##  <a name="queue__pop"></a>  queue::pop  
  Rimuove un elemento dall'inizio dell'oggetto queue.  
   
 ```  
@@ -308,7 +308,7 @@ After a pop the queue length is 2.
 After a pop, the element at the front of the queue is 20.  
 ```  
   
-##  <a name="a-namequeuepusha--queuepush"></a><a name="queue__push"></a>  queue::push  
+##  <a name="queue__push"></a>  queue::push  
  Aggiunge un elemento alla fine dell'oggetto queue.  
   
 ```  
@@ -354,7 +354,7 @@ The queue length is 3.
 The element at the front of the queue is 10.  
 ```  
   
-##  <a name="a-namequeuequeuea--queuequeue"></a><a name="queue__queue"></a>  queue::queue  
+##  <a name="queue__queue"></a>  queue::queue  
  Costruisce un oggetto queue vuoto o che rappresenta una copia di un oggetto contenitore di base.  
   
 ```  
@@ -364,7 +364,7 @@ explicit queue(const container_type& right);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` right`  
+ `right`  
  Il contenitore **const** di cui l'oggetto queue costruito deve essere una copia.  
   
 ### <a name="remarks"></a>Note  
@@ -418,7 +418,7 @@ The element at the front of queue q5 is 1.
 The element at the back of queue q5 is 2.  
 ```  
   
-##  <a name="a-namequeuesizea--queuesize"></a><a name="queue__size"></a>  queue::size  
+##  <a name="queue__size"></a>  queue::size  
  Restituisce il numero di elementi dell'oggetto queue.  
   
 ```  
@@ -457,7 +457,7 @@ The queue length is 1.
 The queue length is now 2.  
 ```  
   
-##  <a name="a-namequeuesizetypea--queuesizetype"></a><a name="queue__size_type"></a>  queue::size_type  
+##  <a name="queue__size_type"></a>  queue::size_type  
  Tipo Unsigned Integer in grado di rappresentare il numero di elementi di un oggetto queue.  
   
 ```  
@@ -470,7 +470,7 @@ typedef typename Container::size_type size_type;
 ### <a name="example"></a>Esempio  
   Vedere l'esempio relativo a [queue::front](#queue__front) per indicazioni su come dichiarare e usare `size_type`.  
   
-##  <a name="a-namequeuevaluetypea--queuevaluetype"></a><a name="queue__value_type"></a>  queue::value_type  
+##  <a name="queue__value_type"></a>  queue::value_type  
  Tipo che rappresenta il tipo di oggetto archiviato come elemento in un oggetto queue.  
   
 ```  

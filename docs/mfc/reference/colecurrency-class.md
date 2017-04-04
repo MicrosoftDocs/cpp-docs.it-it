@@ -198,15 +198,13 @@ CurrencyStatus GetStatus() const;
 ### <a name="remarks"></a>Note  
  Il valore restituito è definito dal `CurrencyStatus` tipo enumerato che viene definito all'interno di **COleCurrency** (classe).  
   
- `enum CurrencyStatus{`  
-  
- `valid = 0,`  
-  
- `invalid = 1,`  
-  
- `null = 2,`  
-  
- `};`  
+```  
+enum CurrencyStatus {
+    valid = 0,
+    invalid = 1,
+    null = 2
+    };  
+```  
   
  Per una breve descrizione dei valori di stato, vedere l'elenco seguente:  
   
@@ -530,15 +528,13 @@ void SetStatus(CurrencyStatus  status  );
 ### <a name="remarks"></a>Note  
  Il *stato* valore di parametro è definito dal `CurrencyStatus` tipo enumerato, che viene definito all'interno di **COleCurrency** classe.  
   
- `enum CurrencyStatus{`  
-  
- `valid = 0,`  
-  
- `invalid = 1,`  
-  
- `null = 2,`  
-  
- `};`  
+```  
+enum CurrencyStatus {
+    valid = 0,
+    invalid = 1,
+    null = 2
+    };  
+```  
   
  Per una breve descrizione dei valori di stato, vedere l'elenco seguente:  
   

@@ -101,7 +101,7 @@ class stack
   
  **Spazio dei nomi:** std  
   
-##  <a name="a-namestackcontainertypea--stackcontainertype"></a><a name="stack__container_type"></a>  stack::container_type  
+##  <a name="stack__container_type"></a>  stack::container_type  
  Tipo che fornisce il contenitore di base da adattare.  
   
 ```  
@@ -116,7 +116,7 @@ typedef Container container_type;
 ### <a name="example"></a>Esempio  
   Vedere l'esempio relativo a [stack::stack](#stack__stack) per indicazioni su come dichiarare e usare `container_type`.  
   
-##  <a name="a-namestackemptya--stackempty"></a><a name="stack__empty"></a>  stack::empty  
+##  <a name="stack__empty"></a>  stack::empty  
  Verifica se uno stack è vuoto.  
   
 ```  
@@ -159,7 +159,7 @@ The stack s1 is not empty.
 The stack s2 is empty.  
 ```  
   
-##  <a name="a-namestackpopa--stackpop"></a><a name="stack__pop"></a>  stack::pop  
+##  <a name="stack__pop"></a>  stack::pop  
  Rimuove l'elemento all'inizio dello stack.  
   
 ```  
@@ -213,7 +213,7 @@ After a pop, the stack length is 2.
 After a pop, the element at the top of the stack is 20.  
 ```  
   
-##  <a name="a-namestackpusha--stackpush"></a><a name="stack__push"></a>  stack::push  
+##  <a name="stack__push"></a>  stack::push  
  Aggiunge un elemento alla fine dello stack.  
   
 ```  
@@ -221,7 +221,7 @@ void push(const Type& val);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` val`  
+ `val`  
  Elemento aggiunto all'inizio dello stack.  
   
 ### <a name="remarks"></a>Note  
@@ -259,7 +259,7 @@ The stack length is 3.
 The element at the top of the stack is 30.  
 ```  
   
-##  <a name="a-namestacksizea--stacksize"></a><a name="stack__size"></a>  stack::size  
+##  <a name="stack__size"></a>  stack::size  
  Restituisce il numero di elementi presenti nello stack.  
   
 ```  
@@ -298,7 +298,7 @@ The stack length is 1.
 The stack length is now 2.  
 ```  
   
-##  <a name="a-namestacksizetypea--stacksizetype"></a><a name="stack__size_type"></a>  stack::size_type  
+##  <a name="stack__size_type"></a>  stack::size_type  
  Tipo Unsigned Integer in grado di rappresentare il numero di elementi di uno stack.  
   
 ```  
@@ -311,7 +311,7 @@ typedef typename Container::size_type size_type;
 ### <a name="example"></a>Esempio  
   Vedere l'esempio relativo a [size](#stack__size) per indicazioni su come dichiarare e usare `size_type`.  
   
-##  <a name="a-namestackstacka--stackstack"></a><a name="stack__stack"></a>  stack::stack  
+##  <a name="stack__stack"></a>  stack::stack  
  Costruisce uno stack vuoto o che rappresenta una copia totale o parziale di una classe contenitore di base.  
   
 ```  
@@ -321,7 +321,7 @@ explicit stack(const container_type& right);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` right`  
+ `right`  
  Contenitore di cui lo stack costruito deve essere una copia.  
   
 ### <a name="example"></a>Esempio  
@@ -363,7 +363,7 @@ int main( )
 The element at the top of stack vsi2 is 1.  
 ```  
   
-##  <a name="a-namestacktopa--stacktop"></a><a name="stack__top"></a>  stack::top  
+##  <a name="stack__top"></a>  stack::top  
  Restituisce un riferimento a un elemento all'inizio dello stack.  
   
 ```  
@@ -411,7 +411,7 @@ The top integer of the stack s1 is 2.
 The next integer down is 1.  
 ```  
   
-##  <a name="a-namestackvaluetypea--stackvaluetype"></a><a name="stack__value_type"></a>  stack::value_type  
+##  <a name="stack__value_type"></a>  stack::value_type  
  Tipo che rappresenta il tipo di oggetto archiviato come elemento in uno stack.  
   
 ```  

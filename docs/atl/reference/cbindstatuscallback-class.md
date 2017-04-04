@@ -275,15 +275,13 @@ ATL_PDATAAVAILABLE m_pFunc;
 ### <a name="remarks"></a>Note  
  La funzione a cui puntava `m_pFunc` è un membro della classe dell'oggetto e presenta la seguente sintassi:  
   
- `void Function_Name(`  
-  
- `CBindStatusCallback<T>* pbsc,`  
-  
- `BYTE* pBytes,`  
-  
- `DWORD dwSize`  
-  
- `);`  
+```  
+void Function_Name(  
+   CBindStatusCallback<T>* pbsc,  
+   BYTE* pBytes,  
+   DWORD dwSize  
+   );  
+```  
   
 ##  <a name="m_pt"></a>CBindStatusCallback::m_pT  
  Puntatore all'oggetto che richiede il trasferimento di dati asincroni.  
