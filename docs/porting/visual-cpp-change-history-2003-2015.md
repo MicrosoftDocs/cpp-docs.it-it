@@ -95,7 +95,7 @@ Quando si esegue l'aggiornamento a una nuova versione del compilatore Visual C++
   
      La correzione per questo avviso consiste nel sostituire la chiamata a abs con una versione a virgola mobile di abs, ad esempio fabs per un argomento double o fabsf per un argomento float o includere l'intestazione cmath e continuare a usare abs.  
   
--   **Conformità del punto a virgola mobile** Sono state apportate numerose modifiche alla libreria matematica per migliorare la conformità alle specifiche IEEE&754; e C11 allegato F rispetto all'input per casi speciali, ad esempio NaN e infiniti. Ad esempio, gli input NaN non interattivi, che spesso venivano considerati errori nelle versioni precedenti della libreria, non vengono più considerati errori. Vedere [Standard IEEE 754](http://grouper.ieee.org/groups/754) e l'allegato F dello [Standard C11](http://www.iso-9899.info/wiki/The_Standard).  
+-   **Conformità del punto a virgola mobile** Sono state apportate numerose modifiche alla libreria matematica per migliorare la conformità alle specifiche IEEE 754 e C11 allegato F rispetto all'input per casi speciali, ad esempio NaN e infiniti. Ad esempio, gli input NaN non interattivi, che spesso venivano considerati errori nelle versioni precedenti della libreria, non vengono più considerati errori. Vedere [Standard IEEE 754](http://grouper.ieee.org/groups/754) e l'allegato F dello [Standard C11](http://www.iso-9899.info/wiki/The_Standard).  
   
      Queste modifiche non provocheranno errori in fase di compilazione, ma potrebbero causare un comportamento diverso da parte dei programmi, sebbene più corretto in base allo standard.  
   
@@ -103,7 +103,7 @@ Quando si esegue l'aggiornamento a una nuova versione del compilatore Visual C++
   
 #### <a name="new-and-newh"></a>\<new> e \<new.h>  
   
--   **new e delete** In previous versions of the library, the implementation-defined operator new e delete functions were exported from the runtime library DLL (for example, msvcr120.dll). Queste funzioni operatore ora sono sempre collegate staticamente nei file binari, anche quando si usano le DLL della libreria di runtime.  
+-   **new e delete** Nelle versioni precedenti della libreria le funzioni dell'operatore new e delete definito dall'implementazione venivano esportate dalla libreria di runtime DLL (ad esempio, msvcr120.dll). Queste funzioni operatore ora sono sempre collegate staticamente nei file binari, anche quando si usano le DLL della libreria di runtime.  
   
      Non si tratta di una modifica rilevante per il codice misto o nativo (/clr), tuttavia per il codice compilato come [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md) potrebbe causare un errore di compilazione da parte del codice. Se si compila codice come /clr:pure, può essere necessario aggiungere #include \<new> o #include \<new.h> per risolvere errori di compilazione dovuti a questa modifica. Si noti che /clr:pure è deprecato in [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] e potrebbe essere rimosso nelle versioni future.  
   
@@ -181,7 +181,7 @@ Quando si esegue l'aggiornamento a una nuova versione del compilatore Visual C++
   
 -   **Precisione %A e %a** La precisione predefinita degli identificatori di formato %A e %a era 6 nelle versioni precedenti della libreria. La precisione predefinita è ora 13 per conformità agli standard C.  
   
-     Si tratta di una modifica del comportamento di runtime nell'output di qualsiasi funzione che usa una stringa di formato con %A o %a. Nel comportamento precedente l'output che usava l'identificatore %A potrebbe essere "1.1A2B3Cp+111". A questo punto l'output per lo stesso valore è "1.1A2B3C4D5E6F7p +&111;". Per ottenere il comportamento precedente, è possibile specificare la precisione, ad esempio, %.6A. Vedere [Specifica precisione](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md#precision).  
+     Si tratta di una modifica del comportamento di runtime nell'output di qualsiasi funzione che usa una stringa di formato con %A o %a. Nel comportamento precedente l'output che usava l'identificatore %A potrebbe essere "1.1A2B3Cp+111". A questo punto l'output per lo stesso valore è "1.1A2B3C4D5E6F7p + 111". Per ottenere il comportamento precedente, è possibile specificare la precisione, ad esempio, %.6A. Vedere [Specifica precisione](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md#precision).  
   
 -   **Identificatore %F** L'identificatore di conversione o di formato %F è ora supportato. È funzionalmente equivalente all'identificatore di formato %f, ad eccezione del fatto che valori infiniti e NaN vengono formattati con lettere maiuscole.  
   
@@ -2268,7 +2268,7 @@ Quando si esegue l'aggiornamento a una nuova versione del compilatore Visual C++
   
 -   L'opzione /Yl del compilatore è stata modificata. Per impostazione predefinita, il compilatore usa questa opzione, che può provocare errori LNK2011 in determinate condizioni. Per altre informazioni, vedere [/Yl (Inserisce il riferimento PCH per la libreria di debug)](../build/reference/yl-inject-pch-reference-for-debug-library.md).  
   
--   Nel codice compilato con /clr, la parola chiave enum class definisce un enum C++&11;, non un enum Common Language Runtime (CLR). Per definire un enum CLR, è necessario essere espliciti riguardo all'accessibilità.  
+-   Nel codice compilato con /clr, la parola chiave enum class definisce un enum C++ 11, non un enum Common Language Runtime (CLR). Per definire un enum CLR, è necessario essere espliciti riguardo all'accessibilità.  
   
 -   Usare la parola chiave template per evitare in modo esplicito ambiguità di un nome di dipendente (conformità con lo standard del linguaggio C++). Nell'esempio seguente la parola chiave template evidenziata è obbligatoria per risolvere l'ambiguità. Per altre informazioni, vedere [Risoluzione dei nomi per tipi dipendenti](../cpp/name-resolution-for-dependent-types.md).  
   
