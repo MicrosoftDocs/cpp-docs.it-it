@@ -1,61 +1,77 @@
 ---
-title: "Classificazione per byte | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.types.bytes"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "routine di classificazione per byte"
-  - "byte, test"
-  - "tabella codici 932"
+title: Classificazione per byte | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.types.bytes
+dev_langs:
+- C++
+helpviewer_keywords:
+- code page 932
+- byte classification routines
+- bytes, testing
 ms.assetid: 1cb52d71-fb0c-46ca-aad7-6472c1103370
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Classificazione per byte
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 9ab3901fa8e167af8b559c6100460f67bd4ed0e7
+ms.lasthandoff: 03/29/2017
 
-Ognuna di queste routine verifica un determinato byte di un carattere multibyte per la soddisfazione di una condizione.  Tranne quando specificato diversamente, il valore di output è influenzato dall'impostazione locali di categoria `LC_CTYPE`; vedere [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) per ulteriori informazioni.  Le versioni di queste funzioni senza il suffisso `_l` utilizzano le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali; le versioni con il suffisso `_l` sono identiche, ad eccezione del fatto che utilizzano il parametro delle impostazioni locali che viene passato.  
+---
+# <a name="byte-classification"></a>Classificazione per byte
+Ognuna di queste routine verifica una specifico byte di un carattere multibyte per soddisfare una condizione. Se non specificato diversamente, la configurazione dell'impostazione della categoria `LC_CTYPE` delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso `_l` usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso `_l` sono identiche ma usano il parametro passato relativo alle impostazioni locali.  
   
 > [!NOTE]
->  Per definizione, il set di caratteri ASCII compresi tra 0 e 127 sono un sottoinsieme di tutti i set di caratteri multibyte.  Ad esempio, il set di caratteri katakana giapponese comprende sia caratteri ASCII sia caratteri non ASCII.  
+>  Per definizione, i caratteri ASCII tra 0 e 127 sono un sottoinsieme di tutti i caratteri multibyte. Ad esempio, il set di caratteri giapponese katakana comprende caratteri ASCII e non ASCII.  
   
- Le costanti predefinite nella tabella seguente sono definite in. CTYPE.H.  
+ Le costanti predefinite nella tabella seguente sono definite in CTYPE.H.  
   
-### Routine di classificazione per byte di caratteri multibyte  
+### <a name="multibyte-character-byte-classification-routines"></a>Routine di classificazione per byte di caratteri multibyte  
   
-|Routine|Condizione di test di byte|Equivalente .NET Framework|  
-|-------------|--------------------------------|--------------------------------|  
-|[isleadbyte, \_isleadbyte\_l](../c-runtime-library/reference/isleadbyte-isleadbyte-l.md)|Byte iniziale; il risultato del test dipende dall'impostazione di categoria `LC_CTYPE` locale.|Non applicabile, vedere [System::Globalization::CultureInfo](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.aspx).|  
-|[\_ismbbalnum, \_ismbbalnum\_l](../c-runtime-library/reference/ismbbalnum-ismbbalnum-l.md)|`isalnum &#124;&#124; _ismbbkalnum`|Non applicabile, vedere [System::Globalization::CultureInfo](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.aspx).|  
-|[\_ismbbalpha, \_ismbbalpha\_l](../c-runtime-library/reference/ismbbalpha-ismbbalpha-l.md)|`isalpha &#124;&#124; _ismbbkalnum`|Non applicabile, vedere [System::Globalization::CultureInfo](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.aspx).|  
-|[\_ismbbgraph, \_ismbbgraph\_l](../c-runtime-library/reference/ismbbgraph-ismbbgraph-l.md)|Lo stesso vale per `_ismbbprint`, ma `_ismbbgraph` non include il carattere spazio \(0x20\)|Non applicabile, vedere [System::Globalization::CultureInfo](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.aspx).|  
-|[\_ismbbkalnum, \_ismbbkalnum\_l](../c-runtime-library/reference/ismbbkalnum-ismbbkalnum-l.md)|Simbolo di testo non ASCII e non di punteggiatura.  Ad esempio, solo nella tabella codice 932, `_ismbbkalnum` verifica per katakana alfanumerico|Non applicabile, vedere [System::Globalization::CultureInfo](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.aspx).|  
-|[\_ismbbkana, \_ismbbkana\_l](../c-runtime-library/reference/ismbbkana-ismbbkana-l.md)|Katakana \(0xA1 – 0xDF\), solo tabella codice 932|Non applicabile, vedere [System::Globalization::CultureInfo](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.aspx).|  
-|[\_ismbbkprint, \_ismbbkprint\_l](../c-runtime-library/reference/ismbbkprint-ismbbkprint-l.md)|Testo non ASCII o simbolo di punteggiatura non ASCII.  Ad esempio, solo nella tabella codice 932, `_ismbbkprint` verifica per punteggiatura katakana o katakana alfanumerico \(intervallo: 0xA1 – 0xDF\).|Non applicabile, vedere [System::Globalization::CultureInfo](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.aspx).|  
-|[\_ismbbkpunct, \_ismbbkpunct\_l](../c-runtime-library/reference/ismbbkpunct-ismbbkpunct-l.md)|Punteggiatura non ASCII.  Ad esempio, solo nella tabella codice 932, `_ismbbkpunct` verifica per punteggiatura katakana|Non applicabile, vedere [System::Globalization::CultureInfo](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.aspx).|  
-|[\_ismbblead, \_ismbblead\_l](../c-runtime-library/reference/ismbblead-ismbblead-l.md)|Primo byte di un carattere multibyte.  Ad esempio, solo nella tabella codice 932, gli intervalli validi sono 0x81 – 0x9F, 0xE0 – 0xFC.|Non applicabile, vedere [System::Globalization::CultureInfo](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.aspx).|  
-|[\_ismbbprint, \_ismbbprint\_l](../c-runtime-library/reference/ismbbprint-ismbbprint-l.md)|`isprint &#124;&#124; _ismbbkprint. ismbbprint` include il carattere di spazio \(0x20\)|Non applicabile, vedere [System::Globalization::CultureInfo](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.aspx).|  
-|[\_ismbbpunct, \_ismbbpunct\_l](../c-runtime-library/reference/ismbbpunct-ismbbpunct-l.md)|`ispunct &#124;&#124; _ismbbkpunct`|Non applicabile, vedere [System::Globalization::CultureInfo](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.aspx).|  
-|[\_ismbbtrail, \_ismbbtrail\_l](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md)|Secondo byte di un carattere multibyte.  Ad esempio, solo nella tabella codice 932, gli intervalli validi sono 0x40 – 0x7E, 0x80 – 0xEC.|Non applicabile, vedere [System::Globalization::CultureInfo](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.aspx).|  
-|[\_ismbslead, \_ismbslead\_l](../c-runtime-library/reference/ismbslead-ismbstrail-ismbslead-l-ismbstrail-l.md)|Byte iniziali \(nel contesto della stringa\)|Non applicabile, vedere [System::Globalization::CultureInfo](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.aspx).|  
-|[ismbstrail, \_ismbstrail\_l](../c-runtime-library/reference/ismbslead-ismbstrail-ismbslead-l-ismbstrail-l.md)|Byte finale \(nel contesto della stringa\)|Non applicabile, vedere [System::Globalization::CultureInfo](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.aspx).|  
-|[\_mbbtype, \_mbbtype\_l](../c-runtime-library/reference/mbbtype-mbbtype-l.md)|Restituisce il tipo del byte basato sul byte precedente|Non applicabile, vedere [System::Globalization::CultureInfo](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.aspx).|  
-|[\_mbsbtype, \_mbsbtype\_l](../c-runtime-library/reference/mbsbtype-mbsbtype-l.md)|Restituisce il tipo del byte in una stringa|Non applicabile, vedere [System::Globalization::CultureInfo](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.aspx).|  
-|[mbsinit](../c-runtime-library/reference/mbsinit.md)|Tiene traccia dello stato di conversione di caratteri multibyte.|Non applicabile, vedere [System::Globalization::CultureInfo](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.aspx).|  
+|Routine|Condizione di test di byte|  
+|-------------|-------------------------|  
+|[isleadbyte, _isleadbyte_l](../c-runtime-library/reference/isleadbyte-isleadbyte-l.md)|Byte di apertura; il risultato del test dipende dall'impostazione di categoria `LC_CTYPE` delle impostazioni locali correnti|  
+|[_ismbbalnum, _ismbbalnum_l](../c-runtime-library/reference/ismbbalnum-ismbbalnum-l.md)|`isalnum &#124;&#124; _ismbbkalnum`|  
+|[_ismbbalpha, _ismbbalpha_l](../c-runtime-library/reference/ismbbalpha-ismbbalpha-l.md)|`isalpha &#124;&#124; _ismbbkalnum`|  
+|[_ismbbgraph, _ismbbgraph_l](../c-runtime-library/reference/ismbbgraph-ismbbgraph-l.md)|Lo stesso vale per `_ismbbprint`, ma `_ismbbgraph` non include il carattere spazio (0x20)|  
+|[_ismbbkalnum, _ismbbkalnum_l](../c-runtime-library/reference/ismbbkalnum-ismbbkalnum-l.md)|Simbolo di testo non ASCII e non di punteggiatura. Ad esempio, solo nella tabella codici 932, `_ismbbkalnum` esegue il test per caratteri alfanumerici Katakana|  
+|[_ismbbkana, _ismbbkana_l](../c-runtime-library/reference/ismbbkana-ismbbkana-l.md)|Katakana (0xA1 – 0xDF), solo tabella codici 932|  
+|[_ismbbkprint, _ismbbkprint_l](../c-runtime-library/reference/ismbbkprint-ismbbkprint-l.md)|Testo non ASCII o simbolo di punteggiatura non ASCII. Ad esempio, solo nella tabella codici 932, `_ismbbkprint` esegue il test per i caratteri alfanumerici o la punteggiatura Katakana (intervallo: 0xA1 – 0xDF).|  
+|[_ismbbkpunct, _ismbbkpunct_l](../c-runtime-library/reference/ismbbkpunct-ismbbkpunct-l.md)|Punteggiatura non ASCII. Ad esempio, solo nella tabella codici 932, `_ismbbkpunct` verifica la punteggiatura Katakana.|  
+|[_ismbblead, _ismbblead_l](../c-runtime-library/reference/ismbblead-ismbblead-l.md)|Primo byte di un carattere multibyte. Ad esempio, solo nella tabella codici 932, gli intervalli validi sono compresi tra 0x81 e 0x9F e tra 0xE0 e 0xFC.|  
+|[_ismbbprint, _ismbbprint_l](../c-runtime-library/reference/ismbbprint-ismbbprint-l.md)|`isprint &#124;&#124; _ismbbkprint. ismbbprint` include il carattere di spazio (0x20)|  
+|[_ismbbpunct, _ismbbpunct_l](../c-runtime-library/reference/ismbbpunct-ismbbpunct-l.md)|`ispunct &#124;&#124; _ismbbkpunct`|  
+|[_ismbbtrail, _ismbbtrail_l](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md)|Secondo byte di un carattere multibyte. Ad esempio, solo nella tabella codici 932, gli intervalli validi sono compresi tra 0x40 e 0x7E e tra 0x80 e 0xEC.|  
+|[_ismbslead, _ismbslead_l](../c-runtime-library/reference/ismbslead-ismbstrail-ismbslead-l-ismbstrail-l.md)|Byte di apertura (nel contesto della stringa)|  
+|[ismbstrail, _ismbstrail_l](../c-runtime-library/reference/ismbslead-ismbstrail-ismbslead-l-ismbstrail-l.md)|Byte di chiusura (nel contesto della stringa)|  
+|[_mbbtype, _mbbtype_l](../c-runtime-library/reference/mbbtype-mbbtype-l.md)|Tipo di byte restituito basato sul byte precedente|  
+|[_mbsbtype, _mbsbtype_l](../c-runtime-library/reference/mbsbtype-mbsbtype-l.md)|Tipo restituito di byte all'interno della stringa|  
+|[mbsinit](../c-runtime-library/reference/mbsinit.md)|Tiene traccia dello stato di una conversione di caratteri multibyte.|  
   
- La macro `MB_LEN_MAX`, definita in LIMITS.H, espande la lunghezza massima in byte che può avere un qualsiasi carattere multibyte.  `MB_CUR_MAX`, definito in STDLIB.H, espande la lunghezza massima in byte di qualsiasi carattere multibyte nelle impostazioni locali correnti.  
+ La macro `MB_LEN_MAX`, definita in LIMITS.H, si espande alla lunghezza massima in byte che può avere qualsiasi carattere multibyte. `MB_CUR_MAX`, definita in STDLIB.H, si espande alla lunghezza massima in byte di qualsiasi carattere multibyte nelle impostazioni locali correnti.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Routine di runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)
