@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CTreeView
+- AFXCVIEW/CTreeView
+- AFXCVIEW/CTreeView::CTreeView
+- AFXCVIEW/CTreeView::GetTreeCtrl
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -85,14 +88,14 @@ class CTreeView : public CCtrlView
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxcview.h  
   
-##  <a name="a-namectreeviewa--ctreeviewctreeview"></a><a name="ctreeview"></a>CTreeView::CTreeView  
+##  <a name="ctreeview"></a>CTreeView::CTreeView  
  Costruisce un oggetto `CTreeView`.  
   
 ```  
 CTreeView();
 ```  
   
-##  <a name="a-namegettreectrla--ctreeviewgettreectrl"></a><a name="gettreectrl"></a>CTreeView:: GetTreeCtrl  
+##  <a name="gettreectrl"></a>CTreeView:: GetTreeCtrl  
  Restituisce un riferimento al controllo della struttura associato alla visualizzazione.  
   
 ```  

@@ -10,8 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSocketAddr
-- ATL.CSocketAddr
-- ATL::CSocketAddr
+- ATLSOCKET/ATL::CSocketAddr
+- ATLSOCKET/ATL::CSocketAddr::CSocketAddr
+- ATLSOCKET/ATL::CSocketAddr::FindAddr
+- ATLSOCKET/ATL::CSocketAddr::FindINET4Addr
+- ATLSOCKET/ATL::CSocketAddr::FindINET6Addr
+- ATLSOCKET/ATL::CSocketAddr::GetAddrInfo
+- ATLSOCKET/ATL::CSocketAddr::GetAddrInfoList
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -78,7 +83,7 @@ class CSocketAddr
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlsocket.h  
   
-##  <a name="a-namecsocketaddra--csocketaddrcsocketaddr"></a><a name="csocketaddr"></a>CSocketAddr::CSocketAddr  
+##  <a name="csocketaddr"></a>CSocketAddr::CSocketAddr  
  Costruttore.  
   
 ```
@@ -88,7 +93,7 @@ CSocketAddr();
 ### <a name="remarks"></a>Note  
  Crea un nuovo `CSocketAddr` dell'oggetto e inizializza l'elenco collegato contenente informazioni di risposta sull'host.  
   
-##  <a name="a-namefindaddra--csocketaddrfindaddr"></a><a name="findaddr"></a>CSocketAddr::FindAddr  
+##  <a name="findaddr"></a>CSocketAddr::FindAddr  
  Chiamare questo metodo per convertire il nome host fornito per l'indirizzo dell'host.  
   
 ```
@@ -137,7 +142,7 @@ int FindAddr(
 ### <a name="remarks"></a>Note  
  Il parametro di nome host può essere in formato IPv4 o IPv6. Questo metodo chiama la funzione API Win32 [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) per eseguire la conversione.  
   
-##  <a name="a-namefindinet4addra--csocketaddrfindinet4addr"></a><a name="findinet4addr"></a>CSocketAddr::FindINET4Addr  
+##  <a name="findinet4addr"></a>CSocketAddr::FindINET4Addr  
  Chiamare questo metodo per convertire il nome host IPv4 per l'indirizzo dell'host.  
   
 ```
@@ -167,7 +172,7 @@ int FindINET4Addr(
 ### <a name="remarks"></a>Note  
  Questo metodo chiama la funzione API Win32 [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) per eseguire la conversione.  
   
-##  <a name="a-namefindinet6addra--csocketaddrfindinet6addr"></a><a name="findinet6addr"></a>CSocketAddr::FindINET6Addr  
+##  <a name="findinet6addr"></a>CSocketAddr::FindINET6Addr  
  Chiamare questo metodo per convertire il nome dell'host IPv6 per l'indirizzo dell'host.  
   
 ```
@@ -197,7 +202,7 @@ int FindINET6Addr(
 ### <a name="remarks"></a>Note  
  Questo metodo chiama la funzione API Win32 [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) per eseguire la conversione.  
   
-##  <a name="a-namegetaddrinfoa--csocketaddrgetaddrinfo"></a><a name="getaddrinfo"></a>CSocketAddr::GetAddrInfo  
+##  <a name="getaddrinfo"></a>CSocketAddr::GetAddrInfo  
  Chiamare questo metodo per restituire un puntatore a un elemento specifico di **addrinfo** elenco.  
   
 ```
@@ -211,7 +216,7 @@ addrinfo* const GetAddrInfoint nIndex = 0) const;
 ### <a name="return-value"></a>Valore restituito  
  Restituisce un puntatore per il **addrinfo** struttura a cui fa riferimento `nIndex` nell'elenco collegato contenente informazioni di risposta sull'host.  
   
-##  <a name="a-namegetaddrinfolista--csocketaddrgetaddrinfolist"></a><a name="getaddrinfolist"></a>CSocketAddr::GetAddrInfoList  
+##  <a name="getaddrinfolist"></a>CSocketAddr::GetAddrInfoList  
  Chiamare questo metodo per restituire un puntatore per il **addrinfo** elenco.  
   
 ```

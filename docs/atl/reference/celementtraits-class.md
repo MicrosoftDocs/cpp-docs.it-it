@@ -1,59 +1,70 @@
 ---
-title: "CElementTraits Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL.CElementTraits<T>"
-  - "ATL::CElementTraits"
-  - "ATL.CElementTraits"
-  - "ATL::CElementTraits<T>"
-  - "CElementTraits"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CElementTraits class"
+title: Classe CElementTraits | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CElementTraits
+- atlcoll/ATL::CElementTraits
+dev_langs:
+- C++
+helpviewer_keywords:
+- CElementTraits class
 ms.assetid: 496528e5-7f80-4b45-be0c-6f646feb43c5
 caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# CElementTraits Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 6664a73967d3bdf9859556f21744737718018e74
+ms.openlocfilehash: 8b7b91bd9e027a3946160d95da1199c24af3502d
+ms.lasthandoff: 03/29/2017
 
-Questa classe utilizzata dalle classi di raccolte per fornire metodi e funzioni per lo spostamento, la copia, il confronto e l'hashing operazioni.  
+---
+# <a name="celementtraits-class"></a>Classe CElementTraits
+Questa classe viene utilizzata dalle classi di raccolta per fornire i metodi e le funzioni per lo spostamento, la copia, di confronto e operazioni di hashing.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
+```
+template<typename T>  
+class CElementTraits : public CDefaultElementTraits<T>
 ```  
   
-      template<  
-   typename T  
->  
-class CElementTraits : public CDefaultElementTraits< T >  
-```  
-  
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `T`  
- Il tipo di dati da archiviare nella libreria.  
+ Il tipo di dati da archiviare nella raccolta.  
   
-## Note  
- Questa classe fornisce funzioni statiche predefinite e metodi per lo spostamento, la copia, confrontare e l'hashing degli elementi memorizzati in una classe di raccolte oggetto.  `CElementTraits` viene specificato come provider predefinito di queste operazioni dalle classi di raccolte [CAtlArray](../../atl/reference/catlarray-class.md), [CAtlList](../../atl/reference/catllist-class.md), [CRBMap](../../atl/reference/crbmap-class.md), [CRBMultiMap](../../atl/reference/crbmultimap-class.md)e [CRBTree](../../atl/reference/crbtree-class.md).  
+## <a name="remarks"></a>Note  
+ Questa classe fornisce metodi e funzioni statiche predefinito per lo spostamento, la copia, il confronto e l'hashing di elementi archiviati in un oggetto di classe di raccolta. `CElementTraits`viene specificato come provider predefinito di queste operazioni per le classi di raccolta [CAtlArray](../../atl/reference/catlarray-class.md), [CAtlList](../../atl/reference/catllist-class.md), [CRBMap](../../atl/reference/crbmap-class.md), [CRBMultiMap](../../atl/reference/crbmultimap-class.md), e [CRBTree](../../atl/reference/crbtree-class.md).  
   
- Le implementazioni predefinite appropriata per i tipi di dati semplici, ma se le classi di raccolte utilizzate per memorizzare più oggetti complessi, funzioni e metodi devono essere sottoposti a override dalle implementazioni fornite.  
+ Le implementazioni predefinite è sufficiente per i tipi di dati semplici, ma se le classi di raccolta vengono utilizzate per archiviare gli oggetti più complessi, le funzioni e i metodi devono essere sottoposto a override dalle implementazioni fornite dall'utente.  
   
- Per ulteriori informazioni, vedere [Classi di raccolte ATL](../../atl/atl-collection-classes.md).  
+ Per ulteriori informazioni, vedere [classi Collection ATL](../../atl/atl-collection-classes.md).  
   
-## Requisiti  
- **Header:** atlcoll.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** atlcoll. h  
   
-## Vedere anche  
- [CDefaultElementTraits Class](../../atl/reference/cdefaultelementtraits-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+## <a name="see-also"></a>Vedere anche  
+ [Classe CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)   
+ [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
+

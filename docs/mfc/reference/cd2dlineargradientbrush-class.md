@@ -9,8 +9,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxrendertarget/CD2DLinearGradientBrush
 - CD2DLinearGradientBrush
+- AFXRENDERTARGET/CD2DLinearGradientBrush
+- AFXRENDERTARGET/CD2DLinearGradientBrush::CD2DLinearGradientBrush
+- AFXRENDERTARGET/CD2DLinearGradientBrush::Attach
+- AFXRENDERTARGET/CD2DLinearGradientBrush::Create
+- AFXRENDERTARGET/CD2DLinearGradientBrush::Destroy
+- AFXRENDERTARGET/CD2DLinearGradientBrush::Detach
+- AFXRENDERTARGET/CD2DLinearGradientBrush::Get
+- AFXRENDERTARGET/CD2DLinearGradientBrush::GetEndPoint
+- AFXRENDERTARGET/CD2DLinearGradientBrush::GetStartPoint
+- AFXRENDERTARGET/CD2DLinearGradientBrush::SetEndPoint
+- AFXRENDERTARGET/CD2DLinearGradientBrush::SetStartPoint
+- AFXRENDERTARGET/CD2DLinearGradientBrush::m_LinearGradientBrushProperties
+- AFXRENDERTARGET/CD2DLinearGradientBrush::m_pLinearGradientBrush
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -99,14 +111,14 @@ class CD2DLinearGradientBrush : public CD2DGradientBrush;
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxrendertarget. h  
   
-##  <a name="a-namedtorcd2dlineargradientbrusha--cd2dlineargradientbrushcd2dlineargradientbrush"></a><a name="_dtorcd2dlineargradientbrush"></a>CD2DLinearGradientBrush:: ~ CD2DLinearGradientBrush  
+##  <a name="_dtorcd2dlineargradientbrush"></a>CD2DLinearGradientBrush:: ~ CD2DLinearGradientBrush  
  Distruttore. Chiamato quando viene eliminato un oggetto pennello sfumato lineare D2D.  
   
 ```  
 virtual ~CD2DLinearGradientBrush();
 ```  
   
-##  <a name="a-nameattacha--cd2dlineargradientbrushattach"></a><a name="attach"></a>CD2DLinearGradientBrush::Attach  
+##  <a name="attach"></a>CD2DLinearGradientBrush::Attach  
  È possibile collegare interfaccia risorse per l'oggetto esistente  
   
 ```  
@@ -117,7 +129,7 @@ void Attach(ID2D1LinearGradientBrush* pResource);
  `pResource`  
  Interfaccia di risorse esistente. Non può essere NULL  
   
-##  <a name="a-namecd2dlineargradientbrusha--cd2dlineargradientbrushcd2dlineargradientbrush"></a><a name="cd2dlineargradientbrush"></a>CD2DLinearGradientBrush::CD2DLinearGradientBrush  
+##  <a name="cd2dlineargradientbrush"></a>CD2DLinearGradientBrush::CD2DLinearGradientBrush  
  Costruisce un oggetto CD2DLinearGradientBrush.  
   
 ```  
@@ -157,7 +169,7 @@ CD2DLinearGradientBrush(
  `bAutoDestroy`  
  Indica che l'oggetto verrà eliminata dal proprietario (pParentTarget).  
   
-##  <a name="a-namecreatea--cd2dlineargradientbrushcreate"></a><a name="create"></a>CD2DLinearGradientBrush::Create  
+##  <a name="create"></a>CD2DLinearGradientBrush::Create  
  Crea un CD2DLinearGradientBrush.  
   
 ```  
@@ -171,14 +183,14 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="return-value"></a>Valore restituito  
  Se il metodo ha esito positivo, viene restituito S_OK. In caso contrario, restituisce un codice di errore HRESULT.  
   
-##  <a name="a-namedestroya--cd2dlineargradientbrushdestroy"></a><a name="destroy"></a>CD2DLinearGradientBrush::Destroy  
+##  <a name="destroy"></a>CD2DLinearGradientBrush::Destroy  
  Elimina un oggetto CD2DLinearGradientBrush.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="a-namedetacha--cd2dlineargradientbrushdetach"></a><a name="detach"></a>CD2DLinearGradientBrush::Detach  
+##  <a name="detach"></a>CD2DLinearGradientBrush::Detach  
  Disconnette l'interfaccia risorse dall'oggetto  
   
 ```  
@@ -188,7 +200,7 @@ ID2D1LinearGradientBrush* Detach();
 ### <a name="return-value"></a>Valore restituito  
  Puntatore a interfaccia risorse scollegato.  
   
-##  <a name="a-namegeta--cd2dlineargradientbrushget"></a><a name="get"></a>CD2DLinearGradientBrush::Get  
+##  <a name="get"></a>CD2DLinearGradientBrush::Get  
  Restituisce l'interfaccia ID2D1LinearGradientBrush  
   
 ```  
@@ -198,7 +210,7 @@ ID2D1LinearGradientBrush* Get();
 ### <a name="return-value"></a>Valore restituito  
  Puntatore a un'interfaccia ID2D1LinearGradientBrush o NULL se l'oggetto non è ancora inizializzato.  
   
-##  <a name="a-namegetendpointa--cd2dlineargradientbrushgetendpoint"></a><a name="getendpoint"></a>CD2DLinearGradientBrush::GetEndPoint  
+##  <a name="getendpoint"></a>CD2DLinearGradientBrush::GetEndPoint  
  Recupera le coordinate finali della sfumatura lineare  
   
 ```  
@@ -208,7 +220,7 @@ CD2DPointF GetEndPoint() const;
 ### <a name="return-value"></a>Valore restituito  
  Le coordinate bidimensionali finale della sfumatura lineare nello spazio delle coordinate del pennello  
   
-##  <a name="a-namegetstartpointa--cd2dlineargradientbrushgetstartpoint"></a><a name="getstartpoint"></a>CD2DLinearGradientBrush::GetStartPoint  
+##  <a name="getstartpoint"></a>CD2DLinearGradientBrush::GetStartPoint  
  Recupera le coordinate iniziali della sfumatura lineare  
   
 ```  
@@ -218,21 +230,21 @@ CD2DPointF GetStartPoint() const;
 ### <a name="return-value"></a>Valore restituito  
  Le coordinate bidimensionali iniziale della sfumatura lineare nello spazio delle coordinate del pennello  
   
-##  <a name="a-namemlineargradientbrushpropertiesa--cd2dlineargradientbrushmlineargradientbrushproperties"></a><a name="m_lineargradientbrushproperties"></a>CD2DLinearGradientBrush::m_LinearGradientBrushProperties  
+##  <a name="m_lineargradientbrushproperties"></a>CD2DLinearGradientBrush::m_LinearGradientBrushProperties  
  I punti iniziale e finale della sfumatura.  
   
 ```  
 D2D1_LINEAR_GRADIENT_BRUSH_PROPERTIES m_LinearGradientBrushProperties;  
 ```  
   
-##  <a name="a-namemplineargradientbrusha--cd2dlineargradientbrushmplineargradientbrush"></a><a name="m_plineargradientbrush"></a>CD2DLinearGradientBrush::m_pLinearGradientBrush  
+##  <a name="m_plineargradientbrush"></a>CD2DLinearGradientBrush::m_pLinearGradientBrush  
  Un puntatore a un ID2D1LinearGradientBrush.  
   
 ```  
 ID2D1LinearGradientBrush* m_pLinearGradientBrush;  
 ```  
   
-##  <a name="a-nameoperatorid2d1lineargradientbrushstara--cd2dlineargradientbrushoperator-id2d1lineargradientbrush"></a><a name="operator_id2d1lineargradientbrush_star"></a>CD2DLinearGradientBrush::operator ID2D1LinearGradientBrush *  
+##  <a name="operator_id2d1lineargradientbrush_star"></a>CD2DLinearGradientBrush::operator ID2D1LinearGradientBrush *  
  Restituisce l'interfaccia ID2D1LinearGradientBrush  
   
 ```  
@@ -242,7 +254,7 @@ operator ID2D1LinearGradientBrush*();
 ### <a name="return-value"></a>Valore restituito  
  Puntatore a un'interfaccia ID2D1LinearGradientBrush o NULL se l'oggetto non è ancora inizializzato.  
   
-##  <a name="a-namesetendpointa--cd2dlineargradientbrushsetendpoint"></a><a name="setendpoint"></a>CD2DLinearGradientBrush::setEndPoint  
+##  <a name="setendpoint"></a>CD2DLinearGradientBrush::setEndPoint  
  Imposta le coordinate finali della sfumatura lineare nello spazio delle coordinate del pennello  
   
 ```  
@@ -253,7 +265,7 @@ void SetEndPoint(CD2DPointF point);
  `point`  
  Le coordinate bidimensionali finale della sfumatura lineare nello spazio delle coordinate del pennello  
   
-##  <a name="a-namesetstartpointa--cd2dlineargradientbrushsetstartpoint"></a><a name="setstartpoint"></a>CD2DLinearGradientBrush::SetStartPoint  
+##  <a name="setstartpoint"></a>CD2DLinearGradientBrush::SetStartPoint  
  Imposta le coordinate iniziali della sfumatura lineare nello spazio delle coordinate del pennello  
   
 ```  

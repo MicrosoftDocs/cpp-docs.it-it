@@ -9,8 +9,28 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CAnimationGroup
 - CAnimationGroup
+- AFXANIMATIONCONTROLLER/CAnimationGroup
+- AFXANIMATIONCONTROLLER/CAnimationGroup::CAnimationGroup
+- AFXANIMATIONCONTROLLER/CAnimationGroup::Animate
+- AFXANIMATIONCONTROLLER/CAnimationGroup::ApplyTransitions
+- AFXANIMATIONCONTROLLER/CAnimationGroup::FindAnimationObject
+- AFXANIMATIONCONTROLLER/CAnimationGroup::GetGroupID
+- AFXANIMATIONCONTROLLER/CAnimationGroup::RemoveKeyframes
+- AFXANIMATIONCONTROLLER/CAnimationGroup::RemoveTransitions
+- AFXANIMATIONCONTROLLER/CAnimationGroup::Schedule
+- AFXANIMATIONCONTROLLER/CAnimationGroup::SetAutodestroyTransitions
+- AFXANIMATIONCONTROLLER/CAnimationGroup::AddKeyframes
+- AFXANIMATIONCONTROLLER/CAnimationGroup::AddTransitions
+- AFXANIMATIONCONTROLLER/CAnimationGroup::CreateTransitions
+- AFXANIMATIONCONTROLLER/CAnimationGroup::m_bAutoclearTransitions
+- AFXANIMATIONCONTROLLER/CAnimationGroup::m_bAutodestroyAnimationObjects
+- AFXANIMATIONCONTROLLER/CAnimationGroup::m_bAutodestroyKeyframes
+- AFXANIMATIONCONTROLLER/CAnimationGroup::m_lstAnimationObjects
+- AFXANIMATIONCONTROLLER/CAnimationGroup::m_lstKeyFrames
+- AFXANIMATIONCONTROLLER/CAnimationGroup::m_pStoryboard
+- AFXANIMATIONCONTROLLER/CAnimationGroup::m_nGroupID
+- AFXANIMATIONCONTROLLER/CAnimationGroup::m_pParentController
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -106,14 +126,14 @@ class CAnimationGroup;
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxanimationcontroller.h  
   
-##  <a name="a-namedtorcanimationgroupa--canimationgroupcanimationgroup"></a><a name="_dtorcanimationgroup"></a>CAnimationGroup:: ~ CAnimationGroup  
+##  <a name="_dtorcanimationgroup"></a>CAnimationGroup:: ~ CAnimationGroup  
  Distruttore. Chiamato quando viene eliminato un gruppo di animazione.  
   
 ```  
 ~CAnimationGroup();
 ```  
   
-##  <a name="a-nameaddkeyframesa--canimationgroupaddkeyframes"></a><a name="addkeyframes"></a>CAnimationGroup::AddKeyframes  
+##  <a name="addkeyframes"></a>CAnimationGroup::AddKeyframes  
  Un helper che aggiunge i fotogrammi chiave a uno storyboard.  
   
 ```  
@@ -127,7 +147,7 @@ void AddKeyframes(IUIAnimationStoryboard* pStoryboard, BOOL bAddDeep);
  `bAddDeep`  
  Specifica se questo metodo aggiunge ai fotogrammi chiave storyboard che dipendono da altri fotogrammi chiave.  
   
-##  <a name="a-nameaddtransitionsa--canimationgroupaddtransitions"></a><a name="addtransitions"></a>CAnimationGroup::AddTransitions  
+##  <a name="addtransitions"></a>CAnimationGroup::AddTransitions  
  Un helper che aggiunge le transizioni a uno storyboard.  
   
 ```  
@@ -142,7 +162,7 @@ void AddTransitions(
   
  `bDependOnKeyframes`  
   
-##  <a name="a-nameanimatea--canimationgroupanimate"></a><a name="animate"></a>CAnimationGroup:: animate  
+##  <a name="animate"></a>CAnimationGroup:: animate  
  Aggiunge un'animazione a un gruppo.  
   
 ```  
@@ -163,7 +183,7 @@ BOOL Animate(
 ### <a name="remarks"></a>Note  
  Questo metodo consente di creare uno storyboard interno, crea e applica le transizioni e pianifica un'animazione se bScheduleNow è TRUE. Se bScheduleNow è FALSE, è necessario chiamare pianificazione per avviare l'animazione all'ora specificata.  
   
-##  <a name="a-nameapplytransitionsa--canimationgroupapplytransitions"></a><a name="applytransitions"></a>CAnimationGroup::ApplyTransitions  
+##  <a name="applytransitions"></a>CAnimationGroup::ApplyTransitions  
  Applica le transizioni per gli oggetti di animazione.  
   
 ```  
@@ -173,7 +193,7 @@ void ApplyTransitions();
 ### <a name="remarks"></a>Note  
  Questo metodo ASSERISCE se non è stato creato uno storyboard in modalità debug. Crea tutte le transizioni in primo luogo, quindi aggiunge "statici" fotogrammi chiave (fotogrammi chiave che dipendono dagli offset), aggiunge transizioni che dipendono dai fotogrammi chiave, aggiunge i fotogrammi chiave a seconda delle transizioni e altri fotogrammi chiave e infine aggiunge transizioni che dipendono dai fotogrammi chiave.  
   
-##  <a name="a-namecanimationgroupa--canimationgroupcanimationgroup"></a><a name="canimationgroup"></a>CAnimationGroup::CAnimationGroup  
+##  <a name="canimationgroup"></a>CAnimationGroup::CAnimationGroup  
  Crea un gruppo di animazione.  
   
 ```  
@@ -187,7 +207,7 @@ CAnimationGroup(CAnimationController* pParentController, UINT32 nGroupID);
  `nGroupID`  
  Specifica l'ID del gruppo.  
   
-##  <a name="a-namecreatetransitionsa--canimationgroupcreatetransitions"></a><a name="createtransitions"></a>CAnimationGroup::CreateTransitions  
+##  <a name="createtransitions"></a>CAnimationGroup::CreateTransitions  
  Un helper che crea oggetti di transizione COM.  
   
 ```  
@@ -197,7 +217,7 @@ BOOL CreateTransitions();
 ### <a name="return-value"></a>Valore restituito  
  TRUE è il metodo ha esito positivo, FALSE in caso contrario.  
   
-##  <a name="a-namefindanimationobjecta--canimationgroupfindanimationobject"></a><a name="findanimationobject"></a>CAnimationGroup::FindAnimationObject  
+##  <a name="findanimationobject"></a>CAnimationGroup::FindAnimationObject  
  Trova un oggetto di animazione che contiene la variabile di animazione specificato.  
   
 ```  
@@ -211,7 +231,7 @@ CAnimationBaseObject* FindAnimationObject(IUIAnimationVariable* pVariable);
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore a oggetto di animazione o NULL se l'oggetto di animazione non viene trovato.  
   
-##  <a name="a-namegetgroupida--canimationgroupgetgroupid"></a><a name="getgroupid"></a>CAnimationGroup::GetGroupID  
+##  <a name="getgroupid"></a>CAnimationGroup::GetGroupID  
  Restituisce l'ID del gruppo.  
   
 ```  
@@ -221,63 +241,63 @@ UINT32 GetGroupID() const;
 ### <a name="return-value"></a>Valore restituito  
  Un identificatore di gruppo.  
   
-##  <a name="a-namembautocleartransitionsa--canimationgroupmbautocleartransitions"></a><a name="m_bautocleartransitions"></a>CAnimationGroup::m_bAutoclearTransitions  
+##  <a name="m_bautocleartransitions"></a>CAnimationGroup::m_bAutoclearTransitions  
  Specifica come cancellare le transizioni tra gli oggetti di animazione che appartengono al gruppo. Se questo membro è TRUE, le transizioni vengono rimosse automaticamente quando è stata pianificata un'animazione. In caso contrario, è necessario rimuovere manualmente le transizioni.  
   
 ```  
 BOOL m_bAutoclearTransitions;  
 ```  
   
-##  <a name="a-namembautodestroyanimationobjectsa--canimationgroupmbautodestroyanimationobjects"></a><a name="m_bautodestroyanimationobjects"></a>CAnimationGroup::  
+##  <a name="m_bautodestroyanimationobjects"></a>CAnimationGroup::  
  Specifica come eliminare gli oggetti di animazione. Se questo parametro è TRUE, gli oggetti di animazione verranno eliminati automaticamente quando viene eliminato il gruppo. In caso contrario gli oggetti di animazione devono essere eliminati manualmente. Il valore predefinito è FALSE. Impostare questo valore su TRUE solo se tutti gli oggetti di animazione che appartengono al gruppo vengono allocati in modo dinamico mediante l'operatore new.  
   
 ```  
 BOOL m_bAutodestroyAnimationObjects;  
 ```  
   
-##  <a name="a-namembautodestroykeyframesa--canimationgroupmbautodestroykeyframes"></a><a name="m_bautodestroykeyframes"></a>CAnimationGroup::m_bAutodestroyKeyframes  
+##  <a name="m_bautodestroykeyframes"></a>CAnimationGroup::m_bAutodestroyKeyframes  
  Specifica come eliminare i fotogrammi chiave. Se questo valore è TRUE, tutti i fotogrammi chiave vengono rimossi e distrutti; in caso contrario vengono rimossi solo dall'elenco. Il valore predefinito è TRUE.  
   
 ```  
 BOOL m_bAutodestroyKeyframes;  
 ```  
   
-##  <a name="a-namemlstanimationobjectsa--canimationgroupmlstanimationobjects"></a><a name="m_lstanimationobjects"></a>CAnimationGroup::m_lstAnimationObjects  
+##  <a name="m_lstanimationobjects"></a>CAnimationGroup::m_lstAnimationObjects  
  Contiene un elenco di oggetti di animazione.  
   
 ```  
 CObList m_lstAnimationObjects;  
 ```  
   
-##  <a name="a-namemlstkeyframesa--canimationgroupmlstkeyframes"></a><a name="m_lstkeyframes"></a>CAnimationGroup::m_lstKeyFrames  
+##  <a name="m_lstkeyframes"></a>CAnimationGroup::m_lstKeyFrames  
  Contiene un elenco di fotogrammi chiave.  
   
 ```  
 CObList m_lstKeyFrames;  
 ```  
   
-##  <a name="a-namemngroupida--canimationgroupmngroupid"></a><a name="m_ngroupid"></a>CAnimationGroup::m_nGroupID  
+##  <a name="m_ngroupid"></a>CAnimationGroup::m_nGroupID  
  Identificatore univoco del gruppo di animazione.  
   
 ```  
 UINT32 m_nGroupID;  
 ```  
   
-##  <a name="a-namempparentcontrollera--canimationgroupmpparentcontroller"></a><a name="m_pparentcontroller"></a>CAnimationGroup::m_pParentController  
+##  <a name="m_pparentcontroller"></a>CAnimationGroup::m_pParentController  
  Puntatore al controller di animazione che appartiene a questo gruppo.  
   
 ```  
 CAnimationController* m_pParentController;  
 ```  
   
-##  <a name="a-namempstoryboarda--canimationgroupmpstoryboard"></a><a name="m_pstoryboard"></a>CAnimationGroup::m_pStoryboard  
+##  <a name="m_pstoryboard"></a>CAnimationGroup::m_pStoryboard  
  Punta a storyboard dell'animazione. Questo puntatore è valido solo dopo la chiamata su Animate.  
   
 ```  
 ATL::CComPtr<IUIAnimationStoryboard> m_pStoryboard;  
 ```  
   
-##  <a name="a-nameremovekeyframesa--canimationgroupremovekeyframes"></a><a name="removekeyframes"></a>CAnimationGroup::RemoveKeyframes  
+##  <a name="removekeyframes"></a>CAnimationGroup::RemoveKeyframes  
  Rimuove e, facoltativamente, Elimina tutti i fotogrammi chiave che appartengono a un gruppo di animazione.  
   
 ```  
@@ -287,7 +307,7 @@ void RemoveKeyframes();
 ### <a name="remarks"></a>Note  
  Se il membro m_bAutodestroyKeyframes è TRUE, i fotogrammi chiave vengono rimossi e quindi eliminati in modo permanente in caso contrario vengono rimossi solo dall'elenco interno dei fotogrammi chiave.  
   
-##  <a name="a-nameremovetransitionsa--canimationgroupremovetransitions"></a><a name="removetransitions"></a>CAnimationGroup::RemoveTransitions  
+##  <a name="removetransitions"></a>CAnimationGroup::RemoveTransitions  
  Rimuove le transizioni tra gli oggetti di animazione che appartengono a un gruppo di animazione.  
   
 ```  
@@ -297,7 +317,7 @@ void RemoveTransitions();
 ### <a name="remarks"></a>Note  
  Se il flag m_bAutoclearTransitions viene impostato su TRUE, questo metodo esegue un ciclo per tutti gli oggetti di animazione che appartengono al gruppo e chiama CAnimationObject::ClearTransitions(FALSE).  
   
-##  <a name="a-nameschedulea--canimationgroupschedule"></a><a name="schedule"></a>CAnimationGroup::Schedule  
+##  <a name="schedule"></a>CAnimationGroup::Schedule  
  Pianifica un'animazione all'ora specificata.  
   
 ```  
@@ -317,7 +337,7 @@ BOOL Schedule(IUIAnimationTimer* pTimer, UI_ANIMATION_SECONDS time);
 ### <a name="remarks"></a>Note  
  Chiamare questa funzione per pianificare un'animazione all'ora specificata. È necessario chiamare Animate con bScheduleNow impostato su FALSE prima.  
   
-##  <a name="a-namesetautodestroytransitionsa--canimationgroupsetautodestroytransitions"></a><a name="setautodestroytransitions"></a>CAnimationGroup::SetAutodestroyTransitions  
+##  <a name="setautodestroytransitions"></a>CAnimationGroup::SetAutodestroyTransitions  
  Indirizza transizioni di eliminazione di tutti gli oggetti di animazione che appartengono al gruppo automaticamente.  
   
 ```  

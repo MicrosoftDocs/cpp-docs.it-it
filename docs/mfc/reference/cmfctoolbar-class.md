@@ -10,6 +10,160 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCToolBar
+- AFXTOOLBAR/CMFCToolBar
+- AFXTOOLBAR/CMFCToolBar::AddBasicCommand
+- AFXTOOLBAR/CMFCToolBar::AddCommandUsage
+- AFXTOOLBAR/CMFCToolBar::AddToolBarForImageCollection
+- AFXTOOLBAR/CMFCToolBar::AdjustLayout
+- AFXTOOLBAR/CMFCToolBar::AdjustSize
+- AFXTOOLBAR/CMFCToolBar::AllowChangeTextLabels
+- AFXTOOLBAR/CMFCToolBar::AreTextLabels
+- AFXTOOLBAR/CMFCToolBar::AutoGrayInactiveImages
+- AFXTOOLBAR/CMFCToolBar::ButtonToIndex
+- AFXTOOLBAR/CMFCToolBar::CalcFixedLayout
+- AFXTOOLBAR/CMFCToolBar::CalcSize
+- AFXTOOLBAR/CMFCToolBar::CanHandleSiblings
+- AFXTOOLBAR/CMFCToolBar::CleanUpImages
+- AFXTOOLBAR/CMFCToolBar::CleanUpLockedImages
+- AFXTOOLBAR/CMFCToolBar::CanBeClosed
+- AFXTOOLBAR/CMFCToolBar::CanBeRestored
+- AFXTOOLBAR/CMFCToolBar::CanFocus
+- AFXTOOLBAR/CMFCToolBar::CanHandleSiblings
+- AFXTOOLBAR/CMFCToolBar::CommandToIndex
+- AFXTOOLBAR/CMFCToolBar::Create
+- AFXTOOLBAR/CMFCToolBar::CreateEx
+- AFXTOOLBAR/CMFCToolBar::Deactivate
+- AFXTOOLBAR/CMFCToolBar::EnableCustomizeButton
+- AFXTOOLBAR/CMFCToolBar::EnableDocking
+- AFXTOOLBAR/CMFCToolBar::EnableLargeIcons
+- AFXTOOLBAR/CMFCToolBar::EnableQuickCustomization
+- AFXTOOLBAR/CMFCToolBar::EnableReflections
+- AFXTOOLBAR/CMFCToolBar::EnableTextLabels
+- AFXTOOLBAR/CMFCToolBar::FromHandlePermanent
+- AFXTOOLBAR/CMFCToolBar::GetAllButtons
+- AFXTOOLBAR/CMFCToolBar::GetAllToolbars
+- AFXTOOLBAR/CMFCToolBar::GetBasicCommands
+- AFXTOOLBAR/CMFCToolBar::GetButton
+- AFXTOOLBAR/CMFCToolBar::GetButtonInfo
+- AFXTOOLBAR/CMFCToolBar::GetButtonSize
+- AFXTOOLBAR/CMFCToolBar::GetButtonStyle
+- AFXTOOLBAR/CMFCToolBar::GetButtonText
+- AFXTOOLBAR/CMFCToolBar::GetColdImages
+- AFXTOOLBAR/CMFCToolBar::GetColumnWidth
+- AFXTOOLBAR/CMFCToolBar::GetCommandButtons
+- AFXTOOLBAR/CMFCToolBar::GetCount
+- AFXTOOLBAR/CMFCToolBar::GetCustomizeButton
+- AFXTOOLBAR/CMFCToolBar::GetDefaultImage
+- AFXTOOLBAR/CMFCToolBar::GetDisabledImages
+- AFXTOOLBAR/CMFCToolBar::GetDisabledMenuImages
+- AFXTOOLBAR/CMFCToolBar::GetDroppedDownMenu
+- AFXTOOLBAR/CMFCToolBar::GetGrayDisabledButtons
+- AFXTOOLBAR/CMFCToolBar::GetHighlightedButton
+- AFXTOOLBAR/CMFCToolBar::GetHotBorder
+- AFXTOOLBAR/CMFCToolBar::GetHotTextColor
+- AFXTOOLBAR/CMFCToolBar::GetHwndLastFocus
+- AFXTOOLBAR/CMFCToolBar::GetIgnoreSetText
+- AFXTOOLBAR/CMFCToolBar::GetImageSize
+- AFXTOOLBAR/CMFCToolBar::GetImages
+- AFXTOOLBAR/CMFCToolBar::GetImagesOffset
+- AFXTOOLBAR/CMFCToolBar::GetInvalidateItemRect
+- AFXTOOLBAR/CMFCToolBar::GetItemID
+- AFXTOOLBAR/CMFCToolBar::GetItemRect
+- AFXTOOLBAR/CMFCToolBar::GetLargeColdImages
+- AFXTOOLBAR/CMFCToolBar::GetLargeDisabledImages
+- AFXTOOLBAR/CMFCToolBar::GetLargeImages
+- AFXTOOLBAR/CMFCToolBar::GetLockedColdImages
+- AFXTOOLBAR/CMFCToolBar::GetLockedDisabledImages
+- AFXTOOLBAR/CMFCToolBar::GetLockedImages
+- AFXTOOLBAR/CMFCToolBar::GetLockedImageSize
+- AFXTOOLBAR/CMFCToolBar::GetLockedMenuImages
+- AFXTOOLBAR/CMFCToolBar::GetMenuButtonSize
+- AFXTOOLBAR/CMFCToolBar::GetMenuImageSize
+- AFXTOOLBAR/CMFCToolBar::GetMenuImages
+- AFXTOOLBAR/CMFCToolBar::GetOrigButtons
+- AFXTOOLBAR/CMFCToolBar::GetOrigResetButtons
+- AFXTOOLBAR/CMFCToolBar::GetResourceID
+- AFXTOOLBAR/CMFCToolBar::GetRouteCommandsViaFrame
+- AFXTOOLBAR/CMFCToolBar::GetRowHeight
+- AFXTOOLBAR/CMFCToolBar::GetShowTooltips
+- AFXTOOLBAR/CMFCToolBar::GetSiblingToolBar
+- AFXTOOLBAR/CMFCToolBar::GetUserImages
+- AFXTOOLBAR/CMFCToolBar::HitTest
+- AFXTOOLBAR/CMFCToolBar::InsertButton
+- AFXTOOLBAR/CMFCToolBar::InsertSeparator
+- AFXTOOLBAR/CMFCToolBar::InvalidateButton
+- AFXTOOLBAR/CMFCToolBar::IsAddRemoveQuickCustomize
+- AFXTOOLBAR/CMFCToolBar::IsAltCustomizeMode
+- AFXTOOLBAR/CMFCToolBar::IsAutoGrayInactiveImages
+- AFXTOOLBAR/CMFCToolBar::IsBasicCommand
+- AFXTOOLBAR/CMFCToolBar::IsButtonExtraSizeAvailable
+- AFXTOOLBAR/CMFCToolBar::IsButtonHighlighted
+- AFXTOOLBAR/CMFCToolBar::IsCommandPermitted
+- AFXTOOLBAR/CMFCToolBar::IsCommandRarelyUsed
+- AFXTOOLBAR/CMFCToolBar::IsCustomizeMode
+- AFXTOOLBAR/CMFCToolBar::IsDragButton
+- AFXTOOLBAR/CMFCToolBar::IsExistCustomizeButton
+- AFXTOOLBAR/CMFCToolBar::IsFloating
+- AFXTOOLBAR/CMFCToolBar::IsLargeIcons
+- AFXTOOLBAR/CMFCToolBar::IsLastCommandFromButton
+- AFXTOOLBAR/CMFCToolBar::IsLocked
+- AFXTOOLBAR/CMFCToolBar::IsOneRowWithSibling
+- AFXTOOLBAR/CMFCToolBar::IsUserDefined
+- AFXTOOLBAR/CMFCToolBar::LoadBitmap
+- AFXTOOLBAR/CMFCToolBar::LoadBitmapEx
+- AFXTOOLBAR/CMFCToolBar::LoadParameters
+- AFXTOOLBAR/CMFCToolBar::LoadState
+- AFXTOOLBAR/CMFCToolBar::LoadToolBar
+- AFXTOOLBAR/CMFCToolBar::LoadToolBarEx
+- AFXTOOLBAR/CMFCToolBar::OnChangeHot
+- AFXTOOLBAR/CMFCToolBar::OnFillBackground
+- AFXTOOLBAR/CMFCToolBar::OnReset
+- AFXTOOLBAR/CMFCToolBar::OnSetAccData
+- AFXTOOLBAR/CMFCToolBar::OnSetDefaultButtonText
+- AFXTOOLBAR/CMFCToolBar::RemoveAllButtons
+- AFXTOOLBAR/CMFCToolBar::RemoveButton
+- AFXTOOLBAR/CMFCToolBar::RemoveStateFromRegistry
+- AFXTOOLBAR/CMFCToolBar::ReplaceButton
+- AFXTOOLBAR/CMFCToolBar::ResetAll
+- AFXTOOLBAR/CMFCToolBar::ResetAllImages
+- AFXTOOLBAR/CMFCToolBar::RestoreOriginalState
+- AFXTOOLBAR/CMFCToolBar::SaveState
+- AFXTOOLBAR/CMFCToolBar::SetBasicCommands
+- AFXTOOLBAR/CMFCToolBar::SetButtonInfo
+- AFXTOOLBAR/CMFCToolBar::SetButtonStyle
+- AFXTOOLBAR/CMFCToolBar::SetButtonText
+- AFXTOOLBAR/CMFCToolBar::SetButtons
+- AFXTOOLBAR/CMFCToolBar::SetCommandUsageOptions
+- AFXTOOLBAR/CMFCToolBar::SetCustomizeMode
+- AFXTOOLBAR/CMFCToolBar::SetGrayDisabledButtons
+- AFXTOOLBAR/CMFCToolBar::SetHeight
+- AFXTOOLBAR/CMFCToolBar::SetHotBorder
+- AFXTOOLBAR/CMFCToolBar::SetHotTextColor
+- AFXTOOLBAR/CMFCToolBar::SetLargeIcons
+- AFXTOOLBAR/CMFCToolBar::SetLockedSizes
+- AFXTOOLBAR/CMFCToolBar::SetMenuSizes
+- AFXTOOLBAR/CMFCToolBar::SetNonPermittedCommands
+- AFXTOOLBAR/CMFCToolBar::SetOneRowWithSibling
+- AFXTOOLBAR/CMFCToolBar::SetPermament
+- AFXTOOLBAR/CMFCToolBar::SetRouteCommandsViaFrame
+- AFXTOOLBAR/CMFCToolBar::SetShowTooltips
+- AFXTOOLBAR/CMFCToolBar::SetSiblingToolBar
+- AFXTOOLBAR/CMFCToolBar::SetSizes
+- AFXTOOLBAR/CMFCToolBar::SetToolBarBtnText
+- AFXTOOLBAR/CMFCToolBar::SetTwoRowsWithSibling
+- AFXTOOLBAR/CMFCToolBar::SetUserImages
+- AFXTOOLBAR/CMFCToolBar::StretchPane
+- AFXTOOLBAR/CMFCToolBar::TranslateChar
+- AFXTOOLBAR/CMFCToolBar::UpdateButton
+- AFXTOOLBAR/CMFCToolBar::WrapToolBar
+- AFXTOOLBAR/CMFCToolBar::AllowShowOnList
+- AFXTOOLBAR/CMFCToolBar::CalcMaxButtonHeight
+- AFXTOOLBAR/CMFCToolBar::DoPaint
+- AFXTOOLBAR/CMFCToolBar::DrawButton
+- AFXTOOLBAR/CMFCToolBar::DrawSeparator
+- AFXTOOLBAR/CMFCToolBar::OnUserToolTip
+- AFXTOOLBAR/CMFCToolBar::m_bDontScaleImages
+- AFXTOOLBAR/CMFCToolBar::m_dblLargeImageRatio
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -264,7 +418,7 @@ class CMFCToolBar : public CMFCBaseToolBar
   
  `CMFCToolBar`  
   
-##  <a name="a-nameaddbasiccommanda--cmfctoolbaraddbasiccommand"></a><a name="addbasiccommand"></a>CMFCToolBar::AddBasicCommand  
+##  <a name="addbasiccommand"></a>CMFCToolBar::AddBasicCommand  
  Aggiunge un comando di menu all'elenco di comandi che vengono sempre visualizzati quando un utente apre un menu.  
   
 ```  
@@ -280,7 +434,7 @@ static void __stdcall AddBasicCommand(UINT uiCmd);
   
  Utilizzare il [CMFCToolBar::SetBasicCommands](#setbasiccommands) per impostare l'elenco di comandi che vengono sempre visualizzati quando un utente apre un menu. Utilizzare il [CMFCToolBar::GetBasicCommands](#getbasiccommands) metodo per recuperare l'elenco di comandi di base utilizzato dall'applicazione.  
   
-##  <a name="a-nameaddcommandusagea--cmfctoolbaraddcommandusage"></a><a name="addcommandusage"></a>CMFCToolBar::AddCommandUsage  
+##  <a name="addcommandusage"></a>CMFCToolBar::AddCommandUsage  
  Viene incrementato di uno il contatore che viene associato al comando specificato.  
   
 ```  
@@ -298,7 +452,7 @@ static void __stdcall AddCommandUsage(UINT uiCommand);
   
  Questo metodo incrementa il contatore di comando utilizzando il [CMFCCmdUsageCount::AddCmd](../../mfc/reference/cmfccmdusagecount-class.md#addcmd) metodo.  
   
-##  <a name="a-nameaddtoolbarforimagecollectiona--cmfctoolbaraddtoolbarforimagecollection"></a><a name="addtoolbarforimagecollection"></a>CMFCToolBar::AddToolBarForImageCollection  
+##  <a name="addtoolbarforimagecollection"></a>CMFCToolBar::AddToolBarForImageCollection  
  Consente di aggiungere immagini dalle risorse dell'interfaccia utente per la raccolta di immagini nell'applicazione.  
   
 ```  
@@ -336,7 +490,7 @@ static BOOL __stdcall AddToolBarForImageCollection(
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo per caricare una bitmap con immagini della barra degli strumenti e aggiungerla alla raccolta di immagini della barra degli strumenti. Questo metodo crea un oggetto temporaneo della barra degli strumenti e le chiamate [CMFCToolBar::LoadToolBar](#loadtoolbar).  
   
-##  <a name="a-nameadjustlayouta--cmfctoolbaradjustlayout"></a><a name="adjustlayout"></a>CMFCToolBar::AdjustLayout  
+##  <a name="adjustlayout"></a>CMFCToolBar::AdjustLayout  
  Ricalcola le dimensioni e posizione di una barra degli strumenti.  
   
 ```  
@@ -350,7 +504,7 @@ virtual void AdjustLayout();
   
  Eseguire l'override di questo metodo per fornire il proprio layout dinamico nelle classi che è possibile derivare da `CMFCToolbar`.  
   
-##  <a name="a-nameadjustsizea--cmfctoolbaradjustsize"></a><a name="adjustsize"></a>CMFCToolBar::AdjustSize  
+##  <a name="adjustsize"></a>CMFCToolBar::AdjustSize  
  Ricalcola le dimensioni della barra degli strumenti.  
   
 ```  
@@ -362,7 +516,7 @@ void AdjustSize();
   
  Il [CMFCToolBar::AdjustLayout](#adjustlayout) metodo chiama questo metodo per ricalcolare le dimensioni, se il padre della barra degli strumenti non è un `CMFCReBar` oggetto.  
   
-##  <a name="a-nameallowchangetextlabelsa--cmfctoolbarallowchangetextlabels"></a><a name="allowchangetextlabels"></a>CMFCToolBar::AllowChangeTextLabels  
+##  <a name="allowchangetextlabels"></a>CMFCToolBar::AllowChangeTextLabels  
  Specifica se le etichette di testo possono essere visualizzate sotto le immagini sui pulsanti della barra degli strumenti.  
   
 ```  
@@ -379,7 +533,7 @@ virtual BOOL AllowChangeTextLabels() const;
   
  Eseguire l'override di questo metodo in un oggetto derivato da `CMFCToolBar` e restituire `FALSE` in cui non si desidera all'utente di decidere se le etichette di testo vengono visualizzate i pulsanti della barra degli strumenti sotto le immagini.  
   
-##  <a name="a-nameallowshowonlista--cmfctoolbarallowshowonlist"></a><a name="allowshowonlist"></a>CMFCToolBar::AllowShowOnList  
+##  <a name="allowshowonlist"></a>CMFCToolBar::AllowShowOnList  
  Determina se la barra degli strumenti viene visualizzato nell'elenco delle barre degli strumenti di **barre degli strumenti** riquadro del **Personalizza** la finestra di dialogo.  
   
 ```  
@@ -394,7 +548,7 @@ virtual BOOL AllowShowOnList() const;
   
  L'implementazione predefinita restituisce sempre `TRUE`. Eseguire l'override di questo metodo quando non si desidera che una barra degli strumenti da visualizzare nell'elenco barre degli strumenti nella finestra di dialogo di personalizzazione.  
   
-##  <a name="a-namearetextlabelsa--cmfctoolbararetextlabels"></a><a name="aretextlabels"></a>CMFCToolBar::AreTextLabels  
+##  <a name="aretextlabels"></a>CMFCToolBar::AreTextLabels  
  Specifica se le etichette di testo sotto le immagini vengono attualmente visualizzate sui pulsanti della barra degli strumenti.  
   
 ```  
@@ -407,7 +561,7 @@ BOOL AreTextLabels() const;
 ### <a name="remarks"></a>Note  
  Utilizzare [CMFCToolBar::EnableTextLabels](#enabletextlabels) per specificare se viene visualizzato il testo. Il valore predefinito è `FALSE`. Chiamare [CMFCToolBar::AllowChangeTextLabels](#allowchangetextlabels) per specificare se l'utente può modificare questa impostazione nella finestra di dialogo di personalizzazione.  
   
-##  <a name="a-nameautograyinactiveimagesa--cmfctoolbarautograyinactiveimages"></a><a name="autograyinactiveimages"></a>CMFCToolBar::AutoGrayInactiveImages  
+##  <a name="autograyinactiveimages"></a>CMFCToolBar::AutoGrayInactiveImages  
  Abilita o disabilita la generazione automatica di immagini di pulsante inattivo.  
   
 ```  
@@ -432,7 +586,7 @@ static void AutoGrayInactiveImages(
   
  Per ulteriori informazioni sui `nGrayImagePercentage` parametro, vedere [CMFCToolBarImages::GrayImages](../../mfc/reference/cmfctoolbarimages-class.md#grayimages).  
   
-##  <a name="a-namebuttontoindexa--cmfctoolbarbuttontoindex"></a><a name="buttontoindex"></a>CMFCToolBar::ButtonToIndex  
+##  <a name="buttontoindex"></a>CMFCToolBar::ButtonToIndex  
  Restituisce l'indice di un oggetto specificato [CMFCToolBarButton classe](../../mfc/reference/cmfctoolbarbutton-class.md) oggetto in questa barra degli strumenti.  
   
 ```  
@@ -446,7 +600,7 @@ int ButtonToIndex(const CMFCToolBarButton* pButton) const;
 ### <a name="return-value"></a>Valore restituito  
  Indice di `pButton` nell'elenco interno dei pulsanti della barra degli strumenti; o -1 se il pulsante specificato non è presente la barra degli strumenti.  
   
-##  <a name="a-namecalcfixedlayouta--cmfctoolbarcalcfixedlayout"></a><a name="calcfixedlayout"></a>CMFCToolBar::CalcFixedLayout  
+##  <a name="calcfixedlayout"></a>CMFCToolBar::CalcFixedLayout  
  Calcola la dimensione orizzontale della barra degli strumenti.  
   
 ```  
@@ -470,7 +624,7 @@ virtual CSize CalcFixedLayout(
   
  Vedere l'esempio VisualStudioDemo per un esempio che utilizza questo metodo.  
   
-##  <a name="a-namecalcmaxbuttonheighta--cmfctoolbarcalcmaxbuttonheight"></a><a name="calcmaxbuttonheight"></a>CMFCToolBar::CalcMaxButtonHeight  
+##  <a name="calcmaxbuttonheight"></a>CMFCToolBar::CalcMaxButtonHeight  
  Calcola l'altezza massima dei pulsanti della barra degli strumenti.  
   
 ```  
@@ -485,7 +639,7 @@ virtual int CalcMaxButtonHeight();
   
  Eseguire l'override di questo metodo in una classe derivata da `CMFCToolBar` per fornire il proprio calcolo altezza.  
   
-##  <a name="a-namecalcsizea--cmfctoolbarcalcsize"></a><a name="calcsize"></a>CMFCToolBar::CalcSize  
+##  <a name="calcsize"></a>CMFCToolBar::CalcSize  
  Chiamato dal framework come parte del processo di calcolo di layout.  
   
 ```  
@@ -504,7 +658,7 @@ virtual CSize CalcSize(BOOL bVertDock);
   
  Se la barra degli strumenti contiene pulsanti, questo metodo restituisce le dimensioni di un singolo pulsante riservate usando il [CMFCToolBar::GetButtonSize](#getbuttonsize) metodo.  
   
-##  <a name="a-namecanbecloseda--cmfctoolbarcanbeclosed"></a><a name="canbeclosed"></a>CMFCToolBar::CanBeClosed  
+##  <a name="canbeclosed"></a>CMFCToolBar::CanBeClosed  
  Specifica se un utente può chiudere la barra degli strumenti.  
   
 ```  
@@ -519,7 +673,7 @@ virtual BOOL CanBeClosed() const;
   
  L'implementazione predefinita restituisce `TRUE`. Eseguire l'override di questo metodo in una classe derivata da `CMFCToolBar` per rendere gli oggetti della barra degli strumenti che non possono essere chiusa dall'utente.  
   
-##  <a name="a-namecanberestoreda--cmfctoolbarcanberestored"></a><a name="canberestored"></a>CMFCToolBar::CanBeRestored  
+##  <a name="canberestored"></a>CMFCToolBar::CanBeRestored  
  Determina se il ripristino del sistema una barra degli strumenti allo stato originale dopo la personalizzazione.  
   
 ```  
@@ -538,7 +692,7 @@ virtual BOOL CanBeRestored() const;
   
  È possibile eseguire l'override di `CanBeRestored` metodo per personalizzare questo comportamento in classi derivate.  
   
-##  <a name="a-namecanfocusa--cmfctoolbarcanfocus"></a><a name="canfocus"></a>CMFCToolBar::CanFocus  
+##  <a name="canfocus"></a>CMFCToolBar::CanFocus  
  Specifica se il riquadro può ricevere lo stato attivo.  
   
 ```  
@@ -551,7 +705,7 @@ virtual BOOL CanFocus() const;
 ### <a name="remarks"></a>Note  
  Questo metodo esegue l'override dell'implementazione della classe base, [CBasePane::CanFocus](../../mfc/reference/cbasepane-class.md#canfocus), poiché gli oggetti della barra degli strumenti non possono ricevere lo stato attivo.  
   
-##  <a name="a-namecanhandlesiblingsa--cmfctoolbarcanhandlesiblings"></a><a name="canhandlesiblings"></a>CMFCToolBar::CanHandleSiblings  
+##  <a name="canhandlesiblings"></a>CMFCToolBar::CanHandleSiblings  
  Determina se la barra degli strumenti e il relativo elemento di pari livello vengono inseriti nello stesso riquadro.  
   
 ```  
@@ -566,7 +720,7 @@ BOOL CanHandleSiblings();
   
  In genere non è necessario usare questo metodo. Per abilitare il **Personalizza** pulsante visualizzato sulla barra degli strumenti, chiamata di [CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton) metodo. Per abilitare il **Mostra pulsanti su una riga** o **Mostra pulsanti su due righe** pulsanti, chiamare [CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar).  
   
-##  <a name="a-namecleanupimagesa--cmfctoolbarcleanupimages"></a><a name="cleanupimages"></a>CMFCToolBar::CleanUpImages  
+##  <a name="cleanupimages"></a>CMFCToolBar::CleanUpImages  
  Libera le risorse di sistema allocate per le immagini della barra degli strumenti.  
   
 ```  
@@ -576,7 +730,7 @@ static void CMFCToolBar::CleanUpImages();
 ### <a name="remarks"></a>Note  
  Il framework chiama questo metodo quando un'applicazione viene chiusa.  
   
-##  <a name="a-namecleanuplockedimagesa--cmfctoolbarcleanuplockedimages"></a><a name="cleanuplockedimages"></a>CMFCToolBar::CleanUpLockedImages  
+##  <a name="cleanuplockedimages"></a>CMFCToolBar::CleanUpLockedImages  
  Libera le risorse di sistema allocate per le immagini della barra degli strumenti bloccate.  
   
 ```  
@@ -586,7 +740,7 @@ void CleanUpLockedImages();
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo quando viene modificato lo stile di visualizzazione dell'applicazione. Vedere l'esempio VisualStudioDemo per un esempio che utilizza questo metodo.  
   
-##  <a name="a-namecommandtoindexa--cmfctoolbarcommandtoindex"></a><a name="commandtoindex"></a>CMFCToolBar::CommandToIndex  
+##  <a name="commandtoindex"></a>CMFCToolBar::CommandToIndex  
  Restituisce l'indice del pulsante nella barra degli strumenti con un ID di comando specificato.  
   
 ```  
@@ -610,7 +764,7 @@ int CommandToIndex(
   
  Se `iIndex` è maggiore di 0, questo metodo ignora qualsiasi pulsante sulla barra degli strumenti che include un indice meno `iIndex`.  
   
-##  <a name="a-namecreatea--cmfctoolbarcreate"></a><a name="create"></a>CMFCToolBar::Create  
+##  <a name="create"></a>CMFCToolBar::Create  
  Crea un oggetto `CMFCToolBar`.  
   
 ```  
@@ -636,7 +790,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Note  
  Questo metodo crea una barra di controllo e lo collega alla barra degli strumenti. Crea la barra di controllo con il `TBSTYLE_FLAT` stile. Chiamare [CMFCToolBar::CreateEx](#createex) se si desidera uno stile della barra di controllo diverso.  
   
-##  <a name="a-namecreateexa--cmfctoolbarcreateex"></a><a name="createex"></a>CMFCToolBar::CreateEx  
+##  <a name="createex"></a>CMFCToolBar::CreateEx  
  Crea un `CMFCToolBar` oggetto che utilizza le opzioni di stile aggiuntive, ad esempio icone grandi.  
   
 ```  
@@ -681,7 +835,7 @@ virtual BOOL CreateEx(
  [!code-cpp[6 NVC_MFC_IEDemo](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
 [!code-cpp[NVC_MFC_IEDemo&#7;](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_3.cpp)]  
   
-##  <a name="a-namedeactivatea--cmfctoolbardeactivate"></a><a name="deactivate"></a>CMFCToolBar::Deactivate  
+##  <a name="deactivate"></a>CMFCToolBar::Deactivate  
  Disattiva la barra degli strumenti.  
   
 ```  
@@ -691,7 +845,7 @@ virtual void Deactivate();
 ### <a name="remarks"></a>Note  
  Questo metodo per disattivare la barra degli strumenti rimuovendo lo stato attivo dal pulsante della barra degli strumenti evidenziati. Il framework chiama questo metodo quando la barra degli strumenti perde lo stato attivo o viene distrutto.  
   
-##  <a name="a-namedopainta--cmfctoolbardopaint"></a><a name="dopaint"></a>CMFCToolBar::DoPaint  
+##  <a name="dopaint"></a>CMFCToolBar::DoPaint  
  Ridisegna una barra degli strumenti.  
   
 ```  
@@ -707,7 +861,7 @@ virtual void DoPaint(CDC* pDC);
   
  Eseguire l'override di questo metodo per personalizzare l'aspetto di un oggetto derivato da `CMFCToolBar`.  
   
-##  <a name="a-namedrawbuttona--cmfctoolbardrawbutton"></a><a name="drawbutton"></a>CMFCToolBar::DrawButton  
+##  <a name="drawbutton"></a>CMFCToolBar::DrawButton  
  Ridisegna un pulsante della barra degli strumenti.  
   
 ```  
@@ -743,7 +897,7 @@ virtual BOOL DrawButton(
   
  Eseguire l'override di questo metodo se si desidera personalizzare l'aspetto dei pulsanti sulla barra degli strumenti.  
   
-##  <a name="a-namedrawseparatora--cmfctoolbardrawseparator"></a><a name="drawseparator"></a>CMFCToolBar::DrawSeparator  
+##  <a name="drawseparator"></a>CMFCToolBar::DrawSeparator  
  Ridisegna un separatore in una barra degli strumenti.  
   
 ```  
@@ -768,7 +922,7 @@ virtual void DrawSeparator(
   
  Eseguire l'override di questo metodo in una classe derivata da [CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md) per personalizzare l'aspetto dei separatori nella barra degli strumenti. L'implementazione predefinita chiama [CMFCVisualManager::OnDrawSeparator](../../mfc/reference/cmfcvisualmanager-class.md#ondrawseparator) per disegnare un separatore del cui aspetto è determinato dal gestore visualizzazione corrente.  
   
-##  <a name="a-nameenablecustomizebuttona--cmfctoolbarenablecustomizebutton"></a><a name="enablecustomizebutton"></a>CMFCToolBar::EnableCustomizeButton  
+##  <a name="enablecustomizebutton"></a>CMFCToolBar::EnableCustomizeButton  
  Abilita o disabilita il pulsante Personalizza visualizzato sulla barra degli strumenti.  
   
 ```  
@@ -809,7 +963,7 @@ void EnableCustomizeButton(
   
  Il framework aggiunge dinamicamente al menu tutti i pulsanti che non rientrano nell'area della barra degli strumenti prima dell'elemento specificato da `iCustomizeCmd`. La freccia di espansione viene visualizzato accanto alla freccia rivolta verso il basso.  
   
-##  <a name="a-nameenabledockinga--cmfctoolbarenabledocking"></a><a name="enabledocking"></a>CMFCToolBar::EnableDocking  
+##  <a name="enabledocking"></a>CMFCToolBar::EnableDocking  
  Consente di ancoraggio del riquadro per la cornice principale.  
   
 ```  
@@ -823,7 +977,7 @@ virtual void EnableDocking(DWORD dwAlignment);
 ### <a name="remarks"></a>Note  
  Questo metodo estende l'implementazione della classe base, [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking), impostando il `CBasePane::m_dwControlBarStyle` membro dati da `AFX_CBRS_FLOAT`. Questo metodo passa quindi `dwAlignment` all'implementazione della classe base.  
   
-##  <a name="a-nameenablelargeiconsa--cmfctoolbarenablelargeicons"></a><a name="enablelargeicons"></a>CMFCToolBar::EnableLargeIcons  
+##  <a name="enablelargeicons"></a>CMFCToolBar::EnableLargeIcons  
  Abilita o disabilita le icone grandi sulle barre degli strumenti.  
   
 ```  
@@ -837,7 +991,7 @@ void EnableLargeIcons(BOOL bEnable);
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, sono abilitate le icone grandi.  
   
-##  <a name="a-nameenablequickcustomizationa--cmfctoolbarenablequickcustomization"></a><a name="enablequickcustomization"></a>CMFCToolBar::EnableQuickCustomization  
+##  <a name="enablequickcustomization"></a>CMFCToolBar::EnableQuickCustomization  
  Abilita o disabilita la rapida personalizzazione delle barre degli strumenti in modo che l'utente può premere il **Alt** chiave e trascinare un pulsante in una nuova posizione.  
   
 ```  
@@ -848,7 +1002,7 @@ static void EnableQuickCustomization(BOOL bEnable=TRUE);
  [in] `bEnable`  
  `TRUE`Per abilitare la personalizzazione rapida, `FALSE` di disattivare la personalizzazione rapida.  
   
-##  <a name="a-nameenablereflectionsa--cmfctoolbarenablereflections"></a><a name="enablereflections"></a>CMFCToolBar::EnableReflections  
+##  <a name="enablereflections"></a>CMFCToolBar::EnableReflections  
  Abilita o disabilita la reflection di comando.  
   
 ```  
@@ -864,7 +1018,7 @@ void EnableReflections(BOOL bEnable = TRUE);
   
  Per ulteriori informazioni sulla reflection di comando, vedere [TN062: Reflection messaggi per controlli Windows](../../mfc/tn062-message-reflection-for-windows-controls.md).  
   
-##  <a name="a-nameenabletextlabelsa--cmfctoolbarenabletextlabels"></a><a name="enabletextlabels"></a>CMFCToolBar::EnableTextLabels  
+##  <a name="enabletextlabels"></a>CMFCToolBar::EnableTextLabels  
  Abilita o disabilita le etichette di testo sotto le immagini di pulsante della barra degli strumenti.  
   
 ```  
@@ -878,7 +1032,7 @@ void EnableTextLabels(BOOL bEnable=TRUE);
 ### <a name="remarks"></a>Note  
  Se sono abilitate le etichette di testo, tutti i pulsanti sulla barra degli strumenti sono ingranditi per fornire spazio per le etichette da visualizzare sotto le immagini. La finestra di dialogo di personalizzazione è un **Mostra etichetta di testo** -casella di controllo di **barre degli strumenti** pagina. Quando l'utente seleziona una barra degli strumenti e controlli di questa opzione, il framework chiama `EnableTextLabels` per la barra degli strumenti selezionata. È possibile disabilitare la casella di controllo per un oggetto derivato da [CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md) restituendo `FALSE` da [CMFCToolBar::AllowChangeTextLabels](#allowchangetextlabels) .  
   
-##  <a name="a-namefromhandlepermanenta--cmfctoolbarfromhandlepermanent"></a><a name="fromhandlepermanent"></a>CMFCToolBar::FromHandlePermanent  
+##  <a name="fromhandlepermanent"></a>CMFCToolBar::FromHandlePermanent  
  Recupera un puntatore per il `CMFCToolBar` oggetto che contiene l'handle di finestra specificato.  
   
 ```  
@@ -895,7 +1049,7 @@ static CMFCToolBar* __stdcall FromHandlePermanent(HWND hwnd);
 ### <a name="remarks"></a>Note  
  Questo metodo condiviso esamina ogni barra degli strumenti dell'applicazione per la `CMFCToolBar` oggetto che contiene l'handle di finestra specificato.  
   
-##  <a name="a-namegetallbuttonsa--cmfctoolbargetallbuttons"></a><a name="getallbuttons"></a>CMFCToolBar::GetAllButtons  
+##  <a name="getallbuttons"></a>CMFCToolBar::GetAllButtons  
  Restituisce un elenco di sola lettura dei pulsanti in una barra degli strumenti.  
   
 ```  
@@ -905,7 +1059,7 @@ const CObList& GetAllButtons() const;
 ### <a name="return-value"></a>Valore restituito  
  Un riferimento costante a un [classe CObList](../../mfc/reference/coblist-class.md) oggetto che contiene una raccolta di [CMFCToolBarButton classe](../../mfc/reference/cmfctoolbarbutton-class.md) oggetti.  
   
-##  <a name="a-namegetalltoolbarsa--cmfctoolbargetalltoolbars"></a><a name="getalltoolbars"></a>CMFCToolBar::GetAllToolbars  
+##  <a name="getalltoolbars"></a>CMFCToolBar::GetAllToolbars  
  Restituisce un elenco di sola lettura di tutte le barre degli strumenti dell'applicazione.  
   
 ```  
@@ -915,7 +1069,7 @@ static const CObList& GetAllToolbars();
 ### <a name="return-value"></a>Valore restituito  
  Un riferimento const a un [classe CObList](../../mfc/reference/coblist-class.md) oggetto che contiene una raccolta di `CMFCToolBar` oggetti.  
   
-##  <a name="a-namegetbasiccommandsa--cmfctoolbargetbasiccommands"></a><a name="getbasiccommands"></a>CMFCToolBar::GetBasicCommands  
+##  <a name="getbasiccommands"></a>CMFCToolBar::GetBasicCommands  
  Restituisce un elenco di sola lettura dei comandi di base definiti nell'applicazione.  
   
 ```  
@@ -928,7 +1082,7 @@ static const CList<UINT,UINT>& GetBasicCommands();
 ### <a name="remarks"></a>Note  
  Aggiungere i comandi di base chiamando [CMFCToolBar::AddBasicCommand](#addbasiccommand) o [CMFCToolBar::SetBasicCommands](#setbasiccommands).  
   
-##  <a name="a-namegetbuttona--cmfctoolbargetbutton"></a><a name="getbutton"></a>CMFCToolBar::GetButton  
+##  <a name="getbutton"></a>CMFCToolBar::GetButton  
  Restituisce un puntatore per il [CMFCToolBarButton classe](../../mfc/reference/cmfctoolbarbutton-class.md) oggetto in corrispondenza dell'indice specificato.  
   
 ```  
@@ -942,7 +1096,7 @@ CMFCToolBarButton* GetButton(int iIndex) const;
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore al pulsante della barra degli strumenti, se presente. o `NULL` se non esiste alcun tale pulsante.  
   
-##  <a name="a-namegetbuttoninfoa--cmfctoolbargetbuttoninfo"></a><a name="getbuttoninfo"></a>CMFCToolBar::GetButtonInfo  
+##  <a name="getbuttoninfo"></a>CMFCToolBar::GetButtonInfo  
  Restituisce l'ID di comando, stile e l'indice dell'immagine del pulsante in corrispondenza dell'indice specificato.  
   
 ```  
@@ -971,7 +1125,7 @@ void GetButtonInfo(
   
  Se il pulsante in corrispondenza dell'indice specificato non esiste, il framework imposta `nID` e `nStyle` su 0, e `iImage` su -1 quando il metodo restituisce.  
   
-##  <a name="a-namegetbuttonsizea--cmfctoolbargetbuttonsize"></a><a name="getbuttonsize"></a>CMFCToolBar::GetButtonSize  
+##  <a name="getbuttonsize"></a>CMFCToolBar::GetButtonSize  
  Restituisce le dimensioni di ogni pulsante sulla barra degli strumenti.  
   
 ```  
@@ -984,7 +1138,7 @@ CSize GetButtonSize() const;
 ### <a name="remarks"></a>Note  
  Chiamare [CMFCToolBar::SetSizes](#setsizes) o [CMFCToolBar::SetLockedSizes](#setlockedsizes) per impostare le dimensioni di ogni pulsante sulla barra degli strumenti.  
   
-##  <a name="a-namegetbuttonstylea--cmfctoolbargetbuttonstyle"></a><a name="getbuttonstyle"></a>CMFCToolBar::GetButtonStyle  
+##  <a name="getbuttonstyle"></a>CMFCToolBar::GetButtonStyle  
  Restituisce lo stile corrente del pulsante della barra degli strumenti che si trova in corrispondenza dell'indice specificato.  
   
 ```  
@@ -1001,7 +1155,7 @@ UINT GetButtonStyle(int nIndex) const;
 ### <a name="remarks"></a>Note  
  Chiamare [CMFCToolBar::SetButtonStyle](#setbuttonstyle) per impostare lo stile di un pulsante della barra degli strumenti  
   
-##  <a name="a-namegetbuttontexta--cmfctoolbargetbuttontext"></a><a name="getbuttontext"></a>CMFCToolBar::GetButtonText  
+##  <a name="getbuttontext"></a>CMFCToolBar::GetButtonText  
  Restituisce l'etichetta di testo di un pulsante che dispone di un indice specificato.  
   
 ```  
@@ -1025,7 +1179,7 @@ void GetButtonText(
 ### <a name="remarks"></a>Note  
  Chiamare [CMFCToolBar::SetButtonText](#setbuttontext) o [CMFCToolBar::SetToolBarBtnText](#settoolbarbtntext) per impostare l'etichetta di testo.  
   
-##  <a name="a-namegetcoldimagesa--cmfctoolbargetcoldimages"></a><a name="getcoldimages"></a>CMFCToolBar::GetColdImages  
+##  <a name="getcoldimages"></a>CMFCToolBar::GetColdImages  
  Restituisce un puntatore alla raccolta di immagini dei pulsanti della barra degli strumenti a freddo nell'applicazione.  
   
 ```  
@@ -1038,7 +1192,7 @@ static CMFCToolBarImages* GetColdImages();
 ### <a name="remarks"></a>Note  
  Le immagini a freddo sono le immagini che vengono utilizzate quando l'utente non interagisce con i pulsanti della barra degli strumenti. Chiamare [CMFCToolBar::LoadBitmapEx](#loadbitmapex) o [CMFCToolBar::LoadBitmap](#loadbitmap) per caricare le immagini a freddo.  
   
-##  <a name="a-namegetcolumnwidtha--cmfctoolbargetcolumnwidth"></a><a name="getcolumnwidth"></a>CMFCToolBar::GetColumnWidth  
+##  <a name="getcolumnwidth"></a>CMFCToolBar::GetColumnWidth  
  Restituisce la larghezza dei pulsanti della barra degli strumenti.  
   
 ```  
@@ -1051,7 +1205,7 @@ virtual int GetColumnWidth() const;
 ### <a name="remarks"></a>Note  
  Il framework chiama questo metodo per calcolare il layout della barra degli strumenti. L'override del metodo in una classe derivata per specificare una larghezza di colonna diversi per la barra degli strumenti.  
   
-##  <a name="a-namegetcommandbuttonsa--cmfctoolbargetcommandbuttons"></a><a name="getcommandbuttons"></a>CMFCToolBar::GetCommandButtons  
+##  <a name="getcommandbuttons"></a>CMFCToolBar::GetCommandButtons  
  Restituisce un elenco di pulsanti che dispone di un ID di comando specificato da tutte le barre degli strumenti dell'applicazione.  
   
 ```  
@@ -1070,7 +1224,7 @@ static int GetCommandButtons(
 ### <a name="return-value"></a>Valore restituito  
  Il numero di pulsanti che dispongono di ID di comando specificato.  
   
-##  <a name="a-namegetcounta--cmfctoolbargetcount"></a><a name="getcount"></a>CMFCToolBar::GetCount  
+##  <a name="getcount"></a>CMFCToolBar::GetCount  
  Restituisce il numero di pulsanti e separatori sulla barra degli strumenti.  
   
 ```  
@@ -1080,7 +1234,7 @@ int GetCount() const;
 ### <a name="return-value"></a>Valore restituito  
  Il numero di pulsanti e separatori sulla barra degli strumenti.  
   
-##  <a name="a-namegetcustomizebuttona--cmfctoolbargetcustomizebutton"></a><a name="getcustomizebutton"></a>CMFCToolBar::GetCustomizeButton  
+##  <a name="getcustomizebutton"></a>CMFCToolBar::GetCustomizeButton  
  Recupera un puntatore per il `CMFCCustomizeButton` oggetto associato con la barra degli strumenti.  
   
 ```  
@@ -1095,7 +1249,7 @@ CMFCCustomizeButton* GetCustomizeButton();
   
  È possibile chiamare il [CMFCToolBar::IsExistCustomizeButton](#isexistcustomizebutton) metodo per determinare se la barra degli strumenti contiene un oggetto valido `CMFCCustomizeButton` oggetto.  
   
-##  <a name="a-namegetdefaultimagea--cmfctoolbargetdefaultimage"></a><a name="getdefaultimage"></a>CMFCToolBar::GetDefaultImage  
+##  <a name="getdefaultimage"></a>CMFCToolBar::GetDefaultImage  
  Restituisce l'indice dell'immagine predefinita per un pulsante della barra degli strumenti con un ID di comando specificato.  
   
 ```  
@@ -1112,7 +1266,7 @@ static int GetDefaultImage(UINT uiID);
 ### <a name="remarks"></a>Note  
  Utilizzare questo metodo condiviso per recuperare l'indice dell'immagine predefinita per un pulsante della barra degli strumenti con l'ID di comando specificato. Il valore restituito è un indice nella raccolta di immagini di pulsante della barra degli strumenti per tutte le barre degli strumenti dell'applicazione condivisa. Chiamare il [CMFCToolBar::GetImages](#getimages) per ottenere un puntatore a questa raccolta.  
   
-##  <a name="a-namegetdisabledimagesa--cmfctoolbargetdisabledimages"></a><a name="getdisabledimages"></a>CMFCToolBar::GetDisabledImages  
+##  <a name="getdisabledimages"></a>CMFCToolBar::GetDisabledImages  
  Restituisce un puntatore alla raccolta di immagini che vengono utilizzate per i pulsanti disabilitato nell'applicazione.  
   
 ```  
@@ -1125,7 +1279,7 @@ static CMFCToolBarImages* __stdcall GetDisabledImages();
 ### <a name="remarks"></a>Note  
  Caricare le immagini dei pulsanti della barra degli strumenti disabilitato usando il [CMFCToolBarEditBoxButton classe](../../mfc/reference/cmfctoolbareditboxbutton-class.md) e [CMFCToolBar::LoadBitmap](#loadbitmap) metodi.  
   
-##  <a name="a-namegetdisabledmenuimagesa--cmfctoolbargetdisabledmenuimages"></a><a name="getdisabledmenuimages"></a>CMFCToolBar::GetDisabledMenuImages  
+##  <a name="getdisabledmenuimages"></a>CMFCToolBar::GetDisabledMenuImages  
  Restituisce un puntatore alla raccolta di immagini che vengono utilizzate per i pulsanti di menu disabilitato nell'applicazione.  
   
 ```  
@@ -1138,7 +1292,7 @@ static CMFCToolBarImages* __stdcall GetDisabledMenuImages();
 ### <a name="remarks"></a>Note  
  Caricare le immagini disabilitate usando il [CMFCToolBarEditBoxButton classe](../../mfc/reference/cmfctoolbareditboxbutton-class.md) metodo.  
   
-##  <a name="a-namegetdroppeddownmenua--cmfctoolbargetdroppeddownmenu"></a><a name="getdroppeddownmenu"></a>CMFCToolBar::GetDroppedDownMenu  
+##  <a name="getdroppeddownmenu"></a>CMFCToolBar::GetDroppedDownMenu  
  Recupera un puntatore all'oggetto pulsante di menu che è attualmente visualizzato relativo sottomenu.  
   
 ```  
@@ -1155,7 +1309,7 @@ CMFCToolBarMenuButton* GetDroppedDownMenu(int* pIndex = NULL) const;
 ### <a name="remarks"></a>Note  
  Se questo metodo restituisce un non - `NULL` valore e `pIndex` non `NULL`, il valore a cui puntava `pIndex` è impostato per l'indice del pulsante di menu nell'insieme di pulsanti della barra degli strumenti.  
   
-##  <a name="a-namegetgraydisabledbuttonsa--cmfctoolbargetgraydisabledbuttons"></a><a name="getgraydisabledbuttons"></a>CMFCToolBar::GetGrayDisabledButtons  
+##  <a name="getgraydisabledbuttons"></a>CMFCToolBar::GetGrayDisabledButtons  
  Specifica se le immagini dei pulsanti disabilitati sono in grigio le versioni delle immagini di pulsante normale, o dalla raccolta di immagini pulsante disabilitato.  
   
 ```  
@@ -1168,7 +1322,7 @@ BOOL GetGrayDisabledButtons() const;
 ### <a name="remarks"></a>Note  
  Utilizzare [CMFCToolBar::SetGrayDisabledButtons](#setgraydisabledbuttons) per alternare le immagini in grigio e le immagini dalla raccolta di immagini disabilitate.  
   
-##  <a name="a-namegethighlightedbuttona--cmfctoolbargethighlightedbutton"></a><a name="gethighlightedbutton"></a>CMFCToolBar::GetHighlightedButton  
+##  <a name="gethighlightedbutton"></a>CMFCToolBar::GetHighlightedButton  
  Restituisce un puntatore al pulsante della barra degli strumenti che attualmente è evidenziato.  
   
 ```  
@@ -1181,7 +1335,7 @@ CMFCToolBarButton* GetHighlightedButton() const;
 ### <a name="remarks"></a>Note  
  Se ha lo stato attivo della tastiera, viene evidenziato un pulsante della barra degli strumenti. Un pulsante della barra degli strumenti viene evidenziato anche se i pulsanti della barra degli strumenti sono intercettato in questa applicazione (per ulteriori informazioni, vedere [CMFCToolBar::GetHotBorder](#gethotborder) e [CMFCToolBar::SetHotBorder](#sethotborder)) e il mouse è posizionato al momento alcun pulsante della barra degli strumenti o voce di menu ha lo stato attivo.  
   
-##  <a name="a-namegethotbordera--cmfctoolbargethotborder"></a><a name="gethotborder"></a>CMFCToolBar::GetHotBorder  
+##  <a name="gethotborder"></a>CMFCToolBar::GetHotBorder  
  Determina se i pulsanti della barra degli strumenti sono *intercettato*. Se un pulsante viene intercettato, questo viene evidenziato quando il mouse viene spostato su di esso.  
   
 ```  
@@ -1194,7 +1348,7 @@ BOOL GetHotBorder() const;
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, i pulsanti della barra degli strumenti sono intercettato.  
   
-##  <a name="a-namegethottextcolora--cmfctoolbargethottextcolor"></a><a name="gethottextcolor"></a>CMFCToolBar::GetHotTextColor  
+##  <a name="gethottextcolor"></a>CMFCToolBar::GetHotTextColor  
  Restituisce il colore del testo dei pulsanti della barra degli strumenti evidenziati.  
   
 ```  
@@ -1207,7 +1361,7 @@ static COLORREF GetHotTextColor();
 ### <a name="remarks"></a>Note  
  Chiamare [CMFCToolBar::SetHotTextColor](#sethottextcolor) per impostare un nuovo colore di testo per i pulsanti della barra degli strumenti evidenziati.  
   
-##  <a name="a-namegethwndlastfocusa--cmfctoolbargethwndlastfocus"></a><a name="gethwndlastfocus"></a>CMFCToolBar::GetHwndLastFocus  
+##  <a name="gethwndlastfocus"></a>CMFCToolBar::GetHwndLastFocus  
  Restituisce un handle alla finestra che ha lo stato attivo prima che la barra degli strumenti ha.  
   
 ```  
@@ -1220,7 +1374,7 @@ HWND GetHwndLastFocus() const;
 ### <a name="remarks"></a>Note  
  Quando un `CMFCToolBar` controllo riceve lo stato attivo, archivia un handle di finestra che perde lo stato attivo in modo che sia possibile ripristinarla in seguito.  
   
-##  <a name="a-namegetignoresettexta--cmfctoolbargetignoresettext"></a><a name="getignoresettext"></a>CMFCToolBar::GetIgnoreSetText  
+##  <a name="getignoresettext"></a>CMFCToolBar::GetIgnoreSetText  
  Specifica se le chiamate per impostare le etichette di pulsante vengono ignorate.  
   
 ```  
@@ -1232,7 +1386,7 @@ BOOL GetIgnoreSetText() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetimagesa--cmfctoolbargetimages"></a><a name="getimages"></a>CMFCToolBar::GetImages  
+##  <a name="getimages"></a>CMFCToolBar::GetImages  
  Restituisce un puntatore alla raccolta di impostazione predefinita, le icone dei pulsanti nell'applicazione.  
   
 ```  
@@ -1245,7 +1399,7 @@ static CMFCToolBarImages* GetImages();
 ### <a name="remarks"></a>Note  
  Questo metodo condiviso fornisce accesso alla raccolta di impostazione predefinita, tutte le immagini della barra degli strumenti per l'applicazione. Chiamare il [CMFCToolBar::LoadBitmap](#loadbitmap) metodo per aggiungere immagini alla raccolta.  
   
-##  <a name="a-namegetimagesizea--cmfctoolbargetimagesize"></a><a name="getimagesize"></a>CMFCToolBar::GetImageSize  
+##  <a name="getimagesize"></a>CMFCToolBar::GetImageSize  
  Restituisce le dimensioni correnti di immagini dei pulsanti della barra degli strumenti.  
   
 ```  
@@ -1255,7 +1409,7 @@ CSize GetImageSize() const;
 ### <a name="return-value"></a>Valore restituito  
  Oggetto [CSize Class](../../atl-mfc-shared/reference/csize-class.md) oggetto che rappresenta le dimensioni correnti di immagini dei pulsanti della barra degli strumenti.  
   
-##  <a name="a-namegetimagesoffseta--cmfctoolbargetimagesoffset"></a><a name="getimagesoffset"></a>CMFCToolBar::GetImagesOffset  
+##  <a name="getimagesoffset"></a>CMFCToolBar::GetImagesOffset  
  Restituisce l'offset indice utilizzato per cercare la barra degli strumenti, le icone dei pulsanti per questa barra degli strumenti nell'elenco globale delle immagini dei pulsanti della barra degli strumenti.  
   
 ```  
@@ -1272,7 +1426,7 @@ int GetImagesOffset() const;
   
  Chiamare [CMFCToolBar::GetImages](#getimages) per ottenere un puntatore alla raccolta di immagini della barra degli strumenti.  
   
-##  <a name="a-namegetinvalidateitemrecta--cmfctoolbargetinvalidateitemrect"></a><a name="getinvalidateitemrect"></a>CMFCToolBar::GetInvalidateItemRect  
+##  <a name="getinvalidateitemrect"></a>CMFCToolBar::GetInvalidateItemRect  
  Recupera l'area dell'area client che deve essere ridisegnata per il pulsante in corrispondenza dell'indice specificato.  
   
 ```  
@@ -1291,7 +1445,7 @@ virtual void GetInvalidateItemRect(
 ### <a name="remarks"></a>Note  
  Il `lpRect` parametro non deve essere `NULL`. Se in corrispondenza dell'indice specificato è presente alcun pulsante `lpRect` riceve un `RECT` oggetto che viene inizializzato su zero.  
   
-##  <a name="a-namegetitemida--cmfctoolbargetitemid"></a><a name="getitemid"></a>CMFCToolBar::GetItemID  
+##  <a name="getitemid"></a>CMFCToolBar::GetItemID  
  Restituisce l'ID di comando del pulsante della barra degli strumenti in corrispondenza dell'indice specificato.  
   
 ```  
@@ -1305,7 +1459,7 @@ UINT GetItemID(int nIndex) const;
 ### <a name="return-value"></a>Valore restituito  
  ID di comando del pulsante della barra degli strumenti. oppure zero se il pulsante con l'indice specificato non esiste.  
   
-##  <a name="a-namegetitemrecta--cmfctoolbargetitemrect"></a><a name="getitemrect"></a>CMFCToolBar::GetItemRect  
+##  <a name="getitemrect"></a>CMFCToolBar::GetItemRect  
  Restituisce il rettangolo di delimitazione del pulsante in corrispondenza dell'indice specificato.  
   
 ```  
@@ -1330,7 +1484,7 @@ virtual void GetItemRect(
  [!code-cpp[6 NVC_MFC_IEDemo](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
 [!code-cpp[9 NVC_MFC_IEDemo](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_4.cpp)]  
   
-##  <a name="a-namegetlargecoldimagesa--cmfctoolbargetlargecoldimages"></a><a name="getlargecoldimages"></a>CMFCToolBar::GetLargeColdImages  
+##  <a name="getlargecoldimages"></a>CMFCToolBar::GetLargeColdImages  
  Restituisce un puntatore alla raccolta di immagini di grandi dimensioni sulla barra degli strumenti a freddo pulsante nell'applicazione.  
   
 ```  
@@ -1343,7 +1497,7 @@ static CMFCToolBarImages* GetLargeColdImages();
 ### <a name="remarks"></a>Note  
  Le immagini a freddo sono le immagini che vengono utilizzate quando l'utente non interagisce con i pulsanti della barra degli strumenti. Chiamare [CMFCToolBar::LoadBitmapEx](#loadbitmapex) per caricare le immagini grandi a freddo.  
   
-##  <a name="a-namegetlargedisabledimagesa--cmfctoolbargetlargedisabledimages"></a><a name="getlargedisabledimages"></a>CMFCToolBar::GetLargeDisabledImages  
+##  <a name="getlargedisabledimages"></a>CMFCToolBar::GetLargeDisabledImages  
  Restituisce un puntatore alla raccolta di immagini di pulsante di grandi dimensioni sulla barra degli strumenti disabilitato nell'applicazione.  
   
 ```  
@@ -1356,7 +1510,7 @@ static CMFCToolBarImages* GetLargeDisabledImages();
 ### <a name="remarks"></a>Note  
  Immagini di grandi dimensioni sono grandi versioni delle immagini di pulsante della barra degli strumenti regolari. Chiamare [CMFCToolBar::LoadBitmapEx](#loadbitmapex) o [CMFCToolBar::LoadBitmap](#loadbitmap) per caricare le immagini di grandi dimensioni.  
   
-##  <a name="a-namegetlargeimagesa--cmfctoolbargetlargeimages"></a><a name="getlargeimages"></a>CMFCToolBar::GetLargeImages  
+##  <a name="getlargeimages"></a>CMFCToolBar::GetLargeImages  
  Restituisce un puntatore alla raccolta di immagini di pulsante di grandi dimensioni sulla barra degli strumenti nell'applicazione.  
   
 ```  
@@ -1369,7 +1523,7 @@ static CMFCToolBarImages* GetLargeImages();
 ### <a name="remarks"></a>Note  
  Immagini di grandi dimensioni sono grandi versioni delle immagini di pulsante della barra degli strumenti regolari. Chiamare [CMFCToolBar::LoadBitmapEx](#loadbitmapex) per caricare le immagini di grandi dimensioni.  
   
-##  <a name="a-namegetlockedcoldimagesa--cmfctoolbargetlockedcoldimages"></a><a name="getlockedcoldimages"></a>CMFCToolBar::GetLockedColdImages  
+##  <a name="getlockedcoldimages"></a>CMFCToolBar::GetLockedColdImages  
  Restituisce un puntatore alla raccolta di immagini a freddo bloccate sulla barra degli strumenti.  
   
 ```  
@@ -1386,7 +1540,7 @@ CMFCToolBarImages* GetLockedColdImages();
   
  Chiamare il [CMFCToolBar::LoadBitmapEx](#loadbitmapex) metodo per caricare le immagini a freddo bloccate.  
   
-##  <a name="a-namegetlockeddisabledimagesa--cmfctoolbargetlockeddisabledimages"></a><a name="getlockeddisabledimages"></a>CMFCToolBar::GetLockedDisabledImages  
+##  <a name="getlockeddisabledimages"></a>CMFCToolBar::GetLockedDisabledImages  
  Restituisce un puntatore alla raccolta di immagini disabilitate bloccate sulla barra degli strumenti.  
   
 ```  
@@ -1403,7 +1557,7 @@ CMFCToolBarImages* GetLockedDisabledImages();
   
  Chiamare il [CMFCToolBar::LoadBitmapEx](#loadbitmapex) metodo per caricare il bloccato disabilitato immagini.  
   
-##  <a name="a-namegetlockedimagesa--cmfctoolbargetlockedimages"></a><a name="getlockedimages"></a>CMFCToolBar::GetLockedImages  
+##  <a name="getlockedimages"></a>CMFCToolBar::GetLockedImages  
  Restituisce un puntatore alla raccolta di immagini bloccato sulla barra degli strumenti.  
   
 ```  
@@ -1418,7 +1572,7 @@ CMFCToolBarImages* GetLockedImages();
   
  Questo metodo restituisce `NULL` se la barra degli strumenti non è bloccato. Se la barra degli strumenti non è bloccato, questo metodo genera inoltre un errore di asserzione nelle build di Debug. Per ulteriori informazioni sulle barre degli strumenti bloccate, vedere [CMFCToolBar::IsLocked](#islocked).  
   
-##  <a name="a-namegetlockedimagesizea--cmfctoolbargetlockedimagesize"></a><a name="getlockedimagesize"></a>CMFCToolBar::GetLockedImageSize  
+##  <a name="getlockedimagesize"></a>CMFCToolBar::GetLockedImageSize  
  Restituisce la dimensione predefinita delle immagini della barra degli strumenti bloccate.  
   
 ```  
@@ -1435,7 +1589,7 @@ CSize GetLockedImageSize() const;
   
  Chiamare il [CMFCToolBar::SetLockedSizes](#setlockedsizes) per specificare le dimensioni dell'immagine bloccata.  
   
-##  <a name="a-namegetlockedmenuimagesa--cmfctoolbargetlockedmenuimages"></a><a name="getlockedmenuimages"></a>CMFCToolBar::GetLockedMenuImages  
+##  <a name="getlockedmenuimages"></a>CMFCToolBar::GetLockedMenuImages  
  Restituisce un puntatore alla raccolta della barra degli strumenti bloccata delle immagini di menu nella barra degli strumenti.  
   
 ```  
@@ -1452,7 +1606,7 @@ CMFCToolBarImages* GetLockedMenuImages();
   
  Chiamare il [CMFCToolBar::LoadBitmapEx](#loadbitmapex) metodo per caricare le immagini di menu bloccato.  
   
-##  <a name="a-namegetmenubuttonsizea--cmfctoolbargetmenubuttonsize"></a><a name="getmenubuttonsize"></a>CMFCToolBar::GetMenuButtonSize  
+##  <a name="getmenubuttonsize"></a>CMFCToolBar::GetMenuButtonSize  
  Restituisce la dimensione dei pulsanti di menu dell'applicazione.  
   
 ```  
@@ -1467,7 +1621,7 @@ static CSize GetMenuButtonSize();
   
  Chiamare [CMFCToolBar::SetMenuSizes](#setmenusizes) per impostare questa variabile globale.  
   
-##  <a name="a-namegetmenuimagesa--cmfctoolbargetmenuimages"></a><a name="getmenuimages"></a>CMFCToolBar::GetMenuImages  
+##  <a name="getmenuimages"></a>CMFCToolBar::GetMenuImages  
  Restituisce un puntatore alla raccolta di immagini di pulsante di menu dell'applicazione.  
   
 ```  
@@ -1482,7 +1636,7 @@ static CMFCToolBarImages* GetMenuImages();
   
  Chiamare il [CMFCToolBar::SetMenuSizes](#setmenusizes) per impostare le dimensioni dei pulsanti e le immagini.  
   
-##  <a name="a-namegetmenuimagesizea--cmfctoolbargetmenuimagesize"></a><a name="getmenuimagesize"></a>CMFCToolBar::GetMenuImageSize  
+##  <a name="getmenuimagesize"></a>CMFCToolBar::GetMenuImageSize  
  Restituisce le dimensioni delle immagini di pulsante di menu dell'applicazione.  
   
 ```  
@@ -1495,7 +1649,7 @@ static CSize GetMenuImageSize();
 ### <a name="remarks"></a>Note  
  Questo metodo restituisce la dimensione delle immagini sui pulsanti di menu della barra degli strumenti che viene mantenuti come una variabile globale. Chiamare [CMFCToolBar::SetMenuSizes](#setmenusizes) per impostare questa variabile globale.  
   
-##  <a name="a-namegetorigbuttonsa--cmfctoolbargetorigbuttons"></a><a name="getorigbuttons"></a>CMFCToolBar::GetOrigButtons  
+##  <a name="getorigbuttons"></a>CMFCToolBar::GetOrigButtons  
  Recupera la raccolta non personalizzata pulsanti della barra degli strumenti.  
   
 ```  
@@ -1510,7 +1664,7 @@ const CObList& GetOrigButtons() const;
   
  Per impostare l'elenco dei pulsanti originali della barra degli strumenti, chiamare il [CMFCToolBar::SetOrigButtons](#setorigbuttons) metodo.  
   
-##  <a name="a-namegetorigresetbuttonsa--cmfctoolbargetorigresetbuttons"></a><a name="getorigresetbuttons"></a>CMFCToolBar::GetOrigResetButtons  
+##  <a name="getorigresetbuttons"></a>CMFCToolBar::GetOrigResetButtons  
  Recupera l'insieme di pulsanti di reimpostazione non personalizzata della barra degli strumenti.  
   
 ```  
@@ -1525,7 +1679,7 @@ const CObList& GetOrigResetButtons() const;
   
  Il [CMFCToolBar::SetButtons](#setbuttons) metodo aggiunge una copia di ogni pulsante della barra degli strumenti per l'elenco dei pulsanti di reimpostazione originale dopo la chiamata di [CMFCToolBar::OnReset](#onreset) metodo. È possibile eseguire l'override di [CMFCToolBar::OnReset](#onreset) metodo per personalizzare l'aspetto dei pulsanti dopo l'utente preme il **reimpostare** pulsante.  
   
-##  <a name="a-namegetresourceida--cmfctoolbargetresourceid"></a><a name="getresourceid"></a>CMFCToolBar::GetResourceID  
+##  <a name="getresourceid"></a>CMFCToolBar::GetResourceID  
  Recupera l'ID risorsa della barra degli strumenti.  
   
 ```  
@@ -1538,7 +1692,7 @@ UINT GetResourceID() const;
 ### <a name="remarks"></a>Note  
  Chiamare il [CMFCToolBar::LoadToolBarEx](#loadtoolbarex) per impostare l'ID risorsa della barra degli strumenti.  
   
-##  <a name="a-namegetroutecommandsviaframea--cmfctoolbargetroutecommandsviaframe"></a><a name="getroutecommandsviaframe"></a>CMFCToolBar::GetRouteCommandsViaFrame  
+##  <a name="getroutecommandsviaframe"></a>CMFCToolBar::GetRouteCommandsViaFrame  
  Determina quale oggetto, il frame padre o il proprietario, invia comandi alla barra degli strumenti.  
   
 ```  
@@ -1553,7 +1707,7 @@ BOOL GetRouteCommandsViaFrame();
   
  Se questo metodo restituisce un valore diverso da zero, è possibile recuperare un puntatore all'oggetto frame padre tramite il `CMFCToolBar::GetCommandTarget` metodo. Vedere l'esempio VisualStudioDemo per un esempio che utilizza questo metodo.  
   
-##  <a name="a-namegetrowheighta--cmfctoolbargetrowheight"></a><a name="getrowheight"></a>CMFCToolBar::GetRowHeight  
+##  <a name="getrowheight"></a>CMFCToolBar::GetRowHeight  
  Restituisce l'altezza dei pulsanti della barra degli strumenti.  
   
 ```  
@@ -1566,7 +1720,7 @@ virtual int GetRowHeight() const;
 ### <a name="remarks"></a>Note  
  Il framework chiama questo metodo per calcolare il layout della barra degli strumenti. L'override del metodo in una classe derivata per specificare un'altezza differente per la barra degli strumenti.  
   
-##  <a name="a-namegetshowtooltipsa--cmfctoolbargetshowtooltips"></a><a name="getshowtooltips"></a>CMFCToolBar::GetShowTooltips  
+##  <a name="getshowtooltips"></a>CMFCToolBar::GetShowTooltips  
  Specifica se le descrizioni comandi vengono visualizzate per i pulsanti della barra degli strumenti.  
   
 ```  
@@ -1579,7 +1733,7 @@ static BOOL GetShowTooltips();
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita vengono visualizzate descrizioni comandi. È possibile modificare questo flag statico chiamando [CMFCToolBar::SetShowTooltips](#setshowtooltips).  
   
-##  <a name="a-namegetsiblingtoolbara--cmfctoolbargetsiblingtoolbar"></a><a name="getsiblingtoolbar"></a>CMFCToolBar::GetSiblingToolBar  
+##  <a name="getsiblingtoolbar"></a>CMFCToolBar::GetSiblingToolBar  
  Recupera l'elemento di pari livello della barra degli strumenti.  
   
 ```  
@@ -1592,7 +1746,7 @@ CMFCToolBar* GetSiblingToolBar();
 ### <a name="remarks"></a>Note  
  Per ulteriori informazioni su come abilitare il **Mostra pulsanti su una riga** e **Mostra pulsanti su due righe** pulsanti, vedere [CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar).  
   
-##  <a name="a-namegetuserimagesa--cmfctoolbargetuserimages"></a><a name="getuserimages"></a>CMFCToolBar::GetUserImages  
+##  <a name="getuserimages"></a>CMFCToolBar::GetUserImages  
  Restituisce un puntatore alla raccolta di immagini di pulsante di barra degli strumenti definiti dall'utente nell'applicazione.  
   
 ```  
@@ -1605,7 +1759,7 @@ static CMFCToolBarImages* GetUserImages();
 ### <a name="remarks"></a>Note  
  Chiamare il [CMFCToolBar::SetUserImages](#setuserimages) per impostare la raccolta di immagini definite dall'utente nell'applicazione.  
   
-##  <a name="a-namehittesta--cmfctoolbarhittest"></a><a name="hittest"></a>CMFCToolBar::HitTest  
+##  <a name="hittest"></a>CMFCToolBar::HitTest  
  Restituisce l'indice del pulsante della barra degli strumenti che si trova nella posizione specificata.  
   
 ```  
@@ -1619,7 +1773,7 @@ virtual int HitTest(CPoint point);
 ### <a name="return-value"></a>Valore restituito  
  L'indice del pulsante su cui si trova nella posizione specificata oppure -1 se è presente alcun questo tipo o il tasto è un separatore.  
   
-##  <a name="a-nameinsertbuttona--cmfctoolbarinsertbutton"></a><a name="insertbutton"></a>CMFCToolBar::InsertButton  
+##  <a name="insertbutton"></a>CMFCToolBar::InsertButton  
  Inserisce un pulsante nella barra degli strumenti.  
   
 ```  
@@ -1648,7 +1802,7 @@ virtual int InsertButton(
   
  Chiamare il [CMFCToolBar::InsertSeparator](#insertseparator) per inserire un separatore della barra degli strumenti.  
   
-##  <a name="a-nameinsertseparatora--cmfctoolbarinsertseparator"></a><a name="insertseparator"></a>CMFCToolBar::InsertSeparator  
+##  <a name="insertseparator"></a>CMFCToolBar::InsertSeparator  
  Inserisce un separatore nella barra degli strumenti.  
   
 ```  
@@ -1669,7 +1823,7 @@ virtual int InsertSeparator(INT_PTR iInsertAt=-1);
   
  Chiamare il [CMFCToolBar::InsertButton](#insertbutton) per inserire un pulsante della barra degli strumenti.  
   
-##  <a name="a-nameinvalidatebuttona--cmfctoolbarinvalidatebutton"></a><a name="invalidatebutton"></a>CMFCToolBar::InvalidateButton  
+##  <a name="invalidatebutton"></a>CMFCToolBar::InvalidateButton  
  Invalida l'area client del pulsante della barra degli strumenti che in corrispondenza dell'indice specificato.  
   
 ```  
@@ -1686,7 +1840,7 @@ CMFCToolBarButton* InvalidateButton(int nIndex);
 ### <a name="remarks"></a>Note  
  Il framework chiama questo metodo quando si aggiorna l'area client associato a un pulsante della barra degli strumenti. Chiama il [CWnd::InvalidateRect](../../mfc/reference/cwnd-class.md#invalidaterect) metodo con il rettangolo client del `CMFCToolBarButton` oggetto esistente in corrispondenza dell'indice specificato.  
   
-##  <a name="a-nameisaddremovequickcustomizea--cmfctoolbarisaddremovequickcustomize"></a><a name="isaddremovequickcustomize"></a>CMFCToolBar::IsAddRemoveQuickCustomize  
+##  <a name="isaddremovequickcustomize"></a>CMFCToolBar::IsAddRemoveQuickCustomize  
  Determina se un utente può aggiungere o rimuovere i pulsanti della barra degli strumenti utilizzando il **Personalizza** opzione di menu.  
   
 ```  
@@ -1698,7 +1852,7 @@ BOOL IsAddRemoveQuickCustomize();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameisaltcustomizemodea--cmfctoolbarisaltcustomizemode"></a><a name="isaltcustomizemode"></a>CMFCToolBar::IsAltCustomizeMode  
+##  <a name="isaltcustomizemode"></a>CMFCToolBar::IsAltCustomizeMode  
  Specifica se *rapida personalizzazione* viene utilizzata per trascinare un pulsante. Quando la personalizzazione rapida è abilitata, un utente può premere e tenere premuto il tasto Alt e trascinare un pulsante in una nuova posizione.  
   
 ```  
@@ -1710,7 +1864,7 @@ static BOOL __stdcall IsAltCustomizeMode();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameisautograyinactiveimagesa--cmfctoolbarisautograyinactiveimages"></a><a name="isautograyinactiveimages"></a>CMFCToolBar::IsAutoGrayInactiveImages  
+##  <a name="isautograyinactiveimages"></a>CMFCToolBar::IsAutoGrayInactiveImages  
  Specifica se è abilitata la generazione automatica di immagini di pulsante inattivo (non evidenziata).  
   
 ```  
@@ -1723,7 +1877,7 @@ static BOOL IsAutoGrayInactiveImages();
 ### <a name="remarks"></a>Note  
  È possibile abilitare o disabilitare luminosità automatica di immagini inattive chiamando [CMFCToolBar::AutoGrayInactiveImages](#autograyinactiveimages).  
   
-##  <a name="a-nameisbasiccommanda--cmfctoolbarisbasiccommand"></a><a name="isbasiccommand"></a>CMFCToolBar::IsBasicCommand  
+##  <a name="isbasiccommand"></a>CMFCToolBar::IsBasicCommand  
  Determina se un comando nell'elenco dei comandi di base.  
   
 ```  
@@ -1740,7 +1894,7 @@ static BOOL IsBasicCommand(UINT uiCmd);
 ### <a name="remarks"></a>Note  
  Questo metodo statico determina se il comando specificato da `uiCmd` appartiene all'elenco globale dei comandi di base. È possibile modificare l'elenco dei comandi di base chiamando [CMFCToolBar::AddBasicCommand](#addbasiccommand) o [CMFCToolBar::SetBasicCommands](#setbasiccommands).  
   
-##  <a name="a-nameisbuttonextrasizeavailablea--cmfctoolbarisbuttonextrasizeavailable"></a><a name="isbuttonextrasizeavailable"></a>CMFCToolBar::IsButtonExtraSizeAvailable  
+##  <a name="isbuttonextrasizeavailable"></a>CMFCToolBar::IsButtonExtraSizeAvailable  
  Determina se la barra degli strumenti può mostrare pulsanti che hanno esteso i bordi.  
   
 ```  
@@ -1755,7 +1909,7 @@ virtual BOOL IsButtonExtraSizeAvailable() const;
   
  Eseguire l'override di questo metodo in una classe derivata da `CMFCToolBar` e restituire `TRUE` se la barra può visualizzare i pulsanti della barra degli strumenti con le dimensioni del bordo aggiuntivi e restituire `FALSE` in caso contrario. L'implementazione predefinita restituisce `TRUE`.  
   
-##  <a name="a-nameisbuttonhighlighteda--cmfctoolbarisbuttonhighlighted"></a><a name="isbuttonhighlighted"></a>CMFCToolBar::IsButtonHighlighted  
+##  <a name="isbuttonhighlighted"></a>CMFCToolBar::IsButtonHighlighted  
  Determina se è evidenziato il pulsante specificato.  
   
 ```  
@@ -1771,7 +1925,7 @@ BOOL IsButtonHighlighted(int iButton) const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameiscommandpermitteda--cmfctoolbariscommandpermitted"></a><a name="iscommandpermitted"></a>CMFCToolBar::IsCommandPermitted  
+##  <a name="iscommandpermitted"></a>CMFCToolBar::IsCommandPermitted  
  Determina se un comando è consentito.  
   
 ```  
@@ -1790,7 +1944,7 @@ static BOOL IsCommandPermitted(UINT uiCmd);
   
  È possibile modificare l'elenco di comandi non autorizzata chiamando [CMFCToolBar::SetNonPermittedCommands](#setnonpermittedcommands).  
   
-##  <a name="a-nameiscommandrarelyuseda--cmfctoolbariscommandrarelyused"></a><a name="iscommandrarelyused"></a>CMFCToolBar::IsCommandRarelyUsed  
+##  <a name="iscommandrarelyused"></a>CMFCToolBar::IsCommandRarelyUsed  
  Determina se un comando viene utilizzato raramente.  
   
 ```  
@@ -1817,7 +1971,7 @@ static BOOL IsCommandRarelyUsed(UINT uiCmd);
   
 -   Più del 20% delle chiamate di comando sono le chiamate al comando specificato.  
   
-##  <a name="a-nameiscustomizemodea--cmfctoolbariscustomizemode"></a><a name="iscustomizemode"></a>CMFCToolBar::IsCustomizeMode  
+##  <a name="iscustomizemode"></a>CMFCToolBar::IsCustomizeMode  
  Specifica se il framework della barra degli strumenti è in modalità di personalizzazione.  
   
 ```  
@@ -1832,7 +1986,7 @@ static BOOL IsCustomizeMode();
   
  Il framework cambia la modalità quando l'utente richiama la finestra di dialogo di personalizzazione ( [CMFCToolBarsCustomizeDialog classe](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)).  
   
-##  <a name="a-nameisdragbuttona--cmfctoolbarisdragbutton"></a><a name="isdragbutton"></a>CMFCToolBar::IsDragButton  
+##  <a name="isdragbutton"></a>CMFCToolBar::IsDragButton  
  Determina se un pulsante della barra degli strumenti viene trascinato.  
   
 ```  
@@ -1848,7 +2002,7 @@ BOOL IsDragButton(const CMFCToolBarButton* pButton) const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameisexistcustomizebuttona--cmfctoolbarisexistcustomizebutton"></a><a name="isexistcustomizebutton"></a>CMFCToolBar::IsExistCustomizeButton  
+##  <a name="isexistcustomizebutton"></a>CMFCToolBar::IsExistCustomizeButton  
  Determina se la barra degli strumenti contiene le **Personalizza** pulsante.  
   
 ```  
@@ -1863,7 +2017,7 @@ BOOL IsExistCustomizeButton();
   
  Utilizzare il [CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton) metodo per aggiungere il **Personalizza** pulsante sulla barra degli strumenti.  
   
-##  <a name="a-nameisfloatinga--cmfctoolbarisfloating"></a><a name="isfloating"></a>CMFCToolBar::IsFloating  
+##  <a name="isfloating"></a>CMFCToolBar::IsFloating  
  Determina se la barra degli strumenti è mobile.  
   
 ```  
@@ -1873,7 +2027,7 @@ virtual BOOL IsFloating() const;
 ### <a name="return-value"></a>Valore restituito  
  `TRUE`Se la barra degli strumenti è mobile. in caso contrario, `FALSE`.  
   
-##  <a name="a-nameislargeiconsa--cmfctoolbarislargeicons"></a><a name="islargeicons"></a>CMFCToolBar::IsLargeIcons  
+##  <a name="islargeicons"></a>CMFCToolBar::IsLargeIcons  
  Specifica se le barre degli strumenti dell'applicazione attualmente visualizzare icone grandi.  
   
 ```  
@@ -1888,7 +2042,7 @@ static BOOL IsLargeIcons();
   
  La modalità di modifica il framework automaticamente quando l'utente attiva o disattiva il **icone grandi** -casella di controllo di **opzioni** pagina di **personalizzazione** la finestra di dialogo.  
   
-##  <a name="a-nameislastcommandfrombuttona--cmfctoolbarislastcommandfrombutton"></a><a name="islastcommandfrombutton"></a>CMFCToolBar::IsLastCommandFromButton  
+##  <a name="islastcommandfrombutton"></a>CMFCToolBar::IsLastCommandFromButton  
  Determina se è stata eseguita l'ultimo comando è stato inviato dal pulsante della barra degli strumenti specificata.  
   
 ```  
@@ -1905,7 +2059,7 @@ static BOOL IsLastCommandFromButton(CMFCToolBarButton* pButton);
 ### <a name="remarks"></a>Note  
  Questo metodo ottiene un puntatore a un [struttura MSG](../../mfc/reference/msg-structure1.md) chiamando `CWnd::GetCurrentMessage`. Confronta quindi il `HWND` del pulsante con i `MSG::lParam` e `MSG::hwnd` membri per determinare se il pulsante è l'origine del comando.  
   
-##  <a name="a-nameislockeda--cmfctoolbarislocked"></a><a name="islocked"></a>CMFCToolBar::IsLocked  
+##  <a name="islocked"></a>CMFCToolBar::IsLocked  
  Determina se la barra degli strumenti è bloccato.  
   
 ```  
@@ -1920,7 +2074,7 @@ BOOL IsLocked() const;
   
  Barre degli strumenti bloccate utilizzare elenchi di immagini separato. Per ulteriori informazioni su questi elenchi di immagini, vedere [CMFCToolBar::LoadBitmapEx](#loadbitmapex).  
   
-##  <a name="a-nameisonerowwithsiblinga--cmfctoolbarisonerowwithsibling"></a><a name="isonerowwithsibling"></a>CMFCToolBar::IsOneRowWithSibling  
+##  <a name="isonerowwithsibling"></a>CMFCToolBar::IsOneRowWithSibling  
  Determina se la barra degli strumenti e la relativa barra degli strumenti di pari livello sono posizionati sulla stessa riga.  
   
 ```  
@@ -1935,7 +2089,7 @@ BOOL IsOneRowWithSibling();
   
  In genere non è necessario usare questo metodo. Per abilitare il **Mostra pulsanti su una riga** o **Mostra pulsanti su due righe** pulsanti, chiamare [CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar).  
   
-##  <a name="a-nameisresourcechangeda--cmfctoolbarisresourcechanged"></a><a name="isresourcechanged"></a>CMFCToolBar::IsResourceChanged  
+##  <a name="isresourcechanged"></a>CMFCToolBar::IsResourceChanged  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1946,7 +2100,7 @@ virtual BOOL IsResourceChanged() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameissiblinga--cmfctoolbarissibling"></a><a name="issibling"></a>CMFCToolBar::IsSibling  
+##  <a name="issibling"></a>CMFCToolBar::IsSibling  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1957,7 +2111,7 @@ BOOL IsSibling();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameisuserdefineda--cmfctoolbarisuserdefined"></a><a name="isuserdefined"></a>CMFCToolBar::IsUserDefined  
+##  <a name="isuserdefined"></a>CMFCToolBar::IsUserDefined  
  Specifica se la barra degli strumenti è definita dall'utente.  
   
 ```  
@@ -1967,7 +2121,7 @@ BOOL IsUserDefined() const;
 ### <a name="return-value"></a>Valore restituito  
  `TRUE`Se la barra degli strumenti è stato creato dall'utente. in caso contrario `FALSE`.  
   
-##  <a name="a-nameloadbitmapa--cmfctoolbarloadbitmap"></a><a name="loadbitmap"></a>CMFCToolBar::LoadBitmap  
+##  <a name="loadbitmap"></a>CMFCToolBar::LoadBitmap  
  Carica le immagini della barra degli strumenti dalle risorse dell'applicazione.  
   
 ```  
@@ -2007,7 +2161,7 @@ virtual BOOL LoadBitmap(
   
  Chiamare il metodo `LoadBitmapEx` per caricare immagini aggiuntive dopo aver creato la barra degli strumenti.  
   
-##  <a name="a-nameloadbitmapexa--cmfctoolbarloadbitmapex"></a><a name="loadbitmapex"></a>CMFCToolBar::LoadBitmapEx  
+##  <a name="loadbitmapex"></a>CMFCToolBar::LoadBitmapEx  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2024,7 +2178,7 @@ virtual BOOL LoadBitmapEx(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameloadlargeiconsstatea--cmfctoolbarloadlargeiconsstate"></a><a name="loadlargeiconsstate"></a>CMFCToolBar::LoadLargeIconsState  
+##  <a name="loadlargeiconsstate"></a>CMFCToolBar::LoadLargeIconsState  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2038,7 +2192,7 @@ static BOOL __stdcall LoadLargeIconsState(LPCTSTR lpszProfileName = NULL);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameloadparametersa--cmfctoolbarloadparameters"></a><a name="loadparameters"></a>CMFCToolBar::LoadParameters  
+##  <a name="loadparameters"></a>CMFCToolBar::LoadParameters  
  Caricamento di opzioni della barra degli strumenti globale dal Registro di sistema.  
   
 ```  
@@ -2057,7 +2211,7 @@ static BOOL LoadParameters(LPCTSTR lpszProfileName=NULL);
   
  Il [CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate) metodo chiama questo metodo come parte del processo di inizializzazione dell'applicazione.  
   
-##  <a name="a-nameloadstatea--cmfctoolbarloadstate"></a><a name="loadstate"></a>CMFCToolBar::LoadState  
+##  <a name="loadstate"></a>CMFCToolBar::LoadState  
  Carica le informazioni sullo stato della barra degli strumenti dal Registro di sistema.  
   
 ```  
@@ -2083,7 +2237,7 @@ virtual BOOL LoadState(
 ### <a name="remarks"></a>Note  
  Il framework chiama questo metodo come parte del processo di inizializzazione dell'applicazione. Per ulteriori informazioni, vedere [CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate).  
   
-##  <a name="a-nameloadtoolbara--cmfctoolbarloadtoolbar"></a><a name="loadtoolbar"></a>CMFCToolBar::LoadToolBar  
+##  <a name="loadtoolbar"></a>CMFCToolBar::LoadToolBar  
  Carica la barra degli strumenti dalle risorse dell'applicazione.  
   
 ```  
@@ -2131,7 +2285,7 @@ virtual BOOL LoadToolBar(
  [!code-cpp[6 NVC_MFC_IEDemo](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
 [!code-cpp[NVC_MFC_IEDemo&#7;](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_3.cpp)]  
   
-##  <a name="a-nameloadtoolbarexa--cmfctoolbarloadtoolbarex"></a><a name="loadtoolbarex"></a>CMFCToolBar::LoadToolBarEx  
+##  <a name="loadtoolbarex"></a>CMFCToolBar::LoadToolBarEx  
  Carica la barra degli strumenti dalle risorse dell'applicazione tramite la `CMFCToolBarInfo` classe helper per consentire all'applicazione di utilizzare immagini di grandi dimensioni.  
   
 ```  
@@ -2157,7 +2311,7 @@ virtual BOOL LoadToolBarEx(
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo per caricare immagini della barra degli strumenti dalle risorse dell'applicazione.  
   
-##  <a name="a-namemdbllargeimageratioa--cmfctoolbarmdbllargeimageratio"></a><a name="m_dbllargeimageratio"></a>CMFCToolBar::m_dblLargeImageRatio  
+##  <a name="m_dbllargeimageratio"></a>CMFCToolBar::m_dblLargeImageRatio  
  Specifica il rapporto tra la dimensione delle immagini di grandi dimensioni (altezza o larghezza) e la dimensione delle immagini regolari.  
   
 ```  
@@ -2169,7 +2323,7 @@ AFX_IMPORT_DATA static double m_dblLargeImageRatio;
   
  Il framework utilizza il membro dati quando non si specifica un set di immagini di grandi dimensioni. Ad esempio, se si desidera che le immagini di grandi dimensioni per le dimensioni 24 x 24 fornire solo il set di immagini di piccole dimensioni con dimensioni 16 x 16, impostare il membro dati 1.5.  
   
-##  <a name="a-namenextmenua--cmfctoolbarnextmenu"></a><a name="nextmenu"></a>CMFCToolBar::NextMenu  
+##  <a name="nextmenu"></a>CMFCToolBar::NextMenu  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2180,7 +2334,7 @@ virtual BOOL NextMenu();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonbeforeremovebuttona--cmfctoolbaronbeforeremovebutton"></a><a name="onbeforeremovebutton"></a>CMFCToolBar::OnBeforeRemoveButton  
+##  <a name="onbeforeremovebutton"></a>CMFCToolBar::OnBeforeRemoveButton  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2200,7 +2354,7 @@ virtual BOOL OnBeforeRemoveButton(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonchangehota--cmfctoolbaronchangehot"></a><a name="onchangehot"></a>CMFCToolBar::OnChangeHot  
+##  <a name="onchangehot"></a>CMFCToolBar::OnChangeHot  
  Chiamato dal framework quando un utente seleziona un pulsante sulla barra degli strumenti.  
   
 ```  
@@ -2214,7 +2368,7 @@ virtual void OnChangeHot(int iHot);
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questo metodo per elaborare le notifiche che l'utente ha selezionato un pulsante in una barra degli strumenti.  
   
-##  <a name="a-nameonchangevisualmanagera--cmfctoolbaronchangevisualmanager"></a><a name="onchangevisualmanager"></a>CMFCToolBar::OnChangeVisualManager  
+##  <a name="onchangevisualmanager"></a>CMFCToolBar::OnChangeVisualManager  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2223,7 +2377,7 @@ virtual void OnChangeVisualManager();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonfillbackgrounda--cmfctoolbaronfillbackground"></a><a name="onfillbackground"></a>CMFCToolBar::OnFillBackground  
+##  <a name="onfillbackground"></a>CMFCToolBar::OnFillBackground  
  Chiamato dal framework da [CBasePane::DoPaint](../../mfc/reference/cbasepane-class.md#dopaint) per riempire lo sfondo della barra degli strumenti.  
   
 ```  
@@ -2239,7 +2393,7 @@ virtual void OnFillBackground(CDC* pDC);
   
  Eseguire l'override di questo metodo per creare sfondo personalizzato nelle classi derivate.  
   
-##  <a name="a-nameonglobalfontschangeda--cmfctoolbaronglobalfontschanged"></a><a name="onglobalfontschanged"></a>CMFCToolBar::OnGlobalFontsChanged  
+##  <a name="onglobalfontschanged"></a>CMFCToolBar::OnGlobalFontsChanged  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2248,7 +2402,7 @@ virtual void OnGlobalFontsChanged();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonreseta--cmfctoolbaronreset"></a><a name="onreset"></a>CMFCToolBar::OnReset  
+##  <a name="onreset"></a>CMFCToolBar::OnReset  
  Consente di ripristinare la barra degli strumenti allo stato originale.  
   
 ```  
@@ -2260,7 +2414,7 @@ virtual void OnReset();
   
  L'implementazione predefinita non esegue alcuna operazione. Eseguire l'override `OnReset` in una classe derivata da `CMFCToolBar` quando la barra degli strumenti con pulsanti fittizi che devono essere sostituiti quando la barra degli strumenti viene restituito lo stato originale.  
   
-##  <a name="a-nameonsetaccdataa--cmfctoolbaronsetaccdata"></a><a name="onsetaccdata"></a>CMFCToolBar::OnSetAccData  
+##  <a name="onsetaccdata"></a>CMFCToolBar::OnSetAccData  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2274,7 +2428,7 @@ virtual BOOL OnSetAccData(long lVal);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonsetdefaultbuttontexta--cmfctoolbaronsetdefaultbuttontext"></a><a name="onsetdefaultbuttontext"></a>CMFCToolBar::OnSetDefaultButtonText  
+##  <a name="onsetdefaultbuttontext"></a>CMFCToolBar::OnSetDefaultButtonText  
  Ripristina il testo di un pulsante della barra degli strumenti allo stato predefinito.  
   
 ```  
@@ -2293,7 +2447,7 @@ virtual BOOL OnSetDefaultButtonText(CMFCToolBarButton* pButton);
   
  L'implementazione predefinita carica il testo di un pulsante dalle risorse dell'applicazione.  
   
-##  <a name="a-nameonusertooltipa--cmfctoolbaronusertooltip"></a><a name="onusertooltip"></a>CMFCToolBar::OnUserToolTip  
+##  <a name="onusertooltip"></a>CMFCToolBar::OnUserToolTip  
  Chiamato dal framework quando la descrizione comando per un pulsante viene visualizzato.  
   
 ```  
@@ -2317,7 +2471,7 @@ virtual BOOL OnUserToolTip(
   
  Eseguire l'override `OnUserToolTip` personalizzare descrizioni dei pulsanti della barra degli strumenti. L'implementazione predefinita chiama [CMFCToolBar::OnUserToolTip](#onusertooltip) per ottenere il testo della descrizione comando.  
   
-##  <a name="a-nameprevmenua--cmfctoolbarprevmenu"></a><a name="prevmenu"></a>CMFCToolBar::PrevMenu  
+##  <a name="prevmenu"></a>CMFCToolBar::PrevMenu  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2328,7 +2482,7 @@ virtual BOOL PrevMenu();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameprocesscommanda--cmfctoolbarprocesscommand"></a><a name="processcommand"></a>CMFCToolBar::ProcessCommand  
+##  <a name="processcommand"></a>CMFCToolBar::ProcessCommand  
  Post di un `WM_COMMAND` messaggio alla finestra che possiede la barra degli strumenti.  
   
 ```  
@@ -2347,7 +2501,7 @@ BOOL ProcessCommand(CMFCToolBarButton* pButton);
   
  Utilizzare il [ON_COMMAND](http://msdn.microsoft.com/library/f24f8bda-2cf4-49d5-aa3d-6f2e6bb003f2) macro per eseguire il mapping di `WM_COMMAND` messaggio a una funzione membro.  
   
-##  <a name="a-nameremoveallbuttonsa--cmfctoolbarremoveallbuttons"></a><a name="removeallbuttons"></a>CMFCToolBar::RemoveAllButtons  
+##  <a name="removeallbuttons"></a>CMFCToolBar::RemoveAllButtons  
  Rimuove tutti i pulsanti e i separatori dalla barra degli strumenti.  
   
 ```  
@@ -2357,7 +2511,7 @@ virtual void RemoveAllButtons();
 ### <a name="remarks"></a>Note  
  Il framework chiama questo metodo quando ricrea o si elimina una barra degli strumenti.  
   
-##  <a name="a-nameremovebuttona--cmfctoolbarremovebutton"></a><a name="removebutton"></a>CMFCToolBar::RemoveButton  
+##  <a name="removebutton"></a>CMFCToolBar::RemoveButton  
  Rimuove dalla barra degli strumenti sul pulsante che dispone dell'indice specificato.  
   
 ```  
@@ -2376,7 +2530,7 @@ virtual BOOL RemoveButton(int iIndex);
   
  Per ulteriori informazioni sui **Personalizza** pulsante, vedere [CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton).  
   
-##  <a name="a-nameremovestatefromregistrya--cmfctoolbarremovestatefromregistry"></a><a name="removestatefromregistry"></a>CMFCToolBar::RemoveStateFromRegistry  
+##  <a name="removestatefromregistry"></a>CMFCToolBar::RemoveStateFromRegistry  
  Elimina le informazioni sullo stato della barra degli strumenti dal Registro di sistema.  
   
 ```  
@@ -2404,7 +2558,7 @@ virtual BOOL RemoveStateFromRegistry(
   
  Eseguire l'override di questo metodo se si archiviano le informazioni aggiuntive sullo stato del Registro di sistema.  
   
-##  <a name="a-namereplacebuttona--cmfctoolbarreplacebutton"></a><a name="replacebutton"></a>CMFCToolBar::ReplaceButton  
+##  <a name="replacebutton"></a>CMFCToolBar::ReplaceButton  
  Sostituisce un pulsante della barra degli strumenti con un altro pulsante della barra degli strumenti.  
   
 ```  
@@ -2436,7 +2590,7 @@ int ReplaceButton(
  [!code-cpp[6 NVC_MFC_IEDemo](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
 [!code-cpp[NVC_MFC_IEDemo&#10;](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_5.cpp)]  
   
-##  <a name="a-nameresetalla--cmfctoolbarresetall"></a><a name="resetall"></a>CMFCToolBar::ResetAll  
+##  <a name="resetall"></a>CMFCToolBar::ResetAll  
  Ripristina tutte le barre degli strumenti allo stato originale.  
   
 ```  
@@ -2446,7 +2600,7 @@ static void __stdcall ResetAll();
 ### <a name="remarks"></a>Note  
  Questo metodo chiama il [CMFCToolBar::RestoreOriginalState](#restoreoriginalstate) metodo su ogni barra degli strumenti dell'applicazione che possono essere ripristinati. Usa il [CMFCToolBar::CanBeRestored](#canberestored) metodo per determinare se una barra degli strumenti può essere ripristinato.  
   
-##  <a name="a-nameresetallimagesa--cmfctoolbarresetallimages"></a><a name="resetallimages"></a>CMFCToolBar::ResetAllImages  
+##  <a name="resetallimages"></a>CMFCToolBar::ResetAllImages  
  Cancella tutte le raccolte di immagine della barra degli strumenti dell'applicazione.  
   
 ```  
@@ -2456,7 +2610,7 @@ static void __stdcall ResetAllImages();
 ### <a name="remarks"></a>Note  
  Questo metodo cancella le raccolte di immagini che vengono inizializzate per il [CMFCToolBar::LoadToolBar](#loadtoolbar) e [CMFCToolBar::LoadBitmap](#loadbitmap) metodi.  
   
-##  <a name="a-nameresetimagesa--cmfctoolbarresetimages"></a><a name="resetimages"></a>CMFCToolBar::ResetImages  
+##  <a name="resetimages"></a>CMFCToolBar::ResetImages  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2465,7 +2619,7 @@ virtual void ResetImages();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namerestorefocusa--cmfctoolbarrestorefocus"></a><a name="restorefocus"></a>CMFCToolBar::RestoreFocus  
+##  <a name="restorefocus"></a>CMFCToolBar::RestoreFocus  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2474,7 +2628,7 @@ virtual void RestoreFocus();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namerestoreoriginalstatea--cmfctoolbarrestoreoriginalstate"></a><a name="restoreoriginalstate"></a>CMFCToolBar::RestoreOriginalState  
+##  <a name="restoreoriginalstate"></a>CMFCToolBar::RestoreOriginalState  
  Ripristina lo stato originale di una barra degli strumenti.  
   
 ```  
@@ -2489,7 +2643,7 @@ virtual BOOL RestoreOriginalState();
   
  Il framework chiama questo metodo quando l'utente sceglie il **Reimposta tutto** pulsante il **barre degli strumenti** pagina di una finestra di dialogo di personalizzazione.  
   
-##  <a name="a-namesaveparametersa--cmfctoolbarsaveparameters"></a><a name="saveparameters"></a>CMFCToolBar::SaveParameters  
+##  <a name="saveparameters"></a>CMFCToolBar::SaveParameters  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2503,7 +2657,7 @@ static BOOL __stdcall SaveParameters(LPCTSTR lpszProfileName = NULL);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namesavestatea--cmfctoolbarsavestate"></a><a name="savestate"></a>CMFCToolBar::SaveState  
+##  <a name="savestate"></a>CMFCToolBar::SaveState  
  Salva le informazioni sullo stato della barra degli strumenti nel Registro di sistema Windows.  
   
 ```  
@@ -2529,7 +2683,7 @@ virtual BOOL SaveState(
 ### <a name="remarks"></a>Note  
  Il framework chiama questo metodo quando si salva lo stato dell'applicazione nel Registro di sistema. Per ulteriori informazioni, vedere [CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate).  
   
-##  <a name="a-namesetbasiccommandsa--cmfctoolbarsetbasiccommands"></a><a name="setbasiccommands"></a>CMFCToolBar::SetBasicCommands  
+##  <a name="setbasiccommands"></a>CMFCToolBar::SetBasicCommands  
  Imposta l'elenco di comandi che vengono sempre visualizzati quando un utente apre un menu.  
   
 ```  
@@ -2547,7 +2701,7 @@ static void __stdcall SetBasicCommands(CList<UINT,UINT>& lstCommands);
   
  Vedere l'esempio di soluzioni per un esempio che utilizza questo metodo.  
   
-##  <a name="a-namesetbuttoninfoa--cmfctoolbarsetbuttoninfo"></a><a name="setbuttoninfo"></a>CMFCToolBar::SetButtonInfo  
+##  <a name="setbuttoninfo"></a>CMFCToolBar::SetButtonInfo  
  Imposta l'ID di comando, stile e l'ID dell'immagine di un pulsante della barra degli strumenti.  
   
 ```  
@@ -2578,7 +2732,7 @@ void SetButtonInfo(
   
  Chiamare il [CMFCToolBar::SetButtonStyle](#setbuttonstyle) per impostare solo lo stile del pulsante.  
   
-##  <a name="a-namesetbuttonsa--cmfctoolbarsetbuttons"></a><a name="setbuttons"></a>CMFCToolBar::SetButtons  
+##  <a name="setbuttons"></a>CMFCToolBar::SetButtons  
  Imposta i pulsanti della barra degli strumenti.  
   
 ```  
@@ -2606,7 +2760,7 @@ virtual BOOL SetButtons(
   
  Questo metodo aggiunge la **Personalizza** pulsante alla barra degli strumenti e invia il `AFX_WM_RESETTOOLBAR` messaggio alla finestra padre della barra degli strumenti. Per ulteriori informazioni sui **Personalizza** pulsante, vedere [CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton).  
   
-##  <a name="a-namesetbuttonstylea--cmfctoolbarsetbuttonstyle"></a><a name="setbuttonstyle"></a>CMFCToolBar::SetButtonStyle  
+##  <a name="setbuttonstyle"></a>CMFCToolBar::SetButtonStyle  
  Imposta lo stile del pulsante della barra degli strumenti in corrispondenza dell'indice specificato.  
   
 ```  
@@ -2625,7 +2779,7 @@ virtual void SetButtonStyle(
 ### <a name="remarks"></a>Note  
  Questo metodo rimuove il `TBBS_PRESSED` stile se `nStyle` è `TBBS_DISABLED` perché l'utente non può fare clic su un pulsante disabilitato.  
   
-##  <a name="a-namesetbuttontexta--cmfctoolbarsetbuttontext"></a><a name="setbuttontext"></a>CMFCToolBar::SetButtonText  
+##  <a name="setbuttontext"></a>CMFCToolBar::SetButtonText  
  Imposta l'etichetta di testo di un pulsante della barra degli strumenti.  
   
 ```  
@@ -2647,7 +2801,7 @@ BOOL SetButtonText(
 ### <a name="remarks"></a>Note  
  Questo metodo restituisce `FALSE` se l'indice specificato non fa riferimento a un pulsante della barra degli strumenti validi.  
   
-##  <a name="a-namesetcommandusageoptionsa--cmfctoolbarsetcommandusageoptions"></a><a name="setcommandusageoptions"></a>CMFCToolBar::SetCommandUsageOptions  
+##  <a name="setcommandusageoptions"></a>CMFCToolBar::SetCommandUsageOptions  
  Specifica quando i comandi utilizzati raramente non vengono visualizzati nel menu dell'applicazione.  
   
 ```  
@@ -2671,7 +2825,7 @@ static BOOL SetCommandUsageOptions(
   
  Questa classe viene utilizzata la `CMFCCmdUsageCount` classe per registrare il conteggio di utilizzo dei comandi. Per ulteriori informazioni su questa classe, vedere [CMFCCmdUsageCount classe](../../mfc/reference/cmfccmdusagecount-class.md).  
   
-##  <a name="a-namesetcustomizemodea--cmfctoolbarsetcustomizemode"></a><a name="setcustomizemode"></a>CMFCToolBar::SetCustomizeMode  
+##  <a name="setcustomizemode"></a>CMFCToolBar::SetCustomizeMode  
  Abilita o disabilita la modalità di personalizzazione per tutte le barre degli strumenti dell'applicazione.  
   
 ```  
@@ -2688,7 +2842,7 @@ static BOOL __stdcall SetCustomizeMode(BOOL bSet=TRUE);
 ### <a name="remarks"></a>Note  
  Questo metodo consente di modificare il layout di e ridisegna ogni barra degli strumenti dell'applicazione. Chiamare il [CMFCToolBar::IsCustomizeMode](#iscustomizemode) metodo per determinare se l'applicazione è in modalità di personalizzazione,  
   
-##  <a name="a-namesetgraydisabledbuttonsa--cmfctoolbarsetgraydisabledbuttons"></a><a name="setgraydisabledbuttons"></a>CMFCToolBar::SetGrayDisabledButtons  
+##  <a name="setgraydisabledbuttons"></a>CMFCToolBar::SetGrayDisabledButtons  
  Specifica se vengono visualizzati in grigio pulsanti disponibili sulla barra degli strumenti, oppure se vengono utilizzate immagini pulsante disponibile.  
   
 ```  
@@ -2702,7 +2856,7 @@ void SetGrayDisabledButtons(BOOL bGrayDisabledButtons);
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, i pulsanti disponibili vengono visualizzati in grigio.  
   
-##  <a name="a-namesetheighta--cmfctoolbarsetheight"></a><a name="setheight"></a>CMFCToolBar::SetHeight  
+##  <a name="setheight"></a>CMFCToolBar::SetHeight  
  Imposta l'altezza della barra degli strumenti.  
   
 ```  
@@ -2716,7 +2870,7 @@ void SetHeight(int cyHeight);
 ### <a name="remarks"></a>Note  
  Questo metodo consente di ricreare la barra degli strumenti dopo avere impostato l'altezza.  
   
-##  <a name="a-namesethelpmodea--cmfctoolbarsethelpmode"></a><a name="sethelpmode"></a>CMFCToolBar::SetHelpMode  
+##  <a name="sethelpmode"></a>CMFCToolBar::SetHelpMode  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2728,7 +2882,7 @@ static void __stdcall SetHelpMode(BOOL bOn = TRUE);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namesethota--cmfctoolbarsethot"></a><a name="sethot"></a>CMFCToolBar::SetHot  
+##  <a name="sethot"></a>CMFCToolBar::SetHot  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2742,7 +2896,7 @@ BOOL SetHot(CMFCToolBarButton* pMenuButton);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namesethotbordera--cmfctoolbarsethotborder"></a><a name="sethotborder"></a>CMFCToolBar::SetHotBorder  
+##  <a name="sethotborder"></a>CMFCToolBar::SetHotBorder  
  Specifica se i pulsanti della barra degli strumenti vengono intercettato.  
   
 ```  
@@ -2758,7 +2912,7 @@ void SetHotBorder(BOOL bShowHotBorder);
   
  Chiamare il [CMFCToolBar::GetHotBorder](#gethotborder) metodo per determinare se le tracce a caldo della barra degli strumenti relativi pulsanti.  
   
-##  <a name="a-namesethottextcolora--cmfctoolbarsethottextcolor"></a><a name="sethottextcolor"></a>CMFCToolBar::SetHotTextColor  
+##  <a name="sethottextcolor"></a>CMFCToolBar::SetHotTextColor  
  Imposta il colore del testo per i pulsanti della barra degli strumenti a caldo.  
   
 ```  
@@ -2772,7 +2926,7 @@ static void SetHotTextColor(COLORREF clrText);
 ### <a name="remarks"></a>Note  
  Per ulteriori informazioni sui pulsanti con il mouse sulla barra degli strumenti, vedere [CMFCToolBar::GetHotBorder](#gethotborder) e [CMFCToolBar::SetHotBorder](#sethotborder).  
   
-##  <a name="a-namesetignoresettexta--cmfctoolbarsetignoresettext"></a><a name="setignoresettext"></a>CMFCToolBar::SetIgnoreSetText  
+##  <a name="setignoresettext"></a>CMFCToolBar::SetIgnoreSetText  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2784,7 +2938,7 @@ void SetIgnoreSetText(BOOL bValue);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namesetlargeiconsa--cmfctoolbarsetlargeicons"></a><a name="setlargeicons"></a>CMFCToolBar::SetLargeIcons  
+##  <a name="setlargeicons"></a>CMFCToolBar::SetLargeIcons  
  Specifica se i pulsanti della barra degli strumenti Visualizzazione icone grandi.  
   
 ```  
@@ -2802,7 +2956,7 @@ static void SetLargeIcons(BOOL bLargeIcons=TRUE);
   
  Per ulteriori informazioni sui **Personalizza** la finestra di dialogo, vedere [CMFCToolBarsCustomizeDialog classe](../../mfc/reference/cmfctoolbarscustomizedialog-class.md).  
   
-##  <a name="a-namesetlockedsizesa--cmfctoolbarsetlockedsizes"></a><a name="setlockedsizes"></a>CMFCToolBar::SetLockedSizes  
+##  <a name="setlockedsizes"></a>CMFCToolBar::SetLockedSizes  
  Imposta le dimensioni dei pulsanti bloccati e bloccate immagini sulla barra degli strumenti.  
   
 ```  
@@ -2827,7 +2981,7 @@ void SetLockedSizes(
   
  Chiamare il [CMFCToolBar::GetLockedImageSize](#getlockedimagesize) per recuperare la dimensione del blocco immagini. Chiamare il [CMFCToolBar::GetButtonSize](#getbuttonsize) per recuperare la dimensione del blocco pulsanti della barra degli strumenti.  
   
-##  <a name="a-namesetmaskmodea--cmfctoolbarsetmaskmode"></a><a name="setmaskmode"></a>CMFCToolBar::SetMaskMode  
+##  <a name="setmaskmode"></a>CMFCToolBar::SetMaskMode  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2839,7 +2993,7 @@ void SetMaskMode(BOOL bMasked);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namesetmenusizesa--cmfctoolbarsetmenusizes"></a><a name="setmenusizes"></a>CMFCToolBar::SetMenuSizes  
+##  <a name="setmenusizes"></a>CMFCToolBar::SetMenuSizes  
  Imposta la dimensione dei pulsanti di menu della barra degli strumenti e le immagini.  
   
 ```  
@@ -2862,7 +3016,7 @@ static void __stdcall SetMenuSizes(
   
  Vedere gli esempi IEDemo e MSMoneyDemo per esempi che utilizzano questo metodo.  
   
-##  <a name="a-namesetnonpermittedcommandsa--cmfctoolbarsetnonpermittedcommands"></a><a name="setnonpermittedcommands"></a>CMFCToolBar::SetNonPermittedCommands  
+##  <a name="setnonpermittedcommands"></a>CMFCToolBar::SetNonPermittedCommands  
  Imposta l'elenco di comandi che non può essere eseguita dall'utente.  
   
 ```  
@@ -2878,7 +3032,7 @@ static void SetNonPermittedCommands(CList<UINT,UINT>& lstCommands);
   
  Questo metodo cancella l'elenco precedente di comandi non autorizzata. Per impostazione predefinita, l'elenco di comandi non autorizzata è vuoto.  
   
-##  <a name="a-namesetonerowwithsiblinga--cmfctoolbarsetonerowwithsibling"></a><a name="setonerowwithsibling"></a>CMFCToolBar::SetOneRowWithSibling  
+##  <a name="setonerowwithsibling"></a>CMFCToolBar::SetOneRowWithSibling  
  Posiziona la barra degli strumenti e pari livello nella stessa riga.  
   
 ```  
@@ -2892,7 +3046,7 @@ void SetOneRowWithSibling();
   
  Il framework chiama la [CMFCToolBar::SetTwoRowsWithSibling](#settworowswithsibling) metodo quando l'utente sceglie il **Mostra pulsanti su due righe** pulsante.  
   
-##  <a name="a-namesetorigbuttonsa--cmfctoolbarsetorigbuttons"></a><a name="setorigbuttons"></a>CMFCToolBar::SetOrigButtons  
+##  <a name="setorigbuttons"></a>CMFCToolBar::SetOrigButtons  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2904,7 +3058,7 @@ void SetOrigButtons(const CObList& lstOrigButtons);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namesetpermamenta--cmfctoolbarsetpermament"></a><a name="setpermament"></a>CMFCToolBar::SetPermament  
+##  <a name="setpermament"></a>CMFCToolBar::SetPermament  
  Specifica se un utente può chiudere la barra degli strumenti.  
   
 ```  
@@ -2920,7 +3074,7 @@ void SetPermament(BOOL bPermament=TRUE);
   
  Chiamare il [CMFCToolBar::CanBeClosed](#canbeclosed) metodo per determinare se un utente può chiudere la barra degli strumenti.  
   
-##  <a name="a-namesetroutecommandsviaframea--cmfctoolbarsetroutecommandsviaframe"></a><a name="setroutecommandsviaframe"></a>CMFCToolBar::SetRouteCommandsViaFrame  
+##  <a name="setroutecommandsviaframe"></a>CMFCToolBar::SetRouteCommandsViaFrame  
  Specifica se il proprietario o il frame padre invia comandi alla barra degli strumenti.  
   
 ```  
@@ -2934,7 +3088,7 @@ void SetRouteCommandsViaFrame(BOOL bValue);
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, il frame padre invia comandi alla barra degli strumenti. Chiamare il [CMFCToolBar::GetRouteCommandsViaFrame](#getroutecommandsviaframe) metodo per determinare se il proprietario o il frame padre invia comandi alla barra degli strumenti.  
   
-##  <a name="a-namesetshowtooltipsa--cmfctoolbarsetshowtooltips"></a><a name="setshowtooltips"></a>CMFCToolBar::SetShowTooltips  
+##  <a name="setshowtooltips"></a>CMFCToolBar::SetShowTooltips  
  Specifica se il framework consente di visualizzare le descrizioni comandi.  
   
 ```  
@@ -2950,7 +3104,7 @@ static void SetShowTooltips(BOOL bValue);
   
  Chiamare il [CMFCToolBar::GetShowTooltips](#getshowtooltips) metodo per determinare se il framework Mostra descrizioni comandi.  
   
-##  <a name="a-namesetsiblingtoolbara--cmfctoolbarsetsiblingtoolbar"></a><a name="setsiblingtoolbar"></a>CMFCToolBar::SetSiblingToolBar  
+##  <a name="setsiblingtoolbar"></a>CMFCToolBar::SetSiblingToolBar  
  Specifica l'elemento di pari livello della barra degli strumenti.  
   
 ```  
@@ -2968,7 +3122,7 @@ void SetSiblingToolBar(CMFCToolBar* pBrotherToolbar);
   
  Per recuperare l'elemento di pari livello di una barra degli strumenti, chiamare [CMFCToolBar::GetSiblingToolBar](#getsiblingtoolbar).  
   
-##  <a name="a-namesetsizesa--cmfctoolbarsetsizes"></a><a name="setsizes"></a>CMFCToolBar::SetSizes  
+##  <a name="setsizes"></a>CMFCToolBar::SetSizes  
  Specifica le dimensioni dei pulsanti e immagini in tutte le barre degli strumenti.  
   
 ```  
@@ -2989,7 +3143,7 @@ static void __stdcall SetSizes(
   
  Chiamare il [CMFCToolBar::GetImageSize](#getimagesize) per recuperare la dimensione delle immagini di pulsante della barra degli strumenti. Chiamare il [CMFCToolBar::GetButtonSize](#getbuttonsize) metodo per recuperare la dimensione dei pulsanti della barra degli strumenti.  
   
-##  <a name="a-namesettoolbarbtntexta--cmfctoolbarsettoolbarbtntext"></a><a name="settoolbarbtntext"></a>CMFCToolBar::SetToolBarBtnText  
+##  <a name="settoolbarbtntext"></a>CMFCToolBar::SetToolBarBtnText  
  Specifica le proprietà di un pulsante sulla barra degli strumenti.  
   
 ```  
@@ -3018,7 +3172,7 @@ void SetToolBarBtnText(
   
  Nelle build di Debug, questo metodo genera un errore di asserzione se `nBtnIndex` non fa riferimento a una barra degli strumenti valido pulsante o sul pulsante della barra degli strumenti è un separatore.  
   
-##  <a name="a-namesettworowswithsiblinga--cmfctoolbarsettworowswithsibling"></a><a name="settworowswithsibling"></a>CMFCToolBar::SetTwoRowsWithSibling  
+##  <a name="settworowswithsibling"></a>CMFCToolBar::SetTwoRowsWithSibling  
  Posiziona la barra degli strumenti e pari livello in righe separate.  
   
 ```  
@@ -3032,7 +3186,7 @@ void SetTwoRowsWithSibling();
   
  Il framework chiama la [CMFCToolBar::SetOneRowWithSibling](#setonerowwithsibling) metodo quando l'utente sceglie il **Mostra pulsanti su una riga** pulsante.  
   
-##  <a name="a-namesetuserimagesa--cmfctoolbarsetuserimages"></a><a name="setuserimages"></a>CMFCToolBar::SetUserImages  
+##  <a name="setuserimages"></a>CMFCToolBar::SetUserImages  
  Imposta la raccolta di immagini definite dall'utente nell'applicazione.  
   
 ```  
@@ -3055,7 +3209,7 @@ static BOOL SetUserImages(CMFCToolBarImages* pUserImages);
   
  Chiamare il [CMFCToolBar::GetUserImages](#getuserimages) per recuperare la raccolta di immagini definite dall'utente nell'applicazione.  
   
-##  <a name="a-namestretchpanea--cmfctoolbarstretchpane"></a><a name="stretchpane"></a>CMFCToolBar::StretchPane  
+##  <a name="stretchpane"></a>CMFCToolBar::StretchPane  
  Estende la barra degli strumenti orizzontalmente o verticalmente e riposiziona i pulsanti, se necessario.  
   
 ```  
@@ -3079,7 +3233,7 @@ virtual CSize StretchPane(
   
  Il valore restituito viene determinato chiamando [CMFCToolBar::CalcSize](#calcsize).  
   
-##  <a name="a-nametranslatechara--cmfctoolbartranslatechar"></a><a name="translatechar"></a>CMFCToolBar::TranslateChar  
+##  <a name="translatechar"></a>CMFCToolBar::TranslateChar  
  Esegue un comando pulsante se il codice di chiave specificato corrisponde a una combinazione di tasti valido.  
   
 ```  
@@ -3096,7 +3250,7 @@ virtual BOOL TranslateChar(UINT nChar);
 ### <a name="remarks"></a>Note  
  Il framework chiama questo metodo quando viene premuto un tasto con il tasto Alt.  
   
-##  <a name="a-nameupdatebuttona--cmfctoolbarupdatebutton"></a><a name="updatebutton"></a>CMFCToolBar::UpdateButton  
+##  <a name="updatebutton"></a>CMFCToolBar::UpdateButton  
  Aggiorna lo stato del pulsante specificato.  
   
 ```  
@@ -3109,7 +3263,7 @@ void UpdateButton(int nIndex);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namewraptoolbara--cmfctoolbarwraptoolbar"></a><a name="wraptoolbar"></a>CMFCToolBar::WrapToolBar  
+##  <a name="wraptoolbar"></a>CMFCToolBar::WrapToolBar  
  Riposiziona i pulsanti della barra degli strumenti all'interno di dimensioni specificate.  
   
 ```  
@@ -3143,7 +3297,7 @@ int WrapToolBar(
 ### <a name="remarks"></a>Note  
  Questo metodo riposiziona i pulsanti nella barra degli strumenti, disposizione di pulsanti per le righe aggiuntive se necessario.  
   
-##  <a name="a-namembdontscaleimagesa--cmfctoolbarmbdontscaleimages"></a><a name="m_bdontscaleimages"></a>CMFCToolBar::m_bDontScaleImages  
+##  <a name="m_bdontscaleimages"></a>CMFCToolBar::m_bDontScaleImages  
  Specifica di adattare le immagini della barra degli strumenti in modalità DPI elevata o meno.  
   
 ```  

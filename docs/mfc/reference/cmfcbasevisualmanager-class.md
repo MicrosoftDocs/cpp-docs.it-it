@@ -10,9 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCBaseVisualManager
-- CMFCBaseVisualManager.~CMFCBaseVisualManager
-- ~CMFCBaseVisualManager
-- CMFCBaseVisualManager::~CMFCBaseVisualManager
+- AFXVISUALMANAGER/CMFCBaseVisualManager
+- AFXVISUALMANAGER/CMFCBaseVisualManager::CMFCBaseVisualManager
+- AFXVISUALMANAGER/CMFCBaseVisualManager::DrawCheckBox
+- AFXVISUALMANAGER/CMFCBaseVisualManager::DrawComboBorder
+- AFXVISUALMANAGER/CMFCBaseVisualManager::DrawComboDropButton
+- AFXVISUALMANAGER/CMFCBaseVisualManager::DrawPushButton
+- AFXVISUALMANAGER/CMFCBaseVisualManager::DrawRadioButton
+- AFXVISUALMANAGER/CMFCBaseVisualManager::DrawStatusBarProgress
+- AFXVISUALMANAGER/CMFCBaseVisualManager::FillReBarPane
+- AFXVISUALMANAGER/CMFCBaseVisualManager::GetStandardWindowsTheme
+- AFXVISUALMANAGER/CMFCBaseVisualManager::CleanUpThemes
+- AFXVISUALMANAGER/CMFCBaseVisualManager::UpdateSystemColors
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -102,7 +111,7 @@ class CMFCBaseVisualManager: public CObject
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxvisualmanager.h  
   
-##  <a name="a-namecleanupthemesa--cmfcbasevisualmanagercleanupthemes"></a><a name="cleanupthemes"></a>CMFCBaseVisualManager::CleanUpThemes  
+##  <a name="cleanupthemes"></a>CMFCBaseVisualManager::CleanUpThemes  
  Chiamate `CloseThemeData` per ottenere tutti gli handle `UpdateSystemColors`.  
   
 ```  
@@ -112,14 +121,14 @@ void CleanUpThemes();
 ### <a name="remarks"></a>Note  
  Solo per uso interno.  
   
-##  <a name="a-namecmfcbasevisualmanagera--cmfcbasevisualmanagercmfcbasevisualmanager"></a><a name="cmfcbasevisualmanager"></a>CMFCBaseVisualManager::CMFCBaseVisualManager  
+##  <a name="cmfcbasevisualmanager"></a>CMFCBaseVisualManager::CMFCBaseVisualManager  
  Costruisce e inizializza un oggetto `CMFCBaseVisualManager`.  
   
 ```  
 CMFCBaseVisualManager();
 ```  
   
-##  <a name="a-namedrawcheckboxa--cmfcbasevisualmanagerdrawcheckbox"></a><a name="drawcheckbox"></a>CMFCBaseVisualManager::DrawCheckBox  
+##  <a name="drawcheckbox"></a>CMFCBaseVisualManager::DrawCheckBox  
  Disegna una casella di controllo utilizzando il tema di Windows corrente.  
   
 ```  
@@ -167,7 +176,7 @@ virtual BOOL DrawCheckBox(
 |1|CBS_CHECKEDNORMAL|  
 |2|CBS_MIXEDNORMAL|  
   
-##  <a name="a-namedrawcombobordera--cmfcbasevisualmanagerdrawcomboborder"></a><a name="drawcomboborder"></a>CMFCBaseVisualManager::DrawComboBorder  
+##  <a name="drawcomboborder"></a>CMFCBaseVisualManager::DrawComboBorder  
  Disegna il bordo della casella combinata utilizzando il tema di Windows corrente.  
   
 ```  
@@ -198,7 +207,7 @@ virtual BOOL DrawComboBorder(
 ### <a name="return-value"></a>Valore restituito  
  `TRUE`Se è abilitata l'API di tema. in caso contrario `FALSE`.  
   
-##  <a name="a-namedrawcombodropbuttona--cmfcbasevisualmanagerdrawcombodropbutton"></a><a name="drawcombodropbutton"></a>CMFCBaseVisualManager::DrawComboDropButton  
+##  <a name="drawcombodropbutton"></a>CMFCBaseVisualManager::DrawComboDropButton  
  Disegna un pulsante di menu a discesa della casella combinata utilizzando il tema di Windows corrente.  
   
 ```  
@@ -223,7 +232,7 @@ virtual BOOL DrawComboDropButton(
 ### <a name="return-value"></a>Valore restituito  
  `TRUE`Se è abilitata l'API di tema. in caso contrario `FALSE`.  
   
-##  <a name="a-namedrawpushbuttona--cmfcbasevisualmanagerdrawpushbutton"></a><a name="drawpushbutton"></a>CMFCBaseVisualManager::DrawPushButton  
+##  <a name="drawpushbutton"></a>CMFCBaseVisualManager::DrawPushButton  
  Disegna un pulsante di comando utilizzando il tema di Windows corrente.  
   
 ```  
@@ -250,7 +259,7 @@ virtual BOOL DrawPushButton(
 ### <a name="return-value"></a>Valore restituito  
  `TRUE`Se è abilitata l'API di tema. in caso contrario `FALSE`.  
   
-##  <a name="a-namedrawradiobuttona--cmfcbasevisualmanagerdrawradiobutton"></a><a name="drawradiobutton"></a>CMFCBaseVisualManager::DrawRadioButton  
+##  <a name="drawradiobutton"></a>CMFCBaseVisualManager::DrawRadioButton  
  Disegna un controllo pulsante di opzione utilizzando il tema di Windows corrente.  
   
 ```  
@@ -285,7 +294,7 @@ virtual BOOL DrawRadioButton(
 ### <a name="return-value"></a>Valore restituito  
  `TRUE`Se è abilitata l'API di tema. in caso contrario `FALSE`.  
   
-##  <a name="a-namedrawstatusbarprogressa--cmfcbasevisualmanagerdrawstatusbarprogress"></a><a name="drawstatusbarprogress"></a>CMFCBaseVisualManager::DrawStatusBarProgress  
+##  <a name="drawstatusbarprogress"></a>CMFCBaseVisualManager::DrawStatusBarProgress  
  Disegna l'indicatore di stato sul controllo barra di stato ( [CMFCStatusBar classe](../../mfc/reference/cmfcstatusbar-class.md)) utilizzando il tema di Windows corrente.  
   
 ```  
@@ -332,7 +341,7 @@ virtual BOOL DrawStatusBarProgress(
 ### <a name="return-value"></a>Valore restituito  
  `TRUE`Se è abilitata l'API di tema. in caso contrario `FALSE`.  
   
-##  <a name="a-namefillrebarpanea--cmfcbasevisualmanagerfillrebarpane"></a><a name="fillrebarpane"></a>CMFCBaseVisualManager::FillReBarPane  
+##  <a name="fillrebarpane"></a>CMFCBaseVisualManager::FillReBarPane  
  Riempie lo sfondo del controllo rebar mediante il tema di Windows corrente.  
   
 ```  
@@ -355,7 +364,7 @@ virtual void FillReBarPane(
 ### <a name="return-value"></a>Valore restituito  
  `TRUE`Se è abilitata l'API di tema. in caso contrario `FALSE`.  
   
-##  <a name="a-namegetstandardwindowsthemea--cmfcbasevisualmanagergetstandardwindowstheme"></a><a name="getstandardwindowstheme"></a>CMFCBaseVisualManager::GetStandardWindowsTheme  
+##  <a name="getstandardwindowstheme"></a>CMFCBaseVisualManager::GetStandardWindowsTheme  
  Ottiene il tema di Windows corrente.  
   
 ```  
@@ -375,7 +384,7 @@ virtual WinXpTheme GetStandardWindowsTheme();
   
 - `WinXpTheme_Silver`-grigio.  
   
-##  <a name="a-nameupdatesystemcolorsa--cmfcbasevisualmanagerupdatesystemcolors"></a><a name="updatesystemcolors"></a>CMFCBaseVisualManager::UpdateSystemColors  
+##  <a name="updatesystemcolors"></a>CMFCBaseVisualManager::UpdateSystemColors  
  Chiamate `OpenThemeData` per ottenere l'handle per la creazione di vari controlli: windows, le barre degli strumenti, pulsanti e così via.  
   
 ```  

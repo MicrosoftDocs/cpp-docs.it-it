@@ -10,6 +10,27 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CCmdTarget
+- AFXWIN/CCmdTarget
+- AFXWIN/CCmdTarget::CCmdTarget
+- AFXWIN/CCmdTarget::BeginWaitCursor
+- AFXWIN/CCmdTarget::DoOleVerb
+- AFXWIN/CCmdTarget::EnableAutomation
+- AFXWIN/CCmdTarget::EnableConnections
+- AFXWIN/CCmdTarget::EnableTypeLib
+- AFXWIN/CCmdTarget::EndWaitCursor
+- AFXWIN/CCmdTarget::EnumOleVerbs
+- AFXWIN/CCmdTarget::FromIDispatch
+- AFXWIN/CCmdTarget::GetDispatchIID
+- AFXWIN/CCmdTarget::GetIDispatch
+- AFXWIN/CCmdTarget::GetTypeInfoCount
+- AFXWIN/CCmdTarget::GetTypeInfoOfGuid
+- AFXWIN/CCmdTarget::GetTypeLib
+- AFXWIN/CCmdTarget::GetTypeLibCache
+- AFXWIN/CCmdTarget::IsInvokeAllowed
+- AFXWIN/CCmdTarget::IsResultExpected
+- AFXWIN/CCmdTarget::OnCmdMsg
+- AFXWIN/CCmdTarget::OnFinalRelease
+- AFXWIN/CCmdTarget::RestoreWaitCursor
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -103,7 +124,7 @@ class CCmdTarget : public CObject
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxwin.h  
   
-##  <a name="a-namebeginwaitcursora--ccmdtargetbeginwaitcursor"></a><a name="beginwaitcursor"></a>CCmdTarget::BeginWaitCursor  
+##  <a name="beginwaitcursor"></a>CCmdTarget::BeginWaitCursor  
  Chiamare questa funzione per visualizzare il cursore come una clessidra quando si prevede che un comando per richiedere un intervallo di tempo significativo da eseguire.  
   
 ```  
@@ -120,14 +141,14 @@ void BeginWaitCursor();
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView&#43;](../../mfc/codesnippet/cpp/ccmdtarget-class_1.cpp)]  
   
-##  <a name="a-nameccmdtargeta--ccmdtargetccmdtarget"></a><a name="ccmdtarget"></a>CCmdTarget::CCmdTarget  
+##  <a name="ccmdtarget"></a>CCmdTarget::CCmdTarget  
  Costruisce un oggetto `CCmdTarget`.  
   
 ```  
 CCmdTarget();
 ```  
   
-##  <a name="a-namedooleverba--ccmdtargetdooleverb"></a><a name="dooleverb"></a>CCmdTarget::DoOleVerb  
+##  <a name="dooleverb"></a>CCmdTarget::DoOleVerb  
  Fa sì che un'azione specificata da un verbo OLE da eseguire.  
   
 ```  
@@ -157,7 +178,7 @@ BOOL DoOleVerb(
 ### <a name="remarks"></a>Note  
  Questa funzione membro è un'implementazione di [IOleObject:: DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508). Le possibili azioni sono state enumerate dal [CCmdTarget::EnumOleVerbs](#enumoleverbs).  
   
-##  <a name="a-nameenableautomationa--ccmdtargetenableautomation"></a><a name="enableautomation"></a>CCmdTarget::EnableAutomation  
+##  <a name="enableautomation"></a>CCmdTarget::EnableAutomation  
  Chiamare questa funzione per abilitare l'automazione OLE per un oggetto.  
   
 ```  
@@ -167,7 +188,7 @@ void EnableAutomation();
 ### <a name="remarks"></a>Note  
  Questa funzione viene in genere chiamata dal costruttore dell'oggetto e deve essere chiamata solo se una mappa di invio è stata dichiarata per la classe. Per ulteriori informazioni sull'automazione, vedere gli articoli [client di automazione](../../mfc/automation-clients.md) e [server di automazione](../../mfc/automation-servers.md).  
   
-##  <a name="a-nameenableconnectionsa--ccmdtargetenableconnections"></a><a name="enableconnections"></a>CCmdTarget::EnableConnections  
+##  <a name="enableconnections"></a>CCmdTarget::EnableConnections  
  Abilita la generazione di eventi su punti di connessione.  
   
 ```  
@@ -177,7 +198,7 @@ void EnableConnections();
 ### <a name="remarks"></a>Note  
  Per abilitare i punti di connessione, chiamare questa funzione membro nel costruttore della classe derivata.  
   
-##  <a name="a-nameenabletypeliba--ccmdtargetenabletypelib"></a><a name="enabletypelib"></a>CCmdTarget::EnableTypeLib  
+##  <a name="enabletypelib"></a>CCmdTarget::EnableTypeLib  
  Abilita libreria dei tipi di un oggetto.  
   
 ```  
@@ -187,7 +208,7 @@ void EnableTypeLib();
 ### <a name="remarks"></a>Note  
  Chiamare questa funzione membro nel costruttore del `CCmdTarget`-oggetto che fornisca informazioni sul tipo derivato. Per ulteriori informazioni, vedere l'articolo della Knowledge Base Q185720, "procedura: fornire informazioni sul tipo da un Server di automazione MFC." Articoli della Knowledge Base sono disponibili nella documentazione di Visual Studio di MSDN Library o al [http://support.microsoft.com](http://support.microsoft.com/).  
   
-##  <a name="a-nameendwaitcursora--ccmdtargetendwaitcursor"></a><a name="endwaitcursor"></a>CCmdTarget::EndWaitCursor  
+##  <a name="endwaitcursor"></a>CCmdTarget::EndWaitCursor  
  Chiamare questa funzione dopo aver chiamato il `BeginWaitCursor` funzione membro da restituire dalla posizione del cursore a clessidra fino al cursore precedente.  
   
 ```  
@@ -200,7 +221,7 @@ void EndWaitCursor();
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView&#43;](../../mfc/codesnippet/cpp/ccmdtarget-class_1.cpp)]  
   
-##  <a name="a-nameenumoleverbsa--ccmdtargetenumoleverbs"></a><a name="enumoleverbs"></a>CCmdTarget::EnumOleVerbs  
+##  <a name="enumoleverbs"></a>CCmdTarget::EnumOleVerbs  
  Enumera i verbi di un oggetto OLE.  
   
 ```  
@@ -217,7 +238,7 @@ BOOL EnumOleVerbs(LPENUMOLEVERB* ppenumOleVerb);
 ### <a name="remarks"></a>Note  
  Questa funzione membro è un'implementazione di [IOleObject:: EnumVerbs](http://msdn.microsoft.com/library/windows/desktop/ms692781).  
   
-##  <a name="a-namefromidispatcha--ccmdtargetfromidispatch"></a><a name="fromidispatch"></a>CCmdTarget::FromIDispatch  
+##  <a name="fromidispatch"></a>CCmdTarget::FromIDispatch  
  Chiamare questa funzione per eseguire il mapping di un `IDispatch` puntatore, ricevuti da funzioni membro di automazione di una classe, nel `CCmdTarget` oggetto che implementa le interfacce di `IDispatch` oggetto.  
   
 ```  
@@ -234,7 +255,7 @@ static CCmdTarget* PASCAL FromIDispatch(LPDISPATCH lpDispatch);
 ### <a name="remarks"></a>Note  
  Il risultato di questa funzione è l'inverso di una chiamata alla funzione membro `GetIDispatch`.  
   
-##  <a name="a-namegetdispatchiida--ccmdtargetgetdispatchiid"></a><a name="getdispatchiid"></a>CCmdTarget::GetDispatchIID  
+##  <a name="getdispatchiid"></a>CCmdTarget::GetDispatchIID  
  Ottiene l'ID di interfaccia dispatch principale.  
   
 ```  
@@ -253,7 +274,7 @@ virtual BOOL GetDispatchIID(IID* pIID);
   
  Per ulteriori informazioni, vedere l'articolo della Knowledge Base Q185720, "procedura: fornire informazioni sul tipo da un Server di automazione MFC." Articoli della Knowledge Base sono disponibili nella documentazione di Visual Studio di MSDN Library o al [http://support.microsoft.com](http://support.microsoft.com/).  
   
-##  <a name="a-namegetidispatcha--ccmdtargetgetidispatch"></a><a name="getidispatch"></a>CCmdTarget::GetIDispatch  
+##  <a name="getidispatch"></a>CCmdTarget::GetIDispatch  
  Chiamare questa funzione membro per recuperare il `IDispatch` puntatore da un metodo di automazione che restituisce un `IDispatch` puntatore o accetta un `IDispatch` puntatore per riferimento.  
   
 ```  
@@ -270,7 +291,7 @@ LPDISPATCH GetIDispatch(BOOL bAddRef);
 ### <a name="remarks"></a>Note  
  Per gli oggetti che chiamano `EnableAutomation` nei propri costruttori, rendendoli automazione attivata, questa funzione restituisce un puntatore all'implementazione della classe di base di `IDispatch` che viene utilizzato dai client che comunicano tramite il `IDispatch` interfaccia. Chiamare questa funzione automaticamente aggiunto un riferimento al puntatore, pertanto non è necessario effettuare una chiamata a [IUnknown:: AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379).  
   
-##  <a name="a-namegettypeinfocounta--ccmdtargetgettypeinfocount"></a><a name="gettypeinfocount"></a>CCmdTarget::GetTypeInfoCount  
+##  <a name="gettypeinfocount"></a>CCmdTarget::GetTypeInfoCount  
  Recupera il numero di interfacce di informazioni sul tipo che fornisce un oggetto.  
   
 ```  
@@ -285,7 +306,7 @@ virtual UINT GetTypeInfoCount();
   
  Le classi derivate devono eseguire l'override di questa funzione per restituire il numero di interfacce di informazioni sul tipo fornito (0 o 1). Se non sottoposto a override, **GetTypeInfoCount** restituisce 0. Per eseguire l'override, utilizzare il [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) macro, che implementa anche `GetTypeLib` e `GetTypeLibCache`.  
   
-##  <a name="a-namegettypeinfoofguida--ccmdtargetgettypeinfoofguid"></a><a name="gettypeinfoofguid"></a>CCmdTarget::GetTypeInfoOfGuid  
+##  <a name="gettypeinfoofguid"></a>CCmdTarget::GetTypeInfoOfGuid  
  Recupera la descrizione del tipo che corrisponde al GUID specificato.  
   
 ```  
@@ -308,7 +329,7 @@ HRESULT GetTypeInfoOfGuid(
 ### <a name="return-value"></a>Valore restituito  
  Un HRESULT che indica l'esito positivo o negativo della chiamata. Se ha esito positivo, * `ppTypeInfo` punta all'interfaccia di informazioni di tipo.  
   
-##  <a name="a-namegettypeliba--ccmdtargetgettypelib"></a><a name="gettypelib"></a>CCmdTarget::GetTypeLib  
+##  <a name="gettypelib"></a>CCmdTarget::GetTypeLib  
  Ottiene un puntatore a una libreria dei tipi.  
   
 ```  
@@ -330,7 +351,7 @@ virtual HRESULT GetTypeLib(
 ### <a name="remarks"></a>Note  
  Le classi derivate devono eseguire l'override di questa funzione membro (se non sottoposto a override, `GetTypeLib` restituisce TYPE_E_CANTLOADLIBRARY). Utilizzare il [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) macro, che implementa anche `GetTypeInfoCount` e `GetTypeLibCache`.  
   
-##  <a name="a-namegettypelibcachea--ccmdtargetgettypelibcache"></a><a name="gettypelibcache"></a>CCmdTarget::GetTypeLibCache  
+##  <a name="gettypelibcache"></a>CCmdTarget::GetTypeLibCache  
  Ottiene la cache di libreria di tipi.  
   
 ```  
@@ -343,7 +364,7 @@ virtual CTypeLibCache* GetTypeLibCache();
 ### <a name="remarks"></a>Note  
  Le classi derivate devono eseguire l'override di questa funzione membro (se non sottoposto a override, **GetTypeLibCache** restituisce NULL). Utilizzare il [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) macro, che implementa anche `GetTypeInfoCount` e `GetTypeLib`.  
   
-##  <a name="a-nameisinvokealloweda--ccmdtargetisinvokeallowed"></a><a name="isinvokeallowed"></a>CCmdTarget::IsInvokeAllowed  
+##  <a name="isinvokeallowed"></a>CCmdTarget::IsInvokeAllowed  
  Questa funzione viene chiamata dall'implementazione MFC di **IDispatch:: Invoke** per determinare se un metodo di automazione specificato (identificato da `dispid`) può essere richiamato.  
   
 ```  
@@ -362,7 +383,7 @@ virtual BOOL IsInvokeAllowed(DISPID dispid);
   
  Le classi derivate possono eseguire l'override di questa funzione per restituire i valori appropriati (se non sottoposto a override, `IsInvokeAllowed` restituisce TRUE). Vedere in particolare [COleControl::IsInvokeAllowed](../../mfc/reference/colecontrol-class.md#isinvokeallowed).  
   
-##  <a name="a-nameisresultexpecteda--ccmdtargetisresultexpected"></a><a name="isresultexpected"></a>CCmdTarget::IsResultExpected  
+##  <a name="isresultexpected"></a>CCmdTarget::IsResultExpected  
  Utilizzare `IsResultExpected` per determinare se un client prevede un valore restituito dalla chiamata a una funzione di automazione.  
   
 ```  
@@ -379,7 +400,7 @@ BOOL IsResultExpected();
   
  `IsResultExpected`Restituisce un valore diverso da zero se viene chiamato quando una chiamata di funzione di automazione non è in corso.  
   
-##  <a name="a-nameoncmdmsga--ccmdtargetoncmdmsg"></a><a name="oncmdmsg"></a>CCmdTarget:: OnCmdMsg  
+##  <a name="oncmdmsg"></a>CCmdTarget:: OnCmdMsg  
  Chiamato dal framework di indirizzare e inviare messaggi di comando e di gestire l'aggiornamento degli oggetti dell'interfaccia utente di comando.  
   
 ```  
@@ -428,7 +449,7 @@ virtual BOOL OnCmdMsg(
   
  [!code-cpp[N. NVC_MFCDocView&45;](../../mfc/codesnippet/cpp/ccmdtarget-class_3.cpp)]  
   
-##  <a name="a-nameonfinalreleasea--ccmdtargetonfinalrelease"></a><a name="onfinalrelease"></a>CCmdTarget:: OnFinalRelease  
+##  <a name="onfinalrelease"></a>CCmdTarget:: OnFinalRelease  
  Chiamato dal framework quando viene rilasciato l'ultimo riferimento OLE a o dall'oggetto.  
   
 ```  
@@ -438,7 +459,7 @@ virtual void OnFinalRelease();
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questa funzione per fornire una gestione speciale per questa situazione. L'implementazione predefinita consente di eliminare l'oggetto.  
   
-##  <a name="a-namerestorewaitcursora--ccmdtargetrestorewaitcursor"></a><a name="restorewaitcursor"></a>CCmdTarget::RestoreWaitCursor  
+##  <a name="restorewaitcursor"></a>CCmdTarget::RestoreWaitCursor  
  Chiamare questa funzione per ripristinare il cursore a clessidra appropriato dopo il cursore di sistema è stato modificato (ad esempio, dopo una finestra di messaggio ha aperto e chiuso mentre è in corso un'operazione lunga).  
   
 ```  

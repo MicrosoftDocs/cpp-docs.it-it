@@ -62,7 +62,7 @@ Queste funzioni forniscono il supporto per la creazione di finestre di dialogo e
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlhost  
 
-##  <a name="a-nameatlaxdialogboxa--atlaxdialogbox"></a><a name="atlaxdialogbox"></a>AtlAxDialogBox  
+##  <a name="atlaxdialogbox"></a>AtlAxDialogBox  
  Crea una finestra di dialogo modale da un modello di finestra di dialogo fornito dall'utente.  
    
 ```
@@ -96,15 +96,16 @@ ATLAPI_(int) AtlAxDialogBox(
 ### <a name="remarks"></a>Note  
  Utilizzare **AtlAxDialogBox** con un modello di finestra di dialogo contenente un controllo ActiveX, specificare un valore valido **CLSID**, **APPID** o una stringa URL come il *testo* campo il **controllo** sezione della risorsa finestra di dialogo, insieme a "AtlAxWin80" come il *nome classe* campo nella stessa sezione. L'esempio seguente illustra quali valido **controllo** sezione potrebbe essere simile:  
   
- `CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,`  
-  
- `"AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100`  
+```  
+CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,  
+    "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100  
+```  
   
  Per ulteriori informazioni sulla modifica di script di risorse, vedere [procedura: aprire un File di Script di risorsa in formato testo](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Per ulteriori informazioni sulle istruzioni di definizione di risorsa di controllo, vedere [parametri di controllo comuni](http://msdn.microsoft.com/library/windows/desktop/aa380902) in [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] *: strumenti SDK*.  
   
  Per ulteriori informazioni sulle finestre di dialogo in generale, vedere [DialogBox](http://msdn.microsoft.com/library/windows/desktop/ms645452) e [CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameatlaxcreatedialoga--atlaxcreatedialog"></a><a name="atlaxcreatedialog"></a>API AtlAxCreateDialog  
+##  <a name="atlaxcreatedialog"></a>API AtlAxCreateDialog  
  Crea una finestra di dialogo non modale da un modello di finestra di dialogo fornito dall'utente.  
   
 ```
@@ -140,7 +141,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
   
  Vedere [CreateDialog](http://msdn.microsoft.com/library/windows/desktop/ms645434) e [CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameatlaxcreatecontrola--atlaxcreatecontrol"></a><a name="atlaxcreatecontrol"></a>AtlAxCreateControl  
+##  <a name="atlaxcreatecontrol"></a>AtlAxCreateControl  
  Crea un controllo ActiveX, lo inizializza e lo ospita nella finestra specificata.  
   
 
@@ -186,7 +187,7 @@ ATLAPI AtlAxCreateControl(
   
  Per creare un controllo ActiveX con licenza, vedere [AtlAxCreateControlLic](#atlaxcreatecontrollic).  
   
-##  <a name="a-nameatlaxcreatecontrolexa--atlaxcreatecontrolex"></a><a name="atlaxcreatecontrolex"></a>AtlAxCreateControlEx  
+##  <a name="atlaxcreatecontrolex"></a>AtlAxCreateControlEx  
  Crea un controllo ActiveX, lo inizializza e lo ospita nella finestra specificata. È possibile creare anche un puntatore a interfaccia e un sink di evento per il nuovo controllo.  
   
 ```
@@ -243,7 +244,7 @@ ATLAPI AtlAxCreateControlEx(
   
  Per creare un controllo ActiveX con licenza, vedere [AtlAxCreateControlLicEx](#atlaxcreatecontrollicex).  
   
-##  <a name="a-nameatlaxcreatecontrollica--atlaxcreatecontrollic"></a><a name="atlaxcreatecontrollic"></a>AtlAxCreateControlLic  
+##  <a name="atlaxcreatecontrollic"></a>AtlAxCreateControlLic  
  Crea un controllo ActiveX con licenza, lo inizializza e lo ospita nella finestra specificata.  
 
 ```
@@ -290,7 +291,7 @@ ATLAPI AtlAxCreateControlLic(
 ### <a name="example"></a>Esempio  
  Vedere [Hosting ActiveX controlli mediante AXHost ATL](../../atl/hosting-activex-controls-using-atl-axhost.md) per un esempio di come utilizzare `AtlAxCreateControlLic`.  
   
-##  <a name="a-nameatlaxcreatecontrollicexa--atlaxcreatecontrollicex"></a><a name="atlaxcreatecontrollicex"></a>AtlAxCreateControlLicEx  
+##  <a name="atlaxcreatecontrollicex"></a>AtlAxCreateControlLicEx  
  Crea un controllo ActiveX con licenza, lo inizializza e lo ospita nella finestra specificata. È possibile creare anche un puntatore a interfaccia e un sink di evento per il nuovo controllo.  
   
 ```
@@ -352,7 +353,7 @@ ATLAPI AtlAxCreateControlLicEx(
 ### <a name="example"></a>Esempio  
  Vedere [Hosting ActiveX controlli mediante AXHost ATL](../../atl/hosting-activex-controls-using-atl-axhost.md) per un esempio di come utilizzare `AtlAxCreateControlLicEx`.  
   
-##  <a name="a-nameatlaxattachcontrola--atlaxattachcontrol"></a><a name="atlaxattachcontrol"></a>AtlAxAttachControl  
+##  <a name="atlaxattachcontrol"></a>AtlAxAttachControl  
  Associa un controllo creato in precedenza alla finestra specificata.  
   
 ```
@@ -381,7 +382,7 @@ ATLAPI AtlAxAttachControl(
 > [!NOTE]
 >  Dell'oggetto controllo associato deve essere inizializzata correttamente prima di chiamare `AtlAxAttachControl`.  
   
-##  <a name="a-nameatlaxgethosta--atlaxgethost"></a><a name="atlaxgethost"></a>AtlAxGetHost  
+##  <a name="atlaxgethost"></a>AtlAxGetHost  
  Ottiene un puntatore a interfaccia diretto per il contenitore di una finestra specifica (se presente) in base al relativo handle.  
   
 ```
@@ -398,7 +399,7 @@ ATLAPI AtlAxGetHost(HWND h, IUnknown** pp);
 ### <a name="return-value"></a>Valore restituito  
  Uno dei valori di HRESULT standard.  
   
-##  <a name="a-nameatlaxgetcontrola--atlaxgetcontrol"></a><a name="atlaxgetcontrol"></a>AtlAxGetControl  
+##  <a name="atlaxgetcontrol"></a>AtlAxGetControl  
  Ottiene un puntatore a interfaccia diretto per il controllo contenuto all'interno di una finestra specifica in base al relativo handle.  
   
 ```
@@ -415,7 +416,7 @@ ATLAPI AtlAxGetControl(HWND h, IUnknown** pp);
 ### <a name="return-value"></a>Valore restituito  
  Uno dei valori di HRESULT standard.  
   
-##  <a name="a-nameatlsetchildsitea--atlsetchildsite"></a><a name="atlsetchildsite"></a>AtlSetChildSite  
+##  <a name="atlsetchildsite"></a>AtlSetChildSite  
  Chiamare questa funzione per impostare il sito dell'oggetto figlio di **IUnknown** dell'oggetto padre.  
   
 ```
@@ -432,7 +433,7 @@ HRESULT AtlSetChildSite(IUnknown* punkChild, IUnknown* punkParent);
 ### <a name="return-value"></a>Valore restituito  
  Un valore HRESULT standard.  
   
-##  <a name="a-nameatlaxwininita--atlaxwininit"></a><a name="atlaxwininit"></a>AtlAxWinInit  
+##  <a name="atlaxwininit"></a>AtlAxWinInit  
  Questa funzione Inizializza l'hosting di codice tramite la registrazione del controllo ATL il **"AtlAxWin80"** e **"Atlaxwin80"** classi di finestre oltre a una coppia di messaggi di finestra personalizzati.  
   
 ```
@@ -445,7 +446,7 @@ ATLAPI_(BOOL) AtlAxWinInit();
 ### <a name="remarks"></a>Note  
  Questa funzione deve essere chiamata prima di utilizzare l'API di hosting del controllo ATL. Segue una chiamata a questa funzione, il **"AtlAxWin"** classe finestra può essere utilizzata nelle chiamate a [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) o [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680), come descritto nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
 
-##  <a name="a-nameatlaxwinterma--atlaxwinterm"></a><a name="atlaxwinterm"></a>AtlAxWinTerm  
+##  <a name="atlaxwinterm"></a>AtlAxWinTerm  
  Questa funzione Annulla l'inizializzazione del controllo ATL codice di hosting per l'annullamento della registrazione di **"AtlAxWin80"** e **"Atlaxwin80"** classi di finestra.  
   
 ```
@@ -460,7 +461,7 @@ inline BOOL AtlAxWinTerm();
   
  Chiamare questa funzione per pulizia dopo che tutte le finestre host esistenti sono state eliminate se è stato chiamato [AtlAxWinInit](#atlaxwininit) e non è più necessario creare l'host di windows. Se non si chiama questa funzione, classe della finestra verrà annullata automaticamente al termine del processo.  
   
-##  <a name="a-nameatlgetobjectsourceinterfacea--atlgetobjectsourceinterface"></a><a name="atlgetobjectsourceinterface"></a>AtlGetObjectSourceInterface  
+##  <a name="atlgetobjectsourceinterface"></a>AtlGetObjectSourceInterface  
  Chiamare questa funzione per recuperare le informazioni sull'interfaccia di origine predefinita di un oggetto.  
   
 ```

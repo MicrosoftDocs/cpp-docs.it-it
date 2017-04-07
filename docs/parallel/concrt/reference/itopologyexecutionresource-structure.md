@@ -9,7 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::ITopologyExecutionResource
+- ITopologyExecutionResource
+- CONCRTRM/concurrency::ITopologyExecutionResource
+- CONCRTRM/concurrency::ITopologyExecutionResource::ITopologyExecutionResource::GetId
+- CONCRTRM/concurrency::ITopologyExecutionResource::ITopologyExecutionResource::GetNext
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: cc54beb4790c9d2ea5bfcb2c8ffd4bca7dca399e
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: d9671dbf84a1104bc3b6f3a6f9d383aac167759c
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="itopologyexecutionresource-structure"></a>Struttura ITopologyExecutionResource
@@ -54,8 +57,8 @@ struct ITopologyExecutionResource;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Metodo itopologyexecutionresource:: GetID](#getid)|Restituisce l'identificatore univoco di Gestione risorse per questa risorsa di esecuzione.|  
-|[Metodo itopologyexecutionresource:: GetNext](#getnext)|Restituisce un'interfaccia in corrispondenza della risorsa di esecuzione successiva nell'ordine dell'enumerazione.|  
+|[Itopologyexecutionresource:: GetID](#getid)|Restituisce l'identificatore univoco di Gestione risorse per questa risorsa di esecuzione.|  
+|[Itopologyexecutionresource:: GetNext](#getnext)|Restituisce un'interfaccia in corrispondenza della risorsa di esecuzione successiva nell'ordine dell'enumerazione.|  
   
 ## <a name="remarks"></a>Note  
  Questa interfaccia viene generalmente utilizzata per esaminare la topologia del sistema come osservato dal gestore delle risorse.  
@@ -68,7 +71,7 @@ struct ITopologyExecutionResource;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="a-namegetida--itopologyexecutionresourcegetid-method"></a><a name="getid"></a>Metodo itopologyexecutionresource:: GetID  
+##  <a name="getid"></a>Metodo itopologyexecutionresource:: GetID  
  Restituisce l'identificatore univoco di Gestione risorse per questa risorsa di esecuzione.  
   
 ```
@@ -78,7 +81,7 @@ virtual unsigned int GetId() const = 0;
 ### <a name="return-value"></a>Valore restituito  
  Identificatore univoco di Gestione risorse per questa risorsa di esecuzione.  
   
-##  <a name="a-namegetnexta--itopologyexecutionresourcegetnext-method"></a><a name="getnext"></a>Metodo itopologyexecutionresource:: GetNext  
+##  <a name="getnext"></a>Metodo itopologyexecutionresource:: GetNext  
  Restituisce un'interfaccia in corrispondenza della risorsa di esecuzione successiva nell'ordine dell'enumerazione.  
   
 ```
@@ -89,5 +92,5 @@ virtual ITopologyExecutionResource *GetNext() const = 0;
  Interfaccia in corrispondenza della risorsa di esecuzione successiva nell'ordine dell'enumerazione. Se non esistono altri nodi nell'ordine dell'enumerazione del nodo a cui questa risorsa di esecuzione appartiene, tramite questo metodo verrà restituito il valore `NULL`.  
   
 ## <a name="see-also"></a>Vedere anche  
- [concorrenza Namespace](concurrency-namespace.md)
+ [Spazio dei nomi concurrency](concurrency-namespace.md)
 

@@ -9,7 +9,36 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- vc.mfc.macros
+- AFXDB/RFX_Binary
+- AFXDB/RFX_Bool
+- AFXDB/RFX_Byte
+- AFXDB/RFX_Date
+- AFXDB/RFX_Double
+- AFXDB/RFX_Int
+- AFXDB/RFX_Long
+- AFXDB/RFX_LongBinary
+- AFXDB/RFX_Single
+- AFXDB/RFX_Text
+- AFXDB/RFX_Binary_Bulk
+- AFXDB/RFX_Bool_Bulk
+- AFXDB/RFX_Byte_Bulk
+- AFXDB/RFX_Date_Bulk
+- AFXDB/RFX_Double_Bulk
+- AFXDB/RFX_Int_Bulk
+- AFXDB/RFX_Long_Bulk
+- AFXDB/RFX_Single_Bulk
+- AFXDB/RFX_Text_Bulk
+- AFXDB/DFX_Binary
+- AFXDB/DFX_Bool
+- AFXDB/DFX_Byte
+- AFXDB/DFX_Currency
+- AFXDB/DFX_DateTime
+- AFXDB/DFX_Double
+- AFXDB/DFX_Long
+- AFXDB/DFX_LongBinary
+- AFXDB/DFX_Short
+- AFXDB/DFX_Single
+- AFXDB/DFX_Text
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -112,7 +141,7 @@ Questo argomento vengono elencati i campi di record (RFX, RFX di massa e DFX) fu
 
  =============================================
 
-## <a name="a-namerfxbinarya--rfxbinary"></a><a name="rfx_binary"></a>RFX_Binary
+## <a name="rfx_binary"></a>RFX_Binary
 I trasferimenti di matrici di byte tra i membri dati di campo di un `CRecordset` oggetto e le colonne di un record nell'origine dati di tipo ODBC **SQL_BINARY**, **SQL_VARBINARY**, o **SQL_LONGVARBINARY**.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -147,7 +176,7 @@ void RFX_Binary(
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** AFXDB. h  
 
-## <a name="a-namerfxboola--rfxbool"></a><a name="rfx_bool"></a>RFX_Bool
+## <a name="rfx_bool"></a>RFX_Bool
 Trasferisce i dati booleani tra i membri dati di campo di un `CRecordset` oggetto e le colonne di un record nell'origine dati di tipo ODBC **SQL_BIT**.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -175,7 +204,7 @@ void RFX_Bool(
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** AFXDB. h  
 
-## <a name="a-namerfxbytea--rfxbyte"></a><a name="rfx_byte"></a>RFX_Byte
+## <a name="rfx_byte"></a>RFX_Byte
 Trasferisce singoli byte tra i membri dati di campo di un `CRecordset` oggetto e le colonne di un record nell'origine dati di tipo ODBC **SQL_TINYINT**.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -203,7 +232,7 @@ void RFX_Byte(
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** AFXDB. h  
 
-## <a name="a-namerfxdatea--rfxdate"></a><a name="rfx_date"></a>RFX_Date
+## <a name="rfx_date"></a>RFX_Date
 I trasferimenti `CTime` o **TIMESTAMP_STRUCT** dati tra i membri dati di campo di un `CRecordset` oggetto e le colonne di un record nell'origine dati di tipo ODBC **SQL_DATE**, **SQL_TIME**, o **SQL_TIMESTAMP**.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -248,7 +277,7 @@ void RFX_Date(
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** AFXDB. h  
 
-## <a name="a-namerfxdoublea--rfxdouble"></a><a name="rfx_double"></a>RFX_Double
+## <a name="rfx_double"></a>RFX_Double
 I trasferimenti **float double** dati tra i membri dati di campo di un `CRecordset` oggetto e le colonne di un record nell'origine dati di tipo ODBC **SQL_DOUBLE**.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -276,7 +305,7 @@ void RFX_Double(
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** AFXDB. h  
 
-## <a name="a-namerfxinta--rfxint"></a><a name="RFX_Int"></a>RFX_Int
+## <a name="RFX_Int"></a>RFX_Int
 I trasferimenti di dati integer tra i membri dei dati di campo un `CRecordset` oggetto e le colonne di un record nell'origine dati di tipo ODBC **SQL_SMALLINT**.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -304,7 +333,7 @@ void RFX_Int(
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** AFXDB. h  
 
-## <a name="a-namerfxlonga--rfxlong"></a><a name="RFX_Long"></a>RFX_Long
+## <a name="RFX_Long"></a>RFX_Long
 I trasferimenti di dati long integer tra i membri dei dati di campo un `CRecordset` oggetto e le colonne di un record nell'origine dati di tipo ODBC **SQL_INTEGER**.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -333,7 +362,7 @@ value );
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** AFXDB. h  
   
-## <a name="a-namerfxlongbinarya--rfxlongbinary"></a><a name="RFX_LongBinary"></a>RFX_LongBinary
+## <a name="RFX_LongBinary"></a>RFX_LongBinary
 Trasferisce i dati oggetto binario di grandi dimensioni (BLOB) usando classe [CLongBinary](clongbinary-class.md) tra i membri dati di campo di un `CRecordset` oggetto e le colonne di un record nell'origine dati di tipo ODBC **SQL_LONGVARBINARY** o **SQL_LONGVARCHAR**.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -361,7 +390,7 @@ void RFX_LongBinary(
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** AFXDB. h  
 
-## <a name="a-namerfxsinglea--rfxsingle"></a><a name="rfx_single"></a>RFX_Single
+## <a name="rfx_single"></a>RFX_Single
 Trasferisce i dati a virgola mobile tra i membri dati di campo di un `CRecordset` oggetto e le colonne di un record nell'origine dati di tipo ODBC **SQL_REAL**.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -390,7 +419,7 @@ void RFX_Single(
  **Intestazione:** AFXDB. h  
   
 
-## <a name="a-namerfxtexta--rfxtext"></a><a name="rfx_text"></a>RFX_Text
+## <a name="rfx_text"></a>RFX_Text
 I trasferimenti `CString` dati tra i membri dati di campo di un `CRecordset` oggetto e le colonne di un record nell'origine dati di tipo ODBC **SQL_LONGVARCHAR**, **SQL_CHAR**, **SQL_VARCHAR**, **SQL_DECIMAL**, o **SQL_NUMERIC**.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -452,7 +481,7 @@ void CCustomer::DoFieldExchange(CFieldExchange* pFX)
  **Intestazione:** AFXDB. h  
 
 
-## <a name="a-namerfxbinarybulka--rfxbinarybulk"></a><a name="rfx_binary_Bulk"></a>RFX_Binary_Bulk
+## <a name="rfx_binary_Bulk"></a>RFX_Binary_Bulk
 Trasferisce più righe di dati byte da una colonna di un'origine dati ODBC in una matrice corrispondente in un `CRecordset`-oggetto derivato.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -498,7 +527,7 @@ void RFX_Binary_Bulk(
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** AFXDB. h  
 
-## <a name="a-namerfxboolbulka--rfxboolbulk"></a><a name="rfx_bool_Bulk"></a>RFX_Bool_Bulk
+## <a name="rfx_bool_Bulk"></a>RFX_Bool_Bulk
 Trasferisce più righe di dati booleani da una colonna di un'origine dati ODBC in una matrice corrispondente in un `CRecordset`-oggetto derivato.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -540,7 +569,7 @@ void RFX_Bool_Bulk(
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** AFXDB. h  
 
-## <a name="a-namerfxbytebulka--rfxbytebulk"></a><a name="rfx_byte_Bulk"></a>RFX_Byte_Bulk
+## <a name="rfx_byte_Bulk"></a>RFX_Byte_Bulk
 Trasferisce più righe di singoli byte da una colonna di un'origine dati ODBC in una matrice corrispondente in un `CRecordset`-oggetto derivato.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -582,7 +611,7 @@ void RFX_Byte_Bulk(
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** AFXDB. h  
   
-## <a name="a-namerfxdatebulka--rfxdatebulk"></a><a name="rfx_date_Bulk"></a>RFX_Date_Bulk
+## <a name="rfx_date_Bulk"></a>RFX_Date_Bulk
 Trasferisce più righe di **TIMESTAMP_STRUCT** dati da una colonna di un'origine dati ODBC in una matrice corrispondente in un `CRecordset`-oggetto derivato.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -624,7 +653,7 @@ void RFX_Date_Bulk(
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** AFXDB. h  
 
-## <a name="a-namerfxdoublebulka--rfxdoublebulk"></a><a name="rfx_double_Bulk"></a>RFX_Double_Bulk
+## <a name="rfx_double_Bulk"></a>RFX_Double_Bulk
 Trasferisce più righe di dati a virgola mobile a precisione doppia da una colonna di un'origine dati ODBC in una matrice corrispondente in un `CRecordset`-oggetto derivato.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -666,7 +695,7 @@ void RFX_Double_Bulk(
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** AFXDB. h  
 
-## <a name="a-namerfxintbulka--rfxintbulk"></a><a name="RFX_Int_Bulk"></a>RFX_Int_Bulk
+## <a name="RFX_Int_Bulk"></a>RFX_Int_Bulk
 I trasferimenti di dati integer tra i membri dei dati di campo un `CRecordset` oggetto e le colonne di un record nell'origine dati di tipo ODBC **SQL_SMALLINT**.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -694,7 +723,7 @@ void RFX_Int(
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** AFXDB. h  
 
-## <a name="a-namerfxlongbulka--rfxlongbulk"></a><a name="RFX_Long_Bulk"></a>RFX_Long_Bulk
+## <a name="RFX_Long_Bulk"></a>RFX_Long_Bulk
 Trasferisce più righe di dati long integer da una colonna di un'origine dati ODBC in una matrice corrispondente in un `CRecordset`-oggetto derivato.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -736,7 +765,7 @@ void RFX_Long_Bulk(
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** AFXDB. h  
 
-## <a name="a-namerfxsinglebulka--rfxsinglebulk"></a><a name="rfx_single_Bulk"></a>RFX_Single_Bulk
+## <a name="rfx_single_Bulk"></a>RFX_Single_Bulk
 Trasferisce più righe di dati a virgola mobile da una colonna di un'origine dati ODBC in una matrice corrispondente in un `CRecordset`-oggetto derivato.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -779,7 +808,7 @@ void RFX_Single_Bulk(
  **Intestazione:** AFXDB. h  
   
 
-## <a name="a-namerfxtextbulka--rfxtextbulk"></a><a name="rfx_text_Bulk"></a>RFX_Text_Bulk
+## <a name="rfx_text_Bulk"></a>RFX_Text_Bulk
 Trasferisce più righe di dati di tipo carattere da una colonna di un'origine dati ODBC in una matrice corrispondente in un `CRecordset`-oggetto derivato.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -840,7 +869,7 @@ void CMultiCustomer::DoBulkFieldExchange(CFieldExchange* pFX)
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** AFXDB. h  
 
-## <a name="a-namedfxbinarya--dfxbinary"></a><a name="dfx_binary"></a>DFX_Binary
+## <a name="dfx_binary"></a>DFX_Binary
 I trasferimenti di matrici di byte tra i membri dati di campo di un [CDaoRecordset](cdaorecordset-class.md) oggetto e le colonne di un record nell'origine dati.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -883,7 +912,7 @@ void AFXAPI DFX_Binary(
  **Intestazione:** afxdao. h  
   
 
-## <a name="a-namedfxboola--dfxbool"></a><a name="dfx_bool"></a>DFX_Bool
+## <a name="dfx_bool"></a>DFX_Bool
 Trasferisce i dati booleani tra i membri dati di campo di un [CDaoRecordset](cdaorecordset-class.md) oggetto e le colonne di un record nell'origine dati.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -921,7 +950,7 @@ void AFXAPI DFX_Bool(
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** afxdao. h  
 
-## <a name="a-namedfxbytea--dfxbyte"></a><a name="dfx_byte"></a>DFX_Byte
+## <a name="dfx_byte"></a>DFX_Byte
 Trasferisce singoli byte tra i membri dati di campo di un [CDaoRecordset](cdaorecordset-class.md) oggetto e le colonne di un record nell'origine dati.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -959,7 +988,7 @@ void AFXAPI DFX_Byte(
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** afxdao. h  
 
-## <a name="a-namedfxcurrencya--dfxcurrency"></a><a name="dfx_currency"></a>DFX_Currency
+## <a name="dfx_currency"></a>DFX_Currency
 Trasferisce i dati di valuta tra i membri dati di campo di un [CDaoRecordset](cdaorecordset-class.md) oggetto e le colonne di un record nell'origine dati.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -997,7 +1026,7 @@ void AFXAPI DFX_Currency(
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** afxdao. h  
 
-## <a name="a-namedfxdatetimea--dfxdatetime"></a><a name="dfx_datetime"></a>DFX_DateTime
+## <a name="dfx_datetime"></a>DFX_DateTime
 Trasferisce i dati di data e ora tra i membri dati di campo di un [CDaoRecordset](cdaorecordset-class.md) oggetto e le colonne di un record nell'origine dati.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -1038,7 +1067,7 @@ void AFXAPI DFX_DateTime(
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** afxdao. h  
 
-## <a name="a-namedfxdoublea--dfxdouble"></a><a name="dfx_double"></a>DFX_Double
+## <a name="dfx_double"></a>DFX_Double
 I trasferimenti **float double** dati tra i membri dati di campo di un [CDaoRecordset](cdaorecordset-class.md) oggetto e le colonne di un record nell'origine dati.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -1076,7 +1105,7 @@ void AFXAPI DFX_Double(
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** afxdao. h  
 
-## <a name="a-namedfxlonga--dfxlong"></a><a name="dfx_long"></a>DFX_Long
+## <a name="dfx_long"></a>DFX_Long
 I trasferimenti di dati long integer tra i membri dei dati di campo un [CDaoRecordset](cdaorecordset-class.md) oggetto e le colonne di un record nell'origine dati.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -1115,7 +1144,7 @@ void AFXAPI DFX_Long(
  **Intestazione:** afxdao. h  
   
 
-## <a name="a-namedfxlongbinarya--dfxlongbinary"></a><a name="dfx_longbinary"></a>DFX_LongBinary
+## <a name="dfx_longbinary"></a>DFX_LongBinary
 **Importante** si consiglia di utilizzare [DFX_Binary](#dfx_binary) anziché questa funzione.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -1157,7 +1186,7 @@ void AFXAPI DFX_LongBinary(
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** afxdao. h  
 
-## <a name="a-namedfxshorta--dfxshort"></a><a name="dfx_short"></a>DFX_Short
+## <a name="dfx_short"></a>DFX_Short
 I trasferimenti breve dati integer tra i membri dati di campo di un [CDaoRecordset](cdaorecordset-class.md) oggetto e le colonne di un record nell'origine dati.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -1199,7 +1228,7 @@ void AFXAPI DFX_Short(
  **Intestazione:** afxdao. h  
   
 
-## <a name="a-namedfxsinglea--dfxsingle"></a><a name="dfx_single"></a>DFX_Single
+## <a name="dfx_single"></a>DFX_Single
 Trasferisce i dati a virgola mobile tra i membri dati di campo di un [CDaoRecordset](cdaorecordset-class.md) oggetto e le colonne di un record nell'origine dati.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -1237,7 +1266,7 @@ void AFXAPI DFX_Single(
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** afxdao. h  
 
-## <a name="a-namedfxtexta--dfxtext"></a><a name="dfx_text"></a>DFX_Text
+## <a name="dfx_text"></a>DFX_Text
 I trasferimenti `CString` dati tra i membri dati di campo di un [CDaoRecordset](cdaorecordset-class.md) oggetto e le colonne di un record nell'origine dati.  
   
 ### <a name="syntax"></a>Sintassi  

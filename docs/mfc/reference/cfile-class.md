@@ -10,6 +10,34 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFile
+- AFX/CFile
+- AFX/CFile::CFile
+- AFX/CFile::Abort
+- AFX/CFile::Close
+- AFX/CFile::Duplicate
+- AFX/CFile::Flush
+- AFX/CFile::GetFileName
+- AFX/CFile::GetFilePath
+- AFX/CFile::GetFileTitle
+- AFX/CFile::GetLength
+- AFX/CFile::GetPosition
+- AFX/CFile::GetStatus
+- AFX/CFile::LockRange
+- AFX/CFile::Open
+- AFX/CFile::Read
+- AFX/CFile::Remove
+- AFX/CFile::Rename
+- AFX/CFile::Seek
+- AFX/CFile::SeekToBegin
+- AFX/CFile::SeekToEnd
+- AFX/CFile::SetFilePath
+- AFX/CFile::SetLength
+- AFX/CFile::SetStatus
+- AFX/CFile::UnlockRange
+- AFX/CFile::Write
+- AFX/CFile::hFileNull
+- AFX/CFile::m_hFile
+- AFX/CFile::m_pTM
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -124,7 +152,7 @@ class CFile : public CObject
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afx.h  
   
-##  <a name="a-nameaborta--cfileabort"></a><a name="abort"></a>CFile:: Abort  
+##  <a name="abort"></a>CFile:: Abort  
  Chiude il file associato all'oggetto e non è più disponibile per la lettura o scrittura del file.  
   
 ```  
@@ -141,7 +169,7 @@ virtual void Abort();
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCFiles n.&5;](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_1.cpp)]  
   
-##  <a name="a-namecfilea--cfilecfile"></a><a name="cfile"></a>CFile::CFile  
+##  <a name="cfile"></a>CFile::CFile  
  Costruisce e inizializza un oggetto `CFile`.  
   
 ```  
@@ -237,7 +265,7 @@ CAtlTransactionManager* pTM);
   
  [!code-cpp[NVC_MFCFiles n.&4;](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_2.cpp)]  
   
-##  <a name="a-nameclosea--cfileclose"></a><a name="close"></a>CFile::Close  
+##  <a name="close"></a>CFile::Close  
  Chiude il file associato all'oggetto e non è più disponibile per la lettura o scrittura del file.  
   
 ```  
@@ -252,7 +280,7 @@ virtual void Close();
 ### <a name="example"></a>Esempio  
  Vedere l'esempio per [CFile::CFile](#cfile).  
   
-##  <a name="a-nameduplicatea--cfileduplicate"></a><a name="duplicate"></a>CFile::Duplicate  
+##  <a name="duplicate"></a>CFile::Duplicate  
  Crea un duplicato `CFile` oggetto per un determinato file.  
   
 ```  
@@ -265,7 +293,7 @@ virtual CFile* Duplicate() const;
 ### <a name="remarks"></a>Note  
  Ciò equivale alla funzione runtime C `_dup`.  
   
-##  <a name="a-nameflusha--cfileflush"></a><a name="flush"></a>CFile::Flush  
+##  <a name="flush"></a>CFile::Flush  
  Forza i dati rimanenti nel buffer di file da scrivere nel file.  
   
 ```  
@@ -278,7 +306,7 @@ virtual void Flush();
 ### <a name="example"></a>Esempio  
  Vedere l'esempio per [CFile::SetFilePath](#setfilepath).  
   
-##  <a name="a-namegetfilenamea--cfilegetfilename"></a><a name="getfilename"></a>CFile::GetFileName  
+##  <a name="getfilename"></a>CFile::GetFileName  
  Chiamare questa funzione membro per recuperare il nome di un file specificato.  
   
 ```  
@@ -298,7 +326,7 @@ virtual CString GetFileName() const;
   
  [!code-cpp[6 NVC_MFCFiles](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_3.cpp)]  
   
-##  <a name="a-namegetfilepatha--cfilegetfilepath"></a><a name="getfilepath"></a>CFile::GetFilePath  
+##  <a name="getfilepath"></a>CFile::GetFilePath  
  Chiamare questa funzione membro per recuperare il percorso completo di un file specificato.  
   
 ```  
@@ -316,7 +344,7 @@ virtual CString GetFilePath() const;
 ### <a name="example"></a>Esempio  
  Vedere l'esempio per [GetFileName](#getfilename).  
   
-##  <a name="a-namegetfiletitlea--cfilegetfiletitle"></a><a name="getfiletitle"></a>CFile::GetFileTitle  
+##  <a name="getfiletitle"></a>CFile::GetFileTitle  
  Chiamare questa funzione membro per recuperare il titolo di file (il nome visualizzato) per il file.  
   
 ```  
@@ -334,7 +362,7 @@ virtual CString GetFileTitle() const;
 ### <a name="example"></a>Esempio  
  Vedere l'esempio per [GetFileName](#getfilename).  
   
-##  <a name="a-namegetlengtha--cfilegetlength"></a><a name="getlength"></a>CFile::GetLength  
+##  <a name="getlength"></a>CFile::GetLength  
  Ottiene la lunghezza logica corrente di file in byte.  
   
 ```  
@@ -347,7 +375,7 @@ virtual ULONGLONG GetLength() const;
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCFiles&#7;](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_4.cpp)]  
   
-##  <a name="a-namegetpositiona--cfilegetposition"></a><a name="getposition"></a>CFile::GetPosition  
+##  <a name="getposition"></a>CFile::GetPosition  
  Ottiene il valore corrente del puntatore del file, che può essere utilizzato nelle chiamate successive a `Seek`.  
   
 ```  
@@ -360,7 +388,7 @@ virtual ULONGLONG GetPosition() const;
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCFiles n.&8;](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_5.cpp)]  
   
-##  <a name="a-namegetstatusa--cfilegetstatus"></a><a name="getstatus"></a>CFile:: GetStatus  
+##  <a name="getstatus"></a>CFile:: GetStatus  
  Questo metodo recupera le informazioni sullo stato relative a un determinato `CFile` istanza dell'oggetto o un percorso di file specificato.  
   
 ```  
@@ -423,7 +451,7 @@ static BOOL PASCAL GetStatus(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCFiles&#10;](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_6.cpp)]  
   
-##  <a name="a-namehfilenulla--cfilehfilenull"></a><a name="hfilenull"></a>CFile::hFileNull  
+##  <a name="hfilenull"></a>CFile::hFileNull  
  Determina la presenza di un handle di file valido per il `CFile` oggetto.  
   
 ```  
@@ -437,7 +465,7 @@ static AFX_DATA const HANDLE hFileNull;
   
  [!code-cpp[NVC_MFCFiles&#22;](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_7.cpp)]  
   
-##  <a name="a-namelockrangea--cfilelockrange"></a><a name="lockrange"></a>CFile::LockRange  
+##  <a name="lockrange"></a>CFile::LockRange  
  Blocca un intervallo di byte in un file aperto, generare un'eccezione se il file è già bloccato.  
   
 ```  
@@ -464,7 +492,7 @@ virtual void LockRange(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCFiles&#12;](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_8.cpp)]  
   
-##  <a name="a-namemhfilea--cfilemhfile"></a><a name="m_hfile"></a>CFile::m_hFile  
+##  <a name="m_hfile"></a>CFile::m_hFile  
  Contiene l'handle di file del sistema operativo per un file aperto.  
   
 ```  
@@ -476,7 +504,7 @@ HANDLE m_hFile;
   
  Utilizzo di `m_hFile` non è consigliata perché dipende dal significato del membro nella classe derivata. `m_hFile`è un membro pubblico per motivi di praticità nel supporto non polimorfici utilizza la classe.  
   
-##  <a name="a-namemptma--cfilemptm"></a><a name="m_ptm"></a>CFile::m_pTM  
+##  <a name="m_ptm"></a>CFile::m_pTM  
  Puntatore a un oggetto `CAtlTransactionManager`.  
   
 ```  
@@ -485,7 +513,7 @@ CAtlTransactionManager* m_pTM;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameopena--cfileopen"></a><a name="open"></a>CFile::Open  
+##  <a name="open"></a>CFile::Open  
  Di overload. **Aprire** è progettato per l'utilizzo con il valore predefinito `CFile` costruttore.  
   
 ```  
@@ -537,14 +565,14 @@ virtual BOOL Open(
   
  [!code-cpp[NVC_MFCFiles&#14;](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_10.cpp)]  
   
-##  <a name="a-nameoperatorhandlea--cfileoperator-handle"></a><a name="operator_handle"></a>CFile::operator HANDLE  
+##  <a name="operator_handle"></a>CFile::operator HANDLE  
  Utilizzare questo operatore per passare un handle per un `CFile` oggetto alle funzioni, ad esempio [ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468) e [GetFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724320) che prevede un `HANDLE`.  
   
 ```  
 operator HANDLE() const;  
 ```  
   
-##  <a name="a-namereada--cfileread"></a><a name="read"></a>CFile:: Read  
+##  <a name="read"></a>CFile:: Read  
  Legge i dati in un buffer dal file di cui è associato il `CFile` oggetto.  
   
 ```  
@@ -568,7 +596,7 @@ virtual UINT Read(
   
  Per un altro esempio vedere [CFile::Open](#open).  
   
-##  <a name="a-nameremovea--cfileremove"></a><a name="remove"></a>CFile::Remove  
+##  <a name="remove"></a>CFile::Remove  
  Questa funzione statica Elimina il file specificato dal percorso.  
   
 ```  
@@ -592,7 +620,7 @@ static void PASCAL Remove(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCFiles n.&17;](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_12.cpp)]  
   
-##  <a name="a-namerenamea--cfilerename"></a><a name="rename"></a>CFile::Rename  
+##  <a name="rename"></a>CFile::Rename  
  Questa funzione statica Rinomina il file specificato.  
   
 ```  
@@ -618,7 +646,7 @@ static void PASCAL Rename(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCFiles&#18;](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_13.cpp)]  
   
-##  <a name="a-nameseeka--cfileseek"></a><a name="seek"></a>CFile::Seek  
+##  <a name="seek"></a>CFile::Seek  
  Riposiziona il puntatore del file in un file aperto.  
   
 ```  
@@ -655,7 +683,7 @@ UINT nFrom);
 ### <a name="example"></a>Esempio  
  [!code-cpp[9 NVC_MFCFiles](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_14.cpp)]  
   
-##  <a name="a-nameseektobegina--cfileseektobegin"></a><a name="seektobegin"></a>CFile::SeekToBegin  
+##  <a name="seektobegin"></a>CFile::SeekToBegin  
  Imposta il valore del puntatore del file all'inizio del file.  
   
 ```  
@@ -668,7 +696,7 @@ void SeekToBegin();
 ### <a name="example"></a>Esempio  
  [!code-cpp[&#19; NVC_MFCFiles](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_15.cpp)]  
   
-##  <a name="a-nameseektoenda--cfileseektoend"></a><a name="seektoend"></a>CFile::SeekToEnd  
+##  <a name="seektoend"></a>CFile::SeekToEnd  
  Imposta il valore del puntatore del file alla fine del file logica.  
   
 ```  
@@ -684,7 +712,7 @@ ULONGLONG SeekToEnd();
 ### <a name="example"></a>Esempio  
  [!code-cpp[&#19; NVC_MFCFiles](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_15.cpp)]  
   
-##  <a name="a-namesetfilepatha--cfilesetfilepath"></a><a name="setfilepath"></a>CFile::SetFilePath  
+##  <a name="setfilepath"></a>CFile::SetFilePath  
  Chiamare questa funzione per specificare il percorso del file. ad esempio, se il percorso di un file non è disponibile quando un [CFile](../../mfc/reference/cfile-class.md) oggetto viene costruito, chiamare `SetFilePath` fornirle.  
   
 ```  
@@ -703,7 +731,7 @@ virtual void SetFilePath(LPCTSTR lpszNewName);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCFiles&#20;](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_16.cpp)]  
   
-##  <a name="a-namesetlengtha--cfilesetlength"></a><a name="setlength"></a>CFile::SetLength  
+##  <a name="setlength"></a>CFile::SetLength  
  Chiamare questa funzione per modificare la lunghezza del file.  
   
 ```  
@@ -722,7 +750,7 @@ virtual void SetLength(ULONGLONG dwNewLen);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCFiles&#11;](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_17.cpp)]  
   
-##  <a name="a-namesetstatusa--cfilesetstatus"></a><a name="setstatus"></a>CFile::SetStatus  
+##  <a name="setstatus"></a>CFile::SetStatus  
  Imposta lo stato del file associato a questo percorso del file.  
   
 ```  
@@ -750,7 +778,7 @@ static void PASCAL SetStatus(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCFiles numero&21;](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_18.cpp)]  
   
-##  <a name="a-nameunlockrangea--cfileunlockrange"></a><a name="unlockrange"></a>CFile::UnlockRange  
+##  <a name="unlockrange"></a>CFile::UnlockRange  
  Sblocca un intervallo di byte in un file aperto.  
   
 ```  
@@ -775,7 +803,7 @@ virtual void UnlockRange(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCFiles&#12;](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_8.cpp)]  
   
-##  <a name="a-namewritea--cfilewrite"></a><a name="write"></a>CFile::Write  
+##  <a name="write"></a>CFile::Write  
  Scrive nel file associato a dati da un buffer di `CFile` oggetto.  
   
 ```  

@@ -9,7 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::location
+- location
+- CONCRT/concurrency::location
+- CONCRT/concurrency::location::location
+- CONCRT/concurrency::location::current
+- CONCRT/concurrency::location::from_numa_node
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +38,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 1a404f44600addcbf332fabcfc19a7b48dab0c81
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: a0b64804ebfea3ad2c172c509aeffd485f4fe30a
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="location-class"></a>Classe location
@@ -54,23 +58,23 @@ class location;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[percorso di costruttore](#ctor)|Di overload. Costruisce un oggetto `location`.|  
+|[percorso](#ctor)|Di overload. Costruisce un oggetto `location`.|  
 |[~ percorso distruttore](#dtor)|Elimina un oggetto `location`.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Metodo corrente](#current)|Restituisce un oggetto `location` che rappresenta il punto più specifico in cui il thread chiamante è in esecuzione.|  
-|[from_numa_node (metodo)](#from_numa_node)|Restituisce un oggetto `location` che rappresenta un nodo NUMA specifico.|  
+|[corrente](#current)|Restituisce un oggetto `location` che rappresenta il punto più specifico in cui il thread chiamante è in esecuzione.|  
+|[from_numa_node](#from_numa_node)|Restituisce un oggetto `location` che rappresenta un nodo NUMA specifico.|  
   
 ### <a name="public-operators"></a>Operatori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[operatore! = (operatore)](#operator_neq)|Determina se due oggetti `location` rappresentano posizioni diverse.|  
-|[operatore = (operatore)](#operator_eq)|Assegna il contenuto di un oggetto `location` differente a questo oggetto.|  
-|[operatore Operator = =](#operator_eq_eq)|Determina se due `location` gli oggetti rappresentano lo stesso percorso.|  
+|[operator!=](#operator_neq)|Determina se due oggetti `location` rappresentano posizioni diverse.|  
+|[operator=](#operator_eq)|Assegna il contenuto di un oggetto `location` differente a questo oggetto.|  
+|[operator==](#operator_eq_eq)|Determina se due `location` gli oggetti rappresentano lo stesso percorso.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `location`  
@@ -80,7 +84,7 @@ class location;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="a-namedtora-location"></a><a name="dtor"></a>~ percorso 
+##  <a name="dtor"></a>~ percorso 
 
  Elimina un oggetto `location`.  
   
@@ -88,7 +92,7 @@ class location;
 ~location();
 ```  
   
-##  <a name="a-namecurrenta-current"></a><a name="current"></a>corrente 
+##  <a name="current"></a>corrente 
 
  Restituisce un oggetto `location` che rappresenta il punto più specifico in cui il thread chiamante è in esecuzione.  
   
@@ -99,7 +103,7 @@ static location __cdecl current();
 ### <a name="return-value"></a>Valore restituito  
  Posizione che rappresenta il punto più specifico in cui il thread chiamante è in esecuzione.  
   
-##  <a name="a-namefromnumanodea-fromnumanode"></a><a name="from_numa_node"></a>from_numa_node 
+##  <a name="from_numa_node"></a>from_numa_node 
 
  Restituisce un oggetto `location` che rappresenta un nodo NUMA specifico.  
   
@@ -114,7 +118,7 @@ static location __cdecl from_numa_node(unsigned short _NumaNodeNumber);
 ### <a name="return-value"></a>Valore restituito  
  Posizione che rappresenta il nodo NUMA specificato dal parametro `_NumaNodeNumber`.  
   
-##  <a name="a-namectora-location"></a><a name="ctor"></a>percorso 
+##  <a name="ctor"></a>percorso 
 
  Costruisce un oggetto `location`.  
   
@@ -141,7 +145,7 @@ location(
 ### <a name="remarks"></a>Note  
  Una posizione costruita predefinita rappresenta il sistema nel suo complesso.  
   
-##  <a name="a-nameoperatorneqa-operator"></a><a name="operator_neq"></a>operatore! = 
+##  <a name="operator_neq"></a>operatore! = 
 
  Determina se due oggetti `location` rappresentano posizioni diverse.  
   
@@ -155,7 +159,7 @@ bool operator!= (const location& _Rhs) const;
 ### <a name="return-value"></a>Valore restituito  
  `true` se le due posizioni sono diverse; in caso contrario `false`.  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>operatore = 
+##  <a name="operator_eq"></a>operatore = 
 
  Assegna il contenuto di un oggetto `location` differente a questo oggetto.  
   
@@ -169,7 +173,7 @@ location& operator= (const location& _Rhs);
   
 ### <a name="return-value"></a>Valore restituito  
   
-##  <a name="a-nameoperatoreqeqa-operator"></a><a name="operator_eq_eq"></a>operatore = = 
+##  <a name="operator_eq_eq"></a>operatore = = 
 
  Determina se due `location` gli oggetti rappresentano lo stesso percorso.  
   
@@ -184,5 +188,5 @@ bool operator== (const location& _Rhs) const;
  `true`Se le due posizioni sono identiche, e `false` in caso contrario.  
   
 ## <a name="see-also"></a>Vedere anche  
- [concorrenza Namespace](concurrency-namespace.md)
+ [Spazio dei nomi concurrency](concurrency-namespace.md)
 

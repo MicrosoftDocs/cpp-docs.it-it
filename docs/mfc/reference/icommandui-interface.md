@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - ICommandUI
+- AFXWINFORMS/ICommandUI
+- AFXWINFORMS/icommandui__Check
+- AFXWINFORMS/ICommandUI::ContinueRouting
+- AFXWINFORMS/ICommandUI::Enabled
+- AFXWINFORMS/ICommandUI::ID
+- AFXWINFORMS/ICommandUI::Index
+- AFXWINFORMS/ICommandUI::Radio
+- AFXWINFORMS/ICommandUI::Text
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -73,7 +81,7 @@ interface class ICommandUI
   
  Per ulteriori informazioni su come i comandi dell'interfaccia utente sono gestiti in MFC, vedere [CCmdUI (classe)](../../mfc/reference/ccmdui-class.md).  
   
-## <a name="a-namechecka-icommanduicheck"></a><a name="check"></a>ICommandUI::Check  
+## <a name="check"></a>ICommandUI::Check  
 Imposta l'elemento dell'interfaccia utente per questo comando per lo stato di controllo appropriate.
 ```
 property UICheckState Check;
@@ -84,7 +92,7 @@ Questa proprietà imposta l'elemento dell'interfaccia utente per questo comando 
 - 1 controllo  
 - 2 impostare indeterminato  
 
-## <a name="a-namecontinueroutinga-icommanduicontinuerouting"></a><a name="continuerouting"></a>ICommandUI::ContinueRouting   
+## <a name="continuerouting"></a>ICommandUI::ContinueRouting   
 Indica il meccanismo di routing di comandi per continuare a indirizzare il messaggio corrente lungo la catena di gestori.
 ```
 void ContinueRouting();
@@ -92,7 +100,7 @@ void ContinueRouting();
 ## <a name="remarks"></a>Note
 Si tratta di una funzione membro avanzata che deve essere utilizzata in combinazione con un gestore ON_COMMAND_EX che restituisce FALSE. Per ulteriori informazioni, vedere tecniche nota TN006: mappe messaggi.
 
-## <a name="a-nameenableda-icommanduienabled"></a><a name="enabled"></a>ICommandUI::Enabled 
+## <a name="enabled"></a>ICommandUI::Enabled 
 Abilita o disabilita l'elemento dell'interfaccia utente per questo comando.
 ```
 property bool Enabled;
@@ -100,7 +108,7 @@ property bool Enabled;
 ## <a name="remarks"></a>Note
 Questa proprietà Abilita o disabilita l'elemento dell'interfaccia utente per questo comando. Impostare Enabled su true per abilitare l'elemento su FALSE per disabilitarla.
 
-## <a name="a-nameida-icommanduiid"></a><a name="id"></a>ICommandUI::ID  
+## <a name="id"></a>ICommandUI::ID  
 Ottiene l'ID dell'oggetto di interfaccia utente rappresentato dall'oggetto ICommandUI.
 ```
 property unsigned int ID;
@@ -108,7 +116,7 @@ property unsigned int ID;
 ## <a name="remarks"></a>Note
 Questa proprietà ottiene l'ID (handle) della voce di menu, pulsante della barra degli strumenti o altro oggetto dell'interfaccia utente rappresentato dall'oggetto ICommandUI.
 
-## <a name="a-nameindexa-icommanduiindex"></a><a name="index"></a>ICommandUI::Index   
+## <a name="index"></a>ICommandUI::Index   
 Ottiene l'indice dell'oggetto di interfaccia utente rappresentato dall'oggetto ICommandUI.
 ```
 property unsigned int Index;
@@ -116,7 +124,7 @@ property unsigned int Index;
 ## <a name="remarks"></a>Note
 Questa proprietà ottiene l'indice (handle) della voce di menu, pulsante della barra degli strumenti o altro oggetto dell'interfaccia utente rappresentato dall'oggetto ICommandUI.
 
-## <a name="a-nameradioa-icommanduiradio"></a><a name="radio"></a>ICommandUI::Radio 
+## <a name="radio"></a>ICommandUI::Radio 
 Imposta l'elemento dell'interfaccia utente per questo comando per lo stato di controllo appropriate.
 ```
 property bool Radio;
@@ -124,7 +132,7 @@ property bool Radio;
 ## <a name="remarks"></a>Note
 Questa proprietà imposta l'elemento dell'interfaccia utente per questo comando per lo stato di controllo appropriate. Opzione set a true per abilitare l'elemento. in caso contrario FALSE.
 
-## <a name="a-nametexta-icommanduitext"></a><a name="text"></a>ICommandUI::Text 
+## <a name="text"></a>ICommandUI::Text 
 Imposta il testo dell'elemento di interfaccia utente per questo comando.
 ```
 property String^ Text;

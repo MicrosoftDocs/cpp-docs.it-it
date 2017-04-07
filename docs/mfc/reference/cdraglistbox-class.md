@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDragListBox
+- AFXCMN/CDragListBox
+- AFXCMN/CDragListBox::CDragListBox
+- AFXCMN/CDragListBox::BeginDrag
+- AFXCMN/CDragListBox::CancelDrag
+- AFXCMN/CDragListBox::Dragging
+- AFXCMN/CDragListBox::DrawInsert
+- AFXCMN/CDragListBox::Dropped
+- AFXCMN/CDragListBox::ItemFromPt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +102,7 @@ class CDragListBox : public CListBox
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxcmn.h  
   
-##  <a name="a-namebegindraga--cdraglistboxbegindrag"></a><a name="begindrag"></a>CDragListBox::BeginDrag  
+##  <a name="begindrag"></a>CDragListBox::BeginDrag  
  Chiamato dal framework quando si verifica un evento che potrebbe iniziare un'operazione di trascinamento, ad esempio premendo il pulsante sinistro del mouse.  
   
 ```  
@@ -111,7 +119,7 @@ virtual BOOL BeginDrag(CPoint pt);
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questa funzione se si vuole controllare cosa succede quando si avvia un'operazione di trascinamento. L'implementazione predefinita consente di acquisire il mouse e rimane in modalità di trascinamento fino a quando l'utente fa clic sul pulsante sinistro o destro del mouse o preme ESC, momento in cui viene annullata l'operazione di trascinamento.  
   
-##  <a name="a-namecanceldraga--cdraglistboxcanceldrag"></a><a name="canceldrag"></a>CDragListBox::CancelDrag  
+##  <a name="canceldrag"></a>CDragListBox::CancelDrag  
  Chiamato dal framework quando è stata annullata un'operazione di trascinamento.  
   
 ```  
@@ -125,14 +133,14 @@ virtual void CancelDrag(CPoint pt);
 ### <a name="remarks"></a>Note  
  Eseguire l'override della funzione per gestire qualsiasi elaborazione speciale per il controllo casella di riepilogo.  
   
-##  <a name="a-namecdraglistboxa--cdraglistboxcdraglistbox"></a><a name="cdraglistbox"></a>CDragListBox::CDragListBox  
+##  <a name="cdraglistbox"></a>CDragListBox::CDragListBox  
  Costruisce un oggetto `CDragListBox`.  
   
 ```  
 CDragListBox();
 ```  
   
-##  <a name="a-namedragginga--cdraglistboxdragging"></a><a name="dragging"></a>CDragListBox::Dragging  
+##  <a name="dragging"></a>CDragListBox::Dragging  
  Chiamato dal framework quando un elemento di casella di riepilogo viene trascinato all'interno di `CDragListBox` oggetto.  
   
 ```  
@@ -155,7 +163,7 @@ virtual UINT Dragging(CPoint pt);
 ### <a name="remarks"></a>Note  
  Il comportamento predefinito restituisce `DL_MOVECURSOR`. Eseguire l'override di questa funzione se si desidera fornire funzionalità aggiuntive.  
   
-##  <a name="a-namedrawinserta--cdraglistboxdrawinsert"></a><a name="drawinsert"></a>CDragListBox::DrawInsert  
+##  <a name="drawinsert"></a>CDragListBox::DrawInsert  
  Chiamato dal framework per creare la Guida di inserimento prima dell'elemento con l'indice indicato.  
   
 ```  
@@ -169,7 +177,7 @@ virtual void DrawInsert(int nItem);
 ### <a name="remarks"></a>Note  
  Un valore di - 1 viene cancellata la Guida di inserimento. Eseguire l'override di questa funzione per modificare l'aspetto o il comportamento della Guida di inserimento.  
   
-##  <a name="a-namedroppeda--cdraglistboxdropped"></a><a name="dropped"></a>CDragListBox::Dropped  
+##  <a name="dropped"></a>CDragListBox::Dropped  
  Chiamato dal framework quando viene eliminato un elemento all'interno di un `CDragListBox` oggetto.  
   
 ```  
@@ -188,7 +196,7 @@ virtual void Dropped(
 ### <a name="remarks"></a>Note  
  Il comportamento predefinito consente di copiare l'elemento casella di riepilogo e i relativi dati nella nuova posizione e quindi Elimina l'elemento originale. Eseguire l'override di questa funzione per personalizzare il comportamento predefinito, ad esempio abilitando le copie degli elementi di casella di elenco da trascinare in altre posizioni all'interno dell'elenco.  
   
-##  <a name="a-nameitemfrompta--cdraglistboxitemfrompt"></a><a name="itemfrompt"></a>CDragListBox::ItemFromPt  
+##  <a name="itemfrompt"></a>CDragListBox::ItemFromPt  
  Questa funzione per recuperare l'indice in base zero dell'elemento casella di elenco nella chiamata `pt`.  
   
 ```  

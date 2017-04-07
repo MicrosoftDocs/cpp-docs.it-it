@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSyncObject
+- AFXMT/CSyncObject
+- AFXMT/CSyncObject::CSyncObject
+- AFXMT/CSyncObject::Lock
+- AFXMT/CSyncObject::Unlock
+- AFXMT/CSyncObject::m_hObject
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +94,7 @@ class CSyncObject : public CObject
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxmt. h  
   
-##  <a name="a-namecsyncobjecta--csyncobjectcsyncobject"></a><a name="csyncobject"></a>CSyncObject::CSyncObject  
+##  <a name="csyncobject"></a>CSyncObject::CSyncObject  
  Costruisce un oggetto di sincronizzazione con il nome fornito.  
   
 ```  
@@ -101,7 +106,7 @@ virtual ~CSyncObject();
  `pstrName`  
  Nome dell'oggetto. Se **NULL**, *pstrName* sarà null.  
   
-##  <a name="a-namelocka--csyncobjectlock"></a><a name="lock"></a>CSyncObject::Lock  
+##  <a name="lock"></a>CSyncObject::Lock  
  Chiamare questa funzione per ottenere l'accesso alla risorsa controllata dall'oggetto di sincronizzazione.  
   
 ```  
@@ -118,14 +123,14 @@ virtual BOOL Lock(DWORD dwTimeout = INFINITE);
 ### <a name="remarks"></a>Note  
  Se l'oggetto di sincronizzazione viene segnalato, `Lock` restituirà correttamente e il thread appartiene a questo punto l'oggetto. Se l'oggetto di sincronizzazione è impostato su non segnalato (non disponibile), `Lock` attenderà per l'oggetto di sincronizzazione vengano segnalati fino al numero di millisecondi specificato nella *dwTimeOut* parametro. Se l'oggetto di sincronizzazione non è stato segnalato entro il periodo di tempo specificato `Lock` restituisce un errore.  
   
-##  <a name="a-namemhobjecta--csyncobjectmhobject"></a><a name="m_hobject"></a>CSyncObject::m_hObject  
+##  <a name="m_hobject"></a>CSyncObject::m_hObject  
  L'handle all'oggetto sottostante per la sincronizzazione.  
   
 ```  
 HANDLE m_hObject;  
 ```  
   
-##  <a name="a-nameoperatorhandlea--csyncobjectoperator-handle"></a><a name="operator_handle"></a>CSyncObject::operator HANDLE  
+##  <a name="operator_handle"></a>CSyncObject::operator HANDLE  
  Utilizzare questo operatore per ottenere l'handle di `CSyncObject` oggetto.  
   
 ```  
@@ -138,7 +143,7 @@ operator HANDLE() const;
 ### <a name="remarks"></a>Note  
  È possibile utilizzare l'handle per chiamare direttamente le API di Windows.  
   
-##  <a name="a-nameunlocka--csyncobjectunlock"></a><a name="unlock"></a>CSyncObject::Unlock  
+##  <a name="unlock"></a>CSyncObject::Unlock  
  La dichiarazione di `Unlock` senza parametri è una funzione virtuale pura e deve essere sottoposto a override da tutte le classi che derivano da `CSyncObject`.  
   
 ```  

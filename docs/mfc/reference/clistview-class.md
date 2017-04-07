@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CListView
+- AFXCVIEW/CListView
+- AFXCVIEW/CListView::CListView
+- AFXCVIEW/CListView::GetListCtrl
+- AFXCVIEW/CListView::RemoveImageList
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,14 +92,14 @@ class CListView : public CCtrlView
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxcview.h  
   
-##  <a name="a-nameclistviewa--clistviewclistview"></a><a name="clistview"></a>CListView::CListView  
+##  <a name="clistview"></a>CListView::CListView  
  Costruisce un oggetto `CListView`.  
   
 ```  
 CListView();
 ```  
   
-##  <a name="a-namegetlistctrla--clistviewgetlistctrl"></a><a name="getlistctrl"></a>CListView::GetListCtrl  
+##  <a name="getlistctrl"></a>CListView::GetListCtrl  
  Chiamare questa funzione membro per ottenere un riferimento al controllo elenco associato alla visualizzazione.  
   
 ```  
@@ -108,7 +112,7 @@ CListCtrl& GetListCtrl() const;
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCListView&#7;](../../atl/reference/codesnippet/cpp/clistview-class_1.cpp)]  
   
-##  <a name="a-nameremoveimagelista--clistviewremoveimagelist"></a><a name="removeimagelist"></a>CListView::RemoveImageList  
+##  <a name="removeimagelist"></a>CListView::RemoveImageList  
  Rimuove l'elenco di immagini specificato dalla visualizzazione elenco.  
   
 ```  

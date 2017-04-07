@@ -10,6 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonLinkCtrl
+- AFXRIBBONLINKCTRL/CMFCRibbonLinkCtrl
+- AFXRIBBONLINKCTRL/CMFCRibbonLinkCtrl::CMFCRibbonLinkCtrl
+- AFXRIBBONLINKCTRL/CMFCRibbonLinkCtrl::CopyFrom
+- AFXRIBBONLINKCTRL/CMFCRibbonLinkCtrl::GetCompactSize
+- AFXRIBBONLINKCTRL/CMFCRibbonLinkCtrl::GetLink
+- AFXRIBBONLINKCTRL/CMFCRibbonLinkCtrl::GetRegularSize
+- AFXRIBBONLINKCTRL/CMFCRibbonLinkCtrl::GetToolTipText
+- AFXRIBBONLINKCTRL/CMFCRibbonLinkCtrl::IsDrawTooltipImage
+- AFXRIBBONLINKCTRL/CMFCRibbonLinkCtrl::OnDraw
+- AFXRIBBONLINKCTRL/CMFCRibbonLinkCtrl::OnDrawMenuImage
+- AFXRIBBONLINKCTRL/CMFCRibbonLinkCtrl::OnMouseMove
+- AFXRIBBONLINKCTRL/CMFCRibbonLinkCtrl::OnSetIcon
+- AFXRIBBONLINKCTRL/CMFCRibbonLinkCtrl::OpenLink
+- AFXRIBBONLINKCTRL/CMFCRibbonLinkCtrl::SetLink
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +98,7 @@ class CMFCRibbonLinkCtrl : public CMFCRibbonButton
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxRibbonLinkCtrl.h  
   
-##  <a name="a-namecmfcribbonlinkctrla--cmfcribbonlinkctrlcmfcribbonlinkctrl"></a><a name="cmfcribbonlinkctrl"></a>CMFCRibbonLinkCtrl::CMFCRibbonLinkCtrl  
+##  <a name="cmfcribbonlinkctrl"></a>CMFCRibbonLinkCtrl::CMFCRibbonLinkCtrl  
  Costruisce e Inizializza un [CMFCRibbonLinkCtrl](../../mfc/reference/cmfcribbonlinkctrl-class.md) oggetto.  
   
 ```  
@@ -109,7 +123,7 @@ CMFCRibbonLinkCtrl(
   
  [!code-cpp[NVC_MFC_RibbonGadgets n.&1;](../../mfc/reference/codesnippet/cpp/cmfcribbonlinkctrl-class_1.cpp)]  
   
-##  <a name="a-namecopyfroma--cmfcribbonlinkctrlcopyfrom"></a><a name="copyfrom"></a>CMFCRibbonLinkCtrl::CopyFrom  
+##  <a name="copyfrom"></a>CMFCRibbonLinkCtrl::CopyFrom  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -121,7 +135,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetcompactsizea--cmfcribbonlinkctrlgetcompactsize"></a><a name="getcompactsize"></a>CMFCRibbonLinkCtrl::GetCompactSize  
+##  <a name="getcompactsize"></a>CMFCRibbonLinkCtrl::GetCompactSize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -135,7 +149,7 @@ virtual CSize GetCompactSize(CDC* pDC);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetlinka--cmfcribbonlinkctrlgetlink"></a><a name="getlink"></a>CMFCRibbonLinkCtrl::GetLink  
+##  <a name="getlink"></a>CMFCRibbonLinkCtrl::GetLink  
  Restituisce il valore del collegamento ipertestuale.  
   
 ```  
@@ -147,7 +161,7 @@ LPCTSTR GetLink() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetregularsizea--cmfcribbonlinkctrlgetregularsize"></a><a name="getregularsize"></a>CMFCRibbonLinkCtrl::GetRegularSize  
+##  <a name="getregularsize"></a>CMFCRibbonLinkCtrl::GetRegularSize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -161,7 +175,7 @@ virtual CSize GetRegularSize(CDC* pDC);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegettooltiptexta--cmfcribbonlinkctrlgettooltiptext"></a><a name="gettooltiptext"></a>CMFCRibbonLinkCtrl::GetToolTipText  
+##  <a name="gettooltiptext"></a>CMFCRibbonLinkCtrl::GetToolTipText  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -172,7 +186,7 @@ virtual CString GetToolTipText() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawmenuimagea--cmfcribbonlinkctrlondrawmenuimage"></a><a name="ondrawmenuimage"></a>CMFCRibbonLinkCtrl::OnDrawMenuImage  
+##  <a name="ondrawmenuimage"></a>CMFCRibbonLinkCtrl::OnDrawMenuImage  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -187,7 +201,7 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameisdrawtooltipimagea--cmfcribbonlinkctrlisdrawtooltipimage"></a><a name="isdrawtooltipimage"></a>CMFCRibbonLinkCtrl::IsDrawTooltipImage  
+##  <a name="isdrawtooltipimage"></a>CMFCRibbonLinkCtrl::IsDrawTooltipImage  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -198,7 +212,7 @@ virtual BOOL IsDrawTooltipImage() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameondrawa--cmfcribbonlinkctrlondraw"></a><a name="ondraw"></a>CMFCRibbonLinkCtrl::OnDraw  
+##  <a name="ondraw"></a>CMFCRibbonLinkCtrl::OnDraw  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -210,7 +224,7 @@ virtual void OnDraw(CDC* pDC);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonmousemovea--cmfcribbonlinkctrlonmousemove"></a><a name="onmousemove"></a>CMFCRibbonLinkCtrl::OnMouseMove  
+##  <a name="onmousemove"></a>CMFCRibbonLinkCtrl::OnMouseMove  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -222,7 +236,7 @@ virtual void OnMouseMove(CPoint point);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonseticona--cmfcribbonlinkctrlonseticon"></a><a name="onseticon"></a>CMFCRibbonLinkCtrl::OnSetIcon  
+##  <a name="onseticon"></a>CMFCRibbonLinkCtrl::OnSetIcon  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -231,7 +245,7 @@ virtual void OnSetIcon();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameopenlinka--cmfcribbonlinkctrlopenlink"></a><a name="openlink"></a>CMFCRibbonLinkCtrl::OpenLink  
+##  <a name="openlink"></a>CMFCRibbonLinkCtrl::OpenLink  
  Apre la pagina Web specificata nel collegamento ipertestuale.  
   
 ```  
@@ -244,7 +258,7 @@ BOOL OpenLink();
 ### <a name="remarks"></a>Note  
  Verrà visualizzata una pagina web utilizzando il collegamento ipertestuale associato di `CMFCRibbonLinkCtrl` oggetto.  
   
-##  <a name="a-namesetlinka--cmfcribbonlinkctrlsetlink"></a><a name="setlink"></a>CMFCRibbonLinkCtrl::SetLink  
+##  <a name="setlink"></a>CMFCRibbonLinkCtrl::SetLink  
  Imposta il valore del collegamento ipertestuale.  
   
 ```  

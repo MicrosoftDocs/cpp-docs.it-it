@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleInsertDialog
+- AFXODLGS/COleInsertDialog
+- AFXODLGS/COleInsertDialog::COleInsertDialog
+- AFXODLGS/COleInsertDialog::CreateItem
+- AFXODLGS/COleInsertDialog::DoModal
+- AFXODLGS/COleInsertDialog::GetClassID
+- AFXODLGS/COleInsertDialog::GetDrawAspect
+- AFXODLGS/COleInsertDialog::GetIconicMetafile
+- AFXODLGS/COleInsertDialog::GetPathName
+- AFXODLGS/COleInsertDialog::GetSelectionType
+- AFXODLGS/COleInsertDialog::m_io
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -105,7 +115,7 @@ class COleInsertDialog : public COleDialog
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxodlgs. h  
   
-##  <a name="a-namecoleinsertdialoga--coleinsertdialogcoleinsertdialog"></a><a name="coleinsertdialog"></a>COleInsertDialog::COleInsertDialog  
+##  <a name="coleinsertdialog"></a>COleInsertDialog::COleInsertDialog  
  Questa funzione crea solo un `COleInsertDialog` oggetto.  
   
 ```  
@@ -138,7 +148,7 @@ COleInsertDialog (
 ### <a name="remarks"></a>Note  
  Per visualizzare la finestra di dialogo, chiamare il [DoModal](#domodal) (funzione).  
   
-##  <a name="a-namecreateitema--coleinsertdialogcreateitem"></a><a name="createitem"></a>COleInsertDialog::CreateItem  
+##  <a name="createitem"></a>COleInsertDialog::CreateItem  
  Chiamare questa funzione per creare un oggetto di tipo [COleClientItem](../../mfc/reference/coleclientitem-class.md) solo se [DoModal](#domodal) restituisce **IDOK**.  
   
 ```  
@@ -155,7 +165,7 @@ BOOL CreateItem(COleClientItem* pItem);
 ### <a name="remarks"></a>Note  
  È necessario allocare il `COleClientItem` dell'oggetto prima di poter chiamare questa funzione.  
   
-##  <a name="a-namedomodala--coleinsertdialogdomodal"></a><a name="domodal"></a>COleInsertDialog::DoModal  
+##  <a name="domodal"></a>COleInsertDialog::DoModal  
  Chiamare questa funzione per visualizzare la finestra di dialogo di inserimento oggetto OLE.  
   
 ```  
@@ -191,7 +201,7 @@ INT_PTR
   
  Se `DoModal` restituisce IDOK, è possibile chiamare altri membri funzioni per recuperare le impostazioni o input informazioni nella finestra di dialogo dall'utente.  
   
-##  <a name="a-namegetclassida--coleinsertdialoggetclassid"></a><a name="getclassid"></a>COleInsertDialog::GetClassID  
+##  <a name="getclassid"></a>COleInsertDialog::GetClassID  
  Chiamare questa funzione per ottenere il **CLSID** associato l'elemento selezionato solo se [DoModal](#domodal) restituisce **IDOK** e il tipo di selezione è **COleInsertDialog::createNewItem**.  
   
 ```  
@@ -204,7 +214,7 @@ REFCLSID GetClassID() const;
 ### <a name="remarks"></a>Note  
  Per ulteriori informazioni, vedere [chiave CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetdrawaspecta--coleinsertdialoggetdrawaspect"></a><a name="getdrawaspect"></a>COleInsertDialog::GetDrawAspect  
+##  <a name="getdrawaspect"></a>COleInsertDialog::GetDrawAspect  
  Chiamare questa funzione per determinare se l'utente sceglie di visualizzare l'elemento selezionato come icona.  
   
 ```  
@@ -223,7 +233,7 @@ DVASPECT GetDrawAspect() const;
   
  Per ulteriori informazioni sulla creazione di aspetto, vedere [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) nella struttura dei dati di [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegeticonicmetafilea--coleinsertdialoggeticonicmetafile"></a><a name="geticonicmetafile"></a>COleInsertDialog::GetIconicMetafile  
+##  <a name="geticonicmetafile"></a>COleInsertDialog::GetIconicMetafile  
  Chiamare questa funzione per ottenere un handle per il metafile che contiene l'aspetto delle icone dell'elemento selezionato.  
   
 ```  
@@ -233,7 +243,7 @@ HGLOBAL GetIconicMetafile() const;
 ### <a name="return-value"></a>Valore restituito  
  L'handle del metafile contenente l'aspetto delle icone dell'elemento selezionato, se la casella di controllo Mostra come icona è stata selezionata quando è stata chiusa la finestra di dialogo scegliendo **OK**; in caso contrario **NULL**.  
   
-##  <a name="a-namegetpathnamea--coleinsertdialoggetpathname"></a><a name="getpathname"></a>COleInsertDialog::GetPathName  
+##  <a name="getpathname"></a>COleInsertDialog::GetPathName  
  Chiamare questa funzione per ottenere il percorso completo del solo se file selezionato [DoModal](#domodal) restituisce **IDOK** e il tipo di selezione non **COleInsertDialog::createNewItem**.  
   
 ```  
@@ -243,7 +253,7 @@ CString GetPathName() const;
 ### <a name="return-value"></a>Valore restituito  
  Il percorso completo del file selezionato nella finestra di dialogo. Se il tipo di selezione è `createNewItem`, questa funzione restituisce un inutile `CString` in modalità di rilascio o genera un'asserzione in modalità debug.  
   
-##  <a name="a-namegetselectiontypea--coleinsertdialoggetselectiontype"></a><a name="getselectiontype"></a>COleInsertDialog::GetSelectionType  
+##  <a name="getselectiontype"></a>COleInsertDialog::GetSelectionType  
  Chiamare questa funzione per ottenere il tipo di selezione scelto quando è stata chiusa la finestra di dialogo Inserisci oggetto scegliendo **OK**.  
   
 ```  
@@ -256,17 +266,13 @@ UINT GetSelectionType() const;
 ### <a name="remarks"></a>Note  
  Vengono specificati i valori di tipo restituito per il **selezione** enumerazione tipo dichiarato nella `COleInsertDialog` classe.  
   
- `enum Selection`  
-  
- `{`  
-  
- `createNewItem,`  
-  
- `insertFromFile,`  
-  
- `linkToFile`  
-  
- `};`  
+```  
+enum Selection {
+    createNewItem,
+    insertFromFile,
+    linkToFile
+    };  
+```  
   
  Seguono brevi descrizioni dei valori seguenti:  
   
@@ -276,7 +282,7 @@ UINT GetSelectionType() const;
   
 - **COleInsertDialog::linkToFile** è stato selezionato il pulsante di opzione di creazione da File ed è stata selezionata la casella di controllo di collegamento.  
   
-##  <a name="a-namemioa--coleinsertdialogmio"></a><a name="m_io"></a>COleInsertDialog::m_io  
+##  <a name="m_io"></a>COleInsertDialog::m_io  
  Struttura di tipo **OLEUIINSERTOBJECT** utilizzato per controllare il comportamento della finestra di dialogo Inserisci oggetto.  
   
 ```  

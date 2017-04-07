@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::improper_scheduler_attach
+- improper_scheduler_attach
+- CONCRT/concurrency::improper_scheduler_attach
+- CONCRT/concurrency::improper_scheduler_attach::improper_scheduler_attach
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 57649ddf3662a4610561ec0e109e795985450b9d
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: eb112237f7a6abe99bb5462dec171dc38be3e24d
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="improperschedulerattach-class"></a>Classe improper_scheduler_attach
@@ -54,7 +56,7 @@ class improper_scheduler_attach : public std::exception;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore improper_scheduler_attach](#ctor)|Di overload. Costruisce un oggetto `improper_scheduler_attach`.|  
+|[improper_scheduler_attach](#ctor)|Di overload. Costruisce un oggetto `improper_scheduler_attach`.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `exception`  
@@ -66,7 +68,7 @@ class improper_scheduler_attach : public std::exception;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="a-namectora-improperschedulerattach"></a><a name="ctor"></a>improper_scheduler_attach 
+##  <a name="ctor"></a>improper_scheduler_attach 
 
  Costruisce un oggetto `improper_scheduler_attach`.  
   
@@ -82,5 +84,5 @@ improper_scheduler_attach() throw();
   
 ## <a name="see-also"></a>Vedere anche  
  [concorrenza Namespace](concurrency-namespace.md)   
- [Scheduler (classe)](scheduler-class.md)
+ [Classe Scheduler](scheduler-class.md)
 

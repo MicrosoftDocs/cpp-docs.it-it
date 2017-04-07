@@ -9,8 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxrendertarget/CD2DRoundedRect
 - CD2DRoundedRect
+- AFXRENDERTARGET/CD2DRoundedRect
+- AFXRENDERTARGET/CD2DRoundedRect::CD2DRoundedRect
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -65,7 +66,7 @@ class CD2DRoundedRect : public D2D1_ROUNDED_RECT;
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxrendertarget. h  
   
-##  <a name="a-namecd2droundedrecta--cd2droundedrectcd2droundedrect"></a><a name="cd2droundedrect"></a>CD2DRoundedRect::CD2DRoundedRect  
+##  <a name="cd2droundedrect"></a>CD2DRoundedRect::CD2DRoundedRect  
  Costruisce un oggetto CD2DRoundedRect da un oggetto CD2DRectF.  
   
 ```  

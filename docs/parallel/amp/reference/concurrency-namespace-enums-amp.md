@@ -6,6 +6,11 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- amp/Concurrency::access_type
+- amp/Concurrency::queuing_mode
+dev_langs:
+- C++
 ms.assetid: 4c87457e-184f-4992-81ab-ca75e7d524ab
 caps.latest.revision: 8
 author: mikeblome
@@ -22,7 +27,7 @@ ms.lasthandoff: 02/24/2017
 |-|-|  
 |[Enumerazione access_type](#access_type)|[Enumerazione queuing_mode](#queuing_mode)|  
   
-##  <a name="a-nameaccesstypea--accesstype-enumeration"></a><a name="access_type"></a>Enumerazione access_type  
+##  <a name="access_type"></a>Enumerazione access_type  
  Tipo di enumerazione utilizzato per indicare i vari tipi di accesso ai dati.  
   
 ```  
@@ -39,7 +44,7 @@ enum access_type;
 |`access_type_write`|Condiviso. L'allocazione è accessibile nel tasto di scelta rapida e sia leggibile e scrivibile sulla CPU.|  
 
   
-##  <a name="a-namequeuingmodea--queuingmode-enumeration"></a><a name="queuing_mode"></a>Enumerazione queuing_mode  
+##  <a name="queuing_mode"></a>Enumerazione queuing_mode  
  Specifica le modalità di Accodamento messaggi sono supportate per i tasti di scelta rapida.  
   
 ```  

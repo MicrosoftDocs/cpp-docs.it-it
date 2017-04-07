@@ -10,6 +10,86 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleClientItem
+- AFXOLE/COleClientItem
+- AFXOLE/COleClientItem::COleClientItem
+- AFXOLE/COleClientItem::Activate
+- AFXOLE/COleClientItem::ActivateAs
+- AFXOLE/COleClientItem::AttachDataObject
+- AFXOLE/COleClientItem::CanCreateFromData
+- AFXOLE/COleClientItem::CanCreateLinkFromData
+- AFXOLE/COleClientItem::CanPaste
+- AFXOLE/COleClientItem::CanPasteLink
+- AFXOLE/COleClientItem::Close
+- AFXOLE/COleClientItem::ConvertTo
+- AFXOLE/COleClientItem::CopyToClipboard
+- AFXOLE/COleClientItem::CreateCloneFrom
+- AFXOLE/COleClientItem::CreateFromClipboard
+- AFXOLE/COleClientItem::CreateFromData
+- AFXOLE/COleClientItem::CreateFromFile
+- AFXOLE/COleClientItem::CreateLinkFromClipboard
+- AFXOLE/COleClientItem::CreateLinkFromData
+- AFXOLE/COleClientItem::CreateLinkFromFile
+- AFXOLE/COleClientItem::CreateNewItem
+- AFXOLE/COleClientItem::CreateStaticFromClipboard
+- AFXOLE/COleClientItem::CreateStaticFromData
+- AFXOLE/COleClientItem::Deactivate
+- AFXOLE/COleClientItem::DeactivateUI
+- AFXOLE/COleClientItem::Delete
+- AFXOLE/COleClientItem::DoDragDrop
+- AFXOLE/COleClientItem::DoVerb
+- AFXOLE/COleClientItem::Draw
+- AFXOLE/COleClientItem::GetActiveView
+- AFXOLE/COleClientItem::GetCachedExtent
+- AFXOLE/COleClientItem::GetClassID
+- AFXOLE/COleClientItem::GetClipboardData
+- AFXOLE/COleClientItem::GetDocument
+- AFXOLE/COleClientItem::GetDrawAspect
+- AFXOLE/COleClientItem::GetExtent
+- AFXOLE/COleClientItem::GetIconFromRegistry
+- AFXOLE/COleClientItem::GetIconicMetafile
+- AFXOLE/COleClientItem::GetInPlaceWindow
+- AFXOLE/COleClientItem::GetItemState
+- AFXOLE/COleClientItem::GetLastStatus
+- AFXOLE/COleClientItem::GetLinkUpdateOptions
+- AFXOLE/COleClientItem::GetType
+- AFXOLE/COleClientItem::GetUserType
+- AFXOLE/COleClientItem::IsInPlaceActive
+- AFXOLE/COleClientItem::IsLinkUpToDate
+- AFXOLE/COleClientItem::IsModified
+- AFXOLE/COleClientItem::IsOpen
+- AFXOLE/COleClientItem::IsRunning
+- AFXOLE/COleClientItem::OnActivate
+- AFXOLE/COleClientItem::OnActivateUI
+- AFXOLE/COleClientItem::OnChange
+- AFXOLE/COleClientItem::OnDeactivate
+- AFXOLE/COleClientItem::OnDeactivateUI
+- AFXOLE/COleClientItem::OnGetClipboardData
+- AFXOLE/COleClientItem::OnInsertMenus
+- AFXOLE/COleClientItem::OnRemoveMenus
+- AFXOLE/COleClientItem::OnSetMenu
+- AFXOLE/COleClientItem::OnShowControlBars
+- AFXOLE/COleClientItem::OnUpdateFrameTitle
+- AFXOLE/COleClientItem::ReactivateAndUndo
+- AFXOLE/COleClientItem::Release
+- AFXOLE/COleClientItem::Reload
+- AFXOLE/COleClientItem::Run
+- AFXOLE/COleClientItem::SetDrawAspect
+- AFXOLE/COleClientItem::SetExtent
+- AFXOLE/COleClientItem::SetHostNames
+- AFXOLE/COleClientItem::SetIconicMetafile
+- AFXOLE/COleClientItem::SetItemRects
+- AFXOLE/COleClientItem::SetLinkUpdateOptions
+- AFXOLE/COleClientItem::SetPrintDevice
+- AFXOLE/COleClientItem::UpdateLink
+- AFXOLE/COleClientItem::CanActivate
+- AFXOLE/COleClientItem::OnChangeItemPosition
+- AFXOLE/COleClientItem::OnDeactivateAndUndo
+- AFXOLE/COleClientItem::OnDiscardUndoState
+- AFXOLE/COleClientItem::OnGetClipRect
+- AFXOLE/COleClientItem::OnGetItemPosition
+- AFXOLE/COleClientItem::OnGetWindowContext
+- AFXOLE/COleClientItem::OnScrollBy
+- AFXOLE/COleClientItem::OnShowItem
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -175,7 +255,7 @@ class COleClientItem : public CDocItem
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** AFXOLE. h  
   
-##  <a name="a-nameactivatea--coleclientitemactivate"></a><a name="activate"></a>COleClientItem::Activate  
+##  <a name="activate"></a>COleClientItem::Activate  
  Chiamare questa funzione per eseguire il verbo specificato invece di [DoVerb](#doverb) in modo da poter eseguire il proprio l'elaborazione quando viene generata un'eccezione.  
   
 ```  
@@ -212,7 +292,7 @@ void Activate(
   
  Per ulteriori informazioni, vedere [IOleObject:: DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameactivateasa--coleclientitemactivateas"></a><a name="activateas"></a>COleClientItem::ActivateAs  
+##  <a name="activateas"></a>COleClientItem::ActivateAs  
  Utilizza le funzionalità di conversione di oggetti OLE per attivare l'elemento come se fosse un elemento del tipo specificato da `clsidNew`.  
   
 ```  
@@ -238,7 +318,7 @@ virtual BOOL ActivateAs(
 ### <a name="remarks"></a>Note  
  Questo viene chiamato automaticamente da [COleConvertDialog::DoConvert](../../mfc/reference/coleconvertdialog-class.md#doconvert). Non viene in genere chiamato direttamente.  
   
-##  <a name="a-nameattachdataobjecta--coleclientitemattachdataobject"></a><a name="attachdataobject"></a>COleClientItem::AttachDataObject  
+##  <a name="attachdataobject"></a>COleClientItem::AttachDataObject  
  Chiamare questa funzione per inizializzare un [COleDataObject](../../mfc/reference/coledataobject-class.md) per l'accesso ai dati dell'elemento OLE.  
   
 ```  
@@ -249,7 +329,7 @@ void AttachDataObject(COleDataObject& rDataObject) const;
  *rDataObject*  
  Fare riferimento a un `COleDataObject` oggetto che verrà inizializzata per consentire l'accesso ai dati dell'elemento OLE.  
   
-##  <a name="a-namecanactivatea--coleclientitemcanactivate"></a><a name="canactivate"></a>COleClientItem:: CanActivate  
+##  <a name="canactivate"></a>COleClientItem:: CanActivate  
  Chiamato dal framework quando l'utente richiede l'attivazione sul posto dell'elemento OLE; valore restituito della funzione determina se è consentita l'attivazione sul posto.  
   
 ```  
@@ -264,7 +344,7 @@ virtual BOOL CanActivate();
   
  Per ulteriori informazioni, vedere [IOleInPlaceSite::CanInPlaceActivate](http://msdn.microsoft.com/library/windows/desktop/ms691236) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namecancreatefromdataa--coleclientitemcancreatefromdata"></a><a name="cancreatefromdata"></a>COleClientItem::CanCreateFromData  
+##  <a name="cancreatefromdata"></a>COleClientItem::CanCreateFromData  
  Controlla se un'applicazione contenitore può creare un oggetto incorporato di determinato `COleDataObject` oggetto.  
   
 ```  
@@ -285,7 +365,7 @@ static BOOL PASCAL CanCreateFromData(const COleDataObject* pDataObject);
   
  Per ulteriori informazioni, vedere l'articolo [oggetti dati e origini dati (OLE)](../../mfc/data-objects-and-data-sources-ole.md).  
   
-##  <a name="a-namecancreatelinkfromdataa--coleclientitemcancreatelinkfromdata"></a><a name="cancreatelinkfromdata"></a>COleClientItem::CanCreateLinkFromData  
+##  <a name="cancreatelinkfromdata"></a>COleClientItem::CanCreateLinkFromData  
  Controlla se un'applicazione contenitore può creare un oggetto collegato il determinato `COleDataObject` oggetto.  
   
 ```  
@@ -306,7 +386,7 @@ static BOOL PASCAL CanCreateLinkFromData(const COleDataObject* pDataObject);
   
  Per ulteriori informazioni, vedere l'articolo [oggetti dati e origini dati (OLE)](../../mfc/data-objects-and-data-sources-ole.md).  
   
-##  <a name="a-namecanpastea--coleclientitemcanpaste"></a><a name="canpaste"></a>COleClientItem::CanPaste  
+##  <a name="canpaste"></a>COleClientItem::CanPaste  
  Chiamare questa funzione per vedere se un elemento OLE incorporato può essere incollato dagli Appunti.  
   
 ```  
@@ -319,7 +399,7 @@ static BOOL PASCAL CanPaste();
 ### <a name="remarks"></a>Note  
  Per ulteriori informazioni, vedere [OleGetClipboard](http://msdn.microsoft.com/library/windows/desktop/ms692778) e [OleQueryCreateFromData](http://msdn.microsoft.com/library/windows/desktop/ms683739) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namecanpastelinka--coleclientitemcanpastelink"></a><a name="canpastelink"></a>COleClientItem::CanPasteLink  
+##  <a name="canpastelink"></a>COleClientItem::CanPasteLink  
  Chiamare questa funzione per vedere se un elemento OLE collegato può essere incollato dagli Appunti.  
   
 ```  
@@ -332,7 +412,7 @@ static BOOL PASCAL CanPasteLink();
 ### <a name="remarks"></a>Note  
  Per ulteriori informazioni, vedere [OleGetClipboard](http://msdn.microsoft.com/library/windows/desktop/ms692778) e [OleQueryLinkFromData](http://msdn.microsoft.com/library/windows/desktop/ms690244) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameclosea--coleclientitemclose"></a><a name="close"></a>COleClientItem::Close  
+##  <a name="close"></a>COleClientItem::Close  
  Chiamare questa funzione per modificare lo stato di un elemento OLE dallo stato di esecuzione allo stato caricato, vale a dire caricato con il relativo gestore in memoria, ma con il server non è in esecuzione.  
   
 ```  
@@ -354,7 +434,7 @@ void Close(OLECLOSE dwCloseOption = OLECLOSE_SAVEIFDIRTY);
   
  Per ulteriori informazioni, vedere [IOleObject::Close](http://msdn.microsoft.com/library/windows/desktop/ms683922) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namecoleclientitema--coleclientitemcoleclientitem"></a><a name="coleclientitem"></a>COleClientItem::COleClientItem  
+##  <a name="coleclientitem"></a>COleClientItem::COleClientItem  
  Costruisce un `COleClientItem` e lo aggiunge all'insieme del documento contenitore di elementi del documento, che costruisce solo l'oggetto C++ e non esegue le operazioni di inizializzazione OLE.  
   
 ```  
@@ -390,7 +470,7 @@ COleClientItem(COleDocument* pContainerDoc = NULL);
   
 - [CreateCloneFrom](#createclonefrom)  
   
-##  <a name="a-nameconverttoa--coleclientitemconvertto"></a><a name="convertto"></a>COleClientItem::ConvertTo  
+##  <a name="convertto"></a>COleClientItem::ConvertTo  
  Chiamare questa funzione membro per convertire l'elemento nel tipo specificato da `clsidNew`.  
   
 ```  
@@ -407,7 +487,7 @@ virtual BOOL ConvertTo(REFCLSID clsidNew);
 ### <a name="remarks"></a>Note  
  Questo viene chiamato automaticamente da [classe COleConvertDialog](../../mfc/reference/coleconvertdialog-class.md). Non è necessario chiamarlo direttamente.  
   
-##  <a name="a-namecopytoclipboarda--coleclientitemcopytoclipboard"></a><a name="copytoclipboard"></a>COleClientItem::CopyToClipboard  
+##  <a name="copytoclipboard"></a>COleClientItem::CopyToClipboard  
  Chiamare questa funzione per copiare l'elemento OLE negli Appunti.  
   
 ```  
@@ -423,7 +503,7 @@ void CopyToClipboard(BOOL bIncludeLink = FALSE);
   
  Per ulteriori informazioni, vedere [OleSetClipboard](http://msdn.microsoft.com/library/windows/desktop/ms686623) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namecreateclonefroma--coleclientitemcreateclonefrom"></a><a name="createclonefrom"></a>COleClientItem::CreateCloneFrom  
+##  <a name="createclonefrom"></a>COleClientItem::CreateCloneFrom  
  Chiamare questa funzione per creare una copia dell'elemento OLE specificato.  
   
 ```  
@@ -440,7 +520,7 @@ BOOL CreateCloneFrom(const COleClientItem* pSrcItem);
 ### <a name="remarks"></a>Note  
  La copia è identica all'elemento di origine. È possibile utilizzare questa funzione per supportare le operazioni di annullamento.  
   
-##  <a name="a-namecreatefromclipboarda--coleclientitemcreatefromclipboard"></a><a name="createfromclipboard"></a>COleClientItem::CreateFromClipboard  
+##  <a name="createfromclipboard"></a>COleClientItem::CreateFromClipboard  
  Chiamare questa funzione per creare un elemento incorporato dal contenuto degli Appunti.  
   
 ```  
@@ -468,7 +548,7 @@ BOOL CreateFromClipboard(
   
  Per ulteriori informazioni, vedere [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) e [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namecreatefromdataa--coleclientitemcreatefromdata"></a><a name="createfromdata"></a>COleClientItem::CreateFromData  
+##  <a name="createfromdata"></a>COleClientItem::CreateFromData  
  Chiamare questa funzione per creare un elemento incorporato da un `COleDataObject` oggetto.  
   
 ```  
@@ -500,7 +580,7 @@ BOOL CreateFromData(
   
  Per ulteriori informazioni, vedere [OleCreateFromData](http://msdn.microsoft.com/library/windows/desktop/ms691211), [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507), e [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namecreatefromfilea--coleclientitemcreatefromfile"></a><a name="createfromfile"></a>CreateFromFile  
+##  <a name="createfromfile"></a>CreateFromFile  
  Chiamare questa funzione per creare un elemento OLE incorporato da un file.  
   
 ```  
@@ -536,7 +616,7 @@ BOOL CreateFromFile(
   
  Per ulteriori informazioni, vedere [OleCreateFromFile](http://msdn.microsoft.com/library/windows/desktop/ms690116), [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507), e [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namecreatelinkfromclipboarda--coleclientitemcreatelinkfromclipboard"></a><a name="createlinkfromclipboard"></a>COleClientItem::CreateLinkFromClipboard  
+##  <a name="createlinkfromclipboard"></a>COleClientItem::CreateLinkFromClipboard  
  Chiamare questa funzione per creare un elemento collegato dal contenuto degli Appunti.  
   
 ```  
@@ -564,7 +644,7 @@ BOOL CreateLinkFromClipboard(
   
  Per ulteriori informazioni, vedere [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) e [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namecreatelinkfromdataa--coleclientitemcreatelinkfromdata"></a><a name="createlinkfromdata"></a>COleClientItem::CreateLinkFromData  
+##  <a name="createlinkfromdata"></a>COleClientItem::CreateLinkFromData  
  Chiamare questa funzione per creare un elemento collegato da un `COleDataObject` oggetto.  
   
 ```  
@@ -596,7 +676,7 @@ BOOL CreateLinkFromData(
   
  Per ulteriori informazioni, vedere [OleCreateLinkFromData](http://msdn.microsoft.com/library/windows/desktop/ms680731), [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507), e [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namecreatelinkfromfilea--coleclientitemcreatelinkfromfile"></a><a name="createlinkfromfile"></a>COleClientItem::CreateLinkFromFile  
+##  <a name="createlinkfromfile"></a>COleClientItem::CreateLinkFromFile  
  Chiamare questa funzione per creare un elemento OLE collegato da un file.  
   
 ```  
@@ -628,7 +708,7 @@ BOOL CreateLinkFromFile(
   
  Per ulteriori informazioni, vedere [OleCreateLinkToFile](http://msdn.microsoft.com/library/windows/desktop/ms678434), [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507), e [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namecreatenewitema--coleclientitemcreatenewitem"></a><a name="createnewitem"></a>COleClientItem::CreateNewItem  
+##  <a name="createnewitem"></a>COleClientItem::CreateNewItem  
  Chiamare questa funzione per creare un elemento incorporato. Questa funzione avvia l'applicazione server che consente all'utente di creare l'elemento OLE.  
   
 ```  
@@ -660,7 +740,7 @@ BOOL CreateNewItem(
   
  Per ulteriori informazioni, vedere [OleCreate](http://msdn.microsoft.com/library/windows/desktop/ms678409), [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507), e [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namecreatestaticfromclipboarda--coleclientitemcreatestaticfromclipboard"></a><a name="createstaticfromclipboard"></a>COleClientItem::CreateStaticFromClipboard  
+##  <a name="createstaticfromclipboard"></a>COleClientItem::CreateStaticFromClipboard  
  Chiamare questa funzione per creare un elemento statico dal contenuto degli Appunti.  
   
 ```  
@@ -688,7 +768,7 @@ BOOL CreateStaticFromClipboard(
   
  Per ulteriori informazioni, vedere [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) e [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namecreatestaticfromdataa--coleclientitemcreatestaticfromdata"></a><a name="createstaticfromdata"></a>COleClientItem::CreateStaticFromData  
+##  <a name="createstaticfromdata"></a>COleClientItem::CreateStaticFromData  
  Chiamare questa funzione per creare un elemento statico da un `COleDataObject` oggetto.  
   
 ```  
@@ -722,7 +802,7 @@ BOOL CreateStaticFromData(
   
  Per ulteriori informazioni, vedere [OleCreateStaticFromData](http://msdn.microsoft.com/library/windows/desktop/ms687290), [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507), e [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namedeactivatea--coleclientitemdeactivate"></a><a name="deactivate"></a>COleClientItem::Deactivate  
+##  <a name="deactivate"></a>COleClientItem::Deactivate  
  Chiamare questa funzione per disattivare l'elemento OLE e liberare qualsiasi risorsa associata.  
   
 ```  
@@ -736,7 +816,7 @@ void Deactivate();
   
  Per ulteriori informazioni, vedere [IOleInPlaceObject::InPlaceDeactivate](http://msdn.microsoft.com/library/windows/desktop/ms679700) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namedeactivateuia--coleclientitemdeactivateui"></a><a name="deactivateui"></a>COleClientItem::DeactivateUI  
+##  <a name="deactivateui"></a>COleClientItem::DeactivateUI  
  Chiamare questa funzione quando l'utente disattiva un elemento che è stato attivato sul posto.  
   
 ```  
@@ -750,7 +830,7 @@ void DeactivateUI();
   
  Per ulteriori informazioni, vedere [IOleInPlaceObject::InPlaceDeactivate](http://msdn.microsoft.com/library/windows/desktop/ms679700) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namedeletea--coleclientitemdelete"></a><a name="delete"></a>COleClientItem::Delete  
+##  <a name="delete"></a>COleClientItem::Delete  
  Chiamare questa funzione per eliminare l'elemento OLE dal documento contenitore.  
   
 ```  
@@ -764,7 +844,7 @@ void Delete(BOOL bAutoDelete = TRUE);
 ### <a name="remarks"></a>Note  
  Questa funzione chiama la [versione](#release) funzione membro, che a sua volta consente di eliminare l'oggetto C++ per l'elemento, in modo permanente la rimozione dell'elemento OLE dal documento. Se l'elemento OLE è incorporato, i dati nativi per l'elemento viene eliminati. Chiude sempre un server in esecuzione. Pertanto, se l'elemento è un collegamento open, questa funzione chiude.  
   
-##  <a name="a-namedodragdropa--coleclientitemdodragdrop"></a><a name="dodragdrop"></a>COleClientItem::DoDragDrop  
+##  <a name="dodragdrop"></a>COleClientItem::DoDragDrop  
  Chiamare il `DoDragDrop` funzione membro per eseguire un'operazione di trascinamento e rilascio.  
   
 ```  
@@ -808,7 +888,7 @@ DROPEFFECT DoDragDrop(
   
  Per ulteriori informazioni su come trascinare ritardato informazioni vengono archiviate nel Registro di sistema o. File INI, vedere [WriteProfileString](http://msdn.microsoft.com/library/windows/desktop/ms725504) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namedoverba--coleclientitemdoverb"></a><a name="doverb"></a>COleClientItem::DoVerb  
+##  <a name="doverb"></a>COleClientItem::DoVerb  
  Chiamare `DoVerb` per eseguire il verbo specificato.  
   
 ```  
@@ -846,7 +926,7 @@ virtual BOOL DoVerb(
   
  Se il verbo primario è Edit e viene specificato zero nel `nVerb` parametro, l'applicazione server viene avviato per consentire l'elemento OLE da modificare. Se l'applicazione contenitore supporta l'attivazione sul posto, la modifica può essere eseguita sul posto. Se il contenitore non supporta l'attivazione sul posto (o se viene specificato il verbo Open), il server viene avviato in una finestra separata e la modifica può essere eseguita non esiste. In genere, quando l'utente dell'applicazione contenitore fa doppio clic l'elemento OLE, il valore per il verbo primario nel `nVerb` parametro determina quale azione può richiedere all'utente. Tuttavia, se il server supporta solo un'azione, è necessario tale azione, indipendentemente dalla specificata nel valore di `nVerb` parametro.  
   
-##  <a name="a-namedrawa--coleclientitemdraw"></a><a name="draw"></a>COleClientItem::Draw  
+##  <a name="draw"></a>COleClientItem::Draw  
  Chiamare questa funzione per disegnare l'elemento OLE nel rettangolo di delimitazione specificato utilizzando il contesto di dispositivo specificato.  
   
 ```  
@@ -878,7 +958,7 @@ BOOL Draw(
   
  Per ulteriori informazioni, vedere [IViewObject](http://msdn.microsoft.com/library/windows/desktop/ms688655) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetactiveviewa--coleclientitemgetactiveview"></a><a name="getactiveview"></a>COleClientItem::GetActiveView  
+##  <a name="getactiveview"></a>COleClientItem::GetActiveView  
  Restituisce la vista in cui l'elemento è attivato sul posto.  
   
 ```  
@@ -888,7 +968,7 @@ CView* GetActiveView() const;
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore alla visualizzazione. in caso contrario **NULL** se l'elemento non è attivato sul posto.  
   
-##  <a name="a-namegetcachedextenta--coleclientitemgetcachedextent"></a><a name="getcachedextent"></a>COleClientItem::GetCachedExtent  
+##  <a name="getcachedextent"></a>COleClientItem::GetCachedExtent  
  Chiamare questa funzione per recuperare la dimensione dell'elemento OLE.  
   
 ```  
@@ -914,7 +994,7 @@ BOOL GetCachedExtent(
   
  Per ulteriori informazioni, vedere [IViewObject2::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms684032) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetclassida--coleclientitemgetclassid"></a><a name="getclassid"></a>COleClientItem::GetClassID  
+##  <a name="getclassid"></a>COleClientItem::GetClassID  
  Restituisce l'ID di classe dell'elemento nella memoria puntata da `pClassID`.  
   
 ```  
@@ -930,7 +1010,7 @@ void GetClassID(CLSID* pClassID) const;
   
  Per ulteriori informazioni, vedere [IPersist:: GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetclipboarddataa--coleclientitemgetclipboarddata"></a><a name="getclipboarddata"></a>COleClientItem::GetClipboardData  
+##  <a name="getclipboarddata"></a>COleClientItem::GetClipboardData  
  Chiamare questa funzione per ottenere un `COleDataSource` oggetto contenente tutti i dati che potrebbero essere inseriti negli Appunti da una chiamata al [CopyToClipboard](#copytoclipboard) funzione membro.  
   
 ```  
@@ -957,7 +1037,7 @@ void GetClipboardData(
 ### <a name="remarks"></a>Note  
  `GetClipboardData`viene chiamato come l'implementazione predefinita di [OnGetClipboardData](#ongetclipboarddata). Eseguire l'override `OnGetClipboardData` solo se si desidera offrire formati di dati oltre a quelli offerti da `CopyToClipboard`. Inserire tali formati nel `COleDataSource` oggetto prima o dopo la chiamata `CopyToClipboard`, quindi passare il `COleDataSource` dell'oggetto per il [SetClipboard](../../mfc/reference/coledatasource-class.md#setclipboard) (funzione). Ad esempio, se si desidera la posizione dell'elemento OLE nel documento relativo contenitore per allegarlo negli Appunti, si potrebbe definire un formato per il passaggio di informazioni e posizionarlo nel `COleDataSource` prima di chiamare `CopyToClipboard`.  
   
-##  <a name="a-namegetdocumenta--coleclientitemgetdocument"></a><a name="getdocument"></a>COleClientItem::GetDocument  
+##  <a name="getdocument"></a>COleClientItem::GetDocument  
  Chiamare questa funzione per ottenere un puntatore al documento che contiene l'elemento OLE.  
   
 ```  
@@ -970,7 +1050,7 @@ COleDocument* GetDocument() const;
 ### <a name="remarks"></a>Note  
  Questo puntatore consente l'accesso alla `COleDocument` oggetto passato come argomento per il `COleClientItem` costruttore.  
   
-##  <a name="a-namegetdrawaspecta--coleclientitemgetdrawaspect"></a><a name="getdrawaspect"></a>COleClientItem::GetDrawAspect  
+##  <a name="getdrawaspect"></a>COleClientItem::GetDrawAspect  
  Chiamare il `GetDrawAspect` funzione membro per determinare la corrente "aspetto", o la vista dell'elemento.  
   
 ```  
@@ -983,7 +1063,7 @@ DVASPECT GetDrawAspect() const;
 ### <a name="remarks"></a>Note  
  L'aspetto specifica come l'elemento da sottoporre a rendering.  
   
-##  <a name="a-namegetextenta--coleclientitemgetextent"></a><a name="getextent"></a>COleClientItem::GetExtent  
+##  <a name="getextent"></a>COleClientItem::GetExtent  
  Chiamare questa funzione per recuperare la dimensione dell'elemento OLE.  
   
 ```  
@@ -1010,7 +1090,7 @@ BOOL GetExtent(
   
  Per ulteriori informazioni, vedere [IOleObject::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms692325) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegeticonfromregistrya--coleclientitemgeticonfromregistry"></a><a name="geticonfromregistry"></a>COleClientItem::GetIconFromRegistry  
+##  <a name="geticonfromregistry"></a>COleClientItem::GetIconFromRegistry  
  Chiamare questa funzione membro per recuperare un handle per una risorsa icona associata al server di un particolare CLSID.  
   
 ```  
@@ -1029,7 +1109,7 @@ static HICON GetIconFromRegistry(CLSID& clsid);
 ### <a name="remarks"></a>Note  
  Questa funzione membro non verrà avviato il server o ottenere un'icona in modo dinamico, anche se il server è già in esecuzione. Invece, questa funzione membro apre l'immagine eseguibile del server e recupera l'icona statico associato al server in cui è stata registrata.  
   
-##  <a name="a-namegeticonicmetafilea--coleclientitemgeticonicmetafile"></a><a name="geticonicmetafile"></a>COleClientItem::GetIconicMetafile  
+##  <a name="geticonicmetafile"></a>COleClientItem::GetIconicMetafile  
  Recupera il metafile utilizzato per disegnare l'icona dell'elemento.  
   
 ```  
@@ -1044,7 +1124,7 @@ HGLOBAL GetIconicMetafile();
   
  Questa funzione chiama inoltre [SetIconicMetafile](#seticonicmetafile) per memorizzare nella cache del metafile per un utilizzo successivo.  
   
-##  <a name="a-namegetinplacewindowa--coleclientitemgetinplacewindow"></a><a name="getinplacewindow"></a>COleClientItem::GetInPlaceWindow  
+##  <a name="getinplacewindow"></a>COleClientItem::GetInPlaceWindow  
  Chiamare il `GetInPlaceWindow` funzione membro per ottenere un puntatore alla finestra in cui l'elemento è stato aperto per la modifica sul posto.  
   
 ```  
@@ -1057,7 +1137,7 @@ CWnd* GetInPlaceWindow();
 ### <a name="remarks"></a>Note  
  Questa funzione deve essere chiamata solo per gli elementi che sono attivi sul posto.  
   
-##  <a name="a-namegetitemstatea--coleclientitemgetitemstate"></a><a name="getitemstate"></a>COleClientItem::GetItemState  
+##  <a name="getitemstate"></a>COleClientItem::GetItemState  
  Chiamare questa funzione per ottenere lo stato corrente dell'elemento OLE.  
   
 ```  
@@ -1072,7 +1152,7 @@ UINT GetItemState() const;
   
  Per ulteriori informazioni, vedere l'articolo [contenitori: stati Client-Item](../../mfc/containers-client-item-states.md).  
   
-##  <a name="a-namegetlaststatusa--coleclientitemgetlaststatus"></a><a name="getlaststatus"></a>COleClientItem::GetLastStatus  
+##  <a name="getlaststatus"></a>COleClientItem::GetLastStatus  
  Restituisce il codice di stato dell'ultima operazione OLE.  
   
 ```  
@@ -1087,7 +1167,7 @@ SCODE GetLastStatus() const;
   
  Per ulteriori informazioni su `SCODE`, vedere [struttura di codici di errore COM](http://msdn.microsoft.com/library/windows/desktop/ms690088) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] documentazione.  
   
-##  <a name="a-namegetlinkupdateoptionsa--coleclientitemgetlinkupdateoptions"></a><a name="getlinkupdateoptions"></a>COleClientItem::GetLinkUpdateOptions  
+##  <a name="getlinkupdateoptions"></a>COleClientItem::GetLinkUpdateOptions  
  Chiamare questa funzione per ottenere il valore corrente dell'opzione di aggiornamento di collegamento per l'elemento OLE.  
   
 ```  
@@ -1108,7 +1188,7 @@ OLEUPDATE GetLinkUpdateOptions();
   
  Per ulteriori informazioni, vedere [IOleLink::GetUpdateOptions](http://msdn.microsoft.com/library/windows/desktop/ms680100) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegettypea--coleclientitemgettype"></a><a name="gettype"></a>COleClientItem::GetType  
+##  <a name="gettype"></a>COleClientItem::GetType  
  Chiamare questa funzione per determinare se l'elemento OLE incorporato o collegato o static.  
   
 ```  
@@ -1124,7 +1204,7 @@ OLE_OBJTYPE GetType() const;
   
 - `OT_STATIC`L'elemento OLE è statico, ovvero, contiene solo dati di presentazione, dati non nativi e pertanto non può essere modificato.  
   
-##  <a name="a-namegetusertypea--coleclientitemgetusertype"></a><a name="getusertype"></a>COleClientItem::GetUserType  
+##  <a name="getusertype"></a>COleClientItem::GetUserType  
  Chiamare questa funzione per ottenere la stringa visibile all'utente che descrive il tipo dell'elemento OLE, ad esempio "Documenti di Word".  
   
 ```  
@@ -1153,7 +1233,7 @@ void GetUserType(
   
  Per ulteriori informazioni, vedere [IOleObject::GetUserType](http://msdn.microsoft.com/library/windows/desktop/ms688643) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameisinplaceactivea--coleclientitemisinplaceactive"></a><a name="isinplaceactive"></a>COleClientItem::IsInPlaceActive  
+##  <a name="isinplaceactive"></a>COleClientItem::IsInPlaceActive  
  Chiamare questa funzione per verificare se l'elemento OLE è attivo sul posto.  
   
 ```  
@@ -1166,7 +1246,7 @@ BOOL IsInPlaceActive() const;
 ### <a name="remarks"></a>Note  
  È comune per eseguire una logica diversa a seconda se l'elemento viene modificato sul posto. La funzione verifica se lo stato dell'elemento corrente è uguale a uno di `activeState` o `activeUIState`.  
   
-##  <a name="a-nameislinkuptodatea--coleclientitemislinkuptodate"></a><a name="islinkuptodate"></a>COleClientItem::IsLinkUpToDate  
+##  <a name="islinkuptodate"></a>COleClientItem::IsLinkUpToDate  
  Chiamare questa funzione per verificare se l'elemento OLE è aggiornato.  
   
 ```  
@@ -1183,7 +1263,7 @@ BOOL IsLinkUpToDate() const;
   
  Per ulteriori informazioni, vedere [IOleObject::IsUpToDate](http://msdn.microsoft.com/library/windows/desktop/ms686624) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameismodifieda--coleclientitemismodified"></a><a name="ismodified"></a>COleClientItem::IsModified  
+##  <a name="ismodified"></a>COleClientItem::IsModified  
  Chiamare questa funzione per verificare se l'elemento OLE è dirty (modificato dall'ultimo salvataggio).  
   
 ```  
@@ -1196,7 +1276,7 @@ BOOL IsModified() const;
 ### <a name="remarks"></a>Note  
  Per ulteriori informazioni, vedere [IPersistStorage::IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms683910) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameisopena--coleclientitemisopen"></a><a name="isopen"></a>COleClientItem::IsOpen  
+##  <a name="isopen"></a>COleClientItem::IsOpen  
  Chiamare questa funzione per verificare se l'elemento OLE è aperto; vale a dire aperto in un'istanza dell'applicazione del server in esecuzione in una finestra separata.  
   
 ```  
@@ -1209,7 +1289,7 @@ BOOL IsOpen() const;
 ### <a name="remarks"></a>Note  
  Viene utilizzato per determinare il momento disegnare l'oggetto con un motivo di tratteggio. Un oggetto aperto deve avere un motivo a tratteggio disegnato sopra l'oggetto. È possibile utilizzare un [CRectTracker](../../mfc/reference/crecttracker-class.md) oggetto per eseguire questa operazione.  
   
-##  <a name="a-nameisrunninga--coleclientitemisrunning"></a><a name="isrunning"></a>COleClientItem::IsRunning  
+##  <a name="isrunning"></a>COleClientItem::IsRunning  
  Chiamare questa funzione per verificare se l'elemento OLE è in esecuzione; ovvero, se l'elemento è caricato e in esecuzione nell'applicazione server.  
   
 ```  
@@ -1222,7 +1302,7 @@ BOOL IsRunning() const;
 ### <a name="remarks"></a>Note  
  Per ulteriori informazioni, vedere [OleIsRunning](http://msdn.microsoft.com/library/windows/desktop/ms688705) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameonactivatea--coleclientitemonactivate"></a><a name="onactivate"></a>COleClientItem::OnActivate  
+##  <a name="onactivate"></a>COleClientItem::OnActivate  
  Chiamato dal framework per notificare l'elemento che è appena stato attivato sul posto.  
   
 ```  
@@ -1234,7 +1314,7 @@ virtual void OnActivate();
   
  L'implementazione predefinita chiama la [OnChange](#onchange) funzione membro con **OLE_CHANGEDSTATE** come parametro. Eseguire l'override di questa funzione per eseguire elaborazioni personalizzate quando un elemento diventa attiva.  
   
-##  <a name="a-nameonactivateuia--coleclientitemonactivateui"></a><a name="onactivateui"></a>COleClientItem::OnActivateUI  
+##  <a name="onactivateui"></a>COleClientItem::OnActivateUI  
  Il framework chiama `OnActivateUI` quando l'oggetto è stato attivato lo stato attivo dell'interfaccia utente.  
   
 ```  
@@ -1246,7 +1326,7 @@ virtual void OnActivateUI();
   
  L'implementazione predefinita del server sono memorizzate `HWND` per un momento successivo **GetServerWindow** chiamate.  
   
-##  <a name="a-nameonchangea--coleclientitemonchange"></a><a name="onchange"></a>COleClientItem:: OnChange  
+##  <a name="onchange"></a>COleClientItem:: OnChange  
  Chiamato dal framework quando l'utente modifica, Salva o chiude l'elemento OLE.  
   
 ```  
@@ -1277,7 +1357,7 @@ virtual void OnChange(
   
  Eseguire l'override di questa funzione per rispondere alle modifiche di stato dell'elemento OLE. In genere viene aggiornato l'aspetto dell'elemento invalida l'area in cui viene visualizzato l'elemento. Chiamare l'implementazione della classe base all'inizio della sostituzione.  
   
-##  <a name="a-nameonchangeitempositiona--coleclientitemonchangeitemposition"></a><a name="onchangeitemposition"></a>COleClientItem:: OnChangeItemPosition  
+##  <a name="onchangeitemposition"></a>COleClientItem:: OnChangeItemPosition  
  Chiamato dal framework per notificare al contenitore di entità dell'elemento OLE è stato modificato durante l'attivazione sul posto.  
   
 ```  
@@ -1296,7 +1376,7 @@ virtual BOOL OnChangeItemPosition(const CRect& rectPos);
   
  Eseguire l'override di questa funzione per applicare le regole speciali per l'operazione di ridimensionamento o spostamento. L'applicazione è scritta in MFC, questa chiamata viene generato perché il server denominato [COleServerDoc::RequestPositionChange](../../mfc/reference/coleserverdoc-class.md#requestpositionchange).  
   
-##  <a name="a-nameondeactivatea--coleclientitemondeactivate"></a><a name="ondeactivate"></a>COleClientItem::OnDeactivate  
+##  <a name="ondeactivate"></a>COleClientItem::OnDeactivate  
  Chiamato dal framework quando si esegue la transizione dallo stato attivo sul posto l'elemento OLE ( `activeState`) allo stato caricato, vale a dire che questo viene disattivato dopo l'attivazione sul posto.  
   
 ```  
@@ -1308,7 +1388,7 @@ virtual void OnDeactivate();
   
  L'implementazione predefinita chiama la [OnChange](#onchange) funzione membro con **OLE_CHANGEDSTATE** come parametro. Eseguire l'override di questa funzione per eseguire elaborazioni personalizzate quando un elemento attivo sul posto è disattivato. Ad esempio, se si supporta il comando di annullamento nell'applicazione contenitore, è possibile ignorare questa funzione per eliminare lo stato di annullamento, che indica che l'ultima operazione eseguita sull'elemento OLE non può essere annullata dopo l'elemento è disattivato.  
   
-##  <a name="a-nameondeactivateandundoa--coleclientitemondeactivateandundo"></a><a name="ondeactivateandundo"></a>COleClientItem::OnDeactivateAndUndo  
+##  <a name="ondeactivateandundo"></a>COleClientItem::OnDeactivateAndUndo  
  Chiamato dal framework quando l'utente richiama il comando Annulla dopo aver attivato l'elemento OLE sul posto.  
   
 ```  
@@ -1320,7 +1400,7 @@ virtual void OnDeactivateAndUndo();
   
  Per ulteriori informazioni, vedere [IOleInPlaceSite::DeactivateAndUndo](http://msdn.microsoft.com/library/windows/desktop/ms683743) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameondeactivateuia--coleclientitemondeactivateui"></a><a name="ondeactivateui"></a>COleClientItem::OnDeactivateUI  
+##  <a name="ondeactivateui"></a>COleClientItem::OnDeactivateUI  
  Chiamato quando l'utente disattiva un elemento che è stato attivato sul posto.  
   
 ```  
@@ -1336,7 +1416,7 @@ virtual void OnDeactivateUI(BOOL bUndoable);
   
  Se `bUndoable` è **FALSE**, il contenitore deve disattivare il comando Annulla, eliminando in effetti lo stato di annullamento del contenitore, perché si indica che l'ultima operazione eseguita dal server non è annullabile.  
   
-##  <a name="a-nameondiscardundostatea--coleclientitemondiscardundostate"></a><a name="ondiscardundostate"></a>COleClientItem::OnDiscardUndoState  
+##  <a name="ondiscardundostate"></a>COleClientItem::OnDiscardUndoState  
  Chiamato dal framework quando l'utente esegue un'azione che elimina lo stato di annullamento durante la modifica dell'elemento OLE.  
   
 ```  
@@ -1350,7 +1430,7 @@ virtual void OnDiscardUndoState();
   
  Per ulteriori informazioni, vedere [IOleInPlaceSite::DiscardUndoState](http://msdn.microsoft.com/library/windows/desktop/ms688642) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameongetclipboarddataa--coleclientitemongetclipboarddata"></a><a name="ongetclipboarddata"></a>COleClientItem::OnGetClipboardData  
+##  <a name="ongetclipboarddata"></a>COleClientItem::OnGetClipboardData  
  Chiamato dal framework per ottenere un `COleDataSource` oggetto contenente tutti i dati che potrebbero essere inseriti negli Appunti da una chiamata a uno di [CopyToClipboard](#copytoclipboard) o [DoDragDrop](#dodragdrop) funzione membro.  
   
 ```  
@@ -1376,7 +1456,7 @@ virtual COleDataSource* OnGetClipboardData(
 ### <a name="remarks"></a>Note  
  L'implementazione predefinita di questa funzione chiama [GetClipboardData](#getclipboarddata).  
   
-##  <a name="a-nameongetcliprecta--coleclientitemongetcliprect"></a><a name="ongetcliprect"></a>COleClientItem::OnGetClipRect  
+##  <a name="ongetcliprect"></a>COleClientItem::OnGetClipRect  
  Il framework chiama la `OnGetClipRect` funzione membro per ottenere le coordinate del rettangolo di ridimensionamento dell'elemento che viene modificato sul posto.  
   
 ```  
@@ -1392,7 +1472,7 @@ virtual void OnGetClipRect(CRect& rClipRect);
   
  L'implementazione predefinita restituisce semplicemente il rettangolo client della visualizzazione in cui l'elemento è attivo sul posto.  
   
-##  <a name="a-nameongetitempositiona--coleclientitemongetitemposition"></a><a name="ongetitemposition"></a>OnGetItemPosition  
+##  <a name="ongetitemposition"></a>OnGetItemPosition  
  Il framework chiama la `OnGetItemPosition` funzione membro per ottenere le coordinate dell'elemento che viene modificato sul posto.  
   
 ```  
@@ -1408,7 +1488,7 @@ virtual void OnGetItemPosition(CRect& rPosition);
   
  L'implementazione predefinita di questa funzione non esegue alcuna operazione. Le applicazioni che supportano la modifica sul posto richiedono l'implementazione.  
   
-##  <a name="a-nameongetwindowcontexta--coleclientitemongetwindowcontext"></a><a name="ongetwindowcontext"></a>COleClientItem::OnGetWindowContext  
+##  <a name="ongetwindowcontext"></a>COleClientItem::OnGetWindowContext  
  Chiamato dal framework quando un elemento viene attivato sul posto.  
   
 ```  
@@ -1440,7 +1520,7 @@ virtual BOOL OnGetWindowContext(
   
  Per ulteriori informazioni, vedere [IOleInPlaceSite::GetWindowContext](http://msdn.microsoft.com/library/windows/desktop/ms694366) e [OLEINPLACEFRAMEINFO](http://msdn.microsoft.com/library/windows/desktop/ms693737) nella struttura di [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameoninsertmenusa--coleclientitemoninsertmenus"></a><a name="oninsertmenus"></a>COleClientItem::OnInsertMenus  
+##  <a name="oninsertmenus"></a>COleClientItem::OnInsertMenus  
  Chiamato dal framework durante l'attivazione sul posto per inserire i menu dell'applicazione contenitore in un menu vuoto.  
   
 ```  
@@ -1463,7 +1543,7 @@ virtual void OnInsertMenus(
   
  Per ulteriori informazioni, vedere [IOleInPlaceFrame:: InsertMenus](http://msdn.microsoft.com/library/windows/desktop/ms683987) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameonremovemenusa--coleclientitemonremovemenus"></a><a name="onremovemenus"></a>COleClientItem::OnRemoveMenus  
+##  <a name="onremovemenus"></a>COleClientItem::OnRemoveMenus  
  Chiamato dal framework per rimuovere i menu del contenitore dal menu composito specificato al termine dell'attivazione sul posto.  
   
 ```  
@@ -1481,7 +1561,7 @@ virtual void OnRemoveMenus(CMenu* pMenuShared);
   
  Per ulteriori informazioni, vedere [IOleInPlaceFrame::RemoveMenus](http://msdn.microsoft.com/library/windows/desktop/ms688685) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameonscrollbya--coleclientitemonscrollby"></a><a name="onscrollby"></a>COleClientItem::OnScrollBy  
+##  <a name="onscrollby"></a>COleClientItem::OnScrollBy  
  Chiamato dal framework per scorrere l'elemento OLE in risposta alle richieste dal server.  
   
 ```  
@@ -1500,7 +1580,7 @@ virtual BOOL OnScrollBy(CSize sizeExtent);
   
  Per ulteriori informazioni, vedere [IOleInPlaceSite::Scroll](http://msdn.microsoft.com/library/windows/desktop/ms690291) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameonsetmenua--coleclientitemonsetmenu"></a><a name="onsetmenu"></a>COleClientItem::OnSetMenu  
+##  <a name="onsetmenu"></a>COleClientItem::OnSetMenu  
  Chiamato dal framework di due volte quando l'attivazione sul posto inizia e finisce; la prima volta per installare il menu composto e la seconda volta (con `holemenu` uguale a **NULL**) per rimuoverlo.  
   
 ```  
@@ -1525,7 +1605,7 @@ virtual void OnSetMenu(
   
  Per ulteriori informazioni, vedere [OleCreateMenuDescriptor](http://msdn.microsoft.com/library/windows/desktop/ms691415), [OleSetMenuDescriptor](http://msdn.microsoft.com/library/windows/desktop/ms692831), e [SetMenu](http://msdn.microsoft.com/library/windows/desktop/ms693713) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameonshowcontrolbarsa--coleclientitemonshowcontrolbars"></a><a name="onshowcontrolbars"></a>COleClientItem::OnShowControlBars  
+##  <a name="onshowcontrolbars"></a>COleClientItem::OnShowControlBars  
  Chiamato dal framework per mostrare e nascondere le barre di controllo dell'applicazione contenitore.  
   
 ```  
@@ -1549,7 +1629,7 @@ virtual BOOL OnShowControlBars(
   
  L'implementazione predefinita rimuove la barra degli strumenti dalla finestra cornice principale.  
   
-##  <a name="a-nameonshowitema--coleclientitemonshowitem"></a><a name="onshowitem"></a>COleClientItem::OnShowItem  
+##  <a name="onshowitem"></a>COleClientItem::OnShowItem  
  Chiamato dal framework per visualizzare l'elemento OLE, renderlo completamente visibile durante la modifica.  
   
 ```  
@@ -1559,7 +1639,7 @@ virtual void OnShowItem();
 ### <a name="remarks"></a>Note  
  Viene utilizzato quando l'applicazione contenitore supporta i collegamenti a elementi incorporati (ovvero, se è stata derivata la classe documento da [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)). Questa funzione viene chiamata durante l'attivazione sul posto o quando l'elemento OLE è un'origine di collegamento e l'utente desidera modificarlo. L'implementazione predefinita è attiva la vista prima del documento contenitore. Eseguire l'override di questa funzione per scorrere il documento in modo che l'elemento OLE è visibile.  
   
-##  <a name="a-nameonupdateframetitlea--coleclientitemonupdateframetitle"></a><a name="onupdateframetitle"></a>COleClientItem::OnUpdateFrameTitle  
+##  <a name="onupdateframetitle"></a>COleClientItem::OnUpdateFrameTitle  
  Chiamato dal framework durante l'attivazione sul posto per aggiornare una barra del titolo della finestra cornice.  
   
 ```  
@@ -1572,7 +1652,7 @@ virtual BOOL OnUpdateFrameTitle();
 ### <a name="remarks"></a>Note  
  L'implementazione predefinita non modifica il titolo della finestra cornice. Eseguire l'override di questa funzione se si desidera un titolo diverso frame per l'applicazione, ad esempio " *app server* - *elemento* in *NomeMedico*" (come "Microsoft Excel - foglio di calcolo nel REPORT. DOC"). Questa è un' sottoponibile a override.  
   
-##  <a name="a-namereactivateandundoa--coleclientitemreactivateandundo"></a><a name="reactivateandundo"></a>COleClientItem::ReactivateAndUndo  
+##  <a name="reactivateandundo"></a>COleClientItem::ReactivateAndUndo  
  Chiamare questa funzione per riattivare l'elemento OLE e annullare l'ultima operazione eseguita dall'utente durante la modifica sul posto.  
   
 ```  
@@ -1589,7 +1669,7 @@ BOOL ReactivateAndUndo();
   
  Per ulteriori informazioni, vedere [IOleInPlaceObject::ReactivateAndUndo](http://msdn.microsoft.com/library/windows/desktop/ms691372) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namereleasea--coleclientitemrelease"></a><a name="release"></a>COleClientItem::Release  
+##  <a name="release"></a>COleClientItem::Release  
  Chiamare questa funzione per liberare le risorse utilizzate dall'elemento OLE.  
   
 ```  
@@ -1605,7 +1685,7 @@ virtual void Release(OLECLOSE dwCloseOption = OLECLOSE_NOSAVE);
   
  Per ulteriori informazioni, vedere [IUnknown:: Release](http://msdn.microsoft.com/library/windows/desktop/ms682317) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namereloada--coleclientitemreload"></a><a name="reload"></a>COleClientItem::Reload  
+##  <a name="reload"></a>COleClientItem::Reload  
  Chiude e ricarica l'elemento.  
   
 ```  
@@ -1618,7 +1698,7 @@ BOOL Reload();
 ### <a name="remarks"></a>Note  
  Chiamare il `Reload` funzione dopo l'attivazione dell'elemento come un elemento di un altro tipo mediante una chiamata a [ActivateAs](#activateas).  
   
-##  <a name="a-nameruna--coleclientitemrun"></a><a name="run"></a>COleClientItem::Run  
+##  <a name="run"></a>COleClientItem::Run  
  Esegue l'applicazione associata a questo elemento.  
   
 ```  
@@ -1628,7 +1708,7 @@ void Run();
 ### <a name="remarks"></a>Note  
  Chiamare il **eseguire** funzione membro per avviare l'applicazione server prima di attivare l'elemento. Questa operazione viene eseguita automaticamente da [attiva](#activate) e [DoVerb](#doverb), pertanto non è in genere necessario chiamare questa funzione. Chiamare questa funzione se è necessario eseguire il server per impostare un attributo dell'elemento, ad esempio [SetExtent](#setextent), prima di eseguire [DoVerb](#doverb).  
   
-##  <a name="a-namesetdrawaspecta--coleclientitemsetdrawaspect"></a><a name="setdrawaspect"></a>COleClientItem::SetDrawAspect  
+##  <a name="setdrawaspect"></a>COleClientItem::SetDrawAspect  
  Chiamare il `SetDrawAspect` funzione membro per impostare la "aspetto", o la vista dell'elemento.  
   
 ```  
@@ -1652,7 +1732,7 @@ virtual void SetDrawAspect(DVASPECT nDrawAspect);
   
  Questa funzione viene chiamata automaticamente l'icona di modifica (e altre finestre di dialogo che chiamano direttamente la finestra di dialogo di modifica dell'icona) per abilitare l'aspetto delle icone di visualizzazione quando richiesto dall'utente.  
   
-##  <a name="a-namesetextenta--coleclientitemsetextent"></a><a name="setextent"></a>COleClientItem::SetExtent  
+##  <a name="setextent"></a>COleClientItem::SetExtent  
  Chiamare questa funzione per specificare la quantità di spazio è disponibile per l'elemento OLE.  
   
 ```  
@@ -1673,7 +1753,7 @@ void SetExtent(
   
  Per ulteriori informazioni, vedere [IOleObject::SetExtent](http://msdn.microsoft.com/library/windows/desktop/ms694330) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesethostnamesa--coleclientitemsethostnames"></a><a name="sethostnames"></a>COleClientItem::SetHostNames  
+##  <a name="sethostnames"></a>COleClientItem::SetHostNames  
  Chiamare questa funzione per specificare il nome dell'applicazione contenitore e il nome del contenitore per un elemento OLE incorporato.  
   
 ```  
@@ -1696,7 +1776,7 @@ void SetHostNames(
   
  Per ulteriori informazioni, vedere [IOleObject::SetHostNames](http://msdn.microsoft.com/library/windows/desktop/ms680642) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameseticonicmetafilea--coleclientitemseticonicmetafile"></a><a name="seticonicmetafile"></a>COleClientItem::SetIconicMetafile  
+##  <a name="seticonicmetafile"></a>COleClientItem::SetIconicMetafile  
  Memorizza nella cache del metafile utilizzato per disegnare l'icona dell'elemento.  
   
 ```  
@@ -1715,7 +1795,7 @@ BOOL SetIconicMetafile(HGLOBAL hMetaPict);
   
  Il `hMetaPict` parametro verrà copiato l'elemento; pertanto, `hMetaPict` deve essere liberata dal chiamante.  
   
-##  <a name="a-namesetitemrectsa--coleclientitemsetitemrects"></a><a name="setitemrects"></a>COleClientItem::SetItemRects  
+##  <a name="setitemrects"></a>COleClientItem::SetItemRects  
  Chiamare questa funzione per impostare il rettangolo di delimitazione o il rettangolo visibile dell'elemento OLE.  
   
 ```  
@@ -1739,7 +1819,7 @@ BOOL SetItemRects(
   
  Per ulteriori informazioni, vedere [IOleInPlaceObject::SetObjectRects](http://msdn.microsoft.com/library/windows/desktop/ms683767) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetlinkupdateoptionsa--coleclientitemsetlinkupdateoptions"></a><a name="setlinkupdateoptions"></a>COleClientItem::SetLinkUpdateOptions  
+##  <a name="setlinkupdateoptions"></a>COleClientItem::SetLinkUpdateOptions  
  Chiamare questa funzione per impostare l'opzione di aggiornamento di collegamento per la presentazione dell'elemento collegato specificato.  
   
 ```  
@@ -1759,7 +1839,7 @@ void SetLinkUpdateOptions(OLEUPDATE dwUpdateOpt);
   
  Per ulteriori informazioni, vedere [IOleLink::SetUpdateOptions](http://msdn.microsoft.com/library/windows/desktop/ms680120) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetprintdevicea--coleclientitemsetprintdevice"></a><a name="setprintdevice"></a>COleClientItem::SetPrintDevice  
+##  <a name="setprintdevice"></a>COleClientItem::SetPrintDevice  
  Chiamare questa funzione per modificare il dispositivo di destinazione di stampa per questo elemento.  
   
 ```  
@@ -1786,7 +1866,7 @@ BOOL SetPrintDevice(const PRINTDLG* ppd);
   
  Per ulteriori informazioni, vedere [DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameupdatelinka--coleclientitemupdatelink"></a><a name="updatelink"></a>COleClientItem::UpdateLink  
+##  <a name="updatelink"></a>COleClientItem::UpdateLink  
  Chiamare questa funzione per aggiornare immediatamente i dati della presentazione dell'elemento OLE.  
   
 ```  

@@ -9,7 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::DispatchState
+- DispatchState
+- CONCRTRM/concurrency::DispatchState
+- CONCRTRM/concurrency::DispatchState::DispatchState::DispatchState
+- CONCRTRM/concurrency::DispatchState::DispatchState::m_dispatchStateSize
+- CONCRTRM/concurrency::DispatchState::DispatchState::m_fIsPreviousContextAsynchronouslyBlocked
+- CONCRTRM/concurrency::DispatchState::DispatchState::m_reserved
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 46c2219464e57da4931596e970199549405d02ec
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: a617d1f1d7f68c00c7011daffc6ba59f08c43a1e
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="dispatchstate-structure"></a>Struttura DispatchState
@@ -54,15 +59,15 @@ struct DispatchState;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore DispatchState:: DispatchState](#ctor)|Costruisce un nuovo oggetto `DispatchState`.|  
+|[DispatchState:: DispatchState](#ctor)|Costruisce un nuovo oggetto `DispatchState`.|  
   
 ### <a name="public-data-members"></a>Membri dati pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Membro dati DispatchState:: M_dispatchstatesize](#m_dispatchstatesize)|Dimensione della struttura, viene utilizzato per il controllo delle versioni.|  
-|[Membro dati DispatchState:: M_fispreviouscontextasynchronouslyblocked](#m_fispreviouscontextasynchronouslyblocked)|Indica se questo contesto è stato attivato il `Dispatch` metodo perché il contesto precedente bloccato in modo asincrono. Viene utilizzato solo nel contesto di pianificazione UMS e viene impostata sul valore `0` per tutti gli altri contesti di esecuzione.|  
-|[Membro dati DispatchState:: M_reserved](#m_reserved)|Bit riservati per il passaggio di informazioni future.|  
+|[DispatchState:: M_dispatchstatesize](#m_dispatchstatesize)|Dimensione della struttura, viene utilizzato per il controllo delle versioni.|  
+|[DispatchState:: M_fispreviouscontextasynchronouslyblocked](#m_fispreviouscontextasynchronouslyblocked)|Indica se questo contesto è stato attivato il `Dispatch` metodo perché il contesto precedente bloccato in modo asincrono. Viene utilizzato solo nel contesto di pianificazione UMS e viene impostata sul valore `0` per tutti gli altri contesti di esecuzione.|  
+|[DispatchState:: M_reserved](#m_reserved)|Bit riservati per il passaggio di informazioni future.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `DispatchState`  
@@ -72,28 +77,28 @@ struct DispatchState;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="a-namectora--dispatchstatedispatchstate-constructor"></a><a name="ctor"></a>Costruttore DispatchState:: DispatchState  
+##  <a name="ctor"></a>Costruttore DispatchState:: DispatchState  
  Costruisce un nuovo oggetto `DispatchState`.  
   
 ```
 DispatchState();
 ```  
   
-##  <a name="a-namemdispatchstatesizea--dispatchstatemdispatchstatesize-data-member"></a><a name="m_dispatchstatesize"></a>Membro dati DispatchState:: M_dispatchstatesize  
+##  <a name="m_dispatchstatesize"></a>Membro dati DispatchState:: M_dispatchstatesize  
  Dimensione della struttura, viene utilizzato per il controllo delle versioni.  
   
 ```
 unsigned long m_dispatchStateSize;
 ```  
   
-##  <a name="a-namemfispreviouscontextasynchronouslyblockeda--dispatchstatemfispreviouscontextasynchronouslyblocked-data-member"></a><a name="m_fispreviouscontextasynchronouslyblocked"></a>Membro dati DispatchState:: M_fispreviouscontextasynchronouslyblocked  
+##  <a name="m_fispreviouscontextasynchronouslyblocked"></a>Membro dati DispatchState:: M_fispreviouscontextasynchronouslyblocked  
  Indica se questo contesto è stato attivato il `Dispatch` metodo perché il contesto precedente bloccato in modo asincrono. Viene utilizzato solo nel contesto di pianificazione UMS e viene impostata sul valore `0` per tutti gli altri contesti di esecuzione.  
   
 ```
 unsigned int m_fIsPreviousContextAsynchronouslyBlocked : 1;
 ```  
   
-##  <a name="a-namemreserveda--dispatchstatemreserved-data-member"></a><a name="m_reserved"></a>Membro dati DispatchState:: M_reserved  
+##  <a name="m_reserved"></a>Membro dati DispatchState:: M_reserved  
  Bit riservati per il passaggio di informazioni future.  
   
 ```
@@ -101,5 +106,5 @@ unsigned int m_reserved : 31;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [concorrenza Namespace](concurrency-namespace.md)
+ [Spazio dei nomi concurrency](concurrency-namespace.md)
 

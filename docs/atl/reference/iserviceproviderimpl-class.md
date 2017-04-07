@@ -9,11 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::IServiceProviderImpl<T>
-- ATL.IServiceProviderImpl<T>
-- ATL.IServiceProviderImpl
-- ATL::IServiceProviderImpl
 - IServiceProviderImpl
+- ATLCOM/ATL::IServiceProviderImpl
+- ATLCOM/ATL::IServiceProviderImpl::QueryService
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -83,7 +81,7 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlcom. h  
   
-##  <a name="a-namequeryservicea--iserviceproviderimplqueryservice"></a><a name="queryservice"></a>IServiceProviderImpl::QueryService  
+##  <a name="queryservice"></a>IServiceProviderImpl::QueryService  
  Crea o accede al servizio specificato e restituisce un puntatore a interfaccia per l'interfaccia specificata per il servizio.  
   
 ```

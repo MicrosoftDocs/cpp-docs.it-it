@@ -9,13 +9,71 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- CPaneFrameWnd.Serialize
-- CPaneFrameWnd.PreTranslateMessage
 - CPaneFrameWnd
-- CPaneFrameWnd::Serialize
-- PreTranslateMessage
-- CPaneFrameWnd::PreTranslateMessage
-- Serialize
+- AFXPANEFRAMEWND/CPaneFrameWnd
+- AFXPANEFRAMEWND/CPaneFrameWnd::AddPane
+- AFXPANEFRAMEWND/CPaneFrameWnd::AddRemovePaneFromGlobalList
+- AFXPANEFRAMEWND/CPaneFrameWnd::AdjustLayout
+- AFXPANEFRAMEWND/CPaneFrameWnd::AdjustPaneFrames
+- AFXPANEFRAMEWND/CPaneFrameWnd::CalcBorderSize
+- AFXPANEFRAMEWND/CPaneFrameWnd::CalcExpectedDockedRect
+- AFXPANEFRAMEWND/CPaneFrameWnd::CanBeAttached
+- AFXPANEFRAMEWND/CPaneFrameWnd::CanBeDockedToPane
+- AFXPANEFRAMEWND/CPaneFrameWnd::CheckGripperVisibility
+- AFXPANEFRAMEWND/CPaneFrameWnd::ConvertToTabbedDocument
+- AFXPANEFRAMEWND/CPaneFrameWnd::Create
+- AFXPANEFRAMEWND/CPaneFrameWnd::CreateEx
+- AFXPANEFRAMEWND/CPaneFrameWnd::DockPane
+- AFXPANEFRAMEWND/CPaneFrameWnd::FindFloatingPaneByID
+- AFXPANEFRAMEWND/CPaneFrameWnd::FrameFromPoint
+- AFXPANEFRAMEWND/CPaneFrameWnd::GetCaptionHeight
+- AFXPANEFRAMEWND/CPaneFrameWnd::GetCaptionRect
+- AFXPANEFRAMEWND/CPaneFrameWnd::GetCaptionText
+- AFXPANEFRAMEWND/CPaneFrameWnd::GetDockingManager
+- AFXPANEFRAMEWND/CPaneFrameWnd::GetDockingMode
+- AFXPANEFRAMEWND/CPaneFrameWnd::GetFirstVisiblePane
+- AFXPANEFRAMEWND/CPaneFrameWnd::GetHotPoint
+- AFXPANEFRAMEWND/CPaneFrameWnd::GetPane
+- AFXPANEFRAMEWND/CPaneFrameWnd::GetPaneCount
+- AFXPANEFRAMEWND/CPaneFrameWnd::GetParent
+- AFXPANEFRAMEWND/CPaneFrameWnd::GetPinState
+- AFXPANEFRAMEWND/CPaneFrameWnd::GetRecentFloatingRect
+- AFXPANEFRAMEWND/CPaneFrameWnd::GetVisiblePaneCount
+- AFXPANEFRAMEWND/CPaneFrameWnd::HitTest
+- AFXPANEFRAMEWND/CPaneFrameWnd::IsCaptured
+- AFXPANEFRAMEWND/CPaneFrameWnd::IsDelayShow
+- AFXPANEFRAMEWND/CPaneFrameWnd::IsRollDown
+- AFXPANEFRAMEWND/CPaneFrameWnd::IsRollUp
+- AFXPANEFRAMEWND/CPaneFrameWnd::KillDockingTimer
+- AFXPANEFRAMEWND/CPaneFrameWnd::LoadState
+- AFXPANEFRAMEWND/CPaneFrameWnd::OnBeforeDock
+- AFXPANEFRAMEWND/CPaneFrameWnd::OnDockToRecentPos
+- AFXPANEFRAMEWND/CPaneFrameWnd::OnKillRollUpTimer
+- AFXPANEFRAMEWND/CPaneFrameWnd::OnMovePane
+- AFXPANEFRAMEWND/CPaneFrameWnd::OnPaneRecalcLayout
+- AFXPANEFRAMEWND/CPaneFrameWnd::OnSetRollUpTimer
+- AFXPANEFRAMEWND/CPaneFrameWnd::OnShowPane
+- AFXPANEFRAMEWND/CPaneFrameWnd::PaneFromPoint
+- AFXPANEFRAMEWND/CPaneFrameWnd::Pin
+- AFXPANEFRAMEWND/CPaneFrameWnd::RedrawAll
+- AFXPANEFRAMEWND/CPaneFrameWnd::RemoveNonValidPanes
+- AFXPANEFRAMEWND/CPaneFrameWnd::RemovePane
+- AFXPANEFRAMEWND/CPaneFrameWnd::ReplacePane
+- AFXPANEFRAMEWND/CPaneFrameWnd::SaveState
+- AFXPANEFRAMEWND/CPaneFrameWnd::SetCaptionButtons
+- AFXPANEFRAMEWND/CPaneFrameWnd::SetDelayShow
+- AFXPANEFRAMEWND/CPaneFrameWnd::SetDockingManager
+- AFXPANEFRAMEWND/CPaneFrameWnd::SetDockingTimer
+- AFXPANEFRAMEWND/CPaneFrameWnd::SetDockState
+- AFXPANEFRAMEWND/CPaneFrameWnd::SetHotPoint
+- AFXPANEFRAMEWND/CPaneFrameWnd::SetPreDockState
+- AFXPANEFRAMEWND/CPaneFrameWnd::SizeToContent
+- AFXPANEFRAMEWND/CPaneFrameWnd::StartTearOff
+- AFXPANEFRAMEWND/CPaneFrameWnd::StoreRecentDockSiteInfo
+- AFXPANEFRAMEWND/CPaneFrameWnd::StoreRecentTabRelatedInfo
+- AFXPANEFRAMEWND/CPaneFrameWnd::OnCheckRollState
+- AFXPANEFRAMEWND/CPaneFrameWnd::OnDrawBorder
+- AFXPANEFRAMEWND/CPaneFrameWnd::m_bUseSaveBits
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -162,7 +220,7 @@ class CPaneFrameWnd : public CWnd
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxPaneFrameWnd.h  
   
-##  <a name="a-nameaddpanea--cpaneframewndaddpane"></a><a name="addpane"></a>CPaneFrameWnd::AddPane  
+##  <a name="addpane"></a>CPaneFrameWnd::AddPane  
  Aggiunge un riquadro.  
   
 ```  
@@ -173,7 +231,7 @@ virtual void AddPane(CBasePane* pWnd);
  [in] `pWnd`  
  Il riquadro da aggiungere.  
   
-##  <a name="a-nameaddremovepanefromgloballista--cpaneframewndaddremovepanefromgloballist"></a><a name="addremovepanefromgloballist"></a>CPaneFrameWnd::AddRemovePaneFromGlobalList  
+##  <a name="addremovepanefromgloballist"></a>CPaneFrameWnd::AddRemovePaneFromGlobalList  
  Aggiunge o rimuove un riquadro dall'elenco globale.  
   
 ```  
@@ -192,14 +250,14 @@ static BOOL __stdcall AddRemovePaneFromGlobalList(
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se il metodo ha esito positivo; in caso contrario 0.  
   
-##  <a name="a-nameadjustlayouta--cpaneframewndadjustlayout"></a><a name="adjustlayout"></a>CPaneFrameWnd::AdjustLayout  
+##  <a name="adjustlayout"></a>CPaneFrameWnd::AdjustLayout  
  Regola il layout della finestra con mini-cornice.  
   
 ```  
 virtual void AdjustLayout();
 ```  
   
-##  <a name="a-nameadjustpaneframesa--cpaneframewndadjustpaneframes"></a><a name="adjustpaneframes"></a>CPaneFrameWnd::AdjustPaneFrames  
+##  <a name="adjustpaneframes"></a>CPaneFrameWnd::AdjustPaneFrames  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -208,7 +266,7 @@ virtual void AdjustPaneFrames();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namecalcbordersizea--cpaneframewndcalcbordersize"></a><a name="calcbordersize"></a>CPaneFrameWnd::CalcBorderSize  
+##  <a name="calcbordersize"></a>CPaneFrameWnd::CalcBorderSize  
  Calcola le dimensioni dei bordi per una finestra mini.  
   
 ```  
@@ -222,7 +280,7 @@ virtual void CalcBorderSize(CRect& rectBorderSize) const;
 ### <a name="remarks"></a>Note  
  Questo metodo viene chiamato dal framework per calcolare la dimensione del bordo di una finestra mini. Il valore restituito dipende se a una finestra cornice contiene una barra degli strumenti o una [CDockablePane](../../mfc/reference/cdockablepane-class.md).  
   
-##  <a name="a-namecalcexpecteddockedrecta--cpaneframewndcalcexpecteddockedrect"></a><a name="calcexpecteddockedrect"></a>CPaneFrameWnd::CalcExpectedDockedRect  
+##  <a name="calcexpecteddockedrect"></a>CPaneFrameWnd::CalcExpectedDockedRect  
  Calcolare il rettangolo previsto di una finestra ancorata.  
   
 ```  
@@ -253,7 +311,7 @@ virtual void CalcExpectedDockedRect(
 ### <a name="remarks"></a>Note  
  Questo metodo calcola il rettangolo che una finestra occuperebbe se un utente ha trascinato la finestra per il punto specificato da `ptMouse` e ancorata sono.  
   
-##  <a name="a-namecanbeattacheda--cpaneframewndcanbeattached"></a><a name="canbeattached"></a>CPaneFrameWnd::CanBeAttached  
+##  <a name="canbeattached"></a>CPaneFrameWnd::CanBeAttached  
  Determina se il riquadro corrente può essere ancorato a un altro riquadro o a un'altra finestra cornice.  
   
 ```  
@@ -263,7 +321,7 @@ virtual BOOL CanBeAttached() const;
 ### <a name="return-value"></a>Valore restituito  
  `TRUE`Se il riquadro può essere ancorato a un'altra finestra riquadro o frame; in caso contrario `FALSE`.  
   
-##  <a name="a-namecanbedockedtopanea--cpaneframewndcanbedockedtopane"></a><a name="canbedockedtopane"></a>CPaneFrameWnd::CanBeDockedToPane  
+##  <a name="canbedockedtopane"></a>CPaneFrameWnd::CanBeDockedToPane  
  Determina se la finestra con mini-cornice può essere ancorata a un riquadro.  
   
 ```  
@@ -277,7 +335,7 @@ virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se il frame minima può essere ancorato al `pDockingBar`; in caso contrario, 0.  
   
-##  <a name="a-namecheckgrippervisibilitya--cpaneframewndcheckgrippervisibility"></a><a name="checkgrippervisibility"></a>CPaneFrameWnd::CheckGripperVisibility  
+##  <a name="checkgrippervisibility"></a>CPaneFrameWnd::CheckGripperVisibility  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -286,14 +344,14 @@ virtual void CheckGripperVisibility();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameconverttotabbeddocumenta--cpaneframewndconverttotabbeddocument"></a><a name="converttotabbeddocument"></a>CPaneFrameWnd::ConvertToTabbedDocument  
+##  <a name="converttotabbeddocument"></a>CPaneFrameWnd::ConvertToTabbedDocument  
  Converte un riquadro in un documento a schede.  
   
 ```  
 virtual void ConvertToTabbedDocument();
 ```  
   
-##  <a name="a-namecreatea--cpaneframewndcreate"></a><a name="create"></a>CPaneFrameWnd::Create  
+##  <a name="create"></a>CPaneFrameWnd::Create  
  Crea una finestra con mini e lo collega al [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) oggetto.  
   
 ```  
@@ -327,7 +385,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Note  
  Viene creata una finestra di mini in due passaggi. In primo luogo, il framework crea un `CPaneFrameWnd` oggetto. In secondo luogo, chiama `Create` per creare la finestra di mini Windows e associarlo al `CPaneFrameWnd` oggetto.  
   
-##  <a name="a-namecreateexa--cpaneframewndcreateex"></a><a name="createex"></a>CPaneFrameWnd::CreateEx  
+##  <a name="createex"></a>CPaneFrameWnd::CreateEx  
  Crea una finestra con mini e lo collega al [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) oggetto.  
   
 ```  
@@ -365,7 +423,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Note  
  Viene creata una finestra di mini in due passaggi. In primo luogo, il framework crea un `CPaneFrameWnd` oggetto. In secondo luogo, chiama `Create` per creare la finestra di mini Windows e associarlo al `CPaneFrameWnd` oggetto.  
   
-##  <a name="a-namedockpanea--cpaneframewnddockpane"></a><a name="dockpane"></a>CPaneFrameWnd::DockPane  
+##  <a name="dockpane"></a>CPaneFrameWnd::DockPane  
  Ancora il riquadro.  
   
 ```  
@@ -379,7 +437,7 @@ virtual CDockablePane* DockPane(BOOL& bWasDocked);
 ### <a name="return-value"></a>Valore restituito  
  Se l'operazione ha esito positivo, il `CDockablePane` che il riquadro è ancorato a; in caso contrario `NULL`.  
   
-##  <a name="a-namefindfloatingpanebyida--cpaneframewndfindfloatingpanebyid"></a><a name="findfloatingpanebyid"></a>CPaneFrameWnd::FindFloatingPaneByID  
+##  <a name="findfloatingpanebyid"></a>CPaneFrameWnd::FindFloatingPaneByID  
  Trova un riquadro con l'ID di controllo specificato nell'elenco globale dei riquadri mobili.  
   
 ```  
@@ -393,7 +451,7 @@ static CBasePane* FindFloatingPaneByID(UINT nID);
 ### <a name="return-value"></a>Valore restituito  
  Il riquadro con l'ID di controllo specificato. in caso contrario, `NULL`, se nessun riquadro con l'ID di controllo specificato.  
   
-##  <a name="a-nameframefrompointa--cpaneframewndframefrompoint"></a><a name="framefrompoint"></a>CPaneFrameWnd::FrameFromPoint  
+##  <a name="framefrompoint"></a>CPaneFrameWnd::FrameFromPoint  
  Trova la finestra con mini-cornice contenente il punto specificato.  
   
 ```  
@@ -420,7 +478,7 @@ static CPaneFrameWnd* __stdcall FrameFromPoint(
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore alla finestra con mini-cornice contenente `pt`; in caso contrario `NULL`.  
   
-##  <a name="a-namegetcaptionheighta--cpaneframewndgetcaptionheight"></a><a name="getcaptionheight"></a>CPaneFrameWnd::GetCaptionHeight  
+##  <a name="getcaptionheight"></a>CPaneFrameWnd::GetCaptionHeight  
  Restituisce l'altezza del titolo della finestra con mini-cornice.  
   
 ```  
@@ -433,7 +491,7 @@ virtual int GetCaptionHeight() const;
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo per determinare l'altezza di una finestra con mini-cornice. Per impostazione predefinita, l'altezza è impostata su `SM_CYSMCAPTION`. Per ulteriori informazioni, vedere [funzione GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385).  
   
-##  <a name="a-namegetcaptionrecta--cpaneframewndgetcaptionrect"></a><a name="getcaptionrect"></a>CPaneFrameWnd::GetCaptionRect  
+##  <a name="getcaptionrect"></a>CPaneFrameWnd::GetCaptionRect  
  Calcola il rettangolo delimitatore di un titolo di finestra con mini-cornice.  
   
 ```  
@@ -447,7 +505,7 @@ virtual void GetCaptionRect(CRect& rectCaption) const;
 ### <a name="remarks"></a>Note  
  Questo metodo viene chiamato dal framework per calcolare il rettangolo di delimitazione di un titolo di finestra con mini-cornice.  
   
-##  <a name="a-namegetcaptiontexta--cpaneframewndgetcaptiontext"></a><a name="getcaptiontext"></a>CPaneFrameWnd::GetCaptionText  
+##  <a name="getcaptiontext"></a>CPaneFrameWnd::GetCaptionText  
  Restituisce il testo del titolo.  
   
 ```  
@@ -460,7 +518,7 @@ virtual CString GetCaptionText();
 ### <a name="remarks"></a>Note  
  Questo metodo viene chiamato dal framework quando viene visualizzato il testo della didascalia.  
   
-##  <a name="a-namegetdockingmanagera--cpaneframewndgetdockingmanager"></a><a name="getdockingmanager"></a>CPaneFrameWnd::GetDockingManager  
+##  <a name="getdockingmanager"></a>CPaneFrameWnd::GetDockingManager  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -471,7 +529,7 @@ CDockingManager* GetDockingManager() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetdockingmodea--cpaneframewndgetdockingmode"></a><a name="getdockingmode"></a>CPaneFrameWnd::GetDockingMode  
+##  <a name="getdockingmode"></a>CPaneFrameWnd::GetDockingMode  
  Restituisce la modalità di ancoraggio.  
   
 ```  
@@ -487,7 +545,7 @@ virtual AFX_DOCK_TYPE GetDockingMode() const;
   
 - `DT_SMART`  
   
-##  <a name="a-namegetfirstvisiblepanea--cpaneframewndgetfirstvisiblepane"></a><a name="getfirstvisiblepane"></a>CPaneFrameWnd::GetFirstVisiblePane  
+##  <a name="getfirstvisiblepane"></a>CPaneFrameWnd::GetFirstVisiblePane  
  Restituisce il primo riquadro visibile contenuto in una finestra con mini-cornice.  
   
 ```  
@@ -497,7 +555,7 @@ virtual CWnd* GetFirstVisiblePane() const;
 ### <a name="return-value"></a>Valore restituito  
  Il primo riquadro nella finestra cornice o `NULL` se la finestra cornice non contiene riquadri.  
   
-##  <a name="a-namegethotpointa--cpaneframewndgethotpoint"></a><a name="gethotpoint"></a>CPaneFrameWnd::GetHotPoint  
+##  <a name="gethotpoint"></a>CPaneFrameWnd::GetHotPoint  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -508,7 +566,7 @@ CPoint GetHotPoint() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetpanea--cpaneframewndgetpane"></a><a name="getpane"></a>CPaneFrameWnd::GetPane  
+##  <a name="getpane"></a>CPaneFrameWnd::GetPane  
  Restituisce un riquadro contenuto nella finestra con mini-cornice.  
   
 ```  
@@ -520,7 +578,7 @@ virtual CWnd* GetPane() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetpanecounta--cpaneframewndgetpanecount"></a><a name="getpanecount"></a>CPaneFrameWnd::GetPaneCount  
+##  <a name="getpanecount"></a>CPaneFrameWnd::GetPaneCount  
  Restituisce il numero di riquadri contenuti in una finestra con mini-cornice.  
   
 ```  
@@ -532,7 +590,7 @@ virtual int GetPaneCount() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetparenta--cpaneframewndgetparent"></a><a name="getparent"></a>CPaneFrameWnd::GetParent  
+##  <a name="getparent"></a>CPaneFrameWnd::GetParent  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -543,7 +601,7 @@ CWnd* GetParent();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetpinstatea--cpaneframewndgetpinstate"></a><a name="getpinstate"></a>CPaneFrameWnd::GetPinState  
+##  <a name="getpinstate"></a>CPaneFrameWnd::GetPinState  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -554,7 +612,7 @@ BOOL GetPinState() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetrecentfloatingrecta--cpaneframewndgetrecentfloatingrect"></a><a name="getrecentfloatingrect"></a>CPaneFrameWnd::GetRecentFloatingRect  
+##  <a name="getrecentfloatingrect"></a>CPaneFrameWnd::GetRecentFloatingRect  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -565,7 +623,7 @@ CRect GetRecentFloatingRect() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetvisiblepanecounta--cpaneframewndgetvisiblepanecount"></a><a name="getvisiblepanecount"></a>CPaneFrameWnd::GetVisiblePaneCount  
+##  <a name="getvisiblepanecount"></a>CPaneFrameWnd::GetVisiblePaneCount  
  Restituisce il numero di riquadri visibili contenuti in una finestra con mini-cornice.  
   
 ```  
@@ -577,7 +635,7 @@ virtual int GetVisiblePaneCount() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namehittesta--cpaneframewndhittest"></a><a name="hittest"></a>CPaneFrameWnd::HitTest  
+##  <a name="hittest"></a>CPaneFrameWnd::HitTest  
  Determina quale parte di una finestra con mini-cornice si trova in un punto specifico.  
   
 ```  
@@ -610,7 +668,7 @@ virtual LRESULT HitTest(
 |`HTBOTTOMLEFT`|Il punto è in basso a sinistra.|  
 |`HTBOTTOMRIGHT`|Il punto è in basso a destra.|  
   
-##  <a name="a-nameiscaptureda--cpaneframewndiscaptured"></a><a name="iscaptured"></a>CPaneFrameWnd::IsCaptured  
+##  <a name="iscaptured"></a>CPaneFrameWnd::IsCaptured  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -621,7 +679,7 @@ BOOL IsCaptured() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameisdelayshowa--cpaneframewndisdelayshow"></a><a name="isdelayshow"></a>CPaneFrameWnd::IsDelayShow  
+##  <a name="isdelayshow"></a>CPaneFrameWnd::IsDelayShow  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -632,7 +690,7 @@ BOOL IsDelayShow() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameisrolldowna--cpaneframewndisrolldown"></a><a name="isrolldown"></a>CPaneFrameWnd::IsRollDown  
+##  <a name="isrolldown"></a>CPaneFrameWnd::IsRollDown  
  Determina se eseguire il rolldown di una finestra con mini-cornice.  
   
 ```  
@@ -647,7 +705,7 @@ virtual BOOL IsRollDown() const;
   
  Per impostazione predefinita, il framework controlla se il puntatore del mouse è all'interno del rettangolo di delimitazione di finestra con mini-cornice per determinare se la finestra dispone di verso il basso. È possibile eseguire l'override di questo comportamento in una classe derivata.  
   
-##  <a name="a-nameisrollupa--cpaneframewndisrollup"></a><a name="isrollup"></a>CPaneFrameWnd::IsRollUp  
+##  <a name="isrollup"></a>CPaneFrameWnd::IsRollUp  
  Determina se eseguire il rollup di una finestra con mini-cornice.  
   
 ```  
@@ -662,14 +720,14 @@ virtual BOOL IsRollUp() const;
   
  Per impostazione predefinita, il framework controlla se il puntatore del mouse è all'interno del rettangolo di delimitazione di finestra con mini-cornice per determinare se la finestra dispone eseguire il rollup. È possibile eseguire l'override di questo comportamento in una classe derivata.  
   
-##  <a name="a-namekilldockingtimera--cpaneframewndkilldockingtimer"></a><a name="killdockingtimer"></a>CPaneFrameWnd::KillDockingTimer  
+##  <a name="killdockingtimer"></a>CPaneFrameWnd::KillDockingTimer  
  Arresta il timer di ancoraggio.  
   
 ```  
 void KillDockingTimer();
 ```  
   
-##  <a name="a-nameloadstatea--cpaneframewndloadstate"></a><a name="loadstate"></a>CPaneFrameWnd::LoadState  
+##  <a name="loadstate"></a>CPaneFrameWnd::LoadState  
  Carica lo stato del riquadro dal Registro di sistema.  
   
 ```  
@@ -688,7 +746,7 @@ virtual BOOL LoadState(
 ### <a name="return-value"></a>Valore restituito  
  `TRUE`Se lo stato del riquadro è stato caricato correttamente. in caso contrario `FALSE`.  
   
-##  <a name="a-namembusesavebitsa--cpaneframewndmbusesavebits"></a><a name="m_busesavebits"></a>CPaneFrameWnd::m_bUseSaveBits  
+##  <a name="m_busesavebits"></a>CPaneFrameWnd::m_bUseSaveBits  
  Specifica se registrare la classe di finestra che ha il `CS_SAVEBITS` stile della classe.  
   
 ```  
@@ -698,7 +756,7 @@ AFX_IMPORT_DATA static BOOL m_bUseSaveBits;
 ### <a name="remarks"></a>Note  
  Impostare il membro statico `TRUE` per registrare la classe di finestra con mini-cornice contenente il `CS_SAVEBITS` stile. Questo può contribuire a ridurre lo sfarfallio quando si trascina la finestra con mini-cornice.  
   
-##  <a name="a-nameonbeforedocka--cpaneframewndonbeforedock"></a><a name="onbeforedock"></a>CPaneFrameWnd::OnBeforeDock  
+##  <a name="onbeforedock"></a>CPaneFrameWnd::OnBeforeDock  
  Determina se l'ancoraggio è possibile.  
   
 ```  
@@ -708,7 +766,7 @@ virtual BOOL OnBeforeDock();
 ### <a name="return-value"></a>Valore restituito  
  `TRUE`Se possibile; ancoraggio in caso contrario, `FALSE`.  
   
-##  <a name="a-nameoncheckrollstatea--cpaneframewndoncheckrollstate"></a><a name="oncheckrollstate"></a>CPaneFrameWnd::OnCheckRollState  
+##  <a name="oncheckrollstate"></a>CPaneFrameWnd::OnCheckRollState  
  Determina se eseguire il rollup o il rolldown di una finestra con mini-cornice.  
   
 ```  
@@ -720,14 +778,14 @@ virtual void OnCheckRollState();
   
  Per impostazione predefinita, il framework chiama [CPaneFrameWnd::IsRollUp](#isrollup) e [CPaneFrameWnd::IsRollDown](#isrolldown) appena allunga o Ripristina la finestra con mini-cornice. È possibile eseguire l'override di questo metodo in una classe derivata a utilizzare un effetto visivo diverso.  
   
-##  <a name="a-nameondocktorecentposa--cpaneframewndondocktorecentpos"></a><a name="ondocktorecentpos"></a>CPaneFrameWnd::OnDockToRecentPos  
+##  <a name="ondocktorecentpos"></a>CPaneFrameWnd::OnDockToRecentPos  
  Ancora la finestra con mini-cornice alla posizione più recente.  
   
 ```  
 virtual void OnDockToRecentPos();
 ```  
   
-##  <a name="a-nameondrawbordera--cpaneframewndondrawborder"></a><a name="ondrawborder"></a>CPaneFrameWnd::OnDrawBorder  
+##  <a name="ondrawborder"></a>CPaneFrameWnd::OnDrawBorder  
  Disegna i bordi di una finestra con mini-cornice.  
   
 ```  
@@ -741,14 +799,14 @@ virtual void OnDrawBorder(CDC* pDC);
 ### <a name="remarks"></a>Note  
  Questo metodo viene chiamato dal framework per disegnare i bordi della finestra con mini-cornice.  
   
-##  <a name="a-nameonkillrolluptimera--cpaneframewndonkillrolluptimer"></a><a name="onkillrolluptimer"></a>CPaneFrameWnd::OnKillRollUpTimer  
+##  <a name="onkillrolluptimer"></a>CPaneFrameWnd::OnKillRollUpTimer  
  Arresta il timer di rollup.  
   
 ```  
 virtual void OnKillRollUpTimer();
 ```  
   
-##  <a name="a-nameonmovepanea--cpaneframewndonmovepane"></a><a name="onmovepane"></a>CPaneFrameWnd::OnMovePane  
+##  <a name="onmovepane"></a>CPaneFrameWnd::OnMovePane  
  Sposta la finestra con mini-cornice in base a un offset specificato.  
   
 ```  
@@ -764,7 +822,7 @@ virtual void OnMovePane(
  [in] `ptOffset`  
  Offset da cui spostare il riquadro.  
   
-##  <a name="a-nameonpanerecalclayouta--cpaneframewndonpanerecalclayout"></a><a name="onpanerecalclayout"></a>CPaneFrameWnd::OnPaneRecalcLayout  
+##  <a name="onpanerecalclayout"></a>CPaneFrameWnd::OnPaneRecalcLayout  
  Consente di modificare il layout di un riquadro all'interno di una finestra con mini-cornice.  
   
 ```  
@@ -776,14 +834,14 @@ virtual void OnPaneRecalcLayout();
   
  Per impostazione predefinita, il riquadro viene posizionato per coprire l'intera area client della finestra con mini-cornice.  
   
-##  <a name="a-nameonsetrolluptimera--cpaneframewndonsetrolluptimer"></a><a name="onsetrolluptimer"></a>CPaneFrameWnd::OnSetRollUpTimer  
+##  <a name="onsetrolluptimer"></a>CPaneFrameWnd::OnSetRollUpTimer  
  Imposta il timer di rollup.  
   
 ```  
 virtual void OnSetRollUpTimer();
 ```  
   
-##  <a name="a-nameonshowpanea--cpaneframewndonshowpane"></a><a name="onshowpane"></a>CPaneFrameWnd::OnShowPane  
+##  <a name="onshowpane"></a>CPaneFrameWnd::OnShowPane  
  Chiamata eseguita dal framework quando un riquadro nella finestra con mini-cornice è nascosto o visualizzato.  
   
 ```  
@@ -802,7 +860,7 @@ virtual void OnShowPane(
 ### <a name="remarks"></a>Note  
  Chiamato dal framework quando un riquadro della finestra cornice viene visualizzato o nascosto. L'implementazione predefinita non esegue alcuna operazione.  
   
-##  <a name="a-namepina--cpaneframewndpin"></a><a name="pin"></a>CPaneFrameWnd::Pin  
+##  <a name="pin"></a>CPaneFrameWnd::Pin  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -814,7 +872,7 @@ void Pin(BOOL bPin = TRUE);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namepanefrompointa--cpaneframewndpanefrompoint"></a><a name="panefrompoint"></a>CPaneFrameWnd::PaneFromPoint  
+##  <a name="panefrompoint"></a>CPaneFrameWnd::PaneFromPoint  
  Restituisce un riquadro contenente un punto fornito dall'utente all'interno di una finestra con mini-cornice.  
   
 ```  
@@ -840,7 +898,7 @@ virtual CBasePane* PaneFromPoint(
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo per ottenere un riquadro che contiene il punto specificato.  
   
-##  <a name="a-nameredrawalla--cpaneframewndredrawall"></a><a name="redrawall"></a>CPaneFrameWnd::RedrawAll  
+##  <a name="redrawall"></a>CPaneFrameWnd::RedrawAll  
  Ridisegna tutte le finestre con mini-cornice.  
   
 ```  
@@ -850,14 +908,14 @@ static void RedrawAll();
 ### <a name="remarks"></a>Note  
  Questo metodo aggiorna tutte le finestre cornice chiamando [CWnd::RedrawWindow](../../mfc/reference/cwnd-class.md#redrawwindow) per ogni finestra.  
   
-##  <a name="a-nameremovenonvalidpanesa--cpaneframewndremovenonvalidpanes"></a><a name="removenonvalidpanes"></a>CPaneFrameWnd::RemoveNonValidPanes  
+##  <a name="removenonvalidpanes"></a>CPaneFrameWnd::RemoveNonValidPanes  
  Chiamata eseguita dal framework per rimuovere i riquadri non validi.  
   
 ```  
 virtual void RemoveNonValidPanes();
 ```  
   
-##  <a name="a-nameremovepanea--cpaneframewndremovepane"></a><a name="removepane"></a>CPaneFrameWnd::RemovePane  
+##  <a name="removepane"></a>CPaneFrameWnd::RemovePane  
  Rimuove un riquadro dalla finestra con mini-cornice.  
   
 ```  
@@ -880,7 +938,7 @@ virtual void RemovePane(
 ### <a name="remarks"></a>Note  
  Il framework può eliminare finestre cornice minima immediatamente o dopo un certo ritardo. Se si desidera ritardare la distruzione di finestre cornice, passare `FALSE` nel `bNoDelayedDestroy` parametro. Eliminazione posticipata si verifica quando il framework elabora i `AFX_WM_CHECKEMPTYMINIFRAME` messaggio.  
   
-##  <a name="a-namereplacepanea--cpaneframewndreplacepane"></a><a name="replacepane"></a>CPaneFrameWnd::ReplacePane  
+##  <a name="replacepane"></a>CPaneFrameWnd::ReplacePane  
  Sostituisce un riquadro con un altro.  
   
 ```  
@@ -896,7 +954,7 @@ virtual void ReplacePane(
  [in] `pBarReplaceWith`  
  Puntatore al riquadro che sostituisce il riquadro originale.  
   
-##  <a name="a-namesavestatea--cpaneframewndsavestate"></a><a name="savestate"></a>CPaneFrameWnd::SaveState  
+##  <a name="savestate"></a>CPaneFrameWnd::SaveState  
  Salva lo stato del riquadro nel Registro di sistema.  
   
 ```  
@@ -915,7 +973,7 @@ virtual BOOL SaveState(
 ### <a name="return-value"></a>Valore restituito  
  `TRUE`Se lo stato del riquadro è stato salvato correttamente. in caso contrario `FALSE`.  
   
-##  <a name="a-namesetcaptionbuttonsa--cpaneframewndsetcaptionbuttons"></a><a name="setcaptionbuttons"></a>CPaneFrameWnd::SetCaptionButtons  
+##  <a name="setcaptionbuttons"></a>CPaneFrameWnd::SetCaptionButtons  
  Imposta i pulsanti della barra del titolo.  
   
 ```  
@@ -934,7 +992,7 @@ virtual void SetCaptionButtons(DWORD dwButtons);
   
 - `AFX_CAPTION_BTN_CUSTOMIZE`  
   
-##  <a name="a-namesetdelayshowa--cpaneframewndsetdelayshow"></a><a name="setdelayshow"></a>CPaneFrameWnd::SetDelayShow  
+##  <a name="setdelayshow"></a>CPaneFrameWnd::SetDelayShow  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -946,7 +1004,7 @@ void SetDelayShow(BOOL bDelayShow);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namesetdockingmanagera--cpaneframewndsetdockingmanager"></a><a name="setdockingmanager"></a>CPaneFrameWnd::SetDockingManager  
+##  <a name="setdockingmanager"></a>CPaneFrameWnd::SetDockingManager  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -958,7 +1016,7 @@ void SetDockingManager(CDockingManager* pManager);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namesetdockingtimera--cpaneframewndsetdockingtimer"></a><a name="setdockingtimer"></a>CPaneFrameWnd::SetDockingTimer  
+##  <a name="setdockingtimer"></a>CPaneFrameWnd::SetDockingTimer  
  Imposta il timer di ancoraggio.  
   
 ```  
@@ -969,7 +1027,7 @@ void SetDockingTimer(UINT nTimeOut);
  [in] `nTimeOut`  
  Valore di timeout in millisecondi.  
   
-##  <a name="a-namesetdockstatea--cpaneframewndsetdockstate"></a><a name="setdockstate"></a>CPaneFrameWnd::SetDockState  
+##  <a name="setdockstate"></a>CPaneFrameWnd::SetDockState  
  Imposta lo stato di ancoraggio.  
   
 ```  
@@ -980,7 +1038,7 @@ virtual void SetDockState(CDockingManager* pDockManager);
  [in] `pDockManager`  
  Un puntatore a un gestore di ancoraggio.  
   
-##  <a name="a-namesethotpointa--cpaneframewndsethotpoint"></a><a name="sethotpoint"></a>CPaneFrameWnd::SetHotPoint  
+##  <a name="sethotpoint"></a>CPaneFrameWnd::SetHotPoint  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -992,7 +1050,7 @@ void SetHotPoint(CPoint& ptNew);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namesetpredockstatea--cpaneframewndsetpredockstate"></a><a name="setpredockstate"></a>CPaneFrameWnd::SetPreDockState  
+##  <a name="setpredockstate"></a>CPaneFrameWnd::SetPreDockState  
  Chiamata eseguita dal framework per impostare lo stato di pre-ancoraggio.  
   
 ```  
@@ -1021,7 +1079,7 @@ virtual BOOL SetPreDockState(
 ### <a name="return-value"></a>Valore restituito  
  `TRUE`Se la finestra cornice è ancorata; `FALSE` se è ancorata.  
   
-##  <a name="a-namesizetocontenta--cpaneframewndsizetocontent"></a><a name="sizetocontent"></a>CPaneFrameWnd::SizeToContent  
+##  <a name="sizetocontent"></a>CPaneFrameWnd::SizeToContent  
  Regola le dimensioni di una finestra con mini-cornice in modo che è equivalente a un riquadro dei contenuti.  
   
 ```  
@@ -1031,7 +1089,7 @@ virtual void SizeToContent();
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo per modificare le dimensioni di una finestra con mini-cornice per la dimensione di un riquadro dei contenuti.  
   
-##  <a name="a-namestarttearoffa--cpaneframewndstarttearoff"></a><a name="starttearoff"></a>CPaneFrameWnd::StartTearOff  
+##  <a name="starttearoff"></a>CPaneFrameWnd::StartTearOff  
  Separa un menu.  
   
 ```  
@@ -1045,7 +1103,7 @@ BOOL StartTearOff(CMFCPopu* pMenu);
 ### <a name="return-value"></a>Valore restituito  
  `TRUE` se il metodo riesce. In caso contrario, `FALSE`.  
   
-##  <a name="a-namestorerecentdocksiteinfoa--cpaneframewndstorerecentdocksiteinfo"></a><a name="storerecentdocksiteinfo"></a>CPaneFrameWnd::StoreRecentDockSiteInfo  
+##  <a name="storerecentdocksiteinfo"></a>CPaneFrameWnd::StoreRecentDockSiteInfo  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1057,7 +1115,7 @@ virtual void StoreRecentDockSiteInfo(CPane* pBar);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namestorerecenttabrelatedinfoa--cpaneframewndstorerecenttabrelatedinfo"></a><a name="storerecenttabrelatedinfo"></a>CPaneFrameWnd::StoreRecentTabRelatedInfo  
+##  <a name="storerecenttabrelatedinfo"></a>CPaneFrameWnd::StoreRecentTabRelatedInfo  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  

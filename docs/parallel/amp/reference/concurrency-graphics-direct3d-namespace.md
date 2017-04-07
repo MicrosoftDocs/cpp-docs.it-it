@@ -33,9 +33,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: a17faa4f0d6bcc29c9d249fd99dd3a5df3b29884
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: f842080ce65d4c7a378a9c16ff91b24ae4f17a07
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrencygraphicsdirect3d-namespace"></a>Spazio dei nomi Concurrency::graphics::direct3d
@@ -53,11 +53,11 @@ namespace direct3d;
   
 |Nome<br /><br /> Descrizione|  
 |--------------------------|  
-|[Funzione get_sampler](concurrency-graphics-direct3d-namespace-functions.md#get_sampler)<br /><br /> Ottenere l'interfaccia Direct3D campionatore stato determinato tasto di scelta rapida consente di visualizzare che rappresenta l'oggetto specificato campionatore.|  
-|[Funzione get_texture](concurrency-graphics-direct3d-namespace-functions.md#get_texture)<br /><br /> Ottiene l'interfaccia di trama Direct3D sottostante specificato [trama](texture-class.md) oggetto.|  
-|[Funzione make_sampler](concurrency-graphics-direct3d-namespace-functions.md#make_sampler)<br /><br /> Creare un campionatore da un puntatore a interfaccia Direct3D campionatore dello stato.|  
-|[Funzione make_texture](concurrency-graphics-direct3d-namespace-functions.md#make_texture)<br /><br /> Crea un [trama](texture-class.md) oggetto utilizzando i parametri specificati.|  
-|[Funzione msad4](concurrency-graphics-direct3d-namespace-functions.md#msad4)<br /><br /> Confronta un valore di riferimento di 4 byte e un valore di origine a 8 byte e accumula un vettore di 4 somme.|  
+|[get_sampler](concurrency-graphics-direct3d-namespace-functions.md#get_sampler)<br /><br /> Ottenere l'interfaccia Direct3D campionatore stato determinato tasto di scelta rapida consente di visualizzare che rappresenta l'oggetto specificato campionatore.|  
+|[get_texture](concurrency-graphics-direct3d-namespace-functions.md#get_texture)<br /><br /> Ottiene l'interfaccia di trama Direct3D sottostante specificato [trama](texture-class.md) oggetto.|  
+|[make_sampler](concurrency-graphics-direct3d-namespace-functions.md#make_sampler)<br /><br /> Creare un campionatore da un puntatore a interfaccia Direct3D campionatore dello stato.|  
+|[make_texture](concurrency-graphics-direct3d-namespace-functions.md#make_texture)<br /><br /> Crea un [trama](texture-class.md) oggetto utilizzando i parametri specificati.|  
+|[msad4](concurrency-graphics-direct3d-namespace-functions.md#msad4)<br /><br /> Confronta un valore di riferimento di 4 byte e un valore di origine a 8 byte e accumula un vettore di 4 somme.|  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** amp_graphics.h  
@@ -65,5 +65,5 @@ namespace direct3d;
  **Namespace:** Concurrency:: Graphics  
   
 ## <a name="see-also"></a>Vedere anche  
- [Concurrency:: Graphics Namespace](concurrency-graphics-namespace.md)
+ [Spazio dei nomi Concurrency::graphics](concurrency-graphics-namespace.md)
 

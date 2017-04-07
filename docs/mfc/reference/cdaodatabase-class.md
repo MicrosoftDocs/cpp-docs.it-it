@@ -10,6 +10,33 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDaoDatabase
+- AFXDAO/CDaoDatabase
+- AFXDAO/CDaoDatabase::CDaoDatabase
+- AFXDAO/CDaoDatabase::CanTransact
+- AFXDAO/CDaoDatabase::CanUpdate
+- AFXDAO/CDaoDatabase::Close
+- AFXDAO/CDaoDatabase::Create
+- AFXDAO/CDaoDatabase::CreateRelation
+- AFXDAO/CDaoDatabase::DeleteQueryDef
+- AFXDAO/CDaoDatabase::DeleteRelation
+- AFXDAO/CDaoDatabase::DeleteTableDef
+- AFXDAO/CDaoDatabase::Execute
+- AFXDAO/CDaoDatabase::GetConnect
+- AFXDAO/CDaoDatabase::GetName
+- AFXDAO/CDaoDatabase::GetQueryDefCount
+- AFXDAO/CDaoDatabase::GetQueryDefInfo
+- AFXDAO/CDaoDatabase::GetQueryTimeout
+- AFXDAO/CDaoDatabase::GetRecordsAffected
+- AFXDAO/CDaoDatabase::GetRelationCount
+- AFXDAO/CDaoDatabase::GetRelationInfo
+- AFXDAO/CDaoDatabase::GetTableDefCount
+- AFXDAO/CDaoDatabase::GetTableDefInfo
+- AFXDAO/CDaoDatabase::GetVersion
+- AFXDAO/CDaoDatabase::IsOpen
+- AFXDAO/CDaoDatabase::Open
+- AFXDAO/CDaoDatabase::SetQueryTimeout
+- AFXDAO/CDaoDatabase::m_pDAODatabase
+- AFXDAO/CDaoDatabase::m_pWorkspace
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -134,7 +161,7 @@ class CDaoDatabase : public CObject
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxdao. h  
   
-##  <a name="a-namecantransacta--cdaodatabasecantransact"></a><a name="cantransact"></a>CDaoDatabase::CanTransact  
+##  <a name="cantransact"></a>CDaoDatabase::CanTransact  
  Chiamare questa funzione membro per determinare se il database consente alle transazioni.  
   
 ```  
@@ -147,7 +174,7 @@ BOOL CanTransact();
 ### <a name="remarks"></a>Note  
  Le transazioni vengono gestite nell'area di lavoro del database.  
   
-##  <a name="a-namecanupdatea--cdaodatabasecanupdate"></a><a name="canupdate"></a>CDaoDatabase::CanUpdate  
+##  <a name="canupdate"></a>CDaoDatabase::CanUpdate  
  Chiamare questa funzione membro per determinare se il `CDaoDatabase` oggetto consente aggiornamenti.  
   
 ```  
@@ -160,7 +187,7 @@ BOOL CanUpdate();
 ### <a name="remarks"></a>Note  
  Per informazioni sull'aggiornamento di database, vedere l'argomento "Proprietà aggiornabile" nella Guida di DAO.  
   
-##  <a name="a-namecdaodatabasea--cdaodatabasecdaodatabase"></a><a name="cdaodatabase"></a>CDaoDatabase::CDaoDatabase  
+##  <a name="cdaodatabase"></a>CDaoDatabase::CDaoDatabase  
  Costruisce un oggetto `CDaoDatabase`.  
   
 ```  
@@ -181,7 +208,7 @@ CDaoDatabase(CDaoWorkspace* pWorkspace = NULL);
 > [!NOTE]
 >  Oggetto `CDaoDatabase` oggetto viene anche creato in modo implicito se si apre un [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) oggetto senza passando un puntatore a un oggetto esistente `CDaoDatabase` oggetto. Questo oggetto di database viene chiuso quando si chiude l'oggetto recordset.  
   
-##  <a name="a-nameclosea--cdaodatabaseclose"></a><a name="close"></a>CDaoDatabase::Close  
+##  <a name="close"></a>CDaoDatabase::Close  
  Chiamare questa funzione membro per disconnettersi da un database e chiudere qualsiasi recordset aperti tabledefs e querydefs associati al database.  
   
 ```  
@@ -199,7 +226,7 @@ virtual void Close();
   
  L'oggetto di database è definito all'esterno dell'ambito di una funzione, se si esce dalla funzione senza chiuderlo, rimarrà aperta fino a quando non chiusa in modo esplicito l'oggetto di database o il modulo in cui è definito esula dall'ambito.  
   
-##  <a name="a-namecreatea--cdaodatabasecreate"></a><a name="create"></a>CDaoDatabase::Create  
+##  <a name="create"></a>CDaoDatabase::Create  
  Per creare un nuovo Microsoft Jet (. MDB) del database, chiamare questa funzione membro dopo la creazione un `CDaoDatabase` oggetto.  
   
 ```  
@@ -270,7 +297,7 @@ virtual void Create(
 > [!NOTE]
 >  Con **crea**, è possibile creare solo Microsoft Jet (. Database MDB). È possibile creare database ISAM o database ODBC.  
   
-##  <a name="a-namecreaterelationa--cdaodatabasecreaterelation"></a><a name="createrelation"></a>CDaoDatabase::CreateRelation  
+##  <a name="createrelation"></a>CDaoDatabase::CreateRelation  
  Chiamare questa funzione membro per stabilire una relazione tra uno o più campi in una tabella nel database primario e uno o più campi di una tabella esterna (un'altra tabella nel database).  
   
 ```  
@@ -330,7 +357,7 @@ void CreateRelation(CDaoRelationInfo& relinfo);
   
  Per informazioni correlate, vedere l'argomento "Metodo CreateRelation" nella Guida di DAO.  
   
-##  <a name="a-namedeletequerydefa--cdaodatabasedeletequerydef"></a><a name="deletequerydef"></a>CDaoDatabase::DeleteQueryDef  
+##  <a name="deletequerydef"></a>CDaoDatabase::DeleteQueryDef  
  Chiamare questa funzione membro per eliminare l'oggetto specificato, ovvero query salvata, ovvero dal `CDaoDatabase` raccolta QueryDefs dell'oggetto.  
   
 ```  
@@ -346,7 +373,7 @@ void DeleteQueryDef(LPCTSTR lpszName);
   
  Per informazioni sulla creazione di oggetti querydef, vedere la classe [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md). Un oggetto querydef viene associato a un particolare `CDaoDatabase` oggetto quando si costruisce il `CDaoQueryDef` oggetto, passando un puntatore all'oggetto di database.  
   
-##  <a name="a-namedeleterelationa--cdaodatabasedeleterelation"></a><a name="deleterelation"></a>CDaoDatabase::DeleteRelation  
+##  <a name="deleterelation"></a>CDaoDatabase::DeleteRelation  
  Chiamare questa funzione membro per eliminare una relazione esistente dalla raccolta Relations dell'oggetto di database.  
   
 ```  
@@ -362,7 +389,7 @@ void DeleteRelation(LPCTSTR lpszName);
   
  Per informazioni correlate, vedere l'argomento "Metodo Delete" nella Guida di DAO.  
   
-##  <a name="a-namedeletetabledefa--cdaodatabasedeletetabledef"></a><a name="deletetabledef"></a>CDaoDatabase::DeleteTableDef  
+##  <a name="deletetabledef"></a>CDaoDatabase::DeleteTableDef  
  Chiamare questa funzione membro per eliminare la tabella specificata e tutti i dati dal `CDaoDatabase` insieme TableDefs dell'oggetto.  
   
 ```  
@@ -383,7 +410,7 @@ void DeleteTableDef(LPCTSTR lpszName);
   
  Per informazioni correlate, vedere l'argomento "Metodo Delete" nella Guida di DAO.  
   
-##  <a name="a-nameexecutea--cdaodatabaseexecute"></a><a name="execute"></a>CDaoDatabase::Execute  
+##  <a name="execute"></a>CDaoDatabase::Execute  
  Chiamare questa funzione membro per eseguire una query o eseguire un'istruzione SQL sul database.  
   
 ```  
@@ -426,7 +453,7 @@ void Execute(
   
  **Eseguire** non restituisce un oggetto recordset. Utilizzando **Execute** su una query che seleziona i record determina MFC generare un'eccezione di tipo `CDaoException`. (Non esiste alcun `ExecuteSQL` funzione membro analogo a `CDatabase::ExecuteSQL`.)  
   
-##  <a name="a-namegetconnecta--cdaodatabasegetconnect"></a><a name="getconnect"></a>CDaoDatabase::GetConnect  
+##  <a name="getconnect"></a>CDaoDatabase::GetConnect  
  Chiamare questa funzione membro per recuperare la stringa di connessione utilizzata per la connessione di `CDaoDatabase` oggetto a un database ODBC o ISAM.  
   
 ```  
@@ -447,7 +474,7 @@ CString GetConnect();
   
  Vedere il [aprire](#open) funzione membro per una descrizione di come viene creata la stringa di connessione. Dopo aver impostata la stringa di connessione **aprire** chiamata, più avanti consente di controllare l'impostazione per determinare il tipo, percorso, l'origine di dati ODBC, la Password o ID utente del database.  
   
-##  <a name="a-namegetnamea--cdaodatabasegetname"></a><a name="getname"></a>CDaoDatabase::GetName  
+##  <a name="getname"></a>CDaoDatabase::GetName  
  Chiamare questa funzione membro per recuperare il nome del database attualmente aperto, ovvero il nome di un file di database esistente o il nome di un'origine dati ODBC registrato.  
   
 ```  
@@ -477,7 +504,7 @@ CString GetName();
   
  Per i database ODBC, ad esempio SQL Server e Oracle, la stringa di connessione del database identifica un nome origine dati (DSN) che viene registrato in ODBC.  
   
-##  <a name="a-namegetquerydefcounta--cdaodatabasegetquerydefcount"></a><a name="getquerydefcount"></a>CDaoDatabase::GetQueryDefCount  
+##  <a name="getquerydefcount"></a>CDaoDatabase::GetQueryDefCount  
  Chiamare questa funzione membro per recuperare il numero di query definite nella raccolta QueryDefs del database.  
   
 ```  
@@ -490,7 +517,7 @@ short GetQueryDefCount();
 ### <a name="remarks"></a>Note  
  `GetQueryDefCount`è utile se è necessario scorrere tutti gli oggetti QueryDef nella raccolta QueryDefs. Per ottenere informazioni su una determinata query nella raccolta, vedere [funzione membro GetQueryDefInfo](#getquerydefinfo).  
   
-##  <a name="a-namegetquerydefinfoa--cdaodatabasegetquerydefinfo"></a><a name="getquerydefinfo"></a>CDaoDatabase::GetQueryDefInfo  
+##  <a name="getquerydefinfo"></a>CDaoDatabase::GetQueryDefInfo  
  Chiamare questa funzione membro per ottenere i vari tipi di informazioni relative a una query definita nel database.  
   
 ```  
@@ -530,7 +557,7 @@ void GetQueryDefInfo(
   
  Per una descrizione delle informazioni restituite *querydefinfo*, vedere il [CDaoQueryDefInfo](../../mfc/reference/cdaoquerydefinfo-structure.md) struttura. Questa struttura dispone di membri che corrispondono agli elementi elencati in precedenza nella sezione Descrizione del `dwInfoOptions`. Se si richiede un livello di informazioni, si ottengono livelli precedenti oltre a informazioni.  
   
-##  <a name="a-namegetquerytimeouta--cdaodatabasegetquerytimeout"></a><a name="getquerytimeout"></a>CDaoDatabase::GetQueryTimeout  
+##  <a name="getquerytimeout"></a>CDaoDatabase::GetQueryTimeout  
  Chiamare questa funzione membro per recuperare il numero corrente di secondi di attesa prima che le operazioni successive sul database connesso si verifica il timeout.  
   
 ```  
@@ -547,7 +574,7 @@ short GetQueryTimeout();
   
  Per informazioni correlate, vedere l'argomento "Proprietà QueryTimeout" nella Guida di DAO.  
   
-##  <a name="a-namegetrecordsaffecteda--cdaodatabasegetrecordsaffected"></a><a name="getrecordsaffected"></a>CDaoDatabase::GetRecordsAffected  
+##  <a name="getrecordsaffected"></a>CDaoDatabase::GetRecordsAffected  
  Chiamare questa funzione membro per determinare il numero di record interessati dall'ultima chiamata di [Execute](#execute) funzione membro.  
   
 ```  
@@ -562,7 +589,7 @@ long GetRecordsAffected();
   
  Per informazioni correlate, vedere l'argomento "Proprietà RecordsAffected" nella Guida di DAO.  
   
-##  <a name="a-namegetrelationcounta--cdaodatabasegetrelationcount"></a><a name="getrelationcount"></a>CDaoDatabase::GetRelationCount  
+##  <a name="getrelationcount"></a>CDaoDatabase::GetRelationCount  
  Chiamare questa funzione membro per ottenere il numero delle relazioni definite tra le tabelle del database.  
   
 ```  
@@ -577,7 +604,7 @@ short GetRelationCount();
   
  Per illustrare il concetto di una relazione, si consideri una tabella fornitori e una tabella dei prodotti, che potrebbe disporre di una relazione uno-a-molti. Questa relazione, un fornitore può fornire più di un prodotto. Altre relazioni sono uno a uno e molti-a-molti.  
   
-##  <a name="a-namegetrelationinfoa--cdaodatabasegetrelationinfo"></a><a name="getrelationinfo"></a>CDaoDatabase::GetRelationInfo  
+##  <a name="getrelationinfo"></a>CDaoDatabase::GetRelationInfo  
  Chiamare questa funzione membro per ottenere informazioni su una relazione specificata nella raccolta di relazioni del database.  
   
 ```  
@@ -618,7 +645,7 @@ void GetRelationInfo(
 > [!NOTE]
 >  Se si imposta la relazione con gli attributi dell'oggetto per attivare le operazioni di propagazione ( **dbRelationUpdateCascades** o **dbRelationDeleteCascades**), il motore di database Microsoft Jet automaticamente aggiorna o Elimina i record in uno o più tabelle quando vengono apportate modifiche alle relative tabelle di chiave primaria. Si supponga, ad esempio, che si stabilisce una relazione di eliminazione a catena tra una tabella Customers e una tabella Orders. Quando si eliminano record dalla tabella Customers, vengono eliminati anche i record nella tabella Orders correlate a tale cliente. Inoltre, se si stabilisce cascade delete relazioni tra la tabella Orders e altre tabelle, i record di tali tabelle vengono eliminati automaticamente quando si eliminano record dalla tabella Customers.  
   
-##  <a name="a-namegettabledefcounta--cdaodatabasegettabledefcount"></a><a name="gettabledefcount"></a>CDaoDatabase:  
+##  <a name="gettabledefcount"></a>CDaoDatabase:  
  Chiamare questa funzione membro per recuperare il numero di tabelle definite nel database.  
   
 ```  
@@ -631,7 +658,7 @@ short GetTableDefCount();
 ### <a name="remarks"></a>Note  
  `GetTableDefCount`è utile se si desidera riprodurre a ciclo continuo tabledefs tutti insieme TableDefs del database. Per ottenere informazioni su una tabella specificata nella raccolta, vedere [GetTableDefInfo](#gettabledefinfo).  
   
-##  <a name="a-namegettabledefinfoa--cdaodatabasegettabledefinfo"></a><a name="gettabledefinfo"></a>CDaoDatabase:: GetTableDefInfo  
+##  <a name="gettabledefinfo"></a>CDaoDatabase:: GetTableDefInfo  
  Chiamare questa funzione membro per ottenere diversi tipi di informazioni su una tabella definita nel database.  
   
 ```  
@@ -674,7 +701,7 @@ void GetTableDefInfo(
 > [!NOTE]
 >  Il `AFX_DAO_ALL_INFO` opzione fornisce informazioni che possono essere lente da ottenere. In questo caso, i record nella tabella di conteggio potrebbe richiedere molto tempo se sono presenti molti record.  
   
-##  <a name="a-namegetversiona--cdaodatabasegetversion"></a><a name="getversion"></a>CDaoDatabase::GetVersion  
+##  <a name="getversion"></a>CDaoDatabase::GetVersion  
  Chiamare questa funzione membro per determinare la versione del file di database Microsoft Jet.  
   
 ```  
@@ -689,7 +716,7 @@ CString GetVersion();
   
  Per informazioni correlate, vedere l'argomento "Proprietà Version" nella Guida di DAO.  
   
-##  <a name="a-nameisopena--cdaodatabaseisopen"></a><a name="isopen"></a>CDaoDatabase::IsOpen  
+##  <a name="isopen"></a>CDaoDatabase::IsOpen  
  Chiamare questa funzione membro per determinare se il `CDaoDatabase` oggetto è aperto in un database.  
   
 ```  
@@ -701,7 +728,7 @@ BOOL IsOpen() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namempdaodatabasea--cdaodatabasempdaodatabase"></a><a name="m_pdaodatabase"></a>CDaoDatabase::m_pDAODatabase  
+##  <a name="m_pdaodatabase"></a>CDaoDatabase::m_pDAODatabase  
  Contiene un puntatore all'interfaccia OLE per l'oggetto di database DAO sottostante il `CDaoDatabase` oggetto.  
   
 ### <a name="remarks"></a>Note  
@@ -709,13 +736,13 @@ BOOL IsOpen() const;
   
  Per informazioni sulla chiamata di DAO direttamente, vedere [Nota tecnica 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).  
   
-##  <a name="a-namempworkspacea--cdaodatabasempworkspace"></a><a name="m_pworkspace"></a>CDaoDatabase::m_pWorkspace  
+##  <a name="m_pworkspace"></a>CDaoDatabase::m_pWorkspace  
  Contiene un puntatore per il [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) oggetto che contiene l'oggetto di database.  
   
 ### <a name="remarks"></a>Note  
  Utilizzare questo puntatore, se è necessario accedere direttamente l'area di lavoro, ad esempio, per ottenere i puntatori a oggetti di database nella raccolta di database dell'area di lavoro.  
   
-##  <a name="a-nameopena--cdaodatabaseopen"></a><a name="open"></a>CDaoDatabase::Open  
+##  <a name="open"></a>CDaoDatabase::Open  
  È necessario chiamare questa funzione membro per inizializzare un oggetto appena costruito `CDaoDatabase` oggetto che rappresenta un database esistente.  
   
 ```  
@@ -774,7 +801,7 @@ virtual void Open(
   
  È inoltre possibile utilizzare la stringa di connessione per più livelli di autorizzazione di accesso (per un diverso ogni `CDaoDatabase` oggetto) o per fornire altre informazioni specifiche del database.  
   
-##  <a name="a-namesetquerytimeouta--cdaodatabasesetquerytimeout"></a><a name="setquerytimeout"></a>CDaoDatabase::SetQueryTimeout  
+##  <a name="setquerytimeout"></a>CDaoDatabase::SetQueryTimeout  
  Chiamare questa funzione membro per sostituire il numero predefinito di secondi consentiti prima le operazioni successive sul timeout database connesso.  
   
 ```  

@@ -10,7 +10,61 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CRenderTarget
-- afxrendertarget/CRenderTarget
+- AFXRENDERTARGET/CRenderTarget
+- AFXRENDERTARGET/CRenderTarget::CRenderTarget
+- AFXRENDERTARGET/CRenderTarget::Attach
+- AFXRENDERTARGET/CRenderTarget::BeginDraw
+- AFXRENDERTARGET/CRenderTarget::Clear
+- AFXRENDERTARGET/CRenderTarget::COLORREF_TO_D2DCOLOR
+- AFXRENDERTARGET/CRenderTarget::CreateCompatibleRenderTarget
+- AFXRENDERTARGET/CRenderTarget::Destroy
+- AFXRENDERTARGET/CRenderTarget::Detach
+- AFXRENDERTARGET/CRenderTarget::DrawBitmap
+- AFXRENDERTARGET/CRenderTarget::DrawEllipse
+- AFXRENDERTARGET/CRenderTarget::DrawGeometry
+- AFXRENDERTARGET/CRenderTarget::DrawGlyphRun
+- AFXRENDERTARGET/CRenderTarget::DrawLine
+- AFXRENDERTARGET/CRenderTarget::DrawRectangle
+- AFXRENDERTARGET/CRenderTarget::DrawRoundedRectangle
+- AFXRENDERTARGET/CRenderTarget::DrawText
+- AFXRENDERTARGET/CRenderTarget::DrawTextLayout
+- AFXRENDERTARGET/CRenderTarget::EndDraw
+- AFXRENDERTARGET/CRenderTarget::FillEllipse
+- AFXRENDERTARGET/CRenderTarget::FillGeometry
+- AFXRENDERTARGET/CRenderTarget::FillMesh
+- AFXRENDERTARGET/CRenderTarget::FillOpacityMask
+- AFXRENDERTARGET/CRenderTarget::FillRectangle
+- AFXRENDERTARGET/CRenderTarget::FillRoundedRectangle
+- AFXRENDERTARGET/CRenderTarget::Flush
+- AFXRENDERTARGET/CRenderTarget::GetAntialiasMode
+- AFXRENDERTARGET/CRenderTarget::GetDpi
+- AFXRENDERTARGET/CRenderTarget::GetMaximumBitmapSize
+- AFXRENDERTARGET/CRenderTarget::GetPixelFormat
+- AFXRENDERTARGET/CRenderTarget::GetPixelSize
+- AFXRENDERTARGET/CRenderTarget::GetRenderTarget
+- AFXRENDERTARGET/CRenderTarget::GetSize
+- AFXRENDERTARGET/CRenderTarget::GetTags
+- AFXRENDERTARGET/CRenderTarget::GetTextAntialiasMode
+- AFXRENDERTARGET/CRenderTarget::GetTextRenderingParams
+- AFXRENDERTARGET/CRenderTarget::GetTransform
+- AFXRENDERTARGET/CRenderTarget::IsSupported
+- AFXRENDERTARGET/CRenderTarget::IsValid
+- AFXRENDERTARGET/CRenderTarget::PopAxisAlignedClip
+- AFXRENDERTARGET/CRenderTarget::PopLayer
+- AFXRENDERTARGET/CRenderTarget::PushAxisAlignedClip
+- AFXRENDERTARGET/CRenderTarget::PushLayer
+- AFXRENDERTARGET/CRenderTarget::RestoreDrawingState
+- AFXRENDERTARGET/CRenderTarget::SaveDrawingState
+- AFXRENDERTARGET/CRenderTarget::SetAntialiasMode
+- AFXRENDERTARGET/CRenderTarget::SetDpi
+- AFXRENDERTARGET/CRenderTarget::SetTags
+- AFXRENDERTARGET/CRenderTarget::SetTextAntialiasMode
+- AFXRENDERTARGET/CRenderTarget::SetTextRenderingParams
+- AFXRENDERTARGET/CRenderTarget::SetTransform
+- AFXRENDERTARGET/CRenderTarget::VerifyResource
+- AFXRENDERTARGET/CRenderTarget::m_lstResources
+- AFXRENDERTARGET/CRenderTarget::m_pRenderTarget
+- AFXRENDERTARGET/CRenderTarget::m_pTextFormatDefault
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -140,14 +194,14 @@ class CRenderTarget : public CObject;
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxrendertarget. h  
   
-##  <a name="a-namedtorcrendertargeta--crendertargetcrendertarget"></a><a name="_dtorcrendertarget"></a>CRenderTarget:: ~ CRenderTarget  
+##  <a name="_dtorcrendertarget"></a>CRenderTarget:: ~ CRenderTarget  
  Distruttore. Chiamato quando viene eliminato un oggetto di destinazione di rendering.  
   
 ```  
 virtual ~CRenderTarget();
 ```  
   
-##  <a name="a-nameattacha--crendertargetattach"></a><a name="attach"></a>CRenderTarget::Attach  
+##  <a name="attach"></a>CRenderTarget::Attach  
  Consente di collegare esistente eseguire il rendering di interfaccia di destinazione per l'oggetto  
   
 ```  
@@ -158,14 +212,14 @@ void Attach(ID2D1RenderTarget* pRenderTarget);
  `pRenderTarget`  
  Interfaccia di destinazione di rendering esistente. Non può essere NULL  
   
-##  <a name="a-namebegindrawa--crendertargetbegindraw"></a><a name="begindraw"></a>CRenderTarget::BeginDraw  
+##  <a name="begindraw"></a>CRenderTarget::BeginDraw  
  Avvia il disegno in questa destinazione di rendering.  
   
 ```  
 void BeginDraw();
 ```  
   
-##  <a name="a-namecleara--crendertargetclear"></a><a name="clear"></a>CRenderTarget::Clear  
+##  <a name="clear"></a>CRenderTarget::Clear  
  Cancella area di disegno per il colore specificato.  
   
 ```  
@@ -176,7 +230,7 @@ void Clear(D2D1_COLOR_F color);
  `color`  
  Il colore a cui viene cancellata l'area di disegno.  
   
-##  <a name="a-namecolorreftod2dcolora--crendertargetcolorreftod2dcolor"></a><a name="colorref_to_d2dcolor"></a>CRenderTarget::COLORREF_TO_D2DCOLOR  
+##  <a name="colorref_to_d2dcolor"></a>CRenderTarget::COLORREF_TO_D2DCOLOR  
  Converte l'oggetto D2D1_COLOR_F GDI colore e i valori alfa.  
   
 ```  
@@ -194,7 +248,7 @@ static D2D1_COLOR_F COLORREF_TO_D2DCOLOR(
 ### <a name="return-value"></a>Valore restituito  
  Valore D2D1_COLOR_F.  
   
-##  <a name="a-namecreatecompatiblerendertargeta--crendertargetcreatecompatiblerendertarget"></a><a name="createcompatiblerendertarget"></a>CRenderTarget::CreateCompatibleRenderTarget  
+##  <a name="createcompatiblerendertarget"></a>CRenderTarget::CreateCompatibleRenderTarget  
  Crea una nuova destinazione di rendering di bitmap per l'utilizzo durante il disegno fuori schermo intermedio compatibile con la destinazione di rendering corrente.  
   
 ```  
@@ -225,14 +279,14 @@ BOOL CreateCompatibleRenderTarget(
 ### <a name="return-value"></a>Valore restituito  
  Se il metodo ha esito positivo, restituisce TRUE. In caso contrario, restituisce FALSE.  
   
-##  <a name="a-namecrendertargeta--crendertargetcrendertarget"></a><a name="crendertarget"></a>CRenderTarget::CRenderTarget  
+##  <a name="crendertarget"></a>CRenderTarget::CRenderTarget  
  Costruisce un oggetto CRenderTarget.  
   
 ```  
 CRenderTarget();
 ```  
   
-##  <a name="a-namedestroya--crendertargetdestroy"></a><a name="destroy"></a>CRenderTarget::Destroy  
+##  <a name="destroy"></a>CRenderTarget::Destroy  
  Elimina una o più risorse  
   
 ```  
@@ -246,7 +300,7 @@ BOOL Destroy(BOOL bDeleteResources = TRUE);
 ### <a name="return-value"></a>Valore restituito  
  Se il metodo ha esito positivo, restituisce TRUE. In caso contrario, restituisce FALSE  
   
-##  <a name="a-namedetacha--crendertargetdetach"></a><a name="detach"></a>CRenderTarget::Detach  
+##  <a name="detach"></a>CRenderTarget::Detach  
  Disconnette l'interfaccia di destinazione di rendering dall'oggetto  
   
 ```  
@@ -256,7 +310,7 @@ ID2D1RenderTarget* Detach ();
 ### <a name="return-value"></a>Valore restituito  
  Puntatore a scollegato interfaccia destinazione di rendering.  
   
-##  <a name="a-namedrawbitmapa--crendertargetdrawbitmap"></a><a name="drawbitmap"></a>CRenderTarget::DrawBitmap  
+##  <a name="drawbitmap"></a>CRenderTarget::DrawBitmap  
  Disegna il testo formattato descritto dall'oggetto IDWriteTextLayout specificato.  
   
 ```  
@@ -284,7 +338,7 @@ void DrawBitmap(
  `pRectSrc`  
  Le dimensioni e posizione, espressa in pixel indipendenti dal dispositivo nello spazio delle coordinate della bitmap, dell'area della bitmap da disegnare.  
   
-##  <a name="a-namedrawellipsea--crendertargetdrawellipse"></a><a name="drawellipse"></a>CRenderTarget::DrawEllipse  
+##  <a name="drawellipse"></a>CRenderTarget::DrawEllipse  
  Disegna la struttura dell'ellisse specificato utilizzando lo stile del tratto specificato.  
   
 ```  
@@ -308,7 +362,7 @@ void DrawEllipse(
  `strokeStyle`  
  Stile del tratto da applicare alla struttura dell'ellisse o NULL per disegnare un tratto continuo.  
   
-##  <a name="a-namedrawgeometrya--crendertargetdrawgeometry"></a><a name="drawgeometry"></a>CRenderTarget::DrawGeometry  
+##  <a name="drawgeometry"></a>CRenderTarget::DrawGeometry  
  Disegna la struttura della geometria specificata utilizzando lo stile del tratto specificato.  
   
 ```  
@@ -332,7 +386,7 @@ void DrawGeometry(
  `strokeStyle`  
  Stile del tratto da applicare alla struttura della geometria o NULL per disegnare un tratto continuo.  
   
-##  <a name="a-namedrawglyphruna--crendertargetdrawglyphrun"></a><a name="drawglyphrun"></a>CRenderTarget::DrawGlyphRun  
+##  <a name="drawglyphrun"></a>CRenderTarget::DrawGlyphRun  
  Consente di disegnare i glifi specificati.  
   
 ```  
@@ -356,7 +410,7 @@ void DrawGlyphRun(
  `measuringMode`  
  Un valore che indica come metrica del glifo viene utilizzata per misurare il testo quando viene formattata. Il valore predefinito è DWRITE_MEASURING_MODE_NATURAL.  
   
-##  <a name="a-namedrawlinea--crendertargetdrawline"></a><a name="drawline"></a>CRenderTarget::DrawLine  
+##  <a name="drawline"></a>CRenderTarget::DrawLine  
  Disegna una linea tra i punti specificati utilizzando lo stile di traccia specificato.  
   
 ```  
@@ -384,7 +438,7 @@ void DrawLine(
  `strokeStyle`  
  Lo stile del tratto da dipingere o NULL per disegnare una linea continua.  
   
-##  <a name="a-namedrawrectanglea--crendertargetdrawrectangle"></a><a name="drawrectangle"></a>CRenderTarget::DrawRectangle  
+##  <a name="drawrectangle"></a>CRenderTarget::DrawRectangle  
  Disegna la struttura di un rettangolo con le dimensioni specificate e stile di traccia.  
   
 ```  
@@ -408,7 +462,7 @@ void DrawRectangle(
  `strokeStyle`  
  Lo stile del tratto da dipingere o NULL per disegnare un tratto continuo.  
   
-##  <a name="a-namedrawroundedrectanglea--crendertargetdrawroundedrectangle"></a><a name="drawroundedrectangle"></a>CRenderTarget::DrawRoundedRectangle  
+##  <a name="drawroundedrectangle"></a>CRenderTarget::DrawRoundedRectangle  
  Disegna la struttura del rettangolo arrotondato specificato utilizzando lo stile del tratto specificato.  
   
 ```  
@@ -432,7 +486,7 @@ void DrawRoundedRectangle(
  `strokeStyle`  
  Stile del tratto del rettangolo arrotondato o NULL per disegnare un tratto continuo. Il valore predefinito è NULL.  
   
-##  <a name="a-namedrawtexta--crendertargetdrawtext"></a><a name="drawtext"></a>CRenderTarget::DrawText  
+##  <a name="drawtext"></a>CRenderTarget::DrawText  
  Disegna il testo specificato mediante le informazioni di formato fornite da un oggetto IDWriteTextFormat.  
   
 ```  
@@ -464,7 +518,7 @@ void DrawText(
  `measuringMode`  
  Un valore che indica come metrica del glifo viene utilizzata per misurare il testo quando viene formattata. Il valore predefinito è DWRITE_MEASURING_MODE_NATURAL.  
   
-##  <a name="a-namedrawtextlayouta--crendertargetdrawtextlayout"></a><a name="drawtextlayout"></a>CRenderTarget::DrawTextLayout  
+##  <a name="drawtextlayout"></a>CRenderTarget::DrawTextLayout  
  Disegna il testo formattato descritto dall'oggetto IDWriteTextLayout specificato.  
   
 ```  
@@ -488,7 +542,7 @@ void DrawTextLayout(
  `options`  
  Un valore che indica se il testo deve essere bloccato nei limiti dei pixel e se il testo deve essere ritagliato nel rettangolo di layout. Il valore predefinito è D2D1_DRAW_TEXT_OPTIONS_NONE, che indica che il testo deve essere bloccato nei limiti dei pixel e non deve essere ritagliato nel rettangolo di layout.  
   
-##  <a name="a-nameenddrawa--crendertargetenddraw"></a><a name="enddraw"></a>CRenderTarget::EndDraw  
+##  <a name="enddraw"></a>CRenderTarget::EndDraw  
  Termina le operazioni di disegno sulla destinazione di rendering e indica lo stato di errore corrente e i tag associati.  
   
 ```  
@@ -498,7 +552,7 @@ HRESULT EndDraw();
 ### <a name="return-value"></a>Valore restituito  
  Se il metodo ha esito positivo, viene restituito S_OK. In caso contrario, restituisce un codice di errore HRESULT.  
   
-##  <a name="a-namefillellipsea--crendertargetfillellipse"></a><a name="fillellipse"></a>CRenderTarget::FillEllipse  
+##  <a name="fillellipse"></a>CRenderTarget::FillEllipse  
  Disegna la parte interna dell'ellisse specificata.  
   
 ```  
@@ -514,7 +568,7 @@ void FillEllipse(
  `pBrush`  
  Il pennello utilizzato per disegnare la parte interna dell'ellisse.  
   
-##  <a name="a-namefillgeometrya--crendertargetfillgeometry"></a><a name="fillgeometry"></a>CRenderTarget::FillGeometry  
+##  <a name="fillgeometry"></a>CRenderTarget::FillGeometry  
  Disegna l'interno della geometria specificata.  
   
 ```  
@@ -534,7 +588,7 @@ void FillGeometry(
  `pOpacityBrush`  
  Maschera di opacità da applicare alla geometria; NULL per non maschera di opacità. Se si specifica una maschera di opacità (il parametro opacityBrush), pennello deve essere un ID2D1BitmapBrush con la modalità x e y estendere impostata su D2D1_EXTEND_MODE_CLAMP. Per altre informazioni, vedere la sezione Osservazioni.  
   
-##  <a name="a-namefillmesha--crendertargetfillmesh"></a><a name="fillmesh"></a>CRenderTarget::FillMesh  
+##  <a name="fillmesh"></a>CRenderTarget::FillMesh  
  Disegna la parte interna della rete specificata.  
   
 ```  
@@ -550,7 +604,7 @@ void FillMesh(
  `pBrush`  
  Il pennello utilizzato per disegnare la mesh.  
   
-##  <a name="a-namefillopacitymaska--crendertargetfillopacitymask"></a><a name="fillopacitymask"></a>CRenderTarget::FillOpacityMask  
+##  <a name="fillopacitymask"></a>CRenderTarget::FillOpacityMask  
  Applica la maschera di opacità descritta da nella bitmap specificata in un pennello che, utilizzato per disegnare un'area della destinazione di rendering.  
   
 ```  
@@ -578,7 +632,7 @@ void FillOpacityMask(
  `rectSrc`  
  L'area della bitmap da utilizzare come maschera di opacità, in pixel indipendenti dal dispositivo.  
   
-##  <a name="a-namefillrectanglea--crendertargetfillrectangle"></a><a name="fillrectangle"></a>CRenderTarget::FillRectangle  
+##  <a name="fillrectangle"></a>CRenderTarget::FillRectangle  
  Disegna l'interno del rettangolo specificato.  
   
 ```  
@@ -594,7 +648,7 @@ void FillRectangle(
  `pBrush`  
  Il pennello utilizzato per disegnare il rettangolo della parte interno.  
   
-##  <a name="a-namefillroundedrectanglea--crendertargetfillroundedrectangle"></a><a name="fillroundedrectangle"></a>CRenderTarget::FillRoundedRectangle  
+##  <a name="fillroundedrectangle"></a>CRenderTarget::FillRoundedRectangle  
  Disegna l'interno del rettangolo arrotondato specificato.  
   
 ```  
@@ -610,7 +664,7 @@ void FillRoundedRectangle(
  `pBrush`  
  Pennello utilizzato per disegnare l'interno del rettangolo arrotondato.  
   
-##  <a name="a-nameflusha--crendertargetflush"></a><a name="flush"></a>CRenderTarget::Flush  
+##  <a name="flush"></a>CRenderTarget::Flush  
  Esegue tutti i comandi di disegno in sospeso.  
   
 ```  
@@ -626,7 +680,7 @@ void Flush(
  `tag2`  
  Contiene il tag per le operazioni che hanno generato errori o 0 se si sono verificati errori. Questo parametro viene passato non inizializzato.  
   
-##  <a name="a-namegetantialiasmodea--crendertargetgetantialiasmode"></a><a name="getantialiasmode"></a>CRenderTarget::GetAntialiasMode  
+##  <a name="getantialiasmode"></a>CRenderTarget::GetAntialiasMode  
  Recupera la modalità di anti-aliasing corrente per le operazioni di disegno non di testo.  
   
 ```  
@@ -636,7 +690,7 @@ D2D1_ANTIALIAS_MODE GetAntialiasMode() const;
 ### <a name="return-value"></a>Valore restituito  
  Modalità di anti-aliasing corrente per le operazioni di disegno non di testo.  
   
-##  <a name="a-namegetdpia--crendertargetgetdpi"></a><a name="getdpi"></a>CRenderTarget::GetDpi  
+##  <a name="getdpi"></a>CRenderTarget::GetDpi  
  Restituisce il rendering punti per pollice (DPI) della destinazione  
   
 ```  
@@ -646,7 +700,7 @@ CD2DSizeF GetDpi() const;
 ### <a name="return-value"></a>Valore restituito  
  Punti per pollice (DPI) della destinazione di rendering.  
   
-##  <a name="a-namegetmaximumbitmapsizea--crendertargetgetmaximumbitmapsize"></a><a name="getmaximumbitmapsize"></a>CRenderTarget::GetMaximumBitmapSize  
+##  <a name="getmaximumbitmapsize"></a>CRenderTarget::GetMaximumBitmapSize  
  Ottiene la dimensione massima, in unità dipendenti dalla periferica (pixel), di qualsiasi dimensione di una bitmap supportato dalla destinazione di rendering  
   
 ```  
@@ -656,7 +710,7 @@ UINT32 GetMaximumBitmapSize() const;
 ### <a name="return-value"></a>Valore restituito  
  La dimensione massima, in pixel, di qualsiasi dimensione di una bitmap supportato dalla destinazione di rendering  
   
-##  <a name="a-namegetpixelformata--crendertargetgetpixelformat"></a><a name="getpixelformat"></a>CRenderTarget::GetPixelFormat  
+##  <a name="getpixelformat"></a>CRenderTarget::GetPixelFormat  
  Recupera il formato pixel e alpha modalità della destinazione di rendering  
   
 ```  
@@ -666,7 +720,7 @@ D2D1_PIXEL_FORMAT GetPixelFormat() const;
 ### <a name="return-value"></a>Valore restituito  
  Il formato pixel e alpha modalità della destinazione di rendering  
   
-##  <a name="a-namegetpixelsizea--crendertargetgetpixelsize"></a><a name="getpixelsize"></a>CRenderTarget::GetPixelSize  
+##  <a name="getpixelsize"></a>CRenderTarget::GetPixelSize  
  Restituisce la dimensione della destinazione di rendering in pixel del dispositivo  
   
 ```  
@@ -676,7 +730,7 @@ CD2DSizeU GetPixelSize() const;
 ### <a name="return-value"></a>Valore restituito  
  Le dimensioni della destinazione di rendering in pixel del dispositivo  
   
-##  <a name="a-namegetrendertargeta--crendertargetgetrendertarget"></a><a name="getrendertarget"></a>CRenderTarget::GetRenderTarget  
+##  <a name="getrendertarget"></a>CRenderTarget::GetRenderTarget  
  Restituisce l'interfaccia ID2D1RenderTarget  
   
 ```  
@@ -686,7 +740,7 @@ ID2D1RenderTarget* GetRenderTarget();
 ### <a name="return-value"></a>Valore restituito  
  Puntatore a un'interfaccia ID2D1RenderTarget o NULL se l'oggetto non è ancora inizializzato.  
   
-##  <a name="a-namegetsizea--crendertargetgetsize"></a><a name="getsize"></a>CRenderTarget::GetSize  
+##  <a name="getsize"></a>CRenderTarget::GetSize  
  Restituisce la dimensione della destinazione di rendering in pixel indipendenti dal dispositivo  
   
 ```  
@@ -696,7 +750,7 @@ CD2DSizeF GetSize() const;
 ### <a name="return-value"></a>Valore restituito  
  La dimensione corrente della destinazione di rendering in pixel indipendenti dal dispositivo  
   
-##  <a name="a-namegettagsa--crendertargetgettags"></a><a name="gettags"></a>CRenderTarget::GetTags  
+##  <a name="gettags"></a>CRenderTarget::GetTags  
  Ottiene l'etichetta per le successive operazioni di disegno.  
   
 ```  
@@ -712,7 +766,7 @@ void GetTags(
  `tag2`  
  Contiene la seconda etichetta per le successive operazioni di disegno. Questo parametro viene passato non inizializzato. Se si specifica NULL, viene recuperato alcun valore per questo parametro.  
   
-##  <a name="a-namegettextantialiasmodea--crendertargetgettextantialiasmode"></a><a name="gettextantialiasmode"></a>CRenderTarget::GetTextAntialiasMode  
+##  <a name="gettextantialiasmode"></a>CRenderTarget::GetTextAntialiasMode  
  Ottiene la modalità di anti-aliasing per testo e le operazioni di disegno del glifo.  
   
 ```  
@@ -722,7 +776,7 @@ D2D1_TEXT_ANTIALIAS_MODE GetTextAntialiasMode() const;
 ### <a name="return-value"></a>Valore restituito  
  Modalità di anti-aliasing corrente per il testo e icona le operazioni di disegno.  
   
-##  <a name="a-namegettextrenderingparamsa--crendertargetgettextrenderingparams"></a><a name="gettextrenderingparams"></a>CRenderTarget::GetTextRenderingParams  
+##  <a name="gettextrenderingparams"></a>CRenderTarget::GetTextRenderingParams  
  Recupera opzioni per il rendering di testo corrente della destinazione di rendering.  
   
 ```  
@@ -733,7 +787,7 @@ void GetTextRenderingParams(IDWriteRenderingParams** textRenderingParams);
  `textRenderingParams`  
  Quando termina, questo metodo corrente textRenderingParams contiene l'indirizzo di un puntatore alla destinazione di rendering della opzioni di rendering del testo.  
   
-##  <a name="a-namegettransforma--crendertargetgettransform"></a><a name="gettransform"></a>CRenderTarget::GetTransform  
+##  <a name="gettransform"></a>CRenderTarget::GetTransform  
  Applica la trasformazione specificata per la destinazione di rendering, sostituendo la trasformazione esistente. Tutte le operazioni di disegno successive si verificano nello spazio trasformato.  
   
 ```  
@@ -744,7 +798,7 @@ void GetTransform(D2D1_MATRIX_3X2_F* transform);
  `transform`  
  La trasformazione da applicare alla destinazione di rendering.  
   
-##  <a name="a-nameissupporteda--crendertargetissupported"></a><a name="issupported"></a>CRenderTarget::IsSupported  
+##  <a name="issupported"></a>CRenderTarget::IsSupported  
  Indica se la destinazione di rendering supporta le proprietà specificate  
   
 ```  
@@ -758,7 +812,7 @@ BOOL IsSupported(const D2D1_RENDER_TARGET_PROPERTIES& renderTargetProperties) co
 ### <a name="return-value"></a>Valore restituito  
  TRUE se le proprietà di destinazione di rendering specificate sono supportate da questa destinazione di rendering; in caso contrario, FALSE  
   
-##  <a name="a-nameisvalida--crendertargetisvalid"></a><a name="isvalid"></a>CRenderTarget::IsValid  
+##  <a name="isvalid"></a>CRenderTarget::IsValid  
  Verifica la validità della risorsa  
   
 ```  
@@ -768,28 +822,28 @@ BOOL IsValid() const;
 ### <a name="return-value"></a>Valore restituito  
  TRUE se la risorsa è valido. in caso contrario FALSE.  
   
-##  <a name="a-namemlstresourcesa--crendertargetmlstresources"></a><a name="m_lstresources"></a>CRenderTarget::m_lstResources  
+##  <a name="m_lstresources"></a>CRenderTarget::m_lstResources  
  Un elenco di puntatori agli oggetti CD2DResource.  
   
 ```  
 CObList m_lstResources;  
 ```  
   
-##  <a name="a-namemprendertargeta--crendertargetmprendertarget"></a><a name="m_prendertarget"></a>CRenderTarget::m_pRenderTarget  
+##  <a name="m_prendertarget"></a>CRenderTarget::m_pRenderTarget  
  Un puntatore a un oggetto ID2D1RenderTarget.  
   
 ```  
 ID2D1RenderTarget* m_pRenderTarget;  
 ```  
   
-##  <a name="a-namemptextformatdefaulta--crendertargetmptextformatdefault"></a><a name="m_ptextformatdefault"></a>CRenderTarget::m_pTextFormatDefault  
+##  <a name="m_ptextformatdefault"></a>CRenderTarget::m_pTextFormatDefault  
  Un puntatore a oggetto CD2DTextFormat che contiene un formato di testo predefinito.  
   
 ```  
 CD2DTextFormat* m_pTextFormatDefault;  
 ```  
   
-##  <a name="a-nameoperatorid2d1rendertargetstara--crendertargetoperator-id2d1rendertarget"></a><a name="operator_id2d1rendertarget_star"></a>CRenderTarget::operator ID2D1RenderTarget *  
+##  <a name="operator_id2d1rendertarget_star"></a>CRenderTarget::operator ID2D1RenderTarget *  
  Restituisce l'interfaccia ID2D1RenderTarget  
   
 ```  
@@ -799,21 +853,21 @@ operator ID2D1RenderTarget*();
 ### <a name="return-value"></a>Valore restituito  
  Puntatore a un'interfaccia ID2D1RenderTarget o NULL se l'oggetto non è ancora inizializzato.  
   
-##  <a name="a-namepopaxisalignedclipa--crendertargetpopaxisalignedclip"></a><a name="popaxisalignedclip"></a>CRenderTarget::PopAxisAlignedClip  
+##  <a name="popaxisalignedclip"></a>CRenderTarget::PopAxisAlignedClip  
  Rimuove l'ultimo clip allineato all'asse dalla destinazione di rendering. Dopo che questo metodo viene chiamato, il clip non è più applicato alle successive operazioni di disegno.  
   
 ```  
 void PopAxisAlignedClip();
 ```  
   
-##  <a name="a-namepoplayera--crendertargetpoplayer"></a><a name="poplayer"></a>CRenderTarget::PopLayer  
+##  <a name="poplayer"></a>CRenderTarget::PopLayer  
  Interrompe il reindirizzamento delle operazioni di disegno al livello specificato da PushLayer ultima chiamata.  
   
 ```  
 void PopLayer();
 ```  
   
-##  <a name="a-namepushaxisalignedclipa--crendertargetpushaxisalignedclip"></a><a name="pushaxisalignedclip"></a>CRenderTarget::PushAxisAlignedClip  
+##  <a name="pushaxisalignedclip"></a>CRenderTarget::PushAxisAlignedClip  
  Rimuove l'ultimo clip allineato all'asse dalla destinazione di rendering. Dopo che questo metodo viene chiamato, il clip non è più applicato alle successive operazioni di disegno.  
   
 ```  
@@ -829,7 +883,7 @@ void PushAxisAlignedClip(
  `mode`  
  La modalità di anti-aliasing utilizzata per disegnare i bordi dei rettangoli clip che hanno limiti dei subpixel, nonché di blend clip con il contenuto della scena. La combinazione viene eseguita una volta quando viene chiamato il metodo PopAxisAlignedClip e non si applica a ogni primitiva all'interno del livello.  
   
-##  <a name="a-namepushlayera--crendertargetpushlayer"></a><a name="pushlayer"></a>CRenderTarget::PushLayer  
+##  <a name="pushlayer"></a>CRenderTarget::PushLayer  
  Aggiunge il livello specificato per la destinazione di rendering in modo che riceva tutte le operazioni di disegno successive fino a quando non viene chiamato PopLayer.  
   
 ```  
@@ -845,7 +899,7 @@ void PushLayer(
  `layer`  
  Il livello che riceve le successive operazioni di disegno.  
   
-##  <a name="a-namerestoredrawingstatea--crendertargetrestoredrawingstate"></a><a name="restoredrawingstate"></a>CRenderTarget::RestoreDrawingState  
+##  <a name="restoredrawingstate"></a>CRenderTarget::RestoreDrawingState  
  Imposta lo stato di disegno della destinazione di rendering di ID2D1DrawingStateBlock specificato.  
   
 ```  
@@ -856,7 +910,7 @@ void RestoreDrawingState(ID2D1DrawingStateBlock& drawingStateBlock);
  `drawingStateBlock`  
  Il nuovo stato di disegno della destinazione di rendering.  
   
-##  <a name="a-namesavedrawingstatea--crendertargetsavedrawingstate"></a><a name="savedrawingstate"></a>CRenderTarget::SaveDrawingState  
+##  <a name="savedrawingstate"></a>CRenderTarget::SaveDrawingState  
  Salva lo stato corrente di disegno ID2D1DrawingStateBlock specificato.  
   
 ```  
@@ -867,7 +921,7 @@ void SaveDrawingState(ID2D1DrawingStateBlock& drawingStateBlock) const;
  `drawingStateBlock`  
  Quando termina, questo metodo contiene lo stato corrente di disegno della destinazione di rendering. Questo parametro deve essere inizializzato prima di passarlo al metodo.  
   
-##  <a name="a-namesetantialiasmodea--crendertargetsetantialiasmode"></a><a name="setantialiasmode"></a>CRenderTarget::SetAntialiasMode  
+##  <a name="setantialiasmode"></a>CRenderTarget::SetAntialiasMode  
  Imposta la modalità di anti-aliasing della destinazione di rendering. La modalità di anti-aliasing si applica a tutte le operazioni di disegno successivi, ad eccezione di testo e icona le operazioni di disegno.  
   
 ```  
@@ -878,7 +932,7 @@ void SetAntialiasMode(D2D1_ANTIALIAS_MODE antialiasMode);
  `antialiasMode`  
  La modalità di anti-aliasing per future operazioni di disegno.  
   
-##  <a name="a-namesetdpia--crendertargetsetdpi"></a><a name="setdpi"></a>CRenderTarget::SetDpi  
+##  <a name="setdpi"></a>CRenderTarget::SetDpi  
  Imposta i punti per pollice (DPI) della destinazione di rendering.  
   
 ```  
@@ -889,7 +943,7 @@ void SetDpi(const CD2DSizeF& sizeDPI);
  `sizeDPI`  
  Un valore maggiore o uguale a zero che specifica il DPI orizzontale/verticale della destinazione di rendering.  
   
-##  <a name="a-namesettagsa--crendertargetsettags"></a><a name="settags"></a>CRenderTarget::SetTags  
+##  <a name="settags"></a>CRenderTarget::SetTags  
  Specifica un'etichetta per le successive operazioni di disegno.  
   
 ```  
@@ -905,7 +959,7 @@ void SetTags(
  `tag2`  
  Etichetta da applicare alle successive operazioni di disegno.  
   
-##  <a name="a-namesettextantialiasmodea--crendertargetsettextantialiasmode"></a><a name="settextantialiasmode"></a>CRenderTarget::SetTextAntialiasMode  
+##  <a name="settextantialiasmode"></a>CRenderTarget::SetTextAntialiasMode  
  Specifica la modalità di anti-aliasing da utilizzare per il testo e le operazioni di disegno del glifo.  
   
 ```  
@@ -916,7 +970,7 @@ void SetTextAntialiasMode(D2D1_TEXT_ANTIALIAS_MODE textAntialiasMode);
  `textAntialiasMode`  
  La modalità di anti-aliasing da utilizzare per il testo e glifo.  
   
-##  <a name="a-namesettextrenderingparamsa--crendertargetsettextrenderingparams"></a><a name="settextrenderingparams"></a>CRenderTarget::SetTextRenderingParams  
+##  <a name="settextrenderingparams"></a>CRenderTarget::SetTextRenderingParams  
  Specifica le opzioni per il rendering di testo da applicare a tutti testo e glifo successive operazioni di disegno.  
   
 ```  
@@ -927,7 +981,7 @@ void SetTextRenderingParams(IDWriteRenderingParams* textRenderingParams = NULL);
  `textRenderingParams`  
  Le opzioni per il rendering di testo da applicare a tutto il testo e glifo; NULL per cancellare le opzioni di rendering di testo corrente.  
   
-##  <a name="a-namesettransforma--crendertargetsettransform"></a><a name="settransform"></a>CRenderTarget::SetTransform  
+##  <a name="settransform"></a>CRenderTarget::SetTransform  
  Applica la trasformazione specificata per la destinazione di rendering, sostituendo la trasformazione esistente. Tutte le operazioni di disegno successive si verificano nello spazio trasformato.  
   
 ```  
@@ -939,7 +993,7 @@ void SetTransform(const D2D1_MATRIX_3X2_F& transform);
  `transform`  
  La trasformazione da applicare alla destinazione di rendering.  
   
-##  <a name="a-nameverifyresourcea--crendertargetverifyresource"></a><a name="verifyresource"></a>CRenderTarget::VerifyResource  
+##  <a name="verifyresource"></a>CRenderTarget::VerifyResource  
  Verifica la validità dell'oggetto CD2DResource; Crea l'oggetto se non esiste già.  
   
 ```  

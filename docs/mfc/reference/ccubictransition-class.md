@@ -10,7 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CCubicTransition
-- afxanimationcontroller/CCubicTransition
+- AFXANIMATIONCONTROLLER/CCubicTransition
+- AFXANIMATIONCONTROLLER/CCubicTransition::CCubicTransition
+- AFXANIMATIONCONTROLLER/CCubicTransition::Create
+- AFXANIMATIONCONTROLLER/CCubicTransition::m_dblFinalValue
+- AFXANIMATIONCONTROLLER/CCubicTransition::m_dblFinalVelocity
+- AFXANIMATIONCONTROLLER/CCubicTransition::m_duration
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +89,7 @@ class CCubicTransition : public CBaseTransition;
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxanimationcontroller.h  
   
-##  <a name="a-nameccubictransitiona--ccubictransitionccubictransition"></a><a name="ccubictransition"></a>CCubicTransition::CCubicTransition  
+##  <a name="ccubictransition"></a>CCubicTransition::CCubicTransition  
  Costruisce un oggetto di transizione e inizializza i parametri.  
   
 ```  
@@ -104,7 +109,7 @@ CCubicTransition(
  `finalVelocity`  
  La velocità della variabile alla fine della transizione.  
   
-##  <a name="a-namecreatea--ccubictransitioncreate"></a><a name="create"></a>CCubicTransition::Create  
+##  <a name="create"></a>CCubicTransition::Create  
  Chiama la libreria di transizione per creare oggetti COM di transizione incapsulato.  
   
 ```  
@@ -120,21 +125,21 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Valore restituito  
  TRUE se transizione viene creata correttamente. in caso contrario FALSE.  
   
-##  <a name="a-namemdblfinalvaluea--ccubictransitionmdblfinalvalue"></a><a name="m_dblfinalvalue"></a>CCubicTransition::m_dblFinalValue  
+##  <a name="m_dblfinalvalue"></a>CCubicTransition::m_dblFinalValue  
  Il valore della variabile di animazione alla fine della transizione.  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
-##  <a name="a-namemdblfinalvelocitya--ccubictransitionmdblfinalvelocity"></a><a name="m_dblfinalvelocity"></a>CCubicTransition::m_dblFinalVelocity  
+##  <a name="m_dblfinalvelocity"></a>CCubicTransition::m_dblFinalVelocity  
  La velocità della variabile alla fine della transizione.  
   
 ```  
 DOUBLE m_dblFinalVelocity;  
 ```  
   
-##  <a name="a-namemdurationa--ccubictransitionmduration"></a><a name="m_duration"></a>CCubicTransition::m_duration  
+##  <a name="m_duration"></a>CCubicTransition::m_duration  
  La durata della transizione.  
   
 ```  

@@ -10,10 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDefaultHashTraits
-- ATL.CDefaultHashTraits<T>
-- ATL::CDefaultHashTraits<T>
-- ATL.CDefaultHashTraits
-- ATL::CDefaultHashTraits
+- ATLCOLL/ATL::CDefaultHashTraits
+- ATLCOLL/ATL::CDefaultHashTraits::Hash
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -73,7 +71,7 @@ class CDefaultHashTraits
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlcoll. h  
   
-##  <a name="a-namehasha--cdefaulthashtraitshash"></a><a name="hash"></a>CDefaultHashTraits::Hash  
+##  <a name="hash"></a>CDefaultHashTraits::Hash  
  Chiamare questa funzione per calcolare un valore hash per un determinato elemento.  
   
 ```

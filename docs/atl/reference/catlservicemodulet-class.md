@@ -9,9 +9,36 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CAtlServiceModuleT
-- ATL.CAtlServiceModuleT
 - CAtlServiceModuleT
+- ATLBASE/ATL::CAtlServiceModuleT
+- ATLBASE/ATL::CAtlServiceModuleT::CAtlServiceModuleT
+- ATLBASE/ATL::CAtlServiceModuleT::Handler
+- ATLBASE/ATL::CAtlServiceModuleT::InitializeSecurity
+- ATLBASE/ATL::CAtlServiceModuleT::Install
+- ATLBASE/ATL::CAtlServiceModuleT::IsInstalled
+- ATLBASE/ATL::CAtlServiceModuleT::LogEvent
+- ATLBASE/ATL::CAtlServiceModuleT::OnContinue
+- ATLBASE/ATL::CAtlServiceModuleT::OnInterrogate
+- ATLBASE/ATL::CAtlServiceModuleT::OnPause
+- ATLBASE/ATL::CAtlServiceModuleT::OnShutdown
+- ATLBASE/ATL::CAtlServiceModuleT::OnStop
+- ATLBASE/ATL::CAtlServiceModuleT::OnUnknownRequest
+- ATLBASE/ATL::CAtlServiceModuleT::ParseCommandLine
+- ATLBASE/ATL::CAtlServiceModuleT::PreMessageLoop
+- ATLBASE/ATL::CAtlServiceModuleT::RegisterAppId
+- ATLBASE/ATL::CAtlServiceModuleT::Run
+- ATLBASE/ATL::CAtlServiceModuleT::ServiceMain
+- ATLBASE/ATL::CAtlServiceModuleT::SetServiceStatus
+- ATLBASE/ATL::CAtlServiceModuleT::Start
+- ATLBASE/ATL::CAtlServiceModuleT::Uninstall
+- ATLBASE/ATL::CAtlServiceModuleT::Unlock
+- ATLBASE/ATL::CAtlServiceModuleT::UnregisterAppId
+- ATLBASE/ATL::CAtlServiceModuleT::WinMain
+- ATLBASE/ATL::CAtlServiceModuleT::m_bService
+- ATLBASE/ATL::CAtlServiceModuleT::m_dwThreadID
+- ATLBASE/ATL::CAtlServiceModuleT::m_hServiceStatus
+- ATLBASE/ATL::CAtlServiceModuleT::m_status
+- ATLBASE/ATL::CAtlServiceModuleT::m_szServiceName
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -125,7 +152,7 @@ class ATL_NO_VTABLE CAtlServiceModuleT : public CAtlExeModuleT<T>
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlbase. h  
   
-##  <a name="a-namecatlservicemoduleta--catlservicemoduletcatlservicemodulet"></a><a name="catlservicemodulet"></a>CAtlServiceModuleT::CAtlServiceModuleT  
+##  <a name="catlservicemodulet"></a>CAtlServiceModuleT::CAtlServiceModuleT  
  Costruttore.  
   
 ```
@@ -135,7 +162,7 @@ CAtlServiceModuleT() throw();
 ### <a name="remarks"></a>Note  
  Inizializza i membri di dati e imposta lo stato iniziale del servizio.  
   
-##  <a name="a-namehandlera--catlservicemodulethandler"></a><a name="handler"></a>CAtlServiceModuleT:: Handler  
+##  <a name="handler"></a>CAtlServiceModuleT:: Handler  
  La routine del gestore per il servizio.  
   
 ```
@@ -161,7 +188,7 @@ void Handler(DWORD dwOpcode) throw();
   
  Un servizio generato da ATL predefinito gestisce solo l'istruzione di interruzione. Se Gestione controllo servizi passa l'istruzione di interruzione, il servizio comunica a Gestione controllo servizi che il programma sta per essere arrestato. Chiama quindi il servizio `PostThreadMessage` per inviare un messaggio quit a se stesso. Questo termina il ciclo di messaggi e il servizio verrà chiuso.  
   
-##  <a name="a-nameinitializesecuritya--catlservicemoduletinitializesecurity"></a><a name="initializesecurity"></a>CAtlServiceModuleT:: InitializeSecurity  
+##  <a name="initializesecurity"></a>CAtlServiceModuleT:: InitializeSecurity  
  Fornisce il valore predefinito di impostazioni di sicurezza per il servizio.  
   
 ```
@@ -184,7 +211,7 @@ HRESULT InitializeSecurity() throw();
   
  [!code-cpp[NVC_ATL_ServiceAttrib n.&1;](../../atl/reference/codesnippet/cpp/catlservicemodulet-class_2.cpp)]  
   
-##  <a name="a-nameinstalla--catlservicemoduletinstall"></a><a name="install"></a>CAtlServiceModuleT::Install  
+##  <a name="install"></a>CAtlServiceModuleT::Install  
  Installa e crea il servizio.  
   
 ```
@@ -197,7 +224,7 @@ BOOL Install() throw();
 ### <a name="remarks"></a>Note  
  Installa il servizio nel database di Gestione controllo servizi (SCM) e quindi crea l'oggetto servizio. Se non è stato possibile creare il servizio, viene visualizzata una finestra di messaggio e il metodo restituisce FALSE.  
   
-##  <a name="a-nameisinstalleda--catlservicemoduletisinstalled"></a><a name="isinstalled"></a>CAtlServiceModuleT::IsInstalled  
+##  <a name="isinstalled"></a>CAtlServiceModuleT::IsInstalled  
  Conferma che il servizio sia stato installato.  
   
 ```
@@ -207,7 +234,7 @@ BOOL IsInstalled() throw();
 ### <a name="return-value"></a>Valore restituito  
  Restituisce TRUE se il servizio è installato, FALSE in caso contrario.  
   
-##  <a name="a-namelogeventa--catlservicemoduletlogevent"></a><a name="logevent"></a>CAtlServiceModuleT::LogEvent  
+##  <a name="logevent"></a>CAtlServiceModuleT::LogEvent  
  Scrive nel registro eventi.  
   
 ```
@@ -224,7 +251,7 @@ void __cdecl LogEvent(LPCTSTR pszFormat, ...) throw();
 ### <a name="remarks"></a>Note  
  Questo metodo scrive i dettagli in un log eventi, utilizzando la funzione [ReportEvent](http://msdn.microsoft.com/library/windows/desktop/aa363679). Se nessun servizio è in esecuzione, la stringa viene inviata alla console.  
   
-##  <a name="a-namembservicea--catlservicemoduletmbservice"></a><a name="m_bservice"></a>CAtlServiceModuleT::m_bService  
+##  <a name="m_bservice"></a>CAtlServiceModuleT::m_bService  
  Flag che indica che il programma viene eseguito come servizio.  
   
 ```
@@ -234,7 +261,7 @@ BOOL m_bService;
 ### <a name="remarks"></a>Note  
  Utilizzato per distinguere un file EXE del servizio da un file EXE dell'applicazione.  
   
-##  <a name="a-namemdwthreadida--catlservicemoduletmdwthreadid"></a><a name="m_dwthreadid"></a>CAtlServiceModuleT::m_dwThreadID  
+##  <a name="m_dwthreadid"></a>CAtlServiceModuleT::m_dwThreadID  
  L'identificatore del thread del servizio di archiviazione di una variabile membro.  
   
 ```
@@ -244,7 +271,7 @@ DWORD m_dwThreadID;
 ### <a name="remarks"></a>Note  
  Questa variabile archivia l'identificatore del thread del thread corrente.  
   
-##  <a name="a-namemhservicestatusa--catlservicemoduletmhservicestatus"></a><a name="m_hservicestatus"></a>CAtlServiceModuleT::m_hServiceStatus  
+##  <a name="m_hservicestatus"></a>CAtlServiceModuleT::m_hServiceStatus  
  Variabile membro l'archiviazione di un handle per la struttura di informazioni di stato per il servizio corrente.  
   
 ```
@@ -254,7 +281,7 @@ SERVICE_STATUS_HANDLE m_hServiceStatus;
 ### <a name="remarks"></a>Note  
  Il [SERVICE_STATUS](http://msdn.microsoft.com/library/windows/desktop/ms685996) struttura contiene informazioni relative a un servizio.  
   
-##  <a name="a-namemstatusa--catlservicemoduletmstatus"></a><a name="m_status"></a>CAtlServiceModuleT::m_status  
+##  <a name="m_status"></a>CAtlServiceModuleT::m_status  
  Variabile membro archiviare la struttura di informazioni di stato per il servizio corrente.  
   
 ```
@@ -264,7 +291,7 @@ SERVICE_STATUS m_status;
 ### <a name="remarks"></a>Note  
  Il [SERVICE_STATUS](http://msdn.microsoft.com/library/windows/desktop/ms685996) struttura contiene informazioni relative a un servizio.  
   
-##  <a name="a-namemszservicenamea--catlservicemoduletmszservicename"></a><a name="m_szservicename"></a>CAtlServiceModuleT::m_szServiceName  
+##  <a name="m_szservicename"></a>CAtlServiceModuleT::m_szServiceName  
  Il nome del servizio in corso la registrazione.  
   
 ```
@@ -274,42 +301,42 @@ TCHAR [256] m_szServiceName;
 ### <a name="remarks"></a>Note  
  Una stringa con terminazione null che archivia il nome del servizio.  
   
-##  <a name="a-nameoncontinuea--catlservicemoduletoncontinue"></a><a name="oncontinue"></a>CAtlServiceModuleT::OnContinue  
+##  <a name="oncontinue"></a>CAtlServiceModuleT::OnContinue  
  Eseguire l'override di questo metodo per riprendere il servizio.  
   
 ```
 void OnContinue() throw();
 ```  
   
-##  <a name="a-nameoninterrogatea--catlservicemoduletoninterrogate"></a><a name="oninterrogate"></a>CAtlServiceModuleT::OnInterrogate  
+##  <a name="oninterrogate"></a>CAtlServiceModuleT::OnInterrogate  
  Eseguire l'override di questo metodo per interrogare il servizio.  
   
 ```
 void OnInterrogate() throw();
 ```  
   
-##  <a name="a-nameonpausea--catlservicemoduletonpause"></a><a name="onpause"></a>CAtlServiceModuleT::OnPause  
+##  <a name="onpause"></a>CAtlServiceModuleT::OnPause  
  Eseguire l'override di questo metodo per sospendere il servizio.  
   
 ```
 void OnPause() throw();
 ```  
   
-##  <a name="a-nameonshutdowna--catlservicemoduletonshutdown"></a><a name="onshutdown"></a>CAtlServiceModuleT::OnShutdown  
+##  <a name="onshutdown"></a>CAtlServiceModuleT::OnShutdown  
  Eseguire l'override di questo metodo per arrestare il servizio.  
   
 ```
 void OnShutdown() throw();
 ```  
   
-##  <a name="a-nameonstopa--catlservicemoduletonstop"></a><a name="onstop"></a>CAtlServiceModuleT::OnStop  
+##  <a name="onstop"></a>CAtlServiceModuleT::OnStop  
  Eseguire l'override di questo metodo per arrestare il servizio.  
   
 ```
 void OnStop() throw();
 ```  
   
-##  <a name="a-nameonunknownrequesta--catlservicemoduletonunknownrequest"></a><a name="onunknownrequest"></a>CAtlServiceModuleT::OnUnknownRequest  
+##  <a name="onunknownrequest"></a>CAtlServiceModuleT::OnUnknownRequest  
  Eseguire l'override di questo metodo per gestire le richieste sconosciute per il servizio.  
   
 ```
@@ -320,7 +347,7 @@ void OnUnknownRequest(DWORD /* dwOpcode*/) throw();
  */\*dwOpcode\*/*  
  Riservato.  
   
-##  <a name="a-nameparsecommandlinea--catlservicemoduletparsecommandline"></a><a name="parsecommandline"></a>CAtlServiceModuleT::ParseCommandLine  
+##  <a name="parsecommandline"></a>CAtlServiceModuleT::ParseCommandLine  
  Analizza la riga di comando e, se necessario, esegue la registrazione.  
   
 ```
@@ -340,7 +367,7 @@ bool ParseCommandLine(LPCTSTR lpCmdLine, HRESULT* pnRetCode) throw();
 ### <a name="remarks"></a>Note  
  Analizza la riga di comando e nei registri o Annulla la registrazione dei file RGS fornito, se necessario. Questo metodo chiama [CAtlExeModuleT::ParseCommandLine](../../atl/reference/catlexemodulet-class.md#parsecommandline) per verificare la presenza di **/RegServer** e **/UnregServer**. Aggiunta dell'argomento **- servizio** verrà registrato il servizio.  
   
-##  <a name="a-namepremessageloopa--catlservicemoduletpremessageloop"></a><a name="premessageloop"></a>CAtlServiceModuleT::PreMessageLoop  
+##  <a name="premessageloop"></a>CAtlServiceModuleT::PreMessageLoop  
  Questo metodo viene chiamato immediatamente prima di immettere il ciclo di messaggi.  
   
 ```
@@ -357,7 +384,7 @@ HRESULT PreMessageLoop(int nShowCmd) throw();
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questo metodo per aggiungere il codice di inizializzazione personalizzata per il servizio.  
   
-##  <a name="a-nameregisterappida--catlservicemoduletregisterappid"></a><a name="registerappid"></a>CAtlServiceModuleT::RegisterAppId  
+##  <a name="registerappid"></a>CAtlServiceModuleT::RegisterAppId  
  Registra il servizio nel Registro di sistema.  
   
 ```
@@ -371,7 +398,7 @@ inline HRESULT RegisterAppId(bool bService = false) throw();
 ### <a name="return-value"></a>Valore restituito  
  Restituisce S_OK esito positivo o un errore HRESULT in caso di errore.  
   
-##  <a name="a-nameruna--catlservicemoduletrun"></a><a name="run"></a>CAtlServiceModuleT  
+##  <a name="run"></a>CAtlServiceModuleT  
  Esegue il servizio.  
   
 ```
@@ -388,7 +415,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 ### <a name="remarks"></a>Note  
  Dopo essere stato chiamato, **eseguire** chiamate [CAtlServiceModuleT::PreMessageLoop](#premessageloop), [CAtlExeModuleT::RunMessageLoop](../../atl/reference/catlexemodulet-class.md#runmessageloop), e [CAtlExeModuleT::PostMessageLoop](../../atl/reference/catlexemodulet-class.md#postmessageloop).  
   
-##  <a name="a-nameservicemaina--catlservicemoduletservicemain"></a><a name="servicemain"></a>CAtlServiceModuleT::  
+##  <a name="servicemain"></a>CAtlServiceModuleT::  
  Questo metodo viene chiamato da Gestione controllo servizi.  
   
 ```
@@ -407,7 +434,7 @@ void ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv) throw();
   
  Dopo il server chiama `ServiceMain`, un servizio deve fornire SCM una funzione del gestore. Questa funzione consente di ottenere lo stato del servizio e passare istruzioni specifiche (ad esempio la sospensione o arresto) Gestione controllo servizi. Successivamente, [CAtlServiceModuleT](#run) viene chiamato per svolgere il compito principale del servizio. **Eseguire** continua l'esecuzione fino a quando il servizio viene arrestato.  
   
-##  <a name="a-namesetservicestatusa--catlservicemoduletsetservicestatus"></a><a name="setservicestatus"></a>CAtlServiceModuleT::SetServiceStatus  
+##  <a name="setservicestatus"></a>CAtlServiceModuleT::SetServiceStatus  
  Questo metodo aggiorna lo stato del servizio.  
   
 ```
@@ -421,7 +448,7 @@ void SetServiceStatus(DWORD dwState) throw();
 ### <a name="remarks"></a>Note  
  Aggiorna le informazioni sullo stato della gestione controllo servizi per il servizio. Viene chiamato dal [CAtlServiceModuleT](#run), [CAtlServiceModuleT::](#servicemain) e altri metodi del gestore. Lo stato viene inoltre archiviato nella variabile membro [CAtlServiceModuleT::m_status](#m_status).  
   
-##  <a name="a-namestarta--catlservicemoduletstart"></a><a name="start"></a>CAtlServiceModuleT:: Start  
+##  <a name="start"></a>CAtlServiceModuleT:: Start  
  Chiamato da `CAtlServiceModuleT::WinMain` all'avvio del servizio.  
   
 ```
@@ -438,7 +465,7 @@ HRESULT Start(int nShowCmd) throw();
 ### <a name="remarks"></a>Note  
  Il [CAtlServiceModuleT:: WinMain](#winmain) metodo gestisce sia l'installazione di registrazione, nonché le attività coinvolte nella rimozione delle voci del Registro di sistema e la disinstallazione del modulo. Quando viene eseguito il servizio, `WinMain` chiamate **avviare**.  
   
-##  <a name="a-nameuninstalla--catlservicemoduletuninstall"></a><a name="uninstall"></a>CAtlServiceModuleT::Uninstall  
+##  <a name="uninstall"></a>CAtlServiceModuleT::Uninstall  
  Arresta e rimuove il servizio.  
   
 ```
@@ -451,7 +478,7 @@ BOOL Uninstall() throw();
 ### <a name="remarks"></a>Note  
  Arresta l'esecuzione del servizio e lo rimuove dal database di Gestione controllo servizi.  
   
-##  <a name="a-nameunlocka--catlservicemoduletunlock"></a><a name="unlock"></a>CAtlServiceModuleT::Unlock  
+##  <a name="unlock"></a>CAtlServiceModuleT::Unlock  
  Decrementa il conteggio dei blocchi del servizio.  
   
 ```
@@ -461,7 +488,7 @@ LONG Unlock() throw();
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il conteggio dei blocchi, che può essere utile per la diagnostica e debug.  
   
-##  <a name="a-nameunregisterappida--catlservicemoduletunregisterappid"></a><a name="unregisterappid"></a>CAtlServiceModuleT::UnregisterAppId  
+##  <a name="unregisterappid"></a>CAtlServiceModuleT::UnregisterAppId  
  Rimuove il servizio dal Registro di sistema.  
   
 ```
@@ -471,7 +498,7 @@ HRESULT UnregisterAppId() throw();
 ### <a name="return-value"></a>Valore restituito  
  Restituisce S_OK esito positivo o un errore HRESULT in caso di errore.  
   
-##  <a name="a-namewinmaina--catlservicemoduletwinmain"></a><a name="winmain"></a>CAtlServiceModuleT:: WinMain  
+##  <a name="winmain"></a>CAtlServiceModuleT:: WinMain  
  Questo metodo implementa il codice necessario per avviare il servizio.  
   
 ```

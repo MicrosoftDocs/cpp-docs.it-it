@@ -9,9 +9,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComEnumImpl
-- ATL::CComEnumImpl
 - CComEnumImpl
+- ATLCOM/ATL::CComEnumImpl
+- ATLCOM/ATL::CComEnumImpl::CComEnumImpl
+- ATLCOM/ATL::CComEnumImpl::Clone
+- ATLCOM/ATL::CComEnumImpl::Init
+- ATLCOM/ATL::CComEnumImpl::Next
+- ATLCOM/ATL::CComEnumImpl::Reset
+- ATLCOM/ATL::CComEnumImpl::Skip
+- ATLCOM/ATL::CComEnumImpl::m_begin
+- ATLCOM/ATL::CComEnumImpl::m_dwFlags
+- ATLCOM/ATL::CComEnumImpl::m_end
+- ATLCOM/ATL::CComEnumImpl::m_iter
+- ATLCOM/ATL::CComEnumImpl::m_spUnk
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -114,21 +124,21 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlcom. h  
   
-##  <a name="a-nameccomenumimpla--ccomenumimplccomenumimpl"></a><a name="ccomenumimpl"></a>CComEnumImpl::CComEnumImpl  
+##  <a name="ccomenumimpl"></a>CComEnumImpl::CComEnumImpl  
  Costruttore.  
   
 ```
 CComEnumImpl();
 ```  
   
-##  <a name="a-namedtora--ccomenumimplccomenumimpl"></a><a name="dtor"></a>CComEnumImpl:: ~ CComEnumImpl  
+##  <a name="dtor"></a>CComEnumImpl:: ~ CComEnumImpl  
  Distruttore.  
   
 ```
 ~CComEnumImpl();
 ```  
   
-##  <a name="a-nameinita--ccomenumimplinit"></a><a name="init"></a>CComEnumImpl::Init  
+##  <a name="init"></a>CComEnumImpl::Init  
  È necessario chiamare questo metodo prima di passare un puntatore a interfaccia dell'enumeratore a qualsiasi client.  
   
 ```
@@ -162,17 +172,14 @@ HRESULT Init(
   
  Il `flags` parametro consente di specificare come l'enumeratore deve considerare gli elementi della matrice passati. `flags`può assumere uno dei valori di **CComEnumFlags** enumerazione illustrato di seguito:  
   
- `enum CComEnumFlags`  
-  
- `{`  
-  
- `AtlFlagNoCopy = 0,`  
-  
- `AtlFlagTakeOwnership = 2, // BitOwn`  
-  
- `AtlFlagCopy = 3           // BitOwn | BitCopy`  
-  
- `};`  
+```  
+enum CComEnumFlags  
+   {  
+   AtlFlagNoCopy = 0,  
+   AtlFlagTakeOwnership = 2, // BitOwn  
+   AtlFlagCopy = 3           // BitOwn | BitCopy  
+   };  
+```  
   
  **AtlFlagNoCopy** indica che la durata della matrice non verrà controllata dall'enumeratore. In questo caso, sarà una matrice statica o l'oggetto identificato da *pUnk* sarà responsabile per il rilascio della matrice quando non è più necessario.  
   
@@ -183,7 +190,7 @@ HRESULT Init(
 > [!NOTE]
 >  Il prototipo di questo metodo consente di specificare gli elementi della matrice come tipo **T**, dove **T** è stato definito come parametro di modello per la classe. Questo è lo stesso tipo che viene esposta tramite il metodo di interfaccia COM [CComEnumImpl::Next](#next). L'implicazione di ciò è che, a differenza di [IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md), questa classe non supporta l'archiviazione diversi ed esposti i tipi di dati. Il tipo di dati degli elementi nella matrice deve essere uguale al tipo di dati esposto tramite l'interfaccia COM.  
   
-##  <a name="a-nameclonea--ccomenumimplclone"></a><a name="clone"></a>CComEnumImpl::Clone  
+##  <a name="clone"></a>CComEnumImpl::Clone  
  Questo metodo fornisce l'implementazione di [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx) metodo mediante la creazione di un oggetto di tipo `CComEnum`, inizializzandola con la stessa matrice e iteratori utilizzato dall'oggetto corrente e restituisce l'interfaccia sull'oggetto appena creato.  
   
 ```
@@ -200,42 +207,42 @@ STDMETHOD(Clone)(Base** ppEnum);
 ### <a name="remarks"></a>Note  
  Si noti che gli enumeratori clonati mai i propri copia (o take ownership) dei dati utilizzati dall'enumeratore originale. Se necessario, enumeratori clonati verranno conserva l'enumeratore originale (tramite un riferimento COM) per garantire che i dati sono disponibili per, purché ne hanno bisogno.  
   
-##  <a name="a-namemspunka--ccomenumimplmspunk"></a><a name="m_spunk"></a>CComEnumImpl::m_spUnk  
+##  <a name="m_spunk"></a>CComEnumImpl::m_spUnk  
  Questo puntatore intelligente mantiene un riferimento all'oggetto passato a [CComEnumImpl::Init](#init), assicurando che rimanga attivo durante il ciclo di vita dell'enumeratore.  
   
 ```
 CComPtr<IUnknown> m_spUnk;
 ```  
   
-##  <a name="a-namembegina--ccomenumimplmbegin"></a><a name="m_begin"></a>CComEnumImpl::m_begin  
+##  <a name="m_begin"></a>CComEnumImpl::m_begin  
  Puntatore alla posizione immediatamente successiva all'ultimo elemento della matrice contenente gli elementi da enumerare.  
   
 ```
 T* m_begin;
 ```  
   
-##  <a name="a-namemenda--ccomenumimplmend"></a><a name="m_end"></a>CComEnumImpl::m_end  
+##  <a name="m_end"></a>CComEnumImpl::m_end  
  Puntatore al primo elemento della matrice contenente gli elementi da enumerare.  
   
 ```
 T* m_end;
 ```  
   
-##  <a name="a-namemitera--ccomenumimplmiter"></a><a name="m_iter"></a>CComEnumImpl::m_iter  
+##  <a name="m_iter"></a>CComEnumImpl::m_iter  
  Puntatore all'elemento corrente della matrice contenente gli elementi da enumerare.  
   
 ```
 T* m_iter;
 ```  
   
-##  <a name="a-namemdwflagsa--ccomenumimplmdwflags"></a><a name="m_dwflags"></a>CComEnumImpl::m_dwFlags  
+##  <a name="m_dwflags"></a>CComEnumImpl::m_dwFlags  
  Il flag passati a [CComEnumImpl::Init](#init).  
   
 ```
 DWORD m_dwFlags;
 ```  
   
-##  <a name="a-namenexta--ccomenumimplnext"></a><a name="next"></a>CComEnumImpl::Next  
+##  <a name="next"></a>CComEnumImpl::Next  
  Questo metodo fornisce l'implementazione di [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx) metodo.  
   
 ```
@@ -255,7 +262,7 @@ STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
 ### <a name="return-value"></a>Valore restituito  
  Un valore `HRESULT` standard.  
   
-##  <a name="a-namereseta--ccomenumimplreset"></a><a name="reset"></a>CComEnumImpl::Reset  
+##  <a name="reset"></a>CComEnumImpl::Reset  
  Questo metodo fornisce l'implementazione di [IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx) metodo.  
   
 ```
@@ -265,7 +272,7 @@ STDMETHOD(Reset)(void);
 ### <a name="return-value"></a>Valore restituito  
  Un valore `HRESULT` standard.  
   
-##  <a name="a-nameskipa--ccomenumimplskip"></a><a name="skip"></a>CComEnumImpl  
+##  <a name="skip"></a>CComEnumImpl  
  Questo metodo fornisce l'implementazione di [IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx) metodo.  
   
 ```

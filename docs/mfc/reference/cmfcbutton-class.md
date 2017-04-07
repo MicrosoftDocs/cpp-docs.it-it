@@ -10,6 +10,44 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCButton
+- AFXBUTTON/CMFCButton
+- AFXBUTTON/CMFCButton::CleanUp
+- AFXBUTTON/CMFCButton::EnableFullTextTooltip
+- AFXBUTTON/CMFCButton::EnableMenuFont
+- AFXBUTTON/CMFCButton::EnableWindowsTheming
+- AFXBUTTON/CMFCButton::GetToolTipCtrl
+- AFXBUTTON/CMFCButton::IsAutoCheck
+- AFXBUTTON/CMFCButton::IsAutorepeatCommandMode
+- AFXBUTTON/CMFCButton::IsCheckBox
+- AFXBUTTON/CMFCButton::IsChecked
+- AFXBUTTON/CMFCButton::IsHighlighted
+- AFXBUTTON/CMFCButton::IsPressed
+- AFXBUTTON/CMFCButton::IsPushed
+- AFXBUTTON/CMFCButton::IsRadioButton
+- AFXBUTTON/CMFCButton::IsWindowsThemingEnabled
+- AFXBUTTON/CMFCButton::SetAutorepeatMode
+- AFXBUTTON/CMFCButton::SetCheckedImage
+- AFXBUTTON/CMFCButton::SetFaceColor
+- AFXBUTTON/CMFCButton::SetImage
+- AFXBUTTON/CMFCButton::SetMouseCursor
+- AFXBUTTON/CMFCButton::SetMouseCursorHand
+- AFXBUTTON/CMFCButton::SetStdImage
+- AFXBUTTON/CMFCButton::SetTextColor
+- AFXBUTTON/CMFCButton::SetTextHotColor
+- AFXBUTTON/CMFCButton::SetTooltip
+- AFXBUTTON/CMFCButton::SizeToContent
+- AFXBUTTON/CMFCButton::OnDraw
+- AFXBUTTON/CMFCButton::OnDrawBorder
+- AFXBUTTON/CMFCButton::OnDrawFocusRect
+- AFXBUTTON/CMFCButton::OnDrawText
+- AFXBUTTON/CMFCButton::OnFillBackground
+- AFXBUTTON/CMFCButton::SelectFont
+- AFXBUTTON/CMFCButton::m_bDrawFocus
+- AFXBUTTON/CMFCButton::m_bHighlightChecked
+- AFXBUTTON/CMFCButton::m_bRightImage
+- AFXBUTTON/CMFCButton::m_bTransparent
+- AFXBUTTON/CMFCButton::m_nAlignStyle
+- AFXBUTTON/CMFCButton::m_nFlatStyle
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -150,14 +188,14 @@ class CMFCButton : public CButton
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxbutton.h  
   
-##  <a name="a-namecleanupa--cmfcbuttoncleanup"></a><a name="cleanup"></a>CMFCButton::CleanUp  
+##  <a name="cleanup"></a>CMFCButton::CleanUp  
  Reimposta le variabili interne e libera le risorse allocate, ad esempio immagini, bitmap e icone.  
   
 ```  
 virtual void CleanUp();
 ```  
   
-##  <a name="a-nameenablefulltexttooltipa--cmfcbuttonenablefulltexttooltip"></a><a name="enablefulltexttooltip"></a>CMFCButton::EnableFullTextTooltip  
+##  <a name="enablefulltexttooltip"></a>CMFCButton::EnableFullTextTooltip  
  Specifica se visualizzare il testo completo di una descrizione comandi in una finestra di descrizione comandi di grandi dimensioni o una versione troncata del testo in una finestra di descrizione comandi di piccole dimensioni.  
   
 ```  
@@ -170,7 +208,7 @@ void EnableFullTextTooltip(BOOL bOn=TRUE);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameenablemenufonta--cmfcbuttonenablemenufont"></a><a name="enablemenufont"></a>CMFCButton::EnableMenuFont  
+##  <a name="enablemenufont"></a>CMFCButton::EnableMenuFont  
  Specifica se il carattere di testo del pulsante è lo stesso del tipo di carattere dal menu di applicazione.  
   
 ```  
@@ -189,7 +227,7 @@ void EnableMenuFont(
 ### <a name="remarks"></a>Note  
  Se non si utilizza questo metodo per specificare il carattere di testo del pulsante, è possibile specificare il tipo di carattere con il [CWnd::SetFont](../../mfc/reference/cwnd-class.md#setfont) metodo. Se non si specifica un tipo di carattere del tutto, il framework imposta un tipo di carattere predefinito.  
   
-##  <a name="a-nameenablewindowstheminga--cmfcbuttonenablewindowstheming"></a><a name="enablewindowstheming"></a>CMFCButton::EnableWindowsTheming  
+##  <a name="enablewindowstheming"></a>CMFCButton::EnableWindowsTheming  
  Specifica se lo stile del bordo pulsante corrisponde al tema di Windows corrente.  
   
 ```  
@@ -203,7 +241,7 @@ static void EnableWindowsTheming(BOOL bEnable = TRUE);
 ### <a name="remarks"></a>Note  
  Questo metodo influisce su tutti i pulsanti nell'applicazione che derivano dalla `CMFCButton` classe.  
   
-##  <a name="a-namegettooltipctrla--cmfcbuttongettooltipctrl"></a><a name="gettooltipctrl"></a>CMFCButton::GetToolTipCtrl  
+##  <a name="gettooltipctrl"></a>CMFCButton::GetToolTipCtrl  
  Restituisce un riferimento al controllo descrizione comando sottostante.  
   
 ```  
@@ -215,7 +253,7 @@ CToolTipCtrl& GetToolTipCtrl();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameisautochecka--cmfcbuttonisautocheck"></a><a name="isautocheck"></a>CMFCButton::IsAutoCheck  
+##  <a name="isautocheck"></a>CMFCButton::IsAutoCheck  
  Indica se una casella di controllo o pulsante di opzione è un pulsante automatica.  
   
 ```  
@@ -227,7 +265,7 @@ BOOL IsAutoCheck() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameisautorepeatcommandmodea--cmfcbuttonisautorepeatcommandmode"></a><a name="isautorepeatcommandmode"></a>CMFCButton::IsAutorepeatCommandMode  
+##  <a name="isautorepeatcommandmode"></a>CMFCButton::IsAutorepeatCommandMode  
  Indica se un pulsante viene impostato sulla modalità di ripetizione automatica.  
   
 ```  
@@ -240,7 +278,7 @@ BOOL IsAutorepeatCommandMode() const;
 ### <a name="remarks"></a>Note  
  Utilizzare il [CMFCButton::SetAutorepeatMode](#setautorepeatmode) per impostare un pulsante alla modalità di ripetizione automatica.  
   
-##  <a name="a-nameischeckboxa--cmfcbuttonischeckbox"></a><a name="ischeckbox"></a>CMFCButton::IsCheckBox  
+##  <a name="ischeckbox"></a>CMFCButton::IsCheckBox  
  Indica se un pulsante è un pulsante della casella di controllo.  
   
 ```  
@@ -252,7 +290,7 @@ BOOL IsCheckBox() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameischeckeda--cmfcbuttonischecked"></a><a name="ischecked"></a>CMFCButton::IsChecked  
+##  <a name="ischecked"></a>CMFCButton::IsChecked  
  Indica se si seleziona il pulsante corrente.  
   
 ```  
@@ -265,7 +303,7 @@ BOOL IsChecked() const;
 ### <a name="remarks"></a>Note  
  Il framework utilizza diversi modi per indicare che sono archiviati i diversi tipi di pulsanti. Ad esempio, un pulsante di opzione è selezionato quando contiene un punto; una casella di controllo è selezionata quando contiene un **X**.  
   
-##  <a name="a-nameishighlighteda--cmfcbuttonishighlighted"></a><a name="ishighlighted"></a>CMFCButton::IsHighlighted  
+##  <a name="ishighlighted"></a>CMFCButton::IsHighlighted  
  Indica se un pulsante è evidenziato.  
   
 ```  
@@ -278,7 +316,7 @@ BOOL IsHighlighted() const;
 ### <a name="remarks"></a>Note  
  Quando il puntatore del mouse viene posizionato sul pulsante, viene evidenziato un pulsante.  
   
-##  <a name="a-nameispresseda--cmfcbuttonispressed"></a><a name="ispressed"></a>CMFCButton::IsPressed  
+##  <a name="ispressed"></a>CMFCButton::IsPressed  
  Indica se un pulsante viene inserito ed evidenziato.  
   
 ```  
@@ -290,7 +328,7 @@ BOOL IsPressed() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameispusheda--cmfcbuttonispushed"></a><a name="ispushed"></a>CMFCButton::IsPushed  
+##  <a name="ispushed"></a>CMFCButton::IsPushed  
  Indica se viene premuto un pulsante.  
   
 ```  
@@ -302,7 +340,7 @@ BOOL IsPushed() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameisradiobuttona--cmfcbuttonisradiobutton"></a><a name="isradiobutton"></a>CMFCButton::IsRadioButton  
+##  <a name="isradiobutton"></a>CMFCButton::IsRadioButton  
  Indica se un pulsante è un pulsante di opzione.  
   
 ```  
@@ -314,7 +352,7 @@ BOOL IsRadioButton() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameiswindowsthemingenableda--cmfcbuttoniswindowsthemingenabled"></a><a name="iswindowsthemingenabled"></a>CMFCButton::IsWindowsThemingEnabled  
+##  <a name="iswindowsthemingenabled"></a>CMFCButton::IsWindowsThemingEnabled  
  Indica se lo stile del bordo pulsante corrisponde al tema di Windows corrente.  
   
 ```  
@@ -324,7 +362,7 @@ static BOOL IsWindowsThemingEnabled();
 ### <a name="return-value"></a>Valore restituito  
  `TRUE`Se lo stile del bordo pulsante corrisponde al tema di Windows corrente. in caso contrario, `FALSE`.  
   
-##  <a name="a-namembdrawfocusa--cmfcbuttonmbdrawfocus"></a><a name="m_bdrawfocus"></a>CMFCButton::m_bDrawFocus  
+##  <a name="m_bdrawfocus"></a>CMFCButton::m_bDrawFocus  
  Indica se disegnare un rettangolo attorno a un pulsante.  
   
 ```  
@@ -336,7 +374,7 @@ BOOL m_bDrawFocus;
   
  Il `CMFCButton` costruttore inizializza il membro a `TRUE`.  
   
-##  <a name="a-namembhighlightcheckeda--cmfcbuttonmbhighlightchecked"></a><a name="m_bhighlightchecked"></a>CMFCButton::m_bHighlightChecked  
+##  <a name="m_bhighlightchecked"></a>CMFCButton::m_bHighlightChecked  
  Indica se evidenziare un pulsante stile BS_CHECKBOX quando il cursore viene posizionato su di esso.  
   
 ```  
@@ -346,7 +384,7 @@ BOOL m_bHighlightChecked;
 ### <a name="remarks"></a>Note  
  Impostare il `m_bHighlightChecked` membro `TRUE` per specificare che il framework evidenzierà un pulsante stile BS_CHECKBOX quando si posiziona il puntatore del mouse su di esso.  
   
-##  <a name="a-namembrightimagea--cmfcbuttonmbrightimage"></a><a name="m_brightimage"></a>CMFCButton::m_bRightImage  
+##  <a name="m_brightimage"></a>CMFCButton::m_bRightImage  
  Indica se visualizzare un'immagine a destra del pulsante.  
   
 ```  
@@ -356,7 +394,7 @@ BOOL m_bRightImage;
 ### <a name="remarks"></a>Note  
  Impostare il `m_bRightImage` membro `TRUE` per specificare che il framework visualizzerà l'icona del pulsante a destra dell'etichetta di testo del pulsante.  
   
-##  <a name="a-namembtransparenta--cmfcbuttonmbtransparent"></a><a name="m_btransparent"></a>CMFCButton::m_bTransparent  
+##  <a name="m_btransparent"></a>CMFCButton::m_bTransparent  
  Indica se il pulsante è trasparente.  
   
 ```  
@@ -366,7 +404,7 @@ BOOL m_bTransparent;
 ### <a name="remarks"></a>Note  
  Impostare il `m_bTransparent` membro `TRUE` per specificare che il framework di pulsante trasparente. Il `CMFCButton` costruttore inizializza il membro a `FALSE`.  
   
-##  <a name="a-namemnalignstylea--cmfcbuttonmnalignstyle"></a><a name="m_nalignstyle"></a>CMFCButton::m_nAlignStyle  
+##  <a name="m_nalignstyle"></a>CMFCButton::m_nAlignStyle  
  Specifica l'allineamento del testo del pulsante.  
   
 ```  
@@ -384,7 +422,7 @@ AlignStyle m_nAlignStyle;
   
  Il `CMFCButton` costruttore inizializza il membro a ALIGN_CENTER.  
   
-##  <a name="a-namemnflatstylea--cmfcbuttonmnflatstyle"></a><a name="m_nflatstyle"></a>CMFCButton::m_nFlatStyle  
+##  <a name="m_nflatstyle"></a>CMFCButton::m_nFlatStyle  
  Specifica lo stile del pulsante, ad esempio senza bordi, flat, semi-flat o 3D.  
   
 ```  
@@ -409,7 +447,7 @@ FlatStyle  m_nFlatStyle;
  [!code-cpp[28 NVC_MFC_NewControls](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls&#29;](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_5.cpp)]  
   
-##  <a name="a-nameondrawa--cmfcbuttonondraw"></a><a name="ondraw"></a>CMFCButton::OnDraw  
+##  <a name="ondraw"></a>CMFCButton::OnDraw  
  Chiamato dal framework per disegnare un pulsante.  
   
 ```  
@@ -432,7 +470,7 @@ virtual void OnDraw(
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questo metodo per utilizzare il proprio codice per disegnare un pulsante.  
   
-##  <a name="a-nameondrawbordera--cmfcbuttonondrawborder"></a><a name="ondrawborder"></a>CMFCButton::OnDrawBorder  
+##  <a name="ondrawborder"></a>CMFCButton::OnDrawBorder  
  Chiamato dal framework per disegnare il bordo di un pulsante.  
   
 ```  
@@ -455,7 +493,7 @@ virtual void OnDrawBorder(
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questo metodo per utilizzare il proprio codice per disegnare il bordo.  
   
-##  <a name="a-nameondrawfocusrecta--cmfcbuttonondrawfocusrect"></a><a name="ondrawfocusrect"></a>CMFCButton::OnDrawFocusRect  
+##  <a name="ondrawfocusrect"></a>CMFCButton::OnDrawFocusRect  
  Chiamato dal framework per disegnare il rettangolo di attivazione per un pulsante.  
   
 ```  
@@ -474,7 +512,7 @@ virtual void OnDrawFocusRect(
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questo metodo per utilizzare il proprio codice per disegnare il rettangolo di attivazione.  
   
-##  <a name="a-nameondrawtexta--cmfcbuttonondrawtext"></a><a name="ondrawtext"></a>CMFCButton::OnDrawText  
+##  <a name="ondrawtext"></a>CMFCButton::OnDrawText  
  Chiamato dal framework per disegnare il testo del pulsante.  
   
 ```  
@@ -505,7 +543,7 @@ virtual void OnDrawText(
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questo metodo per utilizzare il proprio codice per disegnare il testo del pulsante.  
   
-##  <a name="a-nameonfillbackgrounda--cmfcbuttononfillbackground"></a><a name="onfillbackground"></a>CMFCButton::OnFillBackground  
+##  <a name="onfillbackground"></a>CMFCButton::OnFillBackground  
  Chiamato dal framework per disegnare lo sfondo del testo del pulsante.  
   
 ```  
@@ -524,7 +562,7 @@ virtual void OnFillBackground(
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questo metodo per utilizzare il proprio codice per disegnare lo sfondo di un pulsante.  
   
-##  <a name="a-nameselectfonta--cmfcbuttonselectfont"></a><a name="selectfont"></a>CMFCButton::SelectFont  
+##  <a name="selectfont"></a>CMFCButton::SelectFont  
  Recupera il tipo di carattere che è associata al contesto di dispositivo specificato.  
   
 ```  
@@ -540,7 +578,7 @@ virtual CFont* SelectFont(CDC* pDC);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namesetautorepeatmodea--cmfcbuttonsetautorepeatmode"></a><a name="setautorepeatmode"></a>CMFCButton::SetAutorepeatMode  
+##  <a name="setautorepeatmode"></a>CMFCButton::SetAutorepeatMode  
  Imposta un pulsante in modalità di ripetizione automatica.  
   
 ```  
@@ -554,7 +592,7 @@ void SetAutorepeatMode(int nTimeDelay=500);
 ### <a name="remarks"></a>Note  
  Questo metodo, il pulsante Invia costantemente messaggi WM_COMMAND alla finestra padre fino a quando non viene rilasciato il pulsante, o `nTimeDelay` parametro è impostato su zero.  
   
-##  <a name="a-namesetcheckedimagea--cmfcbuttonsetcheckedimage"></a><a name="setcheckedimage"></a>CMFCButton::SetCheckedImage  
+##  <a name="setcheckedimage"></a>CMFCButton::SetCheckedImage  
  Imposta l'immagine per un pulsante selezionato.  
   
 ```  
@@ -619,7 +657,7 @@ void SetCheckedImage(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namesetfacecolora--cmfcbuttonsetfacecolor"></a><a name="setfacecolor"></a>CMFCButton::SetFaceColor  
+##  <a name="setfacecolor"></a>CMFCButton::SetFaceColor  
  Imposta il colore di sfondo per il testo del pulsante.  
   
 ```  
@@ -638,7 +676,7 @@ void SetFaceColor(
 ### <a name="remarks"></a>Note  
  Utilizzare questo metodo per definire un nuovo colore di riempimento per lo sfondo del pulsante (faccia). Notare che lo sfondo viene compilata quando il [CMFCButton::m_bTransparent](#m_btransparent) è una variabile membro `TRUE`.  
   
-##  <a name="a-namesetimagea--cmfcbuttonsetimage"></a><a name="setimage"></a>CMFCButton::SetImage  
+##  <a name="setimage"></a>CMFCButton::SetImage  
  Imposta l'immagine per un pulsante.  
   
 ```  
@@ -709,7 +747,7 @@ void SetImage(
  [!code-cpp[28 NVC_MFC_NewControls](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls&#31;](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_2.cpp)]  
   
-##  <a name="a-namesetmousecursora--cmfcbuttonsetmousecursor"></a><a name="setmousecursor"></a>CMFCButton::SetMouseCursor  
+##  <a name="setmousecursor"></a>CMFCButton::SetMouseCursor  
  Imposta l'immagine del cursore.  
   
 ```  
@@ -729,7 +767,7 @@ void SetMouseCursor(HCURSOR hcursor);
  [!code-cpp[28 NVC_MFC_NewControls](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]  
 [!code-cpp[&#30; NVC_MFC_NewControls](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_6.cpp)]  
   
-##  <a name="a-namesetmousecursorhanda--cmfcbuttonsetmousecursorhand"></a><a name="setmousecursorhand"></a>CMFCButton::SetMouseCursorHand  
+##  <a name="setmousecursorhand"></a>CMFCButton::SetMouseCursorHand  
  Imposta il cursore dell'immagine di una mano.  
   
 ```  
@@ -739,7 +777,7 @@ void SetMouseCursorHand();
 ### <a name="remarks"></a>Note  
  Utilizzare questo metodo per associare l'immagine del cursore di una mano con il pulsante. Il cursore viene caricato dalle risorse dell'applicazione.  
   
-##  <a name="a-namesetstdimagea--cmfcbuttonsetstdimage"></a><a name="setstdimage"></a>CMFCButton::SetStdImage  
+##  <a name="setstdimage"></a>CMFCButton::SetStdImage  
  Utilizza un `CMenuImages` per impostare l'immagine del pulsante.  
   
 ```  
@@ -761,7 +799,7 @@ void SetStdImage(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namesettextcolora--cmfcbuttonsettextcolor"></a><a name="settextcolor"></a>CMFCButton::SetTextColor  
+##  <a name="settextcolor"></a>CMFCButton::SetTextColor  
  Imposta il colore del testo del pulsante per un pulsante che non è selezionato.  
   
 ```  
@@ -774,7 +812,7 @@ void SetTextColor(COLORREF clrText);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namesettexthotcolora--cmfcbuttonsettexthotcolor"></a><a name="settexthotcolor"></a>CMFCButton::SetTextHotColor  
+##  <a name="settexthotcolor"></a>CMFCButton::SetTextHotColor  
  Imposta il colore del testo del pulsante per un pulsante che sia selezionato.  
   
 ```  
@@ -787,7 +825,7 @@ void SetTextHotColor(COLORREF clrTextHot);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namesettooltipa--cmfcbuttonsettooltip"></a><a name="settooltip"></a>CMFCButton::SetTooltip  
+##  <a name="settooltip"></a>CMFCButton::SetTooltip  
  Associa una descrizione comando con un pulsante.  
   
 ```  
@@ -800,7 +838,7 @@ void SetTooltip(LPCTSTR lpszToolTipText);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namesizetocontenta--cmfcbuttonsizetocontent"></a><a name="sizetocontent"></a>CMFCButton::SizeToContent  
+##  <a name="sizetocontent"></a>CMFCButton::SizeToContent  
  Ridimensiona un pulsante per contenere il testo del pulsante e l'immagine.  
   
 ```  

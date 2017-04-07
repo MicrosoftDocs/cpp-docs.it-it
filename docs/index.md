@@ -172,7 +172,7 @@ ms.lasthandoff: 02/24/2017
                                 </a>
                             </li>
                             <li>
-                                <a href="https://microsoft.github.io/PTVS/">
+                                <a href="/visualstudio/python/cpp-and-python">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">

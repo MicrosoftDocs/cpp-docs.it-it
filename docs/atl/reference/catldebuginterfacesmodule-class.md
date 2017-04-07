@@ -9,9 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CAtlDebugInterfacesModule
-- ATL::CAtlDebugInterfacesModule
 - CAtlDebugInterfacesModule
+- atlbase/ATL::CAtlDebugInterfacesModule
 dev_langs:
 - C++
 helpviewer_keywords:

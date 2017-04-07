@@ -9,11 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CAutoPtrArray<E>
 - CAutoPtrArray
-- ATL::CAutoPtrArray
-- ATL.CAutoPtrArray<E>
-- ATL.CAutoPtrArray
+- ATLCOLL/ATL::CAutoPtrArray
+- ATLCOLL/ATL::CAutoPtrArray::CAutoPtrArray
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -83,7 +81,7 @@ class CAutoPtrArray : public CAtlArray<
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlcoll. h  
   
-##  <a name="a-namecautoptrarraya--cautoptrarraycautoptrarray"></a><a name="cautoptrarray"></a>CAutoPtrArray::CAutoPtrArray  
+##  <a name="cautoptrarray"></a>CAutoPtrArray::CAutoPtrArray  
  Costruttore.  
   
 ```

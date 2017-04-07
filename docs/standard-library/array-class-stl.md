@@ -181,7 +181,7 @@ array<int, 4> ai = { 1, 2, 3 };
   
  **Spazio dei nomi:** std  
   
-##  <a name="a-namearrayarraya--arrayarray"></a><a name="array__array"></a>  array::array  
+##  <a name="array__array"></a>  array::array  
  Costruisce un oggetto di matrice.  
   
 ```  
@@ -236,7 +236,7 @@ int main()
 0 1 2 3  
 ```  
   
-##  <a name="a-namearrayassigna--arrayassign"></a><a name="array__assign"></a>  array::assign  
+##  <a name="array__assign"></a>  array::assign  
 Obsoleto in C++&11;, sostituito da [fill](#array__fill). Sostituisce tutti gli elementi.  
   
 ```  
@@ -288,7 +288,7 @@ int main()
 4 4 4 4  
 ```  
   
-##  <a name="a-namearrayata--arrayat"></a><a name="array__at"></a>  array::at  
+##  <a name="array__at"></a>  array::at  
  Accede a un elemento in una posizione specificata.  
   
 ```  
@@ -333,7 +333,7 @@ int main()
   
 ```  
   
-##  <a name="a-namearraybacka--arrayback"></a><a name="array__back"></a>  array::back  
+##  <a name="array__back"></a>  array::back  
  Accede all'ultimo elemento.  
   
 ```  
@@ -378,7 +378,7 @@ int main()
 3  
 ```  
   
-##  <a name="a-namearraybegina--arraybegin"></a><a name="array__begin"></a>  array::begin  
+##  <a name="array__begin"></a>  array::begin  
  Indica l'inizio della sequenza controllata.  
   
 ```  
@@ -423,7 +423,7 @@ int main()
 0  
 ```  
   
-##  <a name="a-namearraycbegina--arraycbegin"></a><a name="array__cbegin"></a>  array::cbegin  
+##  <a name="array__cbegin"></a>  array::cbegin  
  Restituisce un iteratore `const` che punta al primo elemento dell'intervallo.  
   
 ```  
@@ -446,7 +446,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator  
 ```  
   
-##  <a name="a-namearraycenda--arraycend"></a><a name="array__cend"></a>  array::cend  
+##  <a name="array__cend"></a>  array::cend  
  Restituisce un iteratore `const` che punta alla posizione oltre l'ultimo elemento di un intervallo.  
   
 ```  
@@ -471,7 +471,7 @@ auto i2 = Container.cend();
   
  Non è consigliabile dereferenziare il valore restituito da `cend`.  
   
-##  <a name="a-namearrayconstiteratora--arrayconstiterator"></a><a name="array__const_iterator"></a>  array::const_iterator  
+##  <a name="array__const_iterator"></a>  array::const_iterator  
  Tipo di un iteratore costante per la sequenza controllata.  
   
 ```  
@@ -522,7 +522,7 @@ it2: 0
   
 ```  
   
-##  <a name="a-namearrayconstpointera--arrayconstpointer"></a><a name="array__const_pointer"></a>  array::const_pointer  
+##  <a name="array__const_pointer"></a>  array::const_pointer  
  Tipo di un puntatore costante a un elemento.  
   
 ```  
@@ -566,7 +566,7 @@ int main()
 0  
 ```  
   
-##  <a name="a-namearrayconstreferencea--arrayconstreference"></a><a name="array__const_reference"></a>  array::const_reference  
+##  <a name="array__const_reference"></a>  array::const_reference  
  Tipo di un riferimento costante a un elemento.  
   
 ```  
@@ -610,7 +610,7 @@ int main()
 0  
 ```  
   
-##  <a name="a-namearrayconstreverseiteratora--arrayconstreverseiterator"></a><a name="array__const_reverse_iterator"></a>  array::const_reverse_iterator  
+##  <a name="array__const_reverse_iterator"></a>  array::const_reverse_iterator  
  Tipo di un iteratore inverso costante per la sequenza controllata.  
   
 ```  
@@ -654,7 +654,7 @@ int main()
 3  
 ```  
   
-##  <a name="a-namearraycrbegina--arraycrbegin"></a><a name="array__crbegin"></a>  array::crbegin  
+##  <a name="array__crbegin"></a>  array::crbegin  
  Restituisce un iteratore const che punta al primo elemento di una matrice invertita.  
   
 ```  
@@ -697,7 +697,7 @@ The first element of array is 1.
 The first element of the reversed array is 2.  
 ```  
   
-##  <a name="a-namearraycrenda--arraycrend"></a><a name="array__crend"></a>  array::crend  
+##  <a name="array__crend"></a>  array::crend  
  Restituisce un iteratore const che punta alla posizione successiva all'ultimo elemento di una matrice invertita.  
   
 ```  
@@ -740,7 +740,7 @@ int main( )
 1  
 ```  
   
-##  <a name="a-namearraydataa--arraydata"></a><a name="array__data"></a>  array::data  
+##  <a name="array__data"></a>  array::data  
  Ottiene l'indirizzo del primo elemento.  
   
 ```  
@@ -786,7 +786,7 @@ int main()
 0  
 ```  
   
-##  <a name="a-namearraydifferencetypea--arraydifferencetype"></a><a name="array__difference_type"></a>  array::difference_type  
+##  <a name="array__difference_type"></a>  array::difference_type  
  Tipo di una distanza Signed tra due elementi.  
   
 ```  
@@ -830,7 +830,7 @@ int main()
 -4  
 ```  
   
-##  <a name="a-namearrayemptya--arrayempty"></a><a name="array__empty"></a>  array::empty  
+##  <a name="array__empty"></a>  array::empty  
  Verifica se sono presenti o meno degli elementi.  
   
 ```  
@@ -880,7 +880,7 @@ false
 true  
 ```  
   
-##  <a name="a-namearrayenda--arrayend"></a><a name="array__end"></a>  array::end  
+##  <a name="array__end"></a>  array::end  
  Designa la fine della sequenza controllata.  
   
 ```  
@@ -926,7 +926,7 @@ int main()
 3  
 ```  
   
-##  <a name="a-namearrayfilla--arrayfill"></a><a name="array__fill"></a>  array::fill  
+##  <a name="array__fill"></a>  array::fill  
  Cancella una matrice e copia gli elementi specificati nella matrice vuota.  
   
 ```  
@@ -938,7 +938,7 @@ void fill(const Type& val);
 |||  
 |-|-|  
 |Parametro|Descrizione|  
-|` val`|Valore dell'elemento inserito nella matrice.|  
+|`val`|Valore dell'elemento inserito nella matrice.|  
   
 ### <a name="remarks"></a>Note  
  `fill` sostituisce ogni elemento della matrice con il valore specificato.  
@@ -970,7 +970,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namearrayfronta--arrayfront"></a><a name="array__front"></a>  array::front  
+##  <a name="array__front"></a>  array::front  
  Accede al primo elemento.  
   
 ```  
@@ -1015,7 +1015,7 @@ int main()
 0  
 ```  
   
-##  <a name="a-namearrayiteratora--arrayiterator"></a><a name="array__iterator"></a>  array::iterator  
+##  <a name="array__iterator"></a>  array::iterator  
  Tipo di un iteratore per la sequenza controllata.  
   
 ```  
@@ -1066,7 +1066,7 @@ it2: 0
   
 ```  
   
-##  <a name="a-namearraymaxsizea--arraymaxsize"></a><a name="array__max_size"></a>  array::max_size  
+##  <a name="array__max_size"></a>  array::max_size  
  Conta il numero di elementi.  
   
 ```  
@@ -1109,7 +1109,7 @@ int main()
 4  
 ```  
   
-##  <a name="a-namearrayoperatorata--arrayoperator"></a><a name="array__operator_at"></a>  array::operator[]  
+##  <a name="array__operator_at"></a>  array::operator[]  
  Accede a un elemento in una posizione specificata.  
   
 ```  
@@ -1161,7 +1161,7 @@ int main()
 1 3  
 ```  
   
-##  <a name="a-namearrayoperatoreqa--arrayoperator"></a><a name="array__operator_eq"></a>  array::operator=  
+##  <a name="array__operator_eq"></a>  array::operator=  
  Sostituisce la sequenza controllata.  
   
 ```  
@@ -1213,7 +1213,7 @@ int main()
 0 1 2 3  
 ```  
   
-##  <a name="a-namearraypointera--arraypointer"></a><a name="array__pointer"></a>  array::pointer  
+##  <a name="array__pointer"></a>  array::pointer  
  Tipo di un puntatore a un elemento.  
   
 ```  
@@ -1257,7 +1257,7 @@ int main()
 0  
 ```  
   
-##  <a name="a-namearrayrbegina--arrayrbegin"></a><a name="array__rbegin"></a>  array::rbegin  
+##  <a name="array__rbegin"></a>  array::rbegin  
  Indica l'inizio della sequenza controllata inversa.  
   
 ```  
@@ -1302,7 +1302,7 @@ int main()
 3  
 ```  
   
-##  <a name="a-namearrayreferencea--arrayreference"></a><a name="array__reference"></a>  array::reference  
+##  <a name="array__reference"></a>  array::reference  
  Tipo di un riferimento a un elemento.  
   
 ```  
@@ -1346,7 +1346,7 @@ int main()
 0  
 ```  
   
-##  <a name="a-namearrayrenda--arrayrend"></a><a name="array__rend"></a>  array::rend  
+##  <a name="array__rend"></a>  array::rend  
  Indica la fine della sequenza controllata inversa.  
   
 ```  
@@ -1391,7 +1391,7 @@ int main()
 0  
 ```  
   
-##  <a name="a-namearrayreverseiteratora--arrayreverseiterator"></a><a name="array__reverse_iterator"></a>  array::reverse_iterator  
+##  <a name="array__reverse_iterator"></a>  array::reverse_iterator  
  Tipo di un iteratore inverso della sequenza controllata.  
   
 ```  
@@ -1435,7 +1435,7 @@ int main()
 3  
 ```  
   
-##  <a name="a-namearraysizea--arraysize"></a><a name="array__size"></a>  array::size  
+##  <a name="array__size"></a>  array::size  
  Conta il numero di elementi.  
   
 ```  
@@ -1478,7 +1478,7 @@ int main()
 4  
 ```  
   
-##  <a name="a-namearraysizetypea--arraysizetype"></a><a name="array__size_type"></a>  array::size_type  
+##  <a name="array__size_type"></a>  array::size_type  
  Tipo di distanza senza segno tra due elementi.  
   
 ```  
@@ -1522,7 +1522,7 @@ int main()
 4  
 ```  
   
-##  <a name="a-namearrayswapa--arrayswap"></a><a name="array__swap"></a>  array::swap  
+##  <a name="array__swap"></a>  array::swap  
 Scambia il contenuto di questa matrice con un'altra matrice.  
   
 ```  
@@ -1585,7 +1585,7 @@ int main()
 0 1 2 3  
 ```  
   
-##  <a name="a-namearrayvaluetypea--arrayvaluetype"></a><a name="array__value_type"></a>  array::value_type  
+##  <a name="array__value_type"></a>  array::value_type  
  Tipo di un elemento.  
   
 ```  

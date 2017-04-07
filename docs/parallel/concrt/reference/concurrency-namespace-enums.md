@@ -6,27 +6,39 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- CONCRT/concurrency::Agents_EventType
+- CONCRT/concurrency::Concrt_TraceFlags
+- CONCRT/concurrency::CriticalRegionType
+- CONCRT/concurrency::PolicyElementKey
+- CONCRT/concurrency::SchedulerType
+- CONCRT/concurrency::SwitchingProxyState
+- CONCRT/concurrency::WinRTInitializationType
+- CONCRT/concurrency::join_type
+- CONCRT/concurrency::message_status Enumeration
+dev_langs:
+- C++
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
 caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 translationtype: Machine Translation
-ms.sourcegitcommit: 8f7488ff07c9789e2d5f35056de390a5bc464f56
-ms.openlocfilehash: ff187e827b2dd979466b746eee297235e6a6c0ca
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 7589f0054e9393f938bf69d4e1751202cbc02456
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrency-namespace-enums"></a>enumerazioni dello spazio dei nomi Concurrency
 ||||  
 |-|-|-|  
-|[Agents_EventType (enumerazione)](#agents_eventtype)|[ConcRT_EventType (enumerazione)](#concrt_eventtype)|[Concrt_TraceFlags (enumerazione)](#concrt_traceflags)|  
-|[CriticalRegionType (enumerazione)](#criticalregiontype)|[DynamicProgressFeedbackType (enumerazione)](#dynamicprogressfeedbacktype)|[PolicyElementKey (enumerazione)](#policyelementkey)|  
-|[SchedulerType (enumerazione)](#schedulertype)|[SchedulingProtocolType (enumerazione)](#schedulingprotocoltype)|[SwitchingProxyState (enumerazione)](#switchingproxystate)|  
-|[WinRTInitializationType (enumerazione)](#winrtinitializationtype)|[Enumerazione agent_status](#agent_status)|[Enumerazione join_type](#join_type)|  
-|[Enumerazione message_status](#message_status)|[Enumerazione task_group_status](#task_group_status)|  
+|[Agents_EventType](#agents_eventtype)|[ConcRT_EventType](#concrt_eventtype)|[Concrt_TraceFlags](#concrt_traceflags)|  
+|[CriticalRegionType](#criticalregiontype)|[DynamicProgressFeedbackType](#dynamicprogressfeedbacktype)|[PolicyElementKey](#policyelementkey)|  
+|[SchedulerType](#schedulertype)|[SchedulingProtocolType](#schedulingprotocoltype)|[SwitchingProxyState](#switchingproxystate)|  
+|[WinRTInitializationType](#winrtinitializationtype)|[agent_status](#agent_status)|[tipo di join](#join_type)|  
+|[message_status](#message_status)|[stato gruppo di attività](#task_group_status)|  
   
-##  <a name="a-nameagentstatusa--agentstatus-enumeration"></a><a name="agent_status"></a>Enumerazione agent_status  
+##  <a name="agent_status"></a>Enumerazione agent_status  
  Stati validi per un `agent`.  
   
 ```
@@ -48,7 +60,7 @@ enum agent_status;
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** concrt
 
-##  <a name="a-nameagentseventtypea--agentseventtype-enumeration"></a><a name="agents_eventtype"></a>Agents_EventType (enumerazione)  
+##  <a name="agents_eventtype"></a>Agents_EventType (enumerazione)  
  Tipi di eventi che possono essere tracciati mediante la funzionalità di tracciatura offerta dalla libreria di agenti.  
   
 ```
@@ -71,7 +83,7 @@ enum Agents_EventType;
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** concrt
 
-##  <a name="a-nameconcrteventtypea--concrteventtype-enumeration"></a><a name="concrt_eventtype"></a>ConcRT_EventType (enumerazione)  
+##  <a name="concrt_eventtype"></a>ConcRT_EventType (enumerazione)  
  Tipi di eventi che possono essere tracciati mediante la funzionalità di tracciatura offerta dal runtime di concorrenza.  
   
 ```
@@ -92,9 +104,9 @@ enum ConcRT_EventType;
 |`CONCRT_EVENT_YIELD`|Tipo di evento che rappresenta l'atto di restituzione di un contesto.|  
   
 ### <a name="requirements"></a>Requisiti  
- **Intestazione:** concrt
+ **Intestazione:** concrt  **Namespace:** concorrenza
 
-##  <a name="a-nameconcrttraceflagsa--concrttraceflags-enumeration"></a><a name="concrt_traceflags"></a>Concrt_TraceFlags (enumerazione)  
+##  <a name="concrt_traceflags"></a>Concrt_TraceFlags (enumerazione)  
  Flag di analisi per i tipi di evento  
   
 ```
@@ -115,7 +127,7 @@ enum Concrt_TraceFlags;
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** concrt
 
-##  <a name="a-namecriticalregiontypea--criticalregiontype-enumeration"></a><a name="criticalregiontype"></a>CriticalRegionType (enumerazione)  
+##  <a name="criticalregiontype"></a>CriticalRegionType (enumerazione)  
  Tipo di area critica in cui si trova un contesto.  
   
 ```
@@ -132,8 +144,8 @@ enum CriticalRegionType;
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** concrtrm. h 
 
-##  <a name="a-namedynamicprogressfeedbacktypea--dynamicprogressfeedbacktype-enumeration"></a><a name="dynamicprogressfeedbacktype"></a>DynamicProgressFeedbackType (enumerazione)  
- Usato dai criteri `DynamicProgressFeedback` per descrivere se le risorse per l'utilità di pianificazione saranno ribilanciate sulla base di informazioni statistiche raccolte dall'utilità di pianificazione o solo sulla base di processori virtuali che passano allo stato inattivo e viceversa tramite chiamate ai metodi `Activate` e `Deactivate` sull'interfaccia `IVirtualProcessorRoot`. Per ulteriori informazioni sui criteri dell'utilità di pianificazione disponibili, vedere [PolicyElementKey (enumerazione)](concurrency-namespace-enums.md).  
+##  <a name="dynamicprogressfeedbacktype"></a>DynamicProgressFeedbackType (enumerazione)  
+ Usato dai criteri `DynamicProgressFeedback` per descrivere se le risorse per l'utilità di pianificazione saranno ribilanciate sulla base di informazioni statistiche raccolte dall'utilità di pianificazione o solo sulla base di processori virtuali che passano allo stato inattivo e viceversa tramite chiamate ai metodi `Activate` e `Deactivate` sull'interfaccia `IVirtualProcessorRoot`. Per ulteriori informazioni sui criteri dell'utilità di pianificazione disponibili, vedere [PolicyElementKey](concurrency-namespace-enums.md).  
   
 ```
 enum DynamicProgressFeedbackType;
@@ -144,7 +156,7 @@ enum DynamicProgressFeedbackType;
 |----------|-----------------|  
 |`ProgressFeedbackDisabled`|L'utilità di pianificazione non raccoglie informazioni sullo stato. Il ribilanciamento viene eseguito in base esclusivamente sul livello di sottoscrizione del thread di hardware sottostante. Per ulteriori informazioni sui livelli di sottoscrizione, vedere [IExecutionResource:: CurrentSubscriptionLevel](IExecutionResource-structure.md).<br /><br /> Questo valore è riservato dal runtime.|  
 |`ProgressFeedbackEnabled`|L'utilità di pianificazione raccoglie informazioni sullo stato e lo passa al gestore di risorse. Il gestore di risorse utilizzerà queste informazioni statistiche per ribilanciare le risorse per conto di utilità di pianificazione oltre al livello di sottoscrizione del thread di hardware sottostante. Per ulteriori informazioni sui livelli di sottoscrizione, vedere [IExecutionResource:: CurrentSubscriptionLevel](IExecutionResource-structure.md).|  
-##  <a name="a-namejointypea--jointype-enumeration"></a><a name="join_type"></a>Enumerazione join_type  
+##  <a name="join_type"></a>Enumerazione join_type  
  Tipo di un blocco della messaggistica `join`.  
   
 ```
@@ -160,7 +172,7 @@ enum join_type;
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** agents.h  
 
-##  <a name="a-namemessagestatusa--messagestatus-enumeration"></a><a name="message_status"></a>Enumerazione message_status  
+##  <a name="message_status"></a>Enumerazione message_status  
  Risposte valide per un'offerta di un oggetto `message` a un blocco.  
   
 ```
@@ -178,7 +190,7 @@ enum message_status;
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** agents.h  
 
-##  <a name="a-namepolicyelementkeya--policyelementkey-enumeration"></a><a name="policyelementkey"></a>PolicyElementKey (enumerazione)  
+##  <a name="policyelementkey"></a>PolicyElementKey (enumerazione)  
  Chiavi dei criteri che descrivono aspetti del comportamento dell'utilità di pianificazione. Ciascun elemento dei criteri è descritto da una coppia chiave-valore. Per ulteriori informazioni sui criteri dell'utilità di pianificazione e l'impatto nelle utilità di pianificazione, vedere [utilità di pianificazione](../../../parallel/concrt/task-scheduler-concurrency-runtime.md).  
   
 ```
@@ -190,21 +202,21 @@ enum PolicyElementKey;
 |----------|-----------------|  
 |`ContextPriority`|La priorità del thread del sistema operativo di ogni contesto dell'utilità di pianificazione. Se questa chiave è impostata sul valore `INHERIT_THREAD_PRIORITY` i contesti nell'utilità di pianificazione erediteranno la priorità di thread che ha creato l'utilità di pianificazione.<br /><br /> I valori validi: i valori validi per le finestre di `SetThreadPriority` funzione e il valore speciale`INHERIT_THREAD_PRIORITY`<br /><br /> Valore predefinito:`THREAD_PRIORITY_NORMAL`|  
 |`ContextStackSize`|La dimensione dello stack riservato di ogni contesto dell'utilità di pianificazione in kilobyte.<br /><br /> I valori validi: numeri interi positivi<br /><br /> Il valore predefinito: `0`, che indica che il valore predefinito il processo per la dimensione dello stack utilizzabile.|  
-|`DynamicProgressFeedback`|Determina se le risorse per l'utilità di pianificazione verranno riequilibrate in base alle informazioni statistiche raccolte dall'utilità di pianificazione o solo in base al livello di sottoscrizione di thread di hardware sottostante. Per ulteriori informazioni, vedere [DynamicProgressFeedbackType (enumerazione)](#dynamicprogressfeedbacktype).<br /><br /> I valori validi: un membro del `DynamicProgressFeedbackType` enumerazione, ad esempio `ProgressFeedbackEnabled` o`ProgressFeedbackDisabled`<br /><br /> Valore predefinito:`ProgressFeedbackEnabled`|  
+|`DynamicProgressFeedback`|Determina se le risorse per l'utilità di pianificazione verranno riequilibrate in base alle informazioni statistiche raccolte dall'utilità di pianificazione o solo in base al livello di sottoscrizione di thread di hardware sottostante. Per ulteriori informazioni, vedere [DynamicProgressFeedbackType](#dynamicprogressfeedbacktype).<br /><br /> I valori validi: un membro del `DynamicProgressFeedbackType` enumerazione, ad esempio `ProgressFeedbackEnabled` o`ProgressFeedbackDisabled`<br /><br /> Valore predefinito:`ProgressFeedbackEnabled`|  
 |`LocalContextCacheSize`|Quando il `SchedulingProtocol` chiave dei criteri è impostata sul valore `EnhanceScheduleGroupLocality`, specifica il numero massimo di contesti eseguibili consentito deve essere memorizzato nella cache per code locali del processore virtuale. Tali contesti verranno in genere eseguiti last-in-first-out (LIFO) del processore virtuale che li hanno causati diventi eseguibile. Si noti che questa chiave di criterio non ha significato quando la `SchedulingProtocol` chiave è impostata sul valore `EnhanceForwardProgress`.<br /><br /> I valori validi: numeri interi Non negativi<br /><br /> Valore predefinito:`8`|  
 |`MaxConcurrency`|La concorrenza massima livello desiderata dall'utilità di pianificazione. Gestione risorse tenterà di allocare inizialmente questo numero di processori virtuale. Il valore speciale [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) indica che il livello di concorrenza desiderato corrisponde al numero di thread di hardware sul computer. Se il valore specificato per `MinConcurrency` è maggiore del numero di thread di hardware sul computer e `MaxConcurrency` viene specificato come `MaxExecutionResources`, il valore per `MaxConcurrency` viene generato in modo che corrisponda a quello che viene impostato per `MinConcurrency`.<br /><br /> I valori validi: numeri interi positivi e il valore speciale`MaxExecutionResources`<br /><br /> Valore predefinito:`MaxExecutionResources`|  
 |`MaxPolicyElementKey`|Chiave dell'elemento criteri massimo. Non è una chiave di elemento valido.|  
 |`MinConcurrency`|Il livello di concorrenza minimo che deve essere fornito all'utilità di pianificazione da Gestione risorse. Il numero di processori virtuali assegnati a un'utilità di pianificazione non scenderà sotto il valore minimo. Il valore speciale [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) indica che il livello di concorrenza minimo corrisponde al numero di thread di hardware sul computer. Se il valore specificato per `MaxConcurrency` è inferiore al numero di thread di hardware sul computer e `MinConcurrency` viene specificato come `MaxExecutionResources`, il valore per `MinConcurrency` si riducono in modo che corrisponda a quello che viene impostato per `MaxConcurrency`.<br /><br /> I valori validi: numeri interi Non negativi e il valore speciale `MaxExecutionResources`. Si noti che per i criteri dell'utilità di pianificazione utilizzati per la costruzione delle utilità di pianificazione del runtime di concorrenza, il valore `0` non è valido.<br /><br /> Valore predefinito:`1`|  
-|`SchedulerKind`|Il tipo di thread che verrà utilizzata l'utilità di pianificazione per i contesti di esecuzione sottostanti. Per ulteriori informazioni, vedere [SchedulerType (enumerazione)](#schedulertype).<br /><br /> Valori validi: un membro dell'enumerazione `SchedulerType`, ad esempio `ThreadScheduler`<br /><br /> Il valore predefinito: `ThreadScheduler`. Questo si traduce in thread Win32 su tutti i sistemi operativi.|  
-|`SchedulingProtocol`|Descrive quale algoritmo di pianificazione da utilizzare per l'utilità di pianificazione. Per ulteriori informazioni, vedere [SchedulingProtocolType (enumerazione)](#schedulingprotocoltype).<br /><br /> I valori validi: un membro del `SchedulingProtocolType` enumerazione, ad esempio `EnhanceScheduleGroupLocality` o`EnhanceForwardProgress`<br /><br /> Valore predefinito:`EnhanceScheduleGroupLocality`|  
+|`SchedulerKind`|Il tipo di thread che verrà utilizzata l'utilità di pianificazione per i contesti di esecuzione sottostanti. Per ulteriori informazioni, vedere [SchedulerType](#schedulertype).<br /><br /> Valori validi: un membro dell'enumerazione `SchedulerType`, ad esempio `ThreadScheduler`<br /><br /> Il valore predefinito: `ThreadScheduler`. Questo si traduce in thread Win32 su tutti i sistemi operativi.|  
+|`SchedulingProtocol`|Descrive quale algoritmo di pianificazione da utilizzare per l'utilità di pianificazione. Per ulteriori informazioni, vedere [SchedulingProtocolType](#schedulingprotocoltype).<br /><br /> I valori validi: un membro del `SchedulingProtocolType` enumerazione, ad esempio `EnhanceScheduleGroupLocality` o`EnhanceForwardProgress`<br /><br /> Valore predefinito:`EnhanceScheduleGroupLocality`|  
 |`TargetOversubscriptionFactor`|Tentativo del numero di processori virtuali per ogni thread di hardware. Se necessario, il fattore dell'oversubscription di destinazione può essere incrementato da Gestione risorse per soddisfare `MaxConcurrency` con i thread hardware sul computer.<br /><br /> I valori validi: numeri interi positivi<br /><br /> Valore predefinito:`1`|  
 |`WinRTInitialization`||  
   
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** concrt  
 
-##  <a name="a-nameschedulertypea--schedulertype-enumeration"></a><a name="schedulertype"></a>SchedulerType (enumerazione)  
- Usato dai criteri `SchedulerKind` per descrivere il tipo di thread che l'utilità di pianificazione deve usare per i contesti di esecuzione sottostanti. Per ulteriori informazioni sui criteri dell'utilità di pianificazione disponibili, vedere [PolicyElementKey (enumerazione)](concurrency-namespace-enums.md).  
+##  <a name="schedulertype"></a>SchedulerType (enumerazione)  
+ Usato dai criteri `SchedulerKind` per descrivere il tipo di thread che l'utilità di pianificazione deve usare per i contesti di esecuzione sottostanti. Per ulteriori informazioni sui criteri dell'utilità di pianificazione disponibili, vedere [PolicyElementKey](concurrency-namespace-enums.md).  
   
 ```
 enum SchedulerType;
@@ -220,8 +232,8 @@ enum SchedulerType;
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** concrt  
   
-##  <a name="a-nameschedulingprotocoltypea--schedulingprotocoltype-enumeration"></a><a name="schedulingprotocoltype"></a>SchedulingProtocolType (enumerazione)  
- Usato dai criteri `SchedulingProtocol` per descrivere quale algoritmo di pianificazione sarà usato per l'utilità di pianificazione. Per ulteriori informazioni sui criteri dell'utilità di pianificazione disponibili, vedere [PolicyElementKey (enumerazione)](concurrency-namespace-enums.md).  
+##  <a name="schedulingprotocoltype"></a>SchedulingProtocolType (enumerazione)  
+ Usato dai criteri `SchedulingProtocol` per descrivere quale algoritmo di pianificazione sarà usato per l'utilità di pianificazione. Per ulteriori informazioni sui criteri dell'utilità di pianificazione disponibili, vedere [PolicyElementKey](concurrency-namespace-enums.md).  
   
 ```
 enum SchedulingProtocolType;
@@ -236,7 +248,7 @@ enum SchedulingProtocolType;
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** concrt  
  
-##  <a name="a-nameswitchingproxystatea--switchingproxystate-enumeration"></a><a name="switchingproxystate"></a>SwitchingProxyState (enumerazione)  
+##  <a name="switchingproxystate"></a>SwitchingProxyState (enumerazione)  
  Usato per indicare lo stato in cui si trova un proxy del thread, quando è in esecuzione uno scambio di contesto cooperativo per un proxy del thread diverso.  
   
 ```
@@ -255,7 +267,7 @@ enum SwitchingProxyState;
   
  Per ulteriori informazioni sull'utilizzo di questo tipo, vedere [IThreadProxy:: SwitchTo](ithreadproxy-structure.md#switchto).  
   
-##  <a name="a-nametaskgroupstatusa--taskgroupstatus-enumeration"></a><a name="task_group_status"></a>Enumerazione task_group_status  
+##  <a name="task_group_status"></a>Enumerazione task_group_status  
  Descrive lo stato di esecuzione di un oggetto `task_group` o `structured_task_group`. Un valore di questo tipo viene restituito da numerosi metodi che attendono attività pianificate a un gruppo di attività da completare.  
   
 ```
@@ -272,8 +284,8 @@ enum task_group_status;
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** pplinterface.h  
 
-##  <a name="a-namewinrtinitializationtypea--winrtinitializationtype-enumeration"></a><a name="winrtinitializationtype"></a>WinRTInitializationType (enumerazione)  
- Utilizzata dai criteri `WinRTInitialization` per descrivere se e come Windows Runtime verrà inizializzato nei thread dell'utilità di pianificazione per un'applicazione eseguita nei sistemi operativi con la versione Windows 8 o superiore. Per ulteriori informazioni sui criteri dell'utilità di pianificazione disponibili, vedere [PolicyElementKey (enumerazione)](concurrency-namespace-enums.md).  
+##  <a name="winrtinitializationtype"></a>WinRTInitializationType (enumerazione)  
+ Utilizzata dai criteri `WinRTInitialization` per descrivere se e come Windows Runtime verrà inizializzato nei thread dell'utilità di pianificazione per un'applicazione eseguita nei sistemi operativi con la versione Windows 8 o superiore. Per ulteriori informazioni sui criteri dell'utilità di pianificazione disponibili, vedere [PolicyElementKey](concurrency-namespace-enums.md).  
   
 ```
 enum WinRTInitializationType;
@@ -289,5 +301,5 @@ enum WinRTInitializationType;
  **Intestazione:** concrt  
 
 ## <a name="see-also"></a>Vedere anche  
- [concorrenza Namespace](concurrency-namespace.md)
+ [Spazio dei nomi concurrency](concurrency-namespace.md)
 

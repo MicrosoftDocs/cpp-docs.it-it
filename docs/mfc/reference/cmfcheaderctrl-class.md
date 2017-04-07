@@ -10,6 +10,19 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCHeaderCtrl
+- AFXHEADERCTRL/CMFCHeaderCtrl
+- AFXHEADERCTRL/CMFCHeaderCtrl::CMFCHeaderCtrl
+- AFXHEADERCTRL/CMFCHeaderCtrl::EnableMultipleSort
+- AFXHEADERCTRL/CMFCHeaderCtrl::GetColumnState
+- AFXHEADERCTRL/CMFCHeaderCtrl::GetSortColumn
+- AFXHEADERCTRL/CMFCHeaderCtrl::IsAscending
+- AFXHEADERCTRL/CMFCHeaderCtrl::IsDialogControl
+- AFXHEADERCTRL/CMFCHeaderCtrl::IsMultipleSort
+- AFXHEADERCTRL/CMFCHeaderCtrl::RemoveSortColumn
+- AFXHEADERCTRL/CMFCHeaderCtrl::SetSortColumn
+- AFXHEADERCTRL/CMFCHeaderCtrl::OnDrawItem
+- AFXHEADERCTRL/CMFCHeaderCtrl::OnDrawSortArrow
+- AFXHEADERCTRL/CMFCHeaderCtrl::OnFillBackground
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -101,7 +114,7 @@ class CMFCHeaderCtrl : public CHeaderCtrl
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxheaderctrl.h  
   
-##  <a name="a-namecmfcheaderctrla--cmfcheaderctrlcmfcheaderctrl"></a><a name="cmfcheaderctrl"></a>CMFCHeaderCtrl::CMFCHeaderCtrl  
+##  <a name="cmfcheaderctrl"></a>CMFCHeaderCtrl::CMFCHeaderCtrl  
  Costruisce un oggetto `CMFCHeaderCtrl`.  
   
 ```  
@@ -121,7 +134,7 @@ CMFCHeaderCtrl::CMFCHeaderCtrl()
 |`m_bIsDlgControl`|`FALSE`|  
 |`m_hFont`|`NULL`|  
   
-##  <a name="a-nameenablemultiplesorta--cmfcheaderctrlenablemultiplesort"></a><a name="enablemultiplesort"></a>CMFCHeaderCtrl::EnableMultipleSort  
+##  <a name="enablemultiplesort"></a>CMFCHeaderCtrl::EnableMultipleSort  
  Abilita o disabilita *ordinamento a più colonne* modalità per il controllo intestazione corrente.  
   
 ```  
@@ -135,7 +148,7 @@ void EnableMultipleSort(BOOL bEnable=TRUE);
 ### <a name="remarks"></a>Note  
  Utilizzare questo metodo per abilitare o disabilitare la modalità di ordinamento più colonne. Due o più colonne possono partecipare un ordinamento, se il controllo intestazione è in modalità di ordinamento più colonne.  
   
-##  <a name="a-namegetcolumnstatea--cmfcheaderctrlgetcolumnstate"></a><a name="getcolumnstate"></a>CMFCHeaderCtrl::GetColumnState  
+##  <a name="getcolumnstate"></a>CMFCHeaderCtrl::GetColumnState  
  Indica se una colonna è ordinata o viene ordinata in ordine crescente o decrescente.  
   
 ```  
@@ -157,7 +170,7 @@ int GetColumnState(int iColumn) const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetsortcolumna--cmfcheaderctrlgetsortcolumn"></a><a name="getsortcolumn"></a>CMFCHeaderCtrl::GetSortColumn  
+##  <a name="getsortcolumn"></a>CMFCHeaderCtrl::GetSortColumn  
  Recupera l'indice in base zero della prima colonna di ordinamento nel controllo intestazione.  
   
 ```  
@@ -170,7 +183,7 @@ int GetSortColumn() const;
 ### <a name="remarks"></a>Note  
  Se il controllo intestazione è in *ordinamento a più colonne* modalità e compilato l'applicazione in modalità debug, questo metodo dichiara e consiglia di utilizzare il [CMFCHeaderCtrl::GetColumnState](#getcolumnstate) metodo invece. Se il controllo intestazione è in modalità di ordinamento più colonne ed è stato compilato l'applicazione in modalità di vendita al dettaglio, questo metodo restituisce -1.  
   
-##  <a name="a-nameisascendinga--cmfcheaderctrlisascending"></a><a name="isascending"></a>CMFCHeaderCtrl::IsAscending  
+##  <a name="isascending"></a>CMFCHeaderCtrl::IsAscending  
  Indica se una colonna nel controllo header viene ordinata in ordine crescente.  
   
 ```  
@@ -183,7 +196,7 @@ BOOL IsAscending() const;
 ### <a name="remarks"></a>Note  
  Il valore restituito da questo metodo viene utilizzato per visualizzare la freccia di ordinamento appropriato nella voce di controllo intestazione. Utilizzare il [CMFCHeaderCtrl::SetSortColumn](#setsortcolumn) per impostare l'ordinamento.  
   
-##  <a name="a-nameisdialogcontrola--cmfcheaderctrlisdialogcontrol"></a><a name="isdialogcontrol"></a>CMFCHeaderCtrl::IsDialogControl  
+##  <a name="isdialogcontrol"></a>CMFCHeaderCtrl::IsDialogControl  
  Indica se la finestra padre del controllo intestazione corrente è una finestra di dialogo.  
   
 ```  
@@ -193,7 +206,7 @@ BOOL IsDialogControl() const;
 ### <a name="return-value"></a>Valore restituito  
  `TRUE`Se la finestra padre del controllo intestazione corrente è una finestra di dialogo; in caso contrario, `FALSE`.  
   
-##  <a name="a-nameismultiplesorta--cmfcheaderctrlismultiplesort"></a><a name="ismultiplesort"></a>CMFCHeaderCtrl::IsMultipleSort  
+##  <a name="ismultiplesort"></a>CMFCHeaderCtrl::IsMultipleSort  
  Indica se il controllo intestazione corrente è in *ordinamento a più colonne* modalità.  
   
 ```  
@@ -206,7 +219,7 @@ BOOL IsMultipleSort() const;
 ### <a name="remarks"></a>Note  
  Utilizzare il [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) metodo per abilitare o disabilitare la modalità di ordinamento più colonne. Due o più colonne possono partecipare un ordinamento, se il controllo intestazione è in modalità di ordinamento più colonne.  
   
-##  <a name="a-nameondrawitema--cmfcheaderctrlondrawitem"></a><a name="ondrawitem"></a>CMFCHeaderCtrl::OnDrawItem  
+##  <a name="ondrawitem"></a>CMFCHeaderCtrl::OnDrawItem  
  Chiamato dal framework per creare una colonna del controllo intestazione.  
   
 ```  
@@ -234,7 +247,7 @@ virtual void OnDrawItem(
  [in] `bIsHighlighted`  
  `TRUE`per disegnare l'elemento in stato evidenziato. in caso contrario, `FALSE`.  
   
-##  <a name="a-nameondrawsortarrowa--cmfcheaderctrlondrawsortarrow"></a><a name="ondrawsortarrow"></a>CMFCHeaderCtrl::OnDrawSortArrow  
+##  <a name="ondrawsortarrow"></a>CMFCHeaderCtrl::OnDrawSortArrow  
  Chiamato dal framework per disegnare la freccia di ordinamento.  
   
 ```  
@@ -250,7 +263,7 @@ virtual void OnDrawSortArrow(
  [in] `rectArrow`  
  Il rettangolo di delimitazione della freccia di ordinamento.  
   
-##  <a name="a-nameonfillbackgrounda--cmfcheaderctrlonfillbackground"></a><a name="onfillbackground"></a>CMFCHeaderCtrl::OnFillBackground  
+##  <a name="onfillbackground"></a>CMFCHeaderCtrl::OnFillBackground  
  Chiamato dal framework per riempire lo sfondo di una colonna del controllo intestazione.  
   
 ```  
@@ -263,7 +276,7 @@ virtual void OnFillBackground(CDC* pDC);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameremovesortcolumna--cmfcheaderctrlremovesortcolumn"></a><a name="removesortcolumn"></a>CMFCHeaderCtrl::RemoveSortColumn  
+##  <a name="removesortcolumn"></a>CMFCHeaderCtrl::RemoveSortColumn  
  Rimuove la colonna specificata dall'elenco di colonne di ordinamento.  
   
 ```  
@@ -274,7 +287,7 @@ void RemoveSortColumn(int iColumn);
  [in] `iColumn`  
  Indice in base zero della colonna da rimuovere.  
   
-##  <a name="a-namesetsortcolumna--cmfcheaderctrlsetsortcolumn"></a><a name="setsortcolumn"></a>CMFCHeaderCtrl::SetSortColumn  
+##  <a name="setsortcolumn"></a>CMFCHeaderCtrl::SetSortColumn  
  Imposta l'ordinamento della colonna specificata in un controllo intestazione.  
   
 ```  

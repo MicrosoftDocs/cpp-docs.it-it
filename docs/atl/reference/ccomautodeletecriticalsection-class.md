@@ -9,9 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComAutoDeleteCriticalSection
 - CComAutoDeleteCriticalSection
-- ATL::CComAutoDeleteCriticalSection
+- atlcore/ATL::CComAutoDeleteCriticalSection
 dev_langs:
 - C++
 helpviewer_keywords:

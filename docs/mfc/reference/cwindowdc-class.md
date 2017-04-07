@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CWindowDC
+- No header/CWindowDC
+- No header/CWindowDC::CWindowDC
+- No header/CWindowDC::m_hWnd
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -79,7 +82,7 @@ class CWindowDC : public CDC
 ## <a name="requirements"></a>Requisiti  
  Intestazione: AFXWIN. h  
   
-##  <a name="a-namecwindowdca--cwindowdccwindowdc"></a><a name="cwindowdc"></a>CWindowDC::CWindowDC  
+##  <a name="cwindowdc"></a>CWindowDC::CWindowDC  
  Costruisce un `CWindowDC` oggetto a cui accede l'intera area dello schermo (client e non client) del `CWnd` oggetto a cui puntava `pWnd`.  
   
 ```  
@@ -98,7 +101,7 @@ explicit CWindowDC(CWnd* pWnd);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView&#188;](../../mfc/codesnippet/cpp/cwindowdc-class_1.cpp)]  
   
-##  <a name="a-namemhwnda--cwindowdcmhwnd"></a><a name="m_hwnd"></a>CWindowDC::m_hWnd  
+##  <a name="m_hwnd"></a>CWindowDC::m_hWnd  
  Il `HWND` di `CWnd` puntatore viene utilizzato per costruire il `CWindowDC` oggetto.  
   
 ```  

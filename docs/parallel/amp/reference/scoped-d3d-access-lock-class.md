@@ -8,6 +8,10 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- scoped_d3d_access_lock
+- AMPRT/scoped_d3d_access_lock
+- AMPRT/concurrency::direct3d::scoped_d3d_access_lock::scoped_d3d_access_lock
 dev_langs:
 - C++
 ms.assetid: 0ad333e6-9839-4736-a722-16d95d70c4b1
@@ -30,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: c5bc6183b3abc7a5598159717b0dbfa1dae2a05d
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: fd7f377e1dfe4e99f566da4782be5c2ccfdddbff
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="scopedd3daccesslock-class"></a>Classe scoped_d3d_access_lock
@@ -57,7 +61,7 @@ class scoped_d3d_access_lock;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[operatore = (operatore)](#operator_eq)|Acquisisce la proprietà di un blocco da un altro `scoped_d3d_access_lock`.|  
+|[operator=](#operator_eq)|Acquisisce la proprietà di un blocco da un altro `scoped_d3d_access_lock`.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `scoped_d3d_access_lock`  
@@ -67,7 +71,7 @@ class scoped_d3d_access_lock;
   
  **Namespace:** Concurrency:: Direct3D  
 
-##  <a name="a-namectora-scopedd3daccesslock"></a><a name="ctor"></a>scoped_d3d_access_lock 
+##  <a name="ctor"></a>scoped_d3d_access_lock 
 
  Costruisce un oggetto `scoped_d3d_access_lock`. Il blocco viene rilasciato quando l'oggetto esce dall'ambito.  
  
@@ -106,14 +110,14 @@ scoped_d3d_access_lock(// [3] move constructor
  Accetta un blocco di accesso D3D esistente da un altro `scoped_d3d_access_lock` oggetto. Costruzione non è bloccata.  
 
   
-##  <a name="a-namedtora-scopedd3daccesslock"></a><a name="dtor"></a>~ scoped_d3d_access_lock 
+##  <a name="dtor"></a>~ scoped_d3d_access_lock 
 
  Rilascia il blocco di accesso D3D su associato `accelerator_view` oggetto.  
   
 ```  
 ~scoped_d3d_access_lock();
 ```  
-## <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>operatore = 
+## <a name="operator_eq"></a>operatore = 
 
 Acquisisce la proprietà di un blocco di accesso D3D da un altro `scoped_d3d_access_lock` oggetto, il rilascio del blocco precedente.  
  
@@ -129,5 +133,5 @@ scoped_d3d_access_lock& operator= (scoped_d3d_access_lock&& _Other);
  Un riferimento a questo `scoped_accelerator_view_lock`.  
 
 ## <a name="see-also"></a>Vedere anche  
- [Namespace Concurrency:: Direct3D](concurrency-direct3d-namespace.md)
+ [Spazio dei nomi Concurrency::direct3d](concurrency-direct3d-namespace.md)
 

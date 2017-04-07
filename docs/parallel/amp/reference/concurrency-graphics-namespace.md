@@ -9,8 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amp_graphics/Concurrency::graphics
-- amp_short_vectors/Concurrency::graphics
+- AMP_GRAPHICS/Concurrency
 dev_langs:
 - C++
 ms.assetid: 4529d3b1-d7da-4ffb-82bf-080915e0f23e
@@ -33,9 +32,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: fd29b427307e336d560a2caf42e4fc5228e8071f
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: e08a9bc52b7ce519508bb1682287e75070d341a1
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrencygraphics-namespace"></a>Spazio dei nomi Concurrency::graphics
@@ -53,7 +52,7 @@ namespace graphics;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Namespace Concurrency::Graphics::Direct3D](concurrency-graphics-direct3d-namespace.md)|Fornisce funzioni per l'interoperabilità di Direct3D.|  
+|[Spazio dei nomi Concurrency::graphics::direct3d](concurrency-graphics-direct3d-namespace.md)|Fornisce funzioni per l'interoperabilità di Direct3D.|  
   
 ### <a name="typedefs"></a>Definizioni typedef  
   
@@ -101,8 +100,8 @@ namespace graphics;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Copy (funzione)](concurrency-graphics-namespace-functions.md#copy)|Di overload. Copia il contenuto della trama di origine nel buffer di host di destinazione.|  
-|[Funzione copy_async](concurrency-graphics-namespace-functions.md#copy_async)|Di overload. Copia in modo asincrono il contenuto della trama di origine nel buffer di host di destinazione.|  
+|[copy](concurrency-graphics-namespace-functions.md#copy)|Di overload. Copia il contenuto della trama di origine nel buffer di host di destinazione.|  
+|[copy_async](concurrency-graphics-namespace-functions.md#copy_async)|Di overload. Copia in modo asincrono il contenuto della trama di origine nel buffer di host di destinazione.|  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** amp_graphics.h  
@@ -110,5 +109,5 @@ namespace graphics;
  **Spazio dei nomi:** Concurrency  
   
 ## <a name="see-also"></a>Vedere anche  
- [Concorrenza Namespace (C++ AMP)](concurrency-namespace-cpp-amp.md)
+ [Spazio dei nomi Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)
 

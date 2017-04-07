@@ -9,9 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CDebugReportHook
 - CDebugReportHook
-- ATL::CDebugReportHook
+- ATLUTIL/ATL::CDebugReportHook
+- ATLUTIL/ATL::CDebugReportHook::CDebugReportHook
+- ATLUTIL/ATL::CDebugReportHook::CDebugReportHookProc
+- ATLUTIL/ATL::CDebugReportHook::RemoveHook
+- ATLUTIL/ATL::CDebugReportHook::SetHook
+- ATLUTIL/ATL::CDebugReportHook::SetPipeName
+- ATLUTIL/ATL::CDebugReportHook::SetTimeout
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -79,7 +84,7 @@ class CDebugReportHook
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlutil. h  
   
-##  <a name="a-namecdebugreporthooka--cdebugreporthookcdebugreporthook"></a><a name="cdebugreporthook"></a>CDebugReportHook::CDebugReportHook  
+##  <a name="cdebugreporthook"></a>CDebugReportHook::CDebugReportHook  
  Chiamate [al metodo SetPipeName](#setpipename), [SetTimeout](#settimeout), e [SetHook](#sethook).  
   
 ```
@@ -99,14 +104,14 @@ CDebugReportHook(
  `dwTimeout`  
  Il tempo in millisecondi che questa classe rimarrà in attesa della named pipe diventi disponibile.  
   
-##  <a name="a-namedtora--cdebugreporthookcdebugreporthook"></a><a name="dtor"></a>CDebugReportHook:: ~ CDebugReportHook  
+##  <a name="dtor"></a>CDebugReportHook:: ~ CDebugReportHook  
  Chiamate [CDebugReportHook::RemoveHook](#removehook).  
   
 ```
 ~CDebugReportHook() throw();
 ```  
   
-##  <a name="a-namecdebugreporthookproca--cdebugreporthookcdebugreporthookproc"></a><a name="cdebugreporthookproc"></a>CDebugReportHook::CDebugReportHookProc  
+##  <a name="cdebugreporthookproc"></a>CDebugReportHook::CDebugReportHookProc  
  La funzione personalizzata che è collegata al processo di segnalazione il debug del runtime C.  
   
 ```
@@ -134,7 +139,7 @@ static int __cdecl CDebugReportHookProc(
   
  Il codice in questa funzione viene eseguito nel contesto di sicurezza sottostante del thread chiamante, vale a dire la rappresentazione è disabilitata per la durata di questa funzione.  
   
-##  <a name="a-nameremovehooka--cdebugreporthookremovehook"></a><a name="removehook"></a>CDebugReportHook::RemoveHook  
+##  <a name="removehook"></a>CDebugReportHook::RemoveHook  
  Chiamare questo metodo per interrompere l'invio di report di debug alla named pipe e ripristinare l'hook di report precedente.  
   
 ```
@@ -144,7 +149,7 @@ void RemoveHook() throw();
 ### <a name="remarks"></a>Note  
  Chiamate [crtsetreporthook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md) per ripristinare l'hook di report precedente.  
   
-##  <a name="a-namesethooka--cdebugreporthooksethook"></a><a name="sethook"></a>CDebugReportHook::SetHook  
+##  <a name="sethook"></a>CDebugReportHook::SetHook  
  Chiamare questo metodo per iniziare a inviare i report di debug alla named pipe.  
   
 ```
@@ -154,7 +159,7 @@ void SetHook() throw();
 ### <a name="remarks"></a>Note  
  Chiamate [crtsetreporthook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md) per disporre di un report di debug instradato [CDebugReportHookProc](#cdebugreporthookproc) alla named pipe. Questa classe tiene traccia di hook del report precedente in modo che possa essere ripristinato quando [RemoveHook](#removehook) viene chiamato.  
   
-##  <a name="a-namesetpipenamea--cdebugreporthooksetpipename"></a><a name="setpipename"></a>CDebugReportHook::SetPipeName  
+##  <a name="setpipename"></a>CDebugReportHook::SetPipeName  
  Chiamare questo metodo per impostare il computer e il nome della pipe a cui verranno inviati i report di debug.  
   
 ```
@@ -173,7 +178,7 @@ BOOL SetPipeName(
 ### <a name="return-value"></a>Valore restituito  
  Restituisce TRUE esito positivo, FALSE in caso di errore.  
   
-##  <a name="a-namesettimeouta--cdebugreporthooksettimeout"></a><a name="settimeout"></a>CDebugReportHook::SetTimeout  
+##  <a name="settimeout"></a>CDebugReportHook::SetTimeout  
  Chiamare questo metodo per impostare il tempo in millisecondi che questa classe rimarrà in attesa della named pipe diventi disponibile.  
   
 ```

@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleException
+- AFXDISP/COleException
+- AFXDISP/COleException::Process
+- AFXDISP/COleException::m_sc
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -80,7 +83,7 @@ class COleException : public CException
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxdisp.h  
   
-##  <a name="a-namemsca--coleexceptionmsc"></a><a name="m_sc"></a>COleException::m_sc  
+##  <a name="m_sc"></a>COleException::m_sc  
  Questo membro dati contiene il codice di stato OLE che indica il motivo dell'eccezione.  
   
 ```  
@@ -95,7 +98,7 @@ SCODE m_sc;
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCOleContainer&#22;](../../mfc/codesnippet/cpp/coleexception-class_1.cpp)]  
   
-##  <a name="a-nameprocessa--coleexceptionprocess"></a><a name="process"></a>COleException::Process  
+##  <a name="process"></a>COleException::Process  
  Chiamare il **processo** funzione membro per convertire un'eccezione intercettata in un codice di stato OLE.  
   
 ```  

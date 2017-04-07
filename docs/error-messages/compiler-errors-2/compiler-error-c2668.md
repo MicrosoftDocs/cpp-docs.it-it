@@ -1,41 +1,57 @@
 ---
-title: "Errore del compilatore C2668 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2668"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2668"
+title: Errore del compilatore C2668 | Documenti Microsoft
+ms.custom: 
+ms.date: 03/28/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2668
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2668
 ms.assetid: 041e9627-1c76-420e-a653-cfc83f933bd3
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Errore del compilatore C2668
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
+ms.openlocfilehash: 6bb1dc7c1dbf26a4ff8ec25a46fe7128e0fb6aa8
+ms.lasthandoff: 03/29/2017
 
-'funzione': chiamata ambigua a funzione in overload  
+---
+# <a name="compiler-error-c2668"></a>Errore del compilatore C2668
+'function': chiamata ambigua a funzione in overload  
   
- È stato impossibile risolvere la chiamata di funzione in overload specificata.  È possibile eseguire il cast esplicito di uno o più parametri effettivi.  
+ Non è stato possibile risolvere la chiamata di funzione in overload specificato. È consigliabile eseguire il cast esplicito di uno o più parametri effettivi.  
   
- Questo errore può anche verificarsi con l'utilizzo di template.  Se nella stessa classe è presente una funzione membro regolare e una funzione membro basata su template con la stessa firma, la funzione basata su template deve venire per prima.  Si tratta di una limitazione dell'implementazione corrente di Visual C\+\+.  
+ È anche possibile ottenere questo errore tramite l'utilizzo di modello. Se, nella stessa classe, si dispone di una funzione membro regolare e una funzione membro basate su modelli con la stessa firma, deve precedere quella basata su modelli. Si tratta di una limitazione dell'implementazione corrente di Visual C++.  
   
- Per ulteriori informazioni sull'ordine parziale dei template di funzione, vedere l’articolo della Knowledge Base Q240869 \(informazioni in lingua inglese\).  
+ Vedere della Knowledge Base Q240869 per ulteriori informazioni sull'ordinamento parziale dei modelli di funzione.  
   
  Se si compila un progetto ATL contenente un oggetto COM che supporta `ISupportErrorInfo`, vedere l'articolo della Knowledge Base Q243298.  
   
-## Esempio  
- Il seguente codice di esempio genera l'errore C2668:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C2668:  
   
 ```  
 // C2668.cpp  
@@ -53,8 +69,8 @@ int main() {
 }  
 ```  
   
-## Esempio  
- Un altro modo per risolvere questo errore consiste nell'uso di una [dichiarazione using](../../cpp/using-declaration.md):  
+## <a name="example"></a>Esempio  
+ Un altro modo per correggere l'errore riguarda una [dichiarazione using](../../cpp/using-declaration.md):  
   
 ```  
 // C2668b.cpp  
@@ -95,10 +111,10 @@ class MyTestCase : public AppTestCase {
 };  
 ```  
   
-## Esempio  
- Questo errore può anche venire generato come risultato delle operazioni di conformità eseguite per Visual Studio .NET 2003: conversione ambigua su cast della costante 0.  
+## <a name="example"></a>Esempio  
+ Questo errore può anche essere generato come risultato delle operazioni di conformità del compilatore eseguite per Visual Studio .NET 2003: conversione ambigua su cast della costante 0.  
   
- La conversione su un cast che utilizza la costante 0 è ambigua poiché int richiede una conversione sia a long che a void\*.  Per risolvere questo errore, eseguire il cast 0 sul tipo esatto del parametro di funzione per il quale verrà utilizzato in modo che non sia necessario effettuare alcuna conversione. Questo codice sarà valido nelle versioni Visual Studio .NET 2003 e Visual Studio .NET di Visual C\+\+.  
+ Conversione in un cast usando la costante 0 è ambigua poiché int richiede una conversione sia a lungo e a void *. Per correggere l'errore, eseguire il cast tra 0 e il tipo esatto del parametro della funzione utilizzato per in modo che sia non necessaria alcuna conversione la (questo codice è valido nelle versioni di Visual Studio .NET 2003 e Visual Studio .NET di Visual C++).  
   
 ```  
 // C2668c.cpp  
@@ -118,8 +134,8 @@ int main() {
 }  
 ```  
   
-## Esempio  
- Questo errore può verificarsi perché CRT dispone ora di formati float e double di tutte le funzioni matematiche.  
+## <a name="example"></a>Esempio  
+ Questo errore può verificarsi perché CRT dispone ora di form float e double di tutte le funzioni matematiche.  
   
 ```  
 // C2668d.cpp  
@@ -132,8 +148,8 @@ int main() {
 }  
 ```  
   
-## Esempio  
- Questo errore può verificarsi a causa della rimozione di pow\(int, int\) da math.h in CRT.  
+## <a name="example"></a>Esempio  
+ Questo errore può verificarsi perché pow (int, int) è stato rimosso da Math. h in CRT.  
   
 ```  
 // C2668e.cpp  
@@ -142,4 +158,26 @@ int main() {
    pow(9,9);   // C2668  
    pow((double)9,9);   // OK  
 }  
+```
+
+## <a name="example"></a>Esempio  
+Questo codice di Visual Studio 2015 ma non in Visual Studio 2017 e versioni successive con C2668. In Visual Studio 2015 il compilatore tratta erroneamente copy-list-initialization come l'oggetto copy-initialization normale, considerando solo la conversione dei costruttori per la risoluzione dell'overload. 
+
+```
+C++
+struct A {
+    explicit A(int) {}
+};
+
+struct B {
+    B(int) {}
+};
+
+void f(const A&) {}
+void f(const B&) {}
+
+int main()
+{
+    f({ 1 }); // error C2668: 'f': ambiguous call to overloaded function
+}
 ```

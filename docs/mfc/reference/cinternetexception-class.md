@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CInternetException
+- AFXINET/CInternetException
+- AFXINET/CInternetException::CInternetException
+- AFXINET/CInternetException::m_dwContext
+- AFXINET/CInternetException::m_dwError
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -80,7 +84,7 @@ class CInternetException : public CException
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxinet. h  
   
-##  <a name="a-namecinternetexceptiona--cinternetexceptioncinternetexception"></a><a name="cinternetexception"></a>CInternetException::CInternetException  
+##  <a name="cinternetexception"></a>CInternetException::CInternetException  
  Questa funzione membro viene chiamata quando un `CInternetException` viene creato l'oggetto.  
   
 ```  
@@ -94,7 +98,7 @@ CInternetException(DWORD dwError);
 ### <a name="remarks"></a>Note  
  Per generare un CInternetException, chiamare la funzione globale MFC [AfxThrowInternetException](http://msdn.microsoft.com/library/c9645b10-9541-48b2-8b0c-94ca33fed3cb).  
   
-##  <a name="a-namemdwcontexta--cinternetexceptionmdwcontext"></a><a name="m_dwcontext"></a>CInternetException::m_dwContext  
+##  <a name="m_dwcontext"></a>CInternetException::m_dwContext  
  Il valore di contesto associato all'operazione Internet correlato.  
   
 ```  
@@ -104,7 +108,7 @@ DWORD_PTR m_dwContext;
 ### <a name="remarks"></a>Note  
  L'identificatore di contesto è specificato in origine [CInternetSession](../../mfc/reference/cinternetsession-class.md) e passati da MFC per [CInternetConnection](../../mfc/reference/cinternetconnection-class.md)- e [CInternetFile](../../mfc/reference/cinternetfile-class.md)-classi derivate. È possibile ignorare l'impostazione predefinita e assegnare qualsiasi `dwContext` parametro un valore di propria scelta. `dwContext`è associata a qualsiasi operazione dell'oggetto specificato. `dwContext`Identifica le informazioni sullo stato dell'operazione restituite da [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback).  
   
-##  <a name="a-namemdwerrora--cinternetexceptionmdwerror"></a><a name="m_dwerror"></a>CInternetException::m_dwError  
+##  <a name="m_dwerror"></a>CInternetException::m_dwError  
  L'errore che ha causato l'eccezione.  
   
 ```  

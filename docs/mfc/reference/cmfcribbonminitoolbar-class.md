@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonMiniToolBar
+- AFXRIBBONMINITOOLBAR/CMFCRibbonMiniToolBar
+- AFXRIBBONMINITOOLBAR/CMFCRibbonMiniToolBar::IsContextMenuMode
+- AFXRIBBONMINITOOLBAR/CMFCRibbonMiniToolBar::IsRibbonMiniToolBar
+- AFXRIBBONMINITOOLBAR/CMFCRibbonMiniToolBar::SetCommands
+- AFXRIBBONMINITOOLBAR/CMFCRibbonMiniToolBar::Show
+- AFXRIBBONMINITOOLBAR/CMFCRibbonMiniToolBar::ShowWithContextMenu
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +100,7 @@ class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxRibbonMiniToolBar.h  
   
-##  <a name="a-namesetcommandsa--cmfcribbonminitoolbarsetcommands"></a><a name="setcommands"></a>CMFCRibbonMiniToolBar::SetCommands  
+##  <a name="setcommands"></a>CMFCRibbonMiniToolBar::SetCommands  
  Imposta l'elenco di comandi da visualizzare sulla barra degli strumenti.  
   
 ```  
@@ -118,7 +124,7 @@ void SetCommands(
   
  [!code-cpp[9 NVC_MFC_MSOffice2007Demo](../../mfc/reference/codesnippet/cpp/cmfcribbonminitoolbar-class_1.cpp)]  
   
-##  <a name="a-nameshowa--cmfcribbonminitoolbarshow"></a><a name="show"></a>CMFCRibbonMiniToolBar::Show  
+##  <a name="show"></a>CMFCRibbonMiniToolBar::Show  
  Visualizza la barra di formattazione rapida in coordinate dello schermo specificate.  
   
 ```  
@@ -137,7 +143,7 @@ BOOL Show(
 ### <a name="return-value"></a>Valore restituito  
  `TRUE`Se la barra è stata visualizzata correttamente. in caso contrario, `FALSE`.  
   
-##  <a name="a-nameshowwithcontextmenua--cmfcribbonminitoolbarshowwithcontextmenu"></a><a name="showwithcontextmenu"></a>CMFCRibbonMiniToolBar::ShowWithContextMenu  
+##  <a name="showwithcontextmenu"></a>CMFCRibbonMiniToolBar::ShowWithContextMenu  
  Visualizza la barra di formattazione rapida con un menu di scelta rapida.  
   
 ```  
@@ -167,7 +173,7 @@ BOOL ShowWithContextMenu(
 ### <a name="remarks"></a>Note  
  Utilizzare questa funzione per visualizzare una barra degli strumenti mini dotato di un menu di scelta rapida. Menu di scelta rapida è posizionato 15 pixel sotto la barra.  
   
-##  <a name="a-nameiscontextmenumodea--cmfcribbonminitoolbariscontextmenumode"></a><a name="iscontextmenumode"></a>CMFCRibbonMiniToolBar::IsContextMenuMode  
+##  <a name="iscontextmenumode"></a>CMFCRibbonMiniToolBar::IsContextMenuMode  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -178,7 +184,7 @@ BOOL IsContextMenuMode() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameisribbonminitoolbara--cmfcribbonminitoolbarisribbonminitoolbar"></a><a name="isribbonminitoolbar"></a>CMFCRibbonMiniToolBar::IsRibbonMiniToolBar  
+##  <a name="isribbonminitoolbar"></a>CMFCRibbonMiniToolBar::IsRibbonMiniToolBar  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  

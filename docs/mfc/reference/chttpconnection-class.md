@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CHttpConnection
+- AFXINET/CHttpConnection
+- AFXINET/CHttpConnection::CHttpConnection
+- AFXINET/CHttpConnection::OpenRequest
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,7 +95,7 @@ class CHttpConnection : public CInternetConnection
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxinet. h  
   
-##  <a name="a-namechttpconnectiona--chttpconnectionchttpconnection"></a><a name="chttpconnection"></a>CHttpConnection::CHttpConnection  
+##  <a name="chttpconnection"></a>CHttpConnection::CHttpConnection  
  Questa funzione membro viene chiamata per costruire un `CHttpConnection` oggetto.  
   
 ```  
@@ -157,7 +160,7 @@ CHttpConnection(
 ### <a name="remarks"></a>Note  
  Non creare mai un `CHttpConnection` direttamente. Piuttosto, creare un oggetto, chiamare [CInternetSession:: GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection).  
   
-##  <a name="a-nameopenrequesta--chttpconnectionopenrequest"></a><a name="openrequest"></a>CHttpConnection:: OpenRequest  
+##  <a name="openrequest"></a>CHttpConnection:: OpenRequest  
  Chiamare la seguente funzione membro per aprire una connessione HTTP.  
   
 ```  

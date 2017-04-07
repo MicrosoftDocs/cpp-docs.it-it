@@ -9,7 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ppl/concurrency::structured_task_group
+- structured_task_group
+- PPL/concurrency::structured_task_group
+- PPL/concurrency::structured_task_group::structured_task_group
+- PPL/concurrency::structured_task_group::cancel
+- PPL/concurrency::structured_task_group::is_canceling
+- PPL/concurrency::structured_task_group::run
+- PPL/concurrency::structured_task_group::run_and_wait
+- PPL/concurrency::structured_task_group::wait
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: ef20ff7fef8683cec4a3856c80c09846aa69a89a
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: a1817080506150a8a25918988e18b76dd7a04def
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="structuredtaskgroup-class"></a>Classe structured_task_group
@@ -54,18 +61,18 @@ class structured_task_group;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore structured_task_group](#ctor)|Di overload. Costruisce un nuovo oggetto `structured_task_group`.|  
+|[structured_task_group](#ctor)|Di overload. Costruisce un nuovo oggetto `structured_task_group`.|  
 |[~ structured_task_group distruttore](#dtor)|Elimina un oggetto `structured_task_group`. È necessario chiamare il `wait` o `run_and_wait` metodo sull'oggetto prima dell'esecuzione del distruttore, a meno che il distruttore è in esecuzione come risultato di rimozione dello stack a causa di un'eccezione.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Cancel (metodo)](#cancel)|Consente un migliore tentativo di annullamento della sottostruttura ad albero di lavoro con radice nel gruppo di attività. Ogni attività pianificata nel gruppo di attività sarà transitivamente annullata, se possibile.|  
-|[is_canceling (metodo)](#is_canceling)|Informa il chiamante se il gruppo di attività è attualmente in corso di annullamento. Ciò non indica necessariamente che il `cancel` metodo è stato chiamato sul `structured_task_group` oggetto (anche se tale qualifica sicuramente questo metodo per restituire `true`). Potrebbe essere il caso che il `structured_task_group` oggetto è in esecuzione inline e un gruppo di attività più in alto nell'albero del lavoro viene annullato. In casi come questi dove il runtime può determinare in anticipo che l'annullamento si propagherà tramite questo `structured_task_group` oggetto `true` verranno restituiti anche.|  
-|[Run (metodo)](#run)|Di overload. Pianifica un'attività sul `structured_task_group` oggetto. Il chiamante gestisce la durata del `task_handle` oggetto passato nel `_Task_handle` parametro. La versione che accetta il parametro `_Placement` comporta che per l'attività venga data priorità all'esecuzione nella posizione specificata da quel parametro.|  
-|[run_and_wait (metodo)](#run_and_wait)|Di overload. Pianifica un'attività in esecuzione inline nel contesto di chiamata con l'assistenza di `structured_task_group` oggetto per il supporto per l'annullamento completo. Se un `task_handle` oggetto viene passato come parametro per `run_and_wait`, il chiamante è responsabile della gestione della durata di `task_handle` oggetto. La funzione quindi attende che operano sul `structured_task_group` oggetto ha completato o annullato.|  
-|[Wait (metodo)](#wait)|Attende che operano sul `structured_task_group` è stata completata o annullata.|  
+|[Annulla](#cancel)|Consente un migliore tentativo di annullamento della sottostruttura ad albero di lavoro con radice nel gruppo di attività. Ogni attività pianificata nel gruppo di attività sarà transitivamente annullata, se possibile.|  
+|[is_canceling](#is_canceling)|Informa il chiamante se il gruppo di attività è attualmente in corso di annullamento. Ciò non indica necessariamente che il `cancel` metodo è stato chiamato sul `structured_task_group` oggetto (anche se tale qualifica sicuramente questo metodo per restituire `true`). Potrebbe essere il caso che il `structured_task_group` oggetto è in esecuzione inline e un gruppo di attività più in alto nell'albero del lavoro viene annullato. In casi come questi dove il runtime può determinare in anticipo che l'annullamento si propagherà tramite questo `structured_task_group` oggetto `true` verranno restituiti anche.|  
+|[run](#run)|Di overload. Pianifica un'attività sul `structured_task_group` oggetto. Il chiamante gestisce la durata del `task_handle` oggetto passato nel `_Task_handle` parametro. La versione che accetta il parametro `_Placement` comporta che per l'attività venga data priorità all'esecuzione nella posizione specificata da quel parametro.|  
+|[run_and_wait](#run_and_wait)|Di overload. Pianifica un'attività in esecuzione inline nel contesto di chiamata con l'assistenza di `structured_task_group` oggetto per il supporto per l'annullamento completo. Se un `task_handle` oggetto viene passato come parametro per `run_and_wait`, il chiamante è responsabile della gestione della durata di `task_handle` oggetto. La funzione quindi attende che operano sul `structured_task_group` oggetto ha completato o annullato.|  
+|[attesa](#wait)|Attende che operano sul `structured_task_group` è stata completata o annullata.|  
   
 ## <a name="remarks"></a>Note  
  Esistono una serie di restrizioni gravi per l'utilizzo di un `structured_task_group` oggetto per ottenere prestazioni:  
@@ -88,7 +95,7 @@ class structured_task_group;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="a-namecancela-cancel"></a><a name="cancel"></a>Annulla 
+##  <a name="cancel"></a>Annulla 
 
  Consente un migliore tentativo di annullamento della sottostruttura ad albero di lavoro con radice nel gruppo di attività. Ogni attività pianificata nel gruppo di attività sarà transitivamente annullata, se possibile.  
   
@@ -99,7 +106,7 @@ void cancel();
 ### <a name="remarks"></a>Note  
  Per ulteriori informazioni, vedere [annullamento](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation).  
   
-##  <a name="a-nameiscancelinga-iscanceling"></a><a name="is_canceling"></a>is_canceling 
+##  <a name="is_canceling"></a>is_canceling 
 
  Informa il chiamante se il gruppo di attività è attualmente in corso di annullamento. Ciò non indica necessariamente che il `cancel` metodo è stato chiamato sul `structured_task_group` oggetto (anche se tale qualifica sicuramente questo metodo per restituire `true`). Potrebbe essere il caso che il `structured_task_group` oggetto è in esecuzione inline e un gruppo di attività più in alto nell'albero del lavoro viene annullato. In casi come questi dove il runtime può determinare in anticipo che l'annullamento si propagherà tramite questo `structured_task_group` oggetto `true` verranno restituiti anche.  
   
@@ -113,7 +120,7 @@ bool is_canceling();
 ### <a name="remarks"></a>Note  
  Per ulteriori informazioni, vedere [annullamento](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation).  
   
-##  <a name="a-nameruna-run"></a><a name="run"></a>Correre 
+##  <a name="run"></a>Correre 
 
  Pianifica un'attività sul `structured_task_group` oggetto. Il chiamante gestisce la durata del `task_handle` oggetto passato nel `_Task_handle` parametro. La versione che accetta il parametro `_Placement` comporta che per l'attività venga data priorità all'esecuzione nella posizione specificata da quel parametro.  
   
@@ -141,11 +148,11 @@ void run(
 ### <a name="remarks"></a>Note  
  Il runtime crea una copia della funzione lavoro passata a questo metodo. Le modifiche di stato che si verificano in un oggetto funzione passato a questo metodo non compariranno nella propria copia dell'oggetto funzione.  
   
- Se il `structured_task_group` distrugge come risultato di rimozione dello stack da un'eccezione, non è necessaria garantire che è stata effettuata una chiamata al metodo di `wait` o `run_and_wait` (metodo). In questo caso, il distruttore verrà adeguatamente Annulla e attendere l'attività rappresentata dal `_Task_handle` parametro per il completamento.  
+ Se il `structured_task_group` distrugge come risultato di rimozione dello stack da un'eccezione, non è necessaria garantire che è stata effettuata una chiamata al metodo di `wait` o `run_and_wait` (metodo). In questo caso, il distruttore verrà in modo appropriato annullare e attendere l'attività rappresentata dall'istanza di `_Task_handle` parametro per il completamento.  
   
  Genera un [invalid_multiple_scheduling](invalid-multiple-scheduling-class.md) eccezione se l'attività di gestione forniti dal `_Task_handle` parametro è già stato pianificato su un oggetto gruppo di attività tramite il `run` (metodo) e non si è verificato alcun nuova chiamata al `wait` o `run_and_wait` metodo su tale gruppo di attività.  
   
-##  <a name="a-namerunandwaita-runandwait"></a><a name="run_and_wait"></a>run_and_wait 
+##  <a name="run_and_wait"></a>run_and_wait 
 
  Pianifica un'attività in esecuzione inline nel contesto di chiamata con l'assistenza di `structured_task_group` oggetto per il supporto per l'annullamento completo. Se un `task_handle` oggetto viene passato come parametro per `run_and_wait`, il chiamante è responsabile della gestione della durata di `task_handle` oggetto. La funzione quindi attende che operano sul `structured_task_group` oggetto ha completato o annullato.  
   
@@ -179,7 +186,7 @@ task_group_status run_and_wait(const _Function& _Func);
   
  Nel percorso di esecuzione non eccezionale, si dispone di un mandato per chiamare questo metodo o `wait` metodo prima del distruttore del `structured_task_group` esegue.  
   
-##  <a name="a-namectora-structuredtaskgroup"></a><a name="ctor"></a>structured_task_group 
+##  <a name="ctor"></a>structured_task_group 
 
  Costruisce un nuovo oggetto `structured_task_group`.  
   
@@ -196,7 +203,7 @@ structured_task_group(cancellation_token _CancellationToken);
 ### <a name="remarks"></a>Note  
  Tramite il costruttore che accetta un token di annullamento viene creato un oggetto `structured_task_group` che verrà annullato quando l'origine associata al token viene annullata. Fornire un token di annullamento esplicito permette di isolare questo gruppo di attività strutturate dalla partecipazione a un annullamento implicito di un gruppo padre con un token diverso o non.  
   
-##  <a name="a-namedtora-structuredtaskgroup"></a><a name="dtor"></a>~ structured_task_group 
+##  <a name="dtor"></a>~ structured_task_group 
 
  Elimina un oggetto `structured_task_group`. È necessario chiamare il `wait` o `run_and_wait` metodo sull'oggetto prima dell'esecuzione del distruttore, a meno che il distruttore è in esecuzione come risultato di rimozione dello stack a causa di un'eccezione.  
   
@@ -207,7 +214,7 @@ structured_task_group(cancellation_token _CancellationToken);
 ### <a name="remarks"></a>Note  
  Se il distruttore viene eseguito come risultato dell'esecuzione normale (ad esempio, non la rimozione dello stack a causa di un'eccezione) e non il `wait` né `run_and_wait` è stato chiamato, il distruttore venga generata una [missing_wait](missing-wait-class.md) (eccezione).  
   
-##  <a name="a-namewaita-wait"></a><a name="wait"></a>attesa 
+##  <a name="wait"></a>attesa 
 
  Attende che operano sul `structured_task_group` è stata completata o annullata.  
   

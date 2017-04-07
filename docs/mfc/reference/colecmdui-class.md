@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleCmdUI
+- AFXDOCOBJ/COleCmdUI
+- AFXDOCOBJ/COleCmdUI::COleCmdUI
+- AFXDOCOBJ/COleCmdUI::Enable
+- AFXDOCOBJ/COleCmdUI::SetCheck
+- AFXDOCOBJ/COleCmdUI::SetText
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +89,7 @@ class COleCmdUI : public CCmdUI
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxdocobj.h  
   
-##  <a name="a-namecolecmduia--colecmduicolecmdui"></a><a name="colecmdui"></a>COleCmdUI::COleCmdUI  
+##  <a name="colecmdui"></a>COleCmdUI::COleCmdUI  
  Costruisce un `COleCmdUI` oggetto associato a un comando dell'interfaccia utente specifico.  
   
 ```  
@@ -107,7 +112,7 @@ COleCmdUI(
 ### <a name="remarks"></a>Note  
  Il `COleCmdUI` oggetto fornisce un'interfaccia di programmazione per l'aggiornamento degli oggetti dell'interfaccia utente di DocObject, ad esempio voci di menu o pulsanti della barra di controllo. Gli oggetti dell'interfaccia utente possono essere abilitati, disabilitati, selezionati e/o cancellati tramite la `COleCmdUI` oggetto.  
   
-##  <a name="a-nameenablea--colecmduienable"></a><a name="enable"></a>COleCmdUI::Enable  
+##  <a name="enable"></a>COleCmdUI::Enable  
  Chiamare questa funzione per impostare il flag di comando di `COleCmdUI` oggetto **OLECOMDF_ENABLED**, che indica l'interfaccia di comando è disponibile e abilitata, o per cancellare il flag di comando.  
   
 ```  
@@ -118,7 +123,7 @@ virtual void Enable(BOOL bOn);
  `bOn`  
  Indica se il comando è associato il `COleCmdUI` oggetto deve essere abilitato o disabilitato. NonZero consente il comando. 0 disabilita il comando.  
   
-##  <a name="a-namesetchecka--colecmduisetcheck"></a><a name="setcheck"></a>COleCmdUI::SetCheck  
+##  <a name="setcheck"></a>COleCmdUI::SetCheck  
  Chiamare questa funzione per impostare lo stato di un elemento toggle di attivazione/disattivazione comando.  
   
 ```  
@@ -135,7 +140,7 @@ virtual void SetCheck(int nCheck);
 |**2**|Imposta il comando indeterminato; Impossibile determinare lo stato perché l'attributo di questo comando è su e disattivare gli stati della selezione pertinente.|  
 |qualsiasi altro valore|Imposta il comando per disattivare l'opzione.|  
   
-##  <a name="a-namesettexta--colecmduisettext"></a><a name="settext"></a>COleCmdUI::SetText  
+##  <a name="settext"></a>COleCmdUI::SetText  
  Chiamare questa funzione per restituire una stringa di testo nome o lo stato per un comando.  
   
 ```  

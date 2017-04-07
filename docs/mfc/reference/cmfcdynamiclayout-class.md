@@ -8,6 +8,19 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: reference
+f1_keywords:
+- CMFCDynamicLayout
+- AFXLAYOUT/CMFCDynamicLayout
+- AFXLAYOUT/CMFCDynamicLayout::AddItem
+- AFXLAYOUT/CMFCDynamicLayout::Adjust
+- AFXLAYOUT/CMFCDynamicLayout::Create
+- AFXLAYOUT/CMFCDynamicLayout::GetHostWnd
+- AFXLAYOUT/CMFCDynamicLayout::GetMinSize
+- AFXLAYOUT/CMFCDynamicLayout::GetWindowRect
+- AFXLAYOUT/CMFCDynamicLayout::HasItem
+- AFXLAYOUT/CMFCDynamicLayout::IsEmpty
+- AFXLAYOUT/CMFCDynamicLayout::LoadResource
+- AFXLAYOUT/CMFCDynamicLayout::SetMinSize
 dev_langs:
 - C++
 ms.assetid: c2df2976-f049-47fc-9cf0-abe3e01948bc
@@ -93,7 +106,7 @@ class CMFCDynamicLayout : public CObject
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxlayout.h  
   
-##  <a name="a-nameadditema--cmfcdynamiclayoutadditem"></a><a name="additem"></a>CMFCDynamicLayout::AddItem  
+##  <a name="additem"></a>CMFCDynamicLayout::AddItem  
  Aggiunge una finestra figlio, in genere un controllo, all'elenco di finestre controllate dal gestore del layout dinamico.  
   
 ```  
@@ -126,7 +139,7 @@ BOOL AddItem(
 ### <a name="remarks"></a>Note  
  La posizione e le dimensioni di un controllo figlio vengono modificate in modo dinamico durante il ridimensionamento di una finestra di hosting.  
   
-##  <a name="a-nameadjusta--cmfcdynamiclayoutadjust"></a><a name="adjust"></a>CMFCDynamicLayout::Adjust  
+##  <a name="adjust"></a>CMFCDynamicLayout::Adjust  
  Aggiunge una finestra figlio, in genere un controllo, all'elenco di finestre controllate dal gestore del layout dinamico.  
   
 ```  
@@ -136,7 +149,7 @@ void Adjust();
 ### <a name="remarks"></a>Note  
  La posizione e le dimensioni di un controllo figlio vengono modificate in modo dinamico durante il ridimensionamento di una finestra di hosting.  
   
-##  <a name="a-namecreatea--cmfcdynamiclayoutcreate"></a><a name="create"></a>CMFCDynamicLayout::Create  
+##  <a name="create"></a>CMFCDynamicLayout::Create  
  Archivia e convalida la finestra host.  
   
 ```  
@@ -152,7 +165,7 @@ BOOL Create(CWnd* pHostWnd);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegethostwnda--cmfcdynamiclayoutgethostwnd"></a><a name="gethostwnd"></a>CMFCDynamicLayout::GetHostWnd  
+##  <a name="gethostwnd"></a>CMFCDynamicLayout::GetHostWnd  
  Restituisce un puntatore a una finestra host.  
   
 ```  
@@ -165,7 +178,7 @@ CWnd* GetHostWnd();
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, tutte le posizioni di controllo figlio ricalcolate rispetto a questa finestra.  
   
-##  <a name="a-namegetminsizea--cmfcdynamiclayoutgetminsize"></a><a name="getminsize"></a>CMFCDynamicLayout::GetMinSize  
+##  <a name="getminsize"></a>CMFCDynamicLayout::GetMinSize  
  Restituisce le dimensioni finestra al di sotto delle quali il layout non verrà regolato.  
   
 ```  
@@ -178,7 +191,7 @@ CSize GetMinSize();
 ### <a name="remarks"></a>Note  
  Posizione e dimensioni di un controllo figlio quando viene modificato in modo dinamico quando si ridimensiona una finestra di hosting, con una dimensione minima al di sotto della quale il layout non viene regolato. L'utente può ridurre le dimensioni della finestra, ma alcune parti della stessa verranno nascoste dalla visualizzazione.  
   
-##  <a name="a-namegetwindowrecta--cmfcdynamiclayoutgetwindowrect"></a><a name="getwindowrect"></a>CMFCDynamicLayout::GetWindowRect  
+##  <a name="getwindowrect"></a>CMFCDynamicLayout::GetWindowRect  
  Recupera il rettangolo per l'area client corrente della finestra.  
   
 ```  
@@ -191,7 +204,7 @@ void GetHostWndRect(CRect& rect,);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namehasitema--cmfcdynamiclayouthasitem"></a><a name="hasitem"></a>CMFCDynamicLayout::HasItem  
+##  <a name="hasitem"></a>CMFCDynamicLayout::HasItem  
  Controlla se al layout dinamico è stato aggiunto un controllo figlio.  
   
 ```  
@@ -207,7 +220,7 @@ BOOL HasItem(HWND hwnd);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameisemptya--cmfcdynamiclayoutisempty"></a><a name="isempty"></a>CMFCDynamicLayout::IsEmpty  
+##  <a name="isempty"></a>CMFCDynamicLayout::IsEmpty  
  Controlla se un layout dinamico non dispone di finestre figlio aggiuntive.  
   
 ```  
@@ -219,7 +232,7 @@ BOOL IsEmpty();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameloadresourcea--cmfcdynamiclayoutloadresource"></a><a name="loadresource"></a>CMFCDynamicLayout::LoadResource  
+##  <a name="loadresource"></a>CMFCDynamicLayout::LoadResource  
  Legge il layout dinamico dalla risorsa AFX_DIALOG_LAYOUT e quindi applica il layout alla finestra host.  
   
 ```  
@@ -243,7 +256,7 @@ static BOOL LoadResource(CWnd* pHostWnd,
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namemovehorizontala--cmfcdynamiclayoutmovehorizontal"></a><a name="movehorizontal"></a>CMFCDynamicLayout::MoveHorizontal  
+##  <a name="movehorizontal"></a>CMFCDynamicLayout::MoveHorizontal  
  Ottiene un [MoveSettings](#movesettings_structure) valore che definisce il livello di un controllo figlio viene spostato in senso orizzontale quando l'utente ridimensiona la finestra di hosting.  
   
 ```  
@@ -259,7 +272,7 @@ static MoveSettings MoveHorizontal(int nRatio);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namemovehorizontalandverticala--cmfcdynamiclayoutmovehorizontalandvertical"></a><a name="movehorizontalandvertical"></a>CMFCDynamicLayout::MoveHorizontalAndVertical  
+##  <a name="movehorizontalandvertical"></a>CMFCDynamicLayout::MoveHorizontalAndVertical  
  Ottiene un [MoveSettings](#movesettings_structure) valore che definisce il livello di un controllo figlio viene spostato in senso orizzontale quando l'utente ridimensiona la finestra di hosting.  
   
 ```  
@@ -278,7 +291,7 @@ static MoveSettings MoveHorizontalAndVertical(int nXRatio int nYRatio);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namemovenonea--cmfcdynamiclayoutmovenone"></a><a name="movenone"></a>CMFCDynamicLayout::MoveNone  
+##  <a name="movenone"></a>CMFCDynamicLayout::MoveNone  
  Ottiene un [MoveSettings](#movesettings_structure) valore che non rappresenta Nessun movimento, verticale o orizzontale, per un controllo figlio.  
   
 ```  
@@ -290,7 +303,7 @@ static MoveSettings MoveNone();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namemovesettingsstructurea--cmfcdynamiclayoutmovesettings-structure"></a><a name="movesettings_structure"></a>Struttura CMFCDynamicLayout::MoveSettings  
+##  <a name="movesettings_structure"></a>Struttura CMFCDynamicLayout::MoveSettings  
  Incapsula i dati di spostamento per i controlli in un layout dinamico.  
   
 ```  
@@ -331,7 +344,7 @@ BOOL IsVertical() const
 ## <a name="return-value"></a>Valore restituito  
  TRUE se l'oggetto `MoveSettings` specifica uno spostamento verticale diverso da zero.  
 
-##  <a name="a-namemoveverticala--cmfcdynamiclayoutmovevertical"></a><a name="movevertical"></a>CMFCDynamicLayout::MoveVertical  
+##  <a name="movevertical"></a>CMFCDynamicLayout::MoveVertical  
  Ottiene un [MoveSettings](#movesettings_structure) valore che definisce il livello di un controllo figlio viene spostato in senso verticale quando l'utente ridimensiona la finestra di hosting.  
   
 ```  
@@ -347,7 +360,7 @@ static MoveSettings MoveVertical(int nRatio);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namesetminsizea--cmfcdynamiclayoutsetminsize"></a><a name="setminsize"></a>CMFCDynamicLayout::SetMinSize  
+##  <a name="setminsize"></a>CMFCDynamicLayout::SetMinSize  
  Imposta le dimensioni finestra al di sotto delle quali il layout non verrà regolato.  
   
 ```  
@@ -361,7 +374,7 @@ void SetMinSize(const CSize& size);
 ### <a name="remarks"></a>Note  
  Posizione e dimensioni di un controllo figlio quando viene modificato in modo dinamico quando si ridimensiona una finestra di hosting, con una dimensione minima al di sotto della quale il layout non viene regolato. L'utente può ridurre le dimensioni della finestra, ma alcune parti della stessa verranno nascoste dalla visualizzazione.  
   
-##  <a name="a-namesizehorizontala--cmfcdynamiclayoutsizehorizontal"></a><a name="sizehorizontal"></a>CMFCDynamicLayout::SizeHorizontal  
+##  <a name="sizehorizontal"></a>CMFCDynamicLayout::SizeHorizontal  
  Ottiene un [SizeSettings](#sizesettings_structure) valore che definisce il livello di un controllo figlio viene ridimensionata in senso orizzontale quando l'utente ridimensiona la finestra di hosting.  
   
 ```  
@@ -377,7 +390,7 @@ static SizeSettings SizeHorizontal(int nRatio);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namesizehorizontalandverticala--cmfcdynamiclayoutsizehorizontalandvertical"></a><a name="sizehorizontalandvertical"></a>CMFCDynamicLayout::SizeHorizontalAndVertical  
+##  <a name="sizehorizontalandvertical"></a>CMFCDynamicLayout::SizeHorizontalAndVertical  
  Ottiene un [SizeSettings](#sizesettings_structure) valore che definisce il livello di un controllo figlio viene ridimensionata in senso orizzontale quando l'utente ridimensiona la finestra di hosting.  
   
 ```  
@@ -396,7 +409,7 @@ static SizeSettings SizeHorizontalAndVertical(int nXRatio int nYRatio);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namesizenonea--cmfcdynamiclayoutsizenone"></a><a name="sizenone"></a>CMFCDynamicLayout::SizeNone  
+##  <a name="sizenone"></a>CMFCDynamicLayout::SizeNone  
  Ottiene un [SizeSettings](#sizesettings_structure) valore che non rappresenta variazione delle dimensioni per un controllo figlio.  
   
 ```  
@@ -408,7 +421,7 @@ static SizeSettings SizeNone();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namesizesettingsstructurea--cmfcdynamiclayoutsizesettings-structure"></a><a name="sizesettings_structure"></a>Struttura CMFCDynamicLayout::SizeSettings  
+##  <a name="sizesettings_structure"></a>Struttura CMFCDynamicLayout::SizeSettings  
  Incapsula i dati di modifica delle dimensioni per i controlli in un layout dinamico.  
   
 ```  
@@ -448,7 +461,7 @@ BOOL IsVertical() const
 ## <a name="return-value"></a>Valore restituito  
  TRUE se l'oggetto `SizeSettings` specifica un ridimensionamento verticale diverso da zero.  
 
-##  <a name="a-namesizeverticala--cmfcdynamiclayoutsizevertical"></a><a name="sizevertical"></a>CMFCDynamicLayout::SizeVertical  
+##  <a name="sizevertical"></a>CMFCDynamicLayout::SizeVertical  
  Ottiene un [SizeSettings](#sizesettings_structure) valore che definisce il livello di un controllo figlio viene ridimensionata in senso verticale quando l'utente ridimensiona la finestra di hosting.  
   
 ```  

@@ -10,6 +10,25 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCDropDownToolbarButton
+- AFXDROPDOWNTOOLBAR/CMFCDropDownToolbarButton
+- AFXDROPDOWNTOOLBAR/CMFCDropDownToolbarButton::CMFCDropDownToolbarButton
+- AFXDROPDOWNTOOLBAR/CMFCDropDownToolbarButton::CopyFrom
+- AFXDROPDOWNTOOLBAR/CMFCDropDownToolbarButton::DropDownToolbar
+- AFXDROPDOWNTOOLBAR/CMFCDropDownToolbarButton::ExportToMenuButton
+- AFXDROPDOWNTOOLBAR/CMFCDropDownToolbarButton::GetDropDownToolBar
+- AFXDROPDOWNTOOLBAR/CMFCDropDownToolbarButton::IsDropDown
+- AFXDROPDOWNTOOLBAR/CMFCDropDownToolbarButton::IsExtraSize
+- AFXDROPDOWNTOOLBAR/CMFCDropDownToolbarButton::OnCalculateSize
+- AFXDROPDOWNTOOLBAR/CMFCDropDownToolbarButton::OnChangeParentWnd
+- AFXDROPDOWNTOOLBAR/CMFCDropDownToolbarButton::OnClick
+- AFXDROPDOWNTOOLBAR/CMFCDropDownToolbarButton::OnClickUp
+- AFXDROPDOWNTOOLBAR/CMFCDropDownToolbarButton::OnContextHelp
+- AFXDROPDOWNTOOLBAR/CMFCDropDownToolbarButton::OnCustomizeMenu
+- AFXDROPDOWNTOOLBAR/CMFCDropDownToolbarButton::OnDraw
+- AFXDROPDOWNTOOLBAR/CMFCDropDownToolbarButton::OnDrawOnCustomizeList
+- AFXDROPDOWNTOOLBAR/CMFCDropDownToolbarButton::Serialize
+- AFXDROPDOWNTOOLBAR/CMFCDropDownToolbarButton::SetDefaultCommand
+- AFXDROPDOWNTOOLBAR/CMFCDropDownToolbarButton::m_uiShowBarDelay
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -105,7 +124,7 @@ class CMFCDropDownToolbarButton : public CMFCToolBarButton
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxdropdowntoolbar.h  
   
-##  <a name="a-namecopyfroma--cmfcdropdowntoolbarbuttoncopyfrom"></a><a name="copyfrom"></a>CMFCDropDownToolbarButton::CopyFrom  
+##  <a name="copyfrom"></a>CMFCDropDownToolbarButton::CopyFrom  
  Copia le proprietà di un altro pulsante della barra degli strumenti al pulsante corrente.  
   
 ```  
@@ -119,7 +138,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo per copiare un altro pulsante della barra degli strumenti di questo pulsante della barra degli strumenti. `src`deve essere di tipo `CMFCDropDownToolbarButton`.  
   
-##  <a name="a-namecmfcdropdowntoolbarbuttona--cmfcdropdowntoolbarbuttoncmfcdropdowntoolbarbutton"></a><a name="cmfcdropdowntoolbarbutton"></a>CMFCDropDownToolbarButton::CMFCDropDownToolbarButton  
+##  <a name="cmfcdropdowntoolbarbutton"></a>CMFCDropDownToolbarButton::CMFCDropDownToolbarButton  
  Costruisce un oggetto `CMFCDropDownToolbarButton`.  
   
 ```  
@@ -148,7 +167,7 @@ CMFCDropDownToolbarButton(
   
  [!code-cpp[NVC_MFC_VisualStudioDemo&#31;](../../mfc/codesnippet/cpp/cmfcdropdowntoolbarbutton-class_1.cpp)]  
   
-##  <a name="a-namedropdowntoolbara--cmfcdropdowntoolbarbuttondropdowntoolbar"></a><a name="dropdowntoolbar"></a>CMFCDropDownToolbarButton::DropDownToolbar  
+##  <a name="dropdowntoolbar"></a>CMFCDropDownToolbarButton::DropDownToolbar  
  Verrà visualizzata una barra degli strumenti dell'elenco a discesa.  
   
 ```  
@@ -169,7 +188,7 @@ BOOL DropDownToolbar(CWnd* pWnd);
   
  Questo metodo non riesce se `pWnd` è `NULL` e il pulsante di menu a discesa della barra degli strumenti non dispone di una finestra padre.  
   
-##  <a name="a-nameexporttomenubuttona--cmfcdropdowntoolbarbuttonexporttomenubutton"></a><a name="exporttomenubutton"></a>CMFCDropDownToolbarButton::ExportToMenuButton  
+##  <a name="exporttomenubutton"></a>CMFCDropDownToolbarButton::ExportToMenuButton  
  Copia il testo dal pulsante della barra degli strumenti a un menu.  
   
 ```  
@@ -188,7 +207,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
   
  Questo metodo ha esito negativo se la barra degli strumenti principale, `m_pToolBar`, è `NULL` o l'implementazione della classe base restituisce `FALSE`.  
   
-##  <a name="a-namegetdropdowntoolbara--cmfcdropdowntoolbarbuttongetdropdowntoolbar"></a><a name="getdropdowntoolbar"></a>CMFCDropDownToolbarButton::GetDropDownToolBar  
+##  <a name="getdropdowntoolbar"></a>CMFCDropDownToolbarButton::GetDropDownToolBar  
  Recupera la barra degli strumenti dell'elenco a discesa associata al pulsante.  
   
 ```  
@@ -201,7 +220,7 @@ CMFCToolBar* GetDropDownToolBar() const;
 ### <a name="remarks"></a>Note  
  Questo metodo restituisce il `m_pToolBar` (membro dati).  
   
-##  <a name="a-nameisdropdowna--cmfcdropdowntoolbarbuttonisdropdown"></a><a name="isdropdown"></a>CMFCDropDownToolbarButton::IsDropDown  
+##  <a name="isdropdown"></a>CMFCDropDownToolbarButton::IsDropDown  
  Determina se la barra degli strumenti dell'elenco a discesa è aperto.  
   
 ```  
@@ -214,7 +233,7 @@ BOOL IsDropDown() const;
 ### <a name="remarks"></a>Note  
  Il framework apre la barra degli strumenti dell'elenco a discesa utilizzando il [CMFCDropDownToolbarButton::DropDownToolbar](#dropdowntoolbar) metodo. Il framework chiude la barra degli strumenti dell'elenco a discesa quando l'utente preme il pulsante sinistro del mouse nell'area non client della barra degli strumenti elenco a discesa.  
   
-##  <a name="a-nameisextrasizea--cmfcdropdowntoolbarbuttonisextrasize"></a><a name="isextrasize"></a>CMFCDropDownToolbarButton::IsExtraSize  
+##  <a name="isextrasize"></a>CMFCDropDownToolbarButton::IsExtraSize  
  Determina se è possibile visualizzare il pulsante con un bordo esteso.  
   
 ```  
@@ -227,7 +246,7 @@ virtual BOOL IsExtraSize() const;
 ### <a name="remarks"></a>Note  
  Per ulteriori informazioni sui bordi estesi, vedere [CMFCToolBarButton::IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize).  
   
-##  <a name="a-namemuishowbardelaya--cmfcdropdowntoolbarbuttonmuishowbardelay"></a><a name="m_uishowbardelay"></a>CMFCDropDownToolbarButton::m_uiShowBarDelay  
+##  <a name="m_uishowbardelay"></a>CMFCDropDownToolbarButton::m_uiShowBarDelay  
  Specifica il periodo di tempo che un utente deve tenere premuto il pulsante del mouse prima che venga visualizzata la barra degli strumenti dell'elenco a discesa.  
   
 ```  
@@ -237,7 +256,7 @@ static UINT m_uiShowBarDelay;
 ### <a name="remarks"></a>Note  
  L'intervallo di tempo viene misurato in millisecondi. Il valore predefinito è 500. È possibile impostare un altro ritardo modificando il valore di questo membro dati condivisi.  
   
-##  <a name="a-nameoncalculatesizea--cmfcdropdowntoolbarbuttononcalculatesize"></a><a name="oncalculatesize"></a>CMFCDropDownToolbarButton::OnCalculateSize  
+##  <a name="oncalculatesize"></a>CMFCDropDownToolbarButton::OnCalculateSize  
  Chiamato dal framework per calcolare le dimensioni del pulsante per il contesto di dispositivo specificato e lo stato di ancoraggio.  
   
 ```  
@@ -263,7 +282,7 @@ virtual SIZE OnCalculateSize(
 ### <a name="remarks"></a>Note  
  Questo metodo estende l'implementazione della classe base ( [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize)) aggiungendo la larghezza della freccia a discesa per la dimensione orizzontale delle dimensioni del pulsante.  
   
-##  <a name="a-nameonchangeparentwnda--cmfcdropdowntoolbarbuttononchangeparentwnd"></a><a name="onchangeparentwnd"></a>CMFCDropDownToolbarButton::OnChangeParentWnd  
+##  <a name="onchangeparentwnd"></a>CMFCDropDownToolbarButton::OnChangeParentWnd  
  Chiamato dal framework quando il pulsante viene inserito in una nuova barra degli strumenti.  
   
 ```  
@@ -277,7 +296,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ### <a name="remarks"></a>Note  
  Questo metodo esegue l'override dell'implementazione della classe base ( [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)) deselezionando l'etichetta di testo ( [CMFCToolBarButton::m_strText](../../mfc/reference/cmfctoolbarbutton-class.md#m_strtext)) e l'impostazione di [CMFCToolBarButton::m_bText](../../mfc/reference/cmfctoolbarbutton-class.md#m_btext) e [CMFCToolBarButton::m_bUserButton](../../mfc/reference/cmfctoolbarbutton-class.md#m_buserbutton) i membri dati `FALSE`.  
   
-##  <a name="a-nameonclicka--cmfcdropdowntoolbarbuttononclick"></a><a name="onclick"></a>CMFCDropDownToolbarButton::OnClick  
+##  <a name="onclick"></a>CMFCDropDownToolbarButton::OnClick  
  Chiamato dal framework quando l'utente fa clic sul pulsante del mouse.  
   
 ```  
@@ -301,7 +320,7 @@ virtual BOOL OnClick(
   
  Quando un utente fa clic sul pulsante della barra degli strumenti, questo metodo crea un timer che attende il periodo di tempo specificato dal [CMFCDropDownToolbarButton::m_uiShowBarDelay](#m_uishowbardelay) (membro dati) e quindi viene aperto l'elenco a discesa della barra degli strumenti utilizzando il [CMFCDropDownToolbarButton::DropDownToolbar](#dropdowntoolbar) metodo. Questo metodo chiude la barra degli strumenti dell'elenco a discesa la seconda volta, che l'utente fa clic sul pulsante della barra degli strumenti.  
   
-##  <a name="a-nameonclickupa--cmfcdropdowntoolbarbuttononclickup"></a><a name="onclickup"></a>CMFCDropDownToolbarButton::OnClickUp  
+##  <a name="onclickup"></a>CMFCDropDownToolbarButton::OnClickUp  
  Chiamato dal framework quando l'utente rilascia il pulsante del mouse.  
   
 ```  
@@ -318,7 +337,7 @@ virtual BOOL OnClickUp();
   
  Per ulteriori informazioni sull'elenco a discesa della barra degli strumenti e timer di riepilogo a discesa della barra degli strumenti, vedere [CMFCDropDownToolbarButton::OnClick](#onclick).  
   
-##  <a name="a-nameoncontexthelpa--cmfcdropdowntoolbarbuttononcontexthelp"></a><a name="oncontexthelp"></a>CMFCDropDownToolbarButton::OnContextHelp  
+##  <a name="oncontexthelp"></a>CMFCDropDownToolbarButton::OnContextHelp  
  Chiamato dal framework quando la barra degli strumenti padre gestisce un `WM_HELPHITTEST` messaggio.  
   
 ```  
@@ -337,7 +356,7 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
   
  Per ulteriori informazioni sui `WM_HELPHITTEST message, see` [TN028: supporto della Guida sensibile al contesto](../../mfc/tn028-context-sensitive-help-support.md).  
   
-##  <a name="a-nameoncustomizemenua--cmfcdropdowntoolbarbuttononcustomizemenu"></a><a name="oncustomizemenu"></a>CMFCDropDownToolbarButton::OnCustomizeMenu  
+##  <a name="oncustomizemenu"></a>CMFCDropDownToolbarButton::OnCustomizeMenu  
  Modifica il menu fornito quando l'applicazione viene visualizzato un menu di scelta rapida nella barra degli strumenti padre.  
   
 ```  
@@ -366,7 +385,7 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
   
  Eseguire l'override del metodo per modificare il menu di scelta rapida visualizzato dal framework in modalità di personalizzazione.  
   
-##  <a name="a-nameondrawa--cmfcdropdowntoolbarbuttonondraw"></a><a name="ondraw"></a>CMFCDropDownToolbarButton::OnDraw  
+##  <a name="ondraw"></a>CMFCDropDownToolbarButton::OnDraw  
  Chiamato dal framework per disegnare il pulsante utilizzando gli stili specificati e le opzioni.  
   
 ```  
@@ -409,7 +428,7 @@ virtual void OnDraw(
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questo metodo per personalizzare il disegno di pulsante della barra degli strumenti.  
   
-##  <a name="a-nameondrawoncustomizelista--cmfcdropdowntoolbarbuttonondrawoncustomizelist"></a><a name="ondrawoncustomizelist"></a>CMFCDropDownToolbarButton::OnDrawOnCustomizeList  
+##  <a name="ondrawoncustomizelist"></a>CMFCDropDownToolbarButton::OnDrawOnCustomizeList  
  Chiamato dal framework in cui disegnare il pulsante di **comandi** riquadro del **Personalizza** la finestra di dialogo.  
   
 ```  
@@ -437,7 +456,7 @@ virtual int OnDrawOnCustomizeList(
   
  Questo metodo estende l'implementazione della classe base ( [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist)) modificando l'etichetta di testo del pulsante per il nome del pulsante (vale a dire il valore il `lpszName` parametro passato al costruttore).  
   
-##  <a name="a-nameserializea--cmfcdropdowntoolbarbuttonserialize"></a><a name="serialize"></a>CMFCDropDownToolbarButton::Serialize  
+##  <a name="serialize"></a>CMFCDropDownToolbarButton::Serialize  
  Legge l'oggetto da un archivio o scrive in un archivio.  
   
 ```  
@@ -451,7 +470,7 @@ virtual void Serialize(CArchive& ar);
 ### <a name="remarks"></a>Note  
  Questo metodo estende l'implementazione della classe base ( [CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize)) serializzando l'ID risorsa della barra degli strumenti padre. Quando il caricamento dell'archivio ( [CArchive::IsLoading](../../mfc/reference/carchive-class.md#isloading) restituisce un valore diverso da zero), questo metodo imposta la `m_pToolBar` membro dati alla barra degli strumenti che contiene l'ID di risorsa serializzato.  
   
-##  <a name="a-namesetdefaultcommanda--cmfcdropdowntoolbarbuttonsetdefaultcommand"></a><a name="setdefaultcommand"></a>CMFCDropDownToolbarButton::SetDefaultCommand  
+##  <a name="setdefaultcommand"></a>CMFCDropDownToolbarButton::SetDefaultCommand  
  Imposta il comando predefinito che il framework utilizza quando un utente fa clic sul pulsante.  
   
 ```  

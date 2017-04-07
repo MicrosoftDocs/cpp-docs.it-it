@@ -21,7 +21,7 @@ ms.lasthandoff: 02/24/2017
 |[operator!=](#operator_neq)|[operator&gt;](#operator_gt_)|[operator&gt;=](#operator_gt__eq)|  
 |[operator&lt;](#operator_lt_)|[operator&lt;=](#operator_lt__eq)|[operator==](#operator_eq_eq)|  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  operator!=  
+##  <a name="operator_neq"></a>  operator!=  
  Verifica se l'oggetto queue a sinistra dell'operatore non è uguale all'oggetto queue a destra.  
   
 ```  
@@ -29,10 +29,10 @@ bool operator!=(const queue <Type, Container>& left, const queue <Type, Containe
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` left`  
+ `left`  
  Oggetto di tipo **queue**.  
   
- ` right`  
+ `right`  
  Oggetto di tipo **queue**.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -84,7 +84,7 @@ The queues q1 and q2 are not equal.
 The queues q1 and q3 are equal.  
 ```  
   
-##  <a name="a-nameoperatorlta--operatorlt"></a><a name="operator_lt_"></a>  operator&lt;  
+##  <a name="operator_lt_"></a>  operator&lt;  
  Verifica se l'oggetto queue a sinistra dell'operatore è minore dell'oggetto queue a destra.  
   
 ```  
@@ -92,10 +92,10 @@ bool operator<(const queue <Type, Container>& left, const queue <Type, Container
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` left`  
+ `left`  
  Oggetto di tipo **queue**.  
   
- ` right`  
+ `right`  
  Oggetto di tipo **queue**.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -143,7 +143,7 @@ The queue q1 is less than the queue q2.
 The queue q1 is not less than the queue q3.  
 ```  
   
-##  <a name="a-nameoperatorlteqa--operatorlt"></a><a name="operator_lt__eq"></a>  operator&lt;=  
+##  <a name="operator_lt__eq"></a>  operator&lt;=  
  Verifica se l'oggetto queue a sinistra dell'operatore è minore o uguale all'oggetto queue a destra.  
   
 ```  
@@ -151,10 +151,10 @@ bool operator<=(const queue <Type, Container>& left, const queue <Type, Containe
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` left`  
+ `left`  
  Oggetto di tipo **queue**.  
   
- ` right`  
+ `right`  
  Oggetto di tipo **queue**.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -204,7 +204,7 @@ The queue q1 is greater than the queue q2.
 The queue q1 is less than or equal to the queue q3.  
 ```  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  operator==  
+##  <a name="operator_eq_eq"></a>  operator==  
  Verifica se l'oggetto queue a sinistra dell'operatore è uguale all'oggetto queue a destra.  
   
 ```  
@@ -212,10 +212,10 @@ bool operator==(const queue <Type, Container>& left, const queue <Type, Containe
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` left`  
+ `left`  
  Oggetto di tipo **queue**.  
   
- ` right`  
+ `right`  
  Oggetto di tipo **queue**.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -266,7 +266,7 @@ The queues q1 and q2 are not equal.
 The queues q1 and q3 are equal.  
 ```  
   
-##  <a name="a-nameoperatorgta--operatorgt"></a><a name="operator_gt_"></a>  operator&gt;  
+##  <a name="operator_gt_"></a>  operator&gt;  
  Verifica se l'oggetto queue a sinistra dell'operatore è maggiore dell'oggetto queue a destra.  
   
 ```  
@@ -274,10 +274,10 @@ bool operator>(const queue <Type, Container>& left, const queue <Type, Container
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` left`  
+ `left`  
  Oggetto di tipo **queue**.  
   
- ` right`  
+ `right`  
  Oggetto di tipo **queue**.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -328,7 +328,7 @@ The queue q1 is not greater than the queue q2.
 The queue q1 is greater than the queue q3.  
 ```  
   
-##  <a name="a-nameoperatorgteqa--operatorgt"></a><a name="operator_gt__eq"></a>  operator&gt;=  
+##  <a name="operator_gt__eq"></a>  operator&gt;=  
  Verifica se l'oggetto queue a sinistra dell'operatore è maggiore o uguale all'oggetto queue a destra.  
   
 ```  
@@ -336,10 +336,10 @@ bool operator>=(const queue <Type, Container>& left, const queue <Type, Containe
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` left`  
+ `left`  
  Oggetto di tipo **queue**.  
   
- ` right`  
+ `right`  
  Oggetto di tipo **queue**.  
   
 ### <a name="return-value"></a>Valore restituito  

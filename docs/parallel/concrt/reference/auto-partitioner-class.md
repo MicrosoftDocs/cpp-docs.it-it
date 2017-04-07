@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ppl/concurrency::auto_partitioner
+- auto_partitioner
+- PPL/concurrency::auto_partitioner
+- PPL/concurrency::auto_partitioner::auto_partitioner
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 8092a0d6c4fe6053a3bb7e80e659ab6a7628664a
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: d5404f934a219649f1e8e53c1ff156a34a901f58
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="autopartitioner-class"></a>Classe auto_partitioner
@@ -54,7 +56,7 @@ class auto_partitioner;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore auto_partitioner](#ctor)|Costruisce un oggetto `auto_partitioner`.|  
+|[auto_partitioner](#ctor)|Costruisce un oggetto `auto_partitioner`.|  
 |[~ auto_partitioner distruttore](#dtor)|Elimina un oggetto `auto_partitioner`.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
@@ -65,7 +67,7 @@ class auto_partitioner;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="a-namedtora-autopartitioner"></a><a name="dtor"></a>~ auto_partitioner 
+##  <a name="dtor"></a>~ auto_partitioner 
 
  Elimina un oggetto `auto_partitioner`.  
   
@@ -73,7 +75,7 @@ class auto_partitioner;
 ~auto_partitioner();
 ```  
   
-##  <a name="a-namectora-autopartitioner"></a><a name="ctor"></a>auto_partitioner 
+##  <a name="ctor"></a>auto_partitioner 
 
  Costruisce un oggetto `auto_partitioner`.  
   
@@ -82,5 +84,5 @@ auto_partitioner();
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [concorrenza Namespace](concurrency-namespace.md)
+ [Spazio dei nomi concurrency](concurrency-namespace.md)
 

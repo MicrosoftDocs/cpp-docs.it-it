@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::invalid_link_target
+- invalid_link_target
+- CONCRT/concurrency::invalid_link_target
+- CONCRT/concurrency::invalid_link_target::invalid_link_target
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: da613342099cff27b52cfbbe4de941259c6ae073
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 48619a5b0c42251f911b7b6ff8c5fd2bb37832f1
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="invalidlinktarget-class"></a>Classe invalid_link_target
@@ -54,7 +56,7 @@ class invalid_link_target : public std::exception;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore invalid_link_target](#ctor)|Di overload. Costruisce un oggetto `invalid_link_target`.|  
+|[invalid_link_target](#ctor)|Di overload. Costruisce un oggetto `invalid_link_target`.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `exception`  
@@ -66,7 +68,7 @@ class invalid_link_target : public std::exception;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="a-namectora-invalidlinktarget"></a><a name="ctor"></a>invalid_link_target 
+##  <a name="ctor"></a>invalid_link_target 
 
  Costruisce un oggetto `invalid_link_target`.  
   

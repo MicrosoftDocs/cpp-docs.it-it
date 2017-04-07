@@ -10,8 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CStringRefElementTraits
-- ATL.CStringRefElementTraits
-- ATL::CStringRefElementTraits
+- ATLCOLL/ATL::CStringRefElementTraits
+- ATLCOLL/ATL::CStringRefElementTraits::CompareElements
+- ATLCOLL/ATL::CStringRefElementTraits::CompareElementsOrdered
+- ATLCOLL/ATL::CStringRefElementTraits::Hash
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -78,7 +80,7 @@ class CStringRefElementTraits : public CElementTraitsBase<T>
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlcoll. h  
   
-##  <a name="a-namecompareelementsa--cstringrefelementtraitscompareelements"></a><a name="compareelements"></a>CStringRefElementTraits::CompareElements  
+##  <a name="compareelements"></a>CStringRefElementTraits::CompareElements  
  Chiamare questa funzione per confrontare due elementi della stringa per verificarne l'uguaglianza statica.  
   
 ```
@@ -95,7 +97,7 @@ static bool CompareElements(INARGTYPE element1, INARGTYPE element2) throw();
 ### <a name="return-value"></a>Valore restituito  
  Restituisce true se gli elementi sono uguali, false in caso contrario.  
   
-##  <a name="a-namecompareelementsordereda--cstringrefelementtraitscompareelementsordered"></a><a name="compareelementsordered"></a>CStringRefElementTraits::CompareElementsOrdered  
+##  <a name="compareelementsordered"></a>CStringRefElementTraits::CompareElementsOrdered  
  Chiamare questa funzione statica per confrontare due elementi della stringa.  
   
 ```
@@ -112,7 +114,7 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
 ### <a name="return-value"></a>Valore restituito  
  Zero se le stringhe sono identiche, < 0="" if=""> `str1` è minore di `str2`, > 0 o se `str1` è maggiore di `str2`. Il [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) metodo viene utilizzato per eseguire i confronti.  
   
-##  <a name="a-namehasha--cstringrefelementtraitshash"></a><a name="hash"></a>CStringRefElementTraits::Hash  
+##  <a name="hash"></a>CStringRefElementTraits::Hash  
  Chiamare questa funzione statica per calcolare un valore hash per l'elemento di stringa specificata.  
   
 ```

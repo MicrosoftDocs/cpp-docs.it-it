@@ -6,6 +6,9 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: 
+dev_langs:
+- C++
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
 caps.latest.revision: 9
 author: mikeblome
@@ -24,7 +27,7 @@ ms.lasthandoff: 02/24/2017
 |[operator+](#operator_add)|[operator-](#operator-)|[operator/](#operator_div)|  
 |[operator==](#operator_eq_eq)|  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  operator==   
+##  <a name="operator_eq_eq"></a>  operator==   
  Determina se gli argomenti specificati sono uguali.  
   
 ```  
@@ -50,7 +53,7 @@ bool operator== (
 ### <a name="return-value"></a>Valore restituito  
  `true`Se le tuple sono uguali. in caso contrario, `false`.  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  operator!=   
+##  <a name="operator_neq"></a>  operator!=   
  Determina se gli argomenti specificati non sono uguali.  
   
 ```  
@@ -76,7 +79,7 @@ bool operator!= (
 ### <a name="return-value"></a>Valore restituito  
  `true`Se le tuple non sono uguali. in caso contrario, `false`.  
   
-##  <a name="a-nameoperatoradda--operator"></a><a name="operator_add"></a>  operator+   
+##  <a name="operator_add"></a>  operator+   
 
  Calcola la somma component-wise di argomenti specificati.  
   
@@ -121,7 +124,7 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
 ### <a name="return-value"></a>Valore restituito  
  La somma component-wise di argomenti specificati.  
   
-##  <a name="a-nameoperator-a--operator-"></a><a name="operator-"></a>  operator-   
+##  <a name="operator-"></a>  operator-   
 
  Calcola la differenza component-wise tra gli argomenti specificati.  
   
@@ -166,7 +169,7 @@ _Tuple_type<_Rank>   operator-(
 ### <a name="return-value"></a>Valore restituito  
  La differenza component-wise tra gli argomenti specificati.  
   
-##  <a name="a-nameoperatorstara--operator"></a><a name="operator_star"></a>  operator*   
+##  <a name="operator_star"></a>  operator*   
 
  Calcola il prodotto component-wise di argomenti specificati.  
   
@@ -203,7 +206,7 @@ _Tuple_type<_Rank>   operator*(
  Il prodotto component-wise di argomenti specificati.  
   
 
-##  <a name="a-nameoperatordiva--operator"></a><a name="operator_div"></a>  operator/   
+##  <a name="operator_div"></a>  operator/   
  Calcola il quoziente component-wise tra gli argomenti specificati.  
   
 ```  
@@ -238,7 +241,7 @@ _Tuple_type<_Rank>   operator/(
 ### <a name="return-value"></a>Valore restituito  
  Il quoziente component-wise di argomenti specificati.  
   
-##  <a name="a-nameoperatormoda--operator"></a><a name="operator_mod"></a>  operator%   
+##  <a name="operator_mod"></a>  operator%   
 
  Calcola il modulo del primo argomento specificato dal secondo argomento specificato.  
   

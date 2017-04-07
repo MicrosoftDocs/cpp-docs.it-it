@@ -10,6 +10,47 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDockSite
+- AFXDOCKSITE/CDockSite
+- AFXDOCKSITE/CDockSite::AddRow
+- AFXDOCKSITE/CDockSite::AdjustDockingLayout
+- AFXDOCKSITE/CDockSite::AdjustLayout
+- AFXDOCKSITE/CDockSite::AlignDockSite
+- AFXDOCKSITE/CDockSite::CalcFixedLayout
+- AFXDOCKSITE/CDockSite::CanAcceptPane
+- AFXDOCKSITE/CDockSite::CreateEx
+- AFXDOCKSITE/CDockSite::CreateRow
+- AFXDOCKSITE/CDockSite::DockPane
+- AFXDOCKSITE/CDockSite::DoesAllowDynInsertBefore
+- AFXDOCKSITE/CDockSite::FindRowIndex
+- AFXDOCKSITE/CDockSite::FixupVirtualRects
+- AFXDOCKSITE/CDockSite::GetDockSiteID
+- AFXDOCKSITE/CDockSite::GetDockSiteRowsList
+- AFXDOCKSITE/CDockSite::IsAccessibilityCompatible
+- AFXDOCKSITE/CDockSite::IsDragMode
+- AFXDOCKSITE/CDockSite::IsLastRow
+- AFXDOCKSITE/CDockSite::IsRectWithinDockSite
+- AFXDOCKSITE/CDockSite::IsResizable
+- AFXDOCKSITE/CDockSite::MovePane
+- AFXDOCKSITE/CDockSite::OnInsertRow
+- AFXDOCKSITE/CDockSite::OnRemoveRow
+- AFXDOCKSITE/CDockSite::OnResizeRow
+- AFXDOCKSITE/CDockSite::OnSetWindowPos
+- AFXDOCKSITE/CDockSite::OnShowRow
+- AFXDOCKSITE/CDockSite::OnSizeParent
+- AFXDOCKSITE/CDockSite::PaneFromPoint
+- AFXDOCKSITE/CDockSite::DockPaneLeftOf
+- AFXDOCKSITE/CDockSite::FindPaneByID
+- AFXDOCKSITE/CDockSite::GetPaneList
+- AFXDOCKSITE/CDockSite::RectSideFromPoint
+- AFXDOCKSITE/CDockSite::RemovePane
+- AFXDOCKSITE/CDockSite::RemoveRow
+- AFXDOCKSITE/CDockSite::ReplacePane
+- AFXDOCKSITE/CDockSite::RepositionPanes
+- AFXDOCKSITE/CDockSite::ResizeDockSite
+- AFXDOCKSITE/CDockSite::ResizeRow
+- AFXDOCKSITE/CDockSite::ShowPane
+- AFXDOCKSITE/CDockSite::ShowRow
+- AFXDOCKSITE/CDockSite::SwapRows
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -115,7 +156,7 @@ class CDockSite: public CBasePane
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxDockSite.h  
   
-##  <a name="a-nameaddrowa--cdocksiteaddrow"></a><a name="addrow"></a>CDockSite::AddRow  
+##  <a name="addrow"></a>CDockSite::AddRow  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -132,7 +173,7 @@ CDockingPanesRow* AddRow(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameadjustdockinglayouta--cdocksiteadjustdockinglayout"></a><a name="adjustdockinglayout"></a>CDockSite::AdjustDockingLayout  
+##  <a name="adjustdockinglayout"></a>CDockSite::AdjustDockingLayout  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -141,7 +182,7 @@ virtual void AdjustDockingLayout();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameadjustlayouta--cdocksiteadjustlayout"></a><a name="adjustlayout"></a>CDockSite::AdjustLayout  
+##  <a name="adjustlayout"></a>CDockSite::AdjustLayout  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -150,7 +191,7 @@ virtual void AdjustLayout();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namealigndocksitea--cdocksitealigndocksite"></a><a name="aligndocksite"></a>CDockSite::AlignDockSite  
+##  <a name="aligndocksite"></a>CDockSite::AlignDockSite  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -167,7 +208,7 @@ void AlignDockSite(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namecalcfixedlayouta--cdocksitecalcfixedlayout"></a><a name="calcfixedlayout"></a>CDockSite::CalcFixedLayout  
+##  <a name="calcfixedlayout"></a>CDockSite::CalcFixedLayout  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -184,7 +225,7 @@ virtual CSize CalcFixedLayout(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namecanacceptpanea--cdocksitecanacceptpane"></a><a name="canacceptpane"></a>CDockSite::CanAcceptPane  
+##  <a name="canacceptpane"></a>CDockSite::CanAcceptPane  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -198,7 +239,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namecreateexa--cdocksitecreateex"></a><a name="createex"></a>CDockSite::CreateEx  
+##  <a name="createex"></a>CDockSite::CreateEx  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -223,7 +264,7 @@ virtual BOOL CreateEx(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namecreaterowa--cdocksitecreaterow"></a><a name="createrow"></a>CDockSite::CreateRow  
+##  <a name="createrow"></a>CDockSite::CreateRow  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -242,7 +283,7 @@ virtual CDockingPanesRow* CreateRow(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namedockpanea--cdocksitedockpane"></a><a name="dockpane"></a>CDockSite::DockPane  
+##  <a name="dockpane"></a>CDockSite::DockPane  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -259,7 +300,7 @@ virtual void DockPane(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namedockpaneleftofa--cdocksitedockpaneleftof"></a><a name="dockpaneleftof"></a>CDockSite::DockPaneLeftOf  
+##  <a name="dockpaneleftof"></a>CDockSite::DockPaneLeftOf  
  Ancora un riquadro a sinistra di un altro riquadro.  
   
 ```  
@@ -280,7 +321,7 @@ virtual BOOL DockPaneLeftOf(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namedoesallowdyninsertbeforea--cdocksitedoesallowdyninsertbefore"></a><a name="doesallowdyninsertbefore"></a>CDockSite::DoesAllowDynInsertBefore  
+##  <a name="doesallowdyninsertbefore"></a>CDockSite::DoesAllowDynInsertBefore  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -291,7 +332,7 @@ virtual BOOL DoesAllowDynInsertBefore() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namefindpanebyida--cdocksitefindpanebyid"></a><a name="findpanebyid"></a>CDockSite::FindPaneByID  
+##  <a name="findpanebyid"></a>CDockSite::FindPaneByID  
  Restituisce il riquadro con l'ID specificato.  
   
 ```  
@@ -307,7 +348,7 @@ CPane* FindPaneByID(UINT nID);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namefindrowindexa--cdocksitefindrowindex"></a><a name="findrowindex"></a>CDockSite::FindRowIndex  
+##  <a name="findrowindex"></a>CDockSite::FindRowIndex  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -321,7 +362,7 @@ int FindRowIndex(CDockingPanesRow* pRow);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namefixupvirtualrectsa--cdocksitefixupvirtualrects"></a><a name="fixupvirtualrects"></a>CDockSite::FixupVirtualRects  
+##  <a name="fixupvirtualrects"></a>CDockSite::FixupVirtualRects  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -330,7 +371,7 @@ virtual void FixupVirtualRects();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetdocksiteida--cdocksitegetdocksiteid"></a><a name="getdocksiteid"></a>CDockSite::GetDockSiteID  
+##  <a name="getdocksiteid"></a>CDockSite::GetDockSiteID  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -341,7 +382,7 @@ virtual UINT GetDockSiteID() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetdocksiterowslista--cdocksitegetdocksiterowslist"></a><a name="getdocksiterowslist"></a>CDockSite::GetDockSiteRowsList  
+##  <a name="getdocksiterowslist"></a>CDockSite::GetDockSiteRowsList  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -352,7 +393,7 @@ const CObList& GetDockSiteRowsList() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetpanelista--cdocksitegetpanelist"></a><a name="getpanelist"></a>CDockSite::GetPaneList  
+##  <a name="getpanelist"></a>CDockSite::GetPaneList  
  Restituisce un elenco dei riquadri ancorati nel sito di ancoraggio.  
   
 ```  
@@ -362,7 +403,7 @@ const CObList& GetPaneList() const;
 ### <a name="return-value"></a>Valore restituito  
  Un riferimento di sola lettura per un elenco dei riquadri ancorati attualmente nella barra di ancoraggio.  
   
-##  <a name="a-nameisaccessibilitycompatiblea--cdocksiteisaccessibilitycompatible"></a><a name="isaccessibilitycompatible"></a>CDockSite::IsAccessibilityCompatible  
+##  <a name="isaccessibilitycompatible"></a>CDockSite::IsAccessibilityCompatible  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -373,7 +414,7 @@ virtual BOOL IsAccessibilityCompatible();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameisdragmodea--cdocksiteisdragmode"></a><a name="isdragmode"></a>CDockSite::IsDragMode  
+##  <a name="isdragmode"></a>CDockSite::IsDragMode  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -384,7 +425,7 @@ virtual BOOL IsDragMode() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameislastrowa--cdocksiteislastrow"></a><a name="islastrow"></a>CDockSite::IsLastRow  
+##  <a name="islastrow"></a>CDockSite::IsLastRow  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -398,7 +439,7 @@ bool IsLastRow(CDockingPanesRow* pRow) const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameisrectwithindocksitea--cdocksiteisrectwithindocksite"></a><a name="isrectwithindocksite"></a>CDockSite::IsRectWithinDockSite  
+##  <a name="isrectwithindocksite"></a>CDockSite::IsRectWithinDockSite  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -415,7 +456,7 @@ BOOL IsRectWithinDockSite(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameisresizablea--cdocksiteisresizable"></a><a name="isresizable"></a>CDockSite::IsResizable  
+##  <a name="isresizable"></a>CDockSite::IsResizable  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -426,7 +467,7 @@ virtual BOOL IsResizable() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namemovepanea--cdocksitemovepane"></a><a name="movepane"></a>CDockSite::MovePane  
+##  <a name="movepane"></a>CDockSite::MovePane  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -445,7 +486,7 @@ virtual BOOL MovePane(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameoninsertrowa--cdocksiteoninsertrow"></a><a name="oninsertrow"></a>CDockSite::OnInsertRow  
+##  <a name="oninsertrow"></a>CDockSite::OnInsertRow  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -457,7 +498,7 @@ virtual void OnInsertRow(POSITION pos);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonremoverowa--cdocksiteonremoverow"></a><a name="onremoverow"></a>CDockSite::OnRemoveRow  
+##  <a name="onremoverow"></a>CDockSite::OnRemoveRow  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -472,7 +513,7 @@ virtual void OnRemoveRow(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonresizerowa--cdocksiteonresizerow"></a><a name="onresizerow"></a>CDockSite::OnResizeRow  
+##  <a name="onresizerow"></a>CDockSite::OnResizeRow  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -489,7 +530,7 @@ virtual int OnResizeRow(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonsizeparenta--cdocksiteonsizeparent"></a><a name="onsizeparent"></a>CDockSite::OnSizeParent  
+##  <a name="onsizeparent"></a>CDockSite::OnSizeParent  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -508,7 +549,7 @@ virtual void OnSizeParent(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonsetwindowposa--cdocksiteonsetwindowpos"></a><a name="onsetwindowpos"></a>CDockSite::OnSetWindowPos  
+##  <a name="onsetwindowpos"></a>CDockSite::OnSetWindowPos  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -527,7 +568,7 @@ virtual BOOL OnSetWindowPos(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonshowrowa--cdocksiteonshowrow"></a><a name="onshowrow"></a>CDockSite::OnShowRow  
+##  <a name="onshowrow"></a>CDockSite::OnShowRow  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -542,7 +583,7 @@ virtual void OnShowRow(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namepanefrompointa--cdocksitepanefrompoint"></a><a name="panefrompoint"></a>CDockSite::PaneFromPoint  
+##  <a name="panefrompoint"></a>CDockSite::PaneFromPoint  
  Restituisce un riquadro ancorato nel sito di ancoraggio nel punto definito dal parametro specificato.  
   
 ```  
@@ -558,7 +599,7 @@ virtual CPane* PaneFromPoint(CPoint pt);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namerectsidefrompointa--cdocksiterectsidefrompoint"></a><a name="rectsidefrompoint"></a>CDockSite::RectSideFromPoint  
+##  <a name="rectsidefrompoint"></a>CDockSite::RectSideFromPoint  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -575,7 +616,7 @@ static int __stdcall RectSideFromPoint(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameremovepanea--cdocksiteremovepane"></a><a name="removepane"></a>CDockSite::RemovePane  
+##  <a name="removepane"></a>CDockSite::RemovePane  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -590,7 +631,7 @@ virtual void RemovePane(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameremoverowa--cdocksiteremoverow"></a><a name="removerow"></a>CDockSite::RemoveRow  
+##  <a name="removerow"></a>CDockSite::RemoveRow  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -602,7 +643,7 @@ void RemoveRow(CDockingPanesRow* pRow);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namereplacepanea--cdocksitereplacepane"></a><a name="replacepane"></a>CDockSite::ReplacePane  
+##  <a name="replacepane"></a>CDockSite::ReplacePane  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -619,7 +660,7 @@ BOOL ReplacePane(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namerepositionpanesa--cdocksiterepositionpanes"></a><a name="repositionpanes"></a>CDockSite::RepositionPanes  
+##  <a name="repositionpanes"></a>CDockSite::RepositionPanes  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -631,7 +672,7 @@ virtual void RepositionPanes(CRect& rectNewClientArea);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameresizedocksitea--cdocksiteresizedocksite"></a><a name="resizedocksite"></a>CDockSite::ResizeDockSite  
+##  <a name="resizedocksite"></a>CDockSite::ResizeDockSite  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -646,7 +687,7 @@ void ResizeDockSite(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameresizerowa--cdocksiteresizerow"></a><a name="resizerow"></a>CDockSite::ResizeRow  
+##  <a name="resizerow"></a>CDockSite::ResizeRow  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -665,7 +706,7 @@ int ResizeRow(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameshowpanea--cdocksiteshowpane"></a><a name="showpane"></a>CDockSite::ShowPane  
+##  <a name="showpane"></a>CDockSite::ShowPane  
  Mostra il riquadro.  
   
 ```  
@@ -695,7 +736,7 @@ virtual BOOL ShowPane(
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo per mostrare o nascondere i riquadri ancorati. In genere, non è necessario chiamare `CDockSite::ShowPane` direttamente, poiché viene chiamato dalla finestra cornice padre o nel riquadro di base.  
   
-##  <a name="a-nameshowrowa--cdocksiteshowrow"></a><a name="showrow"></a>CDockSite::ShowRow  
+##  <a name="showrow"></a>CDockSite::ShowRow  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -712,7 +753,7 @@ void ShowRow(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameswaprowsa--cdocksiteswaprows"></a><a name="swaprows"></a>CDockSite::SwapRows  
+##  <a name="swaprows"></a>CDockSite::SwapRows  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  

@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDaoRecordView
+- AFXDAO/CDaoRecordView
+- AFXDAO/CDaoRecordView::CDaoRecordView
+- AFXDAO/CDaoRecordView::IsOnFirstRecord
+- AFXDAO/CDaoRecordView::IsOnLastRecord
+- AFXDAO/CDaoRecordView::OnGetRecordset
+- AFXDAO/CDaoRecordView::OnMove
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -106,7 +112,7 @@ class AFX_NOVTABLE CDaoRecordView : public CFormView
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxdao. h  
   
-##  <a name="a-namecdaorecordviewa--cdaorecordviewcdaorecordview"></a><a name="cdaorecordview"></a>CDaoRecordView::CDaoRecordView  
+##  <a name="cdaorecordview"></a>CDaoRecordView::CDaoRecordView  
  Quando si crea un oggetto di un tipo derivato da `CDaoRecordView`, chiamare il costruttore per inizializzare l'oggetto visualizzazione e identificare la risorsa finestra di dialogo in cui si basa la visualizzazione form.  
   
 ```  
@@ -134,7 +140,7 @@ explicit CDaoRecordView(UINT nIDTemplate);
   
  [!code-cpp[NVC_MFCDatabase&#35;](../../mfc/codesnippet/cpp/cdaorecordview-class_1.cpp)]  
   
-##  <a name="a-nameisonfirstrecorda--cdaorecordviewisonfirstrecord"></a><a name="isonfirstrecord"></a>CDaoRecordView::IsOnFirstRecord  
+##  <a name="isonfirstrecord"></a>CDaoRecordView::IsOnFirstRecord  
  Chiamare questa funzione membro per determinare se il record corrente è il primo record nell'oggetto recordset associato alla visualizzazione di record.  
   
 ```  
@@ -149,7 +155,7 @@ BOOL IsOnFirstRecord();
   
  Se l'utente passa al primo record, disabilita il framework oggetti l'interfaccia utente (ad esempio, le voci di menu o i pulsanti della barra degli strumenti) è necessario per lo spostamento al primo o del record precedente.  
   
-##  <a name="a-nameisonlastrecorda--cdaorecordviewisonlastrecord"></a><a name="isonlastrecord"></a>CDaoRecordView::IsOnLastRecord  
+##  <a name="isonlastrecord"></a>CDaoRecordView::IsOnLastRecord  
  Chiamare questa funzione membro per determinare se il record corrente è l'ultimo record nell'oggetto recordset associato alla visualizzazione di record.  
   
 ```  
@@ -165,7 +171,7 @@ BOOL IsOnLastRecord();
 > [!CAUTION]
 >  Il risultato di questa funzione è affidabile, ad eccezione del fatto che la visualizzazione potrebbe non essere in grado di rilevare la fine del recordset fino a quando l'utente ha spostato passa oltre. L'utente potrebbe essere necessario andare oltre l'ultimo record prima di visualizzazione di record può indicare che è necessario disabilitare qualsiasi oggetto di interfaccia utente per lo spostamento al record successivo o ultimo. Se l'utente si sposta dopo l'ultimo record e quindi passa nuovamente all'ultimo record, o prima, la visualizzazione di record può tenere traccia della posizione dell'utente nell'oggetto recordset e disattivare correttamente gli oggetti dell'interfaccia utente.  
   
-##  <a name="a-nameongetrecordseta--cdaorecordviewongetrecordset"></a><a name="ongetrecordset"></a>CDaoRecordView::OnGetRecordset  
+##  <a name="ongetrecordset"></a>CDaoRecordView::OnGetRecordset  
  Restituisce un puntatore per il `CDaoRecordset`-oggetto associato alla visualizzazione di record derivato.  
   
 ```  
@@ -180,7 +186,7 @@ virtual CDaoRecordset* OnGetRecordset() = 0;
   
  Per ulteriori informazioni ed esempi, vedere l'articolo [visualizzazioni di Record: utilizzo di una visualizzazione di Record](../../data/using-a-record-view-mfc-data-access.md).  
   
-##  <a name="a-nameonmovea--cdaorecordviewonmove"></a><a name="onmove"></a>CDaoRecordView::OnMove  
+##  <a name="onmove"></a>CDaoRecordView::OnMove  
  Chiamare questa funzione membro per spostare in un altro record del recordset e visualizzare i relativi campi nei controlli di visualizzazione dei record.  
   
 ```  

@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCImageEditorPaletteBar
+- AFXIMAGEEDITORDIALOG/CMFCImageEditorPaletteBar
+- AFXIMAGEEDITORDIALOG/CMFCImageEditorPaletteBar::GetRowHeight
+- AFXIMAGEEDITORDIALOG/CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -83,7 +86,7 @@ class CMFCImageEditorPaletteBar : public CMFCToolBar
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afximageeditordialog.h  
   
-##  <a name="a-namegetrowheighta--cmfcimageeditorpalettebargetrowheight"></a><a name="getrowheight"></a>CMFCImageEditorPaletteBar::GetRowHeight  
+##  <a name="getrowheight"></a>CMFCImageEditorPaletteBar::GetRowHeight  
  Restituisce l'altezza dei pulsanti della barra degli strumenti.  
   
 ```  
@@ -93,7 +96,7 @@ virtual int GetRowHeight() const;
 ### <a name="return-value"></a>Valore restituito  
  L'altezza di ogni pulsante sulla barra degli strumenti.  
   
-##  <a name="a-nameisbuttonextrasizeavailablea--cmfcimageeditorpalettebarisbuttonextrasizeavailable"></a><a name="isbuttonextrasizeavailable"></a>CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable  
+##  <a name="isbuttonextrasizeavailable"></a>CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable  
  Determina se la barra degli strumenti può mostrare pulsanti che hanno esteso i bordi.  
   
 ```  

@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCImagePaintArea
+- AFXIMAGEPAINTAREA/CMFCImagePaintArea
+- AFXIMAGEPAINTAREA/CMFCImagePaintArea::CMFCImagePaintArea
+- AFXIMAGEPAINTAREA/CMFCImagePaintArea::GetMode
+- AFXIMAGEPAINTAREA/CMFCImagePaintArea::SetBitmap
+- AFXIMAGEPAINTAREA/CMFCImagePaintArea::SetColor
+- AFXIMAGEPAINTAREA/CMFCImagePaintArea::SetMode
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,7 +98,7 @@ class CMFCImagePaintArea : public CButton
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afximagepaintarea.h  
   
-##  <a name="a-namecmfcimagepaintareaa--cmfcimagepaintareacmfcimagepaintarea"></a><a name="cmfcimagepaintarea"></a>CMFCImagePaintArea::CMFCImagePaintArea  
+##  <a name="cmfcimagepaintarea"></a>CMFCImagePaintArea::CMFCImagePaintArea  
  Costruisce un oggetto `CMFCImagePaintArea`.  
   
 ```  
@@ -106,7 +112,7 @@ CMFCImagePaintArea(CMFCImageEditorDialog* pParentDlg);
 |Parametro|Descrizione|  
 |[in] `pParentDlg`|Puntatore alla finestra di dialogo che è l'elemento padre dell'editor di immagini.|  
   
-##  <a name="a-namegetmodea--cmfcimagepaintareagetmode"></a><a name="getmode"></a>CMFCImagePaintArea::GetMode  
+##  <a name="getmode"></a>CMFCImagePaintArea::GetMode  
  Recupera la modalità di disegno corrente.  
   
 ```  
@@ -116,7 +122,7 @@ IMAGE_EDIT_MODE GetMode() const;
 ### <a name="return-value"></a>Valore restituito  
  Un [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) valore che specifica la modalità di disegno corrente.  
   
-##  <a name="a-namesetbitmapa--cmfcimagepaintareasetbitmap"></a><a name="setbitmap"></a>CMFCImagePaintArea::SetBitmap  
+##  <a name="setbitmap"></a>CMFCImagePaintArea::SetBitmap  
  Imposta l'immagine bitmap per l'area dell'immagine.  
   
 ```  
@@ -133,7 +139,7 @@ void SetBitmap(CBitmap* pBitmap);
 ### <a name="remarks"></a>Note  
  Se `pBitmap` è `NULL`, questo metodo imposta le dimensioni dell'area di disegno modificabile su zero. In caso contrario, imposta le dimensioni dell'area di disegno modificabili per le dimensioni dell'immagine bitmap specificata.  
   
-##  <a name="a-namesetcolora--cmfcimagepaintareasetcolor"></a><a name="setcolor"></a>CMFCImagePaintArea::SetColor  
+##  <a name="setcolor"></a>CMFCImagePaintArea::SetColor  
  Imposta il colore corrente.  
   
 ```  
@@ -152,7 +158,7 @@ void SetColor(COLORREF color);
   
  Il colore viene utilizzato nella finestra di dialogo dell'editor di immagini per tutte le modalità di disegno, ad eccezione di `IMAGE_EDIT_MODE_COLOR`. Per ulteriori informazioni sulle modalità di disegno, vedere [enumerazione cmfcimagepaintarea:: Image_edit_mode](cmfcimagepaintarea-image-edit-mode-enumeration.md).  
   
-##  <a name="a-namesetmodea--cmfcimagepaintareasetmode"></a><a name="setmode"></a>CMFCImagePaintArea::SetMode  
+##  <a name="setmode"></a>CMFCImagePaintArea::SetMode  
  Imposta la modalità di disegno corrente.  
   
 ```  

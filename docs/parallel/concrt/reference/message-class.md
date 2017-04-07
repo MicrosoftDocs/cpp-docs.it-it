@@ -9,7 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::message
+- message
+- AGENTS/concurrency::message
+- AGENTS/concurrency::message::message
+- AGENTS/concurrency::message::add_ref
+- AGENTS/concurrency::message::msg_id
+- AGENTS/concurrency::message::remove_ref
+- AGENTS/concurrency::message::payload
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 08d67f2899f27a92250d6fedbf755a5413e01ebd
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: c6cc72c1fe9385eabe86194031913b7363d602ff
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="message-class"></a>Classe message
@@ -65,22 +71,22 @@ class message : public ::Concurrency::details::_Runtime_object;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[messaggio di costruttore](#ctor)|Di overload. Costruisce un oggetto `message`.|  
+|[message](#ctor)|Di overload. Costruisce un oggetto `message`.|  
 |[~ Distruttore dei messaggi](#dtor)|Elimina il `message` oggetto.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[add_ref (metodo)](#add_ref)|Aggiunge il numero di riferimento per il `message` oggetto. Utilizzato per blocchi di messaggi che è necessario per determinare la durata dei messaggi di conteggio dei riferimenti.|  
-|[msg_id (metodo)](#msg_id)|Restituisce l'ID del `message` oggetto.|  
-|[remove_ref (metodo)](#remove_ref)|Consente di sottrarre dal numero di riferimento per il `message` oggetto. Utilizzato per blocchi di messaggi che è necessario per determinare la durata dei messaggi di conteggio dei riferimenti.|  
+|[add_ref](#add_ref)|Aggiunge il numero di riferimento per il `message` oggetto. Utilizzato per blocchi di messaggi che è necessario per determinare la durata dei messaggi di conteggio dei riferimenti.|  
+|[msg_id](#msg_id)|Restituisce l'ID del `message` oggetto.|  
+|[remove_ref](#remove_ref)|Consente di sottrarre dal numero di riferimento per il `message` oggetto. Utilizzato per blocchi di messaggi che è necessario per determinare la durata dei messaggi di conteggio dei riferimenti.|  
   
 ### <a name="public-data-members"></a>Membri dati pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[payload (membro dati)](#payload)|Il payload di `message` oggetto.|  
+|[payload](#payload)|Il payload di `message` oggetto.|  
   
 ## <a name="remarks"></a>Note  
  Per ulteriori informazioni, vedere [blocchi dei messaggi asincroni](../../../parallel/concrt/asynchronous-message-blocks.md).  
@@ -93,7 +99,7 @@ class message : public ::Concurrency::details::_Runtime_object;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="a-nameaddrefa-addref"></a><a name="add_ref"></a>add_ref 
+##  <a name="add_ref"></a>add_ref 
 
  Aggiunge il numero di riferimento per il `message` oggetto. Utilizzato per blocchi di messaggi che è necessario per determinare la durata dei messaggi di conteggio dei riferimenti.  
   
@@ -104,7 +110,7 @@ long add_ref();
 ### <a name="return-value"></a>Valore restituito  
  Il nuovo valore del conteggio dei riferimenti.  
   
-##  <a name="a-namectora-message"></a><a name="ctor"></a>Messaggio 
+##  <a name="ctor"></a>Messaggio 
 
  Costruisce un oggetto `message`.  
   
@@ -136,7 +142,7 @@ message(
 ### <a name="remarks"></a>Note  
  Il costruttore che accetta un puntatore a un `message` l'oggetto come un argomento genera un [invalid_argument](../../../standard-library/invalid-argument-class.md) eccezione se il parametro `_Msg` è `NULL`.  
   
-##  <a name="a-namedtora-message"></a><a name="dtor"></a>~ messaggio 
+##  <a name="dtor"></a>~ messaggio 
 
  Elimina il `message` oggetto.  
   
@@ -144,7 +150,7 @@ message(
 virtual ~message();
 ```  
   
-##  <a name="a-namemsgida-msgid"></a><a name="msg_id"></a>msg_id 
+##  <a name="msg_id"></a>msg_id 
 
  Restituisce l'ID del `message` oggetto.  
   
@@ -155,7 +161,7 @@ runtime_object_identity msg_id() const;
 ### <a name="return-value"></a>Valore restituito  
  Il `runtime_object_identity` di `message` oggetto.  
   
-##  <a name="a-namepayloada-payload"></a><a name="payload"></a>payload 
+##  <a name="payload"></a>payload 
 
  Il payload di `message` oggetto.  
   
@@ -163,7 +169,7 @@ runtime_object_identity msg_id() const;
 T const payload;
 ```  
   
-##  <a name="a-nameremoverefa-removeref"></a><a name="remove_ref"></a>remove_ref 
+##  <a name="remove_ref"></a>remove_ref 
 
  Consente di sottrarre dal numero di riferimento per il `message` oggetto. Utilizzato per blocchi di messaggi che è necessario per determinare la durata dei messaggi di conteggio dei riferimenti.  
   
@@ -175,5 +181,5 @@ long remove_ref();
  Il nuovo valore del conteggio dei riferimenti.  
   
 ## <a name="see-also"></a>Vedere anche  
- [concorrenza Namespace](concurrency-namespace.md)
+ [Spazio dei nomi concurrency](concurrency-namespace.md)
 

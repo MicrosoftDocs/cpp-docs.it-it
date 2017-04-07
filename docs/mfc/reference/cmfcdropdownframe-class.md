@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCDropDownFrame
+- AFXDROPDOWNTOOLBAR/CMFCDropDownFrame
+- AFXDROPDOWNTOOLBAR/CMFCDropDownFrame::Create
+- AFXDROPDOWNTOOLBAR/CMFCDropDownFrame::GetParentMenuBar
+- AFXDROPDOWNTOOLBAR/CMFCDropDownFrame::GetParentPopupMenu
+- AFXDROPDOWNTOOLBAR/CMFCDropDownFrame::RecalcLayout
+- AFXDROPDOWNTOOLBAR/CMFCDropDownFrame::SetAutoDestroy
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +103,7 @@ class CMFCDropDownFrame : public CMiniFrameWnd
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxdropdowntoolbar.h  
   
-##  <a name="a-namecreatea--cmfcdropdownframecreate"></a><a name="create"></a>CMFCDropDownFrame::Create  
+##  <a name="create"></a>CMFCDropDownFrame::Create  
  Crea un oggetto `CMFCDropDownFrame`.  
   
 ```  
@@ -126,7 +132,7 @@ virtual BOOL Create(
   
  Il `CMFCDropDownFrame` classe crea una copia dell'oggetto fornito `CMFCDropDownToolBar` parametro. Questo metodo copia le immagini dei pulsanti e stati dei pulsanti dal `pWndOriginToolbar` parametro per il `m_pWndOriginToolbar` (membro dati).  
   
-##  <a name="a-namegetparentmenubara--cmfcdropdownframegetparentmenubar"></a><a name="getparentmenubar"></a>CMFCDropDownFrame::GetParentMenuBar  
+##  <a name="getparentmenubar"></a>CMFCDropDownFrame::GetParentMenuBar  
  Recupera la barra dei menu del padre del riquadro di riepilogo a discesa.  
   
 ```  
@@ -139,7 +145,7 @@ CMFCMenuBar* GetParentMenuBar() const;
 ### <a name="remarks"></a>Note  
  Questo metodo recupera la barra dei menu del padre dal pulsante padre. Questo metodo restituisce `NULL` se il frame di riepilogo a discesa non include alcun pulsante padre o padre del pulsante non dispone di alcuna barra di menu padre.  
   
-##  <a name="a-namegetparentpopupmenua--cmfcdropdownframegetparentpopupmenu"></a><a name="getparentpopupmenu"></a>CMFCDropDownFrame::GetParentPopupMenu  
+##  <a name="getparentpopupmenu"></a>CMFCDropDownFrame::GetParentPopupMenu  
  Recupera il menu a comparsa principale del riquadro di riepilogo a discesa.  
   
 ```  
@@ -152,7 +158,7 @@ CMFCDropDownFrame* GetParentPopupMenu() const;
 ### <a name="remarks"></a>Note  
  Questo metodo recupera i menu del padre dal pulsante padre. Questo metodo restituisce `NULL` se il frame di riepilogo a discesa non include alcun pulsante padre o padre del pulsante non dispone di alcun menu padre.  
   
-##  <a name="a-namerecalclayouta--cmfcdropdownframerecalclayout"></a><a name="recalclayout"></a>CMFCDropDownFrame::RecalcLayout  
+##  <a name="recalclayout"></a>CMFCDropDownFrame::RecalcLayout  
  Riposiziona il frame di riepilogo a discesa.  
   
 ```  
@@ -169,7 +175,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ### <a name="remarks"></a>Note  
  Il framework chiama questo metodo quando viene creato il frame di riepilogo a discesa o la finestra padre viene ridimensionata. Questo metodo calcola la posizione e le dimensioni del riquadro di riepilogo a discesa tramite la posizione e le dimensioni della finestra padre.  
   
-##  <a name="a-namesetautodestroya--cmfcdropdownframesetautodestroy"></a><a name="setautodestroy"></a>CMFCDropDownFrame::SetAutoDestroy  
+##  <a name="setautodestroy"></a>CMFCDropDownFrame::SetAutoDestroy  
  Specifica se la finestra di riepilogo a discesa della barra degli strumenti figlio viene eliminata automaticamente.  
   
 ```  

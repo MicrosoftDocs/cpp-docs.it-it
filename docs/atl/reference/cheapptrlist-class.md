@@ -9,9 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CHeapPtrList
 - CHeapPtrList
-- ATL.CHeapPtrList
+- ATLCOLL/ATL::CHeapPtrList
+- ATLCOLL/ATL::CHeapPtrList::CHeapPtrList
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -82,7 +82,7 @@ class CHeapPtrList
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlcoll. h  
   
-##  <a name="a-namecheapptrlista--cheapptrlistcheapptrlist"></a><a name="cheapptrlist"></a>CHeapPtrList::CHeapPtrList  
+##  <a name="cheapptrlist"></a>CHeapPtrList::CHeapPtrList  
  Costruttore.  
   
 ```

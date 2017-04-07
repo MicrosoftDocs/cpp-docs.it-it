@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ppl/concurrency::static_partitioner
+- static_partitioner
+- PPL/concurrency::static_partitioner
+- PPL/concurrency::static_partitioner::static_partitioner
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: f36b1e1dcc68d94bdebd8b7b10f4fec735ce9fb5
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 84cdbb30068f8dd9d2a1130e53d06d9b718b0c02
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="staticpartitioner-class"></a>Classe static_partitioner
@@ -54,7 +56,7 @@ class static_partitioner;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore static_partitioner](#ctor)|Costruisce un oggetto `static_partitioner`.|  
+|[static_partitioner](#ctor)|Costruisce un oggetto `static_partitioner`.|  
 |[~ static_partitioner distruttore](#dtor)|Elimina un oggetto `static_partitioner`.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
@@ -65,7 +67,7 @@ class static_partitioner;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="a-namedtora-staticpartitioner"></a><a name="dtor"></a>~ static_partitioner 
+##  <a name="dtor"></a>~ static_partitioner 
 
  Elimina un oggetto `static_partitioner`.  
   
@@ -73,7 +75,7 @@ class static_partitioner;
 ~static_partitioner();
 ```  
   
-##  <a name="a-namectora-staticpartitioner"></a><a name="ctor"></a>static_partitioner 
+##  <a name="ctor"></a>static_partitioner 
 
  Costruisce un oggetto `static_partitioner`.  
   
@@ -82,5 +84,5 @@ static_partitioner();
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [concorrenza Namespace](concurrency-namespace.md)
+ [Spazio dei nomi concurrency](concurrency-namespace.md)
 

@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSocketFile
+- AFXSOCK/CSocketFile
+- AFXSOCK/CSocketFile::CSocketFile
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +91,7 @@ class CSocketFile : public CFile
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** AfxSock  
   
-##  <a name="a-namecsocketfilea--csocketfilecsocketfile"></a><a name="csocketfile"></a>CSocketFile::CSocketFile  
+##  <a name="csocketfile"></a>CSocketFile::CSocketFile  
  Costruisce un oggetto `CSocketFile`.  
   
 ```  

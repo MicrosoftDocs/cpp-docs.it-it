@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::scheduler_worker_creation_error
+- scheduler_worker_creation_error
+- CONCRT/concurrency::scheduler_worker_creation_error
+- CONCRT/concurrency::scheduler_worker_creation_error::scheduler_worker_creation_error
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: c880ed65ef9e01c7eebdd2de45598a41763da57c
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: aee9d72447aca692fa25d675bdc5f727fa5b5c15
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="schedulerworkercreationerror-class"></a>Classe scheduler_worker_creation_error
@@ -54,7 +56,7 @@ class scheduler_worker_creation_error : public scheduler_resource_allocation_err
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore scheduler_worker_creation_error](#ctor)|Di overload. Costruisce un oggetto `scheduler_worker_creation_error`.|  
+|[scheduler_worker_creation_error](#ctor)|Di overload. Costruisce un oggetto `scheduler_worker_creation_error`.|  
   
 ## <a name="remarks"></a>Note  
  Questa eccezione viene generata soprattutto nel caso in cui una chiamata al sistema operativo per creare contesti di esecuzione nel runtime di concorrenza abbia esito negativo. I contesti di esecuzione sono thread tramite cui vengono eseguite attività nel runtime di concorrenza. Il codice di errore generalmente restituito da una chiamata al metodo Win32 `GetLastError` viene convertito in un valore di tipo `HRESULT` e può essere recuperato utilizzando il metodo della classe base `get_error_code`.  
@@ -71,7 +73,7 @@ class scheduler_worker_creation_error : public scheduler_resource_allocation_err
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="a-namectora-schedulerworkercreationerror"></a><a name="ctor"></a>scheduler_worker_creation_error 
+##  <a name="ctor"></a>scheduler_worker_creation_error 
 
  Costruisce un oggetto `scheduler_worker_creation_error`.  
   
@@ -92,5 +94,5 @@ explicit _CRTIMP scheduler_worker_creation_error(
  Il `HRESULT` valore di errore che ha causato l'eccezione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [concorrenza Namespace](concurrency-namespace.md)
+ [Spazio dei nomi concurrency](concurrency-namespace.md)
 

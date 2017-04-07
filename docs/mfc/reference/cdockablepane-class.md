@@ -10,6 +10,70 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDockablePane
+- AFXDOCKABLEPANE/CDockablePane
+- AFXDOCKABLEPANE/CDockablePane::CDockablePane
+- AFXDOCKABLEPANE/CDockablePane::AttachToTabWnd
+- AFXDOCKABLEPANE/CDockablePane::CalcFixedLayout
+- AFXDOCKABLEPANE/CDockablePane::CanAcceptMiniFrame
+- AFXDOCKABLEPANE/CDockablePane::CanAcceptPane
+- AFXDOCKABLEPANE/CDockablePane::CanAutoHide
+- AFXDOCKABLEPANE/CDockablePane::CanBeAttached
+- AFXDOCKABLEPANE/CDockablePane::ConvertToTabbedDocument
+- AFXDOCKABLEPANE/CDockablePane::CopyState
+- AFXDOCKABLEPANE/CDockablePane::Create
+- AFXDOCKABLEPANE/CDockablePane::CreateDefaultPaneDivider
+- AFXDOCKABLEPANE/CDockablePane::CreateEx
+- AFXDOCKABLEPANE/CDockablePane::CreateTabbedPane
+- AFXDOCKABLEPANE/CDockablePane::DockPaneContainer
+- AFXDOCKABLEPANE/CDockablePane::DockPaneStandard
+- AFXDOCKABLEPANE/CDockablePane::DockToRecentPos
+- AFXDOCKABLEPANE/CDockablePane::DockToWindow
+- AFXDOCKABLEPANE/CDockablePane::EnableAutohideAll
+- AFXDOCKABLEPANE/CDockablePane::EnableGripper
+- AFXDOCKABLEPANE/CDockablePane::GetAHRestoredRect
+- AFXDOCKABLEPANE/CDockablePane::GetAHSlideMode
+- AFXDOCKABLEPANE/CDockablePane::GetCaptionHeight
+- AFXDOCKABLEPANE/CDockablePane::GetDefaultPaneDivider
+- AFXDOCKABLEPANE/CDockablePane::GetDockingStatus
+- AFXDOCKABLEPANE/CDockablePane::GetDragSensitivity
+- AFXDOCKABLEPANE/CDockablePane::GetLastPercentInPaneContainer
+- AFXDOCKABLEPANE/CDockablePane::GetTabArea
+- AFXDOCKABLEPANE/CDockablePane::GetTabbedPaneRTC
+- AFXDOCKABLEPANE/CDockablePane::HasAutoHideMode
+- AFXDOCKABLEPANE/CDockablePane::HitTest
+- AFXDOCKABLEPANE/CDockablePane::IsAutohideAllEnabled
+- AFXDOCKABLEPANE/CDockablePane::IsAutoHideMode
+- AFXDOCKABLEPANE/CDockablePane::IsDocked
+- AFXDOCKABLEPANE/CDockablePane::IsHideInAutoHideMode
+- AFXDOCKABLEPANE/CDockablePane::IsInFloatingMultiPaneFrameWnd
+- AFXDOCKABLEPANE/CDockablePane::IsResizable
+- AFXDOCKABLEPANE/CDockablePane::IsTabLocationBottom
+- AFXDOCKABLEPANE/CDockablePane::IsTracked
+- AFXDOCKABLEPANE/CDockablePane::IsVisible
+- AFXDOCKABLEPANE/CDockablePane::OnAfterChangeParent
+- AFXDOCKABLEPANE/CDockablePane::OnAfterDockFromMiniFrame
+- AFXDOCKABLEPANE/CDockablePane::OnBeforeChangeParent
+- AFXDOCKABLEPANE/CDockablePane::OnBeforeFloat
+- AFXDOCKABLEPANE/CDockablePane::RemoveFromDefaultPaneDividier
+- AFXDOCKABLEPANE/CDockablePane::ReplacePane
+- AFXDOCKABLEPANE/CDockablePane::RestoreDefaultPaneDivider
+- AFXDOCKABLEPANE/CDockablePane::SetAutoHideMode
+- AFXDOCKABLEPANE/CDockablePane::SetAutoHideParents
+- AFXDOCKABLEPANE/CDockablePane::SetLastPercentInPaneContainer
+- AFXDOCKABLEPANE/CDockablePane::SetRestoredDefaultPaneDivider
+- AFXDOCKABLEPANE/CDockablePane::SetTabbedPaneRTC
+- AFXDOCKABLEPANE/CDockablePane::ShowPane
+- AFXDOCKABLEPANE/CDockablePane::Slide
+- AFXDOCKABLEPANE/CDockablePane::ToggleAutoHide
+- AFXDOCKABLEPANE/CDockablePane::UndockPane
+- AFXDOCKABLEPANE/CDockablePane::CheckAutoHideCondition
+- AFXDOCKABLEPANE/CDockablePane::CheckStopSlideCondition
+- AFXDOCKABLEPANE/CDockablePane::DrawCaption
+- AFXDOCKABLEPANE/CDockablePane::OnPressButtons
+- AFXDOCKABLEPANE/CDockablePane::OnSlide
+- AFXDOCKABLEPANE/CDockablePane::m_bDisableAnimation
+- AFXDOCKABLEPANE/CDockablePane::m_bHideInAutoHideMode
+- AFXDOCKABLEPANE/CDockablePane::m_nSlideSteps
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -207,7 +271,7 @@ class CDockablePane : public CPane
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxDockablePane.h  
   
-##  <a name="a-nameattachtotabwnda--cdockablepaneattachtotabwnd"></a><a name="attachtotabwnd"></a>CDockablePane::AttachToTabWnd  
+##  <a name="attachtotabwnd"></a>CDockablePane::AttachToTabWnd  
  Collega il riquadro corrente a un riquadro di destinazione, la creazione di un riquadro a schede.  
   
 ```  
@@ -255,7 +319,7 @@ virtual CDockablePane* AttachToTabWnd(
   
  È necessario ancorare il riquadro prima prima di collegare un altro riquadro ad esso.  
   
-##  <a name="a-namecalcfixedlayouta--cdockablepanecalcfixedlayout"></a><a name="calcfixedlayout"></a>CDockablePane::CalcFixedLayout  
+##  <a name="calcfixedlayout"></a>CDockablePane::CalcFixedLayout  
  Restituisce le dimensioni del rettangolo di riquadro.  
   
 ```  
@@ -274,7 +338,7 @@ virtual CSize CalcFixedLayout(
 ### <a name="return-value"></a>Valore restituito  
  Oggetto `CSize` oggetto che contiene le dimensioni del rettangolo di riquadro.  
   
-##  <a name="a-namecanacceptminiframea--cdockablepanecanacceptminiframe"></a><a name="canacceptminiframe"></a>CDockablePane::CanAcceptMiniFrame  
+##  <a name="canacceptminiframe"></a>CDockablePane::CanAcceptMiniFrame  
  Determina se il frame minima specificato può essere ancorato al riquadro.  
   
 ```  
@@ -288,7 +352,7 @@ virtual BOOL CanAcceptMiniFrame(CPaneFrameWnd* pMiniFrame) const;
 ### <a name="return-value"></a>Valore restituito  
  `TRUE`Se `pMiniFrame` può essere ancorata al riquadro; in caso contrario, `FALSE`.  
   
-##  <a name="a-namecanacceptpanea--cdockablepanecanacceptpane"></a><a name="canacceptpane"></a>CDockablePane::CanAcceptPane  
+##  <a name="canacceptpane"></a>CDockablePane::CanAcceptPane  
  Determina se un altro riquadro può essere ancorato al riquadro corrente.  
   
 ```  
@@ -309,7 +373,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
   
  Per impostazione predefinita, questo metodo restituisce `TRUE` se `pBar` o il relativo elemento padre è di tipo `CDockablePane`.  
   
-##  <a name="a-namecanautohidea--cdockablepanecanautohide"></a><a name="canautohide"></a>CDockablePane::CanAutoHide  
+##  <a name="canautohide"></a>CDockablePane::CanAutoHide  
  Determina se il riquadro è nascosta.  
   
 ```  
@@ -328,7 +392,7 @@ virtual BOOL CanAutoHide() const;
   
 -   Il riquadro non è ancorato.  
   
-##  <a name="a-namecanbeattacheda--cdockablepanecanbeattached"></a><a name="canbeattached"></a>CDockablePane::CanBeAttached  
+##  <a name="canbeattached"></a>CDockablePane::CanBeAttached  
  Determina se il riquadro corrente può essere ancorato a un altro riquadro.  
   
 ```  
@@ -341,7 +405,7 @@ virtual BOOL CanBeAttached() const;
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, questo metodo restituisce sempre `TRUE`. L'override del metodo in una classe derivata per abilitare o disabilitare l'ancoraggio senza chiamare il metodo [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).  
   
-##  <a name="a-namecdockablepanea--cdockablepanecdockablepane"></a><a name="cdockablepane"></a>CDockablePane::CDockablePane  
+##  <a name="cdockablepane"></a>CDockablePane::CDockablePane  
  Costruisce e Inizializza un [CDockablePane](../../mfc/reference/cdockablepane-class.md) oggetto.  
   
 ```  
@@ -351,7 +415,7 @@ CDockablePane();
 ### <a name="remarks"></a>Note  
  Dopo la creazione di un oggetto riquadro ancorabile, chiamare [CDockablePane::Create](#create) o [CDockablePane::CreateEx](#createex) per la sua creazione.  
   
-##  <a name="a-nameconverttotabbeddocumenta--cdockablepaneconverttotabbeddocument"></a><a name="converttotabbeddocument"></a>CDockablePane::ConvertToTabbedDocument  
+##  <a name="converttotabbeddocument"></a>CDockablePane::ConvertToTabbedDocument  
  Converte uno o più riquadri ancorabili ai documenti MDI a schede.  
   
 ```  
@@ -362,7 +426,7 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
  [in] `bActiveTabOnly`  
  Quando si converte un `CTabbedPane`, specificare `TRUE` per convertire solo la scheda attiva. Specificare `FALSE` per convertire tutte le schede nel riquadro.  
   
-##  <a name="a-namecheckautohideconditiona--cdockablepanecheckautohidecondition"></a><a name="checkautohidecondition"></a>CDockablePane::CheckAutoHideCondition  
+##  <a name="checkautohidecondition"></a>CDockablePane::CheckAutoHideCondition  
  Determina se il riquadro ancorato è nascosto (nota anche come modalità Nascondi automaticamente).  
   
 ```  
@@ -377,7 +441,7 @@ virtual BOOL CheckAutoHideCondition();
   
  Se vengono soddisfatte tutte le condizioni precedenti, il framework chiama [CDockablePane::Slide](#slide) per nascondere il riquadro.  
   
-##  <a name="a-namecheckstopslideconditiona--cdockablepanecheckstopslidecondition"></a><a name="checkstopslidecondition"></a>CDockablePane::CheckStopSlideCondition  
+##  <a name="checkstopslidecondition"></a>CDockablePane::CheckStopSlideCondition  
  Determina se un riquadro ancorato di tipo Nascondi automaticamente deve interrompere la variabile.  
   
 ```  
@@ -396,7 +460,7 @@ virtual BOOL CheckStopSlideCondition(BOOL bDirection);
   
  L'override del metodo in una classe derivata per implementare gli effetti personalizzati Nascondi automaticamente.  
   
-##  <a name="a-namecopystatea--cdockablepanecopystate"></a><a name="copystate"></a>CDockablePane::CopyState  
+##  <a name="copystate"></a>CDockablePane::CopyState  
  Copia lo stato di un riquadro ancorato.  
   
 ```  
@@ -420,7 +484,7 @@ virtual void CopyState(CDockablePane* pOrgBar);
   
 - [CDockablePane::IsAutohideAllEnabled](#isautohideallenabled)  
   
-##  <a name="a-namecreatea--cdockablepanecreate"></a><a name="create"></a>CDockablePane::Create  
+##  <a name="create"></a>CDockablePane::Create  
  Crea il controllo di Windows e lo collega al [CDockablePane](../../mfc/reference/cdockablepane-class.md) oggetto.  
   
 ```  
@@ -491,7 +555,7 @@ virtual BOOL Create(
   
  Se il `dwTabbedStyle` parametro ha il `AFX_CBRS_OUTLOOK_TABS` flag specificato, nel riquadro Crea riquadri a schede stile Outlook quando un altro riquadro è associato a questo riquadro utilizzando il [CDockablePane::AttachToTabWnd](#attachtotabwnd) metodo. Per impostazione predefinita, riquadri ancorabili creano schede regolare del tipo [CTabbedPane](../../mfc/reference/ctabbedpane-class.md).  
   
-##  <a name="a-namecreatedefaultpanedividera--cdockablepanecreatedefaultpanedivider"></a><a name="createdefaultpanedivider"></a>CDockablePane::CreateDefaultPaneDivider  
+##  <a name="createdefaultpanedivider"></a>CDockablePane::CreateDefaultPaneDivider  
  Crea un divisore predefinito per il riquadro ancorato in una finestra cornice.  
   
 ```  
@@ -524,7 +588,7 @@ static CPaneDivider* __stdcall CreateDefaultPaneDivider(
 |`CBRS_ALIGN_LEFT`|Il riquadro viene viene ancorato al lato sinistro dell'area client di una finestra cornice.|  
 |`CBRS_ALIGN_RIGHT`|Il riquadro è viene ancorato al lato destro dell'area client di una finestra cornice.|  
   
-##  <a name="a-namecreateexa--cdockablepanecreateex"></a><a name="createex"></a>CDockablePane::CreateEx  
+##  <a name="createex"></a>CDockablePane::CreateEx  
  Crea il controllo di Windows e lo collega al [CDockablePane](../../mfc/reference/cdockablepane-class.md) oggetto.  
   
 ```  
@@ -582,7 +646,7 @@ virtual BOOL CreateEx(
   
  Se il `dwTabbedStyle` parametro ha il `AFX_CBRS_OUTLOOK_TABS` flag specificato, nel riquadro Crea riquadri a schede stile Outlook quando un altro riquadro è associato a questo riquadro utilizzando il [CDockablePane::AttachToTabWnd](#attachtotabwnd) metodo. Per impostazione predefinita, riquadri ancorabili creano schede regolare del tipo [CTabbedPane](../../mfc/reference/ctabbedpane-class.md).  
   
-##  <a name="a-namecreatetabbedpanea--cdockablepanecreatetabbedpane"></a><a name="createtabbedpane"></a>CDockablePane::CreateTabbedPane  
+##  <a name="createtabbedpane"></a>CDockablePane::CreateTabbedPane  
  Crea un riquadro a schede nel riquadro corrente.  
   
 ```  
@@ -599,7 +663,7 @@ virtual CTabbedPane* CreateTabbedPane();
   
  Il riquadro a schede che viene creato in base alle informazioni di classe di runtime archiviate nel `m_pTabbedControlBarRTC` membro, che viene inizializzata per il [CDockablePane::CreateEx](#createex) (metodo).  
   
-##  <a name="a-namedockpanecontainera--cdockablepanedockpanecontainer"></a><a name="dockpanecontainer"></a>CDockablePane::DockPaneContainer  
+##  <a name="dockpanecontainer"></a>CDockablePane::DockPaneContainer  
  Consente l'ancoraggio di un contenitore nel riquadro.  
   
 ```  
@@ -632,7 +696,7 @@ virtual BOOL DockPaneContainer(
 |`CBRS_ALIGN_LEFT`|Il contenitore è ancorato a sinistra del riquadro.|  
 |`CBRS_ALIGN_RIGHT`|Il contenitore è ancorato a destra del riquadro.|  
   
-##  <a name="a-namedockpanestandarda--cdockablepanedockpanestandard"></a><a name="dockpanestandard"></a>CDockablePane::DockPaneStandard  
+##  <a name="dockpanestandard"></a>CDockablePane::DockPaneStandard  
  Ancora un riquadro con contorno di ancoraggio (standard).  
   
 ```  
@@ -646,7 +710,7 @@ virtual CPane* DockPaneStandard(BOOL& bWasDocked);
 ### <a name="return-value"></a>Valore restituito  
  Se il riquadro è ancorato in una finestra a schede o se una finestra a schede è stata creata come risultato di ancoraggio, questo metodo restituisce un puntatore alla finestra a schede. Se il riquadro è stato in caso contrario ancorato correttamente, questo metodo restituisce il `this` puntatore. Se ancoraggio ha esito negativo, questo metodo restituisce `NULL`.  
   
-##  <a name="a-namedocktorecentposa--cdockablepanedocktorecentpos"></a><a name="docktorecentpos"></a>CDockablePane::DockToRecentPos  
+##  <a name="docktorecentpos"></a>CDockablePane::DockToRecentPos  
  Un riquadro viene ancorato alla posizione di ancoraggio stored.  
   
 ```  
@@ -659,7 +723,7 @@ BOOL CDockablePane::DockToRecentPos();
 ### <a name="remarks"></a>Note  
  Riquadri ancorabili archiviano informazioni ancoraggio recenti in un [CRecentDockSiteInfo](../../mfc/reference/crecentdocksiteinfo-class.md) oggetto.  
   
-##  <a name="a-namedocktowindowa--cdockablepanedocktowindow"></a><a name="docktowindow"></a>CDockablePane::DockToWindow  
+##  <a name="docktowindow"></a>CDockablePane::DockToWindow  
  Il controllo viene ancorato un riquadro ancorato a un altro riquadro ancorato.  
   
 ```  
@@ -685,7 +749,7 @@ virtual BOOL DockToWindow(
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo per ancorare un riquadro a un altro riquadro con l'allineamento specificato `dwAlignment`.  
   
-##  <a name="a-namedrawcaptiona--cdockablepanedrawcaption"></a><a name="drawcaption"></a>CDockablePane::DrawCaption  
+##  <a name="drawcaption"></a>CDockablePane::DrawCaption  
  Disegna la didascalia (detta anche gripper) di un riquadro ancorato.  
   
 ```  
@@ -706,7 +770,7 @@ virtual void DrawCaption(
   
  L'override del metodo in una classe derivata per personalizzare l'aspetto della didascalia.  
   
-##  <a name="a-nameenableautohidealla--cdockablepaneenableautohideall"></a><a name="enableautohideall"></a>CDockablePane::EnableAutohideAll  
+##  <a name="enableautohideall"></a>CDockablePane::EnableAutohideAll  
  Abilita o disabilita la modalità Nascondi automaticamente per questo riquadro e per altri riquadri nel contenitore.  
   
 ```  
@@ -722,7 +786,7 @@ void EnableAutohideAll(BOOL bEnable = TRUE);
   
  Chiamare questo metodo con `bEnable` impostato su `FALSE` per disabilitare questa funzionalità per un determinato riquadro.  
   
-##  <a name="a-nameenablegrippera--cdockablepaneenablegripper"></a><a name="enablegripper"></a>CDockablePane::EnableGripper  
+##  <a name="enablegripper"></a>CDockablePane::EnableGripper  
  Mostra o nasconde la didascalia (detta anche gripper).  
   
 ```  
@@ -738,7 +802,7 @@ virtual void EnableGripper(BOOL bEnable);
   
  È possibile visualizzare o nascondere la didascalia in qualsiasi momento. Il framework nasconde la didascalia quando viene aggiunto un riquadro come una scheda a una finestra a schede o quando un riquadro è resa mobile all'interno una finestra.  
   
-##  <a name="a-namegetahrestoredrecta--cdockablepanegetahrestoredrect"></a><a name="getahrestoredrect"></a>CDockablePane::GetAHRestoredRect  
+##  <a name="getahrestoredrect"></a>CDockablePane::GetAHRestoredRect  
  Specifica la posizione del riquadro in modalità Nascondi automaticamente.  
   
 ```  
@@ -750,7 +814,7 @@ CRect GetAHRestoredRect() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetahslidemodea--cdockablepanegetahslidemode"></a><a name="getahslidemode"></a>CDockablePane::GetAHSlideMode  
+##  <a name="getahslidemode"></a>CDockablePane::GetAHSlideMode  
  Recupera la modalità di presentazione Nascondi automaticamente per il riquadro.  
   
 ```  
@@ -762,7 +826,7 @@ virtual UINT GetAHSlideMode() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namegetcaptionheighta--cdockablepanegetcaptionheight"></a><a name="getcaptionheight"></a>CDockablePane::GetCaptionHeight  
+##  <a name="getcaptionheight"></a>CDockablePane::GetCaptionHeight  
  Restituisce l'altezza, in pixel, della didascalia corrente.  
   
 ```  
@@ -775,7 +839,7 @@ virtual int GetCaptionHeight() const;
 ### <a name="remarks"></a>Note  
  Altezza della didascalia è 0 se la didascalia nascosto mediante il [CDockablePane::EnableGripper](#enablegripper) (metodo), o se il riquadro non dispone di una didascalia.  
   
-##  <a name="a-namegetdefaultpanedividera--cdockablepanegetdefaultpanedivider"></a><a name="getdefaultpanedivider"></a>CDockablePane::GetDefaultPaneDivider  
+##  <a name="getdefaultpanedivider"></a>CDockablePane::GetDefaultPaneDivider  
  Restituisce il divisore di riquadro predefinito per il contenitore del riquadro.  
   
 ```  
@@ -788,7 +852,7 @@ CPaneDivider* GetDefaultPaneDivider() const;
 ### <a name="remarks"></a>Note  
  Per ulteriori informazioni su divisori di riquadro, vedere [CPaneDivider classe](../../mfc/reference/cpanedivider-class.md).  
   
-##  <a name="a-namegetdockingstatusa--cdockablepanegetdockingstatus"></a><a name="getdockingstatus"></a>CDockablePane::GetDockingStatus  
+##  <a name="getdockingstatus"></a>CDockablePane::GetDockingStatus  
  Determina la capacità di un riquadro ancorato in base alla posizione del puntatore fornito.  
   
 ```  
@@ -821,7 +885,7 @@ virtual AFX_CS_STATUS GetDockingStatus(
   
  Per ritardato ancoraggio stati ( `CS_DELAY_DOCK` e `CS_DELAY_DOCK_TO_TAB`), il framework non esegue l'ancoraggio fino a quando l'utente rilascia il pulsante del mouse. Se viene utilizzato un riquadro di `DT_STANDARD` ancoraggio modalità, il framework visualizza un rettangolo in corrispondenza della posizione di ancoraggio proiettata. Se viene utilizzato un riquadro di `DT_SMART` ancoraggio modalità, il framework Visualizza marcatori di ancoraggio e rettangoli semi-trasparenti in corrispondenza della posizione di ancoraggio proiettata. Per specificare la modalità di ancoraggio del riquadro, chiamare il [CBasePane::SetDockingMode](../../mfc/reference/cbasepane-class.md#setdockingmode) metodo. Per ulteriori informazioni su ancoraggio intelligente, vedere [CDockingManager::GetSmartDockingParams](../../mfc/reference/cdockingmanager-class.md#getsmartdockingparams).  
   
-##  <a name="a-namegetdragsensitivitya--cdockablepanegetdragsensitivity"></a><a name="getdragsensitivity"></a>CDockablePane::GetDragSensitivity  
+##  <a name="getdragsensitivity"></a>CDockablePane::GetDragSensitivity  
  Restituisce la sensibilità del trascinamento di un riquadro ancorato.  
   
 ```  
@@ -831,7 +895,7 @@ static const CSize& GetDragSensitivity();
 ### <a name="return-value"></a>Valore restituito  
  Oggetto [CSize](../../atl-mfc-shared/reference/csize-class.md) oggetto che contiene la larghezza e altezza, in pixel, di un rettangolo centrato su un punto di trascinamento. L'operazione di trascinamento non inizia fino a quando il puntatore del mouse viene spostato all'esterno di questo rettangolo.  
   
-##  <a name="a-namegetlastpercentinpanecontainera--cdockablepanegetlastpercentinpanecontainer"></a><a name="getlastpercentinpanecontainer"></a>CDockablePane::GetLastPercentInPaneContainer  
+##  <a name="getlastpercentinpanecontainer"></a>CDockablePane::GetLastPercentInPaneContainer  
  Recupera la percentuale di spazio che occupa un riquadro relativo contenitore ( [CPaneContainer classe](../../mfc/reference/cpanecontainer-class.md)).  
   
 ```  
@@ -844,7 +908,7 @@ int GetLastPercentInPaneContainer() const;
 ### <a name="remarks"></a>Note  
  Questo metodo viene utilizzato quando il contenitore viene regolato il layout.  
   
-##  <a name="a-namegettabareaa--cdockablepanegettabarea"></a><a name="gettabarea"></a>CDockablePane::GetTabArea  
+##  <a name="gettabarea"></a>CDockablePane::GetTabArea  
  Recupera l'area della scheda per il riquadro.  
   
 ```  
@@ -863,7 +927,7 @@ virtual void GetTabArea(
 ### <a name="remarks"></a>Note  
  Questo metodo viene utilizzato solo nelle classi che derivano da `CDockablePane` e schede. Per ulteriori informazioni, vedere [CTabbedPane::GetTabArea](../../mfc/reference/ctabbedpane-class.md#gettabarea) e [CMFCOutlookBar::GetTabArea](../../mfc/reference/cmfcoutlookbar-class.md#gettabarea).  
   
-##  <a name="a-namegettabbedpanertca--cdockablepanegettabbedpanertc"></a><a name="gettabbedpanertc"></a>CDockablePane::GetTabbedPaneRTC  
+##  <a name="gettabbedpanertc"></a>CDockablePane::GetTabbedPaneRTC  
  Restituisce le informazioni sulla classe di runtime su una finestra a schede che viene creata quando un altro riquadro ancorato al riquadro corrente.  
   
 ```  
@@ -878,7 +942,7 @@ CRuntimeClass* GetTabbedPaneRTC() const;
   
  È possibile impostare le informazioni sulla classe di runtime chiamando il [CDockablePane::SetTabbedPaneRTC](#settabbedpanertc) metodo.  
   
-##  <a name="a-namehasautohidemodea--cdockablepanehasautohidemode"></a><a name="hasautohidemode"></a>CDockablePane::HasAutoHideMode  
+##  <a name="hasautohidemode"></a>CDockablePane::HasAutoHideMode  
  Specifica se è possibile passare alla modalità Nascondi automaticamente un riquadro ancorato.  
   
 ```  
@@ -891,7 +955,7 @@ virtual BOOL HasAutoHideMode() const;
 ### <a name="remarks"></a>Note  
  L'override del metodo in una classe derivata per disabilitare la modalità Nascondi automaticamente per un riquadro ancorata.  
   
-##  <a name="a-namehittesta--cdockablepanehittest"></a><a name="hittest"></a>CDockablePane::HitTest  
+##  <a name="hittest"></a>CDockablePane::HitTest  
  Specifica il percorso in un riquadro in cui l'utente fa clic del mouse.  
   
 ```  
@@ -920,7 +984,7 @@ virtual int HitTest(
   
 - `HTMAXBUTTON`Se `point` è attivato il pulsante pin.  
   
-##  <a name="a-nameisautohideallenableda--cdockablepaneisautohideallenabled"></a><a name="isautohideallenabled"></a>CDockablePane::IsAutohideAllEnabled  
+##  <a name="isautohideallenabled"></a>CDockablePane::IsAutohideAllEnabled  
  Indica se il riquadro ancorato e tutti gli altri riquadri nel contenitore possono essere attivati in modalità Nascondi automaticamente.  
   
 ```  
@@ -935,7 +999,7 @@ virtual BOOL IsAutohideAllEnabled() const;
   
  Per abilitare o disabilitare questo comportamento, chiamare il [CDockablePane::EnableAutohideAll](#enableautohideall) metodo.  
   
-##  <a name="a-nameisautohidemodea--cdockablepaneisautohidemode"></a><a name="isautohidemode"></a>CDockablePane::IsAutoHideMode  
+##  <a name="isautohidemode"></a>CDockablePane::IsAutoHideMode  
  Determina se un riquadro è in modalità Nascondi automaticamente.  
   
 ```  
@@ -945,7 +1009,7 @@ virtual BOOL IsAutoHideMode() const;
 ### <a name="return-value"></a>Valore restituito  
  `TRUE`Se il riquadro ancorato è in modalità Nascondi automaticamente. in caso contrario, `FALSE`.  
   
-##  <a name="a-nameisdockeda--cdockablepaneisdocked"></a><a name="isdocked"></a>CDockablePane::IsDocked  
+##  <a name="isdocked"></a>CDockablePane::IsDocked  
  Determina se il riquadro corrente è ancorato.  
   
 ```  
@@ -958,7 +1022,7 @@ virtual BOOL IsDocked() const;
 ### <a name="remarks"></a>Note  
  Per determinare se il riquadro viene ancorato alla finestra cornice principale, chiamare [CDockablePane::GetDefaultPaneDivider](#getdefaultpanedivider). Se il metodo restituisce un puntatore diverso da NULL, il riquadro è ancorato alla finestra cornice principale.  
   
-##  <a name="a-nameishideinautohidemodea--cdockablepaneishideinautohidemode"></a><a name="ishideinautohidemode"></a>CDockablePane::IsHideInAutoHideMode  
+##  <a name="ishideinautohidemode"></a>CDockablePane::IsHideInAutoHideMode  
  Determina il comportamento di un riquadro che è in modalità Nascondi automaticamente se viene visualizzato (o nascosto) chiamando [CDockablePane::ShowPane](#showpane).  
   
 ```  
@@ -975,7 +1039,7 @@ virtual BOOL IsHideInAutoHideMode() const;
   
  Il valore predefinito per la proprietà `m_bHideInAutoHideMode` è `FALSE`.  
   
-##  <a name="a-nameisinfloatingmultipaneframewnda--cdockablepaneisinfloatingmultipaneframewnd"></a><a name="isinfloatingmultipaneframewnd"></a>CDockablePane::IsInFloatingMultiPaneFrameWnd  
+##  <a name="isinfloatingmultipaneframewnd"></a>CDockablePane::IsInFloatingMultiPaneFrameWnd  
  Specifica se il riquadro è in una finestra cornice a più riquadri ( [CMultiPaneFrameWnd classe](../../mfc/reference/cmultipaneframewnd-class.md)).  
   
 ```  
@@ -987,7 +1051,7 @@ virtual BOOL IsInFloatingMultiPaneFrameWnd() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameisresizablea--cdockablepaneisresizable"></a><a name="isresizable"></a>CDockablePane::IsResizable  
+##  <a name="isresizable"></a>CDockablePane::IsResizable  
  Specifica se il riquadro è ridimensionabile.  
   
 ```  
@@ -1002,7 +1066,7 @@ virtual BOOL IsResizable() const;
   
  Non è possibile che non possono essere ridimensionati float né attivare la modalità Nascondi automaticamente e sono sempre posizionati all'esterno del frame padre.  
   
-##  <a name="a-nameistablocationbottoma--cdockablepaneistablocationbottom"></a><a name="istablocationbottom"></a>CDockablePane::IsTabLocationBottom  
+##  <a name="istablocationbottom"></a>CDockablePane::IsTabLocationBottom  
  Specifica se le schede si trovano all'inizio o alla parte inferiore del riquadro.  
   
 ```  
@@ -1015,7 +1079,7 @@ virtual BOOL IsTabLocationBottom() const;
 ### <a name="remarks"></a>Note  
  Per ulteriori informazioni, vedere [CTabbedPane::IsTabLocationBottom](../../mfc/reference/ctabbedpane-class.md#istablocationbottom).  
   
-##  <a name="a-nameistrackeda--cdockablepaneistracked"></a><a name="istracked"></a>CDockablePane::IsTracked  
+##  <a name="istracked"></a>CDockablePane::IsTracked  
  Specifica se un riquadro viene spostato dall'utente.  
   
 ```  
@@ -1025,7 +1089,7 @@ BOOL IsTracked() const;
 ### <a name="return-value"></a>Valore restituito  
  `TRUE`Se il riquadro di spostamento; in caso contrario, `FALSE`.  
   
-##  <a name="a-nameisvisiblea--cdockablepaneisvisible"></a><a name="isvisible"></a>CDockablePane::IsVisible  
+##  <a name="isvisible"></a>CDockablePane::IsVisible  
  Determina se il riquadro corrente è visibile.  
   
 ```  
@@ -1044,14 +1108,14 @@ virtual BOOL IsVisible() const;
   
  Se il riquadro ancorato non è in modalità Nascondi automaticamente, lo stato di visibilità è determinato dal [CBasePane::IsVisible](../../mfc/reference/cbasepane-class.md#isvisible) metodo.  
   
-##  <a name="a-namembdisableanimationa--cdockablepanembdisableanimation"></a><a name="m_bdisableanimation"></a>CDockablePane::m_bDisableAnimation  
+##  <a name="m_bdisableanimation"></a>CDockablePane::m_bDisableAnimation  
  Specifica se l'animazione Nascondi del riquadro ancorato è disabilitato.  
   
 ```  
 AFX_IMPORT_DATA static BOOL m_bDisableAnimation;  
 ```  
   
-##  <a name="a-namembhideinautohidemodea--cdockablepanembhideinautohidemode"></a><a name="m_bhideinautohidemode"></a>CDockablePane::m_bHideInAutoHideMode  
+##  <a name="m_bhideinautohidemode"></a>CDockablePane::m_bHideInAutoHideMode  
  Determina il comportamento del riquadro quando il riquadro è in modalità Nascondi automaticamente.  
   
 ```  
@@ -1065,7 +1129,7 @@ AFX_IMPORT_DATA static BOOL m_bHideInAutoHideMode;
   
  Se questo membro è impostato su `FALSE`, riquadri ancorabili sono attivati o disattivati quando si chiama [CDockablePane::ShowPane](#showpane).  
   
-##  <a name="a-namemnslidestepsa--cdockablepanemnslidesteps"></a><a name="m_nslidesteps"></a>CDockablePane::m_nSlideSteps  
+##  <a name="m_nslidesteps"></a>CDockablePane::m_nSlideSteps  
  Specifica la velocità dell'animazione del riquadro quando è in modalità Nascondi automaticamente.  
   
 ```  
@@ -1075,7 +1139,7 @@ AFX_IMPORT_DATA static int m_nSlideSteps;
 ### <a name="remarks"></a>Note  
  Per un effetto animazione più veloce, ridurre questo valore. Per un effetto animazione più lento, aumentare questo valore.  
   
-##  <a name="a-nameonafterchangeparenta--cdockablepaneonafterchangeparent"></a><a name="onafterchangeparent"></a>CDockablePane::OnAfterChangeParent  
+##  <a name="onafterchangeparent"></a>CDockablePane::OnAfterChangeParent  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1087,7 +1151,7 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameonafterdockfromminiframea--cdockablepaneonafterdockfromminiframe"></a><a name="onafterdockfromminiframe"></a>CDockablePane::OnAfterDockFromMiniFrame  
+##  <a name="onafterdockfromminiframe"></a>CDockablePane::OnAfterDockFromMiniFrame  
  Chiamato dal framework quando una barra ancorabile a virgola mobile viene ancorato in una finestra cornice.  
   
 ```  
@@ -1097,7 +1161,7 @@ virtual void OnAfterDockFromMiniFrame();
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, questo metodo non esegue alcuna operazione.  
   
-##  <a name="a-nameonbeforechangeparenta--cdockablepaneonbeforechangeparent"></a><a name="onbeforechangeparent"></a>CDockablePane::OnBeforeChangeParent  
+##  <a name="onbeforechangeparent"></a>CDockablePane::OnBeforeChangeParent  
  Il framework chiama questo metodo prima di modificare l'elemento padre del riquadro.  
   
 ```  
@@ -1118,7 +1182,7 @@ virtual void OnBeforeChangeParent(
   
  Se il riquadro viene convertito in un documento a schede, questo metodo archivia la posizione di ancoraggio recenti. Il framework utilizza la posizione di ancoraggio recenti per ripristinare la posizione del riquadro quando viene convertito nuovamente in alloggiamento.  
   
-##  <a name="a-nameonbeforefloata--cdockablepaneonbeforefloat"></a><a name="onbeforefloat"></a>CDockablePane::OnBeforeFloat  
+##  <a name="onbeforefloat"></a>CDockablePane::OnBeforeFloat  
  Il framework chiama questo metodo prima di un riquadro transizioni a uno stato a virgola mobile.  
   
 ```  
@@ -1140,7 +1204,7 @@ virtual BOOL OnBeforeFloat(
 ### <a name="remarks"></a>Note  
  Questo metodo viene chiamato dal framework quando un riquadro è float. È possibile eseguire l'override di questo metodo in una classe derivata se si desidera eseguire l'elaborazione prima che il riquadro mobile.  
   
-##  <a name="a-nameonpressbuttonsa--cdockablepaneonpressbuttons"></a><a name="onpressbuttons"></a>CDockablePane::OnPressButtons  
+##  <a name="onpressbuttons"></a>CDockablePane::OnPressButtons  
  Chiamato quando l'utente preme un pulsante della didascalia oltre il `AFX_HTCLOSE` e `AFX_HTMAXBUTTON` pulsanti.  
   
 ```  
@@ -1154,7 +1218,7 @@ virtual void OnPressButtons(UINT nHit);
 ### <a name="remarks"></a>Note  
  Se si aggiunge un pulsante personalizzato per la didascalia di un riquadro ancorata, eseguire l'override di questo metodo per ricevere notifiche quando un utente preme il pulsante.  
   
-##  <a name="a-nameonslidea--cdockablepaneonslide"></a><a name="onslide"></a>CDockablePane::OnSlide  
+##  <a name="onslide"></a>CDockablePane::OnSlide  
  Chiamato dal framework per animare il riquadro quando è in modalità Nascondi automaticamente.  
   
 ```  
@@ -1168,7 +1232,7 @@ virtual void OnSlide(BOOL bSlideOut);
 ### <a name="remarks"></a>Note  
  L'override del metodo in una classe derivata per implementare gli effetti personalizzati Nascondi automaticamente.  
   
-##  <a name="a-nameremovefromdefaultpanedividiera--cdockablepaneremovefromdefaultpanedividier"></a><a name="removefromdefaultpanedividier"></a>CDockablePane::RemoveFromDefaultPaneDividier  
+##  <a name="removefromdefaultpanedividier"></a>CDockablePane::RemoveFromDefaultPaneDividier  
  Il framework chiama questo metodo quando un riquadro è viene disinserito.  
   
 ```  
@@ -1178,7 +1242,7 @@ void RemoveFromDefaultPaneDividier();
 ### <a name="remarks"></a>Note  
  Questo metodo imposta il divisore di riquadro predefinito `NULL` e rimuove il riquadro del contenitore.  
   
-##  <a name="a-namereplacepanea--cdockablepanereplacepane"></a><a name="replacepane"></a>CDockablePane::ReplacePane  
+##  <a name="replacepane"></a>CDockablePane::ReplacePane  
  Sostituisce il riquadro con un riquadro specificato.  
   
 ```  
@@ -1201,7 +1265,7 @@ BOOL ReplacePane(
 ### <a name="return-value"></a>Valore restituito  
  `TRUE`Se la sostituzione ha esito positivo; in caso contrario, `FALSE`.  
   
-##  <a name="a-namerestoredefaultpanedividera--cdockablepanerestoredefaultpanedivider"></a><a name="restoredefaultpanedivider"></a>CDockablePane::RestoreDefaultPaneDivider  
+##  <a name="restoredefaultpanedivider"></a>CDockablePane::RestoreDefaultPaneDivider  
  Quando un riquadro viene deserializzato, il framework chiama questo metodo per ripristinare il divisore di riquadro predefinito.  
   
 ```  
@@ -1211,7 +1275,7 @@ void RestoreDefaultPaneDivider();
 ### <a name="remarks"></a>Note  
  Il divisore di riquadro predefinito ripristinato sostituisce il divisore di riquadro predefinito corrente, se presente.  
   
-##  <a name="a-namesetautohidemodea--cdockablepanesetautohidemode"></a><a name="setautohidemode"></a>CDockablePane::SetAutoHideMode  
+##  <a name="setautohidemode"></a>CDockablePane::SetAutoHideMode  
  Attiva o disattiva il riquadro ancorato tra visibile e modalità Nascondi automaticamente.  
   
 ```  
@@ -1243,7 +1307,7 @@ virtual CMFCAutoHideBar* SetAutoHideMode(
   
  Chiamare questo metodo per passare a livello di codice in modalità Nascondi automaticamente un riquadro ancorato. Il riquadro deve essere ancorato nella finestra cornice principale ( [CDockablePane::GetDefaultPaneDivider](#getdefaultpanedivider) deve restituire un puntatore valido per il [CPaneDivider](../../mfc/reference/cpanedivider-class.md)).  
   
-##  <a name="a-namesetautohideparentsa--cdockablepanesetautohideparents"></a><a name="setautohideparents"></a>CDockablePane::SetAutoHideParents  
+##  <a name="setautohideparents"></a>CDockablePane::SetAutoHideParents  
  Imposta il pulsante Nascondi automaticamente e Nascondi barra degli strumenti del riquadro.  
   
 ```  
@@ -1259,7 +1323,7 @@ void SetAutoHideParents(
  [in] `pBtn`  
  Puntatore a un pulsante Nascondi automaticamente.  
   
-##  <a name="a-namesetlastpercentinpanecontainera--cdockablepanesetlastpercentinpanecontainer"></a><a name="setlastpercentinpanecontainer"></a>CDockablePane::SetLastPercentInPaneContainer  
+##  <a name="setlastpercentinpanecontainer"></a>CDockablePane::SetLastPercentInPaneContainer  
  Imposta la percentuale di spazio che occupa un riquadro relativo contenitore.  
   
 ```  
@@ -1273,7 +1337,7 @@ void SetLastPercentInPaneContainer(int n);
 ### <a name="remarks"></a>Note  
  Il framework consente di regolare il riquadro per utilizzare il nuovo valore quando il layout viene ricalcolato.  
   
-##  <a name="a-namesetrestoreddefaultpanedividera--cdockablepanesetrestoreddefaultpanedivider"></a><a name="setrestoreddefaultpanedivider"></a>CDockablePane::SetRestoredDefaultPaneDivider  
+##  <a name="setrestoreddefaultpanedivider"></a>CDockablePane::SetRestoredDefaultPaneDivider  
  Imposta il divisore di riquadro predefinito ripristinato.  
   
 ```  
@@ -1287,7 +1351,7 @@ void SetRestoredDefaultPaneDivider(HWND hRestoredSlider);
 ### <a name="remarks"></a>Note  
  Viene ottenuto un divisore di riquadro predefinito ripristinato quando viene deserializzato un riquadro. Per ulteriori informazioni, vedere [CDockablePane::RestoreDefaultPaneDivider](#restoredefaultpanedivider).  
   
-##  <a name="a-namesettabbedpanertca--cdockablepanesettabbedpanertc"></a><a name="settabbedpanertc"></a>CDockablePane::SetTabbedPaneRTC  
+##  <a name="settabbedpanertc"></a>CDockablePane::SetTabbedPaneRTC  
  Imposta le informazioni sulla classe di runtime per una finestra a schede che viene creata quando due riquadri ancorare insieme.  
   
 ```  
@@ -1311,7 +1375,7 @@ void SetTabbedPaneRTC(CRuntimeClass* pRTC);
   
  Quindi, chiamare questo metodo con il puntatore per le informazioni sulle classi di runtime.  
   
-##  <a name="a-nameshowpanea--cdockablepaneshowpane"></a><a name="showpane"></a>CDockablePane::ShowPane  
+##  <a name="showpane"></a>CDockablePane::ShowPane  
  Mostra o nasconde un riquadro.  
   
 ```  
@@ -1334,7 +1398,7 @@ virtual void ShowPane(
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo anziché il [CWnd:: ShowWindow](../../mfc/reference/cwnd-class.md#showwindow) quando mostrare o nascondere i riquadri ancorabili.  
   
-##  <a name="a-nameslidea--cdockablepaneslide"></a><a name="slide"></a>CDockablePane::Slide  
+##  <a name="slide"></a>CDockablePane::Slide  
  Aggiunge un'animazione a un riquadro che si trova in modalità Nascondi automaticamente.  
   
 ```  
@@ -1355,7 +1419,7 @@ virtual void Slide(
   
  Questo metodo utilizza il `CDockablePane::m_nSlideDefaultTimeOut` valore per determinare il valore di timeout per l'effetto diapositiva. Il valore predefinito per il valore di timeout è 1. Se si personalizza l'algoritmo Nascondi automaticamente, è possibile modificare questo membro per modificare il valore di timeout.  
   
-##  <a name="a-nametoggleautohidea--cdockablepanetoggleautohide"></a><a name="toggleautohide"></a>CDockablePane::ToggleAutoHide  
+##  <a name="toggleautohide"></a>CDockablePane::ToggleAutoHide  
  Attiva o disattiva il riquadro tra sempre visibile e la modalità Nascondi automaticamente.  
   
 ```  
@@ -1365,7 +1429,7 @@ virtual void ToggleAutoHide();
 ### <a name="remarks"></a>Note  
  Questo metodo disattiva la modalità Nascondi automaticamente per il riquadro chiamando [CDockablePane::SetAutoHideMode](#setautohidemode).  
   
-##  <a name="a-nameundockpanea--cdockablepaneundockpane"></a><a name="undockpane"></a>CDockablePane::UndockPane  
+##  <a name="undockpane"></a>CDockablePane::UndockPane  
  Cornice un riquadro da un contenitore di finestra mini o finestra cornice principale.  
   
 ```  

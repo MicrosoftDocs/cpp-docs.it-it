@@ -10,10 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComObjectGlobal
-- ATL::CComObjectGlobal<Base>
-- ATL::CComObjectGlobal
-- ATL.CComObjectGlobal
-- ATL.CComObjectGlobal<Base>
+- ATLCOM/ATL::CComObjectGlobal
+- ATLCOM/ATL::CComObjectGlobal::CComObjectGlobal
+- ATLCOM/ATL::CComObjectGlobal::AddRef
+- ATLCOM/ATL::CComObjectGlobal::QueryInterface
+- ATLCOM/ATL::CComObjectGlobal::Release
+- ATLCOM/ATL::CComObjectGlobal::m_hResFinalConstruct
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -93,7 +95,7 @@ class CComObjectGlobal : public Base
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlcom. h  
   
-##  <a name="a-nameaddrefa--ccomobjectglobaladdref"></a><a name="addref"></a>CComObjectGlobal::AddRef  
+##  <a name="addref"></a>CComObjectGlobal::AddRef  
  Incrementa il conteggio dei riferimenti dell'oggetto di 1.  
   
 ```
@@ -106,7 +108,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, `AddRef` chiamate **_Module::Lock**, dove **Module** è l'istanza globale di [CComModule](../../atl/reference/ccommodule-class.md) o una classe derivata da esso.  
   
-##  <a name="a-nameccomobjectglobala--ccomobjectglobalccomobjectglobal"></a><a name="ccomobjectglobal"></a>CComObjectGlobal::CComObjectGlobal  
+##  <a name="ccomobjectglobal"></a>CComObjectGlobal::CComObjectGlobal  
  Costruttore. Chiamate `FinalConstruct` e quindi imposta [m_hResFinalConstruct](#m_hresfinalconstruct) per il `HRESULT` restituito da `FinalConstruct`.  
   
 ```
@@ -116,7 +118,7 @@ CComObjectGlobal(void* = NULL));
 ### <a name="remarks"></a>Note  
  Se non è stata derivata dalla classe base [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), è necessario fornire `FinalConstruct` metodo. Il distruttore chiama `FinalRelease`.  
   
-##  <a name="a-namedtora--ccomobjectglobalccomobjectglobal"></a><a name="dtor"></a>CComObjectGlobal:: ~ CComObjectGlobal  
+##  <a name="dtor"></a>CComObjectGlobal:: ~ CComObjectGlobal  
  Distruttore.  
   
 ```
@@ -126,14 +128,14 @@ CComObjectGlobal();
 ### <a name="remarks"></a>Note  
  Libera tutte le risorse allocate e chiama [FinalRelease](ccomobjectrootex-class.md#finalrelease).  
   
-##  <a name="a-namemhresfinalconstructa--ccomobjectglobalmhresfinalconstruct"></a><a name="m_hresfinalconstruct"></a>CComObjectGlobal::m_hResFinalConstruct  
+##  <a name="m_hresfinalconstruct"></a>CComObjectGlobal::m_hResFinalConstruct  
  Contiene il `HRESULT` dalla chiamata `FinalConstruct` durante la costruzione di `CComObjectGlobal` oggetto.  
   
 ```
 HRESULT m_hResFinalConstruct;
 ```  
   
-##  <a name="a-namequeryinterfacea--ccomobjectglobalqueryinterface"></a><a name="queryinterface"></a>CComObjectGlobal::QueryInterface  
+##  <a name="queryinterface"></a>CComObjectGlobal::QueryInterface  
  Recupera un puntatore al puntatore all'interfaccia richiesta.  
   
 ```
@@ -153,7 +155,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 ### <a name="remarks"></a>Note  
  `QueryInterface` gestisce solo le interfacce nella tabella di mappe COM.  
   
-##  <a name="a-namereleasea--ccomobjectglobalrelease"></a><a name="release"></a>CComObjectGlobal::Release  
+##  <a name="release"></a>CComObjectGlobal::Release  
  Decrementa il conteggio dei riferimenti dell'oggetto di 1.  
   
 ```

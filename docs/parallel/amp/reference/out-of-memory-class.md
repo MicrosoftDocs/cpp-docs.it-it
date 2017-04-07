@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amprt/Concurrency::out_of_memory
+- out_of_memory
+- AMPRT/out_of_memory
+- AMPRT/Concurrency::out_of_memory::out_of_memory
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -68,7 +70,7 @@ class out_of_memory : public runtime_exception;
  **Intestazione:** amprt.h  
   
  **Spazio dei nomi:** Concurrency  
-## <a name="a-namectora-outofmemory"></a><a name="ctor"></a>out_of_memory 
+## <a name="ctor"></a>out_of_memory 
 
  Inizializza una nuova istanza della classe.  
   

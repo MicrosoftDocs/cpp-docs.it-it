@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDaoFieldExchange
+- AFXDAO/CDaoFieldExchange
+- AFXDAO/CDaoFieldExchange::IsValidOperation
+- AFXDAO/CDaoFieldExchange::SetFieldType
+- AFXDAO/CDaoFieldExchange::m_nOperation
+- AFXDAO/CDaoFieldExchange::m_prs
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +102,7 @@ class CDaoFieldExchange
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxdao. h  
   
-##  <a name="a-nameisvalidoperationa--cdaofieldexchangeisvalidoperation"></a><a name="isvalidoperation"></a>CDaoFieldExchange::IsValidOperation  
+##  <a name="isvalidoperation"></a>CDaoFieldExchange::IsValidOperation  
  Se si scrive una funzione DFX, chiamare `IsValidOperation` all'inizio della funzione per determinare se l'operazione corrente può essere eseguito su un tipo di membro dati di campo specifico (un **CDaoFieldExchange::outputColumn** o **CDaoFieldExchange::param**).  
   
 ```  
@@ -112,7 +117,7 @@ BOOL IsValidOperation();
   
  Per ulteriori informazioni sulla scrittura di routine DFX personalizzate, vedere [53 Nota tecnica](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md).  
   
-##  <a name="a-namemnoperationa--cdaofieldexchangemnoperation"></a><a name="m_noperation"></a>CDaoFieldExchange:: M_noperation  
+##  <a name="m_noperation"></a>CDaoFieldExchange:: M_noperation  
  Identifica l'operazione deve essere eseguita la [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) oggetto associato all'oggetto di exchange di campo.  
   
 ### <a name="remarks"></a>Note  
@@ -141,12 +146,12 @@ BOOL IsValidOperation();
 |**DumpField**|Trasferisce il contenuto del campo (solo debug).|  
 |**MaxDFXOperation**|Utilizzato per la verifica dell'input.|  
   
-##  <a name="a-namemprsa--cdaofieldexchangemprs"></a><a name="m_prs"></a>CDaoFieldExchange::m_prs  
+##  <a name="m_prs"></a>CDaoFieldExchange::m_prs  
  Contiene un puntatore al [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) oggetto associato di `CDaoFieldExchange` oggetto.  
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namesetfieldtypea--cdaofieldexchangesetfieldtype"></a><a name="setfieldtype"></a>CDaoFieldExchange:: SetFieldType  
+##  <a name="setfieldtype"></a>CDaoFieldExchange:: SetFieldType  
  Chiamare `SetFieldType` nel `CDaoRecordset` della classe `DoFieldExchange` eseguire l'override.  
   
 ```  

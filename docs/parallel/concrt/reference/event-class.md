@@ -9,7 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::event
+- event
+- CONCRT/concurrency::event
+- CONCRT/concurrency::event::reset
+- CONCRT/concurrency::event::set
+- CONCRT/concurrency::event::wait
+- CONCRT/concurrency::event::wait_for_multiple
+- CONCRT/concurrency::event::timeout_infinite
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: abda6512f391b59cb48c8e96a489714ee117ae68
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: f858bfad08ca8d62c42556c54b505908b7122569
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="event-class"></a>Classe event
@@ -60,16 +66,16 @@ class event;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Reset (metodo)](#reset)|Reimposta l'evento a uno stato non segnalato.|  
-|[Metodo set](#set)|Segnala l'evento.|  
-|[Wait (metodo)](#wait)|Attende l'evento venga segnalato.|  
-|[wait_for_multiple (metodo)](#wait_for_multiple)|Attende la segnalazione di più eventi.|  
+|[reset](#reset)|Reimposta l'evento a uno stato non segnalato.|  
+|[set](#set)|Segnala l'evento.|  
+|[attesa](#wait)|Attende l'evento venga segnalato.|  
+|[wait_for_multiple](#wait_for_multiple)|Attende la segnalazione di più eventi.|  
   
 ### <a name="public-constants"></a>Costanti pubbliche  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[timeout_infinite (costante)](#timeout_infinite)|Valore indicante un'attesa che non deve terminare mai.|  
+|[timeout_infinite](#timeout_infinite)|Valore indicante un'attesa che non deve terminare mai.|  
   
 ## <a name="remarks"></a>Note  
  Per ulteriori informazioni, vedere [strutture di dati di sincronizzazione](../../../parallel/concrt/synchronization-data-structures.md).  
@@ -82,7 +88,7 @@ class event;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="a-namectora-event"></a><a name="ctor"></a>evento 
+##  <a name="ctor"></a>evento 
 
  Costruisce un nuovo evento.  
   
@@ -92,7 +98,7 @@ _CRTIMP event();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namedtora-event"></a><a name="dtor"></a>~ evento 
+##  <a name="dtor"></a>~ evento 
 
  Elimina un evento.  
   
@@ -103,7 +109,7 @@ _CRTIMP event();
 ### <a name="remarks"></a>Note  
  È probabile che non sono presenti thread in attesa dell'evento quando viene eseguito il distruttore. Se si consente all'evento di eseguire la distruzione quando i thread sono ancora in attesa si verificherà un comportamento non definito.  
   
-##  <a name="a-namereseta-reset"></a><a name="reset"></a>reimpostazione 
+##  <a name="reset"></a>reimpostazione 
 
  Reimposta l'evento a uno stato non segnalato.  
   
@@ -111,7 +117,7 @@ _CRTIMP event();
 void reset();
 ```  
   
-##  <a name="a-nameseta-set"></a><a name="set"></a>set 
+##  <a name="set"></a>set 
 
  Segnala l'evento.  
   
@@ -122,7 +128,7 @@ void set();
 ### <a name="remarks"></a>Note  
  Segnalare l'evento potrebbe causare un numero arbitrario di contesti in attesa che l'evento diventi eseguibile.  
   
-##  <a name="a-nametimeoutinfinitea-timeoutinfinite"></a><a name="timeout_infinite"></a>timeout_infinite 
+##  <a name="timeout_infinite"></a>timeout_infinite 
 
  Valore indicante un'attesa che non deve terminare mai.  
   
@@ -130,7 +136,7 @@ void set();
 static const unsigned int timeout_infinite = COOPERATIVE_TIMEOUT_INFINITE;
 ```  
   
-##  <a name="a-namewaita-wait"></a><a name="wait"></a>attesa 
+##  <a name="wait"></a>attesa 
 
  Attende l'evento venga segnalato.  
   
@@ -148,7 +154,7 @@ size_t wait(unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
 > [!IMPORTANT]
 >  In un'applicazione [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)], non chiamare `wait` sul thread ASTA poiché tramite questa chiamata potrebbe bloccarsi il thread corrente e l'applicazione potrebbe non rispondere.  
   
-##  <a name="a-namewaitformultiplea-waitformultiple"></a><a name="wait_for_multiple"></a>wait_for_multiple 
+##  <a name="wait_for_multiple"></a>wait_for_multiple 
 
  Attende la segnalazione di più eventi.  
   
@@ -183,5 +189,5 @@ static size_t __cdecl wait_for_multiple(
 >  In un'applicazione [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)], non chiamare `wait_for_multiple` sul thread ASTA poiché tramite questa chiamata potrebbe bloccarsi il thread corrente e l'applicazione potrebbe non rispondere.  
   
 ## <a name="see-also"></a>Vedere anche  
- [concorrenza Namespace](concurrency-namespace.md)
+ [Spazio dei nomi concurrency](concurrency-namespace.md)
 

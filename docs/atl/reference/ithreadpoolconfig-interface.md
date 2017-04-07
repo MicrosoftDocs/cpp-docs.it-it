@@ -10,8 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IThreadPoolConfig
-- ATL::IThreadPoolConfig
-- ATL.IThreadPoolConfig
+- ATLUTIL/ATL::IThreadPoolConfig
+- ATLUTIL/ATL::GetSize
+- ATLUTIL/ATL::GetTimeout
+- ATLUTIL/ATL::SetSize
+- ATLUTIL/ATL::SetTimeout
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -71,7 +74,7 @@ __interface
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlutil. h  
   
-##  <a name="a-namegetsizea--ithreadpoolconfiggetsize"></a><a name="getsize"></a>IThreadPoolConfig::GetSize  
+##  <a name="getsize"></a>IThreadPoolConfig::GetSize  
  Chiamare questo metodo per ottenere il numero di thread nel pool.  
   
 ```
@@ -88,7 +91,7 @@ STDMETHOD(GetSize)(int* pnNumThreads);
 ### <a name="example"></a>Esempio  
  [!code-cpp[&#134; NVC_ATL_Utilities](../../atl/codesnippet/cpp/ithreadpoolconfig-interface_1.cpp)]  
   
-##  <a name="a-namegettimeouta--ithreadpoolconfiggettimeout"></a><a name="gettimeout"></a>IThreadPoolConfig::GetTimeout  
+##  <a name="gettimeout"></a>IThreadPoolConfig::GetTimeout  
  Chiamare questo metodo per ottenere il tempo massimo in millisecondi di attesa per un thread arrestare il pool di thread.  
   
 ```
@@ -105,7 +108,7 @@ STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
 ### <a name="example"></a>Esempio  
  Vedere [IThreadPoolConfig::GetSize](#getsize).  
   
-##  <a name="a-namesetsizea--ithreadpoolconfigsetsize"></a><a name="setsize"></a>IThreadPoolConfig::SetSize  
+##  <a name="setsize"></a>IThreadPoolConfig::SetSize  
  Chiamare questo metodo per impostare il numero di thread nel pool.  
   
 ```
@@ -126,7 +129,7 @@ STDMETHOD(SetSize)int nNumThreads);
 ### <a name="example"></a>Esempio  
  Vedere [IThreadPoolConfig::GetSize](#getsize).  
   
-##  <a name="a-namesettimeouta--ithreadpoolconfigsettimeout"></a><a name="settimeout"></a>IThreadPoolConfig::SetTimeout  
+##  <a name="settimeout"></a>IThreadPoolConfig::SetTimeout  
  Chiamare questo metodo per impostare il tempo massimo in millisecondi che il pool di thread attenderà per un thread chiuso.  
   
 ```

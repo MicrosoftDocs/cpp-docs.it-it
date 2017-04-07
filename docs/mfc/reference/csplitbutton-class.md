@@ -8,6 +8,13 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: reference
+f1_keywords:
+- CSplitButton
+- AFXCMN/CSplitButton
+- AFXCMN/CSplitButton::CSplitButton
+- AFXCMN/CSplitButton::Create
+- AFXCMN/CSplitButton::SetDropDownMenu
+- AFXCMN/CSplitButton::OnDropDown
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,7 +99,7 @@ class CSplitButton : public CButton
   
  Requisiti aggiuntivi per questa classe sono descritti [creare requisiti per Windows Vista controlli comuni](../../mfc/build-requirements-for-windows-vista-common-controls.md).  
   
-##  <a name="a-namecreatea--csplitbuttoncreate"></a><a name="create"></a>CSplitButton::Create  
+##  <a name="create"></a>CSplitButton::Create  
  Crea un controllo pulsante di menu combinato con gli stili specificati e lo collega a corrente `CSplitButton` oggetto.  
   
 ```  
@@ -115,7 +122,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Valore restituito  
  `true` se questo metodo dà esito positivo; in caso contrario, `false`.  
   
-##  <a name="a-namecsplitbuttona--csplitbuttoncsplitbutton"></a><a name="csplitbutton"></a>CSplitButton::CSplitButton  
+##  <a name="csplitbutton"></a>CSplitButton::CSplitButton  
  Costruisce un oggetto `CSplitButton`. I parametri del costruttore specificano un sottomenu che viene visualizzato quando un utente fa clic sulla freccia giù del controllo pulsante di divisione.  
   
 ```  
@@ -139,7 +146,7 @@ CSplitButton(CMenu* pMenu)
 ### <a name="remarks"></a>Note  
  Utilizzare il [CSplitButton::Create](#create) per creare un controllo split button e associarlo al `CSplitButton` oggetto.  
   
-##  <a name="a-nameondropdowna--csplitbuttonondropdown"></a><a name="ondropdown"></a>CSplitButton::OnDropDown  
+##  <a name="ondropdown"></a>CSplitButton::OnDropDown  
  Gestisce il `BCN_DROPDOWN` notifica che viene inviato dal sistema quando un utente fa clic sulla freccia a discesa del controllo pulsante di divisione corrente.  
   
 ```  
@@ -169,7 +176,7 @@ BEGIN_MESSAGE_MAP(CMySplitButton,
 END_MESSAGE_MAP()  
 ```  
   
-##  <a name="a-namesetdropdownmenua--csplitbuttonsetdropdownmenu"></a><a name="setdropdownmenu"></a>CSplitButton::SetDropDownMenu  
+##  <a name="setdropdownmenu"></a>CSplitButton::SetDropDownMenu  
  Imposta il menu a discesa che viene visualizzato quando un utente fa clic sulla freccia a discesa del controllo pulsante di divisione corrente.  
   
 ```  

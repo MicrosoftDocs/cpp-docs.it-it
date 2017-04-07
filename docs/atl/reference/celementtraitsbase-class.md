@@ -10,10 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CElementTraitsBase
-- ATL::CElementTraitsBase
-- ATL.CElementTraitsBase<T>
-- ATL::CElementTraitsBase<T>
-- ATL.CElementTraitsBase
+- ATLCOLL/ATL::CElementTraitsBase
+- ATLCOLL/ATL::CElementTraitsBase::INARGTYPE
+- ATLCOLL/ATL::CElementTraitsBase::OUTARGTYPE
+- ATLCOLL/ATL::CElementTraitsBase::CopyElements
+- ATLCOLL/ATL::CElementTraitsBase::RelocateElements
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +82,7 @@ class CElementTraitsBase
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlcoll. h  
   
-##  <a name="a-namecopyelementsa--celementtraitsbasecopyelements"></a><a name="copyelements"></a>CElementTraitsBase::CopyElements  
+##  <a name="copyelements"></a>CElementTraitsBase::CopyElements  
  Chiamare questo metodo per copiare gli elementi archiviati in un oggetto classe di raccolta.  
   
 ```
@@ -104,21 +105,21 @@ static void CopyElements(
 ### <a name="remarks"></a>Note  
  Gli elementi di origine e di destinazione non devono sovrapporsi.  
   
-##  <a name="a-nameinargtypea--celementtraitsbaseinargtype"></a><a name="inargtype"></a>CElementTraitsBase::INARGTYPE  
+##  <a name="inargtype"></a>CElementTraitsBase::INARGTYPE  
  Il tipo di dati da utilizzare per l'aggiunta di elementi alla raccolta.  
   
 ```
 typedef const T& INARGTYPE;
 ```  
   
-##  <a name="a-nameoutargtypea--celementtraitsbaseoutargtype"></a><a name="outargtype"></a>CElementTraitsBase::OUTARGTYPE  
+##  <a name="outargtype"></a>CElementTraitsBase::OUTARGTYPE  
  Il tipo di dati da utilizzare per recuperare elementi dalla raccolta.  
   
 ```
 typedef T& OUTARGTYPE;
 ```  
   
-##  <a name="a-namerelocateelementsa--celementtraitsbaserelocateelements"></a><a name="relocateelements"></a>CElementTraitsBase::RelocateElements  
+##  <a name="relocateelements"></a>CElementTraitsBase::RelocateElements  
  Chiamare questo metodo per spostare gli elementi archiviati in un oggetto classe di raccolta.  
   
 ```

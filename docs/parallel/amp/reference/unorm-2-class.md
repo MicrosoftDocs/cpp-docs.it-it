@@ -56,9 +56,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 8c4e7cd3040e9d9d6d3c3a5a915118fbc815aebf
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 789c1fc872f478945de6444c07de069b50074a7f
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="unorm2-class"></a>Classe unorm_2
@@ -88,30 +88,30 @@ class unorm_2;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|unorm_2::get_X (metodo)||  
-|unorm_2::get_xy (metodo)||  
-|unorm_2::get_y (metodo)||  
-|unorm_2::get_yx (metodo)||  
-|Metodo unorm_2::ref_g||  
-|Metodo unorm_2::ref_r||  
-|Metodo unorm_2::ref_x||  
-|Metodo unorm_2::ref_y||  
-|unorm_2::set_X (metodo)||  
-|unorm_2::set_xy (metodo)||  
-|unorm_2::set_y (metodo)||  
-|unorm_2::set_yx (metodo)||  
+|unorm_2::get_X||  
+|unorm_2::get_xy||  
+|unorm_2::get_y||  
+|unorm_2::get_yx||  
+|unorm_2:: ref_g||  
+|unorm_2:: ref_r||  
+|unorm_2:: ref_x||  
+|unorm_2:: ref_y||  
+|unorm_2::set_X||  
+|unorm_2::set_xy||  
+|unorm_2::set_y||  
+|unorm_2::set_yx||  
   
 ### <a name="public-operators"></a>Operatori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|unorm_2::operator - operatore||  
-|unorm_2::operator * = (operatore)||  
-|unorm_2::operator / = (operatore)||  
-|unorm_2::operator + + (operatore)||  
-|unorm_2::operator + = (operatore)||  
-|unorm_2::operator = (operatore)||  
-|unorm_2::operator-= (operatore)||  
+|unorm_2::operator:||  
+|unorm_2::operator * =||  
+|unorm_2::operator / =||  
+|unorm_2::operator + +||  
+|+ = unorm_2::operator||  
+|unorm_2::operator =||  
+|unorm_2::operator =||  
   
 ### <a name="public-constants"></a>Costanti pubbliche  
   
@@ -123,14 +123,14 @@ class unorm_2;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|Membro dati unorm_2::g||  
-|Membro dati unorm_2::GR||  
-|Membro dati unorm_2::r||  
-|Membro dati unorm_2::RG||  
-|Membro dati unorm_2::x||  
-|Membro dati unorm_2::XY||  
-|Membro dati unorm_2::y||  
-|Membro dati unorm_2::YX||  
+|unorm_2::g||  
+|unorm_2::GR||  
+|unorm_2::r||  
+|unorm_2::RG||  
+|unorm_2::x||  
+|unorm_2::XY||  
+|unorm_2::y||  
+|unorm_2::YX||  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `unorm_2`  
@@ -140,7 +140,7 @@ class unorm_2;
   
  **Namespace:** Concurrency:: Graphics  
   
-##  <a name="a-namectora-unorm2"></a><a name="ctor"></a>unorm_2 
+##  <a name="ctor"></a>unorm_2 
 
  Predefinito costruttore inizializza tutti gli elementi con 0.  
   
@@ -214,12 +214,12 @@ explicit inline unorm_2(
  `_Other`  
  Utilizzato per inizializzare l'oggetto.  
   
-##  <a name="a-nameunorm2sizea-size"></a><a name="unorm_2__size"></a>dimensioni 
+##  <a name="unorm_2__size"></a>dimensioni 
 
 ```  
 static const int size = 2;  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Concurrency:: Graphics Namespace](concurrency-graphics-namespace.md)
+ [Spazio dei nomi Concurrency::graphics](concurrency-graphics-namespace.md)
 

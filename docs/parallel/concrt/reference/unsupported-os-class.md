@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::unsupported_os
+- unsupported_os
+- CONCRT/concurrency::unsupported_os
+- CONCRT/concurrency::unsupported_os::unsupported_os
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: d104a9f270196e04a6d84912b6051f43a69a0dc4
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 4eb57f62fcff052cb613c84b7f702f46f225b5b7
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="unsupportedos-class"></a>Classe unsupported_os
@@ -54,7 +56,7 @@ class unsupported_os : public std::exception;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore unsupported_os](#ctor)|Di overload. Costruisce un oggetto `unsupported_os`.|  
+|[unsupported_os](#ctor)|Di overload. Costruisce un oggetto `unsupported_os`.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `exception`  
@@ -66,7 +68,7 @@ class unsupported_os : public std::exception;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="a-namectora-unsupportedos"></a><a name="ctor"></a>unsupported_os 
+##  <a name="ctor"></a>unsupported_os 
 
  Costruisce un oggetto `unsupported_os`.  
   
@@ -81,5 +83,5 @@ unsupported_os() throw();
  Messaggio descrittivo dell'errore.  
   
 ## <a name="see-also"></a>Vedere anche  
- [concorrenza Namespace](concurrency-namespace.md)
+ [Spazio dei nomi concurrency](concurrency-namespace.md)
 

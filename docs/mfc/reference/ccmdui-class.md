@@ -10,6 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CCmdUI
+- AFXWIN/CCmdUI
+- AFXWIN/CCmdUI::ContinueRouting
+- AFXWIN/CCmdUI::Enable
+- AFXWIN/CCmdUI::SetCheck
+- AFXWIN/CCmdUI::SetRadio
+- AFXWIN/CCmdUI::SetText
+- AFXWIN/CCmdUI::m_nID
+- AFXWIN/CCmdUI::m_nIndex
+- AFXWIN/CCmdUI::m_pMenu
+- AFXWIN/CCmdUI::m_pOther
+- AFXWIN/CCmdUI::m_pSubMenu
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -105,7 +116,7 @@ class CCmdUI
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxwin.h  
   
-##  <a name="a-namecontinueroutinga--ccmduicontinuerouting"></a><a name="continuerouting"></a>CCmdUI::ContinueRouting  
+##  <a name="continuerouting"></a>CCmdUI::ContinueRouting  
  Chiamare questa funzione membro per stabilire il meccanismo di routing di comandi per continuare a indirizzare il messaggio corrente lungo la catena di gestori.  
   
 ```  
@@ -115,7 +126,7 @@ void ContinueRouting();
 ### <a name="remarks"></a>Note  
  Si tratta di una funzione membro avanzata che deve essere utilizzata in combinazione con un `ON_COMMAND_EX` gestore restituisce **FALSE**. Per ulteriori informazioni, vedere [6 Nota tecnica](../../mfc/tn006-message-maps.md).  
   
-##  <a name="a-nameenablea--ccmduienable"></a><a name="enable"></a>CCmdUI:: Enable  
+##  <a name="enable"></a>CCmdUI:: Enable  
  Chiamare questa funzione membro per abilitare o disabilitare l'elemento dell'interfaccia utente per questo comando.  
   
 ```  
@@ -131,21 +142,21 @@ virtual void Enable(BOOL bOn = TRUE);
   
  [!code-cpp[NVC_MFCDocView&#47;](../../mfc/codesnippet/cpp/ccmdui-class_2.cpp)]  
   
-##  <a name="a-namemnida--ccmduimnid"></a><a name="m_nid"></a>CCmdUI::m_nID  
+##  <a name="m_nid"></a>CCmdUI::m_nID  
  L'ID della voce di menu, pulsante della barra degli strumenti o un altro oggetto di interfaccia utente rappresentato dal `CCmdUI` oggetto.  
   
 ```  
 UINT m_nID;  
 ```  
   
-##  <a name="a-namemnindexa--ccmduimnindex"></a><a name="m_nindex"></a>CCmdUI::m_nIndex  
+##  <a name="m_nindex"></a>CCmdUI::m_nIndex  
  L'indice della voce di menu, pulsante della barra degli strumenti o un altro oggetto di interfaccia utente rappresentato dal `CCmdUI` oggetto.  
   
 ```  
 UINT m_nIndex;  
 ```  
   
-##  <a name="a-namempmenua--ccmduimpmenu"></a><a name="m_pmenu"></a>CCmdUI::m_pMenu  
+##  <a name="m_pmenu"></a>CCmdUI::m_pMenu  
  Puntatore (di `CMenu` tipo) per il menu rappresentato dal `CCmdUI` oggetto.  
   
 ```  
@@ -155,7 +166,7 @@ CMenu* m_pMenu;
 ### <a name="remarks"></a>Note  
  **NULL** se l'elemento non è un menu.  
   
-##  <a name="a-namempsubmenua--ccmduimpsubmenu"></a><a name="m_psubmenu"></a>CCmdUI::m_pSubMenu  
+##  <a name="m_psubmenu"></a>CCmdUI::m_pSubMenu  
  Puntatore (di `CMenu` tipo) per il sottomenu contenuto rappresentato dal `CCmdUI` oggetto.  
   
 ```  
@@ -165,7 +176,7 @@ CMenu* m_pSubMenu;
 ### <a name="remarks"></a>Note  
  **NULL** se l'elemento non è un menu. Se il sottomenu è visualizzata una finestra popup, `m_nID` contiene l'ID del primo elemento del menu a comparsa. Per ulteriori informazioni, vedere [21 Nota tecnica](../../mfc/tn021-command-and-message-routing.md).  
   
-##  <a name="a-namempothera--ccmduimpother"></a><a name="m_pother"></a>CCmdUI::m_pOther  
+##  <a name="m_pother"></a>CCmdUI::m_pOther  
  Puntatore (di tipo `CWnd`) all'oggetto finestra, ad esempio una barra di stato o lo strumento che ha inviato la notifica.  
   
 ```  
@@ -175,7 +186,7 @@ CWnd* m_pOther;
 ### <a name="remarks"></a>Note  
  **NULL** se l'elemento è un menu o non `CWnd` oggetto.  
   
-##  <a name="a-namesetchecka--ccmduisetcheck"></a><a name="setcheck"></a>CCmdUI::SetCheck  
+##  <a name="setcheck"></a>CCmdUI::SetCheck  
  Chiamare questa funzione membro per impostare l'elemento dell'interfaccia utente per questo comando lo stato di controllo appropriate.  
   
 ```  
@@ -189,7 +200,7 @@ virtual void SetCheck(int nCheck = 1);
 ### <a name="remarks"></a>Note  
  Questa funzione membro funziona per le voci di menu e pulsanti della barra degli strumenti. Lo stato indeterminato si applica solo ai pulsanti della barra degli strumenti.  
   
-##  <a name="a-namesetradioa--ccmduisetradio"></a><a name="setradio"></a>CCmdUI::SetRadio  
+##  <a name="setradio"></a>CCmdUI::SetRadio  
  Chiamare questa funzione membro per impostare l'elemento dell'interfaccia utente per questo comando lo stato di controllo appropriate.  
   
 ```  
@@ -203,7 +214,7 @@ virtual void SetRadio(BOOL bOn = TRUE);
 ### <a name="remarks"></a>Note  
  Questa funzione membro funziona esattamente come `SetCheck`, ad eccezione del fatto che funziona per gli elementi dell'interfaccia utente funge da parte di un gruppo di opzione. Deselezionare gli altri elementi del gruppo non è automatica, a meno che gli elementi mantenere il comportamento di gruppo di opzione.  
   
-##  <a name="a-namesettexta--ccmduisettext"></a><a name="settext"></a>CCmdUI::SetText  
+##  <a name="settext"></a>CCmdUI::SetText  
  Chiamare questa funzione membro per impostare il testo dell'elemento dell'interfaccia utente per questo comando.  
   
 ```  

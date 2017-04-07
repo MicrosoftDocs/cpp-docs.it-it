@@ -9,9 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComFakeCriticalSection
 - CComFakeCriticalSection
-- ATL::CComFakeCriticalSection
+- ATLCORE/ATL::CComFakeCriticalSection
+- ATLCORE/ATL::CComFakeCriticalSection::Init
+- ATLCORE/ATL::CComFakeCriticalSection::Lock
+- ATLCORE/ATL::CComFakeCriticalSection::Term
+- ATLCORE/ATL::CComFakeCriticalSection::Unlock
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -69,7 +72,7 @@ class CComFakeCriticalSection
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlcore. h  
   
-##  <a name="a-nameinita--ccomfakecriticalsectioninit"></a><a name="init"></a>CComFakeCriticalSection::Init  
+##  <a name="init"></a>CComFakeCriticalSection::Init  
  Non esegue alcuna operazione poiché è presente alcuna sezione critica.  
   
 ```
@@ -79,7 +82,7 @@ HRESULT Init() throw();
 ### <a name="return-value"></a>Valore restituito  
  Restituisce S_OK.  
   
-##  <a name="a-namelocka--ccomfakecriticalsectionlock"></a><a name="lock"></a>CComFakeCriticalSection::Lock  
+##  <a name="lock"></a>CComFakeCriticalSection::Lock  
  Non esegue alcuna operazione poiché è presente alcuna sezione critica.  
   
 ```
@@ -89,7 +92,7 @@ HRESULT Lock() throw();
 ### <a name="return-value"></a>Valore restituito  
  Restituisce S_OK.  
   
-##  <a name="a-nameterma--ccomfakecriticalsectionterm"></a><a name="term"></a>CComFakeCriticalSection::Term  
+##  <a name="term"></a>CComFakeCriticalSection::Term  
  Non esegue alcuna operazione poiché è presente alcuna sezione critica.  
   
 ```
@@ -99,7 +102,7 @@ HRESULT Term() throw();
 ### <a name="return-value"></a>Valore restituito  
  Restituisce S_OK.  
   
-##  <a name="a-nameunlocka--ccomfakecriticalsectionunlock"></a><a name="unlock"></a>CComFakeCriticalSection::Unlock  
+##  <a name="unlock"></a>CComFakeCriticalSection::Unlock  
  Non esegue alcuna operazione poiché è presente alcuna sezione critica.  
   
 ```

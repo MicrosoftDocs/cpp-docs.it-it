@@ -10,6 +10,101 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CHtmlView
+- AFXHTML/CHtmlView
+- AFXHTML/CHtmlView::Create
+- AFXHTML/CHtmlView::CreateControlSite
+- AFXHTML/CHtmlView::ExecFormsCommand
+- AFXHTML/CHtmlView::ExecWB
+- AFXHTML/CHtmlView::GetAddressBar
+- AFXHTML/CHtmlView::GetApplication
+- AFXHTML/CHtmlView::GetBusy
+- AFXHTML/CHtmlView::GetContainer
+- AFXHTML/CHtmlView::GetFullName
+- AFXHTML/CHtmlView::GetFullScreen
+- AFXHTML/CHtmlView::GetHeight
+- AFXHTML/CHtmlView::GetHtmlDocument
+- AFXHTML/CHtmlView::GetLeft
+- AFXHTML/CHtmlView::GetLocationName
+- AFXHTML/CHtmlView::GetLocationURL
+- AFXHTML/CHtmlView::GetMenuBar
+- AFXHTML/CHtmlView::GetOffline
+- AFXHTML/CHtmlView::GetParentBrowser
+- AFXHTML/CHtmlView::GetProperty
+- AFXHTML/CHtmlView::GetReadyState
+- AFXHTML/CHtmlView::GetRegisterAsBrowser
+- AFXHTML/CHtmlView::GetRegisterAsDropTarget
+- AFXHTML/CHtmlView::GetSilent
+- AFXHTML/CHtmlView::GetSource
+- AFXHTML/CHtmlView::GetStatusBar
+- AFXHTML/CHtmlView::GetTheaterMode
+- AFXHTML/CHtmlView::GetToolBar
+- AFXHTML/CHtmlView::GetTop
+- AFXHTML/CHtmlView::GetTopLevelContainer
+- AFXHTML/CHtmlView::GetType
+- AFXHTML/CHtmlView::GetVisible
+- AFXHTML/CHtmlView::GetWidth
+- AFXHTML/CHtmlView::GoBack
+- AFXHTML/CHtmlView::GoForward
+- AFXHTML/CHtmlView::GoHome
+- AFXHTML/CHtmlView::GoSearch
+- AFXHTML/CHtmlView::LoadFromResource
+- AFXHTML/CHtmlView::Navigate
+- AFXHTML/CHtmlView::Navigate2
+- AFXHTML/CHtmlView::OnBeforeNavigate2
+- AFXHTML/CHtmlView::OnCommandStateChange
+- AFXHTML/CHtmlView::OnDocumentComplete
+- AFXHTML/CHtmlView::OnDocWindowActivate
+- AFXHTML/CHtmlView::OnDownloadBegin
+- AFXHTML/CHtmlView::OnDownloadComplete
+- AFXHTML/CHtmlView::OnEnableModeless
+- AFXHTML/CHtmlView::OnFilterDataObject
+- AFXHTML/CHtmlView::OnFrameWindowActivate
+- AFXHTML/CHtmlView::OnFullScreen
+- AFXHTML/CHtmlView::OnGetDropTarget
+- AFXHTML/CHtmlView::OnGetExternal
+- AFXHTML/CHtmlView::OnGetHostInfo
+- AFXHTML/CHtmlView::OnGetOptionKeyPath
+- AFXHTML/CHtmlView::OnHideUI
+- AFXHTML/CHtmlView::OnMenuBar
+- AFXHTML/CHtmlView::OnNavigateComplete2
+- AFXHTML/CHtmlView::OnNavigateError
+- AFXHTML/CHtmlView::OnNewWindow2
+- AFXHTML/CHtmlView::OnProgressChange
+- AFXHTML/CHtmlView::OnPropertyChange
+- AFXHTML/CHtmlView::OnQuit
+- AFXHTML/CHtmlView::OnResizeBorder
+- AFXHTML/CHtmlView::OnShowContextMenu
+- AFXHTML/CHtmlView::OnShowUI
+- AFXHTML/CHtmlView::OnStatusBar
+- AFXHTML/CHtmlView::OnStatusTextChange
+- AFXHTML/CHtmlView::OnTheaterMode
+- AFXHTML/CHtmlView::OnTitleChange
+- AFXHTML/CHtmlView::OnToolBar
+- AFXHTML/CHtmlView::OnTranslateAccelerator
+- AFXHTML/CHtmlView::OnTranslateUrl
+- AFXHTML/CHtmlView::OnUpdateUI
+- AFXHTML/CHtmlView::OnVisible
+- AFXHTML/CHtmlView::PutProperty
+- AFXHTML/CHtmlView::QueryFormsCommand
+- AFXHTML/CHtmlView::QueryStatusWB
+- AFXHTML/CHtmlView::Refresh
+- AFXHTML/CHtmlView::Refresh2
+- AFXHTML/CHtmlView::SetAddressBar
+- AFXHTML/CHtmlView::SetFullScreen
+- AFXHTML/CHtmlView::SetHeight
+- AFXHTML/CHtmlView::SetLeft
+- AFXHTML/CHtmlView::SetMenuBar
+- AFXHTML/CHtmlView::SetOffline
+- AFXHTML/CHtmlView::SetRegisterAsBrowser
+- AFXHTML/CHtmlView::SetRegisterAsDropTarget
+- AFXHTML/CHtmlView::SetSilent
+- AFXHTML/CHtmlView::SetStatusBar
+- AFXHTML/CHtmlView::SetTheaterMode
+- AFXHTML/CHtmlView::SetToolBar
+- AFXHTML/CHtmlView::SetTop
+- AFXHTML/CHtmlView::SetVisible
+- AFXHTML/CHtmlView::SetWidth
+- AFXHTML/CHtmlView::Stop
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -199,7 +294,7 @@ class CHtmlView : public CFormView
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxhtml.h  
   
-##  <a name="a-namecreatea--chtmlviewcreate"></a><a name="create"></a>CHtmlView::Create  
+##  <a name="create"></a>CHtmlView::Create  
  Chiamare questa funzione membro per creare eseguibile un controllo WebBrowser o un contenitore per Internet Explorer.  
   
 ```  
@@ -235,7 +330,7 @@ virtual BOOL Create(
  `pContext`  
  Un puntatore a un [CCreateContext](../../mfc/reference/ccreatecontext-structure.md). **NULL** per impostazione predefinita.  
   
-##  <a name="a-namecreatecontrolsitea--chtmlviewcreatecontrolsite"></a><a name="createcontrolsite"></a>CHtmlView::CreateControlSite  
+##  <a name="createcontrolsite"></a>CHtmlView::CreateControlSite  
  Overridable usato per creare un'istanza del sito del controllo per ospitare un controllo nel form.  
   
 ```  
@@ -265,7 +360,7 @@ virtual BOOL CreateControlSite(
 ### <a name="remarks"></a>Note  
  È possibile eseguire l'override di questa funzione membro per restituire un'istanza della classe sito controllo.  
   
-##  <a name="a-nameexecformscommanda--chtmlviewexecformscommand"></a><a name="execformscommand"></a>CHtmlView::ExecFormsCommand  
+##  <a name="execformscommand"></a>CHtmlView::ExecFormsCommand  
  Esegue il comando specificato usando il metodo `IOleCommandTarget::Exec` .  
   
 ```  
@@ -291,7 +386,7 @@ HRESULT ExecFormsCommand(
 ### <a name="remarks"></a>Note  
  **ExecFormsCommand** implementa il comportamento di [IOleCommandTarget::Exec](http://msdn.microsoft.com/library/windows/desktop/ms690300) metodo.  
   
-##  <a name="a-nameexecwba--chtmlviewexecwb"></a><a name="execwb"></a>CHtmlView::ExecWB  
+##  <a name="execwb"></a>CHtmlView::ExecWB  
  Chiamare questa funzione membro per eseguire un comando nel WebBrowser o Internet Explorer.  
   
 ```  
@@ -318,7 +413,7 @@ void ExecWB(
 ### <a name="remarks"></a>Note  
  Vedere [IWebBrowser2::ExecWB](https://msdn.microsoft.com/library/aa752117.aspx) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetaddressbara--chtmlviewgetaddressbar"></a><a name="getaddressbar"></a>CHtmlView::GetAddressBar  
+##  <a name="getaddressbar"></a>CHtmlView::GetAddressBar  
  Chiamare questa funzione membro per recuperare una barra degli indirizzi di Internet Explorer.  
   
 ```  
@@ -331,7 +426,7 @@ BOOL GetAddressBar() const;
 ### <a name="remarks"></a>Note  
  Si applica a Internet Explorer. Se si utilizza questa chiamata con un controllo WebBrowser, non verrà restituito alcun errore, ma lo ignora questa chiamata.  
   
-##  <a name="a-namegetapplicationa--chtmlviewgetapplication"></a><a name="getapplication"></a>CHtmlView::GetApplication  
+##  <a name="getapplication"></a>CHtmlView::GetApplication  
  Chiamare questa funzione membro per recuperare l'oggetto di automazione supportato dall'applicazione che contiene il controllo WebBrowser.  
   
 ```  
@@ -344,7 +439,7 @@ LPDISPATCH GetApplication() const;
 ### <a name="remarks"></a>Note  
  Si applica a WebBrowser e Internet Explorer.  
   
-##  <a name="a-namegetbusya--chtmlviewgetbusy"></a><a name="getbusy"></a>CHtmlView::GetBusy  
+##  <a name="getbusy"></a>CHtmlView::GetBusy  
  Chiamare questa funzione membro per determinare se il controllo WebBrowser è impegnato in un'operazione download o spostamento.  
   
 ```  
@@ -357,7 +452,7 @@ BOOL GetBusy() const;
 ### <a name="remarks"></a>Note  
  Si applica a WebBrowser e Internet Explorer.  
   
-##  <a name="a-namegetcontainera--chtmlviewgetcontainer"></a><a name="getcontainer"></a>CHtmlView::GetContainer  
+##  <a name="getcontainer"></a>CHtmlView::GetContainer  
  Chiamare questa funzione membro per recuperare un oggetto che restituisce il contenitore del browser web.  
   
 ```  
@@ -370,7 +465,7 @@ LPDISPATCH GetContainer() const;
 ### <a name="remarks"></a>Note  
  Si applica a WebBrowser e Internet Explorer.  
   
-##  <a name="a-namegetfullnamea--chtmlviewgetfullname"></a><a name="getfullname"></a>CHtmlView::GetFullName  
+##  <a name="getfullname"></a>CHtmlView::GetFullName  
  Chiamare questa funzione membro per recuperare il percorso completo del file di Internet Explorer è attualmente visualizzato.  
   
 ```  
@@ -383,7 +478,7 @@ CString GetFullName() const;
 ### <a name="remarks"></a>Note  
  Si applica a Internet Explorer. Se si utilizza questa chiamata con un controllo WebBrowser, non verrà restituito alcun errore, ma lo ignora questa chiamata.  
   
-##  <a name="a-namegetfullscreena--chtmlviewgetfullscreen"></a><a name="getfullscreen"></a>CHtmlView::GetFullScreen  
+##  <a name="getfullscreen"></a>CHtmlView::GetFullScreen  
  Chiamare questa funzione membro per determinare se il controllo WebBrowser funziona in modalità a schermo intero o in modalità normale.  
   
 ```  
@@ -398,7 +493,7 @@ BOOL GetFullScreen() const;
   
  Si applica a WebBrowser e Internet Explorer.  
   
-##  <a name="a-namegetheighta--chtmlviewgetheight"></a><a name="getheight"></a>CHtmlView::GetHeight  
+##  <a name="getheight"></a>CHtmlView::GetHeight  
  Chiamare questa funzione membro per recuperare l'altezza, in pixel, della finestra cornice del controllo WebBrowser.  
   
 ```  
@@ -408,7 +503,7 @@ long GetHeight() const;
 ### <a name="return-value"></a>Valore restituito  
  Frame altezza finestra del controllo in pixel.  
   
-##  <a name="a-namegethtmldocumenta--chtmlviewgethtmldocument"></a><a name="gethtmldocument"></a>CHtmlView::GetHtmlDocument  
+##  <a name="gethtmldocument"></a>CHtmlView::GetHtmlDocument  
  Chiamare questa funzione membro per recuperare il documento HTML per il documento attivo.  
   
 ```  
@@ -421,7 +516,7 @@ LPDISPATCH GetHtmlDocument() const;
 ### <a name="remarks"></a>Note  
  Si applica a WebBrowser e Internet Explorer.  
   
-##  <a name="a-namegetlefta--chtmlviewgetleft"></a><a name="getleft"></a>CHtmlView::GetLeft  
+##  <a name="getleft"></a>CHtmlView::GetLeft  
  Chiamare questa funzione membro per recuperare la distanza tra il margine interno sinistro del controllo WebBrowser e il bordo sinistro del relativo contenitore.  
   
 ```  
@@ -434,7 +529,7 @@ long GetLeft() const;
 ### <a name="remarks"></a>Note  
  Si applica a WebBrowser e Internet Explorer.  
   
-##  <a name="a-namegetlocationnamea--chtmlviewgetlocationname"></a><a name="getlocationname"></a>CHtmlView::GetLocationName  
+##  <a name="getlocationname"></a>CHtmlView::GetLocationName  
  Chiamare questa funzione membro per ottenere il nome della risorsa visualizzato nel controllo WebBrowser.  
   
 ```  
@@ -449,7 +544,7 @@ CString GetLocationName() const;
   
  Si applica a WebBrowser e Internet Explorer.  
   
-##  <a name="a-namegetlocationurla--chtmlviewgetlocationurl"></a><a name="getlocationurl"></a>CHtmlView::GetLocationURL  
+##  <a name="getlocationurl"></a>CHtmlView::GetLocationURL  
  Chiamare questa funzione membro per recuperare l'URL della risorsa che il controllo WebBrowser è attualmente visualizzato.  
   
 ```  
@@ -464,7 +559,7 @@ CString GetLocationURL() const;
   
  Si applica a WebBrowser e Internet Explorer.  
   
-##  <a name="a-namegetmenubara--chtmlviewgetmenubar"></a><a name="getmenubar"></a>CHtmlView::GetMenuBar  
+##  <a name="getmenubar"></a>CHtmlView::GetMenuBar  
  Chiamare questa funzione membro per determinare se la barra dei menu è visibile.  
   
 ```  
@@ -477,7 +572,7 @@ BOOL GetMenuBar() const;
 ### <a name="remarks"></a>Note  
  Si applica a WebBrowser e Internet Explorer.  
   
-##  <a name="a-namegetofflinea--chtmlviewgetoffline"></a><a name="getoffline"></a>CHtmlView::GetOffline  
+##  <a name="getoffline"></a>CHtmlView::GetOffline  
  Chiamare questa funzione membro per determinare se il browser opera in modalità offline.  
   
 ```  
@@ -490,7 +585,7 @@ BOOL GetOffline() const;
 ### <a name="remarks"></a>Note  
  Si applica a WebBrowser e Internet Explorer.  
   
-##  <a name="a-namegetparentbrowsera--chtmlviewgetparentbrowser"></a><a name="getparentbrowser"></a>CHtmlView::GetParentBrowser  
+##  <a name="getparentbrowser"></a>CHtmlView::GetParentBrowser  
  Chiamare questa funzione membro per recuperare un puntatore all'oggetto padre del controllo WebBrowser.  
   
 ```  
@@ -503,7 +598,7 @@ LPDISPATCH GetParentBrowser() const;
 ### <a name="remarks"></a>Note  
  Si applica a WebBrowser e Internet Explorer.  
   
-##  <a name="a-namegetpropertya--chtmlviewgetproperty"></a><a name="getproperty"></a>CHtmlView::GetProperty  
+##  <a name="getproperty"></a>CHtmlView::GetProperty  
  Chiamare questa funzione membro per ottenere il valore della proprietà attualmente associato al controllo.  
   
 ```  
@@ -527,7 +622,7 @@ COleVariant GetProperty(LPCTSTR lpszProperty);
 ### <a name="remarks"></a>Note  
  Si applica a WebBrowser e Internet Explorer.  
   
-##  <a name="a-namegetreadystatea--chtmlviewgetreadystate"></a><a name="getreadystate"></a>CHtmlView::GetReadyState  
+##  <a name="getreadystate"></a>CHtmlView::GetReadyState  
  Chiamare questa funzione membro per recuperare lo stato di pronto dell'oggetto WebBrowser.  
   
 ```  
@@ -540,7 +635,7 @@ READYSTATE GetReadyState() const;
 ### <a name="remarks"></a>Note  
  Si applica a WebBrowser e Internet Explorer.  
   
-##  <a name="a-namegetregisterasbrowsera--chtmlviewgetregisterasbrowser"></a><a name="getregisterasbrowser"></a>CHtmlView::GetRegisterAsBrowser  
+##  <a name="getregisterasbrowser"></a>CHtmlView::GetRegisterAsBrowser  
  Chiamare questa funzione membro per determinare se l'oggetto WebBrowser viene registrato come un browser di livello superiore per la risoluzione dei nomi di destinazione.  
   
 ```  
@@ -553,7 +648,7 @@ BOOL GetRegisterAsBrowser() const;
 ### <a name="remarks"></a>Note  
  Si applica a WebBrowser e Internet Explorer.  
   
-##  <a name="a-namegetregisterasdroptargeta--chtmlviewgetregisterasdroptarget"></a><a name="getregisterasdroptarget"></a>CHtmlView::GetRegisterAsDropTarget  
+##  <a name="getregisterasdroptarget"></a>CHtmlView::GetRegisterAsDropTarget  
  Chiamare questa funzione membro per determinare se il controllo WebBrowser viene registrato come destinazione di rilascio per la navigazione.  
   
 ```  
@@ -566,7 +661,7 @@ BOOL GetRegisterAsDropTarget() const;
 ### <a name="remarks"></a>Note  
  Si applica a WebBrowser e Internet Explorer.  
   
-##  <a name="a-namegetsilenta--chtmlviewgetsilent"></a><a name="getsilent"></a>CHtmlView::GetSilent  
+##  <a name="getsilent"></a>CHtmlView::GetSilent  
  Chiamare questa funzione membro per determinare se eventuali finestre di dialogo possono essere visualizzate nel controllo WebBrowser.  
   
 ```  
@@ -579,7 +674,7 @@ BOOL GetSilent() const;
 ### <a name="remarks"></a>Note  
  Si applica a WebBrowser e Internet Explorer.  
   
-##  <a name="a-namegetsourcea--chtmlviewgetsource"></a><a name="getsource"></a>CHtmlView::GetSource  
+##  <a name="getsource"></a>CHtmlView::GetSource  
  Chiamare questa funzione membro per recuperare il codice sorgente HTML della pagina web.  
   
 ```  
@@ -596,7 +691,7 @@ BOOL GetSource(CString& strRef);
 ### <a name="remarks"></a>Note  
  Questa funzione è equivalente al comando "HTML" in Internet Explorer, ad eccezione del fatto che viene restituito il codice di origine un `CString`.  
   
-##  <a name="a-namegetstatusbara--chtmlviewgetstatusbar"></a><a name="getstatusbar"></a>CHtmlView::GetStatusBar  
+##  <a name="getstatusbar"></a>CHtmlView::GetStatusBar  
  Chiamare questa funzione membro per determinare se il controllo WebBrowser visualizza una barra di stato.  
   
 ```  
@@ -609,7 +704,7 @@ BOOL GetStatusBar() const;
 ### <a name="remarks"></a>Note  
  Si applica a Internet Explorer. Se si utilizza questa chiamata con un controllo WebBrowser, non verrà restituito alcun errore, ma lo ignora questa chiamata.  
   
-##  <a name="a-namegettheatermodea--chtmlviewgettheatermode"></a><a name="gettheatermode"></a>CHtmlView::GetTheaterMode  
+##  <a name="gettheatermode"></a>CHtmlView::GetTheaterMode  
  Chiamare questa funzione membro per determinare se il browser web è in modalità teatro.  
   
 ```  
@@ -624,7 +719,7 @@ BOOL GetTheaterMode() const;
   
  Si applica a WebBrowser e Internet Explorer.  
   
-##  <a name="a-namegettoolbara--chtmlviewgettoolbar"></a><a name="gettoolbar"></a>CHtmlView::GetToolBar  
+##  <a name="gettoolbar"></a>CHtmlView::GetToolBar  
  Chiamare questa funzione membro per determinare se la barra degli strumenti è visibile.  
   
 ```  
@@ -634,7 +729,7 @@ int GetToolBar() const;
 ### <a name="return-value"></a>Valore restituito  
  Un valore che indica se la barra degli strumenti è visibile. Diverso da zero se sulla barra degli strumenti è visibile; in caso contrario, zero.  
   
-##  <a name="a-namegettopa--chtmlviewgettop"></a><a name="gettop"></a>CHtmlView::GetTop  
+##  <a name="gettop"></a>CHtmlView::GetTop  
  Chiamare questa funzione membro per recuperare la coordinata del bordo superiore della finestra principale del controllo WebBrowser della schermata.  
   
 ```  
@@ -647,7 +742,7 @@ long GetTop() const;
 ### <a name="remarks"></a>Note  
  Si applica a WebBrowser e Internet Explorer.  
   
-##  <a name="a-namegettoplevelcontainera--chtmlviewgettoplevelcontainer"></a><a name="gettoplevelcontainer"></a>CHtmlView::GetTopLevelContainer  
+##  <a name="gettoplevelcontainer"></a>CHtmlView::GetTopLevelContainer  
  Chiamare questa funzione membro per determinare se Internet Explorer è il contenitore di livello superiore del controllo WebBrowser.  
   
 ```  
@@ -660,7 +755,7 @@ BOOL GetTopLevelContainer() const;
 ### <a name="remarks"></a>Note  
  Si applica a WebBrowser e Internet Explorer.  
   
-##  <a name="a-namegettypea--chtmlviewgettype"></a><a name="gettype"></a>CHtmlView::GetType  
+##  <a name="gettype"></a>CHtmlView::GetType  
  Chiamare questa funzione membro per recuperare il nome del tipo di documento attivo contenuto.  
   
 ```  
@@ -673,7 +768,7 @@ CString GetType() const;
 ### <a name="remarks"></a>Note  
  Si applica a WebBrowser e Internet Explorer.  
   
-##  <a name="a-namegetvisiblea--chtmlviewgetvisible"></a><a name="getvisible"></a>CHtmlView::GetVisible  
+##  <a name="getvisible"></a>CHtmlView::GetVisible  
  Chiamare questa funzione membro per determinare se l'oggetto contenuto che è visibile.  
   
 ```  
@@ -686,7 +781,7 @@ BOOL GetVisible() const;
 ### <a name="remarks"></a>Note  
  Si applica a WebBrowser e Internet Explorer.  
   
-##  <a name="a-namegetwidtha--chtmlviewgetwidth"></a><a name="getwidth"></a>CHtmlView::GetWidth  
+##  <a name="getwidth"></a>CHtmlView::GetWidth  
  Recupera la larghezza della finestra principale di Internet Explorer.  
   
 ```  
@@ -696,7 +791,7 @@ long GetWidth() const;
 ### <a name="return-value"></a>Valore restituito  
  La larghezza corrente della finestra in pixel.  
   
-##  <a name="a-namegobacka--chtmlviewgoback"></a><a name="goback"></a>CHtmlView::GoBack  
+##  <a name="goback"></a>CHtmlView::GoBack  
  Consente di spostarsi all'indietro un elemento nell'elenco della cronologia.  
   
 ```  
@@ -706,14 +801,14 @@ void GoBack();
 ### <a name="remarks"></a>Note  
  Si applica a WebBrowser e Internet Explorer.  
   
-##  <a name="a-namegoforwarda--chtmlviewgoforward"></a><a name="goforward"></a>CHtmlView::GoForward  
+##  <a name="goforward"></a>CHtmlView::GoForward  
  Consente di spostarsi in avanti un elemento nell'elenco della cronologia.  
   
 ```  
 void GoForward();
 ```  
   
-##  <a name="a-namegohomea--chtmlviewgohome"></a><a name="gohome"></a>CHtmlView::GoHome  
+##  <a name="gohome"></a>CHtmlView::GoHome  
  Passa alla home page o alla pagina iniziale corrente specificata nella finestra di dialogo Opzioni Internet di Internet Explorer o nella finestra di dialogo Proprietà Internet, accessibili dal Pannello di controllo.  
   
 ```  
@@ -723,7 +818,7 @@ void GoHome();
 ### <a name="remarks"></a>Note  
  Si applica a WebBrowser e Internet Explorer.  
   
-##  <a name="a-namegosearcha--chtmlviewgosearch"></a><a name="gosearch"></a>CHtmlView::GoSearch  
+##  <a name="gosearch"></a>CHtmlView::GoSearch  
  Passa alla pagina di ricerca, come specificato nella finestra di dialogo Opzioni Internet di Internet Explorer o la finestra di dialogo Proprietà Internet, che si accede dal Pannello di controllo.  
   
 ```  
@@ -733,7 +828,7 @@ void GoSearch();
 ### <a name="remarks"></a>Note  
  Si applica a WebBrowser e Internet Explorer.  
   
-##  <a name="a-nameloadfromresourcea--chtmlviewloadfromresource"></a><a name="loadfromresource"></a>CHtmlView::LoadFromResource  
+##  <a name="loadfromresource"></a>CHtmlView::LoadFromResource  
  Chiamare questa funzione membro per caricare la risorsa specificata nel controllo WebBrowser.  
   
 ```  
@@ -754,7 +849,7 @@ BOOL LoadFromResource(UINT nRes);
 ### <a name="remarks"></a>Note  
  Si applica a WebBrowser e Internet Explorer.  
   
-##  <a name="a-namenavigatea--chtmlviewnavigate"></a><a name="navigate"></a>CHtmlView::Navigate  
+##  <a name="navigate"></a>CHtmlView::Navigate  
  Chiamare questa funzione membro per passare alla risorsa identificata da un URL.  
   
 ```  
@@ -789,7 +884,7 @@ void Navigate(
 ### <a name="remarks"></a>Note  
  Si applica a WebBrowser e Internet Explorer.  
   
-##  <a name="a-namenavigate2a--chtmlviewnavigate2"></a><a name="navigate2"></a>CHtmlView::Navigate2  
+##  <a name="navigate2"></a>CHtmlView::Navigate2  
  Chiamare questa funzione membro per passare alla risorsa identificata da un URL o al file identificato da un percorso completo.  
   
 ```  
@@ -849,7 +944,7 @@ void Navigate2(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCHtmlHttp&#7;](../../mfc/reference/codesnippet/cpp/chtmlview-class_1.cpp)]  
   
-##  <a name="a-nameonbeforenavigate2a--chtmlviewonbeforenavigate2"></a><a name="onbeforenavigate2"></a>CHtmlView::OnBeforeNavigate2  
+##  <a name="onbeforenavigate2"></a>CHtmlView::OnBeforeNavigate2  
  Questa funzione membro viene chiamata dal framework per causare un evento generato prima che si verifichi una navigazione nel web browser.  
   
 ```  
@@ -881,7 +976,7 @@ virtual void OnBeforeNavigate2(
  `pbCancel`  
  Un puntatore a un flag di annullamento. Un'applicazione può impostare questo parametro per diversi da zero per annullare l'operazione di spostamento o a zero per consentirgli di continuare.  
   
-##  <a name="a-nameoncommandstatechangea--chtmlviewoncommandstatechange"></a><a name="oncommandstatechange"></a>CHtmlView::OnCommandStateChange  
+##  <a name="oncommandstatechange"></a>CHtmlView::OnCommandStateChange  
  Questa funzione membro viene chiamata dal framework per notificare a un'applicazione che è stato modificato lo stato abilitato di un comando del browser web.  
   
 ```  
@@ -897,7 +992,7 @@ virtual void OnCommandStateChange(
  `bEnable`  
  Stato abilitato. Questo parametro è diverso da zero se il comando è abilitato, oppure zero se è disabilitato.  
   
-##  <a name="a-nameondocumentcompletea--chtmlviewondocumentcomplete"></a><a name="ondocumentcomplete"></a>CHtmlView::OnDocumentComplete  
+##  <a name="ondocumentcomplete"></a>CHtmlView::OnDocumentComplete  
  Questa funzione membro viene chiamata dal framework per notificare a un'applicazione che ha raggiunto un documento di `READYSTATE_COMPLETE` dello stato.  
   
 ```  
@@ -913,7 +1008,7 @@ virtual void OnDocumentComplete(LPCTSTR lpszURL);
   
  L'URL indicato dal `lpszURL` può essere diverso dall'URL che il browser è stato detto a cui passare, perché questo URL è l'URL completo e in forma canonica. Ad esempio, se un'applicazione specifica un URL "www.microsoft.com" in una chiamata a [Navigate](#navigate) o [Navigate2](#navigate2), l'URL passato `OnNavigateComplete2` sarà "http://www.microsoft.com/". Inoltre, se il server ha reindirizzato il browser su un URL diverso, l'URL reindirizzato comparirà qui.  
   
-##  <a name="a-nameondocwindowactivatea--chtmlviewondocwindowactivate"></a><a name="ondocwindowactivate"></a>CHtmlView::OnDocWindowActivate  
+##  <a name="ondocwindowactivate"></a>CHtmlView::OnDocWindowActivate  
  Chiamata eseguita da Internet Explorer o da un'implementazione MSHTML di **IOleInPlaceActiveObject::OnDocWindowActivate**per notificare l'oggetto sul posto attivo quando la finestra del documento del contenitore è attivata o disattivata.  
   
 ```  
@@ -930,7 +1025,7 @@ virtual HRESULT OnDocWindowActivate(BOOL fActivate);
 ### <a name="remarks"></a>Note  
  Eseguire l'override `OnDocWindowActivate` per rispondere al `OnDocWindowActivate` notifica dal controllo del Browser Web Microsoft. Vedere [IDocHostUIHandler::OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] per ulteriori informazioni.  
   
-##  <a name="a-nameondownloadbegina--chtmlviewondownloadbegin"></a><a name="ondownloadbegin"></a>CHtmlView::OnDownloadBegin  
+##  <a name="ondownloadbegin"></a>CHtmlView::OnDownloadBegin  
  Questa funzione membro viene chiamata dal framework per iniziare il download di un documento.  
   
 ```  
@@ -940,14 +1035,14 @@ virtual void OnDownloadBegin();
 ### <a name="remarks"></a>Note  
  Questo evento viene generato dopo il [OnBeforeNavigate2](#onbeforenavigate2) evento, a meno che non lo spostamento viene annullato. Le animazioni o "occupato" indica che è necessario visualizzare il contenitore deve essere connesso a questo evento.  
   
-##  <a name="a-nameondownloadcompletea--chtmlviewondownloadcomplete"></a><a name="ondownloadcomplete"></a>CHtmlView::OnDownloadComplete  
+##  <a name="ondownloadcomplete"></a>CHtmlView::OnDownloadComplete  
  Questa funzione membro viene chiamata dal framework per indicare che un'operazione di spostamento finita, è stata interrotta o non è riuscita.  
   
 ```  
 virtual void OnDownloadComplete();
 ```  
   
-##  <a name="a-nameonenablemodelessa--chtmlviewonenablemodeless"></a><a name="onenablemodeless"></a>CHtmlView::OnEnableModeless  
+##  <a name="onenablemodeless"></a>CHtmlView::OnEnableModeless  
  Chiamato quando Internet Explorer o MSHTML Visualizza un'interfaccia utente modale.  
   
 ```  
@@ -964,7 +1059,7 @@ virtual HRESULT OnEnableModeless(BOOL fEnable);
 ### <a name="remarks"></a>Note  
  Abilita o disabilita le finestre di dialogo non modale quando il contenitore crea o elimina una finestra di dialogo modale. Eseguire l'override `OnEnableModeless` per rispondere al `EnableModeless` notifica dal controllo del Browser Web Microsoft. Vedere [IDocHostUIHandler::EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] per ulteriori informazioni.  
   
-##  <a name="a-nameonfilterdataobjecta--chtmlviewonfilterdataobject"></a><a name="onfilterdataobject"></a>CHtmlView::OnFilterDataObject  
+##  <a name="onfilterdataobject"></a>CHtmlView::OnFilterDataObject  
  Chiamata eseguita sull'host da Internet Explorer o MSHTML per consentire all'host di sostituire l'oggetto dati di Internet Explorer o MSHTML.  
   
 ```  
@@ -986,7 +1081,7 @@ virtual HRESULT OnFilterDataObject(
 ### <a name="remarks"></a>Note  
  Eseguire l'override `OnFilterDataObject` per rispondere al `FilterDataObject` notifica dal controllo del Browser Web Microsoft. Vedere [IDocHostUIHandler::FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] per ulteriori informazioni.  
   
-##  <a name="a-nameonframewindowactivatea--chtmlviewonframewindowactivate"></a><a name="onframewindowactivate"></a>CHtmlView::OnFrameWindowActivate  
+##  <a name="onframewindowactivate"></a>CHtmlView::OnFrameWindowActivate  
  Chiamato da [IOleInPlaceActiveObject::OnFrameWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms683969) per notificare all'oggetto quando il contenitore di primo livello della finestra cornice è attivata o disattivata.  
   
 ```  
@@ -1003,7 +1098,7 @@ virtual HRESULT OnFrameWindowActivate(BOOL fActivate);
 ### <a name="remarks"></a>Note  
  Eseguire l'override `OnFrameWindowActivate` per rispondere al `OnFrameWindowActivate` notifica dal controllo del Browser Web Microsoft. Vedere [IDocHostUIHandler::OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] per ulteriori informazioni.  
   
-##  <a name="a-nameonfullscreena--chtmlviewonfullscreen"></a><a name="onfullscreen"></a>CHtmlView::OnFullScreen  
+##  <a name="onfullscreen"></a>CHtmlView::OnFullScreen  
  Questa funzione membro viene chiamata dal framework quando il [a schermo intero](https://msdn.microsoft.com/library/aa752119.aspx) proprietà è stata modificata.  
   
 ```  
@@ -1014,7 +1109,7 @@ virtual void OnFullScreen(BOOL bFullScreen);
  *bFullScreen*  
  Diverso da zero se Internet Explorer è in modalità schermo intero. in caso contrario, zero.  
   
-##  <a name="a-nameongetdroptargeta--chtmlviewongetdroptarget"></a><a name="ongetdroptarget"></a>CHtmlView::OnGetDropTarget  
+##  <a name="ongetdroptarget"></a>CHtmlView::OnGetDropTarget  
  Chiamata eseguita da Internet Explorer o MSHTML quando viene usato come destinazione di trascinamento per consentire all'host di fornire una destinazione `IDropTarget`.  
   
 ```  
@@ -1036,7 +1131,7 @@ virtual HRESULT OnGetDropTarget(
 ### <a name="remarks"></a>Note  
  Eseguire l'override `OnGetDropTarget` per rispondere al `GetDropTarget` notifica dal controllo del Browser Web Microsoft. Vedere [IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] per ulteriori informazioni.  
   
-##  <a name="a-nameongetexternala--chtmlviewongetexternal"></a><a name="ongetexternal"></a>CHtmlView::OnGetExternal  
+##  <a name="ongetexternal"></a>CHtmlView::OnGetExternal  
  Chiamata eseguita da Internet Explorer o MSHTML per ottenere l'interfaccia dell'host `IDispatch` .  
   
 ```  
@@ -1053,7 +1148,7 @@ virtual HRESULT OnGetExternal(LPDISPATCH* lppDispatch);
 ### <a name="remarks"></a>Note  
  Eseguire l'override `OnGetExternal` per rispondere al `GetExternal` notifica dal controllo del Browser Web Microsoft. Vedere [IDocHostUIHandler::GetExternal](https://msdn.microsoft.com/library/aa753256.aspx) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] per ulteriori informazioni.  
   
-##  <a name="a-nameongethostinfoa--chtmlviewongethostinfo"></a><a name="ongethostinfo"></a>CHtmlView::OnGetHostInfo  
+##  <a name="ongethostinfo"></a>CHtmlView::OnGetHostInfo  
  Recupera le funzionalità dell'interfaccia utente dell'host di Internet Explorer o MSHTML.  
   
 ```  
@@ -1070,7 +1165,7 @@ virtual HRESULT OnGetHostInfo(DOCHOSTUIINFO* pInfo);
 ### <a name="remarks"></a>Note  
  Eseguire l'override `OnGetHostInfo` per rispondere al `GetHostInfo` notifica dal controllo del Browser Web Microsoft. Vedere [IDocHostUIHandler::GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] per ulteriori informazioni.  
   
-##  <a name="a-nameongetoptionkeypatha--chtmlviewongetoptionkeypath"></a><a name="ongetoptionkeypath"></a>CHtmlView::OnGetOptionKeyPath  
+##  <a name="ongetoptionkeypath"></a>CHtmlView::OnGetOptionKeyPath  
  Chiamare questa funzione membro per ottenere la chiave del Registro di sistema in cui Internet Explorer o MSHTML archivia le preferenze dell'utente.  
   
 ```  
@@ -1092,7 +1187,7 @@ virtual HRESULT OnGetOptionKeyPath(
 ### <a name="remarks"></a>Note  
  Eseguire l'override `OnGetOptionKeyPath` per rispondere al `GetOptionKeyPath` notifica dal controllo del Browser Web Microsoft. Vedere [IDocHostUIHandler::GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] per ulteriori informazioni.  
   
-##  <a name="a-nameonhideuia--chtmlviewonhideui"></a><a name="onhideui"></a>CHtmlView::OnHideUI  
+##  <a name="onhideui"></a>CHtmlView::OnHideUI  
  Questa funzione membro viene chiamata dal framework quando Internet Explorer o MSHTML rimuove i menu e barre degli strumenti.  
   
 ```  
@@ -1105,7 +1200,7 @@ virtual HRESULT OnHideUI();
 ### <a name="remarks"></a>Note  
  Eseguire l'override `OnHideUI` per rispondere al `HideUI` notifica dal controllo del Browser Web Microsoft. Vedere [IDocHostUIHandler::HideUI](https://msdn.microsoft.com/library/aa753259.aspx) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] per ulteriori informazioni.  
   
-##  <a name="a-nameonmenubara--chtmlviewonmenubar"></a><a name="onmenubar"></a>CHtmlView::OnMenuBar  
+##  <a name="onmenubar"></a>CHtmlView::OnMenuBar  
  Questa funzione membro viene chiamata dal framework quando il [MenuBar](https://msdn.microsoft.com/library/aa752131.aspx) proprietà è stata modificata.  
   
 ```  
@@ -1116,7 +1211,7 @@ virtual void OnMenuBar(BOOL bMenuBar);
  *bMenuBar*  
  Diverso da zero se la barra dei menu di Internet Explorer è visibile; in caso contrario, zero.  
   
-##  <a name="a-nameonnavigatecomplete2a--chtmlviewonnavigatecomplete2"></a><a name="onnavigatecomplete2"></a>CHtmlView::OnNavigateComplete2  
+##  <a name="onnavigatecomplete2"></a>CHtmlView::OnNavigateComplete2  
  Questa funzione membro viene chiamata dal framework dopo uno spostamento in un collegamento ipertestuale viene completata (elemento di una finestra o frame).  
   
 ```  
@@ -1132,7 +1227,7 @@ virtual void OnNavigateComplete2(LPCTSTR strURL);
   
  Si noti che l'URL del contenuto in *strURL* può essere diverso dall'URL che il browser è stato detto a cui passare, perché questo URL è l'URL completo e in forma canonica. Ad esempio, se un'applicazione specifica un URL "www.microsoft.com" in una chiamata a [Navigate](#navigate) o [Navigate2](#navigate2), l'URL passato `OnNavigateComplete2` sarà "http://www.microsoft.com/". Inoltre, se il server ha reindirizzato il browser su un URL diverso, l'URL reindirizzato comparirà qui.  
   
-##  <a name="a-nameonnavigateerrora--chtmlviewonnavigateerror"></a><a name="onnavigateerror"></a>CHtmlView::OnNavigateError  
+##  <a name="onnavigateerror"></a>CHtmlView::OnNavigateError  
  Chiamata eseguita dal framework in caso di errore di un collegamento ipertestuale.  
   
 ```  
@@ -1161,7 +1256,7 @@ virtual void OnNavigateError(
   
  Per ulteriori informazioni, vedere [DWebBrowserEvents2::NavigateError](https://msdn.microsoft.com/library/aa768286.aspx)  
   
-##  <a name="a-nameonnewwindow2a--chtmlviewonnewwindow2"></a><a name="onnewwindow2"></a>CHtmlView::OnNewWindow2  
+##  <a name="onnewwindow2"></a>CHtmlView::OnNewWindow2  
  Questa funzione membro viene chiamata dal framework quando viene creato per la visualizzazione di una risorsa di una nuova finestra.  
   
 ```  
@@ -1180,7 +1275,7 @@ virtual void OnNewWindow2(
 ### <a name="remarks"></a>Note  
  Questo evento precede la creazione di una nuova finestra all'interno il controllo WebBrowser.  
   
-##  <a name="a-nameonprogresschangea--chtmlviewonprogresschange"></a><a name="onprogresschange"></a>CHtmlView::OnProgressChange  
+##  <a name="onprogresschange"></a>CHtmlView::OnProgressChange  
  Questa funzione membro viene chiamata dal framework per notificare a un'applicazione che lo stato di avanzamento di un'operazione di download è stato aggiornato.  
   
 ```  
@@ -1199,7 +1294,7 @@ virtual void OnProgressChange(
 ### <a name="remarks"></a>Note  
  Il contenitore può utilizzare le informazioni fornite da questo evento per visualizzare il numero di byte scaricati o per aggiornare un indicatore di stato.  
   
-##  <a name="a-nameonpropertychangea--chtmlviewonpropertychange"></a><a name="onpropertychange"></a>CHtmlView::OnPropertyChange  
+##  <a name="onpropertychange"></a>CHtmlView::OnPropertyChange  
  Questa funzione membro viene chiamata dal framework per notificare a un'applicazione che [PutProperty](#putproperty) ha modificato il valore di una proprietà.  
   
 ```  
@@ -1210,14 +1305,14 @@ virtual void OnPropertyChange(LPCTSTR lpszProperty);
  `lpszProperty`  
  Un puntatore a una stringa contenente il nome della proprietà.  
   
-##  <a name="a-nameonquita--chtmlviewonquit"></a><a name="onquit"></a>CHtmlView::OnQuit  
+##  <a name="onquit"></a>CHtmlView::OnQuit  
  Questa funzione membro viene chiamata dal framework per notificare a un'applicazione che è possibile chiudere l'applicazione di Internet Explorer.  
   
 ```  
 virtual void OnQuit();
 ```  
   
-##  <a name="a-nameonresizebordera--chtmlviewonresizeborder"></a><a name="onresizeborder"></a>CHtmlView::OnResizeBorder  
+##  <a name="onresizeborder"></a>CHtmlView::OnResizeBorder  
  Chiamato dall'implementazione di Internet Explorer o MSHTML di [IOleInPlaceActiveObject::ResizeBorder](http://msdn.microsoft.com/library/windows/desktop/ms680053), che avvisa l'oggetto che è necessario ridimensionare il relativo spazio di bordo.  
   
 ```  
@@ -1243,7 +1338,7 @@ virtual HRESULT OnResizeBorder(
 ### <a name="remarks"></a>Note  
  Eseguire l'override `OnResizeBorder` per rispondere al `ResizeBorder` notifica dal controllo del Browser Web Microsoft. Vedere [IDocHostUIHandler::ResizeBorder](https://msdn.microsoft.com/library/aa753263.aspx) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] per ulteriori informazioni.  
   
-##  <a name="a-nameonshowcontextmenua--chtmlviewonshowcontextmenu"></a><a name="onshowcontextmenu"></a>CHtmlView::OnShowContextMenu  
+##  <a name="onshowcontextmenu"></a>CHtmlView::OnShowContextMenu  
  Chiamata eseguita da Internet Explorer o MSHTML quando sta per visualizzare il menu di scelta rapida.  
   
 ```  
@@ -1273,7 +1368,7 @@ virtual HRESULT OnShowContextMenu(
 ### <a name="remarks"></a>Note  
  Eseguire l'override `OnShowContextMenu` per rispondere al `ShowContextMenu` notifica dal controllo del Browser Web Microsoft. Vedere [IDocHostUIHandler::ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] per ulteriori informazioni.  
   
-##  <a name="a-nameonshowuia--chtmlviewonshowui"></a><a name="onshowui"></a>CHtmlView::OnShowUI  
+##  <a name="onshowui"></a>CHtmlView::OnShowUI  
  Chiamata eseguita prima che Internet Explorer o MSHTML visualizzi i menu e le barre degli strumenti.  
   
 ```  
@@ -1307,7 +1402,7 @@ virtual HRESULT OnShowUI(
 ### <a name="remarks"></a>Note  
  Eseguire l'override `OnShowUI` per rispondere al `ShowUI` notifica dal controllo del Browser Web Microsoft. Vedere [IDocHostUIHandler::ShowUI](https://msdn.microsoft.com/library/aa753265.aspx) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] per ulteriori informazioni.  
   
-##  <a name="a-nameonstatusbara--chtmlviewonstatusbar"></a><a name="onstatusbar"></a>CHtmlView::OnStatusBar  
+##  <a name="onstatusbar"></a>CHtmlView::OnStatusBar  
  Questa funzione membro viene chiamata dal framework quando il [StatusBar](https://msdn.microsoft.com/library/aa768270.aspx) proprietà è stata modificata.  
   
 ```  
@@ -1318,7 +1413,7 @@ virtual void OnStatusBar(BOOL bStatusBar);
  *bStatusBar*  
  Diverso da zero se la barra di stato Internet Explorer o zero in caso contrario.  
   
-##  <a name="a-nameonstatustextchangea--chtmlviewonstatustextchange"></a><a name="onstatustextchange"></a>CHtmlView::OnStatusTextChange  
+##  <a name="onstatustextchange"></a>CHtmlView::OnStatusTextChange  
  Questa funzione membro viene chiamata dal framework per notificare a un'applicazione che viene modificato il testo della barra di stato associato al controllo WebBrowser.  
   
 ```  
@@ -1329,7 +1424,7 @@ virtual void OnStatusTextChange(LPCTSTR lpszText);
  `lpszText`  
  Stringa che contiene il nuovo testo della barra di stato.  
   
-##  <a name="a-nameontheatermodea--chtmlviewontheatermode"></a><a name="ontheatermode"></a>CHtmlView::OnTheaterMode  
+##  <a name="ontheatermode"></a>CHtmlView::OnTheaterMode  
  Questa funzione membro viene chiamata dal framework quando il [TheaterMode viene](https://msdn.microsoft.com/library/aa768273.aspx) proprietà è stata modificata.  
   
 ```  
@@ -1340,7 +1435,7 @@ virtual void OnTheaterMode(BOOL bTheaterMode);
  *bTheaterMode*  
  Diverso da zero se Internet Explorer è in modalità teatro. in caso contrario, zero.  
   
-##  <a name="a-nameontitlechangea--chtmlviewontitlechange"></a><a name="ontitlechange"></a>CHtmlView::OnTitleChange  
+##  <a name="ontitlechange"></a>CHtmlView::OnTitleChange  
  Questa funzione membro viene chiamata da .NET framework per notificare a un'applicazione se il titolo di un documento nel controllo WebBrowser diventa disponibile o le modifiche.  
   
 ```  
@@ -1354,7 +1449,7 @@ virtual void OnTitleChange(LPCTSTR lpszText);
 ### <a name="remarks"></a>Note  
  Per HTML, è possibile modificare il titolo; mentre è ancora il download di HTML, come il titolo è impostato l'URL del documento. Dopo il titolo reale (se presente) viene analizzato dal codice HTML, il titolo viene modificato per riflettere il titolo effettivo.  
   
-##  <a name="a-nameontoolbara--chtmlviewontoolbar"></a><a name="ontoolbar"></a>CHtmlView::OnToolBar  
+##  <a name="ontoolbar"></a>CHtmlView::OnToolBar  
  Questa funzione membro viene chiamata dal framework quando il [sulla barra degli strumenti](https://msdn.microsoft.com/library/aa768274.aspx) proprietà è stata modificata.  
   
 ```  
@@ -1365,7 +1460,7 @@ virtual void OnToolBar(BOOL bToolBar);
  *bToolBar*  
  Diverso da zero se è visibile sulla barra degli strumenti di Internet Explorer o zero in caso contrario.  
   
-##  <a name="a-nameontranslateacceleratora--chtmlviewontranslateaccelerator"></a><a name="ontranslateaccelerator"></a>CHtmlView::OnTranslateAccelerator  
+##  <a name="ontranslateaccelerator"></a>CHtmlView::OnTranslateAccelerator  
  Chiamato da Internet Explorer o MSHTML quando [IOleInPlaceActiveObject::TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms693360) o [IOleControlSite::TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms693756) viene chiamato per elaborare i messaggi di tasto di scelta rapida di menu dalla coda di messaggi del contenitore.  
   
 ```  
@@ -1391,7 +1486,7 @@ virtual HRESULT OnTranslateAccelerator(
 ### <a name="remarks"></a>Note  
  Eseguire l'override `OnTranslateAccelerator` per rispondere al `TranslateAccelerator` notifica dal controllo del Browser Web Microsoft. Vedere [IDocHostUIHandler::TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] per ulteriori informazioni.  
   
-##  <a name="a-nameontranslateurla--chtmlviewontranslateurl"></a><a name="ontranslateurl"></a>CHtmlView::OnTranslateUrl  
+##  <a name="ontranslateurl"></a>CHtmlView::OnTranslateUrl  
  Chiamata eseguita da Internet Explorer o MSHTML per consentire all'host la possibilità di modificare l'URL che deve essere caricato.  
   
 ```  
@@ -1417,7 +1512,7 @@ virtual HRESULT OnTranslateUrl(
 ### <a name="remarks"></a>Note  
  Eseguire l'override `OnTranslateUrl` per rispondere al `TranslateUrl` notifica dal controllo del Browser Web Microsoft. Vedere [IDocHostUIHandler::TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] per ulteriori informazioni.  
   
-##  <a name="a-nameonupdateuia--chtmlviewonupdateui"></a><a name="onupdateui"></a>CHtmlView::OnUpdateUI  
+##  <a name="onupdateui"></a>CHtmlView::OnUpdateUI  
  Notifica all'host che lo stato del comando è stato modificato.  
   
 ```  
@@ -1430,7 +1525,7 @@ virtual HRESULT OnUpdateUI();
 ### <a name="remarks"></a>Note  
  L'host deve aggiornare lo stato dei pulsanti della barra degli strumenti. Questo metodo viene chiamato indipendentemente dal valore restituito da `ShowUI`. Eseguire l'override `OnUpdateUI` per rispondere al `UpdateUI` notifica dal controllo del Browser Web Microsoft.  
   
-##  <a name="a-nameonvisiblea--chtmlviewonvisible"></a><a name="onvisible"></a>CHtmlView::OnVisible  
+##  <a name="onvisible"></a>CHtmlView::OnVisible  
  Questa funzione membro viene chiamata dal framework quando la finestra del controllo WebBrowser debba essere mostrata o nascosta.  
   
 ```  
@@ -1444,7 +1539,7 @@ virtual void OnVisible(BOOL bVisible);
 ### <a name="remarks"></a>Note  
  Questo consente l'oggetto controllo host della finestra funziona allo stesso modo, che si comporteranno la finestra di Internet Explorer.  
   
-##  <a name="a-nameputpropertya--chtmlviewputproperty"></a><a name="putproperty"></a>CHtmlView::PutProperty  
+##  <a name="putproperty"></a>CHtmlView::PutProperty  
  Chiamare questa funzione membro per impostare la proprietà associata a un determinato oggetto.  
   
 ```  
@@ -1498,7 +1593,7 @@ void PutProperty(
 ### <a name="remarks"></a>Note  
  Si applica a WebBrowser e Internet Explorer.  
   
-##  <a name="a-namequeryformscommanda--chtmlviewqueryformscommand"></a><a name="queryformscommand"></a>CHtmlView::QueryFormsCommand  
+##  <a name="queryformscommand"></a>CHtmlView::QueryFormsCommand  
  Query per lo stato di uno o più comandi generati dagli eventi dell'interfaccia utente.  
   
 ```  
@@ -1528,7 +1623,7 @@ HRESULT QueryFormsCommand(
 ### <a name="remarks"></a>Note  
  `QueryFormsCommand`implementa il comportamento di [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) metodo.  
   
-##  <a name="a-namequerystatuswba--chtmlviewquerystatuswb"></a><a name="querystatuswb"></a>CHtmlView::QueryStatusWB  
+##  <a name="querystatuswb"></a>CHtmlView::QueryStatusWB  
  Chiamare questa funzione membro per eseguire una query sullo stato di un comando.  
   
 ```  
@@ -1547,7 +1642,7 @@ OLECMDF QueryStatusWB(OLECMDID cmdID) const;
   
  Si applica a WebBrowser e Internet Explorer.  
   
-##  <a name="a-namerefresha--chtmlviewrefresh"></a><a name="refresh"></a>CHtmlView::Refresh  
+##  <a name="refresh"></a>CHtmlView::Refresh  
  Ricarica l'URL o un file che è attualmente visualizzato nel browser web.  
   
 ```  
@@ -1559,7 +1654,7 @@ void Refresh();
   
  Si applica a WebBrowser e Internet Explorer.  
   
-##  <a name="a-namerefresh2a--chtmlviewrefresh2"></a><a name="refresh2"></a>CHtmlView::Refresh2  
+##  <a name="refresh2"></a>CHtmlView::Refresh2  
  Ricarica il file di Internet Explorer è attualmente visualizzato.  
   
 ```  
@@ -1575,7 +1670,7 @@ void Refresh2(int nLevel);
   
  Si applica a WebBrowser e Internet Explorer.  
   
-##  <a name="a-namesetaddressbara--chtmlviewsetaddressbar"></a><a name="setaddressbar"></a>CHtmlView::SetAddressBar  
+##  <a name="setaddressbar"></a>CHtmlView::SetAddressBar  
  Chiamare questa funzione membro per mostrare o nascondere la barra degli indirizzi dell'oggetto Internet Explorer.  
   
 ```  
@@ -1589,7 +1684,7 @@ void SetAddressBar(BOOL bNewValue);
 ### <a name="remarks"></a>Note  
  Si applica a Internet Explorer. Se si utilizza questa chiamata con un controllo WebBrowser, non verrà restituito alcun errore, ma lo ignora questa chiamata.  
   
-##  <a name="a-namesetfullscreena--chtmlviewsetfullscreen"></a><a name="setfullscreen"></a>CHtmlView::SetFullScreen  
+##  <a name="setfullscreen"></a>CHtmlView::SetFullScreen  
  Chiamare questa funzione membro per impostare entrambe le modalità schermo intero o normale finestra di Internet Explorer.  
   
 ```  
@@ -1605,7 +1700,7 @@ void SetFullScreen(BOOL bNewValue);
   
  Si applica a Internet Explorer. Se si utilizza questa chiamata con un controllo WebBrowser, non verrà restituito alcun errore, ma lo ignora questa chiamata.  
   
-##  <a name="a-namesetheighta--chtmlviewsetheight"></a><a name="setheight"></a>CHtmlView::SetHeight  
+##  <a name="setheight"></a>CHtmlView::SetHeight  
  Chiamare questa funzione membro per impostare l'altezza della finestra principale di Internet Explorer.  
   
 ```  
@@ -1619,7 +1714,7 @@ void SetHeight(long nNewValue);
 ### <a name="remarks"></a>Note  
  Si applica a WebBrowser e Internet Explorer.  
   
-##  <a name="a-namesetlefta--chtmlviewsetleft"></a><a name="setleft"></a>CHtmlView::SetLeft  
+##  <a name="setleft"></a>CHtmlView::SetLeft  
  Imposta la posizione orizzontale della finestra principale di Internet Explorer.  
   
 ```  
@@ -1630,7 +1725,7 @@ void SetLeft(long nNewValue);
  `nNewValue`  
  Coordinata dello schermo del bordo sinistro della finestra principale.  
   
-##  <a name="a-namesetmenubara--chtmlviewsetmenubar"></a><a name="setmenubar"></a>CHtmlView::SetMenuBar  
+##  <a name="setmenubar"></a>CHtmlView::SetMenuBar  
  Chiamare questa funzione membro per mostrare o nascondere la barra dei menu di Internet Explorer.  
   
 ```  
@@ -1644,7 +1739,7 @@ void SetMenuBar(BOOL bNewValue);
 ### <a name="remarks"></a>Note  
  Si applica a Internet Explorer. Se si utilizza questa chiamata con un controllo WebBrowser, non verrà restituito alcun errore, ma lo ignora questa chiamata.  
   
-##  <a name="a-namesetofflinea--chtmlviewsetoffline"></a><a name="setoffline"></a>CHtmlView::SetOffline  
+##  <a name="setoffline"></a>CHtmlView::SetOffline  
  Chiamare questa funzione membro per impostare un valore che indica se il controllo WebBrowser operano in modalità offline.  
   
 ```  
@@ -1660,7 +1755,7 @@ void SetOffline(BOOL bNewValue);
   
  Si applica a WebBrowser e Internet Explorer.  
   
-##  <a name="a-namesetregisterasbrowsera--chtmlviewsetregisterasbrowser"></a><a name="setregisterasbrowser"></a>CHtmlView::SetRegisterAsBrowser  
+##  <a name="setregisterasbrowser"></a>CHtmlView::SetRegisterAsBrowser  
  Chiamare questa funzione membro per impostare un valore che indica se il controllo WebBrowser viene registrato come un browser di livello superiore per la risoluzione dei nomi di destinazione.  
   
 ```  
@@ -1676,7 +1771,7 @@ void SetRegisterAsBrowser(BOOL bNewValue);
   
  Si applica a WebBrowser e Internet Explorer.  
   
-##  <a name="a-namesetregisterasdroptargeta--chtmlviewsetregisterasdroptarget"></a><a name="setregisterasdroptarget"></a>CHtmlView::SetRegisterAsDropTarget  
+##  <a name="setregisterasdroptarget"></a>CHtmlView::SetRegisterAsDropTarget  
  Chiamare questa funzione membro per impostare un valore che indica se il controllo WebBrowser viene registrato come destinazione di rilascio per la navigazione.  
   
 ```  
@@ -1690,7 +1785,7 @@ void SetRegisterAsDropTarget(BOOL bNewValue);
 ### <a name="remarks"></a>Note  
  Si applica a WebBrowser e Internet Explorer.  
   
-##  <a name="a-namesetsilenta--chtmlviewsetsilent"></a><a name="setsilent"></a>CHtmlView::SetSilent  
+##  <a name="setsilent"></a>CHtmlView::SetSilent  
  Chiamare questa funzione membro per impostare un valore che indica se può essere visualizzata alcuna finestra di dialogo.  
   
 ```  
@@ -1704,7 +1799,7 @@ void SetSilent(BOOL bNewValue);
 ### <a name="remarks"></a>Note  
  Si applica a WebBrowser e Internet Explorer.  
   
-##  <a name="a-namesetstatusbara--chtmlviewsetstatusbar"></a><a name="setstatusbar"></a>CHtmlView::SetStatusBar  
+##  <a name="setstatusbar"></a>CHtmlView::SetStatusBar  
  Chiamare questa funzione membro per visualizzare la barra di stato.  
   
 ```  
@@ -1718,7 +1813,7 @@ void SetStatusBar(BOOL bNewValue);
 ### <a name="remarks"></a>Note  
  Si applica a Internet Explorer. Se si utilizza questa chiamata con un controllo WebBrowser, non verrà restituito alcun errore, ma lo ignora questa chiamata.  
   
-##  <a name="a-namesettheatermodea--chtmlviewsettheatermode"></a><a name="settheatermode"></a>CHtmlView::SetTheaterMode  
+##  <a name="settheatermode"></a>CHtmlView::SetTheaterMode  
  Chiamare questa funzione membro per impostare un valore che indica se il controllo WebBrowser è in modalità teatro.  
   
 ```  
@@ -1734,7 +1829,7 @@ void SetTheaterMode(BOOL bNewValue);
   
  Si applica a WebBrowser e Internet Explorer.  
   
-##  <a name="a-namesettoolbara--chtmlviewsettoolbar"></a><a name="settoolbar"></a>CHtmlView::SetToolBar  
+##  <a name="settoolbar"></a>CHtmlView::SetToolBar  
  Chiamare questa funzione membro per mostrare o nascondere la barra degli strumenti di Internet Explorer.  
   
 ```  
@@ -1748,7 +1843,7 @@ void SetToolBar(int nNewValue);
 ### <a name="remarks"></a>Note  
  Si applica a Internet Explorer. Se si utilizza questa chiamata con un controllo WebBrowser, non verrà restituito alcun errore, ma lo ignora questa chiamata.  
   
-##  <a name="a-namesettopa--chtmlviewsettop"></a><a name="settop"></a>CHtmlView::SetTop  
+##  <a name="settop"></a>CHtmlView::SetTop  
  Chiamare questa funzione membro per impostare la distanza tra il margine interno superiore del controllo WebBrowser e il bordo superiore del relativo contenitore  
   
 ```  
@@ -1762,7 +1857,7 @@ void SetTop(long nNewValue);
 ### <a name="remarks"></a>Note  
  Si applica a WebBrowser e Internet Explorer.  
   
-##  <a name="a-namesetvisiblea--chtmlviewsetvisible"></a><a name="setvisible"></a>CHtmlView::SetVisible  
+##  <a name="setvisible"></a>CHtmlView::SetVisible  
  Chiamare questa funzione membro per impostare lo stato di visibilità del controllo WebBrowser.  
   
 ```  
@@ -1776,7 +1871,7 @@ void SetVisible(BOOL bNewValue);
 ### <a name="remarks"></a>Note  
  Si applica a WebBrowser e Internet Explorer.  
   
-##  <a name="a-namesetwidtha--chtmlviewsetwidth"></a><a name="setwidth"></a>CHtmlView::SetWidth  
+##  <a name="setwidth"></a>CHtmlView::SetWidth  
  Imposta la larghezza della finestra principale di Internet Explorer.  
   
 ```  
@@ -1787,7 +1882,7 @@ void SetWidth(long nNewValue);
  `nNewValue`  
  La larghezza, in pixel, della finestra principale di Internet Explorer.  
   
-##  <a name="a-namestopa--chtmlviewstop"></a><a name="stop"></a>CHtmlView::Stop  
+##  <a name="stop"></a>CHtmlView::Stop  
  Chiamare questa funzione membro per Annulla ogni spostamento in sospeso o operazione di download e arresta qualsiasi elemento dinamico della pagina, ad esempio background suoni e animazioni.  
   
 ```  

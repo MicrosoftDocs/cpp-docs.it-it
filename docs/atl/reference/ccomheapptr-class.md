@@ -9,11 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CComHeapPtr
-- ATL.CComHeapPtr<T>
-- ATL::CComHeapPtr<T>
 - CComHeapPtr
-- ATL.CComHeapPtr
+- ATLBASE/ATL::CComHeapPtr
+- ATLBASE/ATL::CComHeapPtr::CComHeapPtr
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -78,7 +76,7 @@ class CComHeapPtr : public CHeapPtr<T, CComAllocator>
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlbase. h  
   
-##  <a name="a-nameccomheapptra--ccomheapptrccomheapptr"></a><a name="ccomheapptr"></a>CComHeapPtr::CComHeapPtr  
+##  <a name="ccomheapptr"></a>CComHeapPtr::CComHeapPtr  
  Costruttore.  
   
 ```

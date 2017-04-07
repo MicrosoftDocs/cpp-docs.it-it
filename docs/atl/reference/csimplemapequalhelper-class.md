@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSimpleMapEqualHelper
+- ATLSIMPCOLL/ATL::CSimpleMapEqualHelper
+- ATLSIMPCOLL/ATL::CSimpleMapEqualHelper::IsEqualKey
+- ATLSIMPCOLL/ATL::CSimpleMapEqualHelper::IsEqualValue
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -71,7 +74,7 @@ class CSimpleMapEqualHelper
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlsimpcoll. h  
   
-##  <a name="a-nameisequalkeya--csimplemapequalhelperisequalkey"></a><a name="isequalkey"></a>CSimpleMapEqualHelper::IsEqualKey  
+##  <a name="isequalkey"></a>CSimpleMapEqualHelper::IsEqualKey  
  Verifica l'uguaglianza delle due chiavi.  
   
 ```
@@ -88,7 +91,7 @@ static bool IsEqualKey(const TKey& k1, const TKey& k2);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce true se le chiavi sono uguali, false in caso contrario.  
   
-##  <a name="a-nameisequalvaluea--csimplemapequalhelperisequalvalue"></a><a name="isequalvalue"></a>CSimpleMapEqualHelper::IsEqualValue  
+##  <a name="isequalvalue"></a>CSimpleMapEqualHelper::IsEqualValue  
  Test di uguaglianza dei due valori.  
   
 ```

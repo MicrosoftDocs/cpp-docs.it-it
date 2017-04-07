@@ -33,8 +33,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
+ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
+ms.openlocfilehash: 7ff37399842c7c8d41f8b7d15660c73b8a11f19f
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Cronologia delle modifiche di Visual C++ dal 2003 al 2015
@@ -58,9 +59,9 @@ Quando si esegue l'aggiornamento a una nuova versione del compilatore Visual C++
   
 4.  [Modifiche importanti apportate al runtime di concorrenza](#BK_ConcRT)  
   
-## <a name="a-namevc2015a-visual-c-2015-conformance-changes"></a><a name="VC_2015"></a>Modifiche della conformità di Visual C++ 2015  
+## <a name="VC_2015"></a>Modifiche della conformità di Visual C++ 2015  
   
-###  <a name="a-namebkcrta-c-runtime-library-crt"></a><a name="BK_CRT"></a> Libreria di runtime C (CRT)  
+###  <a name="BK_CRT"></a> Libreria di runtime C (CRT)  
   
 #### <a name="general-changes"></a>Modifiche generali  
   
@@ -94,7 +95,7 @@ Quando si esegue l'aggiornamento a una nuova versione del compilatore Visual C++
   
      La correzione per questo avviso consiste nel sostituire la chiamata a abs con una versione a virgola mobile di abs, ad esempio fabs per un argomento double o fabsf per un argomento float o includere l'intestazione cmath e continuare a usare abs.  
   
--   **Conformità del punto a virgola mobile** Sono state apportate numerose modifiche alla libreria matematica per migliorare la conformità alle specifiche IEEE&754; e C11 allegato F rispetto all'input per casi speciali, ad esempio NaN e infiniti. Ad esempio, gli input NaN non interattivi, che spesso venivano considerati errori nelle versioni precedenti della libreria, non vengono più considerati errori. Vedere [Standard IEEE 754](http://grouper.ieee.org/groups/754) e l'allegato F dello [Standard C11](http://www.iso-9899.info/wiki/The_Standard).  
+-   **Conformità del punto a virgola mobile** Sono state apportate numerose modifiche alla libreria matematica per migliorare la conformità alle specifiche IEEE 754 e C11 allegato F rispetto all'input per casi speciali, ad esempio NaN e infiniti. Ad esempio, gli input NaN non interattivi, che spesso venivano considerati errori nelle versioni precedenti della libreria, non vengono più considerati errori. Vedere [Standard IEEE 754](http://grouper.ieee.org/groups/754) e l'allegato F dello [Standard C11](http://www.iso-9899.info/wiki/The_Standard).  
   
      Queste modifiche non provocheranno errori in fase di compilazione, ma potrebbero causare un comportamento diverso da parte dei programmi, sebbene più corretto in base allo standard.  
   
@@ -102,7 +103,7 @@ Quando si esegue l'aggiornamento a una nuova versione del compilatore Visual C++
   
 #### <a name="new-and-newh"></a>\<new> e \<new.h>  
   
--   **new e delete** In previous versions of the library, the implementation-defined operator new e delete functions were exported from the runtime library DLL (for example, msvcr120.dll). Queste funzioni operatore ora sono sempre collegate staticamente nei file binari, anche quando si usano le DLL della libreria di runtime.  
+-   **new e delete** Nelle versioni precedenti della libreria le funzioni dell'operatore new e delete definito dall'implementazione venivano esportate dalla libreria di runtime DLL (ad esempio, msvcr120.dll). Queste funzioni operatore ora sono sempre collegate staticamente nei file binari, anche quando si usano le DLL della libreria di runtime.  
   
      Non si tratta di una modifica rilevante per il codice misto o nativo (/clr), tuttavia per il codice compilato come [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md) potrebbe causare un errore di compilazione da parte del codice. Se si compila codice come /clr:pure, può essere necessario aggiungere #include \<new> o #include \<new.h> per risolvere errori di compilazione dovuti a questa modifica. Si noti che /clr:pure è deprecato in [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] e potrebbe essere rimosso nelle versioni future.  
   
@@ -180,7 +181,7 @@ Quando si esegue l'aggiornamento a una nuova versione del compilatore Visual C++
   
 -   **Precisione %A e %a** La precisione predefinita degli identificatori di formato %A e %a era 6 nelle versioni precedenti della libreria. La precisione predefinita è ora 13 per conformità agli standard C.  
   
-     Si tratta di una modifica del comportamento di runtime nell'output di qualsiasi funzione che usa una stringa di formato con %A o %a. Nel comportamento precedente l'output che usava l'identificatore %A potrebbe essere "1.1A2B3Cp+111". A questo punto l'output per lo stesso valore è "1.1A2B3C4D5E6F7p +&111;". Per ottenere il comportamento precedente, è possibile specificare la precisione, ad esempio, %.6A. Vedere [Specifica precisione](../c-runtime-library/precision-specification.md).  
+     Si tratta di una modifica del comportamento di runtime nell'output di qualsiasi funzione che usa una stringa di formato con %A o %a. Nel comportamento precedente l'output che usava l'identificatore %A potrebbe essere "1.1A2B3Cp+111". A questo punto l'output per lo stesso valore è "1.1A2B3C4D5E6F7p + 111". Per ottenere il comportamento precedente, è possibile specificare la precisione, ad esempio, %.6A. Vedere [Specifica precisione](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md#precision).  
   
 -   **Identificatore %F** L'identificatore di conversione o di formato %F è ora supportato. È funzionalmente equivalente all'identificatore di formato %f, ad eccezione del fatto che valori infiniti e NaN vengono formattati con lettere maiuscole.  
   
@@ -252,7 +253,7 @@ Quando si esegue l'aggiornamento a una nuova versione del compilatore Visual C++
   
 -   **CLOCKS_PER_SEC** La macro CLOCKS_PER_SEC ora si espande in un numero intero di tipo clock_t, come richiesto dal linguaggio C.  
   
-####  <a name="a-namebkstla-c-standard-library"></a><a name="BK_STL"></a> Libreria standard C++  
+####  <a name="BK_STL"></a> Libreria standard C++  
  Per attivare nuove ottimizzazioni e controlli di debug, l'implementazione di Visual Studio della libreria standard C++ interrompe intenzionalmente la compatibilità binaria da una versione a quella successiva. Pertanto, se si usa la libreria standard C++, i file oggetto e le librerie statiche compilati usando versioni diverse non possono essere combinati in un file binario (EXE o DLL) e gli oggetti della libreria standard C++ non possono essere passati tra i file binari compilati usando versioni diverse. Tale combinazione genera errori del linker relativi a mancate corrispondenze di _MSC_VER. _MSC_VER è la macro che contiene il numero di versione principale del compilatore, ad esempio 1800 per Visual Studio 2013. Questo controllo non consente di rilevare la combinazione DLL e altre combinazioni inerenti a Visual C++ 2008 o versioni precedenti.  
   
 -   **File di inclusione della libreria standard C++** Sono state apportate alcune modifiche alla struttura di inclusione nelle intestazioni della libreria standard C++. Le intestazioni della libreria standard C++ possono ora includersi reciprocamente in modi non specificati. In generale, è consigliabile scrivere il codice in modo che includa accuratamente tutte le intestazioni necessarie in base allo standard C++ e non si basi su quali intestazioni della libreria standard C++ includono altre intestazioni della libreria standard C++. In questo modo il codice diventa portabile tra versioni e piattaforme. Almeno due modifiche di intestazione in [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] influiscono sul codice utente. Per prima cosa \<string> non include più \<iterator>. Secondo, \<tuple> ora dichiara std::array senza includere tutti i valori \<array>, cosa che può interrompere il codice attraverso la seguente combinazione di costrutti di codice: il codice include una variabile denominata "array", si ha una direttiva using "using namespace std;" e si include un'intestazione della libreria standard C++ (ad esempio \<functional>) che include \<tuple>, che ora dichiara std::array.  
@@ -315,13 +316,13 @@ Quando si esegue l'aggiornamento a una nuova versione del compilatore Visual C++
   
 -   **launch::any e launch::sync policies** The nonstandard launch::any e launch::sync policies were removed. Per launch::any, usare invece launch:async &#124; launch:deferred. Per launch::sync, usare launch::deferred. Vedere [Enumerazione launch](../standard-library/future-enums.md#launch_enumeration).  
   
-####  <a name="a-namebkmfca-mfc-and-atl"></a><a name="BK_MFC"></a> MFC e ATL  
+####  <a name="BK_MFC"></a> MFC e ATL  
   
 -   **Microsoft Foundation Classes (MFC)** non è più incluso in un'installazione "Tipica" di Visual Studio per le grandi dimensioni. Per installare MFC, scegliere l'opzione di installazione personalizzata nel programma di installazione di Visual Studio 2015. Se Visual Studio 2015 è già installato, è possibile installare MFC, eseguendo nuovamente l'installazione di Visual Studio, scegliendo l'opzione di installazione personalizzata e scegliendo Microsoft Foundation Classes. È possibile eseguire nuovamente il programma di installazione di Visual Studio dal Pannello di controllo, Programmi e funzionalità o dai supporti di installazione.  
   
      Il pacchetto ridistribuibile di Visual C++ include ancora questa libreria.  
   
-####  <a name="a-namebkconcrta-concurrency-runtime"></a><a name="BK_ConcRT"></a> Runtime di concorrenza  
+####  <a name="BK_ConcRT"></a> Runtime di concorrenza  
   
 -   **Macro Yield di Windows.h in conflitto con concurrency::Context::Yield** Il runtime di concorrenza in precedenza usava #undef per rimuovere la definizione della macro Yield in modo da evitare conflitti tra la macro Yield definita in Windows.h e la funzione concurrency::Context::Yield. Il runtime #undef è stato rimosso ed è stata aggiunta una nuova chiamata API equivalente non in conflitto [concurrency::Context::YieldExecution](../parallel/concrt/reference/context-class.md#yieldexecution) . Per risolvere i conflitti con Yield, è possibile aggiornare il codice per chiamare la funzione YieldExecution o per racchiudere il nome della funzione Yield tra parentesi nei siti di chiamata, come nell'esempio seguente:  
   
@@ -346,7 +347,7 @@ Quando si esegue l'aggiornamento a una nuova versione del compilatore Visual C++
   
 -   [Miglioramenti della conformità in Update 3](#VS_Update3)  
   
-###  <a name="a-namevsrtma-conformance-improvements-in-visual-c-2015"></a><a name="VS_RTM"></a>Miglioramenti della conformità in Visual C++ 2015  
+###  <a name="VS_RTM"></a>Miglioramenti della conformità in Visual C++ 2015  
   
 -   /Zc:forScope- option  
   
@@ -861,7 +862,7 @@ Quando si esegue l'aggiornamento a una nuova versione del compilatore Visual C++
   
      Sia in [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] che in [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] il compilatore genera un costruttore di copia per una classe se tale classe ha un costruttore di spostamento definito dall'utente, ma nessun costruttore di copia definito dall'utente. In Dev14, questo costruttore di copia generato in modo implicito è contrassegnato come "= delete".  
   
-###  <a name="a-namevsupdate1a-conformance-improvements-in-update-1"></a><a name="VS_Update1"></a> Miglioramenti della conformità in Update 1  
+###  <a name="VS_Update1"></a> Miglioramenti della conformità in Update 1  
   
 -   **Classi base virtuali private ed ereditarietà indiretta**  
   
@@ -948,7 +949,7 @@ Quando si esegue l'aggiornamento a una nuova versione del compilatore Visual C++
   
      Inoltre, nonostante il compilatore non fornisca una diagnostica specifica, il formato dell'operatore new inline viene considerato non valido.  
   
--   **Chiamata di 'operator *type*()' (conversione definita dall'utente) in tipi non classe**  
+-   **Chiamata di 'operator*type*()' (conversione definita dall'utente) in tipi non classe**  
   
      Le versioni precedenti del compilatore consentivano di chiamare 'operator *type*()' su tipi non classe ignorandolo senza avvisare. Questo comportamento precedente creava un rischio di generazione di codice errato senza avvisare, determinando un comportamento imprevedibile in fase di esecuzione. Il compilatore non accetta più il codice scritto in questo modo e genera invece l'errore del compilatore C2228.  
   
@@ -1387,11 +1388,10 @@ Quando si esegue l'aggiornamento a una nuova versione del compilatore Visual C++
     {  
         auto iter = std::find(v.begin(), v.end(), 5);  
     }  
-    catch (…)  
+    catch (...)  
     {  
         do_something();   // ok  
     }  
-  
     ```  
   
      Esempio (dopo)  
@@ -1401,14 +1401,13 @@ Quando si esegue l'aggiornamento a una nuova versione del compilatore Visual C++
     {  
         auto iter = std::find(v.begin(), v.end(), 5);  
     }  
-    catch (…)  
+    catch (...)  
     {  
         do_something();   // warning C4702: unreachable code  
     }  
-  
     ```  
   
-###  <a name="a-namevsupdate2a-conformance-improvements-in-update-2"></a><a name="VS_Update2"></a> Miglioramenti della conformità in Update 2  
+###  <a name="VS_Update2"></a> Miglioramenti della conformità in Update 2  
   
 -   **Errori e avvisi aggiuntivi potrebbero essere generati in seguito a un supporto parziale per l'espressione SFINAE**  
   
@@ -1507,7 +1506,7 @@ Quando si esegue l'aggiornamento a una nuova versione del compilatore Visual C++
   
     ```  
   
--   `volatile` Le variabili membro ** impediscono i costruttori e gli operatori di assegnazione definiti in modo implicito**  
+-   `volatile` Le variabili membro **impediscono i costruttori e gli operatori di assegnazione definiti in modo implicito**  
   
      Le versioni precedenti del compilatore consentivano a una classe con variabili membro `volatile` di generare automaticamente costruttori di copia/spostamento predefiniti e operatori di assegnazione di copia/spostamento predefiniti. Questo comportamento precedente non era corretto e non è conforme allo standard C++. Ora il compilatore presuppone che una classe con variabili membro volatili includa operatori di costruzione e di assegnazione non semplici e, di conseguenza, impedisce la generazione automatica delle implementazioni predefinite di questi operatori.  Quando questa classe è un membro di un'unione (o un'unione anonima all'interno di una classe), i costruttori di copia/spostamento e gli operatori di assegnazione di copia/spostamento dell'unione (o della classe che contiene l'unione anonima) vengono definiti in modo implicito come eliminati. Il tentativo di costruire o copiare l'unione (o la classe che contiene l'unione anonima) senza definirli in modo esplicito è un errore e, di conseguenza, il compilatore genera l'errore C2280.  
   
@@ -1693,7 +1692,7 @@ Quando si esegue l'aggiornamento a una nuova versione del compilatore Visual C++
   
      La correzione del codice scritto in questo modo potrebbe richiedere lo spostamento delle definizioni dell'operatore da un file di intestazione a un file di origine corrispondente.  
   
-###  <a name="a-namevsupdate3a-conformance-improvements-in-update-3"></a><a name="VS_Update3"></a> Miglioramenti della conformità in Update 3  
+###  <a name="VS_Update3"></a> Miglioramenti della conformità in Update 3  
   
 -   **std::is_convertable ora rileva l'assegnazione automatica** (libreria standard)  
   
@@ -2269,7 +2268,7 @@ Quando si esegue l'aggiornamento a una nuova versione del compilatore Visual C++
   
 -   L'opzione /Yl del compilatore è stata modificata. Per impostazione predefinita, il compilatore usa questa opzione, che può provocare errori LNK2011 in determinate condizioni. Per altre informazioni, vedere [/Yl (Inserisce il riferimento PCH per la libreria di debug)](../build/reference/yl-inject-pch-reference-for-debug-library.md).  
   
--   Nel codice compilato con /clr, la parola chiave enum class definisce un enum C++&11;, non un enum Common Language Runtime (CLR). Per definire un enum CLR, è necessario essere espliciti riguardo all'accessibilità.  
+-   Nel codice compilato con /clr, la parola chiave enum class definisce un enum C++ 11, non un enum Common Language Runtime (CLR). Per definire un enum CLR, è necessario essere espliciti riguardo all'accessibilità.  
   
 -   Usare la parola chiave template per evitare in modo esplicito ambiguità di un nome di dipendente (conformità con lo standard del linguaggio C++). Nell'esempio seguente la parola chiave template evidenziata è obbligatoria per risolvere l'ambiguità. Per altre informazioni, vedere [Risoluzione dei nomi per tipi dipendenti](../cpp/name-resolution-for-dependent-types.md).  
   
@@ -2793,8 +2792,3 @@ Quando si esegue l'aggiornamento a una nuova versione del compilatore Visual C++
   
 ## <a name="see-also"></a>Vedere anche  
 [Novità di Visual C++ in Visual Studio](../what-s-new-for-visual-cpp-in-visual-studio.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

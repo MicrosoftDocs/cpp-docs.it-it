@@ -9,7 +9,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::reader_writer_lock
+- reader_writer_lock
+- CONCRT/concurrency::reader_writer_lock
+- CONCRT/concurrency::reader_writer_lock::scoped_lock
+- CONCRT/concurrency::reader_writer_lock::scoped_lock_read
+- CONCRT/concurrency::reader_writer_lock::reader_writer_lock
+- CONCRT/concurrency::reader_writer_lock::lock
+- CONCRT/concurrency::reader_writer_lock::lock_read
+- CONCRT/concurrency::reader_writer_lock::try_lock
+- CONCRT/concurrency::reader_writer_lock::try_lock_read
+- CONCRT/concurrency::reader_writer_lock::unlock
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +43,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: d5d2fde890b0836621fcd1db5bb87b1933bb2a04
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: b5107923baa7d22e6a98c6617a22a883c4d84125
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="readerwriterlock-class"></a>Classe reader_writer_lock
@@ -61,18 +70,18 @@ class reader_writer_lock;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore reader_writer_lock](#ctor)|Costruisce un nuovo oggetto `reader_writer_lock`.|  
+|[reader_writer_lock](#ctor)|Costruisce un nuovo oggetto `reader_writer_lock`.|  
 |[~ reader_writer_lock distruttore](#dtor)|Elimina il `reader_writer_lock` oggetto.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[lock (metodo)](#lock)|Acquisisce il blocco di lettura / scrittura come writer.|  
-|[lock_read (metodo)](#lock_read)|Acquisisce il blocco di lettura / scrittura come lettore. Se sono presenti writer, lettori attivi sono in attesa fino a quando non vengono eseguite. Il lettore semplicemente registra un interesse per il blocco e attende che i writer per rilasciarlo.|  
-|[try_lock (metodo)](#try_lock)|Tenta di acquisire il blocco di lettura / scrittura come writer senza bloccare.|  
-|[try_lock_read (metodo)](#try_lock_read)|Tenta di acquisire il blocco di lettura / scrittura come lettore senza bloccare.|  
-|[Unlock (metodo)](#unlock)|Sblocca il blocco di lettura / scrittura basato su chi ha bloccato, lettore o writer.|  
+|[lock](#lock)|Acquisisce il blocco di lettura / scrittura come writer.|  
+|[lock_read](#lock_read)|Acquisisce il blocco di lettura / scrittura come lettore. Se sono presenti writer, lettori attivi sono in attesa fino a quando non vengono eseguite. Il lettore semplicemente registra un interesse per il blocco e attende che i writer per rilasciarlo.|  
+|[try_lock](#try_lock)|Tenta di acquisire il blocco di lettura / scrittura come writer senza bloccare.|  
+|[try_lock_read](#try_lock_read)|Tenta di acquisire il blocco di lettura / scrittura come lettore senza bloccare.|  
+|[unlock](#unlock)|Sblocca il blocco di lettura / scrittura basato su chi ha bloccato, lettore o writer.|  
   
 ## <a name="remarks"></a>Note  
  Per ulteriori informazioni, vedere [strutture di dati di sincronizzazione](../../../parallel/concrt/synchronization-data-structures.md).  
@@ -85,7 +94,7 @@ class reader_writer_lock;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="a-namelocka-lock"></a><a name="lock"></a>blocco 
+##  <a name="lock"></a>blocco 
 
  Acquisisce il blocco di lettura / scrittura come writer.  
   
@@ -102,7 +111,7 @@ void lock();
   
  Se il blocco è già utilizzato dal contesto di chiamata, un [improper_lock](improper-lock-class.md) verrà generata l'eccezione.  
   
-##  <a name="a-namelockreada-lockread"></a><a name="lock_read"></a>lock_read 
+##  <a name="lock_read"></a>lock_read 
 
  Acquisisce il blocco di lettura / scrittura come lettore. Se sono presenti writer, lettori attivi sono in attesa fino a quando non vengono eseguite. Il lettore semplicemente registra un interesse per il blocco e attende che i writer per rilasciarlo.  
   
@@ -115,7 +124,7 @@ void lock_read();
   
  Se ci sono in attesa sul blocco del writer, il lettore attenderà fino a quando tutti i writer in riga abbiano acquisito e rilasciato il blocco. Questo blocco è alterato dai writer e può essere dannoso per i lettori in condizioni di carico continuo di writer.  
   
-##  <a name="a-namectora-readerwriterlock"></a><a name="ctor"></a>reader_writer_lock 
+##  <a name="ctor"></a>reader_writer_lock 
 
  Costruisce un nuovo oggetto `reader_writer_lock`.  
   
@@ -123,7 +132,7 @@ void lock_read();
 reader_writer_lock();
 ```  
   
-##  <a name="a-namedtora-readerwriterlock"></a><a name="dtor"></a>~ reader_writer_lock 
+##  <a name="dtor"></a>~ reader_writer_lock 
 
  Elimina il `reader_writer_lock` oggetto.  
   
@@ -134,13 +143,13 @@ reader_writer_lock();
 ### <a name="remarks"></a>Note  
  È previsto che il blocco non è più quando il distruttore viene eseguito. Consentire il blocco del writer di lettore distruggere con il blocco ancora mantenuto causa un comportamento indefinito.  
   
-##  <a name="a-namescopedlockclassa--readerwriterlockscopedlock-class"></a><a name="scoped_lock_class"></a>Classe reader_writer_lock:: scoped_lock  
+##  <a name="scoped_lock_class"></a>Classe reader_writer_lock:: scoped_lock  
  Un'eccezione wrapper RAII sicuro che può essere utilizzata per acquisire `reader_writer_lock` oggetti di blocco come writer.  
   
 ```
 class scoped_lock;
 ``` 
-## <a name="a-namescopedlockctora-scopedlockscopedlock"></a><a name="scoped_lock_ctor"></a>scoped_lock::scoped_lock 
+## <a name="scoped_lock_ctor"></a>scoped_lock::scoped_lock 
 
 Costruisce un `scoped_lock` dell'oggetto e acquisisce il `reader_writer_lock` oggetto passato nel `_Reader_writer_lock` parametro come writer. Se il blocco viene mantenuto da un altro thread, questa chiamata verrà bloccata.  
   
@@ -153,7 +162,7 @@ explicit _CRTIMP scoped_lock(reader_writer_lock& _Reader_writer_lock);
  `_Reader_writer_lock`  
  Il `reader_writer_lock` oggetto da acquisire come writer.  
   
-## <a name="a-namescopedlockdtora-scopedlockscopedlock"></a><a name="scoped_lock_dtor"></a>scoped_lock:: ~ scoped_lock 
+## <a name="scoped_lock_dtor"></a>scoped_lock:: ~ scoped_lock 
 
 Elimina un `reader_writer_lock` dell'oggetto e rilascia il blocco fornito nel suo costruttore.   
 
@@ -161,18 +170,18 @@ Elimina un `reader_writer_lock` dell'oggetto e rilascia il blocco fornito nel su
 ~scoped_lock();
 ```  
   
-##  <a name="a-namescopedlockreadclassa--readerwriterlockscopedlockread-class"></a><a name="scoped_lock_read_class"></a>Classe reader_writer_lock:: scoped_lock_read  
+##  <a name="scoped_lock_read_class"></a>Classe reader_writer_lock:: scoped_lock_read  
  Un'eccezione wrapper RAII sicuro che può essere utilizzata per acquisire `reader_writer_lock` oggetti di blocco come lettore.  
   
 ```
 class scoped_lock_read;
 ```  
   
-##  <a name="a-nametrylocka-trylock"></a><a name="try_lock"></a>try_lock 
+##  <a name="try_lock"></a>try_lock 
 
  Tenta di acquisire il blocco di lettura / scrittura come writer senza bloccare.  
 
-## <a name="a-namescopedlockreadctora-scopedlockreadscopedlockread"></a><a name="scoped_lock_read_ctor"></a>scoped_lock_read::scoped_lock_read 
+## <a name="scoped_lock_read_ctor"></a>scoped_lock_read::scoped_lock_read 
 
 Costruisce un `scoped_lock_read` dell'oggetto e acquisisce il `reader_writer_lock` oggetto passato nel `_Reader_writer_lock` parametro come lettore. Se il blocco viene mantenuto da un altro thread come writer o esistono writer in sospeso, questa chiamata verrà bloccata.  
   
@@ -191,7 +200,7 @@ Elimina un `scoped_lock_read` dell'oggetto e rilascia il blocco fornito nel suo 
 ~scoped_lock_read();
 ```  
   
-## <a name="a-nametrylocka-trylock"></a><a name="try_lock"></a>try_lock 
+## <a name="try_lock"></a>try_lock 
 
 ```
 bool try_lock();
@@ -200,7 +209,7 @@ bool try_lock();
 ### <a name="return-value"></a>Valore restituito  
  Se è stato acquisito il blocco, il valore `true`; in caso contrario, il valore `false`.  
   
-##  <a name="a-nametrylockreada-trylockread"></a><a name="try_lock_read"></a>try_lock_read 
+##  <a name="try_lock_read"></a>try_lock_read 
 
  Tenta di acquisire il blocco di lettura / scrittura come lettore senza bloccare.  
   
@@ -211,7 +220,7 @@ bool try_lock_read();
 ### <a name="return-value"></a>Valore restituito  
  Se è stato acquisito il blocco, il valore `true`; in caso contrario, il valore `false`.  
   
-##  <a name="a-nameunlocka-unlock"></a><a name="unlock"></a>sbloccare 
+##  <a name="unlock"></a>sbloccare 
 
  Sblocca il blocco di lettura / scrittura basato su chi ha bloccato, lettore o writer.  
   

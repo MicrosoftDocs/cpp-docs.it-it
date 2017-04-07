@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCPropertyGridFileProperty
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridFileProperty
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridFileProperty::CMFCPropertyGridFileProperty
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -77,7 +79,7 @@ class CMFCPropertyGridFileProperty : public CMFCPropertyGridProperty
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxpropertygridctrl.h  
   
-##  <a name="a-namecmfcpropertygridfilepropertya--cmfcpropertygridfilepropertycmfcpropertygridfileproperty"></a><a name="cmfcpropertygridfileproperty"></a>CMFCPropertyGridFileProperty::CMFCPropertyGridFileProperty  
+##  <a name="cmfcpropertygridfileproperty"></a>CMFCPropertyGridFileProperty::CMFCPropertyGridFileProperty  
  Costruisce un oggetto `CMFCPropertyGridFileProperty`.  
   
 ```  
