@@ -62,9 +62,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: afcf1f37dbf0f55dc26c7258d130043bffc8c1a8
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: e7b151d83f4229586ad8787a326e332abb9fc79d
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cdatabase-class"></a>CDatabase (classe)
@@ -88,7 +88,7 @@ class CDatabase : public CObject
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CDatabase::BeginTrans](#begintrans)|Avvia un \u2012 "transaction" una serie di chiamate reversibile per il `AddNew`, **modifica**, **eliminare**, e **aggiornamento** funzioni membro della classe `CRecordset` \u2012 sull'origine dati connessa. L'origine dati deve supportare le transazioni per **BeginTrans** abbia effetto.|  
+|[CDatabase::BeginTrans](#begintrans)|Avvia una transazione di"", ovvero una serie di chiamate reversibile per il `AddNew`, **modifica**, **eliminare**, e **aggiornamento** funzioni membro della classe `CRecordset` , sull'origine dati connessa. L'origine dati deve supportare le transazioni per **BeginTrans** abbia effetto.|  
 |[CDatabase::BindParameters](#bindparameters)|Consente di associare i parametri prima di chiamare `CDatabase::ExecuteSQL`.|  
 |[CDatabase::Cancel](#cancel)|Annulla un'operazione asincrona o un processo da un secondo thread.|  
 |[CDatabase::CanTransact](#cantransact)|Restituisce zero se l'origine dati supporta le transazioni.|  
@@ -225,7 +225,7 @@ CDatabase();
 ```  
   
 ### <a name="remarks"></a>Note  
- Dopo la costruzione dell'oggetto, è necessario chiamare il relativo `OpenEx` o **aprire** funzione membro per stabilire una connessione a un'origine dati specificata.  
+ Dopo la costruzione dell'oggetto, è necessario chiamare il relativo `OpenEx` o **aprire** la funzione membro per stabilire una connessione a un'origine dati specificata.  
   
  È possibile fare in modo da incorporare la `CDatabase` oggetto nella classe del documento.  
   
@@ -262,7 +262,7 @@ BOOL CommitTrans();
  Diverso da zero se gli aggiornamenti siano stati correttamente eseguito il commit. in caso contrario 0. Se **CommitTrans** ha esito negativo, lo stato dell'origine dati è definito. È necessario controllare i dati per determinare lo stato.  
   
 ### <a name="remarks"></a>Note  
- Una transazione è costituita da una serie di chiamate per il `AddNew`, **modifica**, **eliminare**, e **aggiornamento** funzioni membro di un `CRecordset` oggetto che inizia con una chiamata alla [BeginTrans](#begintrans) funzione membro. **CommitTrans** il commit della transazione. Per impostazione predefinita, gli aggiornamenti vengano eseguito il commit immediatamente. la chiamata **BeginTrans** provoca l'impegno di aggiornamenti per essere posticipata fino al **CommitTrans** viene chiamato.  
+ Una transazione è costituita da una serie di chiamate per il `AddNew`, **modifica**, **eliminare**, e **aggiornamento** funzioni membro di un `CRecordset` oggetto che inizia con una chiamata al [BeginTrans](#begintrans) funzione membro. **CommitTrans** il commit della transazione. Per impostazione predefinita, gli aggiornamenti vengano eseguito il commit immediatamente. la chiamata **BeginTrans** provoca l'impegno di aggiornamenti per essere posticipata fino al **CommitTrans** viene chiamato.  
   
  Finché non si chiama **CommitTrans** per terminare una transazione, è possibile chiamare il [Rollback](#rollback) funzione membro per interrompere la transazione e lasciare l'origine dati nello stato originale. Per avviare una nuova transazione, chiamare **BeginTrans** nuovamente.  
   
@@ -385,7 +385,7 @@ CString GetDatabaseName() const;
 ### <a name="remarks"></a>Note  
  Questo non è lo stesso come il nome di origine dati (DSN) specificato nella `OpenEx` o **aprire** chiamare. Cosa `GetDatabaseName` restituisce dipende da ODBC. In generale, un database è una raccolta di tabelle. Se l'entità disponga di un nome, `GetDatabaseName` restituisce.  
   
- Potrebbe, ad esempio, da visualizzare questo nome in un'intestazione. Se si verifica un errore durante il recupero del nome da ODBC, `GetDatabaseName` restituisce un oggetto vuoto **Cstring**.  
+ Potrebbe, ad esempio, da visualizzare il nome in un'intestazione. Se si verifica un errore durante il recupero del nome da ODBC, `GetDatabaseName` restituisce un oggetto vuoto **Cstring**.  
   
 ##  <a name="isopen"></a>CDatabase::IsOpen  
  Chiamare questa funzione membro per determinare se il `CDatabase` è attualmente collegato a un'origine dati.  
@@ -395,10 +395,10 @@ BOOL IsOpen() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Diverso da zero se il `CDatabase` oggetto è attualmente connesso; in caso contrario 0.  
+ Diverso da zero se la `CDatabase` oggetto è attualmente connesso; in caso contrario 0.  
   
 ##  <a name="m_hdbc"></a>CDatabase:: M_hdbc  
- Contiene un handle pubblico a un ODBC dati origine connessione \u2012 "handle di connessione".  
+ Contiene un handle per una connessione all'origine dati ODBC pubblico, ovvero "handle di connessione".  
   
 ### <a name="remarks"></a>Note  
  In genere, non si disporrà di alcuna necessità di accedere direttamente a questa variabile membro. Al contrario, il framework consente di allocare l'handle quando si chiama `OpenEx` o **aprire**. Il framework dealloca l'handle quando si chiama il **eliminare** gli operatori di `CDatabase` oggetto. Si noti che il **Chiudi** funzione membro non rilasciare l'handle.  
@@ -445,7 +445,7 @@ virtual BOOL Open(
   
 ### <a name="parameters"></a>Parametri  
  `lpszDSN`  
- Specifica una data origine nome \u2012 un nome registrato con ODBC tramite Amministratore ODBC. Se viene specificato un valore DSN in `lpszConnect` (nel formato "DSN =\<origine dati >"), non deve essere specificato nuovamente `lpszDSN`. In questo caso, `lpszDSN` deve essere **NULL**. In caso contrario, è possibile passare **NULL** se si desidera presentare all'utente una finestra di dialogo origine dati in cui l'utente può selezionare un'origine dati. Per ulteriori informazioni, vedere la sezione Osservazioni.  
+ Specifica un nome origine dati, ovvero un nome registrato con ODBC tramite Amministratore ODBC. Se viene specificato un valore DSN in `lpszConnect` (nel formato "DSN =\<origine dati >"), non deve essere specificato nuovamente `lpszDSN`. In questo caso, `lpszDSN` deve essere **NULL**. In caso contrario, è possibile passare **NULL** se si desidera presentare all'utente una finestra di dialogo origine dati in cui l'utente può selezionare un'origine dati. Per ulteriori informazioni, vedere la sezione Osservazioni.  
   
  `bExclusive`  
  Non è supportata in questa versione della libreria di classi. Attualmente, un errore di asserzione se questo parametro è **TRUE**. L'origine dati viene sempre aperto come condivisa (non esclusivo).  
@@ -511,7 +511,7 @@ virtual BOOL OpenEx(
 ### <a name="remarks"></a>Note  
  L'oggetto di database deve essere inizializzata prima che sia possibile utilizzarlo per creare un oggetto recordset.  
   
- Se il `lpszConnectString` parametro il `OpenEx` chiamata non contiene informazioni sufficienti per stabilire la connessione, il driver ODBC verrà visualizzata una finestra di dialogo per ottenere le informazioni necessarie da parte dell'utente, fornito non è stato impostato **CDatabase::noOdbcDialog** o **CDatabase::forceOdbcDialog** nel `dwOptions` parametro. Quando si chiama `OpenEx`, la stringa di connessione, `lpszConnectString`, viene archiviato in modo privato il `CDatabase` oggetto ed è disponibile chiamando il [GetConnect](#getconnect) funzione membro.  
+ Se il `lpszConnectString` parametro il `OpenEx` chiamata non contiene informazioni sufficienti per stabilire la connessione, il driver ODBC verrà visualizzata una finestra di dialogo per ottenere le informazioni necessarie da parte dell'utente, fornito non è stato impostato **CDatabase::noOdbcDialog** o **CDatabase::forceOdbcDialog** nel `dwOptions` parametro. Quando si chiama `OpenEx`, la stringa di connessione, `lpszConnectString`, viene archiviato in locale nel `CDatabase` oggetto ed è disponibile tramite la chiamata di [GetConnect](#getconnect) funzione membro.  
   
  Se si desidera, è possibile aprire la propria finestra di dialogo prima di chiamare `OpenEx` per ottenere informazioni da parte dell'utente, ad esempio una password e quindi aggiungere tali informazioni alla stringa di connessione si passa a `OpenEx`. Oppure è possibile salvare la stringa di connessione viene passato in modo da poterla riutilizzare alla successiva ora l'applicazione chiama `OpenEx` su un `CDatabase` oggetto.  
   
@@ -543,7 +543,7 @@ BOOL Rollback();
   Vedere l'articolo [transazione: esecuzione di una transazione in un Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).  
   
 ##  <a name="setlogintimeout"></a>CDatabase::SetLoginTimeout  
- Chiamare questa \u2012 funzione membro prima di chiamare `OpenEx` o **aprire** \u2012 per sostituire il numero predefinito di secondi consentito prima che un tentativo dati timeout connessione di origine.  
+ Chiamare questa funzione membro, prima di chiamare `OpenEx` o **aprire** : per il numero predefinito di secondi consentito prima di dati di un tentativo di eseguire l'override timeout connessione di origine.  
   
 ```  
 void SetLoginTimeout(DWORD dwSeconds);

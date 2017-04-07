@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCPropertyGridColorProperty | Documenti di Microsoft
+title: Classe CMFCPropertyGridColorProperty | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -47,9 +47,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 7069e35a44dbb0dbd4ad8d5d2b9156ccfbc15c76
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 06c852081b5de8bd10de29f87310b56c7f2279ec
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>Classe CMFCPropertyGridColorProperty
@@ -74,26 +74,26 @@ class CMFCPropertyGridColorProperty : public CMFCPropertyGridProperty
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CMFCPropertyGridColorProperty::EnableAutomaticButton](#enableautomaticbutton)|Consente di *automatica* pulsante nella finestra di dialogo Selezione colore. (Il pulsante automatica standard è denominato **automatica**.)|  
-|[CMFCPropertyGridColorProperty::EnableOtherButton](#enableotherbutton)|Consente di *altri* pulsante nella finestra di dialogo Selezione colore. (Lo standard denominato altro pulsante **più colori... **.)|  
-|`CMFCPropertyGridColorProperty::FormatProperty`|Formatta la rappresentazione di testo di un valore della proprietà. (Esegue l'override di [CMFCPropertyGridProperty::FormatProperty](../../mfc/reference/cmfcpropertygridproperty-class.md#formatproperty).)|  
+|[CMFCPropertyGridColorProperty::EnableAutomaticButton](#enableautomaticbutton)|Consente di *automatica* pulsante nella finestra di dialogo Selezione colore. (Il pulsante automatico standard è denominato **automatica**.)|  
+|[CMFCPropertyGridColorProperty::EnableOtherButton](#enableotherbutton)|Consente di *altri* pulsante nella finestra di dialogo Selezione colore. (Lo standard è denominato pulsante altro **altri colori**.)|  
+|`CMFCPropertyGridColorProperty::FormatProperty`|Formatta la rappresentazione di testo di un valore della proprietà. (Esegue l'override [cmfcpropertygridproperty:: Formatproperty](../../mfc/reference/cmfcpropertygridproperty-class.md#formatproperty).)|  
 |[CMFCPropertyGridColorProperty::GetColor](#getcolor)|Ottiene il colore corrente della proprietà.|  
-|`CMFCPropertyGridColorProperty::GetThisClass`|Utilizzato dal framework per ottenere un puntatore al [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) oggetto associato a questo tipo di classe.|  
-|`CMFCPropertyGridColorProperty::OnClickButton`|Chiamato dal framework quando l'utente fa clic su un pulsante contenuto in una proprietà. (Esegue l'override di [CMFCPropertyGridProperty::OnClickButton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton).)|  
-|`CMFCPropertyGridColorProperty::OnDrawValue`|Chiamato dal framework per visualizzare il valore della proprietà. (Esegue l'override di [CMFCPropertyGridProperty::OnDrawValue](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawvalue).)|  
-|`CMFCPropertyGridColorProperty::OnEdit`|Chiamato dal framework quando l'utente sta per modificare il valore di una proprietà. (Esegue l'override di [CMFCPropertyGridProperty::OnEdit](../../mfc/reference/cmfcpropertygridproperty-class.md#onedit).)|  
-|`CMFCPropertyGridColorProperty::OnUpdateValue`|Chiamato dal framework quando viene modificato il valore di una proprietà modificabile. (Esegue l'override di [CMFCPropertyGridProperty::OnUpdateValue](../../mfc/reference/cmfcpropertygridproperty-class.md#onupdatevalue).)|  
+|`CMFCPropertyGridColorProperty::GetThisClass`|Usato dal framework per ottenere un puntatore per il [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) oggetto associato a questo tipo di classe.|  
+|`CMFCPropertyGridColorProperty::OnClickButton`|Chiamato dal framework quando l'utente fa clic su un pulsante contenuto in una proprietà. (Esegue l'override [cmfcpropertygridproperty:: Onclickbutton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton).)|  
+|`CMFCPropertyGridColorProperty::OnDrawValue`|Chiamato dal framework per visualizzare il valore della proprietà. (Esegue l'override [cmfcpropertygridproperty:: Ondrawvalue](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawvalue).)|  
+|`CMFCPropertyGridColorProperty::OnEdit`|Chiamato dal framework quando l'utente sta per modificare il valore di una proprietà. (Esegue l'override [cmfcpropertygridproperty:: Onedit](../../mfc/reference/cmfcpropertygridproperty-class.md#onedit).)|  
+|`CMFCPropertyGridColorProperty::OnUpdateValue`|Chiamato dal framework quando viene modificato il valore di una proprietà modificabile. (Esegue l'override [cmfcpropertygridproperty:: Onupdatevalue](../../mfc/reference/cmfcpropertygridproperty-class.md#onupdatevalue).)|  
 |[CMFCPropertyGridColorProperty::SetColor](#setcolor)|Imposta un nuovo colore per la proprietà.|  
 |[CMFCPropertyGridColorProperty::SetColumnsNumber](#setcolumnsnumber)|Specifica il numero di colonne nella griglia delle proprietà del colore corrente.|  
 |[CMFCPropertyGridColorProperty::SetOriginalValue](#setoriginalvalue)|Imposta il valore originale di una proprietà modificabile.|  
   
 ## <a name="remarks"></a>Note  
- La classe `CMFCPropertyGridColorProperty` supporta una proprietà Color che è possibile aggiungere a un controllo elenco delle proprietà. Per ulteriori informazioni, vedere il [CMFCPropertyGridCtrl classe](../../mfc/reference/cmfcpropertygridctrl-class.md).  
+ La classe `CMFCPropertyGridColorProperty` supporta una proprietà Color che è possibile aggiungere a un controllo elenco delle proprietà. Per ulteriori informazioni, vedere il [CMFCPropertyGridCtrl Class](../../mfc/reference/cmfcpropertygridctrl-class.md).  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente illustra come costruire un oggetto della classe `CMFCPropertyGridColorProperty` e configurare tale oggetto usando diversi metodi della classe `CMFCPropertyGridColorProperty`. Il codice illustra come abilitare i pulsanti "automatico" (Automatic) e "altro" (Other) e come impostare il colore e il numero di colonne. Questo esempio fa parte di [esempio nuovi controlli](../../visual-cpp-samples.md).  
+ L'esempio seguente illustra come costruire un oggetto della classe `CMFCPropertyGridColorProperty` e configurare tale oggetto usando diversi metodi della classe `CMFCPropertyGridColorProperty`. Il codice illustra come abilitare i pulsanti "automatico" (Automatic) e "altro" (Other) e come impostare il colore e il numero di colonne. In questo esempio fa parte di [esempio nuovi controlli](../../visual-cpp-samples.md).  
   
- [!code-cpp[13 NVC_MFC_NewControls](../../mfc/reference/codesnippet/cpp/cmfcpropertygridcolorproperty-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_NewControls #13](../../mfc/reference/codesnippet/cpp/cmfcpropertygridcolorproperty-class_1.cpp)]  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -103,7 +103,7 @@ class CMFCPropertyGridColorProperty : public CMFCPropertyGridProperty
  [CMFCPropertyGridColorProperty](../../mfc/reference/cmfcpropertygridcolorproperty-class.md)  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** afxpropertygridctrl.h  
+ **Intestazione:** afxpropertygridctrl. h  
   
 ##  <a name="cmfcpropertygridcolorproperty"></a>CMFCPropertyGridColorProperty::CMFCPropertyGridColorProperty  
  Costruisce un oggetto `CMFCPropertyGridColorProperty`.  
@@ -131,10 +131,10 @@ CMFCPropertyGridColorProperty(
  Descrizione della proprietà. Il valore predefinito è `NULL`.  
   
  [in] `dwData`  
- Dati specifici dell'applicazione, ad esempio un numero intero o un puntatore ad altri dati che sono associati alla proprietà. Il valore predefinito è 0.  
+ Dati specifici dell'applicazione, ad esempio un numero intero o un puntatore a altri dati associati con la proprietà. Il valore predefinito è 0.  
   
 ##  <a name="enableautomaticbutton"></a>CMFCPropertyGridColorProperty::EnableAutomaticButton  
- Consente di *automatica* pulsante nella finestra di dialogo Selezione colore. (Il pulsante automatica standard è denominato **automatica**.)  
+ Consente di *automatica* pulsante nella finestra di dialogo Selezione colore. (Il pulsante automatico standard è denominato **automatica**.)  
   
 ```  
 void EnableAutomaticButton(
@@ -145,18 +145,18 @@ void EnableAutomaticButton(
   
 ### <a name="parameters"></a>Parametri  
  [in] `lpszLabel`  
- Il testo dell'etichetta del pulsante automatica.  
+ Il testo dell'etichetta del pulsante automatico.  
   
  [in] `colorAutomatic`  
- Il valore di colore RGB del colore automatic (predefinito).  
+ Il valore di colore RGB del colore automatico (predefinito).  
   
  [in] `bEnable`  
- `TRUE`Per abilitare il pulsante automatico; in caso contrario, `FALSE`. Il valore predefinito è `TRUE`.  
+ `TRUE`Per abilitare il pulsante automatico. in caso contrario, `FALSE`. Il valore predefinito è `TRUE`.  
   
 ### <a name="remarks"></a>Note  
   
 ##  <a name="enableotherbutton"></a>CMFCPropertyGridColorProperty::EnableOtherButton  
- Consente di *altri* pulsante nella finestra di dialogo Selezione colore. (Lo standard denominato altro pulsante **più colori... **.)  
+ Consente di *altri* pulsante nella finestra di dialogo Selezione colore. (Lo standard è denominato pulsante altro **altri colori**.)  
   
 ```  
 void EnableOtherButton(
@@ -170,7 +170,7 @@ void EnableOtherButton(
  Il testo dell'etichetta del pulsante.  
   
  [in] `bAltColorDlg`  
- `TRUE`Per visualizzare il `CMFCColorDialog` finestra di dialogo. `FALSE` per visualizzare la finestra di dialogo Selezione colori standard. Il valore predefinito è `TRUE`.  
+ `TRUE`Per visualizzare il `CMFCColorDialog` finestra di dialogo. `FALSE` per visualizzare la finestra di dialogo di selezione colori standard. Il valore predefinito è `TRUE`.  
   
  [in] `bEnable`  
  `TRUE`Per visualizzare il pulsante; in caso contrario, `FALSE`.  Il valore predefinito è `TRUE`.  
@@ -211,10 +211,10 @@ void SetColumnsNumber(int nColumnsNumber);
   
 ### <a name="parameters"></a>Parametri  
  [in] `nColumnsNumber`  
- Numero di colonne nella griglia delle proprietà colore preferito.  
+ Numero di colonne nella griglia delle proprietà di colore preferito.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo imposta il valore di `m_nColumnsNumber` protetti (membro dati).  
+ Questo metodo imposta il valore della `m_nColumnsNumber` protetto (membro dati).  
   
 ##  <a name="setoriginalvalue"></a>CMFCPropertyGridColorProperty::SetOriginalValue  
  Imposta il valore originale di una proprietà modificabile.  
@@ -228,7 +228,7 @@ virtual void SetOriginalValue(const COleVariant& varValue);
  Un valore.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare il [CMFCPropertyGridProperty::ResetOriginalValue](../../mfc/reference/cmfcpropertygridproperty-class.md#resetoriginalvalue) per reimpostare il valore originale di una proprietà modificata.  
+ Utilizzare il [cmfcpropertygridproperty:: Resetoriginalvalue](../../mfc/reference/cmfcpropertygridproperty-class.md#resetoriginalvalue) per reimpostare il valore originale di una proprietà modificata.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   

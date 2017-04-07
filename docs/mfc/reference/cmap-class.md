@@ -53,9 +53,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: c567d97c613ad517372b454456535165fadbd3ae
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 24f2c70210db2d0179f3234f18c3fcbd3bf093f2
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cmap-class"></a>Classe CMap
@@ -117,7 +117,7 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[[] CMap::operator](#operator_at)|Inserisce un elemento \u2012 mappa per `SetAt`.|  
+|[[] CMap::operator](#operator_at)|Inserisce un elemento nella mappa, la sostituzione di operatore per `SetAt`.|  
   
 ## <a name="remarks"></a>Note  
  Dopo aver inserito una coppia chiave-valore (elemento) nella mappa, è possibile recuperare in modo efficiente o eliminare la coppia utilizzando la chiave di accesso. È inoltre possibile scorrere tutti gli elementi nella mappa.  

@@ -1,40 +1,56 @@
 ---
-title: "Errore del compilatore C2662 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2662"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2662"
+title: Errore del compilatore C2662 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2662
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2662
 ms.assetid: e172c2a4-f29e-4034-8232-e7dc6f83689f
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Errore del compilatore C2662
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: aa2c22d7fbe8b017617fcad41327feef7f8fd19a
+ms.lasthandoff: 04/04/2017
 
-'funzione': impossibile convertire il puntatore 'this' da 'tipo1' a 'tipo2'  
+---
+# <a name="compiler-error-c2662"></a>Errore del compilatore C2662
+'function': Impossibile convertire il puntatore 'this' da 'type1' a 'type2'  
   
- Non è stato possibile convertire il puntatore `this` da `type1`a `type2`.  
+ Il compilatore non è stato possibile convertire il `this` puntatore da `type1` a `type2`.  
   
- Questo errore può verificarsi quando si richiama una funzione membro non\-`const` su un oggetto `const`.  Possibili soluzioni:  
+ Questo errore può dipendere da richiamare non`const` funzione membro su un `const` oggetto.  Soluzioni possibili:  
   
--   Rimuovere `const` dalla dichiarazione dell'oggetto.  
+-   Rimuovere il `const` dalla dichiarazione dell'oggetto.  
   
 -   Aggiungere `const` alla funzione membro.  
   
- Il seguente codice di esempio genera l'errore C2662:  
+ L'esempio seguente genera l'errore C2662:  
   
 ```  
 // C2662.cpp  
@@ -50,7 +66,7 @@ int main() {
 }  
 ```  
   
- Quando si esegue la compilazione con **\/clr**, non è possibile chiamare una funzione su un tipo gestito completo `const` o `volatile`.  Non è possibile dichiarare una funzione membro const di una classe gestita. È pertanto impossibile chiamare metodi sugli oggetti gestiti const.  
+ Durante la compilazione con **/clr**, è possibile chiamare una funzione su un `const` o `volatile` tipo gestito completo. È possibile dichiarare una funzione membro const di una classe gestita, in modo non è possibile chiamare metodi su oggetti gestiti const.  
   
 ```  
 // C2662_b.cpp  
@@ -76,7 +92,7 @@ ref struct N {
 };  
 ```  
   
- Il seguente codice di esempio genera l'errore C2662:  
+ L'esempio seguente genera l'errore C2662:  
   
 ```  
 // C2662_c.cpp  

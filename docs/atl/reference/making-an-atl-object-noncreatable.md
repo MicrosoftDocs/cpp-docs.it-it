@@ -1,5 +1,5 @@
 ---
-title: Rendendo Noncreatable un oggetto ATL | Documenti di Microsoft
+title: Effettua un Noncreatable oggetto ATL | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -35,17 +35,17 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: b812c2d4bfeb0663d62051c05829f25dc7139faf
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 9ee276d86478bb4a7b6c9839378183bfd49533d6
+ms.lasthandoff: 03/31/2017
 
 ---
-# <a name="making-an-atl-object-noncreatable"></a>Rendendo Noncreatable un oggetto ATL
-È possibile modificare gli attributi di un oggetto COM basati su ATL in modo che un client non possa creare direttamente l'oggetto. In questo caso, l'oggetto potrebbe essere restituito tramite una chiamata al metodo su un altro oggetto anziché creare direttamente.  
+# <a name="making-an-atl-object-noncreatable"></a>Effettua un Noncreatable oggetto ATL
+È possibile modificare gli attributi di un oggetto basato su ATL COM in modo che un client non è possibile creare direttamente l'oggetto. In questo caso, l'oggetto potrebbe essere restituito tramite una chiamata al metodo su un altro oggetto anziché creato direttamente.  
   
 ### <a name="to-make-an-object-noncreatable"></a>Per rendere un noncreatable oggetto  
   
-1.  Rimuovere il [OBJECT_ENTRY_AUTO](http://msdn.microsoft.com/library/5a0f4fa5-0905-43d2-b337-e22f979c9e4c) per l'oggetto. Se si desidera che l'oggetto per il controllo da registrare, è possibile sostituire OBJECT_ENTRY_AUTO con [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](http://msdn.microsoft.com/library/abdc093c-6502-42de-8419-b7ebf45299d1).  
+1.  Rimuovere il [OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto) per l'oggetto. Se si desidera che l'oggetto per il controllo deve essere registrato, è possibile sostituire OBJECT_ENTRY_AUTO con [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](object-map-macros.md#object_entry_non_createable_ex_auto).  
   
 2.  Aggiungere il [noncreatable](../../windows/noncreatable.md) attributo coclasse nel file IDL. Ad esempio:  
   
@@ -62,10 +62,10 @@ ms.lasthandoff: 02/24/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione guidata progetto ATL](../../atl/reference/atl-project-wizard.md)   
- [Tipi di progetto Visual C++](../../ide/visual-cpp-project-types.md)   
- [Creazione di progetti Desktop tramite le creazioni guidate applicazione](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
+ [Tipi di progetto di Visual C++](../../ide/visual-cpp-project-types.md)   
+ [Creazione di progetti Desktop mediante creazioni guidate applicazione](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
  [Programmazione con codice di runtime C e ATL](../../atl/programming-with-atl-and-c-run-time-code.md)   
- [Nozioni fondamentali di oggetti COM ATL](../../atl/fundamentals-of-atl-com-objects.md)   
- [Configurazioni predefinite progetto ATL](../../atl/reference/default-atl-project-configurations.md)
+ [Nozioni di base di oggetti COM ATL](../../atl/fundamentals-of-atl-com-objects.md)   
+ [Configurazioni progetto ATL predefinite](../../atl/reference/default-atl-project-configurations.md)
 
 

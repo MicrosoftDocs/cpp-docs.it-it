@@ -1,37 +1,53 @@
 ---
-title: "Errore del compilatore C2286 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2286"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2286"
+title: Errore del compilatore C2286 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2286
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2286
 ms.assetid: 078e0201-35cc-42e2-8dbc-6f8cf557b098
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Errore del compilatore C2286
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: c745afd370bd444614fc216ab42fda0f584295e7
+ms.lasthandoff: 04/01/2017
 
-rappresentazione di puntatori a membro di 'identificatore' già impostata su 'ereditarietà'. Dichiarazione ignorata  
+---
+# <a name="compiler-error-c2286"></a>Errore del compilatore C2286
+i puntatori ai membri della rappresentazione 'identifier' è già impostata su "ereditarietà" - dichiarazione ignorata.  
   
- Esistono due diverse rappresentazioni di puntatore a membro per classe.  
+ Due diverse rappresentazioni di puntatore ai membri esistono per la classe.  
   
- Per ulteriori informazioni, vedere [Parole chiave di ereditarietà](../../cpp/inheritance-keywords.md).  
+ Per ulteriori informazioni, vedere [parole chiave di ereditarietà](../../cpp/inheritance-keywords.md).  
   
-## Esempio  
- Il seguente codice di esempio genera l'errore C2286:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C2286:  
   
 ```  
 // C2286.cpp  

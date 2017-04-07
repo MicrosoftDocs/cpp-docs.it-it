@@ -1,5 +1,5 @@
 ---
-title: Classe CW2AEX | Documenti di Microsoft
+title: Classe CW2AEX | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -38,13 +38,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 8bf433224396f54b81fb5310ec29dfed213c6855
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 007dc4a40f0784984981c9b2741ec79ce6f12d9b
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="cw2aex-class"></a>Classe CW2AEX
-Questa classe viene utilizzata per le macro di conversione di stringhe `CT2AEX`, `CW2TEX`, `CW2CTEX`, e `CT2CAEX`e il typedef **CW2A**.  
+Questa classe viene utilizzata per le macro di conversione di stringhe `CT2AEX`, `CW2TEX`, `CW2CTEX`, e `CT2CAEX`e typedef **CW2A**.  
   
 > [!IMPORTANT]
 >  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.  
@@ -58,7 +58,7 @@ class CW2AEX
   
 #### <a name="parameters"></a>Parametri  
  `t_nBufferLength`  
- Le dimensioni del buffer utilizzato nel processo di traduzione. La lunghezza predefinita è 128 byte.  
+ Le dimensioni del buffer utilizzato nel processo di conversione. La lunghezza predefinita è di 128 byte.  
   
 ## <a name="members"></a>Membri  
   
@@ -85,13 +85,13 @@ class CW2AEX
 ## <a name="remarks"></a>Note  
  A meno che non è necessaria la funzionalità aggiuntiva, utilizzare `CT2AEX`, `CW2TEX`, `CW2CTEX`, `CT2CAEX`, o **CW2A** nel codice.  
   
- Questa classe contiene un buffer statico di dimensione fissa viene utilizzato per archiviare il risultato della conversione. Se il risultato è troppo grande per il buffer statico, la classe alloca memoria con `malloc`, liberando la memoria quando l'oggetto esce dall'ambito. Ciò garantisce che, a differenza del testo macro di conversione disponibili nelle versioni precedenti di ATL, questa classe è sicura per l'uso nei cicli e che non sarà un overflow dello stack.  
+ Questa classe contiene un buffer a dimensione fissa statico viene utilizzato per archiviare il risultato della conversione. Se il risultato è troppo grande per il buffer statico, la classe alloca memoria con `malloc`, liberando la memoria quando l'oggetto esce dall'ambito. Ciò garantisce che, a differenza del testo macro di conversione disponibili nelle versioni precedenti di ATL, questa classe è possibile utilizzare nei cicli e che non sarà un overflow dello stack.  
   
- Se la classe tenta di allocare memoria nell'heap di ha esito negativo, verrà eseguita una chiamata `AtlThrow` con un argomento di **E_OUTOFMEMORY**.  
+ Se la classe tenta di allocare memoria in cui l'heap e non riesce, chiama `AtlThrow` con un argomento di **E_OUTOFMEMORY**.  
   
  Per impostazione predefinita, le classi di conversione ATL e le macro utilizzano la tabella codici ANSI del thread corrente per la conversione. Se si desidera ignorare il comportamento per una conversione specifica, specificare la tabella codici come secondo parametro per il costruttore della classe.  
   
- In questa classe si basano le seguenti macro:  
+ Le macro seguenti sono basate su questa classe:  
   
 - `CT2AEX`  
   
@@ -101,14 +101,14 @@ class CW2AEX
   
 - `CT2CAEX`  
   
- La seguente dichiarazione typedef è basato sulla classe:  
+ La seguente dichiarazione typedef è basato su questa classe:  
   
 - **CW2A**  
   
- Per una descrizione di queste macro di conversione di testo, vedere [macro di conversione di stringhe MFC e ATL](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863).  
+ Per una discussione su queste macro di conversione di testo, vedere [macro di conversione di stringhe MFC e ATL](string-conversion-macros.md).  
   
 ## <a name="example"></a>Esempio  
- Vedere [macro di conversione di stringhe MFC e ATL](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863) per un esempio dell'utilizzo di queste macro di conversione di stringhe.  
+ Vedere [macro di conversione di stringhe MFC e ATL](string-conversion-macros.md) per un esempio dell'utilizzo di queste macro di conversione di stringhe.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlconv. h  
@@ -126,7 +126,7 @@ CW2AEX(LPCWSTR psz) throw(...);
  La stringa di testo da convertire.  
   
  `nCodePage`  
- La tabella codici utilizzata per eseguire la conversione. Vedere la descrizione del parametro pagina codice per il [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] funzione [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072) per ulteriori dettagli.  
+ La tabella codici utilizzata per eseguire la conversione. Vedere la descrizione del parametro pagina codice per il [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] funzione [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072) per altri dettagli.  
   
 ### <a name="remarks"></a>Note  
  Consente di allocare il buffer utilizzato nel processo di conversione.  

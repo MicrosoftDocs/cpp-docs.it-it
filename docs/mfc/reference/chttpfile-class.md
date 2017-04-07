@@ -1,5 +1,5 @@
 ---
-title: Classe CHttpFile | Documenti di Microsoft
+title: Classe CHttpFile | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -47,9 +47,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 0077c04f53514901dccaa3d162cd132578270225
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: b99e87f1cbf8a181cbe1208f3b4008625f82af63
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="chttpfile-class"></a>Classe CHttpFile
@@ -73,13 +73,13 @@ class CHttpFile : public CInternetFile
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CHttpFile:: AddRequestHeaders](#addrequestheaders)|Aggiunge intestazioni di richiesta inviata a un server HTTP.|  
+|[CHttpFile:: AddRequestHeaders](#addrequestheaders)|Aggiunge le intestazioni per la richiesta inviata a un server HTTP.|  
 |[CHttpFile::EndRequest](#endrequest)|Termina una richiesta inviata a un server HTTP con il [SendRequestEx](#sendrequestex) funzione membro.|  
 |[CHttpFile::GetFileURL](#getfileurl)|Ottiene l'URL per il file specificato.|  
 |[CHttpFile::GetObject](#getobject)|Ottiene l'oggetto di destinazione del verbo in una richiesta a un server HTTP.|  
 |[CHttpFile::GetVerb](#getverb)|Ottiene il verbo utilizzato in una richiesta a un server HTTP.|  
 |[QueryInfo](#queryinfo)|Restituisce le intestazioni di richiesta o risposta dal server HTTP.|  
-|[QueryInfoStatusCode](#queryinfostatuscode)|Recupera il codice di stato associato a una richiesta HTTP e lo inserisce nel parametro `dwStatusCode` parametro.|  
+|[QueryInfoStatusCode](#queryinfostatuscode)|Recupera il codice di stato associato a una richiesta HTTP e lo colloca in fornito `dwStatusCode` parametro.|  
 |[CHttpFile:: SendRequest](#sendrequest)|Invia una richiesta a un server HTTP.|  
 |[CHttpFile::SendRequestEx](#sendrequestex)|Invia una richiesta a un server HTTP utilizzando il [scrivere](../../mfc/reference/cinternetfile-class.md#write) o [WriteString](../../mfc/reference/cinternetfile-class.md#writestring) metodi di `CInternetFile`.|  
   
@@ -119,33 +119,33 @@ BOOL AddRequestHeaders(
   
 ### <a name="parameters"></a>Parametri  
  `pstrHeaders`  
- Un puntatore a una stringa contenente l'intestazione o intestazioni da aggiungere alla richiesta. Ogni intestazione deve essere terminata da una coppia di CR/LF.  
+ Un puntatore a una stringa contenente l'intestazione o intestazioni da aggiungere alla richiesta. Ogni intestazione deve terminare con una coppia di CR/LF.  
   
  `dwFlags`  
  Modifica la semantica delle intestazioni di nuovo. Può essere uno dei seguenti:  
   
-- `HTTP_ADDREQ_FLAG_COALESCE`Unisce le intestazioni con lo stesso nome, con il flag per aggiungere la prima intestazione trovata per l'intestazione successiva. Ad esempio, "Accept: text / *" seguita da "Accept: audio /\*" comporta la formazione della sola intestazione "Accept: testo /\*, audio /\*". Spetta all'applicazione chiamante di garantire uno schema coerente per quanto riguarda i dati ricevuti dalle richieste inviate con intestazioni fuse o separate.  
+- `HTTP_ADDREQ_FLAG_COALESCE`Unisce le intestazioni con lo stesso nome, utilizzando il flag per aggiungere l'intestazione prima trovata per l'intestazione successive. Ad esempio, "Accept: text / *" seguito da "Accept: audio /\*" comporta la formazione di una singola intestazione "Accept: testo /\*, audio /\*". È compito dell'applicazione chiamante per garantire uno schema coerente rispetto ai dati ricevuti dalle richieste inviate con le intestazioni fuse o separate.  
   
-- `HTTP_ADDREQ_FLAG_REPLACE`Esegue una, rimuovere e aggiungere per sostituire l'intestazione corrente. Il nome dell'intestazione da utilizzare per rimuovere l'intestazione corrente e il valore completo da utilizzare per aggiungere la nuova intestazione. Se il valore dell'intestazione è vuoto e viene trovata l'intestazione, viene rimosso. Se non è vuota, viene sostituito il valore dell'intestazione.  
+- `HTTP_ADDREQ_FLAG_REPLACE`Esegue un rimuovere e aggiungere per sostituire l'intestazione corrente. Il nome dell'intestazione da utilizzare per rimuovere l'intestazione corrente e il valore completo da utilizzare per aggiungere una nuova intestazione. Se il valore dell'intestazione è vuoto e viene trovata l'intestazione, verrà rimosso. Se non è vuota, viene sostituito il valore dell'intestazione.  
   
-- `HTTP_ADDREQ_FLAG_ADD_IF_NEW`Aggiunge l'intestazione solo se non esiste già. Se è presente, viene restituito un errore.  
+- `HTTP_ADDREQ_FLAG_ADD_IF_NEW`Aggiunge un'intestazione solo se non esiste già. Se è presente, viene restituito un errore.  
   
-- `HTTP_ADDREQ_FLAG_ADD`Utilizzato con sostituzione. Aggiunge l'intestazione se non esiste.  
+- `HTTP_ADDREQ_FLAG_ADD`Utilizzato con sostituzione. Aggiunge un'intestazione se non esiste.  
   
  `dwHeadersLen`  
- La lunghezza in caratteri, di `pstrHeaders`. Se si tratta quindi-1L `pstrHeaders` si presuppone che sia terminata zero e la lunghezza viene calcolata.  
+ Lunghezza, espressa in caratteri, di `pstrHeaders`. Se si tratta quindi-1L `pstrHeaders` si presuppone che sia terminare con zero e la lunghezza viene calcolata.  
   
  `str`  
- Un riferimento a un [CString](../../atl-mfc-shared/reference/cstringt-class.md) oggetto che contiene l'intestazione della richiesta o le intestazioni da aggiungere.  
+ Un riferimento a un [CString](../../atl-mfc-shared/reference/cstringt-class.md) oggetto contenente l'intestazione della richiesta o intestazioni da aggiungere.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, la funzione Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) può essere chiamato per determinare la causa dell'errore.  
   
 ### <a name="remarks"></a>Note  
- `AddRequestHeaders`Aggiunge intestazioni aggiuntive, in formato libero per l'handle di richiesta HTTP. Si deve essere utilizzato dal client avanzati che necessitano di un controllo dettagliato sulle esatta richiesta inviata al server HTTP.  
+ `AddRequestHeaders`Accoda intestazioni aggiuntive, in formato libero per l'handle di richiesta HTTP. Serve per l'utilizzo da parte dei client sofisticati che necessitano di un controllo dettagliato esatta richiesta inviata al server HTTP.  
   
 > [!NOTE]
->  L'applicazione può passare più intestazioni in `pstrHeaders` o `str` per un `AddRequestHeaders` chiamare utilizzando `HTTP_ADDREQ_FLAG_ADD` o `HTTP_ADDREQ_FLAG_ADD_IF_NEW`. Se l'applicazione tenta di rimuovere o sostituire un'intestazione usando **HTTP_ADDREQ_FLAG_REMOVE** o `HTTP_ADDREQ_FLAG_REPLACE`, solo un'intestazione può essere fornita in `lpszHeaders`.  
+>  L'applicazione può passare più intestazioni in `pstrHeaders` o `str` per un `AddRequestHeaders` chiamate usando `HTTP_ADDREQ_FLAG_ADD` o `HTTP_ADDREQ_FLAG_ADD_IF_NEW`. Se l'applicazione tenta di rimuovere o sostituire un'intestazione utilizzando **HTTP_ADDREQ_FLAG_REMOVE** o `HTTP_ADDREQ_FLAG_REPLACE`, solo un'intestazione può essere fornita in `lpszHeaders`.  
   
 ##  <a name="chttpfile"></a>CHttpFile::CHttpFile  
  Questa funzione membro viene chiamata per costruire un `CHttpFile` oggetto.  
@@ -172,7 +172,7 @@ CHttpFile(
  Handle per un file di Internet.  
   
  `hSession`  
- Handle per una sessione di Internet.  
+ Un handle a una sessione di Internet.  
   
  *pstrObject*  
  Un puntatore a una stringa contenente il `CHttpFile` oggetto.  
@@ -181,18 +181,18 @@ CHttpFile(
  Un puntatore a una stringa contenente il nome del server.  
   
  `pstrVerb`  
- Un puntatore a una stringa contenente il metodo da utilizzare quando si invia la richiesta. Can be **POST**, **HEAD**, or `GET`.  
+ Un puntatore a una stringa contenente il metodo da utilizzare durante l'invio della richiesta. Can be **POST**, **HEAD**, or `GET`.  
   
  dwContext  
  Identificatore di contesto per il `CHttpFile` oggetto. Vedere **osservazioni** per ulteriori informazioni su questo parametro.  
   
  `pConnection`  
- Un puntatore a un [oggetto CHttpConnection](../../mfc/reference/chttpconnection-class.md) oggetto.  
+ Un puntatore a un [CHttpConnection](../../mfc/reference/chttpconnection-class.md) oggetto.  
   
 ### <a name="remarks"></a>Note  
- Mai costruire un `CHttpFile` oggetto direttamente, anziché chiamare [CInternetSession:: OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) o [CHttpConnection:: OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest) invece.  
+ Non è mai costruire un `CHttpFile` oggetto direttamente, anziché chiamare [CInternetSession:: OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) o [CHttpConnection:: OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest) invece.  
   
- Il valore predefinito per `dwContext` viene inviato da MFC per la `CHttpFile` dell'oggetto dal [CInternetSession](../../mfc/reference/cinternetsession-class.md) oggetto creato il `CHttpFile` oggetto. Quando si chiama `CInternetSession::OpenURL` o `CHttpConnection` per costruire un `CHttpFile` dell'oggetto, è possibile sostituire il valore predefinito per impostare l'identificatore di contesto su un valore di propria scelta. L'identificatore di contesto viene restituito al [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) per fornire lo stato dell'oggetto con cui viene identificato. Vedere l'articolo [prime operazioni in Internet: WinInet](../../mfc/wininet-basics.md) per ulteriori informazioni sull'identificatore di contesto.  
+ Il valore predefinito per `dwContext` inviato da MFC per la `CHttpFile` dall'oggetto di [CInternetSession](../../mfc/reference/cinternetsession-class.md) dell'oggetto che ha creato il `CHttpFile` oggetto. Quando si chiama `CInternetSession::OpenURL` o `CHttpConnection` per costruire un `CHttpFile` dell'oggetto, è possibile sostituire il valore predefinito per impostare l'identificatore di contesto su un valore di propria scelta. L'identificatore di contesto viene restituito al [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) per fornire l'oggetto con cui viene identificato lo stato. Vedere l'articolo [prime operazioni in Internet: WinInet](../../mfc/wininet-basics.md) per ulteriori informazioni sull'identificatore di contesto.  
   
 ##  <a name="endrequest"></a>CHttpFile::EndRequest  
  Chiamare questa funzione membro per terminare una richiesta inviata a un server HTTP con il [SendRequestEx](#sendrequestex) funzione membro.  
@@ -206,7 +206,7 @@ BOOL EndRequest(
   
 ### <a name="parameters"></a>Parametri  
  `dwFlags`  
- Flag che descrivono l'operazione. Per un elenco dei flag appropriati, vedere [HttpEndRequest](http://msdn.microsoft.com/library/windows/desktop/aa384230) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Flag che descrivono l'operazione. Per un elenco di flag appropriati, vedere [HttpEndRequest](http://msdn.microsoft.com/library/windows/desktop/aa384230) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
  `lpBuffIn`  
  Puntatore a un oggetto inizializzato [INTERNET_BUFFERS](http://msdn.microsoft.com/library/windows/desktop/aa385132) che descrive il buffer di input utilizzato per l'operazione.  
@@ -215,13 +215,13 @@ BOOL EndRequest(
  Identificatore di contesto per l'operazione `CHttpFile`. Per ulteriori informazioni su questo parametro, vedere la sezione Osservazioni.  
   
 ### <a name="return-value"></a>Valore restituito  
- Diverso da zero se ha esito positivo; in caso contrario 0. In caso contrario, determinare la causa dell'errore esaminando il generata [CInternetException](../../mfc/reference/cinternetexception-class.md) oggetto.  
+ Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata non riesce, è possibile determinare la causa dell'errore esaminando il generata [CInternetException](../../mfc/reference/cinternetexception-class.md) oggetto.  
   
 ### <a name="remarks"></a>Note  
- Il valore predefinito per `dwContext` viene inviato da MFC per la `CHttpFile` dell'oggetto dal [CInternetSession](../../mfc/reference/cinternetsession-class.md) oggetto creato il `CHttpFile` oggetto. Quando si chiama [CInternetSession:: OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) o [oggetto CHttpConnection](../../mfc/reference/chttpconnection-class.md) per costruire un `CHttpFile` dell'oggetto, è possibile sostituire il valore predefinito per impostare l'identificatore di contesto su un valore di propria scelta. L'identificatore di contesto viene restituito al [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) per fornire lo stato dell'oggetto con cui viene identificato. Vedere l'articolo [prime operazioni in Internet: WinInet](../../mfc/wininet-basics.md) per ulteriori informazioni sull'identificatore di contesto.  
+ Il valore predefinito per `dwContext` inviato da MFC per la `CHttpFile` dall'oggetto di [CInternetSession](../../mfc/reference/cinternetsession-class.md) dell'oggetto che ha creato il `CHttpFile` oggetto. Quando si chiama [CInternetSession:: OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) o [CHttpConnection](../../mfc/reference/chttpconnection-class.md) per costruire un `CHttpFile` dell'oggetto, è possibile sostituire il valore predefinito per impostare l'identificatore di contesto su un valore di propria scelta. L'identificatore di contesto viene restituito al [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) per fornire l'oggetto con cui viene identificato lo stato. Vedere l'articolo [prime operazioni in Internet: WinInet](../../mfc/wininet-basics.md) per ulteriori informazioni sull'identificatore di contesto.  
   
 ##  <a name="getfileurl"></a>CHttpFile::GetFileURL  
- Chiamare questa funzione membro per ottenere il nome del file come un URL HTTP.  
+ Chiamare questa funzione membro per ottenere il nome del file sotto forma di URL HTTP.  
   
 ```  
 virtual CString GetFileURL() const;  
@@ -231,7 +231,7 @@ virtual CString GetFileURL() const;
  Oggetto [CString](../../atl-mfc-shared/reference/cstringt-class.md) oggetto contenente un URL che fa riferimento la risorsa associata a questo file.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare questa funzione membro solo dopo una chiamata a [SendRequest](#sendrequest) o in un `CHttpFile` oggetto creato correttamente da [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
+ Utilizzare questa funzione membro solo dopo una chiamata a [SendRequest](#sendrequest) o scegliere un `CHttpFile` oggetto creato correttamente da [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
   
 ##  <a name="getobject"></a>CHttpFile::GetObject  
  Chiamare questa funzione membro per ottenere il nome dell'oggetto associato a questo `CHttpFile`.  
@@ -244,10 +244,10 @@ CString GetObject() const;
  Oggetto [CString](../../atl-mfc-shared/reference/cstringt-class.md) oggetto contenente il nome dell'oggetto.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare questa funzione membro solo dopo una chiamata a [SendRequest](#sendrequest) o in un `CHttpFile` oggetto creato correttamente da [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
+ Utilizzare questa funzione membro solo dopo una chiamata a [SendRequest](#sendrequest) o scegliere un `CHttpFile` oggetto creato correttamente da [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
   
 ##  <a name="getverb"></a>CHttpFile::GetVerb  
- Chiamare questa funzione membro per ottenere l'HTTP verbo (o metodo) associata a questo `CHttpFile`.  
+ Chiamare questa funzione membro per ottenere HTTP verbo (o del metodo) associato a questo `CHttpFile`.  
   
 ```  
 CString GetVerb() const;  
@@ -257,10 +257,10 @@ CString GetVerb() const;
  Oggetto [CString](../../atl-mfc-shared/reference/cstringt-class.md) oggetto contenente il nome del verbo HTTP (o metodo).  
   
 ### <a name="remarks"></a>Note  
- Utilizzare questa funzione membro solo dopo una chiamata a [SendRequest](#sendrequest) o in un `CHttpFile` oggetto creato correttamente da [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
+ Utilizzare questa funzione membro solo dopo una chiamata a [SendRequest](#sendrequest) o scegliere un `CHttpFile` oggetto creato correttamente da [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
   
 ##  <a name="queryinfo"></a>QueryInfo  
- Chiamare questa funzione membro per restituire una risposta o le intestazioni di richiesta da una richiesta HTTP.  
+ Chiamare questa funzione membro per restituire una risposta o intestazioni di richiesta da una richiesta HTTP.  
   
 ```  
 BOOL QueryInfo(
@@ -282,13 +282,13 @@ BOOL QueryInfo(
   
 ### <a name="parameters"></a>Parametri  
  `dwInfoLevel`  
- Una combinazione dell'attributo per eseguire query e i flag seguenti che specificano il tipo di informazioni richieste:  
+ Una combinazione di attributo da query e i flag seguenti che specificano il tipo di informazioni richieste:  
   
-- **HTTP_QUERY_CUSTOM** rileva che il nome dell'intestazione e restituisce questo valore in `lpvBuffer` nell'output. **HTTP_QUERY_CUSTOM** genera un'asserzione se l'intestazione non viene trovato.  
+- **HTTP_QUERY_CUSTOM** trova il nome dell'intestazione e restituisce questo valore in `lpvBuffer` nell'output. **HTTP_QUERY_CUSTOM** genera un'asserzione se l'intestazione non viene trovata.  
   
-- **HTTP_QUERY_FLAG_REQUEST_HEADERS** in genere, l'applicazione esegue query le intestazioni di risposta, ma un'applicazione può richiedere anche le intestazioni di richiesta utilizzando il flag.  
+- **HTTP_QUERY_FLAG_REQUEST_HEADERS** in genere, l'applicazione esegue una query le intestazioni di risposta, ma un'applicazione può richiedere anche le intestazioni di richiesta utilizzando il flag.  
   
-- **HTTP_QUERY_FLAG_SYSTEMTIME** per tali intestazioni il cui valore è una stringa data/ora, ad esempio "Last-Modified-Time," questo flag restituisce il valore dell'intestazione come Win32 standard [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struttura che non richiedono l'applicazione per analizzare i dati. Se si utilizza questo flag, si consiglia di utilizzare il `SYSTEMTIME` eseguire l'override della funzione.  
+- **HTTP_QUERY_FLAG_SYSTEMTIME** per tali intestazioni il cui valore è una stringa di data/ora, ad esempio "Last-Modified-Time," questo flag restituisce il valore dell'intestazione come Win32 standard [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struttura che non richiede l'applicazione per analizzare i dati. Se si utilizza questo flag, si desidera utilizzare il `SYSTEMTIME` eseguire l'override della funzione.  
   
 - **HTTP_QUERY_FLAG_NUMBER** per tali intestazioni il cui valore è un numero, ad esempio il codice di stato, questo flag restituisce i dati come un numero a 32 bit.  
   
@@ -298,10 +298,10 @@ BOOL QueryInfo(
  Puntatore al buffer che riceve le informazioni.  
   
  `lpdwBufferLength`  
- In ingresso, si punta a un valore contenente la lunghezza del buffer di dati, in numero di caratteri o byte. Vedere il **osservazioni** sezione per ulteriori informazioni su questo parametro.  
+ In ingresso, punta a un valore contenente la lunghezza del buffer di dati, in quanto a numero di caratteri o byte. Vedere il **osservazioni** sezione per ulteriori informazioni su questo parametro.  
   
  `lpdwIndex`  
- Un puntatore a un indice in base zero dell'intestazione. Può essere **NULL**. Utilizzare questo flag per enumerare più intestazioni con lo stesso nome. Per l'input, `lpdwIndex` indica l'indice dell'intestazione specificata da restituire. Nell'output, `lpdwIndex` indica l'indice dell'intestazione successiva. Se non viene trovato l'indice successivo, **ERROR_HTTP_HEADER_NOT_FOUND** viene restituito.  
+ Puntatore a un indice in base zero dell'intestazione. Può essere **NULL**. Utilizzare questo flag per enumerare più intestazioni con lo stesso nome. Per l'input, `lpdwIndex` indica l'indice dell'intestazione specificata da restituire. Nell'output, `lpdwIndex` indica l'indice dell'intestazione successiva. Se non viene trovato nell'indice successivo, **ERROR_HTTP_HEADER_NOT_FOUND** viene restituito.  
   
  `str`  
  Un riferimento di [CString](../../atl-mfc-shared/reference/cstringt-class.md) oggetto che riceve le informazioni restituite.  
@@ -316,7 +316,7 @@ BOOL QueryInfo(
  Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, la funzione Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) può essere chiamato per determinare la causa dell'errore.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare questa funzione membro solo dopo una chiamata a [SendRequest](#sendrequest) o in un `CHttpFile` oggetto creato correttamente da [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
+ Utilizzare questa funzione membro solo dopo una chiamata a [SendRequest](#sendrequest) o scegliere un `CHttpFile` oggetto creato correttamente da [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
   
  È possibile recuperare i seguenti tipi di dati da `QueryInfo`:  
   
@@ -326,7 +326,7 @@ BOOL QueryInfo(
   
 - `DWORD`(per **STATUS_CODE**, **CONTENT_LENGTH**, ecc.)  
   
- Quando una stringa viene scritta nel buffer e viene eseguita la funzione membro, `lpdwBufferLength` contiene la lunghezza della stringa in caratteri meno 1 per l'interruzione del **NULL** caratteri.  
+ Quando una stringa viene scritto nel buffer e viene eseguita la funzione membro, `lpdwBufferLength` contiene la lunghezza della stringa in caratteri meno 1 per l'interruzione del **NULL** carattere.  
   
  I possibili `dwInfoLevel` i valori includono:  
   
@@ -377,7 +377,7 @@ BOOL QueryInfo(
 - **HTTP_QUERY_RAW_HEADERS_CRLF**  
   
 ##  <a name="queryinfostatuscode"></a>QueryInfoStatusCode  
- Chiamare questa funzione membro per ottenere il codice di stato associato a una richiesta HTTP e posizionarlo nel parametro `dwStatusCode` parametro.  
+ Chiamare questa funzione membro per ottenere il codice di stato associato a una richiesta HTTP e inserirle in fornito `dwStatusCode` parametro.  
   
 ```  
 BOOL QueryInfoStatusCode(DWORD& dwStatusCode) const;  
@@ -385,15 +385,15 @@ BOOL QueryInfoStatusCode(DWORD& dwStatusCode) const;
   
 ### <a name="parameters"></a>Parametri  
  `dwStatusCode`  
- Un riferimento a un codice di stato. Codici di stato indicano l'esito positivo o negativo dell'evento di richiesta. Vedere **osservazioni** per una selezione di descrizioni dei codici di stato.  
+ Un riferimento a un codice di stato. Codici di stato indicano l'esito positivo o negativo dell'evento richiesto. Vedere **osservazioni** per una selezione di descrizioni dei codici di stato.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, la funzione Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) può essere chiamato per determinare la causa dell'errore.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare questa funzione membro solo dopo una chiamata a [SendRequest](#sendrequest) o in un `CHttpFile` oggetto creato correttamente da [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
+ Utilizzare questa funzione membro solo dopo una chiamata a [SendRequest](#sendrequest) o scegliere un `CHttpFile` oggetto creato correttamente da [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
   
- Codici di stato HTTP sono suddivise in gruppi che indica l'esito positivo o negativo della richiesta. Nelle tabelle seguenti illustrano i gruppi di codice di stato e i codici di stato HTTP più comuni.  
+ Codici di stato HTTP rientrano in gruppi che indica l'esito positivo o negativo della richiesta. Nelle tabelle seguenti descrivono i gruppi di codice di stato e i codici di stato HTTP più comuni.  
   
 |Raggruppa|Significato|  
 |-----------|-------------|  
@@ -432,13 +432,13 @@ BOOL SendRequest(
   
 ### <a name="parameters"></a>Parametri  
  `pstrHeaders`  
- Un puntatore a una stringa contenente il nome di intestazioni da inviare.  
+ Un puntatore a una stringa contenente il nome delle intestazioni da inviare.  
   
  `dwHeadersLen`  
  La lunghezza delle intestazioni identificato da `pstrHeaders`.  
   
  `lpOptional`  
- Tutti i dati facoltativi per inviare immediatamente dopo le intestazioni della richiesta. In genere viene utilizzato per **POST** e **inserire** operazioni. Può trattarsi di **NULL** se non sono presenti dati facoltativi per inviare.  
+ Eventuali dati facoltativi da inviare immediatamente dopo le intestazioni della richiesta. In genere viene utilizzato per **POST** e **inserire** operazioni. Può trattarsi di **NULL** se non sono presenti dati facoltativi per l'invio.  
   
  *dwOptionalLen*  
  Lunghezza di `lpOptional`.  
@@ -447,7 +447,7 @@ BOOL SendRequest(
  Stringa contenente il nome delle intestazioni per la richiesta inviata.  
   
 ### <a name="return-value"></a>Valore restituito  
- Diverso da zero se ha esito positivo; in caso contrario 0. In caso contrario, determinare la causa dell'errore esaminando il generata [CInternetException](../../mfc/reference/cinternetexception-class.md) oggetto.  
+ Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata non riesce, è possibile determinare la causa dell'errore esaminando il generata [CInternetException](../../mfc/reference/cinternetexception-class.md) oggetto.  
   
 ##  <a name="sendrequestex"></a>CHttpFile::SendRequestEx  
  Chiamare questa funzione membro per inviare una richiesta a un server HTTP.  
@@ -471,7 +471,7 @@ BOOL SendRequestEx(
  Numero di byte da inviare nella richiesta.  
   
  `dwFlags`  
- Flag che descrivono l'operazione. Per un elenco dei flag appropriati, vedere [HttpSendRequestEx](http://msdn.microsoft.com/library/windows/desktop/aa384318) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] *.*  
+ Flag che descrivono l'operazione. Per un elenco di flag appropriati, vedere [HttpSendRequestEx](http://msdn.microsoft.com/library/windows/desktop/aa384318) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
  `dwContext`  
  Identificatore di contesto per l'operazione `CHttpFile`. Per ulteriori informazioni su questo parametro, vedere la sezione Osservazioni.  
@@ -483,17 +483,17 @@ BOOL SendRequestEx(
  Puntatore a un oggetto inizializzato **INTERNET_BUFFERS** che descrive il buffer di output utilizzato per l'operazione.  
   
 ### <a name="return-value"></a>Valore restituito  
- Diverso da zero se ha esito positivo. In caso contrario, determinare la causa dell'errore esaminando il generata [CInternetException](../../mfc/reference/cinternetexception-class.md) oggetto.  
+ Diverso da zero se ha esito positivo. Se la chiamata non riesce, è possibile determinare la causa dell'errore esaminando il generata [CInternetException](../../mfc/reference/cinternetexception-class.md) oggetto.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione consente di inviare i dati utilizzando l'applicazione di [scrivere](../../mfc/reference/cinternetfile-class.md#write) e [WriteString](../../mfc/reference/cinternetfile-class.md#writestring) metodi di `CInternetFile`. È necessario conoscere la lunghezza dei dati da inviare prima di chiamare l'override di questa funzione. Il primo override consente di specificare la lunghezza dei dati che si desidera inviare. Il secondo override accetta puntatori a **INTERNET_BUFFERS** strutture, che possono essere utilizzate per descrivere il buffer nel dettaglio.  
+ Questa funzione consente di inviare i dati utilizzando l'applicazione di [scrivere](../../mfc/reference/cinternetfile-class.md#write) e [WriteString](../../mfc/reference/cinternetfile-class.md#writestring) metodi di `CInternetFile`. È necessario conoscere la lunghezza dei dati da inviare prima di chiamare l'override di questa funzione. Il primo override consente di specificare la lunghezza dei dati che si desidera inviare. Il secondo override accetta puntatori a **INTERNET_BUFFERS** strutture, che possono essere utilizzate per descrivere il buffer in maggior dettaglio.  
   
- Dopo il contenuto viene scritta nel file, è necessario chiamare [EndRequest](#endrequest) per terminare l'operazione.  
+ Dopo aver scritto il contenuto del file, chiamare [EndRequest](#endrequest) per terminare l'operazione.  
   
- Il valore predefinito per `dwContext` viene inviato da MFC per la `CHttpFile` dell'oggetto dal [CInternetSession](../../mfc/reference/cinternetsession-class.md) oggetto creato il `CHttpFile` oggetto. Quando si chiama [CInternetSession:: OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) o [oggetto CHttpConnection](../../mfc/reference/chttpconnection-class.md) per costruire un `CHttpFile` dell'oggetto, è possibile sostituire il valore predefinito per impostare l'identificatore di contesto su un valore di propria scelta. L'identificatore di contesto viene restituito al [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) per fornire lo stato dell'oggetto con cui viene identificato. Vedere l'articolo [prime operazioni in Internet: WinInet](../../mfc/wininet-basics.md) per ulteriori informazioni sull'identificatore di contesto.  
+ Il valore predefinito per `dwContext` inviato da MFC per la `CHttpFile` dall'oggetto di [CInternetSession](../../mfc/reference/cinternetsession-class.md) dell'oggetto che ha creato il `CHttpFile` oggetto. Quando si chiama [CInternetSession:: OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) o [CHttpConnection](../../mfc/reference/chttpconnection-class.md) per costruire un `CHttpFile` dell'oggetto, è possibile sostituire il valore predefinito per impostare l'identificatore di contesto su un valore di propria scelta. L'identificatore di contesto viene restituito al [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) per fornire l'oggetto con cui viene identificato lo stato. Vedere l'articolo [prime operazioni in Internet: WinInet](../../mfc/wininet-basics.md) per ulteriori informazioni sull'identificatore di contesto.  
   
 ### <a name="example"></a>Esempio  
- Questo frammento di codice invia il contenuto di una stringa in una DLL denominata MFCISAPI. DLL nel server host locale. Mentre in questo esempio viene utilizzato solo una chiamata a `WriteString`, l'utilizzo di più chiamate per inviare i dati in blocchi è accettabile.  
+ Questo frammento di codice invia il contenuto di una stringa in una DLL denominata MFCISAPI. DLL nel server host locale. Sebbene questo esempio viene utilizzata solo una chiamata a `WriteString`, l'utilizzo di più chiamate per inviare i dati in blocchi è accettabile.  
   
  [!code-cpp[9 NVC_MFCWinInet](../../mfc/codesnippet/cpp/chttpfile-class_1.cpp)]  
   
@@ -502,5 +502,5 @@ BOOL SendRequestEx(
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
  [CInternetFile (classe)](../../mfc/reference/cinternetfile-class.md)   
  [CGopherFile (classe)](../../mfc/reference/cgopherfile-class.md)   
- [Oggetto CHttpConnection (classe)](../../mfc/reference/chttpconnection-class.md)
+ [Classe CHttpConnection](../../mfc/reference/chttpconnection-class.md)
 

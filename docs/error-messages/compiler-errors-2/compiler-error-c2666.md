@@ -1,34 +1,51 @@
 ---
-title: "Errore del compilatore C2666 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2666"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2666"
+title: Errore del compilatore C2666 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2666
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2666
 ms.assetid: 78364d15-c6eb-439a-9088-e04a0176692b
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Errore del compilatore C2666
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 0aa7af12e49f152256c2efe7d16d02e1f1c45f68
+ms.lasthandoff: 04/01/2017
 
-'identificatore': numero overload presentano conversioni simili  
+---
+# <a name="compiler-error-c2666"></a>Errore del compilatore C2666
+'identifier': numero overload presentano conversioni simili  
   
- Un operatore o una funzione in overload è ambigua.   È possibile che gli elenchi di parametri formali siano troppo simili perché il compilatore risolva l'ambiguità.  Per correggere questo errore, eseguire il cast esplicito di uno o più parametri effettivi.  
+ Un operatore o la funzione in overload è ambiguo.   Elenchi di parametri formali potrebbero essere troppo simili per il compilatore risolvere l'ambiguità.  Per correggere l'errore, eseguire il cast esplicito uno o più parametri effettivi.  
   
- Il seguente codice di esempio genera l'errore C2666:  
+ L'esempio seguente genera l'errore C2666:  
   
 ```  
 // C2666.cpp  
@@ -44,17 +61,17 @@ int main() {
 }  
 ```  
   
- Questo errore viene anche generato come risultato delle operazioni di conformità eseguite per Visual Studio .NET 2003.  
+ Questo errore può anche essere generato come risultato delle operazioni di conformità del compilatore eseguite per Visual Studio .NET 2003:  
   
--   Operatori binari e conversioni definite dall'utente a tipi puntatore  
+-   gli operatori binari e le conversioni definite dall'utente per i tipi di puntatori  
   
--   Conversione di qualificazione diversa da conversione di identità  
+-   conversione di qualificazione non corrisponde la conversione di identità  
   
- Per gli operatori binari \<, \>, \<\= e \>\=, un parametro passato è ora implicitamente convertito nel tipo dell'operando se il tipo del parametro definisce un operatore di conversione definito dall'utente per la conversione al tipo dell'operando.  Attualmente possono verificarsi ambiguità.  
+ Per gli operatori binari \<, >, \<=, e > =, un oggetto passato parametro è ora implicitamente convertito nel tipo dell'operando se il tipo del parametro definisce un operatore di conversione definita dall'utente in cui convertire il tipo dell'operando. È ora disponibile potenziale ambiguità.  
   
- Affinché il codice sia valido in entrambe le versioni Visual Studio .NET 2003 e Visual Studio .NET di Visual C\+\+, chiamare esplicitamente l'operatore di classe mediante la sintassi di funzione.  
+ Per il codice è valido in Visual Studio .NET 2003 sia le versioni di Visual Studio .NET di Visual C++, chiamare l'operatore di classe in modo esplicito utilizzando la sintassi di funzione.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // C2666b.cpp  
@@ -94,7 +111,7 @@ int main()
     T str1( "ABCD" );  
     const char* str2 = "DEFG";  
   
-    // Error – Ambiguous call to operator<()  
+    // Error - Ambiguous call to operator<()  
     // Trying to convert str1 to char* and then call   
     // operator<( const char*, const char* )?  
     //  OR  
@@ -111,8 +128,8 @@ int main()
 }  
 ```  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore C2666:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C2666  
   
 ```  
 // C2666c.cpp  

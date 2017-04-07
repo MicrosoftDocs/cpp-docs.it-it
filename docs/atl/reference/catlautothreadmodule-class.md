@@ -1,5 +1,5 @@
 ---
-title: Classe CAtlAutoThreadModule | Documenti di Microsoft
+title: Classe CAtlAutoThreadModule | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,9 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CAtlAutoThreadModule
 - CAtlAutoThreadModule
-- ATL::CAtlAutoThreadModule
+- atlbase/ATL::CAtlAutoThreadModule
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,13 +35,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 09f4a7061ce1e4a09d0d27bd90dfcc16a37f4d5b
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 159b2f13dc573262bfab3a2e19209b29e3eaf5a5
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="catlautothreadmodule-class"></a>Classe CAtlAutoThreadModule
-Questa classe implementa un server di pool di thread, il modello di apartment COM.  
+Questa classe implementa un server di pool di thread, modello di apartment COM.  
   
 > [!IMPORTANT]
 >  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.  
@@ -54,14 +53,14 @@ class CAtlAutoThreadModule : public CAtlAutoThreadModuleT<CAtlAutoThreadModule>
 ```  
   
 ## <a name="remarks"></a>Note  
- `CAtlAutoThreadModule`deriva da [CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md) e implementa un server di pool di thread, il modello di apartment COM. `CAtlAutoThreadModule`Usa [CComApartment](../../atl/reference/ccomapartment-class.md) per gestire un apartment per ogni thread nel modulo.  
+ `CAtlAutoThreadModule`deriva da [CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md) e implementazione di un server di pool di thread, modello di apartment COM. `CAtlAutoThreadModule`Usa [CComApartment](../../atl/reference/ccomapartment-class.md) per gestire un apartment per ogni thread nel modulo.  
   
- È necessario utilizzare il [: DECLARE_CLASSFACTORY_AUTO_THREAD](http://msdn.microsoft.com/library/19d7105e-03e8-4412-9f5e-5384c8a5e18f) macro nella definizione di classe dell'oggetto per specificare [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md) come la class factory. È quindi necessario aggiungere una singola istanza di una classe derivata da `CAtlAutoThreadModuleT` , ad esempio `CAtlAutoThreadModule`. Ad esempio:  
+ È necessario utilizzare il [: DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) macro nella definizione di classe dell'oggetto per specificare [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md) come la class factory. È quindi necessario aggiungere una singola istanza di una classe derivata da `CAtlAutoThreadModuleT` , ad esempio `CAtlAutoThreadModule`. Ad esempio:  
   
  `CAtlAutoThreadModule _AtlAutoModule; // name is immaterial.`  
   
 > [!NOTE]
->  Questa classe sostituisce obsoleta [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md) (classe).  
+>  Questa classe sostituisce obsoleta [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md) classe.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `IAtlAutoThreadModule`  
@@ -77,4 +76,5 @@ class CAtlAutoThreadModule : public CAtlAutoThreadModuleT<CAtlAutoThreadModule>
  [Classe CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md)   
  [Classe IAtlAutoThreadModule](../../atl/reference/iatlautothreadmodule-class.md)   
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)   
- [Classi di modulo](../../atl/atl-module-classes.md)
+ [Classi Module](../../atl/atl-module-classes.md)
+

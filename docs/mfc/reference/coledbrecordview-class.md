@@ -39,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: 8269a71e9528da5c3468b5eb37f5dce3a16b14fd
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 6129ad49f58cecb099927fe3d422fe215d143b67
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="coledbrecordview-class"></a>COleDBRecordView (classe)
@@ -71,12 +71,12 @@ class COleDBRecordView : public CFormView
 ## <a name="remarks"></a>Note  
  La vista è un modulo connessi direttamente a un `CRowset` oggetto. La vista viene creata da una risorsa modello di finestra di dialogo e visualizza i campi del `CRowset` oggetto nei controlli del modello di finestra di dialogo. Il `COleDBRecordView` oggetto utilizza DDX (DDX) e le funzionalità di spostamento incorporata `CRowset`per automatizzare lo spostamento dei dati tra i controlli nel form e i campi del set di righe. `COleDBRecordView`inoltre fornisce un'implementazione predefinita per lo spostamento al primo, ultimo, precedente o successiva di record e un'interfaccia per l'aggiornamento del record attualmente sulla vista.  
   
- È possibile utilizzare le funzioni DDX con **COleDbRecordView** per ottenere i dati direttamente dal recordset del database e visualizzarlo in un controllo di finestra di dialogo. È consigliabile utilizzare la **DDX _\*** metodi (ad esempio `DDX_Text`), non la **DDX_Field\* ** funzioni (ad esempio `DDX_FieldText`) con **COleDbRecordView**. `DDX_FieldText`non funzionerà con **COleDbRecordView** perché `DDX_FieldText` accetta un argomento supplementare di tipo **CRecordset\*** (per `CRecordView`) o **CDaoRecordset\* ** (per `CDaoRecordView`).  
+ È possibile utilizzare le funzioni DDX con **COleDbRecordView** per ottenere i dati direttamente dal recordset del database e visualizzarlo in un controllo di finestra di dialogo. È consigliabile utilizzare la **DDX _\*** metodi (come `DDX_Text`), non la **DDX_Field\* ** funzioni (ad esempio `DDX_FieldText`) con **COleDbRecordView**. `DDX_FieldText`non funzionerà con **COleDbRecordView** perché `DDX_FieldText` accetta un argomento supplementare di tipo **CRecordset\*** (per `CRecordView`) o **CDaoRecordset\* ** (per `CDaoRecordView`).  
   
 > [!NOTE]
 >  Se si lavora con le classi di oggetti DAO (Data Access), anziché le classi di modelli Consumer OLE DB, utilizzare una classe [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) invece. Per ulteriori informazioni, vedere l'articolo [Panoramica: programmazione di Database](../../data/data-access-programming-mfc-atl.md).  
   
- `COleDBRecordView`tiene traccia della posizione dell'utente nel set di righe in modo che la visualizzazione di record può aggiornare l'interfaccia utente. Quando l'utente si sposta a estremità del set di righe, visualizzazione di record disabilita utente interfaccia oggetti \u2012, ad esempio voci di menu o \u2012 pulsanti della barra degli strumenti per lo spostamento di ulteriori nella stessa direzione.  
+ `COleDBRecordView`tiene traccia della posizione dell'utente nel set di righe in modo che la visualizzazione di record può aggiornare l'interfaccia utente. Quando l'utente passa a delle estremità del set di righe, la visualizzazione dei record Disabilita oggetti dell'interfaccia utente, ad esempio voci di menu o pulsanti della barra degli strumenti, per lo spostamento nella stessa direzione.  
   
  Per ulteriori informazioni sulle classi di set di righe, vedere il [utilizzando Consumer i modelli OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md) articolo.  
   
@@ -152,13 +152,13 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  `nIDMoveCommand`  
  Uno dei valori di ID di comando standard seguenti:  
   
-- `ID_RECORD_FIRST`\u2012 spostare al primo record del recordset.  
+- `ID_RECORD_FIRST`-Sposta al primo record del recordset.  
   
-- `ID_RECORD_LAST`\u2012 spostare all'ultimo record del recordset.  
+- `ID_RECORD_LAST`: Spostarsi all'ultimo record del recordset.  
   
-- `ID_RECORD_NEXT`\u2012 spostare al record successivo nel recordset.  
+- `ID_RECORD_NEXT`-Sposta al record successivo nel recordset.  
   
-- `ID_RECORD_PREV`\u2012 passare al record precedente nel recordset.  
+- `ID_RECORD_PREV`Passare al record precedente nel recordset.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se lo spostamento è stato completato. in caso contrario 0 se la richiesta di spostamento è stata negata.  

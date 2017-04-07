@@ -1,5 +1,5 @@
 ---
-title: Strumenti del linker LNK2022 errore | Documenti di Microsoft
+title: Strumenti del linker LNK2022 errore | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,26 +34,26 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 91fb85679fd6c66bc97974912a2de688f494d5e9
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 6f12c53d7dd1383ad8f994a713c7226ab038cb19
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="linker-tools-error-lnk2022"></a>Errore degli strumenti del linker LNK2022
-operazione dei metadati non riuscita (HRESULT): error_message  
+operazione sui metadati non riuscita (HRESULT): error_message  
   
- Il linker ha rilevato un errore durante l'unione dei metadati. È necessario risolvere gli errori di metadati per collegare correttamente.  
+ Il linker ha rilevato un errore durante l'unione dei metadati. Per collegare correttamente, è necessario risolvere gli errori di metadati.  
   
- Un modo per diagnosticare questo problema consiste nell'eseguire **ildasm – token** file di oggetto per individuare i cui tipi sono elencati i token in `error_message`e identificare eventuali differenze.  Nei metadati, due tipi diversi con lo stesso nome non è valido, anche se l'attributo LayoutType è diverso.  
+ Un modo per diagnosticare questo problema consiste nell'eseguire **ildasm-token** sui file per trovare tipi di oggetto sono elencati i token in `error_message`ed esaminare le differenze.  Nei metadati, due tipi diversi con lo stesso nome non è valido, anche se l'attributo LayoutType è diverso.  
   
- Per LNK2022 è quando un tipo (ad esempio, uno struct) presente in più moduli con lo stesso nome ma con definizioni in conflitto e quando esegue la compilazione con [/clr](../../build/reference/clr-common-language-runtime-compilation.md).  In questo caso, assicurarsi che il tipo dispone di una definizione identica in tutti i moduli.  Il nome del tipo è elencato `error_message`.  
+ Per LNK2022 è quando un tipo (ad esempio, uno struct) presente in più moduli con lo stesso nome ma con definizioni in conflitto, e quando si compila con [/clr](../../build/reference/clr-common-language-runtime-compilation.md).  In questo caso, assicurarsi che il tipo ha una definizione identica in tutti i moduli.  Il nome del tipo è elencato nella `error_message`.  
   
- Un'altra possibile causa LNK2022 è quando il linker rileva un file di metadati in una posizione diversa rispetto a quello indicato al compilatore (con [#using](../../preprocessor/hash-using-directive-cpp.md) ). Assicurarsi che il file metadati (con estensione dll o netmodule), quando viene passato al linker, si trovi nello stesso percorso di quando è stato passato al compilatore.  
+ Un'altra possibile causa LNK2022 è quando il linker rileva un file di metadati in un percorso diverso rispetto a quello indicato al compilatore (con [#using](../../preprocessor/hash-using-directive-cpp.md) ). Assicurarsi che il file metadati (con estensione dll o netmodule), quando viene passato al linker, si trovi nello stesso percorso di quando è stato passato al compilatore.  
   
  Quando si compila un'applicazione ATL, l'utilizzo di [_ATL_MIXED è presente](http://msdn.microsoft.com/Library/11b59a83-7098-43e2-9f7b-408299930966) è obbligatorio in tutti i moduli, se viene utilizzato in almeno uno.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente definisce un tipo vuoto.  
+ L'esempio seguente definisce un tipo vuoto.  
   
 ```  
 // LNK2022_a.cpp  
@@ -62,9 +62,9 @@ public ref class Test {};
 ```  
   
 ## <a name="example"></a>Esempio  
- Questo esempio mostra che non è possibile collegare due file di codice sorgente che contengono i tipi con lo stesso nome ma definizioni differenti.  
+ Questo esempio viene illustrato che è possibile collegare i due file di codice sorgente che contengono i tipi con lo stesso nome ma definizioni diverse.  
   
- Nell'esempio seguente viene generato l'errore LNK2022.  
+ L'esempio seguente genera l'errore LNK2022.  
   
 ```  
 // LNK2022_b.cpp  

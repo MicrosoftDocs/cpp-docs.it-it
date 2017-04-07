@@ -54,9 +54,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
-ms.openlocfilehash: a2358d31bd87b2cc540dd9a5ce182b9340764522
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 7f394d6519bcf86a4de3966bb958923aab8dd0c6
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cstatusbar-class"></a>CStatusBar (classe)
@@ -89,7 +89,7 @@ class CStatusBar : public CControlBar
 |[CStatusBar::GetPaneInfo](#getpaneinfo)|Ottiene l'ID di indicatori, stile e spessore per un indice specificato.|  
 |[CStatusBar::GetPaneStyle](#getpanestyle)|Ottiene lo stile indicatore per un indice specificato.|  
 |[CStatusBar::GetPaneText](#getpanetext)|Ottiene il testo di indicatore per un indice specificato.|  
-|[CStatusBar:: GetStatusBarCtrl](#getstatusbarctrl)|Consente l'accesso diretto al controllo sottostante comune.|  
+|[CStatusBar:: GetStatusBarCtrl](#getstatusbarctrl)|Consente l'accesso diretto al controllo comune sottostante.|  
 |[CStatusBar:: SetIndicators](#setindicators)|Imposta l'ID di indicatore.|  
 |[CStatusBar::SetPaneInfo](#setpaneinfo)|Imposta l'ID di indicatori, stile e spessore per un indice specificato.|  
 |[CStatusBar::SetPaneStyle](#setpanestyle)|Imposta lo stile dell'indicatore per un indice specificato.|  
@@ -98,7 +98,7 @@ class CStatusBar : public CControlBar
 ## <a name="remarks"></a>Note  
  I riquadri di output vengono comunemente utilizzati come righe di messaggio e come indicatori di stato. Ad esempio le righe di messaggio della Guida di menu che descrivono brevemente il comando di menu selezionata e gli indicatori mostrano lo stato di BLOC SCORR, BLOC NUM e altri tasti.  
   
- [CStatusBar:: GetStatusBarCtrl](#getstatusbarctrl), una funzione membro nuovo alla versione 4.0 di MFC, consente di sfruttare supporto del controllo comune di Windows per funzionalità aggiuntive e personalizzazione della barra di stato. `CStatusBar`funzioni membro consentono la maggior parte delle funzionalità dei controlli comuni di Windows; Tuttavia, quando si chiama `GetStatusBarCtrl`, è possibile assegnare le barre di stato più le caratteristiche di una barra di stato Windows 95/98. Quando si chiama `GetStatusBarCtrl`, verrà restituito un riferimento a un `CStatusBarCtrl` oggetto. Vedere [CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md) per ulteriori informazioni sulla progettazione di barre degli strumenti usando i controlli comuni di Windows. Per ulteriori informazioni generali sui controlli comuni, vedere [controlli comuni](http://msdn.microsoft.com/library/windows/desktop/bb775493) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ [CStatusBar:: GetStatusBarCtrl](#getstatusbarctrl), una funzione membro nuovo alla versione 4.0 di MFC, consente di sfruttare i vantaggi del supporto di controlli comuni di Windows per la personalizzazione e funzionalità aggiuntive della barra di stato. `CStatusBar`funzioni membro consentono la maggior parte delle funzionalità dei controlli comuni di Windows; Tuttavia, quando si chiama `GetStatusBarCtrl`, è possibile assegnare le barre di stato più le caratteristiche di una barra di stato Windows 95/98. Quando si chiama `GetStatusBarCtrl`, verrà restituito un riferimento a un `CStatusBarCtrl` oggetto. Vedere [CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md) per ulteriori informazioni sulla progettazione di barre degli strumenti usando i controlli comuni di Windows. Per ulteriori informazioni generali sui controlli comuni, vedere [controlli comuni](http://msdn.microsoft.com/library/windows/desktop/bb775493) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
  Il framework memorizza le informazioni sugli indicatori in una matrice con l'indicatore più a sinistra nella posizione 0. Quando si crea una barra di stato, utilizzare una matrice di ID che il framework associa gli indicatori corrispondenti di stringa. È quindi possibile utilizzare un ID di stringa o un indice per accedere a un indicatore.  
   
@@ -358,7 +358,7 @@ CStatusBarCtrl& GetStatusBarCtrl() const;
  Per ulteriori informazioni generali sui controlli comuni, vedere [controlli comuni](http://msdn.microsoft.com/library/windows/desktop/bb775493) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ##  <a name="setindicators"></a>CStatusBar:: SetIndicators  
- Imposta l'ID di ogni stato dell'indicatore al valore specificato dall'elemento corrispondente della matrice `lpIDArray`, carica la risorsa di stringa specificata da ogni ID e imposta la stringa di testo dell'indicatore.  
+ Imposta l'ID di ogni stato dell'indicatore sul valore specificato dall'elemento corrispondente della matrice `lpIDArray`, carica la risorsa di stringa specificata da ogni ID e imposta la stringa di testo dell'indicatore.  
   
 ```  
 BOOL SetIndicators(
@@ -405,7 +405,7 @@ void SetPaneInfo(
   
 - **SBPS_NOBORDERS** alcun bordo 3D di riquadro.  
   
-- **SBPS_POPOUT** inversa bordo in modo che il testo "POP".  
+- **SBPS_POPOUT** inverso del bordo in modo che il testo "POP".  
   
 - **SBPS_DISABLED** non disegnare testo.  
   

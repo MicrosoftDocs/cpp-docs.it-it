@@ -1,5 +1,5 @@
 ---
-title: Classe CAtlComModule | Documenti di Microsoft
+title: Classe CAtlComModule | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -40,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 6b933b5388fccc2dc0e31d035aa7eb56de3b1866
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 02381d00226f40c5c84b2d957dfee6881742febb
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="catlcommodule-class"></a>Classe CAtlComModule
@@ -73,9 +73,9 @@ class CAtlComModule : public _ATL_COM_MODULE
 |[CAtlComModule::UnRegisterTypeLib](#unregistertypelib)|Chiamare questo metodo per annullare la registrazione di una libreria dei tipi.|  
   
 ## <a name="remarks"></a>Note  
- `CAtlComModule`implementa un modulo di server COM, consentendo un client di accedere ai componenti del modulo.  
+ `CAtlComModule`implementa un modulo di server COM, in modo che un client accedere ai componenti del modulo.  
   
- Questa classe sostituisce obsoleta [CComModule](../../atl/reference/ccommodule-class.md) classe utilizzata nelle versioni precedenti di ATL. Vedere [classi di modulo ATL](../../atl/atl-module-classes.md) per ulteriori dettagli.  
+ Questa classe sostituisce obsoleta [CComModule](../../atl/reference/ccommodule-class.md) classe utilizzata nelle versioni precedenti di ATL. Vedere [classi di modulo ATL](../../atl/atl-module-classes.md) per altri dettagli.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)  
@@ -120,10 +120,10 @@ HRESULT RegisterServer(BOOL bRegTypeLib = FALSE, const CLSID* pCLSID = NULL);
  Punta al CLSID dell'oggetto da registrare. Se NULL (valore predefinito), tutti gli oggetti nella mappa oggetto verrà registrato.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce S_OK esito positivo o un errore HRESULT in caso di errore.  
+ Restituisce S_OK se l'operazione riesce, o un errore HRESULT in caso di errore.  
   
 ### <a name="remarks"></a>Note  
- Chiama la funzione globale [AtlComModuleRegisterServer](http://msdn.microsoft.com/library/d11a0c91-0c56-4b1b-a5f5-1287970f798b).  
+ Chiama la funzione globale [AtlComModuleRegisterServer](server-registration-global-functions.md#atlcommoduleregisterserver).  
   
 ##  <a name="registertypelib"></a>CAtlComModule::RegisterTypeLib  
  Chiamare questo metodo per registrare una libreria dei tipi.  
@@ -138,7 +138,7 @@ HRESULT RegisterTypeLib();
  Stringa nel formato "\\\N", dove N è l'indice integer della risorsa della libreria dei tipi.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce S_OK esito positivo o un errore HRESULT in caso di errore.  
+ Restituisce S_OK se l'operazione riesce, o un errore HRESULT in caso di errore.  
   
 ### <a name="remarks"></a>Note  
  Aggiunge informazioni su una libreria dei tipi nel Registro di sistema. Se l'istanza del modulo contiene più librerie dei tipi, utilizzare la prima versione di questo metodo per specificare quale libreria dei tipi deve essere utilizzata.  
@@ -154,16 +154,16 @@ HRESULT UnregisterServer(
   
 ### <a name="parameters"></a>Parametri  
  `bRegTypeLib`  
- TRUE se è necessario annullare la registrazione della libreria dei tipi. Il valore predefinito è FALSE.  
+ TRUE se è possibile annullare la registrazione della libreria dei tipi. Il valore predefinito è FALSE.  
   
  `pCLSID`  
- Punta al CLSID dell'oggetto per annullare la registrazione. Se NULL (valore predefinito), tutti gli oggetti nella mappa oggetto verrà annullata.  
+ Punta al CLSID dell'oggetto da cui annullare la registrazione. Se NULL (valore predefinito), tutti gli oggetti nella mappa oggetto verrà annullata.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce S_OK esito positivo o un errore HRESULT in caso di errore.  
+ Restituisce S_OK se l'operazione riesce, o un errore HRESULT in caso di errore.  
   
 ### <a name="remarks"></a>Note  
- Chiama la funzione globale [AtlComModuleUnregisterServer](http://msdn.microsoft.com/library/c4ef3da4-def7-4aaf-b005-573a02e389d5).  
+ Chiama la funzione globale [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver).  
   
 ##  <a name="unregistertypelib"></a>CAtlComModule::UnRegisterTypeLib  
  Chiamare questo metodo per annullare la registrazione di una libreria dei tipi.  
@@ -181,7 +181,7 @@ HRESULT UnRegisterTypeLib();
  Rimuove una libreria dei tipi di informazioni dal Registro di sistema. Se l'istanza del modulo contiene più librerie dei tipi, utilizzare la prima versione di questo metodo per specificare quale libreria dei tipi deve essere utilizzata.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce S_OK esito positivo o un errore HRESULT in caso di errore.  
+ Restituisce S_OK se l'operazione riesce, o un errore HRESULT in caso di errore.  
   
 ## <a name="see-also"></a>Vedere anche  
  [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)   

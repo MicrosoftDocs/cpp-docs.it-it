@@ -1,5 +1,5 @@
 ---
-title: Classe tile_barrier | Documenti di Microsoft
+title: Classe tile_barrier | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -40,13 +40,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 247828a6de3a5820d75623ee438810b563f04519
-ms.lasthandoff: 03/17/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 4bacc84c4e267ffca14290186750ae1d3bdf899f
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="tilebarrier-class"></a>Classe tile_barrier
-Sincronizza l'esecuzione di thread in esecuzione nel gruppo di thread (riquadro) utilizzando `wait` metodi. Solo il runtime può creare un'istanza di questa classe.  
+Sincronizza l'esecuzione del thread in esecuzione nel gruppo di thread (riquadro) con `wait` metodi. Solo il runtime può creare un'istanza di questa classe.  
   
 ### <a name="syntax"></a>Sintassi 
   
@@ -66,10 +66,10 @@ class tile_barrier;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[attesa](#wait)|Indica tutti i thread nel gruppo di thread (riquadro) di arrestare l'esecuzione fino al completamento di tutti i thread nel tile in attesa.|  
-|[wait_with_all_memory_fence](#wait_with_all_memory_fence)|Blocca l'esecuzione di tutti i thread in una sezione fino a quando non sono stati completati tutti gli accessi alla memoria e tutti i thread nel tile hanno raggiunto questa chiamata.|  
-|[wait_with_global_memory_fence](#wait_with_global_memory_fence)|Blocca l'esecuzione di tutti i thread in una sezione fino a quando non sono stati completati tutti gli accessi alla memoria globale e tutti i thread nel tile hanno raggiunto questa chiamata.|  
-|[wait_with_tile_static_memory_fence](#wait_with_tile_static_memory_fence)|Blocca l'esecuzione di tutti i thread in una sezione finché tutti `tile_static` gli accessi alla memoria sono state completate e tutti i thread nel tile hanno raggiunto questa chiamata.|  
+|[attesa](#wait)|Indica a tutti i thread nel gruppo di thread (riquadro) per arrestare l'esecuzione finché non termina in attesa di tutti i thread nel riquadro.|  
+|[wait_with_all_memory_fence](#wait_with_all_memory_fence)|Blocca l'esecuzione di tutti i thread in un riquadro fino a quando non sono stati completati tutti gli accessi alla memoria e tutti i thread nel riquadro hanno raggiunto questa chiamata.|  
+|[wait_with_global_memory_fence](#wait_with_global_memory_fence)|Blocca l'esecuzione di tutti i thread in un riquadro fino a quando non sono stati completati tutti gli accessi di memoria globale e tutti i thread nel riquadro hanno raggiunto questa chiamata.|  
+|[wait_with_tile_static_memory_fence](#wait_with_tile_static_memory_fence)|Blocca l'esecuzione di tutti i thread in un riquadro finché tutti `tile_static` gli accessi alla memoria sono state completate e tutti i thread nel riquadro hanno raggiunto questa chiamata.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `tile_barrier`  
@@ -94,7 +94,7 @@ tile_barrier(
  Il `tile_barrier` oggetto da copiare.  
 
 ## <a name="wait"></a>attesa 
-Indica tutti i thread nel gruppo di thread (riquadro) per arrestare l'esecuzione fino al completamento di tutti i thread nel tile in attesa.  
+Indica a tutti i thread nel gruppo di thread (riquadro) per arrestare l'esecuzione finché non termina in attesa di tutti i thread nel riquadro.  
   
 ### <a name="syntax"></a>Sintassi 
   
@@ -103,7 +103,7 @@ void wait() const restrict(amp);
 ```    
 
 ## <a name="wait_with_all_memory_fence"></a>wait_with_all_memory_fence   
-Blocca l'esecuzione di tutti i thread in una sezione fino a quando tutti i thread in un riquadro hanno raggiunto questa chiamata. In questo modo tutti gli accessi alla memoria sono visibili agli altri thread nel tile thread che sono state eseguite nell'ordine del programma.  
+Blocca l'esecuzione di tutti i thread in un riquadro fino a quando tutti i thread in un riquadro hanno raggiunto questa chiamata. In questo modo tutti gli accessi alla memoria sono visibili agli altri thread nel riquadro del thread che sono state eseguite nell'ordine del programma.  
   
 ### <a name="syntax"></a>Sintassi 
   
@@ -113,7 +113,7 @@ void wait_with_all_memory_fence() const restrict(amp);
   
 
 ## <a name="wait_with_global_memory_fence"></a>wait_with_global_memory_fence   
-Blocca l'esecuzione di tutti i thread in una sezione fino a quando tutti i thread in un riquadro hanno raggiunto questa chiamata. In questo modo tutti gli accessi alla memoria globale sono visibili agli altri thread nel tile thread che sono state eseguite nell'ordine del programma.  
+Blocca l'esecuzione di tutti i thread in un riquadro fino a quando tutti i thread in un riquadro hanno raggiunto questa chiamata. In questo modo tutti gli accessi di memoria globale sono visibili agli altri thread nel riquadro del thread che sono stati eseguiti nell'ordine del programma.  
   
 ### <a name="syntax"></a>Sintassi 
   
@@ -122,7 +122,7 @@ void wait_with_global_memory_fence() const  restrict(amp);
 ```
 
 ## <a name="wait_with_tile_static_memory_fence"></a>wait_with_tile_static_memory_fence   
-Blocca l'esecuzione di tutti i thread in una sezione fino a quando tutti i thread in un riquadro hanno raggiunto questa chiamata. In questo modo `tile_static`memoria accessi sono visibili agli altri thread nel tile thread e sono stati eseguiti nell'ordine del programma.  
+Blocca l'esecuzione di tutti i thread in un riquadro fino a quando tutti i thread in un riquadro hanno raggiunto questa chiamata. In questo modo `tile_static` memoria sono visibili agli altri thread nel riquadro del thread, gli accessi e sono stati eseguiti nell'ordine del programma.  
   
 ### <a name="syntax"></a>Sintassi 
   
