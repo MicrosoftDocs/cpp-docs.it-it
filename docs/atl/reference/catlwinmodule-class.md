@@ -1,5 +1,5 @@
 ---
-title: Classe CAtlWinModule | Documenti di Microsoft
+title: Classe CAtlWinModule | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -38,9 +38,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 6db3ae9e610605524683e984f2aba602b1daf0d4
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: f2d5e28f39159b097c4e00e11518295b2872a84b
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="catlwinmodule-class"></a>Classe CAtlWinModule
@@ -69,10 +69,10 @@ class CAtlWinModule : public _ATL_WIN_MODULE
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[CAtlWinModule::AddCreateWndData](#addcreatewnddata)|Aggiunge un oggetto dati.|  
-|[CAtlWinModule::ExtractCreateWndData](#extractcreatewnddata)|Restituisce un puntatore all'oggetto finestra modulo dati.|  
+|[CAtlWinModule::ExtractCreateWndData](#extractcreatewnddata)|Restituisce un puntatore all'oggetto dati modulo window.|  
   
 ## <a name="remarks"></a>Note  
- Questa classe fornisce supporto per tutte le classi ATL che richiedono funzionalità windowing.  
+ Questa classe fornisce supporto per tutte le classi ATL che richiedono le funzionalità di windowing.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)  
@@ -83,7 +83,7 @@ class CAtlWinModule : public _ATL_WIN_MODULE
  **Intestazione:** atlbase. h  
   
 ##  <a name="addcreatewnddata"></a>CAtlWinModule::AddCreateWndData  
- Questo metodo inizializza e aggiunge un `_AtlCreateWndData` struttura.  
+ Questo metodo inizializza e lo aggiunge un `_AtlCreateWndData` struttura.  
   
 ```
 void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
@@ -91,13 +91,13 @@ void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
   
 ### <a name="parameters"></a>Parametri  
  `pData`  
- Puntatore al `_AtlCreateWndData` struttura deve essere inizializzato e aggiunto al modulo corrente.  
+ Puntatore al `_AtlCreateWndData` struttura deve essere inizializzato e aggiunti al modulo corrente.  
   
  `pObject`  
  Puntatore a un oggetto **questo** puntatore.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo chiama [AtlWinModuleAddCreateWndData](http://msdn.microsoft.com/library/8463a6ed-07ea-4aad-92ec-ded681601b32) che inizializza un [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) struttura. Questa struttura archivierà il **questo** puntatore, utilizzato per ottenere l'istanza della classe nella routine della finestra.  
+ Questo metodo chiama [AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata) che inizializza un [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) struttura. Questa struttura archivierà il **questo** puntatore, utilizzato per ottenere l'istanza della classe nella routine della finestra.  
   
 ##  <a name="catlwinmodule"></a>CAtlWinModule::CAtlWinModule  
  Costruttore.  
@@ -107,7 +107,7 @@ CAtlWinModule();
 ```  
   
 ### <a name="remarks"></a>Note  
- Se un errore di inizializzazione, un **EXCEPTION_NONCONTINUABLE** eccezione.  
+ Se l'inizializzazione non riesce, un **EXCEPTION_NONCONTINUABLE** viene generata l'eccezione.  
   
 ##  <a name="dtor"></a>CAtlWinModule:: ~ CAtlWinModule  
  Distruttore.  
@@ -127,10 +127,10 @@ void* ExtractCreateWndData();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce un puntatore per il `_AtlCreateWndData` struttura aggiunto in precedenza con [CAtlWinModule::AddCreateWndData](#addcreatewnddata), oppure NULL se non è disponibile alcun oggetto.  
+ Restituisce un puntatore al `_AtlCreateWndData` struttura aggiunto in precedenza con [CAtlWinModule::AddCreateWndData](#addcreatewnddata), oppure NULL se non è disponibile alcun oggetto.  
   
 ## <a name="see-also"></a>Vedere anche  
  [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)   
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)   
- [Classi di modulo](../../atl/atl-module-classes.md)
+ [Classi Module](../../atl/atl-module-classes.md)
 
