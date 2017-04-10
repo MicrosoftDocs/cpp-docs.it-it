@@ -42,9 +42,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: 66b5e6cbfaadd4b57d301de74fc2e0b815956952
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 4a82f66f0b6f6535de8e9707c2d68b94b7eb69c5
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="cdbexception-class"></a>Classe CDBException
@@ -98,7 +98,7 @@ class CDBException : public CException
   
 - **AFX_SQL_ERROR_CONNECT_FAIL** Impossibile stabilire la connessione all'origine dati. È passato un **NULL** `CDatabase` puntatore al costruttore del recordset e il successivo tentativo di creare una connessione in base a `GetDefaultConnect` non riuscita.  
   
-- **AFX_SQL_ERROR_DATA_TRUNCATED** richiesto più dati di archiviazione per fornite. Per informazioni su come aumentare l'archiviazione di dati specificato per `CString` o `CByteArray` tipi di dati, vedere il `nMaxLength` argomento per [RFX_Text](http://msdn.microsoft.com/library/de3c7581-d26c-40cb-81f3-c492ef4809f6) e [RFX_Binary](http://msdn.microsoft.com/library/908ff945-3ad0-43a1-9932-cdcdc8b14915) in "Macro e funzioni globali".  
+- **AFX_SQL_ERROR_DATA_TRUNCATED** richiesto più dati di archiviazione per fornite. Per informazioni su come aumentare l'archiviazione di dati specificato per `CString` o `CByteArray` tipi di dati, vedere il `nMaxLength` argomento per [RFX_Text](record-field-exchange-functions.md#rfx_text) e [RFX_Binary](record-field-exchange-functions.md#rfx_binary) in "Macro e funzioni globali".  
   
 - **AFX_SQL_ERROR_DYNASET_NOT_SUPPORTED** una chiamata a `CRecordset::Open` dynaset richiesta non riuscita. I dynaset non sono supportati dal driver.  
   
@@ -130,7 +130,7 @@ class CDBException : public CException
   
 - **AFX_SQL_ERROR_SQL_NO_TOTAL** non è riuscito specificare le dimensioni totali dei driver ODBC di un `CLongBinary` valore dei dati. Probabilmente l'operazione non riuscita perché non è stato possibile preallocato un blocco di memoria globale.  
   
-- **AFX_SQL_ERROR_RECORDSET_READONLY** si è tentato di aggiornare un recordset di sola lettura o l'origine dati è di sola lettura. Alcun operazioni di aggiornamento non possono essere eseguite con il recordset o `CDatabase` oggetto è associato.  
+- **AFX_SQL_ERROR_RECORDSET_READONLY** si è tentato di aggiornare un recordset di sola lettura o l'origine dati è di sola lettura. Nessuna operazione di aggiornamento possono essere eseguita con il recordset o `CDatabase` oggetto è associato.  
   
 - **SQL_ERROR** funzione non riuscita. Il messaggio di errore restituito dalla funzione ODBC **SQLError** viene archiviato nel **m_strError** (membro dati).  
   
@@ -150,7 +150,7 @@ class CDBException : public CException
 ### <a name="remarks"></a>Note  
  La stringa è di formato "stato: % s, nativo: % ld, origine: % s", in cui i codici di formato, in ordine, vengono sostituiti da valori che descrivono:  
   
--   Il **SQLSTATE**, contenente un codice di errore di cinque caratteri restituito in una stringa con terminazione null di *szSqlState* parametro della funzione ODBC **SQLError**. **SQLSTATE** valori sono elencati nell'appendice A, [codici di errore ODBC](https://msdn.microsoft.com/library/ms714687.aspx), nel *riferimento per programmatori ODBC*. Esempio: "S0022".  
+-   Il **SQLSTATE**, contenente un codice di errore di cinque caratteri restituito in una stringa con terminazione null di *szSqlState* parametro della funzione ODBC **SQLError**. **SQLSTATE** valori sono elencati nell'appendice A, [codici di errore ODBC](https://msdn.microsoft.com/library/ms714687.aspx)nella *riferimento per programmatori ODBC*. Esempio: "S0022".  
   
 -   Il codice di errore nativo, specifico dell'origine dati, restituito nel *pfNativeError* parametro del **SQLError** (funzione). Esempio: 207.  
   
