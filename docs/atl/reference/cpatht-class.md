@@ -1,5 +1,5 @@
 ---
-title: Classe CPathT | Documenti di Microsoft
+title: Classe CPathT | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -77,9 +77,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 8cbd91ae1c4318788b38b2daaa7721d1a29fca98
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 98b00e3f888d5f6bfb33f6ee24c4af2860bb470f
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cpatht-class"></a>Classe CPathT
@@ -97,7 +97,7 @@ class CPathT
   
 #### <a name="parameters"></a>Parametri  
  `StringType`  
- La classe di stringhe ATL/MFC da utilizzare per il percorso (vedere [CStringT](../../atl-mfc-shared/reference/cstringt-class.md)).  
+ La classe string ATL/MFC da utilizzare per il percorso (vedere [CStringT](../../atl-mfc-shared/reference/cstringt-class.md)).  
   
 ## <a name="members"></a>Membri  
   
@@ -105,7 +105,7 @@ class CPathT
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CPathT::PCXSTR](#pcxstr)|Un tipo di stringa costante.|  
+|[CPathT::PCXSTR](#pcxstr)|Un tipo stringa costante.|  
 |[CPathT::PXSTR](#pxstr)|Un tipo stringa.|  
 |[CPathT::XCHAR](#xchar)|Tipo di carattere.|  
   
@@ -124,36 +124,36 @@ class CPathT
 |[CPathT::Append](#append)|Chiamare questo metodo per aggiungere una stringa per il percorso corrente.|  
 |[CPathT::BuildRoot](#buildroot)|Chiamare questo metodo per creare un percorso radice da un numero di unità specificata.|  
 |[CPathT::Canonicalize](#canonicalize)|Chiamare questo metodo per convertire il percorso in forma canonica.|  
-|[CPathT::Combine](#combine)|Questo metodo consente di concatenare una stringa che rappresenta un nome di directory e una stringa che rappresenta un nome di percorso di file in un percorso.|  
+|[CPathT::Combine](#combine)|Chiamare questo metodo per concatenare una stringa che rappresenta un nome di directory e una stringa che rappresenta un nome di percorso di file in un percorso.|  
 |[CPathT::CommonPrefix](#commonprefix)|Chiamare questo metodo per determinare se il percorso specificato condivide un prefisso comune con il percorso corrente.|  
-|[CPathT::CompactPath](#compactpath)|Chiamare questo metodo per troncare un percorso di file in base all'interno di una larghezza in pixel specificato mediante la sostituzione di componenti del percorso con i puntini di sospensione.|  
-|[CPathT::CompactPathEx](#compactpathex)|Chiamare questo metodo per troncare un percorso di file in base all'interno di un determinato numero di caratteri mediante la sostituzione di componenti del percorso con i puntini di sospensione.|  
-|[CPathT::FileExists](#fileexists)|Chiamare questo metodo per verificare se è presente il file con questo nome di percorso.|  
+|[CPathT::CompactPath](#compactpath)|Chiamare questo metodo per troncare un percorso di file in base all'interno di una larghezza in pixel specificata sostituendo i componenti del percorso con i puntini di sospensione.|  
+|[CPathT::CompactPathEx](#compactpathex)|Chiamare questo metodo per troncare un percorso di file in base all'interno di un determinato numero di caratteri sostituendo i componenti del percorso con i puntini di sospensione.|  
+|[CPathT::FileExists](#fileexists)|Chiamare questo metodo per verificare se esiste il file con questo nome di percorso.|  
 |[CPathT::FindExtension](#findextension)|Chiamare questo metodo per individuare la posizione dell'estensione di file all'interno del percorso.|  
 |[CPathT::FindFileName](#findfilename)|Chiamare questo metodo per individuare la posizione del nome del file all'interno del percorso.|  
-|[CPathT::GetDriveNumber](#getdrivenumber)|Chiamare questo metodo per cercare il percorso per una lettera di unità all'interno dell'intervallo di 'A' alla 'Z' e restituire il numero di unità corrispondente.|  
-|[CPathT::GetExtension](#getextension)|Chiamare questo metodo per ottenere l'estensione del file dal percorso.|  
-|[CPathT::IsDirectory](#isdirectory)|Chiamare questo metodo per controllare se il percorso è una directory valida.|  
-|[CPathT::IsFileSpec](#isfilespec)|Chiamare questo metodo per cercare un percorso per tutti i caratteri che delimitano percorso (ad esempio, ':' o '\\'). Se non sono presenti caratteri che delimitano percorso, il percorso viene considerato come un percorso di File specifiche.|  
+|[CPathT::GetDriveNumber](#getdrivenumber)|Chiamare questo metodo per cercare il percorso per una lettera di unità all'interno dell'intervallo di 'A' a 'Z' e restituire il numero di unità corrispondenti.|  
+|[CPathT::GetExtension](#getextension)|Chiamare questo metodo per ottenere l'estensione di file dal percorso.|  
+|[CPathT::IsDirectory](#isdirectory)|Chiamare questo metodo per verificare se il percorso è una directory valida.|  
+|[CPathT::IsFileSpec](#isfilespec)|Chiamare questo metodo per cercare un percorso per tutti i caratteri che delimitano percorso (ad esempio, ':' o '\\'). Se non sono presenti caratteri che delimitano percorso, il percorso viene considerato un percorso di File specifiche.|  
 |[CPathT::IsPrefix](#isprefix)|Chiamare questo metodo per determinare se un percorso contiene un prefisso valido del tipo passato `pszPrefix`.|  
 |[CPathT::IsRelative](#isrelative)|Chiamare questo metodo per determinare se il percorso è relativo.|  
 |[CPathT::IsRoot](#isroot)|Chiamare questo metodo per determinare se il percorso è una directory principale.|  
-|[CPathT::IsSameRoot](#issameroot)|Chiamare questo metodo per determinare se un altro percorso include un componente principale comune con il percorso corrente.|  
-|[CPathT::IsUNC](#isunc)|Chiamare questo metodo per determinare se il percorso è un percorso UNC (convenzione di denominazione universale) valido per un server e condivisione.|  
-|[CPathT::IsUNCServer](#isuncserver)|Chiamare questo metodo per determinare se il percorso è un percorso UNC (convenzione di denominazione universale) valido per un solo server.|  
-|[CPathT::IsUNCServerShare](#isuncservershare)|Chiamare questo metodo per determinare se il percorso è un percorso di condivisione UNC (convenzione di denominazione universale) valido, \\ \  *server*\ *condividere*.|  
-|[CPathT::MakePretty](#makepretty)|Chiamare questo metodo per convertire un percorso in tutti i caratteri minuscoli per indicare il percorso di un aspetto coerente.|  
-|[CPathT::MatchSpec](#matchspec)|Chiamare questo metodo per cercare il percorso per una stringa contenente un tipo di corrispondenza con caratteri jolly.|  
+|[CPathT::IsSameRoot](#issameroot)|Chiamare questo metodo per determinare se un altro percorso è un componente radice comune con il percorso corrente.|  
+|[CPathT::IsUNC](#isunc)|Chiamare questo metodo per determinare se il percorso è un percorso UNC (universal convenzione di denominazione) valido per un server e condividere.|  
+|[CPathT::IsUNCServer](#isuncserver)|Chiamare questo metodo per determinare se il percorso è un percorso UNC (universal convenzione di denominazione) valido per un solo server.|  
+|[CPathT::IsUNCServerShare](#isuncservershare)|Chiamare questo metodo per determinare se il percorso è un percorso di condivisione UNC (universal convenzione di denominazione) valido, \\ \  *server*\ *condividere*.|  
+|[CPathT::MakePretty](#makepretty)|Chiamare questo metodo per convertire un percorso per tutti i caratteri minuscoli per fornire il percorso di un aspetto coerente.|  
+|[CPathT::MatchSpec](#matchspec)|Chiamare questo metodo per cercare il percorso di una stringa che contiene un tipo di corrispondenza con caratteri jolly.|  
 |[CPathT::QuoteSpaces](#quotespaces)|Chiamare questo metodo per racchiudere il percorso tra virgolette se contiene spazi.|  
 |[CPathT::RelativePathTo](#relativepathto)|Chiamare questo metodo per creare un percorso relativo da un file o una cartella a altra.|  
 |[CPathT::RemoveArgs](#removeargs)|Chiamare questo metodo per rimuovere eventuali argomenti della riga di comando dal percorso.|  
 |[CPathT::RemoveBackslash](#removebackslash)|Chiamare questo metodo per rimuovere la barra rovesciata finale dal percorso.|  
 |[CPathT::RemoveBlanks](#removeblanks)|Chiamare questo metodo per rimuovere tutti gli spazi iniziali e finali dal percorso.|  
-|[CPathT::RemoveExtension](#removeextension)|Chiamare questo metodo per rimuovere l'estensione del file dal percorso, se presente.|  
-|[CPathT::RemoveFileSpec](#removefilespec)|Chiamare questo metodo per rimuovere il nome del file finale e barra rovesciata dal percorso, se li ha.|  
-|[CPathT::RenameExtension](#renameextension)|Chiamare questo metodo per sostituire l'estensione di file nel percorso di una nuova estensione. Se il nome del file non contiene un'estensione, l'estensione verrà collegato alla fine della stringa.|  
-|[CPathT::SkipRoot](#skiproot)|Chiamare questo metodo per analizzare un percorso, ignorando la lettera di unità o parti del percorso UNC o condivisione server.|  
-|[CPathT::StripPath](#strippath)|Chiamare questo metodo per rimuovere la parte di percorso di un percorso completo e nome file.|  
+|[CPathT::RemoveExtension](#removeextension)|Chiamare questo metodo per rimuovere l'estensione di file dal percorso, se presente.|  
+|[CPathT::RemoveFileSpec](#removefilespec)|Chiamare questo metodo per rimuovere il percorso, il nome di file finali e la barra rovesciata se dispone di essi.|  
+|[CPathT::RenameExtension](#renameextension)|Chiamare questo metodo per sostituire l'estensione del nome file nel percorso di una nuova estensione. Se il nome del file non contiene un'estensione, l'estensione verrà collegato alla fine della stringa.|  
+|[CPathT::SkipRoot](#skiproot)|Chiamare questo metodo per analizzare un percorso, ignorando la lettera di unità o parti di percorso UNC o condivisione server.|  
+|[CPathT::StripPath](#strippath)|Chiamare questo metodo per rimuovere la parte del percorso di un percorso completo e nome file.|  
 |[CPathT::StripToRoot](#striptoroot)|Chiamare questo metodo per rimuovere tutte le parti del percorso, ad eccezione delle informazioni relative alla radice.|  
 |[CPathT::UnquoteSpaces](#unquotespaces)|Chiamare questo metodo per rimuovere le virgolette all'inizio e fine di un percorso.|  
   
@@ -173,7 +173,7 @@ class CPathT
 |[CPathT::m_strPath](#m_strpath)|Percorso.|  
   
 ## <a name="remarks"></a>Note  
- `CPath`, `CPathA`, e `CPathW` sono istanze di `CPathT` definita come segue:  
+ `CPath`, `CPathA`, e `CPathW` sono creazioni di istanze di `CPathT` definito come segue:  
   
  `typedef CPathT< CString > CPath;`  
   
@@ -206,7 +206,7 @@ BOOL AddExtension(PCXSTR pszExtension);
  L'estensione di file da aggiungere.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce TRUE esito positivo, FALSE in caso di errore.  
+ Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.  
   
 ### <a name="remarks"></a>Note  
  Per ulteriori informazioni, vedere [PathAddExtension](http://msdn.microsoft.com/library/windows/desktop/bb773563).  
@@ -223,7 +223,7 @@ BOOL Append(PCXSTR pszMore);
  Stringa da accodare.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce TRUE esito positivo, FALSE in caso di errore.  
+ Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.  
   
 ### <a name="remarks"></a>Note  
  Per ulteriori informazioni, vedere [PathAppend](http://msdn.microsoft.com/library/windows/desktop/bb773565).  
@@ -253,7 +253,7 @@ void Canonicalize();
  Per ulteriori informazioni, vedere [PathCanonicalize](http://msdn.microsoft.com/library/windows/desktop/bb773569).  
   
 ##  <a name="combine"></a>CPathT::Combine  
- Questo metodo consente di concatenare una stringa che rappresenta un nome di directory e una stringa che rappresenta un nome di percorso di file in un percorso.  
+ Chiamare questo metodo per concatenare una stringa che rappresenta un nome di directory e una stringa che rappresenta un nome di percorso di file in un percorso.  
   
 ```
 void Combine(PCXSTR pszDir, PCXSTR  pszFile);
@@ -287,7 +287,7 @@ CPathT<StringType> CommonPrefix(PCXSTR pszOther);
  Un prefisso è uno dei seguenti tipi: "c:\\\\",".","...","... \\\\". Per ulteriori informazioni, vedere [PathCommonPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773574).  
   
 ##  <a name="compactpath"></a>CPathT::CompactPath  
- Chiamare questo metodo per troncare un percorso di file in base all'interno di una larghezza in pixel specificato mediante la sostituzione di componenti del percorso con i puntini di sospensione.  
+ Chiamare questo metodo per troncare un percorso di file in base all'interno di una larghezza in pixel specificata sostituendo i componenti del percorso con i puntini di sospensione.  
   
 ```
 BOOL CompactPath(HDC hDC, UINT nWidth);
@@ -295,19 +295,19 @@ BOOL CompactPath(HDC hDC, UINT nWidth);
   
 ### <a name="parameters"></a>Parametri  
  `hDC`  
- Il contesto di dispositivo utilizzato per le metriche dei tipi di carattere.  
+ Il contesto di dispositivo utilizzato per le metriche del tipo di carattere.  
   
  `nWidth`  
  La larghezza, in pixel, che verrà forzata la stringa per le dimensioni.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce TRUE esito positivo, FALSE in caso di errore.  
+ Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.  
   
 ### <a name="remarks"></a>Note  
  Per ulteriori informazioni, vedere [PathCompactPath](http://msdn.microsoft.com/library/windows/desktop/bb773575).  
   
 ##  <a name="compactpathex"></a>CPathT::CompactPathEx  
- Chiamare questo metodo per troncare un percorso di file in base all'interno di un determinato numero di caratteri mediante la sostituzione di componenti del percorso con i puntini di sospensione.  
+ Chiamare questo metodo per troncare un percorso di file in base all'interno di un determinato numero di caratteri sostituendo i componenti del percorso con i puntini di sospensione.  
   
 ```
 BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);
@@ -315,13 +315,13 @@ BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);
   
 ### <a name="parameters"></a>Parametri  
  `nMaxChars`  
- Numero massimo di caratteri deve essere incluso nella nuova stringa, incluso il carattere di terminazione NULL.  
+ Numero massimo di caratteri devono essere contenuti nella nuova stringa, incluso il carattere di terminazione NULL.  
   
  `dwFlags`  
  Riservato.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce TRUE esito positivo, FALSE in caso di errore.  
+ Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.  
   
 ### <a name="remarks"></a>Note  
  Per ulteriori informazioni, vedere [PathCompactPathEx](http://msdn.microsoft.com/library/windows/desktop/bb773578).  
@@ -340,10 +340,10 @@ CPathT() throw();
  Puntatore a una stringa di percorso.  
   
  *path*  
- Stringa di percorso.  
+ La stringa del percorso.  
   
 ##  <a name="fileexists"></a>CPathT::FileExists  
- Chiamare questo metodo per verificare se è presente il file con questo nome di percorso.  
+ Chiamare questo metodo per verificare se esiste il file con questo nome di percorso.  
   
 ```
 BOOL FileExists() const;
@@ -363,7 +363,7 @@ int FindExtension() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce la posizione del "." che precede l'estensione. Se non viene trovata alcuna estensione, restituisce –&1;.  
+ Restituisce la posizione del "." che precede l'estensione. Se nessuna estensione viene trovata, restituisce -1.  
   
 ### <a name="remarks"></a>Note  
  Per ulteriori informazioni, vedere [PathFindExtension](http://msdn.microsoft.com/library/windows/desktop/bb773587).  
@@ -382,43 +382,43 @@ int FindFileName() const;
  Per ulteriori informazioni, vedere [PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589).  
   
 ##  <a name="getdrivenumber"></a>CPathT::GetDriveNumber  
- Chiamare questo metodo per cercare il percorso per una lettera di unità all'interno dell'intervallo di 'A' alla 'Z' e restituire il numero di unità corrispondente.  
+ Chiamare questo metodo per cercare il percorso per una lettera di unità all'interno dell'intervallo di 'A' a 'Z' e restituire il numero di unità corrispondenti.  
   
 ```
 int GetDriveNumber() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il numero di unità come numero intero compreso tra 0 e 25, corrispondente a 'A' alla 'Z', se il percorso è una lettera di unità, oppure -1 in caso contrario.  
+ Restituisce il numero di unità come numero intero compreso tra 0 e 25, corrispondente a 'A' a 'Z', se il percorso è una lettera di unità, oppure -1 in caso contrario.  
   
 ### <a name="remarks"></a>Note  
  Per ulteriori informazioni, vedere [PathGetDriveNumber](http://msdn.microsoft.com/library/windows/desktop/bb773612).  
   
 ##  <a name="getextension"></a>CPathT::GetExtension  
- Chiamare questo metodo per ottenere l'estensione del file dal percorso.  
+ Chiamare questo metodo per ottenere l'estensione di file dal percorso.  
   
 ```
 StringType GetExtension() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce l'estensione del file.  
+ Restituisce l'estensione di file.  
   
 ##  <a name="isdirectory"></a>CPathT::IsDirectory  
- Chiamare questo metodo per controllare se il percorso è una directory valida.  
+ Chiamare questo metodo per verificare se il percorso è una directory valida.  
   
 ```
 BOOL IsDirectory() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce un valore diverso da zero (16) se il percorso è una directory, `FALSE` in caso contrario.  
+ Restituisce un valore diverso da zero (16), se il percorso è una directory, `FALSE` in caso contrario.  
   
 ### <a name="remarks"></a>Note  
  Per ulteriori informazioni, vedere [PathIsDirectory](http://msdn.microsoft.com/library/windows/desktop/bb773621).  
   
 ##  <a name="isfilespec"></a>CPathT::IsFileSpec  
- Chiamare questo metodo per cercare un percorso per tutti i caratteri che delimitano percorso (ad esempio, ':' o '\\'). Se non sono presenti caratteri che delimitano percorso, il percorso viene considerato come un percorso di File specifiche.  
+ Chiamare questo metodo per cercare un percorso per tutti i caratteri che delimitano percorso (ad esempio, ':' o '\\'). Se non sono presenti caratteri che delimitano percorso, il percorso viene considerato un percorso di File specifiche.  
   
 ```
 BOOL IsFileSpec() const;
@@ -439,7 +439,7 @@ BOOL IsPrefix(PCXSTR pszPrefix) const;
   
 ### <a name="parameters"></a>Parametri  
  `pszPrefix`  
- Il prefisso per la ricerca. Un prefisso è uno dei seguenti tipi: "c:\\\\",".","...","... \\\\".  
+ Il prefisso per cui eseguire la ricerca. Un prefisso è uno dei seguenti tipi: "c:\\\\",".","...","... \\\\".  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce TRUE se il percorso contiene il prefisso o FALSE in caso contrario.  
@@ -455,7 +455,7 @@ BOOL IsRelative() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce TRUE se il percorso è relativo, oppure FALSE se è assoluto.  
+ Restituisce TRUE se il percorso è relativo o FALSE se è assoluto.  
   
 ### <a name="remarks"></a>Note  
  Per ulteriori informazioni, vedere [PathIsRelative](http://msdn.microsoft.com/library/windows/desktop/bb773660).  
@@ -474,7 +474,7 @@ BOOL IsRoot() const;
  Per ulteriori informazioni, vedere [PathIsRoot](http://msdn.microsoft.com/library/windows/desktop/bb773674).  
   
 ##  <a name="issameroot"></a>CPathT::IsSameRoot  
- Chiamare questo metodo per determinare se un altro percorso include un componente principale comune con il percorso corrente.  
+ Chiamare questo metodo per determinare se un altro percorso è un componente radice comune con il percorso corrente.  
   
 ```
 BOOL IsSameRoot(PCXSTR pszOther) const;
@@ -491,7 +491,7 @@ BOOL IsSameRoot(PCXSTR pszOther) const;
  Per ulteriori informazioni, vedere [PathIsSameRoot](http://msdn.microsoft.com/library/windows/desktop/bb773687).  
   
 ##  <a name="isunc"></a>CPathT::IsUNC  
- Chiamare questo metodo per determinare se il percorso è un percorso UNC (convenzione di denominazione universale) valido per un server e condivisione.  
+ Chiamare questo metodo per determinare se il percorso è un percorso UNC (universal convenzione di denominazione) valido per un server e condividere.  
   
 ```
 BOOL IsUNC() const;
@@ -504,7 +504,7 @@ BOOL IsUNC() const;
  Per ulteriori informazioni, vedere [PathIsUNC](http://msdn.microsoft.com/library/windows/desktop/bb773712).  
   
 ##  <a name="isuncserver"></a>CPathT::IsUNCServer  
- Chiamare questo metodo per determinare se il percorso è un percorso UNC (convenzione di denominazione universale) valido per un solo server.  
+ Chiamare questo metodo per determinare se il percorso è un percorso UNC (universal convenzione di denominazione) valido per un solo server.  
   
 ```
 BOOL IsUNCServer() const;
@@ -517,7 +517,7 @@ BOOL IsUNCServer() const;
  Per ulteriori informazioni, vedere [PathIsUNCServer](http://msdn.microsoft.com/library/windows/desktop/bb773722).  
   
 ##  <a name="isuncservershare"></a>CPathT::IsUNCServerShare  
- Chiamare questo metodo per determinare se il percorso è un percorso di condivisione UNC (convenzione di denominazione universale) valido, \\ \  *server*\ *condividere*.  
+ Chiamare questo metodo per determinare se il percorso è un percorso di condivisione UNC (universal convenzione di denominazione) valido, \\ \  *server*\ *condividere*.  
   
 ```
 BOOL IsUNCServerShare() const;
@@ -540,7 +540,7 @@ StringType m_strPath;
  `StringType`è il parametro di modello `CPathT`.  
   
 ##  <a name="makepretty"></a>CPathT::MakePretty  
- Chiamare questo metodo per convertire un percorso in tutti i caratteri minuscoli per indicare il percorso di un aspetto coerente.  
+ Chiamare questo metodo per convertire un percorso per tutti i caratteri minuscoli per fornire il percorso di un aspetto coerente.  
   
 ```
 BOOL MakePretty();
@@ -553,7 +553,7 @@ BOOL MakePretty();
  Per ulteriori informazioni, vedere [PathMakePretty](http://msdn.microsoft.com/library/windows/desktop/bb773725).  
   
 ##  <a name="matchspec"></a>CPathT::MatchSpec  
- Chiamare questo metodo per cercare il percorso per una stringa contenente un tipo di corrispondenza con caratteri jolly.  
+ Chiamare questo metodo per cercare il percorso di una stringa che contiene un tipo di corrispondenza con caratteri jolly.  
   
 ```
 BOOL MatchSpec(PCXSTR pszSpec) const;
@@ -581,7 +581,7 @@ CPathT<StringType>& operator+=(PCXSTR pszMore);
  Stringa da accodare.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il percorso aggiornato.  
+ Restituisce il percorso di aggiornamento.  
   
 ##  <a name="operator_const_stringtype_amp"></a>StringType const CPathT::operator&amp;  
  Questo operatore consente all'oggetto di essere considerato come una stringa.  
@@ -614,7 +614,7 @@ CPathT<StringType>& operator+=(PCXSTR pszMore);
  Restituisce una stringa che rappresenta il percorso corrente gestito da questo oggetto.  
   
 ##  <a name="pcxstr"></a>CPathT::PCXSTR  
- Un tipo di stringa costante.  
+ Un tipo stringa costante.  
   
 ```
 typedef StringType::PCXSTR PCXSTR;
@@ -668,7 +668,7 @@ BOOL RelativePathTo(
  Gli attributi del File di `pszTo`. Se questo valore contiene FILE_ATTRIBUTE_DIRECTORY, `pszTo` assunto da una directory; in caso contrario, `pszTo` si presuppone che sia un file.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce TRUE esito positivo, FALSE in caso di errore.  
+ Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.  
   
 ### <a name="remarks"></a>Note  
  Per ulteriori informazioni, vedere [PathRelativePathTo](http://msdn.microsoft.com/library/windows/desktop/bb773740).  
@@ -704,7 +704,7 @@ void RemoveBlanks();
  Per ulteriori informazioni, vedere [PathRemoveBlanks](http://msdn.microsoft.com/library/windows/desktop/bb773745).  
   
 ##  <a name="removeextension"></a>CPathT::RemoveExtension  
- Chiamare questo metodo per rimuovere l'estensione del file dal percorso, se presente.  
+ Chiamare questo metodo per rimuovere l'estensione di file dal percorso, se presente.  
   
 ```
 void RemoveExtension();
@@ -714,20 +714,20 @@ void RemoveExtension();
  Per ulteriori informazioni, vedere [PathRemoveExtension](http://msdn.microsoft.com/library/windows/desktop/bb773746).  
   
 ##  <a name="removefilespec"></a>CPathT::RemoveFileSpec  
- Chiamare questo metodo per rimuovere il nome del file finale e barra rovesciata dal percorso, se li ha.  
+ Chiamare questo metodo per rimuovere il percorso, il nome di file finali e la barra rovesciata se dispone di essi.  
   
 ```
 BOOL RemoveFileSpec();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce TRUE esito positivo, FALSE in caso di errore.  
+ Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.  
   
 ### <a name="remarks"></a>Note  
  Per ulteriori informazioni, vedere [PathRemoveFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773748).  
   
 ##  <a name="renameextension"></a>CPathT::RenameExtension  
- Chiamare questo metodo per sostituire l'estensione di file nel percorso di una nuova estensione. Se il nome del file non contiene un'estensione, l'estensione verrà collegato alla fine del percorso.  
+ Chiamare questo metodo per sostituire l'estensione del nome file nel percorso di una nuova estensione. Se il nome del file non contiene un'estensione, l'estensione verrà collegato alla fine del percorso.  
   
 ```
 BOOL RenameExtension(PCXSTR pszExtension);
@@ -735,29 +735,29 @@ BOOL RenameExtension(PCXSTR pszExtension);
   
 ### <a name="parameters"></a>Parametri  
  `pszExtension`  
- La nuova estensione nome file, preceduto da un "." caratteri.  
+ La nuova estensione di file, preceduto da un "." carattere.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce TRUE esito positivo, FALSE in caso di errore.  
+ Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.  
   
 ### <a name="remarks"></a>Note  
  Per ulteriori informazioni, vedere [PathRenameExtension](http://msdn.microsoft.com/library/windows/desktop/bb773749).  
   
 ##  <a name="skiproot"></a>CPathT::SkipRoot  
- Chiamare questo metodo per analizzare un percorso, ignorando la lettera di unità o parti del percorso server/condivisione UNC (convenzione di denominazione universale).  
+ Chiamare questo metodo per analizzare un percorso, ignorando la lettera di unità o parti del percorso server o condivisione UNC (universal convenzione di denominazione).  
   
 ```
 int SkipRoot() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce la posizione di inizio del sottopercorso che segue la radice (lettera di unità o un server UNC o condivisione).  
+ Restituisce la posizione di inizio del sottopercorso che segue la radice (lettera di unità o server UNC o condivisione).  
   
 ### <a name="remarks"></a>Note  
  Per ulteriori informazioni, vedere [PathSkipRoot](http://msdn.microsoft.com/library/windows/desktop/bb773754).  
   
 ##  <a name="strippath"></a>CPathT::StripPath  
- Chiamare questo metodo per rimuovere la parte di percorso di un percorso completo e nome file.  
+ Chiamare questo metodo per rimuovere la parte del percorso di un percorso completo e nome file.  
   
 ```
 void StripPath();

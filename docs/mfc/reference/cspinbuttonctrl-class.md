@@ -52,9 +52,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
-ms.openlocfilehash: 4cb2a10982ce42f94925b18f1b20ef72f3c3f83a
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 91be67ccbf1fb7fb863aa4072d55bb3f330aa44f
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl (classe)
@@ -129,7 +129,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametri  
  `dwStyle`  
- Specifica lo stile del controllo pulsante di selezione. Applicare qualsiasi combinazione di stili del controllo pulsante di selezione al controllo. Questi stili sono descritti in [degli stili del controllo UpDown](http://msdn.microsoft.com/library/windows/desktop/bb759885) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Specifica lo stile del controllo pulsante di selezione. Applicare qualsiasi combinazione di stili del controllo pulsante di selezione al controllo. Questi stili sono descritti in [stili del controllo UpDown](http://msdn.microsoft.com/library/windows/desktop/bb759885) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
  `rect`  
  Specifica dimensioni e la posizione del controllo pulsante di selezione. Può essere un [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struttura  
@@ -165,7 +165,7 @@ virtual BOOL CreateEx(
  Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi, vedere il `dwExStyle` parametro per [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
  `dwStyle`  
- Specifica lo stile del controllo pulsante di selezione. Applicare qualsiasi combinazione di stili del controllo pulsante di selezione al controllo. Questi stili sono descritti in [degli stili del controllo UpDown](http://msdn.microsoft.com/library/windows/desktop/bb759885) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Specifica lo stile del controllo pulsante di selezione. Applicare qualsiasi combinazione di stili del controllo pulsante di selezione al controllo. Questi stili sono descritti in [stili del controllo UpDown](http://msdn.microsoft.com/library/windows/desktop/bb759885) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
  `rect`  
  Un riferimento a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che descrive le dimensioni e la posizione della finestra deve essere creata, nelle coordinate del client di `pParentWnd`.  
@@ -245,7 +245,7 @@ int GetPos() const;  int GetPos32(LPBOOL lpbError = NULL) const;
  La seconda versione restituisce la posizione di 32 bit.  
   
 ### <a name="remarks"></a>Note  
- Quando elabora il valore restituito, il controllo Aggiorna la posizione corrente in base alla didascalia della finestra buddy. Il controllo restituisce un errore se nessuna finestra buddy o se la didascalia specifica un valore non valido o out-of-range.  
+ Quando elabora il valore restituito, il controllo ha aggiornato la posizione corrente in base alla didascalia della finestra buddy. Il controllo restituisce un errore se nessuna finestra buddy o se la didascalia specifica un valore non valido o out-of-range.  
   
 ##  <a name="getrange"></a>CSpinButtonCtrl::GetRange  
  Recupera i limiti superiori e inferiori (intervallo) per un controllo pulsante di selezione.  
@@ -361,7 +361,7 @@ void SetRange32(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `nLower`e`nUpper`  
+ `nLower` e `nUpper`  
  Limiti superiore e inferiore per il controllo. Per `SetRange`, né limite può essere maggiore di **UD_MAXVAL** o minore di **UD_MINVAL**; inoltre, non può superare la differenza tra due limiti **UD_MAXVAL**. `SetRange32`non pone limiti ai limiti; utilizzare qualsiasi integer.  
   
 ### <a name="remarks"></a>Note  

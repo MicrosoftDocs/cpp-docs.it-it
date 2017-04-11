@@ -131,9 +131,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
-ms.openlocfilehash: ec5969edb26f4dbc2c249f16a8c39498bd01ca44
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 099e027e778090d14dd7dbe24d6732f7eb06b9d9
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="cwinapp-class"></a>CWinApp (classe)
@@ -204,7 +204,7 @@ class CWinApp : public CWinThread
 |[CWinApp::RegisterWithRestartManager](#registerwithrestartmanager)|Registra l'applicazione con il gestore di riavvio.|  
 |[CWinApp::ReopenPreviousFilesAtRestart](#reopenpreviousfilesatrestart)|Determina se Gestione riavvio riapre i file che sono stati aperti quando l'applicazione è stato terminato in modo imprevisto.|  
 |[CWinApp::RestartInstance](#restartinstance)|Gestisce il riavvio dell'applicazione avviato dal gestore di riavvio.|  
-|[CWinApp::RestoreAutosavedFilesAtRestart](#restoreautosavedfilesatrestart)|Determina se Gestione riavvio consente di ripristinare i file più quando si riavvia l'applicazione.|  
+|[CWinApp::RestoreAutosavedFilesAtRestart](#restoreautosavedfilesatrestart)|Determina se Gestione riavvio consente di ripristinare i file più dopo il riavvio dell'applicazione.|  
 |[CWinApp:: Run](#run)|Esegue il ciclo di messaggi predefinito. Eseguire l'override per personalizzare il ciclo di messaggi.|  
 |[CWinApp::RunAutomated](#runautomated)|Verifica la riga di comando dell'applicazione per il **/Automation** opzione. Obsoleta. Utilizzare invece il valore in [CCommandLineInfo::m_bRunAutomated](../../mfc/reference/ccommandlineinfo-class.md#m_brunautomated) dopo la chiamata [ParseCommandLine](#parsecommandline).|  
 |[CWinApp::RunEmbedded](#runembedded)|Verifica la riga di comando dell'applicazione per il **/Embedding** opzione. Obsoleta. Utilizzare invece il valore in [CCommandLineInfo::m_bRunEmbedded](../../mfc/reference/ccommandlineinfo-class.md#m_brunembedded) dopo la chiamata [ParseCommandLine](#parsecommandline).|  
@@ -268,7 +268,7 @@ class CWinApp : public CWinThread
 ## <a name="remarks"></a>Note  
  Un oggetto application fornisce funzioni membro per l'inizializzazione dell'applicazione (e ogni istanza) e per l'esecuzione dell'applicazione.  
   
- Ogni applicazione che utilizza Microsoft Foundation classes può contenere solo un oggetto derivato da `CWinApp`. Questo oggetto viene costruito quando gli altri oggetti globali C++ vengono costruiti e quando è già disponibile Windows chiama il `WinMain` (funzione), che viene fornito per la libreria Microsoft Foundation Class. Dichiarare una classe derivata `CWinApp` oggetto a livello globale.  
+ Ogni applicazione che utilizza Microsoft Foundation classes può contenere solo un oggetto derivato da `CWinApp`. Questo oggetto viene costruito quando gli altri oggetti globali C++ vengono costruiti e già disponibile quando si chiama Windows il `WinMain` (funzione), che viene fornito per la libreria Microsoft Foundation Class. Dichiarare una classe derivata `CWinApp` oggetto a livello globale.  
   
  Quando si deriva una classe di applicazione da `CWinApp`, eseguire l'override di [InitInstance](#initinstance) funzione membro per creare l'oggetto della finestra principale dell'applicazione.  
   
@@ -361,7 +361,7 @@ virtual DWORD ApplicationRecoveryCallback(LPVOID lpvParam);
   
  L'implementazione predefinita di `ApplicationRecoveryCallback` utilizza il `CDataRecoveryHandler` per salvare l'elenco dei documenti attualmente aperti nel Registro di sistema. Questo metodo non non salva automaticamente tutti i file.  
   
- Per personalizzare il comportamento, l'override della funzione in una classe [CWinApp (classe)](../../mfc/reference/cwinapp-class.md) o passare il proprio metodo di ripristino applicazione come parametro a [CWinApp::RegisterWithRestartManager](#registerwithrestartmanager).  
+ Per personalizzare il comportamento, l'override della funzione in una classe [CWinApp (classe)](../../mfc/reference/cwinapp-class.md) o passare il proprio metodo di ripristino applicazione come un parametro [CWinApp::RegisterWithRestartManager](#registerwithrestartmanager).  
   
 ##  <a name="closealldocuments"></a>CWinApp::CloseAllDocuments  
  Chiamare questa funzione membro per chiudere tutti i documenti aperti prima di uscire.  
@@ -650,7 +650,7 @@ virtual CDataRecoveryHandler *GetDataRecoveryHandler();
  Il gestore di ripristino di dati per questa istanza dell'applicazione.  
   
 ### <a name="remarks"></a>Note  
- Ogni applicazione che utilizza la gestione di riavvio deve avere un'istanza del [CDataRecoveryHandler classe](../../mfc/reference/cdatarecoveryhandler-class.md). Questa classe è responsabile del monitoraggio documenti aperti e i file di salvataggio automatico. Il comportamento del `CDataRecoveryHandler` dipende dalla configurazione di Gestione riavvio. Per ulteriori informazioni, vedere [CDataRecoveryHandler classe](../../mfc/reference/cdatarecoveryhandler-class.md).  
+ Ogni applicazione che utilizza la gestione di riavvio deve avere un'istanza di [CDataRecoveryHandler classe](../../mfc/reference/cdatarecoveryhandler-class.md). Questa classe è responsabile del monitoraggio documenti aperti e i file di salvataggio automatico. Il comportamento del `CDataRecoveryHandler` dipende dalla configurazione di Gestione riavvio. Per ulteriori informazioni, vedere [CDataRecoveryHandler classe](../../mfc/reference/cdatarecoveryhandler-class.md).  
   
  Questo metodo restituisce `NULL` nei sistemi operativi precedenti a [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]. Gestione riavvio non è supportata nei sistemi operativi precedenti a [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)].  
   
@@ -911,7 +911,7 @@ virtual BOOL IsTaskbarInteractionEnabled();
  Restituisce `TRUE` se `EnableTaskbarInteraction` è stato chiamato e il sistema operativo è Windows 7 o versione successiva.  
   
 ### <a name="remarks"></a>Note  
- Sulla barra delle applicazioni interazione significa che applicazioni MDI consente di visualizzare il contenuto di finestre figlio MDI nelle anteprime a schede separate che vengono visualizzati quando il puntatore del mouse sul pulsante della barra delle applicazioni dell'applicazione.  
+ Sulla barra delle applicazioni interazione significa che applicazione MDI consente di visualizzare il contenuto di finestre figlio MDI nelle anteprime a schede separate che vengono visualizzati quando il puntatore del mouse sul pulsante della barra delle applicazioni dell'applicazione.  
   
 ##  <a name="loadcursor"></a>CWinApp::LoadCursor  
  Carica la risorsa del cursore denominata da `lpszResourceName` o specificato da `nIDResource` dal file eseguibile corrente.  
@@ -1041,7 +1041,7 @@ HCURSOR LoadStandardCursor(LPCTSTR lpszCursorName) const;
  Un handle a un cursore se ha esito positivo. in caso contrario **NULL**.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare il `LoadStandardCursor` o [LoadOEMCursor](#loadoemcursor) funzione membro per i cursori predefiniti di Windows di accedere.  
+ Utilizzare il `LoadStandardCursor` o [LoadOEMCursor](#loadoemcursor) la funzione membro per i cursori predefiniti di Windows di accedere.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCWindowing #47](../../mfc/reference/codesnippet/cpp/cwinapp-class_14.cpp)]  
@@ -1121,22 +1121,19 @@ AFX_HELP_TYPE m_eHelpType;
 ### <a name="remarks"></a>Note  
  Il **AFX_HELP_TYPE** enumerazione viene definito come segue:  
   
- `enum AFX_HELP_TYPE`  
-  
- `{`  
-  
- `afxWinHelp = 0,`  
-  
- `afxHTMLHelp = 1`  
-  
- `};`  
+```  
+enum AFX_HELP_TYPE {  
+    afxWinHelp = 0,
+    afxHTMLHelp = 1
+    };  
+```  
   
 -   Per impostare la Guida dell'applicazione per la Guida HTML, chiamare [SetHelpMode](#sethelpmode) e specificare **afxHTMLHelp**.  
   
 -   Per impostare la Guida dell'applicazione per WinHelp, chiamare `SetHelpMode` e specificare **afxWinHelp**.  
   
 ##  <a name="m_hinstance"></a>CWinApp::m_hInstance  
- Corrisponde al `hInstance` parametro passato da Windows per `WinMain`.  
+ Corrisponde alla `hInstance` parametro passato da Windows per `WinMain`.  
   
 ```  
 HINSTANCE m_hInstance;  
@@ -1149,7 +1146,7 @@ HINSTANCE m_hInstance;
  [!code-cpp[NVC_MFCWindowing #55](../../mfc/reference/codesnippet/cpp/cwinapp-class_15.cpp)]  
   
 ##  <a name="m_lpcmdline"></a>CWinApp:: M_lpcmdline  
- Corrisponde al `lpCmdLine` parametro passato da Windows per `WinMain`.  
+ Corrisponde alla `lpCmdLine` parametro passato da Windows per `WinMain`.  
   
 ```  
 LPTSTR m_lpCmdLine;  
@@ -1172,7 +1169,7 @@ int m_nAutosaveInterval;
  È possibile configurare Gestione riavvio per i documenti aperti Salva automaticamente a intervalli prestabiliti. Se l'applicazione non salvataggio file, questo parametro ha effetto.  
   
 ##  <a name="m_ncmdshow"></a>CWinApp::m_nCmdShow  
- Corrisponde al `nCmdShow` parametro passato da Windows per `WinMain`.  
+ Corrisponde alla `nCmdShow` parametro passato da Windows per `WinMain`.  
   
 ```  
 int m_nCmdShow;  
@@ -1399,7 +1396,7 @@ afx_msg void OnHelpFinder();
 ```  
   
 ### <a name="remarks"></a>Note  
- È necessario aggiungere un `ON_COMMAND( ID_HELP_FINDER, OnHelpFinder )` istruzione per il `CWinApp` mappa messaggi di classe per abilitare questa funzione membro. Se abilitata, il framework chiama questa funzione del gestore di messaggi, quando l'utente dell'applicazione seleziona il comando di ricerca della Guida da richiamare `WinHelp` con lo standard **HELP_FINDER** argomento.  
+ È necessario aggiungere un `ON_COMMAND( ID_HELP_FINDER, OnHelpFinder )` istruzione per il `CWinApp` mappa messaggi di classe per abilitare questa funzione membro. Se abilitata, il framework chiama questa funzione del gestore di messaggi quando l'utente dell'applicazione seleziona il comando di ricerca della Guida da richiamare `WinHelp` con lo standard **HELP_FINDER** argomento.  
   
 ##  <a name="onhelpindex"></a>CWinApp::OnHelpIndex  
  Gestisce il **ID_HELP_INDEX** comando e fornisce un argomento della Guida predefinito.  
@@ -1453,12 +1450,12 @@ virtual BOOL OnIdle(LONG lCount);
  Non eseguire le attività di lunga durata durante `OnIdle` perché l'applicazione non è in grado di elaborare l'input dell'utente fino a quando `OnIdle` restituisce.  
   
 > [!NOTE]
->  L'implementazione predefinita di `OnIdle` aggiornamenti comando oggetti dell'interfaccia utente, ad esempio voci di menu e pulsanti della barra degli strumenti e esegue la pulitura di struttura dati interna. Pertanto, se esegue l'override `OnIdle`, è necessario chiamare `CWinApp::OnIdle` con il `lCount` nella versione sottoposta a override. Prima di chiamare tutti-classe di base di elaborazione inattiva (ovvero, fino a quando la classe di base `OnIdle` restituisce 0). Se è necessario eseguire operazioni prima che venga completata l'elaborazione della classe base, esaminare l'implementazione della classe di base per selezionare il proprio `lCount` durante i quali l'esecuzione delle operazioni.  
+>  L'implementazione predefinita di `OnIdle` aggiornamenti oggetti dell'interfaccia utente, ad esempio voci di menu e pulsanti di comando ed esegue la pulitura di struttura di dati interne. Pertanto, se esegue l'override `OnIdle`, è necessario chiamare `CWinApp::OnIdle` con il `lCount` nella versione sottoposta a override. Prima di chiamare tutti-classe di base di elaborazione inattiva (ovvero, fino a quando la classe di base `OnIdle` restituisce 0). Se è necessario eseguire operazioni prima che venga completata l'elaborazione della classe base, esaminare l'implementazione della classe di base per selezionare il proprio `lCount` durante i quali l'esecuzione delle operazioni.  
   
  Se non si desidera `OnIdle` per essere chiamato ogni volta che un messaggio viene recuperato dalla coda di messaggi, è possibile eseguire l'override di [CWinThreadIsIdleMessage](../../mfc/reference/cwinthread-class.md#isidlemessage). Se un'applicazione è impostato un timer molto breve, o se il sistema sta inviando il **WM_SYSTIMER** messaggio, quindi `OnIdle` verrà chiamato più volte e influire negativamente sulle prestazioni.  
   
 ### <a name="example"></a>Esempio  
- I due esempi seguenti viene illustrato come utilizzare `OnIdle`. Nel primo esempio elabora due attività inattiva tramite la `lCount` argomento per assegnare priorità alle attività. La prima attività consiste ad alta priorità e, è consigliabile eseguirla quando possibile. La seconda attività è meno importante e deve essere eseguita solo se è presente una pausa lungo nell'input dell'utente. Si noti la chiamata alla versione della classe di base di `OnIdle`. Nel secondo esempio consente di gestire un gruppo di attività inattive con priorità diverse.  
+ I due esempi seguenti viene illustrato come utilizzare `OnIdle`. Nel primo esempio elabora due attività inattive utilizzando il `lCount` argomento per assegnare priorità alle attività. La prima attività consiste ad alta priorità e, è consigliabile eseguirla quando possibile. La seconda attività è meno importante e deve essere eseguita solo se è presente una pausa lungo nell'input dell'utente. Si noti la chiamata alla versione della classe di base di `OnIdle`. Nel secondo esempio consente di gestire un gruppo di attività inattive con priorità diverse.  
   
  [!code-cpp[NVC_MFCWindowing #51](../../mfc/reference/codesnippet/cpp/cwinapp-class_27.cpp)]  
   
@@ -1514,7 +1511,7 @@ void ParseCommandLine(CCommandLineInfo& rCmdInfo);
  Per una descrizione dei flag della riga di comando, vedere [CCommandLineInfo::m_nShellCommand](../../mfc/reference/ccommandlineinfo-class.md#m_nshellcommand).  
   
 ##  <a name="pretranslatemessage"></a>CWinApp:: PreTranslateMessage  
- Eseguire l'override di questa funzione per filtrare i messaggi di finestra prima che vengano inviati alle funzioni Windows [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) l'implementazione predefinita esegue la conversione di tasto di scelta rapida, è necessario chiamare il `CWinApp::PreTranslateMessage` funzione membro sottoposto a override nella versione in uso.  
+ Eseguire l'override di questa funzione per filtrare i messaggi di finestra prima che vengano inviati alle funzioni Windows [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) l'implementazione predefinita esegue la conversione di tasto di scelta rapida, è necessario chiamare il `CWinApp::PreTranslateMessage` la funzione membro sottoposto a override nella versione in uso.  
   
 ```  
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -1576,21 +1573,17 @@ BOOL ProcessShellCommand(CCommandLineInfo& rCmdInfo);
   
 4. `ProcessShellCommand`gestisce gli argomenti della riga di comando e i flag.  
   
- I membri dei dati di `CCommandLineInfo` oggetto, identificato da [CCommandLineInfo::m_nShellCommand](../../mfc/reference/ccommandlineinfo-class.md#m_nshellcommand), sono di tipo enumerato seguente, viene definito all'interno di `CCommandLineInfo` classe.  
+ I membri dei dati di `CCommandLineInfo` oggetto, identificato da [CCommandLineInfo::m_nShellCommand](../../mfc/reference/ccommandlineinfo-class.md#m_nshellcommand), sono del tipo enumerato seguente, viene definito all'interno di `CCommandLineInfo` classe.  
   
- `enum {`  
-  
- `FileNew,`  
-  
- `FileOpen,`  
-  
- `FilePrint,`  
-  
- `FilePrintTo,`  
-  
- `FileDDE,`  
-  
- `};`  
+```  
+enum {
+    FileNew,
+    FileOpen,
+    FilePrint,
+    FilePrintTo,
+    FileDDE
+    };  
+```
   
  Per una breve descrizione di ognuno di questi valori, vedere `CCommandLineInfo::m_nShellCommand`.  
   
@@ -1734,7 +1727,7 @@ virtual BOOL CWinApp::RestartInstance();
  Questo metodo restituisce `FALSE` se il [CDataRecoveryHandler](../../mfc/reference/cdatarecoveryhandler-class.md) determina che non vi sono documenti non aperti. Se sono non stati documenti aperti, l'applicazione viene avviata normalmente.  
   
 ##  <a name="restoreautosavedfilesatrestart"></a>CWinApp::RestoreAutosavedFilesAtRestart  
- Determina se Gestione riavvio consente di ripristinare i file più quando si riavvia l'applicazione.  
+ Determina se Gestione riavvio consente di ripristinare i file più dopo il riavvio dell'applicazione.  
   
 ```  
 virtual BOOL RestoreAutosavedFilesAtRestart() const;  
@@ -1754,7 +1747,7 @@ virtual int Run();
  Un `int` valore restituito da `WinMain`.  
   
 ### <a name="remarks"></a>Note  
- **Eseguire** acquisisce e invia i messaggi di Windows, fino a quando l'applicazione riceve un **WM_QUIT** messaggio. Se la coda di messaggi dell'applicazione contiene attualmente messaggi, **eseguire** chiamate [OnIdle](#onidle) per eseguire l'elaborazione di tempo di inattività. Visualizzare i messaggi in arrivo il [PreTranslateMessage](#pretranslatemessage) funzione membro per un'elaborazione speciale e quindi per la funzione di Windows **TranslateMessage** per la conversione standard da tastiera; infine, la **DispatchMessage** viene chiamata la funzione di Windows.  
+ **Eseguire** acquisisce e invia i messaggi di Windows, fino a quando l'applicazione riceve un **WM_QUIT** messaggio. Se la coda di messaggi dell'applicazione contiene attualmente messaggi, **eseguire** chiamate [OnIdle](#onidle) per eseguire l'elaborazione di tempo di inattività. Visualizzare i messaggi in arrivo di [PreTranslateMessage](#pretranslatemessage) funzione membro per un'elaborazione speciale e quindi per la funzione di Windows **TranslateMessage** per la conversione standard da tastiera; infine, la **DispatchMessage** viene chiamata la funzione di Windows.  
   
  **Eseguire** raramente viene sottoposto a override, ma è possibile ignorare in modo che fornisca un comportamento speciale.  
   
@@ -1795,7 +1788,7 @@ virtual BOOL SaveAllModified();
  Diverso da zero se è sicuro terminare l'applicazione. 0 se non è possibile terminare l'applicazione.  
   
 ### <a name="remarks"></a>Note  
- Chiama l'implementazione predefinita di questa funzione membro di [CDocument:: SaveModified](../../mfc/reference/cdocument-class.md#savemodified) funzione membro a sua volta per tutti i documenti modificati all'interno dell'applicazione.  
+ L'implementazione predefinita di questa funzione membro chiama il [CDocument:: SaveModified](../../mfc/reference/cdocument-class.md#savemodified) funzione membro a sua volta per tutti i documenti modificati all'interno dell'applicazione.  
   
 ##  <a name="selectprinter"></a>CWinApp::SelectPrinter  
  Chiamare questa funzione membro per selezionare una stampante specifica e rilasciare la stampante selezionata nella finestra di dialogo di stampa.  
@@ -1862,7 +1855,7 @@ virtual BOOL SupportsApplicationRecovery() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`indica il viene ripristinato Gestione riavvio dell'applicazione. `FALSE` indica non Gestione riavvio.  
+ `TRUE`indica i recuperare Gestione riavvio dell'applicazione. `FALSE` indica non Gestione riavvio.  
   
 ##  <a name="supportsautosaveatinterval"></a>CWinApp::SupportsAutosaveAtInterval  
  Determina se la funzionalità di Gestione riavvio aprire documenti a intervalli regolari.  

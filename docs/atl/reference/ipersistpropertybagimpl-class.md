@@ -1,5 +1,5 @@
 ---
-title: Classe IPersistPropertyBagImpl | Documenti di Microsoft
+title: Classe IPersistPropertyBagImpl | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -39,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 901a6a6bf4097b6aa78a898254766f122bb2f959
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: abef2ffa759cf74ee2316c7e0c9dd84f5c76b1d7
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="ipersistpropertybagimpl-class"></a>Classe IPersistPropertyBagImpl
@@ -59,7 +59,7 @@ class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
   
 #### <a name="parameters"></a>Parametri  
  `T`  
- La classe derivata da `IPersistPropertyBagImpl`.  
+ La classe, derivata da `IPersistPropertyBagImpl`.  
   
 ## <a name="members"></a>Membri  
   
@@ -68,14 +68,14 @@ class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[IPersistPropertyBagImpl::GetClassID](#getclassid)|Recupera il CLSID dell'oggetto.|  
-|[IPersistPropertyBagImpl::InitNew](#initnew)|Inizializza un oggetto appena creato. L'implementazione ATL restituisce `S_OK`.|  
+|[IPersistPropertyBagImpl::InitNew](#initnew)|Inizializza un oggetto appena creato. Restituisce l'implementazione di ATL `S_OK`.|  
 |[IPersistPropertyBagImpl::Load](#load)|Carica le proprietà dell'oggetto da un contenitore di proprietà specificato dal client.|  
 |[IPersistPropertyBagImpl::Save](#save)|Salva le proprietà dell'oggetto in un contenitore di proprietà specificato dal client.|  
   
 ## <a name="remarks"></a>Note  
  Il [IPersistPropertyBag](https://msdn.microsoft.com/library/aa768205.aspx) interfaccia consente a un oggetto salvare le proprietà in un contenitore di proprietà specificato dal client. Classe `IPersistPropertyBagImpl` fornisce un'implementazione predefinita di questa interfaccia e implementa **IUnknown** per l'invio di informazioni per il dump Crea dispositivo in modalità debug.  
   
- **IPersistPropertyBag** funziona in combinazione con [IPropertyBag](https://msdn.microsoft.com/library/aa768196.aspx) e [IErrorLog](https://msdn.microsoft.com/library/aa768231.aspx). Queste due interfacce di quest'ultime devono essere implementate dal client. Tramite `IPropertyBag`, il client Salva e carica le singole proprietà dell'oggetto. Tramite **IErrorLog**, l'oggetto sia il client può segnalare gli eventuali errori rilevati.  
+ **IPersistPropertyBag** funziona in combinazione con [IPropertyBag](https://msdn.microsoft.com/library/aa768196.aspx) e [IErrorLog](https://msdn.microsoft.com/library/aa768231.aspx). Queste due interfacce di quest'ultime devono essere implementate dal client. Tramite `IPropertyBag`, il client Salva e carica le proprietà dell'oggetto singoli. Tramite **IErrorLog**, l'oggetto sia il client può segnalare gli eventuali errori rilevati.  
   
  **Articoli correlati** [esercitazione ATL](../../atl/active-template-library-atl-tutorial.md), [creazione di un progetto ATL](../../atl/reference/creating-an-atl-project.md)  
   
@@ -133,11 +133,11 @@ STDMETHOD(Save)(
 ```  
   
 ### <a name="remarks"></a>Note  
- ATL utilizza il mapping di proprietà dell'oggetto per archiviare queste informazioni. Per impostazione predefinita, questo metodo salva tutte le proprietà, indipendentemente dal valore di *fSaveAllProperties*.  
+ ATL Usa il mapping di proprietà dell'oggetto per archiviare queste informazioni. Per impostazione predefinita, questo metodo consente di salvare tutte le proprietà, indipendentemente dal valore di *fSaveAllProperties*.  
   
  Vedere [IPersistPropertyBag::Save](https://msdn.microsoft.com/library/aa768207.aspx) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
- [BEGIN_PROP_MAP](http://msdn.microsoft.com/library/bfe30be6-62c3-4dc2-bd49-21ef96f15427)   
+ [BEGIN_PROP_MAP](property-map-macros.md#begin_prop_map)   
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
 

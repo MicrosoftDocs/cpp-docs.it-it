@@ -1,5 +1,5 @@
 ---
-title: Classe CA2AEX | Documenti di Microsoft
+title: Classe CA2AEX | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -38,13 +38,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 65637b63cf23d2e7433b575e95d3f53a53ed76a1
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 979e06cbb4386f61f6490342f16d48739be55e95
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="ca2aex-class"></a>Classe CA2AEX
-Questa classe viene utilizzata per le macro di conversione di stringhe `CA2TEX` e `CT2AEX`e il typedef **CA2A**.  
+Questa classe viene utilizzata per le macro di conversione di stringhe `CA2TEX` e `CT2AEX`e typedef **CA2A**.  
   
 > [!IMPORTANT]
 >  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.  
@@ -58,7 +58,7 @@ class CA2AEX
   
 #### <a name="parameters"></a>Parametri  
  `t_nBufferLength`  
- Le dimensioni del buffer utilizzato nel processo di traduzione. La lunghezza predefinita è 128 byte.  
+ Le dimensioni del buffer utilizzato nel processo di conversione. La lunghezza predefinita è di 128 byte.  
   
 ## <a name="members"></a>Membri  
   
@@ -85,26 +85,26 @@ class CA2AEX
 ## <a name="remarks"></a>Note  
  A meno che non è necessaria la funzionalità aggiuntiva, utilizzare `CA2TEX`, `CT2AEX`, o **CA2A** nel codice.  
   
- Questa classe contiene un buffer statico di dimensione fissa viene utilizzato per archiviare il risultato della conversione. Se il risultato è troppo grande per il buffer statico, la classe alloca memoria con `malloc`, liberando la memoria quando l'oggetto esce dall'ambito. Ciò garantisce che, a differenza del testo macro di conversione disponibili nelle versioni precedenti di ATL, questa classe è sicura per l'uso nei cicli e che non sarà un overflow dello stack.  
+ Questa classe contiene un buffer a dimensione fissa statico viene utilizzato per archiviare il risultato della conversione. Se il risultato è troppo grande per il buffer statico, la classe alloca memoria con `malloc`, liberando la memoria quando l'oggetto esce dall'ambito. Ciò garantisce che, a differenza del testo macro di conversione disponibili nelle versioni precedenti di ATL, questa classe è possibile utilizzare nei cicli e che non sarà un overflow dello stack.  
   
- Se la classe tenta di allocare memoria nell'heap di ha esito negativo, verrà eseguita una chiamata `AtlThrow` con un argomento di **E_OUTOFMEMORY**.  
+ Se la classe tenta di allocare memoria in cui l'heap e non riesce, chiama `AtlThrow` con un argomento di **E_OUTOFMEMORY**.  
   
  Per impostazione predefinita, le classi di conversione ATL e le macro utilizzano la tabella codici ANSI del thread corrente per la conversione.  
   
- In questa classe si basano le seguenti macro:  
+ Le macro seguenti sono basate su questa classe:  
   
 - `CA2TEX`  
   
 - `CT2AEX`  
   
- La seguente dichiarazione typedef è basato sulla classe:  
+ La seguente dichiarazione typedef è basato su questa classe:  
   
 - **CA2A**  
   
- Per una descrizione di queste macro di conversione di testo, vedere [macro di conversione di stringhe MFC e ATL](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863).  
+ Per una discussione su queste macro di conversione di testo, vedere [macro di conversione di stringhe MFC e ATL](string-conversion-macros.md).  
   
 ## <a name="example"></a>Esempio  
- Vedere [macro di conversione di stringhe MFC e ATL](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863) per un esempio dell'utilizzo di queste macro di conversione di stringhe.  
+ Vedere [macro di conversione di stringhe MFC e ATL](string-conversion-macros.md) per un esempio dell'utilizzo di queste macro di conversione di stringhe.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlconv. h  
@@ -122,10 +122,10 @@ CA2AEX(LPCSTR psz) throw(...);
  La stringa di testo da convertire.  
   
  `nCodePage`  
- Non utilizzato in questa classe.  
+ Non utilizzata per questa classe.  
   
 ### <a name="remarks"></a>Note  
- Crea il buffer necessaria per la traduzione.  
+ Crea il buffer necessario per la traduzione.  
   
 ##  <a name="dtor"></a>CA2AEX:: ~ CA2AEX  
  Distruttore.  

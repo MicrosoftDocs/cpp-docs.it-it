@@ -1,80 +1,98 @@
 ---
-title: "Creazione guidata provider OLE DB ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "vc.codewiz.class.atl.provider.overview"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Creazione guidata provider OLE DB ATL"
-  - "Progetti ATL, aggiunta di provider OLE DB ATL"
+title: Creazione guidata Provider OLE DB ATL | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- vc.codewiz.class.atl.provider.overview
+dev_langs:
+- C++
+helpviewer_keywords:
+- ATL OLE DB Provider Wizard
+- ATL projects, adding ATL OLE DB providers
 ms.assetid: cf91ba78-01d1-4d12-b673-e95d96bfbebe
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Creazione guidata provider OLE DB ATL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: a28a47d9af89470c63903ccc338c680361b1cada
+ms.lasthandoff: 04/04/2017
 
-È possibile utilizzare questa procedura guidata per creare le classi che compongono un provider OLE DB.  
+---
+# <a name="atl-ole-db-provider-wizard"></a>Creazione guidata provider OLE DB ATL
+Questa procedura guidata crea le classi che compongono un provider OLE DB.  
   
-## Note  
- A partire da [!INCLUDE[vs_orcas_long](../../atl/reference/includes/vs_orcas_long_md.md)], lo script della registrazione prodotto da questa procedura guidata registrerà i componenti COM in **HKEY\_CURRENT\_USER** invece di **HKEY\_LOCAL\_MACHINE**.  Per modificare questo comportamento, impostare l'opzione **Registra componente per tutti gli utenti** della procedura guidata ATL.  
+## <a name="remarks"></a>Note  
+ A partire da [!INCLUDE[vs_orcas_long](../../atl/reference/includes/vs_orcas_long_md.md)], lo script di registrazione prodotto da questa procedura guidata registrerà i componenti COM in **HKEY_CURRENT_USER** anziché **HKEY_LOCAL_MACHINE**. Per modificare questo comportamento, impostare il **Registra componente per tutti gli utenti** opzione della procedura guidata ATL.  
   
- Nella tabella seguente sono descritte le opzioni per la procedura guidata del provider ATL OLE DB:  
+ Nella tabella seguente vengono descritte le opzioni per la creazione guidata Provider OLE DB ATL:  
   
  **Nome breve**  
- Digitare il nome breve del provider da creare.  Le altre caselle di testo della procedura guidata verranno automaticamente compilate con il nome immesso.  Se lo si desidera, è possibile modificare tali nomi.  
+ Digitare il nome breve del provider da creare. Le altre caselle di modifica della procedura guidata verranno inseriti automaticamente in base a quanto digitato. Se si desidera, è possibile modificare le altre caselle di nome.  
   
  **Coclasse**  
- Nome della coclasse.  Il nome del ProgID verrà modificato in modo che corrisponda a questo nome.  
+ Il nome della coclasse. Il nome del ProgID verrà modificato in base a questo nome.  
   
  **Con attributi**  
- È possibile utilizzare questa opzione per specificare se verranno create classi del provider mediante gli attributi o le dichiarazioni di template.  Se l'opzione è selezionata, verranno utilizzati gli attributi invece delle dichiarazioni di template. Questa è l'impostazione predefinita per i progetti creati con attributi.  Se l'opzione viene cancellata, verranno utilizzate le dichiarazioni di template invece degli attributi. Questa è l'impostazione predefinita per i progetti creati senza attributi.  
+ Questa opzione specifica se la procedura guidata creerà le classi provider usando gli attributi o le dichiarazioni di template. Quando si seleziona questa opzione, la procedura guidata utilizza gli attributi anziché le dichiarazioni di template (si tratta dell'opzione predefinita se è stato creato un progetto con attributi). Quando si deseleziona questa opzione, verranno usate dichiarazioni di modello anziché agli attributi (si tratta dell'opzione predefinita se è stato creato un progetto con attributi).  
   
- Se si seleziona questa opzione per un progetto senza attributi, verrà visualizzato un messaggio di avviso per informare che il progetto verrà convertito in un progetto con attributi e verrà chiesto se si desidera continuare.  
+ Se si seleziona questa opzione quando si crea un progetto con attributi, la procedura guidata avvisa l'utente che il progetto verrà convertito in un progetto con attributi e viene richiesto se continuare o meno.  
   
  **ProgID**  
- Il ProgID, o identificatore a livello di codice, è una stringa di testo che può essere utilizzata dall'applicazione invece di un GUID.  Il nome del ProgID ha il formato *Nomeprogetto*.*Nomecoclasse*.  
+ Il ProgID o identificatore a livello di codice, è una stringa di testo che l'applicazione può utilizzare invece un GUID. Il nome del ProgID ha il formato *CoClassname*.  
   
- **Versione**  
- Il numero di versione del provider.  Il valore predefinito è 1.  
+ **Version**  
+ Il numero di versione del provider. Il valore predefinito è 1.  
   
  **Classe di origine dati**  
- Nome della classe di origine dati con il formato C`Shortname`Source.  
+ Il nome della classe di origine dati, nel formato C*Shortname*origine.  
   
- **File .h di origine dati**  
- Il file di intestazione per la classe di origine dati.  È possibile modificare questo nome file o selezionare un file di intestazione esistente.  
+ **File di origine dati. h**  
+ Il file di intestazione per la classe di origine dati. È possibile modificare questo nome file o selezionare un file di intestazione esistente.  
   
  **Classe di sessione**  
- Nome della classe di sessione con il formato C`Shortname`Session.  
+ Il nome della classe di sessione, nel formato C*Shortname*sessione.  
   
- **File .h di sessione**  
- Il file di intestazione per la classe di sessione.  È possibile modificare questo nome file o selezionare un file di intestazione esistente.  
+ **File di sessione. h**  
+ Il file di intestazione per la classe di sessione. È possibile modificare questo nome file o selezionare un file di intestazione esistente.  
   
  **Classe di comando**  
- Nome della classe di comando con il formato C`Shortname`Command.  
+ Il nome della classe di comando, nel formato C*Shortname*comando.  
   
- **File .h di comando**  
- Il file di intestazione per la classe di comando.  Questo nome non può essere modificato e dipende dal nome del file di intestazione rowset.  
+ **File di comando. h**  
+ Il file di intestazione per la classe di comando. Questo nome non può essere modificato e dipende dal nome del file di intestazione rowset.  
   
  **Classe di rowset**  
- Nome della classe di rowset con il formato C`Shortname`Rowset.  
+ Il nome della classe di rowset, nel formato C*Shortname*set di righe.  
   
- **File .h di rowset**  
- Il file di intestazione per la classe di rowset.  È possibile modificare questo nome file o selezionare un file di intestazione esistente.  
+ **File di set di righe. h**  
+ Il file di intestazione per la classe di rowset. È possibile modificare questo nome file o selezionare un file di intestazione esistente.  
   
- **File .cpp di rowset**  
- Il file di implementazione del provider.  È possibile modificare questo nome file o selezionare un file di implementazione esistente.  
+ **File con estensione cpp set di righe**  
+ File di implementazione del provider. È possibile modificare questo nome file o selezionare un file di implementazione esistente.  
   
-## Vedere anche  
- [ATL OLE DB Provider](../../atl/reference/adding-an-atl-ole-db-provider.md)
+## <a name="see-also"></a>Vedere anche  
+ [Provider OLE DB ATL](../../atl/reference/adding-an-atl-ole-db-provider.md)
+
+

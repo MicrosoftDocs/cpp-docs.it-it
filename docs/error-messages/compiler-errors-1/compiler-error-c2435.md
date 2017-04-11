@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2435 | Documenti di Microsoft
+title: Errore del compilatore C2435 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,22 +34,22 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: dbc2045eae70cacd42e13ddb7cc8ecb3d60b8596
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 53a3144fe8e87f36a1a5149d292130a9913b646a
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="compiler-error-c2435"></a>Errore del compilatore C2435
-'variabile': l'inizializzazione dinamica richiede CRT gestito, non può essere compilato con /CLR: safe  
+'var': l'inizializzazione dinamica richiede codice CRT gestito; Impossibile compilare con /CLR: safe  
   
- Il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono deprecate in Visual Studio 2015.  
+ Le opzioni del compilatore **/clr:pure** e **/clr:safe** sono deprecate in Visual Studio 2015.  
   
- Inizializzazione di variabili di dominio di applicazione globale richiede la libreria CRT compilata con `/clr:pure`, che non genera un'immagine verificabile.  
+ Inizializzazione di variabili globali per dominio di applicazione richiede la libreria CRT compilata con `/clr:pure`, che non genera un'immagine verificabile.  
   
  Per ulteriori informazioni, vedere [appdomain](../../cpp/appdomain.md) e [processo](../../cpp/process.md).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene generato l'errore C2435:  
+ L'esempio seguente genera l'errore C2435:  
   
 ```  
 // C2435.cpp  

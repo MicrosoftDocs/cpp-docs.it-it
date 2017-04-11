@@ -1,5 +1,5 @@
 ---
-title: Classe CSimpleDialog | Documenti di Microsoft
+title: Classe CSimpleDialog | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -39,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: a4c17a1da8d1be00ebff171af09bc6c8eb81ed44
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 2448f2fcd0547e2344dde51392873e3276f2bd09
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="csimpledialog-class"></a>CSimpleDialog (classe)
@@ -57,7 +57,7 @@ class CSimpleDialog : public CDialogImplBase
 #### <a name="parameters"></a>Parametri  
  *t_wDlgTemplateID*  
   
- L'ID risorsa della risorsa di modello di finestra di dialogo.  
+ L'ID risorsa della risorsa modello di finestra di dialogo.  
   
  *t_bCenter*  
  **TRUE** se l'oggetto finestra di dialogo è centrato nella finestra proprietaria in caso contrario **FALSE**.  
@@ -71,7 +71,7 @@ class CSimpleDialog : public CDialogImplBase
 |[CSimpleDialog::DoModal](#domodal)|Crea una finestra di dialogo modale.|  
   
 ## <a name="remarks"></a>Note  
- Implementa una finestra di dialogo modale con funzionalità di base. `CSimpleDialog`fornisce supporto per controlli comuni di Windows solo. Per creare e visualizzare una finestra di dialogo modale, creare un'istanza di questa classe, specificando il nome di un modello di risorse esistente per la finestra di dialogo. L'oggetto finestra di dialogo si chiude quando l'utente fa clic su qualsiasi controllo con un valore predefinito (ad esempio IDOK o IDCANCEL).  
+ Implementa una finestra di dialogo modale con funzionalità di base. `CSimpleDialog`fornisce supporto per controlli comuni di Windows solo. Per creare e visualizzare una finestra di dialogo modale, creare un'istanza di questa classe, specificando il nome di un modello di risorsa esistente per la finestra di dialogo. L'oggetto finestra di dialogo si chiude quando l'utente fa clic su qualsiasi controllo con un valore predefinito (ad esempio IDOK o IDCANCEL).  
   
  `CSimpleDialog`Consente di creare solo le finestre di dialogo modale. `CSimpleDialog`fornisce la routine della finestra di dialogo, che utilizza la mappa messaggi predefinita per indirizzare i messaggi per i gestori appropriati.  
   
@@ -94,15 +94,15 @@ INT_PTR DoModal(HWND hWndParent = ::GetActiveWindow());
   
 ### <a name="parameters"></a>Parametri  
  `hWndParent`  
- Handle per l'elemento padre della finestra di dialogo. Se viene fornito alcun valore, il padre è impostata per la finestra attiva corrente.  
+ Handle per l'elemento padre della finestra di dialogo. Se non viene fornito alcun valore, l'elemento padre è impostato per la finestra attiva corrente.  
   
 ### <a name="return-value"></a>Valore restituito  
- Se ha esito positivo, il valore restituito è l'ID di risorsa del controllo chiuso la finestra di dialogo.  
+ Se ha esito positivo, il valore restituito è l'ID di risorsa del controllo che chiusa la finestra di dialogo.  
   
- In caso contrario, il valore restituito è -1. Per ottenere informazioni estese sull'errore, chiamare `GetLastError`.  
+ Se la funzione ha esito negativo, il valore restituito è -1. Per ottenere informazioni estese sull'errore, chiamare `GetLastError`.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo gestisce l'interazione con l'utente mentre è attiva la finestra di dialogo. Questo è ciò che rende la finestra di dialogo modale; ovvero, l'utente non può interagire con altre finestre fino a quando non viene chiusa la finestra di dialogo.  
+ Questo metodo gestisce tutte le interazioni con l'utente, mentre è attiva la finestra di dialogo. Questo è ciò che rende la finestra di dialogo modale; ovvero, l'utente non può interagire con altre finestre fino a quando non viene chiusa la finestra di dialogo.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)

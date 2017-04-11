@@ -37,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 3c140b9d49421e8a9f0082351f5e64608506b8ea
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: f9eb30e905729d699668d85872ea8ba4c8572982
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="c-language-reference"></a>Riferimenti del linguaggio C
@@ -56,5 +56,5 @@ Per altro materiale di riferimento relativo a C++ e al preprocessore, vedere:
 Le opzioni del compilatore e del linker sono documentate in [Riferimenti alla compilazione in C/C++](../build/reference/c-cpp-building-reference.md).  
   
 ## <a name="see-also"></a>Vedere anche  
-[Linguaggio C/C++ e librerie standard](../cpp/c-cpp-language-and-standard-libraries.md)   
+[Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)   
 

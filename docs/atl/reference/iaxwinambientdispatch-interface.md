@@ -1,5 +1,5 @@
 ---
-title: Interfaccia IAxWinAmbientDispatch | Documenti di Microsoft
+title: Interfaccia IAxWinAmbientDispatch | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -63,13 +63,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 050e7483670bd32f633660ba44491c8bb3fc462d
-ms.openlocfilehash: 2352b970c81f58d164fb47a6d7a4728c708d864a
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 3dd34ffec68e4503aebe7b8d0e72ec1f711dca03
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="iaxwinambientdispatch-interface"></a>Interfaccia IAxWinAmbientDispatch
-Questa interfaccia fornisce metodi per la specifica delle caratteristiche del controllo ospitato o del contenitore.  
+Questa interfaccia fornisce metodi per specificare le caratteristiche del controllo ospitato o del contenitore.  
   
 > [!IMPORTANT]
 >  Non è possibile utilizzare questa classe e i relativi membri in applicazioni eseguite in [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
@@ -88,44 +88,44 @@ interface IAxWinAmbientDispatch : IDispatch
 |-|-|  
 |[get_AllowContextMenu](#get_allowcontextmenu)|Il **AllowContextMenu** proprietà specifica se il controllo ospitato è autorizzato a visualizzare il proprio menu di scelta rapida.|  
 |[get_AllowShowUI](#get_allowshowui)|Il **AllowShowUI** proprietà specifica se il controllo ospitato è autorizzato a visualizzare la propria interfaccia utente.|  
-|[get_AllowWindowlessActivation](#get_allowwindowlessactivation)|Il **AllowWindowlessActivation** proprietà specifica se il contenitore consente l'attivazione senza finestra.|  
+|[get_AllowWindowlessActivation](#get_allowwindowlessactivation)|Il **AllowWindowlessActivation** proprietà specifica se il contenitore consentirà l'attivazione senza finestra.|  
 |[get_BackColor](#get_backcolor)|Il `BackColor` proprietà specifica il colore di sfondo dell'ambiente del contenitore.|  
-|[get_DisplayAsDefault](#get_displayasdefault)|**DisplayAsDefault** è una proprietà di ambiente che consente a un controllo verificare se si trova il controllo predefinito.|  
+|[get_DisplayAsDefault](#get_displayasdefault)|**DisplayAsDefault** è una proprietà di ambiente che consente a un controllo sapere se è il controllo predefinito.|  
 |[get_DocHostDoubleClickFlags](#get_dochostdoubleclickflags)|Il **DocHostDoubleClickFlags** proprietà specifica l'operazione che dovrà essere eseguita in risposta a un doppio clic.|  
 |[get_DocHostFlags](#get_dochostflags)|Il **DocHostFlags** proprietà specifica le funzionalità dell'interfaccia utente dell'oggetto host.|  
 |[get_Font](#get_font)|Il **carattere** proprietà specifica il tipo di carattere ambiente del contenitore.|  
 |[get_ForeColor](#get_forecolor)|Il `ForeColor` proprietà specifica il colore di primo piano dell'ambiente del contenitore.|  
 |[get_LocaleID](#get_localeid)|Il **LocaleID** proprietà specifica l'ID impostazioni locali di ambiente del contenitore.|  
-|[get_MessageReflect](#get_messagereflect)|Il **MessageReflect** proprietà di ambiente specifica se il contenitore rifletterà i messaggi per il controllo ospitato.|  
-|[get_OptionKeyPath](#get_optionkeypath)|Il **OptionKeyPath** proprietà specifica il percorso della chiave del Registro di sistema per le impostazioni dell'utente.|  
-|[get_ShowGrabHandles](#get_showgrabhandles)|Il **ShowGrabHandles** proprietà di ambiente consente il controllo scoprire se è necessario il disegno con quadratini di ridimensionamento.|  
-|[get_ShowHatching](#get_showhatching)|Il **ShowHatching** proprietà di ambiente consente il controllo scoprire se è necessario il disegno tratteggio.|  
+|[get_MessageReflect](#get_messagereflect)|Il **MessageReflect** proprietà di ambiente specifica se il contenitore rifletteranno i messaggi per il controllo ospitato.|  
+|[get_OptionKeyPath](#get_optionkeypath)|Il **OptionKeyPath** proprietà specifica il percorso della chiave del Registro di sistema per le impostazioni utente.|  
+|[get_ShowGrabHandles](#get_showgrabhandles)|Il **ShowGrabHandles** proprietà ambiente consente il controllo sapere se è necessario disegnare se stesso con quadratini di ridimensionamento.|  
+|[get_ShowHatching](#get_showhatching)|Il **ShowHatching** proprietà ambiente consente il controllo sapere se deve essere disegnato stesso tratteggio.|  
 |[get_UserMode](#get_usermode)|Il **UserMode** proprietà specifica la modalità dell'ambiente utente del contenitore.|  
 |[put_AllowContextMenu](#put_allowcontextmenu)|Il **AllowContextMenu** proprietà specifica se il controllo ospitato è autorizzato a visualizzare il proprio menu di scelta rapida.|  
 |[put_AllowShowUI](#put_allowshowui)|Il **AllowShowUI** proprietà specifica se il controllo ospitato è autorizzato a visualizzare la propria interfaccia utente.|  
-|[put_AllowWindowlessActivation](#put_allowwindowlessactivation)|Il **AllowWindowlessActivation** proprietà specifica se il contenitore consente l'attivazione senza finestra.|  
+|[put_AllowWindowlessActivation](#put_allowwindowlessactivation)|Il **AllowWindowlessActivation** proprietà specifica se il contenitore consentirà l'attivazione senza finestra.|  
 |[put_BackColor](#put_backcolor)|Il `BackColor` proprietà specifica il colore di sfondo dell'ambiente del contenitore.|  
-|[put_DisplayAsDefault](#put_displayasdefault)|**DisplayAsDefault** è una proprietà di ambiente che consente a un controllo verificare se si trova il controllo predefinito.|  
+|[put_DisplayAsDefault](#put_displayasdefault)|**DisplayAsDefault** è una proprietà di ambiente che consente a un controllo sapere se è il controllo predefinito.|  
 |[put_DocHostDoubleClickFlags](#put_dochostdoubleclickflags)|Il **DocHostDoubleClickFlags** proprietà specifica l'operazione che dovrà essere eseguita in risposta a un doppio clic.|  
 |[put_DocHostFlags](#put_dochostflags)|Il **DocHostFlags** proprietà specifica le funzionalità dell'interfaccia utente dell'oggetto host.|  
 |[put_Font](#put_font)|Il **carattere** proprietà specifica il tipo di carattere ambiente del contenitore.|  
 |[put_ForeColor](#put_forecolor)|Il `ForeColor` proprietà specifica il colore di primo piano dell'ambiente del contenitore.|  
 |[put_LocaleID](#put_localeid)|Il **LocaleID** proprietà specifica l'ID impostazioni locali di ambiente del contenitore.|  
-|[put_MessageReflect](#put_messagereflect)|Il **MessageReflect** proprietà di ambiente specifica se il contenitore rifletterà i messaggi per il controllo ospitato.|  
-|[put_OptionKeyPath](#put_optionkeypath)|Il **OptionKeyPath** proprietà specifica il percorso della chiave del Registro di sistema per le impostazioni dell'utente.|  
+|[put_MessageReflect](#put_messagereflect)|Il **MessageReflect** proprietà di ambiente specifica se il contenitore rifletteranno i messaggi per il controllo ospitato.|  
+|[put_OptionKeyPath](#put_optionkeypath)|Il **OptionKeyPath** proprietà specifica il percorso della chiave del Registro di sistema per le impostazioni utente.|  
 |[put_UserMode](#put_usermode)|Il **UserMode** proprietà specifica la modalità dell'ambiente utente del contenitore.|  
   
 ## <a name="remarks"></a>Note  
- Questa interfaccia viene esposta dal controllo ActiveX dell'ATL hosting di oggetti. Chiamare i metodi su questa interfaccia per impostare le proprietà di ambiente disponibili per il controllo ospitato o per specificare altri aspetti del comportamento del contenitore. Per integrare le proprietà fornite da `IAxWinAmbientDispatch`, utilizzare [IAxWinAmbientDispatchEx](../../atl/reference/iaxwinambientdispatchex-interface.md).  
+ Questa interfaccia viene esposta dal controllo ActiveX ATL che ospita gli oggetti. Chiamare i metodi su questa interfaccia per impostare le proprietà di ambiente disponibili per il controllo contenuto o per specificare altri aspetti del comportamento del contenitore. Per integrare le proprietà fornite da `IAxWinAmbientDispatch`, utilizzare [IAxWinAmbientDispatchEx](../../atl/reference/iaxwinambientdispatchex-interface.md).  
   
  [AXHost](https://msdn.microsoft.com/library/system.windows.forms.axhost.aspx) tenterà di caricare le informazioni sul tipo su `IAxWinAmbientDispatch` e `IAxWinAmbientDispatchEx` dalla libreria dei tipi che contiene il codice.  
   
- Se si sta collegando a ATL90. dll, **AXHost** caricherà le informazioni sul tipo dalla libreria dei tipi nella DLL.  
+ Se si collega a ATL90, **AXHost** caricherà le informazioni sul tipo da libreria dei tipi nella DLL.  
   
- Vedere [Hosting ActiveX controlli mediante AXHost ATL](../../atl/hosting-activex-controls-using-atl-axhost.md) per ulteriori dettagli.  
+ Vedere [Hosting ActiveX controlli tramite ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) per altri dettagli.  
   
 ## <a name="requirements"></a>Requisiti  
- La definizione di questa interfaccia è disponibile in una serie di moduli, come illustrato nella tabella seguente.  
+ La definizione di questa interfaccia è disponibile in diversi formati, come illustrato nella tabella seguente.  
   
 |Tipo di definizione|File|  
 |---------------------|----------|  
@@ -148,7 +148,7 @@ STDMETHOD(get_AllowContextMenu)(VARIANT_BOOL* pbAllowContextMenu);
  Un valore `HRESULT` standard.  
   
 ### <a name="remarks"></a>Note  
- L'implementazione dell'oggetto host ATL utilizza `VARIANT_TRUE` come valore predefinito di questa proprietà.  
+ Usa l'implementazione dell'oggetto host ATL `VARIANT_TRUE` come valore predefinito di questa proprietà.  
   
 ##  <a name="get_allowshowui"></a>IAxWinAmbientDispatch::get_AllowShowUI  
  Il **AllowShowUI** proprietà specifica se il controllo ospitato è autorizzato a visualizzare la propria interfaccia utente.  
@@ -165,10 +165,10 @@ STDMETHOD(get_AllowShowUI)(VARIANT_BOOL* pbAllowShowUI);
  Un valore `HRESULT` standard.  
   
 ### <a name="remarks"></a>Note  
- L'implementazione dell'oggetto host ATL utilizza **VARIANT_FALSE** come valore predefinito di questa proprietà.  
+ L'implementazione dell'oggetto host ATL Usa **VARIANT_FALSE** come valore predefinito di questa proprietà.  
   
 ##  <a name="get_allowwindowlessactivation"></a>IAxWinAmbientDispatch::get_AllowWindowlessActivation  
- Il **AllowWindowlessActivation** proprietà specifica se il contenitore consente l'attivazione senza finestra.  
+ Il **AllowWindowlessActivation** proprietà specifica se il contenitore consentirà l'attivazione senza finestra.  
   
 ```
 STDMETHOD(get_AllowWindowlessActivation)(VARIANT_BOOL* pbAllowWindowless);
@@ -182,7 +182,7 @@ STDMETHOD(get_AllowWindowlessActivation)(VARIANT_BOOL* pbAllowWindowless);
  Un valore `HRESULT` standard.  
   
 ### <a name="remarks"></a>Note  
- L'implementazione dell'oggetto host ATL utilizza `VARIANT_TRUE` come valore predefinito di questa proprietà.  
+ Usa l'implementazione dell'oggetto host ATL `VARIANT_TRUE` come valore predefinito di questa proprietà.  
   
 ##  <a name="get_backcolor"></a>IAxWinAmbientDispatch::get_BackColor  
  Il `BackColor` proprietà specifica il colore di sfondo dell'ambiente del contenitore.  
@@ -199,10 +199,10 @@ STDMETHOD(get_BackColor)(OLE_COLOR* pclrBackground);
  Un valore `HRESULT` standard.  
   
 ### <a name="remarks"></a>Note  
- L'implementazione dell'oggetto host ATL utilizza **COLOR_BTNFACE** o **COLOR_WINDOW** come valore predefinito di questa proprietà (a seconda che l'elemento padre della finestra dell'host sia una finestra di dialogo o meno).  
+ L'implementazione dell'oggetto host ATL Usa **COLOR_BTNFACE** o **COLOR_WINDOW** come valore predefinito di questa proprietà (a seconda che l'elemento padre della finestra host sia una finestra di dialogo o meno).  
   
 ##  <a name="get_displayasdefault"></a>IAxWinAmbientDispatch::get_DisplayAsDefault  
- **DisplayAsDefault** è una proprietà di ambiente che consente a un controllo verificare se si trova il controllo predefinito.  
+ **DisplayAsDefault** è una proprietà di ambiente che consente a un controllo sapere se è il controllo predefinito.  
   
 ```
 STDMETHOD(get_DisplayAsDefault)(VARIANT_BOOL* pbDisplayAsDefault);
@@ -216,7 +216,7 @@ STDMETHOD(get_DisplayAsDefault)(VARIANT_BOOL* pbDisplayAsDefault);
  Un valore `HRESULT` standard.  
   
 ### <a name="remarks"></a>Note  
- L'implementazione dell'oggetto host ATL utilizza **VARIANT_FALSE** come valore predefinito di questa proprietà.  
+ L'implementazione dell'oggetto host ATL Usa **VARIANT_FALSE** come valore predefinito di questa proprietà.  
   
 ##  <a name="get_dochostdoubleclickflags"></a>IAxWinAmbientDispatch::get_DocHostDoubleClickFlags  
  Il **DocHostDoubleClickFlags** proprietà specifica l'operazione che dovrà essere eseguita in risposta a un doppio clic.  
@@ -233,7 +233,7 @@ STDMETHOD(get_DocHostDoubleClickFlags)(DWORD* pdwDocHostDoubleClickFlags);
  Un valore `HRESULT` standard.  
   
 ### <a name="remarks"></a>Note  
- L'implementazione dell'oggetto host ATL utilizza **DOCHOSTUIDBLCLK_DEFAULT** come valore predefinito di questa proprietà.  
+ L'implementazione dell'oggetto host ATL Usa **DOCHOSTUIDBLCLK_DEFAULT** come valore predefinito di questa proprietà.  
   
 ##  <a name="get_dochostflags"></a>IAxWinAmbientDispatch::get_DocHostFlags  
  Il **DocHostFlags** proprietà specifica le funzionalità dell'interfaccia utente dell'oggetto host.  
@@ -250,7 +250,7 @@ STDMETHOD(get_DocHostFlags)(DWORD* pdwDocHostFlags);
  Un valore `HRESULT` standard.  
   
 ### <a name="remarks"></a>Note  
- L'implementazione dell'oggetto host ATL utilizza **DOCHOSTUIFLAG_NO3DBORDER** come valore predefinito di questa proprietà.  
+ L'implementazione dell'oggetto host ATL Usa **DOCHOSTUIFLAG_NO3DBORDER** come valore predefinito di questa proprietà.  
   
 ##  <a name="get_font"></a>IAxWinAmbientDispatch::get_Font  
  Il **carattere** proprietà specifica il tipo di carattere ambiente del contenitore.  
@@ -261,13 +261,13 @@ STDMETHOD(get_Font)(IFontDisp** pFont);
   
 ### <a name="parameters"></a>Parametri  
  `pFont`  
- [out] L'indirizzo di un **IFontDisp** puntatore a interfaccia utilizzato per ricevere il valore corrente di questa proprietà.  
+ [out] L'indirizzo di un **IFontDisp** puntatore a interfaccia usato per ricevere il valore corrente di questa proprietà.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un valore `HRESULT` standard.  
   
 ### <a name="remarks"></a>Note  
- L'implementazione dell'oggetto host ATL utilizza il tipo di carattere predefinito GUI o il carattere di sistema come il valore predefinito di questa proprietà.  
+ L'implementazione dell'oggetto host ATL utilizza il tipo di carattere predefinito GUI o il carattere di sistema come valore predefinito di questa proprietà.  
   
 ##  <a name="get_forecolor"></a>IAxWinAmbientDispatch::get_ForeColor  
  Il `ForeColor` proprietà specifica il colore di primo piano dell'ambiente del contenitore.  
@@ -284,7 +284,7 @@ STDMETHOD(get_ForeColor)(OLE_COLOR* pclrForeground);
  Un valore `HRESULT` standard.  
   
 ### <a name="remarks"></a>Note  
- L'implementazione dell'oggetto host ATL utilizza il colore del testo finestra sistema come il valore predefinito di questa proprietà.  
+ L'implementazione dell'oggetto host ATL Usa il colore del testo finestra sistema come valore predefinito di questa proprietà.  
   
 ##  <a name="get_localeid"></a>IAxWinAmbientDispatch::get_LocaleID  
  Il **LocaleID** proprietà specifica l'ID impostazioni locali di ambiente del contenitore.  
@@ -301,12 +301,12 @@ STDMETHOD(get_LocaleID)(LCID* plcidLocaleID);
  Un valore `HRESULT` standard.  
   
 ### <a name="remarks"></a>Note  
- L'implementazione dell'oggetto host ATL utilizza impostazioni locali predefinite dell'utente come valore predefinito di questa proprietà.  
+ L'implementazione dell'oggetto host ATL Usa impostazioni locali predefinite dell'utente come valore predefinito di questa proprietà.  
   
- Con questo metodo è possibile individuare l'ambiente LocalID, vale a dire LocaleID del programma di controllo viene utilizzato. Quando si conosce l'ID, è possibile chiamare codice per caricare le didascalie specifiche delle impostazioni locali, testo del messaggio di errore, e così via da un file di risorse o una DLL satellite.  
+ Con questo metodo è possibile individuare l'ambiente LocalID, vale a dire, il valore LocaleID del programma del controllo viene utilizzato in. Quando si conosce l'ID delle impostazioni locali, è possibile chiamare codice per caricare le didascalie specifiche delle impostazioni locali, testo del messaggio di errore, e così via da un file di risorse o di una DLL satellite.  
   
 ##  <a name="get_messagereflect"></a>IAxWinAmbientDispatch::get_MessageReflect  
- Il **MessageReflect** proprietà di ambiente specifica se il contenitore rifletterà i messaggi per il controllo ospitato.  
+ Il **MessageReflect** proprietà di ambiente specifica se il contenitore rifletteranno i messaggi per il controllo ospitato.  
   
 ```
 STDMETHOD(get_MessageReflect)(VARIANT_BOOL* pbMessageReflect);
@@ -320,10 +320,10 @@ STDMETHOD(get_MessageReflect)(VARIANT_BOOL* pbMessageReflect);
  Un valore `HRESULT` standard.  
   
 ### <a name="remarks"></a>Note  
- L'implementazione dell'oggetto host ATL utilizza `VARIANT_TRUE` come valore predefinito di questa proprietà.  
+ Usa l'implementazione dell'oggetto host ATL `VARIANT_TRUE` come valore predefinito di questa proprietà.  
   
 ##  <a name="get_optionkeypath"></a>IAxWinAmbientDispatch::get_OptionKeyPath  
- Il **OptionKeyPath** proprietà specifica il percorso della chiave del Registro di sistema per le impostazioni dell'utente.  
+ Il **OptionKeyPath** proprietà specifica il percorso della chiave del Registro di sistema per le impostazioni utente.  
   
 ```
 STDMETHOD(get_OptionKeyPath)(BSTR* pbstrOptionKeyPath);
@@ -337,7 +337,7 @@ STDMETHOD(get_OptionKeyPath)(BSTR* pbstrOptionKeyPath);
  Un valore `HRESULT` standard.  
   
 ##  <a name="get_showgrabhandles"></a>IAxWinAmbientDispatch::get_ShowGrabHandles  
- Il **ShowGrabHandles** proprietà di ambiente consente il controllo scoprire se è necessario il disegno con quadratini di ridimensionamento.  
+ Il **ShowGrabHandles** proprietà ambiente consente il controllo sapere se è necessario disegnare se stesso con quadratini di ridimensionamento.  
   
 ```
 STDMETHOD(get_ShowGrabHandles)(VARIANT_BOOL* pbShowGrabHandles);
@@ -354,7 +354,7 @@ STDMETHOD(get_ShowGrabHandles)(VARIANT_BOOL* pbShowGrabHandles);
  Restituisce sempre l'implementazione ATL oggetto host **VARIANT_FALSE** come valore di questa proprietà.  
   
 ##  <a name="get_showhatching"></a>IAxWinAmbientDispatch::get_ShowHatching  
- Il **ShowHatching** proprietà di ambiente consente il controllo scoprire se è necessario il disegno tratteggio.  
+ Il **ShowHatching** proprietà ambiente consente il controllo sapere se deve essere disegnato stesso tratteggio.  
   
 ```
 STDMETHOD(get_ShowHatching)(VARIANT_BOOL* pbShowHatching);
@@ -385,7 +385,7 @@ STDMETHOD(get_UserMode)(VARIANT_BOOL* pbUserMode);
  Un valore `HRESULT` standard.  
   
 ### <a name="remarks"></a>Note  
- L'implementazione dell'oggetto host ATL utilizza `VARIANT_TRUE` come valore predefinito di questa proprietà.  
+ Usa l'implementazione dell'oggetto host ATL `VARIANT_TRUE` come valore predefinito di questa proprietà.  
   
 ##  <a name="put_allowcontextmenu"></a>IAxWinAmbientDispatch::put_AllowContextMenu  
  Il **AllowContextMenu** proprietà specifica se il controllo ospitato è autorizzato a visualizzare il proprio menu di scelta rapida.  
@@ -402,7 +402,7 @@ STDMETHOD(put_AllowContextMenu)(VARIANT_BOOL bAllowContextMenu);
  Un valore `HRESULT` standard.  
   
 ### <a name="remarks"></a>Note  
- L'implementazione dell'oggetto host ATL utilizza `VARIANT_TRUE` come valore predefinito di questa proprietà.  
+ Usa l'implementazione dell'oggetto host ATL `VARIANT_TRUE` come valore predefinito di questa proprietà.  
   
 ##  <a name="put_allowshowui"></a>IAxWinAmbientDispatch::put_AllowShowUI  
  Il **AllowShowUI** proprietà specifica se il controllo ospitato è autorizzato a visualizzare la propria interfaccia utente.  
@@ -419,10 +419,10 @@ STDMETHOD(put_AllowShowUI)(VARIANT_BOOL bAllowShowUI);
  Un valore `HRESULT` standard.  
   
 ### <a name="remarks"></a>Note  
- L'implementazione dell'oggetto host ATL utilizza **VARIANT_FALSE** come valore predefinito di questa proprietà.  
+ L'implementazione dell'oggetto host ATL Usa **VARIANT_FALSE** come valore predefinito di questa proprietà.  
   
 ##  <a name="put_allowwindowlessactivation"></a>IAxWinAmbientDispatch::put_AllowWindowlessActivation  
- Il **AllowWindowlessActivation** proprietà specifica se il contenitore consente l'attivazione senza finestra.  
+ Il **AllowWindowlessActivation** proprietà specifica se il contenitore consentirà l'attivazione senza finestra.  
   
 ```
 STDMETHOD(put_AllowWindowlessActivation)(VARIANT_BOOL bAllowWindowless);
@@ -436,7 +436,7 @@ STDMETHOD(put_AllowWindowlessActivation)(VARIANT_BOOL bAllowWindowless);
  Un valore `HRESULT` standard.  
   
 ### <a name="remarks"></a>Note  
- L'implementazione dell'oggetto host ATL utilizza `VARIANT_TRUE` come valore predefinito di questa proprietà.  
+ Usa l'implementazione dell'oggetto host ATL `VARIANT_TRUE` come valore predefinito di questa proprietà.  
   
 ##  <a name="put_backcolor"></a>IAxWinAmbientDispatch::put_BackColor  
  Il `BackColor` proprietà specifica il colore di sfondo dell'ambiente del contenitore.  
@@ -453,10 +453,10 @@ STDMETHOD(put_BackColor)(OLE_COLOR clrBackground);
  Un valore `HRESULT` standard.  
   
 ### <a name="remarks"></a>Note  
- L'implementazione dell'oggetto host ATL utilizza **COLOR_BTNFACE** o **COLOR_WINDOW** come valore predefinito di questa proprietà (a seconda che l'elemento padre della finestra dell'host sia una finestra di dialogo o meno).  
+ L'implementazione dell'oggetto host ATL Usa **COLOR_BTNFACE** o **COLOR_WINDOW** come valore predefinito di questa proprietà (a seconda che l'elemento padre della finestra host sia una finestra di dialogo o meno).  
   
 ##  <a name="put_displayasdefault"></a>IAxWinAmbientDispatch::put_DisplayAsDefault  
- **DisplayAsDefault** è una proprietà di ambiente che consente a un controllo verificare se si trova il controllo predefinito.  
+ **DisplayAsDefault** è una proprietà di ambiente che consente a un controllo sapere se è il controllo predefinito.  
   
 ```
 STDMETHOD(put_DisplayAsDefault)(VARIANT_BOOL bDisplayAsDefault);
@@ -470,7 +470,7 @@ STDMETHOD(put_DisplayAsDefault)(VARIANT_BOOL bDisplayAsDefault);
  Un valore `HRESULT` standard.  
   
 ### <a name="remarks"></a>Note  
- L'implementazione dell'oggetto host ATL utilizza **VARIANT_FALSE** come valore predefinito di questa proprietà.  
+ L'implementazione dell'oggetto host ATL Usa **VARIANT_FALSE** come valore predefinito di questa proprietà.  
   
 ##  <a name="put_dochostdoubleclickflags"></a>IAxWinAmbientDispatch::put_DocHostDoubleClickFlags  
  Il **DocHostDoubleClickFlags** proprietà specifica l'operazione che dovrà essere eseguita in risposta a un doppio clic.  
@@ -487,7 +487,7 @@ STDMETHOD(put_DocHostDoubleClickFlags)(DWORD dwDocHostDoubleClickFlags);
  Un valore `HRESULT` standard.  
   
 ### <a name="remarks"></a>Note  
- L'implementazione dell'oggetto host ATL utilizza **DOCHOSTUIDBLCLK_DEFAULT** come valore predefinito di questa proprietà.  
+ L'implementazione dell'oggetto host ATL Usa **DOCHOSTUIDBLCLK_DEFAULT** come valore predefinito di questa proprietà.  
   
 ##  <a name="put_dochostflags"></a>IAxWinAmbientDispatch::put_DocHostFlags  
  Il **DocHostFlags** proprietà specifica le funzionalità dell'interfaccia utente dell'oggetto host.  
@@ -504,7 +504,7 @@ STDMETHOD(put_DocHostFlags)(DWORD dwDocHostFlags);
  Un valore `HRESULT` standard.  
   
 ### <a name="remarks"></a>Note  
- L'implementazione dell'oggetto host ATL utilizza **DOCHOSTUIFLAG_NO3DBORDER** come valore predefinito di questa proprietà.  
+ L'implementazione dell'oggetto host ATL Usa **DOCHOSTUIFLAG_NO3DBORDER** come valore predefinito di questa proprietà.  
   
 ##  <a name="put_font"></a>IAxWinAmbientDispatch::put_Font  
  Il **carattere** proprietà specifica il tipo di carattere ambiente del contenitore.  
@@ -521,7 +521,7 @@ STDMETHOD(put_Font)(IFontDisp* pFont);
  Un valore `HRESULT` standard.  
   
 ### <a name="remarks"></a>Note  
- L'implementazione dell'oggetto host ATL utilizza il tipo di carattere predefinito GUI o il carattere di sistema come il valore predefinito di questa proprietà.  
+ L'implementazione dell'oggetto host ATL utilizza il tipo di carattere predefinito GUI o il carattere di sistema come valore predefinito di questa proprietà.  
   
 ##  <a name="put_forecolor"></a>IAxWinAmbientDispatch::put_ForeColor  
  Il `ForeColor` proprietà specifica il colore di primo piano dell'ambiente del contenitore.  
@@ -538,7 +538,7 @@ STDMETHOD(put_ForeColor)(OLE_COLOR clrForeground);
  Un valore `HRESULT` standard.  
   
 ### <a name="remarks"></a>Note  
- L'implementazione dell'oggetto host ATL utilizza il colore del testo finestra sistema come il valore predefinito di questa proprietà.  
+ L'implementazione dell'oggetto host ATL Usa il colore del testo finestra sistema come valore predefinito di questa proprietà.  
   
 ##  <a name="put_localeid"></a>IAxWinAmbientDispatch::put_LocaleID  
  Il **LocaleID** proprietà specifica l'ID impostazioni locali di ambiente del contenitore.  
@@ -555,10 +555,10 @@ STDMETHOD(put_LocaleID)(LCID lcidLocaleID);
  Un valore `HRESULT` standard.  
   
 ### <a name="remarks"></a>Note  
- L'implementazione dell'oggetto host ATL utilizza impostazioni locali predefinite dell'utente come valore predefinito di questa proprietà.  
+ L'implementazione dell'oggetto host ATL Usa impostazioni locali predefinite dell'utente come valore predefinito di questa proprietà.  
   
 ##  <a name="put_messagereflect"></a>IAxWinAmbientDispatch::put_MessageReflect  
- Il **MessageReflect** proprietà di ambiente specifica se il contenitore rifletterà i messaggi per il controllo ospitato.  
+ Il **MessageReflect** proprietà di ambiente specifica se il contenitore rifletteranno i messaggi per il controllo ospitato.  
   
 ```
 STDMETHOD(put_MessageReflect)(VARIANT_BOOL bMessageReflect);
@@ -572,10 +572,10 @@ STDMETHOD(put_MessageReflect)(VARIANT_BOOL bMessageReflect);
  Un valore `HRESULT` standard.  
   
 ### <a name="remarks"></a>Note  
- L'implementazione dell'oggetto host ATL utilizza `VARIANT_TRUE` come valore predefinito di questa proprietà.  
+ Usa l'implementazione dell'oggetto host ATL `VARIANT_TRUE` come valore predefinito di questa proprietà.  
   
 ##  <a name="put_optionkeypath"></a>IAxWinAmbientDispatch::put_OptionKeyPath  
- Il **OptionKeyPath** proprietà specifica il percorso della chiave del Registro di sistema per le impostazioni dell'utente.  
+ Il **OptionKeyPath** proprietà specifica il percorso della chiave del Registro di sistema per le impostazioni utente.  
   
 ```
 STDMETHOD(put_OptionKeyPath)(BSTR bstrOptionKeyPath);
@@ -603,13 +603,13 @@ STDMETHOD(put_UserMode)(VARIANT_BOOL bUserMode);
  Un valore `HRESULT` standard.  
   
 ### <a name="remarks"></a>Note  
- L'implementazione dell'oggetto host ATL utilizza `VARIANT_TRUE` come valore predefinito di questa proprietà.  
+ Usa l'implementazione dell'oggetto host ATL `VARIANT_TRUE` come valore predefinito di questa proprietà.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfaccia IAxWinAmbientDispatchEx](../../atl/reference/iaxwinambientdispatchex-interface.md)   
  [Interfaccia IAxWinHostWindow](../../atl/reference/iaxwinhostwindow-interface.md)   
  [CAxWindow:: QueryHost](../../atl/reference/caxwindow-class.md#queryhost)   
- [AtlAxGetHost](http://msdn.microsoft.com/library/ad1f4f16-608d-4e96-8d30-04d4ca906a7b)
+ [AtlAxGetHost](composite-control-global-functions.md#atlaxgethost)
 
 
 

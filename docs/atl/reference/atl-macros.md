@@ -1,5 +1,5 @@
 ---
-title: Le macro ATL | Documenti di Microsoft
+title: Macro ATL | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,34 +33,34 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: 04df63d36c1ac8dbcb93c3f9503d97decad994f8
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 0e04a53a0ea8919c793614d7e3037d10ce01a03c
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="atl-macros"></a>Macro ATL
-Per trovare una macro di ATL per categoria, vedere gli argomenti seguenti.  
+Per trovare una macro ATL per categoria, vedere gli argomenti seguenti.  
   
- [Aggregazione e macro di Class Factory](../../atl/reference/aggregation-and-class-factory-macros.md)  
+ [Macro di aggregazione e class factory](../../atl/reference/aggregation-and-class-factory-macros.md)  
  Consentono di controllare l'aggregazione e di dichiarazione class factory.  
   
  [Macro di categoria](../../atl/reference/category-macros.md)  
- Definire le mappe di categoria.  
+ Definire i mapping di categoria.  
   
- [Macro della mappa COM](../../atl/reference/com-map-macros.md)  
+ [Macro di mappa COM](../../atl/reference/com-map-macros.md)  
  Definire le mappe dell'interfaccia COM.  
   
  [Macro di opzioni del compilatore](../../atl/reference/compiler-options-macros.md)  
- Controllare le funzionalità del compilatore specifici.  
+ Controllare le funzionalità del compilatore specifico.  
   
- [Macro di controllo composito](../../atl/reference/composite-control-macros.md)  
- Definire le voci e mappe sink di evento.  
+ [Macro di controlli compositi](../../atl/reference/composite-control-macros.md)  
+ Definire mappe sink di evento e le voci.  
   
  [Macro di punto di connessione](../../atl/reference/connection-point-macros.md)  
- Definire le voci e mappe di punto di connessione.  
+ Definire i mapping dei punti di connessione e le voci.  
   
- [Macro di debug e la segnalazione errori](../../atl/reference/debugging-and-error-reporting-macros.md)  
- Fornire le funzionalità di debug e trace utile.  
+ [Macro di debug e segnalazione errori](../../atl/reference/debugging-and-error-reporting-macros.md)  
+ Fornire le funzionalità di debug e traccia utile.  
   
  [Macro di gestione delle eccezioni](../../atl/reference/exception-handling-macros.md)  
  Fornisce supporto per la gestione delle eccezioni.  
@@ -68,34 +68,34 @@ Per trovare una macro di ATL per categoria, vedere gli argomenti seguenti.
  [Macro della mappa messaggi](../../atl/reference/message-map-macros-atl.md)  
  Definire le voci e mappe messaggi.  
   
- [Macro di mapping degli oggetti](../../atl/reference/object-map-macros.md)  
- Definire le voci e mappe di oggetti.  
+ [Macro della mappa oggetti](../../atl/reference/object-map-macros.md)  
+ Definire mappe di oggetti e le voci.  
   
- [Oggetto stato macro](../../atl/reference/object-status-macros.md)  
- Imposta i flag appartenenti ai controlli ActiveX.  
+ [Macro di stato oggetti](../../atl/reference/object-status-macros.md)  
+ Imposta i flag che appartengono ai controlli ActiveX.  
   
- [Macro di mapping di proprietà](../../atl/reference/property-map-macros.md)  
- Definire mapping di proprietà e le voci.  
+ [Macro della mappa proprietà](../../atl/reference/property-map-macros.md)  
+ Definire i mapping di proprietà e le voci.  
   
- [Macro per lo scambio dei dati del Registro di sistema](../../atl/reference/registry-data-exchange-macros.md)  
+ [Macro di scambio dati del Registro di sistema](../../atl/reference/registry-data-exchange-macros.md)  
  Eseguire le operazioni di scambio di dati del Registro di sistema.  
   
  [Macro del Registro di sistema](../../atl/reference/registry-macros.md)  
- Definire strutture di libreria e del Registro di sistema di tipo utile.  
+ Definire strutture di tipo utile libreria e del Registro di sistema.  
   
- [Macro della mappa del servizio](../../atl/reference/service-map-macros.md)  
+ [Macro della mappa servizi](../../atl/reference/service-map-macros.md)  
  Definire le mappe dei servizi e le voci.  
   
- [Oggetto macro snap-In](../../atl/reference/snap-in-object-macros.md)  
- Fornisce supporto per le estensioni snap-in.  
+ [Macro di oggetti snap-in](../../atl/reference/snap-in-object-macros.md)  
+ Fornisce supporto per estensioni snap-in.  
   
- [Macro di conversione di stringhe](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863)  
+ [Macro di conversione di stringhe](string-conversion-macros.md)  
  Fornire le funzionalità di conversione di stringa.  
   
- [Macro di classe di finestra](../../atl/reference/window-class-macros.md)  
+ [Macro di classi di finestre](../../atl/reference/window-class-macros.md)  
  Definire le utilità di classe di finestra.  
   
- [Macro di messaggi di Windows](../../atl/reference/windows-messages-macros.md)  
+ [Macro di messaggi Windows](../../atl/reference/windows-messages-macros.md)  
  Inoltrare i messaggi della finestra.  
   
 ## <a name="see-also"></a>Vedere anche  

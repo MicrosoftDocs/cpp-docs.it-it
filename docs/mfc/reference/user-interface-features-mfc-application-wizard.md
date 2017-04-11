@@ -1,70 +1,88 @@
 ---
-title: "Funzionalit&#224; interfaccia utente, Creazione guidata applicazione MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.mfc.exe.ui"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Creazione guidata applicazione MFC, funzionalità interfaccia utente"
+title: "Funzionalità interfaccia utente, creazione guidata applicazione MFC | Documenti Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.appwiz.mfc.exe.ui
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC Application Wizard, user interface features
 ms.assetid: 59e7b829-a665-42eb-be23-3f2a36eb2dad
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Funzionalit&#224; interfaccia utente, Creazione guidata applicazione MFC
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 390d06ddb09786ac4e9960c1933e0b1a76531f5e
+ms.lasthandoff: 04/01/2017
 
-In questo argomento vengono illustrate le opzioni che è possibile utilizzare per specificare l'aspetto dell'applicazione.  Le funzionalità di interfaccia utente disponibili per il progetto dipendono dal tipo di applicazione specificato nella schermata [Tipo di applicazione, Creazione guidata applicazione MFC](../../mfc/reference/application-type-mfc-application-wizard.md) della Creazione guidata applicazione MFC.  Se ad esempio si crea un'applicazione con interfaccia a documento singolo, non è possibile aggiungere stili di frame figlio.  
+---
+# <a name="user-interface-features-mfc-application-wizard"></a>Funzionalità interfaccia utente, Creazione guidata applicazione MFC
+In questo argomento illustra le opzioni che è possibile utilizzare per specificare l'aspetto dell'applicazione. Le funzionalità dell'interfaccia utente disponibili per il progetto dipendono dal tipo di applicazione specificato nella [tipo di applicazione, creazione guidata applicazione MFC](../../mfc/reference/application-type-mfc-application-wizard.md) pagina della creazione guidata applicazione MFC. Ad esempio, se si crea un'applicazione single document interface, è possibile aggiungere stili dei frame figlio.  
   
  **Stili del frame principale**  
- Imposta le funzionalità del frame principale della finestra dell'applicazione.  
+ Imposta le funzionalità di cornice della finestra principale dell'applicazione.  
   
 |Opzione|Descrizione|  
-|-------------|-----------------|  
-|**Frame con bordo spesso**|Crea una finestra dotata di bordo di ridimensionamento.  Valore predefinito.|  
-|**Pulsante di riduzione a icona**|Include un pulsante di riduzione a icona nella finestra cornice principale.  Valore predefinito.|  
-|**Pulsante di ingrandimento**|Include un pulsante di ingrandimento nella finestra cornice principale.  Valore predefinito.|  
-|**Minimized**|Apre la finestra cornice principale come icona.|  
-|**Maximized**|Apre la finestra cornice principale in modo da occupare l'intero schermo.|  
-|**Menu di sistema**|Include un menu di sistema nella finestra cornice principale.  Valore predefinito.|  
-|**Finestra Informazioni su**|Include una casella **Informazioni su** per l'applicazione.  L'utente può accedere a questa casella dal menu **?** dell'applicazione.  Rappresenta l'opzione predefinita, modificabile solo selezionando l'opzione **Basato su finestra di dialogo** nella schermata [Tipo di applicazione, Creazione guidata applicazione MFC](../../mfc/reference/application-type-mfc-application-wizard.md).<br /><br /> **Nota** In genere, se un'opzione non è disponibile significa che non viene applicata al progetto dalla procedura guidata, indipendentemente dal fatto che la relativa casella di controllo sia selezionata.  In questo caso, al progetto viene sempre aggiunta la finestra **Informazioni su**, a meno che il progetto non sia stato precedentemente impostato come progetto a finestre e sia quindi stata deselezionata l'apposita casella.|  
-|**Barra di stato iniziale**|Aggiunge all'applicazione una barra di stato  contenente indicatori automatici per i tasti MAIUSC, BLOC NUM e BLOC SCORR e una barra dei messaggi in cui vengono visualizzate le stringhe della Guida relative ai comandi di menu e ai pulsanti della barra degli strumenti.  Selezionando questa opzione vengono inoltre aggiunti comandi di menu che consentono di visualizzare o nascondere la barra di stato.  Per impostazione predefinita, un'applicazione è dotata di una barra di stato.  Non è disponibile per i diversi tipi di applicazioni a finestre.|  
-|**Finestra con separatore**|Fornisce una barra di divisione  che suddivide le visualizzazioni principali dell'applicazione.  In un'applicazione con interfaccia a documenti multipli \(MDI\), una finestra con separatore è costituita dalla finestra client del frame figlio MDI, mentre in un'applicazione con interfaccia a documento singolo \(SDI\) e in un'applicazione a documenti multipli di primo livello è costituita dalla finestra client del frame principale.  Non è disponibile per i diversi tipi di applicazioni a finestre.|  
+|------------|-----------------|  
+|**Frame con bordo spesso**|Crea una finestra che ha un bordo di ridimensionamento. Valore predefinito.|  
+|**Ridurre al minimo casella**|Include una finestra ridotta a icona nella finestra cornice principale. Valore predefinito.|  
+|**Pulsante di ingrandimento**|Include un pulsante di ingrandimento nella finestra cornice principale. Valore predefinito.|  
+|**Ridotta a icona**|Apre la finestra cornice principale come un'icona.|  
+|**Ingrandita**|Verrà visualizzata la finestra cornice principale per la dimensione totale dello schermo.|  
+|**Menu di sistema**|Include un menu di sistema nella finestra cornice principale. Valore predefinito.|  
+|**Finestra informazioni su**|Include un **su** casella per l'applicazione. L'utente può accedere a questa casella dell'applicazione **Guida** menu. Il valore predefinito e non sarà possibile modificarla solo se si seleziona **basato su finestra di dialogo**nella [tipo di applicazione, creazione guidata applicazione MFC](../../mfc/reference/application-type-mfc-application-wizard.md) pagina.<br /><br /> **Nota** indica che la procedura guidata non applicare l'opzione per il progetto, se è selezionata o deselezionata la casella di controllo dell'elemento non disponibile in genere, un'opzione non è disponibile. In questo caso, la procedura guidata aggiunge sempre un **su** casella al progetto solo se si specifica innanzitutto il progetto come finestra di dialogo in base e quindi deselezionare la casella di controllo.|  
+|**Barra di stato iniziale**|Aggiunge una barra di stato per l'applicazione. La barra di stato contenente indicatori automatici per i tasti della tastiera BLOC MAIUSC, BLOC NUM e BLOC SCORR e stringhe di un messaggio che visualizza la Guida per i comandi di menu e barra degli strumenti pulsanti. Se si seleziona questa opzione aggiunge anche i comandi di menu per visualizzare o nascondere la barra di stato. Per impostazione predefinita, un'applicazione include una barra di stato. Non è disponibile per i tipi di applicazioni basate su finestra di dialogo.|  
+|**Finestra divisa**|Fornisce una barra di divisione. La barra di divisione divide visualizzazioni principali dell'applicazione. In un'applicazione MDI (interfaccia) di documenti multipli, finestra client del frame MDI figlio è una finestra con separatore, e in un'applicazione single document interface (SDI) e applicazione multiple document di livello superiore, finestra di client del frame principale è una finestra con separatore. Non è disponibile per i tipi di applicazioni basate su finestra di dialogo.|  
   
- **Stili dei frame figlio**  
- Specifica l'aspetto e lo stato iniziale dei frame figlio dell'applicazione.  Gli stili dei frame figlio sono disponibili solo per le applicazioni MDI.  
-  
-|Opzione|Descrizione|  
-|-------------|-----------------|  
-|**Pulsante di riduzione a icona**|Specifica se una finestra figlio è dotata di un pulsante di riduzione a icona \(impostazione predefinita\).|  
-|**Pulsante di ingrandimento**|Specifica se una finestra figlio è dotata di un pulsante di ingrandimento \(impostazione predefinita\).|  
-|**Finestra ingrandita**|Specifica se una finestra figlio viene inizialmente ingrandita mediante l'impostazione del flag **WS\_MAXIMIZE** di cs.style nella funzione membro [PreCreateWindow](../Topic/CWnd::PreCreateWindow.md) di `CChildFrame`.|  
-  
- **Barre dei comandi \(menu\/barra degli strumenti\/barra multifunzione\)**  
- Indica se l'applicazione include menu, barre degli strumenti e\/o una barra multifunzione.  Non è disponibile per le applicazioni a finestre.  
+ **Stili frame figlio**  
+ Specifica l'aspetto e lo stato iniziale dei frame figlio nell'applicazione. Stili di frame figlio sono disponibili solo le applicazioni MDI.  
   
 |Opzione|Descrizione|  
-|-------------|-----------------|  
-|**Usa menu classico**|Specifica che l'applicazione contiene un menu classico, non trascinabile.|  
-|**Usa barra degli strumenti ancorabile**|Aggiunge all'applicazione una barra degli strumenti standard di Windows  contenente pulsanti per creare un nuovo documento, aprire e salvare file di documento, tagliare, copiare, incollare o stampare testo e passare alla modalità Guida.  Attivando questa opzione vengono inoltre aggiunti comandi di menu che consentono di visualizzare o nascondere la barra degli strumenti.|  
-|**Una barra degli strumenti di tipo browser**|Aggiunge all'applicazione una barra degli strumenti di tipo Internet Explorer.|  
-|**Usa barra dei menu e barra degli strumenti**|Indica che l'applicazione contiene una barra dei menu trascinabile e una barra degli strumenti.|  
-|**Barre degli strumenti e immagini definite dall'utente**|Consente all'utente di personalizzare la barra degli strumenti e le immagini relative in fase di esecuzione.|  
-|**Comportamento menu personalizzati**|Specifica se, all'apertura, il menu contiene l'elenco completo di voci o solo i comandi che l'utente utilizza più di frequente.|  
-|**Usa barra multifunzione**|Utilizza nell'applicazione una barra multifunzione di tipo Office 2007 anziché una barra dei menu o una barra degli strumenti.|  
+|------------|-----------------|  
+|**Pulsante di riduzione casella**|Specifica se una finestra figlio ha un pulsante di riduzione a icona (abilitato per impostazione predefinita).|  
+|**Ingrandimento**|Specifica se una finestra figlio contiene un pulsante di ingrandimento (abilitato per impostazione predefinita).|  
+|**Ingrandita**|Specifica se una finestra figlio inizialmente ingrandita mediante l'impostazione del flag **WS_MAXIMIZE** nel [PreCreateWindow](../../mfc/reference/cwnd-class.md#precreatewindow) funzione membro di `CChildFrame`.|  
+  
+ **Barre dei comandi (menu/barra degli strumenti/barra multifunzione)**  
+ Indica se l'applicazione include menu, barre degli strumenti e/o una barra multifunzione. Non è disponibile per le applicazioni basate su finestra di dialogo.  
+  
+|Opzione|Descrizione|  
+|------------|-----------------|  
+|**Usare un menu classico**|Specifica che l'applicazione contiene un menu classico, non draggable.|  
+|**Utilizzare una barra degli strumenti ancorabile classica**|Aggiunge una barra degli strumenti standard di Windows per l'applicazione. La barra degli strumenti contiene pulsanti per la creazione di un nuovo documento. aprire e salvare il file di documento; Taglia, copia o lo stampa di testo. e l'immissione di modalità della Guida. Se si abilita questa opzione aggiunge anche i comandi di menu per visualizzare o nascondere la barra degli strumenti.|  
+|**Utilizzare una barra degli strumenti stile browser**|Aggiunge una barra degli strumenti stile di Internet Explorer per l'applicazione.|  
+|**Utilizzare una barra dei menu e barra degli strumenti**|Indica che l'applicazione contiene una barra dei menu draggable e una barra degli strumenti.|  
+|**Le immagini e definiti dall'utente barre degli strumenti**|Consente all'utente di personalizzare la barra degli strumenti e le immagini della barra degli strumenti in fase di esecuzione.|  
+|**Comportamento menu personalizzati**|Specifica se il menu contiene l'elenco completo degli elementi di cui è aperto o se contiene solo i comandi che l'utente utilizza più di frequente.|  
+|**Utilizzare una barra multifunzione**|Usa una barra multifunzione di Office 2007 nell'applicazione anziché una barra dei menu o una barra degli strumenti.|  
   
  **Titolo della finestra**  
- Questa opzione è disponibile solo per le applicazioni basate sulla [CDialog Class](../../mfc/reference/cdialog-class.md). Il titolo viene visualizzato nella barra del titolo della finestra di dialogo.  Per modificare questo campo, è necessario selezionare l'opzione **Basato su finestra di dialogo** in **Tipo di applicazione**.  Per ulteriori informazioni, vedere [Tipo di applicazione, Creazione guidata applicazione MFC](../../mfc/reference/application-type-mfc-application-wizard.md).  
+ Per [CDialog (classe)](../../mfc/reference/cdialog-class.md)-solo applicazioni basate su questo titolo verrà visualizzato nella barra del titolo della finestra di dialogo. Per modificare questo campo, è necessario selezionare prima il **basato su finestra di dialogo** opzione **tipo di applicazione**. Per ulteriori informazioni, vedere [tipo di applicazione, creazione guidata applicazione MFC](../../mfc/reference/application-type-mfc-application-wizard.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione guidata applicazione MFC](../../mfc/reference/mfc-application-wizard.md)
+
+

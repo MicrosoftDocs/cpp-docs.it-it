@@ -1,5 +1,5 @@
 ---
-title: Classe CComSimpleThreadAllocator | Documenti di Microsoft
+title: Classe CComSimpleThreadAllocator | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -39,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 377e7f2fa6d8377d46e98b52e9c8f075b10956a8
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 04946d07bea39eb739c31a3254355d3527d2e9c3
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="ccomsimplethreadallocator-class"></a>Classe CComSimpleThreadAllocator
@@ -76,13 +76,13 @@ int GetThread(CComApartment* /* pApt */, int nThreads);
   
 ### <a name="parameters"></a>Parametri  
  `pApt`  
- Non utilizzato nell'implementazione predefinita ATL.  
+ Non usato nell'implementazione predefinita ATL.  
   
  `nThreads`  
  Il numero massimo di thread nel modulo EXE.  
   
 ### <a name="return-value"></a>Valore restituito  
- Un numero intero compreso tra zero e ( `nThreads` -1). Identifica uno dei thread nel modulo EXE.  
+ Un numero intero compreso tra zero e ( `nThreads` - 1). Identifica uno dei thread nel modulo EXE.  
   
 ### <a name="remarks"></a>Note  
  È possibile eseguire l'override `GetThread` per fornire un altro metodo di selezione oppure per utilizzare il `pApt` parametro.  
