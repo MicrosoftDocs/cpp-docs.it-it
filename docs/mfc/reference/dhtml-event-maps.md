@@ -38,9 +38,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
-ms.openlocfilehash: 59d41497bafd9782c0849a03e0354e338b7f8467
-ms.lasthandoff: 04/04/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: 6d58bdd55887962bac4644df0ab93f8f5dfe9835
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="dhtml-event-maps"></a>Mappe eventi DHTML
@@ -119,7 +119,7 @@ BEGIN_DHTML_EVENT_MAP(className)
 ### <a name="remarks"></a>Note  
  Aggiungere una mappa eventi DHTML alla classe per fornire informazioni al **CDHtmlDialog** che può essere utilizzato l'invio di eventi generati dal controllo ActiveX in una pagina web alle funzioni di gestione nella classe o elementi HTML.  
   
- Sul posto il `BEGIN_DHTML_EVENT_MAP` macro nel file di implementazione (. cpp) della classe seguito da `DHTML_EVENT` macro per gli eventi della classe consiste nel gestire (ad esempio, `DHTML_EVENT_ONMOUSEOVER` per gli eventi mouseover). Utilizzare il [END_DHTML_EVENT_MAP](#end_dhtml_event_map) (macro) per contrassegnare la fine della mappa eventi. Queste macro implementano la funzione seguente:  
+ Sul posto di `BEGIN_DHTML_EVENT_MAP` macro nel file di implementazione (. cpp) della classe seguito da `DHTML_EVENT` macro per gli eventi della classe consiste nel gestire (ad esempio, `DHTML_EVENT_ONMOUSEOVER` per gli eventi mouseover). Utilizzare il [END_DHTML_EVENT_MAP](#end_dhtml_event_map) (macro) per contrassegnare la fine della mappa eventi. Queste macro implementano la funzione seguente:  
   
  `virtual const DHtmlEventMapEntry* GetDHtmlEventMap();`  
   
@@ -140,7 +140,7 @@ BEGIN_DHTML_EVENT_MAP_INLINE(className)
 ### <a name="remarks"></a>Note  
  Aggiungere una mappa eventi DHTML alla classe per fornire informazioni al **CDHtmlDialog** che può essere utilizzato l'invio di eventi generati dal controllo ActiveX in una pagina web alle funzioni di gestione nella classe o elementi HTML.  
   
- Sul posto di `BEGIN_DHTML_EVENT_MAP` macro nel file di definizione (con estensione h) della classe seguito da `DHTML_EVENT` macro per gli eventi della classe consiste nel gestire (ad esempio, `DHTML_EVENT_ONMOUSEOVER` per gli eventi mouseover). Utilizzare il [END_DHTML_EVENT_MAP_INLINE](http://msdn.microsoft.com/library/0cfec092-20ee-49f3-bc38-56d6a5572db2) (macro) per contrassegnare la fine della mappa eventi. Queste macro implementano la funzione seguente:  
+ Sul posto di `BEGIN_DHTML_EVENT_MAP` macro nel file di definizione (con estensione h) della classe seguito da `DHTML_EVENT` macro per gli eventi della classe consiste nel gestire (ad esempio, `DHTML_EVENT_ONMOUSEOVER` per gli eventi mouseover). Utilizzare il [END_DHTML_EVENT_MAP_INLINE](#end_dhtml_event_map_inline) (macro) per contrassegnare la fine della mappa eventi. Queste macro implementano la funzione seguente:  
   
  `virtual const DHtmlEventMapEntry* GetDHtmlEventMap();`  
   
@@ -364,7 +364,7 @@ DHTML_EVENT_ONCLICK(elemName, memberFxn)
   **Intestazione** afxdhtml. h  
   
 ##  <a name="dhtml_event_ondataavailable"></a>DHTML_EVENT_ONDATAAVAILABLE  
- Gestisce (a livello di documento) il **ondataavailable** ha avuto origine evento per l'elemento HTML identificato da `elemName`.  
+ Gestisce (a livello di documento) la **ondataavailable** ha avuto origine evento per l'elemento HTML identificato da `elemName`.  
   
 ```   
 DHTML_EVENT_ONDATAAVAILABLE(elemName, memberFxn)   
@@ -384,7 +384,7 @@ DHTML_EVENT_ONDATAAVAILABLE(elemName, memberFxn)
   **Intestazione** afxdhtml. h  
   
 ##  <a name="dhtml_event_ondatasetchanged"></a>DHTML_EVENT_ONDATASETCHANGED  
- Gestisce (a livello di documento) il **ondatasetchanged** ha avuto origine evento per l'elemento HTML identificato da `elemName`.  
+ Gestisce (a livello di documento) la **ondatasetchanged** ha avuto origine evento per l'elemento HTML identificato da `elemName`.  
   
 ```   
 DHTML_EVENT_ONDATASETCHANGED(elemName, memberFxn)   
@@ -772,7 +772,7 @@ DHTML_EVENT_ONROWENTER(elemName, memberFxn)
   **Intestazione** afxdhtml. h  
   
 ##  <a name="dhtml_event_onrowexit"></a>DHTML_EVENT_ONROWEXIT  
- Gestisce (a livello di documento) il **onrowexit** ha avuto origine evento per l'elemento HTML identificato da `elemName`.  
+ Gestisce (a livello di documento) la **onrowexit** ha avuto origine evento per l'elemento HTML identificato da `elemName`.  
   
 ```  
  
@@ -794,7 +794,7 @@ DHTML_EVENT_ONROWEXIT(elemName, memberFxn)
   **Intestazione** afxdhtml. h  
   
 ##  <a name="dhtml_event_onselectstart"></a>DHTML_EVENT_ONSELECTSTART  
- Gestisce (a livello di documento) il **onselectstart** ha avuto origine evento per l'elemento HTML identificato da `elemName`.  
+ Gestisce (a livello di documento) la **onselectstart** ha avuto origine evento per l'elemento HTML identificato da `elemName`.  
   
 ```  
  
@@ -886,9 +886,9 @@ BEGIN_EMBED_DHTML_EVENT_MAP(className, mapName)
 ### <a name="remarks"></a>Note  
  Poiché una finestra di dialogo DHTML a più pagine è costituito da più pagine HTML, ognuno dei quali può generare eventi DHTML, mappe eventi incorporati vengono utilizzate per eseguire il mapping degli eventi ai gestori in base a una pagina.  
   
- Mappe eventi incorporato all'interno di una mappa eventi URL e DHTML sono costituiti da un `BEGIN_EMBED_DHTML_EVENT_MAP` (macro), seguito da [DHTML_EVENT](#dhtml_event) macro e un [END_EMBED_DHTML_EVENT_MAP](#end_embed_dhtml_event_map) (macro).  
+ Mappe eventi incorporati all'interno di una mappa eventi URL e DHTML sono costituiti da un `BEGIN_EMBED_DHTML_EVENT_MAP` (macro), seguito da [DHTML_EVENT](#dhtml_event) macro e un [END_EMBED_DHTML_EVENT_MAP](#end_embed_dhtml_event_map) (macro).  
   
- Ogni mappa eventi incorporati richiede un corrispondente [voce evento URL](#url_event_entry) per eseguire il mapping *mapName* (specificato in `BEGIN_EMBED_DHTML_EVENT_MAP`) a una risorsa URL o HTML.  
+ Ogni mappa eventi incorporato richiede un corrispondente [voce evento URL](#url_event_entry) per eseguire il mapping *mapName* (specificato in `BEGIN_EMBED_DHTML_EVENT_MAP`) a una risorsa URL o HTML.  
   
 ### <a name="example"></a>Esempio  
  Vedere l'esempio in [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map).  

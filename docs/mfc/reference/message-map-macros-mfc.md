@@ -41,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
-ms.openlocfilehash: 73def19ecc0577d35054a7384d57c88fd2760499
-ms.lasthandoff: 04/04/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: ca7c5b1e5042ab134ad72a80986435448f5bec20
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="message-map-macros-mfc"></a>Macro della mappa messaggi (MFC)
@@ -55,6 +55,7 @@ Per supportare le mappe messaggi, MFC fornisce le seguenti macro:
 |-|-|  
 |[DECLARE_MESSAGE_MAP](#declare_message_map)|Dichiara una mappa messaggi verrà utilizzata in una classe per eseguire il mapping di messaggi a funzioni (deve essere utilizzato nella dichiarazione di classe).|  
 |[BEGIN_MESSAGE_MAP](#begin_message_map)|Inizia la definizione di una mappa messaggi (deve essere utilizzato nell'implementazione della classe).|  
+|[BEGIN_TEMPLATE_MESSAGE_MAP](#begin_template_interface_map)|Inizia la definizione di una mappa dei messaggi in un tipo di classe contenente un argomento singolo modello. |
 |[END_MESSAGE_MAP](#end_message_map)|Termina la definizione di una mappa messaggi (deve essere utilizzato nell'implementazione della classe).|  
   
 ### <a name="message-mapping-macros"></a>Macro di Mapping di messaggi  
@@ -81,34 +82,6 @@ Per supportare le mappe messaggi, MFC fornisce le seguenti macro:
   
  Per ulteriori informazioni su mappe messaggi, la dichiarazione della mappa messaggi e delimitazione della macro e le macro di mapping di messaggi, vedere [mappe messaggi](../../mfc/reference/message-maps-mfc.md) e [la gestione dei messaggi e gli argomenti di Mapping](../../mfc/message-handling-and-mapping.md). Per ulteriori informazioni sugli intervalli della mappa messaggi, vedere [gestori per intervalli della mappa messaggi](../../mfc/handlers-for-message-map-ranges.md).  
 
-## <a name="declare_message_map"></a>DECLARE_MESSAGE_MAP
- Dichiara che la classe definisce una mappa messaggi. Ogni `CCmdTarget`-classe derivata nel programma deve fornire una mappa messaggi per gestire i messaggi.  
-  
-### <a name="syntax"></a>Sintassi  
-  
-```    
-DECLARE_MESSAGE_MAP( )  
-```  
-  
-### <a name="remarks"></a>Note  
- Utilizzare il `DECLARE_MESSAGE_MAP` (macro) alla fine della dichiarazione di classe. Quindi, nel file. cpp che definisce le funzioni membro per la classe, utilizzare il `BEGIN_MESSAGE_MAP` (macro), per ognuna delle funzioni del gestore di messaggi, le voci di macro e `END_MESSAGE_MAP` (macro).  
-  
-> [!NOTE]
->  Se si dichiara un membro dopo `DECLARE_MESSAGE_MAP`, è necessario specificare un nuovo tipo di accesso (**pubblica**, `private`, o `protected`) per loro.  
-  
- Per ulteriori informazioni sul messaggio di mapping e `DECLARE_MESSAGE_MAP` (macro), vedere [la gestione dei messaggi e mapping dei](../../mfc/message-handling-and-mapping.md).  
-  
-### <a name="example"></a>Esempio  
-```cpp  
-class CMainFrame : public CMDIFrameWnd
-{
-   DECLARE_MESSAGE_MAP()
-
-   // Remainder of class declaration omitted.
-``` 
-  
-### <a name="requirements"></a>Requisiti  
- **Intestazione:** afxwin.h  
 
 ## <a name="begin_message_map"></a>BEGIN_MESSAGE_MAP
 Inizia la definizione della mappa messaggi.  
@@ -140,6 +113,61 @@ END_MESSAGE_MAP()
   
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** afxwin.h 
+
+##  <a name="begin_template_message_map"></a>BEGIN_TEMPLATE_MESSAGE_MAP
+Inizia la definizione di una mappa dei messaggi in un tipo di classe contenente un argomento singolo modello.  
+   
+### <a name="syntax"></a>Sintassi  
+  ```
+BEGIN_TEMPLATE_MESSAGE_MAP( theClass, type_name, baseClass )  
+```
+### <a name="parameters"></a>Parametri  
+ `theClass`  
+ Specifica il nome della classe il cui messaggio mappa.    
+ `type_name`  
+ Il nome del parametro di modello specificato per la classe.    
+ `baseClass`  
+ Specifica il nome della classe base di `theClass`.  
+   
+### <a name="remarks"></a>Note  
+ Questa macro è simile al [BEGIN_MESSAGE_MAP](message-map-macros-mfc.md#begin_message_map) macro; tuttavia, questa macro è destinata per le classi che contengono un argomento singolo modello.  
+  
+ Nella sezione di implementazione del metodo della classe, avviare la mappa dei messaggi con il **BEGIN_TEMPLATE_MESSAGE_MAP** macro; quindi aggiungere le voci di macro per ognuno dei metodi del gestore di messaggi come avviene per una mappa messaggi standard. Come con la **BEGIN_MESSAGE_MAP** (macro), completare la mappa dei messaggi di modello con il [END_MESSAGE_MAP](message-map-macros-mfc.md#end_message_map) (macro).  
+  
+ Per ulteriori informazioni sull'implementazione di mappe messaggi per le classi di modello, fare riferimento a [procedura: creare una mappa messaggi per una classe modello](../how-to-create-a-message-map-for-a-template-class.md).  
+   
+### <a name="requirements"></a>Requisiti  
+ **Intestazione:** afxwin.h  
+ 
+## <a name="declare_message_map"></a>DECLARE_MESSAGE_MAP
+ Dichiara che la classe definisce una mappa messaggi. Ogni `CCmdTarget`-classe derivata nel programma deve fornire una mappa messaggi per gestire i messaggi.  
+  
+### <a name="syntax"></a>Sintassi  
+  
+```    
+DECLARE_MESSAGE_MAP( )  
+```  
+  
+### <a name="remarks"></a>Note  
+ Utilizzare il `DECLARE_MESSAGE_MAP` (macro) alla fine della dichiarazione di classe. Quindi, nel file. cpp che definisce le funzioni membro per la classe, utilizzare il `BEGIN_MESSAGE_MAP` (macro), per ognuna delle funzioni del gestore di messaggi, le voci di macro e `END_MESSAGE_MAP` (macro).  
+  
+> [!NOTE]
+>  Se si dichiara un membro dopo `DECLARE_MESSAGE_MAP`, è necessario specificare un nuovo tipo di accesso (**pubblica**, `private`, o `protected`) per loro.  
+  
+ Per ulteriori informazioni sul messaggio di mapping e `DECLARE_MESSAGE_MAP` (macro), vedere [la gestione dei messaggi e mapping dei](../../mfc/message-handling-and-mapping.md).  
+  
+### <a name="example"></a>Esempio  
+```cpp  
+class CMainFrame : public CMDIFrameWnd
+{
+   DECLARE_MESSAGE_MAP()
+
+   // Remainder of class declaration omitted.
+``` 
+  
+### <a name="requirements"></a>Requisiti  
+ **Intestazione:** afxwin.h  
+
 
 ## <a name="end_message_map"></a>END_MESSAGE_MAP
 Termina la definizione della mappa messaggi.  
@@ -177,7 +205,7 @@ ON_COMMAND( id, memberFxn )
   
  Quando un oggetto destinazione comando riceve un Windows **WM_COMMAND** messaggio con l'ID specificato, `ON_COMMAND` chiamerà la funzione membro `memberFxn` per gestire il messaggio.  
   
- Utilizzare `ON_COMMAND` per eseguire il mapping a una funzione membro un unico comando. Utilizzare [ON_COMMAND_RANGE](#on_command_range) per eseguire il mapping di un intervallo di ID di comando a una funzione membro di uno. Una sola voce della mappa messaggi può corrispondere a un id di comando specificato. Ovvero, è possibile mappare un comando per più di un gestore. Per ulteriori informazioni ed esempi, vedere [la gestione dei messaggi e mapping dei](../../mfc/message-handling-and-mapping.md).  
+ Utilizzare `ON_COMMAND` per eseguire il mapping a una funzione membro di un singolo comando. Utilizzare [ON_COMMAND_RANGE](#on_command_range) per eseguire il mapping di un intervallo di ID di comando a una funzione membro di uno. Una sola voce della mappa messaggi può corrispondere a un id di comando specificato. Ovvero, è possibile mappare un comando per più di un gestore. Per ulteriori informazioni ed esempi, vedere [la gestione dei messaggi e mapping dei](../../mfc/message-handling-and-mapping.md).  
   
 ### <a name="example"></a>Esempio  
 ```cpp  
@@ -574,7 +602,7 @@ ON_COMMAND_RANGE( id1, id2, memberFxn )
 ### <a name="remarks"></a>Note  
  L'intervallo di ID inizia con `id1` e finisce con `id2`.  
   
- Utilizzare `ON_COMMAND_RANGE` per eseguire il mapping di un intervallo di ID di comando a una funzione membro di uno. Utilizzare [ON_COMMAND](#on_command) per eseguire il mapping a una funzione membro un unico comando. Una sola voce della mappa messaggi può corrispondere a un ID di comando specificato. Ovvero, è possibile mappare un comando per più di un gestore. Per ulteriori informazioni sugli intervalli di messaggi di mapping, vedere [gestori per intervalli della mappa messaggi](../../mfc/handlers-for-message-map-ranges.md).  
+ Utilizzare `ON_COMMAND_RANGE` per eseguire il mapping di un intervallo di ID di comando a una funzione membro di uno. Utilizzare [ON_COMMAND](#on_command) per eseguire il mapping a una funzione membro di un singolo comando. Una sola voce della mappa messaggi può corrispondere a un ID di comando specificato. Ovvero, è possibile mappare un comando per più di un gestore. Per ulteriori informazioni sugli intervalli di messaggi di mapping, vedere [gestori per intervalli della mappa messaggi](../../mfc/handlers-for-message-map-ranges.md).  
   
  Non è previsto alcun supporto automatico per intervalli della mappa messaggi, è necessario inserire la macro manualmente.  
   
