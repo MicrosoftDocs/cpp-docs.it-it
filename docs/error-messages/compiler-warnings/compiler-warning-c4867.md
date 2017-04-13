@@ -1,5 +1,5 @@
 ---
-title: Avviso del compilatore C4867 | Documenti di Microsoft
+title: Avviso del compilatore C4867 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,22 +34,22 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 86437fca7bfeef662bef9fe8311fb746a661264d
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: a052194893db90177b88eea8f80435777ae37773
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="compiler-warning-c4867"></a>Avviso del compilatore C4867
-'funzione': chiamata di funzione senza elenco di argomenti; Utilizzare 'chiamata' per creare un puntatore a membro  
+'function': chiamata di funzione senza elenco di argomenti; Utilizzare 'chiamata' per creare un puntatore a membro  
   
- Un puntatore a funzione membro è stato inizializzato correttamente.  
+ Un puntatore a funzione membro è stato inizializzato in modo non corretto.  
   
- Questo avviso può essere generato in seguito a operazioni di conformità del compilatore che è stata eseguita per Visual C++ 2005: conformità avanzata puntatore a membro.  Il codice compilato prima di Visual C++ 2005 genererà l'errore C4867.  
+ Questo avviso può essere generato come risultato delle operazioni di conformità del compilatore eseguite per Visual C++ 2005: conformità avanzata di puntatore a membro.  Il codice compilato prima di Visual C++ 2005 ora genererà C4867.  
   
- Questo avviso viene generato sempre come un errore. Utilizzare il [avviso](../../preprocessor/warning.md) pragma per disabilitare questo avviso. Per ulteriori informazioni sull'avviso C4867 e MFC/ATL, vedere [_ATL_ENABLE_PTM_WARNING](http://msdn.microsoft.com/Library/00b9ff5c-9834-4c40-911e-ee88d512c4af).  
+ Questo avviso viene sempre generato come errore. Utilizzare il [avviso](../../preprocessor/warning.md) pragma per disabilitare questo avviso. Per ulteriori informazioni sull'avviso C4867 e MFC/ATL, vedere [_ATL_ENABLE_PTM_WARNING](../../atl/reference/compiler-options-macros.md#_atl_enable_ptm_warning).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene generato l'errore C4867.  
+ L'esempio seguente genera l'errore C4867.  
   
 ```  
 // C4867.cpp  
