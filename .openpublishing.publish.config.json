@@ -8,7 +8,6 @@
       "build_source_folder": "docs",
       "build_output_subfolder": "vcppdocs",
       "locale": "it-it",
-      "version": 0,
       "open_to_public_contributors": false,
       "type_mapping": {
         "Conceptual": "Content",
@@ -29,13 +28,14 @@
       "branch_mapping": {}
     },
     {
-       "path_to_root": "_repo.en-us",
-       "url": "https://github.com/Microsoft/vcppdocs",
-       "branch": "master",
-       "branch_mapping": {
-         "master": "master",
-         "live": "live"
-       }
+      "path_to_root": "_repo.en-us",
+      "url": "https://github.com/Microsoft/vcppdocs",
+      "branch": "live",
+      "branch_mapping": {
+        "live": "live",
+        "master": "master"
+      }
     }
-  ]
+  ],
+  "need_generate_pdf_url_template": false
 }
