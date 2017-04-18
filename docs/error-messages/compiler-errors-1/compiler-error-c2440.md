@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
-ms.openlocfilehash: d2855f44e05e095f8e1e5cf992eacaafcbe8464d
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
+ms.openlocfilehash: 0789875fee672856dbc0eff429d2363a43963940
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="compiler-error-c2440"></a>Errore del compilatore C2440
@@ -211,7 +211,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>Esempio  
- Il compilatore Visual C++ non consente più il [operatore di const_cast](../../cpp/const-cast-operator.md) verso il basso il cast quando origine il codice che usa **/clr** programmazione viene compilata.  
+ Il compilatore Visual C++ non consente più di [operatore di const_cast](../../cpp/const-cast-operator.md) verso il basso il cast quando origine il codice che usa **/clr** programmazione viene compilata.  
   
  Per risolvere questo errore C2440, utilizzare l'operatore di cast corretto. Per ulteriori informazioni, vedere [operatori di cast](../../cpp/casting-operators.md).  
   
@@ -260,10 +260,12 @@ This error can appear in ATL code that uses the SINK_ENTRY_INFO macro defined in
 ## <a name="example"></a>Esempio  
 ### <a name="copy-list-initialization"></a>Copy-list-initialization
 
-2017 e versioni successiva di Visual Studio genera in modo corretto gli errori del compilatore correlati per la creazione di oggetti utilizzando gli elenchi di inizializzatori non sono stati rilevati in Visual Studio 2015 e potrebbero causare un arresto anomalo o non è definito il comportamento di runtime. In base a N4594 13.3.1.7p1, in copy-list-initialization, il compilatore deve prendere in considerazione un costruttore esplicito per la risoluzione dell'overload, ma deve generare un errore se viene scelto tale overload.
-I seguenti due esempi vengono compilati in Visual Studio 2015 ma non in Visual Studio 2017.
+2017 e versioni successiva di Visual Studio genera in modo corretto gli errori del compilatore correlati per la creazione di oggetti utilizzando gli elenchi di inizializzatori non sono stati rilevati in Visual Studio 2015 e potrebbero causare un arresto anomalo o non è definito il comportamento di runtime. In C++ 17-elenco-inizializzazione per copia, il compilatore deve prendere in considerazione un costruttore esplicito per la risoluzione dell'overload, ma deve generare un errore se tale overload scelto.
 
-```
+L'esempio seguente viene compilato in Visual Studio 2015, ma non in Visual Studio 2017.
+
+```cpp  
+// C2440j.cpp  
 struct A
 {
     explicit A(int) {} 
@@ -272,25 +274,33 @@ struct A
 
 int main()
 {
-    A a1 = { 1 }; // error C3445: copy-list-initialization of 'A' cannot use an explicit constructor
-    const A& a2 = { 1 }; // error C2440: 'initializing': cannot convert from 'int' to 'const A &'
-
+    const A& a2 = { 1 }; // error C2440: 'initializing': cannot 
+                         // convert from 'int' to 'const A &'
 }
-```
+```  
+  
+Per correggere l'errore, usare l'inizializzazione diretta:  
+  
+```cpp  
+// C2440k.cpp  
+struct A
+{
+    explicit A(int) {} 
+    A(double) {}
+};
 
-Per correggere l'errore, usare l'inizializzazione diretta:
-
-```
-A a1{ 1 };
-const A& a2{ 1 };
-```
+int main()
+{
+    const A& a2{ 1 };
+}  
+```  
 
 ## <a name="example"></a>Esempio
 ### <a name="cv-qualifiers-in-class-construction"></a>Qualificatori CV nella costruzione di classi
 
 In Visual Studio 2015 il compilatore a volte ignora erroneamente il qualificatore CV quando genera un oggetto classe usando una chiamata al costruttore. Questo potenzialmente può causare un arresto anomalo o un comportamento imprevisto in fase di esecuzione. Nell'esempio seguente viene compilato in Visual Studio 2015, ma genera un errore del compilatore in Visual Studio 2017 e versioni successive:
 
-```
+```cpp
 struct S 
 {
     S(int);

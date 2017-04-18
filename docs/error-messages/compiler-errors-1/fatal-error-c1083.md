@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile C1083 | Documenti di Microsoft
+title: Errore irreversibile C1083 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 6cc89e4278c03f0dc24c4358cf6a53ec25f3b327
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: bbc5e1f78ca1ea15e65fdd76b7ecd2ea0e195b00
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="fatal-error-c1083"></a>Errore irreversibile C1083
@@ -68,13 +68,13 @@ Impossibile aprire il file tipofile: 'file': messaggio
   
  `#include <stdio.h>`  
   
- il compilatore segue un percorso di ricerca definito dall'ambiente di compilazione, il **/I** l'opzione del compilatore, il **/X** opzione del compilatore e **INCLUDE** variabile di ambiente. Per ulteriori informazioni, inclusi dettagli specifici sull'ordine di ricerca utilizzato per trovare un file, vedere [#include (direttiva) (C/C++)](../../preprocessor/hash-include-directive-c-cpp.md) e [#import direttiva](../../preprocessor/hash-import-directive-cpp.md).  
+ il compilatore segue un percorso di ricerca definito dall'ambiente di compilazione, il **/I** opzione del compilatore di **/X** opzione del compilatore e **INCLUDE** variabile di ambiente. Per ulteriori informazioni, inclusi i dettagli specifici sull'ordine di ricerca utilizzato per trovare un file, vedere [#include (direttiva) (C/C++)](../../preprocessor/hash-include-directive-c-cpp.md) e [#import direttiva](../../preprocessor/hash-import-directive-cpp.md).  
   
- Anche quando i file di intestazione sono elencati in **Esplora** come parte di un progetto, i file vengono trovati solo dal compilatore quando vengono definiti da un `include` o `import` (direttiva) e sono situati in un percorso di ricerca di directory. Tipi diversi di compilazioni possono usare percorsi di ricerca diversi. Il **/X** opzione del compilatore può essere utilizzata per escludere directory dal percorso di ricerca di file di inclusione. In questo modo, compilazioni diverse possono utilizzare file di inclusione diversi con lo stesso nome, ma archiviati in directory diverse. Si tratta di un'alternativa alla compilazione condizionale utilizzando i comandi del preprocessore. Per ulteriori informazioni sui **/X** l'opzione del compilatore, vedere [x (Ignore Standard Include Paths)](../../build/reference/x-ignore-standard-include-paths.md).  
+ Anche quando il file di intestazione sono elencati nel **Esplora** come parte di un progetto, i file vengono trovati solo dal compilatore quando vengono definite da un `include` o `import` direttiva e sono posizionati in un percorso di ricerca di directory. Tipi diversi di compilazioni possono usare percorsi di ricerca diversi. Il **/X** possibile utilizzare l'opzione del compilatore per escludere directory dal percorso di ricerca di file di inclusione. In questo modo, compilazioni diverse possono utilizzare file di inclusione diversi con lo stesso nome, ma archiviati in directory diverse. Si tratta di un'alternativa alla compilazione condizionale utilizzando i comandi del preprocessore. Per ulteriori informazioni sul **/X** l'opzione del compilatore, vedere [/X (Ignora a percorsi di inclusione Standard)](../../build/reference/x-ignore-standard-include-paths.md).  
   
- Quando il compilatore viene richiamato sulla riga di comando, vengono spesso usate variabili di ambiente per specificare i percorsi di ricerca. Se il percorso di ricerca descritto dal **INCLUDE** variabile di ambiente non è impostata correttamente, viene generato un errore C1083. Per ulteriori informazioni su come utilizzare le variabili di ambiente, vedere [procedura: utilizzare variabili di ambiente in una Build](http://msdn.microsoft.com/Library/7f9e4469-8865-4b59-aab3-3ff26bd36e77).  
+ Quando il compilatore viene richiamato sulla riga di comando, vengono spesso usate variabili di ambiente per specificare i percorsi di ricerca. Se il percorso di ricerca descritto dal **INCLUDE** variabile di ambiente non è impostata correttamente, viene generato un errore C1083. Per ulteriori informazioni su come usare le variabili di ambiente, vedere [procedura: utilizzare variabili di ambiente in una Build](/visualstudio/msbuild/how-to-use-environment-variables-in-a-build).  
   
- Per risolvere il problema, correggere il percorso usato dal compilatore per trovare il file importato o incluso. Un nuovo progetto utilizza i percorsi di ricerca predefiniti. Potrebbe essere necessario modificare il percorso per aggiungere una directory per il progetto. Se si compila dalla riga di comando, impostare il **INCLUDE** variabile di ambiente o **/I** l'opzione del compilatore per specificare il percorso del file. Per impostare il percorso di directory di inclusione in Visual Studio, aprire il progetto **pagine delle proprietà** finestra di dialogo espandere **le proprietà di configurazione** e **directory di VC + +**, quindi modificare il **directory di inclusione** valore. Per ulteriori informazioni sulle directory per utente e per ogni progetto cercate dal compilatore in Visual Studio, vedere [pagina delle proprietà directory di VC + +](../../ide/vcpp-directories-property-page.md). Per ulteriori informazioni sui **/I** l'opzione del compilatore, vedere [/I (directory di inclusione aggiuntive)](../../build/reference/i-additional-include-directories.md).  
+ Per risolvere il problema, correggere il percorso usato dal compilatore per trovare il file importato o incluso. Un nuovo progetto utilizza i percorsi di ricerca predefiniti. Potrebbe essere necessario modificare il percorso per aggiungere una directory per il progetto. Se esegue la compilazione sulla riga di comando, impostare il **INCLUDE** variabile di ambiente o **/I** l'opzione del compilatore per specificare il percorso del file. Per impostare il percorso di directory di inclusione in Visual Studio, aprire il progetto **pagine delle proprietà** finestra di dialogo espandere **le proprietà di configurazione** e **directory di VC + +**, quindi modificare il **directory di inclusione** valore. Per ulteriori informazioni sulle directory per ogni progetto e per utente eseguire la ricerca dal compilatore in Visual Studio, vedere [pagina delle proprietà directory di VC + +](../../ide/vcpp-directories-property-page.md). Per ulteriori informazioni sul **/I** l'opzione del compilatore, vedere [/I (directory di inclusione aggiuntive)](../../build/reference/i-additional-include-directories.md).  
   
  **La versione errata di un nome di file è inclusa**  
   
@@ -82,13 +82,13 @@ Impossibile aprire il file tipofile: 'file': messaggio
   
  **Le intestazioni precompilate non sono ancora precompilate**  
   
- Quando un progetto è configurato per l'utilizzo di intestazioni precompilate, è necessario creare i file pch corrispondenti in modo da poter compilare i file che utilizzano il contenuto dell'intestazione. Ad esempio, il file stdafx.cpp file viene creato automaticamente nella directory del progetto per nuovi progetti MFC. Compilare innanzitutto il file per creare i file di intestazione precompilati. (Nella progettazione del processo di compilazione questo avviene automaticamente.) Per ulteriori informazioni, vedere [creazione di file di intestazione precompilati](../../build/reference/creating-precompiled-header-files.md).  
+ Quando un progetto è configurato per l'utilizzo di intestazioni precompilate, è necessario creare i file pch corrispondenti in modo da poter compilare i file che utilizzano il contenuto dell'intestazione. Ad esempio, il file stdafx.cpp file viene creato automaticamente nella directory del progetto per nuovi progetti MFC. Compilare innanzitutto il file per creare i file di intestazione precompilati. (Nella progettazione del processo di compilazione questo avviene automaticamente.) Per ulteriori informazioni, vedere [la creazione di file di intestazione precompilata](../../build/reference/creating-precompiled-header-files.md).  
   
  **Cause aggiuntive**  
   
 -   Il file utilizza il codice gestito, ma l'opzione del compilatore **/clr** non è specificato. Per altre informazioni, vedere [/clr (Compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).  
   
--   Il file viene compilato utilizzando un altro **/ANALYZE** impostazione dell'opzione del compilatore rispetto a quella utilizzata per precompilare le intestazioni. (Quando le intestazioni per un progetto vengono precompilate, tutte dovrebbero utilizzare le stesse **/ANALYZE** impostazioni.) Per altre informazioni, vedere [/analyze (Analisi codice)](../../build/reference/analyze-code-analysis.md).  
+-   Il file viene compilato utilizzando un altro **/ANALYZE** impostazione dell'opzione del compilatore rispetto a quella utilizzata per precompilare le intestazioni. (Quando le intestazioni per un progetto vengono precompilate, tutte utilizzano lo stesso **/ANALYZE** impostazioni.) Per altre informazioni, vedere [/analyze (Analisi codice)](../../build/reference/analyze-code-analysis.md).  
   
 -   Il file, la directory o il disco è di sola lettura.  
   

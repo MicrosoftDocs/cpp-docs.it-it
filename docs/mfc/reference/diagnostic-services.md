@@ -49,9 +49,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
-ms.openlocfilehash: 0e83114e2e6f062b9cb2164cf71bb25792304de0
-ms.lasthandoff: 04/04/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: ceaf02cbe0eedec6e8bd4980d87c025d6aa23615
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="diagnostic-services"></a>Servizi diagnostici
@@ -252,7 +252,7 @@ ASSERT_VALID(pObject)
 ```  
   
 ### <a name="remarks"></a>Note  
- È possibile utilizzare `DEBUG_NEW` everywhere nel programma che normalmente utilizzerebbe il **nuova** operatore per allocare memoria heap.  
+ È possibile utilizzare `DEBUG_NEW` ovunque nel programma che normalmente utilizzerebbe il **nuova** operatore per allocare memoria heap.  
   
  In modalità di debug (quando il **debug** simbolo è definito), `DEBUG_NEW` tiene traccia del numero filename e line per ogni oggetto da esso allocato. Quindi, quando si utilizza il [CMemoryState:: DumpAllObjectsSince](cmemorystate-structure.md#dumpallobjectssince) funzione membro, ciascun oggetto allocato con `DEBUG_NEW` viene visualizzato con il nome di file e numero di riga in cui è stato allocato.  
   
@@ -356,7 +356,7 @@ TRACE(DWORD  category,  UINT  level, LPCSTR lpszFormat, ...)
 ```  
   
 ### <a name="remarks"></a>Note  
- Vedere [ATLTRACE2](http://msdn.microsoft.com/library/467ff555-e7a5-4f94-bdd9-50ee27ab9986) per una descrizione di **traccia**. **TRACCIA** e `ATLTRACE2` hanno lo stesso comportamento.  
+ Vedere [ATLTRACE2](../../atl/reference/debugging-and-error-reporting-macros.md#atltrace2) per una descrizione di **traccia**. **TRACCIA** e `ATLTRACE2` hanno lo stesso comportamento.  
   
  Nella versione di debug di MFC, questa macro invia la stringa specificata per il debug dell'applicazione corrente. In una build di rilascio, questa macro viene compilato su nothing (viene generato alcun codice affatto).  
   
@@ -401,7 +401,7 @@ CDumpContext  afxDump;
 ```  
   
 ### <a name="remarks"></a>Note  
- `afxDump`è un oggetto predefinito [CDumpContext](../../mfc/reference/cdumpcontext-class.md) oggetto che consente di inviare `CDumpContext` sulla finestra di output del debugger o in un terminale di debug. In genere, si fornisce `afxDump` come parametro a `CObject::Dump`.  
+ `afxDump`è un oggetto predefinito [CDumpContext](../../mfc/reference/cdumpcontext-class.md) oggetto che consente di inviare `CDumpContext` informazioni nella finestra di output del debugger o a un terminale di debug. In genere, si fornisce `afxDump` come parametro a `CObject::Dump`.  
   
  In Windows NT e tutte le versioni di Windows, `afxDump` quando si esegue il debug dell'applicazione, l'output viene inviato alla finestra di Output di Debug di Visual C++.  
   
@@ -470,7 +470,7 @@ throw COleException*
 ```  
   
 ### <a name="remarks"></a>Note  
- Se si tratta di un errore, la funzione genera un'eccezione. Se l'oggetto passato `SCODE` viene **E_OUTOFMEMORY**, la funzione genera un [CMemoryException](../../mfc/reference/cmemoryexception-class.md) chiamando [AfxThrowMemoryException](exception-processing.md#afxthrowmemoryexception). In caso contrario, la funzione genera un [COleException](../../mfc/reference/coleexception-class.md) chiamando [AfxThrowOleException](exception-processing.md#afxthrowoleexception).  
+ Se si tratta di un errore, la funzione genera un'eccezione. Se l'oggetto passato `SCODE` è **E_OUTOFMEMORY**, la funzione genera un [CMemoryException](../../mfc/reference/cmemoryexception-class.md) chiamando [AfxThrowMemoryException](exception-processing.md#afxthrowmemoryexception). In caso contrario, la funzione genera un [COleException](../../mfc/reference/coleexception-class.md) chiamando [AfxThrowOleException](exception-processing.md#afxthrowoleexception).  
   
  Questa funzione può essere utilizzata per controllare i valori restituiti delle chiamate alle funzioni OLE nell'applicazione. Controllando il valore restituito con questa funzione nell'applicazione, possano rispondere correttamente alle condizioni di errore con una quantità minima di codice.  
   
@@ -734,7 +734,7 @@ BOOL AfxIsValidAddress(
  Specifica se la memoria sia per la lettura e scrittura ( **TRUE**) o semplicemente leggendo ( **FALSE**).  
   
 ### <a name="return-value"></a>Valore restituito  
- Nelle build di debug diverso da zero se il blocco di memoria specificata è interamente contenuta all'interno dello spazio di memoria del programma; in caso contrario 0.  
+ Nelle build di debug, diverso da zero se il blocco di memoria specificato è contenuto interamente in spazio di memoria del programma. in caso contrario 0.  
   
  Nelle compilazioni non di debug, diverso da zero se `lp` non è NULL; in caso contrario, 0.  
   
@@ -849,7 +849,7 @@ void AfxDoForAllObjects(
   
 ### <a name="parameters"></a>Parametri  
  `pfn`  
- Punta a una funzione di iterazioni da eseguire per ogni oggetto. Gli argomenti di funzione sono un puntatore a un `CObject` e un puntatore void per dati aggiuntivi che il chiamante fornisce alla funzione.  
+ Punta a una funzione di iterazioni da eseguire per ogni oggetto. Gli argomenti della funzione sono un puntatore a un `CObject` e un puntatore void per dati aggiuntivi che il chiamante fornisce alla funzione.  
   
  `pContext`  
  Punta a dati facoltativi che il chiamante può fornire per la funzione di iterazione. L'indicatore di misura può essere **NULL**.  

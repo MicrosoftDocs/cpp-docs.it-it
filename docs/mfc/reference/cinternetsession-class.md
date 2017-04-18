@@ -49,9 +49,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 0d9ff419c0275d9ab426b4e60102918794aa5221
-ms.lasthandoff: 03/31/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: 1bc8f21cd68741a4b0560ea3e1cb678be50dcf89
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="cinternetsession-class"></a>CInternetSession (classe)
@@ -147,7 +147,7 @@ CInternetSession(
  `dwAccessType`  
  Il tipo di accesso necessarie. Di seguito sono indicati i valori validi, uno dei quali può essere fornito:  
   
-- **INTERNET_OPEN_TYPE_PRECONFIG** connettersi utilizzando impostazioni predefinite nel Registro di sistema. Questo tipo di accesso è impostato come predefinito. Per connettersi tramite un proxy TIS, impostare `dwAccessType` in questo valore; è quindi impostare il Registro di sistema in modo appropriato.  
+- **INTERNET_OPEN_TYPE_PRECONFIG** connettersi utilizzando impostazioni preconfigurate nel Registro di sistema. Questo tipo di accesso è impostato come predefinito. Per connettersi tramite un proxy TIS, impostare `dwAccessType` su questo valore; è quindi impostare il Registro di sistema in modo appropriato.  
   
 - `INTERNET_OPEN_TYPE_DIRECT`Connettersi direttamente a Internet.  
   
@@ -159,7 +159,7 @@ CInternetSession(
  Il nome del proxy CERN preferito se `dwAccessType` è impostato come `INTERNET_OPEN_TYPE_PROXY`. Il valore predefinito è **NULL**.  
   
  *pstrProxyBypass*  
- Un puntatore a una stringa contenente un elenco facoltativo di indirizzi del server. Questi indirizzi possono essere ignorati quando si utilizza l'accesso al proxy. Se un **NULL** valore viene fornito, sarà possibile leggere l'elenco di bypass dal Registro di sistema. Questo parametro è significativo solo se `dwAccessType` è impostato su `INTERNET_OPEN_TYPE_PROXY`.  
+ Un puntatore a una stringa contenente un elenco facoltativo di indirizzi del server. Questi indirizzi possono essere ignorati quando si utilizza l'accesso al proxy. Se un **NULL** valore viene specificato, l'elenco di esclusione leggerà dal Registro di sistema. Questo parametro è significativo solo se `dwAccessType` è impostato su `INTERNET_OPEN_TYPE_PROXY`.  
   
  `dwFlags`  
  Indica diverse opzioni di memorizzazione nella cache. Il valore predefinito è impostato su 0. I valori possibili includono:  
@@ -171,7 +171,7 @@ CInternetSession(
 ### <a name="remarks"></a>Note  
  **CInternetSession** è la prima funzione Internet chiamata da un'applicazione. Inizializza strutture dati interne e si prepara per le future chiamate dall'applicazione.  
   
- Se non si può aprire alcuna connessione a Internet, `CInternetSession` genera un [AfxThrowInternetException](http://msdn.microsoft.com/library/c9645b10-9541-48b2-8b0c-94ca33fed3cb).  
+ Se non si può aprire alcuna connessione a Internet, `CInternetSession` genera un [AfxThrowInternetException](internet-url-parsing-globals.md#afxthrowinternetexception).  
   
 ### <a name="example"></a>Esempio  
   Per vedere l'esempio [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md).  
@@ -198,7 +198,7 @@ BOOL EnableStatusCallback(BOOL bEnable = TRUE);
  Specifica se i callback è abilitato o disabilitato. Il valore predefinito è **TRUE**.  
   
 ### <a name="return-value"></a>Valore restituito  
- Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata non riesce, è possibile determinare la causa dell'errore esaminando il generata [CInternetException](../../mfc/reference/cinternetexception-class.md) oggetto.  
+ Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata non riesce, determinare la causa dell'errore esaminando il generata [CInternetException](../../mfc/reference/cinternetexception-class.md) oggetto.  
   
 ### <a name="remarks"></a>Note  
  Quando si gestiscono i callback dello stato, è possibile fornire lo stato sullo stato di avanzamento dell'operazione (ad esempio la risoluzione nome, la connessione al server e così via) nella barra di stato dell'applicazione. Visualizzazione dello stato dell'operazione è particolarmente importante durante un'operazione a lungo termine.  
@@ -259,7 +259,7 @@ static BOOL GetCookie(
   
 - **ERROR_NO_MORE_ITEMS** è presente alcun cookie per l'URL specificato e tutti i relativi elementi padre.  
   
-- **ERROR_INSUFFICIENT_BUFFER** il valore passato `dwBufLen` è insufficiente per copiare tutti i dati del cookie. Il valore restituito in `dwBufLen` è la dimensione del buffer necessaria per ottenere tutti i dati.  
+- **ERROR_INSUFFICIENT_BUFFER** valore passato in `dwBufLen` è insufficiente per copiare tutti i dati del cookie. Il valore restituito in `dwBufLen` è la dimensione del buffer necessaria per ottenere tutti i dati.  
   
 ### <a name="remarks"></a>Note  
  Nel secondo overload, MFC recupera i dati del cookie in fornito `CString` oggetto.  
@@ -322,7 +322,7 @@ CFtpConnection* GetFtpConnection(
  Specifica la modalità passiva o attiva per la sessione FTP. Se impostato su **TRUE**, imposta l'API Win32 `dwFlag` a **INTERNET_FLAG_PASSIVE**.  
   
 ### <a name="return-value"></a>Valore restituito  
- Un puntatore a un [CFtpConnection](../../mfc/reference/cftpconnection-class.md) oggetto. Se la chiamata non riesce, è possibile determinare la causa dell'errore esaminando il generata [CInternetException](../../mfc/reference/cinternetexception-class.md) oggetto.  
+ Un puntatore a un [CFtpConnection](../../mfc/reference/cftpconnection-class.md) oggetto. Se la chiamata non riesce, determinare la causa dell'errore esaminando il generata [CInternetException](../../mfc/reference/cinternetexception-class.md) oggetto.  
   
 ### <a name="remarks"></a>Note  
  `GetFtpConnection`si connette a un server FTP, crea e restituisce un puntatore a un **CFTPConnection** oggetto. Non eseguire qualsiasi operazione specifica nel server. Se si prevede di leggere o scrivere nei file, ad esempio, è necessario eseguire queste operazioni in due fasi distinte. Vedere le classi [CFtpConnection](../../mfc/reference/cftpconnection-class.md) e [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md) per informazioni sulla ricerca di file, aprire i file e la lettura o scrittura nei file. Vedere l'articolo [Internet programmazione con WinInet](../../mfc/win32-internet-extensions-wininet.md) per i passaggi in esecuzione di attività comuni di connessione FTP.  
@@ -355,7 +355,7 @@ CGopherConnection* GetGopherConnection(
  Numero che identifica la porta TCP/IP da utilizzare nel server.  
   
 ### <a name="return-value"></a>Valore restituito  
- Un puntatore a un [CGopherConnection](../../mfc/reference/cgopherconnection-class.md) oggetto. Se la chiamata non riesce, è possibile determinare la causa dell'errore esaminando il generata [CInternetException](../../mfc/reference/cinternetexception-class.md) oggetto.  
+ Un puntatore a un [CGopherConnection](../../mfc/reference/cgopherconnection-class.md) oggetto. Se la chiamata non riesce, determinare la causa dell'errore esaminando il generata [CInternetException](../../mfc/reference/cinternetexception-class.md) oggetto.  
   
 ### <a name="remarks"></a>Note  
  `GetGopherConnection`si connette a un server gopher, crea e restituisce un puntatore a un `CGopherConnection` oggetto. Non eseguire qualsiasi operazione specifica nel server. Se si prevede di leggere o scrivere dati, ad esempio, è necessario eseguire queste operazioni in due fasi distinte. Vedere le classi [CGopherConnection](../../mfc/reference/cgopherconnection-class.md), [CGopherFile](../../mfc/reference/cgopherfile-class.md), e [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md) per informazioni sulla ricerca di file, aprire i file e la lettura o scrittura nei file. Per informazioni sull'esplorazione di un sito FTP, vedere la funzione membro [OpenURL](#openurl). Vedere l'articolo [Internet programmazione con WinInet](../../mfc/win32-internet-extensions-wininet.md) per i passaggi in esecuzione di attività di connessione comuni gopher.  
@@ -396,7 +396,7 @@ CHttpConnection* GetHttpConnection(
  Qualsiasi combinazione del **Internet _ FLAG_CONFIG_ALLOW_MOVE\*** flag. Vedere la tabella nel **osservazioni** sezione [CHttpConnection:: OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest) per una descrizione di `dwFlags` valori.  
   
 ### <a name="return-value"></a>Valore restituito  
- Un puntatore a un [CHttpConnection](../../mfc/reference/chttpconnection-class.md) oggetto. Se la chiamata non riesce, è possibile determinare la causa dell'errore esaminando il generata [CInternetException](../../mfc/reference/cinternetexception-class.md) oggetto.  
+ Un puntatore a un [CHttpConnection](../../mfc/reference/chttpconnection-class.md) oggetto. Se la chiamata non riesce, determinare la causa dell'errore esaminando il generata [CInternetException](../../mfc/reference/cinternetexception-class.md) oggetto.  
   
 ### <a name="remarks"></a>Note  
  `GetHttpConnection`si connette a un server HTTP e crea e restituisce un puntatore a un `CHttpConnection` oggetto. Non eseguire qualsiasi operazione specifica nel server. Se si desidera eseguire una query di un'intestazione HTTP, ad esempio, è necessario eseguire questa operazione come passaggio separato. Vedere le classi [CHttpConnection](../../mfc/reference/chttpconnection-class.md) e [CHttpFile](../../mfc/reference/chttpfile-class.md) per informazioni sulle operazioni eseguibili tramite una connessione a un server HTTP. Per informazioni sull'esplorazione di un sito HTTP, vedere la funzione membro [OpenURL](#openurl). Vedere l'articolo [Internet programmazione con WinInet](../../mfc/win32-internet-extensions-wininet.md) per i passaggi in esecuzione di attività comuni di connessione HTTP.  
@@ -426,9 +426,9 @@ virtual void OnStatusCallback(
  La dimensione di `lpvStatusInformation`.  
   
 ### <a name="remarks"></a>Note  
- È prima necessario chiamare [EnableStatusCallback](#enablestatuscallback) possa sfruttare i vantaggi di callback dello stato.  
+ È prima necessario chiamare [EnableStatusCallback](#enablestatuscallback) per sfruttare i vantaggi di callback dello stato.  
   
- Il `dwInternetStatus` parametro indica l'operazione in corso e determina quali il contenuto di `lpvStatusInformation` sarà. `dwStatusInformationLength`indica la lunghezza dei dati inclusi nel `lpvStatusInformation`. I valori per il seguente stato `dwInternetStatus` sono definite come segue:  
+ Il `dwInternetStatus` parametro indica l'operazione in corso e determina quali il contenuto di `lpvStatusInformation` sarà. `dwStatusInformationLength`indica la lunghezza dei dati inclusi in `lpvStatusInformation`. I valori per il seguente stato `dwInternetStatus` sono definite come segue:  
   
 |Valore|Significato|  
 |-----------|-------------|  
@@ -509,7 +509,7 @@ CStdioFile* OpenURL(
 |FTP: / /|**CInternetFile\***|  
   
 ### <a name="remarks"></a>Note  
- Il parametro `dwFlags` deve includere una **INTERNET_FLAG_TRANSFER_ASCII** o **INTERNET_FLAG_TRANSFER_BINARY**, ma non entrambi. I flag restanti possono essere combinati con i bit per bit `OR` (operatore) ( **|**).  
+ Il parametro `dwFlags` deve includere una **INTERNET_FLAG_TRANSFER_ASCII** o **INTERNET_FLAG_TRANSFER_BINARY**, ma non entrambi. I flag restanti possono essere combinati con il bit per bit `OR` (operatore) ( **|**).  
   
  `OpenURL`, che include la funzione Win32 **InternetOpenURL**, consente di solo download, il recupero e la lettura dei dati da un server Internet. `OpenURL`non consente di alcuna modifica dei file in una posizione remota, in modo che non richiede alcuna [CInternetConnection](../../mfc/reference/cinternetconnection-class.md) oggetto.  
   
