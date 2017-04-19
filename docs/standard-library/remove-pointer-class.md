@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - remove_pointer
-- std::remove_pointer
 - type_traits/std::remove_pointer
 dev_langs:
 - C++

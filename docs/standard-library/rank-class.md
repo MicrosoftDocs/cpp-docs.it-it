@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - rank
-- std::rank
 - type_traits/std::rank
 dev_langs:
 - C++

@@ -9,8 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::overflow_error
-- std.overflow_error
 - overflow_error
 - stdexcept/std::overflow_error
 dev_langs:

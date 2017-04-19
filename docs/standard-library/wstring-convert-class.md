@@ -9,12 +9,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- cvt.wstring_convert
 - wstring_convert
 - stdext::cvt::wstring_convert
 - cvt::wstring_convert
 - wstring/stdext::cvt::wstring_convert
-- stdext.cvt.wstring_convert
+- locale/std::wstring_convert::byte_string
+- locale/std::wstring_convert::wide_string
+- locale/std::wstring_convert::state_type
+- locale/std::wstring_convert::int_type
+- locale/std::wstring_convert::from_bytes
+- locale/std::wstring_convert::to_bytes
+- locale/std::wstring_convert::converted
+- locale/std::wstring_convert::state
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -105,7 +111,7 @@ class wstring_convert
   
  **Spazio dei nomi:** std  
   
-##  <a name="a-namewstringconvertbytestringa--wstringconvertbytestring"></a><a name="wstring_convert__byte_string"></a>  wstring_convert::byte_string  
+##  <a name="wstring_convert__byte_string"></a>  wstring_convert::byte_string  
  Tipo che rappresenta una stringa di tipo byte.  
   
 ```
@@ -115,7 +121,7 @@ typedef std::basic_string<char> byte_string;
 ### <a name="remarks"></a>Note  
  Il tipo è sinonimo di `std::basic_string<char>`.  
   
-##  <a name="a-namewstringconvertconverteda--wstringconvertconverted"></a><a name="wstring_convert__converted"></a>  wstring_convert::converted  
+##  <a name="wstring_convert__converted"></a>  wstring_convert::converted  
  Restituisce il numero di conversioni riuscite.  
   
 ```
@@ -128,7 +134,7 @@ size_t converted() const;
 ### <a name="remarks"></a>Note  
  Il numero di conversioni riuscite viene archiviato nell'oggetto del conteggio di conversione.  
   
-##  <a name="a-namewstringconvertfrombytesa--wstringconvertfrombytes"></a><a name="wstring_convert__from_bytes"></a>  wstring_convert::from_bytes  
+##  <a name="wstring_convert__from_bytes"></a>  wstring_convert::from_bytes  
  Converte una stringa di byte in una stringa di caratteri "wide".  
   
 ```
@@ -156,7 +162,7 @@ wide_string from_bytes(const char* first, const char* last);
   
  Il numero di elementi di input convertiti correttamente viene archiviato nell'oggetto conteggio di conversione. Se non si verificano errori di conversione, la funzione membro restituisce la stringa di caratteri "wide" convertita. In caso contrario, se l'oggetto è stato costruito con un inizializzatore per il messaggio di errore con stringa di caratteri "wide", la funzione membro restituisce l'oggetto messaggio di errore con stringa di caratteri "wide". In caso contrario, la funzione membro genera un oggetto della classe [range_error](../standard-library/range-error-class.md).  
   
-##  <a name="a-namewstringconvertinttypea--wstringconvertinttype"></a><a name="wstring_convert__int_type"></a>  wstring_convert::int_type  
+##  <a name="wstring_convert__int_type"></a>  wstring_convert::int_type  
  Tipo che rappresenta un Integer.  
   
 ```
@@ -166,7 +172,7 @@ typedef typename wide_string::traits_type::int_type int_type;
 ### <a name="remarks"></a>Note  
  Il tipo è sinonimo di `wide_string::traits_type::int_type`.  
   
-##  <a name="a-namewstringconvertstatea--wstringconvertstate"></a><a name="wstring_convert__state"></a>  wstring_convert::state  
+##  <a name="wstring_convert__state"></a>  wstring_convert::state  
  Restituisce un oggetto che rappresenta lo stato della conversione.  
   
 ```
@@ -178,7 +184,7 @@ state_type state() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-namewstringconvertstatetypea--wstringconvertstatetype"></a><a name="wstring_convert__state_type"></a>  wstring_convert::state_type  
+##  <a name="wstring_convert__state_type"></a>  wstring_convert::state_type  
  Tipo che rappresenta lo stato della conversione.  
   
 ```
@@ -188,7 +194,7 @@ typedef typename Codecvt::state_type state_type;
 ### <a name="remarks"></a>Note  
  Il tipo descrive un oggetto che può rappresentare uno stato di conversione. Il tipo è sinonimo di `Codecvt::state_type`.  
   
-##  <a name="a-namewstringconverttobytesa--wstringconverttobytes"></a><a name="wstring_convert__to_bytes"></a>  wstring_convert::to_bytes  
+##  <a name="wstring_convert__to_bytes"></a>  wstring_convert::to_bytes  
  Converte una stringa di caratteri "wide" in una stringa di byte.  
   
 ```
@@ -213,7 +219,7 @@ byte_string to_bytes(const Elem* first, const Elem* last);
   
  Il numero di elementi di input convertiti correttamente viene archiviato nell'oggetto conteggio di conversione. Se non si verificano errori di conversione, la funzione membro restituisce la stringa di byte convertita. In caso contrario, se l'oggetto è stato costruito con un inizializzatore per il messaggio di errore con stringa di byte, la funzione membro restituisce l'oggetto messaggio di errore con stringa di byte. In caso contrario, la funzione membro genera un oggetto della classe [range_error](../standard-library/range-error-class.md).  
   
-##  <a name="a-namewstringconvertwidestringa--wstringconvertwidestring"></a><a name="wstring_convert__wide_string"></a>  wstring_convert::wide_string  
+##  <a name="wstring_convert__wide_string"></a>  wstring_convert::wide_string  
  Tipo che rappresenta una stringa di tipo wide.  
   
 ```
@@ -223,7 +229,7 @@ typedef std::basic_string<Elem> wide_string;
 ### <a name="remarks"></a>Note  
  Il tipo è sinonimo di `std::basic_string<Elem>`.  
   
-##  <a name="a-namewstringconvertwstringconverta--wstringconvertwstringconvert"></a><a name="wstring_convert__wstring_convert"></a>  wstring_convert::wstring_convert  
+##  <a name="wstring_convert__wstring_convert"></a>  wstring_convert::wstring_convert  
  Costruisce un oggetto di tipo `wstring_convert`.  
   
 ```

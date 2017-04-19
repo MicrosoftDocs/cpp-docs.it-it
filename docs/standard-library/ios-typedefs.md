@@ -6,6 +6,13 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- ios/std::ios
+- ios/std::streamoff
+- ios/std::streampos
+- ios/std::streamsize
+- ios/std::wios
+- ios/std::wstreampos
 ms.assetid: 0b962632-3439-44de-bf26-20c67a7f0ff3
 caps.latest.revision: 13
 manager: ghogen
@@ -21,7 +28,7 @@ ms.lasthandoff: 02/24/2017
 |[ios](#ios)|[streamoff](#streamoff)|[streampos](#streampos)|  
 |[streamsize](#streamsize)|[wios](#wios)|[wstreampos](#wstreampos)|  
   
-##  <a name="a-nameiosa--ios"></a><a name="ios"></a>  ios  
+##  <a name="ios"></a>  ios  
  Supporta la classe ios dalla libreria iostream precedente.  
   
 ```  
@@ -31,7 +38,7 @@ typedef basic_ios<char, char_traits<char>> ios;
 ### <a name="remarks"></a>Note  
  Il tipo è un sinonimo della classe modello [basic_ios](../standard-library/basic-ios-class.md), specializzata per elementi di tipo `char` con tratti di carattere predefiniti.  
   
-##  <a name="a-namestreamoffa--streamoff"></a><a name="streamoff"></a>  streamoff  
+##  <a name="streamoff"></a>  streamoff  
  Supporta operazioni interne.  
   
 ```  
@@ -45,7 +52,7 @@ typedef basic_ios<char, char_traits<char>> ios;
 ### <a name="remarks"></a>Note  
  Il tipo è un intero con segno che descrive un oggetto in grado di archiviare un offset di byte interessato da varie operazioni di posizionamento del flusso. La relativa rappresentazione contiene almeno 32 bit di valore. Non necessariamente è abbastanza ampia da rappresentare una posizione di byte arbitraria all'interno di un flusso. Il valore **streamoff(-1)** indica generalmente un offset errato.  
   
-##  <a name="a-namestreamposa--streampos"></a><a name="streampos"></a>  streampos  
+##  <a name="streampos"></a>  streampos  
  Contiene la posizione corrente del puntatore a un buffer o del puntatore a un file.  
   
 ```  
@@ -78,7 +85,7 @@ int main( )
 7  
 ```  
   
-##  <a name="a-namestreamsizea--streamsize"></a><a name="streamsize"></a>  streamsize  
+##  <a name="streamsize"></a>  streamsize  
  Denota le dimensioni del flusso.  
   
 ```  
@@ -111,7 +118,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namewiosa--wios"></a><a name="wios"></a>  wios  
+##  <a name="wios"></a>  wios  
  Supporta la classe wios dalla libreria iostream precedente.  
   
 ```  
@@ -121,7 +128,7 @@ typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 ### <a name="remarks"></a>Note  
  Il tipo è un sinonimo della classe modello [basic_ios](../standard-library/basic-ios-class.md), specializzata per elementi di tipo `wchar_t` con tratti di carattere predefiniti.  
   
-##  <a name="a-namewstreamposa--wstreampos"></a><a name="wstreampos"></a>  wstreampos  
+##  <a name="wstreampos"></a>  wstreampos  
  Contiene la posizione corrente del puntatore a un buffer o del puntatore a un file.  
   
 ```  

@@ -10,8 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - negate
-- std.negate
-- std::negate
 - xfunctional/std::negate
 dev_langs:
 - C++

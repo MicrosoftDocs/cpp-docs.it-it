@@ -6,6 +6,17 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- type_traits/std::is_assignable
+- type_traits/std::is_copy_assignable
+- type_traits/std::is_copy_constructible
+- type_traits/std::is_default_constructible
+- type_traits/std::is_move_assignable
+- type_traits/std::is_move_constructible
+- type_traits/std::is_nothrow_move_assignable
+- type_traits/std::is_trivially_copy_assignable
+- type_traits/std::is_trivially_move_assignable
+- type_traits/std::is_trivially_move_constructible
 ms.assetid: dce4492f-f3e4-4d5e-bdb4-5875321254ec
 caps.latest.revision: 13
 manager: ghogen
@@ -23,7 +34,7 @@ ms.lasthandoff: 02/24/2017
 |[is_nothrow_move_assignable](#is_nothrow_move_assignable)|[is_trivially_copy_assignable](#is_trivially_copy_assignable)|[is_trivially_move_assignable](#is_trivially_move_assignable)|  
 |[is_trivially_move_constructible](#is_trivially_move_constructible)|  
   
-##  <a name="a-nameisassignablea--isassignable"></a><a name="is_assignable"></a>  is_assignable  
+##  <a name="is_assignable"></a>  is_assignable  
  Verifica se un valore di tipo `From` può essere assegnato a un tipo `To`.  
   
 ```  
@@ -41,7 +52,7 @@ struct is_assignable;
 ### <a name="remarks"></a>Note  
  L'espressione non valutata `declval<To>() = declval<From>()` deve essere nel formato corretto. `From` e `To` devono essere tipi completi, `void`, o matrici di valori associati sconosciuti.  
   
-##  <a name="a-nameiscopyassignablea--iscopyassignable"></a><a name="is_copy_assignable"></a>  is_copy_assignable  
+##  <a name="is_copy_assignable"></a>  is_copy_assignable  
  Test se è il tipo può essere copiato in un'assegnazione.  
   
 ```  
@@ -56,7 +67,7 @@ struct is_copy_assignable;
 ### <a name="remarks"></a>Note  
  Un'istanza del predicato di tipo contiene true se il tipo `Ty` è una classe che ha un operatore di assegnazione di copia; in caso contrario, contiene false. Equivalente a is_assignable\<Ty&, const Ty&>.  
   
-##  <a name="a-nameiscopyconstructiblea--iscopyconstructible"></a><a name="is_copy_constructible"></a>  is_copy_constructible  
+##  <a name="is_copy_constructible"></a>  is_copy_constructible  
  Verifica se il tipo ha un costruttore di copia.  
   
 ```  
@@ -106,7 +117,7 @@ is_copy_constructible<Copyable> == true
 is_copy_constructible<NotCopyable > == false  
 ```  
   
-##  <a name="a-nameisdefaultconstructiblea--isdefaultconstructible"></a><a name="is_default_constructible"></a>  is_default_constructible  
+##  <a name="is_default_constructible"></a>  is_default_constructible  
  Verifica se il tipo ha un costruttore predefinito.  
   
 ```  
@@ -156,7 +167,7 @@ is_default_constructible<Simple> == true
 is_default_constructible<Simple2> == false  
 ```  
   
-##  <a name="a-nameismoveassignablea--ismoveassignable"></a><a name="is_move_assignable"></a>  is_move_assignable  
+##  <a name="is_move_assignable"></a>  is_move_assignable  
  Verifica se il tipo può essere assegnato mediante spostamento.  
   
 ```  
@@ -171,7 +182,7 @@ struct is_move_assignable;
 ### <a name="remarks"></a>Note  
  Un tipo può essere assegnato mediante spostamento se un riferimento rvalue a tale tipo può essere assegnato a un riferimento al tipo stesso. Il predicato del tipo è equivalente a `is_assignable<T&, T&&>`. I tipi assegnabili mediante spostamento includono tipi scalari referenziabili e tipi di classe con operatori di assegnazione mediante spostamento generati dal compilatore o definiti dall'utente.  
   
-##  <a name="a-nameismoveconstructiblea--ismoveconstructible"></a><a name="is_move_constructible"></a>  is_move_constructible  
+##  <a name="is_move_constructible"></a>  is_move_constructible  
  Verifica se il tipo ha un costruttore di spostamento.  
   
 ```  
@@ -186,7 +197,7 @@ struct is_move_constructible;
 ### <a name="remarks"></a>Note  
  Un predicato di tipo che restituisce true se il tipo `T` può essere costruito con un'operazione di spostamento. Questo predicato è equivalente a `is_constructible<T, T&&>`.  
   
-##  <a name="a-nameisnothrowmoveassignablea--isnothrowmoveassignable"></a><a name="is_nothrow_move_assignable"></a>  is_nothrow_move_assignable  
+##  <a name="is_nothrow_move_assignable"></a>  is_nothrow_move_assignable  
  Verifica se il tipo ha un operatore **nothrow** di assegnazione di spostamento.  
   
 ```  
@@ -201,7 +212,7 @@ struct is_nothrow_move_assignable;
 ### <a name="remarks"></a>Note  
  Un'istanza del predicato di tipo contiene true se il tipo `Ty` è un operatore di assegnazione di spostamento nothrow; in caso contrario, contiene false.  
   
-##  <a name="a-nameistriviallycopyassignablea--istriviallycopyassignable"></a><a name="is_trivially_copy_assignable"></a>  is_trivially_copy_assignable  
+##  <a name="is_trivially_copy_assignable"></a>  is_trivially_copy_assignable  
  Verifica se il tipo ha un operatore di assegnazione di copia semplice.  
   
 ```  
@@ -218,7 +229,7 @@ struct is_trivially_copy_assignable;
   
  Un costruttore di assegnazione per una classe `T` è semplice se è fornito in modo implicito, la classe `T` non dispone di funzioni virtuali, la classe `T` non dispone di basi virtuali, le classi di tutti i membri di dati non statici di tipo classe dispongono di operatori di assegnazione semplice e le classi di tutti i membri di dati non statici di tipo matrice di classe dispongono di operatori di assegnazione semplice.  
   
-##  <a name="a-nameistriviallymoveassignablea--istriviallymoveassignable"></a><a name="is_trivially_move_assignable"></a>  is_trivially_move_assignable  
+##  <a name="is_trivially_move_assignable"></a>  is_trivially_move_assignable  
  Verifica se il tipo ha un operatore di assegnazione di spostamento semplice.  
   
 ```  
@@ -245,7 +256,7 @@ struct is_trivially_move_assignable;
   
  le classi di tutti i membri dati non statici di tipo matrice della classe hanno operatori di assegnazione di spostamento semplici  
   
-##  <a name="a-nameistriviallymoveconstructiblea--istriviallymoveconstructible"></a><a name="is_trivially_move_constructible"></a>  is_trivially_move_constructible  
+##  <a name="is_trivially_move_constructible"></a>  is_trivially_move_constructible  
  Verifica se il tipo ha un costruttore di spostamento semplice.  
   
 ```  

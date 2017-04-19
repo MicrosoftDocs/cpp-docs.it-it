@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::logical_and
 - xfunctional/std::logical_and
-- std.logical_and
 - logical_and
 dev_langs:
 - C++

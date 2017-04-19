@@ -11,8 +11,6 @@ ms.topic: article
 f1_keywords:
 - xutility/std::random_access_iterator_tag
 - random_access_iterator_tag
-- std.random_access_iterator_tag
-- std::random_access_iterator_tag
 dev_langs:
 - C++
 helpviewer_keywords:

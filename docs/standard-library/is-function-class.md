@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - is
-- std::is
 - type_traits/std::is
 dev_langs:
 - C++

@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - is_standard_layout
-- std::is_standard_layout
 - type_traits/std::is_standard_layout
 dev_langs:
 - C++

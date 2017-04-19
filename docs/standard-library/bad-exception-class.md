@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.bad_exception
 - bad_exception
 - exception/std::bad_exception
 dev_langs:

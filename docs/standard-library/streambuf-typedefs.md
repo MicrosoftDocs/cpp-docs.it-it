@@ -6,6 +6,9 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- streambuf/std::streambuf
+- streambuf/std::wstreambuf
 ms.assetid: 2678e18f-f0f0-4995-bc53-f1bc7dfc4ec6
 caps.latest.revision: 11
 manager: ghogen
@@ -20,7 +23,7 @@ ms.lasthandoff: 02/24/2017
 |-|-|  
 |[streambuf](#streambuf)|[wstreambuf](#wstreambuf)|  
   
-##  <a name="a-namestreambufa--streambuf"></a><a name="streambuf"></a>  streambuf  
+##  <a name="streambuf"></a>  streambuf  
  Una specializzazione di `basic_streambuf` che usa `char` come parametri modello.  
   
 ```
@@ -30,7 +33,7 @@ typedef basic_streambuf<char, char_traits<char>> streambuf;
 ### <a name="remarks"></a>Note  
  Il tipo è un sinonimo della classe modello [basic_streambuf](../standard-library/basic-streambuf-class.md), specializzata per gli elementi di tipo `char` con tratti di carattere predefiniti.  
   
-##  <a name="a-namewstreambufa--wstreambuf"></a><a name="wstreambuf"></a>  wstreambuf  
+##  <a name="wstreambuf"></a>  wstreambuf  
  Una specializzazione di `basic_streambuf` che usa `wchar_t` come parametri modello.  
   
 ```

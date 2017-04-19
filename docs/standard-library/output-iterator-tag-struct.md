@@ -9,10 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::output_iterator_tag
 - output_iterator_tag
 - xutility/std::output_iterator_tag
-- std.output_iterator_tag
 dev_langs:
 - C++
 helpviewer_keywords:

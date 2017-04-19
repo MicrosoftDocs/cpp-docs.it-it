@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - is_fundamental
-- std::is_fundamental
 - type_traits/std::is_fundamental
 dev_langs:
 - C++

@@ -10,9 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - stdexcept/std::range_error
-- std.range_error
 - range_error
-- std::range_error
 dev_langs:
 - C++
 helpviewer_keywords:

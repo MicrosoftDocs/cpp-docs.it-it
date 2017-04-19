@@ -14,6 +14,7 @@ helpviewer_keywords:
 - extraction operators
 - '>> operator, extraction operators'
 - operators [C++], extraction
+f1_keywords: []
 ms.assetid: a961e1a9-4897-41de-b210-89d5b2d051ae
 caps.latest.revision: 8
 author: corob-msft

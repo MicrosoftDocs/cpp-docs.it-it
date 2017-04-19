@@ -6,6 +6,7 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: []
 ms.assetid: 9282a62e-a3d1-4371-a284-fbc9515bb9a2
 caps.latest.revision: 10
 author: corob-msft
@@ -22,7 +23,7 @@ ms.lasthandoff: 02/24/2017
 |-|  
 |[operator&lt;&lt;](#operator_lt__lt_)|  
   
-##  <a name="a-nameoperatorltlta--operatorltlt"></a><a name="operator_lt__lt_"></a>  operator&lt;&lt;  
+##  <a name="operator_lt__lt_"></a>  operator&lt;&lt;  
  Scrive vari tipi nel flusso.  
   
 ```

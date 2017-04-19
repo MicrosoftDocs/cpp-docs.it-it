@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - remove_volatile
-- std::remove_volatile
 - type_traits/std::remove_volatile
 dev_langs:
 - C++

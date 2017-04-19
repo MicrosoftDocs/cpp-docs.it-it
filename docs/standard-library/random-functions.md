@@ -6,6 +6,7 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: []
 ms.assetid: 2ac9ec59-619b-4b85-a425-f729277c1bc8
 caps.latest.revision: 10
 manager: ghogen
@@ -17,7 +18,7 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="ltrandomgt-functions"></a>Funzioni &lt;random&gt;
   
-##  <a name="a-namegeneratecanonicala--generatecanonical"></a><a name="generate_canonical"></a>  generate_canonical  
+##  <a name="generate_canonical"></a>  generate_canonical  
  Restituisce un valore a virgola mobile da una sequenza casuale.  
   
 > [!NOTE]

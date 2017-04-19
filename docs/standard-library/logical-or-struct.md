@@ -9,8 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.logical_or
-- std::logical_or
 - logical_or
 - xfunctional/std::logical_or
 dev_langs:

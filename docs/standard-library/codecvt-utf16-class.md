@@ -10,8 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - codecvt/std::codecvt_utf16
-- std::codecvt_utf16
-- std.codecvt_utf16
 - codecvt_utf16
 dev_langs:
 - C++

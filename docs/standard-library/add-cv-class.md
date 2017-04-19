@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - add_cv
-- std::add_cv
 - type_traits/std::add_cv
 dev_langs:
 - C++

@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - vector<bool>::reference
-- std::vector<bool>::reference
 dev_langs:
 - C++
 helpviewer_keywords:

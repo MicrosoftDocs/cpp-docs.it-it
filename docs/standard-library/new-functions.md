@@ -6,6 +6,9 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- new/std::nothrow
+- new/std::set_new_handler
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
 caps.latest.revision: 10
 manager: ghogen
@@ -20,7 +23,7 @@ ms.lasthandoff: 02/24/2017
 |-|-|  
 |[nothrow](#nothrow)|[set_new_handler](#set_new_handler)|  
   
-##  <a name="a-namenothrowa--nothrow"></a><a name="nothrow"></a>  nothrow  
+##  <a name="nothrow"></a>  nothrow  
  Fornisce un oggetto da usare come argomento per le versioni `nothrow` di **new** e **delete**.  
   
 ```  
@@ -33,7 +36,7 @@ extern const std::nothrow_t nothrow;
 ### <a name="example"></a>Esempio  
   Vedere [operator new](../standard-library/new-operators.md#operator_new) e [operator new&#91;&#93;](../standard-library/new-operators.md#operator_new_arr) per esempi relativi all'uso di `std::nothrow_t` come parametro di funzione.  
   
-##  <a name="a-namesetnewhandlera--setnewhandler"></a><a name="set_new_handler"></a>  set_new_handler  
+##  <a name="set_new_handler"></a>  set_new_handler  
  Installa una funzione utente che deve essere chiamata quando `operator new` non riesce ad allocare memoria.  
   
 ```  

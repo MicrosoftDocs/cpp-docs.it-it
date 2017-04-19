@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::regex_traits<wchar_t>
 - regex/std::regex_traits<wchar_t>
 dev_langs:
 - C++

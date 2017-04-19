@@ -10,9 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - modulus
-- std::modulus
 - xfunctional/std::modulus
-- std.modulus
 dev_langs:
 - C++
 helpviewer_keywords:

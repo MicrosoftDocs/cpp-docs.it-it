@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - enable_shared_from_this
-- std::enable_shared_from_this
 - memory/std::enable_shared_from_this
 dev_langs:
 - C++
@@ -75,7 +74,7 @@ protected:
   
  **Spazio dei nomi:** std  
   
-##  <a name="a-nameenablesharedfromthissharedfromthisa--enablesharedfromthissharedfromthis"></a><a name="enable_shared_from_this__shared_from_this"></a>  enable_shared_from_this::shared_from_this  
+##  <a name="enable_shared_from_this__shared_from_this"></a>  enable_shared_from_this::shared_from_this  
  Genera un `shared_ptr` che condivide la proprietà dell'istanza con i proprietari `shared_ptr` esistenti.  
   
 ```  

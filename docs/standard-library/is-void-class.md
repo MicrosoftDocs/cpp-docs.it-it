@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - is_void
-- std::is_void
 - type_traits/std::is_void
 dev_langs:
 - C++

@@ -11,8 +11,6 @@ ms.topic: article
 f1_keywords:
 - greater
 - xfunctional/std::greater
-- std.greater
-- std::greater
 dev_langs:
 - C++
 helpviewer_keywords:

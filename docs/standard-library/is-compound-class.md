@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - is_compound
-- std::is_compound
 - type_traits/std::is_compound
 dev_langs:
 - C++

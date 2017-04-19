@@ -11,8 +11,6 @@ ms.topic: article
 f1_keywords:
 - stdexcept/std::length_error
 - length_error
-- std::length_error
-- std.length_error
 dev_langs:
 - C++
 helpviewer_keywords:

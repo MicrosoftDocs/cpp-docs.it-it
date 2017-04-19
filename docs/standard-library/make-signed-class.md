@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - make_signed
-- std::make_signed
 - type_traits/std::make_signed
 dev_langs:
 - C++

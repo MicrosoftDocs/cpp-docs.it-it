@@ -11,8 +11,6 @@ ms.topic: article
 f1_keywords:
 - out_of_range
 - stdexcept/std::out_of_range
-- std.out_of_range
-- std::out_of_range
 dev_langs:
 - C++
 helpviewer_keywords:

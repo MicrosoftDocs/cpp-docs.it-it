@@ -6,6 +6,9 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- unordered_set/std::swap (set)
+- unordered_set/std::swap (unordered_multiset)
 ms.assetid: 66b35671-4023-4411-ad50-83786580d8ee
 caps.latest.revision: 10
 manager: ghogen
@@ -20,7 +23,7 @@ ms.lasthandoff: 02/24/2017
 |-|-|  
 |[swap (set)](#swap)|[swap (unordered_multiset)](#swap_unordered_multiset)|  
   
-##  <a name="a-nameswapa--swap-unorderedset"></a><a name="swap"></a>  swap (unordered_set)  
+##  <a name="swap"></a>  swap (unordered_set)  
  Scambia il contenuto di due contenitori.  
   
 ```  
@@ -109,7 +112,7 @@ return (0);
   
 ```  
   
-##  <a name="a-nameswapunorderedmultiseta--swap-unorderedmultiset"></a><a name="swap_unordered_multiset"></a>  swap (unordered_multiset) 
+##  <a name="swap_unordered_multiset"></a>  swap (unordered_multiset) 
  Scambia il contenuto di due contenitori.  
   
 ```  

@@ -10,9 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - system_error/std::is_error_code_enum
-- std.is_error_code_enum
 - is_error_code_enum
-- std::is_error_code_enum
 dev_langs:
 - C++
 helpviewer_keywords:

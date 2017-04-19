@@ -11,8 +11,6 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - is_nothrow_constructible
-- std.is_nothrow_constructible
-- std::is_nothrow_constructible
 - type_traits/std::is_nothrow_constructible
 dev_langs:
 - C++

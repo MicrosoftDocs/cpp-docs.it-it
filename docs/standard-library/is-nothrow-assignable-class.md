@@ -11,8 +11,6 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - is_nothrow_assignable
-- std.is_nothrow_assignable
-- std::is_nothrow_assignable
 - type_traits/std::is_nothrow_assignable
 dev_langs:
 - C++

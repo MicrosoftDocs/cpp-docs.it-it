@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - is_signed
-- std::is_signed
 - type_traits/std::is_signed
 dev_langs:
 - C++

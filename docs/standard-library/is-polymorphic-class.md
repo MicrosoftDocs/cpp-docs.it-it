@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - is_polymorphic
-- std::is_polymorphic
 - type_traits/std::is_polymorphic
 dev_langs:
 - C++

@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.greater_equal
 - greater_equal
-- std::greater_equal
 - xfunctional/std::greater_equal
 dev_langs:
 - C++

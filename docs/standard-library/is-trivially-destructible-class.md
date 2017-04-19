@@ -11,8 +11,6 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - is_trivially_destructible
-- std.is_trivially_destructible
-- std::is_trivially_destructible
 - type_traits/std::is_trivially_destructible
 dev_langs:
 - C++

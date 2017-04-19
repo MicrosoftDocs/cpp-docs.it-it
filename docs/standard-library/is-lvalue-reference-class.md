@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - is_lvalue_reference
-- std::is_lvalue_reference
 - type_traits/std::is_lvalue_reference
 dev_langs:
 - C++

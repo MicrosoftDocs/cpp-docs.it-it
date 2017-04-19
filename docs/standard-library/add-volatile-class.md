@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - add_volatile
-- std::add_volatile
 - type_traits/std::add_volatile
 dev_langs:
 - C++

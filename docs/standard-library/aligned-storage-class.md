@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - aligned_storage
-- std::aligned_storage
 - type_traits/std::aligned_storage
 dev_langs:
 - C++

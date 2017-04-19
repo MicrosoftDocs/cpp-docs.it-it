@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - bad_weak_ptr
-- std::bad_weak_ptr
 - memory/std::bad_weak_ptr
 dev_langs:
 - C++

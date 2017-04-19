@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - is_enum
-- std::is_enum
 - type_traits/std::is_enum
 dev_langs:
 - C++

@@ -10,8 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - is_nothrow_copy_assignable
-- std.is_nothrow_copy_assignable
-- std::is_nothrow_copy_assignable
 - type_traits/std::is_nothrow_copy_assignable
 dev_langs:
 - C++

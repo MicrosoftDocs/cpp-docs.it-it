@@ -11,8 +11,6 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - is_trivially_constructible
-- std.is_trivially_constructible
-- std::is_trivially_constructible
 - type_traits/std::is_trivially_constructible
 dev_langs:
 - C++

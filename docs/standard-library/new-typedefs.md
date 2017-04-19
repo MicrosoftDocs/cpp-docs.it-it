@@ -6,6 +6,8 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- new/std::new_handler
 ms.assetid: aef01de1-06b5-4b6c-aebc-2c9f423d7e47
 caps.latest.revision: 7
 manager: ghogen
@@ -20,7 +22,7 @@ ms.lasthandoff: 02/24/2017
 |-|  
 |[new_handler](#new_handler)|  
   
-##  <a name="a-namenewhandlera--newhandler"></a><a name="new_handler"></a>  new_handler  
+##  <a name="new_handler"></a>  new_handler  
  Il tipo punta a una funzione appropriata per l'uso come nuovo gestore.  
   
 ```

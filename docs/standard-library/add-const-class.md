@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - add_const
-- std::add_const
 - type_traits/std::add_const
 dev_langs:
 - C++

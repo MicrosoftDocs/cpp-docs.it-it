@@ -9,10 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.runtime_error
 - runtime_error
 - stdexcept/std::runtime_error
-- std::runtime_error
 dev_langs:
 - C++
 helpviewer_keywords:

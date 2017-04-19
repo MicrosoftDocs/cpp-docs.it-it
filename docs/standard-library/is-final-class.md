@@ -11,8 +11,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - is_final
-- std.is_final
-- std::is_final
 - type_traits/std::is_final
 dev_langs:
 - C++

@@ -10,13 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - file_status
-- std::experimental::filesystem::v1::file_status
 - filesystem/std::experimental::filesystem::v1::file_status
-- std::experimental::filesystem::v1::file_status::operator=
 - filesystem/std::experimental::filesystem::v1::file_status::operator=
-- std::experimental::filesystem::v1::file_status::type
 - filesystem/std::experimental::filesystem::v1::file_status::type
-- std::experimental::filesystem::v1::file_status::permissions
 - filesystem/std::experimental::filesystem::v1::file_status::permissions
 dev_langs:
 - C++
