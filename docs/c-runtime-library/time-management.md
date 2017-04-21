@@ -38,9 +38,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: baf07427498c6b1f60ceca67112251be794a7451
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 665210ecf78fa0c76d598c9116fc19dc391a0585
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="time-management"></a>Gestione dell'ora
@@ -59,7 +59,7 @@ Usare queste funzioni per ottenere l'ora corrente e convertirla, regolarla e mem
 |[_ftime, _ftime32, _ftime64](../c-runtime-library/reference/ftime-ftime32-ftime64.md),[_ftime_s, _ftime32_s, _ftime64_s](../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md)|Memorizza l'ora di sistema corrente nella variabile di tipo `struct _timeb` o `struct``__timeb64` Le versioni di queste funzioni con il suffisso `_s` sono più sicure.|  
 |[_futime, _futime32, _futime64](../c-runtime-library/reference/futime-futime32-futime64.md)|Imposta la data della modifica su un file aperto|  
 |[gmtime, _gmtime32, _gmtime64](../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md), [gmtime_s, _gmtime32_s, _gmtime64_s](../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)|Converte l'ora dal tipo `time_t` a `struct tm` o dal tipo `__time64_t` a `struct tm`. Le versioni di queste funzioni con il suffisso `_s` sono più sicure.|  
-|[localtime, _localtime32, _localtime64](../c-runtime-library/reference/localtime-localtime32-localtime64.md), [localtime_s, _localtime32_s, _localtime64_s](../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)|Converte l'ora dal tipo `time_t` a `struct tm` o dal tipo `__time64_t` a `struct tm`con la correzione locale. Le versioni di queste funzioni con il suffisso `_s` sono più sicure.|  
+|[localtime, _localtime32, _localtime64](../c-runtime-library/reference/localtime-localtime32-localtime64.md), [localtime_s, _localtime32_s, _localtime64_s](../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)|Converte l'ora dal tipo `time_t` a `struct tm` o dal tipo `__time64_t` a `struct tm`con correzione locale. Le versioni di queste funzioni con il suffisso `_s` sono più sicure.|  
 |[_mkgmtime, _mkgmtime32, _mkgmtime64](../c-runtime-library/reference/mkgmtime-mkgmtime32-mkgmtime64.md)|Converte l'ora in un valore del calendario GMT (Greenwich Mean Time).|  
 |[mktime, _mktime32, _mktime64](../c-runtime-library/reference/mktime-mktime32-mktime64.md)|Converte l'ora in un valore del calendario.|  
 |[_strdate, _wstrdate](../c-runtime-library/reference/strdate-wstrdate.md), [_strdate_s, _wstrdate_s](../c-runtime-library/reference/strdate-s-wstrdate-s.md)|Restituisce una data di sistema come stringa. Le versioni di queste funzioni con il suffisso `_s` sono più sicure.|  

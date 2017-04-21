@@ -37,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c4c0e4de99d0d700f04f235a4bd5f7afd83937fb
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 904069e809876beefbc05c7dc0ddb83bee8e5c94
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="c-floating-point-constants"></a>Costanti C a virgola mobile
@@ -59,7 +59,7 @@ Una costante a virgola mobile è un numero decimale che rappresenta un numero re
  &nbsp;&nbsp; **E**  *sign*<sub>opz</sub> *digit-sequence*  
   
  *sign* : uno tra  
- &nbsp;&nbsp; **+ –**  
+ &nbsp;&nbsp; **+ -**  
   
  *digit-sequence*:  
  &nbsp;&nbsp; *digit*  

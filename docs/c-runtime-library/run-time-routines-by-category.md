@@ -37,13 +37,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 2e9fdeff96af536b1e742b6b15f59805ab231608
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 7c22002fa6b98213913a3cff1b8f0e851f22c6d3
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="run-time-routines-by-category"></a>Routine di runtime per categoria
-In questa sezione vengono elencate e descritte le routine di libreria di runtime Microsoft per categoria. Per praticità di riferimento, alcune routine sono elencate in più categorie. Le routine di caratteri multibyte e le routine di caratteri wide vengono raggruppate con le controparti di caratteri a byte singolo, qualora esistano.  
+In questa sezione vengono elencate e descritte le routine di libreria di runtime Microsoft per categoria. Per praticità di riferimento, alcune routine sono elencate in più categorie. Le routine di caratteri multibyte e le routine di caratteri wide vengono raggruppate con le controparti di caratteri a un byte, se presenti.  
   
  Le categorie principali di routine di libreria di runtime Microsoft sono:  
   

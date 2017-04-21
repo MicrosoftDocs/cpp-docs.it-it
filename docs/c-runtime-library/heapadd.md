@@ -50,9 +50,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: c1a72c382d0df6d667ca97a45c6783c928f6ae98
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 8e5b9c8871d77e4c677c2ad88a8616d0cd9b3eac
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="heapadd"></a>_heapadd
@@ -78,7 +78,7 @@ int _heapadd(
  Dimensione della memoria da aggiungere, in byte.  
   
 ## <a name="return-value"></a>Valore restituito  
- Se l'operazione riesce, `_heapadd` restituisce 0; in caso contrario, la funzione restituisce -1 e imposta `errno` su `ENOSYS`.  
+ Se l'operazione ha esito positivo, `_heapadd` restituisce 0; in caso contrario, la funzione restituisce -1 e imposta `errno` su `ENOSYS`.  
   
  Per altre informazioni su questi e su altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
