@@ -27,9 +27,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: d3ac5f5e54334e42ad48304d26a4f32b1b598459
-ms.openlocfilehash: dbed9eaf443d7392373d1eeba81bc0095c5bd1b4
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 71ae904790532cde7ffe559648ccd13a59b88051
+ms.lasthandoff: 04/01/2017
 
 ---
 
@@ -127,7 +127,7 @@ CPPRestSDK, un'API Web multipiattaforma per C++, è stato aggiornato alla versio
 
   ![Filtro elenco membri](media/mlfiltering.png "Filtro elenco membri")
 
-* È stata aggiunta una nuova funzionalità sperimentale IntelliSense predittivo che fornisce un elenco di risultati filtrato e compatibile con il contesto per l'elenco dei membri. Vedere il post relativo ai [miglioramenti di IntelliSense per C++ con informazioni su IntelliSense predittiva e filtri](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/c-intellisense-improvements-predictive-intellisense-filtering/)
+* È stata aggiunta una nuova funzionalità sperimentale IntelliSense predittivo che fornisce un elenco di risultati filtrato e compatibile con il contesto per l'elenco dei membri. Vedere [C++ IntelliSense Improvements - Predictive IntelliSense & Filtering](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/c-intellisense-improvements-predictive-intellisense-filtering/) (Miglioramenti di IntelliSense per C++ - IntelliSense predittiva e filtri)
 
 * Trova tutti i riferimenti (MAIUSC+F12) ora consente di spostarsi con facilità, anche nelle codebase complesse. Offre funzioni avanzate di raggruppamento, filtro, ordinamento, ricerca all'interno dei risultati e, per alcuni linguaggi, colorazione, che agevolano notevolmente la comprensione dei riferimenti. Per C++ la nuova interfaccia utente include informazioni che indicano se è in corso la lettura o la scrittura in una variabile.
 
@@ -148,7 +148,7 @@ Visual Studio 2017 introduce la funzionalità "Apri cartella", che consente di c
   -    Launch.json per personalizzare l'esperienza di debug.
 
 ### <a name="cmake-support-via-open-folder"></a>Supporto CMake con Apri cartella
-Visual Studio 2017 introduce il supporto per l'uso dei progetti CMake senza la conversione in file di progetto di MSBuild (con estensione vcxproj). Per altre informazioni, vedere [CMake support in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/cmake-support-in-visual-studio/) (Supporto di CMake in Visual Studio) e [CMake support in Visual Studio 2017 – what's new in the RC.2 update](https://blogs.msdn.microsoft.com/vcblog/2016/12/20/cmake-support-in-visual-studio-2017-whats-new-in-the-rc-update/) (Supporto di CMake in Visual Studio 2017 - Novità dell'aggiornamento RC.2). Se si aprono i progetti CMake con "Apri cartella", l'ambiente viene automaticamente configurato per la modifica, la compilazione e il debug in C++.
+Visual Studio 2017 introduce il supporto per l'uso dei progetti CMake senza la conversione in file di progetto di MSBuild (con estensione vcxproj). Per altre informazioni, vedere [CMake support in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/cmake-support-in-visual-studio/) (Supporto di CMake in Visual Studio) e [CMake support in Visual Studio 2017 - what's new in the RC.2 update](https://blogs.msdn.microsoft.com/vcblog/2016/12/20/cmake-support-in-visual-studio-2017-whats-new-in-the-rc-update/) (Supporto di CMake in Visual Studio 2017 - Novità dell'aggiornamento RC.2). Se si aprono i progetti CMake con "Apri cartella", l'ambiente viene automaticamente configurato per la modifica, la compilazione e il debug in C++.
 
 * IntelliSense C++ funzionerà senza necessità di creare un file CppProperties.json nella cartella radice. È stato anche aggiunto un nuovo elenco a discesa per consentire agli utenti di passare facilmente tra le configurazioni fornite dai file CMake e CppProperties.json.
 

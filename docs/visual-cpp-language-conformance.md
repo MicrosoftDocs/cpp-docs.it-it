@@ -30,15 +30,18 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: da3c2e6ce7247d3e8c9a401bc0a133cb8d46a970
-ms.openlocfilehash: a13be4d4d32ab0f0bc3cc7b5972e90c4493d06ff
-ms.lasthandoff: 03/15/2017
+ms.sourcegitcommit: 705a5fd040b3cba1d3e8be1ac9e2a22ef1f98eb9
+ms.openlocfilehash: 8e21a77e42a90571c73ff0f207f5d799ff722bd3
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="visual-c-language-conformance"></a>Conformità al linguaggio Visual C++ 
 Questo argomento riepiloga la conformità agli standard di linguaggio ISO C++03, C++11, C++14 e bozza C++17 delle funzionalità del compilatore e delle funzionalità della libreria standard (STL) per Visual C++ in Visual Studio 2017 e versioni precedenti. Ogni nome di compilatore e di funzionalità STL è collegato al documento dello standard ISO C++ che descrive la funzionalità, se disponibile al momento della pubblicazione. La colonna Supportato elenca la prima versione di Visual Studio in cui è apparso il supporto della funzionalità.  
   
 Per informazioni sui miglioramenti della conformità e su altre modifiche in Visual Studio 2017, vedere [Miglioramenti della conformità di C++ in Visual Studio 2017](cpp-conformance-improvements-2017.md) e [Novità di Visual C++ in Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md). Per le modifiche della conformità nelle versioni precedenti, vedere [Cronologia delle modifiche di Visual C++](porting/visual-cpp-change-history-2003-2015.md) e [Visual C++: novità dalla versione 2003 alla 2015](porting/visual-cpp-what-s-new-2003-through-2015.md). Per notizie aggiornate dal team di C++, visitare il [blog del team di Visual C++](http://blogs.msdn.microsoft.com/vcblog/).  
+
+ > [!NOTE]
+ > Non sono state apportate modifiche binarie di rilevo tra Visual Studio 2015 e Visual Studio 2017.
   
 ## <a name="compiler-features"></a>Funzionalità del compilatore  
   
