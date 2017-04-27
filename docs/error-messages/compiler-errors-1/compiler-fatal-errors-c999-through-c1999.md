@@ -88,6 +88,86 @@ f1_keywords:
 - C1901
 - C1903
 - C1904
+helpviewer_keywords:
+- C1012
+- C1013
+- C1014
+- C1016
+- C1018
+- C1019
+- C1020
+- C1021
+- C1022
+- C1023
+- C1034
+- C1035
+- C1036
+- C1037
+- C1038
+- C1041
+- C1045
+- C1047
+- C1048
+- C1049
+- C1053
+- C1063
+- C1068
+- C1069
+- C1070
+- C1074
+- C1077
+- C1082
+- C1086
+- C1087
+- C1088
+- C1089
+- C1090
+- C1091
+- C1098
+- C1099
+- C1100
+- C1101
+- C1102
+- C1103
+- C1104
+- C1105
+- C1108
+- C1109
+- C1110
+- C1111
+- C1112
+- C1114
+- C1190
+- C1193
+- C1195
+- C1196
+- C1201
+- C1202
+- C1205
+- C1206
+- C1207
+- C1208
+- C1209
+- C1210
+- C1211
+- C1300
+- C1301
+- C1302
+- C1306
+- C1310
+- C1312
+- C1352
+- C1353
+- C1383
+- C1384
+- C1451
+- C1505
+- C1508
+- C1510
+- C1852
+- C1901
+- C1903
+- C1904
 dev_langs:
 - C++
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
@@ -111,13 +191,18 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: e8d1696e325ac6a005636aa1d874d30b9c296e91
-ms.lasthandoff: 04/12/2017
+ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
+ms.openlocfilehash: 7cd9b98172f30248c40d2b0b8410b19f4a0cafec
+ms.lasthandoff: 04/24/2017
 
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>Errori del compilatore irreversibili da C999 a C1999
 Gli articoli in questa parte della documentazione contengono informazioni su una sottosezione degli errori del compilatore di Visual C++. È possibile accedere alle informazioni qui o nella finestra **Output** in Visual Studio è possibile selezionare un numero di errore e quindi scegliere il tasto F1.  
+  
+> [!NOTE]
+>  Non tutti [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] errore è documentato in MSDN. In molti casi, il messaggio di diagnostica fornisce tutte le informazioni che sono disponibile. Se si ritiene che un messaggio di errore richieda una spiegazione aggiuntiva, è possibile informarne Microsoft. È possibile utilizzare la forma di commenti e suggerimenti in questa pagina o passare alla barra dei menu in Visual Studio e scegliere **Guida**, **segnalare un Bug**, o è possibile inviare un report di suggerimenti o bug in [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
+  
+ È possibile trovare assistenza per errori e avvisi nei forum pubblici MSDN. Il [del linguaggio Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) forum è a domande e discussioni sul [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] sintassi del linguaggio e compilatore. Il [generali di Visual C++](http://go.microsoft.com/fwlink/?LinkId=158194) forum è per domande su [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] che non sono trattati in altri forum. È inoltre possibile trovare informazioni su errori e avvisi in [Overflow dello Stack](http://stackoverflow.com/).  
   
 |Errore|Messaggio|  
 |-----------|-------------|  
@@ -130,7 +215,7 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |[Errore irreversibile C1007](../../error-messages/compiler-errors-1/fatal-error-c1007.md)|contrassegno non riconosciuto '*stringa*'in'*opzione*'|  
 |[Errore irreversibile C1008](../../error-messages/compiler-errors-1/fatal-error-c1008.md)|nessun file di input specificato|  
 |[Errore irreversibile C1009](../../error-messages/compiler-errors-1/fatal-error-c1009.md)|limite del compilatore: macro eccessivamente annidate|  
-|[Errore irreversibile C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|fine file imprevista durante la ricerca dell'intestazione precompilata. Si è omesso di aggiungere ' #include *file*>' all'origine?|  
+|[Errore irreversibile C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|fine file imprevista durante la ricerca dell'intestazione precompilata. Si è omesso di aggiungere ' #include <*file*>' all'origine?|  
 |Errore irreversibile C1012|parentesi non corrispondenti: manca '*carattere*"|  
 |Errore irreversibile C1013|limite del compilatore: troppe parentesi aperte|  
 |Errore irreversibile C1014|Troppi file di inclusione: profondità = *numero*|  
@@ -174,7 +259,7 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |Errore irreversibile C1074|'IDB' è un'estensione per il file PDB: *file*|  
 |[Errore irreversibile C1075](../../error-messages/compiler-errors-1/fatal-error-c1075.md)|sinistra *token* la fine del file è senza corrispondenza|  
 |[Errore irreversibile C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md)|limite del compilatore: raggiunto limite interno dell'heap. Usare /Zm per specificare un limite maggiore|  
-|Errore irreversibile C1077|limite del compilatore: non può avere più di *numero* opzioni della riga di comando|  
+|Errore irreversibile C1077|limite del compilatore: non può avere più di *numero* le opzioni della riga di comando|  
 |[Errore irreversibile C1079](../../error-messages/compiler-errors-1/fatal-error-c1079.md)|limite del compilatore: superato limite della dimensione del file PCH|  
 |[Errore irreversibile C1080](../../error-messages/compiler-errors-1/fatal-error-c1080.md)|limite del compilatore: limite superato opzione della riga di comando di *numero* caratteri|  
 |[Errore irreversibile C1081](../../error-messages/compiler-errors-1/fatal-error-c1081.md)|'*file*': nome file troppo lungo|  
@@ -255,7 +340,7 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |[Errore irreversibile C1510](../../error-messages/compiler-errors-1/fatal-error-c1510.md)|Impossibile aprire il file clui.dll della risorsa di lingua|  
 |[Errore irreversibile C1601](../../error-messages/compiler-errors-1/fatal-error-c1601.md)|codice operativo dell'assembly inline non supportato|  
 |[Errore irreversibile C1602](../../error-messages/compiler-errors-1/fatal-error-c1602.md)|intrinseco non supportato|  
-|[Errore irreversibile C1603](../../error-messages/compiler-errors-1/fatal-error-c1603.md)|destinazione assembly inline non compreso nell'intervallo da *numero* byte|  
+|[Errore irreversibile C1603](../../error-messages/compiler-errors-1/fatal-error-c1603.md)|destinazione di branch assembly inline non compreso nell'intervallo da *numero* byte|  
 |Errore irreversibile C1852|'*file*' non è un file di intestazione precompilata valido|  
 |[Errore irreversibile C1853](../../error-messages/compiler-errors-1/fatal-error-c1853.md)|'*file*' file di intestazione precompilata da una versione precedente del compilatore, o l'intestazione precompilata è C++ e si sono utilizzando C (o viceversa)|  
 |[Errore irreversibile C1854](../../error-messages/compiler-errors-1/fatal-error-c1854.md)|non è possibile sovrascrivere le informazioni generate durante la creazione dell'intestazione precompilata nel file oggetto: '*file*'|  
