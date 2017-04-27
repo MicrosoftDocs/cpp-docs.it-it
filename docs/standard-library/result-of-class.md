@@ -11,11 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - result_of
-- std::result_of
 - type_traits/std::result_of
-- std::result_of_t
 - type_traits/std::result_of_t
-- std::result_of::type
 - type_traits/std::result_of::type
 dev_langs:
 - C++

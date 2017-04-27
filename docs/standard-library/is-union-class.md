@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - is_union
-- std::is_union
 - type_traits/std::is_union
 dev_langs:
 - C++

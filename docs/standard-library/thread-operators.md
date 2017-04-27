@@ -6,6 +6,7 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: []
 ms.assetid: e6bb6c0f-64f9-4cb2-9ff2-05b88a6ba7ac
 caps.latest.revision: 11
 manager: ghogen
@@ -22,7 +23,7 @@ ms.lasthandoff: 02/24/2017
 |[operator&lt;](#operator_lt_)|[operator&lt;&lt;](#operator_lt__lt_)|[operator&lt;=](#operator_lt__eq)|  
 |[operator==](#operator_eq_eq)|  
   
-##  <a name="a-nameoperatorgteqa--operatorgt"></a><a name="operator_gt__eq"></a>  operator&gt;=  
+##  <a name="operator_gt__eq"></a>  operator&gt;=  
  Determina se un oggetto `thread::id` è maggiore o uguale a un altro.  
   
 ```cpp  
@@ -44,7 +45,7 @@ bool operator>= (
 ### <a name="remarks"></a>Note  
  Questa funzione non genera eccezioni.  
   
-##  <a name="a-nameoperatorgta--operatorgt"></a><a name="operator_gt_"></a>  operator&gt;  
+##  <a name="operator_gt_"></a>  operator&gt;  
  Determina se un oggetto `thread::id` è maggiore di un altro.  
   
 ```cpp  
@@ -66,7 +67,7 @@ bool operator> (
 ### <a name="remarks"></a>Note  
  Questa funzione non genera eccezioni.  
   
-##  <a name="a-nameoperatorlteqa--operatorlt"></a><a name="operator_lt__eq"></a>  operator&lt;=  
+##  <a name="operator_lt__eq"></a>  operator&lt;=  
  Determina se un oggetto `thread::id` è minore o uguale a un altro.  
   
 ```cpp  
@@ -88,7 +89,7 @@ bool operator<= (
 ### <a name="remarks"></a>Note  
  Questa funzione non genera eccezioni.  
   
-##  <a name="a-nameoperatorlta--operatorlt"></a><a name="operator_lt_"></a>  operator&lt;  
+##  <a name="operator_lt_"></a>  operator&lt;  
  Determina se un oggetto `thread::id` è minore di un altro.  
   
 ```cpp  
@@ -112,7 +113,7 @@ bool operator<(
   
  Questa funzione non genera eccezioni.  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  operator!=  
+##  <a name="operator_neq"></a>  operator!=  
  Confronta due oggetti `thread::id` per stabilirne la disuguaglianza.  
   
 ```cpp  
@@ -134,7 +135,7 @@ bool operator!= (
 ### <a name="remarks"></a>Note  
  Questa funzione non genera eccezioni.  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  operator==  
+##  <a name="operator_eq_eq"></a>  operator==  
  Confronta due oggetti `thread::id` per stabilirne l'uguaglianza.  
   
 ```cpp  
@@ -156,7 +157,7 @@ bool operator== (
 ### <a name="remarks"></a>Note  
  Questa funzione non genera eccezioni.  
   
-##  <a name="a-nameoperatorltlta--operatorltlt"></a><a name="operator_lt__lt_"></a>  operator&lt;&lt;  
+##  <a name="operator_lt__lt_"></a>  operator&lt;&lt;  
  Inserisce una rappresentazione testo di un oggetto `thread::id` in un flusso.  
   
 ```cpp  

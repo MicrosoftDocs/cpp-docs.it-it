@@ -11,8 +11,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - is_literal_type
-- std.is_literal_type
-- std::is_literal_type
 - type_traits/std::is_literal_type
 dev_langs:
 - C++

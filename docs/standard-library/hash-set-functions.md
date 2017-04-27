@@ -6,6 +6,9 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- hash_set/std::swap
+- hash_set/std::swap (hash_multiset)
 ms.assetid: 557a0162-3728-4537-97dc-f9f6cc7ece94
 caps.latest.revision: 7
 manager: ghogen
@@ -20,7 +23,7 @@ ms.lasthandoff: 02/24/2017
 |-|-|  
 |[swap](#swap)|[swap (hash_multiset)](#swap__hash_multiset_)|  
   
-##  <a name="a-nameswapa--swap"></a><a name="swap"></a>  swap  
+##  <a name="swap"></a>  swap  
   
 > [!NOTE]
 >  Questa API è obsoleta. L'alternativa è la [classe unordered_set](../standard-library/unordered-set-class.md).  
@@ -52,7 +55,7 @@ void swap(
 ### <a name="example"></a>Esempio  
   Vedere l'esempio di codice relativo alla classe membro [hash_set::swap](../standard-library/hash-set-class.md#hash_set__swap) per indicazioni su come usare la versione modello di `swap`.  
   
-##  <a name="a-nameswaphashmultiseta--swap-hashmultiset"></a><a name="swap__hash_multiset_"></a>  swap (hash_multiset)  
+##  <a name="swap__hash_multiset_"></a>  swap (hash_multiset)  
   
 > [!NOTE]
 >  Questa API è obsoleta. L'alternativa è la [classe unordered_set](../standard-library/unordered-set-class.md).  

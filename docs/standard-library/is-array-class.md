@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - is_array
-- std::is_array
 - type_traits/std::is_array
 dev_langs:
 - C++

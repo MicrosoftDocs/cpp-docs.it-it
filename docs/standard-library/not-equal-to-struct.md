@@ -9,8 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.not_equal_to
-- std::not_equal_to
 - not_equal_to
 - xfunctional/std::not_equal_to
 dev_langs:

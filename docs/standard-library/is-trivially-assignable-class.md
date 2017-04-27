@@ -11,8 +11,6 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - is_trivially_assignable
-- std.is_trivially_assignable
-- std::is_trivially_assignable
 - type_traits/std::is_trivially_assignable
 dev_langs:
 - C++

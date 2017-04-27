@@ -10,9 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - xfunctional/std::plus
-- std.plus
 - plus
-- std::plus
 dev_langs:
 - C++
 helpviewer_keywords:

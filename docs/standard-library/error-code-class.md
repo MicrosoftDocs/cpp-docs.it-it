@@ -10,9 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - error_code
-- std.error_code
-- std::error_code
 - system_error/std::error_code
+- system_error/std::error_code::value_type
+- system_error/std::error_code::assign
+- system_error/std::error_code::category
+- system_error/std::error_code::clear
+- system_error/std::error_code::default_error_condition
+- system_error/std::error_code::message
+- system_error/std::error_code::operator bool
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -91,7 +96,7 @@ class error_code;
   
  **Spazio dei nomi:** std  
   
-##  <a name="a-nameerrorcodeassigna--errorcodeassign"></a><a name="error_code__assign"></a>  error_code::assign  
+##  <a name="error_code__assign"></a>  error_code::assign  
  Assegna un valore di codice di errore e una categoria a un codice di errore.  
   
 ```
@@ -108,7 +113,7 @@ void assign(value_type val, const error_category& _Cat);
 ### <a name="remarks"></a>Note  
  La funzione membro archivia `val` come il valore del codice di errore e un puntatore a `_Cat`.  
   
-##  <a name="a-nameerrorcodecategorya--errorcodecategory"></a><a name="error_code__category"></a>  error_code::category  
+##  <a name="error_code__category"></a>  error_code::category  
  Restituisce la categoria dell'errore.  
   
 ```
@@ -117,7 +122,7 @@ const error_category& category() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameerrorcodecleara--errorcodeclear"></a><a name="error_code__clear"></a>  error_code::clear  
+##  <a name="error_code__clear"></a>  error_code::clear  
  Cancella il valore del codice di errore e la categoria.  
   
 ```
@@ -127,7 +132,7 @@ clear();
 ### <a name="remarks"></a>Note  
  La funzione membro archivia un valore del codice di errore zero e un puntatore all'oggetto [generic_category](../standard-library/system-error-functions.md#generic_category).  
   
-##  <a name="a-nameerrorcodedefaulterrorconditiona--errorcodedefaulterrorcondition"></a><a name="error_code__default_error_condition"></a>  error_code::default_error_condition  
+##  <a name="error_code__default_error_condition"></a>  error_code::default_error_condition  
  Restituisce la condizione di errore predefinita.  
   
 ```
@@ -140,7 +145,7 @@ error_condition default_error_condition() const;
 ### <a name="remarks"></a>Note  
  Questa funzione membro restituisce `category().default_error_condition(value())`.  
   
-##  <a name="a-nameerrorcodeerrorcodea--errorcodeerrorcode"></a><a name="error_code__error_code"></a>  error_code::error_code  
+##  <a name="error_code__error_code"></a>  error_code::error_code  
  Costruisce un oggetto di tipo `error_code`.  
   
 ```
@@ -169,7 +174,7 @@ error_code(_Enum _Errcode,
   
  Il terzo costruttore archivia `(value_type)_Errcode` come valore del codice di errore e un puntatore alla [generic_category](../standard-library/system-error-functions.md#generic_category).  
   
-##  <a name="a-nameerrorcodemessagea--errorcodemessage"></a><a name="error_code__message"></a>  error_code::message  
+##  <a name="error_code__message"></a>  error_code::message  
  Restituisce il nome del codice di errore.  
   
 ```
@@ -182,7 +187,7 @@ string message() const;
 ### <a name="remarks"></a>Note  
  Questa funzione membro restituisce `category().message(value())`.  
   
-##  <a name="a-nameerrorcodeoperatoreqeqa--errorcodeoperator"></a><a name="error_code__operator_eq_eq"></a>  error_code::operator==  
+##  <a name="error_code__operator_eq_eq"></a>  error_code::operator==  
  Verifica l'uguaglianza tra oggetti `error_code`.  
   
 ```
@@ -201,7 +206,7 @@ bool operator==(const error_code& right) const;
 ### <a name="remarks"></a>Note  
  L'operatore membro restituisce `category() == right.category() && value == right.value()`.  
   
-##  <a name="a-nameerrorcodeoperatorneqa--errorcodeoperator"></a><a name="error_code__operator_neq"></a>  error_code::operator!=  
+##  <a name="error_code__operator_neq"></a>  error_code::operator!=  
  Verifica la disuguaglianza tra oggetti `error_code`.  
   
 ```
@@ -220,7 +225,7 @@ bool operator!=(const error_code& right) const;
 ### <a name="remarks"></a>Note  
  L'operatore membro restituisce `!(*this == right)`.  
   
-##  <a name="a-nameerrorcodeoperatorlta--errorcodeoperatorlt"></a><a name="error_code__operator_lt_"></a>  error_code::operator&lt;  
+##  <a name="error_code__operator_lt_"></a>  error_code::operator&lt;  
  Verifica se l'oggetto [error_code](http://msdn.microsoft.com/en-us/09c6ef90-b6f8-430a-b584-e168716c7e31) è più piccolo dell'oggetto `error_code` passato per il confronto.  
   
 ```
@@ -239,7 +244,7 @@ bool operator<(const error_code& right) const;
 ### <a name="remarks"></a>Note  
  L'operatore membro restituisce `category() < right.category() || category() == right.category() && value < right.value()`.  
   
-##  <a name="a-nameerrorcodeoperatoreqa--errorcodeoperator"></a><a name="error_code__operator_eq"></a>  error_code::operator=  
+##  <a name="error_code__operator_eq"></a>  error_code::operator=  
  Assegna un nuovo valore di enumerazione all'oggetto [error_code](http://msdn.microsoft.com/en-us/09c6ef90-b6f8-430a-b584-e168716c7e31).  
   
 ```
@@ -261,7 +266,7 @@ typename enable_if<is_error_code_enum<_Enum>::value,
 ### <a name="remarks"></a>Note  
  L'operatore membro archivia `(value_type)_Errcode` come valore del codice di errore e un puntatore alla [generic_category](../standard-library/system-error-functions.md#generic_category). Restituisce `*this`.  
   
-##  <a name="a-nameerrorcodeoperatorboola--errorcodeoperator-bool"></a><a name="error_code__operator_bool"></a>  error_code::operator bool  
+##  <a name="error_code__operator_bool"></a>  error_code::operator bool  
  Crea una variabile di tipo `error_code`.  
   
 ```
@@ -274,7 +279,7 @@ explicit operator bool() const;
 ### <a name="remarks"></a>Note  
  L'operatore restituisce un valore convertibile in `true` solo se [value](#error_code__value) non è uguale a zero. Il tipo restituito è convertibile solo in `bool`, non in `void *` o altri tipi scalari noti.  
   
-##  <a name="a-nameerrorcodevaluea--errorcodevalue"></a><a name="error_code__value"></a>  error_code::value  
+##  <a name="error_code__value"></a>  error_code::value  
  Restituisce il valore del codice di errore archiviato.  
   
 ```
@@ -286,7 +291,7 @@ value_type value() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="a-nameerrorcodevaluetypea--errorcodevaluetype"></a><a name="error_code__value_type"></a>  error_code::value_type  
+##  <a name="error_code__value_type"></a>  error_code::value_type  
  Tipo che rappresenta il valore del codice di errore archiviato.  
   
 ```

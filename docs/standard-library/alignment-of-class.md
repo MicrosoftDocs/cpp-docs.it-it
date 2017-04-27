@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - alignment_of
-- std::alignment_of
 - type_traits/std::alignment_of
 dev_langs:
 - C++

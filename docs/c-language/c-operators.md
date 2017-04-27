@@ -37,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 1e4b047307bb1153c136b0485b0d141086907525
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 6eab29bde1fe9b08e0883960ed7a160101d56d1a
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="c-operators"></a>Operatori C
@@ -51,18 +51,18 @@ Gli operatori C sono un sottoinsieme degli [operatori C++ predefiniti](../cpp/cp
   
 |Simbolo|Nome|  
 |------------|----------|  
-|**– ~ !**|Operatori di complemento e di negazione|  
+|**- ~ !**|Operatori di complemento e di negazione|  
 |**\* &**|Operatori di riferimento indiretto e address-of|  
 |`sizeof`|Operatore size|  
 |**+**|Operatore più unario|  
-|**++ ––**|Operatori di incremento e decremento unari|  
+|**++ --**|Operatori di incremento e decremento unari|  
   
  Gli operatori binari vengono associati da sinistra a destra. In C sono disponibili gli operatori binari seguenti:  
   
 |Simbolo|Nome|  
 |------------|----------|  
 |**\* / %**|Operatori moltiplicativi|  
-|**+ –**|Operatori additivi|  
+|**+ -**|Operatori additivi|  
 |**<\< >>**|Operatori shift|  
 |**\<   >   \<=   >=   ==   !=**|Operatori relazionali|  
 |**&   &#124; ^**|Operatori bit per bit|  
@@ -73,7 +73,7 @@ Gli operatori C sono un sottoinsieme degli [operatori C++ predefiniti](../cpp/cp
   
  L'operatore di espressione condizionale ha una precedenza minore rispetto alle espressioni binarie e differisce da tali espressioni per l'associatività a destra.  
   
- Le espressioni con operatori includono inoltre espressioni di assegnazione, che utilizzano operatori di assegnazione unari o binari. Gli operatori di assegnazione unari sono gli operatori di incremento (`++`) e decremento (**––**), mentre gli operatori di assegnazione binari sono l'operatore di assegnazione semplice (**=**) e gli operatori di assegnazione composta. Ogni operatore di assegnazione composta è una combinazione di un altro operatore binario con l'operatore di assegnazione semplice.  
+ Le espressioni con operatori includono inoltre espressioni di assegnazione, che utilizzano operatori di assegnazione unari o binari. Gli operatori di assegnazione unari sono gli operatori di incremento (`++`) e decremento (**--**), mentre gli operatori di assegnazione binari sono l'operatore di assegnazione semplice (**=**) e gli operatori di assegnazione composta. Ogni operatore di assegnazione composta è una combinazione di un altro operatore binario con l'operatore di assegnazione semplice.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni e assegnazioni](../c-language/expressions-and-assignments.md)

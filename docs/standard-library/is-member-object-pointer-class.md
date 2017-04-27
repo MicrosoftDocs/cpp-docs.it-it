@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - is_member_object_pointer
-- std::is_member_object_pointer
 - type_traits/std::is_member_object_pointer
 dev_langs:
 - C++

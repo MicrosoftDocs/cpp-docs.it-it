@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - make_unsigned
-- std::make_unsigned
 - type_traits/std::make_unsigned
 dev_langs:
 - C++

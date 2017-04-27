@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - hash
-- std::hash
 - functional/std::hash
 - bitset/std::hash
 - memory/std::hash

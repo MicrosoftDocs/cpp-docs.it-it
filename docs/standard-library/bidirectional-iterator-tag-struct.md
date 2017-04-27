@@ -10,8 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - xutility/std::bidirectional_iterator_tag
-- std::bidirectional_iterator_tag
-- std.bidirectional_iterator_tag
 - bidirectional_iterator_tag
 dev_langs:
 - C++

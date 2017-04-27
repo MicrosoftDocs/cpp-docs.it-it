@@ -10,111 +10,72 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - regex_constants
-- std::regex_constants
 - regex/std::regex_constants
 - error_collate
-- std::regex_constants::error_collate
 - regex/std::regex_constants::error_collate
 - error_ctype
-- std::regex_constants::error_ctype
 - regex/std::regex_constants::error_ctype
 - error_escape
-- std::regex_constants::error_escape
 - regex/std::regex_constants::error_escape
 - error_backref
-- std::regex_constants::error_backref
 - regex/std::regex_constants::error_backref
 - error_brack
-- std::regex_constants::error_brack
 - regex/std::regex_constants::error_brack
 - error_paren
-- std::regex_constants::error_paren
 - regex/std::regex_constants::error_paren
 - error_brace
-- std::regex_constants::error_brace
 - regex/std::regex_constants::error_brace
 - error_badbrace
-- std::regex_constants::error_badbrace
 - regex/std::regex_constants::error_badbrace
 - error_range
-- std::regex_constants::error_range
 - regex/std::regex_constants::error_range
 - error_space
-- std::regex_constants::error_space
 - regex/std::regex_constants::error_space
 - error_badrepeat
-- std::regex_constants::error_badrepeat
 - regex/std::regex_constants::error_badrepeat
 - error_complexity
-- std::regex_constants::error_complexity
 - regex/std::regex_constants::error_complexity
 - error_stack
-- std::regex_constants::error_stack
 - regex/std::regex_constants::error_stack
 - error_parse
-- std::regex_constants::error_parse
 - regex/std::regex_constants::error_parse
 - error_syntax
-- std::regex_constants::error_syntax
 - regex/std::regex_constants::error_syntax
 - match_default
-- std::regex_constants::match_default
 - regex/std::regex_constants::match_default
 - match_not_bol
-- std::regex_constants::match_not_bol
 - regex/std::regex_constants::match_not_bol
 - match_not_eol
-- std::regex_constants::match_not_eol
 - regex/std::regex_constants::match_not_eol
 - match_not_bow
-- std::regex_constants::match_not_bow
 - regex/std::regex_constants::match_not_bow
 - match_not_eow
-- std::regex_constants::match_not_eow
 - regex/std::regex_constants::match_not_eow
 - match_any
-- std::regex_constants::match_any
 - regex/std::regex_constants::match_any
 - match_not_null
-- std::regex_constants::match_not_null
 - regex/std::regex_constants::match_not_null
 - match_continuous
-- std::regex_constants::match_continuous
 - regex/std::regex_constants::match_continuous
 - match_prev_avail
-- std::regex_constants::match_prev_avail
 - regex/std::regex_constants::match_prev_avail
 - format_default
-- std::regex_constants::format_default
 - regex/std::regex_constants::format_default
 - format_sed
-- std::regex_constants::format_sed
 - regex/std::regex_constants::format_sed
 - format_no_copy
-- std::regex_constants::format_no_copy
 - regex/std::regex_constants::format_no_copy
 - format_first_only
-- std::regex_constants::format_first_only
 - regex/std::regex_constants::format_first_only
-- std::regex_constants::ECMAScript
 - regex/std::regex_constants::ECMAScript
-- std::regex_constants::basic
 - regex/std::regex_constants::basic
-- std::regex_constants::extended
 - regex/std::regex_constants::extended
-- std::regex_constants::awk
 - regex/std::regex_constants::awk
-- std::regex_constants::grep
 - regex/std::regex_constants::grep
-- std::regex_constants::egrep
 - regex/std::regex_constants::egrep
-- std::regex_constants::icase
 - regex/std::regex_constants::icase
-- std::regex_constants::nosubs
 - regex/std::regex_constants::nosubs
-- std::regex_constants::optimize
 - regex/std::regex_constants::optimize
-- std::regex_constants::collate
 - regex/std::regex_constants::collate
 dev_langs:
 - C++
@@ -166,7 +127,7 @@ namespace regex_constants {
   
  **Spazio dei nomi:** std  
   
-##  <a name="a-nameregexconstantserrortypea--regexconstantserrortype"></a><a name="regex_constants__error_type"></a>  regex_constants::error_type  
+##  <a name="regex_constants__error_type"></a>  regex_constants::error_type  
  Indicatori per segnalare errori di sintassi di espressione regolare.  
   
 ```  
@@ -225,7 +186,7 @@ enum error_type
   
  `error_backref` -- l'espressione contiene un backreference non valido  
   
-##  <a name="a-nameregexconstantsmatchflagtypea--regexconstantsmatchflagtype"></a><a name="regex_constants__match_flag_type"></a>  regex_constants::match_flag_type  
+##  <a name="regex_constants__match_flag_type"></a>  regex_constants::match_flag_type  
  Flag per opzioni di corrispondenza delle espressioni regolari.  
   
 ```  
@@ -281,7 +242,7 @@ enum match_flag_type
   
  `format_first_only` -- non cercare corrispondenze dopo la prima  
   
-##  <a name="a-nameregexconstantssyntaxoptiontypea--regexconstantssyntaxoptiontype"></a><a name="regex_constants__syntax_option_type"></a>  regex_constants::syntax_option_type  
+##  <a name="regex_constants__syntax_option_type"></a>  regex_constants::syntax_option_type  
  Flag per selezionare le opzioni di sintassi.  
   
 ```  

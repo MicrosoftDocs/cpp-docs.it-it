@@ -9,8 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.codecvt_utf8
-- std::codecvt_utf8
 - codecvt_utf8
 - codecvt/std::codecvt_utf8
 dev_langs:

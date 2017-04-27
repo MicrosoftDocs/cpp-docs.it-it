@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - remove_extent
-- std::remove_extent
 - type_traits/std::remove_extent
 dev_langs:
 - C++

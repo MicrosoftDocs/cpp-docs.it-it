@@ -10,8 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - xfunctional/std::divides
-- std::divides
-- std.divides
 - divides
 dev_langs:
 - C++

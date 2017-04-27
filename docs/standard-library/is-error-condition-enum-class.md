@@ -9,8 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::is_error_condition_enum
-- std.is_error_condition_enum
 - is_error_condition_enum
 - system_error/std::is_error_condition_enum
 dev_langs:

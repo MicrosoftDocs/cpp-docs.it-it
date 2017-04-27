@@ -9,10 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.unary
 - unary
 - functional/std::unary
-- std::unary
 dev_langs:
 - C++
 helpviewer_keywords:

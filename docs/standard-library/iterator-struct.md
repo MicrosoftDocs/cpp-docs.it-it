@@ -10,8 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - iterator
-- std::iterator
-- std.iterator
 - xutility/std::iterator
 dev_langs:
 - C++

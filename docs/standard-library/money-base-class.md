@@ -11,8 +11,6 @@ ms.topic: article
 f1_keywords:
 - locale/std::money_base
 - money_base
-- std::money_base
-- std.money_base
 dev_langs:
 - C++
 helpviewer_keywords:

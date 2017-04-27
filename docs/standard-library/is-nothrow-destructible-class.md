@@ -11,8 +11,6 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - is_nothrow_destructible
-- std.is_nothrow_destructible
-- std::is_nothrow_destructible
 - type_traits/std::is_nothrow_destructible
 dev_langs:
 - C++

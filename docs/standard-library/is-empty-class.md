@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - is_empty
-- std::is_empty
 - type_traits/std::is_empty
 dev_langs:
 - C++

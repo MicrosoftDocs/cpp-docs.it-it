@@ -10,6 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 dev_langs:
 - C++
+f1_keywords: []
 ms.assetid: 853d4b30-167a-471b-8325-86a868943568
 caps.latest.revision: 8
 author: corob-msft

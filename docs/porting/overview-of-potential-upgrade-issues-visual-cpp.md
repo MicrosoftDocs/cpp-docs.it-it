@@ -12,8 +12,9 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 translationtype: Human Translation
-ms.sourcegitcommit: fb1f9f25be6d32f15324c8d3a7bd5069ca869a35
-ms.openlocfilehash: 6951129578e28251cef8eb54abb4ef790eb7f944
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 24ae58e6d8948572248a1595c59714bdf2c6f3f5
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Panoramica dei potenziali problemi di aggiornamento (Visual C++)
@@ -47,7 +48,7 @@ Nel corso degli anni il compilatore Visual C++ ha subito molte modifiche, che si
   
 2.  Se non è possibile (o non si vuole) ricompilare la libreria statica, è possibile provare il collegamento con legacy_stdio_definitions.lib. Se questa soluzione soddisfa le dipendenze in fase di collegamento della libreria statica, è consigliabile testare in modo approfondito la libreria statica quando viene usata nel codice binario, per assicurarsi che non dia origine a problemi causati da una delle [modifiche funzionali apportate alla libreria Universal CRT](visual-cpp-change-history-2003-2015.md#BK_CRT).  
   
-3.  Se le dipendenze della libreria statica in uso non sono soddisfatte da legacy_stdio_definitions.lib o se la libreria non funziona con la libreria Universal CRT a causa delle modifiche funzionali sopra citate, è consigliabile incapsulare la libreria statica in una DLL e quindi collegare la DLL alla versione appropriata del runtime Microsoft C. Ad esempio, se la libreria statica è stata creata con Visual C++ 2013 sarà necessario creare la DLL usando Visual C++ 2013 e le librerie di Visual C++ 2013. Incorporando la libreria in una DLL si isola il dettaglio di implementazione rappresentato dalla dipendenza della libreria da una versione specifica del runtime Microsoft C. (Sarà necessario assicurarsi che l'interfaccia della DLL non trasmetta esternamente dettagli del runtime C usato, ad esempio restituendo un'istruzione FILE* fuori dall'ambito della DLL o restituendo un puntatore allocato da malloc e prevedendone lo sblocco da parte del chiamante.)  
+3.  Se le dipendenze della libreria statica in uso non sono soddisfatte da legacy_stdio_definitions.lib o se la libreria non funziona con la libreria Universal CRT a causa delle modifiche funzionali sopra citate, è consigliabile incapsulare la libreria statica in una DLL e quindi collegare la DLL alla versione appropriata del runtime Microsoft C. Ad esempio, se la libreria statica è stata creata con Visual C++ 2013 sarà necessario creare la DLL usando Visual C++ 2013 e le librerie di Visual C++ 2013. Incorporando la libreria in una DLL si isola il dettaglio di implementazione rappresentato dalla dipendenza della libreria da una versione specifica del runtime Microsoft C. Sarà necessario assicurarsi che l'interfaccia della DLL non trasmetta esternamente dettagli del runtime C usato, ad esempio restituendo un'istruzione FILE* fuori dall'ambito della DLL o restituendo un puntatore allocato da malloc e prevedendone lo sblocco da parte del chiamante.  
   
  L'uso di più CRT in un unico processo non è di per sé un problema; di fatto la maggior parte dei processi carica DLL con più CRT. Ad esempio i componenti del sistema operativo Windows dipendono da msvcrt.dll e mentre CLR dipende dal proprio CRT privato. I problemi si verificano quando si usa in modo non ordinato lo stato di più CRT. Ad esempio è sconsigliabile allocare memoria usando msvcr110.dll!malloc e provare a deallocare la memoria usando msvcr120.dll!free. Allo stesso modo è sconsigliabile provare ad aprire un FILE usando msvcr110!fopen e quindi provare a leggere il FILE usando msvcr120!fread. Se si evita di usare in modo non ordinato lo stato di più CRT, è possibile avere più CRT caricati in un singolo processo.  
   
@@ -66,13 +67,13 @@ Nel corso degli anni il compilatore Visual C++ ha subito molte modifiche, che si
 ### <a name="lnk2019-unresolved-external"></a>LNK2019: simbolo esterno non risolto  
  Se vengono rilevati simboli non risolti, potrebbe essere necessario correggere le impostazioni del progetto.  
   
--   •   Se il file di origine si trova in un percorso non predefinito, è stato aggiunto il percorso delle directory di inclusione del progetto?  
+-   Se il file di origine si trova in un percorso non predefinito, è stato aggiunto il percorso delle directory di inclusione del progetto?  
   
--   •   Se il simbolo esterno è definito in un file .lib, è stato specificato il percorso lib nelle proprietà del progetto e in tale percorso è presente la versione corretta del file .lib?  
+-   Se il simbolo esterno è definito in un file con estensione lib, è stato specificato il percorso lib nelle proprietà del progetto e nel percorso è presente la versione corretta del file con estensione lib?  
   
--   •   Si sta provando a creare ul collegamento a un file .lib compilato con una versione diversa di Visual Studio? In questo caso, vedere la sezione precedente relativa alle dipendenze di librerie e set di strumenti.  
+-   Si sta provando a creare ul collegamento a un file con estensione lib compilato con una versione diversa di Visual Studio? In questo caso, vedere la sezione precedente relativa alle dipendenze di librerie e set di strumenti.  
   
--   •   I tipi degli argomenti nel sito di chiamata corrispondono di fatto a un overload esistente della funzione? Verificare che i tipi sottostanti degli eventuali typedef nella firma della funzione e nel codice che chiama la funzione siano quelli previsti.  
+-   I tipi degli argomenti nel sito di chiamata corrispondono di fatto a un overload esistente della funzione? Verificare che i tipi sottostanti degli eventuali typedef nella firma della funzione e nel codice che chiama la funzione siano quelli previsti.  
   
  Per risolvere gli errori di simbolo non risolto, provare a usare dumpbin.exe per esaminare i simboli definiti in un file binario. Provare la riga di comando seguente per visualizzare i simboli definiti in una libreria:  
   
@@ -114,9 +115,9 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
   
  Se l'errore è C2371 e riguarda un tipo stdint, è probabile che il tipo sia definito in un'intestazione nel proprio codice o in un file lib di terze parti.  Durante l'aggiornamento è necessario eliminare eventuali definizioni personalizzate di tipi \<stdint.h>, ma prima confrontare le definizioni personalizzate con le definizioni standard correnti, per assicurarsi di non introdurre nuovi problemi.  
   
- È possibile premere F12 "Vai a definizione" per vedere dove è definito il tipo in questione.  
+ È possibile premere F12 **Vai a definizione** per visualizzare la posizione in cui è definito il tipo in questione.  
   
- L'opzione del compilatore [/showIncludes](../build/reference/showincludes-list-include-files.md) può essere utile in questo contesto. Nella finestra di dialogo Pagine delle proprietà per il progetto, aprire la pagina **C/C++**, **Avanzate** e impostare **Mostra inclusioni** su "Sì". Ricompilare il progetto e visualizzare l'elenco di #include (inclusioni) nella finestra di output.  Ogni intestazione è provvista di un rientro sotto l'intestazione che la include.  
+ L'opzione del compilatore [/showIncludes](../build/reference/showincludes-list-include-files.md) può essere utile in questo contesto. Nella finestra di dialogo Pagine delle proprietà per il progetto aprire la pagina **C/C++**, **Avanzate** e impostare **Mostra inclusioni** su **Sì**. Ricompilare il progetto e visualizzare l'elenco di #include (inclusioni) nella finestra di output.  Ogni intestazione è provvista di un rientro sotto l'intestazione che la include.  
   
 ## <a name="errors-involving-crt-functions"></a>Errori relativi alle funzioni CRT  
  Nel corso degli anni sono state apportate numerose modifiche al runtime C. Sono state aggiunte molte versioni sicure delle funzioni e alcune sono state rimosse. Come già descritto in precedenza in questo articolo, l'implementazione Microsoft della libreria CRT è stata sottoposta a refactoring in Visual Studio 2015, con nuovi file binari e file .lib associati.  
@@ -128,7 +129,7 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
  Se l'errore riguarda argomenti della stringa di formato, è probabile che il compilatore applichi lo standard in modo più restrittivo. Per altre informazioni vedere la cronologia delle modifiche. Prestare particolare attenzione a eventuali errori in questa fase, in quanto possono rappresentare rischi per la sicurezza.  
   
 ## <a name="errors-due-to-changes-in-the-c-standard"></a>Errori dovuti a modifiche dello standard C++  
- Anche lo standard C++ è stato sottoposto ad aggiornamenti non sempre compatibili con le versioni precedenti. L'introduzione della semantica di spostamento, di nuove parole chiave e di altre funzionalità del linguaggio e della libreria standard in C++&11; può causare errori del compilatore e anche un comportamento diverso in fase di runtime.  
+ Anche lo standard C++ è stato sottoposto ad aggiornamenti non sempre compatibili con le versioni precedenti. L'introduzione della semantica di spostamento, di nuove parole chiave e di altre funzionalità del linguaggio e della libreria standard in C++ 11 può causare errori del compilatore e anche un comportamento diverso in fase di runtime.  
   
  Ad esempio, un vecchio programma C++ può includere l'intestazione iostream.h. Questa intestazione è stata deprecata nelle fasi iniziali della storia di C++ e alla fine è stata completamente rimossa da Visual C++. In questo caso sarà necessario usare \<iostream> e riscrivere il codice. Per altre informazioni, vedere [Aggiornamento del vecchio codice iostream](porting-guide-spy-increment.md#updating_iostreams_code).  
   
@@ -167,9 +168,4 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 ## <a name="see-also"></a>Vedere anche  
  [Aggiornamento di progetti da versioni precedenti di Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)
  [Miglioramenti della conformità di C++ in Visual Studio 2017](../cpp-conformance-improvements-2017.md)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

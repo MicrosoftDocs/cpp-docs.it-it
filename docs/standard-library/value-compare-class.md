@@ -9,8 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::value_compare
-- std.value_compare
 - value_compare
 dev_langs:
 - C++

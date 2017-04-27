@@ -6,6 +6,17 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- exception/std::current_exception
+- exception/std::get_terminate
+- exception/std::get_unexpected
+- exception/std::make_exception_ptr
+- exception/std::rethrow_exception
+- exception/std::set_terminate
+- exception/std::set_unexpected
+- exception/std::terminate
+- exception/std::uncaught_exception
+- exception/std::unexpected
 ms.assetid: c09ac569-5e35-4fe8-872d-ca5810274dd7
 caps.latest.revision: 12
 manager: ghogen
@@ -23,7 +34,7 @@ ms.lasthandoff: 02/24/2017
 |[set_unexpected](#set_unexpected)|[terminate](#terminate)|[uncaught_exception](#uncaught_exception)|  
 |[unexpected](#unexpected)|  
   
-##  <a name="a-namecurrentexceptiona--currentexception"></a><a name="current_exception"></a>  current_exception  
+##  <a name="current_exception"></a>  current_exception  
  Ottiene un puntatore intelligente all'eccezione corrente.  
   
 ```cpp  
@@ -42,7 +53,7 @@ exception_ptr current_exception();
   
  Le chiamate successive alla funzione `current_exception` restituiscono oggetti `exception_ptr` che fanno riferimento a copie diverse dell'eccezione corrente. Di conseguenza, gli oggetti vengono considerati diversi perché fanno riferimento a copie diverse, anche se le copie presentano lo stesso valore binario.  
   
-##  <a name="a-namemakeexceptionptra--makeexceptionptr"></a><a name="make_exception_ptr"></a>  make_exception_ptr  
+##  <a name="make_exception_ptr"></a>  make_exception_ptr  
  Crea un oggetto [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) contenente la copia di un'eccezione.  
   
 ```cpp  
@@ -62,7 +73,7 @@ exception_ptr make_exception_ptr(E Except);
   
  In genere un'applicazione non richiede la funzione `make_exception_ptr` e se ne sconsiglia l'utilizzo.  
   
-##  <a name="a-namerethrowexceptiona--rethrowexception"></a><a name="rethrow_exception"></a>  rethrow_exception  
+##  <a name="rethrow_exception"></a>  rethrow_exception  
  Genera un'eccezione passata come parametro.  
   
 ```cpp  
@@ -76,14 +87,14 @@ void rethrow_exception(exception_ptr P);
 ### <a name="remarks"></a>Note  
  Dopo aver archiviato un'eccezione intercettata in un oggetto `exception_ptr`, il thread principale può elaborare l'oggetto. Nel thread principale, chiamare la funzione `rethrow_exception` insieme all'oggetto `exception_ptr` come suo argomento. La funzione `rethrow_exception` estrae l'eccezione dall'oggetto `exception_ptr`, quindi genera l'eccezione nel contesto del thread principale.  
   
-##  <a name="a-namegetterminatea--getterminate"></a><a name="get_terminate"></a>  get_terminate  
+##  <a name="get_terminate"></a>  get_terminate  
  Ottiene la funzione `terminate_handler` corrente.  
   
 ```cpp  
 terminate_handler get_terminate();
 ```  
   
-##  <a name="a-namesetterminatea--setterminate"></a><a name="set_terminate"></a>  set_terminate  
+##  <a name="set_terminate"></a>  set_terminate  
  Crea un nuovo `terminate_handler` da chiamare al termine del programma.  
   
 ```  
@@ -129,14 +140,14 @@ int main()
   
 ```  
   
-##  <a name="a-namegetunexpecteda--getunexpected"></a><a name="get_unexpected"></a>  get_unexpected  
+##  <a name="get_unexpected"></a>  get_unexpected  
  Ottiene la funzione `unexpected_handler` corrente.  
   
 ```cpp  
 unexpected_handler get_unexpected();
 ```  
   
-##  <a name="a-namesetunexpecteda--setunexpected"></a><a name="set_unexpected"></a>  set_unexpected  
+##  <a name="set_unexpected"></a>  set_unexpected  
  Stabilisce un nuovo `unexpected_handler` quando viene rilevata un'eccezione imprevista.  
   
 ```  
@@ -181,7 +192,7 @@ int main()
   
 ```  
   
-##  <a name="a-nameterminatea--terminate"></a><a name="terminate"></a>  terminate  
+##  <a name="terminate"></a>  terminate  
  Chiama un gestore di terminazione.  
   
 ```  
@@ -196,7 +207,7 @@ void terminate();
 ### <a name="example"></a>Esempio  
   Vedere [set_unexpected](../standard-library/exception-functions.md#set_unexpected) per un esempio dell'utilizzo di **terminate**.  
   
-##  <a name="a-nameuncaughtexceptiona--uncaughtexception"></a><a name="uncaught_exception"></a>  uncaught_exception  
+##  <a name="uncaught_exception"></a>  uncaught_exception  
  Restituisce `true` solo se un'eccezione generata è in corso di elaborazione.  
   
 ```  
@@ -259,7 +270,7 @@ In Test::~Test("outside try block")
         std::uncaught_exception( ) = 0  
 ```  
   
-##  <a name="a-nameunexpecteda--unexpected"></a><a name="unexpected"></a>  unexpected  
+##  <a name="unexpected"></a>  unexpected  
  Chiama il gestore imprevisto.  
   
 ```  

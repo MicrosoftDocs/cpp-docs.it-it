@@ -9,10 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.logical_not
 - logical_not
 - xfunctional/std::logical_not
-- std::logical_not
 dev_langs:
 - C++
 helpviewer_keywords:

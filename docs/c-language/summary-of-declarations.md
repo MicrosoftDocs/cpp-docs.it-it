@@ -30,26 +30,26 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: cf1442e98cdd7489a395bec211cda1bbb037bae2
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 85238c2cf07398bd74040a7d5d3c6c2e6a6b8fc3
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="summary-of-declarations"></a>Riepilogo di dichiarazioni
 `declaration`:  
- *declaration-specifiers attribute-seq* opz*init-declarator-list*opz**;**  
+ *declaration-specifiers attribute-seq* <sub>opt</sub> *init-declarator-list*<sub>opt</sub>**;**  
   
  /\* *attribute-seq* è specifico di Microsoft */  
   
  *declaration-specifiers*:  
- *storage-class-specifier declaration-specifiers*opz  
+ *storage-class-specifier declaration-specifiers*<sub>opt</sub>  
   
- *type-specifier declaration-specifiers*opz  
+ *type-specifier declaration-specifiers*<sub>opt</sub>  
   
- *type-qualifier declaration-specifiers*opz  
+ *type-qualifier declaration-specifiers*<sub>opt</sub>  
   
  *attribute-seq* :            /\* *attribute-seq* è specifico di Microsoft \*/  
- *attribute attribute-seq* opz  
+ *attribute attribute-seq* <sub>opt</sub>  
   
  *attribute* : uno tra      /* Specifico di Microsoft \*/  
  ||||  
@@ -120,23 +120,23 @@ ms.lasthandoff: 02/24/2017
  `volatile`  
   
  `declarator`:  
- `pointer`opz*direct-declarator*  
+ `pointer`<sub>opt</sub> *direct-declarator*  
   
  *direct-declarator*:  
  *identifier*  
   
  **(**  *declarator*  **)**  
   
- *direct-declarator*  **[**  *constant-expression* opz**]**  
+ *direct-declarator*  **[**  *constant-expression* <sub>opt</sub>**]**  
   
  *direct-declarator*  **(**  *parameter-type-list*  **)** /* Dichiaratore nuovo stile \*/  
   
- *direct-declarator*  **(**  *identifier-list*opz**)** /* Dichiaratore stile obsoleto \*/  
+ *direct-declarator*  **(**  *identifier-list*<sub>opt</sub>**)** /* Dichiaratore stile obsoleto \*/  
   
  `pointer`:  
- **\*** *type-qualifier-list*opz  
+ **\*** *type-qualifier-list*<sub>opt</sub>  
   
- **\*** *type-qualifier-list*opz`pointer`  
+ **\*** *type-qualifier-list*<sub>opt</sub>`pointer`  
   
  *parameter-type-list*:                           /\* Elenco parametri \*/  
  *parameter-list*  
@@ -154,7 +154,7 @@ ms.lasthandoff: 02/24/2017
  *type-qualifier-list type-qualifier*  
   
  *enum-specifier*:  
- **enum**  *identifier*opz**{** *enumerator-list* **}**  
+ **enum**  *identifier*<sub>opt</sub>**{** *enumerator-list* **}**  
   
  **enum**  *identifier*  
   
@@ -172,7 +172,7 @@ ms.lasthandoff: 02/24/2017
  *identifier*  
   
  *struct-or-union-specifier*:  
- *struct-or-union identifier*opz**{** *struct-declaration-list* **}** *struct-or-union identifier*  
+ *struct-or-union identifier*<sub>opt</sub>**{** *struct-declaration-list* **}** *struct-or-union identifier*  
   
  *struct-or-union*:  
  **struct**  
@@ -188,9 +188,9 @@ ms.lasthandoff: 02/24/2017
  *specifier-qualifier-list struct-declarator-list* **;**  
   
  *specifier-qualifier-list*:  
- *type-specifier specifier-qualifier-list*opz  
+ *type-specifier specifier-qualifier-list*<sub>opt</sub>  
   
- *type-qualifier specifier-qualifier-list*opz  
+ *type-qualifier specifier-qualifier-list*<sub>opt</sub>  
   
  *struct-declarator-list*:  
  *struct-declarator struct-declarator-list*  **,**  *struct-declarator*  
@@ -198,12 +198,12 @@ ms.lasthandoff: 02/24/2017
  *struct-declarator*:  
  *declarator*  
   
- *type-specifier declarator*opz**:** *constant-expression*  
+ *type-specifier declarator*<sub>opt</sub>**:** *constant-expression*  
   
  *parameter-declaration*:  
  *declaration-specifiers declarator* /* Dichiaratore denominato \*/  
   
- *declaration-specifiers abstract-declarator*opz**/\*** Dichiaratore anonimo **\*/**  
+ *declaration-specifiers abstract-declarator*<sub>opt</sub>**/\*** Dichiaratore anonimo **\*/**  
   
  *identifier-list*: **/\*** Per dichiaratore stile precedente **\* /**  
  *identifier*  
@@ -213,14 +213,14 @@ ms.lasthandoff: 02/24/2017
  *abstract-declarator*: **/\*** Usato con dichiaratori anonimi **\*/**  
  *pointer*  
   
- `pointer`opz*direct-abstract-declarator*  
+ `pointer`<sub>opt</sub>*direct-abstract-declarator*  
   
  *direct-abstract-declarator*:  
  **(**  *abstract-declarator*  **)**  
   
- *direct-abstract-declarator*opz**[** *constant-expression*opz**]**  
+ *direct-abstract-declarator*<sub>opt</sub>**[** *constant-expression*<sub>opt</sub>**]**  
   
- *direct-abstract-declarator*opz**(** *parameter-type-list* opz**)**  
+ *direct-abstract-declarator*<sub>opt</sub>**(** *parameter-type-list* <sub>opt</sub>**)**  
   
  *initializer*:  
  *assignment-expression*  
@@ -235,13 +235,13 @@ ms.lasthandoff: 02/24/2017
  *initializer-list*  **,**  *initializer*  
   
  *type-name*:  
- *specifier-qualifier-list abstract-declarator*opz  
+ *specifier-qualifier-list abstract-declarator*<sub>opt</sub>  
   
  *typedef-name*:  
  *identifier*  
   
  *extended-decl-modifier-seq*:/\*    Specifico di Microsoft \*/  
- *extended-decl-modifier*opz  
+ *extended-decl-modifier*<sub>opt</sub>  
   
  *extended-decl-modifier-seq extended-decl-modifier*  
   

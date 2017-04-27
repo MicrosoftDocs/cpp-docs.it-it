@@ -10,8 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - minus
-- std.minus
-- std::minus
 - xfunctional/std::minus
 dev_langs:
 - C++

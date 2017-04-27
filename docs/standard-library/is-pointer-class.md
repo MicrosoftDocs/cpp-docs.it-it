@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - is_pointer
-- std::is_pointer
 - type_traits/std::is_pointer
 dev_langs:
 - C++

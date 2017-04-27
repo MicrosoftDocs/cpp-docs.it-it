@@ -1,104 +1,120 @@
 ---
-title: "Funzioni da stringa a valore numerico | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apilocation: 
-  - "msvcr80.dll"
-  - "msvcr110.dll"
-  - "msvcr120.dll"
-  - "msvcr100.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr90.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_tcstoui64"
-  - "_tcstoi64"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "analisi, stringhe numeriche"
-  - "conversione di stringhe, in valori numerici"
+title: Funzioni da stringa a valore numerico | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apilocation:
+- msvcr80.dll
+- msvcr110.dll
+- msvcr120.dll
+- msvcr100.dll
+- msvcr110_clr0400.dll
+- msvcr90.dll
+apitype: DLLExport
+f1_keywords:
+- _tcstoui64
+- _tcstoi64
+dev_langs:
+- C++
+helpviewer_keywords:
+- parsing, numeric strings
+- string conversion, to numeric values
 ms.assetid: 11cbd9ce-033b-4914-bf66-029070e7e385
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Funzioni da stringa a valore numerico
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: f3e38062baccecbe3b3cf5bbc9e059c1f1acae56
+ms.lasthandoff: 04/01/2017
 
--   [strtod, \_strtod\_l, wcstod, \_wcstod\_l](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)  
+---
+# <a name="string-to-numeric-value-functions"></a>Funzioni da stringa a valore numerico
+-   [strtod, _strtod_l, wcstod, _wcstod_l](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)  
   
--   [strtol, wcstol, \_strtol\_l, \_wcstol\_l](../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)  
+-   [strtol, wcstol, _strtol_l, _wcstol_l](../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)  
   
--   [strtoul, \_strtoul\_l, wcstoul, \_wcstoul\_l](../c-runtime-library/reference/strtoul-strtoul-l-wcstoul-wcstoul-l.md)  
+-   [strtoul, _strtoul_l, wcstoul, _wcstoul_l](../c-runtime-library/reference/strtoul-strtoul-l-wcstoul-wcstoul-l.md)  
   
--   [\_strtoi64, \_wcstoi64, \_strtoi64\_l, \_wcstoi64\_l](../c-runtime-library/reference/strtoi64-wcstoi64-strtoi64-l-wcstoi64-l.md)  
+-   [_strtoi64, _wcstoi64, _strtoi64_l, _wcstoi64_l](../c-runtime-library/reference/strtoi64-wcstoi64-strtoi64-l-wcstoi64-l.md)  
   
--   [\_strtoui64, \_wcstoui64, \_strtoui64\_l, \_wcstoui64\_l](../c-runtime-library/reference/strtoui64-wcstoui64-strtoui64-l-wcstoui64-l.md)  
+-   [_strtoui64, _wcstoui64, _strtoui64_l, _wcstoui64_l](../c-runtime-library/reference/strtoui64-wcstoui64-strtoui64-l-wcstoui64-l.md)  
   
-## Note  
- Ogni funzione nella famiglia **strtod** converte una stringa con terminazione null a un valore numerico.  Nella tabella riportata di seguito vengono elencate le funzioni disponibili.  
+## <a name="remarks"></a>Note  
+ Ogni funzione della famiglia **strtod** converte una stringa con terminazione Null in un valore numerico. Nella tabella seguente sono elencate le funzioni disponibili.  
   
 |Funzione|Descrizione|  
 |--------------|-----------------|  
-|`strtod`|Convertire stringhe in valori a virgola mobile e con doppia precisione.|  
-|`strtol`|Convertire una stringa in un long integer|  
-|`strtoul`|Convertire una stringa in un unsigned long integer|  
-|`_strtoi64`|Convertire una stringa in un integer `__int64` a 64 bit|  
-|`_strtoui64`|Convertire una stringa in un unsigned integer `__int64` a 64 bit.|  
+|`strtod`|Converte una stringa in un valore a virgola mobile a precisione doppia|  
+|`strtol`|Converte una stringa in un long integer|  
+|`strtoul`|Converte una stringa in un unsigned long integer|  
+|`_strtoi64`|Converte una stringa in un integer `__int64` a 64 bit|  
+|`_strtoui64`|Converte una stringa in un unsigned integer `__int64` a 64 bit|  
   
- `wcstod`, `wcstol`, `wcstoul`e `_wcstoi64` sono versioni a caratteri estesi di `strtod`, `strtol`, `strtoul`e `_strtoi64`, rispettivamente.  L'argomento di tipo stringa a ognuna di queste funzioni a caratteri estesi è una stringa di caratteri estesi, ogni funzione si comporta in modo identico alla sua relativa controparte in single byte character.  
+ `wcstod`, `wcstol`, `wcstoul` e `_wcstoi64` sono versioni a caratteri wide rispettivamente di `strtod`, `strtol`, `strtoul` e `_strtoi64`. L'argomento di stringa per ognuna di queste funzioni di caratteri wide è una stringa di caratteri wide. Ogni funzione si comporta in maniera identica alla relativa controparte di caratteri a un byte.  
   
- La funzione `strtod` accetta due argomenti: il primo è la stringa di input e la seconda un puntatore al carattere che termina il processo di conversione.  `strtol`, `strtoul`, **\_strtoi64** e **\_strtoui64** accettano un terzo argomento come il numero base da utilizzare nel processo di conversione.  
+ La funzione `strtod` accetta due argomenti: il primo è la stringa di input e il secondo è un puntatore al carattere che termina il processo di conversione. `strtol`, `strtoul`, **_strtoi64** e **_strtoui64** accettano un terzo argomento come base numerica da usare nel processo di conversione.  
   
- La stringa di input è una sequenza di caratteri che può essere interpretata come valore numerico del tipo specificato.  Ogni funzione arresta la lettura della stringa in corrispondenza del primo carattere non riconosciuto come parte di un numero.  Questo può rappresentare il carattere di terminazione null.  Per `strtol`, `strtoul`, `_strtoi64`e `_strtoui64`, questo carattere di terminazione può essere il primo carattere numerico maggiore o uguale del numero fornito dall'utente.  
+ La stringa di input è una sequenza di caratteri che può essere interpretata come valore numerico del tipo specificato. Ogni funzione interrompe la lettura della stringa in corrispondenza del primo carattere che non può riconoscere come parte di un numero. Questo può essere il carattere Null di terminazione. Per `strtol`, `strtoul`, `_strtoi64` e `_strtoui64`, il carattere di terminazione può anche essere il primo carattere numerico maggiore o uguale alla base numerica specificata dall'utente.  
   
- Se il puntatore, fornito dall'utente, a un carattere di fine di conversione non è impostato su **NULL** al momento della chiamata, verrà archiviato un puntatore al carattere che arresta la scansione.  Se nessuna conversione può essere eseguita \(nessuna cifra valida è stata trovata o è stata specificata una base non valida\), il valore del puntatore della stringa viene archiviato all'indirizzo.  
+ Se il puntatore specificato dall'utente in un carattere di fine di conversione non è impostato su **NULL** in fase di chiamata, verrà archiviato un puntatore al carattere che ha interrotto l'analisi. Se è non possibile eseguire alcuna conversione (non sono state trovate cifre valide o è stata specificata una base non valida), il valore puntatore della stringa viene archiviato in tale indirizzo.  
   
- `strtod` si aspetta una stringa nel formato seguente:  
+ `strtod` prevede una stringa nel formato seguente:  
   
- \[*spazio*\] \[*segno*\] \[`digits`\] \[**.**`digits`\] \[ {**d** &#124; **D** &#124; **e** &#124; **E**}\[*sign*\]`digits`\]  
+ [*whitespace*] [*sign*] [`digits`] [**.**`digits`] [ {**d** &#124; **D** &#124; **e** &#124; **E**}[*sign*]`digits`]  
   
- Uno *spazio* può essere costituito dallo spazio o di caratteri di tabulazione, che vengono ignorati; il *segno* è sia più \(**\+**\) che meno \(**–**\); e `digits` è una o più cifre decimali.  Se nessuna cifra viene visualizzata prima del carattere radice, almeno uno deve apparire dopo il carattere di base.  Le cifre decimali possono essere seguite da un esponente, costituito da una lettera introduttiva \(**d**, **D**, **e**, o **E**\) e opzionalmente da un signed integer.  Se né una parte dell'esponente né un carattere di base viene visualizzato, un carattere di base viene utilizzato per seguire l'ultima cifra nella stringa.  Il primo carattere non idoneo arresta la scansione.  
+ Uno *spazio vuoto* può essere costituito da spazi o caratteri di tabulazione, che vengono ignorati; *sign* è il segno di addizione (**+**) o di sottrazione (**-**); e `digits` corrisponde a una o più cifre decimali. Se non viene visualizzata alcuna cifra prima del carattere di base, deve essercene almeno una dopo il carattere di base. Le cifre decimali possono essere seguite da un esponente, costituito da una lettera introduttiva (**d**, **D**, **e** o **E**) e facoltativamente da un intero con segno. Se non viene visualizzata una parte esponente né un carattere di base, si presuppone che l'ultima cifra nella stringa sia seguita da un carattere di base. Il primo carattere che non corrisponde a questo formato interrompe la lettura.  
   
- Il `strtol`, `strtoul`, `_strtoi64`e le funzioni `_strtoui64` si aspettano una stringa del formato seguente:  
+ Le funzioni `strtol`, `strtoul`, `_strtoi64` e `_strtoui64` prevedono una stringa nel formato seguente:  
   
- *spazio*\] \[{**\+** &#124; **\-**}\] \[**0** \[{ **x** &#124; **X** }\]\] \[`digits`\]  
+ [*whitespace*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [`digits`]  
   
- Se l'argomento di base è compreso tra 2 e 36, quindi viene utilizzato come base del numero.  Se è 0, i caratteri iniziali a cui fanno riferimento dal puntatore di fine di conversione vengono utilizzati per determinare la base.  Se il primo carattere è 0 e il secondo carattere non è 'x' o 'X', la stringa viene interpretata come intero ottale; in caso contrario, viene interpretata come numero decimale.  Se il primo carattere è '0' e il secondo carattere è 'x' o 'X', la stringa viene interpretata come Integer esadecimale.  Se il primo carattere è '1' e '9', la stringa viene interpretata come Integer decimale.  Le lettere da 'a' a 'z' \(o da 'A' a 'Z'\) sono assegnati i valori da 10 a 35; solo lettere con valori assegnati minori della *base* sono permesse.  `strtoul` e `_strtoui64` consentono un segno più \(**\+**\) o meno \(**–**\) come prefisso; un segno meno iniziale indica che il valore restituito è negato.  
+ Se l'argomento di base è incluso tra 2 e 36, viene usato come base del numero. Se è 0, per determinare la base vengono usati i caratteri iniziali a cui fa riferimento il puntatore di fine della conversione. Se il primo carattere è 0 e il secondo carattere non è 'x' o 'X', la stringa viene interpretata come un numero intero ottale. In caso contrario, viene interpretata come numero decimale. Se il primo carattere è '0' e il secondo carattere è 'x' o 'X', la stringa viene interpretata come integer esadecimale. Se il primo carattere è compreso tra '1' e '9', la stringa viene interpretata come integer decimale. Alle lettere da 'a' a 'z' (o da 'A' a 'Z') vengono assegnati i valori da 10 a 35. Sono consentite solo le lettere con valori assegnati minori di *base*. `strtoul` e `_strtoui64` consentono l'uso di un prefisso con un segno di addizione (**+**) o sottrazione (**-**). Un segno di sottrazione iniziale indica che il valore restituito è negativo.  
   
- Il valore di output è interessato dall'impostazione dell'impostazione di categoria `LC_NUMERIC` delle impostazioni locali; vedere [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) per ulteriori informazioni.  Le versioni di queste funzioni senza il suffisso **\_l** utilizzano le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali; le versioni con il suffisso **\_l** sono identiche, ad eccezione del fatto che utilizzano il parametro delle impostazioni locali che viene passato.  
+ La configurazione dell'impostazione della categoria `LC_NUMERIC` delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali.  
   
- Quando il valore restituito da queste funzioni può causare un overflow o un underflow, o quando la conversione non è possibile, i valori speciali vengono restituiti come mostrato di seguito:  
+ Se il valore restituito da queste funzioni causa un overflow o underflow, o se la conversione non può essere eseguita, vengono restituiti valori case speciali come illustrato di seguito:  
   
 |Funzione|Condizione|Valore restituito|  
-|--------------|----------------|-----------------------|  
-|`strtod`|Overflow|\+\/\- `HUGE_VAL`|  
+|--------------|---------------|--------------------|  
+|`strtod`|Overflow|+/- `HUGE_VAL`|  
 |`strtod`|Underflow o nessuna conversione|0|  
-|`strtol`|\+ Overflow.|**LONG\_MAX**|  
-|`strtol`|\- Overflow|**LONG\_MIN**|  
+|`strtol`|+ Overflow|**LONG_MAX**|  
+|`strtol`|- Overflow|**LONG_MIN**|  
 |`strtol`|Underflow o nessuna conversione|0|  
-|`_strtoi64`|\+ Overflow.|**\_I64\_MAX**|  
-|`_strtoi64`|\- Overflow|**\_I64\_MIN**|  
+|`_strtoi64`|+ Overflow|**_I64_MAX**|  
+|`_strtoi64`|- Overflow|**_I64_MIN**|  
 |`_strtoi64`|Nessuna conversione|0|  
-|`_strtoui64`|Overflow|**\_UI64\_MAX**|  
+|`_strtoui64`|Overflow|**_UI64_MAX**|  
 |`_strtoui64`|Nessuna conversione|0|  
   
- **\_I64\_MAX**, \_**I64\_MIN**, e **\_UI64\_MAX** sono definiti in LIMITS.H.  
+ **_I64_MAX**, _**I64_MIN** e **_UI64_MAX** sono definiti in LIMITS.H.  
   
- `wcstod`, `wcstol`, `wcstoul`, `_wcstoi64`e `_wcstoui64` sono versioni a caratteri estesi `strtod`, `strtol`, `strtoul`, `_strtoi64`e `_strtoui64`, rispettivamente; il puntatore a un argomento di fine conversione a ognuna di queste funzioni a caratteri estesi è una stringa di caratteri estesi.  In caso contrario, ognuna di queste funzioni a caratteri estesi si comporta in modo identico alla relativa controparte in single byte character.  
+ `wcstod`, `wcstol`, `wcstoul`, `_wcstoi64` e `_wcstoui64` sono versioni a caratteri wide rispettivamente di `strtod`, `strtol`, `strtoul`, `_strtoi64` e `_strtoui64`. Il puntatore a un argomento di fine conversione per ognuna di queste funzioni di caratteri wide è una stringa di caratteri wide. In caso contrario, ognuna di queste funzioni di caratteri wide si comporta in modo identico alla controparte di caratteri a un byte.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Conversione dei dati](../c-runtime-library/data-conversion.md)   
  [Impostazioni locali](../c-runtime-library/locale.md)   
  [Interpretazione di sequenze di caratteri multibyte](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [Supporto a virgola mobile](../c-runtime-library/floating-point-support.md)   
- [atof, \_atof\_l, \_wtof, \_wtof\_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)
+ [Floating-Point Support](../c-runtime-library/floating-point-support.md)  (Supporto delle funzioni a virgola mobile)  
+ [atof, _atof_l, _wtof, _wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)

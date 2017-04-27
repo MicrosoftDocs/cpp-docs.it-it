@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - conditional
-- std::conditional
 - type_traits/std::conditional
 dev_langs:
 - C++

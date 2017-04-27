@@ -10,8 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - system_error/std::system_error
-- std.system_error
-- std::system_error
 - system_error
 dev_langs:
 - C++

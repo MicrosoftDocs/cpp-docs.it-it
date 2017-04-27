@@ -6,6 +6,12 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- utility/std::exchange
+- utility/std::forward
+- utility/std::make_pair
+- utility/std::move
+- utility/std::swap
 ms.assetid: b1df38cd-3a59-4098-9c81-83342eb719a4
 caps.latest.revision: 7
 manager: ghogen
@@ -21,7 +27,7 @@ ms.lasthandoff: 02/24/2017
 |[exchange](#exchange)|[forward](#forward)|[get Function &lt;utility&gt;](#get)|  
 |[make_pair](#make_pair)|[move](#move)|[swap](#swap)|  
   
-##  <a name="a-nameexchangea--exchange"></a><a name="exchange"></a>  exchange  
+##  <a name="exchange"></a>  exchange  
  **(C++14)** Assegna un nuovo valore a un oggetto e restituisce il relativo valore precedente.  
   
 ```cpp  
@@ -70,7 +76,7 @@ The new value of c1 after exchange is: 2
 */  
 ```  
   
-##  <a name="a-nameforwarda--forward"></a><a name="forward"></a>  forward  
+##  <a name="forward"></a>  forward  
  Esegue il cast in modo condizionale del relativo argomento a un riferimento rvalue se l'argomento è un rvalue o un riferimento rvalue. In questo modo viene ripristinata la caratteristica rvalue di una funzione di inoltro in supporto dell'inoltro perfetto.  
   
 ```
@@ -98,7 +104,7 @@ constexpr Type&& forward(typename remove_reference<Type>::type&& Arg) noexcept
   
  Il ripristino della caratteristica rvalue del valore originale di un argomento per eseguire la risoluzione dell'overload è noto come *inoltro perfetto*. L'inoltro perfetto consente a una funzione di modello di accettare un argomento di un tipo di riferimento e di ripristinare la caratteristica rvalue quando è necessario per una risoluzione corretta dell'overload. Utilizzando l'inoltro perfetto è possibile mantenere la semantica di spostamento relativa agli rvalue ed evitare di fornire gli overload per le funzioni che variano solo in base al tipo di riferimento dei relativi argomenti.  
   
-##  <a name="a-namegeta--get"></a><a name="get"></a>  get  
+##  <a name="get"></a>  get  
  Consente di visualizzare un elemento dall'oggetto `pair` in base alla posizione di indice o in base al tipo.  
   
 ```
@@ -193,7 +199,7 @@ int main()
 }
 ```  
   
-##  <a name="a-namemakepaira--makepair"></a><a name="make_pair"></a>  make_pair  
+##  <a name="make_pair"></a>  make_pair  
  Funzione di modello che è possibile usare per costruire oggetti di tipo `pair`, in cui i tipi di componenti vengono automaticamente scelti in base ai tipi di dati passati come parametri.  
   
 ```
@@ -238,7 +244,7 @@ pair<T, U> make_pair(T&& Val1, U&& Val2);
 ### <a name="example"></a>Esempio  
   Per un esempio sull'uso della funzione helper `make_pair` per dichiarare e inizializzare una coppia, vedere [Struttura pair](../standard-library/pair-structure.md).  
   
-##  <a name="a-namemovea--move"></a><a name="move"></a>  move  
+##  <a name="move"></a>  move  
  Esegue il cast in modo condizionale del relativo argomento a un riferimento rvalue e segnala pertanto che può essere spostato se il relativo tipo è abilitato allo spostamento.  
   
 ```
@@ -263,7 +269,7 @@ constexpr typename remove_reference<Type>::type&& move(Type&& Arg) noexcept;
   
  Se il valore passato in `Arg` è un lvalue, ovvero dispone di un nome o il relativo indirizzo può essere accettato, viene invalidato quando si verifica lo spostamento. Non fare riferimento al valore passato in `Arg` in base al relativo nome o indirizzo dopo che è stato spostato.  
   
-##  <a name="a-nameswapa--swap"></a><a name="swap"></a>  swap  
+##  <a name="swap"></a>  swap  
  Scambia gli elementi di due oggetti della [struttura pair](../standard-library/pair-structure.md).  
   
 ```

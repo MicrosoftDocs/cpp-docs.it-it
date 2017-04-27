@@ -13,6 +13,8 @@ f1_keywords:
 - tuple/std::operator<
 - tuple/std::operator<=
 - tuple/std::operator==
+dev_langs:
+- C++
 ms.assetid: f25752dc-d3e2-4e12-b5ac-9a8682ca60ed
 caps.latest.revision: 13
 manager: ghogen
@@ -28,7 +30,7 @@ ms.lasthandoff: 02/24/2017
 |[operator!=](#operator_neq)|[operator&gt;](#operator_gt_)|[operator&gt;=](#operator_gt__eq)|  
 |[operator&lt;](#operator_lt_)|[operator&lt;=](#operator_lt__eq)|[operator==](#operator_eq_eq)|  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  operator!=  
+##  <a name="operator_neq"></a>  operator!=  
  Confronta oggetti `tuple` per verificarne la disuguaglianza.  
   
 ```  
@@ -90,7 +92,7 @@ false
 true  
 ```  
   
-##  <a name="a-nameoperatorlta--operatorlt"></a><a name="operator_lt_"></a>  operator&lt;  
+##  <a name="operator_lt_"></a>  operator&lt;  
  Confronta oggetti `tuple` per verificare se sono minori di un certo valore.  
   
 ```  
@@ -152,7 +154,7 @@ false
 true  
 ```  
   
-##  <a name="a-nameoperatorlteqa--operatorlt"></a><a name="operator_lt__eq"></a>  operator&lt;=  
+##  <a name="operator_lt__eq"></a>  operator&lt;=  
  Confronta oggetti `tuple` per verificare se sono minori o uguali a un certo valore.  
   
 ```  
@@ -214,7 +216,7 @@ true
 false  
 ```  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  operator==  
+##  <a name="operator_eq_eq"></a>  operator==  
  Confronta oggetti `tuple` per verificarne l'uguaglianza.  
   
 ```  
@@ -276,7 +278,7 @@ true
 false  
 ```  
   
-##  <a name="a-nameoperatorgta--operatorgt"></a><a name="operator_gt_"></a>  operator&gt;  
+##  <a name="operator_gt_"></a>  operator&gt;  
  Confronta oggetti `tuple` per verificare qual è il maggiore.  
   
 ```  
@@ -338,7 +340,7 @@ false
 true  
 ```  
   
-##  <a name="a-nameoperatorgteqa--operatorgt"></a><a name="operator_gt__eq"></a>  operator&gt;=  
+##  <a name="operator_gt__eq"></a>  operator&gt;=  
  Confronta oggetti `tuple` per verificare se sono uguali o stabilire qual è il maggiore.  
   
 ```  

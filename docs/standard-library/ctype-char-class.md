@@ -11,8 +11,6 @@ ms.topic: article
 f1_keywords:
 - ctype<char>
 - locale/std::ctype<char>
-- std::ctype<char>
-- std.ctype<char>
 dev_langs:
 - C++
 helpviewer_keywords:

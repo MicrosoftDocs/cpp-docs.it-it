@@ -6,6 +6,15 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- fstream/std::filebuf
+- fstream/std::fstream
+- fstream/std::ifstream
+- fstream/std::ofstream
+- fstream/std::wfilebuf
+- fstream/std::wfstream
+- fstream/std::wifstream
+- fstream/std::wofstream
 ms.assetid: 8dddef2d-7f17-42a6-ba08-6f6f20597d23
 caps.latest.revision: 11
 manager: ghogen
@@ -22,7 +31,7 @@ ms.lasthandoff: 02/24/2017
 |[ofstream](#ofstream)|[wfilebuf](#wfilebuf)|[wfstream](#wfstream)|  
 |[wifstream](#wifstream)|[wofstream](#wofstream)|  
   
-##  <a name="a-namefilebufa--filebuf"></a><a name="filebuf"></a>  filebuf  
+##  <a name="filebuf"></a>  filebuf  
  Tipo `basic_filebuf` specializzato nei parametri di modello `char`.  
   
 ```
@@ -32,7 +41,7 @@ typedef basic_filebuf<char, char_traits<char>> filebuf;
 ### <a name="remarks"></a>Note  
  Il tipo è un sinonimo della classe modello [basic_filebuf](../standard-library/basic-filebuf-class.md), specializzata per gli elementi di tipo `char` con tratti di carattere predefiniti.  
   
-##  <a name="a-namefstreama--fstream"></a><a name="fstream"></a>  fstream  
+##  <a name="fstream"></a>  fstream  
  Tipo `basic_fstream` specializzato nei parametri di modello `char`.  
   
 ```
@@ -42,7 +51,7 @@ typedef basic_fstream<char, char_traits<char>> fstream;
 ### <a name="remarks"></a>Note  
  Il tipo è un sinonimo della classe modello [basic_fstream](../standard-library/basic-fstream-class.md), specializzata per gli elementi di tipo `char` con tratti di carattere predefiniti.  
   
-##  <a name="a-nameifstreama--ifstream"></a><a name="ifstream"></a>  ifstream  
+##  <a name="ifstream"></a>  ifstream  
  Definisce un flusso da usare per leggere i dati di tipo carattere a un byte in sequenza da un file. `ifstream` è un typedef che specializza la classe modello `basic_ifstream` per `char`.  
   
  Esiste anche `wifstream`, un typedef che specializza `basic_ifstream` per leggere i caratteri `wchar_t` a larghezza doppia. Per altre informazioni, vedere [wifstream](../standard-library/fstream-typedefs.md#wifstream).  
@@ -70,7 +79,7 @@ typedef basic_ifstream<char, char_traits<char>> ifstream;
   
  `}`  
   
-##  <a name="a-nameofstreama--ofstream"></a><a name="ofstream"></a>  ofstream  
+##  <a name="ofstream"></a>  ofstream  
  Tipo `basic_ofstream` specializzato nei parametri di modello `char`.  
   
 ```
@@ -80,7 +89,7 @@ typedef basic_ofstream<char, char_traits<char>> ofstream;
 ### <a name="remarks"></a>Note  
  Il tipo è un sinonimo della classe modello [basic_ofstream](../standard-library/basic-ofstream-class.md), specializzata per gli elementi di tipo `char` con tratti di carattere predefiniti.  
   
-##  <a name="a-namewfstreama--wfstream"></a><a name="wfstream"></a>  wfstream  
+##  <a name="wfstream"></a>  wfstream  
  Tipo `basic_fstream` specializzato nei parametri di modello `wchar_t`.  
   
 ```
@@ -90,7 +99,7 @@ typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
 ### <a name="remarks"></a>Note  
  Il tipo è un sinonimo della classe modello [basic_fstream](../standard-library/basic-fstream-class.md), specializzata per gli elementi di tipo `wchar_t` con tratti di carattere predefiniti.  
   
-##  <a name="a-namewifstreama--wifstream"></a><a name="wifstream"></a>  wifstream  
+##  <a name="wifstream"></a>  wifstream  
  Tipo `basic_ifstream` specializzato nei parametri di modello `wchar_t`.  
   
 ```
@@ -100,7 +109,7 @@ typedef basic_ifstream<wchar_t, char_traits<wchar_t>> wifstream;
 ### <a name="remarks"></a>Note  
  Il tipo è un sinonimo della classe modello [basic_ifstream](../standard-library/basic-ifstream-class.md), specializzata per gli elementi di tipo `wchar_t` con tratti di carattere predefiniti.  
   
-##  <a name="a-namewofstreama--wofstream"></a><a name="wofstream"></a>  wofstream  
+##  <a name="wofstream"></a>  wofstream  
  Tipo `basic_ofstream` specializzato nei parametri di modello `wchar_t`.  
   
 ```
@@ -110,7 +119,7 @@ typedef basic_ofstream<wchar_t, char_traits<wchar_t>> wofstream;
 ### <a name="remarks"></a>Note  
  Il tipo è un sinonimo della classe modello [basic_ofstream](../standard-library/basic-ofstream-class.md), specializzata per gli elementi di tipo `wchar_t` con tratti di carattere predefiniti.  
   
-##  <a name="a-namewfilebufa--wfilebuf"></a><a name="wfilebuf"></a>  wfilebuf  
+##  <a name="wfilebuf"></a>  wfilebuf  
  Tipo `basic_filebuf` specializzato nei parametri di modello `wchar_t`.  
   
 ```

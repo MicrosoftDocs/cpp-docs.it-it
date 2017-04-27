@@ -10,8 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - is_assignable
-- std.is_assignable
-- std::is_assignable
 - type_traits/std::is_assignable
 dev_langs:
 - C++

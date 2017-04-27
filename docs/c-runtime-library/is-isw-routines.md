@@ -1,179 +1,195 @@
 ---
-title: "is, isw Routines | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apilocation: 
-  - "msvcr110_clr0400.dll"
-  - "msvcr90.dll"
-  - "msvcr80.dll"
-  - "msvcr100.dll"
-  - "msvcr110.dll"
-  - "msvcr120.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "isw"
-  - "is"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "is (routine)"
-  - "isw (routine)"
+title: Routine is, isw | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apilocation:
+- msvcr110_clr0400.dll
+- msvcr90.dll
+- msvcr80.dll
+- msvcr100.dll
+- msvcr110.dll
+- msvcr120.dll
+apitype: DLLExport
+f1_keywords:
+- isw
+- is
+dev_langs:
+- C++
+helpviewer_keywords:
+- is routines
+- isw routines
 ms.assetid: 1e171a57-2cde-41f6-a75f-a080fa3c12e5
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# is, isw Routines
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: d4f4902c29b64be4c2e032571face5f583c62734
+ms.lasthandoff: 04/01/2017
 
+---
+# <a name="is-isw-routines"></a>is, isw Routines
 |||  
 |-|-|  
-|[isalnum, iswalnum, \_isalnum\_l, \_iswalnum\_l](../c-runtime-library/reference/isalnum-iswalnum-isalnum-l-iswalnum-l.md)|[isgraph, iswgraph, \_isgraph\_l, \_iswgraph\_l](../c-runtime-library/reference/isgraph-iswgraph-isgraph-l-iswgraph-l.md)|  
-|[isalpha, iswalpha, \_isalpha\_l, \_iswalpha\_l](../c-runtime-library/reference/isalpha-iswalpha-isalpha-l-iswalpha-l.md)|[isleadbyte, \_isleadbyte\_l](../c-runtime-library/reference/isleadbyte-isleadbyte-l.md)|  
-|[isascii, isascii, iswascii](../c-runtime-library/reference/isascii-isascii-iswascii.md)|[islower, iswlower, \_islower\_l, \_iswlower\_l](../c-runtime-library/reference/islower-iswlower-islower-l-iswlower-l.md)|  
-|[isblank, iswblank, \_isblank\_l, \_iswblank\_l](../c-runtime-library/reference/isblank-iswblank-isblank-l-iswblank-l.md)|[isprint, iswprint, \_isprint\_l, \_iswprint\_l](../c-runtime-library/reference/isprint-iswprint-isprint-l-iswprint-l.md)|  
-|[iscntrl, iswcntrl, \_iscntrl\_l, \_iswcntrl\_l](../c-runtime-library/reference/iscntrl-iswcntrl-iscntrl-l-iswcntrl-l.md)|[ispunct, iswpunct, \_ispunct\_l, \_iswpunct\_l](../c-runtime-library/reference/ispunct-iswpunct-ispunct-l-iswpunct-l.md)|  
-|[iscsym, iscsymf, iscsym, iswcsym, iscsymf, iswcsymf, iscsym\_l, iswcsym\_l, iscsymf\_l, iswcsymf\_l](../c-runtime-library/reference/iscsym-functions.md)|[isspace, iswspace, \_isspace\_l, \_iswspace\_l](../c-runtime-library/reference/isspace-iswspace-isspace-l-iswspace-l.md)|  
-|[\_isctype, iswctype, \_isctype\_l, \_iswctype\_l](../c-runtime-library/reference/isctype-iswctype-isctype-l-iswctype-l.md)|[isupper, \_isupper\_l, iswupper, \_iswupper\_l](../c-runtime-library/reference/isupper-isupper-l-iswupper-iswupper-l.md)|  
-|[isdigit, iswdigit, \_isdigit\_l, \_iswdigit\_l](../c-runtime-library/reference/isdigit-iswdigit-isdigit-l-iswdigit-l.md)|[isxdigit, iswxdigit, \_isxdigit\_l, \_iswxdigit\_l](../c-runtime-library/reference/isxdigit-iswxdigit-isxdigit-l-iswxdigit-l.md)|  
+|[isalnum, iswalnum, _isalnum_l, _iswalnum_l](../c-runtime-library/reference/isalnum-iswalnum-isalnum-l-iswalnum-l.md)|[isgraph, iswgraph, _isgraph_l, _iswgraph_l](../c-runtime-library/reference/isgraph-iswgraph-isgraph-l-iswgraph-l.md)|  
+|[isalpha, iswalpha, _isalpha_l, _iswalpha_l](../c-runtime-library/reference/isalpha-iswalpha-isalpha-l-iswalpha-l.md)|[isleadbyte, _isleadbyte_l](../c-runtime-library/reference/isleadbyte-isleadbyte-l.md)|  
+|[isascii, __isascii, iswascii](../c-runtime-library/reference/isascii-isascii-iswascii.md)|[islower, iswlower, _islower_l, _iswlower_l](../c-runtime-library/reference/islower-iswlower-islower-l-iswlower-l.md)|  
+|[isblank, iswblank, _isblank_l, _iswblank_l](../c-runtime-library/reference/isblank-iswblank-isblank-l-iswblank-l.md)|[isprint, iswprint, _isprint_l, _iswprint_l](../c-runtime-library/reference/isprint-iswprint-isprint-l-iswprint-l.md)|  
+|[iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l](../c-runtime-library/reference/iscntrl-iswcntrl-iscntrl-l-iswcntrl-l.md)|[ispunct, iswpunct, _ispunct_l, _iswpunct_l](../c-runtime-library/reference/ispunct-iswpunct-ispunct-l-iswpunct-l.md)|  
+|[iscsym, iscsymf, __iscsym, \__iswcsym, \__iscsymf, \__iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l](../c-runtime-library/reference/iscsym-functions.md)|[isspace, iswspace, _isspace_l, _iswspace_l](../c-runtime-library/reference/isspace-iswspace-isspace-l-iswspace-l.md)|  
+|[_isctype, iswctype, _isctype_l, _iswctype_l](../c-runtime-library/reference/isctype-iswctype-isctype-l-iswctype-l.md)|[isupper, _isupper_l, iswupper, _iswupper_l](../c-runtime-library/reference/isupper-isupper-l-iswupper-iswupper-l.md)|  
+|[isdigit, iswdigit, _isdigit_l, _iswdigit_l](../c-runtime-library/reference/isdigit-iswdigit-isdigit-l-iswdigit-l.md)|[isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l](../c-runtime-library/reference/isxdigit-iswxdigit-isxdigit-l-iswxdigit-l.md)|  
   
-## Note  
+## <a name="remarks"></a>Note  
  Queste routine verificano che i caratteri soddisfino le condizioni specificate.  
   
- Le routine **is** forniscono risultati significativi per qualsiasi argomento Integer da –1 \(`EOF`\) a **UCHAR\_MAX** \(0xFF\), inclusi.  Il tipo di argomento previsto è `int`.  
+ Le routine **is** producono risultati significativi per qualsiasi argomento Integer compreso tra -1 (`EOF`) e **UCHAR_MAX** (0xFF), inclusi. Il tipo di argomento previsto è `int`.  
   
 > [!CAUTION]
->  Per routine **is**, il passaggio di un argomento di tipo `char` potrebbe generare risultati imprevedibili.  Un carattere a byte singolo SBCS o MBCS di tipo `char` con un valore maggiore di 0x7F è negativo.  Se viene passato un tipo `char`, il compilatore potrebbe convertire il valore in un `int` o **long** con segno.  Il valore potrebbe essere esteso con segno dal compilatore, con risultati non previsti.  
+>  Per le routine **is**, il passaggio di un argomento di tipo `char` potrebbe generare risultati imprevedibili. Un carattere a un byte SBCS o MBCS di tipo `char` con un valore maggiore di 0x7F è negativo. Se viene passato un tipo `char`, è possibile che il compilatore converta il valore in un `int` o **long** con segno. Il valore potrebbe essere esteso con segno dal compilatore, con risultati non previsti.  
   
- Le routine **isw** forniscono risultati significativi per qualsiasi valore Integer da –1 \(**WEOF**\) a 0xFFFF, inclusi.  Il tipo di dati **wint\_t** è definito in WCHAR.H come **unsigned short**; può utilizzare qualsiasi carattere di tipo "wide" o di tipo "wide" di fine file \(**WEOF**\).  
+ Le routine **isw** producono risultati significativi per qualsiasi valore Integer compreso tra -1 (**WEOF**) e 0xFFFF, inclusi. Il tipo di dati **wint_t** è definito in WCHAR.H come **unsigned short**. Può usare qualsiasi carattere wide o valore wide di fine del file (**WEOF**).  
   
- Il valore di output è interessato dall'impostazione dell'impostazione di categoria `LC_CTYPE` delle impostazioni locali; vedere [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) per ulteriori informazioni.  Le versioni di queste funzioni senza il suffisso **\_l** utilizzano le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali; le versioni con il suffisso **\_l** sono identiche, ad eccezione del fatto che utilizzano il parametro delle impostazioni locali che viene passato.  
+ La configurazione dell'impostazione della categoria `LC_CTYPE` delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali.  
   
- Nelle impostazioni locali "C", le condizioni di test per le routine **is** sono come specificato qui di seguito:  
+ Nelle impostazioni locali "C" le condizioni di test per le routine **is** sono quelle specificate di seguito:  
   
  `isalnum`  
- Alfanumerico \(A – Z, a – z, o 0 – 9\).  
+ Alfanumerico (A - Z, a - z o 0 - 9).  
   
  `isalpha`  
- Alfabetico \(A – Z o a – z\).  
+ Alfabetico (A - Z o a - z).  
   
  `__isascii`  
- Carattere ASCII \(0x00 – 0x7F\).  
+ Carattere ASCII (0x00 - 0x7F).  
   
  `isblank`  
- Tabulazione orizzontale o spazio \(0x09 o 0x20\).  
+ Tabulazione orizzontale o spazio (0x09 o 0x20).  
   
  `iscntrl`  
- Carattere di controllo \(0x00 – 0x1F o 0x7F\).  
+ Carattere di controllo (0x00-0x1F o 0x7F).  
   
  `__iscsym`  
- Lettera, sottolineatura, o cifra.  
+ Lettera, carattere di sottolineatura o cifra.  
   
  `__iscsymf`  
- Lettera o sottolineatura.  
+ Lettera o carattere di sottolineatura.  
   
  **isdigit**  
- Cifra decimale \(0 – 9\).  
+ Cifra decimale (0 - 9).  
   
  `isgraph`  
- Carattere stampabile eccetto lo spazio \( \).  
+ Carattere stampabile, eccetto lo spazio ( ).  
   
  `islower`  
- Lettera minuscola \(a – z\).  
+ Lettera minuscola (a - z).  
   
  `isprint`  
- Carattere stampabile tra cui spazio \(0x20 – 0x7E\).  
+ Caratteri stampabili, incluso lo spazio (0x20 - 0x7E).  
   
  `ispunct`  
- Caratteri di punteggiatura.  
+ Carattere di punteggiatura.  
   
  `isspace`  
- Carattere di spazio vuoto \(0x09 – 0x0D o 0x20\).  
+ Spazio vuoto (0x09 - 0x0D o 0x20).  
   
  `isupper`  
- Lettera maiuscola \(A – Z\).  
+ Lettera maiuscola (A - Z).  
   
  `isxdigit`  
- Cifra esadecimale \(A – f, a alla f, o 0 – 9\).  
+ Cifra esadecimale (A - F, a - f o 0 - 9).  
   
- Per le routine **isw**, il risultato del test per la condizione specifica è indipendente dalle impostazioni locali.  Le condizioni di test per le funzioni **isw** sono le seguenti:  
+ Per le routine **isw**, il risultato del test per la condizione specifica è indipendente dalle impostazioni locali. Le condizioni di test per le funzioni **isw** sono le seguenti:  
   
  `iswalnum`  
  `iswalpha` o `iswdigit`.  
   
  `iswalpha`  
- Qualsiasi carattere di tipo "wide" di un set definito dall'implementazione per il quale nessuna delle funzioni `iswcntrl`, `iswdigit`, `iswpunct`, o `iswspace` è diversa da zero.  `iswalpha` restituisce un valore diverso da zero solo per i caratteri di tipo " wide " per i quali `iswupper` o `iswlower` è diversa da zero.  
+ Qualsiasi carattere wide di un set definito a livello di implementazione per il quale nessuna delle funzioni `iswcntrl`, `iswdigit`, `iswpunct`, o `iswspace` è diversa da zero. `iswalpha` restituisce un valore diverso da zero solo per i caratteri wide per i quali `iswupper` o `iswlower` è diversa da zero.  
   
  `iswascii`  
- Rappresentazione di caratteri di tipo "wide" nella codifica ASCII \(0x0000 – 0x007F\).  
+ Rappresentazione di caratteri wide in caratteri ASCII (0x0000 - 0x007F).  
   
  `iswblank`  
- Il carattere di tipo "wide" che corrisponde allo spazio vuoto standard o è parte di un set definito dall'implementazione di caratteri di tipo "wide" per il quale la funzione `iswalnum` è falsa.  I caratteri vuoti standard sono spazio \(L' '\) e tab orizzontale \(L'\\t'\).  
+ Carattere wide che corrisponde allo spazio standard o è parte di un set definito a livello di implementazione di caratteri wide per il quale la funzione `iswalnum` è falsa. I caratteri vuoti standard sono spazio (L' ') e tabulazione orizzontale (L'\t').  
   
  `iswcntrl`  
- Caratteri di tipo "wide" di controllo.  
+ Carattere di controllo wide.  
   
- **\_\_iswcsym**  
- Qualsiasi carattere di tipo "wide" per il quale **isalnum** è vera, o il carattere "\_".  
+ **__iswcsym**  
+ Qualsiasi carattere wide per il quale la funzione **isalnum** è vera, o il carattere "_".  
   
- **\_\_iswcsymf**  
- Qualsiasi carattere di tipo "wide" per il quale `iswalpha` è vera, o il carattere "\_".  
+ **__iswcsymf**  
+ Qualsiasi carattere wide per il quale `iswalpha` è vera, o il carattere "_".  
   
  `iswctype`  
- Il carattere ha una proprietà specificata dall'argomento `desc`.  Per ciascun valore valido dell'argomento `desc` della funzione `iswctype`, esiste un'equivalente routine di classificazione a caratteri di tipo "wide", come illustrato nella tabella seguente:  
+ Il carattere ha una proprietà specificata dall'argomento `desc`. Per ogni valore valido dell'argomento `desc` della funzione `iswctype`, esiste un'equivalente routine di classificazione a caratteri wide, come illustrato nella tabella seguente:  
   
- **Equivalenza di iswctype\(**   
- ***c, desc* \) ad altre routines isw di Testing**  
+ **Equivalenza di iswctype (**   
+ ***c, desc* ) ad altre routine di test isw**  
   
-|Valore dell'argomento *desc*|l'equivalente di iswctype \( *c, desc* \)|  
-|----------------------------------|-----------------------------------------------|  
-|**\_ALPHA**|**iswalpha\(** `c` **\)**|  
-|**\_ALPHA** &#124; **\_DIGIT**|**iswalnum\(** `c` **\)**|  
-|**\_BLANK**|**iswblank\(** `c` **\)**|  
-|**\_CONTROL**|**iswcntrl\(** `c` **\)**|  
-|**\_DIGIT**|**iswdigit\(** `c` **\)**|  
-|**\_ALPHA** &#124; **\_DIGIT** &#124; **\_PUNCT**|**iswgraph\(** `c` **\)**|  
-|**\_LOWER**|**iswlower\(** `c` **\)**|  
-|**\_ALPHA** &#124; **\_BLANK** &#124; **\_DIGIT** &#124; **\_PUNCT**|**iswprint\(** `c` **\)**|  
-|**\_PUNCT**|**iswpunct\(** `c` **\)**|  
-|**\_BLANK**|**iswblank\(** `c` **\)**|  
-|**\_SPACE**|**iswspace\(** `c` **\)**|  
-|**\_UPPER**|**iswupper\(** `c` **\)**|  
-|**\_HEX**|**iswxdigit\(** `c` **\)**|  
+|Valore dell'argomento *desc*|Equivalente di iswctype( *c, desc*)|  
+|------------------------------|----------------------------------------|  
+|**_ALPHA**|**iswalpha(** `c` **)**|  
+|**_ALPHA** &#124; **_DIGIT**|**iswalnum(** `c` **)**|  
+|**_BLANK**|**iswblank(** `c` **)**|  
+|**_CONTROL**|**iswcntrl(** `c` **)**|  
+|**_DIGIT**|**iswdigit(** `c` **)**|  
+|**_ALPHA** &#124; **_DIGIT** &#124; **_PUNCT**|**iswgraph(** `c` **)**|  
+|**_LOWER**|**iswlower(** `c` **)**|  
+|**_ALPHA** &#124; **_BLANK** &#124; **_DIGIT** &#124; **_PUNCT**|**iswprint(** `c` **)**|  
+|**_PUNCT**|**iswpunct(** `c` **)**|  
+|**_BLANK**|**iswblank(** `c` **)**|  
+|**_SPACE**|**iswspace(** `c` **)**|  
+|**_UPPER**|**iswupper(** `c` **)**|  
+|**_HEX**|**iswxdigit(** `c` **)**|  
   
  `iswdigit`  
- Carattere di tipo "wide" corrispondente ad una cifra decimale.  
+ Carattere wide corrispondente a una cifra decimale.  
   
  `iswgraph`  
- Carattere di tipo "wide" stampabile escluso il carattere di spazio \(L '\).  
+ Carattere wide stampabile, escluso il carattere wide dello spazio (L ').  
   
  `iswlower`  
- Lettera in minuscolo, o una del set definito dall'implementazione di caratteri di tipo "wide" per il quale nessuna delle funzioni `iswcntrl`, `iswdigit`, `iswpunct`, o `iswspace` è diversa da zero.  `iswlower` restituisce un valore diverso da zero solo per i caratteri di tipo "wide" che corrispondono alle lettere minuscole.  
+ Lettera minuscola o una parte di un set di caratteri wide definito dall'implementazione per il quale nessuna delle funzioni `iswcntrl`, `iswdigit`, `iswpunct`, o `iswspace` è diversa da zero. `iswlower` restituisce un valore diverso da zero solo per i caratteri wide che corrispondono a lettere minuscole.  
   
  `iswprint`  
- Carattere di tipo "wide" stampabile incluso il carattere di spazio \(L '\).  
+ Carattere wide stampabile, incluso il carattere wide dello spazio (L ').  
   
  `iswpunct`  
- Carattere di tipo "wide" stampabile che non è né un carattere di spazio \(L '\) né un carattere di tipo "wide" per il quale la funzione `iswalnum` è diversa da zero.  
+ Carattere wide stampabile che non sia il carattere wide di spazio (L' ') né un carattere wide per il quale la funzione `iswalnum` sia diversa da zero.  
   
  `iswspace`  
- Il carattere di tipo "wide" che corrisponde allo spazio vuoto standard o è parte di un set definito dall'implementazione di caratteri di tipo "wide" per il quale la funzione `iswalnum` è falsa.  Gli spazi vuoti standard sono: spazio \(L' '\), avanzamento modulo \(L'\\f'\), nuova riga \(L'\\n'\), ritorno a capo \(L'\\r'\), tabulazione orizzontale \(L'\\t'\) e tabulazione verticale \(L'\\v'\).  
+ Carattere wide che corrisponde allo spazio vuoto standard o è parte di un set definito a livello di implementazione di caratteri wide per il quale la funzione `iswalnum` è falsa. Gli spazi vuoti standard sono: spazio (L' '), modulo continuo (L'\f'), nuova riga (L'\n'), ritorno a capo (L'\r'), tabulazione orizzontale (L'\t') e tabulazione verticale (L'\v').  
   
  `iswupper`  
- Il carattere di tipo "wide" che è maiuscolo o è parte di un set definito dall'implementazione di caratteri di tipo "wide" per il quale nessuna delle funzioni `iswcntrl`, `iswdigit`, `iswpunct`, o `iswspace` è diversa da zero.  `iswupper` restituisce un valore diverso da zero solo per i caratteri di tipo "wide" che corrispondono caratteri maiuscoli.  
+ Carattere wide maiuscolo o una parte di un set di caratteri wide definito a livello di implementazione per il quale nessuna delle funzioni `iswcntrl`, `iswdigit`, `iswpunct`, o `iswspace` è diversa da zero. `iswupper` restituisce un valore diverso da zero solo per i caratteri wide che corrispondono a caratteri maiuscoli.  
   
  `iswxdigit`  
- Carattere di tipo "wide" che corrisponde a una cifra esadecimale.  
+ Carattere wide che corrisponde a una cifra esadecimale.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_isfam.c  
@@ -211,7 +227,7 @@ int main( void )
 }  
 ```  
   
-## Output  
+## <a name="output"></a>Output  
   
 ```  
 00            AS  C                              .  
@@ -344,9 +360,9 @@ int main( void )
 7f            AS  C                              .  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classificazione di caratteri](../c-runtime-library/character-classification.md)   
  [Impostazioni locali](../c-runtime-library/locale.md)   
- [setlocale, \_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)   
+ [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)   
  [Interpretazione di sequenze di caratteri multibyte](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [Funzioni to](../c-runtime-library/to-functions.md)

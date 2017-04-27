@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.binary
 - functional/std::binary
-- std::binary
 - binary
 dev_langs:
 - C++

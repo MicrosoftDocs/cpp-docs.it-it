@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - is_rvalue_reference
-- std::is_rvalue_reference
 - type_traits/std::is_rvalue_reference
 dev_langs:
 - C++

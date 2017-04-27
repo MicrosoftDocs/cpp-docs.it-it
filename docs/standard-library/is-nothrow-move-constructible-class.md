@@ -10,8 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - is_nothrow_move_constructible
-- std.is_nothrow_move_constructible
-- std::is_nothrow_move_constructible
 - type_traits/std::is_nothrow_move_constructible
 dev_langs:
 - C++

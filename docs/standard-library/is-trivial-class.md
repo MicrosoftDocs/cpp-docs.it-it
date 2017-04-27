@@ -11,7 +11,6 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - is_trivial
-- std::is_trivial
 - type_traits/std::is_trivial
 dev_langs:
 - C++

@@ -10,8 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - input_iterator_tag
-- std.input_iterator_tag
-- std::input_iterator_tag
 - xutility/std::input_iterator_tag
 dev_langs:
 - C++

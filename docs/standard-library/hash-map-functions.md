@@ -6,6 +6,9 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- hash_map/std::swap
+- hash_map/std::swap (hash_map)
 ms.assetid: 28748cd0-71f7-41b9-b068-579183645fba
 caps.latest.revision: 9
 manager: ghogen
@@ -20,7 +23,7 @@ ms.lasthandoff: 02/24/2017
 |-|-|  
 |[swap](#swap)|[swap (hash_map)](#swap__hash_map_)|  
   
-##  <a name="a-nameswaphashmapa--swap-hashmap"></a><a name="swap__hash_map_"></a>  swap (hash_map)  
+##  <a name="swap__hash_map_"></a>  swap (hash_map)  
   
 > [!NOTE]
 >  Questa API è obsoleta. L'alternativa è la [classe unordered_map](../standard-library/unordered-map-class.md).  
@@ -45,7 +48,7 @@ void swap(
   
  In Visual C++ .NET 2003 i membri dei file di intestazione [<hash_map>](../standard-library/hash-map.md) e [<hash_set>](../standard-library/hash-set.md) non si trovano più nello spazio dei nomi std, ma sono stati spostati nello spazio dei nomi stdext. Per altre informazioni, vedere [Spazio dei nomi stdext](../standard-library/stdext-namespace.md).  
   
-##  <a name="a-nameswapa--swap"></a><a name="swap"></a>  swap  
+##  <a name="swap"></a>  swap  
   
 > [!NOTE]
 >  Questa API è obsoleta. L'alternativa è la [classe unordered_multimap](../standard-library/unordered-multimap-class.md).  

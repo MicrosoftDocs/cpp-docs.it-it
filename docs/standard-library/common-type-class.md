@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - common_type
-- std::common_type
 - type_traits/std::common_type
 dev_langs:
 - C++

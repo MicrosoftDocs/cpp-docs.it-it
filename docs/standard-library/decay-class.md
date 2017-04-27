@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - decay
-- std::decay
 - type_traits/std::decay
 dev_langs:
 - C++

@@ -10,8 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - nothrow_t
-- std.nothrow_t
-- std::nothrow_t
 dev_langs:
 - C++
 helpviewer_keywords:

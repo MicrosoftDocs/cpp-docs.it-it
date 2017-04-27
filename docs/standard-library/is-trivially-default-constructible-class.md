@@ -10,8 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - is_trivially_default_constructible
-- std.is_trivially_default_constructible
-- std::is_trivially_default_constructible
 - type_traits/std::is_trivially_default_constructible
 dev_langs:
 - C++

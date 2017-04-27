@@ -7,18 +7,14 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::array::operator!=
 - array/std::array::operator!=
-- std::array::operator<
 - array/std::array::operator<
-- std::array::operator<=
 - array/std::array::operator<=
-- std::array::operator>
 - array/std::array::operator>
-- std::array::operator>=
 - array/std::array::operator>=
-- std::array::operator==
 - array/std::array::operator==
+dev_langs:
+- C++
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
 caps.latest.revision: 12
 manager: ghogen
@@ -36,7 +32,7 @@ L'intestazione \<array> include queste funzioni modello di confronto non membro 
 |[operator!=](#operator_neq)|[operator&gt;](#operator_gt_)|[operator&gt;=](#operator_gt__eq)|  
 |[operator&lt;](#operator_lt_)|[operator&lt;=](#operator_lt__eq)|[operator==](#operator_eq_eq)|  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  operator!=  
+##  <a name="operator_neq"></a>  operator!=  
  Confronto tra matrici, diverso.  
   
 ```  
@@ -106,7 +102,7 @@ false
 true  
 ```  
   
-##  <a name="a-nameoperatorlta--operatorlt"></a><a name="operator_lt_"></a>  operator&lt;  
+##  <a name="operator_lt_"></a>  operator&lt;  
  Confronto tra matrici, minore di.  
   
 ```  
@@ -177,7 +173,7 @@ false
 true  
 ```  
   
-##  <a name="a-nameoperatorlteqa--operatorlt"></a><a name="operator_lt__eq"></a>  operator&lt;=  
+##  <a name="operator_lt__eq"></a>  operator&lt;=  
  Confronto tra matrici, minore di o uguale.  
   
 ```  
@@ -248,7 +244,7 @@ true
 false  
 ```  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  operator==  
+##  <a name="operator_eq_eq"></a>  operator==  
  Confronto tra matrici, uguale.  
   
 ```  
@@ -319,7 +315,7 @@ true
 false  
 ```  
   
-##  <a name="a-nameoperatorgta--operatorgt"></a><a name="operator_gt_"></a>  operator&gt;  
+##  <a name="operator_gt_"></a>  operator&gt;  
  Confronto tra matrici, maggiore di.  
   
 ```  
@@ -390,7 +386,7 @@ false
 true  
 ```  
   
-##  <a name="a-nameoperatorgteqa--operatorgt"></a><a name="operator_gt__eq"></a>  operator&gt;=  
+##  <a name="operator_gt__eq"></a>  operator&gt;=  
  Confronto tra matrici, maggiore di o uguale.  
   
 ```  

@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::less_equal
 - xfunctional/std::less_equal
-- std.less_equal
 - less_equal
 dev_langs:
 - C++

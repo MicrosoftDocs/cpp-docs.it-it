@@ -6,6 +6,22 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- locale/std::has_facet
+- locale/std::isalnum
+- locale/std::isalpha
+- locale/std::iscntrl
+- locale/std::isdigit
+- locale/std::isgraph
+- locale/std::islower
+- locale/std::isprint
+- locale/std::ispunct
+- locale/std::isspace
+- locale/std::isupper
+- locale/std::isxdigit
+- locale/std::tolower
+- locale/std::toupper
+- locale/std::use_facet
 ms.assetid: b06c1ceb-33a7-48d3-8d4b-2714bbb27f14
 caps.latest.revision: 15
 manager: ghogen
@@ -24,7 +40,7 @@ ms.lasthandoff: 02/24/2017
 |[isspace](#isspace)|[isupper](#isupper)|[isxdigit](#isxdigit)|  
 |[tolower](#tolower)|[toupper](#toupper)|[use_facet](#use_facet)|  
   
-##  <a name="a-namehasfaceta--hasfacet"></a><a name="has_facet"></a>  has_facet  
+##  <a name="has_facet"></a>  has_facet  
  Verifica se un facet specifico viene archiviato nelle impostazioni locali specificate.  
   
 ```  
@@ -63,7 +79,7 @@ int main( )
 1  
 ```  
   
-##  <a name="a-nameisalnuma--isalnum"></a><a name="isalnum"></a>  isalnum  
+##  <a name="isalnum"></a>  isalnum  
  Verifica se un elemento delle impostazioni locali è un carattere alfabetico o numerico.  
   
 ```  
@@ -127,7 +143,7 @@ The character '@' in the locale is  not alphanumeric.
 The character '3' in the locale is alphanumeric.  
 ```  
   
-##  <a name="a-nameisalphaa--isalpha"></a><a name="isalpha"></a>  isalpha  
+##  <a name="isalpha"></a>  isalpha  
  Verifica se un elemento delle impostazioni locali è un carattere alfabetico.  
   
 ```  
@@ -188,7 +204,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameiscntrla--iscntrl"></a><a name="iscntrl"></a>  iscntrl  
+##  <a name="iscntrl"></a>  iscntrl  
  Verifica se un elemento delle impostazioni locali è un carattere di controllo.  
   
 ```  
@@ -249,7 +265,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameisdigita--isdigit"></a><a name="isdigit"></a>  isdigit  
+##  <a name="isdigit"></a>  isdigit  
  Verifica se un elemento delle impostazioni locali è un carattere numerico.  
   
 ```  
@@ -310,7 +326,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameisgrapha--isgraph"></a><a name="isgraph"></a>  isgraph  
+##  <a name="isgraph"></a>  isgraph  
  Verifica se un elemento delle impostazioni locali è un carattere alfanumerico o di punteggiatura.  
   
 ```  
@@ -371,7 +387,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameislowera--islower"></a><a name="islower"></a>  islower  
+##  <a name="islower"></a>  islower  
  Verifica se un elemento delle impostazioni locali è un carattere minuscolo.  
   
 ```  
@@ -432,7 +448,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameisprinta--isprint"></a><a name="isprint"></a>  isprint  
+##  <a name="isprint"></a>  isprint  
  Verifica se un elemento delle impostazioni locali è un carattere stampabile.  
   
 ```  
@@ -492,7 +508,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameispuncta--ispunct"></a><a name="ispunct"></a>  ispunct  
+##  <a name="ispunct"></a>  ispunct  
  Verifica se un elemento delle impostazioni locali è un carattere di punteggiatura.  
   
 ```  
@@ -553,7 +569,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameisspacea--isspace"></a><a name="isspace"></a>  isspace  
+##  <a name="isspace"></a>  isspace  
  Verifica se un elemento delle impostazioni locali è uno spazio vuoto.  
   
 ```  
@@ -614,7 +630,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameisuppera--isupper"></a><a name="isupper"></a>  isupper  
+##  <a name="isupper"></a>  isupper  
  Verifica se un elemento delle impostazioni locali è un carattere maiuscolo.  
   
 ```  
@@ -675,7 +691,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameisxdigita--isxdigit"></a><a name="isxdigit"></a>  isxdigit  
+##  <a name="isxdigit"></a>  isxdigit  
  Verifica se un elemento delle impostazioni locali è un carattere utilizzato per rappresentare un numero esadecimale.  
   
 ```  
@@ -738,7 +754,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nametolowera--tolower"></a><a name="tolower"></a>  tolower  
+##  <a name="tolower"></a>  tolower  
  Converte un carattere in minuscolo.  
   
 ```  
@@ -783,7 +799,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nametouppera--toupper"></a><a name="toupper"></a>  toupper  
+##  <a name="toupper"></a>  toupper  
  Converte un carattere in maiuscolo.  
   
 ```  
@@ -828,7 +844,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameusefaceta--usefacet"></a><a name="use_facet"></a>  use_facet  
+##  <a name="use_facet"></a>  use_facet  
  Restituisce un riferimento a un facet di un tipo specificato archiviato nelle impostazioni locali.  
   
 ```  

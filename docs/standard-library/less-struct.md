@@ -9,8 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::less
-- std.less
 - less
 - xfunctional/std::less
 dev_langs:

@@ -11,8 +11,6 @@ ms.topic: article
 f1_keywords:
 - utility/std::pair
 - pair
-- std::pair
-- std.pair
 dev_langs:
 - C++
 helpviewer_keywords:

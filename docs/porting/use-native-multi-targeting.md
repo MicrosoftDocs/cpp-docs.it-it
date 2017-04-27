@@ -34,9 +34,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 8953e3bd81158ce183e1abb5dfa969164c1f9ced
-ms.openlocfilehash: 1088f17c1d758589fba146f82b2544ae17090a22
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: ba1dd940e6dfe9bb749de1473850a245fa8073a9
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Usare multitargeting nativo in Visual Studio per compilare progetti precedenti  
@@ -54,7 +54,7 @@ Fortunatamente, è possibile usare Visual Studio 2017 e Visual Studio 2015 per c
   
 Le versioni più recenti di Visual Studio supportano il multitargeting nativo e il round trip dei progetti. Il multitargeting nativo è la capacità dell'IDE più recente di eseguire la compilazione usando set di strumenti installati dalle versioni precedenti di Visual Studio. Il round trip è la capacità dell'IDE più recente di caricare i progetti creati da una versione precedente dell'IDE senza apportare modifiche al progetto. Se si installa la versione più recente di Visual Studio affiancata alla versione esistente, è possibile usare la nuova versione dell'IDE con il compilatore e gli strumenti dalla versione esistente per compilare i progetti. Gli altri membri del team possono continuare a usare i progetti nella versione precedente di Visual Studio.  
   
-Quando si usa un set di strumenti più datato, è possibile usufruire di molte delle funzionalità IDE più recenti, ma non delle ultime innovazioni nel compilatore, nelle librerie e negli strumenti di compilazione di C++. Ad esempio, non sarà possibile applicare i nuovi miglioramenti della conformità del linguaggio, le nuove funzionalità di debug e di analisi del codice né ottenere la maggiore velocità di compilazione offerta dal set di strumenti più recente. Esistono inoltre alcune funzionalità IDE che non sono compatibili con i set di strumenti precedenti. Ad esempio, le informazioni sul tipo possono risultare mancanti nel profiler della memoria e l'operazione di refactoring "Converti in valori letterali stringa non elaborata" genera un codice conforme a C++11 che non verrà compilato quando si usa Visual Studio 2012 o un set di strumenti più datato.
+Quando si usa un set di strumenti più datato, è possibile usufruire di molte delle funzionalità IDE più recenti, ma non delle ultime innovazioni nel compilatore, nelle librerie e negli strumenti di compilazione di C++. Ad esempio, non sarà possibile applicare i nuovi miglioramenti della conformità del linguaggio, le nuove funzionalità di debug e di analisi del codice né ottenere la maggiore velocità di compilazione offerta dal set di strumenti più recente. Esistono inoltre alcune funzionalità IDE che non sono compatibili con i set di strumenti precedenti. Ad esempio, le informazioni sul tipo possono risultare mancanti nel profiler della memoria e l'operazione di refactoring **Converti in valore letterale stringa non elaborata** genera un codice conforme a C++11 che non verrà compilato quando si usa Visual Studio 2012 o un set di strumenti più datato.
 
 ## <a name="how-to-use-native-multi-targeting-in-visual-studio"></a>Come usare multitargeting nativo in Visual Studio
 Dopo aver installato Visual Studio affiancato alla versione meno recente, aprire il progetto esistente nella nuova versione di Visual Studio. Quando viene caricato il progetto Visual Studio chiede se si vuole aggiornarlo in modo che usi il compilatore e librerie C++ più recenti. Poiché si vuole mantenere il compilatore e le librerie precedenti per il progetto, scegliere il pulsante **Annulla**.  

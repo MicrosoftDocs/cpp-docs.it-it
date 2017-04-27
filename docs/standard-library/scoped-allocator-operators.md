@@ -6,6 +6,7 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: []
 ms.assetid: 4dfe0805-cc6e-479f-887f-a1c164f73837
 caps.latest.revision: 10
 manager: ghogen
@@ -20,7 +21,7 @@ ms.lasthandoff: 02/24/2017
 |-|-|  
 |[operator!=](#operator_neq)|[operator==](#operator_eq_eq)|  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  operator!=  
+##  <a name="operator_neq"></a>  operator!=  
  Verifica la disuguaglianza dei due oggetti `scoped_allocator_adaptor`.  
   
 ```cpp  
@@ -40,7 +41,7 @@ bool operator!=(
 ### <a name="return-value"></a>Valore restituito  
  `!(left == right)`  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  operator==  
+##  <a name="operator_eq_eq"></a>  operator==  
  Verifica l'uguaglianza di due oggetti `scoped_allocator_adaptor`.  
   
 ```cpp  
