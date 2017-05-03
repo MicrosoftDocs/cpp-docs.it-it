@@ -69,4 +69,4 @@ template <typename T, typename E>
   
 ## Vedere anche  
  [\(NOTINBUILD\) Spazio dei nomi Platform](http://msdn.microsoft.com/it-it/f3ce3eab-028c-4204-ba9f-9ab8af17c8c4)   
- [Creazione di componenti Windows Runtime in C\+\+](../Topic/Creating%20Windows%20Runtime%20Components%20in%20C++.md)
+ [Creazione di componenti Windows Runtime in C\+\+](http://msdn.microsoft.com/library/5b7251e6-4271-4f13-af80-c1cf5b1489bf)

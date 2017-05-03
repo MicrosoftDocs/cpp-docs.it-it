@@ -33,7 +33,7 @@ Restituisce un handle all'oggetto rappresentato dall'oggetto Agile corrente.
 ## Valore restituito  
  Handle all'oggetto rappresentato dall'oggetto Agile corrente.  
   
- Il tipo di valore restituito effettivo è un tipo interno riservato. Un modo pratico per contenere il valore restituito consiste nell'assegnarlo a una variabile dichiarata con la parola chiave di deduzione del tipo [auto](../Topic/auto%20\(C++\).md). Ad esempio `auto x = myAgileTvariable->Get();`.  
+ Il tipo di valore restituito effettivo è un tipo interno riservato. Un modo pratico per contenere il valore restituito consiste nell'assegnarlo a una variabile dichiarata con la parola chiave di deduzione del tipo [auto](~/cpp/auto-cpp.md). Ad esempio `auto x = myAgileTvariable->Get();`.  
   
 ## Requisiti  
  **Client minimo supportato:** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  

@@ -34,7 +34,7 @@ virtual Windows::Foundation::Collections::IIterator <T>^
  Iteratore che fa riferimento al primo elemento in Vector.  
   
 ## Note  
- Un modo pratico per contenere l'iteratore restituito da First\(\) consiste nell'assegnare il valore restituito a una variabile dichiarata con la parola chiave di deduzione del tipo [auto](../Topic/auto%20\(C++\).md). Ad esempio `auto x = myVector->First();`. Questo iteratore conosce la lunghezza della raccolta.  
+ Un modo pratico per contenere l'iteratore restituito da First\(\) consiste nell'assegnare il valore restituito a una variabile dichiarata con la parola chiave di deduzione del tipo [auto](~/cpp/auto-cpp.md). Ad esempio `auto x = myVector->First();`. Questo iteratore conosce la lunghezza della raccolta.  
   
  Se ti servono un paio di iteratori da passare a una funzione STL, usa le funzioni Free [Windows::Foundation::Collections::begin](../cppcx/begin-function.md) e [Windows::Foundation::Collections::end](../cppcx/end-function.md)  
   

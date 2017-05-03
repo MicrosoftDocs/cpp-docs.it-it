@@ -93,7 +93,7 @@ VectorView(
  Valore utilizzato per inizializzare ciascun elemento nell'oggetto VectorView corrente.  
   
  `v`  
- [Elementi Lvalue e Rvalue](../Topic/Lvalues%20and%20Rvalues%20\(Visual%20C++\).md) a [::std::vector](../Topic/vector%20Class%201.md) utilizzato per inizializzare l'oggetto VectorView corrente.  
+ [Elementi Lvalue e Rvalue](~/cpp/lvalues-and-rvalues-visual-cpp.md) a [::std::vector](../Topic/vector%20Class%201.md) utilizzato per inizializzare l'oggetto VectorView corrente.  
   
  `ptr`  
  Puntatore a `std::vector` utilizzato per inizializzare l'oggetto VectorView corrente.  
@@ -105,10 +105,10 @@ VectorView(
  Oggetto [std::array](../Topic/vector%20Class%201.md) utilizzato per inizializzare l'oggetto VectorView corrente.  
   
  `first`  
- Primo elemento di una sequenza di oggetti utilizzati per inizializzare l'oggetto VectorView corrente. Il tipo di `first` viene passato mediante l'*inoltro perfetto*. Per altre informazioni, vedere [Dichiaratore di riferimento rvalue: &&](../Topic/Rvalue%20Reference%20Declarator:%20&&.md).  
+ Primo elemento di una sequenza di oggetti utilizzati per inizializzare l'oggetto VectorView corrente. Il tipo di `first` viene passato mediante l'*inoltro perfetto*. Per altre informazioni, vedere [Dichiaratore di riferimento rvalue: &&](~/cpp/rvalue-reference-declarator-amp-amp.md).  
   
  `last`  
- Ultimo elemento di una sequenza di oggetti utilizzati per inizializzare l'oggetto VectorView corrente. Il tipo di `last` viene passato mediante l'*inoltro perfetto*. Per altre informazioni, vedere [Dichiaratore di riferimento rvalue: &&](../Topic/Rvalue%20Reference%20Declarator:%20&&.md).  
+ Ultimo elemento di una sequenza di oggetti utilizzati per inizializzare l'oggetto VectorView corrente. Il tipo di `last` viene passato mediante l'*inoltro perfetto*. Per altre informazioni, vedere [Dichiaratore di riferimento rvalue: &&](~/cpp/rvalue-reference-declarator-amp-amp.md).  
   
 ## Requisiti  
  **Intestazione:** collection.h  

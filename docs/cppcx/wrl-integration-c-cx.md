@@ -19,7 +19,7 @@ caps.handback.revision: 9
 È possibile combinare liberamente il codice [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] con il codice [!INCLUDE[cppwrl](../cppcx/includes/cppwrl-md.md)] \([!INCLUDE[cppwrl_short](../cppcx/includes/cppwrl-short-md.md)]\). Nella stessa unità di conversione puoi utilizzare oggetti dichiarati con la notazione handle a oggetto [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] \(`^`\) e la notazione del puntatore intelligente [!INCLUDE[cppwrl_short](../cppcx/includes/cppwrl-short-md.md)] \(`ComPtr<T>`\). Tuttavia, devi gestire manualmente i valori restituiti, i codici di errore HRESULT [!INCLUDE[cppwrl_short](../cppcx/includes/cppwrl-short-md.md)] e le eccezioni [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)].  
   
 ## Sviluppo in [!INCLUDE[cppwrl_short](../cppcx/includes/cppwrl-short-md.md)]  
- Per ulteriori informazioni sulla creazione e sull'utilizzo di componenti, [!INCLUDE[cppwrl_short](../cppcx/includes/cppwrl-short-md.md)] vedi [Libreria di modelli di Windows Runtime C\+\+ \(WRL\)](../Topic/Windows%20Runtime%20C++%20Template%20Library%20\(WRL\).md).  
+ Per ulteriori informazioni sulla creazione e sull'utilizzo di componenti, [!INCLUDE[cppwrl_short](../cppcx/includes/cppwrl-short-md.md)] vedi [Libreria di modelli di Windows Runtime C\+\+ \(WRL\)](~/windows/windows-runtime-cpp-template-library-wrl.md).  
   
 ## Esempio  
  Nel frammento di codice riportato di seguito viene illustrato come servirsi di [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] e [!INCLUDE[cppwrl_short](../cppcx/includes/cppwrl-short-md.md)] per utilizzare le classi [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] ed esaminare i file di metadati.  

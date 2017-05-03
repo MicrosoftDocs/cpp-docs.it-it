@@ -22,7 +22,7 @@ manager: "ghogen"
 caps.handback.revision: 7
 ---
 # Platform::Type (classe)
-Contiene le informazioni di runtime su un tipo, in particolare un nome di stringa e un codice del tipo. Ottenute chiamando [Object::GetType Method](../cppcx/object-gettype-method.md) su qualsiasi oggetto o usando l'operatore [typeid](../Topic/typeid%20%20\(C++%20Component%20Extensions\).md)su un nome di struct o classe.  
+Contiene le informazioni di runtime su un tipo, in particolare un nome di stringa e un codice del tipo. Ottenute chiamando [Object::GetType Method](../cppcx/object-gettype-method.md) su qualsiasi oggetto o usando l'operatore [typeid](~/windows/typeid-cpp-component-extensions.md)su un nome di struct o classe.  
   
 ## Sintassi  
   

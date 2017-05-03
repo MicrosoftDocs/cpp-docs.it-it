@@ -34,7 +34,7 @@ virtual Windows::Foundation::Collections::IIterator<T>^
  Iteratore che specifica il primo elemento in VectorView.  
   
 ## Note  
- Un modo pratico per contenere l'iteratore restituito da First\(\) consiste nell'assegnare il valore restituito a una variabile dichiarata con la parola chiave di deduzione del tipo [auto](../Topic/auto%20\(C++\).md). Ad esempio `auto x = myVectorView->First();`.  
+ Un modo pratico per contenere l'iteratore restituito da First\(\) consiste nell'assegnare il valore restituito a una variabile dichiarata con la parola chiave di deduzione del tipo [auto](~/cpp/auto-cpp.md). Ad esempio `auto x = myVectorView->First();`.  
   
 ## Requisiti  
  **Intestazione:** collection.h  

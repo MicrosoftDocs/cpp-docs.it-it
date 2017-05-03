@@ -100,4 +100,4 @@ ref class Map sealed;
  [Classe Platform::Collections::Map](../cppcx/platform-collections-map-class.md)   
  [Classe Platform::Collections::UnorderedMapView](../cppcx/platform-collections-unorderedmapview-class.md)   
  [Raccolte](../cppcx/collections-c-cx.md)   
- [Creazione di componenti Windows Runtime in C\+\+](../Topic/Creating%20Windows%20Runtime%20Components%20in%20C++.md)
+ [Creazione di componenti Windows Runtime in C\+\+](http://msdn.microsoft.com/library/5b7251e6-4271-4f13-af80-c1cf5b1489bf)

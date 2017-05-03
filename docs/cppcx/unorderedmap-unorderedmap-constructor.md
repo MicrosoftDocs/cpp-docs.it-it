@@ -106,7 +106,7 @@ UnorderedMap();
  Oggetto funzione che produce un valore hash per una chiave. Per impostazione predefinita, questo parametro è [Classe hash](../Topic/hash%20Class%201.md) per i tipi di chiave supportati dalla classe.  
   
  `m`  
- Riferimento o [Elementi Lvalue e Rvalue](../Topic/Lvalues%20and%20Rvalues%20\(Visual%20C++\).md) a un oggetto [std::unordered\_map](../standard-library/unordered-map-class.md) usato per inizializzare l'oggetto UnorderedMap corrente.  
+ Riferimento o [Elementi Lvalue e Rvalue](~/cpp/lvalues-and-rvalues-visual-cpp.md) a un oggetto [std::unordered\_map](../standard-library/unordered-map-class.md) usato per inizializzare l'oggetto UnorderedMap corrente.  
   
  il  
  Oggetto [std::initializer\_list](../standard-library/initializer-list-class.md) di oggetti [std::pair](../standard-library/pair-structure.md) che verrà usato per inizializzare la mappa.  

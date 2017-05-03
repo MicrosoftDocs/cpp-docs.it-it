@@ -33,7 +33,7 @@ const throw();
 ## Valore restituito  
  Handle all'oggetto rappresentato dall'oggetto Agile corrente.  
   
- Questo operatore restituisce un tipo interno riservato. Un modo pratico per contenere il valore restituito consiste nell'assegnarlo a una variabile dichiarata con la parola chiave di deduzione del tipo [auto](../Topic/auto%20\(C++\).md).  
+ Questo operatore restituisce un tipo interno riservato. Un modo pratico per contenere il valore restituito consiste nell'assegnarlo a una variabile dichiarata con la parola chiave di deduzione del tipo [auto](~/cpp/auto-cpp.md).  
   
 ## Requisiti  
  **Client minimo supportato:** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  

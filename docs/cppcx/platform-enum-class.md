@@ -34,7 +34,7 @@ public class Enum
  La classe Enum eredita i metodi Equals\(\), GetHashCode\(\) e ToString\(\) da [Classe Platform::Object](../cppcx/platform-object-class.md).  
   
 ## Note  
- Usare la parola chiave [classe enum pubblica](../Topic/enum%20class%20%20\(C++%20Component%20Extensions\).md) per creare enumerazioni. Non usare il tipo di Platform::Enum in modo esplicito. Per altre informazioni, vedere [Enumerazioni](../cppcx/enums-c-cx.md).  
+ Usare la parola chiave [classe enum pubblica](~/windows/enum-class-cpp-component-extensions.md) per creare enumerazioni. Non usare il tipo di Platform::Enum in modo esplicito. Per altre informazioni, vedere [Enumerazioni](../cppcx/enums-c-cx.md).  
   
 ## Requisiti  
  **Client minimo supportato:** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  

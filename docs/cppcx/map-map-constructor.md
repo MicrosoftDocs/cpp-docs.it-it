@@ -52,7 +52,7 @@ Map(
  Tipo che fornisce un oggetto funzione che può confrontare due valori di elementi come chiavi di ordinamento per determinare l'ordine relativo nella mappa.  
   
  `m`  
- Riferimento o [Elementi Lvalue e Rvalue](../Topic/Lvalues%20and%20Rvalues%20\(Visual%20C++\).md) a un oggetto [Classe map](../standard-library/map-class.md) utilizzato per inizializzare l'oggetto Map corrente.  
+ Riferimento o [Elementi Lvalue e Rvalue](~/cpp/lvalues-and-rvalues-visual-cpp.md) a un oggetto [Classe map](../standard-library/map-class.md) utilizzato per inizializzare l'oggetto Map corrente.  
   
  `first`  
  Iteratore di input del primo elemento in un intervallo di elementi utilizzato per inizializzare l'oggetto Map corrente.  
