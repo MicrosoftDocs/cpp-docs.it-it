@@ -10,6 +10,7 @@
           "**/obj/**",
           "vcppdocs/**",
           "**/includes/**",
+        "cppcx/**",
 	"assembler/**",
 	"atl/**",
 	"atl/reference/**",
