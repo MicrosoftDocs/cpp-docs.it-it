@@ -17935,5 +17935,95 @@
   ],
   "eb5e4319f2fced5ade91b0902b3af49dc6a4f229": [
     "docs\\data\\oledb\\csqllanguages-csqllanguageinfo.md"
+  ],
+  "cfb059055fc15c66fb3b91ab6893b5f88c92d875": [
+    "docs\\cppcx\\platform-invalidargumentexception-class.md"
+  ],
+  "0b9b6ef1f6f0d6171229161c71970279aaacc32f": [
+    "docs\\cppcx\\default-type-name-tostring-method.md"
+  ],
+  "53bdedc724a66effc12ec2da4c851bddc3a4d2b1": [
+    "docs\\cppcx\\default-type-name-equals-method.md"
+  ],
+  "180747f974ea3ff7cfcde7da17d68eb7658d2899": [
+    "docs\\cppcx\\back-inserter-function.md"
+  ],
+  "75b65caf097d3548a214cefc698417d658c8ea77": [
+    "docs\\cppcx\\platform-notimplementedexception-class.md"
+  ],
+  "254787c7407559e7295f05f71786fa76cad66de2": [
+    "docs\\cppcx\\platform-outofmemoryexception-class.md"
+  ],
+  "d3859c7ad024982302fc0704de7b80563d6e30c2": [
+    "docs\\cppcx\\operator-subtracttype-hat.md"
+  ],
+  "193a40d622f70c7911e2a3b1c1ef39d761954ef8": [
+    "docs\\cppcx\\to-vector-function.md"
+  ],
+  "511d6c1bb06776fb604a10a379003ab42cef1a1e": [
+    "docs\\cppcx\\default-type-name-gettype-method.md"
+  ],
+  "442fe6400824a0143769e7dacb6ac3595d8c2e1b": [
+    "docs\\cppcx\\platform-changedstateexception-class.md"
+  ],
+  "f3ff5872f5607750c2c4f0c88a0c4fdb122e48b8": [
+    "docs\\cppcx\\platform-wrongthreadexception-class.md"
+  ],
+  "7e2aca7fafb5a986aed4740d3fd89d259392f90a": [
+    "docs\\cppcx\\platform-uintptr-value-class.md"
+  ],
+  "e60da0c1cf87c5339ae331b6a56e1966cda089fa": [
+    "docs\\cppcx\\begin-function.md"
+  ],
+  "3e58fc2ed86d30b4785755b3ee889ab1c2ea163e": [
+    "docs\\cppcx\\operator-subtractwindows-ui-xaml-interop-typename.md"
+  ],
+  "796b5b3cd861fa00f8a2775261520c2e44c41bb4": [
+    "docs\\cppcx\\platform-operationcanceledexception-class.md"
+  ],
+  "35fb9eaf03c117fe02e8eda447bda246b6c0ddbe": [
+    "docs\\cppcx\\platform-disconnectedexception-class.md"
+  ],
+  "04cddd46416080b58d7b3b8ba4fc4e934fe7bd7b": [
+    "docs\\cppcx\\default-type-name-gethashcode-method.md"
+  ],
+  "69f304e0acd088867e1e509e220ff21fd30999e3": [
+    "docs\\cppcx\\platform-ivaluetype-interface.md"
+  ],
+  "b980dc189de7fb036249d18a1b2d0abab80a8d13": [
+    "docs\\cppcx\\platform-failureexception-class.md"
+  ],
+  "06ceae4c41ed0510e6915f5c6f9e23cbaf4cc120": [
+    "docs\\cppcx\\platform-callbackcontext-enumeration.md"
+  ],
+  "1fea6088b4583438aae21c55a5226112f5752f9d": [
+    "docs\\cppcx\\platform-nullreferenceexception-class.md"
+  ],
+  "ee28482c76814701c81770c77bb8c7446d02966f": [
+    "docs\\cppcx\\platform-boolean-value-class.md"
+  ],
+  "74c93fc91ba20f6ccf74e8e8699b58fa4431875e": [
+    "docs\\cppcx\\crt-functions-not-supported-in-universal-windows-platform-apps.md"
+  ],
+  "446ccaba31efe0c4a6130a37ad79f568bbbc6617": [
+    "docs\\cppcx\\platform-typecode-enumeration.md"
+  ],
+  "cc05efad4836a80f0b88231daebb713db545ffda": [
+    "docs\\cppcx\\end-function.md"
+  ],
+  "3f797ca2825de83baa82fcc92c6c0c1d4e088b58": [
+    "docs\\cppcx\\platform-outofboundsexception-class.md"
+  ],
+  "b0732395a8350c0746c1dd37b8b0c824a65dce82": [
+    "docs\\cppcx\\platform-metadata-runtimeclassname.md"
+  ],
+  "5a46833408d2b50dcaa786a10dbb96db1f5921be": [
+    "docs\\cppcx\\platform-classnotregisteredexception-class.md"
+  ],
+  "062d2c2320f2186a41f4d64da2c2a92c9b6f2066": [
+    "docs\\cppcx\\platform-invalidcastexception-class.md"
+  ],
+  "0c0ab0cc82096e61b9612a8a382bec1bd3493955": [
+    "docs\\cppcx\\platform-objectdisposedexception-class.md"
   ]
 }
