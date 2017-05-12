@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2821 | Documenti di Microsoft
+title: Errore del compilatore C2821 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,18 +34,18 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 5a8000d7867ec7a18730a5d95538f21ffb3a0b2e
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 774c191bb3da3c5382c4aff7d48c8d6ae5ca7e68
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="compiler-error-c2821"></a>Errore del compilatore C2821
 il primo parametro formale di 'operator new' deve essere 'unsigned int'  
   
-Il primo parametro formale di [operatore new](../../standard-library/new-operators.md#operator_new) deve essere un unsigned `int`.  
+Il primo parametro formale del [operatore new](../../standard-library/new-operators.md#op_new) deve essere un unsigned `int`.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene generato l'errore C2821:  
+ L'esempio seguente genera l'errore C2821:  
   
 ```cpp  
 // C2821.cpp  
