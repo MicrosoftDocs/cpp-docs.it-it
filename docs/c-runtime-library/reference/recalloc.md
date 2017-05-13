@@ -51,10 +51,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 89626019b42a478b2dfe3800e2f732ba6b90d106
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: ae78e17f66448de46e36ea7d6dc6e3121b306c68
+ms.contentlocale: it-it
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="recalloc"></a>_recalloc
@@ -90,13 +91,13 @@ void *_recalloc(
  Il valore restituito punta a uno spazio di archiviazione che garantisce il corretto allineamento per l'archiviazione di qualsiasi tipo di oggetto. Per ottenere un puntatore a un tipo diverso da `void`, usare un cast del tipo sul valore restituito.  
   
 ## <a name="remarks"></a>Note  
- La funzione _`recalloc` modifica la dimensione di un blocco di memoria allocato. L'argomento `memblock` punta all'inizio del blocco di memoria. Se `memblock` è `NULL`, \_`recalloc` si comporta allo stesso modo di [calloc](../../c-runtime-library/reference/calloc.md) e alloca un nuovo blocco di `num` * `size` byte. Ogni elemento viene inizializzato su 0. Se `memblock` non è `NULL`, deve essere un puntatore restituito da una precedente chiamata a `calloc`, [malloc](../../c-runtime-library/reference/malloc.md) o [realloc](../../c-runtime-library/reference/realloc.md).  
+ La funzione `_recalloc` modifica la dimensione di un blocco di memoria allocato. L'argomento `memblock` punta all'inizio del blocco di memoria. Se `memblock` è `NULL`, `_recalloc` si comporta esattamente come [calloc](../../c-runtime-library/reference/calloc.md) e assegna un nuovo blocco di `num`  *  `size` byte. Ogni elemento viene inizializzato a 0. Se `memblock` non è `NULL`, deve essere un puntatore restituito da una precedente chiamata a `calloc`, [malloc](../../c-runtime-library/reference/malloc.md) o [realloc](../../c-runtime-library/reference/realloc.md).  
   
- Poiché il nuovo blocco può trovarsi in una nuova posizione di memoria, non è garantito che il puntatore restituito da _`recalloc` sia il puntatore passato tramite l'argomento `memblock`.  
+ Poiché il nuovo blocco può trovarsi in una nuova posizione di memoria, non è garantito che il puntatore restituito da `_recalloc` sia il puntatore passato tramite l'argomento `memblock`.  
   
  `_recalloc` imposta `errno` su `ENOMEM` se l'allocazione di memoria ha esito negativo o se la quantità di memoria richiesta supera `_HEAP_MAXREQ`. Per informazioni su questo e altri codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
- `recalloc` chiama `realloc` per usare la funzione [_set_new_mode](../../c-runtime-library/reference/set-new-mode.md) di C++ per impostare la nuova modalità del gestore. La nuova modalità del gestore indica se, in caso di errore, `realloc` deve chiamare la routine del nuovo gestore come impostato tramite [set_new_handler](../../c-runtime-library/reference/set-new-handler.md). Per impostazione predefinita, `realloc` non chiama la routine del nuovo gestore in caso di errore di allocazione della memoria. È possibile eseguire l'override di questo comportamento predefinito in modo che, quando `recalloc` non riesce ad allocare memoria, `realloc` chiami la routine del nuovo gestore, come fa l'operatore `new` quando non riesce per lo stesso motivo. Per eseguire l'override del comportamento predefinito, chiamare  
+ `recalloc` chiama `realloc` per usare la funzione [_set_new_mode](../../c-runtime-library/reference/set-new-mode.md) di C++ per impostare la nuova modalità del gestore. La nuova modalità del gestore indica se, in caso di errore, `realloc` deve chiamare la routine del nuovo gestore come impostato tramite [set_new_handler](../../c-runtime-library/reference/set-new-handler.md). Per impostazione predefinita, `realloc` non chiama la routine del nuovo gestore in caso di errore di allocazione della memoria. È possibile eseguire l'override di questo comportamento predefinito in modo che, quando `_recalloc` non riesce ad allocare memoria, `realloc` chiami la routine del nuovo gestore, come fa l'operatore `new` quando non riesce per lo stesso motivo. Per eseguire l'override del comportamento predefinito, chiamare  
   
 ```  
 _set_new_mode(1)  
@@ -104,7 +105,7 @@ _set_new_mode(1)
   
  all'inizio del programma o collegare con NEWMODE.OBJ.  
   
- Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime C, _`recalloc` viene risolto in [_recalloc_dbg](../../c-runtime-library/reference/recalloc-dbg.md). Per altre informazioni su come viene gestito l'heap durante il processo di debug, vedere [Informazioni dettagliate sull'heap di debug CRT](/visualstudio/debugger/crt-debug-heap-details).  
+ Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime C, `_recalloc` si risolve in [recalloc_dbg](../../c-runtime-library/reference/recalloc-dbg.md). Per altre informazioni su come viene gestito l'heap durante il processo di debug, vedere [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (Informazioni dettagliate sull'heap di debug CRT).  
   
  `_recalloc` è contrassegnato come `__declspec(noalias)` e `__declspec(restrict)` e questo garantisce che la funzione non modifichi le variabili globali e il puntatore restituito non venga associato a un alias. Per altre informazioni, vedere [noalias](../../cpp/noalias.md) e [restrict](../../cpp/restrict.md).  
   
@@ -114,10 +115,7 @@ _set_new_mode(1)
 |-------------|---------------------|  
 |`_recalloc`|\<stdlib.h> e \<malloc.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Allocazione di memoria](../../c-runtime-library/memory-allocation.md)   

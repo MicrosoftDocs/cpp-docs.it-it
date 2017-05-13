@@ -52,10 +52,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d71962eca033e5d3994c82e666102f44c62e82be
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 9c340310feb94ac181049c01d3ab1efaee2002c3
+ms.contentlocale: it-it
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="rtcseterrorfuncw"></a>_RTC_SetErrorFuncW
@@ -78,15 +79,15 @@ Definisce una funzione come gestore per la segnalazione dei controlli degli erro
  Funzione di errore definita in precedenza o `NULL` se in precedenza non è stata definita alcuna funzione.  
   
 ## <a name="remarks"></a>Note  
- Nel nuovo codice usare solo `_RTC_SetErrorFuncW`. La funzione `_RTC_SetErrorFunc` è inclusa nella libreria solo per compatibilità con le versioni precedenti.  
+ Nel nuovo codice usare solo `_RTC_SetErrorFuncW`. `_RTC_SetErrorFunc` è incluso nella libreria solo per la compatibilità con le versioni precedenti.  
   
  Il callback di `_RTC_SetErrorFuncW` si applica solo al componente che è stato collegato, ma non globalmente.  
   
  Verificare che l'indirizzo passato a `_RTC_SetErrorFuncW` corrisponda a quello di una funzione di gestione degli errori valida.  
   
- Se a un errore è stato assegnato il tipo -1 con [RTC_SetErrorType](../../c-runtime-library/reference/rtc-seterrortype.md), la funzione di gestione degli errori non viene chiamata.  
+ Se un errore è stato assegnato un tipo di -1 con [RTC_SetErrorType](../../c-runtime-library/reference/rtc-seterrortype.md), non viene chiamata la funzione di gestione degli errori.  
   
- Prima di chiamare questa funzione, è necessario chiamare una delle funzioni di inizializzazione dei controlli degli errori di run-time. Per altre informazioni, vedere [Uso dei controlli di runtime senza la libreria di runtime C](/visualstudio/debugger/using-run-time-checks-without-the-c-run-time-library).  
+ Prima di chiamare questa funzione, è necessario chiamare una delle funzioni di inizializzazione dei controlli degli errori di run-time. Per altre informazioni, vedere [Using Run-Time Checks Without the C Run-Time Library](/visualstudio/debugger/using-run-time-checks-without-the-c-run-time-library).  
   
  La definizione di **_RTC_error_fnW** è la seguente:  
   
@@ -95,7 +96,7 @@ Definisce una funzione come gestore per la segnalazione dei controlli degli erro
  dove:  
   
  `errorType`  
- Tipo di errore specificato da [_RTC_SetErrorType](../../c-runtime-library/reference/rtc-seterrortype.md).  
+ Tipo di errore specificato da [RTC_SetErrorType](../../c-runtime-library/reference/rtc-seterrortype.md).  
   
  *filename*  
  File di origine in cui si è verificato l'errore o Null se non sono disponibili informazioni di debug.  
@@ -121,9 +122,6 @@ Definisce una funzione come gestore per la segnalazione dei controlli degli erro
   
 ## <a name="libraries"></a>Librerie  
  Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
 ## <a name="see-also"></a>Vedere anche  
  [_CrtDbgReport, _CrtDbgReportW](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md)   

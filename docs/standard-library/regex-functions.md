@@ -8,31 +8,32 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - regex_match
-- std::regex_match
 - regex/std::regex_match
 - regex_replace
-- std::regex_replace
 - regex/std::regex_replace
 - regex_search
-- std::regex_search
 - regex/std::regex_search
 - regex/std::swap
+- regex/std::swap
+dev_langs:
+- C++
 ms.assetid: 91a8314b-6f7c-4e33-b7d6-d8583dd75585
 caps.latest.revision: 12
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 28fdbf1c00c44711538b7c163053eeca5a0c47e9
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 0b803ecc31331cdfed9b178ca2e919606482aa33
+ms.contentlocale: it-it
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="ltregexgt-functions"></a>Funzioni &lt;regex&gt;
 ||||  
 |-|-|-|  
-|[Funzione regex_match](#regex_match_function)|[Funzione regex_replace](#regex_replace_function)|[Funzione regex_search](#regex_search_function)|  
-|[Funzione swap](#swap_function)|  
+|[regex_match](#regex_match)|[regex_replace](#regex_replace)|[regex_search](#regex_search)|  
+|[swap](#swap)|  
   
-##  <a name="a-nameregexmatchfunctiona--regexmatch-function"></a><a name="regex_match_function"></a>  Funzione regex_match  
+##  <a name="regex_match"></a>regex_match
  Verifica se un'espressione regolare corrisponde all'intera stringa di destinazione.  
   
 ```  
@@ -121,7 +122,7 @@ bool regex_match(
  Fine della sequenza per cui cercare una corrispondenza.  
   
  `match`  
- Risultati della corrispondenza. Corrisponde al tipo Elem: [smatch](../standard-library/regex-typedefs.md#smatch_typedef) per string, [wsmatch](../standard-library/regex-typedefs.md#wsmatch_typedef) per wstring, [cmatch](../standard-library/regex-typedefs.md#cmatch_typedef) per char* o [wcmatch](../standard-library/regex-typedefs.md#wcmatch_typedef) per wchar_t\*.  
+ Risultati della corrispondenza. Corrisponde al tipo Elem: [smatch](../standard-library/regex-typedefs.md#smatch) per string, [wsmatch](../standard-library/regex-typedefs.md#wsmatch) per wstring, [cmatch](../standard-library/regex-typedefs.md#cmatch) per char* o [wcmatch](../standard-library/regex-typedefs.md#wcmatch) per wchar_t\*.  
   
  `ptr`  
  Puntatore all'inizio della sequenza per cui cercare una corrispondenza. Se ptr è char*, usare cmatch e regex. Se ptr è wchar_t\*, usare wcmatch e wregex.  
@@ -133,7 +134,7 @@ bool regex_match(
  Stringa per cui cercare una corrispondenza. Corrisponde al tipo di Elem.  
   
 ### <a name="remarks"></a>Note  
- Ogni funzione modello restituisce true solo se l'intera sequenza di operandi `str` corrisponde esattamente all'argomento dell'espressione regolare `re`. Usare [regex_search](../standard-library/regex-functions.md#regex_search_function) per cercare una corrispondenza con una sottostringa all'interno di una sequenza di destinazione e regex_iterator per trovare più corrispondenze. Le funzioni che accettano un oggetto `match_results` impostano i propri membri in modo da indicare se la corrispondenza ha avuto esito positivo e, in caso affermativo, cosa hanno acquisito i vari gruppi di acquisizione nell'espressione regolare.  
+ Ogni funzione modello restituisce true solo se l'intera sequenza di operandi `str` corrisponde esattamente all'argomento dell'espressione regolare `re`. Usare [regex_search](../standard-library/regex-functions.md#regex_search) per cercare una corrispondenza con una sottostringa all'interno di una sequenza di destinazione e regex_iterator per trovare più corrispondenze. Le funzioni che accettano un oggetto `match_results` impostano i propri membri in modo da indicare se la corrispondenza ha avuto esito positivo e, in caso affermativo, cosa hanno acquisito i vari gruppi di acquisizione nell'espressione regolare.  
   
  Le funzioni che accettano un oggetto `match_results` impostano i propri membri in modo da indicare se la corrispondenza ha avuto esito positivo e, in caso affermativo, cosa hanno acquisito i vari gruppi di acquisizione nell'espressione regolare.  
   
@@ -192,7 +193,7 @@ int _tmain(int argc, _TCHAR* argv[])
   
 ```  
   
-##  <a name="a-nameregexreplacefunctiona--regexreplace-function"></a><a name="regex_replace_function"></a>  Funzione regex_replace  
+##  <a name="regex_replace"></a>regex_replace
  Sostituisce espressioni regolari corrispondenti.  
   
 ```  
@@ -298,7 +299,7 @@ replacement == AdAeAf
 replacement == Adaeaf  
 ```  
   
-##  <a name="a-nameregexsearchfunctiona--regexsearch-function"></a><a name="regex_search_function"></a>  Funzione regex_search  
+##  <a name="regex_search"></a>regex_search
  Cerca una corrispondenza dell'espressione regolare.  
   
 ```  
@@ -447,7 +448,7 @@ search(string, "abc") == true
   matched: "abc"  
 ```  
   
-##  <a name="a-nameswapfunctiona--swap-function"></a><a name="swap_function"></a>  Funzione swap  
+##  <a name="swap"></a>  swap
  Scambia due oggetti basic_regex o match_results.  
   
 ```  
