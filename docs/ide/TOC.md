@@ -21,6 +21,8 @@
 ### [File della Guida (HTML)](help-files-html-help.md)
 ### [File della Guida (WinHelp)](help-files-winhelp.md)
 ### [File dei suggerimenti](hint-files.md)
+### [File XML delle pagine delle proprietà](property-page-xml-files.md)
+### [Struttura dei file con estensione vcxproj e props](vcxproj-file-structure.md)
 ## [Creazione di progetti desktop tramite le creazioni guidate applicazioni](creating-desktop-projects-by-using-application-wizards.md)
 ### [Supporto della procedura guidata per altre lingue](wizard-support-for-other-languages.md)
 ### [Creazione di una procedura guidata personalizzata](creating-a-custom-wizard.md)
