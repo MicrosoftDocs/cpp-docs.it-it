@@ -59,10 +59,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: bde781215787a1d39a58c69b344eb8d41f7b3c52
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: e068c6711630976a2d8b3baea01010bc5e34ed6e
+ms.contentlocale: it-it
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="localtimes-localtime32s-localtime64s"></a>localtime_s, _localtime32_s, _localtime64_s
@@ -120,7 +121,7 @@ errno_t _localtime64_s(
  I campi del tipo di struttura [tm](../../c-runtime-library/standard-types.md) archiviano i valori seguenti, ognuno dei quali è un `int`.  
   
  `tm_sec`  
- Secondi dopo il minuto (0 - 59).  
+ Secondi dopo minuto (0 - 59).  
   
  `tm_min`  
  Minuti dopo l'ora (0 - 59).  
@@ -129,19 +130,19 @@ errno_t _localtime64_s(
  Ore dopo la mezzanotte (0 - 23).  
   
  `tm_mday`  
- Giorno del mese (1 - 31).  
+ Giorno del mese (1-31).  
   
  `tm_mon`  
- Mese (0 - 11; gennaio = 0).  
+ Mese (0 - 11; Gennaio = 0).  
   
  `tm_year`  
  Anno (anno corrente meno 1900).  
   
  `tm_wday`  
- Giorno della settimana (0 - 6; domenica = 0).  
+ Giorno della settimana (0 - 6. Domenica = 0).  
   
  `tm_yday`  
- Giorno dell'anno (0 - 365; 1 gennaio = 0).  
+ Giorno dell'anno (0 - 365; Il 1 ° gennaio = 0).  
   
  `tm_isdst`  
  Valore positivo se è in vigore l'ora legale. 0 se l'ora legale non è in vigore. Valore negativo se lo stato dell'ora legale è sconosciuto. Se viene impostata la variabile di ambiente `TZ`, la libreria di runtime C presuppone l'uso delle regole relative agli Stati Uniti per implementare il calcolo dell'ora legale.  
@@ -211,9 +212,6 @@ int main( void )
 ```  
 Fri Apr 25 01:19:27 PM  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- [System::DateTime::ToLocalTime](https://msdn.microsoft.com/en-us/library/system.datetime.tolocaltime.aspx)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione del tempo](../../c-runtime-library/time-management.md)   

@@ -1,103 +1,120 @@
 ---
-title: "_cputs, _cputws | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_cputws"
-  - "_cputs"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-conio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "cputws"
-  - "_cputs"
-  - "_cputws"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_cputs (funzione)"
-  - "_cputws (funzione)"
-  - "console, invio di stringhe"
-  - "cputs (funzione)"
-  - "cputws (funzione)"
-  - "inserimento di stringhe nella console"
-  - "stringhe [C++], scrittura"
+title: _cputs, _cputws | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _cputws
+- _cputs
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-conio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- cputws
+- _cputs
+- _cputws
+dev_langs:
+- C++
+helpviewer_keywords:
+- strings [C++], writing
+- _cputs function
+- _cputws function
+- putting strings to the console
+- cputs function
+- console, sending strings to
+- cputws function
 ms.assetid: ec418484-0f8d-43ec-8d8b-198a556c659e
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# _cputs, _cputws
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: b773a7b9ae2ad6a7af7aa178fa277be2362c2c11
+ms.contentlocale: it-it
+ms.lasthandoff: 02/28/2017
 
+---
+# <a name="cputs-cputws"></a>_cputs, _cputws
 Inserisce una stringa nella console.  
   
 > [!IMPORTANT]
->  Questa API non può essere usata nelle applicazioni eseguite in [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  Per altre informazioni, vedere l'argomento relativo alle [funzioni CRT non supportate con \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Questa API non può essere usata nelle applicazioni eseguite in [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]. Per altre informazioni, vedere l'articolo relativo alle [funzioni CRT non supportate con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-        int _cputs(   
-const char *str   
+int _cputs(   
+   const char *str   
 );  
 int _cputws(  
-const wchar_t *str   
+   const wchar_t *str   
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `str`  
  Stringa di output.  
   
-## Valore restituito  
- Se l'esito è positivo, `_cputs` restituisce 0.  In caso contrario, restituisce un valore diverso da zero.  
+## <a name="return-value"></a>Valore restituito  
+ Se l'esito è positivo, `_cputs` restituisce 0. In caso contrario, restituisce un valore diverso da zero.  
   
-## Note  
- La funzione `_cputs` scrive la stringa con terminazione Null a cui punta `str` direttamente alla console.  Una combinazione di ritorno a capo e avanzamento riga \(CR\-LF\) non verrà aggiunto automaticamente alla stringa.  
+## <a name="remarks"></a>Note  
+ La funzione `_cputs` scrive la stringa con terminazione Null a cui punta `str` direttamente alla console. Una combinazione di ritorno a capo e avanzamento riga (CR-LF) non verrà aggiunto automaticamente alla stringa.  
   
- Questa funzione convalida il relativo parametro.  Se `str` è **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).  Se l'esecuzione può continuare, `errno` viene impostato su `EINVAL` e viene restituito \-1.  
+ Questa funzione convalida il relativo parametro. Se `str` è **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, `errno` viene impostato su `EINVAL` e viene restituito -1.  
   
-### Mapping di routine di testo generico  
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
-|Routine Tchar.h|\_UNICODE e \_MBCS non definiti|\_MBCS definito|\_UNICODE definito|  
-|---------------------|-------------------------------------|---------------------|------------------------|  
-|**\_cputts**|`_cputs`|`_cputs`|`_cputws`|  
+|Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
+|**_cputts**|`_cputs`|`_cputs`|`_cputws`|  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|Intestazione facoltativa|  
-|-------------|-------------------------------|------------------------------|  
-|`_cputs`|\<conio.h\>|\<errno.h\>|  
-|`_cputws`|\<conio.h\>|\<errno.h\>|  
+|-------------|---------------------|---------------------|  
+|`_cputs`|\<conio.h>|\<errno.h>|  
+|`_cputws`|\<conio.h>|\<errno.h>|  
   
  Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
-## Raccolte  
+## <a name="libraries"></a>Librerie  
  Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-```  
+```C  
 // crt_cputs.c  
 // compile with: /c  
 // This program first displays a string to the console.  
@@ -147,13 +164,11 @@ int main()
 }  
 ```  
   
-## Output  
-  
-```  
+```Output  
 Hello world (courtesy of _cputs)!  
 Hello world (courtesy of _cputws)!  
 ```  
   
-## Vedere anche  
- [I\/O console e porta](../../c-runtime-library/console-and-port-i-o.md)   
- [\_putch, \_putwch](../../c-runtime-library/reference/putch-putwch.md)
+## <a name="see-also"></a>Vedere anche  
+ [Console e porta I/O](../../c-runtime-library/console-and-port-i-o.md)   
+ [_putch, _putwch](../../c-runtime-library/reference/putch-putwch.md)

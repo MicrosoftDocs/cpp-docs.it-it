@@ -6,23 +6,25 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: []
 ms.assetid: b7c664f0-49d4-4993-b5d1-9ac4859fdddc
 caps.latest.revision: 10
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 636825d8dc49ed0d4d7beaa03328b7a3f20f668e
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: a369890d41b58fb3865780291822b4e7e045e919
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltiteratorgt-operators"></a>Operatori &lt;iterator&gt;
 ||||  
 |-|-|-|  
-|[operator!=](#operator_neq)|[operator&gt;](#operator_gt_)|[operator&gt;=](#operator_gt__eq)|  
-|[operator&lt;](#operator_lt_)|[operator&lt;=](#operator_lt__eq)|[operator+](#operator_add)|  
-|[operator-](#operator-)|[operator==](#operator_eq_eq)|  
+|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
+|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator+](#op_add)|  
+|[operator-](#operator-)|[operator==](#op_eq_eq)|  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  operator!=  
+##  <a name="op_neq"></a>  operator!=  
  Verifica se l'oggetto iteratore a sinistra dell'operatore non è uguale all'oggetto iteratore a destra.  
   
 ```  
@@ -37,10 +39,10 @@ bool operator!=(const istreambuf_iterator<CharType, Traits>& left, const istream
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` left`  
+ `left`  
  Oggetto di tipo **iteratore**.  
   
- ` right`  
+ `right`  
  Oggetto di tipo **iteratore**.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -111,7 +113,7 @@ The iterator rVPOS1 now points to the second element
 The iterators are not equal.  
 ```  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  operator==  
+##  <a name="op_eq_eq"></a>  operator==  
  Verifica se l'oggetto iteratore a sinistra dell'operatore è uguale all'oggetto iteratore a destra.  
   
 ```  
@@ -137,10 +139,10 @@ bool operator==(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` left`  
+ `left`  
  Oggetto di tipo iteratore.  
   
- ` right`  
+ `right`  
  Oggetto di tipo iteratore.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -149,7 +151,7 @@ bool operator==(
 ### <a name="remarks"></a>Note  
  Un oggetto iteratore è uguale a un altro se entrambi puntano agli stessi elementi in un contenitore. Se due iteratori puntano a elementi diversi in un contenitore, non sono uguali.  
   
- I primi due operatori modello restituiscono true solo se ` left` e ` right` archiviano lo stesso iteratore. Il terzo operatore modello restituisce true solo se ` left` e ` right` archiviano lo stesso puntatore del flusso. Il quarto operatore modello restituisce ` left.equal ( right)`.  
+ I primi due operatori modello restituiscono true solo se `left` e `right` archiviano lo stesso iteratore. Il terzo operatore modello restituisce true solo se `left` e `right` archiviano lo stesso puntatore del flusso. Il quarto operatore modello restituisce ` left.equal ( right)`.  
   
 ### <a name="example"></a>Esempio  
   
@@ -213,7 +215,7 @@ The iterator rVPOS1 now points to the second element
 The iterators are not equal.  
 ```  
   
-##  <a name="a-nameoperatorlta--operatorlt"></a><a name="operator_lt_"></a>  operator&lt;  
+##  <a name="op_lt"></a>  operator&lt;  
  Verifica se l'oggetto iteratore a sinistra dell'operatore è minore all'oggetto iteratore a destra.  
   
 ```  
@@ -222,10 +224,10 @@ bool operator<(const reverse_iterator<RandomIterator>& left, const reverse_itera
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` left`  
+ `left`  
  Oggetto di tipo **iteratore**.  
   
- ` right`  
+ `right`  
  Oggetto di tipo **iteratore**.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -300,7 +302,7 @@ The iterator rVPOS2 now points to the second element
 The iterator rVPOS1 is less than the iterator rVPOS2.  
 ```  
   
-##  <a name="a-nameoperatorlteqa--operatorlt"></a><a name="operator_lt__eq"></a>  operator&lt;=  
+##  <a name="op_lt_eq"></a>  operator&lt;=  
  Verifica se l'oggetto iteratore a sinistra dell'operatore è minore o uguale all'oggetto iteratore a destra.  
   
 ```  
@@ -309,10 +311,10 @@ bool operator<=(const reverse_iterator<RandomIterator>& left, const reverse_iter
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` left`  
+ `left`  
  Oggetto di tipo iteratore.  
   
- ` right`  
+ `right`  
  Oggetto di tipo iteratore.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -391,7 +393,7 @@ The iterator rVPOS2 now points to the second element
 The iterator rVPOS1 is less than or equal to the iterator rVPOS2.  
 ```  
   
-##  <a name="a-nameoperatorgta--operatorgt"></a><a name="operator_gt_"></a>  operator&gt;  
+##  <a name="op_gt"></a>  operator&gt;  
  Verifica se l'oggetto iteratore a sinistra dell'operatore è maggiore dell'oggetto iteratore a destra.  
   
 ```  
@@ -400,10 +402,10 @@ bool operator>(const reverse_iterator<RandomIterator>& left, const reverse_itera
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` left`  
+ `left`  
  Oggetto di tipo iteratore.  
   
- ` right`  
+ `right`  
  Oggetto di tipo iteratore.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -476,7 +478,7 @@ The iterator rVPOS1 now points to the second element
 The iterator rVPOS1 is greater than the iterator rVPOS2.  
 ```  
   
-##  <a name="a-nameoperatorgteqa--operatorgt"></a><a name="operator_gt__eq"></a>  operator&gt;=  
+##  <a name="op_gt_eq"></a>  operator&gt;=  
  Verifica se l'oggetto iteratore a sinistra dell'operatore è maggiore o uguale all'oggetto iteratore a destra.  
   
 ```  
@@ -485,10 +487,10 @@ bool operator>=(const reverse_iterator<RandomIterator>& left, const reverse_iter
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` left`  
+ `left`  
  Oggetto di tipo iteratore.  
   
- ` right`  
+ `right`  
  Oggetto di tipo iteratore.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -567,7 +569,7 @@ The iterator rVPOS1 now points to the second element
 The iterator rVPOS1 is greater than or equal to the iterator rVPOS2.  
 ```  
   
-##  <a name="a-nameoperatoradda--operator"></a><a name="operator_add"></a>  operator+  
+##  <a name="op_add"></a>  operator+  
  Aggiunge un offset a un iteratore e restituisce un oggetto `move_iterator` o un oggetto `reverse_iterator` che punta all'elemento inserito in corrispondenza della nuova posizione dell'offset.  
   
 ```  
@@ -588,11 +590,11 @@ operator+(
  `_Off`  
  Numero di posizioni in base alle quali deve essere eseguito l'offset di move_iterator const o reverse_iterator const.  
   
- ` right`  
+ `right`  
  Iteratore di cui deve essere eseguito l'offset.  
   
 ### <a name="return-value"></a>Valore restituito  
- Somma ` right` + `_Off`.  
+ Somma `right` + `_Off`.  
   
 ### <a name="example"></a>Esempio  
   
@@ -643,7 +645,7 @@ The iterator rVPOS1 now points to the fifth element
  in the reversed sequence: 2.  
 ```  
   
-##  <a name="a-nameoperator-a--operator-"></a><a name="operator-"></a>  operator-  
+##  <a name="operator-"></a>  operator-  
  Sottrae un iteratore da un altro e restituisce la differenza.  
   
 ```  
@@ -659,19 +661,19 @@ Tdiff operator-(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` left`  
+ `left`  
  Iteratore.  
   
- ` right`  
+ `right`  
  Iteratore.  
   
 ### <a name="return-value"></a>Valore restituito  
  Differenza tra due iteratori `.`.  
   
 ### <a name="remarks"></a>Note  
- Il primo operatore modello restituisce ` left.base() -  right.base()`.  
+ Il primo operatore modello restituisce `left.base() - right.base()`.  
   
- Il secondo operatore modello restituisce ` right.current -  left.current`.  
+ Il secondo operatore modello restituisce `right.current - left.current`.  
   
  `Tdiff` è determinato dal tipo dell'espressione restituita. Altrimenti, è `RandomIterator1::difference_type`.  
   

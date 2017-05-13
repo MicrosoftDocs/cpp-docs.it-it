@@ -9,10 +9,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::allocator
 - allocator
 - memory/std::allocator
-- std.allocator
+- memory/std::allocator::const_pointer
+- memory/std::allocator::const_reference
+- memory/std::allocator::difference_type
+- memory/std::allocator::pointer
+- memory/std::allocator::reference
+- memory/std::allocator::size_type
+- memory/std::allocator::value_type
+- memory/std::allocator::address
+- memory/std::allocator::allocate
+- memory/std::allocator::construct
+- memory/std::allocator::deallocate
+- memory/std::allocator::destroy
+- memory/std::allocator::max_size
+- memory/std::allocator::rebind
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,10 +48,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 4c9e2c1acffd7286644ca61a4ef782e7b3a11eef
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: a2447e0e42cc0a7fdc22db9de415f6dde46c40a5
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="allocator-class"></a>Classe allocator
@@ -61,19 +74,19 @@ class allocator
   
  Ad esempio, un oggetto allocatore potrebbe allocare spazio di archiviazione in un heap privato o nella memoria condivisa o potrebbe ottimizzare per le dimensioni piccole o grandi dell'oggetto. Potrebbe anche specificare, attraverso le definizioni di tipo fornite, che è possibile accedere agli elementi con speciali oggetti funzione di accesso che gestiscono la memoria condivisa o eseguono operazioni automatiche di Garbage Collection. Di conseguenza, una classe che alloca memoria usando un oggetto allocatore deve usare questi tipi per il puntatore di dichiarazione e gli oggetti di riferimento, proprio come i contenitori della libreria standard C++.  
   
- **(Solo C_++98/03)**Quando si deriva dalla classe allocator, è necessario fornire uno struct [rebind](#allocator__rebind), il cui typedef `_Other` si riferisce alla nuova classe derivata.  
+ **(Solo C_++98/03)**Quando si deriva dalla classe allocator, è necessario fornire uno struct [rebind](#rebind), il cui typedef `_Other` si riferisce alla nuova classe derivata.  
   
  Di conseguenza, un allocatore definisce i tipi seguenti:  
   
-- [pointer](#allocator__pointer) funziona come un puntatore a **Type**.  
+- [pointer](#pointer) funziona come un puntatore a **Type**.  
   
-- [const_pointer](#allocator__const_pointer) funziona come un puntatore const a **Type**.  
+- [const_pointer](#const_pointer) funziona come un puntatore const a **Type**.  
   
-- [reference](#allocator__reference) funziona come un riferimento a **Type**.  
+- [reference](#reference) funziona come un riferimento a **Type**.  
   
-- [const_reference](#allocator__const_reference) funziona come un riferimento const a **Type**.  
+- [const_reference](#const_reference) funziona come un riferimento const a **Type**.  
   
- Questi **Type** specificano il form che puntatori e riferimenti devono accettare per gli elementi allocati. [allocator::pointer](#allocator__pointer) non è necessariamente identico a **Type**\* per tutti gli oggetti allocatore, anche se ha questa definizione ovvia per la classe **allocator**.  
+ Questi **Type** specificano il form che puntatori e riferimenti devono accettare per gli elementi allocati. [allocator::pointer](#pointer) non è necessariamente identico a **Type**\* per tutti gli oggetti allocatore, anche se ha questa definizione ovvia per la classe **allocator**.  
   
  **C++11 e versioni successive:** per abilitare le operazioni di spostamento nell'allocatore, usare l'interfaccia dell'allocatore minimo e implementare il costruttore di copia, gli operatori == e !=, allocate e deallocate. Per altre informazioni e un esempio, vedere [Allocatori](../standard-library/allocators.md)  
   
@@ -83,44 +96,44 @@ class allocator
   
 |||  
 |-|-|  
-|[allocator](#allocator__allocator)|Costruttori usati per la creazione di oggetti `allocator`.|  
+|[allocator](#allocator)|Costruttori usati per la creazione di oggetti `allocator`.|  
   
 ### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
-|[const_pointer](#allocator__const_pointer)|Tipo che fornisce un puntatore costante al tipo di oggetto gestito dall'allocatore.|  
-|[const_reference](#allocator__const_reference)|Tipo che fornisce un riferimento costante al tipo di oggetto gestito dall'allocatore.|  
-|[difference_type](#allocator__difference_type)|Tipo integrale con segno che può rappresentare la differenza tra valori di puntatori al tipo di oggetto gestito dall'allocatore.|  
-|[pointer](#allocator__pointer)|Tipo che fornisce un puntatore al tipo di oggetto gestito dall'allocatore.|  
-|[reference](#allocator__reference)|Tipo che fornisce un riferimento al tipo di oggetto gestito dall'allocatore.|  
-|[size_type](#allocator__size_type)|Un tipo integrale senza segno che può rappresentare la lunghezza di qualsiasi sequenza che un oggetto della classe modello `allocator` può allocare.|  
-|[value_type](#allocator__value_type)|Tipo gestito dall'allocatore.|  
+|[const_pointer](#const_pointer)|Tipo che fornisce un puntatore costante al tipo di oggetto gestito dall'allocatore.|  
+|[const_reference](#const_reference)|Tipo che fornisce un riferimento costante al tipo di oggetto gestito dall'allocatore.|  
+|[difference_type](#difference_type)|Tipo integrale con segno che può rappresentare la differenza tra valori di puntatori al tipo di oggetto gestito dall'allocatore.|  
+|[pointer](#pointer)|Tipo che fornisce un puntatore al tipo di oggetto gestito dall'allocatore.|  
+|[reference](#reference)|Tipo che fornisce un riferimento al tipo di oggetto gestito dall'allocatore.|  
+|[size_type](#size_type)|Un tipo integrale senza segno che può rappresentare la lunghezza di qualsiasi sequenza che un oggetto della classe modello `allocator` può allocare.|  
+|[value_type](#value_type)|Tipo gestito dall'allocatore.|  
   
 ### <a name="member-functions"></a>Funzioni membro  
   
 |||  
 |-|-|  
-|[address](#allocator__address)|Trova l'indirizzo di un oggetto il cui valore è specificato.|  
-|[allocate](#allocator__allocate)|Alloca un blocco di memoria sufficiente a contenere almeno un numero specificato di elementi.|  
-|[construct](#allocator__construct)|Costruisce un tipo specifico di oggetto su un indirizzo specificato che viene inizializzato con un valore specificato.|  
-|[deallocate](#allocator__deallocate)|Libera un numero specificato di oggetti dall'archiviazione iniziando da una posizione specificata.|  
-|[destroy](#allocator__destroy)|Chiama un distruttore di oggetti senza deallocare la memoria in cui è stato archiviato l'oggetto.|  
-|[max_size](#allocator__max_size)|Restituisce il numero di elementi di tipo `Type` che potrebbe essere assegnata da un oggetto della classe `allocator` prima che la memoria libera si esaurisca.|  
-|[rebind](#allocator__rebind)|Una struttura che consente a un allocatore per gli oggetti di un unico tipo di allocare memoria per gli oggetti di un altro tipo.|  
+|[address](#address)|Trova l'indirizzo di un oggetto il cui valore è specificato.|  
+|[allocate](#allocate)|Alloca un blocco di memoria sufficiente a contenere almeno un numero specificato di elementi.|  
+|[construct](#construct)|Costruisce un tipo specifico di oggetto su un indirizzo specificato che viene inizializzato con un valore specificato.|  
+|[deallocate](#deallocate)|Libera un numero specificato di oggetti dall'archiviazione iniziando da una posizione specificata.|  
+|[destroy](#destroy)|Chiama un distruttore di oggetti senza deallocare la memoria in cui è stato archiviato l'oggetto.|  
+|[max_size](#max_size)|Restituisce il numero di elementi di tipo `Type` che potrebbe essere assegnata da un oggetto della classe `allocator` prima che la memoria libera si esaurisca.|  
+|[rebind](#rebind)|Una struttura che consente a un allocatore per gli oggetti di un unico tipo di allocare memoria per gli oggetti di un altro tipo.|  
   
 ### <a name="operators"></a>Operatori  
   
 |||  
 |-|-|  
-|[operator=](#allocator__operator_eq)|Assegna un oggetto `allocator` a un altro oggetto `allocator`.|  
+|[operator=](#op_eq)|Assegna un oggetto `allocator` a un altro oggetto `allocator`.|  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** \<memory>  
   
  **Spazio dei nomi:** std  
   
-##  <a name="a-nameallocatoraddressa--allocatoraddress"></a><a name="allocator__address"></a>  allocator::address  
+##  <a name="address"></a>  allocator::address  
  Trova l'indirizzo di un oggetto il cui valore è specificato.  
   
 ```  
@@ -129,14 +142,14 @@ const_pointer address(const_reference val) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` val`  
+ `val`  
  Valore const o nonconst dell'oggetto di cui viene cercato l'indirizzo.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore const o nonconst all'oggetto trovato rispettivamente di valore const o nonconst.  
   
 ### <a name="remarks"></a>Note  
- Le funzioni membro restituiscono l'indirizzo di ` val` nel form che i puntatori devono accettare per gli elementi allocati.  
+ Le funzioni membro restituiscono l'indirizzo di `val` nel form che i puntatori devono accettare per gli elementi allocati.  
   
 ### <a name="example"></a>Esempio  
   
@@ -182,7 +195,7 @@ The original vector v1 is:
 The integer addressed by v1Ptr has a value of: *v1Ptr = 8.  
 ```  
   
-##  <a name="a-nameallocatorallocatea--allocatorallocate"></a><a name="allocator__allocate"></a>  allocator::allocate  
+##  <a name="allocate"></a>  allocator::allocate  
  Alloca un blocco di memoria sufficiente a contenere almeno un numero specificato di elementi.  
   
 ```  
@@ -190,7 +203,7 @@ pointer allocate(size_type count, const void* _Hint);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` count`  
+ `count`  
  Numero di elementi per cui deve essere allocato spazio di archiviazione sufficiente.  
   
  *_Hint*  
@@ -200,7 +213,7 @@ pointer allocate(size_type count, const void* _Hint);
  Un puntatore all'oggetto allocato o null se non è stata allocata memoria.  
   
 ### <a name="remarks"></a>Note  
- La funzione membro alloca spazio di archiviazione per una matrice di elementi count di tipo **Type** tramite una chiamata all'operatore new( ` count`). Restituisce un puntatore all'oggetto allocato. L'argomento hint consente ad alcuni allocatori di migliorare la posizione del riferimento. Una scelta valida è l'indirizzo di un oggetto allocato in precedenza dallo stesso oggetto allocatore e non ancora deallocato. Per non specificare hint, usare un argomento di puntatore null.  
+ La funzione membro alloca spazio di archiviazione per una matrice di elementi count di tipo **Type** tramite una chiamata all'operatore new( `count`). Restituisce un puntatore all'oggetto allocato. L'argomento hint consente ad alcuni allocatori di migliorare la posizione del riferimento. Una scelta valida è l'indirizzo di un oggetto allocato in precedenza dallo stesso oggetto allocatore e non ancora deallocato. Per non specificare hint, usare un argomento di puntatore null.  
   
 ### <a name="example"></a>Esempio  
   
@@ -238,7 +251,7 @@ int main( )
 0 1 2 3 4 5 6 7 8 9   
 ```  
   
-##  <a name="a-nameallocatorallocatora--allocatorallocator"></a><a name="allocator__allocator"></a>  allocator::allocator  
+##  <a name="allocator"></a>  allocator::allocator  
  Costruttori usati per la creazione di oggetti allocatore.  
   
 ```  
@@ -249,7 +262,7 @@ allocator(const allocator<Other>& right);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` right`  
+ `right`  
  Oggetto allocatore da copiare.  
   
 ### <a name="remarks"></a>Note  
@@ -318,7 +331,7 @@ The allocator objects cv1Alloc & v1Alloc are equal.
 The allocator objects cAlloc & Alloc are equal.  
 ```  
   
-##  <a name="a-nameallocatorconstpointera--allocatorconstpointer"></a><a name="allocator__const_pointer"></a>  allocator::const_pointer  
+##  <a name="const_pointer"></a>  allocator::const_pointer  
  Tipo che fornisce un puntatore costante al tipo di oggetto gestito dall'allocatore.  
   
 ```  
@@ -371,7 +384,7 @@ The original vector v1 is:
 The integer's address found has a value of: 10.  
 ```  
   
-##  <a name="a-nameallocatorconstreferencea--allocatorconstreference"></a><a name="allocator__const_reference"></a>  allocator::const_reference  
+##  <a name="const_reference"></a>  allocator::const_reference  
  Tipo che fornisce un riferimento costante al tipo di oggetto gestito dall'allocatore.  
   
 ```  
@@ -435,7 +448,7 @@ The value of the element referred to by vcref,
  after nofication through its nonconst iterator, is: 175.  
 ```  
   
-##  <a name="a-nameallocatorconstructa--allocatorconstruct"></a><a name="allocator__construct"></a>  allocator::construct  
+##  <a name="construct"></a>  allocator::construct  
  Costruisce un tipo specifico di oggetto su un indirizzo specificato che viene inizializzato con un valore specificato.  
   
 ```  
@@ -446,14 +459,14 @@ void construct(pointer ptr, _Other&&...   val);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` ptr`  
+ `ptr`  
  Puntatore al percorso in cui deve essere creato l'oggetto.  
   
- ` val`  
+ `val`  
  Il valore con cui viene inizializzato l'oggetto costruito.  
   
 ### <a name="remarks"></a>Note  
- La prima funzione membro è equivalente a **new** ( ( `void` \*) ` ptr` ) **Type** ( ` val` ).  
+ La prima funzione membro è equivalente a **new** ( ( `void` \*) `ptr` ) **Type** ( `val` ).  
   
 ### <a name="example"></a>Esempio  
   
@@ -504,7 +517,7 @@ The modified vector v1 is:
  ( 3 7 9 12 15 18 21 ).  
 ```  
   
-##  <a name="a-nameallocatordeallocatea--allocatordeallocate"></a><a name="allocator__deallocate"></a>  allocator::deallocate  
+##  <a name="deallocate"></a>  allocator::deallocate  
  Libera un numero specificato di oggetti dall'archiviazione iniziando da una posizione specificata.  
   
 ```  
@@ -512,19 +525,19 @@ void deallocate(pointer ptr, size_type count);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` ptr`  
+ `ptr`  
  Puntatore al primo oggetto che deve essere deallocato dall'archivio.  
   
- ` count`  
+ `count`  
  Numero di oggetti da deallocare dall'archivio.  
   
 ### <a name="remarks"></a>Note  
- La funzione membro libera spazio di archiviazione per la matrice di oggetti count di tipo **Type** a partire da ` ptr` tramite una chiamata a `operator delete`( ` ptr`). Il puntatore ` ptr` deve essere stato restituito in precedenza da una chiamata ad [allocate](#allocator__allocate) per un oggetto allocatore che risulta uguale a **\*this**, allocando un oggetto matrice con dimensione e tipo corrispondenti. `deallocate` non genera mai un'eccezione.  
+ La funzione membro libera spazio di archiviazione per la matrice di oggetti di conteggio di tipo **tipo** a partire da `ptr`, chiamando `operator delete(ptr)`. Il puntatore `ptr` deve essere stato restituito in precedenza da una chiamata ad [allocate](#allocate) per un oggetto allocatore che risulta uguale a **\*this**, allocando un oggetto matrice con dimensione e tipo corrispondenti. `deallocate` non genera mai un'eccezione.  
   
 ### <a name="example"></a>Esempio  
-  Per un esempio di utilizzo della funzione membro, vedere [allocator::allocate](#allocator__allocate).  
+  Per un esempio di utilizzo della funzione membro, vedere [allocator::allocate](#allocate).  
   
-##  <a name="a-nameallocatordestroya--allocatordestroy"></a><a name="allocator__destroy"></a>  allocator::destroy  
+##  <a name="destroy"></a>  allocator::destroy  
  Chiama un distruttore di oggetti senza deallocare la memoria in cui è stato archiviato l'oggetto.  
   
 ```  
@@ -532,11 +545,11 @@ void destroy(pointer ptr);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` ptr`  
+ `ptr`  
  Un puntatore che indica l'indirizzo dell'oggetto da distruggere.  
   
 ### <a name="remarks"></a>Note  
- La funzione membro distrugge l'oggetto specificato da ` ptr` tramite una chiamata al distruttore ` ptr` -> **Type**:: **~Type**.  
+ La funzione membro Elimina definitivamente l'oggetto specificato da `ptr`, tramite la chiamata del distruttore `ptr->` **tipo**::**~ tipo**.  
   
 ### <a name="example"></a>Esempio  
   
@@ -587,7 +600,7 @@ The modified vector v1 is:
  ( 2 4 6 8 10 -99 14 ).  
 ```  
   
-##  <a name="a-nameallocatordifferencetypea--allocatordifferencetype"></a><a name="allocator__difference_type"></a>  allocator::difference_type  
+##  <a name="difference_type"></a>  allocator::difference_type  
  Tipo integrale con segno che può rappresentare la differenza tra valori di puntatori al tipo di oggetto gestito dall'allocatore.  
   
 ```  
@@ -646,7 +659,7 @@ Pointer v1PtrB addresses 12.
 The difference between the integer's addresses is: 8.  
 ```  
   
-##  <a name="a-nameallocatormaxsizea--allocatormaxsize"></a><a name="allocator__max_size"></a>  allocator::max_size  
+##  <a name="max_size"></a>  allocator::max_size  
  Restituisce il numero di elementi di tipo **Type** che possono essere allocati da un oggetto della classe allocator prima che la memoria libera si esaurisca.  
   
 ```  
@@ -713,7 +726,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameallocatoroperatoreqa--allocatoroperator"></a><a name="allocator__operator_eq"></a>  allocator::operator=  
+##  <a name="op_eq"></a>  allocator::operator=  
  Assegna un oggetto allocatore a un altro oggetto allocatore.  
   
 ```  
@@ -722,7 +735,7 @@ allocator<Type>& operator=(const allocator<Other>& right);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` right`  
+ `right`  
  Oggetto allocatore da assegnare a un altro oggetto di questo tipo.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -772,7 +785,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameallocatorpointera--allocatorpointer"></a><a name="allocator__pointer"></a>  allocator::pointer  
+##  <a name="pointer"></a>  allocator::pointer  
  Tipo che fornisce un puntatore al tipo di oggetto gestito dall'allocatore.  
   
 ```  
@@ -825,7 +838,7 @@ The original vector v1 is:
 The integer addressed by v1Ptr has a value of: *v1Ptr = 12.  
 ```  
   
-##  <a name="a-nameallocatorrebinda--allocatorrebind"></a><a name="allocator__rebind"></a>  allocator::rebind  
+##  <a name="rebind"></a>  allocator::rebind  
  Una struttura che consente a un allocatore per gli oggetti di un unico tipo di allocare memoria per gli oggetti di un altro tipo.  
 ```  
 struct rebind {    typedef allocator<_Other> other ;    };  
@@ -876,7 +889,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameallocatorreferencea--allocatorreference"></a><a name="allocator__reference"></a>  allocator::reference  
+##  <a name="reference"></a>  allocator::reference  
  Tipo che fornisce un riferimento al tipo di oggetto gestito dall'allocatore.  
   
 ```  
@@ -934,7 +947,7 @@ The value of the element referred to by vref is: 100,
 The element referred to by vref after being modified is: 150.  
 ```  
   
-##  <a name="a-nameallocatorsizetypea--allocatorsizetype"></a><a name="allocator__size_type"></a>  allocator::size_type  
+##  <a name="size_type"></a>  allocator::size_type  
  Un tipo integrale senza segno che può rappresentare la lunghezza di qualsiasi sequenza che un oggetto della classe di modello allocator può allocare.  
   
 ```  
@@ -978,7 +991,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameallocatorvaluetypea--allocatorvaluetype"></a><a name="allocator__value_type"></a>  allocator::value_type  
+##  <a name="value_type"></a>  allocator::value_type  
  Tipo gestito dall'allocatore.  
   
 ```  

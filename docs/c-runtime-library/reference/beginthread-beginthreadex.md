@@ -1,55 +1,72 @@
 ---
-title: "_beginthread, _beginthreadex | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_beginthread"
-  - "_beginthreadex"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "beginthread"
-  - "_beginthread"
-  - "beginthreadex"
-  - "_beginthreadex"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_beginthread (funzione)"
-  - "threading [C++], creazione di thread"
-  - "beginthreadex (funzione)"
-  - "_beginthreadex (funzione)"
-  - "beginthread (funzione)"
+title: _beginthread, _beginthreadex | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _beginthread
+- _beginthreadex
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- beginthread
+- _beginthread
+- beginthreadex
+- _beginthreadex
+dev_langs:
+- C++
+helpviewer_keywords:
+- _beginthread function
+- threading [C++], creating threads
+- beginthreadex function
+- _beginthreadex function
+- beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
 caps.latest.revision: 36
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 36
----
-# _beginthread, _beginthreadex
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 3c556e6460f1a39bab23f2612cbf820e284d7605
+ms.contentlocale: it-it
+ms.lasthandoff: 03/29/2017
 
+---
+# <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 Crea un thread.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 uintptr_t _beginthread( // NATIVE CODE  
@@ -80,9 +97,9 @@ uintptr_t _beginthreadex( // MANAGED CODE
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `start_address`  
- Indirizzo iniziale di una routine che avvia l'esecuzione di un nuovo thread. Per `_beginthread` la convenzione di chiamata è [\_\_cdecl](../../cpp/cdecl.md) \(per il codice nativo\) o [\_\_clrcall](../../cpp/clrcall.md) \(per il codice gestito\). Per `_beginthreadex` è [\_\_stdcall](../../cpp/stdcall.md) \(per il codice nativo\) o [\_\_clrcall](../../cpp/clrcall.md) \(per il codice gestito\).  
+ Indirizzo iniziale di una routine che avvia l'esecuzione di un nuovo thread. Per `_beginthread`la convenzione di chiamata è [__cdecl](../../cpp/cdecl.md) (per il codice nativo) o [__clrcall](../../cpp/clrcall.md) (per il codice gestito). Per `_beginthreadex`è [__stdcall](../../cpp/stdcall.md) (per il codice nativo) o [__clrcall](../../cpp/clrcall.md) (per il codice gestito).  
   
  `stack_size`  
  Dimensione dello stack per un nuovo thread, oppure 0.  
@@ -91,7 +108,7 @@ uintptr_t _beginthreadex( // MANAGED CODE
  Elenco di argomenti da passare a un nuovo thread o NULL.  
   
  `Security`  
- Puntatore a una struttura [SECURITY\_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) che determina se l'handle restituito può essere ereditato dai processi figlio. Se `Security` è NULL, l'handle non può essere ereditato. Deve essere NULL per le applicazioni Windows 95.  
+ Puntatore a una struttura [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) che determina se l'handle restituito può essere ereditato dai processi figlio. Se `Security` è NULL, l'handle non può essere ereditato. Deve essere NULL per le applicazioni Windows 95.  
   
  `initflag`  
  Flag che controllano lo stato iniziale di un nuovo thread. Impostare `initflag` su `0` per l'esecuzione immediata o su `CREATE_SUSPENDED` per creare il thread in uno stato sospeso. Usare quindi [ResumeThread](http://msdn.microsoft.com/library/windows/desktop/ms685086.aspx) per eseguire il thread. Impostare `initflag` sul flag `STACK_SIZE_PARAM_IS_A_RESERVATION` per usare `stack_size` come dimensione di riserva iniziale dello stack in byte. Se questo flag non è specificato, `stack_size` specifica la dimensione del commit.  
@@ -99,62 +116,62 @@ uintptr_t _beginthreadex( // MANAGED CODE
  `thrdaddr`  
  Punta a una variabile a 32 bit che riceve l'identificatore del thread. Se è NULL, non viene usato.  
   
-## Valore restituito  
- Se completata correttamente, ognuna di queste funzioni restituisce un handle per il thread appena creato. Tuttavia, se il thread appena creato termina troppo rapidamente, `_beginthread` potrebbe non restituire un handle valido. Vedere la discussione nella sezione Osservazioni. In caso di errore, `_beginthread` restituisce \-1L e `errno` viene impostato su `EAGAIN` se sono presenti troppi thread, su `EINVAL` se l'argomento non è valido o la dimensione dello stack è errata o su `EACCES` nel caso di risorse insufficienti \(ad esempio memoria\). In caso di errore, `_beginthreadex` restituisce 0 e vengono impostati `errno` e `_doserrno`.  
+## <a name="return-value"></a>Valore restituito  
+ Se completata correttamente, ognuna di queste funzioni restituisce un handle per il thread appena creato. Tuttavia, se il thread appena creato termina troppo rapidamente, `_beginthread` potrebbe non restituire un handle valido. Vedere la discussione nella sezione Osservazioni. In caso di errore, `_beginthread` restituisce -1L e `errno` viene impostato su `EAGAIN` se sono presenti troppi thread, su `EINVAL` se l'argomento non è valido o la dimensione dello stack è errata o su `EACCES` nel caso di risorse insufficienti (ad esempio memoria). In caso di errore, `_beginthreadex` restituisce 0 e vengono impostati `errno` e `_doserrno` .  
   
- Se `startaddress` è NULL, viene richiamato il gestore di parametro non valido, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano `errno` su `EINVAL` e restituiscono \-1.  
+ Se `startaddress` è NULL, viene richiamato il gestore di parametro non valido, come descritto in [Parameter Validation](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano `errno` su `EINVAL` e restituiscono -1.  
   
- Per altre informazioni su questi e altri codici restituiti, vedere [errno, \_doserrno, \_sys\_errlist, and \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Per altre informazioni su questi e altri codici restituiti, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
  Per altre informazioni su `uintptr_t`, vedere [Tipi standard](../../c-runtime-library/standard-types.md).  
   
-## Note  
- La funzione `_beginthread` crea un thread che inizia l'esecuzione di una routine presente in `start_address`. La routine in `start_address` deve usare la convenzione di chiamata `__cdecl` \(per il codice nativo\) o `__clrcall` \(per il codice gestito\) e non dovrebbe avere alcun valore restituito. Quando il thread viene restituito da quella routine, viene terminato automaticamente. Per altre informazioni sui thread, vedere [Supporto del multithreading per il codice precedente \(Visual C\+\+\)](../../parallel/multithreading-support-for-older-code-visual-cpp.md).  
+## <a name="remarks"></a>Note  
+ La funzione `_beginthread` crea un thread che inizia l'esecuzione di una routine presente in `start_address`. La routine in `start_address` deve usare la convenzione di chiamata `__cdecl` (per il codice nativo) o `__clrcall` (per il codice gestito) e non dovrebbe avere alcun valore restituito. Quando il thread viene restituito da quella routine, viene terminato automaticamente. Per altre informazioni sui thread, vedere [Supporto del multithreading per il codice precedente (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md).  
   
- `_beginthreadex` è simile all'API [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453.aspx) Win32 più di quanto lo sia `_beginthread`.`_beginthreadex` differisce da `_beginthread` nei seguenti modi:  
+ `_beginthreadex` è simile all'API [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453.aspx) Win32 più di quanto lo sia `_beginthread`. `_beginthreadex` differisce da `_beginthread` nei seguenti modi:  
   
--   `_beginthreadex` presenta tre parametri aggiuntivi: `initflag`, `security` e `threadaddr`. Il nuovo thread può essere creato in uno stato sospeso, con una sicurezza specificata ed è possibile accedervi usando `thrdaddr`, che è l'identificatore del thread.  
+-   `_beginthreadex` presenta tre parametri aggiuntivi: `initflag`, `security`e `threadaddr`. Il nuovo thread può essere creato in uno stato sospeso, con una sicurezza specificata ed è possibile accedervi usando `thrdaddr`, che è l'identificatore del thread.  
   
--   La routine in `start_address` che viene passata a `_beginthreadex` deve usare la convenzione di chiamata `__stdcall` \(per il codice nativo\) o `__clrcall` \(per il codice gestito\) e deve restituire un codice di uscita del thread.  
+-   La routine in `start_address` che viene passata a `_beginthreadex` deve usare la convenzione di chiamata `__stdcall` (per il codice nativo) o `__clrcall` (per il codice gestito) e deve restituire un codice di uscita del thread.  
   
--   `_beginthreadex` restituisce 0 in caso di errore, anziché \-1L.  
+-   `_beginthreadex` restituisce 0 in caso di errore, anziché -1L.  
   
--   Un thread creato usando `_beginthreadex` viene terminato con una chiamata a [\_endthreadex](../../c-runtime-library/reference/endthread-endthreadex.md).  
+-   Un thread creato usando `_beginthreadex` viene terminato con una chiamata a [_endthreadex](../../c-runtime-library/reference/endthread-endthreadex.md).  
   
- La funzione `_beginthreadex` offre maggiore controllo su come viene creato il thread rispetto a `_beginthread`. La funzione `_endthreadex` è inoltre più flessibile. Ad esempio, con `_beginthreadex`, è possibile usare informazioni di sicurezza, impostare lo stato iniziale del thread \(in esecuzione o in sospeso\) e ottenere l'identificatore del thread appena creato. È inoltre possibile usare l'handle del thread restituito da `_beginthreadex` con le API di sincronizzazione. Questa operazione non può essere eseguita con `_beginthread`.  
+ La funzione `_beginthreadex` offre maggiore controllo su come viene creato il thread rispetto a `_beginthread` . La funzione `_endthreadex` è inoltre più flessibile. Ad esempio, con `_beginthreadex`, è possibile usare informazioni di sicurezza, impostare lo stato iniziale del thread (in esecuzione o in sospeso) e ottenere l'identificatore del thread appena creato. È inoltre possibile usare l'handle del thread restituito da `_beginthreadex` con le API di sincronizzazione. Questa operazione non può essere eseguita con `_beginthread`.  
   
  È preferibile usare `_beginthreadex` anziché `_beginthread`. Se il thread generato da `_beginthread` termina rapidamente, l'handle restituito al chiamante di `_beginthread` potrebbe essere non valido o puntare a un altro thread. Tuttavia, l'handle restituito da `_beginthreadex` deve essere chiuso dal chiamante di `_beginthreadex`, pertanto è sempre un handle valido se `_beginthreadex` non ha restituito un errore.  
   
- È possibile chiamare [\_endthread](../../c-runtime-library/reference/endthread-endthreadex.md) o `_endthreadex` in modo esplicito per terminare un thread. Tuttavia, `_endthread` o `_endthreadex` viene chiamato automaticamente quando il thread viene restituito dalla routine passata come parametro. La terminazione di un thread con una chiamata a `_endthread` o a `_endthreadex` consente di assicurare il ripristino corretto delle risorse allocate per il thread.  
+ È possibile chiamare [_endthread](../../c-runtime-library/reference/endthread-endthreadex.md) o `_endthreadex` in modo esplicito per terminare un thread. Tuttavia, `_endthread` o `_endthreadex` viene chiamato automaticamente quando il thread viene restituito dalla routine passata come parametro. La terminazione di un thread con una chiamata a `_endthread` o a `_endthreadex` consente di assicurare il ripristino corretto delle risorse allocate per il thread.  
   
- `_endthread` chiude automaticamente l'handle del thread, mentre `_endthreadex` non lo fa. Pertanto, quando si usano `_beginthread` e `_endthread`, non chiudere in modo esplicito l'handle del thread chiamando l'API Win32 [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx). Questo comportamento è diverso dall'API Win32 [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659.aspx).  
+ `_endthread` chiude automaticamente l'handle del thread, mentre `_endthreadex` non lo fa. Pertanto, quando si usano `_beginthread` e `_endthread`, non chiudere in modo esplicito l'handle del thread chiamando l'API Win32 [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) . Questo comportamento è diverso dall'API Win32 [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659.aspx) .  
   
 > [!NOTE]
->  Per un file eseguibile collegato a Libcmt.lib, non chiamare l'API Win32 `ExitThread` in modo da non impedire al sistema di runtime di recuperare le risorse allocate.`_endthread` e `_endthreadex` recuperano le risorse del thread allocate, quindi chiamano `ExitThread`.  
+>  Per un file eseguibile collegato a Libcmt.lib, non chiamare l'API Win32 `ExitThread` in modo da non impedire al sistema di runtime di recuperare le risorse allocate. `_endthread` e `_endthreadex` recuperano le risorse del thread allocate, quindi chiamano `ExitThread`.  
   
- Il sistema operativo gestisce l'allocazione dello stack quando si chiama `_beginthread` o `_beginthreadex`. Non è necessario passare l'indirizzo dello stack di thread a una di queste funzioni. Inoltre, l'argomento `stack_size` può essere 0, nel qual caso il sistema operativo usa lo stesso valore dello stack specificato per il thread principale.  
+ Il sistema operativo gestisce l'allocazione dello stack quando si chiama `_beginthread` o `_beginthreadex` . Non è necessario passare l'indirizzo dello stack di thread a una di queste funzioni. Inoltre, l'argomento `stack_size` può essere 0, nel qual caso il sistema operativo usa lo stesso valore dello stack specificato per il thread principale.  
   
- `arglist` è un parametro da passare al thread appena creato. In genere è l'indirizzo di un elemento di dati, quale una stringa di caratteri.`arglist` può essere NULL se non è necessario, ma a `_beginthread` e `_beginthreadex` deve essere assegnato un valore da passare al nuovo thread. Tutti i thread vengono terminati se un thread qualsiasi chiama `abort`, `exit`, `_exit` o `ExitProcess`.  
+ `arglist` è un parametro da passare al thread appena creato. In genere è l'indirizzo di un elemento di dati, quale una stringa di caratteri. `arglist` può essere NULL se non è necessario, ma a `_beginthread` e `_beginthreadex` deve essere assegnato un valore da passare al nuovo thread. Tutti i thread vengono terminati se un thread qualsiasi chiama `abort`, `exit`, `_exit`o `ExitProcess`.  
   
- Le impostazioni locali del nuovo thread vengono ereditate dal relativo thread padre. Se le impostazioni locali per thread vengono abilitate da una chiamata a [\_configthreadlocale](../../c-runtime-library/reference/configthreadlocale.md) \(sia globalmente che solo per i nuovi thread\), il thread può modificare le proprie impostazioni locali indipendentemente dal padre chiamando `setlocale` o `_wsetlocale`. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ Le impostazioni locali del nuovo thread vengono ereditate dal relativo thread padre. Se le impostazioni locali per thread vengono abilitate da una chiamata a [_configthreadlocale](../../c-runtime-library/reference/configthreadlocale.md) (sia globalmente che solo per i nuovi thread), il thread può modificare le proprie impostazioni locali indipendentemente dal padre chiamando `setlocale` o `_wsetlocale`. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
- Per codice misto e puro, `_beginthread` e `_beginthreadex` dispongono ognuno di due overload, uno che accetta un puntatore alla funzione nativa della convenzione di chiamata, l'altro che accetta un puntatore alla funzione `__clrcall`. Il primo overload non è indipendente dal dominio applicazione e non lo sarà mai. Se si sta scrivendo codice misto o puro, è necessario assicurarsi che il nuovo thread acceda al dominio dell'applicazione corretto prima di accedere alle risorse gestite. Questa operazione può essere eseguita, ad esempio, usando [Funzione call\_in\_appdomain](../../dotnet/call-in-appdomain-function.md). Il secondo overload è indipendente dal dominio applicazione. Il thread appena creato finirà sempre nel dominio applicazione del chiamante di `_beginthread` o di `_beginthreadex`.  
+ Per codice misto e puro, `_beginthread` e `_beginthreadex` dispongono ognuno di due overload, uno che accetta un puntatore alla funzione nativa della convenzione di chiamata, l'altro che accetta un puntatore alla funzione `__clrcall` . Il primo overload non è indipendente dal dominio applicazione e non lo sarà mai. Se si sta scrivendo codice misto o puro, è necessario assicurarsi che il nuovo thread acceda al dominio dell'applicazione corretto prima di accedere alle risorse gestite. Questa operazione può essere eseguita, ad esempio, usando la funzione [call_in_domain](../../dotnet/call-in-appdomain-function.md). Il secondo overload è indipendente dal dominio applicazione. Il thread appena creato finirà sempre nel dominio applicazione del chiamante di `_beginthread` o di `_beginthreadex`.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`_beginthread`|\<process.h\>|  
-|`_beginthreadex`|\<process.h\>|  
+|-------------|---------------------|  
+|`_beginthread`|\<process.h>|  
+|`_beginthreadex`|\<process.h>|  
   
  Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
-## Librerie  
- Solo versioni multithread delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Librerie  
+ Solo versioni multithread delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md) .  
   
  Per usare `_beginthread` o `_beginthreadex`, l'applicazione deve essere collegata a una delle librerie di runtime C con multithreading.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Nell'esempio seguente vengono usate `_beginthread` e `_endthread`.  
   
 ```  
@@ -273,7 +290,7 @@ void Bounce( void * parg )
   
  Premere un tasto qualsiasi per chiudere l'applicazione di esempio.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Nel codice di esempio seguente viene illustrato come usare l'handle del thread restituito da `_beginthreadex` con l'API di sincronizzazione [WaitForSingleObject](http://msdn.microsoft.com/library/windows/desktop/ms687032.aspx). Il thread principale attende che il secondo thread termini prima di continuare. Quando il secondo thread chiama `_endthreadex`, il relativo oggetto thread passa allo stato segnalato. Ciò consente al thread principale di continuare l'esecuzione. Questa operazione non può essere eseguita con `_beginthread` e `_endthread`, dal momento che `_endthread` chiama `CloseHandle`, il quale distrugge l'oggetto thread prima che possa essere impostato sullo stato segnalato.  
   
 ```  
@@ -317,15 +334,14 @@ int main()
 ```  
   
 ```Output  
-Creazione di un secondo thread... Nel secondo thread... Il contatore dovrebbe essere 1000000; è-> 1000000  
+Creating second thread...  
+In second thread...  
+Counter should be 1000000; it is-> 1000000  
 ```  
   
-## Equivalente .NET Framework  
- [System::Threading::Thread::Start](https://msdn.microsoft.com/en-us/library/system.threading.thread.start.aspx)  
-  
-## Vedere anche  
- [Controllo processo e ambiente](../../c-runtime-library/process-and-environment-control.md)   
- [\_endthread, \_endthreadex](../../c-runtime-library/reference/endthread-endthreadex.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Controllo di processi e ambiente](../../c-runtime-library/process-and-environment-control.md)   
+ [_endthread, _endthreadex](../../c-runtime-library/reference/endthread-endthreadex.md)   
  [abort](../../c-runtime-library/reference/abort.md)   
- [exit, \_Exit, \_exit](../../c-runtime-library/reference/exit-exit-exit.md)   
+ [exit, _Exit, _exit](../../c-runtime-library/reference/exit-exit-exit.md)   
  [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)

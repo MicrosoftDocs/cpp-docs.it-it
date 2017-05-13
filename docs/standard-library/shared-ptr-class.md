@@ -10,30 +10,25 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - shared_ptr
-- std::shared_ptr
 - memory/std::shared_ptr
-- std::shared_ptr::element_type
 - memory/std::shared_ptr::element_type
-- std::shared_ptr::get
 - memory/std::shared_ptr::get
-- std::shared_ptr::owner_before
 - memory/std::shared_ptr::owner_before
-- std::shared_ptr::reset
 - memory/std::shared_ptr::reset
-- std::shared_ptr::swap
 - memory/std::shared_ptr::swap
-- std::shared_ptr::unique
 - memory/std::shared_ptr::unique
-- std::shared_ptr::use_count
 - memory/std::shared_ptr::use_count
-- std::shared_ptr::operator boolean-type
 - memory/std::shared_ptr::operator boolean-type
-- std::shared_ptr::operator*
 - memory/std::shared_ptr::operator*
-- std::shared_ptr::operator=
 - memory/std::shared_ptr::operator=
-- std::shared_ptr::operator->
 - memory/std::shared_ptr::operator->
+- memory/std::shared_ptr::element_type
+- memory/std::shared_ptr::get
+- memory/std::shared_ptr::owner_before
+- memory/std::shared_ptr::reset
+- memory/std::shared_ptr::swap
+- memory/std::shared_ptr::unique
+- memory/std::shared_ptr::use_count
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -57,10 +52,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: d3638923d92759e5bbc379b8f1da633931fd7254
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: ead4dff36cf75d7a1519cee10aed39a30b6e88b8
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="sharedptr-class"></a>Classe shared_ptr
@@ -105,7 +101,7 @@ shared_ptr<int> sp6(sp2);   // error, template parameter int and argument shared
   
 -   se è stato creato da un oggetto [classe weak_ptr](../standard-library/weak-ptr-class.md) che punta alla risorsa o  
   
--   se la proprietà di tale risorsa è stata assegnata all'oggetto stesso con [shared_ptr::operator=](#shared_ptr__operator_eq) o mediante una chiamata alla funzione membro [shared_ptr::reset](#shared_ptr__reset).  
+-   se la proprietà di tale risorsa è stata assegnata all'oggetto stesso con [shared_ptr::operator=](#op_eq) o mediante una chiamata alla funzione membro [shared_ptr::reset](#reset).  
   
  Gli oggetti `shared_ptr` che possiedono una risorsa condividono un blocco di controllo. Il blocco di controllo contiene gli elementi seguenti:  
   
@@ -152,36 +148,36 @@ shared_ptr<int> sp6(sp2);   // error, template parameter int and argument shared
   
 |||  
 |-|-|  
-|[shared_ptr::shared_ptr](#shared_ptr__shared_ptr)|Costruisce un oggetto `shared_ptr`.|  
-|[shared_ptr::~shared_ptr](#shared_ptr___dtorshared_ptr)|Elimina un oggetto `shared_ptr`.|  
+|[shared_ptr](#shared_ptr)|Costruisce un oggetto `shared_ptr`.|  
+|[shared_ptr::~shared_ptr](#dtorshared_ptr)|Elimina un oggetto `shared_ptr`.|  
   
 ### <a name="methods"></a>Metodi  
   
 |||  
 |-|-|  
-|[shared_ptr::element_type](#shared_ptr__element_type)|Tipo di un elemento.|  
-|[shared_ptr::get](#shared_ptr__get)|Ottiene l'indirizzo della risorsa posseduta.|  
-|[shared_ptr::owner_before](#shared_ptr__owner_before)|Restituisce true se `shared_ptr` è ordinato in posizione precedente (o è minore di) del puntatore fornito.|  
-|[shared_ptr::reset](#shared_ptr__reset)|Sostituisce una risorsa di proprietà.|  
-|[shared_ptr::swap](#shared_ptr__swap)|Scambia due oggetti `shared_ptr`.|  
-|[shared_ptr::unique](#shared_ptr__unique)|Verifica se la risorsa di proprietà è univoca.|  
-|[shared_ptr::use_count](#shared_ptr__use_count)|Conta il numero dei proprietari delle risorse.|  
+|[element_type](#element_type)|Tipo di un elemento.|  
+|[get](#get)|Ottiene l'indirizzo della risorsa posseduta.|  
+|[owner_before](#owner_before)|Restituisce true se `shared_ptr` è ordinato in posizione precedente (o è minore di) del puntatore fornito.|  
+|[reset](#reset)|Sostituisce una risorsa di proprietà.|  
+|[swap](#swap)|Scambia due oggetti `shared_ptr`.|  
+|[unique](#unique)|Verifica se la risorsa di proprietà è univoca.|  
+|[use_count](#use_count)|Conta il numero dei proprietari delle risorse.|  
   
 ### <a name="operators"></a>Operatori  
   
 |||  
 |-|-|  
-|[shared_ptr::operator boolean-type](#shared_ptr__operator_boolean-type)|Verifica se una risorsa di proprietà esiste.|  
-|[shared_ptr::operator*](#shared_ptr__operator_star)|Ottiene il valore definito.|  
-|[shared_ptr::operator=](#shared_ptr__operator_eq)|Sostituisce la risorsa di proprietà.|  
-|[shared_ptr::operator-&gt;](#shared_ptr__operator-_gt_)|Ottiene un puntatore al valore definito.|  
+|[shared_ptr::operator boolean-type](#op_boolean-type)|Verifica se una risorsa di proprietà esiste.|  
+|[shared_ptr::operator*](#op_star)|Ottiene il valore definito.|  
+|[shared_ptr::operator=](#op_eq)|Sostituisce la risorsa di proprietà.|  
+|[shared_ptr::operator-&gt;](#operator-_gt)|Ottiene un puntatore al valore definito.|  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** \<memory>  
   
  **Spazio dei nomi:** std  
   
-##  <a name="a-namesharedptrelementtypea--sharedptrelementtype"></a><a name="shared_ptr__element_type"></a>  shared_ptr::element_type  
+##  <a name="element_type"></a>  shared_ptr::element_type  
  Tipo di un elemento.  
   
 ```  
@@ -215,7 +211,7 @@ int main()
 *sp0 == 5  
 ```  
   
-##  <a name="a-namesharedptrgeta--sharedptrget"></a><a name="shared_ptr__get"></a>  shared_ptr::get  
+##  <a name="get"></a>  shared_ptr::get  
  Ottiene l'indirizzo della risorsa posseduta.  
   
 ```  
@@ -252,7 +248,7 @@ sp0.get() == 0 == true
 *sp1.get() == 5  
 ```  
   
-##  <a name="a-namesharedptroperatorboolean-typea--sharedptroperator-boolean-type"></a><a name="shared_ptr__operator_boolean-type"></a>  shared_ptr::operator boolean-type  
+##  <a name="shared_ptr__operator_boolean-type"></a>  shared_ptr::operator boolean-type  
  Verifica se una risorsa di proprietà esiste.  
   
 ```  
@@ -290,7 +286,7 @@ int main()
 (bool)sp1 == true  
 ```  
   
-##  <a name="a-namesharedptroperatorstara--sharedptroperator"></a><a name="shared_ptr__operator_star"></a>  shared_ptr::operator*  
+##  <a name="op_star"></a>  shared_ptr::operator*  
  Ottiene il valore definito.  
   
 ```  
@@ -323,7 +319,7 @@ int main()
 *sp0 == 5  
 ```  
   
-##  <a name="a-namesharedptroperatoreqa--sharedptroperator"></a><a name="shared_ptr__operator_eq"></a>  shared_ptr::operator=  
+##  <a name="op_eq"></a>  shared_ptr::operator=  
  Sostituisce la risorsa di proprietà.  
   
 ```  
@@ -385,7 +381,7 @@ int main()
 *sp0 == 10  
 ```  
   
-##  <a name="a-namesharedptroperator-gta--sharedptroperator-gt"></a><a name="shared_ptr__operator-_gt_"></a>  shared_ptr::operator-&gt;  
+##  <a name="shared_ptr__operator-_gt"></a>  shared_ptr::operator-&gt;  
  Ottiene un puntatore al valore definito.  
   
 ```  
@@ -421,7 +417,7 @@ sp0->first == 1
 sp0->second == 2  
 ```  
   
-##  <a name="a-namesharedptrownerbeforea--sharedptrownerbefore"></a><a name="shared_ptr__owner_before"></a>  shared_ptr::owner_before  
+##  <a name="owner_before"></a>  shared_ptr::owner_before  
  Restituisce true se `shared_ptr` è ordinato in posizione precedente (o è minore di) del puntatore fornito.  
   
 ```  
@@ -439,7 +435,7 @@ bool owner_before(const weak_ptr<Other>& ptr);
 ### <a name="remarks"></a>Note  
  La funzione membro di modello restituisce true se `*this` è `ordered before``ptr`.  
   
-##  <a name="a-namesharedptrreseta--sharedptrreset"></a><a name="shared_ptr__reset"></a>  shared_ptr::reset  
+##  <a name="reset"></a>  shared_ptr::reset  
  Sostituisce una risorsa di proprietà.  
   
 ```  
@@ -524,7 +520,7 @@ int main()
 *sp == 15  
 ```  
   
-##  <a name="a-namesharedptrsharedptra--sharedptrsharedptr"></a><a name="shared_ptr__shared_ptr"></a>  shared_ptr::shared_ptr  
+##  <a name="shared_ptr"></a>  shared_ptr::shared_ptr  
  Costruisce un oggetto `shared_ptr`.  
   
 ```  
@@ -657,7 +653,7 @@ int main()
 *sp5 == 15  
 ```  
   
-##  <a name="a-namesharedptrdtorsharedptra--sharedptrsharedptr"></a><a name="shared_ptr___dtorshared_ptr"></a>  shared_ptr::~shared_ptr  
+##  <a name="dtorshared_ptr"></a>  shared_ptr::~shared_ptr  
  Elimina un oggetto `shared_ptr`.  
   
 ```  
@@ -711,7 +707,7 @@ use count == 2
 use count == 1  
 ```  
   
-##  <a name="a-namesharedptrswapa--sharedptrswap"></a><a name="shared_ptr__swap"></a>  shared_ptr::swap  
+##  <a name="swap"></a>  shared_ptr::swap  
  Scambia due oggetti `shared_ptr`.  
   
 ```  
@@ -779,7 +775,7 @@ int main()
 *wp1 == 5  
 ```  
   
-##  <a name="a-namesharedptruniquea--sharedptrunique"></a><a name="shared_ptr__unique"></a>  shared_ptr::unique  
+##  <a name="unique"></a>  shared_ptr::unique  
  Verifica se la risorsa di proprietà è univoca.  
   
 ```  
@@ -825,7 +821,7 @@ sp1.unique() == true
 sp1.unique() == false  
 ```  
   
-##  <a name="a-namesharedptrusecounta--sharedptrusecount"></a><a name="shared_ptr__use_count"></a>  shared_ptr::use_count  
+##  <a name="use_count"></a>  shared_ptr::use_count  
  Conta il numero dei proprietari delle risorse.  
   
 ```  

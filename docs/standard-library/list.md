@@ -35,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 6c8b7cc67cc2c35b7a02cea7d60c812cf2d9bb92
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: ce9fb66784027d81acaac6e98ad0f6a6121da956
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltlistgt"></a>&lt;list&gt;
@@ -54,12 +55,12 @@ Definisce l'elenco di classi modello del contenitore e diversi modelli di suppor
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/list-operators.md#operator_neq)|Verifica se l'oggetto elenco a sinistra dell'operatore non è uguale all'oggetto elenco a destra.|  
-|[operator<](../standard-library/list-operators.md#operator_lt_)|Verifica se l'oggetto elenco a sinistra dell'operatore è minore dell'oggetto elenco a destra.|  
-|[operator\<=](../standard-library/list-operators.md#operator_lt__eq)|Verifica se l'oggetto elenco a sinistra dell'operatore è minore o uguale all'oggetto elenco a destra.|  
-|[operator==](../standard-library/list-operators.md#operator_eq_eq)|Verifica se l'oggetto elenco a sinistra dell'operatore è uguale all'oggetto elenco a destra.|  
-|[operator>](../standard-library/list-operators.md#operator_gt_)|Verifica se l'oggetto elenco a sinistra dell'operatore è maggiore dell'oggetto elenco a destra.|  
-|[operator>=](../standard-library/list-operators.md#operator_gt__eq)|Verifica se l'oggetto elenco a sinistra dell'operatore è maggiore o uguale all'oggetto elenco a destra.|  
+|[operator!=](../standard-library/list-operators.md#op_neq)|Verifica se l'oggetto elenco a sinistra dell'operatore non è uguale all'oggetto elenco a destra.|  
+|[operator<](../standard-library/list-operators.md#op_lt)|Verifica se l'oggetto elenco a sinistra dell'operatore è minore dell'oggetto elenco a destra.|  
+|[operator\<=](../standard-library/list-operators.md#op_gt_eq)|Verifica se l'oggetto elenco a sinistra dell'operatore è minore o uguale all'oggetto elenco a destra.|  
+|[operator==](../standard-library/list-operators.md#op_eq_eq)|Verifica se l'oggetto elenco a sinistra dell'operatore è uguale all'oggetto elenco a destra.|  
+|[operator>](../standard-library/list-operators.md#op_gt)|Verifica se l'oggetto elenco a sinistra dell'operatore è maggiore dell'oggetto elenco a destra.|  
+|[operator>=](../standard-library/list-operators.md#op_gt_eq)|Verifica se l'oggetto elenco a sinistra dell'operatore è maggiore o uguale all'oggetto elenco a destra.|  
   
 ### <a name="classes"></a>Classi  
   

@@ -56,10 +56,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 6bfbae9b083563f0f9a6b0c30e02fb79f413d52d
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: f197e4f6341508f05e566f45566f26a18be43bed
+ms.contentlocale: it-it
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="crtdbgreport-crtdbgreportw"></a>_CrtDbgReport, _CrtDbgReportW
@@ -106,9 +107,9 @@ int _CrtDbgReportW(
  Argomenti di sostituzione facoltativi usati da `format`.  
   
 ## <a name="return-value"></a>Valore restituito  
- Per tutte le destinazioni del rapporto, `_CrtDbgReport` e `_CrtDbgReportW` restituiscono –1 se si verifica un errore e 0 se non si verificano errori. Tuttavia, quando la destinazione del report è una finestra di messaggio di debug e l'utente fa clic sul pulsante **Riprova**, queste funzioni restituiscono 1. Se l'utente fa clic sul pulsante **Interrompi** nella finestra di messaggio di debug, queste funzioni vengono interrotte immediatamente e non restituiscono nessun valore.  
+ Per tutte le destinazioni del rapporto, `_CrtDbgReport` e `_CrtDbgReportW` restituisce -1 se si verifica un errore e 0 se non si verificano errori. Tuttavia, quando la destinazione del report è una finestra di messaggio di debug e l'utente fa clic sul pulsante **Riprova**, queste funzioni restituiscono 1. Se l'utente fa clic sul pulsante **Interrompi** nella finestra di messaggio di debug, queste funzioni vengono interrotte immediatamente e non restituiscono nessun valore.  
   
- Le macro di debug [_RPT, _RPTF](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) eseguono una chiamata a `_CrtDbgReport` per generare i relativi report di debug. Le versioni a caratteri wide di queste macro, nonché [_ASSERT&#91;E&#93;](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md), `_RPTW``n` e `_RPTFW``n` usano `_CrtDbgReportW` per generare i report di debug. Quando `_CrtDbgReport` o `_CrtDbgReportW` restituiscono 1, queste macro avviano il debugger JIT (just-in-time), purché il debug sia abilitato.  
+ Le macro di debug [_RPT, _RPTF](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) eseguono una chiamata a `_CrtDbgReport` per generare i relativi report di debug. Le versioni a caratteri wide di queste macro, nonché [_ASSERT&#91;E&#93;](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md), `_RPTW n` e `_RPTFW n` usano `_CrtDbgReportW` per generare i report di debug. Quando `_CrtDbgReport` o `_CrtDbgReportW` restituiscono 1, queste macro avviano il debugger JIT (just-in-time), purché il debug sia abilitato.  
   
 ## <a name="remarks"></a>Note  
  `_CrtDbgReport` e `_CrtDbgReportW` possono inviare il rapporto di debug a tre destinazioni diverse: un file di rapporto di debug, un monitor di debug (ovvero il debugger [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]) o a una finestra di messaggio di debug. Vengono usate due funzioni di configurazione, [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) e [_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md), per specificare la destinazione o le destinazioni per ogni tipo di report. Queste funzioni consentono alle destinazioni per la creazione dei rapporti per ogni tipo di rapporto di essere controllate separatamente. È ad esempio possibile specificare che un `reportType` di `_CRT_WARN` possa essere inviato solo al monitor di debug, mentre un `reportType` di `_CRT_ASSERT` sia inviato a una finestra di messaggio di debug e a un file di rapporto definito dall'utente.  
@@ -157,16 +158,6 @@ int main(int argc, char *argv[]) {
 ```  
   
  Per un esempio su come modificare la funzione per la creazione di report, vedere [crt_dbg2](http://msdn.microsoft.com/en-us/21e1346a-6a17-4f57-b275-c76813089167).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
-  
--   [System::Diagnostics::Debug::Write](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.write.aspx)  
-  
--   [System::Diagnostics::Debug::Writeline](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writeline.aspx)  
-  
--   [System::Diagnostics::Debug::WriteIf](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writeif.aspx)  
-  
--   [System::Diagnostics::Debug::WriteLineIf](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writelineif.aspx)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Routine di debug](../../c-runtime-library/debug-routines.md)   

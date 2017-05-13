@@ -1,72 +1,90 @@
 ---
-title: "atof, _atof_l, _wtof, _wtof_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wtof_l"
-  - "atof"
-  - "_atof_l"
-  - "_wtof"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_tstof"
-  - "_ttof"
-  - "atof"
-  - "stdlib/atof"
-  - "math/atof"
-  - "_atof_l"
-  - "stdlib/_atof_l"
-  - "math/_atof_l"
-  - "_wtof"
-  - "corecrt_wstdlib/_wtof"
-  - "_wtof_l"
-  - "corecrt_wstdlib/_wtof_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tstof (funzione)"
-  - "atof_l (funzione)"
-  - "_atof_l (funzione)"
-  - "atof (funzione)"
-  - "_tstof (funzione)"
-  - "_ttof (funzione)"
-  - "wtof (funzione)"
-  - "_wtof_l (funzione)"
-  - "ttof (funzione)"
-  - "wtof_l (funzione)"
-  - "_wtof (funzione)"
-  - "conversione di stringhe, in valori a virgola mobile"
+title: atof, _atof_l, _wtof, _wtof_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wtof_l
+- atof
+- _atof_l
+- _wtof
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _tstof
+- _ttof
+- atof
+- stdlib/atof
+- math/atof
+- _atof_l
+- stdlib/_atof_l
+- math/_atof_l
+- _wtof
+- corecrt_wstdlib/_wtof
+- _wtof_l
+- corecrt_wstdlib/_wtof_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- tstof function
+- atof_l function
+- _atof_l function
+- atof function
+- _tstof function
+- _ttof function
+- wtof function
+- _wtof_l function
+- ttof function
+- wtof_l function
+- _wtof function
+- string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
 caps.latest.revision: 26
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 26
----
-# atof, _atof_l, _wtof, _wtof_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 3bb571d759b8a6360326554f4915e60d6ab0aa93
+ms.contentlocale: it-it
+ms.lasthandoff: 04/01/2017
 
+---
+# <a name="atof-atofl-wtof-wtofl"></a>atof, _atof_l, _wtof, _wtof_l
 Convertire una stringa in double.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 double atof(  
@@ -85,100 +103,103 @@ double _wtof_l(
 );  
 ```  
   
-#### Parametri  
+## <a name="parameters"></a>Parametri  
  `str`  
  Stringa da convertire.  
   
  `locale`  
- Impostazioni locali da utilizzare.  
+ Impostazioni locali da usare.  
   
-## Valore restituito  
- Ogni funzione restituisce il valore `double` che viene prodotto interpretando i caratteri di input come un numero.  Il valore restituito è 0.0 se l'input non può essere convertito in un valore di tale tipo.  
+## <a name="return-value"></a>Valore restituito  
+ Ogni funzione restituisce il valore `double` che viene prodotto interpretando i caratteri di input come numero. Il valore restituito è 0.0 se l'input non può essere convertito in un valore di tale tipo.  
   
- In tutti i casi esterni all'intervallo, errno viene impostato su `ERANGE`.  Se il parametro passato è `NULL`, viene invocato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).  Se l'esecuzione può continuare, queste funzioni impostano `errno` su `EINVAL` e restituiscono 0.  
+ In tutti i casi fuori intervallo, errno è impostato su `ERANGE`. Se il parametro passato è `NULL`, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano `errno` su `EINVAL` e restituiscono 0.  
   
-## Note  
- Queste funzioni consentono di convertire una stringa di caratteri in un valore a precisione doppia e virgola mobile.  
+## <a name="remarks"></a>Note  
+ Queste funzioni convertono una stringa di caratteri in un valore a virgola mobile a precisione doppia.  
   
- La stringa di input è una sequenza di caratteri che può essere interpretata come valore numerico del tipo specificato.  La funzione arresta la lettura della stringa di input al primo carattere che non riconosce come parte di un numero.  Questo carattere può essere il carattere null \('\\0' or L'\\0'\) che termina la stringa.  
+ La stringa di input è una sequenza di caratteri che può essere interpretata come valore numerico del tipo specificato. La funzione interrompe la lettura della stringa di input in corrispondenza del primo carattere che non riconosce come parte di un numero. Questo carattere può essere il carattere null ('\0' o L'\0') che termina la stringa.  
   
- L'argomento `str` per `atof` e `_wtof` ha la seguente forma:  
+ L'argomento `str` per `atof` e `_wtof` ha il formato seguente:  
   
- \[`whitespace`\] \[`sign`\] \[`digits`\] \[`.digits`\] \[ {`d` &#124; `D` &#124; `e` &#124; `E` }\[`sign`\]`digits`\]  
+ [`whitespace`] [`sign`] [`digits`] [`.digits`] [ {`e` &#124; `E` }[`sign`]`digits`]  
   
- Un `whitespace` è costituito dallo spazio o dai caratteri di tabulazione, i quali vengono ignorati; `sign` può essere più \(\+\) o meno \(–\); e `digits` sono una o più cifre decimali.  Se nessuna cifra viene visualizzata prima del separatore decimale, almeno uno deve apparire dopo il separatore decimale.  Le cifre decimali possono essere seguite da un esponente, costituito da una lettera introduttiva \(`d`, `D`, `e`, o `E`\) e opzionalmente da un numero decimale intero con segno.  
+ Oggetto `whitespace` costituito da caratteri spazio o tabulazione, verranno ignorati. `sign` è un segno più (+) o meno (-); e `digits` sono uno o più cifre decimali. Se non viene visualizzata alcuna cifra prima del separatore decimale, è necessario che sia presente almeno una cifra dopo il separatore decimale. Le cifre decimali possono essere seguite da un esponente, costituito da una lettera introduttiva (`e` o `E`) e un intero decimale con segno facoltativo.  
+ 
+ Le versioni UCRT di queste funzioni non supportano la conversione di lettere esponente in stile Fortran (`d` o `D`). Questa estensione non standard è supportata dalle versioni precedenti della libreria CRT e può rappresentare una modifica con impatto significativo per il codice esistente.  
   
- Le versioni di queste funzioni con il suffisso `_l` sono identiche ad eccezione che utilizzano il parametro delle impostazioni locali passato in ingresso invece di utilizzare le impostazioni locali correnti.  
+ Le versioni di queste funzioni con il suffisso `_l` sono identiche ad eccezione per il fatto che usano il parametro delle impostazioni locali passato al posto di quelle correnti.  
   
-### Mapping di routine di testo generico  
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
-|Routine TCHAR.H|\_UNICODE & \_MBCS non definiti|\_MBCS definito|\_UNICODE definito|  
-|---------------------|-------------------------------------|---------------------|------------------------|  
+|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tstof`|`atof`|`atof`|`_wtof`|  
 |`_ttof`|`atof`|`atof`|`_wtof`|  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-|Routine\(s\)|Intestazione obbligatoria|  
-|------------------|-------------------------------|  
-|`atof`|\<stdlib.h\> e \<stdlib.h\>|  
-|`_atof_l`|\<stdlib.h\> e \<stdlib.h\>|  
-|`_wtof`, `_wtof_l`|\<stdlib.h\> o \<wchar.h\>|  
+|Routine|Intestazione obbligatoria|  
+|------------------|---------------------|  
+|`atof`, `_atof_l`|C: \<math.h> o \<stdlib.h> C++: \<cstdlib>, \<stdlib.h>, \<cmath> o \<math.h>|  
+|`_wtof`, `_wtof_l`|C: \<stdlib.h> o \<wchar.h> C++: \<cstdlib>, \<stdlib.h> o \<wchar.h>|  
   
-## Esempio  
- Questo programma mostra come i numeri memorizzati come stringhe possono essere convertiti in valori numerici usando la funzione `atof`.  
+## <a name="example"></a>Esempio  
+ Questo programma mostra come i numeri memorizzati come stringhe possono essere convertiti in valori numerici usando le funzioni `atof` e `_atof_l`.  
   
-```  
+```C  
 // crt_atof.c  
 //  
 // This program shows how numbers stored as   
 // strings can be converted to numeric  
-// values using the atof function.  
-  
+// values using the atof and _atof_l functions.  
+
 #include <stdlib.h>  
 #include <stdio.h>  
-  
-int main( void )  
-{  
-    char    *str = NULL;  
-    double  value = 0;  
-  
+#include <locale.h>  
+
+int main(void)
+{
+    char    *str = NULL;
+    double value = 0;
+    _locale_t fr = _create_locale(LC_NUMERIC, "fr-FR");
+
     // An example of the atof function  
     // using leading and training spaces.  
-    str = "  3336402735171707160320 ";  
-    value = atof( str );  
-    printf( "Function: atof( \"%s\" ) = %e\n", str, value );  
-  
+    str = "  3336402735171707160320 ";
+    value = atof(str);
+    printf("Function: atof(\"%s\") = %e\n", str, value);
+
     // Another example of the atof function  
-    // using the 'd' exponential formatting keyword.  
-    str = "3.1412764583d210";  
-    value = atof( str );  
-    printf( "Function: atof( \"%s\" ) = %e\n", str, value );  
-  
-    // An example of the atof function  
-    // using the 'e' exponential formatting keyword.  
-    str = "  -2309.12E-15";  
-    value = atof( str );  
-    printf( "Function: atof( \"%s\" ) = %e\n", str, value );  
-  
+    // using the 'E' exponential formatting keyword.  
+    str = "3.1412764583E210";
+    value = atof(str);
+    printf("Function: atof(\"%s\") = %e\n", str, value);
+
+    // An example of the atof and _atof_l functions  
+    // using the 'e' exponential formatting keyword  
+    // and showing different decimal point interpretations.  
+    str = "  -2,309e-25";
+    value = atof(str);
+    printf("Function: atof(\"%s\") = %e\n", str, value);
+    value = _atof_l(str, fr);
+    printf("Function: _atof_l(\"%s\", fr)) = %e\n", str, value);
 }  
 ```  
   
-  **Function: atof\( "  3336402735171707160320 " \) \= 3.336403e\+021**  
-**Function: atof\( "3.1412764583d210" \) \= 3.141276e\+210**  
-**Function: atof\( "  \-2309.12E\-15" \) \= \-2.309120e\-012**   
-## Equivalente .NET Framework  
+```Output  
+Function: atof("  3336402735171707160320 ") = 3.336403e+21
+Function: atof("3.1412764583E210") = 3.141276e+210
+Function: atof("  -2,309e-25") = -2.000000e+00
+Function: _atof_l("  -2,309e-25", fr)) = -2.309000e-25  
+```  
   
--   [System::Convert::ToSingle](https://msdn.microsoft.com/en-us/library/system.convert.tosingle.aspx)  
-  
--   [System::Convert::ToDouble](https://msdn.microsoft.com/en-us/library/system.convert.todouble.aspx)  
-  
-## Vedere anche  
- [Conversione dei dati](../../c-runtime-library/data-conversion.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Data Conversion](../../c-runtime-library/data-conversion.md)  (Conversione dei dati)  
  [Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)   
  [Impostazioni locali](../../c-runtime-library/locale.md)   
- [\_ecvt](../../c-runtime-library/reference/ecvt.md)   
- [\_fcvt](../../c-runtime-library/reference/fcvt.md)   
- [\_gcvt](../../c-runtime-library/reference/gcvt.md)   
- [setlocale, \_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [\_atodbl, \_atodbl\_l, \_atoldbl, \_atoldbl\_l, \_atoflt, \_atoflt\_l](../../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)
+ [_ecvt](../../c-runtime-library/reference/ecvt.md)   
+ [_fcvt](../../c-runtime-library/reference/fcvt.md)   
+ [_gcvt](../../c-runtime-library/reference/gcvt.md)   
+ [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
+ [_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l](../../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)

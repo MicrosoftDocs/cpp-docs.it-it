@@ -6,24 +6,26 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: []
 ms.assetid: 84fe6a13-6f6e-4cdc-bf8f-6f65ab1134d4
 caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 2a1f1c21cdcd42e7e8d33eb6405297fc88635d87
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 99e42dab27a7ee03c42e9b1b5a35e94cc7ed050b
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltbitsetgt-operators"></a>Operatori &lt;bitset&gt;
 ||||  
 |-|-|-|  
-|[operator&amp;](#operator_amp_)|[operator&gt;&gt;](#operator_gt__gt_)|[operator&lt;&lt;](#operator_lt__lt_)|  
-|[operator_xor](#operator_xor)|[operator_or](#operator_or)|  
+|[operator&amp;](#op_amp)|[operator&gt;&gt;](#op_gt_gt)|[operator&lt;&lt;](#op_lt_lt)|  
+|[operator^](#op_xor)|[operator|](#op_or)|  
   
-##  <a name="a-nameoperatorampa--operatoramp"></a><a name="operator_amp_"></a>  operator&amp;  
+##  <a name="op_amp"></a>  operator&amp;  
  Esegue un'operazione `AND` bit per bit tra due bitset.  
   
 ```  
@@ -35,14 +37,14 @@ operator&(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` left`  
+ `left`  
  Il primo dei due bitset i cui rispettivi elementi devono essere combinati con l'operazione `AND` bit per bit.  
   
- ` right`  
+ `right`  
  La seconda delle due matrici di valori i cui rispettivi elementi devono essere combinati con l'operazione `AND` bit per bit.  
   
 ### <a name="return-value"></a>Valore restituito  
- Un bitset i cui elementi sono il risultato dell'esecuzione dell'operazione `AND` sugli elementi corrispondenti di ` left` e ` right`.  
+ Un bitset i cui elementi sono il risultato dell'esecuzione dell'operazione `AND` sugli elementi corrispondenti di `left` e `right`.  
   
 ### <a name="example"></a>Esempio  
   
@@ -72,7 +74,7 @@ bitset 2: 0011
 bitset 3: 0001  
 ```  
   
-##  <a name="a-nameoperatorltlta--operatorltlt"></a><a name="operator_lt__lt_"></a>  operator&lt;&lt;  
+##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
  Inserisce una rappresentazione di testo della sequenza di bit nel flusso di output.  
   
 ```  
@@ -80,12 +82,11 @@ bitset 3: 0001
 template <class CharType, class Traits, size_t N>  
 basic_ostream<CharType, Traits>& operator<<(
     basic_ostream<CharType, Traits>& ostr,  
-    const bitset<N>& 
-    right);
+    const bitset<N>& right);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` right`  
+ `right`  
  Un oggetto di tipo **bitset\<N>** che deve essere inserito nel flusso di output come stringa.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -127,7 +128,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameoperatorgtgta--operatorgtgt"></a><a name="operator_gt__gt_"></a>  operator&gt;&gt;  
+##  <a name="op_gt_gt"></a>  operator&gt;&gt;  
  Legge una stringa di caratteri di bit in un bitset.  
   
 ```  
@@ -144,7 +145,7 @@ _Istr,
  `_Istr`  
  La immessa nel flusso di input da inserire nel bitset.  
   
- ` right`  
+ `right`  
  Il bitset che riceve i bit dal flusso di input.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -210,7 +211,7 @@ int main()
 }  
 ```  
   
-##  <a name="a-nameoperatorxora--operatorxor"></a><a name="operator_xor"></a>  operator_xor  
+##  <a name="op_xor"></a>  operator^  
  Esegue un'operazione `EXCLUSIVE-OR` bit per bit tra due bitset.  
   
 ```  
@@ -222,14 +223,14 @@ operator^(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` left`  
+ `left`  
  Il primo dei due bitset i cui rispettivi elementi devono essere combinati con l'operazione `EXCLUSIVE-OR` bit per bit.  
   
- ` right`  
+ `right`  
  La seconda delle due matrici di valori i cui rispettivi elementi devono essere combinati con l'operazione `EXCLUSIVE-OR` bit per bit.  
   
 ### <a name="return-value"></a>Valore restituito  
- Un bitset i cui elementi sono il risultato dell'esecuzione dell'operazione `EXCLUSIVE-OR` sugli elementi corrispondenti di ` left` e ` right`.  
+ Un bitset i cui elementi sono il risultato dell'esecuzione dell'operazione `EXCLUSIVE-OR` sugli elementi corrispondenti di `left` e `right`.  
   
 ### <a name="example"></a>Esempio  
   
@@ -259,7 +260,7 @@ bitset 2: 0011
 bitset 3: 0110  
 ```  
   
-##  <a name="a-nameoperatorora--operatoror"></a><a name="operator_or"></a>  operator_or  
+##  <a name="op_or"></a>operatore |  
  Esegue un'operazione `OR` bit per bit tra due bitset.  
   
 ```  
@@ -271,14 +272,14 @@ operator|(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` left`  
+ `left`  
  Il primo dei due bitset i cui rispettivi elementi devono essere combinati con l'operazione `OR` bit per bit.  
   
- ` right`  
+ `right`  
  La seconda delle due matrici di valori i cui rispettivi elementi devono essere combinati con l'operazione `OR` bit per bit.  
   
 ### <a name="return-value"></a>Valore restituito  
- Un bitset i cui elementi sono il risultato dell'esecuzione dell'operazione `OR` sugli elementi corrispondenti di ` left` e ` right`.  
+ Un bitset i cui elementi sono il risultato dell'esecuzione dell'operazione `OR` sugli elementi corrispondenti di `left` e `right`.  
   
 ### <a name="example"></a>Esempio  
   

@@ -1,63 +1,83 @@
 ---
-title: "&lt; iomanip &gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "iomanip/std::<iomanip>"
-  - "std::<iomanip>"
-  - "<iomanip>"
-  - "std.<iomanip>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "iomanip (intestazione)"
+title: '&lt;iomanip&gt; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- iomanip/std::<iomanip>
+- std::<iomanip>
+- <iomanip>
+- std.<iomanip>
+dev_langs:
+- C++
+helpviewer_keywords:
+- iomanip header
 ms.assetid: 3681c346-4763-4037-bba4-cf0dc3447974
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# &lt; iomanip &gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 753e2a5bab18a3643456504bda2ab84df530754e
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
-Includere l'intestazione standard `iostreams``<iomanip>` per definire diversi manipolatori che accettano un solo argomento.  
+---
+# <a name="ltiomanipgt"></a>&lt;iomanip&gt;
+Includere l'intestazione standard `iostreams` `<iomanip>` per definire diversi manipolatori che accettano un solo argomento.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 #include <iomanip>  
   
 ```  
   
-## Note  
- Ognuna di questi manipolatori restituisce un tipo non specificato, denominato da **T1** a **T10**, che esegue sottopone a overload sia `basic_istream`\<**Elem**, **Tr**\>`::`[operator\>\>](../Topic/operator%3E%3E%20\(%3Cistream%3E\).md) sia `basic_ostream`\<**Elem**, **Tr**\>`::`[operatore\<\<](../Topic/operator%3C%3C%20\(%3Costream%3E\).md).  
+## <a name="remarks"></a>Note  
+ Ciascuno di questi manipolatori restituisce un tipo non specificato, a cui viene assegnato un nome compreso tra **T1** e **T10**, che esegue l'overload sia di `basic_istream`\<**Elem**, **Tr**>`::`[operator>>](../standard-library/istream-operators.md#op_gt_gt) sia di `basic_ostream`\<**Elem**, **Tr**>`::`[operator<<](../standard-library/ostream-operators.md#op_lt_lt).  
   
-### Manipolatori  
+### <a name="manipulators"></a>Manipolatori  
   
 |||  
 |-|-|  
-|[get\_money](../Topic/%3Ciomanip%3E%20get_money.md)|Ottiene un importo monetario, facoltativamente in formato internazionale.|  
-|[get\_time](../Topic/%3Ciomanip%3E%20get_time.md)|Ottiene un'ora in una struttura di ora usando un formato specificato.|  
-|[put\_money](../Topic/%3Ciomanip%3E%20put_money.md)|Fornisce un importo monetario, facoltativamente in formato internazionale.|  
-|[put\_time](../Topic/%3Ciomanip%3E%20put_time.md)|Fornisce un'ora in una struttura di ora e una stringa di formato da usare.|  
-|[quoted](../Topic/quoted.md)|Abilita pratiche sequenze di andata e ritorno delle stringhe con operatori di inserimento ed estrazione.|  
-|[resetiosflags](../Topic/resetiosflags.md)|Cancella i flag specificati.|  
-|[setbase](../Topic/setbase.md)|Imposta la base per i valori integer.|  
-|[setfill](../Topic/setfill.md)|Imposta il carattere che verrà usato per riempire gli spazi in una visualizzazione giustificata a destra.|  
-|[setiosflags](../Topic/setiosflags.md)|Imposta i flag specificati.|  
-|[setprecision](../Topic/setprecision.md)|Imposta la precisione per i valori a virgola mobile.|  
-|[setw](../Topic/setw.md)|Specifica la larghezza del campo di visualizzazione.|  
+|[get_money](../standard-library/iomanip-functions.md#iomanip_get_money)|Ottiene un importo monetario, facoltativamente in formato internazionale.|  
+|[get_time](../standard-library/iomanip-functions.md#iomanip_get_time)|Ottiene un'ora in una struttura di ora usando un formato specificato.|  
+|[put_money](../standard-library/iomanip-functions.md#iomanip_put_money)|Fornisce un importo monetario, facoltativamente in formato internazionale.|  
+|[put_time](../standard-library/iomanip-functions.md#iomanip_put_time)|Fornisce un'ora in una struttura di ora e una stringa di formato da usare.|  
+|[quoted](../standard-library/iomanip-functions.md#quoted)|Abilita pratiche sequenze di andata e ritorno delle stringhe con operatori di inserimento ed estrazione.|  
+|[resetiosflags](../standard-library/iomanip-functions.md#resetiosflags)|Cancella i flag specificati.|  
+|[setbase](../standard-library/iomanip-functions.md#setbase)|Imposta la base per i valori integer.|  
+|[setfill](../standard-library/iomanip-functions.md#setfill)|Imposta il carattere che verrà usato per riempire gli spazi in una visualizzazione giustificata a destra.|  
+|[setiosflags](../standard-library/iomanip-functions.md#setiosflags)|Imposta i flag specificati.|  
+|[setprecision](../standard-library/iomanip-functions.md#setprecision)|Imposta la precisione per i valori a virgola mobile.|  
+|[setw](../standard-library/iomanip-functions.md#setw)|Specifica la larghezza del campo di visualizzazione.|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)   
- [Sicurezza dei thread nella libreria standard C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [Programmazione di iostream](../standard-library/iostream-programming.md)   
  [Convenzioni di iostream](../standard-library/iostreams-conventions.md)
+
+
+
+

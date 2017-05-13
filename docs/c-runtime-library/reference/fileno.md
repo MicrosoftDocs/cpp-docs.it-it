@@ -1,50 +1,68 @@
 ---
-title: "_fileno | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_fileno"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_fileno"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "handle di file [C++], recupero da flussi"
-  - "fileno (funzione)"
-  - "_fileno (funzione)"
-  - "flussi, recupero di handle di file"
+title: _fileno | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _fileno
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _fileno
+dev_langs:
+- C++
+helpviewer_keywords:
+- file handles [C++], getting from streams
+- fileno function
+- _fileno function
+- streams, getting file handles
 ms.assetid: 86474174-2f17-4100-bcc4-352dd976c7b5
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# _fileno
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: e5a2f9c68eef3698886afd2ed48690d8b4fffd53
+ms.contentlocale: it-it
+ms.lasthandoff: 04/04/2017
 
-Ottiene il descrittore del file associato a un flusso.  
+---
+# <a name="fileno"></a>_fileno
+Ottenere il descrittore di file associato al flusso.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 int _fileno(   
@@ -52,30 +70,30 @@ int _fileno(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `stream`  
  Puntatore alla struttura `FILE`.  
   
-## Valore restituito  
- `_fileno` restituisce il descrittore del file.  Nessun ritorno di errore.  Il risultato è indefinito se `stream` non specifica un file aperto.  Se il flusso è `NULL`, \_`fileno` invoca il gestore di parametro non valido, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).  Se l'esecuzione può continuare, questa funzione restituisce \-1 ed imposta `errno` a `EINVAL`.  
+## <a name="return-value"></a>Valore restituito  
+ `_fileno` restituisce il descrittore del file. Non vi è restituzione di errori. Il risultato sarà indefinito se `stream` non specifica un file aperto. Se il flusso è `NULL`, `_fileno` richiama il gestore dei parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione restituisce -1 e imposta `errno` su `EINVAL`.  
   
- Per ulteriori informazioni su questi e altri codici, vedere [\_doserrno, errno, \_sys\_errlist, e \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Per altre informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 > [!NOTE]
->  Se `stdout` o `stderr` non è associato a un flusso di output \(ad esempio, in un'applicazione Windows senza una finestra della console\), il descrittore del file restituito è \-2.  Nelle versioni precedenti, il descrittore del file restituito era \-1.  Questa modifica consente alle applicazioni di distinguere questa condizione da un errore.  
+>  Se `stdout` o `stderr` non è associata a un flusso di output (ad esempio, in un'applicazione di Windows senza una finestra della console), il descrittore del file restituito è -2. Nelle versioni precedenti, il descrittore del file restituito era -1. Questa modifica consente alle applicazioni di distinguere questa condizione da un errore.  
   
-## Note  
- La routine `_fileno` restituisce il descrittore del file attualmente associato a `stream`.  Questa procedura è implementata sia come funzione che come macro.  Per informazioni sulla scelta di un'implementazione, vedere [Scelta tra le funzioni e le macro](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md) .  
+## <a name="remarks"></a>Note  
+ La routine `_fileno` restituisce il descrittore del file attualmente associato a `stream`. Questa routine viene implementata come funzione e come macro. Per informazioni sulla scelta di un'implementazione, vedere [Suggerimenti per la scelta tra funzioni e macro](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md).  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Funzione|Intestazione obbligatoria|  
-|--------------|-------------------------------|  
-|`_fileno`|\<stdio.h\>|  
+|--------------|---------------------|  
+|`_fileno`|\<stdio.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_fileno.c  
@@ -93,15 +111,15 @@ int main( void )
 }  
 ```  
   
-  **Il descrittore del file per stdin è 0**  
-**Il descrittore del file per stdout è 1**  
-**Il descrittore del file per stderr è 2**   
-## Equivalente .NET Framework  
- [System::IO::FileStream::Handle](https://msdn.microsoft.com/en-us/library/system.io.filestream.handle.aspx)  
+```Output  
+The file descriptor for stdin is 0  
+The file descriptor for stdout is 1  
+The file descriptor for stderr is 2  
+```  
   
-## Vedere anche  
- [I\/O di flusso](../../c-runtime-library/stream-i-o.md)   
- [\_fdopen, \_wfdopen](../../c-runtime-library/reference/fdopen-wfdopen.md)   
- [\_filelength, \_filelengthi64](../../c-runtime-library/reference/filelength-filelengthi64.md)   
- [fopen, \_wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
- [freopen, \_wfreopen](../../c-runtime-library/reference/freopen-wfreopen.md)
+## <a name="see-also"></a>Vedere anche  
+ [I/O di flusso](../../c-runtime-library/stream-i-o.md)   
+ [_fdopen, _wfdopen](../../c-runtime-library/reference/fdopen-wfdopen.md)   
+ [_filelength, _filelengthi64](../../c-runtime-library/reference/filelength-filelengthi64.md)   
+ [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
+ [freopen, _wfreopen](../../c-runtime-library/reference/freopen-wfreopen.md)

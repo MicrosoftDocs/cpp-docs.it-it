@@ -1,53 +1,70 @@
 ---
-title: "_lfind_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_lfind_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-utility-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "lfind_s"
-  - "_lfind_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_lfind_s (funzione)"
-  - "matrici [CRT], ricerca"
-  - "chiavi, ricerca in matrici"
-  - "lfind_s (funzione)"
-  - "ricerca lineare"
-  - "ricerca, lineari"
+title: _lfind_s | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _lfind_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-utility-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- lfind_s
+- _lfind_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- linear searching
+- keys, finding in arrays
+- lfind_s function
+- arrays [CRT], searching
+- searching, linear
+- _lfind_s function
 ms.assetid: f1d9581d-5c9d-4222-a31c-a6dfafefa40d
 caps.latest.revision: 26
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 26
----
-# _lfind_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: c50893f1dc73db9f928eaea346a381d1bd991d2f
+ms.contentlocale: it-it
+ms.lasthandoff: 03/29/2017
 
-Esegue una ricerca lineare della chiave specificata.  Una versione di [\_lfind](../../c-runtime-library/reference/lfind.md) con miglioramenti della sicurezza come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
+---
+# <a name="lfinds"></a>_lfind_s
+Esegue una ricerca lineare della chiave specificata. Questa è una versione di [_lfind](../../c-runtime-library/reference/lfind.md) che include miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 void *_lfind_s(  
@@ -60,53 +77,53 @@ void *_lfind_s(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `key`  
- Oggetto da ricercare.  
+ Oggetto da cercare.  
   
  `base`  
- Puntatore alla base dei dati della ricerca.  
+ Puntatore alla base dei dati di ricerca.  
   
  `num`  
- Numero di elementi dell'array.  
+ Numero degli elementi della matrice.  
   
  `size`  
- Dimensione degli elementi dell'array in byte.  
+ Dimensione degli elementi della matrice in byte.  
   
  `compare`  
- Puntatore alla routine di confronto.  Il primo parametro è il puntatore `context`.  Il secondo parametro è un puntatore alla chiave di ricerca.  Il terzo parametro è un puntatore ad un elemento dell'array da confrontare con la chiave.  
+ Puntatore alla routine di confronto. Il primo parametro è il puntatore `context`. Il secondo parametro è un puntatore alla chiave per la ricerca. Il terzo parametro è un puntatore all'elemento della matrice da confrontare con la chiave.  
   
  `context`  
- Un puntatore a un oggetto che dev'essere accessibile nella funzione di confronto.  
+ Puntatore a un oggetto che potrebbe essere accessibile nella funzione di confronto.  
   
-## Valore restituito  
- Se la chiave viene trovata, `_lfind_s` restituisce un puntatore all'elemento alla `base` dell'array che corrisponde a `key`.  Se la chiave non viene trovata, `_lfind_s` non è reperibile, la funzione restituisce `NULL`.  
+## <a name="return-value"></a>Valore restituito  
+ Se la chiave viene trovata, `_lfind_s` restituisce un puntatore all'elemento della matrice in `base` che corrisponde a `key`. Se la chiave non viene trovata, `_lfind_s` restituisce `NULL`.  
   
- Se alla funzione vengono passati parametri invalidi, viene invocato il gestore di parametro non valido, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).  Se l'esecuzione può continuare, `errno` viene impostato su `EINVAL` e la funzione restituisce `NULL`.  
+ Se alla funzione vengono passati parametri non validi, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, `errno` viene impostato su `EINVAL` e la funzione restituisce `NULL`.  
   
-### Condizioni di errore  
+### <a name="error-conditions"></a>Condizioni di errore  
   
-|chiave|base|compare|num|size|errno|  
-|------------|----------|-------------|---------|----------|-----------|  
-|`NULL`|any|any|any|any|`EINVAL`|  
-|any|`NULL`|any|\!\= 0|any|`EINVAL`|  
-|any|any|any|any|zero|`EINVAL`|  
-|any|any|`NULL`|un|any|`EINVAL`|  
+|key|base|compare|num|size|errno|  
+|---------|----------|-------------|---------|----------|-----------|  
+|`NULL`|qualsiasi|qualsiasi|qualsiasi|qualsiasi|`EINVAL`|  
+|qualsiasi|`NULL`|qualsiasi|!= 0|qualsiasi|`EINVAL`|  
+|qualsiasi|qualsiasi|qualsiasi|any|zero|`EINVAL`|  
+|any|qualsiasi|`NULL`|any|qualsiasi|`EINVAL`|  
   
-## Note  
- La funzione `_lfind_s` esegue una ricerca lineare del valore `key` in un array di `num` elementi, ognuno di `width` byte.  A differenza di `bsearch_s`, `_lfind_s` non richiede che l'array sia ordinato.  L'argomento `base` è un puntatore alla base della matrice da ricercare.  L'argomento `compare` è un puntatore a una routine fornita dall'utente che confronta due elementi di un array e restituisce un valore che specifica la loro relazione.  `_lfind_s` chiama la routine `compare` una o più volte durante la ricerca, passando il puntatore `context` e i puntatori a due elementi di array ad ogni chiamata.  La routine `compare` deve confrontare gli elementi e quindi restituire un valore diverso da zero \(che indica che gli elementi sono differenti\) o 0 \(che indica che gli elementi sono identici\).  
+## <a name="remarks"></a>Note  
+ La funzione `_lfind_s` esegue una ricerca lineare del valore `key` in una matrice di `num` elementi, ognuno di `width` byte. A differenza di `bsearch_s`, `_lfind_s` non richiede che la matrice sia ordinata. L'argomento `base` è un puntatore alla base della matrice in cui eseguire la ricerca. L'argomento `compare` è un puntatore a una routine fornita dall'utente che confronta due elementi di matrice e quindi restituisce un valore che ne specifica la relazione. `_lfind_s` chiama la routine `compare` una o più volte durante la ricerca, passando il puntatore `context` e i puntatori a due elementi della matrice per ogni chiamata. La routine `compare` deve confrontare gli elementi e quindi restituire un valore diverso da zero (che indica che gli elementi sono diversi) o 0 (che indica che gli elementi sono identici).  
   
- `_lfind_s` è simile a `_lfind` fatta eccezione per l'aggiunta del puntatore `context` agli argomenti della funzione di confronto e l'elenco di parametri della funzione.  Il puntatore `context` può essere utile se la struttura dei dati trovata fa parte di un oggetto e la funzione `compare` deve accedere ai relativi membri.  La funzione `compare` può eseguire il cast del puntatore void nel tipo di oggetto appropriato e accedere ai membri dell'oggetto.  L'aggiunta del parametro `context` rende `_lfind_s` più sicuro perché il contesto aggiuntivo può essere utilizzato per evitare il rientro dei bug associati utilizzando variabili statiche per rendere disponibili i dati della funzione `compare`.  
+ `_lfind_s` è simile a `_lfind` con l'eccezione dell'aggiunta del puntatore `context` agli argomenti della funzione di confronto e all'elenco dei parametri della funzione. Il puntatore `context` può essere utile se la struttura dei dati sottoposta a ricerca fa parte di un oggetto e la funzione `compare` deve accedere ai membri dell'oggetto. La funzione `compare` può eseguire il cast del puntatore void nel tipo di oggetto appropriato e accedere ai membri di tale oggetto. L'aggiunta del parametro `context` rende `_lfind_s` più sicuro perché può essere usato un contesto aggiuntivo per evitare i bug di reentrancy associati all'uso di variabili statiche per rendere disponibili i dati alla funzione `compare`.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`_lfind_s`|\<search.h\>|  
+|-------------|---------------------|  
+|`_lfind_s`|\<search.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_lfind_s.cpp  
@@ -182,13 +199,13 @@ int main( )
 }  
 ```  
   
-  **weit found**   
-## Equivalente .NET Framework  
- <xref:System.Collections.ArrayList.Contains%2A>  
+```Output  
+weit found  
+```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Ricerca e ordinamento](../../c-runtime-library/searching-and-sorting.md)   
- [bsearch\_s](../../c-runtime-library/reference/bsearch-s.md)   
- [\_lsearch\_s](../../c-runtime-library/reference/lsearch-s.md)   
- [qsort\_s](../../c-runtime-library/reference/qsort-s.md)   
- [\_lfind](../../c-runtime-library/reference/lfind.md)
+ [bsearch_s](../../c-runtime-library/reference/bsearch-s.md)   
+ [_lsearch_s](../../c-runtime-library/reference/lsearch-s.md)   
+ [qsort_s](../../c-runtime-library/reference/qsort-s.md)   
+ [_lfind](../../c-runtime-library/reference/lfind.md)

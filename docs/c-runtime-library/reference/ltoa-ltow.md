@@ -1,56 +1,73 @@
 ---
-title: "_ltoa, _ltow | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_ltoa"
-  - "_ltow"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "ltow"
-  - "_ltot"
-  - "_ltoa"
-  - "_ltow"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ltoa (funzione)"
-  - "_ltow (funzione)"
-  - "conversione di integer"
-  - "conversione di numeri, in stringhe"
-  - "conversione di long integer in stringa"
-  - "ltoa (funzione)"
-  - "ltow (funzione)"
+title: _ltoa, _ltow | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _ltoa
+- _ltow
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- ltow
+- _ltot
+- _ltoa
+- _ltow
+dev_langs:
+- C++
+helpviewer_keywords:
+- converting integers
+- _ltoa function
+- _ltow function
+- ltow function
+- ltoa function
+- long integer conversion to string
+- converting numbers, to strings
 ms.assetid: 14036104-2c25-4759-87c0-918ed8521e47
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# _ltoa, _ltow
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 5e67ca683ac8946f88389e9ca2323f1255da6695
+ms.contentlocale: it-it
+ms.lasthandoff: 04/01/2017
 
-Converte un long integer in una stringa.  Più versioni sicure di queste funzioni sono disponibili, vedere [\_ltoa\_s, \_ltow\_s](../../c-runtime-library/reference/ltoa-s-ltow-s.md).  
+---
+# <a name="ltoa-ltow"></a>_ltoa, _ltow
+Converte un intero lungo in una stringa. Sono disponibili versioni più sicure di queste funzioni. Vedere [_ltoa_s, _ltow_s](../../c-runtime-library/reference/ltoa-s-ltow-s.md).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 char *_ltoa(  
@@ -77,49 +94,46 @@ wchar_t *_ltow(
 ); // C++ only  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `value`  
- Numeri da convertire.  
+ Numero da convertire.  
   
  `str`  
- Stringa di risultato.  
+ Risultato stringa.  
   
  `radix`  
  Base di `value`.  
   
-## Valore restituito  
- Ognuna di queste funzioni restituisce un puntatore a `str`.  Nessun ritorno di errore.  
+## <a name="return-value"></a>Valore restituito  
+ Ognuna di queste funzioni restituisce un puntatore a `str`. Non vi è restituzione di errori.  
   
-## Note  
- La funzione `_ltoa` converte le cifre di `value` a una stringa di caratteri con terminazione null e archivia il risultato \(fino a 33 byte\) in `str`.  L'argomento `radix` specifica la base di `value`, che deve essere compreso tra 2 e 36.  Se `radix` è uguale a 10 e `value` è negativo, il primo carattere della stringa memorizzata è il segno meno \(–\).  `_ltow` è una versione a caratteri estesi di `_ltoa`; gli argomenti e i valori restituiti di `_ltow` sono stringhe con caratteri estesi.  Ognuna di queste funzioni è specifica di Microsoft.  
+## <a name="remarks"></a>Note  
+ La funzione `_ltoa` converte le cifre di `value` in una stringa di caratteri con terminazione Null e archivia il risultato (fino a 33 byte) in `str`. Il `radix` argomento specifica la base di `value`, che deve essere compreso nell'intervallo 2-36. Se `radix` è uguale a 10 e `value` è negativo, il primo carattere della stringa archiviata è il segno meno (-). `_ltow` è una versione a caratteri wide di `_ltoa`. Il secondo argomento e il valore restituito da `_ltow` sono stringhe a caratteri wide. Ognuna di queste funzioni è specifica di Microsoft.  
   
 > [!IMPORTANT]
->  Per evitare sovraccarichi del buffer, assicurarsi che il buffer `str` sia sufficientemente grande da contenere le cifre convertite più il carattere null finale e un carattere di segno.  
+>  Per evitare sovraccarichi del buffer, verificare che il buffer `str` sia sufficientemente grande da contenere le cifre convertite oltre al carattere Null finale e al carattere del segno.  
   
- In C\+\+, queste funzioni hanno modelli di overload.  Per ulteriori informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ queste funzioni presentano overload dei modelli. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).  
   
-### Mapping di routine a Testo generico  
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
-|Routine Tchar.h|\_UNICODE e \_MBCS non definiti|\_MBCS definito|\_UNICODE definito|  
-|---------------------|-------------------------------------|---------------------|------------------------|  
+|Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_ltot`|`_ltoa`|`_ltoa`|`_ltow`|  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`_ltoa`|\<stdlib.h\>|  
-|`_ltow`|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`_ltoa`|\<stdlib.h>|  
+|`_ltow`|\<stdlib.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
-## Esempio  
- Vedere l'esempio per [\_itoa](../../c-runtime-library/reference/itoa-i64toa-ui64toa-itow-i64tow-ui64tow.md).  
+## <a name="example"></a>Esempio  
+ Vedere l'esempio per [_itoa](../../c-runtime-library/reference/itoa-i64toa-ui64toa-itow-i64tow-ui64tow.md).  
   
-## Equivalente .NET Framework  
- [System::Convert::ToString](https://msdn.microsoft.com/en-us/library/system.convert.tostring.aspx)  
-  
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Conversione dei dati](../../c-runtime-library/data-conversion.md)   
- [\_itoa, \_i64toa, \_ui64toa, \_itow, \_i64tow, \_ui64tow](../../c-runtime-library/reference/itoa-i64toa-ui64toa-itow-i64tow-ui64tow.md)   
- [\_ultoa, \_ultow](../../c-runtime-library/reference/ultoa-ultow.md)
+ [_itoa, _i64toa, _ui64toa, _itow, _i64tow, _ui64tow](../../c-runtime-library/reference/itoa-i64toa-ui64toa-itow-i64tow-ui64tow.md)   
+ [_ultoa, _ultow](../../c-runtime-library/reference/ultoa-ultow.md)

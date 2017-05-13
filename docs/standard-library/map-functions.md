@@ -6,13 +6,17 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- map/std::swap (map)
+- map/std::swap (multimap)
 ms.assetid: 7cb3d1a5-7add-4726-a73f-61927eafd466
 caps.latest.revision: 6
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: d322b318ac4206c5bc27b81299190d129548ef9f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: a72fb2cd6a34cc7946503593657aa0c3a5dc894e
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltmapgt-functions"></a>Funzioni &lt;map&gt;
@@ -20,7 +24,7 @@ ms.lasthandoff: 02/24/2017
 |-|-|  
 |[swap (map)](#swap)|[swap (multimap)](#swap_multimap)|  
   
-##  <a name="a-nameswapmultimapa--swap--map"></a><a name="swap_multimap"></a>  swap  (map)
+##  <a name="swap_multimap"></a>  swap  (map)
  Scambia gli elementi di due oggetti map.  
   
 ```  
@@ -31,19 +35,19 @@ void swap(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` right`  
- Oggetto map che fornisce gli elementi da scambiare o i cui elementi devono essere scambiati con quelli dell'oggetto map ` left`.  
+ `right`  
+ Oggetto map che fornisce gli elementi da scambiare o i cui elementi devono essere scambiati con quelli dell'oggetto map `left`.  
   
- ` left`  
- Oggetto map i cui elementi devono essere scambiati con quelli dell'oggetto map ` right`.  
+ `left`  
+ Oggetto map i cui elementi devono essere scambiati con quelli dell'oggetto map `right`.  
   
 ### <a name="remarks"></a>Note  
- La funzione modello è un algoritmo specializzato sulla classe contenitore map per l'esecuzione della funzione membro ` left.`[swap](../standard-library/map-class.md#map__swap)*( right*). Si tratta di un'istanza dell'ordinamento parziale dei modelli di funzione eseguito dal compilatore. Quando le funzioni modello sono sottoposte a overload in modo tale che la corrispondenza del modello con la chiamata di funzione non è univoca, il compilatore seleziona la versione più specializzata della funzione modello. La versione generale della funzione modello, **template** \< **class T**> **void swap**( **T&**, **T&**), nella classe algoritmo viene eseguita in base ad assegnazione ed è un'operazione lenta. La versione specializzata presente in ogni contenitore è molto più veloce, dal momento che funziona con la rappresentazione interna della classe contenitore.  
+ La funzione di modello è un algoritmo specializzato sulla mappa della classe contenitore per eseguire la funzione membro `left`.[ swap](../standard-library/map-class.md#swap)( `right`). Si tratta di un'istanza dell'ordinamento parziale dei modelli di funzione eseguito dal compilatore. Quando le funzioni modello sono sottoposte a overload in modo tale che la corrispondenza del modello con la chiamata di funzione non è univoca, il compilatore seleziona la versione più specializzata della funzione modello. La versione generale della funzione modello, **template** \< **class T**> **void swap**( **T&**, **T&**), nella classe algoritmo viene eseguita in base ad assegnazione ed è un'operazione lenta. La versione specializzata presente in ogni contenitore è molto più veloce, dal momento che funziona con la rappresentazione interna della classe contenitore.  
   
 ### <a name="example"></a>Esempio  
-  Vedere l'esempio di codice relativo alla funzione membro [map::swap](../standard-library/map-class.md#map__swap) per indicazioni su come usare la versione modello di `swap`.  
+  Vedere l'esempio di codice relativo alla funzione membro [map::swap](../standard-library/map-class.md#swap) per indicazioni su come usare la versione modello di `swap`.  
   
-##  <a name="a-nameswapa--swap--multimap"></a><a name="swap"></a>  swap  (multimap)
+##  <a name="swap"></a>  swap  (multimap)
  Scambia gli elementi di due oggetti multimap.  
   
 ```  
@@ -54,17 +58,17 @@ void swap(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` right`  
- Oggetto multimap che fornisce gli elementi da scambiare o i cui elementi devono essere scambiati con quelli dell'oggetto multimap ` left`.  
+ `right`  
+ Oggetto multimap che fornisce gli elementi da scambiare o i cui elementi devono essere scambiati con quelli dell'oggetto multimap `left`.  
   
- ` left`  
- Oggetto multimap i cui elementi devono essere scambiati con quelli dell'oggetto multimap ` right`.  
+ `left`  
+ Oggetto multimap i cui elementi devono essere scambiati con quelli dell'oggetto multimap `right`.  
   
 ### <a name="remarks"></a>Note  
- La funzione modello è un algoritmo specializzato sulla classe contenitore multimap per l'esecuzione della funzione membro ` left.`[swap](../standard-library/multimap-class.md#multimap__swap) ( ` right`). Si tratta di un'istanza dell'ordinamento parziale dei modelli di funzione eseguito dal compilatore. Quando le funzioni modello sono sottoposte a overload in modo tale che la corrispondenza del modello con la chiamata di funzione non è univoca, il compilatore seleziona la versione più specializzata della funzione modello. La versione generale della funzione modello, **template** \< **class T**> **void swap**( **T&**, **T&**), nella classe algoritmo viene eseguita in base ad assegnazione ed è un'operazione lenta. La versione specializzata presente in ogni contenitore è molto più veloce, dal momento che funziona con la rappresentazione interna della classe contenitore.  
+ La funzione di modello è un algoritmo specializzato sulla mappa della classe contenitore da eseguire nel multimap classe contenitore per eseguire la funzione membro `left`.[ swap](../standard-library/multimap-class.md#swap) ( `right`). Si tratta di un'istanza dell'ordinamento parziale dei modelli di funzione eseguito dal compilatore. Quando le funzioni modello sono sottoposte a overload in modo tale che la corrispondenza del modello con la chiamata di funzione non è univoca, il compilatore seleziona la versione più specializzata della funzione modello. La versione generale della funzione modello, **template** \< **class T**> **void swap**( **T&**, **T&**), nella classe algoritmo viene eseguita in base ad assegnazione ed è un'operazione lenta. La versione specializzata presente in ogni contenitore è molto più veloce, dal momento che funziona con la rappresentazione interna della classe contenitore.  
   
 ### <a name="example"></a>Esempio  
-  Vedere l'esempio di codice relativo alla funzione membro [multimap::swap](../standard-library/multimap-class.md#multimap__swap) per indicazioni su come usare la versione modello di `swap`.  
+  Vedere l'esempio di codice relativo alla funzione membro [multimap::swap](../standard-library/multimap-class.md#swap) per indicazioni su come usare la versione modello di `swap`.  
   
 ## <a name="see-also"></a>Vedere anche  
  [\<map>](../standard-library/map.md)

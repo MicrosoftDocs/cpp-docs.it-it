@@ -1,56 +1,73 @@
 ---
-title: "fgetc, fgetwc | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fgetwc"
-  - "fgetc"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_fgettc"
-  - "fgetwc"
-  - "fgetc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fgettc (funzione)"
-  - "caratteri, lettura"
-  - "fgetc (funzione)"
-  - "fgettc (funzione)"
-  - "fgetwc (funzione)"
-  - "lettura di caratteri da flussi"
-  - "flussi, lettura di caratteri"
+title: fgetc, fgetwc | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- fgetwc
+- fgetc
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _fgettc
+- fgetwc
+- fgetc
+dev_langs:
+- C++
+helpviewer_keywords:
+- fgettc function
+- characters, reading
+- _fgettc function
+- fgetc function
+- streams, reading characters from
+- reading characters from streams
+- fgetwc function
 ms.assetid: 13348b7b-dc86-421c-9d6c-611ca79c8338
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# fgetc, fgetwc
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 5a0a697a4ba7cfea7c24809796179861fccc2f68
+ms.contentlocale: it-it
+ms.lasthandoff: 03/29/2017
 
-Leggere un carattere da un flusso.  
+---
+# <a name="fgetc-fgetwc"></a>fgetc, fgetwc
+Leggono un carattere da un flusso.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 int fgetc(   
@@ -61,40 +78,40 @@ wint_t fgetwc(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `stream`  
- Puntatore alla struttura `FILE`.  
+ Puntatore alla struttura `FILE` .  
   
-## Valore restituito  
- `fgetc` restituisce il carattere letto come un `int` o restituisce `EOF` per indicare un errore o EOF.  `fgetwc` restituisce, come un [wint\_t](../../c-runtime-library/standard-types.md), il carattere di tipo esteso che corrisponde al carattere di lettura o restituisce `WEOF` per indicare un errore o EOF.  Per entrambe le funzioni, utilizzare `feof` o `ferror` per distinguere un errore da una condizione di EOF.  Se avviene un errore di lettura, l'indicatore di errore per il flusso viene impostato.  Se `stream` è `NULL`, `fgetc` e `fgetwc` invocano il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).  Se l'esecuzione può continuare, queste funzioni impostano `errno` a `EINVAL` e restituiscono `EOF`.  
+## <a name="return-value"></a>Valore restituito  
+ `fgetc` restituisce il carattere letto come `int` o restituisce `EOF` per indicare un errore o la fine del file. `fgetwc` restituisce, come [wint_t](../../c-runtime-library/standard-types.md), il carattere wide che corrisponde al carattere letto o restituisce `WEOF` per indicare un errore o la fine del file. Per entrambe le funzioni, usare `feof` o `ferror` per distinguere tra un errore e una condizione di fine del file. Se si verifica un errore di lettura, viene impostato l'indicatore di errore per il flusso. Se `stream` è `NULL`, `fgetc` e `fgetwc` richiamano il gestore dei parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano `errno` su `EINVAL` e restituiscono `EOF`.  
   
-## Note  
- Ognuna di queste funzioni legge un singolo carattere nella posizione corrente del file associato a `stream`.  La funzione quindi incrementa il puntatore del file collegato \(se definito\) per indicare il carattere successivo.  Se il flusso è alla fine del file, l'indicatore EOF del flusso viene impostato.  
+## <a name="remarks"></a>Note  
+ Ognuna di queste funzioni legge un singolo carattere dalla posizione corrente del file associato a `stream`. La funzione quindi incrementa il puntatore del file associato (se definito) per puntare al carattere successivo. Se il flusso è alla fine del file, viene impostato l'indicatore di fine del file per il flusso.  
   
- `fgetc` equivale a `getc`, ma viene implementato solo come funzione, anziché come una funzione e macro.  
+ `fgetc` è equivalente a `getc`, ma è implementata solo come funzione, anziché come funzione e macro.  
   
- `fgetwc` è la versione a caratteri estesi di `fgetc`; legge `c` come carattere multibyte o un carattere esteso a seconda di come `stream` viene aperto se in modalità testo o in modalità binario.  
+ `fgetwc` è la versione a caratteri wide di `fgetc`. Legge `c` come carattere multibyte o come carattere wide a seconda che `stream` venga aperto in modalità testo o in modalità binaria.  
   
- Le versioni con il suffisso `_nolock` sono identiche ma non sono protette da interferenze da parte di altri thread.  
+ Le versioni con il suffisso `_nolock` sono identiche, ad eccezione del fatto che non sono protette da interferenze da parte di altri thread.  
   
- Per ulteriori informazioni sui caratteri di tipo "wide" e i caratteri multibyte di elaborazione in modo binario e testo, vedere [Flusso I\/O Unicode in modalità binario e del testo](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).  
+ Per altre informazioni sull'elaborazione di caratteri wide e caratteri multibyte in modalità testo e binaria, vedere [I/O flusso Unicode in modalità testo e binaria](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).  
   
-### Mapping di routine a Testo generico  
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
-|TCHAR.H routine|\_UNICODE & \_MBCS non definiti|\_MBCS definito|\_UNICODE definito|  
-|---------------------|-------------------------------------|---------------------|------------------------|  
+|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_fgettc`|`fgetc`|`fgetc`|`fgetwc`|  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Funzione|Intestazione obbligatoria|  
-|--------------|-------------------------------|  
-|`fgetc`|\<stdio.h\>|  
-|`fgetwc`|\<stdio.h\> o \<wchar.h\>|  
+|--------------|---------------------|  
+|`fgetc`|\<stdio.h>|  
+|`fgetwc`|\<stdio.h> o \<wchar.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_fgetc.c  
@@ -131,27 +148,21 @@ int main( void )
 }  
 ```  
   
-## Input: crt\_fgetc.txt  
+## <a name="input-crtfgetctxt"></a>Input: crt_fgetc.txt  
   
 ```  
 Line one.  
 Line two.  
 ```  
   
-### Output  
+### <a name="output"></a>Output  
   
 ```  
 Line one.  
 Line two.  
 ```  
   
-## Equivalente .NET Framework  
-  
--   [System::IO::StreamReader::Read](https://msdn.microsoft.com/en-us/library/system.io.streamreader.read.aspx)  
-  
--   [System::Console::Read](https://msdn.microsoft.com/en-us/library/system.console.read.aspx)  
-  
-## Vedere anche  
- [I\/O di flusso](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>Vedere anche  
+ [I/O di flusso](../../c-runtime-library/stream-i-o.md)   
  [fputc, fputwc](../../c-runtime-library/reference/fputc-fputwc.md)   
  [getc, getwc](../../c-runtime-library/reference/getc-getwc.md)

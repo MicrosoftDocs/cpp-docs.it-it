@@ -52,10 +52,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9e1389e2d8623e7e96ef3ad6af8772ee7026ec76
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: e1e92656713a31d3057dfe180bd1cb4e819ceb5b
+ms.contentlocale: it-it
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="div"></a>div
@@ -89,9 +90,9 @@ lldiv_t div(
  `div` chiamato utilizzando argomenti di tipo `int` restituisce una struttura di tipo `div_t`, inclusi il quoziente e il resto. Il valore restituito dell'overload con argomenti di tipo `long` è `ldiv_t`. `div_t` e `ldiv_t` sono definiti in STDLIB.H.  
   
 ## <a name="remarks"></a>Note  
- La funzione `div` divide `numer` per `denom` calcolando così il quoziente e il resto. La struttura [div_t](../../c-runtime-library/standard-types.md) contiene il quoziente `int``quot` e il resto `int``rem`. Il segno del quoziente è uguale a quello del quoziente matematico. Il valore assoluto del quoziente è l'intero più grande che è minore del valore assoluto del quoziente matematico. Se il denominatore è 0, il programma termina con un messaggio di errore.  
+ La funzione `div` divide `numer` per `denom` calcolando così il quoziente e il resto. La struttura [div_t](../../c-runtime-library/standard-types.md) contiene il quoziente `int quot` e il resto `int rem`. Il segno del quoziente è uguale a quello del quoziente matematico. Il valore assoluto del quoziente è l'intero più grande che è minore del valore assoluto del quoziente matematico. Se il denominatore è 0, il programma termina con un messaggio di errore.  
   
- Gli overload che accettano argomenti di tipo `long` o `long long` sono disponibili solo nel codice C++. Il tipo restituito [ldiv_t](../../c-runtime-library/standard-types.md) contiene i membri `long``quot` e `long``rem`, mentre il tipo restituito [lldiv_t](../../c-runtime-library/standard-types.md) contiene i membri `long long quot` e `long long rem` che hanno gli stessi significati dei membri di `div_t`.  
+ Gli overload che accettano argomenti di tipo `long` o `long long` sono disponibili solo nel codice C++. Il tipo restituito [ldiv_t](../../c-runtime-library/standard-types.md) contiene i membri `long quot` e `long rem`, mentre il tipo restituito [lldiv_t](../../c-runtime-library/standard-types.md) contiene i membri `long long quot` e `long long rem` che hanno gli stessi significati dei membri di `div_t`.  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -138,9 +139,6 @@ int main( int argc, char *argv[] )
 x is 876, y is 13  
 The quotient is 67, and the remainder is 5  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Floating-Point Support](../../c-runtime-library/floating-point-support.md)  (Supporto delle funzioni a virgola mobile)  
