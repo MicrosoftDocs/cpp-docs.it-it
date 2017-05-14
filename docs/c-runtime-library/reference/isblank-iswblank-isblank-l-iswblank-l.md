@@ -1,53 +1,70 @@
 ---
-title: "isblank, iswblank, _isblank_l, _iswblank_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "isblank"
-  - "_isblank_l"
-  - "iswblank"
-  - "_iswblank_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_iswblank_l"
-  - "isblank"
-  - "_istblank_l"
-  - "_istblank"
-  - "_isblank_l"
-  - "iswblank"
-dev_langs: 
-  - "C++"
+title: isblank, iswblank, _isblank_l, _iswblank_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- isblank
+- _isblank_l
+- iswblank
+- _iswblank_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _iswblank_l
+- isblank
+- _istblank_l
+- _istblank
+- _isblank_l
+- iswblank
+dev_langs:
+- C++
 ms.assetid: 33ce96c0-f387-411a-8283-c3d2a69e56bd
 caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
----
-# isblank, iswblank, _isblank_l, _iswblank_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 6c5f3ebe9921a4b8cc4781cf81239fd63dfa7fd2
+ms.contentlocale: it-it
+ms.lasthandoff: 03/29/2017
 
-Determina se un integer rappresenta un carattere vuoto.  
+---
+# <a name="isblank-iswblank-isblankl-iswblankl"></a>isblank, iswblank, _isblank_l, _iswblank_l
+Determina se un intero rappresenta un carattere vuoto.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 int isblank(  
@@ -66,42 +83,39 @@ int _iswblank_l(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `c`  
- Integer da testare.  
+ Valore Integer da testare.  
   
  `locale`  
- Impostazioni locali da utilizzare.  
+ Impostazioni locali da usare.  
   
-## Valore restituito  
- Ognuna di queste routine restituisce un valore diverso da zero se `c` è una rappresentazione specifica di uno spazio o un carattere di tabulazione orizzontale oppure è uno dei set di caratteri specifico delle impostazioni locali utilizzato per separare le parole all'interno di una riga di testo.  Tramite `isblank` viene restituito un valore diverso da zero se `c` è uno spazio \(0x20\) o un carattere di tabulazione orizzontale \(0x09\).  Il risultato della condizione di test per le funzioni `isblank` dipende da un'impostazione di categoria `LC_CTYPE` delle impostazioni locali; per ulteriori informazioni, vedere [setlocale, \_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md).  Le versioni di queste funzioni che non hanno il suffisso `_l` utilizzano le impostazioni locali correnti per il comportamento dipendente di tutte le impostazioni locali; le versioni che hanno il suffisso `_l` sono identiche, con la differenza che utilizzano il parametro delle impostazioni locali che viene passato.  Per ulteriori informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+## <a name="return-value"></a>Valore restituito  
+ Ognuna di queste routine restituisce un valore diverso da zero se `c` è una rappresentazione particolare di uno spazio o un carattere di tabulazione orizzontale oppure se fa parte di un set specifico delle impostazioni locali di caratteri usati per separare le parole all'interno di una riga di testo. `isblank` restituisce un valore diverso da zero se `c` è un carattere di spazio (0x20) oppure un carattere di tabulazione orizzontale (0x09). Il risultato della condizione di test per le funzioni `isblank` dipende dall'impostazione della categoria `LC_CTYPE` delle impostazioni locali. Per altre informazioni, vedere [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Le versioni di queste funzioni che non hanno il suffisso `_l` usano le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. Le versioni che non hanno il suffisso `_l` sono identiche, con la differenza che usano le impostazioni locali passate. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
   
- Tramite `iswblank` viene restituito un valore diverso da zero se `c` è un carattere wide corrispondente a un carattere di tabulazione orizzontale o a uno spazio standard.  
+ `iswblank` restituisce un valore diverso da zero se `c` è un carattere wide che corrisponde a un carattere standard di spazio o di tabulazione orizzontale.  
   
- Il comportamento di `isblank` e `_isblank_l` non viene definito se `c` non è EOF o è compreso nell'intervallo tra 0 e 0xFF, inclusi.  Quando una libreria di debug CRT viene utilizzata e `c` non è uno di questi valori, le funzioni generano un'asserzione.  
+ Il comportamento di `isblank` e `_isblank_l` è indefinito se `c` non è EOF o non è compreso nell'intervallo da 0 a 0xFF, inclusi. Quando si usa una libreria di debug CRT e `c` non è uno di questi valori, le funzioni generano un'asserzione.  
   
-### Mapping di routine su testo generico  
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
-|Routine TCHAR.H|\_UNICODE e \_MBCS non definiti|\_MBCS definito|\_UNICODE definito|  
-|---------------------|-------------------------------------|---------------------|------------------------|  
-|`_istblank`|`isblank`|[\_ismbcblank](../../c-runtime-library/reference/ismbcgraph-functions.md)|`iswblank`|  
-|`_istblank_l`|`_isblank_l`|[\_ismbcblank\_l](../../c-runtime-library/reference/ismbcgraph-functions.md)|`_iswblank_l`|  
+|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
+|`_istblank`|`isblank`|[_ismbcblank](../../c-runtime-library/reference/ismbcgraph-functions.md)|`iswblank`|  
+|`_istblank_l`|`_isblank_l`|[_ismbcblank_l](../../c-runtime-library/reference/ismbcgraph-functions.md)|`_iswblank_l`|  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`isblank`|\<ctype.h\>|  
-|`iswblank`|\<ctype.h\> o \<wchar.h\>|  
-|`_isblank_l`|\<ctype.h\>|  
-|`_iswblank_l`|\<ctype.h\> o \<wchar.h\>|  
+|-------------|---------------------|  
+|`isblank`|\<ctype.h>|  
+|`iswblank`|\<ctype.h> o \<wchar.h>|  
+|`_isblank_l`|\<ctype.h>|  
+|`_iswblank_l`|\<ctype.h> o \<wchar.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
-## Equivalente .NET Framework  
- [System::Char::IsWhiteSpace](https://msdn.microsoft.com/en-us/library/system.char.iswhitespace.aspx)  
-  
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classificazione di caratteri](../../c-runtime-library/character-classification.md)   
  [Impostazioni locali](../../c-runtime-library/locale.md)   
- [is, isw Routines](../../c-runtime-library/is-isw-routines.md)
+ [Routine is, isw](../../c-runtime-library/is-isw-routines.md)

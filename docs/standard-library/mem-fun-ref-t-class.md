@@ -11,8 +11,6 @@ ms.topic: article
 f1_keywords:
 - xfunctional/std::mem_fun_ref_t
 - mem_fun_ref_t
-- std.mem_fun_ref_t
-- std::mem_fun_ref_t
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 5f8be1fed655191657f3303cd76fda772b355ef4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: a462fa28f086f2ff0f74e35594dbd651e6d416d9
+ms.contentlocale: it-it
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="memfunreft-class"></a>Classe mem_fun_ref_t
@@ -72,7 +71,7 @@ class mem_fun_ref_t : public unary_function<Type, Result> {
  La classe modello archivia una copia di `_Pm`, che deve essere un puntatore a una funzione membro della classe **Type**, in un oggetto membro privato. Definisce la relativa funzione membro `operator()` che restituisce ( **left**.* `_Pm`)( ).  
   
 ## <a name="example"></a>Esempio  
-  Il costruttore di `mem_fun_ref_t` non viene usato in genere direttamente. Per adattare le funzioni membro, viene usata la funzione helper `mem_fun_ref`. Per un esempio di come usare gli adattatori di funzione membro, vedere [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref_function).  
+  Il costruttore di `mem_fun_ref_t` non viene usato in genere direttamente. Per adattare le funzioni membro, viene usata la funzione helper `mem_fun_ref`. Per un esempio di come usare gli adattatori di funzione membro, vedere [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref).  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** \<functional>  

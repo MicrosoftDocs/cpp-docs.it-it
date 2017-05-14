@@ -10,32 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - piecewise_constant_distribution
-- std::piecewise_constant_distribution
 - random/std::piecewise_constant_distribution
-- std::piecewise_constant_distribution::reset
 - random/std::piecewise_constant_distribution::reset
-- std::piecewise_constant_distribution::intervals
 - random/std::piecewise_constant_distribution::intervals
-- std::piecewise_constant_distribution::densities
 - random/std::piecewise_constant_distribution::densities
-- std::piecewise_constant_distribution::param
 - random/std::piecewise_constant_distribution::param
-- std::piecewise_constant_distribution::min
 - random/std::piecewise_constant_distribution::min
-- std::piecewise_constant_distribution::max
 - random/std::piecewise_constant_distribution::max
-- std::piecewise_constant_distribution::operator()
 - random/std::piecewise_constant_distribution::operator()
-- std::piecewise_constant_distribution::param_type
 - random/std::piecewise_constant_distribution::param_type
-- std::piecewise_constant_distribution::param_type::intervals
 - random/std::piecewise_constant_distribution::param_type::intervals
-- std::piecewise_constant_distribution::param_type::densities
 - random/std::piecewise_constant_distribution::param_type::densities
-- std::piecewise_constant_distribution::param_type::operator==
 - random/std::piecewise_constant_distribution::param_type::operator==
-- std::piecewise_constant_distribution::param_type::operator!=
 - random/std::piecewise_constant_distribution::param_type::operator!=
+- random/std::piecewise_constant_distribution::param_type
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -59,10 +47,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: 51fe6674bd7d538a3d3948f000497f70105de8d7
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: fecb32f7916b79d631ed7a6ccf4cb55b89448fa0
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="piecewiseconstantdistribution-class"></a>Classe piecewise_constant_distribution
@@ -119,8 +108,8 @@ La tabella seguente include collegamenti ad articoli relativi ai singoli membri:
   
 ||||  
 |-|-|-|  
-|[piecewise_constant_distribution::piecewise_constant_distribution](#piecewise_constant_distribution__piecewise_constant_distribution)|`piecewise_constant_distribution::intervals`|`piecewise_constant_distribution::param`|  
-|`piecewise_constant_distribution::operator()`|`piecewise_constant_distribution::densities`|[piecewise_constant_distribution::param_type](#piecewise_constant_distribution__param_type)|  
+|[piecewise_constant_distribution](#piecewise_constant_distribution)|`piecewise_constant_distribution::intervals`|`piecewise_constant_distribution::param`|  
+|`piecewise_constant_distribution::operator()`|`piecewise_constant_distribution::densities`|[param_type](#param_type)|  
   
 La funzione di proprietà `intervals()` restituisce una `vector<result_type>` con l'insieme di intervalli archiviati della distribuzione.  
   
@@ -246,7 +235,7 @@ Distribution for 100 samples:
   
  **Spazio dei nomi:** std  
   
-##  <a name="a-namepiecewiseconstantdistributionpiecewiseconstantdistributiona--piecewiseconstantdistributionpiecewiseconstantdistribution"></a><a name="piecewise_constant_distribution__piecewise_constant_distribution"></a>  piecewise_constant_distribution::piecewise_constant_distribution  
+##  <a name="piecewise_constant_distribution"></a>  piecewise_constant_distribution::piecewise_constant_distribution  
 Costruisce la distribuzione.  
   
 ```  
@@ -339,7 +328,7 @@ explicit piecewise_constant_distribution(const param_type& parm);
   
 crea un oggetto di distribuzione usando `parm` come struttura di parametri archiviata.  
   
-##  <a name="a-namepiecewiseconstantdistributionparamtypea--piecewiseconstantdistributionparamtype"></a><a name="piecewise_constant_distribution__param_type"></a>  piecewise_constant_distribution::param_type  
+##  <a name="param_type"></a>  piecewise_constant_distribution::param_type  
 Archivia tutti i parametri della distribuzione.  
   
 ```    
@@ -359,7 +348,7 @@ struct param_type {
 ```  
   
 ### <a name="parameters"></a>Parametri  
-Per la distribuzione [piecewise_constant_distribution](#piecewise_constant_distribution__piecewise_constant_distribution) vedere i parametri del costruttore.  
+Per la distribuzione [piecewise_constant_distribution](#piecewise_constant_distribution) vedere i parametri del costruttore.  
   
 ### <a name="remarks"></a>Note  
  **Precondizione:** `xmin < xmax`  

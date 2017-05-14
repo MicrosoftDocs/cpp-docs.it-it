@@ -59,10 +59,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9a16b7d6152ce3070eb8e4ea7552ab83200c0910
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 835450387dea050b45dac2e44a12c7df5d5d7023
+ms.contentlocale: it-it
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="ungetcnolock-ungetwcnolock"></a>_ungetc_nolock, _ungetwc_nolock
@@ -89,7 +90,7 @@ wint_t _ungetwc_nolock(
  Puntatore alla struttura `FILE` .  
   
 ## <a name="return-value"></a>Valore restituito  
- In caso di esito negativo, ognuna di queste funzioni restituisce l'argomento del carattere `c`*.* Se non è possibile reinserire `c` oppure se non è stato letto alcun carattere, il flusso di input rimane invariato e `_ungetc_nolock` restituisce `EOF`. `_ungetwc_nolock` restituisce `WEOF`. Se `stream` è `NULL`, `EOF` o `WEOF` viene restituito e `errno` è impostato su `EINVAL`.  
+ Se ha esito positivo, ognuna di queste funzioni restituisce l'argomento di tipo carattere `c`. Se non è possibile reinserire `c` oppure se non è stato letto alcun carattere, il flusso di input rimane invariato e `_ungetc_nolock` restituisce `EOF`. `_ungetwc_nolock` restituisce `WEOF`. Se `stream` è `NULL`, `EOF` o `WEOF` viene restituito e `errno` è impostato su `EINVAL`.  
   
  Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
@@ -110,9 +111,6 @@ wint_t _ungetwc_nolock(
 |`_ungetwc_nolock`|\<stdio.h> o \<wchar.h>|  
   
  Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
 ## <a name="see-also"></a>Vedere anche  
  [I/O di flusso](../../c-runtime-library/stream-i-o.md)   

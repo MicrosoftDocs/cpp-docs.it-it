@@ -1,5 +1,5 @@
 ---
-title: '&lt;stack&gt; | Documenti di Microsoft'
+title: '&lt;stack&gt; | Documenti Microsoft'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 02ce6e15184a7ef6acb07218564c9e1d5a7dcddd
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: a769d1f945c6a79c0941a505e3291ae0f5529bbd
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltstackgt"></a>&lt;stack&gt;
@@ -56,12 +57,12 @@ Definisce lo stack della classe modello e due modelli di supporto.
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/stack-operators.md#operator_neq)|Verifica se l'oggetto stack a sinistra dell'operatore non è uguale all'oggetto stack a destra.|  
-|[operator<](../standard-library/stack-operators.md#operator_eq_eq)|Verifica se l'oggetto stack a sinistra dell'operatore è minore dell'oggetto stack a destra.|  
-|[operator\<=](../standard-library/stack-operators.md#operator_lt_)|Verifica se l'oggetto stack a sinistra dell'operatore è minore o uguale all'oggetto stack a destra.|  
-|[operator==](../standard-library/stack-operators.md#operator_lt__eq)|Verifica se l'oggetto stack a sinistra dell'operatore è uguale all'oggetto stack a destra.|  
-|[operator>](../standard-library/stack-operators.md#operator_gt_)|Verifica se l'oggetto stack a sinistra dell'operatore è maggiore dell'oggetto stack a destra.|  
-|[operator>=](../standard-library/stack-operators.md#operator_gt__eq)|Verifica se l'oggetto stack a sinistra dell'operatore è maggiore o uguale all'oggetto stack a destra.|  
+|[operator!=](../standard-library/stack-operators.md#op_neq)|Verifica se l'oggetto stack a sinistra dell'operatore non è uguale all'oggetto stack a destra.|  
+|[operator<](../standard-library/stack-operators.md#op_lt)|Verifica se l'oggetto stack a sinistra dell'operatore è minore dell'oggetto stack a destra.|  
+|[operator\<=](../standard-library/stack-operators.md#op_lt_eq)|Verifica se l'oggetto stack a sinistra dell'operatore è minore o uguale all'oggetto stack a destra.|  
+|[operator==](../standard-library/stack-operators.md#op_eq_eq)|Verifica se l'oggetto stack a sinistra dell'operatore è uguale all'oggetto stack a destra.|  
+|[operator>](../standard-library/stack-operators.md#op_gt)|Verifica se l'oggetto stack a sinistra dell'operatore è maggiore dell'oggetto stack a destra.|  
+|[operator>=](../standard-library/stack-operators.md#op_gt_eq)|Verifica se l'oggetto stack a sinistra dell'operatore è maggiore o uguale all'oggetto stack a destra.|  
   
 ### <a name="classes"></a>Classi  
   

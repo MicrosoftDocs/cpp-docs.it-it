@@ -57,10 +57,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 4c4f63690395398698624fd75d1450ef4bcb7287
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 9131d9769d96d7668db180c5c9595ea786770e8b
+ms.contentlocale: it-it
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="getdcwddbg-wgetdcwddbg"></a>_getdcwd_dbg, _wgetdcwd_dbg
@@ -127,10 +128,7 @@ wchar_t *_wgetdcwd_dbg(
 |`_getdcwd_dbg`|\<crtdbg.h>|  
 |`_wgetdcwd_dbg`|\<crtdbg.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- <xref:System.Environment.CurrentDirectory%2A?displayProperty=fullName>  
+ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [_getdcwd, _wgetdcwd](../../c-runtime-library/reference/getdcwd-wgetdcwd.md)   

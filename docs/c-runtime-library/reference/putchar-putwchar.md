@@ -1,54 +1,72 @@
 ---
-title: "putchar, putwchar | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "putchar"
-  - "putwchar"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "putchar"
-  - "putwchar"
-  - "_puttchar"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_puttchar (funzione)"
-  - "caratteri, scrittura"
-  - "putchar (funzione)"
-  - "putwchar (funzione)"
-  - "output standard, scrittura"
+title: putchar, putwchar | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- putchar
+- putwchar
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- putchar
+- putwchar
+- _puttchar
+dev_langs:
+- C++
+helpviewer_keywords:
+- putchar function
+- _puttchar function
+- characters, writing
+- standard output, writing to
+- putwchar function
 ms.assetid: 93657c7f-cca1-4032-8e3a-cd6ab6193748
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# putchar, putwchar
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 1d1cf554b7d359c3bd761656df60881c4be514b8
+ms.contentlocale: it-it
+ms.lasthandoff: 03/29/2017
 
-Scrive un carattere nel **stdout**.  
+---
+# <a name="putchar-putwchar"></a>putchar, putwchar
+Scrive un carattere in **stdout**.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -60,39 +78,39 @@ wint_t putwchar(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `c`  
  Carattere da scrivere.  
   
-## Valore restituito  
- Restituisce il carattere scritto.  Per indicare un errore o una condizione di fine del file, `putc` e `putchar` restituiscono `EOF`; `putwc` e `putwchar` restituisce **WEOF**.  Per tutte quattro le routine, utilizzare [ferror](../../c-runtime-library/reference/ferror.md) o [feof](../../c-runtime-library/reference/feof.md) per verificare la presenza di un errore o di fine del file.  Se viene passato un puntatore a null per `stream`, queste funzioni generano un'eccezione di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).  Se l'esecuzione può continuare, queste funzioni impostano `EOF` o **WEOF** e impostano `errno` su `EINVAL`.  
+## <a name="return-value"></a>Valore restituito  
+ Restituisce il carattere scritto. Per indicare un errore o una condizione di fine file, `putc` e `putchar` restituiscono`EOF`; `putwc` e `putwchar` restituiscono **WEOF**. Per tutte e quattro le routine, usare [ferror](../../c-runtime-library/reference/ferror.md) o [feof](../../c-runtime-library/reference/feof.md) per verificare la presenza di un errore o della fine del file. Se viene passato un puntatore Null per `stream`, queste funzioni generano un'eccezione di parametro non valido, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, restituiscono `EOF` o **WEOF** e impostano `errno` su `EINVAL`.  
   
- Vedere [\_doserrno, errno, \_sys\_errlist, e \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) per ulteriori informazioni su questi, e altri, codici di errore.  
+ Per altre informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Note  
- La routine `putc` scrive il singolo carattere `c` sullo `stream` di output alla posizione corrente.  Qualsiasi integer può essere passato a `putc`, ma solo gli 8 bit più significativi vengono scritti.  La routine `putchar` è identica a **putc\(** `c`**, stdout \)**.  Per ogni routine, se si verifica un errore di lettura, viene impostato l'indicatore dell'errore per il flusso.  `putc` e `putchar` sono simili a `fputc` e di `_fputchar`, rispettivamente, ma vengono implementati sia come funzioni che come macro \(vedere [Scelta tra le funzioni e le macro](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)\).  `putwc` e `putwchar` sono versioni a caratteri estesi rispettivamente di `putc` e `putchar`.  
+## <a name="remarks"></a>Note  
+ La routine `putc` scrive il carattere singolo `c` nell'elemento `stream` di output in corrispondenza della posizione corrente. È possibile passare qualsiasi intero a `putc`, ma vengono scritti solo gli 8 bit inferiori. La routine `putchar` è identica a **putc(** `c`**, stdout )**. Per ogni routine, se si verifica un errore di lettura, viene impostato l'indicatore di errore per il flusso. `putc` e `putchar` sono rispettivamente simili a `fputc` e `_fputchar`, ma vengono implementati sia come funzioni che come macro (vedere [Raccomandazioni per la scelta tra funzioni e macro](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)). `putwc` e `putwchar` sono versioni a caratteri wide di `putc` e `putchar` rispettivamente.  
   
- Le versioni con il suffisso  sono identiche ma non sono protette da interferenze da parte di altre thread.  Potrebbero essere più veloci poiché non comportano un sovraccarico che blocca le altre thread.  Utilizzare queste funzioni solo in contesti thread\-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.  
+ Le versioni con suffisso **_nolock** sono identiche, ad eccezione del fatto che non sono protette da interferenze da parte di altri thread. Potrebbero essere più veloci perché non comportano il sovraccarico dovuto al blocco degli altri thread. Utilizzare queste funzioni solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.  
   
-### Mapping di routine su testo generico  
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
-|Routine TCHAR.H|\_UNICODE & \_MBCS non definiti|\_MBCS definito|\_UNICODE definito|  
-|---------------------|-------------------------------------|---------------------|------------------------|  
+|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_puttchar`|`putchar`|`putchar`|**putwchar**|  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`putchar`|\<stdio.h\>|  
-|`putwchar`|\<stdio.h\> o \<wchar.h\>|  
+|-------------|---------------------|  
+|`putchar`|\<stdio.h>|  
+|`putwchar`|\<stdio.h> o \<wchar.h>|  
   
- La console non è supportata nelle applicazioni [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)].  Gli handle del flusso standard associati alla console,`stdin`, `stdout` e `stderr`, devono essere reindirizzati prima di poter utilizzare le funzioni di runtime del linguaggio C nelle applicazioni [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)].  Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
+ La console non è supportata nelle applicazioni [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Gli handle del flusso standard associati alla console, `stdin`, `stdout` e `stderr`, devono essere reindirizzati prima di poter usare le funzioni di runtime del linguaggio C nelle app [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
-## Librerie  
- Tutte le versioni delle [Librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Librerie  
+ Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_putchar.c  
@@ -116,19 +134,13 @@ int main( void )
 }  
 ```  
   
-## Output  
+## <a name="output"></a>Output  
   
 ```  
 This is the line of output  
 ```  
   
-## Equivalente .NET Framework  
-  
--   [System::IO::StreamWriter::Write](https://msdn.microsoft.com/en-us/library/system.io.streamwriter.write.aspx)  
-  
--   [System::Console::Write](https://msdn.microsoft.com/en-us/library/system.console.write.aspx)  
-  
-## Vedere anche  
- [I\/O di flusso](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>Vedere anche  
+ [I/O di flusso](../../c-runtime-library/stream-i-o.md)   
  [fputc, fputwc](../../c-runtime-library/reference/fputc-fputwc.md)   
  [getc, getwc](../../c-runtime-library/reference/getc-getwc.md)

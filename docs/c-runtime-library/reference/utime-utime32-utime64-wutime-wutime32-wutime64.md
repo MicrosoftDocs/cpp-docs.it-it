@@ -85,10 +85,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 7d8823bfe5650634d3fb079d2910e98409622ec6
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 80836179c63da2f62384abd07fe2a4970d9bce55
+ms.contentlocale: it-it
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="utime-utime32-utime64-wutime-wutime32-wutime64"></a>_utime, _utime32, _utime64, _wutime, _wutime32, _wutime64
@@ -131,7 +132,7 @@ int _wutime64(
  Puntatore ai valori di ora archiviati.  
   
 ## <a name="return-value"></a>Valore restituito  
- Ognuna di queste funzioni restituisce 0 se l'ora di modifica del file è cambiata. Un valore restituito di –1 indica un errore. Se viene passato un parametro non valido, viene richiamato il gestire di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e `errno` viene impostato su uno dei valori seguenti:  
+ Ognuna di queste funzioni restituisce 0 se l'ora di modifica del file è cambiata. Il valore restituito-1 indica un errore. Se viene passato un parametro non valido, viene richiamato il gestire di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e `errno` viene impostato su uno dei valori seguenti:  
   
  `EACCES`  
  Il percorso specifica una directory o un file di sola lettura  
@@ -253,9 +254,6 @@ File time modified
                1 File(s)            935 bytes  
                0 Dir(s)  20,742,955,008 bytes free  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione del tempo](../../c-runtime-library/time-management.md)   

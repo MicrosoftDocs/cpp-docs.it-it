@@ -1,121 +1,157 @@
 ---
-title: "strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mbslen"
-  - "_mbslen_l"
-  - "_mbstrlen"
-  - "wcslen"
-  - "_mbstrlen_l"
-  - "strlen"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_mbstrlen"
-  - "wcslen"
-  - "_tcslen"
-  - "_ftcslen"
-  - "strlen"
-  - "_mbslen"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ftcslen (funzione)"
-  - "_mbslen (funzione)"
-  - "_mbslen_l (funzione)"
-  - "_mbstrlen (funzione)"
-  - "_mbstrlen_l (funzione)"
-  - "_tcslen (funzione)"
-  - "ftcslen (funzione)"
-  - "lunghezze, stringhe"
-  - "mbslen (funzione)"
-  - "mbslen_l (funzione)"
-  - "mbstrlen (funzione)"
-  - "mbstrlen_l (funzione)"
-  - "lunghezza della stringa, recupero"
-  - "stringhe [C++], recupero della lunghezza"
-  - "strlen (funzione)"
-  - "tcslen (funzione)"
-  - "wcslen (funzione)"
+title: strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mbslen
+- _mbslen_l
+- _mbstrlen
+- wcslen
+- _mbstrlen_l
+- strlen
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _mbstrlen
+- wcslen
+- _tcslen
+- _ftcslen
+- strlen
+- _mbslen
+dev_langs:
+- C++
+helpviewer_keywords:
+- wcslen function
+- string length, getting
+- ftcslen function
+- lengths, strings
+- mbstrlen_l function
+- _mbslen_l function
+- _tcslen function
+- mbslen_l function
+- mbslen function
+- _mbstrlen function
+- strings [C++], getting length
+- mbstrlen function
+- _mbstrlen_l function
+- _ftcslen function
+- tcslen function
+- strlen function
+- _mbslen function
 ms.assetid: 16462f2a-1e0f-4eb3-be55-bf1c83f374c2
 caps.latest.revision: 32
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 32
----
-# strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: b5ed3069aa637faea1a09fdfd12a98abc773f7dc
+ms.contentlocale: it-it
+ms.lasthandoff: 03/29/2017
 
-Ottiene la lunghezza di una stringa, usando le impostazioni locali correnti o le impostazioni locali specificate.  Sono disponibili versioni più sicure di queste funzioni. Vedere [strnlen, strnlen\_s, wcsnlen, wcsnlen\_s, \_mbsnlen, \_mbsnlen\_l, \_mbstrnlen, \_mbstrnlen\_l](../../c-runtime-library/reference/strnlen-strnlen-s.md)  
+---
+# <a name="strlen-wcslen-mbslen-mbslenl-mbstrlen-mbstrlenl"></a>strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l
+Ottiene la lunghezza di una stringa, usando le impostazioni locali correnti o le impostazioni locali specificate. Sono disponibili versioni più sicure di queste funzioni. Vedere [strnlen, strnlen_s, wcsnlen, wcsnlen_s, _mbsnlen, _mbsnlen_l, _mbstrnlen, _mbstrnlen_l](../../c-runtime-library/reference/strnlen-strnlen-s.md).  
   
 > [!IMPORTANT]
->  Non è possibile usare `_mbslen`, `_mbslen_l`, `_mbstrlen` e `_mbstrlen_l` in applicazioni eseguite in Windows Runtime.  Per altre informazioni, vedere l'argomento relativo alle [funzioni CRT non supportate con \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+> Non è possibile usare  `_mbslen`, `_mbslen_l`, `_mbstrlen` e `_mbstrlen_l` in applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere l'articolo relativo alle [funzioni CRT non supportate con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-size_t strlen(    const char *str ); size_t wcslen(    const wchar_t *str  ); size_t _mbslen(    const unsigned char *str  ); size_t _mbslen_l(    const unsigned char *str,    _locale_t locale ); size_t _mbstrlen(    const char *str ); size_t _mbstrlen_l(    const char *str,    _locale_t locale );  
+size_t strlen(  
+   const char *str  
+);  
+size_t wcslen(  
+   const wchar_t *str   
+);  
+size_t _mbslen(  
+   const unsigned char *str   
+);  
+size_t _mbslen_l(  
+   const unsigned char *str,  
+   _locale_t locale  
+);  
+size_t _mbstrlen(  
+   const char *str  
+);  
+size_t _mbstrlen_l(  
+   const char *str,  
+   _locale_t locale  
+);  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `str`  
  Stringa con terminazione Null.  
   
  `locale`  
  Impostazioni locali da usare.  
   
-## Valore restituito  
- Ognuna di queste funzioni restituisce il numero di caratteri in `str`, escluso il `NULL` terminale.  Non è riservato alcun valore per indicare un errore, ad eccezione di `_mbstrlen` e `_mbstrlen_l`, che restituiscono `((size_t)(-1))` se la stringa contiene un carattere multibyte non valido.  
+## <a name="return-value"></a>Valore restituito  
+ Ognuna di queste funzioni restituisce il numero di caratteri in `str`, escluso il `NULL` terminale. Non è riservato alcun valore per indicare un errore, ad eccezione di `_mbstrlen` e `_mbstrlen_l`, che restituiscono `((size_t)(-1))` se la stringa contiene un carattere multibyte non valido.  
   
-## Note  
- `strlen` interpreta la stringa come stringa di caratteri a byte singolo. Il valore restituito sarà quindi sempre uguale al numero di byte, anche se la stringa contiene caratteri multibyte.  `wcslen` è una versione a caratteri wide di `strlen`. L'argomento di `wcslen` è una stringa a caratteri wide e il conteggio di caratteri è espresso in caratteri wide \(a due byte\).  In caso contrario, `wcslen` e `strlen` si comportano in modo identico.  
+## <a name="remarks"></a>Note  
+ `strlen` interpreta la stringa come stringa di caratteri a byte singolo. Il valore restituito sarà quindi sempre uguale al numero di byte, anche se la stringa contiene caratteri multibyte. `wcslen` è una versione a caratteri wide di `strlen`. L'argomento di `wcslen` è una stringa a caratteri wide e il conteggio di caratteri è espresso in caratteri wide (a due byte). In caso contrario, `wcslen` e `strlen` si comportano in modo identico.  
   
- **Nota sulla sicurezza** Queste funzioni possono incorrere in una minaccia potenziale dovuta a un problema di sovraccarico del buffer.  I problemi di sovraccarico del buffer sono usati spesso come metodo di attacco di sistema e provocano un'elevazione dei privilegi non autorizzata.  Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
+ **Nota sulla sicurezza** Queste funzioni sono esposte a una potenziale minaccia dovuta a un problema di sovraccarico del buffer. I problemi di sovraccarico del buffer sono usati spesso come metodo di attacco di sistema e provocano un'elevazione dei privilegi non autorizzata. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
   
-### Mapping di routine di testo generico  
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
-|Routine TCHAR.H|\_UNICODE e \_MBCS non definiti|\_MBCS definito|\_UNICODE definito|  
-|---------------------|-------------------------------------|---------------------|------------------------|  
+|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcslen`|`strlen`|`strlen`|`wcslen`|  
 |`_tcsclen`|`strlen`|`_mbslen`|`wcslen`|  
 |`_tcsclen_l`|`strlen`|`_mbslen_l`|`wcslen`|  
   
- `_mbslen` e `_mbslen_l` restituiscono il numero di caratteri multibyte in una stringa a caratteri multibyte, ma non testano la validità dei caratteri multibyte.  `_mbstrlen` e `_mbstrlen_l` testano la validità dei caratteri multibyte e riconoscono le sequenze di caratteri multibyte.  Se la stringa passata a `_mbstrlen` o `_mbstrlen_l` contiene un carattere multibyte non valido per la tabella codici, la funzione restituirà \-1 e imposterà `errno` su `EILSEQ`.  
+ `_mbslen` e `_mbslen_l` restituiscono il numero di caratteri multibyte in una stringa a caratteri multibyte, ma non testano la validità dei caratteri multibyte. `_mbstrlen` e `_mbstrlen_l` testano la validità dei caratteri multibyte e riconoscono le sequenze di caratteri multibyte. Se la stringa passata a `_mbstrlen` o `_mbstrlen_l` contiene un carattere multibyte non valido per la tabella codici, la funzione restituirà -1 e imposterà `errno` su `EILSEQ`.  
   
- Il valore di output è interessato dalla configurazione dell'impostazione della categoria `LC_CTYPE` delle impostazioni locali. Per altre informazioni, vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md).  Le versioni di queste funzioni senza il suffisso `_l` usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso `_l` sono identiche ma usano il parametro passato relativo alle impostazioni locali.  Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ La configurazione dell'impostazione della categoria `LC_CTYPE` delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso `_l` usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso `_l` sono identiche ma usano il parametro passato relativo alle impostazioni locali. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`strlen`|\<string.h\>|  
-|`wcslen`|\<string.h\> o \<wchar.h\>|  
-|`_mbslen`, `_mbslen_l`|\<mbstring.h\>|  
-|`_mbstrlen`, `_mbstrlen_l`|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`strlen`|\<string.h>|  
+|`wcslen`|\<string.h> o \<wchar.h>|  
+|`_mbslen`, `_mbslen_l`|\<mbstring.h>|  
+|`_mbstrlen`, `_mbstrlen_l`|\<stdlib.h>|  
   
  Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_strlen.c  
@@ -170,21 +206,23 @@ int main()
 }  
 ```  
   
-  **Length of 'Count.' : 6 Length of 'Count.' : 6 Length of 'ABCァD' : 5**  
-**Length of 'ABCァD' : 5**  
-**Bytes in 'ABCァD' : 6**   
-## Equivalente .NET Framework  
- [System::String::Length](https://msdn.microsoft.com/en-us/library/system.string.length.aspx)  
+```Output  
+Length of 'Count.' : 6  
+Length of 'Count.' : 6  
+Length of 'ABCァD' : 5  
+Length of 'ABCァD' : 5  
+Bytes in 'ABCァD' : 6  
+```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md)   
  [Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [Impostazioni locali](../../c-runtime-library/locale.md)   
- [setlocale, \_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [strcat, wcscat, \_mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
- [strcmp, wcscmp, \_mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
+ [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
+ [strcat, wcscat, _mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
+ [strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
  [Funzioni strcoll](../../c-runtime-library/strcoll-functions.md)   
- [strcpy, wcscpy, \_mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
- [strrchr, wcsrchr, \_mbsrchr, \_mbsrchr\_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [\_strset, \_strset\_l, \_wcsset, \_wcsset\_l, \_mbsset, \_mbsset\_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)   
- [strspn, wcsspn, \_mbsspn, \_mbsspn\_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)
+ [strcpy, wcscpy, _mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
+ [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
+ [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)   
+ [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)

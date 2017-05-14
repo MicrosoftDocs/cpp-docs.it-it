@@ -20,18 +20,19 @@ caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 0194fbc3e45c270ca7537285c5c6b4e768c65a90
-ms.openlocfilehash: 3a4ab558f46f99850aed286865ae5dbbd7d4a6af
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: f38d129aab8703b6077b2848d7b71bb0a07e0ea7
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltfunctionalgt-operators"></a>Operatori &lt;functional&gt;
 |||  
 |-|-|  
-|[operator!=](#operator_neq)|[operator==](#operator_eq_eq)|  
+|[operator!=](#op_neq)|[operator==](#op_eq_eq)|  
   
-##  <a name="operator_eq_eq"></a>  operator==  
+##  <a name="op_eq_eq"></a>  operator==  
  Verifica se l'oggetto chiamabile è vuoto.  
   
 ```  
@@ -88,7 +89,7 @@ empty == true
 empty == false  
 ```  
   
-##  <a name="operator_neq"></a>  operator!=  
+##  <a name="op_neq"></a>  operator!=  
  Verifica se l'oggetto chiamabile non è vuoto.  
   
 ```  

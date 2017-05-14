@@ -8,23 +8,28 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - unordered_map/std::swap
+- unordered_map/std::swap (unordered_map)
+- unordered_map/std::swap (unordered_multimap)
+dev_langs:
+- C++
 ms.assetid: cf2e4115-f205-4a0e-90be-a143ffcc1f44
 caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 491992306060125ab91d64560113f7f8a3b740b1
-ms.openlocfilehash: d95416a470ba7c0f1987af2b55ac0b7516ce0828
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: b60954085c747fb06bc6ba4f6058909a54765e49
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltunorderedmapgt-functions"></a>Funzioni &lt;unordered_map&gt;
 |||  
 |-|-|  
-|[swap (unordered_map)](#swap_function)|[swap (unordered_multimap)](#swap_function_multimap)|  
+|[swap (unordered_map)](#swap)|[swap (unordered_multimap)](#swap_function_multimap)|  
   
-##  <a name="a-nameswapfunctiona--swap-unorderedmap"></a><a name="swap_function"></a>  swap (unordered_map)  
+##  <a name="swap"></a>  swap (unordered_map)  
  Scambia il contenuto di due contenitori.  
   
 ```  
@@ -57,7 +62,7 @@ void swap(
  Secondo contenitore da scambiare.  
   
 ### <a name="remarks"></a>Note  
- La funzione modello esegue `left.`[unordered_map::swap](../standard-library/unordered-map-class.md#unordered_map__swap)`(right)`.  
+ La funzione modello esegue `left.`[unordered_map::swap](../standard-library/unordered-map-class.md#swap)`(right)`.  
   
 ### <a name="example"></a>Esempio  
   
@@ -115,7 +120,7 @@ int main()
 [c, 3] [b, 2] [a, 1]  
 ```  
   
-##  <a name="a-nameswapfunctionmultimapa--swap-unorderedmultimap"></a><a name="swap_function_multimap"></a>  swap (unordered_multimap)  
+##  <a name="swap_function_multimap"></a>  swap (unordered_multimap)  
  Scambia il contenuto di due contenitori.  
   
 ```  
@@ -148,7 +153,7 @@ void swap(
  Secondo contenitore da scambiare.  
   
 ### <a name="remarks"></a>Note  
- La funzione modello esegue `left.`[unordered_multimap::swap](../standard-library/unordered-multimap-class.md#unordered_multimap__swap)`(right)`.  
+ La funzione modello esegue `left.`[unordered_multimap::swap](../standard-library/unordered-multimap-class.md#swap)`(right)`.  
   
 ### <a name="example"></a>Esempio  
   

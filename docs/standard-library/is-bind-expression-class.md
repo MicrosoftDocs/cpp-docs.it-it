@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - is_bind_expression
-- std::is_bind_expression
 - functional/std::is_bind_expression
 dev_langs:
 - C++
@@ -35,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: 5de10289474525e5db270cf0d36cfd4b01ab96a9
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 58e5d6db98ff10180d2e1efea973fa7d63386553
+ms.contentlocale: it-it
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="isbindexpression-class"></a>Classe is_bind_expression
@@ -93,6 +93,6 @@ int main()
  **Spazio dei nomi:** std  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzione bind](../standard-library/functional-functions.md#bind_function)
+ [bind](../standard-library/functional-functions.md#bind)
 
 

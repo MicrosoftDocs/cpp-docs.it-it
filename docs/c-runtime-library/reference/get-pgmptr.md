@@ -52,10 +52,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: f119e7680f53f37a75b5e2e54263094e1b48a402
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: bb04c82492a241c8a1089e2414358a11b54fff70
+ms.contentlocale: it-it
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="getpgmptr"></a>_get_pgmptr
@@ -77,7 +78,7 @@ errno_t _get_pgmptr(
  Restituisce zero se ha esito positivo; un codice di errore se ha esito negativo. Se `pValue` è `NULL`, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta `errno` su`EINVAL` e restituisce `EINVAL`.  
   
 ## <a name="remarks"></a>Note  
- La variabile globale `_pgmptr` contiene il percorso completo del file eseguibile associato al processo. Per altre informazioni, vedere [_pgmptr, _wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md).  
+ Il `_pgmptr` (variabile globale) contiene il percorso completo del file eseguibile associato al processo. Per altre informazioni, vedere [_pgmptr, _wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md).  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -85,10 +86,7 @@ errno_t _get_pgmptr(
 |-------------|---------------------|  
 |`_get_pgmptr`|\<stdlib.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
-  
-## <a name="net-framework-equivalent"></a>Equivalente in NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [_get_wpgmptr](../../c-runtime-library/reference/get-wpgmptr.md)

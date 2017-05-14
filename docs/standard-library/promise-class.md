@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - future/std::promise
+- future/std::promise::promise
+- future/std::promise::get_future
+- future/std::promise::set_exception
+- future/std::promise::set_exception_at_thread_exit
+- future/std::promise::set_value
+- future/std::promise::set_value_at_thread_exit
+- future/std::promise::swap
 dev_langs:
 - C++
 ms.assetid: 2931558c-d94a-4ba1-ac4f-20bf7b6e23f9
@@ -31,10 +38,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: ad79ecc3497182a451ef85ea53c8ec5603fdca69
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 2f052d1af76e8f874e2bbe0187a82b838e47f45e
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="promise-class"></a>Classe promise
@@ -53,34 +61,34 @@ class promise;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore promise::promise](#promise__promise_constructor)|Costruisce un oggetto `promise`.|  
+|[oggetto Promise](#promise)|Costruisce un oggetto `promise`.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[promise::get_future](#promise__get_future_method)|Restituisce un elemento [future](../standard-library/future-class.md) associato a questo oggetto promise.|  
-|[promise::set_exception](#promise__set_exception_method)|Imposta atomicamente il risultato dell'oggetto promise per indicare un'eccezione.|  
-|[promise::set_exception_at_thread_exit](#promise__set_exception_at_thread_exit_method)|Imposta atomicamente il risultato dell'oggetto promise per indicare un'eccezione e recapitare la notifica solo dopo che tutti gli oggetti locali nel thread corrente sono stati eliminati definitivamente (in genere all'uscita del thread).|  
-|[promise::set_value](#promise__set_value_method)|Imposta atomicamente il risultato dell'oggetto promise per indicare un valore.|  
-|[promise::set_value_at_thread_exit](#promise__set_value_at_thread_exit_method)|Imposta atomicamente il risultato dell'oggetto promise per indicare un valore e recapitare la notifica solo dopo che tutti gli oggetti locali nel thread corrente sono stati eliminati definitivamente (in genere all'uscita del thread).|  
-|[promise::swap](#promise__swap_method)|Scambia lo *stato asincrono associato* di questo oggetto promise con quello di un oggetto promise specificato.|  
+|[get_future](#get_future)|Restituisce un elemento [future](../standard-library/future-class.md) associato a questo oggetto promise.|  
+|[set_exception](#set_exception)|Imposta atomicamente il risultato dell'oggetto promise per indicare un'eccezione.|  
+|[set_exception_at_thread_exit](#set_exception_at_thread_exit)|Imposta atomicamente il risultato dell'oggetto promise per indicare un'eccezione e recapitare la notifica solo dopo che tutti gli oggetti locali nel thread corrente sono stati eliminati definitivamente (in genere all'uscita del thread).|  
+|[set_Value](#set_value)|Imposta atomicamente il risultato dell'oggetto promise per indicare un valore.|  
+|[set_value_at_thread_exit](#set_value_at_thread_exit)|Imposta atomicamente il risultato dell'oggetto promise per indicare un valore e recapitare la notifica solo dopo che tutti gli oggetti locali nel thread corrente sono stati eliminati definitivamente (in genere all'uscita del thread).|  
+|[swap](#swap)|Scambia lo *stato asincrono associato* di questo oggetto promise con quello di un oggetto promise specificato.|  
   
 ### <a name="public-operators"></a>Operatori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[promise::operator=](#promise__operator_eq)|Assegnazione dello stato condiviso dell'oggetto promise.|  
+|[promise::operator=](#op_eq)|Assegnazione dello stato condiviso dell'oggetto promise.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `promise`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** future  
+ **Intestazione:** \<futura >  
   
  **Spazio dei nomi:** std  
   
-##  <a name="a-namepromisegetfuturemethoda--promisegetfuture"></a><a name="promise__get_future_method"></a>  promise::get_future  
+##  <a name="get_future"></a>  promise::get_future  
  Restituisce un oggetto [future](../standard-library/future-class.md) con lo stesso *stato asincrono associato* di questo oggetto promise.  
   
 ```
@@ -92,7 +100,7 @@ future<Ty> get_future();
   
  Se il metodo è già stato chiamato per un oggetto promise con lo stesso stato asincrono associato, il metodo genera un `future_error` con `error_code` `future_already_retrieved`.  
   
-##  <a name="a-namepromiseoperatoreqa--promiseoperator"></a><a name="promise__operator_eq"></a>  promise::operator=  
+##  <a name="op_eq"></a>  promise::operator=  
  Trasferisce lo *stato asincrono associato* da un oggetto `promise` specificato.  
   
 ```
@@ -109,7 +117,7 @@ promise& operator=(promise&& Other) noexcept;
 ### <a name="remarks"></a>Note  
  Questo operatore trasferisce lo stato asincrono associato da `Other`. Dopo il trasferimento, `Other` è *empty*.  
   
-##  <a name="a-namepromisepromiseconstructora--promisepromise-constructor"></a><a name="promise__promise_constructor"></a>  Costruttore promise::promise  
+##  <a name="promise"></a>  Costruttore promise::promise  
  Costruisce un oggetto `promise`.  
   
 ```
@@ -133,7 +141,7 @@ promise(promise&& Other) noexcept;
   
  Il terzo costruttore costruisce un oggetto `promise` e trasferisce lo stato asincrono associato da `Other`, lasciando `Other` vuoto.  
   
-##  <a name="a-namepromisesetexceptionmethoda--promisesetexception"></a><a name="promise__set_exception_method"></a>  promise::set_exception  
+##  <a name="set_exception"></a>  promise::set_exception  
  Archivia un'eccezione in modo atomico come risultato di questo oggetto `promise` e imposta lo *stato asincrono associato* su *ready*.  
   
 ```
@@ -147,11 +155,11 @@ void set_exception(exception_ptr Exc);
 ### <a name="remarks"></a>Note  
  Se l'oggetto `promise` non ha alcuno stato asincrono associato, il metodo genera un [future_error](../standard-library/future-error-class.md) con codice di errore `no_state`.  
   
- Se `set_exception`, [set_exception_at_thread_exit](#promise__set_exception_at_thread_exit_method), [set_value](#promise__set_value_method) o [set_value_at_thread_exit](#promise__set_value_at_thread_exit_method) è già stato chiamato per un oggetto `promise` con lo stesso stato asincrono associato, il metodo genera un `future_error` con codice di errore `promise_already_satisfied`.  
+ Se `set_exception`, [set_exception_at_thread_exit](#set_exception_at_thread_exit), [set_value](#set_value) o [set_value_at_thread_exit](#set_value_at_thread_exit) è già stato chiamato per un oggetto `promise` con lo stesso stato asincrono associato, il metodo genera un `future_error` con codice di errore `promise_already_satisfied`.  
   
  Come risultato di questo metodo, i thread bloccati sullo stato asincrono associato vengono sbloccati.  
   
-##  <a name="a-namepromisesetexceptionatthreadexitmethoda--promisesetexceptionatthreadexit"></a><a name="promise__set_exception_at_thread_exit_method"></a>  promise::set_exception_at_thread_exit  
+##  <a name="set_exception_at_thread_exit"></a>  promise::set_exception_at_thread_exit  
  Imposta atomicamente il risultato del'oggetto `promise` per indicare un'eccezione, recapitante la notifica solo dopo che tutti gli oggetti locali nel thread corrente sono stati eliminati (in genere all'uscita del thread).  
   
 ```
@@ -165,11 +173,11 @@ void set_exception_at_thread_exit(exception_ptr Exc);
 ### <a name="remarks"></a>Note  
  Se l'oggetto promise non ha alcuno *stato asincrono associato*, il metodo genera un [future_error](../standard-library/future-error-class.md) con codice di errore `no_state`.  
   
- Se [set_exception](#promise__set_exception_method), `set_exception_at_thread_exit`, [set_value](#promise__set_value_method) o [set_value_at_thread_exit](#promise__set_value_at_thread_exit_method) è già stato chiamato per un oggetto `promise` con lo stesso stato asincrono associato, il metodo genera un `future_error` con codice di errore `promise_already_satisfied`.  
+ Se [set_exception](#set_exception), `set_exception_at_thread_exit`, [set_value](#set_value) o [set_value_at_thread_exit](#set_value_at_thread_exit) è già stato chiamato per un oggetto `promise` con lo stesso stato asincrono associato, il metodo genera un `future_error` con codice di errore `promise_already_satisfied`.  
   
- A differenza di [set_exception](#promise__set_exception_method), questo metodo non imposta lo stato asincrono associato su ready finché tutti gli oggetti locali del thread corrente non sono stati eliminati definitivamente. In genere, i thread bloccati sullo stato associato asincrono non vengono sbloccati finché non si esce dal thread corrente.  
+ A differenza di [set_exception](#set_exception), questo metodo non imposta lo stato asincrono associato su ready finché tutti gli oggetti locali del thread corrente non sono stati eliminati definitivamente. In genere, i thread bloccati sullo stato associato asincrono non vengono sbloccati finché non si esce dal thread corrente.  
   
-##  <a name="a-namepromisesetvaluemethoda--promisesetvalue"></a><a name="promise__set_value_method"></a>  promise::set_value  
+##  <a name="set_value"></a>  promise::set_value  
  Archivia un valore in modo atomico come risultato di questo oggetto `promise` e imposta lo *stato asincrono associato* su *ready*.  
   
 ```
@@ -186,7 +194,7 @@ void promise<void>::set_value();
 ### <a name="remarks"></a>Note  
  Se l'oggetto `promise` non ha alcuno stato asincrono associato, il metodo genera un [future_error](../standard-library/future-error-class.md) con codice di errore `no_state`.  
   
- Se [set_exception](#promise__set_exception_method), [set_exception_at_thread_exit](#promise__set_exception_at_thread_exit_method), `set_value` o [set_value_at_thread_exit](#promise__set_value_at_thread_exit_method) è già stato chiamato per un oggetto `promise` con lo stesso stato asincrono associato, il metodo genera un `future_error` con codice di errore `promise_already_satisfied`.  
+ Se [set_exception](#set_exception), [set_exception_at_thread_exit](#set_exception_at_thread_exit), `set_value` o [set_value_at_thread_exit](#set_value_at_thread_exit) è già stato chiamato per un oggetto `promise` con lo stesso stato asincrono associato, il metodo genera un `future_error` con codice di errore `promise_already_satisfied`.  
   
  Come risultato di questo metodo, i thread bloccati sullo stato asincrono associato vengono sbloccati.  
   
@@ -198,7 +206,7 @@ void promise<void>::set_value();
   
  Per la specializzazione `promise<void>`, non esiste alcun valore archiviato.  
   
-##  <a name="a-namepromisesetvalueatthreadexitmethoda--promisesetvalueatthreadexit"></a><a name="promise__set_value_at_thread_exit_method"></a>  promise::set_value_at_thread_exit  
+##  <a name="set_value_at_thread_exit"></a>  promise::set_value_at_thread_exit  
  Archivia un valore in modo atomico come risultato di questo oggetto `promise`.  
   
 ```
@@ -215,7 +223,7 @@ void promise<void>::set_value_at_thread_exit();
 ### <a name="remarks"></a>Note  
  Se l'oggetto promise non ha alcuno *stato asincrono associato*, il metodo genera un [future_error](../standard-library/future-error-class.md) con codice di errore `no_state`.  
   
- Se [set_exception](#promise__set_exception_method), [set_exception_at_thread_exit](#promise__set_exception_at_thread_exit_method), [set_value](#promise__set_value_method) o `set_value_at_thread_exit` è già stato chiamato per un oggetto `promise` con lo stesso stato associato asincrono, il metodo genera un `future_error` con codice di errore `promise_already_satisfied`.  
+ Se [set_exception](#set_exception), [set_exception_at_thread_exit](#set_exception_at_thread_exit), [set_value](#set_value) o `set_value_at_thread_exit` è già stato chiamato per un oggetto `promise` con lo stesso stato associato asincrono, il metodo genera un `future_error` con codice di errore `promise_already_satisfied`.  
   
  A differenza di `set_value`, lo stato associato asincrono non viene impostato su ready finché tutti gli oggetti locali del thread corrente non sono stati eliminati definitivamente. In genere, i thread bloccati sullo stato associato asincrono non vengono sbloccati finché non si esce dal thread corrente.  
   
@@ -227,7 +235,7 @@ void promise<void>::set_value_at_thread_exit();
   
  Per la specializzazione `promise<void>`, non esiste alcun valore archiviato.  
   
-##  <a name="a-namepromiseswapmethoda--promiseswap"></a><a name="promise__swap_method"></a>  promise::swap  
+##  <a name="swap"></a>  promise::swap  
  Scambia lo *stato asincrono associato* di questo oggetto promise con quello di un oggetto specificato.  
   
 ```

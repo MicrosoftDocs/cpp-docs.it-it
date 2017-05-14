@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 902d19ff7e548fcf2847ab492e1237b36035d06f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: af4d8eab26873d9c29ab8343afc462e7ed22060c
+ms.contentlocale: it-it
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="memcmp-wmemcmp"></a>memcmp, wmemcmp
@@ -63,8 +64,7 @@ Confronta i caratteri in due buffer.
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      int memcmp(  
+int memcmp(  
    const void *buf1,  
    const void *buf2,  
    size_t count  
@@ -112,9 +112,8 @@ int wmemcmp(
   
 ## <a name="example"></a>Esempio  
   
-```  
-  
-      // crt_memcmp.c  
+```C  
+// crt_memcmp.c  
 /* This program uses memcmp to compare  
  * the strings named first and second. If the first  
  * 19 bytes of the strings are equal, the program  
@@ -152,17 +151,12 @@ int main( void )
 }  
 ```  
   
-## <a name="output"></a>Output  
-  
-```  
+```Output  
 Compare '1234567890123456789' to '1234567890123456789':  
 First is equal to second.  
 Compare '1,2' to '1,2':  
 int_arr1 is equal to int_arr2.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Modifica del buffer](../../c-runtime-library/buffer-manipulation.md)   

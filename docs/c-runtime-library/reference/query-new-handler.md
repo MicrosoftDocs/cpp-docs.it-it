@@ -52,10 +52,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d79c8a5d68f7dd41a737111a3abe943389bfedd2
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 63d43e80009b0d6c8f2d827f6ea5b239d7a39663
+ms.contentlocale: it-it
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="querynewhandler"></a>_query_new_handler
@@ -85,9 +86,6 @@ _PNH _query_new_handler(
   
 ## <a name="libraries"></a>Librerie  
  Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Allocazione di memoria](../../c-runtime-library/memory-allocation.md)   

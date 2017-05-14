@@ -58,10 +58,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 2218210801bff38094d06d96736a7f05f7be29cf
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 9814916e32878a1e1a11f534fce64aeaf2f6a57e
+ms.contentlocale: it-it
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="getcwddbg-wgetcwddbg"></a>_getcwd_dbg, _wgetcwd_dbg
@@ -108,7 +109,7 @@ wchar_t *_wgetcwd_dbg(
  Per altre informazioni vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Note  
- Le funzioni `_getcwd_dbg` e `_wgetcwd_dbg` sono identiche a `_getcwd` e `_wgetcwd` tranne per il fatto che, quando _`DEBUG` è definito, queste funzioni usano la versione di debug di `malloc` e `_malloc_dbg` per allocare memoria se `NULL` viene passato come primo parametro. Per altre informazioni, vedere [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md).  
+ Il `_getcwd_dbg` e `_wgetcwd_dbg` funzioni sono identiche a `_getcwd` e `_wgetcwd` ad eccezione del fatto che, quando `_DEBUG` è definito, queste funzioni usano la versione di debug `malloc` e `_malloc_dbg` per allocare memoria se `NULL` viene passato come primo parametro. Per altre informazioni, vedere [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md).  
   
  Nella maggior parte dei casi non è necessario chiamare queste funzioni in modo esplicito. In alternativa, è possibile definire il flag `_CRTDBG_MAP_ALLOC`. Quando `_CRTDBG_MAP_ALLOC` è definito, le chiamate a `_getcwd` e `_wgetcwd` vengono mappate nuovamente a `_getcwd_dbg` e `_wgetcwd_dbg` rispettivamente, con `blockType` impostato su `_NORMAL_BLOCK`. Quindi, non è necessario chiamare queste funzioni in modo esplicito a meno che non si vogliano contrassegnare blocchi di memoria heap come `_CLIENT_BLOCK`. Per altre informazioni, vedere [Tipi di blocchi sull'heap di debug](/visualstudio/debugger/crt-debug-heap-details).  
   
@@ -125,10 +126,7 @@ wchar_t *_wgetcwd_dbg(
 |`_getcwd_dbg`|\<crtdbg.h>|  
 |`_wgetcwd_dbg`|\<crtdbg.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- <xref:System.Environment.CurrentDirectory%2A>  
+ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [_getcwd, _wgetcwd](../../c-runtime-library/reference/getcwd-wgetcwd.md)   

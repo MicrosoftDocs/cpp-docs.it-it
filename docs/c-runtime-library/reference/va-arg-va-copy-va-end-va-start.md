@@ -64,10 +64,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 5caea89460070402fc8dc5b38912e290d4c5798d
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 1b8ddbc48b00a037ae20632f4cd396e8e0ff2722
+ms.contentlocale: it-it
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="vaarg-vacopy-vaend-vastart"></a>va_arg, va_copy, va_end, va_start
@@ -250,9 +251,6 @@ Deviation is: 2.236068
 Deviation is: 0.000000  
   
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- [Classe System::ParamArrayAttribute](https://msdn.microsoft.com/en-us/library/system.paramarrayattribute.aspx)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Accesso agli argomenti](../../c-runtime-library/argument-access.md)   

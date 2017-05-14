@@ -1,54 +1,71 @@
 ---
-title: "_gcvt | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_gcvt"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_gcvt"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_CVTBUFSIZE"
-  - "_gcvt (funzione)"
-  - "conversioni, da virgola mobile in stringhe"
-  - "CVTBUFSIZE"
-  - "funzioni a virgola mobile, conversione di un numero in stringa"
-  - "gcvt (funzione)"
-  - "numeri, conversione in stringhe"
-  - "stringhe [C++], conversione da virgola mobile"
+title: _gcvt | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _gcvt
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _gcvt
+dev_langs:
+- C++
+helpviewer_keywords:
+- _gcvt function
+- _CVTBUFSIZE
+- gcvt function
+- floating-point functions, converting number to string
+- numbers, converting to strings
+- conversions, floating point to strings
+- strings [C++], converting from floating point
+- CVTBUFSIZE
 ms.assetid: 5761411e-c06b-409a-912f-810fe7f4bcb5
 caps.latest.revision: 25
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 25
----
-# _gcvt
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 055d1e6d996a076ca7f1a49e21abf3771fa543fb
+ms.contentlocale: it-it
+ms.lasthandoff: 03/29/2017
 
-Converte un valore in virgola mobile in una stringa, che sono memorizzate in un buffer.  È disponibile una versione più sicura di questa funzione; consultare [\_gcvt\_s](../../c-runtime-library/reference/gcvt-s.md).  
+---
+# <a name="gcvt"></a>_gcvt
+Converte un valore a virgola mobile in una stringa, che viene archiviata in un buffer. È disponibile una versione più sicura di questa funzione. Vedere [_gcvt_s](../../c-runtime-library/reference/gcvt-s.md).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 char *_gcvt(   
@@ -58,7 +75,7 @@ char *_gcvt(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `value`  
  Valore da convertire.  
   
@@ -66,27 +83,27 @@ char *_gcvt(
  Numero di cifre significative archiviate.  
   
  `buffer`  
- Percorso di archiviazione per il risultato.  
+ Posizione di archiviazione per il risultato.  
   
-## Valore restituito  
+## <a name="return-value"></a>Valore restituito  
  `_gcvt` restituisce un puntatore alla stringa di cifre.  
   
-## Note  
- La funzione `_gcvt` converte un `value` in virgola mobile in una stringa di caratteri \(che include un separatore decimale e un possibile byte di segno\) e archivia la stringa in `buffer`.  Il `buffer` deve essere grande a sufficienza per contenere il valore convertito più un carattere di terminazione null, che viene aggiunto automaticamente.  Se viene utilizzata la dimensione del buffer `digits` \+ 1, la funzione sovrascrive la fine del buffer.  Questo perché la stringa convertita include un separatore decimale e può contenere le informazioni sull'esponente ed il segno.  Non esiste alcuna operazione di overflow.  `_gcvt` tenta di generare le cifre `digits` in formato decimale.  Se non è possibile, produce le cifre `digits` in formato esponenziale.  Gli zeri finali potrebbero essere eliminati nella conversione.  
+## <a name="remarks"></a>Note  
+ La funzione `_gcvt` converte un elemento `value` a virgola mobile in una stringa di caratteri (che include un separatore decimale e un possibile byte del segno) e archivia la stringa in `buffer`. `buffer` deve essere sufficientemente grande da contenere il carattere convertito oltre a un carattere Null di terminazione, che viene aggiunto automaticamente. Se viene usata una dimensione del buffer pari a `digits` + 1, la funzione sovrascrive la fine del buffer. Ciò perché la stringa convertita include un separatore decimale e può contenere informazioni su segno ed esponente. Non sono previste misure per l'overflow. `_gcvt` tenta di produrre un numero di cifre pari a `digits` in formato decimale. Se non è possibile, produce un numero di cifre pari a `digits` in formato esponenziale. Gli zeri finali possono essere eliminati nella conversione.  
   
- Un buffer `buffer` di lunghezza `_CVTBUFSIZE` è sufficiente per qualsiasi valore in virgola mobile.  
+ Un `buffer` di lunghezza `_CVTBUFSIZE` è sufficiente per qualsiasi valore a virgola mobile.  
   
- Questa funzione convalida i parametri.  Se `buffer` è `NULL`, viene richiamato il gestore di parametro non valido, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).  Se l'esecuzione può continuare, la funzione imposta `errno` e imposta `EINVAL` su `NULL`.  
+ Questa funzione convalida i relativi parametri. Se `buffer` è `NULL`, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta `errno` su`EINVAL` e restituisce `NULL`.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`_gcvt`|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`_gcvt`|\<stdlib.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_gcvt.c  
@@ -129,21 +146,22 @@ int main( void )
 }  
 ```  
   
-  **The following numbers were converted by \_gcvt\(value,12,buffer\):**  
-**buffer: '\-1234567890.12' \(14 chars\)**  
-**buffer: '\-1234567890.12' \(14 chars\)**  
-**buffer: '\-123456789012' \(13 chars\)**  
-**buffer: '\-1.23456789012e\+012' \(19 chars\)**  
-**buffer: '\-1234567890.12' \(14 chars\)**  
-**buffer: '\-1234567890.12' \(14 chars\)**  
-**buffer: '\-0.123456789012' \(15 chars\)**  
-**buffer: '\-1.23456789012e\-002' \(19 chars\)**   
-## Equivalente .NET Framework  
- [System::Convert::ToString](https://msdn.microsoft.com/en-us/library/system.convert.tostring.aspx)  
+```Output  
+The following numbers were converted by _gcvt(value,12,buffer):  
+buffer: '-1234567890.12' (14 chars)  
+buffer: '-12345678901.2' (14 chars)  
+buffer: '-123456789012' (13 chars)  
+buffer: '-1.23456789012e+012' (19 chars)  
   
-## Vedere anche  
- [Conversione dei dati](../../c-runtime-library/data-conversion.md)   
- [Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)   
- [atof, \_atof\_l, \_wtof, \_wtof\_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
- [\_ecvt](../../c-runtime-library/reference/ecvt.md)   
- [\_fcvt](../../c-runtime-library/reference/fcvt.md)
+buffer: '-12.3456789012' (14 chars)  
+buffer: '-1.23456789012' (14 chars)  
+buffer: '-0.123456789012' (15 chars)  
+buffer: '-1.23456789012e-002' (19 chars)  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Data Conversion](../../c-runtime-library/data-conversion.md)  (Conversione dei dati)  
+ [Floating-Point Support](../../c-runtime-library/floating-point-support.md)  (Supporto delle funzioni a virgola mobile)  
+ [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
+ [_ecvt](../../c-runtime-library/reference/ecvt.md)   
+ [_fcvt](../../c-runtime-library/reference/fcvt.md)

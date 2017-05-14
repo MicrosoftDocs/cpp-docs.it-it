@@ -66,10 +66,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: a42b5d8811e108b727671921322423d186d73afd
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 69a19aaa457ffc52c431a9ca1c3597a475a10994
+ms.contentlocale: it-it
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="status87-statusfp-statusfp2"></a>_status87, _statusfp, _statusfp2
@@ -100,7 +101,7 @@ void _statusfp2(unsigned int *px86, unsigned int *pSSE2)
   
  È consigliabile usare `_statusfp2` per chip (ad esempio Pentium IV) che hanno un processore a virgola mobile sia x87 che SSE2. Per `_statusfp2`, gli indirizzi vengono compilati usando la parola di stato nelle operazioni a virgola mobile sia per il processore a virgola mobile x87 che SSE2. Per un chip che supporta i processori a virgola mobile x87 e SSE2, EM_AMBIGUOUS viene impostato su 1 se su usa la funzione `_statusfp` o `_controlfp` e l'azione è ambigua perché potrebbe fare riferimento alla parola di stato x87 o SSE2. La funzione `_statusfp2` è supportata solo nelle piattaforme x86.  
   
- Queste funzioni non sono utili per [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) perché common language runtime (CLR) supporta solo la precisione a virgola mobile predefinita.  
+ Queste funzioni non sono utili per [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) Poiché common language runtime (CLR) supporta solo la precisione a virgola mobile predefinita.  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -155,9 +156,6 @@ Status = 0x00000000 - clear
 Status = 0x00000003 - inexact, underflow  
 Status = 0x00080003 - inexact, underflow, denormal  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)   

@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 7771de57070961751e16294bc966e08843baef4c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 212b2b5af678bd39b4ecc7d6622c71db20db5a26
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="lttuplegt"></a>&lt;tuple&gt;
@@ -60,20 +61,20 @@ Definisce un modello `tuple` le cui istanze contengono oggetti di tipi diversi.
   
 |||  
 |-|-|  
-|[operator==](../standard-library/tuple-operators.md#operator_eq_eq)|Confronto tra oggetti `tuple`, uguali|  
-|[operator!=](../standard-library/tuple-operators.md#operator_neq)|Confronto tra oggetti `tuple`, non uguali|  
-|[operator<](../standard-library/tuple-operators.md#operator_lt_)|Confronto tra oggetti `tuple`, minore di|  
-|[operator<=](../standard-library/tuple-operators.md#operator_lt__eq)|Confronto tra oggetti `tuple`, minore o uguale a|  
-|[operator>](../standard-library/tuple-operators.md#operator_gt_)|Confronto tra oggetti `tuple`, maggiore di|  
-|[operator>=](../standard-library/tuple-operators.md#operator_gt__eq)|Confronto tra oggetti `tuple`, maggiore o uguale a|  
+|[operator==](../standard-library/tuple-operators.md#op_eq_eq)|Confronto tra oggetti `tuple`, uguali|  
+|[operator!=](../standard-library/tuple-operators.md#op_neq)|Confronto tra oggetti `tuple`, non uguali|  
+|[operator<](../standard-library/tuple-operators.md#op_lt)|Confronto tra oggetti `tuple`, minore di|  
+|[operator<=](../standard-library/tuple-operators.md#op_lt_eq)|Confronto tra oggetti `tuple`, minore o uguale a|  
+|[operator>](../standard-library/tuple-operators.md#op_gt)|Confronto tra oggetti `tuple`, maggiore di|  
+|[operator>=](../standard-library/tuple-operators.md#op_gt_eq)|Confronto tra oggetti `tuple`, maggiore o uguale a|  
   
 ### <a name="functions"></a>Funzioni  
   
 |||  
 |-|-|  
-|[get](../standard-library/tuple-functions.md#get_function)|Ottiene un elemento da un oggetto `tuple`.|  
-|[make_tuple](../standard-library/tuple-functions.md#make_tuple_function)|Genera un oggetto `tuple` da valori di elemento.|  
-|[tie](../standard-library/tuple-functions.md#tie_function)|Genera un oggetto `tuple` da riferimenti di elemento.|  
+|[get](../standard-library/tuple-functions.md#get)|Ottiene un elemento da un oggetto `tuple`.|  
+|[make_tuple](../standard-library/tuple-functions.md#make_tuple)|Genera un oggetto `tuple` da valori di elemento.|  
+|[tie](../standard-library/tuple-functions.md#tie)|Genera un oggetto `tuple` da riferimenti di elemento.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [\<array>](../standard-library/array.md)

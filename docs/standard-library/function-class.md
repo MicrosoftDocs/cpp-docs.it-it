@@ -10,8 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - function
-- std::function
 - functional/std::function
+- functional/std::function::result_type
+- functional/std::function::assign
+- functional/std::function::swap
+- functional/std::function::target
+- functional/std::function::target_type
+- functional/std::function::operator unspecified
+- functional/std::function::operator()
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,10 +41,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: acc0ecd4edaf1e58977dcbdeb483d497a72bc4c8
-ms.openlocfilehash: adc625fe0acd085f2433d5436c535c9ae9fd2455
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 0c79b2b4d1ac2e9df7f38708ff232d70392cce15
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="function-class"></a>Classe function
@@ -120,37 +127,37 @@ public:
   
 |||  
 |-|-|  
-|[function::function](#function__function)|Costruisce un wrapper vuoto o in cui è archiviato un oggetto chiamabile di tipo arbitrario con una firma fissa.|  
+|[function](#function)|Costruisce un wrapper vuoto o in cui è archiviato un oggetto chiamabile di tipo arbitrario con una firma fissa.|  
   
 ### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
-|[function::result_type](#function__result_type)|Tipo restituito dell'oggetto chiamabile archiviato.|  
+|[result_type](#result_type)|Tipo restituito dell'oggetto chiamabile archiviato.|  
   
 ### <a name="member-functions"></a>Funzioni membro  
   
 |||  
 |-|-|  
-|[function::assign](#function__assign)|Assegna un oggetto chiamabile a questo oggetto funzione.|  
-|[function::swap](#function__swap)|Scambia due oggetti chiamabili.|  
-|[function::target](#function__target)|Verifica se l'oggetto chiamabile archiviato è chiamabile come specificato.|  
-|[function::target_type](#function__target_type)|Ottiene le informazioni sui tipi per l'oggetto chiamabile.|  
+|[assign](#assign)|Assegna un oggetto chiamabile a questo oggetto funzione.|  
+|[swap](#swap)|Scambia due oggetti chiamabili.|  
+|[destinazione](#target)|Verifica se l'oggetto chiamabile archiviato è chiamabile come specificato.|  
+|[target_type](#target_type)|Ottiene le informazioni sui tipi per l'oggetto chiamabile.|  
   
 ### <a name="operators"></a>Operatori  
   
 |||  
 |-|-|  
-|[function::operator unspecified](#function__operator_unspecified)|Verifica se è presente un oggetto chiamabile archiviato.|  
-|[function::operator()](#function__operator__)|Chiama un oggetto chiamabile.|  
-|[function::operator=](#function__operator_eq)|Sostituisce l'oggetto chiamabile archiviato.|  
+|[function::operator unspecified](#op_unspecified)|Verifica se è presente un oggetto chiamabile archiviato.|  
+|[function::operator()](#op_call)|Chiama un oggetto chiamabile.|  
+|[function::operator=](#op_eq)|Sostituisce l'oggetto chiamabile archiviato.|  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** \<functional>  
   
  **Spazio dei nomi:** std  
   
-##  <a name="function__assign"></a>  function::assign  
+##  <a name="assign"></a>  function::assign  
  Assegna un oggetto chiamabile a questo oggetto funzione.  
   
 ```  
@@ -178,7 +185,7 @@ template <class Fx, class Alloc>
 ### <a name="remarks"></a>Note  
  Ogni funzione membro sostituisce l'oggetto `callable object` incluso in `*this` con l'oggetto chiamabile passato come `operand`. Entrambe allocano memoria con l'oggetto allocatore `Ax`.  
   
-##  <a name="function__function"></a>  function::function  
+##  <a name="function"></a>  function::function  
  Costruisce un wrapper vuoto o in cui è archiviato un oggetto chiamabile di tipo arbitrario con una firma fissa.  
   
 ```  
@@ -292,7 +299,7 @@ f is non-empty (correct).
 g is empty (correct).  
 ```  
   
-##  <a name="function__operator_unspecified"></a>  function::operator unspecified  
+##  <a name="op_unspecified"></a>  function::operator unspecified  
  Verifica se è presente un oggetto chiamabile archiviato.  
   
 ```  
@@ -332,7 +339,7 @@ not empty == false
 not empty == true  
 ```  
   
-##  <a name="function__operator__"></a>  function::operator()  
+##  <a name="op_call"></a>  function::operator()  
  Chiama un oggetto chiamabile.  
   
 ```  
@@ -380,7 +387,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="function__operator_eq"></a>  function::operator=  
+##  <a name="op_eq"></a>  function::operator=  
  Sostituisce l'oggetto chiamabile archiviato.  
   
 ```  
@@ -459,7 +466,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="function__result_type"></a>  function::result_type  
+##  <a name="result_type"></a>  function::result_type  
  Tipo restituito dell'oggetto chiamabile archiviato.  
   
 ```  
@@ -499,7 +506,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="function__swap"></a>  function::swap  
+##  <a name="swap"></a>  function::swap  
  Scambia due oggetti chiamabili.  
   
 ```  
@@ -555,7 +562,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="function__target"></a>  function::target  
+##  <a name="target"></a>  function::target  
  Verifica se l'oggetto chiamabile archiviato è chiamabile come specificato.  
   
 ```  
@@ -614,7 +621,7 @@ empty == true
 no target == true  
 ```  
   
-##  <a name="function__target_type"></a>  function::target_type  
+##  <a name="target_type"></a>  function::target_type  
  Ottiene le informazioni sui tipi per l'oggetto chiamabile.  
   
 ```  
@@ -659,6 +666,6 @@ type == void
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzione mem_fn](../standard-library/functional-functions.md#mem_fn_function)   
+ [mem_fn](../standard-library/functional-functions.md#mem_fn)   
  [Classe reference_wrapper](../standard-library/reference-wrapper-class.md)
 

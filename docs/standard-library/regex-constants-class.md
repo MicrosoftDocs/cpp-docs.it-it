@@ -100,10 +100,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 248e9ba676b906af62f6804f4939e04158a8e2ef
-ms.openlocfilehash: 9330a5c4e1b487880f405478dd7e8838af739c44
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 83cf6d3c8b6c571898bf6d1f2aeeefbc930dd573
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="regexconstants-class"></a>Classe regex_constants
@@ -127,7 +128,7 @@ namespace regex_constants {
   
  **Spazio dei nomi:** std  
   
-##  <a name="regex_constants__error_type"></a>  regex_constants::error_type  
+##  <a name="error_type"></a>  regex_constants::error_type  
  Indicatori per segnalare errori di sintassi di espressione regolare.  
   
 ```  
@@ -186,7 +187,7 @@ enum error_type
   
  `error_backref` -- l'espressione contiene un backreference non valido  
   
-##  <a name="regex_constants__match_flag_type"></a>  regex_constants::match_flag_type  
+##  <a name="match_flag_type"></a>  regex_constants::match_flag_type  
  Flag per opzioni di corrispondenza delle espressioni regolari.  
   
 ```  
@@ -242,7 +243,7 @@ enum match_flag_type
   
  `format_first_only` -- non cercare corrispondenze dopo la prima  
   
-##  <a name="regex_constants__syntax_option_type"></a>  regex_constants::syntax_option_type  
+##  <a name="syntax_option_type"></a>  regex_constants::syntax_option_type  
  Flag per selezionare le opzioni di sintassi.  
   
 ```  

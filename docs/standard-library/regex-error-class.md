@@ -35,10 +35,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 248e9ba676b906af62f6804f4939e04158a8e2ef
-ms.openlocfilehash: e5eab496a34eaef6f6d382ce8b1d10055c6b4422
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: af23c0562720abd15bdaf77edac2b2728c50f617
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="regexerror-class"></a>Classe regex_error
@@ -66,7 +67,7 @@ public:
   
  **Spazio dei nomi:** std  
   
-##  <a name="regex_error__code"></a>  regex_error::code  
+##  <a name="code"></a>  regex_error::code  
  Restituisce il codice di errore.  
   
 ```  
@@ -113,7 +114,7 @@ int main()
 regex error: unbalanced parentheses  
 ```  
   
-##  <a name="regex_error__regex_error"></a>  regex_error::regex_error  
+##  <a name="regex_error"></a>  regex_error::regex_error  
  Costruisce l'oggetto.  
   
 ```  

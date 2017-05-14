@@ -35,10 +35,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 54bfdd8a1f095478282af39354a6e9a91ba32891
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
+ms.openlocfilehash: b5568eb951738b1c0c53321d7430c84db6bac9ec
+ms.contentlocale: it-it
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="tupleelement-class"></a>Classe tuple_element
@@ -108,7 +109,7 @@ La specializzazione della classe modello per le matrici fornisce un'interfaccia 
   
 Le specializzazioni modello per i tipi `pair` forniscono ciascuna un singolo membro typedef, `type`, che è un sinonimo del tipo di elemento in corrispondenza della posizione specificata nella coppia, con qualsiasi qualificazione const e/o volatile mantenuta. Il typedef `tuple_element_t` è un alias conveniente per `tuple_element<N, pair<T1, T2>>::type`.  
   
-Usare l'[utility &lt;get Function&gt;](../standard-library/utility-functions.md#get) per restituire l'elemento in una posizione specificata oppure (in C + + 14 / Visual Studio 2015) di un tipo specificato. 
+Utilizzare il [funzione get &lt;utilità&gt; ](../standard-library/utility-functions.md#get) per restituire l'elemento in una posizione specificata, o di un tipo specificato. 
   
 ## <a name="example"></a>Esempio  
   

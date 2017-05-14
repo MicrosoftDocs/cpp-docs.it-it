@@ -61,10 +61,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 4c25516a625df7e43ff8d008370b71a5f7a7c8b3
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: ab4f6c8789505a6f2439d3c61815e668a12c4bb6
+ms.contentlocale: it-it
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="getchnolock-getwchnolock"></a>_getch_nolock, _getwch_nolock
@@ -129,13 +130,13 @@ int main( void )
 }  
 ```  
   
+```Input  
+abcdefy
+```
+  
 ```Output  
-  
-abcdeyType 'Y' when finished typing keys: Y  
+Type 'Y' when finished typing keys: Y  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente in NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
 ## <a name="see-also"></a>Vedere anche  
  [I/O su console e porta](../../c-runtime-library/console-and-port-i-o.md)   

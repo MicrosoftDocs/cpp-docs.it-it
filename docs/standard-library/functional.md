@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: dcac506c06aac3c29ba2251af4281a713eec7491
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: e4c3cbb6d11758ff15909c6062b7430f6679f6de
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltfunctionalgt"></a>&lt;functional&gt;
@@ -54,7 +55,7 @@ Definisce funzioni della libreria standard C++ che consentono di costruire *ogge
 ## <a name="remarks"></a>Note  
  Gli algoritmi richiedono due tipi di oggetti funzione, ovvero unario e binario. Gli oggetti funzione di tipo unario richiedono un argomento, mentre gli oggetti funzione di tipo binario richiedono due argomenti. Un oggetto funzione e i puntatori a funzione possono essere passati come predicato a un algoritmo, ma gli oggetti funzione sono anche adattabili e aumentano l'ambito, la flessibilità e l'efficienza della libreria standard C++. Se, ad esempio, un valore deve essere associato a una funzione prima del passaggio a un algoritmo, non è possibile ad esempio utilizzare un puntatore a funzione. Gli adattatori di funzione convertono i puntatori a funzione in oggetti funzione adattabili che possono essere associati a un valore. L'intestazione \<functional> contiene anche gli adattatori di funzione membro che consentono a queste ultime di essere chiamate come oggetti funzione adattabili. Le funzioni sono adattabili se le dichiarazioni di tipo corrispondenti sono annidate, ne specificano l'argomento e i tipi restituiti. Lo standard C++ richiede che l'adattabilità sia implementata con tutte le classi di oggetti standard che ereditano dalle classi base binary_function o unary_function. Gli oggetti funzione e i relativi adattatori consentono alla libreria standard C++ di aggiornare le applicazioni esistenti, oltre a facilitare l'integrazione di tale libreria nell'ambiente di programmazione C++.  
   
- L'implementazione [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] degli oggetti funzione in \<functional> include *funtori di operatori trasparenti*, ovvero specializzazioni degli oggetti funzione standard che non accettano parametri modello ed eseguono l'inoltro perfetto degli argomenti di funzione e la restituzione perfetta del risultato. Questa funzionalità è parte della specifica dello standard C++&14; in formato bozza. In queste specializzazioni del modello non è necessario specificare i tipi di argomento quando si richiamano i funtori di aritmetica, di confronto e degli operatori bit per bit. È possibile eseguire l'overload degli operatori di aritmetica, di confronto, logici o bit per bit per i tipi personalizzati o per le combinazioni eterogenee di tipi, quindi utilizzare i funtori di operatore trasparenti come argomenti della funzione. Ad esempio, se il tipo *MyType* implementa `operator<`, è possibile chiamare `sort(my_collection.begin(), my_collection.end(), less<>())` anziché specificare in modo esplicito il tipo `sort(my_collection.begin(), my_collection.end(), less<MyType>())`.  
+ L'implementazione [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] degli oggetti funzione in \<functional> include *funtori di operatori trasparenti*, ovvero specializzazioni degli oggetti funzione standard che non accettano parametri modello ed eseguono l'inoltro perfetto degli argomenti di funzione e la restituzione perfetta del risultato. Questa funzionalità è parte della specifica dello standard C++ 14 in formato bozza. In queste specializzazioni del modello non è necessario specificare i tipi di argomento quando si richiamano i funtori di aritmetica, di confronto e degli operatori bit per bit. È possibile eseguire l'overload degli operatori di aritmetica, di confronto, logici o bit per bit per i tipi personalizzati o per le combinazioni eterogenee di tipi, quindi utilizzare i funtori di operatore trasparenti come argomenti della funzione. Ad esempio, se il tipo *MyType* implementa `operator<`, è possibile chiamare `sort(my_collection.begin(), my_collection.end(), less<>())` anziché specificare in modo esplicito il tipo `sort(my_collection.begin(), my_collection.end(), less<MyType>())`.  
   
 ## <a name="c11c14-implementation"></a>Implementazione di C++11/C++14  
  Le seguenti funzionalità vengono aggiunte in Visual C++ nell'implementazione di C++11/C++14:  
@@ -126,22 +127,22 @@ Definisce funzioni della libreria standard C++ che consentono di costruire *ogge
   
 |||  
 |-|-|  
-|[bind](../standard-library/functional-functions.md#bind_function)|Associa gli argomenti a un oggetto richiamabile.|  
-|[bind1st](../standard-library/functional-functions.md#bind1st_function)|Funzione di modello helper che crea un adattatore per convertire un oggetto funzione binaria in un oggetto funzione unaria associando il primo argomento della funzione binaria a un valore specificato.|  
-|[bind2nd](../standard-library/functional-functions.md#bind2nd_function)|Funzione di modello helper che crea un adattatore per convertire un oggetto funzione binaria in un oggetto funzione unaria associando il secondo argomento della funzione binaria a un valore specificato.|  
-|[bit_and](../standard-library/functional-functions.md#bit_and_function)|Restituisce l'AND logico bit per bit (operatore binario &) dei due parametri.|  
-|[bit_not](../standard-library/functional-functions.md#bit_not_function)|Restituisce il complemento logico bit per bit (operator~) del parametro.|  
-|[bit_or](../standard-library/functional-functions.md#bit_or_function)|Restituisce l'OR logico bit per bit (operatore&#124;) dei due parametri.|  
-|[bit_xor](../standard-library/functional-functions.md#bit_xor_function)|Restituisce il risultato dell'operazione XOR logico bit per bit (operator ^) dei due parametri.|  
-|[cref](../standard-library/functional-functions.md#cref_function)|Costruisce un oggetto `reference_wrapper` di tipo const da un argomento.|  
-|[mem_fn](../standard-library/functional-functions.md#mem_fn_function)|Genera un wrapper di chiamata semplice.|  
-|[mem_fun](../standard-library/functional-functions.md#mem_fun_function)|Funzioni di modello helper utilizzate per costruire gli adattatori dell'oggetto funzione per funzioni membro una volta inizializzate con gli argomenti di puntatore.|  
-|[mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref_function)|Funzione di modello helper utilizzata per costruire gli adattatori dell'oggetto funzione per funzioni membro una volta inizializzata con gli argomenti di riferimento.|  
-|[not1](../standard-library/functional-functions.md#not1_function)|Restituisce il complemento di un predicato unario.|  
-|[not2](../standard-library/functional-functions.md#not2_function)|Restituisce il complemento di un predicato binario.|  
-|[ptr_fun](../standard-library/functional-functions.md#ptr_fun_function)|Funzione di modello helper utilizzata per convertire i puntatori a funzioni unarie e binarie rispettivamente in funzioni adattabili unarie e binarie.|  
-|[ref](../standard-library/functional-functions.md#ref_function)|Costruisce un oggetto `reference_wrapper` da un argomento.|  
-|[swap](../standard-library/functional-functions.md#swap_function)|Scambia due oggetti `function`.|  
+|[bind](../standard-library/functional-functions.md#bind)|Associa gli argomenti a un oggetto richiamabile.|  
+|[bind1st](../standard-library/functional-functions.md#bind1st)|Funzione di modello helper che crea un adattatore per convertire un oggetto funzione binaria in un oggetto funzione unaria associando il primo argomento della funzione binaria a un valore specificato.|  
+|[bind2nd](../standard-library/functional-functions.md#bind2nd)|Funzione di modello helper che crea un adattatore per convertire un oggetto funzione binaria in un oggetto funzione unaria associando il secondo argomento della funzione binaria a un valore specificato.|  
+|[bit_and](../standard-library/functional-functions.md#bit_and)|Restituisce l'AND logico bit per bit (operatore binario &) dei due parametri.|  
+|[bit_not](../standard-library/functional-functions.md#bit_not)|Restituisce il complemento logico bit per bit (operator~) del parametro.|  
+|[bit_or](../standard-library/functional-functions.md#bit_or)|Restituisce l'OR logico bit per bit (operatore&#124;) dei due parametri.|  
+|[bit_xor](../standard-library/functional-functions.md#bit_xor)|Restituisce il risultato dell'operazione XOR logico bit per bit (operator ^) dei due parametri.|  
+|[cref](../standard-library/functional-functions.md#cref)|Costruisce un oggetto `reference_wrapper` di tipo const da un argomento.|  
+|[mem_fn](../standard-library/functional-functions.md#mem_fn)|Genera un wrapper di chiamata semplice.|  
+|[mem_fun](../standard-library/functional-functions.md#mem_fun)|Funzioni di modello helper utilizzate per costruire gli adattatori dell'oggetto funzione per funzioni membro una volta inizializzate con gli argomenti di puntatore.|  
+|[mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref)|Funzione di modello helper utilizzata per costruire gli adattatori dell'oggetto funzione per funzioni membro una volta inizializzata con gli argomenti di riferimento.|  
+|[not1](../standard-library/functional-functions.md#not1)|Restituisce il complemento di un predicato unario.|  
+|[not2](../standard-library/functional-functions.md#not2)|Restituisce il complemento di un predicato binario.|  
+|[ptr_fun](../standard-library/functional-functions.md#ptr_fun)|Funzione di modello helper utilizzata per convertire i puntatori a funzioni unarie e binarie rispettivamente in funzioni adattabili unarie e binarie.|  
+|[ref](../standard-library/functional-functions.md#ref)|Costruisce un oggetto `reference_wrapper` da un argomento.|  
+|[swap](../standard-library/functional-functions.md#swap)|Scambia due oggetti `function`.|  
   
 ### <a name="structs"></a>Struct  
   
@@ -175,8 +176,8 @@ Definisce funzioni della libreria standard C++ che consentono di costruire *ogge
   
 |||  
 |-|-|  
-|[operator==](../standard-library/functional-operators.md#operator_eq_eq)|Impedisce il confronto di uguaglianza di oggetti richiamabili.|  
-|[operator!=](../standard-library/functional-operators.md#operator_neq)|Impedisce il confronto di disuguaglianza di oggetti richiamabili.|  
+|[operator==](../standard-library/functional-operators.md#op_eq_eq)|Impedisce il confronto di uguaglianza di oggetti richiamabili.|  
+|[operator!=](../standard-library/functional-operators.md#op_neq)|Impedisce il confronto di disuguaglianza di oggetti richiamabili.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)   

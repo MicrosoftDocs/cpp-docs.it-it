@@ -35,10 +35,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 3928493eeb4aa09511b3e58d27383c7a480d06ad
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 7050def4c0350e4bdbba3baf348fe5b971e0b20a
+ms.contentlocale: it-it
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>Oggetti funzione della libreria standard C++
@@ -83,7 +84,7 @@ ForwardIterator remove_if(
     Predicate pred);
 ```  
   
- L'ultimo argomento a `remove_if` è un oggetto funzione che restituisce un valore booleano (un *predicato*). Se il risultato dell'oggetto funzione è `true`, l'elemento viene rimosso dal contenitore a cui accedono gli iteratori ` first` e ` last`. È possibile usare uno qualsiasi degli oggetti funzione dichiarati nell'intestazione [\<functional>](../standard-library/functional.md) per l'argomento ` pred` oppure è possibile crearne uno.  
+ L'ultimo argomento a `remove_if` è un oggetto funzione che restituisce un valore booleano (un *predicato*). Se il risultato dell'oggetto funzione è `true`, l'elemento viene rimosso dal contenitore a cui accedono gli iteratori `first` e `last`. È possibile usare uno qualsiasi degli oggetti funzione dichiarati nell'intestazione [\<functional>](../standard-library/functional.md) per l'argomento `pred` oppure è possibile crearne uno.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

@@ -9,41 +9,41 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::bind
 - functional/std::bind
-- std::bind1st
 - functional/std::bind1st
-- std::bind2nd
 - functional/std::bind2nd
-- std::bit_and
 - functional/std::bit_and
-- std::bit_not
 - functional/std::bit_not
-- std::bit_or
 - functional/std::bit_or
-- std::bit_xor
 - functional/std::bit_xor
-- std::cref
 - functional/std::cref
 - type_traits/std::cref
-- std::mem_fn
 - functional/std::mem_fn
-- std::mem_fun
 - functional/std::mem_fun
-- std::mem_fun_ref
 - functional/std::mem_fun_ref
-- std::not1
 - functional/std::not1
-- std::not2
 - functional/std::not2
-- std::ptr_fun
 - functional/std::ptr_fun
-- std::ref
 - functional/std::ref
 - type_traits/std::ref
-- std::swap
 - functional/std::swap
 - type_traits/std::swap
+- functional/std::bind
+- functional/std::bind1st
+- functional/std::bind2nd
+- functional/std::bit_and
+- functional/std::bit_not
+- functional/std::bit_or
+- functional/std::bit_xor
+- functional/std::cref
+- functional/std::mem_fn
+- functional/std::mem_fun
+- functional/std::mem_fun_ref
+- functional/std::not1
+- functional/std::not2
+- functional/std::ptr_fun
+- functional/std::ref
+- functional/std::swap
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -53,23 +53,24 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 9437109e3e03f2b8bfb39bf2b4ca75e520b59c80
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 16d93ad5a46dccbc53fa67a08e2f8432b18f14b5
+ms.contentlocale: it-it
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="ltfunctionalgt-functions"></a>Funzioni &lt;functional&gt;
 ||||  
 |-|-|-|  
-|[bind](#bind_function)|[bind1st](#bind1st_function)|[bind2nd](#bind2nd_function)|  
-|[bit_and](#bit_and_function)|[bit_not](#bit_not_function)|[bit_or](#bit_or_function)|  
-|[bit_xor](#bit_xor_function)|[cref](#cref_function)|[mem_fn](#mem_fn_function)|  
-|[mem_fun](#mem_fun_function)|[mem_fun_ref](#mem_fun_ref_function)|[not1](#not1_function)|  
-|[not2](#not2_function)|[ptr_fun](#ptr_fun_function)|[ref](#ref_function)|  
-|[swap](#swap_function)|  
+|[bind](#bind)|[bind1st](#bind1st)|[bind2nd](#bind2nd)|  
+|[bit_and](#bit_and)|[bit_not](#bit_not)|[bit_or](#bit_or)|  
+|[bit_xor](#bit_xor)|[cref](#cref)|[mem_fn](#mem_fn)|  
+|[mem_fun](#mem_fun)|[mem_fun_ref](#mem_fun_ref)|[not1](#not1)|  
+|[not2](#not2)|[ptr_fun](#ptr_fun)|[ref](#ref)|  
+|[swap](#swap)|  
   
-##  <a name="a-namebindfunctiona--bind"></a><a name="bind_function"></a>  bind  
+##  <a name="bind"></a>  bind  
  Associa gli argomenti a un oggetto richiamabile.  
   
 ```  
@@ -96,7 +97,7 @@ unspecified bind(Fty fn, T1 t1, T2 t2, ..., TN tN);
 ### <a name="remarks"></a>Note  
  I tipi `Fty, T1, T2, ..., TN` devono essere costruibili mediante copia e `INVOKE(fn, t1, ..., tN)` deve essere un'espressione valida per alcuni valori `w1, w2, ..., wN`.  
   
- La prima funzione modello restituisce un wrapper di chiamata di inoltro `g` con un tipo di risultato debole. L'effetto di `g(u1, u2, ..., uM)` è `INVOKE(f, v1, v2, ..., vN,` [result_of](../standard-library/result-of-class.md)`<Fty` `cv` `(V1, V2, ..., VN)>::type)`, dove `cv` corrisponde ai qualificatori CV di `g` e i valori e i tipi degli argomenti associati `v1, v2, ..., vN` vengono determinati come specificato di seguito. È possibile usarla per associare argomenti a un oggetto chiamabile in modo da avere un oggetto chiamabile con un elenco di argomenti personalizzato.  
+ La prima funzione modello restituisce un wrapper di chiamata di inoltro `g` con un tipo di risultato debole. L'effetto di `g(u1, u2, ..., uM)` è `INVOKE(f, v1, v2, ..., vN, ` [result_of](../standard-library/result-of-class.md)`<Fty cv (V1, V2, ..., VN)>::type)`, dove `cv` è i qualificatori cv di `g` e i valori e tipi di argomenti associati `v1, v2, ..., vN` vengono determinate come specificato di seguito. È possibile usarla per associare argomenti a un oggetto chiamabile in modo da avere un oggetto chiamabile con un elenco di argomenti personalizzato.  
   
  La seconda funzione modello restituisce un wrapper di chiamata di inoltro `g` con un tipo nidificato `result_type` sinonimo di `Ret`. L'effetto di `g(u1, u2, ..., uM)` è `INVOKE(f, v1, v2, ..., vN, Ret)`, dove `cv` corrisponde ai qualificatori CV di `g` e i valori e i tipi degli argomenti associati `v1, v2, ..., vN` vengono determinati come specificato di seguito. È possibile usarla per associare argomenti a un oggetto chiamabile in modo da avere un oggetto chiamabile con un elenco di argomenti personalizzato e con un tipo restituito specificato.  
   
@@ -168,7 +169,7 @@ int main()
 3^2 == 9  
 ```  
   
-##  <a name="a-namebind1stfunctiona--bind1st"></a><a name="bind1st_function"></a>  bind1st  
+##  <a name="bind1st"></a>  bind1st  
  Funzione di modello helper che crea un adattatore per convertire un oggetto funzione binaria in un oggetto funzione unaria associando il primo argomento della funzione binaria a un valore specificato.  
   
 ```  
@@ -180,11 +181,11 @@ binder1st <Operation> bind1st (const Operation& func, const Type& left);
  `func`  
  Oggetto funzione binaria da convertire in un oggetto funzione unaria.  
   
- ` left`  
+ `left`  
  Valore a cui deve essere associato il primo argomento dell'oggetto funzione binaria.  
   
 ### <a name="return-value"></a>Valore restituito  
- L'oggetto funzione unaria risultante dall'associazione del primo argomento dell'oggetto funzione binaria al valore ` left.`  
+ L'oggetto funzione unaria risultante dalla associando il primo argomento dell'oggetto funzione binaria al valore `left`.  
   
 ### <a name="remarks"></a>Note  
  I binder di funzione sono un tipo di adattatore di funzione e restituiscono oggetti funzione. Pertanto, possono essere usati in determinati tipi di composizione di funzione per costruire espressioni più complicate e potenti.  
@@ -258,7 +259,7 @@ The number of elements in v1 greater than 5 is: 4.
 The number of elements in v1 less than 10 is: 2.  
 ```  
   
-##  <a name="a-namebind2ndfunctiona--bind2nd"></a><a name="bind2nd_function"></a>  bind2nd  
+##  <a name="bind2nd"></a>  bind2nd  
  Funzione di modello helper che crea un adattatore per convertire un oggetto funzione binaria in un oggetto funzione unaria associando il secondo argomento della funzione binaria a un valore specificato.  
   
 ```  
@@ -270,11 +271,11 @@ binder2nd <Operation> bind2nd(const Operation& func, const Type& right);
  `func`  
  Oggetto funzione binaria da convertire in un oggetto funzione unaria.  
   
- ` right`  
+ `right`  
  Valore a cui deve essere associato il secondo argomento dell'oggetto funzione binaria.  
   
 ### <a name="return-value"></a>Valore restituito  
- L'oggetto funzione unaria risultante dall'associazione del secondo argomento dell'oggetto funzione binaria al valore ` right.`  
+ L'oggetto funzione unaria risultante dalla associando il secondo argomento dell'oggetto funzione binaria al valore `right`.  
   
 ### <a name="remarks"></a>Note  
  I binder di funzione sono un tipo di adattatore di funzione e restituiscono oggetti funzione. Pertanto, possono essere usati in determinati tipi di composizione di funzione per costruire espressioni più complicate e potenti.  
@@ -348,7 +349,7 @@ The number of elements in v1 greater than 15 is: 2.
 The number of elements in v1 less than 10 is: 2.  
 ```  
   
-##  <a name="a-namebitandfunctiona--bitand"></a><a name="bit_and_function"></a>  bit_and  
+##  <a name="bit_and"></a>  bit_and  
  Oggetto funzione predefinito che esegue l'operazione AND bit per bit (`operator&` binario) sui relativi argomenti.  
   
 ```  
@@ -370,14 +371,14 @@ struct bit_and<void>
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `Type`, ` T`, ` U`  
+ `Type`, `T`, `U`  
  Qualsiasi tipo che supporta un `operator&` che accetta gli operandi dei tipi specificati o dedotti.  
   
  `Left`  
- Operando sinistro dell'operazione AND bit per bit. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo `Type`. Il modello specializzato esegue un inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto ` T`.  
+ Operando sinistro dell'operazione AND bit per bit. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo `Type`. Il modello specializzato esegue un inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto `T`.  
   
  `Right`  
- Operando destro dell'operazione AND bit per bit. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo `Type`. Il modello specializzato esegue un inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto ` U`.  
+ Operando destro dell'operazione AND bit per bit. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo `Type`. Il modello specializzato esegue un inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto `U`.  
   
 ### <a name="return-value"></a>Valore restituito  
  Risultato di `Left``&``Right`. Il modello specializzato esegue un inoltro perfetto del risultato, con il tipo restituito da `operator&`.  
@@ -385,7 +386,7 @@ struct bit_and<void>
 ### <a name="remarks"></a>Note  
  Il funtore `bit_and` è limitato ai tipi integrali per i tipi di dati di base o ai tipi definiti dall'utente che implementano un oggetto `operator&` binario.  
   
-##  <a name="a-namebitnotfunctiona--bitnot"></a><a name="bit_not_function"></a>  bit_not  
+##  <a name="bit_not"></a>  bit_not  
  Oggetto funzione predefinito che esegue l'operazione di complemento (NOT) bit per bit (`operator~` unario) sul relativo argomento.  
   
 ```  
@@ -417,7 +418,7 @@ struct bit_not<void>
 ### <a name="remarks"></a>Note  
  Il funtore `bit_not` è limitato ai tipi integrali per i tipi di dati di base o ai tipi definiti dall'utente che implementano un oggetto `operator~` binario.  
   
-##  <a name="a-namebitorfunctiona--bitor"></a><a name="bit_or_function"></a>  bit_or  
+##  <a name="bit_or"></a>  bit_or  
  Oggetto funzione predefinito che esegue l'operazione OR bit per bit (`operator|`) sui relativi argomenti.  
   
 ```  
@@ -439,14 +440,14 @@ struct bit_or<void>
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `Type`, ` T`, ` U`  
+ `Type`, `T`, `U`  
  Qualsiasi tipo che supporta un `operator|` che accetta gli operandi dei tipi specificati o dedotti.  
   
  `Left`  
- Operando sinistro dell'operazione OR bit per bit. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo `Type`. Il modello specializzato esegue un inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto ` T`.  
+ Operando sinistro dell'operazione OR bit per bit. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo `Type`. Il modello specializzato esegue un inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto `T`.  
   
  `Right`  
- Operando destro dell'operazione OR bit per bit. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo `Type`. Il modello specializzato esegue un inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto ` U`.  
+ Operando destro dell'operazione OR bit per bit. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo `Type`. Il modello specializzato esegue un inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto `U`.  
   
 ### <a name="return-value"></a>Valore restituito  
  Risultato di `Left``|``Right`. Il modello specializzato esegue un inoltro perfetto del risultato, con il tipo restituito da `operator|`.  
@@ -454,7 +455,7 @@ struct bit_or<void>
 ### <a name="remarks"></a>Note  
  Il funtore `bit_or` è limitato ai tipi integrali per i tipi di dati di base o ai tipi definiti dall'utente che implementano `operator|`.  
   
-##  <a name="a-namebitxorfunctiona--bitxor"></a><a name="bit_xor_function"></a>  bit_xor  
+##  <a name="bit_xor"></a>  bit_xor  
  Oggetto funzione predefinito che esegue l'operazione XOR bit per bit (`operator^` binario) sui relativi argomenti.  
   
 ```  
@@ -476,14 +477,14 @@ struct bit_xor<void>
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `Type`, ` T`, ` U`  
+ `Type`, `T`, `U`  
  Qualsiasi tipo che supporta un `operator^` che accetta gli operandi dei tipi specificati o dedotti.  
   
  `Left`  
- Operando sinistro dell'operazione XOR bit per bit. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo `Type`. Il modello specializzato esegue un inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto ` T`.  
+ Operando sinistro dell'operazione XOR bit per bit. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo `Type`. Il modello specializzato esegue un inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto `T`.  
   
  `Right`  
- Operando destro dell'operazione XOR bit per bit. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo `Type`. Il modello specializzato esegue un inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto ` U`.  
+ Operando destro dell'operazione XOR bit per bit. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo `Type`. Il modello specializzato esegue un inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto `U`.  
   
 ### <a name="return-value"></a>Valore restituito  
  Risultato di `Left``^``Right`. Il modello specializzato esegue un inoltro perfetto del risultato, con il tipo restituito da `operator^`.  
@@ -491,7 +492,7 @@ struct bit_xor<void>
 ### <a name="remarks"></a>Note  
  Il funtore `bit_xor` è limitato ai tipi integrali per i tipi di dati di base o ai tipi definiti dall'utente che implementano un oggetto `operator^` binario.  
   
-##  <a name="a-namecreffunctiona--cref"></a><a name="cref_function"></a>  cref  
+##  <a name="cref"></a>  cref  
  Costruisce un oggetto `reference_wrapper` di tipo const da un argomento.  
   
 ```  
@@ -545,7 +546,7 @@ cref(i) = 1
 cref(neg)(i) = -1  
 ```  
   
-##  <a name="a-namememfnfunctiona--memfn"></a><a name="mem_fn_function"></a>  mem_fn  
+##  <a name="mem_fn"></a>  mem_fn  
  Genera un wrapper di chiamata semplice.  
   
 ```  
@@ -606,7 +607,7 @@ int main()
 3*2 == 6  
 ```  
   
-##  <a name="a-namememfunfunctiona--memfun"></a><a name="mem_fun_function"></a>  mem_fun  
+##  <a name="mem_fun"></a>  mem_fun  
  Funzioni di modello helper utilizzate per costruire gli adattatori dell'oggetto funzione per funzioni membro una volta inizializzate con gli argomenti di puntatore.  
   
 ```  
@@ -690,7 +691,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namememfunreffunctiona--memfunref"></a><a name="mem_fun_ref_function"></a>  mem_fun_ref  
+##  <a name="mem_fun_ref"></a>  mem_fun_ref  
  Funzioni modello helper usate per costruire gli adattatori dell'oggetto funzione per funzioni membro se inizializzate mediante argomenti di riferimento.  
   
 ```  
@@ -792,7 +793,7 @@ The original values stored in v2 are: 1 2 3 4 5 6 7 8 9 10 11 12 13
 With the even numbers removed, the remaining values are: 1 3 5 7 9 11 13   
 ```  
   
-##  <a name="a-namenot1functiona--not1"></a><a name="not1_function"></a>  not1  
+##  <a name="not1"></a>  not1  
  Restituisce il complemento di un predicato unario.  
   
 ```  
@@ -801,7 +802,7 @@ unary_negate<UnaryPredicate> not1(const UnaryPredicate& pred);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` pred`  
+ `pred`  
  Predicato unario da negare.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -860,7 +861,7 @@ The number of elements in v1 greater than 10 is: 5.
 The number of elements in v1 not greater than 10 is: 3.  
 ```  
   
-##  <a name="a-namenot2functiona--not2"></a><a name="not2_function"></a>  not2  
+##  <a name="not2"></a>  not2  
  Restituisce il complemento di un predicato binario.  
   
 ```  
@@ -932,7 +933,7 @@ Sorted vector v1 = ( 41 6262 6262 6334 18467 19169 26500 )
 Resorted vector v1 = ( 26500 19169 18467 6334 6262 6262 41 )  
 ```  
   
-##  <a name="a-nameptrfunfunctiona--ptrfun"></a><a name="ptr_fun_function"></a>  ptr_fun  
+##  <a name="ptr_fun"></a>  ptr_fun  
  Funzioni modello helper usate per convertire i puntatori a funzioni unarie e binarie rispettivamente in funzioni adattabili unarie e binarie.  
   
 ```  
@@ -958,7 +959,7 @@ pointer_to_binary_function<Arg1, Arg2, Result, Result (*)(Arg1, Arg2)> ptr_fun(R
 ### <a name="example"></a>Esempio  
  [!code-cpp[functional_ptr_fun#1](../standard-library/codesnippet/CPP/functional-functions_1.cpp)]  
   
-##  <a name="a-namereffunctiona--ref"></a><a name="ref_function"></a>  ref  
+##  <a name="ref"></a>  ref  
  Costruisce un oggetto `reference_wrapper` da un argomento.  
   
 ```  
@@ -1047,7 +1048,7 @@ tiger lion cougar
 tiger cougar  
 ```  
   
-##  <a name="a-nameswapfunctiona--swap"></a><a name="swap_function"></a>  swap  
+##  <a name="swap"></a>  swap  
  Scambia due oggetti `function`.  
   
 ```  

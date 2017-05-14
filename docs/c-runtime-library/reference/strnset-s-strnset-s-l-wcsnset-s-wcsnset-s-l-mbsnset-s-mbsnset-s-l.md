@@ -1,83 +1,100 @@
 ---
-title: "_strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mbsnset_s_l"
-  - "_strnset_s"
-  - "_mbsnset_s"
-  - "_strnset_s_l"
-  - "_wcsnset_s_l"
-  - "_wcsnset_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_mbsnset_s_l"
-  - "wcsnset_s"
-  - "_tcsnset_s_l"
-  - "_wcsnset_s"
-  - "_mbsnset_s"
-  - "_wcsnset_s_l"
-  - "_strnset_s_l"
-  - "strnset_s_l"
-  - "_tcsnset_s"
-  - "_strnset_s"
-  - "strnset_s"
-  - "mbsnset_s_l"
-  - "mbsnset_s"
-  - "wcsnset_s_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_mbsnset_s (funzione)"
-  - "_mbsnset_s_l (funzione)"
-  - "_strnset_s (funzione)"
-  - "_strnset_s_l (funzione)"
-  - "_tcsnset_s (funzione)"
-  - "_tcsnset_s_l (funzione)"
-  - "_wcsnset_s (funzione)"
-  - "inizializzazione di caratteri"
-  - "mbsnset_s (funzione)"
-  - "mbsnset_s_l (funzione)"
-  - "strnset_s (funzione)"
-  - "strnset_s_l (funzione)"
-  - "tcsnset_s (funzione)"
-  - "tcsnset_s_l (funzione)"
-  - "wcsnset_s (funzione)"
+title: _strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mbsnset_s_l
+- _strnset_s
+- _mbsnset_s
+- _strnset_s_l
+- _wcsnset_s_l
+- _wcsnset_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _mbsnset_s_l
+- wcsnset_s
+- _tcsnset_s_l
+- _wcsnset_s
+- _mbsnset_s
+- _wcsnset_s_l
+- _strnset_s_l
+- strnset_s_l
+- _tcsnset_s
+- _strnset_s
+- strnset_s
+- mbsnset_s_l
+- mbsnset_s
+- wcsnset_s_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- tcsnset_s function
+- mbsnset_s_l function
+- initializing characters
+- wcsnset_s function
+- mbsnset_s function
+- _tcsnset_s_l function
+- _strnset_s_l function
+- _mbsnset_s function
+- strnset_s_l function
+- _tcsnset_s function
+- _strnset_s function
+- tcsnset_s_l function
+- _mbsnset_s_l function
+- strnset_s function
+- _wcsnset_s function
 ms.assetid: 9cf1b321-b5cb-4469-b285-4c07cfbd8813
 caps.latest.revision: 27
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 27
----
-# _strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 041346dea48684be67cc28699eb2e98e7adf8031
+ms.contentlocale: it-it
+ms.lasthandoff: 04/04/2017
 
-Inizializza i caratteri di una stringa con un carattere specifico.  Queste versioni di [\_strnset, \_strnset\_l, \_wcsnset, \_wcsnset\_l, \_mbsnset, \_mbsnset\_l](../../c-runtime-library/reference/strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md) contengono i miglioramenti della sicurezza come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
+---
+# <a name="strnsets-strnsetsl-wcsnsets-wcsnsetsl-mbsnsets-mbsnsetsl"></a>_strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l
+Inizializza i caratteri di una stringa sul carattere specificato. Queste versioni di [_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l](../../c-runtime-library/reference/strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md) includono miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
 > [!IMPORTANT]
->  `_mbsnset_s` e `_mbsnset_s_l` non possono essere utilizzate nelle applicazioni che vengono eseguite in Windows Runtime.  Per ulteriori informazioni, vedere [Funzioni CRT non supportate con \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbsnset_s` e `_mbsnset_s_l` non possono essere usati nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere l'articolo relativo alle [funzioni CRT non supportate con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 errno_t _strnset_s(  
@@ -121,56 +138,56 @@ errno_t _mbsnset_s_l(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `str`  
  Stringa da modificare.  
   
  `numberOfElements`  
- La dimensione del buffer `str`.  
+ Dimensioni del buffer di `str`.  
   
  `c`  
  Impostazione del carattere.  
   
  `count`  
- Numero di caratteri da impostare.  
+ Numero dei caratteri da impostare.  
   
  `locale`  
- Impostazioni locali da utilizzare.  
+ Impostazioni locali da usare.  
   
-## Valore restituito  
- Zero in caso di esito positivo; in caso contrario, un codice di errore.  
+## <a name="return-value"></a>Valore restituito  
+ Zero in caso di esito positivo e un codice di errore in caso contrario.  
   
- Queste funzioni convalidano gli argomenti.  Se `str` non è una stringa con terminazione null valida oppure la dimensione dell'argomento è minore o uguale a 0, il gestore di parametro non valido viene richiamato, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).  Se l'esecuzione può continuare, queste funzioni restituiscono un codice di errore e un set `errno` al codice di errore.  Il codice di errore predefinito è `EINVAL` se un valore più specifico non viene applicato.  
+ Queste funzioni convalidano i rispettivi argomenti. Se `str` non è una stringa con terminazione Null valida o l'argomento size è minore o uguale a 0, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono un codice di errore e impostano `errno` su tale codice di errore. Il codice di errore predefinito è `EINVAL` se non si applica un valore più specifico.  
   
-## Note  
- Queste funzioni impostano, al massimo, i primi caratteri `count` di `str` a `c`.  Se `count` è superiore alla dimensione di `str`, la dimensione di `str` viene utilizzata invece di `count`.  Si verifica un errore se `count` è maggiore `numberOfElements` ed entrambi i parametri sono maggiori delle dimensioni di `str`.  
+## <a name="remarks"></a>Note  
+ Queste funzioni impostano al massimo i primi `count` caratteri di `str` su `c`. Se `count` è maggiore delle dimensioni di `str`, vengono usate le dimensioni di `str` invece di `count`. Si verifica un errore se `count` è maggiore di `numberOfElements` ed entrambi questi parametri sono maggiori delle dimensioni di `str`.  
   
- `_wcsnset_s` e `_mbsnset_s` sono versioni a caratteri di tipo "wide" e di caratteri multibyte di `_strnset_s`.  L'argomento di tipo stringa `_wcsnset_s` è una stringa di caratteri di tipo "wide"; tale `_mbsnset_s` è una `` stringa con caratteri multibyte.  Altrimenti queste tre funzioni si comportano in modo identico.  
+ `_wcsnset_s` e `_mbsnset_s` sono le versioni a caratteri wide e a caratteri multibyte di `_strnset_s`. L'argomento stringa di `_wcsnset_s` è una versione a caratteri wide. L'argomento di `_mbsnset_s` è una stringa di caratteri multibyte. A parte ciò, queste tre funzioni si comportano in modo identico.  
   
- Il valore di output è interessato dall'impostazione di categoria `LC_CTYPE` delle impostazioni locali; vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) per ulteriori informazioni.  Le versioni di queste funzioni senza il suffisso `_l` utilizzano le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali; le versioni con il suffisso `_l` sono identiche, ad eccezione del fatto che utilizzano il parametro delle impostazioni locali che viene passato.  Per ulteriori informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ La configurazione dell'impostazione della categoria `LC_CTYPE` delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso `_l` usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso `_l` sono identiche ma usano il parametro passato relativo alle impostazioni locali. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
   
- La versione di debug di queste funzioni per prima cosa riempiono il buffer con il valore 0xFD.  Per disattivare questo comportamento, utilizzare [\_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
+ Le versioni di debug di queste funzioni riempiono innanzitutto il buffer con 0xFD. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
-### Mapping di routine su testo generico  
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
-|Routine TCHAR.H|\_UNICODE & \_MBCS non definiti|\_MBCS definito|\_UNICODE definito|  
-|---------------------|-------------------------------------|---------------------|------------------------|  
+|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcsnset_s`|`_strnset_s`|`_mbsnbset_s`|`_wcsnset_s`|  
 |`_tcsnset_s_l`|`_strnset_s_l`|`_mbsnbset_s_l`|`_wcsnset_s_l`|  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`_strnset_s`|\<string.h\>|  
-|`_strnset_s_l`|\<tchar.h\>|  
-|`_wcsnset_s`|\<string.h\> o \<wchar.h\>|  
-|`_wcsnset_s_l`|\<tchar.h\>|  
-|`_mbsnset_s`, `_mbsnset_s_l`|\<mbstring.h\>|  
+|-------------|---------------------|  
+|`_strnset_s`|\<string.h>|  
+|`_strnset_s_l`|\<tchar.h>|  
+|`_wcsnset_s`|\<string.h> o \<wchar.h>|  
+|`_wcsnset_s_l`|\<tchar.h>|  
+|`_mbsnset_s`, `_mbsnset_s_l`|\<mbstring.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_strnset_s.c  
@@ -187,16 +204,16 @@ int main( void )
 }  
 ```  
   
-  **Prima: Questo è un test**  
-**Dopo: \*\*\*\* è un test**   
-## Equivalente .NET Framework  
- [System::String::Replace](https://msdn.microsoft.com/en-us/library/system.string.replace.aspx)  
+```Output  
+Before: This is a test  
+After:  **** is a test  
+```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md)   
  [Impostazioni locali](../../c-runtime-library/locale.md)   
  [Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [strcat, wcscat, \_mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
- [strcmp, wcscmp, \_mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [strcpy, wcscpy, \_mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
- [\_strset, \_strset\_l, \_wcsset, \_wcsset\_l, \_mbsset, \_mbsset\_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)
+ [strcat, wcscat, _mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
+ [strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
+ [strcpy, wcscpy, _mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
+ [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)

@@ -60,10 +60,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 377ebdd79e201a2b7a017eb3ce34c6ced0062702
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: bb000bddd8f376587aa7614d135f39e09771ccb7
+ms.contentlocale: it-it
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="time-time32-time64"></a>time, _time32, _time64
@@ -91,9 +92,9 @@ __time64_t _time64(
  Restituisce il tempo in secondi trascorso dalla mezzanotte del 1° gennaio 1970 oppure -1 in caso di errore.  
   
 ## <a name="remarks"></a>Note  
- La funzione `time` restituisce il numero di secondi trascorsi dalla mezzanotte (00.00.00) del 1 gennaio 1970 nel formato UTC (Coordinated Universal Time), in base all'orologio di sistema. Il valore restituito viene archiviato nella posizione specificata da `timer`. Questo parametro può essere `NULL` e in questo caso il valore restituito non viene archiviato.  
+ La funzione `time` restituisce il numero di secondi trascorsi dalla mezzanotte (00.00.00) del 1 gennaio 1970 nel formato UTC (Coordinated Universal Time), in base all'orologio di sistema. Il valore restituito viene archiviato nel percorso specificato da `timer`. Questo parametro può essere `NULL`; in questo caso, il valore restituito non viene archiviato.  
   
- `time` è un wrapper per `_time64` e `time_t` equivale a `__time64_t` per impostazione predefinita. Se è necessario forzare il compilatore in modo che interpreti `time_t` come il vecchio `time_t` a 32 bit, è possibile definire `_USE_32BIT_TIME_T`. Questa operazione non è consigliabile perché l'applicazione potrebbe non riuscire dopo il 18 gennaio 2038. L'uso di questa macro non è consentito su piattaforme a 64 bit.  
+ `time` è un wrapper per `_time64` e `time_t` è, per impostazione predefinita, equivalente a `__time64_t`. Se è necessario forzare il compilatore in modo che interpreti `time_t` come il vecchio `time_t`a 32 bit, è possibile definire `_USE_32BIT_TIME_T`. Questa operazione non è consigliabile perché l'applicazione potrebbe non riuscire dopo il 18 gennaio 2038. L'uso di questa macro non è consentito su piattaforme a 64 bit.  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -254,9 +255,6 @@ Christmas            Sat Dec 25 12:00:00 1993
   
 Today is Friday, day 25 of April in the year 2003.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione del tempo](../../c-runtime-library/time-management.md)   

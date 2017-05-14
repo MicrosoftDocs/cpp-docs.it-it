@@ -32,10 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 4c83adc4b7365518275d5d54ac927012abc29657
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: e2ebbb8eb6e6f250376b0ef2b43dae261a642d69
+ms.contentlocale: it-it
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
@@ -52,7 +53,7 @@ Includere l'intestazione standard \<future> per definire le classi modello e i m
 ## <a name="remarks"></a>Note  
   
 > [!NOTE]
->  Nel codice che viene compilato mediante **/clr**, questa intestazione è bloccata.  
+>  Nel codice compilato tramite **/clr**, questa intestazione è bloccata.  
   
  Un *provider asincrono* archivia il risultato di una chiamata di funzione. Un *oggetto restituito asincrono* viene usato per recuperare il risultato di una chiamata di funzione. Uno *stato asincrono associato* consente la comunicazione tra un provider asincrono e uno o più oggetti restituiti asincroni.  
   
@@ -91,19 +92,19 @@ Includere l'intestazione standard \<future> per definire le classi modello e i m
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Funzione async](../standard-library/future-functions.md#async_function)|Rappresenta un provider asincrono.|  
-|[Funzione future_category](../standard-library/future-functions.md#future_category_function)|Restituisce un riferimento all'oggetto `error_category` che caratterizza gli errori associati agli oggetti `future`.|  
-|[Funzione make_error_code](../standard-library/future-functions.md#make_error_code_function)|Crea un oggetto `error_code` che dispone dell'oggetto `error_category` che caratterizza gli errori `future`.|  
-|[Funzione make_error_condition](../standard-library/future-functions.md#make_error_condition_function)|Crea un oggetto `error_condition` che dispone dell'oggetto `error_category` che caratterizza gli errori `future`.|  
-|[Funzione swap](../standard-library/future-functions.md#swap_function)|Scambia lo stato asincrono associato di un oggetto `promise` con quello di un altro oggetto.|  
+|[async](../standard-library/future-functions.md#async)|Rappresenta un provider asincrono.|  
+|[future_category](../standard-library/future-functions.md#future_category)|Restituisce un riferimento all'oggetto `error_category` che caratterizza gli errori associati agli oggetti `future`.|  
+|[make_error_code](../standard-library/future-functions.md#make_error_code)|Crea un oggetto `error_code` che dispone dell'oggetto `error_category` che caratterizza gli errori `future`.|  
+|[make_error_condition](../standard-library/future-functions.md#make_error_condition)|Crea un oggetto `error_condition` che dispone dell'oggetto `error_category` che caratterizza gli errori `future`.|  
+|[swap](../standard-library/future-functions.md#swap)|Scambia lo stato asincrono associato di un oggetto `promise` con quello di un altro oggetto.|  
   
 ### <a name="enumerations"></a>Enumerazioni  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Enumerazione future_errc](../standard-library/future-enums.md#future_errc_enumeration)|Fornisce i nomi simbolici per tutti gli errori segnalati dalla classe `future_error`.|  
-|[Enumerazione future_status](../standard-library/future-enums.md#future_status_enumeration)|Fornisce i nomi simbolici per i motivi che una funzione di attesa temporizzata può restituire.|  
-|[Enumerazione launch](../standard-library/future-enums.md#launch_enumeration)|Rappresenta un tipo di maschera di bit che descrive le possibili modalità per la funzione modello `async`.|  
+|[future_errc](../standard-library/future-enums.md#future_errc)|Fornisce i nomi simbolici per tutti gli errori segnalati dalla classe `future_error`.|  
+|[future_status](../standard-library/future-enums.md#future_status)|Fornisce i nomi simbolici per i motivi che una funzione di attesa temporizzata può restituire.|  
+|[avvio veloce](../standard-library/future-enums.md#launch)|Rappresenta un tipo di maschera di bit che descrive le possibili modalità per la funzione modello `async`.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Header Files Reference](../standard-library/cpp-standard-library-header-files.md) (Riferimento file di intestazione)

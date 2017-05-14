@@ -52,10 +52,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 441861208d699a056084970a3d60d629ba79dc77
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 298f293e5ea0533fb27ae8c259900bc4f1cd0d2a
+ms.contentlocale: it-it
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="getdaylight"></a>_get_daylight
@@ -83,9 +84,6 @@ Recupera l'offset ora legale in ore.
  Se `hours` è `NULL`, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta `errno` su`EINVAL` e restituisce `EINVAL`.  
   
  È consigliabile usare questa funzione invece della macro `_daylight` o della funzione deprecata `__daylight`.  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Esempi di platform invoke](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="requirements"></a>Requisiti  
   

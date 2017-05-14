@@ -56,10 +56,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d5f2d015ecc2f027712bc81f1ea538f88e130662
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: d54444dcd6f0b22527dc2362cfdee5f2b1c33b60
+ms.contentlocale: it-it
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="getch-getwch"></a>_getch, _getwch
@@ -79,7 +80,7 @@ wint_t _getwch( void );
  Restituisce il carattere letto. Non vi è restituzione di errori.  
   
 ## <a name="remarks"></a>Note  
- Le funzioni `_getch` e `_getwch` leggono un singolo carattere dalla console senza visualizzarlo (echo). Nessuna di queste funzioni può essere usata per leggere CTRL+C. Durante la lettura di un tasto funzione o un tasto di direzione, ogni funzione deve essere chiamata due volte. La prima chiamata restituisce 0 o 0xE0 e la seconda chiamata restituisce il codice effettivo.  
+ Il `_getch` e `_getwch` funzioni senza il carattere di ripetizione di leggere un singolo carattere dalla console. Nessuna di queste funzioni può essere usata per leggere CTRL+C. Durante la lettura di un tasto funzione o un tasto di direzione, ogni funzione deve essere chiamata due volte. La prima chiamata restituisce 0 o 0xE0 e la seconda chiamata restituisce il codice effettivo.  
   
  Queste funzioni bloccano il thread chiamante e pertanto sono thread-safe. Per le versioni che non bloccano il thread, vedere [_getch_nolock, _getwch_nolock](../../c-runtime-library/reference/getch-nolock-getwch-nolock.md).  
   
@@ -100,7 +101,7 @@ wint_t _getwch( void );
   
 ## <a name="example"></a>Esempio  
   
-```  
+```C  
 // crt_getch.c  
 // compile with: /c  
 // This program reads characters from  
@@ -126,13 +127,13 @@ int main( void )
 }  
 ```  
   
+```Input  
+abcdefy
+```
+  
 ```Output  
-  
-abcdeyType 'Y' when finished typing keys: Y  
+Type 'Y' when finished typing keys: Y  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente in NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
 ## <a name="see-also"></a>Vedere anche  
  [I/O su console e porta](../../c-runtime-library/console-and-port-i-o.md)   
