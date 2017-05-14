@@ -1,32 +1,47 @@
 ---
-title: "Classe collate_byname | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::collate_byname"
-  - "locale/std::collate_byname"
-  - "std.collate_byname"
-  - "collate_byname"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "collate_byname (classe)"
+title: Classe collate_byname | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- locale/std::collate_byname
+- collate_byname
+dev_langs:
+- C++
+helpviewer_keywords:
+- collate_byname class
 ms.assetid: 3dc380df-867c-4763-b60e-ba62a8e63ca7
 caps.latest.revision: 24
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# Classe collate_byname
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 0552fd2b76859166ea84ec17433ee5d04b5dcb19
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
+---
+# <a name="collatebyname-class"></a>Classe collate_byname
 Classe modello derivata che descrive un oggetto che può essere utilizzato come facet di ordinamento delle impostazioni locali specificate, consentendo il recupero di informazioni relative alle convenzioni di ordinamento delle stringhe specifiche di un'area culturale.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -51,21 +66,22 @@ protected:
   
 #### <a name="parameters"></a>Parametri  
  `_Locname`  
- Nome delle impostazioni locali.  
+ Impostazioni locali denominate.  
   
  `_Refs`  
- Un conteggio di riferimento iniziale.  
+ Conteggio di riferimento iniziale.  
   
 ## <a name="remarks"></a>Note  
- La classe modello descrive un oggetto che può essere utilizzato come un [facet delle impostazioni locali](../standard-library/locale-class.md#facet_class) di tipo [collate](../standard-library/collate-class.md#collate__collate)\< CharType>. Il comportamento varia a seconda di [denominato](../standard-library/locale-class.md#locale__name) delle impostazioni locali `_Locname`. Ogni costruttore inizializza il relativo oggetto di base con [collate](../standard-library/collate-class.md#collate__collate)\< CharType>( `_Refs`).  
+ La classe modello descrive un oggetto che può fungere da [facet delle impostazioni locali](../standard-library/locale-class.md#facet_class) di tipo [collate](../standard-library/collate-class.md#collate)\<CharType>. Il comportamento è determinato dalle [impostazioni locali denominate](../standard-library/locale-class.md#name)`_Locname`. Ogni costruttore inizializza l'oggetto di base con [collate](../standard-library/collate-class.md#collate)\<CharType> (`_Refs`).  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** \< impostazioni locali>  
+ **Intestazione:** \<locale>  
   
  **Spazio dei nomi:** std  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sicurezza dei thread nella libreria Standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md) (Thread safety nella libreria standard C++)
+
 
 
 
