@@ -1,51 +1,68 @@
 ---
-title: "_ecvt_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_ecvt_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "ecvt_s"
-  - "_ecvt_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ecvt_s (funzione)"
-  - "conversione di numeri double"
-  - "ecvt_s (funzione)"
-  - "numeri, conversione"
+title: _gcvt_s | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _ecvt_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- ecvt_s
+- _ecvt_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- _ecvt_s function
+- ecvt_s function
+- numbers, converting
+- converting double numbers
 ms.assetid: d52fb0a6-cb91-423f-80b3-952a8955d914
 caps.latest.revision: 25
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 25
----
-# _ecvt_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 81bcb9fe1306f5affa49672269890d6f5888a3ac
+ms.contentlocale: it-it
+ms.lasthandoff: 03/29/2017
 
-Converte un numero `double` in una stringa.  Si tratta di una versione di [\_ecvt](../../c-runtime-library/reference/ecvt.md) con miglioramenti della sicurezza come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
+---
+# <a name="ecvts"></a>_ecvt_s
+Converte un numero `double` in una stringa. Questa è una versione di [_ecvt](../../c-runtime-library/reference/ecvt.md) che include miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md) (Funzionalità di sicurezza in CRT).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 errno_t _ecvt_s(   
@@ -66,65 +83,65 @@ errno_t _ecvt_s(
 ); // C++ only  
 ```  
   
-#### Parametri  
- \[out\] `_Buffer`  
- Riempito con il puntatore alla stringa di cifre, il risultato della conversione.  
+#### <a name="parameters"></a>Parametri  
+ [out] `_Buffer`  
+ Contiene il puntatore alla stringa di cifre, il risultato della conversione.  
   
- \[in\] `_SizeInBytes`  
- Dimensione, in byte, del buffer.  
+ [in] `_SizeInBytes`  
+ Dimensione del buffer in byte.  
   
- \[in\] `_Value`  
- Numeri da convertire.  
+ [in] `_Value`  
+ Numero da convertire.  
   
- \[in\] `_Count`  
- Numero di cifre archiviato.  
+ [in] `_Count`  
+ Numero di cifre archiviate.  
   
- \[out\] `_Dec`  
- Posizione archiviata del separatore decimale.  
+ [out] `_Dec`  
+ Posizione del separatore decimale archiviata.  
   
- \[out\] `_Sign`  
- Il segno del numero convertito.  
+ [out] `_Sign`  
+ Segno del numero convertito.  
   
-## Valore restituito  
- Zero se ha esito positivo.  Il valore restituito è un codice di errore in presenza di un fallimento.  I codici di errore sono definiti in Errno.h.  Per ulteriori informazioni, vedere [errno, \_doserrno, \_sys\_errlist, and \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+## <a name="return-value"></a>Valore restituito  
+ Zero in caso di esito positivo. Il valore restituito è un codice di errore se si verifica un errore. I codici di errore sono definiti in Errno.h. Per altre informazioni, vedere [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (errno, _doserrno, _sys_errlist e _sys_nerr).  
   
- Nel caso di un parametro non valido, come indicato nella seguente tabella, questa funzione viene richiamata dal gestore di parametro non valido, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).  Se l'esecuzione può continuare, la funzione imposta `errno` e imposta `EINVAL` su `EINVAL`.  
+ Se uno parametro non è valido, come elencato nella tabella seguente, questa funzione chiama il gestore dei parametri non validi, come descritto in [Parameter Validation](../../c-runtime-library/parameter-validation.md) (Convalida dei parametri). Se l'esecuzione può continuare, la funzione imposta `errno` su`EINVAL` e restituisce `EINVAL`.  
   
-### Condizioni di errore  
+### <a name="error-conditions"></a>Condizioni di errore  
   
-|`_Buffer`|`_SizeInBytes`|\_Value|\_Count|\_Dec|\_Sign|Valore restituito|Valore in `buffer`|  
-|---------------|--------------------|-------------|-------------|-----------|------------|-----------------------|------------------------|  
-|`NULL`|any|any|any|any|any|`EINVAL`|Non modificato.|  
-|Non `NULL` \(punta alla memoria valida\)|\<\=0|any|any|any|any|`EINVAL`|Non modificato.|  
-|any|any|any|any|`NULL`|any|`EINVAL`|Non modificato.|  
-|any|any|any|any|any|`NULL`|`EINVAL`|Non modificato.|  
+|`_Buffer`|`_SizeInBytes`|_Value|_Count|_Dec|_Sign|Valore restituito|Valore in `buffer`|  
+|---------------|--------------------|-------------|-------------|-----------|------------|------------------|-----------------------|  
+|`NULL`|qualsiasi|qualsiasi|qualsiasi|qualsiasi|qualsiasi|`EINVAL`|Non modificato.|  
+|Non `NULL` (punta alla memoria valida)|<=0|any|qualsiasi|qualsiasi|qualsiasi|`EINVAL`|Non modificato.|  
+|any|qualsiasi|qualsiasi|qualsiasi|`NULL`|qualsiasi|`EINVAL`|Non modificato.|  
+|any|qualsiasi|qualsiasi|qualsiasi|qualsiasi|`NULL`|`EINVAL`|Non modificato.|  
   
- **Problemi relativi alla sicurezza**  
+ **Problemi di sicurezza**  
   
- `_ecvt_s` potrebbe generare una violazione di accesso se `buffer` non punta alla memoria valida e non è `NULL`.  
+ `_ecvt_s` può generare una violazione di accesso se `buffer` non punta a una memoria valida e non è `NULL`.  
   
-## Note  
- La funzione `_ecvt_s` converte un numero a virgola mobile in una stringa di caratteri terminata da null.  Il parametro `_Value` è il numero a virgola mobile da convertire.  Questa funzione memorizza fino a `count` cifre di `_Value` come stringa e aggiunge un carattere null \('\\0'\).  Se il numero di cifre in `_Value` supera `_Count`, la cifra meno significativa viene arrotondata.  Se sono presenti meno di `count` cifre, la stringa viene completata con degli zeri.  
+## <a name="remarks"></a>Note  
+ La funzione `_ecvt_s` converte un numero a virgola mobile in una stringa di caratteri. Il parametro `_Value` è il numero a virgola mobile da convertire. Questa funzione consente di archiviare fino a `count` cifre di `_Value` come stringa e aggiunge un carattere null ('\0'). Se il numero di cifre in `_Value` supera `_Count`, la cifra meno significativa viene arrotondata. Se ci sono meno di `count` cifre, la stringa viene riempita con zeri.  
   
- Solo le cifre vengono archiviate nella stringa.  La posizione del separatore decimale e il segno di `_Value` possono essere ottenuti da `_Dec` e `_Sign` dopo la chiamata.  Il parametro `_Dec` punta ad un valore Integer che fornisce la posizione del separatore decimale rispetto all'inizio della stringa.  Un Integer 0 o negativo indica che il separatore decimale si trova a sinistra della prima cifra.  I punti del parametro `_Sign` su un intero che indica il segno del numero convertito.  Se il valore Integer è 0, il numero è positivo.  In caso contrario, il numero è negativo.  
+ Nella stringa vengono archiviate solo cifre. La posizione del separatore decimale e il segno di `_Value` possono essere ottenuti da `_Dec` e `_Sign` dopo la chiamata. Il parametro `_Dec` punta a un valore intero che indica la posizione del separatore decimale rispetto all'inizio della stringa. Uno zero o un valore intero negativo indica che il separatore decimale si trova a sinistra della prima cifra. Il parametro `_Sign` punta a un valore intero che indica il segno del numero convertito. Se il valore intero è 0, il numero è positivo. In caso contrario, il risultato sarà negativo.  
   
- Un buffer di lunghezza `_CVTBUFSIZE` è sufficiente per qualsiasi valore in virgola mobile.  
+ Un buffer di lunghezza `_CVTBUFSIZE` è sufficiente per qualsiasi valore a virgola mobile.  
   
- La differenza tra `_ecvt_s` e `_fcvt_s` risiede nell'interpretazione del parametro `_Count`.  `_ecvt_s` interpreta `_Count` come il numero totale di cifre contenute nella stringa di output, mentre `_fcvt_s` interpreta `_Count` come il numero di cifre dopo il separatore decimale.  
+ La differenza tra `_ecvt_s` e `_fcvt_s` consiste nell'interpretazione del parametro `_Count`. `_ecvt_s` interpreta `_Count` come numero totale di cifre nella stringa di output, mentre `_fcvt_s` interpreta `_Count` come numero di cifre dopo il separatore decimale.  
   
- In C\+\+, l'utilizzo di questa funzione viene semplificato da un overload del modello; l'overload può dedurre la lunghezza del buffer automaticamente, eliminando la necessità di specificare un argomento per la dimensione.  Per ulteriori informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ l'uso di questa funzione è semplificato da un overload del modello. L'overload può dedurre la lunghezza del buffer automaticamente, evitando la necessità di specificare un argomento di dimensione. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).  
   
- La versione di debug della funzione per prima cosa inserisce nel buffer il valore 0xFD.  Per disattivare questo comportamento, utilizzare [\_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
+ Le versioni di debug di questa funzione riempiono prima il buffer con 0xFD. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Funzione|Intestazione obbligatoria|Intestazione facoltativa|  
-|--------------|-------------------------------|------------------------------|  
-|`_ecvt_s`|\<stdlib.h\>|\<errno.h\>|  
+|--------------|---------------------|---------------------|  
+|`_ecvt_s`|\<stdlib.h>|\<errno.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // ecvt_s.c  
@@ -153,14 +170,14 @@ int main( )
 }  
 ```  
   
-  **Valore convertito: 12000**   
-## Equivalente .NET Framework  
- <xref:System.Convert.ToString%2A>  
+```Output  
+Converted value: 12000  
+```  
   
-## Vedere anche  
- [Conversione dei dati](../../c-runtime-library/data-conversion.md)   
- [Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)   
- [atof, \_atof\_l, \_wtof, \_wtof\_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
- [\_ecvt](../../c-runtime-library/reference/ecvt.md)   
- [\_fcvt\_s](../../c-runtime-library/reference/fcvt-s.md)   
- [\_gcvt\_s](../../c-runtime-library/reference/gcvt-s.md)
+## <a name="see-also"></a>Vedere anche  
+ [Data Conversion](../../c-runtime-library/data-conversion.md)  (Conversione dei dati)  
+ [Floating-Point Support](../../c-runtime-library/floating-point-support.md)  (Supporto delle funzioni a virgola mobile)  
+ [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
+ [_ecvt](../../c-runtime-library/reference/ecvt.md)   
+ [_fcvt_s](../../c-runtime-library/reference/fcvt-s.md)   
+ [_gcvt_s](../../c-runtime-library/reference/gcvt-s.md)

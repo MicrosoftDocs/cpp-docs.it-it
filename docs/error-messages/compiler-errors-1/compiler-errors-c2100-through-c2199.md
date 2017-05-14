@@ -17,7 +17,6 @@ f1_keywords:
 - C2131
 - C2136
 - C2176
-- C2178
 - C2187
 - C2189
 helpviewer_keywords:
@@ -29,7 +28,6 @@ helpviewer_keywords:
 - C2131
 - C2136
 - C2176
-- C2178
 - C2187
 - C2189
 dev_langs:
@@ -53,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 3716dbf66c2cf1c35c26df6dfd95fb1c0946e68d
-ms.lasthandoff: 04/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: c724fd7907f7ec3f0ce8f096faf88d4ec66ae970
+ms.contentlocale: it-it
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="compiler-errors-c2100-through-c2199"></a>Errore del compilatores C2100 through C2199
@@ -99,7 +98,7 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |Errore del compilatore C2127|'*identificatore*': inizializzazione non ammessa dell'entità 'constexpr' con un'espressione non costante|  
 |[Errore del compilatore C2128](compiler-error-c2128.md)|'*funzione*': alloc_text/same_seg applicabili solo a funzioni con collegamento C|  
 |[Errore del compilatore C2129](compiler-error-c2129.md)|funzione statica '*identificatore*' dichiarata ma non definita|  
-|[Errore del compilatore C2130](compiler-error-c2130.md)|#riga prevista una stringa contenente il nome del file '*token*'|  
+|[Errore del compilatore C2130](compiler-error-c2130.md)|#line prevista una stringa contenente il nome del file '*token*'|  
 |C2131 errore del compilatore|l'espressione costante non ha restituito una costante|  
 |[Errore del compilatore C2132](compiler-error-c2132.md)|errore di sintassi: identificatore imprevisto|  
 |[Errore del compilatore C2133](compiler-error-c2133.md)|'*identificatore*': dimensione sconosciuta|  
@@ -147,7 +146,7 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |[Errore del compilatore C2175](compiler-error-c2175.md)|'*internazionali*': impostazioni locali non valido|  
 |C2176 errore del compilatore|non è possibile usare un'istruzione return nel gestore di un blocco try di funzione associato a un costruttore|  
 |[Errore del compilatore C2177](compiler-error-c2177.md)|costante troppo grande|  
-|C2178 errore del compilatore|'*identificatore*'non può essere dichiarata con'*identificatore*' identificatore|  
+|[Errore del compilatore C2178](compiler-error-c2178.md)|'*identificatore*'non può essere dichiarata con'*identificatore*' identificatore|  
 |[Errore del compilatore C2179](compiler-error-c2179.md)|'*tipo*': argomento di attributo non è possibile utilizzare parametri di tipo|  
 |[Errore del compilatore C2180](compiler-error-c2180.md)|espressione di controllo ha tipo '*tipo*'|  
 |[Errore del compilatore C2181](compiler-error-c2181.md)|else non valido senza if corrispondente|  

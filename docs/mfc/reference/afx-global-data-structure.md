@@ -35,13 +35,14 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 1427efddf9271d273e94c4f62d6d104e7f1c2b48
-ms.lasthandoff: 03/31/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: c490b3d744aa691331500f491444435dfe583d13
+ms.contentlocale: it-it
+ms.lasthandoff: 05/10/2017
 
 ---
-# <a name="afxglobaldata-structure"></a>Struttura AFX_GLOBAL_DATA
+# <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA (struttura)
 La struttura `AFX_GLOBAL_DATA` contiene i campi e i metodi usati per gestire il framework o per personalizzare l'aspetto e il comportamento dell'applicazione.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -278,13 +279,13 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
  `TRUE` per abilitare il supporto per l'accessibilità; `FALSE` per disabilitare il supporto per l'accessibilità. Il valore predefinito è `TRUE`.  
   
 ### <a name="remarks"></a>Note  
- L'accessibilità attiva è una tecnologia basata su COM che migliora il modo in cui i programmi e il sistema operativo Windows lavorano insieme ai prodotti di Assistive Technology. Fornisce metodi affidabili per l'esposizione di informazioni sugli elementi dell'interfaccia utente. Tuttavia, è ora disponibile un nuovo modello di accessibilità denominato Automazione dell'interfaccia utente Microsoft. Per un confronto tra le due tecnologie, vedere [automazione interfaccia utente e Microsoft Active Accessibility](http://msdn.microsoft.com/library/87bee662-0a3e-4232-a421-20e7a5968321).  
+ L'accessibilità attiva è una tecnologia basata su COM che migliora il modo in cui i programmi e il sistema operativo Windows lavorano insieme ai prodotti di Assistive Technology. Fornisce metodi affidabili per l'esposizione di informazioni sugli elementi dell'interfaccia utente. Tuttavia, è ora disponibile un nuovo modello di accessibilità denominato Automazione dell'interfaccia utente Microsoft. Per un confronto tra le due tecnologie, vedere [automazione interfaccia utente e Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility).  
   
  Utilizzare il [AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport) metodo per determinare se è abilitato il supporto di Microsoft Active Accessibility.  
   
  
 ### <a name="see-also"></a>Vedere anche  
- [Automazione interfaccia utente e Microsoft Active Accessibility](http://msdn.microsoft.com/library/87bee662-0a3e-4232-a421-20e7a5968321)   
+ [Automazione interfaccia utente e Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)   
  [AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport)
 
 ## <a name="excludetag"></a>AFX_GLOBAL_DATA::ExcludeTag
@@ -316,7 +317,7 @@ BOOL ExcludeTag(
  `TRUE` se questo metodo dà esito positivo; in caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Note  
- Una coppia di tag XML costituito da nome di tag che indicano l'inizio e fine di una sequenza di testo nel buffer specificato. Il `strBuffer` parametro specifica il buffer e `lpszTag` parametro specifica il nome del tag XML.  
+ Una coppia di tag XML costituito da denominato tag che indicano l'inizio e fine di una sequenza di testo nel buffer specificato. Il `strBuffer` parametro specifica il buffer e `lpszTag` parametro specifica il nome del tag XML.  
   
  Utilizzare i simboli nella tabella seguente per codificare un set di caratteri di escape nel buffer specificato. Specificare `TRUE` per il `bIsCharsList` parametro da convertire i simboli nel `strTag` parametro in caratteri di escape effettivo. Nella tabella seguente viene utilizzato il [t ()](../../c-runtime-library/data-type-mappings.md) (macro) per specificare il simbolo e stringhe di caratteri di escape.  
   
@@ -466,7 +467,7 @@ BOOL Is32BitIcons() const;
  `TRUE`Se le icone di 32 bit predefinite sono supportate. in caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo restituisce `TRUE` se il framework supporta icone incorporate a 32 bit, il sistema operativo supporti i 16 bit per pixel o superiore e se non vengono visualizzate le immagini di contrasto elevato.  
+ Questo metodo restituisce `TRUE` se il framework supporta icone predefinite 32 bit, il sistema operativo supporti i 16 bit per pixel o superiore e se non vengono visualizzate le immagini di contrasto elevato.  
   
 ## <a name="isaccessibilitysupport"></a>AFX_GLOBAL_DATA::IsAccessibilitySupport
 Indica se il supporto di Microsoft Active Accessibility è abilitato.  
@@ -486,7 +487,7 @@ BOOL IsAccessibilitySupport() const;
   
 
 ### <a name="see-also"></a>Vedere anche  
- [Automazione interfaccia utente e Microsoft Active Accessibility](http://msdn.microsoft.com/library/87bee662-0a3e-4232-a421-20e7a5968321)
+ [Automazione interfaccia utente e Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)
 
 ## <a name="isd2dinitialized"></a>AFX_GLOBAL_DATA::IsD2DInitialized
  Determina se è stato inizializzato il D2D  
@@ -742,7 +743,7 @@ BOOL SetMenuFont(
  `TRUE`Se questo metodo ha esito positivo. in caso contrario, `FALSE`. In modalità debug, questo metodo indica se questo metodo ha esito negativo.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo crea un carattere normale orizzontale, un carattere sottolineato, e un tipo di carattere grassetto viene utilizzato predefinita voci di menu. Facoltativamente, questo metodo crea un tipo di carattere verticale regolare. Per ulteriori informazioni sui tipi di carattere logiche, vedere [CFont:: CreateFontIndirect](../../mfc/reference/cfont-class.md#createfontindirect).  
+ Questo metodo crea un carattere normale orizzontale, un carattere sottolineato, e un tipo di carattere grassetto è usato predefinita voci di menu. Facoltativamente, questo metodo crea un tipo di carattere verticale regolare. Per ulteriori informazioni sui tipi di carattere logiche, vedere [CFont:: CreateFontIndirect](../../mfc/reference/cfont-class.md#createfontindirect).  
   
 ## <a name="updatefonts"></a>AFX_GLOBAL_DATA::UpdateFonts
 Reinizializza i tipi di carattere logici usati dal framework.  
@@ -788,7 +789,7 @@ COLORREF clrInactiveCaptionGradient;
 ```  
   
 ## <a name="getitaskbarlist"></a>AFX_GLOBAL_DATA::GetITaskbarList
-Crea e archivia i dati globali in un puntatore al `ITaskBarList` interfaccia.  
+Crea e archivia i dati globali in un puntatore di `ITaskBarList` interfaccia.  
   
   
 ```  
@@ -799,7 +800,7 @@ ITaskbarList *GetITaskbarList();
  Un puntatore al `ITaskbarList` interfaccia se la creazione di una barra oggetto elenco delle attività ha esito positivo. `NULL` se la creazione non riesce o se il sistema operativo corrente è inferiore a Windows 7.  
   
 ## <a name="getitaskbarlist3"></a>AFX_GLOBAL_DATA::GetITaskbarList3
-Crea e archivia i dati globali in un puntatore al `ITaskBarList3` interfaccia.  
+Crea e archivia i dati globali in un puntatore di `ITaskBarList3` interfaccia.  
   
   
 ```  

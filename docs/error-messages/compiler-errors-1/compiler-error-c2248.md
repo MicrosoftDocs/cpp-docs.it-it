@@ -1,108 +1,127 @@
 ---
-title: "Errore del compilatore C2248 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2248"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2248"
+title: Errore del compilatore C2248 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2248
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2248
 ms.assetid: 7a3ba0e8-d3b9-4bb9-95db-81ef17e31d23
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# Errore del compilatore C2248
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 24977f831d326dab4882a21c70d8dce6da8b1ae9
+ms.contentlocale: it-it
+ms.lasthandoff: 05/10/2017
 
-'membro': impossibile accedere a 'accesso' membro dichiarato nella classe 'classe'  
+---
+# <a name="compiler-error-c2248"></a>Errore del compilatore C2248
+'*membro*': Impossibile accedere '*access_level*'membro dichiarato nella classe'*classe*'  
   
- I membri di una classe derivata non possono accedere ai membri `private` di una classe base.  Non è possibile accedere ai membri `private` o `protected` di istanze di classe.  
+I membri di una classe derivata non possono accedere `private` i membri di una classe base. Non è possibile accedere `private` o `protected` membri delle istanze della classe.  
   
- Per ulteriori informazioni sull'errore C2248, vedere l'articolo della Knowledge Base KB243351 \(informazioni in lingua inglese\).  
+## <a name="example"></a>Esempio  
   
- Il seguente codice di esempio genera l'errore C2248:  
+L'esempio seguente genera l'errore C2248 quando privato o protetto i membri di una classe sono accessibili all'esterno della classe. Per risolvere questo problema, non accedere a questi membri direttamente all'esterno della classe. Utilizzare i dati dei membri pubblici e le funzioni membro per interagire con la classe.  
   
-```  
-// C2248.cpp  
+```cpp  
+// C2248_access.cpp 
+// compile with: cl /EHsc /W4 C2248_access.cpp 
 #include <stdio.h>  
+
 class X {  
 public:  
-   int  m_pubMemb;  
-   void setPrivMemb( int i ) {  
-      m_privMemb = i;  
-      printf_s("\n%d", m_privMemb);  
-   }  
+    int  m_publicMember;  
+    void setPrivateMember( int i ) {  
+        m_privateMember = i;  
+        printf_s("\n%d", m_privateMember);  
+    }  
 protected:  
-   int  m_protMemb;  
+    int  m_protectedMember;  
   
 private:  
-   int  m_privMemb;  
+    int  m_privateMember;  
 } x;  
   
 int main() {  
-   x.m_pubMemb = 4;  
-   printf_s("\n%d", x.m_pubMemb);  
-   x.m_protMemb = 2;   // C2248 m_protMemb is protected  
-   x.m_privMemb = 3;   // C2248  m_privMemb is private  
-   x.setPrivMemb(0);   // OK uses public access function  
+    x.m_publicMember = 4;  
+    printf_s("\n%d", x.m_publicMember);  
+    x.m_protectedMember = 2; // C2248 m_protectedMember is protected  
+    x.m_privateMember = 3;   // C2248  m_privMemb is private  
+    x.setPrivateMember(0);   // OK uses public access function  
 }  
 ```  
   
- Un altro problema relativo alla conformità che causa la visualizzazione dell'errore C2248 riguarda l'utilizzo di specializzazioni ed elementi friend di modelli.  Per ulteriori informazioni, vedere [Errore degli strumenti del linker LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md).  
+Un problema di conformità che espone C2248 è l'utilizzo di specializzazione e Friend. Per risolvere questo problema, dichiarare friend funzioni di modello utilizzando un <> elenco parametri di modello vuoto o i parametri di modello specifico.  
   
-```  
-// C2248_b.cpp  
+```cpp  
+// C2248_template.cpp 
+// compile with: cl /EHsc /W4 C2248_template.cpp 
 template<class T>  
 void f(T t) {  
-   t.i;   // C2248  
+    t.i;   // C2248  
 }  
   
 struct S {  
 private:  
-   int i;  
+    int i;  
   
 public:  
-   S() {}  
-   // Delete the following line to resolve.  
-   friend void f(S);   // refer to the non-template function void f(S)  
-  
-   // Uncomment the following line to resolve.  
-   // friend void f<S>(S);  
+    S() {}  
+    friend void f(S);   // refer to the non-template function void f(S)  
+    // To fix, comment out the previous line and
+    // uncomment the following line.  
+    // friend void f<S>(S);  
 };  
   
 int main() {  
-   S s;  
-   f<S>(s);  
+    S s;  
+    f<S>(s);  
 }  
 ```  
   
- L'errore C2248 può inoltre essere visualizzato a causa di un problema di conformità quando si tenta di dichiarare un elemento friend di una classe e quest'ultima non è visibile alla dichiarazione dell'elemento friend nell'ambito della classe.  In questo caso, concedere l'accesso friend alla classe contenitore per correggere l'errore.  
+Un problema di conformità che espone C2248 è quando si tenta di dichiarare un elemento friend di una classe e quando la classe non è visibile per la dichiarazione friend nell'ambito della classe. Per risolvere questo problema, concedere l'accesso Friend alla classe contenitore.  
   
-```  
-// C2248_c.cpp  
-// compile with: /c  
+```cpp  
+// C2248_enclose.cpp  
+// compile with: cl /W4 /c C2248_enclose.cpp  
 class T {  
-   class S {  
-      class E {};  
-   };  
-   friend class S::E;   // C2248  
+    class S {  
+        class E {};  
+    };  
+    friend class S::E;   // C2248  
 };  
   
 class A {  
-   class S {  
-      class E {};  
-      friend class A;   // grant friendship to enclosing class  
-   };  
-   friend class S::E;   // OK  
+    class S {  
+        class E {};  
+        friend class A;  // grant friendship to enclosing class  
+    };  
+    friend class S::E;   // OK  
 };  
 ```

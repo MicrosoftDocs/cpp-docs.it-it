@@ -1,77 +1,94 @@
 ---
-title: "_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_cwscanf_s_l"
-  - "_cwscanf_s"
-  - "_cscanf_s"
-  - "_cscanf_s_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "cscanf_s"
-  - "cscanf_s_l"
-  - "cwscanf_s"
-  - "_cwscanf_s"
-  - "_tcscanf_s"
-  - "_cscanf_s"
-  - "_cwscanf_s_l"
-  - "_cscanf_s_l"
-  - "cwscanf_s_l"
-  - "_tcscanf_s_l"
-  - "tcscanf_s"
-  - "tcscanf_s_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_cscanf_s (funzione)"
-  - "_cscanf_s_l (funzione)"
-  - "_cwscanf_s (funzione)"
-  - "_cwscanf_s_l (funzione)"
-  - "_tcscanf_s (funzione)"
-  - "_tcscanf_s_l (funzione)"
-  - "console [C++], lettura"
-  - "cscanf_s (funzione)"
-  - "cscanf_s_l (funzione)"
-  - "cwscanf_s (funzione)"
-  - "cwscanf_s_l (funzione)"
-  - "dati [C++], lettura dalla console"
-  - "lettura di dati [C++], console"
-  - "tcscanf_s (funzione)"
-  - "tcscanf_s_l (funzione)"
+title: _cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _cwscanf_s_l
+- _cwscanf_s
+- _cscanf_s
+- _cscanf_s_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- cscanf_s
+- cscanf_s_l
+- cwscanf_s
+- _cwscanf_s
+- _tcscanf_s
+- _cscanf_s
+- _cwscanf_s_l
+- _cscanf_s_l
+- cwscanf_s_l
+- _tcscanf_s_l
+- tcscanf_s
+- tcscanf_s_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- cscanf_s function
+- _cwscanf_s_l function
+- tcscanf_s function
+- console [C++], reading from
+- _cscanf_s function
+- data [C++], reading from the console
+- cwscanf_s function
+- _tcscanf_s_l function
+- _cscanf_s_l function
+- cscanf_s_l function
+- cwscanf_s_l function
+- reading data [C++], from the console
+- _cwscanf_s function
+- _tcscanf_s function
+- tcscanf_s_l function
 ms.assetid: 9ccab74d-916f-42a6-93d8-920525efdf4b
 caps.latest.revision: 24
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# _cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: af647340f579d6dfba8bcc1a67a4e90b40753a4e
+ms.contentlocale: it-it
+ms.lasthandoff: 04/04/2017
 
-Legge i dati formattati dalla console.  Queste versioni più sicure di [\_cscanf, \_cscanf\_l, \_cwscanf, \_cwscanf\_l](../../c-runtime-library/reference/cscanf-cscanf-l-cwscanf-cwscanf-l.md) contengono i miglioramenti della sicurezza come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
+---
+# <a name="cscanfs-cscanfsl-cwscanfs-cwscanfsl"></a>_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l
+Legge i dati formattati dalla console. Queste versioni più sicure di [_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](../../c-runtime-library/reference/cscanf-cscanf-l-cwscanf-cwscanf-l.md) includono miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
 > [!IMPORTANT]
->  Questa API non può essere utilizzata nelle applicazioni che vengono eseguite in Windows Runtime.  Per ulteriori informazioni, vedere [Funzioni CRT non supportate con \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere l'articolo relativo alle [funzioni CRT non supportate con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 int _cscanf_s(   
@@ -94,7 +111,7 @@ int _cwscanf_s_l(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `format`  
  Stringa di controllo del formato.  
   
@@ -102,43 +119,43 @@ int _cwscanf_s_l(
  Parametri facoltativi.  
   
  `locale`  
- Impostazioni locali da utilizzare.  
+ Impostazioni locali da usare.  
   
-## Valore restituito  
- Il numero di campi che sono stati correttamente convertiti e assegnati.  Il valore restituito non include campi che sono stati letti ma non assegnati.  Il valore restituito è `EOF` per un tentativo di lettura alla fine di un file.  Questa situazione può verificarsi quando l'input della tastiera viene reindirizzato a livello di riga di comando del sistema operativo.  Un valore restituito pari a 0 significa che nessun campo è stato assegnato.  
+## <a name="return-value"></a>Valore restituito  
+ Numero di campi che sono stati convertiti ed assegnati correttamente. Il valore restituito non include i campi che sono stati letti ma non assegnati. Il valore restituito è `EOF` per un tentativo di lettura alla fine del file. Ciò può verificarsi quando viene reindirizzato l'input da tastiera al livello di riga di comando del sistema operativo. Un valore restituito pari a 0 indica che nessun campo è stato assegnato.  
   
- Queste funzioni convalidano i parametri.  Se `format` è un puntatore null, queste funzioni richiamano il gestore di parametro non valido, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).  Se l'esecuzione può continuare, queste funzioni restituiscono `EOF` e impostano `errno`su `EINVAL`.  
+ Queste funzioni convalidano i relativi parametri. Se `format` è un puntatore Null, queste funzioni richiamano il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono `EOF` e `errno` è impostato su `EINVAL`.  
   
-## Note  
- La funzione `_cscanf_s` legge i dati direttamente dalla console nelle posizioni indicate da `argument`.  La funzione [\_getche](../../c-runtime-library/reference/getch-getwch.md) viene utilizzata per leggere caratteri.  Ogni parametro opzionale deve essere un puntatore a una variabile di un tipo che corrisponde ad un identificatore del tipo `format`.  Il formato controlla l'interpretazione dei campi di input e ha lo stesso form e funzione di un parametro `format` per la funzione [scanf\_s](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md).  Mentre `_cscanf_s` generalmente visualizza il carattere di input, non esegue questa operazione se l'ultima chiamata a è stata a `_ungetch`.  
+## <a name="remarks"></a>Note  
+ La funzione `_cscanf_s` legge i dati direttamente dalla console nei percorsi specificati da `argument`. La funzione [_getche](../../c-runtime-library/reference/getch-getwch.md) viene usata per leggere i caratteri. Ogni parametro facoltativo deve essere un puntatore a una variabile con un tipo corrispondente a un identificatore di tipo in `format`. Il formato controlla l'interpretazione dei campi di input e ha la stessa maschera e la stessa funzione del parametro `format` per la funzione [scanf_s](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md). Anche se `_cscanf_s` restituisce in genere il carattere di input, non esegue questa operazione se l'ultima chiamata era per `_ungetch`.  
   
- Analogamente ad altre versioni sicure delle funzioni nella famiglia `scanf`,`_cscanf_s` e `_cswscanf_s` richiedono la dimensione degli argomenti per i caratteri di campo di tipo `c`, `C`, `s`, `S` e `[`.  Per ulteriori informazioni, vedere [Specifica della larghezza per scanf](../../c-runtime-library/scanf-width-specification.md).  
+ Quali altre versioni sicure delle funzioni di `scanf` famiglia, `_cscanf_s` e `_cswscanf_s` richiede gli argomenti di dimensione per i caratteri di campo di tipo `c`, `C`, `s`, `S`, e `[`. Per altre informazioni, vedere [Specifica della larghezza per scanf](../../c-runtime-library/scanf-width-specification.md).  
   
 > [!NOTE]
->  Il parametro di dimensione è di tipo `unsigned`, non `size_t`.  
+>  Il parametro di dimensione è di tipo `unsigned` non `size_t`.  
   
- Le versioni di queste funzioni con il suffisso `_l` sono identiche ad eccezione per il fatto che utilizzano il parametro delle impostazioni locali passato in ingresso invece di utilizzare quelle del thread corrente.  
+ Le versioni di queste funzioni con il suffisso `_l` sono identiche ad eccezione per il fatto che utilizzano il parametro delle impostazioni locali passato al posto di quelle del thread corrente.  
   
-### Mapping di routine su testo generico  
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
-|Routine TCHAR.H|\_UNICODE e \_MBCS non definiti|\_MBCS definito|\_UNICODE definito|  
-|---------------------|-------------------------------------|---------------------|------------------------|  
+|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tcscanf_s`|`_cscanf_s`|`_cscanf_s`|`_cwscanf_s`|  
 |`_tcscanf_s_l`|`_cscanf_s_l`|`_cscanf_s_l`|`_cwscanf_s_l`|  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`_cscanf_s`,`_cscanf_s_l`|\<conio.h\>|  
-|`_cwscanf_s`, `_cwscanf_s_l`|\<conio.h\> o \<wchar.h\>|  
+|-------------|---------------------|  
+|`_cscanf_s`,`_cscanf_s_l`|\<conio.h>|  
+|`_cwscanf_s`, `_cwscanf_s_l`|\<conio.h> o \<wchar.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
-## Librerie  
- Tutte le versioni delle [Librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Librerie  
+ Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_cscanf_s.c  
@@ -165,21 +182,21 @@ int main( void )
 }  
 ```  
   
-## Input  
+## <a name="input"></a>Input  
   
 ```  
 1 2 3  
 ```  
   
-## Output  
+## <a name="output"></a>Output  
   
 ```  
 You entered 1 2 3  
 ```  
   
-## Vedere anche  
- [I\/O console e porta](../../c-runtime-library/console-and-port-i-o.md)   
- [\_cprintf, \_cprintf\_l, \_cwprintf, \_cwprintf\_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
- [fscanf\_s, \_fscanf\_s\_l, fwscanf\_s, \_fwscanf\_s\_l](../../c-runtime-library/reference/fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md)   
- [scanf\_s, \_scanf\_s\_l, wscanf\_s, \_wscanf\_s\_l](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)   
- [sscanf\_s, \_sscanf\_s\_l, swscanf\_s, \_swscanf\_s\_l](../../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)
+## <a name="see-also"></a>Vedere anche  
+ [Console e porta I/O](../../c-runtime-library/console-and-port-i-o.md)   
+ [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
+ [fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l](../../c-runtime-library/reference/fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md)   
+ [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)   
+ [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](../../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)

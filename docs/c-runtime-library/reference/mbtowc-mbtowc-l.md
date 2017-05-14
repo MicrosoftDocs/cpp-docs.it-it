@@ -52,10 +52,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 40fe628e045d8aa8930560ba8ab88a9e203022e3
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 78ec6b782a5dd0c78e3e2724fd06258d17fdbe67
+ms.contentlocale: it-it
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="mbtowc-mbtowcl"></a>mbtowc, _mbtowc_l
@@ -91,7 +92,7 @@ int _mbtowc_l(
  Impostazioni locali da usare.  
   
 ## <a name="return-value"></a>Valore restituito  
- Se **mbchar** non è **NULL** e se l'oggetto a cui punta `mbchar` rappresenta un carattere multibyte valido, `mbtowc` restituisce la lunghezza in byte del carattere multibyte. Se `mbchar` è **NULL** o l'oggetto a cui punta è un carattere Null wide (L'\0'), la funzione restituisce 0. Se l'oggetto a cui punta `mbchar` non forma un carattere multibyte valido entro i primi *count* caratteri, restituisce -1.  
+ Se **mbchar** non è **NULL** e se l'oggetto a cui punta `mbchar` rappresenta un carattere multibyte valido, `mbtowc` restituisce la lunghezza in byte del carattere multibyte. Se `mbchar` è **NULL** o l'oggetto a cui punta è un carattere Null wide (L'\0'), la funzione restituisce 0. Se l'oggetto che `mbchar` punti a non formano un carattere multibyte valido all'interno della prima *conteggio* caratteri, viene restituito -1.  
   
 ## <a name="remarks"></a>Note  
  La funzione `mbtowc` converte un numero di byte pari a *count* o meno a cui punta `mbchar`, se `mbchar` non è **NULL**, in un carattere wide corrispondente. `mbtowc` archivia il carattere wide risultante in *wchar* se *wchar* non è **NULL**. `mbtowc` non esamina più di `MB_CUR_MAX` byte. `mbtowc` usa le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. La funzione `_mbtowc_l` è identica, ma usa le impostazioni locali passate. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
@@ -166,9 +167,6 @@ Attempt to convert when target is NULL
 Attempt to convert a NULL pointer to a wide character:  
   Bytes converted: 0  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Conversione dei dati](../../c-runtime-library/data-conversion.md)   

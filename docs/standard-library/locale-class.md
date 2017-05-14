@@ -10,9 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - xlocale/std::locale
-- std::locale
-- std.locale
 - locale
+- locale/std::locale::category
+- locale/std::locale::combine
+- locale/std::locale::name
+- locale/std::locale::classic
+- locale/std::locale::global
+- locale/std::locale::operator( )
+- locale/std::locale::facet
+- locale/std::locale::id
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,10 +42,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: c32deb2524dc56925d3235c170f6ff0219c1b28c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 6e33e125d2689d37443bec58c5b01f5b7e72ccfd
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="locale-class"></a>Classe locale
@@ -60,7 +67,7 @@ static locale::id id;
   
  È possibile definire un set aperto di tali facet. È inoltre possibile costruire un oggetto delle impostazioni locali che indica un numero arbitrario di facet.  
   
- I gruppi predefiniti di questi facet rappresentano le [categorie di impostazioni locali](#locale__category) tradizionalmente gestite nella libreria C standard dalla funzione `setlocale`.  
+ I gruppi predefiniti di questi facet rappresentano le [categorie di impostazioni locali](#category) tradizionalmente gestite nella libreria C standard dalla funzione `setlocale`.  
   
  La categoria collate (LC_COLLATE) include i facet:  
   
@@ -124,7 +131,7 @@ messages<wchar_t>
   
  Alcuni di questi facet predefiniti vengono utilizzati dalle classi iostream per controllare la conversione dei valori numerici da e in sequenze di testo.  
   
- Un oggetto delle impostazioni locali della classe consente inoltre di archiviare un nome delle impostazioni locali come oggetto della classe [string](../standard-library/string-typedefs.md#string). L'uso di un nome delle impostazioni locali non valido per costruire un facet o un oggetto delle impostazioni locali genera un oggetto della classe [runtime_error](../standard-library/runtime-error-class.md). Il nome delle impostazioni locali archiviate è `"*"` se l'oggetto delle impostazioni locali non è in grado di determinare che le impostazioni locali di tipo C corrispondono esattamente a quelle rappresentate dall'oggetto. In caso contrario, è possibile definire delle impostazioni locali corrispondenti all'interno della libreria C standard per l'oggetto delle impostazioni locali `Loc`, chiamando `setlocale`(LC_ALL `,` `Loc`. [name](#locale__name)`().c_str()`).  
+ Un oggetto delle impostazioni locali della classe consente inoltre di archiviare un nome delle impostazioni locali come oggetto della classe [string](../standard-library/string-typedefs.md#string). L'uso di un nome delle impostazioni locali non valido per costruire un facet o un oggetto delle impostazioni locali genera un oggetto della classe [runtime_error](../standard-library/runtime-error-class.md). Il nome delle impostazioni locali archiviate è `"*"` se l'oggetto delle impostazioni locali non è in grado di determinare che le impostazioni locali di tipo C corrispondono esattamente a quelle rappresentate dall'oggetto. In caso contrario, è possibile definire delle impostazioni locali corrispondenti all'interno della libreria C standard per l'oggetto delle impostazioni locali `Loc`, chiamando `setlocale`(LC_ALL `,` `Loc`. [name](#name)`().c_str()`).  
   
  In questa implementazione è inoltre possibile chiamare la funzione membro statica:  
   
@@ -154,35 +161,35 @@ cout.imbue(loc);
   
 |||  
 |-|-|  
-|[locale](#locale__locale)|Crea le impostazioni locali o una copia delle impostazioni locali oppure una copia delle impostazioni locali in cui un facet o una categoria è stata sostituita da un facet o da una categoria di altre impostazioni locali.|  
+|[locale](#locale)|Crea le impostazioni locali o una copia delle impostazioni locali oppure una copia delle impostazioni locali in cui un facet o una categoria è stata sostituita da un facet o da una categoria di altre impostazioni locali.|  
   
 ### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
-|[category](#locale__category)|Tipo Integer che fornisce i valori della maschera di bit per indicare le famiglie di facet standard.|  
+|[category](#category)|Tipo Integer che fornisce i valori della maschera di bit per indicare le famiglie di facet standard.|  
   
 ### <a name="member-functions"></a>Funzioni membro  
   
 |||  
 |-|-|  
-|[combine](#locale__combine)|Inserisce un facet delle impostazioni locali specificate nelle impostazioni locali di destinazione.|  
-|[name](#locale__name)|Restituisce il nome delle impostazioni locali archiviate.|  
+|[combine](#combine)|Inserisce un facet delle impostazioni locali specificate nelle impostazioni locali di destinazione.|  
+|[name](#name)|Restituisce il nome delle impostazioni locali archiviate.|  
   
 ### <a name="static-functions"></a>Funzioni statiche  
   
 |||  
 |-|-|  
-|[classic](#locale__classic)|La funzione membro statica restituisce un oggetto delle impostazioni locali che rappresenta le impostazioni locali C classiche.|  
-|[global](#locale__global)|Reimposta le impostazioni locali predefinite per il programma.|  
+|[classic](#classic)|La funzione membro statica restituisce un oggetto delle impostazioni locali che rappresenta le impostazioni locali C classiche.|  
+|[global](#global)|Reimposta le impostazioni locali predefinite per il programma.|  
   
 ### <a name="operators"></a>Operatori  
   
 |||  
 |-|-|  
-|[operator!=](#locale__operator_neq)|Verifica l'ineguaglianza di due impostazioni locali.|  
-|[operator( )](#locale__operator__)|Confronta due oggetti `basic_string`.|  
-|[operator==](#locale__operator_eq_eq)|Verifica l'uguaglianza di due impostazioni locali.|  
+|[operator!=](#op_neq)|Verifica l'ineguaglianza di due impostazioni locali.|  
+|[operator( )](#op_call)|Confronta due oggetti `basic_string`.|  
+|[operator==](#op_eq_eq)|Verifica l'uguaglianza di due impostazioni locali.|  
   
 ### <a name="classes"></a>Classi  
   
@@ -196,7 +203,7 @@ cout.imbue(loc);
   
  **Spazio dei nomi:** std  
   
-##  <a name="a-namelocalecategorya--localecategory"></a><a name="locale__category"></a>  locale::category  
+##  <a name="category"></a>  locale::category  
  Tipo Integer che fornisce i valori della maschera di bit per indicare le famiglie di facet standard.  
   
 ```  
@@ -234,7 +241,7 @@ static const int none = 0;
   
  È possibile rappresentare un gruppo arbitrario di categorie usando `OR` con queste constanti, come in **monetary** &#124; **time**.  
   
-##  <a name="a-namelocaleclassica--localeclassic"></a><a name="locale__classic"></a>  locale::classic  
+##  <a name="classic"></a>  locale::classic  
  La funzione membro statica restituisce un oggetto delle impostazioni locali che rappresenta le impostazioni locali C classiche.  
   
 ```  
@@ -286,7 +293,7 @@ The previous locale was classic.
 The current locale is not classic.  
 ```  
   
-##  <a name="a-namelocalecombinea--localecombine"></a><a name="locale__combine"></a>  locale::combine  
+##  <a name="combine"></a>  locale::combine  
  Inserisce un facet delle impostazioni locali specificate nelle impostazioni locali di destinazione.  
   
 ```  
@@ -331,7 +338,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namefacetclassa--facet-class"></a><a name="facet_class"></a>  Classe facet  
+##  <a name="facet_class"></a>  Classe facet  
  Classe utilizzata come classe base per tutti i facet delle impostazioni locali.  
 
 ```    
@@ -350,7 +357,7 @@ private:
   
  In questi casi, il costruttore della classe di base facet deve avere un argomento `_Refs` di valore zero. Quando non è più necessario, l'oggetto viene eliminato. Di conseguenza, viene fornito un argomento _ *Refs* diverso da zero solo nei rari casi in cui ci si assume la responsabilità dell'intera durata dell'oggetto.  
   
-##  <a name="a-namelocaleglobala--localeglobal"></a><a name="locale__global"></a>  locale::global  
+##  <a name="global"></a>  locale::global  
  Reimposta le impostazioni locali predefinite per il programma. Ha effetto sulle impostazioni locali globali sia per C che per C++.  
   
 ```  
@@ -395,7 +402,7 @@ The current locale is: German_Germany.1252
 The previous locale was: C  
 ```  
   
-##  <a name="a-nameidclassa--id-class"></a><a name="id_class"></a>  Classe id  
+##  <a name="id_class"></a>  Classe id  
  La classe di membro fornisce un'identificazione dei facet univoca utilizzata come indice per cercare i facet nelle impostazioni locali.  
   
 class id { protected:    id(); private:    id(const id&) // not defined void operator=(const id&)  // not defined    };  
@@ -403,7 +410,7 @@ class id { protected:    id(); private:    id(const id&) // not defined void ope
 ### <a name="remarks"></a>Note  
  La classe membro descrive l'oggetto membro statico richiesto da ciascun facet delle impostazioni locali univoco. Si noti che non è possibile copiare o assegnare un oggetto della classe **id**.  
   
-##  <a name="a-namelocalelocalea--localelocale"></a><a name="locale__locale"></a>  locale::locale  
+##  <a name="locale"></a>  locale::locale  
  Crea le impostazioni locali o una copia delle impostazioni locali oppure una copia delle impostazioni locali in cui un facet o una categoria è stata sostituita da un facet o da una categoria di altre impostazioni locali.  
   
 ```  
@@ -494,7 +501,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namelocalenamea--localename"></a><a name="locale__name"></a>  locale::name  
+##  <a name="name"></a>  locale::name  
  Restituisce il nome delle impostazioni locali archiviate.  
   
 ```  
@@ -531,7 +538,7 @@ The name of the previous locale is: C.
 The name of the current locale is: German_Germany.1252.  
 ```  
   
-##  <a name="a-namelocaleoperatorneqa--localeoperator"></a><a name="locale__operator_neq"></a>  locale::operator!=  
+##  <a name="op_neq"></a>  locale::operator!=  
  Verifica l'ineguaglianza di due impostazioni locali.  
   
 ```  
@@ -539,7 +546,7 @@ bool operator!=(const locale& right) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` right`  
+ `right`  
  Una delle impostazioni locali di cui verificare la disuguaglianza.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -588,7 +595,7 @@ locales loc1 (German_Germany.1252) and
  loc3 (English_United States.1252) are not equal.  
 ```  
   
-##  <a name="a-namelocaleoperatora--localeoperator"></a><a name="locale__operator__"></a>  locale::operator()  
+##  <a name="op_call"></a>  locale::operator()  
  Confronta due oggetti `basic_string`.  
   
 ```  
@@ -599,18 +606,18 @@ bool operator()(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` left`  
+ `left`  
  Stringa sinistra.  
   
- ` right`  
+ `right`  
  Stringa destra.  
   
 ### <a name="return-value"></a>Valore restituito  
  La funzione membro restituisce:  
   
--   -1 se la prima sequenza ottiene un risultato inferiore nel confronto con la seconda sequenza.  
+-   - 1 se la prima sequenza ottiene un risultato inferiore nel confronto con la seconda sequenza.  
   
--   +1 se la seconda sequenza ottiene un risultato inferiore nel confronto con la prima sequenza.  
+-   + 1 se la seconda sequenza ottiene un risultato inferiore nel confronto con la prima sequenza.  
   
 -   0 se le sequenze sono equivalenti.  
   
@@ -620,7 +627,7 @@ bool operator()(
 ```  
 const collate<CharType>& fac = use_fac<collate<CharType>>(*this);
 
-return (fac.compare(left.begin(), left.end(), right.begin(), right.end()) <0);
+return (fac.compare(left.begin(), left.end(), right.begin(), right.end()) < 0);
 ```  
   
  In questo modo, è possibile usare un oggetto locale come oggetto della funzione.  
@@ -656,7 +663,7 @@ int main( )
 0  
 ```  
   
-##  <a name="a-namelocaleoperatoreqeqa--localeoperator"></a><a name="locale__operator_eq_eq"></a>  locale::operator==  
+##  <a name="op_eq_eq"></a>  locale::operator==  
  Verifica l'uguaglianza di due impostazioni locali.  
   
 ```  
@@ -664,7 +671,7 @@ bool operator==(const locale& right) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` right`  
+ `right`  
  Una delle impostazioni locali di cui verificare l'uguaglianza.  
   
 ### <a name="return-value"></a>Valore restituito  

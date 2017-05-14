@@ -1,50 +1,67 @@
 ---
-title: "_setmbcp | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_setmbcp"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-locale-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_setmbcp"
-  - "setmbcp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_setmbcp (funzione)"
-  - "tabelle codici multibyte"
-  - "setmbcp (funzione)"
+title: _setmbcp | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _setmbcp
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-locale-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _setmbcp
+- setmbcp
+dev_langs:
+- C++
+helpviewer_keywords:
+- setmbcp function
+- _setmbcp function
+- multibyte code pages
 ms.assetid: cfde53b5-0b73-4684-81b1-a8d3aafc85de
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# _setmbcp
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 4ae4dc9b57da5ee7d38f32066b8b4b204c50f065
+ms.contentlocale: it-it
+ms.lasthandoff: 04/01/2017
 
-Imposta una nuova tabella di codici multibyte.  
+---
+# <a name="setmbcp"></a>_setmbcp
+Imposta una nuova tabella codici multibyte.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 int _setmbcp(  
@@ -52,46 +69,46 @@ int _setmbcp(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `codepage`  
- Nuova impostazione della tabella di codici per le routine multibyte indipendenti dalle impostazioni locali.  
+ Nuova impostazione della tabella codici per le routine multibyte indipendenti dalle impostazioni locali.  
   
-## Valore restituito  
- Restituisce 0 se la tabella dei codici è impostata in modo corretto.  Se un valore non valido della tabella codici viene fornito per `codepage`, restituisce \-1 e la tabella codici resta invariata.  Imposta `errno` a `EINVAL` se si verifica un errore di allocazione della memoria.  
+## <a name="return-value"></a>Valore restituito  
+ Restituisce 0 se la tabella codici è impostata correttamente. Se viene fornito un valore di tabella codici non valida per `codepage`, restituisce -1 e l'impostazione di pagina del codice è rimasto invariato. Imposta `errno` su `EINVAL` se si verifica un errore di allocazione di memoria.  
   
-## Note  
- La funzione `_setmbcp` specifica una nuova tabella codici multibyte.  Per impostazione predefinita, il sistema runtime imposta automaticamente la tabella codici multibyte alla tabella codici ANSI del sistema predefinito.  L'impostazione della tabella codici multibyte influisce su tutte le routine multibyte che non sono dipendenti dalle impostazioni locali.  Tuttavia, è possibile indicare a `_setmbcp` di utilizzare la tabella codici definita per le impostazioni locali correnti \(vedere l'elenco seguente delle costanti manifesto e i risultati dei comportamenti registrati\).  Per un elenco delle routine multibyte dipendenti dalla tabella codici delle impostazioni locali anziché dalla tabella codici multibyte, vedere [Interpretazione delle sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md).  
+## <a name="remarks"></a>Note  
+ La funzione `_setmbcp` specifica una nuova tabella codici multibyte. Per impostazione predefinita, il sistema di runtime imposta automaticamente la tabella codici multibyte sulla tabella codici ANSI predefinita del sistema. L'impostazione della tabella codici multibyte influisce su tutte le routine multibyte non dipendenti dalle impostazioni locali. Tuttavia, è possibile indicare a `_setmbcp` di usare la tabella codici definita per le impostazioni locali correnti (vedere l'elenco seguente di costanti manifeste e i risultati a livello di comportamento associati). Per un elenco delle routine multibyte dipendenti dalla tabella codici delle impostazioni locali, anziché dalla tabella codici multibyte, vedere [Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md).  
   
- La tabella codici multibyte influisce sull'elaborazione di caratteri multibyte dalle seguenti routine di libreria di runtime:  
+ La tabella codici multibyte influisce anche sull'elaborazione dei caratteri multibyte per le routine della libreria di runtime seguenti:  
   
 ||||  
 |-|-|-|  
-|[funzioni \_exec](../../c-runtime-library/exec-wexec-functions.md)|[\_mktemp](../../c-runtime-library/reference/mktemp-wmktemp.md)|[\_stat](../../c-runtime-library/reference/stat-functions.md)|  
-|[\_fullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)|[funzioni \_spawn](../../c-runtime-library/spawn-wspawn-functions.md)|[\_tempnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)|  
-|[\_makepath](../../c-runtime-library/reference/makepath-wmakepath.md)|[\_splitpath](../../c-runtime-library/reference/splitpath-wsplitpath.md)|[tmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)|  
+|[Funzioni _exec](../../c-runtime-library/exec-wexec-functions.md)|[_mktemp](../../c-runtime-library/reference/mktemp-wmktemp.md)|[_stat](../../c-runtime-library/reference/stat-functions.md)|  
+|[_fullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)|[Funzioni _spawn](../../c-runtime-library/spawn-wspawn-functions.md)|[_tempnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)|  
+|[_makepath](../../c-runtime-library/reference/makepath-wmakepath.md)|[_splitpath](../../c-runtime-library/reference/splitpath-wsplitpath.md)|[tmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)|  
   
- Inoltre, tutte le routine di libreria di runtime che ricevono il carattere multibyte `argv` o argomenti del programma di `envp` e i parametri \(ad esempio i gruppi di `_spawn` e di `_exec` \) elaborano tali stringhe in base alla tabella codici multibyte.  Di conseguenza, queste routine sono interessate da una chiamata a `_setmbcp` che modifica la tabella codici multibyte.  
+ Inoltre, tutte le routine della libreria di runtime che ricevono argomenti di programma `argv` o `envp` con caratteri multibyte (come le famiglie `_exec` e `_spawn`) elaborano queste stringhe in base alla tabella codici multibyte. Pertanto, una chiamata a `_setmbcp` che modifica la tabella codici multibyte influisce anche su queste routine.  
   
- L'argomento `codepage` può essere impostato su uno dei valori che seguono:  
+ L'argomento `codepage` può essere impostato su uno dei valori seguenti:  
   
--   `_MB_CP_ANSI` Utilizzare la tabella codici ANSI ottenuta dal sistema operativo all'avvio del programma.  
+-   `_MB_CP_ANSI` Per usare la tabella codici ANSI ottenuta dal sistema operativo all'avvio del programma.  
   
--   `_MB_CP_LOCALE` Utilizzare la tabella codici corrente delle impostazioni locali ottenuta da una chiamata precedente a [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md).  
+-   `_MB_CP_LOCALE` Per usare la tabella codici delle impostazioni locali correnti ottenuta da una chiamata precedente a [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md).  
   
--   `_MB_CP_OEM` Utilizzare la tabella codici OEM ottenuta dal sistema operativo all'avvio del programma.  
+-   `_MB_CP_OEM` Per usare la tabella codici OEM ottenuta dal sistema operativo all'avvio del programma.  
   
--   `_MB_CP_SBCS` Utilizzare la tabella codici a byte singolo.  Quando la tabella codici è impostata su `_MB_CP_SBCS`, una routine come [\_ismbblead](../../c-runtime-library/reference/ismbblead-ismbblead-l.md) restituisce sempre false.  
+-   `_MB_CP_SBCS` Per usare la tabella codici a byte singolo. Quando la tabella codici è impostata su `_MB_CP_SBCS`, una routine come [_ismbblead](../../c-runtime-library/reference/ismbblead-ismbblead-l.md) restituisce sempre false.  
   
--   Qualsiasi altro valore valido della tabella codici, indipendentemente dal valore è di tipo ANSI, OEM, o un'altra tabella codici supportata dal sistema operativo \(eccetto UTF\-7 e la codifica UTF\-8, che non sono supportate\).  
+-   Qualsiasi altro valore di tabella codici valido, indipendentemente dal fatto che il valore corrisponda a una tabella codici ANSI, OEM o qualsiasi altra tabella codici supportata dal sistema operativo (ad eccezione di UTF-7 e UTF-8, che non sono supportati).  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`_setmbcp`|\<mbctype.h\>|  
+|-------------|---------------------|  
+|`_setmbcp`|\<mbctype.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
-## Vedere anche  
- [\_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
- [setlocale, \_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)
+## <a name="see-also"></a>Vedere anche  
+ [_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
+ [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)

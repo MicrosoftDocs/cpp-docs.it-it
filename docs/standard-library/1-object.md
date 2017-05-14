@@ -35,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
-ms.openlocfilehash: e90ee470e3cf990240f3c586c23fe8fd3d487f3d
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: ce86a87e5f22b27c5b1d7eeeeb4edcbcac8e15c7
+ms.contentlocale: it-it
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="1-object"></a>Oggetto _1
@@ -54,7 +55,7 @@ namespace placeholders {
 ```  
   
 ## <a name="remarks"></a>Note  
- Gli oggetti `_1, _2, ... _M` sono segnaposto che definiscono rispettivamente il primo, secondo e così via argomento Mth in una chiamata di funzione a un oggetto restituito dalla [funzione bind](../standard-library/functional-functions.md#bind_function). Usare `_N` per specificare il punto in cui inserire l'argomento Nth quando viene valutata l'espressione bind.  
+ Gli oggetti `_1, _2, ... _M` sono segnaposto che definisce il primo, secondo,..., argomento mese rispettivamente in una chiamata di funzione a un oggetto restituito da [associare](../standard-library/functional-functions.md#bind). Usare `_N` per specificare il punto in cui inserire l'argomento Nth quando viene valutata l'espressione bind.  
   
  In questa implementazione il valore di `M` è 20.  
   
@@ -116,6 +117,6 @@ int main()
  **Spazio dei nomi:** std  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzione bind](../standard-library/functional-functions.md#bind_function)   
+ [operazione di binding](../standard-library/functional-functions.md#bind)   
  [Classe is_placeholder](../standard-library/is-placeholder-class.md)
 

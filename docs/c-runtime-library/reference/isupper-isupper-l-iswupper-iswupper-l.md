@@ -1,59 +1,76 @@
 ---
-title: "isupper, _isupper_l, iswupper, _iswupper_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "isupper"
-  - "iswupper"
-  - "_iswupper_l"
-  - "_isupper_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "isupper"
-  - "_istupper"
-  - "iswupper"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_istupper (funzione)"
-  - "_isupper_l (funzione)"
-  - "_iswupper_l (funzione)"
-  - "istupper (funzione)"
-  - "isupper (funzione)"
-  - "isupper_l (funzione)"
-  - "iswupper (funzione)"
-  - "iswupper_l (funzione)"
+title: isupper, _isupper_l, iswupper, _iswupper_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- isupper
+- iswupper
+- _iswupper_l
+- _isupper_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- isupper
+- _istupper
+- iswupper
+dev_langs:
+- C++
+helpviewer_keywords:
+- istupper function
+- iswupper function
+- isupper_l function
+- _isupper_l function
+- iswupper_l function
+- _istupper function
+- _iswupper_l function
+- isupper function
 ms.assetid: da2bcc9f-241c-48c0-9a0e-ad273827e16a
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# isupper, _isupper_l, iswupper, _iswupper_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: ded3f62cc54e769e9b7ba17bd106a64daf14e63f
+ms.contentlocale: it-it
+ms.lasthandoff: 04/01/2017
 
+---
+# <a name="isupper-isupperl-iswupper-iswupperl"></a>isupper, _isupper_l, iswupper, _iswupper_l
 Determina se un intero rappresenta un carattere maiuscolo.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 int isupper(  
@@ -72,42 +89,39 @@ int _iwsupper_l(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `c`  
- Integer da testare.  
+ Valore Integer da testare.  
   
  `locale`  
- Impostazioni locali da utilizzare.  
+ Impostazioni locali da usare.  
   
-## Valore restituito  
- Ognuna di queste routine restituisce un valore diverso da zero se `c` è una rappresentazione specifica di una lettera maiuscola.  `isupper` restituisce un valore diverso da zero se `c` è un carattere maiuscolo \(A – Z\).  `iswupper` restituisce un valore diverso da zero se `c` è un carattere wide che corrisponde ad una lettera maiuscola, o se `c` è un set di caratteri wide definito dall'implementazione per il quale nessuno tra `iswcntrl`, `iswdigit`, `iswpunct`, o `iswspace` è diverso da zero.  Ognuna di queste routine restituisce 0 se `c` non soddisfa la condizione di test.  
+## <a name="return-value"></a>Valore restituito  
+ Ognuna di queste routine restituisce un valore diverso da zero se `c` è una rappresentazione particolare di un carattere maiuscolo. `isupper`Restituisce un valore diverso da zero se `c` è una lettera maiuscola (A - Z). `iswupper` restituisce un valore diverso da zero se `c` è un carattere wide corrispondente a una lettera maiuscola oppure se `c` fa parte di un set definito dall'implementazione di caratteri wide per cui nessuno dei valori `iswcntrl`, `iswdigit`, `iswpunct` o `iswspace` è diverso da zero. Ognuna di queste routine restituisce 0 se `c` non soddisfa la condizione di test.  
   
- Le versioni di queste funzioni che hanno il suffisso `_l` usano le impostazioni locali che vengono passate anziché le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali.  Per ulteriori informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ Le versioni di queste funzioni che hanno il suffisso `_l` utilizzano le impostazioni locali passate anziché le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
   
- Il comportamento di `isupper` e `_isupper_l` non viene definito se `c` non è EOF o è compreso nell'intervallo tra 0 e 0xFF, inclusi.  Quando una libreria di debug CRT viene utilizzata e `c` non è uno di questi valori, le funzioni generano un'asserzione.  
+ Il comportamento di `isupper` e `_isupper_l` è indefinito se `c` non è EOF o non è compreso nell'intervallo da 0 a 0xFF, inclusi. Quando si usa una libreria di debug CRT e `c` non è uno di questi valori, le funzioni generano un'asserzione.  
   
-### Mapping di routine su testo generico  
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
-|Routine TCHAR.H|\_UNICODE & \_MBCS non definiti|\_MBCS definito|\_UNICODE definito|  
-|---------------------|-------------------------------------|---------------------|------------------------|  
-|`_istupper`|`isupper`|[\_ismbcupper](../../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|`iswupper`|  
-|`_istupper_l`|`_isupper_l`|[\_ismbclower, \_ismbclower\_l, \_ismbcupper, \_ismbcupper\_l](../../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|`_iswupper_l`|  
+|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
+|`_istupper`|`isupper`|[_ismbcupper](../../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|`iswupper`|  
+|`_istupper_l`|`_isupper_l`|[_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l](../../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|`_iswupper_l`|  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`isupper`|\<ctype.h\>|  
-|`_isupper_l`|\<ctype.h\>|  
-|`iswupper`|\<ctype.h\> o \<wchar.h\>|  
-|`_iswupper_l`|\<ctype.h\>|  
+|-------------|---------------------|  
+|`isupper`|\<ctype.h>|  
+|`_isupper_l`|\<ctype.h>|  
+|`iswupper`|\<ctype.h> o \<wchar.h>|  
+|`_iswupper_l`|\<ctype.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
-## Equivalente .NET Framework  
- [System::Char::IsUpper](https://msdn.microsoft.com/en-us/library/system.char.isupper.aspx)  
-  
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classificazione di caratteri](../../c-runtime-library/character-classification.md)   
  [Impostazioni locali](../../c-runtime-library/locale.md)   
- [is, isw Routines](../../c-runtime-library/is-isw-routines.md)
+ [Routine is, isw](../../c-runtime-library/is-isw-routines.md)

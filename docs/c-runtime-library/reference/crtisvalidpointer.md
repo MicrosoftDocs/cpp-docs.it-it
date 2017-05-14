@@ -49,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 4e95f4f22b8b319f89b612a50c4372ca0da75f66
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 021277c17252d18ee0127d710b3a64b3d25fd6d9
+ms.contentlocale: it-it
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="crtisvalidpointer"></a>_CrtIsValidPointer
@@ -105,9 +106,6 @@ _ASSERTE( _CrtIsValidPointer( address, size, TRUE ) );
   
 ## <a name="example"></a>Esempio  
  Vedere l'esempio per l'argomento [_CrtIsValidHeapPointer](../../c-runtime-library/reference/crtisvalidheappointer.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Routine di debug](../../c-runtime-library/debug-routines.md)

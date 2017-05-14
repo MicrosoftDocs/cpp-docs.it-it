@@ -10,9 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - xfunctional/std::binder1st
-- std::binder1st
 - binder1st
-- std.binder1st
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: 71d06115b1f6cc0df5a3dee9ce60482e641407ef
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 4f9198d5b3f29799d38036ce4fd0dd0a67b66137
+ms.contentlocale: it-it
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="binder1st-class"></a>Classe binder1st
@@ -85,7 +84,7 @@ protected:
 ## <a name="remarks"></a>Note  
  La classe modello archivia una copia di un oggetto funzione binaria `Func` in **op** e una copia di `left` in **value**. Definisce la relativa funzione membro `operator()` che restituisce **op**( **value**, `right`).  
   
- Se `Func` è un oggetto di tipo **Operation** e `c` è una costante, [bind1st](../standard-library/functional-functions.md#bind1st_function) ( `Func`, `c` ) equivale al costruttore di classe `binder1st` `binder1st`\< **Operation**> ( `Func`, `c` ) ed è più pratico.  
+ Se `Func` è un oggetto di tipo **Operation** e `c` è una costante, [bind1st](../standard-library/functional-functions.md#bind1st) ( `Func`, `c` ) equivale al costruttore di classe `binder1st` `binder1st`\< **Operation**> ( `Func`, `c` ) ed è più pratico.  
   
 ## <a name="example"></a>Esempio  
   

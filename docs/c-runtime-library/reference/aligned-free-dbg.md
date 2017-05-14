@@ -49,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 40a42d694d6f0101573cb9b29e5a7571c4863bb0
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 3522cd33098484194fec8158b26577b9e01dfe62
+ms.contentlocale: it-it
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="alignedfreedbg"></a>_aligned_free_dbg
@@ -71,7 +72,7 @@ void _aligned_free_dbg(
  Puntatore al blocco di memoria che è stato restituito alla funzione `_aligned_malloc` o `_aligned_offset_malloc`.  
   
 ## <a name="remarks"></a>Note  
- La funzione `_aligned_free_dbg` è una versione di debug della funzione [_aligned_free](../../c-runtime-library/reference/aligned-free.md). Quando [_DEBUG](../../c-runtime-library/debug.md) non è definito, ogni chiamata a `_aligned_free_dbg` viene ridotta a una chiamata a _`aligned_free`. Sia \_`aligned_free` che `_aligned_free_dbg` liberano un blocco di memoria nell'heap di base, ma `_aligned_free_dbg` include una funzionalità di debug: la possibilità di mantenere i blocchi liberati nell'elenco collegato dell'heap per simulare una condizione di memoria insufficiente.  
+ La funzione `_aligned_free_dbg` è una versione di debug della funzione [_aligned_free](../../c-runtime-library/reference/aligned-free.md). Quando [_DEBUG](../../c-runtime-library/debug.md) non è definito, ogni chiamata a `_aligned_free_dbg` viene ridotta a una chiamata a `_aligned_free`. Entrambi `_aligned_free` e `_aligned_free_dbg` libera un blocco di memoria nell'heap di base, ma `_aligned_free_dbg` include una funzionalità di debug: blocca la possibilità di mantenere liberati nell'elenco collegato dell'heap per simulare condizioni di memoria insufficiente.  
   
  `_aligned_free_dbg` esegue un controllo di validità su tutti i percorsi di file e di blocchi specificati prima di eseguire prima di procedere a liberare i blocchi. Non è previsto che l'applicazione fornisca queste informazioni. Quando un blocco di memoria viene liberato, il gestore dell'heap di debug controlla automaticamente l'integrità dei buffer a ogni lato della porzione utente e genera un rapporto errori se si sono verificate sovrascritture. Se il campo di bit `_CRTDBG_DELAY_FREE_MEM_DF` del flag [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) è impostato, il blocco liberato viene riempito con il valore 0xDD, viene assegnato il tipo di blocco `_FREE_BLOCK` e il blocco viene mantenuto nell'elenco collegato di blocchi di memoria dell'heap.  
   
@@ -85,10 +86,7 @@ void _aligned_free_dbg(
 |-------------|---------------------|  
 |`_aligned_free_dbg`|\<crtdbg.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Routine di debug](../../c-runtime-library/debug-routines.md)

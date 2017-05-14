@@ -36,10 +36,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: 119af430ef2d333780587ce72fb5be65faf43892
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: 75f527ca1e0742a1958076b49446b257793c69a5
+ms.contentlocale: it-it
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltcodecvtgt"></a>&lt;codecvt&gt;
@@ -85,7 +86,7 @@ Definisce diverse classi modello che descrivono oggetti basati sulla classe mode
   
 |||  
 |-|-|  
-|[codecvt_mode](../standard-library/codecvt-enums.md#codecvt_mode_enumeration)|Specifica informazioni sulla configurazione per i facet delle impostazioni locali.|  
+|[codecvt_mode](../standard-library/codecvt-enums.md#codecvt_mode)|Specifica informazioni sulla configurazione per i facet delle impostazioni locali.|  
   
 ### <a name="classes"></a>Classi  
   

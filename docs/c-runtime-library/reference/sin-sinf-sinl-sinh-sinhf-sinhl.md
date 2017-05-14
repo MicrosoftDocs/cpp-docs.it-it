@@ -1,68 +1,85 @@
 ---
-title: "sin, sinf, sinl, sinh, sinhf, sinhl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "sinl"
-  - "sinf"
-  - "sinhf"
-  - "sinh"
-  - "sin"
-  - "sinhl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_sinl"
-  - "sinf"
-  - "sinhl"
-  - "sinl"
-  - "sin"
-  - "sinhf"
-  - "_sinhl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_sinhl (funzione)"
-  - "_sinl (funzione)"
-  - "calcolo di seni"
-  - "funzioni iperboliche"
-  - "sin (funzione)"
-  - "sinf (funzione)"
-  - "sinh (funzione)"
-  - "sinhf (funzione)"
-  - "sinhl (funzione)"
-  - "sinl (funzione)"
-  - "funzioni trigonometriche"
+title: sin, sinf, sinl, sinh, sinhf, sinhl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- sinl
+- sinf
+- sinhf
+- sinh
+- sin
+- sinhl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _sinl
+- sinf
+- sinhl
+- sinl
+- sin
+- sinhf
+- _sinhl
+dev_langs:
+- C++
+helpviewer_keywords:
+- sinh function
+- _sinl function
+- _sinhl function
+- sinhf function
+- sinl function
+- calculating sines
+- sin function
+- trigonometric functions
+- sinf function
+- sinhl function
+- hyperbolic functions
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# sin, sinf, sinl, sinh, sinhf, sinhl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 8f33398820df9df9de21e7d24cc35f76f131bd43
+ms.contentlocale: it-it
+ms.lasthandoff: 04/01/2017
 
-Calcola i seni e i seni iperbolici.  
+---
+# <a name="sin-sinf-sinl-sinh-sinhf-sinhl"></a>sin, sinf, sinl, sinh, sinhf, sinhl
+Calcola il seno e il seno iperbolico.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 double sin(  
@@ -77,8 +94,7 @@ long double sin(
 float sinf(  
    float x   
 );  
-long double sinl(  
-   long double x  
+long double sinl(   long double x  
 );  
 double sinh(  
    double x   
@@ -97,35 +113,35 @@ long double sinhl(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `x`  
  Angolo in radianti.  
   
-## Valore restituito  
- La funzione `sin` restituisce il seno di `x`.  Se `x` è maggiore o uguale a 263, o inferiore o uguale a 263, si verifica una perdita di importanza nel risultato.  
+## <a name="return-value"></a>Valore restituito  
+ Le funzioni `sin` restituiscono il seno di `x`. Se `x` è maggiore o uguale a 263 o inferiore o uguale a -263, si verifica una perdita di significato nel risultato.  
   
- Le funzioni `sinh` restituiscono il seno iperbolico di `x`.  Per impostazione predefinita, se il risultato è troppo grande, `sinh` imposta `errno` a `ERANGE` e restituisce ±`HUGE_VAL`.  
+ Le funzioni `sinh` restituiscono il seno iperbolico di `x`. Per impostazione predefinita, se il risultato è troppo grande, `sinh` imposta `errno` su `ERANGE` e restituisce ±`HUGE_VAL`.  
   
 |Input|Eccezione SEH|Eccezione Matherr|  
 |-----------|-------------------|-----------------------|  
-|± QNAN, IND|Nessuno|\_DOMAIN|  
-|± ∞ \(sin, sinf, sinl\)|NON VALIDO|\_DOMAIN|  
-|&#124;x&#124; ≥ 7.104760e\+002 \(sinh, sinhf, sinhl\)|OVERFLOW\+INEXACT|OVERFLOW|  
+|± QNAN,IND|None|_DOMAIN|  
+|± ∞ (sin, sinf, sinl)|INVALID|_DOMAIN|  
+|&#124;x&#124; ≥ 7.104760e+002 (sinh, sinhf, sinhl)|OVERFLOW+INEXACT|OVERFLOW|  
   
- Per ulteriori informazioni sui codici restituiti, vedere [errno, \_doserrno, \_sys\_errlist, and \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Per altre informazioni sui codici restituiti, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Note  
- Poiché C\+\+ consente l'overload, è possibile chiamare gli overload di `sin` e `sinh` che accettano e restituiscono i valori `float` o `long double`.  In un programma C, `sin` e `sinh` vengono sempre accettati e restituiscono `double`.  
+## <a name="remarks"></a>Note  
+ Poiché C++ consente l'overload, è possibile chiamare gli overload di `sin` e `sinh` che accettano e restituiscono i valori `float` o `long double`. In un programma C, `sin` e `sinh` accettano sempre e restituiscono `double`.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`sin`, `sinf`, `sinl`, `sinh`, `sinhf`, `sinhl`|\<math.h\>|  
+|-------------|---------------------|  
+|`sin`, `sinf`, `sinl`, `sinh`, `sinhf`, `sinhl`|\<math.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_sincos.c  
@@ -153,21 +169,18 @@ int main( void )
 }  
 ```  
   
-  **sin\( 1,570796 \) \= 1,000000**  
-**sinh\( 1,570796 \) \= 2,301299**  
-**cos\( 1,570796 \) \= 0,000000**  
-**cosh\( 1,570796 \) \= 2,509178**   
-## Equivalente .NET Framework  
+```Output  
+sin( 1.570796 ) = 1.000000  
+sinh( 1.570796 ) = 2.301299  
+cos( 1.570796 ) = 0.000000  
+cosh( 1.570796 ) = 2.509178  
+```  
   
--   [System::Math::Sin](https://msdn.microsoft.com/en-us/library/system.math.sin.aspx)  
-  
--   [System::Math::Sinh](https://msdn.microsoft.com/en-us/library/system.math.sinh.aspx)  
-  
-## Vedere anche  
- [Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)   
  [acos, acosf, acosl](../../c-runtime-library/reference/acos-acosf-acosl.md)   
  [asin, asinf, asinl](../../c-runtime-library/reference/asin-asinf-asinl.md)   
  [atan, atanf, atanl, atan2, atan2f, atan2l](../../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)   
  [cos, cosf, cosl, cosh, coshf, coshl](../../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)   
  [tan, tanf, tanl, tanh, tanhf, tanhl](../../c-runtime-library/reference/tan-tanf-tanl-tanh-tanhf-tanhl.md)   
- [\_CIsin](../../c-runtime-library/cisin.md)
+ [_CIsin](../../c-runtime-library/cisin.md)

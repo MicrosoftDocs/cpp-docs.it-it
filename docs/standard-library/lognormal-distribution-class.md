@@ -10,32 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - lognormal_distribution
-- std::lognormal_distribution
 - random/std::lognormal_distribution
-- std::lognormal_distribution::reset
 - random/std::lognormal_distribution::reset
-- std::lognormal_distribution::m
 - random/std::lognormal_distribution::m
-- std::lognormal_distribution::s
 - random/std::lognormal_distribution::s
-- std::lognormal_distribution::param
 - random/std::lognormal_distribution::param
-- std::lognormal_distribution::min
 - random/std::lognormal_distribution::min
-- std::lognormal_distribution::max
 - random/std::lognormal_distribution::max
-- std::lognormal_distribution::operator()
 - random/std::lognormal_distribution::operator()
-- std::lognormal_distribution::param_type
 - random/std::lognormal_distribution::param_type
-- std::lognormal_distribution::param_type::m
 - random/std::lognormal_distribution::param_type::m
-- std::lognormal_distribution::param_type::s
 - random/std::lognormal_distribution::param_type::s
-- std::lognormal_distribution::param_type::operator==
 - random/std::lognormal_distribution::param_type::operator==
-- std::lognormal_distribution::param_type::operator!=
 - random/std::lognormal_distribution::param_type::operator!=
+- random/std::lognormal_distribution::param_type
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -59,10 +47,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: 9e3e74b396e0f5026cc69c6cf4e2ca7cf5215ad5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 3c5d969e7250987471f88579d30e36d7838a9ed1
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="lognormaldistribution-class"></a>Classe lognormal_distribution
@@ -104,8 +93,8 @@ La classe di modelli descrive una distribuzione che produce valori di un tipo in
   
 ||||  
 |-|-|-|  
-|[lognormal_distribution::lognormal_distribution](#lognormal_distribution__lognormal_distribution)|`lognormal_distribution::m`|`lognormal_distribution::param`|  
-|`lognormal_distribution::operator()`|`lognormal_distribution::s`|[lognormal_distribution::param_type](#lognormal_distribution__param_type)|  
+|[lognormal_distribution](#lognormal_distribution)|`lognormal_distribution::m`|`lognormal_distribution::param`|  
+|`lognormal_distribution::operator()`|`lognormal_distribution::s`|[param_type](#param_type)|  
   
 Le funzioni di proprietà `m()` e `s()` restituiscono i valori per i parametri di distribuzione archiviati, rispettivamente *m* e *s*.  
   
@@ -210,7 +199,7 @@ Distribution for 10 samples:
   
  **Spazio dei nomi:** std  
   
-##  <a name="a-namelognormaldistributionlognormaldistributiona--lognormaldistributionlognormaldistribution"></a><a name="lognormal_distribution__lognormal_distribution"></a>  lognormal_distribution::lognormal_distribution  
+##  <a name="lognormal_distribution"></a>  lognormal_distribution::lognormal_distribution  
  Costruisce la distribuzione.  
   
 ```  
@@ -235,7 +224,7 @@ Il primo costruttore crea un oggetto il cui valore `m` archiviato include il val
   
 Il secondo costruttore crea un oggetto i cui parametri archiviati sono inizializzati da *parm*. È possibile ottenere e impostare i parametri correnti di una distribuzione esistente chiamando la funzione membro `param()`.  
   
-##  <a name="a-namelognormaldistributionparamtypea--lognormaldistributionparamtype"></a><a name="lognormal_distribution__param_type"></a>  lognormal_distribution::param_type  
+##  <a name="param_type"></a>  lognormal_distribution::param_type  
 Archivia i parametri della distribuzione.  
   
 ```  

@@ -10,18 +10,19 @@ f1_keywords: []
 ms.assetid: 4dfe0805-cc6e-479f-887f-a1c164f73837
 caps.latest.revision: 10
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: c8b64ba6276ecfa1078faf3b75a3cf36e9fc5072
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: d4602aa94b41a278edaff72f4e7bce6a6ea53407
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltscopedallocatorgt-operators"></a>Operatori &lt;scoped_allocator&gt;
 |||  
 |-|-|  
-|[operator!=](#operator_neq)|[operator==](#operator_eq_eq)|  
+|[operator!=](#op_neq)|[operator==](#op_eq_eq)|  
   
-##  <a name="operator_neq"></a>  operator!=  
+##  <a name="op_neq"></a>  operator!=  
  Verifica la disuguaglianza dei due oggetti `scoped_allocator_adaptor`.  
   
 ```cpp  
@@ -41,7 +42,7 @@ bool operator!=(
 ### <a name="return-value"></a>Valore restituito  
  `!(left == right)`  
   
-##  <a name="operator_eq_eq"></a>  operator==  
+##  <a name="op_eq_eq"></a>  operator==  
  Verifica l'uguaglianza di due oggetti `scoped_allocator_adaptor`.  
   
 ```cpp  

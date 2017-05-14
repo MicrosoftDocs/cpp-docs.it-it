@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 599560617d55c32de25775d74dcf27240994c36b
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 1af8dc2f8fef535883088c413827a98a35539980
+ms.contentlocale: it-it
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="hash-structure-c-standard-library"></a>Struttura hash (Libreria standard C++)
@@ -54,7 +55,7 @@ struct hash<thread::id> :
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** thread  
+ **Intestazione:** \<thread >  
   
  **Spazio dei nomi:** std  
   

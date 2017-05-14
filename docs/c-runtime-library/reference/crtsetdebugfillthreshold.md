@@ -52,10 +52,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 86fa28d188aa5d1009d7a97591c95bad0e479564
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 6d200480df1ff06afbb2b167ca62515fbf406435
+ms.contentlocale: it-it
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="crtsetdebugfillthreshold"></a>_CrtSetDebugFillThreshold
@@ -77,7 +78,7 @@ size_t _CrtSetDebugFillThreshold(
  La soglia precedente.  
   
 ## <a name="remarks"></a>Note  
- Le versioni di debug di alcune funzioni CRT di sicurezza avanzata riempiono il buffer passato con un carattere speciale (0xFD). Ciò consente di individuare i casi in cui la dimensione errata è stata passata alla funzione. Sfortunatamente, questo riduce anche le prestazioni. Per migliorare le prestazioni, utilizzare `_CrtSetDebugFillThreshold` per disabilitare il riempimento del buffer per i buffer più grandi della soglia. Una soglia di 0 lo disabiliterà per tutti i buffer.  
+ Le versioni di debug di alcune funzioni CRT con sicurezza avanzata riempiono il buffer passato con un carattere speciale (0xFE). Ciò consente di individuare i casi in cui la dimensione errata è stata passata alla funzione. Sfortunatamente, questo riduce anche le prestazioni. Per migliorare le prestazioni, utilizzare `_CrtSetDebugFillThreshold` per disabilitare il riempimento del buffer per i buffer più grandi della soglia. Una soglia di 0 lo disabiliterà per tutti i buffer.  
   
  La soglia predefinita è `SIZE_T_MAX`.  
   
@@ -132,9 +133,9 @@ size_t _CrtSetDebugFillThreshold(
   
 ## <a name="example"></a>Esempio  
   
-```  
-// crt_crtsetdebugfillthreshold.cpp  
-// compile with: /MTd  
+```C  
+// crt_crtsetdebugfillthreshold.c  
+// compile with: cl /MTd crt_crtsetdebugfillthreshold.c  
 #include <stdio.h>  
 #include <stdlib.h>  
 #include <string.h>  
@@ -169,7 +170,7 @@ int main( void )
 }  
 ```  
   
-```  
+```Output  
 With buffer-filling on:  
 68  h  
 6f  o  
@@ -177,10 +178,10 @@ With buffer-filling on:
 64  d  
 79  y  
 00  
-fd  ²  
-fd  ²  
-fd  ²  
-fd  ²  
+fe  ■  
+fe  ■  
+fe  ■  
+fe  ■  
 With buffer-filling off:  
 68  h  
 6f  o  
@@ -193,9 +194,6 @@ With buffer-filling off:
 00  
 00  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Routine di debug](../../c-runtime-library/debug-routines.md)

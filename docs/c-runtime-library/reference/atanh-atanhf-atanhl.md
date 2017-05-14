@@ -54,10 +54,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 8cda9bb597a24cc3e7988ba8ef4c4f8103861ea3
-ms.openlocfilehash: 3b559db7a8d8f8fbc0672d8d8a644579fd9e1ca8
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 4648fb28d20951b045abde39d0238de81a133f0c
+ms.contentlocale: it-it
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh, atanhf, atanhl
@@ -88,7 +89,7 @@ long double atanhl(
  Valore a virgola mobile.  
   
 ## <a name="return-value"></a>Valore restituito  
- Le funzioni `atanh` restituiscono la tangente iperbolica inversa (tangente iperbolica d'arco) di `x`. Se `x` è maggiore di 1 o minore di -1, `errno` verrà impostato su `EDOM` e il risultato sarà un valore NaN non interattivo. Se `x` è uguale a 1 o a -1, viene restituito rispettivamente un infinito positivo o negativo e `errno` viene impostato su `ERANGE`.  
+ Le funzioni `atanh` restituiscono la tangente iperbolica inversa (tangente iperbolica d'arco) di `x`. Se `x` è maggiore di 1 o minore di -1, `errno` è impostato su `EDOM` e il risultato è un NaN non interattivo. Se `x` è uguale a 1 o a -1, viene restituito rispettivamente un infinito positivo o negativo e `errno` viene impostato su `ERANGE`.  
   
 |Input|Eccezione SEH|Eccezione `Matherr`|  
 |-----------|-------------------|-------------------------|  
@@ -133,9 +134,6 @@ int main( void )
 tanh( 0.785398 ) = 0.655794  
 atanh( 0.655794 ) = 0.785398  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)   

@@ -1,53 +1,71 @@
 ---
-title: "remainder, remainderf, remainderl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "remainderl"
-  - "remainder"
-  - "remainderf"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "remainderf"
-  - "remainder"
-  - "remainderl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "remainderf"
-  - "remainderl"
-  - "remainder"
+title: remainder, remainderf, remainderl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- remainderl
+- remainder
+- remainderf
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- remainderf
+- remainder
+- remainderl
+dev_langs:
+- C++
+helpviewer_keywords:
+- remainderf
+- remainderl
+- remainder
 ms.assetid: 5f721fb3-8b78-4597-9bc0-ca9bcd1f1d0e
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# remainder, remainderf, remainderl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: bfd25184e2542c8f1f3c4e1e975397685328b64b
+ms.contentlocale: it-it
+ms.lasthandoff: 03/29/2017
 
-Calcola il resto del quoziente di due valori a virgola mobile, arrotondati al valore intero più vicino.  
+---
+# <a name="remainder-remainderf-remainderl"></a>remainder, remainderf, remainderl
+Calcola il resto del quoziente di due valori a virgola mobile, arrotondati al valore integrale più vicino.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 double remainder(   
@@ -73,32 +91,32 @@ long double remainderl(
   
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `numer`  
  Numeratore.  
   
  `denom`  
  Denominatore.  
   
-## Valore restituito  
- Il resto a virgola mobile di `x` \/ `y`.  Se il valore di `y` è 0.0, `remainder` restituisce un valore NaN non interattivo.  Per informazioni sulla rappresentazione di un quiet Nan dalla famiglia `printf`, vedere [printf, \_printf\_l, wprintf, \_wprintf\_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md).  
+## <a name="return-value"></a>Valore restituito  
+ Resto a virgola mobile di `x` / `y`. Se il valore di `y` è 0,0, `remainder` restituisce un valore NaN silenzioso (QNaN). Per informazioni sulla rappresentazione di un NaN non interattivo dalla famiglia `printf`, vedere [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md).  
   
-## Note  
- La funzione `remainder` calcola il resto a virgola mobile `r` di `x` \/ `y` in modo che `x` \= `n` \* `y` \+ `r`, dove `n` è l'intero più vicino al valore `x` \/ `y` e `n` è sempre pari &#124; `n` \- `x` \/ `y` &#124; \= 1\/2.  Quando `r` \= 0, `r` ha lo stesso segno di `x`.  
+## <a name="remarks"></a>Note  
+ La funzione `remainder` calcola il resto a virgola mobile `r` di `x` / `y` in modo che `x` = `n` * `y` + `r`, dove `n` è l'intero più vicino al valore `x` / `y` e `n` è sempre pari quando &#124; `n` - `x` / `y` &#124; = 1/2. Quando `r` = 0, `r` ha lo stesso segno di `x`.  
   
- Poiché C\+\+ consente l'overload, è possibile chiamare gli overload di `remainder` che accettano e restituiscono i valori `float` o `long double`.  In un programma C, `remainder` accetta sempre due double e restituisce un double.  
+ Dato che C++ consente l'overload, è possibile chiamare degli overload di `remainder` che accettino e restituiscano valori `float` o `long double`. In un programma C `remainder` accetta sempre due valori double e restituisce un valore double.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Funzione|Intestazione obbligatoria|  
-|--------------|-------------------------------|  
-|`remainder`, `remainderf`, `remainderl`|\<math.h\>|  
+|--------------|---------------------|  
+|`remainder`, `remainderf`, `remainderl`|\<math.h>|  
   
  Per informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-```c  
+```C  
 // crt_remainder.c  
 // This program displays a floating-point remainder.  
   
@@ -114,12 +132,12 @@ int main( void )
 }  
 ```  
   
-  **Il resto di \-10,00 \/ 3,00 è \-1,000000**   
-## Equivalente .NET Framework  
- [System::Math::IEEERemainder](https://msdn.microsoft.com/en-us/library/system.math.ieeeremainder.aspx)  
+```Output  
+The remainder of -10.00 / 3.00 is -1.000000  
+```  
   
-## Vedere anche  
- [Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Floating-Point Support](../../c-runtime-library/floating-point-support.md)  (Supporto delle funzioni a virgola mobile)  
  [ldiv, lldiv](../../c-runtime-library/reference/ldiv-lldiv.md)   
  [imaxdiv](../../c-runtime-library/reference/imaxdiv.md)   
  [fmod, fmodf](../../c-runtime-library/reference/fmod-fmodf.md)   

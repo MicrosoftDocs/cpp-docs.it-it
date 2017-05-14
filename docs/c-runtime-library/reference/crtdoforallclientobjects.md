@@ -50,10 +50,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 316e062f4953874ce014f8288e86094209760faf
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: df96a24b04473099daaca29472f90c9770181e82
+ms.contentlocale: it-it
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="crtdoforallclientobjects"></a>_CrtDoForAllClientObjects
@@ -78,9 +79,9 @@ void _CrtDoForAllClientObjects(
 ## <a name="remarks"></a>Note  
  La funzione `_CrtDoForAllClientObjects` cerca nell'elenco collegato dell'heap i blocchi di memoria con il tipo `_CLIENT_BLOCK` e chiama la funzione fornita dall'applicazione quando trova un blocco di questo tipo. Il blocco individuato e il parametro `context` vengono passati come argomenti alla funzione fornita dall'applicazione. Durante il debug, un'applicazione può tenere traccia di un gruppo specifico di allocazioni chiamando in modo esplicito le funzioni heap di debug per allocare memoria e specificando che i blocchi vengono associati al tipo di blocco `_CLIENT_BLOCK` . Questi blocchi possono quindi essere controllati separatamente ed essere segnalati in modo diverso durante la creazione dello stato della memoria e del rilevamento di perdite.  
   
- Se il campo di bit `_CRTDBG_ALLOC_MEM_DF` del flag [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) non è attivato, viene restituito immediatamente `_CrtDoForAllClientObjects` . Quando [_DEBUG](../../c-runtime-library/debug.md) non è definito, le chiamate a `_CrtDoForAllClientObjects` vengono rimosse durante la pre-elaborazione.  
+ Se il campo di bit `_CRTDBG_ALLOC_MEM_DF` del flag [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) non è attivato, viene restituito immediatamente il risultato di `_CrtDoForAllClientObjects` . Quando [_DEBUG](../../c-runtime-library/debug.md) non è definito, le chiamate a `_CrtDoForAllClientObjects` vengono rimosse durante la pre-elaborazione.  
   
- Per altre informazioni sul tipo `_CLIENT_BLOCK` e su come può essere usato da altre funzioni di debug, vedere [Tipi di blocchi sull'heap di debug](/visualstudio/debugger/crt-debug-heap-details). Per informazioni sulle modalità di allocazione, inizializzazione e gestione dei blocchi di memoria nella versione di debug dell'heap di base, vedere [Informazioni dettagliate sull'heap di debug CRT](/visualstudio/debugger/crt-debug-heap-details).  
+ Per altre informazioni sul tipo `_CLIENT_BLOCK` e su come può essere usato da altre funzioni di debug, vedere [Types of blocks on the debug heap](/visualstudio/debugger/crt-debug-heap-details). Per informazioni sulle modalità di allocazione, inizializzazione e gestione dei blocchi di memoria nella versione di debug dell'heap di base, vedere [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).  
   
  Se `pfn` è `NULL`, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) viene impostato su `EINVAL` e viene restituito il risultato della funzione.  
   
@@ -93,9 +94,6 @@ void _CrtDoForAllClientObjects(
  Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
  **Librerie** : Solo versioni di debug delle librerie di runtime C universali.  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Routine di debug](../../c-runtime-library/debug-routines.md)   

@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2030 | Documenti di Microsoft
+title: Errore del compilatore C2030 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,15 +33,16 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: b38e76d73cf6e933145d8d382b653b8a5ed1892e
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: c76a4fc5de139c2cc9f6802fc66526f291b862a2
+ms.contentlocale: it-it
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="compiler-error-c2030"></a>Errore del compilatore C2030
 un distruttore con accessibilità 'protected private' non può essere membro di una classe dichiarata 'sealed'  
   
- Una classe di Windows Runtime dichiarata `sealed` non può avere un distruttore privato protetto. Nei tipi sealed sono consentiti solo distruttori pubblici virtuali e privati non virtuali. Per ulteriori informazioni, vedere [le classi e struct](http://msdn.microsoft.com/Library/3d736b82-0bf0-48cf-bac1-cc9d110b70d1).  
+ Una classe di Windows Runtime dichiarata `sealed` non può avere un distruttore privato protetto. Nei tipi sealed sono consentiti solo distruttori pubblici virtuali e privati non virtuali. Per ulteriori informazioni, vedere [le classi e struct](../../cppcx/ref-classes-and-structs-c-cx.md).  
   
  Per correggere l'errore, modificare l'accessibilità del distruttore.

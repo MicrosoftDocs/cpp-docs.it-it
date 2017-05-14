@@ -34,18 +34,22 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: fd99248bdfca428b01921e80eb902d482c0e95be
-ms.lasthandoff: 04/12/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 60e5fb2346c92b3005e7cbfe1663d43cc0a12cdc
+ms.contentlocale: it-it
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="compiler-error-c2316"></a>Errore del compilatore C2316
-'exception': non può essere intercettato come distruttore e/o i costruttori di copia sono inaccessibili  
+
+> '*eccezione*': non può essere intercettato come distruttore e/o costruttore di copia è inaccessibile  
   
- È stata rilevata un'eccezione per valore o riferimento, ma il costruttore di copia e/o l'operatore di assegnazione erano inaccessibili.  
+È stata rilevata un'eccezione per valore o riferimento, ma il costruttore di copia e/o l'operatore di assegnazione erano inaccessibili.  
   
- Questo codice è stato accettato dal compilatore della versione precedente ma attualmente causa un errore.  
+Questo codice è stato accettato da versioni di Visual C++ prima di Visual Studio 2003, ma attualmente causa un errore.  
+  
+Le modifiche di conformità in Visual Studio 2015 apportate questo errore si applicano alle istruzioni catch non valido di eccezioni MFC derivate da `CException`. Poiché `CException` dispone di un costruttore di copia privato ereditato, la classe e i relativi derivati sono non copiabile e non possono essere passati per valore, che significa anche che non può essere intercettati dal valore. Genera le istruzioni che intercettate eccezioni MFC da valore in precedenza ha portato a eccezioni non rilevate in fase di esecuzione, ma ora il compilatore identifica correttamente questa situazione e i rapporti errore C2316. Per risolvere questo problema, è consigliabile che utilizzare le macro MFC TRY/CATCH anziché scrivono i propri gestori di eccezioni, ma se non è appropriato per il codice, intercettare eccezioni MFC invece per riferimento.   
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente genera l'errore C2316:  

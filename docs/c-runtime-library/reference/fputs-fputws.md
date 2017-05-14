@@ -1,54 +1,71 @@
 ---
-title: "fputs, fputws | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fputs"
-  - "fputws"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fputs"
-  - "fputws"
-  - "_fputts"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fputts (funzione)"
-  - "fputs (funzione)"
-  - "fputts (funzione)"
-  - "fputws (funzione)"
-  - "flussi, scrittura di stringhe"
+title: fputs, fputws | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- fputs
+- fputws
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fputs
+- fputws
+- _fputts
+dev_langs:
+- C++
+helpviewer_keywords:
+- streams, writing strings to
+- fputws function
+- _fputts function
+- fputs function
+- fputts function
 ms.assetid: d48c82b8-aa17-4830-8c7d-30442ddbb326
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# fputs, fputws
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 0a90ce974533ee40eba83f75f400c9ee472cdd4b
+ms.contentlocale: it-it
+ms.lasthandoff: 03/29/2017
 
+---
+# <a name="fputs-fputws"></a>fputs, fputws
 Scrive una stringa in un flusso.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 int fputs(   
@@ -61,39 +78,39 @@ int fputws(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `str`  
  Stringa di output.  
   
  `stream`  
- Puntatore alla struttura `FILE`.  
+ Puntatore alla struttura `FILE` .  
   
-## Valore restituito  
- Ognuna di queste funzioni restituisce un valore negativo in caso di successo.  In caso di errore, `fputs` e `fputws` restituiscono `EOF`.  Se `str` o `stream` è un puntatore null, queste funzioni richiamano un gestore di parametro non valido, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).  Se l'esecuzione può continuare, queste funzioni impostano `errno` su `EINVAL` e quindi `fputs` restituisce `EOF`, e `fputws` restituisce `WEOF`.  
+## <a name="return-value"></a>Valore restituito  
+ Ognuna di queste funzioni restituisce un valore non negativo se ha esito positivo. In caso di errore, `fputs` e `fputws` restituiscono `EOF`. Se `str` o `stream` è un puntatore Null, queste funzioni richiamano il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano `errno` su `EINVAL` e quindi `fputs` restituisce `EOF` e `fputws` restituisce `WEOF`.  
   
- Vedere [\_doserrno, errno, \_sys\_errlist, e \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) per ulteriori informazioni su questi, e altri, codici di errore.  
+ Per altre informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Note  
- Ognuna di queste funzioni copia `str` nell'output `stream` alla posizione corrente.  `fputws` copia rispettivamente l'argomento a caratteri wide `str` in `stream` come una stringa di caratteri multibyte o una stringa di caratteri estesi a seconda di come lo `stream` venga aperto rispettivamente, in modalità di testo oppure in modalità binaria.  Nemmeno una funzione copia il carattere di terminazione null.  
+## <a name="remarks"></a>Note  
+ Ognuna di queste funzioni copia `str` nell'elemento `stream` di output nella posizione corrente. `fputws` copia l'argomento a caratteri wide `str` in `stream` come stringa di caratteri multibyte o stringa di caratteri wide a seconda che `stream` venga aperto rispettivamente in modalità testo oppure in modalità binaria. Nessuna delle funzioni copia il carattere Null di terminazione.  
   
- Queste due funzioni si comportano in modo identico se il flusso viene aperto in modalità ANSI.  `fputs` non supporta attualmente l'output in un flusso UNICODE.  
+ Le due funzioni si comportano in modo identico se il flusso viene aperto in modalità ANSI. `fputs` non supporta attualmente l'output in un flusso UNICODE.  
   
-### Mapping di routine su testo generico  
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
-|Routine TCHAR.H|\_UNICODE & \_MBCS non definiti|\_MBCS definito|\_UNICODE definito|  
-|---------------------|-------------------------------------|---------------------|------------------------|  
+|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_fputts`|`fputs`|`fputs`|`fputws`|  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Funzione|Intestazione obbligatoria|  
-|--------------|-------------------------------|  
-|`fputs`|\<stdio.h\>|  
-|`fputws`|\<stdio.h\> o \<wchar.h\>|  
+|--------------|---------------------|  
+|`fputs`|\<stdio.h>|  
+|`fputws`|\<stdio.h> o \<wchar.h>|  
   
- La console non è supportata nelle applicazioni [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)].  Gli handle del flusso standard associati alla console,`stdin`, `stdout` e `stderr`, devono essere reindirizzati prima di poter utilizzare le funzioni di runtime del linguaggio C nelle applicazioni [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)].  Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
+ La console non è supportata nelle applicazioni [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Gli handle del flusso standard associati alla console, `stdin`, `stdout` e `stderr`, devono essere reindirizzati prima di poter usare le funzioni di runtime del linguaggio C nelle app [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_fputs.c  
@@ -108,12 +125,12 @@ int main( void )
 }  
 ```  
   
-  **Hello world from fputs.**   
-## Equivalente .NET Framework  
- [System::IO::StreamWriter::Write](https://msdn.microsoft.com/en-us/library/system.io.streamwriter.write.aspx)  
+```Output  
+Hello world from fputs.  
+```  
   
-## Vedere anche  
- [I\/O di flusso](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>Vedere anche  
+ [I/O di flusso](../../c-runtime-library/stream-i-o.md)   
  [fgets, fgetws](../../c-runtime-library/reference/fgets-fgetws.md)   
- [gets, \_getws](../../c-runtime-library/gets-getws.md)   
- [puts, \_putws](../../c-runtime-library/reference/puts-putws.md)
+ [gets, _getws](../../c-runtime-library/gets-getws.md)   
+ [puts, _putws](../../c-runtime-library/reference/puts-putws.md)

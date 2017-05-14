@@ -1,67 +1,84 @@
 ---
-title: "_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_fwprintf_p"
-  - "_fprintf_p_l"
-  - "_fwprintf_p_l"
-  - "_fprintf_p"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_fprintf_p"
-  - "_ftprintf_p"
-  - "fwprintf_p"
-  - "_fwprintf_p"
-  - "fprintf_p"
-  - "ftprintf_p"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fprintf_p (funzione)"
-  - "_fprintf_p_l (funzione)"
-  - "_ftprintf_p (funzione)"
-  - "_ftprintf_p_l (funzione)"
-  - "_fwprintf_p (funzione)"
-  - "_fwprintf_p_l (funzione)"
-  - "fprintf_p (funzione)"
-  - "fprintf_p_l (funzione)"
-  - "ftprintf_p (funzione)"
-  - "ftprintf_p_l (funzione)"
-  - "fwprintf_p (funzione)"
-  - "fwprintf_p_l (funzione)"
-  - "stampa [C++], dati formattati in flussi"
-  - "flussi, stampa di dati formattati"
+title: _fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _fwprintf_p
+- _fprintf_p_l
+- _fwprintf_p_l
+- _fprintf_p
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _fprintf_p
+- _ftprintf_p
+- fwprintf_p
+- _fwprintf_p
+- fprintf_p
+- ftprintf_p
+dev_langs:
+- C++
+helpviewer_keywords:
+- fprintf_p_l function
+- fprintf_p function
+- _fprintf_p_l function
+- _fprintf_p function
+- _ftprintf_p_l function
+- streams, printing formatted data to
+- _fwprintf_p function
+- fwprintf_p function
+- _ftprintf_p function
+- _fwprintf_p_l function
+- ftprintf_p function
+- printing [C++], formatted data to streams
+- ftprintf_p_l function
+- fwprintf_p_l function
 ms.assetid: 46b082e1-45ba-4383-9ee4-97015aa50bc6
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# _fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 107188d51cb1fa49f538793c726ac1454afa15a4
+ms.contentlocale: it-it
+ms.lasthandoff: 03/29/2017
 
-Stampa dati formattati in un flusso.  
+---
+# <a name="fprintfp-fprintfpl-fwprintfp-fwprintfpl"></a>_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l
+Stampa i dati formattati in un flusso.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 int _fprintf_p(   
@@ -88,7 +105,7 @@ int _fwprintf_p_l(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `stream`  
  Puntatore alla struttura `FILE`.  
   
@@ -99,42 +116,42 @@ int _fwprintf_p_l(
  Argomenti facoltativi.  
   
  `locale`  
- Impostazioni locali da utilizzare.  
+ Impostazioni locali da usare.  
   
-## Valore restituito  
- `_fprintf_p` e `_fwprintf_p` restituiscono il numero di caratteri scritto oppure restituiscono un valore negativo quando si verifica un errore di output.  
+## <a name="return-value"></a>Valore restituito  
+ `_fprintf_p` e `_fwprintf_p` restituiscono il numero di caratteri scritti o un valore negativo quando si verifica un errore di output.  
   
-## Note  
- `_fprintf_p` formatta e visualizza una stringa di caratteri e di valori nello `stream`di output.  Ogni funzione `argument` \(se presente\) viene convertita e restituita in base al formato specificato in `format`.  Per `_fprintf_p`, l'argomento `format` ha la stessa sintassi e la stessa funzione che ha in `_printf_p`.  Queste funzioni supportano i parametri posizionali, pertanto l'ordine dei parametri utilizzati dalla stringa di formato può essere modificato.  Per ulteriori informazioni sui parametri posizionali, vedere [Parametri posizionali printf\_p](../../c-runtime-library/printf-p-positional-parameters.md).  
+## <a name="remarks"></a>Note  
+ La funzione `_fprintf_p` formatta e stampa una serie di caratteri e di valori nell'elemento di output `stream`. Ogni funzione `argument` (se presente) viene convertita e restituita in base alla specifica di formato corrispondente in `format`. Per `_fprintf_p`, la sintassi e la modalità d'uso dell'argomento `format` sono uguali a quelle di `_printf_p`. Queste funzioni supportano parametri posizionali, vale a dire che l'ordine dei parametri usati dalla stringa di formato può essere modificato. Per altre informazioni sui parametri posizionali, vedere [Parametri posizionali printf_p](../../c-runtime-library/printf-p-positional-parameters.md).  
   
- `_fwprintf_p` è una versione a caratteri di tipo "wide" di `_fprintf_p`; in `_fwprintf_p`, `format` è una stringa di caratteri di tipo "wide".  Queste funzioni si comportano in modo identico se il flusso viene aperto in modalità ANSI.  `_fprintf_p` non supporta attualmente l'output in un flusso UNICODE.  
+ `_fwprintf_p` è una versione a caratteri wide di `_fprintf_p`. In `_fwprintf_p`, `format` è una stringa di caratteri wide. Queste funzioni si comportano in modo identico se il flusso viene aperto in modalità ANSI. `_fprintf_p` non supporta attualmente l'output in un flusso UNICODE.  
   
- Le versioni di queste funzioni con il suffisso `_l` sono identiche ad eccezione che utilizzano il parametro delle impostazioni locali passato in ingresso invece di utilizzare le impostazioni locali correnti.  
+ Le versioni di queste funzioni con il suffisso `_l` sono identiche ad eccezione per il fatto che usano il parametro delle impostazioni locali passato al posto di quelle correnti.  
   
 > [!IMPORTANT]
 >  Assicurarsi che `format` non sia una stringa definita dall'utente.  
   
- Come le versioni non sicure \(vedere [fprintf, \_fprintf\_l, fwprintf, \_fwprintf\_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)\), queste funzioni convalidano i relativi parametri e richiamano il gestore del parametro non valido, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md), se `stream` o `format` è un puntatore null o se ci sono identificatori di formattazione sconosciuti o mal formati.  Se l'esecuzione può continuare, la funzione restituisce \-1 e imposta `errno` a `EINVAL`.  
+ Come le versioni non sicure (vedere [fprintf, fprintf_l, fwprintf, fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)), queste funzioni convalidano i parametri e richiamano il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md), se il valore `stream` o `format` è un puntatore Null o se sono presenti identificatori di formattazione sconosciuti o non corretti. Se l'esecuzione può continuare, le funzioni restituiranno -1 e imposteranno `errno` su `EINVAL`.  
   
-### Mapping di routine di testo generico  
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
-|Routine Tchar.h|\_UNICODE e \_MBCS non definiti|\_MBCS definito|\_UNICODE definito|  
-|---------------------|-------------------------------------|---------------------|------------------------|  
+|Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_ftprintf_p`|`_fprintf_p`|`_fprintf_p`|`_fwprintf_p`|  
 |`_ftprintf_p_l`|`_fprintf_p_l`|`_fprintf_p_l`|`_fwprintf_p_l`|  
   
- Per ulteriori informazioni, vedere [Specifiche di formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
+ Per altre informazioni, vedere [Specifiche di formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Funzione|Intestazione obbligatoria|  
-|--------------|-------------------------------|  
-|`_fprintf_p`, `_fprintf_p_l`|\<stdio.h\>|  
-|`_fwprintf_p`, `_fwprintf_p_l`|\<stdio.h\> o \<wchar.h\>|  
+|--------------|---------------------|  
+|`_fprintf_p`, `_fprintf_p_l`|\<stdio.h>|  
+|`_fwprintf_p`, `_fwprintf_p_l`|\<stdio.h> o \<wchar.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_fprintf_p.c  
@@ -172,19 +189,19 @@ int main( void )
 }  
 ```  
   
-  **questa è una stringa**  
-**10**  
-**1.500000**   
-## Equivalente .NET Framework  
- [System::IO::StreamWriter::Write](https://msdn.microsoft.com/en-us/library/system.io.streamwriter.write.aspx)  
+```Output  
+this is a string  
+10  
+1.500000  
+```  
   
-## Vedere anche  
- [I\/O di flusso](../../c-runtime-library/stream-i-o.md)   
- [\_cprintf, \_cprintf\_l, \_cwprintf, \_cwprintf\_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
- [fscanf, \_fscanf\_l, fwscanf, \_fwscanf\_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
- [sprintf, \_sprintf\_l, swprintf, \_swprintf\_l, \_\_swprintf\_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [Parametri posizionali printf\_p](../../c-runtime-library/printf-p-positional-parameters.md)   
- [\_cprintf\_p, \_cprintf\_p\_l, \_cwprintf\_p, \_cwprintf\_p\_l](../../c-runtime-library/reference/cprintf-p-cprintf-p-l-cwprintf-p-cwprintf-p-l.md)   
- [\_cprintf\_s, \_cprintf\_s\_l, \_cwprintf\_s, \_cwprintf\_s\_l](../../c-runtime-library/reference/cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md)   
- [Parametri posizionali printf\_p](../../c-runtime-library/printf-p-positional-parameters.md)   
- [fscanf\_s, \_fscanf\_s\_l, fwscanf\_s, \_fwscanf\_s\_l](../../c-runtime-library/reference/fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md)
+## <a name="see-also"></a>Vedere anche  
+ [I/O di flusso](../../c-runtime-library/stream-i-o.md)   
+ [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
+ [fscanf, _fscanf_l, fwscanf, _fwscanf_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [Parametri posizionali printf_p](../../c-runtime-library/printf-p-positional-parameters.md)   
+ [_cprintf_p, _cprintf_p_l, _cwprintf_p, _cwprintf_p_l](../../c-runtime-library/reference/cprintf-p-cprintf-p-l-cwprintf-p-cwprintf-p-l.md)   
+ [_cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l](../../c-runtime-library/reference/cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md)   
+ [Parametri posizionali printf_p](../../c-runtime-library/printf-p-positional-parameters.md)   
+ [fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l](../../c-runtime-library/reference/fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md)

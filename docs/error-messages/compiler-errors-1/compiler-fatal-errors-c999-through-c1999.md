@@ -190,10 +190,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 7cd9b98172f30248c40d2b0b8410b19f4a0cafec
-ms.lasthandoff: 04/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 42bd88a29dbefe48c59742ab8fc982355262f66e
+ms.contentlocale: it-it
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>Errori del compilatore irreversibili da C999 a C1999
@@ -219,7 +220,7 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |Errore irreversibile C1012|parentesi non corrispondenti: manca '*carattere*"|  
 |Errore irreversibile C1013|limite del compilatore: troppe parentesi aperte|  
 |Errore irreversibile C1014|Troppi file di inclusione: profondità = *numero*|  
-|Errore irreversibile C1016|#ifdef / #ifndef previsto un identificatore|  
+|Errore irreversibile C1016|#ifdef/#ifndef previsto un identificatore|  
 |[Errore irreversibile C1017](../../error-messages/compiler-errors-1/fatal-error-c1017.md)|espressione costante integer non valida|  
 |Errore irreversibile C1018|#elif imprevisto|  
 |Errore irreversibile C1019|#else imprevisto|  
@@ -241,6 +242,7 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |Errore irreversibile C1048|opzione sconosciuta '*stringa*'in'*opzione*'|  
 |Errore irreversibile C1049|argomento numerico non valido '*valore*'|  
 |[Errore irreversibile C1051](../../error-messages/compiler-errors-1/fatal-error-c1051.md)|file di database di programma '*file*', ha un formato obsoleto, eliminare e ricompilare|  
+|[Errore irreversibile C1052](fatal-error-c1052.md)|file di database di programma '*filename*', è stato generato dal linker con /debug: fastlink; compilatore non può aggiornare questi file PDB;. eliminarlo o usare /Fd per specificare un nome di file PDB diverso|  
 |Errore irreversibile C1053|'*funzione*': funzione troppo lunga|  
 |[Errore irreversibile C1054](../../error-messages/compiler-errors-1/fatal-error-c1054.md)|limite del compilatore: inizializzatori eccessivamente annidati|  
 |[Errore irreversibile C1055](../../error-messages/compiler-errors-1/fatal-error-c1055.md)|limite del compilatore: chiavi insufficienti|  
@@ -259,7 +261,7 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |Errore irreversibile C1074|'IDB' è un'estensione per il file PDB: *file*|  
 |[Errore irreversibile C1075](../../error-messages/compiler-errors-1/fatal-error-c1075.md)|sinistra *token* la fine del file è senza corrispondenza|  
 |[Errore irreversibile C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md)|limite del compilatore: raggiunto limite interno dell'heap. Usare /Zm per specificare un limite maggiore|  
-|Errore irreversibile C1077|limite del compilatore: non può avere più di *numero* le opzioni della riga di comando|  
+|Errore irreversibile C1077|limite del compilatore: non può avere più di *numero* opzioni della riga di comando|  
 |[Errore irreversibile C1079](../../error-messages/compiler-errors-1/fatal-error-c1079.md)|limite del compilatore: superato limite della dimensione del file PCH|  
 |[Errore irreversibile C1080](../../error-messages/compiler-errors-1/fatal-error-c1080.md)|limite del compilatore: limite superato opzione della riga di comando di *numero* caratteri|  
 |[Errore irreversibile C1081](../../error-messages/compiler-errors-1/fatal-error-c1081.md)|'*file*': nome file troppo lungo|  
@@ -296,7 +298,7 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |[Errore irreversibile C1121](../../error-messages/compiler-errors-1/fatal-error-c1121.md)|chiamata a CryptoAPI non riuscita|  
 |[Errore irreversibile C1126](../../error-messages/compiler-errors-1/fatal-error-c1126.md)|l'allocazione automatica supera *dimensioni*|  
 |[Errore irreversibile C1128](../../error-messages/compiler-errors-1/fatal-error-c1128.md)|il numero di sezioni ha superato il limite di formato del file oggetto: compilare con /bigobj|  
-|[Errore irreversibile C1189](../../error-messages/compiler-errors-1/fatal-error-c1189.md)|#Errore: *messaggio*|  
+|[Errore irreversibile C1189](../../error-messages/compiler-errors-1/fatal-error-c1189.md)|#error: *messaggio*|  
 |Errore irreversibile C1190|il codice gestito interessato richiede un'opzione '/clr'|  
 |[Errore irreversibile C1191](../../error-messages/compiler-errors-1/fatal-error-c1191.md)|'*file*' può essere importato solo in ambito globale|  
 |[Errore irreversibile C1192](../../error-messages/compiler-errors-1/fatal-error-c1192.md)|#using non riuscito in '*file*'|  
@@ -340,7 +342,7 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |[Errore irreversibile C1510](../../error-messages/compiler-errors-1/fatal-error-c1510.md)|Impossibile aprire il file clui.dll della risorsa di lingua|  
 |[Errore irreversibile C1601](../../error-messages/compiler-errors-1/fatal-error-c1601.md)|codice operativo dell'assembly inline non supportato|  
 |[Errore irreversibile C1602](../../error-messages/compiler-errors-1/fatal-error-c1602.md)|intrinseco non supportato|  
-|[Errore irreversibile C1603](../../error-messages/compiler-errors-1/fatal-error-c1603.md)|destinazione di branch assembly inline non compreso nell'intervallo da *numero* byte|  
+|[Errore irreversibile C1603](../../error-messages/compiler-errors-1/fatal-error-c1603.md)|destinazione assembly inline non compreso nell'intervallo da *numero* byte|  
 |Errore irreversibile C1852|'*file*' non è un file di intestazione precompilata valido|  
 |[Errore irreversibile C1853](../../error-messages/compiler-errors-1/fatal-error-c1853.md)|'*file*' file di intestazione precompilata da una versione precedente del compilatore, o l'intestazione precompilata è C++ e si sono utilizzando C (o viceversa)|  
 |[Errore irreversibile C1854](../../error-messages/compiler-errors-1/fatal-error-c1854.md)|non è possibile sovrascrivere le informazioni generate durante la creazione dell'intestazione precompilata nel file oggetto: '*file*'|  

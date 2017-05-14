@@ -30,14 +30,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: c7f3b346bc8abeab0c6bd913fc0b554bef4ed208
-ms.openlocfilehash: f376ad55945cf9f23579406ae73866f93c17008b
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 1a3e7e0cc81bae89b0560c1aebb989e4d140e059
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="file-system-navigation"></a>Esplorazione del file system
-L'intestazione \<filesystem> implementa la specifica tecnica del file system di ISO/IEC TS 18822:2015 di C++ (bozza finale [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)) e contiene tipi e funzioni che consentono di scrivere codice indipendente dalla piattaforma per l'esplorazione del file system. Essendo multipiattaforma, contiene le API che non sono rilevanti per i sistemi Windows. Ciò significa, ad esempio, che `is_fifo(const path&)` restituisce sempre `false` in Windows. L'intestazione è basata su una versione bozza della specifica tecnica che non è stata inserita come standard C++17 fino a Visual Studio 2015 RTM. I membri sono disponibili nello spazio dei nomi `std::experimental::filesystem`, resi in linea da `std::experimental::filesystem::v1`.  
+L'intestazione \<filesystem> implementa la specifica tecnica del file system di ISO/IEC TS 18822:2015 di C++ (bozza finale [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)) e contiene tipi e funzioni che consentono di scrivere codice indipendente dalla piattaforma per l'esplorazione del file system. Essendo multipiattaforma, contiene le API che non sono rilevanti per i sistemi Windows. Ciò significa, ad esempio, che `is_fifo(const path&)` restituisce sempre `false` in Windows.   
   
 ## <a name="overview"></a>Panoramica  
 Usare le API \<filesystem> per le attività seguenti:  
@@ -175,7 +176,7 @@ C:\Documents\2014\ < D:\Documents\2013\Reports\: true
 Per eseguire questo codice, incollarlo nell'esempio completo sopra prima di `main` e rimuovere il commento dalla riga che chiama tale codice.  
   
 ### <a name="converting-between-path-and-string-types"></a>Conversione tra tipi di stringa e percorso  
-Un oggetto `path` è convertibile in modo implicito in un oggetto `std::wstring` o `std::string`. Ciò significa che è possibile passare un percorso a funzioni quali [wofstream::open](../standard-library/basic-ofstream-class.md#basic_ofstream__open), come illustrato nell'esempio seguente:  
+Un oggetto `path` è convertibile in modo implicito in un oggetto `std::wstring` o `std::string`. Ciò significa che è possibile passare un percorso a funzioni quali [wofstream::open](../standard-library/basic-ofstream-class.md#open), come illustrato nell'esempio seguente:  
   
 ```cpp  
 // filesystem_path_conversion.cpp  
