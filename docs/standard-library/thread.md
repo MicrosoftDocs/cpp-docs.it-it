@@ -1,5 +1,5 @@
 ---
-title: '&lt;thread&gt; | Documenti di Microsoft'
+title: '&lt;thread&gt; | Documenti Microsoft'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 9b32de86d2ec84017157cccf1a05b9e9b6802e47
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 496269689428e73dc78893092844afb1650da20d
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltthreadgt"></a>&lt;thread&gt;
@@ -49,7 +50,7 @@ Includere l'intestazione standard \<thread > per definire la classe `thread` e v
 ## <a name="remarks"></a>Note  
   
 > [!NOTE]
->  Nel codice che viene compilato mediante **/clr**, questa intestazione è bloccata.  
+>  Nel codice compilato tramite **/clr**, questa intestazione è bloccata.  
   
  Il `__STDCPP_THREADS__` macro viene definita come un valore diverso da zero per indicare che i thread sono supportati da questa intestazione.  
   
@@ -59,35 +60,35 @@ Includere l'intestazione standard \<thread > per definire la classe `thread` e v
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Classe thread](../standard-library/thread-class.md)|Definisce un oggetto utilizzato per verificare e gestire un thread di esecuzione in un'applicazione.|  
+|[Classe thread](../standard-library/thread-class.md)|Definisce un oggetto che è possibile osservare e gestire un thread di esecuzione in un'applicazione.|  
   
 ### <a name="public-structures"></a>Strutture pubbliche  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Struttura hash (libreria standard C++)](../standard-library/hash-structure-stl.md)|Definisce una funzione membro che restituisce un valore che viene determinato in modo univoco da un `thread::id`. Definisce la funzione membro di un [hash](../standard-library/hash-class.md) funzione adatto per i valori di mapping di tipo `thread::id` una distribuzione dei valori di indice.|  
+|[Struttura hash (libreria standard C++)](../standard-library/hash-structure-stl.md)|Definisce una funzione membro che restituisce un valore che viene determinato in modo univoco da un `thread::id`. Definisce la funzione membro un [hash](../standard-library/hash-class.md) funzione adatto per i valori di mapping di tipo `thread::id` una distribuzione dei valori di indice.|  
   
 ### <a name="public-functions"></a>Funzioni pubbliche  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Funzione get_id](../standard-library/thread-functions.md#get_id_function)|Identifica in modo univoco il thread di esecuzione corrente.|  
-|[Funzione sleep_for](../standard-library/thread-functions.md#sleep_for_function)|Blocca il thread chiamante.|  
-|[Funzione sleep_until](../standard-library/thread-functions.md#sleep_until_function)|La funzione blocca il thread chiamante almeno fino all'ora specificata.|  
-|[Funzione swap](../standard-library/thread-functions.md#swap_function)|Scambia gli stati di due `thread` oggetti.|  
-|[Funzione yield](../standard-library/thread-functions.md#yield_function)|Segnala al sistema operativo di eseguire altri thread, anche se in genere l'esecuzione del thread corrente dovrebbe continuare.|  
+|[get_id](../standard-library/thread-functions.md#get_id)|Identifica in modo univoco il thread di esecuzione corrente.|  
+|[sleep_for](../standard-library/thread-functions.md#sleep_for)|Blocca il thread chiamante.|  
+|[sleep_until](../standard-library/thread-functions.md#sleep_until)|La funzione blocca il thread chiamante almeno fino all'ora specificata.|  
+|[swap](../standard-library/thread-functions.md#swap)|Scambia gli stati di due `thread` oggetti.|  
+|[yield](../standard-library/thread-functions.md#yield)|Segnala al sistema operativo di eseguire altri thread, anche se in genere l'esecuzione del thread corrente dovrebbe continuare.|  
   
 ### <a name="public-operators"></a>Operatori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[operatore > = (operatore)](../standard-library/thread-operators.md#operator_gt__eq)|Determina se un oggetto `thread::id` è maggiore o uguale a un altro.|  
-|[operatore > (operatore)](../standard-library/thread-operators.md#operator_gt_)|Determina se un oggetto `thread::id` è maggiore di un altro.|  
-|[(operatore)<=></=>](../standard-library/thread-operators.md#operator_lt__eq)|Determina se un oggetto `thread::id` è minore o uguale a un altro.|  
-|[(operatore)<>](../standard-library/thread-operators.md#operator_lt_)|Determina se un oggetto `thread::id` è minore di un altro.|  
-|[operatore! = (operatore)](../standard-library/thread-operators.md#operator_neq)|Confronta due oggetti `thread::id` per stabilirne la disuguaglianza.|  
-|[operatore Operator = =](../standard-library/thread-operators.md#operator_eq_eq)|Confronta due oggetti `thread::id` per stabilirne l'uguaglianza.|  
-|[(operatore)<>](../standard-library/thread-operators.md#operator_lt__lt_)|Inserisce una rappresentazione testo di un oggetto `thread::id` in un flusso.|  
+|[operatore > = (operatore)](../standard-library/thread-operators.md#op_gt_eq)|Determina se un oggetto `thread::id` è maggiore o uguale a un altro.|  
+|[operatore > (operatore)](../standard-library/thread-operators.md#op_gt)|Determina se un oggetto `thread::id` è maggiore di un altro.|  
+|[operatore < = (operatore)](../standard-library/thread-operators.md#op_lt_eq)|Determina se un oggetto `thread::id` è minore o uguale a un altro.|  
+|[operatore < (operatore)](../standard-library/thread-operators.md#op_lt)|Determina se un oggetto `thread::id` è minore di un altro.|  
+|[operatore! = (operatore)](../standard-library/thread-operators.md#op_neq)|Confronta due oggetti `thread::id` per stabilirne la disuguaglianza.|  
+|[operatore Operator = =](../standard-library/thread-operators.md#op_eq_eq)|Confronta due oggetti `thread::id` per stabilirne l'uguaglianza.|  
+|[operatore << (operatore)](../standard-library/thread-operators.md#op_lt_lt)|Inserisce una rappresentazione testo di un oggetto `thread::id` in un flusso.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)   

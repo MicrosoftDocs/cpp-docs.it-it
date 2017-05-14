@@ -1,56 +1,73 @@
 ---
-title: "_tell, _telli64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_telli64"
-  - "_tell"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "tell"
-  - "telli64"
-  - "_telli64"
-  - "_tell"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_tell (funzione)"
-  - "_telli64 (funzione)"
-  - "puntatori a file [C++]"
-  - "puntatori a file [C++], recupero"
-  - "tell (funzione)"
-  - "telli64 (funzione)"
+title: _tell, _telli64 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _telli64
+- _tell
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- tell
+- telli64
+- _telli64
+- _tell
+dev_langs:
+- C++
+helpviewer_keywords:
+- tell function
+- file pointers [C++], getting
+- _tell function
+- file pointers [C++]
+- telli64 function
+- _telli64 function
 ms.assetid: 1500e8f9-8fec-4253-9eec-ec66125dfc9b
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# _tell, _telli64
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 5609e3e192ab01be6acd7bbdb495b7e58fd3acf2
+ms.contentlocale: it-it
+ms.lasthandoff: 04/01/2017
 
+---
+# <a name="tell-telli64"></a>_tell, _telli64
 Ottiene la posizione del puntatore del file.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 long _tell(  
@@ -61,29 +78,29 @@ __int64 _telli64(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `handle`  
- Descrittore del file che fa riferimento al file aperto.  
+ Descrittore del file che fa riferimento a un file aperto.  
   
-## Valore restituito  
- La posizione corrente del puntatore del file.  Nei dispositivi incapaci di posizionarsi, il valore restituito è indefinito.  
+## <a name="return-value"></a>Valore restituito  
+ Posizione corrente del puntatore del file. Nei dispositivi che non supportano la ricerca, il valore restituito è indefinito.  
   
- Un valore restituito pari a –1 indica un errore.  Se `handle` è un descrittore di file non valido, il gestore di parametri non validi viene invocato, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).  Se l'esecuzione può continuare, queste funzioni impostano `errno` a `EBADF` e restituiscono \-1.  
+ Valore restituito di L-1 indica un errore. Se `handle` è un descrittore di file non valido, viene chiamato il gestore di parametri non validi, come descritto in [Parameter Validation](../../c-runtime-library/parameter-validation.md) (Convalida dei parametri). Se l'esecuzione può continuare, queste funzioni impostano `errno` su `EBADF` e restituiscono -1L.  
   
- Vedere [\_doserrno, errno, \_sys\_errlist, e \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) per ulteriori informazioni su questo, e altri, codici restituiti.  
+ Per altre informazioni su questo e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Note  
- La funzione `_tell` ottiene la posizione corrente del puntatore del file \(se presente\) associato all'argomento `handle`.  La posizione è espressa come numero di byte dall'inizio del file.  Per la funzione `_telli64`, questo valore è espresso come Integer a 64 bit.  
+## <a name="remarks"></a>Note  
+ La funzione `_tell` ottiene la posizione corrente del puntatore del file (se presente) associata all'argomento `handle`. La posizione viene espressa come numero di byte dall'inizio del file. Per la funzione `_telli64`, questo valore è espresso come intero a 64 bit.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`_tell`, `_telli64`|\<io.h\>|  
+|-------------|---------------------|  
+|`_tell`, `_telli64`|\<io.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_tell.c  
@@ -116,20 +133,20 @@ int main( void )
 }  
 ```  
   
-## Input: crt\_tell.txt  
+## <a name="input-crttelltxt"></a>Input: crt_tell.txt  
   
 ```  
 Line one.  
 Line two.  
 ```  
   
-### Output  
+### <a name="output"></a>Output  
   
 ```  
 Current file position is: 20  
 ```  
   
-## Vedere anche  
- [I\/O a basso livello](../../c-runtime-library/low-level-i-o.md)   
- [ftell, \_ftelli64](../../c-runtime-library/reference/ftell-ftelli64.md)   
- [\_lseek, \_lseeki64](../../c-runtime-library/reference/lseek-lseeki64.md)
+## <a name="see-also"></a>Vedere anche  
+ [I/O di basso livello](../../c-runtime-library/low-level-i-o.md)   
+ [ftell, _ftelli64](../../c-runtime-library/reference/ftell-ftelli64.md)   
+ [_lseek, _lseeki64](../../c-runtime-library/reference/lseek-lseeki64.md)

@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - tuple
-- std::tuple
 - tuple/std::tuple
 - tuple/std::tuple::operator=
 dev_langs:
@@ -36,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 5a06cb149bd08f733f2b43692747d33d81ab7a7b
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 29ff622d6411885682aa727a8040a3542f013d47
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="tuple-class"></a>Classe tuple
@@ -145,7 +145,7 @@ The tuples in the vector are
   
  **Spazio dei nomi:** std  
   
-##  <a name="a-nametupleoperatoreqa--tupleoperator"></a><a name="tuple__operator_eq"></a>  tuple::operator=  
+##  <a name="op_eq"></a>  tuple::operator=  
  Assegna un oggetto `tuple`.  
   
 ```  
@@ -225,7 +225,7 @@ int main()
 x 4  
 ```  
   
-##  <a name="a-nametupleswapa--tupleswap"></a><a name="tuple_swap"></a>  tuple:swap  
+##  <a name="tuple_swap"></a>  tuple:swap  
  Scambia gli elementi di due tuple.  
   
 ```  
@@ -243,7 +243,7 @@ template <class... Types>
 ### <a name="remarks"></a>Note  
  La funzione esegue `left.swap(right)`.  
   
-##  <a name="a-nametupletuplea--tupletuple"></a><a name="tuple__tuple"></a>  tuple::tuple  
+##  <a name="tuple"></a>  tuple::tuple  
  Costruisce un oggetto `tuple`.  
   
 ```  
@@ -356,6 +356,6 @@ int main()
   
 ## <a name="see-also"></a>Vedere anche  
  [\<tuple>](../standard-library/tuple.md)   
- [Funzione make_tuple](../standard-library/tuple-functions.md#make_tuple_function)
+ [make_tuple](../standard-library/tuple-functions.md#make_tuple)
 
 

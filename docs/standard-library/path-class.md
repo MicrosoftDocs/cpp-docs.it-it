@@ -31,10 +31,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: acc0ecd4edaf1e58977dcbdeb483d497a72bc4c8
-ms.openlocfilehash: b6f1fb2eacdc12857978d03ccbd98ee5da3047e5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: d1739ef33378358a9d195b79c1ba7ace7bf54acf
+ms.contentlocale: it-it
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="path-class"></a>Classe path
@@ -160,7 +161,7 @@ path extension() const;
 path filename() const;
 ```  
   
- Restituisce il componente della directory radice di myname, nello specifico `empty()  path() : *--end()`. Il componente può essere vuoto.  
+ Restituisce il componente della directory radice di myname, in maniera specifica `empty()  path() : *--end()`. Il componente può essere vuoto.  
   
 ## <a name="pathgenericstring"></a>path::generic_string  
   
@@ -174,7 +175,7 @@ template <class Elem,
 string generic_string() const;
 ```  
   
- Restituisce `this->string<Elem, Traits, Alloc>(al)` con qualsiasi barra rovesciata convertita in una barra (in Windows).  
+ Restituisce `this->string<Elem, Traits, Alloc>(al)` con (in Windows) qualsiasi barra rovesciata convertita in una barra.  
   
 ## <a name="pathgenericu16string"></a>path::generic_u16string  
   
@@ -612,7 +613,7 @@ wstring wstring() const;
  Converte la sequenza archiviata in mypath nella codifica preferita dal sistema hot per una sequenza wchar_t e la restituisce archiviata in un oggetto di tipo wstring.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** filesystem  
+ **Intestazione:** \<filesystem >  
   
  **Spazio nomi:** std::experimental::filesystem
   

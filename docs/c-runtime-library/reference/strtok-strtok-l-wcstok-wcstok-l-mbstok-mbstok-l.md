@@ -72,10 +72,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d203033a5cb07ca4e6888cca7cbf4bba1b1da9da
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 07948b7fc08bbc41e2e899e190842be98746aeab
+ms.contentlocale: it-it
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strtok-strtokl-wcstok-wcstokl-mbstok-mbstokl"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
@@ -125,7 +126,7 @@ unsigned char *_mbstok(
 > [!IMPORTANT]
 >  Queste funzioni possono incorrere in una minaccia potenziale dovuta a un problema di sovraccarico del buffer. I problemi di sovraccarico del buffer sono usati spesso come metodo di attacco di sistema e provocano un'elevazione dei privilegi non autorizzata. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
   
- Nella prima chiamata a `strtok` la funzione ignora i delimitatori iniziali e restituisce un puntatore al primo token in `strToken`, aggiungendo un carattere Null di terminazione al token. Possono essere suddivisi altri token dal resto di `strToken` tramite una serie di chiamate a `strtok`. Ogni chiamata a `strtok` modifica `strToken` inserendo un carattere Null dopo il `token` restituito dalla chiamata. Per leggere il token successivo da `strToken`, chiamare `strtok` con un valore `NULL` per l'argomento `strToken`. Se l'argomento `strToken` è `NULL`, `strtok` cerca il token successivo nella versione modificata di `strToken`. L'argomento `strDelimit` può accettare qualsiasi valore da una chiamata alla successiva, quindi il set di delimitatori può variare.  
+ Nella prima chiamata a `strtok` la funzione ignora i delimitatori iniziali e restituisce un puntatore al primo token in `strToken`, aggiungendo un carattere Null di terminazione al token. Possono essere suddivisi altri token dal resto di `strToken` tramite una serie di chiamate a `strtok`. Ogni chiamata a `strtok` modifica `strToken` inserendo un carattere null dopo la `token` restituito dalla chiamata. Per leggere il token successivo da `strToken`, chiamare `strtok` con un valore `NULL` per l'argomento `strToken`. Se l'argomento `strToken` è `NULL`, `strtok` cerca il token successivo nella versione modificata di `strToken`. L'argomento `strDelimit` può accettare qualsiasi valore da una chiamata alla successiva, quindi il set di delimitatori può variare.  
   
  La configurazione dell'impostazione della categoria `LC_CTYPE` delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso `_l` usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso `_l` sono identiche ma usano il parametro passato relativo alle impostazioni locali. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
   
@@ -194,9 +195,6 @@ Tokens:
  more  
  tokens  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md)   

@@ -12,18 +12,19 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 72389624e776a2e8334490c37a5ca628e033ffaa
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 097b3ec2a7b097eb2137e1fd5fe59eabc0da537f
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltostreamgt-operators"></a>Operatori &lt;ostream&gt;
 ||  
 |-|  
-|[operator&lt;&lt;](#operator_lt__lt_)|  
+|[operator&lt;&lt;](#op_lt_lt)|  
   
-##  <a name="operator_lt__lt_"></a>  operator&lt;&lt;  
+##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
  Scrive vari tipi nel flusso.  
   
 ```
@@ -106,7 +107,7 @@ basic_ostream <_Elem, _Tr>& operator<<(
  Flusso.  
   
 ### <a name="remarks"></a>Note  
- La classe `basic_ostream` definisce inoltre diversi operatori di inserimento. Per altre informazioni, vedere [basic_ostream::operator&lt;&lt;](../standard-library/basic-ostream-class.md#basic_ostream_operator_lt_lt_).  
+ La classe `basic_ostream` definisce inoltre diversi operatori di inserimento. Per altre informazioni, vedere [basic_ostream::operator&lt;&lt;](../standard-library/basic-ostream-class.md#basic_ostream_operator_lt_lt).  
   
  La funzione modello  
   
@@ -117,7 +118,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```  
   
- determina la lunghezza N = `traits_type::`[length](../standard-library/char-traits-struct.md#char_traits__length)( `str`) della sequenza che inizia da `str` e inserisce la sequenza. Se N < `_Ostr.`[width](../standard-library/ios-base-class.md#ios_base__width), la funzione inserisce anche una ripetizione di caratteri di riempimento `_Ostr.``width` - N. La ripetizione precede la sequenza se ( `_Ostr`. [flags](../standard-library/ios-base-class.md#ios_base__flags) & `adjustfield` != [left](../standard-library/ios-functions.md#left). In caso contrario, la ripetizione segue la sequenza. La funzione restituisce `_Ostr`.  
+ determina la lunghezza N = `traits_type::`[length](../standard-library/char-traits-struct.md#length)( `str`) della sequenza che inizia da `str` e inserisce la sequenza. Se N < `_Ostr.`[width](../standard-library/ios-base-class.md#width), la funzione inserisce anche una ripetizione di caratteri di riempimento `_Ostr.``width` - N. La ripetizione precede la sequenza se ( `_Ostr`. [flags](../standard-library/ios-base-class.md#flags) & `adjustfield` != [left](../standard-library/ios-functions.md#left). In caso contrario, la ripetizione segue la sequenza. La funzione restituisce `_Ostr`.  
   
  La funzione modello  
   
@@ -148,14 +149,18 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```  
   
- ad eccezione del fatto che ciascun elemento `_Ch` della sequenza che inizia da `str` viene convertito in un oggetto di tipo `Elem` tramite la chiamata di `_Ostr.`[put](../standard-library/basic-ostream-class.md#basic_ostream__put)( `_Ostr.`[widen](../standard-library/basic-ios-class.md#basic_ios__widen)( `_Ch`)).  
+ ad eccezione del fatto che ciascun elemento `_Ch` della sequenza che inizia da `str` viene convertito in un oggetto di tipo `Elem` tramite la chiamata di `_Ostr.`[put](../standard-library/basic-ostream-class.md#put)( `_Ostr.`[widen](../standard-library/basic-ios-class.md#widen)( `_Ch`)).  
   
  La funzione modello  
   
-``cpp template <class _Elem, class _Tr> basic_ostream<Elem, _Tr>& operator<<( basic_ostream<Elem, _Tr>& _Ostr, char _Ch);
+```cpp
+template <class _Elem, class _Tr>
+basic_ostream<Elem, _Tr>& operator<<(
+    basic_ostream<Elem, _Tr>& _Ostr,
+    char _Ch);
 ```  
   
- behaves the same as  
+ si comporta allo stesso modo di  
   
 ```cpp  
 template <class _Elem, class _Tr>

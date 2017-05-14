@@ -71,10 +71,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 2a1c5b467ba9f96af0bc8e402715a0a427c73eeb
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: cd787e4c18cf947760a31b5ee61f5ce7b83a7a2f
+ms.contentlocale: it-it
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strnextc-wcsnextc-mbsnextc-mbsnextcl"></a>_strnextc, _wcsnextc, _mbsnextc, _mbsnextc_l
@@ -110,7 +111,7 @@ unsigned int _mbsnextc_l(
  Impostazioni locali da usare.  
   
 ## <a name="return-value"></a>Valore restituito  
- Ognuna di queste funzioni restituisce il valore intero del carattere successivo in `str`*.*  
+ Ognuna di queste funzioni restituisce il valore intero del carattere successivo nella `str`.  
   
 ## <a name="remarks"></a>Note  
  La funzione `_mbsnextc` restituisce il valore intero del carattere multibyte successivo in `str`, senza far avanzare il puntatore di stringa. `_mbsnextc` riconosce le sequenze di caratteri multibyte in base alla [tabella codici multibyte](../../c-runtime-library/code-pages.md) attualmente in uso.  
@@ -125,7 +126,7 @@ unsigned int _mbsnextc_l(
 |---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tcsnextc`|`_strnextc`|`_mbsnextc`|`_wcsnextc`|  
   
- `_strnextc` e `_wcsnextc` sono versioni con stringa di caratteri a byte singolo e stringa di caratteri wide di `_mbsnextc`. `_wcsnextc` restituisce il valore intero del successivo carattere wide `string` `_strnextc` restituisce il valore intero del carattere a byte singolo successivo in `string`. `_strnextc` e `_wcsnextc` sono forniti solo per questo mapping e non devono essere usate in altre circostanze. Per altre informazioni, vedere [Uso dei mapping di testo generico](../../c-runtime-library/using-generic-text-mappings.md) e [Mapping di testo generico](../../c-runtime-library/generic-text-mappings.md).  
+ `_strnextc`e `_wcsnextc` sono stringhe di caratteri a byte singolo e le versioni di stringa di caratteri wide di `_mbsnextc`. `_wcsnextc` restituisce il valore intero del successivo carattere wide `string` `_strnextc` restituisce il valore intero del carattere a byte singolo successivo in `string`. `_strnextc` e `_wcsnextc` sono forniti solo per questo mapping e non devono essere usate in altre circostanze. Per altre informazioni, vedere [Uso dei mapping di testo generico](../../c-runtime-library/using-generic-text-mappings.md) e [Mapping di testo generico](../../c-runtime-library/generic-text-mappings.md).  
   
  `_mbsnextc_l` è identica, ma usa il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
   
@@ -138,10 +139,7 @@ unsigned int _mbsnextc_l(
 |`_strnextc`|\<tchar.h>|  
 |`_wcsnextc`|\<tchar.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md)   

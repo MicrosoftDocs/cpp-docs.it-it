@@ -67,10 +67,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c372d65ca9d3c49aee32cb51fea67859dc11a7fb
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 08ab806a3f2852109dda05d40e7264dbd8571298
+ms.contentlocale: it-it
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strdec-wcsdec-mbsdec-mbsdecl"></a>_strdec, _wcsdec, _mbsdec, _mbsdec_l
@@ -103,16 +104,16 @@ unsigned char *_mbsdec_l(
   
 #### <a name="parameters"></a>Parametri  
  `start`  
- Puntatore a qualsiasi carattere (o per `_mbsdec` e _`mbsdec_l`, il primo byte di un carattere multibyte) nella stringa di origine. `start` deve precedere `current` nella stringa di origine.  
+ Puntatore a qualsiasi carattere (o per `_mbsdec` e `_mbsdec_l`, il primo byte di un carattere multibyte) nella stringa di origine. `start` deve precedere `current` nella stringa di origine.  
   
  `current`  
- Puntatore a qualsiasi carattere (o per `_mbsdec` e _`mbsdec_l`, il primo byte di un carattere multibyte) nella stringa di origine. `current` deve seguire `start` nella stringa di origine.  
+ Puntatore a qualsiasi carattere (o per `_mbsdec` e `_mbsdec_l`, il primo byte di un carattere multibyte) nella stringa di origine. `current` deve seguire `start` nella stringa di origine.  
   
  `locale`  
  Impostazioni locali da usare.  
   
 ## <a name="return-value"></a>Valore restituito  
- `_mbsdec`, _`mbsdec_l`, `_strdec` e `_wcsdec` restituiscono ognuna un puntatore al carattere che precede immediatamente `current`. `_mbsdec` restituisce `NULL` se il valore di `start` è maggiore o uguale a quello di `current`. `_tcsdec` viene mappata a una di queste funzioni e il relativo valore restituito dipende dal mapping.  
+ `_mbsdec`, `_mbsdec_l`, `_strdec`, e `_wcsdec` ogni funzione restituisce un puntatore al carattere che precede immediatamente `current`; `_mbsdec` restituisce `NULL` se il valore di `start` è maggiore o uguale a quella del `current`. `_tcsdec` viene mappata a una di queste funzioni e il relativo valore restituito dipende dal mapping.  
   
 ## <a name="remarks"></a>Note  
  Le funzioni `_mbsdec` e `_mbsdec_l` restituiscono un puntatore al primo byte del carattere multibyte che precede immediatamente `current` nella stringa contenente `start`.  
@@ -197,9 +198,6 @@ int main()
 }  
   
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md)   

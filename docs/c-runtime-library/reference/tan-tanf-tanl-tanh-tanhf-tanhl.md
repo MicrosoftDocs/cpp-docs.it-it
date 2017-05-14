@@ -72,10 +72,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 94ad2866dc8b2284d674ccfa284646aac9a68efa
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: f52084801f695fe6c435e9c46520a6b2b3c9e754
+ms.contentlocale: it-it
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="tan-tanf-tanl-tanh-tanhf-tanhl"></a>tan, tanf, tanl, tanh, tanhf, tanhl
@@ -121,7 +122,7 @@ long double tanhl(
  Angolo in radianti.  
   
 ## <a name="return-value"></a>Valore restituito  
- Le funzioni `tan` restituiscono la tangente di `x`. Se `x` è maggiore o uguale a 263 o inferiore o uguale a -263, si verifica una perdita di significato nel risultato.  
+ Le funzioni `tan` restituiscono la tangente di `x`. If `x` is greater than or equal to 263, or less than or equal to -263, a loss of significance in the result occurs.  
   
  Le funzioni `tanh` restituiscono la tangente iperbolica di `x`. Non vi è restituzione di errori.  
   
@@ -168,12 +169,6 @@ int main( void )
 tan( 0.785398 ) = 1.000000  
 tanh( 1.000000 ) = 0.761594  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
-  
--   [System::Math::Tan](https://msdn.microsoft.com/en-us/library/system.math.tan.aspx)  
-  
--   [System::Math::Tanh](https://msdn.microsoft.com/en-us/library/system.math.tanh.aspx)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)   

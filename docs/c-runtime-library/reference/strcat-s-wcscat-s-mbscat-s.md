@@ -1,60 +1,77 @@
 ---
-title: "strcat_s, wcscat_s, _mbscat_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "strcat_s"
-  - "_mbscat_s"
-  - "wcscat_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "strcat_s"
-  - "wcscat_s"
-  - "_mbscat_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_mbscat_s (funzione)"
-  - "aggiunta di stringhe"
-  - "mbscat_s (funzione)"
-  - "strcat_s (funzione)"
-  - "stringhe [C++], aggiunta"
-  - "wcscat_s (funzione)"
+title: strcat_s, wcscat_s, _mbscat_s | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- strcat_s
+- _mbscat_s
+- wcscat_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- strcat_s
+- wcscat_s
+- _mbscat_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- wcscat_s function
+- strcat_s function
+- mbscat_s function
+- strings [C++], appending
+- _mbscat_s function
+- appending strings
 ms.assetid: 0f2f9901-c5c5-480b-98bc-f8f690792fc0
 caps.latest.revision: 30
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 30
----
-# strcat_s, wcscat_s, _mbscat_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 37cb584538c51844cbd23eb0853ef48f548600ca
+ms.contentlocale: it-it
+ms.lasthandoff: 04/01/2017
 
-Aggiungere una stringa.  Queste versioni di [strcat, wcscat, \_mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md) contengono i miglioramenti della sicurezza come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
+---
+# <a name="strcats-wcscats-mbscats"></a>strcat_s, wcscat_s, _mbscat_s
+Aggiunge una stringa. Queste versioni di [strcat, wcscat, _mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md) includono miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
 > [!IMPORTANT]
->  `_mbscat_s` non può essere utilizzato in applicazioni che vengono eseguite in Windows Runtime.  Per ulteriori informazioni, vedere [Funzioni CRT non supportate con \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbscat_s` non può essere utilizzato in applicazioni che vengono eseguite in Windows Runtime. Per altre informazioni, vedere l'articolo relativo alle [funzioni CRT non supportate con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 errno_t strcat_s(  
@@ -89,74 +106,71 @@ errno_t _mbscat_s(
 ); // C++ only  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `strDestination`  
- Buffer della stringa destinazione che terminata con Null.  
+ Buffer della stringa di destinazione con terminazione Null.  
   
  `numberOfElements`  
- Dimensione del buffer della stringa di destinazione.  
+ Dimensioni del buffer della stringa di destinazione.  
   
  `strSource`  
  Buffer della stringa di origine che termina con Null.  
   
-## Valore restituito  
- Zero se ha esito positivo; un codice di errore in caso di errore.  
+## <a name="return-value"></a>Valore restituito  
+ Zero se con esito positivo; un codice di errore in caso di errore.  
   
-### Condizioni di errore  
+### <a name="error-conditions"></a>Condizioni di errore  
   
-|`strDestination`|`numberOfElements`|`strSource`|Valore restituito|Contenuto di `strDestination`.|  
-|----------------------|------------------------|-----------------|-----------------------|------------------------------------|  
-|`NULL` o non terminato|any|any|`EINVAL`|non modificato|  
-|any|any|`NULL`|`EINVAL`|`strDestination`\[0\] impostato su 0|  
-|any|0 o troppo piccolo|any|`ERANGE`|`strDestination`\[0\] impostato su 0|  
+|`strDestination`|`numberOfElements`|`strSource`|Valore restituito|Contenuto di `strDestination`|  
+|----------------------|------------------------|-----------------|------------------|----------------------------------|  
+|`NULL` o senza terminazione|any|qualsiasi|`EINVAL`|non modificato|  
+|any|qualsiasi|`NULL`|`EINVAL`|`strDestination`[0] impostato su 0|  
+|qualsiasi|0 o troppo piccolo|qualsiasi|`ERANGE`|`strDestination`[0] impostato su 0|  
   
-## Note  
- La funzione `strcat_s` aggiunge `strSource` a `strDestination` e termina la stringa risultato con un carattere null.  Il carattere iniziale di `strSource` sovrascrive il carattere di terminazione null di `strDestination`.  Il comportamento di `strcat_s` non è definito se le stringhe di origine e di destinazione si sovrappongono.  
+## <a name="remarks"></a>Note  
+ La funzione `strcat_s` aggiunge `strSource` a `strDestination` e termina la stringa risultante con un carattere Null. Il carattere iniziale di `strSource` sovrascrive il carattere Null di terminazione di `strDestination`. Se le stringhe di origine e di destinazione si sovrappongono, il comportamento di `strcat_s` non è definito.  
   
- Si noti che il secondo parametro è la dimensione totale del buffer, non la dimensione rimanente:  
+ Si noti che il secondo parametro rappresenta le dimensioni totali del buffer e non le dimensioni rimanenti:  
   
 ```  
 char buf[16];  
 strcpy_s(buf, 16, "Start");  
 strcat_s(buf, 16, " End");               // Correct  
-strcat_s(buf, 16 – strlen(buf), " End"); // Incorrect  
+strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect  
 ```  
   
- `wcscat_s` e `_mbscat_s` sono versioni a caratteri di tipo "wide" e di caratteri multibyte di `strcat_s`.  Gli argomenti e il valore restituito di `wcscat_s` sono stringhe di caratteri di tipo "wide", quelli di `_mbscat_s` sono stringhe di caratteri multibyte.  Altrimenti queste tre funzioni si comportano in modo identico.  
+ `wcscat_s` e `_mbscat_s` sono le versioni a caratteri wide e a caratteri multibyte di `strcat_s`. Gli argomenti e il valore restituito di `wcscat_s` sono stringhe con caratteri wide, mentre quelli di `_mbscat_s` sono stringhe con caratteri multibyte. A parte ciò, queste tre funzioni si comportano in modo identico.  
   
- Se `strDestination` è un puntatore null, o non è con terminazione null, o se `strSource` è un puntatore `NULL`, o se la stringa di destinazione è troppo piccola, il gestore di parametri non validi viene invocato, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).  Se l'esecuzione può continuare, queste funzioni restituiscono `EINVAL` e impostano `errno` su `EINVAL`.  
+ Se `strDestination` è un puntatore Null o non ha terminazione Null oppure se `strSource` è un puntatore `NULL` oppure se la stringa di destinazione è troppo piccola, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono `EINVAL` e impostano `errno` su `EINVAL`.  
   
- In C\+\+, l'utilizzo di queste funzioni è semplificato dagli overload dei modelli; gli overload possono dedurre la lunghezza del buffer automaticamente \(che elimina la necessità di specificare un argomento di dimensione\) e possono sostituire automaticamente le funzioni precedenti, quelle non sicure alle più recenti e le controparti sicure.  Per ulteriori informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).  
   
- La versione di debug di queste funzioni per prima cosa riempiono il buffer con il valore 0xFD.  Per disattivare questo comportamento, utilizzare [\_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
+ Le versioni di debug di queste funzioni riempiono innanzitutto il buffer con 0xFD. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
-### Mapping di routine su testo generico  
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
-|Routine TCHAR.H|\_UNICODE & \_MBCS not defined|\_MBCS definito|\_UNICODE definito|  
-|---------------------|------------------------------------|---------------------|------------------------|  
+|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcscat_s`|`strcat_s`|`_mbscat_s`|`wcscat_s`|  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`strcat_s`|\<string.h\>|  
-|`wcscat_s`|\<string.h\> o \<wchar.h\>|  
-|`_mbscat_s`|\<mbstring.h\>|  
+|-------------|---------------------|  
+|`strcat_s`|\<string.h>|  
+|`wcscat_s`|\<string.h> o \<wchar.h>|  
+|`_mbscat_s`|\<mbstring.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
-## Esempio  
- Vedere l'esempio di codice in [strcpy\_s, wcscpy\_s, \_mbscpy\_s](../../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md).  
+## <a name="example"></a>Esempio  
+ Vedere il codice di esempio in [strcpy_s, wcscpy_s, _mbscpy_s](../../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md).  
   
-## Equivalente .NET Framework  
- [System::String::Concat](https://msdn.microsoft.com/en-us/library/system.string.concat.aspx)  
-  
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md)   
- [strncat, \_strncat\_l, wcsncat, \_wcsncat\_l, \_mbsncat, \_mbsncat\_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)   
- [strncmp, wcsncmp, \_mbsncmp, \_mbsncmp\_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [strncpy, \_strncpy\_l, wcsncpy, \_wcsncpy\_l, \_mbsncpy, \_mbsncpy\_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
- [\_strnicmp, \_wcsnicmp, \_mbsnicmp, \_strnicmp\_l, \_wcsnicmp\_l, \_mbsnicmp\_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strrchr, wcsrchr, \_mbsrchr, \_mbsrchr\_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [strspn, wcsspn, \_mbsspn, \_mbsspn\_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)
+ [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)   
+ [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
+ [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
+ [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
+ [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)
