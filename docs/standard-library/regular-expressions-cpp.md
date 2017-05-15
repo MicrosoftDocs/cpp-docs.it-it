@@ -33,17 +33,36 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 8159bf4e5ebde026fe0d92b7d9d3c73ce1a7b7b9
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
+ms.openlocfilehash: ac4dc70360682aff3a28eabeed0e4f05e4c509a8
+ms.contentlocale: it-it
+ms.lasthandoff: 04/24/2017
 
 ---
 # <a name="regular-expressions-c"></a>Espressioni regolari (C++)
-In questo argomento vengono illustrate le grammatiche dei motori dell'espressione regolare.  
+La libreria standard C++ supporta più grammatiche dell'espressione regolare. Questo argomento illustra le variazioni di grammatica disponibile quando si utilizzano espressioni regolari.  
   
-##  <a name="a-nameregexgrammara-regular-expression-grammar"></a><a name="regexgrammar"></a> Grammatica dell'espressione regolare  
+##  <a name="regexgrammar"></a> Grammatica dell'espressione regolare  
+Grammatica dell'espressione regolare da utilizzare per specificato per l'utilizzo di uno del `std::regex_constants::syntax_option_type` valori di enumerazione. Le grammatiche dell'espressione regolare vengono definite in std::regex_constants:
+
+-   `ECMAScript`: Questo è più vicino alla grammatica utilizzata da JavaScript e i linguaggi .NET.
+-   `basic`: Le espressioni regolari di POSIX base o motore regole di business.
+-   `extended`: Il POSIX estesi espressioni regolari o ERE.
+-   `awk`: Questo è `extended`, ma presenta altre sequenze di escape per caratteri non stampabili.
+-   `grep`: Questo è `basic`, ma consente anche una nuova riga caratteri ('\n') separare le alternanze.
+-   `egrep`: Questo è `extended`, ma consente anche di caratteri di nuova riga separare alternatios.
+
+Per impostazione predefinita, se non viene specificata nessuna grammatica, `ECMAScript` verrà utilizzato. È possibile specificare solo una grammatica.  
   
+Oltre a grammatica, può essere applicato più flag:  
+-   `icase`: Maiuscole e minuscole durante corrispondenti.  
+-   `nosubs`: Ignorare contrassegnate corrispondenze (ovvero, le espressioni tra parentesi); Nessun sostituzioni vengono archiviate.  
+-   `optimize`: Verificare corrispondenza più velocemente, le possibili spese della fase di costruzione maggiore.  
+-   `collate`: Utilizzare sequenze di confronto di impostazioni locali (ad esempio, gli intervalli nel formato "[a-z]").  
+  
+Zero o più flag possono essere combinati con la grammatica per specificare il comportamento del motore delle espressioni regolari. Se solo vengono specificati flag, `ECMAScript` si presuppone che sia la grammatica.
+
 ### <a name="element"></a>Elemento  
  Un elemento può essere quanto segue:  
   
@@ -67,7 +86,7 @@ In questo argomento vengono illustrate le grammatiche dei motori dell'espression
   
 -   Un *ancoraggio*. L'ancoraggio '^' corrisponde all'inizio della sequenza di destinazione; l'ancoraggio '$' corrisponde alla fine della sequenza di destinazione.  
   
- Un *gruppo Capture* nel formato "( *sottoespressione* )" o "\\( *sottoespressione* \\)" in `BRE` e in `grep` che corrisponde alla sequenza di caratteri nella sequenza di destinazione a cui corrisponde il modello racchiuso tra i delimitatori.  
+ Un *gruppo Capture* nel formato "( *sottoespressione* )" o "\\( *sottoespressione* \\)" in `basic` e in `grep` che corrisponde alla sequenza di caratteri nella sequenza di destinazione a cui corrisponde il modello racchiuso tra i delimitatori.  
   
 -   Un *escape di identità* nel formato "\\`k`" che corrisponde al carattere `k` nella sequenza di destinazione.  
   
@@ -83,7 +102,7 @@ In questo argomento vengono illustrate le grammatiche dei motori dell'espression
   
 -   "(a)" corrisponde alla sequenza di destinazione "a" e associa il gruppo Capture 1 alla sottosequenza "a", ma non corrisponde alle sequenze di destinazione "B", "b" o "c".  
   
- In `ECMAScript`, in `BRE` e in `grep` un elemento può anche essere un *backreference* nel formato "\\`dd`" in cui `dd` rappresenta un valore decimale N che corrisponde a una sequenza di caratteri nella sequenza di destinazione uguale alla sequenza di caratteri a cui corrisponde l'ennesimo *gruppo Capture*. Ad esempio, "(a)\1" corrisponde alla sequenza di destinazione "aa" perché il primo (e unico) gruppo Capture corrisponde alla sequenza iniziale "a", quindi \1 corrisponde alla sequenza finale "a".  
+ In `ECMAScript`, in `basic` e in `grep` un elemento può anche essere un *backreference* nel formato "\\`dd`" in cui `dd` rappresenta un valore decimale N che corrisponde a una sequenza di caratteri nella sequenza di destinazione uguale alla sequenza di caratteri a cui corrisponde l'ennesimo *gruppo Capture*. Ad esempio, "(a)\1" corrisponde alla sequenza di destinazione "aa" perché il primo (e unico) gruppo Capture corrisponde alla sequenza iniziale "a", quindi \1 corrisponde alla sequenza finale "a".  
   
  In `ECMAScript` un elemento può anche essere quanto segue:  
   
@@ -126,13 +145,13 @@ In questo argomento vengono illustrate le grammatiche dei motori dell'espression
 -   Una *sequenza di escape ottale* nel formato "\\`ooo`". Corrisponde a un carattere nella sequenza di destinazione la cui rappresentazione è il valore rappresentato da uno, due o tre cifre ottali `ooo`.  
   
 ### <a name="repetition"></a>Ripetizione  
- Qualsiasi elemento diverso da un'*asserzione positiva*, un'*asserzione negativa* o da un *ancoraggio* può essere seguito da un numero di ripetizioni. Il tipo di numero di ripetizioni più generale assume il formato "{`min`,`max`}" o "\\{`min`,`max`\\}" in `BRE` e in `grep`. Un elemento seguito da questo formato di numero di ripetizioni corrisponde almeno a `min` occorrenze successive e a non più di `max` occorrenze successive di una sequenza corrispondente all'elemento. Ad esempio, "a{2,3}" corrisponde alla sequenza di destinazione "aa" e alla sequenza di destinazione "aaa", ma non corrisponde alla sequenza di destinazione "a" o alla sequenza di destinazione "aaaa".  
+ Qualsiasi elemento diverso da un'*asserzione positiva*, un'*asserzione negativa* o da un *ancoraggio* può essere seguito da un numero di ripetizioni. Il tipo di numero di ripetizioni più generale assume il formato "{`min`,`max`}" o "\\{`min`,`max`\\}" in `basic` e in `grep`. Un elemento seguito da questo formato di numero di ripetizioni corrisponde almeno a `min` occorrenze successive e a non più di `max` occorrenze successive di una sequenza corrispondente all'elemento. Ad esempio, "a{2,3}" corrisponde alla sequenza di destinazione "aa" e alla sequenza di destinazione "aaa", ma non corrisponde alla sequenza di destinazione "a" o alla sequenza di destinazione "aaaa".  
   
  Un numero di ripetizioni può inoltre assumere uno dei seguenti formati:  
   
--   "{`min`}" o "\\{`min`\\}" in `BRE` e `grep`. Equivalente a "{`min`,`min`}".  
+-   "{`min`}" o "\\{`min`\\}" in `basic` e `grep`. Equivalente a "{`min`,`min`}".  
   
--   "{`min`,}" o "\\{`min`,\\}" in `BRE` e `grep`. Equivalente a "{`min`,unbounded}".  
+-   "{`min`,}" o "\\{`min`,\\}" in `basic` e `grep`. Equivalente a "{`min`,unbounded}".  
   
 -   "*". Equivalente a "{0,unbounded}".  
   
@@ -144,7 +163,7 @@ In questo argomento vengono illustrate le grammatiche dei motori dell'espression
   
 -   "a*" corrisponde alla sequenza di destinazione "", alla sequenza di destinazione "a", alla sequenza di destinazione "aa" e così via.  
   
- Per tutte le grammatiche tranne `BRE` e `grep`, un numero di ripetizioni può inoltre assumere uno dei seguenti formati:  
+ Per tutte le grammatiche tranne `basic` e `grep`, un numero di ripetizioni può inoltre assumere uno dei seguenti formati:  
   
 -   "". Equivalente a "{0,1}".  
   
@@ -162,19 +181,19 @@ In questo argomento vengono illustrate le grammatiche dei motori dell'espression
  Gli elementi delle espressioni regolari, con o senza *numeri di ripetizioni*, possono essere concatenati per formare espressioni regolari più lunghe. L'espressione risultante corrisponde a una sequenza di destinazione che è una concatenazione delle sequenze a cui corrispondono i singoli elementi. Ad esempio, "a{2,3}b" corrisponde alla sequenza di destinazione "aab" e alla sequenza di destinazione "aaab", ma non corrisponde alla sequenza di destinazione "ab" o alla sequenza di destinazione "aaaab".  
   
 ### <a name="alternation"></a>Alternanza  
- In tutte le grammatiche dell'espressione regolare tranne `BRE` e `grep` un'espressione regolare concatenata può essere seguita dal carattere '&#124;' e da un'altra espressione regolare concatenata. Qualsiasi numero di espressioni regolari concatenate può essere combinato in questo modo. L'espressione risultante corrisponde a qualsiasi sequenza di destinazione corrispondente a uno o più espressioni regolari concatenate.  
+ In tutte le grammatiche dell'espressione regolare tranne `basic` e `grep` un'espressione regolare concatenata può essere seguita dal carattere '&#124;' e da un'altra espressione regolare concatenata. Qualsiasi numero di espressioni regolari concatenate può essere combinato in questo modo. L'espressione risultante corrisponde a qualsiasi sequenza di destinazione corrispondente a uno o più espressioni regolari concatenate.  
   
  Quando più di una delle espressioni regolari concatenate corrisponde alla sequenza di destinazione, `ECMAScript` sceglie la prima delle espressioni regolari concatenate che corrisponde alla sequenza come corrispondenza (*prima corrispondenza*). Le altre grammatiche dell'espressione regolare scelgono quella che raggiunge la *corrispondenza più lunga*. Ad esempio, "ab&#124;cd" corrisponde alla sequenza di destinazione "ab" e alla sequenza di destinazione "cd", ma non corrisponde alla sequenza di destinazione"abd" o alla sequenza di destinazione "acd".  
   
  In `grep` e in `egrep` è possibile utilizzare un carattere di nuova riga ('\n') per separare le alternanze.  
   
 ### <a name="subexpression"></a>Sottoespressione  
- In `BRE` e in `grep` una sottoespressione è una concatenazione. Nelle altre grammatiche dell'espressione regolare una sottoespressione è un'alternanza.  
+ In `basic` e in `grep` una sottoespressione è una concatenazione. Nelle altre grammatiche dell'espressione regolare una sottoespressione è un'alternanza.  
   
-##  <a name="a-namegrammarsummarya-grammar-summary"></a><a name="grammarsummary"></a> Riepilogo delle grammatiche  
+##  <a name="grammarsummary"></a> Riepilogo delle grammatiche  
  Nella tabella riportata di seguito vengono riepilogate le funzionalità disponibili nelle diverse grammatiche dell'espressione regolare:  
   
-|Elemento|BRE|ERE|ECMA|grep|egrep|awk|  
+|Elemento|di base|estese|ECMAScript|grep|egrep|awk|  
 |-------------|---------|---------|----------|----------|-----------|---------|  
 |alternanza in cui viene usato '&#124;'||+|+||+|+|  
 |alternanza in cui viene utilizzato '\n'||||+|+||  
@@ -203,13 +222,13 @@ In questo argomento vengono illustrate le grammatiche dei motori dell'espression
 |carattere jolly|+|+|+|+|+|+|  
 |asserzione confine di parola|||+||||  
   
-##  <a name="a-namesemanticdetailsa-semantic-details"></a><a name="semanticdetails"></a> Dettagli semantici  
+##  <a name="semanticdetails"></a> Dettagli semantici  
   
 ### <a name="anchor"></a>Ancoraggio  
  Un ancoraggio corrisponde a una posizione nella stringa di destinazione, non a un carattere. '^' corrisponde all'inizio della stringa di destinazione e '$' corrisponde alla fine della stringa di destinazione.  
   
 ### <a name="back-reference"></a>Backreference  
- Un backreference è una barra rovesciata seguita da un valore decimale N. Corrisponde al contenuto dell'ennesimo *gruppo Capture*. Il valore di N non deve essere maggiore del numero di gruppi Capture che precedono il backreference. In `BRE` e in `grep` il valore di N è determinato dalla cifra decimale che segue la barra rovesciata. In `ECMAScript` il valore di N è determinato da tutte le cifre decimali che seguono immediatamente la barra rovesciata. Pertanto, in `BRE` e in `grep` il valore di N non è mai maggiore di 9, anche se l'espressione regolare include più di nove gruppi Capture. In `ECMAScript` il valore di N è illimitato.  
+ Un backreference è una barra rovesciata seguita da un valore decimale N. Corrisponde al contenuto dell'ennesimo *gruppo Capture*. Il valore di N non deve essere maggiore del numero di gruppi Capture che precedono il backreference. In `basic` e in `grep` il valore di N è determinato dalla cifra decimale che segue la barra rovesciata. In `ECMAScript` il valore di N è determinato da tutte le cifre decimali che seguono immediatamente la barra rovesciata. Pertanto, in `basic` e in `grep` il valore di N non è mai maggiore di 9, anche se l'espressione regolare include più di nove gruppi Capture. In `ECMAScript` il valore di N è illimitato.  
   
  Esempi:  
   
@@ -217,7 +236,7 @@ In questo argomento vengono illustrate le grammatiche dei motori dell'espression
   
 -   "(a)\2" non è valido.  
   
--   Il significato di "(b(((((((((a))))))))))\10" è diverso in `BRE` e in `ECMAScript`. In `BRE` il backreference è "\1". Il backreference corrisponde al contenuto del primo gruppo Capture, ovvero quello che inizia con "(b" e termina con ")" finale e precede il backreference, e la '0' finale corrisponde a un carattere ordinario '0'. In `ECMAScript` il backreference è "\10". Corrisponde al decimo gruppo Capture, ovvero quello più interno.  
+-   Il significato di "(b(((((((((a))))))))))\10" è diverso in `basic` e in `ECMAScript`. In `basic` il backreference è "\1". Il backreference corrisponde al contenuto del primo gruppo Capture, ovvero quello che inizia con "(b" e termina con ")" finale e precede il backreference, e la '0' finale corrisponde a un carattere ordinario '0'. In `ECMAScript` il backreference è "\10". Corrisponde al decimo gruppo Capture, ovvero quello più interno.  
   
 ### <a name="bracket-expression"></a>Espressione tra parentesi quadre  
  Un'espressione tra parentesi quadre definisce un set di caratteri ed *elementi di collazione*. Quando l'espressione tra parentesi quadre inizia con il carattere '^' la corrispondenza ha esito positivo se nessun elemento nel set corrisponde al carattere nella sequenza di destinazione. In caso contrario, la corrispondenza ha esito positivo se uno degli elementi nel set corrisponde al carattere corrente nella sequenza di destinazione.  
@@ -318,9 +337,9 @@ In questo argomento vengono illustrate le grammatiche dei motori dell'espression
   
 |Grammatica|Caratteri di escape di identità consentiti|  
 |-------------|----------------------------------------|  
-|`BRE`, `grep`|{ '(', ')', '{', '}', '.', '[', '\\', '*', '^', '$' }|  
-|`ERE`, `egre`|{ '(', ')', '{', '.', '[', '\\', '*', '^', '$', '+', '', '&#124;' }|  
-|`awk`|`ERE` più {'"', '/'}|  
+|`basic`, `grep`|{ '(', ')', '{', '}', '.', '[', '\\', '*', '^', '$' }|  
+|`extended`, `egrep`|{ '(', ')', '{', '.', '[', '\\', '*', '^', '$', '+', '', '&#124;' }|  
+|`awk`|`extended` più {'"', '/'}|  
 |`ECMAScript`|Tutti i caratteri tranne quelli che possono far parte di un identificatore. In genere sono comprese le lettere, le cifre, '$', '_' e le sequenze di escape Unicode. Per ulteriori informazioni, vedere la specifica del linguaggio ECMAScript.|  
   
 ### <a name="individual-character"></a>Singolo carattere  
@@ -374,11 +393,11 @@ In questo argomento vengono illustrate le grammatiche dei motori dell'espression
   
 -   ^  $  \  .  *  +    (  )  [  ]  {  }  &#124;  
   
- In `BRE` e in `grep` i seguenti caratteri hanno significati speciali:  
+ In `basic` e in `grep` i seguenti caratteri hanno significati speciali:  
   
 -   .   [   \  
   
- Inoltre in `BRE` e in `grep` i seguenti caratteri hanno significati speciali quando vengono utilizzati in un particolare contesto.  
+ Inoltre in `basic` e in `grep` i seguenti caratteri hanno significati speciali quando vengono utilizzati in un particolare contesto.  
   
 -   '*' ha un significato speciale in tutti i casi tranne quando è il primo carattere di un'espressione regolare o il primo carattere che segue un '^ iniziale in un'espressione regolare, oppure quando è il primo carattere di un gruppo Capture o il primo carattere che segue un '^' iniziale in un gruppo Capture.  
   
@@ -386,11 +405,11 @@ In questo argomento vengono illustrate le grammatiche dei motori dell'espression
   
 -   '$' ha un significato speciale quando è l'ultimo carattere di un'espressione regolare.  
   
- In `ERE`, `egrep` e in `awk` i seguenti caratteri hanno significati speciali:  
+ In `extended`, `egrep` e in `awk` i seguenti caratteri hanno significati speciali:  
   
 -   .   [   \   (   *   +      {   &#124;  
   
- Inoltre in `ERE`, `egrep` e in `awk` i seguenti caratteri hanno significati speciali quando vengono utilizzati in un particolare contesto.  
+ Inoltre in `extended`, `egrep` e in `awk` i seguenti caratteri hanno significati speciali quando vengono utilizzati in un particolare contesto.  
   
 -   ')' ha un significato speciale quando corrisponde a un '(' precedente.  
   
@@ -431,7 +450,7 @@ In questo argomento vengono illustrate le grammatiche dei motori dell'espression
 ### <a name="word-boundary-assert"></a>Asserzione confine di parola  
  Un'asserzione confine di parola si verifica quando la posizione corrente nella stringa di destinazione si trova subito dopo un *confine di parola*.  
   
-##  <a name="a-namematchingandsearchinga-matching-and-searching"></a><a name="matchingandsearching"></a> Corrispondenza e ricerca  
+##  <a name="matchingandsearching"></a> Corrispondenza e ricerca  
  Affinché un'espressione regolare corrisponda a una sequenza di destinazione, l'intera espressione regolare deve corrispondere all'intera sequenza di destinazione. Ad esempio, l'espressione regolare "bcd" corrisponde alla sequenza di destinazione "bcd", ma non corrisponde alla sequenza di destinazione "abcd" o alla sequenza di destinazione "bcde".  
   
  Perché una ricerca di espressione regolare abbia esito positivo, è necessario che esista una sottosequenza in qualche punto della sequenza di destinazione corrispondente all'espressione regolare. La ricerca in genere trova la sottosequenza corrispondente più a sinistra.  
@@ -446,7 +465,7 @@ In questo argomento vengono illustrate le grammatiche dei motori dell'espression
   
  Una corrispondenza parziale ha esito positivo se la corrispondenza raggiunge la fine della sequenza di destinazione senza generare errori, anche se non ha raggiunto la fine dell'espressione regolare. Di conseguenza, dopo l'esito positivo di una corrispondenza parziale, l'aggiunta di caratteri alla sequenza di destinazione potrebbe causare l'esito negativo di una corrispondenza parziale successiva. Tuttavia, dopo l'esito negativo di una corrispondenza parziale, l'aggiunta di caratteri alla sequenza di destinazione potrebbe impedire l'esito positivo di una corrispondenza parziale successiva. Ad esempio, con una corrispondenza parziale, "ab" corrisponde alla sequenza di destinazione "a", ma non alla sequenza di destinazione "ac".  
   
-##  <a name="a-nameformatflagsa-format-flags"></a><a name="formatflags"></a> Flag di formato  
+##  <a name="formatflags"></a> Flag di formato  
   
 |Regole dei formati ECMAScript|Regole dei formati sed|Testo di sostituzione|  
 |-----------------------------|----------------------|----------------------|  
@@ -455,9 +474,9 @@ In questo argomento vengono illustrate le grammatiche dei motori dell'espression
 ||"\\&"|"&"|  
 |"$ `" (simbolo del dollaro seguito dalla virgoletta inversa)||Sequenza di caratteri che precede la sottosequenza corrispondente all'espressione regolare (`[match.prefix().first, match.prefix().second)`)|  
 |"$'" (simbolo del dollaro seguito dalla virgoletta dritta)||Sequenza di caratteri che segue la sottosequenza corrispondente all'espressione regolare (`[match.suffix().first, match.suffix().second)`)|  
-|"$n"|"\n"|Sequenza di caratteri corrispondente al gruppo Capture nella posizione `n`, in cui `n` è un numero compreso tra 0 e 9 (`[match[n].first, match[n].second)`|  
+|"$n"|"\n"|La sequenza di caratteri che corrisponde al gruppo capture nella posizione `n`, dove `n` è un numero compreso tra 0 e 9 (`[match[n].first, match[n].second)`)|  
 ||"\\\n"|"\n"|  
-|"$nn"||Sequenza di caratteri corrispondente al gruppo Capture nella posizione `nn`, dove `nn` è un numero compreso tra 10 e 99 (`[match[nn].first, match[nn].second)`|  
+|"$nn"||La sequenza di caratteri che corrisponde al gruppo capture nella posizione `nn`, dove `nn` è un numero compreso tra 10 e 99 (`[match[nn].first, match[nn].second)`)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica sulla libreria standard C++](../standard-library/cpp-standard-library-overview.md)

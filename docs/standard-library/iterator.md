@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: e7f431f18a1ddd6097fc5a4790a1a3688d3bda92
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 67ba9e9a670ac187d15fe53729d8cdac475472ce
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltiteratorgt"></a>&lt;iterator&gt;
@@ -92,13 +93,13 @@ Definisce le primitive degli iteratori, gli iteratori predefiniti e gli iterator
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/iterator-operators.md#operator_neq)|Verifica se l'oggetto iteratore a sinistra dell'operatore non è uguale all'oggetto iteratore a destra.|  
-|[operator==](../standard-library/iterator-operators.md#operator_eq_eq)|Verifica se l'oggetto iteratore a sinistra dell'operatore è uguale all'oggetto iteratore a destra.|  
-|[operator<](../standard-library/iterator-operators.md#operator_lt_)|Verifica se l'oggetto iteratore a sinistra dell'operatore è minore all'oggetto iteratore a destra.|  
-|[operator\<=](../standard-library/iterator-operators.md#operator_lt__eq)|Verifica se l'oggetto iteratore a sinistra dell'operatore è minore o uguale all'oggetto iteratore a destra.|  
-|[operator>](../standard-library/iterator-operators.md#operator_gt_)|Verifica se l'oggetto iteratore a sinistra dell'operatore è maggiore dell'oggetto iteratore a destra.|  
-|[operator>=](../standard-library/iterator-operators.md#operator_gt__eq)|Verifica se l'oggetto iteratore a sinistra dell'operatore è maggiore o uguale all'oggetto iteratore a destra.|  
-|[operator+](../standard-library/iterator-operators.md#operator_add)|Aggiunge un offset a un iteratore e restituisce il nuovo `reverse_iterator` che punta all'elemento inserito in corrispondenza della nuova posizione dell'offset.|  
+|[operator!=](../standard-library/iterator-operators.md#op_neq)|Verifica se l'oggetto iteratore a sinistra dell'operatore non è uguale all'oggetto iteratore a destra.|  
+|[operator==](../standard-library/iterator-operators.md#op_eq_eq)|Verifica se l'oggetto iteratore a sinistra dell'operatore è uguale all'oggetto iteratore a destra.|  
+|[operator<](../standard-library/iterator-operators.md#op_lt)|Verifica se l'oggetto iteratore a sinistra dell'operatore è minore all'oggetto iteratore a destra.|  
+|[operator\<=](../standard-library/iterator-operators.md#op_gt_eq)|Verifica se l'oggetto iteratore a sinistra dell'operatore è minore o uguale all'oggetto iteratore a destra.|  
+|[operator>](../standard-library/iterator-operators.md#op_gt)|Verifica se l'oggetto iteratore a sinistra dell'operatore è maggiore dell'oggetto iteratore a destra.|  
+|[operator>=](../standard-library/iterator-operators.md#op_gt_eq)|Verifica se l'oggetto iteratore a sinistra dell'operatore è maggiore o uguale all'oggetto iteratore a destra.|  
+|[operator+](../standard-library/iterator-operators.md#op_add)|Aggiunge un offset a un iteratore e restituisce il nuovo `reverse_iterator` che punta all'elemento inserito in corrispondenza della nuova posizione dell'offset.|  
 |[operator-](../standard-library/iterator-operators.md#operator-)|Sottrae un iteratore da un altro e restituisce la differenza.|  
   
 ### <a name="classes"></a>Classi  

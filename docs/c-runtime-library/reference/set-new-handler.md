@@ -52,10 +52,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9939a9c3586367f048a173fb75e17d5c9f67c387
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: c8a3b6e7df9f46ebf299f2fe5472461f1944b055
+ms.contentlocale: it-it
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="setnewhandler"></a>_set_new_handler
@@ -115,7 +116,7 @@ _set_new_mode(1)
   
  all'inizio del programma o collegare con Newmode.obj.  
   
- Se viene specificato un `operator new` definito dall'utente, le funzioni del nuovo gestore non vengono chiamate automaticamente in caso di errore.  
+ Se un utente definito `operator new` viene fornito, le nuove funzioni del gestore non vengono chiamate automaticamente in caso di errore.  
   
  Per altre informazioni, vedere [new](../../cpp/new-operator-cpp.md) e [delete](../../cpp/delete-operator-cpp.md) in *Riferimenti al linguaggio C++*.  
   
@@ -177,9 +178,6 @@ Allocation failed. Coalescing heap.
 This application has requested the Runtime to terminate it in an unusual way.  
 Please contact the application's support team for more information.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Memory Allocation](../../c-runtime-library/memory-allocation.md)  (Allocazione di memoria)  

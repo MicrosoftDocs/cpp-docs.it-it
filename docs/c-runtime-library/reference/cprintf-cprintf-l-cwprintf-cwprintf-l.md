@@ -72,10 +72,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d761621d23ab97d951199e7790e71f224394f92c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: c96743fc777a53f2fe849d5f88f3fd7299054d02
+ms.contentlocale: it-it
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cprintf-cprintfl-cwprintf-cwprintfl"></a>_cprintf, _cprintf_l, _cwprintf, _cwprintf_l
@@ -88,22 +89,18 @@ Formatta e stampa nella console. Sono disponibili versioni più sicure, vedere [
   
 ```  
 int _cprintf(   
-   const char * format [,   
-   argument] ...   
+   const char * format [, argument_list]  
 );  
-int _cprintf_l(   
+int _cprintf_l(  
    const char * format,  
-   locale_t locale [,  
-   argument] …   
+   locale_t locale [, argument_list]  
 );  
 int _cwprintf(  
-   const wchar * format [,   
-   argument] …  
+   const wchar * format [, argument_list]  
 );  
 int _cwprintf_l(  
    const wchar * format,  
-   locale_t locale [,   
-   argument] …  
+   locale_t locale [, argument_list]  
 );  
 ```  
   
@@ -111,8 +108,8 @@ int _cwprintf_l(
  `format`  
  Stringa di controllo del formato.  
   
- `argument`  
- Parametri facoltativi.  
+ `argument_list`  
+ Parametri facoltativi per la stringa di formato.  
   
  `locale`  
  Impostazioni locali da usare.  
@@ -121,9 +118,9 @@ int _cwprintf_l(
  Numero di caratteri stampati.  
   
 ## <a name="remarks"></a>Note  
- Queste funzioni formattano e stampano una serie di caratteri e valori direttamente sulla console, usando la funzione `_putch` (`_putwch` per `_cwprintf`) per i caratteri di output. Ogni funzione `argument` (se presente) viene convertita e restituita in base al formato specificato in `format`. Il formato ha la stessa forma e funzione del parametro `format` per la funzione [printf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). A differenza delle funzioni `fprintf`, `printf` e `sprintf`, né `_cprintf` né `_cwprintf` convertono, nell'output, combinazioni di caratteri di avanzamento di riga in caratteri di ritorno a capo (CR-LF).  
+ Queste funzioni formattano e stampano una serie di caratteri e valori direttamente sulla console, usando la funzione `_putch` (`_putwch` per `_cwprintf`) per i caratteri di output. Ogni argomento `argument_list` (se presente) viene convertita e restituita in base alla specifica del formato corrispondente in `format`. Il `format` argomento Usa il [formattare sintassi specifica per le funzioni printf e wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). A differenza di `fprintf`, `printf`, e `sprintf` funzioni, né `_cprintf` né `_cwprintf` converte i caratteri di avanzamento di riga in combinazioni di ritorno a capo e avanzamento riga (CR-LF) quando l'output.  
   
- Una differenza importante è che `_cwprintf` visualizza i caratteri Unicode se usato in Windows NT. A differenza di `_cprintf`, `_cwprintf` utilizza le impostazioni locali correnti della console.  
+ Una differenza importante è che `_cwprintf` Visualizza i caratteri Unicode quando si utilizza Windows. A differenza di `_cprintf`, `_cwprintf` utilizza le impostazioni locali correnti della console.  
   
  Le versioni di queste funzioni con il suffisso `_l` sono identiche ad eccezione per il fatto che usano il parametro delle impostazioni locali passato al posto di quelle correnti.  
   
@@ -175,9 +172,6 @@ int main( void )
 ```Output  
 -16  001d  62511  A Test  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
 ## <a name="see-also"></a>Vedere anche  
  [I/O su console e porta](../../c-runtime-library/console-and-port-i-o.md)   

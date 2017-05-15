@@ -53,10 +53,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 2e96f911e6784744eb539f6ce2b1961102d9869d
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 314f57a38cdabb4257624550f6686075a5b61697
+ms.contentlocale: it-it
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="getosfhandle"></a>_get_osfhandle
@@ -75,7 +76,7 @@ intptr_t _get_osfhandle(
  Descrittore di file esistente.  
   
 ## <a name="return-value"></a>Valore restituito  
- Un handle di file del sistema operativo se `fd` è valido. In caso contrario, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione restituisce `INVALID_HANDLE_VALUE` (-1) e imposta `errno` su `EBADF`, a indicare un handle di file non valido.  
+ Un handle di file del sistema operativo se `fd` è valido. In caso contrario, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione restituisce `INVALID_HANDLE_VALUE` (-1) e imposta `errno` a `EBADF`, che indica un handle di file non valido.  
   
 ## <a name="remarks"></a>Note  
  Per chiudere un file aperto con `_get_osfhandle`, chiamare `_close`. L'handle sottostante viene inoltre chiuso da una chiamata a `_close`, pertanto non è necessario chiamare la funzione Win32 `CloseHandle` sull'handle originale.  
@@ -87,9 +88,6 @@ intptr_t _get_osfhandle(
 |`_get_osfhandle`|\<io.h>|  
   
  Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione di file](../../c-runtime-library/file-handling.md)   

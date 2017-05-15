@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: f352a9efb06dc0267abcf1d4174c48dcbaae78a2
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 6cc4af94f5eae06cde244da58c4aa03e561821a7
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
@@ -73,15 +74,15 @@ Definisce la classe modello `basic_string` del contenitore e diversi modelli di 
   
 |||  
 |-|-|  
-|[operator+](../standard-library/string-operators.md#operator_add)|Concatena due oggetti stringa.|  
-|[operator!=](../standard-library/string-operators.md#operator_neq)|Verifica se l'oggetto stringa a sinistra dell'operatore non è uguale all'oggetto stringa a destra.|  
-|[operator==](../standard-library/string-operators.md#operator_eq_eq)|Verifica se l'oggetto stringa a sinistra dell'operatore è uguale all'oggetto stringa a destra.|  
-|[operator<](../standard-library/string-operators.md#operator_lt_)|Verifica se l'oggetto stringa a sinistra dell'operatore è minore dell'oggetto stringa a destra.|  
-|[operator<=](../standard-library/string-operators.md#operator_lt__eq)|Verifica se l'oggetto stringa a sinistra dell'operatore è minore o uguale all'oggetto stringa a destra.|  
-|[operator<\<](../standard-library/string-operators.md#operator_lt__lt_)|Funzione di modello che inserisce una stringa nel flusso di output.|  
-|[operator>](../standard-library/string-operators.md#operator_gt_)|Verifica se l'oggetto stringa a sinistra dell'operatore è maggiore dell'oggetto stringa a destra.|  
-|[operator>=](../standard-library/string-operators.md#operator_gt__eq)|Verifica se l'oggetto stringa a sinistra dell'operatore è maggiore o uguale all'oggetto stringa a destra.|  
-|[operator>>](../standard-library/string-operators.md#operator_gt__gt_)|Funzione di modello che estrae una stringa dal flusso di input.|  
+|[operator+](../standard-library/string-operators.md#op_add)|Concatena due oggetti stringa.|  
+|[operator!=](../standard-library/string-operators.md#op_neq)|Verifica se l'oggetto stringa a sinistra dell'operatore non è uguale all'oggetto stringa a destra.|  
+|[operator==](../standard-library/string-operators.md#op_eq_eq)|Verifica se l'oggetto stringa a sinistra dell'operatore è uguale all'oggetto stringa a destra.|  
+|[operator<](../standard-library/string-operators.md#op_lt)|Verifica se l'oggetto stringa a sinistra dell'operatore è minore dell'oggetto stringa a destra.|  
+|[operator<=](../standard-library/string-operators.md#op_lt_eq)|Verifica se l'oggetto stringa a sinistra dell'operatore è minore o uguale all'oggetto stringa a destra.|  
+|[operator<\<](../standard-library/string-operators.md#op_lt_lt)|Funzione di modello che inserisce una stringa nel flusso di output.|  
+|[operator>](../standard-library/string-operators.md#op_gt)|Verifica se l'oggetto stringa a sinistra dell'operatore è maggiore dell'oggetto stringa a destra.|  
+|[operator>=](../standard-library/string-operators.md#op_gt_eq)|Verifica se l'oggetto stringa a sinistra dell'operatore è maggiore o uguale all'oggetto stringa a destra.|  
+|[operator>>](../standard-library/string-operators.md#op_gt_gt)|Funzione di modello che estrae una stringa dal flusso di input.|  
   
 ### <a name="specialized-template-functions"></a>Funzioni di modello specializzate  
   
@@ -102,7 +103,7 @@ Definisce la classe modello `basic_string` del contenitore e diversi modelli di 
   
 |||  
 |-|-|  
-|[Funzione modello getline](../standard-library/string-functions.md#getline)|Estrarre stringhe dal flusso di input riga per riga.|  
+|[Modello getLine](../standard-library/string-functions.md#getline)|Estrarre stringhe dal flusso di input riga per riga.|  
   
 ### <a name="classes"></a>Classi  
   

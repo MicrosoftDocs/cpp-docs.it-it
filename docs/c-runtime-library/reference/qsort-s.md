@@ -1,50 +1,67 @@
 ---
-title: "qsort_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "qsort_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-utility-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "qsort_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "matrici [C++], ordinamento"
-  - "qsort_s (funzione)"
-  - "quick-sort (algoritmo)"
-  - "ordinamento di matrici"
+title: qsort_s | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- qsort_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-utility-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- qsort_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- arrays [C++], sorting
+- quick-sort algorithm
+- qsort_s function
+- sorting arrays
 ms.assetid: 6ee817b0-4408-4355-a5d4-6605e419ab91
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# qsort_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: e4ba4fcb5acc8c914cf240e5b858a945bd55cc86
+ms.contentlocale: it-it
+ms.lasthandoff: 04/04/2017
 
-Esegue un algoritmo QuickSort.  Una versione di [qsort](../../c-runtime-library/reference/qsort.md) con miglioramenti della sicurezza come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
+---
+# <a name="qsorts"></a>qsort_s
+Esegue un ordinamento rapido. Questa è una versione di [qsort](../../c-runtime-library/reference/qsort.md) che include miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 void qsort_s(  
@@ -56,24 +73,24 @@ void qsort_s(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `base`  
- Inizio dell'array di destinazione.  
+ Inizio della matrice di destinazione.  
   
  `num`  
- Dimensione dell'array in elementi.  
+ Dimensione della matrice in elementi.  
   
  `width`  
  Dimensione dell'elemento in byte.  
   
  `compare`  
- Funzione di confronto.  Il primo argomento è il puntatore `context`.  Il secondo argomento è un puntatore a `key` per la ricerca.  Il terzo argomento è un puntatore all'elemento del vettore da confrontare con `key`.  
+ Funzione di confronto. Il primo argomento è il puntatore `context`. Il secondo argomento è un puntatore a `key` per la ricerca. Il terzo argomento è un puntatore all'elemento della matrice da confrontare con `key`.  
   
  `context`  
- Un puntatore ad un contesto, che può essere un qualsiasi oggetto a cui la routine `compare` ha bisogno di accedere.  
+ Un puntatore a un contesto che può essere un qualsiasi oggetto a cui la routine `compare` deve accedere.  
   
-## Note  
- La funzione `qsort_s` implementa un algoritmo di ordinamento QuickSort che consente di ordinare un array di `num` elementi, di `width` byte ciascuno.  L'argomento `base` è un puntatore alla base della matrice da ordinare.  `qsort_s` sovrascrive questo array con gli elementi ordinati.  L'argomento `compare` è un puntatore a una routine fornita dall'utente che confronta due elementi di un array e restituisce un valore che specifica la loro relazione.  `qsort_s` chiama la routine `compare` una o più volte durante l'ordinamento, passando i puntatori a due elementi di array ad ogni chiamata:  
+## <a name="remarks"></a>Note  
+ La funzione `qsort_s` implementa un algoritmo di ordinamento rapido per ordinare una matrice di `num` elementi, di `width` byte ciascuno. L'argomento `base` è un puntatore alla base della matrice da ordinare. `qsort_s` sovrascrive questa matrice con gli elementi ordinati. L'argomento `compare` è un puntatore a una routine fornita dall'utente che confronta due elementi di matrice e restituisce un valore che specifica la relazione. `qsort_s` chiama la routine `compare` una o più volte durante l'ordinamento, passando i puntatori a due elementi di matrice per ogni chiamata:  
   
 ```  
 compare( context, (void *) & elem1, (void *) & elem2 );  
@@ -82,38 +99,38 @@ compare( context, (void *) & elem1, (void *) & elem2 );
  La routine deve confrontare gli elementi e quindi restituire uno dei seguenti valori:  
   
 |Valore restituito|Descrizione|  
-|-----------------------|-----------------|  
-|\< 0|`elem1` minore di `elem2`|  
-|0|`elem1` è equivalente a `elem2`|  
-|\> 0|`elem1` è maggiore di `elem2`|  
+|------------------|-----------------|  
+|< 0|`elem1` minore di `elem2`|  
+|0|`elem1` equivalente a `elem2`|  
+|> 0|`elem1` maggiore di `elem2`|  
   
- L'array viene ordinato in ordine crescente, come definito dalla funzione di confronto.  Per ordinare un array in ordine decrescente, invertire il verso di "maggiore di" e "minore di" nella funzione di confronto.  
+ La matrice viene ordinata in ordine crescente, come definito dalla funzione di confronto. Per ordinare una matrice in ordine decrescente, invertire il senso di "maggiore di" e "minore di" nella funzione di confronto.  
   
- Se alla funzione vengono passati parametri invalidi, viene invocato il gestore di parametro non valido, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).  Se l'esecuzione può continuare, allora la funzione completa la propria esecuzione e `errno` viene impostato a `EINVAL`.  Per ulteriori informazioni, vedere [errno, \_doserrno, \_sys\_errlist, and \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Se alla funzione vengono passati parametri non validi, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, allora la funzione restituisce e `errno` viene impostato su `EINVAL`. Per altre informazioni vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-### Condizioni di errore  
+### <a name="error-conditions"></a>Condizioni di errore  
   
-|chiave|base|compare|num|width|errno|  
-|------------|----------|-------------|---------|-----------|-----------|  
-|`NULL`|any|any|any|any|`EINVAL`|  
-|any|`NULL`|any|\!\= 0|any|`EINVAL`|  
-|any|any|any|any|\<\= 0|`EINVAL`|  
-|any|any|`NULL`|any|any|`EINVAL`|  
+|key|base|compare|num|width|errno|  
+|---------|----------|-------------|---------|-----------|-----------|  
+|`NULL`|qualsiasi|qualsiasi|qualsiasi|qualsiasi|`EINVAL`|  
+|qualsiasi|`NULL`|qualsiasi|!= 0|qualsiasi|`EINVAL`|  
+|qualsiasi|qualsiasi|qualsiasi|any|<= 0|`EINVAL`|  
+|qualsiasi|qualsiasi|`NULL`|qualsiasi|qualsiasi|`EINVAL`|  
   
- `qsort_s` ha lo stesso comportamento di `qsort` ma dispone del parametro `context` ed imposta `errno`.  Passando un parametro `context`, le funzioni di confronto possono utilizzare un oggetto puntatore per accedere alla funzionalità dell'oggetto o ad altre informazioni non accessibili tramite un puntatore dell'elemento.  L'aggiunta del parametro `context` rende `qsort_s`più sicuro perché `context` può essere utilizzato per evitare dei bug reentrancy introdotti utilizzando variabili statiche per rendere disponibili le informazioni condivise alla funzione `compare`.  
+ `qsort_s` ha lo stesso comportamento di `qsort` ma dispone del parametro `context` e imposta `errno`. Passando un parametro `context`, le funzioni di confronto possono utilizzare un puntatore a un oggetto per accedere alla funzionalità dell'oggetto o ad altre informazioni non accessibili tramite un puntatore a un elemento. L'aggiunta del `context` parametro rende `qsort_s` più sicura perché `context` può essere utilizzato per evitare i bug reentrancy introdotti dall'utilizzo di variabili statiche per rendere disponibili informazioni condivise il `compare` (funzione).  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`qsort_s`|\<stdlib.h\> e \<search.h\>|  
+|-------------|---------------------|  
+|`qsort_s`|\<stdlib.h> e \<search.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'Introduzione.  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
- **Librerie:** Tutte le versioni di [Funzionalità libreria CRT](../../c-runtime-library/crt-library-features.md).  
+ **Librerie:** tutte le versioni delle [funzionalità della libreria CRT](../../c-runtime-library/crt-library-features.md).  
   
-## Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il parametro di `context` nella funzione `qsort_s` `` .  Il parametro `context` rende più facile eseguire ordinamenti thread\-safe.  Anziché utilizzare variabili statiche che devono essere sincronizzate per garantire la thread safety, passare un differente parametro `context` in ogni ordinamento.  In questo esempio, un oggetto delle impostazioni locali viene utilizzato come parametro di `context`.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come utilizzare il `context` parametro il `qsort_s` (funzione). Il parametro `context` rende più facile eseguire ordinamenti thread-safe. Anziché utilizzare variabili statiche che devono essere sincronizzate per garantire la thread safety, passare un parametro `context` diverso in ogni ordinamento. In questo esempio, un oggetto delle impostazioni locali viene utilizzato come parametro `context`.  
   
 ```  
 // crt_qsort_s.cpp  
@@ -254,7 +271,7 @@ int main( )
 }  
 ```  
   
-## Esempio di output  
+## <a name="sample-output"></a>Esempio di output  
   
 ```  
 Unsorted input:  
@@ -267,11 +284,8 @@ España Español espantado
 table tablet tableux  
 ```  
   
-## Equivalente .NET Framework  
- <xref:System.Collections.ArrayList.Sort%2A>  
-  
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Ricerca e ordinamento](../../c-runtime-library/searching-and-sorting.md)   
- [bsearch\_s](../../c-runtime-library/reference/bsearch-s.md)   
- [\_lsearch\_s](../../c-runtime-library/reference/lsearch-s.md)   
+ [bsearch_s](../../c-runtime-library/reference/bsearch-s.md)   
+ [_lsearch_s](../../c-runtime-library/reference/lsearch-s.md)   
  [qsort](../../c-runtime-library/reference/qsort.md)

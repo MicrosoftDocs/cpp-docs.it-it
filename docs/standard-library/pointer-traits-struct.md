@@ -19,6 +19,7 @@ f1_keywords:
 - xmemory0/std::pointer_traits
 - xmemory0/std::pointer_traits::difference_type
 - xmemory0/std::pointer_traits::rebind
+- memory/std::pointer_traits::pointer_to
 dev_langs:
 - C++
 ms.assetid: 545aecf1-3561-4859-8b34-603c079fe1b3
@@ -40,10 +41,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 3a5633fa4c9f45629d655edf922d40b02b68aaca
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: dbb9a0a8ecd59b76a84ce05b3c239de42be647cb
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="pointertraits-struct"></a>Struct pointer_traits
@@ -88,14 +90,14 @@ struct Ptr
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[pointer_to](#pointer_traits__pointer_to_method)|Converte un riferimento arbitrario a un oggetto della classe `Ptr`.|  
+|[pointer_to](#pointer_to)|Converte un riferimento arbitrario a un oggetto della classe `Ptr`.|  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** \<memory>  
   
  **Spazio dei nomi:** std  
   
-##  <a name="a-namepointertraitspointertomethoda--pointerto"></a><a name="pointer_traits__pointer_to_method"></a>  pointer_to  
+##  <a name="pointer_to"></a>  pointer_to  
  Metodo statico che restituisce `Ptr::pointer_to(obj)`, se tale funzione esiste. In caso contrario, non è possibile convertire un riferimento arbitrario a un oggetto della classe `Ptr`. Se `Ptr` è un puntatore non elaborato, il metodo restituisce `addressof(obj)`.  
   
 ```cpp  

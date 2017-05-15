@@ -57,10 +57,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 3b4b1a35e2abcbeb128a36443eb4c5e5aa2a15e9
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: c4c6803731deba188a4f4dba118b04f626f58564
+ms.contentlocale: it-it
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="splitpaths-wsplitpaths"></a>_splitpath_s, _wsplitpath_s
@@ -159,7 +160,7 @@ errno_t _wsplitpath_s(
  Se uno qualsiasi dei buffer è troppo breve per contenere il risultato, queste funzioni cancellano tutti i buffer per svuotarli dalle stringhe, impostano `errno` su `ERANGE` e restituiscono `ERANGE`.  
   
 ## <a name="remarks"></a>Note  
- La funzione `_splitpath_s` suddivide un percorso nei suoi quattro componenti. `_splitpath_s` gestisce automaticamente e in modo appropriato gli argomenti stringa di caratteri multibyte, riconoscendo le sequenze di caratteri multibyte in base alla tabella codici multibyte attualmente in uso. `_wsplitpath_s` è una versione a caratteri wide di `_splitpath_s`. Gli argomenti per `_``wsplitpath_s` sono stringhe di caratteri wide. A parte ciò, queste funzioni si comportano in modo identico.  
+ La funzione `_splitpath_s` suddivide un percorso nei suoi quattro componenti. `_splitpath_s` gestisce automaticamente e in modo appropriato gli argomenti stringa di caratteri multibyte, riconoscendo le sequenze di caratteri multibyte in base alla tabella codici multibyte attualmente in uso. `_wsplitpath_s` è una versione a caratteri "wide" di `_splitpath_s`. Gli argomenti per `_``wsplitpath_s` sono stringhe a caratteri "wide". A parte ciò, queste funzioni si comportano in modo identico.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
@@ -195,9 +196,6 @@ errno_t _wsplitpath_s(
   
 ## <a name="example"></a>Esempio  
  See the example for [_makepath_s, _wmakepath_s](../../c-runtime-library/reference/makepath-s-wmakepath-s.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione di file](../../c-runtime-library/file-handling.md)   

@@ -1,56 +1,74 @@
 ---
-title: "_onexit, _onexit_m | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_onexit"
-  - "_onexit_m"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_onexit"
-  - "onexit_m"
-  - "onexit"
-  - "_onexit_m"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "onexit (funzione)"
-  - "Registro di sistema, registrazione delle routine di uscita"
-  - "_onexit_m (funzione)"
-  - "onexit_m (funzione)"
-  - "_onexit (funzione)"
-  - "registrazione delle routine di uscita"
-  - "registrazione da chiamare all'uscita"
+title: _onexit, _onexit_m | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _onexit
+- _onexit_m
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _onexit
+- onexit_m
+- onexit
+- _onexit_m
+dev_langs:
+- C++
+helpviewer_keywords:
+- onexit function
+- registry, registering exit routines
+- _onexit_m function
+- onexit_m function
+- _onexit function
+- registering exit routines
+- registering to be called on exit
 ms.assetid: 45743298-0e2f-46cf-966d-1ca44babb443
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# _onexit, _onexit_m
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 50070672e990333073f5ad7f7ba604110c3a3cfa
+ms.contentlocale: it-it
+ms.lasthandoff: 03/29/2017
 
+---
+# <a name="onexit-onexitm"></a>_onexit, _onexit_m
 Registra una routine da chiamare in fase di uscita.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 _onexit_t _onexit(  
@@ -61,29 +79,29 @@ _onexit_t_m _onexit_m(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `function`  
- Puntatore a funzione da chiamare all'uscita.  
+ Puntatore a una funzione da chiamare all'uscita.  
   
-## Valore restituito  
- `_onexit` restituisce un puntatore a funzione in caso di esito positivo o `NULL` se non c'è spazio per archiviare il puntatore a funzione.  
+## <a name="return-value"></a>Valore restituito  
+ `_onexit` restituisce un puntatore alla funzione in caso di esito positivo o `NULL` se non c'è spazio per archiviare il puntatore a funzione.  
   
-## Note  
- Alla funzione `_onexit` viene passato l'indirizzo di una funzione \(`function`\) da chiamare quando il programma termina normalmente.  Le chiamate successive a `_onexit` creano un registro di funzioni che vengono eseguite sulla base dell'ordine LIFO \(last\-in\-first\-out\).  Le funzioni passate a `_onexit` non accettano parametri.  
+## <a name="remarks"></a>Note  
+ Alla funzione `_onexit` viene passato l'indirizzo di una funzione (`function`) da chiamare quando il programma termina normalmente. Le chiamate successive a `_onexit` creano un registro di funzioni che vengono eseguite sulla base dell'ordine LIFO (last-in-first-out). Le funzioni passate a `_onexit` non accettano parametri.  
   
- Nel caso in cui `_onexit` viene chiamato dall'interno di una DLL, le routine registrate con `_onexit` vengono eseguite sullo scaricamento di una DLL dopo che `DllMain` è stato chiamato con DLL\_PROCESS\_DETACH.  
+ Nel caso in cui `_onexit` viene chiamato dall'interno di una DLL, le routine registrate con `_onexit` vengono eseguite sullo scaricamento di una DLL dopo che `DllMain` è stato chiamato con DLL_PROCESS_DETACH.  
   
- `_onexit` è un'estensione Microsoft.  Per la portabilità ANSI, utilizzare [atexit](../../c-runtime-library/reference/atexit.md).  La versione `_onexit_m` della funzione è per l'utilizzo in modalità mista.  
+ `_onexit` è un'estensione Microsoft. Per la portabilità ANSI, usare [atexit](../../c-runtime-library/reference/atexit.md). La versione `_onexit_m` della funzione è per l'utilizzo in modalità mista.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`_onexit`|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`_onexit`|\<stdlib.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_onexit.c  
@@ -128,18 +146,15 @@ int fn4()
 }  
 ```  
   
-## Output  
+## <a name="output"></a>Output  
   
 ```  
 This is executed first.  
 This is executed next.  
 ```  
   
-## Equivalente .NET Framework  
- [System::Diagnostics::Process::Exited](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.exited.aspx)  
-  
-## Vedere anche  
- [Controllo processo e ambiente](../../c-runtime-library/process-and-environment-control.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Controllo di processi e ambiente](../../c-runtime-library/process-and-environment-control.md)   
  [atexit](../../c-runtime-library/reference/atexit.md)   
- [exit, \_Exit, \_exit](../../c-runtime-library/reference/exit-exit-exit.md)   
- [\_\_dllonexit](../../c-runtime-library/dllonexit.md)
+ [exit, _Exit, _exit](../../c-runtime-library/reference/exit-exit-exit.md)   
+ [__dllonexit](../../c-runtime-library/dllonexit.md)

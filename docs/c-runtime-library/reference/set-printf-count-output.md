@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: dfb86b7d6e52168fda5ec28bd66edc29b24432e4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
+ms.openlocfilehash: 11f0dbe2a4bb67992dd307aea62f79ca8f6b5f73
+ms.contentlocale: it-it
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="setprintfcountoutput"></a>_set_printf_count_output
@@ -76,7 +77,7 @@ int _set_printf_count_output(
  Lo stato del supporto di `%n` prima di chiamare questa funzione: diverso da zero se il supporto `%n` è stato abilitato, 0 se è stato disabilitato.  
   
 ## <a name="remarks"></a>Note  
- Per motivi di sicurezza, il supporto dell'identificatore di formato `%n` è disabilitato per impostazione predefinita in `printf` e tutte le sue varianti. Se viene rilevato `%n` in una specifica di formato `printf`, il comportamento predefinito prevede di richiamare il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Quando si chiama `_set_printf_count_output` con un argomento diverso da zero, le funzioni della famiglia `printf` interpretano `%n` come descritto in [Caratteri di campo di tipo per printf](../../c-runtime-library/printf-type-field-characters.md).  
+ Per motivi di sicurezza, il supporto dell'identificatore di formato `%n` è disabilitato per impostazione predefinita in `printf` e tutte le sue varianti. Se viene rilevato `%n` in una specifica di formato `printf`, il comportamento predefinito prevede di richiamare il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). La chiamata `_set_printf_count_output` con un argomento diverso da zero causerà `printf`-famiglia di funzioni per interpretare `%n` come descritto in [sintassi specifica del formato: funzioni printf e wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -88,7 +89,7 @@ int _set_printf_count_output(
   
 ## <a name="example"></a>Esempio  
   
-```  
+```C  
 // crt_set_printf_count_output.c  
 #include <stdio.h>  
   
@@ -106,17 +107,12 @@ int main()
 }  
 ```  
   
-## <a name="output"></a>Output  
-  
-```  
+```Output  
 %n support was disabled.  
 %n support is now enabled.  
 123456789  
 i = 5  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente in NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
 ## <a name="see-also"></a>Vedere anche  
  [_get_printf_count_output](../../c-runtime-library/reference/get-printf-count-output.md)

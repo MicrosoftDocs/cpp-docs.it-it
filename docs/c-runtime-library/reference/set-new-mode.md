@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 069a7dd22950e7ae9826ff2cf8c542025f14facd
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 57a578f8accf7244d71c0d8791a6e898ead7d242
+ms.contentlocale: it-it
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="setnewmode"></a>_set_new_mode
@@ -73,7 +74,7 @@ int _set_new_mode(
  Nuova modalità del gestore per `malloc`. Il valore valido è 0 o 1.  
   
 ## <a name="return-value"></a>Valore restituito  
- Restituisce la modalità del gestore precedente impostata per `malloc`. Il valore restituito 1 indica che, in caso di errore di allocazione della memoria, `malloc` ha chiamato in precedenza la routine del nuovo gestore. Il valore restituito 0 indica il contrario. Se l'argomento `newhandlermode` non è uguale a 0 o 1, restituisce -1.  
+ Restituisce la modalità del gestore precedente impostata per `malloc`. Il valore restituito 1 indica che, in caso di errore di allocazione della memoria, `malloc` ha chiamato in precedenza la routine del nuovo gestore. Il valore restituito 0 indica il contrario. Se il `newhandlermode` argomento diverso da 0 o 1, restituisce -1.  
   
 ## <a name="remarks"></a>Note  
  La funzione C++ `_set_new_mode` imposta la nuova modalità del gestore per [malloc](../../c-runtime-library/reference/malloc.md). La nuova modalità del gestore indica se, in caso di errore, `malloc` deve chiamare la routine del nuovo gestore come impostato tramite [set_new_handler](../../c-runtime-library/reference/set-new-handler.md). Per impostazione predefinita, `malloc` non chiama la routine del nuovo gestore in caso di errore di allocazione della memoria. È possibile eseguire l'override di questo comportamento predefinito in modo che, quando `malloc` non riesce ad allocare memoria, `malloc` chiami la routine del nuovo gestore, come fa l'operatore `new` quando non riesce per lo stesso motivo. Per altre informazioni, vedere le informazioni sugli operatori [new](../../cpp/new-operator-cpp.md) e [delete](../../cpp/delete-operator-cpp.md) in *Riferimenti al linguaggio C++*. Per eseguire l'override del comportamento predefinito, chiamare:  
@@ -92,10 +93,7 @@ _set_new_mode(1)
 |-------------|---------------------|  
 |`_set_new_mode`|\<new.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Memory Allocation](../../c-runtime-library/memory-allocation.md)  (Allocazione di memoria)  

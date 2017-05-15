@@ -13,10 +13,11 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: c82a33636012665f671dbaf16d5d0e0b90bbc391
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 5cccff749b58c7e229068ebedf9e8b3c6984114c
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltdequegt-functions"></a>Funzioni &lt;deque&gt;
@@ -41,7 +42,7 @@ void swap(
  Oggetto di tipo `deque`.  
   
 ### <a name="example"></a>Esempio  
- Vedere l'esempio per [deque::swap](../standard-library/deque-class.md#deque__swap).  
+ Vedere l'esempio per [deque::swap](../standard-library/deque-class.md#swap).  
   
 ## <a name="see-also"></a>Vedere anche  
  [\<deque >](../standard-library/deque.md)

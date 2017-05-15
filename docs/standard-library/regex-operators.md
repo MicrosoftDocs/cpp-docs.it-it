@@ -19,20 +19,21 @@ dev_langs:
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
 caps.latest.revision: 12
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 254eee6065dfc4b11c6eadf82d07fcfb5a7cf4e3
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: c5bf713f65c26a1a46becf846fa21f17ac867628
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltregexgt-operators"></a>Operatori &lt;regex&gt;
 ||||  
 |-|-|-|  
-|[operator!=](#operator_neq)|[operator&gt;](#operator_gt_)|[operator&gt;=](#operator_gt__eq)|  
-|[operator&lt;](#operator_lt_)|[operator&lt;&lt;](#operator_lt__lt_)|[operator&lt;=](#operator_lt__eq)|  
-|[operator==](#operator_eq_eq)|  
+|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
+|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|  
+|[operator==](#op_eq_eq)|  
   
-##  <a name="operator_neq"></a>  operator!=  
+##  <a name="op_neq"></a>  operator!=  
  Confronto non uguale tra vari oggetti.  
   
 ```  
@@ -149,7 +150,7 @@ sub != "aab" == true
 sub != 'a' == true  
 ```  
   
-##  <a name="operator_lt_"></a>  operator&lt;  
+##  <a name="op_lt"></a>  operator&lt;  
  Confronto minore di tra vari oggetti.  
   
 ```  
@@ -257,7 +258,7 @@ sub < "aab" == true
 sub < 'a' == false  
 ```  
   
-##  <a name="operator_lt__lt_"></a>  operator&lt;&lt;  
+##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
  Inserisce un oggetto sub_match in un flusso.  
   
 ```  
@@ -315,7 +316,7 @@ int main()
 whole match: caaa  
 ```  
   
-##  <a name="operator_lt__eq"></a>  operator&lt;=  
+##  <a name="op_lt_eq"></a>  operator&lt;=  
  Confronto minore di o uguale tra vari oggetti.  
   
 ```  
@@ -423,7 +424,7 @@ sub <= "aab" == true
 sub <= 'a' == false  
 ```  
   
-##  <a name="operator_eq_eq"></a>  operator==  
+##  <a name="op_eq_eq"></a>  operator==  
  Confronto uguale tra vari oggetti.  
   
 ```  
@@ -548,7 +549,7 @@ sub == "aab" == false
 sub == 'a' == false  
 ```  
   
-##  <a name="operator_gt_"></a>  operator&gt;  
+##  <a name="op_gt"></a>  operator&gt;  
  Confronto maggiore di tra vari oggetti.  
   
 ```  
@@ -656,7 +657,7 @@ sub > "aab" == false
 sub > 'a' == true  
 ```  
   
-##  <a name="operator_gt__eq"></a>  operator&gt;=  
+##  <a name="op_gt_eq"></a>  operator&gt;=  
  Confronto maggiore di o uguale tra vari oggetti.  
   
 ```  

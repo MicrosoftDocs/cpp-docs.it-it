@@ -10,32 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - weibull_distribution
-- std::weibull_distribution
 - random/std::weibull_distribution
-- std::weibull_distribution::reset
 - random/std::weibull_distribution::reset
-- std::weibull_distribution::a
 - random/std::weibull_distribution::a
-- std::weibull_distribution::b
 - random/std::weibull_distribution::b
-- std::weibull_distribution::param
 - random/std::weibull_distribution::param
-- std::weibull_distribution::min
 - random/std::weibull_distribution::min
-- std::weibull_distribution::max
 - random/std::weibull_distribution::max
-- std::weibull_distribution::operator()
 - random/std::weibull_distribution::operator()
-- std::weibull_distribution::param_type
 - random/std::weibull_distribution::param_type
-- std::weibull_distribution::param_type::a
 - random/std::weibull_distribution::param_type::a
-- std::weibull_distribution::param_type::b
 - random/std::weibull_distribution::param_type::b
-- std::weibull_distribution::param_type::operator==
 - random/std::weibull_distribution::param_type::operator==
-- std::weibull_distribution::param_type::operator!=
 - random/std::weibull_distribution::param_type::operator!=
+- random/std::weibull_distribution::param_type
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -59,10 +47,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 491992306060125ab91d64560113f7f8a3b740b1
-ms.openlocfilehash: 265754b7593a9654eab6f377d34d95268f1b9454
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: a16199c03f0865d3c425b843ccbcd5cc5690c7f0
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="weibulldistribution-class"></a>Classe weibull_distribution
@@ -106,8 +95,8 @@ La classe modello descrive una distribuzione che produce valori di un tipo a vir
   
 ||||  
 |-|-|-|  
-|[weibull_distribution::weibull_distribution](#weibull_distribution__weibull_distribution)|`weibull_distribution::a`|`weibull_distribution::param`|  
-|`weibull_distribution::operator()`|`weibull_distribution::b`|[weibull_distribution::param_type](#weibull_distribution__param_type)|  
+|[weibull_distribution](#weibull_distribution)|`weibull_distribution::a`|`weibull_distribution::param`|  
+|`weibull_distribution::operator()`|`weibull_distribution::b`|[param_type](#param_type)|  
   
 Le funzioni di proprietà `a()` e `b()` restituiscono i valori rispettivi per i parametri di distribuzione archiviati *a* e *b*.  
   
@@ -239,7 +228,7 @@ Distribution for 10 samples:
   
  **Spazio dei nomi:** std  
   
-##  <a name="a-nameweibulldistributionweibulldistributiona--weibulldistributionweibulldistribution"></a><a name="weibull_distribution__weibull_distribution"></a>  weibull_distribution::weibull_distribution  
+##  <a name="weibull_distribution"></a>  weibull_distribution::weibull_distribution  
   
 ```  
 explicit weibull_distribution(result_type a = 1.0, result_type b = 1.0);
@@ -263,7 +252,7 @@ Struttura `param_type` usata per costruire la distribuzione.
   
  Il secondo costruttore crea un oggetto i cui parametri archiviati sono inizializzati da *parm*. È possibile ottenere e impostare i parametri correnti di una distribuzione esistente chiamando la funzione membro `param()`.  
   
-##  <a name="a-nameweibulldistributionparamtypea--weibulldistributionparamtype"></a><a name="weibull_distribution__param_type"></a>  weibull_distribution::param_type  
+##  <a name="param_type"></a>  weibull_distribution::param_type  
  Archivia i parametri della distribuzione.  
 ```  
 struct param_type {  

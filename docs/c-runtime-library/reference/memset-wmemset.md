@@ -1,51 +1,68 @@
 ---
-title: "memset, wmemset | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "wmemset"
-  - "memset"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ntdll.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "memset"
-  - "wmemset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "memset (funzione)"
-  - "wmemset (funzione)"
+title: memset, wmemset | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- wmemset
+- memset
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ntdll.dll
+- ucrtbase.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- memset
+- wmemset
+dev_langs:
+- C++
+helpviewer_keywords:
+- wmemset function
+- memset function
 ms.assetid: e7ceb01b-df69-49c2-b294-a39358ad4699
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# memset, wmemset
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: a305da5b415b6db38f3d5b4e155b31133e1ac980
+ms.contentlocale: it-it
+ms.lasthandoff: 03/29/2017
 
-Imposta i buffer a un carattere specificato.  
+---
+# <a name="memset-wmemset"></a>memset, wmemset
+Imposta i buffer su un carattere specificato.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -61,37 +78,37 @@ wchar_t *wmemset(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  *dest*  
  Puntatore alla destinazione.  
   
  `c`  
- Un carattere da impostare.  
+ Carattere da impostare.  
   
  *count*  
- Numero di caratteri  
+ Numero di caratteri.  
   
-## Valore restituito  
+## <a name="return-value"></a>Valore restituito  
  Valore di `dest`.  
   
-## Note  
- Imposta i primi `count` caratteri di `dest` con il carattere `c`.  
+## <a name="remarks"></a>Note  
+ Imposta i primi `count` caratteri di `dest` sul carattere `c`.  
   
- **Nota di sicurezza** Assicurarsi che il buffer di destinazione disponga di spazio sufficiente per almeno `count` caratteri.  Per ulteriori informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
+ **Nota sulla sicurezza** Assicurarsi che il buffer di destinazione abbia spazio sufficiente per almeno `count` caratteri. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`memset`|\<memory.h\> o \<string.h\>|  
-|`wmemset`|\<wchar.h\>|  
+|-------------|---------------------|  
+|`memset`|\<memory.h> o \<string.h>|  
+|`wmemset`|\<wchar.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'Introduzione.  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
-## Librerie  
- Tutte le versioni delle [Librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Librerie  
+ Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_memset.c  
@@ -112,14 +129,14 @@ int main( void )
 }  
 ```  
   
-## Output  
+## <a name="output"></a>Output  
   
 ```  
 Before: This is a test of the memset function  
 After:  **** is a test of the memset function  
 ```  
   
- Di seguito è riportato un esempio di utilizzo di wmemset:  
+ Ecco un esempio dell'uso di wmemset:  
   
 ```  
 // crt_wmemset.c  
@@ -140,20 +157,17 @@ int main( void )
 }  
 ```  
   
-## Output  
+## <a name="output"></a>Output  
   
 ```  
 Before: This is a test of the wmemset function  
 After:  **** is a test of the wmemset function  
 ```  
   
-## Equivalente .NET Framework  
- [System::Buffer::SetByte](https://msdn.microsoft.com/en-us/library/system.buffer.setbyte.aspx)  
-  
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Modifica del buffer](../../c-runtime-library/buffer-manipulation.md)   
- [\_memccpy](../../c-runtime-library/reference/memccpy.md)   
+ [_memccpy](../../c-runtime-library/reference/memccpy.md)   
  [memchr, wmemchr](../../c-runtime-library/reference/memchr-wmemchr.md)   
  [memcmp, wmemcmp](../../c-runtime-library/reference/memcmp-wmemcmp.md)   
  [memcpy, wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)   
- [\_strnset, \_strnset\_l, \_wcsnset, \_wcsnset\_l, \_mbsnset, \_mbsnset\_l](../../c-runtime-library/reference/strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)
+ [_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l](../../c-runtime-library/reference/strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)

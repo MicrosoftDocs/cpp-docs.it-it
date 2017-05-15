@@ -54,10 +54,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 0fbce9639718ca7316494b1f573a817d8ab0e6f1
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 0ebd79ed048bad988ca8a31f0f2f8d5427b84675
+ms.contentlocale: it-it
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="expm1-expm1f-expm1l"></a>expm1, expm1f, expm1l
@@ -88,7 +89,7 @@ long double expm1l(
  Il valore esponenziale a virgola mobile.  
   
 ## <a name="return-value"></a>Valore restituito  
- Le funzioni `expm1` restituiscono un valore a virgola mobile che rappresenta e<sup>x</sup> - 1, se l'esito è positivo. In caso di overflow `expm1` restituisce `HUGE_VAL`, `expm1f` restituisce `HUGE_VALF`, `expm1l` restituisce `HUGE_VALL`, e `errno` viene impostato su `ERANGE`. Per altre informazioni sui codici restituiti, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Il `expm1` funzioni restituiscono un valore a virgola mobile che rappresenta e<sup>x</sup> - 1, se ha esito positivo. In caso di overflow `expm1` restituisce `HUGE_VAL`, `expm1f` restituisce `HUGE_VALF`, `expm1l` restituisce `HUGE_VALL`, e `errno` viene impostato su `ERANGE`. Per altre informazioni sui codici restituiti, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Note  
  Dato che C++ consente l'overload, è possibile chiamare degli overload di `expm1` che accettino e restituiscano valori `float` e `long double`. In un programma C `expm1` accetta e restituisce sempre un valore `double`.  
@@ -99,10 +100,7 @@ long double expm1l(
 |-------------|---------------------|  
 |`expm1`, `expm1f`, `expm1l`|\<math.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Floating-Point Support](../../c-runtime-library/floating-point-support.md)  (Supporto a virgola mobile)  

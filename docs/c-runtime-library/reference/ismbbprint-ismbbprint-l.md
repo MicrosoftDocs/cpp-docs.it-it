@@ -55,10 +55,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 64d619e9826e896633aaa35d64d0148bede7879b
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 09187e54126553331a6100fa11c98a730434db12
+ms.contentlocale: it-it
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="ismbbprint-ismbbprintl"></a>_ismbbprint, _ismbbprint_l
@@ -90,7 +91,7 @@ int _ismbbprint_l(
 isprint || _ismbbkprint  
 ```  
   
- è diverso da zero per `c` oppure zero in caso contrario. `_ismbbprint` usa le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. `_ismbbprint_l` è identica, ma usa le impostazioni locali passate. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ è diverso da zero per `c`oppure zero in caso contrario. `_ismbbprint` usa le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. `_ismbbprint_l` è identico, ma usa le impostazioni locali che gli vengono passate. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -100,9 +101,6 @@ isprint || _ismbbkprint
 |`_ismbbprint_l`|\<mbctype.h>|  
   
  Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classificazione per byte](../../c-runtime-library/byte-classification.md)   

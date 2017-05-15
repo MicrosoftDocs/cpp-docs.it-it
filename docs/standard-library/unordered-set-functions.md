@@ -12,10 +12,11 @@ f1_keywords:
 ms.assetid: 66b35671-4023-4411-ad50-83786580d8ee
 caps.latest.revision: 10
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 3d2d2d2f281fa6bdb19a48fdf22ae1ddadabfd0a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 916534c3ab864a217e1e5b340bc368190774d49e
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltunorderedsetgt-functions"></a>Funzioni &lt;unordered_set&gt;
@@ -54,7 +55,7 @@ void swap(
  Secondo contenitore da scambiare.  
   
 ### <a name="remarks"></a>Note  
- La funzione modello esegue `left.`[unordered_set::swap](../standard-library/unordered-set-class.md#unordered_set__swap)`(right)`.  
+ La funzione modello esegue `left.`[unordered_set::swap](../standard-library/unordered-set-class.md#swap)`(right)`.  
   
 ### <a name="example"></a>Esempio  
   
@@ -143,7 +144,7 @@ void swap(
  Secondo contenitore da scambiare.  
   
 ### <a name="remarks"></a>Note  
- La funzione modello esegue `left.`[unordered_multiset::swap](../standard-library/unordered-multiset-class.md#unordered_multiset__swap)`(right)`.  
+ La funzione modello esegue `left.`[unordered_multiset::swap](../standard-library/unordered-multiset-class.md#swap)`(right)`.  
   
 ### <a name="example"></a>Esempio  
   

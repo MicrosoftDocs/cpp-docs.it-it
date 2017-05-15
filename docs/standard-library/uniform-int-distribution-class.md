@@ -10,32 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - uniform_int_distribution
-- std::uniform_int_distribution
 - random/std::uniform_int_distribution
-- std::uniform_int_distribution::reset
 - random/std::uniform_int_distribution::reset
-- std::uniform_int_distribution::a
 - random/std::uniform_int_distribution::a
-- std::uniform_int_distribution::b
 - random/std::uniform_int_distribution::b
-- std::uniform_int_distribution::param
 - random/std::uniform_int_distribution::param
-- std::uniform_int_distribution::min
 - random/std::uniform_int_distribution::min
-- std::uniform_int_distribution::max
 - random/std::uniform_int_distribution::max
-- std::uniform_int_distribution::operator()
 - random/std::uniform_int_distribution::operator()
-- std::uniform_int_distribution::param_type
 - random/std::uniform_int_distribution::param_type
-- std::uniform_int_distribution::param_type::a
 - random/std::uniform_int_distribution::param_type::a
-- std::uniform_int_distribution::param_type::b
 - random/std::uniform_int_distribution::param_type::b
-- std::uniform_int_distribution::param_type::operator==
 - random/std::uniform_int_distribution::param_type::operator==
-- std::uniform_int_distribution::param_type::operator!=
 - random/std::uniform_int_distribution::param_type::operator!=
+- random/std::uniform_int_distribution::param_type
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -59,10 +47,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 56ce46ec6b19a0ac5068193d5e1d3dfb0c9b4ee9
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 0555c6562ee987eab9eebc2e9e178a31cdf684e9
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="uniformintdistribution-class"></a>Classe uniform_int_distribution
@@ -107,8 +96,8 @@ La classe modello descrive una distribuzione inclusiva-inclusiva che produce val
   
 ||||  
 |-|-|-|  
-|[uniform_int_distribution::uniform_int_distribution](#uniform_int_distribution__uniform_int_distribution)|`uniform_int_distribution::a`|`uniform_int_distribution::param`|  
-|`uniform_int_distribution::operator()`|`uniform_int_distribution::b`|[uniform_int_distribution::param_type](#uniform_int_distribution__param_type)|  
+|[uniform_int_distribution](#uniform_int_distribution)|`uniform_int_distribution::a`|`uniform_int_distribution::param`|  
+|`uniform_int_distribution::operator()`|`uniform_int_distribution::b`|[param_type](#param_type)|  
   
 Il membro della proprietà `a()` restituisce il limite minimo della distribuzione attualmente archiviato, mentre `b()` restituisce il limite massimo attualmente archiviato. Per questa classe di distribuzione, i valori minimo e massimo sono gli stessi restituiti dalle funzioni di proprietà comuni `min()` e `max()`.  
   
@@ -205,7 +194,7 @@ Distribution for 200 samples:
   
  **Spazio dei nomi:** std  
   
-##  <a name="a-nameuniformintdistributionuniformintdistributiona--uniformintdistributionuniformintdistribution"></a><a name="uniform_int_distribution__uniform_int_distribution"></a>  uniform_int_distribution::uniform_int_distribution  
+##  <a name="uniform_int_distribution"></a>  uniform_int_distribution::uniform_int_distribution  
 Costruisce la distribuzione.  
   
 ```  
@@ -231,7 +220,7 @@ Il primo costruttore crea un oggetto il cui valore `a` archiviato include il val
   
 Il secondo costruttore crea un oggetto i cui parametri archiviati sono inizializzati da *parm*. È possibile ottenere e impostare i parametri correnti di una distribuzione esistente chiamando la funzione membro `param()`.  
   
-##  <a name="a-nameuniformintdistributionparamtypea--uniformintdistributionparamtype"></a><a name="uniform_int_distribution__param_type"></a>  uniform_int_distribution::param_type  
+##  <a name="param_type"></a>  uniform_int_distribution::param_type  
  Archivia i parametri della distribuzione.  
 ```cpp  
 struct param_type {  

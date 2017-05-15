@@ -21,10 +21,11 @@ f1_keywords:
 ms.assetid: 3ddde610-70cc-4cfa-8a89-3e83d1d356a8
 caps.latest.revision: 10
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d54e1d5071414f1e8f6ae96391aa1659397bbcb3
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: cc990171c1196a35f0fe90d99ee1cbdbca337c9a
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltiomanipgt-functions"></a>Funzioni &lt;iomanip&gt;
@@ -289,7 +290,7 @@ T1 resetiosflags(ios_base::fmtflags Mask);
  Flag da cancellare.  
   
 ### <a name="return-value"></a>Valore restituito  
- Il manipolatore restituisce un oggetto che, se estratto o inserito nel flusso **str**, chiama **str**. [setf](../standard-library/ios-base-class.md#ios_base__setf)( `ios_base::`[fmtflags](../standard-library/ios-base-class.md#ios_base__fmtflags), _ *Mask*) e quindi restituisce **str**.  
+ Il manipolatore restituisce un oggetto che, se estratto o inserito nel flusso **str**, chiama **str**. [setf](../standard-library/ios-base-class.md#setf)( `ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags), _ *Mask*) e quindi restituisce **str**.  
   
 ### <a name="example"></a>Esempio  
   Vedere [setw](../standard-library/iomanip-functions.md#setw) per un esempio d'uso di `resetiosflags`.  
@@ -306,7 +307,7 @@ T3 setbase(int _Base);
  Base numerica.  
   
 ### <a name="return-value"></a>Valore restituito  
- Il manipolatore restituisce un oggetto che, se estratto o inserito nel flusso **str**, chiama **str**. `setf`( **mask**, [ios_base::basefield](../standard-library/ios-base-class.md#ios_base__fmtflags)) e quindi restituisce **str**. In questo caso, **mask** viene determinato come segue:  
+ Il manipolatore restituisce un oggetto che, se estratto o inserito nel flusso **str**, chiama **str**. `setf`( **mask**, [ios_base::basefield](../standard-library/ios-base-class.md#fmtflags)) e quindi restituisce **str**. In questo caso, **mask** viene determinato come segue:  
   
 -   Se _ *Base* è 8, **mask** è `ios_base::`[oct](../standard-library/ios-functions.md#oct).  
   
@@ -314,7 +315,7 @@ T3 setbase(int _Base);
   
 -   Se _ *Base* è 16, **mask** è `ios_base::`[hex](../standard-library/ios-functions.md#hex).  
   
--   Se _ *Base* è un qualsiasi altro valore, mask è `ios_base::`[fmtflags](../standard-library/ios-base-class.md#ios_base__fmtflags)(0).  
+-   Se _ *Base* è un qualsiasi altro valore, mask è `ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags)(0).  
   
 ### <a name="example"></a>Esempio  
   Vedere [setw](../standard-library/iomanip-functions.md#setw) per un esempio d'uso di `setbase`.  
@@ -332,7 +333,7 @@ T4 setfill(Elem Ch);
  Carattere che verrà usato per riempire gli spazi in una visualizzazione giustificata a destra.  
   
 ### <a name="return-value"></a>Valore restituito  
- Il manipolatore di modelli restituisce un oggetto che, se estratto o inserito nel flusso **str**, chiama **str**. [fill](../standard-library/basic-ios-class.md#basic_ios__fill)( `Ch`) e quindi restituisce **str**. Il tipo **Elem** deve corrispondere al tipo di elemento del flusso **str**.  
+ Il manipolatore di modelli restituisce un oggetto che, se estratto o inserito nel flusso **str**, chiama **str**. [fill](../standard-library/basic-ios-class.md#fill)( `Ch`) e quindi restituisce **str**. Il tipo **Elem** deve corrispondere al tipo di elemento del flusso **str**.  
   
 ### <a name="example"></a>Esempio  
   Vedere [setw](../standard-library/iomanip-functions.md#setw) per un esempio d'uso di `setfill`.  
@@ -349,7 +350,7 @@ T2 setiosflags(ios_base::fmtflags Mask);
  Flag da impostare.  
   
 ### <a name="return-value"></a>Valore restituito  
- Il manipolatore restituisce un oggetto che, se estratto o inserito nel flusso **str**, chiama **str**. [setf](../standard-library/ios-base-class.md#ios_base__setf)(_ *Mask*) e quindi restituisce **str**.  
+ Il manipolatore restituisce un oggetto che, se estratto o inserito nel flusso **str**, chiama **str**. [setf](../standard-library/ios-base-class.md#setf)(_ *Mask*) e quindi restituisce **str**.  
   
 ### <a name="example"></a>Esempio  
   Vedere [setw](../standard-library/iomanip-functions.md#setw) per un esempio d'uso di `setiosflags`.  
@@ -366,7 +367,7 @@ T5 setprecision(streamsize Prec);
  Precisione per i valori a virgola mobile.  
   
 ### <a name="return-value"></a>Valore restituito  
- Il manipolatore restituisce un oggetto che, se estratto o inserito nel flusso **str**, chiama **str**. [precision](../standard-library/ios-base-class.md#ios_base__precision)( `Prec`) e quindi restituisce **str**.  
+ Il manipolatore restituisce un oggetto che, se estratto o inserito nel flusso **str**, chiama **str**. [precision](../standard-library/ios-base-class.md#precision)( `Prec`) e quindi restituisce **str**.  
   
 ### <a name="example"></a>Esempio  
   Vedere [setw](../standard-library/iomanip-functions.md#setw) per un esempio d'uso di `setprecision`.  
@@ -383,7 +384,7 @@ T6 setw(streamsize Wide);
  Larghezza del campo di visualizzazione.  
   
 ### <a name="return-value"></a>Valore restituito  
- Il manipolatore restituisce un oggetto che, se estratto o inserito nel flusso **str**, chiama **str**. [width](../standard-library/ios-base-class.md#ios_base__width)(_ *Wide*) e quindi restituisce **str**.  
+ Il manipolatore restituisce un oggetto che, se estratto o inserito nel flusso **str**, chiama **str**. [width](../standard-library/ios-base-class.md#width)(_ *Wide*) e quindi restituisce **str**.  
   
 ### <a name="remarks"></a>Note  
  setw imposta la larghezza solo per l'elemento successivo nel flusso e deve essere inserito prima di ogni elemento di cui si vuole specificare la larghezza.  

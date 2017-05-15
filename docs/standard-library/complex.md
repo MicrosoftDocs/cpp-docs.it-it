@@ -35,54 +35,56 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: c1753b0f4f017c6d02fc41c427285e6adae6521b
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 02d651b3e3ca4dc643b01463a85762a6427b8e83
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
-Definisce la classe modello del contenitore e i relativi modelli di supporto.  
+Definisce la classe di modello del contenitore **complesso** e i relativi modelli di supporto.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
 #include <complex>  
-  
 ```  
   
 ## <a name="remarks"></a>Note  
  Un numero complesso è una coppia ordinata di numeri reali. In termini puramente geometrici, il piano complesso è il piano bidimensionale reale. Le qualità speciali del piano complesso che lo distinguono dal piano reale dipendono dal fatto che ha una struttura algebrica aggiuntiva. Questa struttura algebrica include due operazioni fondamentali:  
   
--   Addizione, definita come (*a, b*) + (*c, d*) = (*a + c, b + d)*  
+-   Addition defined as (*a*, *b*) + (*c*, *d*) = (*a* + *c*, *b* + *d*)  
   
--   Moltiplicazione, definita come (*a, b*) \* (*c, d*) = (*ac - bd, ad + bc*)  
+-   Multiplication defined as (*a*, *b*) \* (*c*, *d*) = (*ac* - *bd*, *ad* + *bc*)  
   
  L'insieme di numeri complessi con operazioni di addizione complessa e moltiplicazione complessa corrisponde a un campo nel senso algebrico standard:  
   
 -   Le operazioni di addizione e moltiplicazione sono commutative e associative e la moltiplicazione è distributiva rispetto all'addizione, esattamente come rispetto alla vera addizione e moltiplicazione nel campo dei numeri reali.  
   
--   Il numero complesso (*0, 0*) corrisponde all'identità di addizione e (*1, 0*) è l'identità di moltiplicazione.  
+-   Numero complesso (0, 0) è l'identità additiva e (1, 0) è l'identità moltiplicativa.  
   
--   L'inverso di addizione per un numero complesso (*a, b*) è (*-a, -b*) e l'inverso di moltiplicazione per tutti questi numeri complessi ad eccezione di (*0, 0*) è  
+-   L'inverso additivo per un numero complesso (*un*, *b*) è (-*un*-*b*) e l'inverso moltiplicativo per tutti questi numeri complessi, ad eccezione (0, 0) è  
   
-     (*a*/(*a*<sup>2</sup> + *b*<sup>2</sup>), -*b*/(*a*<sup>2</sup> + *b*<sup>2</sup>)  
+     (*a*/(*a*<sup>2</sup> + *b*<sup>2</sup>), -*b*/(*a*<sup>2</sup> + *b*<sup>2</sup>))  
   
- Con la rappresentazione di un numero complesso *z = (a, b)* nel formato *z = a + bi*, dove *i*<sup>2</sup> *=* -1, le regole per il calcolo algebrico dell'insieme di numeri reali possono essere applicate all'insieme di numeri complessi e ai rispettivi componenti. Ad esempio:  
+ Mediante la rappresentazione di un numero complesso *z* = (*un*, *b*) nel formato *z* = *un* + *bi*, dove *si*<sup>2</sup> = -1, le regole per l'algebra del set di numeri reali può essere applicata per il set di numeri complessi e i relativi componenti. Ad esempio:  
   
- (1 + 2*i*) \* (2 + 3*i*)    = 1\*(2 + 3*i*) + 2*i*\*(2 + 3*i*) = (2 + 3*i*) + (4*i* + 6*i*<sup>2</sup>)  
+  (1 + 2*i*) \* (2 + 3*i*)  
+  = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*)  
+  = (2 + 3*i*) + (4*i* + 6*i*<sup>2</sup>)  
+  = (2 - 6) + (3 + 4)*i*  
+  = -4 + 7*i*  
   
- = (2 –6) + (3 + 4)*i* = -4 + 7*i*  
-  
- Il sistema di numeri complessi è un campo, ma non è un campo ordinato. Non è previsto l'ordinamento dei numeri complessi, disponibile invece per il campo o per i numeri reali e i rispettivi sottoinsiemi. Non sarà quindi possibile applicare disuguaglianze ai numeri complessi in modo analogo all'applicazione ai numeri reali, che corrispondono a un campo ordinato.  
+ Il sistema di numeri complessi è un campo, ma non è un campo ordinato. Non sussiste alcun ordinamento dei numeri complessi, come accade per il campo di numeri reali e i relativi sottoinsiemi, quindi non è possibile applicare disuguaglianze ai numeri complessi come se fossero in numeri reali.  
   
  Esistono tre formati comuni di rappresentazione di un numero complesso *z*:  
   
--   Cartesiano: *z = a + bi*  
+-   Cartesian: *z* = *a* + *bi*  
   
--   Polare: *z = r* (cos *+ i*sin)  
+-   Polar: *z* = *r* (cos *p* + *i* sin *p*)  
   
--   Esponenziale: *z = r \** exp()  
+-   Exponential: *z* = *r* \* *e*<sup>*ip*</sup>  
   
  I termini usati in queste rappresentazioni standard di un numero complesso vengono definiti come segue:  
   
@@ -90,11 +92,11 @@ Definisce la classe modello del contenitore e i relativi modelli di supporto.
   
 -   Componente cartesiana immaginaria o parte immaginaria *b*.  
   
--   Il modulo o valore assoluto di un numero complesso Ρ.  
+-   Il modulo o un valore assoluto di un numero complesso *r*.  
   
--   L'argomento o l'angolo di fase.  
+-   L'angolo di fase o argomento *p* in radianti.  
   
- Se non diversamente specificato, le funzioni che possono restituire valori multipli sono necessarie per restituire un valore principale per i rispettivi argomenti superiori a –pi greco e inferiori o uguali a +pi greco, per mantenerli a valore singolo. Tutti gli angoli devono essere espressi in radianti. In un cerchio sono presenti due 2 radianti pi greco (360 gradi).  
+ Se non diversamente specificato, le funzioni che possono restituire valori multipli sono necessarie per restituire un valore principale per i relativi argomenti di maggiore di - π e minore di o uguale a + π per mantenerli a singolo valore. Tutti gli angoli devono essere espressi in radianti, in cui sono presenti 2 π radianti (360 gradi) in un cerchio.  
   
 ### <a name="functions"></a>Funzioni  
   
@@ -123,22 +125,22 @@ Definisce la classe modello del contenitore e i relativi modelli di supporto.
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/complex-operators.md#operator_neq)|Verifica la disuguaglianza tra due numeri complessi, di cui uno o entrambi possono appartenere al sottoinsieme del tipo per le parti reali e immaginarie.|  
-|[operator*](../standard-library/complex-operators.md#operator_star)|Moltiplica due numeri complessi, di cui uno o entrambi possono appartenere al sottoinsieme del tipo per le parti reali e immaginarie.|  
-|[operator+](../standard-library/complex-operators.md#operator_add)|Aggiunge due numeri complessi, di cui uno o entrambi possono appartenere al sottoinsieme del tipo per le parti reali e immaginarie.|  
+|[operator!=](../standard-library/complex-operators.md#op_neq)|Verifica la disuguaglianza tra due numeri complessi, di cui uno o entrambi possono appartenere al sottoinsieme del tipo per le parti reali e immaginarie.|  
+|[operator*](../standard-library/complex-operators.md#op_star)|Moltiplica due numeri complessi, di cui uno o entrambi possono appartenere al sottoinsieme del tipo per le parti reali e immaginarie.|  
+|[operator+](../standard-library/complex-operators.md#op_add)|Aggiunge due numeri complessi, di cui uno o entrambi possono appartenere al sottoinsieme del tipo per le parti reali e immaginarie.|  
 |[operator-](../standard-library/complex-operators.md#operator-)|Sottrae due numeri complessi, di cui uno o entrambi possono appartenere al sottoinsieme del tipo per le parti reali e immaginarie.|  
-|[operator/](../standard-library/complex-operators.md#operator_)|Divide due numeri complessi, di cui uno o entrambi possono appartenere al sottoinsieme del tipo per le parti reali e immaginarie.|  
-|[operator<\<](../standard-library/complex-operators.md#operator_lt__lt_)|Funzione di modello che inserisce un numero complesso nel flusso di output.|  
-|[operator==](../standard-library/complex-operators.md#operator_eq_eq)|Verifica l'uguaglianza tra due numeri complessi, di cui uno o entrambi possono appartenere al sottoinsieme del tipo per le parti reali e immaginarie.|  
-|[operator>>](../standard-library/complex-operators.md#operator_gt__gt_)|Funzione di modello che estrae un valore complesso dal flusso di input.|  
+|[operator/](../standard-library/complex-operators.md#op_div)|Divide due numeri complessi, di cui uno o entrambi possono appartenere al sottoinsieme del tipo per le parti reali e immaginarie.|  
+|[operator<\<](../standard-library/complex-operators.md#op_lt_lt)|Funzione di modello che inserisce un numero complesso nel flusso di output.|  
+|[operator==](../standard-library/complex-operators.md#op_eq_eq)|Verifica l'uguaglianza tra due numeri complessi, di cui uno o entrambi possono appartenere al sottoinsieme del tipo per le parti reali e immaginarie.|  
+|[operator>>](../standard-library/complex-operators.md#op_gt_gt)|Funzione di modello che estrae un valore complesso dal flusso di input.|  
   
 ### <a name="classes"></a>Classi  
   
 |||  
 |-|-|  
-|[complex\<double>](../standard-library/complex-double.md)|La classe modello specificata in modo esplicito descrive un oggetto che archivia una coppia ordinata di oggetti, entrambi di tipo **double***,*. Il primo rappresenta la parte reale di un numero complesso, il secondo la parte immaginaria.|  
-|[complex\<float>](../standard-library/complex-float.md)|La classe modello specificata in modo esplicito descrive un oggetto che archivia una coppia ordinata di oggetti, entrambi di tipo **float***,*. Il primo rappresenta la parte reale di un numero complesso, il secondo la parte immaginaria.|  
-|[complex\<long double>](../standard-library/complex-long-double.md)|La classe modello specificata in modo esplicito descrive un oggetto che archivia una coppia ordinata di oggetti, entrambi di tipo `long double`*,*. Il primo rappresenta la parte reale di un numero complesso, il secondo la parte immaginaria.|  
+|[complex\<double>](../standard-library/complex-double.md)|La classe modello specializzata in modo esplicito descrive un oggetto che archivia una coppia ordinata di oggetti, entrambi di tipo **doppie**, dove il primo rappresenta la parte reale di un numero complesso e il secondo rappresenta la parte immaginaria.|  
+|[complex\<float>](../standard-library/complex-float.md)|La classe modello specializzata in modo esplicito descrive un oggetto che archivia una coppia ordinata di oggetti, entrambi di tipo **float**, dove il primo rappresenta la parte reale di un numero complesso e il secondo rappresenta la parte immaginaria.|  
+|[complex\<long double>](../standard-library/complex-long-double.md)|La classe modello specializzata in modo esplicito descrive un oggetto che archivia una coppia ordinata di oggetti, entrambi di tipo **long double**, dove il primo rappresenta la parte reale di un numero complesso e il secondo rappresenta la parte immaginaria.|  
 |[complex](../standard-library/complex-class.md)|La classe modello descrive un oggetto usato per rappresentare il sistema di numeri complessi e per eseguire operazioni aritmetiche complesse.|  
   
 ### <a name="literals"></a>Valori letterali  
@@ -146,7 +148,7 @@ Definisce la classe modello del contenitore e i relativi modelli di supporto.
   
 |||  
 |-|-|  
-|`constexpr complex<long double> operator""il(long double d)il(long double d)`<br /><br /> `constexpr complex<long double> operator""il(unsigned long long d)`|Restituisce `complex<long double>{0.0L, static_cast<long double>(d)}`.|  
+|`constexpr complex<long double> operator""il(long double d)`<br /><br /> `constexpr complex<long double> operator""il(unsigned long long d)`|Restituisce:`complex<long double>{0.0L, static_cast<long double>(d)}`|  
 |`constexpr complex<double> operator""i(long double d)`<br /><br /> `constexpr complex<double> operator""i(unsigned long long d)`|Restituisce `complex<double>{0.0, static_cast<double>(d)}`.|  
 |`constexpr complex<float> operator""if(long double d)`<br /><br /> `constexpr complex<float> operator""if(unsigned long long d)`|Restituisce `complex<float>{0.0f, static_cast<float>(d)}`.|  
   

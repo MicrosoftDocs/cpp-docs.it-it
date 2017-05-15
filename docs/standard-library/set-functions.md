@@ -12,10 +12,11 @@ f1_keywords:
 ms.assetid: d1277d14-8502-46c0-b820-bcda820f9406
 caps.latest.revision: 7
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: fb2b30dc58b7ba65dd13a07cec8456ea4adeb5e1
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 6c26128064b2f20a55ab1b9d1c013829e72523e0
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltsetgt-functions"></a>Funzioni &lt;set&gt;
@@ -39,14 +40,14 @@ void swap(set<Key, Traits, Allocator>& left, set<Key, Traits, Allocator>& right)
  Oggetto set i cui elementi devono essere scambiati con quelli dell'oggetto set `right`.  
   
 ### <a name="remarks"></a>Note  
- La funzione modello è un algoritmo specializzato sulla classe contenitore set per l'esecuzione della funzione membro `left``.`[swap](../standard-library/set-class.md#set__swap)( `right`). Si tratta di un'istanza dell'ordinamento parziale dei modelli di funzione eseguito dal compilatore. Quando le funzioni modello sono sottoposte a overload in modo tale che la corrispondenza del modello con la chiamata di funzione non è univoca, il compilatore seleziona la versione più specializzata della funzione modello. La versione generale della funzione modello  
+ La funzione modello è un algoritmo specializzato sulla classe contenitore set per l'esecuzione della funzione membro `left``.`[swap](../standard-library/set-class.md#swap)( `right`). Si tratta di un'istanza dell'ordinamento parziale dei modelli di funzione eseguito dal compilatore. Quando le funzioni modello sono sottoposte a overload in modo tale che la corrispondenza del modello con la chiamata di funzione non è univoca, il compilatore seleziona la versione più specializzata della funzione modello. La versione generale della funzione modello  
   
  `template` \< **classT**> **void swap**( **T&**, **T&**)  
   
  nella classe algoritmo viene eseguita in base ad assegnazione ed è un'operazione lenta. La versione specializzata presente in ogni contenitore è molto più veloce, dal momento che funziona con la rappresentazione interna della classe contenitore.  
   
 ### <a name="example"></a>Esempio  
-  Vedere l'esempio di codice relativo alla classe membro [set::swap](../standard-library/set-class.md#set__swap) per indicazioni su come usare la versione modello di `swap`.  
+  Vedere l'esempio di codice relativo alla classe membro [set::swap](../standard-library/set-class.md#swap) per indicazioni su come usare la versione modello di `swap`.  
   
 ##  <a name="swap_multiset"></a>  swap  (multiset)
  Scambia gli elementi di due oggetti multiset.  
@@ -64,14 +65,14 @@ void swap(multiset<Key, Traits, Allocator>& left, multiset<Key, Traits, Allocato
  Oggetto multiset i cui elementi devono essere scambiati con quelli dell'oggetto multiset `right`.  
   
 ### <a name="remarks"></a>Note  
- La funzione modello è un algoritmo specializzato sulla classe contenitore multiset per l'esecuzione della funzione membro `left``.`[swap](../standard-library/multiset-class.md#multiset__swap)( `right`). Si tratta di un'istanza dell'ordinamento parziale dei modelli di funzione eseguito dal compilatore. Quando le funzioni modello sono sottoposte a overload in modo tale che la corrispondenza del modello con la chiamata di funzione non è univoca, il compilatore seleziona la versione più specializzata della funzione modello. La versione generale della funzione modello  
+ La funzione modello è un algoritmo specializzato sulla classe contenitore multiset per l'esecuzione della funzione membro `left``.`[swap](../standard-library/multiset-class.md#swap)( `right`). Si tratta di un'istanza dell'ordinamento parziale dei modelli di funzione eseguito dal compilatore. Quando le funzioni modello sono sottoposte a overload in modo tale che la corrispondenza del modello con la chiamata di funzione non è univoca, il compilatore seleziona la versione più specializzata della funzione modello. La versione generale della funzione modello  
   
  `template` \< **classT**> **void swap**( **T&**, **T&**)  
   
  nella classe algoritmo viene eseguita in base ad assegnazione ed è un'operazione lenta. La versione specializzata presente in ogni contenitore è molto più veloce, dal momento che funziona con la rappresentazione interna della classe contenitore.  
   
 ### <a name="example"></a>Esempio  
-  Vedere l'esempio di codice relativo alla classe membro [multiset::swap](../standard-library/multiset-class.md#multiset__swap) per indicazioni su come usare la versione modello di `swap`.  
+  Vedere l'esempio di codice relativo alla classe membro [multiset::swap](../standard-library/multiset-class.md#swap) per indicazioni su come usare la versione modello di `swap`.  
   
 ## <a name="see-also"></a>Vedere anche  
  [\<set>](../standard-library/set.md)

@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: d06d072dd62eed102c3073cd1cd7a0c112e674bb
-ms.lasthandoff: 04/01/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 9ae60a13db0f975aca84c74caed43327e5bd1267
+ms.contentlocale: it-it
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="cdialog-class"></a>CDialog (classe)
@@ -125,7 +126,7 @@ class CDialog : public CWnd
   
  Il programmatore sia la chiamata del framework `DoDataExchange` indirettamente tramite una chiamata a [CWnd::UpdateData](../../mfc/reference/cwnd-class.md#updatedata).  
   
- Il framework chiama `UpdateData` quando l'utente fa clic sul pulsante OK per chiudere una finestra di dialogo modale. (I dati non vengono recuperati se si fa clic sul pulsante Annulla.) L'implementazione predefinita di [OnInitDialog](#oninitdialog) chiama anche `UpdateData` per impostare i valori iniziali dei controlli. È in genere di eseguire l'override `OnInitDialog` ulteriormente inizializzare i controlli. `OnInitDialog`viene chiamato dopo che tutti i controlli di finestra di dialogo vengono creati e appena prima la finestra di dialogo viene visualizzata.  
+ Il framework chiama `UpdateData` quando l'utente fa clic sul pulsante OK per chiudere una finestra di dialogo modale. (I dati non vengono recuperati se si fa clic sul pulsante Annulla.) L'implementazione predefinita di [OnInitDialog](#oninitdialog) chiama anche `UpdateData` per impostare i valori iniziali dei controlli. È in genere di eseguire l'override `OnInitDialog` inizializzare ulteriori controlli. `OnInitDialog`viene chiamato dopo che tutti i controlli di finestra di dialogo vengono creati e appena prima la finestra di dialogo viene visualizzata.  
   
  È possibile chiamare `CWnd::UpdateData` in qualsiasi momento durante l'esecuzione di una finestra di dialogo modale o non modale.  
   
@@ -186,7 +187,7 @@ CDialog();
   
  Dopo la creazione di una finestra di dialogo modale con uno dei metodi precedenti, chiamare `DoModal`.  
   
- Per creare una finestra di dialogo non modale, utilizzare la forma protetta del `CDialog` costruttore. Il costruttore è protetto perché è necessario derivare la propria classe di finestra di dialogo per implementare una finestra di dialogo non modale. Costruzione di una finestra di dialogo non modale è un processo in due fasi. Prima chiamata al costruttore. Chiamare quindi il **crea** funzione membro per creare una finestra di dialogo basata sulle risorse, o chiamare `CreateIndirect` per creare la finestra di dialogo da un modello in memoria.  
+ Per creare una finestra di dialogo non modale, utilizzare il formato protetto del `CDialog` costruttore. Il costruttore è protetto perché è necessario derivare la propria classe di finestra di dialogo per implementare una finestra di dialogo non modale. Costruzione di una finestra di dialogo non modale è un processo in due fasi. Prima chiamata al costruttore. Chiamare quindi il **crea** funzione membro per creare una finestra di dialogo basata sulle risorse, o chiamare `CreateIndirect` per creare la finestra di dialogo da un modello in memoria.  
   
 ##  <a name="create"></a>CDialog::Create  
  Chiamare **crea** per creare una finestra di dialogo non modale utilizzando un modello di finestra di dialogo da una risorsa.  
@@ -226,7 +227,7 @@ virtual BOOL Create(
   
  Utilizzare il **WS_VISIBLE** stile nel modello di finestra di dialogo, se la finestra di dialogo deve essere visualizzati quando viene creata la finestra padre. In caso contrario, è necessario chiamare `ShowWindow`. Per un'ulteriore gli stili di finestra di dialogo e le applicazioni, vedere il [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) strutturare nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] e [stili finestra](../../mfc/reference/window-styles.md) nel *riferimenti alla libreria MFC*.  
   
- Utilizzare la `CWnd::DestroyWindow` funzione distruggere creata da una finestra di dialogo di **crea** (funzione).  
+ Utilizzare il `CWnd::DestroyWindow` funzione distruggere creata da una finestra di dialogo di **crea** (funzione).  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCControlLadenDialog #62](../../mfc/codesnippet/cpp/cdialog-class_1.cpp)]  
@@ -265,11 +266,11 @@ virtual BOOL CreateIndirect(
 ### <a name="remarks"></a>Note  
  Il `CreateIndirect` funzione membro restituisce immediatamente dopo la creazione nella finestra di dialogo.  
   
- Utilizzare il **WS_VISIBLE** stile nel modello di finestra di dialogo, se la finestra di dialogo deve essere visualizzati quando viene creata la finestra padre. In caso contrario, è necessario chiamare `ShowWindow` per fare in modo che venga visualizzato. Per ulteriori informazioni su come è possibile specificare altri stili di finestra di dialogo nel modello, vedere il [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) strutturare nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Utilizzare il **WS_VISIBLE** stile nel modello di finestra di dialogo, se la finestra di dialogo deve essere visualizzati quando viene creata la finestra padre. In caso contrario, è necessario chiamare `ShowWindow` per fare in modo che venga visualizzato. Per ulteriori informazioni su come è possibile specificare altri stili di finestra di dialogo nel modello, vedere il [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) struttura nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
  Utilizzare il `CWnd::DestroyWindow` funzione distruggere creata da una finestra di dialogo di `CreateIndirect` (funzione).  
   
- Finestre di dialogo che contengono controlli ActiveX richiedono informazioni aggiuntive fornite un **DLGINIT** risorse. Per ulteriori informazioni, vedere l'articolo della Knowledge Base Q231591, "HOWTO: utilizzare un modello di finestra di dialogo per creare una finestra di dialogo MFC con un controllo ActiveX." Articoli della Knowledge Base sono disponibili nella documentazione di Visual Studio di MSDN Library o al [http://support.microsoft.com](http://support.microsoft.com/).  
+ Finestre di dialogo che contengono controlli ActiveX richiedono informazioni aggiuntive fornite un **DLGINIT** risorse. Per ulteriori informazioni, vedere l'articolo della Knowledge Base Q231591, "HOWTO: utilizzare un modello di finestra di dialogo per creare una finestra di dialogo MFC con un controllo ActiveX." Articoli della Knowledge Base sono disponibili in [http://support.microsoft.com](http://support.microsoft.com/).  
   
 ##  <a name="domodal"></a>CDialog::DoModal  
  Chiamare questa funzione membro per richiamare la finestra di dialogo modale e restituire il risultato della finestra di dialogo al termine.  
@@ -279,7 +280,7 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Un `int` valore che specifica il valore della `nResult` parametro passato al [CDialog::EndDialog](#enddialog) funzione membro, che viene utilizzato per chiudere la finestra di dialogo. Il valore restituito è -1 se la funzione non è stato possibile creare la finestra di dialogo o **IDABORT** se si è verificato un altro errore, nel qual caso la finestra di output conterrà informazioni sull'errore da [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Un `int` valore che specifica il valore della `nResult` parametro passato per il [CDialog::EndDialog](#enddialog) funzione membro, che viene utilizzato per chiudere la finestra di dialogo. Il valore restituito è -1 se la funzione non è stato possibile creare la finestra di dialogo o **IDABORT** se si è verificato un altro errore, nel qual caso la finestra di output conterrà informazioni sull'errore da [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="remarks"></a>Note  
  Questa funzione membro gestisce tutte le interazioni con l'utente, mentre è attiva la finestra di dialogo. Questo è ciò che rende la finestra di dialogo modale; ovvero, l'utente non può interagire con altre finestre fino a quando non viene chiusa la finestra di dialogo.  
@@ -316,7 +317,7 @@ void EndDialog(int nResult);
  [!code-cpp[&#65; NVC_MFCControlLadenDialog](../../mfc/codesnippet/cpp/cdialog-class_4.cpp)]  
   
 ##  <a name="getdefid"></a>CDialog::GetDefID  
- Chiamare il `GetDefID` la funzione membro per ottenere l'ID del controllo pulsante predefinito per una finestra di dialogo.  
+ Chiamare il `GetDefID` funzione membro per ottenere l'ID del controllo pulsante predefinito per una finestra di dialogo.  
   
 ```  
 DWORD GetDefID() const;  
@@ -379,7 +380,7 @@ BOOL InitModalIndirect(
 ### <a name="remarks"></a>Note  
  Per creare una finestra di dialogo modale indirettamente, allocare un blocco di memoria globale e compilarlo con il modello di finestra di dialogo. Chiamare quindi il vuoto `CDialog` costruttore per costruire l'oggetto finestra di dialogo. Successivamente, chiamare `InitModalIndirect` per archiviare l'handle per il modello di finestra di dialogo in memoria. Nella finestra di dialogo verrà creata e visualizzata successivamente, quando il [DoModal](#domodal) viene chiamata la funzione membro.  
   
- Finestre di dialogo che contengono controlli ActiveX richiedono informazioni aggiuntive fornite un **DLGINIT** risorse. Per ulteriori informazioni, vedere l'articolo della Knowledge Base Q231591, "HOWTO: utilizzare un modello di finestra di dialogo per creare una finestra di dialogo MFC con un controllo ActiveX." Articoli della Knowledge Base sono disponibili nella documentazione di Visual Studio di MSDN Library o al [http://support.microsoft.com](http://support.microsoft.com/).  
+ Finestre di dialogo che contengono controlli ActiveX richiedono informazioni aggiuntive fornite un **DLGINIT** risorse. Per ulteriori informazioni, vedere l'articolo della Knowledge Base Q231591, "HOWTO: utilizzare un modello di finestra di dialogo per creare una finestra di dialogo MFC con un controllo ActiveX." Articoli della Knowledge Base sono disponibili in [http://support.microsoft.com](http://support.microsoft.com/).  
   
 ##  <a name="mapdialogrect"></a>CDialog::MapDialogRect  
  Chiamata per convertire le unità della finestra di dialogo di un rettangolo in unità schermo.  

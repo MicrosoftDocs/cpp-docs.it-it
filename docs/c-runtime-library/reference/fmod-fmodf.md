@@ -1,53 +1,71 @@
 ---
-title: "fmod, fmodf | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fmod"
-  - "fmodf"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fmod"
-  - "_fmodl"
-  - "fmodf"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "calcolo di resti a virgola mobile"
-  - "fmodf (funzione)"
-  - "fmod (funzione)"
-  - "numeri a virgola mobile, calcolo dei resti"
+title: fmod, fmodf | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- fmod
+- fmodf
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fmod
+- _fmodl
+- fmodf
+dev_langs:
+- C++
+helpviewer_keywords:
+- calculating floating-point remainders
+- fmodf function
+- fmod function
+- floating-point numbers, calculating remainders
 ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# fmod, fmodf
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 09e647a4b99f887d11cb2dcd64e0fd680870ae2b
+ms.contentlocale: it-it
+ms.lasthandoff: 03/29/2017
 
-Calcola il resto in virgola mobile.  
+---
+# <a name="fmod-fmodf"></a>fmod, fmodf
+Calcola il resto a virgola mobile.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 double fmod(   
@@ -68,27 +86,27 @@ float fmodf(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `x`, `y`  
  Valori a virgola mobile.  
   
-## Valore restituito  
- `fmod` restituisce il resto in virgola mobile di `x` \/ `y`.  Se il valore di `y` è 0.0, `fmod` restituisce un valore NaN non interattivo.  Per informazioni sulla rappresentazione di un quiet Nan dalla famiglia `printf`, vedere [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md).  
+## <a name="return-value"></a>Valore restituito  
+ `fmod` restituisce il resto a virgola mobile di `x` / `y`. Se il valore di `y` è 0,0, `fmod` restituisce un valore NaN silenzioso (QNaN). Per informazioni sulla rappresentazione di un valore NaN silenzioso dalla famiglia `printf`, vedere [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md).  
   
-## Note  
- La funzione `fmod` calcola il resto a virgola mobile `f` di `x` \/ `y` in modo che `x` \= `i` `*` `y` \+ `f`, dove `i` è un Integer, `f` ha lo stesso segno di `x` e il valore assoluto di `f` è minore del valore assoluto di `y`.  
+## <a name="remarks"></a>Note  
+ La funziona `fmod` calcola il resto a virgola mobile `f` di `x` / `y` come `x` = `i` `*` `y` + `f`, dove `i` è un intero, `f` ha lo stesso segno di `x` e il valore assoluto di `f` è minore del valore assoluto di `y`.  
   
- Il C\+\+ consente l'overload, pertanto è possibile chiamare gli overload di `fmod`.  In un programma C, `fmod` accetta sempre due double e restituisce un double.  
+ C++ consente l'overload, quindi è possibile chiamare overload di `fmod`. In un programma C `fmod` accetta sempre due valori double e restituisce un valore double.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Funzione|Intestazione obbligatoria|  
-|--------------|-------------------------------|  
-|`fmod`, `fmodf`|\<math.h\>|  
+|--------------|---------------------|  
+|`fmod`, `fmodf`|\<math.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'Introduzione.  
+ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_fmod.c  
@@ -106,13 +124,13 @@ int main( void )
 }  
 ```  
   
-  **Il resto di \-10,00 \/ 3,00 è \-1,000000**   
-## Equivalente .NET Framework  
- [System::Math::IEEERemainder](https://msdn.microsoft.com/en-us/library/system.math.ieeeremainder.aspx)  
+```Output  
+The remainder of -10.00 / 3.00 is -1.000000  
+```  
   
-## Vedere anche  
- [Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)   
  [ceil, ceilf, ceill](../../c-runtime-library/reference/ceil-ceilf-ceill.md)   
  [fabs, fabsf, fabsl](../../c-runtime-library/reference/fabs-fabsf-fabsl.md)   
  [floor, floorf, floorl](../../c-runtime-library/reference/floor-floorf-floorl.md)   
- [\_CIfmod](../../c-runtime-library/cifmod.md)
+ [_CIfmod](../../c-runtime-library/cifmod.md)

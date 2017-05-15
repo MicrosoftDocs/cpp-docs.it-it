@@ -1,69 +1,87 @@
 ---
-title: "Classe codecvt_base | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "codecvt_base"
-  - "xlocale/std::codecvt_base"
-  - "std.codecvt_base"
-  - "std::codecvt_base"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "codecvt_base (classe)"
+title: Classe codecvt_base | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- codecvt_base
+- xlocale/std::codecvt_base
+dev_langs:
+- C++
+helpviewer_keywords:
+- codecvt_base class
 ms.assetid: 7e95c083-91b4-4b3f-8918-0d4ea244a040
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# Classe codecvt_base
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: d0c12f0dfb1b0ceb111f3c3313e78dd5c9197f70
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
-Una classe di base per la classe di codecvt utilizzata per definire un tipo di enumerazione definito **risultato**, utilizzata come tipo restituito per le funzioni membro facet per indicare il risultato di una conversione.  
+---
+# <a name="codecvtbase-class"></a>Classe codecvt_base
+Classe di base per la classe codecvt usata per definire un tipo di enumerazione a cui si fa riferimento come **result**, usato come tipo restituito per le funzioni membro facet per indicare il risultato di una conversione.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
+```
+class codecvt_base : public locale::facet {
+public:
+    enum result {ok, partial, error, noconv};
+    codecvt_base( size_t _Refs = 0);
+    bool always_noconv() const;
+    int max_length() const;
+    int encoding() const;
+    ~codecvt_base()
+
+protected:
+    virtual bool do_always_noconv() const;
+    virtual int do_max_length() const;
+    virtual int do_encoding() const;
+};
 ```  
-class codecvt_base : public locale::facet {  
-public:  
-    enum result {ok, partial, error, noconv};  
-    codecvt_base(  
-        size_t _Refs = 0  
-);  
-    bool always_noconv() const;  
-    int max_length() const;  
-    int encoding() const;  
-    ~codecvt_base()  
-protected:  
-    virtual bool do_always_noconv() const;  
-    virtual int do_max_length() const;  
-    virtual int do_encoding() const;  
-};  
-```  
   
-## Note  
- La classe viene descritto un insieme comune di enumerazione a tutte le specializzazioni di classe modello [codecvt](../standard-library/codecvt-class.md).  Il risultato di enumerazione descritti i valori possibili restituiti da [do\_in](../Topic/codecvt::do_in.md) o da [do\_out](../Topic/codecvt::do_out.md):  
+## <a name="remarks"></a>Note  
+ La classe descrive un'enumerazione comune a tutte le specializzazioni della classe modello [codecvt](../standard-library/codecvt-class.md). Il risultato dell'enumerazione descrive i possibili valori restituiti da [do_in](../standard-library/codecvt-class.md#do_in) o [do_out](../standard-library/codecvt-class.md#do_out):  
   
--   **OK** se la conversione tra le codifiche dei caratteri interne e esterne ha esito positivo.  
+- **ok** se la conversione tra codifiche di caratteri interni ed esterni ha esito positivo.  
   
--   **Parziale** se la destinazione non è sufficiente per la conversione ha esito positivo.  
+- **partial** se la destinazione non è abbastanza grande per consentire la conversione.  
   
--   **errore** se la sequenza di origine è corretto.  
+- **error** se la sequenza di origine non è stata creata nel formato corretto.  
   
--   **noconv** se la funzione non esegue conversione.  
+- **noconv** se la funzione non esegue alcuna conversione.  
   
-## Requisiti  
- impostazioni locali \<di**Intestazione:** \>  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<locale>  
   
  **Spazio dei nomi:** std  
   
-## Vedere anche  
- [Sicurezza dei thread nella libreria standard C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>Vedere anche  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md) (Thread safety nella libreria standard C++)
+
+
+
+

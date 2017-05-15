@@ -1,78 +1,93 @@
 ---
-title: "complex&lt;float&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::complex<float>"
-  - "std.complex<float>"
-  - "complex<float>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "complex<float> (funzione)"
+title: complex&lt;float&gt; | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std::complex<float>
+- std.complex<float>
+- complex<float>
+dev_langs:
+- C++
+helpviewer_keywords:
+- complex<float> function
 ms.assetid: 1178eb1e-39bd-4017-89cd-aea95f813939
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# complex&lt;float&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 50b4cd9578da0b70c1c37ea2919bc2dc765ee521
+ms.contentlocale: it-it
+ms.lasthandoff: 04/04/2017
 
+---
+# <a name="complexltfloatgt"></a>complex&lt;float&gt;
 Descrive un oggetto che archivia una coppia ordinata di oggetti, entrambi di tipo **float***,* di cui il primo rappresenta la parte reale di un numero complesso e il secondo rappresenta la parte immaginaria.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
-```  
-template<>  
-   class complex<float> {  
-public:  
-   constexpr complex(  
-      float _RealVal = 0,   
-      float _ImagVal = 0  
-   );  
-  
-   constexpr complex(  
-      const complex<float>& _ComplexNum  
-   );  
-   constexpr complex(  
-      const complex<double>& _ComplexNum  
-   );  
-   constexpr complex(  
-      const complex<long double>& _ComplexNum  
-   );  
-   // rest same as template class complex  
-};  
+```
+template <>
+class complex<float> {
+public:
+    constexpr complex(
+    float _RealVal = 0,
+    float _ImagVal = 0);
+
+constexpr complex(
+    const complex<float>& complexNum);
+
+constexpr complex(
+    const complex<double>& complexNum);
+
+constexpr complex(
+    const complex<long double>& complexNum);
+// rest same as template class complex
+};
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `_RealVal`  
  Valore di tipo **float** per la parte reale del numero complesso che viene costruito.  
   
  `_ImagVal`  
  Valore di tipo **float** per la parte immaginaria del numero complesso che viene costruito.  
   
- `_ComplexNum`  
+ `complexNum`  
  Numero complesso di tipo **double** o di tipo `long double` le cui parti reale e immaginaria vengono usate per inizializzare un numero complesso di tipo **float** che viene costruito.  
   
-## Valore restituito  
+## <a name="return-value"></a>Valore restituito  
  Numero complesso di tipo **float**.  
   
-## Note  
- La specializzazione esplicita della classe modello complex in una classe complex di tipo **float** si differenzia dalla classe modello solo per i costruttori definiti.  La conversione da **float** a **double** può essere implicita, ma la conversione meno sicura da **float** a `long double` deve essere **esplicita**.  L'uso di regole **esplicite** esclude l'inizializzazione con conversione del tipo tramite la sintassi di assegnazione.  
+## <a name="remarks"></a>Note  
+ La specializzazione esplicita della classe modello complex in una classe complex di tipo **float** si differenzia dalla classe modello solo per i costruttori definiti. La conversione da **float** a **double** può essere implicita, ma la conversione meno sicura da **float** a `long double` deve essere **esplicita**. L'uso di una conversione **esplicita** esclude l'inizializzazione con conversione del tipo tramite la sintassi di assegnazione.  
   
- Per altre informazioni sulla classe modello `complex`, vedere [Classe complex](../standard-library/complex-class.md).  Per un elenco dei membri della classe modello `complex`, vedere .  
+ Per altre informazioni sulla classe modello `complex`, vedere [Classe complex](../standard-library/complex-class.md). Per un elenco dei membri della classe modello `complex`, vedere  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-```  
+```cpp  
 // complex_comp_flt.cpp  
 // compile with: /EHsc  
 #include <complex>  
@@ -112,22 +127,28 @@ int main( )
         << argc3 << " radians, which is " << argc3 * 180 / pi  
         << " degrees." << endl;  
 }  
+\* Output:   
+Specifying initial real & imaginary parts,  
+ as type float gives c1 = (4,5)  
+Implicit conversion from type double to type float,  
+ gives c2float = (1,3)  
+Explicit conversion from type long double to type float,  
+ gives c3float = (3,4)  
+The modulus of c3 is recovered from c3 using: abs ( c3 ) = 5  
+Argument of c3 is recovered from c3 using:  
+ arg ( c3 ) = 0.927295 radians, which is 53.1301 degrees.  
+*\  
 ```  
   
-  **Specifying initial real & imaginary parts,**  
- **as type float gives c1 \= \(4,5\)**  
-**Implicit conversion from type double to type float,**  
- **gives c2float \= \(1,3\)**  
-**Explicit conversion from type long double to type float,**  
- **gives c3float \= \(3,4\)**  
-**The modulus of c3 is recovered from c3 using: abs \( c3 \) \= 5**  
-**Argument of c3 is recovered from c3 using:**  
- **arg \( c3 \) \= 0.927295 radians, which is 53.1301 degrees.**   
-## Requisiti  
- **Intestazione**: \<complex\>  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione**: \<complex>  
   
  **Spazio dei nomi:** std  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe complex](../standard-library/complex-class.md)   
- [Sicurezza dei thread nella libreria standard C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md) (Thread safety nella libreria standard C++)
+
+
+
+

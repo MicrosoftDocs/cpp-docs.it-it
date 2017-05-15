@@ -10,9 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - unique_ptr
-- std.unique_ptr
-- std::unique_ptr
 - memory/std::unique_ptr
+- memory/std::unique_ptr::deleter_type
+- memory/std::unique_ptr::element_type
+- memory/std::unique_ptr::pointer
+- memory/std::unique_ptr::get
+- memory/std::unique_ptr::get_deleter
+- memory/std::unique_ptr::release
+- memory/std::unique_ptr::reset
+- memory/std::unique_ptr::swap
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,10 +42,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 581766663067a026f73fc14893b52203a6c69294
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: ff78ad0f8bb0d3a8dfb844a7379d6b73948d8d1a
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="uniqueptr-class"></a>Classe unique_ptr
@@ -126,7 +133,7 @@ public:
   
  `unique_ptr` gestisce una risorsa in modo univoco. Ogni oggetto `unique_ptr` archivia un puntatore nell'oggetto di sua proprietà oppure archivia un puntatore Null. Una risorsa può appartenere a non più di un oggetto `unique_ptr`. Quando un oggetto `unique_ptr` proprietario di una risorsa particolare viene eliminato definitivamente, la risorsa viene liberata. Un oggetto `unique_ptr` può essere spostato, ma non copiato. Per altre informazioni, vedere [Dichiaratore di riferimento rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
- La risorsa viene liberata chiamando un oggetto `deleter` archiviato di tipo `Del` in grado di allocare le risorse per un determinato `unique_ptr`. Per impostazione predefinita, `deleter``default_delete``<T>` presuppone che la risorsa a cui punta ` ptr` venga allocata con `new` e che possa essere liberata chiamando `delete _``Ptr`. Una specializzazione parziale `unique_ptr<T[]>` gestisce gli oggetti matrice allocati con `new[]` e ha il valore predefinito `deleter``default_delete<T[]>`, specializzato per chiamare delete [] ` ptr`.  
+ La risorsa viene liberata chiamando un oggetto `deleter` archiviato di tipo `Del` in grado di allocare le risorse per un determinato `unique_ptr`. Per impostazione predefinita, `deleter``default_delete``<T>` presuppone che la risorsa a cui punta `ptr` venga allocata con `new` e che possa essere liberata chiamando `delete _``Ptr`. Una specializzazione parziale `unique_ptr<T[]>` gestisce gli oggetti matrice allocati con `new[]` e ha il valore predefinito `deleter``default_delete<T[]>`, specializzato per chiamare delete [] `ptr`.  
   
  Il puntatore archiviato in una risorsa di proprietà, `stored_ptr` è di tipo `pointer`. È `Del::pointer` se definito; in caso contrario, `T *`. L'oggetto `deleter` archiviato `stored_deleter` non occupa spazio nell'oggetto se `deleter` è senza stato. Si noti che `Del` può essere un tipo di riferimento.  
   
@@ -136,7 +143,7 @@ public:
   
 |||  
 |-|-|  
-|[unique_ptr::unique_ptr](#unique_ptr__unique_ptr)|Esistono sette costruttori per `unique_ptr`.|  
+|[unique_ptr](#unique_ptr)|Esistono sette costruttori per `unique_ptr`.|  
   
 ### <a name="typedefs"></a>Typedef  
   
@@ -150,11 +157,11 @@ public:
   
 |||  
 |-|-|  
-|[unique_ptr::get](#unique_ptr__get)|Restituisce `stored_ptr`.|  
-|[unique_ptr::get_deleter](#unique_ptr__get_deleter)|Restituisce un riferimento a `stored_deleter`.|  
-|[unique_ptr::release](#unique_ptr__release)|archivia `pointer()` in `stored_ptr` e restituisce il relativo contenuto precedente.|  
-|[unique_ptr::reset](#unique_ptr__reset)|Elimina la risorsa attualmente di proprietà e accetta una nuova risorsa.|  
-|[unique_ptr::swap](#unique_ptr__swap)|Scambia la risorsa e `deleter` con l'`unique_ptr` fornito.|  
+|[get](#get)|Restituisce `stored_ptr`.|  
+|[get_deleter](#get_deleter)|Restituisce un riferimento a `stored_deleter`.|  
+|[release](#release)|archivia `pointer()` in `stored_ptr` e restituisce il relativo contenuto precedente.|  
+|[reset](#reset)|Elimina la risorsa attualmente di proprietà e accetta una nuova risorsa.|  
+|[swap](#swap)|Scambia la risorsa e `deleter` con l'`unique_ptr` fornito.|  
   
 ### <a name="operators"></a>Operatori  
   
@@ -170,7 +177,7 @@ public:
   
  **Spazio dei nomi:** std  
   
-##  <a name="a-namedeletertypea--deletertype"></a><a name="deleter_type"></a>  deleter_type  
+##  <a name="deleter_type"></a>  deleter_type  
  Il tipo è un sinonimo del parametro di modello `Del`.  
   
 ```  
@@ -180,7 +187,7 @@ typedef Del deleter_type;
 ### <a name="remarks"></a>Note  
  Il tipo è un sinonimo del parametro di modello `Del`.  
   
-##  <a name="a-nameelementtypea--elementtype"></a><a name="element_type"></a>  element_type  
+##  <a name="element_type"></a>  element_type  
  Il tipo è un sinonimo del parametro di modello `Type`.  
   
 ```  
@@ -190,7 +197,7 @@ typedef Type element_type;
 ### <a name="remarks"></a>Note  
  Il tipo è un sinonimo del parametro di modello `Ty`.  
   
-##  <a name="a-nameuniqueptrgeta--uniqueptrget"></a><a name="unique_ptr__get"></a>  unique_ptr::get  
+##  <a name="get"></a>  unique_ptr::get  
  Restituisce `stored_ptr`.  
   
 ```  
@@ -200,7 +207,7 @@ pointer get() const;
 ### <a name="remarks"></a>Note  
  La funzione membro restituisce`stored_ptr`.  
   
-##  <a name="a-nameuniqueptrgetdeletera--uniqueptrgetdeleter"></a><a name="unique_ptr__get_deleter"></a>  unique_ptr::get_deleter  
+##  <a name="get_deleter"></a>  unique_ptr::get_deleter  
  Restituisce un riferimento a `stored_deleter`.  
   
 ```  
@@ -212,7 +219,7 @@ const Del& get_deleter() const;
 ### <a name="remarks"></a>Note  
  La funzione membro restituisce un riferimento a `stored_deleter`.  
   
-##  <a name="a-nameuniqueptroperatoreqa--uniqueptr-operator"></a><a name="unique_ptr_operator_eq"></a>  unique_ptr operator=  
+##  <a name="unique_ptr_operator_eq"></a>  unique_ptr operator=  
  Assegna l'indirizzo dell'oggetto `unique_ptr` fornito a quello corrente.  
   
 ```  
@@ -226,9 +233,9 @@ unique_ptr& operator=(pointer-type);
  Un riferimento `unique_ptr` usato per assegnare il valore dell'oggetto `unique_ptr` corrente.  
   
 ### <a name="remarks"></a>Note  
- Le funzioni membro chiamano `reset(`` right``.release())` e spostano ` right``.stored_deleter` in `stored_deleter`, quindi restituiscono `*this`.  
+ Le funzioni membro chiamano `reset(``right``.release())` e spostano `right``.stored_deleter` in `stored_deleter`, quindi restituiscono `*this`.  
   
-##  <a name="a-namepointera--pointer"></a><a name="pointer"></a>  pointer  
+##  <a name="pointer"></a>  pointer  
  Sinonimo di `Del::pointer` se definito, in caso contrario, `Type *`.  
   
 ```  
@@ -238,7 +245,7 @@ typedef T1 pointer;
 ### <a name="remarks"></a>Note  
  Il tipo è un sinonimo di `Del::pointer` se definito, in caso contrario, `Type *`.  
   
-##  <a name="a-nameuniqueptrreleasea--uniqueptrrelease"></a><a name="unique_ptr__release"></a>  unique_ptr::release  
+##  <a name="release"></a>  unique_ptr::release  
  Rilascia la proprietà del puntatore archiviato restituito al chiamante e imposta il valore del puntatore archiviato su `nullptr`.  
   
 ```  
@@ -298,7 +305,7 @@ Deleting Sample(3)
   
 ```  
   
-##  <a name="a-nameuniqueptrreseta--uniqueptrreset"></a><a name="unique_ptr__reset"></a>  unique_ptr::reset  
+##  <a name="reset"></a>  unique_ptr::reset  
  Acquisisce la proprietà del parametro del puntatore, quindi elimina il puntatore archiviato originale. Se il nuovo puntatore è uguale al puntatore archiviato originale, `reset` elimina il puntatore e imposta il puntatore archiviato su `nullptr`.  
   
 ```  
@@ -313,11 +320,11 @@ void reset(nullptr_t ptr);
 |`ptr`|Puntatore alla risorsa di cui acquisire la proprietà.|  
   
 ### <a name="remarks"></a>Note  
- Usare `reset` per cambiare l'oggetto [pointer](#pointer) archiviato di proprietà di `unique_ptr` in `ptr`, quindi eliminare il puntatore archiviato originale. Se l'oggetto `unique_ptr` non è vuoto, `reset` richiama la funzione deleter restituita da [get_deleter](#unique_ptr__get_deleter) nel puntatore archiviato originale.  
+ Usare `reset` per cambiare l'oggetto [pointer](#pointer) archiviato di proprietà di `unique_ptr` in `ptr`, quindi eliminare il puntatore archiviato originale. Se l'oggetto `unique_ptr` non è vuoto, `reset` richiama la funzione deleter restituita da [get_deleter](#get_deleter) nel puntatore archiviato originale.  
   
  Poiché `reset` archivia prima il nuovo puntatore `ptr` e poi elimina il puntatore archiviato originale, è possibile eliminare subito `reset` con `ptr` se è uguale al puntatore archiviato originale.  
   
-##  <a name="a-nameuniqueptrswapa--uniqueptrswap"></a><a name="unique_ptr__swap"></a>  unique_ptr::swap  
+##  <a name="swap"></a>  unique_ptr::swap  
  Scambi di puntatori tra due oggetti `unique_ptr`.  
   
 ```  
@@ -325,13 +332,13 @@ void swap(unique_ptr& right);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` right`  
+ `right`  
  `unique_ptr` usato a puntatori swap.  
   
 ### <a name="remarks"></a>Note  
  La funzione membro scambia `stored_ptr` con `right.stored_ptr` e `stored_deleter` con `right.stored_deleter`.  
   
-##  <a name="a-nameuniqueptruniqueptra--uniqueptruniqueptr"></a><a name="unique_ptr__unique_ptr"></a>  unique_ptr::unique_ptr  
+##  <a name="unique_ptr"></a>  unique_ptr::unique_ptr  
  Esistono sette costruttori per `unique_ptr`.  
   
 ```  
@@ -357,16 +364,16 @@ unique_ptr(unique_ptr<Ty2, Del2>&& right);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|` ptr`|Puntatore alla risorsa da assegnare a un oggetto `unique_ptr.`.|  
+|`ptr`|Puntatore alla risorsa da assegnare a un oggetto `unique_ptr.`.|  
 |`_Deleter`|Un oggetto `deleter` da assegnare a un oggetto `unique_ptr`.|  
-|` right`|Un oggetto `rvalue reference` a un oggetto `unique_ptr` da cui i campi `unique_ptr` vengono assegnati all'oggetto `unique_ptr` appena costruito.|  
+|`right`|Un oggetto `rvalue reference` a un oggetto `unique_ptr` da cui i campi `unique_ptr` vengono assegnati all'oggetto `unique_ptr` appena costruito.|  
   
 ### <a name="remarks"></a>Note  
  I primi due costruttori costruiscono un oggetto che non gestisce alcuna risorsa. Il terzo costruttore archivia `ptr` in `stored_ptr`. Il quarto costruttore archivia `ptr` in `stored_ptr` e `deleter` in `stored_deleter`.  
   
  Il quinto costruttore archivia `ptr` in `stored_ptr` e sposta `deleter` in `stored_deleter`. Il sesto e il settimo costruttore archiviano `right.reset()` in `stored_ptr` e spostano `right.get_deleter()` in `stored_deleter`.  
   
-##  <a name="a-nameuniqueptrdtoruniqueptra--uniqueptr-uniqueptr"></a><a name="unique_ptr__dtorunique_ptr"></a>  unique_ptr ~unique_ptr  
+##  <a name="dtorunique_ptr"></a>  unique_ptr ~unique_ptr  
  Il distruttore per `unique_ptr` distribuisce un oggetto `unique_ptr`.  
   
 ```  

@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - mutex/std::mutex
+- mutex/std::mutex::mutex
+- mutex/std::mutex::lock
+- mutex/std::mutex::native_handle
+- mutex/std::mutex::try_lock
+- mutex/std::mutex::unlock
 dev_langs:
 - C++
 ms.assetid: 7999d055-f74f-4303-810f-8d3c9cde2f69
@@ -31,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: ff3e7e71c678ffc9bdead79ec56ad94f8e297a16
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: e08c7c13d1e182bc3299f11769eddb699b03ab3f
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="mutex-class-c-standard-library"></a>Classe mutex (libreria standard C++)
@@ -52,24 +58,24 @@ class mutex;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore mutex::mutex](#mutex__mutex_constructor)|Costruisce un oggetto `mutex`.|  
-|[Distruttore mutex::~mutex](#mutex___dtormutex_destructor)|Rilascia le risorse utilizzate dall'oggetto `mutex`.|  
+|[mutex](#mutex)|Costruisce un oggetto `mutex`.|  
+|[Distruttore mutex::~mutex](#dtormutex_destructor)|Rilascia le risorse utilizzate dall'oggetto `mutex`.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Metodo mutex::lock](#mutex__lock_method)|Blocca il thread chiamante finché il thread non ottiene la proprietà di `mutex`.|  
-|[Metodo mutex::native_handle](#mutex__native_handle_method)|Restituisce il tipo specifico dell'implementazione che rappresenta l'handle mutex.|  
-|[Metodo mutex::try_lock](#mutex__try_lock_method)|Tenta di ottenere proprietà di `mutex` senza bloccare.|  
-|[Metodo mutex::unlock](#mutex__unlock_method)|Rilascia la proprietà di `mutex`.|  
+|[lock](#lock)|Blocca il thread chiamante finché il thread non ottiene la proprietà di `mutex`.|  
+|[native_handle](#native_handle)|Restituisce il tipo specifico dell'implementazione che rappresenta l'handle mutex.|  
+|[try_lock](#try_lock)|Tenta di ottenere proprietà di `mutex` senza bloccare.|  
+|[unlock](#unlock)|Rilascia la proprietà di `mutex`.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** mutex  
+ **Intestazione:** \<mutex >  
   
  **Spazio dei nomi:** std  
   
-##  <a name="a-namemutexlockmethoda--mutexlock-method"></a><a name="mutex__lock_method"></a>  Metodo mutex::lock  
+##  <a name="lock"></a>mutex:: lock
  Blocca il thread chiamante finché il thread non ottiene la proprietà di `mutex`.  
   
 ```cpp  
@@ -79,14 +85,14 @@ void lock();
 ### <a name="remarks"></a>Note  
  Se il thread chiamante è già proprietario di `mutex`, il comportamento non è definito.  
   
-##  <a name="a-namemutexmutexconstructora--mutexmutex-constructor"></a><a name="mutex__mutex_constructor"></a>  Costruttore mutex::mutex  
+##  <a name="mutex"></a>  Costruttore mutex::mutex  
  Costruisce un oggetto `mutex` non bloccato.  
   
 ```cpp  
 constexpr mutex() noexcept;
 ```  
   
-##  <a name="a-namemutexdtormutexdestructora--mutexmutex-destructor"></a><a name="mutex___dtormutex_destructor"></a>  Distruttore mutex::~mutex  
+##  <a name="dtormutex_destructor"></a>  Distruttore mutex::~mutex  
  Rilascia le risorse usate dall'oggetto `mutex`.  
   
 ```cpp  
@@ -96,7 +102,7 @@ constexpr mutex() noexcept;
 ### <a name="remarks"></a>Note  
  Se l'oggetto è bloccato quando il distruttore viene eseguito, il comportamento non è definito.  
   
-##  <a name="a-namemutexnativehandlemethoda--mutexnativehandle-method"></a><a name="mutex__native_handle_method"></a>  Metodo mutex::native_handle  
+##  <a name="native_handle"></a>mutex:: native_handle
  Restituisce il tipo specifico dell'implementazione che rappresenta l'handle mutex. L'handle del mutex può essere usato in modi specifici dell'implementazione.  
   
 ```
@@ -106,7 +112,7 @@ native_handle_type native_handle();
 ### <a name="return-value"></a>Valore restituito  
  `native_handle_type` viene definito come `Concurrency::critical_section *` di cui viene eseguito il cast come `void *`.  
   
-##  <a name="a-namemutextrylockmethoda--mutextrylock-method"></a><a name="mutex__try_lock_method"></a>  Metodo mutex::try_lock  
+##  <a name="try_lock"></a>mutex::try_lock
  Tenta di ottenere proprietà di `mutex` senza bloccare.  
   
 ```cpp  
@@ -119,7 +125,7 @@ bool try_lock();
 ### <a name="remarks"></a>Note  
  Se il thread chiamante è già proprietario di `mutex`, il comportamento non è definito.  
   
-##  <a name="a-namemutexunlockmethoda--mutexunlock-method"></a><a name="mutex__unlock_method"></a>  Metodo mutex::unlock  
+##  <a name="unlock"></a>mutex:: Unlock
  Rilascia la proprietà di `mutex`.  
   
 ```cpp  

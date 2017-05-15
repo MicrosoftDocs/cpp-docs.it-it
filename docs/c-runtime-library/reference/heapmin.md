@@ -54,10 +54,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c839e372e2385928346693b0a74be0af2781882a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 4f980d2b8df9f8eb2f2337e4dd0888e63c2451ed
+ms.contentlocale: it-it
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="heapmin"></a>_heapmin
@@ -70,12 +71,12 @@ int _heapmin( void );
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- Se l'operazione riesce, `_heapmin` restituisce 0; in caso contrario, la funzione restituisce -1 e imposta `errno` su `ENOSYS`.  
+ Se l'operazione ha esito positivo, `_heapmin` restituisce 0; in caso contrario, la funzione restituisce -1 e imposta `errno` su `ENOSYS`.  
   
  Per altre informazioni su questi e su altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Note  
- La funzione `_heapmin` riduce l'heap al minimo rilasciando la memoria heap inutilizzata al sistema operativo. Se il sistema operativo non supporta `_heapmin` (ad esempio, Windows 98), la funzione restituisce -1 e imposta `errno` su `ENOSYS`.  
+ La funzione `_heapmin` riduce l'heap al minimo rilasciando la memoria heap inutilizzata al sistema operativo. Se il sistema operativo non supporta `_heapmin`(ad esempio, Windows 98), la funzione restituisce -1 e imposta `errno` a `ENOSYS`.  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -83,10 +84,7 @@ int _heapmin( void );
 |-------------|---------------------|---------------------|  
 |`_heapmin`|\<malloc.h>|\<errno.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Allocazione di memoria](../../c-runtime-library/memory-allocation.md)   

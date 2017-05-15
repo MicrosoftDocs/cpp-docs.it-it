@@ -37,10 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: e5f214501712bd8d6212f465fe82d835ccaf9028
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 37c517bf764e9a9840d549aa9f223ad0942d8c48
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="istreamiterator-class"></a>Classe istream_iterator
@@ -76,30 +77,30 @@ class istream_iterator
   
 |||  
 |-|-|  
-|[istream_iterator](#istream_iterator__istream_iterator)|Costruisce un iteratore di fine flusso come `istream_iterator` predefinito o un `istream_iterator` inizializzato nel tipo di flusso dell'iteratore da cui legge.|  
+|[istream_iterator](#istream_iterator)|Costruisce un iteratore di fine flusso come `istream_iterator` predefinito o un `istream_iterator` inizializzato nel tipo di flusso dell'iteratore da cui legge.|  
   
 ### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
-|[char_type](#istream_iterator__char_type)|Tipo che fornisce il tipo di carattere di `istream_iterator`.|  
-|[istream_type](#istream_iterator__istream_type)|Tipo che fornisce il tipo di flusso di `istream_iterator`.|  
-|[traits_type](#istream_iterator__traits_type)|Tipo che fornisce il tipo di tratti di `istream_iterator`.|  
+|[char_type](#char_type)|Tipo che fornisce il tipo di carattere di `istream_iterator`.|  
+|[istream_type](#istream_type)|Tipo che fornisce il tipo di flusso di `istream_iterator`.|  
+|[traits_type](#traits_type)|Tipo che fornisce il tipo di tratti di `istream_iterator`.|  
   
 ### <a name="operators"></a>Operatori  
   
 |||  
 |-|-|  
-|[operator*](#istream_iterator__operator_star)|L'operatore di dereferenziazione restituisce l'oggetto archiviato di tipo `Type` a cui punta `istream_iterator`.|  
-|[operator->](#istream_iterator__operator-_gt_)|Restituisce il valore di un numero, se presente.|  
-|[operator++](#istream_iterator__operator_add_add)|Estrae un oggetto incrementato dal flusso di input oppure copia tale oggetto prima di incrementarlo e restituisce la copia.|  
+|[operator*](#op_star)|L'operatore di dereferenziazione restituisce l'oggetto archiviato di tipo `Type` a cui punta `istream_iterator`.|  
+|[operator->](#operator-_gt)|Restituisce il valore di un numero, se presente.|  
+|[operator++](#op_add_add)|Estrae un oggetto incrementato dal flusso di input oppure copia tale oggetto prima di incrementarlo e restituisce la copia.|  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** \<iterator>  
   
  **Spazio dei nomi:** std  
   
-##  <a name="istream_iterator__char_type"></a>  istream_iterator::char_type  
+##  <a name="char_type"></a>  istream_iterator::char_type  
  Tipo che fornisce il tipo di carattere di `istream_iterator`.  
   
 ```
@@ -145,7 +146,7 @@ int main( )
 }  
 ```  
   
-##  <a name="istream_iterator__istream_iterator"></a>  istream_iterator::istream_iterator  
+##  <a name="istream_iterator"></a>  istream_iterator::istream_iterator  
  Costruisce un iteratore di fine flusso come `istream_iterator` predefinito o un `istream_iterator` inizializzato nel tipo di flusso dell'iteratore da cui legge.  
   
 ```
@@ -197,7 +198,7 @@ int main( )
 }  
 ```  
   
-##  <a name="istream_iterator__istream_type"></a>  istream_iterator::istream_type  
+##  <a name="istream_type"></a>  istream_iterator::istream_type  
  Tipo che fornisce il tipo di flusso di `istream_iterator`.  
   
 ```
@@ -208,9 +209,9 @@ typedef basic_istream<CharType, Traits> istream_type;
  Il tipo è un sinonimo di `basic_istream`\< **CharType**, **Traits**>.  
   
 ### <a name="example"></a>Esempio  
-  Vedere [istream_iterator](#istream_iterator__istream_iterator) per un esempio di come dichiarare e usare `istream_type`.  
+  Vedere [istream_iterator](#istream_iterator) per un esempio di come dichiarare e usare `istream_type`.  
   
-##  <a name="istream_iterator__operator_star"></a>  istream_iterator::operator*  
+##  <a name="op_star"></a>  istream_iterator::operator*  
  L'operatore di dereferenziazione restituisce l'oggetto archiviato di tipo **Type** a cui punta `istream_iterator`.  
   
 ```
@@ -252,7 +253,7 @@ int main( )
 }  
 ```  
   
-##  <a name="istream_iterator__operator-_gt_"></a>  istream_iterator::operator-&gt;  
+##  <a name="istream_iterator__operator-_gt"></a>  istream_iterator::operator-&gt;  
  Restituisce il valore di un numero, se presente.  
   
 ```
@@ -299,7 +300,7 @@ int main( )
 }  
 ```  
   
-##  <a name="istream_iterator__operator_add_add"></a>  istream_iterator::operator++  
+##  <a name="op_add_add"></a>  istream_iterator::operator++  
  Estrae un oggetto incrementato dal flusso di input oppure copia tale oggetto prima di incrementarlo e restituisce la copia.  
   
 ```
@@ -343,7 +344,7 @@ int main( )
 }  
 ```  
   
-##  <a name="istream_iterator__traits_type"></a>  istream_iterator::traits_type  
+##  <a name="traits_type"></a>  istream_iterator::traits_type  
  Tipo che fornisce il tipo di tratti di `istream_iterator`.  
   
 ```

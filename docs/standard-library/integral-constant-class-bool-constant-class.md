@@ -10,11 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - integral_constant
-- std::integral_constant
 - type_traits/std::integral_constant
 - XTR1COMMON/std::integral_constant
 - bool_constant
-- std::bool_constant
 - type_traits/std::bool_constant
 - XTR1COMMON/std::bool_constant
 dev_langs:
@@ -42,10 +40,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 8630a5c0b97b85e0dc75e8b470974bb7d223a511
-ms.openlocfilehash: 6c71c3571e19c57b13c827bbb84e347e3ff26b01
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: b64b3ef25622a61fd10bca9d49d527ff232d5c1b
+ms.contentlocale: it-it
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="integralconstant-class-boolconstant-class"></a>Classe integral_constant, classe bool_constant
@@ -109,7 +108,7 @@ integral_constant<bool, false> == false
   
 ## <a name="see-also"></a>Vedere anche  
  [<type_traits>](../standard-library/type-traits.md)   
- [Typedef false_type](../standard-library/type-traits-typedefs.md#false_type_typedef)   
- [Typedef true_type](../standard-library/type-traits-typedefs.md#true_type_typedef)
+ [false_type](../standard-library/type-traits-typedefs.md#false_type)   
+ [true_type](../standard-library/type-traits-typedefs.md#true_type)
 
 

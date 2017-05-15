@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 484ecd12490eab00c02fb4184edcaa55f346c3a8
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 436e581907e3b651716e819a9c82a24eed2e4b8e
+ms.contentlocale: it-it
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="mbstowcs-mbstowcsl"></a>mbstowcs, _mbstowcs_l
@@ -103,13 +104,13 @@ size_t _mbstowcs_l(
  Impostazioni locali da usare.  
   
 ## <a name="return-value"></a>Valore restituito  
- Se `mbstowcs` converte correttamente la stringa di origine, restituisce il numero di caratteri multibyte convertiti. Se l'argomento `wcstr` è `NULL`, la funzione restituisce le dimensioni richieste (in caratteri wide) della stringa di destinazione. Se `mbstowcs` rileva un carattere multibyte non valido, restituisce -1. Se il valore restituito è `count`, alla stringa di caratteri wide non viene aggiunta la terminazione Null.  
+ Se `mbstowcs` converte correttamente la stringa di origine, restituisce il numero di caratteri multibyte convertiti. Se l'argomento `wcstr` è `NULL`, la funzione restituisce le dimensioni richieste (in caratteri wide) della stringa di destinazione. Se `mbstowcs` rileva un carattere multibyte non valido, viene restituito -1. Se il valore restituito è `count`, alla stringa di caratteri wide non viene aggiunta la terminazione Null.  
   
 > [!IMPORTANT]
 >  Verificare che `wcstr` e `mbstr` non si sovrappongano e che `count` rispecchi correttamente il numero di caratteri multibyte da convertire.  
   
 ## <a name="remarks"></a>Note  
- La funzione `mbstowcs` converte fino a un numero massimo di caratteri multibyte pari a `count` a cui punta `mbstr` in una stringa di caratteri wide corrispondenti che dipendono dalle impostazioni locali correnti. La stringa di caratteri wide risultante viene archiviata nell'indirizzo rappresentato da `wcstr`*.* Il risultato è simile a una serie di chiamate a `mbtowc`. Se `mbstowcs` rileva il carattere Null a byte singolo ('\0') quando raggiunge `count` o prima, lo converte in un carattere Null wide (L'\0') e si arresta. Pertanto, la stringa di caratteri wide in `wcstr` termina con Null solo se viene rilevato un carattere Null durante la conversione. Se le sequenze a cui puntano `wcstr` e `mbstr` si sovrappongono, il comportamento non è definito.  
+ La funzione `mbstowcs` converte fino a un numero massimo di caratteri multibyte pari a `count` a cui punta `mbstr` in una stringa di caratteri wide corrispondenti che dipendono dalle impostazioni locali correnti. Archivia la stringa di caratteri "wide" risultante in corrispondenza dell'indirizzo rappresentato da `wcstr`. Il risultato è simile a una serie di chiamate a `mbtowc`. Se `mbstowcs` rileva il carattere Null a byte singolo ('\0') quando raggiunge `count` o prima, lo converte in un carattere Null wide (L'\0') e si arresta. Pertanto, la stringa di caratteri wide in `wcstr` termina con Null solo se viene rilevato un carattere Null durante la conversione. Se le sequenze a cui puntano `wcstr` e `mbstr` si sovrappongono, il comportamento non è definito.  
   
  Se l'argomento `wcstr` è `NULL`, `mbstowcs` restituisce il numero di caratteri wide risultanti dalla conversione, senza includere un carattere di terminazione Null. La stringa di origine deve avere terminazione Null perché venga restituito il valore corretto. Se è necessario che la stringa di caratteri wide risultante abbia terminazione Null, aggiungere un carattere di terminazione Null al valore restituito.  
   
@@ -222,9 +223,6 @@ Convert back to wide-character string:
   Characters converted: 2  
   Hex value of first 2 wide characters: 0x3042 0x3043  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Conversione dei dati](../../c-runtime-library/data-conversion.md)   

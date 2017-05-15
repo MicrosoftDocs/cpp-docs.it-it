@@ -1,61 +1,78 @@
 ---
-title: "_fgetc_nolock, _fgetwc_nolock | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_fgetc_nolock"
-  - "_fgetwc_nolock"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_fgetwc_nolock"
-  - "fgettc_nolock"
-  - "fgetwc_nolock"
-  - "_fgetc_nolock"
-  - "_fgettc_nolock"
-  - "fgetc_nolock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fgetc_nolock (funzione)"
-  - "_fgettc_nolock (funzione)"
-  - "_fgetwc_nolock (funzione)"
-  - "caratteri, lettura"
-  - "fgetc_nolock (funzione)"
-  - "fgettc_nolock (funzione)"
-  - "fgetwc_nolock (funzione)"
-  - "lettura di caratteri da flussi"
-  - "flussi, lettura di caratteri"
+title: _fgetc_nolock, _fgetwc_nolock | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _fgetc_nolock
+- _fgetwc_nolock
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _fgetwc_nolock
+- fgettc_nolock
+- fgetwc_nolock
+- _fgetc_nolock
+- _fgettc_nolock
+- fgetc_nolock
+dev_langs:
+- C++
+helpviewer_keywords:
+- fgetc_nolock function
+- fgetwc_nolock function
+- _fgetwc_nolock function
+- characters, reading
+- _fgetc_nolock function
+- streams, reading characters from
+- fgettc_nolock function
+- reading characters from streams
+- _fgettc_nolock function
 ms.assetid: fb8e7c5b-4503-493a-879e-6a1db75aa114
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# _fgetc_nolock, _fgetwc_nolock
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 9e22872f55161a78816c137ba3c4427c9efbd8cc
+ms.contentlocale: it-it
+ms.lasthandoff: 03/29/2017
 
+---
+# <a name="fgetcnolock-fgetwcnolock"></a>_fgetc_nolock, _fgetwc_nolock
 Legge un carattere da un flusso senza bloccare il thread.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 int _fgetc_nolock(   
@@ -66,32 +83,32 @@ wint_t _fgetwc_nolock(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `stream`  
  Puntatore alla struttura `FILE`.  
   
-## Valore restituito  
- Vedere[fgetc, fgetwc](../../c-runtime-library/reference/fgetc-fgetwc.md).  
+## <a name="return-value"></a>Valore restituito  
+ Vedere [fgetc, fgetwc](../../c-runtime-library/reference/fgetc-fgetwc.md).  
   
-## Note  
- `_fgetc_nolock` e `_fgetwc_nolock` sono identiche rispettivamente a `fgetc` e `fgetwc` ad eccezione del fatto che non sono protette dalle interferenze da parte di altre thread.  Potrebbero essere più veloci perché non comportano un sovraccarico che blocca altri thread.  Utilizzare queste funzioni solo in contesti thread\-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.  
+## <a name="remarks"></a>Note  
+ `_fgetc_nolock` e `_fgetwc_nolock` sono rispettivamente identiche a `fgetc` e a `fgetwc`, ad eccezione del fatto che non sono protette da interferenze da parte di altri thread. Potrebbero essere più veloci perché non comportano un sovraccarico che blocca altri thread. Utilizzare queste funzioni solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.  
   
-### Mapping di routine di testo generico  
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
-|Routine Tchar.h|\_UNICODE e \_MBCS non definiti|\_MBCS definito|\_UNICODE definito|  
-|---------------------|-------------------------------------|---------------------|------------------------|  
+|Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_fgettc_nolock`|`_fgetc_nolock`|`_fgetc_nolock`|`_fgetwc_nolock`|  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Funzione|Intestazione obbligatoria|  
-|--------------|-------------------------------|  
-|`_fgetc_nolock`|\<stdio.h\>|  
-|`_fgetwc_nolock`|\<stdio.h\> o \<wchar.h\>|  
+|--------------|---------------------|  
+|`_fgetc_nolock`|\<stdio.h>|  
+|`_fgetwc_nolock`|\<stdio.h> o \<wchar.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_fgetc_nolock.c  
@@ -127,27 +144,21 @@ int main( void )
 }  
 ```  
   
-## Input: crt\_fgetc\_nolock.txt  
+## <a name="input-crtfgetcnolocktxt"></a>Input: crt_fgetc_nolock.txt  
   
 ```  
 Line one.  
 Line two.  
 ```  
   
-### Output  
+### <a name="output"></a>Output  
   
 ```  
 Line one.  
 Line two.  
 ```  
   
-## Equivalente .NET Framework  
-  
--   [System::IO::StreamReader::Read](https://msdn.microsoft.com/en-us/library/system.io.streamreader.read.aspx)  
-  
--   [System::Console::Read](https://msdn.microsoft.com/en-us/library/system.console.read.aspx)  
-  
-## Vedere anche  
- [I\/O di flusso](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>Vedere anche  
+ [I/O di flusso](../../c-runtime-library/stream-i-o.md)   
  [fputc, fputwc](../../c-runtime-library/reference/fputc-fputwc.md)   
  [getc, getwc](../../c-runtime-library/reference/getc-getwc.md)

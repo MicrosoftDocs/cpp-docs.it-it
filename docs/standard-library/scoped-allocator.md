@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 829c6079fb2b0cff58dc6d21228500c91ec30f98
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 6372d4f2a553f8d7667d520617d969700931010c
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltscopedallocatorgt"></a>&lt;scoped_allocator&gt;
@@ -52,8 +53,8 @@ Definisce la classe modello contenitore scoped_allocator.
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/scoped-allocator-operators.md#operator_neq)|Verifica se l'oggetto scoped_allocator a sinistra dell'operatore non è uguale all'oggetto a destra.|  
-|[operator==](../standard-library/scoped-allocator-operators.md#operator_eq_eq)|Verifica se l'oggetto scoped_allocator a sinistra dell'operatore è uguale all'oggetto a destra.|  
+|[operator!=](../standard-library/scoped-allocator-operators.md#op_neq)|Verifica se l'oggetto scoped_allocator a sinistra dell'operatore non è uguale all'oggetto a destra.|  
+|[operator==](../standard-library/scoped-allocator-operators.md#op_eq_eq)|Verifica se l'oggetto scoped_allocator a sinistra dell'operatore è uguale all'oggetto a destra.|  
   
 ### <a name="classes"></a>Classi  
   

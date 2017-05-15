@@ -36,10 +36,11 @@ caps.latest.revision: 3
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: d9f3bbe8cddea347e1663d8963c4496bcf8d7319
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 23d69fc4ac64b4364c736ee6bb596d8dcfcce54a
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltfilesystemgt-enumerations"></a>Enumerazioni &lt;filesystem&gt;
@@ -50,7 +51,7 @@ Questo argomento illustra le enumerazioni nell'intestazione del file system.
   
  **Spazio nomi:** std::experimental::filesystem  
 
-##  <a name="filesystem__copy_options"></a>  copy_options
+##  <a name="copy_options"></a>  copy_options
 Enumerazione dei valori di maschera di bit che viene usata con le funzioni [copy](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) e [copy_file](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) per specificare comportamenti.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -85,7 +86,7 @@ enum class copy_options {
 |`create_hard_links`|Creare collegamenti reali, anziché copiare file.|  
   
 
-##  <a name="filesystem__directory_options"></a> directory_options
+##  <a name="directory_options"></a> directory_options
 Specifica se seguire i collegamenti simbolici alle directory o ignorarli.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -103,7 +104,7 @@ enum class directory_options {
 |`none`|Comportamento predefinito: ignorare i collegamenti simbolici a directory. L'autorizzazione negata è un errore.|  
 |`follow_directory_symlink`|Considerare i collegamenti simbolici a directory come directory effettive.|  
   
-##  <a name="filesystem__file_type"></a>  file_type
+##  <a name="file_type"></a>  file_type
 Enumerazione di tipi di file. I valori supportati sono regular e directory, not_found e unknown.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -137,7 +138,7 @@ enum class file_type {
 |`socket`|7|Rappresenta un socket nei sistemi basati su UNIX. (non supportato).|  
 |`unknown`|8|Rappresenta un file il cui stato non può essere determinato.|  
   
-##  <a name="filesystem__perms"></a>  perms
+##  <a name="perms"></a>  perms
 Flag per le autorizzazioni del file. I valori supportati sono essenzialmente "readonly" e all. Per un file readonly non è impostato alcun bit *_write. In caso contrario, è impostato il bit `all` (0x0777).  
   
 ### <a name="syntax"></a>Sintassi  

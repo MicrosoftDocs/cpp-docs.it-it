@@ -50,10 +50,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 40c56f3ebd01ac809b48c48dcda85ef8a3217be4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 210a0a2b353d691916c8f091205518bb67e375df
+ms.contentlocale: it-it
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="feholdexcept"></a>feholdexcept
@@ -65,7 +66,6 @@ Salva l'ambiente a virgola mobile corrente nell'oggetto specificato, cancella i 
 int feholdexcept(  
    fenv_t *penv  
 );  
-  
 ```  
   
 #### <a name="parameters"></a>Parametri  
@@ -73,10 +73,10 @@ int feholdexcept(
  Puntatore a un oggetto `fenv_t` per contenere una copia dell'ambiente a virgola mobile.  
   
 ## <a name="return-value"></a>Valore restituito  
- Restituisce zero solo se la funzione è in grado di attivare correttamente la gestione delle eccezioni a virgola mobile senza interruzioni.  
+ Restituisce zero se e solo se la funzione è in grado di attivare correttamente la gestione delle eccezioni a virgola mobile non significative.  
   
 ## <a name="remarks"></a>Note  
- La funzione `feholdexcept` viene usata per archiviare lo stato dell'ambiente a virgola mobile corrente nell'oggetto `fenv_t` a cui punta `penv` e per impostare l'ambiente per non interrompere l'esecuzione in corrispondenza di eccezioni a virgola mobile. Questa attività è nota come modalità senza interruzioni.  Questa modalità continua fino a quando l'ambiente viene ripristinato tramite [fesetenv](http://msdn.microsoft.com/Library/a34b2705-0bd4-452e-a30f-eea3898d8183) o [feupdateenv](../../c-runtime-library/reference/feupdateenv.md).  
+ La funzione `feholdexcept` viene usata per archiviare lo stato dell'ambiente a virgola mobile corrente nell'oggetto `fenv_t` a cui punta `penv` e per impostare l'ambiente per non interrompere l'esecuzione in corrispondenza di eccezioni a virgola mobile. Questa attività è nota come modalità senza interruzioni.  Questa modalità continua fino a quando l'ambiente viene ripristinato tramite [fesetenv](fesetenv1.md) o [feupdateenv](../../c-runtime-library/reference/feupdateenv.md).  
   
  È possibile usare questa funzione all'inizio di una subroutine che deve nascondere uno o più eccezioni a virgola mobile dal chiamante. Per segnalare un'eccezione, è possibile eliminare semplicemente le eccezioni non volute tramite [feclearexcept](../../c-runtime-library/reference/feclearexcept1.md) e quindi terminare la modalità senza interruzioni con una chiamata a `feupdateenv`.  
   
@@ -93,5 +93,5 @@ int feholdexcept(
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento alfabetico alle funzioni](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [feclearexcept](../../c-runtime-library/reference/feclearexcept1.md)   
- [fesetenv](http://msdn.microsoft.com/Library/a34b2705-0bd4-452e-a30f-eea3898d8183)   
+ [fesetenv](fesetenv1.md)   
  [feupdateenv](../../c-runtime-library/reference/feupdateenv.md)

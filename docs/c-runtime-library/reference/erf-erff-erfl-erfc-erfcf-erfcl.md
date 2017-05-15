@@ -54,10 +54,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 78c12c22f85eb9ba50b1ea5a92f6f3bb171e01a0
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 48718acb6ad8773f876251962fd4b643993c27e8
+ms.contentlocale: it-it
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf, erff, erfl, erfc, erfcf, erfcl
@@ -110,7 +111,7 @@ long double erfcl(
   
  ![Funzione di errore di x](../../c-runtime-library/reference/media/crt_erf_formula.PNG "CRT_erf_formula")  
   
- La funzione di errore di Gauss complementare è definita come 1 – erf(x). Le funzioni `erf` restituiscono un valore compreso tra -1,0 e 1,0. Non vi è restituzione di errori. Le funzioni `erfc` restituiscono un valore compreso tra 0 e 2. Se `x` è troppo grande per `erfc`, la variabile `errno` è impostata su `ERANGE`.  
+ La funzione di errore di Gauss complementare è definita come 1 - Erf (x). Le funzioni `erf` restituiscono un valore compreso tra -1,0 e 1,0. Non vi è restituzione di errori. Le funzioni `erfc` restituiscono un valore compreso tra 0 e 2. Se `x` è troppo grande per `erfc`, la variabile `errno` è impostata su `ERANGE`.  
   
  Dato che C++ consente l'overload, è possibile chiamare degli overload di `erf` e `erfc` che accettino e restituiscano i tipi `float` e `long double`. In un programma C `erf` e `erfc` accettano e restituiscono sempre un valore `double`.  
   
@@ -120,10 +121,7 @@ long double erfcl(
 |--------------|---------------------|  
 |`erf`, `erff`, `erfl`, `erfc`, `erfcf`, `erfcl`|\<math.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)

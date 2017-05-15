@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: c82ae35feadcf1f28af47d3f055e854f7bcf6a34
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 646d30d5e85c985896ee0380cac9c1630cb2ffbf
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="valuecompare-class"></a>Classe value_compare
@@ -70,7 +71,7 @@ protected:
  In Visual C++ .NET 2003 i membri dei file di intestazione [<hash_map>](../standard-library/hash-map.md) e [<hash_set>](../standard-library/hash-set.md) non si trovano più nello spazio dei nomi std, ma sono stati spostati nello spazio dei nomi stdext. Per altre informazioni, vedere [Spazio dei nomi stdext](../standard-library/stdext-namespace.md).  
   
 ## <a name="example"></a>Esempio  
- Vedere l'esempio relativo ad [hash_map::value_comp](../standard-library/hash-map-class.md#hash_map__value_comp) per indicazioni su come dichiarare e usare la classe value_compare.  
+ Vedere l'esempio relativo ad [hash_map::value_comp](../standard-library/hash-map-class.md#value_comp) per indicazioni su come dichiarare e usare la classe value_compare.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** \<hash_map>  

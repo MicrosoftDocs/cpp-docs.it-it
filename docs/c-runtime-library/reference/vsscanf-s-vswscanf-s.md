@@ -1,47 +1,64 @@
 ---
-title: "vsscanf_s, vswscanf_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "vswscanf_s"
-  - "vsscanf_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "vsscanf_s"
-  - "vswscanf_s"
-  - "_vstscanf_s"
-dev_langs: 
-  - "C++"
+title: vsscanf_s, vswscanf_s | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- vswscanf_s
+- vsscanf_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- vsscanf_s
+- vswscanf_s
+- _vstscanf_s
+dev_langs:
+- C++
 ms.assetid: 7b732e68-c6f4-4579-8917-122f5a7876e1
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# vsscanf_s, vswscanf_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 0c193b05dc7e8b1279343e729aa98ae5ed8bc153
+ms.contentlocale: it-it
+ms.lasthandoff: 03/29/2017
 
-Legge i dati formattati da una stringa.  Queste versioni di [vsscanf, vswscanf](../../c-runtime-library/reference/vsscanf-vswscanf.md) contengono i miglioramenti della sicurezza come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
+---
+# <a name="vsscanfs-vswscanfs"></a>vsscanf_s, vswscanf_s
+Legge i dati formattati da una stringa. Queste versioni di [vsscanf, vswscanf](../../c-runtime-library/reference/vsscanf-vswscanf.md) includono miglioramenti per sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 int vsscanf_s(  
@@ -56,53 +73,53 @@ int vswscanf_s(
 );   
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `buffer`  
  Dati archiviati  
   
  `format`  
- Stringa di controllo del formato.  Per ulteriori informazioni, vedere [Campi per la specifica di formato: funzioni scanf e wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).  
+ Stringa di controllo del formato. Per altre informazioni, vedere [Campi di specifica di formato: funzioni scanf e wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).  
   
  `arglist`  
  Elenco di argomenti variabili.  
   
-## Valore restituito  
- Ognuna di queste funzioni restituisce il numero di campi che vengono convertiti correttamente e assegnati; il valore restituito non include i campi che sono stati letti ma non assegnati.  Un valore restituito pari a 0 indica che nessun campo è stato assegnato.  Il valore restituito è `EOF` per un errore, o se la fine della stringa viene raggiunta prima della prima conversione.  
+## <a name="return-value"></a>Valore restituito  
+ Ognuna di queste funzioni restituisce il numero di campi che vengono convertiti e assegnati correttamente. Il valore restituito non include i campi che sono stati letti ma non assegnati. Un valore restituito pari a 0 indica che nessun campo è stato assegnato. Il valore restituito è `EOF` in caso di errore o se viene raggiunta la fine della stringa prima della prima conversione.  
   
- Se `buffer` o `format` è un `NULL` puntatore null, viene richiamato il gestore di parametro non valido, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).  Se l'esecuzione può continuare, la funzione restituisce \-1 e imposta `errno` su `EINVAL`  
+ Se `buffer` o `format` è un puntatore `NULL`, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostano `errno` su `EINVAL`  
   
- Per informazioni su questi e altri codici di errore, vedere [errno, \_doserrno, \_sys\_errlist, and \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Per informazioni su questi e altri codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Note  
- La funzione `vsscanf_s` legge i dati da `buffer` nell posizioni fornite da ogni argomento nell'elenco di argomenti `arglist`.  Gli argomenti dell'elenco di argomenti specificano i puntatori a variabili che hanno un tipo che corrisponde a un identificatore di tipo in `format`.  A differenza della versione `vsscanf`meno sicura, un parametro di dimensione del buffer è obbligatorio quando si utilizzano i caratteri di campo di tipo `c`, `C`, `s`, `S` o set di controlli di stringa racchiusi in `[]`.  La dimensione del buffer nei caratteri deve essere fornita come parametro aggiuntivo subito dopo ogni parametro del buffer che lo richiede.  
+## <a name="remarks"></a>Note  
+ La funzione `vsscanf_s` legge i dati da `buffer` nelle posizioni specificate da ogni argomento nell'elenco di argomenti `arglist`. Gli argomenti nell'elenco degli argomenti specificano i puntatori alle variabili che hanno un tipo corrispondente all'identificatore di tipo in `format`. Diversamente dalla versione meno sicura `vsscanf`, è necessario un parametro per le dimensioni del buffer quando si usano i caratteri di campo di tipo `c`, `C`, `s`, `S` o set di controllo stringa racchiusi tra `[]`. Le dimensioni del buffer in caratteri vengono passate come parametro aggiuntivo subito dopo ogni parametro del buffer che le richiede.  
   
- La dimensione del buffer include il carattere di terminazione null.  Un campo di specifica della larghezza può essere utilizzato per assicurarsi che il token che viene letto verrà inserito nel buffer.  Se non viene utilizzato alcun campo di specifica della larghezza e il token letto è troppo grande per adattarsi al buffer, in quest'ultimo non vengono scritti dati.  
+ La dimensione del buffer include il carattere di terminazione null. Potrebbe essere usato un campo di specifica della larghezza per assicurarsi che il token letto possa essere inserito nel buffer. Se non viene utilizzato alcun campo di specifica di larghezza e il token letto è troppo grande per entrare nel buffer, non vengono scritti dati nel buffer.  
   
- Per ulteriori informazioni, vedere [scanf\_s, \_scanf\_s\_l, wscanf\_s, \_wscanf\_s\_l](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) e [Caratteri di campo di tipo per scanf](../../c-runtime-library/scanf-type-field-characters.md).  
+ Per altre informazioni, vedere [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) e [Caratteri di campo di tipo per scanf](../../c-runtime-library/scanf-type-field-characters.md).  
   
 > [!NOTE]
->  Il parametro di dimensione è di tipo `unsigned`, non `size_t`.  
+>  Il parametro di dimensione è di tipo `unsigned` non `size_t`.  
   
- L'argomento `format` controlla l'interpretazione dei campi di input e ha gli stessi form e funzione dell'argomento `format` per la funzione `scanf_s`.  Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.  
+ L'argomento `format` controlla l'interpretazione dei campi di input e ha lo stesso formato e la stessa funzione dell'argomento `format` per la funzione `scanf_s`. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.  
   
- `vswscanf_s` è una versione a caratteri estesi di `vsscanf_s`; gli argomenti per `vswscanf_s` sono stringhe a caratteri estesi.  `vsscanf_s` non gestisce caratteri esadecimali multibyte.  `vswscanf_s` non gestisce i caratteri esadecimali o dell'"area di compatibilità" a larghezza intera Unicode.  Altrimenti `vswscanf_s` e `vsscanf_s` si comportano in modo identico.  
+ `vswscanf_s` è una versione a caratteri "wide" di `vsscanf_s`. Gli argomenti per `vswscanf_s` sono stringhe a caratteri "wide". `vsscanf_s` non gestisce i caratteri esadecimali multibyte. `vswscanf_s` non gestisce caratteri esadecimali a larghezza intera o caratteri nell'area di compatibilità Unicode. In caso contrario, `vswscanf_s` e `vsscanf_s` si comportano in modo identico.  
   
-### Mapping di routine su testo generico  
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
-|Routine TCHAR.H|\_UNICODE e \_MBCS non definiti|\_MBCS definito|\_UNICODE definito|  
-|---------------------|-------------------------------------|---------------------|------------------------|  
+|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_vstscanf_s`|`vsscanf_s`|`vsscanf_s`|`vswscanf_s`|  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`vsscanf_s`|\<stdio.h\>|  
-|`vswscanf_s`|\<stdio.h\> o \<wchar.h\>|  
+|-------------|---------------------|  
+|`vsscanf_s`|\<stdio.h>|  
+|`vswscanf_s`|\<stdio.h> o \<wchar.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_vsscanf_s.c  
@@ -147,17 +164,17 @@ int main( void )
 }  
 ```  
   
-  **Stringa    \= 15**  
-**Carattere \= 1**  
-**Integer:  \= 15**  
-**Real:     \= 15.000000**   
-## Equivalente .NET Framework  
- Vedere i metodi `Parse`, come [System::Double::Parse](https://msdn.microsoft.com/en-us/library/system.double.parse.aspx).  
+```Output  
+String    = 15  
+Character = 1  
+Integer:  = 15  
+Real:     = 15.000000  
+```  
   
-## Vedere anche  
- [I\/O di flusso](../../c-runtime-library/stream-i-o.md)   
- [scanf, \_scanf\_l, wscanf, \_wscanf\_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [sscanf, \_sscanf\_l, swscanf, \_swscanf\_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
- [sscanf\_s, \_sscanf\_s\_l, swscanf\_s, \_swscanf\_s\_l](../../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)   
- [sprintf, \_sprintf\_l, swprintf, \_swprintf\_l, \_\_swprintf\_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+## <a name="see-also"></a>Vedere anche  
+ [I/O di flusso](../../c-runtime-library/stream-i-o.md)   
+ [scanf, _scanf_l, wscanf, _wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
+ [sscanf, _sscanf_l, swscanf, _swscanf_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
+ [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](../../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
  [vsscanf, vswscanf](../../c-runtime-library/reference/vsscanf-vswscanf.md)

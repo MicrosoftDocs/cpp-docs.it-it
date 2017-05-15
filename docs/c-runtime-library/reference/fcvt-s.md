@@ -1,51 +1,68 @@
 ---
-title: "_fcvt_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_fcvt_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fcvt_s"
-  - "_fcvt_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fcvt_s (funzione)"
-  - "conversione virgola mobile, in stringhe"
-  - "fcvt_s (funzione)"
-  - "funzioni a virgola mobile, conversione di un numero in stringa"
+title: _fcvt_s | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _fcvt_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fcvt_s
+- _fcvt_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- fcvt_s function
+- converting floating point, to strings
+- floating-point functions, converting number to string
+- _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
 caps.latest.revision: 27
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 27
----
-# _fcvt_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 9c282757ae79367cdc2ee72b3f3ce8d0e50983fa
+ms.contentlocale: it-it
+ms.lasthandoff: 04/04/2017
 
-Converte un numero a virgola mobile in una stringa.  Si tratta di una versione di [\_fcvt](../../c-runtime-library/reference/fcvt.md) con miglioramenti della sicurezza come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
+---
+# <a name="fcvts"></a>_fcvt_s
+Converte un numero a virgola mobile in una stringa. Questa è una versione di [_fcvt](../../c-runtime-library/reference/fcvt.md) che include miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 errno_t _fcvt_s(   
@@ -66,67 +83,67 @@ errno_t _fcvt_s(
 ); // C++ only  
 ```  
   
-#### Parametri  
- \[out\] `buffer`  
- Il buffer fornito che conterrà il risultato della conversione.  
+#### <a name="parameters"></a>Parametri  
+ [out] `buffer`  
+ Buffer specificato che conterrà il risultato della conversione.  
   
- \[in\] `sizeInBytes`  
- La dimensione, in byte, del buffer.  
+ [in] `sizeInBytes`  
+ Dimensioni del buffer in byte.  
   
- \[in\] `value`  
- Numeri da convertire.  
+ [in] `value`  
+ Numero da convertire.  
   
- \[in\] `count`  
+ [in] `count`  
  Numero di cifre dopo il separatore decimale.  
   
- \[out\] `dec`  
+ [out] `dec`  
  Puntatore alla posizione del separatore decimale archiviata.  
   
- \[out\] `sign`  
+ [out] `sign`  
  Puntatore all'indicatore di segno archiviato.  
   
-## Valore restituito  
- Zero se ha esito positivo.  Il valore restituito è un codice di errore in presenza di un fallimento.  I codici di errore sono definiti in Errno.h.  Per un elenco di questi errori, vedere [errno, \_doserrno, \_sys\_errlist, and \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+## <a name="return-value"></a>Valore restituito  
+ Zero in caso di esito positivo. Il valore restituito è un codice di errore se si verifica un errore. I codici di errore sono definiti in Errno.h. Per un elenco di questi errori, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
- Nel caso di un parametro non valido, come indicato nella seguente tabella, questa funzione viene richiamata dal gestore di parametro non valido, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).  Se l'esecuzione può continuare, la funzione imposta `errno` e imposta `EINVAL` su `EINVAL`.  
+ Se uno parametro non è valido, come elencato nella tabella seguente, questa funzione richiama il gestore dei parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta `errno` su`EINVAL` e restituisce `EINVAL`.  
   
-### Condizioni di errore  
+### <a name="error-conditions"></a>Condizioni di errore  
   
-|`buffer`|`sizeInBytes`|predefinito|Conteggio|dec|sign|Restituzione|Valore in `buffer`|  
-|--------------|-------------------|-----------------|---------------|---------|----------|------------------|------------------------|  
-|`NULL`|any|any|any|any|any|`EINVAL`|Non modificato.|  
-|Non `NULL` \(punta alla memoria valida\)|\<\=0|any|any|any|any|`EINVAL`|Non modificato.|  
-|any|any|any|any|`NULL`|any|`EINVAL`|Non modificato.|  
-|any|any|any|any|any|`NULL`|`EINVAL`|Non modificato.|  
+|`buffer`|`sizeInBytes`|valore|count|dec|segno|Restituzione|Valore in `buffer`|  
+|--------------|-------------------|-----------|-----------|---------|----------|------------|-----------------------|  
+|`NULL`|qualsiasi|qualsiasi|qualsiasi|qualsiasi|qualsiasi|`EINVAL`|Non modificato.|  
+|Non `NULL` (punta alla memoria valida)|<=0|any|qualsiasi|qualsiasi|qualsiasi|`EINVAL`|Non modificato.|  
+|any|qualsiasi|qualsiasi|qualsiasi|`NULL`|qualsiasi|`EINVAL`|Non modificato.|  
+|any|qualsiasi|qualsiasi|qualsiasi|qualsiasi|`NULL`|`EINVAL`|Non modificato.|  
   
- **Problemi relativi alla sicurezza**  
+ **Problemi di sicurezza**  
   
- `_fcvt_s` potrebbe generare una violazione di accesso se `buffer` non punta alla memoria valida e non è `NULL`.  
+ `_fcvt_s` può generare una violazione di accesso se `buffer` non punta a una memoria valida e non è `NULL`.  
   
-## Note  
- La funzione di `_fcvt_s` converte un numero a virgola mobile in una stringa di caratteri terminata da null.  Il parametro `value` è il numero a virgola mobile da convertire.  `_fcvt_s` archivia le cifre di `value` come stringa e aggiunge un carattere null \("\\0"\).  Il parametro `count` specifica il numero di cifre da archiviare dopo il separatore decimale.  Le cifre in eccesso vengono arrotondati alle posizioni di `count`.  Se sono presenti meno di `count` cifre di precisione, la stringa viene completata con degli zeri.  
+## <a name="remarks"></a>Note  
+ La funzione `_fcvt_s` converte un numero a virgola mobile in una stringa di caratteri che termina con NULL. Il parametro `value` è il numero a virgola mobile da convertire. `_fcvt_s` archivia le cifre di `value` come stringa e aggiunge un carattere null ('\0'). Il parametro `count` specifica il numero di cifre da archiviare dopo il separatore decimale. Le cifre in eccesso vengono arrotondate a `count` posti. Se ci sono meno di `count` cifre, la stringa viene riempita con zeri.  
   
- Solo le cifre vengono archiviate nella stringa.  La posizione del separatore decimale e il segno di `value` possono essere ottenuti da `dec` e `sign` dopo la chiamata.  Il parametro `dec` punta ad un valore Integer; questo valore Integer fornisce la posizione del separatore decimale rispetto all'inizio della stringa.  Un valore Integer zero o negativo indica che il separatore decimale si trova a sinistra della prima cifra.  Il parametro `sign` punta ad un intero che indica il segno di `value`.  L'intero è impostato a 0 se `value` è positivo e ad un numero diverso da zero se `value` è negativo.  
+ Nella stringa vengono archiviate solo cifre. La posizione del separatore decimale e il segno di `value` possono essere ottenuti da `dec` e `sign` dopo la chiamata. Il parametro `dec` punta a un valore intero. Questo valore intero indica la posizione del separatore decimale rispetto all'inizio della stringa. Uno zero o un valore intero negativo indica che il separatore decimale si trova a sinistra della prima cifra. Il parametro `sign` punta a un numero intero che indica il segno di `value`. L'intero viene impostato su 0 se `value` è positivo e viene impostato su un numero diverso da zero se `value` è negativo.  
   
- Un buffer di lunghezza `_CVTBUFSIZE` è sufficiente per qualsiasi valore in virgola mobile.  
+ Un buffer di lunghezza `_CVTBUFSIZE` è sufficiente per qualsiasi valore a virgola mobile.  
   
- La differenza tra `_ecvt_s` e `_fcvt_s` risiede nell'interpretazione del parametro `count`.  `_ecvt_s` interpreta `count` come il numero totale di cifre contenute nella stringa di output e `_fcvt_s` interpreta c`ount` come il numero di cifre dopo il separatore decimale.  
+ La differenza tra `_ecvt_s` e `_fcvt_s` consiste nell'interpretazione del parametro `count`. `_ecvt_s`interpreta `count` come il numero totale di cifre nella stringa di output e `_fcvt_s` interpreta `count` come il numero di cifre dopo il separatore decimale.  
   
- In C\+\+, l'utilizzo di questa funzione viene semplificato da un overload del modello; l'overload può dedurre la lunghezza del buffer automaticamente, eliminando la necessità di specificare un argomento per la dimensione.  Per ulteriori informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ l'uso di questa funzione è semplificato da un overload del modello. L'overload può dedurre la lunghezza del buffer automaticamente, evitando la necessità di specificare un argomento di dimensione. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).  
   
- La versione di debug della funzione per prima cosa inserisce nel buffer il valore 0xFD.  Per disattivare questo comportamento, utilizzare [\_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
+ Le versioni di debug di questa funzione riempiono prima il buffer con 0xFD. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Funzione|Intestazione obbligatoria|Intestazione facoltativa|  
-|--------------|-------------------------------|------------------------------|  
-|`_fcvt_s`|\<stdlib.h\>|\<errno.h\>|  
+|--------------|---------------------|---------------------|  
+|`_fcvt_s`|\<stdlib.h>|\<errno.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
   
- **Librerie:** Tutte le versioni di [Funzionalità libreria CRT](../../c-runtime-library/crt-library-features.md).  
+ **Librerie:** tutte le versioni delle [funzionalità della libreria CRT](../../c-runtime-library/crt-library-features.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // fcvt_s.c  
@@ -155,14 +172,14 @@ int main()
 }  
 ```  
   
-  **Valore convertito: 120000**   
-## Equivalente .NET Framework  
- <xref:System.Convert.ToString%2A>  
+```Output  
+Converted value: 120000  
+```  
   
-## Vedere anche  
- [Conversione dei dati](../../c-runtime-library/data-conversion.md)   
- [Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)   
- [atof, \_atof\_l, \_wtof, \_wtof\_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
- [\_ecvt\_s](../../c-runtime-library/reference/ecvt-s.md)   
- [\_gcvt\_s](../../c-runtime-library/reference/gcvt-s.md)   
- [\_fcvt](../../c-runtime-library/reference/fcvt.md)
+## <a name="see-also"></a>Vedere anche  
+ [Data Conversion](../../c-runtime-library/data-conversion.md)  (Conversione dei dati)  
+ [Floating-Point Support](../../c-runtime-library/floating-point-support.md)  (Supporto delle funzioni a virgola mobile)  
+ [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
+ [_ecvt_s](../../c-runtime-library/reference/ecvt-s.md)   
+ [_gcvt_s](../../c-runtime-library/reference/gcvt-s.md)   
+ [_fcvt](../../c-runtime-library/reference/fcvt.md)

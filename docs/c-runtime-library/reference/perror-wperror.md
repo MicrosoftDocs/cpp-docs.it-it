@@ -57,10 +57,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: b826a1539581aee3d58f49f68c5ba04139a14328
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: f263a40a56c7f94e022a8410724a7b2f3379e5d0
+ms.contentlocale: it-it
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="perror-wperror"></a>perror, _wperror
@@ -83,7 +84,7 @@ void _wperror(
  Messaggio stringa da stampare.  
   
 ## <a name="remarks"></a>Note  
- La funzione `perror` stampa un messaggio di errore su `stderr`. `_wperror` è una versione a caratteri wide di **_perror`_wperror`. L'argomento ** per `string` è una stringa di caratteri wide. In caso contrario, `_wperror` e **_perror** si comportano in modo identico.  
+ La funzione `perror` stampa un messaggio di errore su `stderr`. `_wperror` è una versione a caratteri wide di **_perror`_wperror`. L'argomento**  per `string` è una stringa di caratteri wide. In caso contrario, `_wperror` e **_perror** si comportano in modo identico.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
@@ -160,9 +161,6 @@ perror says open failed: No such file or directory
 strerror says open failed: No such file or directory  
 _strerror says open failed: No such file or directory  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Controllo di processi e ambiente](../../c-runtime-library/process-and-environment-control.md)   

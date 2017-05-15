@@ -1,97 +1,114 @@
 ---
-title: "Classe slice_array | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "slice_array"
-  - "valarray/std::slice_array"
-  - "std.slice_array"
-  - "std::slice_array"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "slice_array (classe)"
+title: Classe slice_array | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- slice_array
+- valarray/std::slice_array
+dev_langs:
+- C++
+helpviewer_keywords:
+- slice_array class
 ms.assetid: a182d5f7-f35c-4e76-86f2-b5ac64ddc846
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# Classe slice_array
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 97770a32fe661daf972753384d69b47badbcb7aa
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
-Una classe modello interna e ausiliaria che supporta affettano gli oggetti immettendo le operazioni tra matrici di sottoinsieme definiti dalla sezione di un valarray.  
+---
+# <a name="slicearray-class"></a>Classe slice_array
+Classe modello ausiliaria interna che supporta oggetti sezione fornendo operazioni tra matrici di subset definite dalla sezione di un oggetto valarray.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-template<class Type>  
-   class slice_array : public slice {  
+template <class Type>  
+class slice_array : public slice {  
 public:  
-   typedef Type value_type;  
-   void operator=(  
-      const valarray<Type>& x  
-   ) const;  
-   void operator=(  
-      const Type& x  
-   ) const;  
-   void operator*=(  
-      const valarray<Type>& x  
-   ) const;  
-   void operator/=(  
-      const valarray<Type>& x  
-   ) const;  
-   void operator%=(  
-      const valarray<Type>& x  
-   ) const;  
-   void operator+=(  
-      const valarray<Type>& x  
-   ) const;  
-   void operator-=(  
-      const valarray<Type>& x  
-   ) const;  
-   void operator^=(  
-      const valarray<Type>& x  
-   ) const;  
-   void operator&=(  
-      const valarray<Type>& x  
-   ) const;  
-   void operator|=(  
-      const valarray<Type>& x  
-   ) const;  
-   void operator<<=(  
-      const valarray<Type>& x  
-   ) const;  
-   void operator>>=(  
-      const valarray<Type>& x  
-   ) const;  
+    typedef Type value_type;  
+    void operator=(const valarray<Type>& x) const;
+
+ 
+    void operator=(const Type& x) const;
+
+ 
+    void operator*=(const valarray<Type>& x) const;
+
+ 
+    void operator/=(const valarray<Type>& x) const;
+
+ 
+    void operator%=(const valarray<Type>& x) const;
+
+ 
+    void operator+=(const valarray<Type>& x) const;
+
+ 
+    void operator-=(const valarray<Type>& x) const;
+
+ 
+    void operator^=(const valarray<Type>& x) const;
+
+ 
+    void operator&=(const valarray<Type>& x) const;
+
+ 
+    void operator|=(const valarray<Type>& x) const;
+
+ 
+    void operator<<=(const valarray<Type>& x) const;
+
+ 
+    void operator>>=(const valarray<Type>& x) const;
+
+ 
 // The rest is private or implementation defined  
 }  
 ```  
   
-## Note  
- La classe descrive un oggetto che contiene un riferimento a un oggetto di classe [valarray](../standard-library/valarray-class.md)**\<Tipo\>**, con un oggetto di classe [sezione](../standard-library/slice-class.md), che descrive la sequenza di elementi choose dall'oggetto di **valarray\<Type\>**.  
+## <a name="remarks"></a>Note  
+ La classe descrive un oggetto che archivia un riferimento a un oggetto della classe [valarray](../standard-library/valarray-class.md)**\<Type>**, insieme a un oggetto della classe [slice](../standard-library/slice-class.md) che descrive la sequenza di elementi da selezionare dall'oggetto **valarray\<Type>**.  
   
- La classe modello viene creata indirettamente da determinate operazioni valarray e non può essere utilizzato direttamente nel programma.  Una classe modello interna e ausiliaria utilizzata dall'operatore di indice della sezione:  
+ La classe modello viene creata indirettamente da alcune operazioni valarray e non può essere usata direttamente nel programma. Una classe modello ausiliaria interna viene usata dall'operatore di indice inferiore di sezione:  
   
- `slice_array`\<**Type**\>`valarray`\<**Type**::`operator[]` \(`slice`\).  
+ `slice_array`\< **Type**> `valarray`< **Type**:: `operator[]` ( `slice`).  
   
- Si costruisce un oggetto di **slice\_array\<Type\>** solo scrive un'espressione del tipo [va SL &#91;&#93;](../Topic/valarray::operator.md), per una sezione **sl** di **va**valarray.  Le funzioni membro delle classi slice\_array quindi si comportano come le firme della funzione corrispondenti definite per **valarray\<Type\>**, ma solo la sequenza di elementi selezionati viene modificata.  La sequenza controllata da slice\_array è definita da tre parametri del costruttore della sezione, indice del primo elemento nella sezione, il numero di elementi e della distanza tra gli elementi.  Un slice\_array taglia da **va** valarray dichiarato da **va**\[`slice`\(2, 5, 3\)\] seleziona gli elementi con gli indici 2, 5, 8, 11 e 14 per **va**.  Gli indici devono essere validi per la routine siano validi.  
+ Si costruisce un oggetto **slice_array\<Type>** solo scrivendo un'espressione nel formato [va&#91;sl&#93;](../standard-library/valarray-class.md#op_at), per una sezione **sl** di valarray **va**. Le funzioni membro della classe slice_array si comportano quindi come le firme di funzione corrispondenti definite per **valarray\<Type>**, ad eccezione del fatto che è interessata solo la sequenza degli elementi selezionati. La sequenza controllata dall'oggetto slice_array è definita dai tre parametri del costruttore di sezione, ovvero l'indice del primo elemento della sezione, il numero di elementi e la distanza tra questi ultimi. Un oggetto slice_array sottratto da valarray **va** dichiarato da **va**[ `slice`(2, 5, 3)] seleziona da **va** elementi con indici 2, 5, 8, 11 e 14. Affinché la procedura sia valida, è necessario che gli indici siano validi.  
   
-## Esempio  
- Vedere l'esempio relativo [slice::slice](../Topic/slice::slice.md) per un esempio di come dichiarare e utilizzare uno slice\_array.  
+## <a name="example"></a>Esempio  
+ Per un esempio di come dichiarare e usare un oggetto slice_array, vedere l'esempio relativo a [slice::slice](../standard-library/slice-class.md#slice).  
   
-## Requisiti  
- **Header:** \<valarray\>  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<valarray>  
   
  **Spazio dei nomi:** std  
   
-## Vedere anche  
- [Sicurezza dei thread nella libreria standard C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>Vedere anche  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md) (Thread safety nella libreria standard C++)
+
+

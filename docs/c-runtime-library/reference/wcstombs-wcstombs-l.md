@@ -56,10 +56,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: dead533ee11db7c40faa7d3611b30c6a6159ee50
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 200337a53155b27b76a944d025c8fb013c29c4e6
+ms.contentlocale: it-it
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="wcstombs-wcstombsl"></a>wcstombs, _wcstombs_l
@@ -108,7 +109,7 @@ size_t _wcstombs_l(
  Impostazioni locali da usare.  
   
 ## <a name="return-value"></a>Valore restituito  
- Se `wcstombs` converte correttamente la stringa multibyte, restituisce il numero di byte scritti nella stringa di output multibyte, escluso il carattere `NULL` di terminazione (se presente). Se l'argomento `mbstr` è `NULL`, `wcstombs` restituisce le dimensioni necessarie in byte della stringa di destinazione. Se `wcstombs` rileva un carattere wide che non può convertire in carattere multibyte, restituisce il cast -1 del tipo `size_t` e imposta `errno` su `EILSEQ`.  
+ Se `wcstombs` converte correttamente la stringa multibyte, restituisce il numero di byte scritti nella stringa di output multibyte, escluso il carattere `NULL` di terminazione (se presente). Se l'argomento `mbstr` è `NULL`, `wcstombs` restituisce le dimensioni necessarie in byte della stringa di destinazione. Se `wcstombs` rileva un carattere "wide" non è possibile convertire un carattere multibyte, restituisce -1 cast al tipo `size_t` e imposta `errno` a `EILSEQ`.  
   
 ## <a name="remarks"></a>Note  
  La funzione `wcstombs` converte la stringa di caratteri wide a cui punta `wcstr` nei caratteri multibyte corrispondenti e archivia il risultato nella matrice `mbstr`. Il parametro `count` indica il numero massimo di byte che possono essere archiviati nella stringa di output multibyte, ovvero le dimensioni di `mbstr`. In generale, non è possibile sapere quanti byte saranno necessari durante la conversione di stringa di caratteri wide. Alcuni caratteri wide richiederanno un solo byte nella stringa di output, altri due. Se sono presenti due byte nella stringa di output multibyte per ogni carattere wide nella stringa di input (incluso il carattere wide `NULL`), lo spazio disponibile sarà sicuramente sufficiente per il risultato.  
@@ -117,7 +118,7 @@ size_t _wcstombs_l(
   
  Se l'argomento `mbstr` è `NULL`, `wcstombs` restituisce le dimensioni necessarie in byte della stringa di destinazione.  
   
- `wcstombs` convalida i propri parametri. Se `wcstr` è `NULL` o `count` è maggiore di `INT_MAX`, questa funzione richiama il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta `errno` su `EINVAL` e restituisce -1.  
+ `wcstombs` convalida i propri parametri. Se `wcstr` è `NULL`, o se `count` è maggiore di `INT_MAX`, questa funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, la funzione imposta `errno` su `EINVAL` e restituisce -1.  
   
  `wcstombs` usa le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. La funzione `_wcstombs_l` è identica, ma usa le impostazioni locali passate. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
   
@@ -172,9 +173,6 @@ Convert wide-character string:
    Characters converted: 13  
     Multibyte character: Hello, world.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Conversione dei dati](../../c-runtime-library/data-conversion.md)   

@@ -114,10 +114,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d8611402652268e0a85170a36355619e5c7335ac
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: ca0ae546af28c342db2e452bec432ced0437738a
+ms.contentlocale: it-it
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="rpt-rptf-rptw-rptfw-macros"></a>_RPT, _RPTF, _RPTW, _RPTFW Macros
@@ -162,7 +163,7 @@ _RPTFWn(
  Argomenti di sostituzione usati da `format`.  
   
 ## <a name="remarks"></a>Note  
- Tutte queste macro accettano i parametri `reportType` e `format`. Potrebbero anche accettare fino a quattro argomenti aggiuntivi, indicati dal numero aggiunto al nome della macro. Ad esempio, `_RPT0` e `_RPTF0` non accettano altri argomenti, `_RPT1` e `_RPTF1` accettano `arg1`, `_RPT2` e `_RPTF2` accettano `arg1` e `arg2` e così via.  
+ Eseguire tutte le macro di `reportType` e `format` parametri. Potrebbero anche accettare fino a quattro argomenti aggiuntivi, indicati dal numero aggiunto al nome della macro. Ad esempio, `_RPT0` e `_RPTF0` non accettano altri argomenti, `_RPT1` e `_RPTF1` accettano `arg1`, `_RPT2` e `_RPTF2` accettano `arg1` e `arg2` e così via.  
   
  Le macro `_RPT` e `_RPTF` sono simili alla funzione [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md), perché possono essere usate per tenere traccia dello stato di un'applicazione durante il processo di debug. Queste macro sono tuttavia più flessibili di `printf`, perché non devono essere racchiuse in istruzioni `#ifdef` per evitare che vengano chiamate in una compilazione della versione finale di un'applicazione. Questa flessibilità si ottiene usando la macro[_DEBUG](../../c-runtime-library/debug.md). Le macro `_RPT` e `_RPTF` sono disponibili solo quando è definito i flag `_DEBUG`. Quando `_DEBUG` non viene definito, le chiamate a queste macro vengono rimosse durante la pre-elaborazione.  
   
@@ -202,9 +203,6 @@ _RPTFWn(
   
 ## <a name="example"></a>Esempio  
  Vedere l'esempio nell'argomento [_ASSERT](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Routine di debug](../../c-runtime-library/debug-routines.md)

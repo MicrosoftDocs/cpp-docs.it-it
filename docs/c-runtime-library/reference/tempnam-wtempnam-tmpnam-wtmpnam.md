@@ -67,10 +67,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e4f0eff8758694e97bfb310f9cfa650cb28cefa4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 0600d44b2b87ed3bb56e7d1c64fffd762e77aff2
+ms.contentlocale: it-it
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="tempnam-wtempnam-tmpnam-wtmpnam"></a>_tempnam, _wtempnam, tmpnam, _wtmpnam
@@ -106,7 +107,7 @@ wchar_t *_wtmpnam(
  Puntatore che conterrà il nome generato e sarà identico a quello restituito dalla funzione. Questo è un modo pratico per salvare il nome generato.  
   
 ## <a name="return-value"></a>Valore restituito  
- Ognuna di queste funzioni restituisce un puntatore al nome generato o `NULL` se si verifica un errore. Può verificarsi un errore se si tentano più di `TMP_MAX` chiamate (vedere STDIO.H) con `tmpnam` oppure se si usa `_tempnam` e il nome di directory specificato nella variabile di ambiente TMP e nel parametro `dir` non è valido.  
+ Ognuna di queste funzioni restituisce un puntatore al nome generato o `NULL` se si verifica un errore. Errore può verificarsi se si tenta più di `TMP_MAX` (vedere STDIO. H) chiamate con `tmpnam` o se si utilizza `_tempnam` ed è presente un nome di directory non valido specificato nella variabile di ambiente TMP e nel `dir` parametro.  
   
 > [!NOTE]
 >  I puntatori restituiti da `tmpnam` e `_wtmpnam` puntano a buffer statici interni. Non chiamare [free](../../c-runtime-library/reference/free.md) per deallocare questi puntatori. È necessario chiamare `free` per i puntatori allocati da `_tempnam` e `_wtempnam`.  
@@ -192,9 +193,6 @@ int main( void )
 \s1gk. is safe to use as a temporary file.  
 C:\DOCUME~1\user\LOCALS~1\Temp\2\stq2 is safe to use as a temporary file.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
 ## <a name="see-also"></a>Vedere anche  
  [I/O di flusso](../../c-runtime-library/stream-i-o.md)   

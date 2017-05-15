@@ -1,50 +1,67 @@
 ---
-title: "_chsize_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_chsize_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "chsize_s"
-  - "_chsize_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_chsize_s (funzione)"
-  - "chsize_s (funzione)"
-  - "file [C++], modifica delle dimensioni"
+title: _chsize_s | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _chsize_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- chsize_s
+- _chsize_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- files [C++], changing size
+- chsize_s function
+- _chsize_s function
 ms.assetid: d88d2e94-6e3b-42a5-8631-16ac4d82fa38
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# _chsize_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: eb8292d70a77a5901c710349d6912e46cfda8f63
+ms.contentlocale: it-it
+ms.lasthandoff: 03/29/2017
 
-Cambia la dimensione di un file.  Si tratta di una versione di [\_chsize](../../c-runtime-library/reference/chsize.md) con miglioramenti di sicurezza come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
+---
+# <a name="chsizes"></a>_chsize_s
+Modifica la dimensione di un file. Questa è una versione di [_chsize](../../c-runtime-library/reference/chsize.md) che include miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 errno_t _chsize_s(   
@@ -53,42 +70,36 @@ errno_t _chsize_s(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `fd`  
- Il descrittore del file che fa riferimento a un file aperto.  
+ Descrittore del file che fa riferimento a un file aperto.  
   
  `size`  
- Nuova lunghezza del file in byte.  
+ Nuova lunghezza, in byte, del file.  
   
-## Valore restituito  
- `_chsize_s` restituisce il valore 0 se le dimensioni del file vengono correttamente modificate.  Un valore diverso da zero indica un errore: il valore restituito è `EACCES` se il file specificato è bloccato all'accesso, `EBADF` se il file specificato è di sola lettura o il descrittore non è valido, `ENOSPC` se non c'è più spazio nel dispositivo, o `EINVAL` se la dimensione è minore di zero.  `errno` è impostato sullo stesso valore.  
+## <a name="return-value"></a>Valore restituito  
+ `_chsize_s` restituisce il valore 0 se la dimensione del file viene modificata. Un valore restituito diverso da zero indica un errore: il valore restituito è `EACCES` se il file specificato è bloccato per impedire l'accesso, `EBADF` se il file specificato è di sola lettura o il descrittore non è valido, `ENOSPC` se non è rimasto spazio nel dispositivo o `EINVAL` se la dimensione è minore di zero. `errno` è impostata sullo stesso valore.  
   
- Per ulteriori informazioni su questi e altri codici restituiti, vedere [\_doserrno, errno, \_sys\_errlist, e \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Note  
- La funzione `_chsize_s` estende o tronca il file associato con `fd` alla lunghezza specificata da `size`.  Il file deve essere aperto in una modalità che consente di scrivere.  I caratteri null \('\\0'\) vengono aggiunti se il file viene esteso.  Se il file viene troncato, tutti i dati dalla fine del file ridotto alla lunghezza originale del file verranno persi.  
+## <a name="remarks"></a>Note  
+ La funzione `_chsize_s` estende o tronca il file associato a `fd` in base alla lunghezza specificata da `size`. Il file deve essere aperto in una modalità che consente la scrittura. Se il file viene esteso, vengono aggiunti caratteri null ("\0"). Se il file viene troncato, si perderanno tutti i dati a partire dalla fine del file abbreviato fino alla fine del file originale.  
   
- `_chsize_s` accetta un intero a 64 bit come la dimensione del file e quindi può gestire dimensioni del file maggiori di 4 GB.  `_chsize` è limitato alle dimensioni dei file a 32 bit.  
+ `_chsize_s` accetta un valore Integer a 64 bit come dimensione del file ed è quindi in grado di gestire file di dimensioni superiori a 4 GB. `_chsize` è limitata alle dimensioni dei file a 32 bit.  
   
- Questa funzione convalida i parametri.  Se `fd` non è un descrittore di file valido o la dimensione è minore di zero, il gestore di parametro non valido viene invocato, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).  
+ Questa funzione convalida i relativi parametri. Se `fd` non è un descrittore di file valido o la dimensione è inferiore a zero, viene richiamato il gestore di parametri non validi come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|Intestazione facoltativa|  
-|-------------|-------------------------------|------------------------------|  
-|`_chsize_s`|\<io.h\>|\<errno.h\>|  
+|-------------|---------------------|---------------------|  
+|`_chsize_s`|\<io.h>|\<errno.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
   
-## Equivalente .NET Framework  
-  
--   [System::IO::Stream::SetLength](https://msdn.microsoft.com/en-us/library/system.io.stream.setlength.aspx)  
-  
--   [System::IO::FileStream::SetLength](https://msdn.microsoft.com/en-us/library/system.io.filestream.setlength.aspx)  
-  
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Gestione di file](../../c-runtime-library/file-handling.md)   
- [\_chsize](../../c-runtime-library/reference/chsize.md)   
- [\_close](../../c-runtime-library/reference/close.md)   
- [\_creat, \_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [\_open, \_wopen](../../c-runtime-library/reference/open-wopen.md)
+ [_chsize](../../c-runtime-library/reference/chsize.md)   
+ [_close](../../c-runtime-library/reference/close.md)   
+ [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
+ [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)

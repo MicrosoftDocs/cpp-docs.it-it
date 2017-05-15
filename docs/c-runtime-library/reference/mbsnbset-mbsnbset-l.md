@@ -59,10 +59,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: a9db88e2797e5828a007c21fd7f7fdde135ff4bf
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 51b82c6a60eb8024c267e07e1327c8afd7928eea
+ms.contentlocale: it-it
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="mbsnbset-mbsnbsetl"></a>_mbsnbset, _mbsnbset_l
@@ -104,9 +105,9 @@ unsigned char *_mbsnbset_l(
  `_mbsnbset` restituisce un puntatore alla stringa modificata.  
   
 ## <a name="remarks"></a>Note  
- Le funzioni `_mbsnbset` e `_mbsnbset_l` impostano al massimo i primi `count` byte di `str` su `c`. Se `count` è maggiore della lunghezza di `str`, la lunghezza di `str` viene usata invece di `count`. Se `c` è un carattere multibyte e non può essere interamente impostato nell'ultimo byte specificato da `count`, l'ultimo byte viene riempito con un carattere vuoto. `_mbsnbset` e `_mbsnbset_l` non inseriscono un Null di terminazione alla fine di `str`.  
+ Le funzioni `_mbsnbset` e `_mbsnbset_l` impostano al massimo i primi `count` byte di `str` su `c`. Se `count` è maggiore della lunghezza di `str`, la lunghezza di `str` viene usata invece di `count`. Se `c` è un carattere multibyte e non può essere interamente impostato nell'ultimo byte specificato da `count`, l'ultimo byte viene riempito con un carattere vuoto. `_mbsnbset`e `_mbsnbset_l` non viene inserita una terminazione null alla fine di `str`.  
   
- `_mbsnbset` e `_mbsnbset_l` sono simili a `_mbsnset`, ma impostano `count` byte invece di `count` caratteri di `c`.  
+ `_mbsnbset`e `_mbsnbset_l` è simile a `_mbsnset`, ad eccezione del fatto che imposta `count` byte anziché `count` caratteri `c`.  
   
  Se `str` è `NULL` o `count` è zero, questa funzione genera un'eccezione di parametro non valido, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, `errno` viene impostato su `EINVAL` e la funzione restituisce `NULL`. Inoltre, se `c` non è un carattere multibyte valido, `errno` viene impostato su `EINVAL` e in alternativa viene usato uno spazio.  
   
@@ -155,9 +156,6 @@ int main( void )
 Before: This is a test  
 After:  **** is a test  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md)   

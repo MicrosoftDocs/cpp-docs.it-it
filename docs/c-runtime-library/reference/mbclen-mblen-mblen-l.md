@@ -63,10 +63,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c0a3a001234439314f682984b01496aff960b366
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: f8e2a1bf9282298d3d41183c0d335e49e89f1b42
+ms.contentlocale: it-it
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="mbclen-mblen-mblenl"></a>_mbclen, mblen, _mblen_l
@@ -106,7 +107,7 @@ int _mblen_l(
  Impostazioni locali da usare.  
   
 ## <a name="return-value"></a>Valore restituito  
- `_mbclen` restituisce 1 o 2, a seconda che il carattere multibyte `c` abbia una lunghezza di 1 o 2 byte. Non è prevista la restituzioni di errori per `_mbclen`. Se `mbstr` non è `NULL`, `mblen` restituisce la lunghezza in byte, del carattere multibyte. Se `mbstr` è `NULL` o punta al carattere Null del carattere wide, `mblen` restituisce 0. Se l'oggetto a cui punta `mbstr` non forma un carattere multibyte valido entro i primi `count` caratteri, `mblen` restituisce -1.  
+ `_mbclen` restituisce 1 o 2, a seconda che il carattere multibyte `c` abbia una lunghezza di 1 o 2 byte. Non è prevista la restituzioni di errori per `_mbclen`. Se `mbstr` non è `NULL`, `mblen` restituisce la lunghezza in byte, del carattere multibyte. Se `mbstr` è `NULL` o punta al carattere Null del carattere wide, `mblen` restituisce 0. Se l'oggetto che `mbstr` punti a non formano un carattere multibyte valido all'interno della prima `count` caratteri, `mblen` restituisce -1.  
   
 ## <a name="remarks"></a>Note  
  La funzione `_mbclen` restituisce la lunghezza in byte del carattere multibyte `c`. Se `c` non punta al byte di apertura di un carattere multibyte in base a quanto determinato da una chiamata implicita a `_ismbblead`, il risultato di `_mbclen` è imprevedibile.  
@@ -171,9 +172,6 @@ Convert wide character to multibyte character:
 Length in bytes of multibyte character 61: 1  
 Length in bytes of NULL multibyte character 0: 0  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classificazione di caratteri](../../c-runtime-library/character-classification.md)   

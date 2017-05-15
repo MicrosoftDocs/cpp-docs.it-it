@@ -6,26 +6,28 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: []
 ms.assetid: 8a53562c-90ab-4eb3-85d3-ada5259d90b0
 caps.latest.revision: 8
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: c2d2d523f8085db02336be1efc80f34b5cf62b27
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: aa730db3fd5e9a3ea4919bb255d49532f7440981
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltvalarraygt-operators"></a>Operatori &lt;valarray&gt;
 ||||  
 |-|-|-|  
-|[operator!=](#operator_neq)|[operator%](#operator_mod)|[operator&amp;](#operator_amp_)|  
-|[operator&amp;&amp;](#operator_amp__amp_)|[operator&gt;](#operator_gt_)|[operator&gt;&gt;](#operator_gt__gt_)|  
-|[operator&gt;=](#operator_gt__eq)|[operator&lt;](#operator_lt_)|[operator&lt;&lt;](#operator_lt__lt_)|  
-|[operator&lt;=](#operator_lt__eq)|[operator*](#operator_star)|[operator+](#operator_add)|  
-|[operator-](#operator-)|[operator/](#operator_)|[operator==](#operator_eq_eq)|  
-|[operator^](#operator_xor)|[operator|](#operator_or)|[operator||](#operator_lor)|  
+|[operator!=](#op_neq)|[operator%](#op_mod)|[operator&amp;](#op_amp)|  
+|[operator&amp;&amp;](#op_amp_amp)|[operator&gt;](#op_gt)|[operator&gt;&gt;](#op_gt_gt)|  
+|[operator&gt;=](#op_gt_eq)|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|  
+|[operator&lt;=](#op_lt_eq)|[operator*](#op_star)|[operator+](#op_add)|  
+|[operator-](#operator-)|[operator/](#op_div)|[operator==](#op_eq_eq)|  
+|[operator^](#op_xor)|[operator|](#op_or)|[operator||](#op_lor)|  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  operator!=  
+##  <a name="op_neq"></a>  operator!=  
  Verifica se gli elementi corrispondenti di due oggetti valarray di dimensioni equivalenti sono diversi o se tutti gli elementi di un oggetto valarray sono diversi da un valore specificato.  
   
 ```  
@@ -49,10 +51,10 @@ operator!=(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` left`  
+ `left`  
  Primo dei due oggetti valarray i cui elementi devono essere testati per verificare la disuguaglianza.  
   
- ` right`  
+ `right`  
  Secondo dei due oggetti valarray i cui elementi devono essere testati per verificare la disuguaglianza.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -63,11 +65,11 @@ operator!=(
 - **false** se gli elementi corrispondenti non sono disuguali.  
   
 ### <a name="remarks"></a>Note  
- Il primo operatore modello restituisce un oggetto di classe [valarray\<bool>](../standard-library/valarray-bool-class.md), di cui ogni elemento `I` è ` left`[ `I`] != ` right`[ `I`].  
+ Il primo operatore modello restituisce un oggetto della classe [valarray\<bool >](../standard-library/valarray-bool-class.md), tutti gli elementi il cui `I` è `left[I] != right[I]`.  
   
- Il secondo operatore modello viene archiviato nell'elemento *I  left*[ `I`] != _ *Right*.  
+ Il secondo operatore modello vengono memorizzate nell'elemento `I` `left[I] != right`.  
   
- Il terzo operatore modello viene archiviato nell'elemento *I  left* != ` right`[ `I`].  
+ Il terzo operatore modello vengono memorizzate nell'elemento `I` `left != right[I]`.  
   
 ### <a name="example"></a>Esempio  
   
@@ -116,7 +118,7 @@ The element-by-element result of the not equal comparison test is the
 *\  
 ```  
   
-##  <a name="a-nameoperatormoda--operator"></a><a name="operator_mod"></a>  operator%  
+##  <a name="op_mod"></a>  operator%  
  Ottiene il resto della divisione degli elementi corrispondenti di due oggetti valarray di dimensioni equivalenti, della divisione di un oggetto valarray per un valore specificato oppure della divisione di un valore specificato per un oggetto valarray.  
   
 ```  
@@ -140,14 +142,14 @@ operator%(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` left`  
+ `left`  
  Valore di oggetto valarray usato come dividendo in cui deve essere diviso un altro valore o un altro oggetto valarray.  
   
- ` right`  
+ `right`  
  Valore oppure oggetto valarray usato come divisore che divide un altro valore oppure un altro oggetto valarray.  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto valarray i cui elementi sono i resti, elemento per elemento, di ` left` diviso per ` right.`  
+ Un oggetto valarray i cui elementi sono l'elemento per elemento resti di `left` diviso `right`.  
   
 ### <a name="example"></a>Esempio  
   
@@ -196,7 +198,7 @@ The remainders from the element-by-element division is the
 *\  
 ```  
   
-##  <a name="a-nameoperatorampa--operatoramp"></a><a name="operator_amp_"></a>  operator&amp;  
+##  <a name="op_amp"></a>  operator&amp;  
  Ottiene l'operatore **AND** bit per bit tra gli elementi corrispondenti di due oggetti valarray di dimensioni equivalenti o tra un oggetto valarray e un valore specificato del tipo di elemento.  
   
 ```  
@@ -220,19 +222,19 @@ operator&(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` left`  
+ `left`  
  Primo dei due oggetti valarray i cui rispettivi elementi devono essere combinati con l'operatore **AND** bit per bit oppure valore specificato del tipo di elemento da combinare bit per bit con ogni elemento di un oggetto valarray.  
   
- ` right`  
+ `right`  
  Secondo dei due oggetti valarray i cui rispettivi elementi devono essere combinati con l'operatore **AND** bit per bit oppure valore specificato del tipo di elemento da combinare bit per bit con ogni elemento di un oggetto valarray.  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto valarray i cui elementi sono la combinazione elemento per elemento dell'operazione AND bit per bit di ` left` e ` right.`  
+ Un oggetto valarray i cui elementi sono la combinazione di elemento dell'operazione AND bit per bit di `left` e `right`.  
   
 ### <a name="remarks"></a>Note  
  È possibile usare un'operazione bit per bit solo per modificare i bit in tipi di dati `char` e `int` e varianti e non per tipi di dati **float**, **double**, **longdouble**, `void``bool` o per altri tipi di dati più complessi.  
   
- L'operatore **AND** bit per bit supporta la stessa tabella di verità dell'operatore **AND** logico, ma si applica al tipo di dati a livello dei singoli bit. L'operatore [operator&&](../standard-library/valarray-operators.md#operator_amp__amp_) si applica a livello di elemento, conteggiando tutti i valori diversi da zero come true e il risultato è un oggetto valarray di valori booleani. L'operatore **ANDoperator&** bit per bit invece può determinare un oggetto valarray di valori diversi da 0 o 1, a seconda del risultato dell'operazione bit per bit.  
+ L'operatore **AND** bit per bit supporta la stessa tabella di verità dell'operatore **AND** logico, ma si applica al tipo di dati a livello dei singoli bit. L'operatore [operator&&](../standard-library/valarray-operators.md#amp) si applica a livello di elemento, conteggiando tutti i valori diversi da zero come true e il risultato è un oggetto valarray di valori booleani. L'operatore **ANDoperator&** bit per bit invece può determinare un oggetto valarray di valori diversi da 0 o 1, a seconda del risultato dell'operazione bit per bit.  
   
 ### <a name="example"></a>Esempio  
   
@@ -281,7 +283,7 @@ The element-by-element result of the bitwise operator & is the
 *\  
 ```  
   
-##  <a name="a-nameoperatorampampa--operatorampamp"></a><a name="operator_amp__amp_"></a>  operator&amp;&amp;  
+##  <a name="op_amp_amp"></a>  operator&amp;&amp;  
  Ottiene l'operatore **AND** logico tra gli elementi corrispondenti di due oggetti valarray di dimensioni equivalenti o tra un oggetto valarray e un valore specificato del tipo di elemento dell'oggetto valarray.  
   
 ```  
@@ -305,17 +307,17 @@ operator&&(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` left`  
+ `left`  
  Primo dei due oggetti valarray i cui rispettivi elementi devono essere combinati con l'operatore **AND** logico oppure valore specificato del tipo di elemento da combinare con ogni elemento di un oggetto valarray.  
   
- ` right`  
+ `right`  
  Secondo dei due oggetti valarray i cui rispettivi elementi devono essere combinati con l'operatore **AND** logico oppure valore specificato del tipo di elemento da combinare con ogni elemento di un oggetto valarray.  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto valarray i cui elementi sono di tipo bool e sono la combinazione elemento per elemento dell'operazione **AND** logica di ` left` e ` right.`  
+ Un oggetto valarray i cui elementi sono di tipo bool e sono la combinazione di elemento di logico **AND** operazione di `left` e `right`.  
   
 ### <a name="remarks"></a>Note  
- L'operatore **ANDoperator&&** logico si applica a livello di elemento, conteggiando tutti i valori diversi da zero come true e il risultato è un oggetto valarray di valori booleani. La versione bit per bit dell'operatore **AND**, [operator&,](../standard-library/valarray-operators.md#operator_amp_) invece può determinare un oggetto valarray di valori diversi da 0 o 1, a seconda del risultato dell'operazione bit per bit.  
+ L'operatore **ANDoperator&&** logico si applica a livello di elemento, conteggiando tutti i valori diversi da zero come true e il risultato è un oggetto valarray di valori booleani. La versione bit per bit dell'operatore **AND**, [operator&,](../standard-library/valarray-operators.md#op_amp) invece può determinare un oggetto valarray di valori diversi da 0 o 1, a seconda del risultato dell'operazione bit per bit.  
   
 ### <a name="example"></a>Esempio  
   
@@ -364,7 +366,7 @@ The element-by-element result of the logical AND operator&& is the
 *\  
 ```  
   
-##  <a name="a-nameoperatorgta--operatorgt"></a><a name="operator_gt_"></a>  operator&gt;  
+##  <a name="op_gt"></a>  operator&gt;  
  Verifica se gli elementi di un oggetto valarray sono maggiori degli elementi di un oggetto valarray di dimensioni equivalenti o se tutti gli elementi di un oggetto valarray sono maggiori o minori di un valore specificato.  
   
 ```  
@@ -388,18 +390,18 @@ operator>(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` left`  
+ `left`  
  Primo dei due oggetti valarray i cui elementi devono essere confrontati oppure valore specificato da confrontare con ogni elemento di un oggetto valarray.  
   
- ` right`  
+ `right`  
  Secondo dei due oggetti valarray i cui elementi devono essere confrontati oppure valore specificato da confrontare con ogni elemento di un oggetto valarray.  
   
 ### <a name="return-value"></a>Valore restituito  
  Oggetto valarray di valori booleani, ognuno dei quali è:  
   
-- **true** se il valore o l'elemento ` left` è maggiore del valore o dell'elemento ` right` corrispondente.  
+- **true** se il valore o l'elemento `left` è maggiore del valore o dell'elemento `right` corrispondente.  
   
-- **false** se il valore o l'elemento ` left` non è maggiore del valore o dell'elemento ` right` corrispondente.  
+- **false** se il valore o l'elemento `left` non è maggiore del valore o dell'elemento `right` corrispondente.  
   
 ### <a name="remarks"></a>Note  
  Se il numero di elementi in due oggetti valarray non è uguale, il risultato è indefinito.  
@@ -451,7 +453,7 @@ The element-by-element result of the greater than comparison test is the
 *\  
 ```  
   
-##  <a name="a-nameoperatorgteqa--operatorgt"></a><a name="operator_gt__eq"></a>  operator&gt;=  
+##  <a name="op_gt_eq"></a>  operator&gt;=  
  Verifica se gli elementi di un oggetto valarray sono maggiori o uguali agli elementi di un oggetto valarray di dimensioni equivalenti o se tutti gli elementi di un oggetto valarray sono maggiori o uguali o minori o uguali a un valore specificato.  
   
 ```  
@@ -475,18 +477,18 @@ operator>=(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` left`  
+ `left`  
  Primo dei due oggetti valarray i cui elementi devono essere confrontati oppure valore specificato da confrontare con ogni elemento di un oggetto valarray.  
   
- ` right`  
+ `right`  
  Secondo dei due oggetti valarray i cui elementi devono essere confrontati oppure valore specificato da confrontare con ogni elemento di un oggetto valarray.  
   
 ### <a name="return-value"></a>Valore restituito  
  Oggetto valarray di valori booleani, ognuno dei quali è:  
   
-- **true** se il valore o l'elemento ` left` è maggiore o uguale al valore o all'elemento ` right` corrispondente.  
+- **true** se il valore o l'elemento `left` è maggiore o uguale al valore o all'elemento `right` corrispondente.  
   
-- **false** se il valore o l'elemento ` left` è minore del valore o dell'elemento ` right` corrispondente.  
+- **false** se il valore o l'elemento `left` è minore del valore o dell'elemento `right` corrispondente.  
   
 ### <a name="remarks"></a>Note  
  Se il numero di elementi in due oggetti valarray non è uguale, il risultato è indefinito.  
@@ -538,7 +540,7 @@ The element-by-element result of the greater than or equal test is the
 *\  
 ```  
   
-##  <a name="a-nameoperatorgtgta--operatorgtgt"></a><a name="operator_gt__gt_"></a>  operator&gt;&gt;  
+##  <a name="op_gt_gt"></a>  operator&gt;&gt;  
  Sposta verso destra i bit per ogni elemento di un oggetto valarray di un numero specificato di posizioni o in base a una quantità di elementi specificata da un secondo oggetto valarray.  
   
 ```  
@@ -562,10 +564,10 @@ operator>>(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` left`  
+ `left`  
  Valore da spostare oppure oggetto valarray i cui elementi sono da spostare.  
   
- ` right`  
+ `right`  
  Valore che indica di quanto viene effettuato lo spostamento verso destra oppure oggetto valarray i cui elementi indicano di quanto viene effettuato lo spostamento verso destra elemento per elemento.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -621,7 +623,7 @@ The element-by-element result of the right shift is the
 *\  
 ```  
   
-##  <a name="a-nameoperatorlta--operatorlt"></a><a name="operator_lt_"></a>  operator&lt;  
+##  <a name="op_lt"></a>  operator&lt;  
  Verifica se gli elementi di un oggetto valarray sono minori degli elementi di un oggetto valarray di dimensioni equivalenti o se tutti gli elementi di un oggetto valarray sono maggiori o minori di un valore specificato.  
   
 ```  
@@ -645,18 +647,18 @@ operator<(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` left`  
+ `left`  
  Primo dei due oggetti valarray i cui elementi devono essere confrontati oppure valore specificato da confrontare con ogni elemento di un oggetto valarray.  
   
- ` right`  
+ `right`  
  Secondo dei due oggetti valarray i cui elementi devono essere confrontati oppure valore specificato da confrontare con ogni elemento di un oggetto valarray.  
   
 ### <a name="return-value"></a>Valore restituito  
  Oggetto valarray di valori booleani, ognuno dei quali è:  
   
-- **true** se il valore o l'elemento ` left` è minore del valore o dell'elemento ` right` corrispondente.  
+- **true** se il valore o l'elemento `left` è minore del valore o dell'elemento `right` corrispondente.  
   
-- **false** se il valore o l'elemento ` left` non è minore del valore o dell'elemento ` right` corrispondente.  
+- **false** se il valore o l'elemento `left` non è minore del valore o dell'elemento `right` corrispondente.  
   
 ### <a name="remarks"></a>Note  
  Se il numero di elementi in due oggetti valarray non è uguale, il risultato è indefinito.  
@@ -708,7 +710,7 @@ The element-by-element result of the less-than comparson test is the
 *\  
 ```  
   
-##  <a name="a-nameoperatorlteqa--operatorlt"></a><a name="operator_lt__eq"></a>  operator&lt;=  
+##  <a name="op_lt_eq"></a>  operator&lt;=  
  Verifica se gli elementi di un oggetto valarray sono minori o uguali agli elementi di un oggetto valarray di dimensioni equivalenti o se tutti gli elementi di un oggetto valarray sono maggiori o uguali o minori o uguali a un valore specificato.  
   
 ```  
@@ -732,18 +734,18 @@ operator<=(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` left`  
+ `left`  
  Primo dei due oggetti valarray i cui elementi devono essere confrontati oppure valore specificato da confrontare con ogni elemento di un oggetto valarray.  
   
- ` right`  
+ `right`  
  Secondo dei due oggetti valarray i cui elementi devono essere confrontati oppure valore specificato da confrontare con ogni elemento di un oggetto valarray.  
   
 ### <a name="return-value"></a>Valore restituito  
  Oggetto valarray di valori booleani, ognuno dei quali è:  
   
-- **true** se il valore o l'elemento ` left` è minore o uguale al valore o all'elemento ` right` corrispondente.  
+- **true** se il valore o l'elemento `left` è minore o uguale al valore o all'elemento `right` corrispondente.  
   
-- **false** se il valore o l'elemento ` left` è maggiore del valore o dell'elemento ` right` corrispondente.  
+- **false** se il valore o l'elemento `left` è maggiore del valore o dell'elemento `right` corrispondente.  
   
 ### <a name="remarks"></a>Note  
  Se il numero di elementi in due oggetti valarray non è uguale, il risultato è indefinito.  
@@ -795,7 +797,7 @@ The element-by-element result of the less than or equal test is the
 *\  
 ```  
   
-##  <a name="a-nameoperatorltlta--operatorltlt"></a><a name="operator_lt__lt_"></a>  operator&lt;&lt;  
+##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
  Sposta verso sinistra i bit per ogni elemento di un oggetto valarray di un numero specificato di posizioni o in base a una quantità di elementi specificata da un secondo oggetto valarray.  
   
 ```  
@@ -819,10 +821,10 @@ operator<<(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` left`  
+ `left`  
  Valore da spostare oppure oggetto valarray i cui elementi sono da spostare.  
   
- ` right`  
+ `right`  
  Valore che indica di quanto viene effettuato lo spostamento verso sinistra oppure oggetto valarray i cui elementi indicano di quanto viene effettuato lo spostamento verso sinistra elemento per elemento.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -878,7 +880,7 @@ The element-by-element result of the left shift is the
 *\  
 ```  
   
-##  <a name="a-nameoperatorstara--operator"></a><a name="operator_star"></a>  operator*  
+##  <a name="op_star"></a>  operator*  
  Ottiene il prodotto, elemento per elemento, tra gli elementi corrispondenti di due oggetti valarray di dimensioni equivalenti o tra un oggetto valarray e un valore specificato.  
   
 ```  
@@ -902,14 +904,14 @@ operator*(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` left`  
+ `left`  
  Primo dei due oggetti valarray i cui elementi devono essere moltiplicati oppure valore specificato da moltiplicare con ogni elemento di un oggetto valarray.  
   
- ` right`  
+ `right`  
  Secondo dei due oggetti valarray i cui elementi devono essere moltiplicati oppure valore specificato da moltiplicare con ogni elemento di un oggetto valarray.  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto valarray i cui elementi sono il prodotto, elemento per elemento, di ` left` e ` right.`  
+ Un oggetto valarray i cui elementi sono il prodotto tra gli elementi di `left` e `right`.  
   
 ### <a name="example"></a>Esempio  
   
@@ -958,7 +960,7 @@ The element-by-element result of the multiplication is the
 *\  
 ```  
   
-##  <a name="a-nameoperatoradda--operator"></a><a name="operator_add"></a>  operator+  
+##  <a name="op_add"></a>  operator+  
  Ottiene la somma, elemento per elemento, degli elementi corrispondenti di due oggetti valarray di dimensioni equivalenti o di un oggetto valarray e di un valore specificato.  
   
 ```  
@@ -982,14 +984,14 @@ operator+(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` left`  
+ `left`  
  Primo dei due oggetti valarray i cui elementi devono essere aggiunti oppure valore specificato da aggiungere a ogni elemento di un oggetto valarray.  
   
- ` right`  
+ `right`  
  Secondo dei due oggetti valarray i cui elementi devono essere aggiunti oppure valore specificato da aggiungere a ogni elemento di un oggetto valarray.  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto valarray i cui elementi sono la somma, elemento per elemento, di ` left` e ` right.`  
+ Un oggetto valarray i cui elementi sono la somma di `left` e `right`.  
   
 ### <a name="example"></a>Esempio  
   
@@ -1038,7 +1040,7 @@ The element-by-element result of the sum is the
 *\  
 ```  
   
-##  <a name="a-nameoperator-a--operator-"></a><a name="operator-"></a>  operator-  
+##  <a name="operator-"></a>  operator-  
  Ottiene la differenza, elemento per elemento, tra gli elementi corrispondenti di due oggetti valarray di dimensioni equivalenti o tra un oggetto valarray e un valore specificato.  
   
 ```  
@@ -1062,14 +1064,14 @@ operator-(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` left`  
+ `left`  
  Valore oppure oggetto valarray usato come minuendo da cui devono essere sottratti altri valori oppure oggetti valarray per formare la differenza.  
   
- ` right`  
+ `right`  
  Valore oppure oggetto valarray usato come sottraendo che deve essere sottratto da altri valori oppure oggetti valarray per formare la differenza.  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto valarray i cui elementi sono la differenza, elemento per elemento, di ` left` e ` right.`  
+ Un oggetto valarray i cui elementi sono la differenza degli elementi di `left` e `right`.  
   
 ### <a name="remarks"></a>Note  
  La terminologia aritmetica usata per descrivere una sottrazione è la seguente:  
@@ -1123,7 +1125,7 @@ The element-by-element result of the difference is the
 *\  
 ```  
   
-##  <a name="a-nameoperatora--operator"></a><a name="operator_"></a>  operator/  
+##  <a name="op_div"></a>  operator/  
  Ottiene il quoziente, elemento per elemento, tra gli elementi corrispondenti di due oggetti valarray di dimensioni equivalenti o tra un oggetto valarray e un valore specificato.  
   
 ```  
@@ -1147,14 +1149,14 @@ operator/(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` left`  
+ `left`  
  Valore oppure oggetto valarray usato come dividendo per cui deve essere diviso un altro valore o un altro oggetto valarray per formare il quoziente.  
   
- ` right`  
+ `right`  
  Valore oppure oggetto valarray usato come divisore che divide un altro valore oppure un altro oggetto valarray per formare il quoziente.  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto valarray i cui elementi sono il quoziente, elemento per elemento, di ` left` diviso per ` right.`  
+ Un oggetto valarray i cui elementi sono il quoziente di `left` diviso `right`.  
   
 ### <a name="remarks"></a>Note  
  La terminologia aritmetica usata per descrivere una divisione è la seguente:  
@@ -1208,7 +1210,7 @@ The element-by-element result of the quotient is the
 *\  
 ```  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  operator==  
+##  <a name="op_eq_eq"></a>  operator==  
  Verifica se gli elementi corrispondenti di due oggetti valarray di dimensioni equivalenti sono uguali o se tutti gli elementi di un oggetto valarray sono uguali a un valore specificato.  
   
 ```  
@@ -1232,10 +1234,10 @@ operator==(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` left`  
+ `left`  
  Primo dei due oggetti valarray i cui elementi devono essere testati per verificare l'uguaglianza.  
   
- ` right`  
+ `right`  
  Secondo dei due oggetti valarray i cui elementi devono essere testati per verificare l'uguaglianza.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -1246,7 +1248,7 @@ operator==(
 - **false** se gli elementi corrispondenti non sono uguali.  
   
 ### <a name="remarks"></a>Note  
- Il primo operatore modello restituisce un oggetto di classe [valarray\<bool>](../standard-library/valarray-bool-class.md), di cui ogni elemento `I` è _ *Left*[ `I`] == \_ *Right*[ `I`]. Il secondo operatore modello viene archiviato nell'elemento `I`` left`[ `I`] == \_ *Right*. Il terzo operatore modello viene archiviato nell'elemento `I`` left` == ` right`[ `I`].  
+ Il primo operatore modello restituisce un oggetto della classe [valarray\<bool >](../standard-library/valarray-bool-class.md), tutti gli elementi il cui `I` è `left[I] == right[I]`. Il secondo operatore modello vengono memorizzate nell'elemento `I` `left[I] == right`. Il terzo operatore modello vengono memorizzate nell'elemento `I` `left == right[I]`.  
   
 ### <a name="example"></a>Esempio  
   
@@ -1295,7 +1297,7 @@ The element-by-element result of the equality comparison test is the
 *\  
 ```  
   
-##  <a name="a-nameoperatorxora--operator"></a><a name="operator_xor"></a>  operator^  
+##  <a name="op_xor"></a>  operator^  
  Ottiene l'operatore `OR` esclusivo (**XOR**) bit per bit tra gli elementi corrispondenti di due oggetti valarray di dimensioni equivalenti o tra un oggetto valarray e un valore specificato del tipo di elemento.  
   
 ```  
@@ -1319,14 +1321,14 @@ operator^(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` left`  
+ `left`  
  Primo dei due oggetti valarray i cui rispettivi elementi devono essere combinati con l'operatore **XOR** bit per bit oppure valore specificato del tipo di elemento da combinare bit per bit con ogni elemento di un oggetto valarray.  
   
- ` right`  
+ `right`  
  Secondo dei due oggetti valarray i cui rispettivi elementi devono essere combinati con l'operatore **XOR** bit per bit oppure valore specificato del tipo di elemento da combinare bit per bit con ogni elemento di un oggetto valarray.  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto valarray i cui elementi sono la combinazione elemento per elemento dell'operazione **XOR** bit per bit di ` left` e ` right.`  
+ Un oggetto valarray i cui elementi sono la combinazione di elemento di bit per bit **XOR** operazione di `left` e `right`.  
   
 ### <a name="remarks"></a>Note  
  È possibile usare un'operazione bit per bit solo per modificare i bit in tipi di dati `char` e `int` e varianti e non per tipi di dati **float**, **double**, `long double`, `void``bool` o per altri tipi di dati più complessi.  
@@ -1384,7 +1386,7 @@ The element-by-element result of the bitwise XOR operator^ is the
 *\  
 ```  
   
-##  <a name="a-nameoperatorora--operator124"></a><a name="operator_or"></a>  operator&#124;  
+##  <a name="op_or"></a>  operator&#124;  
  Ottiene l'operatore `OR` bit per bit tra gli elementi corrispondenti di due oggetti valarray di dimensioni equivalenti o tra un oggetto valarray e un valore specificato del tipo di elemento.  
   
 ```  
@@ -1408,19 +1410,19 @@ operator|(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` left`  
+ `left`  
  Primo dei due oggetti valarray i cui rispettivi elementi devono essere combinati con l'operatore `OR` bit per bit oppure valore specificato del tipo di elemento da combinare bit per bit con ogni elemento di un oggetto valarray.  
   
- ` right`  
+ `right`  
  Secondo dei due oggetti valarray i cui rispettivi elementi devono essere combinati con l'operatore `OR` bit per bit oppure valore specificato del tipo di elemento da combinare bit per bit con ogni elemento di un oggetto valarray.  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto valarray i cui elementi sono la combinazione elemento per elemento dell'operazione `OR` bit per bit di ` left` e ` right.`  
+ Un oggetto valarray i cui elementi sono la combinazione di elemento di bit per bit `OR` operazione di `left` e `right`.  
   
 ### <a name="remarks"></a>Note  
  È possibile usare un'operazione bit per bit solo per modificare i bit in tipi di dati `char` e `int` e varianti e non per tipi di dati **float**, **double**, **longdouble**, `void`, `bool` o per altri tipi di dati più complessi.  
   
- L'operatore OR bit per bit supporta la stessa tabella di verità dell'operatore `OR` logico, ma si applica al tipo di dati a livello dei singoli bit. Dati i bit *b*1 e *b*2, *b*1 `OR` *b*2 è **true** se almeno uno dei bit è true o **false** se entrambi i bit sono false. L'operatore `OR`[operator&#124;&#124;](../standard-library/valarray-operators.md#operator_lor) logico si applica a livello di elemento, conteggiando tutti i valori diversi da zero come **true** e il risultato è un oggetto valarray di valori booleani. L'operatore OR `operator|` bit per bit invece può determinare un oggetto valarray di valori diversi da 0 o 1, a seconda del risultato dell'operazione bit per bit.  
+ L'operatore OR bit per bit supporta la stessa tabella di verità dell'operatore `OR` logico, ma si applica al tipo di dati a livello dei singoli bit. Dati i bit *b*1 e *b*2, *b*1 `OR` *b*2 è **true** se almeno uno dei bit è true o **false** se entrambi i bit sono false. L'operatore `OR`[operator&#124;&#124;](../standard-library/valarray-operators.md#op_lor) logico si applica a livello di elemento, conteggiando tutti i valori diversi da zero come **true** e il risultato è un oggetto valarray di valori booleani. L'operatore OR `operator|` bit per bit invece può determinare un oggetto valarray di valori diversi da 0 o 1, a seconda del risultato dell'operazione bit per bit.  
   
 ### <a name="example"></a>Esempio  
   
@@ -1473,7 +1475,7 @@ The element-by-element result of the bitwise OR operator| is the
 *\  
 ```  
   
-##  <a name="a-nameoperatorlora--operator124124"></a><a name="operator_lor"></a>  operator&#124;&#124;  
+##  <a name="op_lor"></a>  operator&#124;&#124;  
  Ottiene l'operatore `OR` logico tra gli elementi corrispondenti di due oggetti valarray di dimensioni equivalenti o tra un oggetto valarray e un valore specificato del tipo di elemento dell'oggetto valarray.  
   
 ```  
@@ -1497,17 +1499,17 @@ operator||(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- ` left`  
+ `left`  
  Primo dei due oggetti valarray i cui rispettivi elementi devono essere combinati con l'operatore `OR` logico oppure valore specificato del tipo di elemento da combinare con ogni elemento di un oggetto valarray.  
   
- ` right`  
+ `right`  
  Secondo dei due oggetti valarray i cui rispettivi elementi devono essere combinati con l'operatore `OR` logico oppure valore specificato del tipo di elemento da combinare con ogni elemento di un oggetto valarray.  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto valarray i cui elementi sono di tipo `bool` e sono la combinazione elemento per elemento dell'operazione OR logica di ` left` e ` right.`  
+ Un oggetto valarray i cui elementi sono di tipo `bool` e sono la combinazione di elemento dell'operazione di OR logico di `left` e `right`.  
   
 ### <a name="remarks"></a>Note  
- L'operatore `OR``operator||` logico si applica a livello di elemento, conteggiando tutti i valori diversi da zero come **true** e il risultato è un oggetto valarray di valori booleani. La versione bit per bit dell'operatore `OR`, [operator&#124;](../standard-library/valarray-operators.md#operator_or) invece può determinare un oggetto valarray di valori diversi da 0 o 1, a seconda del risultato dell'operazione bit per bit.  
+ L'operatore `OR``operator||` logico si applica a livello di elemento, conteggiando tutti i valori diversi da zero come **true** e il risultato è un oggetto valarray di valori booleani. La versione bit per bit dell'operatore `OR`, [operator&#124;](../standard-library/valarray-operators.md#op_or) invece può determinare un oggetto valarray di valori diversi da 0 o 1, a seconda del risultato dell'operazione bit per bit.  
   
 ### <a name="example"></a>Esempio  
   

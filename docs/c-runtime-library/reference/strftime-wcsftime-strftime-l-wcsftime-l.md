@@ -1,58 +1,76 @@
 ---
-title: "strftime, wcsftime, _strftime_l, _wcsftime_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "strftime"
-  - "_wcsftime_l"
-  - "_strftime_l"
-  - "wcsftime"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-time-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_tcsftime"
-  - "strftime"
-  - "wcsftime"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_strftime_l (funzione)"
-  - "strftime (funzione)"
-  - "tcsftime (funzione)"
-  - "_wcsftime_l (funzione)"
-  - "wcsftime (funzione)"
-  - "_tcsftime (funzione)"
-  - "stringhe di ora"
+title: strftime, wcsftime, _strftime_l, _wcsftime_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- strftime
+- _wcsftime_l
+- _strftime_l
+- wcsftime
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-time-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _tcsftime
+- strftime
+- wcsftime
+dev_langs:
+- C++
+helpviewer_keywords:
+- _strftime_l function
+- strftime function
+- tcsftime function
+- _wcsftime_l function
+- wcsftime function
+- _tcsftime function
+- time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# strftime, wcsftime, _strftime_l, _wcsftime_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 1a5331b77e218c5fe5796b2df6d0f61578657758
+ms.contentlocale: it-it
+ms.lasthandoff: 04/04/2017
 
-Formattare una stringa di data e ora.  
+---
+# <a name="strftime-wcsftime-strftimel-wcsftimel"></a>strftime, wcsftime, _strftime_l, _wcsftime_l
+Formatta una stringa dell'ora.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 size_t strftime(  
@@ -83,94 +101,94 @@ size_t _wcsftime_l(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `strDest`  
  Stringa di output.  
   
  `maxsize`  
- Dimensione del buffer `strDest`, misurata in caratteri \(`char` o `wchart_t`\).  
+ Dimensioni del buffer `strDest`, in caratteri (`char` o `wchart_t`).  
   
  `format`  
  Stringa di controllo del formato.  
   
  `timeptr`  
- `tm` struttura dei dati.  
+Struttura di dati  `tm`.  
   
  `locale`  
- Impostazioni locali da utilizzare.  
+ Impostazioni locali da usare.  
   
-## Valore restituito  
- `strftime` restituisce il numero di caratteri posizionato in `strDest` e `wcsftime` restituisce il numero corrispondente di caratteri wide.  
+## <a name="return-value"></a>Valore restituito  
+ `strftime` restituisce il numero di caratteri in `strDest` e `wcsftime` restituisce il numero di caratteri wide corrispondente.  
   
- Se il numero totale di caratteri, inclusi il carattere di terminazione null, è più di `maxsize`, sia `strftime` che `wcsftime` restituisce 0 e il contenuto di `strDest` è indeterminato.  
+ Se il numero totale di caratteri, incluso il carattere di terminazione Null, è maggiore di `maxsize`, sia `strftime` che `wcsftime` restituiscono 0 e il contenuto di `strDest` è indeterminato.  
   
- Il numero di caratteri in `strDest` è uguale al numero di caratteri letterali in `format` nonché di tutti i caratteri che possono essere aggiunti a `format` tramite i codici di formattazione.  Il carattere di terminazione Null di una stringa non è incluso nel valore restituito.  
+ Il numero di caratteri in `strDest` è uguale al numero di caratteri letterali in `format` oltre agli eventuali caratteri aggiunti a `format` tramite codici di formattazione. La terminazione Null di una stringa non viene conteggiata nel valore restituito.  
   
-## Note  
- Le funzioni `wcsftime` e `strftime` consentono di formattare il valore temporale `tm` in `timeptr` come l'argomento `format` fornito ed archiviano il risultato nel buffer `strDest`*.* Al massimo, i caratteri di `maxsize` vengono inseriti nella stringa.  Per una descrizione dei campi della struttura `timeptr`, vedere [asctime](../../c-runtime-library/reference/asctime-wasctime.md).  `wcsftime` è l'equivalente a caratteri estesi di `strftime`; il suo puntatore di stringa passato come argomento punta ad una stringa di caratteri estesi.  Altrimenti queste funzioni si comportano in modo identico.  
+## <a name="remarks"></a>Note  
+ Il `strftime` e `wcsftime` formato funzioni il `tm` ora valore `timeptr` in base alle fornito `format` argomento e il risultato nel buffer di archivio `strDest`. Nella stringa vengono inseriti al massimo `maxsize`. Per una descrizione dei campi nella struttura `timeptr`, vedere [asctime](../../c-runtime-library/reference/asctime-wasctime.md). `wcsftime` è l'equivalente di caratteri wide di `strftime`. L'argomento puntatore di stringa corrispondente punta a una stringa di caratteri wide. A parte ciò, queste funzioni si comportano in modo identico.  
   
 > [!NOTE]
->  Nelle versioni precedenti a Visual C\+\+ 2005, la documentazione descriveva il parametro `format` di `wcsftime` come dotata del tipo di dati `const wchar_t *`, ma in realtà l'implementazione attuale del tipo di dati `format` è `const char *`.  L'implementazione del tipo di dati `format`è stata aggiornata per riflettere la documentazione precedente e corrente, ovvero, `const wchar_t *`.  
+>  Nelle versioni precedenti a Visual C++ 2005, la documentazione indica che il parametro `format` di `wcsftime` ha il tipo di dati `const wchar_t *`, ma l'implementazione effettiva tipo di dati `format` è `const char *`. L'implementazione del `format` tipo di dati è stato aggiornato per riflettere la documentazione precedente e corrente, vale a dire `const wchar_t *`.  
   
- Questa funzione convalida i parametri.  Se `strDest`, `format`, o`timeptr` è un puntatore null, o se la struttura dei dati `tm` di destinazione di `timeptr` non è valida \(ad esempio, se contiene valori esterni all'intervallo per l'ora o la data\), oppure se la stringa `format` contiene un codice di formattazione non valido, il gestore del parametro non valido viene invocato, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).  Se l'esecuzione può continuare, la funzione restituisce 0 e imposta `errno` su `EINVAL`.  
+ Questa funzione convalida i relativi parametri. Se `strDest`, `format`, o `timeptr` è un puntatore null, o se il `tm` struttura di dati interessato da `timeptr` non è valido (ad esempio, se contiene valori fuori intervallo per l'ora o data), o se il `format` stringa contiene un codice di formattazione non valido, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce 0 e imposta `errno` su `EINVAL`.  
   
-### Mapping di routine di testo generico  
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
-|Routine TCHAR.H|\_UNICODE & \_MBCS non definiti|\_MBCS definito|\_UNICODE definito|  
-|---------------------|-------------------------------------|---------------------|------------------------|  
+|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcsftime`|`strftime`|`strftime`|`wcsftime`|  
   
- L'argomento `format` è costituito da uno o più codici; come in `printf`, i codici di formattazione sono preceduti da un segno di percentuale \(`%`\).  I caratteri che non iniziano con `%` vengono copiati senza modifiche in `strDest`*.* La categoria `LC_TIME` delle impostazioni locali correnti influisce sulla formattazione di `strftime`. \(Per ulteriori informazioni su `LC_TIME`, vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md).\) Le funzioni senza il suffisso `_l` utilizzano le impostazioni locali attualmente impostate.  Le versioni di queste funzioni con il suffisso `_l` sono identiche ad eccezione per il fatto che prendono il parametro delle impostazioni locali e lo usano al posto di quello corrente.  Per ulteriori informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ L'argomento `format` è costituito da uno o più codici. Come in `printf`, i codici di formattazione sono preceduti da un segno di percentuale (`%`). Caratteri che non iniziano con `%` verranno copiate così a `strDest`. La categoria `LC_TIME` delle impostazioni locali correnti influisce sulla formattazione dell'output di `strftime`. Per altre informazioni su `LC_TIME`, vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Le funzioni senza il suffisso `_l` usano le impostazioni locali correnti. Le versioni di queste funzioni con il suffisso `_l` sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali correnti. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
   
- I codici di formattazione per `strftime` vengono elencati di seguito:  
+ I codici di formattazione per `strftime` sono elencati di seguito:  
   
  `%a`  
- Nome abbreviato del giorno della settimana  
+ Nome del giorno della settimana abbreviato  
   
  `%A`  
- Nome completo del giorno della settimana  
+ Nome del giorno della settimana intero  
   
  `%b`  
- Nome abbreviato del mese  
+ Nome del mese abbreviato  
   
  `%B`  
- Nome completo del mese  
+ Nome del mese intero  
   
  `%c`  
- Rappresentazione di data e ora adatta alle impostazioni locali  
+ Rappresentazione di data e ora appropriata per le impostazioni locali  
   
  `%d`  
- Giorno del mese come numero decimale \(01 \- 31\)  
+ Giorno del mese come numero decimale (01-31)  
   
  `%H`  
- Ora nel formato a 24 ore \(00 \- 23\)  
+ Ora in formato 24 ore (00 - 23)  
   
  `%I`  
- Ora nel formato a 12 ore \(01 \- 12\)  
+ Ora in formato 12 ore (da 01 a 12)  
   
  `%j`  
- Giorno dell'anno come numero decimale \(001 \- 366\)  
+ Giorno dell'anno come numero decimale (001-366)  
   
  `%m`  
- Mese come numero decimale \(01 \- 12\)  
+ Mese come numero decimale (da 01 a 12)  
   
  `%M`  
- Minuti come numero decimale \(00 \- 59\)  
+ Minuti come numero decimale (00 - 59)  
   
  `%p`  
- Indicatore di A.M. \/P.M. per le impostazioni locali correnti dell'orario nel formato a 12 ore  
+ Indicatore AM/PM delle impostazioni locali correnti per il formato 12 ore  
   
  `%S`  
- In secondo luogo come numero decimale \(00 \- 59\)  
+ Secondo come numero decimale (00 - 59)  
   
  `%U`  
- Settimana dell'anno come numero decimale, con Domenica come primo giorno della settimana \(00 \- 53\)  
+ Settimana dell'anno come numero decimale, con domenica come primo giorno della settimana (00 - 53)  
   
  `%w`  
- Giorno della settimana come numero decimale \(0 \- 6; Domenica corrisponde allo 0\)  
+ Giorno della settimana come numero decimale (0 - 6. Domenica è 0)  
   
  `%W`  
- Settimana dell'anno come numero decimale, con Lunedì come primo giorno della settimana \(00 \- 53\)  
+ Settimana dell'anno come numero decimale, con lunedì come primo giorno della settimana (00 - 53)  
   
  `%x`  
  Rappresentazione della data per le impostazioni locali correnti  
@@ -179,57 +197,45 @@ size_t _wcsftime_l(
  Rappresentazione dell'ora per le impostazioni locali correnti  
   
  `%y`  
- Anno senza secolo, come numero decimale \(00 \- 99\)  
+ Anno senza il secolo, come numero decimale (00 - 99)  
   
  `%Y`  
- Anno con secolo, come numero decimale  
+ Anno con il secolo, come numero decimale  
   
  `%z, %Z`  
- Qualsiasi nome del fuso orario o abbreviazione del fuso orario, a seconda delle impostazioni del Registro di sistema; nessun carattere se il fuso orario è sconosciuto  
+ Nome del fuso orario o abbreviazione del fuso orario, a seconda delle impostazioni del Registro di sistema; nessun carattere se il fuso orario è sconosciuto  
   
  `%%`  
  Segno di percentuale  
   
- Come nella funzione `printf`, il flag `#` può essere preceduto da qualsiasi codice di formattazione.  In tal caso, il significato del codice di formattazione viene modificato come segue.  
+ Come nella funzione `printf`, il flag `#` può essere usato come prefisso per qualsiasi codice di formattazione. In questo caso, il significato del codice di formato viene modificato come segue.  
   
 |Codice formato|Significato|  
-|--------------------|-----------------|  
+|-----------------|-------------|  
 |`%#a, %#A, %#b, %#B, %#p, %#X, %#z, %#Z, %#%`|Il flag `#` viene ignorato.|  
-|`%#c`|Rappresentazione estesa di data ed ora, appropriata per le impostazioni locali correnti.  Ad esempio: "Martedì 14 marzo 1995, 12:41:29".|  
-|`%#x`|Rappresentazione estesa della data, appropriata per le impostazioni locali correnti.  Ad esempio: "Martedì 14 marzo 1995".|  
-|`%#d, %#H, %#I, %#j, %#m, %#M, %#S, %#U, %#w, %#W, %#y, %#Y`|Rimuovere gli zeri iniziali se presenti.|  
+|`%#c`|Rappresentazione di data e ora estesa, appropriata per le impostazioni locali correnti. Ad esempio: "martedì 14 marzo 1995 12.41.29".|  
+|`%#x`|Rappresentazione di data estesa, appropriata per le impostazioni locali correnti. Ad esempio: "martedì 14 marzo 1995".|  
+|`%#d, %#H, %#I, %#j, %#m, %#M, %#S, %#U, %#w, %#W, %#y, %#Y`|Vengono rimossi gli eventuali zeri iniziali.|  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`strftime`|\<time.h\>|  
-|`wcsftime`|\<time.h\> o \<wchar.h\>|  
-|`_strftime_l`|\<time.h\>|  
-|`_wcsftime_l`|\<time.h\> o \<wchar.h\>|  
+|-------------|---------------------|  
+|`strftime`|\<time.h>|  
+|`wcsftime`|\<time.h> o \<wchar.h>|  
+|`_strftime_l`|\<time.h>|  
+|`_wcsftime_l`|\<time.h> or \<wchar.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'Introduzione.  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
-## Esempio  
- Vedere l'esempio relativo a [time](../../c-runtime-library/reference/time-time32-time64.md).  
+## <a name="example"></a>Esempio  
+ Vedere l'esempio per [time](../../c-runtime-library/reference/time-time32-time64.md).  
   
-## Equivalente .NET Framework  
-  
--   [System::DateTime::ToLongDateString](https://msdn.microsoft.com/en-us/library/system.datetime.tolongdatestring.aspx)  
-  
--   [System::DateTime::ToLongTimeString](https://msdn.microsoft.com/en-us/library/system.datetime.tolongtimestring.aspx)  
-  
--   [System::DateTime::ToShortDateString](https://msdn.microsoft.com/en-us/library/system.datetime.toshortdatestring.aspx)  
-  
--   [System::DateTime::ToShortTimeString](https://msdn.microsoft.com/en-us/library/system.datetime.toshorttimestring.aspx)  
-  
--   [System::DateTime::ToString](https://msdn.microsoft.com/en-us/library/system.datetime.tostring.aspx)  
-  
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Impostazioni locali](../../c-runtime-library/locale.md)   
  [Gestione dell'ora](../../c-runtime-library/time-management.md)   
  [Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md)   
  [localeconv](../../c-runtime-library/reference/localeconv.md)   
- [setlocale, \_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
+ [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
  [Funzioni strcoll](../../c-runtime-library/strcoll-functions.md)   
- [strxfrm, wcsxfrm, \_strxfrm\_l, \_wcsxfrm\_l](../../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)
+ [strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](../../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)

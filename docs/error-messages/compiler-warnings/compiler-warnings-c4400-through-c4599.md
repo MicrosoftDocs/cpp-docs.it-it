@@ -39,7 +39,6 @@ f1_keywords:
 - C4457
 - C4458
 - C4459
-- C4463
 - C4464
 - C4472
 - C4480
@@ -101,7 +100,6 @@ helpviewer_keywords:
 - C4457
 - C4458
 - C4459
-- C4463
 - C4464
 - C4472
 - C4480
@@ -144,10 +142,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: d7d097b399d3681ef523d8787ecc38af472840f6
-ms.openlocfilehash: 123fea75676708aa557a4b4bb5aced1712ca86e4
-ms.lasthandoff: 04/28/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: ed1f641e226f85aefcebf5ecf127c1345dc0b1b2
+ms.contentlocale: it-it
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>C4400 avvisi del compilatore tramite C4599
@@ -215,14 +214,14 @@ Gli articoli in questa parte della documentazione contengono informazioni su un 
 |Avviso del compilatore (livello 1) C4453|'*tipo*': un tipo '[WebHostHidden]' non deve essere utilizzato sulla superficie pubblicata di un tipo pubblico che non è '[WebHostHidden]'|  
 |Avviso del compilatore (livello 1) C4454|'*funzione*' viene eseguito l'overload più il numero di parametri di input senza specificato [DefaultOverload]. Prelievo '*dichiarazione*' come overload predefinito|  
 |Avviso del compilatore (livello 1) C4455|' operatore *operatore*': gli identificatori di suffisso letterale che non iniziano con un carattere di sottolineatura sono riservati|  
-|Avviso del compilatore (livello 3) C4456|dichiarazione di '*identificatore*' nasconde la dichiarazione locale precedente|  
-|Avviso del compilatore (livello 3) C4457|dichiarazione di '*identificatore*' parametro della funzione verrà nascosto|  
-|Avviso del compilatore (livello 3) C4458|dichiarazione di '*identificatore*' nasconde il membro della classe|  
-|Avviso del compilatore (livello 3) C4459|dichiarazione di '*identificatore*' nasconde una dichiarazione globale|  
+|[Avviso del compilatore (livello 4) C4456](compiler-warning-level-4-c4456.md)|dichiarazione di '*identificatore*' nasconde la dichiarazione locale precedente|  
+|[Avviso del compilatore (livello 4) C4457](compiler-warning-level-4-c4457.md)|dichiarazione di '*identificatore*' parametro della funzione verrà nascosto|  
+|[Avviso del compilatore (livello 4) C4458](compiler-warning-level-4-c4458.md)|dichiarazione di '*identificatore*' nasconde il membro della classe|  
+|[Avviso del compilatore (livello 4) C4459](compiler-warning-level-4-c4459.md)|dichiarazione di '*identificatore*' nasconde una dichiarazione globale|  
 |[Avviso del compilatore (livello 4) C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|' WinRT &#124; gestiti ' operatore '*operatore*', contiene un parametro passato per riferimento. ' WinRT &#124; gestiti ' operatore '*operatore*'ha una semantica diversa da quella dell'operatore C++'*cpp_operator*', probabilmente si intendeva passare per valore?|  
 |[Avviso del compilatore (livello 1) C4461](../../error-messages/compiler-warnings/compiler-warning-level-1-c4461.md)|'*classname*': questa classe ha un finalizzatore '! *finalizzatore*' ma non un distruttore ' ~*dtor*'|  
 |[Avviso del compilatore (livello 1) C4462](../../error-messages/compiler-warnings/compiler-warning-level-1-c4462.md)|'*tipo*': Impossibile determinare il GUID del tipo. Il programma potrebbe bloccarsi in fase di esecuzione.|  
-|Avviso C4463 del compilatore|overflow; l'assegnazione di '*valore*'campo di bit che può contenere solo valori da'*min_value*'a'*max_value*'|  
+|[Avviso del compilatore (livello 4) C4463](compiler-warning-level-4-c4463.md)|overflow; l'assegnazione di '*valore*'campo di bit che può contenere solo valori da'*min_value*'a'*max_value*'|  
 |Avviso del compilatore C4464|il percorso include relativo contiene '... '|  
 |[Avviso del compilatore (livello 1) C4470](../../error-messages/compiler-warnings/compiler-warning-level-1-c4470.md)|pragma di controllo a virgola mobile ignorati in /clr|  
 |[Avviso del compilatore (livello 4) C4471](compiler-warning-level-4-c4471.md)|'*enumerazione*': una dichiarazione con prototipo di un'enumerazione senza ambita deve avere un tipo sottostante (presupposto int)|  

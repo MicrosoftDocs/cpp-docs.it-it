@@ -61,10 +61,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9fc67bbf6c900a79825fe62b6882c4459c348d61
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: d91f7b780c8f17fbe1e12a195b6a7cf2eaad3d2f
+ms.contentlocale: it-it
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="putenv-wputenv"></a>_putenv, _wputenv
@@ -89,7 +90,7 @@ int _wputenv(
  Definizione della stringa di ambiente.  
   
 ## <a name="return-value"></a>Valore restituito  
- Restituisce 0 in caso di esito positivo o -1 in caso di errore.  
+ Restituisce 0 se ha esito positivo o -1 in caso di errore.  
   
 ## <a name="remarks"></a>Note  
  La funzione `_putenv` aggiunge nuove variabili di ambiente o modifica i valori delle variabili di ambiente esistente. Le variabili di ambiente definiscono l'ambiente in cui viene eseguito un processo (ad esempio, il percorso di ricerca predefinito per le librerie da collegare a un programma). `_wputenv` è una versione a caratteri wide di `_putenv`; l'argomento `envstring` in `_wputenv` è una stringa di caratteri wide.  
@@ -106,7 +107,7 @@ int _wputenv(
   
  Non modificare direttamente una voce di ambiente. Usare invece `_putenv` o `_wputenv` per modificarla. In particolare, liberare direttamente gli elementi della matrice globale `_environ[]` potrebbe causare un indirizzamento di memoria non valido.  
   
- `getenv` e `_putenv` usano la variabile globale `_environ` per accedere e modificare la tabella dell'ambiente; `_wgetenv` e `_wputenv` usano `_wenviron`. `_putenv` e `_wputenv` possono modificare il valore di `_environ` e `_wenviron` e pertanto invalidano l'argomento `_envp` per `main` e l'argomento `wenvp` per `wmain`. È di conseguenza preferibile usare `_environ` o `_wenviron` per accedere alle informazioni dell'ambiente. Per altre informazioni sulla relazione tra `_putenv` e `_wputenv` e le variabili globali, vedere [_environ, _wenviron](../../c-runtime-library/environ-wenviron.md).  
+ `getenv` e `_putenv` usano la variabile globale `_environ` per accedere e modificare la tabella dell'ambiente; `_wgetenv` e `_wputenv` usano `_wenviron`. `_putenv`e `_wputenv` potrebbe modificare il valore di `_environ` e `_wenviron`, pertanto l'invalidamento il `_envp` argomento `main` e `_wenvp` argomento `wmain`. È di conseguenza preferibile usare `_environ` o `_wenviron` per accedere alle informazioni dell'ambiente. Per altre informazioni sulla relazione tra `_putenv` e `_wputenv` e le variabili globali, vedere [_environ, _wenviron](../../c-runtime-library/environ-wenviron.md).  
   
 > [!NOTE]
 >  Le famiglie di funzioni `_putenv` e `_getenv` non sono thread-safe. `_getenv` potrebbe restituire un puntatore di stringa mentre `_putenv` sta modificando la stringa, causando errori casuali. Assicurarsi che le chiamate alle funzioni siano sincronizzate.  
@@ -122,9 +123,6 @@ int _wputenv(
   
 ## <a name="example"></a>Esempio  
  Per un esempio su come usare `_putenv`, vedere [getenv, _wgetenv](../../c-runtime-library/reference/getenv-wgetenv.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Controllo di processi e ambiente](../../c-runtime-library/process-and-environment-control.md)   

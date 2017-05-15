@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 649c3d34e1ebcfc7af2fa3ef0b500dc1f630a967
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 930ef18229737fee03d03308c45f5ffb3615cdcd
+ms.contentlocale: it-it
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="cabs"></a>_cabs
@@ -80,7 +81,7 @@ double _cabs(
  `_cabs` restituisce il valore assoluto dell'argomento se l'operazione ha esito positivo. In caso di overflow, `_cabs` restituisce `HUGE_VAL` e imposta `errno` su `ERANGE`. È possibile modificare la gestione degli errori con [_matherr](../../c-runtime-library/reference/matherr.md).  
   
 ## <a name="remarks"></a>Note  
- La funzione `_cabs` calcola il valore assoluto di un numero complesso che deve essere una struttura di tipo [_complex](../../c-runtime-library/standard-types.md). La struttura `z` è costituita da un componente reale `x` e un componente immaginario `y`. Una chiamata a `_cabs` genera un valore equivalente a quello dell'espressione `sqrt`( `z.x``*``z.x``+``z.y`*`z.y` ).  
+ La funzione `_cabs` calcola il valore assoluto di un numero complesso che deve essere una struttura di tipo [_complex](../../c-runtime-library/standard-types.md). La struttura `z` è costituita da un componente reale `x` e un componente immaginario `y`. Una chiamata a `_cabs` produce un valore equivalente a quello dell'espressione `sqrt( z.x * z.x + z.y * z.y )`.  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -114,9 +115,6 @@ int main( void )
 ```Output  
 The absolute value of 3.000000 + 4.000000i is 5.000000  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)   

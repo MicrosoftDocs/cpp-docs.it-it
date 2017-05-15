@@ -57,10 +57,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: ac8ef965bd904ecfa17f78d6898c2e21ccb1591a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 5ff2c3bb0ce0a39e6481e2fbb5d690aa2972a0a0
+ms.contentlocale: it-it
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh, acoshf, acoshl
@@ -93,10 +94,10 @@ long double acoshl(
 ## <a name="return-value"></a>Valore restituito  
  Le funzioni `acosh` restituiscono il coseno iperbolico inverso (coseno iperbolico d'arco) di `x`. Queste funzioni sono valide nel dominio `x` ≥ 1. Se `x` è minore di 1, `errno` sarà impostato su `EDOM` e il risultato sarà una costante NaN non interattiva. Se `x` è una costante NaN non interattiva, un valore indefinito o infinito, sarà restituito lo stesso valore.  
   
-|Input|Eccezione SEH|Eccezione `_matherr`|  
+|Input|Eccezione SEH|Eccezione`_matherr` |  
 |-----------|-------------------|--------------------------|  
-|± QNAN, IND, INF|none|nessuno|  
-|x < 1|nessuno|nessuno|  
+|± QNAN, IND, INF|none|none|  
+|x < 1|none|nessuno|  
   
 ## <a name="remarks"></a>Note  
  Quando si usa C++, è possibile chiamare overload di `acosh` che accettano e restituiscono valori `float` o `long double`. In un programma C, `acosh` accetta e restituisce sempre `double`.  
@@ -136,9 +137,6 @@ int main( void )
 cosh( 0.785398 ) = 1.324609  
 acosh( 1.324609 ) = 0.785398  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)   

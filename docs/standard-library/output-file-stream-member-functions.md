@@ -12,6 +12,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - output streams, member functions
+f1_keywords: []
 ms.assetid: 38aaf710-8035-4a34-a0c4-123a5327f28a
 caps.latest.revision: 8
 author: corob-msft
@@ -31,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 62d10faef9b1958f0ad5cee7b8ff2b4e491c617a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: baa226c95d396232ea8ac545c839352c5df4c22f
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="output-file-stream-member-functions"></a>Funzioni membro del flussi di file di output
@@ -43,7 +45,7 @@ Le funzioni membro del flusso di output sono di tre tipi: quelle equivalenti a m
 ## <a name="the-open-function-for-output-streams"></a>Funzione open per flussi di output  
  Per usare un flusso di file di output ([ofstream](../standard-library/basic-ofstream-class.md)), è necessario associare tale flusso a un file su disco specifico nel costruttore o alla funzione **open**. Se si usa la funzione **open**, è possibile riusare lo stesso oggetto di flusso con una serie di file. In entrambi i casi, gli argomenti che descrivono i file sono gli stessi.  
   
- Quando si apre il file associato a un flusso di output, in genere si specifica un flag **open_mode**. È possibile combinare questi flag, definiti come enumeratori nella classe `ios`, con l'operatore Bitwise-OR ( &#124; ). Per un elenco di enumeratori, vedere [ios_base::openmode](../standard-library/ios-base-class.md#ios_base__openmode).  
+ Quando si apre il file associato a un flusso di output, in genere si specifica un flag **open_mode**. È possibile combinare questi flag, definiti come enumeratori nella classe `ios`, con l'operatore Bitwise-OR ( &#124; ). Per un elenco di enumeratori, vedere [ios_base::openmode](../standard-library/ios-base-class.md#openmode).  
   
  Tre situazioni di flusso di output comuni impiegano opzioni di modalità:  
   
@@ -81,7 +83,7 @@ ofile.open("FILE1",
 // FILE2 closed  // When ofile goes out of scope it is destroyed.  
 ```  
   
-## <a name="the-put-function"></a>Funzione put  
+## <a name="the-put"></a>Il put
  La funzione **put** scrive un carattere nel flusso di output. Le due istruzioni seguenti sono uguali per impostazione predefinita, ma la seconda è influenzata dagli argomenti format del flusso:  
   
 ```  
@@ -91,7 +93,7 @@ cout.put('A');
 cout <<'A'; // Format arguments 'width' and 'fill' apply   
 ```  
   
-## <a name="the-write-function"></a>Funzione write  
+## <a name="the-write"></a>L'operazione di scrittura
  La funzione **write** scrive un blocco di memoria in un flusso di file di output. L'argomento length specifica il numero di byte scritti. In questo esempio viene creato un flusso di file di output in cui viene scritto il valore binario della struttura `Date`:  
   
 ```  
@@ -123,7 +125,7 @@ int main( )
   
  Il distruttore del flusso di output chiude automaticamente un file del flusso solo se il costruttore o la funzione membro **open** ha aperto il file. Se viene passato al costruttore un descrittore di file per un file già aperto o viene usata la funzione membro **attach**, è necessario chiudere il file in modo esplicito.  
   
-##  <a name="a-namevclrferrorprocessingfunctionsanchor10a-error-processing-functions"></a><a name="vclrferrorprocessingfunctionsanchor10"></a> Funzioni per l'elaborazione degli errori  
+##  <a name="vclrferrorprocessingfunctionsanchor10"></a> Funzioni per l'elaborazione degli errori  
  Usare queste funzioni membro per verificare gli errori durante la scrittura in un flusso:  
   
 |Funzione|Valore restituito|  

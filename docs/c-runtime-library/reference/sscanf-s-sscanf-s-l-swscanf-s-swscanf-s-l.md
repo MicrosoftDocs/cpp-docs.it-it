@@ -1,66 +1,83 @@
 ---
-title: "sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_sscanf_s_l"
-  - "sscanf_s"
-  - "_swscanf_s_l"
-  - "swscanf_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_stscanf_s"
-  - "sscanf_s"
-  - "swscanf_s"
-  - "_swscanf_s_l"
-  - "_stscanf_s_l"
-  - "_sscanf_s_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_sscanf_s_l (funzione)"
-  - "_stscanf_s (funzione)"
-  - "_stscanf_s_l (funzione)"
-  - "_swscanf_s_l (funzione)"
-  - "lettura di dati, stringhe"
-  - "sscanf_s (funzione)"
-  - "sscanf_s_l (funzione)"
-  - "stringhe [C++], lettura"
-  - "stringhe [C++], lettura di dati"
-  - "stscanf_s (funzione)"
-  - "stscanf_s_l (funzione)"
-  - "swscanf_s (funzione)"
-  - "swscanf_s_l (funzione)"
+title: sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _sscanf_s_l
+- sscanf_s
+- _swscanf_s_l
+- swscanf_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _stscanf_s
+- sscanf_s
+- swscanf_s
+- _swscanf_s_l
+- _stscanf_s_l
+- _sscanf_s_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- stscanf_s_l function
+- stscanf_s function
+- swscanf_s function
+- swscanf_s_l function
+- sscanf_s_l function
+- _stscanf_s_l function
+- strings [C++], reading data from
+- sscanf_s function
+- _swscanf_s_l function
+- _stscanf_s function
+- reading data, strings
+- strings [C++], reading
+- _sscanf_s_l function
 ms.assetid: 956e65c8-00a5-43e8-a2f2-0f547ac9e56c
 caps.latest.revision: 30
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 30
----
-# sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 59693a41b76eb7d6d7bae4c50fa320d8f48c78d1
+ms.contentlocale: it-it
+ms.lasthandoff: 03/29/2017
 
-Legge i dati da una stringa formattati. Queste versioni di [sscanf, \_sscanf\_l, swscanf, \_swscanf\_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md) con miglioramenti della sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
+---
+# <a name="sscanfs-sscanfsl-swscanfs-swscanfsl"></a>sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l
+Legge i dati formattati da una stringa. Queste versioni di [sscanf, _sscanf_l, swscanf, _swscanf_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md) includono miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 int sscanf_s(  
@@ -87,34 +104,34 @@ int _swscanf_s_l(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `buffer`  
  Dati archiviati  
   
  `format`  
- Stringa di controllo del formato. Per altre informazioni, vedere [Campi per la specifica di formato: funzioni scanf e wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).  
+ Stringa di controllo del formato. Per altre informazioni, vedere [Campi di specifica di formato: funzioni scanf e wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).  
   
  `argument`  
  Argomenti facoltativi  
   
  `locale`  
- Impostazioni locali da utilizzare  
+ Impostazioni locali da usare  
   
-## Valore restituito  
- Ognuna di queste funzioni restituisce il numero di campi che vengono convertiti ed assegnati; correttamente il valore restituito non include i campi che sono stati letti ma non assegnati. Un valore restituito pari a 0 indica che nessun campo è stato assegnato. Il valore restituito è `EOF` per un errore o se viene raggiunta la fine della stringa prima della conversione prima.  
+## <a name="return-value"></a>Valore restituito  
+ Ognuna di queste funzioni restituisce il numero di campi che vengono convertiti e assegnati correttamente. Il valore restituito non include i campi che sono stati letti ma non assegnati. Un valore restituito pari a 0 indica che nessun campo è stato assegnato. Il valore restituito è `EOF` in caso di errore o se viene raggiunta la fine della stringa prima della prima conversione.  
   
- Se `buffer` o `format` è un `NULL` puntatore, il gestore di parametro non valido viene richiamato, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono \-1 e impostano `errno` su `EINVAL`  
+ Se `buffer` o `format` è un puntatore `NULL`, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostano `errno` su `EINVAL`  
   
- Per informazioni su questi e altri codici di errore, vedere [errno, \_doserrno, \_sys\_errlist, and \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Per informazioni su questi e altri codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Note  
- Il `sscanf_s` funzione legge i dati da `buffer` nella posizione che viene fornita da ciascun `argument`. Gli argomenti dopo la stringa di formato specificano i puntatori alle variabili che hanno un tipo che corrisponde a un identificatore di tipo in `format`. A differenza della versione meno sicura `sscanf`, un parametro di dimensione del buffer è obbligatorio quando si utilizzano i caratteri di campo di tipo `c`, `C`, `s`, `S`, o di stringa di set di controllo sono racchiusi tra parentesi `[]`. Le dimensioni del buffer in caratteri devono essere specificate come un parametro aggiuntivo immediatamente dopo ogni parametro di buffer che lo richiede. Ad esempio, se si legge in una stringa, la dimensione del buffer per tale stringa viene passata nel modo seguente:  
+## <a name="remarks"></a>Note  
+ La funzione `sscanf_s` legge i dati da `buffer` nella posizione specificata da ogni `argument`. Gli argomenti dopo la stringa di formato specificano i puntatori alle variabili che hanno un tipo corrispondente all'identificatore di tipo in `format`. Diversamente dalla versione meno sicura `sscanf`, è necessario un parametro per le dimensioni del buffer quando si usano i caratteri di campo di tipo `c`, `C`, `s`, `S` o set di controllo stringa racchiusi tra `[]`. Le dimensioni del buffer in caratteri vengono passate come parametro aggiuntivo subito dopo ogni parametro del buffer che le richiede. Ad esempio, se si sta leggendo una stringa, le dimensioni del buffer per tale stringa vengono passate nel modo seguente:  
   
  `wchar_t ws[10];`  
   
  `swscanf_s(in_str, L"%9s", ws, (unsigned)_countof(ws)); // buffer size is 10, width specification is 9`  
   
- La dimensione del buffer include il carattere di terminazione null. Un campo di specifica della larghezza può essere utilizzato per assicurarsi che il token che viene letto possa essere inserito nel buffer. Se non viene utilizzato alcun campo di specifica di larghezza e il token letto è troppo grande per entrare nel buffer, non vengono scritti dati nel buffer.  
+ La dimensione del buffer include il carattere di terminazione null. Potrebbe essere usato un campo di specifica della larghezza per assicurarsi che il token letto possa essere inserito nel buffer. Se non viene utilizzato alcun campo di specifica di larghezza e il token letto è troppo grande per entrare nel buffer, non vengono scritti dati nel buffer.  
   
  Nel caso dei caratteri, un singolo carattere può essere letto come segue:  
   
@@ -122,40 +139,40 @@ int _swscanf_s_l(
   
  `swscanf_s(in_str, L"%c", &wc, 1);`  
   
- In questo esempio legge un singolo carattere dalla stringa di input e quindi lo archivia in un buffer di caratteri wide. Durante la lettura di più caratteri per stringhe con terminazione non null, vengono utilizzati interi senza segno come specificare la larghezza e la dimensione del buffer.  
+ Questo esempio legge un singolo carattere dalla stringa di input e quindi lo archivia in un buffer di caratteri wide. Quando si leggono più caratteri per stringhe con terminazione non Null, vengono usati interi senza segno per specificare la larghezza e le dimensioni del buffer.  
   
  `char c[4];`  
   
  `sscanf_s(input, "%4c", &c, (unsigned)_countof(c)); // not null terminated`  
   
- Per altre informazioni, vedere [scanf\_s, \_scanf\_s\_l, wscanf\_s, \_wscanf\_s\_l](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) e [Caratteri di campo di tipo per scanf](../../c-runtime-library/scanf-type-field-characters.md).  
+ Per altre informazioni, vedere [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) e [Caratteri di campo di tipo per scanf](../../c-runtime-library/scanf-type-field-characters.md).  
   
 > [!NOTE]
->  Il parametro di dimensione è di tipo `unsigned` non `size_t`. Durante la compilazione per destinazioni a 64 bit, utilizzare un cast statico per convertire `_countof` o `sizeof` risultati per le dimensioni corrette.  
+>  Il parametro di dimensione è di tipo `unsigned` non `size_t`. Durante la compilazione per destinazioni a 64 bit, usare un cast statico per convertire i risultati di `_countof` o `sizeof` nelle dimensioni corrette.  
   
- Il `format` controlli argomento l'interpretazione dell'input campi e ha lo stesso modulo e funziona come il `format` argomento per il `scanf_s` \(funzione\). Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.  
+ L'argomento `format` controlla l'interpretazione dei campi di input e ha lo stesso formato e la stessa funzione dell'argomento `format` per la funzione `scanf_s`. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.  
   
- `swscanf_s` è una versione a caratteri wide di `sscanf_s;` argomenti `swscanf_s` sono stringhe a caratteri wide.`sscanf_s` non gestisce i caratteri multibyte in caratteri esadecimali.`swscanf_s` non gestisce esadecimale a larghezza intera Unicode o caratteri "area di compatibilità". In caso contrario, `swscanf_s` e `sscanf_s` si comportano in modo identico.  
+ `swscanf_s` è una versione a caratteri wide di `sscanf_s;`. Gli argomenti per `swscanf_s` sono stringhe di caratteri wide. `sscanf_s` non gestisce i caratteri esadecimali multibyte. `swscanf_s` non gestisce caratteri esadecimali a larghezza intera o caratteri nell'area di compatibilità Unicode. In caso contrario, `swscanf_s` e `sscanf_s` si comportano in modo identico.  
   
  Le versioni di queste funzioni con il suffisso `_l` sono identiche, ad eccezione del fatto che utilizzano il parametro delle impostazioni locali passato al posto delle impostazioni locali del thread corrente.  
   
-### Mapping di routine di testo generico  
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
-|Routine TCHAR.H|\_UNICODE e \_MBCS non definiti|\_MBCS definito|\_UNICODE definito|  
-|---------------------|-------------------------------------|---------------------|------------------------|  
+|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_stscanf_s`|`sscanf_s`|`sscanf_s`|`swscanf_s`|  
 |`_stscanf_s_l`|`_sscanf_s_l`|`_sscanf_s_l`|`_swscanf_s_l`|  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`sscanf_s`, `_sscanf_s_l`|\<stdio.h\>|  
-|`swscanf_s`, `_swscanf_s_l`|\<stdio.h\> o \<wchar.h\>|  
+|-------------|---------------------|  
+|`sscanf_s`, `_sscanf_s_l`|\<stdio.h>|  
+|`swscanf_s`, `_swscanf_s_l`|\<stdio.h> o \<wchar.h>|  
   
  Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_sscanf_s.c  
@@ -189,15 +206,15 @@ int main( void )
 ```  
   
 ```Output  
-Stringa = 15 caratteri = 1 Integer: = 15 reali: = 15.000000  
+String    = 15  
+Character = 1  
+Integer:  = 15  
+Real:     = 15.000000  
 ```  
   
-## Equivalente .NET Framework  
- Vedere `Parse` metodi, ad esempio [System::Double::Parse](https://msdn.microsoft.com/en-us/library/system.double.parse.aspx).  
-  
-## Vedere anche  
- [I\/O di flusso](../../c-runtime-library/stream-i-o.md)   
- [fscanf, \_fscanf\_l, fwscanf, \_fwscanf\_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
- [scanf, \_scanf\_l, wscanf, \_wscanf\_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [sprintf, \_sprintf\_l, swprintf, \_swprintf\_l, \_\_swprintf\_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [snprintf, \_snprintf, \_snprintf\_l, \_snwprintf, \_snwprintf\_l](../../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)
+## <a name="see-also"></a>Vedere anche  
+ [I/O di flusso](../../c-runtime-library/stream-i-o.md)   
+ [fscanf, _fscanf_l, fwscanf, _fwscanf_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
+ [scanf, _scanf_l, wscanf, _wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l](../../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)

@@ -48,10 +48,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 467f967446b0dd4976fa0fc695924a97b471a6b6
-ms.openlocfilehash: 1e721b0c0900ae476bbe4c531f265369d004ab37
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 052a4172dc6c729e1a05a4bc89ecca33b6aa6790
+ms.contentlocale: it-it
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="imaxabs"></a>imaxabs
@@ -109,9 +110,6 @@ int main(int argc, char *argv[])
 ```Output  
 The absolute value of -9223372036854775806 is 9223372036854775806  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- [System::Math::Abs](https://msdn.microsoft.com/en-us/library/system.math.abs.aspx)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Data Conversion](../../c-runtime-library/data-conversion.md)  (Conversione dei dati)  

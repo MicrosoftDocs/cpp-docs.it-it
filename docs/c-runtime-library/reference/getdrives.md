@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: b8052d82a223402849b6ba48ce5f6621a7d27ed9
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: 314c8633ce43a154533873efadc7f3a0006a1aff
+ms.contentlocale: it-it
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="getdrives"></a>_getdrives
@@ -82,9 +83,8 @@ unsigned long _getdrives( void );
   
 ## <a name="example"></a>Esempio  
   
-```  
-  
-      // crt_getdrives.c  
+```C  
+// crt_getdrives.c  
 // This program retrives and lists out  
 // all the logical drives that are   
 // currently mounted on the machine.  
@@ -126,9 +126,6 @@ C:
 D:  
 E:  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente in NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Controllo delle directory](../../c-runtime-library/directory-control.md)

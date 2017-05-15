@@ -12,10 +12,11 @@ f1_keywords:
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
 caps.latest.revision: 10
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: e32c8f5892764d2efc955bbf2d7930e0c8d3f3f0
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 53a31f533ee777dbbcc486283034094481ab0c31
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltnewgt-functions"></a>Funzioni &lt;new&gt;
@@ -34,7 +35,7 @@ extern const std::nothrow_t nothrow;
  L'oggetto viene usato come argomento di funzione in modo da stabilire una corrispondenza con il tipo di parametro [std::nothrow_t](../standard-library/nothrow-t-structure.md).  
   
 ### <a name="example"></a>Esempio  
-  Vedere [operator new](../standard-library/new-operators.md#operator_new) e [operator new&#91;&#93;](../standard-library/new-operators.md#operator_new_arr) per esempi relativi all'uso di `std::nothrow_t` come parametro di funzione.  
+  Vedere [operator new](../standard-library/new-operators.md#op_new) e [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr) per esempi relativi all'uso di `std::nothrow_t` come parametro di funzione.  
   
 ##  <a name="set_new_handler"></a>  set_new_handler  
  Installa una funzione utente che deve essere chiamata quando `operator new` non riesce ad allocare memoria.  
@@ -51,7 +52,7 @@ new_handler set_new_handler(new_handler Pnew) throw();
  0 nella prima chiamata e oggetto `new_handler` precedente nelle chiamate successive.  
   
 ### <a name="remarks"></a>Note  
- La funzione archivia `Pnew` in un puntatore [new_handler](../standard-library/new-typedefs.md#new_handler) statico gestito e quindi restituisce il valore archiviato in precedenza nel puntatore. Il nuovo gestore viene usato da [operator new](../standard-library/new-operators.md#operator_new)( **size_t**).  
+ La funzione archivia `Pnew` in un puntatore [new_handler](../standard-library/new-typedefs.md#new_handler) statico gestito e quindi restituisce il valore archiviato in precedenza nel puntatore. Il nuovo gestore viene usato da [operator new](../standard-library/new-operators.md#op_new)( **size_t**).  
   
 ### <a name="example"></a>Esempio  
   

@@ -35,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: ad237fd3f28e7adfd380e6c2adf0510bfcf5248d
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: e804f35db459c7fe50bb36fa8eeaf795d04cc621
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltnewgt"></a>&lt;new&gt;
@@ -76,10 +77,10 @@ Definisce diversi tipi e funzioni che controllano l'allocazione e la liberazione
   
 |||  
 |-|-|  
-|[operator delete](../standard-library/new-operators.md#operator_delete)|Funzione chiamata da un'espressione delete per rendere nuovamente disponibile l'archiviazione di singoli oggetti.|  
-|[operator delete&#91;&#93;](../standard-library/new-operators.md#operator_delete_arr)|Funzione chiamata da un'espressione delete per deallocare memoria per una matrice di oggetti.|  
-|[operator new](../standard-library/new-operators.md#operator_new)|La funzione chiamata da un'espressione new per allocare memoria per singoli oggetti.|  
-|[operator new&#91;&#93;](../standard-library/new-operators.md#operator_new_arr)|La funzione chiamata da un'espressione new per allocare memoria per una matrice di oggetti.|  
+|[operator delete](../standard-library/new-operators.md#op_delete)|Funzione chiamata da un'espressione delete per rendere nuovamente disponibile l'archiviazione di singoli oggetti.|  
+|[operator delete&#91;&#93;](../standard-library/new-operators.md#op_delete_arr)|Funzione chiamata da un'espressione delete per deallocare memoria per una matrice di oggetti.|  
+|[operator new](../standard-library/new-operators.md#op_new)|La funzione chiamata da un'espressione new per allocare memoria per singoli oggetti.|  
+|[operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)|La funzione chiamata da un'espressione new per allocare memoria per una matrice di oggetti.|  
   
 ### <a name="classes"></a>Classi  
   

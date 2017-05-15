@@ -1,71 +1,88 @@
 ---
-title: "vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_vswprintf_l"
-  - "_vsprintf_l"
-  - "vsprintf"
-  - "vswprintf"
-  - "__vswprintf_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "vstprintf"
-  - "vswprintf"
-  - "_vstprintf"
-  - "vsprintf"
-  - "__vswprintf_l"
-  - "_vsprintf_l"
-  - "_vswprintf_l"
-  - "vswprintf_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__vswprintf_l (funzione)"
-  - "_vsprintf_l (funzione)"
-  - "_vstprintf (funzione)"
-  - "_vstprintf_l (funzione)"
-  - "_vswprintf_l (funzione)"
-  - "sovraccarichi del buffer"
-  - "buffer, evitare i sovraccarichi"
-  - "buffer, sovraccarichi del buffer"
-  - "testo formattato"
-  - "vsprintf (funzione)"
-  - "vsprintf_l (funzione)"
-  - "vstprintf (funzione)"
-  - "vstprintf_l (funzione)"
-  - "vswprintf (funzione)"
-  - "vswprintf_l (funzione)"
+title: vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _vswprintf_l
+- _vsprintf_l
+- vsprintf
+- vswprintf
+- __vswprintf_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- vstprintf
+- vswprintf
+- _vstprintf
+- vsprintf
+- __vswprintf_l
+- _vsprintf_l
+- _vswprintf_l
+- vswprintf_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- __vswprintf_l function
+- _vstprintf_l function
+- formatted text
+- vstprintf_l function
+- _vswprintf_l function
+- vsprintf_l function
+- buffers, avoiding overruns
+- buffer overruns
+- vswprintf_l function
+- buffers, buffer overruns
+- vstprintf function
+- _vsprintf_l function
+- vswprintf function
+- vsprintf function
+- _vstprintf function
 ms.assetid: b8ef1c0d-58f9-4a18-841a-f1a989e1c29b
 caps.latest.revision: 32
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 32
----
-# vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: f738bc22cc5b3feb854dc958607509352202a738
+ms.contentlocale: it-it
+ms.lasthandoff: 03/29/2017
 
-Scrivere l'output formattato utilizzando un puntatore a un elenco di argomenti.  Sono disponibili versioni più sicure di queste funzioni; vedere [vsprintf\_s, \_vsprintf\_s\_l, vswprintf\_s, \_vswprintf\_s\_l](../../c-runtime-library/reference/vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md).  
+---
+# <a name="vsprintf-vsprintfl-vswprintf-vswprintfl-vswprintfl"></a>vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l
+Scrivere l'output formattato mediante un puntatore a un elenco di argomenti. Sono disponibili versioni più sicure di queste funzioni. Vedere [vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l](../../c-runtime-library/reference/vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 int vsprintf(  
@@ -126,58 +143,58 @@ int _vswprintf_l(
 ); // C++ only  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `buffer`  
  Percorso di archiviazione per l'output.  
   
  `count`  
- Numero massimo di caratteri da archiviare, nella versione `UNICODE` per questa funzione.  
+ Numero massimo di caratteri da archiviare nella versione `UNICODE` di questa funzione.  
   
  `format`  
- Specifica di formato,  
+ Specifica di formato.  
   
  `argptr`  
- Puntatore all'elenco di argomenti.  
+ Puntatore a un elenco di argomenti.  
   
  `locale`  
- Impostazioni locali da utilizzare.  
+ Impostazioni locali da usare.  
   
-## Valore restituito  
- `vsprintf` e `vswprintf` restituiscono il numero di caratteri scritti, escluso il carattere di terminazione null, o un valore negativo se un errore di output viene visualizzato.  Se `buffer` o `format` è un puntatore null, queste funzioni richiamano un gestore di parametro non valido, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).  Se l'esecuzione può continuare, la funzione restituisce \-1 e imposta `errno` su `EINVAL`.  
+## <a name="return-value"></a>Valore restituito  
+ `vsprintf` e `vswprintf` restituiscono il numero di caratteri scritti, escludendo il carattere Null di terminazione, o un valore negativo se si verifica un errore di output. Se `buffer` o `format` è un puntatore Null, queste funzioni richiamano il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostano `errno` su `EINVAL`.  
   
- Per ulteriori informazioni su questi, e altri, codici di errore vedere [\_doserrno, errno, \_sys\_errlist, and \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .  
+ Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Note  
- Ognuna di queste funzioni accetta un puntatore ad un elenco di argomenti, quindi formatta e scrive i dati specificati nella locazione di memoria indicata da `buffer`.  
+## <a name="remarks"></a>Note  
+ Ognuna di queste funzioni accetta un puntatore a un elenco di argomenti, quindi formatta e scrive i dati specifici nella memoria a cui punta `buffer`.  
   
- Le versioni di queste funzioni con il suffisso `_l` sono identiche ad eccezione per il fatto che utilizzano il parametro delle impostazioni locali passato in ingresso invece di utilizzare quelle del thread corrente.  
+ Le versioni di queste funzioni con il suffisso `_l` sono identiche ad eccezione per il fatto che utilizzano il parametro delle impostazioni locali passato al posto di quelle del thread corrente.  
   
 > [!IMPORTANT]
->  Con l'utilizzo di `vsprintf` qui non è possibile limitare il numero di caratteri scritti, ovvero il codice che utilizza questa funzione è soggetto a sovraccarichi del buffer.  Utilizzare invece [\_vsnprintf](../../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md), oppure chiamare [\_vscprintf](../../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) per determinare la quantità di un buffer necessaria.  Inoltre, assicurarsi che `format` non sia una stringa definita dall'utente.  Per ulteriori informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
+>  Se si usa `vsprintf`, non è possibile limitare il numero di caratteri scritti e questo significa che il codice che usa questa funzione è soggetto a sovraccarichi del buffer. Usare [vsnprintf](../../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) in alternativa o chiamare [_vscprintf](../../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) per determinare le dimensioni necessarie per un buffer. Assicurarsi anche che `format` non sia una stringa definita dall'utente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
   
- `vswprintf` è conforme allo standard ISO C, che richiede il secondo parametro, `count`, di tipo `size_t`.  Per definire un comportamento precedente non standard, definire `_CRT_NON_CONFORMING_SWPRINTFS.` il comportamento precedente non può trovarsi in una versione futura, il codice deve essere modificato per utilizzare il nuovo comportamento conforme.  
+ `vswprintf` è conforme allo standard ISO C che richiede il secondo parametro, `count`, di tipo `size_t`. Per forzare il comportamento precedente non standard, definire `_CRT_NON_CONFORMING_SWPRINTFS.`. Il comportamento precedente potrebbe non essere disponibile in una versione futura, quindi il codice dovrebbe essere modificato per usare il nuovo comportamento conforme.  
   
- In C\+\+, queste funzioni presentano overload dei modelli che richiamano le relative controparti sicure e più recenti.  Per ulteriori informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ queste funzioni presentano overload di modello che richiamano le relative controparti più recenti e sicure. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).  
   
-### Mapping di routine su testo generico  
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
-|Routine TCHAR.H|\_UNICODE & \_MBCS non definiti|\_MBCS definito|\_UNICODE definito|  
-|---------------------|-------------------------------------|---------------------|------------------------|  
+|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_vstprintf`|`vsprintf`|`vsprintf`|`vswprintf`|  
 |`_vstprintf_l`|`_vsprintf_l`|`_vsprintf_l`|`_vswprintf_l`|  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|Intestazioni facoltative|  
-|-------------|-------------------------------|------------------------------|  
-|`vsprintf`, `_vsprintf_l`|\<stdio.h\> e \<stdarg.h\>|\<varargs.h\>\*|  
-|`vswprintf`, `_vswprintf_l`|\<stdio.h\> o \<wchar.h\>, e \<stdarg.h\>|\<varargs.h\>\*|  
+|-------------|---------------------|----------------------|  
+|`vsprintf`, `_vsprintf_l`|\<stdio.h> e \<stdarg.h>|\<varargs.h>*|  
+|`vswprintf`, `_vswprintf_l`|\<stdio.h> o \<wchar.h> e \<stdarg.h>|\<varargs.h>*|  
   
- \* Necessario per la compatibilità con UNIX V.  
+ \* Richiesto per la compatibilità con UNIX V.  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'Introduzione.  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_vsprintf.c  
@@ -207,7 +224,8 @@ void test( char * format, ... )
     // Note: vsprintf is deprecated; consider using vsprintf_s instead  
     puts( buffer );  
   
-    free( buffer );  
+    free( buffer ); 
+    va_end( args ); 
 }  
   
 int main( void )  
@@ -217,16 +235,16 @@ int main( void )
 }  
 ```  
   
-  **123 \< 456**  
-**Questa è una stringa**   
-## Equivalente .NET Framework  
- [System::String::Format](https://msdn.microsoft.com/en-us/library/system.string.format.aspx)  
+```Output  
+123 < 456  
+This is a string  
+```  
   
-## Vedere anche  
- [I\/O di flusso](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>Vedere anche  
+ [I/O di flusso](../../c-runtime-library/stream-i-o.md)   
  [Funzioni vprintf](../../c-runtime-library/vprintf-functions.md)   
- [Sintassi per la specifica del formato: funzioni printf wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)   
- [fprintf, \_fprintf\_l, fwprintf, \_fwprintf\_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [printf, \_printf\_l, wprintf, \_wprintf\_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [sprintf, \_sprintf\_l, swprintf, \_swprintf\_l, \_\_swprintf\_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [va\_arg, va\_copy, va\_end, va\_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)
+ [Sintassi per la specifica del formato: funzioni printf e wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)   
+ [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
+ [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [va_arg, va_copy, va_end, va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)

@@ -6,22 +6,29 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- thread/std::get_id
+- thread/std::sleep_for
+- thread/std::sleep_until
+- thread/std::swap
+- thread/std::yield
 ms.assetid: bb1aa1ef-fe3f-4e2c-8b6e-e22dbf2f5a19
 caps.latest.revision: 12
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: de302b9a2d971b2a39d4ce775799f27dd7244a5c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 3c603ac75955c057cfba009494a9a430fd987a69
+ms.contentlocale: it-it
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="ltthreadgt-functions"></a>Funzioni &lt;thread&gt;
 ||||  
 |-|-|-|  
-|[get_id](#get_id_function)|[sleep_for](#sleep_for_function)|[sleep_until](#sleep_until_function)|  
-|[swap](#swap_function)|[yield](#yield_function)|  
+|[get_id](#get_id)|[sleep_for](#sleep_for)|[sleep_until](#sleep_until)|  
+|[swap](#swap)|[yield](#yield)|  
   
-##  <a name="a-namegetidfunctiona--getid"></a><a name="get_id_function"></a>  get_id  
+##  <a name="get_id"></a>  get_id  
  Identifica in modo univoco il thread di esecuzione corrente.  
   
 ```  
@@ -31,7 +38,7 @@ thread::id this_thread::get_id() noexcept;
 ### <a name="return-value"></a>Valore restituito  
  Oggetto di tipo [thread::id](../standard-library/thread-class.md) che identifica in modo univoco il thread di esecuzione corrente.  
   
-##  <a name="a-namesleepforfunctiona--sleepfor"></a><a name="sleep_for_function"></a>  sleep_for  
+##  <a name="sleep_for"></a>  sleep_for  
  Blocca il thread chiamante.  
   
 ```  
@@ -47,7 +54,7 @@ inline void sleep_for(const chrono::duration<Rep, Period>& Rel_time);
 ### <a name="remarks"></a>Note  
  La funzione blocca il thread chiamante almeno per il tempo specificato da `Rel_time`. Questa funzione non genera eccezioni.  
   
-##  <a name="a-namesleepuntilfunctiona--sleepuntil"></a><a name="sleep_until_function"></a>  sleep_until  
+##  <a name="sleep_until"></a>  sleep_until  
  La funzione blocca il thread chiamante almeno fino all'ora specificata.  
   
 ```  
@@ -64,7 +71,7 @@ void sleep_until(const xtime *Abs_time);
 ### <a name="remarks"></a>Note  
  Questa funzione non genera eccezioni.  
   
-##  <a name="a-nameswapfunctiona--swap"></a><a name="swap_function"></a>  swap  
+##  <a name="swap"></a>  swap  
  Scambia gli stati dei due oggetti `thread`.  
   
 ```  
@@ -81,7 +88,7 @@ void swap(thread& Left, thread& Right) noexcept;
 ### <a name="remarks"></a>Note  
  La funzione chiama `Left.swap(Right)`.  
   
-##  <a name="a-nameyieldfunctiona--yield"></a><a name="yield_function"></a>  yield  
+##  <a name="yield"></a>  yield  
  Segnala al sistema operativo di eseguire altri thread, anche se in genere l'esecuzione del thread corrente dovrebbe continuare.  
   
 ```  

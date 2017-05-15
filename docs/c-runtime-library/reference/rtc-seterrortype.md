@@ -50,10 +50,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: da5f95812b750da5f337eb459cf136b7eb827c5c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 78f056e65523a39477bf138e6bd1664e0945a899
+ms.contentlocale: it-it
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="rtcseterrortype"></a>_RTC_SetErrorType
@@ -74,7 +75,7 @@ Associa un errore che viene rilevato dai controlli degli errori di run-time a un
  Numero compreso tra zero e uno minore del valore restituito da [_RTC_NumErrors](../../c-runtime-library/reference/rtc-numerrors.md).  
   
  *ErrType*  
- Valore da assegnare a questo *errnum*. Ad esempio, si può usare **_CRT_ERROR**. Se si usa `_CrtDbgReport` come gestore di errori, *ErrType* può rappresentare solo uno dei simboli definiti in [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md). Se si usa un gestore di errori personalizzato ([_RTC_SetErrorFunc](../../c-runtime-library/reference/rtc-seterrorfunc.md)), è possibile avere un numero di *ErrType* pari al numero di *errnum*.  
+ Valore da assegnare a questo *errnum*. Ad esempio, si può usare **_CRT_ERROR**. Se si usa `_CrtDbgReport` come gestore di errori, *ErrType* può rappresentare solo uno dei simboli definiti in [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md). Se si ha un proprio gestore di errori ([_RTC_SetErrorFunc](../../c-runtime-library/reference/rtc-seterrorfunc.md)), è possibile avere un numero di *ErrType*pari al numero di *errnum*.  
   
  Un valore *ErrType* di _RTC_ERRTYPE_IGNORE ha un significato speciale per `_CrtSetReportMode`. L'errore viene ignorato.  
   
@@ -96,9 +97,6 @@ Associa un errore che viene rilevato dai controlli degli errori di run-time a un
   
 ## <a name="libraries"></a>Librerie  
  Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
 ## <a name="see-also"></a>Vedere anche  
  [_RTC_GetErrDesc](../../c-runtime-library/reference/rtc-geterrdesc.md)   

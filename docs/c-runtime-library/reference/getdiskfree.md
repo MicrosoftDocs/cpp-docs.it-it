@@ -53,10 +53,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 5d4d3fea944955b75002e88e3692d42954612a3a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: 725a45288dc39ac36966d877017ad65334800c11
+ms.contentlocale: it-it
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="getdiskfree"></a>_getdiskfree
@@ -120,9 +121,8 @@ struct _diskfree_t {
   
 ## <a name="example"></a>Esempio  
   
-```  
-  
-      // crt_getdiskfree.c  
+```C  
+// crt_getdiskfree.c  
 // compile with: /c  
 #include <windows.h>  
 #include <direct.h>  
@@ -220,9 +220,6 @@ void utoiRightJustified(TCHAR* szLeft, TCHAR* szRight, unsigned uVal) {
 |  E: | The device is not ready.    |                 |              |  
 ======================================================================  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Controllo delle directory](../../c-runtime-library/directory-control.md)

@@ -9,8 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::const_mem_fun1_ref_t
-- std.const_mem_fun1_ref_t
 - xfunctional/std::const_mem_fun1_ref_t
 - const_mem_fun1_ref_t
 dev_langs:
@@ -36,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 88dddcd0b43361adc0b06d231f0a6a138999200f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: d66879ccf3c8fdf572b3f636706b0128a489df5c
+ms.contentlocale: it-it
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="constmemfun1reft-class"></a>Classe const_mem_fun1_ref_t
@@ -74,7 +73,7 @@ class const_mem_fun1_ref_t
  La classe modello archivia una copia di `Pm`, che deve essere un puntatore a una funzione membro della classe **Type**, in un oggetto membro privato. Definisce la relativa funzione membro `operator()` che restituisce ( `left`.\* *Pm*)( `right`) **const**.  
   
 ## <a name="example"></a>Esempio  
- Il costruttore di `const_mem_fun1_ref_t` non viene usato in genere direttamente; per adattare le funzioni membro, viene usata la funzione di supporto `mem_fun_ref`. Per esempi di come usare gli adattatori di funzione membro, vedere [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref_function).  
+ Il costruttore di `const_mem_fun1_ref_t` non viene usato in genere direttamente; per adattare le funzioni membro, viene usata la funzione di supporto `mem_fun_ref`. Per esempi di come usare gli adattatori di funzione membro, vedere [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref).  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** \<functional>  

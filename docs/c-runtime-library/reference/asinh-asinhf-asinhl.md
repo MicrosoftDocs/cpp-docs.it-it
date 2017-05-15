@@ -54,10 +54,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 35e456abc1682624b73f75b32ea4ec2fedee1a37
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 459b1a8c80f4131c0e23f7ab92e304e7353290d8
+ms.contentlocale: it-it
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh, asinhf, asinhl
@@ -90,7 +91,7 @@ long double asinhl(
 ## <a name="return-value"></a>Valore restituito  
  Le funzioni `asinh` restituiscono il seno iperbolico inverso (seno iperbolico d'arco) di `x`. Questa funzione è valida nel dominio a virgola mobile. Se `x` è una costante NaN non interattiva, un valore indefinito o infinito, sarà restituito lo stesso valore.  
   
-|Input|Eccezione SEH|Eccezione `_matherr`|  
+|Input|Eccezione SEH|Eccezione`_matherr` |  
 |-----------|-------------------|--------------------------|  
 |± QNAN, IND, INF|none|nessuno|  
   
@@ -132,9 +133,6 @@ int main( void )
 sinh( 0.785398 ) = 0.868671  
 asinh( 0.868671 ) = 0.785398  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)   

@@ -2,9 +2,10 @@
 layout: HubPage
 title: Documentazione di Visual C++ | Microsoft Docs
 description: Informazioni su come usare C++ per lo sviluppo di applicazioni, servizi e strumenti per piattaforme e dispositivi.
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: fa2cdbf2d54994784bfc8a0bd0e542b3f5de309b
 ms.openlocfilehash: a4623b2ccb2ea1f10b8060afa691c20d22a9c181
+ms.contentlocale: it-it
 ms.lasthandoff: 02/24/2017
 
 ---

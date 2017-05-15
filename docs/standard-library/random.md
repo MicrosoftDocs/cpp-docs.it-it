@@ -33,10 +33,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: c7f3b346bc8abeab0c6bd913fc0b554bef4ed208
-ms.openlocfilehash: a817bc264a762d6043b80a68d966a9e8420c72b5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: 89cbb528d14117feac1f04863f0f4082969f22d9
+ms.contentlocale: it-it
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
@@ -64,7 +65,7 @@ Definisce strutture per la generazione casuale di numeri, permettendo la creazio
 ### <a name="quick-tips"></a>Suggerimenti rapidi  
  Ecco alcuni suggerimenti da ricordare quando si usa `<random>`:  
   
--   Nella maggior parte dei casi, i generatori URNG producono bit non elaborati che devono essere modellati da distribuzioni. Un'eccezione è costituita da [std::shuffle()](../standard-library/algorithm-functions.md#std__shuffle), poiché usa direttamente un generatore URNG.  
+-   Nella maggior parte dei casi, i generatori URNG producono bit non elaborati che devono essere modellati da distribuzioni. Un'eccezione è costituita da [std::shuffle()](../standard-library/algorithm-functions.md#shuffle), poiché usa direttamente un generatore URNG.  
   
 -   Una singola creazione di istanza di un generatore URNG o di una distribuzione non può essere chiamata contemporaneamente in modo sicuro, poiché l'esecuzione di un generatore URNG o di una distribuzione costituisce un'operazione di modifica. Per altre informazioni, vedere [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md).  
   
@@ -74,7 +75,7 @@ Definisce strutture per la generazione casuale di numeri, permettendo la creazio
   
  Nell'intestazione `<random>` sono disponibili molte opzioni selezionabili e qualsiasi opzione indicata è preferibile alla funzione `rand()` obsoleta di Runtime C. Per informazioni sui problemi relativi a `rand()` e sul modo in cui `<random>` li gestisce, vedere [questo video](http://go.microsoft.com/fwlink/LinkId=397615).  
   
-##  <a name="a-namecodea-examples"></a><a name="code"></a> Esempi  
+##  <a name="code"></a> Esempi  
  L'esempio di codice seguente illustra come generare alcuni numeri casuali, in questo caso cinque, usando un generatore creato con un valore di inizializzazione non deterministico.  
   
 ```cpp  
@@ -228,9 +229,9 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
   
 Questo codice illustra due sequenze casuali: la creazione di una sequenza casuale per un vettore di interi e la riproduzione casuale di una matrice di dati indicizzati, con una funzione modello di esempio. La prima chiamata alla funzione di test usa il `random_device` sicuro a livello di crittografia, non deterministico, non sottoponibile a seeding, non ripetibile del generatore URNG. La seconda esecuzione dei test usa `mersenne_twister_engine` come generatore URNG, con seeding costante a 32 bit deterministico. I risultati sono quindi ripetibili. La terza esecuzione dei test esegue il seeding di `mersenne_twister_engine` con un risultato non deterministico a 32 bit da `random_device`. La quarta esecuzione dei test procede a un'ulteriore espansione, usando una [sequenza di seeding](../standard-library/seed-seq-class.md) compilata con risultati di `random_device`, che consente di ottenere in modo efficace un risultato superiore a una casualità deterministica a 32 bit, ma non ancora sicuro a livello di crittografia. Per altre informazioni, continuare a leggere.  
   
-##  <a name="a-namelistinga-categorized-listing"></a><a name="listing"></a> Elenchi categorizzati  
+##  <a name="listing"></a> Elenchi categorizzati  
   
-###  <a name="a-nameurngsa-uniform-random-number-generators"></a><a name="urngs"></a> Generatori di numeri casuali uniformi  
+###  <a name="urngs"></a> Generatori di numeri casuali uniformi  
  I generatori URNG sono spesso descritti tramite e proprietà seguenti:  
   
 1. **Durata periodo**: numero di iterazioni necessarie per la ripetizione della sequenza di numeri generati. È preferibile specificare un periodo lungo.  
@@ -241,13 +242,13 @@ Questo codice illustra due sequenze casuali: la creazione di una sequenza casual
   
  Nella sezione seguente sono elencati i generatori di numeri casuali uniformi disponibili nell'intestazione di `<random>`.  
   
-####  <a name="a-namerda-non-deterministic-generator"></a><a name="rd"></a> Generatore non deterministico  
+####  <a name="rd"></a> Generatore non deterministico  
   
 |||  
 |-|-|  
 |[Classe random_device](../standard-library/random-device-class.md)|Genera una sequenza casuale non deterministica e sicura a livello di crittografia usando un dispositivo esterno. È usato in genere per il seeding di un motore. Offre prestazioni ridotte ma qualità molto elevata. Per altre informazioni, vedere [Note](#comments).|  
   
-####  <a name="a-nametypedefsa-engine-typedefs-with-predefined-parameters"></a><a name="typedefs"></a> Typedef di motore con parametri predefiniti  
+####  <a name="typedefs"></a> Typedef di motore con parametri predefiniti  
  Per la creazione di istanze di motori e adattatori del motore. Per altre informazioni, vedere [Motori e distribuzioni](#engdist).  
   
 - `default_random_engine` Motore predefinito.   
@@ -280,7 +281,7 @@ Questo codice illustra due sequenze casuali: la creazione di una sequenza casual
 - `ranlux48_base` Usato come base per `ranlux48`.   
  `typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;`  
   
-####  <a name="a-nameenga-engine-templates"></a><a name="eng"></a> Modelli di motore  
+####  <a name="eng"></a> Modelli di motore  
  I modelli di motore sono usati come generatori URNG autonomi o come motori di base passati ad [adattatori del motore](#engadapt). In genere sono create istanze corrispondenti con un [typedef di motore predefinito](#typedefs) e le istanze sono passate a una [distribuzione](#distributions). Per altre informazioni, vedere la sezione [Motori e distribuzioni](#engdist).  
   
 |||  
@@ -289,7 +290,7 @@ Questo codice illustra due sequenze casuali: la creazione di una sequenza casual
 |[Classe mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md)|Genera una sequenza casuale usando l'algoritmo twister Mersenne. È estremamente complesso e offre la qualità più elevata, ad eccezione della classe random_device class. Prestazioni molto elevate.|  
 |[Classe subtract_with_carry_engine](../standard-library/subtract-with-carry-engine-class.md)|Genera una sequenza casuale usando l'algoritmo subtract-with-carry. Rappresenta un miglioramento rispetto `linear_congruential_engine`, ma offre qualità e prestazioni inferiori rispetto a `mersenne_twister_engine`.|  
   
-####  <a name="a-nameengadapta-engine-adaptor-templates"></a><a name="engadapt"></a> Modelli di adattatori del motore  
+####  <a name="engadapt"></a> Modelli di adattatori del motore  
  Gli adattatori del motore sono modelli che adattano altri motori (di base). In genere sono create istanze corrispondenti con un [typedef di motore predefinito](#typedefs) e le istanze sono passate a una [distribuzione](#distributions). Per altre informazioni, vedere la sezione [Motori e distribuzioni](#engdist).  
   
 |||  
@@ -300,7 +301,7 @@ Questo codice illustra due sequenze casuali: la creazione di una sequenza casual
   
  [[Modelli di motore](#eng)]  
   
-###  <a name="a-namedistributionsa-random-number-distributions"></a><a name="distributions"></a> Distribuzioni di numeri casuali  
+###  <a name="distributions"></a> Distribuzioni di numeri casuali  
  Nelle sezioni seguenti sono elencate le distribuzioni disponibili nell'intestazione `<random>`. Le distribuzioni sono un meccanismo post-elaborazione che usano in genere l'output del generatore URNG come input e distribuiscono l'output in base a una funzione di densità di probabilità statistica definita. Per altre informazioni, vedere la sezione [Motori e distribuzioni](#engdist).  
   
 #### <a name="uniform-distributions"></a>Distribuzioni uniformi  
@@ -330,7 +331,7 @@ Questo codice illustra due sequenze casuali: la creazione di una sequenza casual
 |-|-|  
 |[Classe cauchy_distribution](../standard-library/cauchy-distribution-class.md)|Produce una distribuzione Cauchy di valori reali (a virgola mobile).|  
 |[Classe chi_squared_distribution](../standard-library/chi-squared-distribution-class.md)|Produce una distribuzione del chi quadrato di valori reali (a virgola mobile).|  
-|[Classe fisher_f_distribution](../standard-library/fisher-f-distribution-class.md)|Produce una distribuzione F (nota anche come distribuzione F di Snedecor o distribuzione Fisher–Snedecor) di valori reali (a virgola mobile).|  
+|[Classe fisher_f_distribution](../standard-library/fisher-f-distribution-class.md)|Produce una distribuzione F (nota anche come distribuzione F di Snedecor o distribuzione Fisher-Snedecor) di valori reali (a virgola mobile).|  
 |[Classe lognormal_distribution](../standard-library/lognormal-distribution-class.md)|Produce una distribuzione lognormale di valori reali (a virgola mobile).|  
 |[Classe normal_distribution](../standard-library/normal-distribution-class.md)|Produce una distribuzione normale (gaussiana) di valori reali (a virgola mobile).|  
 |[Classe student_t_distribution](../standard-library/student-t-distribution-class.md)|Produce una distribuzione *t* di valori reali (a virgola mobile).|  
@@ -376,7 +377,7 @@ Questo codice illustra due sequenze casuali: la creazione di una sequenza casual
 |`operator<<`|Scrive le informazioni sullo stato in un flusso.|  
 |`operator>>`|Estrae le informazioni sullo stato da un flusso.|  
   
-##  <a name="a-nameengdista-engines-and-distributions"></a><a name="engdist"></a> Motori e distribuzioni  
+##  <a name="engdist"></a> Motori e distribuzioni  
  Per informazioni su ogni categoria di classi di modelli definita in `<random>`, fare riferimento alle sezioni seguenti. Entrambe le categorie di classi di modelli accettano un tipo come argomento e usano i nomi di parametri di modello condivisi per descrivere le proprietà del tipo consentite come tipo di argomento effettivo, come indicato di seguito:  
   
 - `IntType` indica un `short`, `int`, `long`, `long long`, `unsigned short`, `unsigned int`, `unsigned long` o `unsigned long long`.  
@@ -459,7 +460,7 @@ Questo codice illustra due sequenze casuali: la creazione di una sequenza casual
   
  Per altre informazioni, vedere gli argomenti secondari di riferimento seguenti. I collegamenti corrispondenti sono disponibili in precedenza in questo articolo.  
   
-##  <a name="a-namecommentsa-remarks"></a><a name="comments"></a> Note  
+##  <a name="comments"></a> Note  
  In Visual Studio sono disponibili due generatori URNG molto utili, ovvero `mt19937` e `random_device`, come mostrato in questa tabella di confronto:  
   
 |URNG|Fast|Sicuro a livello di crittografia|Compatibile con seeding|Deterministico|  

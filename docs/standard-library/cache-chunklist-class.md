@@ -1,68 +1,134 @@
 ---
-title: "Classe cache_chunklist | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "allocators/stdext::cache_chunklist"
-  - "stdext.cache_chunklist"
-  - "stdext::cache_chunklist"
-  - "cache_chunklist"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cache_chunklist (classe)"
+title: Classe cache_chunklist | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- allocators/stdext::cache_chunklist
+- stdext::cache_chunklist
+- cache_chunklist
+- allocators/stdext::cache_chunklist::allocate
+- allocators/stdext::cache_chunklist::deallocate
+dev_langs:
+- C++
+helpviewer_keywords:
+- cache_chunklist class
 ms.assetid: af19eccc-4ae7-4a34-bbb2-81e397424cb9
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# Classe cache_chunklist
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 283186349d84225fdf9d1d52ec04817a12f3d27f
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
-Definisce [allocatore di blocco](../standard-library/allocators-header.md) che per allocare e liberare blocchi di memoria di una singola dimensione.  
+---
+# <a name="cachechunklist-class"></a>Classe cache_chunklist
+Definisce un [allocatore di blocco](../standard-library/allocators-header.md) che alloca e dealloca blocchi di memoria di un'unica dimensione.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
+```
+template <std::size_t Sz, std::size_t Nelts = 20>  
+class cache_chunklist
 ```  
-template <std::size_t Sz, std::size_t Nelts = 20> class cache_chunklist  
-```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|`Sz`|Il numero di elementi nella matrice da allocare.|  
+|`Sz`|Numero di elementi della matrice da allocare.|  
   
-## Note  
- Questa classe modello utilizza `operator new` per allocare i blocchi di memoria non elaborata, suballocating blocchi per allocare la memoria per un blocco di memoria quando è necessario; archivia i blocchi di memoria eliminati in free list separate per ogni blocco e utilizza `operator delete` per rilasciare un blocco quando nessuno dei blocchi di memoria viene utilizzato.  
+## <a name="remarks"></a>Note  
+ Questa classe modello usa `operator new` per allocare porzioni di memoria non elaborata, con sottoallocazione dei blocchi per allocare memoria per un blocco di memoria quando necessario; archivia i blocchi di memoria deallocati in un elenco di disponibilità separato per ogni porzione e usa `operator delete` per deallocare una porzione quando nessuno dei relativi blocchi di memoria è in uso.  
   
- Ciascun blocco di memoria utilizza i byte di `Sz` di memoria utilizzabile e di un puntatore al blocco a cui appartiene.  Ciascun blocco utilizza blocchi di memoria di `Nelts`, tre puntatori, un int e i dati che `operator new` e `operator delete` richiedono.  
+ Ogni blocco di memoria contiene `Sz` byte di memoria utilizzabile e un puntatore alla porzione a cui appartiene. Ogni porzione contiene `Nelts` blocchi di memoria, tre puntatori, un int e i dati richiesti da `operator new` e `operator delete`.  
   
-### Costruttori  
-  
-|||  
-|-|-|  
-|[cache\_chunklist](../Topic/cache_chunklist::cache_chunklist.md)|Crea un oggetto di tipo `cache_chunklist`.|  
-  
-### Funzioni del membro  
+### <a name="constructors"></a>Costruttori  
   
 |||  
 |-|-|  
-|[allocare](../Topic/cache_chunklist::allocate.md)|Alloca un blocco di memoria.|  
-|[rilasciare](../Topic/cache_chunklist::deallocate.md)|Libera un numero specificato di oggetti dall'inizio di archiviazione a una posizione specificata.|  
+|[cache_chunklist](#cache_chunklist)|Costruisce un oggetto di tipo `cache_chunklist`.|  
   
-## Requisiti  
- allocatori \<di**Intestazione:** \>  
+### <a name="member-functions"></a>Funzioni membro  
+  
+|||  
+|-|-|  
+|[allocate](#allocate)|Alloca un blocco di memoria.|  
+|[deallocate](#deallocate)|Libera un numero specificato di oggetti dall'archiviazione iniziando da una posizione specificata.|  
+  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<allocators>  
   
  **Spazio dei nomi:** stdext  
   
-## Vedere anche  
- [\<allocators\>](../standard-library/allocators-header.md)
+##  <a name="allocate"></a>  cache_chunklist::allocate  
+ Alloca un blocco di memoria.  
+  
+```
+void *allocate(std::size_t count);
+```  
+  
+### <a name="parameters"></a>Parametri  
+  
+|Parametro|Descrizione|  
+|---------------|-----------------|  
+|`count`|Numero di elementi della matrice da allocare.|  
+  
+### <a name="return-value"></a>Valore restituito  
+ Puntatore all'oggetto allocato.  
+  
+### <a name="remarks"></a>Note  
+  
+##  <a name="cache_chunklist"></a>  cache_chunklist::cache_chunklist  
+ Costruisce un oggetto di tipo `cache_chunklist`.  
+  
+```
+cache_chunklist();
+```  
+  
+### <a name="remarks"></a>Note  
+  
+##  <a name="deallocate"></a>  cache_chunklist::deallocate  
+ Libera un numero specificato di oggetti dall'archiviazione iniziando da una posizione specificata.  
+  
+```
+void deallocate(void* ptr, std::size_t count);
+```  
+  
+### <a name="parameters"></a>Parametri  
+  
+|Parametro|Descrizione|  
+|---------------|-----------------|  
+|`ptr`|Puntatore al primo oggetto da deallocare dall'archivio.|  
+|`count`|Numero di oggetti da deallocare dall'archivio.|  
+  
+### <a name="remarks"></a>Note  
+  
+## <a name="see-also"></a>Vedere anche  
+ [\<allocators>](../standard-library/allocators-header.md)
+
+
+
+

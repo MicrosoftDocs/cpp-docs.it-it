@@ -1,50 +1,67 @@
 ---
-title: "vsscanf, vswscanf | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "vsscanf"
-  - "vswscanf"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_vstscanf"
-  - "vsscanf"
-  - "vswscanf"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "vsscanf (funzione)"
-  - "vswscanf (funzione)"
+title: vsscanf, vswscanf | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- vsscanf
+- vswscanf
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _vstscanf
+- vsscanf
+- vswscanf
+dev_langs:
+- C++
+helpviewer_keywords:
+- vswscanf function
+- vsscanf function
 ms.assetid: e96180f2-df46-423d-b4eb-0a49ab819bde
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# vsscanf, vswscanf
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 06c26fdeb5d63a446600bc288f99ca9cc903d002
+ms.contentlocale: it-it
+ms.lasthandoff: 03/29/2017
 
-Legge i dati formattati da una stringa.  Sono disponibili versioni più sicure di queste funzioni; vedere [vsscanf\_s, vswscanf\_s](../../c-runtime-library/reference/vsscanf-s-vswscanf-s.md).  
+---
+# <a name="vsscanf-vswscanf"></a>vsscanf, vswscanf
+Legge i dati formattati da una stringa. Sono disponibili versioni più sicure di queste funzioni. Vedere [vsscanf_s, vswscanf_s](../../c-runtime-library/reference/vsscanf-s-vswscanf-s.md).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 int vsscanf(  
@@ -59,47 +76,47 @@ int vswscanf(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `buffer`  
  Dati archiviati  
   
  `format`  
- Stringa di controllo del formato.  Per ulteriori informazioni, vedere [Campi per la specifica di formato: funzioni scanf e wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).  
+ Stringa di controllo del formato. Per altre informazioni, vedere [Campi di specifica di formato: funzioni scanf e wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).  
   
  `arglist`  
  Elenco di argomenti variabili.  
   
-## Valore restituito  
- Ognuna di queste funzioni restituisce il numero di campi che vengono convertiti correttamente e assegnati; il valore restituito non include i campi che sono stati letti ma non assegnati.  Un valore restituito pari a 0 indica che nessun campo è stato assegnato.  Il valore restituito è `EOF` per un errore, o se la fine della stringa viene raggiunta prima della prima conversione.  
+## <a name="return-value"></a>Valore restituito  
+ Ognuna di queste funzioni restituisce il numero di campi che vengono convertiti e assegnati correttamente. Il valore restituito non include i campi che sono stati letti ma non assegnati. Un valore restituito pari a 0 indica che nessun campo è stato assegnato. Il valore restituito è `EOF` in caso di errore o se viene raggiunta la fine della stringa prima della prima conversione.  
   
- Se `buffer` o `format` è un `NULL` puntatore null, viene richiamato il gestore di parametro non valido, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).  Se l'esecuzione può continuare, la funzione restituisce \-1 e imposta `errno` su `EINVAL`.  
+ Se `buffer` o `format` è un puntatore `NULL`, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostano `errno` su `EINVAL`.  
   
- Per informazioni su questi e altri codici di errore, vedere [errno, \_doserrno, \_sys\_errlist, and \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Per informazioni su questi e altri codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Note  
- La funzione `vsscanf` legge i dati da `buffer` nell posizioni fornite da ogni argomento nell'elenco di argomenti `arglist`.  Ogni argomento dell'elenco deve essere un puntatore a una variabile con un tipo che corrisponde a un identificatore del tipo in `format`.  L'argomento `format` controlla l'interpretazione dei campi di input e ha gli stessi form e funzione dell'argomento `format` per la funzione `scanf`.  Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.  
+## <a name="remarks"></a>Note  
+ La funzione `vsscanf` legge i dati da `buffer` nelle posizioni specificate da ogni argomento nell'elenco di argomenti `arglist`. Ogni argomento nell'elenco deve essere un puntatore a una variabile di un tipo corrispondente a un identificatore di tipo in `format`. L'argomento `format` controlla l'interpretazione dei campi di input e ha lo stesso formato e la stessa funzione dell'argomento `format` per la funzione `scanf`. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.  
   
 > [!IMPORTANT]
->  Quando si utilizza `vsscanf` per leggere una stringa, specificare sempre una larghezza per il formato `%s`, ad esempio `"%32s"` anziché `"%s"`\); in caso contrario, l'input in un formato inappropriato può comportare un sovraccarico del buffer.  
+>  Quando si usa `vsscanf` per leggere una stringa, specificare sempre una larghezza per il formato `%s`, ad esempio, `"%32s"` anziché `"%s"`. In caso contrario, l'input formattato in modo non corretto può causare un sovraccarico del buffer.  
   
- `vswscanf` è una versione a caratteri estesi di `vsscanf`; gli argomenti per `vswscanf` sono stringhe a caratteri estesi.  `vsscanf` non gestisce caratteri esadecimali multibyte.  `vswscanf` non gestisce i caratteri esadecimali o dell'"area di compatibilità" a larghezza intera Unicode.  Altrimenti `vswscanf` e `vsscanf` si comportano in modo identico.  
+ `vswscanf` è una versione a caratteri "wide" di `vsscanf`. Gli argomenti per `vswscanf` sono stringhe a caratteri "wide". `vsscanf` non gestisce i caratteri esadecimali multibyte. `vswscanf` non gestisce caratteri esadecimali a larghezza intera o caratteri nell'area di compatibilità Unicode. In caso contrario, `vswscanf` e `vsscanf` si comportano in modo identico.  
   
-### Mapping di routine su testo generico  
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
-|Routine TCHAR.H|\_UNICODE e \_MBCS non definiti|\_MBCS definito|\_UNICODE definito|  
-|---------------------|-------------------------------------|---------------------|------------------------|  
+|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_vstscanf`|`vsscanf`|`vsscanf`|`vswscanf`|  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`vsscanf`|\<stdio.h\>|  
-|`vswscanf`|\<stdio.h\> o \<wchar.h\>|  
+|-------------|---------------------|  
+|`vsscanf`|\<stdio.h>|  
+|`vswscanf`|\<stdio.h> o \<wchar.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_vsscanf.c  
@@ -143,16 +160,16 @@ int main( void )
 }  
 ```  
   
-  **Stringa    \= 15**  
-**Carattere \= 1**  
-**Integer:  \= 15**  
-**Real:     \= 15.000000**   
-## Equivalente .NET Framework  
- Vedere i metodi `Parse`, come [System::Double::Parse](https://msdn.microsoft.com/en-us/library/system.double.parse.aspx).  
+```Output  
+String    = 15  
+Character = 1  
+Integer:  = 15  
+Real:     = 15.000000  
+```  
   
-## Vedere anche  
- [I\/O di flusso](../../c-runtime-library/stream-i-o.md)   
- [scanf, \_scanf\_l, wscanf, \_wscanf\_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [sscanf, \_sscanf\_l, swscanf, \_swscanf\_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
- [sprintf, \_sprintf\_l, swprintf, \_swprintf\_l, \_\_swprintf\_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [vsscanf\_s, vswscanf\_s](../../c-runtime-library/reference/vsscanf-s-vswscanf-s.md)
+## <a name="see-also"></a>Vedere anche  
+ [I/O di flusso](../../c-runtime-library/stream-i-o.md)   
+ [scanf, _scanf_l, wscanf, _wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
+ [sscanf, _sscanf_l, swscanf, _swscanf_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [vsscanf_s, vswscanf_s](../../c-runtime-library/reference/vsscanf-s-vswscanf-s.md)

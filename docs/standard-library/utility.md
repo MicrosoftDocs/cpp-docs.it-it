@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 67792e92a4a8336c025249a5d1322d00360a62c5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 1a65dea30745ce3afa680c0851fe33cc9f386404
+ms.contentlocale: it-it
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltutilitygt"></a>&lt;utility&gt;
@@ -76,12 +77,12 @@ Definisce i tipi, le funzioni e gli operatori della libreria standard C++ che se
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/utility-operators.md#operator_neq)|Verifica se l'oggetto pair a sinistra dell'operatore è minore o uguale all'oggetto pair a destra.|  
-|[operator==](../standard-library/utility-operators.md#operator_eq_eq)|Verifica se l'oggetto pair a sinistra dell'operatore è uguale all'oggetto pair a destra.|  
-|[operator<](../standard-library/utility-operators.md#operator_lt_)|Verifica se l'oggetto pair a sinistra dell'operatore è minore dell'oggetto pair a destra.|  
-|[operator\<=](../standard-library/utility-operators.md#operator_lt__eq)|Verifica se l'oggetto pair a sinistra dell'operatore è minore o uguale all'oggetto pair a destra.|  
-|[operator>](../standard-library/utility-operators.md#operator_gt_)|Verifica se l'oggetto pair a sinistra dell'operatore è maggiore dell'oggetto pair a destra.|  
-|[operator>=](../standard-library/utility-operators.md#operator_gt__eq)|Verifica se l'oggetto pair a sinistra dell'operatore è maggiore o uguale all'oggetto pair a destra.|  
+|[operator!=](../standard-library/utility-operators.md#op_neq)|Verifica se l'oggetto pair a sinistra dell'operatore è minore o uguale all'oggetto pair a destra.|  
+|[operator==](../standard-library/utility-operators.md#op_eq_eq)|Verifica se l'oggetto pair a sinistra dell'operatore è uguale all'oggetto pair a destra.|  
+|[operator<](../standard-library/utility-operators.md#op_lt)|Verifica se l'oggetto pair a sinistra dell'operatore è minore dell'oggetto pair a destra.|  
+|[operator\<=](../standard-library/utility-operators.md#op_gt_eq)|Verifica se l'oggetto pair a sinistra dell'operatore è minore o uguale all'oggetto pair a destra.|  
+|[operator>](../standard-library/utility-operators.md#op_gt)|Verifica se l'oggetto pair a sinistra dell'operatore è maggiore dell'oggetto pair a destra.|  
+|[operator>=](../standard-library/utility-operators.md#op_gt_eq)|Verifica se l'oggetto pair a sinistra dell'operatore è maggiore o uguale all'oggetto pair a destra.|  
   
 ### <a name="structs"></a>Struct  
   

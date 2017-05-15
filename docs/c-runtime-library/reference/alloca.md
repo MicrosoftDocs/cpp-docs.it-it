@@ -1,5 +1,5 @@
 ---
-title: Alloca | Documenti di Microsoft
+title: Alloca | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -50,14 +50,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c7bf8e09b7af4153bae3bfa0f80c002149ff3ee9
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 5875a26dc5758674665fba2fde5b51c2ff53420e
+ms.contentlocale: it-it
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="alloca"></a>_alloca
-Alloca memoria nello stack. Questa funzione è deprecata in quanto è disponibile una versione più sicura; vedere [malloca](../../c-runtime-library/reference/malloca.md).  
+Alloca memoria nello stack. Questa funzione è deprecata poiché è disponibile una versione più sicura; vedere [malloca](../../c-runtime-library/reference/malloca.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -77,7 +78,7 @@ void *_alloca(
  Se lo spazio non può essere allocato viene generata un'eccezione di overflow dello stack. L'eccezione di overflow dello stack non è un'eccezione C++; si tratta di un'eccezione strutturata. Invece di usare la gestione delle eccezioni C++, è necessario usare la [gestione delle eccezioni strutturata](../../cpp/structured-exception-handling-c-cpp.md).  
   
 ## <a name="remarks"></a>Note  
- `_alloca`alloca `size` byte dallo stack di programma. Lo spazio allocato viene liberato automaticamente al termine della funzione chiamante (non quando l'allocazione semplicemente diventa esterno all'ambito). Pertanto, non passare il valore del puntatore restituito da `_alloca` come argomento di [gratuita](../../c-runtime-library/reference/free.md).  
+ `_alloca`alloca `size` byte dallo stack di programma. Lo spazio allocato viene liberato automaticamente al termine della funzione chiamante (ma non quando l'allocazione semplicemente diventa esterno all'ambito). Pertanto, non passare il valore del puntatore restituito da `_alloca` come argomento di [disponibile](../../c-runtime-library/reference/free.md).  
   
  Esistono restrizioni per chiamare in modo esplicito `_alloca` in un gestore di eccezioni (EH). Le routine EH in esecuzione su processori x86 operano nel relativo frame di memoria: eseguono le attività nello spazio di memoria che non è basato sulla posizione corrente del puntatore dello stack della funzione contenitore. Le implementazioni più comuni includono la gestione delle eccezioni strutturata di Windows NT e le espressioni con clausola catch C++. Di conseguenza, chiamare in modo esplicito `_alloca` in uno dei seguenti scenari genera un errore di programma durante la restituzione alla routine EH chiamante:  
   
@@ -92,7 +93,7 @@ void *_alloca(
 > [!IMPORTANT]
 >  In Windows XP, se la funzione `_alloca` viene chiamata all'interno di un blocco try/catch, è necessario chiamare [_resetstkoflw](../../c-runtime-library/reference/resetstkoflw.md) nel blocco catch.  
   
- Oltre alle restrizioni menzionate sopra, quando si utilizza il[/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) opzione `_alloca` non può essere utilizzato `__except` blocchi. Per altre informazioni, vedere [Limitazioni di /clr](../../build/reference/clr-restrictions.md).  
+ Oltre alle restrizioni menzionate sopra, quando si utilizza il[/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) opzione `_alloca` non può essere utilizzato `__except` blocchi. Per altre informazioni, vedere [/clr Restrictions](../../build/reference/clr-restrictions.md).  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -157,9 +158,6 @@ int main()
 ```Output  
 Allocated 1000 bytes of stack at 0x0012FB50  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Memory Allocation](../../c-runtime-library/memory-allocation.md)  (Allocazione di memoria)  

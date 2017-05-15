@@ -50,10 +50,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: d8d43b39c9f71807d68f20cb4873abf96d3f91e8
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: df4705972f45fd129462f5a3f131c72135254620
+ms.contentlocale: it-it
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="setsetranslator"></a>_set_se_translator
@@ -101,7 +102,7 @@ typedef void (*_se_translator_function)(unsigned int, struct _EXCEPTION_POINTERS
 |-------------|---------------------|  
 |`_set_se_translator`|\<eh.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
   
 ## <a name="example"></a>Esempio  
   
@@ -218,9 +219,6 @@ int main(int argc, char** argv) {
 Translating the structured exception to a C++ exception.  
 Caught CMyException.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- Non applicabile. Per chiamare la funzione C standard, usare `PInvoke`. Per altre informazioni, vedere [Platform Invoke Examples](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f) (Esempi di platform invoke).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Routine di gestione delle eccezioni](../../c-runtime-library/exception-handling-routines.md)   

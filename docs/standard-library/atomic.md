@@ -75,10 +75,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 8346982360dbc6ecfaae296e48da9464b91190b4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: 0727a9bab67872237ffe6f747bd0be3f538eb01d
+ms.contentlocale: it-it
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
@@ -93,7 +94,7 @@ Definisce le classi e le classi di modello da usare per creare tipi che supporta
 ## <a name="remarks"></a>Note  
   
 > [!NOTE]
->  Nel codice che viene compilato mediante **/clr**, questa intestazione è bloccata.  
+>  Nel codice compilato tramite **/clr**, questa intestazione è bloccata.  
   
  Un'operazione atomica ha due proprietà chiave che consentono di usare più thread per gestire correttamente un oggetto senza usare blocchi mutex.  
   
@@ -191,35 +192,35 @@ Definisce le classi e le classi di modello da usare per creare tipi che supporta
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Funzione atomic_compare_exchange_strong](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_function)|Esegue un'operazione di *confronto e scambio atomico*.|  
-|[Funzione atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit_function)|Esegue un'operazione di *confronto e scambio atomico*.|  
-|[Funzione atomic_compare_exchange_weak](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_function)|Esegue un'operazione di *confronto e scambio atomico debole*.|  
-|[Funzione atomic_compare_exchange_weak_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_explicit_function)|Esegue un'operazione di *confronto e scambio atomico debole*.|  
-|[Funzione atomic_exchange](../standard-library/atomic-functions.md#atomic_exchange_function)|Sostituisce un valore archiviato.|  
-|[Funzione atomic_exchange_explicit](../standard-library/atomic-functions.md#atomic_exchange_explicit_function)|Sostituisce un valore archiviato.|  
-|[Funzione atomic_fetch_add](../standard-library/atomic-functions.md#atomic_fetch_add_function)|Aggiunge un valore specificato a un valore archiviato esistente.|  
-|[Funzione atomic_fetch_add_explicit](../standard-library/atomic-functions.md#atomic_fetch_add_explicit_function)|Aggiunge un valore specificato a un valore archiviato esistente.|  
-|[Funzione atomic_fetch_and](../standard-library/atomic-functions.md#atomic_fetch_and_function)|Esegue un `and` bit per bit in un valore specificato e un valore archiviato esistente.|  
-|[Funzione atomic_fetch_and_explicit](../standard-library/atomic-functions.md#atomic_fetch_and_explicit_function)|Esegue un `and` bit per bit in un valore specificato e un valore archiviato esistente.|  
-|[Funzione atomic_fetch_or](../standard-library/atomic-functions.md#atomic_fetch_or_function)|Esegue un `or` bit per bit in un valore specificato e un valore archiviato esistente.|  
-|[Funzione atomic_fetch_or_explicit](../standard-library/atomic-functions.md#atomic_fetch_or_explicit_function)|Esegue un `or` bit per bit in un valore specificato e un valore archiviato esistente.|  
-|[Funzione atomic_fetch_sub](../standard-library/atomic-functions.md#atomic_fetch_sub_function)|Sottrae un valore specificato da un valore archiviato esistente.|  
-|[Funzione atomic_fetch_sub_explicit](../standard-library/atomic-functions.md#atomic_fetch_sub_explicit_function)|Sottrae un valore specificato da un valore archiviato esistente.|  
-|[Funzione atomic_fetch_xor](../standard-library/atomic-functions.md#atomic_fetch_xor_function)|Esegue un `exclusive or` bit per bit in un valore specificato e un valore archiviato esistente.|  
-|[Funzione atomic_fetch_xor_explicit](../standard-library/atomic-functions.md#atomic_fetch_xor_explicit_function)|Esegue un `exclusive or` bit per bit in un valore specificato e un valore archiviato esistente.|  
-|[Funzione atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear_function)|Imposta il flag in un oggetto `atomic_flag` su `false`.|  
-|[Funzione atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit_function)|Imposta il flag in un oggetto `atomic_flag` su `false`.|  
-|[Funzione atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set_function)|Imposta il flag in un oggetto `atomic_flag` su `true`.|  
-|[Funzione atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit_function)|Imposta il flag in un oggetto `atomic_flag` su `true`.|  
-|[Funzione atomic_init](../standard-library/atomic-functions.md#atomic_init_function)|Imposta il valore archiviato in un oggetto `atomic`.|  
-|[Funzione atomic_is_lock_free](../standard-library/atomic-functions.md#atomic_is_lock_free_function)|Specifica se le operazioni atomiche in un oggetto specificato sono senza blocco.|  
-|[Funzione atomic_load](../standard-library/atomic-functions.md#atomic_load_function)|Recupera un valore in modo atomico.|  
-|[Funzione atomic_load_explicit](../standard-library/atomic-functions.md#atomic_load_explicit_function)|Recupera un valore in modo atomico.|  
-|[Funzione atomic_signal_fence](../standard-library/atomic-functions.md#atomic_signal_fence_function)|Agisce come *limite* che stabilisce i requisiti di ordinamento della memoria tra due limiti in un thread di chiamata che ha gestori di segnale eseguiti nello stesso thread.|  
-|[Funzione atomic_store](../standard-library/atomic-functions.md#atomic_store_function)|Archivia un valore in modo atomico.|  
-|[Funzione atomic_store_explicit](../standard-library/atomic-functions.md#atomic_store_explicit_function)|Archivia un valore in modo atomico.|  
-|[Funzione atomic_thread_fence](../standard-library/atomic-functions.md#atomic_thread_fence_function)|Agisce come *limite* che stabilisce i requisiti di ordinamento della memoria relativamente ad altri limiti.|  
-|[Funzione kill_dependency](../standard-library/atomic-functions.md#kill_dependency_function)|Interrompe una possibile catena delle dipendenze.|  
+|[atomic_compare_exchange_strong](../standard-library/atomic-functions.md#atomic_compare_exchange_strong)|Esegue un'operazione di *confronto e scambio atomico*.|  
+|[atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit)|Esegue un'operazione di *confronto e scambio atomico*.|  
+|[atomic_compare_exchange_weak](../standard-library/atomic-functions.md#atomic_compare_exchange_weak)|Esegue un'operazione di *confronto e scambio atomico debole*.|  
+|[atomic_compare_exchange_weak_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_explicit)|Esegue un'operazione di *confronto e scambio atomico debole*.|  
+|[atomic_exchange](../standard-library/atomic-functions.md#atomic_exchange)|Sostituisce un valore archiviato.|  
+|[atomic_exchange_explicit](../standard-library/atomic-functions.md#atomic_exchange_explicit)|Sostituisce un valore archiviato.|  
+|[atomic_fetch_add](../standard-library/atomic-functions.md#atomic_fetch_add)|Aggiunge un valore specificato a un valore archiviato esistente.|  
+|[atomic_fetch_add_explicit](../standard-library/atomic-functions.md#atomic_fetch_add_explicit)|Aggiunge un valore specificato a un valore archiviato esistente.|  
+|[atomic_fetch_and](../standard-library/atomic-functions.md#atomic_fetch_and)|Esegue un `and` bit per bit in un valore specificato e un valore archiviato esistente.|  
+|[atomic_fetch_and_explicit](../standard-library/atomic-functions.md#atomic_fetch_and_explicit)|Esegue un `and` bit per bit in un valore specificato e un valore archiviato esistente.|  
+|[atomic_fetch_or](../standard-library/atomic-functions.md#atomic_fetch_or)|Esegue un `or` bit per bit in un valore specificato e un valore archiviato esistente.|  
+|[atomic_fetch_or_explicit](../standard-library/atomic-functions.md#atomic_fetch_or_explicit)|Esegue un `or` bit per bit in un valore specificato e un valore archiviato esistente.|  
+|[atomic_fetch_sub](../standard-library/atomic-functions.md#atomic_fetch_sub)|Sottrae un valore specificato da un valore archiviato esistente.|  
+|[atomic_fetch_sub_explicit](../standard-library/atomic-functions.md#atomic_fetch_sub_explicit)|Sottrae un valore specificato da un valore archiviato esistente.|  
+|[atomic_fetch_xor](../standard-library/atomic-functions.md#atomic_fetch_xor)|Esegue un `exclusive or` bit per bit in un valore specificato e un valore archiviato esistente.|  
+|[atomic_fetch_xor_explicit](../standard-library/atomic-functions.md#atomic_fetch_xor_explicit)|Esegue un `exclusive or` bit per bit in un valore specificato e un valore archiviato esistente.|  
+|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|Imposta il flag in un oggetto `atomic_flag` su `false`.|  
+|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|Imposta il flag in un oggetto `atomic_flag` su `false`.|  
+|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|Imposta il flag in un oggetto `atomic_flag` su `true`.|  
+|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|Imposta il flag in un oggetto `atomic_flag` su `true`.|  
+|[atomic_init](../standard-library/atomic-functions.md#atomic_init)|Imposta il valore archiviato in un oggetto `atomic`.|  
+|[atomic_is_lock_free](../standard-library/atomic-functions.md#atomic_is_lock_free)|Specifica se le operazioni atomiche in un oggetto specificato sono senza blocco.|  
+|[atomic_load](../standard-library/atomic-functions.md#atomic_load)|Recupera un valore in modo atomico.|  
+|[atomic_load_explicit](../standard-library/atomic-functions.md#atomic_load_explicit)|Recupera un valore in modo atomico.|  
+|[atomic_signal_fence](../standard-library/atomic-functions.md#atomic_signal_fence)|Agisce come *limite* che stabilisce i requisiti di ordinamento della memoria tra due limiti in un thread di chiamata che ha gestori di segnale eseguiti nello stesso thread.|  
+|[atomic_store](../standard-library/atomic-functions.md#atomic_store)|Archivia un valore in modo atomico.|  
+|[atomic_store_explicit](../standard-library/atomic-functions.md#atomic_store_explicit)|Archivia un valore in modo atomico.|  
+|[atomic_thread_fence](../standard-library/atomic-functions.md#atomic_thread_fence)|Agisce come *limite* che stabilisce i requisiti di ordinamento della memoria relativamente ad altri limiti.|  
+|[kill_dependency](../standard-library/atomic-functions.md#kill_dependency)|Interrompe una possibile catena delle dipendenze.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)   

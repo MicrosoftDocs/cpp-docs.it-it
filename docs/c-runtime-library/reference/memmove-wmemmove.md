@@ -1,50 +1,67 @@
 ---
-title: "memmove, wmemmove | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "memmove"
-  - "wmemmove"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ntdll.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "memmove"
-  - "wmemmove"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "memmove (funzione)"
-  - "wmemmove (funzione)"
+title: memmove, wmemmove | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- memmove
+- wmemmove
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ntdll.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- memmove
+- wmemmove
+dev_langs:
+- C++
+helpviewer_keywords:
+- wmemmove function
+- memmove function
 ms.assetid: 3a906114-9cf3-40d7-bd99-ee452004f218
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# memmove, wmemmove
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 2f8c6199d65c5865110774dcd0d2e5623d515467
+ms.contentlocale: it-it
+ms.lasthandoff: 04/04/2017
 
-Sposta un buffer in un altro.  Sono disponibili versioni più sicure di queste funzioni. Vedere [memmove\_s, wmemmove\_s](../../c-runtime-library/reference/memmove-s-wmemmove-s.md).  
+---
+# <a name="memmove-wmemmove"></a>memmove, wmemmove
+Sposta un buffer in un altro. Sono disponibili versioni più sicure di queste funzioni. Vedere [memmove_s, wmemmove_s](../../c-runtime-library/reference/memmove-s-wmemmove-s.md).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 void *memmove(  
@@ -59,7 +76,7 @@ wchar_t *wmemmove(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `dest`  
  Oggetto di destinazione.  
   
@@ -67,17 +84,17 @@ wchar_t *wmemmove(
  Oggetto di origine.  
   
  `count`  
- Numero di byte \(`memmove`\) o caratteri \(`wmemmove`\) da copiare.  
+ Numero di byte (`memmove`) o caratteri (`wmemmove`) da copiare.  
   
-## Valore restituito  
- Valore di `dest`*.*  
+## <a name="return-value"></a>Valore restituito  
+ Valore di `dest`.  
   
-## Note  
- Copia `count` byte \(`memmove`\) o caratteri \(`wmemmove`\) da `src` a `dest`*.* Se alcune aree dell'area di origine e di destinazione si sovrappongono, entrambe le funzioni si assicurano che i byte di origine originali dell'area sovrapposta vengano copiati prima di essere sovrascritti.  
+## <a name="remarks"></a>Note  
+ Copie `count` byte (`memmove`) o caratteri (`wmemmove`) da `src` a `dest`. Se alcune parti dell'area di origine e di destinazione si sovrappongono, entrambe le funzioni assicurano che i byte di origine originali nell'area sovrapposta vengono copiati prima di essere sovrascritti.  
   
- **Nota sulla sicurezza** Assicurarsi che il buffer di destinazione sia della stessa dimensione o di una dimensione maggiore del buffer di origine.  Per ulteriori informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
+ **Nota sulla sicurezza** Assicurarsi che il buffer di destinazione sia della stessa dimensione o più grande del buffer di origine. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
   
- Le funzioni `memmove` e di `wmemmove` verranno deprecate solo se la costante `_CRT_SECURE_DEPRECATE_MEMORY` è definita prima dell'istruzione di inclusione in modo che funzioni vengano deprecate, come nell'esempio seguente:  
+ Le funzioni `memmove` e `wmemmove` verranno deprecate solo se la costante `_CRT_SECURE_DEPRECATE_MEMORY` è definita prima dell'istruzione di inclusione in modo che funzioni vengano deprecate, come nell'esempio seguente:  
   
 ```  
 #define _CRT_SECURE_DEPRECATE_MEMORY  
@@ -87,16 +104,16 @@ or
 #include <wchar.h>  
 ```  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`memmove`|\<string.h\>|  
-|`wmemmove`|\<wchar.h\>|  
+|-------------|---------------------|  
+|`memmove`|\<string.h>|  
+|`wmemmove`|\<wchar.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'Introduzione.  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_memcpy.c  
@@ -125,16 +142,16 @@ int main( void )
 }  
 ```  
   
-  **La stringa: aabbcc**  
-**Nuova stringa: aaaabb**  
-**La stringa: aabbcc**  
-**Nuova stringa: aaaabb**   
-## Equivalente .NET Framework  
- [System::Buffer::BlockCopy](https://msdn.microsoft.com/en-us/library/system.buffer.blockcopy.aspx)  
+```Output  
+The string: aabbcc  
+New string: aaaabb  
+The string: aabbcc  
+New string: aaaabb  
+```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Modifica del buffer](../../c-runtime-library/buffer-manipulation.md)   
- [\_memccpy](../../c-runtime-library/reference/memccpy.md)   
+ [_memccpy](../../c-runtime-library/reference/memccpy.md)   
  [memcpy, wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)   
- [strcpy, wcscpy, \_mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
- [strncpy, \_strncpy\_l, wcsncpy, \_wcsncpy\_l, \_mbsncpy, \_mbsncpy\_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)
+ [strcpy, wcscpy, _mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
+ [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)
