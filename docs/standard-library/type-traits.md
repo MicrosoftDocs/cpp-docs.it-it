@@ -34,10 +34,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 76f96a1e0b88e7b43a2d4efa55cc57e84efdb3b5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: ec13a255f456254f89ca84488d12fbf5ce0440b4
+ms.contentlocale: it-it
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
@@ -52,7 +53,7 @@ Definisce modelli che forniscono costanti in fase di compilazione in grado di of
 ## <a name="remarks"></a>Note  
  Le classi e i modelli di `<type_traits>` vengono usati per supportare l'inferenza, la classificazione e la trasformazione dei tipi in fase di compilazione, per rilevare gli errori relativi ai tipi e per ottimizzare il codice generico. Questi modelli e classi includono tratti di tipo unario che descrivono una proprietà di un tipo, tratti di tipo binario che descrivono una relazione tra tipi e tratti di trasformazione che modificano una proprietà di un tipo.  
   
- Per supportare i tratti di tipo viene definita una classe helper `integral_constant`. Questa classe dispone delle specializzazioni modello `true_type` e `false_type` che formano le classi di base per i predicati di tipo. Un *predicato di tipo* è un modello che accetta uno o più argomenti di tipo. Quando un predicato di tipo è *include true*, è derivato pubblicamente, in modo diretto o indiretto, da [true_type](../standard-library/type-traits-typedefs.md#true_type_typedef). Quando un predicato di tipo è *include false*, è derivato pubblicamente, in modo diretto o indiretto, da [false_type](../standard-library/type-traits-typedefs.md#false_type_typedef).  
+ Per supportare i tratti di tipo viene definita una classe helper `integral_constant`. Questa classe dispone delle specializzazioni modello `true_type` e `false_type` che formano le classi di base per i predicati di tipo. Un *predicato di tipo* è un modello che accetta uno o più argomenti di tipo. Quando un predicato di tipo è *include true*, è derivato pubblicamente, in modo diretto o indiretto, da [true_type](../standard-library/type-traits-typedefs.md#true_type). Quando un predicato di tipo è *include false*, è derivato pubblicamente, in modo diretto o indiretto, da [false_type](../standard-library/type-traits-typedefs.md#false_type).  
   
  Un *modificatore di tipo* o *tratto di trasformazione* è un modello che accetta uno o più argomenti di modello e include un membro, `type`, che è sinonimo di tipo modificato.  
   
@@ -79,8 +80,8 @@ using add_const_t = typename add_const<T>::type;
 |||  
 |-|-|  
 |[integral_constant](../standard-library/integral-constant-class-bool-constant-class.md)|Crea una costante integrale da un tipo e da un valore.|  
-|[true_type](../standard-library/type-traits-typedefs.md#true_type_typedef)|Include la costante integrale con valore true.|  
-|[false_type](../standard-library/type-traits-typedefs.md#false_type_typedef)|Include la costante integrale con valore false.|  
+|[true_type](../standard-library/type-traits-typedefs.md#true_type)|Include la costante integrale con valore true.|  
+|[false_type](../standard-library/type-traits-typedefs.md#false_type)|Include la costante integrale con valore false.|  
   
  Categorie di tipi primari  
   
