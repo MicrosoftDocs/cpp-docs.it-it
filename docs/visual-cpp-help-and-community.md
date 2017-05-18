@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -30,9 +30,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5c6fbfc8699d7d66c40b0458972d8b6ef0dcc705
-ms.openlocfilehash: 4d67a376c8a000b48984f8a290b0d042c33a0f7c
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: f09027c947478aa07cbefe13114edde8932c4a2d
+ms.contentlocale: it-it
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="visual-c-help-and-community"></a>Guida e community di Visual C++
@@ -42,17 +44,17 @@ Le informazioni seguenti illustrano come scrivere codice in C++ e usare gli stru
   
 |Titolo|Descrizione|  
 |-----------|-----------------|  
-|[Esempi di codice per gli sviluppatori](http://go.microsoft.com/fwlink/p/?LinkId=256533)|Contiene il codice di esempio scaricabile da Microsoft e dai collaboratori della community.|  
+|[Codice di esempio per gli sviluppatori](http://go.microsoft.com/fwlink/p/?LinkId=256533)|Contiene il codice di esempio scaricabile da Microsoft e dai collaboratori della community.|  
   
 ## <a name="product-documentation"></a>Documentazione del prodotto  
   
 |Titolo|Descrizione|  
 |-----------|-----------------|  
 |[Visual C++](visual-cpp-in-visual-studio.md)|Contiene documentazione di riferimento e concettuale su Visual C++. Parte di MSDN Library.|  
-|[Centro per sviluppatori Windows](http://go.microsoft.com/fwlink/p/?LinkId=256534)|Contiene informazioni sull'uso di C++ e altri linguaggi per sviluppare app per [!INCLUDE[win8](build/reference/includes/win8_md.md)]. Parte del Windows Dev Center, i contenuti di C++ sono nel nodo Documenti > Riferimento al linguaggio.|  
+|[Windows Dev Center](http://go.microsoft.com/fwlink/p/?LinkId=256534)|Contiene informazioni su come usare C++ e altri linguaggi per sviluppare app per [!INCLUDE[win8](build/reference/includes/win8_md.md)]. Parte del Windows Dev Center, i contenuti di C++ sono nel nodo Documenti > Riferimento al linguaggio.|  
   
 ### <a name="online-and-offline-documentation"></a>Documentazione online e offline  
- È possibile visualizzare il contenuto di MSDN Library e di Windows Dev Center online. Questo contenuto viene aggiornato di frequente.  
+ È possibile visualizzare il contenuto per gli sviluppatori Microsoft online. Il contenuto viene aggiornato regolarmente. 
   
  È anche possibile scaricare e visualizzare il contenuto localmente nell'Help Viewer offline. La documentazione offline viene organizzata in documenti di contenuti correlati, che vengono aggiornati anche periodicamente. È possibile scaricare la documentazione a cui si è interessati non appena sono disponibili. Per altre informazioni, vedere [Microsoft Help Viewer](/visualstudio/ide/microsoft-help-viewer).  
   
@@ -64,8 +66,3 @@ Le informazioni seguenti illustrano come scrivere codice in C++ e usare gli stru
 |[Channel 9](http://go.microsoft.com/fwlink/p/?LinkId=251694)|Contiene video di interviste e conferenze. Usare la casella di ricerca nella home page di Channel 9, per trovare i contenuti riguardanti C++.|  
 |[Visual Studio](http://go.microsoft.com/fwlink/p/?LinkId=256535)|Contiene articoli e informazioni su Visual Studio e su gli strumenti di sviluppo correlati.|  
 |[Forum MSDN](http://go.microsoft.com/fwlink/p/?LinkId=256538)|Forum ufficiale Microsoft, in cui è possibile inserire domande e ottenere risposte da Microsoft e dagli esperti della community. Usare la casella di ricerca nella home page del forum per trovare forum correlati con C++.|
-
-
-<!--HONumber=Feb17_HO4-->
-
-
