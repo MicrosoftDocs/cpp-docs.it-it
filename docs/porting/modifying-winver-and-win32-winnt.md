@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -33,9 +33,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 220ecd24c6056737d0338cc584663e4664ac81b1
 ms.openlocfilehash: 73c02454c535c030846c5a3dfca74818182baafb
+ms.contentlocale: it-it
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="modifying-winver-and-win32winnt"></a>Modifica di WINVER e _WIN32_WINNT
@@ -81,9 +83,4 @@ Visual C++ non supporta più i sistemi operativi Windows 95, Windows 98, Windows
   
 ## <a name="see-also"></a>Vedere anche  
  [Previous Product Changes](http://msdn.microsoft.com/en-us/91fa1713-0778-4b6b-82f7-0fe0a23ab1db) (Modifiche di prodotto precedenti)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

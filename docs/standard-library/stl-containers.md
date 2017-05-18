@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -32,9 +32,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
 ms.openlocfilehash: dc71a6958a352ebf1c46406114c32d77b7fb8887
+ms.contentlocale: it-it
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -45,7 +46,7 @@ La libreria standard fornisce vari contenitori indipendenti dai tipi per archivi
   
  I contenitori possono essere suddivisi in tre categorie: contenitori sequenza, contenitori associativi e adattatori del contenitore.  
   
-##  <a name="a-namesequencecontainersa-sequence-containers"></a><a name="sequence_containers"></a> Contenitori sequenziali  
+##  <a name="sequence_containers"></a> Contenitori sequenziali  
  I contenitori sequenziali mantengono l'ordinamento degli elementi inseriti specificati.  
   
  Un contenitore `vector` si comporta come una matrice, ma può automaticamente crescere come richiesto. È ad accesso casuale, viene archiviato in modo contiguo e la lunghezza è estremamente flessibile. Per questi e altri motivi, `vector` è il contenitore sequenziale preferito per la maggior parte delle applicazioni. In caso di dubbi circa il tipo di contenitore sequenziale da usare, iniziare con un vettore. Per altre informazioni, vedere [Classe vector](../standard-library/vector-class.md).  

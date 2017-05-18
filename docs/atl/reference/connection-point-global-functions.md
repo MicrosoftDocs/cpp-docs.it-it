@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
 ms.openlocfilehash: 8271f512141e4d2cc274d180b31e1ad33bfc354e
+ms.contentlocale: it-it
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -52,7 +53,7 @@ Queste funzioni forniscono il supporto per i punti di connessione e mappe del si
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlbase. h  
    
-##  <a name="a-nameatladvisea--atladvise"></a><a name="atladvise"></a>AtlAdvise  
+##  <a name="atladvise"></a>AtlAdvise  
  Crea una connessione tra il punto di connessione di un oggetto e il sink di un client.  
   
 > [!IMPORTANT]
@@ -88,7 +89,7 @@ HRESULT    AtlAdvise(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATL_Windowing&#91;](../../atl/codesnippet/cpp/connection-point-global-functions_1.cpp)]  
   
-##  <a name="a-nameatlunadvisea--atlunadvise"></a><a name="atlunadvise"></a>AtlUnadvise  
+##  <a name="atlunadvise"></a>AtlUnadvise  
  Termina la connessione stabilita tramite [AtlAdvise](#atladvise).  
   
 > [!IMPORTANT]
@@ -117,7 +118,7 @@ HRESULT    AtlUnadvise(
 ### <a name="example"></a>Esempio  
  [!code-cpp[&#96; NVC_ATL_Windowing](../../atl/codesnippet/cpp/connection-point-global-functions_2.cpp)]  
   
-##  <a name="a-nameatladvisesinkmapa--atladvisesinkmap"></a><a name="atladvisesinkmap"></a>AtlAdviseSinkMap  
+##  <a name="atladvisesinkmap"></a>AtlAdviseSinkMap  
  Chiamare questa funzione per inviare o annullare gli avvisi per tutte le voci della mappa eventi sink dell'oggetto.  
   
 > [!IMPORTANT]

@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
 ms.openlocfilehash: 7e8c664bd6632f480ba53b9dedea914bbc8e4dd7
+ms.contentlocale: it-it
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -44,7 +45,7 @@ Se si usa solo l'oggetto `cin`, non è necessario costruire un flusso di input. 
   
 - [Costruttori di flusso di stringhe di input](#vclrfinputstringstreamconstructorsanchor9)  
   
-##  <a name="a-namevclrfinputfilestreamconstructorsanchor8a-input-file-stream-constructors"></a><a name="vclrfinputfilestreamconstructorsanchor8"></a> Costruttori di flusso di file di input  
+##  <a name="vclrfinputfilestreamconstructorsanchor8"></a> Costruttori di flusso di file di input  
  Sono due i metodi disponibili per creare un flusso di file di input:  
   
 -   Usare il costruttore di argomenti `void` e chiamare la funzione membro `open`:  
@@ -64,7 +65,7 @@ Se si usa solo l'oggetto `cin`, non è necessario costruire un flusso di input. 
     ifstream myFile("filename");
 ```  
   
-##  <a name="a-namevclrfinputstringstreamconstructorsanchor9a-input-string-stream-constructors"></a><a name="vclrfinputstringstreamconstructorsanchor9"></a> Costruttori di flusso di stringhe di input  
+##  <a name="vclrfinputstringstreamconstructorsanchor9"></a> Costruttori di flusso di stringhe di input  
  I costruttori di flusso di stringhe di input richiedono l'indirizzo di archiviazione preallocato e preinizializzato:  
   
 ```  

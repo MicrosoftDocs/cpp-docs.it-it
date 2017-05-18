@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -37,9 +37,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
 ms.openlocfilehash: d2649ef9c8b0320a94ec28a2341baa0f768b07d0
+ms.contentlocale: it-it
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -58,7 +59,7 @@ Le classi di raccolta `CMap`, `CList`, e `CArray` utilizzare funzioni di support
 |[HashKey](#hashkey)|Calcola una chiave hash.|  
 |[SerializeElements](#serializeelements)|Memorizza o recupera gli elementi da o verso un archivio.|  
   
-##  <a name="a-namecompareelementsa--compareelements"></a><a name="compareelements"></a>CompareElements  
+##  <a name="compareelements"></a>CompareElements  
  Chiamata direttamente da [CList::Find] (clist class.md not_found.md # #clist__find e indirettamente da [cmap__lookup](cmap-class.md#lookup) e [[] cmap__operator](cmap-class.md#operator_at).  
   
 ```   
@@ -95,7 +96,7 @@ CompareElements(
 ### <a name="requirements"></a>Requisiti  
    **Intestazione:** afxtempl.h   
   
-##  <a name="a-namecopyelementsa--copyelements"></a><a name="copyelements"></a>CopyElements  
+##  <a name="copyelements"></a>CopyElements  
  Questa funzione viene chiamata direttamente da [CArray:: Append](carray-class.md#append) e [CArray:: Copy](carray-class.md#copy).  
   
 ```   
@@ -127,7 +128,7 @@ void AFXAPI CopyElements(
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** afxtempl. h  
   
-##  <a name="a-namedumpelementsa--dumpelements"></a><a name="dumpelements"></a>DumpElements  
+##  <a name="dumpelements"></a>DumpElements  
  Fornisce orientato al flusso di output di diagnostica in formato testo per gli elementi della raccolta quando viene sottoposto a override.  
   
 ```   
@@ -160,7 +161,7 @@ void  AFXAPI DumpElements(
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** afxtempl. h  
   
-##  <a name="a-namehashkeya--hashkey"></a><a name="hashkey"></a>HashKey  
+##  <a name="hashkey"></a>HashKey  
  Calcola un valore hash per la chiave specificata.  
   
 ```  
@@ -196,7 +197,7 @@ template <> UINT AFXAPI HashKey(unsigned __int64 key)
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** afxtempl. h 
   
-##  <a name="a-nameserializeelementsa--serializeelements"></a><a name="serializeelements"></a>SerializeElements  
+##  <a name="serializeelements"></a>SerializeElements  
  [CArray](carray-class.md), [CList](clist-class.md), e [CMap](cmap-class.md) chiamare questa funzione per serializzare gli elementi.  
   
 ```   

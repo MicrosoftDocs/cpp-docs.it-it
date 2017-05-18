@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -34,9 +34,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
 ms.openlocfilehash: b8bbf72a1ea16b37dabf88c5d41a34b1a03ba0d1
+ms.contentlocale: it-it
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -66,7 +67,7 @@ Una funzionalità di controlli OLE, sia proprietà persistenza (serializzazione)
   
  Inoltre, il `AfxOleTypeMatchGuid` funzione globale viene fornito per individuare una corrispondenza tra un `TYPEDESC` e un GUID specifico.  
   
-##  <a name="a-namepxbloba--pxblob"></a><a name="px_blob"></a>PX_Blob  
+##  <a name="px_blob"></a>PX_Blob  
  Chiamare questa funzione all'interno del controllo `DoPropExchange` funzione membro da serializzare o inizializzare una proprietà che archivia i dati dell'oggetto binario di grandi dimensioni (BLOB).  
   
 ```  
@@ -111,7 +112,7 @@ hBlobDefault
   
  Si noti che `PX_Blob` comporta l'allocazione memoria, utilizzando le finestre di [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) API, quando il caricamento delle proprietà di tipo BLOB. È responsabilità dell'utente per liberare la memoria. Pertanto, è necessario chiamare il distruttore del controllo [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579) su qualsiasi proprietà di tipo BLOB handle per liberare fino quantità di memoria allocata per il controllo.  
   
-##  <a name="a-namepxboola--pxbool"></a><a name="px_bool"></a>PX_Bool  
+##  <a name="px_bool"></a>PX_Bool  
  Chiamare questa funzione all'interno del controllo `DoPropExchange` funzione membro da serializzare o inizializzare una proprietà di tipo **BOOL**.  
   
 ```  
@@ -154,7 +155,7 @@ bValue  ,
 ### <a name="remarks"></a>Note  
  Il valore della proprietà dovrà leggere o scritto la variabile a cui fa riferimento `bValue`, come appropriato. Se `bDefault` viene specificato, verrà considerato come valore predefinito della proprietà. Questo valore viene utilizzato se per qualsiasi motivo, il processo di serializzazione del controllo ha esito negativo.  
   
-##  <a name="a-namepxcolora--pxcolor"></a><a name="px_color"></a>PX_Color  
+##  <a name="px_color"></a>PX_Color  
  Chiamare questa funzione all'interno del controllo `DoPropExchange` funzione membro da serializzare o inizializzare una proprietà di tipo **OLE_COLOR**.  
   
 ```  
@@ -196,7 +197,7 @@ clrDefault);
 ### <a name="remarks"></a>Note  
  Il valore della proprietà dovrà leggere o scritto la variabile a cui fa riferimento `clrValue`, come appropriato. Se `clrDefault` viene specificato, verrà considerato come valore predefinito della proprietà. Questo valore viene utilizzato se per qualsiasi motivo, il processo di serializzazione del controllo ha esito negativo.  
   
-##  <a name="a-namepxcurrencya--pxcurrency"></a><a name="px_currency"></a>PX_Currency  
+##  <a name="px_currency"></a>PX_Currency  
  Chiamare questa funzione all'interno del controllo `DoPropExchange` funzione membro da serializzare o inizializzare una proprietà di tipo **valuta**.  
   
 ```  
@@ -239,7 +240,7 @@ cyValue  ,
 ### <a name="remarks"></a>Note  
  Il valore della proprietà dovrà leggere o scritto la variabile a cui fa riferimento `cyValue`, come appropriato. Se `cyDefault` viene specificato, verrà considerato come valore predefinito della proprietà. Questo valore viene utilizzato se per qualsiasi motivo, il processo di serializzazione del controllo ha esito negativo.  
   
-##  <a name="a-namepxdatapatha--pxdatapath"></a><a name="px_datapath"></a>PX_DataPath  
+##  <a name="px_datapath"></a>PX_DataPath  
  Chiamare questa funzione all'interno del controllo `DoPropExchange` funzione membro da serializzare o inizializzare una proprietà di percorso dati di tipo [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md).  
   
 ```  
@@ -275,7 +276,7 @@ pPX,
 ### <a name="remarks"></a>Note  
  Le proprietà del percorso dati implementano le proprietà di controllo asincrono. Il valore della proprietà dovrà leggere o scritto la variabile a cui fa riferimento `dataPathProperty`, come appropriato.  
   
-##  <a name="a-namepxdoublea--pxdouble"></a><a name="px_double"></a>PX_Double  
+##  <a name="px_double"></a>PX_Double  
  Chiamare questa funzione all'interno del controllo `DoPropExchange` funzione membro da serializzare o inizializzare una proprietà di tipo **double**.  
   
 ```  
@@ -318,7 +319,7 @@ doubleValue  ,
 ### <a name="remarks"></a>Note  
  Il valore della proprietà viene letto o scritto per la variabile a cui fa riferimento `doubleValue`, come appropriato. Se `doubleDefault` viene specificato, verrà considerato come valore predefinito della proprietà. Questo valore viene utilizzato se per qualsiasi motivo, il processo di serializzazione del controllo ha esito negativo.  
   
-##  <a name="a-namepxfonta--pxfont"></a><a name="px_font"></a>PX_Font  
+##  <a name="px_font"></a>PX_Font  
  Chiamare questa funzione all'interno del controllo `DoPropExchange` funzione membro da serializzare o inizializzare una proprietà di tipo di carattere.  
   
 ```  
@@ -364,7 +365,7 @@ pFontDispAmbient
 ### <a name="remarks"></a>Note  
  Il valore della proprietà viene letto o scritto per `font`, `CFontHolder` di riferimento, quando appropriato. Se `pFontDesc` e `pFontDispAmbient` sono specificati, vengono utilizzati per inizializzare il valore della proprietà predefinita, quando necessario. Questi valori vengono utilizzati se per qualsiasi motivo, il processo di serializzazione del controllo ha esito negativo. In genere, si passa **NULL** per `pFontDesc` e il valore di ambiente restituito da `COleControl::AmbientFont` per `pFontDispAmbient`. Si noti che l'oggetto tipo di carattere restituito da `COleControl::AmbientFont` deve essere rilasciato da una chiamata al **IFontDisp::Release** funzione membro.  
   
-##  <a name="a-namepxfloata--pxfloat"></a><a name="px_float"></a>PX_Float  
+##  <a name="px_float"></a>PX_Float  
  Chiamare questa funzione all'interno del controllo `DoPropExchange` funzione membro da serializzare o inizializzare una proprietà di tipo **float**.  
   
 ```  
@@ -407,7 +408,7 @@ floatValue  ,
 ### <a name="remarks"></a>Note  
  Il valore della proprietà viene letto o scritto per la variabile a cui fa riferimento `floatValue`, come appropriato. Se `floatDefault` viene specificato, verrà considerato come valore predefinito della proprietà. Questo valore viene utilizzato se per qualsiasi motivo, il processo di serializzazione del controllo ha esito negativo.  
   
-##  <a name="a-namepxiunknowna--pxiunknown"></a><a name="px_iunknown"></a>PX_IUnknown  
+##  <a name="px_iunknown"></a>PX_IUnknown  
  Chiamare questa funzione all'interno del controllo `DoPropExchange` funzione membro da serializzare o inizializzare una proprietà rappresentata da un oggetto con un **IUnknown**-interfaccia derivata.  
   
 ```  
@@ -449,7 +450,7 @@ pUnkDefault
 ### <a name="remarks"></a>Note  
  Il valore della proprietà viene letto o scritto per la variabile a cui fa riferimento *pUnk*, come appropriato. Se `pUnkDefault` viene specificato, verrà considerato come valore predefinito della proprietà. Questo valore viene utilizzato se per qualsiasi motivo, il processo di serializzazione del controllo ha esito negativo.  
   
-##  <a name="a-namepxlonga--pxlong"></a><a name="px_long"></a>PX_Long  
+##  <a name="px_long"></a>PX_Long  
  Chiamare questa funzione all'interno del controllo `DoPropExchange` funzione membro da serializzare o inizializzare una proprietà di tipo **lungo**.  
   
 ```  
@@ -492,7 +493,7 @@ lValue  ,
 ### <a name="remarks"></a>Note  
  Il valore della proprietà viene letto o scritto per la variabile a cui fa riferimento `lValue`, come appropriato. Se `lDefault` viene specificato, verrà considerato come valore predefinito della proprietà. Questo valore viene utilizzato se per qualsiasi motivo, il processo di serializzazione del controllo ha esito negativo.  
   
-##  <a name="a-namepxpicturea--pxpicture"></a><a name="px_picture"></a>PX_Picture  
+##  <a name="px_picture"></a>PX_Picture  
  Chiamare questa funzione all'interno del controllo `DoPropExchange` funzione membro da serializzare o inizializzare una proprietà di immagine del controllo.  
   
 ```  
@@ -535,7 +536,7 @@ pict  ,
 ### <a name="remarks"></a>Note  
  Il valore della proprietà viene letto o scritto per la variabile a cui fa riferimento `pict`, come appropriato. Se `pictDefault` viene specificato, verrà considerato come valore predefinito della proprietà. Questo valore viene utilizzato se per qualsiasi motivo, il processo di serializzazione del controllo ha esito negativo.  
   
-##  <a name="a-namepxshorta--pxshort"></a><a name="px_short"></a>PX_Short  
+##  <a name="px_short"></a>PX_Short  
  Chiamare questa funzione all'interno del controllo `DoPropExchange` funzione membro da serializzare o inizializzare una proprietà di tipo **breve**.  
   
 ```  
@@ -578,7 +579,7 @@ sValue  ,
 ### <a name="remarks"></a>Note  
  Il valore della proprietà viene letto o scritto per la variabile a cui fa riferimento `sValue`, come appropriato. Se `sDefault` viene specificato, verrà considerato come valore predefinito della proprietà. Questo valore viene utilizzato se per qualsiasi motivo, il processo di serializzazione del controllo ha esito negativo.  
   
-##  <a name="a-namepxulonga--pxulong"></a><a name="px_ulong"></a>PX_ULong  
+##  <a name="px_ulong"></a>PX_ULong  
  Chiamare questa funzione all'interno del controllo `DoPropExchange` funzione membro da serializzare o inizializzare una proprietà di tipo **ULONG**.  
   
 ```  
@@ -621,7 +622,7 @@ ulValue  ,
 ### <a name="remarks"></a>Note  
  Il valore della proprietà viene letto o scritto per la variabile a cui fa riferimento `ulValue`, come appropriato. Se `ulDefault` viene specificato, verrà considerato come valore predefinito della proprietà. Questo valore viene utilizzato se per qualsiasi motivo, il processo di serializzazione del controllo ha esito negativo.  
   
-##  <a name="a-namepxushorta--pxushort"></a><a name="px_ushort"></a>PX_UShort  
+##  <a name="px_ushort"></a>PX_UShort  
  Chiamare questa funzione all'interno del controllo `DoPropExchange` funzione membro da serializzare o inizializzare una proprietà di tipo `unsigned` **breve**.  
   
 ```  
@@ -664,7 +665,7 @@ usValue  ,
 ### <a name="remarks"></a>Note  
  Il valore della proprietà viene letto o scritto per la variabile a cui fa riferimento *usValue*, come appropriato. Se *usDefault* viene specificato, verrà considerato come valore predefinito della proprietà. Questo valore viene utilizzato se per qualsiasi motivo, il processo di serializzazione del controllo ha esito negativo.  
   
-##  <a name="a-namepxstringa--pxstring"></a><a name="px_string"></a>PXstring  
+##  <a name="px_string"></a>PXstring  
  Chiamare questa funzione all'interno del controllo **DoPropExchange** funzione membro da serializzare o inizializzare una proprietà di stringa di caratteri.  
   
 ```  
@@ -707,7 +708,7 @@ strValue  ,
 ### <a name="remarks"></a>Note  
  Il valore della proprietà viene letto o scritto per la variabile a cui fa riferimento `strValue`, come appropriato. Se `strDefault` viene specificato, verrà considerato come valore predefinito della proprietà. Questo valore viene utilizzato se per qualsiasi motivo, il processo di serializzazione del controllo ha esito negativo.  
   
-##  <a name="a-namepxvbxfontconverta--pxvbxfontconvert"></a><a name="px_vbxfontconvert"></a>PX_VBXFontConvert  
+##  <a name="px_vbxfontconvert"></a>PX_VBXFontConvert  
  Chiamare questa funzione all'interno del controllo `DoPropExchange` funzione membro per inizializzare una proprietà font convertendo le proprietà relative ai caratteri di un controllo VBX.  
   
 ```  

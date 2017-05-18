@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -37,9 +37,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
 ms.openlocfilehash: f1ae094e7085017f03daab3f73323da13ab1be39
+ms.contentlocale: it-it
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -55,7 +56,7 @@ Le macro di cast di tipo consentono di eseguire il cast di un puntatore specific
 |[DYNAMIC_DOWNCAST](#dynamic_downcast)|Esegue il cast di un puntatore a un puntatore a un oggetto della classe durante la verifica per vedere se il cast non è valido.|  
 |[STATIC_DOWNCAST](#static_downcast)|Esegue il cast di un puntatore a un oggetto da una classe a un puntatore di tipo correlato. In una build di debug, viene generato un **ASSERT** se l'oggetto non è un "tipo di" il tipo di destinazione.|  
   
-##  <a name="a-namedynamicdowncasta--dynamicdowncast"></a><a name="dynamic_downcast"></a>DYNAMIC_DOWNCAST  
+##  <a name="dynamic_downcast"></a>DYNAMIC_DOWNCAST  
  Fornisce un modo comodo per eseguire il cast di un puntatore a un puntatore a un oggetto della classe durante la verifica per vedere se il cast non è valido.  
   
 ```   
@@ -74,7 +75,7 @@ DYNAMIC_DOWNCAST(class, pointer)
   
  Se l'oggetto a cui fa riferimento il puntatore è un "tipo di" la classe identificata, la macro restituisce il puntatore del mouse appropriato. Se non è un cast valido, la macro restituisce **NULL**.  
   
-##  <a name="a-namestaticdowncasta--staticdowncast"></a><a name="static_downcast"></a>STATIC_DOWNCAST  
+##  <a name="static_downcast"></a>STATIC_DOWNCAST  
  Cast *pobject* a un puntatore a un *class_name* oggetto.  
   
 ```   

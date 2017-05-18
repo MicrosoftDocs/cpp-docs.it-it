@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -30,9 +30,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5c6fbfc8699d7d66c40b0458972d8b6ef0dcc705
 ms.openlocfilehash: c5de7e4f11b2e1aa87eab408c5e85e08632a42f2
+ms.contentlocale: it-it
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="visual-c-samples"></a>Esempi di Visual C++
@@ -60,8 +62,3 @@ Negli esempi di Visual C++ elencati di seguito vengono illustrate funzionalità 
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimenti a Visual C++](http://msdn.microsoft.com/en-us/1ba03b5c-8229-4f63-b08c-6c12141d6ab1)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

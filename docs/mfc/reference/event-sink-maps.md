@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -33,9 +33,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
 ms.openlocfilehash: 33bf66d18b499787a34b2da501bb3e8ead255459
+ms.contentlocale: it-it
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -56,7 +57,7 @@ Quando un controllo OLE incorporato viene generato un evento, il contenitore ric
 |[ON_PROPNOTIFY_RANGE](#on_propnotify_range)|Definisce un gestore per la gestione delle notifiche di proprietà da un set di controlli OLE.|  
 |[ON_PROPNOTIFY_REFLECT](#on_propnotify_reflect)|Riceve le notifiche di proprietà inviate dal controllo prima vengono gestiti dal contenitore del controllo.|  
   
-##  <a name="a-namebegineventsinkmapa--begineventsinkmap"></a><a name="begin_eventsink_map"></a>BEGIN_EVENTSINK_MAP  
+##  <a name="begin_eventsink_map"></a>BEGIN_EVENTSINK_MAP  
  Inizia la definizione della mappa del sink di evento.  
   
 ```   
@@ -78,7 +79,7 @@ BEGIN_EVENTSINK_MAP(theClass, baseClass)
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** afxdisp. h  
   
-##  <a name="a-namedeclareeventsinkmapa--declareeventsinkmap"></a><a name="declare_eventsink_map"></a>DECLARE_EVENTSINK_MAP  
+##  <a name="declare_eventsink_map"></a>DECLARE_EVENTSINK_MAP  
  Un contenitore OLE può fornire una mappa del sink di evento per specificare gli eventi che verrà notificato nel contenitore.  
   
 ```   
@@ -93,7 +94,7 @@ DECLARE_EVENTSINK_MAP()
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** AFXWIN. h  
   
-##  <a name="a-nameendeventsinkmapa--endeventsinkmap"></a><a name="end_eventsink_map"></a>END_EVENTSINK_MAP  
+##  <a name="end_eventsink_map"></a>END_EVENTSINK_MAP  
  Termina la definizione della mappa del sink di evento.  
   
 ```   
@@ -103,7 +104,7 @@ END_EVENTSINK_MAP()
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** afxdisp. h  
   
-##  <a name="a-nameoneventa--onevent"></a><a name="on_event"></a>ON_EVENT  
+##  <a name="on_event"></a>ON_EVENT  
  Utilizzare il `ON_EVENT` macro per definire una funzione del gestore eventi per un evento generato da un controllo OLE.  
   
 ```   
@@ -138,7 +139,7 @@ ON_EVENT(theClass, id, dispid, pfnHandler,  vtsParams)
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** afxdisp. h  
   
-##  <a name="a-nameoneventrangea--oneventrange"></a><a name="on_event_range"></a>ON_EVENT_RANGE  
+##  <a name="on_event_range"></a>ON_EVENT_RANGE  
  Utilizzare il `ON_EVENT_RANGE` macro per definire una funzione del gestore eventi per un evento attivato da qualsiasi controllo OLE con un ID di controllo all'interno di un intervallo contiguo di ID.  
   
 ```   
@@ -185,7 +186,7 @@ ON_EVENT_RANGE(theClass, idFirst, idLast, dispid, pfnHandler,  vtsParams)
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** afxdisp. h  
   
-##  <a name="a-nameoneventreflecta--oneventreflect"></a><a name="on_event_reflect"></a>ON_EVENT_REFLECT  
+##  <a name="on_event_reflect"></a>ON_EVENT_REFLECT  
  Il `ON_EVENT_REFLECT` (macro), quando utilizzato nell'evento mappa sink della classe wrapper del controllo OLE, riceve gli eventi generati dal controllo prima che vengano gestiti dal contenitore del controllo.  
   
 ```   
@@ -219,7 +220,7 @@ ON_EVENT_REFLECT(theClass,  dispid, pfnHandler,  vtsParams)
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** afxdisp. h  
   
-##  <a name="a-nameonpropnotifya--onpropnotify"></a><a name="on_propnotify"></a>ON_PROPNOTIFY  
+##  <a name="on_propnotify"></a>ON_PROPNOTIFY  
  Utilizzare il `ON_PROPNOTIFY` macro per definire una voce di mappa eventi sink per la gestione delle notifiche di proprietà da un controllo OLE.  
   
 ```   
@@ -252,7 +253,7 @@ ON_PROPNOTIFY(theClass, id, dispid, pfnRequest, pfnChanged)
   
  Per un elenco di **VTS _** costanti, vedere [EVENT_CUSTOM](event-maps.md#event_custom).  
   
-##  <a name="a-nameonpropnotifyrangea--onpropnotifyrange"></a><a name="on_propnotify_range"></a>ON_PROPNOTIFY_RANGE  
+##  <a name="on_propnotify_range"></a>ON_PROPNOTIFY_RANGE  
  Utilizzare il `ON_PROPNOTIFY_RANGE` macro per definire una voce di mapping di sink di evento per la gestione delle notifiche di proprietà da qualsiasi controllo OLE con un ID di controllo all'interno di un intervallo contiguo di ID.  
   
 ```  
@@ -283,7 +284,7 @@ ON_PROPNOTIFY_RANGE(theClass, idFirst, idLast, dispid, pfnRequest, pfnChanged)
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** afxdisp. h  
   
-##  <a name="a-nameonpropnotifyreflecta--onpropnotifyreflect"></a><a name="on_propnotify_reflect"></a>ON_PROPNOTIFY_REFLECT  
+##  <a name="on_propnotify_reflect"></a>ON_PROPNOTIFY_REFLECT  
  Il `ON_PROPNOTIFY_REFLECT` (macro), quando utilizzato nell'evento mappa sink della classe wrapper del controllo OLE, riceve le notifiche di proprietà inviate dal controllo prima vengono gestiti dal contenitore del controllo.  
   
 ```  

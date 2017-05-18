@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
 ms.openlocfilehash: 89aa66d3a1e85183baaba21f001b60e080895f7f
+ms.contentlocale: it-it
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -50,7 +51,7 @@ Le seguenti macro possono essere utilizzate per eseguire il mapping di comandi d
 |[DHTMLEDITING_CMD_ENTRY_TYPE](#dhtmlediting_cmd_entry_type)|Un ID di comando viene eseguito il mapping a un comando di modifica HTML e un elemento dell'interfaccia utente.|  
 |[DHTMLEDITING_CMD_ENTRY_FUNC_TYPE](#dhtmlediting_cmd_entry_func_type)|Esegue il mapping di un ID di comando a un comando di modifica HTML, un gestore messaggi e un elemento dell'interfaccia utente.|  
   
-##  <a name="a-namedeclaredhtmleditingcmdmapa--declaredhtmleditingcmdmap"></a><a name="declare_dhtmlediting_cmdmap"></a>DECLARE_DHTMLEDITING_CMDMAP  
+##  <a name="declare_dhtmlediting_cmdmap"></a>DECLARE_DHTMLEDITING_CMDMAP  
  Dichiara una mappa di comando di modifica DHTML in una classe.  
   
 ```  
@@ -72,7 +73,7 @@ DECLARE_DHTMLEDITING_CMDMAP(className)
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** afxhtml. h  
   
-##  <a name="a-namebegindhtmleditingcmdmapa--begindhtmleditingcmdmap"></a><a name="begin_dhtmlediting_cmdmap"></a>BEGIN_DHTMLEDITING_CMDMAP  
+##  <a name="begin_dhtmlediting_cmdmap"></a>BEGIN_DHTMLEDITING_CMDMAP  
  Inizia la definizione di una mappa di comando di modifica DHTML all'interno di una classe.  
   
 ```  
@@ -91,7 +92,7 @@ BEGIN_DHTMLEDITING_CMDMAP(className)
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** afxhtml. h  
   
-##  <a name="a-nameenddhtmleditingcmdmapa--enddhtmleditingcmdmap"></a><a name="end_dhtmlediting_cmdmap"></a>END_DHTMLEDITING_CMDMAP  
+##  <a name="end_dhtmlediting_cmdmap"></a>END_DHTMLEDITING_CMDMAP  
  Contrassegna la fine di un mapping dei comandi di modifica DHTML.  
   
 ```  
@@ -107,7 +108,7 @@ END_DHTMLEDITING_CMDMAP()
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** afxhtml. h  
   
-##  <a name="a-namedhtmleditingcmdentrya--dhtmleditingcmdentry"></a><a name="dhtmlediting_cmd_entry"></a>DHTMLEDITING_CMD_ENTRY  
+##  <a name="dhtmlediting_cmd_entry"></a>DHTMLEDITING_CMD_ENTRY  
  Un ID di comando viene eseguito il mapping a un comando di modifica HTML.  
   
 ```  
@@ -127,7 +128,7 @@ DHTMLEDITING_CMD_ENTRY(cmdID,  dhtmlcmdID)
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** afxhtml. h  
   
-##  <a name="a-namedhtmleditingcmdentryfunca--dhtmleditingcmdentryfunc"></a><a name="dhtmlediting_cmd_entry_func"></a>DHTMLEDITING_CMD_ENTRY_FUNC  
+##  <a name="dhtmlediting_cmd_entry_func"></a>DHTMLEDITING_CMD_ENTRY_FUNC  
  Un ID di comando viene eseguito il mapping a un comando di modifica HTML e il gestore di messaggi.  
   
 ```  
@@ -150,7 +151,7 @@ DHTMLEDITING_CMD_ENTRY_FUNC(cmdID, dhtmlcmdID,  member_func_name)
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** afxhtml. h  
   
-##  <a name="a-namedhtmleditingcmdentrytypea--dhtmleditingcmdentrytype"></a><a name="dhtmlediting_cmd_entry_type"></a>DHTMLEDITING_CMD_ENTRY_TYPE  
+##  <a name="dhtmlediting_cmd_entry_type"></a>DHTMLEDITING_CMD_ENTRY_TYPE  
  Un ID di comando viene eseguito il mapping a un comando di modifica HTML e un elemento dell'interfaccia utente.  
   
 ```  
@@ -173,7 +174,7 @@ DHTMLEDITING_CMD_ENTRY_TYPE(cmdID  ,   dhtmlcmdID  ,    elemType)
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** afxhtml. h  
   
-##  <a name="a-namedhtmleditingcmdentryfunctypea--dhtmleditingcmdentryfunctype"></a><a name="dhtmlediting_cmd_entry_func_type"></a>DHTMLEDITING_CMD_ENTRY_FUNC_TYPE  
+##  <a name="dhtmlediting_cmd_entry_func_type"></a>DHTMLEDITING_CMD_ENTRY_FUNC_TYPE  
  Esegue il mapping di un ID di comando a un comando di modifica HTML, un gestore messaggi e un elemento dell'interfaccia utente.  
   
 ```  

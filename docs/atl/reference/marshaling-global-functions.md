@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
 ms.openlocfilehash: dd4b8d50ec69974b7b2af29438b1657e1ce592b4
+ms.contentlocale: it-it
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -47,7 +48,7 @@ Queste funzioni forniscono il supporto per il marshalling e conversione dei dati
 |[AtlMarshalPtrInProc](#atlmarshalptrinproc)|Crea un nuovo oggetto flusso ed effettua il marshalling del puntatore a interfaccia specificato.|  
 |[AtlUnmarshalPtr](#atlunmarshalptr)|Converte i dati di marshalling del flusso in un puntatore a interfaccia.|  
   
-##  <a name="a-nameatlfreemarshalstreama--atlfreemarshalstream"></a><a name="atlfreemarshalstream"></a>AtlFreeMarshalStream  
+##  <a name="atlfreemarshalstream"></a>AtlFreeMarshalStream  
  Rilascia i dati del marshalling nel flusso, quindi rilascia il puntatore di flusso.  
 
 ```
@@ -61,7 +62,7 @@ HRESULT AtlFreeMarshalStream(IStream* pStream);
 ### <a name="example"></a>Esempio  
   Vedere l'esempio per [AtlMarshalPtrInProc](#atlmarshalptrinproc).  
   
-##  <a name="a-nameatlmarshalptrinproca--atlmarshalptrinproc"></a><a name="atlmarshalptrinproc"></a>AtlMarshalPtrInProc  
+##  <a name="atlmarshalptrinproc"></a>AtlMarshalPtrInProc  
  Crea un nuovo oggetto flusso, scrivere il CLSID del proxy nel flusso ed effettua il marshalling del puntatore a interfaccia specificato scrivendo i dati necessari a inizializzare il proxy nel flusso.  
   
 ```
@@ -94,7 +95,7 @@ HRESULT AtlMarshalPtrInProc(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATL_COM &#50;](../../atl/codesnippet/cpp/marshaling-global-functions_1.cpp)]  
   
-##  <a name="a-nameatlunmarshalptra--atlunmarshalptr"></a><a name="atlunmarshalptr"></a>AtlUnmarshalPtr  
+##  <a name="atlunmarshalptr"></a>AtlUnmarshalPtr  
  Converte i dati del marshalling del flusso in un puntatore a interfaccia che può essere utilizzato dal client.  
    
 ```

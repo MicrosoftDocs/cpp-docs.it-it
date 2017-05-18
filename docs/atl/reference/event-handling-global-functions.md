@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -32,9 +32,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
 ms.openlocfilehash: 4bf2a8b0211361f5d5d2bf0f996e978638631116
+ms.contentlocale: it-it
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -51,7 +52,7 @@ Questa funzione fornisce un gestore eventi.
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlbase. h  
 
-##  <a name="a-nameatlwaitwithmessageloopa--atlwaitwithmessageloop"></a><a name="atlwaitwithmessageloop"></a>AtlWaitWithMessageLoop  
+##  <a name="atlwaitwithmessageloop"></a>AtlWaitWithMessageLoop  
  Attendere che l'oggetto venga segnalato, inviando nel frattempo i messaggi della finestra in base alle necessità.  
   
 > [!IMPORTANT]

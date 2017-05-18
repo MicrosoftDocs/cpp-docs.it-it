@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
 ms.openlocfilehash: ee3c1d639ee4a6c6bd6cf26a8c59bb1a37a4fa02
+ms.contentlocale: it-it
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -52,7 +53,7 @@ Queste macro eseguono le operazioni di scambio di dati del Registro di sistema.
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlplus  
    
-##  <a name="a-namebeginrdxmapa--beginrdxmap"></a><a name="begin_rdx_map"></a>BEGIN_RDX_MAP  
+##  <a name="begin_rdx_map"></a>BEGIN_RDX_MAP  
  Contrassegna l'inizio della mappa di scambio di dati del Registro di sistema.  
   
 ```
@@ -71,14 +72,14 @@ BEGIN_RDX_MAP
   
  La funzione globale [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), la funzione membro con lo stesso nome autore o il `BEGIN_RDX_MAP` e `END_RDX_MAP` macro, deve essere utilizzato quando il codice necessario per lo scambio di dati tra il Registro di sistema e le variabili specificate nella mappa RDX.  
   
-##  <a name="a-nameendrdxmapa--endrdxmap"></a><a name="end_rdx_map"></a>END_RDX_MAP  
+##  <a name="end_rdx_map"></a>END_RDX_MAP  
  Contrassegna la fine della mappa di scambio di dati del Registro di sistema.  
   
 ```
 END_RDX_MAP
 ```  
   
-##  <a name="a-namerdxbinarya--rdxbinary"></a><a name="rdx_binary"></a>RDX_BINARY  
+##  <a name="rdx_binary"></a>RDX_BINARY  
  Associa la voce del Registro di sistema a una variabile membro di tipo BYTE.  
   
 ```
@@ -109,7 +110,7 @@ RDX_BINARY(
 ### <a name="remarks"></a>Note  
  Questa macro viene utilizzata in combinazione con il `BEGIN_RDX_MAP` e `END_RDX_MAP` macro per associare una variabile membro a una voce del Registro di sistema specificato. La funzione globale [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), la funzione membro con lo stesso nome autore o il `BEGIN_RDX_MAP` e `END_RDX_MAP` macro, deve essere utilizzato per effettuare lo scambio di dati tra il Registro di sistema e le variabili membro della mappa RDX.  
   
-##  <a name="a-namerdxcstringtexta--rdxcstringtext"></a><a name="rdx_cstring_text"></a>RDX_CSTRING_TEXT  
+##  <a name="rdx_cstring_text"></a>RDX_CSTRING_TEXT  
  Associa la voce del Registro di sistema a una variabile membro specificato del tipo CString.  
   
 ```
@@ -140,7 +141,7 @@ RDX_CSTRING_TEXT(
 ### <a name="remarks"></a>Note  
  Questa macro viene utilizzata in combinazione con il `BEGIN_RDX_MAP` e `END_RDX_MAP` macro per associare una variabile membro a una voce del Registro di sistema specificato. La funzione globale [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), la funzione membro con lo stesso nome autore o il `BEGIN_RDX_MAP` e `END_RDX_MAP` macro, deve essere utilizzato per effettuare lo scambio di dati tra il Registro di sistema e le variabili membro della mappa RDX.  
   
-##  <a name="a-namerdxdworda--rdxdword"></a><a name="rdx_dword"></a>RDX_DWORD  
+##  <a name="rdx_dword"></a>RDX_DWORD  
  Associa la voce del Registro di sistema a una variabile membro di tipo DWORD.  
   
 ```
@@ -171,7 +172,7 @@ RDX_DWORD(
 ### <a name="remarks"></a>Note  
  Questa macro viene utilizzata in combinazione con il `BEGIN_RDX_MAP` e `END_RDX_MAP` macro per associare una variabile membro a una voce del Registro di sistema specificato. La funzione globale [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), la funzione membro con lo stesso nome autore o il `BEGIN_RDX_MAP` e `END_RDX_MAP` macro, deve essere utilizzato per effettuare lo scambio di dati tra il Registro di sistema e le variabili membro della mappa RDX.  
   
-##  <a name="a-namerdxtexta--rdxtext"></a><a name="rdx_text"></a>RDX_TEXT  
+##  <a name="rdx_text"></a>RDX_TEXT  
  Associa una variabile membro specificato del tipo TCHAR la voce del Registro di sistema.  
   
 ```

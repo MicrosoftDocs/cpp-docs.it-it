@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -35,9 +35,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
 ms.openlocfilehash: 48e5d1fe207089733caa5ed9e8ca30c2de21f95f
+ms.contentlocale: it-it
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -58,7 +59,7 @@ Automazione OLE fornisce metodi per chiamare i metodi e accedere alle proprietà
 |[DISP_PROPERTY_PARAM](#disp_property_param)|Definisce una proprietà di automazione OLE che accetta parametri e i nomi delle funzioni Get e Set.|  
 |[DISP_DEFVALUE](#disp_defvalue)|Imposta una proprietà esistente come il valore predefinito di un oggetto.|  
   
-##  <a name="a-namedeclaredispatchmapa--declaredispatchmap"></a><a name="declare_dispatch_map"></a>DECLARE_DISPATCH_MAP  
+##  <a name="declare_dispatch_map"></a>DECLARE_DISPATCH_MAP  
  Se un `CCmdTarget`-classe derivata nel programma supporta l'automazione OLE, che classe deve fornire una mappa di invio per esporre i relativi metodi e proprietà.  
   
 ```   
@@ -79,7 +80,7 @@ DECLARE_DISPATCH_MAP()
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** afxwin.h  
 
-##  <a name="a-namebegindispatchmapa--begindispatchmap"></a><a name="begin_dispatch_map"></a>BEGIN_DISPATCH_MAP  
+##  <a name="begin_dispatch_map"></a>BEGIN_DISPATCH_MAP  
  Dichiara la definizione della mappa di invio.  
   
 ```  
@@ -99,7 +100,7 @@ BEGIN_DISPATCH_MAP(theClass, baseClass)
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** afxdisp.h  
 
-##  <a name="a-nameenddispatchmapa--enddispatchmap"></a><a name="end_dispatch_map"></a>END_DISPATCH_MAP  
+##  <a name="end_dispatch_map"></a>END_DISPATCH_MAP  
  Termina la definizione della mappa di invio.  
   
 ```   
@@ -112,7 +113,7 @@ END_DISPATCH_MAP()
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** afxdisp.h  
 
-##  <a name="a-namedispfunctiona--dispfunction"></a><a name="disp_function"></a>DISP_FUNCTION  
+##  <a name="disp_function"></a>DISP_FUNCTION  
  Definisce una funzione di automazione OLE in una mappa di invio.  
   
 ```   
@@ -198,7 +199,7 @@ DISP_FUNCTION(
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** afxdisp.h 
 
-##  <a name="a-namedisppropertya--dispproperty"></a><a name="disp_property"></a>DISP_PROPERTY  
+##  <a name="disp_property"></a>DISP_PROPERTY  
  Definisce una proprietà di automazione OLE in una mappa di invio.  
   
 ```   
@@ -245,7 +246,7 @@ DISP_PROPERTY(
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** afxdisp.h 
 
-##  <a name="a-namedisppropertyexa--disppropertyex"></a><a name="disp_property_ex"></a>DISP_PROPERTY_EX  
+##  <a name="disp_property_ex"></a>DISP_PROPERTY_EX  
  Definisce le funzioni utilizzate per ottenere e impostare il valore della proprietà in una mappa di invio di un nome e una proprietà di automazione OLE.  
   
 ```   
@@ -281,7 +282,7 @@ DISP_PROPERTY_EX(
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** afxdisp.h 
 
-##  <a name="a-namedisppropertynotifya--disppropertynotify"></a><a name="disp_property_notify"></a>DISP_PROPERTY_NOTIFY  
+##  <a name="disp_property_notify"></a>DISP_PROPERTY_NOTIFY  
  Definisce una proprietà di automazione OLE con la notifica in una mappa di invio.  
   
 ```   
@@ -332,7 +333,7 @@ DISP_PROPERTY_NOTIFY(
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** afxdisp.h 
 
-##  <a name="a-namedisppropertyparama--disppropertyparam"></a><a name="disp_property_param"></a>DISP_PROPERTY_PARAM  
+##  <a name="disp_property_param"></a>DISP_PROPERTY_PARAM  
  Definisce una proprietà accessibile con separato **ottenere** e `Set` funzioni membro.  
   
 ```   
@@ -387,7 +388,7 @@ DISP_PROPERTY_PARAM(
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** afxdisp.h 
 
-##  <a name="a-namedispdefvaluea--dispdefvalue"></a><a name="disp_defvalue"></a>DISP_DEFVALUE  
+##  <a name="disp_defvalue"></a>DISP_DEFVALUE  
  Imposta una proprietà esistente come il valore predefinito di un oggetto.  
   
 ```   
