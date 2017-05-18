@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 8cdedc5cfac9d49df812ae6fcfcc548201b1edb5
 ms.openlocfilehash: 9fb8a907c8052c9816d6b87247e903a63f34a5be
+ms.contentlocale: it-it
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -53,7 +54,7 @@ Queste macro definiscono mappe sink di evento e le voci.
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlcom. h  
 
-##  <a name="a-namebeginsinkmapa--beginsinkmap"></a><a name="begin_sink_map"></a>BEGIN_SINK_MAP  
+##  <a name="begin_sink_map"></a>BEGIN_SINK_MAP  
  Dichiara l'inizio della mappa del sink di evento per il controllo composito.  
   
 ```
@@ -70,7 +71,7 @@ BEGIN_SINK_MAP(_class)
 ### <a name="remarks"></a>Note  
  Implementazione ATL CE ActiveX evento sink soli supporta restituiti o dei valori di HRESULT di tipo void dai metodi del gestore eventi; qualsiasi altro valore restituito non è supportato e il relativo comportamento sarà indefinito.  
   
-##  <a name="a-nameendsinkmapa--endsinkmap"></a><a name="end_sink_map"></a>END_SINK_MAP  
+##  <a name="end_sink_map"></a>END_SINK_MAP  
  Dichiara la fine della mappa del sink di evento per il controllo composito.  
   
 ```
@@ -83,7 +84,7 @@ END_SINK_MAP()
 ### <a name="remarks"></a>Note  
  Implementazione ATL CE ActiveX evento sink soli supporta restituiti o dei valori di HRESULT di tipo void dai metodi del gestore eventi; qualsiasi altro valore restituito non è supportato e il relativo comportamento sarà indefinito.  
   
-##  <a name="a-namesinkentrya--sinkentry"></a><a name="sink_entry"></a>MACRO SINK_ENTRY  
+##  <a name="sink_entry"></a>MACRO SINK_ENTRY  
  Dichiara la funzione del gestore ( `fn`) per l'evento specificato ( `dispid`), del controllo identificato da `id`.  
   
 ```
@@ -106,7 +107,7 @@ SINK_ENTRY( id, dispid, fn )
 ### <a name="remarks"></a>Note  
  Implementazione ATL CE ActiveX evento sink soli supporta restituiti o dei valori di HRESULT di tipo void dai metodi del gestore eventi; qualsiasi altro valore restituito non è supportato e il relativo comportamento sarà indefinito.  
   
-##  <a name="a-namesinkentryexa--sinkentryex-and-sinkentryexp"></a><a name="sink_entry_ex"></a>SINK_ENTRY_EX e SINK_ENTRY_EX_P
+##  <a name="sink_entry_ex"></a>SINK_ENTRY_EX e SINK_ENTRY_EX_P
  Dichiara la funzione del gestore ( `fn`) per l'evento specificato ( `dispid`), dell'interfaccia dispatch ( *iid)*, per il controllo identificato da `id`.  
   
 ```
@@ -136,7 +137,7 @@ SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 ### <a name="remarks"></a>Note  
  Implementazione ATL CE ActiveX evento sink soli supporta restituiti o dei valori di HRESULT di tipo void dai metodi del gestore eventi; qualsiasi altro valore restituito non è supportato e il relativo comportamento sarà indefinito.  
   
-##  <a name="a-namesinkentryinfoa--sinkentryinfo-and-sinkentryinfop"></a><a name="sink_entry_info"></a>Macro SINK_ENTRY_INFO e SINK_ENTRY_INFO_P  
+##  <a name="sink_entry_info"></a>Macro SINK_ENTRY_INFO e SINK_ENTRY_INFO_P  
  Utilizzare il `SINK_ENTRY_INFO` (macro) all'interno di una mappa del sink di evento per fornire le informazioni necessarie a [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) l'invio di eventi alla funzione del gestore pertinente.  
   
 ```

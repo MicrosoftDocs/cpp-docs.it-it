@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
 ms.openlocfilehash: 4ace3bb50d824827071260e3f43cec3cda32742f
+ms.contentlocale: it-it
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -52,7 +53,7 @@ Queste funzioni forniscono il supporto per la registrazione e annullamento della
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlbase. h  
    
-##  <a name="a-nameatlcommoduleregisterservera--atlcommoduleregisterserver"></a><a name="atlcommoduleregisterserver"></a>AtlComModuleRegisterServer  
+##  <a name="atlcommoduleregisterserver"></a>AtlComModuleRegisterServer  
  Questa funzione viene chiamata per registrare ogni oggetto nella mappa oggetto.  
   
 ```
@@ -80,7 +81,7 @@ ATLINLINE ATLAPI AtlComModuleRegisterServer(
   
  Questa funzione viene chiamata [CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver).  
   
-##  <a name="a-nameatlcommoduleunregisterservera--atlcommoduleunregisterserver"></a><a name="atlcommoduleunregisterserver"></a>AtlComModuleUnregisterServer  
+##  <a name="atlcommoduleunregisterserver"></a>AtlComModuleUnregisterServer  
  Questa funzione viene chiamata per annullare la registrazione di ogni oggetto nella mappa oggetto.  
   
 ```
@@ -108,7 +109,7 @@ ATLINLINE ATLAPI AtlComModuleUnregisterServer(
   
  Questa funzione viene chiamata [CAtlComModule::UnregisterServer](catlcommodule-class.md#unregisterserver).  
   
-##  <a name="a-nameatlcommoduleregisterclassobjectsa--atlcommoduleregisterclassobjects"></a><a name="atlcommoduleregisterclassobjects"></a>AtlComModuleRegisterClassObjects  
+##  <a name="atlcommoduleregisterclassobjects"></a>AtlComModuleRegisterClassObjects  
  Questa funzione viene chiamata per registrare gli oggetti della classe.  
   
 ```
@@ -134,7 +135,7 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
 ### <a name="remarks"></a>Note  
  Questa funzione di supporto viene utilizzata da [CComModule::RegisterClassObjects](ccommodule-class.md#registerclassobjects) (obsoleta in ATL 7.0) e [CAtlExeModuleT::RegisterClassObjects](catlexemodulet-class.md#registerclassobjects).  
   
-##  <a name="a-nameatlcommodulerevokeclassobjectsa--atlcommodulerevokeclassobjects"></a><a name="atlcommodulerevokeclassobjects"></a>AtlComModuleRevokeClassObjects  
+##  <a name="atlcommodulerevokeclassobjects"></a>AtlComModuleRevokeClassObjects  
  Questa funzione viene chiamata per rimuovere le class factory dalla tabella degli oggetti in esecuzione.  
   
 ```
@@ -151,7 +152,7 @@ ATLINLINE ATLAPI AtlComModuleRevokeClassObjects(_ATL_COM_MODULE* pComModule);
 ### <a name="remarks"></a>Note  
  Questa funzione di supporto viene utilizzata da [CComModule::RevokeClassObjects](ccommodule-class.md#revokeclassobjects) (obsoleta in ATL 7.0) e [CAtlExeModuleT::RevokeClassObjects](catlexemodulet-class.md#revokeclassobjects).  
   
-##  <a name="a-nameatlcommodulegetclassobjecta--atlcommodulegetclassobject"></a><a name="atlcommodulegetclassobject"></a>AtlComModuleGetClassObject  
+##  <a name="atlcommodulegetclassobject"></a>AtlComModuleGetClassObject  
  Questa funzione viene chiamata per restituire la class factory.  
   
 ```

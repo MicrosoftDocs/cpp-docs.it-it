@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
 ms.openlocfilehash: 3a3abf5ad29b50c7f6708f02fd7c5aa193b3591c
+ms.contentlocale: it-it
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -54,7 +55,7 @@ Queste macro definiscono strutture di libreria e del Registro di sistema di tipo
  **Intestazione:** atlcom. h  
   
     
-##  <a name="a-nameatlstaticregistrya--atlstaticregistry"></a><a name="_atl_static_registry"></a>ATL_STATIC_REGISTRY  
+##  <a name="_atl_static_registry"></a>ATL_STATIC_REGISTRY  
  Un simbolo che indica che si desidera che il codice di registrazione per l'oggetto sia l'oggetto per evitare una dipendenza su ATL. DLL.  
   
 ```
@@ -66,7 +67,7 @@ Queste macro definiscono strutture di libreria e del Registro di sistema di tipo
   
  [!code-cpp[NVC_ATL_EventHandlingSample n.&5;](../../atl/codesnippet/cpp/registry-macros_1.cpp)]  
   
-##  <a name="a-namedeclarelibida--declarelibid"></a><a name="declare_libid"></a>DECLARE_LIBID  
+##  <a name="declare_libid"></a>DECLARE_LIBID  
  Fornisce un modo per ATL ottenere il *libid* della libreria dei tipi.  
   
 ```
@@ -83,14 +84,14 @@ DECLARE_LIBID( libid )
 ### <a name="example"></a>Esempio  
  Attributi non generato dalla procedura guidata ATL (progetti) avrà un esempio dell'utilizzo di questa macro.  
   
-##  <a name="a-namedeclarenoregistrya--declarenoregistry"></a><a name="declare_no_registry"></a>DECLARE_NO_REGISTRY  
+##  <a name="declare_no_registry"></a>DECLARE_NO_REGISTRY  
  Utilizzare `DECLARE_NO_REGISTRY` se si desidera evitare qualsiasi registrazione ATL predefinito per la classe in cui viene visualizzata questa macro.  
   
 ```
 DECLARE_NO_REGISTRY()
 ```  
   
-##  <a name="a-namedeclareregistrya--declareregistry"></a><a name="declare_registry"></a>DECLARE_REGISTRY  
+##  <a name="declare_registry"></a>DECLARE_REGISTRY  
  Immette la registrazione della classe standard nel Registro di sistema o lo rimuove dal Registro di sistema.  
   
 ```
@@ -123,7 +124,7 @@ DECLARE_REGISTRY(
   
  Quando si crea un oggetto o controllo utilizzando la creazione guidata classe aggiungere ATL, la procedura guidata implementa il supporto del Registro di sistema basato su script automaticamente e aggiunge il [DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid) macro nei file. Se non si desidera supporto basato su script del Registro di sistema, è necessario sostituire questa macro con `DECLARE_REGISTRY`. `DECLARE_REGISTRY`Consente di inserire solo le chiavi di base cinque descritte in precedenza nel Registro di sistema. È necessario scrivere manualmente codice per inserire altre chiavi del Registro di sistema.  
   
-##  <a name="a-namedeclareregistryappidresourceida--declareregistryappidresourceid"></a><a name="declare_registry_appid_resourceid"></a>DECLARE_REGISTRY_APPID_RESOURCEID  
+##  <a name="declare_registry_appid_resourceid"></a>DECLARE_REGISTRY_APPID_RESOURCEID  
  Specifica le informazioni necessarie per registrare automaticamente il *appid*.  
   
 ```
@@ -145,7 +146,7 @@ DECLARE_REGISTRY_APPID_RESOURCEID(
 ### <a name="example"></a>Esempio  
  Le classi aggiunte a ATL (progetti) con la creazione guidata aggiunta classe dispongono di un esempio dell'utilizzo di questa macro.  
   
-##  <a name="a-namedeclareregistryresourcea--declareregistryresource"></a><a name="declare_registry_resource"></a>MACRO DECLARE_REGISTRY_RESOURCE  
+##  <a name="declare_registry_resource"></a>MACRO DECLARE_REGISTRY_RESOURCE  
  Ottiene la risorsa specificata che contiene il file del Registro di sistema e viene eseguito lo script per immettere gli oggetti nel Registro di sistema o rimuoverli dal Registro di sistema.  
   
 ```
@@ -168,7 +169,7 @@ DECLARE_REGISTRY_RESOURCE( x )
   
  Per ulteriori informazioni sui parametri sostituibili e script, vedere l'articolo [il componente del Registro di sistema ATL (Registrar)](../../atl/atl-registry-component-registrar.md).  
   
-##  <a name="a-namedeclareregistryresourceida--declareregistryresourceid"></a><a name="declare_registry_resourceid"></a>DECLARE_REGISTRY_RESOURCEID  
+##  <a name="declare_registry_resourceid"></a>DECLARE_REGISTRY_RESOURCEID  
  Uguale a [macro DECLARE_REGISTRY_RESOURCE](#declare_registry_resource) ad eccezione del fatto che utilizza una procedura guidata genera **UINT** per identificare la risorsa, anziché un nome di stringa.  
   
 ```

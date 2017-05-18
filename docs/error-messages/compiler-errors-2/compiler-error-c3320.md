@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -34,9 +34,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
 ms.openlocfilehash: 4b4acfe97e38cf13e336b7c58ffc868c69cf7a09
+ms.contentlocale: it-it
 ms.lasthandoff: 02/24/2017
 
 ---

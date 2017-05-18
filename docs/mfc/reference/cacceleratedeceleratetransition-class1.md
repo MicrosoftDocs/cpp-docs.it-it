@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -34,9 +34,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
 ms.openlocfilehash: f11dc96b48695b998fb17c33735e8f56bce517b7
+ms.contentlocale: it-it
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -85,7 +86,7 @@ class CAccelerateDecelerateTransition : public CBaseTransition;
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxanimationcontroller.h  
   
-##  <a name="a-namecacceleratedeceleratetransitiona--cacceleratedeceleratetransitioncacceleratedeceleratetransition"></a><a name="cacceleratedeceleratetransition"></a>CAccelerateDecelerateTransition::CAccelerateDecelerateTransition  
+##  <a name="cacceleratedeceleratetransition"></a>CAccelerateDecelerateTransition::CAccelerateDecelerateTransition  
  Costruisce un oggetto di transizione.  
   
 ```  
@@ -109,7 +110,7 @@ CAccelerateDecelerateTransition(
  `decelerationRatio`  
  Il rapporto di tempo trascorsa la durata.  
   
-##  <a name="a-namecreatea--cacceleratedeceleratetransitioncreate"></a><a name="create"></a>CAccelerateDecelerateTransition::Create  
+##  <a name="create"></a>CAccelerateDecelerateTransition::Create  
  Chiama la libreria di transizione per creare oggetti COM di transizione incapsulato.  
   
 ```  
@@ -125,28 +126,28 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Valore restituito  
  TRUE se transizione viene creata correttamente. in caso contrario FALSE.  
   
-##  <a name="a-namemaccelerationratioa--cacceleratedeceleratetransitionmaccelerationratio"></a><a name="m_accelerationratio"></a>CAccelerateDecelerateTransition::m_accelerationRatio  
+##  <a name="m_accelerationratio"></a>CAccelerateDecelerateTransition::m_accelerationRatio  
  Il rapporto di tempo trascorsa la durata.  
   
 ```  
 DOUBLE m_accelerationRatio;  
 ```  
   
-##  <a name="a-namemdecelerationratioa--cacceleratedeceleratetransitionmdecelerationratio"></a><a name="m_decelerationratio"></a>CAccelerateDecelerateTransition::m_decelerationRatio  
+##  <a name="m_decelerationratio"></a>CAccelerateDecelerateTransition::m_decelerationRatio  
  Il rapporto di tempo trascorsa la durata.  
   
 ```  
 DOUBLE m_decelerationRatio;  
 ```  
   
-##  <a name="a-namemdurationa--cacceleratedeceleratetransitionmduration"></a><a name="m_duration"></a>CAccelerateDecelerateTransition::m_duration  
+##  <a name="m_duration"></a>CAccelerateDecelerateTransition::m_duration  
  La durata della transizione.  
   
 ```  
 UI_ANIMATION_SECONDS m_duration;  
 ```  
   
-##  <a name="a-namemfinalvaluea--cacceleratedeceleratetransitionmfinalvalue"></a><a name="m_finalvalue"></a>CAccelerateDecelerateTransition::m_finalValue  
+##  <a name="m_finalvalue"></a>CAccelerateDecelerateTransition::m_finalValue  
  Il valore della variabile di animazione alla fine della transizione.  
   
 ```  

@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
 ms.openlocfilehash: 13823feb06e7fecb2e81a01f3c88e3664de01d30
+ms.contentlocale: it-it
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -52,7 +53,7 @@ Queste macro forniscono il supporto per le estensioni di snap-in.
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlsnap.h 
    
-##  <a name="a-namebeginextensionsnapinnodeinfomapa--beginextensionsnapinnodeinfomap"></a><a name="begin_extension_snapin_nodeinfo_map"></a>BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP  
+##  <a name="begin_extension_snapin_nodeinfo_map"></a>BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP  
  Contrassegna l'inizio del mapping di classe di dati di estensione dello snap-in.  
   
 ```
@@ -69,7 +70,7 @@ BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP(classname)
 ### <a name="example"></a>Esempio  
  [!code-cpp[&#105; NVC_ATL_Windowing](../../atl/codesnippet/cpp/snap-in-object-macros_1.h)]  
   
-##  <a name="a-namebeginsnapintoolbaridmapa--beginsnapintoolbaridmap"></a><a name="begin_snapintoolbarid_map"></a>BEGIN_SNAPINTOOLBARID_MAP  
+##  <a name="begin_snapintoolbarid_map"></a>BEGIN_SNAPINTOOLBARID_MAP  
  Dichiara l'inizio della mappa di ID della barra degli strumenti per l'oggetto Snap-In.  
   
 ```
@@ -83,7 +84,7 @@ BEGIN_SNAPINTOOLBARID_MAP(_class)
 ### <a name="example"></a>Esempio  
  [!code-cpp[&#106; NVC_ATL_Windowing](../../atl/codesnippet/cpp/snap-in-object-macros_2.h)]  
   
-##  <a name="a-nameendextensionsnapinnodeinfomapa--endextensionsnapinnodeinfomap"></a><a name="end_extension_snapin_nodeinfo_map"></a>END_EXTENSION_SNAPIN_NODEINFO_MAP  
+##  <a name="end_extension_snapin_nodeinfo_map"></a>END_EXTENSION_SNAPIN_NODEINFO_MAP  
  Contrassegna la fine del mapping di classe di dati di estensione dello snap-in.  
   
 ```
@@ -96,7 +97,7 @@ END_EXTENSION_SNAPIN_NODEINFO_MAP()
 ### <a name="example"></a>Esempio  
  Vedere l'esempio per [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map).  
   
-##  <a name="a-nameendsnapintoolbaridmapa--endsnapintoolbaridmap"></a><a name="end_snapintoolbarid_map"></a>END_SNAPINTOOLBARID_MAP  
+##  <a name="end_snapintoolbarid_map"></a>END_SNAPINTOOLBARID_MAP  
  Dichiara la fine della mappa di ID della barra degli strumenti per l'oggetto Snap-In.  
   
 ```
@@ -110,7 +111,7 @@ END_SNAPINTOOLBARID_MAP( _class )
 ### <a name="example"></a>Esempio  
  Vedere l'esempio per [BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map).  
   
-##  <a name="a-nameextensionsnapindataclassa--extensionsnapindataclass"></a><a name="extension_snapin_dataclass"></a>EXTENSION_SNAPIN_DATACLASS  
+##  <a name="extension_snapin_dataclass"></a>EXTENSION_SNAPIN_DATACLASS  
  Aggiunge un membro dati per la classe di dati di estensione dello snap-in per un **ISnapInItemImpl**-classe derivata.  
   
 ```
@@ -127,7 +128,7 @@ EXTENSION_SNAPIN_DATACLASS(dataClass )
 ### <a name="example"></a>Esempio  
  [!code-cpp[&#105; NVC_ATL_Windowing](../../atl/codesnippet/cpp/snap-in-object-macros_1.h)]  
   
-##  <a name="a-nameextensionsnapinnodeinfoentrya--extensionsnapinnodeinfoentry"></a><a name="extension_snapin_nodeinfo_entry"></a>EXTENSION_SNAPIN_NODEINFO_ENTRY  
+##  <a name="extension_snapin_nodeinfo_entry"></a>EXTENSION_SNAPIN_NODEINFO_ENTRY  
  Aggiunge una classe di dati di estensione dello snap-in per il mapping di classe dei dati di estensione dello snap-in.  
   
 ```
@@ -144,7 +145,7 @@ EXTENSION_SNAPIN_NODEINFO_ENTRY( dataClass )
 ### <a name="example"></a>Esempio  
  Vedere l'esempio per [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map).  
   
-##  <a name="a-namesnapinmenuida--snapinmenuid"></a><a name="snapinmenuid"></a>SNAPINMENUID  
+##  <a name="snapinmenuid"></a>SNAPINMENUID  
  Utilizzare questa macro per dichiarare la risorsa di menu di contesto dell'oggetto Snap-In.  
   
 ```
@@ -155,7 +156,7 @@ SNAPINMENUID( id )
  `id`  
  [in] Identifica il menu di scelta rapida dell'oggetto Snap-In.  
   
-##  <a name="a-namesnapintoolbaridentrya--snapintoolbaridentry"></a><a name="snapintoolbarid_entry"></a>SNAPINTOOLBARID_ENTRY  
+##  <a name="snapintoolbarid_entry"></a>SNAPINTOOLBARID_ENTRY  
  Utilizzare questa macro per immettere un ID della barra degli strumenti nella mappa di ID della barra degli strumenti dell'oggetto Snap-In.  
   
 ```

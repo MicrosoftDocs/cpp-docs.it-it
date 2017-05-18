@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,9 +19,10 @@ caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 4fafe461008e3545243d693e0d9e34acd57163e0
 ms.openlocfilehash: fbba1e6dde180e77afe7ed8960849ee8cc0fd108
+ms.contentlocale: it-it
 ms.lasthandoff: 02/24/2017
 
 ---
