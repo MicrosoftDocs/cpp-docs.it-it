@@ -9,7 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- vc.mfc.macros.ole
+- afxdisp/AfxOleInit
+- afxdisp/AfxEnableControlContainer
 dev_langs:
 - C++
 helpviewer_keywords:
