@@ -62,7 +62,7 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
 Controllo Struttura a schede che presenta l'aspetto visivo del **Riquadro di navigazione** in Microsoft Outlook.  
-  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
 ## <a name="syntax"></a>Sintassi  
   
 ```  
@@ -290,7 +290,7 @@ int GetBorderSize() const;
  Le dimensioni del bordo, in pixel.  
   
 ##  <a name="getvisiblepagebuttons"></a>CMFCOutlookBarTabCtrl::GetVisiblePageButtons  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetVisiblePageButtons() const;  
@@ -447,7 +447,7 @@ BOOL SetToolbarImageList(
  Questo metodo non deve essere chiamato se non è in modalità di Microsoft Office 2003. Per ulteriori informazioni, vedere [CMFCOutlookBar Class](../../mfc/reference/cmfcoutlookbar-class.md).  
   
 ##  <a name="setvisiblepagebuttons"></a>CMFCOutlookBarTabCtrl::SetVisiblePageButtons  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetVisiblePageButtons(int nVisiblePageButtons);

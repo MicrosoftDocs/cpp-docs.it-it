@@ -410,7 +410,7 @@ int AddPage(LPCTSTR lpszPageLabel);
  Indice in base zero della nuova pagina.  
   
 ##  <a name="addseparator"></a>CMFCTasksPane::AddSeparator  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int AddSeparator(int nGroup);
@@ -496,7 +496,7 @@ CMFCTasksPane();
 ```  
   
 ##  <a name="collapseallgroups"></a>CMFCTasksPane::CollapseAllGroups  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void CollapseAllGroups(BOOL bCollapse = TRUE);
@@ -544,7 +544,7 @@ BOOL CollapseGroup(
  Un gruppo compresso Mostra solo la didascalia del gruppo; l'elenco di attività è nascosta.  
   
 ##  <a name="createdefaultminiframe"></a>CMFCTasksPane::CreateDefaultMiniframe  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
@@ -648,7 +648,7 @@ void EnableNavigationToolbar(
  Per impostazione predefinita, il framework non viene visualizzata la barra di spostamento. Se non viene visualizzata la barra di spostamento, i pulsanti di navigazione si trovano sulla barra del titolo della barra di ancoraggio.  
   
 ##  <a name="enableoffsetcustomcontrols"></a>CMFCTasksPane::EnableOffsetCustomControls  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void EnableOffsetCustomControls(BOOL bEnable);
@@ -797,7 +797,7 @@ int GetHorzMargin() const;
  La spaziatura predefinita tra un riquadro attività e il bordo dell'area client è 12 pixel.  
   
 ##  <a name="getnextpages"></a>CMFCTasksPane::GetNextPages  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void GetNextPages(CStringList& lstNextPages) const;  
@@ -838,7 +838,7 @@ int GetPagesCount() const;
  Il numero di pagine nel riquadro attività.  
   
 ##  <a name="getpreviouspages"></a>CMFCTasksPane::GetPreviousPages  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void GetPreviousPages(CStringList& lstPrevPages) const;  
@@ -850,7 +850,7 @@ void GetPreviousPages(CStringList& lstPrevPages) const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="getscrollbarctrl"></a>CMFCTasksPane::GetScrollBarCtrl  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CScrollBar* GetScrollBarCtrl(int nBar) const;  
@@ -966,7 +966,7 @@ int GetTasksHorzOffset() const;
  L'offset orizzontale predefinito di attività è 12 pixel.  
   
 ##  <a name="gettasksiconhorzoffset"></a>CMFCTasksPane::GetTasksIconHorzOffset  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetTasksIconHorzOffset() const;  
@@ -977,7 +977,7 @@ int GetTasksIconHorzOffset() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="gettasksiconvertoffset"></a>CMFCTasksPane::GetTasksIconVertOffset  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetTasksIconVertOffset() const;  
@@ -1001,7 +1001,7 @@ int GetVertMargin() const;
  Il margine verticale è lo spazio tra un riquadro attività e i bordi dell'area client. Il valore predefinito del margine verticale è 12 pixel.  
   
 ##  <a name="isaccessibilitycompatible"></a>CMFCTasksPane::IsAccessibilityCompatible  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsAccessibilityCompatible();
@@ -1051,7 +1051,7 @@ BOOL IsForwardButtonEnabled() const;
  Pulsante Avanti consente lo spostamento in avanti nella cronologia delle pagine di attività.  
   
 ##  <a name="isgroupcollapseenabled"></a>CMFCTasksPane::IsGroupCollapseEnabled  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsGroupCollapseEnabled() const;  
@@ -1082,7 +1082,7 @@ BOOL IsNavigationToolbarEnabled() const;
  `TRUE`Se la barra di spostamento è abilitata. in caso contrario, `FALSE`.  
   
 ##  <a name="istoolbox"></a>CMFCTasksPane::IsToolBox  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsToolBox() const;  
@@ -1113,7 +1113,7 @@ BOOL IsWrapTasksEnabled() const;
  `TRUE`Se la stringa di attività viene eseguito il wrapping; in caso contrario, `FALSE`.  
   
 ##  <a name="loadstate"></a>CMFCTasksPane::LoadState  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL LoadState(
@@ -1142,7 +1142,7 @@ virtual void OnActivateTasksPanePage();
  L'override del metodo in una classe derivata per personalizzare l'aspetto della pagina riquadro attività.  
   
 ##  <a name="oncancel"></a>CMFCTasksPane::OnCancel  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnCancel();
@@ -1180,7 +1180,7 @@ virtual void OnClickTask(
  L'override del metodo in una classe derivata può eseguire codice personalizzato quando si fa clic su un'attività.  
   
 ##  <a name="onok"></a>CMFCTasksPane::OnOK  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnOK();
@@ -1225,7 +1225,7 @@ virtual void OnPressHomeButton();
  L'override del metodo in una classe derivata può eseguire codice personalizzato quando l'utente fa clic sul pulsante Home Page.  
   
 ##  <a name="onpressotherbutton"></a>CMFCTasksPane::OnPressOtherButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnPressOtherButton(
@@ -1240,7 +1240,7 @@ virtual void OnPressOtherButton(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="onsetaccdata"></a>CMFCTasksPane::OnSetAccData  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnSetAccData(long lVal);
@@ -1254,7 +1254,7 @@ virtual BOOL OnSetAccData(long lVal);
 ### <a name="remarks"></a>Note  
   
 ##  <a name="onupdatecmdui"></a>CMFCTasksPane::OnUpdateCmdUI  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnUpdateCmdUI(
@@ -1269,7 +1269,7 @@ virtual void OnUpdateCmdUI(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="pretranslatemessage"></a>CMFCTasksPane::PreTranslateMessage  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -1283,7 +1283,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="remarks"></a>Note  
   
 ##  <a name="recalclayout"></a>CMFCTasksPane::RecalcLayout  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void RecalcLayout(BOOL bRedraw = TRUE);
@@ -1377,7 +1377,7 @@ BOOL RemoveTask(
  `TRUE`Se la funzione ha esito positivo. `FALSE` se `nGroup` o `nTask` non è valido.  
   
 ##  <a name="savestate"></a>CMFCTasksPane::SaveState  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL SaveState(
@@ -1396,7 +1396,7 @@ virtual BOOL SaveState(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="serialize"></a>CMFCTasksPane::Serialize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void Serialize(CArchive& ar);
@@ -1638,7 +1638,7 @@ void SetTasksHorzOffset(int n = -1);
  L'offset orizzontale predefinito è 12 pixel.  
   
 ##  <a name="settasksiconhorzoffset"></a>CMFCTasksPane::SetTasksIconHorzOffset  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetTasksIconHorzOffset(int n = -1);
@@ -1650,7 +1650,7 @@ void SetTasksIconHorzOffset(int n = -1);
 ### <a name="remarks"></a>Note  
   
 ##  <a name="settasksiconvertoffset"></a>CMFCTasksPane::SetTasksIconVertOffset  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetTasksIconVertOffset(int n = -1);
@@ -1736,7 +1736,7 @@ BOOL SetWindowHeight(
  Chiamare [CMFCTasksPane::AddWindow](#addwindow) per aggiungere attività con i controlli di finestra.  
   
 ##  <a name="showcommandmessagestring"></a>CMFCTasksPane::ShowCommandMessageString  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void ShowCommandMessageString(UINT uiCmdId);

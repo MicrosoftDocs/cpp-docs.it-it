@@ -98,7 +98,6 @@ class CGlobalUtils
  **Intestazione:** afxglobalutils.h  
   
 ##  <a name="adjustrecttoworkarea"></a>CGlobalUtils::AdjustRectToWorkArea  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
 void AdjustRectToworkArea(
@@ -113,7 +112,7 @@ void AdjustRectToworkArea(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="calcexpecteddockedrect"></a>CGlobalUtils::CalcExpectedDockedRect  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void CalcExpectedDockedRect(
@@ -136,7 +135,7 @@ void CalcExpectedDockedRect(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="canbeattached"></a>CGlobalUtils::CanBeAttached  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL CanBeAttached(CWnd* pWnd) const;  
@@ -150,7 +149,7 @@ BOOL CanBeAttached(CWnd* pWnd) const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="canpanebeinfloatingmultipaneframewnd"></a>CGlobalUtils::CanPaneBeInFloatingMultiPaneFrameWnd  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL CanPaneBeInFloatingMultiPaneFrameWnd(CWnd* pWnd) const;  
@@ -164,7 +163,7 @@ BOOL CanPaneBeInFloatingMultiPaneFrameWnd(CWnd* pWnd) const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="checkalignment"></a>CGlobalUtils::CheckAlignment  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL CheckAlignment(
@@ -193,7 +192,7 @@ BOOL CheckAlignment(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="cyfromstring"></a>CGlobalUtils::CyFromString  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL CyFromString(
@@ -210,7 +209,7 @@ BOOL CyFromString(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="decimalfromstring"></a>CGlobalUtils::DecimalFromString  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL DecimalFromString(
@@ -227,7 +226,7 @@ BOOL DecimalFromString(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="fliprect"></a>CGlobalUtils::FlipRect  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void FlipRect(
@@ -242,7 +241,7 @@ void FlipRect(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="forceadjustlayout"></a>CGlobalUtils::ForceAdjustLayout  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void ForceAdjustLayout(
@@ -259,7 +258,7 @@ void ForceAdjustLayout(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="getdockingmanager"></a>CGlobalUtils::GetDockingManager  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CDockingManager* GetDockingManager(CWnd* pWnd);
@@ -273,7 +272,7 @@ CDockingManager* GetDockingManager(CWnd* pWnd);
 ### <a name="remarks"></a>Note  
   
 ##  <a name="getoppositealignment"></a>CGlobalUtils::GetOppositeAlignment  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 DWORD GetOppositeAlignment(DWORD dwAlign);
@@ -287,7 +286,7 @@ DWORD GetOppositeAlignment(DWORD dwAlign);
 ### <a name="remarks"></a>Note  
   
 ##  <a name="getpaneandalignfrompoint"></a>CGlobalUtils::GetPaneAndAlignFromPoint  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL GetPaneAndAlignFromPoint(
@@ -312,7 +311,7 @@ BOOL GetPaneAndAlignFromPoint(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="getwndicon"></a>CGlobalUtils::GetWndIcon  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 HICON GetWndIcon(CWnd* pWnd);
@@ -326,7 +325,7 @@ HICON GetWndIcon(CWnd* pWnd);
 ### <a name="remarks"></a>Note  
   
 ##  <a name="setnewparent"></a>CGlobalUtils::SetNewParent  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetNewParent(
@@ -343,7 +342,7 @@ void SetNewParent(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="stringfromcy"></a>CGlobalUtils::StringFromCy  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL StringFromCy(
@@ -360,7 +359,7 @@ BOOL StringFromCy(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="stringfromdecimal"></a>CGlobalUtils::StringFromDecimal  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL StringFromDecimal(

@@ -54,7 +54,8 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfcshelltreectrl-class"></a>Classe CMFCShellTreeCtrl
 Il `CMFCShellTreeCtrl` classe estende [CTreeCtrl (classe)](../../mfc/reference/ctreectrl-class.md) funzionalità visualizzando una gerarchia degli elementi della Shell.  
-  
+
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
 ## <a name="syntax"></a>Sintassi  
   
 ```  
@@ -164,7 +165,7 @@ CMFCShellListCtrl* GetRelatedList() const;
  Utilizzando un `CMFCShellListCtrl` oggetto insieme con un `CMFCShellTreeCtrl` dell'oggetto, è possibile creare una finestra simile a Esplora risorse. Utilizzare il metodo [CMFCShellTreeCtrl::SetRelatedList](#setrelatedlist) per associare le due classi. Dopo che sono associati, il framework aggiorna automaticamente il `CMFCShellListCtrl` se la selezione nella `CMFCShellTreeCtrl` modifiche.  
   
 ##  <a name="onchildnotify"></a>CMFCShellTreeCtrl::OnChildNotify  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnChildNotify(
@@ -185,7 +186,7 @@ virtual BOOL OnChildNotify(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ongetitemicon"></a>CMFCShellTreeCtrl::OnGetItemIcon  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int OnGetItemIcon(
@@ -202,7 +203,7 @@ virtual int OnGetItemIcon(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ongetitemtext"></a>CMFCShellTreeCtrl::OnGetItemText  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CString OnGetItemText(LPAFX_SHELLITEMINFO pItem);

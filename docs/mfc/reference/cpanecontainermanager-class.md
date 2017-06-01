@@ -93,6 +93,7 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cpanecontainermanager-class"></a>Classe CPaneContainerManager
 La `CPaneContainerManager` classe gestisce l'archiviazione e la visualizzazione del layout di ancoraggio corrente.  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -176,7 +177,7 @@ class CPaneContainerManager : public CObject
  **Intestazione:** afxpanecontainermanager.h  
   
 ##  <a name="addpane"></a>CPaneContainerManager::AddPane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void AddPane(CDockablePane* pControlBarToAdd);
@@ -188,7 +189,7 @@ virtual void AddPane(CDockablePane* pControlBarToAdd);
 ### <a name="remarks"></a>Note  
   
 ##  <a name="addpanecontainermanager"></a>CPaneContainerManager::AddPaneContainerManager  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL AddPaneContainerManager(
@@ -215,7 +216,7 @@ virtual BOOL AddPaneContainerManager(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="addpanecontainermanagertodockablepane"></a>CPaneContainerManager::AddPaneContainerManagerToDockablePane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL AddPaneContainerManagerToDockablePane(
@@ -232,7 +233,7 @@ virtual BOOL AddPaneContainerManagerToDockablePane(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="addpanestolist"></a>CPaneContainerManager::AddPanesToList  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void AddPanesToList(
@@ -247,7 +248,7 @@ void AddPanesToList(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="addpanetolist"></a>CPaneContainerManager::AddPaneToList  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void AddPaneToList(CDockablePane* pControlBarToAdd);
@@ -259,7 +260,7 @@ void AddPaneToList(CDockablePane* pControlBarToAdd);
 ### <a name="remarks"></a>Note  
   
 ##  <a name="addpanetorecentpanecontainer"></a>CPaneContainerManager::AddPaneToRecentPaneContainer  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CDockablePane* AddPaneToRecentPaneContainer(
@@ -276,7 +277,7 @@ virtual CDockablePane* AddPaneToRecentPaneContainer(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="calcrects"></a>CPaneContainerManager::CalcRects  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void CalcRects(
@@ -301,7 +302,7 @@ void CalcRects(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="canbeattached"></a>CPaneContainerManager::CanBeAttached  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL CanBeAttached() const;  
@@ -312,7 +313,7 @@ virtual BOOL CanBeAttached() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="checkandremovenonvalidpane"></a>CPaneContainerManager::CheckAndRemoveNonValidPane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL CheckAndRemoveNonValidPane(CWnd* pWnd);
@@ -326,7 +327,7 @@ BOOL CheckAndRemoveNonValidPane(CWnd* pWnd);
 ### <a name="remarks"></a>Note  
   
 ##  <a name="checkforminiframeandcaption"></a>CPaneContainerManager::CheckForMiniFrameAndCaption  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL CheckForMiniFrameAndCaption(
@@ -343,7 +344,7 @@ virtual BOOL CheckForMiniFrameAndCaption(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="create"></a>CPaneContainerManager::Create  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL Create(
@@ -362,7 +363,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="doesallowdyninsertbefore"></a>CPaneContainerManager::DoesAllowDynInsertBefore  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL DoesAllowDynInsertBefore() const;  
@@ -373,7 +374,7 @@ virtual BOOL DoesAllowDynInsertBefore() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="doescontainfloatingpane"></a>CPaneContainerManager::DoesContainFloatingPane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL DoesContainFloatingPane();
@@ -384,7 +385,7 @@ virtual BOOL DoesContainFloatingPane();
 ### <a name="remarks"></a>Note  
   
 ##  <a name="enablegrippers"></a>CPaneContainerManager::EnableGrippers  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void EnableGrippers(BOOL bEnable);
@@ -396,7 +397,7 @@ virtual void EnableGrippers(BOOL bEnable);
 ### <a name="remarks"></a>Note  
   
 ##  <a name="findpanecontainer"></a>CPaneContainerManager::FindPaneContainer  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CPaneContainer* FindPaneContainer(
@@ -413,7 +414,7 @@ virtual CPaneContainer* FindPaneContainer(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="findtabbedpane"></a>CPaneContainerManager::FindTabbedPane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CDockablePane* FindTabbedPane(UINT nID);
@@ -427,7 +428,7 @@ CDockablePane* FindTabbedPane(UINT nID);
 ### <a name="remarks"></a>Note  
   
 ##  <a name="getavailablespace"></a>CPaneContainerManager::GetAvailableSpace  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void GetAvailableSpace(CRect& rect) const;  
@@ -439,7 +440,7 @@ virtual void GetAvailableSpace(CRect& rect) const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="getdefaultpanedivider"></a>CPaneContainerManager::GetDefaultPaneDivider  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CPaneDivider* GetDefaultPaneDivider() const;  
@@ -450,7 +451,7 @@ CPaneDivider* GetDefaultPaneDivider() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="getdocksiteframewnd"></a>CPaneContainerManager::GetDockSiteFrameWnd  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CWnd* GetDockSiteFrameWnd();
@@ -461,7 +462,7 @@ virtual CWnd* GetDockSiteFrameWnd();
 ### <a name="remarks"></a>Note  
   
 ##  <a name="getfirstpane"></a>CPaneContainerManager::GetFirstPane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CBasePane* GetFirstPane() const;  
@@ -472,7 +473,7 @@ virtual CBasePane* GetFirstPane() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="getfirstvisiblepane"></a>CPaneContainerManager::GetFirstVisiblePane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CWnd* GetFirstVisiblePane() const;  
@@ -483,7 +484,7 @@ virtual CWnd* GetFirstVisiblePane() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="getminmaxoffset"></a>CPaneContainerManager::GetMinMaxOffset  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void GetMinMaxOffset(
@@ -502,7 +503,7 @@ virtual void GetMinMaxOffset(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="getminsize"></a>CPaneContainerManager::GetMinSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void GetMinSize(CSize& size);
@@ -514,7 +515,7 @@ virtual void GetMinSize(CSize& size);
 ### <a name="remarks"></a>Note  
   
 ##  <a name="getnodecount"></a>CPaneContainerManager::GetNodeCount  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetNodeCount() const;  
@@ -525,7 +526,7 @@ int GetNodeCount() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="getpanecontainerrtc"></a>CPaneContainerManager::GetPaneContainerRTC  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CRuntimeClass* GetPaneContainerRTC() const;  
@@ -536,7 +537,7 @@ CRuntimeClass* GetPaneContainerRTC() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="getpanecount"></a>CPaneContainerManager::GetPaneCount  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetPaneCount() const;  
@@ -547,7 +548,7 @@ int GetPaneCount() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="gettotalrefcount"></a>CPaneContainerManager::GetTotalRefCount  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetTotalRefCount() const;  
@@ -558,7 +559,7 @@ int GetTotalRefCount() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="getvisiblepanecount"></a>CPaneContainerManager::GetVisiblePaneCount  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int GetVisiblePaneCount() const;  
@@ -569,7 +570,7 @@ virtual int GetVisiblePaneCount() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="getwindowrect"></a>CPaneContainerManager::GetWindowRect  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void GetWindowRect(CRect& rect) const;  
@@ -581,7 +582,7 @@ virtual void GetWindowRect(CRect& rect) const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="hideall"></a>CPaneContainerManager::HideAll  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void HideAll();
@@ -590,7 +591,7 @@ virtual void HideAll();
 ### <a name="remarks"></a>Note  
   
 ##  <a name="insertpane"></a>CPaneContainerManager::InsertPane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL InsertPane(
@@ -613,7 +614,7 @@ virtual BOOL InsertPane(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="isautohidemode"></a>CPaneContainerManager::IsAutoHideMode  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsAutoHideMode() const;  
@@ -624,7 +625,7 @@ BOOL IsAutoHideMode() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="isempty"></a>CPaneContainerManager::IsEmpty  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsEmpty() const;  
@@ -635,7 +636,7 @@ BOOL IsEmpty() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="isrootpanecontainervisible"></a>CPaneContainerManager::IsRootPaneContainerVisible  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsRootPaneContainerVisible() const;  
@@ -646,7 +647,7 @@ virtual BOOL IsRootPaneContainerVisible() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="notifypanedivider"></a>CPaneContainerManager::NotifyPaneDivider  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void NotifyPaneDivider();
@@ -655,7 +656,7 @@ void NotifyPaneDivider();
 ### <a name="remarks"></a>Note  
   
 ##  <a name="onpanedividermove"></a>CPaneContainerManager::OnPaneDividerMove  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int OnPaneDividerMove(
@@ -676,7 +677,7 @@ virtual int OnPaneDividerMove(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="onshowpane"></a>CPaneContainerManager::OnShowPane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnShowPane(
@@ -693,7 +694,7 @@ virtual BOOL OnShowPane(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="panefrompoint"></a>CPaneContainerManager::PaneFromPoint  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CDockablePane* PaneFromPoint(
@@ -716,7 +717,7 @@ virtual CDockablePane* PaneFromPoint(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="releaseemptypanecontainers"></a>CPaneContainerManager::ReleaseEmptyPaneContainers  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void ReleaseEmptyPaneContainers();
@@ -725,7 +726,7 @@ void ReleaseEmptyPaneContainers();
 ### <a name="remarks"></a>Note  
   
 ##  <a name="removeallpanesandpanedividers"></a>CPaneContainerManager::RemoveAllPanesAndPaneDividers  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void RemoveAllPanesAndPaneDividers();
@@ -734,7 +735,7 @@ void RemoveAllPanesAndPaneDividers();
 ### <a name="remarks"></a>Note  
   
 ##  <a name="removenonvalidpanes"></a>CPaneContainerManager::RemoveNonValidPanes  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void RemoveNonValidPanes();
@@ -743,7 +744,7 @@ void RemoveNonValidPanes();
 ### <a name="remarks"></a>Note  
   
 ##  <a name="removepanedivider"></a>CPaneContainerManager::RemovePaneDivider  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void RemovePaneDivider(CPaneDivider* pSlider);
@@ -755,7 +756,7 @@ virtual void RemovePaneDivider(CPaneDivider* pSlider);
 ### <a name="remarks"></a>Note  
   
 ##  <a name="removepanefrompanecontainer"></a>CPaneContainerManager::RemovePaneFromPaneContainer  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL RemovePaneFromPaneContainer(CDockablePane* pControlBar);
@@ -769,7 +770,7 @@ virtual BOOL RemovePaneFromPaneContainer(CDockablePane* pControlBar);
 ### <a name="remarks"></a>Note  
   
 ##  <a name="replacepane"></a>CPaneContainerManager::ReplacePane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL ReplacePane(
@@ -786,7 +787,7 @@ virtual BOOL ReplacePane(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="resizepanecontainers"></a>CPaneContainerManager::ResizePaneContainers  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void ResizePaneContainers(
@@ -811,7 +812,7 @@ virtual void ResizePaneContainers(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="serialize"></a>CPaneContainerManager::Serialize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void Serialize(CArchive& ar);
@@ -823,7 +824,7 @@ void Serialize(CArchive& ar);
 ### <a name="remarks"></a>Note  
   
 ##  <a name="setdefaultpanedividerforpanes"></a>CPaneContainerManager::SetDefaultPaneDividerForPanes  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetDefaultPaneDividerForPanes(CPaneDivider* pSlider);
@@ -835,7 +836,7 @@ void SetDefaultPaneDividerForPanes(CPaneDivider* pSlider);
 ### <a name="remarks"></a>Note  
   
 ##  <a name="setpanecontainerrtc"></a>CPaneContainerManager::SetPaneContainerRTC  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetPaneContainerRTC(CRuntimeClass* pContainerRTC);
@@ -847,7 +848,7 @@ void SetPaneContainerRTC(CRuntimeClass* pContainerRTC);
 ### <a name="remarks"></a>Note  
   
 ##  <a name="setresizemode"></a>CPaneContainerManager::SetResizeMode  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void SetResizeMode(BOOL bResize);
@@ -859,7 +860,7 @@ virtual void SetResizeMode(BOOL bResize);
 ### <a name="remarks"></a>Note  
   
 ##  <a name="storerecentdocksiteinfo"></a>CPaneContainerManager::StoreRecentDockSiteInfo  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void StoreRecentDockSiteInfo(CDockablePane* pBar);

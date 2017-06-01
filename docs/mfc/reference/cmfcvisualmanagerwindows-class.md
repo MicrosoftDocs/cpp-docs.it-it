@@ -110,6 +110,8 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfcvisualmanagerwindows-class"></a>Classe CMFCVisualManagerWindows
 `CMFCVisualManagerWindows`riproduce l'aspetto di Microsoft Windows XP o Microsoft Vista quando l'utente seleziona un tema di Vista o Windows XP.  
+
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -227,7 +229,7 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
  **Intestazione:** afxvisualmanagerwindows.h  
   
 ##  <a name="alwayshighlight3dtabs"></a>CMFCVisualManagerWindows::AlwaysHighlight3DTabs  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL AlwaysHighlight3DTabs() const;  
@@ -238,7 +240,7 @@ virtual BOOL AlwaysHighlight3DTabs() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="cmfcvisualmanagerwindows"></a>CMFCVisualManagerWindows::CMFCVisualManagerWindows  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CMFCVisualManagerWindows(BOOL bIsTemporary = FALSE);
@@ -250,7 +252,7 @@ CMFCVisualManagerWindows(BOOL bIsTemporary = FALSE);
 ### <a name="remarks"></a>Note  
   
 ##  <a name="drawcomboborderwinxp"></a>CMFCVisualManagerWindows::DrawComboBorderWinXP  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL DrawComboBorderWinXP(
@@ -273,7 +275,7 @@ virtual BOOL DrawComboBorderWinXP(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="drawcombodropbuttonwinxp"></a>CMFCVisualManagerWindows::DrawComboDropButtonWinXP  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL DrawComboDropButtonWinXP(
@@ -296,7 +298,7 @@ virtual BOOL DrawComboDropButtonWinXP(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="drawpushbuttonwinxp"></a>CMFCVisualManagerWindows::DrawPushButtonWinXP  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL DrawPushButtonWinXP(
@@ -317,7 +319,7 @@ virtual BOOL DrawPushButtonWinXP(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="getbuttonextraborder"></a>CMFCVisualManagerWindows::GetButtonExtraBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CSize GetButtonExtraBorder() const;  
@@ -328,7 +330,7 @@ virtual CSize GetButtonExtraBorder() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="getcaptionbuttonextraborder"></a>CMFCVisualManagerWindows::GetCaptionButtonExtraBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CSize GetCaptionButtonExtraBorder() const;  
@@ -339,7 +341,7 @@ virtual CSize GetCaptionButtonExtraBorder() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="getdockingpanecaptionextraheight"></a>CMFCVisualManagerWindows::GetDockingPaneCaptionExtraHeight  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int GetDockingPaneCaptionExtraHeight() const;  
@@ -350,7 +352,7 @@ virtual int GetDockingPaneCaptionExtraHeight() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="gethighlightedmenuitemtextcolor"></a>CMFCVisualManagerWindows::GetHighlightedMenuItemTextColor  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual COLORREF GetHighlightedMenuItemTextColor(CMFCToolBarMenuButton* pButton);
@@ -364,7 +366,7 @@ virtual COLORREF GetHighlightedMenuItemTextColor(CMFCToolBarMenuButton* pButton)
 ### <a name="remarks"></a>Note  
   
 ##  <a name="getpopupmenugap"></a>CMFCVisualManagerWindows::GetPopupMenuGap  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int GetPopupMenuGap() const;  
@@ -375,7 +377,7 @@ virtual int GetPopupMenuGap() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="gettoolbarbuttontextcolor"></a>CMFCVisualManagerWindows::GetToolbarButtonTextColor  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual COLORREF GetToolbarButtonTextColor(
@@ -392,7 +394,7 @@ virtual COLORREF GetToolbarButtonTextColor(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="isdefaultwinxppopupbutton"></a>CMFCVisualManagerWindows::IsDefaultWinXPPopupButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsDefaultWinXPPopupButton(CMFCDesktopAlertWndButton* pButton) const;  
@@ -406,7 +408,7 @@ virtual BOOL IsDefaultWinXPPopupButton(CMFCDesktopAlertWndButton* pButton) const
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ishighlightwholemenuitem"></a>CMFCVisualManagerWindows::IsHighlightWholeMenuItem  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsHighlightWholeMenuItem();
@@ -417,7 +419,7 @@ virtual BOOL IsHighlightWholeMenuItem();
 ### <a name="remarks"></a>Note  
   
 ##  <a name="isofficestylemenus"></a>CMFCVisualManagerWindows::IsOfficeStyleMenus  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsOfficeStyleMenus() const;  
@@ -428,7 +430,7 @@ BOOL IsOfficeStyleMenus() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="isofficexpstylemenus"></a>CMFCVisualManagerWindows::IsOfficeXPStyleMenus  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsOfficeXPStyleMenus() const;  
@@ -439,7 +441,7 @@ virtual BOOL IsOfficeXPStyleMenus() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="iswindowsthemingsupported"></a>CMFCVisualManagerWindows::IsWindowsThemingSupported  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsWindowsThemingSupported() const;  
@@ -474,7 +476,7 @@ AFX_IMPORT_DATA static BOOL m_b3DTabsXPTheme;
 ```  
   
 ##  <a name="ondrawbargripper"></a>CMFCVisualManagerWindows::OnDrawBarGripper  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawBarGripper(
@@ -493,7 +495,7 @@ virtual void OnDrawBarGripper(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ondrawbrowsebutton"></a>CMFCVisualManagerWindows::OnDrawBrowseButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnDrawBrowseButton(
@@ -516,7 +518,7 @@ virtual BOOL OnDrawBrowseButton(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ondrawbuttonborder"></a>CMFCVisualManagerWindows::OnDrawButtonBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawButtonBorder(
@@ -535,7 +537,7 @@ virtual void OnDrawButtonBorder(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ondrawbuttonseparator"></a>CMFCVisualManagerWindows::OnDrawButtonSeparator  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawButtonSeparator(
@@ -556,7 +558,7 @@ virtual void OnDrawButtonSeparator(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ondrawcaptionbutton"></a>CMFCVisualManagerWindows::OnDrawCaptionButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawCaptionButton(
@@ -581,7 +583,7 @@ virtual void OnDrawCaptionButton(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ondrawcaptionbuttonicon"></a>CMFCVisualManagerWindows::OnDrawCaptionButtonIcon  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawCaptionButtonIcon(
@@ -604,7 +606,7 @@ virtual void OnDrawCaptionButtonIcon(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ondrawcheckboxex"></a>CMFCVisualManagerWindows::OnDrawCheckBoxEx  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawCheckBoxEx(
@@ -627,7 +629,7 @@ virtual void OnDrawCheckBoxEx(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ondrawcomboborder"></a>CMFCVisualManagerWindows::OnDrawComboBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawComboBorder(
@@ -650,7 +652,7 @@ virtual void OnDrawComboBorder(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ondrawcombodropbutton"></a>CMFCVisualManagerWindows::OnDrawComboDropButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawComboDropButton(
@@ -673,7 +675,7 @@ virtual void OnDrawComboDropButton(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ondrawcontrolborder"></a>CMFCVisualManagerWindows::OnDrawControlBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawControlBorder(CWnd* pWndCtrl);
@@ -685,7 +687,7 @@ virtual void OnDrawControlBorder(CWnd* pWndCtrl);
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ondraweditborder"></a>CMFCVisualManagerWindows::OnDrawEditBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawEditBorder(
@@ -706,7 +708,7 @@ virtual void OnDrawEditBorder(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ondrawexpandingbox"></a>CMFCVisualManagerWindows::OnDrawExpandingBox  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawExpandingBox(
@@ -725,7 +727,7 @@ virtual void OnDrawExpandingBox(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ondrawfloatingtoolbarborder"></a>CMFCVisualManagerWindows::OnDrawFloatingToolbarBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawFloatingToolbarBorder(
@@ -744,7 +746,7 @@ virtual void OnDrawFloatingToolbarBorder(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ondrawheaderctrlborder"></a>CMFCVisualManagerWindows::OnDrawHeaderCtrlBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawHeaderCtrlBorder(
@@ -765,7 +767,7 @@ virtual void OnDrawHeaderCtrlBorder(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ondrawheaderctrlsortarrow"></a>CMFCVisualManagerWindows::OnDrawHeaderCtrlSortArrow  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawHeaderCtrlSortArrow(
@@ -784,7 +786,7 @@ virtual void OnDrawHeaderCtrlSortArrow(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ondrawmenuborder"></a>CMFCVisualManagerWindows::OnDrawMenuBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawMenuBorder(
@@ -801,7 +803,7 @@ virtual void OnDrawMenuBorder(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ondrawmenusystembutton"></a>CMFCVisualManagerWindows::OnDrawMenuSystemButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawMenuSystemButton(
@@ -822,7 +824,7 @@ virtual void OnDrawMenuSystemButton(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ondrawminiframeborder"></a>CMFCVisualManagerWindows::OnDrawMiniFrameBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawMiniFrameBorder(
@@ -841,7 +843,7 @@ virtual void OnDrawMiniFrameBorder(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ondrawoutlookpagebuttonborder"></a>CMFCVisualManagerWindows::OnDrawOutlookPageButtonBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawOutlookPageButtonBorder(
@@ -860,7 +862,7 @@ virtual void OnDrawOutlookPageButtonBorder(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ondrawpaneborder"></a>CMFCVisualManagerWindows::OnDrawPaneBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawPaneBorder(
@@ -877,7 +879,7 @@ virtual void OnDrawPaneBorder(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ondrawpanecaption"></a>CMFCVisualManagerWindows::OnDrawPaneCaption  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual COLORREF OnDrawPaneCaption(
@@ -900,7 +902,7 @@ virtual COLORREF OnDrawPaneCaption(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ondrawpopupwindowbuttonborder"></a>CMFCVisualManagerWindows::OnDrawPopupWindowButtonBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawPopupWindowButtonBorder(
@@ -917,7 +919,7 @@ virtual void OnDrawPopupWindowButtonBorder(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ondrawscrollbuttons"></a>CMFCVisualManagerWindows::OnDrawScrollButtons  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawScrollButtons(
@@ -938,7 +940,7 @@ virtual void OnDrawScrollButtons(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ondrawseparator"></a>CMFCVisualManagerWindows::OnDrawSeparator  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawSeparator(
@@ -957,7 +959,7 @@ virtual void OnDrawSeparator(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ondrawspinbuttons"></a>CMFCVisualManagerWindows::OnDrawSpinButtons  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawSpinButtons(
@@ -978,7 +980,7 @@ virtual void OnDrawSpinButtons(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ondrawstatusbarpaneborder"></a>CMFCVisualManagerWindows::OnDrawStatusBarPaneBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawStatusBarPaneBorder(
@@ -999,7 +1001,7 @@ virtual void OnDrawStatusBarPaneBorder(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ondrawstatusbarprogress"></a>CMFCVisualManagerWindows::OnDrawStatusBarProgress  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawStatusBarProgress(
@@ -1028,7 +1030,7 @@ virtual void OnDrawStatusBarProgress(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ondrawstatusbarsizebox"></a>CMFCVisualManagerWindows::OnDrawStatusBarSizeBox  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawStatusBarSizeBox(
@@ -1045,7 +1047,7 @@ virtual void OnDrawStatusBarSizeBox(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ondrawtab"></a>CMFCVisualManagerWindows::OnDrawTab  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawTab(
@@ -1066,7 +1068,7 @@ virtual void OnDrawTab(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ondrawtabclosebutton"></a>CMFCVisualManagerWindows::OnDrawTabCloseButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawTabCloseButton(
@@ -1089,7 +1091,7 @@ virtual void OnDrawTabCloseButton(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ondrawtabsbuttonborder"></a>CMFCVisualManagerWindows::OnDrawTabsButtonBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawTabsButtonBorder(
@@ -1110,7 +1112,7 @@ virtual void OnDrawTabsButtonBorder(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ondrawtask"></a>CMFCVisualManagerWindows::OnDrawTask  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawTask(
@@ -1131,7 +1133,7 @@ virtual void OnDrawTask(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ondrawtasksgroupareaborder"></a>CMFCVisualManagerWindows::OnDrawTasksGroupAreaBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawTasksGroupAreaBorder(
@@ -1150,7 +1152,7 @@ virtual void OnDrawTasksGroupAreaBorder(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ondrawtasksgroupcaption"></a>CMFCVisualManagerWindows::OnDrawTasksGroupCaption  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawTasksGroupCaption(
@@ -1171,7 +1173,7 @@ virtual void OnDrawTasksGroupCaption(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ondrawtearoffcaption"></a>CMFCVisualManagerWindows::OnDrawTearOffCaption  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawTearOffCaption(
@@ -1188,7 +1190,7 @@ virtual void OnDrawTearOffCaption(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="onerasepopupwindowbutton"></a>CMFCVisualManagerWindows::OnErasePopupWindowButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnErasePopupWindowButton(
@@ -1205,7 +1207,7 @@ virtual void OnErasePopupWindowButton(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="onerasetabsarea"></a>CMFCVisualManagerWindows::OnEraseTabsArea  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnEraseTabsArea(
@@ -1222,7 +1224,7 @@ virtual void OnEraseTabsArea(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="onerasetabsbutton"></a>CMFCVisualManagerWindows::OnEraseTabsButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnEraseTabsButton(
@@ -1241,7 +1243,7 @@ virtual void OnEraseTabsButton(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="onerasetabsframe"></a>CMFCVisualManagerWindows::OnEraseTabsFrame  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnEraseTabsFrame(
@@ -1260,7 +1262,7 @@ virtual BOOL OnEraseTabsFrame(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="onfillbarbackground"></a>CMFCVisualManagerWindows::OnFillBarBackground  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnFillBarBackground(
@@ -1281,7 +1283,7 @@ virtual void OnFillBarBackground(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="onfillbuttoninterior"></a>CMFCVisualManagerWindows::OnFillButtonInterior  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnFillButtonInterior(
@@ -1300,7 +1302,7 @@ virtual void OnFillButtonInterior(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="onfillcommandslistbackground"></a>CMFCVisualManagerWindows::OnFillCommandsListBackground  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual COLORREF OnFillCommandsListBackground(
@@ -1319,7 +1321,7 @@ virtual COLORREF OnFillCommandsListBackground(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="onfillminiframecaption"></a>CMFCVisualManagerWindows::OnFillMiniFrameCaption  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual COLORREF OnFillMiniFrameCaption(
@@ -1340,7 +1342,7 @@ virtual COLORREF OnFillMiniFrameCaption(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="onfilloutlookpagebutton"></a>CMFCVisualManagerWindows::OnFillOutlookPageButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnFillOutlookPageButton(
@@ -1361,7 +1363,7 @@ virtual void OnFillOutlookPageButton(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="onfilltasksgroupinterior"></a>CMFCVisualManagerWindows::OnFillTasksGroupInterior  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnFillTasksGroupInterior(
@@ -1378,7 +1380,7 @@ virtual void OnFillTasksGroupInterior(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="onfilltaskspanebackground"></a>CMFCVisualManagerWindows::OnFillTasksPaneBackground  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnFillTasksPaneBackground(
@@ -1393,7 +1395,7 @@ virtual void OnFillTasksPaneBackground(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="onhighlightmenuitem"></a>CMFCVisualManagerWindows::OnHighlightMenuItem  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnHighlightMenuItem(
@@ -1412,7 +1414,7 @@ virtual void OnHighlightMenuItem(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="onhighlightrarelyusedmenuitems"></a>CMFCVisualManagerWindows::OnHighlightRarelyUsedMenuItems  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnHighlightRarelyUsedMenuItems(
@@ -1427,7 +1429,7 @@ virtual void OnHighlightRarelyUsedMenuItems(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="onupdatesystemcolors"></a>CMFCVisualManagerWindows::OnUpdateSystemColors  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnUpdateSystemColors();
@@ -1436,7 +1438,7 @@ virtual void OnUpdateSystemColors();
 ### <a name="remarks"></a>Note  
   
 ##  <a name="setofficestylemenus"></a>CMFCVisualManagerWindows::SetOfficeStyleMenus  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetOfficeStyleMenus(BOOL bOn = TRUE);

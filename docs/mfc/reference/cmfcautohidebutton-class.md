@@ -65,7 +65,8 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfcautohidebutton-class"></a>Classe CMFCAutoHideButton
 Un pulsante che visualizza o nasconde una [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) configurato in modo da nascondere.  
-  
+
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
 ## <a name="syntax"></a>Sintassi  
   
 ```  
@@ -120,7 +121,7 @@ class CMFCAutoHideButton : public CObject
  **Intestazione:** afxautohidebutton.h  
   
 ##  <a name="bringtotop"></a>CMFCAutoHideButton::BringToTop  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void BringToTop();
@@ -199,7 +200,7 @@ CDockablePane* GetAutoHideWindow() const;
  Per associare un pulsante Nascondi automaticamente con un `CDockablePane`, passare il `CDockablePane` come parametro per il [CMFCAutoHideButton::Create](#create) metodo.  
   
 ##  <a name="getparenttoolbar"></a>CMFCAutoHideButton::GetParentToolBar  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CMFCAutoHideBar* GetParentToolBar();
@@ -210,7 +211,7 @@ CMFCAutoHideBar* GetParentToolBar();
 ### <a name="remarks"></a>Note  
   
 ##  <a name="getrect"></a>CMFCAutoHideButton::GetRect  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CRect GetRect() const;  
@@ -270,7 +271,7 @@ BOOL IsHorizontal() const;
  Il framework imposta l'orientamento di un [CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) durante la creazione dell'oggetto.  È possibile controllare l'orientamento utilizzando il `dwAlignment` parametro il [CMFCAutoHideButton::Create](#create) metodo.  
   
 ##  <a name="istop"></a>CMFCAutoHideButton::IsTop  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsTop() const;  
@@ -369,7 +370,7 @@ virtual void ShowButton(BOOL bShow);
  Valore booleano che specifica se mostrare il pulsante Nascondi automaticamente.  
   
 ##  <a name="move"></a>CMFCAutoHideButton::Move  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void Move(int nOffset);
@@ -381,7 +382,7 @@ void Move(int nOffset);
 ### <a name="remarks"></a>Note  
   
 ##  <a name="replacepane"></a>CMFCAutoHideButton::ReplacePane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void ReplacePane(CDockablePane* pNewBar);

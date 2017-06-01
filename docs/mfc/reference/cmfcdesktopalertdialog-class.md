@@ -47,6 +47,8 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfcdesktopalertdialog-class"></a>Classe CMFCDesktopAlertDialog
 Il `CMFCDesktopAlertDialog` classe viene utilizzata in combinazione con il [CMFCDesktopAlertWnd classe](../../mfc/reference/cmfcdesktopalertwnd-class.md) per visualizzare una finestra di dialogo personalizzata in una finestra popup.  
+
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -93,7 +95,7 @@ class CMFCDesktopAlertDialog : public CDialogEx
  **Intestazione:** afxDesktopAlertDialog.h  
   
 ##  <a name="createfromparams"></a>CMFCDesktopAlertDialog::CreateFromParams  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL CreateFromParams(
@@ -110,7 +112,7 @@ BOOL CreateFromParams(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="getdlgsize"></a>CMFCDesktopAlertDialog::GetDlgSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CSize GetDlgSize();
@@ -121,7 +123,7 @@ CSize GetDlgSize();
 ### <a name="remarks"></a>Note  
   
 ##  <a name="hasfocus"></a>CMFCDesktopAlertDialog::HasFocus  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL HasFocus() const;  
@@ -132,7 +134,7 @@ BOOL HasFocus() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="pretranslatemessage"></a>CMFCDesktopAlertDialog::PreTranslateMessage  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL PreTranslateMessage(MSG* pMsg);
