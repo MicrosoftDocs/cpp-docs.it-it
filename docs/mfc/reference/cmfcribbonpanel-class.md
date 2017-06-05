@@ -97,6 +97,9 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfcribbonpanel-class"></a>Classe CMFCRibbonPanel
 Implementa un riquadro contenente un set di elementi della barra multifunzione. Quando il pannello viene disegnato, visualizza tutti gli elementi possibili in base alle proprie dimensioni.  
+
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -450,7 +453,7 @@ LPCTSTR GetName() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="getparentbutton"></a>CMFCRibbonPanel::GetParentButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CMFCRibbonBaseElement* GetParentButton() const;  
@@ -471,7 +474,7 @@ CMFCRibbonCategory* GetParentCategory() const;
  Puntatore alla categoria della barra multifunzione che contiene il pannello della barra multifunzione.  
   
 ##  <a name="getparentmenubar"></a>CMFCRibbonPanel::GetParentMenuBar  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CMFCRibbonPanelMenuBar* GetParentMenuBar() const;  
@@ -696,7 +699,7 @@ virtual BOOL IsMainPanel() const;
  Quando l'utente seleziona il pulsante dell'applicazione, verrà visualizzato il pannello principale della barra multifunzione.  
   
 ##  <a name="ismenumode"></a>CMFCRibbonPanel::IsMenuMode  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsMenuMode() const;  
@@ -707,7 +710,7 @@ BOOL IsMenuMode() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="onkey"></a>CMFCRibbonPanel::OnKey  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnKey(UINT nChar);

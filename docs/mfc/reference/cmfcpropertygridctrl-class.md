@@ -279,7 +279,7 @@ class CMFCPropertyGridCtrl : public CWnd
  **Intestazione:** afxpropertygridctrl. h  
   
 ##  <a name="accselect"></a>CMFCPropertyGridCtrl::accSelect  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual HRESULT accSelect(
@@ -332,7 +332,7 @@ virtual void AdjustLayout();
  Questo metodo Ricalcola come disegnare il controllo griglia intera proprietà e le relative proprietà, tra cui immagini, i tipi di carattere e i controlli.  
   
 ##  <a name="alwaysshowusertooltip"></a>CMFCPropertyGridCtrl::AlwaysShowUserToolTip  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void AlwaysShowUserToolTip(BOOL bShow = TRUE);
@@ -453,7 +453,7 @@ BOOL DeleteProperty(
  Usare questo metodo per eliminare una proprietà e ai relativi elementi secondari, dal controllo griglia delle proprietà.  
   
 ##  <a name="drawcontrolbarcolors"></a>CMFCPropertyGridCtrl::DrawControlBarColors  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL DrawControlBarColors() const;  
@@ -588,7 +588,7 @@ CMFCPropertyGridProperty* FindItemByData(
  Utilizzare il [CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl) costruttore o [CMFCPropertyGridProperty::SetData](../../mfc/reference/cmfcpropertygridproperty-class.md#setdata) metodo per associare un `DWORD` con una proprietà.  
   
 ##  <a name="get_accchildcount"></a>CMFCPropertyGridCtrl::get_accChildCount  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual HRESULT get_accChildCount(long* pcountChildren);
@@ -602,7 +602,7 @@ virtual HRESULT get_accChildCount(long* pcountChildren);
 ### <a name="remarks"></a>Note  
   
 ##  <a name="get_accfocus"></a>CMFCPropertyGridCtrl::get_accFocus  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual HRESULT get_accFocus(VARIANT* pvarChild);
@@ -616,7 +616,7 @@ virtual HRESULT get_accFocus(VARIANT* pvarChild);
 ### <a name="remarks"></a>Note  
   
 ##  <a name="get_acchelp"></a>CMFCPropertyGridCtrl::get_accHelp  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual HRESULT get_accHelp(
@@ -633,7 +633,7 @@ virtual HRESULT get_accHelp(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="get_acchelptopic"></a>CMFCPropertyGridCtrl::get_accHelpTopic  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual HRESULT get_accHelpTopic(
@@ -652,7 +652,7 @@ virtual HRESULT get_accHelpTopic(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="get_acckeyboardshortcut"></a>CMFCPropertyGridCtrl::get_accKeyboardShortcut  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual HRESULT get_accKeyboardShortcut(
@@ -669,7 +669,7 @@ virtual HRESULT get_accKeyboardShortcut(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="get_accselection"></a>CMFCPropertyGridCtrl::get_accSelection  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual HRESULT get_accSelection(VARIANT* pvarChildren);
@@ -986,7 +986,7 @@ BOOL IsAlphabeticMode() const;
  Utilizzare il [CMFCPropertyGridCtrl::SetAlphabeticMode](#setalphabeticmode) metodo per abilitare o disabilitare la modalità alfabetica.  
   
 ##  <a name="isalwaysshowusertooltip"></a>CMFCPropertyGridCtrl::IsAlwaysShowUserToolTip  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsAlwaysShowUserToolTip() const;  

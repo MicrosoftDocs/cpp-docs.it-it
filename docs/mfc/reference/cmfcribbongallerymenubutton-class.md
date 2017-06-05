@@ -49,7 +49,8 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfcribbongallerymenubutton-class"></a>Classe CMFCRibbonGalleryMenuButton
 Implementa un pulsante di menu della barra multifunzione contenente raccolte della barra multifunzione.  
-  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
@@ -112,7 +113,7 @@ ASSERT_VALID (pExButton);
  **Intestazione:** afxRibbonPaletteGallery.h  
   
 ##  <a name="copyfrom"></a>CMFCRibbonGalleryMenuButton::CopyFrom  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void CopyFrom(const CMFCToolBarButton& src);
@@ -170,7 +171,7 @@ CMFCRibbonGalleryMenuButton(
  [!code-cpp[NVC_MFC_MSOffice2007Demo n.&8;](../../mfc/reference/codesnippet/cpp/cmfcribbongallerymenubutton-class_1.cpp)]  
   
 ##  <a name="createpopupmenu"></a>CMFCRibbonGalleryMenuButton::CreatePopupMenu  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CMFCPopupMenu* CreatePopupMenu();
@@ -181,7 +182,7 @@ virtual CMFCPopupMenu* CreatePopupMenu();
 ### <a name="remarks"></a>Note  
   
 ##  <a name="getpalette"></a>CMFCRibbonGalleryMenuButton::GetPalette  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CMFCRibbonGallery& GetPalette();
@@ -192,7 +193,7 @@ CMFCRibbonGallery& GetPalette();
 ### <a name="remarks"></a>Note  
   
 ##  <a name="hasbutton"></a>CMFCRibbonGalleryMenuButton::HasButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL HasButton() const;  
@@ -203,7 +204,7 @@ virtual BOOL HasButton() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="isemptymenuallowed"></a>CMFCRibbonGalleryMenuButton::IsEmptyMenuAllowed  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsEmptyMenuAllowed() const;  

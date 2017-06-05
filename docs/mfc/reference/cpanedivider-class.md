@@ -175,7 +175,7 @@ class CPaneDivider : public CBasePane
  **Intestazione:** afxPaneDivider.h  
   
 ##  <a name="setautohidemode"></a>CPaneDivider::SetAutoHideMode  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetAutoHideMode(BOOL bMode);
@@ -187,7 +187,7 @@ void SetAutoHideMode(BOOL bMode);
 ### <a name="remarks"></a>Note  
   
 ##  <a name="setpanecontainermanager"></a>CPaneDivider::SetPaneContainerManager  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetPaneContainerManager(CPaneContainerManager* p);
@@ -199,7 +199,7 @@ void SetPaneContainerManager(CPaneContainerManager* p);
 ### <a name="remarks"></a>Note  
   
 ##  <a name="addpane"></a>CPaneDivider::AddPane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void AddPane(CDockablePane* pBar);
@@ -211,7 +211,7 @@ virtual void AddPane(CDockablePane* pBar);
 ### <a name="remarks"></a>Note  
   
 ##  <a name="addpanecontainer"></a>CPaneDivider::AddPaneContainer  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL AddPaneContainer(
@@ -236,7 +236,7 @@ virtual BOOL AddPaneContainer(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="addrecentpane"></a>CPaneDivider::AddRecentPane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CDockablePane* AddRecentPane(CDockablePane* pBar);
@@ -250,7 +250,7 @@ virtual CDockablePane* AddRecentPane(CDockablePane* pBar);
 ### <a name="remarks"></a>Note  
   
 ##  <a name="calcexpecteddockedrect"></a>CPaneDivider::CalcExpectedDockedRect  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void CalcExpectedDockedRect(
@@ -271,7 +271,7 @@ virtual void CalcExpectedDockedRect(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="calcfixedlayout"></a>CPaneDivider::CalcFixedLayout  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CSize CalcFixedLayout(
@@ -288,7 +288,7 @@ virtual CSize CalcFixedLayout(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="checkvisibility"></a>CPaneDivider::CheckVisibility  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL CheckVisibility();
@@ -299,7 +299,7 @@ virtual BOOL CheckVisibility();
 ### <a name="remarks"></a>Note  
   
 ##  <a name="cpanedivider"></a>CPaneDivider::CPaneDivider  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CPaneDivider();
@@ -319,7 +319,7 @@ CPaneDivider(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="createex"></a>CPaneDivider::CreateEx  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL CreateEx(
@@ -344,7 +344,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="doesallowdyninsertbefore"></a>CPaneDivider::DoesAllowDynInsertBefore  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL DoesAllowDynInsertBefore() const;  
@@ -355,7 +355,7 @@ virtual BOOL DoesAllowDynInsertBefore() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="doescontainfloatingpane"></a>CPaneDivider::DoesContainFloatingPane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL DoesContainFloatingPane();
@@ -366,7 +366,7 @@ virtual BOOL DoesContainFloatingPane();
 ### <a name="remarks"></a>Note  
   
 ##  <a name="findpanecontainer"></a>CPaneDivider::FindPaneContainer  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CPaneContainer* FindPaneContainer(
@@ -383,7 +383,7 @@ CPaneContainer* FindPaneContainer(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="findtabbedpane"></a>CPaneDivider::FindTabbedPane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CDockablePane* FindTabbedPane(UINT nID);
@@ -397,7 +397,7 @@ CDockablePane* FindTabbedPane(UINT nID);
 ### <a name="remarks"></a>Note  
   
 ##  <a name="getdefaultwidth"></a>CPaneDivider::GetDefaultWidth  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 static int __stdcall GetDefaultWidth();
@@ -408,7 +408,7 @@ static int __stdcall GetDefaultWidth();
 ### <a name="remarks"></a>Note  
   
 ##  <a name="getfirstpane"></a>CPaneDivider::GetFirstPane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 const CBasePane* GetFirstPane() const;  
@@ -433,7 +433,7 @@ void GetPaneDividers(CObList& lstSliders);
  Questo metodo deve essere chiamato per solo i divisori di riquadro predefinito. Un divisore di riquadro predefinito è un divisore che ridimensiona il riquadro intero contenitore.  
   
 ##  <a name="getpanedividerstyle"></a>CPaneDivider::GetPaneDividerStyle  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 DWORD GetPaneDividerStyle() const;  
@@ -458,7 +458,7 @@ void GetPanes(CObList& lstBars);
  Questo metodo deve essere chiamato per solo i divisori di riquadro predefinito. Un divisore di riquadro predefinito è un divisore che ridimensiona il riquadro intero contenitore.  
   
 ##  <a name="getrootcontainerrect"></a>CPaneDivider::GetRootContainerRect  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CRect GetRootContainerRect();
@@ -469,7 +469,7 @@ CRect GetRootContainerRect();
 ### <a name="remarks"></a>Note  
   
 ##  <a name="getwidth"></a>CPaneDivider::GetWidth  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetWidth() const;  
@@ -480,7 +480,7 @@ int GetWidth() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="init"></a>CPaneDivider::Init  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void Init(
@@ -495,7 +495,7 @@ void Init(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="insertpane"></a>CPaneDivider::InsertPane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL InsertPane(
@@ -516,7 +516,7 @@ virtual BOOL InsertPane(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="isautohidemode"></a>CPaneDivider::IsAutoHideMode  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsAutoHideMode() const;  
@@ -527,7 +527,7 @@ BOOL IsAutoHideMode() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="isdefault"></a>CPaneDivider::IsDefault  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsDefault() const;  
@@ -538,7 +538,7 @@ BOOL IsDefault() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ishorizontal"></a>CPaneDivider::IsHorizontal  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsHorizontal() const;  
@@ -556,7 +556,7 @@ AFX_IMPORT_DATA static int m_nDefaultWidth;
 ```  
   
 ##  <a name="move"></a>CPaneDivider::Move  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void Move(
@@ -593,7 +593,7 @@ CPaneDivider::m_pSliderRTC = RUNTIME_CLASS(CMySpliter);
 ```  
   
 ##  <a name="notifyaboutrelease"></a>CPaneDivider::NotifyAboutRelease  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void NotifyAboutRelease();
@@ -602,7 +602,7 @@ virtual void NotifyAboutRelease();
 ### <a name="remarks"></a>Note  
   
 ##  <a name="onshowpane"></a>CPaneDivider::OnShowPane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnShowPane(
@@ -617,7 +617,7 @@ virtual void OnShowPane(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="releaseemptypanecontainers"></a>CPaneDivider::ReleaseEmptyPaneContainers  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void ReleaseEmptyPaneContainers();
@@ -626,7 +626,7 @@ void ReleaseEmptyPaneContainers();
 ### <a name="remarks"></a>Note  
   
 ##  <a name="removepane"></a>CPaneDivider::RemovePane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void RemovePane(CDockablePane* pBar);
@@ -638,7 +638,7 @@ virtual void RemovePane(CDockablePane* pBar);
 ### <a name="remarks"></a>Note  
   
 ##  <a name="replacepane"></a>CPaneDivider::ReplacePane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL ReplacePane(
@@ -655,7 +655,7 @@ virtual BOOL ReplacePane(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="repositionpanes"></a>CPaneDivider::RepositionPanes  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void RepositionPanes(
@@ -670,7 +670,7 @@ virtual void RepositionPanes(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="serialize"></a>CPaneDivider::Serialize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void Serialize(CArchive& ar);
@@ -682,7 +682,7 @@ void Serialize(CArchive& ar);
 ### <a name="remarks"></a>Note  
   
 ##  <a name="showwindow"></a>CPaneDivider::ShowWindow  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void ShowWindow(int nCmdShow);
@@ -694,7 +694,7 @@ void ShowWindow(int nCmdShow);
 ### <a name="remarks"></a>Note  
   
 ##  <a name="storerecentdocksiteinfo"></a>CPaneDivider::StoreRecentDockSiteInfo  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void StoreRecentDockSiteInfo(CDockablePane* pBar);
@@ -706,7 +706,7 @@ void StoreRecentDockSiteInfo(CDockablePane* pBar);
 ### <a name="remarks"></a>Note  
   
 ##  <a name="storerecenttabrelatedinfo"></a>CPaneDivider::StoreRecentTabRelatedInfo  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void StoreRecentTabRelatedInfo(

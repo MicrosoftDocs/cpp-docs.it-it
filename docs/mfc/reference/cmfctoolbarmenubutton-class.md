@@ -86,6 +86,7 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>Classe CMFCToolBarMenuButton
 Pulsante della barra degli strumenti contenente un menu di scelta rapida.  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -221,7 +222,7 @@ CMFCToolBarMenuButton(
  [!code-cpp[9 NVC_MFC_WordPad](../../mfc/reference/codesnippet/cpp/cmfctoolbarmenubutton-class_2.cpp)]  
   
 ##  <a name="comparewith"></a>CMFCToolBarMenuButton::CompareWith  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL CompareWith(const CMFCToolBarButton& other) const;  
@@ -235,7 +236,7 @@ virtual BOOL CompareWith(const CMFCToolBarButton& other) const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="copyfrom"></a>CMFCToolBarMenuButton::CopyFrom  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void CopyFrom(const CMFCToolBarButton& src);
@@ -314,7 +315,7 @@ void DrawDocumentIcon(
  Questo metodo accetta un'icona di documento e viene tracciato sul pulsante di menu, centrato nell'area specificata da `rectImage`.  
   
 ##  <a name="enablequickcustomize"></a>CMFCToolBarMenuButton::EnableQuickCustomize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void EnableQuickCustomize();
@@ -323,7 +324,7 @@ void EnableQuickCustomize();
 ### <a name="remarks"></a>Note  
   
 ##  <a name="hasbutton"></a>CMFCToolBarMenuButton::HasButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL HasButton() const;  
@@ -334,7 +335,7 @@ virtual BOOL HasButton() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="havehotborder"></a>CMFCToolBarMenuButton::HaveHotBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL HaveHotBorder() const;  
@@ -345,7 +346,7 @@ virtual BOOL HaveHotBorder() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="isborder"></a>CMFCToolBarMenuButton::IsBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsBorder() const;  
@@ -356,7 +357,7 @@ virtual BOOL IsBorder() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="isclickedonmenu"></a>CMFCToolBarMenuButton::IsClickedOnMenu  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsClickedOnMenu() const;  
@@ -367,7 +368,7 @@ BOOL IsClickedOnMenu() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="isquickmode"></a>CMFCToolBarMenuButton::IsQuickMode  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsQuickMode();
@@ -504,7 +505,7 @@ static BOOL m_bAlwaysCallOwnerDraw;
  Quando questa variabile membro è impostata su `TRUE`, sul pulsante chiama sempre [CFrameWndEx::OnDrawMenuImage](../../mfc/reference/cframewndex-class.md#ondrawmenuimage) metodo per visualizzare l'immagine del pulsante. Quando `m_bAlwaysCallOwnerDraw` è `FALSE`, il pulsante stesso Disegna l'immagine se l'immagine è già definito. In caso contrario, chiama `OnDrawMenuImage`.  
   
 ##  <a name="onaftercreatepopupmenu"></a>CMFCToolBarMenuButton::OnAfterCreatePopupMenu  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnAfterCreatePopupMenu();
@@ -513,7 +514,7 @@ virtual void OnAfterCreatePopupMenu();
 ### <a name="remarks"></a>Note  
   
 ##  <a name="onbeforedrag"></a>CMFCToolBarMenuButton::OnBeforeDrag  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnBeforeDrag() const;  
@@ -524,7 +525,7 @@ virtual BOOL OnBeforeDrag() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="oncalculatesize"></a>CMFCToolBarMenuButton::OnCalculateSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual SIZE OnCalculateSize(
@@ -543,7 +544,7 @@ virtual SIZE OnCalculateSize(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="oncancelmode"></a>CMFCToolBarMenuButton::OnCancelMode  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnCancelMode();
@@ -552,7 +553,7 @@ virtual void OnCancelMode();
 ### <a name="remarks"></a>Note  
   
 ##  <a name="onchangeparentwnd"></a>CMFCToolBarMenuButton::OnChangeParentWnd  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnChangeParentWnd(CWnd* pWndParent);
@@ -564,7 +565,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ### <a name="remarks"></a>Note  
   
 ##  <a name="onclick"></a>CMFCToolBarMenuButton::OnClick  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnClick(
@@ -596,7 +597,7 @@ virtual BOOL OnClickMenuItem();
  Per personalizzare l'elaborazione di voce di menu, eseguire l'override `OnClickMenuItem` in una classe derivata da `CMFCToolBarMenuButton` (classe). È inoltre necessario eseguire l'override [CFrameWndEx::OnShowPopupMenu](../../mfc/reference/cframewndex-class.md#onshowpopupmenu) e sostituire i pulsanti di menu che richiedono un'elaborazione speciale con istanze della classe derivata.  
   
 ##  <a name="oncontexthelp"></a>CMFCToolBarMenuButton::OnContextHelp  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnContextHelp(CWnd* pWnd);
@@ -610,7 +611,7 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ondraw"></a>CMFCToolBarMenuButton::OnDraw  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDraw(
@@ -637,7 +638,7 @@ virtual void OnDraw(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ondrawoncustomizelist"></a>CMFCToolBarMenuButton::OnDrawOnCustomizeList  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int OnDrawOnCustomizeList(
@@ -673,7 +674,7 @@ virtual BOOL OpenPopupMenu(CWnd* pWnd=NULL);
  Questa funzione viene chiamata dal framework quando l'utente apre un menu a discesa di un pulsante di menu della barra degli strumenti.  
   
 ##  <a name="resetimagetodefault"></a>CMFCToolBarMenuButton::ResetImageToDefault  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void ResetImageToDefault();
@@ -682,7 +683,7 @@ virtual void ResetImageToDefault();
 ### <a name="remarks"></a>Note  
   
 ##  <a name="savebarstate"></a>CMFCToolBarMenuButton::SaveBarState  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void SaveBarState();
@@ -692,7 +693,7 @@ virtual void SaveBarState();
  Il framework chiama questo metodo quando viene creato un pulsante della barra degli strumenti come il risultato di un'operazione di trascinamento e rilascio. Questo metodo chiama il [CMFCPopupMenu::SaveState](../../mfc/reference/cmfcpopupmenu-class.md#savestate) metodo del menu a comparsa principale, in modo che il pulsante principale del menu a comparsa per ricreare il relativo menu.  
   
 ##  <a name="serialize"></a>CMFCToolBarMenuButton::Serialize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void Serialize(CArchive& ar);
@@ -759,7 +760,7 @@ void SetMenuPaletteMode(
  Nella modalità di tavolozza, tutte le voci di menu vengono visualizzate come una tavolozza a più colonne. Specificare il numero di righe utilizzando `nPaletteRows`.  
   
 ##  <a name="setmessagewnd"></a>CMFCToolBarMenuButton::SetMessageWnd  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetMessageWnd(CWnd* pWndMessage);
