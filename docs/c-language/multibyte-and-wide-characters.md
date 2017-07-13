@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "applicazioni internazionali [C++], visualizzazione di caratteri"
   - "caratteri multibyte [C++]"
   - "tipi [C], carattere"
-  - "Unicode [C++], set di caratteri "wide""
+  - "Unicode [C++], set di caratteri \"wide\""
   - "caratteri wide [C++]"
 ms.assetid: 1943c469-200d-4724-b18f-781d70520f9e
 caps.latest.revision: 6
