@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
-  - "Unicode [C++], set di caratteri "wide""
+  - "Unicode [C++], set di caratteri \"wide\""
   - "caratteri wide [C++], Unicode"
 ms.assetid: b6a05a21-59a5-4d30-8c85-2dbe185f7a74
 caps.latest.revision: 8
