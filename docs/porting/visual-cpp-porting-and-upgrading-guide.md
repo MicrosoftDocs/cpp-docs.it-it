@@ -31,10 +31,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 02dd887f1b20b42145ccc83165570b9f682e693c
-ms.openlocfilehash: eb4787147a249addbab6c6c2afabf67d2497f78b
+ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
+ms.openlocfilehash: d548106a8820c9eea4e6c2956615fff8c6cd514c
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 06/01/2017
 
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Guida al porting e aggiornamento in Visual C++
@@ -106,7 +106,7 @@ Questo argomento presenta una guida per aggiornare il codice di Visual C++. Verr
 |[Porting di librerie di terze parti](porting-third-party-libraries.md)|Come usare lo strumento della riga di comando **vcpkg** per trasferire le librerie open source precedenti alle versioni compilate con i set di strumenti più recenti di Visual C++.|  
 |[Porting e aggiornamento: esempi e case study](porting-and-upgrading-examples-and-case-studies.md)|In questa sezione viene illustrato il processo di porting e aggiornamento di vari esempi e applicazioni e vengono descritte le esperienze e i risultati. La lettura di questi esempi offre una panoramica delle operazioni coinvolte nel processi di porting e aggiornamento. Vengono inoltre presentati suggerimenti e indicazioni per l'aggiornamento e viene descritto come risolvere errori specifici.|  
 |[Trasferimento alla piattaforma UWP (Universal Windows Platform)](porting-to-the-universal-windows-platform-cpp.md)|Contiene informazioni sul porting di codice a Windows 10|  
-|[Introduzione a Visual C++ per utenti UNIX](introduction-to-visual-cpp-for-unix-users.md)|Fornisce informazioni per gli utenti UNIX che non hanno familiarità con [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] e che desiderano aumentare la produttività.|  
+|[Introduzione a Visual C++ per utenti UNIX](introduction-to-visual-cpp-for-unix-users.md)|Fornisce informazioni per gli utenti UNIX che non hanno familiarità con Visual C++ e vogliono aumentare la produttività con questo linguaggio.|  
 |[Porting da UNIX a Win32](porting-from-unix-to-win32.md)|Illustra le opzioni per la migrazione di applicazioni UNIX a Windows.|  
 |[Nozioni di base della migrazione in C++/CLI](../dotnet/cpp-cli-migration-primer.md)|Fornisce informazioni dettagliate su come eseguire l'aggiornamento delle estensioni gestite per la sintassi C++ per usare la nuova sintassi. Per altre informazioni, vedere [Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md).|  
   
