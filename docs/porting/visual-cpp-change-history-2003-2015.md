@@ -33,10 +33,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ef479e2818cb9226830cc34f3fe9f8e59202e89
-ms.openlocfilehash: bb69ad913af2fd4777c5b4e64bde0758beb73822
+ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
+ms.openlocfilehash: 482b404293cc1eea9879b09de52fb277cc1bd2a0
 ms.contentlocale: it-it
-ms.lasthandoff: 04/28/2017
+ms.lasthandoff: 06/01/2017
 
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Cronologia delle modifiche di Visual C++ dal 2003 al 2015
@@ -109,7 +109,7 @@ Quando si esegue l'aggiornamento a una nuova versione del compilatore Visual C++
   
 -   **new e delete** Nelle versioni precedenti della libreria le funzioni dell'operatore new e delete definito dall'implementazione venivano esportate dalla libreria di runtime DLL (ad esempio, msvcr120.dll). Queste funzioni operatore ora sono sempre collegate staticamente nei file binari, anche quando si usano le DLL della libreria di runtime.  
   
-     Non si tratta di una modifica rilevante per il codice misto o nativo (/clr), tuttavia per il codice compilato come [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md) potrebbe causare un errore di compilazione da parte del codice. Se si compila codice come /clr:pure, può essere necessario aggiungere #include \<new> o #include \<new.h> per risolvere errori di compilazione dovuti a questa modifica. Si noti che /clr:pure è deprecato in [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] e potrebbe essere rimosso nelle versioni future.  
+     Non si tratta di una modifica rilevante per il codice misto o nativo (/clr), tuttavia per il codice compilato come [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md) potrebbe causare un errore di compilazione da parte del codice. Se si compila codice come /clr:pure, può essere necessario aggiungere #include \<new> o #include \<new.h> per risolvere errori di compilazione dovuti a questa modifica. Si noti che /clr:pure è deprecato in Visual Studio 2015 e potrebbe essere rimosso nelle versioni future.  
   
 #### <a name="processh"></a>\<process.h>  
   
@@ -260,7 +260,7 @@ Quando si esegue l'aggiornamento a una nuova versione del compilatore Visual C++
 ####  <a name="BK_STL"></a> Libreria standard C++  
  Per attivare nuove ottimizzazioni e controlli di debug, l'implementazione di Visual Studio della libreria standard C++ interrompe intenzionalmente la compatibilità binaria da una versione a quella successiva. Pertanto, se si usa la libreria standard C++, i file oggetto e le librerie statiche compilati usando versioni diverse non possono essere combinati in un file binario (EXE o DLL) e gli oggetti della libreria standard C++ non possono essere passati tra i file binari compilati usando versioni diverse. Tale combinazione genera errori del linker relativi a mancate corrispondenze di _MSC_VER. _MSC_VER è la macro che contiene il numero di versione principale del compilatore, ad esempio 1800 per Visual Studio 2013. Questo controllo non consente di rilevare la combinazione DLL e altre combinazioni inerenti a Visual C++ 2008 o versioni precedenti.  
   
--   **File di inclusione della libreria standard C++** Sono state apportate alcune modifiche alla struttura di inclusione nelle intestazioni della libreria standard C++. Le intestazioni della libreria standard C++ possono ora includersi reciprocamente in modi non specificati. In generale, è consigliabile scrivere il codice in modo che includa accuratamente tutte le intestazioni necessarie in base allo standard C++ e non si basi su quali intestazioni della libreria standard C++ includono altre intestazioni della libreria standard C++. In questo modo il codice diventa portabile tra versioni e piattaforme. Almeno due modifiche di intestazione in [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] influiscono sul codice utente. Per prima cosa \<string> non include più \<iterator>. Secondo, \<tuple> ora dichiara std::array senza includere tutti i valori \<array>, cosa che può interrompere il codice attraverso la seguente combinazione di costrutti di codice: il codice include una variabile denominata "array", si ha una direttiva using "using namespace std;" e si include un'intestazione della libreria standard C++ (ad esempio \<functional>) che include \<tuple>, che ora dichiara std::array.  
+-   **File di inclusione della libreria standard C++** Sono state apportate alcune modifiche alla struttura di inclusione nelle intestazioni della libreria standard C++. Le intestazioni della libreria standard C++ possono ora includersi reciprocamente in modi non specificati. In generale, è consigliabile scrivere il codice in modo che includa accuratamente tutte le intestazioni necessarie in base allo standard C++ e non si basi su quali intestazioni della libreria standard C++ includono altre intestazioni della libreria standard C++. In questo modo il codice diventa portabile tra versioni e piattaforme. Almeno due modifiche di intestazione in Visual Studio 2015 influiscono sul codice utente. Per prima cosa \<string> non include più \<iterator>. Secondo, \<tuple> ora dichiara std::array senza includere tutti i valori \<array>, cosa che può interrompere il codice attraverso la seguente combinazione di costrutti di codice: il codice include una variabile denominata "array", si ha una direttiva using "using namespace std;" e si include un'intestazione della libreria standard C++ (ad esempio \<functional>) che include \<tuple>, che ora dichiara std::array.  
   
 -   **steady_clock** L'implementazione di \<chrono> di [steady_clock](../standard-library/steady-clock-struct.md) è stata modificata per soddisfare i requisiti standard C++ per tenuta e monotonicità. steady_clock ora è basato su [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) e high_resolution_clock è ora un typedef per steady_clock. Di conseguenza in Visual C++ steady_clock::time_point è ora un typedef per chrono::time_point <steady_clock>; tuttavia, ciò non vale necessariamente per altre implementazioni.  
   
@@ -280,7 +280,7 @@ Quando si esegue l'aggiornamento a una nuova versione del compilatore Visual C++
   
 -   **std::allocator::deallocate** In Visual C++ 2013 e versioni precedenti, std::allocator::deallocate(p, n) ignorava l'argomento passato per n.  Lo standard C++ ha sempre richiesto che n sia uguale al valore passato come primo argomento alla chiamata di allocare che ha restituito p. Tuttavia, nella versione corrente il valore di n viene controllato. Il codice che passa gli argomenti per n che differiscono da ciò che richiede lo standard potrebbe arrestarsi in modo anomalo in fase di esecuzione.  
   
--   **hash_map e hash_set** I file di intestazione non standard hash_map e hash_set sono deprecati in [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] e verranno rimossi in una versione futura. Usare invece unordered_map e unordered_set.  
+-   **hash_map e hash_set** I file di intestazione non standard hash_map e hash_set sono deprecati in Visual Studio 2015 e verranno rimossi in una versione futura. Usare invece unordered_map e unordered_set.  
   
 -   **comparators e operator()** I contenitori associativi (la famiglia \<map>) ora richiedono che i loro comparatori abbiano operatori di chiamata di funzioni in grado di chiamare const. Il codice seguente in una dichiarazione di classe comparatore ora causa errori di compilazione:  
   
@@ -294,7 +294,7 @@ Quando si esegue l'aggiornamento a una nuova versione del compilatore Visual C++
     bool operator()(const X& a, const X& b) const  
     ```  
   
--   **tratti di tipo** The old names for tratti di tipo from an earlier version of the C++ draft standard have been removed. Sono stati modificati in C++11 e sono stati aggiornati ai valori C++11 in [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)]. La tabella seguente illustra i nomi precedenti e nuovi:  
+-   **tratti di tipo** The old names for tratti di tipo from an earlier version of the C++ draft standard have been removed. Sono stati modificati in C++11 e sono stati aggiornati ai valori C++11 in Visual Studio 2015. La tabella seguente illustra i nomi precedenti e nuovi:  
   
     |Nome precedente|Nuovo nome|  
     |--------------|--------------|  
@@ -864,7 +864,7 @@ Quando si esegue l'aggiornamento a una nuova versione del compilatore Visual C++
   
 -   **Costruttori di copia**  
   
-     Sia in [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] che in [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] il compilatore genera un costruttore di copia per una classe se tale classe ha un costruttore di spostamento definito dall'utente, ma nessun costruttore di copia definito dall'utente. In Dev14, questo costruttore di copia generato in modo implicito è contrassegnato come "= delete".  
+     Sia in [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] che in Visual Studio 2015 il compilatore genera un costruttore di copia per una classe se tale classe ha un costruttore di spostamento definito dall'utente, ma nessun costruttore di copia definito dall'utente. In Dev14, questo costruttore di copia generato in modo implicito è contrassegnato come "= delete".  
 
 <!--From here to VS_Update1 added 04/21/2017-->
 
