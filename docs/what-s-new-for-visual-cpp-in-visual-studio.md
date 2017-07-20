@@ -26,10 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 71ae904790532cde7ffe559648ccd13a59b88051
-ms.lasthandoff: 04/01/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: ed0e4505b68c2ea198e0771b6301e685daa8662e
+ms.openlocfilehash: 58b5a3f2e5ce491ba7ba185c90bb6b4a2dca3101
+ms.contentlocale: it-it
+ms.lasthandoff: 06/30/2017
 
 ---
 
@@ -94,7 +95,7 @@ In questa versione sono stati introdotti numerosi miglioramenti per l'ottimizzaz
 * Per l'elenco completo dei miglioramenti apportati a STL, vedere [STL Fixes In VS 2017 RTM](https://blogs.msdn.microsoft.com/vcblog/2017/02/06/stl-fixes-in-vs-2017-rtm/) (Correzioni a STL in VS 2017 RTM).
 
 ### <a name="open-source-library-support"></a>Supporto librerie open source  
-Vcpkg è un strumento open source da riga di comando che semplifica notevolmente il processo di acquisizione e di creazione di librerie statiche e DLL C++ open source in Visual Studio. Per altre informazioni, vedere il post relativo agli [aggiornamenti Vcpkg e alla disponibilità del collegamento statico](https://blogs.msdn.microsoft.com/vcblog/2016/11/01/vcpkg-updates-static-linking-is-now-available/).
+Vcpkg è un strumento open source da riga di comando che semplifica notevolmente il processo di acquisizione e di creazione di librerie statiche e DLL C++ open source in Visual Studio. Per altre informazioni, vedere [vcpkg: gestione pacchetti per C++](vcpkg.md).
 
 ### <a name="cpprest-sdk-290"></a>CPPRestSDK 2.9.0  
 CPPRestSDK, un'API Web multipiattaforma per C++, è stato aggiornato alla versione 2.9.0. Per altre informazioni, vedere il post sulla [disponibilità di CppRestSDK 2.9.0 su GitHub](https://blogs.msdn.microsoft.com/vcblog/2016/10/21/cpprestsdk-2-9-0-is-available-on-github/).
@@ -143,9 +144,9 @@ Alcune di queste funzionalità sono usate anche in altri linguaggi e alcune sono
 Visual Studio 2017 introduce la funzionalità "Apri cartella", che consente di codificare, compilare ed eseguire il debug in un cartella contenente il codice sorgente senza dover creare soluzioni o progetti. Questo rende molto più semplice iniziare a usare Visual Studio anche se il progetto non è un progetto basato su MSBuild. Con "Apri cartella" è possibile accedere alle potenti funzionalità per la comprensione, la modifica, la compilazione e il debug del codice già offerte da Visual Studio per i progetti MSBuild. Per altre informazioni, vedere il [post sull'uso della codebase di C++ in Visual Studio con "Apri cartella"](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/bring-your-c-codebase-to-visual-studio-with-open-folder/).
 
 * Sono stati apportati miglioramenti all'esperienza Apri cartella. È possibile personalizzare l'esperienza usando i file JSON seguenti:
-  -    CppProperties.json per personalizzare l'esperienza IntelliSense e di esplorazione.
-  -    Tasks.json per personalizzare le procedure di compilazione. 
-  -    Launch.json per personalizzare l'esperienza di debug.
+  - CppProperties.json per personalizzare l'esperienza IntelliSense e di esplorazione.
+  - Tasks.json per personalizzare le procedure di compilazione. 
+  - Launch.json per personalizzare l'esperienza di debug.
 
 ### <a name="cmake-support-via-open-folder"></a>Supporto CMake con Apri cartella
 Visual Studio 2017 introduce il supporto per l'uso dei progetti CMake senza la conversione in file di progetto di MSBuild (con estensione vcxproj). Per altre informazioni, vedere [CMake support in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/cmake-support-in-visual-studio/) (Supporto di CMake in Visual Studio) e [CMake support in Visual Studio 2017 - what's new in the RC.2 update](https://blogs.msdn.microsoft.com/vcblog/2016/12/20/cmake-support-in-visual-studio-2017-whats-new-in-the-rc-update/) (Supporto di CMake in Visual Studio 2017 - Novità dell'aggiornamento RC.2). Se si aprono i progetti CMake con "Apri cartella", l'ambiente viene automaticamente configurato per la modifica, la compilazione e il debug in C++.
