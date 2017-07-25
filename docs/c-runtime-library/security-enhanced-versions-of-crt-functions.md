@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -34,10 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 2008eeb968e63929404cda6deaedc23042b86c5e
-ms.lasthandoff: 04/04/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 95bf81054110b972c7731415a9032a0b42f813ab
+ms.contentlocale: it-it
+ms.lasthandoff: 05/18/2017
 
 ---
 # <a name="security-enhanced-versions-of-crt-functions"></a>Versioni con sicurezza avanzata delle funzioni CRT
@@ -70,7 +71,7 @@ Sono disponibili altre versioni sicure delle routine di libreria di runtime. Per
 |[_gcvt](../c-runtime-library/reference/gcvt.md)|[_gcvt_s](../c-runtime-library/reference/gcvt-s.md)|Converte un valore a virgola mobile in una stringa e lo archivia in un buffer|  
 |[getenv, _wgetenv](../c-runtime-library/reference/getenv-wgetenv.md)|[getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md)|Ottiene un valore dall'ambiente corrente.|  
 |Funzione obsoleta|[gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|Ottiene una riga dal flusso `stdin`|  
-|[gmtime, _gmtime32, _gmtime64](../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)|[_gmtime32_s, _gmtime64_s](../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)|Converte l'ora dal tipo `time_t` a `struct``tm` o dal tipo `__time64_t` a `struct tm`|  
+|[gmtime, _gmtime32, _gmtime64](../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)|[_gmtime32_s, _gmtime64_s](../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)|Converte l'ora dal tipo `time_t` a `struct tm` o dal tipo `__time64_t` a `struct tm`|  
 |[_itoa, _i64toa, _ui64toa, _itow, _i64tow, _ui64tow](../c-runtime-library/reference/itoa-i64toa-ui64toa-itow-i64tow-ui64tow.md)|[_itoa_s, _i64toa_s, _ui64toa_s, _itow_s, _i64tow_s, _ui64tow_s](../c-runtime-library/reference/itoa-s-i64toa-s-ui64toa-s-itow-s-i64tow-s-ui64tow-s.md)|Converte un numero intero in una stringa|  
 |[_lfind](../c-runtime-library/reference/lfind.md)|[_lfind_s](../c-runtime-library/reference/lfind-s.md)|Esegue una ricerca lineare per la chiave specificata|  
 |[localtime, _localtime32, _localtime64](../c-runtime-library/reference/localtime-localtime32-localtime64.md)|[localtime_s, _localtime32_s, _localtime64_s](../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)|Converte l'ora dal tipo `time_t` a `struct tm` o dal tipo `__time64_t` a `struct tm` con correzione locale|  

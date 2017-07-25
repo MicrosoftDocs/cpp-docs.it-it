@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apilocation:
@@ -42,10 +42,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 93dafafddd271eb7e068a0e822be6dd8535fc721
-ms.lasthandoff: 04/01/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 82ace58042dd9c7f9cceb0ef0781968532ae7b29
+ms.contentlocale: it-it
+ms.lasthandoff: 05/18/2017
 
 ---
 # <a name="scanf-type-field-characters"></a>Caratteri di campo di tipo per scanf
@@ -63,12 +64,12 @@ Le informazioni seguenti si applicano a qualsiasi famiglia di funzioni `scanf` ,
 |`i`|Intero. Esadecimale se la stringa di input inizia con "0x" o "0X", ottale se la stringa inizia con "0", in caso contrario decimale.|Puntatore a `int`.|No.|  
 |`o`|Integer ottale.|Puntatore a `int`.|No.|  
 |`p`|Indirizzo del puntatore in cifre esadecimali. Il numero massimo di cifre lette dipende dalle dimensioni di un puntatore (32 o 64 bit), che a sua volta dipende dall'architettura del computer. I prefissi accettati sono "0x" e "0X".|Puntatore a `void*`.|No.|  
-|`u`|Intero decimale senza segno.|Puntatore a `unsigned``int`.|No.|  
+|`u`|Intero decimale senza segno.|Puntatore a `unsigned int`.|No.|  
 |`x`|Integer esadecimale.|Puntatore a `int`.|No.|  
 |`e`, `E`, `f`, `F`, `g`, `G`|Valore a virgola mobile composto dal segno (+ o -) facoltativo, serie di uno o più cifre decimali che include il separatore decimale e l'esponente facoltativo ("e" o "E") seguito facoltativamente da un intero con segno.|Puntatore a `float`.|No.|  
 |`a`, `A`|Valore a virgola mobile costituito da una serie di una o più cifre esadecimali che contiene un separatore decimale facoltativo e un esponente ("p" o "P") seguito da un valore decimale.|Puntatore a `float`.|No.|  
 |`n`|Nessun input letto dal flusso o buffer.|Puntatore a `int`in cui è stato correttamente archiviato il numero di caratteri letti dal flusso o dal buffer fino un determinato punto della chiamata corrente alle funzioni `scanf` o `wscanf` .|No.|  
-|`s`|Stringa, fino al primo carattere di spazio vuoto (spazio, scheda o una nuova riga). Per leggere stringhe non delimitate da caratteri di spazio, usare il set di parentesi quadre (`[ ]`), come illustrato in [Specifica della larghezza per scanf](../c-runtime-library/scanf-width-specification.md).|Una volta usato con funzioni `scanf` , specifica una matrice di caratteri a singolo byte; quando usato con funzioni `wscanf` , specifica una matrice di caratteri wide. In entrambi i casi, la matrice di caratteri deve essere sufficientemente grande per il campo di input e il carattere di terminazione null che viene aggiunto automaticamente.|Obbligatorio. La dimensione include lo spazio per una terminazione NULL.|  
+|`s`|Stringa, fino al primo carattere di spazio vuoto (spazio, scheda o una nuova riga). Per leggere stringhe non delimitati da caratteri di spazio, usare il set di parentesi quadre (`[ ]`), come illustrato in [scanf Width Specification](../c-runtime-library/scanf-width-specification.md).|Una volta usato con funzioni `scanf` , specifica una matrice di caratteri a singolo byte; quando usato con funzioni `wscanf` , specifica una matrice di caratteri wide. In entrambi i casi, la matrice di caratteri deve essere sufficientemente grande per il campo di input e il carattere di terminazione null che viene aggiunto automaticamente.|Obbligatorio. La dimensione include lo spazio per una terminazione NULL.|  
 |`S`|Stringa di caratteri di dimensione opposta fino al primo carattere di spazio vuoto (spazio, scheda o una nuova riga). Per leggere stringhe non delimitate da caratteri di spazio, usare il set di parentesi quadre (`[ ]`), come illustrato in [Specifica della larghezza per scanf](../c-runtime-library/scanf-width-specification.md).|Quando viene usato con funzioni `scanf`, specifica una matrice di caratteri wide. Quando viene usato con funzioni `wscanf`, specifica una matrice di caratteri a un byte. In entrambi i casi, la matrice di caratteri deve essere sufficientemente grande per il campo di input e il carattere di terminazione null che viene aggiunto automaticamente.|Obbligatorio. La dimensione include lo spazio per una terminazione NULL.|  
   
   
@@ -85,10 +86,10 @@ scanf_s("%10s %8s", string1, 11, string2, 9);
   
 |Per leggere un carattere come|Usare questa funzione|Con questi identificatori di formato|  
 |--------------------------|-----------------------|----------------------------------|  
-|a un byte|Funzioni `scanf`|`c`, `hc` o `hC`|  
-|a un byte|Funzioni `wscanf`|`C`, `hc` o `hC`|  
-|wide|Funzioni `wscanf`|`c`, `lc` o `lC`|  
-|wide|Funzioni `scanf`|`C`, `lc` o `lC`|  
+|a un byte|Funzioni`scanf` |`c`, `hc`o `hC`|  
+|a un byte|Funzioni`wscanf` |`C`, `hc`o `hC`|  
+|wide|Funzioni`wscanf` |`c`, `lc`o `lC`|  
+|wide|Funzioni`scanf` |`C`, `lc`o `lC`|  
   
  Per analizzare le stringhe con funzioni `scanf` e `wscanf` , usare la tabella sopra riportata con identificatori di tipo di formato `s` e `S` anziché `c` e `C`.  
   
