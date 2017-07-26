@@ -1,28 +1,46 @@
 ---
-title: "Dimensione di matrice massima | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Dimensioni massime delle matrici | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 4c782cf6-73f3-40b0-b306-229d22da4ee1
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Dimensione di matrice massima
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 117ba3a50b76477bbebf688aaec0b57df4376bc9
+ms.contentlocale: it-it
+ms.lasthandoff: 05/18/2017
 
-**ANSI 3.3.3.4, 4.1.1** Il tipo di intero necessario per mantenere la dimensione massima di un array, ovvero la dimensione di **size\_t**  
+---
+# <a name="largest-array-size"></a>Dimensione di matrice massima
+**ANSI 3.3.3.4, 4.1.1** Tipo di intero necessario per contenere le dimensioni massime di una matrice, ovvero la dimensione di **size_t**  
   
- Il typedef `size_t` è un `unsigned int` sulla piattaforma x86 a 32 bit.  Su piattaforme a 64 bit, il typedef `size_t` è un **unsigned \_\_int64**.  
+ Il typedef `size_t` è un valore `unsigned int` sulla piattaforma x86 a 32 bit. Nelle piattaforme a 64 bit il typedef `size_t` è un valore **unsigned __int64**.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Matrici e puntatori](../c-language/arrays-and-pointers.md)

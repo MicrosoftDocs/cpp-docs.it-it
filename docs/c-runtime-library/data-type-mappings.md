@@ -1,60 +1,77 @@
 ---
-title: "Mapping dei tipi di dati | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_TXCHAR"
-  - "_TUCHAR"
-  - "_TINT"
-  - "_TSCHAR"
-  - "_TCHAR"
-  - "TCHAR::H"
-  - "TCHAR"
-  - "_T"
-  - "_TEXT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_T (tipo)"
-  - "_TCHAR (tipo)"
-  - "_TEXT (tipo)"
-  - "_TINT (tipo)"
-  - "_TSCHAR (tipo)"
-  - "_TUCHAR (tipo)"
-  - "_TXCHAR (tipo)"
-  - "tipi di dati per testo generico"
-  - "T (tipo)"
-  - "TCHAR (tipo)"
-  - "tipi di dati TCHAR.H, mapping definiti"
-  - "TEXT (tipo)"
-  - "TINT (tipo)"
-  - "TSCHAR (tipo)"
-  - "TUCHAR (tipo)"
-  - "TXCHAR (tipo)"
+title: Mapping dei tipi di dati | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _TXCHAR
+- _TUCHAR
+- _TINT
+- _TSCHAR
+- _TCHAR
+- TCHAR::H
+- TCHAR
+- _T
+- _TEXT
+dev_langs:
+- C++
+helpviewer_keywords:
+- _TXCHAR type
+- TINT type
+- _TCHAR type
+- TSCHAR type
+- TEXT type
+- TCHAR type
+- TCHAR.H data types, mappings defined in
+- generic-text data types
+- _TINT type
+- TUCHAR type
+- TXCHAR type
+- _TSCHAR type
+- T type
+- _TUCHAR type
+- _TEXT type
+- _T type
 ms.assetid: 4e573c05-8800-468b-ae5f-76ff7409835e
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Mapping dei tipi di dati
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 4a5b7610ac3e83a8c3f05db330798e85c82cce2f
+ms.contentlocale: it-it
+ms.lasthandoff: 05/18/2017
 
-Questi mapping dei tipi di dati sono definiti in TCHAR.H e varia se la costante `_UNICODE` o `_MBCS` è stata definita nel programma.  
+---
+# <a name="data-type-mappings"></a>Mapping dei tipi di dati
+I mapping dei tipi di dati vengono definiti in TCHAR.H e variano a seconda che nel programma sia stata definita la costante `_UNICODE` o `_MBCS`.  
   
- Per informazioni correlate, vedere [Utilizzare tipi di dati di TCHAR.H con il codice di \_MBCS](../text/using-tchar-h-data-types-with-mbcs-code.md).  
+ Per informazioni correlate, vedere [Using TCHAR.H Data Types with _MBCS Code](../text/using-tchar-h-data-types-with-mbcs-code.md) (Uso dei tipi di dati in TCHAR.H con codice _MBCS).  
   
-### Mappature di tipi di dati di testo generico  
+### <a name="generic-text-data-type-mappings"></a>Mapping dei tipi di dati di testo generico  
   
-|Testo generico<br /><br /> Nome tipo di dati|SBCS \(\_UNICODE,<br /><br /> \_MBCS not<br /><br /> defined\)|\_MBCS<br /><br /> è definito|\_UNICODE<br /><br /> è definito|  
-|------------------------------------------|----------------------------------------------------|---------------------------|------------------------------|  
+|Nome tipo dati<br /><br /> testo generico|SBCS (_UNICODE,<br /><br /> MBCS non<br /><br /> definito)|_MBCS<br /><br /> definizione|_UNICODE<br /><br /> definizione|  
+|--------------------------------------|----------------------------------------------------|------------------------|---------------------------|  
 |`_TCHAR`|`char`|`char`|`wchar_t`|  
 |`_tfinddata_t`|`_finddata_t`|`_finddata_t`|`_wfinddata_t`|  
 |`_tfinddata64_t`|`__finddata64_t`|`__finddata64_t`|`__wfinddata64_t`|  
@@ -63,11 +80,11 @@ Questi mapping dei tipi di dati sono definiti in TCHAR.H e varia se la costante 
 |`_TSCHAR`|`signed char`|`signed char`|`wchar_t`|  
 |`_TUCHAR`|`unsigned char`|`unsigned char`|`wchar_t`|  
 |`_TXCHAR`|`char`|`unsigned char`|`wchar_t`|  
-|`_T` o `_TEXT`|Nessun effetto \(eliminato dal preprocessore\)|Nessun effetto \(eliminato dal preprocessore\)|`L` \(converte il carattere o la stringa seguente nell'equivalente Unicode\)|  
+|`_T` o `_TEXT`|Nessun effetto (rimosso dal preprocessore)|Nessun effetto (rimosso dal preprocessore)|`L` (converte il carattere o la stringa seguente nell'equivalente Unicode)|  
   
-## Vedere anche  
- [Mapping testo generico](../c-runtime-library/generic-text-mappings.md)   
- [Mapping costanti e variabili globali](../c-runtime-library/constant-and-global-variable-mappings.md)   
- [Mapping di routine](../c-runtime-library/routine-mappings.md)   
- [Programma di testo generico di esempio](../c-runtime-library/a-sample-generic-text-program.md)   
- [Utilizzo di mapping testo generico](../c-runtime-library/using-generic-text-mappings.md)
+## <a name="see-also"></a>Vedere anche  
+ [Generic-Text Mappings](../c-runtime-library/generic-text-mappings.md)  (Mapping di testo generico)  
+ [Constant and Global Variable Mappings](../c-runtime-library/constant-and-global-variable-mappings.md)  (Mapping di costanti e variabili globali)  
+ [Routine Mappings](../c-runtime-library/routine-mappings.md)  (Mapping di routine)  
+ [A Sample Generic-Text Program](../c-runtime-library/a-sample-generic-text-program.md)  (Programma di testo generico di esempio)  
+ [Using Generic-Text Mappings](../c-runtime-library/using-generic-text-mappings.md) (Uso di mapping di testo generico)
