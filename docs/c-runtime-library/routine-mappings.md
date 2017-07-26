@@ -1,41 +1,58 @@
 ---
-title: "Mapping di routine | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.mappings"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_tWinMain"
-  - "mapping testo generico"
-  - "tipi di dati TCHAR.H, elenco di mapping di routine"
+title: Mapping di routine | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.mappings
+dev_langs:
+- C++
+helpviewer_keywords:
+- _tWinMain
+- TCHAR.H data types, list of routine mappings
+- generic-text mappings
 ms.assetid: 38f33d3b-0f7b-430d-8a4f-75e27c6f1c42
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Mapping di routine
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 1b716aacca01e72f917fe4b4083c79d39546b6c4
+ms.contentlocale: it-it
+ms.lasthandoff: 05/18/2017
 
-I mapping di routine a testo generico sono definite in TCHAR.H.  `_tccpy` e il mapping `_tclen` delle funzioni nel modello MBCS; sono mappate le macro o le funzioni inline nei modelli SBCS e Unicode per completezza.  Per informazioni su una routine generica di testo, vedere l'argomento della Guida corrispondente a `SBCS`, ovvero `_MBCS` oppure le routine correlate `_UNICODE`.  
+---
+# <a name="routine-mappings"></a>Mapping di routine
+I mapping di routine di testo generico sono definite in TCHAR.H. `_tccpy` e `_tclen` eseguono il mapping alle funzioni nel modello MBCS; sono mappate alle macro o alle funzioni inline nei modelli SBCS e Unicode per completezza. Per informazioni su una routine di testo generico, vedere l'argomento della Guida sulla corrispondente routine correlata a `SBCS`, `_MBCS` o `_UNICODE`.  
   
- Non sono disponibili in questa documentazione, informazioni più specifiche sulle singole routine elencate nella colonna di sinistra della tabella seguente.  Tuttavia, è possibile trovare informazioni corrispondenti a `SBCS`, ovvero `_MBCS`\- oppure le routine correlate a `_UNICODE`.  Utilizzare il comando **Cerca** dal menu **?** per cercare qualsiasi routine a testo generica elencate di seguito.  
+ In questa documentazione non sono disponibili informazioni più specifiche sulle singole routine elencate nella colonna di sinistra della tabella seguente. Tuttavia, è possibile trovare informazioni su una corrisponde routine correlata a `SBCS`, `_MBCS` o `_UNICODE`. Usare il comando **Cerca** dal menu **?** per cercare qualsiasi routine di testo generico elencata di seguito.  
   
- Per informazioni relative, vedere [Mapping di testo generico in TCHAR.H](../text/generic-text-mappings-in-tchar-h.md).  
+ Per informazioni correlate, vedere [Mappature di testo generico in Tchar.h](../text/generic-text-mappings-in-tchar-h.md).  
   
-### Mapping di routine su testo generico  
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
-|Nome di una routine a testo generico|SBCS \(\_UNICODE & MBCS non definiti\)|\_MBCS definito|\_UNICODE definito|  
-|------------------------------------------|--------------------------------------------|---------------------|------------------------|  
+|Nome di una routine di testo generico|SBCS (_UNICODE & MBCS non definiti)|_MBCS definito|_UNICODE definito|  
+|--------------------------------|-------------------------------------------|--------------------|-----------------------|  
 |`_cgetts`|`_cgets`|`_cgets`|`_cgetws`|  
 |`_cgetts_s`|`_cgets_s`|`_cgets_s`|`_cgetws_s`|  
 |`_cputts`|`_cputs`|`_cputs`|`_cputws`|  
@@ -91,11 +108,11 @@ I mapping di routine a testo generico sono definite in TCHAR.H.  `_tccpy` e il m
 |`_taccess_s`|`_access_s`|`_access_s`|`_waccess_s`|  
 |`_tasctime`|`asctime`|`asctime`|`_wasctime`|  
 |`_tasctime_s`|`asctime_s`|`asctime_s`|`_wasctime_s`|  
-|`_tccmp`|Mapping della macro o della funzione inline|`_mbsncmp`|Mapping della macro o della funzione inline|  
-|`_tccpy`|Mapping della macro o della funzione inline|`_mbccpy`|Mapping della macro o della funzione inline|  
+|`_tccmp`|Mapping a una macro o a una funzione inline|`_mbsncmp`|Mapping a una macro o a una funzione inline|  
+|`_tccpy`|Mapping a una macro o a una funzione inline|`_mbccpy`|Mapping a una macro o a una funzione inline|  
 |`_tccpy_s`|`strcpy_s`|`_mbccpy_s`|`wcscpy_s`|  
 |`_tchdir`|`_chdir`|`_chdir`|`_wchdir`|  
-|`_tclen`|Mapping della macro o della funzione inline|`_mbclen`|Mapping della macro o della funzione inline|  
+|`_tclen`|Mapping a una macro o a una funzione inline|`_mbclen`|Mapping a una macro o a una funzione inline|  
 |`_tchmod`|`_chmod`|`_chmod`|`_wchmod`|  
 |`_tcprintf`|`_cprintf`|`_cprintf`|`_cwprintf`|  
 |`_tcprintf_s`|`_cprintf_s`|`_cprintf_s`|`_cwprintf_s`|  
@@ -271,9 +288,9 @@ I mapping di routine a testo generico sono definite in TCHAR.H.  `_tccpy` e il m
 |`_vtprintf`|`vprintf`|`vprintf`|`vwprintf`|  
 |`_vtprintf_s`|`vprintf_s`|`vprintf_s`|`vwprintf_s`|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Mapping testo generico](../c-runtime-library/generic-text-mappings.md)   
  [Mapping dei tipi di dati](../c-runtime-library/data-type-mappings.md)   
- [Mapping costanti e variabili globali](../c-runtime-library/constant-and-global-variable-mappings.md)   
+ [Mapping di costanti e variabili globali](../c-runtime-library/constant-and-global-variable-mappings.md)   
  [Programma di testo generico di esempio](../c-runtime-library/a-sample-generic-text-program.md)   
- [Utilizzo di mapping testo generico](../c-runtime-library/using-generic-text-mappings.md)
+ [Using Generic-Text Mappings](../c-runtime-library/using-generic-text-mappings.md) (Uso di mapping di testo generico)

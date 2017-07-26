@@ -1,46 +1,63 @@
 ---
-title: "__set_app_type | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "__set_app_type"
-  - "_set_app_type"
-apilocation: 
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr110.dll"
-  - "msvcr80.dll"
-  - "msvcrt.dll"
-  - "msvcr120.dll"
-  - "msvcr110_clr0400.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "__set_app_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__set_app_type"
+title: __set_app_type | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- __set_app_type
+- _set_app_type
+apilocation:
+- msvcr90.dll
+- msvcr100.dll
+- msvcr110.dll
+- msvcr80.dll
+- msvcrt.dll
+- msvcr120.dll
+- msvcr110_clr0400.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- __set_app_type
+dev_langs:
+- C++
+helpviewer_keywords:
+- __set_app_type
 ms.assetid: f0ac0f4d-70e6-4e96-9e43-eb9d1515490c
 caps.latest.revision: 2
-caps.handback.revision: 2
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# __set_app_type
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: e1b14f0e4cbf4ebfeb02811ee622db6f9eeaab2b
+ms.contentlocale: it-it
+ms.lasthandoff: 05/18/2017
 
+---
+# <a name="setapptype"></a>__set_app_type
 Imposta il tipo di applicazione corrente.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 void __set_app_type (  
@@ -48,20 +65,20 @@ void __set_app_type (
    )  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `at`  
- Un valore che indica il tipo di applicazione.  I valori possibili sono:  
+ Un valore che indica il tipo di applicazione. I valori possibili sono:  
   
 |Valore|Descrizione|  
-|------------|-----------------|  
-|\_UNKNOWN\_APP|Tipo di applicazione sconosciuto.|  
-|\_CONSOLE\_APP|Applicazione console \(riga di comando\).|  
-|\_GUI\_APP|Applicazione GUI \(Windows\)|  
+|-----------|-----------------|  
+|_UNKNOWN_APP|Tipo di applicazione sconosciuto.|  
+|_CONSOLE_APP|Applicazione console (riga di comando).|  
+|_GUI_APP|Applicazione GUI (Windows).|  
   
-## Note  
+## <a name="remarks"></a>Note  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|\_\_set\_app\_type|internal.h|
+|-------------|---------------------|  
+|__set_app_type|internal.h|

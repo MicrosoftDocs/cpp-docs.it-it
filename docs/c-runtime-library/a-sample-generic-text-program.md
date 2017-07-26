@@ -1,34 +1,52 @@
 ---
-title: "Programma di testo generico di esempio | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_TCHAR (tipo)"
-  - "mapping, tipi di dati TCHAR.H"
-  - "esempio di testo generico [CRT]"
-  - "TCHAR (tipo)"
-  - "TCHAR.H (tipi di dati), mapping"
+title: Programma di testo generico di esempio | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- _TCHAR type
+- mappings, TCHAR.H data types
+- generic-text example [CRT]
+- TCHAR type
+- TCHAR.H data types, mapping
 ms.assetid: a03de0db-8118-4bd9-a03f-640e8dfc5ed3
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Programma di testo generico di esempio
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 0cdc18215fe80c4165ffa03a5d789af0ebc95b40
+ms.contentlocale: it-it
+ms.lasthandoff: 05/18/2017
 
+---
+# <a name="a-sample-generic-text-program"></a>Programma di testo generico di esempio
 **Sezione specifica Microsoft**  
   
- Il seguente programma, GENTEXT.C, fornisce un'illustrazione molto dettagliata dell'uso delle mappature di testo generico definiti in TCHAR.H:  
+ Il seguente programma, GENTEXT.C, fornisce un'illustrazione più dettagliata dell'uso delle mappature di testo generico definite in TCHAR.H:  
   
 ```  
 // GENTEXT.C  
@@ -69,7 +87,7 @@ int __cdecl _tmain(int argc, _TCHAR **argv, _TCHAR **envp)
   
 ```  
   
- Se `_MBCS` è stato definito, GENTEXT.C mappa il seguente programma MBCS:  
+ Se `_MBCS` è stato definito, GENTEXT.C esegue il mapping al seguente programma MBCS:  
   
 ```  
 // crt_mbcsgtxt.c  
@@ -107,7 +125,7 @@ int __cdecl main(int argc, char **argv, char **envp)
 }  
 ```  
   
- Se `_UNICODE` è stato definito, GENTEXT.C mappa la seguente versione Unicode del programma.  Per ulteriori informazioni sull'utilizzo  `wmain` nei programmi Unicode in sostituzione di `main`, consultare [Utilizzando wmain](../c-language/using-wmain.md) *nel riferimento del linguaggio C*.  
+ Se `_UNICODE` è stato definito, GENTEXT.C esegue il mapping alla seguente versione Unicode del programma. Per altre informazioni sull'uso di `wmain` nei programmi Unicode in sostituzione di `main`, vedere [Utilizzo di wmain](../c-language/using-wmain.md) in *Riferimenti del linguaggio C*.  
   
 ```  
 // crt_unicgtxt.c  
@@ -145,7 +163,7 @@ int __cdecl wmain(int argc, wchar_t **argv, wchar_t **envp)
 }  
 ```  
   
- Se `_MBCS` né `_UNICODE` sono stati definiti, GENTEXT.C mappa il codice ASCII a byte singolo, come segue:  
+ Se `_MBCS` né `_UNICODE` sono stati definiti, GENTEXT.C esegue il mapping al codice ASCII a byte singolo, come segue:  
   
 ```  
 // crt_sbcsgtxt.c  
@@ -184,9 +202,9 @@ int __cdecl main(int argc, char **argv, char **envp)
   
  **Fine sezione specifica Microsoft**  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Mapping testo generico](../c-runtime-library/generic-text-mappings.md)   
  [Mapping dei tipi di dati](../c-runtime-library/data-type-mappings.md)   
  [Mapping costanti e variabili globali](../c-runtime-library/constant-and-global-variable-mappings.md)   
  [Mapping di routine](../c-runtime-library/routine-mappings.md)   
- [Utilizzo di mapping testo generico](../c-runtime-library/using-generic-text-mappings.md)
+ [Uso di mapping di testo generico](../c-runtime-library/using-generic-text-mappings.md)
