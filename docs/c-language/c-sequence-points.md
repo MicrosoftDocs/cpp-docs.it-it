@@ -64,4 +64,4 @@ Il valore di un oggetto può essere modificato una sola volta da un'espressione 
 -   L'espressione in un'istruzione `return`. L'espressione viene valutata completamente e tutti gli effetti collaterali vengono completati prima che il controllo torni alla funzione chiamante.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Valutazione dell'espressione](../c-language/expression-evaluation-c.md)
+ [Valutazione di un'espressione](../c-language/expression-evaluation-c.md)

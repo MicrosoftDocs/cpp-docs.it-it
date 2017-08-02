@@ -49,7 +49,7 @@ Un'istruzione composta (detta anche "blocco") viene in genere visualizzata come 
  *declaration-list*:  
  *declaration*  
   
- *declaration-list dichiarazione*  
+ *declaration-list declaration*  
   
  *statement-list*:  
  s*tatement*  

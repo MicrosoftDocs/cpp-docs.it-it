@@ -50,7 +50,7 @@ L'istruzione **if** controlla la creazione condizionale di rami. Il corpo di un'
   
 ## <a name="syntax"></a>Sintassi  
  *selection-statement*:  
- **if (**  *espressione*  **)**  *istruzione*  
+ **if (**  *expression*  **)**  *statement*  
   
  **if (**  *expression*  **)**  *statement*  **else**  *statement*  
   

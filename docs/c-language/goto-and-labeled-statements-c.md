@@ -46,7 +46,7 @@ ms.lasthandoff: 05/18/2017
 L'istruzione `goto` trasferisce il controllo a un'etichetta. L'etichetta specificata deve risiedere nella stessa funzione e può apparire solo prima di un'istruzione nella stessa funzione.  
   
 ## <a name="syntax"></a>Sintassi  
- *istruzione*:  
+ *statement*:  
  *labeled-statement*  
   
  *jump-statement*  
