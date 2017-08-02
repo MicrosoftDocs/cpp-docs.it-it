@@ -1,69 +1,86 @@
 ---
-title: "Prototipi di funzioni | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tipi di dati [C], tipi restituiti dalla funzione"
-  - "prototipi di funzioni"
-  - "tipi restituiti dalla funzione, prototipi di funzioni"
-  - "funzioni [C], tipi restituiti"
-  - "prototipi [C++], funzione"
+title: Prototipi di funzioni | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- function prototypes
+- function return types, function prototypes
+- data types [C], function return types
+- functions [C], return types
+- prototypes [C++], function
 ms.assetid: d152f8e6-971e-432c-93ca-5a91400653c2
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Prototipi di funzioni
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: a9f005b9a48cc3c09f1fce1803988dbfe9eaaf72
+ms.contentlocale: it-it
+ms.lasthandoff: 05/18/2017
 
-Una dichiarazione di funzione precede la definizione di funzione e specifica il nome, il tipo restituito, la classe di archiviazione e altri attributi di una funzione.  Per essere un prototipo, la dichiarazione della funzione deve inoltre stabilire i tipi e gli identificatori per gli argomenti della funzione.  
+---
+# <a name="function-prototypes"></a>Prototipi di funzioni
+Una dichiarazione di funzione precede la definizione di funzione e specifica il nome, il tipo restituito, la classe di archiviazione e altri attributi di una funzione. Per essere un prototipo, la dichiarazione della funzione deve inoltre stabilire i tipi e gli identificatori per gli argomenti della funzione.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
  `declaration`:  
- *declaration\-specifiers attribute\-seq*  opt *init\-declarator\-list* opt**;**  
+ *declaration-specifiers attribute-seq* opt*init-declarator-list* opt**;**  
   
- \/\* *attribute\-seq* opt è specifico di Microsoft \*\/  
+ /\* *attribute-seq* opt è specifico di Microsoft */  
   
- *declaration\-specifiers*:  
- *storage\-class\-specifier declaration\-specifiers*  opt  
+ *declaration-specifiers*:  
+ *storage-class-specifier declaration-specifiers* opt  
   
- *type\-specifier declaration\-specifiers*  opt  
+ *type-specifier declaration-specifiers* opt  
   
- *type\-qualifier declaration\-specifiers*  opt  
+ *type-qualifier declaration-specifiers* opt  
   
- *init\-declarator\-list*:  
- *init\-declarator*  
+ *init-declarator-list*:  
+ *init-declarator*  
   
- *init\-declarator\-list*  **,**  *init\-declarator*  
+ *init-declarator-list*  **,**  *init-declarator*  
   
- *init\-declarator*:  
+ *init-declarator*:  
  *declarator*  
   
- *declarator \= initializer*  
+ *declarator = initializer*  
   
  `declarator`:  
- *pointer*  opt *direct\-declarator*  
+ *pointer* opt*direct-declarator*  
   
- *direct\-declarator*: \/\* dichiaratore di funzione \*\/  
- *direct\-declarator*  **\(**  *parameter\-type\-list*  **\)**  \/\* Dichiaratore nuovo stile \*\/  
+ *direct-declarator*: /\* Dichiaratore di funzione \*/  
+ *direct-declarator*  **(**  *parameter-type-list*  **)**  /* Dichiaratore nuovo stile \*/  
   
- *direct\-declarator*  **\(**  *identifier\-list*  opt **\)** \/\* Dichiaratore stile obsoleto \*\/  
+ *direct-declarator*  **(**  *identifier-list* opt**)** /* Dichiaratore stile obsoleto \*/  
   
- Il prototipo ha lo stesso form della definizione di funzione, ma viene terminato da un punto e virgola immediatamente dopo la parentesi di chiusura e pertanto non ha corpo.  In entrambi i casi, il tipo restituito deve corrispondere al tipo restituito specificato nella definizione di funzione.  
+ Il prototipo ha lo stesso form della definizione di funzione, ma viene terminato da un punto e virgola immediatamente dopo la parentesi di chiusura e pertanto non ha corpo. In entrambi i casi, il tipo restituito deve corrispondere al tipo restituito specificato nella definizione di funzione.  
   
  I prototipi di funzione hanno gli utilizzi importanti elencati di seguito:  
   
--   Stabiliscono il tipo restituito per funzioni che restituiscono tipi diversi da `int`.  Sebbene le funzioni che restituiscono valori `int` non richiedano prototipi, i prototipi sono consigliati.  
+-   Stabiliscono il tipo restituito per funzioni che restituiscono tipi diversi da `int`. Sebbene le funzioni che restituiscono valori `int` non richiedano prototipi, i prototipi sono consigliati.  
   
 -   Senza prototipi completi, le conversioni standard vengono effettuate, ma non viene eseguito alcun tentativo di controllare il tipo o il numero di argomenti con il numero di parametri.  
   
@@ -71,19 +88,19 @@ Una dichiarazione di funzione precede la definizione di funzione e specifica il 
   
 -   L'elenco di parametri viene utilizzato per controllare la corrispondenza degli argomenti nella chiamata di funzione con i parametri nella definizione di funzione.  
   
- Il tipo convertito di ogni parametro determina l'interpretazione degli argomenti che la chiamata di funzione inserisce nello stack.  Un tipo non corrispondente tra un argomento e un parametro può determinare che gli argomenti nello stack siano interpretati erroneamente.  Ad esempio, in un computer a 16 bit, se un puntatore a 16 bit viene passato come argomento, quindi dichiarato come parametro **long**, i primi 32 bit dello stack sono interpretati come parametro **long**.  Questo errore crea problemi non solo con il parametro **long**, ma con tutti i parametri che lo seguono.  È possibile rilevare errori di questo tipo dichiarando prototipi di funzione completi per tutte le funzioni.  
+ Il tipo convertito di ogni parametro determina l'interpretazione degli argomenti che la chiamata di funzione inserisce nello stack. Un tipo non corrispondente tra un argomento e un parametro può determinare che gli argomenti nello stack siano interpretati erroneamente. Se ad esempio in un computer a 16 bit un puntatore a 16 bit viene passato come argomento, quindi dichiarato come parametro **long**, i primi 32 bit dello stack sono interpretati come parametro **long**. Questo errore crea problemi non solo con il parametro **long**, ma anche con tutti i parametri che lo seguono. È possibile rilevare errori di questo tipo dichiarando prototipi di funzione completi per tutte le funzioni.  
   
- Un prototipo stabilisce gli attributi di una funzione in modo da poter controllare le chiamate alla funzione che precede la relativa definizione \(o che si verifica in altri file di origine\) per l'eventuale presenza di tipi restituiti e tipi di argomento non corrispondenti.  Ad esempio, se si specifica l'identificatore di classe di archiviazione **static** in un prototipo, è necessario specificare anche la classe di archiviazione **static** nella definizione di funzione.  
+ Un prototipo stabilisce gli attributi di una funzione in modo da poter controllare le chiamate alla funzione che precede la relativa definizione (o che si verifica in altri file di origine) per l'eventuale presenza di tipi restituiti e tipi di argomento non corrispondenti. Se ad esempio se si specifica l'identificatore di classe di archiviazione **static** in un prototipo, è necessario specificare anche la classe di archiviazione **static** nella definizione di funzione.  
   
- Le dichiarazioni di parametro complete \(`int a`\) possono essere combinate con dichiaratori astratti \(`int`\) nella stessa dichiarazione.  Ad esempio, la seguente dichiarazione è valida:  
+ Le dichiarazioni di parametro complete (`int a`) possono essere combinate con dichiaratori astratti (`int`) nella stessa dichiarazione. Ad esempio, la seguente dichiarazione è valida:  
   
 ```  
 int add( int a, int );  
 ```  
   
- Il prototipo può includere sia il tipo che un identificatore per ogni espressione passata come argomento.  Tuttavia, tali identificatori hanno un ambito di validità solo fino alla fine della dichiarazione.  Il prototipo può inoltre riflettere il fatto che il numero di argomenti sia variabile o che nessun argomento sia passato.  Senza tale elenco, le mancate corrispondenze non possono essere rivelate né il compilatore può generare messaggi diagnostici relativi.  Per ulteriori informazioni sul controllo del tipo, vedere [Argomenti](../c-language/arguments.md).  
+ Il prototipo può includere sia il tipo che un identificatore per ogni espressione passata come argomento. Tuttavia, tali identificatori hanno un ambito di validità solo fino alla fine della dichiarazione. Il prototipo può inoltre riflettere il fatto che il numero di argomenti sia variabile o che nessun argomento sia passato. Senza tale elenco, le mancate corrispondenze non possono essere rivelate né il compilatore può generare messaggi diagnostici relativi. Per altre informazioni sul controllo del tipo, vedere [Argomenti](../c-language/arguments.md).  
   
- L'ambito del prototipo nel compilatore C di Microsoft è adesso compatibile con ANSI durante la compilazione con l'opzione del compilatore \/Za.  Ciò significa che se si dichiara un tag `struct` o **union** all'interno di un prototipo, il tag viene inserito in quell'ambito anziché in ambito globale.  Ad esempio durante la compilazione con \/Za per compatibilità con ANSI, non è mai possibile chiamare questa funzione senza causare un errore di mancata corrispondenza tra i tipi:  
+ L'ambito del prototipo nel compilatore C di Microsoft è adesso compatibile con ANSI durante la compilazione con l'opzione del compilatore /Za. Ciò significa che se si dichiara un tag `struct` o **union** all'interno di un prototipo, il tag viene inserito in quell'ambito anziché in ambito globale. Ad esempio durante la compilazione con /Za per compatibilità con ANSI, non è mai possibile chiamare questa funzione senza causare un errore di mancata corrispondenza tra i tipi:  
   
 ```  
 void func1( struct S * );  
@@ -96,7 +113,7 @@ struct S;
 void func1( struct S * );  
 ```  
   
- In \/Ze, il tag viene ancora inserito in ambito globale.  
+ In /Ze, il tag viene ancora inserito in ambito globale.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Funzioni](../c-language/functions-c.md)

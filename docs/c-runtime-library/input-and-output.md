@@ -1,43 +1,60 @@
 ---
-title: "Input e output | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.io"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "I/O [CRT]"
-  - "I/O [CRT], routine"
-  - "routine I/O"
-  - "routine di input"
-  - "routine di output"
+title: Input e output | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.io
+dev_langs:
+- C++
+helpviewer_keywords:
+- input routines
+- I/O [CRT]
+- I/O routines
+- I/O [CRT], routines
+- output routines
 ms.assetid: 1c177301-e341-4ca0-aedc-0a87fe1c75ae
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Input e output
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 79ede2f4d96f0dd985b5b68cf83e641cbba10f3e
+ms.contentlocale: it-it
+ms.lasthandoff: 05/18/2017
 
-Le funzioni di I\/O leggono e scrivono dati ai e dai file e dispositivi.  Le operazioni di I\/O di file vengono eseguite in modalità testo o in modalità binario.  La libreria di runtime di Microsoft ha tre tipi di funzioni di I\/O:  
+---
+# <a name="input-and-output"></a>Input e output
+Le funzioni di I/O leggono e scrivono dati in e da file e dispositivi. Le operazioni di I/O per i file si svolgono in modalità testo o modalità binaria. La libreria di runtime di Microsoft include tre tipi di funzioni I/O:  
   
--   Le funzioni di[Stream I\/O](../c-runtime-library/stream-i-o.md) trattano i dati come un flusso di singoli caratteri.  
+-   Le funzioni [I/O di flusso](../c-runtime-library/stream-i-o.md) elaborano i dati come un flusso di caratteri singoli.  
   
--   Le funzioni di[I\/O di basso livello](../c-runtime-library/low-level-i-o.md) richiamano direttamente il sistema operativo per operazioni di livello inferiore rispetto a quelle fornite dallo stream I\/O.  
+-   Le funzioni [I/O di basso livello](../c-runtime-library/low-level-i-o.md) chiamano direttamente il sistema operativo per operazioni di livello inferiore rispetto a quelle specificate dal flusso di I/O.  
   
--   Le funzioni di[console e porta I\/O](../c-runtime-library/console-and-port-i-o.md) leggono o scrivono direttamente ad una console \(tastiera e lo schermo\) o a una porta di I\/O \(ad esempio una porta della stampante\).  
+-   Le funzioni di [I/O su console e porta](../c-runtime-library/console-and-port-i-o.md) leggono o scrivono direttamente su una console (tastiera e schermo) o su una porta di I/O (ad esempio una porta per stampante).  
   
     > [!NOTE]
-    >  Poiché le funzioni di flusso sono memorizzate nel buffer mentre le funzioni di basso livello non lo sono, questi due tipi di funzioni sono generalmente incompatibili.  Per elaborare un file specifico, utilizzare il flusso o funzioni di basso livello separatamente.  
+    >  Dato che le funzioni di flusso vengono memorizzate nel buffer e le funzioni di basso livello non vengono memorizzate, questi due tipi di funzione sono incompatibili a livello generale. Per elaborare un file specifico usare solo funzioni di flusso o solo funzioni di basso livello.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Routine di runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)

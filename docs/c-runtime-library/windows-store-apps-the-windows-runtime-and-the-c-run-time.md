@@ -1,28 +1,45 @@
 ---
-title: "Applicazioni Windows Store, Windows Runtime e C Run-Time | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: App di Windows Store, Windows Runtime e CRT (C Run-Time) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 356d6d8d-76ee-4181-9ad0-6f24b2fede38
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Applicazioni Windows Store, Windows Runtime e C Run-Time
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
+ms.openlocfilehash: fc0ed4b45e04357fae46fb1391d55d184440f12d
+ms.contentlocale: it-it
+ms.lasthandoff: 06/01/2017
 
-Le applicazioni [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] sono programmi che vengono eseguiti in [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] eseguibile su [!INCLUDE[win8](../build/includes/win8_md.md)].  [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] è un ambiente attendibile che controlla le funzioni, le variabili e le risorse disponibili per un'applicazione [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)].  Tuttavia, per motivi legati alla progettazione, le restrizioni [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] impediscono l'utilizzo della maggior parte delle funzionalità della libreria di runtime C \(CRT\) nelle applicazioni [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)].  
+---
+# <a name="windows-store-apps-the-windows-runtime-and-the-c-run-time"></a>Applicazioni Windows Store, Windows Runtime e C Run-Time
+Le app di [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] sono programmi eseguiti con Windows Runtime in [!INCLUDE[win8](../build/reference/includes/win8_md.md)].  Windows Runtime è un ambiente attendibile che controlla le funzioni, le variabili e le risorse disponibili per un'app di [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)]. Tuttavia, per motivi legati alla progettazione, le restrizioni di Windows Runtime impediscono l'uso della maggior parte delle funzionalità della libreria C Run-Time (CRT) nelle app di [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)].  
   
- [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] non supporta le funzionalità CRT seguenti:  
+ Windows Runtime non supporta le funzionalità CRT seguenti:  
   
 -   La maggior parte delle funzioni CRT sono correlate a funzionalità non supportate.  
   
@@ -42,17 +59,17 @@ Le applicazioni [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long
   
 -   Il concetto di una cartella di lavoro corrente.  
   
--   Applicazioni [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] e DLL che vengono staticamente collegate a CRT e compilate usando le opzioni del compilatore [\/MT](../build/reference/md-mt-ld-use-run-time-library.md) o `/MTd`.  
+-   App e DLL di [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] staticamente collegate a CRT compilate usando le opzioni del compilatore [/MT](../build/reference/md-mt-ld-use-run-time-library.md) o `/MTd`.  
   
      Ovvero un'applicazione che usa una versione statica con multithreading di CRT.  
   
--   Un'applicazione compilata usando l'opzione del compilatore [\/MDd](../build/reference/md-mt-ld-use-run-time-library.md).  
+-   App compilate usando l'opzione del compilatore [/MDd](../build/reference/md-mt-ld-use-run-time-library.md).  
   
-     Ovvero, una versione di debug con multithreading specifica per DLL di CRT.  Tale applicazione non è supportata sul [!INCLUDE[win8_appstore_long](../build/reference/includes/win8_appstore_long_md.md)].  
+     Ovvero, una versione di debug con multithreading specifica per DLL di CRT. Tale applicazione non è supportata sul [!INCLUDE[win8_appstore_long](../build/reference/includes/win8_appstore_long_md.md)].  
   
- Per un elenco completo delle funzioni CRT che non sono disponibili in un'app [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] e per suggerimenti su funzioni alternative, vedere [Funzioni CRT non supportate con \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+ Per un elenco completo delle funzioni CRT non disponibili in un'app di [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] e per suggerimenti su funzioni alternative, vedere [CRT functions not supported with /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx) (Funzioni CRT non supportate con /ZW).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Compatibilità](../c-runtime-library/compatibility.md)   
  [Funzioni CRT non supportate da Windows Runtime](../c-runtime-library/windows-runtime-unsupported-crt-functions.md)   
  [Routine di runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)

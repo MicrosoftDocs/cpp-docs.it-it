@@ -1,31 +1,48 @@
 ---
-title: "Dichiaratori astratti C | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "dichiarazioni astratte"
-  - "dichiaratori, abstract"
+title: Dichiaratori astratti C | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- declarators, abstract
+- abstract declarations
 ms.assetid: 6a556ad7-0555-421a-aa02-294d77cda8b5
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Dichiaratori astratti C
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: cc4c700142f8dd533d98eca6ffb01fa18006a111
+ms.contentlocale: it-it
+ms.lasthandoff: 05/18/2017
 
-Un dichiaratore astratto è un dichiaratore senza un identificatore, composto da uno o più puntatori, matrici o modificatori di funzione.  Il modificatore del puntatore \(**\***\) precede sempre l'identificatore contenuto in un dichiaratore; i modificatori di matrice \(**\[ \]**\) e funzione \( **\( \)** \) invece seguono l'identificatore.  Partendo da questo presupposto, è possibile determinare se l'identificatore dovrà apparire in un dichiaratore astratto e interpretare il dichiaratore di conseguenza.  Per ulteriori informazioni ed esempi sui dichiaratori complessi, vedere [Interpretazione dei dichiaratori più complessi](../c-language/interpreting-more-complex-declarators.md).  `typedef` può essere in genere utilizzato per semplificare i dichiaratori.  Vedere [Dichiarazioni typedef](../c-language/typedef-declarations.md).  
+---
+# <a name="c-abstract-declarators"></a>Dichiaratori astratti C
+Un dichiaratore astratto è un dichiaratore senza un identificatore, composto da uno o più puntatori, matrici o modificatori di funzione. Il modificatore del puntatore (**\***) precede sempre l'identificatore contenuto in un dichiaratore; i modificatori di matrice (**[ ]**) e funzione (**( )**) seguono l'identificatore. Partendo da questo presupposto, è possibile determinare se l'identificatore dovrà apparire in un dichiaratore astratto e interpretare il dichiaratore di conseguenza. Per altre informazioni ed esempi di dichiaratori complessi, vedere [Interpretazione di più dichiaratori complessi](../c-language/interpreting-more-complex-declarators.md). `typedef` può essere in genere utilizzato per semplificare i dichiaratori. Vedere [Dichiarazioni typedef](../c-language/typedef-declarations.md).  
   
- I dichiaratori astratti possono essere complessi.  Le parentesi in un dichiaratore astratto complesso specificano un'interpretazione speciale, così come fanno per i dichiaratori complessi all'interno delle dichiarazioni.  
+ I dichiaratori astratti possono essere complessi. Le parentesi in un dichiaratore astratto complesso specificano un'interpretazione speciale, così come fanno per i dichiaratori complessi all'interno delle dichiarazioni.  
   
  In questi esempi vengono illustrati i dichiaratori astratti:  
   
@@ -52,7 +69,7 @@ int (*const []) ( unsigned int, ... )
 ```  
   
 > [!NOTE]
->  Il dichiaratore astratto composto da un set di parentesi vuote, **\( \)**, non è consentito perché è ambiguo.  È impossibile determinare se l'identificatore implicito appartiene all'interno delle parentesi \(in questo caso è un tipo non modificato\) oppure le precede \(in questo caso è un tipo di funzione\).  
+>  Il dichiaratore astratto composto da un set di parentesi vuote **( )** non è consentito perché è ambiguo. È impossibile determinare se l'identificatore implicito appartiene all'interno delle parentesi (in questo caso è un tipo non modificato) oppure le precede (in questo caso è un tipo di funzione).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Dichiaratori e dichiarazioni di variabili](../c-language/declarators-and-variable-declarations.md)

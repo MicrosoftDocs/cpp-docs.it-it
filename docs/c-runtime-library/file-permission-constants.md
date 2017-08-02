@@ -1,36 +1,53 @@
 ---
-title: "Costanti di autorizzazione file | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_S_IWRITE"
-  - "_S_IREAD"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_S_IREAD (costante)"
-  - "_S_IWRITE (costante)"
-  - "costanti [C++], attributi dei file"
-  - "autorizzazioni di file [C++]"
-  - "S_IREAD (costante)"
-  - "S_IWRITE (costante)"
+title: Costanti di autorizzazione file | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _S_IWRITE
+- _S_IREAD
+dev_langs:
+- C++
+helpviewer_keywords:
+- S_IWRITE constant
+- constants [C++], file attributes
+- S_IREAD constant
+- file permissions [C++]
+- _S_IWRITE constant
+- _S_IREAD constant
 ms.assetid: 593cad33-31d1-44d2-8941-8af7d210c88c
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Costanti di autorizzazione file
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: fe25cc1ce973d46c87425b59cc2da3544b216033
+ms.contentlocale: it-it
+ms.lasthandoff: 05/18/2017
 
-## Sintassi  
+---
+# <a name="file-permission-constants"></a>Costanti di autorizzazione file
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -38,28 +55,28 @@ caps.handback.revision: 6
   
 ```  
   
-## Note  
- Una di queste costanti è necessaria quando `_O_CREAT` \(`_open`, `_sopen`\) viene specificato.  
+## <a name="remarks"></a>Note  
+ Una di queste costanti è necessaria quando `_O_CREAT` (`_open`, `_sopen`) viene specificato.  
   
- L'argomento `pmode` specifica le impostazioni delle autorizzazioni del file come segue.  
+ L'argomento `pmode` specifica le impostazioni di autorizzazione del file come segue.  
   
 |Costante|Significato|  
-|--------------|-----------------|  
+|--------------|-------------|  
 |`_S_IREAD`|Lettura consentita|  
 |`_S_IWRITE`|Scrittura consentita|  
-|`_S_IREAD`  &#124; `_S_IWRITE`|Lettura e scrittura consentite|  
+|`_S_IREAD` &#124; `_S_IWRITE`|Lettura e scrittura consentite|  
   
- Una volta utilizzata come argomento di `pmode` per `_umask`, la costante del manifesto imposta l'impostazione di autorizzazione, come illustrato di seguito.  
+ Una volta utilizzato come argomento `pmode` per `_umask`, la costante manifesto imposta l'impostazione di autorizzazione, come illustrato di seguito.  
   
 |Costante|Significato|  
-|--------------|-----------------|  
-|`_S_IREAD`|Scrittura non consentita \(file è di sola lettura\)|  
-|`_S_IWRITE`|Lettura non consentita \(file è in sola scrittura\)|  
-|`_S_IREAD`  &#124; `_S_IWRITE`|Lettura e scrittura non consentite|  
+|--------------|-------------|  
+|`_S_IREAD`|Scrittura non consentita (file di sola lettura)|  
+|`_S_IWRITE`|Lettura non consentita (file di sola scrittura)|  
+|`_S_IREAD` &#124; `_S_IWRITE`|Lettura e scrittura non consentite|  
   
-## Vedere anche  
- [\_open, \_wopen](../c-runtime-library/reference/open-wopen.md)   
- [\_sopen, \_wsopen](../c-runtime-library/reference/sopen-wsopen.md)   
- [\_umask](../c-runtime-library/reference/umask.md)   
+## <a name="see-also"></a>Vedere anche  
+ [_open, _wopen](../c-runtime-library/reference/open-wopen.md)   
+ [_sopen, _wsopen](../c-runtime-library/reference/sopen-wsopen.md)   
+ [_umask](../c-runtime-library/reference/umask.md)   
  [Tipi standard](../c-runtime-library/standard-types.md)   
  [Costanti globali](../c-runtime-library/global-constants.md)

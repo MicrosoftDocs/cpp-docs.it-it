@@ -1,32 +1,49 @@
 ---
-title: "Inizializzazione CRT | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "inizializzazione CRT [C++]"
+title: Inizializzazione CRT | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CRT initialization [C++]
 ms.assetid: e7979813-1856-4848-9639-f29c86b74ad7
 caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Inizializzazione CRT
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: a4542c86e571a338a08479feedbbb27347776137
+ms.contentlocale: it-it
+ms.lasthandoff: 05/18/2017
 
-In questo argomento viene descritto come il CRT inizializza gli stati globali nel codice nativo.  
+---
+# <a name="crt-initialization"></a>Inizializzazione CRT
+In questo argomento viene descritto come CRT inizializza gli stati globali nel codice nativo.  
   
- Per impostazione predefinita, il linker include la libreria CRT, che fornisce il proprio codice di avvio.  Questo codice di avvio inizializza la libreria CRT, chiama gli inizializzatori globali e quindi chiama la funzione fornita dall'utente `main` per le applicazioni console.  
+ Per impostazione predefinita, il linker include la libreria CRT che fornisce il proprio codice di avvio. Questo codice di avvio inizializza la libreria CRT, chiama gli inizializzatori globali e quindi chiama la funzione `main` fornita dall'utente per le applicazioni console.  
   
-## Inizializzare un oggetto globale  
+## <a name="initializing-a-global-object"></a>Inizializzazione di un oggetto globale  
  Esaminare il codice seguente:  
   
 ```  
@@ -43,13 +60,13 @@ int main()
 }  
 ```  
   
- Secondo lo standard C\/C\+\+, `func()` deve essere chiamato prima che `main()` venga eseguito.  Ma chi lo chiama?  
+ Secondo lo standard C/C++, `func()` deve essere chiamato prima che `main()` venga eseguito. Ma chi lo chiama?  
   
- Un modo per determinarlo è quello di impostare un punto di interruzione in `func()`, eseguire il debug dell'applicazione ed esaminare lo stack.  Ciò è possibile poiché il codice sorgente CRT è incluso in Visual Studio.  
+ Un modo per determinarlo è quello di impostare un punto di interruzione in `func()`, eseguire il debug dell'applicazione ed esaminare lo stack. Ciò è possibile poiché il codice sorgente CRT è incluso in Visual Studio.  
   
- Quando si scorrono le funzioni sullo stack, si noterà che la CRT esegue il ciclo per scorrere un elenco di puntatori a funzione e ognuno viene chiamato quando li incontra.  Queste funzioni sono simili a `func()` o ai costruttori per le istanze di classe.  
+ Quando si esplorano le funzioni sullo stack, si noterà che CRT scorre in ciclo un elenco di puntatori a funzione e chiama ognuno nel momento in cui li incontra. Queste funzioni sono simili a `func()` o ai costruttori per le istanze di classe.  
   
- CRT ottiene l'elenco dei puntatori a funzione dal compilatore di Visual C\+\+.  Quando il compilatore rileva un inizializzatore globale, viene generato un inizializzatore dinamico nella sezione di `.CRT$XCU` \(dove `CRT` è il nome della sezione e `XCU` è il nome del gruppo\).  Per ottenere un elenco degli inizializzatori dinamici eseguire il comando **dumpbin \/all main.obj**, e quindi individuare la sezione `.CRT$XCU` \(main.cpp quando viene compilato come file C\+\+, non come file c\).  Sarà simile a quanto seguente:  
+ CRT ottiene l'elenco dei puntatori a funzione dal compilatore di Visual C++. Quando il compilatore rileva un inizializzatore globale, viene generato un inizializzatore dinamico nella sezione `.CRT$XCU` (dove `CRT` è il nome della sezione e `XCU` è il nome del gruppo). Per ottenere un elenco di tali inizializzatori dinamici eseguire il comando **dumpbin /all main.obj**, quindi individuare la sezione `.CRT$XCU` (se main.cpp viene compilato come file C++, non come file C). Sarà simile a quanto segue:  
   
 ```  
 SECTION HEADER #6  
@@ -85,7 +102,7 @@ RELOCATIONS #6
   
  Entrambi i gruppi non hanno alcun altro simbolo definito tranne `__xc_a` e `__xc_z`.  
   
- Ora, quando il linker indica i vari gruppi di `.CRT`, li combina in una sezione e li ordina alfabeticamente.  Ciò significa che gli inizializzatori globali definiti dall'utente \(che il compilatore di Visual C\+\+ inserisce in `.CRT$XCU`\) verranno sempre dopo `.CRT$XCA` e prima di `.CRT$XCZ`.  
+ Ora, quando il linker legge i vari gruppi `.CRT`, li combina in una sezione e li ordina alfabeticamente. Ciò significa che gli inizializzatori globali definiti dall'utente (che il compilatore di Visual C++ inserisce in `.CRT$XCU`) verranno sempre dopo `.CRT$XCA` e prima di `.CRT$XCZ`.  
   
  La sezione sarà simile alla seguente:  
   
@@ -99,7 +116,7 @@ RELOCATIONS #6
             __xc_z  
 ```  
   
- Pertanto, la libreria CRT utilizza sia `__xc_a` che `__xc_z` per determinare l'inizio e la fine dell'elenco degli inizializzatori globali a causa del modo in cui vengono disposti in memoria dopo che l'immagine viene caricata.  
+ Pertanto, la libreria CRT utilizza sia `__xc_a` che `__xc_z` per determinare l'inizio e la fine dell'elenco di inizializzatori globali a causa del modo in cui vengono disposti nella memoria dopo che l'immagine viene caricata.  
   
-## Vedere anche  
- [Funzionalità libreria CRT](../c-runtime-library/crt-library-features.md)
+## <a name="see-also"></a>Vedere anche  
+ [CRT Library Features](../c-runtime-library/crt-library-features.md) (Funzionalità della libreria CRT)

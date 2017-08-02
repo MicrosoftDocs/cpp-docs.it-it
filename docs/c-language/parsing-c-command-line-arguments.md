@@ -1,60 +1,77 @@
 ---
-title: "Analisi di argomenti della riga di comando C | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "riga di comando, analisi"
-  - "virgolette doppie"
-  - "analisi, argomenti della riga di comando"
-  - "virgolette, argomenti della riga di comando"
-  - "avvio (codice), analisi di argomenti della riga di comando"
+title: Analisi di argomenti della riga di comando C | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- quotation marks, command-line arguments
+- double quotation marks
+- command line, parsing
+- parsing, command-line arguments
+- startup code, parsing command-line arguments
 ms.assetid: ffce8037-2811-45c4-8db4-1ed787859c80
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Analisi di argomenti della riga di comando C
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 66f9ab28bfec3fe0cfd9d29d60a0ee7ac283591a
+ms.contentlocale: it-it
+ms.lasthandoff: 05/18/2017
 
+---
+# <a name="parsing-c-command-line-arguments"></a>Analisi di argomenti della riga di comando C
 **Sezione specifica Microsoft**  
   
  Il codice di avvio C di Microsoft utilizza le regole seguenti quando interpreta gli argomenti forniti alla riga di comando del sistema operativo.  
   
 -   Gli argomenti sono delimitati da spazi vuoti, ovvero da uno spazio o da una tabulazione.  
   
--   Una stringa racchiusa tra virgolette doppie viene interpretata come argomento singolo, indipendentemente dalla presenza di spazi al suo interno.  Una stringa tra virgolette può essere incorporata in un argomento.  Si noti che l'accento circonflesso \(**^**\) non viene riconosciuto come carattere di escape o delimitatore.  
+-   Una stringa racchiusa tra virgolette doppie viene interpretata come argomento singolo, indipendentemente dalla presenza di spazi al suo interno. Una stringa tra virgolette può essere incorporata in un argomento. Si noti che l'accento circonflesso (**^**) non viene riconosciuto come carattere di escape o delimitatore.  
   
--   Le virgolette doppie precedute da una barra rovesciata \(**\\"**\) vengono interpretate letteralmente come virgolette doppie \(**"**\).  
+-   Le virgolette doppie precedute da una barra rovesciata (**\\"**) vengono interpretate letteralmente come virgolette doppie (**"**).  
   
 -   Le barre rovesciate vengono interpretate letteralmente, a meno che non precedano virgolette doppie.  
   
--   Se le virgolette doppie seguono un numero pari di barre rovesciate, per ciascuna coppia di barre rovesciate \(**\\\\**\) viene inserita nella matrice `argv` una barra rovesciata \(**\\**\) e le virgolette doppie \(**"**\) vengono interpretate come delimitatori di stringa.  
+-   Se le virgolette doppie seguono un numero pari di barre rovesciate, per ogni coppia di barre rovesciate (**\\\\**) viene inserita nella matrice `argv` una barra rovesciata (**\\**) e le virgolette doppie (**"**) vengono interpretate come delimitatori di stringa.  
   
--   Se un numero dispari di barre rovesciate è seguito da un segno di virgolette doppie, viene inserita una barra rovesciata \(**\\**\) nella matrice `argv` per ciascuna coppia di barre rovesciate \(**\\\\**\) e le virgolette doppie vengono interpretate come sequenza di escape dalla barra rovesciata rimanente, causando l'inserimento di virgolette doppie \(**"**\) letterali in `argv`.  
+-   Se un numero dispari di barre rovesciate è seguito da un segno di virgolette doppie, viene inserita una barra rovesciata (**\\**) nella matrice `argv` per ogni coppia di barre rovesciate (**\\\\**) e le virgolette doppie vengono interpretate come sequenza di escape dalla barra rovesciata rimanente, causando l'inserimento di virgolette doppie (**"**) letterali in `argv`.  
   
- In questo elenco vengono illustrate le regole precedenti per visualizzare il risultato interpretato come passato a `argv` per alcuni esempi di argomenti della riga di comando.  L'output elencato nella seconda, terza e quarta colonna viene dal programma ARGS.C che segue l'elenco.  
+ In questo elenco vengono illustrate le regole precedenti per visualizzare il risultato interpretato come passato a `argv` per alcuni esempi di argomenti della riga di comando. L'output elencato nella seconda, terza e quarta colonna viene dal programma ARGS.C che segue l'elenco.  
   
-|Input della riga di comando|argv\[1\]|argv\[2\]|argv\[3\]|  
-|---------------------------------|---------------|---------------|---------------|  
+|Input della riga di comando|argv[1]|argv[2]|argv[3]|  
+|-------------------------|---------------|---------------|---------------|  
 |`"a b c" d e`|`a b c`|`d`|`e`|  
 |`"ab\"c" "\\" d`|`ab"c`|`\`|`d`|  
 |`a\\\b d"e f"g h`|`a\\\b`|`de fg`|`h`|  
 |`a\\\"b c d`|`a\"b`|`c`|`d`|  
 |`a\\\\"b c" d e`|`a\\b c`|`d`|`e`|  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-### Codice  
+### <a name="code"></a>Codice  
   
 ```  
 // Parsing_C_Commandline_args.c  
@@ -85,7 +102,7 @@ int main( int argc, // Number of strings in array argv
 }  
 ```  
   
-## Commenti  
+## <a name="comments"></a>Commenti  
  Un esempio di output del programma è:  
   
 ```  
@@ -105,5 +122,5 @@ Environment variables:
   
  **Fine sezione specifica Microsoft**  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Funzione main ed esecuzione di programmi](../c-language/main-function-and-program-execution.md)

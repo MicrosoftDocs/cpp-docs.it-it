@@ -1,49 +1,66 @@
 ---
-title: "Tipo restituito | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tipi di dati [C++], tipi restituiti dalla funzione"
-  - "tipi restituiti dalla funzione"
-  - "tipi restituiti dalla funzione, sintassi"
-  - "funzioni [C++], tipi restituiti"
-  - "return (parola chiave) [C++], tipi restituiti dalla funzione"
-  - "valori restituiti [C++]"
-  - "valori restituiti [C++], routine di funzione"
+title: Tipo restituito | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- function return types
+- return values [C++], function procedures
+- function return types, syntax
+- return values [C++]
+- data types [C++], function return types
+- return keyword [C++], function return types
+- functions [C++], return types
 ms.assetid: 3e5b8a97-b341-48c5-8be8-8986980ef586
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Tipo restituito
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 44079c7a9539673fb2d0b1d49e9c50acd51b237b
+ms.contentlocale: it-it
+ms.lasthandoff: 05/18/2017
 
+---
+# <a name="return-type"></a>Tipo restituito
 Il tipo restituito di una funzione determina la dimensione e il tipo del valore restituito dalla funzione e corrisponde all'identificatore di tipo nella sintassi seguente:  
   
-## Sintassi  
- *function\-definition*:  
- *declaration\-specifiers*  opt *attribute\-seq* opt *declarator declaration\-list* opt *compound\-statement*  
+## <a name="syntax"></a>Sintassi  
+ *function-definition*:  
+ *declaration-specifiers* opt*attribute-seq* opt*declarator declaration-list* opt*compound-statement*  
   
- \/\* *attribute\-seq* è specifico di Microsoft \*\/  
+ /\* *attribute-seq* è specifico di Microsoft */  
   
- *declaration\-specifiers*:  
- *storage\-class\-specifier declaration\-specifiers*  opt  
+ *declaration-specifiers*:  
+ *storage-class-specifier declaration-specifiers* opt  
   
- *type\-specifier declaration\-specifiers*  opt  
+ *type-specifier declaration-specifiers* opt  
   
- *type\-qualifier declaration\-specifiers*  opt  
+ *type-qualifier declaration-specifiers* opt  
   
- *type\-specifier*:  
+ *type-specifier*:  
  **void**  
   
  **char**  
@@ -62,15 +79,15 @@ Il tipo restituito di una funzione determina la dimensione e il tipo del valore 
   
  **unsigned**  
   
- *struct\-or\-union\-specifier*  
+ *struct-or-union-specifier*  
   
- *enum\-specifier*  
+ *enum-specifier*  
   
- *typedef\-name*  
+ *typedef-name*  
   
- *type\-specifier* può specificare qualsiasi struttura o tipo di unione fondamentale.  Se non si include *type\-specifier*, il tipo restituito `int` viene presupposto.  
+ *type-specifier* può specificare qualsiasi struttura o tipo di unione fondamentale. Se non si include *type-specifier*, viene presupposto il tipo restituito `int`.  
   
- Il tipo restituito fornito nella definizione di funzione deve corrispondere al tipo restituito nelle dichiarazioni della funzione in altre parti del programma.  Una funzione restituisce un valore quando un'istruzione `return` che contiene un'espressione viene eseguita.  L'espressione viene valutata, convertita in un tipo di valore restituito se necessario e viene restituita al punto in cui la funzione è stata chiamata.  Se una funzione è dichiarata con il tipo restituito `void`, un'istruzione return che contiene un'espressione genera un avviso e l'espressione non viene valutata.  
+ Il tipo restituito fornito nella definizione di funzione deve corrispondere al tipo restituito nelle dichiarazioni della funzione in altre parti del programma. Una funzione restituisce un valore quando un'istruzione `return` che contiene un'espressione viene eseguita. L'espressione viene valutata, convertita in un tipo di valore restituito se necessario e viene restituita al punto in cui la funzione è stata chiamata. Se una funzione è dichiarata con il tipo restituito `void`, un'istruzione return che contiene un'espressione genera un avviso e l'espressione non viene valutata.  
   
  Negli esempi seguenti vengono illustrati i valori restituiti dalla funzione.  
   
@@ -90,7 +107,7 @@ STUDENT sortstu( STUDENT a, STUDENT b )
 }  
 ```  
   
- Viene definito il tipo `STUDENT` con una dichiarazione `typedef` e viene definita la funzione `sortstu` per avere il tipo restituito `STUDENT`.  La funzione selezionata e restituisce uno dei propri argomenti struttura.  Nelle successive chiamate alla funzione, il compilatore controlla per verificare che i tipi di argomento siano `STUDENT`.  
+ Viene definito il tipo `STUDENT` con una dichiarazione `typedef` e viene definita la funzione `sortstu` per avere il tipo restituito `STUDENT`. La funzione selezionata e restituisce uno dei propri argomenti struttura. Nelle successive chiamate alla funzione, il compilatore controlla per verificare che i tipi di argomento siano `STUDENT`.  
   
 > [!NOTE]
 >  L'efficienza risulta miglioratala passando di puntatori alla struttura, piuttosto che l'intera struttura.  
@@ -110,9 +127,9 @@ char *smallstr( char s1[], char s2[] )
 }  
 ```  
   
- Nell'esempio seguente viene definita una funzione che restituisce un puntatore a una matrice di caratteri.  La funzione accetta due matrici di caratteri \(stringhe\) come argomenti e restituisce un puntatore alla più breve delle due stringhe.  Un puntatore a un elemento punta al primo degli elementi della matrice e ha il suo tipo; pertanto, il tipo restituito della funzione è un puntatore al tipo `char`.  
+ Nell'esempio seguente viene definita una funzione che restituisce un puntatore a una matrice di caratteri. La funzione accetta due matrici di caratteri (stringhe) come argomenti e restituisce un puntatore alla più breve delle due stringhe. Un puntatore a un elemento punta al primo degli elementi della matrice e ha il suo tipo; pertanto, il tipo restituito della funzione è un puntatore al tipo `char`.  
   
  Non è necessario dichiarare le funzioni con il tipo restituito `int` prima di chiamarle, sebbene i prototipi siano consigliati in modo da consentire il controllo del tipo corretto per gli argomenti e i valori restituiti.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Definizioni di funzioni C](../c-language/c-function-definitions.md)

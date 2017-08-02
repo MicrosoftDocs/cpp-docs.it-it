@@ -1,42 +1,59 @@
 ---
-title: "UNIX | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "unix"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "compatibilità con POSIX"
-  - "nomi di file POSIX"
-  - "UNIX"
-  - "UNIX, compatibilità"
+title: UNIX | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- unix
+dev_langs:
+- C++
+helpviewer_keywords:
+- UNIX
+- POSIX compatibility
+- POSIX file names
+- UNIX, compatibility
 ms.assetid: 40792414-7a5b-415d-bfa8-2bfb1ebb3731
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# UNIX
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 500280e2818908930fe2e3fe2608e217e1ba4b49
+ms.contentlocale: it-it
+ms.lasthandoff: 05/18/2017
 
-Se si intende eseguire il porting dei programmi in UNIX, attenersi alle seguenti linee guida:  
+---
+# <a name="unix"></a>UNIX
+Se si intende trasferire i programmi su UNIX, attenersi alle seguenti linee guida:  
   
--   Non rimuovere i file di intestazione dalla sottodirectory SYS.  È possibile inserire i file di intestazione di SYS altrove solo se non si intende portare i programmi su UNIX.  
+-   Non rimuovere i file di intestazione dalla sottodirectory SYS. È possibile inserire i file di intestazione SYS altrove solo se non si intende trasferire i programmi su UNIX.  
   
--   Utilizzare il delimitatore di percorso compatibile con UNIX nelle routine che accettano stringhe che rappresentano i percorsi e i nomi di file come argomenti.  Per questo scopo UNIX supporta solo la barra \(\/\), mentre i sistemi operativi Win32 supportano sia la barra rovesciata \(\\\) che la barra \(\/\).  Questa documentazione utilizza quindi le barre compatibili con UNIX, ad esempio come delimitatori del percorso nelle istruzioni `#include`. \(Tuttavia, la shell dei comandi del sistema operativo Windows, CMD.EXE, non supporta la barra nei comandi immessi nel prompt dei comandi.\)  
+-   Usare il delimitatore di percorso compatibile con UNIX nelle routine che accettano stringhe che rappresentano i percorsi e i nomi file come argomenti. Per questo scopo UNIX supporta solo la barra (/), mentre i sistemi operativi Win32 supportano sia la barra rovesciata (\\) che la barra (/). Questa documentazione utilizza quindi le barre compatibili con UNIX, ad esempio, come delimitatori di percorso nelle istruzioni `#include`. (Tuttavia, la shell dei comandi del sistema operativo Windows, CMD.EXE, non supporta la barra nei comandi immessi nel prompt dei comandi).  
   
--   Utilizzare i percorsi e i nomi di file che funzionano correttamente in UNIX, in cui viene applicata la distinzione tra maiuscole e minuscole.  Il file system tabella di allocazione file \(FAT\) nei sistemi operativi Win32 non applica la distinzione tra maiuscole e minuscole; il file system NTFS preserva le maiuscole e minuscole per gli elenchi delle directory, ma le ignora nelle ricerche dei file e in altre operazioni di sistema.  
+-   Utilizzare i percorsi e i nomi file che funzionano correttamente in UNIX, in cui viene fatta la distinzione tra maiuscole e minuscole. Il file system della tabella di allocazione file (FAT) nei sistemi operativi Win32 non fa la distinzione tra maiuscole e minuscole; il file system NTFS preserva le maiuscole e minuscole per gli elenchi delle directory, ma le ignora nelle ricerche dei file e in altre operazioni di sistema.  
   
     > [!NOTE]
-    >  In questa versione di Visual C\+\+, le informazioni di compatibilità con UNIX sono state rimosse dalle descrizioni delle funzioni.  
+    >  In questa versione di Visual C++, le informazioni di compatibilità con UNIX sono state rimosse dalle descrizioni delle funzioni.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Compatibilità](../c-runtime-library/compatibility.md)

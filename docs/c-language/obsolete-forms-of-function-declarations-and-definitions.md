@@ -1,28 +1,45 @@
 ---
-title: "Forme obsolete di dichiarazioni e definizioni di funzioni | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "dichiarazioni di funzioni obsolete"
+title: Forme obsolete di dichiarazioni e definizioni di funzioni | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- old style function declarations
 ms.assetid: 67c5038f-0529-4f29-9d0f-c27580977b50
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Forme obsolete di dichiarazioni e definizioni di funzioni
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 7ef80d6a438118da00d8afaf67cf9317cc50b953
+ms.contentlocale: it-it
+ms.lasthandoff: 05/18/2017
 
-Rispetto alla sintassi consigliata dallo standard ANSI C, le dichiarazioni e le definizioni delle funzioni obsolete utilizzano regole leggermente differenti per la dichiarazione dei parametri.  Innanzitutto, le dichiarazioni obsolete non includono un elenco di parametri.  In secondo luogo, nella definizione di funzione, i parametri sono elencati, ma i relativi tipi sono dichiarati nell'elenco di parametri.  Le dichiarazioni del tipo precedono l'istruzione composta che costituisce il corpo della funzione.  La sintassi obsoleta non è aggiornata e non deve essere utilizzata nel nuovo codice.  Il codice che utilizza la sintassi obsoleta è, tuttavia, ancora supportato.  In questo esempio vengono illustrati i form obsoleti delle dichiarazioni e delle definizioni:  
+---
+# <a name="obsolete-forms-of-function-declarations-and-definitions"></a>Forme obsolete di dichiarazioni e definizioni di funzioni
+Rispetto alla sintassi consigliata dallo standard ANSI C, le dichiarazioni e le definizioni delle funzioni obsolete utilizzano regole leggermente differenti per la dichiarazione dei parametri. Innanzitutto, le dichiarazioni obsolete non includono un elenco di parametri. In secondo luogo, nella definizione di funzione, i parametri sono elencati, ma i relativi tipi sono dichiarati nell'elenco di parametri. Le dichiarazioni del tipo precedono l'istruzione composta che costituisce il corpo della funzione. La sintassi obsoleta non è aggiornata e non deve essere utilizzata nel nuovo codice. Il codice che utilizza la sintassi obsoleta è, tuttavia, ancora supportato. In questo esempio vengono illustrati i form obsoleti delle dichiarazioni e delle definizioni:  
   
 ```  
 double old_style();           /* Obsolete function declaration */  
@@ -37,7 +54,7 @@ double alt_style( a , real )  /* Obsolete function definition */
   
  Alle funzioni che restituiscono un intero o un puntatore con la stessa dimensione di  `int` non è richiesto di contenere una dichiarazione sebbene l'utilizzo della dichiarazione sia consigliato.  
   
- Per la conformità allo standard ANSI C, le dichiarazioni di funzione obsolete con i puntini di sospensione generano ora un errore durante la compilazione con l'opzione \/Za e un avviso di livello 4 durante la compilazione con \/Ze.  Ad esempio:  
+ Per la conformità allo standard ANSI C, le dichiarazioni di funzione obsolete con i puntini di sospensione generano ora un errore durante la compilazione con l'opzione /Za e un avviso di livello 4 durante la compilazione con /Ze. Ad esempio:  
   
 ```  
 void funct1( a, ... )  /* Generates a warning under /Ze or */  
@@ -56,7 +73,7 @@ void funct1( int a, ... )
   
  Anche le dichiarazioni di funzione obsolete generano avvisi se, in un secondo momento, si dichiara o si definisce la stessa funzione con i puntini di sospensione o con un parametro con un tipo che non è uguale al relativo tipo promosso.  
   
- Nella sezione successiva [Definizioni di funzioni C](../c-language/c-function-definitions.md) viene illustrata la sintassi per le definizioni di funzioni, inclusa la sintassi obsoleta.  Il non terminale per l'elenco dei parametri nella sintassi obsoleta è *identifier\-list*.  
+ Nella sezione successiva, [Definizioni di funzioni C](../c-language/c-function-definitions.md), viene illustrata la sintassi per le definizioni di funzioni, inclusa la sintassi obsoleta. Il non terminale per l'elenco dei parametri nella sintassi obsoleta è *identifier-list*.  
   
-## Vedere anche  
- [Cenni preliminari sulle funzioni](../c-language/overview-of-functions.md)
+## <a name="see-also"></a>Vedere anche  
+ [Panoramica delle funzioni](../c-language/overview-of-functions.md)

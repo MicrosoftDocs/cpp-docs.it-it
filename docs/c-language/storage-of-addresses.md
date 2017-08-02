@@ -1,35 +1,52 @@
 ---
-title: "Archiviazione di indirizzi | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "indirizzi [C++], archiviazione"
-  - "archiviazione [C++], indirizzi"
+title: Archiviazione di indirizzi | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- storage [C++], addresses
+- addresses [C++], storage of
 ms.assetid: 423b2402-b847-4788-ad70-943b7c9c5c8b
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Archiviazione di indirizzi
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 8a9a2b431a6f064d4593a547092a7e6dcf60dadd
+ms.contentlocale: it-it
+ms.lasthandoff: 05/18/2017
 
-La quantità di memoria richiesta per un indirizzo e il significato dell'indirizzo dipendono dall'implementazione del compilatore.  Non è garantito che i puntatori ai diversi tipi abbiano la stessa lunghezza.  Di conseguenza, **sizeof\(char \*\)** non è necessariamente uguale a **sizeof\(int \*\)**.  
+---
+# <a name="storage-of-addresses"></a>Archiviazione di indirizzi
+La quantità di memoria richiesta per un indirizzo e il significato dell'indirizzo dipendono dall'implementazione del compilatore. Non è garantito che i puntatori ai diversi tipi abbiano la stessa lunghezza. Di conseguenza, **sizeof(char \*)** non è necessariamente uguale a **sizeof(int\*)**.  
   
  **Sezione specifica Microsoft**  
   
- Per il compilatore C Microsoft, **sizeof\(char \*\)** è uguale a **sizeof\(int \*\)**.  
+ Per il compilatore C Microsoft, **sizeof(char \*)** è uguale a **sizeof(int\*)**.  
   
  **Fine sezione specifica Microsoft**  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Dichiarazioni di puntatori](../c-language/pointer-declarations.md)

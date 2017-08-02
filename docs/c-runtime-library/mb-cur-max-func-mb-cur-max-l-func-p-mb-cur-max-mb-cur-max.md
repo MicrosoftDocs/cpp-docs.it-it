@@ -1,76 +1,96 @@
 ---
-title: "___mb_cur_max_func, ___mb_cur_max_l_func, __p___mb_cur_max, __mb_cur_max | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "___mb_cur_max_l_func"
-  - "__p___mb_cur_max"
-  - "___mb_cur_max_func"
-  - "__mb_cur_max"
-apilocation: 
-  - "msvcr110_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr80.dll"
-  - "msvcr100.dll"
-  - "msvcrt.dll"
-  - "msvcr90.dll"
-  - "msvcr120.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "___mb_cur_max_func"
-  - "___mb_cur_max_l_func"
-  - "__p___mb_cur_max"
-  - "__mb_cur_max"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "___mb_cur_max_func"
-  - "___mb_cur_max_l_func"
-  - "__mb_cur_max"
-  - "__p___mb_cur_max"
+title: ___mb_cur_max_func, ___mb_cur_max_l_func, __p___mb_cur_max, __mb_cur_max | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- ___mb_cur_max_l_func
+- __p___mb_cur_max
+- ___mb_cur_max_func
+- __mb_cur_max
+apilocation:
+- msvcr110_clr0400.dll
+- msvcr110.dll
+- msvcr80.dll
+- msvcr100.dll
+- msvcrt.dll
+- msvcr90.dll
+- msvcr120.dll
+apitype: DLLExport
+f1_keywords:
+- ___mb_cur_max_func
+- ___mb_cur_max_l_func
+- __p___mb_cur_max
+- __mb_cur_max
+dev_langs:
+- C++
+helpviewer_keywords:
+- __mb_cur_max
+- ___mb_cur_max_func
+- ___mb_cur_max_l_func
+- __p___mb_cur_max
 ms.assetid: 60d36108-1ca7-45a6-8ce7-68a91f13e3a1
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# ___mb_cur_max_func, ___mb_cur_max_l_func, __p___mb_cur_max, __mb_cur_max
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 2aebb94a30c40446f2e892eb5c8ca024c616e15e
+ms.contentlocale: it-it
+ms.lasthandoff: 05/18/2017
 
-Funzione CRT interna.  Recupera il numero massimo di byte in un carattere multibyte per le impostazioni locali attuali o specificate.  
+---
+# <a name="mbcurmaxfunc-mbcurmaxlfunc-pmbcurmax-mbcurmax"></a>___mb_cur_max_func, ___mb_cur_max_l_func, __p___mb_cur_max, __mb_cur_max
+Funzione CRT interna. Recupera il numero massimo di byte in un carattere multibyte per le impostazioni locali attuali o specificate.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
-int ___mb_cur_max_func(void); int ___mb_cur_max_l_func(_locale_t locale); int * __p___mb_cur_max(void); #define __mb_cur_max (___mb_cur_max_func())  
+int ___mb_cur_max_func(void);  
+int ___mb_cur_max_l_func(_locale_t locale);  
+int * __p___mb_cur_max(void);  
+#define __mb_cur_max (___mb_cur_max_func())  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  locale  
- Struttura di impostazioni locali da cui recuperare il risultato.  Se il valore è null, verranno usate le impostazioni locali del thread attuale.  
+ Struttura di impostazioni locali da cui recuperare il risultato. Se il valore è null, verranno usate le impostazioni locali correnti.  
   
-## Valore restituito  
- Numero massimo di byte in un carattere multibyte per le impostazioni locali del thread attuale o per quelle specificate.  
+## <a name="return-value"></a>Valore restituito  
+ Numero massimo di byte in un carattere multibyte per le impostazioni locali del thread corrente o per le impostazioni specificate.  
   
-## Note  
- Si tratta di una funzione interna usata da CRT per recuperare il valore attuale della macro [MB\_CUR\_MAX](../c-runtime-library/mb-cur-max.md) dall'archiviazione locale di thread.  Per la portabilità, è consigliabile usare la macro `MB_CUR_MAX` nel codice.  
+## <a name="remarks"></a>Note  
+ Si tratta di una funzione interna usata da CRT per recuperare il valore attuale della macro [MB_CUR_MAX](../c-runtime-library/mb-cur-max.md) dall'archivio thread-local. Per la portabilità, è consigliabile usare la macro `MB_CUR_MAX` nel codice.  
   
- La macro `__mb_cur_max` rappresenta un metodo conveniente per chiamare la funzione `___mb_cur_max_func()`.  La funzione `__p___mb_cur_max` viene definita per compatibilità con Visual C\+\+ 5.0 e versioni precedenti.  
+ La macro `__mb_cur_max` rappresenta un metodo conveniente per chiamare la funzione `___mb_cur_max_func()`. La funzione `__p___mb_cur_max` viene definita per compatibilità con Visual C++ 5.0 e versioni precedenti.  
   
- Le funzioni CRT interne sono specifiche dell'implementazione e soggette a modifica a ogni rilascio.  Se ne sconsiglia l'uso nel codice.  
+ Le funzioni CRT interne sono specifiche dell'implementazione e soggette a modifica a ogni rilascio. Se ne sconsiglia l'uso nel codice.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`___mb_cur_max_func`, `___mb_cur_max_l_func`, `__p___mb_cur_max`|\<ctype.h\>, \<stdlib.h\>|  
+|-------------|---------------------|  
+|`___mb_cur_max_func`, `___mb_cur_max_l_func`, `__p___mb_cur_max`|\<ctype.h>, \<stdlib.h>|  
   
-## Vedere anche  
- [MB\_CUR\_MAX](../c-runtime-library/mb-cur-max.md)
+## <a name="see-also"></a>Vedere anche  
+ [MB_CUR_MAX](../c-runtime-library/mb-cur-max.md)
