@@ -1,37 +1,54 @@
 ---
-title: "Espressioni e assegnazioni | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "assegnazione di valori in C"
-  - "operatori di assegnazione, assegnazioni di valori nelle espressioni"
-  - "istruzioni di assegnazione, valori nelle espressioni"
-  - "espressioni [C]"
-  - "espressioni [C], assegnazione di valori"
-  - "operatori [C], assegnazione di valori"
-  - "Visual C, assegnazioni"
-  - "Visual C, espressioni"
+title: Espressioni e assegnazioni | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- assignment statements, values in expressions
+- expressions [C]
+- expressions [C], assigning values
+- Visual C, expressions
+- assignment operators, assigning values in expressions
+- operators [C], assigning values
+- assigning values in C
+- Visual C, assignments
 ms.assetid: 9c72919f-0768-4b47-85ca-afdfec6847f4
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Espressioni e assegnazioni
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: b0a4089a7f6b3a3dba79eec364a1f9b399c96fbf
+ms.contentlocale: it-it
+ms.lasthandoff: 05/18/2017
 
-In questa sezione viene descritto come creare espressioni e assegnare valori in linguaggio C.  Costanti, identificatori, stringhe e chiamate di funzione sono tutti operandi che vengono modificati nelle espressioni.  Il linguaggio C dispone di tutti i consueti operatori di linguaggio.  In questa sezione vengono analizzati tali operatori, nonché gli operatori univoci per C o Microsoft C.  Negli argomenti trattati sono inclusi:  
+---
+# <a name="expressions-and-assignments"></a>Espressioni e assegnazioni
+In questa sezione viene descritto come creare espressioni e assegnare valori in linguaggio C. Costanti, identificatori, stringhe e chiamate di funzione sono tutti operandi che vengono modificati nelle espressioni. Il linguaggio C dispone di tutti i consueti operatori di linguaggio. In questa sezione vengono analizzati tali operatori, nonché gli operatori univoci per C o Microsoft C. Negli argomenti trattati sono inclusi:  
   
--   [Espressioni r\-value e l\-value](../c-language/l-value-and-r-value-expressions.md)  
+-   [Espressioni l-value e r-value](../c-language/l-value-and-r-value-expressions.md)  
   
 -   [Espressioni costanti](../c-language/c-constant-expressions.md)  
   
@@ -43,9 +60,9 @@ In questa sezione viene descritto come creare espressioni e assegnare valori in 
   
 -   [Precedenza tra gli operatori](../c-language/precedence-and-order-of-evaluation.md)  
   
--   [Conversioni dei tipi](../c-language/type-conversions-c.md)  
+-   [Conversioni di tipi](../c-language/type-conversions-c.md)  
   
 -   [Cast di tipo](../c-language/type-cast-conversions.md)  
   
-## Vedere anche  
- [Riferimenti del linguaggio C](../c-language/c-language-reference.md)
+## <a name="see-also"></a>Vedere anche  
+ [Riferimenti per il linguaggio C](../c-language/c-language-reference.md)

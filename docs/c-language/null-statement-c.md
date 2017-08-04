@@ -1,33 +1,50 @@
 ---
-title: "Istruzione Null (C) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "espressioni [C++], null"
-  - "istruzione null"
-  - "valori null, espressioni"
-  - "punto e virgola, istruzione null in C"
+title: Istruzione Null (C) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- semicolon, C null statement
+- expressions [C++], null
+- null statement
+- null values, expressions
 ms.assetid: 72576ce6-26d0-4379-be65-fee522088790
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Istruzione Null (C)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 4a03d50c5c2a80bccd864f7e4d51df4d33169277
+ms.contentlocale: it-it
+ms.lasthandoff: 05/18/2017
 
-Un'istruzione "null" è un'istruzione che contiene solo un punto e virgola; può essere visualizzata in qualsiasi punto in cui è prevista un'istruzione.  Quando viene eseguita un'istruzione null, non succede nulla.  Il modo corretto per codificare un'istruzione null è:  
+---
+# <a name="null-statement-c"></a>Istruzione Null (C)
+Un'istruzione "null" è un'istruzione che contiene solo un punto e virgola; può essere visualizzata in qualsiasi punto in cui è prevista un'istruzione. Quando viene eseguita un'istruzione null, non succede nulla. Il modo corretto per codificare un'istruzione null è:  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -35,10 +52,10 @@ Un'istruzione "null" è un'istruzione che contiene solo un punto e virgola; può
   
 ```  
   
-## Note  
- Istruzioni quali **do**, **for**, **if** e `while` richiedono che un'istruzione eseguibile venga visualizzata come corpo dell'istruzione.  L'istruzione null soddisfa il requisito della sintassi nei casi in cui non è necessario un corpo effettivo dell'istruzione.  
+## <a name="remarks"></a>Note  
+ Istruzioni quali **do**, **for**, **if** e `while` richiedono che un'istruzione eseguibile venga visualizzata come corpo dell'istruzione. L'istruzione null soddisfa il requisito della sintassi nei casi in cui non è necessario un corpo effettivo dell'istruzione.  
   
- Come per qualsiasi altra istruzione di C, è possibile includere un'etichetta prima di un'istruzione null.  Per etichettare un elemento che non è un'istruzione, come la parentesi graffa di chiusura di un'istruzione composta, è possibile etichettare un'istruzione null e inserirla subito prima dell'elemento per ottenere lo stesso risultato.  
+ Come per qualsiasi altra istruzione di C, è possibile includere un'etichetta prima di un'istruzione null. Per etichettare un elemento che non è un'istruzione, come la parentesi graffa di chiusura di un'istruzione composta, è possibile etichettare un'istruzione null e inserirla subito prima dell'elemento per ottenere lo stesso risultato.  
   
  In questo esempio viene illustrata l'istruzione null:  
   
@@ -47,7 +64,7 @@ for ( i = 0; i < 10; line[i++] = 0 )
      ;  
 ```  
   
- In questo esempio, l'espressione loop dell'istruzione **for** `line[i++] = 0` inizializza i primi 10 elementi di `line` su 0.  Il corpo dell'istruzione è un'istruzione null, poiché non sono disponibili ulteriori istruzioni.  
+ In questo esempio, l'espressione del ciclo dell'istruzione **for** `line[i++] = 0` inizializza i primi 10 elementi di `line` su 0. Il corpo dell'istruzione è un'istruzione null, poiché non sono disponibili ulteriori istruzioni.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Istruzioni](../c-language/statements-c.md)

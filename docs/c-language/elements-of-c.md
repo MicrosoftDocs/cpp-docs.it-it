@@ -1,33 +1,50 @@
 ---
-title: "Elementi di C | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "convenzioni, lessicali"
-  - "convenzioni lessicali"
+title: Elementi di C | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- lexical conventions
+- conventions, lexical
 ms.assetid: 20668a49-cab7-4153-a6d9-7439aac3ff3b
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Elementi di C
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: d9dcf001dc048ed129b36b200fadef3917420d56
+ms.contentlocale: it-it
+ms.lasthandoff: 05/18/2017
 
-In questa sezione vengono descritti gli elementi del linguaggio di programmazione C, compresi i nomi, numeri e caratteri che vengono utilizzati per costruire un programma C.  La sintassi ANSI C contrassegna questi componenti token.  
+---
+# <a name="elements-of-c"></a>Elementi di C
+In questa sezione vengono descritti gli elementi del linguaggio di programmazione C, ad esempio i nomi, i numeri e i caratteri utilizzati per realizzare un programma C. La sintassi ANSI C contrassegna questi componenti come token.  
   
  In questa sezione viene illustrato come definire i token e come vengono valutati dal compilatore.  
   
- Verranno descritti i seguenti argomenti:  
+ Vengono trattati i seguenti argomenti:  
   
 -   [Token](../c-language/c-tokens.md)  
   
@@ -39,13 +56,13 @@ In questa sezione vengono descritti gli elementi del linguaggio di programmazion
   
 -   [Costanti](../c-language/c-constants.md)  
   
--   [Stringa di letterali](../c-language/c-string-literals.md)  
+-   [Valori letterali stringa](../c-language/c-string-literals.md)  
   
 -   [Punteggiatura e caratteri speciali](../c-language/punctuation-and-special-characters.md)  
   
- La sezione include anche le tabelle di riferimento per [Trigrammi](../c-language/trigraphs.md), [Limiti sulle costanti a virgola mobile](../c-language/limits-on-floating-point-constants.md), [Limiti per i tipi Integer in C\+\+](../c-language/cpp-integer-limits.md) e [Sequenze di escape](../c-language/escape-sequences.md).  
+ La sezione include anche le tabelle di riferimento per [Trigrammi](../c-language/trigraphs.md), [Limiti su costanti a virgola mobile](../c-language/limits-on-floating-point-constants.md), [Limiti per tipi Integer C++](../c-language/cpp-integer-limits.md), e [Sequenze di escape](../c-language/escape-sequences.md).  
   
- Gli operatori sono simboli \(sia singoli caratteri che combinazioni di caratteri\) che specificano come manipolare i valori.  Ciascun simbolo viene interpretato come un'unità singola, chiamata token.  Per ulteriori informazioni, vedere [Operatori](../c-language/c-operators.md).  
+ Gli operatori sono simboli (sia singoli caratteri che combinazioni di caratteri) che specificano come utilizzare i valori. Ciascun simbolo viene interpretato come un'unità singola, denominata token. Per altre informazioni, vedere [Operatori](../c-language/c-operators.md).  
   
-## Vedere anche  
- [Riferimenti del linguaggio C](../c-language/c-language-reference.md)
+## <a name="see-also"></a>Vedere anche  
+ [Riferimenti per il linguaggio C](../c-language/c-language-reference.md)

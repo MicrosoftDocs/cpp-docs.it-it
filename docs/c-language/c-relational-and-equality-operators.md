@@ -1,77 +1,94 @@
 ---
-title: "Operatori relazionali e operatori di uguaglianza C | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "uguaglianza (operatore)"
-  - "uguaglianza (operatore), sintassi"
-  - "operatori [C], uguaglianza"
-  - "operatori [C], relazionale"
-  - "operatori relazionali, sintassi"
+title: Operatori relazionali e operatori di uguaglianza C | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- relational operators, syntax
+- equality operator
+- operators [C], equality
+- equality operator, syntax
+- operators [C], relational
 ms.assetid: c89a3815-a65e-4e0d-8333-0e8dc7fdb30b
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Operatori relazionali e operatori di uguaglianza C
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 31d7b7a4725c6c956ad5acf647ad6224585f9d24
+ms.contentlocale: it-it
+ms.lasthandoff: 05/18/2017
 
-Gli operatori relazionali e di uguaglianza binari confrontano il primo operando con il secondo per testare la validità della relazione specificata.  Il risultato di un'espressione relazionale è 1 se la relazione testata è true e 0 se è false.  Il tipo del risultato è `int`.  
+---
+# <a name="c-relational-and-equality-operators"></a>Operatori relazionali e operatori di uguaglianza C
+Gli operatori relazionali e di uguaglianza binari confrontano il primo operando con il secondo per testare la validità della relazione specificata. Il risultato di un'espressione relazionale è 1 se la relazione testata è true e 0 se è false. Il tipo del risultato è `int`.  
   
  **Sintassi**  
   
- *relational\-expression*:  
- *shift\-expression*  
+ *relational-expression*:  
+ *shift-expression*  
   
- *relational\-expression*  **\<**  *shift\-expression*  
+ *relational-expression*  **\<**  *shift-expression*  
   
- *relational\-expression*  **\>**  *shift\-expression*  
+ *relational-expression*  **>**  *shift-expression*  
   
- *relational\-expression*  **\<\=**  *shift\-expression*  
+ *relational-expression*  **\<=**  *shift-expression*  
   
- *relational\-expression*  **\>\=**  *shift\-expression*  
+ *relational-expression*  **>=**  *shift-expression*  
   
- *equality\-expression*:  
- *relational\-expression*  
+ *equality-expression*:  
+ *relational-expression*  
   
- *equality\-expression*  **\=\=**  *relational\-expression*  
+ *equality-expression*  **==**  *relational-expression*  
   
- *equality\-expression*  **\!\=**  *relational\-expression*  
+ *equality-expression*  **!=**  *relational-expression*  
   
  Gli operatori relazionali e di uguaglianza testano le relazioni seguenti:  
   
 |Operatore|Relazione testata|  
-|---------------|-----------------------|  
+|--------------|-------------------------|  
 |**\<**|Primo operando minore del secondo operando|  
-|**\>**|Primo operando maggiore del secondo operando|  
-|**\<\=**|Primo operando minore o uguale al secondo operando|  
-|**\>\=**|Primo operando maggiore o uguale al secondo operando|  
+|**>**|Primo operando maggiore del secondo operando|  
+|**\<=**|Primo operando minore o uguale al secondo operando|  
+|**>=**|Primo operando maggiore o uguale al secondo operando|  
 |`==`|Primo operando uguale al secondo operando|  
 |`!=`|Primo operando non uguale al secondo operando|  
   
- I primi quattro operatori nell'elenco sopra riportato hanno maggiore precedenza rispetto agli operatori di uguaglianza \(`==` e `!=`\).  Visualizzare le informazioni di precedenza nella tabella [Precedenza e associazione degli operatori C](../c-language/precedence-and-order-of-evaluation.md).  
+ I primi quattro operatori nell'elenco sopra riportato hanno maggiore precedenza rispetto agli operatori di uguaglianza (`==` e `!=`). Per informazioni sulla precedenza, vedere la tabella [Precedenza e associatività degli operatori C](../c-language/precedence-and-order-of-evaluation.md).  
   
- Gli operandi possono disporre di un tipo integrale, a virgola mobile o puntatore.  I tipi di operandi possono essere diversi.  Gli operatori relazionali eseguono conversioni aritmetiche consuete su operandi di tipo integrale e a virgola mobile.  Inoltre, è possibile utilizzare le seguenti combinazioni di tipi di operando con gli operatori relazionali e di uguaglianza:  
+ Gli operandi possono disporre di un tipo integrale, a virgola mobile o puntatore. I tipi di operandi possono essere diversi. Gli operatori relazionali eseguono conversioni aritmetiche consuete su operandi di tipo integrale e a virgola mobile. Inoltre, è possibile utilizzare le seguenti combinazioni di tipi di operando con gli operatori relazionali e di uguaglianza:  
   
--   Entrambi gli operandi di qualsiasi operatore relazionale o di uguaglianza possono essere puntatori allo stesso tipo.  Per gli operatori di uguaglianza \(`==`\) e di disuguaglianza \(`!=`\) il risultato del confronto indica se i due puntatori sono indirizzati alla stessa posizione di memoria.  Per gli altri operatori relazionali \(**\<**, **\>**, **\<**\= e **\>**\=\) il risultato del confronto indica la posizione relativa ai due indirizzi di memoria degli oggetti a cui si fa riferimento.  Gli operatori relazionali confrontano solo gli offset.  
+-   Entrambi gli operandi di qualsiasi operatore relazionale o di uguaglianza possono essere puntatori allo stesso tipo. Per gli operatori di uguaglianza (`==`) e di disuguaglianza (`!=`) il risultato del confronto indica se i due puntatori sono indirizzati alla stessa posizione di memoria. Per gli altri operatori relazionali (**\<**, **>**, **\<**= e **>**=) il risultato del confronto indica la posizione relativa dei due indirizzi di memoria degli oggetti a cui si fa riferimento. Gli operatori relazionali confrontano solo gli offset.  
   
-     Il confronto tra puntatori viene definito solo per le parti dello stesso oggetto.  Se i puntatori fanno riferimento ai membri di una matrice, il confronto è equivalente al confronto dei pedici corrispondenti.  L'indirizzo del primo elemento della matrice è "minore di" quello dell'ultimo elemento.  Nel caso di strutture, i puntatori ai membri della struttura dichiarati successivamente sono "maggiori dei" puntatori ai membri dichiarati nella struttura.  I puntatori ai membri della stessa unione sono uguali.  
+     Il confronto tra puntatori viene definito solo per le parti dello stesso oggetto. Se i puntatori fanno riferimento ai membri di una matrice, il confronto è equivalente al confronto dei pedici corrispondenti. L'indirizzo del primo elemento della matrice è "minore di" quello dell'ultimo elemento. Nel caso di strutture, i puntatori ai membri della struttura dichiarati successivamente sono "maggiori dei" puntatori ai membri dichiarati nella struttura. I puntatori ai membri della stessa unione sono uguali.  
   
--   Un valore del puntatore può essere confrontato con il valore costante 0 per uguaglianza \(`==`\) o disuguaglianza \(`!=`\).  Un puntatore con un valore pari a 0 viene chiamato un puntatore "null", ovvero non indica una posizione di memoria valida.  
+-   Un valore del puntatore può essere confrontato con il valore costante 0 per uguaglianza (`==`) o disuguaglianza (`!=`). Un puntatore con un valore pari a 0 viene chiamato un puntatore "null", ovvero non indica una posizione di memoria valida.  
   
--   Gli operatori di uguaglianza seguono le stesse regole degli operatori relazionali, ma supportano funzionalità aggiuntive: un puntatore può essere confrontato con un'espressione costante integrale con valore pari a 0 o a un puntatore a `void`.  Se due puntatori sono entrambi puntatori null, vengono considerati uguali.  Gli operatori di uguaglianza confrontano segmento e offset.  
+-   Gli operatori di uguaglianza seguono le stesse regole degli operatori relazionali, ma supportano funzionalità aggiuntive: un puntatore può essere confrontato con un'espressione costante integrale con valore pari a 0 o a un puntatore a `void`. Se due puntatori sono entrambi puntatori null, vengono considerati uguali. Gli operatori di uguaglianza confrontano segmento e offset.  
   
-## Esempi  
+## <a name="examples"></a>Esempi  
  Negli esempi riportati di seguito vengono illustrati gli operatori relazionali e di uguaglianza.  
   
 ```  
@@ -102,8 +119,8 @@ enum color { red, white, green } col;
    .  
 ```  
   
- Queste istruzioni dichiarano una variabile di enumerazione denominata `col` con il tag `color`.  In qualsiasi momento, la variabile può contenere un intero pari a 0, 1 o 2, che rappresenta uno degli elementi dell'enumerazione impostata `color`: rispettivamente il colore rosso, bianco o verde.  Se l'elemento `col` contiene 0 quando viene eseguita l'istruzione **if**, verranno eseguite tutte le istruzioni in base a **if**.  
+ Queste istruzioni dichiarano una variabile di enumerazione denominata `col` con il tag `color`. In qualsiasi momento, la variabile può contenere un intero pari a 0, 1 o 2, che rappresenta uno degli elementi dell'enumerazione impostata `color`: rispettivamente il colore rosso, bianco o verde. Se l'elemento `col` contiene 0, quando viene eseguita l'istruzione **if** vengono eseguite tutte le eventuali istruzioni che dipendono da **if**.  
   
-## Vedere anche  
- [Operatore relazionali: \<, \>, \<\= e \>\=](../cpp/relational-operators-equal-and-equal.md)   
- [Operatori di uguaglianza: \=\= e \!\=](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)
+## <a name="see-also"></a>Vedere anche  
+ [Operatori relazionali: \<, >, \<= e >=](../cpp/relational-operators-equal-and-equal.md)   
+ [Operatori di uguaglianza: == e !=](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)

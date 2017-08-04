@@ -1,35 +1,52 @@
 ---
-title: "Conversioni aritmetiche comuni | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "conversioni aritmetiche [C++]"
-  - "operatori aritmetici [C++], tipo (conversione)"
-  - "conversioni [C++], aritmetici"
-  - "conversione di tipi di dati [C++], aritmetici"
-  - "operatori [C], conversioni aritmetiche"
-  - "conversione di tipi [C++], aritmetici"
+title: Conversioni aritmetiche comuni | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- arithmetic conversions [C++]
+- type conversion [C++], arithmetic
+- operators [C], arithmetic conversions
+- data type conversion [C++], arithmetic
+- conversions [C++], arithmetic
+- arithmetic operators [C++], type conversions
 ms.assetid: bfa49803-0efd-45d0-b987-111412a140d7
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Conversioni aritmetiche comuni
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 2dd676c9e566e0b0ed67a2ea6d9f1222582f0815
+ms.contentlocale: it-it
+ms.lasthandoff: 05/18/2017
 
-La maggior parte degli operatori C eseguono conversioni di tipi per impostare gli operandi di un'espressione a un tipo comune o per estendere valori short nella dimensione dell'Integer utilizzata nelle operazioni del computer.  Le conversioni eseguite dagli operatori C dipendono dall'operatore specifico e dal tipo di operando o di operandi.  Tuttavia, molti operatori eseguono conversioni simili su operandi di tipi integrali e a virgola mobile.  Queste conversioni sono note come "conversioni aritmetiche". La conversione di un valore operando in un tipo compatibile non comporta alcuna modifica al valore.  
+---
+# <a name="usual-arithmetic-conversions"></a>Conversioni aritmetiche comuni
+La maggior parte degli operatori C eseguono conversioni di tipi per impostare gli operandi di un'espressione a un tipo comune o per estendere valori short nella dimensione dell'Integer utilizzata nelle operazioni del computer. Le conversioni eseguite dagli operatori C dipendono dall'operatore specifico e dal tipo di operando o di operandi. Tuttavia, molti operatori eseguono conversioni simili su operandi di tipi integrali e a virgola mobile. Queste conversioni sono note come "conversioni aritmetiche". La conversione di un valore operando in un tipo compatibile non comporta alcuna modifica al valore.  
   
- Le conversioni aritmetiche riepilogate di seguito vengono definite "conversioni aritmetiche comuni". Questi passaggi si applicano solo agli operatori binari che prevedono il tipo aritmetico.  Lo scopo è quello di produrre un tipo comune che è anche il tipo del risultato.  Per determinare quali conversioni vengono effettivamente eseguite, il compilatore applica l'algoritmo seguente alle operazioni binarie nell'espressione.  I passaggi riportati di seguito non sono in un ordine di precedenza.  
+ Le conversioni aritmetiche riepilogate di seguito vengono definite "conversioni aritmetiche comuni". Questi passaggi si applicano solo agli operatori binari che prevedono il tipo aritmetico. Lo scopo è quello di produrre un tipo comune che è anche il tipo del risultato. Per determinare quali conversioni vengono effettivamente eseguite, il compilatore applica l'algoritmo seguente alle operazioni binarie nell'espressione. I passaggi riportati di seguito non sono in un ordine di precedenza.  
   
 1.  Se uno degli operandi è di tipo `long double`, l'altro operando verrà convertito nel tipo `long double`.  
   
@@ -37,11 +54,11 @@ La maggior parte degli operatori C eseguono conversioni di tipi per impostare gl
   
 3.  Se le due condizioni precedenti non vengono soddisfatte e uno degli operandi è di tipo **float**, l'altro operando verrà convertito nel tipo **float**.  
   
-4.  Se le tre condizioni precedenti non vengono soddisfatte \(nessuno degli operandi è di tipo a virgola mobile\), le conversioni integrali verranno eseguite sugli operandi come segue:  
+4.  Se le tre condizioni precedenti non vengono soddisfatte (nessuno degli operandi è di tipo a virgola mobile), le conversioni integrali verranno eseguite sugli operandi come segue:  
   
     -   Se uno degli operandi è di tipo `unsigned long`, l'altro operando verrà convertito nel tipo `unsigned long`.  
   
-    -   Se la condizione precedente non viene soddisfatta e uno degli operandi è di tipo **long** e l'altro operando di tipo `unsigned int`, entrambi gli operandi verranno convertiti nel tipo `unsigned long`.  
+    -   Se la condizione precedente non viene soddisfatta e uno degli operandi è di tipo **long** e l'altro operando è di tipo `unsigned int`, entrambi gli operandi verranno convertiti nel tipo `unsigned long`.  
   
     -   Se le due condizioni precedenti non vengono soddisfatte e uno degli operandi è di tipo **long**, l'altro operando verrà convertito nel tipo **long**.  
   
@@ -67,5 +84,5 @@ dVal = ulVal + fVal; /* ulVal converted to float
                       */   
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Operatori C](../c-language/c-operators.md)

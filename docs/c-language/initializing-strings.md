@@ -1,44 +1,61 @@
 ---
-title: "Inizializzazione di stringhe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "matrici di caratteri, inizializzazione"
-  - "inizializzazione di matrici, stringhe"
-  - "stringhe [C++], inizializzazione"
+title: Inizializzazione di stringhe | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- character arrays, initializing
+- strings [C++], initializing
+- initializing arrays, strings
 ms.assetid: 0ab8079d-d0d3-48f9-afd1-36a7bb439b29
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Inizializzazione di stringhe
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: c1bf614544f008910a86e8281cb775c1d7734b0d
+ms.contentlocale: it-it
+ms.lasthandoff: 05/18/2017
 
-È possibile inizializzare una matrice di caratteri \(o carattere "wide"\) con un valore letterale stringa \(o valore letterale stringa "wide"\).  Ad esempio:  
+---
+# <a name="initializing-strings"></a>Inizializzazione di stringhe
+È possibile inizializzare una matrice di caratteri (o carattere "wide") con un valore letterale stringa (o valore letterale stringa "wide"). Ad esempio:  
   
 ```  
 char code[ ] = "abc";  
 ```  
   
- inizializza `code` come matrice di caratteri di quattro elementi.  Il quarto elemento è il carattere null, che termina tutti i valori letterali stringa.  
+ inizializza `code` come matrice di caratteri di quattro elementi. Il quarto elemento è il carattere null, che termina tutti i valori letterali stringa.  
   
- Un elenco di identificatori può essere lungo solo come il numero di identificatori da inizializzare.  Se si specifica una matrice con dimensione minore della stringa, i caratteri aggiuntivi vengono ignorati.  Ad esempio, la seguente dichiarazione inizializza `code` come matrice di caratteri con tre elementi:  
+ Un elenco di identificatori può essere lungo solo come il numero di identificatori da inizializzare. Se si specifica una matrice con dimensione minore della stringa, i caratteri aggiuntivi vengono ignorati. Ad esempio, la seguente dichiarazione inizializza `code` come matrice di caratteri con tre elementi:  
   
 ```  
 char code[3] = "abcd";  
 ```  
   
- Solo i primi tre caratteri dell'inizializzatore vengono assegnati a `code`.  Il carattere `d` e il carattere di terminazione null della stringa vengono rimossi.  Si noti che in questo modo viene creata una stringa non terminata \(ovvero una stringa senza un valore 0 che ne contrassegni la fine\) e viene generato un messaggio di diagnostica che indica questa condizione.  
+ Solo i primi tre caratteri dell'inizializzatore vengono assegnati a `code`. Il carattere `d` e il carattere di terminazione null della stringa vengono rimossi. Si noti che in questo modo viene creata una stringa non terminata (ovvero una stringa senza un valore 0 che ne contrassegni la fine) e viene generato un messaggio di diagnostica che indica questa condizione.  
   
  La dichiarazione  
   
@@ -61,5 +78,5 @@ char s[]  = {'a', 'b', 'c', '\0'},
   
  **Fine sezione specifica Microsoft**  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Inizializzazione](../c-language/initialization.md)

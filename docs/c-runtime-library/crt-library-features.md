@@ -47,10 +47,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
-ms.openlocfilehash: 57de8d43336f8fd5c82da17f42cf6f8292600148
+ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
+ms.openlocfilehash: 232da2506389337f6b37412161492c103db5b971
 ms.contentlocale: it-it
-ms.lasthandoff: 03/07/2017
+ms.lasthandoff: 06/01/2017
 
 ---
 # <a name="crt-library-features"></a>Funzionalità libreria CRT
@@ -59,7 +59,7 @@ Questo argomento descrive i vari file lib che formano le librerie di runtime C, 
 ## <a name="c-run-time-libraries-crt"></a>Librerie di runtime C (CRT)  
  La libreria di runtime C (CRT) fa parte della libreria standard C++ che incorpora la libreria standard ISO C99. Le librerie Visual C++ che implementano la libreria CRT supportano lo sviluppo del codice nativo, il codice nativo e gestito misto e il codice gestito pure per lo sviluppo di .NET. Tutte le versioni della libreria CRT supportano lo sviluppo multithread. La maggior parte delle librerie supporta il collegamento statico, per collegare la libreria direttamente al codice, oppure il collegamento dinamico, in modo che il codice usi file DLL comuni.  
   
- A partire da Visual Studio 2015 la libreria CRT è stata sottoposta a refactoring in nuovi file binari. La libreria CRT universale (UCRT) contiene le funzioni e le variabili globali esportate dalla libreria CRT C99 standard. La libreria UCRT è ora un componente di Windows ed è inclusa in Windows 10. La libreria statica, la libreria di importazione DLL e i file di intestazione per la libreria UCRT si trovano ora in Windows 10 SDK. Quando si installa Visual C++, Visual Studio installato il subset di Windows 10 SDK richiesto per usare la libreria UCRT. È possibile usare la libreria UCRT in qualsiasi versione di Windows supportata da Visual Studio 2015 e versioni successive. È possibile ridistribuirla usando vcredist per le versioni supportate di Windows diverse da Windows 10. Per altre informazioni, vedere [Ridistribuzione di file Visual C++](../ide/redistributing-visual-cpp-files.md).  
+ A partire da Visual Studio 2015 la libreria CRT è stata sottoposta a refactoring in nuovi file binari. La libreria CRT universale (UCRT) contiene le funzioni e le variabili globali esportate dalla libreria CRT C99 standard. La libreria UCRT è ora un componente di Windows ed è inclusa in Windows 10. La libreria statica, la libreria di importazione DLL e i file di intestazione per la libreria UCRT si trovano ora in Windows 10 SDK. Quando si installa Visual C++, Visual Studio installato il subset di Windows 10 SDK richiesto per usare la libreria UCRT. È possibile usare la libreria UCRT in qualsiasi versione di Windows supportata da Visual Studio 2015 e versioni successive. È possibile ridistribuirla usando vcredist per le versioni supportate di Windows diverse da Windows 10. Per altre informazioni, vedere [Redistributing Visual C++ Files](../ide/redistributing-visual-cpp-files.md).  
   
  La tabella seguente elenca le librerie che implementano le librerie UCRT.  
   
@@ -87,7 +87,7 @@ Questo argomento descrive i vari file lib che formano le librerie di runtime C, 
   
 |Libreria|Caratteristiche|Opzione|Direttive per il preprocessore|  
 |-------------|---------------------|------------|-----------------------------|  
-|libcmt.lib|Collega in modo statico l'avvio della libreria UCRT nativa nel codice.|**/MT**|_MT|  
+|LIBCMT.lib|Collega in modo statico l'avvio della libreria UCRT nativa nel codice.|**/MT**|_MT|  
 |libcmtd.lib|Collega in modo statico la versione di Debug dell'avvio della libreria CRT nativa. Non ridistribuibile.|**/MTd**|_DEBUG, _MT|  
 |msvcrt.lib|Libreria statica per l'avvio della libreria CRT nativa per l'uso con DLL UCRT e vcruntime.|**/MD**|_MT, _DLL|  
 |msvcrtd.lib|Libreria statica per la versione di debug per l'avvio della libreria CRT nativa da usare con DLL UCRT e vcruntime. Non ridistribuibile.|**/MDd**|_DEBUG, _MT, _DLL|  
@@ -116,19 +116,19 @@ Questo argomento descrive i vari file lib che formano le librerie di runtime C, 
   
 |Libreria standard C++|Caratteristiche|Opzione|Direttive per il preprocessore|  
 |----------------------------|---------------------|------------|-----------------------------|  
-|LIBCPMT.LIB|Multithreading, collegamento statico|**/MT**|_MT|  
+|LIBCPMT.lib|Multithreading, collegamento statico|**/MT**|_MT|  
 |MSVCPRT.LIB|Multithreading, collegamento dinamico (libreria di importazione per MSVCP\<version>.dll)|**/MD**|_MT, _DLL|  
 |LIBCPMTD.LIB|Multithreading, collegamento statico|**/MTd**|_DEBUG, _MT|  
 |MSVCPRTD.LIB|Multithreading, collegamento dinamico (libreria di importazione per MSVCP\<version>D.DLL)|**/MDd**|_DEBUG, _MT, _DLL|  
   
- Quando si compila una versione di rilascio del progetto, una delle librerie di runtime C di base (LIBCMT.LIB, MSVCMRT.LIB, MSVCRT.LIB) viene collegata per impostazione predefinita, a seconda dell'opzione del compilatore scelta (multithreading, DLL, /clr). Se si include uno dei [file di intestazione della libreria standard di C++](../standard-library/cpp-standard-library-header-files.md) nel codice, sarà collegata automaticamente una libreria standard di C++ da [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] in fase di compilazione. Ad esempio:  
+ Quando si compila una versione di rilascio del progetto, una delle librerie di runtime C di base (LIBCMT.LIB, MSVCMRT.LIB, MSVCRT.LIB) viene collegata per impostazione predefinita, a seconda dell'opzione del compilatore scelta (multithreading, DLL, /clr). Se si include uno dei [file di intestazione della libreria standard di C++](../standard-library/cpp-standard-library-header-files.md) nel codice, Visual C++ collegherà automaticamente una libreria C++ standard in fase di compilazione. Ad esempio:  
   
 ```  
 #include <ios>   
 ```  
   
 ## <a name="what-problems-exist-if-an-application-uses-more-than-one-crt-version"></a>Quali problemi si verificano se un'applicazione usa più di una versione CRT?  
- Se sono presenti più file DLL o EXE, verranno create più librerie CRT, indipendentemente dal fatto che si usino versioni diverse di [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)]. Ad esempio, il collegamento statico della libreria CRT a più DLL può produrre lo stesso problema. Agli sviluppatori che rilevano questo problema con le librerie CRT statiche sono state fornite istruzioni per eseguire la compilazione con **/MD** per usare la DLL di CRT. Se le DLL passano le risorse CRT tra i limiti DLL, potrebbe verificarsi lo stesso problema con le librerie CRT senza corrispondenza e sarà necessario ricompilare il progetto Visual C++.  
+ Se sono presenti più file DLL o EXE, possono esistere più librerie CRT, indipendentemente dal fatto che si usino versioni diverse di Visual C++. Ad esempio, il collegamento statico della libreria CRT a più DLL può produrre lo stesso problema. Agli sviluppatori che rilevano questo problema con le librerie CRT statiche sono state fornite istruzioni per eseguire la compilazione con **/MD** per usare la DLL di CRT. Se le DLL passano le risorse CRT tra i limiti DLL, potrebbe verificarsi lo stesso problema con le librerie CRT senza corrispondenza e sarà necessario ricompilare il progetto Visual C++.  
   
  Se il programma usa più versioni della libreria CRT, è necessario prestare attenzione quando si passano determinati oggetti CRT (ad esempio, handle di file, impostazioni locali e variabili di ambiente) tra i limiti DLL. Per altre informazioni su questi problemi e su come risolverli, vedere [Potenziali errori di passaggio di oggetti CRT attraverso i limiti DLL](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).  
   

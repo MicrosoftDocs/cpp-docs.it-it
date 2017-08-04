@@ -1,112 +1,129 @@
 ---
-title: "Utilizzo di mapping testo generico | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_UNICODE"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_MBCS (tipo di dati)"
-  - "_T (tipo)"
-  - "_TCHAR (tipo)"
-  - "_TEXT (tipo)"
-  - "_TINT (tipo)"
-  - "_TSCHAR (tipo)"
-  - "_TUCHAR (tipo)"
-  - "_TXCHAR (tipo)"
-  - "_UNICODE (costante)"
-  - "tipi di dati per testo generico"
-  - "mapping testo generico"
-  - "mapping, testo generico"
-  - "MBCS (tipo di dati)"
-  - "T (tipo)"
-  - "TCHAR (tipo)"
-  - "tipi di dati TCHAR.H, mapping definiti"
-  - "TEXT (tipo)"
-  - "TINT (tipo)"
-  - "TSCHAR (tipo)"
-  - "TUCHAR (tipo)"
-  - "TXCHAR (tipo)"
-  - "UNICODE (costante)"
+title: Uso di mapping di testo generico | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _UNICODE
+dev_langs:
+- C++
+helpviewer_keywords:
+- _TXCHAR type
+- TINT type
+- _TCHAR type
+- TSCHAR type
+- TEXT type
+- TCHAR type
+- TCHAR.H data types, mappings defined in
+- generic-text data types
+- _TINT type
+- TUCHAR type
+- _UNICODE constant
+- TXCHAR type
+- generic-text mappings
+- _TSCHAR type
+- T type
+- mappings, generic-text
+- _TUCHAR type
+- MBCS data type
+- _MBCS data type
+- _TEXT type
+- UNICODE constant
+- _T type
 ms.assetid: 2848121c-e51f-4b9b-a2e6-833ece4b0cb3
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Utilizzo di mapping testo generico
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 17a3f4f7be76be9f23160e351466fee4f70b9272
+ms.contentlocale: it-it
+ms.lasthandoff: 05/18/2017
 
+---
+# <a name="using-generic-text-mappings"></a>Utilizzo di mapping testo generico
 **Sezione specifica Microsoft**  
   
- Allo scopo di semplificare lo sviluppo di codice per diversi mercati internazionali, la libreria di runtime di Microsoft fornisce mappature di testo generico specifiche di Microsoft per molti tipi di dati, routine e altri oggetti.  I mapping sono definiti in TCHAR.H.  È possibile utilizzare questi mapping di nomi per produrre codice generico che può essere compilato per uno qualsiasi dei tre tipi di set di caratteri: ASCII \(SBCS\), MBCS, o Unicode, a seconda di una costante di manifesto definita utilizzando un'istruzione `#define`.  Le mappature di testo generico sono estensioni Microsoft non compatibili con lo standard ANSI.  
+ Per semplificare lo sviluppo di codice per vari mercati internazionali, la libreria di runtime di Microsoft fornisce mapping di testo generico specifiche di Microsoft per molti tipi di dati, routine e altri oggetti. I mapping sono definiti in TCHAR.H. È possibile utilizzare questi mapping di nomi per scrivere codice generico che può essere compilato per uno qualsiasi dei tre tipi di set di caratteri: ASCII (SBCS), MBCS o Unicode, in base a una costante di manifesto definita utilizzando un'istruzione `#define`. I mapping di testo generico sono estensioni Microsoft non compatibili con ANSI.  
   
-### Istruzioni del preprocessore per le mappature di testo generico  
+### <a name="preprocessor-directives-for-generic-text-mappings"></a>Direttive del preprocessore per i mapping di testo generico  
   
-|\#define|Versione compilata|Esempio|  
-|--------------|------------------------|-------------|  
-|`_UNICODE`|Unicode \(caratteri wide\)|`_tcsrev` corrisponde a `_wcsrev`|  
-|`_MBCS`|Caratteri multibyte|`_tcsrev` corrisponde a `_mbsrev`|  
-|Nessuna definizione. Questa è l'impostazione predefinita: non viene definito né `_UNICODE` né `_MBCS`.|SBCS \(ASCII\)|Viene eseguito il mapping dell'oggetto `_tcsrev` in `strrev`.|  
+|#define|Versione compilata|Esempio|  
+|--------------|----------------------|-------------|  
+|`_UNICODE`|Unicode (caratteri wide)|`_tcsrev` viene mappata a `_wcsrev`|  
+|`_MBCS`|Caratteri multibyte|`_tcsrev` viene mappata a `_mbsrev`|  
+|Nessuno. Questa è l'impostazione predefinita: non viene definito né `_UNICODE` né `_MBCS`.|SBCS (ASCII)|`_tcsrev` viene mappata a `strrev`|  
   
- Ad esempio, la funzione di testo generico `_tcsrev`, che è definita in TCHAR.H, corrisponde a `mbsrev` se nel programma è stato definito `MBCS` oppure a `_wcsrev` se è stato definito `_UNICODE` .  In caso contrario, viene eseguito il mapping di `_tcsrev` in `strrev`.  
+ Ad esempio, la funzione di testo generico `_tcsrev`, definita in TCHAR.H, viene mappata a `mbsrev` se nel programma è stata definita la versione `MBCS` oppure a `_wcsrev` se è stata definita la versione `_UNICODE`. In caso contrario, `_tcsrev` viene mappata a `strrev`.  
   
- Il tipo di dati di testo generico `_TCHAR`, anche definito in TCHAR.H, viene mappato nel tipo `char` se `_MBCS` è definito, nel tipo `wchar_t` se `_UNICODE` è definito e nel tipo `char` se nessuna delle due costanti è definita.  Per facilitare la programmazione, vengono fornite in TCHAR.H altre mappature di tipi di dati, ma `_TCHAR` è il tipo più utile.  
+ Il tipo di dati di testo generico `_TCHAR`, anche definito in TCHAR.H, corrisponde al tipo `char` se `_MBCS` è definito, al tipo `wchar_t` se `_UNICODE` è definito e al tipo `char` se nessuna costante è definita. Per facilitare la programmazione, vengono forniti in TCHAR.H altri mapping del tipo di dati, ma `_TCHAR` è il tipo più utile.  
   
-### Mappature di tipi di dati di testo generico  
+### <a name="generic-text-data-type-mappings"></a>Mapping dei tipi di dati di testo generico  
   
-|Mappature di tipi di dati di testo generico|SBCS \(\_UNICODE, \_MBCS non definito\)|\_MBCS definito|\_UNICODE definito|  
-|-------------------------------------------------|---------------------------------------------|---------------------|------------------------|  
+|Nome del tipo di dati di testo generico|SBCS (_UNICODE, _MBCS non definiti)|_MBCS definito|_UNICODE definito|  
+|----------------------------------|--------------------------------------------|--------------------|-----------------------|  
 |`_TCHAR`|`char`|`char`|`wchar_t`|  
 |`_TINT`|`int`|`int`|`wint_t`|  
 |`_TSCHAR`|`signed char`|`signed char`|`wchar_t`|  
 |`_TUCHAR`|`unsigned char`|`unsigned char`|`wchar_t`|  
 |`_TXCHAR`|`char`|`unsigned char`|`wchar_t`|  
-|`_T` o `_TEXT`|Nessun effetto \(eliminato dal preprocessore\)|Nessun effetto \(eliminato dal preprocessore\)|`L` \(converte il carattere o la stringa seguente nell'equivalente Unicode\)|  
+|`_T` o `_TEXT`|Nessun effetto (rimosso dal preprocessore)|Nessun effetto (rimosso dal preprocessore)|`L` (converte il carattere o la stringa seguente nell'equivalente Unicode)|  
   
- Per un elenco completo delle mappature di testo generico di routine, variabili e altri oggetti, vedere [Mappature di testo generico](../c-runtime-library/generic-text-mappings.md).  
+ Per un elenco completo dei mapping di testo generico di routine, variabili e altri oggetti, vedere [Mapping testo generico](../c-runtime-library/generic-text-mappings.md).  
   
- Nei seguenti frammenti di codice viene illustrato l'utilizzo di `_TCHAR` e `_tcsrev` per impostare mappature con modelli MBSC, Unicode e SBCS.  
+ Nei seguenti frammenti di codice viene illustrato l'utilizzo di `_TCHAR` e `_tcsrev` per il mapping a modelli MBSC, Unicode e SBCS.  
   
 ```  
 _TCHAR *RetVal, *szString;  
 RetVal = _tcsrev(szString);  
 ```  
   
- Se `MBCS` è stato definito, il preprocessore esegue il mapping del frammento precedente nel codice seguente:  
+ Se `MBCS` è stato definito, il preprocessore esegue il mapping del frammento precedente al codice seguente:  
   
 ```  
 char *RetVal, *szString;  
 RetVal = _mbsrev(szString);  
 ```  
   
- Se `_UNICODE` è stato definito, il preprocessore esegue il mapping dello stesso frammento nel codice seguente:  
+ Se `_UNICODE` è stato definito, il preprocessore esegue il mapping dello stesso frammento al codice seguente:  
   
 ```  
 wchar_t *RetVal, *szString;  
 RetVal = _wcsrev(szString);  
 ```  
   
- Se non è stato definito né `_MBCS` né `_UNICODE`, il preprocessore tradurrà il codice in modo da utilizzare il codice ASCII a byte singolo come segue:  
+ Se non è stato definito né `_MBCS` né `_UNICODE`, il preprocessore esegue il mapping del frammento al codice ASCII a byte singolo come segue:  
   
 ```  
 char *RetVal, *szString;  
 RetVal = strrev(szString);  
 ```  
   
- Di conseguenza, è possibile scrivere, gestire e compilare un unico file di codice sorgente per eseguirlo con routine specifiche per uno dei tre tipi di set di caratteri.  
+ Pertanto, è possibile scrivere, mantenere e compilare un unico file di codice sorgente per eseguirlo con routine specifiche per uno dei tre tipi di set di caratteri.  
   
  **Fine sezione specifica Microsoft**  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Mapping testo generico](../c-runtime-library/generic-text-mappings.md)   
  [Mapping dei tipi di dati](../c-runtime-library/data-type-mappings.md)   
  [Mapping costanti e variabili globali](../c-runtime-library/constant-and-global-variable-mappings.md)   

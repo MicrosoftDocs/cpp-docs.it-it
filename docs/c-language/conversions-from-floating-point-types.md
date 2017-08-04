@@ -1,66 +1,83 @@
 ---
-title: "Conversioni da tipi a virgola mobile | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "conversione virgola mobile"
-  - "conversione virgola mobile"
+title: Conversioni dai tipi a virgola mobile | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- converting floating point
+- floating-point conversion
 ms.assetid: 96804c8e-fa3b-4742-9006-0082ed9e57f2
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Conversioni da tipi a virgola mobile
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: dc37188d46029319cff88de9b2402744c17311c8
+ms.contentlocale: it-it
+ms.lasthandoff: 05/18/2017
 
-Quando un valore **float** viene convertito in **double** o `long double` o un valore **double** viene convertito in `long double`, non si verifica alcun cambiamento del valore.  I valori **double** convertiti in valori **float** vengono rappresentati esattamente, ove possibile.  Se il valore non può essere rappresentato esattamente, la precisione non è mantenuta.  Se il risultato non è incluso nell'intervallo, il comportamento non è definito.  Vedere [Limiti su costanti a virgola mobile](../c-language/limits-on-floating-point-constants.md) per conoscere l'intervallo dei tipi a virgola mobile.  
+---
+# <a name="conversions-from-floating-point-types"></a>Conversioni dai tipi a virgola mobile
+Quando un valore **float** viene convertito in **double** o `long double` o un valore **double** viene convertito in `long double` non si verifica alcun cambiamento del valore. Se possibile i valori **double** convertiti in valori **float** vengono rappresentati esattamente. Se il valore non può essere rappresentato esattamente, la precisione non è mantenuta. Se il risultato non è incluso nell'intervallo, il comportamento non è definito. Per l'intervallo dei tipi a virgola mobile vedere [Limiti sulle costanti a virgola mobile](../c-language/limits-on-floating-point-constants.md).  
   
- Per convertire un valore a virgola mobile in un valore integrale, è necessario innanzitutto convertirlo in **long**, in seguito è possibile convertirlo da valore **long** al valore integrale specifico.  La parte decimale del valore a virgola mobile viene eliminata, con la conversione a **long**.  Se il risultato ha ancora una dimensione troppo grande per un tipo **long**, lo stesso risultato della conversione è indefinito.  
+ Per convertire un valore a virgola mobile in un valore integrale, è necessario prima convertirlo in **long**, quindi è possibile convertirlo da valore **long** al valore integrale specifico. La parte decimale del valore a virgola mobile viene eliminata con la conversione a **long**. Se il risultato ha ancora una dimensione troppo grande per un tipo **long** il risultato della conversione è indefinito.  
   
  **Sezione specifica Microsoft**  
   
- Nel convertire un numero a virgola mobile **double** o `long double` in un numero a virgola mobile più breve, il valore della variabile a virgola mobile viene troncato verso zero, quando si verifica un underflow.  L'overflow provoca un errore di runtime.  Si noti che il compilatore C Microsoft mappa `long double` al tipo **double**.  
+ Quando un numero a virgola mobile **double** o `long double` viene convertito in un numero a virgola mobile più breve, il valore della variabile a virgola mobile viene troncato verso lo zero in caso di underflow. L'overflow provoca un errore di runtime. Si noti che il compilatore C Microsoft esegue il mapping di `long double` sul tipo **double**.  
   
  **Fine sezione specifica Microsoft**  
   
  Nella tabella seguente sono riepilogate le conversioni dai tipi a virgola mobile.  
   
-### Conversioni dai tipi a virgola mobile  
+### <a name="conversions-from-floating-point-types"></a>Conversioni dai tipi a virgola mobile  
   
 |Da|Per|Metodo|  
-|--------|---------|------------|  
-|**float**|`char`|Conversione in **long**; conversione di **long** in `char`|  
-|**float**|**short**|Conversione in **long**; conversione di **long** in **short**|  
-|**float**|**long**|Troncare in corrispondenza del separatore decimale.  Se il risultato ha una dimensione troppo grande per essere rappresentato come **long**, lo stesso risultato è indefinito.|  
-|**float**|**unsigned short**|Conversione in **long**; conversione di **long** in `unsigned` **short**|  
-|**float**|`unsigned long`|Conversione in **long**; conversione di **long** in `unsigned` **long**|  
+|----------|--------|------------|  
+|**float**|`char`|Convertire a **long**; convertire **long** a `char`|  
+|**float**|**short**|Convertire a **long**; convertire **long** a **short**|  
+|**float**|**long**|Troncare in corrispondenza del separatore decimale. Se il valore risultante è troppo grande per essere rappresentato come **long** il risultato è indefinito.|  
+|**float**|**unsigned short**|Convertire a **long**; convertire **long** a `unsigned` **short**|  
+|**float**|`unsigned long`|Convertire a **long**; convertire **long** a `unsigned` **long**|  
 |**float**|**double**|Modificare la rappresentazione interna|  
 |**float**|`long double`|Modificare la rappresentazione interna|  
-|**double**|`char`|Conversione in **float**; conversione di **float** in `char`|  
-|**double**|**short**|Conversione in **float**; conversione di **float** in **short**|  
-|**double**|**long**|Troncare in corrispondenza del separatore decimale.  Se il risultato ha una dimensione troppo grande per essere rappresentato come **long**, lo stesso risultato è indefinito.|  
-|**double**|**unsigned short**|Conversione in **long**; conversione di **long** in **unsigned short**|  
-|**double**|`unsigned long`|Conversione in **long**; conversione di **long** in `unsigned` **long**|  
-|**double**|**float**|Rappresentare come **float**.  Se il valore **double** non può essere rappresentato esattamente come **float**, cioè comporta una perdita di precisione.  Se il valore ha una dimensione troppo grande per essere rappresentato come **float**, il risultato è indefinito.|  
-|`long double`|`char`|Conversione in **float**; conversione di **float** in `char`|  
-|`long double`|**short**|Conversione in **float**; conversione di **float** in **short**|  
-|`long double`|**long**|Troncare in corrispondenza del separatore decimale.  Se il risultato ha una dimensione troppo grande per essere rappresentato come **long**, lo stesso risultato è indefinito.|  
-|`long double`|**unsigned short**|Conversione in **long**; conversione di **long** in `unsigned` **short**|  
-|`long double`|`unsigned long`|Conversione in **long**; conversione di **long** in `unsigned` **long**|  
-|`long double`|**float**|Rappresentare come **float**.  Se il valore **double** non può essere rappresentato esattamente come **float**, cioè comporta una perdita di precisione.  Se il valore ha una dimensione troppo grande per essere rappresentato come **float**, il risultato è indefinito.|  
+|**double**|`char`|Convertire a **float**; convertire **float** a `char`|  
+|**double**|**short**|Convertire a **float**; convertire **float** a **short**|  
+|**double**|**long**|Troncare in corrispondenza del separatore decimale. Se il valore risultante è troppo grande per essere rappresentato come **long** il risultato è indefinito.|  
+|**double**|**unsigned short**|Convertire a **long**; convertire **long** a **unsigned short**|  
+|**double**|`unsigned long`|Convertire a **long**; convertire **long** a `unsigned` **long**|  
+|**double**|**float**|Rappresentare come **float**. Se il valore **double** non può essere rappresentato esattamente come **float** si verifica una perdita di precisione. Se il valore è troppo grande per essere rappresentato come **float**, il risultato è indefinito.|  
+|`long double`|`char`|Convertire a **float**; convertire **float** a `char`|  
+|`long double`|**short**|Convertire a **float**; convertire **float** a **short**|  
+|`long double`|**long**|Troncare in corrispondenza del separatore decimale. Se il valore risultante è troppo grande per essere rappresentato come **long** il risultato è indefinito.|  
+|`long double`|**unsigned short**|Convertire a **long**; convertire **long** a `unsigned` **short**|  
+|`long double`|`unsigned long`|Convertire a **long**; convertire **long** a `unsigned` **long**|  
+|`long double`|**float**|Rappresentare come **float**. Se il valore **double** non può essere rappresentato esattamente come **float** si verifica una perdita di precisione. Se il valore è troppo grande per essere rappresentato come **float**, il risultato è indefinito.|  
 |`long double`|**double**|Il valore **long double** viene considerato come **double**.|  
   
- Le conversioni da valori **float**, **double** o `long double` a `unsigned long` non sono accurate, se il valore convertito ha una dimensione maggiore del più grande valore **long** positivo.  
+ Le conversioni da valori **float**, **double** o `long double` a `unsigned long` non sono accurate se il valore convertito è superiore al valore **long** massimo positivo.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Conversioni di assegnazione](../c-language/assignment-conversions.md)

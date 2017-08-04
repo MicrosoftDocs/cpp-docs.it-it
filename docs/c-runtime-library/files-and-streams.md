@@ -1,55 +1,72 @@
 ---
-title: "File e flussi | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "file [C++]"
-  - "flussi"
+title: File e flussi | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- files [C++]
+- streams
 ms.assetid: f61e712b-eac9-4c28-bb18-97c3786ef387
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# File e flussi
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 81caecba2f34f761706acba58afbfc55058e713b
+ms.contentlocale: it-it
+ms.lasthandoff: 05/18/2017
 
-Un programma comunica con l'ambiente di destinazione tramite la lettura e scrittura dei file.  Un file può essere:  
+---
+# <a name="files-and-streams"></a>File e flussi
+Un programma comunica con l'ambiente di destinazione tramite la lettura e scrittura dei file. Un file può essere:  
   
 -   Un set di dati che è possibile leggere e scrivere più volte.  
   
--   Un flusso di byte generati da un programma \(ad esempio una pipeline\).  
+-   Un flusso di byte generati da un programma (ad esempio una pipeline).  
   
--   Un flusso di byte ricevuti da una periferica o inviati a una periferica.  
+-   Un flusso di byte ricevuti da un dispositivo periferico o inviati a un dispositivo periferico.  
   
- Gli ultimi due elementi sono file interattivi.  I file sono in genere i metodi principali tramite i quali interagire con un programma.  Manipolare tutti questi tipi di file per la maggior parte allo stesso modo, richiamando funzioni di libreria.  Includere l'intestazione standard STDIO.H per dichiarare la maggior parte di queste funzioni.  
+ Gli ultimi due elementi sono file interattivi. I file sono in genere i mezzi principali tramite i quali interagire con un programma. Manipolare tutti questi tipi di file allo stesso modo, chiamando funzioni di libreria. Includere l'intestazione standard STDIO.H per dichiarare la maggior parte di queste funzioni.  
   
- Prima di poter eseguire molte delle operazioni in un file, il file deve essere aperto.  Aprire un file comporta la sua associazione ad un flusso, una struttura di dati all'interno della libreria standard C che maschera molte differenze tra i file di vario genere.  La libreria mantiene lo stato di ogni flusso in un oggetto di tipo FILE.  
+ Prima di poter eseguire molte delle operazioni in un file, il file deve essere aperto. Aprire un file comporta la sua associazione a un flusso, una struttura di dati all'interno della libreria standard C che maschera molte differenze tra file di vari tipi. La libreria mantiene lo stato di ogni flusso in un oggetto di tipo FILE.  
   
- L'ambiente di destinazione apre tre file prima dell'avvio del programma.  È possibile aprire un file chiamando la funzione di libreria [fopen, \_wfopen](../c-runtime-library/reference/fopen-wfopen.md) con due argomenti. \(La funzione `fopen` è deprecata, utilizzare invece [fopen\_s, \_wfopen\_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)\). Il primo argomento è un nome di file.  Il secondo argomento è una stringa C che specifica:  
+ L'ambiente di destinazione apre tre file prima dell'avvio del programma. È possibile aprire un file chiamando la funzione di libreria [fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md) con due argomenti. (La funzione `fopen` è deprecata, al suo posto usare [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)). Il primo argomento è un nome file. Il secondo argomento è una stringa C che specifica:  
   
 -   Se si desidera leggere i dati dal file o scrivere dati nel file o entrambe le cose.  
   
--   Se si desidera generare nuovi contenuti per il file \(o creare un file se in precedenza non esisteva\) oppure lasciare inalterato il contenuto esistente.  
+-   Se si desidera generare nuovi contenuti per il file (o creare un file se in precedenza non esisteva) oppure lasciare inalterato il contenuto esistente.  
   
--   Se si scrive in un file il contenuto esistente potrebbe venire alterato esistenti oppure potrebbe semplicemente aggiungere byte alla fine del file.  
+-   Mentre scrivere in un file può alterare il contenuto esistente oppure potrebbe semplicemente aggiungere byte alla fine del file.  
   
 -   Se si desidera modificare un flusso di testo o un flusso binario.  
   
- Una volta aperto il file con successo, è possibile determinare se il flusso è orientato ai byte \(un flusso di byte\) o orientato ai caratteri wide \(un flusso di caratteri wide\).  Un flusso inizialmente è privo di associazione.  Richiamare alcune funzioni sullo stream lo rendono orientato ai byte, mentre altre funzioni lo rendono orientato ai caratteri wide.  Una volta stabilito, un flusso mantiene il proprio orientamento fino alla chiusura della chiamata a [fclose](../c-runtime-library/reference/fclose-fcloseall.md) o a [freopen](../c-runtime-library/reference/freopen-wfreopen.md).  
+ Una volta aperto il file con successo, è possibile determinare se il flusso è orientato ai byte (un flusso di byte) o orientato ai caratteri wide (un flusso di caratteri wide). Un flusso inizialmente è privo di associazione. Chiamare alcune funzioni in modo che operino sul flusso lo rendono orientato ai byte, mentre altre funzioni lo rendono orientato ai caratteri wide. Una volta stabilito, un flusso mantiene il proprio orientamento fino alla chiusura da parte di una chiamata a [fclose](../c-runtime-library/reference/fclose-fcloseall.md) o a [freopen](../c-runtime-library/reference/freopen-wfreopen.md).  
   
- © 1989\-2001 da P.J.  Plauger e JIM Brodie.  Tutti i diritti sono riservati.  
+ © 1989-2001 da P.J. Plauger e Jim Brodie. Tutti i diritti sono riservati.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Flussi di testo e binari](../c-runtime-library/text-and-binary-streams.md)   
  [Flussi di byte e "wide"](../c-runtime-library/byte-and-wide-streams.md)   
  [Controllo dei flussi](../c-runtime-library/controlling-streams.md)   

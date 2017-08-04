@@ -1,66 +1,83 @@
 ---
-title: "Operatori bit per bit C | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "& (operatore), bit per bit (operatori)"
-  - "^ (operatore)"
-  - "^ (operatore), bit per bit (operatori)"
-  - "| (operatore), bit per bit (operatori)"
-  - "e commerciale (operatore) (&)"
-  - "AND (operatore)"
-  - "bit per bit (operatori)"
-  - "bit per bit (operatori), Visual C"
-  - "operatori [C], bit per bit"
+title: Operatori bit per bit C | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- '| operator, bitwise operators'
+- bitwise operators, Visual C
+- bitwise operators
+- operators [C], bitwise
+- ^ operator, bitwise operators
+- AND operator
+- ampersand operator (&)
+- ^ operator
+- '& operator, bitwise operators'
 ms.assetid: e22127b1-9a2d-4876-b01d-c8f72cec3317
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Operatori bit per bit C
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 620177616e8b60d910d064d7c345633ac5155020
+ms.contentlocale: it-it
+ms.lasthandoff: 05/18/2017
 
-Gli operatori bit a bit eseguono AND bit a bit \(**&**\), OR\-esclusivo bit a bit \(**^**\) e OR\-inclusivo bit a bit \(       **&#124;** \)operazioni.  
+---
+# <a name="c-bitwise-operators"></a>Operatori bit per bit C
+Gli operatori bit per bit eseguono operazioni di tipo AND bit per bit (**&**), OR bit per bit esclusivo (**^**) e OR bit per bit inclusivo (**&#124;**).  
   
  **Sintassi**  
   
- *espressione\-AND*:  
- *Espressioni di uguaglianza*  
+ *AND-expression*:  
+ *equality-expression*  
   
- *espressione\-AND* **&**  *espressione di uguaglianza*  
+ *AND-expression*  **&**  *equality-expression*  
   
- *espressione\-OR\-esclusivo*:  
- *Espressione\-AND*  
+ *exclusive-OR-expression*:  
+ *AND-expression*  
   
- *espressione\-OR\-esclusivo*  **^**  *espressione\-AND*  
+ *exclusive-OR-expression*  **^**  *AND-expression*  
   
- *espressione OR\-inclusivo*:  
- *espressione\-OR\-esclusivo*  
+ *inclusive-OR-expression*:  
+ *exclusive-OR-expression*  
   
- *espressione\-OR\-inclusivo* &#124; *espressione\-OR\-esclusivo*  
+ *inclusive-OR-expression* &#124; *exclusive-OR-expression*  
   
- Gli operandi degli operatori bit a bit devono avere tipo integral, ma il loro tipi possono essere diversi.  Questi operatori eseguono le consuete conversioni aritmetiche; il tipo del risultato è il tipo degli operandi dopo la conversione.  
+ Gli operandi degli operatori bit per bit devono avere tipi di dati integrali, ma i tipi possono essere diversi. Questi operatori eseguono le conversioni aritmetiche comuni; il tipo del risultato è il tipo degli operandi dopo la conversione.  
   
- Gli operatori bit a bit del C sono descritti di seguito:  
+ Gli operatori bit per bit C sono descritti di seguito:  
   
 |Operatore|Descrizione|  
-|---------------|-----------------|  
-|**&**|L'operatore AND bit a bit confronta ogni frammento del primo operando con il corrispondente bit del secondo operando.  Se entrambi i bit sono a 1 , il corrispondente bit risultato viene impostato a 1.  In caso contrario, il bit corrispondente al risultato viene impostato a 0.|  
-|**^**|L'operatore OR\-esclusivo bit a bit confronta ogni bit del primo operando con il corrispondente bit del secondo operando.  Se un bit è 0 e l'altro bit è 1, il bit corrispondente al risultato viene impostato a 1.  In caso contrario, il bit corrispondente al risultato viene impostato a 0.|  
-|**&#124;**|L'operatore bit a bit OR\-inclusivo confronta ogni bit del primo operando con il corrispondente bit del secondo operando.  Se uno dei bit è 1, il bit corrispondente al risultato viene impostato a 1.  In caso contrario, il bit corrispondente al risultato viene impostato a 0.|  
+|--------------|-----------------|  
+|**&**|L'operatore AND bit per bit confronta ogni bit del primo operando con il bit corrispondente del secondo operando. Se entrambi i bit sono 1, il bit del risultato corrispondente viene impostato su 1. In caso contrario, il bit di risultato corrispondente viene impostato su 0.|  
+|**^**|L'operatore OR bit per bit esclusivo confronta ogni bit del primo operando con il bit corrispondente del secondo operando. Se un bit è 0 e l'altro bit è 1, il bit di risultato corrispondente viene impostato su 1. In caso contrario, il bit di risultato corrispondente viene impostato su 0.|  
+|**&#124;**|L'operatore OR bit per bit inclusivo confronta ogni bit del primo operando con il bit corrispondente del secondo operando. Se un bit è 1 bit, il bit di risultato corrispondente viene impostato su 1. In caso contrario, il bit di risultato corrispondente viene impostato su 0.|  
   
-## Esempi  
- Queste dichiarazioni vengono utilizzate per i tre esempi seguenti:  
+## <a name="examples"></a>Esempi  
+ Queste dichiarazioni vengono usate per gli esempi seguenti:  
   
 ```  
 short i = 0xAB00;  
@@ -70,7 +87,7 @@ short n;
 n = i & j;  
 ```  
   
- Il risultato assegnato a `n` in questo primo esempio è lo stesso `i` \(0xAB00 esadecimale\).  
+ Il risultato assegnato a `n` in questo primo esempio è identico a `i` (0xAB00 esadecimale).  
   
 ```  
 n = i | j;  
@@ -78,11 +95,11 @@ n = i | j;
 n = i ^ j;  
 ```  
   
- L'OR inclusivo bit a bit nel secondo esempio risulta nel valore 0xABCD \(esadecimale\), mentre l'OR esclusivo bit a bit nel terzo esempio produce esadecimale 0xCD \(esadecimale\).  
+ L'operatore OR bit per bit inclusivo nel secondo esempio restituisce il valore 0xABCD (esadecimale), mentre l'operatore OR bit per bit esclusivo nel terzo esempio produce 0xCD (esadecimale).  
   
- **Specifici di Microsoft**  
+ **Sezione specifica Microsoft**  
   
- Il risultato di un'operazione bit a bit sugli interi con segno è definito dal compilatore in base allo standard ANSI C.  Per il compilatore C di Microsoft, le operazioni bit a bit sugli interi con segno funzionano allo stesso modo delle operazioni bit a bit sugli interi senza segno.  Ad esempio, `-16 & 99` può essere espresso binario come  
+ I risultati dell'elaborazione bit per bit su Integer con segno sono definiti dall'implementazione, in base allo standard C ANSI. Per il compilatore Microsoft C le operazioni bit per bit su Integer con segno funzionano in modo analogo alle operazioni bit per bit sui valori interi senza segno. Ad esempio, `-16 & 99` può essere espresso in formato binario come  
   
 ```  
   11111111 11110000  
@@ -91,11 +108,11 @@ n = i ^ j;
   00000000 01100000  
 ```  
   
- Il risultato dell' AND bit a bit è il decimale 96.  
+ Il risultato dell'operazione AND bit per bit è 96 decimale.  
   
- **Specifica END Microsoft**  
+ **Fine sezione specifica Microsoft**  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Operatore AND bit per bit: &](../cpp/bitwise-and-operator-amp.md)   
  [Operatore OR bit per bit esclusivo: ^](../cpp/bitwise-exclusive-or-operator-hat.md)   
  [Operatore OR bit per bit inclusivo: &#124;](../cpp/bitwise-inclusive-or-operator-pipe.md)

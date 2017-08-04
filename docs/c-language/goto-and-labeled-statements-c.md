@@ -1,50 +1,67 @@
 ---
-title: "Istruzioni goto e con etichetta (C) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "goto"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "goto (parola chiave) [C]"
-  - "labeled (istruzione)"
-  - "istruzioni, labeled"
+title: Istruzioni goto e con etichetta (C) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- goto
+dev_langs:
+- C++
+helpviewer_keywords:
+- labeled statement
+- statements, labeled
+- goto keyword [C]
 ms.assetid: 3d0473dc-4b18-4fcc-9616-31a38499d7d7
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Istruzioni goto e con etichetta (C)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 2e42906c932375ec62597868f7c106712bd25cbc
+ms.contentlocale: it-it
+ms.lasthandoff: 05/18/2017
 
-L'istruzione `goto` trasferisce il controllo a un'etichetta.  L'etichetta specificata deve risiedere nella stessa funzione e può apparire solo prima di un'istruzione nella stessa funzione.  
+---
+# <a name="goto-and-labeled-statements-c"></a>Istruzioni goto e con etichetta (C)
+L'istruzione `goto` trasferisce il controllo a un'etichetta. L'etichetta specificata deve risiedere nella stessa funzione e può apparire solo prima di un'istruzione nella stessa funzione.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
  *statement*:  
- *labeled\-statement*  
+ *labeled-statement*  
   
- *jump\-statement*  
+ *jump-statement*  
   
- *jump\-statement*:  
+ *jump-statement*:  
  **goto**  *identifier*  **;**  
   
- *labeled\-statement*:  
+ *labeled-statement*:  
  *identifier*  **:**  *statement*  
   
  Un'etichetta dell'istruzione è significativa solo a un'istruzione `goto`; in qualsiasi altro contesto, un'istruzione contrassegnata viene eseguita indipendentemente dall'etichetta.  
   
- *jump\-statement* deve risiedere nella stessa funzione e può apparire prima solo di un'istruzione nella stessa funzione.  Il set di nomi *identifier* che seguono `goto` dispone del proprio spazio nomi in modo che i nomi non interferiscono con altri identificatori.  Le etichette non possono essere ridichiarate.  Vedere [Spazi dei nomi](../c-language/name-spaces.md) per ulteriori informazioni.  
+ Un elemento *jump-statement* deve risiedere nella stessa funzione e può apparire prima di una sola istruzione nella stessa funzione. Il set di nomi *identifier* che segue `goto` dispone del proprio spazio nomi in modo che i nomi non interferiscano con altri identificatori. Le etichette non possono essere ridichiarate. Per altre informazioni, vedere [Spazi dei nomi](../c-language/name-spaces.md).  
   
- È buona norma programmare lo stile per utilizzare l'istruzione **break**, **continue** e `return` piuttosto che `goto` quando possibile.  Poiché l'istruzione **break** termina solo da un livello del ciclo, potrebbe essere necessario `goto` per uscire da un ciclo dall'interno di un ciclo eccessivamente annidato.  
+ Per uno stile di programmazione ottimale è consigliabile preferire le istruzioni **break**, **continue** e `return` all'istruzione `goto` quando possibile. Dato che l'istruzione **break** termina solo un livello del ciclo, potrebbe essere necessaria un'istruzione `goto` per uscire da un ciclo incluso in un ciclo annidato più interno.  
   
  In questo esempio viene illustrata l'istruzione `goto`:  
   
@@ -76,5 +93,5 @@ int main()
   
  In questo esempio, un'istruzione `goto` trasferisce il controllo per puntare `stop` etichettate quando `i` è uguale a 5.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Istruzioni](../c-language/statements-c.md)

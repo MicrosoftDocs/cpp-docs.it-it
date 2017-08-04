@@ -1,68 +1,85 @@
 ---
-title: "_pgmptr, _wpgmptr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "pgmptr"
-  - "_pgmptr"
-  - "wpgmptr"
-  - "_wpgmptr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_pgmptr (funzione)"
-  - "_wpgmptr (funzione)"
-  - "pgmptr (funzione)"
-  - "wpgmptr (funzione)"
+title: _pgmptr, _wpgmptr | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- pgmptr
+- _pgmptr
+- wpgmptr
+- _wpgmptr
+dev_langs:
+- C++
+helpviewer_keywords:
+- wpgmptr function
+- _wpgmptr function
+- _pgmptr function
+- pgmptr function
 ms.assetid: 4d44b515-0eff-4136-8bc4-684195f218f5
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# _pgmptr, _wpgmptr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 221d1bd8259d8922695e9060eb8f2ada63d63631
+ms.contentlocale: it-it
+ms.lasthandoff: 05/18/2017
 
-Percorso del file eseguibile.  Deprecato; utilizzare [\_get\_pgmptr](../c-runtime-library/reference/get-pgmptr.md) e [\_get\_wpgmptr](../c-runtime-library/reference/get-wpgmptr.md).  
+---
+# <a name="pgmptr-wpgmptr"></a>_pgmptr, _wpgmptr
+Percorso del file eseguibile. Deprecate. Usare [_get_pgmptr](../c-runtime-library/reference/get-pgmptr.md) e [_get_wpgmptr](../c-runtime-library/reference/get-wpgmptr.md).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 extern char *_pgmptr;  
 extern wchar_t *_wpgmptr;  
 ```  
   
-## Note  
- Quando un programma viene eseguito dall'interprete di comando \(Cmd.exe\), `_pgmptr` viene automaticamente inizializzato al percorso completo del file eseguibile.  Ad esempio, se Hello.exe è in C:\\BIN e C:\\BIN nel percorso, `_pgmptr` è impostato su C:\\BIN\\Hello.exe quando si esegue:  
+## <a name="remarks"></a>Note  
+ Quando un programma viene eseguito dall'interprete dei comandi (Cmd.exe), `_pgmptr` viene automaticamente inizializzato al percorso completo del file eseguibile. Ad esempio, se Hello.exe è in C:\BIN e C:\BIN nel percorso, `_pgmptr` è impostato su C:\BIN\Hello.exe quando si esegue:  
   
 ```  
 C> hello   
 ```  
   
- Quando un programma non viene eseguito dalla riga di comando, `_pgmptr` è possibile inizializzarlo con il nome del programma \(il nome di base del file senza l'estensione di file\) o ad un nome file, un percorso relativo oppure un percorso completo.  
+ Quando un programma non viene eseguito dalla riga di comando, `_pgmptr` potrebbe essere inizializzato al nome del programma (il nome di base del file senza l'estensione di file) o a un nome file, un percorso relativo oppure un percorso completo.  
   
- `_wpgmptr` è l'equivalente a caratteri estesi di `_pgmptr` da utilizzare con i programmi che utilizzano `wmain`.  
+ `_wpgmptr` è l'equivalente a caratteri wide di `_pgmptr` da utilizzare con i programmi che utilizzano `wmain`.  
   
-### Mapping di routine di testo generico  
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
-|Routine Tchar.h|\_UNICODE e \_MBCS non definiti|\_MBCS definito|\_UNICODE definito|  
-|---------------------|-------------------------------------|---------------------|------------------------|  
+|Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tpgmptr`|`_pgmptr`|`_pgmptr`|`_wpgmptr`|  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Variabile|Intestazione obbligatoria|  
-|---------------|-------------------------------|  
-|`_pgmptr`, `_wpgmptr`|\<stdlib.h\>|  
+|--------------|---------------------|  
+|`_pgmptr`, `_wpgmptr`|\<stdlib.h>|  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Nel programma seguente viene illustrato l'utilizzo di `_pgmptr`.  
   
 ```  
@@ -80,7 +97,7 @@ int main( void )
 }  
 ```  
   
- È possibile utilizzare `_wpgmptr` modificando `%Fs` a `%S` e `main` a `wmain`.  
+ È possibile utilizzare `_wpgmptr` modificando `%Fs` in `%S` e `main` in `wmain`.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Variabili globali](../c-runtime-library/global-variables.md)

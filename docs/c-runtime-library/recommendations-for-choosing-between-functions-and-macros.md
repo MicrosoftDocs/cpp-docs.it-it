@@ -1,33 +1,50 @@
 ---
-title: "Suggerimenti per la scelta tra funzioni e macro | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.functions"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "funzioni [CRT], macro"
-  - "macro, funzioni"
+title: Suggerimenti per la scelta tra funzioni e macro | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.functions
+dev_langs:
+- C++
+helpviewer_keywords:
+- functions [CRT], vs. macros
+- macros, vs. functions
 ms.assetid: 18a633d6-cf1c-470c-a649-fa7677473e2b
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Suggerimenti per la scelta tra funzioni e macro
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 30b5a2c779e12dc16c37222f00ec45f296825498
+ms.contentlocale: it-it
+ms.lasthandoff: 05/18/2017
 
-La maggior parte delle routine di libreria runtime di Microsoft sono funzioni compilate o assemblate, ma alcune routine sono implementate come macro.  Quando un file di intestazione dichiara sia una versione funzione che una macro di una routine, la definizione macro ha la precedenza, perché viene sempre dopo la dichiarazione di funzione.  Quando viene richiamata una routine che viene implementata sia come una funzione che come una macro, è possibile imporre al compilatore di utilizzare la versione in funzione in due modi:  
+---
+# <a name="recommendations-for-choosing-between-functions-and-macros"></a>Suggerimenti per la scelta tra funzioni e macro
+La maggior parte delle routine delle librerie run-time di Microsoft è costituita da funzioni compilate o assemblate, ma alcune routine sono implementate come macro. Quando un file di intestazione dichiara sia una versione funzione che una versione macro di una routine, la versione macro ha la precedenza, perché viene sempre dopo la dichiarazione di funzione. Quando si chiama una routine implementata sia come funzione che come macro, è possibile imporre al compilatore di usare la versione funzione in due modi:  
   
--   Racchiudere il nome della routine tra parentesi.  
+-   Racchiudendo il nome della routine tra parentesi.  
   
     ```  
     #include <ctype.h>  
@@ -36,20 +53,20 @@ La maggior parte delle routine di libreria runtime di Microsoft sono funzioni co
                         // function version of toupper.  
     ```  
   
--   "Rimuovere la definizione" macro con la direttiva `#undef` :  
+-   "Rimuovendo" la versione macro con la direttiva `#undef`:  
   
     ```  
     #include <ctype.h>  
     #undef _toupper  
     ```  
   
- Se è necessario scegliere tra l'implementazione in funzione e l'implementazione in macro di una routine di libreria, considerare i seguenti compromessi:  
+ Se è necessario scegliere tra l'implementazione come funzione e l'implementazione come macro di una routine di libreria, tenere in considerazione i compromessi seguenti:  
   
--   **Velocità contro dimensione** Il vantaggio principale della macro è il tempo di esecuzione più veloce.  Durante la pre\-elaborazione, una macro viene espansa \(sostituita dalla relativa definizione\) in linea quando viene utilizzata.  Una definizione di funzione viene eseguita solo una volta indipendentemente dal numero di volte in cui viene chiamata.  Le macro possono aumentare la dimensione del codice ma non hanno l'overhead associato alle chiamate di funzione.  
+-   **Velocità contro dimensioni** Il vantaggio principale delle macro è la velocità di esecuzione. Durante la pre-elaborazione, una macro viene espansa (sostituita dalla definizione corrispondente) inline ogni volta che viene usata. Una definizione di funzione viene eseguita solo una volta indipendentemente dal numero di volte in cui viene chiamata. Le macro possono aumentare le dimensioni del codice ma non comportano il sovraccarico associato alle chiamate di funzione.  
   
--   **Function evaluation** Una funzione restituisce un indirizzo, una macro no.  Pertanto non è possibile utilizzare un nome di macro in contesti che richiedono un puntatore.  Ad esempio, è possibile dichiarare un puntatore a una funzione, ma non un puntatore a una macro.  
+-   **Valutazione della funzione** Una funzione restituisce un indirizzo, una macro no. Pertanto non è possibile usare un nome di macro in contesti che richiedono un puntatore. È ad esempio possibile dichiarare un puntatore a una funzione, ma non un puntatore a una macro.  
   
--   **Type\-checking** Quando si dichiara una funzione, il compilatore può controllare i tipi di argomento.  Poiché non è possibile dichiarare una macro, il compilatore non può controllare i tipi di argomenti della macro; sebbene possa verificare il numero di argomenti passati a una macro.  
+-   **Controllo del tipo** Quando si dichiara una funzione, il compilatore può controllare i tipi di argomento. Poiché non è possibile dichiarare una macro, il compilatore non può controllare i tipi di argomenti della macro, anche se può verificare il numero di argomenti passati a una macro.  
   
-## Vedere anche  
- [Funzionalità libreria CRT](../c-runtime-library/crt-library-features.md)
+## <a name="see-also"></a>Vedere anche  
+ [CRT Library Features](../c-runtime-library/crt-library-features.md) (Funzionalità della libreria CRT)
