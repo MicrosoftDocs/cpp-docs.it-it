@@ -1,789 +1,398 @@
 # [Riferimenti alla compilazione in C/C++](c-cpp-building-reference.md)
-
 # [Compilazione di un programma C/C++](compiling-a-c-cpp-program.md)
-
 ## [Impostazione delle opzioni del compilatore](setting-compiler-options.md)
-
 ### [Sintassi della riga di comando del compilatore](compiler-command-line-syntax.md)
-
 #### [Sintassi del nome file di CL](cl-filename-syntax.md)
-
 #### [Ordine delle opzioni CL](order-of-cl-options.md)
-
 #### [Valore restituito di cl.exe](return-value-of-cl-exe.md)
-
 ### [Variabili di ambiente CL](cl-environment-variables.md)
-
 ### [File di comando di CL](cl-command-files.md)
-
 ### [Compilazione veloce](fast-compilation.md)
-
 ### [CL richiama il linker](cl-invokes-the-linker.md)
-
 ## [Opzioni del compilatore](compiler-options.md)
-
 ### [Opzioni del compilatore elencate per categoria](compiler-options-listed-by-category.md)
-
 ### [Opzioni del compilatore elencate in ordine alfabetico](compiler-options-listed-alphabetically.md)
-
 #### [@ (specifica un file di risposta del compilatore)](at-specify-a-compiler-response-file.md)
-
 #### [-AI (specifica le directory di metadati)](ai-specify-metadata-directories.md)
-
 #### [-analyze (analisi codice)](analyze-code-analysis.md)
-
 #### [-arch (architettura minima della CPU)](arch-minimum-cpu-architecture.md)
-
 ##### [-arch (x86)](arch-x86.md)
-
 ##### [-arch (x64)](arch-x64.md)
-
 ##### [-arch (ARM)](arch-arm.md)
-
+#### [-await (abilita il supporto di coroutine)](await-enable-coroutine-support.md)
 #### [-bigobj (aumenta il numero di sezioni nel file OBJ)](bigobj-increase-number-of-sections-in-dot-obj-file.md)
-
 #### [-C (conserva i commenti durante la pre-elaborazione)](c-preserve-comments-during-preprocessing.md)
-
 #### [-c (compila senza collegamenti)](c-compile-without-linking.md)
-
 #### [-cgthreads (thread di generazione di codice)](cgthreads-code-generation-threads.md)
-
 #### [-clr (compilazione Common Language Runtime)](clr-common-language-runtime-compilation.md)
-
 ##### [Limitazioni di -clr](clr-restrictions.md)
-
+#### [-constexpr (controlla la valutazione di constexpr)](constexpr-control-constexpr-evaluation.md)
 #### [-D (definizioni preprocessore)](d-preprocessor-definitions.md)
-
 #### [-diagnostics (opzioni di diagnostica del compilatore)](diagnostics-compiler-diagnostic-options.md)
-
 #### [-doc (elabora i commenti per la documentazione) (C/C++)](doc-process-documentation-comments-c-cpp.md)
-
 #### [-E (pre-elabora in stdout)](e-preprocess-to-stdout.md)
-
 #### [-EH (modello di gestione delle eccezioni)](eh-exception-handling-model.md)
-
 #### [-EP (pre-elabora in stdout senza direttive #line)](ep-preprocess-to-stdout-without-hash-line-directives.md)
-
 #### [-errorReport (segnala gli errori interni del compilatore)](errorreport-report-internal-compiler-errors.md)
-
 #### [-execution-charset (set esecuzione Character Set)](execution-charset-set-execution-character-set.md)
-
 #### [-F (imposta la dimensione dello stack)](f-set-stack-size.md)
-
 #### [Opzioni del file di output (-F)](output-file-f-options.md)
-
 ##### [-FA, -Fa (file di listato)](fa-fa-listing-file.md)
-
 ##### [Specifica del nome del percorso](specifying-the-pathname.md)
-
 ##### [-FD (ricompilazione minima IDE)](fd-ide-minimal-rebuild.md)
-
 ##### [-Fd (nome file database di programma)](fd-program-database-file-name.md)
-
 ##### [-Fe (specifica file EXE)](fe-name-exe-file.md)
-
 ##### [-Fi (pre-elaborazione nome file di output)](fi-preprocess-output-file-name.md)
-
 ##### [-FI (specifica il file di inclusione da usare)](fi-name-forced-include-file.md)
-
 ##### [-Fm (specifica file map)](fm-name-mapfile.md)
-
 ##### [-Fo (nome file oggetto)](fo-object-file-name.md)
-
 ##### [-Fp (specifica file pch)](fp-name-dot-pch-file.md)
-
 ##### [-FR, -Fr (crea file sbr)](fr-fr-create-dot-sbr-file.md)
-
 ##### [-FU (specifica file #using da usare)](fu-name-forced-hash-using-file.md)
-
 ##### [-Fx (esegue il merge del codice)](fx-merge-injected-code.md)
-
 #### [-favor (ottimizzato per le specifiche di architettura)](favor-optimize-for-architecture-specifics.md)
-
 #### [-FC (percorso completo del file di codice sorgente nella diagnostica)](fc-full-path-of-source-code-file-in-diagnostics.md)
-
 #### [-fp (specifica il comportamento della virgola mobile)](fp-specify-floating-point-behavior.md)
-
 #### [-FS (forza scritture PDB sincrone)](fs-force-synchronous-pdb-writes.md)
-
 #### [-GA (ottimizza per applicazione Windows)](ga-optimize-for-windows-application.md)
-
 #### [-Gd, -Gr, -Gv, -Gz (convenzione di chiamata)](gd-gr-gv-gz-calling-convention.md)
-
 #### [-Ge (attiva ricerche dello stack)](ge-enable-stack-probes.md)
-
 #### [-GF (elimina stringhe duplicate)](gf-eliminate-duplicate-strings.md)
-
 #### [-GH (attiva funzione hook _pexit)](gh-enable-pexit-hook-function.md)
-
 #### [-Gh (attiva funzione hook _penter)](gh-enable-penter-hook-function.md)
-
 #### [-GL (ottimizzazione intero programma)](gl-whole-program-optimization.md)
-
 #### [-Gm (attiva ricompilazione minima)](gm-enable-minimal-rebuild.md)
-
 #### [-GR (attiva informazioni sui tipi in fase di esecuzione)](gr-enable-run-time-type-information.md)
-
 #### [-GS (controllo sicurezza buffer)](gs-buffer-security-check.md)
-
 #### [-Gs (verifica le chiamate ai controlli di stack)](gs-control-stack-checking-calls.md)
-
 #### [-guard (abilita la protezione del flusso di controllo)](guard-enable-control-flow-guard.md)
-
 #### [-GT (supporta archiviazione locale di thread indipendente da fiber)](gt-support-fiber-safe-thread-local-storage.md)
-
 #### [-Gw (ottimizza dati globali)](gw-optimize-global-data.md)
-
 #### [-GX (attiva gestione eccezioni)](gx-enable-exception-handling.md)
-
 #### [-Gy (attiva collegamento a livello di funzione)](gy-enable-function-level-linking.md)
-
 #### [-GZ (attiva controllo errori in fase di esecuzione dello stack frame)](gz-enable-stack-frame-run-time-error-checking.md)
-
 #### [-H (limita la lunghezza dei nomi esterni)](h-restrict-length-of-external-names.md)
-
 #### [-HELP (Guida della riga di comando del compilatore)](help-compiler-command-line-help.md)
-
 #### [-homeparams (copia i parametri del registro nello stack)](homeparams-copy-register-parameters-to-stack.md)
-
 #### [-hotpatch (crea immagine con funzionalità di patch a caldo)](hotpatch-create-hotpatchable-image.md)
-
 #### [-I (directory di inclusione aggiuntive)](i-additional-include-directories.md)
-
 #### [-J (il tipo char predefinito è unsigned)](j-default-char-type-is-unsigned.md)
-
 #### [-kernel (crea file binario in modalità Kernel)](kernel-create-kernel-mode-binary.md)
-
 #### [-link (passaggio delle opzioni al linker)](link-pass-options-to-linker.md)
-
 #### [-LN (crea modulo MSIL)](ln-create-msil-module.md)
-
 #### [-MD, -MT, -LD (uso della libreria di runtime)](md-mt-ld-use-run-time-library.md)
-
 #### [-MP (compilazione con più processi)](mp-build-with-multiple-processes.md)
-
 #### [-nologo (non visualizza il messaggio di avvio) (C/C++)](nologo-suppress-startup-banner-c-cpp.md)
-
 #### [Opzioni -O (ottimizza codice)](o-options-optimize-code.md)
-
 ##### [-O1, -O2 (riduce dimensione, Ottimizza velocità)](o1-o2-minimize-size-maximize-speed.md)
-
 ##### [-Ob (espansione funzioni inline)](ob-inline-function-expansion.md)
-
 ##### [-Od (disabilita (Debug))](od-disable-debug.md)
-
 ##### [-Og (ottimizzazioni globali)](og-global-optimizations.md)
-
 ##### [-Oi (genera funzioni intrinseche)](oi-generate-intrinsic-functions.md)
-
 ##### [-Os, -Ot (ottimizza per dimensione codice, ottimizza per velocità codice)](os-ot-favor-small-code-favor-fast-code.md)
-
 ##### [-Ox (ottimizzazione completa)](ox-full-optimization.md)
-
 ##### [-Oy (omissione dei puntatori ai frame)](oy-frame-pointer-omission.md)
-
 #### [-openmp (attiva supporto OpenMP 2.0)](openmp-enable-openmp-2-0-support.md)
-
 #### [-P (pre-elabora in un file)](p-preprocess-to-a-file.md)
-
 #### [-permissive- (conformità agli standard)](permissive-standards-conformance.md)
-
 #### [Opzioni -Q (operazioni di basso livello)](q-options-low-level-operations.md)
-
 ##### [-Qfast_transcendentals (forza funzioni trascendenti veloci)](qfast-transcendentals-force-fast-transcendentals.md)
-
 ##### [-QIfist (elimina _ftol)](qifist-suppress-ftol.md)
-
 ##### [-Qimprecise_fwaits (rimuove comandi fwait all'interno dei blocchi try)](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)
-
 ##### [-Qpar (Parallelizzazione automatica)](qpar-auto-parallelizer.md)
-
 ##### [-Qvec-report (livello di segnalazione parallelizzazione automatica)](qpar-report-auto-parallelizer-reporting-level.md)
-
 ##### [-Qsafe_fp_loads](qsafe-fp-loads.md)
-
 ##### [-Qvec-report (livello di segnalazione vettorizzazione automatica)](qvec-report-auto-vectorizer-reporting-level.md)
-
 #### [-RTC (controlli di runtime)](rtc-run-time-error-checks.md)
-
 #### [-sdl (abilita altri controlli di sicurezza)](sdl-enable-additional-security-checks.md)
-
 #### [-showIncludes (elenca i file di inclusione)](showincludes-list-include-files.md)
-
 #### [-source-charset (imposta set di caratteri di origine)](source-charset-set-source-character-set.md)
-
 #### [-std (specifica la versione standard del linguaggio)](std-specify-language-standard-version.md)
-
 #### [-Tc, -Tp, -TC, -TP (specifica il tipo di file di origine)](tc-tp-tc-tp-specify-source-file-type.md)
-
 #### [-U, -u (annulla le definizione dei simboli)](u-u-undefine-symbols.md)
-
 #### [-utf-8 (imposta i set di caratteri eseguibili e di origine su UTF-8)](utf-8-set-source-and-executable-character-sets-to-utf-8.md)
-
 #### [-V (numero versione)](v-version-number.md)
-
 #### [-validate-charset (convalida per i caratteri compatibili)](validate-charset-validate-for-compatible-characters.md)
-
 #### [-vd (disabilita spostamenti costruttori)](vd-disable-construction-displacements.md)
-
 #### [-vmb, -vmg (metodo di rappresentazione)](vmb-vmg-representation-method.md)
-
 #### [-vmm, -vms, -vmv (rappresentazione generale)](vmm-vms-vmv-general-purpose-representation.md)
-
 #### [-volatile (interpretazione della parole chiave volatile)](volatile-volatile-keyword-interpretation.md)
-
 #### [-w, -W0, -W1, -W2, -W3, -W4, -w1, -w2, -w3, -w4, -Wall, -wd, -we, -wo, -Wv, -WX (Livello di avviso)](compiler-option-warning-level.md)
-
 #### [-WL (attiva le informazioni di diagnostica su una sola riga)](wl-enable-one-line-diagnostics.md)
-
 #### [-Wp64 (rileva errori di portabilità a 64 bit)](wp64-detect-64-bit-portability-issues.md)
-
 #### [-X (ignora percorso di inclusione standard)](x-ignore-standard-include-paths.md)
-
 #### [-Y (intestazioni precompilate)](y-precompiled-headers.md)
-
 ##### [-Y- (ignora le opzioni dell'intestazione precompilata)](y-ignore-precompiled-header-options.md)
-
 ##### [-Yc (crea il file di intestazione precompilata)](yc-create-precompiled-header-file.md)
-
 ##### [-Yd (inserisce le informazioni di debug nel file oggetto)](yd-place-debug-information-in-object-file.md)
-
 ##### [-Yl (inserisce il riferimento PCH per la libreria di debug)](yl-inject-pch-reference-for-debug-library.md)
-
 ##### [-Yu (usa il file di intestazione precompilata)](yu-use-precompiled-header-file.md)
-
 #### [-Z7, -Zi, -ZI (formato informazioni di debug)](z7-zi-zi-debug-information-format.md)
-
 #### [-Za, -Ze (disabilita estensioni linguaggio)](za-ze-disable-language-extensions.md)
-
 ##### [Estensioni Microsoft per C e C++](microsoft-extensions-to-c-and-cpp.md)
-
 #### [-Zc (conformità)](zc-conformance.md)
-
 ##### [-Zc:forScope (imponi conformità nell'ambito di un ciclo For)](zc-forscope-force-conformance-in-for-loop-scope.md)
-
 ##### [-Zc:wchar_t (wchar_t Is Tipo nativo)](zc-wchar-t-wchar-t-is-native-type.md)
-
 ##### [-Zc:auto (deduzione del tipo di variabile)](zc-auto-deduce-variable-type.md)
-
 ##### [-Zc:trigraphs (sostituzione trigrammi)](zc-trigraphs-trigraphs-substitution.md)
-
 ##### [-Zc:rvalueCast (applica regole di conversione dei tipi)](zc-rvaluecast-enforce-type-conversion-rules.md)
-
 ##### [-Zc:strictStrings (disabilita la conversione del tipo di valore letterale stringa)](zc-strictstrings-disable-string-literal-type-conversion.md)
-
 ##### [-Zc:inline (rimuove COMDAT senza riferimenti)](zc-inline-remove-unreferenced-comdat.md)
-
 ##### [-Zc:implicitNoexcept (identificatori di eccezioni implicite)](zc-implicitnoexcept-implicit-exception-specifiers.md)
-
 #### [-Zg (genera i prototipi delle funzioni)](zg-generate-function-prototypes.md)
-
 #### [-Zl (omette il nome della libreria predefinita)](zl-omit-default-library-name.md)
-
 #### [-Zm (specifica il limite di allocazione della memoria per l'intestazione precompilata)](zm-specify-precompiled-header-memory-allocation-limit.md)
-
 #### [-Zo (ottimizza il debug)](zo-enhance-optimized-debugging.md)
-
 #### [-Zp (allineamento membri struct)](zp-struct-member-alignment.md)
-
 #### [-Zs (solo controllo della sintassi)](zs-syntax-check-only.md)
-
 #### [-ZW (compilazione di Windows Runtime)](zw-windows-runtime-compilation.md)
-
 ## [Creazione di file di intestazione precompilata](creating-precompiled-header-files.md)
-
 ## [Supporto Unicode nel compilatore e nel linker](unicode-support-in-the-compiler-and-linker.md)
-
 # [Collegamento](linking.md)
-
 ## [Impostazione delle opzioni del linker](setting-linker-options.md)
-
 ### [Sintassi della riga di comando del linker](linker-command-line-syntax.md)
-
 ### [File di comando LINK](link-command-files.md)
-
 ### [Variabili di ambiente LINK](link-environment-variables.md)
-
 ## [Opzioni del linker](linker-options.md)
-
 ### [Opzioni di LINK controllate dal compilatore](compiler-controlled-link-options.md)
-
 ### [File di input LINK](link-input-files.md)
-
 #### [File OBJ come input del linker](dot-obj-files-as-linker-input.md)
-
 #### [File con estensione netmodule come input del linker](netmodule-files-as-linker-input.md)
-
 ##### [Scelta del formato dei file di input con estensione netmodule](choosing-the-format-of-netmodule-input-files.md)
-
 #### [File LIB come input del linker](dot-lib-files-as-linker-input.md)
-
 #### [File EXP come input del linker](dot-exp-files-as-linker-input.md)
-
 #### [File DEF come input del linker](dot-def-files-as-linker-input.md)
-
 #### [File PDB come input del linker](dot-pdb-files-as-linker-input.md)
-
 #### [File RES come input del linker](dot-res-files-as-linker-input.md)
-
 #### [File EXE come input del linker](dot-exe-files-as-linker-input.md)
-
 #### [File TXT come input del linker](dot-txt-files-as-linker-input.md)
-
 #### [File ILK come input del linker](dot-ilk-files-as-linker-input.md)
-
 ### [Output di LINK](link-output.md)
-
 ### [Parole riservate](reserved-words.md)
-
 ### [@ (specifica un file di risposta del linker)](at-specify-a-linker-response-file.md)
-
 ### [-ALIGN (allineamento sezione)](align-section-alignment.md)
-
 ### [-ALLOWBIND (prevenzione dell'associazione di DLL)](allowbind-prevent-dll-binding.md)
-
 ### [-ALLOWISOLATION (ricerca di manifesti)](allowisolation-manifest-lookup.md)
-
 ### [-APPCONTAINER (app di Windows Store)](appcontainer-windows-store-app.md)
-
 ### [-ASSEMBLYDEBUG (aggiunge DebuggableAttribute)](assemblydebug-add-debuggableattribute.md)
-
 ### [-ASSEMBLYLINKRESOURCE (collegamento a risorse .NET Framework)](assemblylinkresource-link-to-dotnet-framework-resource.md)
-
 ### [-ASSEMBLYMODULE (aggiunge un modulo MSIL all'assembly)](assemblymodule-add-a-msil-module-to-the-assembly.md)
-
 ### [-ASSEMBLYRESOURCE (incorpora una risorsa gestita)](assemblyresource-embed-a-managed-resource.md)
-
 ### [-BASE (indirizzo di base)](base-base-address.md)
-
 ### [-CGTHREADS (thread del compilatore)](cgthreads-compiler-threads.md)
-
 ### [-CLRIMAGETYPE (specifica il tipo di immagine CLR)](clrimagetype-specify-type-of-clr-image.md)
-
 ### [-CLRUNMANAGEDCODECHECK (aggiunge SupressUnmanagedCodeSecurityAttribute)](clrunmanagedcodecheck-add-supressunmanagedcodesecurityattribute.md)
-
 ### [-CLRSUPPORTLASTERROR (mantiene l'ultimo codice di errore per le chiamate PInvoke)](clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls.md)
-
 ### [-CLRTHREADATTRIBUTE (imposta l'attributo thread CLR)](clrthreadattribute-set-clr-thread-attribute.md)
-
 ### [-DEBUG (genera informazioni di debug)](debug-generate-debug-info.md)
-
 ### [-DEBUGTYPE (opzioni delle informazioni di debug)](debugtype-debug-info-options.md)
-
 ### [-DEF (specifica il file di definizione moduli)](def-specify-module-definition-file.md)
-
 ### [-DEFAULTLIB (specifica la libreria predefinita)](defaultlib-specify-default-library.md)
-
 ### [-DELAY (impostazioni dell'importazione a caricamento ritardato)](delay-delay-load-import-settings.md)
-
 ### [-DELAYLOAD (importazione a caricamento ritardato)](delayload-delay-load-import.md)
-
 ### [-DELAYSIGN (firma parzialmente un assembly)](delaysign-partially-sign-an-assembly.md)
-
 ### [-DLL (compilare una DLL)](dll-build-a-dll.md)
-
 ### [-DRIVER (driver in modalità kernel di Windows NT)](driver-windows-nt-kernel-mode-driver.md)
-
 ### [-DYNAMICBASE (uso della funzionalità ASLR)](dynamicbase-use-address-space-layout-randomization.md)
-
 ### [-ENTRY (simbolo del punto di ingresso)](entry-entry-point-symbol.md)
-
 ### [-ERRORREPORT (segnala gli errori interni del linker)](errorreport-report-internal-linker-errors.md)
-
 ### [-EXPORT (esporta una funzione)](export-exports-a-function.md)
-
 ### [-FIXED (indirizzo di base fisso)](fixed-fixed-base-address.md)
-
 ### [-FORCE (forza l'output del file)](force-force-file-output.md)
-
 ### [-FUNCTIONPADMIN (crea immagine con funzionalità di patch a caldo)](functionpadmin-create-hotpatchable-image.md)
-
 ### [-GENPROFILE, -FASTGENPROFILE (genera la build instrumentata di profilatura)](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)
-
 ### [-GUARD (abilita i controlli di protezione)](guard-enable-guard-checks.md)
-
 ### [-HEAP (imposta la dimensione dell'heap)](heap-set-heap-size.md)
-
 ### [-HIGHENTROPYVA (supporta ASLR a 64 bit)](highentropyva-support-64-bit-aslr.md)
-
 ### [-IDLOUT (assegna un nome ai file di output MIDL)](idlout-name-midl-output-files.md)
-
 ### [-IGNORE (ignora determinati avvisi)](ignore-ignore-specific-warnings.md)
-
 ### [-IGNOREIDL (non elabora gli attributi in MIDL)](ignoreidl-don-t-process-attributes-into-midl.md)
-
 ### [-IMPLIB (assegna un nome alla libreria di importazione)](implib-name-import-library.md)
-
 ### [-INCLUDE (forza riferimenti al simbolo)](include-force-symbol-references.md)
-
 ### [-INCREMENTAL (collegamento incrementale)](incremental-link-incrementally.md)
-
 ### [-INTEGRITYCHECK (richiede controllo della firma)](integritycheck-require-signature-check.md)
-
 ### [-KEYCONTAINER (specifica un contenitore di chiavi per firmare un assembly)](keycontainer-specify-a-key-container-to-sign-an-assembly.md)
-
 ### [-KEYFILE (specifica una chiave o una coppia di chiavi per firmare un assembly)](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)
-
 ### [-LARGEADDRESSAWARE (gestione di indirizzi di grandi dimensioni)](largeaddressaware-handle-large-addresses.md)
-
 ### [-LIBPATH (percorso LIB aggiuntivo)](libpath-additional-libpath.md)
-
 ### [-LTCG (generazione di codice in fase di collegamento)](ltcg-link-time-code-generation.md)
-
 ### [-MACHINE (specifica la piattaforma di destinazione)](machine-specify-target-platform.md)
-
 ### [-MANIFEST (crea manifesto dell'assembly affiancato)](manifest-create-side-by-side-assembly-manifest.md)
-
 ### [-MANIFESTDEPENDENCY (specifica le dipendenze tra manifesti)](manifestdependency-specify-manifest-dependencies.md)
-
 ### [-MANIFESTFILE (assegna un nome al file manifesto)](manifestfile-name-manifest-file.md)
-
 ### [-MANIFESTDEPENDENCY (specifica l'input del manifesto)](manifestinput-specify-manifest-input.md)
-
 ### [-MANIFESTUAC (incorpora informazioni sul controllo dell'account utente nel manifesto)](manifestuac-embeds-uac-information-in-manifest.md)
-
 ### [-MAP (genera file MAP)](map-generate-mapfile.md)
-
 ### [-MAPINFO (include informazioni in file MAP)](mapinfo-include-information-in-mapfile.md)
-
 ### [-MERGE (combina sezioni)](merge-combine-sections.md)
-
 ### [-MIDL (specifica opzioni della riga di comando MIDL)](midl-specify-midl-command-line-options.md)
-
+### [-NATVIS (aggiunge Natvis a PDB)](natvis-add-natvis-to-pdb.md)
 ### [-NOASSEMBLY (crea un modulo MSIL)](noassembly-create-a-msil-module.md)
-
 ### [-NODEFAULTLIB (ignora librerie)](nodefaultlib-ignore-libraries.md)
-
 ### [-NOENTRY (nessun punto di ingresso)](noentry-no-entry-point.md)
-
 ### [-NOLOGO (non visualizza il messaggio di avvio) (Linker)](nologo-suppress-startup-banner-linker.md)
-
 ### [-NXCOMPAT (compatibile con Protezione esecuzione programmi)](nxcompat-compatible-with-data-execution-prevention.md)
-
 ### [-OPT (ottimizzazioni)](opt-optimizations.md)
-
 ### [-ORDER (inserisce le funzioni in ordine)](order-put-functions-in-order.md)
-
 ### [-OUT (nome file di output)](out-output-file-name.md)
-
 ### [-PDB (usa database di programma)](pdb-use-program-database.md)
-
 ### [-PDBALTPATH (usa percorso PDB alternativo)](pdbaltpath-use-alternate-pdb-path.md)
-
 ### [-PDBSTRIPPED (rimuove simboli privati)](pdbstripped-strip-private-symbols.md)
-
 ### [-PGD (specifica il database per le ottimizzazioni PGO)](pgd-specify-database-for-profile-guided-optimizations.md)
-
 ### [-PROFILE (profiler strumenti di prestazioni)](profile-performance-tools-profiler.md)
-
 ### [-RELEASE (imposta checksum)](release-set-the-checksum.md)
-
 ### [-SAFESEH (l'immagine ha gestori delle eccezioni sicuri)](safeseh-image-has-safe-exception-handlers.md)
-
 ### [-SECTION (specifica attributi di sezione)](section-specify-section-attributes.md)
-
 ### [-STACK (allocazioni stack)](stack-stack-allocations.md)
-
 ### [-STUB (nome file stub MS-DOS)](stub-ms-dos-stub-file-name.md)
-
 ### [-SUBSYSTEM (specifica il sottosistema)](subsystem-specify-subsystem.md)
-
 ### [-SWAPRUN (caricamento dell'output del linker nel file di scambio)](swaprun-load-linker-output-to-swap-file.md)
-
 ### [-TLBID (specifica l'ID di risorsa per una libreria dei tipi)](tlbid-specify-resource-id-for-typelib.md)
-
 ### [-TLBOUT denomina un file TLB)](tlbout-name-dot-tlb-file.md)
-
 ### [-TSAWARE (crea un'applicazione con supporto Terminal Server)](tsaware-create-terminal-server-aware-application.md)
-
 ### [-Verbose (stampa di messaggi sullo stato)](verbose-print-progress-messages.md)
-
 ### [-VERSION (informazioni sulla versione)](version-version-information.md)
-
 ### [-WHOLEARCHIVE (include tutti i file oggetto della raccolta)](wholearchive-include-all-library-object-files.md)
-
 ### [-WINMD (genera metadati di Windows)](winmd-generate-windows-metadata.md)
-
 ### [-WINMDFILE (specifica il file winmd)](winmdfile-specify-winmd-file.md)
-
 ### [-WINMDKEYFILE (specifica il file di chiave winmd)](winmdkeyfile-specify-winmd-key-file.md)
-
 ### [-WINMDKEYCONTAINER (specifica il contenitore di chiavi)](winmdkeycontainer-specify-key-container.md)
-
 ### [-WINMDDELAYSIGN (firma parzialmente un winmd)](winmddelaysign-partially-sign-a-winmd.md)
-
 ### [-WX (considera gli avvisi del linker come errori)](wx-treat-linker-warnings-as-errors.md)
-
 ## [File Module-Definition (.Def)](module-definition-dot-def-files.md)
-
 ### [Regole relative alle istruzioni di definizione dei moduli](rules-for-module-definition-statements.md)
-
 #### [EXPORTS](exports.md)
-
 #### [LIBRARY](library.md)
-
 #### [HEAPSIZE](heapsize.md)
-
 #### [NAME (C/C++)](name-c-cpp.md)
-
 #### [SECTIONS (C/C++)](sections-c-cpp.md)
-
 #### [STACKSIZE](stacksize.md)
-
 #### [STUB](stub.md)
-
 #### [VERSION (C/C++)](version-c-cpp.md)
-
 ## [Supporto per le DLL a caricamento ritardato nel linker](linker-support-for-delay-loaded-dlls.md)
-
 ### [Specifica delle DLL per il caricamento ritardato](specifying-dlls-to-delay-load.md)
-
 ### [Scaricamento esplicito di una DLL a caricamento ritardato](explicitly-unloading-a-delay-loaded-dll.md)
-
 ### [Associazione di importazioni](binding-imports.md)
-
 ### [Caricamento di tutte le importazioni per una DLL a caricamento ritardato](loading-all-imports-for-a-delay-loaded-dll.md)
-
 ### [Gestione e notifica degli errori](error-handling-and-notification.md)
-
 #### [Hook di notifica](notification-hooks.md)
-
 #### [Hook di errore](failure-hooks.md)
-
 #### [Eccezioni (C/C++)](exceptions-c-cpp.md)
-
 ### [Dump delle importazioni a caricamento ritardato](dumping-delay-loaded-imports.md)
-
 ### [Vincoli delle DLL a caricamento ritardato](constraints-of-delay-loading-dlls.md)
-
 ### [Informazioni sulla funzione di supporto](understanding-the-helper-function.md)
-
 #### [Modifiche della funzione di supporto del caricamento ritardato delle DLL introdotte a partire da Visual C++ 6.0](changes-in-the-dll-delayed-loading-helper-function-since-visual-cpp-6-0.md)
-
 #### [Convenzioni di chiamata, parametri e tipo restituito](calling-conventions-parameters-and-return-type.md)
-
 #### [Struttura e definizioni di costanti](structure-and-constant-definitions.md)
-
 #### [Calcolo dei valori necessari](calculating-necessary-values.md)
-
 #### [Scaricamento di una DLL a caricamento ritardato](unloading-a-delay-loaded-dll.md)
-
 ### [Sviluppo di una funzione di supporto personalizzata](developing-your-own-helper-function.md)
-
 # [Build di versione](release-builds.md)
-
 ## [Procedura: Creare una build di versione](how-to-create-a-release-build.md)
-
 ## [Problemi comuni durante la creazione di una build di rilascio](common-problems-when-creating-a-release-build.md)
-
 ## [Correzione dei problemi della build di versione](fixing-release-build-problems.md)
-
 ### [Uso di VERIFY invece di ASSERT](using-verify-instead-of-assert.md)
-
 ### [Uso della compilazione di debug per il controllo della sovrascrittura di memoria](using-the-debug-build-to-check-for-memory-overwrite.md)
-
 ### [Procedura: Eseguire il debug di una build di versione](how-to-debug-a-release-build.md)
-
 ### [Controllo delle sovrascritture di memoria](checking-for-memory-overwrites.md)
-
 # [Ottimizzazione del codice](optimizing-your-code.md)
-
 ## [Pragma e parole chiave di ottimizzazione](optimization-pragmas-and-keywords.md)
-
 ## [Incremento dell'efficienza delle operazioni del compilatore](improving-compiler-throughput.md)
-
 ## [Causa della possibile perdita di precisione dei numeri a virgola mobile](why-floating-point-numbers-may-lose-precision.md)
-
 ### [Formato a virgola mobile IEEE](ieee-floating-point-representation.md)
-
 ## [Suggerimenti per il miglioramento del codice critico](tips-for-improving-time-critical-code.md)
-
 ## [Mancata generazione di codice in seguito all'uso di nomi di funzione senza ()](using-function-name-without-parens-produces-no-code.md)
-
 ## [Procedure consigliate di ottimizzazione](optimization-best-practices.md)
-
 # [Strumenti per la compilazione in C/C++](c-cpp-build-tools.md)
-
 ## [Riferimento a BSCMAKE](bscmake-reference.md)
-
 ### [Panoramica sulla compilazione di file di informazioni di visualizzazione](building-browse-information-files-overview.md)
-
 ### [Compilazione di un file BSC](building-a-dot-bsc-file.md)
-
 #### [Creazione di un file SBR](creating-an-dot-sbr-file.md)
-
 #### [Modalità di compilazione di un file BSC in BSCMAKE](how-bscmake-builds-a-dot-bsc-file.md)
-
 ### [Riga di comando di BSCMAKE](bscmake-command-line.md)
-
 ### [File di comando di BSCMAKE (file di risposta)](bscmake-command-file-response-file.md)
-
 ### [Opzioni di BSCMAKE](bscmake-options.md)
-
 ### [Codici di uscita di BSCMAKE](bscmake-exit-codes.md)
-
 ## [Riferimento a LIB](lib-reference.md)
-
 ### [Panoramica di LIB](overview-of-lib.md)
-
 #### [Procedura: Impostare le opzioni di LIB.EXE nell'ambiente di sviluppo di Visual Studio](how-to-set-lib-exe-options-in-the-visual-studio-development-environment.md)
-
 #### [File di input LIB](lib-input-files.md)
-
 #### [File di output di LIB](lib-output-files.md)
-
 #### [Altri output di LIB](other-lib-output.md)
-
 #### [Struttura di una libreria](structure-of-a-library.md)
-
 ### [Esecuzione di LIB](running-lib.md)
-
 ### [Gestione di una libreria](managing-a-library.md)
-
 ### [Estrazione di membri dalle librerie](extracting-a-library-member.md)
-
 ### [Uso di librerie di importazione e file di esportazione](working-with-import-libraries-and-export-files.md)
-
 #### [Compilazione di una libreria di importazione e di un file di esportazione](building-an-import-library-and-export-file.md)
-
 #### [Uso di una libreria di importazione e di un file di esportazione](using-an-import-library-and-export-file.md)
-
 ## [Riferimento a EDITBIN](editbin-reference.md)
-
 ### [Riga di comando EDITBIN](editbin-command-line.md)
-
 ### [Opzioni di EDITBIN](editbin-options.md)
-
 #### [-ALLOWISOLATION](allowisolation.md)
-
 #### [-ALLOWBIND](allowbind.md)
-
 #### [-APPCONTAINER](appcontainer.md)
-
 #### [-BIND](bind.md)
-
 #### [-DYNAMICBASE](dynamicbase.md)
-
 #### [-ERRORREPORT (editbin.exe)](errorreport-editbin-exe.md)
-
 #### [-HEAP](heap.md)
-
 #### [-HIGHENTROPYVA](highentropyva.md)
-
 #### [-INTEGRITYCHECK](integritycheck.md)
-
 #### [-LARGEADDRESSAWARE](largeaddressaware.md)
-
 #### [-NOLOGO (EDITBIN)](nologo-editbin.md)
-
 #### [-NXCOMPAT](nxcompat.md)
-
 #### [-REBASE](rebase.md)
-
 #### [-RELEASE](release.md)
-
 #### [-SECTION (EDITBIN)](section-editbin.md)
-
 #### [-STACK](stack.md)
-
 #### [-SUBSYSTEM](subsystem.md)
-
 #### [-SWAPRUN](swaprun.md)
-
 #### [-TSAWARE](tsaware.md)
-
 #### [-VERSION](version.md)
-
 ## [Riferimento a DUMPBIN](dumpbin-reference.md)
-
 ### [Riga di comando DUMPBIN](dumpbin-command-line.md)
-
 ### [Opzioni di DUMPBIN](dumpbin-options.md)
-
 #### [-ALL](all.md)
-
 #### [-ARCHIVEMEMBERS](archivemembers.md)
-
 #### [-CLRHEADER](clrheader.md)
-
 #### [-DEPENDENTS](dependents.md)
-
 #### [-DIRECTIVES](directives.md)
-
 #### [-DISASM](disasm.md)
-
 #### [-ERRORREPORT (dumpbin.exe)](errorreport-dumpbin-exe.md)
-
 #### [-EXPORTS](dash-exports.md)
-
 #### [-FPO](fpo.md)
-
 #### [-HEADERS](headers.md)
-
 #### [-IMPORTS (DUMPBIN)](imports-dumpbin.md)
-
 #### [-LINENUMBERS](linenumbers.md)
-
 #### [-LINKERMEMBER](linkermember.md)
-
 #### [-LOADCONFIG](loadconfig.md)
-
 #### [-OUT (DUMPBIN)](out-dumpbin.md)
-
 #### [-PDATA](pdata.md)
-
 #### [-PDBPATH](pdbpath.md)
-
 #### [-RANGE](range.md)
-
 #### [-RAWDATA](rawdata.md)
-
 #### [-RELOCATIONS](relocations.md)
-
 #### [-SECTION (DUMPBIN)](section-dumpbin.md)
-
 #### [-SUMMARY](summary.md)
-
 #### [-SYMBOLS](symbols.md)
-
 #### [-TLS](tls.md)
-
 ## [Riferimento a ERRLOOK](errlook-reference.md)
-
 ### [Controllo Value Edit](value-edit-control.md)
-
 ### [Controllo modifica messaggio di errore](error-message-edit-control.md)
-
 ### [Pulsante Moduli](modules-button.md)
-
 ### [Pulsante Cerca](look-up-button.md)
-
 ## [Nomi decorati](decorated-names.md)
-
 ## [Ottimizzazioni PGO](profile-guided-optimizations.md)
-
 ### [Ottimizzazione PGO nell'hub Prestazioni e diagnostica](profile-guided-optimization-in-the-performance-and-diagnostics-hub.md)
-
 ### [Strumenti per l'ottimizzazione manuale PGO](tools-for-manual-profile-guided-optimization.md)
-
 #### [Variabili d'ambiente per le ottimizzazioni GPO](environment-variables-for-profile-guided-optimizations.md)
-
 ##### [PogoSafeMode](pogosafemode.md)
-
 ##### [VCPROFILE_ALLOC_SCALE](vcprofile-alloc-scale.md)
-
 ##### [VCPROFILE_PATH](vcprofile-path.md)
-
 #### [pgomgr](pgomgr.md)
-
 #### [pgosweep](pgosweep.md)
-
 ### [Procedura: Unire più profili PGO in un unico profilo](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)
-
 # [Errori del compilatore da C999 a C2499](../../error-messages/compiler-errors-1/TOC.md)
-
 # [Errori del compilatore da C2500 a C3999](../../error-messages/compiler-errors-2/TOC.md)
-
 # [Avvisi del compilatore](../../error-messages/compiler-warnings/TOC.md)
-
 # [Errori degli strumenti](../../error-messages/tool-errors/TOC.md)
