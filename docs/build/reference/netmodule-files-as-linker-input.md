@@ -1,59 +1,75 @@
 ---
-title: ".File con estensione netmodule come input del linker | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".netmodules"
-  - "collegamento [C++], moduli"
-  - "moduli, Visual C++"
-  - "MSIL (collegamento)"
+title: .netmodule Files as Linker Input | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MSIL linking
+- linking [C++], modules
+- .netmodules
+- modules, Visual C++
 ms.assetid: a4bcbe8a-4255-451d-853b-f88cfd82f4e1
 caps.latest.revision: 22
-caps.handback.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# .File con estensione netmodule come input del linker
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: e0d6309625eebb93f317a9a968302dbf34abb285
+ms.contentlocale: it-it
+ms.lasthandoff: 08/30/2017
 
-link.exe ora accetta il codice MSIL .obj e .netmodules come input.  Il file di output generato dal linker sarà un assembly o un .netmodule senza dipendenza di runtime da uno dei file .obj o .netmodules che sono stati introdotti nel linker.  
+---
+# <a name="netmodule-files-as-linker-input"></a>.netmodule Files as Linker Input
+link.exe now accepts MSIL .obj and .netmodules as input. The output file produced by the linker will be an assembly or a .netmodule with no run-time dependency on any of the .obj or .netmodules that were input to the linker.  
   
- I .netmodule vengono creati dal compilatore Visual C\+\+ con [\/LN \(Crea modulo MSIL\)](../../build/reference/ln-create-msil-module.md) oppure dal linker con [\/NOASSEMBLY \(Crea un modulo MSIL\)](../../build/reference/noassembly-create-a-msil-module.md). I file obj vengono sempre creati in una compilazione Visual C\+\+.  Per altri compilatori di Visual Studio, utilizzare l'opzione del compilatore **\/target:module**.  
+ .netmodules are created by the Visual C++ compiler with [/LN (Create MSIL Module)](../../build/reference/ln-create-msil-module.md) or by the linker with [/NOASSEMBLY (Create a MSIL Module)](../../build/reference/noassembly-create-a-msil-module.md). .objs are always created in a Visual C++ compilation. For other Visual Studio compilers, use the **/target:module** compiler option.  
   
- Nella maggior parte dei casi, sarà necessario passare al linker il file .obj dalla compilazione di Visual C\+\+ che ha creato il .netmodule, a meno che il .netmodule venga creato con [\/clr \(Compilazione Common Language Runtime\)](../../build/reference/clr-common-language-runtime-compilation.md).  I .netmodule MSIL utilizzati come input per il linker devono essere file MSIL puri, ovvero file che possono essere generati dal compilatore Visual C\+\+ utilizzando **\/clr:safe**.  Altri compilatori di Visual Studio generano moduli pure di MSIL per impostazione predefinita.  
+ In most cases, you will need to pass to the linker the .obj file from the Visual C++ compilation that created the .netmodule, unless the .netmodule was created with [/clr (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md). MSIL .netmodules used as input to the linker must be pure MSIL, which can be produced by the Visual C++ compiler using **/clr:safe**. The **/clr:pure** and **/clr:safe** compiler options are deprecated in Visual Studio 2015. The .NET Visual Studio compilers produce pure MSIL modules by default.  
   
- Per informazioni su come richiamare il linker dalla riga di comando, vedere [Sintassi della riga di comando del linker](../../build/reference/linker-command-line-syntax.md) e [Impostazione delle variabili di percorso e di ambiente per la compilazione dalla riga di comando](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md).  
+ For information on how to invoke the linker from the command line, see [Linker Command-Line Syntax](../../build/reference/linker-command-line-syntax.md), [Build C/C++ code on the command line](../../build/building-on-the-command-line.md), and [Set the Path and Environment Variables for Command-Line Builds](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md).  
   
- Passare un file .netmodule o .dll al linker compilato dal compilatore Visual C\+\+ con **\/clr** o **\/clr:pure** può comportare un errore del linker.  Per ulteriori informazioni, vedere [Scelta del formato dei file di input con estensione netmodule](../../build/reference/choosing-the-format-of-netmodule-input-files.md).  
+ Passing a .netmodule or .dll file to the linker that was compiled by the Visual C++ compiler with **/clr** or with **/clr:pure** can result in a linker error. For more information, see [Choosing the Format of .netmodule Input Files](../../build/reference/choosing-the-format-of-netmodule-input-files.md).  
   
- Il linker accetta file obj nativi e file obj di MSIL compilati con **\/clr**, **\/clr:pure** o **\/clr:safe**.  Quando nella stessa build vengono passati file obj misti, la verificabilità del file di output risultante sarà, per impostazione predefinita, uguale al livello minimo di verificabilità dei moduli di input.  Se, ad esempio, si passa un file con estensione obj pure sicuro al linker, il file di output sarà pure.  [\/CLRIMAGETYPE \(Specifica il tipo di immagine CLR\)](../../build/reference/clrimagetype-specify-type-of-clr-image.md) consente di specificare un livello di verificabilità più basso, se necessario.  
+ The linker accepts native .obj files as well as MSIL .obj files compiled with **/clr**, **/clr:pure**, or **/clr:safe**. When passing mixed .objs in the same build, the verifiability of the resulting output file will, by default, be equal to the lowest level of verifiability of the input modules. For example, if you pass a safe and pure .obj to the linker, the output file will be pure. [/CLRIMAGETYPE (Specify Type of CLR Image)](../../build/reference/clrimagetype-specify-type-of-clr-image.md) lets you specify a lower level of verifiability, if that is what you need.  
   
- Se si dispone di un'applicazione composta da due o più assembly e si desidera che l'applicazione sia contenuta in uno solo, è necessario ricompilare gli assembly e collegare i file .obj o .netmodule per produrre un singolo assembly.  
+ If you currently have an application that is composed of two or more assemblies and you want the application to be contained in one assembly, you must recompile the assemblies and then link the .objs or .netmodules to produce a single assembly.  
   
- Quando si crea un'immagine eseguibile, è necessario specificare un punto di ingresso utilizzando [\/ENTRY \(Simbolo del punto di ingresso\)](../../build/reference/entry-entry-point-symbol.md).  
+ You must specify an entry point using [/ENTRY (Entry-Point Symbol)](../../build/reference/entry-entry-point-symbol.md) when creating an executable image.  
   
- Nel collegamento a un file MSIL .obj o .netmodule, utilizzare [\/LTCG \(Generazione di codice in fase di collegamento\)](../../build/reference/ltcg-link-time-code-generation.md), altrimenti quando il linker rileva il codice MSIL .obj o .netmodule, riavvierà il collegamento con l'opzione \/LTCG.  
+ When linking with an MSIL .obj or .netmodule file, use [/LTCG (Link-time Code Generation)](../../build/reference/ltcg-link-time-code-generation.md), otherwise when the linker encounters the MSIL .obj or .netmodule, it will restart the link with /LTCG.  
   
- I file MSIL .obj o .netmodule possono essere passati anche a cl.exe.  
+ MSIL .obj or .netmodule files can also be passed to cl.exe.  
   
- I file di input MSIL .obj o .netmodule non possono disporre di risorse incorporate.  Una risorsa viene incorporata in un file di output \(modulo o assembly\) con l'opzione del linker [\/ASSEMBLYRESOURCE \(Incorpora una risorsa gestita\)](../../build/reference/assemblyresource-embed-a-managed-resource.md) o con l'opzione del compilatore **\/resource** in altri compilatori di Visual Studio.  
+ Input MSIL .obj or .netmodule files cannot have embedded resources. A resource is embedded in an output file (module or assembly) with [/ASSEMBLYRESOURCE (Embed a Managed Resource)](../../build/reference/assemblyresource-embed-a-managed-resource.md) linker option or with the **/resource** compiler option in other Visual Studio compilers.  
   
- Quando si eseguono collegamenti MSIL, e non viene specificato anche [\/LTCG \(Generazione di codice in fase di collegamento\)](../../build/reference/ltcg-link-time-code-generation.md), viene visualizzato un messaggio in cui si segnala che il collegamento viene riavviato.  Sebbene sia possibile ignorare il messaggio, per migliorare le prestazioni del linker con i collegamenti MSIL è opportuno specificare **\/LTCG** in modo esplicito.  
+ When performing MSIL linking, and if you do not also specify [/LTCG (Link-time Code Generation)](../../build/reference/ltcg-link-time-code-generation.md), you will see an informational message reporting that the link is restarting. This message can be ignored, but to improve linker performance with MSIL linking, explicitly specify **/LTCG**.  
   
-## Esempio  
- Nel codice C\+\+ verrà richiamato il blocco catch di un blocco try corrispondente per un'eccezione non di sistema.  Tuttavia, per impostazione predefinita, CLR esegue il wrapping di eccezioni non di sistema con <xref:System.Runtime.CompilerServices.RuntimeWrappedException>.  Quando viene creato un assembly dai moduli Visual C\+\+ e non Visual C\+\+ e si desidera che un blocco catch nel codice C\+\+ venga richiamato dalla clausola try corrispondente alla generazione di un'eccezione non di sistema da parte del blocco try, sarà necessario aggiungere  
+## <a name="example"></a>Example  
+ In C++ code the catch block of a corresponding try will be invoked for a non System exception. However, by default, the CLR wraps non System exceptions with <xref:System.Runtime.CompilerServices.RuntimeWrappedException>. When an assembly is created from Visual C++ and non Visual C++ modules and you want a catch block in C++ code to be invoked from its corresponding try clause when the try block throws a non System exception, you must add the  
   
- l'attributo \[assembly:System::Runtime::CompilerServices::RuntimeCompatibility\(WrapNonExceptionThrows\=false\)\] al codice sorgente per i moduli non C\+\+.  
+ [assembly:System::Runtime::CompilerServices::RuntimeCompatibility(WrapNonExceptionThrows=false)] attribute to the source code for the non C++ modules.  
   
 ```  
 // MSIL_linking.cpp  
@@ -78,8 +94,8 @@ int main() {
 */  
 ```  
   
-## Esempio  
- Se si modifica il valore booleano dell'attributo WrapNonExceptionThrows, verrà modificata la capacità del codice Visual C\+\+ di rilevare un'eccezione non di sistema.  
+## <a name="example"></a>Example  
+ By changing the Boolean value of the WrapNonExceptionThrows attribute, you modify the ability of the Visual C++ code to catch a non System exception.  
   
 ```  
 // MSIL_linking_2.cs  
@@ -102,7 +118,10 @@ class MLinkTest {
 }  
 ```  
   
-  **eccezione di sistema non rilevata nel file di codice sorgente C\+\+**   
-## Vedere anche  
- [File di input LINK](../../build/reference/link-input-files.md)   
- [Opzioni del linker](../../build/reference/linker-options.md)
+```Output  
+caught non System exception in C++ source code file  
+```  
+  
+## <a name="see-also"></a>See Also  
+ [LINK Input Files](../../build/reference/link-input-files.md)   
+ [Linker Options](../../build/reference/linker-options.md)

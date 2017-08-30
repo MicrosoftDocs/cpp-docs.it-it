@@ -1,44 +1,60 @@
 ---
-title: "MSBuild (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MSBuild"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MSBuild"
+title: MSBuild (Visual C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- MSBuild
+dev_langs:
+- C++
+helpviewer_keywords:
+- MSBuild
 ms.assetid: 7a1be7ff-0312-4669-adf2-5f5bf507d560
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# MSBuild (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 90ae4fb50baa02967c78ce8125e85e2590fa22da
+ms.contentlocale: it-it
+ms.lasthandoff: 08/30/2017
 
-È possibile utilizzare lo strumento **MSBuild** per compilare un'applicazione di Visual C\+\+ dal prompt dei comandi.  Il processo di compilazione viene controllato dalle informazioni in un file di progetto \(con estensione vcxproj\) che è possibile creare e modificare.  Il file di progetto specifica le opzioni di compilazione in base agli eventi, alle condizioni e alle fasi di compilazione.  
+---
+# <a name="msbuild-visual-c"></a>MSBuild (Visual C++)
+You can use the **MSBuild** tool to build a Visual C++ application from the command prompt. The build process is controlled by the information in a project file (.vcxproj) that you can create and edit. The project file specifies build options based on build stages, conditions, and events.  
   
-## In questa sezione  
+## <a name="in-this-section"></a>In This Section  
   
-|Termine|Definizione|  
-|-------------|-----------------|  
-|[Cenni preliminari su MSBuild \(Visual C\+\+\)](../build/msbuild-visual-cpp-overview.md)|Viene descritto l'utilizzo del sistema **MSBuild** in Visual C\+\+.|  
-|[Modifiche al sistema di compilazione](../build/build-system-changes.md)|Vengono illustrate alcune delle differenze tra il sistema di compilazione corrente e la versione precedente.|  
-|[Procedura dettagliata: utilizzo di MSBuild per la creazione di un progetto Visual C\+\+](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)|Viene illustrato come creare un progetto Visual C\+\+ tramite **MSBuild**.|  
-|[Procedura: utilizzo di eventi di compilazione in progetti MSBuild](../build/how-to-use-build-events-in-msbuild-projects.md)|Viene illustrato come specificare un'azione che si verifica in una determinata fase della compilazione: prima dell'avvio della compilazione; prima dell'inizio del passaggio di collegamento o una volta terminata la compilazione.|  
-|[Procedura: aggiungere un'istruzione di compilazione personalizzata a progetti MSBuild](../build/how-to-add-a-custom-build-step-to-msbuild-projects.md)|Viene illustrato come aggiungere una fase definita dall'utente alla sequenza di compilazione.|  
-|[Procedura: aggiungere uno strumento di compilazione personalizzato a progetti MSBuild](../build/how-to-add-custom-build-tools-to-msbuild-projects.md)|Viene illustrato come associare un strumento di compilazione a un determinato file.|  
-|[Procedura: integrare strumenti personalizzati nelle proprietà del progetto](../build/how-to-integrate-custom-tools-into-the-project-properties.md)|Viene illustrato come aggiungere opzioni per uno strumento personalizzato alle proprietà del progetto.|  
-|[Procedura: modificare il framework di destinazione e il set di strumenti della piattaforma](../build/how-to-modify-the-target-framework-and-platform-toolset.md)|Viene illustrato come compilare un progetto per più framework o set di strumenti.|  
+|Term|Definition|  
+|----------|----------------|  
+|[MSBuild (Visual C++) Overview](../build/msbuild-visual-cpp-overview.md)|Describes how Visual C++ uses the **MSBuild** system.|  
+|[Build System Changes](../build/build-system-changes.md)|Discusses some of the differences between the current build system and the previous release.|  
+|[Walkthrough: Using MSBuild to Create a Visual C++ Project](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)|Demonstrates how to create a Visual C++ project using **MSBuild**.|  
+|[How to: Use Build Events in MSBuild Projects](../build/how-to-use-build-events-in-msbuild-projects.md)|Demonstrates how to specify an action that occurs at a particuler stage in the build: before the build starts; before the link step starts; or after the build ends.|  
+|[How to: Add a Custom Build Step to MSBuild Projects](../build/how-to-add-a-custom-build-step-to-msbuild-projects.md)|Demonstrates how to add a user-defined stage to the build sequence.|  
+|[How to: Add Custom Build Tools to MSBuild Projects](../build/how-to-add-custom-build-tools-to-msbuild-projects.md)|Demonstrates how to associate a build tool with a particular file.|  
+|[How to: Integrate Custom Tools into the Project Properties](../build/how-to-integrate-custom-tools-into-the-project-properties.md)|Demonstrates how to add options for a custom tool to the project properties.|  
+|[How to: Modify the Target Framework and Platform Toolset](../build/how-to-modify-the-target-framework-and-platform-toolset.md)|Demonstrates how to compile a project for multiple frameworks or toolsets.|  
   
-## Vedere anche  
- [Compilazione dalla riga di comando](../build/building-on-the-command-line.md)
+## <a name="see-also"></a>See Also  
+ [Build C/C++ code on the command line](../build/building-on-the-command-line.md)

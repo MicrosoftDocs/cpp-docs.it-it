@@ -1,58 +1,77 @@
 ---
-title: "Configurazione di programmi per processori a 64 bit (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/13/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "compilatore a 64 bit [C++]"
-  - "compilatore a 64 bit [C++], opzioni"
-  - "programmazione a 64 bit [C++], informazioni"
-  - "programmazione [C++], 64 bit"
-  - "Visual C++, hardware a 64 bit"
+title: Configure Visual C++ for 64-bit, x64 targets | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- 64-bit compiler [C++], options
+- 64-bit compiler [C++]
+- 64-bit programming [C++], about 64-bit programming
+- programming [C++], 64-bit
+- Visual C++, 64-bit hardware
 ms.assetid: cb99f72b-8c74-48f4-846a-8921b37b97e9
 caps.latest.revision: 22
-caps.handback.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Configurazione di programmi per processori a 64 bit (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: d55ed3a2ac13dd809f805ae5afb04ed92e74b50d
+ms.contentlocale: it-it
+ms.lasthandoff: 08/30/2017
 
-Questa sezione contiene argomenti relativi alla programmazione per hardware a 64 bit con gli strumenti di compilazione di Visual C\+\+.  
+---
+# <a name="configure-visual-c-for-64-bit-x64-targets"></a>Configure Visual C++ for 64-bit, x64 targets
+
+This section contains topics about targeting 64-bit x64 hardware with the Visual C++ build tools.  
   
-## In questa sezione  
+## <a name="in-this-section"></a>In This Section  
   
--   [Procedura: Configurare i progetti Visual C\+\+ per piattaforme a 64 bit](../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)  
+-   [How to: Configure Visual C++ Projects to Target 64-Bit, x64 Platforms](../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)  
   
--   [Procedura: abilitare un set di strumenti Visual C\+\+ a 64 bit dalla riga di comando](../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)  
+-   [How to: Enable a 64-Bit Visual C++ Toolset on the Command Line](../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)  
   
--   [Problemi comuni relativi alla migrazione di Visual C\+\+ a 64 bit](../build/common-visual-cpp-64-bit-migration-issues.md)  
+-   [Common Visual C++ 64-bit Migration Issues](../build/common-visual-cpp-64-bit-migration-issues.md)  
   
--   [Convenzioni del software x64](../build/x64-software-conventions.md)  
+-   [x64 Software Conventions](../build/x64-software-conventions.md)  
   
-## Sezioni correlate  
- [Applicazioni a 64 bit](../Topic/64-bit%20Applications.md)  
+## <a name="related-sections"></a>Related Sections  
+
+[.NET Framework 64-bit Applications](/dotnet/framework/64-bit-apps)  
   
- [align](../cpp/align-cpp.md)  
+[align](../cpp/align-cpp.md)  
   
- [\/clr \(Compilazione Common Language Runtime\)](../build/reference/clr-common-language-runtime-compilation.md) per informazioni su come eseguire un'applicazione compilata con **\/clr:safe** in WOW64 su un sistema operativo a 64 bit.  
+[/clr (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md)  
   
- [\/favor \(ottimizzato per le specifiche di architettura\)](../build/reference/favor-optimize-for-architecture-specifics.md)  
+[/favor (Optimize for Architecture Specifics)](../build/reference/favor-optimize-for-architecture-specifics.md)  
   
- [\<caps:sentence id\="tgt3" sentenceid\="c0b6f1277b46c5d69ba3f7f43ec38f55" class\="tgtSentence"\>Guida alla programmazione per Windows a 64 bit\<\/caps:sentence\>](http://msdn.microsoft.com/library/windows/desktop/bb427430)  
+[Programming Guide for 64-bit Windows](http://msdn.microsoft.com/library/windows/desktop/bb427430)  
   
- [MASM for x64 \(ml64.exe\)](../assembler/masm/masm-for-x64-ml64-exe.md)  
+[MASM for x64 (ml64.exe)](../assembler/masm/masm-for-x64-ml64-exe.md)  
   
- [x64 Intrinsics](http://msdn.microsoft.com/it-it/5d1f5d3e-156e-4ebf-932e-fd09be7ced62)  
+[x64 (amd64) Intrinsics List](../intrinsics/x64-amd64-intrinsics-list.md)  
   
-## Vedere anche  
- [\(NOTINBUILD\)Visual C\+\+ Programming Methodologies](http://msdn.microsoft.com/it-it/0822f806-fa81-4b65-bf0f-1e2921f30c95)
+## <a name="see-also"></a>See Also  
+
+[Building C/C++ Programs](building-c-cpp-programs.md)
