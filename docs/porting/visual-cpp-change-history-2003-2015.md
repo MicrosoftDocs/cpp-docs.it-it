@@ -1,7 +1,7 @@
 ---
 title: Visual C++ change history 2003 - 2015 | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 08/30/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -33,10 +33,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 7e1281daaf729de6935774ba34e2387bf82446e8
-ms.openlocfilehash: ab1d4fed84fb7fc0dee28c0663bfb1afbee3c019
+ms.sourcegitcommit: 42abd4adfe10b032849bfec391874cd249793c32
+ms.openlocfilehash: f77417b92138854d71740494680e9bb72c38f789
 ms.contentlocale: it-it
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 08/31/2017
 
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ change history 2003 - 2015
