@@ -1,7 +1,7 @@
 ---
 title: "Novità di Visual C++ in Visual Studio | Microsoft Docs"
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 8/2/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -9,8 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-author: BrianPeek
-ms.author: brpeek
+author: mblome
+ms.author: mblome
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -26,11 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ed0e4505b68c2ea198e0771b6301e685daa8662e
-ms.openlocfilehash: 58b5a3f2e5ce491ba7ba185c90bb6b4a2dca3101
+ms.translationtype: HT
+ms.sourcegitcommit: b90891be2ca726bb6cdd28d024cda68494e69af4
+ms.openlocfilehash: 9103da7fb4e10553d2558b15a24bc6a894dd1eff
 ms.contentlocale: it-it
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/15/2017
 
 ---
 
@@ -48,7 +48,9 @@ Questa versione include aggiornamenti al compilatore C++ e alla libreria standar
 
 ### <a name="new-compiler-switches"></a>Nuove opzioni del compilatore  
 
- -**/std:c++14** e **/std:c++latest**: queste opzioni del compilatore controllano il consenso esplicito per versioni specifiche del linguaggio di programmazione ISO C++ in un progetto. Per altre informazioni, vedere il post relativo alle [opzioni di controllo della versione dello standard nel compilatore](https://blogs.msdn.microsoft.com/vcblog/2016/06/07/standards-version-switches-in-the-compiler). La maggior parte delle nuove funzionalità standard in fase di progettazione è protetta dall'opzione /std:c++latest. 
+ -**/std:c++14** e **/std:c++latest**: queste opzioni del compilatore controllano il consenso esplicito per versioni specifiche del linguaggio di programmazione ISO C++ in un progetto. Per altre informazioni, vedere [-std (specifica la versione standard del linguaggio)](build/reference/std-specify-language-standard-version.md). La maggior parte delle nuove funzionalità standard in fase di progettazione è protetta dall'opzione /std:c++latest. 
+
+**Visual Studio 2017 versione 15.3**: l'opzione **/std:c++17** abilita il set di funzionalità C++17 implementate dal compilatore Visual C++. Questa opzione disabilita il supporto del compilatore e della libreria standard per le funzionalità modificate o nuove nelle versioni più recenti del documento di lavoro e degli aggiornamenti sui difetti dello standard C++.
 
 -[/permissive-](build/reference/permissive-standards-conformance.md): consente di abilitare tutte le opzioni del compilatore relative alla conformità allo standard e disabilitare la maggior parte delle estensioni del compilatore specifiche di Microsoft (ma non __declspec(dllimport), ad esempio). L'opzione è disattivata per impostazione predefinita ma sarà attivata per impostazione predefinita in un determinato momento nel futuro.
 
@@ -67,7 +69,9 @@ In questa versione sono stati introdotti numerosi miglioramenti per l'ottimizzaz
 - Controllo delle versioni: il valore del preprocessore predefinito macro_MSC_VER ora viene monotonicamente aggiornato ad ogni aggiornamento del set di strumenti di Visual C++. Per altre informazioni, vedere il post relativo alla [versione del compilatore Visual C++](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/visual-c-compiler-version/).
 - Nuovo layout del set di strumenti: il compilatore e gli strumenti di compilazione correlati hanno un nuovo percorso e una nuova struttura di directory nel computer di sviluppo. Il nuovo layout consente installazioni side-by-side di più versioni del compilatore. Per altre informazioni, vedere il post [Compiler Tools Layout in Visual Studio "15"](https://blogs.msdn.microsoft.com/vcblog/2016/10/07/compiler-tools-layout-in-visual-studio-15/) (Layout degli strumenti del compilatore in Visual Studio "15").
 - Miglioramenti alla diagnostica: nella finestra di output ora appare la colonna in cui si verifica un errore. Per altre informazioni, vedere il post [C++ compiler diagnostics improvements in VS "15" Preview 5](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/c-compiler-diagnostics-improvements-in-vs-15-rc/) (Miglioramenti della diagnostica del compilatore C++ in VS "15" anteprima 5).
-- Quando si usano coroutine, la parola chiave sperimentale "yield" (disponibile sotto l'opzione /await) è stata rimossa. È necessario aggiornare il codice per l'uso di "co_yield". Per altre informazioni, vedere il blog del team di Visual C++. 
+- Quando si usano coroutine, la parola chiave sperimentale "yield" (disponibile con l'opzione /await) è stata rimossa. È necessario aggiornare il codice per l'uso di `co_yield`. Per altre informazioni, vedere il [blog del team di Visual C++](https://blogs.msdn.microsoft.com/vcblog/). 
+
+**Visual Studio 2017 versione 15.3**: ulteriori miglioramenti alla diagnostica nel compilatore. Per altre informazioni, vedere [Diagnostic Improvements in Visual Studio 2017 15.3.0](https://blogs.msdn.microsoft.com/vcblog/2017/07/21/diagnostic-improvements-in-vs2017-15-3-0/) (Miglioramenti della diagnostica in Visual Studio 2017 15.3.0).
 
 ## <a name="c-libraries"></a>Librerie C++
 
@@ -76,7 +80,7 @@ In questa versione sono stati introdotti numerosi miglioramenti per l'ottimizzaz
 * Piccoli miglioramenti della diagnostica basic_string _ITERATOR_DEBUG_LEVEL != 0. L'attivazione di un controllo IDL in una struttura basata su stringhe ora segnalerà il comportamento specifico che ha causato l'attivazione. Ad esempio, anziché un messaggio del tipo "iteratore stringa non dereferenziabile" se ne otterrà uno del tipo "impossibile dereferenziare l'iteratore stringa perché non compreso nell'intervallo (potrebbe trattarsi ad esempio di un iteratore di fine)".
 * Miglioramento delle prestazioni: gli overload di basic_string::find(char) ora possono chiamare traits::find solo una volta. In precedenza questa funzione era implementata come una ricerca di stringa generale avente come obiettivo una stringa di lunghezza 1.
 * Miglioramento delle prestazioni: basic_string::operator== ora controlla la dimensione della stringa prima di confrontare il contenuto delle stringhe.
-* Miglioramento delle prestazioni: è stato rimosso l'accoppiamento dei controlli in basic_string che era difficile da analizzare per l'utilità di ottimizzazione del compilatore. Risolve VSO# 262848 "<string>: reserve() esegue troppe operazioni". Si noti che, per tutte le stringhe brevi, la chiamata di reserve ha comunque un costo senza eseguire alcuna operazione.
+* Miglioramento delle prestazioni: è stato rimosso l'accoppiamento dei controlli in basic_string che era difficile da analizzare per l'utilità di ottimizzazione del compilatore. Risolve l'errore VSO n. 262848 "\<string\>: reserve() esegue troppe operazioni". Si noti che, per tutte le stringhe brevi, la chiamata di reserve ha comunque un costo senza eseguire alcuna operazione.
 * Sono stati aggiunti \<any\>, \<string_view\>, apply() e make_from_tuple().
 * std::vector è stata migliorata nella correttezza e nelle prestazioni: l'uso di alias durante l'inserimento/ubicazione è ora gestito correttamente come richiesto dallo Standard, la solida garanzia di eccezione viene ora fornita quando richiesto dallo Standard tramite move_if_noexcept() e altra logica e l'inserimento/ubicazione eseguono meno operazioni sugli elementi.
 * La libreria dello standard C++ ora evita la dereferenziazione dei puntatori null ricercati.
@@ -92,7 +96,74 @@ In questa versione sono stati introdotti numerosi miglioramenti per l'ottimizzaz
 * Per aumentare la velocità effettiva del compilatore, le intestazioni della libreria standard C++ evitano di includere dichiarazioni per le funzioni intrinseche del compilatore non indispensabili.
 * Diagnostica del compilatore leggermente migliorata per le chiamate bind() non corrette.
 * Miglioramento delle prestazioni (più che triplicate) per i costruttori di spostamento di std::string/std::wstring
-* Per l'elenco completo dei miglioramenti apportati a STL, vedere [STL Fixes In VS 2017 RTM](https://blogs.msdn.microsoft.com/vcblog/2017/02/06/stl-fixes-in-vs-2017-rtm/) (Correzioni a STL in VS 2017 RTM).
+* Per l'elenco completo dei miglioramenti apportati alla libreria standard, vedere [Standard Library Fixes In VS 2017 RTM](https://blogs.msdn.microsoft.com/vcblog/2017/02/06/stl-fixes-in-vs-2017-rtm/) (Correzioni alla libreria standard in Visual Studio 2017 RTM).
+
+#### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 versione 15.3
+
+##### <a name="c17-features"></a>Funzionalità C++17 
+Sono state implementate varie funzionalità aggiuntive C++17. Per altre informazioni, vedere [Conformità al linguaggio di Visual C++](visual-cpp-language-conformance.md).
+
+##### <a name="other-new-features"></a>Altre nuove funzionalità
+* Implementazione di P0602R0 "variant e optional devono propagare trivially_move e trivially_copy".
+* La libreria standard ora tollera ufficialmente la disabilitazione dell'opzione RTTI dinamica tramite /GR-. Le funzioni dynamic_pointer_cast() e rethrow_if_nested() richiedono intrinsecamente dynamic_cast, quindi la libreria standard le contrassegna ora come =delete in /GR-.
+* Anche quando l'opzione RTTI dinamica viene disabilitata tramite /GR-, l'opzione "RTTI statica" (sotto forma di typeid(Tipo)) è ancora disponibile e interagisce con vari componenti della libreria standard. La libreria standard ora supporta anche la disabilitazione di questa opzione, tramite /D_HAS_STATIC_RTTI=0. *Si noti che verranno così disabilitati std::any, target() e target_type() di std::function e get_deleter() di shared_ptr.*
+
+##### <a name="correctness-fixes"></a>Correzioni di correttezza
+* I contenitori della libreria standard fissano ora max_size() a numeric_limits\<tipo_differenza\>::max() invece che al valore max di size_type. Ciò garantisce che il risultato di distance() sugli iteratori da tale contenitore sia rappresentabile nel tipo restituito di distance().
+* Correzione della specializzazione mancante auto_ptr\<void\>.
+* Gli algoritmi meow_n() generavano in precedenza errori di compilazione se l'argomento della lunghezza non era un tipo integrale. Ora viene tentata la conversione delle lunghezze non integrali nel difference_type degli iteratori.
+* normal_distribution\<float\> non genera più avvisi nella libreria standard in merito alla conversione da double a float.
+* Correzione di alcune operazioni basic_string che eseguivano il confronto con npos anziché max_size() durante il controllo dell'overflow delle dimensioni massime.
+* condition_variable::wait_for(lock, relative_time, predicate) rispettava tutto il tempo relativo di attesa in caso di riattivazione spuria. Ora l'attesa corrisponde a un singolo intervallo del tempo relativo.
+* future::get() ora invalida future, come richiesto dallo standard.
+* iterator_traits\<void \*\> era un errore complesso perché veniva eseguito un tentativo di formare void&;. Ora diventa in modo fluido uno struct vuoto per consentire l'uso di iterator_traits nelle condizioni "is iterator" SFINAE.
+* Sono stati corretti alcuni avvisi segnalati da Clang -Wsystem-headers.
+* È stato corretto anche il problema "la specifica dell'eccezione nella dichiarazione non corrisponde alla dichiarazione precedente" segnalato da Clang -Wmicrosoft-exception-spec.
+* Sono stati corretti anche gli avvisi relativi all'ordinamento dell'elenco degli inizializzatori dei membri segnalati da Clang e C1XX.
+* I contenitori non ordinati non scambiavano i rispettivi hasher o predicati quando venivano scambiati i contenitori stessi. Ora lo fanno.
+* Molte operazioni di scambio del contenitore sono ora contrassegnate noexcept (dato che la libreria standard non intende mai generare un'eccezione quando rileva la condizione di comportamento indefinito non-propagate_on_container_swap non-equal-allocator).
+* Molte operazioni vector\<bool\> sono ora contrassegnate noexcept.
+* La libreria standard impone ora la corrispondenza di value_types dell'allocatore (in modalità C++17) con un'opzione per il rifiuto esplicito.
+* Correzione di alcune condizioni nelle quali un'operazione self-range-insert in basic_string compromette il contenuto delle stringhe. (Nota: lo standard proibisce ancora le operazioni self-range-insert in vettori.)
+* propagate_on_container_swap dell'allocatore non influisce più su basic_string::shrink_to_fit().
+* std::decay gestisce ora i tipi di funzione abominable, ovvero i tipi di funzione qualificati con cv e/o ref.
+* Modifica delle direttive include per l'uso corretto della distinzione tra maiuscole e minuscole e delle barre, con miglioramento della portabilità.
+* Correzione dell'avviso C4061: "l'enumeratore 'miao' nell'istruzione switch dell'enum 'gatti' non viene gestito da un'etichetta case in modo esplicito". Questo avviso è disattivato per impostazione predefinita ed è stato risolto come eccezione alle norme generali della libreria standard per gli avvisi. (La libreria standard garantisce il livello /W4, ma non tenta di offrire il livello /Wall. Molti avvisi disattivati per impostazione predefinita sono estremamente fastidiosi e non sono progettati per essere usati regolarmente.)
+* Controlli di debug migliorati per std::list. Gli iteratori di elenco controllano ora operator->() e list::unique() contrassegna ora gli iteratori come invalidati.
+* Correzione della metaprogrammazione uses-allocator nella tupla.
+
+##### <a name="performancethroughput-fixes"></a>Correzioni per prestazioni e velocità
+* Correzione delle interazioni con noexcept che impedivano l'implementazione inline di std::atomic nelle funzioni che usano la gestione delle eccezioni strutturata.
+* Modifica della funzione _Deallocate() interna della libreria standard per l'ottimizzazione in codice più ridotto, consentendone l'implementazione inline in più posizioni.
+* Modifica di std::try_lock() per l'uso dell'espansione di pacchetto invece della ricorsione.
+* Miglioramento dell'algoritmo per la prevenzione di deadlock di std::lock() con l'uso di operazioni lock() al posto della rotazione di tutti i try_lock() dei blocchi.
+* Abilitazione dell'ottimizzazione del valore restituito denominato in system_category::message().
+* La congiunzione e la disgiunzione ora creano istanze di tipi N + 1, invece di tipi 2N + 2.
+* std::function non crea più istanze del meccanismo di supporto degli allocatori per ogni chiamata di cancellazione dei tipi, con conseguente miglioramento della velocità e riduzione delle dimensioni dei file obj nei programmi che passano molte espressioni lambda distinte a std::function.
+* allocator_traits\<std:: allocator\> contiene operazioni std::allocator implementate manualmente inline, con conseguente riduzione delle dimensioni nel codice che interagisce con std::allocator solo tramite allocator_traits, ovvero la maggior parte del codice.
+* L'interfaccia minima dell'allocatore C++11 viene ora gestita dalla libreria standard che chiama direttamente allocator_traits, invece di eseguire il wrapping dell'allocatore in un _Wrap_alloc della classe interna. Ciò consente di ridurre le dimensioni del codice generato per il supporto dell'allocatore, migliorare la capacità dell'ottimizzatore di interpretare i contenitori della libreria standard in alcuni casi e offre una migliore esperienza di debug, perché è ora possibile vedere il tipo di allocatore anziché dover ricorrere a _Wrap_alloc\<tipo allocatore\> nel debugger.
+* Rimozione della metaprogrammazione per versioni personalizzate di allocator::reference, che gli allocatori non sono in effetti autorizzati a personalizzare. (Gli allocatori possono fare in modo che i contenitori usino puntatori fantasiosi, ma non riferimenti fantasiosi.)
+* Il front-end del compilatore è stato addestrato ad annullare il wrapping degli iteratori di debug nei cicli for basati su intervalli, con conseguente miglioramento delle build di debug.
+* Il percorso di riduzione interno di basic_string per shrink_to_fit() e reserve() non è più nel percorso delle operazioni di riallocazione, con conseguente riduzione delle dimensioni del codice per tutti i membri mutanti.
+* Il percorso di crescita interno di basic_string non è più nel percorso di shrink_to_fit().
+* Le operazioni di mutazione di basic_string vengono ora sottoposte a factoring nelle funzioni del percorso veloce senza allocazione e del percorso lento con allocazione, quindi l'implementazione inline nei chiamanti del caso comune senza riallocazione diventa più probabile.
+* Le operazioni di mutazione di basic_string costruiscono ora i buffer riallocati nello stato desiderato anziché eseguire il ridimensionamento in loco. Ad esempio, un'operazione di inserimento all'inizio di una stringa ora sposta il contenuto dopo l'inserimento una sola volta (verso il basso o nel nuovo buffer allocato) invece di due come nel caso della riallocazione (nel nuovo buffer allocato e poi verso il basso).
+* Le operazioni che chiamano la libreria standard C in \<string\> ora memorizzano nella cache l'indirizzo di errno per evitare interazioni ripetute con TLS.
+* Implementazione semplificata di is_pointer.
+* Completamento della modifica dell'espressione SFINAE da basata su funzioni a basata su struct/void_t.
+* Gli algoritmi della libreria standard ora evitano il post-incremento degli iteratori.
+* Correzione degli avvisi di troncamento durante l'uso di allocatori a 32 bit in sistemi a 64 bit.
+* L'assegnazione di spostamento di std::vector è ora più efficiente nel caso di allocatori non uguali e non POCMA, grazie al riutilizzo del buffer quando possibile.
+
+##### <a name="readability-and-other-improvements"></a>Miglioramenti della leggibilità e altri miglioramenti
+* La libreria standard ora usa constexpr C++14 incondizionatamente, anziché le macro definite in modo condizionale.
+* La libreria standard ora usa modelli di alias internamente.
+* La libreria standard ora usa nullptr internamente, invece di nullptr_t{}. (L'utilizzo interno di NULL è stato eliminato. L'utilizzo interno di 0 come null verrà rimosso gradualmente.)
+* La libreria standard ora usa std::move() internamente invece di usare std::forward() in modo stilisticamente non corretto.
+* Modifica di static_assert(false, "messaggio") in messaggio #error. Ciò migliora la diagnostica del compilatore perché #error interrompe immediatamente la compilazione.
+* La libreria standard non contrassegna più le funzioni come __declspec(dllimport). Ciò non è più richiesto dalla tecnologia dei linker moderni.
+* Estrazione di SFINAE negli argomenti del modello predefiniti, con conseguente riduzione della confusione rispetto ai tipi restituiti e ai tipi di argomenti delle funzioni.
+* I controlli di debug in \<random\> usano ora i normali meccanismi della libreria standard, invece della funzione interna _Rng_abort() che chiamava fputs() per stderr. L'implementazione di questa funzione viene mantenuta per la compatibilità binaria, ma verrà rimossa nella prossima versione della libreria standard non compatibile dal punto di vista binario. 
 
 ### <a name="open-source-library-support"></a>Supporto librerie open source  
 Vcpkg è un strumento open source da riga di comando che semplifica notevolmente il processo di acquisizione e di creazione di librerie statiche e DLL C++ open source in Visual Studio. Per altre informazioni, vedere [vcpkg: gestione pacchetti per C++](vcpkg.md).
@@ -112,6 +183,12 @@ CPPRestSDK, un'API Web multipiattaforma per C++, è stato aggiornato alla versio
 ## <a name="c-ide"></a>IDE C++
 
 * Le prestazioni di modifica della configurazione sono ora migliori per i progetti nativi C++ e molto migliori per i progetti C++/CLI. La prima attivazione di una configurazione della soluzione è ora più veloce e tutte le attivazioni successive saranno quasi immediate.
+
+**Visual Studio 2017 versione 15.3**:
+* Sono state riscritte diverse procedure guidate per il progetto e il codice nello stile basato su finestre di dialogo.
+* **Aggiungi classe** ora avvia direttamente la procedura guidata Aggiungi classe. Tutti gli altri elementi che in precedenza erano disponibili in questa posizione ora sono disponibili in **Aggiungi > Nuovo elemento**.
+* I progetti Win32 ora sono inclusi nella categoria Desktop di Windows nella finestra di dialogo **Nuovo progetto**.
+* I modelli Applicazione console di Windows e Applicazione desktop di Windows ora creano i progetti senza visualizzare una procedura guidata. Nella stessa categoria ora è presente una nuova Creazione guidata applicazione desktop di Windows, che visualizza le stesse opzioni disponibili in precedenza.
 
 ### <a name="intellisense"></a>IntelliSense  
 * Il nuovo motore di database basato su SQLite viene ora usato per impostazione predefinita. Questo consente di velocizzare le operazioni di database come Vai a definizione e Trova tutti i riferimenti e migliorerà significativamente il tempo di analisi iniziale. L'impostazione è stata spostata in Strumenti > Opzioni > Editor di testo -> C/C++ -> Avanzate. Nelle versioni precedenti si trova in ...C/C++ > Sperimentale.
@@ -136,20 +213,26 @@ CPPRestSDK, un'API Web multipiattaforma per C++, è stato aggiornato alla versio
 
 * Le funzionalità di refactoring sperimentale Cambia firma ed Estrai funzione ora sono disponibili per impostazione predefinita.
 
-* È stata abilitata la nuova funzionalità sperimentale per il caricamento più rapido dei progetti C++. Alla successiva apertura di un progetto C++, questo verrà caricato più velocemente e la volta successiva ciò avverrà in modo rapidissimo.
+* La funzionalità sperimentale per il caricamento più rapido dei progetti C++. Alla successiva apertura di un progetto C++, questo verrà caricato più velocemente e la volta successiva ciò avverrà in modo rapidissimo.
 
 Alcune di queste funzionalità sono usate anche in altri linguaggi e alcune sono specifiche di C++. Per altre informazioni su queste nuove funzionalità, vedere il post che [annuncia Visual Studio "15"](https://blogs.msdn.microsoft.com/visualstudio/2016/10/05/announcing-visual-studio-15-preview-5/). 
 
+
 ### <a name="support-for-non-msbuild-projects-with-open-folder"></a>Supporto per i progetti non MSBuild con Apri cartella
-Visual Studio 2017 introduce la funzionalità "Apri cartella", che consente di codificare, compilare ed eseguire il debug in un cartella contenente il codice sorgente senza dover creare soluzioni o progetti. Questo rende molto più semplice iniziare a usare Visual Studio anche se il progetto non è un progetto basato su MSBuild. Con "Apri cartella" è possibile accedere alle potenti funzionalità per la comprensione, la modifica, la compilazione e il debug del codice già offerte da Visual Studio per i progetti MSBuild. Per altre informazioni, vedere il [post sull'uso della codebase di C++ in Visual Studio con "Apri cartella"](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/bring-your-c-codebase-to-visual-studio-with-open-folder/).
+Visual Studio 2017 introduce la funzionalità "Apri cartella", che consente di codificare, compilare ed eseguire il debug in un cartella contenente il codice sorgente senza dover creare soluzioni o progetti. Questo rende molto più semplice iniziare a usare Visual Studio anche se il progetto non è un progetto basato su MSBuild. Con "Apri cartella" è possibile accedere alle potenti funzionalità per la comprensione, la modifica, la compilazione e il debug del codice già offerte da Visual Studio per i progetti MSBuild. Per altre informazioni, vedere [Open Folder projects in Visual C++](ide/non-msbuild-projects.md) (Aprire una cartella di progetti in Visual C++).
 
 * Sono stati apportati miglioramenti all'esperienza Apri cartella. È possibile personalizzare l'esperienza usando i file JSON seguenti:
   - CppProperties.json per personalizzare l'esperienza IntelliSense e di esplorazione.
   - Tasks.json per personalizzare le procedure di compilazione. 
   - Launch.json per personalizzare l'esperienza di debug.
 
+**Visual Studio 2017 versione 15.3**: 
+* Supporto migliorato per i compilatori alternativi e gli ambienti di compilazione, come MinGW e Cygwin. Per altre informazioni, vedere [Using MinGW and Cygwin with Visual C++ and Open Folder](https://blogs.msdn.microsoft.com/vcblog/2017/07/19/using-mingw-and-cygwin-with-visual-cpp-and-open-folder/) (Uso di MinGW e Cygwin con Visual C++ e Apri cartella).
+* È stato aggiunto il supporto per la definizione di variabili di ambiente globali e specifiche della configurazione in "CppProperties.json" e "CMakeSettings.json". Queste variabili di ambiente possono essere usate dalle configurazioni di debug definite in "launch.vs.json" e dalle attività in "tasks.vs.json".
+* È stato migliorato il supporto del generatore Ninja di CMake, inclusa la possibilità di creare facilmente codice destinato alle piattaforme a 64 bit.
+
 ### <a name="cmake-support-via-open-folder"></a>Supporto CMake con Apri cartella
-Visual Studio 2017 introduce il supporto per l'uso dei progetti CMake senza la conversione in file di progetto di MSBuild (con estensione vcxproj). Per altre informazioni, vedere [CMake support in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/cmake-support-in-visual-studio/) (Supporto di CMake in Visual Studio) e [CMake support in Visual Studio 2017 - what's new in the RC.2 update](https://blogs.msdn.microsoft.com/vcblog/2016/12/20/cmake-support-in-visual-studio-2017-whats-new-in-the-rc-update/) (Supporto di CMake in Visual Studio 2017 - Novità dell'aggiornamento RC.2). Se si aprono i progetti CMake con "Apri cartella", l'ambiente viene automaticamente configurato per la modifica, la compilazione e il debug in C++.
+Visual Studio 2017 introduce il supporto per l'uso dei progetti CMake senza la conversione in file di progetto di MSBuild (con estensione vcxproj). Per altre informazioni, vedere [Progetti CMake in Visual C++](ide/cmake-tools-for-visual-cpp.md). Se si aprono i progetti CMake con "Apri cartella", l'ambiente viene automaticamente configurato per la modifica, la compilazione e il debug in C++.
 
 * IntelliSense C++ funzionerà senza necessità di creare un file CppProperties.json nella cartella radice. È stato anche aggiunto un nuovo elenco a discesa per consentire agli utenti di passare facilmente tra le configurazioni fornite dai file CMake e CppProperties.json.
 
@@ -157,6 +240,7 @@ Visual Studio 2017 introduce il supporto per l'uso dei progetti CMake senza la c
 
   ![Apri cartella Cmake](media/cmake_cpp.png "Apri cartella Cmake")
 
+**Visual Studio 2017 versione 15.3**: è stato aggiunto il supporto per il generatore Ninja CMake. Per altre informazioni, vedere [CMake support in Visual Studio – what’s new in 2017 15.3 Preview 2](https://blogs.msdn.microsoft.com/vcblog/2017/06/14/cmake-support-in-visual-studio-whats-new-in-2017-15-3-preview-2/) (Supporto di CMake in Visual Studio – Novità nella versione 2017 15.3 Preview 2). 
 
 ## <a name="c-installation-workloads"></a>Carichi di lavoro di installazione per C++ 
 
@@ -167,6 +251,8 @@ Per creare progetti Win32 nel carico di lavoro per desktop C++, è necessario in
 
 ### <a name="linux-development-with-c"></a>Sviluppo per Linux con C++:  
 L'estensione comune [Visual C++ for Linux Development](https://visualstudiogallery.msdn.microsoft.com/725025cf-7067-45c2-8d01-1e0fd359ae6e) ora fa parte di Visual Studio. Questa installazione include tutto il necessario per lo sviluppo e il debug di applicazioni C++ in esecuzione in un ambiente Linux.  
+
+**Visual Studio 2017 versione 15.2**: miglioramenti per la condivisione del codice tra piattaforme e per la visualizzazione dei tipi. Per altre informazioni vedere, [Linux C++ improvements for cross-platform code sharing and type visualization](https://blogs.msdn.microsoft.com/vcblog/2017/05/10/linux-cross-platform-and-type-visualization/) (Miglioramenti di Linux C++ per la condivisione del codice tra piattaforme e per la visualizzazione dei tipi).
 
 ### <a name="game-development-with-c"></a>Sviluppo di giochi con C++:  
 Usare tutta la potenza di C++ per compilare giochi professionali con tecnologia DirectX o Cocos2d.  
@@ -191,6 +277,12 @@ Il set di strumenti Clang/C2 incluso in [!INCLUDE[vs_dev15_md](misc/includes/vs_
 I controlli di base per C++ per l'applicazione delle [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines) (Linee guida di base per C++) ora sono distribuiti con Visual Studio. È sufficiente abilitare i controlli nella finestra di dialogo delle estensioni di analisi del codice nelle pagine di proprietà del progetto per includere le estensioni durante l'esecuzione dell'analisi del codice. 
 
 ![CppCoreCheck](media/CppCoreCheck.png "Pagina delle proprietà di CppCoreCheck") 
+
+**Visual Studio 2017 versione 15.3**: è stato aggiunto il supporto di regole correlate alla gestione delle risorse. Per altre informazioni, vedere [Using the C++ Core Guidelines checkers](/visualstudio/code-quality/using-the-cpp-core-guidelines-checkers) (Uso dei controlli delle linee guida di base per C++).
+
+## <a name="unit-testing"></a>Testing unità
+
+Le nuove estensioni di Visual Studio consentono di eseguire gli unit test in base a Google Test e Boost.Test direttamente in Visual Studio. Per altre informazioni, vedere [C++ Unit Testing Updates: Announcing Boost.Test Adapter and Improved Google Test Support](https://blogs.msdn.microsoft.com/vcblog/2017/08/04/c-unit-testing-updates-announcing-boost-test-adapter-and-improved-google-test-support/) (Aggiornamenti degli unit test C++: annuncio dell'adattatore Boost.Test e miglioramento del supporto di Google Test).
 
 ## <a name="visual-studio-graphics-diagnostics"></a>Diagnostica della grafica di Visual Studio
 
