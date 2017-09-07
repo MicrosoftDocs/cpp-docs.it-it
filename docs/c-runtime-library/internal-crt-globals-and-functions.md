@@ -1,5 +1,5 @@
 ---
-title: Funzioni e variabili globali CRT interne | Microsoft Docs
+title: Internal CRT Globals and Functions | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,6 +18,8 @@ apiname:
 - __C_specific_handler
 - _calloc_base
 - _chkesp
+- __chkstk
+- _chkstk
 - _chvalidator
 - _chvalidator_l
 - _CIacos
@@ -295,6 +297,7 @@ apilocation:
 - api-ms-win-crt-conio-l1-1-0.dll
 - vcruntime140_app.dll
 - msvcp140_app.dll
+- ntdll.dll
 apitype: DLLExport
 f1_keywords:
 - __acrt_iob_func
@@ -306,6 +309,8 @@ f1_keywords:
 - __C_specific_handler
 - _calloc_base
 - _chkesp
+- __chkstk
+- _chkstk
 - _chvalidator
 - _chvalidator_l
 - _CIacos
@@ -580,6 +585,8 @@ helpviewer_keywords:
 - __C_specific_handler
 - _calloc_base
 - _chkesp
+- __chkstk
+- _chkstk
 - _chvalidator
 - _chvalidator_l
 - _CIacos
@@ -843,41 +850,25 @@ helpviewer_keywords:
 - _Xbad_alloc
 - _Xlength_error
 ms.assetid: 99a27f11-fa5a-449e-bfbb-aab578d1cc4f
-caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ac823b16dbcb3ef2bac984a8d0634ac51198dae4
-ms.openlocfilehash: e82838570d8c01d4ecc36fda384a102c415618ae
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 0afa07af22d787e669f32d21c021bec02e2de42e
 ms.contentlocale: it-it
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="internal-crt-globals-and-functions"></a>Funzioni e variabili globali CRT interne  
+# <a name="internal-crt-globals-and-functions"></a>Internal CRT Globals and Functions  
   
-La libreria di runtime C (CRT) include funzioni e variabili globali usate solo per il supporto dell'interfaccia della libreria pubblica. Alcune di esse vengono esposte in intestazioni pubbliche come dettagli relativi all'implementazione. Sebbene queste funzioni e variabili globali siano accessibili mediante esportazioni pubbliche, non sono destinate all'uso nel codice da parte degli sviluppatori. È consigliabile modificare eventuale codice che usa queste funzioni e variabili in modo da usare gli equivalenti dalla libreria pubblica. Queste funzioni possono variare a seconda della versione e sono elencate di seguito per facilitarne l'identificazione. Quando esiste documentazione aggiuntiva, vengono specificati i relativi collegamenti, ma in generale questi dettagli di implementazione non vengono documentati.  
+The C runtime (CRT) library contains functions and global variables that are used only to support the public library interface. Some of them are exposed in public headers as implementation details. Although these functions and global variables are accessible through public exports, they are not intended for use by your code. We recommend that you change any code that uses these functions and variables to use public library equivalents instead. These functions may change from version to version. They are listed here to help you identify them. Links are provided when additional documentation exists, but in general, these implementation details are not documented.  
   
-## <a name="internal-crt-globals-and-value-macros"></a>Macro di valore e variabili globali interne di CRT  
+## <a name="internal-crt-globals-and-value-macros"></a>Internal CRT Globals and Value Macros  
   
-Queste variabili globali e definizioni di macro vengono usate per implementare CRT.  
+These global variables and macro definitions are used to implement the CRT.  
   
-|Nome|  
+|Name|  
 |----------|  
 |__badioinfo|  
 |[_acmdln](../c-runtime-library/acmdln-tcmdln-wcmdln.md)|  
@@ -892,10 +883,11 @@ Queste variabili globali e definizioni di macro vengono usate per implementare C
 |[_wcmdln](../c-runtime-library/acmdln-tcmdln-wcmdln.md)|  
 |__winitenv|  
   
-## <a name="internal-crt-functions-and-function-macros"></a>Funzioni e macro di funzione interne di CRT  
- Queste funzioni e macro di funzione vengono usate per implementare la libreria CRT e la libreria standard C++.  
+## <a name="internal-crt-functions-and-function-macros"></a>Internal CRT Functions and Function Macros
+
+These functions and function macros are used to implement the CRT and the C++ Standard Library.  
   
-|Nome|  
+|Name|  
 |----------|  
 |__acrt_iob_func|  
 |__AdjustPointer|  
@@ -905,6 +897,8 @@ Queste variabili globali e definizioni di macro vengono usate per implementare C
 |__C_specific_handler|  
 |_calloc_base|  
 |_chkesp|  
+|__chkstk|  
+|_chkstk|  
 |_chvalidator|  
 |_chvalidator_l|  
 |_CIacos|  
@@ -1197,5 +1191,6 @@ Queste variabili globali e definizioni di macro vengono usate per implementare C
 |_Xbad_alloc|  
 |_Xlength_error|  
   
-## <a name="see-also"></a>Vedere anche  
- [Routine di runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)
+## <a name="see-also"></a>See Also
+
+[Run-Time Routines by Category](../c-runtime-library/run-time-routines-by-category.md)
