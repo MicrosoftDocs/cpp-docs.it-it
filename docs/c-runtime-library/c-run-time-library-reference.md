@@ -35,11 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: dfe2d5cb2180585879bba9f912253f71f7aa3805
+ms.translationtype: HT
+ms.sourcegitcommit: 22da7776e46171467a37d46c3de3227f060eaf77
+ms.openlocfilehash: eaa816f145dc46ca45ea761ab52f9c3bb7d9e343
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="c-run-time-library-reference"></a>Riferimenti alla libreria di runtime C
@@ -76,8 +76,8 @@ La libreria di runtime Microsoft fornisce le routine per la programmazione per i
  [Controllo degli errori di runtime](../c-runtime-library/run-time-error-checking.md)  
  Vengono forniti collegamenti alle funzioni che supportano i controlli degli errori di runtime.  
   
- [Funzionamento della libreria di runtime](../build/run-time-library-behavior.md)  
- Viene descritto il punto di ingresso nella DLL CRT.  
+ [DLL e comportamento delle librerie di runtime Visual C++](../build/run-time-library-behavior.md)  
+ Viene illustrato il codice di avvio e del punto di ingresso usato per una DLL.  
   
  [Librerie di Visual C++](http://msdn.microsoft.com/en-us/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
  Vengono forniti collegamenti alle diverse librerie disponibili in Visual C++, ad esempio ATL, MFC, modelli OLE DB, la libreria di runtime del linguaggio C e la libreria standard C++.  

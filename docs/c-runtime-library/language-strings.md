@@ -33,15 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: dfbd15b0da6e09b825a1562f006416e975603ab5
+ms.translationtype: HT
+ms.sourcegitcommit: 22da7776e46171467a37d46c3de3227f060eaf77
+ms.openlocfilehash: 51f99c8990015c6a9f3d50c31a370df5e3e22dbf
 ms.contentlocale: it-it
-ms.lasthandoff: 05/18/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="language-strings"></a>Language Strings
-Le funzioni `setlocale` e `_create_locale` possono utilizzare le lingue supportate dall'API NLS di Windows nei sistemi operativi che non utilizzano la tabella codici Unicode. Per l'elenco delle lingue supportate dalle singole versioni del sistema operativo, vedere [National Language Support (NLS) API Reference](http://msdn.microsoft.com/goglobal/bb896001.aspx). La stringa lingua può essere uno dei valori nelle colonne **Language** (Lingua) e **Language name abbreviation** (Abbreviazione nome lingua) dell'elenco delle lingue supportate. L'implementazione della libreria di runtime C supporta anche queste stringhe lingua:  
+Le funzioni `setlocale` e `_create_locale` possono utilizzare le lingue supportate dall'API NLS di Windows nei sistemi operativi che non utilizzano la tabella codici Unicode. Per l'elenco delle lingue supportate dalle singole versioni del sistema operativo, vedere [National Language Support (NLS) API Reference](https://www.microsoft.com/resources/msdn/goglobal/default.mspx). La stringa lingua può essere uno dei valori nelle colonne **Language** (Lingua) e **Language name abbreviation** (Abbreviazione nome lingua) dell'elenco delle lingue supportate. Per informazioni aggiuntive sul supporto delle lingue in base alla versione del sistema operativo, vedere [Appendix A: Product Behavior](http://msdn.microsoft.com/goglobal/bb896001.aspx) (Appendice A: comportamento del prodotto) in "[MS-LCID]: Windows Language Code Identifier (LCID) Reference" (Informazioni di riferimento sugli identificatori di lingua (LCID) di Windows).   
+  
+L'implementazione della libreria di runtime C supporta anche queste stringhe lingua:  
   
 |Stringa lingua|Nome equivalente delle impostazioni locali|  
 |---------------------|----------------------------|  
