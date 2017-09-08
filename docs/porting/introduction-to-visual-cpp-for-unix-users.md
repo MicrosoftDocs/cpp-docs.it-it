@@ -1,7 +1,7 @@
 ---
 title: Introduction to Visual C++ for UNIX Users | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 09/01/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -32,10 +32,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
-ms.openlocfilehash: 6eaba7ea947bc6a9c79c67745876bc0d67e73314
+ms.sourcegitcommit: 22000a296568c01082c9aef5ceaac8f266bcad5c
+ms.openlocfilehash: c8421ff4424915c5941133553c432c44fc51ad82
 ms.contentlocale: it-it
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Introduction to Visual C++ for UNIX Users
