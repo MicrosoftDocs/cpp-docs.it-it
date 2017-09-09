@@ -1,5 +1,5 @@
 ---
-title: Funzioni modello specializzate &lt;sample container&gt; | Microsoft Docs
+title: '&lt;sample container&gt; Specialized Template Functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 dev_langs:
 - C++
-f1_keywords: []
 ms.assetid: 853d4b30-167a-471b-8325-86a868943568
 caps.latest.revision: 8
 author: corob-msft
@@ -30,14 +29,14 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: b016c0b8c2009a6e6d53b96f0d0d39cc68893159
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: dc77a4282676d4b4dd89f1a5cd41faa014988b00
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltsample-containergt-specialized-template-functions"></a>Funzioni modello specializzate &lt;sample container&gt;
-Per altre informazioni sulle funzioni membro specializzate in \<sample container>, vedere [\<sample container>](../standard-library/sample-container.md).
+# <a name="ltsample-containergt-specialized-template-functions"></a>&lt;sample container&gt; Specialized Template Functions
+For more information about the specialized template functions in \<sample container>, see [\<sample container>](../standard-library/sample-container.md).
 
 

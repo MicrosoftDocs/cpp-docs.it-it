@@ -1,5 +1,5 @@
 ---
-title: Classe discard_block_engine | Microsoft Docs
+title: discard_block_engine Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- discard_block_engine
 - random/std::discard_block_engine
 dev_langs:
 - C++
@@ -34,51 +33,51 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: b770c9b353f126939a1d70c195b9cc421cb2e06e
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: f98da1248f00e34f3660f613e5a95b8ffc101c56
 ms.contentlocale: it-it
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="discardblockengine-class"></a>Classe discard_block_engine
-Genera una sequenza casuale, eliminando i valori restituiti dal motore di base corrispondente.  
+# <a name="discardblockengine-class"></a>discard_block_engine Class
+Generates a random sequence by discarding values returned by its base engine.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Engine, size_t P, size_t R>  
 class discard_block_engine;  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  `Engine`  
- Tipo del motore di base.  
+ The base engine type.  
   
  `P`  
- **Dimensioni del blocco**. Numero di valori in ogni blocco.  
+ **Block size**. The number of values in each block.  
   
  `R`  
- **Blocco usato**. Numero di valori usati in ogni blocco. Il resto viene scartato ( `P` - `R`). **Precondizione**:`0 < R ≤ P`  
+ **Used block**. The number of values in each block that are used. The rest are discarded ( `P` - `R`). **Precondition**: `0 < R ≤ P`  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 ||||  
 |-|-|-|  
 |`discard_block_engine::discard_block_engine`|`discard_block_engine::base`|`discard_block_engine::discard`|  
 |`discard_block_engine::operator()`|`discard_block_engine::base_type`|`discard_block_engine::seed`|  
   
- Per altre informazioni sui membri del motore, vedere [\<random>](../standard-library/random.md).  
+ For more information about engine members, see [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>Note  
- Questa classe modello descrive un adattatore del motore che produce valori scartando alcuni dei valori restituiti dal rispettivo motore di base.  
+## <a name="remarks"></a>Remarks  
+ This template class describes an engine adaptor that produces values by discarding some of the values returned by its base engine.  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<random>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<random>  
   
- **Spazio dei nomi:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: Struttura atomic_flag | Microsoft Docs
+title: atomic_flag Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,67 +33,67 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 9fe3617331c7019956af5d64789624e299c17242
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: cd9b53126f07bc2ab847d4921a7cdc569e6f5ea0
 ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="atomicflag-structure"></a>Struttura atomic_flag
-Descrive un oggetto che imposta e rimuove atomicamente un flag `bool`. Le operazioni sui flag atomici sono sempre senza blocco.  
+# <a name="atomicflag-structure"></a>atomic_flag Structure
+Describes an object that atomically sets and clears a `bool` flag. Operations on atomic flags are always lock-free.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```
 struct atomic_flag;
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>Metodi pubblici  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[clear](#clear)|Imposta il flag archiviato su `false`.|  
-|[test_and_set](#test_and_set)|Imposta il flag archiviato su `true` e restituisce il valore del flag iniziale.|  
+|[clear](#clear)|Sets the stored flag to `false`.|  
+|[test_and_set](#test_and_set)|Sets the stored flag to `true` and returns the initial flag value.|  
   
-## <a name="remarks"></a>Note  
- Gli oggetti `atomic_flag` possono essere passati alle funzioni non membro [atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear), [atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit), [atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set) e [atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit). Tali oggetti possono essere inizializzati tramite il valore `ATOMIC_FLAG_INIT`.  
+## <a name="remarks"></a>Remarks  
+ `atomic_flag` objects can be passed to the non-member functions [atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear), [atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit), [atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set), and [atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit). They can be initialized by using the value `ATOMIC_FLAG_INIT`.  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<atomic >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<atomic>  
   
- **Spazio dei nomi:** std  
+ **Namespace:** std  
   
-##  <a name="clear"></a>atomic_flag:: Clear
- Imposta il flag `bool` archiviato in `*this` su `false` nei limiti dei vincoli [memory_order](../standard-library/atomic-enums.md#memory_order_enum) specificati.  
+##  <a name="clear"></a>  atomic_flag::clear
+ Sets the `bool` flag that is stored in `*this` to `false`, within the specified [memory_order](../standard-library/atomic-enums.md#memory_order_enum) constraints.  
   
 ```
 void atomic_flag::clear(memory_order Order = memory_order_seq_cst) volatile noexcept;
 void atomic_flag::clear(memory_order Order = memory_order_seq_cst) noexcept;
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `Order`  
- Un [memory_order](../standard-library/atomic-enums.md#memory_order_enum).  
+ A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).  
   
-##  <a name="test_and_set"></a>atomic_flag:: test_and_set
- Imposta il flag `bool` archiviato in `*this` su `true` nei limiti dei vincoli [memory_order](../standard-library/atomic-enums.md#memory_order_enum) specificati.  
+##  <a name="test_and_set"></a>  atomic_flag::test_and_set
+ Sets the `bool` flag that is stored in `*this` to `true`, within the specified [memory_order](../standard-library/atomic-enums.md#memory_order_enum) constraints.  
   
 ```
 bool atomic_flag::test_and_set(memory_order Order = memory_order_seq_cst) volatile noexcept;
 bool atomic_flag::test_and_set(memory_order Order = memory_order_seq_cst) noexcept;
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `Order`  
- Un [memory_order](../standard-library/atomic-enums.md#memory_order_enum).  
+ A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).  
   
-### <a name="return-value"></a>Valore restituito  
- Valore iniziale del flag archiviato in `*this`.  
+### <a name="return-value"></a>Return Value  
+ The initial value of the flag that is stored in `*this`.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [\<atomic>](../standard-library/atomic.md)
 
 

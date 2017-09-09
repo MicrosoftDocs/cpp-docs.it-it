@@ -1,5 +1,5 @@
 ---
-title: Classe normal_distribution | Microsoft Docs
+title: normal_distribution Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- normal_distribution
 - random/std::normal_distribution
 - random/std::normal_distribution::reset
 - random/std::normal_distribution::mean
@@ -27,7 +26,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- normal_distribution class
+- std::normal_distribution [C++]
+- std::normal_distribution [C++], reset
+- std::normal_distribution [C++], mean
+- std::normal_distribution [C++], stddev
+- std::normal_distribution [C++], param
+- std::normal_distribution [C++], min
+- std::normal_distribution [C++], max
+- std::normal_distribution [C++], param_type
+- std::normal_distribution [C++], param_type
 ms.assetid: bf92cdbd-bc72-4d4a-b588-173d748f0d7d
 caps.latest.revision: 19
 author: corob-msft
@@ -47,17 +54,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 16b8c59395ae727e47be88e32aeb87c32b2e403d
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: ccb23d20952df8f0b1a530ba245917260e5d36ee
 ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="normaldistribution-class"></a>Classe normal_distribution
-Genera una distribuzione normale.  
+# <a name="normaldistribution-class"></a>normal_distribution Class
+Generates a normal distribution.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
 ```  
 template<class RealType = double>
 class normal_distribution  
@@ -88,33 +95,33 @@ public:
    };  
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
 *RealType*  
-Tipo di risultato a virgola mobile. Per impostazione predefinita, `double`. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).  
+The floating-point result type, defaults to `double`. For possible types, see [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>Note  
-La classe modello descrive una distribuzione che produce valori di un tipo integrale specificato dall'utente o di tipo `double` se non è specificato alcun valore, distribuiti in base alla distribuzione normale. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.  
+## <a name="remarks"></a>Remarks  
+The template class describes a distribution that produces values of a user-specified integral type, or type `double` if none is provided, distributed according to the Normal Distribution. The following table links to articles about individual members.  
   
 ||||  
 |-|-|-|  
 |[normal_distribution](#normal_distribution)|`normal_distribution::mean`|`normal_distribution::param`|  
 |`normal_distribution::operator()`|`normal_distribution::stddev`|[param_type](#param_type)|  
   
-Le funzioni di proprietà `mean()` e `stddev()` restituiscono i valori rispettivi per i parametri di distribuzione archiviati `mean` e `stddev`, rispettivamente.  
+The property functions `mean()` and `stddev()` return the values for the stored distribution parameters `mean` and `stddev` respectively.  
   
-Il membro di proprietà `param()` imposta o restituisce il pacchetto di parametri di distribuzione archiviato `param_type`.  
+The property member `param()` sets or returns the `param_type` stored distribution parameter package.  
 
-Le funzioni membro `min()` e `max()` restituiscono rispettivamente il minor risultato possibile e il maggior risultato possibile.  
+The `min()` and `max()` member functions return the smallest possible result and largest possible result, respectively.  
   
-La funzione membro `reset()` rimuove gli eventuali valori memorizzati nella cache, in modo che il risultato della successiva chiamata a `operator()` non dipenda da alcun valore ottenuto dal motore prima della chiamata.  
+The `reset()` member function discards any cached values, so that the result of the next call to `operator()` does not depend on any values obtained from the engine before the call.  
   
-Le funzioni membro `operator()` restituiscono il successivo valore generato basato sul motore URNG, dal pacchetto di parametri corrente o da quello specificato.
+The `operator()` member functions return the next generated value based on the URNG engine, either from the current parameter package, or the specified parameter package.
   
-Per altre informazioni sulle classi di distribuzione e sui rispettivi membri, vedere [\<random>](../standard-library/random.md).  
+For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).  
   
-Per informazioni dettagliate sulla distribuzione normale, vedere l'articolo di Wolfram MathWorld [Normal Distribution](http://go.microsoft.com/fwlink/LinkId=400924) (Distribuzione normale).  
+For detailed information about the Normal distribution, see the Wolfram MathWorld article [Normal Distribution](http://go.microsoft.com/fwlink/LinkId=400924).  
   
-## <a name="example"></a>Esempio  
+## <a name="example"></a>Example  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -199,38 +206,38 @@ Distribution for 10 samples:
     10: 2.7821317338  
 ```  
   
-## <a name="requirements"></a>Requisiti  
-**Intestazione:** \<random>  
+## <a name="requirements"></a>Requirements  
+**Header:** \<random>  
   
-**Spazio dei nomi:** std  
+**Namespace:** std  
   
 ##  <a name="normal_distribution"></a>  normal_distribution::normal_distribution  
-Costruisce la distribuzione.  
+Constructs the distribution.  
   
 ```  
 explicit normal_distribution(result_type mean = 0.0, result_type stddev = 1.0);
 explicit normal_distribution(const param_type& parm);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
 *mean*  
-Parametro di distribuzione `mean`.  
+The `mean` distribution parameter.  
   
 *stddev*  
-Parametro di distribuzione `stddev`.  
+The `stddev` distribution parameter.  
   
 *parm*  
-Struttura di parametri usata per costruire la distribuzione.  
+The parameter structure used to construct the distribution.  
   
-### <a name="remarks"></a>Note  
-**Precondizione:** `0.0 ≤ stddev`  
+### <a name="remarks"></a>Remarks  
+**Precondition:** `0.0 ≤ stddev`  
   
-Il primo costruttore crea un oggetto il cui valore `mean` archiviato include il valore *mean* e il cui valore `stddev` archiviato include il valore *stddev*.  
+The first constructor constructs an object whose stored `mean` value holds the value *mean* and whose stored `stddev` value holds the value *stddev*.  
   
-Il secondo costruttore crea un oggetto i cui parametri archiviati sono inizializzati da *parm*. È possibile ottenere e impostare i parametri correnti di una distribuzione esistente chiamando la funzione membro `param()`.  
+The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.  
   
 ##  <a name="param_type"></a>  normal_distribution::param_type  
-Archivia i parametri della distribuzione.  
+Stores the parameters of the distribution.  
   
 ```cpp  
 struct param_type {  
@@ -243,22 +250,22 @@ struct param_type {
    bool operator!=(const param_type& right) const;
    };  
 ```  
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
 *mean*  
-Parametro di distribuzione `mean`.  
+The `mean` distribution parameter.  
   
 *stddev*  
-Parametro di distribuzione `stddev`.  
+The `stddev` distribution parameter.  
   
 *right*  
-Struttura `param_type` usata per il confronto.  
+The `param_type` structure used to compare.  
   
-### <a name="remarks"></a>Note  
-**Precondizione:** `0.0 ≤ stddev`  
+### <a name="remarks"></a>Remarks  
+**Precondition:** `0.0 ≤ stddev`  
   
-Questa struttura può essere passata al costruttore di classe della distribuzione durante la creazione di istanze, alla funzione membro `param()` per impostare i parametri archiviati di una distribuzione esistente e a `operator()` per l'uso in sostituzione dei parametri archiviati.  
+This structure can be passed to the distribution's class constructor at instantiation, to the `param()` member function to set the stored parameters of an existing distribution, and to `operator()` to be used in place of the stored parameters.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

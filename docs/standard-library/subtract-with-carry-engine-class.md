@@ -1,5 +1,5 @@
 ---
-title: Classe subtract_with_carry_engine | Microsoft Docs
+title: subtract_with_carry_engine Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- subtract_with_carry_engine
 - random/std::subtract_with_carry_engine
 - random/std::subtract_with_carry_engine::default_seed
 - random/std::subtract_with_carry_engine::discard
@@ -19,7 +18,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- subtract_with_carry_engine class
+- std::subtract_with_carry_engine [C++]
+- std::subtract_with_carry_engine [C++], default_seed
+- std::subtract_with_carry_engine [C++], discard
+- std::subtract_with_carry_engine [C++], min
+- std::subtract_with_carry_engine [C++], max
+- std::subtract_with_carry_engine [C++], seed
 ms.assetid: 94a055f2-a620-4a22-ac34-c156924bab31
 caps.latest.revision: 20
 author: corob-msft
@@ -39,69 +43,69 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: c73401963b231883d26aa45590a9cad305b13875
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: b686e174e483e619dd7b45c54eef9ce3244ad4ba
 ms.contentlocale: it-it
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="subtractwithcarryengine-class"></a>Classe subtract_with_carry_engine
-Genera una sequenza casuale usando l'algoritmo subtract-with-carry (lagged Fibonacci).  
+# <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine Class
+Generates a random sequence by the subtract-with-carry (lagged Fibonacci) algorithm.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class UIntType, size_t W, size_t S, size_t R>  
 class subtract_with_carry_engine;  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  `UIntType`  
- Tipo di risultato Unsigned Integer. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).  
+ The unsigned integer result type. For possible types, see [\<random>](../standard-library/random.md).  
   
  `W`  
- **Dimensione parola**. Dimensione di ogni parola, in bit, della sequenza di stato. **Precondizione**: `0 < W ≤ numeric_limits<UIntType>::digits`  
+ **Word size**. Size of each word, in bits, of the state sequence. **Precondition**: `0 < W ≤ numeric_limits<UIntType>::digits`  
   
  `S`  
- **Ritardo breve**. Numero di valori Integer. **Precondizione**: `0 < S < R`  
+ **Short lag**. Number of integer values. **Precondition**: `0 < S < R`  
   
  `R`  
- **Ritardo lungo**. Determina la ricorrenza nella serie generata.  
+ **Long lag**. Determines recurrence in the series generated.  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 ||||  
 |-|-|-|  
 |`subtract_with_carry_engine::subtract_with_carry_engine`|`subtract_with_carry_engine::min`|`subtract_with_carry_engine::discard`|  
 |`subtract_with_carry_engine::operator()`|`subtract_with_carry_engine::max`|`subtract_with_carry_engine::seed`|  
-|`default_seed` è una costante membro definita come `19780503u`, usata come valore di parametro predefinito per `subtract_with_carry_engine::seed` e per il costruttore a valore singolo.|||  
+|`default_seed` is a member constant, defined as `19780503u`, used as the default parameter value for `subtract_with_carry_engine::seed` and the single value constructor.|||  
   
- Per altre informazioni sui membri del motore, vedere [\<random>](../standard-library/random.md).  
+ For more information about engine members, see [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>Note  
- La classe modello `substract_with_carry_engine` rappresenta un miglioramento di [linear_congruential_engine](../standard-library/linear-congruential-engine-class.md). Nessuno di questi motori può tuttavia eguagliare la rapidità e la qualità dei risultati offerte da [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).  
+## <a name="remarks"></a>Remarks  
+ The `substract_with_carry_engine` template class is an improvement over the [linear_congruential_engine](../standard-library/linear-congruential-engine-class.md). Neither for these engines is as fast or with as high quality results as the [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).  
   
- Questo motore genera valori di un tipo integrale senza segno specificato dall'utente usando la relazione di ricorrenza (*periodo*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`, dove `cy(i)` presenta il valore `1` se `x(i - S) - x(i - R) - cy(i - 1) < 0`, in caso contrario `0` e `M` presenta il valore `2`<sup>W</sup>. Lo stato del motore è un indicatore riporto più `R` valori. Questi valori sono costituiti dagli ultimi valori `R` restituiti se `operator()` è stato chiamato almeno `R` volte, altrimenti dai valori `N` che sono stati restituiti e dagli ultimi `R - N` valori di seeding.  
+ This engine produces values of a user-specified unsigned integral type using the recurrence relation ( *period*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`, where `cy(i)` has the value `1` if `x(i - S) - x(i - R) - cy(i - 1) < 0`, otherwise `0`, and `M` has the value `2`<sup>W</sup>. The engine's state is a carry indicator plus `R` values. These values consist of the last `R` values returned if `operator()` has been called at least `R` times, otherwise the `N` values that have been returned and the last `R - N` values of the seed.  
   
- L'argomento del modello `UIntType` deve essere abbastanza grande da contenere valori fino a `M - 1`.  
+ The template argument `UIntType` must be large enough to hold values up to `M - 1`.  
   
- Sebbene sia possibile costruire un generatore direttamente da questo motore, è anche possibile usare uno dei typedef predefiniti seguenti:  
+ Although you can construct a generator from this engine directly, you can also use one of these predefined typedefs:  
   
- `ranlux24_base`: usato come base per `ranlux24`.                   
+ `ranlux24_base`: Used as a base for `ranlux24`.                   
 `typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;`  
   
- `ranlux48_base`: usato come base per `ranlux48`.                   
+ `ranlux48_base`: Used as a base for `ranlux48`.                   
 `typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;`  
   
- Per informazioni dettagliate sull'algoritmo del motore subract-with-carry, vedere l'articolo di Wikipedia [Generatore di Fibonacci ritardato](http://go.microsoft.com/fwlink/LinkId=402445).  
+ For detailed information about the subract with carry engine algorithm, see the Wikipedia article [Lagged Fibonacci generator](http://go.microsoft.com/fwlink/LinkId=402445).  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<random>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<random>  
   
- **Spazio dei nomi:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

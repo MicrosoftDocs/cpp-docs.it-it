@@ -1,5 +1,5 @@
 ---
-title: Classe sub_match | Microsoft Docs
+title: sub_match Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- sub_match
 - regex/std::sub_match
 - regex/std::sub_match::matched
 - regex/std::sub_match::compare
@@ -21,7 +20,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- sub_match class
+- std::sub_match [C++]
+- std::sub_match [C++], matched
+- std::sub_match [C++], compare
+- std::sub_match [C++], length
+- std::sub_match [C++], str
+- std::sub_match [C++], difference_type
+- std::sub_match [C++], iterator
+- std::sub_match [C++], value_type
 ms.assetid: 804e2b9e-d16a-4c4c-ac60-024e0b2dd0e8
 caps.latest.revision: 19
 author: corob-msft
@@ -41,17 +47,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 12d12497fa96d7cf4185ad3664908a56be1078c9
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: cf13a50f8485a8981b39efec9ee5f785e5a0ab72
 ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="submatch-class"></a>Classe sub_match
-Descrive una sottocorrispondenza.  
+# <a name="submatch-class"></a>sub_match Class
+Describes a submatch.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class BidIt>  
@@ -73,28 +79,28 @@ public:
  };  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  `BidIt`  
- Tipo di iteratore per le sottocorrispondenze.  
+ The iterator type for submatches.  
   
-## <a name="remarks"></a>Note  
- La classe modello descrive un oggetto che definisce una sequenza di caratteri corrispondente a un gruppo di acquisizione in una chiamata a [regex_match](../standard-library/regex-functions.md#regex_match) o [regex_search](../standard-library/regex-functions.md#regex_search). Oggetti di tipo [classe match_results](../standard-library/match-results-class.md) contengono una matrice di questi oggetti, una per ogni gruppo Capture nell'espressione regolare usata nella ricerca.  
+## <a name="remarks"></a>Remarks  
+ The template class describes an object that designates a sequence of characters that matched a capture group in a call to [regex_match](../standard-library/regex-functions.md#regex_match) or to [regex_search](../standard-library/regex-functions.md#regex_search). Objects of type [match_results Class](../standard-library/match-results-class.md) hold an array of these objects, one for each capture group in the regular expression that was used in the search.  
   
- Se il gruppo Capture non è corrispondente, il membro di dati dell'oggetto `matched` contiene false e i due iteratori `first` e `second` (ereditati dalla base `std::pair`) sono uguali. Se il gruppo Capture è corrispondente, `matched` contiene true, l'iteratore `first` punta al primo carattere nella sequenza di destinazione corrispondente al gruppo Capture e l'iteratore `second` punti punta a una posizione dopo l'ultimo carattere nel database di destinazione che corrisponda al gruppo Capture. Si noti che per una corrispondenza di lunghezza zero il membro `matched` è true, i due iteratori saranno uguali ed entrambi punteranno alla posizione della corrispondenza.  
+ If the capture group was not matched the object's data member `matched` holds false, and the two iterators `first` and `second` (inherited from the base `std::pair`) are equal. If the capture group was matched, `matched` holds true, the iterator `first` points to the first character in the target sequence that matched the capture group, and the iterator `second` points one position past the last character in the target sequence that matched the capture group. Note that for a zero-length match the member `matched` holds true, the two iterators will be equal, and both will point to the position of the match.  
   
- Una corrispondenza zero si può verificare quando un gruppo Capture è costituito solamente da un'asserzione o da una ripetizione che consente zero ripetizioni. Ad esempio:  
+ A zero-length match can occur when a capture group consists solely of an assertion, or of a repetition that allows zero repeats. For example:  
   
- "^" corrisponde alla sequenza di destinazione "a"; l'oggetto `sub_match` corrispondente al gruppo Capture 0 contiene gli iteratori che entrambi puntano al primo carattere della sequenza.  
+ "^" matches the target sequence "a"; the `sub_match` object corresponding to capture group 0 holds iterators that both point to the first character in the sequence.  
   
- "b(a*)b" corrisponde alla sequenza di destinazione "bb"; l'oggetto `sub_match` corrispondente al gruppo Capture 1 contiene gli iteratori che entrambi puntano al secondo carattere della sequenza.  
+ "b(a*)b" matches the target sequence "bb"; the `sub_match` object corresponding to capture group 1 holds iterators that both point to the second character in the sequence.  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<regex>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<regex>  
   
- **Spazio dei nomi:** std  
+ **Namespace:** std  
   
 ##  <a name="compare"></a>  sub_match::compare  
- Confronta una sottocorrispondenza rispetto a una sequenza.  
+ Compare submatch against a sequence.  
   
 ```  
 int compare(const sub_match& right) const;
@@ -102,28 +108,28 @@ int compare(const basic_string<value_type>& str) const;
 int compare(const value_type *ptr) const;
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `right`  
- Sottocorrispondenza da confrontare.  
+ The submatch to compare to.  
   
  `str`  
- Stringa da confrontare.  
+ The string to compare to.  
   
  `ptr`  
- Sequenza con terminazione null da confrontare.  
+ The null-terminated sequence to compare to.  
   
-### <a name="remarks"></a>Note  
- La prima funzione membro confronta la sequenza corrispondente `[first, second)` con la sequenza corrispondente `[right.first, right.second)`. La seconda funzione membro confronta la sequenza corrispondente `[first, second)` con la sequenza di caratteri `[right.begin(), right.end())`. La terza funzione membro confronta la sequenza corrispondente `[first, second)` con la sequenza di caratteri `[right, right + std::char_traits<value_type>::length(right))`.  
+### <a name="remarks"></a>Remarks  
+ The first member function compares the matched sequence `[first, second)` to the matched sequence `[right.first, right.second)`. The second member function compares the matched sequence `[first, second)` to the character sequence `[right.begin(), right.end())`. The third member function compares the matched sequence `[first, second)` to the character sequence `[right, right + std::char_traits<value_type>::length(right))`.  
   
- Ogni funzione restituisce:  
+ Each function returns:  
   
- Un valore negativo se il primo valore differente nella sequenza risulta inferiore rispetto all'elemento corrispondente nella sequenza di operandi (come determinato da `std::char_traits<value_type>::compare`) o se le due sequenze hanno un prefisso comune, ma la sequenza di destinazione è più lunga  
+ a negative value if the first differing value in the matched sequence compares less than the corresponding element in the operand sequence (as determined by `std::char_traits<value_type>::compare`), or if the two have a common prefix but the target sequence is longer  
   
- Zero se le due sequenze risultano uguali elemento per elemento e hanno la stessa lunghezza  
+ zero if the two compare equal element by element and have the same length  
   
- Un valore positivo in caso contrario  
+ a positive value otherwise  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__sub_match_compare.cpp   
@@ -177,16 +183,16 @@ compare(sub) == 0
 ```  
   
 ##  <a name="difference_type"></a>  sub_match::difference_type  
- Tipo di differenza iteratore.  
+ The type of an iterator difference.  
   
 ```  
 typedef typename iterator_traits<BidIt>::difference_type difference_type;  
 ```  
   
-### <a name="remarks"></a>Note  
- typedef è sinonimo di `iterator_traits<BidIt>::difference_type`.  
+### <a name="remarks"></a>Remarks  
+ The typedef is a synonym for `iterator_traits<BidIt>::difference_type`.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__sub_match_difference_type.cpp   
@@ -240,16 +246,16 @@ compare(sub) == 0
 ```  
   
 ##  <a name="iterator"></a>  sub_match::iterator  
- Tipo di iteratore.  
+ The type of an iterator.  
   
 ```  
 typedef BidIt iterator;  
 ```  
   
-### <a name="remarks"></a>Note  
- Typedef è un sinonimo dell'argomento di tipo modello `Bidit`.  
+### <a name="remarks"></a>Remarks  
+ The typedef is a synonym for the template type argument `Bidit`.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__sub_match_iterator.cpp   
@@ -303,16 +309,16 @@ compare(sub) == 0
 ```  
   
 ##  <a name="length"></a>  sub_match::length  
- Restituisce la lunghezza di una sottocorrispondenza.  
+ Returns the length of a submatch.  
   
 ```  
 difference_type length() const;
 ```  
   
-### <a name="remarks"></a>Note  
- La funzione membro restituisce la lunghezza della sequenza corrispondente oppure zero se non era presente alcuna sequenza corrispondente.  
+### <a name="remarks"></a>Remarks  
+ The member function returns the length of the matched sequence, or zero if there was no matched sequence.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__sub_match_length.cpp   
@@ -366,16 +372,16 @@ compare(sub) == 0
 ```  
   
 ##  <a name="matched"></a>  sub_match::matched  
- Indica se la corrispondenza ha avuto esito positivo.  
+ Indicates if match succeeded.  
   
 ```  
 bool matched;  
 ```  
   
-### <a name="remarks"></a>Note  
- Il membro contiene `true` solo se il gruppo Capture associato a `*this` fa parte della corrispondenza di espressione regolare.  
+### <a name="remarks"></a>Remarks  
+ The member holds `true` only if the capture group associated with `*this` was part of the regular expression match.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__sub_match_matched.cpp   
@@ -429,16 +435,16 @@ compare(sub) == 0
 ```  
   
 ##  <a name="op_basic_string_lt_value_type_gt"></a>  sub_match::operator basic_string&lt;value_type&gt;  
- Esegue il cast di una sottocorrispondenza a una stringa.  
+ Casts submatch to a string.  
   
 ```  
 operator basic_string<value_type>() const;
 ```  
   
-### <a name="remarks"></a>Note  
- L'operatore membro restituisce `str()`.  
+### <a name="remarks"></a>Remarks  
+ The member operator returns `str()`.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__sub_match_operator_str.cpp   
@@ -492,16 +498,16 @@ compare(sub) == 0
 ```  
   
 ##  <a name="str"></a>  sub_match::str  
- Converte una sottocorrispondenza in una stringa.  
+ Converts submatch to a string.  
   
 ```  
 basic_string<value_type> str() const;
 ```  
   
-### <a name="remarks"></a>Note  
- La funzione membro restituisce `basic_string<value_type>(first, second)`.  
+### <a name="remarks"></a>Remarks  
+ The member function returns `basic_string<value_type>(first, second)`.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__sub_match_str.cpp   
@@ -555,16 +561,16 @@ compare(sub) == 0
 ```  
   
 ##  <a name="value_type"></a>  sub_match::value_type  
- Tipo di un elemento.  
+ The type of an element.  
   
 ```  
 typedef typename iterator_traits<BidIt>::value_type value_type;  
 ```  
   
-### <a name="remarks"></a>Note  
- typedef è sinonimo di `iterator_traits<BidIt>::value_type`.  
+### <a name="remarks"></a>Remarks  
+ The typedef is a synonym for `iterator_traits<BidIt>::value_type`.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__sub_match_value_type.cpp   
@@ -617,7 +623,7 @@ compare(string) == 1
 compare(sub) == 0  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [\<regex>](../standard-library/regex.md)   
  [sub_match](../standard-library/sub-match-class.md)
 

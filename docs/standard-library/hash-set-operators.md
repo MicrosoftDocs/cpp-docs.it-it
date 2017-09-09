@@ -1,23 +1,27 @@
 ---
-title: Operatori &lt;hash_set&gt; | Microsoft Docs
+title: '&lt;hash_set&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- hash_set/std::operator!=
+- hash_set/std::operator==
+dev_langs:
+- C++
 ms.assetid: 403d8e4e-0b3f-43fb-bc5a-8100c4f331c5
 caps.latest.revision: 13
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 5434d1dc44724cf876a42323140877ba38cb2b45
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: f01351ff8564091ac6778b8846bfd52d18eb896c
 ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="lthashsetgt-operators"></a>Operatori &lt;hash_set&gt;
+# <a name="lthashsetgt-operators"></a>&lt;hash_set&gt; operators
 ||||  
 |-|-|-|  
 |[operator!=](#op_neq)|[operator!= (hash_multiset)](#op_neq_hash_multiset)|[operator==](#op_eq_eq)|  
@@ -26,30 +30,30 @@ ms.lasthandoff: 04/29/2017
 ##  <a name="op_neq"></a>  operator!=  
   
 > [!NOTE]
->  Questa API è obsoleta. L'alternativa è la [classe unordered_set](../standard-library/unordered-set-class.md).  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- Verifica se l'oggetto hash_set a sinistra dell'operatore non è uguale all'oggetto hash_set a destra.  
+ Tests if the hash_set object on the left side of the operator is not equal to the hash_set object on the right side.  
   
 ```  
 bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <Key, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `left`  
- Oggetto di tipo `hash_set`.  
+ An object of type `hash_set`.  
   
  `right`  
- Oggetto di tipo `hash_set`.  
+ An object of type `hash_set`.  
   
-### <a name="return-value"></a>Valore restituito  
- **true** se gli oggetti hash_set non sono uguali; in caso contrario, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the hash_sets are not equal; **false** if hash_sets are equal.  
   
-### <a name="remarks"></a>Note  
- Il confronto tra gli oggetti hash_set si basa su un confronto a coppie dei rispettivi elementi. Due oggetti hash_set sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.  
+### <a name="remarks"></a>Remarks  
+ The comparison between hash_set objects is based on a pairwise comparison between their elements. Two hash_sets are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
   
- I membri del [< hash_map >](../standard-library/hash-map.md) e [< hash_set >](../standard-library/hash-set.md) presenti file di intestazione di [stdext Namespace](../standard-library/stdext-namespace.md).
+ Members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are in the [stdext Namespace](../standard-library/stdext-namespace.md).
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_set_op_ne.cpp  
@@ -91,30 +95,30 @@ The hash_sets hs1 and hs3 are equal.
 ##  <a name="op_eq_eq"></a>  operator==  
   
 > [!NOTE]
->  Questa API è obsoleta. L'alternativa è la [classe unordered_set](../standard-library/unordered-set-class.md).  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- Verifica se l'oggetto hash_set a sinistra dell'operatore è uguale all'oggetto hash_set a destra.  
+ Tests if the hash_set object on the left side of the operator is equal to the hash_set object on the right side.  
   
 ```  
 bool operator!==(const hash_set <Key, Traits, Allocator>& left, const hash_set <Key, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `left`  
- Oggetto di tipo `hash_set`.  
+ An object of type `hash_set`.  
   
  `right`  
- Oggetto di tipo `hash_set`.  
+ An object of type `hash_set`.  
   
-### <a name="return-value"></a>Valore restituito  
- **true** se l'oggetto hash_set a sinistra dell'operatore è uguale all'oggetto hash_set a destra; in caso contrario, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the hash_set on the left side of the operator is equal to the hash_set on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>Note  
- Il confronto tra gli oggetti hash_set si basa su un confronto a coppie dei rispettivi elementi. Due oggetti hash_set sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.  
+### <a name="remarks"></a>Remarks  
+ The comparison between hash_set objects is based on a pairwise comparison of their elements. Two hash_sets are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
   
- In Visual C++ .NET 2003 i membri dei file di intestazione [<hash_map>](../standard-library/hash-map.md) e [<hash_set>](../standard-library/hash-set.md) non si trovano più nello spazio dei nomi std, ma sono stati spostati nello spazio dei nomi stdext. Per altre informazioni, vedere [Spazio dei nomi stdext](../standard-library/stdext-namespace.md).  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_set_op_eq.cpp  
@@ -156,30 +160,30 @@ The hash_sets s1 and s3 are equal.
 ##  <a name="neq_hash_multiset"></a>  operator!= (hash_multiset)  
   
 > [!NOTE]
->  Questa API è obsoleta. L'alternativa è la [classe unordered_set](../standard-library/unordered-set-class.md).  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- Verifica se l'oggetto hash_multiset a sinistra dell'operatore non è uguale all'oggetto hash_multiset a destra.  
+ Tests if the hash_multiset object on the left side of the operator is not equal to the hash_multiset object on the right side.  
   
 ```  
 bool operator!=(const hash_multiset <Key, Traits, Allocator>& left, const hash_multiset <Key, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `left`  
- Oggetto di tipo `hash_multiset`.  
+ An object of type `hash_multiset`.  
   
  `right`  
- Oggetto di tipo `hash_multiset`.  
+ An object of type `hash_multiset`.  
   
-### <a name="return-value"></a>Valore restituito  
- **true** se gli oggetti hash_multiset non sono uguali; in caso contrario, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the hash_multisets are not equal; **false** if hash_multisets are equal.  
   
-### <a name="remarks"></a>Note  
- Il confronto tra gli oggetti hash_multiset si basa su un confronto a coppie dei rispettivi elementi. Due oggetti hash_multiset sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.  
+### <a name="remarks"></a>Remarks  
+ The comparison between hash_multiset objects is based on a pairwise comparison between their elements. Two hash_multisets are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
   
- In Visual C++ .NET 2003 i membri dei file di intestazione [<hash_map>](../standard-library/hash-map.md) e [<hash_set>](../standard-library/hash-set.md) non si trovano più nello spazio dei nomi std, ma sono stati spostati nello spazio dei nomi stdext. Per altre informazioni, vedere [Spazio dei nomi stdext](../standard-library/stdext-namespace.md).  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hashset_op_ne.cpp  
@@ -221,30 +225,30 @@ The hash_multisets hs1 and hs3 are equal.
 ##  <a name="eq_eq_hash_multiset"></a>  operator== (hash_multiset)  
   
 > [!NOTE]
->  Questa API è obsoleta. L'alternativa è la [classe unordered_set](../standard-library/unordered-set-class.md).  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- Verifica se l'oggetto hash_multiset a sinistra dell'operatore è uguale all'oggetto hash_multiset a destra.  
+ Tests if the hash_multiset object on the left side of the operator is equal to the hash_multiset object on the right side.  
   
 ```  
 bool operator!==(const hash_multiset <Key, Traits, Allocator>& left, const hash_multiset <Key, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `left`  
- Oggetto di tipo `hash_multiset`.  
+ An object of type `hash_multiset`.  
   
  `right`  
- Oggetto di tipo `hash_multiset`.  
+ An object of type `hash_multiset`.  
   
-### <a name="return-value"></a>Valore restituito  
- **true** se l'oggetto hash_multiset a sinistra dell'operatore è uguale all'oggetto hash_multiset a destra; in caso contrario, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the hash_multiset on the left side of the operator is equal to the hash_multiset on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>Note  
- Il confronto tra gli oggetti hash_multiset si basa su un confronto a coppie dei rispettivi elementi. Due oggetti hash_multiset sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.  
+### <a name="remarks"></a>Remarks  
+ The comparison between hash_multiset objects is based on a pairwise comparison of their elements. Two hash_multisets are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
   
- In Visual C++ .NET 2003 i membri dei file di intestazione [<hash_map>](../standard-library/hash-map.md) e [<hash_set>](../standard-library/hash-set.md) non si trovano più nello spazio dei nomi std, ma sono stati spostati nello spazio dei nomi stdext. Vedere [lo spazio dei nomi stdext](../standard-library/stdext-namespace.md) per ulteriori informazioni.  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multiset_op_eq.cpp  
@@ -283,7 +287,7 @@ The hash_multisets s1 and s2 are not equal.
 The hash_multisets s1 and s2 are equal.  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [<hash_set>](../standard-library/hash-set.md)
 
 

@@ -1,16 +1,15 @@
 ---
-title: Classe map | Microsoft Docs
+title: map Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - map/std::map
-- map
 - map/std::map::allocator_type
 - map/std::map::const_iterator
 - map/std::map::const_pointer
@@ -55,7 +54,48 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- map class
+- std::map [C++]
+- std::map [C++], allocator_type
+- std::map [C++], const_iterator
+- std::map [C++], const_pointer
+- std::map [C++], const_reference
+- std::map [C++], const_reverse_iterator
+- std::map [C++], difference_type
+- std::map [C++], iterator
+- std::map [C++], key_compare
+- std::map [C++], key_type
+- std::map [C++], mapped_type
+- std::map [C++], pointer
+- std::map [C++], reference
+- std::map [C++], reverse_iterator
+- std::map [C++], size_type
+- std::map [C++], value_type
+- std::map [C++], at
+- std::map [C++], begin
+- std::map [C++], cbegin
+- std::map [C++], cend
+- std::map [C++], clear
+- std::map [C++], count
+- std::map [C++], crbegin
+- std::map [C++], crend
+- std::map [C++], emplace
+- std::map [C++], emplace_hint
+- std::map [C++], empty
+- std::map [C++], end
+- std::map [C++], equal_range
+- std::map [C++], erase
+- std::map [C++], find
+- std::map [C++], get_allocator
+- std::map [C++], insert
+- std::map [C++], key_comp
+- std::map [C++], lower_bound
+- std::map [C++], max_size
+- std::map [C++], rbegin
+- std::map [C++], rend
+- std::map [C++], size
+- std::map [C++], swap
+- std::map [C++], upper_bound
+- std::map [C++], value_comp
 ms.assetid: 7876f4c9-ebb4-4878-af1e-09364c43af0a
 caps.latest.revision: 27
 author: corob-msft
@@ -75,19 +115,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: a4fa9aa24f2e6cdf9be4127f38637f57c08e588e
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 1e239176d8c9c52269720a0548438f2417d0aa1b
 ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="map-class"></a>Classe map
-Utilizzato per l'archiviazione e il recupero di dati da una raccolta in cui ogni elemento è costituito da una coppia che contiene sia un valore dati che una chiave di ordinamento. Il valore della chiave è univoco e viene utilizzato per l'ordinamento automatico dei dati.  
+# <a name="map-class"></a>map Class
+Used for the storage and retrieval of data from a collection in which each element is a pair that has both a data value and a sort key. The value of the key is unique and is used to automatically sort the data.  
   
- Il valore di un elemento di una mappa può essere modificato direttamente. Il valore della chiave è una costante e non può essere modificato. Al contrario, i valori delle chiavi associati a elementi precedenti devono essere eliminati e i valori delle nuove chiavi devono essere inseriti per i nuovi elementi.  
+ The value of an element in a map can be changed directly. The key value is a constant and cannot be changed. Instead, key values associated with old elements must be deleted, and new key values must be inserted for new elements.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Key,   
@@ -97,132 +137,132 @@ template <class Key,
 class map;  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  `Key`  
- Tipo di dati relativo alle chiavi da archiviare nella mappa.  
+ The key data type to be stored in the map.  
   
  `Type`  
- Tipo di dati relativo agli elementi da archiviare nella mappa.  
+ The element data type to be stored in the map.  
   
  `Traits`  
- Tipo che fornisce un oggetto funzione in grado di confrontare i valori di due elementi come chiavi di ordinamento per determinarne l'ordine relativo nella mappa. Questo argomento è facoltativo e il predicato binario `less<Key>` rappresenta il valore predefinito.  
+ The type that provides a function object that can compare two element values as sort keys to determine their relative order in the map. This argument is optional and the binary predicate `less<Key>` is the default value.  
   
- In C++ 14 è possibile abilitare la ricerca eterogenea specificando il predicato std::less<> che non ha alcun parametro di tipo. Per altre informazioni, vedere [Ricerca eterogenea nei contenitori associativi](../standard-library/stl-containers.md#sequence_containers).  
+ In C++14 you can enable heterogeneous lookup by specifying the std::less<> predicate that has no type parameters. For more information, see [Heterogeneous Lookup in Associative Containers](../standard-library/stl-containers.md#sequence_containers)  
   
  `Allocator`  
- Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli relativi all'allocazione della mappa e alla deallocazione della memoria. Questo argomento è facoltativo e il valore predefinito è `allocator<pair<const Key, Type> >`.  
+ The type that represents the stored allocator object that encapsulates details about the map's allocation and deallocation of memory. This argument is optional and the default value is `allocator<pair<const Key, Type> >`.  
   
-## <a name="remarks"></a>Note  
- La classe map della libreria standard C++ è:  
+## <a name="remarks"></a>Remarks  
+ The C++ Standard Library map class is:  
   
--   Un contenitore di dimensioni variabili in grado di recuperare in modo efficiente i valori degli elementi in base ai valori delle chiavi associate.  
+-   A container of variable size that efficiently retrieves element values based on associated key values.  
   
--   Reversibile, in quanto fornisce iteratori bidirezionali per accedere ai relativi elementi.  
+-   Reversible, because it provides bidirectional iterators to access its elements.  
   
--   Ordinato, perché i relativi elementi vengono ordinati in base ai valori delle chiavi secondo una funzione di confronto specificata.  
+-   Sorted, because its elements are ordered by key values according to a specified comparison function.  
   
--   Univoco. perché ogni elemento deve disporre di una chiave univoca.  
+-   Unique. because each of its elements must have a unique key.  
   
--   Un contenitore associativo di coppie, in quanto i valori dei dati degli elementi sono diversi dai valori delle relative chiavi.  
+-   A pair-associative container, because its element data values are distinct from its key values.  
   
--   Una classe modello, poiché le funzionalità che fornisce sono generiche e indipendenti dal tipo di elemento o di chiave. I tipi di dati utilizzati per gli elementi e le chiavi vengono specificati come parametri nella classe modello insieme alla funzione di confronto e all'allocatore.  
+-   A template class, because the functionality it provides is generic and independent of element or key type. The data types used for elements and keys are specified as parameters in the class template together with the comparison function and allocator.  
   
- L'iteratore fornito dalla classe map è un iteratore bidirezionale, ma le funzioni membro [insert](#insert) e [map](#map) della classe hanno versioni che accettano come parametri di modello un iteratore di input più debole, in cui i requisiti delle funzionalità sono inferiori a quelli garantiti dalla classe degli iteratori bidirezionali. I diversi concetti di iteratore sono correlati dai perfezionamenti delle rispettive funzionalità. Ogni concetto di iteratore dispone di un proprio set di requisiti e gli algoritmi utilizzati con tali concetti devono essere limitati da tali requisiti. Un iteratore di input può essere dereferenziato per fare riferimento a un determinato oggetto, nonché incrementato all'iteratore successivo della sequenza.  
+ The iterator provided by the map class is a bidirectional iterator, but the [insert](#insert) and [map](#map) class member functions have versions that take as template parameters a weaker input iterator, whose functionality requirements are fewer than those guaranteed by the class of bidirectional iterators. The different iterator concepts are related by refinements in their functionality. Each iterator concept has its own set of requirements, and the algorithms that work with it must be limited by those requirements. An input iterator may be dereferenced to refer to some object and may be incremented to the next iterator in the sequence.  
   
- È consigliabile basare la scelta del tipo di contenitore sul tipo di ricerca e inserimento richiesti dall'applicazione. I contenitori associativi sono ottimizzati per le operazioni di ricerca, inserimento e rimozione. Le funzioni membro che supportano in modo esplicito queste operazioni consentono di eseguirle in un tempo nella più pessimistica delle ipotesi proporzionale al logaritmo del numero di elementi presenti nel contenitore. L'inserimento di elementi non invalida gli iteratori e la rimozione di tali elementi invalida solo gli iteratori che avevano puntato in modo specifico agli elementi rimossi.  
+ We recommend that you base the choice of container type on the kind of searching and inserting that is required by the application. Associative containers are optimized for the operations of lookup, insertion, and removal. The member functions that explicitly support these operations perform them in a worst-case time that is proportional to the logarithm of the number of elements in the container. Inserting elements invalidates no iterators, and removing elements invalidates only those iterators that specifically pointed to the removed elements.  
   
- È consigliabile scegliere come contenitore associativo la mappa quando le condizioni che consentono di associare i valori alle chiavi vengono soddisfatte dall'applicazione. Un modello relativo a questo tipo di struttura è costituito da un elenco ordinato di parole chiave univoche a cui sono associati valori di stringa contenenti definizioni. Se una parola dispone di più definizioni corrette, tali da rendere una chiave non univoca, è opportuno scegliere come contenitore un multimap. Se viene archiviato solo un elenco di parole, il set sarà il contenitore appropriato. Se sono consentite più occorrenze delle parole, il multiset rappresenterà la scelta appropriata.  
+ We recommend that you make the map the associative container of choice when conditions that associate values with keys are satisfied by the application. A model for this kind of structure is an ordered list of uniquely occurring key words that have associated string values that provide definitions. If a word has more than one correct definition, so that key is not unique, then a multimap would be the container of choice. If just the list of words is being stored, then a set would be the appropriate container. If multiple occurrences of the words are allowed, then a multiset would be appropriate.  
   
- L'oggetto map ordina gli elementi che controlla chiamando un oggetto funzione archiviato di tipo [key_compare](#key_compare). Questo oggetto archiviato è una funzione di confronto a cui si accede chiamando il metodo [key_comp](#key_comp). In genere, due elementi qualsiasi vengono confrontati per determinare se uno è minore dell'altro o se sono equivalenti. Una volta che tutti gli elementi sono stati confrontati, viene creata una sequenza ordinata di elementi non equivalenti.  
+ The map orders the elements it controls by calling a stored function object of type [key_compare](#key_compare). This stored object is a comparison function that is accessed by calling the [key_comp](#key_comp) method. In general, any two given elements are compared to determine whether one is less than the other or whether they are equivalent. As all elements are compared, an ordered sequence of non-equivalent elements is created.  
   
 > [!NOTE]
->  La funzione di confronto è un predicato binario che provoca un ordinamento di tipo "strict weak" nel senso matematico standard. Un predicato binario                     f(x,y) è un oggetto funzione che dispone di due oggetti argomento                     x e                     y e di un valore restituito `true` o `false`. Un ordinamento imposto a un set è un ordinamento di tipo "strict weak" se il predicato binario è irriflessivo, antisimmetrico e transitivo e se l'equivalenza è transitiva, in cui due oggetti                     x and                     y vengono definiti equivalenti quando sia                     f(x,y) che                     f(y,x) sono `false`. Se la condizione di uguaglianza più forte tra le chiavi sostituisce quella di equivalenza, l'ordinamento diventa totale (nel senso che tutti gli elementi vengono ordinati l'uno rispetto all'altro) e le chiavi accoppiate saranno indistinguibili l'una dall'altra.  
+>  The comparison function is a binary predicate that induces a strict weak ordering in the standard mathematical sense. A binary predicate                     f(x,y) is a function object that has two argument objects                     x and                     y, and a return value of `true` or `false`. An ordering imposed on a set is a strict weak ordering if the binary predicate is irreflexive, antisymmetric, and transitive, and if equivalence is transitive, where two objects                     x and                     y are defined to be equivalent when both                     f(x,y)and                     f(y,x) are `false`. If the stronger condition of equality between keys replaces that of equivalence, the ordering becomes total (in the sense that all the elements are ordered with regard to one other), and the keys matched will be indiscernible from one other.  
 >   
->  In C++ 14 è possibile abilitare la ricerca eterogenea specificando il predicato `std::less<>` o `std::greater<>` che non ha alcun parametro di tipo. Per altre informazioni, vedere [Ricerca eterogenea nei contenitori associativi](../standard-library/stl-containers.md#sequence_containers).  
+>  In C++14 you can enable heterogeneous lookup by specifying the `std::less<>` or `std::greater<>` predicate that has no type parameters. For more information, see [Heterogeneous Lookup in Associative Containers](../standard-library/stl-containers.md#sequence_containers)  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="constructors"></a>Costruttori  
-  
-|||  
-|-|-|  
-|[map](#map)|Costruisce una lista di dimensioni specifiche con elementi di un valore specifico, con un `allocator` specifico o come copia di un'altra mappa.|  
-  
-### <a name="typedefs"></a>Typedef  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[allocator_type](#allocator_type)|typedef per la classe `allocator` dell'oggetto mappa.|  
-|[const_iterator](#const_iterator)|typedef per un iteratore bidirezionale in grado di leggere un elemento `const` della mappa.|  
-|[const_pointer](#const_pointer)|typedef per un puntatore a un elemento `const` di una mappa.|  
-|[const_reference](#const_reference)|typedef per un riferimento a un elemento `const` archiviato in una mappa per la lettura e l'esecuzione di operazioni `const`.|  
-|[const_reverse_iterator](#const_reverse_iterator)|Tipo che fornisce un iteratore bidirezionale in grado di leggere qualsiasi elemento `const` della mappa.|  
-|[difference_type](#difference_type)|typedef Signed Integer per il numero di elementi di una mappa in un intervallo compreso tra gli elementi a cui puntano gli iteratori.|  
-|[iterator](#iterator)|typedef per un iteratore bidirezionale in grado di leggere o di modificare qualsiasi elemento di una mappa.|  
-|[key_compare](#key_compare)|typedef per un oggetto funzione in grado di confrontare due chiavi di ordinamento per determinare l'ordine relativo di due elementi della mappa.|  
-|[key_type](#key_type)|typedef per la chiave di ordinamento archiviata in ogni elemento della mappa.|  
-|[mapped_type](#mapped_type)|typedef per i dati archiviati in ogni elemento di una mappa.|  
-|[pointer](#pointer)|typedef per un puntatore a un elemento `const` di una mappa.|  
-|[reference](#reference)|typedef per un riferimento a un elemento archiviato in una mappa.|  
-|[reverse_iterator](#reverse_iterator)|typedef per un iteratore bidirezionale in grado di leggere o di modificare un elemento di una mappa invertita.|  
-|[size_type](#size_type)|typedef Unsigned Integer per il numero di elementi di una mappa|  
-|[value_type](#value_type)|typedef per il tipo di oggetto archiviato come elemento di una mappa.|  
+|[map](#map)|Constructs a list of a specific size or with elements of a specific value or with a specific `allocator` or as a copy of some other map.|  
   
-### <a name="member-functions"></a>Funzioni membro  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[at](#at)|Trova un elemento con un valore della chiave specificata.|  
-|[begin](#begin)|Restituisce un iteratore che punta al primo elemento della mappa.|  
-|[cbegin](#cbegin)|Restituisce un iteratore const che punta al primo elemento della mappa.|  
-|[cend](#cend)|Restituisce un iteratore const successivo all'ultimo valore.|  
-|[clear](#clear)|Cancella tutti gli elementi di una mappa.|  
-|[count](#count)|Restituisce il numero di elementi di una mappa la cui chiave corrisponde alla chiave specificata in un parametro.|  
-|[crbegin](#crbegin)|Restituisce un iteratore const che punta al primo elemento di una mappa invertita.|  
-|[crend](#crend)|Restituisce un iteratore const che punta alla posizione successiva all'ultimo elemento di una mappa invertita.|  
-|[emplace](#emplace)|Inserisce un elemento costruito sul posto nella mappa.|  
-|[emplace_hint](#emplace_hint)|Inserisce un elemento costruito sul posto nella mappa, con un suggerimento sulla posizione.|  
-|[empty](#empty)|Restituisce `true` se una mappa è vuota.|  
-|[end](#end)|Restituisce l'iteratore successivo all'ultimo valore.|  
-|[equal_range](#equal_range)|Restituisce una coppia di iteratori. Il primo iteratore della coppia fa riferimento al primo elemento di un `map` con una chiave maggiore di una chiave specificata. Il secondo iteratore della coppia fa riferimento al primo elemento della `map` con una chiave uguale o maggiore della chiave specificata.|  
-|[erase](#erase)|Rimuove un elemento o un intervallo di elementi di una mappa dalle posizioni specificate.|  
-|[find](#find)|Restituisce un iteratore che punta alla posizione di un elemento di una mappa con una chiave uguale a una chiave specificata.|  
-|[get_allocator](#get_allocator)|Restituisce una copia dell'oggetto `allocator` utilizzato per costruire la mappa.|  
-|[insert](#insert)|Incolla un elemento o un intervallo di elementi nella mappa in una posizione specificata.|  
-|[key_comp](#key_comp)|Restituisce una copia dell'oggetto di confronto utilizzato per ordinare le chiavi di una mappa.|  
-|[lower_bound](#lower_bound)|Restituisce un iteratore al primo elemento di una mappa con un valore della chiave uguale o maggiore di quello di una chiave specificata.|  
-|[max_size](#max_size)|Restituisce la lunghezza massima della mappa.|  
-|[rbegin](#rbegin)|Restituisce un iteratore che punta al primo elemento di una mappa invertita.|  
-|[rend](#rend)|Restituisce un iteratore che punta alla posizione successiva all'ultimo elemento di una mappa invertita.|  
-|[size](#size)|Restituisce il numero di elementi della mappa.|  
-|[swap](#swap)|Scambia gli elementi di due oggetti map.|  
-|[upper_bound](#upper_bound)|Restituisce un iteratore al primo elemento di una mappa con un valore della chiave uguale o maggiore di quello di una chiave specificata.|  
-|[value_comp](#value_comp)|Recupera una copia dell'oggetto di confronto utilizzato per ordinare i valori di una mappa.|  
+|[allocator_type](#allocator_type)|A typedef for the `allocator` class for the map object.|  
+|[const_iterator](#const_iterator)|A typedef for a bidirectional iterator that can read a `const` element in the map.|  
+|[const_pointer](#const_pointer)|A typedef for a pointer to a `const` element in a map.|  
+|[const_reference](#const_reference)|A typedef for a reference to a `const` element stored in a map for reading and performing `const` operations.|  
+|[const_reverse_iterator](#const_reverse_iterator)|A type that provides a bidirectional iterator that can read any `const` element in the map.|  
+|[difference_type](#difference_type)|A signed integer typedef for the number of elements of a map in a range between elements pointed to by iterators.|  
+|[iterator](#iterator)|A typedef for a bidirectional iterator that can read or modify any element in a map.|  
+|[key_compare](#key_compare)|A typedef for a function object that can compare two sort keys to determine the relative order of two elements in the map.|  
+|[key_type](#key_type)|A typedef for the sort key stored in each element of the map.|  
+|[mapped_type](#mapped_type)|A typedef for the data stored in each element of a map.|  
+|[pointer](#pointer)|A typedef for a pointer to a `const` element in a map.|  
+|[reference](#reference)|A typedef for a reference to an element stored in a map.|  
+|[reverse_iterator](#reverse_iterator)|A typedef for a bidirectional iterator that can read or modify an element in a reversed map.|  
+|[size_type](#size_type)|An unsigned integer typedef for the number of elements in a map|  
+|[value_type](#value_type)|A typedef for the type of object stored as an element in a map.|  
   
-### <a name="operators"></a>Operatori  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[operator&#91;&#93;](#op_at)|Inserisce un elemento in una mappa con un valore di chiave specificato.|  
-|[operator=](#op_eq)|Sostituisce gli elementi di una mappa con una copia di un'altra mappa.|  
+|[at](#at)|Finds an element with a specified key value.|  
+|[begin](#begin)|Returns an iterator that points to the first element in the map.|  
+|[cbegin](#cbegin)|Returns a const iterator that points to the first element in the map.|  
+|[cend](#cend)|Returns a const past-the-end iterator.|  
+|[clear](#clear)|Erases all the elements of a map.|  
+|[count](#count)|Returns the number of elements in a map whose key matches the key specified in a parameter.|  
+|[crbegin](#crbegin)|Returns a const iterator that points to the first element in a reversed map.|  
+|[crend](#crend)|Returns a const iterator that points to the location after the last element in a reversed map.|  
+|[emplace](#emplace)|Inserts an element constructed in place into the map.|  
+|[emplace_hint](#emplace_hint)|Inserts an element constructed in place into the map, with a placement hint.|  
+|[empty](#empty)|Returns `true` if a map is empty.|  
+|[end](#end)|Returns the past-the-end iterator.|  
+|[equal_range](#equal_range)|Returns a pair of iterators. The first iterator in the pair points to the first element in a `map` with a key that is greater than a specified key. The second iterator in the pair points to the first element in the `map` with a key that is equal to or greater than the key.|  
+|[erase](#erase)|Removes an element or a range of elements in a map from the specified positions.|  
+|[find](#find)|Returns an iterator that points to the location of an element in a map that has a key equal to a specified key.|  
+|[get_allocator](#get_allocator)|Returns a copy of the `allocator` object that is used to construct the map.|  
+|[insert](#insert)|Inserts an element or a range of elements into the map at a specified position.|  
+|[key_comp](#key_comp)|Returns a copy of the comparison object that used to order keys in a map.|  
+|[lower_bound](#lower_bound)|Returns an iterator to the first element in a map that has a key value that is equal to or greater than that of a specified key.|  
+|[max_size](#max_size)|Returns the maximum length of the map.|  
+|[rbegin](#rbegin)|Returns an iterator that points to the first element in a reversed map.|  
+|[rend](#rend)|Returns an iterator that points to the location after the last element in a reversed map.|  
+|[size](#size)|Returns the number of elements in the map.|  
+|[swap](#swap)|Exchanges the elements of two maps.|  
+|[upper_bound](#upper_bound)|Returns an iterator to the first element in a map that has a key value that is greater than that of a specified key.|  
+|[value_comp](#value_comp)|Retrieves a copy of the comparison object that is used to order element values in a map.|  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<map>  
+### <a name="operators"></a>Operators  
   
- **Spazio dei nomi:** std  
+|||  
+|-|-|  
+|[operator&#91;&#93;](#op_at)|Inserts an element into a map with a specified key value.|  
+|[operator=](#op_eq)|Replaces the elements of a map with a copy of another map.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<map>  
+  
+ **Namespace:** std  
   
 ##  <a name="allocator_type"></a>  map::allocator_type  
- Tipo che rappresenta la classe allocator per l'oggetto map.  
+ A type that represents the allocator class for the map object.  
   
 ```  
 typedef Allocator allocator_type;  
 ```  
   
-### <a name="example"></a>Esempio  
-  Vedere l'esempio relativo a [get_allocator](#get_allocator) per indicazioni su come usare `allocator_type`.  
+### <a name="example"></a>Example  
+  See example for [get_allocator](#get_allocator) for an example that uses `allocator_type`.  
   
 ##  <a name="at"></a>  map::at  
- Trova un elemento con un valore della chiave specificata.  
+ Finds an element with a specified key value.  
   
 ```  
 Type& at(const Key& key);
@@ -230,20 +270,20 @@ Type& at(const Key& key);
 const Type& at(const Key& key) const;
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Parametro|Descrizione|  
-|`key`|Valore di chiave da trovare.|  
+|Parameter|Description|  
+|`key`|The key value to find.|  
   
-### <a name="return-value"></a>Valore restituito  
- Riferimento al valore dei dati dell'elemento trovato.  
+### <a name="return-value"></a>Return Value  
+ A reference to the data value of the element found.  
   
-### <a name="remarks"></a>Note  
- Se non viene trovato il valore della chiave dell'argomento, la funzione genera un oggetto della [classe out_of_range](../standard-library/out-of-range-class.md).  
+### <a name="remarks"></a>Remarks  
+ If the argument key value is not found, then the function throws an object of class [out_of_range Class](../standard-library/out-of-range-class.md).  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_at.cpp  
@@ -270,7 +310,7 @@ int main()
 ```  
   
 ##  <a name="begin"></a>  map::begin  
- Restituisce un iteratore che punta al primo elemento dell'oggetto map.  
+ Returns an iterator addressing the first element in the map.  
   
 ```  
 const_iterator begin() const;
@@ -278,10 +318,10 @@ const_iterator begin() const;
 iterator begin();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Iteratore bidirezionale che punta al primo elemento dell'oggetto map o alla posizione successiva a un oggetto map vuoto.  
+### <a name="return-value"></a>Return Value  
+ A bidirectional iterator addressing the first element in the map or the location succeeding an empty map.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_begin.cpp  
@@ -323,19 +363,19 @@ The first element of m1 is now 1
 ```  
   
 ##  <a name="cbegin"></a>  map::cbegin  
- Restituisce un iteratore `const` che punta alla posizione oltre l'ultimo elemento di un intervallo.  
+ Returns a `const` iterator that addresses the location just beyond the last element in a range.  
   
 ```  
 const_iterator cbegin() const;
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Iteratore bidirezionale `const` che punta al primo elemento dell'intervallo o alla posizione oltre la fine di un intervallo vuoto (per un intervallo vuoto, `cbegin() == cend()`).  
+### <a name="return-value"></a>Return Value  
+ A `const` bidirectional iterator addressing the first element in the range, or the location just beyond the end of an empty range (for an empty range, `cbegin() == cend()`).  
   
-### <a name="remarks"></a>Note  
- Con il valore restituito di `cbegin`, gli elementi dell'intervallo non possono essere modificati.  
+### <a name="remarks"></a>Remarks  
+ With the return value of `cbegin`, the elements in the range cannot be modified.  
   
- È possibile usare questa funzione membro anziché la funzione membro `begin()` per garantire che il valore restituito sia `const_iterator`. In genere, viene usata insieme alla parola chiave di deduzione di tipo [auto](../cpp/auto-cpp.md), come illustrato nell'esempio seguente. Nell'esempio si consideri `Container` come un contenitore (non `const`) modificabile di qualsiasi tipo che supporta `begin()` e `cbegin()`.  
+ You can use this member function in place of the `begin()` member function to guarantee that the return value is `const_iterator`. Typically, it's used in conjunction with the [auto](../cpp/auto-cpp.md) type deduction keyword, as shown in the following example. In the example, consider `Container` to be a modifiable (non- `const`) container of any kind that supports `begin()` and `cbegin()`.  
   
 ```cpp  
 auto i1 = Container.begin();
@@ -346,19 +386,19 @@ auto i2 = Container.cbegin();
 ```  
   
 ##  <a name="cend"></a>  map::cend  
- Restituisce un iteratore `const` che punta alla posizione oltre l'ultimo elemento di un intervallo.  
+ Returns a `const` iterator that addresses the location just beyond the last element in a range.  
   
 ```  
 const_iterator cend() const;
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Iteratore di accesso bidirezionale `const` che punta oltre la fine dell'intervallo.  
+### <a name="return-value"></a>Return Value  
+ A `const` bidirectional-access iterator that points just beyond the end of the range.  
   
-### <a name="remarks"></a>Note  
- `cend` viene utilizzato per verificare se un iteratore ha superato la fine del relativo intervallo.  
+### <a name="remarks"></a>Remarks  
+ `cend` is used to test whether an iterator has passed the end of its range.  
   
- È possibile usare questa funzione membro anziché la funzione membro `end()` per garantire che il valore restituito sia `const_iterator`. In genere, viene usata insieme alla parola chiave di deduzione di tipo [auto](../cpp/auto-cpp.md), come illustrato nell'esempio seguente. Nell'esempio, si consideri `Container` come un contenitore (non `const`) modificabile di qualsiasi tipo che supporta `end()` e `cend()`.  
+ You can use this member function in place of the `end()` member function to guarantee that the return value is `const_iterator`. Typically, it's used in conjunction with the [auto](../cpp/auto-cpp.md) type deduction keyword, as shown in the following example. In the example, consider `Container` to be a modifiable (non- `const`) container of any kind that supports `end()` and `cend()`.  
   
 ```cpp  
 auto i1 = Container.end();
@@ -368,17 +408,17 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator  
 ```  
   
- Non è consigliabile dereferenziare il valore restituito da `cend`.  
+ The value returned by `cend` should not be dereferenced.  
   
 ##  <a name="clear"></a>  map::clear  
- Cancella tutti gli elementi di una mappa.  
+ Erases all the elements of a map.  
   
 ```  
 void clear();
 ```  
   
-### <a name="example"></a>Esempio  
-  L'esempio seguente illustra l'uso della funzione membro map::clear.  
+### <a name="example"></a>Example  
+  The following example demonstrates the use of the map::clear member function.  
   
 ```  
 // map_clear.cpp  
@@ -413,46 +453,46 @@ The size of the map after clearing is 0.
 ```  
   
 ##  <a name="const_iterator"></a>  map::const_iterator  
- Tipo che fornisce un iteratore bidirezionale in grado di leggere un elemento **const** dell'oggetto map.  
+ A type that provides a bidirectional iterator that can read a **const** element in the map.  
   
 ```  
 typedef implementation-defined const_iterator;  
 ```  
   
-### <a name="remarks"></a>Note  
- Un tipo `const_iterator` non può essere usato per modificare il valore di un elemento.  
+### <a name="remarks"></a>Remarks  
+ A type `const_iterator` cannot be used to modify the value of an element.  
   
- Il tipo `const_iterator` definito da map punta a elementi che sono oggetti di [value_type](#value_type), ovvero di tipo `pair`\< **constKey**, **Type**>, in cui il primo membro è la chiave dell'elemento e il secondo membro è il punto di riferimento mappato incluso nell'elemento.  
+ The `const_iterator` defined by map points to elements that are objects of [value_type](#value_type), that is of type `pair`\< **constKey**, **Type**>, whose first member is the key to the element and whose second member is the mapped datum held by the element.  
   
- Per dereferenziare un tipo `const_iterator``cIter` che punta a un elemento in un oggetto map, usare l'operatore **->**.  
+ To dereference a `const_iterator` `cIter` pointing to an element in a map, use the **->** operator.  
   
- Per accedere al valore della chiave per l'elemento, usare `cIter` -> **first**, che equivale a (\* `cIter`). **first**.  
+ To access the value of the key for the element, use `cIter` -> **first**, which is equivalent to (\* `cIter`). **first**.  
   
- Per accedere al valore del punto di riferimento mappato per l'elemento, usare `cIter` -> **second**, che equivale a (\* `cIter`). **second**.  
+ To access the value of the mapped datum for the element, use `cIter` -> **second**, which is equivalent to (\* `cIter`). **second**.  
   
-### <a name="example"></a>Esempio  
-  Vedere l'esempio relativo a [begin](#begin) per indicazioni su come usare `const_iterator`.  
+### <a name="example"></a>Example  
+  See example for [begin](#begin) for an example that uses `const_iterator`.  
   
 ##  <a name="const_pointer"></a>  map::const_pointer  
- Tipo che fornisce un puntatore a un elemento **const** di un oggetto map.  
+ A type that provides a pointer to a **const** element in a map.  
   
 ```  
 typedef typename allocator_type::const_pointer const_pointer;  
 ```  
   
-### <a name="remarks"></a>Note  
- Un tipo `const_pointer` non può essere usato per modificare il valore di un elemento.  
+### <a name="remarks"></a>Remarks  
+ A type `const_pointer` cannot be used to modify the value of an element.  
   
- Nella maggior parte dei casi, è consigliabile usare un tipo [iterator](#iterator) per accedere agli elementi di un oggetto map.  
+ In most cases, an [iterator](#iterator) should be used to access the elements in a map object.  
   
 ##  <a name="const_reference"></a>  map::const_reference  
- Tipo che fornisce un riferimento a un elemento **const** archiviato in un oggetto map per la lettura e l'esecuzione di operazioni **const**.  
+ A type that provides a reference to a **const** element stored in a map for reading and performing **const** operations.  
   
 ```  
 typedef typename allocator_type::const_reference const_reference;  
 ```  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_const_ref.cpp  
@@ -495,49 +535,49 @@ The data value of first element in the map is 10.
 ```  
   
 ##  <a name="const_reverse_iterator"></a>  map::const_reverse_iterator  
- Tipo che fornisce un iteratore bidirezionale in grado di leggere qualsiasi elemento **const** dell'oggetto map.  
+ A type that provides a bidirectional iterator that can read any **const** element in the map.  
   
 ```  
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;  
 ```  
   
-### <a name="remarks"></a>Note  
- Un tipo `const_reverse_iterator` non può modificare il valore di un elemento e viene usato per eseguire l'iterazione sull'oggetto map in ordine inverso.  
+### <a name="remarks"></a>Remarks  
+ A type `const_reverse_iterator` cannot modify the value of an element and is use to iterate through the map in reverse.  
   
- Il `const_reverse_iterator` definito dai punti mappa gli elementi che sono oggetti di [value_type](#value_type), che è di tipo `pair<const Key, Type>`, il cui primo membro è la chiave per l'elemento e il cui secondo membro è il riferimento con mapping utilizzato dall'elemento.  
+ The `const_reverse_iterator` defined by map points to elements that are objects of [value_type](#value_type), that is of type `pair<const Key, Type>`, whose first member is the key to the element and whose second member is the mapped datum held by the element.  
   
- Per dereferenziare un tipo `const_reverse_iterator crIter` che punta a un elemento in un oggetto map, usare l'operatore **->**.  
+ To dereference a `const_reverse_iterator crIter` pointing to an element in a map, use the **->** operator.  
   
- Per accedere al valore della chiave per l'elemento, utilizzare `crIter`  ->  **prima**, che equivale a (\* `crIter`). **primo**.  
+ To access the value of the key for the element, use `crIter` -> **first**, which is equivalent to (\* `crIter`).**first**.  
   
- Per accedere al valore del riferimento con mapping per l'elemento, utilizzare `crIter`  ->  **secondo**, che equivale a (\* `crIter`). **primo**.  
+ To access the value of the mapped datum for the element, use `crIter` -> **second**, which is equivalent to (\* `crIter`).**first**.  
   
-### <a name="example"></a>Esempio  
-  Vedere l'esempio relativo a [rend](#rend) per indicazioni su come dichiarare e usare `const_reverse_iterator`.  
+### <a name="example"></a>Example  
+  See the example for [rend](#rend) for an example of how to declare and use `const_reverse_iterator`.  
   
 ##  <a name="count"></a>  map::count  
- Restituisce il numero di elementi di una mappa la cui chiave corrisponde a una chiave specificata dal parametro.  
+ Returns the number of elements in a map whose key matches a parameter-specified key.  
   
 ```  
 size_type count(const Key& key) const;
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `key`  
- Valore chiave degli elementi per cui trovare un corrispondenza nella mappa.  
+ The key value of the elements to be matched from the map.  
   
-### <a name="return-value"></a>Valore restituito  
- 1 se la mappa contiene un elemento la cui chiave di ordinamento corrisponde alla chiave del parametro. 0 se la mappa non contiene un elemento con una chiave corrispondente.  
+### <a name="return-value"></a>Return Value  
+ 1 if the map contains an element whose sort key matches the parameter key; 0 if the map does not contain an element with a matching key.  
   
-### <a name="remarks"></a>Note  
- La funzione membro restituisce il numero di elementi *x* nell'intervallo  
+### <a name="remarks"></a>Remarks  
+ The member function returns the number of elements *x* in the range  
   
  [ `lower_bound` (_ *Key* ), `upper_bound` (\_ *Key* ) )  
   
- corrispondente a 0 o 1 nel caso della mappa, che è un contenitore associativo univoco.  
+ which is 0 or 1 in the case of map, which is a unique associative container.  
   
-### <a name="example"></a>Esempio  
-  L'esempio seguente illustra l'uso della funzione membro map::count.  
+### <a name="example"></a>Example  
+  The following example demonstrates the use of the map::count member function.  
   
 ```  
 // map_count.cpp  
@@ -579,23 +619,23 @@ The number of elements in m1 with a sort key of 3 is: 0.
 ```  
   
 ##  <a name="crbegin"></a>  map::crbegin  
- Restituisce un iteratore const che punta al primo elemento di un oggetto map invertito.  
+ Returns a const iterator addressing the first element in a reversed map.  
   
 ```  
 const_reverse_iterator crbegin() const;
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Iteratore bidirezionale const inverso che punta al primo elemento di un oggetto [map](../standard-library/map-class.md) invertito o a quello che è stato l'ultimo elemento dell'oggetto `map` non invertito.  
+### <a name="return-value"></a>Return Value  
+ A const reverse bidirectional iterator addressing the first element in a reversed [map](../standard-library/map-class.md) or addressing what had been the last element in the unreversed `map`.  
   
-### <a name="remarks"></a>Note  
- `crbegin` viene usato con un oggetto `map` invertito proprio come [begin](#begin) viene usato con un oggetto `map`.  
+### <a name="remarks"></a>Remarks  
+ `crbegin` is used with a reversed `map` just as [begin](#begin) is used with a `map`.  
   
- Con il valore restituito di `crbegin`, l'oggetto `map` non può essere modificato.  
+ With the return value of `crbegin`, the `map` object cannot be modified  
   
- `crbegin` può essere usato per eseguire l'iterazione all'indietro su un oggetto `map`.  
+ `crbegin` can be used to iterate through a `map` backwards.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_crbegin.cpp  
@@ -626,25 +666,25 @@ The first element of the reversed map m1 is 3.
 ```  
   
 ##  <a name="crend"></a>  map::crend  
- Restituisce un iteratore const che punta alla posizione successiva all'ultimo elemento di un oggetto map invertito.  
+ Returns a const iterator that addresses the location succeeding the last element in a reversed map.  
   
 ```  
 const_reverse_iterator crend() const;
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Iteratore bidirezionale const inverso che punta alla posizione successiva all'ultimo elemento di un oggetto [map](../standard-library/map-class.md) invertito, ovvero la posizione che precedeva il primo elemento dell'oggetto `map` non invertito.  
+### <a name="return-value"></a>Return Value  
+ A const reverse bidirectional iterator that addresses the location succeeding the last element in a reversed [map](../standard-library/map-class.md) (the location that had preceded the first element in the unreversed `map`).  
   
-### <a name="remarks"></a>Note  
- `crend` viene usato con un oggetto map invertito proprio come [end](#end) viene usato con un oggetto `map`.  
+### <a name="remarks"></a>Remarks  
+ `crend` is used with a reversed map just as [end](#end) is used with a `map`.  
   
- Con il valore restituito di `crend`, l'oggetto `map` non può essere modificato.  
+ With the return value of `crend`, the `map` object cannot be modified.  
   
- `crend` può essere usato per verificare se un iteratore inverso ha raggiunto la fine dell'oggetto `map`.  
+ `crend` can be used to test to whether a reverse iterator has reached the end of its `map`.  
   
- Non è consigliabile dereferenziare il valore restituito da `crend`.  
+ The value returned by `crend` should not be dereferenced.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_crend.cpp  
@@ -676,18 +716,18 @@ The last element of the reversed map m1 is 1.
 ```  
   
 ##  <a name="difference_type"></a>  map::difference_type  
- Tipo Signed Integer che può essere usato per rappresentare il numero di elementi di un oggetto map in un intervallo compreso tra gli elementi a cui puntano gli iteratori.  
+ A signed integer type that can be used to represent the number of elements of a map in a range between elements pointed to by iterators.  
   
 ```  
 typedef allocator_type::difference_type difference_type;  
 ```  
   
-### <a name="remarks"></a>Note  
- `difference_type` è il tipo restituito quando si sottrae o si incrementa tramite gli iteratori del contenitore. `difference_type` viene in genere usato per rappresentare il numero di elementi nell'intervallo *[ first,  last)* tra gli iteratori `first` e `last`, includendo l'elemento a cui punta `first` e l'intervallo di elementi fino all'elemento a cui punta `last`, escluso tale elemento.  
+### <a name="remarks"></a>Remarks  
+ The `difference_type` is the type returned when subtracting or incrementing through iterators of the container. The `difference_type` is typically used to represent the number of elements in the range *[ first,  last)* between the iterators `first` and `last`, includes the element pointed to by `first` and the range of elements up to, but not including, the element pointed to by `last`.  
   
- Si noti che, sebbene `difference_type` sia disponibile per tutti gli iteratori che soddisfano i requisiti di un iteratore di input, inclusa la classe degli iteratori bidirezionali supportati da contenitori reversibili come set, la sottrazione tra gli iteratori è supportata solo da iteratori ad accesso casuale forniti da un contenitore ad accesso casuale, ad esempio vector.  
+ Note that although `difference_type` is available for all iterators that satisfy the requirements of an input iterator, which includes the class of bidirectional iterators supported by reversible containers such as set, subtraction between iterators is only supported by random access iterators provided by a random access container such as vector.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_diff_type.cpp  
@@ -730,7 +770,7 @@ The number of elements in the map m1 is: 4.
 ```  
   
 ##  <a name="emplace"></a>  map::emplace  
- Inserisce un elemento costruito sul posto, senza che vengano eseguite operazioni di copia o spostamento.  
+ Inserts an element constructed in place (no copy or move operations are performed) into a map.  
   
 ```  
 template <class... Args>  
@@ -739,26 +779,26 @@ emplace(
     Args&&... args);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Parametro|Descrizione|  
-|`args`|Argomenti inoltrati per costruire un elemento da inserire nell'oggetto map a meno che quest'ultimo non contenga già un elemento il cui valore è ordinato in modo equivalente.|  
+|Parameter|Description|  
+|`args`|The arguments forwarded to construct an element to be inserted into the map unless it already contains an element whose value is equivalently ordered.|  
   
-### <a name="return-value"></a>Valore restituito  
- Atruttura [pair](../standard-library/pair-structure.md) il cui componente `bool` è true se è stato eseguito un inserimento e false se l'oggetto map contiene già un elemento di valore equivalente nell'ordinamento. Il componente dell'iteratore della coppia di valori restituita punta all'elemento appena inserito se il componente `bool` è true oppure all'elemento esistente se il componente `bool` è false.  
+### <a name="return-value"></a>Return Value  
+ A [pair](../standard-library/pair-structure.md) whose `bool` component is true if an insertion was made, and false if the map already contained an element of equivalent value in the ordering. The iterator component of the return-value pair points to the newly inserted element if the `bool` component is true, or to the existing element if the `bool` component is false.  
   
- Per accedere al componente iterator di una struttura `pair``pr`, usare `pr.first` e per dereferenziarlo, usare `*pr.first`. Per accedere al componente `bool`, usare `pr.second`. Per un esempio, vedere il codice di esempio più avanti in questo articolo.  
+ To access the iterator component of a `pair` `pr`, use `pr.first`; to dereference it, use `*pr.first`. To access the `bool` component, use `pr.second`. For an example, see the sample code later in this article.  
   
-### <a name="remarks"></a>Note  
- Questa funzione non invalida alcun iteratore né riferimento.  
+### <a name="remarks"></a>Remarks  
+ No iterators or references are invalidated by this function.  
   
- Se viene generata un'eccezione durante l'inserimento, lo stato del contenitore non viene modificato.  
+ During emplacement, if an exception is thrown, the container's state is not modified.  
   
- L'oggetto [value_type](#value_type) di un elemento è una coppia, pertanto il valore di un elemento sarà una coppia ordinata in cui il primo componente equivale al valore della chiave e il secondo componente equivale al valore dei dati dell'elemento.  
+ The [value_type](#value_type) of an element is a pair, so that the value of an element will be an ordered pair with the first component equal to the key value and the second component equal to the data value of the element.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_emplace.cpp  
@@ -816,7 +856,7 @@ int main()
 ```  
   
 ##  <a name="emplace_hint"></a>  map::emplace_hint  
- Inserisce un elemento costruito in locale (senza che vengano eseguite operazioni di copia o di spostamento), con un suggerimento sulla posizione.  
+ Inserts an element constructed in place (no copy or move operations are performed), with a placement hint.  
   
 ```  
 template <class... Args>  
@@ -825,27 +865,27 @@ iterator emplace_hint(
     Args&&... args);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Parametro|Descrizione|  
-|`args`|Argomenti inoltrati per costruire un elemento da inserire nell'oggetto map a meno che quest'ultimo non contenga già tale elemento o, più in generale, un elemento la cui la chiave è ordinata in modo equivalente.|  
-|`where`|Posizione in cui iniziare a cercare il punto di inserimento corretto. Se tale punto è immediatamente seguito da `where`, l'inserimento può avvenire in tempo costante ammortizzato anziché in tempo logaritmico.|  
+|Parameter|Description|  
+|`args`|The arguments forwarded to construct an element to be inserted into the map unless the map already contains that element or, more generally, unless it already contains an element whose key is equivalently ordered.|  
+|`where`|The place to start searching for the correct point of insertion. (If that point immediately precedes `where`, insertion can occur in amortized constant time instead of logarithmic time.)|  
   
-### <a name="return-value"></a>Valore restituito  
- Iteratore all'elemento appena inserito.  
+### <a name="return-value"></a>Return Value  
+ An iterator to the newly inserted element.  
   
- Se l'inserimento ha avuto esito negativo perché l'elemento esiste già, restituisce un iteratore all'elemento esistente con la relativa chiave.  
+ If the insertion failed because the element already exists, returns an iterator to the existing element with its key.  
   
-### <a name="remarks"></a>Note  
- Questa funzione non invalida alcun iteratore né riferimento.  
+### <a name="remarks"></a>Remarks  
+ No iterators or references are invalidated by this function.  
   
- Se viene generata un'eccezione durante l'inserimento, lo stato del contenitore non viene modificato.  
+ During emplacement, if an exception is thrown, the container's state is not modified.  
   
- L'oggetto [value_type](#value_type) di un elemento è una coppia, pertanto il valore di un elemento sarà una coppia ordinata in cui il primo componente equivale al valore della chiave e il secondo componente equivale al valore dei dati dell'elemento.  
+ The [value_type](#value_type) of an element is a pair, so that the value of an element will be an ordered pair with the first component equal to the key value and the second component equal to the data value of the element.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_emplace.cpp  
@@ -891,16 +931,16 @@ int main()
 ```  
   
 ##  <a name="empty"></a>  map::empty  
- Verifica se un oggetto map è vuoto.  
+ Tests if a map is empty.  
   
 ```  
 bool empty() const;
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- **true** se l'oggetto map è vuoto; in caso contrario, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the map is empty; **false** if the map is nonempty.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_empty.cpp  
@@ -934,7 +974,7 @@ The map m2 is empty.
 ```  
   
 ##  <a name="end"></a>  map::end  
- Restituisce l'iteratore successivo all'ultimo valore.  
+ Returns the past-the-end iterator.  
   
 ```  
 const_iterator end() const;
@@ -944,18 +984,18 @@ const_iterator end() const;
 iterator end();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Iteratore successivo all'ultimo valore. Se la mappa è vuota, verrà restituito `map::end() == map::begin()`.  
+### <a name="return-value"></a>Return Value  
+ The past-the-end iterator. If the map is empty, then `map::end() == map::begin()`.  
   
-### <a name="remarks"></a>Note  
- **end** viene usato per verificare se un iteratore ha superato la fine del relativo oggetto map.  
+### <a name="remarks"></a>Remarks  
+ **end** is used to test whether an iterator has passed the end of its map.  
   
- Non è consigliabile dereferenziare il valore restituito da **end**.  
+ The value returned by **end** should not be dereferenced.  
   
- Per un esempio di codice, vedere [map::find](#find).  
+ For a code example, see [map::find](#find).  
   
 ##  <a name="equal_range"></a>  map::equal_range  
- Restituisce una coppia di iteratori che rappresentano rispettivamente l'elemento [lower_bound](#lower_bound) e l'elemento [upper_bound](#upper_bound) della chiave.  
+ Returns a pair of iterators that represent the [lower_bound](#lower_bound) of the key and the [upper_bound](#upper_bound) of the key.  
   
 ```  
 pair <const_iterator, const_iterator> equal_range (const Key& key) const;
@@ -963,14 +1003,14 @@ pair <const_iterator, const_iterator> equal_range (const Key& key) const;
 pair <iterator, iterator> equal_range (const Key& key);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `key`  
- Valore della chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto map in cui si esegue la ricerca.  
+ The argument key value to be compared with the sort key of an element from the map being searched.  
   
-### <a name="return-value"></a>Valore restituito  
- Per accedere al primo iteratore di una coppia `pr` restituita dalla funzione membro, usare `pr`. **first** e per dereferenziare l'iteratore del limite inferiore, usare \*( `pr`. **first**). Per accedere al secondo iteratore di una coppia `pr` restituita dalla funzione membro, usare `pr`. **second** e per dereferenziare l'iteratore del limite superiore, usare \*( `pr`. **second**).  
+### <a name="return-value"></a>Return Value  
+ To access the first iterator of a pair `pr` returned by the member function, use `pr`. **first**, and to dereference the lower bound iterator, use \*( `pr`. **first**). To access the second iterator of a pair `pr` returned by the member function, use `pr`. **second**, and to dereference the upper bound iterator, use \*( `pr`. **second**).  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_equal_range.cpp  
@@ -1031,7 +1071,7 @@ The map m1 doesn't have an element with a key less than 40.
 ```  
   
 ##  <a name="erase"></a>  map::erase  
- Rimuove un elemento o un intervallo di elementi di un oggetto map dalle posizioni specificate oppure rimuove gli elementi che corrispondono a una chiave specificata.  
+ Removes an element or a range of elements in a map from specified positions or removes elements that match a specified key.  
   
 ```  
 iterator erase(
@@ -1047,25 +1087,25 @@ size_type erase(
     const key_type& Key);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `Where`  
- Posizione dell'elemento che deve essere rimosso.  
+ Position of the element to be removed.  
   
  `First`  
- Posizione del primo elemento che deve essere rimosso.  
+ Position of the first element to be removed.  
   
  `Last`  
- Posizione immediatamente successiva all'ultimo elemento che deve essere rimosso.  
+ Position just beyond the last element to be removed.  
   
  `Key`  
- Valore della chiave dell'elemento che deve essere rimosso.  
+ The key value of the elements to be removed.  
   
-### <a name="return-value"></a>Valore restituito  
- Per le prime due funzioni membro, iteratore bidirezionale che definisce il primo elemento rimanente oltre gli eventuali elementi rimossi o elemento che rappresenta la fine dell'oggetto map se tali elementi non sono presenti.  
+### <a name="return-value"></a>Return Value  
+ For the first two member functions, a bidirectional iterator that designates the first element remaining beyond any elements removed, or an element that is the end of the map if no such element exists.  
   
- Per la terza funzione membro, restituisce il numero di elementi rimossi dall'oggetto map.  
+ For the third member function, returns the number of elements that have been removed from the map.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_erase.cpp  
@@ -1147,7 +1187,7 @@ int main()
 ```  
   
 ##  <a name="find"></a>  map::find  
- Restituisce un iteratore che fa riferimento alla posizione di un elemento in una mappa che contiene una chiave equivalente a una chiave specificata.  
+ Returns an iterator that refers to the location of an element in a map that has a key equivalent to a specified key.  
   
 ```  
 iterator find(const Key& key);
@@ -1156,19 +1196,19 @@ iterator find(const Key& key);
 const_iterator find(const Key& key) const;
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `key`  
- Valore chiave per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nella mappa in cui eseguire la ricerca.  
+ The key value to be matched by the sort key of an element from the map being searched.  
   
-### <a name="return-value"></a>Valore restituito  
- Iteratore che fa riferimento alla posizione di un elemento con una chiave specificata o alla posizione successiva all'ultimo elemento dell'oggetto map ( `map::end()`) se non viene trovata alcuna corrispondenza per la chiave.  
+### <a name="return-value"></a>Return Value  
+ An iterator that refers to the location of an element with a specified key, or the location succeeding the last element in the map ( `map::end()`) if no match is found for the key.  
   
-### <a name="remarks"></a>Note  
- La funzione membro restituisce un iteratore che fa riferimento a un elemento della mappa la cui chiave di ordinamento è equivalente alla chiave dell'argomento in un predicato binario che causa un ordinamento basato su una relazione di comparabilità minore di.  
+### <a name="remarks"></a>Remarks  
+ The member function returns an iterator that refers to an element in the map whose sort key is equivalent to the argument key under a binary predicate that induces an ordering based on a less than comparability relation.  
   
- Se il valore restituito di **find** viene assegnato a un **const_iterator**, l'oggetto map non può essere modificato. Se il valore restituito di **find** viene assegnato a un **iterator**, l'oggetto map può essere modificato.  
+ If the return value of **find** is assigned to a **const_iterator**, the map object cannot be modified. If the return value of **find** is assigned to an **iterator**, the map object can be modified  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // compile with: /EHsc /W4 /MTd  
@@ -1232,19 +1272,19 @@ int main()
 ```  
   
 ##  <a name="get_allocator"></a>  map::get_allocator  
- Restituisce una copia dell'oggetto allocatore usato per costruire l'oggetto map.  
+ Returns a copy of the allocator object used to construct the map.  
   
 ```  
 allocator_type get_allocator() const;
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Allocatore usato dall'oggetto map.  
+### <a name="return-value"></a>Return Value  
+ The allocator used by the map.  
   
-### <a name="remarks"></a>Note  
- Gli allocatori per la classe map specificano il modo in cui la classe gestisce l'archiviazione. Gli allocatori predefiniti forniti con le classi dei contenitori della libreria standard C++ sono sufficienti per la maggior parte delle esigenze di programmazione. Scrivere e usare una classe allocator personalizzata è un argomento di C++ avanzato.  
+### <a name="remarks"></a>Remarks  
+ Allocators for the map class specify how the class manages storage. The default allocators supplied with C++ Standard Library container classes are sufficient for most programming needs. Writing and using your own allocator class is an advanced C++ topic.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_get_allocator.cpp  
@@ -1299,7 +1339,7 @@ int main( )
 ```  
   
 ##  <a name="insert"></a>  map::insert  
- Inserisce un elemento o un intervallo di elementi in una mappa.  
+ Inserts an element or a range of elements into a map.  
   
 ```  
 // (1) single element  
@@ -1340,40 +1380,40 @@ void insert(
 IList);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Parametro|Descrizione|  
-|`Val`|Valore di un elemento da inserire nella mappa a meno che non vi sia già contenuto un elemento la cui chiave è ordinata in modo equivalente.|  
-|`Where`|Posizione in cui iniziare a cercare il punto di inserimento corretto. Se tale punto è immediatamente seguito da `Where`, l'inserimento può avvenire in tempo costante ammortizzato anziché in tempo logaritmico.|  
-|`ValTy`|Parametro di modello che specifica il tipo di argomento che può essere usato dall'oggetto map per costruire un elemento di [value_type](#value_type) e che esegue l'inoltro perfetto di `Val` come argomento.|  
-|`First`|Posizione del primo elemento da copiare.|  
-|`Last`|Posizione immediatamente dopo l'ultimo elemento da copiare.|  
-|`InputIterator`|Argomento della funzione modello che soddisfa i requisiti di un [iteratore di input](../standard-library/input-iterator-tag-struct.md) che punta agli elementi di un tipo utilizzabili per costruire oggetti [value_type](#value_type).|  
-|`IList`|Oggetto [initializer_list](../standard-library/initializer-list.md) da cui copiare gli elementi.|  
+|Parameter|Description|  
+|`Val`|The value of an element to be inserted into the map unless it already contains an element whose key is equivalently ordered.|  
+|`Where`|The place to start searching for the correct point of insertion. (If that point immediately precedes `Where`, insertion can occur in amortized constant time instead of logarithmic time.)|  
+|`ValTy`|Template parameter that specifies the argument type that the map can use to construct an element of [value_type](#value_type), and perfect-forwards `Val` as an argument.|  
+|`First`|The position of the first element to be copied.|  
+|`Last`|The position just beyond the last element to be copied.|  
+|`InputIterator`|Template function argument that meets the requirements of an [input iterator](../standard-library/input-iterator-tag-struct.md) that points to elements of a type that can be used to construct [value_type](#value_type) objects.|  
+|`IList`|The [initializer_list](../standard-library/initializer-list.md) from which to copy the elements.|  
   
-### <a name="return-value"></a>Valore restituito  
- Le funzioni membro a elemento singolo (1) e (2) restituiscono una struttura [pair](../standard-library/pair-structure.md) il cui componente `bool` è true se è stato eseguito un inserimento e false se l'oggetto map contiene già un elemento la cui chiave ha un valore equivalente nell'ordinamento. Il componente dell'iteratore della coppia di valori restituita punta all'elemento appena inserito se il componente `bool` è true oppure all'elemento esistente se il componente `bool` è false.  
+### <a name="return-value"></a>Return Value  
+ The single-element member functions, (1) and (2), return a [pair](../standard-library/pair-structure.md) whose `bool` component is true if an insertion was made, and false if the map already contained an element whose key had an equivalent value in the ordering. The iterator component of the return-value pair points to the newly inserted element if the `bool` component is true, or to the existing element if the `bool` component is false.  
   
- Le funzioni membro a elemento singolo con suggerimento, (3) e (4), restituiscono un iteratore che punta alla posizione in cui il nuovo elemento è stato inserito nella mappa o all'elemento già esistente, se esiste un elemento con una chiave equivalente.  
+ The single-element-with-hint member functions, (3) and (4), return an iterator that points to the position where the new element was inserted into the map or, if an element with an equivalent key already exists, to the existing element.  
   
-### <a name="remarks"></a>Note  
- Non ci sono iteratori, puntatori o riferimenti invalidati da questa funzione.  
+### <a name="remarks"></a>Remarks  
+ No iterators, pointers, or references are invalidated by this function.  
   
- Se viene generata un'eccezione durante l'inserimento di un solo elemento, ma l'eccezione non si manifesta nella funzione hash del contenitore, lo stato del contenitore non verrà modificato. Se viene generata un'eccezione durante l'inserimento di più elementi, il contenitore viene lasciato in uno stato non specificato ma comunque valido.  
+ During the insertion of just one element, if an exception is thrown, the container's state is not modified. During the insertion of multiple elements, if an exception is thrown, the container is left in an unspecified but valid state.  
   
- Per accedere al componente iteratore di un oggetto `pair``pr` restituito dalle funzioni membro a elemento singolo, usare `pr.first`. Per dereferenziare l'iteratore all'interno della coppia restituita, usare `*pr.first`, che fornisce un elemento. Per accedere al componente `bool`, usare `pr.second`. Per un esempio, vedere il codice di esempio più avanti in questo articolo.  
+ To access the iterator component of a `pair` `pr` that's returned by the single-element member functions, use `pr.first`; to dereference the iterator within the returned pair, use `*pr.first`, giving you an element. To access the `bool` component, use `pr.second`. For an example, see the sample code later in this article.  
   
- L'oggetto [value_type](#value_type) di un contenitore è un typedef appartenente al contenitore e, per map, `map<K, V>::value_type` è `pair<const K, V>`. Il valore di un elemento è una coppia ordinata in cui il primo componente equivale al valore della chiave e il secondo componente equivale al valore dati dell'elemento.  
+ The [value_type](#value_type) of a container is a typedef that belongs to the container, and for map, `map<K, V>::value_type` is `pair<const K, V>`. The value of an element is an ordered pair in which the first component is equal to the key value and the second component is equal to the data value of the element.  
   
- La funzione membro di intervallo (5) inserisce la sequenza di valori di elemento in una mappa che corrisponde a ogni elemento interessato da un iteratore nell'intervallo `[First, Last)`. Non viene quindi inserito `Last`. La funzione membro di contenitore `end()` fa riferimento alla posizione immediatamente dopo l'ultimo elemento nel contenitore. L'istruzione `m.insert(v.begin(), v.end());`, ad esempio, cerca di inserire tutti gli elementi di `v` in `m`. Solo gli elementi che hanno valori univoci nell'intervallo vengono inseriti; i duplicati vengono ignorati. Per osservare quali elementi vengono rifiutati, usare le versioni con un singolo elemento di `insert`.  
+ The range member function (5) inserts the sequence of element values into a map that corresponds to each element addressed by an iterator in the range `[First, Last)`; therefore, `Last` does not get inserted. The container member function `end()` refers to the position just after the last element in the container—for example, the statement `m.insert(v.begin(), v.end());` attempts to insert all elements of `v` into `m`. Only elements that have unique values in the range are inserted; duplicates are ignored. To observe which elements are rejected, use the single-element versions of `insert`.  
   
- La funzione membro dell'elenco di inizializzatori (6) usa un oggetto [initializer_list](../standard-library/initializer-list.md) per copiare gli elementi nell'oggetto map.  
+ The initializer list member function (6) uses an [initializer_list](../standard-library/initializer-list.md) to copy elements into the map.  
   
- Per l'inserimento di un elemento costruito sul posto, ovvero senza operazioni di copia o spostamento, vedere [map::emplace](#emplace) e [map::emplace_hint](#emplace_hint).  
+ For insertion of an element constructed in place—that is, no copy or move operations are performed—see [map::emplace](#emplace) and [map::emplace_hint](#emplace_hint).  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_insert.cpp  
@@ -1473,40 +1513,40 @@ int main()
 ```  
   
 ##  <a name="iterator"></a>  map::iterator  
- Tipo che fornisce un iteratore bidirezionale in grado di leggere o modificare qualsiasi elemento di un oggetto map.  
+ A type that provides a bidirectional iterator that can read or modify any element in a map.  
   
 ```  
 typedef implementation-defined iterator;  
 ```  
   
-### <a name="remarks"></a>Note  
- Il tipo **iterator** definito da map punta a elementi che sono oggetti di [value_type](#value_type), ovvero di tipo `pair`*\<***constKey**, **Type***>*, dove il primo membro è la chiave dell'elemento e il secondo membro è il punto di riferimento mappato incluso nell'elemento.  
+### <a name="remarks"></a>Remarks  
+ The **iterator** defined by map points to elements that are objects of [value_type](#value_type), that is of type `pair`*\<***constKey**, **Type***>*, whose first member is the key to the element and whose second member is the mapped datum held by the element.  
   
- Per dereferenziare un tipo **iterator**`Iter` che punta a un elemento in un oggetto map, usare l'operatore **->**.  
+ To dereference an **iterator**`Iter` pointing to an element in a map, use the **->** operator.  
   
- Per accedere al valore della chiave per l'elemento, usare `Iter` -> **first**, che equivale a (\* `Iter`). **first**. Per accedere al valore del punto di riferimento mappato per l'elemento, usare `Iter` -> **second**, che equivale a (\* `Iter`). **second**.  
+ To access the value of the key for the element, use `Iter` -> **first**, which is equivalent to (\* `Iter`). **first**. To access the value of the mapped datum for the element, use `Iter` -> **second**, which is equivalent to (\* `Iter`). **second**.  
   
-### <a name="example"></a>Esempio  
-  Vedere l'esempio relativo a [begin](#begin) per indicazioni su come dichiarare e usare **iterator**.  
+### <a name="example"></a>Example  
+  See example for [begin](#begin) for an example of how to declare and use **iterator**.  
   
 ##  <a name="key_comp"></a>  map::key_comp  
- Recupera una copia dell'oggetto di confronto usato per ordinare le chiavi di un oggetto map.  
+ Retrieves a copy of the comparison object used to order keys in a map.  
   
 ```  
 key_compare key_comp() const;
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Oggetto funzione che viene usato da un oggetto map per ordinare gli elementi.  
+### <a name="return-value"></a>Return Value  
+ Returns the function object that a map uses to order its elements.  
   
-### <a name="remarks"></a>Note  
- L'oggetto archiviato definisce la funzione membro  
+### <a name="remarks"></a>Remarks  
+ The stored object defines the member function  
   
  **bool operator**( **constKey&**`left`, **const Key&**`right`);  
   
- che restituisce **true** se `left` precede e non è uguale a `right` nell'ordinamento.  
+ which returns **true** if `left` precedes and is not equal to `right` in the sort order.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_key_comp.cpp  
@@ -1558,37 +1598,37 @@ kc2( 2,3 ) returns value of false, where kc2 is the function object of m2.
 ```  
   
 ##  <a name="key_compare"></a>  map::key_compare  
- Tipo che fornisce un oggetto funzione in grado di confrontare due chiavi di ordinamento per determinare l'ordine relativo di due elementi nell'oggetto map.  
+ A type that provides a function object that can compare two sort keys to determine the relative order of two elements in the map.  
   
 ```  
 typedef Traits key_compare;  
 ```  
   
-### <a name="remarks"></a>Note  
- `key_compare` è un sinonimo per il parametro di modello `Traits`.  
+### <a name="remarks"></a>Remarks  
+ `key_compare` is a synonym for the template parameter `Traits`.  
   
- Per altre informazioni su `Traits`, vedere l'argomento [Classe map](../standard-library/map-class.md).  
+ For more information on `Traits` see the [map Class](../standard-library/map-class.md) topic.  
   
-### <a name="example"></a>Esempio  
-  Vedere l'esempio relativo a [key_comp](#key_comp) per indicazioni su come dichiarare e usare `key_compare`.  
+### <a name="example"></a>Example  
+  See example for [key_comp](#key_comp) for an example of how to declare and use `key_compare`.  
   
 ##  <a name="key_type"></a>  map::key_type  
- Tipo che descrive la chiave di ordinamento archiviata in ogni elemento dell'oggetto map.  
+ A type that describes the sort key stored in each element of the map.  
   
 ```  
 typedef Key key_type;  
 ```  
   
-### <a name="remarks"></a>Note  
- `key_type` è un sinonimo per il parametro di modello `Key`.  
+### <a name="remarks"></a>Remarks  
+ `key_type` is a synonym for the template parameter `Key`.  
   
- Per altre informazioni su `Key`, vedere la sezione Note dell'argomento [Classe map](../standard-library/map-class.md).  
+ For more information on `Key`, see the Remarks section of the [map Class](../standard-library/map-class.md) topic.  
   
-### <a name="example"></a>Esempio  
-  Vedere l'esempio relativo a [value_type](#value_type) per indicazioni su come dichiarare e usare `key_type`.  
+### <a name="example"></a>Example  
+  See example for [value_type](#value_type) for an example of how to declare and use `key_type`.  
   
 ##  <a name="lower_bound"></a>  map::lower_bound  
- Restituisce un iteratore al primo elemento di un oggetto map con un valore della chiave uguale o maggiore di quello di una chiave specificata.  
+ Returns an iterator to the first element in a map with a key value that is equal to or greater than that of a specified key.  
   
 ```  
 iterator lower_bound(const Key& key);
@@ -1596,16 +1636,16 @@ iterator lower_bound(const Key& key);
 const_iterator lower_bound(const Key& key) const;
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `key`  
- Valore della chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto map in cui si esegue la ricerca.  
+ The argument key value to be compared with the sort key of an element from the map being searched.  
   
-### <a name="return-value"></a>Valore restituito  
- Tipo **iterator** o `const_iterator` che punta alla posizione di un elemento di un oggetto map con una chiave uguale o maggiore della chiave dell'argomento o che punta alla posizione successiva all'ultimo elemento dell'oggetto map se non viene trovata alcuna corrispondenza per la chiave.  
+### <a name="return-value"></a>Return Value  
+ An **iterator** or `const_iterator` that addresses the location of an element in a map that with a key that is equal to or greater than the argument key, or that addresses the location succeeding the last element in the map if no match is found for the key.  
   
- Se il valore restituito di `lower_bound` viene assegnato a un `const_iterator`, l'oggetto map non può essere modificato. Se il valore restituito di `lower_bound` viene assegnato a un **iterator**, l'oggetto map può essere modificato.  
+ If the return value of `lower_bound` is assigned to a `const_iterator`, the map object cannot be modified. If the return value of `lower_bound` is assigned to an **iterator**, the map object can be modified.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_lower_bound.cpp  
@@ -1656,7 +1696,7 @@ The element of m1 with a key matching that of the last element is: 30.
 ```  
   
 ##  <a name="map"></a>  map::map  
- Costruisce un oggetto map vuoto o che rappresenta una copia totale o parziale di un altro oggetto map.  
+ Constructs a map that is empty or that is a copy of all or part of some other map.  
   
 ```  
 map();
@@ -1705,36 +1745,36 @@ map(
     const Allocator& Al);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Parametro|Descrizione|  
-|`Al`|Classe dell'allocatore di archiviazione da usare per l'oggetto map. Per impostazione predefinita è `Allocator`.|  
-|`Comp`|Funzione di confronto di tipo `const Traits` usata per ordinare gli elementi nell'oggetto map. Per impostazione predefinita è `hash_compare`.|  
-|`Right`|Oggetto map di cui il set costruito deve essere una copia.|  
-|`First`|Posizione del primo elemento nell'intervallo di elementi da copiare.|  
-|`Last`|Posizione del primo elemento oltre l'intervallo di elementi da copiare.|  
-|`IList`|Oggetto initializer_list da cui devono essere copiati gli elementi.|  
+|Parameter|Description|  
+|`Al`|The storage allocator class to be used for this map object, which defaults to `Allocator`.|  
+|`Comp`|The comparison function of type `const Traits` used to order the elements in the map, which defaults to `hash_compare`.|  
+|`Right`|The map of which the constructed set is to be a copy.|  
+|`First`|The position of the first element in the range of elements to be copied.|  
+|`Last`|The position of the first element beyond the range of elements to be copied.|  
+|`IList`|The initializer_list from which the elements are to be copied.|  
   
-### <a name="remarks"></a>Note  
- Tutti i costruttori archiviano un tipo di oggetto allocatore che gestisce l'archiviazione per l'oggetto map e che può essere restituito in un secondo momento chiamando [get_allocator](#get_allocator). Il parametro allocator viene spesso omesso nelle dichiarazioni di classe e vengono usate macro di pre-elaborazione per introdurre allocatori alternativi.  
+### <a name="remarks"></a>Remarks  
+ All constructors store a type of allocator object that manages memory storage for the map and that can later be returned by calling [get_allocator](#get_allocator). The allocator parameter is often omitted in the class declarations and preprocessing macros used to substitute alternative allocators.  
   
- Tutti i costruttori inizializzano il relativo oggetto map.  
+ All constructors initialize their map.  
   
- Tutti i costruttori archiviano un oggetto funzione di tipo Traits che viene usato per stabilire un ordine tra le chiavi dell'oggetto map e che può essere restituito in un secondo momento chiamando [key_comp](#key_comp).  
+ All constructors store a function object of type Traits that is used to establish an order among the keys of the map and that can later be returned by calling [key_comp](#key_comp).  
   
- I primi tre costruttori specificano un oggetto map iniziale vuoto. Di questi, il secondo specifica il tipo di funzione di confronto ( `Comp`) da usare per stabilire l'ordine degli elementi e il terzo specifica in modo esplicito il tipo di allocatore ( `Al`) da usare. La parola chiave `explicit` elimina alcuni tipi di conversione automatica del tipo.  
+ The first three constructors specify an empty initial map, the second specifying the type of comparison function ( `Comp`) to be used in establishing the order of the elements and the third explicitly specifying the allocator type ( `Al`) to be used. The key word `explicit` suppresses certain kinds of automatic type conversion.  
   
- Il quarto costruttore specifica una copia dell'oggetto map `Right`.  
+ The fourth constructor specifies a copy of the map `Right`.  
   
- Il quinto costruttore specifica una copia dell'oggetto map tramite lo spostamento di `Right`.  
+ The fifth constructor specifies a copy of the map by moving `Right`.  
   
- Il sesto, il settimo e l'ottavo costruttore usano un oggetto initializer_list da cui copiare i membri.  
+ The sixth, seventh, and eighth constructors use an initializer_list from which to copy the members.  
   
- I tre costruttori successivi copiano l'intervallo `[First, Last)` di un oggetto map con un grado di esplicitazione crescente nello specificare il tipo di funzione di confronto della classe `Traits` e il tipo di allocatore.  
+ The next three constructors copy the range `[First, Last)` of a map with increasing explicitness in specifying the type of comparison function of class `Traits` and allocator.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_map.cpp  
@@ -1852,31 +1892,31 @@ int main()
 ```  
   
 ##  <a name="mapped_type"></a>  map::mapped_type  
- Tipo che rappresenta il tipo di dati archiviato in un oggetto map.  
+ A type that represents the data stored in a map.  
   
 ```  
 typedef Type mapped_type;  
 ```  
   
-### <a name="remarks"></a>Note  
- Il tipo `mapped_type` è un sinonimo per il parametro di modello `Type` della classe.  
+### <a name="remarks"></a>Remarks  
+ The type `mapped_type` is a synonym for the class's `Type` template parameter.  
   
- Per altre informazioni su `Type`, vedere l'argomento [Classe map](../standard-library/map-class.md).  
+ For more information on `Type` see the [map Class](../standard-library/map-class.md) topic.  
   
-### <a name="example"></a>Esempio  
-  Vedere l'esempio relativo a [value_type](#value_type) per indicazioni su come dichiarare e usare `mapped_type`.  
+### <a name="example"></a>Example  
+  See example for [value_type](#value_type) for an example of how to declare and use `mapped_type`.  
   
 ##  <a name="max_size"></a>  map::max_size  
- Restituisce la lunghezza massima della mappa.  
+ Returns the maximum length of the map.  
   
 ```  
 size_type max_size() const;
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Massima lunghezza possibile dell'oggetto map.  
+### <a name="return-value"></a>Return Value  
+ The maximum possible length of the map.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_max_size.cpp  
@@ -1898,7 +1938,7 @@ int main( )
 ```  
   
 ##  <a name="op_at"></a>  map::operator[]  
- Inserisce un elemento in una mappa con un valore di chiave specificato.  
+ Inserts an element into a map with a specified key value.  
   
 ```  
 Type& operator[](const Key& key);
@@ -1906,24 +1946,24 @@ Type& operator[](const Key& key);
 Type& operator 0-(Key&& key);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Parametro|Descrizione|  
-|`key`|Valore della chiave dell'elemento da inserire.|  
+|Parameter|Description|  
+|`key`|The key value of the element that is to be inserted.|  
   
-### <a name="return-value"></a>Valore restituito  
- Riferimento al valore dei dati dell'elemento inserito.  
+### <a name="return-value"></a>Return Value  
+ A reference to the data value of the inserted element.  
   
-### <a name="remarks"></a>Note  
- Se non viene trovato il valore della chiave dell'argomento, viene inserito insieme al valore predefinito del tipo di dati.  
+### <a name="remarks"></a>Remarks  
+ If the argument key value is not found, then it is inserted along with the default value of the data type.  
   
- `operator[]` può essere usato per inserire elementi in un oggetto map `m` tramite `m[ key] = DataValue;`, dove `DataValue` è il valore di `mapped_type` dell'elemento con un valore di chiave `key`.  
+ `operator[]` may be used to insert elements into a map `m` using `m[ key] = DataValue;` where `DataValue` is the value of the `mapped_type` of the element with a key value of `key`.  
   
- Quando si utilizza `operator[]` per inserire gli elementi, il riferimento restituito non indica se un inserimento modifica un elemento già esistente o ne crea uno nuovo. Le funzioni membro [find](#find) e [insert](#insert) possono essere usate per determinare se un elemento con una chiave specificata è già presente prima di un inserimento.  
+ When using `operator[]` to insert elements, the returned reference does not indicate whether an insertion is changing a pre-existing element or creating a new one. The member functions [find](#find) and [insert](#insert) can be used to determine whether an element with a specified key is already present before an insertion.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_op_insert.cpp  
@@ -1995,7 +2035,7 @@ c2["abc"] == 1
 ```  
   
 ##  <a name="op_eq"></a>  map::operator=  
- Sostituisce gli elementi di una mappa con una copia di un'altra mappa.  
+ Replaces the elements of a map with a copy of another map.  
   
 ```  
 map& operator=(const map& right);
@@ -2003,17 +2043,17 @@ map& operator=(const map& right);
 map& operator=(map&& right);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Parametro|Descrizione|  
-|`right`|Oggetto [map](../standard-library/map-class.md) da copiare nell'oggetto `map`.|  
+|Parameter|Description|  
+|`right`|The [map](../standard-library/map-class.md) being copied into the `map`.|  
   
-### <a name="remarks"></a>Note  
- Dopo la cancellazione di tutti gli elementi esistenti in un oggetto `map`, `operator=` copia o sposta il contenuto di `right` nell'oggetto map.  
+### <a name="remarks"></a>Remarks  
+ After erasing any existing elements in a `map`, `operator=` either copies or moves the contents of `right` into the map.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_operator_as.cpp  
@@ -2051,19 +2091,19 @@ int main( )
 ```  
   
 ##  <a name="pointer"></a>  map::pointer  
- Tipo che fornisce un puntatore a un elemento di un oggetto map.  
+ A type that provides a pointer to an element in a map.  
   
 ```  
 typedef typename allocator_type::pointer pointer;  
 ```  
   
-### <a name="remarks"></a>Note  
- Un tipo **pointer** può essere usato per modificare il valore di un elemento.  
+### <a name="remarks"></a>Remarks  
+ A type **pointer** can be used to modify the value of an element.  
   
- Nella maggior parte dei casi, è consigliabile usare un tipo [iterator](#iterator) per accedere agli elementi di un oggetto map.  
+ In most cases, an [iterator](#iterator) should be used to access the elements in a map object.  
   
 ##  <a name="rbegin"></a>  map::rbegin  
- Restituisce un iteratore che punta al primo elemento di un oggetto map invertito.  
+ Returns an iterator addressing the first element in a reversed map.  
   
 ```  
 const_reverse_iterator rbegin() const;
@@ -2071,17 +2111,17 @@ const_reverse_iterator rbegin() const;
 reverse_iterator rbegin();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Iteratore bidirezionale inverso che punta al primo elemento di un oggetto map invertito o a quello che è stato l'ultimo elemento dell'oggetto map non invertito.  
+### <a name="return-value"></a>Return Value  
+ A reverse bidirectional iterator addressing the first element in a reversed map or addressing what had been the last element in the unreversed map.  
   
-### <a name="remarks"></a>Note  
- `rbegin` viene usato con un oggetto map invertito proprio come [begin](#begin) viene usato con un oggetto map.  
+### <a name="remarks"></a>Remarks  
+ `rbegin` is used with a reversed map just as [begin](#begin) is used with a map.  
   
- Se il valore restituito di `rbegin` viene assegnato a un `const_reverse_iterator`, l'oggetto map non può essere modificato. Se il valore restituito di `rbegin` viene assegnato a un `reverse_iterator`, l'oggetto map può essere modificato.  
+ If the return value of `rbegin` is assigned to a `const_reverse_iterator`, then the map object cannot be modified. If the return value of `rbegin` is assigned to a `reverse_iterator`, then the map object can be modified.  
   
- `rbegin` può essere usato per eseguire l'iterazione all'indietro su un oggetto map.  
+ `rbegin` can be used to iterate through a map backwards.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_rbegin.cpp  
@@ -2140,13 +2180,13 @@ After the erasure, the first element in the reversed map is 2.
 ```  
   
 ##  <a name="reference"></a>  map::reference  
- Tipo che fornisce un riferimento a un elemento archiviato in un oggetto map.  
+ A type that provides a reference to an element stored in a map.  
   
 ```  
 typedef typename allocator_type::reference reference;  
 ```  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_reference.cpp  
@@ -2196,7 +2236,7 @@ The modified data value of first element is 15.
 ```  
   
 ##  <a name="rend"></a>  map::rend  
- Restituisce un iteratore che punta alla posizione successiva all'ultimo elemento di un oggetto map invertito.  
+ Returns an iterator that addresses the location succeeding the last element in a reversed map.  
   
 ```  
 const_reverse_iterator rend() const;
@@ -2204,19 +2244,19 @@ const_reverse_iterator rend() const;
 reverse_iterator rend();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Iteratore bidirezionale inverso che punta alla posizione successiva all'ultimo elemento di un oggetto map invertito, ovvero la posizione che precedeva il primo elemento dell'oggetto map non invertito.  
+### <a name="return-value"></a>Return Value  
+ A reverse bidirectional iterator that addresses the location succeeding the last element in a reversed map (the location that had preceded the first element in the unreversed map).  
   
-### <a name="remarks"></a>Note  
- `rend` viene usato con un oggetto map invertito proprio come [end](#end) viene usato con un oggetto map.  
+### <a name="remarks"></a>Remarks  
+ `rend` is used with a reversed map just as [end](#end) is used with a map.  
   
- Se il valore restituito di `rend` viene assegnato a un `const_reverse_iterator`, l'oggetto map non può essere modificato. Se il valore restituito di `rend` viene assegnato a un `reverse_iterator`, l'oggetto map può essere modificato.  
+ If the return value of `rend` is assigned to a `const_reverse_iterator`, then the map object cannot be modified. If the return value of `rend` is assigned to a `reverse_iterator`, then the map object can be modified.  
   
- `rend` può essere usato per verificare se un iteratore inverso ha raggiunto la fine del relativo oggetto map.  
+ `rend` can be used to test to whether a reverse iterator has reached the end of its map.  
   
- Non è consigliabile dereferenziare il valore restituito da `rend`.  
+ The value returned by `rend` should not be dereferenced.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_rend.cpp  
@@ -2277,36 +2317,36 @@ After the erasure, the last element in the reversed map is 2.
 ```  
   
 ##  <a name="reverse_iterator"></a>  map::reverse_iterator  
- Tipo che fornisce un iteratore bidirezionale in grado di leggere o modificare un elemento di un oggetto map invertito.  
+ A type that provides a bidirectional iterator that can read or modify an element in a reversed map.  
   
 ```  
 typedef std::reverse_iterator<iterator> reverse_iterator;  
 ```  
   
-### <a name="remarks"></a>Note  
- Un tipo `reverse_iterator` non può modificare il valore di un elemento e viene usato per eseguire l'iterazione sull'oggetto map in ordine inverso.  
+### <a name="remarks"></a>Remarks  
+ A type `reverse_iterator` cannot modify the value of an element and is use to iterate through the map in reverse.  
   
- Il tipo `reverse_iterator` definito da map punta a elementi che sono oggetti di [value_type](#value_type), ovvero di tipo `pair`*\<***constKey**, **Type***>*, dove il primo membro è la chiave dell'elemento e il secondo membro è il punto di riferimento mappato incluso nell'elemento.  
+ The `reverse_iterator` defined by map points to elements that are objects of [value_type](#value_type), that is of type `pair`*\<***constKey**, **Type***>*, whose first member is the key to the element and whose second member is the mapped datum held by the element.  
   
- Per dereferenziare un tipo `reverse_iterator``rIter` che punta a un elemento in un oggetto map, usare l'operatore **->**.  
+ To dereference a `reverse_iterator` `rIter` pointing to an element in a map, use the **->** operator.  
   
- Per accedere al valore della chiave per l'elemento, usare `rIter` -> **first**, che equivale a (\* `rIter`). **first**. Per accedere al valore del punto di riferimento mappato per l'elemento, usare `rIter` -> **second**, che equivale a (\* `rIter`). **first**.  
+ To access the value of the key for the element, use `rIter` -> **first**, which is equivalent to (\* `rIter`). **first**. To access the value of the mapped datum for the element, use `rIter` -> **second**, which is equivalent to (\* `rIter`). **first**.  
   
-### <a name="example"></a>Esempio  
-  Vedere l'esempio relativo a [rbegin](#rbegin) per indicazioni su come dichiarare e usare `reverse_iterator`.  
+### <a name="example"></a>Example  
+  See example for [rbegin](#rbegin) for an example of how to declare and use `reverse_iterator`.  
   
 ##  <a name="size"></a>  map::size  
- Restituisce il numero di elementi della mappa.  
+ Returns the number of elements in the map.  
   
 ```  
 size_type size() const;
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- La lunghezza corrente dell'oggetto map.  
+### <a name="return-value"></a>Return Value  
+ The current length of the map.  
   
-### <a name="example"></a>Esempio  
-  L'esempio seguente illustra l'uso della funzione membro map::size.  
+### <a name="example"></a>Example  
+  The following example demonstrates the use of the map::size member function.  
   
 ```  
 // map_size.cpp  
@@ -2337,31 +2377,31 @@ The map length is now 2.
 ```  
   
 ##  <a name="size_type"></a>  map::size_type  
- Tipo Unsigned Integer in grado di rappresentare il numero di elementi di un oggetto map.  
+ An unsigned integer type that can represent the number of elements in a map.  
   
 ```  
 typedef typename allocator_type::size_type size_type;  
 ```  
   
-### <a name="example"></a>Esempio  
-  Vedere l'esempio relativo a [size](#size) per indicazioni su come dichiarare e usare `size_type`.  
+### <a name="example"></a>Example  
+  See the example for [size](#size) for an example of how to declare and use `size_type`.  
   
 ##  <a name="swap"></a>  map::swap  
- Scambia gli elementi di due oggetti map.  
+ Exchanges the elements of two maps.  
   
 ```  
 void swap(
     map<Key, Type, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `right`  
- Argomento di tipo map che fornisce gli elementi da scambiare con l'oggetto map di destinazione.  
+ The argument map providing the elements to be swapped with the target map.  
   
-### <a name="remarks"></a>Note  
- La funzione membro non invalida riferimenti, puntatori o iteratori che designano gli elementi dei due oggetti map di cui vengono scambiati gli elementi.  
+### <a name="remarks"></a>Remarks  
+ The member function invalidates no references, pointers, or iterators that designate elements in the two maps whose elements are being exchanged.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_swap.cpp  
@@ -2414,7 +2454,7 @@ After swapping with m3, map m1 is: 300.
 ```  
   
 ##  <a name="upper_bound"></a>  map::upper_bound  
- Restituisce un iteratore al primo elemento di un oggetto map con un valore della chiave maggiore di quello di una chiave specificata.  
+ Returns an iterator to the first element in a map that with a key having a value that is greater than that of a specified key.  
   
 ```  
 iterator upper_bound(const Key& key);
@@ -2422,16 +2462,16 @@ iterator upper_bound(const Key& key);
 const_iterator upper_bound(const Key& key) const;
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `key`  
- Valore della chiave dell'argomento per cui trovare una corrispondenza con il valore della chiave di ordinamento di un elemento presente nell'oggetto map in cui si esegue la ricerca.  
+ The argument key value to be compared with the sort key value of an element from the map being searched.  
   
-### <a name="return-value"></a>Valore restituito  
- Tipo **iterator** o `const_iterator` che punta alla posizione di un elemento di un oggetto map con una chiave maggiore della chiave dell'argomento o che punta alla posizione successiva all'ultimo elemento dell'oggetto map se non viene trovata alcuna corrispondenza per la chiave.  
+### <a name="return-value"></a>Return Value  
+ An **iterator** or `const_iterator` that addresses the location of an element in a map that with a key that is greater than the argument key, or that addresses the location succeeding the last element in the map if no match is found for the key.  
   
- Se il valore restituito viene assegnato a un `const_iterator`, l'oggetto map non può essere modificato. Se il valore restituito viene assegnato a un **iterator**, l'oggetto map può essere modificato.  
+ If the return value is assigned to a `const_iterator`, the map object cannot be modified. If the return value is assigned to a **iterator**, the map object can be modified.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_upper_bound.cpp  
@@ -2483,23 +2523,23 @@ that of the initial element of m1 is: 20.
 ```  
   
 ##  <a name="value_comp"></a>  map::value_comp  
- La funzione membro restituisce un oggetto funzione che determina l'ordine degli elementi in un oggetto map confrontando i valori delle relative chiavi.  
+ The member function returns a function object that determines the order of elements in a map by comparing their key values.  
   
 ```  
 value_compare value_comp() const;
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Restituisce l'oggetto funzione di confronto che viene usato da un oggetto map per ordinare gli elementi.  
+### <a name="return-value"></a>Return Value  
+ Returns the comparison function object that a map uses to order its elements.  
   
-### <a name="remarks"></a>Note  
- Per un oggetto map *m*, se due elementi *e*1( *k*1, *d*1) e *e*2( *k*2, `d`2) sono oggetti di tipo `value_type`, dove *k*1 e *k*2 sono le rispettive chiavi di tipo `key_type` e `d`1 e `d`2 sono i rispettivi dati di tipo `mapped_type`, *m.*`value_comp`( *e*1, *e*2) è equivalente a *m.*`key_comp`*(k*1, *k*2). Un oggetto archiviato definisce la funzione membro  
+### <a name="remarks"></a>Remarks  
+ For a map *m*, if two elements *e*1( *k*1, *d*1) and *e*2( *k*2, `d`2) are objects of type `value_type`, where *k*1 and *k*2 are their keys of type `key_type` and `d`1 and `d`2 are their data of type `mapped_type`, then *m.*`value_comp`( *e*1, *e*2) is equivalent to *m.*`key_comp`*(k*1, *k*2). A stored object defines the member function  
   
  **bool operator**( **value_type&**`left`, **value_type&**`right`);  
   
- che restituisce **true** se il valore della chiave `left` precede e non è uguale al valore della chiave `right` nell'ordinamento.  
+ which returns **true** if the key value of `left` precedes and is not equal to the key value of `right` in the sort order.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_value_comp.cpp  
@@ -2548,13 +2588,13 @@ The element ( 2,5 ) does not precede the element ( 1,10 ).
 ```  
   
 ##  <a name="value_type"></a>  map::value_type  
- Tipo di oggetto archiviato come elemento di un oggetto map.  
+ The type of object stored as an element in a map.  
   
 ```  
 typedef pair<const Key, Type> value_type;  
 ```  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // map_value_type.cpp  
@@ -2606,10 +2646,10 @@ int main( )
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [\<map> Members](http://msdn.microsoft.com/en-us/7e8f0bc2-6034-40f6-9d14-76d4cef86308) (Membri di <map>)   
- [Contenitori](../cpp/containers-modern-cpp.md)   
- [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [\<map> Members](http://msdn.microsoft.com/en-us/7e8f0bc2-6034-40f6-9d14-76d4cef86308)   
+ [Containers](../cpp/containers-modern-cpp.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 

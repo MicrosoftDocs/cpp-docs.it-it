@@ -1,5 +1,5 @@
 ---
-title: Classe numpunct_byname | Microsoft Docs
+title: numpunct_byname Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- numpunct_byname
 - xlocnum/std::numpunct_byname
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 1821793921924a5f0bb75703f581705f7f1d8115
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: ccf23ec18332b96ae3532a4f384d829a398a3b54
 ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="numpunctbyname-class"></a>Classe numpunct_byname
-La classe modello derivata descrive un oggetto che può essere usato come facet `numpunct` delle impostazioni locali specificate, consentendo la formattazione e la punteggiatura delle espressioni numeriche e booleane.  
+# <a name="numpunctbyname-class"></a>numpunct_byname Class
+The derived template class describes an object that can serve as a `numpunct` facet of a given locale enabling the formatting and punctuation of numeric and Boolean expressions.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class CharType>
@@ -64,16 +63,16 @@ protected:
  };
 ```  
   
-## <a name="remarks"></a>Note  
- Il comportamento è determinato dall'impostazione locale [denominata](../standard-library/locale-class.md#name) `_Locname`. Il costruttore inizializza l'oggetto di base con [numpunct](../standard-library/numpunct-class.md#numpunct)\<CharType>( `_Refs`).  
+## <a name="remarks"></a>Remarks  
+ Its behavior is determined by the [named](../standard-library/locale-class.md#name) locale `_Locname`. The constructor initializes its base object with [numpunct](../standard-library/numpunct-class.md#numpunct)\<CharType>( `_Refs`).  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<locale>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
   
- **Spazio dei nomi:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Vedere anche  
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md) (Thread safety nella libreria standard C++)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

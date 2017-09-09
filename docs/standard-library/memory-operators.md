@@ -1,5 +1,5 @@
 ---
-title: Operatori &lt;memory&gt; | Microsoft Docs
+title: '&lt;memory&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -21,14 +21,14 @@ caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 6416c01a3538961af9f1c6f2e8bca3c91ffd4bde
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 9a8504cadcd584e423a1050c7fa02b935a1fa0e9
 ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltmemorygt-operators"></a>Operatori &lt;memory&gt;
+# <a name="ltmemorygt-operators"></a>&lt;memory&gt; operators
 ||||  
 |-|-|-|  
 |[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
@@ -36,7 +36,7 @@ ms.lasthandoff: 04/29/2017
 |[operator==](#op_eq_eq)|  
   
 ##  <a name="op_neq"></a>  operator!=  
- Verifica la disuguaglianza tra oggetti.  
+ Tests for inequality between objects.  
   
 ```  
 template <class Type, class Other>  
@@ -55,28 +55,28 @@ bool operator!=(
     const shared_ptr<Ty2>& right);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `left`  
- Uno degli oggetti di cui verificare la disuguaglianza.  
+ One of the objects to be tested for inequality.  
   
  `right`  
- Uno degli oggetti di cui verificare la disuguaglianza.  
+ One of the objects to be tested for inequality.  
   
  `Ty1`  
- Tipo controllato dal puntatore condiviso sinistro.  
+ The type controlled by the left shared pointer.  
   
  `Ty2`  
- Tipo controllato dal puntatore condiviso destro.  
+ The type controlled by the right shared pointer.  
   
-### <a name="return-value"></a>Valore restituito  
- **true** se gli oggetti non sono uguali; in caso contrario, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the objects are not equal; **false** if objects are equal.  
   
-### <a name="remarks"></a>Note  
- Il primo operatore modello restituisce false Tutti gli allocatori predefiniti sono uguali.  
+### <a name="remarks"></a>Remarks  
+ The first template operator returns false. (All default allocators are equal.)  
   
- Il secondo e il terzo operatore modello restituiscono `!(left == right)`.  
+ The second and third template operators return `!(left == right)`.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // memory_op_me.cpp  
@@ -105,7 +105,7 @@ int main( )
 The allocator objects Alloc & v1Alloc are equal.  
 ```  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__operator_ne.cpp   
@@ -134,7 +134,7 @@ sp0 != sp1 == true
 ```  
   
 ##  <a name="op_eq_eq"></a>  operator==  
- Verifica l'uguaglianza tra oggetti.  
+ Tests for equality between objects.  
   
 ```  
 template <class Type, class Other>  
@@ -153,28 +153,28 @@ bool operator==(
     const shared_ptr<Ty2>& right);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `left`  
- Uno degli oggetti di cui verificare l'uguaglianza.  
+ One of the objects to be tested for equality.  
   
  `right`  
- Uno degli oggetti di cui verificare l'uguaglianza.  
+ One of the objects to be tested for equality.  
   
  `Ty1`  
- Tipo controllato dal puntatore condiviso sinistro.  
+ The type controlled by the left shared pointer.  
   
  `Ty2`  
- Tipo controllato dal puntatore condiviso destro.  
+ The type controlled by the right shared pointer.  
   
-### <a name="return-value"></a>Valore restituito  
- `true` se gli oggetti sono uguali, `false` se gli oggetti non sono uguali.  
+### <a name="return-value"></a>Return Value  
+ `true` if the objects are equal, `false` if objects are not equal.  
   
-### <a name="remarks"></a>Note  
- Il primo operatore modello restituisce true Tutti gli allocatori predefiniti sono uguali.  
+### <a name="remarks"></a>Remarks  
+ The first template operator returns true. (All default allocators are equal.)  
   
- Il secondo e il terzo operatore modello restituiscono ` left.get() ==  right.get()`.  
+ The second and third template operators return ` left.get() ==  right.get()`.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // memory_op_eq.cpp  
@@ -214,7 +214,7 @@ The allocator objects cv1Alloc & v1Alloc are equal.
 The allocator objects cAlloc & Alloc are equal.  
 ```  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__operator_eq.cpp   
@@ -243,7 +243,7 @@ sp0 == sp1 == false
 ```  
   
 ##  <a name="op_gt_eq"></a>  operator&gt;=  
- Verifica se un oggetto è maggiore o uguale a un secondo oggetto.  
+ Tests for one object being greater than or equal to a second object.  
   
 ```  
 template <class T, class Del1, class U, class Del2>  
@@ -257,24 +257,24 @@ bool operator>=(
     const shared_ptr<Ty2>& right);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `left`  
- Uno degli oggetti da confrontare.  
+ One of the objects to be compared.  
   
  `right`  
- Uno degli oggetti da confrontare.  
+ One of the objects to be compared.  
   
  `Ty1`  
- Tipo controllato dal puntatore condiviso sinistro.  
+ The type controlled by the left shared pointer.  
   
  `Ty2`  
- Tipo controllato dal puntatore condiviso destro.  
+ The type controlled by the right shared pointer.  
   
-### <a name="remarks"></a>Note  
- Gli operatori di modello restituiscono `left.get() >= right.get()`.  
+### <a name="remarks"></a>Remarks  
+ The template operators return `left.get() >= right.get()`.  
   
 ##  <a name="op_lt"></a>  operator&lt;  
- Verifica se un oggetto è minore di un secondo oggetto.  
+ Tests for one object being less than a second object.  
   
 ```  
 template <class T, class Del1, class U, class Del2>  
@@ -288,21 +288,21 @@ bool operator<(
     const shared_ptr<Ty2>& right);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `left`  
- Uno degli oggetti da confrontare.  
+ One of the objects to be compared.  
   
  `right`  
- Uno degli oggetti da confrontare.  
+ One of the objects to be compared.  
   
  `Ty1`  
- Tipo controllato dal puntatore sinistro.  
+ The type controlled by the left pointer.  
   
  `Ty2`  
- Tipo controllato dal puntatore destro.  
+ The type controlled by the right pointer.  
   
 ##  <a name="op_lt_eq"></a>  operator&lt;=  
- Verifica se un oggetto è minore o uguale a un secondo oggetto.  
+ Tests for one object being less than or equal to a second object.  
   
 ```  
 template <class T, class Del1, class U, class Del2>  
@@ -316,24 +316,24 @@ bool operator<=(
     const shared_ptr<Ty2>& right);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `left`  
- Uno degli oggetti da confrontare.  
+ One of the objects to be compared.  
   
  `right`  
- Uno degli oggetti da confrontare.  
+ One of the objects to be compared.  
   
  `Ty1`  
- Tipo controllato dal puntatore condiviso sinistro.  
+ The type controlled by the left shared pointer.  
   
  `Ty2`  
- Tipo controllato dal puntatore condiviso destro.  
+ The type controlled by the right shared pointer.  
   
-### <a name="remarks"></a>Note  
- Gli operatori di modello restituiscono`left.get() <= right.get()`  
+### <a name="remarks"></a>Remarks  
+ The template operators return `left.get() <= right.get()`  
   
 ##  <a name="op_gt"></a>  operator&gt;  
- Verifica se un oggetto è maggiore di un secondo oggetto.  
+ Tests for one object being greater than a second object.  
   
 ```  
 template <class Ty1, class Del1, class Ty2, class Del2>  
@@ -347,21 +347,21 @@ bool operator>(
     const shared_ptr<Ty2>& right);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `left`  
- Uno degli oggetti da confrontare.  
+ One of the objects to be compared.  
   
  `right`  
- Uno degli oggetti da confrontare.  
+ One of the objects to be compared.  
   
  `Ty1`  
- Tipo controllato dal puntatore condiviso sinistro.  
+ The type controlled by the left shared pointer.  
   
  `Ty2`  
- Tipo controllato dal puntatore condiviso destro.  
+ The type controlled by the right shared pointer.  
   
 ##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
-Scrive il puntatore condiviso nel flusso.  
+Writes the shared pointer to the stream.  
   
 ```  
 template <class Elem, class Tr, class Ty>  
@@ -369,26 +369,26 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
     shared_ptr<Ty>& sp);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `Elem`  
- Tipo dell'elemento flusso.  
+ The type of the stream element.  
   
  `Tr`  
- Tipo dei tratti dell'elemento flusso.  
+ The type the stream element traits.  
   
  `Ty`  
- Tipo controllato dal puntatore condiviso.  
+ The type controlled by the shared pointer.  
   
  `out`  
- Flusso di output.  
+ The output stream.  
   
  `sp`  
- Puntatore condiviso.  
+ The shared pointer.  
   
-### <a name="remarks"></a>Note  
- La funzione modello restituisce `out << sp.get()`.  
+### <a name="remarks"></a>Remarks  
+ The template function returns `out << sp.get()`.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__operator_sl.cpp   
@@ -411,7 +411,7 @@ int main()
 sp0 == 3f3040 (varies)  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [\<memory>](../standard-library/memory.md)
 
 

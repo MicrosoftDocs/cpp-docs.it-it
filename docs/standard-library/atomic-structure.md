@@ -1,11 +1,11 @@
 ---
-title: Struttura atomic | Microsoft Docs
+title: atomic Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -31,66 +31,66 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: fd21d2fe59dc7db7670fb94fde6d169603bbf6d1
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: f30b48b20d4ca22f836a6f5d8d4679d7a7306457
 ms.contentlocale: it-it
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="atomic-structure"></a>Struttura atomic
-Descrive un oggetto che esegue operazioni atomiche in un valore archiviato di tipo `Ty`.  
+# <a name="atomic-structure"></a>atomic Structure
+Describes an object that performs atomic operations on a stored value of type `Ty`.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Ty>
 struct atomic;
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Costruttori pubblici  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[atomic](http://msdn.microsoft.com/Library/a538c43f-4d48-4308-ae1b-bab1839bccb8)|Costruisce un oggetto atomico.|  
+|[atomic](http://msdn.microsoft.com/Library/a538c43f-4d48-4308-ae1b-bab1839bccb8)|Constructs an atomic object.|  
   
-### <a name="public-operators"></a>Operatori pubblici  
+### <a name="public-operators"></a>Public Operators  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[Operatore atomic::operator Ty](http://msdn.microsoft.com/Library/a366c700-c7a0-4bcb-8eb4-4b57dfaea065)|Legge e restituisce il valore archiviato. ([atomic:: Load](http://msdn.microsoft.com/Library/05212726-cf8a-46fe-83d2-c16ac2abb7d1))|  
-|[Operatore atomic::operator=](http://msdn.microsoft.com/Library/fe161d57-47ae-4bad-92bf-ce32ac8d5953)|Usa un valore specificato per sostituire il valore archiviato. ([atomic:: Store](http://msdn.microsoft.com/Library/84759413-d664-47ef-a1f3-a73c5a62007b))|  
-|[Operatore atomic::operator++](http://msdn.microsoft.com/Library/492959e9-1ea8-4e02-a031-82b1b92e91a0)|Incrementa il valore archiviato. Usato solo da specializzazioni integrali e dei puntatori.|  
-|[Operatore atomic::operator+=](http://msdn.microsoft.com/Library/9ec97aa2-c9d7-436b-943d-2989eb2617dd)|Aggiunge un valore specificato al valore archiviato. Usato solo da specializzazioni integrali e dei puntatori.|  
-|[Operatore atomic::operator--](http://msdn.microsoft.com/Library/ad7c1ea7-1f6d-4a54-bf26-07630f749864)|Decrementa il valore archiviato. Usato solo da specializzazioni integrali e dei puntatori.|  
-|[Operatore atomic::operator-=](http://msdn.microsoft.com/Library/902d0d9f-88fd-4500-aa2d-1e50f443e77c)|Sottrae un valore specificato da un valore archiviato. Usato solo da specializzazioni integrali e dei puntatori.|  
-|[Operatore atomic::operator&=](http://msdn.microsoft.com/Library/90e730ac-12e1-4abb-98f5-4eadd6861a89)|Esegue un `and` bit per bit in un valore specificato e nel valore archiviato. Usato solo da specializzazioni integrali.|  
-|[Operatore atomic::operator&#124;=](http://msdn.microsoft.com/Library/f105eacc-31a6-4906-abba-f1cf013599b2)|Esegue un `or` bit per bit in un valore specificato e nel valore archiviato. Usato solo da specializzazioni integrali.|  
-|[Operatore atomic::operator^=](http://msdn.microsoft.com/Library/f2a4da9d-67e8-4249-9161-9998e72a33c2)|Esegue un `exclusive or` bit per bit in un valore specificato e nel valore archiviato. Usato solo da specializzazioni integrali.|  
+|[atomic::operator Ty Operator](http://msdn.microsoft.com/Library/a366c700-c7a0-4bcb-8eb4-4b57dfaea065)|Reads and returns the stored value. ([atomic::load](http://msdn.microsoft.com/Library/05212726-cf8a-46fe-83d2-c16ac2abb7d1))|  
+|[atomic::operator= Operator](http://msdn.microsoft.com/Library/fe161d57-47ae-4bad-92bf-ce32ac8d5953)|Uses a specified value to replace the stored value. ([atomic::store](http://msdn.microsoft.com/Library/84759413-d664-47ef-a1f3-a73c5a62007b))|  
+|[atomic::operator++ Operator](http://msdn.microsoft.com/Library/492959e9-1ea8-4e02-a031-82b1b92e91a0)|Increments the stored value. Used only by integral and pointer specializations.|  
+|[atomic::operator+= Operator](http://msdn.microsoft.com/Library/9ec97aa2-c9d7-436b-943d-2989eb2617dd)|Adds a specified value to the stored value. Used only by integral and pointer specializations.|  
+|[atomic::operator-- Operator](http://msdn.microsoft.com/Library/ad7c1ea7-1f6d-4a54-bf26-07630f749864)|Decrements the stored value. Used only by integral and pointer specializations.|  
+|[atomic::operator-= Operator](http://msdn.microsoft.com/Library/902d0d9f-88fd-4500-aa2d-1e50f443e77c)|Subtracts a specified value from the stored value. Used only by integral and pointer specializations.|  
+|[atomic::operator&= Operator](http://msdn.microsoft.com/Library/90e730ac-12e1-4abb-98f5-4eadd6861a89)|Performs a bitwise `and` on a specified value and the stored value. Used only by integral specializations.|  
+|[atomic::operator&#124;= Operator](http://msdn.microsoft.com/Library/f105eacc-31a6-4906-abba-f1cf013599b2)|Performs a bitwise `or` on a specified value and the stored value. Used only by integral specializations.|  
+|[atomic::operator^= Operator](http://msdn.microsoft.com/Library/f2a4da9d-67e8-4249-9161-9998e72a33c2)|Performs a bitwise `exclusive or` on a specified value and the stored value. Used only by integral specializations.|  
   
-### <a name="public-methods"></a>Metodi pubblici  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[compare_exchange_strong](http://msdn.microsoft.com/Library/47bbf894-b28c-4ece-959e-67b3863cf4ed)|Esegue un'operazione `atomic_compare_and_exchange` in `this` e restituisce il risultato.|  
-|[compare_exchange_weak](http://msdn.microsoft.com/Library/e15e421a-f7a3-4272-993a-f487d2242e4f)|Esegue un'operazione `weak_atomic_compare_and_exchange` in `this` e restituisce il risultato.|  
-|[fetch_add](http://msdn.microsoft.com/Library/c68b91f2-6e8a-4ffa-8991-6bb6d466e1f3)|Aggiunge un valore specificato al valore archiviato.|  
-|[fetch_and](http://msdn.microsoft.com/Library/a9c83001-b72c-4085-9640-f63f866714b9)|Esegue un `and` bit per bit in un valore specificato e nel valore archiviato.|  
-|[fetch_or](http://msdn.microsoft.com/Library/4c532f7f-80c5-432a-b34b-48feacab8dca)|Esegue un `or` bit per bit in un valore specificato e nel valore archiviato.|  
-|[fetch_sub](http://msdn.microsoft.com/Library/8cc80d4b-0942-45a3-9db8-bbf339a903e4)|Sottrae un valore specificato da un valore archiviato.|  
-|[fetch_xor](http://msdn.microsoft.com/Library/92bbaff8-ee29-4a1e-aee4-d9d405285bfe)|Esegue un `exclusive or` bit per bit in un valore specificato e nel valore archiviato.|  
-|[is_lock_free](http://msdn.microsoft.com/Library/b99d5130-cdda-40a2-b14c-152b13a8ba45)|Specifica se le operazioni atomiche in `this` sono *senza blocco*. Un tipo atomico è *senza blocco* se nessuna operazione atomica in tale tipo usa i blocchi.|  
-|[carico](http://msdn.microsoft.com/Library/05212726-cf8a-46fe-83d2-c16ac2abb7d1)|Legge e restituisce il valore archiviato.|  
-|[archivio](http://msdn.microsoft.com/Library/84759413-d664-47ef-a1f3-a73c5a62007b)|Usa un valore specificato per sostituire il valore archiviato.|  
+|[compare_exchange_strong](http://msdn.microsoft.com/Library/47bbf894-b28c-4ece-959e-67b3863cf4ed)|Performs an `atomic_compare_and_exchange` operation on `this` and returns the result.|  
+|[compare_exchange_weak](http://msdn.microsoft.com/Library/e15e421a-f7a3-4272-993a-f487d2242e4f)|Performs a `weak_atomic_compare_and_exchange` operation on `this` and returns the result.|  
+|[fetch_add](http://msdn.microsoft.com/Library/c68b91f2-6e8a-4ffa-8991-6bb6d466e1f3)|Adds a specified value to the stored value.|  
+|[fetch_and](http://msdn.microsoft.com/Library/a9c83001-b72c-4085-9640-f63f866714b9)|Performs a bitwise `and` on a specified value and the stored value.|  
+|[fetch_or](http://msdn.microsoft.com/Library/4c532f7f-80c5-432a-b34b-48feacab8dca)|Performs a bitwise `or` on a specified value and the stored value.|  
+|[fetch_sub](http://msdn.microsoft.com/Library/8cc80d4b-0942-45a3-9db8-bbf339a903e4)|Subtracts a specified value from the stored value.|  
+|[fetch_xor](http://msdn.microsoft.com/Library/92bbaff8-ee29-4a1e-aee4-d9d405285bfe)|Performs a bitwise `exclusive or` on a specified value and the stored value.|  
+|[is_lock_free](http://msdn.microsoft.com/Library/b99d5130-cdda-40a2-b14c-152b13a8ba45)|Specifies whether atomic operations on `this` are *lock free*. An atomic type is *lock free* if no atomic operations on that type use locks.|  
+|[load](http://msdn.microsoft.com/Library/05212726-cf8a-46fe-83d2-c16ac2abb7d1)|Reads and returns the stored value.|  
+|[store](http://msdn.microsoft.com/Library/84759413-d664-47ef-a1f3-a73c5a62007b)|Uses a specified value to replace the stored value.|  
   
-## <a name="remarks"></a>Note  
- Il tipo `Ty` deve essere *facilmente copiabile*. Ovvero, l'uso di [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) per copiarne i byte deve produrre un oggetto `Ty` valido che risulta uguale all'oggetto originale. Le funzioni membro `compare_exchange_weak` e `compare_exchange_strong` usano [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md) per determinare se due valori `Ty` sono uguali. Queste funzioni non useranno `Ty`-defined `operator==`. Le funzioni membro di `atomic` usano `memcpy` per copiare i valori di tipo `Ty`.  
+## <a name="remarks"></a>Remarks  
+ The type `Ty` must be *trivially copyable*. That is, using [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) to copy its bytes must produce a valid `Ty` object that compares equal to the original object. The `compare_exchange_weak` and `compare_exchange_strong` member functions use [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md) to determine whether two `Ty` values are equal. These functions will not use a `Ty`-defined `operator==`. The member functions of `atomic` use `memcpy` to copy values of type `Ty`.  
   
- Per tutti i tipi di puntatore è disponibile una specializzazione parziale `atomic<Ty *>`. La specializzazione consente l'aggiunta o la sottrazione di un offset dal valore del puntatore gestito. Le operazioni aritmetiche accettano un argomento di tipo `ptrdiff_t` e modificano l'argomento in base alla dimensione di `Ty` per coerenza con l'aritmetica di indirizzo ordinaria.  
+ A partial specialization, `atomic<Ty *>`, exists for all pointer types. The specialization enables the addition of an offset to the managed pointer value or the subtraction of an offset from it. The arithmetic operations take an argument of type `ptrdiff_t` and adjust that argument according to the size of `Ty` to be consistent with ordinary address arithmetic.  
   
- È disponibile una specializzazione per ogni tipo integrale, ad eccezione di `bool`. Ogni specializzazione offre un set di metodi per le operazioni logiche e di aritmetica atomica.  
+ A specialization exists for every integral type except `bool`. Each specialization provides a rich set of methods for atomic arithmetic and logical operations.  
   
 ||||  
 |-|-|-|  
@@ -100,16 +100,16 @@ struct atomic;
 |`atomic<unsigned int>`|`atomic<long>`|`atomic<unsigned long>`|  
 |`atomic<long long>`|`atomic<unsigned long long>`|  
   
- Le specializzazioni integrali sono derivate dai tipi `atomic_``integral` corrispondenti. Ad esempio, `atomic<unsigned int>` è derivato da `atomic_uint`.  
+ Integral specializations are derived from corresponding `atomic_integral` types. For example, `atomic<unsigned int>` is derived from `atomic_uint`.  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<atomic >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<atomic>  
   
- **Spazio dei nomi:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [\<atomic>](../standard-library/atomic.md)   
- [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)
 
 
 

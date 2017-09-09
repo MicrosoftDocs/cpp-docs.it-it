@@ -59,11 +59,57 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
+helpviewer_keywords:
+- std::addressof [C++]
+- std::align [C++]
+- std::allocate_shared [C++]
+- std::const_pointer_cast [C++]
+- std::declare_no_pointers [C++]
+- std::declare_reachable [C++]
+- std::default_delete [C++]
+- std::dynamic_pointer_cast [C++]
+- std::get_deleter [C++]
+- std::get_pointer_safety [C++]
+- std::get_temporary_buffer [C++]
+- std::make_shared [C++]
+- std::make_unique [C++]
+- std::owner_less [C++]
+- std::return_temporary_buffer [C++]
+- std::static_pointer_cast [C++]
+- std::swap [C++]
+- std::undeclare_no_pointers [C++]
+- std::undeclare_reachable [C++]
+- std::uninitialized_copy [C++]
+- std::uninitialized_copy_n [C++]
+- std::uninitialized_fill [C++]
+- std::uninitialized_fill_n [C++]
+- std::addressof [C++]
+- std::align [C++]
+- std::allocate_shared [C++]
+- std::const_pointer_cast [C++]
+- std::declare_no_pointers [C++]
+- std::declare_reachable [C++]
+- std::default_delete [C++]
+- std::dynamic_pointer_cast [C++]
+- std::get_deleter [C++]
+- std::get_pointer_safety [C++]
+- std::get_temporary_buffer [C++]
+- std::make_shared [C++]
+- std::make_unique [C++]
+- std::owner_less [C++]
+- std::return_temporary_buffer [C++]
+- std::static_pointer_cast [C++]
+- std::undeclare_no_pointers [C++]
+- std::undeclare_reachable [C++]
+- std::uninitialized_copy [C++]
+- std::uninitialized_copy_n [C++]
+- std::uninitialized_fill [C++]
+- std::uninitialized_fill_n [C++]
 ms.translationtype: MT
-ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
-ms.openlocfilehash: bb7a62b3057561c7db0b228a29682e93af218744
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 60cfb7d617d6d2eaa24c81155aa916d799b5d141
 ms.contentlocale: it-it
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltmemorygt-functions"></a>&lt;memory&gt; functions

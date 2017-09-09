@@ -1,5 +1,5 @@
 ---
-title: Funzioni membro del flusso di file di output | Microsoft Docs
+title: Output File Stream Member Functions | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -11,8 +11,7 @@ ms.topic: article
 dev_langs:
 - C++
 helpviewer_keywords:
-- output streams, member functions
-f1_keywords: []
+- output streams [C++], member functions
 ms.assetid: 38aaf710-8035-4a34-a0c4-123a5327f28a
 caps.latest.revision: 8
 author: corob-msft
@@ -32,24 +31,24 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: baa226c95d396232ea8ac545c839352c5df4c22f
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 571e2c0248317511773e9d33cf6745b446d82b7f
 ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="output-file-stream-member-functions"></a>Funzioni membro del flussi di file di output
-Le funzioni membro del flusso di output sono di tre tipi: quelle equivalenti a manipolatori, quelle che eseguono operazioni di scrittura non formattate e quelle che modificano lo stato del flusso e non hanno un manipolatore o un operatore di inserimento equivalente . Per l'output formattato e sequenziale, è possibile usare solo operatori di inserimento e manipolatori. Per l'output del disco binario ad accesso casuale, usare altre funzioni membro, con o senza operatori di inserimento.  
+# <a name="output-file-stream-member-functions"></a>Output File Stream Member Functions
+Output stream member functions have three types: those that are equivalent to manipulators, those that perform unformatted write operations, and those that otherwise modify the stream state and have no equivalent manipulator or insertion operator. For sequential, formatted output, you might use only insertion operators and manipulators. For random-access binary disk output, you use other member functions, with or without insertion operators.  
   
-## <a name="the-open-function-for-output-streams"></a>Funzione open per flussi di output  
- Per usare un flusso di file di output ([ofstream](../standard-library/basic-ofstream-class.md)), è necessario associare tale flusso a un file su disco specifico nel costruttore o alla funzione **open**. Se si usa la funzione **open**, è possibile riusare lo stesso oggetto di flusso con una serie di file. In entrambi i casi, gli argomenti che descrivono i file sono gli stessi.  
+## <a name="the-open-function-for-output-streams"></a>The open Function for Output Streams  
+ To use an output file stream ([ofstream](../standard-library/basic-ofstream-class.md)), you must associate that stream with a specific disk file in the constructor or the **open** function. If you use the **open** function, you can reuse the same stream object with a series of files. In either case, the arguments describing the file are the same.  
   
- Quando si apre il file associato a un flusso di output, in genere si specifica un flag **open_mode**. È possibile combinare questi flag, definiti come enumeratori nella classe `ios`, con l'operatore Bitwise-OR ( &#124; ). Per un elenco di enumeratori, vedere [ios_base::openmode](../standard-library/ios-base-class.md#openmode).  
+ When you open the file associated with an output stream, you generally specify an **open_mode** flag. You can combine these flags, which are defined as enumerators in the `ios` class, with the bitwise OR ( &#124; ) operator. See [ios_base::openmode](../standard-library/ios-base-class.md#openmode) for a list of the enumerators.  
   
- Tre situazioni di flusso di output comuni impiegano opzioni di modalità:  
+ Three common output stream situations involve mode options:  
   
--   Creazione di un file. Se il file esiste già, la versione precedente viene eliminata.  
+-   Creating a file. If the file already exists, the old version is deleted.  
   
  ```  
     ostream ofile("FILENAME");
@@ -59,13 +58,13 @@ Le funzioni membro del flusso di output sono di tre tipi: quelle equivalenti a m
 // Equivalent to above  
 ```  
   
--   Aggiunta di record a un file esistente o creazione di un record se non esiste.  
+-   Appending records to an existing file or creating one if it does not exist.  
   
  ```  
     ofstream ofile("FILENAME", ios::app);
 ```  
   
--   Apertura di due file, uno alla volta, nello stesso flusso.  
+-   Opening two files, one at a time, on the same stream.  
   
  ```  
     ofstream ofile();
@@ -83,8 +82,8 @@ ofile.open("FILE1",
 // FILE2 closed  // When ofile goes out of scope it is destroyed.  
 ```  
   
-## <a name="the-put"></a>Il put
- La funzione **put** scrive un carattere nel flusso di output. Le due istruzioni seguenti sono uguali per impostazione predefinita, ma la seconda è influenzata dagli argomenti format del flusso:  
+## <a name="the-put"></a>The put
+ The **put** function writes one character to the output stream. The following two statements are the same by default, but the second is affected by the stream's format arguments:  
   
 ```  
 cout.put('A');
@@ -93,8 +92,8 @@ cout.put('A');
 cout <<'A'; // Format arguments 'width' and 'fill' apply   
 ```  
   
-## <a name="the-write"></a>L'operazione di scrittura
- La funzione **write** scrive un blocco di memoria in un flusso di file di output. L'argomento length specifica il numero di byte scritti. In questo esempio viene creato un flusso di file di output in cui viene scritto il valore binario della struttura `Date`:  
+## <a name="the-write"></a>The write
+ The **write** function writes a block of memory to an output file stream. The length argument specifies the number of bytes written. This example creates an output file stream and writes the binary value of the `Date` structure to it:  
   
 ```  
 // write_function.cpp  
@@ -115,55 +114,55 @@ int main( )
 }  
 ```  
   
- La funzione **write** non si arresta quando raggiunge un carattere null, pertanto viene scritta la struttura di classe completa. La funzione accetta due argomenti: un puntatore `char` e un conteggio di caratteri da scrivere. Si noti il cast necessario per **char\*** prima dell'indirizzo dell'oggetto di struttura.  
+ The **write** function does not stop when it reaches a null character, so the complete class structure is written. The function takes two arguments: a `char` pointer and a count of characters to write. Note the required cast to **char\*** before the address of the structure object.  
   
-## <a name="the-seekp-and-tellp-functions"></a>Funzioni seekp e tellp  
- Un flusso di file di output mantiene un puntatore interno che punta alla posizione in cui verranno successivamente scritti i dati. La funzione membro `seekp` imposta questo puntatore, garantendo pertanto l'output di file su disco ad accesso casuale. La funzione membro `tellp` restituisce la posizione del file. Per esempi che usano gli equivalenti del flusso di input di `seekp` e `tellp`, vedere [Le funzioni di tellg e di seekg](../standard-library/input-stream-member-functions.md).  
+## <a name="the-seekp-and-tellp-functions"></a>The seekp and tellp Functions  
+ An output file stream keeps an internal pointer that points to the position where data is to be written next. The `seekp` member function sets this pointer and thus provides random-access disk file output. The `tellp` member function returns the file position. For examples that use the input stream equivalents to `seekp` and `tellp`, see [The seekg and tellg Functions](../standard-library/input-stream-member-functions.md).  
   
-## <a name="the-close-function-for-output-streams"></a>Funzione close per flussi di output  
- La funzione membro **close** chiude il file su disco associato a un flusso di file di output. Per completare tutto l'output del disco, è necessario chiudere il file. Se necessario, il distruttore `ofstream` chiude automaticamente il file, ma è possibile usare la funzione **close** se è necessario aprire un altro file per lo stesso oggetto di flusso.  
+## <a name="the-close-function-for-output-streams"></a>The close Function for Output Streams  
+ The **close** member function closes the disk file associated with an output file stream. The file must be closed to complete all disk output. If necessary, the `ofstream` destructor closes the file for you, but you can use the **close** function if you need to open another file for the same stream object.  
   
- Il distruttore del flusso di output chiude automaticamente un file del flusso solo se il costruttore o la funzione membro **open** ha aperto il file. Se viene passato al costruttore un descrittore di file per un file già aperto o viene usata la funzione membro **attach**, è necessario chiudere il file in modo esplicito.  
+ The output stream destructor automatically closes a stream's file only if the constructor or the **open** member function opened the file. If you pass the constructor a file descriptor for an already-open file or use the **attach** member function, you must close the file explicitly.  
   
-##  <a name="vclrferrorprocessingfunctionsanchor10"></a> Funzioni per l'elaborazione degli errori  
- Usare queste funzioni membro per verificare gli errori durante la scrittura in un flusso:  
+##  <a name="vclrferrorprocessingfunctionsanchor10"></a> Error Processing Functions  
+ Use these member functions to test for errors while writing to a stream:  
   
-|Funzione|Valore restituito|  
+|Function|Return value|  
 |--------------|------------------|  
-|[bad](http://msdn.microsoft.com/Library/4038d331-e9c9-48b0-bf49-c6505744469c)|Restituisce **true** se è presente un errore irreversibile.|  
-|[fail](http://msdn.microsoft.com/Library/619f1b36-1e72-4551-8b48-888ae4e370d2)|Restituisce **true** se è presente un errore irreversibile o una condizione "prevista", ad esempio un errore di conversione, o se è impossibile trovare il file. L'elaborazione può spesso riprendere dopo una chiamata a **clear** con un argomento con valore zero.|  
-|[good](http://msdn.microsoft.com/Library/77f0aa17-2ae1-48ae-8040-592d301e3972)|Restituisce **true** se non è presente alcuna condizione di errore (errore irreversibile o altro errore) e non è impostato il flag di fine file.|  
-|[eof](http://msdn.microsoft.com/Library/3087f631-1268-49cd-86cf-ff4108862329)|Restituisce **true** in caso di condizione di fine file.|  
-|[clear](http://msdn.microsoft.com/Library/dc172694-1267-45f8-8f5c-e822e16fc271)|Imposta lo stato di errore interno. Se chiamato con gli argomenti predefiniti, cancella tutti i bit di errore.|  
-|[rdstate](http://msdn.microsoft.com/Library/e235e4e2-7e95-4777-a160-3938d263dd9c)|Restituisce lo stato di errore corrente.|  
+|[bad](http://msdn.microsoft.com/Library/4038d331-e9c9-48b0-bf49-c6505744469c)|Returns **true** if there is an unrecoverable error.|  
+|[fail](http://msdn.microsoft.com/Library/619f1b36-1e72-4551-8b48-888ae4e370d2)|Returns **true** if there is an unrecoverable error or an "expected" condition, such as a conversion error, or if the file is not found. Processing can often resume after a call to **clear** with a zero argument.|  
+|[good](http://msdn.microsoft.com/Library/77f0aa17-2ae1-48ae-8040-592d301e3972)|Returns **true** if there is no error condition (unrecoverable or otherwise) and the end-of-file flag is not set.|  
+|[eof](http://msdn.microsoft.com/Library/3087f631-1268-49cd-86cf-ff4108862329)|Returns **true** on the end-of-file condition.|  
+|[clear](http://msdn.microsoft.com/Library/dc172694-1267-45f8-8f5c-e822e16fc271)|Sets the internal error state. If called with the default arguments, it clears all error bits.|  
+|[rdstate](http://msdn.microsoft.com/Library/e235e4e2-7e95-4777-a160-3938d263dd9c)|Returns the current error state.|  
   
- L'operatore **!** viene sottoposto a overload per eseguire la stessa funzione della funzione **fail**. Pertanto, l'espressione:  
+ The **!** operator is overloaded to perform the same function as the **fail** function. Thus the expression:  
   
 ```  
 if(!cout)...  
 ```  
   
- equivale a:  
+ is equivalent to:  
   
 ```  
 if(cout.fail())...  
 ```  
   
- L'operatore **void\*()** viene sottoposto a overload per essere l'opposto dell'operatore **!**; pertanto, l'espressione:  
+ The **void\*()** operator is overloaded to be the opposite of the **!** operator; thus the expression:  
   
 ```  
 if(cout)...  
 ```  
   
- è uguale a:  
+ is equal to:  
   
 ```  
 if(!cout.fail())...  
 ```  
   
- L'operatore **void\*()** non è equivalente a **good** in quanto non verifica la fine del file.  
+ The **void\*()** operator is not equivalent to **good** because it does not test for the end of file.  
   
-## <a name="see-also"></a>Vedere anche  
- [Output Streams](../standard-library/output-streams.md) (Flussi di output)
+## <a name="see-also"></a>See Also  
+ [Output Streams](../standard-library/output-streams.md)
 
 

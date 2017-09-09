@@ -1,5 +1,5 @@
 ---
-title: Classe slice | Microsoft Docs
+title: slice Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,14 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - valarray/std::slice
-- slice
 - valarray/std::slice::size
 - valarray/std::slice::start
 - valarray/std::slice::stride
 dev_langs:
 - C++
 helpviewer_keywords:
-- slice class
+- std::slice [C++]
+- std::slice [C++], size
+- std::slice [C++], start
+- std::slice [C++], stride
 ms.assetid: 00f0b03d-d657-4b81-ba53-5a9034bb2bf2
 caps.latest.revision: 23
 author: corob-msft
@@ -37,59 +39,59 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 1732814d42a3c20e9c0248d61bd93f830c073bd9
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 2fb661edd99dba7d187988ee0e3401f3fc784724
 ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="slice-class"></a>Classe slice
-Classe di utilità per valarray usata per definire subset unidimensionali di un elemento valarray padre. Se valarray viene considerato come una matrice bidimensionale con tutti gli elementi di una matrice, slice estrae un vettore di una dimensione all'esterno della matrice bidimensionale.  
+# <a name="slice-class"></a>slice Class
+A utility class to valarray that is used to define one-dimensional subsets of a parent valarray. If a valarray is regarded as a two-dimensional matrix with all elements in an array, then the slice extracts a vector in one dimension out of the two-dimensional array.  
   
-## <a name="remarks"></a>Note  
- La classe archivia i parametri che caratterizzano un oggetto di tipo [slice_array](../standard-library/slice-array-class.md). Il subset di valarray viene costruito indirettamente quando un oggetto della classe slice viene visualizzato come argomento per un oggetto della classe [valarray](../standard-library/valarray-class.md#op_at)**\<Type>**. I valori archiviati che specificano il subset selezionato da valarray padre includono:  
+## <a name="remarks"></a>Remarks  
+ The class stores the parameters that characterize an object of type [slice_array](../standard-library/slice-array-class.md) The subset of a valarray is indirectly constructed when an object of class slice appears as an argument for an object of class [valarray](../standard-library/valarray-class.md#op_at)**\<Type>**. The stored values that specify the subset selected from the parent valarray include:  
   
--   Un indice iniziale in valarray.  
+-   A starting index in the valarray.  
   
--   Una lunghezza totale o un numero di elementi in slice.  
+-   A total length, or number of elements in the slice.  
   
--   Uno stride o una distanza tra indici di elementi successivi in valarray.  
+-   A stride, or distance between subsequent indices of elements in the valarray.  
   
- Se il set definito da una slice è il subset di un valarray costante, slice è un nuovo valarray. Se il set definito da una slice è il subset di un valarray non costante, slice contiene una semantica di riferimento al valarray originale. Il meccanismo di valutazione per i valarray non costanti consente di risparmiare tempo e memoria.  
+ If the set defined by a slice is the subset of a constant valarray, then the slice is a new valarray. If the set defined by a slice is the subset of a nonconstant valarray, then the slice has reference semantics to the original valarray. The evaluation mechanism for nonconstant valarrays saves time and memory.  
   
- Le operazioni sui valarray sono consentite solo se i subset di origine e di destinazione definiti dagli slice sono distinti e tutti gli indici sono validi.  
+ Operations on valarrays are guaranteed only if the source and destination subsets defined by the slices are distinct and all indices are valid.  
   
-### <a name="constructors"></a>Costruttori  
-  
-|||  
-|-|-|  
-|[slice](#slice)|Definisce un subset di un `valarray` che è costituito da un numero di elementi che sono equidistanti e che iniziano da un elemento specificato.|  
-  
-### <a name="member-functions"></a>Funzioni membro  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[size](#size)|Trova il numero di elementi in uno slice di un `valarray`.|  
-|[start](#start)|Trova l'indice iniziale di uno slice di un `valarray`.|  
-|[stride](#stride)|Trova la distanza tra gli elementi in uno slice di un `valarray`.|  
+|[slice](#slice)|Defines a subset of a `valarray` that consists of a number of elements that are an equal distance apart and that start at a specified element.|  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<valarray>  
+### <a name="member-functions"></a>Member Functions  
   
- **Spazio dei nomi:** std  
+|||  
+|-|-|  
+|[size](#size)|Finds the number of elements in a slice of a `valarray`.|  
+|[start](#start)|Finds the starting index of a slice of a `valarray`.|  
+|[stride](#stride)|Finds the distance between elements in a slice of a `valarray`.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<valarray>  
+  
+ **Namespace:** std  
   
 ##  <a name="size"></a>  slice::size  
- Trova il numero di elementi di una sezione di un valarray.  
+ Finds the number of elements in a slice of a valarray.  
   
 ```  
 size_t size() const;
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Numero di elementi di una sezione di un valarray.  
+### <a name="return-value"></a>Return Value  
+ The number of elements in a slice of a valarray.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // slice_size.cpp  
@@ -142,7 +144,7 @@ The size of slice vaSlice is: 6.
 ```  
   
 ##  <a name="slice"></a>  slice::slice  
- Definisce un subset di un valarray costituito da un numero di elementi che sono equidistanti e che iniziano da un elemento specificato.  
+ Defines a subset of a valarray that consists of a number of elements that are an equal distance apart and that start at a specified element.  
   
 ```  
 slice();
@@ -153,23 +155,23 @@ slice(
     size_t stride);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `_StartIndex`  
- Indice valarray del primo elemento del subset.  
+ The valarray index of the first element in the subset.  
   
  `_Len`  
- Numero di elementi del subset.  
+ The number of elements in the subset.  
   
  `stride`  
- Distanza tra gli elementi del subset.  
+ The distance between elements in the subset.  
   
-### <a name="return-value"></a>Valore restituito  
- Il costruttore predefinito archivia zero per l'indice iniziale, la lunghezza totale e lo stride. Il secondo costruttore archivia `_StartIndex` per l'indice iniziale, `_Len` per la lunghezza totale e `stride` per lo stride.  
+### <a name="return-value"></a>Return Value  
+ The default constructor stores zeros for the starting index, total length, and stride. The second constructor stores `_StartIndex` for the starting index, `_Len` for the total length, and `stride` for the stride.  
   
-### <a name="remarks"></a>Note  
- Lo stride non può essere negativo.  
+### <a name="remarks"></a>Remarks  
+ The stride may be negative.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // slice_ctor.cpp  
@@ -211,16 +213,16 @@ va[slice( 1, 7, 3)] = ( 4 10 16 22 28 34 40 ).
 ```  
   
 ##  <a name="start"></a>  slice::start  
- Trova l'indice iniziale di una sezione di un valarray.  
+ Finds the starting index of a slice of a valarray.  
   
 ```  
 size_t start() const;
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Indice iniziale di una sezione di un valarray.  
+### <a name="return-value"></a>Return Value  
+ The starting index of a slice of a valarray.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // slice_start.cpp  
@@ -267,16 +269,16 @@ The start index of slice vaSlice is: 3.
 ```  
   
 ##  <a name="stride"></a>  slice::stride  
- Trova la distanza tra gli elementi di una sezione di un valarray.  
+ Finds the distance between elements in a slice of a valarray.  
   
 ```  
 size_t stride() const;
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Distanza tra gli elementi di una sezione di un valarray.  
+### <a name="return-value"></a>Return Value  
+ The distance between elements in a slice of a valarray.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // slice_stride.cpp  
@@ -322,7 +324,7 @@ The slice of valarray va is vaResult = va[slice( 4, 5, 3)] =
 The stride of slice vaSlice is: 3.  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md) (Thread safety nella libreria standard C++)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: Classe sample container | Microsoft Docs
+title: Sample Container Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -11,8 +11,7 @@ ms.topic: article
 dev_langs:
 - C++
 helpviewer_keywords:
-- container classes
-f1_keywords: []
+- container classes [C++]
 ms.assetid: 5b1451f2-c708-45da-bbf0-9e42fd687a1a
 caps.latest.revision: 10
 author: corob-msft
@@ -32,34 +31,34 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 0f45ecbb6746c8d660e699ac0f7c08ecfb5dbb68
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 39854940bf4ecccaeedd26ebd8d0b489bd06727d
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="sample-container-class"></a>Classe contenitore di esempio
+# <a name="sample-container-class"></a>Sample Container Class
 > [!NOTE]
->  Questo argomento è incluso nella documentazione di Visual C++ come esempio non funzionale dei contenitori usati nella libreria standard C++. Per altre informazioni, vedere [C++ Standard Library Containers](../standard-library/stl-containers.md) (Contenitori della libreria standard C++).  
+>  This topic is in the Visual C++ documentation as a nonfunctional example of containers used in the C++ Standard Library. For more information, see [C++ Standard Library Containers](../standard-library/stl-containers.md).  
   
- Descrive un oggetto che controlla una sequenza di elementi di lunghezza variabile, in genere di tipo **Ty**. La sequenza viene archiviata in modi diversi, a seconda del contenitore effettivo.  
+ Describes an object that controls a varying-length sequence of elements, typically of type **Ty**. The sequence is stored in different ways, depending on the actual container.  
   
- Un costruttore contenitore o una funzione membro può chiamare il costruttore **Ty**(**const Ty&**) o la funzione **Ty::operator=**(**const Ty&**). Se tale chiamata genera un'eccezione, l'oggetto contenitore ha l'obbligo di mantenere l'integrità e di generare nuovamente tutte le eccezioni che intercetta. È possibile scambiare, assegnare, cancellare o eliminare in modo sicuro un oggetto contenitore dopo che genera una di queste eccezioni. In linea generale non è tuttavia possibile prevedere in altro modo lo stato della sequenza controllata dall'oggetto contenitore.  
+ A container constructor or member function may find occasion to call the constructor **Ty**(**const Ty&**) or the function **Ty::operator=**(**const Ty&**). If such a call throws an exception, the container object is obliged to maintain its integrity, and to rethrow any exception it catches. You can safely swap, assign to, erase, or destroy a container object after it throws one of these exceptions. In general, however, you cannot otherwise predict the state of the sequence controlled by the container object.  
   
- Alcune avvertenze aggiuntive:  
+ A few additional caveats:  
   
--   Se l'espressione **~Ty** genera un'eccezione, lo stato risultante dell'oggetto contenitore non è definito.  
+-   If the expression **~Ty** throws an exception, the resulting state of the container object is undefined.  
   
--   Se il contenitore archivia un oggetto allocatore *al* e *al* genera un'eccezione diversa dal risultato di una chiamata ad *al***.allocate**, lo stato risultante dell'oggetto contenitore non è definito.  
+-   If the container stores an allocator object *al*, and *al* throws an exception other than as a result of a call to *al***.allocate**, the resulting state of the container object is undefined.  
   
--   Se il contenitore archivia un oggetto funzione *comp*per determinare come ordinare la sequenza controllata e *comp* genera un'eccezione di qualsiasi tipo, lo stato risultante dell'oggetto contenitore non è definito.  
+-   If the container stores a function object *comp*, to determine how to order the controlled sequence, and *comp* throws an exception of any kind, the resulting state of the container object is undefined.  
   
- Le classi contenitore definite dalla libreria standard C++ soddisfano diversi requisiti aggiuntivi, come descritto nei paragrafi seguenti.  
+ The container classes defined by C++ Standard Library satisfy several additional requirements, as described in the following paragraphs.  
   
- La classe modello contenitore [list](../standard-library/list-class.md) garantisce un comportamento deterministico e utile, anche in presenza delle eccezioni descritte in precedenza. Se ad esempio viene generata un'eccezione durante l'inserimento di uno o più elementi, il contenitore viene lasciato inalterato e viene nuovamente generata l'eccezione.  
+ Container template class [list](../standard-library/list-class.md) provides deterministic, and useful, behavior even in the presence of the exceptions described above. For example, if an exception is thrown during the insertion of one or more elements, the container is left unaltered and the exception is rethrown.  
   
- Per *tutte* le classi contenitore definite dalla libreria standard C++, se viene generata un'eccezione durante le chiamate alle funzioni membro seguenti:  
+ For *all* the container classes defined by C++ Standard Library, if an exception is thrown during calls to the following member functions:  
   
 ```  
 <A NAME="vclrfcontainerinsert"></A>insert // single element inserted  
@@ -67,53 +66,53 @@ ms.lasthandoff: 02/24/2017
 <A NAME="vclrfcontainerpushfront"></A>push_front  
 ```  
   
- il contenitore viene lasciato inalterato e viene nuovamente generata l'eccezione.  
+ the container is left unaltered and the exception is rethrown.  
   
- Per *tutte* le classi contenitore definite dalla libreria standard C++, non viene generata alcuna eccezione durante le chiamate alle funzioni membro seguenti:  
+ For *all* the container classes defined by C++ Standard Library, no exception is thrown during calls to the following member functions:  
   
 ```  
 <A NAME="vclrfcontainerpopback"></A>pop_back  
 <A NAME="vclrfcontainerpopfront"></A>pop_front  
 ```  
   
- La funzione membro [erase](../standard-library/container-class-erase.md) genera un'eccezione solo se un'operazione di copia (costruzione di copia o assegnazione) genera un'eccezione.  
+ The member function [erase](../standard-library/container-class-erase.md) throws an exception only if a copy operation (assignment or copy construction) throws an exception.  
   
- Non viene inoltre generata alcuna eccezione durante la copia di un iteratore restituito da una funzione membro.  
+ Moreover, no exception is thrown while copying an iterator returned by a member function.  
   
- La funzione membro [swap](../standard-library/container-class-swap.md) per *tutte* le classi contenitore definite dalla libreria standard C++ garantisce quanto segue:  
+ The member function [swap](../standard-library/container-class-swap.md) makes additional promises for *all* container classes defined by C++ Standard Library:  
   
--   La funzione membro genera un'eccezione solo se il contenitore archivia un oggetto allocatore al e `al` genera un'eccezione quando viene copiato.  
+-   The member function throws an exception only if the container stores an allocator object al, and `al` throws an exception when copied.  
   
--   I riferimenti, i puntatori e gli iteratori che designano elementi delle sequenze controllate che vengono scambiate restano validi.  
+-   References, pointers, and iterators that designate elements of the controlled sequences being swapped remain valid.  
   
- Un oggetto di una classe di contenitori definita dalla libreria standard C++ alloca e libera la memoria per la sequenza che controlla tramite un oggetto archiviato di tipo `Alloc`, che in genere è un parametro di modello. Tale oggetto allocatore deve avere la stessa interfaccia esterna di un oggetto della classe **allocator\<Ty>**. In particolare `Alloc` deve essere dello stesso tipo di **Alloc::rebind<value_type>::other**  
+ An object of a container class defined by C++ Standard Library allocates and frees storage for the sequence it controls through a stored object of type `Alloc`, which is typically a template parameter. Such an allocator object must have the same external interface as an object of class **allocator\<Ty>**. In particular, `Alloc` must be the same type as **Alloc::rebind<value_type>::other**  
   
- Per *tutte* le classi contenitore definite dalla libreria standard C++, la funzione membro **Alloc get_allocator const;** restituisce una copia dell'oggetto allocatore archiviato. Si noti che l'oggetto allocatore archiviato *non* viene copiato dopo l'assegnazione dell'oggetto contenitore. Tutti i costruttori inizializzano il valore archiviato in **allocator** su `Alloc` se il costruttore non contiene alcun parametro allocatore.  
+ For *all* container classes defined by C++ Standard Library, the member function **Alloc get_allocator const;** returns a copy of the stored allocator object. Note that the stored allocator object is *not* copied when the container object is assigned. All constructors initialize the value stored in **allocator**, to `Alloc` if the constructor contains no allocator parameter.  
   
- In base allo standard C++, per una classe di contenitori definita nella libreria standard C++ si può presupporre quanto segue:  
+ According to the C++ Standard, a container class defined by the C++ Standard Library can assume that:  
   
--   Tutti gli oggetti della classe `Alloc` risultano uguali.  
+-   All objects of class `Alloc` compare equal.  
   
--   Il tipo **Alloc::const_pointer** è uguale a **const Ty \***.  
+-   Type **Alloc::const_pointer** is the same as **const Ty \***.  
   
--   Il tipo **Alloc::const_reference** è uguale a **const Ty&**.  
+-   Type **Alloc::const_reference** is the same as **const Ty&**.  
   
--   Il tipo **Alloc::pointer** è uguale a **Ty \***.  
+-   Type **Alloc::pointer** is the same as **Ty \***.  
   
--   Il tipo **Alloc::reference** è uguale a **Ty&**.  
+-   Type **Alloc::reference** is the same as **Ty&**.  
   
- In questa implementazione, tuttavia, i contenitori non si basano su presupposti semplificati. Funzionano pertanto correttamente con gli oggetti allocatore più ambiziosi:  
+ In this implementation, however, containers do not make such simplifying assumptions. Thus, they work properly with allocator objects that are more ambitious:  
   
--   Gli oggetti della classe `Alloc` non devono risultare tutti uguali. È possibile mantenere più pool di archiviazione.  
+-   All objects of class `Alloc` does not need to compare equal. (You can maintain multiple pools of storage.)  
   
--   Il tipo **Alloc::const_pointer** non deve essere uguale a **const Ty \***. Un puntatore const può essere una classe.  
+-   Type **Alloc::const_pointer** does not need to be the same as **const Ty \***. (A const pointer can be a class.)  
   
--   Il tipo **Alloc::pointer** non deve essere uguale a **Ty \***. Un puntatore può essere una classe.  
+-   Type **Alloc::pointer** does not need to be the same as **Ty \***. (A pointer can be a class.)  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione**: \<sample container>  
+## <a name="requirements"></a>Requirements  
+ **Header**: \<sample container>  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [\<sample container>](../standard-library/sample-container.md)
 
 

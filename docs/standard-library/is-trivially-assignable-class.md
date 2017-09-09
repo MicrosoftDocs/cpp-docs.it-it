@@ -1,5 +1,5 @@
 ---
-title: Classe is_trivially_assignable | Microsoft Docs
+title: is_trivially_assignable Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,7 +10,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- is_trivially_assignable
 - type_traits/std::is_trivially_assignable
 dev_langs:
 - C++
@@ -35,38 +34,39 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 4b640307631b1407e5309adaa63b39e100839f91
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 581df77e2017881e80349494f48415868a854aeb
+ms.contentlocale: it-it
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="istriviallyassignable-class"></a>Classe is_trivially_assignable
-Verifica se un valore di tipo `From` può essere facilmente assegnato al tipo `To`.  
+# <a name="istriviallyassignable-class"></a>is_trivially_assignable Class
+Tests whether a value of `From` type can be trivially assigned to `To` type  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class To, class From>  
 struct is_trivially_assignable;
 ```  
   
-#### <a name="parameters"></a>Parametri  
- Per  
- Il tipo di oggetto che riceve l'assegnazione.  
+#### <a name="parameters"></a>Parameters  
+ To  
+ The type of the object that receives the assignment.  
   
- Da  
- Il tipo di oggetto che fornisce il valore.  
+ From  
+ The type of the object that provides the value.  
   
-## <a name="remarks"></a>Note  
- L'espressione `declval<To>() = declval<From>()` deve essere nel formato corretto e deve essere nota al compilatore per non richiedere operazioni complesse. `From` e `To` devono essere tipi completi, `void`, o matrici di valori associati sconosciuti.  
+## <a name="remarks"></a>Remarks  
+ The expression `declval<To>() = declval<From>()` must be well-formed, and must be known to the compiler to require no non-trivial operations. Both `From` and `To` must be complete types, `void`, or arrays of unknown bound.  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **Spazio dei nomi:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

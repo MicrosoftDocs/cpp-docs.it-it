@@ -1,5 +1,5 @@
 ---
-title: Classe hash | Microsoft Docs
+title: hash Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- hash
 - functional/std::hash
 - bitset/std::hash
 - memory/std::hash
@@ -23,7 +22,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- hash class
+- std::hash [C++]
+- std::hash [C++]
+- std::hash [C++]
+- std::hash [C++]
+- std::hash [C++]
+- std::hash [C++]
+- std::hash [C++]
+- std::hash [C++]
+- std::hash [C++]
 ms.assetid: e1b500c6-a5c8-4f6f-ad33-7ec52eb8e2e4
 caps.latest.revision: 21
 author: corob-msft
@@ -43,17 +50,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: d549fb7aeed268327122532e6c4390ac931740e7
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 23f654c648e834f238143648b59150eebcc73aec
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="hash-class"></a>Classe hash
-Calcola il codice hash per un valore.  
+# <a name="hash-class"></a>hash Class
+Computes hash code for a value.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty>  
@@ -62,10 +69,10 @@ struct hash {
 };  
 ```  
   
-## <a name="remarks"></a>Note  
-L'oggetto funzione definisce una funzione hash, idonea per il mapping di valori di tipo *Ty* con una distribuzione di valori di indice. Il membro `operator()` restituisce un codice hash per *val*, idoneo per l'uso con classi modello `unordered_map`, `unordered_multimap`, `unordered_set` e `unordered_multiset`. La libreria standard fornisce specializzazioni per i tipi di base: *Ty* può essere qualsiasi tipo scalare, inclusi tipi di puntatore e tipi di enumerazione. Sono inoltre disponibili specializzazioni per i tipi della libreria `string`, `wstring`, `u16string`, `u32string`, `string_view`, `wstring_view`, `u16string_view`, `u32string_view`, `bitset`, `error_code`, `error_condition`, `optional`, `shared_ptr`, `thread`, `type_index`, `unique_ptr`, `variant` e `vector<bool>`.  
+## <a name="remarks"></a>Remarks  
+The function object defines a hash function, suitable for mapping values of type *Ty* to a distribution of index values. The member `operator()` returns a hash code for *val*, suitable for use with template classes `unordered_map`, `unordered_multimap`, `unordered_set`, and `unordered_multiset`. The standard library provides specializations for basic types: *Ty* may be any scalar type, including pointer types and enumeration types. In addition, there are specializations for the library types `string`, `wstring`, `u16string`, `u32string`, `string_view`, `wstring_view`, `u16string_view`, `u32string_view`, `bitset`, `error_code`, `error_condition`, `optional`, `shared_ptr`, `thread`, `type_index`, `unique_ptr`, `variant`, and `vector<bool>`.  
   
-## <a name="example"></a>Esempio  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__hash.cpp   
@@ -89,15 +96,15 @@ int main()
 3  
 ```  
   
-## <a name="requirements"></a>Requisiti  
-**Intestazione:** \<functional>  
+## <a name="requirements"></a>Requirements  
+**Header:** \<functional>  
   
-**Spazio dei nomi:** std  
+**Namespace:** std  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [<unordered_map>](../standard-library/unordered-map.md)   
- [Classe unordered_multimap](../standard-library/unordered-multimap-class.md)   
- [Classe unordered_multiset](../standard-library/unordered-multiset-class.md)   
+ [unordered_multimap Class](../standard-library/unordered-multimap-class.md)   
+ [unordered_multiset Class](../standard-library/unordered-multiset-class.md)   
  [<unordered_set>](../standard-library/unordered-set.md)
 
 

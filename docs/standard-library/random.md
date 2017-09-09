@@ -34,10 +34,10 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 ms.translationtype: MT
-ms.sourcegitcommit: 22000a296568c01082c9aef5ceaac8f266bcad5c
-ms.openlocfilehash: a8067cb0e9b0d7fd03983d880f6018025c15d69b
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 8f3f440023a2ad7339bac7c2f4a1e792ec47f5c7
 ms.contentlocale: it-it
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;

@@ -1,5 +1,5 @@
 ---
-title: Funzioni &lt;forward_list&gt; | Microsoft Docs
+title: '&lt;forward_list&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -11,19 +11,20 @@ f1_keywords:
 ms.assetid: 0d6bc656-7049-4651-a4bd-c9a805e47756
 caps.latest.revision: 11
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: b1c8cbb3a8dbbf7f6c14400f531e7ab40a2c84f6
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: bc9a3e66e9cebfeb02f4e4b059b5c087ce93c2eb
+ms.contentlocale: it-it
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltforwardlistgt-functions"></a>Funzioni &lt;forward_list&gt;
+# <a name="ltforwardlistgt-functions"></a>&lt;forward_list&gt; functions
 ||  
 |-|  
 |[swap](#swap)|  
   
 ##  <a name="swap"></a>  swap  
- Scambia gli elementi di due elenchi di inoltro.  
+ Exchanges the elements of two forward lists.  
   
 ```
 void swap(
@@ -31,17 +32,17 @@ void swap(
     forward_list <Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
   
-|Parametro|Descrizione|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`left`|Oggetto di tipo `forward_list`.|  
-|`right`|Oggetto di tipo `forward_list`.|  
+|`left`|An object of type `forward_list`.|  
+|`right`|An object of type `forward_list`.|  
   
-### <a name="remarks"></a>Note  
- Questa funzione modello esegue `left.swap(right)`.  
+### <a name="remarks"></a>Remarks  
+ This template function executes `left.swap(right)`.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [<forward_list>](../standard-library/forward-list.md)
 
 

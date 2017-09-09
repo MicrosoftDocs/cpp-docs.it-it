@@ -1,5 +1,5 @@
 ---
-title: Classe time_base | Microsoft Docs
+title: time_base Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- time_base
 - locale/std::time_base
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 86e27eec232094c1e57120f6f811c96b4e4a4871
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 6342dfcacd83a83a39877b39328e5c2563205a25
 ms.contentlocale: it-it
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="timebase-class"></a>Classe time_base
-Questa classe viene usata come classe di base per i facet della classe modello time_get e definisce solo l'oggetto **dateorder** di tipo enumerato e diverse costanti di questo tipo.  
+# <a name="timebase-class"></a>time_base Class
+The class serves as a base class for facets of template class time_get, defining just the enumerated type **dateorder** and several constants of this type.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```
 class time_base : public locale::facet {
@@ -61,26 +60,26 @@ public:
 };
 ```  
   
-## <a name="remarks"></a>Note  
- Ogni costante caratterizza un modo diverso di ordinare i componenti di una data. Le costanti sono:  
+## <a name="remarks"></a>Remarks  
+ Each constant characterizes a different way to order the components of a date. The constants are:  
   
-- **no_order**: specifica che non si vuole usare un ordine particolare.  
+- **no_order** specifies no particular order.  
   
-- **dmy**: specifica l'ordine giorno, mese e anno, come in 2 Dicembre 1979.  
+- **dmy** specifies the order day, month, then year, as in 2 December 1979.  
   
-- **dmy**: specifica l'ordine mese, giorno e anno, come in Dicembre 2, 1979.  
+- **mdy** specifies the order month, day, then year, as in December 2, 1979.  
   
-- **ymd**: specifica l'ordine anno, mese e giorno, come in 1979/12/2.  
+- **ymd** specifies the order year, month, then day, as in 1979/12/2.  
   
-- **ydm**: specifica l'ordine anno, giorno e mese, come in 1979: 2 Dic.  
+- **ydm** specifies the order year, day, then month, as in 1979: 2 Dec.  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<locale>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
   
- **Spazio dei nomi:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Vedere anche  
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md) (Thread safety nella libreria standard C++)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

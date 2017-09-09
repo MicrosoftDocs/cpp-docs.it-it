@@ -1,5 +1,5 @@
 ---
-title: Funzioni &lt;chrono&gt; | Microsoft Docs
+title: '&lt;chrono&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -12,48 +12,48 @@ f1_keywords:
 ms.assetid: d6800e15-77a1-4df3-900e-d8b2fee190c7
 caps.latest.revision: 10
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 68c68070265c8cc7ff4d6c5c070b4e7849d50a91
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 7fcec92b9d5b3dabcb0b5c53c1b9bf581dd71cab
 ms.contentlocale: it-it
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltchronogt-functions"></a>Funzioni &lt;chrono&gt;
+# <a name="ltchronogt-functions"></a>&lt;chrono&gt; functions
 ||||  
 |-|-|-|  
 |[duration_cast](#duration_cast)|[time_point_cast](#time_point_cast)|  
   
 
-##  <a name="duration_cast"></a>duration_cast
- Esegue il cast di un oggetto `duration` in un tipo specificato.  
+##  <a name="duration_cast"></a>  duration_cast
+ Casts a `duration` object to a specified type.  
   
 ```  
 template <class To, class Rep, class Period>  
 constexpr To duration_cast(const duration<Rep, Period>& Dur);
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Oggetto `duration` di tipo `To` che rappresenta l'intervallo di tempo `Dur`, che viene troncato se deve rientrare nel tipo di destinazione.  
+### <a name="return-value"></a>Return Value  
+ A `duration` object of type `To` that represents the time interval `Dur`, which is truncated if it has to fit into the target type.  
   
-### <a name="remarks"></a>Note  
- Se `To` rappresenta una creazione di istanza di `duration`, questa funzione non fa parte della risoluzione dell'overload.  
+### <a name="remarks"></a>Remarks  
+ If `To` is an instantiation of `duration`, this function does not participate in overload resolution.  
   
-##  <a name="time_point_cast"></a>time_point_cast
- Esegue il cast di un oggetto [time_point](../standard-library/time-point-class.md) in un tipo specificato.  
+##  <a name="time_point_cast"></a>  time_point_cast
+ Casts a [time_point](../standard-library/time-point-class.md) object to a specified type.  
   
 ```  
 template <class To, class Clock, class Duration>  
 time_point<Clock, To> time_point_cast(const time_point<Clock, Duration>& Tp);
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Un oggetto `time_point` con durata di tipo `To`.  
+### <a name="return-value"></a>Return Value  
+ A `time_point` object that has a duration of type `To`.  
   
-### <a name="remarks"></a>Note  
- A meno che `To` sia una creazione di istanza di [duration](../standard-library/duration-class.md), questa funzione non fa parte della risoluzione dell'overload.  
+### <a name="remarks"></a>Remarks  
+ Unless `To` is an instantiation of [duration](../standard-library/duration-class.md), this function does not participate in overload resolution.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [\<chrono>](../standard-library/chrono.md)
 
 

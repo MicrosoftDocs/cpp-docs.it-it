@@ -1,5 +1,5 @@
 ---
-title: 'Librerie protette: libreria standard C++ | Microsoft Docs'
+title: 'Safe Libraries: C++ Standard Library | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -36,40 +36,40 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: f1698faaf860ab5b1e2e8579d2077c09c2a46114
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: cf00775b29ec46c4d356b52edc1e411f2f486aa3
 ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="safe-libraries-c-standard-library"></a>Librerie protette: libreria standard C++
-Sono stati apportati diversi miglioramenti alle librerie fornite con Visual C++, inclusa la libreria standard C++, in modo da renderle più sicure.  
+# <a name="safe-libraries-c-standard-library"></a>Safe Libraries: C++ Standard Library
+Several enhancements have been made to the libraries that ship with Visual C++, including the C++ Standard Library, to make them more secure.  
   
- Nella libreria standard C++ vari metodi sono stati identificati come potenzialmente non sicuri perché potrebbero causare un sovraccarico buffer o altri problemi relativi al codice. L'uso di questi metodi è sconsigliato, mentre sono stati creati in sostituzione metodi nuovi e più sicuri. Questi metodi terminano tutti in `_s`.  
+ Several methods in the C++ Standard Library have been identified as potentially unsafe because they could lead to a buffer overrun or other code defect. The use of these methods is discouraged, and new, more secure methods have been created to replace them. These new methods all end in `_s`.  
   
- Sono stati apportati anche vari miglioramenti per rendere gli iteratori e gli algoritmi più sicuri. Per altre informazioni, vedere [Iteratori verificati](../standard-library/checked-iterators.md), [Supporto degli iteratori di debug](../standard-library/debug-iterator-support.md) e [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).  
+ Several enhancements have also been made to make iterators and algorithms more secure. For more information, see [Checked Iterators](../standard-library/checked-iterators.md), [Debug Iterator Support](../standard-library/debug-iterator-support.md) and [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).  
   
-## <a name="remarks"></a>Note  
- La tabella seguente elenca i metodi della libreria standard C++ potenzialmente non sicuri, nonché il relativo equivalente più sicuro:  
+## <a name="remarks"></a>Remarks  
+ The following table lists the C++ Standard Library methods that are potentially unsafe, as well as their safer equivalent:  
   
-|Metodo potenzialmente non sicuro|Equivalente più sicuro|  
+|Potentially unsafe method|Safer equivalent|  
 |-------------------------------|----------------------|  
 |[copy](../standard-library/basic-string-class.md#copy)|[basic_string::_Copy_s](../standard-library/basic-string-class.md#copy_s)|  
 |[copy](../standard-library/char-traits-struct.md#copy)|[char_traits::_Copy_s](../standard-library/char-traits-struct.md#copy_s)|  
   
- Se si chiama uno dei metodi potenzialmente non sicuri elencati qui sopra o se si usano gli iteratori in modo non corretto, il compilatore genererà l'[Avviso del compilatore (livello 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Per informazioni su come disabilitare questi avvisi, vedere [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md).  
+ If you call any one of the potentially unsafe methods above, or if you use iterators incorrectly, the compiler will generate [Compiler Warning (level 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). For information on how to disable these warnings, see [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md).  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In This Section  
  [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)  
   
  [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md)  
   
  [Checked Iterators](../standard-library/checked-iterators.md)  
   
- [Supporto degli iteratori di debug](../standard-library/debug-iterator-support.md)  
+ [Debug Iterator Support](../standard-library/debug-iterator-support.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Panoramica sulla libreria standard C++](../standard-library/cpp-standard-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [C++ Standard Library Overview](../standard-library/cpp-standard-library-overview.md)
 
 

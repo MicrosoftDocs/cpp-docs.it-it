@@ -1,5 +1,5 @@
 ---
-title: Funzioni &lt;valarray&gt; | Microsoft Docs
+title: '&lt;valarray&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -27,14 +27,32 @@ f1_keywords:
 ms.assetid: 109778fc-440e-4239-b23e-bafda2b165c2
 caps.latest.revision: 12
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: c5d52ee25c8afaa531413859a57f97e014d568e8
+helpviewer_keywords:
+- std::abs [C++]
+- std::acos [C++]
+- std::asin [C++]
+- std::atan [C++]
+- std::atan2
+- std::cos [C++]
+- std::cosh [C++]
+- std::exp [C++]
+- std::log [C++]
+- std::log10
+- std::pow [C++]
+- std::sin [C++]
+- std::sinh [C++]
+- std::sqrt [C++]
+- std::swap [C++]
+- std::tan [C++]
+- std::tanh [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 35a42bfd4584e4451fecd6700574301adcabf20d
 ms.contentlocale: it-it
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltvalarraygt-functions"></a>Funzioni &lt;valarray&gt;
+# <a name="ltvalarraygt-functions"></a>&lt;valarray&gt; functions
 ||||  
 |-|-|-|  
 |[abs](#abs)|[acos](#acos)|[asin](#asin)|  
@@ -45,21 +63,21 @@ ms.lasthandoff: 04/19/2017
 |[tan](#tan)|[tanh](#tanh)|  
   
 ##  <a name="abs"></a>  abs  
- Opera sugli elementi di un oggetto valarray di input, restituendo un oggetto valarray i cui elementi sono uguali al valore assoluto degli elementi dell'oggetto valarray di input.  
+ Operates on the elements of an input valarray, returning a valarray whose elements are equal to the absolute value of the elements of the input valarray.  
   
 ```  
 template <class Type>  
 valarray<Type> abs(const valarray<Type>& left);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `left`  
- Oggetto valarray di input sui cui elementi deve agire la funzione membro.  
+ The input valarray whose elements are to be operated on by the member function.  
   
-### <a name="return-value"></a>Valore restituito  
- Oggetto valarray i cui elementi sono uguali al valore assoluto degli elementi dell'oggetto valarray di input.  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are equal to the absolute value of the elements of the input valarray.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_abs.cpp  
@@ -97,26 +115,26 @@ The absolute value of the initial valarray is: 0 1 2 3 4 5 6 7 8 .
 ```  
   
 ##  <a name="acos"></a>  acos  
- Opera sugli elementi di un oggetto valarray di input, restituendo un oggetto valarray i cui elementi sono uguali all'arcocoseno degli elementi dell'oggetto valarray di input.  
+ Operates on the elements of an input valarray, returning a valarray whose elements are equal to the arccosine of the elements of the input valarray.  
   
 ```  
 template <class Type>  
 valarray<Type> acos(const valarray<Type>& left);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `left`  
- Oggetto valarray di input sui cui elementi deve agire la funzione membro.  
+ The input valarray whose elements are to be operated on by the member function.  
   
-### <a name="return-value"></a>Valore restituito  
- Oggetto valarray i cui elementi sono uguali all'arcocoseno degli elementi dell'oggetto valarray di input.  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are equal to the arccosine of the elements of the input valarray.  
   
-### <a name="remarks"></a>Note  
- Le unità degli elementi restituiti sono espresse in radianti.  
+### <a name="remarks"></a>Remarks  
+ The units of the returned elements are in radians.  
   
- Il valore restituito è un valore di entità compreso tra 0 e +pi greco coerente con l'input del valore del coseno.  
+ The return value is a principal value between 0 and +pi that is consistent with the cosine value input.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_acos.cpp  
@@ -166,26 +184,26 @@ The arccosine of the initial valarray is:
 ```  
   
 ##  <a name="asin"></a>  asin  
- Opera sugli elementi di un oggetto valarray di input, restituendo un oggetto valarray i cui elementi sono uguali all'arcoseno degli elementi dell'oggetto valarray di input.  
+ Operates on the elements of an input valarray, returning a valarray whose elements are equal to the arcsine of the elements of the input valarray.  
   
 ```  
 template <class Type>  
 valarray<Type> asin(const valarray<Type>& left);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `left`  
- Oggetto valarray di input sui cui elementi deve agire la funzione membro.  
+ The input valarray whose elements are to be operated on by the member function.  
   
-### <a name="return-value"></a>Valore restituito  
- Oggetto valarray i cui elementi sono uguali all'arcoseno degli elementi dell'oggetto valarray di input.  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are equal to the arcsine of the elements of the input valarray.  
   
-### <a name="remarks"></a>Note  
- Le unità degli elementi restituiti sono espresse in radianti.  
+### <a name="remarks"></a>Remarks  
+ The units of the returned elements are in radians.  
   
- Il valore restituito è un valore compreso tra + pi/2 e - pi/2 è coerente con il seno valore di input.  
+ The return value is a principal value between +pi/2 and -pi/2 that is consistent with the sine value input.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_asin.cpp  
@@ -235,26 +253,26 @@ The arcsine of the initial valarray is:
 ```  
   
 ##  <a name="atan"></a>  atan  
- Opera sugli elementi di un oggetto valarray di input, restituendo un oggetto valarray i cui elementi sono uguali al valore di entità dell'arcotangente degli elementi dell'oggetto valarray di input.  
+ Operates on the elements of an input valarray, returning a valarray whose elements are equal to the principal value of the arctangent of the elements of the input valarray.  
   
 ```  
 template <class Type>  
 valarray<Type> atan(const valarray<Type>& left);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `left`  
- Oggetto valarray di input sui cui elementi deve agire la funzione membro.  
+ The input valarray whose elements are to be operated on by the member function.  
   
-### <a name="return-value"></a>Valore restituito  
- Oggetto valarray i cui elementi sono uguali all'arcotangente degli elementi dell'oggetto valarray di input.  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are equal to the arctangent of the elements of the input valarray.  
   
-### <a name="remarks"></a>Note  
- Le unità degli elementi restituiti sono espresse in radianti.  
+### <a name="remarks"></a>Remarks  
+ The units of the returned elements are in radians.  
   
- Il valore restituito è un valore compreso tra + pi/2 e - pi/2 è coerente con la tangente valore di input.  
+ The return value is a principal value between +pi/2 and -pi/2 that is consistent with the tangent value input.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_atan.cpp  
@@ -307,7 +325,7 @@ The arcsine of the initial valarray is:
 ```  
   
 ##  <a name="atan2"></a>  atan2  
- Restituisce un oggetto valarray i cui elementi sono uguali all'arcotangente dei componenti cartesiani specificati da una combinazione di costanti ed elementi di oggetti valarray.  
+ Returns a valarray whose elements are equal to the arctangent of the Cartesian components specified by a combination of constants and elements of valarrays.  
   
 ```  
 template <class Type>  
@@ -320,30 +338,30 @@ template <class Type>
 valarray<Type> atan2(const Type& left, const valarray<Type>& right);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `left`  
- Tipo di dati numerici costanti oppure oggetto valarray di input i cui elementi forniscono i valori per la coordinata Y dell'argomento arcotangente.  
+ The constant numerical data type or input valarray whose elements provide the values for the y-coordinate of the arctangent argument.  
   
  `right`  
- Tipo di dati numerici costanti oppure oggetto valarray di input i cui elementi forniscono i valori per la coordinata X dell'argomento arcotangente.  
+ The constant numerical data type or input valarray whose elements provide the values for the x-coordinate of the arctangent argument.  
   
-### <a name="return-value"></a>Valore restituito  
- Oggetto valarray i cui elementi `I` sono uguali all'arcotangente di:  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements `I` are equal to the arctangent of:  
   
-- `left` [ *I* ] / *_Righ*t [ *I* ] per la prima funzione modello.  
+- `left` [ *I* ] / *_Righ*t [ *I* ] for the first template function.  
   
-- `left` [ *I* ] / `right` per la seconda funzione modello.  
+- `left` [ *I* ] / `right` for the second template function.  
   
-- `left` / `right` [ *I* ] per la terza funzione modello.  
+- `left` / `right` [ *I* ] for the third template function.  
   
-### <a name="remarks"></a>Note  
- Le unità degli elementi restituiti sono espresse in radianti.  
+### <a name="remarks"></a>Remarks  
+ The units of the returned elements are in radians.  
   
- Questa funzione consente di mantenere informazioni i segni dei componenti nell'argomento, che viene persa durante la funzione di controllo di tangente standard e questo il quadrante conoscendo di valore restituito per assegnare un angolo univoco tra + pi greco e - pi greco.  
+ This function preserves information about the signs of the components in the argument that is lost by the standard tangent function, and this knowledge of the quadrant enables the return value to be assigned a unique angle between +pi and -pi.  
   
- Se `left` e `right` hanno un numero di elementi diverso, il risultato è indefinito.  
+ If `left` and `right` have a different number of elements, the result is undefined.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_atan2.cpp  
@@ -397,21 +415,21 @@ The atan2 ( y / x ) of the initial valarrays is:
 ```  
   
 ##  <a name="cos"></a>  cos  
- Opera sugli elementi di un oggetto valarray di input, restituendo un oggetto valarray i cui elementi sono uguali al coseno degli elementi dell'oggetto valarray di input.  
+ Operates on the elements of an input valarray, returning a valarray whose elements are equal to the cosine of the elements of the input valarray.  
   
 ```  
 template <class Type>  
 valarray<Type> cos(const valarray<Type>& left);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `left`  
- Oggetto valarray di input sui cui elementi deve agire la funzione membro.  
+ The input valarray whose elements are to be operated on by the member function.  
   
-### <a name="return-value"></a>Valore restituito  
- Oggetto valarray i cui elementi sono uguali al valore assoluto degli elementi dell'oggetto valarray di input.  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are equal to the absolute value of the elements of the input valarray.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_cos.cpp  
@@ -471,26 +489,26 @@ The cosine of the initial valarray is:
 ```  
   
 ##  <a name="cosh"></a>  cosh  
- Opera sugli elementi di un oggetto valarray di input, restituendo un oggetto valarray i cui elementi sono uguali al coseno iperbolico degli elementi dell'oggetto valarray di input.  
+ Operates on the elements of an input valarray, returning a valarray whose elements are equal to the hyperbolic cosine of the elements of the input valarray.  
   
 ```  
 template <class Type>  
 valarray<Type> cosh(const valarray<Type>& left);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `left`  
- Oggetto valarray di input sui cui elementi deve agire la funzione membro.  
+ The input valarray whose elements are to be operated on by the member function.  
   
-### <a name="return-value"></a>Valore restituito  
- Oggetto valarray i cui elementi sono uguali al coseno iperbolico degli elementi dell'oggetto valarray di input.  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are equal to the hyperbolic cosine of the elements of the input valarray.  
   
-### <a name="remarks"></a>Note  
- Identità che definiscono il coseno iperbolico in termini di funzione esponenziale:  
+### <a name="remarks"></a>Remarks  
+ Identities defining the hyperbolic cosine in terms of exponential function:  
   
  cosh ( *z* ) = ( exp ( *z* ) + exp ( - *z* ) ) / 2  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_cosh.cpp  
@@ -550,21 +568,21 @@ The hyperbolic cosine of the initial valarray is:
 ```  
   
 ##  <a name="exp"></a>  exp  
- Opera sugli elementi di un oggetto valarray di input, restituendo un oggetto valarray i cui elementi sono uguali al valore esponenziale naturale degli elementi dell'oggetto valarray di input.  
+ Operates on the elements of an input valarray, returning a valarray whose elements are equal to the natural exponential of the elements of the input valarray.  
   
 ```  
 template <class Type>  
 valarray<Type> exp(const valarray<Type>& left);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `left`  
- Oggetto valarray di input sui cui elementi deve agire la funzione membro.  
+ The input valarray whose elements are to be operated on by the member function.  
   
-### <a name="return-value"></a>Valore restituito  
- Oggetto valarray i cui elementi sono uguali all'esponenziale naturale degli elementi dell'oggetto valarray di input.  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are equal to the natural exponential of the elements of the input valarray.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_exp.cpp  
@@ -610,21 +628,21 @@ The natural exponential of the initial valarray is:
 ```  
   
 ##  <a name="log"></a>  log  
- Opera sugli elementi di un oggetto valarray di input, restituendo un oggetto valarray i cui elementi sono uguali al logaritmo naturale degli elementi dell'oggetto valarray di input.  
+ Operates on the elements of an input valarray, returning a valarray whose elements are equal to the natural logarithm of the elements of the input valarray.  
   
 ```  
 template <class Type>  
 valarray<Type> log(const valarray<Type>& left);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `left`  
- Oggetto valarray di input sui cui elementi deve agire la funzione membro.  
+ The input valarray whose elements are to be operated on by the member function.  
   
-### <a name="return-value"></a>Valore restituito  
- Oggetto valarray i cui elementi sono uguali al valore assoluto degli elementi dell'oggetto valarray di input.  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are equal to the absolute value of the elements of the input valarray.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_log.cpp  
@@ -670,21 +688,21 @@ The natural logarithm of the initial valarray is:
 ```  
   
 ##  <a name="log10"></a>  log10  
- Opera sugli elementi di un oggetto valarray di input, restituendo un oggetto valarray i cui elementi sono uguali al logaritmo in base 10 o comune degli elementi dell'oggetto valarray di input.  
+ Operates on the elements of an input valarray, returning a valarray whose elements are equal to the base 10 or common logarithm of the elements of the input valarray.  
   
 ```  
 template <class Type>  
 valarray<Type> log10(const valarray<Type>& left);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `left`  
- Oggetto valarray di input sui cui elementi deve agire la funzione membro.  
+ The input valarray whose elements are to be operated on by the member function.  
   
-### <a name="return-value"></a>Valore restituito  
- Oggetto valarray i cui elementi sono uguali al logaritmo comune degli elementi dell'oggetto valarray di input.  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are equal to the common logarithm of the elements of the input valarray.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_log10.cpp  
@@ -732,7 +750,7 @@ The common logarithm of the initial valarray is:
 ```  
   
 ##  <a name="pow"></a>  pow  
- Opera sugli elementi di oggetti valarray di input e costanti, restituendo un oggetto valarray i cui elementi sono uguali a una base specificata dagli elementi di un oggetto valarray di input o di una costante elevata a una potenza specificata dagli elementi di un oggetto valarray di input o di una costante.  
+ Operates on the elements of input valarrays and constants, returning a valarray whose elements are equal to a base specified either by the elements of an input valarray or a constant raised to an exponent specified either by the elements of an input valarray or a constant.  
   
 ```  
 template <class Type>  
@@ -754,26 +772,26 @@ pow(
     const valarray<Type>& right);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `left`  
- Oggetto valarray di input i cui elementi forniscono la base per ogni elemento da elevare a potenza.  
+ The input valarray whose elements supply the base for each element to be exponentiated.  
   
  `right`  
- Oggetto valarray di input i cui elementi forniscono la potenza per ogni elemento da elevare a potenza.  
+ The input valarray whose elements supply the power for each element to be exponentiated.  
   
-### <a name="return-value"></a>Valore restituito  
- Oggetto valarray i cui elementi `I` sono uguali a:  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements `I` are equal to:  
   
-- `left` [ *I* ] elevato alla potenza `right` [ *I* ] per la prima funzione modello.  
+- `left` [ *I* ] raised to the power `right` [ *I* ] for the first template function.  
   
-- `left` [ *I* ] elevato alla potenza `right` per la seconda funzione modello.  
+- `left` [ *I* ] raised to the power `right` for the second template function.  
   
-- `left` elevato alla potenza `right` [ *I* ] per la terza funzione modello.  
+- `left` raised to the power `right` [ *I* ] for the third template function.  
   
-### <a name="remarks"></a>Note  
- Se `left` e `right` hanno un numero di elementi diverso, il risultato è indefinito.  
+### <a name="remarks"></a>Remarks  
+ If `left` and `right` have a different number of elements, the result is undefined.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 #include <valarray>  
@@ -825,21 +843,21 @@ n = 5   gives 1024
 ```  
   
 ##  <a name="sin"></a>  sin  
- Opera sugli elementi di un oggetto valarray di input, restituendo un oggetto valarray i cui elementi sono uguali al seno degli elementi dell'oggetto valarray di input.  
+ Operates on the elements of an input valarray, returning a valarray whose elements are equal to the sine of the elements of the input valarray.  
   
 ```  
 template <class Type>  
 valarray<Type> sin(const valarray<Type>& left);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `left`  
- Oggetto valarray di input sui cui elementi deve agire la funzione membro.  
+ The input valarray whose elements are to be operated on by the member function.  
   
-### <a name="return-value"></a>Valore restituito  
- Oggetto valarray i cui elementi sono uguali al seno degli elementi dell'oggetto valarray di input.  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are equal to the sine of the elements of the input valarray.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_sin.cpp  
@@ -899,26 +917,26 @@ The sine of the initial valarray is:
 ```  
   
 ##  <a name="sinh"></a>  sinh  
- Opera sugli elementi di un oggetto valarray di input, restituendo un oggetto valarray i cui elementi sono uguali al seno iperbolico degli elementi dell'oggetto valarray di input.  
+ Operates on the elements of an input valarray, returning a valarray whose elements are equal to the hyperbolic sine of the elements of the input valarray.  
   
 ```  
 template <class Type>  
 valarray<Type> sinh(const valarray<Type>& left);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `left`  
- Oggetto valarray di input sui cui elementi deve agire la funzione membro.  
+ The input valarray whose elements are to be operated on by the member function.  
   
-### <a name="return-value"></a>Valore restituito  
- Oggetto valarray i cui elementi sono uguali al seno iperbolico degli elementi dell'oggetto valarray di input.  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are equal to the hyperbolic sine of the elements of the input valarray.  
   
-### <a name="remarks"></a>Note  
- Identità che definiscono il seno iperbolico in termini di funzione esponenziale:  
+### <a name="remarks"></a>Remarks  
+ Identities defining the hyperbolic sine in terms of exponential function:  
   
  sinh ( *z* ) = ( exp ( *z* ) - exp ( - *z* ) ) / 2  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_sinh.cpp  
@@ -978,21 +996,21 @@ The hyperbolic sine of the initial valarray is:
 ```  
   
 ##  <a name="sqrt"></a>  sqrt  
- Opera sugli elementi di un oggetto valarray di input, restituendo un oggetto valarray i cui elementi sono uguali alla radice quadrata degli elementi dell'oggetto valarray di input.  
+ Operates on the elements of an input valarray, returning a valarray whose elements are equal to the square root of the elements of the input valarray.  
   
 ```  
 template <class Type>  
 valarray<Type> sqrt(const valarray<Type>& left);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `left`  
- Oggetto valarray di input sui cui elementi deve agire la funzione membro.  
+ The input valarray whose elements are to be operated on by the member function.  
   
-### <a name="return-value"></a>Valore restituito  
- Oggetto valarray i cui elementi sono uguali alla radice quadrata degli elementi dell'oggetto valarray di input.  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are equal to the square root of the elements of the input valarray.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_sqrt.cpp  
@@ -1029,7 +1047,7 @@ The square root of the initial valarray is: ( 0 1 2 3 4 ).
 ```  
   
 ##  <a name="swap"></a>  swap  
- Scambia gli elementi di due oggetti valarray.  
+ Exchanges the elements of two valarrays.  
   
 ```  
 template <class Type>  
@@ -1038,32 +1056,32 @@ void swap(
     valarray<Type>& right);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
   
-|Parametro|Descrizione|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`left`|Oggetto di tipo `valarray`.|  
-|`right`|Oggetto di tipo `valarray`.|  
+|`left`|An object of type `valarray`.|  
+|`right`|An object of type `valarray`.|  
   
-### <a name="remarks"></a>Note  
- La funzione modello esegue ` left.swap( right)`.  
+### <a name="remarks"></a>Remarks  
+ The template function executes ` left.swap( right)`.  
   
 ##  <a name="tan"></a>  tan  
- Opera sugli elementi di un oggetto valarray di input, restituendo un oggetto valarray i cui elementi sono uguali alla tangente degli elementi dell'oggetto valarray di input.  
+ Operates on the elements of an input valarray, returning a valarray whose elements are equal to the tangent of the elements of the input valarray.  
   
 ```  
 template <class Type>  
 valarray<Type> tan(const valarray<Type>& left);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `left`  
- Oggetto valarray di input sui cui elementi deve agire la funzione membro.  
+ The input valarray whose elements are to be operated on by the member function.  
   
-### <a name="return-value"></a>Valore restituito  
- Oggetto valarray i cui elementi sono uguali alla tangente degli elementi dell'oggetto valarray di input.  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are equal to the tangent of the elements of the input valarray.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_tan.cpp  
@@ -1123,26 +1141,26 @@ The tangent of the initial valarray is:
 ```  
   
 ##  <a name="tanh"></a>  tanh  
- Opera sugli elementi di un oggetto valarray di input, restituendo un oggetto valarray i cui elementi sono uguali alla tangente iperbolica degli elementi dell'oggetto valarray di input.  
+ Operates on the elements of an input valarray, returning a valarray whose elements are equal to the hyperbolic tangent of the elements of the input valarray.  
   
 ```  
 template <class Type>  
 valarray<Type> tanh(const valarray<Type>& left);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `left`  
- Oggetto valarray di input sui cui elementi deve agire la funzione membro.  
+ The input valarray whose elements are to be operated on by the member function.  
   
-### <a name="return-value"></a>Valore restituito  
- Oggetto valarray i cui elementi sono uguali al coseno iperbolico degli elementi dell'oggetto valarray di input.  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are equal to the hyperbolic cosine of the elements of the input valarray.  
   
-### <a name="remarks"></a>Note  
- Identità che definiscono la tangente iperbolica in termini di funzione esponenziale:  
+### <a name="remarks"></a>Remarks  
+ Identities defining the hyperbolic tangent in terms of the exponential function:  
   
  tanh ( *z* ) = sinh ( *z* ) / cosh ( *z* ) = ( exp ( *z* ) - exp ( - *z* ) ) / ( exp ( *z* ) + exp ( - *z* ) )  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_tanh.cpp  
@@ -1201,7 +1219,7 @@ The hyperbolic tangent of the initial valarray is:
 0.996272  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [\<valarray>](../standard-library/valarray.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: Struct pointer_traits | Microsoft Docs
+title: pointer_traits Struct | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -41,25 +41,25 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: dbb9a0a8ecd59b76a84ce05b3c239de42be647cb
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 6dd1d04071429da08fca79bc900757f2adc74c98
 ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="pointertraits-struct"></a>Struct pointer_traits
-Fornisce le informazioni necessarie per un oggetto della classe modello `allocator_traits` per descrivere un allocatore con il tipo di puntatore `Ptr`.  
+# <a name="pointertraits-struct"></a>pointer_traits Struct
+Supplies information that is needed by an object of template class `allocator_traits` to describe an allocator with pointer type `Ptr`.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 template <class Ptr>
 struct pointer_traits;
 ```  
   
-## <a name="remarks"></a>Note  
- Ptr può essere un puntatore non elaborato di tipo `Ty *` o una classe con le proprietà seguenti.  
+## <a name="remarks"></a>Remarks  
+ Ptr can be a raw pointer of type `Ty *` or a class with the following properties.  
 ```  
 struct Ptr
    { // describes a pointer type usable by allocators
@@ -72,40 +72,40 @@ struct Ptr
    // optional
    };  
 ```
-### <a name="typedefs"></a>Typedef  
+### <a name="typedefs"></a>Typedefs  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|`typedef T2 difference_type`|Il tipo `T2` è `Ptr::difference_type` se quel tipo esiste; in caso contrario `ptrdiff_t`. Se `Ptr` è un puntatore non elaborato, il tipo è `ptrdiff_t`.|  
-|`typedef T1 element_type`|Il tipo `T1` è `Ptr::element_type` se quel tipo esiste; in caso contrario `Ty`. Se `Ptr` è un puntatore non elaborato, il tipo è `Ty`.|  
-|`typedef Ptr pointer`|Il tipo è `Ptr`.|  
+|`typedef T2 difference_type`|The type `T2` is `Ptr::difference_type` if that type exists, otherwise `ptrdiff_t`. If `Ptr` is a raw pointer, the type is `ptrdiff_t`.|  
+|`typedef T1 element_type`|The type `T1` is `Ptr::element_type` if that type exists, otherwise `Ty`. If `Ptr` is a raw pointer, the type is `Ty`.|  
+|`typedef Ptr pointer`|The type is `Ptr`.|  
   
-### <a name="structs"></a>Strutture  
+### <a name="structs"></a>Structs  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|`pointer_traits::rebind`|Tenta di convertire il tipo di puntatore sottostante in un tipo specificato.|  
+|`pointer_traits::rebind`|Attempts to convert the underlying pointer type to a specified type.|  
   
-### <a name="methods"></a>Metodi  
+### <a name="methods"></a>Methods  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[pointer_to](#pointer_to)|Converte un riferimento arbitrario a un oggetto della classe `Ptr`.|  
+|[pointer_to](#pointer_to)|Converts an arbitrary reference to an object of class `Ptr`.|  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<memory>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<memory>  
   
- **Spazio dei nomi:** std  
+ **Namespace:** std  
   
 ##  <a name="pointer_to"></a>  pointer_to  
- Metodo statico che restituisce `Ptr::pointer_to(obj)`, se tale funzione esiste. In caso contrario, non è possibile convertire un riferimento arbitrario a un oggetto della classe `Ptr`. Se `Ptr` è un puntatore non elaborato, il metodo restituisce `addressof(obj)`.  
+ Static method that returns `Ptr::pointer_to(obj)`, if that function exists. Otherwise, it is not possible to convert an arbitrary reference to an object of class `Ptr`. If `Ptr` is a raw pointer, this method returns `addressof(obj)`.  
   
 ```cpp  
 static pointer pointer_to(element_type& obj);
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [\<memory>](../standard-library/memory.md)   
- [Classe allocator_traits](../standard-library/allocator-traits-class.md)
+ [allocator_traits Class](../standard-library/allocator-traits-class.md)
 
 

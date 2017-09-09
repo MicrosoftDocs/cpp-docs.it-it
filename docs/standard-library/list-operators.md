@@ -1,30 +1,45 @@
 ---
-title: Operatori &lt;list&gt; | Microsoft Docs
+title: '&lt;list&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- list/std::operator!=
+- list/std::operator&gt;
+- list/std::operator&gt;=
+- list/std::operator&lt;
+- list/std::operator&lt;=
+- list/std::operator==
+dev_langs:
+- C++
 ms.assetid: 8103d8f2-c30f-49ad-ac50-b3ba6a907ebe
 caps.latest.revision: 7
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 5713a02d534f8e4e2245ba3d181d78c529adbe79
+helpviewer_keywords:
+- std::operator!= (list)
+- std::operator&gt; (list)
+- std::operator&gt;= (list)
+- std::operator&lt; (list)
+- std::operator&lt;= (list)
+- std::operator== (list)
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 575dcc65565bf004da19238b743f1802e023668c
 ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltlistgt-operators"></a>Operatori &lt;list&gt;
+# <a name="ltlistgt-operators"></a>&lt;list&gt; operators
 ||||  
 |-|-|-|  
 |[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
 |[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|  
   
 ##  <a name="op_neq"></a>  operator!=  
- Verifica se l'oggetto elenco a sinistra dell'operatore non è uguale all'oggetto elenco a destra.  
+ Tests if the list object on the left side of the operator is not equal to the list object on the right side.  
   
 ```
 bool operator!=(
@@ -32,20 +47,20 @@ bool operator!=(
     const list<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `left`  
- Oggetto di tipo **list**.  
+ An object of type **list**.  
   
  `right`  
- Oggetto di tipo **list**.  
+ An object of type **list**.  
   
-### <a name="return-value"></a>Valore restituito  
- **true** se gli elenchi non sono uguali; in caso contrario, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the lists are not equal; **false** if the lists are equal.  
   
-### <a name="remarks"></a>Note  
- Il confronto tra gli oggetti elenco si basa su un confronto a coppie dei relativi elementi. Due elenchi sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.  
+### <a name="remarks"></a>Remarks  
+ The comparison between list objects is based on a pairwise comparison of their elements. Two lists are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_op_ne.cpp  
@@ -71,7 +86,7 @@ Lists not equal.
 ```  
   
 ##  <a name="op_lt"></a>  operator&lt;  
- Verifica se l'oggetto elenco a sinistra dell'operatore è minore dell'oggetto elenco a destra.  
+ Tests if the list object on the left side of the operator is less than the list object on the right side.  
   
 ```
 bool operator<(
@@ -79,20 +94,20 @@ bool operator<(
     const list<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `left`  
- Oggetto di tipo **list**.  
+ An object of type **list**.  
   
  `right`  
- Oggetto di tipo **list**.  
+ An object of type **list**.  
   
-### <a name="return-value"></a>Valore restituito  
- **true** se l'elenco a sinistra dell'operatore è minore ma non uguale all'elenco a destra; in caso contrario, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the list on the left side of the operator is less than but not equal to the list on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>Note  
- Il confronto tra gli oggetti elenco si basa su un confronto a coppie dei relativi elementi. La relazione minore di tra due oggetti si basa su un confronto della prima coppia di elementi non uguali.  
+### <a name="remarks"></a>Remarks  
+ The comparison between list objects is based on a pairwise comparison of their elements. The less-than relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_op_lt.cpp  
@@ -122,7 +137,7 @@ List c1 is less than list c2.
 ```  
   
 ##  <a name="op_lt_eq"></a>  operator&lt;=  
- Verifica se l'oggetto elenco a sinistra dell'operatore è minore o uguale all'oggetto elenco a destra.  
+ Tests if the list object on the left side of the operator is less than or equal to the list object on the right side.  
   
 ```
 bool operator<=(
@@ -130,20 +145,20 @@ bool operator<=(
     const list<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `left`  
- Oggetto di tipo **list**.  
+ An object of type **list**.  
   
  `right`  
- Oggetto di tipo **list**.  
+ An object of type **list**.  
   
-### <a name="return-value"></a>Valore restituito  
- **true** se l'elenco a sinistra dell'operatore è minore o uguale all'elenco a destra; in caso contrario, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the list on the left side of the operator is less than or equal to the list on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>Note  
- Il confronto tra gli oggetti elenco si basa su un confronto a coppie dei relativi elementi. La relazione minore di o uguale a tra due oggetti si basa su un confronto della prima coppia di elementi non uguali.  
+### <a name="remarks"></a>Remarks  
+ The comparison between list objects is based on a pairwise comparison of their elements. The less than or equal to relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_op_le.cpp  
@@ -173,7 +188,7 @@ List c1 is less than or equal to list c2.
 ```  
   
 ##  <a name="op_eq_eq"></a>  operator==  
- Verifica se l'oggetto elenco a sinistra dell'operatore è uguale all'oggetto elenco a destra.  
+ Tests if the list object on the left side of the operator is equal to the list object on the right side.  
   
 ```
 bool operator==(
@@ -181,20 +196,20 @@ bool operator==(
     const list<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `left`  
- Oggetto di tipo **list**.  
+ An object of type **list**.  
   
  `right`  
- Oggetto di tipo **list**.  
+ An object of type **list**.  
   
-### <a name="return-value"></a>Valore restituito  
- **true** se l'elenco a sinistra dell'operatore è uguale all'elenco a destra; in caso contrario, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the list on the left side of the operator is equal to the list on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>Note  
- Il confronto tra gli oggetti elenco si basa su un confronto a coppie dei relativi elementi. Due elenchi sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.  
+### <a name="remarks"></a>Remarks  
+ The comparison between list objects is based on a pairwise comparison of their elements. Two lists are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_op_eq.cpp  
@@ -220,7 +235,7 @@ The lists are equal.
 ```  
   
 ##  <a name="op_gt"></a>  operator&gt;  
- Verifica se l'oggetto elenco a sinistra dell'operatore è maggiore dell'oggetto elenco a destra.  
+ Tests if the list object on the left side of the operator is greater than the list object on the right side.  
   
 ```
 bool operator>(
@@ -228,20 +243,20 @@ bool operator>(
     const list<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `left`  
- Oggetto di tipo **list**.  
+ An object of type **list**.  
   
  `right`  
- Oggetto di tipo **list**.  
+ An object of type **list**.  
   
-### <a name="return-value"></a>Valore restituito  
- **true** se l'elenco a sinistra dell'operatore è maggiore dell'elenco a destra; in caso contrario, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the list on the left side of the operator is greater than the list on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>Note  
- Il confronto tra gli oggetti elenco si basa su un confronto a coppie dei relativi elementi. La relazione maggiore di tra due oggetti si basa su un confronto della prima coppia di elementi non uguali.  
+### <a name="remarks"></a>Remarks  
+ The comparison between list objects is based on a pairwise comparison of their elements. The greater-than relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_op_gt.cpp  
@@ -271,7 +286,7 @@ List c1 is greater than list c2.
 ```  
   
 ##  <a name="op_gt_eq"></a>  operator&gt;=  
- Verifica se l'oggetto elenco a sinistra dell'operatore è maggiore o uguale all'oggetto elenco a destra.  
+ Tests if the list object on the left side of the operator is greater than or equal to the list object on the right side.  
   
 ```
 bool operator>=(
@@ -279,20 +294,20 @@ bool operator>=(
     const list<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `left`  
- Oggetto di tipo **list**.  
+ An object of type **list**.  
   
  `right`  
- Oggetto di tipo **list**.  
+ An object of type **list**.  
   
-### <a name="return-value"></a>Valore restituito  
- **true** se l'elenco a sinistra dell'operatore è maggiore o uguale all'elenco a destra; in caso contrario, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the list on the left side of the operator is greater than or equal to the list on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>Note  
- Il confronto tra gli oggetti elenco si basa su un confronto a coppie dei relativi elementi. La relazione maggiore di o uguale a tra due oggetti si basa su un confronto della prima coppia di elementi non uguali.  
+### <a name="remarks"></a>Remarks  
+ The comparison between list objects is based on a pairwise comparison of their elements. The greater than or equal to relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_op_ge.cpp  
@@ -322,7 +337,7 @@ List c1 is greater than or equal to list c2.
 *\  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [\<list>](../standard-library/list.md)
 
 

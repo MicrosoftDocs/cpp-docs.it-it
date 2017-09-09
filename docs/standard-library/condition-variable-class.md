@@ -1,5 +1,5 @@
 ---
-title: Classe condition_variable | Microsoft Docs
+title: condition_variable Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -38,82 +38,91 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 5614afd8d17f119b47d11c641e3f999399f80925
+helpviewer_keywords:
+- std::condition
+- std::condition_variable::condition_variable
+- std::condition_variable::native_handle
+- std::condition_variable::notify_all
+- std::condition_variable::notify_one
+- std::condition_variable::wait
+- std::condition_variable::wait_for
+- std::condition_variable::wait_until
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 7f6f042a545cc2b9846404551fdc23770b5b19bf
 ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="conditionvariable-class"></a>Classe condition_variable
-Usare la classe `condition_variable` per attendere un evento quando si ha un `mutex` di tipo `unique_lock<mutex>`. Gli oggetti di questo tipo possono avere prestazioni migliori rispetto agli oggetti di tipo [condition_variable_any<unique_lock\<mutex>>](../standard-library/condition-variable-any-class.md).  
+# <a name="conditionvariable-class"></a>condition_variable Class
+Use the `condition_variable` class to wait for an event when you have a `mutex` of type `unique_lock<mutex>`. Objects of this type may have better performance than objects of type [condition_variable_any<unique_lock\<mutex>>](../standard-library/condition-variable-any-class.md).  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```
 class condition_variable;
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Costruttori pubblici  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[condition_variable](#condition_variable)|Costruisce un oggetto `condition_variable`.|  
+|[condition_variable](#condition_variable)|Constructs a `condition_variable` object.|  
   
-### <a name="public-methods"></a>Metodi pubblici  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[native_handle](#native_handle)|Restituisce il tipo specifico per l'implementazione che rappresenta l'handle condition_variable.|  
-|[notify_all](#notify_all)|Sblocca tutti i thread in attesa dell'oggetto `condition_variable`.|  
-|[notify_one](#notify_one)|Sblocca uno dei thread in attesa dell'oggetto `condition_variable`.|  
-|[attesa](#wait)|Blocca un thread.|  
-|[wait_for](#wait_for)|Blocca un thread e imposta un intervallo di tempo dopo il quale il thread viene sbloccato.|  
-|[wait_until](#wait_until)|Blocca un thread e imposta un tempo massimo dopo il quale il thread viene sbloccato.|  
+|[native_handle](#native_handle)|Returns the implementation-specific type representing the condition_variable handle.|  
+|[notify_all](#notify_all)|Unblocks all threads that are waiting for the `condition_variable` object.|  
+|[notify_one](#notify_one)|Unblocks one of the threads that are waiting for the `condition_variable` object.|  
+|[wait](#wait)|Blocks a thread.|  
+|[wait_for](#wait_for)|Blocks a thread, and sets a time interval after which the thread unblocks.|  
+|[wait_until](#wait_until)|Blocks a thread, and sets a maximum point in time at which the thread unblocks.|  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<condition_variable >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<condition_variable>  
   
- **Spazio dei nomi:** std  
+ **Namespace:** std  
   
-##  <a name="condition_variable"></a>  Costruttore condition_variable::condition_variable  
- Costruisce un oggetto `condition_variable`.  
+##  <a name="condition_variable"></a>  condition_variable::condition_variable Constructor  
+ Constructs a `condition_variable` object.  
   
 ```
 condition_variable();
 ```  
   
-### <a name="remarks"></a>Note  
- Se non è disponibile memoria sufficiente, il costruttore genera un oggetto [system_error](../standard-library/system-error-class.md) che ha un codice di errore `not_enough_memory`. Se l'oggetto non può essere costruito perché non è disponibile un'altra risorsa, il costruttore genera un oggetto `system_error` che ha un codice di errore `resource_unavailable_try_again`.  
+### <a name="remarks"></a>Remarks  
+ If not enough memory is available, the constructor throws a [system_error](../standard-library/system-error-class.md) object that has a `not_enough_memory` error code. If the object cannot be constructed because some other resource is not available, the constructor throws a `system_error` object that has a `resource_unavailable_try_again` error code.  
   
 ##  <a name="native_handle"></a>  condition_variable::native_handle  
- Restituisce il tipo specifico per l'implementazione che rappresenta l'handle condition_variable.  
+ Returns the implementation-specific type that represents the condition_variable handle.  
   
 ```
 native_handle_type native_handle();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- `native_handle_type` viene definito come un puntatore a strutture di dati interne di runtime di concorrenza.  
+### <a name="return-value"></a>Return Value  
+ `native_handle_type` is defined as a pointer to Concurrency Runtime internal data structures.  
   
 ##  <a name="notify_all"></a>  condition_variable::notify_all  
- Sblocca tutti i thread in attesa dell'oggetto `condition_variable`.  
+ Unblocks all threads that are waiting for the `condition_variable` object.  
   
 ```
 void notify_all() noexcept;
 ```  
   
 ##  <a name="notify_one"></a>  condition_variable::notify_one  
- Sblocca uno dei thread in attesa dell'oggetto `condition_variable`.  
+ Unblocks one of the threads that are waiting on the `condition_variable` object.  
   
 ```
 void notify_one() noexcept;
 ```  
   
 ##  <a name="wait"></a>  condition_variable::wait  
- Blocca un thread.  
+ Blocks a thread.  
   
 ```
 void wait(unique_lock<mutex>& Lck);
@@ -122,17 +131,17 @@ template <class Predicate>
 void wait(unique_lock<mutex>& Lck, Predicate Pred);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `Lck`  
- Un oggetto [unique_lock\<mutex>](../standard-library/unique-lock-class.md).  
+ A [unique_lock\<mutex>](../standard-library/unique-lock-class.md) object.  
   
  `Pred`  
- Qualsiasi espressione che restituisca un valore `true` o `false`.  
+ Any expression that returns `true` or `false`.  
   
-### <a name="remarks"></a>Note  
- Il primo metodo si blocca fino a quando l'oggetto `condition_variable` non viene segnalato da una chiamata a [notify_one](#notify_one) o [notify_all](#notify_all). Può anche riattivarsi in modo spurio.  
+### <a name="remarks"></a>Remarks  
+ The first method blocks until the `condition_variable` object is signaled by a call to [notify_one](#notify_one) or [notify_all](#notify_all). It can also wake up spuriously.  
   
- Il secondo metodo esegue il codice seguente.  
+ In effect, the second method executes the following code.  
   
 ```cpp  
 while(!Pred())
@@ -140,7 +149,7 @@ while(!Pred())
 ```    
   
 ##  <a name="wait_for"></a>  condition_variable::wait_for  
- Blocca un thread e imposta un intervallo di tempo dopo il quale il thread viene sbloccato.  
+ Blocks a thread, and sets a time interval after which the thread unblocks.  
   
 ```
 template <class Rep, class Period>
@@ -155,25 +164,25 @@ bool wait_for(
     Predicate Pred);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `Lck`  
- Un oggetto [unique_lock\<mutex>](../standard-library/unique-lock-class.md).  
+ A [unique_lock\<mutex>](../standard-library/unique-lock-class.md) object.  
   
  `Rel_time`  
- Un oggetto `chrono::duration` che specifica la quantità di tempo prima che il thread venga riattivato.  
+ A `chrono::duration` object that specifies the amount of time before the thread wakes up.  
   
  `Pred`  
- Qualsiasi espressione che restituisca un valore `true` o `false`.  
+ Any expression that returns `true` or `false`.  
   
-### <a name="return-value"></a>Valore restituito  
- Il primo metodo restituisce `cv_status::timeout` se l'attesa termina quando `Rel_time` è trascorso. In caso contrario, il metodo restituisce `cv_status::no_timeout`.  
+### <a name="return-value"></a>Return Value  
+ The first method returns `cv_status::timeout` if the wait terminates when `Rel_time` has elapsed. Otherwise, the method returns `cv_status::no_timeout`.  
   
- Il secondo metodo restituisce il valore di `Pred`.  
+ The second method returns the value of `Pred`.  
   
-### <a name="remarks"></a>Note  
- Il primo metodo si blocca fino a quando l'oggetto `condition_variable` non viene segnalato da una chiamata a [notify_one](#notify_one) o [notify_all](#notify_all), oppure finché non è trascorso l'intervallo di tempo `Rel_time`. Può anche riattivarsi in modo spurio.  
+### <a name="remarks"></a>Remarks  
+ The first method blocks until the `condition_variable` object is signaled by a call to [notify_one](#notify_one) or [notify_all](#notify_all) or until the time interval `Rel_time` has elapsed. It can also wake up spuriously.  
   
- Il secondo metodo esegue il codice seguente.  
+ In effect, the second method executes the following code.  
   
 ```cpp  
 while(!Pred())
@@ -184,7 +193,7 @@ return true;
 ```  
   
 ##  <a name="wait_until"></a>  condition_variable::wait_until  
- Blocca un thread e imposta un tempo massimo dopo il quale il thread viene sbloccato.  
+ Blocks a thread, and sets a maximum point in time at which the thread unblocks.  
   
 ```
 template <class Clock, class Duration>
@@ -209,25 +218,25 @@ bool wait_until(
     Predicate Pred);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `Lck`  
- Un oggetto [unique_lock\<mutex>](../standard-library/unique-lock-class.md).  
+ A [unique_lock\<mutex>](../standard-library/unique-lock-class.md) object.  
   
  `Abs_time`  
- Un oggetto [chrono:: time_point](../standard-library/time-point-class.md).  
+ A [chrono::time_point](../standard-library/time-point-class.md) object.  
   
  `Pred`  
- Qualsiasi espressione che restituisca un valore `true` o `false`.  
+ Any expression that returns `true` or `false`.  
   
-### <a name="return-value"></a>Valore restituito  
- I metodi che restituiscono un tipo `cv_status` restituiscono `cv_status::timeout` se l'attesa termina quando `Abs_time` è trascorso. In caso contrario, i metodi restituiscono `cv_status::no_timeout`.  
+### <a name="return-value"></a>Return Value  
+ Methods that return a `cv_status` type return `cv_status::timeout` if the wait terminates when `Abs_time` elapses. Otherwise, the methods return `cv_status::no_timeout`.  
   
- I metodi che restituiscono un oggetto `bool` restituiscono il valore di `Pred`.  
+ Methods that return a `bool` return the value of `Pred`.  
   
-### <a name="remarks"></a>Note  
- Il primo metodo si blocca fino a quando l'oggetto `condition_variable` non viene segnalato da una chiamata a [notify_one](#notify_one) o [notify_all](#notify_all) oppure fino a che non viene restituito `Abs_time`. Può anche riattivarsi in modo spurio.  
+### <a name="remarks"></a>Remarks  
+ The first method blocks until the `condition_variable` object is signaled by a call to [notify_one](#notify_one) or [notify_all](#notify_all) or until `Abs_time`. It can also wake up spuriously.  
   
- Il secondo metodo esegue il codice seguente  
+ In effect, the second method executes the following code  
   
 ```cpp  
 while(!Pred())
@@ -237,10 +246,10 @@ while(!Pred())
 return true;
 ```  
   
- Il terzo e il quarto metodo usano un puntatore a un oggetto di tipo `xtime` per sostituire l'oggetto `chrono::time_point`. L'oggetto `xtime` specifica il tempo massimo di attesa di un segnale.  
+ The third and fourth methods use a pointer to an object of type `xtime` to replace the `chrono::time_point` object. The `xtime` object specifies the maximum amount of time to wait for a signal.  
   
-## <a name="see-also"></a>Vedere anche  
- [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)  (Riferimento file di intestazione)  
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
  [<condition_variable>](../standard-library/condition-variable.md)
 
 

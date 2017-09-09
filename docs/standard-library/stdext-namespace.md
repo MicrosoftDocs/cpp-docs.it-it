@@ -1,7 +1,7 @@
 ---
-title: Spazio dei nomi stdext | Microsoft Docs
+title: stdext Namespace | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 09/06/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -35,27 +35,29 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 213b760a134a645a0b6552e4c3600fc4762b0bb2
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 77d6ee6c4ce675b8994dcb04470d8c736653838b
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="stdext-namespace"></a>Spazio dei nomi stdext
-I membri dei file di intestazione [<hash_map>](../standard-library/hash-map.md) e [<hash_set>](../standard-library/hash-set.md) non fanno attualmente parte dello standard ISO C++. Di conseguenza, questi tipi e membri sono stati spostati dallo spazio dei nomi `std` a quello `stdext`per restare conformi allo standard C++.  
-  
- Durante la compilazione con [/Ze](../build/reference/za-ze-disable-language-extensions.md), che è l'impostazione predefinita, il compilatore genera un avviso sull'uso di `std` per i membri dei file di intestazione <hash_map> e <hash_set>. Per disabilitare l'avviso, usare il pragma [warning](../preprocessor/warning.md).  
-  
- Per fare in modo che il compilatore generi un errore per l'uso di `std` per i membri dei file di intestazione <hash_map> e <hash_set> con **/Ze**, aggiungere la direttiva seguente prima dell'esecuzione di #include per qualsiasi file di intestazione della libreria standard C++.  
-  
-```  
+# <a name="stdext-namespace"></a>stdext Namespace
+
+Members of the [\<hash_map>](../standard-library/hash-map.md) and [\<hash_set>](../standard-library/hash-set.md) header files are not currently part of the ISO C++ standard. Therefore, these types and members have been moved from the `std` namespace to namespace `stdext`, to remain conformant with the C++ standard.
+
+When compiling with [/Ze](../build/reference/za-ze-disable-language-extensions.md), which is the default, the compiler warns on the use of `std` for members of the \<hash_map> and \<hash_set> header files. To disable the warning, use the [warning](../preprocessor/warning.md) pragma.
+
+To have the compiler generate an error for the use of `std` for members of the \<hash_map> and \<hash_set> header files with **/Ze**, add the following directive before you `#include` any C++ Standard Library header files.
+
+```cpp  
 #define _DEFINE_DEPRECATED_HASH_CLASSES 0  
 ```  
-  
- Quando si compila con **/Za**, il compilatore genererà un errore.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Panoramica sulla libreria standard C++](../standard-library/cpp-standard-library-overview.md)
+
+When compiling with **/Za**, the compiler generates an error.  
+
+## <a name="see-also"></a>See Also
+
+[C++ Standard Library Overview](../standard-library/cpp-standard-library-overview.md)
 
 

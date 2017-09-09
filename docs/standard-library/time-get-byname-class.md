@@ -1,5 +1,5 @@
 ---
-title: Classe time_get_byname | Microsoft Docs
+title: time_get_byname Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- time_get_byname
 - xloctime/std::time_get_byname
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 609bf85c8d56172f9498997e83740cf9620798dc
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 4179ade157e45c6ba746a6c7cccaaa8ae44310fc
 ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="timegetbyname-class"></a>Classe time_get_byname
-Questa classe modello derivata descrive un oggetto che può essere usato come facet delle impostazioni locali di tipo `time_get`\<CharType, InputIterator>.  
+# <a name="timegetbyname-class"></a>time_get_byname Class
+The derived template class describes an object that can serve as a locale facet of type `time_get`\<CharType, InputIterator>.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Elem, class InputIterator =
@@ -65,23 +64,23 @@ protected:
 };
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  `_Locname`  
- Impostazioni locali denominate.  
+ A named locale.  
   
  `_Refs`  
- Conteggio di riferimento iniziale.  
+ An initial reference count.  
   
-## <a name="requirements"></a>Requisiti  
- Il comportamento è determinato dalle impostazioni locali denominate `_Locname`. Ogni costruttore inizializza l'oggetto di base con [time_get](../standard-library/time-get-class.md#time_get)\<CharType, InputIterator>( `_Refs`).  
+## <a name="requirements"></a>Requirements  
+ Its behavior is determined by the named locale `_Locname`. Each constructor initializes its base object with [time_get](../standard-library/time-get-class.md#time_get)\<CharType, InputIterator>( `_Refs`).  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<locale>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
   
- **Spazio dei nomi:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Vedere anche  
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md) (Thread safety nella libreria standard C++)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

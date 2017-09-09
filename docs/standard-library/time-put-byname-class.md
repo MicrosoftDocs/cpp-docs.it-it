@@ -1,5 +1,5 @@
 ---
-title: Classe time_put_byname | Microsoft Docs
+title: time_put_byname Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- time_put_byname
 - xloctime/std::time_put_byname
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: a21c91fba99623ae7c97ef1455278617746fc310
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 64073ef0aec24e0e6ceae0c798e9519ebae1ee35
 ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="timeputbyname-class"></a>Classe time_put_byname
-Questa classe modello derivata descrive un oggetto che può essere usato come facet delle impostazioni locali di tipo `time_put`\< CharType, OutputIterator >.  
+# <a name="timeputbyname-class"></a>time_put_byname Class
+The derived template class describes an object that can serve as a locale facet of type `time_put`\< CharType, OutputIterator >.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class CharType, class OutIt = ostreambuf_iterator<CharType, char_traits<CharType>>>
@@ -65,23 +64,23 @@ protected:
 };
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  `_Locname`  
- Nome delle impostazioni locali.  
+ A locale name.  
   
  `_Refs`  
- Conteggio di riferimento iniziale.  
+ An initial reference count.  
   
-## <a name="remarks"></a>Note  
- Il comportamento è determinato dalle impostazioni locali [denominate](../standard-library/locale-class.md#name) `_Locname`. Ogni costruttore inizializza l'oggetto di base con [time_put](../standard-library/time-put-class.md#time_put)\<CharType, OutputIterator>( `_Refs`).  
+## <a name="remarks"></a>Remarks  
+ Its behavior is determined by the [named](../standard-library/locale-class.md#name) locale `_Locname`. Each constructor initializes its base object with [time_put](../standard-library/time-put-class.md#time_put)\<CharType, OutputIterator>( `_Refs`).  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<locale>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
   
- **Spazio dei nomi:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Vedere anche  
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md) (Thread safety nella libreria standard C++)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

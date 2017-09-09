@@ -1,48 +1,52 @@
 ---
-title: Funzioni &lt;random&gt; | Microsoft Docs
+title: '&lt;random&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- random/std::generate_canonical
 ms.assetid: 2ac9ec59-619b-4b85-a425-f729277c1bc8
+helpviewer_keywords:
+- std::generate_canonical
 caps.latest.revision: 10
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 3aebef535acb59046fab53d49051df16bd362c3c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 0929e7c6749af19065f42f10ee6c15ab4d4a3e88
+ms.contentlocale: it-it
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltrandomgt-functions"></a>Funzioni &lt;random&gt;
+# <a name="ltrandomgt-functions"></a>&lt;random&gt; functions
   
 ##  <a name="generate_canonical"></a>  generate_canonical  
- Restituisce un valore a virgola mobile da una sequenza casuale.  
+ Returns a floating-point value from a random sequence.  
   
 > [!NOTE]
->  Lo standard C++ ISO indica che questa funzione deve restituire valori compresi nell'intervallo [ `0`, `1`). Visual Studio non è ancora conforme a questo vincolo. Come soluzione alternativa per generare valori in questo intervallo, usare [uniform_real_distribution](../standard-library/uniform-real-distribution-class.md).  
+>  The ISO C++ Standard states that this function should return values in the range [ `0`, `1`). Visual Studio is not yet compliant with this constraint. As a workaround to generate values in this range, use [uniform_real_distribution](../standard-library/uniform-real-distribution-class.md).  
   
 ```  
 template <class RealType, size_t Bits, class Generator>  
 RealType generate_canonical(Generator& Gen);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `RealType`  
- Tipo integrale a virgola mobile. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).  
+ The floating point integral type. For possible types, see [\<random>](../standard-library/random.md).  
   
  `Bits`  
- Generatore di numeri casuali.  
+ The random number generator.  
   
  `Gen`  
- Generatore di numeri casuali.  
+ The random number generator.  
   
-### <a name="remarks"></a>Note  
- La funzione di modello chiama ripetutamente `operator()` di `Gen` e inserisce i valori restituiti in un pacchetto in un `x` a virgola mobile di tipo `RealType` fino al recupero del numero specificato di bit di mantissa in `x`. Il numero specificato è più piccolo rispetto a `Bits` (che deve essere diverso da zero) e al numero completo di bit di mantissa in `RealType`. La prima chiamata fornisce i bit di livello più basso. La funzione restituisce `x`.  
+### <a name="remarks"></a>Remarks  
+ The template function calls `operator()` of `Gen` repeatedly and packs the returned values into a floating-point value `x` of type `RealType` until it has gathered the specified number of mantissa bits in `x`. The specified number is the smaller of `Bits` (which must be nonzero) and the full number of mantissa bits in `RealType`. The first call supplies the lowest-order bits. The function returns `x`.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

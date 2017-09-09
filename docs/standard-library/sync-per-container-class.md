@@ -1,5 +1,5 @@
 ---
-title: Classe sync_per_container | Microsoft Docs
+title: sync_per_container Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,8 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- sync_per_container
-- stdext::sync_per_container
 - allocators/stdext::sync_per_container
 - allocators/stdext::sync_per_container::equals
 dev_langs:
@@ -36,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 80e119d2d7ee913b691bffe6f9943a28599dc1e5
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: eb16cef2c9185b211268257a8de721875391f70b
 ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="syncpercontainer-class"></a>Classe sync_per_container
-Descrive un [filtro di sincronizzazione](../standard-library/allocators-header.md) che fornisce un oggetto cache separato per ogni oggetto allocatore.  
+# <a name="syncpercontainer-class"></a>sync_per_container Class
+Describes a [synchronization filter](../standard-library/allocators-header.md) that provides a separate cache object for each allocator object.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Cache>  
@@ -54,43 +52,43 @@ class sync_per_container
  : public Cache
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
   
-|Parametro|Descrizione|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Cache`|Tipo di cache associato al filtro di sincronizzazione. Può essere [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) o [cache_suballoc](../standard-library/cache-suballoc-class.md).|  
+|`Cache`|The type of cache associated with the synchronization filter. This can be [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md), or [cache_suballoc](../standard-library/cache-suballoc-class.md).|  
   
-### <a name="member-functions"></a>Funzioni membro  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[equals](#equals)|Confronta due cache per stabilirne l'uguaglianza.|  
+|[equals](#equals)|Compares two caches for equality.|  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<allocators>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<allocators>  
   
- **Spazio dei nomi:** stdext  
+ **Namespace:** stdext  
   
 ##  <a name="equals"></a>  sync_per_container::equals  
- Confronta due cache per stabilirne l'uguaglianza.  
+ Compares two caches for equality.  
   
 ```
 bool equals(const sync_per_container<Cache>& Other) const;
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
   
-|Parametro|Descrizione|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Cache`|Oggetto cache del filtro di sincronizzazione.|  
-|`Other`|Oggetto cache da confrontare per verificarne l'uguaglianza.|  
+|`Cache`|The cache object of the synchronization filter.|  
+|`Other`|The cache object to compare for equality.|  
   
-### <a name="return-value"></a>Valore restituito  
- La funzione membro restituisce sempre `false`.  
+### <a name="return-value"></a>Return Value  
+ The member function always returns `false`.  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [\<allocators>](../standard-library/allocators-header.md)
 
 

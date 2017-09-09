@@ -1,5 +1,5 @@
 ---
-title: Classe ctype&lt;char&gt; | Microsoft Docs
+title: ctype&lt;char&gt; Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 28fc5cf88c6a50b5fcd9950b68d7c6ef3529ccee
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 45f94354962f3312ef7f935d1461d4ca54c42915
 ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ctypeltchargt-class"></a>Classe ctype&lt;char&gt;
-Classe che rappresenta una specializzazione esplicita della classe modello **ctype\<CharType**> per il tipo `char`, che descrive un oggetto che può essere usato come facet delle impostazioni locali per caratterizzare le varie proprietà di un carattere di tipo `char`.  
+# <a name="ctypeltchargt-class"></a>ctype&lt;char&gt; Class
+The class is an explicit specialization of template class **ctype\<CharType**> to type `char`, describing an object that can serve as a locale facet to characterize various properties of a character of type `char`.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <>  
@@ -144,31 +144,31 @@ protected:
 };  
 ```  
   
-## <a name="remarks"></a>Note  
- La specializzazione esplicita è diversa dalla classe di modello in vari modi:  
+## <a name="remarks"></a>Remarks  
+ The explicit specialization differs from the template class in several ways:  
   
--   Un oggetto della classe ctype< `char`> archivia un puntatore al primo elemento di una tabella di maschera ctype, una matrice di elementi UCHAR_MAX + 1 di tipo **ctype_base::mask**. Archivia anche un oggetto booleano che indica se la matrice deve essere eliminata (tramite `operator delete[]`) quando l'oggetto di ctype\< **Elem**> viene eliminato.  
+-   An object of class ctype< `char`> stores a pointer to the first element of a ctype mask table, an array of UCHAR_MAX + 1 elements of type **ctype_base::mask**. It also stores a Boolean object that indicates whether the array should be deleted (using `operator delete[]`) when the ctype\< **Elem**> object is destroyed.  
   
--   Il relativo costruttore pubblico unico consente di specificare **tab**, la tabella, maschera ctype e **del**, l'oggetto Boolean che è true se la matrice deve essere eliminata quando l'oggetto di ctype< `char`> viene eliminato definitivamente, nonché i riferimenti al parametro reference-count.  
+-   Its sole public constructor lets you specify **tab**, the ctype mask table, and **del**, the Boolean object that is true if the array should be deleted when the ctype< `char`> object is destroyed, as well as the reference-count parameter refs.  
   
--   La funzione membro protetto **table** restituisce la tabella della maschera ctype archiviata.  
+-   The protected member function **table** returns the stored ctype mask table.  
   
--   L'oggetto membro statico **table_size** specifica il numero minimo di elementi in una tabella di maschera ctype.  
+-   The static member object **table_size** specifies the minimum number of elements in a ctype mask table.  
   
--   La funzione membro protetto statica **classic_table**( restituisce la tabella maschera ctype appropriata per le impostazioni locali "C".  
+-   The protected static member function **classic_table**( returns the ctype mask table appropriate to the "C" locale.  
   
--   Non ci sono funzioni membro virtuale protetto [do_is](../standard-library/ctype-class.md#do_is), [do_scan_is](../standard-library/ctype-class.md#do_scan_is) o [do_scan_not](../standard-library/ctype-class.md#do_scan_not). Le funzioni membro pubblico corrispondenti eseguono direttamente le operazioni equivalenti.  
+-   There are no protected virtual member functions [do_is](../standard-library/ctype-class.md#do_is), [do_scan_is](../standard-library/ctype-class.md#do_scan_is), or [do_scan_not](../standard-library/ctype-class.md#do_scan_not). The corresponding public member functions perform the equivalent operations themselves.  
   
- Le funzioni membro [do_narrow](../standard-library/ctype-class.md#do_narrow) e [do_widen](../standard-library/ctype-class.md#do_widen) copiano elementi non modificati.  
+ The member functions [do_narrow](../standard-library/ctype-class.md#do_narrow) and [do_widen](../standard-library/ctype-class.md#do_widen) copy elements unaltered.  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<locale>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
   
- **Spazio dei nomi:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [facet Class](http://msdn.microsoft.com/Library/dd4f12f5-cb1b-457f-af56-2fb204216ec1)   
  [ctype_base Class](../standard-library/ctype-base-class.md)   
- [Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

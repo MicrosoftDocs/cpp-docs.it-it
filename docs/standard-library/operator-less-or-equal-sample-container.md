@@ -9,12 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::<=
-- std.operator<=
-- operator<=
-- std.<=
-- std::operator<=
-- <=
+- std::<=", "std.operator<=", "operator<=", "std.<=", "std::operator<=", "<=
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -41,20 +36,20 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 3267090567017a0aba7100d464a628bd0a0bcbea
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 2587c23ab6b060e65dbc12b04df5bd5ad05017b0
 ms.contentlocale: it-it
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="operatorlt-ltsample-containergt"></a>operator&lt;= (&lt;sample container&gt;)
 > [!NOTE]
->  Questo argomento è incluso nella documentazione di Visual C++ come esempio non funzionale dei contenitori usati nella libreria standard C++. Per altre informazioni, vedere [C++ Standard Library Containers](../standard-library/stl-containers.md) (Contenitori della libreria standard C++).  
+>  This topic is in the Visual C++ documentation as a nonfunctional example of containers used in the C++ Standard Library. For more information, see [C++ Standard Library Containers](../standard-library/stl-containers.md).  
   
- Esegue l'overload di **operator<=** per confrontare due oggetti della classe modello [Container](../standard-library/sample-container-class.md).  
+ Overloads **operator<=** to compare two objects of template class [Container](../standard-library/sample-container-class.md).  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty>  
@@ -63,10 +58,10 @@ bool operator<=(
     const Container <Ty>& right);
 ```  
   
-## <a name="return-value"></a>Valore restituito  
- Restituisce `!(right < left)`.  
+## <a name="return-value"></a>Return Value  
+ Returns `!(right < left)`.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [\<sample container>](../standard-library/sample-container.md)
 
 

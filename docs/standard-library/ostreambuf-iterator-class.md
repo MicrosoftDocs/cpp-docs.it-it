@@ -1,5 +1,5 @@
 ---
-title: Classe ostreambuf_iterator | Microsoft Docs
+title: ostreambuf_iterator Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - streambuf/std::ostreambuf_iterator
-- ostreambuf_iterator
 - iterator/std::ostreambuf_iterator::char_type
 - iterator/std::ostreambuf_iterator::ostream_type
 - iterator/std::ostreambuf_iterator::streambuf_type
@@ -19,7 +18,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- ostreambuf_iterator class
+- std::ostreambuf_iterator [C++]
+- std::ostreambuf_iterator [C++], char_type
+- std::ostreambuf_iterator [C++], ostream_type
+- std::ostreambuf_iterator [C++], streambuf_type
+- std::ostreambuf_iterator [C++], traits_type
+- std::ostreambuf_iterator [C++], failed
 ms.assetid: dad1e624-2f45-4e94-8887-a885e95f9071
 caps.latest.revision: 16
 author: corob-msft
@@ -39,77 +43,77 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 2f58e86e76e63d51739558b796e47dc3f5165d3f
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 089009873b69087b1125ef3e1dc7b1c907dce956
 ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ostreambufiterator-class"></a>Classe ostreambuf_iterator
-La classe modello ostreambuf_iterator descrive un oggetto iteratore di output che consente di scrivere gli elementi dei caratteri consecutivi nel flusso di output con l'estrazione **operator>>**. Gli oggetti `ostreambuf_iterator` differiscono da quelli della [classe ostream_iterator](../standard-library/ostream-iterator-class.md) per il fatto che hanno caratteri anziché un tipo generico in corrispondenza del tipo di oggetto inserito nel flusso di output.  
+# <a name="ostreambufiterator-class"></a>ostreambuf_iterator Class
+The template class ostreambuf_iterator describes an output iterator object that writes successive character elements onto the output stream with the extraction **operator>>**. The `ostreambuf_iterator`s differ from those of the [ostream_iterator Class](../standard-library/ostream-iterator-class.md) in having characters instead of a generic type at the type of object being inserted into the output stream.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class CharType = char class Traits = char_traits <CharType>>
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  `CharType`  
- Tipo che rappresenta il tipo di carattere per ostreambuf_iterator. Questo argomento è facoltativo e il valore predefinito è `char`.  
+ The type that represents the character type for the ostreambuf_iterator. This argument is optional and the default value is `char`.  
   
  `Traits`  
- Tipo che rappresenta il tipo di carattere per ostreambuf_iterator. Questo argomento è facoltativo e il valore predefinito è `char_traits`\< *CharType>.*  
+ The type that represents the character type for the ostreambuf_iterator. This argument is optional and the default value is `char_traits`\< *CharType>.*  
   
-## <a name="remarks"></a>Note  
- La classe ostreambuf_iterator deve soddisfare i requisiti per un iteratore di output. Gli algoritmi possono essere scritti direttamente nei flussi di output utilizzando un `ostreambuf_iterator`. La classe fornisce un iteratore del flusso di basso livello che consente l'accesso al flusso I/O non elaborato (non formattato) sotto forma di caratteri e la possibilità di ignorare le conversioni dei caratteri e del buffer associate agli iteratori del flusso di alto livello.  
+## <a name="remarks"></a>Remarks  
+ The ostreambuf_iterator class must satisfy the requirements for an output iterator. Algorithms can be written directly to output streams using an `ostreambuf_iterator`. The class provides a low-level stream iterator that allows access to the raw (unformatted) I/O stream in the form of characters and the ability to bypass the buffering and character translations associated with the high-level stream iterators.  
   
-### <a name="constructors"></a>Costruttori  
-  
-|||  
-|-|-|  
-|[ostreambuf_iterator](#ostreambuf_iterator_ostreambuf_iterator)|Costruisce un `ostreambuf_iterator` inizializzato per scrivere i caratteri nel flusso di output.|  
-  
-### <a name="typedefs"></a>Typedef  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[char_type](#char_type)|Tipo che fornisce il tipo di carattere di `ostreambuf_iterator`.|  
-|[ostream_type](#ostreambuf_iterator_ostream_type)|Tipo che fornisce il tipo di flusso di `ostream_iterator`.|  
-|[streambuf_type](#streambuf_type)|Tipo che fornisce il tipo di flusso di `ostreambuf_iterator`.|  
-|[traits_type](#traits_type)|Tipo che fornisce il tipo di tratti di `ostream_iterator`.|  
+|[ostreambuf_iterator](#ostreambuf_iterator_ostreambuf_iterator)|Constructs an `ostreambuf_iterator` that is initialized to write characters to the output stream.|  
   
-### <a name="member-functions"></a>Funzioni membro  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[failed](#failed)|Verifica l'esito negativo di un inserimento nel buffer del flusso di output.|  
+|[char_type](#char_type)|A type that provides for the character type of the `ostreambuf_iterator`.|  
+|[ostream_type](#ostreambuf_iterator_ostream_type)|A type that provides for the stream type of the `ostream_iterator`.|  
+|[streambuf_type](#streambuf_type)|A type that provides for the stream type of the `ostreambuf_iterator`.|  
+|[traits_type](#traits_type)|A type that provides for the character traits type of the `ostream_iterator`.|  
   
-### <a name="operators"></a>Operatori  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[operator*](#op_star)|Operatore di dereferenziazione usato per implementare l'espressione dell'iteratore di output * `i` = `x`.|  
-|[operator++](#op_add_add)|Operatore di incremento non funzionale che restituisce `ostreambuf_iterator` allo stesso oggetto a cui ha puntato prima che venisse chiamata l'operazione.|  
-|[operator=](#op_eq)|L'operatore inserisce un carattere nel buffer del flusso associato.|  
+|[failed](#failed)|Tests for failure of an insertion into the output stream buffer.|  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<iterator>  
+### <a name="operators"></a>Operators  
   
- **Spazio dei nomi:** std  
+|||  
+|-|-|  
+|[operator*](#op_star)|Dereferencing operator used to implement the output iterator expression * `i` = `x`.|  
+|[operator++](#op_add_add)|A nonfunctional increment operator that returns an `ostreambuf_iterator` to the same object it addressed before the operation was called.|  
+|[operator=](#op_eq)|The operator inserts a character into the associated stream buffer.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<iterator>  
+  
+ **Namespace:** std  
   
 ##  <a name="char_type"></a>  ostreambuf_iterator::char_type  
- Tipo che fornisce il tipo di carattere di `ostreambuf_iterator`.  
+ A type that provides for the character type of the `ostreambuf_iterator`.  
   
 ```
 typedef CharType char_type;
 ```  
   
-### <a name="remarks"></a>Note  
- Il tipo è un sinonimo del parametro di modello **CharType**.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **CharType**.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ostreambuf_iterator_char_type.cpp  
@@ -148,19 +152,19 @@ The characters written to the output stream
 ```  
   
 ##  <a name="failed"></a>  ostreambuf_iterator::failed  
- Verifica l'esito negativo di un inserimento nel buffer del flusso di output.  
+ Tests for failure of an insertion into the output stream buffer.  
   
 ```
 bool failed() const throw();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- **true** se in precedenza nessun inserimento nel buffer del flusso di output ha avuto esito negativo; in caso contrario, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if no insertion into the output stream buffer has failed earlier; otherwise **false**.  
   
-### <a name="remarks"></a>Note  
- La funzione membro restituisce **true** se, in qualsiasi uso precedente del membro `operator=`, la chiamata a **subf**_-> `sputc` ha restituito **eof**.  
+### <a name="remarks"></a>Remarks  
+ The member function returns **true** if, in any prior use of member `operator=`, the call to **subf**_-> `sputc` returned **eof**.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ostreambuf_iterator_failed.cpp  
@@ -196,19 +200,19 @@ No insertions failed.
 ```  
   
 ##  <a name="op_star"></a>  ostreambuf_iterator::operator*  
- Operatore di dereferenziazione non funzionale usato per implementare l'espressione dell'iteratore di output \* *i* = *x*.  
+ A nonfunctional dereferencing operator used to implement the output iterator expression \* *i* = *x*.  
   
 ```
 ostreambuf_iterator<CharType, Traits>& operator*();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Oggetto iteratore ostreambuf.  
+### <a name="return-value"></a>Return Value  
+ The ostreambuf iterator object.  
   
-### <a name="remarks"></a>Note  
- Questo operatore funziona solo nell'espressione dell'iteratore di output \* *i* = *x* per generare caratteri nel buffer del flusso. Applicato a un iteratore ostreambuf, restituisce l'iteratore; **\*iter** restituisce **iter**,  
+### <a name="remarks"></a>Remarks  
+ This operator functions only in the output iterator expression \* *i* = *x* to output characters to stream buffer. Applied to an ostreambuf iterator, it returns the iterator; **\*iter** returns **iter**,  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ostreambuf_iterator_op_deref.cpp  
@@ -240,20 +244,20 @@ OUT
 ```  
   
 ##  <a name="op_add_add"></a>  ostreambuf_iterator::operator++  
- Operatore di incremento non funzionale che restituisce un iteratore ostream allo stesso carattere a cui puntava prima che venisse chiamata l'operazione.  
+ A nonfunctional increment operator that returns an ostream iterator to the same character it addressed before the operation was called.  
   
 ```
 ostreambuf_iterator<CharType, Traits>& operator++();
 ostreambuf_iterator<CharType, Traits>& operator++(int);
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Riferimento al carattere a cui puntava originariamente o a un oggetto definito dall'implementazione, convertibile in `ostreambuf_iterator`\< **CharType**, **Traits**>.  
+### <a name="return-value"></a>Return Value  
+ A reference to the character originally addressed or to an implementation-defined object that is convertible to `ostreambuf_iterator`\< **CharType**, **Traits**>.  
   
-### <a name="remarks"></a>Note  
- L'operatore viene usato per implementare l'espressione dell'iteratore di output \* *i* = *x*.  
+### <a name="remarks"></a>Remarks  
+ The operator is used to implement the output iterator expression \* *i* = *x*.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ostreambuf_iterator_op_incr.cpp  
@@ -285,23 +289,23 @@ OUT
 ```  
   
 ##  <a name="op_eq"></a>  ostreambuf_iterator::operator=  
- L'operatore inserisce un carattere nel buffer del flusso associato.  
+ The operator inserts a character into the associated stream buffer.  
   
 ```
 ostreambuf_iterator<CharType, Traits>& operator=(CharType _Char);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `_Char`  
- Carattere da inserire nel buffer del flusso.  
+ The character to be inserted into the stream buffer.  
   
-### <a name="return-value"></a>Valore restituito  
- Riferimento al carattere inserito nel buffer del flusso.  
+### <a name="return-value"></a>Return Value  
+ A reference to the character inserted into the stream buffer.  
   
-### <a name="remarks"></a>Note  
- Operatore di assegnazione usato per implementare l'espressione dell'iteratore di output \* *i* = *x* per la scrittura in un flusso di output.  
+### <a name="remarks"></a>Remarks  
+ Assignment operator used to implement the output iterator expression \* *i* = *x* for writing to an output stream.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ostreambuf_iterator_op_assign.cpp  
@@ -333,26 +337,26 @@ OUT
 ```  
   
 ##  <a name="ostreambuf_iterator_ostreambuf_iterator"></a>  ostreambuf_iterator::ostreambuf_iterator  
- Costruisce un `ostreambuf_iterator` inizializzato per scrivere i caratteri nel flusso di output.  
+ Constructs an `ostreambuf_iterator` that is initialized to write characters to the output stream.  
   
 ```
 ostreambuf_iterator(streambuf_type* strbuf) throw();
 ostreambuf_iterator(ostream_type& Ostr) throw();
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `strbuf`  
- Oggetto streambuf di output usato per inizializzare il puntatore del buffer del flusso di output.  
+ The output streambuf object used to initialize the output stream-buffer pointer.  
   
  `Ostr`  
- Oggetto del flusso di output usato per inizializzare il puntatore del buffer del flusso di output.  
+ The output stream object used to initialize the output stream-buffer pointer.  
   
-### <a name="remarks"></a>Note  
- Il primo costruttore inizializza il puntatore del buffer del flusso di output con `strbuf`.  
+### <a name="remarks"></a>Remarks  
+ The first constructor initializes the output stream-buffer pointer with `strbuf`.  
   
- Il secondo costruttore inizializza il puntatore del buffer del flusso di output con `Ostr`. `rdbuf`. Il puntatore archiviato non deve essere un puntatore null.  
+ The second constructor initializes the output stream-buffer pointer with `Ostr`. `rdbuf`. The stored pointer must not be a null pointer.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ostreambuf_iteratorOstreambuf_iterator.cpp  
@@ -386,42 +390,42 @@ These characters are being written to the output stream.
 ```  
   
 ##  <a name="ostreambuf_iterator_ostream_type"></a>  ostreambuf_iterator::ostream_type  
- Tipo che fornisce il tipo di flusso di `ostream_iterator`.  
+ A type that provides for the stream type of the `ostream_iterator`.  
   
 ```
 typedef basicOstream<CharType, Traits> ostream_type;
 ```  
   
-### <a name="remarks"></a>Note  
- Il tipo è un sinonimo di `basicOstream`\< **CharType**, **Traits**>  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for `basicOstream`\< **CharType**, **Traits**>  
   
-### <a name="example"></a>Esempio  
-  Vedere [ostreambuf_iterator](#ostreambuf_iterator_ostreambuf_iterator) per indicazioni su come dichiarare e usare `ostream_type`.  
+### <a name="example"></a>Example  
+  See [ostreambuf_iterator](#ostreambuf_iterator_ostreambuf_iterator) for an example of how to declare and use `ostream_type`.  
   
 ##  <a name="streambuf_type"></a>  ostreambuf_iterator::streambuf_type  
- Tipo che fornisce il tipo di flusso di `ostreambuf_iterator`.  
+ A type that provides for the stream type of the `ostreambuf_iterator`.  
   
 ```
 typedef basic_streambuf<CharType, Traits> streambuf_type;
 ```  
   
-### <a name="remarks"></a>Note  
- Il tipo è un sinonimo di `basic_streambuf`\< **CharType**, **Traits**>, una classe di flusso per i buffer I/O che diventa `streambuf` quando è specializzata per il tipo di carattere `char`.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for `basic_streambuf`\< **CharType**, **Traits**>, a stream class for I/O buffers that becomes `streambuf` when specialized to character type `char`.  
   
-### <a name="example"></a>Esempio  
-  Vedere [ostreambuf_iterator](#ostreambuf_iterator_ostreambuf_iterator) per indicazioni su come dichiarare e usare `streambuf_type`.  
+### <a name="example"></a>Example  
+  See [ostreambuf_iterator](#ostreambuf_iterator_ostreambuf_iterator) for an example of how to declare and use `streambuf_type`.  
   
 ##  <a name="traits_type"></a>  ostreambuf_iterator::traits_type  
- Tipo che fornisce il tipo di tratti di `ostream_iterator`.  
+ A type that provides for the character traits type of the `ostream_iterator`.  
   
 ```
 typedef Traits traits_type;
 ```  
   
-### <a name="remarks"></a>Note  
- Il tipo è un sinonimo del parametro di modello **Traits**.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **Traits**.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ostreambuf_iterator_traits_type.cpp  
@@ -459,10 +463,10 @@ The characters written to the output stream
 *\  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [\<iterator>](../standard-library/iterator.md)   
- [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

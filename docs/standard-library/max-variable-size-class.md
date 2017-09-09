@@ -1,5 +1,5 @@
 ---
-title: Classe max_variable_size| Microsoft Docs
+title: max_variable_size Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- stdext::max_variable_size
 - allocators/stdext::max_variable_size
-- max_variable_size
 - allocators/stdext::max_variable_size::allocated
 - allocators/stdext::max_variable_size::deallocated
 - allocators/stdext::max_variable_size::full
@@ -20,7 +18,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- max_variable_size class
+- stdext::max_variable_size
+- stdext::max_variable_size [C++], allocated
+- stdext::max_variable_size [C++], deallocated
+- stdext::max_variable_size [C++], full
+- stdext::max_variable_size [C++], released
+- stdext::max_variable_size [C++], saved
 ms.assetid: 9f2e9df0-4148-4b37-bc30-f8eca0ef86ae
 caps.latest.revision: 18
 author: corob-msft
@@ -40,119 +43,119 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: dbb2405313f9b58bc6c5634410a5c378e0f0abca
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 3ba2450e4079307d26402dd56532686f687ab3f4
 ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="maxvariablesize-class"></a>Classe max_variable_size
-Descrive un oggetto [max class](../standard-library/allocators-header.md) che limita un oggetto [freelist](../standard-library/freelist-class.md) a una lunghezza massima approssimativamente proporzionale al numero di blocchi di memoria allocati.  
+# <a name="maxvariablesize-class"></a>max_variable_size Class
+Describes a [max class](../standard-library/allocators-header.md) object that limits a [freelist](../standard-library/freelist-class.md) object to a maximum length that is roughly proportional to the number of allocated memory blocks.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```
 class max_variable_size
 ```  
   
-### <a name="constructors"></a>Costruttori  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[max_variable_size](#max_variable_size)|Costruisce un oggetto di tipo `max_variable_size`.|  
+|[max_variable_size](#max_variable_size)|Constructs an object of type `max_variable_size`.|  
   
-### <a name="member-functions"></a>Funzioni membro  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[allocated](#allocated)|Incrementa il conteggio dei blocchi di memoria allocati.|  
-|[deallocated](#deallocated)|Decrementa il conteggio dei blocchi di memoria allocati.|  
-|[full](#full)|Restituisce un valore che specifica se all'elenco di disponibilità devono essere aggiunti altri blocchi di memoria.|  
-|[released](#released)|Decrementa il conteggio dei blocchi di memoria nell'elenco di disponibilità.|  
-|[saved](#saved)|Incrementa il conteggio dei blocchi di memoria nell'elenco di disponibilità.|  
+|[allocated](#allocated)|Increments the count of allocated memory blocks.|  
+|[deallocated](#deallocated)|Decrements the count of allocated memory blocks.|  
+|[full](#full)|Returns a value that specifies whether more memory blocks should be added to the free list.|  
+|[released](#released)|Decrements the count of memory blocks on the free list.|  
+|[saved](#saved)|Increments the count of memory blocks on the free list.|  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<allocators>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<allocators>  
   
- **Spazio dei nomi:** stdext  
+ **Namespace:** stdext  
   
 ##  <a name="allocated"></a>  max_variable_size::allocated  
- Incrementa il conteggio dei blocchi di memoria allocati.  
+ Increments the count of allocated memory blocks.  
   
 ```
 void allocated(std::size_t _Nx = 1);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
   
-|Parametro|Descrizione|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`_Nx`|Valore di incremento.|  
+|`_Nx`|The increment value.|  
   
-### <a name="remarks"></a>Note  
- Questa funzione membro aggiunge `_Nx` al valore archiviato `_Nallocs`. Questa funzione viene chiamata dopo ogni chiamata eseguita da `cache_freelist::allocate` all'operatore `new`. L'argomento `_Nx` è il numero di blocchi di memoria inclusi nel blocco allocato dall'operatore `new`.  
+### <a name="remarks"></a>Remarks  
+ This member function adds `_Nx` to the stored value `_Nallocs`. This member function is called after each successful call by `cache_freelist::allocate` to operator `new`. The argument `_Nx` is the number of memory blocks in the chunk allocated by operator `new`.  
   
 ##  <a name="deallocated"></a>  max_variable_size::deallocated  
- Decrementa il conteggio dei blocchi di memoria allocati.  
+ Decrements the count of allocated memory blocks.  
   
 ```
 void deallocated(std::size_t _Nx = 1);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
   
-|Parametro|Descrizione|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`_Nx`|Valore di incremento.|  
+|`_Nx`|The increment value.|  
   
-### <a name="remarks"></a>Note  
- Questa funzione membro sottrae `_Nx` al valore archiviato `_Nallocs`. Questa funzione viene chiamata dopo ogni chiamata eseguita da `cache_freelist::deallocate` all'operatore `delete`. L'argomento `_Nx` è il numero di blocchi di memoria inclusi nel blocco deallocato dall'operatore `delete`.  
+### <a name="remarks"></a>Remarks  
+ The member function subtracts `_Nx` from the stored value `_Nallocs`. This member function is called after each call by `cache_freelist::deallocate` to operator `delete`. The argument `_Nx` is the number of memory blocks in the chunk deallocated by operator `delete`.  
   
 ##  <a name="full"></a>  max_variable_size::full  
- Restituisce un valore che specifica se all'elenco di disponibilità devono essere aggiunti altri blocchi di memoria.  
+ Returns a value that specifies whether more memory blocks should be added to the free list.  
   
 ```
 bool full();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- `true` se `_Nallocs / 16 + 16 <= _Nblocks`.  
+### <a name="return-value"></a>Return Value  
+ `true` if `_Nallocs / 16 + 16 <= _Nblocks`.  
   
-### <a name="remarks"></a>Note  
- Questa funzione membro viene chiamata da `cache_freelist::deallocate`. Se la chiamata restituisce `true`, `deallocate` inserisce il blocco di memoria nell'elenco di disponibilità; se restituisce false, `deallocate` chiama l'operatore `delete` per deallocare il blocco.  
+### <a name="remarks"></a>Remarks  
+ This member function is called by `cache_freelist::deallocate`. If the call returns `true`, `deallocate` puts the memory block on the free list; if it returns false, `deallocate` calls operator `delete` to deallocate the block.  
   
 ##  <a name="max_variable_size"></a>  max_variable_size::max_variable_size  
- Costruisce un oggetto di tipo `max_variable_size`.  
+ Constructs an object of type `max_variable_size`.  
   
 ```
 max_variable_size();
 ```  
   
-### <a name="remarks"></a>Note  
- Il costruttore inizializza i valori archiviati `_Nblocks` e `_Nallocs` su zero.  
+### <a name="remarks"></a>Remarks  
+ The constructor initializes the stored values `_Nblocks` and `_Nallocs` to zero.  
   
 ##  <a name="released"></a>  max_variable_size::released  
- Decrementa il conteggio dei blocchi di memoria nell'elenco di disponibilità.  
+ Decrements the count of memory blocks on the free list.  
   
 ```
 void released();
 ```  
   
-### <a name="remarks"></a>Note  
- Questa funzione membro decrementa il valore archiviato `_Nblocks`. La funzione membro `released` della classe max corrente viene chiamata da `cache_freelist::allocate` ogni volta che rimuove un blocco di memoria dall'elenco di disponibilità.  
+### <a name="remarks"></a>Remarks  
+ This member function decrements the stored value `_Nblocks`. The `released` member function of the current max class is called by `cache_freelist::allocate` whenever it removes a memory block from the free list.  
   
 ##  <a name="saved"></a>  max_variable_size::saved  
- Incrementa il conteggio dei blocchi di memoria nell'elenco di disponibilità.  
+ Increments the count of memory blocks on the free list.  
   
 ```
 void saved();
 ```  
   
-### <a name="remarks"></a>Note  
- Questa funzione membro incrementa il valore archiviato `_Nblocks`. Viene chiamata da `cache_freelist::deallocate` ogni volta che inserisce un blocco di memoria nell'elenco di disponibilità.  
+### <a name="remarks"></a>Remarks  
+ This member function increments the stored value `_Nblocks`. This member function is called by `cache_freelist::deallocate` whenever it puts a memory block on the free list.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [\<allocators>](../standard-library/allocators-header.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: Classe stack | Microsoft Docs
+title: stack Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- stack
 - stack/std::stack::container_type
 - stack/std::stack::size_type
 - stack/std::stack::value_type
@@ -21,8 +20,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- stack, stack class
-- stack class
+- std::stack [C++], container_type
+- std::stack [C++], size_type
+- std::stack [C++], value_type
+- std::stack [C++], empty
+- std::stack [C++], pop
+- std::stack [C++], push
+- std::stack [C++], size
+- std::stack [C++], top
 ms.assetid: 02151c1e-eab0-41b8-be94-a839ead78ecf
 caps.latest.revision: 22
 author: corob-msft
@@ -42,98 +47,98 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 57f6d4a94348e8565a8c8e21b248335d9d9c651d
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: f09ff7fca199d2d30c35954a69ee292ee61e151e
 ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="stack-class"></a>Classe stack
-Una classe di adattatori di contenitori di modelli che fornisce una restrizione di funzionalità, limitando l'accesso all'elemento aggiunto più recentemente a un tipo di contenitore sottostante. La classe stack viene usata quando è importante chiarire che sul contenitore vengono eseguite solo operazioni di stack.  
+# <a name="stack-class"></a>stack Class
+A template container adaptor class that provides a restriction of functionality limiting access to the element most recently added to some underlying container type. The stack class is used when it is important to be clear that only stack operations are being performed on the container.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Type, class Container= deque <Type>>  
 class stack  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  *Type*  
- Tipo di dati degli elementi da archiviare nello stack.  
+ The element data type to be stored in the stack.  
   
  `Container`  
- Tipo del contenitore sottostante usato per implementare lo stack. Il valore predefinito è la classe `deque`*\<Type>*.  
+ The type of the underlying container used to implement the stack. The default value is the class `deque`*\<Type>*.  
   
-## <a name="remarks"></a>Note  
- Gli elementi della classe **Type** stipulata nel primo parametro di modello di un oggetto stack sono sinonimi di [value_type](#value_type) e devono corrispondere al tipo di elemento della classe contenitore sottostante **Container** stipulata dal secondo parametro di modello. La classe **Type** deve essere assegnabile, in modo che sia possibile copiare oggetti di quel tipo e assegnare valori alle variabili di quel tipo.  
+## <a name="remarks"></a>Remarks  
+ The elements of class **Type** stipulated in the first template parameter of a stack object are synonymous with [value_type](#value_type) and must match the type of element in the underlying container class **Container** stipulated by the second template parameter. The **Type** must be assignable, so that it is possible to copy objects of that type and to assign values to variables of that type.  
   
- Le classi contenitore sottostanti idonee per lo stack includono le classi [deque](../standard-library/deque-class.md), [list](../standard-library/list-class.md) e [vector](../standard-library/vector-class.md) o qualsiasi altro contenitore sequenziale che supporta il funzionamento di **back**, `push_back` e `pop_back`. La classe del contenitore sottostante è incapsulata nell'adattatore di contenitori, che espone solo il set limitato di funzioni membro dei contenitori di sequenza come interfaccia pubblica.  
+ Suitable underlying container classes for stack include [deque](../standard-library/deque-class.md), [list class](../standard-library/list-class.md), and [vector class](../standard-library/vector-class.md), or any other sequence container that supports the operations of **back**, `push_back`, and `pop_back`. The underlying container class is encapsulated within the container adaptor, which exposes only the limited set of the sequence container member functions as a public interface.  
   
- Gli oggetti stack sono di tipo EqualityComparable se e solo se gli elementi della classe **Type** sono di tipo EqualityComparable. Sono invece di tipo LessThanComparable se e solo se gli elementi della classe **Type** sono di tipo LessThanComparable.  
+ The stack objects are equality comparable if and only if the elements of class **Type** are equality comparable and are less-than comparable if and only if the elements of class **Type** are less-than comparable.  
   
--   La classe stack supporta la struttura dei dati LIFO (Last-In, First-Out). Una buona analogia è costituita da una pila di piatti. Gli elementi (piatti) possono essere inseriti, ispezionati o rimossi solo dalla cima della pila/stack, ovvero l'ultimo elemento alla fine del contenitore di base. La restrizione relativa alla possibilità di accedere solo al primo elemento è il motivo per l'uso della classe stack.  
+-   The stack class supports a last-in, first-out (LIFO) data structure. A good analogue to keep in mind would be a stack of plates. Elements (plates) may be inserted, inspected, or removed only from the top of the stack, which is the last element at the end of the base container. The restriction to accessing only the top element is the reason for using the stack class.  
   
--   La [classe queue](../standard-library/queue-class.md) supporta una struttura dei dati FIFO (First-In, First-Out). Una buona analogia è costituita da persone in coda davanti allo sportello di una banca. Gli elementi (persone) possono essere aggiunti alla fine della fila e vengono rimossi dalla parte iniziale della fila. È possibile ispezionare sia l'inizio che la fine della fila. La restrizione relativa alla possibilità di accedere solo agli elementi iniziali e finali in questo modo costituisce il motivo per l'uso della classe queue.  
+-   The [queue class](../standard-library/queue-class.md) supports a first-in, first-out (FIFO) data structure. A good analogue to keep in mind would be people lining up for a bank teller. Elements (people) may be added to the back of the line and are removed from the front of the line. Both the front and the back of a line may be inspected. The restriction to accessing only the front and back elements in this way is the reason fur using the queue class.  
   
--   La [classe priority_queue](../standard-library/priority-queue-class.md) ordina gli elementi in modo che l'elemento più grande sia sempre in prima posizione. Supporta l'inserimento di un elemento e l'ispezione e la rimozione del primo elemento. Una buona analogia è costituita da una fila di persone disposte in base a età, altezza o qualche altro criterio.  
+-   The [priority_queue class](../standard-library/priority-queue-class.md) orders its elements so that the largest element is always at the top position. It supports insertion of an element and the inspection and removal of the top element. A good analogue to keep in mind would be people lining up where they are arranged by age, height, or some other criterion.  
   
-### <a name="constructors"></a>Costruttori  
-  
-|||  
-|-|-|  
-|[stack](#stack)|Costruisce un `stack` vuoto o che rappresenta una copia totale o parziale di un oggetto contenitore di base.|  
-  
-### <a name="typedefs"></a>Typedef  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[container_type](#container_type)|Tipo che fornisce il contenitore di base che deve essere adattato da un oggetto `stack`.|  
-|[size_type](#size_type)|Tipo Unsigned Integer in grado di rappresentare il numero di elementi di un `stack`.|  
-|[value_type](#value_type)|Tipo che rappresenta il tipo di oggetto archiviato come elemento in `stack`.|  
+|[stack](#stack)|Constructs a `stack` that is empty or that is a copy of a base container object.|  
   
-### <a name="member-functions"></a>Funzioni membro  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[empty](#empty)|Verifica se `stack` è vuoto.|  
-|[pop](#pop)|Rimuove l'elemento dalla parte superiore di `stack`.|  
-|[push](#push)|Aggiunge un elemento alla parte superiore di `stack`.|  
-|[size](#size)|Restituisce il numero di elementi nel `stack`.|  
-|[top](#top)|Restituisce un riferimento a un elemento nella parte superiore di `stack`.|  
+|[container_type](#container_type)|A type that provides the base container to be adapted by a `stack`.|  
+|[size_type](#size_type)|An unsigned integer type that can represent the number of elements in a `stack`.|  
+|[value_type](#value_type)|A type that represents the type of object stored as an element in a `stack`.|  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<stack>  
+### <a name="member-functions"></a>Member Functions  
   
- **Spazio dei nomi:** std  
+|||  
+|-|-|  
+|[empty](#empty)|Tests if the `stack` is empty.|  
+|[pop](#pop)|Removes the element from the top of the `stack`.|  
+|[push](#push)|Adds an element to the top of the `stack`.|  
+|[size](#size)|Returns the number of elements in the `stack`.|  
+|[top](#top)|Returns a reference to an element at the top of the `stack`.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<stack>  
+  
+ **Namespace:** std  
   
 ##  <a name="container_type"></a>  stack::container_type  
- Tipo che fornisce il contenitore di base da adattare.  
+ A type that provides the base container to be adapted.  
   
 ```  
 typedef Container container_type;  
 ```  
   
-### <a name="remarks"></a>Note  
- Il tipo è un sinonimo del parametro di modello `Container`. Tutti e tre i contenitori sequenziali della libreria standard C++, ovvero la classe vector, la classe list e la classe predefinita deque, soddisfano i requisiti richiesti e possono essere usati come contenitori per un oggetto stack. È anche possibile usare tipi definiti dall'utente che soddisfano i requisiti.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter `Container`. All three C++ Standard Library sequence container classes — the vector class, list class, and the default class deque — meet the requirements to be used as the base container for a stack object. User-defined types satisfying these requirements may also be used.  
   
- Per altre informazioni su `Container`, vedere la sezione Note dell'argomento [Classe stack](../standard-library/stack-class.md).  
+ For more information on `Container`, see the Remarks section of the [stack Class](../standard-library/stack-class.md) topic.  
   
-### <a name="example"></a>Esempio  
-  Vedere l'esempio relativo a [stack::stack](#stack) per indicazioni su come dichiarare e usare `container_type`.  
+### <a name="example"></a>Example  
+  See the example for [stack::stack](#stack) for an example of how to declare and use `container_type`.  
   
 ##  <a name="empty"></a>  stack::empty  
- Verifica se uno stack è vuoto.  
+ Tests if a stack is empty.  
   
 ```  
 bool empty() const;
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- **true** se l'oggetto stack è vuoto; in caso contrario, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the stack is empty; **false** if the stack is nonempty.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // stack_empty.cpp  
@@ -167,16 +172,16 @@ The stack s2 is empty.
 ```  
   
 ##  <a name="pop"></a>  stack::pop  
- Rimuove l'elemento all'inizio dello stack.  
+ Removes the element from the top of the stack.  
   
 ```  
 void pop();
 ```  
   
-### <a name="remarks"></a>Note  
- Per applicare la funzione membro, lo stack deve essere non vuoto. L'inizio dello stack è la posizione occupata dall'elemento aggiunto più di recente ed è l'ultimo elemento alla fine del contenitore.  
+### <a name="remarks"></a>Remarks  
+ The stack must be nonempty to apply the member function. The top of the stack is the position occupied by the most recently added element and is the last element at the end of the container.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // stack_pop.cpp  
@@ -221,20 +226,20 @@ After a pop, the element at the top of the stack is 20.
 ```  
   
 ##  <a name="push"></a>  stack::push  
- Aggiunge un elemento alla fine dello stack.  
+ Adds an element to the top end of the stack.  
   
 ```  
 void push(const Type& val);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `val`  
- Elemento aggiunto all'inizio dello stack.  
+ The element added to the top of the stack.  
   
-### <a name="remarks"></a>Note  
- L'inizio dello stack è la posizione occupata dall'elemento aggiunto più di recente ed è l'ultimo elemento alla fine del contenitore.  
+### <a name="remarks"></a>Remarks  
+ The top of the stack is the position occupied by the most recently added element and is the last element at the end of the container.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // stack_push.cpp  
@@ -267,16 +272,16 @@ The element at the top of the stack is 30.
 ```  
   
 ##  <a name="size"></a>  stack::size  
- Restituisce il numero di elementi presenti nello stack.  
+ Returns the number of elements in the stack.  
   
 ```  
 size_type size() const;
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Lunghezza corrente dello stack.  
+### <a name="return-value"></a>Return Value  
+ The current length of the stack.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // stack_size.cpp  
@@ -306,20 +311,20 @@ The stack length is now 2.
 ```  
   
 ##  <a name="size_type"></a>  stack::size_type  
- Tipo Unsigned Integer in grado di rappresentare il numero di elementi di uno stack.  
+ An unsigned integer type that can represent the number of elements in a stack.  
   
 ```  
 typedef typename Container::size_type size_type;  
 ```  
   
-### <a name="remarks"></a>Note  
- Il tipo è un sinonimo del `size_type` del contenitore di base adattato dallo stack.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for `size_type` of the base container adapted by the stack.  
   
-### <a name="example"></a>Esempio  
-  Vedere l'esempio relativo a [size](#size) per indicazioni su come dichiarare e usare `size_type`.  
+### <a name="example"></a>Example  
+  See the example for [size](#size) for an example of how to declare and use `size_type`.  
   
 ##  <a name="stack"></a>  stack::stack  
- Costruisce uno stack vuoto o che rappresenta una copia totale o parziale di una classe contenitore di base.  
+ Constructs a stack that is empty or that is a copy of a base container class.  
   
 ```  
 stack();
@@ -327,11 +332,11 @@ stack();
 explicit stack(const container_type& right);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `right`  
- Contenitore di cui lo stack costruito deve essere una copia.  
+ The container of which the constructed stack is to be a copy.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // stack_stack.cpp  
@@ -371,7 +376,7 @@ The element at the top of stack vsi2 is 1.
 ```  
   
 ##  <a name="top"></a>  stack::top  
- Restituisce un riferimento a un elemento all'inizio dello stack.  
+ Returns a reference to an element at the top of the stack.  
   
 ```  
 reference top();
@@ -379,15 +384,15 @@ reference top();
 const_reference top() const;
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Riferimento all'ultimo elemento del contenitore all'inizio dello stack.  
+### <a name="return-value"></a>Return Value  
+ A reference to the last element in the container at the top of the stack.  
   
-### <a name="remarks"></a>Note  
- Per applicare la funzione membro, lo stack deve essere non vuoto. L'inizio dello stack è la posizione occupata dall'elemento aggiunto più di recente ed è l'ultimo elemento alla fine del contenitore.  
+### <a name="remarks"></a>Remarks  
+ The stack must be nonempty to apply the member function. The top of the stack is the position occupied by the most recently added element and is the last element at the end of the container.  
   
- Se il valore restituito di **top** viene assegnato a `const_reference`, l'oggetto stack non può essere modificato. Se il valore restituito di **top** viene assegnato a un oggetto **reference**, l'oggetto stack può essere modificato.  
+ If the return value of **top** is assigned to a `const_reference`, the stack object cannot be modified. If the return value of **top** is assigned to a **reference**, the stack object can be modified.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // stack_top.cpp  
@@ -419,16 +424,16 @@ The next integer down is 1.
 ```  
   
 ##  <a name="value_type"></a>  stack::value_type  
- Tipo che rappresenta il tipo di oggetto archiviato come elemento in uno stack.  
+ A type that represents the type of object stored as an element in a stack.  
   
 ```  
 typedef typename Container::value_type value_type;  
 ```  
   
-### <a name="remarks"></a>Note  
- Il tipo è un sinonimo del `value_type` del contenitore di base adattato dallo stack.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for `value_type` of the base container adapted by the stack.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // stack_value_type.cpp  
@@ -457,8 +462,8 @@ The value_type is AnInt = 69
 The element at the top of the stack is 69.  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)  (Sicurezza dei thread nella libreria standard C++)  
- [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 

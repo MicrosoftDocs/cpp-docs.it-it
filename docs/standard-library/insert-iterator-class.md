@@ -1,5 +1,5 @@
 ---
-title: Classe insert_iterator | Microsoft Docs
+title: insert_iterator Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - iterator/std::insert_iterator
-- insert_iterator
 - iterator/std::insert_iterator::container_type
 - iterator/std::insert_iterator::reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- insert_iterator class
-- insert_iterator class, syntax
+- std::insert_iterator [C++]
+- std::insert_iterator [C++], container_type
+- std::insert_iterator [C++], reference
 ms.assetid: d5d86405-872e-4e3b-9e68-c69a2b7e8221
 caps.latest.revision: 17
 author: corob-msft
@@ -37,67 +37,67 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 79e0603aeafe714b891e5564d68cbed6ede89768
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 1f4f56297b7247234518cb93600b95698b9e2c5a
 ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="insertiterator-class"></a>Classe insert_iterator
-Descrive un adattatore dell'iteratore che soddisfa i requisiti dell'iteratore di output. Inserisce, anziché sovrascrivere, gli elementi in una sequenza, fornendo in questo modo una semantica diversa dalla semantica di sovrascrittura fornita dagli iteratori dei contenitori associativi e di sequenza C++. Viene creato un modello della classe `insert_iterator` in base al tipo di contenitore da adattare.  
+# <a name="insertiterator-class"></a>insert_iterator Class
+Describes an iterator adaptor that satisfies the requirements of an output iterator. It inserts, rather than overwrites, elements into a sequence and thus provides semantics that are different from the overwrite semantics provided by the iterators of the C++ sequence and associative containers. The `insert_iterator` class is templatized on the type of container being adapted.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Container>  
 class insert_iterator;
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  `Container`  
- Tipo di contenitore in cui devono essere inseriti gli elementi da un `insert_iterator`.  
+ The type of container into which elements are to be inserted by an `insert_iterator`.  
   
-## <a name="remarks"></a>Note  
- Il contenitore di tipo **Container** deve soddisfare i requisiti relativi a un contenitore a dimensione variabile e disporre di una funzione membro di inserimento a due argomenti in cui i parametri sono di tipo **Container::iterator** e **Container::value_type** e che restituisce un tipo **Container::iterator**. La sequenza della libreria standard C++ e i contenitori associativi ordinati soddisfano tali requisiti e possono essere adattati per l'uso con `insert_iterator`. Per i contenitori associativi, l'argomento della posizione viene considerato come un suggerimento, che potrebbe migliorare o ridurre le prestazioni a seconda della validità di tale suggerimento. Un `insert_iterator` deve essere sempre inizializzato insieme al relativo contenitore.  
+## <a name="remarks"></a>Remarks  
+ The container of type **Container** must satisfy the requirements for a variable-sized container and have a two-argument insert member function where the parameters are of type **Container::iterator** and **Container::value_type** and that returns a type **Container::iterator**. C++ Standard Library sequence and sorted associative containers satisfy these requirements and can be adapted to use with `insert_iterator`s. For associative containers, the position argument is treated as a hint, which has the potential to improve or degrade performance depending on how good the hint is. An `insert_iterator` must always be initialized with its container.  
   
-### <a name="constructors"></a>Costruttori  
-  
-|||  
-|-|-|  
-|[insert_iterator](#insert_iterator)|Costruisce un `insert_iterator` che inserisce un elemento in una posizione specificata di un contenitore.|  
-  
-### <a name="typedefs"></a>Typedef  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[container_type](#container_type)|Tipo che rappresenta il contenitore in cui è necessario effettuare un inserimento generale.|  
-|[reference](#reference)|Tipo che fornisce un riferimento a un elemento di una sequenza controllata dal contenitore associato.|  
+|[insert_iterator](#insert_iterator)|Constructs an `insert_iterator` that inserts an element into a specified position in a container.|  
   
-### <a name="operators"></a>Operatori  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[operator*](#op_star)|Operatore di dereferenziazione usato per implementare l'espressione dell'iteratore di output * `i` = `x` per un inserimento generale.|  
-|[operator++](#op_add_add)|Incrementa `insert_iterator` alla posizione successiva in cui è possibile archiviare un valore.|  
-|[operator=](#op_eq)|Operatore di assegnazione usato per implementare l'espressione dell'iteratore di output * `i` = `x` per un inserimento generale.|  
+|[container_type](#container_type)|A type that represents the container into which a general insertion is to be made.|  
+|[reference](#reference)|A type that provides a reference to an element in a sequence controlled by the associated container.|  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione**: \<iterator>  
+### <a name="operators"></a>Operators  
   
- **Spazio dei nomi:** std  
+|||  
+|-|-|  
+|[operator*](#op_star)|Dereferencing operator used to implement the output iterator expression * `i` = `x` for a general insertion.|  
+|[operator++](#op_add_add)|Increments the `insert_iterator` to the next location into which a value may be stored.|  
+|[operator=](#op_eq)|Assignment operator used to implement the output iterator expression * `i` = `x` for a general insertion.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header**: \<iterator>  
+  
+ **Namespace:** std  
   
 ##  <a name="container_type"></a>  insert_iterator::container_type  
- Tipo che rappresenta il contenitore in cui è necessario effettuare un inserimento generale.  
+ A type that represents the container into which a general insertion is to be made.  
   
 ```
 typedef Container container_type;
 ```  
   
-### <a name="remarks"></a>Note  
- Il tipo è un sinonimo del parametro di modello **Container**.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **Container**.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // insert_iterator_container_type.cpp  
@@ -128,23 +128,23 @@ The list L2 is: ( 40 20 10 ).
 ```  
   
 ##  <a name="insert_iterator"></a>  insert_iterator::insert_iterator  
- Costruisce un `insert_iterator` che inserisce un elemento in una posizione specificata di un contenitore.  
+ Constructs an `insert_iterator` that inserts an element into a specified position in a container.  
   
 ```
 insert_iterator(Container& _Cont, typename Container::iterator _It);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `_Cont`  
- Contenitore in cui `insert_iterator` deve inserire gli elementi.  
+ The container into which the `insert_iterator` is to insert elements.  
   
  `_It`  
- Posizione per l'inserimento.  
+ The position for the insertion.  
   
-### <a name="remarks"></a>Note  
- Tutti i contenitori hanno la funzione membro di inserimento chiamata da `insert_iterator`. Per i contenitori associativi il parametro della posizione è semplicemente un suggerimento. La funzione insert offre un modo pratico per inserire valori.  
+### <a name="remarks"></a>Remarks  
+ All containers have the insert member function called by the `insert_iterator`. For associative containers the position parameter is merely a suggestion. The inserter function provides a convenient way to insert to values.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // insert_iterator_insert_iterator.cpp  
@@ -191,19 +191,19 @@ After the insertions, the list L is:
 ```  
   
 ##  <a name="op_star"></a>  insert_iterator::operator*  
- Dereferenzia l'iteratore di inserimento restituendo l'elemento a cui punta.  
+ Dereferences the insert iterator returning the element is addresses.  
   
 ```
 insert_iterator<Container>& operator*();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- La funzione membro restituisce il valore dell'elemento puntato.  
+### <a name="return-value"></a>Return Value  
+ The member function returns the value of the element addressed.  
   
-### <a name="remarks"></a>Note  
- Usato per implementare l'espressione dell'iteratore di output **\*Iter** = **value**. Se **Iter** è un iteratore che punta a un elemento in una sequenza, **\*Iter** = **value** sostituisce l'elemento con il valore senza modificare il numero totale di elementi presenti nella sequenza.  
+### <a name="remarks"></a>Remarks  
+ Used to implement the output iterator expression **\*Iter** = **value**. If **Iter** is an iterator that addresses an element in a sequence, then **\*Iter** = **value** replaces that element with value and does not change the total number of elements in the sequence.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // insert_iterator_op_deref.cpp  
@@ -248,7 +248,7 @@ After the insertions, the list L is:
 ```  
   
 ##  <a name="op_add_add"></a>  insert_iterator::operator++  
- Incrementa **insert_iterator** in base alla posizione successiva in cui può essere archiviato un valore.  
+ Increments the **insert_iterator** to the next location into which a value may be stored.  
   
 ```
 insert_iterator<Container>& operator++();
@@ -256,13 +256,13 @@ insert_iterator<Container>& operator++();
 insert_iterator<Container> operator++(int);
 ```  
   
-### <a name="parameters"></a>Parametri  
- `insert_iterator` che punta alla posizione successiva in cui può essere archiviato un valore.  
+### <a name="parameters"></a>Parameters  
+ A `insert_iterator` addressing the next location into which a value may be stored.  
   
-### <a name="remarks"></a>Note  
- Sia gli operatori di pre-incremento che quelli di post-incremento restituiscono lo stesso risultato.  
+### <a name="remarks"></a>Remarks  
+ Both preincrementation and postincrementation operators return the same result.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // insert_iterator_op_incr.cpp  
@@ -309,7 +309,7 @@ After the insertions, the vector vec becomes:
 ```  
   
 ##  <a name="op_eq"></a>  insert_iterator::operator=  
- Inserisce un valore nel contenitore e restituisce l'iteratore aggiornato in modo da puntare al nuovo elemento.  
+ Inserts a value into the container and returns the iterator updated to point to the new element.  
   
 ```
 insert_iterator<Container>& operator=(
@@ -319,31 +319,31 @@ insert_iterator<Container>& operator=(
     typename Container::value_type&& val);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `val`  
- Valore da assegnare al contenitore.  
+ The value to be assigned to the container.  
   
-### <a name="return-value"></a>Valore restituito  
- Riferimento all'elemento inserito nel contenitore.  
+### <a name="return-value"></a>Return Value  
+ A reference to the element inserted into the container.  
   
-### <a name="remarks"></a>Note  
- Il primo operatore membro valuta  
+### <a name="remarks"></a>Remarks  
+ The first member operator evaluates  
   
  `Iter = container->insert(Iter, val)`;  
   
  `++Iter;`  
   
- e quindi restituisce `*this`.  
+ then returns `*this`.  
   
- Il secondo operatore membro valuta  
+ The second member operator evaluates  
   
  `Iter = container->insert(Iter, std::move(val));`  
   
  `++Iter;`  
   
- e quindi restituisce `*this`.  
+ then returns `*this`.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // insert_iterator_op_assign.cpp  
@@ -388,16 +388,16 @@ After the insertions, the list L is:
 ```  
   
 ##  <a name="reference"></a>  insert_iterator::reference  
- Tipo che fornisce un riferimento a un elemento di una sequenza controllata dal contenitore associato.  
+ A type that provides a reference to an element in a sequence controlled by the associated container.  
   
 ```
 typedef typename Container::reference reference;
 ```  
   
-### <a name="remarks"></a>Note  
- Il tipo descrive un riferimento a un elemento della sequenza controllata dal contenitore associato.  
+### <a name="remarks"></a>Remarks  
+ The type describes a reference to an element of the sequence controlled by the associated container.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // insert_iterator_container_reference.cpp  
@@ -433,10 +433,10 @@ The first element in the list L is: 10.
 *\  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [\<iterator>](../standard-library/iterator.md)   
- [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

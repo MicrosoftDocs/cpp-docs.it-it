@@ -1,5 +1,5 @@
 ---
-title: Funzioni &lt;tuple&gt; | Microsoft Docs
+title: '&lt;tuple&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,20 +18,27 @@ dev_langs:
 ms.assetid: bc6be38f-5258-4c14-b81b-63caa335fd44
 caps.latest.revision: 13
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: acf980e3bcd491eb08dee0c87ee1762dc25b417b
+helpviewer_keywords:
+- std::get [C++]
+- std::make_tuple [C++]
+- std::tie [C++]
+- std::get [C++]
+- std::make_tuple [C++]
+- std::tie [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 8853217b74474559ea00fe0819ec819bde5f9a3d
 ms.contentlocale: it-it
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="lttuplegt-functions"></a>Funzioni &lt;tuple&gt;
+# <a name="lttuplegt-functions"></a>&lt;tuple&gt; functions
 ||||  
 |-|-|-|  
 |[get](#get)|[make_tuple](#make_tuple)|[tie](#tie)|  
   
 ##  <a name="get"></a>  get
- Consente di visualizzare un elemento dall'oggetto `tuple` , in base all'indice o (in C++14) in base al tipo.  
+ Gets an element from a `tuple` object, by index or (in C++14) by type.  
   
 ```  
 // by index:
@@ -61,25 +68,25 @@ template <class T, class... Types>
    constexpr T&& get(tuple<Types...>&& Tuple) noexcept;  
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `Index`  
- L'indice dell'elemento da visualizzare.  
+ The index of the element to get.  
   
  `Types`  
- La sequenza relativa ai tipi dichiarati nella tupla, in ordine di dichiarazione.  
+ The sequence of types declared in the tuple, in declaration order.  
   
  `T`  
- Il tipo di elemento da visualizzare.  
+ The type of the element to get.  
   
  `Tuple`  
- Un valore std::tuple che include il numero degli elementi.  
+ A std::tuple that contains any number of elements.  
   
-### <a name="remarks"></a>Note  
- Le funzionalità del modello restituiscono un riferimento al valore dell'indice `Index`o del tipo `T` nell'oggetto `tuple` .  
+### <a name="remarks"></a>Remarks  
+ The template functions return a reference to the value at index `Index`, or of type `T` in the `tuple` object.  
   
- La chiamata `get<T>(Tuple)` genera un errore del compilatore, nel caso in cui la tupla contenga più di un elemento o non contenga elementi di tipo T.  
+ Calling `get<T>(Tuple)` will produce a compiler error if Tuple contains more or less than one element of type T.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 #include <tuple>   
@@ -108,27 +115,27 @@ int main() {
 0 1.42 Call me Tuple  
 ```  
   
-##  <a name="make_tuple"></a>make_tuple
- Genera un oggetto `tuple` da valori di elemento.  
+##  <a name="make_tuple"></a>  make_tuple
+ Makes a `tuple` from element values.  
   
 ```  
 template <class T1, class T2, ..., class TN>  
    tuple<V1, V2, ..., VN> make_tuple(const T1& t1, const T2& t2, ..., const TN& tN);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `TN`  
- Tipo del parametro di funzione Nth.  
+ The type of the Nth function parameter.  
   
  `tN`  
- Valore del parametro di funzione Nth.  
+ The value of the Nth function parameter.  
   
-### <a name="remarks"></a>Note  
- La funzione modello restituisce `tuple<V1, V2, ..., VN>(t1, t2, ..., tN)`, dove ciascun tipo `Vi` è `X&` quando il corrispondente tipo `Ti` è `cv` `reference_wrapper<X>`; in caso contrario, è `Ti`.  
+### <a name="remarks"></a>Remarks  
+ The template function returns `tuple<V1, V2, ..., VN>(t1, t2, ..., tN)`, where each type `Vi` is `X&` when the corresponding type `Ti` is `cv` `reference_wrapper<X>`; otherwise, it is `Ti`.  
   
- Un vantaggio di `make_tuple` consiste nel fatto che i tipi di oggetti archiviati vengono determinati automaticamente dal compilatore e non devono essere specificati in modo esplicito. Non utilizzare gli argomenti di modello espliciti come `make_tuple<int, int>(1, 2)` quando si usa `make_tuple` perché è inutilmente dettagliato e aggiunge problemi complessi relativi ai riferimenti rvalue che potrebbero provocare un errore di compilazione.  
+ One advantage of `make_tuple` is that the types of objects that are being stored are determined automatically by the compiler and do not have to be explicitly specified. Don't use explicit template arguments such as `make_tuple<int, int>(1, 2)` when you use `make_tuple` because it is unnecessarily verbose and adds complex rvalue reference problems that might cause compilation failure.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__tuple__make_tuple.cpp   
@@ -165,22 +172,22 @@ int main() {
  4 5 6 7  
 ```  
   
-##  <a name="tie"></a>tie
- Genera un oggetto `tuple` da riferimenti di elemento.  
+##  <a name="tie"></a>  tie
+ Makes a `tuple` from element references.  
   
 ```  
 template <class T1, class T2, ..., class TN>  
 tuple<T1&, T2&, ..., TN&> tie(T1& t1, T2& t2, ..., TN& tN);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `TN`  
- Tipo di base dell'ennesimo elemento tupla.  
+ The base type of the Nth tuple element.  
   
-### <a name="remarks"></a>Note  
- La funzione modello restituisce `tuple<T1&, T2&, ..., TN&>(t1, t2, ..., tN)`.  
+### <a name="remarks"></a>Remarks  
+ The template function returns `tuple<T1&, T2&, ..., TN&>(t1, t2, ..., tN)`.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__tuple__tie.cpp   
@@ -221,7 +228,7 @@ int main() {
 0 1 2 3  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [\<tuple>](../standard-library/tuple.md)
 
 

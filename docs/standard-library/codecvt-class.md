@@ -1,5 +1,5 @@
 ---
-title: Classe codecvt | Microsoft Docs
+title: codecvt Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- codecvt
 - xlocale/std::codecvt
 - locale/std::codecvt::extern_type
 - locale/std::codecvt::intern_type
@@ -31,7 +30,24 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- codecvt class
+- std::codecvt [C++]
+- std::codecvt [C++], extern_type
+- std::codecvt [C++], intern_type
+- std::codecvt [C++], state_type
+- std::codecvt [C++], always_noconv
+- std::codecvt [C++], do_always_noconv
+- std::codecvt [C++], do_encoding
+- std::codecvt [C++], do_in
+- std::codecvt [C++], do_length
+- std::codecvt [C++], do_max_length
+- std::codecvt [C++], do_out
+- std::codecvt [C++], do_unshift
+- std::codecvt [C++], encoding
+- std::codecvt [C++], in
+- std::codecvt [C++], length
+- std::codecvt [C++], max_length
+- std::codecvt [C++], out
+- std::codecvt [C++], unshift
 ms.assetid: 37d3efa1-2b7f-42b6-b04f-7a972c8c2c86
 caps.latest.revision: 23
 author: corob-msft
@@ -51,114 +67,114 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 2f96bb4a2eb577eb490b492ec425220ea5ce9eb3
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: b6d5be54b532879b685bd5200dec575610d61489
 ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="codecvt-class"></a>Classe codecvt
-Classe modello che descrive un oggetto che può essere utilizzato come facet delle impostazioni locali. Tale classe è in grado di controllare le conversioni tra una sequenza di valori utilizzata per codificare i caratteri all'interno del programma e una sequenza di valori utilizzata per codificare i caratteri all'esterno del programma.  
+# <a name="codecvt-class"></a>codecvt Class
+A template class that describes an object that can serve as a locale facet. It is able to control conversions between a sequence of values used to encode characters within the program and a sequence of values used to encode characters outside the program.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class CharType, class Byte, class StateType>  
 class codecvt : public locale::facet, codecvt_base;  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  `CharType`  
- Tipo utilizzato all'interno di un programma per codificare i caratteri.  
+ The type used within a program to encode characters.  
   
  `Byte`  
- Tipo utilizzato per codificare i caratteri all'esterno di un programma.  
+ A type used to encode characters outside a program.  
   
  `StateType`  
- Tipo che può essere utilizzato per rappresentare gli stati intermedi di una conversione tra tipi di rappresentazioni di caratteri interni ed esterni.  
+ A type that can be used to represent intermediate states of a conversion between internal and external types of character representations.  
   
-## <a name="remarks"></a>Note  
- La classe modello descrive un oggetto che può essere usato come [facet delle impostazioni locali](../standard-library/locale-class.md#facet_class) per controllare le conversioni tra una sequenza di valori di tipo `CharType` e una sequenza di valori di tipo `Byte`. La classe `StateType` caratterizza la trasformazione e un oggetto della classe `StateType` archivia tutte le informazioni necessarie sullo stato durante una conversione.  
+## <a name="remarks"></a>Remarks  
+ The template class describes an object that can serve as a [locale facet](../standard-library/locale-class.md#facet_class), to control conversions between a sequence of values of type `CharType` and a sequence of values of type `Byte`. The class `StateType` characterizes the transformation -- and an object of class `StateType` stores any necessary state information during a conversion.  
   
- Nella codifica interna viene utilizzata una rappresentazione con un numero fisso di byte per carattere, in genere il tipo `char` o `wchar_t`.  
+ The internal encoding uses a representation with a fixed number of bytes per character, usually either type `char` or type `wchar_t`.  
   
- Come in qualsiasi facet delle impostazioni locali, l'oggetto statico `id` ha un valore archiviato iniziale uguale a zero. Il primo tentativo di accedere al valore archiviato consente di archiviare un valore positivo univoco in `id`.  
+ As with any locale facet, the static object `id` has an initial stored value of zero. The first attempt to access its stored value stores a unique positive value in `id`.  
   
- Le versioni dei modelli di [do_in](#do_in) e [do_out](#do_out) restituiscono sempre `codecvt_base::noconv`.  
+ The template versions of [do_in](#do_in) and [do_out](#do_out) always return `codecvt_base::noconv`.  
   
- Nella libreria standard C++ vengono definite diverse specializzazioni esplicite:  
+ The C++ Standard Library defines several explicit specializations:  
   
  `template<>`  
   
  `codecvt<wchar_t, char, mbstate_t>`  
   
- Esegue la conversione tra le sequenze `wchar_t` e `char`.  
+ converts between `wchar_t` and `char` sequences.  
   
  `template<>`  
   
  `codecvt<char16_t, char, mbstate_t>`  
   
- esegue la conversione tra le sequenze `char16_t` codificate come UTF-16 e le sequenze `char` codificate come UTF-8.  
+ converts between `char16_t` sequences encoded as UTF-16 and `char` sequences encoded as UTF-8.  
   
  `template<>`  
   
  `codecvt<char32_t, char, mbstate_t>`  
   
- esegue la conversione tra le sequenze `char32_t` codificate come UTF-32 (UCS-4) e le sequenze `char` codificate come UTF-8.  
+ converts between `char32_t` sequences encoded as UTF-32 (UCS-4) and `char` sequences encoded as UTF-8.  
   
-### <a name="constructors"></a>Costruttori  
-  
-|||  
-|-|-|  
-|[codecvt](#codecvt)|Costruttore per gli oggetti della classe `codecvt` utilizzato come facet delle impostazioni locali per gestire le conversioni.|  
-  
-### <a name="typedefs"></a>Typedef  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[extern_type](#extern_type)|Tipo di carattere utilizzato per le rappresentazioni esterne.|  
-|[intern_type](#intern_type)|Tipo di carattere utilizzato per le rappresentazioni interne.|  
-|[state_type](#state_type)|Tipo di carattere utilizzato per rappresentare gli stati intermedi durante le conversione tra le rappresentazioni interne ed esterne.|  
+|[codecvt](#codecvt)|The constructor for objects of class `codecvt` that serves as a locale facet to handle conversions.|  
   
-### <a name="member-functions"></a>Funzioni membro  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[always_noconv](#always_noconv)|Verifica che non sia necessario eseguire alcuna conversione.|  
-|[do_always_noconv](#do_always_noconv)|Funzione virtuale chiamata per verificare che non sia necessario eseguire alcuna conversione.|  
-|[do_encoding](#do_encoding)|Funzione virtuale che consente di verificare se la codifica del flusso `Byte` è dipendente dallo stato, se il rapporto tra i `Byte` utilizzati e i `CharType` generati è costante e, in caso affermativo, determina il valore di tale rapporto.|  
-|[do_in](#do_in)|Funzione virtuale chiamata per convertire una sequenza di `Byte` interni in una sequenza di `CharType` esterni.|  
-|[do_length](#do_length)|Funzione virtuale che determina il numero di `Byte` di una sequenza specificata di `Byte` esterni che produce non più di un numero specificato di `CharType` interni e che restituisce tale numero di `Byte`.|  
-|[do_max_length](#do_max_length)|Funzione virtuale che restituisce il numero massimo di byte esterni necessari per produrre un `CharType` interno.|  
-|[do_out](#do_out)|Funzione virtuale chiamata per convertire una sequenza di `CharType` interni in una sequenza di byte esterni.|  
-|[do_unshift](#do_unshift)|Funzione virtuale chiamata per fornire i `Byte` necessari in una conversione dipendente dallo stato per completare l'ultimo carattere di una sequenza di `Byte`.|  
-|[encoding](#encoding)|Verifica se la codifica del flusso `Byte` è dipendente dallo stato, se il rapporto tra i `Byte` utilizzati e i `CharType` generati è costante e, in caso affermativo, determina il valore di tale rapporto.|  
-|[in](#in)|Converte una rappresentazione esterna di una sequenza di `Byte` in una rappresentazione interna di una sequenza di `CharType`.|  
-|[length](#length)|Determina il numero di `Byte` di una sequenza specificata di `Byte` esterni che produce non più di un numero specificato di `CharType` interni e restituisce tale numero di `Byte`.|  
-|[max_length](#max_length)|Restituisce il numero massimo di `Byte` esterni necessari per produrre un `CharType` interno.|  
-|[out](#out)|Converte una sequenza di `CharType` interni in una sequenza di `Byte` esterni.|  
-|[unshift](#unshift)|Fornisce il `Byte` esterno necessario in una conversione dipendente dallo stato per completare l'ultimo carattere della sequenza di `Byte`.|  
+|[extern_type](#extern_type)|A character type that is used for external representations.|  
+|[intern_type](#intern_type)|A character type that is used for internal representations.|  
+|[state_type](#state_type)|A character type that is used to represent intermediate states during conversions between internal and external representations.|  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<locale>  
+### <a name="member-functions"></a>Member Functions  
   
- **Spazio dei nomi:** std  
+|||  
+|-|-|  
+|[always_noconv](#always_noconv)|Tests whether no conversions need be done.|  
+|[do_always_noconv](#do_always_noconv)|A virtual function called to test whether no conversions need be done.|  
+|[do_encoding](#do_encoding)|A virtual function that tests if the encoding of the `Byte` stream is state dependent, whether the ratio between the `Byte`s used and the `CharType`s produced is constant, and, if so, determines the value of that ratio.|  
+|[do_in](#do_in)|A virtual function called to convert a sequence of internal `Byte`s to a sequence of external `CharType`s.|  
+|[do_length](#do_length)|A virtual function that determines how many `Byte`s from a given sequence of external `Byte`s produce not more than a given number of internal `CharType`s and returns that number of `Byte`s.|  
+|[do_max_length](#do_max_length)|A virtual function that returns the maximum number of external Bytes necessary to produce one internal `CharType`.|  
+|[do_out](#do_out)|A virtual function called to convert a sequence of internal `CharType`s to a sequence of external Bytes.|  
+|[do_unshift](#do_unshift)|A virtual function called to provide the `Byte`s needed in a state-dependent conversion to complete the last character in a sequence of `Byte`s.|  
+|[encoding](#encoding)|Tests if the encoding of the `Byte` stream is state dependent, whether the ratio between the `Byte`s used and the `CharType`s produced is constant, and, if so, determines the value of that ratio.|  
+|[in](#in)|Converts an external representation of a sequence of `Byte`s to an internal representation of a sequence of `CharType`s.|  
+|[length](#length)|Determines how many `Byte`s from a given sequence of external `Byte`s produce not more than a given number of internal `CharType`s and returns that number of `Byte`s.|  
+|[max_length](#max_length)|Returns the maximum number of external `Byte`s necessary to produce one internal `CharType`.|  
+|[out](#out)|Converts a sequence of internal `CharType`s to a sequence of external `Byte`s.|  
+|[unshift](#unshift)|Provides the external `Byte`s needed in a state-dependent conversion to complete the last character in the sequence of `Byte`s.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
+  
+ **Namespace:** std  
   
 ##  <a name="always_noconv"></a>  codecvt::always_noconv  
- Verifica che non sia necessario eseguire alcuna conversione.  
+ Tests whether no conversions need be done.  
   
 ```  
 bool always_noconv() const throw();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Valore booleano che è **true** se non è necessario eseguire alcuna conversione, **false** se deve esserne eseguita almeno una.  
+### <a name="return-value"></a>Return Value  
+ A Boolean value that is **true** if no conversions need be done; **false** is at least one needs to be done.  
   
-### <a name="remarks"></a>Note  
- La funzione membro restituisce [do_always_noconv](#do_always_noconv).  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_always_noconv](#do_always_noconv).  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // codecvt_always_noconv.cpp  
@@ -194,63 +210,63 @@ At least one conversion is required.
 ```  
   
 ##  <a name="codecvt"></a>  codecvt::codecvt  
- Costruttore per gli oggetti della classe codecvt usato come facet delle impostazioni locali per gestire le conversioni.  
+ The constructor for objects of class codecvt that serves as a locale facet to handle conversions.  
   
 ```  
 explicit codecvt(size_t _Refs = 0);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `_Refs`  
- Valore Integer che consente di specificare il tipo di gestione della memoria per l'oggetto.  
+ Integer value used to specify the type of memory management for the object.  
   
-### <a name="remarks"></a>Note  
- I valori possibili per il parametro `_Refs` e i relativi significati sono:  
+### <a name="remarks"></a>Remarks  
+ The possible values for the `_Refs` parameter and their significance are:  
   
--   0: la durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.  
+-   0: The lifetime of the object is managed by the locales that contain it.  
   
--   1: la durata dell'oggetto deve essere gestita manualmente.  
+-   1: The lifetime of the object must be manually managed.  
   
--   \>1: questi valori non definiti.  
+-   \> 1: These values are not defined.  
   
- Il costruttore inizializza la `locale::facet` oggetto di base con **internazionali::**[facet](../standard-library/locale-class.md#facet_class)(`_Refs`).  
+ The constructor initializes its `locale::facet` base object with **locale::**[facet](../standard-library/locale-class.md#facet_class)(`_Refs`).  
   
 ##  <a name="do_always_noconv"></a>  codecvt::do_always_noconv  
- Funzione virtuale chiamata per verificare che non sia necessario eseguire alcuna conversione.  
+ A virtual function called to test whether no conversions need be done.  
   
 ```  
 virtual bool do_always_noconv() const throw();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- La funzione membro protetto virtuale restituisce **true** solo se ogni chiamata a [do_in](#do_in) o [do_out](#do_out) restituisce **noconv**.  
+### <a name="return-value"></a>Return Value  
+ The protected virtual member function returns **true** only if every call to [do_in](#do_in) or [do_out](#do_out) returns **noconv**.  
   
- La versione modello restituisce sempre **true**.  
+ The template version always returns **true**.  
   
-### <a name="example"></a>Esempio  
-  Vedere l'esempio per [always_noconv](#always_noconv), che chiama `do_always_noconv`.  
+### <a name="example"></a>Example  
+  See the example for [always_noconv](#always_noconv), which calls `do_always_noconv`.  
   
 ##  <a name="do_encoding"></a>  codecvt::do_encoding  
- Funzione virtuale che consente di verificare se la codifica del flusso di **Byte** dipende dallo stato, se il rapporto tra **Byte** usati e **CharType** generati è costante e, in caso affermativo, determina il valore di tale rapporto.  
+ A virtual function that tests if the encoding of the **Byte** stream is state dependent, whether the ratio between the **Byte**s used and the **CharType**s produced is constant and, if so, determines the value of that ratio.  
   
 ```  
 virtual int do_encoding() const throw();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- La funzione membro protetto virtuale restituisce:  
+### <a name="return-value"></a>Return Value  
+ The protected virtual member function returns:  
   
--   -1, se la codifica delle sequenze di tipo `extern_type` è stato dipendenti.  
+-   -1, if the encoding of sequences of type `extern_type` is state dependent.  
   
--   0 se la codifica implica le sequenze di lunghezza variabile.  
+-   0, if the encoding involves sequences of varying lengths.  
   
-- *N* se la codifica implica solo sequenze di lunghezza *N*  
+- *N*, if the encoding involves only sequences of length *N*  
   
-### <a name="example"></a>Esempio  
-  Vedere l'esempio di [encoding](#encoding), che chiama `do_encoding`.  
+### <a name="example"></a>Example  
+  See the example for [encoding](#encoding), which calls `do_encoding`.  
   
 ##  <a name="do_in"></a>  codecvt::do_in  
- Funzione virtuale chiamata per convertire una sequenza di **Byte** interni in una sequenza di **CharType** interni.  
+ A virtual function called to convert a sequence of external **Byte**s to a sequence of internal **CharType**s.  
   
 ```  
 virtual result do_in(
@@ -263,47 +279,47 @@ virtual result do_in(
     CharType*& next2,) const;
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `_State`  
- Lo stato della conversione che viene mantenuto tra le chiamate alla funzione membro.  
+ The conversion state that is maintained between calls to the member function.  
   
  `first1`  
- Puntatore all'inizio della sequenza da convertire.  
+ Pointer to the beginning of the sequence to be converted.  
   
  `last1`  
- Puntatore alla fine della sequenza da convertire.  
+ Pointer to the end of the sequence to be converted.  
   
  `next1`  
- Puntatore oltre la fine della sequenza convertita, al primo carattere non convertito.  
+ Pointer beyond the end of the converted sequence, to the first unconverted character.  
   
  `first2`  
- Puntatore all'inizio della sequenza convertita.  
+ Pointer to the beginning of the converted sequence.  
   
  `last2`  
- Puntatore alla fine della sequenza convertita.  
+ Pointer to the end of the converted sequence.  
   
  `next2`  
- Puntatore al **CharType** che segue l'ultimo **CharType** convertito, al primo carattere non modificato nella sequenza di destinazione.  
+ Pointer to the **CharType** that comes after the last converted **CharType**, to the first unaltered character in the destination sequence.  
   
-### <a name="return-value"></a>Valore restituito  
- Indica l'esito positivo, l'esecuzione parziale o l'esito negativo dell'operazione. La funzione restituisce:  
+### <a name="return-value"></a>Return Value  
+ A return that indicates the success, partial success, or failure of the operation. The function returns:  
   
-- **codecvt_base::error** se la sequenza di origine non è stata creata nel formato corretto.  
+- **codecvt_base::error** if the source sequence is ill formed.  
   
-- `codecvt_base::noconv` se la funzione non esegue alcuna conversione.  
+- `codecvt_base::noconv` if the function performs no conversion.  
   
-- **codecvt_base::ok** se la conversione ha esito positivo.  
+- **codecvt_base::ok** if the conversion succeeds.  
   
-- **codecvt_base::partial** se l'origine è insufficiente o se la destinazione non è abbastanza grande per consentire la conversione.  
+- **codecvt_base::partial** if the source is insufficient or if the destination is not large enough, for the conversion to succeed.  
   
-### <a name="remarks"></a>Note  
- `_State` deve rappresentare lo stato di conversione iniziale all'inizio di una nuova sequenza di origine. La funzione modifica il valore archiviato in base alle necessità per riflettere lo stato corrente di una corretta conversione. In caso contrario, il valore archiviato non è specificato.  
+### <a name="remarks"></a>Remarks  
+ `_State` must represent the initial conversion state at the beginning of a new source sequence. The function alters its stored value as needed to reflect the current state of a successful conversion. Its stored value is otherwise unspecified.  
   
-### <a name="example"></a>Esempio  
-  Vedere l'esempio di [in](#in), che chiama `do_in`.  
+### <a name="example"></a>Example  
+  See the example for [in](#in), which calls `do_in`.  
   
 ##  <a name="do_length"></a>  codecvt::do_length  
- Funzione virtuale che determina il numero di **Byte** di una sequenza specificata di **Byte** esterni che produce non più di un determinato numero di **CharType** interni e restituisce tale numero di **Byte**.  
+ A virtual function that determines how many **Byte**s from a given sequence of external **Byte**s produce not more than a given number of internal **CharType**s and returns that number of **Byte**s.  
   
 ```  
 virtual int do_length(
@@ -313,50 +329,50 @@ virtual int do_length(
     size_t _Len2) const;
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `_State`  
- Lo stato della conversione che viene mantenuto tra le chiamate alla funzione membro.  
+ The conversion state that is maintained between calls to the member function.  
   
  `first1`  
- Puntatore all'inizio della sequenza esterna.  
+ Pointer to the beginning of the external sequence.  
   
  `last1`  
- Puntatore alla fine della sequenza esterna.  
+ Pointer to the end of the external sequence.  
   
  `_Len2`  
- Il numero massimo di **Byte**che può essere restituito dalla funzione membro.  
+ The maximum number of **Byte**s that can be returned by the member function.  
   
-### <a name="return-value"></a>Valore restituito  
- Valore Integer che rappresenta il calcolo del numero massimo di conversioni, non maggiore `_Len2`, definito dalla sequenza di origine esterna in [ `first1`, `last1`).  
+### <a name="return-value"></a>Return Value  
+ An integer that represents a count of the maximum number of conversions, not greater than `_Len2`, defined by the external source sequence at [ `first1`, `last1`).  
   
-### <a name="remarks"></a>Note  
- La funzione membro protetto virtuale chiama in modo efficace `do_in`( `_State`, `first1`, `last1`, `next1`, `_Buf`, `_Buf` + `_Len2`, `next2`) per `_State` (una copia dello stato), alcuni buffer `_Buf` e i puntatori `next1` e `next2`.  
+### <a name="remarks"></a>Remarks  
+ The protected virtual member function effectively calls `do_in`( `_State`, `first1`, `last1`, `next1`, `_Buf`, `_Buf` + `_Len2`, `next2`) for `_State` (a copy of state), some buffer `_Buf`, and pointers `next1`and `next2`.  
   
- Restituisce quindi `next2`  -  **buf**. In questo modo viene calcolato il numero massimo di conversioni, non maggiore di `_Len2`, definito dalla sequenza di origine esterna in corrispondenza di [ `first1`, `last1`).  
+ It then returns `next2` - **buf**. Thus, it counts the maximum number of conversions, not greater than `_Len2`, defined by the source sequence at [ `first1`, `last1`).  
   
- La versione del modello restituisce sempre il minore dei `last1`  -  `first1` e `_Len2`.  
+ The template version always returns the lesser of `last1` - `first1` and `_Len2`.  
   
-### <a name="example"></a>Esempio  
-  Vedere l'esempio di [length](#length), che chiama **do_length**.  
+### <a name="example"></a>Example  
+  See the example for [length](#length), which calls **do_length**.  
   
 ##  <a name="do_max_length"></a>  codecvt::do_max_length  
- Funzione virtuale che restituisce il numero massimo di **Byte** esterni necessari per produrre un **CharType** interno.  
+ A virtual function that returns the maximum number of external **Byte**s necessary to produce one internal **CharType**.  
   
 ```  
 virtual int do_max_length() const throw();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Il numero massimo di **Byte**necessari per produrre un **CharType**.  
+### <a name="return-value"></a>Return Value  
+ The maximum number of **Byte**s necessary to produce one **CharType**.  
   
-### <a name="remarks"></a>Note  
- La funzione membro protetto virtuale restituisce il massimo valore consentito che può essere restituito da [do_length](#do_length)( `first1`, `last1`, 1) per valori arbitrari validi di `first1` e `last1`.  
+### <a name="remarks"></a>Remarks  
+ The protected virtual member function returns the largest permissible value that can be returned by [do_length](#do_length)( `first1`, `last1`, 1) for arbitrary valid values of `first1` and `last1`.  
   
-### <a name="example"></a>Esempio  
-  Vedere l'esempio di [max_length](#max_length), che chiama `do_max_length`.  
+### <a name="example"></a>Example  
+  See the example for [max_length](#max_length), which calls `do_max_length`.  
   
 ##  <a name="do_out"></a>  codecvt::do_out  
- Funzione virtuale chiamata per convertire una sequenza di **CharType** interni in una sequenza di **Byte** interni.  
+ A virtual function called to convert a sequence of internal **CharType**s to a sequence of external **Byte**s.  
   
 ```  
 virtual result do_out(
@@ -369,47 +385,47 @@ virtual result do_out(
     Byte*& next2) const;
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `_State`  
- Lo stato della conversione che viene mantenuto tra le chiamate alla funzione membro.  
+ The conversion state that is maintained between calls to the member function.  
   
  `first1`  
- Puntatore all'inizio della sequenza da convertire.  
+ Pointer to the beginning of the sequence to be converted.  
   
  `last1`  
- Puntatore alla fine della sequenza da convertire.  
+ Pointer to the end of the sequence to be converted.  
   
  `next1`  
- Riferimento a un puntatore al primo **CharType** non convertito, dopo l'ultimo **CharType** convertito.  
+ Reference to a pointer to the first unconverted **CharType**, after the last **CharType** converted.  
   
  `first2`  
- Puntatore all'inizio della sequenza convertita.  
+ Pointer to the beginning of the converted sequence.  
   
  `last2`  
- Puntatore alla fine della sequenza convertita.  
+ Pointer to the end of the converted sequence.  
   
  `next2`  
- Riferimento a un puntatore al primo **Byte** non convertito, dopo l'ultimo **Byte** convertito.  
+ Reference to a pointer to the first unconverted **Byte**, after the last **Byte** converted.  
   
-### <a name="return-value"></a>Valore restituito  
- La funzione restituisce:  
+### <a name="return-value"></a>Return Value  
+ The function returns:  
   
-- **codecvt_base::error** se la sequenza di origine non è stata creata nel formato corretto.  
+- **codecvt_base::error** if the source sequence is ill formed.  
   
-- `codecvt_base::noconv` se la funzione non esegue alcuna conversione.  
+- `codecvt_base::noconv` if the function performs no conversion.  
   
-- **codecvt_base::ok** se la conversione ha esito positivo.  
+- **codecvt_base::ok** if the conversion succeeds.  
   
-- **codecvt_base::partial** se l'origine è insufficiente o se la destinazione non è abbastanza grande per consentire la conversione.  
+- **codecvt_base::partial** if the source is insufficient or if the destination is not large enough for the conversion to succeed.  
   
-### <a name="remarks"></a>Note  
- `_State` deve rappresentare lo stato di conversione iniziale all'inizio di una nuova sequenza di origine. La funzione modifica il valore archiviato in base alle necessità per riflettere lo stato corrente di una corretta conversione. In caso contrario, il valore archiviato non è specificato.  
+### <a name="remarks"></a>Remarks  
+ `_State` must represent the initial conversion state at the beginning of a new source sequence. The function alters its stored value as needed to reflect the current state of a successful conversion. Its stored value is otherwise unspecified.  
   
-### <a name="example"></a>Esempio  
-  Vedere l'esempio di [out](#out), che chiama `do_out`.  
+### <a name="example"></a>Example  
+  See the example for [out](#out), which calls `do_out`.  
   
 ##  <a name="do_unshift"></a>  codecvt::do_unshift  
- Funzione virtuale chiamata quando sono necessari **Byte** in una conversione dipendente dallo stato per completare l'ultimo carattere di una sequenza di **Byte**.  
+ A virtual function called to provide the **Byte**s needed in a state-dependent conversion to complete the last character in a sequence of **Byte**s.  
   
 ```  
 virtual result do_unshift(
@@ -419,60 +435,60 @@ virtual result do_unshift(
     Byte*& next2) const;
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `_State`  
- Lo stato della conversione che viene mantenuto tra le chiamate alla funzione membro.  
+ The conversion state that is maintained between calls to the member function.  
   
  `first2`  
- Puntatore alla prima posizione nell'intervallo di destinazione.  
+ Pointer to the first position in the destination range.  
   
  `last2`  
- Puntatore all'ultima posizione nell'intervallo di destinazione.  
+ Pointer to the last position in the destination range.  
   
  `next2`  
- Puntatore al primo elemento non modificato nella sequenza di destinazione.  
+ Pointer to the first unaltered element in the destination sequence.  
   
-### <a name="return-value"></a>Valore restituito  
- La funzione restituisce:  
+### <a name="return-value"></a>Return Value  
+ The function returns:  
   
-- **codecvt_base::error** se _ *State* rappresenta uno stato non valido  
+- **codecvt_base::error** if _ *State* represents an invalid state  
   
-- `codecvt_base::noconv` se la funzione non esegue alcuna conversione  
+- `codecvt_base::noconv` if the function performs no conversion  
   
-- **codecvt_base::ok** se la conversione ha esito positivo  
+- **codecvt_base::ok** if the conversion succeeds  
   
-- **codecvt_base::partial** se la destinazione non è abbastanza grande per consentire la conversione  
+- **codecvt_base::partial** if the destination is not large enough for the conversion to succeed  
   
-### <a name="remarks"></a>Note  
- La funzione membro protetto virtuale prova a convertire l'elemento di origine **CharType**(0) in una sequenza di destinazione che archivia tra [ `first2`, `last2`), ad eccezione dell'elemento di terminazione **Byte**(0). Archivia sempre in `next2` un puntatore al primo elemento non modificato nella sequenza di destinazione.  
+### <a name="remarks"></a>Remarks  
+ The protected virtual member function tries to convert the source element **CharType**(0) to a destination sequence that it stores within [ `first2`, `last2`), except for the terminating element **Byte**(0). It always stores in `next2` a pointer to the first unaltered element in the destination sequence.  
   
- _ *State* deve rappresentare lo stato di conversione iniziale all'inizio di una nuova sequenza di origine. La funzione modifica il valore archiviato in base alle necessità per riflettere lo stato corrente di una corretta conversione. In genere la conversione dell'elemento di origine **CharType**(0) lascia lo stato corrente nello stato di conversione iniziale.  
+ _ *State* must represent the initial conversion state at the beginning of a new source sequence. The function alters its stored value as needed to reflect the current state of a successful conversion. Typically, converting the source element **CharType**(0) leaves the current state in the initial conversion state.  
   
-### <a name="example"></a>Esempio  
-  Vedere l'esempio di [unshift](#unshift), che chiama `do_unshift`.  
+### <a name="example"></a>Example  
+  See the example for [unshift](#unshift), which calls `do_unshift`.  
   
 ##  <a name="encoding"></a>  codecvt::encoding  
- Verifica se la codifica del flusso di **Byte** dipende dallo stato, se il rapporto tra **Byte** usati e **CharType** generati è costante e, in caso affermativo, determina il valore di tale rapporto.  
+ Tests if the encoding of the **Byte** stream is state dependent, whether the ratio between the **Byte**s used and the **CharType**s produced is constant, and, if so, determines the value of that ratio.  
   
 ```  
 int encoding() const throw();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Se il valore restituito è positivo, tale valore è il numero costante di caratteri **Byte** necessari per produrre il carattere **CharType**.  
+### <a name="return-value"></a>Return Value  
+ If the return value is positive then that value is the constant number of **Byte** characters required to produce the **CharType** character.  
   
- La funzione membro protetto virtuale restituisce:  
+ The protected virtual member function returns:  
   
--   -1, se la codifica delle sequenze di tipo `extern_type` è stato dipendenti.  
+-   -1, if the encoding of sequences of type `extern_type` is state dependent.  
   
--   0 se la codifica implica le sequenze di lunghezza variabile.  
+-   0, if the encoding involves sequences of varying lengths.  
   
-- *N* se la codifica implica solo sequenze di lunghezza *N.*  
+- *N*, if the encoding involves only sequences of length *N.*  
   
-### <a name="remarks"></a>Note  
- La funzione membro restituisce [do_encoding](#do_encoding).  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_encoding](#do_encoding).  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // codecvt_encoding.cpp  
@@ -500,17 +516,17 @@ int main( )
 ```  
   
 ##  <a name="extern_type"></a>  codecvt::extern_type  
- Tipo di carattere utilizzato per le rappresentazioni esterne.  
+ A character type that is used for external representations.  
   
 ```  
 typedef Byte extern_type;  
 ```  
   
-### <a name="remarks"></a>Note  
- Il tipo è un sinonimo del parametro di modello **Byte**.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **Byte**.  
   
 ##  <a name="in"></a>  codecvt::in  
- Converte una rappresentazione esterna di una sequenza di **Byte** in una rappresentazione interna di una sequenza di **CharType**.  
+ Converts an external representation of a sequence of **Byte**s to an internal representation of a sequence of **CharType**s.  
   
 ```  
 result in(
@@ -523,45 +539,45 @@ result in(
     CharType*& next2,) const;
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `_State`  
- Lo stato della conversione che viene mantenuto tra le chiamate alla funzione membro.  
+ The conversion state that is maintained between calls to the member function.  
   
  `first1`  
- Puntatore all'inizio della sequenza da convertire.  
+ Pointer to the beginning of the sequence to be converted.  
   
  `last1`  
- Puntatore alla fine della sequenza da convertire.  
+ Pointer to the end of the sequence to be converted.  
   
  `next1`  
- Puntatore oltre la fine della sequenza convertita, al primo carattere non convertito.  
+ Pointer beyond the end of the converted sequence to the first unconverted character.  
   
  `first2`  
- Puntatore all'inizio della sequenza convertita.  
+ Pointer to the beginning of the converted sequence.  
   
  `last2`  
- Puntatore alla fine della sequenza convertita.  
+ Pointer to the end of the converted sequence.  
   
  `next2`  
- Puntatore al **CharType** che segue l'ultimo **CharType** convertito, al primo carattere non modificato nella sequenza di destinazione.  
+ Pointer to the **CharType** that comes after the last converted **Chartype** to the first unaltered character in the destination sequence.  
   
-### <a name="return-value"></a>Valore restituito  
- Indica l'esito positivo, l'esecuzione parziale o l'esito negativo dell'operazione. La funzione restituisce:  
+### <a name="return-value"></a>Return Value  
+ A return that indicates the success, partial success or failure of the operation. The function returns:  
   
-- **codecvt_base::error** se la sequenza di origine non è stata creata nel formato corretto.  
+- **codecvt_base::error** if the source sequence is ill formed.  
   
-- `codecvt_base::noconv` se la funzione non esegue alcuna conversione.  
+- `codecvt_base::noconv` if the function performs no conversion.  
   
-- **codecvt_base::ok** se la conversione ha esito positivo.  
+- **codecvt_base::ok** if the conversion succeeds.  
   
-- **codecvt_base::partial** se l'origine è insufficiente o se la destinazione non è abbastanza grande per consentire la conversione.  
+- **codecvt_base::partial** if the source is insufficient or if the destination is not large enough for the conversion to succeed.  
   
-### <a name="remarks"></a>Note  
- `_State` deve rappresentare lo stato di conversione iniziale all'inizio di una nuova sequenza di origine. La funzione modifica il valore archiviato in base alle necessità per riflettere lo stato corrente di una corretta conversione. Dopo una conversione parziale, `_State` deve essere impostata in modo da riprendere la conversione quando arrivano nuovi caratteri.  
+### <a name="remarks"></a>Remarks  
+ `_State` must represent the initial conversion state at the beginning of a new source sequence. The function alters its stored value, as needed, to reflect the current state of a successful conversion. After a partial conversion, `_State` must be set so as to allow the conversion to resume when new characters arrive.  
   
- La funzione membro restituisce [do_in](#do_in)( `_State`, _ *First1,  last1,  next1, First2, _Llast2,  next2*).  
+ The member function returns [do_in](#do_in)( `_State`, _ *First1,  last1,  next1, First2, _Llast2,  next2*).  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // codecvt_in.cpp  
@@ -599,17 +615,17 @@ It worked! The converted string is:
 ```  
   
 ##  <a name="intern_type"></a>  codecvt::intern_type  
- Tipo di carattere utilizzato per le rappresentazioni interne.  
+ A character type that is used for internal representations.  
   
 ```  
 typedef CharType intern_type;  
 ```  
   
-### <a name="remarks"></a>Note  
- Il tipo è un sinonimo del parametro di modello **CharType**.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **CharType**.  
   
 ##  <a name="length"></a>  codecvt::length  
- Determina il numero di **Byte** di una sequenza specificata di **Byte** esterni che produce non più di un determinato numero di **CharType** interni e restituisce tale numero di **Byte**.  
+ Determines how many **Byte**s from a given sequence of external **Byte**s produce not more than a given number of internal **CharType**s and returns that number of **Byte**s.  
   
 ```  
 int length(
@@ -619,26 +635,26 @@ int length(
     size_t _Len2) const;
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `_State`  
- Lo stato della conversione che viene mantenuto tra le chiamate alla funzione membro.  
+ The conversion state that is maintained between calls to the member function.  
   
  `first1`  
- Puntatore all'inizio della sequenza esterna.  
+ Pointer to the beginning of the external sequence.  
   
  `last1`  
- Puntatore alla fine della sequenza esterna.  
+ Pointer to the end of the external sequence.  
   
  `_Len2`  
- Il numero massimo di byte che può essere restituito dalla funzione membro.  
+ The maximum number of Bytes that can be returned by the member function.  
   
-### <a name="return-value"></a>Valore restituito  
- Valore Integer che rappresenta il calcolo del numero massimo di conversioni, non maggiore `_Len2`, definito dalla sequenza di origine esterna in [ `first1`, `last1`).  
+### <a name="return-value"></a>Return Value  
+ An integer that represents a count of the maximum number of conversions, not greater than `_Len2`, defined by the external source sequence at [ `first1`, `last1`).  
   
-### <a name="remarks"></a>Note  
- La funzione membro restituisce [do_length](#do_length)( *_State, first1*, `last1`, `_Len2`).  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_length](#do_length)( *_State,  first1*, `last1`, `_Len2`).  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // codecvt_length.cpp  
@@ -668,19 +684,19 @@ The length of the string is: 50.
 ```  
   
 ##  <a name="max_length"></a>  codecvt::max_length  
- Restituisce il numero massimo di **Byte** esterni necessari per produrre un **CharType** interno.  
+ Returns the maximum number of external **Byte**s necessary to produce one internal **CharType**.  
   
 ```  
 int max_length() const throw();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Il numero massimo di **Byte**necessari per produrre un **CharType**.  
+### <a name="return-value"></a>Return Value  
+ The maximum number of **Byte**s necessary to produce one **CharType**.  
   
-### <a name="remarks"></a>Note  
- La funzione membro restituisce [do_max_length](#do_max_length).  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_max_length](#do_max_length).  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // codecvt_max_length.cpp  
@@ -704,7 +720,7 @@ int main( )
 ```  
   
 ##  <a name="out"></a>  codecvt::out  
- Converte una sequenza di **CharType** interni in una sequenza di **Byte** esterni.  
+ Converts a sequence of internal **CharType**s to a sequence of external **Byte**s.  
   
 ```  
 result out(
@@ -717,35 +733,35 @@ result out(
     Byte*& next2) const;
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `_State`  
- Lo stato della conversione che viene mantenuto tra le chiamate alla funzione membro.  
+ The conversion state that is maintained between calls to the member function.  
   
  `first1`  
- Puntatore all'inizio della sequenza da convertire.  
+ Pointer to the beginning of the sequence to be converted.  
   
  `last1`  
- Puntatore alla fine della sequenza da convertire.  
+ Pointer to the end of the sequence to be converted.  
   
  `next1`  
- Riferimento a un puntatore al primo **CharType** non convertito, dopo l'ultimo **CharType** convertito.  
+ Reference to a pointer to the first unconverted **CharType** after the last **CharType** converted.  
   
  `first2`  
- Puntatore all'inizio della sequenza convertita.  
+ Pointer to the beginning of the converted sequence.  
   
  `last2`  
- Puntatore alla fine della sequenza convertita.  
+ Pointer to the end of the converted sequence.  
   
  `next2`  
- Riferimento a un puntatore al primo **Byte** non convertito, dopo l'ultimo **Byte** convertito.  
+ Reference to a pointer to the first unconverted **Byte** after the last converted **Byte**.  
   
-### <a name="return-value"></a>Valore restituito  
- La funzione membro restituisce [do_out](#do_out)( `_State`, `first1`, `last1`, `next1`, `first2`, `last2`, `next2`).  
+### <a name="return-value"></a>Return Value  
+ The member function returns [do_out](#do_out)( `_State`, `first1`, `last1`, `next1`, `first2`, `last2`, `next2`).  
   
-### <a name="remarks"></a>Note  
- Per altre informazioni, vedere [codecvt::do_out](#do_out).  
+### <a name="remarks"></a>Remarks  
+ For more information, see [codecvt::do_out](#do_out).  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // codecvt_out.cpp  
@@ -783,17 +799,17 @@ It worked: The converted string is:
 ```  
   
 ##  <a name="state_type"></a>  codecvt::state_type  
- Tipo di carattere utilizzato per rappresentare gli stati intermedi durante le conversione tra le rappresentazioni interne ed esterne.  
+ A character type that is used to represent intermediate states during conversions between internal and external representations.  
   
 ```  
 typedef StateType state_type;  
 ```  
   
-### <a name="remarks"></a>Note  
- Il tipo è un sinonimo del parametro di modello **StateType**.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **StateType**.  
   
 ##  <a name="unshift"></a>  codecvt::unshift  
- Rende disponibili i **Byte** necessari in una conversione dipendente dallo stato per completare l'ultimo carattere della sequenza di **Byte**.  
+ Provides the **Byte**s needed in a state-dependent conversion to complete the last character in a sequence of **Byte**s.  
   
 ```  
 result unshift(
@@ -803,41 +819,41 @@ result unshift(
     Byte*& next2) const;
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `_State`  
- Lo stato della conversione che viene mantenuto tra le chiamate alla funzione membro.  
+ The conversion state that is maintained between calls to the member function.  
   
  `first2`  
- Puntatore alla prima posizione nell'intervallo di destinazione.  
+ Pointer to the first position in the destination range.  
   
  `last2`  
- Puntatore all'ultima posizione nell'intervallo di destinazione.  
+ Pointer to the last position in the destination range.  
   
  `next2`  
- Puntatore al primo elemento non modificato nella sequenza di destinazione.  
+ Pointer to the first unaltered element in the destination sequence.  
   
-### <a name="return-value"></a>Valore restituito  
- La funzione restituisce:  
+### <a name="return-value"></a>Return Value  
+ The function returns:  
   
-- **codecvt_base::error** se lo stato rappresenta uno stato non valido.  
+- **codecvt_base::error** if state represents an invalid state.  
   
-- `codecvt_base::noconv` se la funzione non esegue alcuna conversione.  
+- `codecvt_base::noconv` if the function performs no conversion.  
   
-- **codecvt_base::ok** se la conversione ha esito positivo.  
+- **codecvt_base::ok** if the conversion succeeds.  
   
-- **codecvt_base::partial** se la destinazione non è abbastanza grande per consentire la conversione.  
+- **codecvt_base::partial** if the destination is not large enough for the conversion to succeed.  
   
-### <a name="remarks"></a>Note  
- La funzione membro protetto virtuale prova a convertire l'elemento di origine **CharType**(0) in una sequenza di destinazione che archivia tra [ `first2`, `last2`), ad eccezione dell'elemento di terminazione **Byte**(0). Archivia sempre in `next2` un puntatore al primo elemento non modificato nella sequenza di destinazione.  
+### <a name="remarks"></a>Remarks  
+ The protected virtual member function tries to convert the source element **CharType**(0) to a destination sequence that it stores within [ `first2`, `last2`), except for the terminating element **Byte**(0). It always stores in `next2` a pointer to the first unaltered element in the destination sequence.  
   
- `_State` deve rappresentare lo stato di conversione iniziale all'inizio di una nuova sequenza di origine. La funzione modifica il valore archiviato in base alle necessità per riflettere lo stato corrente di una corretta conversione. In genere la conversione dell'elemento di origine **CharType**(0) lascia lo stato corrente nello stato di conversione iniziale.  
+ `_State` must represent the initial conversion state at the beginning of a new source sequence. The function alters its stored value, as needed, to reflect the current state of a successful conversion. Typically, converting the source element **CharType**(0) leaves the current state in the initial conversion state.  
   
- La funzione membro restituisce [do_unshift](#do_unshift)( `_State`, `first2`, `last2`, `next2`).  
+ The member function returns [do_unshift](#do_unshift)( `_State`, `first2`, `last2`, `next2` ).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [\<locale>](../standard-library/locale.md)   
- [Tabelle codici](../c-runtime-library/code-pages.md)   
- [Nomi delle impostazioni locali, lingue e stringhe relative a paesi](../c-runtime-library/locale-names-languages-and-country-region-strings.md)   
- [Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [Code Pages](../c-runtime-library/code-pages.md)   
+ [Locale Names, Languages, and Country/Region Strings](../c-runtime-library/locale-names-languages-and-country-region-strings.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
