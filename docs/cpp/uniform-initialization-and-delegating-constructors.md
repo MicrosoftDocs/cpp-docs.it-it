@@ -1,29 +1,47 @@
 ---
-title: "Inizializzazione uniforme e costruttori deleganti | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Uniform Initialization and Delegating Constructors | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: aa4daa64-eaec-4a3c-ade4-d9325e31e9d4
 caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
----
-# Inizializzazione uniforme e costruttori deleganti
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: ac08f1df693edd6fe2245146b2bc1717415e1d73
+ms.contentlocale: it-it
+ms.lasthandoff: 09/11/2017
 
-Nel C\+\+ moderno, è possibile utilizzare l'*inizializzazione di parentesi graffe* per qualsiasi tipo, senza il segno uguale.  Inoltre, è possibile utilizzare la delega dei costruttori per semplificare il codice quando si dispone di più costruttori che eseguono lavoro simile.  
+---
+# <a name="uniform-initialization-and-delegating-constructors"></a>Uniform Initialization and Delegating Constructors
+In modern C++, you can use *brace initialization* for any type, without the equals sign. Also, you can use delegating constructors to simplify your code when you have multiple constructors that perform similar work.  
   
-## Inizializzazione di parentesi graffe  
- È possibile utilizzare l'inizializzazione di parentesi graffe per qualsiasi classe, struttura o union.  Se un tipo dispone di un costruttore predefinito, dichiarato in modo implicito o esplicito, è possibile utilizzare l'inizializzazione predefinita di parentesi graffe \(con le parentesi graffe vuote\).  Ad esempio, la classe seguente può essere inizializzata utilizzando sia l'inizializzazione di parentesi graffe predefinita che quella non predefinita:  
+## <a name="brace-initialization"></a>Brace Initialization  
+ You can use brace initialization for any class, struct, or union. If a type has a default constructor, either implicitly or explicitly declared, you can use default brace initialization (with empty braces). For example, the following class may be initialized by using both default and non-default brace initialization:  
   
 ```cpp  
 #include <string>  
@@ -53,7 +71,7 @@ int main()
   
 ```  
   
- Se la classe non dispone di costruttori predefiniti, l'ordine in cui i membri della classe vengono visualizzati nell'inizializzatore di parentesi graffe è l'ordine in cui appaiono i parametri corrispondenti nel costruttore, non l'ordine in cui i membri vengono dichiarati \(come nel caso di `class_a` nell'esempio precedente\).  Altrimenti, se il tipo non dispone di alcun costruttore dichiarato, l'ordine in cui i membri vengono visualizzati nell'inizializzatore di parentesi graffe corrisponde all'ordine in cui essi sono dichiarati; in questo caso, è possibile inizializzare un numero a piacere di membri pubblici, ma non è possibile ignorare alcun membro.  Nell'esempio seguente viene illustrato l'ordine utilizzato nell'inizializzazione di parentesi graffe quando non vi è alcun costruttore dichiarato:  
+ If a class has non-default constructors, the order in which class members appear in the brace initializer is the order in which the corresponding parameters appear in the constructor, not the order in which the members are declared (as with `class_a` in the previous example). Otherwise, if the type has no declared constructor, the order in which the members appear in the brace initializer is the same as the order in which they are declared; in this case, you can initialize as many of the public members as you wish, but you cannot skip any member. The following example shows the order that's used in brace initialization when there is no declared constructor:  
   
 ```cpp  
 class class_d {  
@@ -75,7 +93,7 @@ int main()
 }   
 ```  
   
- Se il costruttore predefinito è dichiarato in modo esplicito ma contrassegnato come eliminato, l'inizializzazione di parentesi graffe predefinita non può essere utilizzata:  
+ If the default constructor is explicitly declared but marked as deleted, default brace initialization cannot be used:  
   
 ```cpp  
 class class_f {  
@@ -91,7 +109,7 @@ int main()
 }  
 ```  
   
- È possibile utilizzare l'inizializzazione di parentesi graffe ovunque tipicamente si esegue l'inizializzazione, ad esempio come parametro della funzione o valore di ritorno, o con la parola chiave `new`:  
+ You can use brace initialization anywhere you would typically do initialization—for example, as a function parameter or a return value, or with the `new` keyword:  
   
 ```cpp  
 class_d* cf = new class_d{4.5};  
@@ -100,17 +118,17 @@ return { 4.5 };
   
 ```  
   
-## Costruttori di initializer\_list  
- [initializer\_list Class](../standard-library/initializer-list-class.md) rappresenta un elenco di oggetti di un tipo specificato che può essere utilizzato in un costruttore e in altri contesti.  È possibile creare un initializer\_list tramite l'inizializzazione di parentesi graffe:  
+## <a name="initializerlist-constructors"></a>initializer_list Constructors  
+ The [initializer_list Class](../standard-library/initializer-list-class.md) represents a list of objects of a specified type that can be used in a constructor, and in other contexts. You can construct an initializer_list by using brace initialization:  
   
 ```cpp  
 initializer_list<int> int_list{5, 6, 7};  
 ```  
   
 > [!IMPORTANT]
->  Per utilizzare questa classe, è necessario includere l'intestazione [\<initializer\_list\>](../standard-library/initializer-list.md).  
+>  To use this class, you must include the [<initializer_list>](../standard-library/initializer-list.md) header.  
   
- Un `initializer_list` può essere copiato.  In questo caso, i membri del nuovo elenco sono riferimenti ai membri dell'elenco originale:  
+ An `initializer_list` can be copied. In this case, the members of the new list are references to the members of the original list:  
   
 ```cpp  
 initializer_list<int> ilist1{ 5, 6, 7 };  
@@ -120,7 +138,7 @@ if (ilist1.begin() == ilist2.begin())
   
 ```  
   
- Le classi standard di contenitori di libreria e `string`, `wstring` e `regex`, dispongono di costruttori `initializer_list`.  Negli esempi seguenti viene illustrato come effettuare l'inizializzazione di parentesi graffe con questi costruttori:  
+ The standard library container classes, and also `string`, `wstring`, and `regex`, have `initializer_list` constructors. The following examples show how to do brace initialization with these constructors:  
   
 ```cpp  
 vector<int> v1{ 9, 10, 11 };   
@@ -129,8 +147,8 @@ string s{ 'a', 'b', 'c' };
 regex rgx{'x', 'y', 'z'};   
 ```  
   
-## Delega dei costruttori  
- Molte classi dispongono di più costruttori che fanno cose simili, come ad esempio la convalida di parametri:  
+## <a name="delegating-constructors"></a>Delegating Constructors  
+ Many classes have multiple constructors that do similar things—for example, validate parameters:  
   
 ```cpp  
 class class_c {  
@@ -155,7 +173,7 @@ public:
 };  
 ```  
   
- È possibile ridurre il codice ripetitivo aggiungendo una funzione che esegue l'intera convalida, ma il codice per `class_c` sarebbe più facile da comprendere e mantenere se un costruttore fosse in grado di delegare parte del lavoro ad un altro.  Per aggiungere la delega dei costruttori, utilizzare la sintassi di `constructor (. . .) : constructor (. . .)`:  
+ You could reduce the repetitive code by adding a function that does all of the validation, but the code for `class_c` would be easier to understand and maintain if one constructor could delegate some of the work to another one. To add delegating constructors, use the `constructor (. . .) : constructor (. . .)` syntax:  
   
 ```cpp  
 class class_c {  
@@ -181,9 +199,9 @@ int main() {
   
 ```  
   
- Nel visualizzare l'esempio precedente, si noti che il costruttore `class_c(int, int, int)` prima chiama il costruttore `class_c(int, int)`, che a sua volta chiama `class_c(int)`.  Ciascuno dei costruttori esegue solamente il lavoro che non viene eseguito dagli altri costruttori.  
+ As you step through the previous example, notice that the constructor `class_c(int, int, int)` first calls the constructor `class_c(int, int)`, which in turn calls `class_c(int)`. Each of the constructors performs only the work that is not performed by the other constructors.  
   
- Il primo costruttore chiamato inizializza l'oggetto in modo da inizializzare tutti i relativi membri in tale posizione.  Non è possibile eseguire l'inizializzazione dei membri in un costruttore che delega del lavoro a un altro costruttore, come illustrato di seguito:  
+ The first constructor that's called initializes the object so that all of its members are initialized at that point. You can’t do member initialization in a constructor that delegates to another constructor, as shown here:  
   
 ```cpp  
 class class_a {  
@@ -204,7 +222,7 @@ public:
   
 ```  
   
- Nell'esempio seguente viene illustrato l'utilizzo degli inizializzatori non statici dei membri dati.  Si noti che se un costruttore inizializza anche un membro dati fornito, l'inizializzatore del membro viene ignorato:  
+ The next example shows the use of non-static data-member initializers. Notice that if a constructor also initializes a given data member, the member initializer is overridden:  
   
 ```cpp  
 class class_a {  
@@ -222,7 +240,7 @@ int main() {
 }  
 ```  
   
- La sintassi della delega del costruttore non impedisce la creazione accidentale di ricorsione del costruttore, ad esempio Costruttore1 chiama Costruttore2 il quale chiama Costruttore1, e non viene generato alcun errore fino a quando non vi sia un overflow dello stack.  È propria responsabilità evitare i cicli.  
+ The constructor delegation syntax doesn't prevent the accidental creation of constructor recursion—Constructor1 calls Constructor2 which calls Constructor1—and no errors are thrown until there is a stack overflow. It's your responsibility to avoid cycles.  
   
 ```cpp  
 class class_f{  

@@ -1,125 +1,141 @@
 ---
-title: "Puntatori intelligenti (C++ moderno) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Smart Pointers (Modern C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 909ef870-904c-49b6-b8cd-e9d0b7dc9435
 caps.latest.revision: 26
-caps.handback.revision: 26
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Puntatori intelligenti (C++ moderno)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 6b25a9c39f09aef0958c475b663151b97285a6fb
+ms.contentlocale: it-it
+ms.lasthandoff: 09/11/2017
 
-Nella programmazione C\+\+ moderna, la libreria standard include i *puntatori intelligenti*, puntatori che aiutano a garantire che i programmi non subiscano perdite di memoria e di risorse e siano protetti dalle eccezioni.  
+---
+# <a name="smart-pointers-modern-c"></a>Smart Pointers (Modern C++)
+In modern C++ programming, the Standard Library includes *smart pointers*, which are used to help ensure that programs are free of memory and resource leaks and are exception-safe.  
   
-## Utilizzi per i puntatori intelligenti  
- I puntatori intelligenti sono definiti nello spazio dei nomi `std` nel file di intestazione di [\<memoria\>](../standard-library/memory.md).  Sono fondamentali per il linguaggio di programmazione [RAII](../cpp/objects-own-resources-raii.md) \(*Resource Acquisition Is Initialialization*\).  L'obiettivo principale di questo linguaggio è assicurare che l'acquisizione delle risorse avvenga contemporaneamente all'inizializzazione dell'oggetto, in modo che tutte le risorse per l'oggetto vengano create e rese disponibili in una riga di codice.  In pratica, il principio fondamentale di RAII è assegnare la proprietà delle risorse allocate dall'heap, ad esempio gli handle di oggetti di memoria o di memoria allocati in modo dinamico, a un oggetto allocato dallo stack il cui distruttore contiene il codice per eliminare o liberare la risorsa ed eventuale codice di pulizia associato.  
+## <a name="uses-for-smart-pointers"></a>Uses for smart pointers  
+ Smart pointers are defined in the `std` namespace in the [\<memory>](../standard-library/memory.md) header file. They are crucial to the [RAII](../cpp/objects-own-resources-raii.md) or *Resource Acquisition Is Initialialization* programming idiom. The main goal of this idiom is to ensure that resource acquisition occurs at the same time that the object is initialized, so that all resources for the object are created and made ready in one line of code. In practical terms, the main principle of RAII is to give ownership of any heap-allocated resource—for example, dynamically-allocated memory or system object handles—to a stack-allocated object whose destructor contains the code to delete or free the resource and also any associated cleanup code.  
   
- Nella maggior parte dei casi, quando si inizializza un handle di risorsa o puntatore non elaborato per puntare a una risorsa effettiva, passare immediatamente il puntatore a un puntatore intelligente.  Nel linguaggio C\+\+ moderno, i puntatori non elaborati vengono utilizzati esclusivamente in blocchi di codice piccoli con ambito limitato, nei cicli o nelle funzioni di supporto per le quali le prestazioni sono importanti e non può crearsi confusione circa la proprietà.  
+ In most cases, when you initialize a raw pointer or resource handle to point to an actual resource, pass the pointer to a smart pointer immediately. In modern C++, raw pointers are only used in small code blocks of limited scope, loops, or helper functions where performance is critical and there is no chance of confusion about ownership.  
   
- Nell'esempio seguente viene fatto un confronto tra una dichiarazione di puntatore non elaborato e una dichiarazione di puntatore intelligente.  
+ The following example compares a raw pointer declaration to a smart pointer declaration.  
   
  [!code-cpp[smart_pointers_intro#1](../cpp/codesnippet/CPP/smart-pointers-modern-cpp_1.cpp)]  
   
- Come illustrato nell'esempio, un puntatore intelligente è un modello di classe dichiarato nello stack e inizializzato tramite un puntatore non elaborato che punta a un oggetto allocato dall'heap.  Dopo essere stato inizializzato, il puntatore intelligente detiene la proprietà del puntatore non elaborato.  Ciò significa che il puntatore intelligente è responsabile dell'eliminazione della memoria specificata dal puntatore non elaborato.  Il distruttore del puntatore intelligente contiene la chiamata per l'eliminazione e poiché il puntatore intelligente viene dichiarato nello stack, il relativo distruttore viene richiamato quando il puntatore intelligente esce dall'ambito, anche se viene generata un'eccezione in un punto precedente dello stack.  
+ As shown in the example, a smart pointer is a class template that you declare on the stack, and initialize by using a raw pointer that points to a heap-allocated object. After the smart pointer is initialized, it owns the raw pointer. This means that the smart pointer is responsible for deleting the memory that the raw pointer specifies. The smart pointer destructor contains the call to delete, and because the smart pointer is declared on the stack, its destructor is invoked when the smart pointer goes out of scope, even if an exception is thrown somewhere further up the stack.  
   
- Accedere al puntatore incapsulato utilizzando gli operatori del puntatore noti, `->` e `*`, di cui verrà eseguito l'overload per restituire il puntatore non elaborato incapsulato.  
+ Access the encapsulated pointer by using the familiar pointer operators, `->` and `*`, which the smart pointer class overloads to return the encapsulated raw pointer.  
   
- Il linguaggio del puntatore intelligente C\+\+ ricorda la creazione di oggetti in linguaggi come C\#: prima si crea l'oggetto e poi si permette al sistema di eliminarlo al momento opportuno.  La differenza consiste nel fatto che nessun Garbage Collector separato viene eseguito in background. La memoria viene gestita tramite le regole di ambito C\+\+ standard in modo che l'ambiente di runtime risulti più veloce e più efficiente.  
+ The C++ smart pointer idiom resembles object creation in languages such as C#: you create the object and then let the system take care of deleting it at the correct time. The difference is that no separate garbage collector runs in the background; memory is managed through the standard C++ scoping rules so that the runtime environment is faster and more efficient.  
   
 > [!IMPORTANT]
->  Creare sempre puntatori intelligenti su una riga di codice separata e mai in un elenco di parametri, in modo da evitare anche le più piccole perdite di risorse dovute a alcune regole di allocazione dell'elenco di parametri.  
+>  Always create smart pointers on a separate line of code, never in a parameter list, so that a subtle resource leak won't occur due to certain parameter list allocation rules.  
   
- Di seguito viene illustrato come utilizzare un tipo di puntatore intelligente `unique_ptr` dalla libreria di modelli standard per incapsulare un puntatore in un oggetto di grandi dimensioni.  
+ The following example shows how a `unique_ptr` smart pointer type from the C++ Standard Library could be used to encapsulate a pointer to a large object.  
   
  [!code-cpp[smart_pointers_intro#2](../cpp/codesnippet/CPP/smart-pointers-modern-cpp_2.cpp)]  
   
- Di seguito vengono illustrati i passaggi essenziali per utilizzare i puntatori intelligenti.  
+ The example demonstrates the following essential steps for using smart pointers.  
   
-1.  Dichiarare il puntatore intelligente come variabile \(locale\) automatica. \(Non utilizzare l'espressione `malloc` o `new` sul puntatore intelligente stesso\).  
+1.  Declare the smart pointer as an automatic (local) variable. (Do not use the `new` or `malloc` expression on the smart pointer itself.)  
   
-2.  Nel parametro di tipo specificare il tipo di riferimento del puntatore incapsulato.  
+2.  In the type parameter, specify the pointed-to type of the encapsulated pointer.  
   
-3.  Passare un puntatore non elaborato a un oggetto `new` nel costruttore del puntatore intelligente. \(Alcune funzioni dell'utilità o costruttori del puntatore intelligente eseguono queste operazioni in modo automatico\).  
+3.  Pass a raw pointer to a `new`-ed object in the smart pointer constructor. (Some utility functions or smart pointer constructors do this for you.)  
   
-4.  Utilizzare gli operatori `->` e `*` sottoposti a overload per accedere all'oggetto.  
+4.  Use the overloaded `->` and `*` operators to access the object.  
   
-5.  Consentire al puntatore intelligente di eliminare l'oggetto.  
+5.  Let the smart pointer delete the object.  
   
- I puntatori intelligenti sono progettati per essere estremamente efficaci sia in termini di memoria che di prestazioni.  Ad esempio, l'unico membro dati in `unique_ptr` è il puntatore incapsulato.  Ciò significa che `unique_ptr` è esattamente delle stesse dimensioni del puntatore, ovvero quattro o otto byte.  L'accesso al puntatore incapsulato tramite gli operatori \* e \-\> sottoposti a overload del puntatore intelligente non è più lento dell'accesso diretto ai puntatori non elaborati.  
+ Smart pointers are designed to be as efficient as possible both in terms of memory and performance. For example, the only data member in `unique_ptr` is the encapsulated pointer. This means that `unique_ptr` is exactly the same size as that pointer, either four bytes or eight bytes. Accessing the encapsulated pointer by using the smart pointer overloaded * and -> operators is not significantly slower than accessing the raw pointers directly.  
   
- I puntatori intelligenti dispongono di funzioni membro proprie accessibili tramite la notazione "punto".  Alcuni puntatori intelligenti STL, ad esempio, dispongono di una funzione membro di reimpostazione che rilascia la proprietà del puntatore.  Come illustrato nell'esempio seguente, questa caratteristica è utile quando è necessario liberare memoria di proprietà del puntatore intelligente prima che quest'ultimo esca dall'ambito.  
+ Smart pointers have their own member functions, which are accessed by using “dot” notation. For example, some C++ Standard Library smart pointers have a reset member function that releases ownership of the pointer. This is useful when you want to free the memory owned by the smart pointer before the smart pointer goes out of scope, as shown in the following example.  
   
  [!code-cpp[smart_pointers_intro#3](../cpp/codesnippet/CPP/smart-pointers-modern-cpp_3.cpp)]  
   
- I puntatori intelligenti consentono in genere di accedere direttamente al relativo puntatore non elaborato.  I puntatori intelligenti STL dispongono di una funzione membro `get` che assolve a questo scopo e `CComPtr` dispone di un membro della classe `p` pubblica.  Consentendo l'accesso diretto al puntatore sottostante, è possibile utilizzare il puntatore intelligente per gestire la memoria nel codice e passare il puntatore non elaborato al codice che non supporta i puntatori intelligenti.  
+ Smart pointers usually provide a way to access their  raw pointer directly. C++ Standard Library smart pointers have a `get` member function for this purpose, and `CComPtr` has a public `p` class member. By providing direct access to the underlying pointer, you can use the smart pointer to manage memory in your own code and still pass the raw pointer to code that does not support smart pointers.  
   
  [!code-cpp[smart_pointers_intro#4](../cpp/codesnippet/CPP/smart-pointers-modern-cpp_4.cpp)]  
   
-## Tipi di puntatori intelligenti  
- Nella sezione seguente vengono riepilogati i diversi tipi di puntatori intelligenti disponibili nell'ambiente di programmazione Windows e ne viene descritto l'utilizzo.  
+## <a name="kinds-of-smart-pointers"></a>Kinds of Smart Pointers  
+ The following section summarizes the different kinds of smart pointers that are available in the Windows programming environment and describes when to use them.  
   
- **Puntatori intelligenti della libreria standard C\+\+**  
- Utilizzare questi puntatori intelligenti come prima scelta per incapsulare i puntatori in oggetti C\+\+ non aggiornati \(POCO, plain old C\+\+ object\).  
+ **C++ Standard Library Smart Pointers**  
+ Use these smart pointers as a first choice for encapsulating pointers to plain old C++ objects (POCO).  
   
--   `unique_ptr`    
-    Consente esattamente un proprietario del puntatore sottostante.  Utilizzarlo come scelta predefinita per POCO, a meno che non sia necessario un `shared_ptr`.  Può essere spostato a un nuovo proprietario, ma non copiato o condiviso.  Sostituisce `auto_ptr`, che è deprecato.  Confrontare con `boost::scoped_ptr`.  `unique_ptr` è di piccole dimensioni ed efficiente. Presenta le dimensioni di un puntatore e supporta i riferimenti rvalue per l'inserimento e il recupero rapidi dalle raccolte STL.  File di intestazione: `<memory>`.  Per ulteriori informazioni, vedere [Procedura: creare e utilizzare istanze unique\_ptr](../cpp/how-to-create-and-use-unique-ptr-instances.md) e [Classe unique\_ptr](../standard-library/unique-ptr-class.md).  
+-   `unique_ptr`   
+     Allows exactly one owner of the underlying pointer. Use as the default choice for POCO unless you know for certain that you require a `shared_ptr`. Can be moved to a new owner, but not copied or shared. Replaces `auto_ptr`, which is deprecated. Compare to `boost::scoped_ptr`. `unique_ptr` is small and efficient; the size is one pointer and it supports rvalue references for fast insertion and retrieval from C++ Standard Library collections. Header file: `<memory>`. For more information, see [How to: Create and Use unique_ptr Instances](../cpp/how-to-create-and-use-unique-ptr-instances.md) and [unique_ptr Class](../standard-library/unique-ptr-class.md).  
   
--   `shared_ptr`    
-    Puntatore intelligente con conteggio dei riferimenti.  Utilizzarlo quando si desidera assegnare un puntatore non elaborato a più proprietari, ad esempio quando si restituisce una copia di un puntatore da un contenitore, ma si desidera conservare l'originale.  Il puntatore non elaborato non viene eliminato finché tutti i proprietari di `shared_ptr` non sono usciti dall'ambito o non hanno ceduto in altro modo la proprietà.  Ha le dimensioni di due puntatori, uno per l'oggetto e uno per il blocco di controllo condiviso che contiene il conteggio dei riferimenti.  File di intestazione: `<memory>`.  Per ulteriori informazioni, vedere [Procedura: creare e utilizzare istanze shared\_ptr](../cpp/how-to-create-and-use-shared-ptr-instances.md) e [Classe shared\_ptr](../standard-library/shared-ptr-class.md).  
+-   `shared_ptr`   
+     Reference-counted smart pointer. Use when you want to assign one raw pointer to multiple owners, for example, when you return a copy of a pointer from a container but want to keep the original. The raw pointer is not deleted until all `shared_ptr` owners have gone out of scope or have otherwise given up ownership. The size is two pointers; one for the object and one for the shared control block that contains the reference count. Header file: `<memory>`. For more information, see [How to: Create and Use shared_ptr Instances](../cpp/how-to-create-and-use-shared-ptr-instances.md) and [shared_ptr Class](../standard-library/shared-ptr-class.md).  
   
--   `weak_ptr`    
-    Puntatore intelligente per casi speciali da utilizzare insieme a `shared_ptr`.  `weak_ptr` fornisce l'accesso a un oggetto di proprietà di una o più istanze di `shared_ptr`, ma non partecipa al conteggio dei riferimenti.  Utilizzarlo quando si desidera osservare un oggetto, ma non è necessario che rimanga attivo.  Necessario in alcuni casi per interrompere i riferimenti circolari tra istanze di `shared_ptr`.  File di intestazione: `<memory>`.  Per ulteriori informazioni, vedere [Procedura: creare e utilizzare istanze weak\_ptr](../cpp/how-to-create-and-use-weak-ptr-instances.md) e [Classe weak\_ptr](../standard-library/weak-ptr-class.md).  
+-   `weak_ptr`   
+    Special-case smart pointer for use in conjunction with `shared_ptr`. A `weak_ptr` provides access to an object that is owned by one or more `shared_ptr` instances, but does not participate in reference counting. Use when you want to observe an object, but do not require it to remain alive. Required in some cases to break circular references between `shared_ptr` instances. Header file: `<memory>`. For more information, see [How to: Create and Use weak_ptr Instances](../cpp/how-to-create-and-use-weak-ptr-instances.md) and [weak_ptr Class](../standard-library/weak-ptr-class.md).  
   
- **Puntatori intelligenti per oggetti COM \(programmazione Windows classica\)**  
- Quando si utilizzano gli oggetti COM, eseguire il wrapping dei puntatori a interfaccia in un tipo di puntatore intelligente appropriato.  La libreria ATL \(Active Template Library\) definisce diversi puntatori intelligenti che assolvono a funzioni diverse.  È anche possibile utilizzare il tipo di puntatore intelligente `_com_ptr_t`, utilizzato dal compilatore durante la creazione di classi wrapper da file TLB.  Si tratta della scelta migliore quando non si desidera includere i file di intestazione ATL.  
+ **Smart Pointers for COM Objects (Classic Windows Programming)**  
+ When you work with COM objects, wrap the interface pointers in an appropriate smart pointer type. The Active Template Library (ATL) defines several smart pointers for various purposes. You can also use the `_com_ptr_t` smart pointer type, which the compiler uses when it creates wrapper classes from .tlb files. It's the best choice when you do not want to include the ATL header files.  
   
  [CComPtr Class](../atl/reference/ccomptr-class.md)  
- Utilizzarlo solo se non si può utilizzare ATL.  Esegue il conteggio dei riferimenti mediante i metodi `Release` e `AddRef`.  Per ulteriori informazioni, vedere [Procedura: creare e utilizzare istanze CComPtr e CComQIPtr](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).  
+ Use this unless you cannot use ATL. Performs reference counting by using the `AddRef` and `Release` methods. For more information, see [How to: Create and Use CComPtr and CComQIPtr Instances](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).  
   
  [CComQIPtr Class](../atl/reference/ccomqiptr-class.md)  
- È simile a `CComPtr`, ma fornisce una sintassi semplificata per chiamare `QueryInterface` su oggetti COM.  Per ulteriori informazioni, vedere [Procedura: creare e utilizzare istanze CComPtr e CComQIPtr](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).  
+ Resembles `CComPtr` but also provides simplified syntax for calling `QueryInterface` on COM objects. For more information, see [How to: Create and Use CComPtr and CComQIPtr Instances](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).  
   
  [CComHeapPtr Class](../atl/reference/ccomheapptr-class.md)  
- Puntatore intelligente a oggetti che utilizzano `CoTaskMemFree` per liberare memoria.  
+ Smart pointer to objects that use `CoTaskMemFree` to free memory.  
   
  [CComGITPtr Class](../atl/reference/ccomgitptr-class.md)  
- Puntatore intelligente per interfacce ottenute dalla tabella di interfaccia globale \(GIT\).  
+ Smart pointer for interfaces that are obtained from the global interface table (GIT).  
   
- [Classe \_com\_ptr\_t](../cpp/com-ptr-t-class.md)  
- È simile a `CComQIPtr` in termini di funzionalità, ma non dipende dalle intestazioni ATL.  
+ [_com_ptr_t Class](../cpp/com-ptr-t-class.md)  
+ Resembles `CComQIPtr` in functionality but does not depend on ATL headers.  
   
- **Puntatori intelligenti ALT per oggetti POCO**  
- Oltre ai puntatori intelligenti per gli oggetti COM, ATL definisce i puntatori intelligenti e le raccolte di puntatori intelligenti per gli oggetti POCO.  Nella programmazione Windows classica questi tipi sono alternative utili alle raccolte STL, specialmente quando la portabilità del codice non è necessaria o quando non si desidera combinare i modelli di programmazione STL e ATL.  
+ **ATL Smart Pointers for POCO Objects**  
+ In addition to smart pointers for COM objects, ATL also defines smart pointers, and collections of smart pointers, for plain old C++ objects. In classic Windows programming, these types are useful alternatives to the C++ Standard Library collections, especially when code portability is not required or when you do not want to mix the programming models of the C++ Standard Library and ATL.  
   
  [CAutoPtr Class](../atl/reference/cautoptr-class.md)  
- Puntatore intelligente che applica la proprietà univoca trasferendo la proprietà sulla copia.  Paragonabile alla classe `std::auto_ptr` deprecata.  
+ Smart pointer that enforces unique ownership by transferring ownership on copy. Comparable to the deprecated `std::auto_ptr` Class.  
   
  [CHeapPtr Class](../atl/reference/cheapptr-class.md)  
- Puntatore intelligente per gli oggetti allocati utilizzando la funzione [malloc](../c-runtime-library/reference/malloc.md) C.  
+ Smart pointer for objects that are allocated by using the C [malloc](../c-runtime-library/reference/malloc.md) function.  
   
  [CAutoVectorPtr Class](../atl/reference/cautovectorptr-class.md)  
- Puntatore intelligente per le matrici allocate tramite `new[]`.  
+ Smart pointer for arrays that are allocated by using `new[]`.  
   
  [CAutoPtrArray Class](../atl/reference/cautoptrarray-class.md)  
- Classe che incapsula una matrice di elementi `CAutoPtr`.  
+ Class that encapsulates an array of `CAutoPtr` elements.  
   
  [CAutoPtrList Class](../atl/reference/cautoptrlist-class.md)  
- Classe che incapsula metodi per modificare un elenco di nodi `CAutoPtr`.  
+ Class that encapsulates methods for manipulating a list of `CAutoPtr` nodes.  
   
-## Vedere anche  
- [C\+\+](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [Riferimenti del linguaggio C\+\+](../cpp/cpp-language-reference.md)   
- [Libreria standard C\+\+](../standard-library/cpp-standard-library-reference.md)   
- [\(NOTINBUILD\)Overview: Memory Management in C\+\+](http://msdn.microsoft.com/it-it/2201885d-3d91-4a6e-aaa6-7a554e0362a8)
+## <a name="see-also"></a>See Also  
+ [Welcome Back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
+ [C++ Language Reference](../cpp/cpp-language-reference.md)   
+ [C++ Standard Library](../standard-library/cpp-standard-library-reference.md)   
+

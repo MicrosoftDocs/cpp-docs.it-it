@@ -1,29 +1,46 @@
 ---
-title: "Risoluzione dei nomi per nomi dichiarati in locale | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: Name Resolution for Locally Declared Names | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: 743b88f3-de11-48f4-ae83-931449ea3886
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Risoluzione dei nomi per nomi dichiarati in locale
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 767daf6f58a0389b14ea547fd912431734c41850
+ms.contentlocale: it-it
+ms.lasthandoff: 09/11/2017
 
-È possibile fare riferimento al nome stesso del modello con o senza gli argomenti di modello.  Nell'ambito di un modello di classe, il nome stesso fa riferimento al modello.  Nell'ambito della specializzazione o della specializzazione parziale di un modello, il nome da solo fa riferimento alla specializzazione o alla specializzazione parziale.  È inoltre possibile fare riferimento alle altre specializzazioni o alle specializzazioni parziali del modello con gli argomenti di modello appropriati.  
+---
+# <a name="name-resolution-for-locally-declared-names"></a>Name Resolution for Locally Declared Names
+The template's name itself can be referred to with or without the template arguments. In the scope of a class template, the name itself refers to the template. In the scope of a template specialization or partial specialization, the name alone refers to the specialization or partial specialization. Other specializations or partial specializations of the template can also be referenced, with the appropriate template arguments.  
   
-## Esempio  
- Nel codice riportato di seguito viene illustrato che il nome A del modello della classe viene interpretato in modo diverso nell'ambito di una specializzazione o di una specializzazione parziale.  
+## <a name="example"></a>Example  
+ The following code shows that the class template's name A is interpreted differently in the scope of a specialization or partial specialization.  
   
 ```  
 // template_name_resolution3.cpp  
@@ -43,10 +60,10 @@ template<> class A<int> {
 };  
 ```  
   
-## Esempio  
- In caso di un conflitto di nomi tra un parametro di modello e un altro oggetto, il parametro di modello può o non essere nascosto.  Le regole seguenti consentiranno di determinare la precedenza.  
+## <a name="example"></a>Example  
+ In the case of a name conflict between a template parameter and another object, the template parameter can or cannot be hidden. The following rules will help determine precedence.  
   
- Il parametro di modello si trova nell'ambito a partire dal punto in cui viene visualizzato per la prima volta fino alla fine della classe o del modello di funzione.  Se il nome viene di nuovo visualizzato nell'elenco degli argomenti di modello o nell'elenco delle classi base, si riferisce allo stesso tipo.  In C\+\+ standard, nessun altro nome identico al parametro di modello può essere dichiarato nello stesso ambito.  Un'estensione Microsoft consente di ridefinire il parametro di modello nell'ambito del modello.  Nell'esempio riportato di seguito viene illustrato l'utilizzo del parametro di modello nella specifica di base di un modello di classe.  
+ The template parameter is in scope from the point where it first appears until the end of the class or function template. If the name appears again in the template argument list or in the list of base classes, it refers to the same type. In standard C++, no other name that is identical to the template parameter can be declared in the same scope. A Microsoft extension allows the template parameter to be redefined in the scope of the template. The following example shows using the template parameter in the base specification of a class template.  
   
 ```  
 // template_name_resolution4.cpp  
@@ -62,8 +79,8 @@ int main() {
 }  
 ```  
   
-## Esempio  
- Nel definire le funzioni membro di un modello all'esterno del modello di classe, è possibile utilizzare un nome del parametro di modello diverso.  Se la definizione di funzione membro di modello utilizza un nome diverso per il parametro di modello rispetto a quello utilizzato dalla dichiarazione e il nome utilizzato nella definizione è in conflitto con un altro membro della dichiarazione, il membro della dichiarazione di modello ha la precedenza.  
+## <a name="example"></a>Example  
+ When defining a template's member functions outside the class template, a different template parameter name can be used. If the template member function definition uses a different name for the template parameter than the declaration does, and the name used in the definition conflicts with another member of the declaration, the member in the template declaration takes precedence.  
   
 ```  
 // template_name_resolution5.cpp  
@@ -92,9 +109,12 @@ int main() {
 }  
 ```  
   
-  **Z::Z\(\)**   
-## Esempio  
- Quando si definisce una funzione o una funzione membro di modello all'esterno dello spazio dei nomi in cui è stato dichiarato il modello, l'argomento di modello ha la precedenza sui nomi degli altri membri dello spazio dei nomi.  
+```Output  
+Z::Z()  
+```  
+  
+## <a name="example"></a>Example  
+ When defining a template function or member function outside the namespace in which the template was declared, the template argument takes precedence over the names of other members of the namespace.  
   
 ```  
 // template_name_resolution6.cpp  
@@ -122,9 +142,12 @@ int main() {
 }  
 ```  
   
-  **C\<T\>::g**   
-## Esempio  
- Nelle definizioni esterne alla dichiarazione della classe di modello, se una classe di modello dispone di una classe base che non dipende da un argomento di modello e se la classe base o uno dei suoi membri hanno lo stesso nome di un argomento di modello, la classe base o il nome del membro nascondono l'argomento di modello.  
+```Output  
+C<T>::g  
+```  
+  
+## <a name="example"></a>Example  
+ In definitions that are outside of the template class declaration, if a template class has a base class that does not depend on a template argument and if the base class or one of its members has the same name as a template argument, then the base class or member name hides the template argument.  
   
 ```  
 // template_name_resolution7.cpp  
@@ -155,7 +178,10 @@ int main() {
 }  
 ```  
   
-  **Base**  
-**1**   
-## Vedere anche  
- [Risoluzione di nomi](../cpp/templates-and-name-resolution.md)
+```Output  
+Base  
+1  
+```  
+  
+## <a name="see-also"></a>See Also  
+ [Name Resolution](../cpp/templates-and-name-resolution.md)

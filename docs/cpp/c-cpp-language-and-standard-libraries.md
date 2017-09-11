@@ -1,37 +1,54 @@
 ---
-title: "Linguaggio C++ e librerie standard | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: C/C++ Language and Standard Libraries | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: c26a6682-961a-43ef-ad33-2adc612f69ac
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Linguaggio C++ e librerie standard
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: a9f154b6f2d96658eb898cac6ae3147088de29bc
+ms.contentlocale: it-it
+ms.lasthandoff: 09/11/2017
 
-Questa sezione della documentazione include le linee guida e i contenuti di riferimento per l'implementazione Microsoft degli standard ISO Per C e C\+\+.  
+---
+# <a name="cc-language-and-standard-libraries"></a>C/C++ Language and Standard Libraries
+This section of the documentation includes guidelines and reference content for the Microsoft implementation of the ISO standards for C and C++.  
   
-## Articoli correlati  
+## <a name="related-articles"></a>Related Articles  
   
-|Titolo|Descrizione|  
-|------------|-----------------|  
-|[C\+\+](../cpp/welcome-back-to-cpp-modern-cpp.md)|Vengono descritti i moderni idiomi di programmazione e le procedure consigliate di C\+\+.|  
-|[Linguaggi C\/C\+\+](../misc/c-cpp-languages.md)|Contenuto di riferimento per i linguaggi C e C\+\+.|  
-|[Riferimenti alla libreria di runtime C](../c-runtime-library/c-run-time-library-reference.md)|Contenuto di riferimento per l'implementazione Microsoft del C runtime \(CRT\).|  
-|[Libreria standard C\+\+](../standard-library/cpp-standard-library-reference.md)|Contenuto di riferimento per l'implementazione Microsoft della Standard Template Library \(STL\).|  
-|[Libreria SafeInt](../windows/safeint-library.md)|Contenuto di riferimento per una libreria di funzioni che gestiscono i valori integer, senza il rischio di generare overflow.|  
-|[Visual C\+\+](../top/visual-cpp-in-visual-studio-2015.md)|Descrive le funzionalità principali di Visual C\+\+ in Visual Studio e i collegamenti al resto della documentazione di Visual C\+\+.|  
-|[IDE e strumenti di sviluppo](../ide/ide-and-tools-for-visual-cpp-development.md)|Collega ad altri articoli contenenti informazioni su come utilizzare Visual Studio e gli strumenti correlati per creare, compilare e distribuire applicazioni C\+\+.|  
-|[Novità in Visual C\+\+](../top/what-s-new-for-visual-cpp-in-visual-studio-2015.md)|Vengono descritte le nuove funzionalità e i miglioramenti apportati a questa versione.|
+|Title|Description|  
+|-----------|-----------------|  
+|[Welcome Back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)|Describes modern C++ programming idioms and best practices.|  
+|[C++ Language Reference](../cpp/cpp-language-reference.md)|Reference content for the C++ languages.|  
+|[C++ Standard Library](../standard-library/cpp-standard-library-reference.md)|Reference content for the Microsoft implementation of the C++ Standard Library.|  
+|[C Language Reference](../c-language/c-language-reference.md)|Reference content for the Microsoft implementation of the C language.|
+|[C Run-Time Library Reference](../c-runtime-library/c-run-time-library-reference.md)|Reference content for the Microsoft implementation of the C runtime (CRT).|
+|[SafeInt Library](../windows/safeint-library.md)|Reference content for a library of functions that handle integers without the risk of overflow.|  
+|[Visual C++](../visual-cpp-in-visual-studio.md)|Describes key features of Visual C++ in Visual Studio and links to the rest of the Visual C++ documentation.|  
+|[IDE and Development Tools](../ide/ide-and-tools-for-visual-cpp-development.md)|Links to other articles that contain information about how to use Visual Studio and its related tools to create, build, and deploy C++ apps.|  
+|[What's New for Visual C++](../what-s-new-for-visual-cpp-in-visual-studio.md)|Describes the new features and enhancements in this release.|

@@ -1,55 +1,70 @@
 ---
-title: "Conversioni di tipi e indipendenza dai tipi (C++ moderno) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Type Conversions and Type Safety (Modern C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 629b361a-2ce1-4700-8b5d-ab4f57b245d5
 caps.latest.revision: 23
-caps.handback.revision: 23
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Conversioni di tipi e indipendenza dai tipi (C++ moderno)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 4a4be148948b8e4b180504dfc6a05a34e7ab4f33
+ms.contentlocale: it-it
+ms.lasthandoff: 09/11/2017
 
-In questo documento vengono identificati i problemi comuni di conversione di tipi e viene descritto come evitarli nel codice C\+\+.  
+---
+# <a name="type-conversions-and-type-safety-modern-c"></a>Type Conversions and Type Safety (Modern C++)
+This document identifies common type conversion problems and describes how you can avoid them in your C++ code.  
   
- Quando si scrive un programma C\+\+, è importante assicurarsi che sia indipendente dai tipi.  Ciò significa che qualsiasi variabile, argomento della funzione e valore restituito di una funzione non memorizza un tipo accettabile di dati e le operazioni che includono i valori di tipi diversi "abbiano significato" e non comportano perdita di dati, l'errata interpretazione di schemi di bit, o il danneggiamento della memoria.  Un programma che mai in modo esplicito o implicito converte valori da un tipo a un altro è indipendente dai tipi per definizione.  Tuttavia, le conversioni di tipo, anche conversioni di tipo rischiose, sono talvolta necessarie.  Ad esempio, potrebbe essere necessario archiviare il risultato di un'operazione a virgola mobile in una variabile di tipo `int` o, è necessario passare il valore in `int` unsigned a una funzione che accetta `int` signed.  Entrambi gli esempi mostrano le conversioni rischiose di tipo perché potrebbero causare la perdita di dati o re\-interpretare un valore.  
+ When you write a C++ program, it's important to ensure that it's type-safe. This means that every variable, function argument, and function return value is storing an acceptable kind of data, and that operations that involve values of different types "make sense" and don't cause data loss, incorrect interpretation of bit patterns, or memory corruption. A program that never explicitly or implicitly converts values from one type to another is type-safe by definition. However, type conversions, even unsafe conversions, are sometimes required. For example, you might have to store the result of a floating point operation in a variable of type `int`, or you might have to pass the value in an unsigned `int` to a function that takes a signed `int`. Both examples illustrate unsafe conversions because they may cause data loss or re-interpretation of a value.  
   
- Quando il compilatore rileva una conversione non sicura, viene generato un errore o un avviso.  Un errore impedisce la compilazione; un avviso permette di eseguire la compilazione ma indica un possibile errore nel codice.  Tuttavia, anche se il programma viene compilato senza avvisi, potrebbe contenere codice che conduce conversioni implicite di tipi che producono risultati errati.  Gli errori di tipo possono essere dovuti anche alle conversioni esplicite, o dai cast, nel codice.  
+ When the compiler detects an unsafe conversion, it issues either an error or a warning. An error stops compilation; a warning allows compilation to continue but indicates a possible error in the code. However, even if your program compiles without warnings, it still may contain code that leads to implicit type conversions that produce incorrect results. Type errors can also be introduced by explicit conversions, or casts, in the code.  
   
-## Conversione implicita di tipi  
- Quando un'espressione contiene gli operandi diversi di tipi incorporati, e non sono presenti cast espliciti, il compilatore utilizza *le conversioni standard* incorporate per convertire uno degli operandi in modo che i tipi corrispondano.  Il compilatore tenta le conversioni in una sequenza ben definita finché una non viene eseguita.  Se la conversione selezionata è una promozione, il compilatore non genera un avviso.  Se la conversione è un meccanismo, il compilatore genera un avviso sulla possibile perdita di dati.  Se la perdita di dati effettivi si verifica, essa dipende dai valori effettivi in questione, ma è consigliabile considerare l'avviso come un errore.  Se un tipo definito dall'utente è implicito, il compilatore tenta di utilizzare le conversioni specificate nella definizione della classe.  Se non viene trovata una conversione accettabile, il compilatore genera un errore e il programma non verrà compilato.  Per ulteriori informazioni sulle regole che controllano le conversioni standard, consultare [Conversioni standard](../cpp/standard-conversions.md).  Per ulteriori informazioni sulle conversioni definite dall'utente, consultare [Conversioni definite dall'utente](../dotnet/user-defined-conversions-cpp-cli.md)\).  
+## <a name="implicit-type-conversions"></a>Implicit type conversions  
+ When an expression contains operands of different built-in types, and no explicit casts are present, the compiler uses built-in *standard conversions* to convert one of the operands so that the types match. The compiler tries the conversions in a well-defined sequence until one succeeds. If the selected conversion is a promotion, the compiler does not issue a warning. If the conversion is a narrowing, the compiler issues a warning about possible data loss. Whether actual data loss occurs depends on the actual values involved, but we recommend that you treat this warning as an error. If a user-defined type is involved, then the compiler tries to use the conversions that you have specified in the class definition. If it can't find an acceptable conversion, the compiler issues an error and does not compile the program. For more information about the rules that govern the standard conversions, see [Standard Conversions](../cpp/standard-conversions.md). For more information about user-defined conversions, see [User-Defined Conversions (C++/CLI)](../dotnet/user-defined-conversions-cpp-cli.md).  
   
-### Conversione di ampliamento \(promozione\)  
- In una conversione verso un tipo di dati più grande, un valore in una piccola variabile viene assegnato a una maggiore variabile senza perdita di dati.  Poiché le conversioni di ampliamento sono sempre sicure, il compilatore li esegue automaticamente e non genera avvisi.  Le seguenti traduzioni sono conversioni di ampliamento.  
+### <a name="widening-conversions-promotion"></a>Widening conversions (promotion)  
+ In a widening conversion, a value in a smaller variable is assigned to a larger variable with no loss of data. Because widening conversions are always safe, the compiler performs them silently and does not issue warnings. The following conversions are widening conversions.  
   
-|Da|Per|  
-|--------|---------|  
-|Qualsiasi tipo integrale signed o unsigned escluso `long long` o `__int64`|`double`|  
-|`bool` o `char`|Qualsiasi altro tipo incorporato|  
-|`short` o `wchar_t`|`int`, `long`, `long long`|  
+|From|To|  
+|----------|--------|  
+|Any signed or unsigned integral type except `long long` or `__int64`|`double`|  
+|`bool` or `char`|Any other built-in type|  
+|`short` or `wchar_t`|`int`, `long`, `long long`|  
 |`int`, `long`|`long long`|  
 |`float`|`double`|  
   
-### Conversione di restrizione \(coercizione\)  
- Il compilatore esegue conversioni di restrizione in modo implicito, ma segnala potenziali perdite di dati.  Prendere molto seriamente questi avvisi.  Se si è certi che alcuna perdita di dati si verifica perché i valori nella variabile più grande verranno sempre adattati nella variabile più piccola, allora si aggiunge un cast esplicito in modo che il compilatore non generi più alcun un avviso.  Se non si è certi che la conversione è sicura, aggiungere al codice un tipo di controllo runtime per gestire la perdita di dati in modo che non il programma non produca risultati non corretti.  Per suggerimenti su come gestire questo scenario, consultare [\(NOTINBUILD\)How to: Handle Narrowing Conversions \(C\+\+\)](http://msdn.microsoft.com/it-it/e483237e-501e-4a12-ac24-51526f6ddeaa).  
+### <a name="narrowing-conversions-coercion"></a>Narrowing conversions (coercion)  
+ The compiler performs narrowing conversions implicitly, but it warns you about potential data loss. Take these warnings very seriously. If you are certain that no data loss will occur because the values in the larger variable will always fit in the smaller variable, then add an explicit cast so that the compiler will no longer issue a warning. If you are not sure that the conversion is safe, add to your code some kind of runtime check to handle possible data loss so that it does not cause your program to produce incorrect results. 
   
- Una conversione da un tipo a virgola mobile a un tipo integrale è una conversione di restrizione perché la parte decimale del valore in virgola mobile viene rimossa e persa.  
+ Any conversion from a floating point type to an integral type is a narrowing conversion because the fractional portion of the floating point value is discarded and lost.  
   
- Nell'esempio di codice seguente vengono illustrati alcune conversioni implicite verso un tipo di dati più piccolo, e gli avvisi che il compilatore genera.  
+ The following code example shows some implicit narrowing conversions, and the warnings that the compiler issues for them.  
   
 ```cpp  
-  
 int i = INT_MAX + 1; //warning C4307:'+':integral constant overflow  
 wchar_t wch = 'A'; //OK  
 char c = wch; // warning C4244:'initializing':conversion from 'wchar_t'  
@@ -60,16 +75,14 @@ int j = 1.9f; // warning C4244:'initializing':conversion from 'float' to
               // 'int', possible loss of data  
 int k = 7.7; // warning C4244:'initializing':conversion from 'double' to  
              // 'int', possible loss of data  
-  
 ```  
   
-### Conversioni Signed \- Unsigned  
- Un tipo integrale signed e la relativa controparte unsigned hanno sempre la stessa dimensione, ma differiscono per l'interpretazione da trasformazione di valore dello schema di bit.  Nell'esempio di codice illustra cosa accade quando lo stesso schema di bit viene interpretato come un valore signed e unsigned.  Lo schema di bit memorizzato in entrambi i `num2` e `num` non cambia come illustrato nel precedente esempio.  
+### <a name="signed---unsigned-conversions"></a>Signed - unsigned conversions  
+ A signed integral type and its unsigned counterpart are always the same size, but they differ in how the bit pattern is interpreted for value transformation. The following code example demonstrates what happens when the same bit pattern is interpreted as a signed value and as an unsigned value. The bit pattern stored in both `num` and `num2` never changes from what is shown in the earlier illustration.  
   
 ```cpp  
-  
 using namespace std;  
-unsigned short num = numeric_limits<unsigned short>::max(); // #include <limits>  
+unsigned short num = numeric_limits<unsigned short>::max(); // #include <limits>  
 short num2 = num;  
 cout << "unsigned val = " << num << " signed val = " << num2 << endl;  
 // Prints: unsigned val = 65535 signed val = -1  
@@ -82,44 +95,40 @@ cout << "unsigned val = " << num << " signed val = " << num2 << endl;
   
 ```  
   
- Si noti che i valori vengono interpretati nuovamente in entrambe le direzioni.  Se il programma produce risultati dispari in cui il segno del valore risulta invertito dal previsto, cercare le conversioni implicite tra i tipi integrali signed e unsigned.  Nell'esempio seguente, il risultato dell'espressione \(0 \- 1\) viene convertito in modo implicito da `int` in `unsigned int` quando viene archiviato in `num`.  In questo modo lo schema di bit deve essere interpretato nuovamente.  
+ Notice that values are reinterpreted in both directions. If your program produces odd results in which the sign of the value seems inverted from what you expect, look for implicit conversions between signed and unsigned integral types. In the following example, the result of the expression ( 0 - 1) is implicitly converted from `int` to `unsigned int` when it's stored in `num`. This causes the bit pattern to be reinterpreted.  
   
 ```cpp  
-  
 unsigned int u3 = 0 - 1;  
 cout << u3 << endl; // prints 4294967295  
   
 ```  
   
- Il compilatore non avvisa sulle conversioni implicite tra i tipi integrali signed e unsigned.  Di conseguenza, è consigliabile evitare le conversioni signed e unsigned nel suo complesso.  Se non è possibile evitarli, aggiungere al codice un controllo runtime per rilevare se il valore convertito è maggiore o uguale a zero e minore o uguale al valore massimo del tipo signed.  I valori in questo intervallo verranno modificati da signed a unsigned o viceversa senza necessità che vengano reinterpretati.  
+ The compiler does not warn about implicit conversions between signed and unsigned integral types. Therefore, we recommend that you avoid signed-to-unsigned conversions altogether. If you can't avoid them, then add to your code a runtime check to detect whether the value being converted is greater than or equal to zero and less than or equal to the maximum value of the signed type. Values in this range will transfer from signed to unsigned or from unsigned to signed without being reinterpreted.  
   
-### Conversioni puntatore  
- In molte espressioni, gli array in stile C vengono convertiti in modo implicito in un puntatore al primo elemento dell'array e le conversioni costanti possono verificarsi automaticamente.  Sebbene sia utile, è potenzialmente soggetto ad errori.  Ad esempio, il seguente esempio di codice progettato in modo scorretto non ha alcun senso, ma verrà compilato in Visual C\+\+ e produce come risultato "p".  Innanzitutto, la stringa "help" viene convertita in `char*` che indica il primo elemento dell'array; questo puntatore viene incrementato da tre elementi in modo che punti ora all'ultimo elemento "p".  
+### <a name="pointer-conversions"></a>Pointer conversions  
+ In many expressions, a C-style array is implicitly converted to a pointer to the first element in the array, and constant conversions can happen silently. Although this is convenient, it's also potentially error-prone. For example, the following badly designed code example seems nonsensical, and yet it will compile in Visual C++ and produces a result of 'p'. First, the "Help" string constant literal is converted to a `char*` that points to the first element of the array; that pointer is then incremented by three elements so that it now points to the last element 'p'.  
   
 ```cpp  
-  
 char* s = "Help" + 3;  
   
 ```  
   
-## Conversioni esplicite \(cast\)  
- Tramite un'operazione cast, è possibile indicare al compilatore di convertire un valore di un tipo a un altro.  Il compilatore genererà in alcuni casi un errore se i due tipi sono completamente indipendenti, ma in altri casi non genererà un errore anche se l'operazione non è indipendente dai tipi.  Utilizzare il Cast con moderazione poiché qualsiasi conversione da un tipo a un altro è una potenziale fonte di errori in un programma.  Tuttavia, i cast talvolta sono necessari e non tutti i cast sono altrettanto pericolosi.  Un cast è efficace quando il codice esegue una conversione verso un tipo di dati più piccolo e si sa che la conversione non riproduca risultati non corretti.  In effetti, si indica al compilatore che si è a conoscenza di ciò che si sta facendo e di interrompere con fastidiosi avvisi riguardo a tale operazione.  Un altro utilizzo è di eseguire il cast da un pointer\-to\-derived class \(puntatore ad una classe derivata\) ad un pointer\-to\-base class \(puntatore ad una classe di base\).  Un altro utilizzo è di eseguire il cast di `const` di una variabile per passarla a una funzione che richiede un argomento non`const`.  La maggior parte di queste operazioni cast implicano alcuni rischi.  
+## <a name="explicit-conversions-casts"></a>Explicit conversions (casts)  
+ By using a cast operation, you can instruct the compiler to convert a value of one type to another type. The compiler will raise an error in some cases if the two types are completely unrelated, but in other cases it will not raise an error even if the operation is not type-safe. Use casts sparingly because any conversion from one type to another is a potential source of program error. However, casts are sometimes required, and not all casts are equally dangerous. One effective use of a cast is when your code performs a narrowing conversion and you know that the conversion is not causing your program to produce incorrect results. In effect, this tells the compiler that you know what you are doing and to stop bothering you with warnings about it. Another use is to cast from a pointer-to-derived class to a pointer-to-base class. Another use is to cast away the `const`-ness of a variable to pass it to a function that requires a non-`const` argument. Most of these cast operations involve some risk.  
   
- Nella programmazione C, lo stesso operatore di cast viene utilizzato per tutti i tipi di cast.  
+ In C-style programming, the same C-style cast operator is used for all kinds of casts.  
   
 ```cpp  
-  
 (int) x; // old-style cast, old-style syntax  
 int(x); // old-style cast, functional syntax  
   
 ```  
   
- L'operatore di cast nel linguaggio C è identico all'operatore di chiamata \(\) e quindi non appariscente nel codice e facile da ignorare.  Entrambi sono errati in quanto sono difficili da riconoscere immediatamente oppure da trovare e sono piuttosto diversi per richiamare qualsiasi combinazione di `static`, `const` e `reinterpret_cast`.  Comprendere cosa un cast obsoleto effettivamente fa può essere difficile e soggetto a errori.  Per tutti questi motivi, quando un cast è richiesto, è consigliabile utilizzare uno dei seguenti operatori di cast di C\+\+, in alcuni casi decisamente più indipendenti dai tipi e che esprimono molto più esplicitamente lo scopo di programmazione:  
+ The C-style cast operator is identical to the call operator () and is therefore inconspicuous in code and easy to overlook. Both are bad because they're difficult to recognize at a glance or search for, and they're disparate enough to invoke any combination of `static`, `const`, and `reinterpret_cast`. Figuring out what an old-style cast actually does can be difficult and error-prone. For all these reasons, when a cast is required, we recommend that you use one of the following C++ cast operators, which in some cases are significantly more type-safe, and which express much more explicitly the programming intent:  
   
--   `static_cast`, per i cast controllati solamente in fase di compilazione.  `static_cast` restituisce un errore se rileva che si sta tentando di eseguire il cast tra tipi che sono completamente incompatibili.  È inoltre possibile utilizzarlo per eseguire il cast tra un puntatore base e un puntatore derivato, ma il compilatore non è in grado di riconoscere sempre se tali conversioni sono sicure in fase di esecuzione.  
+-   `static_cast`, for casts that are checked at compile time only. `static_cast` returns an error if the compiler detects that you are trying to cast between types that are completely incompatible. You can also use it to cast between pointer-to-base and pointer-to-derived, but the compiler can't always tell whether such conversions will be safe at runtime.  
   
     ```cpp  
-  
     double d = 1.58947;  
     int i = d;  // warning C4244 possible loss of data  
     int j = static_cast<int>(d);       // No warning.  
@@ -132,12 +141,11 @@ int(x); // old-style cast, functional syntax
   
     ```  
   
-     Per ulteriori informazioni, consultare [Cast Statici](../cpp/static-cast-operator.md).  
+     For more information, see [static_cast](../cpp/static-cast-operator.md).  
   
--   `dynamic_cast`, per sicurezza, cast di puntatori base e puntatori derivati controllati in fase di esecuzione.  `dynamic_cast` è più sicuro di `static_cast` per il downcast, ma il controllo in fase di esecuzione comporta un sovraccarico.  
+-   `dynamic_cast`, for safe, runtime-checked casts of pointer-to-base to pointer-to-derived. A `dynamic_cast` is safer than a `static_cast` for downcasts, but the runtime check incurs some overhead.  
   
     ```cpp  
-  
     Base* b = new Base();  
   
     // Run-time check to determine whether b is actually a Derived*  
@@ -159,12 +167,11 @@ int(x); // old-style cast, functional syntax
   
     ```  
   
-     Per ulteriori informazioni, consultare [dynamic\_cast](../cpp/dynamic-cast-operator.md).  
+     For more information, see [dynamic_cast](../cpp/dynamic-cast-operator.md).  
   
--   `const_cast`, per eseguire il cast di `const` di una variabile o, la conversione di una variabile non\-`const` per essere `const`.  L'operazione di cast tramite `const` utilizzando questo operatore è altrettanto soggetto a errori quanto utilizza un cast tipico del linguaggio C, ma con `const-cast` è meno probabile eseguire il cast accidentalmente.  Talvolta è necessario eseguire il cast di `const` di una variabile, ad esempio, per passare una variabile `const` a una funzione che accetta un parametro non`const`.  Nell'esempio seguente viene illustrato come effettuare questa operazione.  
+-   `const_cast`, for casting away the `const`-ness of a variable, or converting a non-`const` variable to be `const`. Casting away `const`-ness by using this operator is just as error-prone as is using a C-style cast, except that with `const-cast` you are less likely to perform the cast accidentally. Sometimes you have to cast away the `const`-ness of a variable, for example, to pass a `const` variable to a function that takes a non-`const` parameter. The following example shows how to do this.  
   
     ```cpp  
-  
     void Func(double& d) { ... }  
     void ConstCast()  
     {  
@@ -174,17 +181,16 @@ int(x); // old-style cast, functional syntax
   
     ```  
   
-     Per ulteriori informazioni, consultare [const\_cast](../cpp/const-cast-operator.md).  
+     For more information, see [const_cast](../cpp/const-cast-operator.md).  
   
--   `reinterpret_cast`, per i cast tra tipi indipendenti come `pointer` in `int`.  
+-   `reinterpret_cast`, for casts between unrelated types such as `pointer` to `int`.  
   
     > [!NOTE]
-    >  Questo operatore di cast non viene spesso utilizzato come gli altri, e non è garantito che sia portabile ad altri compilatori.  
+    >  This cast operator is not used as often as the others, and it's not guaranteed to be portable to other compilers.  
   
-     Nell'esempio seguente viene illustrato come `reinterpret_cast` differisce da `static_cast`.  
+     The following example illustrates how `reinterpret_cast` differs from `static_cast`.  
   
     ```cpp  
-  
     const char* str = "hello";  
     int i = static_cast<int>(str);//error C2440: 'static_cast' : cannot  
                                   // convert from 'const char *' to 'int'  
@@ -195,10 +201,10 @@ int(x); // old-style cast, functional syntax
   
     ```  
   
-     Per ulteriori informazioni, vedere [Operatore reinterpret\_cast](../cpp/reinterpret-cast-operator.md).  
+     For more information, see [reinterpret_cast Operator](../cpp/reinterpret-cast-operator.md).  
   
-## Vedere anche  
- [Sistema di tipi C\+\+](../cpp/cpp-type-system-modern-cpp.md)   
- [C\+\+](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [Riferimenti del linguaggio C\+\+](../cpp/cpp-language-reference.md)   
- [Libreria standard C\+\+](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [C++ Type System](../cpp/cpp-type-system-modern-cpp.md)   
+ [Welcome Back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
+ [C++ Language Reference](../cpp/cpp-language-reference.md)   
+ [C++ Standard Library](../standard-library/cpp-standard-library-reference.md)
