@@ -1,60 +1,79 @@
 ---
-title: "Ottimizzazione del disegno dei controlli | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC (controlli ActiveX), ottimizzazione"
+title: Optimizing Control Drawing | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], optimizing
 ms.assetid: 29ff985d-9bf5-4678-b62d-aad12def75fb
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Ottimizzazione del disegno dei controlli
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c7fe06fb28ec2274c5350aa372a1fbad0b33c269
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Quando viene richiesto a un controllo di disegnarsi in un contesto di dispositivo fornito dal contenitore, in genere seleziona gli oggetti GDI \(come penne, pennelli e i tipi di carattere\) nel contesto di dispositivo, esegue le operazioni di disegno e ripristina gli oggetti GDI precedenti.  Se il contenitore ha più controlli che devono essere disegnati nello stesso contesto di dispositivo e ogni controllo seleziona gli oggetti GDI necessari, è possibile risparmiare tempo se i controlli non ripristinano i singoli oggetti precedentemente selezionati.  Dopo che tutti i controlli sono stati disegnati, il contenitore può automaticamente ripristinare gli oggetti originali.  
+---
+# <a name="optimizing-control-drawing"></a>Optimizing Control Drawing
+When a control is instructed to draw itself into a container-supplied device context, it typically selects GDI objects (such as pens, brushes, and fonts) into the device context, performs its drawing operations, and restores the previous GDI objects. If the container has multiple controls that are to be drawn into the same device context, and each control selects the GDI objects it requires, time can be saved if the controls do not individually restore previously selected objects. After all the controls have been drawn, the container can automatically restore the original objects.  
   
- Per individuare se un contenitore supporta questa tecnica, un controllo può chiamare la funzione membro [COleControl::IsOptimizedDraw](../Topic/COleControl::IsOptimizedDraw.md).  Se la funzione restituisce **TRUE**, il controllo può ignorare il passaggio normale di ripristino degli oggetti precedentemente selezionati.  
+ To detect whether a container supports this technique, a control can call the [COleControl::IsOptimizedDraw](../mfc/reference/colecontrol-class.md#isoptimizeddraw) member function. If this function returns **TRUE**, the control can skip the normal step of restoring the previously selected objects.  
   
- Si consideri un controllo con la seguente funzione `OnDraw` \(non ottimizzata\):  
+ Consider a control that has the following (unoptimized) `OnDraw` function:  
   
- [!code-cpp[NVC_MFC_AxOpt#15](../mfc/codesnippet/CPP/optimizing-control-drawing_1.cpp)]  
+ [!code-cpp[NVC_MFC_AxOpt#15](../mfc/codesnippet/cpp/optimizing-control-drawing_1.cpp)]  
   
- La penna e il pennello in questo esempio sono variabili locali e pertanto i loro distruttori verranno chiamati quando escono dall'ambito \(quando la funzione `OnDraw` termina\).  I distruttori cercheranno di eliminare gli oggetti GDI corrispondenti.  Ma non devono essere eliminati se si intende lasciarli selezionati nel contesto di dispositivo restituito da `OnDraw`.  
+ The pen and brush in this example are local variables, meaning their destructors will be called when they go out of scope (when the `OnDraw` function ends). The destructors will attempt to delete the corresponding GDI objects. But they should not be deleted if you plan to leave them selected into the device context upon returning from `OnDraw`.  
   
- Per impedire che gli oggetti [CBrush](../mfc/reference/cbrush-class.md) e [CPen](../mfc/reference/cpen-class.md) vengano eliminati quando `OnDraw` completa, li si memorizzi in variabili membro anziché in variabili locali.  Nella dichiarazione della classe del controllo, aggiungere le dichiarazioni per due nuove variabili membro:  
+ To prevent the [CPen](../mfc/reference/cpen-class.md) and [CBrush](../mfc/reference/cbrush-class.md) objects from being destroyed when `OnDraw` finishes, store them in member variables instead of local variables. In the control's class declaration, add declarations for two new member variables:  
   
- [!code-cpp[NVC_MFC_AxOpt#16](../mfc/codesnippet/CPP/optimizing-control-drawing_2.h)]  
-[!code-cpp[NVC_MFC_AxOpt#17](../mfc/codesnippet/CPP/optimizing-control-drawing_3.h)]  
+ [!code-cpp[NVC_MFC_AxOpt#16](../mfc/codesnippet/cpp/optimizing-control-drawing_2.h)]  
+[!code-cpp[NVC_MFC_AxOpt#17](../mfc/codesnippet/cpp/optimizing-control-drawing_3.h)]  
   
- È quindi possibile riscrivere la funzione `OnDraw`, come segue:  
+ Then, the `OnDraw` function can be rewritten as follows:  
   
- [!code-cpp[NVC_MFC_AxOpt#18](../mfc/codesnippet/CPP/optimizing-control-drawing_4.cpp)]  
+ [!code-cpp[NVC_MFC_AxOpt#18](../mfc/codesnippet/cpp/optimizing-control-drawing_4.cpp)]  
   
- In questo modo si evita la creazione della penna e del pennello ogni volta che `OnDraw` viene chiamato.  Il miglioramento della velocità avviene al costo di mantenere dati aggiuntivi dell'istanza.  
+ This approach avoids creation of the pen and brush every time `OnDraw` is called. The speed improvement comes at the cost of maintaining additional instance data.  
   
- Se la proprietà BackColor o ForeColor cambia, la penna o il pennello devono essere ricreati.  A tale scopo, eseguire l'override delle funzioni membro [OnBackColorChanged](../Topic/COleControl::OnBackColorChanged.md) e [OnForeColorChanged](../Topic/COleControl::OnForeColorChanged.md) :  
+ If the ForeColor or BackColor property changes, the pen or brush needs to be created again. To do this, override the [OnForeColorChanged](../mfc/reference/colecontrol-class.md#onforecolorchanged) and [OnBackColorChanged](../mfc/reference/colecontrol-class.md#onbackcolorchanged) member functions:  
   
- [!code-cpp[NVC_MFC_AxOpt#19](../mfc/codesnippet/CPP/optimizing-control-drawing_5.cpp)]  
+ [!code-cpp[NVC_MFC_AxOpt#19](../mfc/codesnippet/cpp/optimizing-control-drawing_5.cpp)]  
   
- Infine, eliminare le chiamate non necessarie di `SelectObject`, modificare `OnDraw` come segue:  
+ Finally, to eliminate unnecessary `SelectObject` calls, modify `OnDraw` as follows:  
   
- [!code-cpp[NVC_MFC_AxOpt#20](../mfc/codesnippet/CPP/optimizing-control-drawing_6.cpp)]  
+ [!code-cpp[NVC_MFC_AxOpt#20](../mfc/codesnippet/cpp/optimizing-control-drawing_6.cpp)]  
   
-## Vedere anche  
- [Controlli ActiveX MFC: ottimizzazione](../mfc/mfc-activex-controls-optimization.md)   
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls: Optimization](../mfc/mfc-activex-controls-optimization.md)   
  [COleControl Class](../mfc/reference/colecontrol-class.md)   
- [Controlli ActiveX MFC](../mfc/mfc-activex-controls.md)   
- [Controlli ActiveX MFC](../mfc/mfc-activex-controls.md)   
- [Creazione guidata controllo ActiveX MFC](../mfc/reference/mfc-activex-control-wizard.md)   
- [Controlli ActiveX MFC: disegno di un controllo ActiveX](../mfc/mfc-activex-controls-painting-an-activex-control.md)
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)   
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)   
+ [MFC ActiveX Control Wizard](../mfc/reference/mfc-activex-control-wizard.md)   
+ [MFC ActiveX Controls: Painting an ActiveX Control](../mfc/mfc-activex-controls-painting-an-activex-control.md)
+
+

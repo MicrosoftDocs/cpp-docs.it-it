@@ -1,51 +1,71 @@
 ---
-title: "Impostazioni applicazione, Creazione guidata controllo ActiveX MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.mfc.ctl.appset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Creazione guidata controllo ActiveX MFC, impostazioni di applicazioni"
+title: Application Settings, MFC ActiveX Control Wizard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.appwiz.mfc.ctl.appset
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX Control Wizard, application settings
 ms.assetid: 48475194-cc63-467f-8499-f142269a4c1c
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Impostazioni applicazione, Creazione guidata controllo ActiveX MFC
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1e4fb7cc0e9c07d1f1996531bfc4c5b2c05146a2
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Questa schermata della Creazione guidata controllo ActiveX MFC può essere usata per progettare e aggiungere funzioni di base a un nuovo progetto ActiveX MFC. Queste impostazioni si applicano all'applicazione, non a funzionalità o elementi del controllo specifici.  
+---
+# <a name="application-settings-mfc-activex-control-wizard"></a>Application Settings, MFC ActiveX Control Wizard
+Use this page of the MFC ActiveX Control Wizard to design and add basic features to a new MFC ActiveX project. These settings apply to the application itself and not to any specific feature or element of the control.  
   
- **Licenza runtime**  
- Selezionare questa opzione per generare un file di licenza utente da distribuire con il controllo. La licenza è costituita da un file di testo denominato *projname*.lic. Questo file deve trovarsi nella stessa directory della DLL del controllo, in modo da consentire la creazione di un'istanza del controllo in un ambiente di progettazione. Il file di licenza viene in genere distribuito con il controllo dallo sviluppatore ad altri programmatori, i quali non lo distribuiscono con le proprie applicazioni.  
+ **Run-time license**  
+ Select this option to generate a user license file to distribute with the control. The license is a text file, *projname*.lic. This file must be in the same directory as the control's DLL to allow an instance of the control to be created in a design-time environment. You usually distribute this file with your control, but your customers do not distribute it.  
   
- **Generare file della Guida**  
- Selezionare questa opzione per generare prototipi di file della Guida e configurare il progetto in modo da includere la Guida relativa al controllo. Un progetto predefinito, creato senza questa opzione, genera solo una finestra **Informazioni su** che viene visualizzata facendo clic con il pulsante destro del mouse sul controllo, premendo F1 oppure scegliendo **?** nel contenitore del controllo.  
+ **Generate help files**  
+ Select this option to generate stubbed help files and configure the project to include help for your control. A default project, created without this option, generates only an **About** box that is displayed when the user right clicks the control, uses F1, or clicks **Help** on the control's container.  
   
 > [!NOTE]
->  Il modo in cui viene visualizzata la Guida dipende dal tipo di interazione esistente tra il controllo e il relativo contenitore. Se la Guida viene inclusa nel contenitore, per ottenere una visualizzazione adeguata è necessario gestire i messaggi tra il controllo e il contenitore.  
+>  How help is displayed depends on how your control interacts with its container. If you include help with your container, you must handle messages between the control and the container to display the help appropriately.  
   
- Quando si generano file della Guida con la procedura guidata, il progetto comprende quanto riportato di seguito:  
+ When you generate help files using the wizard, your project includes the following:  
   
--   Il file vcxproj contiene il codice usato per compilare e configurare il file della Guida al momento della compilazione del progetto.  
+-   The file .vcxproj contains code to build and configure the help file when the project is built.  
   
--   Il file *projnamePropPage*.cpp comprende una funzione [SetHelpInfo](../Topic/COlePropertyPage::SetHelpInfo.md) nel costruttore.  
+-   The file *projnamePropPage*.cpp file includes a [SetHelpInfo](../../mfc/reference/colepropertypage-class.md#sethelpinfo) function in the constructor.  
   
--   Il file projname.hpj è il file di progetto usato dal compilatore della Guida per creare il file della Guida del controllo ActiveX. Rappresenta un file di testo contenente le informazioni sulla compilazione del file della Guida e sui percorsi dei file aggiuntivi \(ad esempio le bitmap\) inclusi nel file della Guida.  
+-   The file projname.hpj, is the help project file used by the help compiler to create the ActiveX control's help file. The .hpj file is a text file containing the information about building your help file and the paths to the additional files (for example, bitmaps) the help file includes.  
   
--   Il progetto include la directory HLP contenente i file bitmap della Guida del progetto e il file degli argomenti della Guida \(*projname.rtf*\), che comprende gli argomenti standard per le proprietà, gli eventi e i metodi comuni supportati da numerosi controlli ActiveX. Il file RTF può essere modificato allo scopo di aggiungere o rimuovere determinati argomenti della Guida.  
+-   The project includes the HLP directory to contain the project help bitmap files and the help topic file (*projname*.rtf). This help topic file contains the standard help topics for the common properties, events, and methods supported by many ActiveX controls. You can edit the .rtf file to add or remove specific help topics.  
   
-## Vedere anche  
- [Creazione guidata controllo ActiveX MFC](../../mfc/reference/mfc-activex-control-wizard.md)   
- [Nomi controllo, Creazione guidata controllo ActiveX MFC](../../mfc/reference/control-names-mfc-activex-control-wizard.md)   
- [Impostazioni controllo, Creazione guidata controllo ActiveX MFC](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Control Wizard](../../mfc/reference/mfc-activex-control-wizard.md)   
+ [Control Names, MFC ActiveX Control Wizard](../../mfc/reference/control-names-mfc-activex-control-wizard.md)   
+ [Control Settings, MFC ActiveX Control Wizard](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)
+
+

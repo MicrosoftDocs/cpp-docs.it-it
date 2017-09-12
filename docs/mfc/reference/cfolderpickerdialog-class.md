@@ -1,5 +1,5 @@
 ---
-title: Classe CFolderPickerDialog | Documenti di Microsoft
+title: CFolderPickerDialog Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,7 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CFolderPickerDialog class
+- CFolderPickerDialog [MFC], CFolderPickerDialog
 ms.assetid: 8db01684-dd1d-4e9c-989e-07a2318a8156
 caps.latest.revision: 22
 author: mikeblome
@@ -35,34 +35,34 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 0d020544a16056d3f4db538750ed5a16b54f9a51
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9ffe67842dd3114a6877e3ade056b25ec7633da9
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cfolderpickerdialog-class"></a>Classe CFolderPickerDialog
-Classe CFolderPickerDialog implementa CFileDialog nella modalità di selezione cartelle.  
+# <a name="cfolderpickerdialog-class"></a>CFolderPickerDialog Class
+CFolderPickerDialog class implements CFileDialog in the folder picker mode.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CFolderPickerDialog : public CFileDialog;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Costruttori pubblici  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CFolderPickerDialog:: ~ CFolderPickerDialog](#cfolderpickerdialog__~cfolderpickerdialog)|Distruttore.|  
-|[CFolderPickerDialog::CFolderPickerDialog](#cfolderpickerdialog)|Costruttore.|  
+|[CFolderPickerDialog::~CFolderPickerDialog](#cfolderpickerdialog__~cfolderpickerdialog)|Destructor.|  
+|[CFolderPickerDialog::CFolderPickerDialog](#cfolderpickerdialog)|Constructor.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Remarks  
   
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -77,11 +77,11 @@ class CFolderPickerDialog : public CFileDialog;
   
  `CFolderPickerDialog`  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** afxdlgs. h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdlgs.h  
   
-##  <a name="cfolderpickerdialog"></a>CFolderPickerDialog::CFolderPickerDialog  
- Costruttore.  
+##  <a name="cfolderpickerdialog"></a>  CFolderPickerDialog::CFolderPickerDialog  
+ Constructor.  
   
 ```  
 explicit CFolderPickerDialog(
@@ -91,30 +91,30 @@ explicit CFolderPickerDialog(
     DWORD dwSize = 0);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `lpszFolder`  
- Cartella iniziale.  
+ Initial folder.  
   
  `dwFlags`  
- Una combinazione di uno o più flag che consentono di personalizzare la finestra di dialogo.  
+ A combination of one or more flags that allow you to customize the dialog box.  
   
  `pParentWnd`  
- Puntatore alla finestra padre o proprietaria dell'oggetto finestra di dialogo.  
+ A pointer to the dialog box object's parent or owner window.  
   
  `dwSize`  
- Le dimensioni della struttura OPENFILENAME.  
+ The size of the OPENFILENAME structure.  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="_dtorcfolderpickerdialog"></a>CFolderPickerDialog:: ~ CFolderPickerDialog  
- Distruttore.  
+##  <a name="_dtorcfolderpickerdialog"></a>  CFolderPickerDialog::~CFolderPickerDialog  
+ Destructor.  
   
 ```  
 virtual ~CFolderPickerDialog();
 ```  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>Vedere anche  
- [Classi](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

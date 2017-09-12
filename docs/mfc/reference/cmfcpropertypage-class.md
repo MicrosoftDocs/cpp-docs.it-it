@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCPropertyPage | Documenti di Microsoft
+title: CMFCPropertyPage Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,10 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCPropertyPage::PreTranslateMessage method
-- CMFCPropertyPage::CreateObject method
-- CMFCPropertyPage class
-- CMFCPropertyPage::OnSetActive method
+- CMFCPropertyPage [MFC], CMFCPropertyPage
 ms.assetid: d279d7f2-2d81-418d-9f23-6147d6e8df09
 caps.latest.revision: 30
 author: mikeblome
@@ -38,46 +35,46 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 0e9cdfa8a98c034839fac119c828cf1b92a1867a
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 70f39e3c8eb89ea6e5c772d5b1ca147da0244d8c
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcpropertypage-class"></a>Classe CMFCPropertyPage
-La `CMFCPropertyPage` classe supporta la visualizzazione del menu di scelta rapida in una pagina delle proprietà.  
+# <a name="cmfcpropertypage-class"></a>CMFCPropertyPage Class
+The `CMFCPropertyPage` class supports the display of pop-up menus on a property page.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCPropertyPage : public CPropertyPage  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Costruttori pubblici  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCPropertyPage::CMFCPropertyPage](#cmfcpropertypage)|Costruisce un oggetto `CMFCPropertyPage`.|  
-|`CMFCPropertyPage::~CMFCPropertyPage`|Distruttore.|  
+|[CMFCPropertyPage::CMFCPropertyPage](#cmfcpropertypage)|Constructs a `CMFCPropertyPage` object.|  
+|`CMFCPropertyPage::~CMFCPropertyPage`|Destructor.|  
   
-### <a name="public-methods"></a>Metodi pubblici  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCPropertyPage::CreateObject`|Usato dal framework per creare un'istanza dinamica di questo tipo di classe.|  
-|`CMFCPropertyPage::GetThisClass`|Utilizzato dal framework per ottenere un puntatore al [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) oggetto associato a questo tipo di classe.|  
-|`CMFCPropertyPage::OnSetActive`|Questa funzione membro viene chiamata dal framework quando la pagina viene scelto dall'utente e diventa la pagina attiva. (Esegue l'override di [CPropertyPage:: OnSetActive](../../mfc/reference/cpropertypage-class.md#onsetactive).)|  
-|`CMFCPropertyPage::PreTranslateMessage`|Converte i messaggi della finestra prima che vengano inviati per il [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funzioni di Windows. Per ulteriori informazioni e la sintassi del metodo, vedere [CWnd:: PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). Esegue l'override di `CPropertyPage::PreTranslateMessage`.|  
+|`CMFCPropertyPage::CreateObject`|Used by the framework to create a dynamic instance of this class type.|  
+|`CMFCPropertyPage::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
+|`CMFCPropertyPage::OnSetActive`|This member function is called by the framework when the page is chosen by the user and becomes the active page. (Overrides [CPropertyPage::OnSetActive](../../mfc/reference/cpropertypage-class.md#onsetactive).)|  
+|`CMFCPropertyPage::PreTranslateMessage`|Translates window messages before they are dispatched to the [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) and [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows functions. For more information and method syntax, see [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Overrides `CPropertyPage::PreTranslateMessage`.)|  
   
-## <a name="remarks"></a>Note  
- La `CMFCPropertyPage` classe rappresenta singole pagine di una finestra delle proprietà, altrimenti nota come finestra di dialogo a schede.  
+## <a name="remarks"></a>Remarks  
+ The `CMFCPropertyPage` class represents individual pages of a property sheet, otherwise known as a tab dialog box.  
   
- Utilizzare il `CMFCPropertyPage` classe con il [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) (classe). Per utilizzare i menu nella pagina delle proprietà, sostituire tutte le occorrenze di `CPropertyPage` classe con la `CMFCPropertyPage` classe.  
+ Use the `CMFCPropertyPage` class together with the [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) class. To use menus on a property page, replace all occurrences of the `CPropertyPage` class with the `CMFCPropertyPage` class.  
   
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -90,11 +87,11 @@ class CMFCPropertyPage : public CPropertyPage
   
  [CMFCPropertyPage](../../mfc/reference/cmfcpropertypage-class.md)  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** afxpropertypage.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxpropertypage.h  
   
-##  <a name="cmfcpropertypage"></a>CMFCPropertyPage::CMFCPropertyPage  
- Costruisce un oggetto `CMFCPropertyPage`.  
+##  <a name="cmfcpropertypage"></a>  CMFCPropertyPage::CMFCPropertyPage  
+ Constructs a `CMFCPropertyPage` object.  
   
 ```  
 CMFCPropertyPage(
@@ -107,23 +104,23 @@ CMFCPropertyPage(
     UINT nIDCaption=0);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `nIDTemplate`  
- ID di risorsa del modello per questa pagina.  
+ Resource ID of the template for this page.  
   
  `nIDCaption`  
- ID di risorsa dell'etichetta da inserire nella scheda della pagina. Se è 0, il nome viene ottenuto dal modello di finestra di dialogo per questa pagina. Il valore predefinito è 0.  
+ Resource ID of the label to put in the tab for this page. If 0, the name is obtained from the dialog box template for this page. The default value is 0.  
   
  `lpszTemplateName`  
- Punta al nome del modello per questa pagina. Non può essere `NULL`.  
+ Points to the name of the template for this page. Cannot be `NULL`.  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
- Per ulteriori informazioni sui parametri del costruttore, vedere [CPropertyPage::CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage).  
+### <a name="remarks"></a>Remarks  
+ For more information about the constructor parameters, see [CPropertyPage::CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage).  
   
-## <a name="see-also"></a>Vedere anche  
- [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
- [Classi](../../mfc/reference/mfc-classes.md)   
- [Classe di CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCPropertySheet Class](../../mfc/reference/cmfcpropertysheet-class.md)
 

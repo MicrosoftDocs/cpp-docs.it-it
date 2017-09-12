@@ -1,67 +1,85 @@
 ---
-title: "Struttura PAINTSTRUCT | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PAINTSTRUCT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PAINTSTRUCT (struttura)"
+title: PAINTSTRUCT Structure | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- PAINTSTRUCT
+dev_langs:
+- C++
+helpviewer_keywords:
+- PAINTSTRUCT structure [MFC]
 ms.assetid: 81ce4993-3e89-43b2-8c98-7946f1314d24
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Struttura PAINTSTRUCT
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b27dcb247437b37631e306b171c4201142c33cae
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-La struttura di `PAINTSTRUCT` contiene informazioni che possono essere utilizzate per disegnare l'area client di una finestra.  
+---
+# <a name="paintstruct-structure"></a>PAINTSTRUCT Structure
+The `PAINTSTRUCT` structure contains information that can be used to paint the client area of a window.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      typedef struct tagPAINTSTRUCT {  
-   HDC hdc;  
-   BOOL fErase;  
-   RECT rcPaint;  
-   BOOL fRestore;  
-   BOOL fIncUpdate;  
-   BYTE rgbReserved[16];  
+typedef struct tagPAINTSTRUCT {  
+    HDC hdc;  
+    BOOL fErase;  
+    RECT rcPaint;  
+    BOOL fRestore;  
+    BOOL fIncUpdate;  
+    BYTE rgbReserved[16];  
 } PAINTSTRUCT;  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  *hdc*  
- Identifica il contesto di visualizzazione da utilizzare per disegnare.  
+ Identifies the display context to be used for painting.  
   
  *fErase*  
- Specifica se i precedenti devono essere ridisegnata.  Non sono 0 se l'applicazione ridisegna lo sfondo.  L'applicazione è responsabile del disegno dello sfondo se una classe finestra di windows viene creata senza un pennello per lo sfondo \(vedere la descrizione del membro di **hbrBackground** della struttura di [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) in [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]\).  
+ Specifies whether the background needs to be redrawn. It is not 0 if the application should redraw the background. The application is responsible for drawing the background if a Windows window-class is created without a background brush (see the description of the **hbrBackground** member of the [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) structure in the Windows SDK).  
   
  *rcPaint*  
- Specifica corretti gli angoli in alto a sinistra e inferiore del rettangolo in cui disegnare è necessaria.  
+ Specifies the upper left and lower right corners of the rectangle in which the painting is requested.  
   
  *fRestore*  
- Membro riservato.  Viene utilizzato internamente da windows.  
+ Reserved member. It is used internally by Windows.  
   
  *fIncUpdate*  
- Membro riservato.  Viene utilizzato internamente da windows.  
+ Reserved member. It is used internally by Windows.  
   
- *rgbReserved \[16\]*  
- Membro riservato.  Un blocco di memoria riservata utilizzato internamente da windows.  
+ *rgbReserved[16]*  
+ Reserved member. A reserved block of memory used internally by Windows.  
   
-## Requisiti  
- **Intestazione:** winuser.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** winuser.h  
   
-## Vedere anche  
- [Strutture, stili, callback e mappe messaggi](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CPaintDC::m\_ps](../Topic/CPaintDC::m_ps.md)
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CPaintDC::m_ps](../../mfc/reference/cpaintdc-class.md#m_ps)
+
+

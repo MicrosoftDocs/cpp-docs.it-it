@@ -87,9 +87,79 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CRichEditCtrl class, common controls
-- CRichEditCtrl class
-- formatted text [C++]
+- CRichEditCtrl [MFC], CRichEditCtrl
+- CRichEditCtrl [MFC], CanPaste
+- CRichEditCtrl [MFC], CanRedo
+- CRichEditCtrl [MFC], CanUndo
+- CRichEditCtrl [MFC], CharFromPos
+- CRichEditCtrl [MFC], Clear
+- CRichEditCtrl [MFC], Copy
+- CRichEditCtrl [MFC], Create
+- CRichEditCtrl [MFC], CreateEx
+- CRichEditCtrl [MFC], Cut
+- CRichEditCtrl [MFC], DisplayBand
+- CRichEditCtrl [MFC], EmptyUndoBuffer
+- CRichEditCtrl [MFC], FindText
+- CRichEditCtrl [MFC], FindWordBreak
+- CRichEditCtrl [MFC], FormatRange
+- CRichEditCtrl [MFC], GetCharPos
+- CRichEditCtrl [MFC], GetDefaultCharFormat
+- CRichEditCtrl [MFC], GetEventMask
+- CRichEditCtrl [MFC], GetFirstVisibleLine
+- CRichEditCtrl [MFC], GetIRichEditOle
+- CRichEditCtrl [MFC], GetLimitText
+- CRichEditCtrl [MFC], GetLine
+- CRichEditCtrl [MFC], GetLineCount
+- CRichEditCtrl [MFC], GetModify
+- CRichEditCtrl [MFC], GetOptions
+- CRichEditCtrl [MFC], GetParaFormat
+- CRichEditCtrl [MFC], GetPunctuation
+- CRichEditCtrl [MFC], GetRect
+- CRichEditCtrl [MFC], GetRedoName
+- CRichEditCtrl [MFC], GetSel
+- CRichEditCtrl [MFC], GetSelectionCharFormat
+- CRichEditCtrl [MFC], GetSelectionType
+- CRichEditCtrl [MFC], GetSelText
+- CRichEditCtrl [MFC], GetTextLength
+- CRichEditCtrl [MFC], GetTextLengthEx
+- CRichEditCtrl [MFC], GetTextMode
+- CRichEditCtrl [MFC], GetTextRange
+- CRichEditCtrl [MFC], GetUndoName
+- CRichEditCtrl [MFC], GetWordWrapMode
+- CRichEditCtrl [MFC], HideSelection
+- CRichEditCtrl [MFC], LimitText
+- CRichEditCtrl [MFC], LineFromChar
+- CRichEditCtrl [MFC], LineIndex
+- CRichEditCtrl [MFC], LineLength
+- CRichEditCtrl [MFC], LineScroll
+- CRichEditCtrl [MFC], Paste
+- CRichEditCtrl [MFC], PasteSpecial
+- CRichEditCtrl [MFC], PosFromChar
+- CRichEditCtrl [MFC], Redo
+- CRichEditCtrl [MFC], ReplaceSel
+- CRichEditCtrl [MFC], RequestResize
+- CRichEditCtrl [MFC], SetAutoURLDetect
+- CRichEditCtrl [MFC], SetBackgroundColor
+- CRichEditCtrl [MFC], SetDefaultCharFormat
+- CRichEditCtrl [MFC], SetEventMask
+- CRichEditCtrl [MFC], SetModify
+- CRichEditCtrl [MFC], SetOLECallback
+- CRichEditCtrl [MFC], SetOptions
+- CRichEditCtrl [MFC], SetParaFormat
+- CRichEditCtrl [MFC], SetPunctuation
+- CRichEditCtrl [MFC], SetReadOnly
+- CRichEditCtrl [MFC], SetRect
+- CRichEditCtrl [MFC], SetSel
+- CRichEditCtrl [MFC], SetSelectionCharFormat
+- CRichEditCtrl [MFC], SetTargetDevice
+- CRichEditCtrl [MFC], SetTextMode
+- CRichEditCtrl [MFC], SetUndoLimit
+- CRichEditCtrl [MFC], SetWordCharFormat
+- CRichEditCtrl [MFC], SetWordWrapMode
+- CRichEditCtrl [MFC], StopGroupTyping
+- CRichEditCtrl [MFC], StreamIn
+- CRichEditCtrl [MFC], StreamOut
+- CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
 caps.latest.revision: 26
 author: mikeblome
@@ -110,10 +180,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: MT
-ms.sourcegitcommit: 0286098cb87ecfea244269a8e5756829759b82f7
-ms.openlocfilehash: 41ac94d20cf50cff78fd52deeb24e38067374bfe
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2dd08ed607d269f57d9211a3c520b2ff969df259
 ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl Class

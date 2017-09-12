@@ -1,32 +1,51 @@
 ---
-title: "Creazione di schede create dal proprietario | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTabCtrl (classe), schede create dal proprietario"
-  - "disegno, schede"
-  - "schede create dal proprietario"
-  - "schede, create dal proprietario"
+title: Making Owner-Drawn Tabs | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- owner-drawn tabs [MFC]
+- tabs [MFC], owner-drawn
+- CTabCtrl class [MFC], owner-drawn tabs
+- drawing [MFC], tabs
 ms.assetid: 11af2926-41d7-47e3-9eec-c595283f6371
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Creazione di schede create dal proprietario
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a1225ad6e29bde551cde3ab0df29c70fd4681bb9
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-È possibile definire i singoli elementi di un controllo Struttura a schede \([CTabCtrl](../mfc/reference/ctabctrl-class.md)\) per essere proprietari designati degli elementi.  Per ulteriori informazioni, vedere [Schede create dal proprietario](http://msdn.microsoft.com/library/windows/desktop/bb760550) in [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+---
+# <a name="making-owner-drawn-tabs"></a>Making Owner-Drawn Tabs
+You can define individual items of a tab control ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) to be owner-drawn items. For more information, see [Owner-Drawn Tabs](http://msdn.microsoft.com/library/windows/desktop/bb760550) in the Windows SDK.  
   
-## Vedere anche  
- [Utilizzo di CTabCtrl](../mfc/using-ctabctrl.md)   
- [Controlli](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTabCtrl](../mfc/using-ctabctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

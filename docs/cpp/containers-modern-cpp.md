@@ -31,15 +31,15 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
-ms.openlocfilehash: e8ff096578d382d01c408aa568e6d4bdd90764d3
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 15512233f7a9388397e11dd22a99a7fc054f5f9f
 ms.contentlocale: it-it
-ms.lasthandoff: 09/11/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="containers-modern-c"></a>Containers (Modern C++)  
   
-By default, use [vector](../standard-library/vector-class.md) as the preferred sequential container in C++. This is equivalent to `List\<T>` in .NET languages.  
+By default, use [vector](../standard-library/vector-class.md) as the preferred sequential container in C++. This is equivalent to `List<T>` in .NET languages.  
   
 ```cpp  
 vector<string> apples;  
@@ -70,3 +70,4 @@ For more information about containers, see [C++ Standard Library Containers](../
  [Welcome Back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [C++ Language Reference](../cpp/cpp-language-reference.md)   
  [C++ Standard Library](../standard-library/cpp-standard-library-reference.md)
+

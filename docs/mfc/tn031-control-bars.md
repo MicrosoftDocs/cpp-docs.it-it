@@ -1,232 +1,254 @@
 ---
-title: "TN031: barre di controllo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.controls.bars"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "barre di controllo, stili"
-  - "classe CStatusBar, uso Nota tecnica 31"
-  - "classe CControlBar, uso Nota tecnica 31"
-  - "classe CControlBar, derivazione da"
-  - "barre di controllo, classi"
-  - "classe CDialogBar, uso Nota tecnica 31"
-  - "classe CToolBar, uso Nota tecnica 31"
-  - "TN031"
-  - "stili, barre di controllo"
+title: 'TN031: Control Bars | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.controls.bars
+dev_langs:
+- C++
+helpviewer_keywords:
+- control bars [MFC], styles
+- CStatusBar class [MFC], Tech Note 31 usage
+- CControlBar class [MFC], Tech Note 31 usage
+- CControlBar class [MFC], deriving from
+- control bars [MFC], classes [MFC]
+- CDialogBar class [MFC], Tech Note 31 usage
+- CToolBar class [MFC], Tech Note 31 usage
+- TN031
+- styles [MFC], control bars
 ms.assetid: 8cb895c0-40ea-40ef-90ee-1dd29f34cfd1
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# TN031: barre di controllo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 96602bc469bb7aab112833a68c999d69e39df36c
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn031-control-bars"></a>TN031: Control Bars
 > [!NOTE]
->  La seguente nota tecnica non è stata aggiornata da quando è stata inclusa per la prima volta nella documentazione online. Di conseguenza, alcune procedure e argomenti potrebbero essere non aggiornati o errati. Per le informazioni più recenti, è consigliabile cercare l'argomento di interesse nell'indice della documentazione online.  
+>  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.  
   
- Questa nota descrive le classi di barre di controllo in MFC: la classe generale [CControlBar](#_mfcnotes_ccontrolbar), [CStatusBar](#_mfcnotes_cstatusbar), [CToolBar](#_mfcnotes_ctoolbar), [CDialogBar](#_mfcnotes_cdialogbar) e **CDockBar**.  
+ This note describes the control bar classes in MFC: the general [CControlBar](#_mfcnotes_ccontrolbar), [CStatusBar](#_mfcnotes_cstatusbar), [CToolBar](#_mfcnotes_ctoolbar), [CDialogBar](#_mfcnotes_cdialogbar), and **CDockBar**.  
   
- `CControlBar`  
+## <a name="_mfcnotes_ccontrolbar"></a> CControlBar 
   
- **ControlBar** è una classe derivata da `CWnd` che:  
+ A **ControlBar** is a `CWnd`-derived class that:  
   
--   È allineata con il lato superiore o inferiore di una finestra cornice.  
+-   Is aligned to the top or bottom of a frame window.  
   
--   Può contenere elementi figlio che sono controlli basati su HWND \(ad esempio, `CDialogBar`\) o elementi non basati su `HWND` \(ad esempio, `CToolBar`, `CStatusBar`\).  
+-   May contain child items that are either HWND-based controls (for example, `CDialogBar`) or non-`HWND` based items (for example, `CToolBar`, `CStatusBar`).  
   
- Le barre di controllo supportano gli stili aggiuntivi:  
+ Control bars support the additional styles:  
   
--   `CBRS_TOP` \(Predefinito\) La barra di controllo viene bloccata nella parte superiore.  
+- `CBRS_TOP` (The default) pin the control bar to the top.  
   
--   `CBRS_BOTTOM` La barra di controllo viene bloccata nella parte inferiore.  
+- `CBRS_BOTTOM` Pin the control bar to the bottom.  
   
--   `CBRS_NOALIGN` La barra di controllo non viene riposizionata quando l'elemento padre viene ridimensionato.  
+- `CBRS_NOALIGN` Do not reposition the control bar when the parent resizes.  
   
- Le classi derivate da `CControlBar` offrono altre implementazioni interessanti:  
+ Classes derived from `CControlBar` provide more interesting implementations:  
   
--   `CStatusBar` Una barra di stato, gli elementi sono riquadri della barra di stato contenenti testo.  
+- `CStatusBar` A status bar, items are status bar panes containing text.  
   
--   `CToolBar` Una barra degli strumenti, gli elementi sono pulsanti con bitmap allineati in una riga.  
+- `CToolBar` A toolbar, items are bitmap buttons aligned in a row.  
   
--   `CDialogBar` Un frame simile alla barra degli strumenti contenente controlli Windows standard \(creato da una risorsa modello di finestra di dialogo\).  
+- `CDialogBar` A toolbar-like frame containing standard windows controls (created from a dialog template resource).  
   
--   **CDockBar** Un'area di ancoraggio generalizzata per altri oggetti derivati `CControlBar`. Le variabili e le funzioni membro specifiche disponibili in questa classe potrebbero essere soggette a modifiche nelle future versioni.  
+- **CDockBar** A generalized docking area for other `CControlBar` derived objects. The specific member functions and variables available in this class are likely to change in future releases.  
   
- Tutti gli oggetti\/finestre della barra di controllo saranno finestre figlio di una finestra cornice padre. In genere vengono aggiunti come elemento di pari livello all'area client del frame \(ad esempio, una visualizzazione o un client MDI\). L'ID della finestra figlio di una barra di controllo è importante. Il layout predefinito della barra di controllo funziona solo per le barre di controllo con ID compreso nell'intervallo da **AFX\_IDW\_CONTROLBAR\_FIRST** a **AFX\_IDW\_CONTROLBAR\_LAST**. Si noti che anche se c'è un intervallo di 256 ID di barre di controllo, i primi 32 ID sono speciali perché sono supportati direttamente dall'architettura dell'anteprima di stampa.  
+ All control bar objects/windows will be child windows of some parent frame window. They are usually added as a sibling to the client area of the frame (for example, an MDI Client or view). The child window ID of a control bar is important. The default layout of control bar only works for control bars with IDs in the range of **AFX_IDW_CONTROLBAR_FIRST** to **AFX_IDW_CONTROLBAR_LAST**. Note that even though there is a range of 256 control bar IDs, the first 32 of these control bar IDs are special since they are directly supported by the print preview architecture.  
   
- La classe `CControlBar` assicura l'implementazione standard per:  
+ The `CControlBar` class gives standard implementation for:  
   
--   Allineare la barra di controllo alla parte superiore, inferiore o a entrambi i lati del frame.  
+-   Aligning the control bar to the top, bottom, or either side of the frame.  
   
--   Allocare matrici degli elementi di controllo.  
+-   Allocating control item arrays.  
   
--   Supportare l'implementazione di classi derivate.  
+-   Supporting the implementation of derived classes.  
   
- In genere gli oggetti della barra di controllo C\+\+ vengono incorporati come membri di una classe derivata `CFrameWnd` e vengono eliminati quando l'oggetto e l'`HWND` padre vengono eliminati in modo permanente. Se è necessario allocare un oggetto della barra di controllo sull'heap, è possibile impostare semplicemente il membro **m\_bAutoDestruct** su **TRUE** per far in modo che la barra di controllo "**lo elimini**" quando `HWND` viene eliminato in modo permanente.  
+ C++ control bar objects will usually be embedded as members of a `CFrameWnd` derived class, and will be cleaned up when the parent `HWND` and object are destroyed. If you need to allocate a control bar object on the heap, you can simply set the **m_bAutoDestruct** member to **TRUE** to make the control bar "**delete this**" when the `HWND` is destroyed.  
   
 > [!NOTE]
->  Se si crea la propria classe derivata da `CControlBar`, piuttosto che usare una delle classi derivate di MFC, come `CStatusBar`, `CToolBar` o `CDialogBar`, sarà necessario impostare il membro dati `m_dwStyle`. Ciò può essere eseguito nell'override di **Create**:  
+>  If you create your own `CControlBar`-derived class, rather than using one of MFC's derived classes, such as `CStatusBar`, `CToolBar`, or `CDialogBar`, you will need to set the `m_dwStyle` data member. This can be done in the override of **Create**:  
   
 ```  
 // CMyControlBar is derived from CControlBar  
-BOOL CMyControlBar::Create( CWnd* pParentWnd, DWORD dwStyle, UINT nID )  
+BOOL CMyControlBar::Create(CWnd* pParentWnd,
+    DWORD dwStyle,
+    UINT nID)  
 {  
-   m_dwStyle = dwStyle;  
-  
-   .  
-   .  
-   .  
+    m_dwStyle = dwStyle;  
+ 
+ .  
+ .  
+ .  
 }  
 ```  
   
- **Algoritmo di layout della barra di controllo**  
+ **Control Bar Layout Algorithm**  
   
- L'algoritmo di layout della barra di controllo è molto semplice. La finestra cornice invia un messaggio **WM\_SIZEPARENT** a tutti gli elementi figlio nell'intervallo della barra di controllo. Con questo messaggio viene passato un puntatore al rettangolo client dell'elemento padre. Questo messaggio viene inviato agli elementi figlio nell'ordine Z. Gli elementi figlio della barra di controllo usano queste informazioni per posizionarsi e ridurre le dimensioni dell'area client dell'elemento padre. Il rettangolo finale lasciato per l'area client normale \(meno barre di controllo\) viene usato per posizionare la finestra del client principale \(in genere una finestra con separatore, una visualizzazione o un client MDI\).  
+ The control bar layout algorithm is very simple. The frame window sends a message **WM_SIZEPARENT** to all children in the control bar range. Along with this message, a pointer to the parent's client rectangle is passed. This message is sent to children in Z-order. The control-bar children use this information to position themselves and to decrease the size of the parent's client area. The final rectangle that is left for the normal client area (less control bars) is used to position the main client window (usually an MDI client, view or splitter window).  
   
- Per altre informazioni, vedere `CWnd::RepositionBars` e `CFrameWnd::RecalcLayout`.  
+ See `CWnd::RepositionBars` and `CFrameWnd::RecalcLayout` for more details.  
   
- I messaggi Windows privati MFC, tra cui **WM\_SIZEPARENT**, sono descritti nella [Nota tecnica 24](../mfc/tn024-mfc-defined-messages-and-resources.md).  
+ MFC private Windows messages, including **WM_SIZEPARENT**, are documented in [Technical Note 24](../mfc/tn024-mfc-defined-messages-and-resources.md).  
   
- `CStatusBar`  
+## <a name="_mfcnotes_cstatusbar"></a>  CStatusBar  
   
- Una barra di stato è una barra di controllo contenente una riga di riquadri di output di testo. Esistono due modi comuni per usare i riquadri di output di testo:  
+ A status bar is a control bar that has a row of text output panes. There are two common ways to use text output panes:  
   
--   Come una riga di messaggio  
+-   As a message line  
   
-     \(ad esempio, la riga del messaggio di aiuto del menu standard\). È generalmente possibile accedervi tramite un indice in base 0  
+     (for example, the standard menu help message line). These are usually accessed by a 0-based indexed  
   
--   Come indicatori di stato  
+-   As status indicators  
   
-     \(ad esempio, gli indicatori MA, NUM e BLOC SCORR\). È generalmente possibile accedervi tramite stringa\/ID di comando.  
+     (for example, the CAP, NUM and SCRL indicators). These are usually accessed by string/command ID.  
   
- Il tipo di carattere per la barra di stato è MS Sans Serif dimensione 10 punti, determinato dalla Windows Interface Application Design Guide \(Guida alla progettazione di applicazioni con interfaccia di Windows\) o in base alla migliore corrispondenza dei mapper di un tipo di carattere proporzionale Swiss dimensioni 10 punti. In alcune versioni di Windows, ad esempio l'edizione giapponese, i tipi di carattere selezionati sono diversi.  
+ The font for the status bar is 10-point MS Sans Serif (dictated by the Windows Interface Application Design Guide or the font mappers best match of a 10-point Swiss proportional font). On certain versions of Windows, such as the Japanese edition, the fonts selected are different.  
   
- I colori usati nella barra di stato sono coerenti anche con l'indicazione della Windows Interface Application Design Guide \(Guida alla progettazione di applicazioni con interfaccia di Windows\). Questi colori non sono hardcoded e vengono modificati in modo dinamico in risposta alla personalizzazione dell'utente nel Pannello di controllo.  
+ The colors used in the status bar are also consistent with the recommendation of the Windows Interface Application Design Guide. These colors are not hard coded and are changed dynamically in response to user customization in Control Panel.  
   
-|Elemento|Valore COLOR di Windows|RGB predefinito|  
-|--------------|-----------------------------|---------------------|  
-|Sfondo della barra di stato|**COLOR\_BTNFACE**|RGB\(192, 192, 192\)|  
-|Testo barra di stato|**COLOR\_BTNTEXT**|RGB\(000, 000, 000\)|  
-|Bordi superiore\/sinistro della barra di stato|**COLOR\_BTNHIGHLIGHT**|RGB\(255, 255, 255\)|  
-|Bordi inferiore\/destro della barra di stato|**COLOR\_BTNSHADOW**|RGB\(128, 128, 128\)|  
+|Item|Windows COLOR value|Default RGB|  
+|----------|-------------------------|-----------------|  
+|Status bar background|**COLOR_BTNFACE**|RGB(192, 192, 192)|  
+|Status bar text|**COLOR_BTNTEXT**|RGB(000, 000, 000)|  
+|Status bar top/left edges|**COLOR_BTNHIGHLIGHT**|RGB(255, 255, 255)|  
+|Status bar bot/right edges|**COLOR_BTNSHADOW**|RGB(128, 128, 128)|  
   
- **Supporto CCmdUI per CStatusBar**  
+ **CCmdUI Support for CStatusBar**  
   
- Gli indicatori vengono in genere aggiornati tramite il meccanismo `ON_UPDATE_COMMAND_UI`. Nel tempo di inattività la barra di stato chiama il gestore `ON_UPDATE_COMMAND_UI` con l'ID stringa del riquadro degli indicatori.  
+ The way indicators are usually updated is through the `ON_UPDATE_COMMAND_UI` mechanism. On idle time, the status bar will call the `ON_UPDATE_COMMAND_UI` handler with the string ID of the indicator pane.  
   
- Il gestore `ON_UPDATE_COMMAND_UI` può chiamare:  
+ The `ON_UPDATE_COMMAND_UI` handler can call:  
   
--   **Enable**: per abilitare o disabilitare il riquadro. Un riquadro disabilitato è identico a un riquadro abilitato ma il testo è invisibile \(ovvero viene disattivato l'indicatore di testo\).  
+- **Enable**: To enable or disable the pane. A disabled pane looks exactly like an enabled pane but the text is invisible (that is, turns off the text indicator).  
   
--   **SetText**: per modificare il testo. Se si usa questo metodo, prestare attenzione perché il riquadro non verrà ridimensionato automaticamente.  
+- **SetText**: To change the text. Be careful if you use this because the pane will not automatically resize.  
   
- Fare riferimento alla classe [CStatusBar](../mfc/reference/cstatusbar-class.md) nei *Riferimenti della libreria di classi* per informazioni sulle API di creazione e personalizzazione della `CStatusBar`. La maggior parte delle personalizzazioni delle barre di stato deve essere eseguita prima che la barra di stato venga inizialmente resa visibile.  
+ Refer to class [CStatusBar](../mfc/reference/cstatusbar-class.md) in the *Class Library Reference* for details about `CStatusBar` creation and customization APIs. Most customization of status bars should be done before the status bar is initially made visible.  
   
- La barra di stato supporta un solo riquadro estendibile, in genere il primo. Le dimensioni di questo riquadro sono davvero minime. Se la barra di stato supera la dimensione minima di tutti i pannelli, la larghezza in eccesso verrà attribuita al riquadro estendibile. L'applicazione predefinita con una barra di stato ha indicatori allineati a destra per MA, NUM e BLOC SCORR poiché il primo riquadro è estendibile.  
+ The status bar supports only one stretchy pane, usually the first pane. The size of that pane is really a minimum size. If the status bar is bigger than the minimum size of all the panes, any extra width will be given to the stretchy pane. The default application with a status bar has right-aligned indicators for CAP, NUM and SCRL since the first pane is stretchy.  
   
- `CToolBar`  
+## <a name="_mfcnotes_ctoolbar"></a>  CToolBar  
   
- Una barra degli strumenti è una barra di controllo con una riga di pulsanti con bitmap che può includere separatori. Sono supportati due stili di pulsanti: pulsanti di comando e pulsanti della casella di controllo. La funzionalità del gruppo di pulsanti di opzione può essere generata con pulsanti della casella di controllo e `ON_UPDATE_COMMAND_UI`.  
+ A toolbar is a control bar with a row of bitmap buttons that may include separators. Two styles of buttons are supported: pushbuttons and check box buttons. Radio group functionality can be built with check box buttons and `ON_UPDATE_COMMAND_UI`.  
   
- Tutti i pulsanti con bitmap nella barra degli strumenti provengono da una singola bitmap. Questa bitmap deve contenere un'immagine o un glifo per ogni pulsante. In genere l'ordine di immagini\/glifi nella bitmap è lo stesso con cui verranno disegnati sullo schermo. \(Questo può essere modificato usando le API di personalizzazione\).  
+ All the bitmap buttons in the toolbar are taken from one bitmap. This bitmap must contain one image or glyph for each button. Typically the order of the images/glyphs in the bitmap is the same order they will be drawn on the screen. (This can be changed using the customization APIs.)  
   
- Tutti i pulsanti devono avere la stessa dimensione. Il valore predefinito è il valore standard di 24 x 22 pixel. Tutte le immagini o tutti i glifi devono avere la stessa dimensione ed essere affiancati nella bitmap. La dimensione predefinita di immagini\/glifi è 16 x 15 pixel. Pertanto, per una barra degli strumenti con 10 pulsanti \(usando dimensioni standard\), è necessario una bitmap di 160 pixel di larghezza e 15 pixel di altezza.  
+ Each button must be the same size. The default is the standard 24x22 pixels. Each image/glyph must be the same size and must be side-by-side in the bitmap. The default image/glyph size is 16x15 pixels. Therefore, for a toolbar with 10 buttons (using standard sizes), you need a bitmap that is 160 pixels wide and 15 pixels high.  
   
- Ogni pulsante ha una sola immagine o un solo glifo. I diversi stati e stili dei pulsanti \(ad esempio, premuto, non selezionato, selezionato, disabilitato, selezionato disabilitato, indeterminato\) sono generati in modo algoritmico da un'immagine o un glifo. È teoricamente possibile usare qualsiasi bitmap a colori o DIB. L'algoritmo per la generazione dei diversi stati dei pulsanti funziona meglio se l'immagine originale presenta sfumature di grigio. Esaminare i pulsanti della barra degli strumenti standard e la clipart dei pulsanti della barra degli strumenti forniti a titolo esemplificativo nell'esempio generale [CLIPART](../top/visual-cpp-samples.md) di MFC.  
+ Each button has one and only one image/glyph. The different button states and styles (for example, pressed, up, down, disabled, disabled down, indeterminate) are algorithmically generated from that one image/glyph. Any color bitmap or DIB can be used in theory. The algorithm for generating the different button states works best if the original image is shades of gray. Look at the standard toolbar buttons and the toolbar button clipart provided in MFC General sample [CLIPART](../visual-cpp-samples.md) for examples.  
   
- I colori usati nella barra degli strumenti sono coerenti anche con l'indicazione della Windows Interface Application Design Guide \(Guida alla progettazione di applicazioni con interfaccia di Windows\). Questi colori non sono hardcoded e vengono modificati in modo dinamico in risposta alla personalizzazione dell'utente nel Pannello di controllo.  
+ The colors used in the toolbar are also consistent with the recommendation of the Windows Interface Application Design Guide. These colors are not hard coded and are changed dynamically in response to user customization in Control Panel.  
   
-|Elemento|Valore COLOR di Windows|RGB predefinito|  
-|--------------|-----------------------------|---------------------|  
-|Sfondo della barra degli strumenti|**COLOR\_BTNFACE**|RGB\(192,192,192\)|  
-|Bordi superiore\/sinistro della barra degli strumenti|**COLOR\_BTNHIGHLIGHT**|RGB\(255,255,255\)|  
-|Bordi inferiore\/destro della barra degli strumenti|**COLOR\_BTNSHADOW**|RGB\(128,128,128\)|  
+|Item|Windows COLOR value|Default RGB|  
+|----------|-------------------------|-----------------|  
+|ToolBar background|**COLOR_BTNFACE**|RGB(192,192,192)|  
+|ToolBar buttons top/left edges|**COLOR_BTNHIGHLIGHT**|RGB(255,255,255)|  
+|ToolBar buttons bot/right edges|**COLOR_BTNSHADOW**|RGB(128,128,128)|  
   
- Inoltre, i pulsanti con bitmap della barra degli strumenti vengono ricolorati come se fossero controlli pulsante di Windows standard. Questa ricolorazione si verifica quando la bitmap viene caricata dalla risorsa e in risposta a una modifica nei colori di sistema conseguente alla personalizzazione dell'utente nel Pannello di controllo. I colori seguenti in una bitmap della barra degli strumenti vengono ricolorati automaticamente e devono quindi essere usati con cautela. Se non si desidera che una parte della bitmap venga ricolorata, usare un colore che si avvicini molto a uno dei valori RGB mappati. Il mapping viene eseguito in base ai valori RGB esatti.  
+ In addition, the toolbar bitmap buttons are recolored as though they were standard Windows button controls. This recoloring occurs when the bitmap is loaded from the resource and in response to a change in system colors in response to user customization in Control Panel. The following colors in a toolbar bitmap will be recolored automatically so they should be used with caution. If you do not wish to have a portion of your bitmap recolored, then use a color that closely approximates one of the mapped RGB values. The mapping is done based on exact RGB values.  
   
-|Valore RGB|Valore COLOR mappato in modo dinamico|  
-|----------------|-------------------------------------------|  
-|RGB\(000, 000, 000\)|COLOR\_BTNTEXT|  
-|RGB\(128, 128, 128\)|COLOR\_BTNSHADOW|  
-|RGB\(192, 192, 192\)|COLOR\_BTNFACE|  
-|RGB\(255, 255, 255\)|COLOR\_BTNHIGHLIGHT|  
+|RGB value|Dynamically mapped COLOR value|  
+|---------------|------------------------------------|  
+|RGB(000, 000, 000)|COLOR_BTNTEXT|  
+|RGB(128, 128, 128)|COLOR_BTNSHADOW|  
+|RGB(192, 192, 192)|COLOR_BTNFACE|  
+|RGB(255, 255, 255)|COLOR_BTNHIGHLIGHT|  
   
- Fare riferimento alla classe [CToolBar](../mfc/reference/ctoolbar-class.md) nei *Rifermenti della libreria di classi* per informazioni sulle API di creazione e personalizzazione della `CToolBar`. La maggior parte delle personalizzazioni delle barre degli strumenti deve essere eseguita prima che la barra degli strumenti venga inizialmente resa visibile.  
+ Refer to class [CToolBar](../mfc/reference/ctoolbar-class.md) the *Class Library Reference* for details about the `CToolBar` creation and customization APIs. Most customization of toolbars should be done before the toolbar is initially made visible.  
   
- Le API di personalizzazione possono essere usate per modificare ID, stili, larghezza dello spaziatore dei pulsanti e per stabilire quale immagine\/glifo usare per un pulsante specifico. Per impostazione predefinita, non è necessario usare le API.  
+ The customization APIs can be used to adjust the button IDs, styles, spacer width and which image/glyph is used for what button. By default you do not need to use these APIs.  
   
-## Supporto CCmdUI per CToolBar  
- I pulsanti della barra degli strumenti vengono sempre aggiornati attraverso il meccanismo `ON_UPDATE_COMMAND_UI`. Nel tempo di inattività, la barra degli strumenti chiamerà il gestore `ON_UPDATE_COMMAND_UI` con ID di comando di quel pulsante. Il meccanismo `ON_UPDATE_COMMAND_UI` non viene chiamato per il separatore, ma per i pulsanti di comando e i pulsanti della casella di controllo.  
+## <a name="ccmdui-support-for-ctoolbar"></a>CCmdUI Support for CToolBar  
+ The way toolbar buttons are always updated is through the `ON_UPDATE_COMMAND_UI` mechanism. On idle time, the toolbar will call the `ON_UPDATE_COMMAND_UI` handler with the command ID of that button. `ON_UPDATE_COMMAND_UI` is not called for separators, but it is called for pushbuttons and check box buttons.  
   
- Il gestore `ON_UPDATE_COMMAND_UI` può chiamare:  
+ The `ON_UPDATE_COMMAND_UI` handler can call:  
   
--   **Enable**: per abilitare o disabilitare il pulsante. Questo metodo è applicabile sia ai pulsanti della casella di controllo sia ai pulsanti di comando.  
+- **Enable**: To enable or disable the button. This works equally for pushbuttons and check box buttons.  
   
--   `SetCheck`: per impostare lo stato di selezione di un pulsante. Se la chiamata viene eseguita per un pulsante della barra degli strumenti, questo verrà convertito in un pulsante della casella di controllo.`SetCheck` accetta un parametro che può essere 0 \(non selezionato\), 1 \(selezionato\) o 2 \(indeterminato\)  
+- `SetCheck`: To set the check state of a button. Calling this for a toolbar button will turn it into a check box button. `SetCheck` takes a parameter which can be 0 (not checked), 1 (checked) or 2 (indeterminate)  
   
--   `SetRadio`: sintassi abbreviata per `SetCheck`.  
+- `SetRadio`: Shorthand for `SetCheck`.  
   
- I pulsanti della casella di controllo sono pulsanti "AUTO" ovvero, quando premuti, cambiano immediatamente stato. Lo stato selezionato è lo stato attivo o premuto. Non è possibile impostare lo stato "indeterminato" tramite un'interfaccia utente incorporata. Tale modifica deve essere eseguita tramite codice.  
+ Check box buttons are "AUTO" check box buttons; that is, when the user presses them they will immediately change state. Checked is the down or depressed state. There is no built-in user interface way to change a button into the "indeterminate" state; that must be done through code.  
   
- Le API di personalizzazione consentono di modificare lo stato di un pulsante della barra degli strumenti specificato. È consigliabile modificare questi stati nel gestore `ON_UPDATE_COMMAND_UI` per il comando rappresentato dal pulsante della barra degli strumenti. Tenere presente che l'elaborazione durante l'inattività modifica lo stato dei pulsanti della barra degli strumenti con il gestore `ON_UPDATE_COMMAND_UI`, pertanto tutte le modifiche a questi stati eseguite tramite SetButtonStyle potrebbero andare perse dopo il successivo periodo di inattività.  
+ The customization APIs will permit you to change the state of a given toolbar button, preferably you should change these states in the `ON_UPDATE_COMMAND_UI` handler for the command the toolbar button represents. Remember, the idle processing will change the state of toolbar buttons with the `ON_UPDATE_COMMAND_UI` handler, so any changes to these states made through SetButtonStyle may get lost after the next idle.  
   
- I pulsanti della barra degli strumenti inviano messaggi **WM\_COMMAND** come pulsanti normali o voci di menu e vengono di norma gestiti da un gestore `ON_COMMAND` nella stessa classe che fornisce il gestore `ON_UPDATE_COMMAND_UI`.  
+ Toolbar buttons will send **WM_COMMAND** messages like normal buttons or menu items and are normally handled by an `ON_COMMAND` handler in the same class that provides the `ON_UPDATE_COMMAND_UI` handler.  
   
- Esistono quattro stili dei pulsanti della barra degli strumenti \(TBBS\_ valori\) usati per gli stati di visualizzazione:  
+ There are four Toolbar button styles (TBBS_ values) used for display states:  
   
--   TBBS\_CHECKED:   la casella di controllo è attualmente selezionata.  
+-   TBBS_CHECKED:   Check box is currently checked (down).  
   
--   TBBS\_INDETERMINATE::   la casella di controllo è attualmente indeterminata.  
+-   TBBS_INDETERMINATE:   Check box is currently indeterminate.  
   
--   TBBS\_DISABLED:   il pulsante è attualmente disabilitato.  
+-   TBBS_DISABLED:   Button is currently disabled.  
   
--   TBBS\_PRESSED:   il pulsante è attualmente premuto.  
+-   TBBS_PRESSED:   Button is currently pressed.  
   
- I sei stili ufficiali dei pulsanti indicati nella Windows Interface Application Design Guide \(Guida alla progettazione di applicazioni con interfaccia di Windows\) sono rappresentati dai valori TBBS seguenti:  
+ The six official Windows Interface Application Design Guide button styles are represented by the following TBBS values:  
   
--   Non selezionato \= 0  
+-   Up = 0  
   
--   Pulsante premuto \= TBBS\_PRESSED \(&#124; altri stili\)  
+-   Mouse Down = TBBS_PRESSED (&#124; any other style)  
   
--   Disabilitato \= TBBS\_DISABLED  
+-   Disabled = TBBS_DISABLED  
   
--   Selezionato \= TBBS\_CHECKED  
+-   Down = TBBS_CHECKED  
   
--   Selezionato disabilitato \= TBBS\_CHECKED &#124; TBBS\_DISABLED  
+-   Down Disabled = TBBS_CHECKED &#124; TBBS_DISABLED  
   
--   Indeterminato \= TBBS\_INDETERMINATE  
+-   Indeterminate = TBBS_INDETERMINATE  
   
 ##  <a name="_mfcnotes_cdialogbar"></a> CDialogBar  
- Una barra della finestra di dialogo è una barra di controllo contenente i controlli Windows standard. Agisce come una finestra di dialogo in quanto contiene i controlli e supporta la tabulazione tra di essi. Funge anche da finestra di dialogo che usa un modello di finestra di dialogo per rappresentare la barra.  
+ A dialog bar is a control bar that contains standard Windows controls. It acts like a dialog in that it contains the controls and supports tabbing between them. It also acts like a dialog in that it uses a dialog template to represent the bar.  
   
- `CDialogBar` viene usata per la barra degli strumenti dell'anteprima di stampa, che contiene i controlli dei pulsanti di comando standard.  
+ A `CDialogBar` is used for the print-preview toolbar, which contains standard pushbutton controls.  
   
- Usare `CDialogBar` equivale a usare `CFormView`. È necessario definire un modello di finestra di dialogo per la barra della finestra di dialogo e rimuovere tutti gli stili ad eccezione di **WS\_CHILD**. Si noti che la finestra di dialogo non deve essere visibile.  
+ Using a `CDialogBar` is like using a `CFormView`. You must define a dialog template for the dialog bar and remove all the styles except **WS_CHILD**. Note that the dialog must not be visible.  
   
- Le notifiche dei controlli per `CDialogBar` vengono inviate all'elemento padre della barra di controllo \(come i pulsanti della barra degli strumenti\).  
+ The control notifications for a `CDialogBar` will be sent to the parent of the control bar (just like toolbar buttons).  
   
-## Supporto CCmdUI per CDialogBar  
- I pulsanti della barra della finestra di dialogo devono essere aggiornati tramite il meccanismo del gestore `ON_UPDATE_COMMAND_UI`. Nel tempo di inattività, la barra della finestra di dialogo chiama il gestore `ON_UPDATE_COMMAND_UI` con l'ID di comando di tutti i pulsanti con un ID \>\= 0x8000 \(ovvero nell'intervallo degli ID di comando\).  
+## <a name="ccmdui-support-for-cdialogbar"></a>CCmdUI Support for CDialogBar  
+ Dialog bar buttons should be updated through the `ON_UPDATE_COMMAND_UI` handler mechanism. At idle time, the dialog bar will call the `ON_UPDATE_COMMAND_UI` handler with the command ID of all the buttons that have a ID >= 0x8000 (that is, in the range of command IDs).  
   
- Il gestore `ON_UPDATE_COMMAND_UI` può chiamare:  
+ The `ON_UPDATE_COMMAND_UI` handler can call:  
   
--   Enable: per abilitare o disabilitare il pulsante.  
+-   Enable: to enable or disable the button.  
   
--   SetText: per modificare il testo del pulsante.  
+-   SetText: to change the text of the button.  
   
- La personalizzazione può essere eseguita tramite le API di gestione delle finestre standard.  
+ Customization can be done through standard window manager APIs.  
   
-## Vedere anche  
- [Note tecniche per numero](../mfc/technical-notes-by-number.md)   
- [Note tecniche per categoria](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

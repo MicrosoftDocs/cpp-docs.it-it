@@ -1,5 +1,5 @@
 ---
-title: Classe CD2DTextFormat | Documenti di Microsoft
+title: CD2DTextFormat Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -23,7 +23,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CD2DTextFormat class
+- CD2DTextFormat [MFC], CD2DTextFormat
+- CD2DTextFormat [MFC], Create
+- CD2DTextFormat [MFC], Destroy
+- CD2DTextFormat [MFC], Get
+- CD2DTextFormat [MFC], GetFontFamilyName
+- CD2DTextFormat [MFC], GetLocaleName
+- CD2DTextFormat [MFC], IsValid
+- CD2DTextFormat [MFC], ReCreate
+- CD2DTextFormat [MFC], m_pTextFormat
 ms.assetid: db194cec-9dae-4644-ab84-7c43b7164117
 caps.latest.revision: 16
 author: mikeblome
@@ -43,74 +51,74 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 5f7347dbbad8290bfdc800cbacaf21400583a392
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ec537322ff432d83edd742076cc8f4c53a228e43
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cd2dtextformat-class"></a>Classe CD2DTextFormat
-Un wrapper per IDWriteTextFormat.  
+# <a name="cd2dtextformat-class"></a>CD2DTextFormat Class
+A wrapper for IDWriteTextFormat.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CD2DTextFormat : public CD2DResource;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Costruttori pubblici  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DTextFormat::CD2DTextFormat](#cd2dtextformat)|Costruisce un oggetto CD2DTextFormat.|  
-|[CD2DTextFormat:: ~ CD2DTextFormat](#cd2dtextformat__~cd2dtextformat)|Distruttore. Chiamato quando viene eliminato un oggetto formato di testo D2D.|  
+|[CD2DTextFormat::CD2DTextFormat](#cd2dtextformat)|Constructs a CD2DTextFormat object.|  
+|[CD2DTextFormat::~CD2DTextFormat](#cd2dtextformat__~cd2dtextformat)|The destructor. Called when a D2D text format object is being destroyed.|  
   
-### <a name="public-methods"></a>Metodi pubblici  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DTextFormat::Create](#create)|Crea un CD2DTextFormat. (Esegue l'override di [CD2DResource:: Create](../../mfc/reference/cd2dresource-class.md#create).)|  
-|[CD2DTextFormat::Destroy](#destroy)|Elimina un oggetto CD2DTextFormat. (Esegue l'override di [CD2DResource:: Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|  
-|[CD2DTextFormat::Get](#get)|Restituisce l'interfaccia IDWriteTextFormat|  
-|[CD2DTextFormat::GetFontFamilyName](#getfontfamilyname)|Ottiene una copia del nome di famiglia del tipo di carattere.|  
-|[CD2DTextFormat::GetLocaleName](#getlocalename)|Ottiene una copia del nome delle impostazioni locali.|  
-|[CD2DTextFormat::IsValid](#isvalid)|Controlla la validità della risorsa (esegue l'override di [CD2DResource:: IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|  
-|[CD2DTextFormat::ReCreate](#recreate)|Consente di ricreare un CD2DTextFormat. (Esegue l'override di [CD2DResource:: ReCreate](../../mfc/reference/cd2dresource-class.md#recreate).)|  
+|[CD2DTextFormat::Create](#create)|Creates a CD2DTextFormat. (Overrides [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|  
+|[CD2DTextFormat::Destroy](#destroy)|Destroys a CD2DTextFormat object. (Overrides [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|  
+|[CD2DTextFormat::Get](#get)|Returns IDWriteTextFormat interface|  
+|[CD2DTextFormat::GetFontFamilyName](#getfontfamilyname)|Gets a copy of the font family name.|  
+|[CD2DTextFormat::GetLocaleName](#getlocalename)|Gets a copy of the locale name.|  
+|[CD2DTextFormat::IsValid](#isvalid)|Checks resource validity (Overrides [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|  
+|[CD2DTextFormat::ReCreate](#recreate)|Re-creates a CD2DTextFormat. (Overrides [CD2DResource::ReCreate](../../mfc/reference/cd2dresource-class.md#recreate).)|  
   
-### <a name="public-operators"></a>Operatori pubblici  
+### <a name="public-operators"></a>Public Operators  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DTextFormat::operator IDWriteTextFormat *](#operator_idwritetextformat_star)|Restituisce l'interfaccia IDWriteTextFormat|  
+|[CD2DTextFormat::operator IDWriteTextFormat*](#operator_idwritetextformat_star)|Returns IDWriteTextFormat interface|  
   
-### <a name="protected-data-members"></a>Membri dati protetti  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DTextFormat::m_pTextFormat](#m_ptextformat)|Un puntatore a un oggetto IDWriteTextFormat.|  
+|[CD2DTextFormat::m_pTextFormat](#m_ptextformat)|A pointer to an IDWriteTextFormat.|  
   
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CD2DResource](../../mfc/reference/cd2dresource-class.md)  
   
  [CD2DTextFormat](../../mfc/reference/cd2dtextformat-class.md)  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** afxrendertarget. h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxrendertarget.h  
   
-##  <a name="_dtorcd2dtextformat"></a>CD2DTextFormat:: ~ CD2DTextFormat  
- Distruttore. Chiamato quando viene eliminato un oggetto formato di testo D2D.  
+##  <a name="_dtorcd2dtextformat"></a>  CD2DTextFormat::~CD2DTextFormat  
+ The destructor. Called when a D2D text format object is being destroyed.  
   
 ```  
 virtual ~CD2DTextFormat();
 ```  
   
-##  <a name="cd2dtextformat"></a>CD2DTextFormat::CD2DTextFormat  
- Costruisce un oggetto CD2DTextFormat.  
+##  <a name="cd2dtextformat"></a>  CD2DTextFormat::CD2DTextFormat  
+ Constructs a CD2DTextFormat object.  
   
 ```  
 CD2DTextFormat(
@@ -125,118 +133,118 @@ CD2DTextFormat(
     BOOL bAutoDestroy = TRUE);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pParentTarget`  
- Puntatore alla destinazione di rendering.  
+ A pointer to the render target.  
   
  `strFontFamilyName`  
- Un oggetto CString che contiene il nome della famiglia di caratteri.  
+ A CString object that contains the name of the font family.  
   
  `fontSize`  
- La dimensione logica del tipo di carattere nelle unità DIP ("device-independent pixel"). Un DIP è pari a 1/96 di pollice.  
+ The logical size of the font in DIP ("device-independent pixel") units. A DIPequals 1/96 inch.  
   
  `fontWeight`  
- Un valore che indica lo spessore del carattere per l'oggetto testo.  
+ A value that indicates the font weight for the text object.  
   
  `fontStyle`  
- Un valore che indica lo stile del carattere per l'oggetto testo.  
+ A value that indicates the font style for the text object.  
   
  `fontStretch`  
- Un valore che indica l'estensione del carattere per l'oggetto testo.  
+ A value that indicates the font stretch for the text object.  
   
  `strFontLocale`  
- Un oggetto CString che contiene il nome delle impostazioni locali.  
+ A CString object that contains the locale name.  
   
  `pFontCollection`  
- Un puntatore a un oggetto raccolta di tipi di carattere. Quando è NULL, indica la raccolta di tipi di carattere di sistema.  
+ A pointer to a font collection object. When this is NULL, indicates the system font collection.  
   
  `bAutoDestroy`  
- Indica che l'oggetto verrà eliminata dal proprietario (pParentTarget).  
+ Indicates that the object will be destroyed by owner (pParentTarget).  
   
-##  <a name="create"></a>CD2DTextFormat::Create  
- Crea un CD2DTextFormat.  
+##  <a name="create"></a>  CD2DTextFormat::Create  
+ Creates a CD2DTextFormat.  
   
 ```  
 virtual HRESULT Create(CRenderTarget* */);
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Se il metodo ha esito positivo, viene restituito S_OK. In caso contrario, restituisce un codice di errore HRESULT.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns S_OK. Otherwise, it returns an HRESULT error code.  
   
-##  <a name="destroy"></a>CD2DTextFormat::Destroy  
- Elimina un oggetto CD2DTextFormat.  
+##  <a name="destroy"></a>  CD2DTextFormat::Destroy  
+ Destroys a CD2DTextFormat object.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="get"></a>CD2DTextFormat::Get  
- Restituisce l'interfaccia IDWriteTextFormat  
+##  <a name="get"></a>  CD2DTextFormat::Get  
+ Returns IDWriteTextFormat interface  
   
 ```  
 IDWriteTextFormat* Get();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Puntatore a un'interfaccia IDWriteTextFormat o NULL se l'oggetto non è ancora inizializzato.  
+### <a name="return-value"></a>Return Value  
+ Pointer to an IDWriteTextFormat interface or NULL if object is not initialized yet.  
   
-##  <a name="getfontfamilyname"></a>CD2DTextFormat::GetFontFamilyName  
- Ottiene una copia del nome di famiglia del tipo di carattere.  
+##  <a name="getfontfamilyname"></a>  CD2DTextFormat::GetFontFamilyName  
+ Gets a copy of the font family name.  
   
 ```  
 CString GetFontFamilyName() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Oggetto CString che contiene il nome della famiglia corrente.  
+### <a name="return-value"></a>Return Value  
+ CString object that contains the current font family name.  
   
-##  <a name="getlocalename"></a>CD2DTextFormat::GetLocaleName  
- Ottiene una copia del nome delle impostazioni locali.  
+##  <a name="getlocalename"></a>  CD2DTextFormat::GetLocaleName  
+ Gets a copy of the locale name.  
   
 ```  
 CString GetLocaleName() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Oggetto CString che contiene il nome delle impostazioni locali correnti.  
+### <a name="return-value"></a>Return Value  
+ CString object that contains the current locale name.  
   
-##  <a name="isvalid"></a>CD2DTextFormat::IsValid  
- Verifica la validità della risorsa  
+##  <a name="isvalid"></a>  CD2DTextFormat::IsValid  
+ Checks resource validity  
   
 ```  
 virtual BOOL IsValid() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- TRUE se la risorsa è valido. in caso contrario FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE if resource is valid; otherwise FALSE.  
   
-##  <a name="m_ptextformat"></a>CD2DTextFormat::m_pTextFormat  
- Un puntatore a un oggetto IDWriteTextFormat.  
+##  <a name="m_ptextformat"></a>  CD2DTextFormat::m_pTextFormat  
+ A pointer to an IDWriteTextFormat.  
   
 ```  
 IDWriteTextFormat* m_pTextFormat;  
 ```  
   
-##  <a name="operator_idwritetextformat_star"></a>CD2DTextFormat::operator IDWriteTextFormat *  
- Restituisce l'interfaccia IDWriteTextFormat  
+##  <a name="operator_idwritetextformat_star"></a>  CD2DTextFormat::operator IDWriteTextFormat*  
+ Returns IDWriteTextFormat interface  
   
 ```  
 operator IDWriteTextFormat*();
 ```   
   
-### <a name="return-value"></a>Valore restituito  
- Puntatore a un'interfaccia IDWriteTextFormat o NULL se l'oggetto non è ancora inizializzato.  
+### <a name="return-value"></a>Return Value  
+ Pointer to an IDWriteTextFormat interface or NULL if object is not initialized yet.  
   
-##  <a name="recreate"></a>CD2DTextFormat::ReCreate  
- Consente di ricreare un CD2DTextFormat.  
+##  <a name="recreate"></a>  CD2DTextFormat::ReCreate  
+ Re-creates a CD2DTextFormat.  
   
 ```  
 virtual HRESULT ReCreate(CRenderTarget* */);
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Se il metodo ha esito positivo, viene restituito S_OK. In caso contrario, restituisce un codice di errore HRESULT.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns S_OK. Otherwise, it returns an HRESULT error code.  
   
-## <a name="see-also"></a>Vedere anche  
- [Classi](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

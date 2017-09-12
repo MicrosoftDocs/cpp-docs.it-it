@@ -1,239 +1,258 @@
 ---
-title: "Controlli ActiveX MFC: utilizzo dei tipi di carattere | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "OnFontChanged"
-  - "HeadingFont"
-  - "InternalFont"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tipi di carattere, controlli ActiveX"
-  - "GetFont (metodo)"
-  - "HeadingFont (proprietà)"
-  - "InternalFont (metodo)"
-  - "IPropertyNotifySink (classe)"
-  - "MFC (controlli ActiveX), tipi di carattere"
-  - "notifiche, tipi di carattere per controlli ActiveX MFC"
-  - "OnDraw (metodo), controlli ActiveX MFC"
-  - "OnFontChanged (metodo)"
-  - "SelectStockFont (metodo)"
-  - "SetFont (metodo)"
-  - "Stock Font (proprietà)"
+title: 'MFC ActiveX Controls: Using Fonts | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- OnFontChanged
+- HeadingFont
+- InternalFont
+dev_langs:
+- C++
+helpviewer_keywords:
+- notifications [MFC], MFC ActiveX controls fonts
+- OnDraw method, MFC ActiveX controls
+- InternalFont method [MFC]
+- SetFont method [MFC]
+- OnFontChanged method [MFC]
+- IPropertyNotifySink class [MFC]
+- MFC ActiveX controls [MFC], fonts
+- Stock Font property [MFC]
+- HeadingFont property [MFC]
+- GetFont method [MFC]
+- SelectStockFont method [MFC]
+- fonts [MFC], ActiveX controls
 ms.assetid: 7c51d602-3f5a-481d-84d1-a5d8a3a71761
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Controlli ActiveX MFC: utilizzo dei tipi di carattere
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 160c743fef712d42deae76711f0df3069d82b709
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Se le visualizzazioni del controllo ActiveX testo to, è possibile consentire all'utente di modificare l'aspetto del testo modifica una proprietà del carattere.  Le proprietà predefinite vengono implementate come oggetti font e possono essere di due tipi: azione o personalizzato.  Le proprietà Font predefinite sono proprietà del carattere preimplemented che è possibile aggiungere tramite Aggiunta guidata proprietà.  Le proprietà Font personalizzate non preimplemented e lo sviluppatore del controllo determina il comportamento e l'utilizzo della proprietà.  
+---
+# <a name="mfc-activex-controls-using-fonts"></a>MFC ActiveX Controls: Using Fonts
+If your ActiveX control displays text, you can allow the control user to change the text appearance by changing a font property. Font properties are implemented as font objects and can be one of two types: stock or custom. Stock Font properties are preimplemented font properties that you can add using the Add Property Wizard. Custom Font properties are not preimplemented and the control developer determines the property's behavior and usage.  
   
- Questo articolo vengono trattati i seguenti argomenti:  
+ This article covers the following topics:  
   
--   [Utilizzando la proprietà Font predefinita](#_core_using_the_stock_font_property)  
+-   [Using the Stock Font property](#_core_using_the_stock_font_property)  
   
--   [Utilizzando le proprietà Font personalizzate del controllo](#_core_implementing_a_custom_font_property)  
+-   [Using Custom Font Properties in Your Control](#_core_implementing_a_custom_font_property)  
   
-##  <a name="_core_using_the_stock_font_property"></a> Utilizzando la proprietà Font predefinita  
- Le proprietà Font predefinite preimplemented dalla classe [COleControl](../mfc/reference/colecontrol-class.md).  Inoltre, una pagina standard della proprietà Font è anche disponibile, consentendo l'utente ai vari attributi di modifica dell'oggetto del tipo di carattere, quali il nome, la dimensione e stile.  
+##  <a name="_core_using_the_stock_font_property"></a> Using the Stock Font Property  
+ Stock Font properties are preimplemented by the class [COleControl](../mfc/reference/colecontrol-class.md). In addition, a standard Font property page is also available, allowing the user to change various attributes of the font object, such as its name, size, and style.  
   
- Accedere all'oggetto del tipo di carattere con [GetFont](../Topic/COleControl::GetFont.md), [SetFont](../Topic/COleControl::SetFont.md) e le funzioni di [InternalGetFont](../Topic/COleControl::InternalGetFont.md) di `COleControl`.  L'utente del controllo utilizzerà l'oggetto di carattere tramite `GetFont` e `SetFont` funziona in modo analogo come qualsiasi altra ottiene o imposta la proprietà.  Quando l'accesso all'oggetto del tipo di carattere è richiesto dall'interno di un controllo, utilizzare la funzione di `InternalGetFont`.  
+ Access the font object through the [GetFont](../mfc/reference/colecontrol-class.md#getfont), [SetFont](../mfc/reference/colecontrol-class.md#setfont), and [InternalGetFont](../mfc/reference/colecontrol-class.md#internalgetfont) functions of `COleControl`. The control user will access the font object via the `GetFont` and `SetFont` functions in the same manner as any other Get/Set property. When access to the font object is required from within a control, use the `InternalGetFont` function.  
   
- Come illustrato in [Controlli ActiveX MFC: Proprietà](../mfc/mfc-activex-controls-properties.md), aggiungere le proprietà predefinite andarci piano a [Aggiunta guidata proprietà](../ide/names-add-property-wizard.md).  Si sceglie la proprietà Font e l'aggiunta guidata proprietà imposta automaticamente la voce predefinita del carattere nella mappa di invio del controllo.  
+ As discussed in [MFC ActiveX Controls: Properties](../mfc/mfc-activex-controls-properties.md), adding stock properties is easy with the [Add Property Wizard](../ide/names-add-property-wizard.md). You choose the Font property, and the Add Property Wizard automatically inserts the stock Font entry into the control's dispatch map.  
   
-#### Per aggiungere la proprietà Font predefinita mediante l'aggiunta guidata proprietà  
+#### <a name="to-add-the-stock-font-property-using-the-add-property-wizard"></a>To add the stock Font property using the Add Property Wizard  
   
-1.  Caricare il progetto del controllo.  
+1.  Load your control's project.  
   
-2.  In Visualizzazione classi, espandere il nodo della libreria del controllo.  
+2.  In Class View, expand the library node of your control.  
   
-3.  Fare clic con il pulsante destro del mouse sul nodo dell'interfaccia del controllo \(il secondo nodo il nodo della libreria\) per aprire il menu di scelta rapida.  
+3.  Right-click the interface node for your control (the second node of the library node) to open the shortcut menu.  
   
-4.  Dal menu di scelta rapida, fare clic **Aggiungi** quindi fare clic **Aggiungi proprietà**.  
+4.  From the shortcut menu, click **Add** and then click **Add Property**.  
   
-     Verrà avviata l'aggiunta guidata proprietà.  
+     This opens the Add Property Wizard.  
   
-5.  Nella casella di **Nome proprietà**, fare clic **Carattere**.  
+5.  In the **Property Name** box, click **Font**.  
   
-6.  Scegliere **Fine**.  
+6.  Click **Finish**.  
   
- L'aggiunta guidata proprietà aggiungere la seguente riga alla mappa di invio del controllo, che si trova nel file di implementazione della classe del controllo:  
+ The Add Property Wizard adds the following line to the control's dispatch map, located in the control class implementation file:  
   
- [!code-cpp[NVC_MFC_AxFont#1](../mfc/codesnippet/CPP/mfc-activex-controls-using-fonts_1.cpp)]  
+ [!code-cpp[NVC_MFC_AxFont#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_1.cpp)]  
   
- Inoltre, l'aggiunta guidata proprietà aggiungere la seguente riga al file del controllo .IDL:  
+ In addition, the Add Property Wizard adds the following line to the control .IDL file:  
   
- [!code-cpp[NVC_MFC_AxFont#2](../mfc/codesnippet/CPP/mfc-activex-controls-using-fonts_2.idl)]  
+ [!code-cpp[NVC_MFC_AxFont#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_2.idl)]  
   
- La proprietà predefinita della barra del titolo è un esempio di proprietà Text che è possibile disegnare utilizzando le informazioni predefinite delle proprietà dei tipi.  Aggiungendo la proprietà predefinita della barra del titolo al controllo utilizza i passaggi simili a quelli utilizzati per la proprietà Font predefinita.  
+ The stock Caption property is an example of a text property that can be drawn using the stock Font property information. Adding the stock Caption property to the control uses steps similar to those used for the stock Font property.  
   
-#### Per aggiungere la proprietà predefinita della barra del titolo mediante l'aggiunta guidata proprietà  
+#### <a name="to-add-the-stock-caption-property-using-the-add-property-wizard"></a>To add the stock Caption property using the Add Property Wizard  
   
-1.  Caricare il progetto del controllo.  
+1.  Load your control's project.  
   
-2.  In Visualizzazione classi, espandere il nodo della libreria del controllo.  
+2.  In Class View, expand the library node of your control.  
   
-3.  Fare clic con il pulsante destro del mouse sul nodo dell'interfaccia del controllo \(il secondo nodo il nodo della libreria\) per aprire il menu di scelta rapida.  
+3.  Right-click the interface node for your control (the second node of the library node) to open the shortcut menu.  
   
-4.  Dal menu di scelta rapida, fare clic **Aggiungi** quindi fare clic **Aggiungi proprietà**.  
+4.  From the shortcut menu, click **Add** and then click **Add Property**.  
   
-     Verrà avviata l'aggiunta guidata proprietà.  
+     This opens the Add Property Wizard.  
   
-5.  Nella casella di **Nome proprietà**, fare clic **Titolo**.  
+5.  In the **Property Name** box, click **Caption**.  
   
-6.  Scegliere **Fine**.  
+6.  Click **Finish**.  
   
- L'aggiunta guidata proprietà aggiungere la seguente riga alla mappa di invio del controllo, che si trova nel file di implementazione della classe del controllo:  
+ The Add Property Wizard adds the following line to the control's dispatch map, located in the control class implementation file:  
   
- [!code-cpp[NVC_MFC_AxFont#3](../mfc/codesnippet/CPP/mfc-activex-controls-using-fonts_3.cpp)]  
+ [!code-cpp[NVC_MFC_AxFont#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_3.cpp)]  
   
-##  <a name="_core_modifying_the_ondraw_function"></a> Modificare la funzione di OnDraw  
- L'implementazione predefinita di `OnDraw` utilizza il tipo di sistema di Windows per tutto il testo visualizzato nel controllo.  Ciò significa che è necessario modificare il codice di `OnDraw` selezionando l'oggetto di carattere nel contesto di dispositivo.  A tale scopo, chiamare [COleControl::SelectStockFont](../Topic/COleControl::SelectStockFont.md) e passare il contesto di dispositivo del controllo, come illustrato nell'esempio seguente:  
+##  <a name="_core_modifying_the_ondraw_function"></a> Modifying the OnDraw Function  
+ The default implementation of `OnDraw` uses the Windows system font for all text displayed in the control. This means that you must modify the `OnDraw` code by selecting the font object into the device context. To do this, call [COleControl::SelectStockFont](../mfc/reference/colecontrol-class.md#selectstockfont) and pass the control's device context, as shown in the following example:  
   
- [!code-cpp[NVC_MFC_AxFont#4](../mfc/codesnippet/CPP/mfc-activex-controls-using-fonts_4.cpp)]  
+ [!code-cpp[NVC_MFC_AxFont#4](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_4.cpp)]  
   
- Dopo che la funzione di `OnDraw` è cambiata per utilizzare l'oggetto font, tutto il testo nel controllo viene visualizzato con le caratteristiche della proprietà Font di azione del controllo.  
+ After the `OnDraw` function has been modified to use the font object, any text within the control is displayed with characteristics from the control's stock Font property.  
   
-##  <a name="_core_using_custom_font_properties_in_your_control"></a> Utilizzando le proprietà Font personalizzate del controllo  
- Oltre alla proprietà Font predefinita, il controllo ActiveX può presentare proprietà Font personalizzate.  Per aggiungere una proprietà del carattere personalizzata è necessario:  
+##  <a name="_core_using_custom_font_properties_in_your_control"></a> Using Custom Font Properties in Your Control  
+ In addition to the stock Font property, the ActiveX control can have custom Font properties. To add a custom font property you must:  
   
--   Utilizzare l'aggiunta guidata proprietà per implementare la proprietà Font personalizzata.  
+-   Use the Add Property Wizard to implement the custom Font property.  
   
--   [Notifiche dei tipi di elaborazione](#_core_processing_font_notifications).  
+-   [Processing font notifications](#_core_processing_font_notifications).  
   
--   [Implementare una nuova interfaccia di notifica di carattere](#_core_implementing_a_new_font_notification_interface).  
+-   [Implementing a new font notification interface](#_core_implementing_a_new_font_notification_interface).  
   
-###  <a name="_core_implementing_a_custom_font_property"></a> Implementare una proprietà Font personalizzata  
- Per implementare una proprietà Font personalizzata, utilizzare l'aggiunta guidata proprietà per aggiungere la proprietà e quindi apportare alcune modifiche al codice.  Nelle sezioni seguenti viene descritto come aggiungere la proprietà personalizzata di `HeadingFont` al controllo di esempio.  
+###  <a name="_core_implementing_a_custom_font_property"></a> Implementing a Custom Font Property  
+ To implement a custom Font property, you use the Add Property Wizard to add the property and then make some modifications to the code. The following sections describe how to add the custom `HeadingFont` property to the Sample control.  
   
-##### Per aggiungere la proprietà Font personalizzata mediante l'aggiunta guidata proprietà  
+##### <a name="to-add-the-custom-font-property-using-the-add-property-wizard"></a>To add the custom Font property using the Add Property Wizard  
   
-1.  Caricare il progetto del controllo.  
+1.  Load your control's project.  
   
-2.  In Visualizzazione classi, espandere il nodo della libreria del controllo.  
+2.  In Class View, expand the library node of your control.  
   
-3.  Fare clic con il pulsante destro del mouse sul nodo dell'interfaccia del controllo \(il secondo nodo il nodo della libreria\) per aprire il menu di scelta rapida.  
+3.  Right-click the interface node for your control (the second node of the library node) to open the shortcut menu.  
   
-4.  Dal menu di scelta rapida, fare clic **Aggiungi** quindi fare clic **Aggiungi proprietà**.  
+4.  From the shortcut menu, click **Add** and then click **Add Property**.  
   
-     Verrà avviata l'aggiunta guidata proprietà.  
+     This opens the Add Property Wizard.  
   
-5.  Nella casella di **Nome proprietà**, digitare un nome per la proprietà.  Per questo esempio, utilizzare **HeadingFont**.  
+5.  In the **Property Name** box, type a name for the property. For this example, use **HeadingFont**.  
   
-6.  Per **Implementation Type**, fare clic **Metodi Get\/Set**.  
+6.  For **Implementation Type**, click **Get/Set Methods**.  
   
-7.  Nella casella di **Tipo proprietà**, **IDispatch\*** selezionato per il tipo della proprietà.  
+7.  In the **Property Type** box, select **IDispatch\*** for the property's type.  
   
-8.  Scegliere **Fine**.  
+8.  Click **Finish**.  
   
- L'aggiunta guidata proprietà crea il codice per aggiungere una proprietà personalizzata di `HeadingFont` alla classe di `CSampleCtrl` e nel file di SAMPLE.IDL.  Poiché `HeadingFont` è un tipo di proprietà set\/get, l'aggiunta guidata proprietà viene modificata la mappa di invio della classe di `CSampleCtrl` per includere una macro voce di `DISP_PROPERTY_EX_ID`[DISP\_PROPERTY\_EX](../Topic/DISP_PROPERTY_EX.md) :  
+ The Add Property Wizard creates the code to add the `HeadingFont` custom property to the `CSampleCtrl` class and the SAMPLE.IDL file. Because `HeadingFont` is a Get/Set property type, the Add Property Wizard modifies the `CSampleCtrl` class's dispatch map to include a `DISP_PROPERTY_EX_ID`[DISP_PROPERTY_EX](../mfc/reference/dispatch-maps.md#disp_property_ex) macro entry:  
   
- [!code-cpp[NVC_MFC_AxFont#5](../mfc/codesnippet/CPP/mfc-activex-controls-using-fonts_5.cpp)]  
+ [!code-cpp[NVC_MFC_AxFont#5](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_5.cpp)]  
   
- La macro di `DISP_PROPERTY_EX` associa il nome della proprietà di `HeadingFont` con la relativa classe corrispondente di `CSampleCtrl` ottiene e imposta i metodi, `GetHeadingFont` e `SetHeadingFont`.  Il tipo del valore della proprietà viene specificato; in questo caso, **VT\_FONT**.  
+ The `DISP_PROPERTY_EX` macro associates the `HeadingFont` property name with its corresponding `CSampleCtrl` class Get and Set methods, `GetHeadingFont` and `SetHeadingFont`. The type of the property value is also specified; in this case, **VT_FONT**.  
   
- L'aggiunta guidata proprietà aggiunge una dichiarazione nel file di intestazione del controllo \(. H\) per `GetHeadingFont` e `SetHeadingFont` viene eseguito e aggiunge i propri modelli di funzione nel file di implementazione del controllo \(.CPP\):  
+ The Add Property Wizard also adds a declaration in the control header file (.H) for the `GetHeadingFont` and `SetHeadingFont` functions and adds their function templates in the control implementation file (.CPP):  
   
- [!code-cpp[NVC_MFC_AxFont#6](../mfc/codesnippet/CPP/mfc-activex-controls-using-fonts_6.cpp)]  
+ [!code-cpp[NVC_MFC_AxFont#6](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_6.cpp)]  
   
- Infine, l'aggiunta guidata proprietà modificare il file del controllo .IDL aggiungendo una voce per la proprietà di `HeadingFont` :  
+ Finally, the Add Property Wizard modifies the control .IDL file by adding an entry for the `HeadingFont` property:  
   
- [!code-cpp[NVC_MFC_AxFont#7](../mfc/codesnippet/CPP/mfc-activex-controls-using-fonts_7.idl)]  
+ [!code-cpp[NVC_MFC_AxFont#7](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_7.idl)]  
   
-### Modifiche al codice del controllo  
- Dopo aver aggiunto la proprietà di `HeadingFont` al controllo, è necessario apportare modifiche all'intestazione e ai file di implementazione del controllo completamente per supportare la nuova proprietà.  
+### <a name="modifications-to-the-control-code"></a>Modifications to the Control Code  
+ Now that you have added the `HeadingFont` property to the control, you must make some changes to the control header and implementation files to fully support the new property.  
   
- Nel file di intestazione del controllo \(. H\), aggiungere la seguente dichiarazione di una variabile membro protetto:  
+ In the control header file (.H), add the following declaration of a protected member variable:  
   
- [!code-cpp[NVC_MFC_AxFont#8](../mfc/codesnippet/CPP/mfc-activex-controls-using-fonts_8.h)]  
+ [!code-cpp[NVC_MFC_AxFont#8](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_8.h)]  
   
- Nel file di implementazione del controllo \(.CPP\), effettuare le operazioni seguenti:  
+ In the control implementation file (.CPP), do the following:  
   
--   Inizializzare `m_fontHeading` nel costruttore del controllo.  
+-   Initialize `m_fontHeading` in the control constructor.  
   
-     [!code-cpp[NVC_MFC_AxFont#9](../mfc/codesnippet/CPP/mfc-activex-controls-using-fonts_9.cpp)]  
+     [!code-cpp[NVC_MFC_AxFont#9](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_9.cpp)]  
   
--   Dichiarare una struttura statica di **FONTDESC** che contiene gli attributi predefiniti di carattere.  
+-   Declare a static **FONTDESC** structure containing default attributes of the font.  
   
-     [!code-cpp[NVC_MFC_AxFont#10](../mfc/codesnippet/CPP/mfc-activex-controls-using-fonts_10.cpp)]  
+     [!code-cpp[NVC_MFC_AxFont#10](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_10.cpp)]  
   
--   Nella funzione membro di `DoPropExchange` del controllo, aggiungere una chiamata alla funzione di `PX_Font`.  Ciò fornisce l'inizializzazione e la persistenza per la proprietà Font personalizzata.  
+-   In the control `DoPropExchange` member function, add a call to the `PX_Font` function. This provides initialization and persistence for your custom Font property.  
   
-     [!code-cpp[NVC_MFC_AxFont#11](../mfc/codesnippet/CPP/mfc-activex-controls-using-fonts_11.cpp)]  
+     [!code-cpp[NVC_MFC_AxFont#11](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_11.cpp)]  
   
--   Fine che implementa la funzione membro di `GetHeadingFont` del controllo.  
+-   Finish implementing the control `GetHeadingFont` member function.  
   
-     [!code-cpp[NVC_MFC_AxFont#12](../mfc/codesnippet/CPP/mfc-activex-controls-using-fonts_12.cpp)]  
+     [!code-cpp[NVC_MFC_AxFont#12](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_12.cpp)]  
   
--   Fine che implementa la funzione membro di `SetHeadingFont` del controllo.  
+-   Finish implementing the control `SetHeadingFont` member function.  
   
-     [!code-cpp[NVC_MFC_AxFont#13](../mfc/codesnippet/CPP/mfc-activex-controls-using-fonts_13.cpp)]  
+     [!code-cpp[NVC_MFC_AxFont#13](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_13.cpp)]  
   
--   Modificare la funzione membro di `OnDraw` dei controlli per definire una variabile per utilizzare il tipo di carattere selezionata in precedenza.  
+-   Modify the control `OnDraw` member function to define a variable to hold the previously selected font.  
   
-     [!code-cpp[NVC_MFC_AxFont#14](../mfc/codesnippet/CPP/mfc-activex-controls-using-fonts_14.cpp)]  
+     [!code-cpp[NVC_MFC_AxFont#14](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_14.cpp)]  
   
--   Modificare la funzione membro di `OnDraw` del controllo per selezionare il tipo di carattere personalizzato nel contesto di dispositivo aggiungendo la seguente riga nel tipo deve essere utilizzata.  
+-   Modify the control `OnDraw` member function to select the custom font into the device context by adding the following line wherever the font is to be used.  
   
-     [!code-cpp[NVC_MFC_AxFont#15](../mfc/codesnippet/CPP/mfc-activex-controls-using-fonts_15.cpp)]  
+     [!code-cpp[NVC_MFC_AxFont#15](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_15.cpp)]  
   
--   Modificare la funzione membro di `OnDraw` del controllo per selezionare il tipo di carattere precedente nel contesto di dispositivo aggiungendo la seguente riga dopo il tipo è stata utilizzata.  
+-   Modify the control `OnDraw` member function to select the previous font back into the device context by adding the following line after the font has been used.  
   
-     [!code-cpp[NVC_MFC_AxFont#16](../mfc/codesnippet/CPP/mfc-activex-controls-using-fonts_16.cpp)]  
+     [!code-cpp[NVC_MFC_AxFont#16](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_16.cpp)]  
   
- Dopo la proprietà Font personalizzata è stata implementata, la pagina standard delle proprietà dei tipi deve essere implementata, consentendo agli utenti del controllo del tipo corrente del controllo.  Per aggiungere la pagina delle proprietà ID per la pagina standard le proprietà predefinite, inserire la seguente riga dopo la macro di `BEGIN_PROPPAGEIDS` :  
+ After the custom Font property has been implemented, the standard Font property page should be implemented, allowing control users to change the control's current font. To add the property page ID for the standard Font property page, insert the following line after the `BEGIN_PROPPAGEIDS` macro:  
   
- [!code-cpp[NVC_MFC_AxFont#17](../mfc/codesnippet/CPP/mfc-activex-controls-using-fonts_17.cpp)]  
+ [!code-cpp[NVC_MFC_AxFont#17](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_17.cpp)]  
   
- È inoltre necessario incrementare il parametro count della macro di `BEGIN_PROPPAGEIDS` da una.  La riga seguente viene illustrata questa:  
+ You must also increment the count parameter of your `BEGIN_PROPPAGEIDS` macro by one. The following line illustrates this:  
   
- [!code-cpp[NVC_MFC_AxFont#18](../mfc/codesnippet/CPP/mfc-activex-controls-using-fonts_18.cpp)]  
+ [!code-cpp[NVC_MFC_AxFont#18](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_18.cpp)]  
   
- Dopo che tali modifiche apportate, ricompilare l'intero progetto includere funzionalità aggiuntive.  
+ After these changes have been made, rebuild the entire project to incorporate the additional functionality.  
   
-###  <a name="_core_processing_font_notifications"></a> Notifiche dei tipi di elaborazione  
- Nella maggior parte dei casi le esigenze di controllo di sapere quando le caratteristiche dell'oggetto del tipo di carattere sono state modificate.  Ogni oggetto font è in grado di invio di notifiche quando viene modificata una chiamata a una funzione membro di interfaccia di **IFontNotification**, implementato da `COleControl`.  
+###  <a name="_core_processing_font_notifications"></a> Processing Font Notifications  
+ In most cases the control needs to know when the characteristics of the font object have been modified. Each font object is capable of providing notifications when it changes by calling a member function of the **IFontNotification** interface, implemented by `COleControl`.  
   
- Se il controllo utilizza la proprietà Font predefinita, le notifiche vengono gestite dalla funzione membro di `OnFontChanged` di `COleControl`.  Quando si aggiunge le proprietà del carattere personalizzate, è possibile farli utilizzare la stessa implementazione.  Nell'esempio nella sezione precedente, questo è stato compiuto passando &**m\_xFontNotification** quando si inizializza la variabile membro di **m\_fontHeading**.  
+ If the control uses the stock Font property, its notifications are handled by the `OnFontChanged` member function of `COleControl`. When you add custom font properties, you can have them use the same implementation. In the example in the previous section, this was accomplished by passing &**m_xFontNotification** when initializing the **m_fontHeading** member variable.  
   
- ![Implementazione di più interfacce dell'oggetto tipo di carattere](../mfc/media/vc373q1.png "vc373Q1")  
-Implementazione di interfacce di oggetti con più tipi di carattere  
+ ![Implementing multiple font object interfaces](../mfc/media/vc373q1.gif "vc373q1")  
+Implementing Multiple Font Object Interfaces  
   
- Le linee continue nella figura precedente viene mostrato che entrambi gli oggetti font utilizzano la stessa implementazione di **IFontNotification**.  Ciò potrebbe causare problemi se si desidera distinguere che il tipo è stato modificato.  
+ The solid lines in the figure above show that both font objects are using the same implementation of **IFontNotification**. This could cause problems if you wanted to distinguish which font changed.  
   
- Un modo per distinguere tra le notifiche dell'oggetto del tipo di controllo è possibile creare un'implementazione separata dell'interfaccia di **IFontNotification** per ogni oggetto di carattere nel controllo.  Questa tecnica consente di ottimizzare il codice di disegno aggiornamento solo la stringa, o le stringhe, utilizzando il tipo di recente modificata.  Nelle sezioni seguenti vengono descritti i passaggi necessari per implementare interfacce di notifica separate per una seconda proprietà Font.  La seconda proprietà del carattere costituisca la proprietà di `HeadingFont` che è stata aggiunta la sezione precedente.  
+ One way to distinguish between the control's font object notifications is to create a separate implementation of the **IFontNotification** interface for each font object in the control. This technique allows you to optimize your drawing code by updating only the string, or strings, that use the recently modified font. The following sections demonstrate the steps necessary to implement separate notification interfaces for a second Font property. The second font property is assumed to be the `HeadingFont` property that was added in the previous section.  
   
-###  <a name="_core_implementing_a_new_font_notification_interface"></a> Implementare una nuova interfaccia di notifica di carattere  
- Per distinguere tra le notifiche due o più tipi di carattere, una nuova interfaccia di notifica deve essere implementata per ogni tipo di carattere utilizzato nel controllo.  Nelle sezioni seguenti viene descritto come implementare una nuova interfaccia di notifica di carattere modificare l'intestazione e il file di implementazione del controllo.  
+###  <a name="_core_implementing_a_new_font_notification_interface"></a> Implementing a New Font Notification Interface  
+ To distinguish between the notifications of two or more fonts, a new notification interface must be implemented for each font used in the control. The following sections describe how to implement a new font notification interface by modifying the control header and implementation files.  
   
-### Aggiunte al file di intestazione  
- Nel file di intestazione del controllo \(. H\), aggiungere le righe seguenti alla dichiarazione di classe:  
+### <a name="additions-to-the-header-file"></a>Additions to the Header File  
+ In the control header file (.H), add the following lines to the class declaration:  
   
- [!code-cpp[NVC_MFC_AxFont#19](../mfc/codesnippet/CPP/mfc-activex-controls-using-fonts_19.h)]  
+ [!code-cpp[NVC_MFC_AxFont#19](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_19.h)]  
   
- Ciò crea un'implementazione dell'interfaccia di `IPropertyNotifySink` chiamata `HeadingFontNotify`.  Questa nuova interfaccia contiene un metodo denominato `OnChanged`.  
+ This creates an implementation of the `IPropertyNotifySink` interface called `HeadingFontNotify`. This new interface contains a method called `OnChanged`.  
   
-### Aggiunta del file di implementazione  
- Nel codice che inizializza il tipo di intestazione \(nel costruttore del controllo\), `&m_xFontNotification` di modifica a `&m_xHeadingFontNotify`.  Aggiungere il seguente codice:  
+### <a name="additions-to-the-implementation-file"></a>Additions to the Implementation File  
+ In the code that initializes the heading font (in the control constructor), change `&m_xFontNotification` to `&m_xHeadingFontNotify`. Then add the following code:  
   
- [!code-cpp[NVC_MFC_AxFont#20](../mfc/codesnippet/CPP/mfc-activex-controls-using-fonts_20.cpp)]  
+ [!code-cpp[NVC_MFC_AxFont#20](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_20.cpp)]  
   
- I metodi di `Release` e di `AddRef` nell'interfaccia di `IPropertyNotifySink` tengono traccia del conteggio dei riferimenti per l'oggetto del controllo ActiveX.  Quando il controllo ottenga l'accesso al puntatore a interfaccia, viene chiamato `AddRef` per incrementare il conteggio dei riferimenti.  Quando il controllo viene completato con il puntatore, chiama `Release`, nello stesso modo in cui **GlobalFree** può essere chiamato per liberare un blocco di memoria globale.  Quando il conteggio dei riferimenti per l'interfaccia vai a zero, l'implementazione di interfaccia può essere liberata.  In questo esempio, la funzione di `QueryInterface` restituisce un puntatore a un'interfaccia di `IPropertyNotifySink` su un oggetto specifico.  Questa funzione consente a un controllo ActiveX eseguire una query su un oggetto per determinare le interfacce supporta.  
+ The `AddRef` and `Release` methods in the `IPropertyNotifySink` interface keep track of the reference count for the ActiveX control object. When the control obtains access to interface pointer, the control calls `AddRef` to increment the reference count. When the control is finished with the pointer, it calls `Release`, in much the same way that **GlobalFree** might be called to free a global memory block. When the reference count for this interface goes to zero, the interface implementation can be freed. In this example, the `QueryInterface` function returns a pointer to a `IPropertyNotifySink` interface on a particular object. This function allows an ActiveX control to query an object to determine what interfaces it supports.  
   
- Dopo che tali modifiche apportate al progetto, ricompilare il progetto e utilizzare il contenitore di test per testare l'interfaccia.  Per ulteriori informazioni sulla modalità di accesso a Test Container, vedere [Verifica di proprietà ed eventi tramite Test Container](../mfc/testing-properties-and-events-with-test-container.md).  
+ After these changes have been made to your project, rebuild the project and use Test Container to test the interface. See [Testing Properties and Events with Test Container](../mfc/testing-properties-and-events-with-test-container.md) for information on how to access the test container.  
   
-## Vedere anche  
- [Controlli ActiveX MFC](../mfc/mfc-activex-controls.md)   
- [Controlli ActiveX MFC: utilizzo di immagini in un controllo ActiveX](../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md)   
- [Controlli ActiveX MFC: utilizzo delle pagine delle proprietà predefinite](../mfc/mfc-activex-controls-using-stock-property-pages.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)   
+ [MFC ActiveX Controls: Using Pictures in an ActiveX Control](../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md)   
+ [MFC ActiveX Controls: Using Stock Property Pages](../mfc/mfc-activex-controls-using-stock-property-pages.md)
+
+

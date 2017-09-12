@@ -1,5 +1,5 @@
 ---
-title: CBrush (classe) | Documenti di Microsoft
+title: CBrush Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -23,8 +23,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- brushes, CBrush class
-- CBrush class
+- CBrush [MFC], CBrush
+- CBrush [MFC], CreateBrushIndirect
+- CBrush [MFC], CreateDIBPatternBrush
+- CBrush [MFC], CreateHatchBrush
+- CBrush [MFC], CreatePatternBrush
+- CBrush [MFC], CreateSolidBrush
+- CBrush [MFC], CreateSysColorBrush
+- CBrush [MFC], FromHandle
+- CBrush [MFC], GetLogBrush
 ms.assetid: e5ef2c62-dd95-4973-9090-f52f605900e1
 caps.latest.revision: 21
 author: mikeblome
@@ -44,68 +51,68 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: efcbe2757de3a7e4621e2b20c88726ead111cf8c
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 23a816363af6f77ff498890a4e4cca8ecc17d53a
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cbrush-class"></a>CBrush (classe)
-Incapsula un pennello GDI (Graphics Device Interface) di Windows.  
+# <a name="cbrush-class"></a>CBrush Class
+Encapsulates a Windows graphics device interface (GDI) brush.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CBrush : public CGdiObject  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Costruttori pubblici  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CBrush::CBrush](#cbrush)|Costruisce un oggetto `CBrush`.|  
+|[CBrush::CBrush](#cbrush)|Constructs a `CBrush` object.|  
   
-### <a name="public-methods"></a>Metodi pubblici  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CBrush::CreateBrushIndirect](#createbrushindirect)|Inizializza un pennello con lo stile, colore e modello specificato in un [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) struttura.|  
-|[CBrush::CreateDIBPatternBrush](#createdibpatternbrush)|Inizializza un pennello con un modello specificato da una bitmap indipendente dalla periferica (DIB).|  
-|[CBrush::CreateHatchBrush](#createhatchbrush)|Inizializza un oggetto brush con il modello tratteggiata specificato e il colore.|  
-|[CBrush::CreatePatternBrush](#createpatternbrush)|Inizializza un pennello con un modello specificato da una bitmap.|  
-|[CBrush::CreateSolidBrush](#createsolidbrush)|Inizializza un pennello di riempimento a tinta unita specificato.|  
-|[CBrush::CreateSysColorBrush](#createsyscolorbrush)|Crea un pennello che rappresenta il colore di sistema predefinito.|  
-|[CBrush::FromHandle](#fromhandle)|Restituisce un puntatore a un `CBrush` oggetto quando viene specificato un handle a un Windows `HBRUSH` oggetto.|  
-|[CBrush::GetLogBrush](#getlogbrush)|Ottiene un [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) struttura.|  
+|[CBrush::CreateBrushIndirect](#createbrushindirect)|Initializes a brush with the style, color, and pattern specified in a [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) structure.|  
+|[CBrush::CreateDIBPatternBrush](#createdibpatternbrush)|Initializes a brush with a pattern specified by a device-independent bitmap (DIB).|  
+|[CBrush::CreateHatchBrush](#createhatchbrush)|Initializes a brush with the specified hatched pattern and color.|  
+|[CBrush::CreatePatternBrush](#createpatternbrush)|Initializes a brush with a pattern specified by a bitmap.|  
+|[CBrush::CreateSolidBrush](#createsolidbrush)|Initializes a brush with the specified solid color.|  
+|[CBrush::CreateSysColorBrush](#createsyscolorbrush)|Creates a brush that is the default system color.|  
+|[CBrush::FromHandle](#fromhandle)|Returns a pointer to a `CBrush` object when given a handle to a Windows `HBRUSH` object.|  
+|[CBrush::GetLogBrush](#getlogbrush)|Gets a [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) structure.|  
   
-### <a name="public-operators"></a>Operatori pubblici  
+### <a name="public-operators"></a>Public Operators  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[HBRUSH CBrush::operator](#operator_hbrush)|Restituisce l'handle di Windows associata per la `CBrush` oggetto.|  
+|[CBrush::operator HBRUSH](#operator_hbrush)|Returns the Windows handle attached to the `CBrush` object.|  
   
-## <a name="remarks"></a>Note  
- Per utilizzare un `CBrush` dell'oggetto, creare un `CBrush` e passandolo a qualsiasi `CDC` funzione membro che richiede un pennello.  
+## <a name="remarks"></a>Remarks  
+ To use a `CBrush` object, construct a `CBrush` object and pass it to any `CDC` member function that requires a brush.  
   
- Pennelli possono essere continuo, nati o motivi.  
+ Brushes can be solid, hatched, or patterned.  
   
- Per ulteriori informazioni su `CBrush`, vedere [oggetti grafici](../../mfc/graphic-objects.md).  
+ For more information on `CBrush`, see [Graphic Objects](../../mfc/graphic-objects.md).  
   
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CGdiObject](../../mfc/reference/cgdiobject-class.md)  
   
  `CBrush`  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="cbrush"></a>CBrush::CBrush  
- Costruisce un oggetto `CBrush`.  
+##  <a name="cbrush"></a>  CBrush::CBrush  
+ Constructs a `CBrush` object.  
   
 ```  
 CBrush(); 
@@ -114,66 +121,66 @@ CBrush(int nIndex, COLORREF crColor);
 explicit CBrush(CBitmap* pBitmap);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `crColor`  
- Specifica il colore di primo piano del pennello come un colore RGB. Se è nati il pennello, questo parametro specifica il colore del tratteggio.  
+ Specifies the foreground color of the brush as an RGB color. If the brush is hatched, this parameter specifies the color of the hatching.  
   
  `nIndex`  
- Specifica lo stile di tratteggio del pennello. Può essere uno dei valori seguenti:  
+ Specifies the hatch style of the brush. It can be any one of the following values:  
   
-- `HS_BDIAGONAL`Tratteggio verso il basso (da sinistra a destra) 45 gradi  
+- `HS_BDIAGONAL` Downward hatch (left to right) at 45 degrees  
   
-- `HS_CROSS`Tratteggio incrociato orizzontale e verticale  
+- `HS_CROSS` Horizontal and vertical crosshatch  
   
-- `HS_DIAGCROSS`Tratteggio trasversale a 45 gradi  
+- `HS_DIAGCROSS` Crosshatch at 45 degrees  
   
-- `HS_FDIAGONAL`Tratteggio verso l'alto (da sinistra a destra) 45 gradi  
+- `HS_FDIAGONAL` Upward hatch (left to right) at 45 degrees  
   
-- `HS_HORIZONTAL`Tratteggio orizzontale  
+- `HS_HORIZONTAL` Horizontal hatch  
   
-- `HS_VERTICAL`Tratteggio verticale  
+- `HS_VERTICAL` Vertical hatch  
   
  `pBitmap`  
- Punta a un `CBitmap` oggetto che specifica una bitmap con il quale il pennello disegna.  
+ Points to a `CBitmap` object that specifies a bitmap with which the brush paints.  
   
-### <a name="remarks"></a>Note  
- `CBrush`dispone di quattro overload costruttori. Il costruttore senza argomenti crea un valore non inizializzato `CBrush` oggetto che deve essere inizializzato prima che possa essere utilizzato.  
+### <a name="remarks"></a>Remarks  
+ `CBrush` has four overloaded constructors.The constructor with no arguments constructs an uninitialized `CBrush` object that must be initialized before it can be used.  
   
- Se si utilizza il costruttore senza argomenti, è necessario inizializzare l'oggetto risultante `CBrush` con [CreateSolidBrush](#createsolidbrush), [CreateHatchBrush](#createhatchbrush), [CreateBrushIndirect](#createbrushindirect), [CreatePatternBrush](#createpatternbrush), o [CreateDIBPatternBrush](#createdibpatternbrush). Se si utilizza uno dei costruttori che accettano argomenti, quindi non è necessario inizializzare. I costruttori con argomenti possono generare un'eccezione se vengono rilevati errori, mentre il costruttore senza argomenti avrà sempre esito positivo.  
+ If you use the constructor with no arguments, you must initialize the resulting `CBrush` object with [CreateSolidBrush](#createsolidbrush), [CreateHatchBrush](#createhatchbrush), [CreateBrushIndirect](#createbrushindirect), [CreatePatternBrush](#createpatternbrush), or [CreateDIBPatternBrush](#createdibpatternbrush). If you use one of the constructors that takes arguments, then no further initialization is necessary. The constructors with arguments can throw an exception if errors are encountered, while the constructor with no arguments will always succeed.  
   
- Il costruttore con un singolo [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametro costruisce un oggetto solid brush con il colore specificato. Il colore specifica un valore RGB e può essere costruito con il `RGB` (macro) in WINDOWS. H.  
+ The constructor with a single [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parameter constructs a solid brush with the specified color. The color specifies an RGB value and can be constructed with the `RGB` macro in WINDOWS.H.  
   
- Il costruttore con due parametri costruisce un pennello tratteggiato. Il `nIndex` parametro specifica l'indice di un motivo tratteggiato. Il `crColor` parametro specifica il colore.  
+ The constructor with two parameters constructs a hatch brush. The `nIndex` parameter specifies the index of a hatched pattern. The `crColor` parameter specifies the color.  
   
- Il costruttore con un `CBitmap` parametro costruisce un pennello in serie. Il parametro identifica una bitmap. Si presuppone che la bitmap sono stati creati utilizzando [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), o [CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap). La dimensione minima per una bitmap da utilizzare in un motivo di riempimento è 8 x 8 pixel.  
+ The constructor with a `CBitmap` parameter constructs a patterned brush. The parameter identifies a bitmap. The bitmap is assumed to have been created by using [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap::LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), or [CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap). The minimum size for a bitmap to be used in a fill pattern is 8 pixels by 8 pixels.  
   
-### <a name="example"></a>Esempio  
- [!code-cpp[NVC_MFCDocView numero&21;](../../mfc/codesnippet/cpp/cbrush-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#21](../../mfc/codesnippet/cpp/cbrush-class_1.cpp)]  
   
-##  <a name="createbrushindirect"></a>CBrush::CreateBrushIndirect  
- Inizializza un pennello con uno stile, colore e modello specificato in un [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) struttura.  
+##  <a name="createbrushindirect"></a>  CBrush::CreateBrushIndirect  
+ Initializes a brush with a style, color, and pattern specified in a [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) structure.  
   
 ```  
 BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  *lpLogBrush*  
- Punta a un [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) struttura che contiene informazioni sul pennello.  
+ Points to a [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) structure that contains information about the brush.  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se la funzione ha esito positivo; in caso contrario, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>Note  
- Il pennello può successivamente essere selezionato come pennello corrente per qualsiasi contesto di dispositivo.  
+### <a name="remarks"></a>Remarks  
+ The brush can subsequently be selected as the current brush for any device context.  
   
- Un pennello creato utilizzando una bitmap monocromatica (piano 1, 1 bit per pixel) verrà disegnato utilizzando i colori di testo e di sfondo correnti. Pixel rappresentato da un bit è impostato su 0 verrà disegnata con il colore del testo corrente. Pixel rappresentato da un bit è impostato su 1 verrà disegnata con il colore di sfondo corrente.  
+ A brush created using a monochrome (1 plane, 1 bit per pixel) bitmap is drawn using the current text and background colors. Pixels represented by a bit set to 0 will be drawn with the current text color. Pixels represented by a bit set to 1 will be drawn with the current background color.  
   
-### <a name="example"></a>Esempio  
- [!code-cpp[NVC_MFCDocView&#22;](../../mfc/codesnippet/cpp/cbrush-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#22](../../mfc/codesnippet/cpp/cbrush-class_2.cpp)]  
   
-##  <a name="createdibpatternbrush"></a>CBrush::CreateDIBPatternBrush  
- Inizializza un oggetto brush con il modello specificato da una bitmap indipendente dalla periferica (DIB).  
+##  <a name="createdibpatternbrush"></a>  CBrush::CreateDIBPatternBrush  
+ Initializes a brush with the pattern specified by a device-independent bitmap (DIB).  
   
 ```  
 BOOL CreateDIBPatternBrush(
@@ -186,49 +193,49 @@ BOOL CreateDIBPatternBrush(
     UINT nUsage);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  *hPackedDIB*  
- Identifica un oggetto di memoria globale contenente compressa device-independent bitmap (DIB).  
+ Identifies a global-memory object containing a packed device-independent bitmap (DIB).  
   
  *nUsage*  
- Specifica se il **[] bmiColors** i campi del [BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md) struttura dei dati (una parte di "compressi DIB") contengono esplicita valori RGB o gli indici della tavolozza logica attualmente realizzato. Il parametro deve essere uno dei valori seguenti:  
+ Specifies whether the **bmiColors[]** fields of the [BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md) data structure (a part of the "packed DIB") contain explicit RGB values or indices into the currently realized logical palette. The parameter must be one of the following values:  
   
-- **DIB_PAL_COLORS** la tabella color è costituito da una matrice di indici a 16 bit.  
+- **DIB_PAL_COLORS** The color table consists of an array of 16-bit indexes.  
   
-- **DIB_RGB_COLORS** la tabella color contiene valori RGB letterali.  
+- **DIB_RGB_COLORS** The color table contains literal RGB values.  
   
  *lpPackedDIB*  
- Punta a DIB compresso costituito da un `BITMAPINFO` struttura immediatamente seguita da una matrice di byte che definisce i pixel della bitmap.  
+ Points to a packed DIB consisting of a `BITMAPINFO` structure immediately followed by an array of bytes defining the pixels of the bitmap.  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se ha esito positivo; in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Note  
- Successivamente è possibile selezionare il pennello per qualsiasi contesto di dispositivo che supporta operazioni parallele.  
+### <a name="remarks"></a>Remarks  
+ The brush can subsequently be selected for any device context that supports raster operations.  
   
- Le due versioni si differenziano per la modalità di che Gestione dell'immagine DIB:  
+ The two versions differ in the way you handle the DIB:  
   
--   Nella prima versione, per ottenere un handle per il formato DIB chiamare Windows **GlobalAlloc** funzione per allocare un blocco di memoria globale, quindi compilare la memoria con il formato DIB compresso.  
+-   In the first version, to obtain a handle to the DIB you call the Windows **GlobalAlloc** function to allocate a block of global memory and then fill the memory with the packed DIB.  
   
--   Nella seconda versione, non è necessario chiamare **GlobalAlloc** ad allocare memoria per il formato DIB compresso.  
+-   In the second version, it is not necessary to call **GlobalAlloc** to allocate memory for the packed DIB.  
   
- DIB compresso è costituito da un `BITMAPINFO` struttura dei dati seguito da una matrice di byte che definisce i pixel della bitmap. Bitmap utilizzata come serie di riempimento deve essere 8 x 8 pixel. Se la bitmap è più grande, Windows crea una serie di riempimento utilizzando solo i bit corrispondenti alle righe primi 8 e 8 colonne di pixel nell'angolo superiore sinistro della bitmap.  
+ A packed DIB consists of a `BITMAPINFO` data structure immediately followed by the array of bytes that defines the pixels of the bitmap. Bitmaps used as fill patterns should be 8 pixels by 8 pixels. If the bitmap is larger, Windows creates a fill pattern using only the bits corresponding to the first 8 rows and 8 columns of pixels in the upper-left corner of the bitmap.  
   
- Quando un'applicazione viene selezionato un riempimento con motivo DIB due colori in un contesto di dispositivo monocromatico, Windows ignora i colori specificati in DIB e verrà visualizzato invece il pennello di modello utilizzando i colori di testo e di sfondo correnti del contesto del dispositivo. Pixel mappato al primo colore (all'offset 0 nella tabella colore DIB) dell'immagine DIB vengono visualizzati utilizzando il colore del testo. Pixel mappato al secondo colore (dall'offset 1 nella tabella dei colori) vengono visualizzati utilizzando il colore di sfondo.  
+ When an application selects a two-color DIB pattern brush into a monochrome device context, Windows ignores the colors specified in the DIB and instead displays the pattern brush using the current text and background colors of the device context. Pixels mapped to the first color (at offset 0 in the DIB color table) of the DIB are displayed using the text color. Pixels mapped to the second color (at offset 1 in the color table) are displayed using the background color.  
   
- Per informazioni sull'utilizzo delle funzioni seguenti di Windows, vedere il [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]:  
+ For information about using the following Windows functions, see the Windows SDK:  
   
-- [CreateDIBPatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183492) (questa funzione viene fornita solo per compatibilità con le applicazioni scritte per versioni di Windows precedenti alla 3.0, utilizzare il **CreateDIBPatternBrushPt** (funzione).)  
+- [CreateDIBPatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183492) (This function is provided only for compatibility with applications written for versions of Windows earlier than 3.0; use the **CreateDIBPatternBrushPt** function.)  
   
-- [CreateDIBPatternBrushPt](http://msdn.microsoft.com/library/windows/desktop/dd183493) (questa funzione deve essere usata per le applicazioni basate su Win32).  
+- [CreateDIBPatternBrushPt](http://msdn.microsoft.com/library/windows/desktop/dd183493) (This function should be used for Win32-based applications.)  
   
 - [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574)  
   
-### <a name="example"></a>Esempio  
- [!code-cpp[NVC_MFCDocView&#23;](../../mfc/codesnippet/cpp/cbrush-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#23](../../mfc/codesnippet/cpp/cbrush-class_3.cpp)]  
   
-##  <a name="createhatchbrush"></a>CBrush::CreateHatchBrush  
- Inizializza un oggetto brush con il modello tratteggiata specificato e il colore.  
+##  <a name="createhatchbrush"></a>  CBrush::CreateHatchBrush  
+ Initializes a brush with the specified hatched pattern and color.  
   
 ```  
 BOOL CreateHatchBrush(
@@ -236,176 +243,176 @@ BOOL CreateHatchBrush(
     COLORREF crColor);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Specifica lo stile di tratteggio del pennello. Può essere uno dei valori seguenti:  
+ Specifies the hatch style of the brush. It can be any one of the following values:  
   
-- `HS_BDIAGONAL`Tratteggio verso il basso (da sinistra a destra) 45 gradi  
+- `HS_BDIAGONAL` Downward hatch (left to right) at 45 degrees  
   
-- `HS_CROSS`Tratteggio incrociato orizzontale e verticale  
+- `HS_CROSS` Horizontal and vertical crosshatch  
   
-- `HS_DIAGCROSS`Tratteggio trasversale a 45 gradi  
+- `HS_DIAGCROSS` Crosshatch at 45 degrees  
   
-- `HS_FDIAGONAL`Tratteggio verso l'alto (da sinistra a destra) 45 gradi  
+- `HS_FDIAGONAL` Upward hatch (left to right) at 45 degrees  
   
-- `HS_HORIZONTAL`Tratteggio orizzontale  
+- `HS_HORIZONTAL` Horizontal hatch  
   
-- `HS_VERTICAL`Tratteggio verticale  
+- `HS_VERTICAL` Vertical hatch  
   
  `crColor`  
- Specifica il colore di primo piano del pennello come un colore RGB (il colore di tratteggi). Vedere [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] per ulteriori informazioni.  
+ Specifies the foreground color of the brush as an RGB color (the color of the hatches). See [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) in the Windows SDK for more information.  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se ha esito positivo; in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Note  
- Il pennello può successivamente essere selezionato come pennello corrente per qualsiasi contesto di dispositivo.  
+### <a name="remarks"></a>Remarks  
+ The brush can subsequently be selected as the current brush for any device context.  
   
-### <a name="example"></a>Esempio  
- [!code-cpp[NVC_MFCDocView&#24;](../../mfc/codesnippet/cpp/cbrush-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#24](../../mfc/codesnippet/cpp/cbrush-class_4.cpp)]  
   
-##  <a name="createpatternbrush"></a>CBrush::CreatePatternBrush  
- Inizializza un pennello con un modello specificato da una bitmap.  
+##  <a name="createpatternbrush"></a>  CBrush::CreatePatternBrush  
+ Initializes a brush with a pattern specified by a bitmap.  
   
 ```  
 BOOL CreatePatternBrush(CBitmap* pBitmap);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pBitmap`  
- Identifica una bitmap.  
+ Identifies a bitmap.  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se ha esito positivo; in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Note  
- Successivamente è possibile selezionare il pennello per qualsiasi contesto di dispositivo che supporta operazioni parallele. La bitmap identificata da `pBitmap` in genere viene inizializzato utilizzando il [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), o [CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap) (funzione).  
+### <a name="remarks"></a>Remarks  
+ The brush can subsequently be selected for any device context that supports raster operations. The bitmap identified by `pBitmap` is typically initialized by using the [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap::LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), or [CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap) function.  
   
- Bitmap utilizzata come serie di riempimento deve essere 8 x 8 pixel. Se la bitmap è più grande, Windows utilizzerà solo i bit corrispondenti alle prime 8 righe e colonne di pixel nell'angolo superiore sinistro della bitmap.  
+ Bitmaps used as fill patterns should be 8 pixels by 8 pixels. If the bitmap is larger, Windows will only use the bits corresponding to the first 8 rows and columns of pixels in the upper-left corner of the bitmap.  
   
- Un pennello pattern può essere eliminato senza influire sulla bitmap associati. Ciò significa che la bitmap può essere utilizzata per creare un numero qualsiasi di pennelli pattern.  
+ A pattern brush can be deleted without affecting the associated bitmap. This means the bitmap can be used to create any number of pattern brushes.  
   
- Un pennello creato utilizzando una bitmap monocromatica (piano 1 colore, 1 bit per pixel) verrà disegnato utilizzando i colori di testo e di sfondo correnti. Pixel rappresentato da un bit è impostato su 0 vengono disegnati con il colore del testo corrente. Pixel rappresentato da un bit è impostato su 1 vengono disegnati con il colore di sfondo corrente.  
+ A brush created using a monochrome bitmap (1 color plane, 1 bit per pixel) is drawn using the current text and background colors. Pixels represented by a bit set to 0 are drawn with the current text color. Pixels represented by a bit set to 1 are drawn with the current background color.  
   
- Per informazioni sull'utilizzo di [CreatePatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183508), una funzione di Windows, vedere il [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For information about using [CreatePatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183508), a Windows function, see the Windows SDK.  
   
-### <a name="example"></a>Esempio  
- [!code-cpp[NVC_MFCDocView&#25;](../../mfc/codesnippet/cpp/cbrush-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#25](../../mfc/codesnippet/cpp/cbrush-class_5.cpp)]  
   
-##  <a name="createsolidbrush"></a>CBrush::CreateSolidBrush  
- Inizializza un pennello con un colore a tinta unita specificato.  
+##  <a name="createsolidbrush"></a>  CBrush::CreateSolidBrush  
+ Initializes a brush with a specified solid color.  
   
 ```  
 BOOL CreateSolidBrush(COLORREF crColor);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `crColor`  
- Oggetto [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) struttura che specifica il colore del pennello. Il colore specifica un valore RGB e può essere costruito con il `RGB` (macro) in WINDOWS. H.  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) structure that specifies the color of the brush. The color specifies an RGB value and can be constructed with the `RGB` macro in WINDOWS.H.  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se ha esito positivo; in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Note  
- Il pennello può successivamente essere selezionato come pennello corrente per qualsiasi contesto di dispositivo.  
+### <a name="remarks"></a>Remarks  
+ The brush can subsequently be selected as the current brush for any device context.  
   
- Quando un'applicazione ha terminato di utilizzare il pennello creato da `CreateSolidBrush`, è necessario selezionare il pennello fuori il contesto di dispositivo.  
+ When an application has finished using the brush created by `CreateSolidBrush`, it should select the brush out of the device context.  
   
-### <a name="example"></a>Esempio  
-  Vedere l'esempio per [CBrush::CBrush](#cbrush).  
+### <a name="example"></a>Example  
+  See the example for [CBrush::CBrush](#cbrush).  
   
-##  <a name="createsyscolorbrush"></a>CBrush::CreateSysColorBrush  
- Inizializza il colore del pennello.  
+##  <a name="createsyscolorbrush"></a>  CBrush::CreateSysColorBrush  
+ Initializes a brush color.  
   
 ```  
 BOOL CreateSysColorBrush(int nIndex);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Specifica un indice di colore. Questo valore corrisponde al colore utilizzato per disegnare uno degli elementi 21 finestra. Vedere [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] per un elenco di valori.  
+ Specifies a color index. This value corresponds to the color used to paint one of the 21 window elements. See [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) in the Windows SDK for a list of values.  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se ha esito positivo; in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Note  
- Il pennello può successivamente essere selezionato come pennello corrente per qualsiasi contesto di dispositivo.  
+### <a name="remarks"></a>Remarks  
+ The brush can subsequently be selected as the current brush for any device context.  
   
- Quando un'applicazione ha terminato di utilizzare il pennello creato da `CreateSysColorBrush`, è necessario selezionare il pennello fuori il contesto di dispositivo.  
+ When an application has finished using the brush created by `CreateSysColorBrush`, it should select the brush out of the device context.  
   
-### <a name="example"></a>Esempio  
- [!code-cpp[&#26; NVC_MFCDocView](../../mfc/codesnippet/cpp/cbrush-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#26](../../mfc/codesnippet/cpp/cbrush-class_6.cpp)]  
   
-##  <a name="fromhandle"></a>CBrush::FromHandle  
- Restituisce un puntatore a un `CBrush` oggetto quando viene specificato un handle a un Windows [HBRUSH](#operator_hbrush) oggetto.  
+##  <a name="fromhandle"></a>  CBrush::FromHandle  
+ Returns a pointer to a `CBrush` object when given a handle to a Windows [HBRUSH](#operator_hbrush) object.  
   
 ```  
 static CBrush* PASCAL FromHandle(HBRUSH hBrush);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `hBrush`  
- `HANDLE`per un pennello GDI di Windows.  
+ `HANDLE` to a Windows GDI brush.  
   
-### <a name="return-value"></a>Valore restituito  
- Un puntatore a un `CBrush` oggetto in caso di esito positivo; in caso contrario **NULL**.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a `CBrush` object if successful; otherwise **NULL**.  
   
-### <a name="remarks"></a>Note  
- Se un `CBrush` oggetto non è già connesso all'handle temporaneo `CBrush` oggetto viene creato e collegato. Questo temporaneo `CBrush` oggetto è valido solo fino alla successiva esecuzione dell'applicazione è il tempo di inattività nel relativo ciclo di eventi. A questo punto, tutti gli oggetti grafici temporanei vengono eliminati. In altre parole, l'oggetto temporaneo è valido solo durante l'elaborazione di una finestra di messaggio.  
+### <a name="remarks"></a>Remarks  
+ If a `CBrush` object is not already attached to the handle, a temporary `CBrush` object is created and attached. This temporary `CBrush` object is valid only until the next time the application has idle time in its event loop. At this time, all temporary graphic objects are deleted. In other words, the temporary object is valid only during the processing of one window message.  
   
- Per ulteriori informazioni sull'utilizzo di oggetti grafici, vedere [oggetti grafico](http://msdn.microsoft.com/library/windows/desktop/dd144962) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information about using graphic objects, see [Graphic Objects](http://msdn.microsoft.com/library/windows/desktop/dd144962) in the Windows SDK.  
   
-### <a name="example"></a>Esempio  
-  Vedere l'esempio per [CBrush::CBrush](#cbrush).  
+### <a name="example"></a>Example  
+  See the example for [CBrush::CBrush](#cbrush).  
   
-##  <a name="getlogbrush"></a>CBrush::GetLogBrush  
- Chiamare questa funzione membro per recuperare il `LOGBRUSH` struttura.  
+##  <a name="getlogbrush"></a>  CBrush::GetLogBrush  
+ Call this member function to retrieve the `LOGBRUSH` structure.  
   
 ```  
 int GetLogBrush(LOGBRUSH* pLogBrush);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pLogBrush`  
- Punta a un [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) struttura che contiene informazioni sul pennello.  
+ Points to a [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) structure that contains information about the brush.  
   
-### <a name="return-value"></a>Valore restituito  
- Se la funzione ha esito positivo, e `pLogBrush` è un puntatore valido, il valore restituito è il numero di byte memorizzati nel buffer.  
+### <a name="return-value"></a>Return Value  
+ If the function succeeds, and `pLogBrush` is a valid pointer, the return value is the number of bytes stored into the buffer.  
   
- Se la funzione ha esito positivo, e `pLogBrush` è **NULL**, il valore restituito è il numero di byte necessari per contenere le informazioni la funzione verrà archiviati nel buffer.  
+ If the function succeeds, and `pLogBrush` is **NULL**, the return value is the number of bytes required to hold the information the function would store into the buffer.  
   
- In caso contrario, il valore restituito è 0.  
+ If the function fails, the return value is 0.  
   
-### <a name="remarks"></a>Note  
- Il `LOGBRUSH` struttura definisce lo stile, colore e motivo di un pennello.  
+### <a name="remarks"></a>Remarks  
+ The `LOGBRUSH` structure defines the style, color, and pattern of a brush.  
   
- Ad esempio, chiamare `GetLogBrush` in modo che corrisponda il colore specifico o il modello di una bitmap.  
+ For example, call `GetLogBrush` to match the particular color or pattern of a bitmap.  
   
-### <a name="example"></a>Esempio  
- [!code-cpp[NVC_MFCDocView&#27;](../../mfc/codesnippet/cpp/cbrush-class_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#27](../../mfc/codesnippet/cpp/cbrush-class_7.cpp)]  
   
-##  <a name="operator_hbrush"></a>HBRUSH CBrush::operator  
- Utilizzare questo operatore per ottenere l'handle GDI Windows collegato di `CBrush` oggetto.  
+##  <a name="operator_hbrush"></a>  CBrush::operator HBRUSH  
+ Use this operator to get the attached Windows GDI handle of the `CBrush` object.  
   
 ```  
 operator HBRUSH() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Se ha esito positivo, un handle per l'oggetto GDI Windows rappresentato dal `CBrush` oggetto; in caso contrario **NULL**.  
+### <a name="return-value"></a>Return Value  
+ If successful, a handle to the Windows GDI object represented by the `CBrush` object; otherwise **NULL**.  
   
-### <a name="remarks"></a>Note  
- Questo è un operatore di cast, che supporta l'utilizzo diretto di un `HBRUSH` oggetto.  
+### <a name="remarks"></a>Remarks  
+ This operator is a casting operator, which supports direct use of an `HBRUSH` object.  
   
- Per ulteriori informazioni sull'utilizzo di oggetti grafici, vedere [oggetti grafico](http://msdn.microsoft.com/library/windows/desktop/dd144962) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information about using graphic objects, see [Graphic Objects](http://msdn.microsoft.com/library/windows/desktop/dd144962) in the Windows SDK.  
   
-### <a name="example"></a>Esempio  
- [!code-cpp[28 NVC_MFCDocView](../../mfc/codesnippet/cpp/cbrush-class_8.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#28](../../mfc/codesnippet/cpp/cbrush-class_8.cpp)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Esempio MFC PROPDLG](../../visual-cpp-samples.md)   
- [Classe CGdiObject](../../mfc/reference/cgdiobject-class.md)   
- [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
- [CBitmap (classe)](../../mfc/reference/cbitmap-class.md)   
- [CDC (classe)](../../mfc/reference/cdc-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample PROPDLG](../../visual-cpp-samples.md)   
+ [CGdiObject Class](../../mfc/reference/cgdiobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CBitmap Class](../../mfc/reference/cbitmap-class.md)   
+ [CDC Class](../../mfc/reference/cdc-class.md)
 

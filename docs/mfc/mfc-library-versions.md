@@ -1,42 +1,61 @@
 ---
-title: "Versioni di librerie MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "librerie di classi, compilazione di versioni"
-  - "librerie, versioni"
-  - "MFC (libreria di classi)"
-  - "MFC (libreria di classi), compilazione"
-  - "MFC (librerie)"
-  - "MFC, versioni di librerie"
-  - "informazioni sulla versione, libreria MFC"
+title: MFC Library Versions | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- class libraries [MFC], building versions
+- version information [MFC], MFC library
+- MFC class library
+- MFC class library, building
+- MFC libraries
+- MFC, library versions
+- libraries [MFC], versions
 ms.assetid: 3d7a8ae1-e276-4cf8-ba63-360c2f85ad0e
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Versioni di librerie MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f7c8c53025d787a987767f9d0a24b1e18e8dcf09
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-In questo articolo vengono fornite informazioni sulle versioni disponibili della libreria MFC \(Microsoft Foundation Class \(MFC\).  Vengono trattati i seguenti argomenti:  
+---
+# <a name="mfc-library-versions"></a>MFC Library Versions
+This article provides information on available versions of the Microsoft Foundation Class (MFC) Library. Topics covered include:  
   
--   [Collegare automatico della versione della libreria MFC](../mfc/automatic-linking-of-mfc-library-version.md)  
+-   [Automatic linking of MFC library version](../mfc/automatic-linking-of-mfc-library-version.md)  
   
--   [Convenzioni di denominazione delle librerie](../mfc/library-naming-conventions.md)  
+-   [Library naming conventions](../mfc/library-naming-conventions.md)  
   
--   [Versioni di AFXDLL](../mfc/afxdll-versions.md)  
+-   [AFXDLL versions](../mfc/afxdll-versions.md)  
   
--   [Supporto di \(DLL\) della libreria a collegamento dinamico](../mfc/dynamic-link-library-support.md)  
+-   [Dynamic-link library (DLL) support](../mfc/dynamic-link-library-support.md)  
   
-## Vedere anche  
- [Argomenti MFC generali](../mfc/general-mfc-topics.md)
+## <a name="see-also"></a>See Also  
+ [General MFC Topics](../mfc/general-mfc-topics.md)
+
+

@@ -1,40 +1,59 @@
 ---
-title: "Funzioni membro pulsante di selezione | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CSpinButtonCtrl (classe), metodi"
-  - "controllo pulsante di selezione, metodi"
+title: Spin Button Member Functions | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- spin button control, methods
+- CSpinButtonCtrl class [MFC], methods
 ms.assetid: a08a26fd-b803-4cbe-a509-395fa357d057
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Funzioni membro pulsante di selezione
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5582767fb0a68f41664499bdb31b5ae06c3379cf
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Esistono numerose funzioni membro disponibili per il controllo casella di selezione \([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)\).  Utilizzare queste funzioni per modificare gli attributi del pulsante di selezione.  
+---
+# <a name="spin-button-member-functions"></a>Spin Button Member Functions
+There are several member functions available for the spin control ([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)). Use these functions to change the following attributes of the spin button.  
   
--   **Accelerazione** È possibile modificare la frequenza con cui la posizione modifica quando l'utente tiene premuto il pulsante freccia.  Per funzionare con accelerazione, utilizzare le funzioni membro di [GetAccel](../Topic/CSpinButtonCtrl::GetAccel.md) e di [SetAccel](../Topic/CSpinButtonCtrl::SetAccel.md).  
+-   **Acceleration** You can adjust the rate at which the position changes when the user holds down the arrow button. To work with acceleration, use the [SetAccel](../mfc/reference/cspinbuttonctrl-class.md#setaccel) and [GetAccel](../mfc/reference/cspinbuttonctrl-class.md#getaccel) member functions.  
   
--   **Base** È possibile modificare la base \(10 o 16\) utilizzato per visualizzare la posizione nella barra del titolo della finestra degli utenti.  Per utilizzare la base, utilizzare le funzioni membro di [SetBase](../Topic/CSpinButtonCtrl::SetBase.md) e di [GetBase](../Topic/CSpinButtonCtrl::GetBase.md).  
+-   **Base** You can change the base (either 10 or 16) used to display the position in the caption of the buddy window. To work with the base, use the [GetBase](../mfc/reference/cspinbuttonctrl-class.md#getbase) and [SetBase](../mfc/reference/cspinbuttonctrl-class.md#setbase) member functions.  
   
--   **Finestra Buddy** È possibile impostare in modo dinamico la finestra degli utenti.  Per eseguire una query o modificate che il controllo sia la finestra degli utenti, utilizzare le funzioni membro di [SetBuddy](../Topic/CSpinButtonCtrl::SetBuddy.md) e di [GetBuddy](../Topic/CSpinButtonCtrl::GetBuddy.md).  
+-   **Buddy Window** You can dynamically set the buddy window. To query or change which control is the buddy window, use the [GetBuddy](../mfc/reference/cspinbuttonctrl-class.md#getbuddy) and [SetBuddy](../mfc/reference/cspinbuttonctrl-class.md#setbuddy) member functions.  
   
--   **Posizione** È possibile eseguire una query e modificare il percorso.  Per utilizzare direttamente la posizione, utilizzare le funzioni membro di [SetPos](../Topic/CSpinButtonCtrl::SetPos.md) e di [GetPos](../Topic/CSpinButtonCtrl::GetPos.md).  Poiché la barra del titolo del controllo degli utenti possono modificare \(ad esempio, nel caso in cui il buddy sia un controllo di modifica\), `GetPos` recupera la didascalia corrente e ne modifica il percorso di conseguenza.  
+-   **Position** You can query and change the position. To work directly with position, use the [GetPos](../mfc/reference/cspinbuttonctrl-class.md#getpos) and [SetPos](../mfc/reference/cspinbuttonctrl-class.md#setpos) member functions. Since the caption of the buddy control may have changed (for example, in the case that the buddy is an edit control), `GetPos` retrieves the current caption and adjusts the position accordingly.  
   
--   **Intervallo** È possibile modificare le posizioni minime e massime per il pulsante di selezione.  Per impostazione predefinita, il valore massimo è impostato su 0 e il minimo è impostato su 100.  Poiché il massimo predefinito è inferiore al minimo predefinito, le azioni dei pulsanti freccia è contatore\- intuitive.  In genere, impostato l'intervallo mediante la funzione membro di [SetRange](../Topic/CSpinButtonCtrl::SetRange.md).  Per eseguire una query sull'utilizzo [GetRange](../Topic/CSpinButtonCtrl::GetRange.md)dell'intervallo.  
+-   **Range** You can change the maximum and minimum positions for the spin button. By default, the maximum is set to 0, and the minimum is set to 100. Since the default maximum is less than the default minimum, the actions of the arrow buttons is counter-intuitive. Typically, you will set the range using the [SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) member function. To query the range use [GetRange](../mfc/reference/cspinbuttonctrl-class.md#getrange).  
   
-## Vedere anche  
- [Utilizzo di CSpinButtonCtrl](../mfc/using-cspinbuttonctrl.md)   
- [Controlli](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CSpinButtonCtrl](../mfc/using-cspinbuttonctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

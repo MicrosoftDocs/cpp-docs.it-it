@@ -1,61 +1,80 @@
 ---
-title: "Classi di contenitori OLE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.ole"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classi ActiveX [C++]"
-  - "classi di contenitori [C++]"
-  - "contenitori [C++], applicazioni contenitore OLE"
-  - "OLE [C++], classi"
-  - "classi OLE [C++]"
-  - "modifica visiva [C++], classi"
+title: OLE Container Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.ole
+dev_langs:
+- C++
+helpviewer_keywords:
+- ActiveX classes [MFC]
+- container classes [MFC]
+- OLE classes [MFC]
+- visual editing [MFC], classes
+- OLE [MFC], classes
+- containers [MFC], OLE container applications
 ms.assetid: 1e27e1ab-4c22-41eb-8547-6915c72668ae
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Classi di contenitori OLE
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: eb954b9d9671bc9f09bae737469c90151c7011f3
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Queste classi sono utilizzate dalle applicazioni contenitore.  Sia `COleLinkingDoc` che `COleDocument` gestiscono raccolte di oggetti `COleClientItem`.  Anziché derivare la classe documento da **CDocument**, lo si deriva da `COleLinkingDoc` o da `COleDocument`, a seconda se si desidera il supporto per i collegamenti agli oggetti incorporati nel documento.  
+---
+# <a name="ole-container-classes"></a>OLE Container Classes
+These classes are used by container applications. Both `COleLinkingDoc` and `COleDocument` manage collections of `COleClientItem` objects. Rather than deriving your document class from **CDocument**, you'll derive it from `COleLinkingDoc` or `COleDocument`, depending on whether you want support for links to objects embedded in your document.  
   
- Utilizzare un oggetto `COleClientItem` per rappresentare ciascun elemento OLE nel documento che è incorporato da un altro documento o è un collegamento a un altro documento.  
+ Use a `COleClientItem` object to represent each OLE item in your document that is embedded from another document or is a link to another document.  
   
  [COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md)  
- Supporta Active Document Containment.  
+ Supports active document containment.  
   
  [COleDocument](../mfc/reference/coledocument-class.md)  
- Utilizzato per l'implementazione del documento composito, nonché il supporto di base del contenitore.  Funge da contenitore per le classi derivate da `CDocItem`.  Questa classe può essere utilizzata come classe base per i documenti contenitore ed è la classe base per `COleServerDoc`.  
+ Used for compound document implementation, as well as basic container support. Serves as a container for classes derived from `CDocItem`. This class can be used as the base class for container documents and is the base class for `COleServerDoc`.  
   
  [COleLinkingDoc](../mfc/reference/colelinkingdoc-class.md)  
- Classe derivata da `COleDocument` che fornisce l'infrastruttura per il collegamento.  È necessario derivare classi di documento per le applicazioni contenitore da questa classe anziché da `COleDocument` se si desidera supportare i collegamenti agli oggetti incorporati.  
+ A class derived from `COleDocument` that provides the infrastructure for linking. You should derive the document classes for your container applications from this class instead of from `COleDocument` if you want them to support links to embedded objects.  
   
  [CRichEditDoc](../mfc/reference/cricheditdoc-class.md)  
- Mantiene l'elenco di elementi client OLE presenti nel controllo Rich Edit.  Utilizzato con [CRichEditView](../mfc/reference/cricheditview-class.md) e [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md).  
+ Maintains the list of OLE client items that are in the rich edit control. Used with [CRichEditView](../mfc/reference/cricheditview-class.md) and [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md).  
   
  [CDocItem](../mfc/reference/cdocitem-class.md)  
- Classe di base astratta di `COleClientItem` e `COleServerItem`.  Gli oggetti di classi derivate da `CDocItem` rappresentano parti dei documenti.  
+ Abstract base class of `COleClientItem` and `COleServerItem`. Objects of classes derived from `CDocItem` represent parts of documents.  
   
  [COleClientItem](../mfc/reference/coleclientitem-class.md)  
- Una classe client dell'elemento che rappresenta il lato client della connessione ad un elemento OLE incorporato o collegato.  Derivare gli elementi client da questa classe.  
+ A client item class that represents the client's side of the connection to an embedded or linked OLE item. Derive your client items from this class.  
   
  [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)  
- Fornisce l'accesso al lato client ad un elemento OLE archiviato in un controllo Rich Edit in caso di utilizzo con `CRichEditView` e `CRichEditDoc`.  
+ Provides client-side access to an OLE item stored in a rich edit control when used with `CRichEditView` and `CRichEditDoc`.  
   
  [COleException](../mfc/reference/coleexception-class.md)  
- Un'eccezione generata da un errore all'interno di un processo OLE.  Questa classe viene utilizzata dai contenitori e dal server.  
+ An exception resulting from a failure in OLE processing. This class is used by both containers and servers.  
   
-## Vedere anche  
- [Cenni preliminari sulle classi](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

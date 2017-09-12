@@ -1,5 +1,5 @@
 ---
-title: Classe CD2DBitmapBrush | Documenti di Microsoft
+title: CD2DBitmapBrush Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,7 +32,24 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CD2DBitmapBrush class
+- CD2DBitmapBrush [MFC], CD2DBitmapBrush
+- CD2DBitmapBrush [MFC], Attach
+- CD2DBitmapBrush [MFC], Create
+- CD2DBitmapBrush [MFC], Destroy
+- CD2DBitmapBrush [MFC], Detach
+- CD2DBitmapBrush [MFC], Get
+- CD2DBitmapBrush [MFC], GetBitmap
+- CD2DBitmapBrush [MFC], GetExtendModeX
+- CD2DBitmapBrush [MFC], GetExtendModeY
+- CD2DBitmapBrush [MFC], GetInterpolationMode
+- CD2DBitmapBrush [MFC], SetBitmap
+- CD2DBitmapBrush [MFC], SetExtendModeX
+- CD2DBitmapBrush [MFC], SetExtendModeY
+- CD2DBitmapBrush [MFC], SetInterpolationMode
+- CD2DBitmapBrush [MFC], CommonInit
+- CD2DBitmapBrush [MFC], m_pBitmap
+- CD2DBitmapBrush [MFC], m_pBitmapBrush
+- CD2DBitmapBrush [MFC], m_pBitmapBrushProperties
 ms.assetid: 46ebbe34-66e0-44c8-af1d-d129e851de5e
 caps.latest.revision: 17
 author: mikeblome
@@ -52,70 +69,70 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: a9ab15dcae8715b98cc9f723a710b64e83649bf9
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 430dcb54636a07ecc9b9bb6315ea1beefac443ad
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cd2dbitmapbrush-class"></a>Classe CD2DBitmapBrush
-Un wrapper per ID2D1BitmapBrush.  
+# <a name="cd2dbitmapbrush-class"></a>CD2DBitmapBrush Class
+A wrapper for ID2D1BitmapBrush.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CD2DBitmapBrush : public CD2DBrush;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Costruttori pubblici  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DBitmapBrush::CD2DBitmapBrush](#cd2dbitmapbrush)|Di overload. Costruisce un oggetto CD2DBitmapBrush dal file.|  
-|[CD2DBitmapBrush:: ~ CD2DBitmapBrush](#dtor)|Distruttore. Chiamato quando viene eliminato un oggetto brush di bitmap D2D.|  
+|[CD2DBitmapBrush::CD2DBitmapBrush](#cd2dbitmapbrush)|Overloaded. Constructs a CD2DBitmapBrush object from file.|  
+|[CD2DBitmapBrush::~CD2DBitmapBrush](#dtor)|The destructor. Called when a D2D bitmap brush object is being destroyed.|  
   
-### <a name="public-methods"></a>Metodi pubblici  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DBitmapBrush::Attach](#attach)|È possibile collegare interfaccia risorse per l'oggetto esistente|  
-|[CD2DBitmapBrush::Create](#create)|Crea un CD2DBitmapBrush. (Esegue l'override di [CD2DResource:: Create](../../mfc/reference/cd2dresource-class.md#create).)|  
-|[CD2DBitmapBrush::Destroy](#destroy)|Elimina un oggetto CD2DBitmapBrush. (Esegue l'override di [CD2DBrush:: Destroy](../../mfc/reference/cd2dbrush-class.md#destroy).)|  
-|[CD2DBitmapBrush::Detach](#detach)|Disconnette l'interfaccia risorse dall'oggetto|  
-|[CD2DBitmapBrush::Get](#get)|Restituisce l'interfaccia ID2D1BitmapBrush|  
-|[CD2DBitmapBrush::getBitmap](#getbitmap)|Ottiene l'origine della bitmap che questo pennello utilizzato per disegnare|  
-|[CD2DBitmapBrush::GetExtendModeX](#getextendmodex)|Ottiene il metodo mediante il quale il pennello Affianca orizzontalmente quelle aree che si estendono oltre la bitmap|  
-|[CD2DBitmapBrush::GetExtendModeY](#getextendmodey)|Ottiene il metodo mediante il quale il pennello affianca verticalmente quelle aree che si estendono oltre la bitmap|  
-|[CD2DBitmapBrush::GetInterpolationMode](#getinterpolationmode)|Ottiene il metodo di interpolazione utilizzato quando la bitmap pennello viene ridimensionata o ruotata|  
-|[CD2DBitmapBrush::SetBitmap](#setbitmap)|Specifica l'origine della bitmap che questo pennello utilizzato per disegnare|  
-|[CD2DBitmapBrush::SetExtendModeX](#setextendmodex)|Specifica come il pennello Affianca orizzontalmente quelle aree che si estendono oltre la bitmap|  
-|[CD2DBitmapBrush::SetExtendModeY](#setextendmodey)|Specifica come il pennello affianca verticalmente quelle aree che si estendono oltre la bitmap|  
-|[CD2DBitmapBrush::SetInterpolationMode](#setinterpolationmode)|Specifica la modalità di interpolazione utilizzata quando la bitmap pennello viene ridimensionata o ruotata|  
+|[CD2DBitmapBrush::Attach](#attach)|Attaches existing resource interface to the object|  
+|[CD2DBitmapBrush::Create](#create)|Creates a CD2DBitmapBrush. (Overrides [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|  
+|[CD2DBitmapBrush::Destroy](#destroy)|Destroys a CD2DBitmapBrush object. (Overrides [CD2DBrush::Destroy](../../mfc/reference/cd2dbrush-class.md#destroy).)|  
+|[CD2DBitmapBrush::Detach](#detach)|Detaches resource interface from the object|  
+|[CD2DBitmapBrush::Get](#get)|Returns ID2D1BitmapBrush interface|  
+|[CD2DBitmapBrush::GetBitmap](#getbitmap)|Gets the bitmap source that this brush uses to paint|  
+|[CD2DBitmapBrush::GetExtendModeX](#getextendmodex)|Gets the method by which the brush horizontally tiles those areas that extend past its bitmap|  
+|[CD2DBitmapBrush::GetExtendModeY](#getextendmodey)|Gets the method by which the brush vertically tiles those areas that extend past its bitmap|  
+|[CD2DBitmapBrush::GetInterpolationMode](#getinterpolationmode)|Gets the interpolation method used when the brush bitmap is scaled or rotated|  
+|[CD2DBitmapBrush::SetBitmap](#setbitmap)|Specifies the bitmap source that this brush uses to paint|  
+|[CD2DBitmapBrush::SetExtendModeX](#setextendmodex)|Specifies how the brush horizontally tiles those areas that extend past its bitmap|  
+|[CD2DBitmapBrush::SetExtendModeY](#setextendmodey)|Specifies how the brush vertically tiles those areas that extend past its bitmap|  
+|[CD2DBitmapBrush::SetInterpolationMode](#setinterpolationmode)|Specifies the interpolation mode used when the brush bitmap is scaled or rotated|  
   
-### <a name="protected-methods"></a>Metodi protetti  
+### <a name="protected-methods"></a>Protected Methods  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DBitmapBrush::CommonInit](#commoninit)|Inizializza l'oggetto|  
+|[CD2DBitmapBrush::CommonInit](#commoninit)|Initializes the object|  
   
-### <a name="public-operators"></a>Operatori pubblici  
+### <a name="public-operators"></a>Public Operators  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DBitmapBrush::operator ID2D1BitmapBrush *](#operator_id2d1bitmapbrush_star)|Restituisce l'interfaccia ID2D1BitmapBrush|  
+|[CD2DBitmapBrush::operator ID2D1BitmapBrush*](#operator_id2d1bitmapbrush_star)|Returns ID2D1BitmapBrush interface|  
   
-### <a name="protected-data-members"></a>Membri dati protetti  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DBitmapBrush::m_pBitmap](#m_pbitmap)|Archivia un puntatore a un oggetto CD2DBitmap.|  
-|[CD2DBitmapBrush::m_pBitmapBrush](#m_pbitmapbrush)|Archivia un puntatore a un oggetto ID2D1BitmapBrush.|  
-|[CD2DBitmapBrush::m_pBitmapBrushProperties](#m_pbitmapbrushproperties)|Proprietà del pennello bitmap.|  
+|[CD2DBitmapBrush::m_pBitmap](#m_pbitmap)|Stores a pointer to a CD2DBitmap object.|  
+|[CD2DBitmapBrush::m_pBitmapBrush](#m_pbitmapbrush)|Stores a pointer to an ID2D1BitmapBrush object.|  
+|[CD2DBitmapBrush::m_pBitmapBrushProperties](#m_pbitmapbrushproperties)|Bitmap brush properties.|  
   
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CD2DResource](../../mfc/reference/cd2dresource-class.md)  
@@ -124,29 +141,29 @@ class CD2DBitmapBrush : public CD2DBrush;
   
  `CD2DBitmapBrush`  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** afxrendertarget. h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxrendertarget.h  
   
-##  <a name="dtor"></a>CD2DBitmapBrush:: ~ CD2DBitmapBrush  
- Distruttore. Chiamato quando viene eliminato un oggetto brush di bitmap D2D.  
+##  <a name="dtor"></a>  CD2DBitmapBrush::~CD2DBitmapBrush  
+ The destructor. Called when a D2D bitmap brush object is being destroyed.  
   
 ```  
 virtual ~CD2DBitmapBrush();
 ```  
   
-##  <a name="attach"></a>CD2DBitmapBrush::Attach  
- È possibile collegare interfaccia risorse per l'oggetto esistente  
+##  <a name="attach"></a>  CD2DBitmapBrush::Attach  
+ Attaches existing resource interface to the object  
   
 ```  
 void Attach(ID2D1BitmapBrush* pResource);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pResource`  
- Interfaccia di risorse esistente. Non può essere NULL  
+ Existing resource interface. Cannot be NULL  
   
-##  <a name="cd2dbitmapbrush"></a>CD2DBitmapBrush::CD2DBitmapBrush  
- Costruisce un oggetto CD2DBitmapBrush.  
+##  <a name="cd2dbitmapbrush"></a>  CD2DBitmapBrush::CD2DBitmapBrush  
+ Constructs a CD2DBitmapBrush object.  
   
 ```  
 CD2DBitmapBrush(
@@ -175,198 +192,198 @@ CD2DBitmapBrush(
     BOOL bAutoDestroy = TRUE);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pParentTarget`  
- Puntatore alla destinazione di rendering.  
+ A pointer to the render target.  
   
  `pBitmapBrushProperties`  
- Un puntatore per la modalità di estensione e la modalità di interpolazione di un pennello bitmap.  
+ A pointer to the extend modes and the interpolation mode of a bitmap brush.  
   
  `pBrushProperties`  
- Puntatore all'opacità e alla trasformazione di un pennello.  
+ A pointer to the opacity and transformation of a brush.  
   
  `bAutoDestroy`  
- Indica che l'oggetto verrà eliminata dal proprietario (pParentTarget).  
+ Indicates that the object will be destroyed by owner (pParentTarget).  
   
  `uiResID`  
- Il numero di ID risorsa della risorsa.  
+ The resource ID number of the resource.  
   
  `lpszType`  
- Puntatore a una stringa con terminazione null che contiene il tipo di risorsa.  
+ Pointer to a null-terminated string that contains the resource type.  
   
  `sizeDest`  
- Dimensione di destinazione della bitmap.  
+ Destination size of the bitmap.  
   
  `lpszImagePath`  
- Puntatore a una stringa con terminazione null che contiene il nome del file.  
+ Pointer to a null-terminated string that contains the name of file.  
   
-##  <a name="commoninit"></a>CD2DBitmapBrush::CommonInit  
- Inizializza l'oggetto  
+##  <a name="commoninit"></a>  CD2DBitmapBrush::CommonInit  
+ Initializes the object  
   
 ```  
 void CommonInit(D2D1_BITMAP_BRUSH_PROPERTIES* pBitmapBrushProperties);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pBitmapBrushProperties`  
- Puntatore alla proprietà del pennello bitmap.  
+ A pointer to the bitmap brush properties.  
   
-##  <a name="create"></a>CD2DBitmapBrush::Create  
- Crea un CD2DBitmapBrush.  
+##  <a name="create"></a>  CD2DBitmapBrush::Create  
+ Creates a CD2DBitmapBrush.  
   
 ```  
 virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pRenderTarget`  
- Puntatore alla destinazione di rendering.  
+ A pointer to the render target.  
   
-### <a name="return-value"></a>Valore restituito  
- Se il metodo ha esito positivo, viene restituito S_OK. In caso contrario, restituisce un codice di errore HRESULT.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns S_OK. Otherwise, it returns an HRESULT error code.  
   
-##  <a name="destroy"></a>CD2DBitmapBrush::Destroy  
- Elimina un oggetto CD2DBitmapBrush.  
+##  <a name="destroy"></a>  CD2DBitmapBrush::Destroy  
+ Destroys a CD2DBitmapBrush object.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="detach"></a>CD2DBitmapBrush::Detach  
- Disconnette l'interfaccia risorse dall'oggetto  
+##  <a name="detach"></a>  CD2DBitmapBrush::Detach  
+ Detaches resource interface from the object  
   
 ```  
 ID2D1BitmapBrush* Detach();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Puntatore a interfaccia risorse scollegato.  
+### <a name="return-value"></a>Return Value  
+ Pointer to detached resource interface.  
   
-##  <a name="get"></a>CD2DBitmapBrush::Get  
- Restituisce l'interfaccia ID2D1BitmapBrush  
+##  <a name="get"></a>  CD2DBitmapBrush::Get  
+ Returns ID2D1BitmapBrush interface  
   
 ```  
 ID2D1BitmapBrush* Get();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Puntatore a un'interfaccia ID2D1BitmapBrush o NULL se l'oggetto non è ancora inizializzato.  
+### <a name="return-value"></a>Return Value  
+ Pointer to an ID2D1BitmapBrush interface or NULL if object is not initialized yet.  
   
-##  <a name="getbitmap"></a>CD2DBitmapBrush::getBitmap  
- Ottiene l'origine della bitmap che questo pennello utilizzato per disegnare  
+##  <a name="getbitmap"></a>  CD2DBitmapBrush::GetBitmap  
+ Gets the bitmap source that this brush uses to paint  
   
 ```  
 CD2DBitmap* GetBitmap();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Puntatore a un oggetto CD2DBitmap o NULL se l'oggetto non è ancora inizializzato.  
+### <a name="return-value"></a>Return Value  
+ Pointer to an CD2DBitmap object or NULL if object is not initialized yet.  
   
-##  <a name="getextendmodex"></a>CD2DBitmapBrush::GetExtendModeX  
- Ottiene il metodo mediante il quale il pennello Affianca orizzontalmente quelle aree che si estendono oltre la bitmap  
+##  <a name="getextendmodex"></a>  CD2DBitmapBrush::GetExtendModeX  
+ Gets the method by which the brush horizontally tiles those areas that extend past its bitmap  
   
 ```  
 D2D1_EXTEND_MODE GetExtendModeX() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Un valore che specifica come il pennello Affianca orizzontalmente quelle aree che si estendono oltre la bitmap  
+### <a name="return-value"></a>Return Value  
+ A value that specifies how the brush horizontally tiles those areas that extend past its bitmap  
   
-##  <a name="getextendmodey"></a>CD2DBitmapBrush::GetExtendModeY  
- Ottiene il metodo mediante il quale il pennello affianca verticalmente quelle aree che si estendono oltre la bitmap  
+##  <a name="getextendmodey"></a>  CD2DBitmapBrush::GetExtendModeY  
+ Gets the method by which the brush vertically tiles those areas that extend past its bitmap  
   
 ```  
 D2D1_EXTEND_MODE GetExtendModeY() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Un valore che specifica come il pennello affianca verticalmente quelle aree che si estendono oltre la bitmap  
+### <a name="return-value"></a>Return Value  
+ A value that specifies how the brush vertically tiles those areas that extend past its bitmap  
   
-##  <a name="getinterpolationmode"></a>CD2DBitmapBrush::GetInterpolationMode  
- Ottiene il metodo di interpolazione utilizzato quando la bitmap pennello viene ridimensionata o ruotata  
+##  <a name="getinterpolationmode"></a>  CD2DBitmapBrush::GetInterpolationMode  
+ Gets the interpolation method used when the brush bitmap is scaled or rotated  
   
 ```  
 D2D1_BITMAP_INTERPOLATION_MODE GetInterpolationMode() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Il metodo di interpolazione utilizzato quando la bitmap pennello viene ridimensionata o ruotata  
+### <a name="return-value"></a>Return Value  
+ The interpolation method used when the brush bitmap is scaled or rotated  
   
-##  <a name="m_pbitmap"></a>CD2DBitmapBrush::m_pBitmap  
- Archivia un puntatore a un oggetto CD2DBitmap.  
+##  <a name="m_pbitmap"></a>  CD2DBitmapBrush::m_pBitmap  
+ Stores a pointer to a CD2DBitmap object.  
   
 ```  
 CD2DBitmap* m_pBitmap;  
 ```  
   
-##  <a name="m_pbitmapbrush"></a>CD2DBitmapBrush::m_pBitmapBrush  
- Archivia un puntatore a un oggetto ID2D1BitmapBrush.  
+##  <a name="m_pbitmapbrush"></a>  CD2DBitmapBrush::m_pBitmapBrush  
+ Stores a pointer to an ID2D1BitmapBrush object.  
   
 ```  
 ID2D1BitmapBrush* m_pBitmapBrush;  
 ```  
   
-##  <a name="m_pbitmapbrushproperties"></a>CD2DBitmapBrush::m_pBitmapBrushProperties  
- Proprietà del pennello bitmap.  
+##  <a name="m_pbitmapbrushproperties"></a>  CD2DBitmapBrush::m_pBitmapBrushProperties  
+ Bitmap brush properties.  
   
 ```  
 D2D1_BITMAP_BRUSH_PROPERTIES* m_pBitmapBrushProperties;  
 ```  
   
-##  <a name="operator_id2d1bitmapbrush_star"></a>CD2DBitmapBrush::operator ID2D1BitmapBrush *  
- Restituisce l'interfaccia ID2D1BitmapBrush  
+##  <a name="operator_id2d1bitmapbrush_star"></a>  CD2DBitmapBrush::operator ID2D1BitmapBrush*  
+ Returns ID2D1BitmapBrush interface  
   
 ```  
 operator ID2D1BitmapBrush*();
 ```   
   
-### <a name="return-value"></a>Valore restituito  
- Puntatore a un'interfaccia ID2D1BitmapBrush o NULL se l'oggetto non è ancora inizializzato.  
+### <a name="return-value"></a>Return Value  
+ Pointer to an ID2D1BitmapBrush interface or NULL if object is not initialized yet.  
   
-##  <a name="setbitmap"></a>CD2DBitmapBrush::SetBitmap  
- Specifica l'origine della bitmap che questo pennello utilizzato per disegnare  
+##  <a name="setbitmap"></a>  CD2DBitmapBrush::SetBitmap  
+ Specifies the bitmap source that this brush uses to paint  
   
 ```  
 void SetBitmap(CD2DBitmap* pBitmap);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pBitmap`  
- L'origine della bitmap utilizzata dal pennello.  
+ The bitmap source used by the brush  
   
-##  <a name="setextendmodex"></a>CD2DBitmapBrush::SetExtendModeX  
- Specifica come il pennello Affianca orizzontalmente quelle aree che si estendono oltre la bitmap  
+##  <a name="setextendmodex"></a>  CD2DBitmapBrush::SetExtendModeX  
+ Specifies how the brush horizontally tiles those areas that extend past its bitmap  
   
 ```  
 void SetExtendModeX(D2D1_EXTEND_MODE extendModeX);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `extendModeX`  
- Un valore che specifica come il pennello Affianca orizzontalmente quelle aree che si estendono oltre la bitmap  
+ A value that specifies how the brush horizontally tiles those areas that extend past its bitmap  
   
-##  <a name="setextendmodey"></a>CD2DBitmapBrush::SetExtendModeY  
- Specifica come il pennello affianca verticalmente quelle aree che si estendono oltre la bitmap  
+##  <a name="setextendmodey"></a>  CD2DBitmapBrush::SetExtendModeY  
+ Specifies how the brush vertically tiles those areas that extend past its bitmap  
   
 ```  
 void SetExtendModeY(D2D1_EXTEND_MODE extendModeY);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `extendModeY`  
- Un valore che specifica come il pennello affianca verticalmente quelle aree che si estendono oltre la bitmap  
+ A value that specifies how the brush vertically tiles those areas that extend past its bitmap  
   
-##  <a name="setinterpolationmode"></a>CD2DBitmapBrush::SetInterpolationMode  
- Specifica la modalità di interpolazione utilizzata quando la bitmap pennello viene ridimensionata o ruotata  
+##  <a name="setinterpolationmode"></a>  CD2DBitmapBrush::SetInterpolationMode  
+ Specifies the interpolation mode used when the brush bitmap is scaled or rotated  
   
 ```  
 void SetInterpolationMode(D2D1_BITMAP_INTERPOLATION_MODE interpolationMode);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `interpolationMode`  
- La modalità di interpolazione utilizzata quando la bitmap pennello viene ridimensionata o ruotata  
+ The interpolation mode used when the brush bitmap is scaled or rotated  
   
-## <a name="see-also"></a>Vedere anche  
- [Classi](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

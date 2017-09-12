@@ -1,57 +1,75 @@
 ---
-title: "Trascinamento della sezione: implementazione di una destinazione di rilascio | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "trascinamento della selezione, destinazione di rilascio"
-  - "trascinamento della selezione OLE, destinazione di rilascio"
-  - "trascinamento della selezione OLE, implementazione delle destinazioni di rilascio"
+title: 'Drag and Drop: Implementing a Drop Target | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE drag and drop [MFC], implementing drop targets
+- OLE drag and drop [MFC], drop target
+- drag and drop [MFC], drop target
 ms.assetid: 0689f1ec-5326-4008-b226-4b373c881358
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Trascinamento della sezione: implementazione di una destinazione di rilascio
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f6d4fb84423e3d2b67ad6d5a91bf001be5098061
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Questo articolo delinea come rendere l'applicazione una destinazione di rilascio.  Implementare una destinazione di rilascio richiede poco più lavoro che implementare un'origine di trascinamento, ma è ancora relativamente semplice.  Queste tecniche si applicano anche ad applicazioni non OLE.  
+---
+# <a name="drag-and-drop-implementing-a-drop-target"></a>Drag and Drop: Implementing a Drop Target
+This article outlines how to make your application a drop target. Implementing a drop target takes slightly more work than implementing a drop source, but it is still relatively simple. These techniques also apply to non-OLE applications.  
   
-#### Per implementare una destinazione di rilascio  
+#### <a name="to-implement-a-drop-target"></a>To implement a drop target  
   
-1.  Aggiungere una variabile membro a ciascuna visualizzazione nell'applicazione che si desidera rendere destinazione di rilascio.  Questa variabile membro deve essere di tipo `COleDropTarget` o una classe derivata da esso.  
+1.  Add a member variable to each view in the application that you want to be a drop target. This member variable must be of type `COleDropTarget` or a class derived from it.  
   
-2.  Dalla funzione della classe di visualizzazione che gestisce il messaggio `WM_CREATE` \(in genere `OnCreate`\), chiamare il nuovo membro `Register` della variabile.  `Revoke` verrà chiamato automaticamente quando la visualizzazione viene distrutta.  
+2.  From your view class's function that handles the `WM_CREATE` message (typically `OnCreate`), call the new member variable's `Register` member function. `Revoke` will be called automatically for you when your view is destroyed.  
   
-3.  Eseguire l'override delle funzioni seguenti.  Se si vuole lo stesso comportamento in tutta l'applicazione, eseguire l'override di queste funzioni nella classe di visualizzazione.  Se si desidera modificare il comportamento in casi isolati o si desidera abilitare il rilascio sulle finestre non\-`CView`, eseguire l'override di queste funzioni nella classe derivata `COleDropTarget`.  
+3.  Override the following functions. If you want the same behavior throughout your application, override these functions in your view class. If you want to modify behavior in isolated cases or want to enable dropping on non-`CView` windows, override these functions in your `COleDropTarget`-derived class.  
   
-    |Override|Per concedere|  
-    |--------------|-------------------|  
-    |`OnDragEnter`|Il verificarsi di operazioni di rilascio nella finestra.  Chiamata quando il cursore entra per la prima volta nella finestra.|  
-    |`OnDragLeave`|Comportamento speciale quando l'operazione di trascinamento lascia la finestra specificata.|  
-    |`OnDragOver`|Verificarsi di operazioni di rilascio nella finestra.  Chiamato quando il cursore viene trascinato attraverso la finestra.|  
-    |`OnDrop`|Gestione dei dati che vengono rilasciati nella finestra specificata.|  
-    |`OnScrollBy`|Comportamento speciale per quando lo scorrimento è necessario nella finestra di destinazione.|  
+    |Override|To allow|  
+    |--------------|--------------|  
+    |`OnDragEnter`|Drop operations to occur in the window. Called when the cursor first enters the window.|  
+    |`OnDragLeave`|Special behavior when the drag operation leaves the specified window.|  
+    |`OnDragOver`|Drop operations to occur in the window. Called when the cursor is being dragged across the window.|  
+    |`OnDrop`|Handling of data being dropped into the specified window.|  
+    |`OnScrollBy`|Special behavior for when scrolling is necessary in the target window.|  
   
- Vedere il file MAINVIEW.CPP che è parte dell'esempio MFC OLE [OCLIENT](../top/visual-cpp-samples.md) per un esempio di come queste funzioni interagiscono.  
+ See the MAINVIEW.CPP file that is part of the MFC OLE sample [OCLIENT](../visual-cpp-samples.md) for an example of how these functions work together.  
   
- Per ulteriori informazioni, vedere:  
+ For more information, see:  
   
--   [Implementazione di un origine di rilascio](../mfc/drag-and-drop-implementing-a-drop-source.md)  
+-   [Implementing a Drop Source](../mfc/drag-and-drop-implementing-a-drop-source.md)  
   
--   [Creazione ed eliminazione degli oggetti dati OLE e origini dati](../mfc/data-objects-and-data-sources-creation-and-destruction.md)  
+-   [Creating and Destroying OLE Data Objects and Data Sources](../mfc/data-objects-and-data-sources-creation-and-destruction.md)  
   
--   [Modifica di oggetti dati e origini dati OLE](../mfc/data-objects-and-data-sources-manipulation.md)  
+-   [Manipulating OLE Data Objects and Data Sources](../mfc/data-objects-and-data-sources-manipulation.md)  
   
-## Vedere anche  
- [Trascinamento \(OLE\)](../mfc/drag-and-drop-ole.md)   
+## <a name="see-also"></a>See Also  
+ [Drag and Drop (OLE)](../mfc/drag-and-drop-ole.md)   
  [COleDropTarget Class](../mfc/reference/coledroptarget-class.md)
+

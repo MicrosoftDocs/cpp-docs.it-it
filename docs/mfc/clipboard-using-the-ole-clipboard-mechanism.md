@@ -1,56 +1,75 @@
 ---
-title: "Appunti: utilizzo del meccanismo degli Appunti OLE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "applicazioni [OLE], Appunti"
-  - "Appunti [C++], formati OLE"
-  - "formati [C++], Appunti per OLE"
-  - "Appunti OLE"
-  - "Appunti OLE, formati"
+title: 'Clipboard: Using the OLE Clipboard Mechanism | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- applications [OLE], Clipboard
+- OLE Clipboard
+- Clipboard [MFC], OLE formats
+- OLE Clipboard, formats
+- formats [MFC], Clipboard for OLE
 ms.assetid: 229cc610-5bb1-435e-bd20-2c8b9964d1af
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Appunti: utilizzo del meccanismo degli Appunti OLE
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8087ff3c5054193fa681ea094d1f223855889b78
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-OLE fa uso di formati standard ed alcuni formati OLE specifici per trasferire dati dagli Appunti.  
+---
+# <a name="clipboard-using-the-ole-clipboard-mechanism"></a>Clipboard: Using the OLE Clipboard Mechanism
+OLE uses standard formats and some OLE-specific formats for transferring data through the Clipboard.  
   
- Quando si taglia o copia un dato da un'applicazione, il dato viene archiviato negli Appunti per essere utilizzato più avanti nelle operazioni Incolla.  Questi dati sono in diversi formati.  Quando un utente sceglie di incollare un dato dagli Appunti, l'applicazione può stabilire quali di questi formati utilizzare.  L'applicazione deve essere scritta per scegliere il formato che fornisce la maggior parte delle informazioni, a meno che l'utente non richieda specificamente un determinato formato, utilizzando Incolla speciale.  Prima di procedere, è possibile leggere gli argomenti di [Oggetti dati e origini dati \(OLE\)](../mfc/data-objects-and-data-sources-ole.md).  Descrivono i concetti fondamentali di funzionamento dei trasferimenti di dati e di come implementarli nelle applicazioni.  
+ When you cut or copy data from an application, the data is stored on the Clipboard to be used later in paste operations. This data is in a variety of formats. When a user chooses to paste data from the Clipboard, the application can choose which of these formats to use. The application should be written to choose the format that provides the most information, unless the user specifically asks for a certain format, using Paste Special. Before continuing, you may want to read the [Data Objects and Data Sources (OLE)](../mfc/data-objects-and-data-sources-ole.md) topics. They describe the fundamentals of how data transfers work, and how to implement them in your applications.  
   
- Windows definisce numerosi formati standard che possono essere utilizzati per trasferire i dati dagli Appunti.  Questi includono metafile, testo, bitmap e altri.  OLE definisce anche numerosi formati specifici OLE.  Per le applicazioni che necessitano di maggiori dettagli di quelli forniti da questi formati standard, è consigliabile registrare i rispettivi formati degli Appunti personalizzati.  Utilizzare la funzione [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) dell'API Win32 per questo scopo.  
+ Windows defines a number of standard formats that can be used for transferring data through the Clipboard. These include metafiles, text, bitmaps, and others. OLE defines a number of OLE-specific formats, as well. For applications that need more detail than given by these standard formats, it is a good idea to register their own custom Clipboard formats. Use the Win32 API function [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) to do this.  
   
- Ad esempio, Microsoft Excel registra un formato personalizzato per i fogli di calcolo.  Questo formato racchiude molta più informazione rispetto, ad esempio, ad una bitmap.  Quando questi dati vengono inseriti in un'applicazione che supporta il formato foglio di calcolo, tutte le formule e valori del foglio di calcolo vengono mantenuti e possono essere aggiornati se necessario.  Microsoft Excel inserisce anch'esso i dati negli Appunti in più formati in modo da poterli incollare come elemento OLE.  Tutti i contenitori OLE di documento possono incollare queste informazioni come elemento incorporato.  Questo elemento incorporato può essere modificato utilizzando Microsoft Excel.  Gli Appunti contengono inoltre una semplice bitmap dell'immagine dell'intervallo selezionato nel foglio di calcolo.  Ciò può essere incollato nei contenitori OLE di documento o negli editor di immagini bitmap, come Paint.  Nel caso di una bitmap, tuttavia, non è possibile modificare i dati come un foglio di calcolo.  
+ For example, Microsoft Excel registers a custom format for spreadsheets. This format carries much more information than, for example, a bitmap does. When this data is pasted into an application that supports the spreadsheet format, all the formulas and values from the spreadsheet are retained and can be updated if necessary. Microsoft Excel also puts data on the Clipboard in formats so that it can be pasted as an OLE item. Any OLE document container can paste this information as an embedded item. This embedded item can be changed using Microsoft Excel. The Clipboard also contains a simple bitmap of the image of the selected range on the spreadsheet. This can also be pasted into OLE document containers or into bitmap editors, like Paint. In the case of a bitmap, however, there is no way to manipulate the data as a spreadsheet.  
   
- Per recuperare la massima quantità di informazioni dagli Appunti, le applicazioni devono controllare questi formati personalizzati prima di incollare i dati dagli Appunti.  
+ To retrieve the maximum amount of information from the Clipboard, applications should check for these custom formats before pasting data from the Clipboard.  
   
- Ad esempio, per attivare il comando Taglia, è possibile scrivere un gestore simile al seguente:  
+ For example, to enable the Cut command, you might write a handler something like the following:  
   
- [!code-cpp[NVC_MFCListView#3](../mfc/codesnippet/CPP/clipboard-using-the-ole-clipboard-mechanism_1.cpp)]  
+ [!code-cpp[NVC_MFCListView#3](../atl/reference/codesnippet/cpp/clipboard-using-the-ole-clipboard-mechanism_1.cpp)]  
   
-## Scegliere l'argomento su cui visualizzare maggiori informazioni  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Copia e Incolla di dati](../mfc/clipboard-copying-and-pasting-data.md)  
+-   [Copying and pasting data](../mfc/clipboard-copying-and-pasting-data.md)  
   
--   [Aggiunta di altri formati](../mfc/clipboard-adding-other-formats.md)  
+-   [Adding other formats](../mfc/clipboard-adding-other-formats.md)  
   
--   [Utilizzare gli Appunti di Windows](../mfc/clipboard-using-the-windows-clipboard.md)  
+-   [Using the Windows Clipboard](../mfc/clipboard-using-the-windows-clipboard.md)  
   
 -   [OLE](../mfc/ole-background.md)  
   
--   [Oggetti dati OLE e origine dati OLE e trasferimento dei dati uniforme](../mfc/data-objects-and-data-sources-ole.md)  
+-   [OLE data objects and data sources and uniform data transfer](../mfc/data-objects-and-data-sources-ole.md)  
   
-## Vedere anche  
- [Appunti](../mfc/clipboard.md)
+## <a name="see-also"></a>See Also  
+ [Clipboard](../mfc/clipboard.md)
+
+

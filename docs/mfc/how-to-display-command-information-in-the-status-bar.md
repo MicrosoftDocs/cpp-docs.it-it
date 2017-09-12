@@ -1,35 +1,54 @@
 ---
-title: "Procedura: visualizzare informazioni sui comandi nella barra di stato | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "visualizzazione dello stato del comando"
-  - "prompt [C++]"
-  - "barre di stato, visualizzazione di informazioni su comandi"
-  - "barre di stato, area messaggio"
+title: 'How to: Display Command Information in the Status Bar | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- prompts [MFC]
+- displaying command status [MFC]
+- status bars [MFC], message area
+- status bars [MFC], displaying command information
 ms.assetid: de895cbe-61ee-46bf-9787-76b247527d6d
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Procedura: visualizzare informazioni sui comandi nella barra di stato
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ed04870c904c0b2cbe01686282bbfe8b4f1b1cb4
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Quando si esegue la creazione guidata applicazione MFC per creare la struttura dell'applicazione, è possibile supportare una barra degli strumenti e una barra di stato.  Solo un'opzione nella creazione guidata supporta entrambi.  Quando una barra di stato è presente, l'applicazione automaticamente fornisce feedback utile quando l'utente sposta il puntatore sugli elementi nei menu.  L'applicazione viene visualizzato automaticamente una stringa di richiesta la barra di stato quando la voce di menu viene evidenziata.  Ad esempio, quando l'utente sposta il puntatore sul comando di **Taglia** dal menu di **Modifica**, la barra di stato non venga visualizzato "di ridurre la selezione e la inserisce negli Appunti" e l'area messaggi della barra di stato.  La richiesta guida all'utente di capire lo scopo della voce di menu.  Questa possibilità vale anche quando l'utente fa clic su un pulsante della barra degli strumenti.  
+---
+# <a name="how-to-display-command-information-in-the-status-bar"></a>How to: Display Command Information in the Status Bar
+When you run the Application Wizard to create the skeleton of your application, you can support a toolbar and a status bar. Just one option in the Application Wizard supports both. When a status bar is present, the application automatically provides helpful feedback as the user moves the pointer over items on the menus. The application automatically displays a prompt string in the status bar when the menu item is highlighted. For example, when the user moves the pointer over the **Cut** command on the **Edit** menu, the status bar might display "Cuts the selection and puts it on the Clipboard" in the message area of the status bar. The prompt helps the user understand the purpose of the menu item. This also works when the user clicks a toolbar button.  
   
- È possibile aggiungere a questa guida della barra di stato definendo le stringhe di richiesta per le voci di menu che si aggiunge al programma.  A tale scopo, immettere stringhe di richiesta quando si modificano le proprietà della voce di menu nell'editor menu.  Le stringhe definite vengono memorizzate nel file di risorse dell'applicazione; gli ID dei controlli che spiegano.  
+ You can add to this status-bar help by defining prompt strings for menu items that you add to the program. To do this, provide the prompt strings when you edit the properties of the menu item in the menu editor. The strings you define are stored in the application resource file; they have the same IDs as the commands they explain.  
   
- Per impostazione predefinita, la creazione guidata applicazione aggiunge `AFX_IDS_IDLEMESSAGE`, l'id di un messaggio standard di " pronto ", che viene visualizzato quando il programma è in attesa dei nuovi messaggi.  Se si specifica l'opzione guida sensibile al contesto nella procedura guidata, il messaggio viene impostata su "per la guida, premere F1."  
+ By default, the Application Wizard adds `AFX_IDS_IDLEMESSAGE`, the ID for a standard "Ready" message, which is displayed when the program is waiting for new messages. If you specify the Context-Sensitive Help option in the Application Wizard, the message is changed to "For Help, press F1."  
   
-## Vedere anche  
- [Gestione e mapping dei messaggi](../mfc/message-handling-and-mapping.md)
+## <a name="see-also"></a>See Also  
+ [Message Handling and Mapping](../mfc/message-handling-and-mapping.md)
+
+

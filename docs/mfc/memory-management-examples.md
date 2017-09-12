@@ -1,111 +1,130 @@
 ---
-title: "Gestione della memoria: esempi | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "matrici [C++], allocazione di risorse"
-  - "matrici [C++], gestione della memoria"
-  - "strutture di dati [C++]"
-  - "strutture di dati [C++], allocazione di memoria"
-  - "esempi [MFC], allocazione di memoria"
-  - "allocazione di frame"
-  - "allocazione di heap, esempi"
-  - "allocazione di memoria [C++], matrici"
-  - "allocazione di memoria [C++], strutture di dati"
-  - "allocazione di memoria [C++], esempi"
-  - "allocazione di memoria [C++], oggetti"
-  - "MFC [C++], gestione della memoria"
-  - "oggetti [C++], allocazione di memoria"
-  - "oggetti [C++], allocazione di memoria"
-  - "allocazione di memoria struct"
-  - "tipi [C++], allocazione di memoria"
+title: 'Memory Management: Examples | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- objects [MFC], memory allocation
+- data structures [MFC]
+- arrays [MFC], allocating resources
+- objects [MFC], allocating memory
+- data structures [MFC], allocating memory
+- examples [MFC], memory allocation
+- heap allocation [MFC], examples
+- memory allocation [MFC], arrays
+- MFC, memory management
+- struct memory allocation [MFC]
+- types [MFC], memory allocation
+- memory allocation [MFC], objects
+- memory allocation [MFC], examples
+- arrays [MFC], memory management
+- frame allocation [MFC]
+- memory allocation [MFC], data structures
 ms.assetid: f10240f8-b698-4c83-9288-97a54318930b
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Gestione della memoria: esempi
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 108a4988ca87c96642c2368764ec3d047de746a8
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-In questo articolo viene descritto come MFC esegue le allocazioni e allocazioni heap di frame per ciascuno dei tre tipi comuni delle allocazioni di memoria:  
+---
+# <a name="memory-management-examples"></a>Memory Management: Examples
+This article describes how MFC performs frame allocations and heap allocations for each of the three typical kinds of memory allocations:  
   
--   [Una matrice di byte](#_core_allocation_of_an_array_of_bytes)  
+-   [An array of bytes](#_core_allocation_of_an_array_of_bytes)  
   
--   [Una struttura di dati](#_core_allocation_of_a_data_structure)  
+-   [A data structure](#_core_allocation_of_a_data_structure)  
   
--   [Un oggetto](#_core_allocation_of_an_object)  
+-   [An object](#_core_allocation_of_an_object)  
   
-##  <a name="_core_allocation_of_an_array_of_bytes"></a> Allocazione di una matrice di byte  
+##  <a name="_core_allocation_of_an_array_of_bytes"></a> Allocation of an Array of Bytes  
   
-#### Per allocare una matrice di byte sul frame  
+#### <a name="to-allocate-an-array-of-bytes-on-the-frame"></a>To allocate an array of bytes on the frame  
   
-1.  Definire la matrice come illustrato nel codice seguente.  La matrice verrà automaticamente eliminato e la memoria viene recuperata quando la variabile di matrice esce dal relativo ambito.  
+1.  Define the array as shown by the following code. The array is automatically deleted and its memory reclaimed when the array variable exits its scope.  
   
-     [!code-cpp[NVC_MFC_Utilities#1](../mfc/codesnippet/CPP/memory-management-examples_1.cpp)]  
+     [!code-cpp[NVC_MFC_Utilities#1](../mfc/codesnippet/cpp/memory-management-examples_1.cpp)]  
   
-#### Per allocare una matrice di byte \(o in qualsiasi tipo di dati primitivo\) nell'heap  
+#### <a name="to-allocate-an-array-of-bytes-or-any-primitive-data-type-on-the-heap"></a>To allocate an array of bytes (or any primitive data type) on the heap  
   
-1.  Utilizzare l'operatore di **nuova** con la sintassi delle matrici illustrata in questo esempio:  
+1.  Use the **new** operator with the array syntax shown in this example:  
   
-     [!code-cpp[NVC_MFC_Utilities#2](../mfc/codesnippet/CPP/memory-management-examples_2.cpp)]  
+     [!code-cpp[NVC_MFC_Utilities#2](../mfc/codesnippet/cpp/memory-management-examples_2.cpp)]  
   
-#### Per rilasciare le matrici dall'heap  
+#### <a name="to-deallocate-the-arrays-from-the-heap"></a>To deallocate the arrays from the heap  
   
-1.  Utilizzare l'operatore di **eliminazione** come segue:  
+1.  Use the **delete** operator as follows:  
   
-     [!code-cpp[NVC_MFC_Utilities#3](../mfc/codesnippet/CPP/memory-management-examples_3.cpp)]  
+     [!code-cpp[NVC_MFC_Utilities#3](../mfc/codesnippet/cpp/memory-management-examples_3.cpp)]  
   
-##  <a name="_core_allocation_of_a_data_structure"></a> Allocazione di una struttura di dati  
+##  <a name="_core_allocation_of_a_data_structure"></a> Allocation of a Data Structure  
   
-#### Per allocare una struttura di dati sul frame  
+#### <a name="to-allocate-a-data-structure-on-the-frame"></a>To allocate a data structure on the frame  
   
-1.  Definire una variabile di struttura come segue:  
+1.  Define the structure variable as follows:  
   
-     [!code-cpp[NVC_MFC_Utilities#4](../mfc/codesnippet/CPP/memory-management-examples_4.cpp)]  
+     [!code-cpp[NVC_MFC_Utilities#4](../mfc/codesnippet/cpp/memory-management-examples_4.cpp)]  
   
-     La memoria occupata dalla struttura viene recuperata quando esce dal relativo ambito.  
+     The memory occupied by the structure is reclaimed when it exits its scope.  
   
-#### Per allocare le strutture di dati nell'heap  
+#### <a name="to-allocate-data-structures-on-the-heap"></a>To allocate data structures on the heap  
   
-1.  Utilizzare **nuova** per allocare le strutture dei dati sull'heap e su **eliminazione** per rilasciarli, come illustrato negli esempi seguenti:  
+1.  Use **new** to allocate data structures on the heap and **delete** to deallocate them, as shown by the following examples:  
   
-     [!code-cpp[NVC_MFC_Utilities#5](../mfc/codesnippet/CPP/memory-management-examples_5.cpp)]  
+     [!code-cpp[NVC_MFC_Utilities#5](../mfc/codesnippet/cpp/memory-management-examples_5.cpp)]  
   
-##  <a name="_core_allocation_of_an_object"></a> Allocazione di un oggetto  
+##  <a name="_core_allocation_of_an_object"></a> Allocation of an Object  
   
-#### Per allocare un oggetto sul frame  
+#### <a name="to-allocate-an-object-on-the-frame"></a>To allocate an object on the frame  
   
-1.  Dichiarare l'oggetto come segue:  
+1.  Declare the object as follows:  
   
-     [!code-cpp[NVC_MFC_Utilities#6](../mfc/codesnippet/CPP/memory-management-examples_6.cpp)]  
+     [!code-cpp[NVC_MFC_Utilities#6](../mfc/codesnippet/cpp/memory-management-examples_6.cpp)]  
   
-     Il distruttore dell'oggetto verrà richiamato quando l'oggetto esce dal relativo ambito.  
+     The destructor for the object is automatically invoked when the object exits its scope.  
   
-#### Per allocare un oggetto di l  
+#### <a name="to-allocate-an-object-on-the-heap"></a>To allocate an object on the heap  
   
-1.  Utilizzare l'operatore di **nuova**, che restituisce un puntatore all'oggetto, allocare gli oggetti nell'heap.  Utilizzare l'operatore di **eliminazione** per eliminarli.  
+1.  Use the **new** operator, which returns a pointer to the object, to allocate objects on the heap. Use the **delete** operator to delete them.  
   
-     Negli esempi di frame e dell'heap si presuppone che nel costruttore di `CPerson` non accetta argomenti.  
+     The following heap and frame examples assume that the `CPerson` constructor takes no arguments.  
   
-     [!code-cpp[NVC_MFC_Utilities#7](../mfc/codesnippet/CPP/memory-management-examples_7.cpp)]  
+     [!code-cpp[NVC_MFC_Utilities#7](../mfc/codesnippet/cpp/memory-management-examples_7.cpp)]  
   
-     Se l'argomento del costruttore di `CPerson` è un puntatore a `char`, l'istruzione per l'allocazione di frame è:  
+     If the argument for the `CPerson` constructor is a pointer to `char`, the statement for frame allocation is:  
   
-     [!code-cpp[NVC_MFC_Utilities#8](../mfc/codesnippet/CPP/memory-management-examples_8.cpp)]  
+     [!code-cpp[NVC_MFC_Utilities#8](../mfc/codesnippet/cpp/memory-management-examples_8.cpp)]  
   
-     L'istruzione dell'allocazione heap è:  
+     The statement for heap allocation is:  
   
-     [!code-cpp[NVC_MFC_Utilities#9](../mfc/codesnippet/CPP/memory-management-examples_9.cpp)]  
+     [!code-cpp[NVC_MFC_Utilities#9](../mfc/codesnippet/cpp/memory-management-examples_9.cpp)]  
   
-## Vedere anche  
- [Gestione della memoria: allocazione di heap](../mfc/memory-management-heap-allocation.md)
+## <a name="see-also"></a>See Also  
+ [Memory Management: Heap Allocation](../mfc/memory-management-heap-allocation.md)
+
+

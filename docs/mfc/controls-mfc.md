@@ -1,55 +1,73 @@
 ---
-title: "Controlli (MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controlli comuni di Windows [C++]"
-  - "controlli comuni [C++]"
-  - "controlli [MFC]"
+title: Controls (MFC) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Windows common controls [MFC]
+- common controls [MFC]
+- controls [MFC]
 ms.assetid: b2842884-6435-4b8f-933b-21671bf8af95
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Controlli (MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1a2fad4323b03cd302644561820fa436a3f4a6c6
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-I controlli sono oggetti con cui gli utenti possono interagire per immettere o modificare i dati. In genere vengono visualizzati nelle finestre di dialogo o nelle barre degli strumenti. In questo gruppo di argomenti vengono illustrati tre tipi principali di controlli:  
+---
+# <a name="controls-mfc"></a>Controls (MFC)
+Controls are objects that users can interact with to enter or manipulate data. They commonly appear in dialog boxes or on toolbars. This topic family covers three main kinds of controls:  
   
--   Controlli comuni di Windows, inclusi quelli creati dal proprietario  
+-   Windows common controls, including owner-drawn controls  
   
--   Controlli ActiveX  
+-   ActiveX Controls  
   
--   Altre classi di controlli fornite dalla libreria Microsoft Foundation Class \(MFC\)  
+-   Other control classes supplied by the Microsoft Foundation Class Library (MFC)  
   
-## Controlli comuni di Windows  
- Il sistema operativo Windows ha sempre fornito un numero di controlli comuni di Windows. Questi oggetti controllo sono programmabili e l'editor finestre di Visual C\+\+ ne supporta l'aggiunta alle finestre di dialogo. La libreria Microsoft Foundation Class \(MFC\) fornisce classi che incapsulano ognuno di questi controlli, come illustrato nella tabella [Controlli comuni di Windows e classi MFC](#_core_windows_common_controls_and_mfc_classes). \(Per alcuni elementi nella tabella sono previsti argomenti correlati che li descrivono in maggiore dettaglio. Per i controlli che non dispongono di argomenti, vedere la documentazione per la classe MFC\).  
+## <a name="windows-common-controls"></a>Windows Common Controls  
+ The Windows operating system has always provided a number of Windows common controls. These control objects are programmable, and the Visual C++ dialog editor supports adding them to your dialog boxes. The Microsoft Foundation Class Library (MFC) supplies classes that encapsulate each of these controls, as shown in the table [Windows Common Controls and MFC Classes](#_core_windows_common_controls_and_mfc_classes). (Some items in the table have related topics that describe them further. For controls that lack topics, see the documentation for the MFC class.)  
   
- La classe [CWnd](../mfc/reference/cwnd-class.md) è la classe base di tutte le classi di finestra, incluse tutte le classi di controlli. I controlli comuni di Windows sono supportati negli ambienti seguenti:  
+ Class [CWnd](../mfc/reference/cwnd-class.md) is the base class of all window classes, including all of the control classes. The Windows common controls are supported in the following environments:  
   
--   Windows 95, Windows 98 e Windows 2000  
+-   Windows 95, Windows 98, and Windows 2000  
   
--   Windows NT, versione 3.51 e successive  
+-   Windows NT, version 3.51 and later  
   
--   Win32s, versione 1.3 \(Visual C\+\+ versioni 4.2 e successive non supportano Win32s\)  
+-   Win32s, version 1.3 (Visual C++ versions 4.2 and later do not support Win32s)  
   
- I controlli comuni precedenti, tra cui caselle di controllo, caselle combinate, caselle di modifica, caselle di riepilogo, pulsanti di opzione, pulsanti di comando, controlli della barra di scorrimento e controlli statici, erano disponibili anche nelle versioni precedenti di Windows.  
+ The older common controls — check boxes, combo boxes, edit boxes, list boxes, option buttons, pushbuttons, scroll bar controls, and static controls — were available in earlier versions of Windows as well.  
   
-## Controlli ActiveX  
- I controlli ActiveX, precedentemente noti come controlli OLE, possono essere usati nelle finestre di dialogo delle applicazioni per Windows o nelle pagine HTML sul World Wide Web. Per altre informazioni, vedere [MFC ActiveX Controls](../mfc/mfc-activex-controls.md) \(Controlli ActiveX MFC\).  
+## <a name="activex-controls"></a>ActiveX Controls  
+ ActiveX controls, formerly known as OLE controls, can be used in dialog boxes in your applications for Windows, or in HTML pages on the World Wide Web. For more information, see [MFC ActiveX Controls](../mfc/mfc-activex-controls.md).  
   
-## Altre classi di controlli MFC  
- Oltre alle classi che incapsulano tutti i controlli comuni di Windows e che supportano la programmazione dei propri controlli ActiveX \(o l'uso di controlli ActiveX forniti da altri utenti\), MFC prevede proprie classi di controlli riportate di seguito:  
+## <a name="other-mfc-control-classes"></a>Other MFC Control Classes  
+ In addition to classes that encapsulate all of the Windows common controls and that support programming your own ActiveX controls (or using ActiveX controls supplied by others), MFC supplies the following control classes of its own:  
   
 -   [CBitmapButton](../mfc/reference/cbitmapbutton-class.md)  
   
@@ -57,66 +75,68 @@ I controlli sono oggetti con cui gli utenti possono interagire per immettere o m
   
 -   [CDragListBox](../mfc/reference/cdraglistbox-class.md)  
   
-##  <a name="_core_finding_information_about_windows_common_controls"></a> Ricerca di informazioni sui controlli comuni di Windows  
- Nella tabella seguente viene brevemente descritto ogni controllo comune di Windows, tra cui la classe wrapper MFC del controllo.  
+##  <a name="_core_finding_information_about_windows_common_controls"></a> Finding Information About Windows Common Controls  
+ The table below briefly describes each of the Windows common controls, including the control's MFC wrapper class.  
   
-### Controlli comuni di Windows e classi MFC  
+### <a name="_core_windows_common_controls_and_mfc_classes"></a>  Windows Common Controls and MFC Classes  
   
-|Controllo|Classe MFC|Descrizione|Novità in Windows 95|  
-|---------------|----------------|-----------------|--------------------------|  
-|[animazione](../mfc/using-canimatectrl.md)|[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)|Visualizza frame successivi di un videoclip AVI|Sì|  
-|button|[CButton](../mfc/reference/cbutton-class.md)|Pulsanti di comando che determinano un'azione, usati anche per caselle di controllo, pulsanti di opzione e caselle di gruppo|No|  
-|casella combinata|[CComboBox](../mfc/reference/ccombobox-class.md)|Combinazione di una casella di modifica e una casella di riepilogo|No|  
-|[selezione data e ora](../mfc/using-cdatetimectrl.md)|[CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)|Consente all'utente di scegliere un valore di data o di ora specifico|Sì|  
-|casella di modifica|[CEdit](../mfc/reference/cedit-class.md)|Caselle per l'immissione di testo|No|  
-|[casella combinata estesa](../mfc/using-ccomboboxex.md)|[CComboBoxEx](../mfc/reference/ccomboboxex-class.md)|Controllo di una casella combinata con la possibilità di visualizzare immagini|Sì|  
-|[intestazione](../mfc/using-cheaderctrl.md)|[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)|Pulsante visualizzato sopra una colonna di testo; controlla la larghezza del testo visualizzato|Sì|  
-|[hotkey](../mfc/using-chotkeyctrl.md)|[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)|Finestra che consente all'utente di creare un "tasto di scelta rapida" per eseguire velocemente un'azione|Sì|  
-|[elenco di immagini](../mfc/using-cimagelist.md)|[CImageList](../mfc/reference/cimagelist-class.md)|Raccolta di immagini usata per gestire grandi set di icone o bitmap \(l'elenco di immagini non è realmente un controllo e supporta gli elenchi usati da altri controlli\)|Sì|  
-|[list](../mfc/using-clistctrl.md)|[CListCtrl](../mfc/reference/clistctrl-class.md)|Finestra che visualizza un elenco di stringhe di testo con icone|Sì|  
-|casella di riepilogo|[CListBox](../mfc/reference/clistbox-class.md)|Casella contenente un elenco di stringhe|No|  
-|[calendario mensile](../mfc/using-cmonthcalctrl.md)|[CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)|Controllo che visualizza informazioni sulla data|Sì|  
-|[avanzamento](../mfc/using-cprogressctrl.md)|[CProgressCtrl](../mfc/reference/cprogressctrl-class.md)|Finestra che indica lo stato di avanzamento di un'operazione di lunga durata|Sì|  
-|[rebar](../mfc/using-crebarctrl.md)|[CRebarCtrl](../mfc/reference/crebarctrl-class.md)|Barra degli strumenti che può contenere altre finestre figlio sotto forma di controlli|Sì|  
-|[rich edit](../mfc/using-cricheditctrl.md)|[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)|Finestra in cui è possibile modificare la formattazione di carattere e paragrafo \(vedere [Classes Related to Rich Edit Controls](../mfc/classes-related-to-rich-edit-controls.md) \(Classi correlate ai controlli Rich Edit\)\)|Sì|  
-|barra di scorrimento|[CScrollBar](../mfc/reference/cscrollbar-class.md)|Barra di scorrimento usata come un controllo all'interno di una finestra di dialogo \(non una finestra\)|No|  
-|[cursore](../mfc/using-csliderctrl.md)|[CSliderCtrl](../mfc/reference/csliderctrl-class.md)|Finestra contenente un controllo dispositivo di scorrimento con segni di graduazione facoltativi|Sì|  
-|[casella di selezione](../mfc/using-cspinbuttonctrl.md)|[CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)|Coppia di pulsanti freccia selezionabili per aumentare o diminuire un valore|Sì|  
-|testo statico|[CStatic](../mfc/reference/cstatic-class.md)|Testo per le etichette di altri controlli|No|  
-|[barra di stato](../mfc/using-cstatusbarctrl.md)|[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)|Finestra per la visualizzazione di informazioni sullo stato, simile alla classe MFC `CStatusBar`|Sì|  
-|[scheda](../mfc/using-ctabctrl.md)|[CTabCtrl](../mfc/reference/ctabctrl-class.md)|Simile ai separatori in un blocco per appunti, è usato in "finestre di dialogo a schede" o nelle finestre delle proprietà|Sì|  
-|[barra degli strumenti](../mfc/using-ctoolbarctrl.md)|[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)|Finestra con pulsanti di generazione comandi, simile alla classe MFC `CToolBar`|Sì|  
-|[descrizione comando](../mfc/using-ctooltipctrl.md)|[CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)|Piccola finestra popup che descrive lo scopo di un pulsante della barra degli strumenti o un altro strumento|Sì|  
-|[struttura ad albero](../mfc/using-ctreectrl.md)|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|Finestra che visualizza un elenco gerarchico di elementi|Sì|  
+|Control|MFC class|Description|New in Windows 95|  
+|-------------|---------------|-----------------|------------------------|  
+|[animation](../mfc/using-canimatectrl.md)|[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)|Displays successive frames of an AVI video clip|Yes|  
+|button|[CButton](../mfc/reference/cbutton-class.md)|Pushbuttons that cause an action; also used for check boxes, radio buttons, and group boxes|No|  
+|combo box|[CComboBox](../mfc/reference/ccombobox-class.md)|Combination of an edit box and a list box|No|  
+|[date and time picker](../mfc/using-cdatetimectrl.md)|[CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)|Allows the user to choose a specific date or time value|Yes|  
+|edit box|[CEdit](../mfc/reference/cedit-class.md)|Boxes for entering text|No|  
+|[extended combo box](../mfc/using-ccomboboxex.md)|[CComboBoxEx](../mfc/reference/ccomboboxex-class.md)|A combo box control with the ability to display images|Yes|  
+|[header](../mfc/using-cheaderctrl.md)|[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)|Button that appears above a column of text; controls width of text displayed|Yes|  
+|[hotkey](../mfc/using-chotkeyctrl.md)|[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)|Window that enables user to create a "hot key" to perform an action quickly|Yes|  
+|[image list](../mfc/using-cimagelist.md)|[CImageList](../mfc/reference/cimagelist-class.md)|Collection of images used to manage large sets of icons or bitmaps (image list isn't really a control; it supports lists used by other controls)|Yes|  
+|[list](../mfc/using-clistctrl.md)|[CListCtrl](../mfc/reference/clistctrl-class.md)|Window that displays a list of text with icons|Yes|  
+|list box|[CListBox](../mfc/reference/clistbox-class.md)|Box that contains a list of strings|No|  
+|[month calendar](../mfc/using-cmonthcalctrl.md)|[CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)|Control that displays date information|Yes|  
+|[progress](../mfc/using-cprogressctrl.md)|[CProgressCtrl](../mfc/reference/cprogressctrl-class.md)|Window that indicates progress of a long operation|Yes|  
+|[rebar](../mfc/using-crebarctrl.md)|[CRebarCtrl](../mfc/reference/crebarctrl-class.md)|Tool bar that can contain additional child windows in the form of controls|Yes|  
+|[rich edit](../mfc/using-cricheditctrl.md)|[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)|Window in which user can edit with character and paragraph formatting (see [Classes Related to Rich Edit Controls](../mfc/classes-related-to-rich-edit-controls.md))|Yes|  
+|scroll bar|[CScrollBar](../mfc/reference/cscrollbar-class.md)|Scroll bar used as a control inside a dialog box (not on a window)|No|  
+|[slider](../mfc/using-csliderctrl.md)|[CSliderCtrl](../mfc/reference/csliderctrl-class.md)|Window containing a slider control with optional tick marks|Yes|  
+|[spin button](../mfc/using-cspinbuttonctrl.md)|[CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)|Pair of arrow buttons user can click to increment or decrement a value|Yes|  
+|static-text|[CStatic](../mfc/reference/cstatic-class.md)|Text for labeling other controls|No|  
+|[status bar](../mfc/using-cstatusbarctrl.md)|[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)|Window for displaying status information, similar to MFC class `CStatusBar`|Yes|  
+|[tab](../mfc/using-ctabctrl.md)|[CTabCtrl](../mfc/reference/ctabctrl-class.md)|Analogous to the dividers in a notebook; used in "tab dialog boxes" or property sheets|Yes|  
+|[toolbar](../mfc/using-ctoolbarctrl.md)|[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)|Window with command-generating buttons, similar to MFC class `CToolBar`|Yes|  
+|[tool tip](../mfc/using-ctooltipctrl.md)|[CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)|Small pop-up window that describes purpose of a toolbar button or other tool|Yes|  
+|[tree](../mfc/using-ctreectrl.md)|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|Window that displays a hierarchical list of items|Yes|  
   
-### Scegliere l'argomento su cui visualizzare maggiori informazioni  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   Un controllo individuale: vedere la tabella [Controlli comuni di Windows e classi MFC](#_core_windows_common_controls_and_mfc_classes) in questo argomento per collegamenti a tutti i controlli  
+-   An individual control: see the table [Windows Common Controls and MFC Classes](#_core_windows_common_controls_and_mfc_classes) in this topic for links to all controls  
   
--   [Making and using controls \(Creazione e uso di controlli\)](../mfc/making-and-using-controls.md)  
+-   [Making and using controls](../mfc/making-and-using-controls.md)  
   
--   [Using the dialog editor to add controls \(Uso dell'editor finestre per aggiungere controlli\)](../mfc/using-the-dialog-editor-to-add-controls.md)  
+-   [Using the dialog editor to add controls](../mfc/using-the-dialog-editor-to-add-controls.md)  
   
--   [Adding controls to a dialog box by hand \(Aggiunta manuale di controlli a una finestra di dialogo\)](../mfc/adding-controls-by-hand.md)  
+-   [Adding controls to a dialog box by hand](../mfc/adding-controls-by-hand.md)  
   
--   [Deriving control classes from the MFC control classes \(Derivazione di classi di controlli da classi di controlli MFC\)](../mfc/deriving-controls-from-a-standard-control.md)  
+-   [Deriving control classes from the MFC control classes](../mfc/deriving-controls-from-a-standard-control.md)  
   
--   [Using common controls as child windows \(Uso di controlli comuni come finestre figlio\)](../mfc/using-a-common-control-as-a-child-window.md)  
+-   [Using common controls as child windows](../mfc/using-a-common-control-as-a-child-window.md)  
   
--   [Notifications from common controls \(Notifiche da controlli comuni\)](../mfc/receiving-notification-from-common-controls.md)  
+-   [Notifications from common controls](../mfc/receiving-notification-from-common-controls.md)  
   
--   [Add common controls to a dialog box](../mfc/using-common-controls-in-a-dialog-box.md) \(Aggiungere controlli comuni a una finestra di dialogo\).  
+-   [Add common controls to a dialog box](../mfc/using-common-controls-in-a-dialog-box.md).  
   
--   [Derive a control from a standard Windows control \(Derivare un controllo da un controllo Windows standard\)](../mfc/deriving-controls-from-a-standard-control.md)  
+-   [Derive a control from a standard Windows control](../mfc/deriving-controls-from-a-standard-control.md)  
   
--   [Access dialog\-box controls with type safety \(Accedere ai controlli della finestra di dialogo con indipendenza dai tipi\)](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)  
+-   [Access dialog-box controls with type safety](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)  
   
--   [Receive notification messages from common controls \(Ricevere messaggi di notifica da controlli comuni\)](../mfc/receiving-notification-from-common-controls.md)  
+-   [Receive notification messages from common controls](../mfc/receiving-notification-from-common-controls.md)  
   
--   [Esempi](../mfc/common-control-sample-list.md)  
+-   [Samples](../mfc/common-control-sample-list.md)  
   
- Per informazioni sui controlli comuni di Windows nel [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)], vedere [Common Controls](http://msdn.microsoft.com/library/windows/desktop/bb775493) \(Controlli comuni\).  
+ For information about Windows common controls in the Windows SDK, see [Common Controls](http://msdn.microsoft.com/library/windows/desktop/bb775493).  
   
-## Vedere anche  
- [Elementi dell'interfaccia utente](../mfc/user-interface-elements-mfc.md)   
- [Dialog Editor](../mfc/dialog-editor.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)   
+ [Dialog Editor](../windows/dialog-editor.md)
+
+

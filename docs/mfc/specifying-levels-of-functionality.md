@@ -1,87 +1,106 @@
 ---
-title: "Specifica dei livelli di funzionalit&#224; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CObject (classe), aggiunta di funzionalità a classi derivate"
-  - "supporto della creazione dinamica"
-  - "livelli [C++]"
-  - "livelli [C++], funzionalità in CObject"
-  - "runtime [C++], informazioni sulle classi"
-  - "classe in fase di esecuzione, supporto delle informazioni"
-  - "serializzazione [C++], Cobject"
+title: Specifying Levels of Functionality | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CObject class [MFC], adding functionality to derived classes
+- runtime [MFC], class information
+- serialization [MFC], Cobject
+- dynamic creation support
+- levels [MFC], functionality in CObject
+- run-time class [MFC], information support
+- levels [MFC]
 ms.assetid: 562669ba-c858-4f66-b5f1-b3beeea4f486
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Specifica dei livelli di funzionalit&#224;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3caa6b3fb3ae939c11646d54282edeb25a8740ac
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-In questo articolo viene descritto come aggiungere i seguenti livelli di funzionalità al [CObject](../mfc/reference/cobject-class.md)\- classe derivata:  
+---
+# <a name="specifying-levels-of-functionality"></a>Specifying Levels of Functionality
+This article describes how to add the following levels of functionality to your [CObject](../mfc/reference/cobject-class.md)-derived class:  
   
--   [Informazioni sulla classe di runtime](#_core_to_add_run.2d.time_class_information)  
+-   [Run-time class information](#_core_to_add_run.2d.time_class_information)  
   
--   [Supporto dinamico di progettazione](#_core_to_add_dynamic_creation_support)  
+-   [Dynamic creation support](#_core_to_add_dynamic_creation_support)  
   
--   [Supporto della serializzazione](#_core_to_add_serialization_support)  
+-   [Serialization support](#_core_to_add_serialization_support)  
   
- Per una descrizione generale di funzionalità di `CObject`, vedere l'articolo [Derivando una classe da CObject](../mfc/deriving-a-class-from-cobject.md).  
+ For a general description of `CObject` functionality, see the article [Deriving a Class from CObject](../mfc/deriving-a-class-from-cobject.md).  
   
-#### Per aggiungere informazioni sulla classe di runtime  
+-   [Run-time class information](#_core_to_add_run.2d.time_class_information)  
+#### <a name="_core_to_add_run.2d.time_class_information"></a> To add run-time class information  
   
-1.  Derivare la classe da `CObject`, come descritto nell'articolo di [Derivando una classe da CObject](../mfc/deriving-a-class-from-cobject.md).  
+1.  Derive your class from `CObject`, as described in the [Deriving a Class from CObject](../mfc/deriving-a-class-from-cobject.md) article.  
   
-2.  Utilizzare la macro di `DECLARE_DYNAMIC` nella dichiarazione di classe, come illustrato di seguito:  
+2.  Use the `DECLARE_DYNAMIC` macro in your class declaration, as shown here:  
   
-     [!code-cpp[NVC_MFCCObjectSample#2](../mfc/codesnippet/CPP/specifying-levels-of-functionality_1.h)]  
+     [!code-cpp[NVC_MFCCObjectSample#2](../mfc/codesnippet/cpp/specifying-levels-of-functionality_1.h)]  
   
-3.  Utilizzare la macro di `IMPLEMENT_DYNAMIC` nel file di implementazione \(.CPP\) della classe.  Questa macro accetta come argomenti il nome della classe e della relativa classe base, come segue:  
+3.  Use the `IMPLEMENT_DYNAMIC` macro in the implementation file (.CPP) of your class. This macro takes as arguments the name of the class and its base class, as follows:  
   
-     [!code-cpp[NVC_MFCCObjectSample#3](../mfc/codesnippet/CPP/specifying-levels-of-functionality_2.cpp)]  
+     [!code-cpp[NVC_MFCCObjectSample#3](../mfc/codesnippet/cpp/specifying-levels-of-functionality_2.cpp)]  
   
 > [!NOTE]
->  `IMPLEMENT_DYNAMIC` sempre inserito nel file di implementazione \(.CPP\) della classe.  La macro di `IMPLEMENT_DYNAMIC` deve essere valutata soltanto una volta durante la compilazione e non deve essere utilizzata in un file di interfaccia \(. H\) che potrebbe potenzialmente essere incluso in più file.  
+>  Always put `IMPLEMENT_DYNAMIC` in the implementation file (.CPP) for your class. The `IMPLEMENT_DYNAMIC` macro should be evaluated only once during a compilation and therefore should not be used in an interface file (.H) that could potentially be included in more than one file.  
   
-#### Per aggiungere il supporto dinamico di progettazione  
+#### <a name="_core_to_add_dynamic_creation_support"></a> To add dynamic creation support  
   
-1.  Derivare la classe da `CObject`.  
+1.  Derive your class from `CObject`.  
   
-2.  Utilizzare la macro di `DECLARE_DYNCREATE` nella dichiarazione di classe.  
+2.  Use the `DECLARE_DYNCREATE` macro in the class declaration.  
   
-3.  Definire un costruttore senza argomenti \(un costruttore predefinito\).  
+3.  Define a constructor with no arguments (a default constructor).  
   
-4.  Utilizzare la macro di `IMPLEMENT_DYNCREATE` nel file di implementazione della classe.  
+4.  Use the `IMPLEMENT_DYNCREATE` macro in the class implementation file.  
   
-#### Per aggiungere il supporto della serializzazione  
+#### <a name="_core_to_add_serialization_support"></a> To add serialization support  
   
-1.  Derivare la classe da `CObject`.  
+1.  Derive your class from `CObject`.  
   
-2.  Eseguire l'override della funzione membro di `Serialize`.  
+2.  Override the `Serialize` member function.  
   
     > [!NOTE]
-    >  Se si chiama direttamente `Serialize`, ovvero, non si desidera serializzare l'oggetto tramite un puntatore polimorfico, omettere i passaggi da 3 a 5.  
+    >  If you call `Serialize` directly, that is, you do not want to serialize the object through a polymorphic pointer, omit steps 3 through 5.  
   
-3.  Utilizzare la macro di `DECLARE_SERIAL` nella dichiarazione di classe.  
+3.  Use the `DECLARE_SERIAL` macro in the class declaration.  
   
-4.  Definire un costruttore senza argomenti \(un costruttore predefinito\).  
+4.  Define a constructor with no arguments (a default constructor).  
   
-5.  Utilizzare la macro di `IMPLEMENT_SERIAL` nel file di implementazione della classe.  
+5.  Use the `IMPLEMENT_SERIAL` macro in the class implementation file.  
   
 > [!NOTE]
->  Punti "di un puntatore polimorfico" a un oggetto di una classe \(chiamata A\) o a un oggetto di qualsiasi classe derivata da ricordare \(A, B\).  Per serializzare tramite un puntatore polimorfico, il framework deve determinare la classe di runtime dell'oggetto che si sta la serializzazione \(B\), poiché potrebbe essere un oggetto di qualsiasi classe derivata da una classe di base \(A\).  
+>  A "polymorphic pointer" points to an object of a class (call it A) or to an object of any class derived from A (say, B). To serialize through a polymorphic pointer, the framework must determine the run-time class of the object it is serializing (B), since it might be an object of any class derived from some base class (A).  
   
- Per ulteriori informazioni su come attivare la serializzazione quando si deriva la classe da `CObject`, vedere gli articoli [File in MFC](../mfc/files-in-mfc.md) e [Serializzazione](../mfc/serialization-in-mfc.md).  
+ For more details on how to enable serialization when you derive your class from `CObject`, see the articles [Files in MFC](../mfc/files-in-mfc.md) and [Serialization](../mfc/serialization-in-mfc.md).  
   
-## Vedere anche  
- [Derivazione da una classe da CObject](../mfc/deriving-a-class-from-cobject.md)
+## <a name="see-also"></a>See Also  
+ [Deriving a Class from CObject](../mfc/deriving-a-class-from-cobject.md)
+

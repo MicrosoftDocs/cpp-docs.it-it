@@ -1,54 +1,73 @@
 ---
-title: "Utilizzo di finestre cornice | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "finestre cornice [C++], utilizzo"
-  - "MFC [C++], finestre cornice"
-  - "finestre [C++], finestre cornice"
+title: Using Frame Windows | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- windows [MFC], frame windows
+- frame windows [MFC], using
+- MFC, frame windows
 ms.assetid: 4d773238-11f6-4ccf-8114-57310c5aaa2d
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Utilizzo di finestre cornice
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1d570d89da4acf7ec3b13092661725bd21d42f86
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Il framework MFC creazione di finestre le finestre cornice \- e i relativi punti di vista e documenti \- come parte della relativa implementazione di comandi new e apri dal menu File.  Poiché il framework esegue la maggior quantità di lavoro della finestra cornice automaticamente, svolgete solo un piccolo ruolo nel creare, quando si utilizzano e nella distruzione delle finestre.  È possibile, tuttavia, in modo esplicito creare finestre e le finestre figlio per scopi speciali.  
+---
+# <a name="using-frame-windows"></a>Using Frame Windows
+The MFC framework creates document frame windows — and their views and documents — as part of its implementation of the New and Open commands on the File menu. Because the framework does most of the frame-window work for you, you play only a small role in creating, using, and destroying those windows. You can, however, explicitly create your own frame windows and child windows for special purposes.  
   
-## Scegliere l'argomento su cui visualizzare maggiori informazioni  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Creazione delle finestre di documento](../mfc/creating-document-frame-windows.md)  
+-   [Creating document frame windows](../mfc/creating-document-frame-windows.md)  
   
--   [Quando inizializzare gli oggetti CWnd](../mfc/when-to-initialize-cwnd-objects.md)  
+-   [When to Initialize CWnd Objects](../mfc/when-to-initialize-cwnd-objects.md)  
   
--   [Eliminazione permanente delle finestre](../mfc/destroying-frame-windows.md)  
+-   [Destroying frame windows](../mfc/destroying-frame-windows.md)  
   
--   [Gestione di finestre figlio MDI](../mfc/managing-mdi-child-windows.md)  
+-   [Managing MDI child windows](../mfc/managing-mdi-child-windows.md)  
   
--   [Gestire la visualizzazione corrente](../mfc/managing-the-current-view.md)  
+-   [Managing the current view](../mfc/managing-the-current-view.md)  
   
--   [Gestire i menu, le barre di controllo e i tasti di scelta rapida](../mfc/managing-menus-control-bars-and-accelerators.md)  
+-   [Managing menus, control bars, and accelerators](../mfc/managing-menus-control-bars-and-accelerators.md)  
   
--   [Trascinandone i file in una finestra cornice](../mfc/dragging-and-dropping-files-in-a-frame-window.md)  
+-   [Dragging and dropping files in a frame window](../mfc/dragging-and-dropping-files-in-a-frame-window.md)  
   
--   [Rispondendo allo scambio dinamico dati \(DDE\)](../mfc/responding-to-dynamic-data-exchange-dde.md)  
+-   [Responding to dynamic data exchange (DDE)](../mfc/responding-to-dynamic-data-exchange-dde.md)  
   
--   [Orchestrare altre azioni della finestra](../mfc/orchestrating-other-window-actions.md)  
+-   [Orchestrating other window actions](../mfc/orchestrating-other-window-actions.md)  
   
--   [Gestire guida sensibile al contesto](../mfc/orchestrating-other-window-actions.md)  
+-   [Managing context-sensitive help](../mfc/orchestrating-other-window-actions.md)  
   
--   [Il ruolo della finestra cornice nella stampa e in anteprima di stampa](../mfc/orchestrating-other-window-actions.md)  
+-   [The frame window's role in printing and print preview](../mfc/orchestrating-other-window-actions.md)  
   
-## Vedere anche  
- [Finestre cornice](../mfc/frame-windows.md)
+## <a name="see-also"></a>See Also  
+ [Frame Windows](../mfc/frame-windows.md)
+
+

@@ -1,43 +1,62 @@
 ---
-title: "Sfondo OLE: collegamento e incorporamento | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "oggetti incorporati [C++]"
-  - "tipi di elemento"
-  - "tipi di elemento, definizione"
-  - "elementi collegati (OLE) [C++]"
-  - "elementi incorporati OLE"
-  - "elementi OLE, tipi"
-  - "OLE, elementi collegati"
+title: 'OLE Background: Linking and Embedding | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE embedded items [MFC]
+- item types [MFC], defined
+- item types [MFC]
+- OLE [MFC], linked items
+- linked items (OLE) [MFC]
+- embedded objects [MFC]
+- OLE items [MFC], types
 ms.assetid: 11107711-eb96-4099-8f5c-7910bb3ecb75
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Sfondo OLE: collegamento e incorporamento
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ab76058d859758ac9c42e63839ad2fd683e58e08
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Utilizzando il comando Incolla in un'applicazione contenitore può creare una componente incorporata, o un elemento incorporato.  I dati di origine per un elemento incorporato sono archiviati come parte del documento OLE che lo contiene.  In questo modo, un documento di testo può contenere testo e può inoltre contenere bitmap, grafici, formule, o qualsiasi altro tipo di dati.  
+---
+# <a name="ole-background-linking-and-embedding"></a>OLE Background: Linking and Embedding
+Using the Paste command in a container application can create an embedded component, or embedded item. The source data for an embedded item is stored as part of the OLE document that contains it. In this way, a document file for a word processor document can contain text and also can contain bitmaps, graphs, formulas, or any other type of data.  
   
- OLE fornisce un altro modo per includere i dati da un'altra applicazione: creare una parte collegata, o un elemento collegato, o un collegamento.  I passaggi per creare un elemento collegato sono simili a quelli per creare un elemento incorporato, ad eccezione di utilizzare il comando Incolla link anziché il comando Incolla.  A differenza di una componente incorporata, una componente collegata memorizza un percorso ai dati originali, i quali sono spesso in un file separato.  
+ OLE provides another way to incorporate data from another application: creating a linked component, or linked item, or a link. The steps for creating a linked item are similar to those for creating an embedded item, except that you use the Paste Link command instead of the Paste command. Unlike an embedded component, a linked component stores a path to the original data, which is often in a separate file.  
   
- Ad esempio, se si utilizza un documento di testo e si crea un elemento collegato ad alcune celle del foglio di lavoro, i dati relativi all'elemento collegato vengono archiviati nel documento originale del foglio di lavoro.  Il documento di testo contiene solo le informazioni che specificano la posizione in cui l'elemento è disponibile, ovvero, contiene un collegamento al documento originale del foglio di lavoro.  Quando si fa doppio clic sulle celle, l'applicazione del foglio di lavoro viene avviata e il documento originale del foglio di lavoro viene caricato da dove è stato archiviato.  
+ For example, if you are working in a word processor document and create a linked item to some spreadsheet cells, the data for the linked item is stored in the original spreadsheet document. The word processor document contains only the information specifying where the item can be found, that is, it contains a link to the original spreadsheet document. When you double-click the cells, the spreadsheet application is launched and the original spreadsheet document is loaded from where it was stored.  
   
- Ogni elemento OLE, se incorporato o collegato, è associato a un tipo che si basa sull'applicazione che lo ha creato.  Ad esempio, un elemento di Microsoft Paintbrush è un tipo di elemento e un elemento di Microsoft Excel è un altro tipo.  Alcune applicazioni, tuttavia, possono creare più di un tipo di elemento.  Ad esempio, Microsoft Excel può creare elementi del foglio di lavoro, elementi del grafico e elementi di macrosheet.  Ognuno di questi elementi può essere identificato in modo univoco dal sistema con l'identificatore di classe o **CLSID**.  
+ Every OLE item, whether embedded or linked, has a type associated with it based on the application that created it. For example, a Microsoft Paintbrush item is one type of item, and a Microsoft Excel item is another type. Some applications, however, can create more than one item type. For example, Microsoft Excel can create worksheet items, chart items, and macrosheet items. Each of these items can be uniquely identified by the system using a Class Identifier or **CLSID**.  
   
-## Vedere anche  
- [Sfondo OLE](../mfc/ole-background.md)   
- [Sfondo OLE: contenitori e server](../mfc/ole-background-containers-and-servers.md)   
- [Contenitori: elementi client](../mfc/containers-client-items.md)   
- [Server: elementi server](../mfc/servers-server-items.md)
+## <a name="see-also"></a>See Also  
+ [OLE Background](../mfc/ole-background.md)   
+ [OLE Background: Containers and Servers](../mfc/ole-background-containers-and-servers.md)   
+ [Containers: Client Items](../mfc/containers-client-items.md)   
+ [Servers: Server Items](../mfc/servers-server-items.md)
+
+

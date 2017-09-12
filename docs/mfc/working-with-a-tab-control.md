@@ -1,39 +1,58 @@
 ---
-title: "Utilizzo di un controllo Tab | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTabCtrl (classe), utilizzo"
-  - "controlli delle schede, utilizzo"
-  - "controlli delle schede, utilizzo"
+title: Working with a Tab Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CTabCtrl class [MFC], using
+- tab controls [MFC], working with
+- tab controls [MFC], using
 ms.assetid: 819488e3-4944-44b7-9483-195edb8e0aed
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Utilizzo di un controllo Tab
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3ab06d599c81b9c91b7c6e5aa87013daa1c78506
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Il modo più semplice per utilizzare un controllo Struttura a schede \([CTabCtrl](../mfc/reference/ctabctrl-class.md)\) è aggiungendolo a una risorsa modello di finestra di dialogo con l'editor finestre.  È inoltre possibile utilizzare un controllo Struttura a schede da sola.  MFC chiama **InitCommonControls** automaticamente.  Le attività principali sono i seguenti:  
+---
+# <a name="working-with-a-tab-control"></a>Working with a Tab Control
+The easiest way to use a tab control ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) is by adding it to a dialog template resource with the dialog editor. You can also use a tab control by itself. MFC calls **InitCommonControls** for you. The key tasks are as follows:  
   
--   [Creazione del controllo Struttura a schede](../mfc/creating-the-tab-control.md)  
+-   [Creating the tab control](../mfc/creating-the-tab-control.md)  
   
--   [Schede di aggiunta a un controllo Struttura a schede](../mfc/adding-tabs-to-a-tab-control.md)  
+-   [Adding tabs to a tab control](../mfc/adding-tabs-to-a-tab-control.md)  
   
--   [Messaggi di notifica del controllo Struttura a schede di elaborazione](../mfc/processing-tab-control-notification-messages.md)  
+-   [Processing tab control notification messages](../mfc/processing-tab-control-notification-messages.md)  
   
- Se il controllo Struttura a schede viene incorporato in una visualizzazione padre o in una classe finestra di dialogo, il controllo viene eliminato quando l'elemento padre viene eliminato.  
+ If the tab control object is embedded in a parent view or dialog class, the control is destroyed when the parent is destroyed.  
   
-## Vedere anche  
- [Utilizzo di CTabCtrl](../mfc/using-ctabctrl.md)   
- [Controlli](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTabCtrl](../mfc/using-ctabctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

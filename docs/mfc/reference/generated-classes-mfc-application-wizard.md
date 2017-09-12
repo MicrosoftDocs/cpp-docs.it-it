@@ -1,48 +1,67 @@
 ---
-title: "Classi generate, Creazione guidata applicazione MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.mfc.exe.classes"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Creazione guidata applicazione MFC, classi generate"
+title: Generated Classes, MFC Application Wizard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.appwiz.mfc.exe.classes
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC Application Wizard, generated classes
 ms.assetid: 5f33209c-7f01-4f72-8c1c-6f02f507ba9f
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Classi generate, Creazione guidata applicazione MFC
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f2c57a0297648b05928ad6d1fecb2abb0b103d87
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-In questo argomento vengono elencati i nomi delle classi di base e dei file generati dal progetto.  Per impostazione predefinita, i nomi sono basati sul nome del progetto specificato nella finestra di dialogo **Nuovo progetto**.  È possibile modificare la maggior parte di questi nomi, come descritto di seguito:  
+---
+# <a name="generated-classes-mfc-application-wizard"></a>Generated Classes, MFC Application Wizard
+This topic lists the names of base classes and files that your project generates. By default, the names are based on the project name that you specified in the **New Project Dialog Box**. You can change most of these names, as described here:  
   
- **Classi generate**  
- I nomi delle classi create per il progetto.  Per impostazione predefinita, i nomi sono basati sul nome del progetto.  Il progetto MFC predefinito viene creata la classe di visualizzazione c*ProjName*, la classe di un'applicazione C\/C\+\+*ProjName*, la classe doc c*ProjName*, una classe CMainFrame e una classe di CChildFrame.  Tutti gli altri valori in questa schermata riflettono le informazioni relative alla classe correntemente selezionata nell'elenco **Classi generate**.  
+ **Generated classes**  
+ The names of the classes created for the project. By default, the names are based on the project name. The default MFC project creates a C*ProjName*View class, a C*ProjName*App class, a C*ProjName*Doc class, a CMainFrame class, and a CChildFrame class. All other values on this page contain information about the class currently selected in the **Generated classes** list.  
   
- Per modificare il nome di una classe, utilizzare la casella di testo **Nome classe**.  
+ To change a class name, use the **Class Name** text box.  
   
- **Nome di classe**  
- Il nome della classe correntemente selezionata nell'elenco **Classi generate**.  Se la casella è attiva, è possibile modificare il nome della classe.  Quando si sposta lo stato attivo dalla casella **Nome classe**, qualsiasi modifica apportata al nome della classe selezionata viene visualizzata nell'elenco **Classi generate**.  
+ **Class name**  
+ The name of the class that is currently selected in the **Generated classes** list. If the box is active, you can change the class name. When you change the focus from the **Class Name** box, any change to the selected class name appears in the **Generated classes** list.  
   
- **File H**  
- Il nome del file di intestazione della classe correntemente selezionata nell'elenco **Classi generate**.  Se la casella di testo è attiva, è possibile modificare il nome del file di intestazione.  
+ **.h file**  
+ The name of the header file of the class that is currently selected in the **Generated classes** list. If the text box is active, you can change the name of the header file.  
   
- **Classe base**  
- Il nome della classe di base della classe correntemente selezionata nell'elenco **Classi generate**.  Se la casella è attiva, è possibile selezionare dall'elenco un'altra classe come classe base.  
+ **Base class**  
+ The name of the base class of the currently selected class in the **Generated classes** list. If the box is active, you can select from the list another class for the base class.  
   
- **File CPP**  
- Il nome del file di codice sorgente associato alla classe selezionata.  Se la casella di testo è attiva, è possibile modificare il nome del file di implementazione.  
+ **.cpp file**  
+ The name of the source code file that is associated with the selected class. If the text box is active, you can change the name of the implementation file.  
   
-## Vedere anche  
- [Funzionalità avanzate, Creazione guidata applicazione MFC](../../mfc/reference/advanced-features-mfc-application-wizard.md)   
- [Tipi di file creati per i progetti di Visual C\+\+](../../ide/file-types-created-for-visual-cpp-projects.md)
+## <a name="see-also"></a>See Also  
+ [Advanced Features, MFC Application Wizard](../../mfc/reference/advanced-features-mfc-application-wizard.md)   
+ [File Types Created for Visual C++ Projects](../../ide/file-types-created-for-visual-cpp-projects.md)
+
+

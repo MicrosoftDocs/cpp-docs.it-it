@@ -1,5 +1,5 @@
 ---
-title: Impostazioni dell&quot;applicazione, creazione guidata DLL MFC | Documenti di Microsoft
+title: Application Settings, MFC DLL Wizard | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,41 +33,41 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: df1e3de3e1548fe4c4c340a30127d9916998ba64
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a4721fbb1f0abfdda66dfb70ad1f4e44cf848fd3
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="application-settings-mfc-dll-wizard"></a>Impostazioni applicazione, Creazione guidata DLL MFC
-Utilizzare questa pagina della procedura guidata DLL MFC per progettare e aggiungere funzionalità di base a un nuovo progetto DLL MFC.  
+# <a name="application-settings-mfc-dll-wizard"></a>Application Settings, MFC DLL Wizard
+Use this page of the MFC DLL wizard to design and add basic features to a new MFC DLL project.  
   
-## <a name="dll-type"></a>Tipo di DLL  
- Selezionare il tipo di DLL che si desidera creare.  
+## <a name="dll-type"></a>DLL type  
+ Select the type of DLL you want to create.  
   
- **DLL regolari utilizzando DLL MFC condivisa**  
- Selezionare questa opzione per collegare la libreria MFC al programma come DLL condivisa. Tramite questa opzione, è possibile condividere oggetti MFC tra la DLL e l'applicazione chiamante. Il programma effettua chiamate alla libreria MFC in fase di esecuzione. Questa opzione consente di ridurre i requisiti di memoria e disco del programma se è costituita da più file eseguibili che utilizzano la libreria MFC. Applicazioni Win32 sia MFC è possono chiamare funzioni nella DLL. È necessario ridistribuire le DLL MFC con questo tipo di progetto.  
+ **Regular MFC DLL using shared MFC DLL**  
+ Select this option to link the MFC library to your program as a shared DLL. Using this option, you cannot share MFC objects between your DLL and the calling application. Your program makes calls to the MFC library at run time. This option reduces the disk and memory requirements of your program if it is composed of multiple execution files that use the MFC library. Both Win32 and MFC programs can call functions in your DLL. You must redistribute the MFC DLL with this type of project.  
   
- **DLL regolari con collegata statico MFC**  
- Selezionare questa opzione per collegare il programma in modo statico alla libreria MFC in fase di compilazione. Applicazioni Win32 sia MFC è possono chiamare funzioni nella DLL. Anche se questa opzione aumenta le dimensioni del programma, non è necessario ridistribuire le DLL MFC con questo tipo di progetto. È possibile condividere oggetti MFC tra la DLL e l'applicazione chiamante.  
+ **Regular MFC DLL with MFC statically linked**  
+ Select this option to link your program statically to the MFC library at build time. Both Win32 and MFC programs can call functions in your DLL. While this option increases the size of your program, you do not need to redistribute the MFC DLL with this type of project. You cannot share MFC objects between your DLL and the calling application.  
   
- **DLL di estensione MFC**  
- Selezionare questa opzione se si desidera che il programma per effettuare chiamate alla libreria MFC in fase di esecuzione e, se si desidera condividere oggetti MFC tra la DLL e l'applicazione chiamante. Questa opzione consente di ridurre i requisiti di memoria e disco del programma, se è costituita da più file eseguibili che utilizzano la libreria MFC. Solo i programmi MFC è possono chiamare funzioni nella DLL. È necessario ridistribuire le DLL MFC con questo tipo di progetto.  
+ **MFC extension DLL**  
+ Select this option if you want your program to make calls to the MFC library at run time, and if you want to share MFC objects between your DLL and the calling application. This option reduces the disk and memory requirements of your program, if it is composed of multiple executable files that all use the MFC library. Only MFC programs can call functions in your DLL. You must redistribute the MFC DLL with this type of project.  
   
-## <a name="additional-features"></a>Funzionalità aggiuntive  
- Selezionare se la DLL MFC deve supportare l'automazione e se deve supportare Windows sockets.  
+## <a name="additional-features"></a>Additional features  
+ Select whether your MFC DLL should support automation and whether it should support Windows sockets.  
   
- **Automazione**  
- Selezionare **automazione** per consentire al programma di modificare oggetti implementati in un altro programma. Selezione di **automazione** espone anche un programma per altri client di automazione. Vedere [automazione](../../mfc/automation.md) per ulteriori informazioni.  
+ **Automation**  
+ Select **Automation** to allow your program to manipulate objects implemented in another program. Selecting **Automation** also exposes your program to other Automation clients. See [Automation](../../mfc/automation.md) for more information.  
   
- **Socket di Windows**  
- Selezionare questa opzione per indicare che il programma supporta Windows sockets. Consente di scrivere programmi in grado di comunicare su reti TCP/IP.  
+ **Windows sockets**  
+ Select this option to indicate that your program supports Windows sockets. Windows sockets allow you to write programs that communicate over TCP/IP networks.  
   
- Quando la DLL MFC con Windows sockets viene creato il supporto, [:: InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) Inizializza il supporto per socket e il file di intestazione MFC StdAfx. H include AfxSock.  
+ When your MFC DLL with Windows sockets support is created, [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) initializes support for sockets and the MFC header file StdAfx.h includes AfxSock.h.  
   
-## <a name="see-also"></a>Vedere anche  
- [Creazione guidata DLL MFC](../../mfc/reference/mfc-dll-wizard.md)   
- [Creazione di un progetto DLL MFC](../../mfc/reference/creating-an-mfc-dll-project.md)
+## <a name="see-also"></a>See Also  
+ [MFC DLL Wizard](../../mfc/reference/mfc-dll-wizard.md)   
+ [Creating an MFC DLL Project](../../mfc/reference/creating-an-mfc-dll-project.md)
 
 

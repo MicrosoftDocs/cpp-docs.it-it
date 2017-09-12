@@ -1,5 +1,5 @@
 ---
-title: Classe COleLinksDialog | Documenti di Microsoft
+title: COleLinksDialog Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,10 +17,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Edit Links dialog box
-- COleLinksDialog class
-- dialog boxes, OLE
-- OLE Edit Links dialog box
+- COleLinksDialog [MFC], COleLinksDialog
+- COleLinksDialog [MFC], DoModal
+- COleLinksDialog [MFC], m_el
 ms.assetid: fb2eb638-2809-46db-ac74-392a732affc7
 caps.latest.revision: 22
 author: mikeblome
@@ -40,53 +39,53 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: ed256b3a4d3236863e3dcccb7614949f650f058b
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fa51351bf888268c1bddf0f4b1247216de9e2e4d
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="colelinksdialog-class"></a>Classe COleLinksDialog
-Utilizzato per la finestra di dialogo di modifica collegamenti OLE.  
+# <a name="colelinksdialog-class"></a>COleLinksDialog Class
+Used for the OLE Edit Links dialog box.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COleLinksDialog : public COleDialog  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Costruttori pubblici  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleLinksDialog::COleLinksDialog](#colelinksdialog)|Costruisce un oggetto `COleLinksDialog`.|  
+|[COleLinksDialog::COleLinksDialog](#colelinksdialog)|Constructs a `COleLinksDialog` object.|  
   
-### <a name="public-methods"></a>Metodi pubblici  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleLinksDialog::DoModal](#domodal)|Visualizza la finestra di dialogo Modifica collegamenti OLE.|  
+|[COleLinksDialog::DoModal](#domodal)|Displays the OLE Edit Links dialog box.|  
   
-### <a name="public-data-members"></a>Membri dati pubblici  
+### <a name="public-data-members"></a>Public Data Members  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleLinksDialog::m_el](#m_el)|Una struttura di tipo **OLEUIEDITLINKS** che controlla il comportamento della finestra di dialogo.|  
+|[COleLinksDialog::m_el](#m_el)|A structure of type **OLEUIEDITLINKS** that controls the behavior of the dialog box.|  
   
-## <a name="remarks"></a>Note  
- Creare un oggetto della classe `COleLinksDialog` quando si desidera chiamare questa finestra di dialogo. Dopo un `COleLinksDialog` oggetto è stato costruito, è possibile utilizzare il [m_el](#m_el) struttura per inizializzare i valori o gli stati dei controlli nella finestra di dialogo. Il `m_el` struttura è di tipo **OLEUIEDITLINKS**. Per ulteriori informazioni sull'utilizzo di questa classe di finestra di dialogo, vedere il [DoModal](#domodal) funzione membro.  
+## <a name="remarks"></a>Remarks  
+ Create an object of class `COleLinksDialog` when you want to call this dialog box. After a `COleLinksDialog` object has been constructed, you can use the [m_el](#m_el) structure to initialize the values or states of controls in the dialog box. The `m_el` structure is of type **OLEUIEDITLINKS**. For more information about using this dialog class, see the [DoModal](#domodal) member function.  
   
 > [!NOTE]
->  Il codice dell'applicazione generato dalla procedura guidata contenitore utilizza questa classe.  
+>  Application Wizard-generated container code uses this class.  
   
- Per ulteriori informazioni, vedere il [OLEUIEDITLINKS](http://msdn.microsoft.com/library/windows/desktop/ms678492) nella struttura di [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see the [OLEUIEDITLINKS](http://msdn.microsoft.com/library/windows/desktop/ms678492) structure in the Windows SDK.  
   
- Per ulteriori informazioni sulle finestre di dialogo OLE specifici, vedere l'articolo [finestre di dialogo in OLE](../../mfc/dialog-boxes-in-ole.md).  
+ For more information regarding OLE-specific dialog boxes, see the article [Dialog Boxes in OLE](../../mfc/dialog-boxes-in-ole.md).  
   
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -101,30 +100,30 @@ class COleLinksDialog : public COleDialog
   
  `COleLinksDialog`  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** afxodlgs. h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxodlgs.h  
   
-##  <a name="domodal"></a>COleLinksDialog::DoModal  
- Visualizza la finestra di dialogo Modifica collegamenti OLE.  
+##  <a name="domodal"></a>  COleLinksDialog::DoModal  
+ Displays the OLE Edit Links dialog box.  
   
 ```  
 virtual INT_PTR DoModal();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Stato di completamento per la finestra di dialogo. Uno dei valori seguenti:  
+### <a name="return-value"></a>Return Value  
+ Completion status for the dialog box. One of the following values:  
   
-- **IDOK** se è stata visualizzata correttamente nella finestra di dialogo.  
+- **IDOK** if the dialog box was successfully displayed.  
   
-- **IDCANCEL** se l'utente ha annullato la finestra di dialogo.  
+- **IDCANCEL** if the user canceled the dialog box.  
   
-- **IDABORT** se si è verificato un errore. Se **IDABORT** viene restituito, chiamare il `COleDialog::GetLastError` funzione membro per ottenere ulteriori informazioni sul tipo di errore che si è verificato. Per un elenco dei possibili errori, vedere il [OleUIEditLinks](http://msdn.microsoft.com/library/windows/desktop/ms679703) in funzione il [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+- **IDABORT** if an error occurred. If **IDABORT** is returned, call the `COleDialog::GetLastError` member function to get more information about the type of error that occurred. For a listing of possible errors, see the [OleUIEditLinks](http://msdn.microsoft.com/library/windows/desktop/ms679703) function in the Windows SDK.  
   
-### <a name="remarks"></a>Note  
- Se si desidera inizializzare i vari controlli della finestra di dialogo impostando i membri di [m_el](#m_el) struttura, è necessario farlo prima di chiamare `DoModal`, ma dopo che l'oggetto finestra di dialogo.  
+### <a name="remarks"></a>Remarks  
+ If you want to initialize the various dialog box controls by setting members of the [m_el](#m_el) structure, you should do it before calling `DoModal`, but after the dialog object is constructed.  
   
-##  <a name="colelinksdialog"></a>COleLinksDialog::COleLinksDialog  
- Costruisce un oggetto `COleLinksDialog`.  
+##  <a name="colelinksdialog"></a>  COleLinksDialog::COleLinksDialog  
+ Constructs a `COleLinksDialog` object.  
   
 ```  
 COleLinksDialog (
@@ -134,36 +133,36 @@ COleLinksDialog (
     CWnd* pParentWnd = NULL);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pDoc`  
- Punta al documento OLE che contiene i collegamenti da modificare.  
+ Points to the OLE document that contains the links to be edited.  
   
  `pView`  
- Fa riferimento alla vista corrente in `pDoc`.  
+ Points to the current view on `pDoc`.  
   
  `dwFlags`  
- Flag di creazione, che contiene i valori validi sono 0 o **ELF_SHOWHELP** per specificare se il pulsante della Guida verrà visualizzato quando viene visualizzata la finestra di dialogo.  
+ Creation flag, which contains either 0 or **ELF_SHOWHELP** to specify whether the Help button will be displayed when the dialog box is displayed.  
   
  `pParentWnd`  
- Punta all'oggetto finestra padre o proprietaria (di tipo `CWnd`) a cui appartiene l'oggetto finestra di dialogo. In questo caso **NULL**, la finestra padre della finestra di dialogo è impostata nella finestra principale dell'applicazione.  
+ Points to the parent or owner window object (of type `CWnd`) to which the dialog object belongs. If it is **NULL**, the parent window of the dialog box is set to the main application window.  
   
-### <a name="remarks"></a>Note  
- Questa funzione crea solo un `COleLinksDialog` oggetto. Per visualizzare la finestra di dialogo, chiamare il [DoModal](#domodal) (funzione).  
+### <a name="remarks"></a>Remarks  
+ This function constructs only a `COleLinksDialog` object. To display the dialog box, call the [DoModal](#domodal) function.  
   
-##  <a name="m_el"></a>COleLinksDialog::m_el  
- Struttura di tipo **OLEUIEDITLINKS** utilizzato per controllare il comportamento della finestra di dialogo Modifica collegamenti.  
+##  <a name="m_el"></a>  COleLinksDialog::m_el  
+ Structure of type **OLEUIEDITLINKS** used to control the behavior of the Edit Links dialog box.  
   
 ```  
 OLEUIEDITLINKS m_el;  
 ```  
   
-### <a name="remarks"></a>Note  
- I membri di questa struttura possono essere modificati direttamente o tramite le funzioni membro.  
+### <a name="remarks"></a>Remarks  
+ Members of this structure can be modified either directly or through member functions.  
   
- Per ulteriori informazioni, vedere il [OLEUIEDITLINKS](http://msdn.microsoft.com/library/windows/desktop/ms678492) nella struttura di [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see the [OLEUIEDITLINKS](http://msdn.microsoft.com/library/windows/desktop/ms678492) structure in the Windows SDK.  
   
-## <a name="see-also"></a>Vedere anche  
- [Classe COleDialog](../../mfc/reference/coledialog-class.md)   
- [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
- [Classe COleDialog](../../mfc/reference/coledialog-class.md)
+## <a name="see-also"></a>See Also  
+ [COleDialog Class](../../mfc/reference/coledialog-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [COleDialog Class](../../mfc/reference/coledialog-class.md)
 

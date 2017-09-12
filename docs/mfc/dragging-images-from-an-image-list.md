@@ -1,44 +1,63 @@
 ---
-title: "Trascinamento di immagini da un elenco di immagini | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CImageList (classe), trascinamento di immagini da"
-  - "trascinamento di immagini da elenchi di immagini"
-  - "elenchi di immagini [C++], trascinamento di immagini da"
-  - "immagini [C++], trascinamento da elenchi di immagini"
+title: Dragging Images from an Image List | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CImageList class [MFC], dragging images from
+- dragging images from image lists [MFC]
+- image lists [MFC], dragging images from
+- images [MFC], dragging from image lists
 ms.assetid: af691db8-e4f0-4046-b7b9-9acc68d3713d
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Trascinamento di immagini da un elenco di immagini
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 15c483b33b5f2f3fa127b93343797747de093351
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-[CImageList](../mfc/reference/cimagelist-class.md) include le funzioni per trascinare un'immagine sullo schermo.  Le funzioni trascinare spostano un'immagine in modo uniforme, a colori e senza lampeggiamento del cursore.  Sia le immagini mascherate che smascherate possono essere trascinate.  
+---
+# <a name="dragging-images-from-an-image-list"></a>Dragging Images from an Image List
+[CImageList](../mfc/reference/cimagelist-class.md) includes functions for dragging an image on the screen. The dragging functions move an image smoothly, in color, and without any flashing of the cursor. Both masked and unmasked images can be dragged.  
   
- Gli elementi iniziali di funzione membro di [BeginDrag](../Topic/CImageList::BeginDrag.md) un'operazione di trascinamento.  I parametri includono l'indice dell'immagine per trascinare e la posizione dell'area sensibile nell'immagine.  L'area sensibile è un singolo pixel che le funzioni trascinare riconoscono come posizione esatta dello schermo dell'immagine.  In genere, un'applicazione imposta l'area sensibile affinché coincida con l'area sensibile di un cursore del mouse.  La funzione membro di [DragMove](../Topic/CImageList::DragMove.md) dell'immagine in una nuova posizione.  
+ The [BeginDrag](../mfc/reference/cimagelist-class.md#begindrag) member function begins a drag operation. The parameters include the index of the image to drag and the location of the hot spot within the image. The hot spot is a single pixel that the dragging functions recognize as the exact screen location of the image. Typically, an application sets the hot spot so that it coincides with the hot spot of the mouse cursor. The [DragMove](../mfc/reference/cimagelist-class.md#dragmove) member function moves the image to a new location.  
   
- La funzione membro di [DragEnter](../Topic/CImageList::DragEnter.md) imposta la posizione iniziale dell'immagine di trascinamento all'interno di una finestra e l'immagine viene disegnata nella posizione.  I parametri vengono un puntatore alla finestra in cui disegnare l'immagine e un punto che specifica le coordinate della posizione iniziale nella finestra.  Le coordinate sono relativi all'angolo superiore sinistro della finestra, non dell'area client.  Lo stesso vale per le immagini trascinare una funzione che coordinate take come parametri.  Ciò significa che è necessario compensare la larghezza degli elementi della finestra, ad esempio il bordo, la barra del titolo e la barra dei menu quando specifica le coordinate.  Se si specifica un handle di finestra di **NULL** quando chiama `DragEnter`, disegnare di trascinamento di funzioni nel contesto di dispositivo associato alla finestra del desktop e le coordinate sono relativi all'angolo superiore sinistro dello schermo.  
+ The [DragEnter](../mfc/reference/cimagelist-class.md#dragenter) member function sets the initial position of the drag image within a window and draws the image at the position. The parameters include a pointer to the window in which to draw the image and a point that specifies the coordinates of the initial position within the window. The coordinates are relative to the window's upper-left corner, not the client area. The same is true for all of the image-dragging functions that take coordinates as parameters. This means you must compensate for the widths of window elements, such as the border, title bar, and menu bar, when specifying the coordinates. If you specify a **NULL** window handle when calling `DragEnter`, the dragging functions draw the image in the device context associated with the desktop window, and the coordinates are relative to the upper-left corner of the screen.  
   
- `DragEnter` blocca tutti gli altri aggiornamenti nella finestra specificata durante un'operazione di trascinamento.  Se è necessario apportare eventuali disegno durante un'operazione di trascinamento, ad esempio evidenziazione della destinazione di un'operazione di trascinamento della selezione, è possibile nascondere temporaneamente l'immagine trascinata utilizzando la funzione membro di [DragLeave](../Topic/CImageList::DragLeave.md).  È inoltre possibile utilizzare la funzione membro di [DragShowNoLock](../Topic/CImageList::DragShowNolock.md).  
+ `DragEnter` locks all other updates to the given window during the drag operation. If you need to do any drawing during a drag operation, such as highlighting the target of a drag-and-drop operation, you can temporarily hide the dragged image by using the [DragLeave](../mfc/reference/cimagelist-class.md#dragleave) member function. You can also use the [DragShowNoLock](../mfc/reference/cimagelist-class.md#dragshownolock) member function.  
   
- Chiamare [EndDrag](../Topic/CImageList::EndDrag.md) al fatto che si trascina l'immagine.  
+ Call [EndDrag](../mfc/reference/cimagelist-class.md#enddrag) when you're done dragging the image.  
   
- La funzione membro di [SetDragCursorImage](../Topic/CImageList::SetDragCursorImage.md) crea una nuova immagine di trascinamento combinando l'immagine specificata \(in genere un'immagine del cursore del mouse\) con l'immagine di trascinamento corrente.  Poiché le funzioni trascinare utilizzano la nuova immagine durante l'operazione di trascinamento, è necessario utilizzare la funzione di [ShowCursor](http://msdn.microsoft.com/library/windows/desktop/ms648396) di windows per nascondere che il cursore del mouse dopo aver chiamato `SetDragCursorImage`.  In caso contrario, il sistema può sembrare che due cursori del mouse per la durata dell'operazione di trascinamento.  
+ The [SetDragCursorImage](../mfc/reference/cimagelist-class.md#setdragcursorimage) member function creates a new drag image by combining the given image (typically a mouse cursor image) with the current drag image. Because the dragging functions use the new image during a drag operation, you should use the Windows [ShowCursor](http://msdn.microsoft.com/library/windows/desktop/ms648396) function to hide the actual mouse cursor after calling `SetDragCursorImage`. Otherwise, the system may appear to have two mouse cursors for the duration of the drag operation.  
   
- Quando un'applicazione chiama `BeginDrag`, il sistema crea un elenco immagini temporaneo e internal e copia l'immagine di trascinamento specificata all'elenco interno.  È possibile recuperare un puntatore all'elenco temporaneo immagine di trascinamento tramite la funzione membro di [GetDragImage](../Topic/CImageList::GetDragImage.md).  La funzione recupera anche la posizione corrente del trascinamento e l'offset dell'immagine di trascinamento relativo al percorso del trascinamento.  
+ When an application calls `BeginDrag`, the system creates a temporary, internal image list and copies the specified drag image to the internal list. You can retrieve a pointer to the temporary drag image list by using the [GetDragImage](../mfc/reference/cimagelist-class.md#getdragimage) member function. The function also retrieves the current drag position and the offset of the drag image relative to the drag position.  
   
-## Vedere anche  
- [Utilizzo di CImageList](../mfc/using-cimagelist.md)   
- [Controlli](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CImageList](../mfc/using-cimagelist.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

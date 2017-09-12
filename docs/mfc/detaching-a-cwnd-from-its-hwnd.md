@@ -1,42 +1,61 @@
 ---
-title: "Disconnessione di CWnd da HWND | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CWnd"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "oggetti CWnd, disconnessione da HWND"
-  - "Detach (metodo) (classe CWnd)"
-  - "disconnessione di CWnd da HWND"
-  - "HWND, disconnessione di CWnd da"
-  - "rimozione di HWND da CWnd"
+title: Detaching a CWnd from Its HWND | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CWnd
+dev_langs:
+- C++
+helpviewer_keywords:
+- HWND, detaching CWnd from
+- removing HWNDs from CWnds
+- CWnd objects [MFC], detaching from HWND
+- detaching CWnds from HWNDs
+- Detach method (CWnd class)
 ms.assetid: 6efadf84-0517-4a3f-acfd-216e088f19c6
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Disconnessione di CWnd da HWND
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7b93a8205a5e6bafbf1561735e02b137ad4aa56e
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Per aggirare la relazione di`HWND` dell'oggetto, MFC fornisce un'altra funzione membro di `CWnd`, [Disconnetti](../Topic/CWnd::Detach.md), che disconnette l'oggetto window C\+\+ dalla finestra di windows.  Ciò impedisce il distruttore da eliminare la finestra di windows quando l'oggetto verrà eliminato.  
+---
+# <a name="detaching-a-cwnd-from-its-hwnd"></a>Detaching a CWnd from Its HWND
+If you need to circumvent the object-`HWND` relationship, MFC provides another `CWnd` member function, [Detach](../mfc/reference/cwnd-class.md#detach), which disconnects the C++ window object from the Windows window. This prevents the destructor from destroying the Windows window when the object is destroyed.  
   
-## Scegliere l'argomento su cui visualizzare maggiori informazioni  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Creare finestre](../mfc/creating-windows.md)  
+-   [Creating windows](../mfc/creating-windows.md)  
   
--   [Sequenza di distruzione della finestra](../mfc/window-destruction-sequence.md)  
+-   [Window destruction sequence](../mfc/window-destruction-sequence.md)  
   
--   [Allocando e rilasciando la finestra memoria](../mfc/allocating-and-deallocating-window-memory.md)  
+-   [Allocating and deallocating window memory](../mfc/allocating-and-deallocating-window-memory.md)  
   
-## Vedere anche  
- [Oggetti finestra](../mfc/window-objects.md)
+## <a name="see-also"></a>See Also  
+ [Window Objects](../mfc/window-objects.md)
+
+

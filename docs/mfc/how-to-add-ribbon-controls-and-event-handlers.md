@@ -1,52 +1,72 @@
 ---
-title: "Procedura: aggiungere controlli Ribbon e gestori eventi | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "gestori eventi, aggiunta"
-  - "controlli della barra multifunzione, aggiunta"
+title: 'How to: Add Ribbon Controls and Event Handlers | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- event handlers [MFC], adding
+- ribbon controls [MFC], adding
 ms.assetid: b31f25bc-ede7-49c3-9e3c-dffe4e174a69
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Procedura: aggiungere controlli Ribbon e gestori eventi
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 99bd07de331cb9281bffeb39eb78123377fe31b6
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-I controlli barra multifunzione sono elementi, quali pulsanti e caselle combinate, aggiunta ai pannelli.  I pannelli sono superfici della barra della barra multifunzione che visualizza un gruppo di controlli correlati.  
+---
+# <a name="how-to-add-ribbon-controls-and-event-handlers"></a>How to: Add Ribbon Controls and Event Handlers
+Ribbon controls are elements, such as buttons and combo boxes, that you add to panels. Panels are areas of the ribbon bar that display a group of related controls.  
   
- In questo argomento, si aprirà la finestra di progettazione della barra multifunzione, aggiungere un pulsante e quindi si collega un evento che venga visualizzato "Hello World".  
+ In this topic, you will open the Ribbon Designer, add a button, and then link an event that displays "Hello World".  
   
-### Per aprire la finestra di progettazione della barra multifunzione  
+### <a name="to-open-the-ribbon-designer"></a>To open the Ribbon Designer  
   
-1.  In Visual Studio, nel menu di **Visualizza**, fare clic su **Visualizzazione risorse**.  
+1.  In Visual Studio, on the **View** menu, click **Resource View**.  
   
-2.  In **Visualizzazione risorse**, fare doppio clic sulla risorsa barra multifunzione da visualizzare nell'area di progettazione.  
+2.  In **Resource View**, double-click the ribbon resource to display it on the design surface.  
   
-### Per aggiungere un pulsante e un gestore eventi  
+### <a name="to-add-a-button-and-an-event-handler"></a>To add a Button and an Event Handler  
   
-1.  Da **Barra degli strumenti**, scegliere **Pulsante** e trascinarla su un pannello nell'area di progettazione.  
+1.  From the **Toolbar**, click **Button** and drag it on to a panel in the design surface.  
   
-2.  Fare clic con il pulsante destro del mouse sul pulsante e fare clic **Aggiungi gestore eventi**.  
+2.  Right-click the button, and click **Add Event Handler**.  
   
-3.  In **Creazione guidata gestore eventi**, verificare le impostazioni predefinite e fare clic **Aggiungi**.  Per ulteriori informazioni, vedere [Creazione guidata gestore eventi](../ide/event-handler-wizard.md).  
+3.  In the **Event Handler Wizard**, confirm the default settings and click **Add and Edit**. For more information, see [Event Handler Wizard](../ide/event-handler-wizard.md).  
   
-4.  Nell'editor di codice, aggiungere il seguente codice nella funzione di gestione:  
+4.  In the code editor, add the following code into the handler function:  
   
-    ```  
-    MessageBox((LPCTSTR)L"Hello World");  
-    ```  
+ ```  
+    MessageBox((LPCTSTR)L"Hello World");
+
+ ```  
   
-## Vedere anche  
- [Esempio RibbonGadgets: applicazione della barra multifunzione Gadget](../top/visual-cpp-samples.md)   
- [Finestra di progettazione della barra multifunzione \(MFC\)](../mfc/ribbon-designer-mfc.md)
+## <a name="see-also"></a>See Also  
+ [RibbonGadgets Sample: Ribbon Gadgets Application](../visual-cpp-samples.md)   
+ [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md)
+
+

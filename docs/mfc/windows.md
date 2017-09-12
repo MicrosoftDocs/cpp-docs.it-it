@@ -1,76 +1,93 @@
 ---
-title: "Windows | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC [C++], finestre"
-  - "oggetti [C++], finestra"
-  - "oggetti delle finestre [C++], framework MFC"
-  - "finestre [C++]"
+title: Windows | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- objects [MFC], window
+- windows [MFC]
+- MFC, windows
+- window objects [MFC], MFC Framework
 ms.assetid: dd92bf34-842e-40fe-8aea-3028b55314d5
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Windows
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 79e436760e1a96a4e3d6e3edf9729c6d9f3cb0b8
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-La famiglia di articoli agli oggetti window nel framework MFC.  Tutte le finestre MFC derivano dalla classe [CWnd](../mfc/reference/cwnd-class.md), incluse le finestre, le visualizzazioni, le finestre di dialogo e i comandi.  
+---
+# <a name="windows"></a>Windows
+This family of articles covers window objects in the MFC framework. All MFC windows derive from class [CWnd](../mfc/reference/cwnd-class.md), including frame windows, views, dialog boxes, and controls.  
   
- Il primo gruppo di articoli viene descritto [oggetti della finestra](../mfc/window-objects.md) in generale.  Fare riferimento a questo gruppo per informazioni generali sugli oggetti della finestra C\+\+, ad esempio incapsulano un HWND e come utilizzarli quando si creano finestre, ad esempio finestre figlio.  
+ The first group of articles describes [window objects](../mfc/window-objects.md) in general. Refer to this group for general information about C++ window objects, how they encapsulate an HWND, and how you use them when creating your own windows, such as child windows.  
   
- Il secondo gruppo di articoli viene descritto [le finestre](../mfc/frame-windows.md)\- windows che inserisce un frame intorno a content in particolare.  Fare riferimento a questo gruppo per informazioni su come il framework MFC gestisce le finestre cornici e il contenuto che incorniciano, incluse le barre di controllo e visualizzazioni.  
+ The second group of articles describes [frame windows](../mfc/frame-windows.md)—windows that put a frame around content — in particular. Refer to this group for information about how the MFC framework manages frame windows and the contents that they frame, including control bars and views.  
   
-## Scegliere l'argomento su cui visualizzare maggiori informazioni  
- *Argomenti sugli oggetti Window in generale*  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
+ *Topics on Window Objects in General*  
   
--   [Oggetti Window](../mfc/window-objects.md)  
+-   [Window objects](../mfc/window-objects.md)  
   
--   [Relazione tra gli oggetti della finestra c\+\+ e l'handle di HWND](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md)  
+-   [Relationship between a C++ window objects and HWND handles](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md)  
   
--   [Classi di finestre derivate](../mfc/derived-window-classes.md)  
+-   [Derived Window classes](../mfc/derived-window-classes.md)  
   
--   [Creare gli oggetti della finestra](../mfc/creating-windows.md)  
+-   [Creating window objects](../mfc/creating-windows.md)  
   
--   [Eliminare gli oggetti Window](../mfc/destroying-window-objects.md)  
+-   [Destroying Window Objects](../mfc/destroying-window-objects.md)  
   
--   [Registrare la finestra "classe"](../mfc/registering-window-classes.md)  
+-   [Registering window "classes"](../mfc/registering-window-classes.md)  
   
--   [Utilizzo degli oggetti della finestra](../mfc/working-with-window-objects.md)  
+-   [Working with window objects](../mfc/working-with-window-objects.md)  
   
--   [Contesti di periferica](../mfc/device-contexts.md): oggetti che fanno le finestre dello stile sottoposte indipendenti dal dispositivo  
+-   [Device contexts](../mfc/device-contexts.md): objects that make Windows drawing device-independent  
   
--   [Oggetti grafici](../mfc/graphic-objects.md): penne, pennelli, tipi di carattere, bitmap, tavolozze, aree  
+-   [Graphic objects](../mfc/graphic-objects.md): pens, brushes, fonts, bitmaps, palettes, regions  
   
- *Argomenti della finestra cornice*  
+ *Frame Window Topics*  
   
--   [Le finestre](../mfc/frame-windows.md): oggetti della finestra che forniscono i frame  
+-   [Frame windows](../mfc/frame-windows.md): window objects that provide frames  
   
--   [Le finestre e visualizzazioni](../mfc/frame-windows.md)  
+-   [Frame windows and views](../mfc/frame-windows.md)  
   
--   [Classi della finestra cornice](../mfc/frame-window-classes.md)  
+-   [Frame-window classes](../mfc/frame-window-classes.md)  
   
--   [Stili finestra cornice](../mfc/frame-window-styles-cpp.md)  
+-   [Frame-window styles](../mfc/frame-window-styles-cpp.md)  
   
--   [Modificando gli stili di una finestra ha creato da MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)  
+-   [Changing the styles of a window created by MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)  
   
--   [Le finestre che fanno](../mfc/what-frame-windows-do.md)  
+-   [What frame windows do](../mfc/what-frame-windows-do.md)  
   
--   [Utilizzo delle finestre](../mfc/using-frame-windows.md)  
+-   [Using frame windows](../mfc/using-frame-windows.md)  
   
--   [Gestione delle finestre di MD\/Child \(finestra di MDICLIENT\)](../mfc/managing-mdi-child-windows.md)  
+-   [Managing MD/Child windows (the MDICLIENT window)](../mfc/managing-mdi-child-windows.md)  
   
--   [Gestire i menu, le barre di controllo e i tasti di scelta rapida](../mfc/managing-menus-control-bars-and-accelerators.md)  
+-   [Managing menus, control bars, and accelerators](../mfc/managing-menus-control-bars-and-accelerators.md)  
   
 -   [CFrameWnd](../mfc/reference/cframewnd-class.md)  
   
@@ -78,43 +95,45 @@ La famiglia di articoli agli oggetti window nel framework MFC.  Tutte le finestr
   
 -   [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)  
   
--   [Utilizzo delle visualizzazioni](../mfc/using-views.md)  
+-   [Using Views](../mfc/using-views.md)  
   
--   [Tipi di documenti multipli, visualizzazioni e le finestre \(finestre con separatore\)](../mfc/multiple-document-types-views-and-frame-windows.md)  
+-   [Multiple Document Types, Views, and Frame Windows (Splitter windows)](../mfc/multiple-document-types-views-and-frame-windows.md)  
   
--   [\(Mappe messaggi e funzioni di gestione\)](../mfc/messages.md)  
+-   [Messages (maps and handler functions)](../mfc/messages.md)  
   
- *Creare ed eliminare le finestre*  
+ *Create and Destroy Windows*  
   
--   [Sequenza generale di progettazione della finestra](../mfc/general-window-creation-sequence.md)  
+-   [General Window Creation Sequence](../mfc/general-window-creation-sequence.md)  
   
--   [Eliminare gli oggetti della finestra](../mfc/destroying-window-objects.md)  
+-   [Destroy window objects](../mfc/destroying-window-objects.md)  
   
--   [Creazione delle finestre di documento](../mfc/creating-document-frame-windows.md)  
+-   [Create document frame windows](../mfc/creating-document-frame-windows.md)  
   
--   [Eliminare le finestre cornici](../mfc/destroying-frame-windows.md)  
+-   [Destroy frame windows](../mfc/destroying-frame-windows.md)  
   
- *Creare finestre con separatore*  
+ *Create Splitter Windows*  
   
--   [Creare finestre con separatore](../mfc/multiple-document-types-views-and-frame-windows.md)  
+-   [Create splitter windows](../mfc/multiple-document-types-views-and-frame-windows.md)  
   
- *Gestire le finestre figlio e la visualizzazione corrente*  
+ *Manage Child Windows and the Current View*  
   
--   [Gestire le finestre figlio MDI](../mfc/managing-mdi-child-windows.md)  
+-   [Manage MDI child windows](../mfc/managing-mdi-child-windows.md)  
   
--   [Gestire la visualizzazione corrente](../mfc/managing-the-current-view.md)  
+-   [Manage the current view](../mfc/managing-the-current-view.md)  
   
--   [Gestire i menu, le barre di controllo e i tasti di scelta rapida](../mfc/managing-menus-control-bars-and-accelerators.md)  
+-   [Manage menus, control bars, and accelerators](../mfc/managing-menus-control-bars-and-accelerators.md)  
   
- *Utilizzare i contesti di periferica e gli stili finestra*  
+ *Work with Device Contexts and Window Styles*  
   
--   [Utilizzare penne e altri oggetti elemento grafico in un contesto di dispositivo](../mfc/graphic-objects.md)  
+-   [Use pens and other graphic objects in a device context](../mfc/graphic-objects.md)  
   
--   [Modificare gli stili di una finestra creata da MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)  
+-   [Change the styles of a window created by MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)  
   
-## Vedere anche  
- [Elementi dell'interfaccia utente](../mfc/user-interface-elements-mfc.md)   
- [Finestre di dialogo](../mfc/dialog-boxes.md)   
- [Barre degli strumenti](../mfc/toolbars.md)   
- [Barre di stato](../mfc/status-bars.md)   
- [Barra di finestra di dialogo](../mfc/dialog-bars.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)   
+ [Dialog Boxes](../mfc/dialog-boxes.md)   
+ [Toolbars](../mfc/toolbars.md)   
+ [Status Bars](../mfc/status-bars.md)   
+ [Dialog Bars](../mfc/dialog-bars.md)
+
+

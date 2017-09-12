@@ -1,5 +1,5 @@
 ---
-title: Classe CCachedDataPathProperty | Documenti di Microsoft
+title: CCachedDataPathProperty Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,11 +16,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- ActiveX controls [C++], asynchronous
-- CCachedDataPathProperty class
-- OLE controls [C++], asynchronous
-- asynchronous controls [C++]
-- memory files [C++]
+- CCachedDataPathProperty [MFC], CCachedDataPathProperty
+- CCachedDataPathProperty [MFC], m_Cache
 ms.assetid: 0d81356b-4fe5-43f6-aed2-2eb5a5485706
 caps.latest.revision: 22
 author: mikeblome
@@ -40,50 +37,50 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 6e3f54e6429456be24cbe18471abd1705bbe0034
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 46b1b6b61441c9a3a886d3dbc48232e9afdd1f56
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ccacheddatapathproperty-class"></a>Classe CCachedDataPathProperty
-Implementa una proprietà del controllo OLE trasferita in modo asincrono e memorizzata nella cache in un file di memoria.  
+# <a name="ccacheddatapathproperty-class"></a>CCachedDataPathProperty Class
+Implements an OLE control property transferred asynchronously and cached in a memory file.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CCachedDataPathProperty : public CDataPathProperty  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Costruttori pubblici  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCachedDataPathProperty::CCachedDataPathProperty](#ccacheddatapathproperty)|Costruisce un oggetto `CCachedDataPathProperty`.|  
+|[CCachedDataPathProperty::CCachedDataPathProperty](#ccacheddatapathproperty)|Constructs a `CCachedDataPathProperty` object.|  
   
-### <a name="public-data-members"></a>Membri dati pubblici  
+### <a name="public-data-members"></a>Public Data Members  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCachedDataPathProperty::m_Cache](#m_cache)|`CMemFile`oggetto in cui i dati nella cache.|  
+|[CCachedDataPathProperty::m_Cache](#m_cache)|`CMemFile` object in which to cache data.|  
   
-## <a name="remarks"></a>Note  
- Un file di memoria verrà archiviato nella RAM anziché su disco ed è utile per i trasferimenti rapida temporanei.  
+## <a name="remarks"></a>Remarks  
+ A memory file is stored in RAM rather than on disk and is useful for fast temporary transfers.  
   
- Insieme a **CAysncMonikerFile** e `CDataPathProperty`, `CCachedDataPathProperty` fornisce funzionalità per l'utilizzo di moniker asincroni in controlli OLE. Con `CCachedDataPathProperty` oggetti, è possibile trasferire i dati in modo asincrono da un URL o un file di origine e archiviarlo in un file di memoria tramite il `m_Cache` variabile pubblica. Tutti i dati vengono archiviati nel file di memoria e non è necessario eseguire l'override [OnDataAvailable](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable) a meno che non si desidera controllare le notifiche e rispondere. Ad esempio, se si intende una grande. File GIF e si desidera inviare una notifica al controllo che sono arrivato più dati e deve essere ridisegnato, eseguire l'override `OnDataAvailable` la notifica.  
+ Along with **CAysncMonikerFile** and `CDataPathProperty`, `CCachedDataPathProperty` provides functionality for the use of asynchronous monikers in OLE controls. With `CCachedDataPathProperty` objects, you are able to transfer data asynchronously from a URL or file source and store it in a memory file via the `m_Cache` public variable. All the data is stored in the memory file, and there is no need to override [OnDataAvailable](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable) unless you want to watch for notifications and respond. For example, if you are transferring a large .GIF file and want to notify your control that more data has arrived and it should redraw itself, override `OnDataAvailable` to make the notification.  
   
- La classe `CCachedDataPathProperty` è derivato da `CDataPathProperty`.  
+ The class `CCachedDataPathProperty` is derived from `CDataPathProperty`.  
   
- Per ulteriori informazioni sull'utilizzo di controlli ActiveX e moniker asincroni nelle applicazioni Internet, vedere gli argomenti seguenti:  
+ For more information about how to use asynchronous monikers and ActiveX controls in Internet applications, see the following topics:  
   
-- [Prime operazioni in Internet: Controlli ActiveX](../../mfc/activex-controls-on-the-internet.md)  
+- [Internet First Steps: ActiveX Controls](../../mfc/activex-controls-on-the-internet.md)  
   
-- [Prime operazioni in Internet: Moniker asincroni](../../mfc/asynchronous-monikers-on-the-internet.md)  
+- [Internet First Steps: Asynchronous Monikers](../../mfc/asynchronous-monikers-on-the-internet.md)  
   
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CFile](../../mfc/reference/cfile-class.md)  
@@ -98,11 +95,11 @@ class CCachedDataPathProperty : public CDataPathProperty
   
  `CCachedDataPathProperty`  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** afxctl. h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxctl.h  
   
-##  <a name="ccacheddatapathproperty"></a>CCachedDataPathProperty::CCachedDataPathProperty  
- Costruisce un oggetto `CCachedDataPathProperty`.  
+##  <a name="ccacheddatapathproperty"></a>  CCachedDataPathProperty::CCachedDataPathProperty  
+ Constructs a `CCachedDataPathProperty` object.  
   
 ```  
 CCachedDataPathProperty(COleControl* pControl = NULL);
@@ -113,28 +110,28 @@ CCachedDataPathProperty(
     COleControl* pControl = NULL);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pControl`  
- Un puntatore all'oggetto da associare a questo controllo ActiveX `CCachedDataPathProperty` oggetto.  
+ A pointer to the ActiveX control object to be associated with this `CCachedDataPathProperty` object.  
   
  `lpszPath`  
- Il percorso, che può essere assoluto o relativo, utilizzato per creare un moniker asincroni che fa riferimento al percorso assoluto effettivo della proprietà. `CCachedDataPathProperty`utilizza gli URL, non nomi di file. Se si desidera che un `CCachedDataPathProperty` di oggetto per un file, anteporre file:// nel percorso.  
+ The path, which may be absolute or relative, used to create an asynchronous moniker that references the actual absolute location of the property. `CCachedDataPathProperty` uses URLs, not filenames. If you want a `CCachedDataPathProperty` object for a file, prepend file:// to the path.  
   
-### <a name="remarks"></a>Note  
- Il `COleControl` oggetto a cui puntava `pControl` viene utilizzato da [aprire](../../mfc/reference/cdatapathproperty-class.md#open) e recuperati dalle classi derivate. Se `pControl` è **NULL**, il controllo utilizzato con **aprire** deve essere impostato con [SetControl](../../mfc/reference/cdatapathproperty-class.md#setcontrol). Se `lpszPath` è **NULL**, è possibile passare il percorso tramite **aprire** o impostarlo con [SetWorkingDirectory](../../mfc/reference/cdatapathproperty-class.md#setpath).  
+### <a name="remarks"></a>Remarks  
+ The `COleControl` object pointed to by `pControl` is used by [Open](../../mfc/reference/cdatapathproperty-class.md#open) and retrieved by derived classes. If `pControl` is **NULL**, the control used with **Open** should be set with [SetControl](../../mfc/reference/cdatapathproperty-class.md#setcontrol). If `lpszPath` is **NULL**, you can pass in the path through **Open** or set it with [SetPath](../../mfc/reference/cdatapathproperty-class.md#setpath).  
   
-##  <a name="m_cache"></a>CCachedDataPathProperty::m_Cache  
- Contiene il nome della classe del file della memoria in cui viene memorizzato nella cache di dati.  
+##  <a name="m_cache"></a>  CCachedDataPathProperty::m_Cache  
+ Contains the class name of the memory file into which data is cached.  
   
 ```  
 CMemFile m_Cache;  
 ```  
   
-### <a name="remarks"></a>Note  
- Un file di memoria verrà archiviato nella RAM anziché sul disco.  
+### <a name="remarks"></a>Remarks  
+ A memory file is stored in RAM rather than on disk.  
   
-## <a name="see-also"></a>Vedere anche  
- [Classe CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md)   
- [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
- [Classe CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md)
+## <a name="see-also"></a>See Also  
+ [CDataPathProperty Class](../../mfc/reference/cdatapathproperty-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CDataPathProperty Class](../../mfc/reference/cdatapathproperty-class.md)
 

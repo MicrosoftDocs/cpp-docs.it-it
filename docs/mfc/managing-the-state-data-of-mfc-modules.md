@@ -1,57 +1,76 @@
 ---
-title: "Gestione dei dati dello stato dei moduli MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "gestione dei dati [C++]"
-  - "gestione dei dati [C++], moduli MFC"
-  - "interfacce esportate e stato globale [C++]"
-  - "stato globale [C++]"
-  - "MFC [C++], gestione dei dati sullo stato"
-  - "stato del modulo ripristinato"
-  - "stati dei moduli, salvataggio e ripristino"
-  - "più moduli"
-  - "punti di ingresso della routine della finestra [C++]"
+title: Managing the State Data of MFC Modules | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- global state [MFC]
+- data management [MFC], MFC modules
+- window procedure entry points [MFC]
+- exported interfaces and global state [MFC]
+- module states [MFC], saving and restoring
+- data management [MFC]
+- MFC, managing state data
+- multiple modules [MFC]
+- module state restored [MFC]
 ms.assetid: 81889c11-0101-4a66-ab3c-f81cf199e1bb
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Gestione dei dati dello stato dei moduli MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 087c8e584d4d42f2bcdbfffdc594523d795308cb
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Questo articolo vengono illustrati i dati relativi allo stato dei moduli MFC e come questo stato viene aggiornato quando il flusso di esecuzione \(il codice del percorso accetta con un'applicazione quando esegue\) entra o esce in un modulo.  Gli stati del modulo di commutazione a macro di `METHOD_PROLOGUE` e di `AFX_MANAGE_STATE` viene illustrato.  
+---
+# <a name="managing-the-state-data-of-mfc-modules"></a>Managing the State Data of MFC Modules
+This article discusses the state data of MFC modules and how this state is updated when the flow of execution (the path code takes through an application when executing) enters and leaves a module. Switching module states with the `AFX_MANAGE_STATE` and `METHOD_PROLOGUE` macros is also discussed.  
   
 > [!NOTE]
->  Il termine "modulo" qui si riferisce a un programma eseguibile, o a una DLL \(o al set di DLL\) che funziona indipendentemente dal resto dell'applicazione, ma utilizza una copia DLL condivisa di MFC.  Un controllo ActiveX è un tipico esempio di un modulo.  
+>  The term "module" here refers to an executable program, or to a DLL (or set of DLLs) that operate independently of the rest of the application, but uses a shared copy of the MFC DLL. An ActiveX control is a typical example of a module.  
   
- Come illustrato nella figura seguente, MFC include dati sullo stato di ogni modulo utilizzato in un'applicazione.  Esempi di questi dati includono gli handle di windows \(utilizzate per il caricamento delle risorse\), puntatori a `CWinApp` e agli oggetti correnti di `CWinThread` di un'applicazione, conteggi dei riferimenti OLE del modulo e varie mappe che gestiscono le connessioni tra l'handle di windows e le istanze corrispondenti degli oggetti MFC.  Tuttavia, se l'applicazione utilizza più moduli, i dati sullo stato di ogni modulo non sono applicazione ampia.  Piuttosto, ogni modulo ha una propria copia privata dei dati sullo stato di MFC.  
+ As shown in the following figure, MFC has state data for each module used in an application. Examples of this data include Windows instance handles (used for loading resources), pointers to the current `CWinApp` and `CWinThread` objects of an application, OLE module reference counts, and a variety of maps that maintain the connections between Windows object handles and corresponding instances of MFC objects. However, when an application uses multiple modules, the state data of each module is not application wide. Rather, each module has its own private copy of the MFC's state data.  
   
- ![Dati dello stato di un modulo singolo &#40;applicazione&#41;](../mfc/media/vc387n1.png "vc387N1")  
-Dati sullo stato di un modulo singolo \(applicazione\)  
+ ![State data of a single module &#40;application&#41;](../mfc/media/vc387n1.gif "vc387n1")  
+State Data of a Single Module (Application)  
   
- I dati relativi allo stato di un form sono contenuti in una struttura e sono sempre disponibili tramite un puntatore a tale struttura.  Quando il flusso di esecuzione offre un modulo particolare, come illustrato nella figura seguente, che lo stato del modulo deve essere "current" o "efficace" per indicare.  Di conseguenza, ogni oggetto thread ha un puntatore all'effettiva struttura di stato dell'applicazione.  La conservazione del puntatore this aggiornato sempre è un elemento essenziale per gestire lo stato complessivo dell'applicazione e di mantenere l'integrità dello stato di ogni modulo.  L'errata gestione dello stato globale può produrre un comportamento imprevedibile di applicazione.  
+ A module's state data is contained in a structure and is always available via a pointer to that structure. When the flow of execution enters a particular module, as shown in the following figure, that module's state must be the "current" or "effective" state. Therefore, each thread object has a pointer to the effective state structure of that application. Keeping this pointer updated at all times is vital to managing the application's global state and maintaining the integrity of each module's state. Incorrect management of the global state can lead to unpredictable application behavior.  
   
- ![Dati dello stato di più moduli](../mfc/media/vc387n2.png "vc387N2")  
-Dati sullo stato di più moduli  
+ ![State data of multiple modules](../mfc/media/vc387n2.gif "vc387n2")  
+State Data of Multiple Modules  
   
- Ovvero ogni modulo è responsabile corretto di passare tra gli stati del modulo qualsiasi dei relativi punti di ingresso.  "Un punto di ingresso" è il punto in cui il flusso di esecuzione può immettere codice del form.  I punti di ingresso includono:  
+ In other words, each module is responsible for correctly switching between module states at all of its entry points. An "entry point" is any place where the flow of execution can enter the module's code. Entry points include:  
   
--   [Funzioni esportate da una DLL](../mfc/exported-dll-function-entry-points.md)  
+-   [Exported functions in a DLL](../mfc/exported-dll-function-entry-points.md)  
   
--   [Funzioni membro delle interfacce COM](../mfc/com-interface-entry-points.md)  
+-   [Member functions of COM interfaces](../mfc/com-interface-entry-points.md)  
   
--   [Procedure della finestra](../mfc/window-procedure-entry-points.md)  
+-   [Window procedures](../mfc/window-procedure-entry-points.md)  
   
-## Vedere anche  
- [Argomenti MFC generali](../mfc/general-mfc-topics.md)
+## <a name="see-also"></a>See Also  
+ [General MFC Topics](../mfc/general-mfc-topics.md)
+
+

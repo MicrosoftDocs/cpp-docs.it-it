@@ -1,62 +1,81 @@
 ---
-title: "Utilizzo di CHeaderCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CHeaderCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CHeaderCtrl (classe)"
-  - "controlli intestazione, utilizzo"
+title: Using CHeaderCtrl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CHeaderCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- header controls [MFC], using
+- CHeaderCtrl class [MFC]
 ms.assetid: fb3e512b-9539-43c4-a7e7-3fafd6d0706e
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Utilizzo di CHeaderCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3b0d6b19847a3ebc366676a1c3f4816941d919f8
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Utilizzare un controllo intestazione, rappresentato dalla classe [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md), per visualizzare le intestazioni di colonna per un elenco in formato colonna.  Ad esempio, un controllo intestazione sarebbe utile per implementare i controlli di colonna in un foglio di calcolo.  
+---
+# <a name="using-cheaderctrl"></a>Using CHeaderCtrl
+Use a header control, represented by class [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md), to display column headers for a columnar list. For example, a header control would be useful for implementing column controls in a spreadsheet.  
   
- Il controllo intestazione in genere è suddiviso in parti, denominate "voci di intestazione," ogni cuscinetto un titolo per la colonna collegata di testo o numeri.  A seconda degli stili impostati, è possibile fornire diversi modi dirette agli utenti di modificare le voci di intestazione.  
+ The header control is usually divided into parts, called "header items," each bearing a title for the associated column of text or numbers. Depending on the styles you set, you can provide a number of direct ways for users to manipulate the header items.  
   
 > [!NOTE]
->  [CListCtrl](../mfc/reference/clistctrl-class.md) fornisce un controllo intestazione incorporato e [CListView](../mfc/reference/clistview-class.md) incapsula `CListCtrl` in una classe MFC.  Ne deriva in genere a utilizzare `CHeaderCtrl` agli elenchi di etichetta che si intende disegnarti.  
+>  [CListCtrl](../mfc/reference/clistctrl-class.md) provides an embedded header control, and [CListView](../mfc/reference/clistview-class.md) encapsulates `CListCtrl` in an MFC class. In general, think of using `CHeaderCtrl` to label lists that you intend to draw yourself.  
   
-## Scegliere l'argomento su cui visualizzare maggiori informazioni  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Controllo intestazione e controllo elenco](../mfc/header-control-and-list-control.md)  
+-   [Header Control and List Control](../mfc/header-control-and-list-control.md)  
   
--   [Esempi di controllo header](../mfc/header-control-examples.md)  
+-   [Header Control Examples](../mfc/header-control-examples.md)  
   
--   [Voci di intestazione in un controllo intestazione](../mfc/header-items-in-a-header-control.md)  
+-   [Header Items in a Header Control](../mfc/header-items-in-a-header-control.md)  
   
--   [Personalizzare l'aspetto voce di intestazione](../mfc/customizing-the-header-item-s-appearance.md)  
+-   [Customizing the Header Item's Appearance](../mfc/customizing-the-header-item-s-appearance.md)  
   
--   [Fornendo supporto trascinamento per le voci di intestazione](../mfc/providing-drag-and-drop-support-for-header-items.md)  
+-   [Providing Drag-and-Drop Support for Header Items](../mfc/providing-drag-and-drop-support-for-header-items.md)  
   
--   [Utilizzo di elenchi di immagini con i controlli intestazione](../mfc/using-image-lists-with-header-controls.md)  
+-   [Using Image Lists with Header Controls](../mfc/using-image-lists-with-header-controls.md)  
   
--   [Creazione di controlli intestazione creati dal proprietario](../mfc/making-owner-drawn-header-controls.md)  
+-   [Making Owner-Drawn Header Controls](../mfc/making-owner-drawn-header-controls.md)  
   
--   [Utilizza un controllo intestazione](../mfc/working-with-a-header-control.md)  
+-   [Working with a Header Control](../mfc/working-with-a-header-control.md)  
   
--   [Creazione del controllo intestazione](../mfc/creating-the-header-control.md)  
+-   [Creating the Header Control](../mfc/creating-the-header-control.md)  
   
--   [Aggiunta di elementi al controllo intestazione](../mfc/adding-items-to-the-header-control.md)  
+-   [Adding Items to the Header Control](../mfc/adding-items-to-the-header-control.md)  
   
--   [Elementi nel controllo intestazione](../mfc/ordering-items-in-the-header-control.md)  
+-   [Ordering Items in the Header Control](../mfc/ordering-items-in-the-header-control.md)  
   
--   [Notifiche di controllo header di elaborazione](../mfc/processing-header-control-notifications.md)  
+-   [Processing Header-Control Notifications](../mfc/processing-header-control-notifications.md)  
   
-## Vedere anche  
- [Controlli](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Controls](../mfc/controls-mfc.md)
+
+

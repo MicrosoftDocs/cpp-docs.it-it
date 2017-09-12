@@ -1,68 +1,87 @@
 ---
-title: "Stampa | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "documenti, stampa"
-  - "stampa [MFC]"
-  - "stampa [MFC], da framework"
-  - "classi visualizzazione, operazioni di stampa"
+title: Printing | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- view classes [MFC], print operations
+- documents [MFC], printing
+- printing [MFC], from framework
+- printing [MFC]
 ms.assetid: be465e8d-b0c9-4fc5-9fa8-d10486064f76
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Stampa
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 095ef2d763a44607c5d026b61301d46d7654dfe2
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Visualizzazione indipendente dal dispositivo di risorse di Microsoft Windows.  In MFC, significa che le stesse chiamate di disegno, nella funzione membro di `OnDraw` della classe di visualizzazione, sono responsabili di disegnare sulla visualizzazione e di altri dispositivi, come stampanti.  Per l'anteprima di stampa, il dispositivo di destinazione è un output simulato della stampante alla visualizzazione.  
+---
+# <a name="printing"></a>Printing
+Microsoft Windows implements device-independent display. In MFC, this means that the same drawing calls, in the `OnDraw` member function of your view class, are responsible for drawing on the display and on other devices, such as printers. For print preview, the target device is a simulated printer output to the display.  
   
-##  <a name="_core_your_role_in_printing_vs.._the_framework.92.s_role"></a> Il ruolo di stampa sul ruolo del Framework  
- La classe visualizzazioni sono responsabili di quanto segue:  
+##  <a name="_core_your_role_in_printing_vs.._the_framework.92.s_role"></a> Your Role in Printing vs. the Framework's Role  
+ Your view class has the following responsibilities:  
   
--   Notifica al framework di pagine sono nel documento.  
+-   Inform the framework how many pages are in the document.  
   
--   Quando viene chiesto di stampare una pagina specificata, disegnare parte del documento.  
+-   When asked to print a specified page, draw that portion of the document.  
   
--   Allocare e rilasciare tutte i tipi o di altre risorse \(GDI\) di Graphics Device Interface\) necessarie per la stampa.  
+-   Allocate and deallocate any fonts or other graphics device interface (GDI) resources needed for printing.  
   
--   Se necessario, inviare tutti i codici di escape necessari per modificare la modalità della stampante prima della stampa una pagina specifica, ad esempio, per modificare l'orientamento di stampa nella pagina.  
+-   If necessary, send any escape codes needed to change the printer mode before printing a given page, for example, to change the printing orientation on a per-page basis.  
   
- Le responsabilità del framework sono le seguenti:  
+ The framework's responsibilities are as follows:  
   
--   Visualizzare la finestra di dialogo **Stampa**.  
+-   Display the **Print** dialog box.  
   
--   Creare un oggetto di [CDC](../mfc/reference/cdc-class.md) per la stampante.  
+-   Create a [CDC](../mfc/reference/cdc-class.md) object for the printer.  
   
--   Chiamare le funzioni membro di [EndDoc](../Topic/CDC::EndDoc.md) e di [StartDoc](../Topic/CDC::StartDoc.md) dell'oggetto di `CDC`.  
+-   Call the [StartDoc](../mfc/reference/cdc-class.md#startdoc) and [EndDoc](../mfc/reference/cdc-class.md#enddoc) member functions of the `CDC` object.  
   
--   Chiamare ripetutamente la funzione membro di [StartPage](../Topic/CDC::StartPage.md) dell'oggetto di `CDC`, notificano alla classe di visualizzazione quale la pagina deve essere stampati e chiamare la funzione membro di [EndPage](../Topic/CDC::EndPage.md) dell'oggetto di `CDC`.  
+-   Repeatedly call the [StartPage](../mfc/reference/cdc-class.md#startpage) member function of the `CDC` object, inform the view class which page should be printed, and call the [EndPage](../mfc/reference/cdc-class.md#endpage) member function of the `CDC` object.  
   
--   Chiamare le funzioni sottoponibili a override nella visualizzazione al momento opportuno.  
+-   Call overridable functions in the view at the appropriate times.  
   
- Gli articoli seguenti illustrano il framework supporta la stampa e anteprima di stampa:  
+ The following articles discuss how the framework supports printing and print preview:  
   
-### Scegliere l'argomento su cui visualizzare maggiori informazioni  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Come default la stampa viene effettuata](../mfc/how-default-printing-is-done.md)  
+-   [How default printing is done](../mfc/how-default-printing-is-done.md)  
   
--   [Documenti a più pagine](../mfc/multipage-documents.md)  
+-   [Multipage documents](../mfc/multipage-documents.md)  
   
--   [Intestazioni e piè di pagina](../mfc/headers-and-footers.md)  
+-   [Headers and footers](../mfc/headers-and-footers.md)  
   
--   [Allocare risorse GDI per stampare](../mfc/allocating-gdi-resources.md)  
+-   [Allocating GDI resources for printing](../mfc/allocating-gdi-resources.md)  
   
--   [Anteprima di stampa](../mfc/print-preview-architecture.md)  
+-   [Print preview](../mfc/print-preview-architecture.md)  
   
-## Vedere anche  
- [Stampa e anteprima di stampa](../mfc/printing-and-print-preview.md)
+## <a name="see-also"></a>See Also  
+ [Printing and Print Preview](../mfc/printing-and-print-preview.md)
+
+

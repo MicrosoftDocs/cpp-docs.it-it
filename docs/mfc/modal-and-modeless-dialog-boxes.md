@@ -1,48 +1,67 @@
 ---
-title: "Finestre di dialogo modali e non modali | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC (finestre di dialogo), modali"
-  - "MFC (finestre di dialogo), non modali"
-  - "finestre di dialogo modali"
-  - "finestre di dialogo non modali"
+title: Modal and Modeless Dialog Boxes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC dialog boxes [MFC], modeless
+- modeless dialog boxes [MFC]
+- MFC dialog boxes [MFC], modal
+- modal dialog boxes [MFC]
 ms.assetid: e83df336-5994-4b8f-8233-7942f997315b
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Finestre di dialogo modali e non modali
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 85bddb463705b83332bd16dc19fcbd627ffc3063
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-È possibile utilizzare la classe [CDialog](../mfc/reference/cdialog-class.md) per gestire due tipi di finestre di dialogo:  
+---
+# <a name="modal-and-modeless-dialog-boxes"></a>Modal and Modeless Dialog Boxes
+You can use class [CDialog](../mfc/reference/cdialog-class.md) to manage two kinds of dialog boxes:  
   
--   *Finestre di dialogo modali*, che richiedono all'utente di rispondere prima di procedere del programma  
+-   *Modal dialog boxes*, which require the user to respond before continuing the program  
   
--   *Finestre di dialogo non modale*, che rimangono nello schermo e sono disponibili in qualsiasi momento ma supportano altre attività dell'utente  
+-   *Modeless dialog boxes*, which stay on the screen and are available for use at any time but permit other user activities  
   
- Modifica e le procedure delle risorse per creare un modello di finestra di dialogo sono identiche per modale e finestre di dialogo non modale.  
+ The resource editing and procedures for creating a dialog template are the same for modal and modeless dialog boxes.  
   
- Creazione di una finestra di dialogo per il programma richiede i seguenti passaggi:  
+ Creating a dialog box for your program requires the following steps:  
   
-1.  Utilizzare [editor finestre](../mfc/dialog-editor.md) per progettare la finestra di dialogo e creare la risorsa di dialogo\- modello.  
+1.  Use the [dialog editor](../windows/dialog-editor.md) to design the dialog box and create its dialog-template resource.  
   
-2.  Creare una classe di finestre di dialogo.  
+2.  Create a dialog class.  
   
-3.  Connettersi [i controlli di risorsa finestra di dialogo gestori di messaggi](../mfc/adding-event-handlers-for-dialog-box-controls.md) nella classe della finestra di dialogo.  
+3.  Connect the [dialog resource's controls to message handlers](../windows/adding-event-handlers-for-dialog-box-controls.md) in the dialog class.  
   
-4.  Aggiungere i membri dati associati a comandi della finestra di dialogo e specificare [scambio di dati della finestra di dialogo](../mfc/dialog-data-exchange.md) e [convalida di dati della finestra di dialogo](../mfc/dialog-data-validation.md) per i controlli.  
+4.  Add data members associated with the dialog box's controls and to specify [dialog data exchange](../mfc/dialog-data-exchange.md) and [dialog data validations](../mfc/dialog-data-validation.md) for the controls.  
   
-## Vedere anche  
- [Finestre di dialogo](../mfc/dialog-boxes.md)   
- [Ciclo di vita di una finestra di dialogo](../mfc/life-cycle-of-a-dialog-box.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Boxes](../mfc/dialog-boxes.md)   
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)
+
+

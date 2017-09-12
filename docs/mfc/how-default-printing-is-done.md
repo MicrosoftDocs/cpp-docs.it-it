@@ -1,40 +1,59 @@
 ---
-title: "Procedura di stampa predefinita | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "stampa predefinita"
-  - "impostazioni predefinite, stampa"
-  - "stampa [MFC], predefinita"
+title: How Default Printing Is Done | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- default printing
+- printing [MFC], default
+- defaults, printing
 ms.assetid: 0f698459-0fc9-4d43-97da-29cf0f65daa2
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Procedura di stampa predefinita
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d4a08c857045a41bb3e913f90eb1c46d3d49db68
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-In questo articolo viene illustrato il processo di stampa predefinito in Windows in termini del framework MFC.  
+---
+# <a name="how-default-printing-is-done"></a>How Default Printing Is Done
+This article explains the default printing process in Windows in terms of the MFC framework.  
   
- Nelle applicazioni MFC, la classe di visualizzazione dispone di una funzione membro denominata `OnDraw` contenente tutto il codice di disegno.  `OnDraw` accetta come parametro un puntatore a un oggetto [CDC](../mfc/reference/cdc-class.md).  L'oggetto `CDC` rappresenta il contesto di dispositivo che deve ricevere l'immagine prodotta da `OnDraw`.  Quando la finestra visualizza il documento riceve un messaggio [WM\_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213), il framework chiama `OnDraw` e passa ad essa un contesto di dispositivo per lo schermo \(per la precisione un oggetto [CPaintDC](../mfc/reference/cpaintdc-class.md)\).  Pertanto, l'output di `OnDraw` sarà inviato allo schermo.  
+ In MFC applications, the view class has a member function named `OnDraw` that contains all the drawing code. `OnDraw` takes a pointer to a [CDC](../mfc/reference/cdc-class.md) object as a parameter. That `CDC` object represents the device context to receive the image produced by `OnDraw`. When the window displaying the document receives a [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) message, the framework calls `OnDraw` and passes it a device context for the screen (a [CPaintDC](../mfc/reference/cpaintdc-class.md) object, to be specific). Accordingly, `OnDraw`'s output goes to the screen.  
   
- Nella programmazione per Windows, inviare l'output alla stampante è molto simile a inviare l'output allo schermo.  Questo perché la Windows Graphics Device Interface \(GDI\) è indipendente dall'hardware.  È possibile utilizzare le stesse funzioni GDI per la visualizzazione su schermo o per la stampa utilizzando semplicemente il contesto di dispositivo appropriato.  Se l'oggetto `CDC` ricevuto da `OnDraw` rappresenta la stampante, l'output di `OnDraw` sarà inviato alla stampante.  
+ In programming for Windows, sending output to the printer is very similar to sending output to the screen. This is because the Windows graphics device interface (GDI) is hardware-independent. You can use the same GDI functions for screen display or for printing simply by using the appropriate device context. If the `CDC` object that `OnDraw` receives represents the printer, `OnDraw`'s output goes to the printer.  
   
- Questo mostra come le applicazioni MFC possono eseguire la stampa semplice senza necessità di operazioni aggiuntive.  Il framework si prende cura della visualizzazione della finestra di dialogo Stampa e della creazione di un contesto di dispositivo per la stampante.  Quando l'utente seleziona il comando Stampa dal menu File, la visualizzazione passa tale contesto di dispositivo a `OnDraw`, che disegna il documento nella stampante.  
+ This explains how MFC applications can perform simple printing without requiring extra effort on your part. The framework takes care of displaying the Print dialog box and creating a device context for the printer. When the user selects the Print command from the File menu, the view passes this device context to `OnDraw`, which draws the document on the printer.  
   
- Tuttavia, esistono alcune differenze significative tra stampa e visualizzazione su schermo.  Quando si stampa, è necessario dividere il documento in pagine distinte e visualizzarle una alla volta, anziché mostrare la porzione visibile in una finestra.  Come effetto, si deve tenere conto del formato della carta \(ovvero dimensione lettera, legale o busta\).  È possibile che si desideri stampare con orientamenti diversi, quali orientamento orizzontale o verticale.  La libreria MFC non può prevedere come l'applicazione gestirà questi problemi, pertanto viene fornito un protocollo per poter aggiungere queste funzionalità.  
+ However, there are some significant differences between printing and screen display. When you print, you have to divide the document into distinct pages and display them one at a time, rather than display whatever portion is visible in a window. As a corollary, you have to be aware of the size of the paper (whether it's letter size, legal size, or an envelope). You may want to print in different orientations, such as landscape or portrait mode. The Microsoft Foundation Class Library can't predict how your application will handle these issues, so it provides a protocol for you to add these capabilities.  
   
- Tale protocollo è descritto nell'articolo [Documenti con più pagine](../mfc/multipage-documents.md).  
+ That protocol is described in the article [Multipage Documents](../mfc/multipage-documents.md).  
   
-## Vedere anche  
- [Stampa](../mfc/printing.md)
+## <a name="see-also"></a>See Also  
+ [Printing](../mfc/printing.md)
+
+

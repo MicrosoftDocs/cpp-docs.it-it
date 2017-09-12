@@ -1,45 +1,64 @@
 ---
-title: "Elementi elenco ed elenchi di immagini | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CImageList (classe), e voci elenco"
-  - "CListCtrl (classe), elenchi di immagini"
-  - "elenchi di immagini [C++], voci elenco"
-  - "voci elenco, elenchi di immagini"
+title: List Items and Image Lists | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CImageList class [MFC], and list items
+- image lists [MFC], list items
+- CListCtrl class [MFC], image lists
+- list items [MFC], image lists
 ms.assetid: 317d095f-f978-47da-acb6-7bfe7dd3bc69
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Elementi elenco ed elenchi di immagini
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: de7e5fa9537d4cec3fed7c891fba9a7c4c11c4d2
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Un "elemento" in un controllo elenco \([CListCtrl](../mfc/reference/clistctrl-class.md)\) contiene un'icona, un'etichetta ed eventualmente altre informazioni \(in "elementi secondari"\).  
+---
+# <a name="list-items-and-image-lists"></a>List Items and Image Lists
+An "item" in a list control ([CListCtrl](../mfc/reference/clistctrl-class.md)) consists of an icon, a label, and possibly other information (in "subitems").  
   
- Le icone degli elementi di un controllo elenco sono contenute negli elenchi di immagini.  Un elenco immagini contiene icone grandi utilizzate utilizzate nella visualizzazione icone.  Un secondo, facoltativo, elenco di immagini contiene le versioni più piccole delle stesse icone per l'utilizzo nelle altre visualizzazioni del controllo.  Un terzo elenco facoltativo contiene le immagini "stato", ad esempio le caselle di controllo per la visualizzazione davanti alle icone piccole in alcune visualizzazioni.  Un quarto elenco facoltativo contiene le immagini visualizzate nelle singole voci di intestazione del controllo elenco.  
+ The icons for list control items are contained in image lists. One image list contains full-sized icons used in icon view. A second, optional, image list contains smaller versions of the same icons for use in other views of the control. A third optional list contains "state" images, such as check boxes, for display in front of the small icons in certain views. A fourth optional list contains images that are displayed in individual header items of the list control.  
   
 > [!NOTE]
->  Se un controllo visualizzazione elenco viene creato con lo stile `LVS_SHAREIMAGELISTS`, è necessario provvedere all'eliminazione degli elenchi di immagini quando non sono più utilizzati.  Specificare questo stile se si assegnano gli stessi elenchi di immagini a più controlli di visualizzazione di elenchi; in caso contrario, più di un controllo potrebbe tentare di eliminare lo stesso elenco di immagini.  
+>  If a list view control is created with the `LVS_SHAREIMAGELISTS` style, you are responsible for destroying the image lists when they are no longer in use. Specify this style if you assign the same image lists to multiple list view controls; otherwise, more than one control might try to destroy the same image list.  
   
- Per ulteriori informazioni sugli elementi di un elenco, vedere [Elenchi di immagini di visualizzazione elenco](http://msdn.microsoft.com/library/windows/desktop/bb774736) e [Elementi ed elementi secondari](http://msdn.microsoft.com/library/windows/desktop/bb774736) in [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  Vedere anche la classe [CImageList](../mfc/reference/cimagelist-class.md) in *Riferimenti alla libreria MFC* e [Utilizzare CImageList](../mfc/using-cimagelist.md) in questa famiglia di articoli.  
+ For more information about list items, see [List View Image Lists](http://msdn.microsoft.com/library/windows/desktop/bb774736) and [Items and Subitems](http://msdn.microsoft.com/library/windows/desktop/bb774736) in the Windows SDK. Also see class [CImageList](../mfc/reference/cimagelist-class.md) in the *MFC Reference* and [Using CImageList](../mfc/using-cimagelist.md) in this family of articles.  
   
- Per creare un controllo elenco, è necessario fornire gli elenchi di immagini da utilizzare quando si inseriscono nuovi elementi nell'elenco.  Nell'esempio seguente viene illustrata questa procedura, dove `m_pImagelist` è un puntatore di tipo `CImageList` e `m_listctrl` è un membro dati `CListCtrl`.  
+ To create a list control, you need to supply image lists to be used when you insert new items into the list. The following example demonstrates this procedure, where `m_pImagelist` is a pointer of type `CImageList` and `m_listctrl` is a `CListCtrl` data member.  
   
- [!code-cpp[NVC_MFCControlLadenDialog#19](../mfc/codesnippet/CPP/list-items-and-image-lists_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#19](../mfc/codesnippet/cpp/list-items-and-image-lists_1.cpp)]  
   
- Tuttavia, se non si intende visualizzare le icone nella visualizzazione elenco o nel controllo elenco, non sono necessari gli elenchi di immagini.  
+ However, if you don't plan to display icons in your list view or list control, you don't need image lists.  
   
-## Vedere anche  
- [Utilizzo di CListCtrl](../mfc/using-clistctrl.md)   
- [Controlli](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CListCtrl](../mfc/using-clistctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

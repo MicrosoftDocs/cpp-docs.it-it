@@ -1,87 +1,105 @@
 ---
-title: "Aggiornamento del testo di un riquadro barra di stato | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CStatusBar (classe), aggiornamento"
-  - "ON_UPDATE_COMMAND_UI (macro)"
-  - "riquadri, barra di stato"
-  - "SetText (metodo)"
-  - "barre di stato, aggiornamento"
-  - "testo, barra di stato"
-  - "aggiornamento di oggetti dell'interfaccia utente"
-  - "oggetti dell'interfaccia utente, aggiornamento"
+title: Updating the Text of a Status-Bar Pane | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- updating user interface objects [MFC]
+- ON_UPDATE_COMMAND_UI macro [MFC]
+- user interface objects [MFC], updating
+- text, status bar
+- CStatusBar class [MFC], updating
+- SetText method [MFC]
+- panes, status bar
+- status bars [MFC], updating
 ms.assetid: 4984a3f4-9905-4d8c-a927-dca19781053b
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Aggiornamento del testo di un riquadro barra di stato
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8a935d43a026259ecfacf44785c784e1a52534ae
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-In questo articolo viene illustrato come modificare il testo visualizzato in un riquadro della barra di stato MFC.  Una barra di stato a un oggetto finestra di classe [CStatusBar](../mfc/reference/cstatusbar-class.md) \- "contiene diversi riquadri." Ciascun riquadro è un'area rettangolare della barra di stato che è possibile utilizzare per visualizzare le informazioni.  Ad esempio, molte applicazioni visualizzare lo stato del tasto BLOC MAIUSC, BLOC NUM e altri tipi più riquadri a destra.  Le applicazioni anche perché il testo informativo nel riquadro a sinistra riquadro \(0\), talvolta denominato "il riquadro del messaggio". Ad esempio, la barra di stato predefinito di MFC utilizza il riquadro dei messaggi per visualizzare una stringa che espande la voce di menu o sul pulsante della barra degli strumenti attualmente selezionata.  Nella figura [Barre di stato](../mfc/status-bar-implementation-in-mfc.md) visualizzata una barra di stato in un'applicazione MFC Procedura creazioni guidate applicazione creata.  
+---
+# <a name="updating-the-text-of-a-status-bar-pane"></a>Updating the Text of a Status-Bar Pane
+This article explains how to change the text that appears in an MFC status bar pane. A status bar — a window object of class [CStatusBar](../mfc/reference/cstatusbar-class.md) — contains several "panes." Each pane is a rectangular area of the status bar that you can use to display information. For example, many applications display the status of the CAPS LOCK, NUM LOCK, and other keys in the rightmost panes. Applications also often display informative text in the leftmost pane (pane 0), sometimes called the "message pane." For example, the default MFC status bar uses the message pane to display a string explaining the currently selected menu item or toolbar button. The figure in [Status Bars](../mfc/status-bar-implementation-in-mfc.md) shows a status bar from an Application Wizard-created MFC application.  
   
- Per impostazione predefinita, in MFC non consente un riquadro di `CStatusBar` quando si crea il riquadro.  Per attivare un riquadro, è necessario utilizzare la macro di `ON_UPDATE_COMMAND_UI` per ciascun riquadro sulla barra di stato e aggiornare i riquadri.  Poiché i riquadri non riceve i messaggi di **WM\_COMMAND** \(non sono simili ai pulsanti della barra degli strumenti, è necessario immettere manualmente il codice.  
+ By default, MFC does not enable a `CStatusBar` pane when it creates the pane. To activate a pane, you must use the `ON_UPDATE_COMMAND_UI` macro for each pane on the status bar and update the panes. Because panes do not send **WM_COMMAND** messages (they aren't like toolbar buttons), you must type the code manually.  
   
- Ad esempio, si supponga che un riquadro di `ID_INDICATOR_PAGE` come unico identificatore di comando e che contiene il numero di pagina corrente in un documento.  La procedura seguente viene illustrato come creare un nuovo riquadro la barra di stato.  
+ For example, suppose one pane has `ID_INDICATOR_PAGE` as its command identifier and that it contains the current page number in a document. The following procedure describes how to create a new pane in the status bar.  
   
-### Per creare un nuovo riquadro  
+### <a name="to-make-a-new-pane"></a>To make a new pane  
   
-1.  Definire gli ID di comando del riquadro  
+1.  Define the pane's command ID.  
   
-     Dal menu di **Visualizza** , fare clic su **Visualizzazione risorse**.  Fare clic con il pulsante destro del mouse sulla risorsa di progetto e fare clic **Simboli risorsa**.  Nella finestra di dialogo simboli risorsa, fare clic `New`.  Digitare un nome di ID di comando: ad esempio, `ID_INDICATOR_PAGE`.  Specificare un valore per ID, o accettare il valore consigliato dalla finestra di dialogo simboli risorsa.  Ad esempio, per `ID_INDICATOR_PAGE`, accettare il valore predefinito.  Chiudere la finestra di dialogo simboli risorsa.  
+     On the **View** menu, click **Resource View**. Right-click the project resource and click **Resource Symbols**. In the Resource Symbols dialog box, click `New`. Type a command ID name: for example, `ID_INDICATOR_PAGE`. Specify a value for the ID, or accept the value suggested by the Resource Symbols dialog box. For example, for `ID_INDICATOR_PAGE`, accept the default value. Close the Resource Symbols dialog box.  
   
-2.  Definire una stringa predefinita per visualizzare il riquadro.  
+2.  Define a default string to display in the pane.  
   
-     Con la visualizzazione risorse aperta, fare doppio clic su **Tabella di stringhe** nella finestra tipi di risorsa di elenchi per l'applicazione.  Con l'editor di **Tabella di stringhe** aperto, scegliere **Nuova stringa** dal menu di **Inserimento** .  Nella finestra delle proprietà stringa, selezionare l'id di comando del riquadro \(ad esempio, `ID_INDICATOR_PAGE`\) e immettere un valore stringa predefinito, ad esempio "pagina".  Chiudere l'editor stringhe. \(È necessaria una stringa predefinita di evitare un errore del compilatore.\)  
+     With Resource View open, double-click **String Table** in the window that lists resource types for your application. With the **String Table** editor open, choose **New String** from the **Insert** menu. In the String Properties window, select your pane's command ID (for example, `ID_INDICATOR_PAGE`) and type a default string value, such as "Page   ". Close the string editor. (You need a default string to avoid a compiler error.)  
   
-3.  Aggiungere il riquadro alla matrice di **indicatori**.  
+3.  Add the pane to the **indicators** array.  
   
-     In file MAINFRM.CPP, individuare la matrice di **indicatori**.  ID di comando degli elenchi di questa matrice per gli indicatori di una barra di stato, in ordine da sinistra a destra.  Il punto appropriato nella matrice, immettere l'id di comando del riquadro, come illustrato di seguito per `ID_INDICATOR_PAGE`:  
+     In file MAINFRM.CPP, locate the **indicators** array. This array lists command IDs for all of the status bar's indicators, in order from left to right. At the appropriate point in the array, enter your pane's command ID, as shown here for `ID_INDICATOR_PAGE`:  
   
-     [!code-cpp[NVC_MFCDocView#10](../mfc/codesnippet/CPP/updating-the-text-of-a-status-bar-pane_1.cpp)]  
+     [!code-cpp[NVC_MFCDocView#10](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_1.cpp)]  
   
- La modalità consigliata visualizzare il testo in un riquadro consiste nel chiamare la funzione membro di **SetText** di classe `CCmdUI` in una funzione del gestore aggiornamento per il riquadro.  Ad esempio, è possibile installare una variabile Integer `m_nPage` contenente il numero di pagina corrente e l'utilizzo **SetText** impostare il testo del riquadro a una versione della stringa di tale numero.  
+ The recommended way to display text in a pane is to call the **SetText** member function of class `CCmdUI` in an update handler function for the pane. For example, you might want to set up an integer variable `m_nPage` that contains the current page number and use **SetText** to set the pane's text to a string version of that number.  
   
 > [!NOTE]
->  L'approccio di **SetText** è consigliato.  È possibile eseguire questa attività leggermente a un livello inferiore chiamando la funzione membro `SetPaneText`di `CStatusBar`.  Tuttavia, è necessario un gestore aggiornamento.  Senza tale gestore per il riquadro, MFC automaticamente disabilita il riquadro, deselezionando il contenuto.  
+>  The **SetText** approach is recommended. It is possible to perform this task at a slightly lower level by calling the `CStatusBar` member function `SetPaneText`. Even so, you still need an update handler. Without such a handler for the pane, MFC automatically disables the pane, erasing its content.  
   
- La procedura riportata di seguito viene mostrato come utilizzare una funzione del gestore aggiornamento per visualizzare testo in un riquadro.  
+ The following procedure shows how to use an update handler function to display text in a pane.  
   
-#### Per rendere una visualizzazione del riquadro al testo a  
+#### <a name="to-make-a-pane-display-text"></a>To make a pane display text  
   
-1.  Aggiungere un gestore aggiornamento di comando.  
+1.  Add a command update handler for the command.  
   
-     Aggiungere manualmente un prototipo per il gestore, come illustrato di seguito per `ID_INDICATOR_PAGE` \(in MAINFRM.H\):  
+     Manually add a prototype for the handler, as shown here for `ID_INDICATOR_PAGE` (in MAINFRM.H):  
   
-     [!code-cpp[NVC_MFCDocView#11](../mfc/codesnippet/CPP/updating-the-text-of-a-status-bar-pane_2.h)]  
+     [!code-cpp[NVC_MFCDocView#11](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_2.h)]  
   
-2.  Nel file appropriato di .CPP, aggiungere la definizione del gestore, come illustrato di seguito per `ID_INDICATOR_PAGE` \(in MAINFRM.CPP\):  
+2.  In the appropriate .CPP file, add the handler's definition, as shown here for `ID_INDICATOR_PAGE` (in MAINFRM.CPP):  
   
-     [!code-cpp[NVC_MFCDocView#12](../mfc/codesnippet/CPP/updating-the-text-of-a-status-bar-pane_3.cpp)]  
+     [!code-cpp[NVC_MFCDocView#12](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_3.cpp)]  
   
-     Le ultime tre righe del gestore nel codice che visualizza il testo.  
+     The last three lines of this handler are the code that displays your text.  
   
-3.  Nella mappa messaggi appropriato, aggiungere la macro di `ON_UPDATE_COMMAND_UI`, come illustrato di seguito per `ID_INDICATOR_PAGE` \(in MAINFRM.CPP\):  
+3.  In the appropriate message map, add the `ON_UPDATE_COMMAND_UI` macro, as shown here for `ID_INDICATOR_PAGE` (in MAINFRM.CPP):  
   
-     [!code-cpp[NVC_MFCDocView#13](../mfc/codesnippet/CPP/updating-the-text-of-a-status-bar-pane_4.cpp)]  
+     [!code-cpp[NVC_MFCDocView#13](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_4.cpp)]  
   
- Una volta definite il valore di una variabile membro di `m_nPage` \(classe `CMainFrame`\), cause di questa tecnica il numero di pagina da visualizzare nel riquadro durante l'elaborazione inattiva nello stesso modo in cui l'applicazione aggiornare gli indicatori.  Se modifiche di `m_nPage`, le modifiche della visualizzazione durante il ciclo inattivo seguente.  
+ Once you define the value of the `m_nPage` member variable (of class `CMainFrame`), this technique causes the page number to appear in the pane during idle processing in the same manner that the application updates other indicators. If `m_nPage` changes, the display changes during the next idle loop.  
   
-### Scegliere l'argomento su cui visualizzare maggiori informazioni  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Aggiornamento degli oggetti dell'interfaccia utente \(come aggiornare i pulsanti della barra degli strumenti e le voci di menu come modifica dello stato del programma\)](../mfc/how-to-update-user-interface-objects.md)  
+-   [Updating user-interface objects (how to update toolbar buttons and menu items as program conditions change)](../mfc/how-to-update-user-interface-objects.md)  
   
-## Vedere anche  
- [Implementazione della barra di stato in MFC](../mfc/status-bar-implementation-in-mfc.md)   
+## <a name="see-also"></a>See Also  
+ [Status Bar Implementation in MFC](../mfc/status-bar-implementation-in-mfc.md)   
  [CStatusBar Class](../mfc/reference/cstatusbar-class.md)
+

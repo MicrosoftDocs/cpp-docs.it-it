@@ -1,83 +1,102 @@
 ---
-title: "Utilizzo delle classi per la creazione di applicazioni per Windows | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "applicazioni [OLE], framework applicazione MFC"
-  - "applicazioni di database [C++], creazione"
-  - "MFC [C++], sviluppo di applicazioni"
-  - "MFC (controlli ActiveX), creazione"
-  - "applicazioni OLE [C++], framework applicazione MFC"
-  - "applicazioni Windows [C++], framework applicazione MFC"
+title: Using the Classes to Write Applications for Windows | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Windows applications [MFC], MFC application framework
+- MFC, application development
+- applications [OLE], MFC application framework
+- MFC ActiveX controls [MFC], creating
+- OLE applications [MFC], MFC application framework
+- database applications [MFC], creating
 ms.assetid: 73f63470-857d-43dd-9a54-b38b7be0f1b7
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Utilizzo delle classi per la creazione di applicazioni per Windows
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 17290c69b0cffbfeb6d70667a45719836f2707fe
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Accetta raccolta, le classi della libreria MFC \(Microsoft Foundation Class \(MFC\) "costituiscono un framework di applicazione," su cui si compila un'applicazione in sistema operativo Windows.  A un livello molto generale, il framework definisce la struttura di un'applicazione e fornisce un'implementazione standard dell'interfaccia utente che possono essere posizionate nello schema.  Il processo il programmatore consiste nel compilare il resto dello scheletro, ovvero le operazioni specifiche all'applicazione.  È possibile ottenere un vantaggio acquisito all'inizio di una gara utilizzando la Creazione guidata applicazione MFC per creare i file di un'applicazione molto approfondita iniziali.  Si utilizzano gli editor di risorse di Microsoft Visual C\+\+ per progettare gli elementi dell'interfaccia utente visivamente, i controlli di Visualizzazione classi connettere gli elementi per la codifica e la libreria di classi per implementare la logica specifica dell'applicazione.  
+---
+# <a name="using-the-classes-to-write-applications-for-windows"></a>Using the Classes to Write Applications for Windows
+Taken together, the classes in the Microsoft Foundation Class (MFC) Library make up an "application framework," on which you build an application for the Windows operating system. At a very general level, the framework defines the skeleton of an application and supplies standard user-interface implementations that can be placed onto the skeleton. Your job as programmer is to fill in the rest of the skeleton, which are those things that are specific to your application. You can get a head start by using the MFC Application Wizard to create the files for a very thorough starter application. You use the Microsoft Visual C++ resource editors to design your user-interface elements visually, Class View commands to connect those elements to code, and the class library to implement your application-specific logic.  
   
- Versione 3,51 le versioni 3,0 e successive di programmazione supporti del framework MFC per le piattaforme Win32, compreso Microsoft Windows 95 e versioni successive e Windows NT e successive.  Il supporto MFC Win32 include il multithreading.  Utilizzare la versione 1,5*x* per eseguire la programmazione a 16 bit.  
+ Version 3.0 and later of the MFC framework supports programming for Win32 platforms, including Microsoft Windows 95 and later, and Windows NT versions 3.51 and later. MFC Win32 support includes multithreading. Use version 1.5*x* if you need to do 16-bit programming.  
   
- La famiglia di articoli elencati i cenni preliminari sul framework applicazione.  Anche esplora oggetti principali che costituiscono l'applicazione e come vengono creati.  Tra gli argomenti trattati in questi articoli sono i seguenti:  
+ This family of articles presents a broad overview of the application framework. It also explores the major objects that make up your application and how they are created. Among the topics covered in these articles are the following:  
   
--   [Il framework](../mfc/framework-mfc.md).  
+-   [The framework](../mfc/framework-mfc.md).  
   
--   Suddivisione del lavoro tra il framework e il codice, come descritto in [Compilazione in Framework](../mfc/building-on-the-framework.md).  
+-   Division of labor between the framework and your code, as described in [Building on the Framework](../mfc/building-on-the-framework.md).  
   
--   [La classe application](../mfc/cwinapp-the-application-class.md), che incapsula funzionalità a livello di applicazione.  
+-   [The application class](../mfc/cwinapp-the-application-class.md), which encapsulates application-level functionality.  
   
--   Come [modelli di documento](../mfc/document-templates-and-the-document-view-creation-process.md) crea e gestisce i documenti e le visualizzazioni e le finestre collegati.  
+-   How [document templates](../mfc/document-templates-and-the-document-view-creation-process.md) create and manage documents and their associated views and frame windows.  
   
--   Classe [CWnd](../mfc/window-objects.md), la classe base radice di tutte le finestre.  
+-   Class [CWnd](../mfc/window-objects.md), the root base class of all windows.  
   
--   [Oggetti grafici](../mfc/graphic-objects.md), come penne e pennelli.  
+-   [Graphic objects](../mfc/graphic-objects.md), such as pens and brushes.  
   
- Altre parti del framework includono:  
+ Other parts of the framework include:  
   
--   [Oggetti Window: Panoramica](../mfc/window-objects.md)  
+-   [Window Objects: Overview](../mfc/window-objects.md)  
   
--   [Gestione dei messaggi e il mapping](../mfc/message-handling-and-mapping.md)  
+-   [Message handling and mapping](../mfc/message-handling-and-mapping.md)  
   
--   [CObject, la classe base radice in MFC](../mfc/using-cobject.md)  
+-   [CObject, The Root Base Class in MFC](../mfc/using-cobject.md)  
   
--   [L'architettura documento\/visualizzazione](../mfc/document-view-architecture.md)  
+-   [Document/View Architecture](../mfc/document-view-architecture.md)  
   
--   [Finestre di dialogo](../mfc/dialog-boxes.md)  
+-   [Dialog Boxes](../mfc/dialog-boxes.md)  
   
--   [Controlli](../mfc/controls-mfc.md)  
+-   [Controls](../mfc/controls-mfc.md)  
   
--   [Barre di controllo](../mfc/control-bars.md)  
+-   [Control Bars](../mfc/control-bars.md)  
   
 -   [OLE](../mfc/ole-in-mfc.md)  
   
--   [Gestione della memoria](../mfc/memory-management.md)  
+-   [Memory Management](../mfc/memory-management.md)  
   
-     Oltre a fornire un vantaggio in applicazioni di scrittura del sistema operativo Windows, MFC rende molto più semplice scrivere applicazioni che specificamente utilizzano OLE che collega e che incorpora la tecnologia.  È possibile rendere all'applicazione un contenitore di modifica visiva OLE, il server di modifica visiva OLE o entrambe, e aggiungere l'automazione in modo da poter utilizzare gli oggetti dall'applicazione o addirittura determinarlo altre applicazioni in modalità remota.  
+     Besides giving you an advantage in writing applications for the Windows operating system, MFC also makes it much easier to write applications that specifically use OLE linking and embedding technology. You can make your application an OLE visual editing container, an OLE visual editing server, or both, and you can add Automation so that other applications can use objects from your application or even drive it remotely.  
   
--   [Controlli ActiveX MFC](../mfc/mfc-activex-controls.md)  
+-   [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)  
   
-     Il kit \(CDK\) di sviluppo di controlli OLE è completamente integrata con il framework.  La famiglia dell'articolo vengono forniti cenni preliminari sullo sviluppo di controlli ActiveX con MFC. \(Controlli ActiveX in precedenza sono stati definiti controlli OLE.\)  
+     The OLE control development kit (CDK) is now fully integrated with the framework. This article family supplies an overview of ActiveX control development with MFC. (ActiveX controls were formerly known as OLE controls.)  
   
--   [La programmazione di database](../data/data-access-programming-mfc-atl.md)  
+-   [Database Programming](../data/data-access-programming-mfc-atl.md)  
   
-     MFC fornisce anche due set di classi di database che semplificano le applicazioni di accesso ai dati di scrittura.  Mediante le classi di database ODBC, è possibile connettersi al database tramite un driver ODBC \(open database connectivity\), i record selezionati dalle tabelle e per registrare informazioni visualizzate in un form sullo schermo.  Utilizzo di classi di \(DAO\) dell'oggetto di accesso ai dati, è possibile lavorare con database tramite il motore di database Microsoft Jet o origini dati esterne \(non Jet\), incluse le origini dati ODBC.  
+     MFC also supplies two sets of database classes that simplify writing data-access applications. Using the ODBC database classes, you can connect to databases through an Open Database Connectivity (ODBC) driver, select records from tables, and display record information in an on-screen form. Using the Data Access Object (DAO) classes, you can work with databases through the Microsoft Jet database engine or external (non-Jet) data sources, including ODBC data sources.  
   
-     Inoltre, MFC supporta è abilitato per la scrittura di applicazioni che utilizzano il formato Unicode e set di caratteri multibyte \(MBCS\), in particolare i set di caratteri \(DBCS\) a byte doppio.  
+     In addition, MFC is fully enabled for writing applications that use Unicode and multibyte character sets (MBCS), specifically double-byte character sets (DBCS).  
   
- Per una descrizione generale alla documentazione MFC, vedere [Argomenti generali di MFC](../mfc/general-mfc-topics.md).  
+ For a general guide to MFC documentation, see [General MFC Topics](../mfc/general-mfc-topics.md).  
   
-## Vedere anche  
- [Argomenti MFC generali](../mfc/general-mfc-topics.md)
+## <a name="see-also"></a>See Also  
+ [General MFC Topics](../mfc/general-mfc-topics.md)
+
+

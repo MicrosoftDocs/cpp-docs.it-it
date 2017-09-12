@@ -1,39 +1,57 @@
 ---
-title: "Gestione di messaggi riprodotti | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "gestione dei messaggi, message riflessi"
-  - "message riflessi, gestione"
+title: Handling Reflected Messages | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- message handling [MFC], reflected messages
+- reflected messages, handling
 ms.assetid: 147a4e0c-51cc-4447-a8e1-c28b4cece578
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Gestione di messaggi riprodotti
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1366210ad53c7b04e36dfcf3afef7063d61c4b01
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-La reflection di messaggio consente di gestire i messaggi per un controllo, come `WM_CTLCOLOR`, **WM\_COMMAND** e **WM\_NOTIFY**, all'interno del controllo stesso.  Questo rende il controllo più autonomo e portatile.  Il meccanismo lavora con i controlli comuni di Windows così come con i controlli ActiveX \(formalmente denominati controlli OLE\).  
+---
+# <a name="handling-reflected-messages"></a>Handling Reflected Messages
+Message reflection lets you handle messages for a control, such as `WM_CTLCOLOR`, **WM_COMMAND**, and **WM_NOTIFY**, within the control itself. This makes the control more self-contained and portable. The mechanism works with Windows common controls as well as with ActiveX controls (formerly called OLE controls).  
   
- La reflection di messaggio consente di riutilizzare più facilmente il `CWnd`\- classi derivate.  La reflection di messaggio lavora tramite [CWnd::OnChildNotify](../Topic/CWnd::OnChildNotify.md), utilizzando le voci della mappa messaggi speciali **ON\_XXX\_REFLECT**: ad esempio, **ON\_CTLCOLOR\_REFLECT** e **ON\_CONTROL\_REFLECT**.  [Nota tecnica 62](../mfc/tn062-message-reflection-for-windows-controls.md) mostra più dettagliatamente la reflection di messaggio.  
+ Message reflection lets you reuse your `CWnd`-derived classes more readily. Message reflection works via [CWnd::OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify), using special **ON_XXX_REFLECT** message map entries: for example, **ON_CTLCOLOR_REFLECT** and **ON_CONTROL_REFLECT**. [Technical Note 62](../mfc/tn062-message-reflection-for-windows-controls.md) explains message reflection in more detail.  
   
-## Scegliere l'argomento con cui si desidera procedere  
+## <a name="what-do-you-want-to-do"></a>What do you want to do  
   
--   [Acquisire ulteriori informazioni sulla reflection di messaggio](../mfc/tn062-message-reflection-for-windows-controls.md)  
+-   [Learn more about message reflection](../mfc/tn062-message-reflection-for-windows-controls.md)  
   
--   [Implementare la reflection di messaggio per un controllo comune](../mfc/tn062-message-reflection-for-windows-controls.md)  
+-   [Implement message reflection for a common control](../mfc/tn062-message-reflection-for-windows-controls.md)  
   
--   [Implementare la reflection di messaggio per un controllo ActiveX](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)  
+-   [Implement message reflection for an ActiveX control](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)  
   
-## Vedere anche  
- [Dichiarazioni di funzioni gestore messaggi](../mfc/declaring-message-handler-functions.md)
+## <a name="see-also"></a>See Also  
+ [Declaring Message Handler Functions](../mfc/declaring-message-handler-functions.md)
+

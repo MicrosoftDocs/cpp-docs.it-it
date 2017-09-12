@@ -1,73 +1,92 @@
 ---
-title: "Utilizzo delle finestre delle propriet&#224; nell&#39;applicazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AddPage (metodo)"
-  - "CPropertyPage (classe), stili"
-  - "Create (metodo) [C++], finestre delle proprietà"
-  - "risorse finestra di dialogo"
-  - "modelli di finestra di dialogo, finestre delle proprietà"
-  - "DoModal (finestre delle proprietà del metodo)"
-  - "proprietà (pagine), finestre delle proprietà"
-  - "finestre delle proprietà, informazioni sulle finestre delle proprietà"
+title: Using Property Sheets in Your Application | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- dialog templates [MFC], property sheets
+- dialog resources
+- property pages [MFC], property sheets
+- DoModal method property sheets
+- AddPage method [MFC]
+- property sheets, about property sheets
+- Create method [MFC], property sheets
+- CPropertyPage class [MFC], styles
 ms.assetid: 240654d4-152b-4e3f-af7b-44234339206e
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Utilizzo delle finestre delle propriet&#224; nell&#39;applicazione
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 45c1c305309c7136dc3b749bb1489c818764479b
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Per utilizzare una finestra delle proprietà nell'applicazione, completare i passaggi seguenti:  
+---
+# <a name="using-property-sheets-in-your-application"></a>Using Property Sheets in Your Application
+To use a property sheet in your application, complete the following steps:  
   
-1.  Creare una risorsa modello di finestra di dialogo per ogni pagina delle proprietà.  Tenere presente che l'utente può passare da una pagina a un'altra, pertanto disporre ogni pagina nel modo più consistente possibile.  
+1.  Create a dialog template resource for each property page. Keep in mind that the user may be switching from one page to another, so lay out each page as consistently as possible.  
   
-     I modelli della finestra di dialogo per tutte le pagine non devono avere le stesse dimensioni.  Il framework utilizza la dimensione della più ampia pagina per determinare la quantità di spazio da allocare nella finestra delle proprietà delle pagine delle proprietà.  
+     The dialog templates for all pages do not have to be the same size. The framework uses the size of the largest page to determine how much space to allocate in the property sheet for the property pages.  
   
-     Quando si crea una risorsa modello di finestra di dialogo per una pagina delle proprietà, è necessario specificare i seguenti stili nella finestra delle proprietà delle proprietà della finestra di dialogo:  
+     When you create the dialog template resource for a property page, you must specify the following styles in the Dialog Properties property sheet:  
   
-    -   Impostare la casella di modifica **Titolo** nella pagina **Generale** al testo che si desidera visualizzare nella scheda per questa pagina.  
+    -   Set the **Caption** edit box on the **General** page to the text you wish to appear in the tab for this page.  
   
-    -   Impostare la casella di riepilogo **Stile** nella pagina **Stili** a **Figlio**.  
+    -   Set the **Style** list box on the **Styles** page to **Child**.  
   
-    -   Impostare la casella di riepilogo **Bordo** nella pagina **Stili** a **Sottile**.  
+    -   Set the **Border** list box on the **Styles** page to **Thin**.  
   
-    -   Verificare che la casella di controllo **Barra del titolo** nella pagina **Stili** sia selezionata.  
+    -   Ensure that the **Titlebar** check box on the **Styles** page is selected.  
   
-    -   Verificare che la casella di controllo **Disattivato** nella pagina **Ulteriori Stili** sia selezionata.  
+    -   Ensure that the **Disabled** check box on the **More Styles** page is selected.  
   
-2.  Creare una [CPropertyPage](../mfc/reference/cpropertypage-class.md)\- classe derivata corrispondente a ogni modello di finestra di dialogo di pagina delle proprietà.  Vedere [Aggiunta di un classe](../ide/adding-a-class-visual-cpp.md).  Scegliere `CPropertyPage` come classe base.  
+2.  Create a [CPropertyPage](../mfc/reference/cpropertypage-class.md)-derived class corresponding to each property page dialog template. See [Adding a Class](../ide/adding-a-class-visual-cpp.md). Choose `CPropertyPage` as the base class.  
   
-3.  Creare le variabili membro per contenere i valori per questa pagina delle proprietà.  Il processo di aggiunta delle variabili membro in una pagina delle proprietà è esattamente uguale all'aggiunta di variabili membro ad una finestra di dialogo, perché una pagina delle proprietà è una finestra di dialogo complessa.  Per ulteriori informazioni, vedere [Definizione delle variabili membro per i controlli della finestra di dialogo](../mfc/defining-member-variables-for-dialog-controls.md).  
+3.  Create member variables to hold the values for this property page. The process for adding member variables to a property page is exactly the same as adding member variables to a dialog box, because a property page is a specialized dialog box. For more information, see [Defining Member Variables for Dialog Controls](../windows/defining-member-variables-for-dialog-controls.md).  
   
-4.  Costruisce un oggetto [CPropertySheet](../mfc/reference/cpropertysheet-class.md) nel codice sorgente.  In genere, si crea l'oggetto `CPropertySheet` nel gestore per il comando che visualizza la finestra delle proprietà.  Questo oggetto rappresenta l'intera finestra delle proprietà.  Se si crea una finestra delle proprietà modale tramite la funzione [DoModal](../Topic/CPropertySheet::DoModal.md), il framework fornisce tre pulsanti di comando per impostazione predefinita: OK, Annulla e Applica.  Il framework non crea pulsanti di comando per le finestre delle proprietà non modali create con la funzione [Crea](../Topic/CPropertySheet::Create.md).  Non è necessario derivare una classe da `CPropertySheet` a meno che non si aggiungano altri controlli \(ad esempio una finestra di anteprima\) o visualizzino una finestra delle proprietà non modale.  Questa operazione è necessaria per le finestre delle proprietà non modali perché non contiene alcuni controlli predefiniti che possano essere utilizzati per chiudere la finestra delle proprietà.  
+4.  Construct a [CPropertySheet](../mfc/reference/cpropertysheet-class.md) object in your source code. Usually, you construct the `CPropertySheet` object in the handler for the command that displays the property sheet. This object represents the entire property sheet. If you create a modal property sheet with the [DoModal](../mfc/reference/cpropertysheet-class.md#domodal) function, the framework supplies three command buttons by default: OK, Cancel, and Apply. The framework creates no command buttons for modeless property sheets created with the [Create](../mfc/reference/cpropertysheet-class.md#create) function. You do not need to derive a class from `CPropertySheet` unless you want to either add other controls (such as a preview window) or display a modeless property sheet. This step is necessary for modeless property sheets because they do not contain any default controls that could be used to close the property sheet.  
   
-5.  Per ogni pagina da aggiungere alla finestra delle proprietà, effettuare le seguenti operazioni:  
+5.  For each page to be added to the property sheet, do the following:  
   
-    -   Costruire un oggetto per ciascuna `CPropertyPage`\- classe derivata precedentemente creata in questo processo.  
+    -   Construct one object for each `CPropertyPage`-derived class that you created earlier in this process.  
   
-    -   Chiamare [CPropertySheet::AddPage](../Topic/CPropertySheet::AddPage.md) per ogni pagina.  
+    -   Call [CPropertySheet::AddPage](../mfc/reference/cpropertysheet-class.md#addpage) for each page.  
   
-     In genere, l'oggetto che crea `CPropertySheet` crea inoltre gli oggetti `CPropertyPage` in questo passaggio.  Tuttavia, se si implementa `CPropertySheet`\- classe derivata, è possibile importare gli oggetti `CPropertyPage` nell'oggetto `CPropertySheet` e chiamare `AddPage` per ogni pagina da `CPropertySheet`\- costruttore di classe derivata.  `AddPage` aggiunge l'oggetto `CPropertyPage` all'elenco della finestra delle proprietà delle pagine, ma non crea la finestra per la pagina.  Di conseguenza, non è necessario attendere fino alla creazione della finestra delle proprietà per chiamare `AddPage`; è possibile chiamare `AddPage` dal costruttore della finestra delle proprietà.  
+     Typically, the object that creates the `CPropertySheet` also creates the `CPropertyPage` objects in this step. However, if you implement a `CPropertySheet`-derived class, you can embed the `CPropertyPage` objects in the `CPropertySheet` object and call `AddPage` for each page from the `CPropertySheet`-derived class constructor. `AddPage` adds the `CPropertyPage` object to the property sheet's list of pages but does not actually create the window for that page. Therefore, it is not necessary to wait until creation of the property sheet window to call `AddPage`; you can call `AddPage` from the property sheet's constructor.  
   
-     Per impostazione predefinita, se una finestra delle proprietà dispone di più schede di quelle che può contenere in una singola riga della finestra delle proprietà, le schede verranno impilate in più righe.  Per disabilitare lo stacking, chiamare [CPropertySheet::EnableStackedTabs](../Topic/CPropertySheet::EnableStackedTabs.md) con il parametro impostato su **FALSE**.  È necessario chiamare `EnableStackedTabs` quando si crea la finestra delle proprietà.  
+     By default, if a property sheet has more tabs than will fit in a single row of the property sheet, the tabs will stack in multiple rows. To disable stacking, call [CPropertySheet::EnableStackedTabs](../mfc/reference/cpropertysheet-class.md#enablestackedtabs) with the parameter set to **FALSE**. You must call `EnableStackedTabs` when you create the property sheet.  
   
-6.  Chiamare [CPropertySheet::DoModal](../Topic/CPropertySheet::DoModal.md) o [Crea](../Topic/CPropertySheet::Create.md) per visualizzare la finestra delle proprietà.  Chiamare `DoModal` per creare una finestra delle proprietà come finestra di dialogo modale.  Chiamare **Crea** per creare la finestra delle proprietà come finestra di dialogo non modale.  
+6.  Call [CPropertySheet::DoModal](../mfc/reference/cpropertysheet-class.md#domodal) or [Create](../mfc/reference/cpropertysheet-class.md#create) to display the property sheet. Call `DoModal` to create a property sheet as a modal dialog box. Call **Create** to create the property sheet as a modeless dialog box.  
   
-7.  Trasferimento di dati tra le pagine delle proprietà e il proprietario della finestra delle proprietà.  Questa situazione viene illustrata nell'articolo [Lo scambio di dati](../mfc/exchanging-data.md).  
+7.  Exchange data between property pages and the owner of the property sheet. This is explained in the article [Exchanging Data](../mfc/exchanging-data.md).  
   
- Per un esempio di come utilizzare le finestre delle proprietà, vedere l'esempio MFC generale [PROPDLG](../top/visual-cpp-samples.md).  
+ For an example of how to use property sheets, see the MFC General sample [PROPDLG](../visual-cpp-samples.md).  
   
-## Vedere anche  
- [Finestre delle proprietà](../mfc/property-sheets-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Property Sheets](../mfc/property-sheets-mfc.md)
+
+

@@ -1,40 +1,59 @@
 ---
-title: "Utilizzo di un controllo Header | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controlli intestazione"
-  - "controlli intestazione, utilizzo"
+title: Working with a Header Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- header controls [MFC], working with
+- header controls
 ms.assetid: af3afb5c-bf97-451b-8fee-3adcb8257210
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Utilizzo di un controllo Header
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9504196cddd69effb45300a1130051e2b8a1c184
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Il modo più semplice per utilizzare un controllo intestazione \([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)\) è insieme a un controllo elenco; vedere più avanti in questa [Utilizzando CListCtrl](../mfc/using-clistctrl.md) famiglia di argomento.  È inoltre possibile utilizzare un controllo intestazione da sola.  MFC chiama **InitCommonControls** automaticamente.  Le attività principali sono i seguenti:  
+---
+# <a name="working-with-a-header-control"></a>Working with a Header Control
+The easy way to use a header control ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) is in conjunction with a list control; see [Using CListCtrl](../mfc/using-clistctrl.md) later in this topic family. You can also use a header control by itself. MFC calls **InitCommonControls** for you. The key tasks are as follows:  
   
--   [Creazione del controllo intestazione](../mfc/creating-the-header-control.md)  
+-   [Creating the header control](../mfc/creating-the-header-control.md)  
   
--   [Aggiunta di elementi al controllo intestazione](../mfc/adding-items-to-the-header-control.md)  
+-   [Adding items to the header control](../mfc/adding-items-to-the-header-control.md)  
   
--   [Elementi nel controllo intestazione](../mfc/ordering-items-in-the-header-control.md)  
+-   [Ordering items in the header control](../mfc/ordering-items-in-the-header-control.md)  
   
--   [Notifiche di controllo header di elaborazione](../mfc/processing-header-control-notifications.md)  
+-   [Processing header-control notifications](../mfc/processing-header-control-notifications.md)  
   
- Se il controllo intestazione è incorporato in una visualizzazione padre o in una classe finestra di dialogo, il controllo viene eliminato quando l'elemento padre viene eliminato.  
+ If the header control object is embedded in a parent view or dialog class, the control is destroyed when the parent is destroyed.  
   
-## Vedere anche  
- [Utilizzo di CHeaderCtrl](../mfc/using-cheaderctrl.md)   
- [Controlli](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CHeaderCtrl](../mfc/using-cheaderctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

@@ -1,61 +1,80 @@
 ---
-title: "Contenitori di controlli ActiveX | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "contenitori dei controlli ActiveX [C++]"
-  - "controlli OLE [C++], contenitori"
+title: ActiveX Control Containers | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- ActiveX control containers [MFC]
+- OLE controls [MFC], containers
 ms.assetid: 0eb1a713-e607-4c79-a0c7-67c5f1fd5fab
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Contenitori di controlli ActiveX
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 928c59eaa4c3440f5c1ec3679a6c39631155b7e7
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Un contenitore di controlli ActiveX è un contenitore che supporta completamente i controlli ActiveX e può includerli nelle proprie finestre e nelle finestre di dialogo.  Un controllo ActiveX rappresenta un elemento di software riutilizzabile che si può utilizzare in molti progetti di sviluppo.  I controlli consentono all'utente dell'applicazione di accedere ai database, di monitorare i dati e di effettuare varie selezioni all'interno delle applicazioni.  Per ulteriori informazioni sui controlli ActiveX, vedere l'articolo [Controlli ActiveX MFC](../mfc/mfc-activex-controls.md).  
+---
+# <a name="activex-control-containers"></a>ActiveX Control Containers
+An ActiveX control container is a container that fully supports ActiveX controls and can incorporate them into its own windows or dialogs. An ActiveX control is a reusable software element that you can use in many development projects. Controls allow your application's user to access databases, monitor data, and make various selections within your applications. For more information on ActiveX controls, see the article [MFC ActiveX Controls](../mfc/mfc-activex-controls.md).  
   
- In genere i contenitori dei controlli possono assumere due forme in un progetto:  
+ Control containers typically take two forms in a project:  
   
--   Finestre di dialogo e finestre simili alle finestre di dialogo come le visualizzazioni di form, dove un controllo ActiveX viene utilizzato in qualche punto nella finestra di dialogo.  
+-   Dialogs and dialog-like windows such as form views, where an ActiveX control is used somewhere in the dialog box.  
   
--   Finestre in un'applicazione, dove un controllo ActiveX viene utilizzato in una barra degli strumenti o in un'altra posizione nella finestra dell'utente.  
+-   Windows in an application, where an ActiveX control is used in a toolbar, or other location in the user window.  
   
- Il contenitore dei controlli ActiveX interagisce con il controllo mediante [metodi](../mfc/mfc-activex-controls-methods.md) e [proprietà](../mfc/mfc-activex-controls-properties.md) esposti.  Questi metodi e proprietà, accessibili e modificabili dal contenitore dei controlli, sono accessibili tramite una classe wrapper nel progetto del contenitore dei controlli ActiveX.  Il controllo ActiveX incorporato può anche interagire con il contenitore generando \(inviando\) [eventi](../mfc/mfc-activex-controls-events.md) per notificare al contenitore che un'azione si è verificata.  Il contenitore dei controlli può scegliere di agire oppure no su queste notifiche.  
+ The ActiveX control container interacts with the control via exposed [methods](../mfc/mfc-activex-controls-methods.md) and [properties](../mfc/mfc-activex-controls-properties.md). These methods and properties, which can be accessed and modified by the control container, are accessed through a wrapper class in the ActiveX control container project. The embedded ActiveX control can also interact with the container by firing (sending) [events](../mfc/mfc-activex-controls-events.md) to notify the container that an action has occurred. The control container can choose to act upon these notifications or not.  
   
- Articoli aggiuntivi in cui vengono illustrati diversi argomenti, dalla creazione di un progetto del contenitore dei controlli ActiveX a problemi di base di implementazione relativi ai contenitori dei controlli ActiveX creati con Visual C\+\+:  
+ Additional articles discuss several topics, from creating an ActiveX control container project to basic implementation issues related to ActiveX control containers built with Visual C++:  
   
--   [Creazione di un contenitore di controlli ActiveX MFC](../mfc/reference/creating-an-mfc-activex-control-container.md)  
+-   [Creating an MFC ActiveX Control Container](../mfc/reference/creating-an-mfc-activex-control-container.md)  
   
--   [Contenitori per i controlli ActiveX](../mfc/containers-for-activex-controls.md)  
+-   [Containers for ActiveX Controls](../mfc/containers-for-activex-controls.md)  
   
--   [Contenitori di controlli ActiveX: attivazione manuale del contenimento dei controlli ActiveX](../mfc/activex-control-containers-manually-enabling-activex-control-containment.md)  
+-   [ActiveX Control Containers: Manually Enabling ActiveX Control Containment](../mfc/activex-control-containers-manually-enabling-activex-control-containment.md)  
   
--   [Contenitori di controlli ActiveX: inserimento di un controllo in un'applicazione contenitore di controlli](../mfc/inserting-a-control-into-a-control-container-application.md)  
+-   [ActiveX Control Containers: Inserting a Control into a Control Container Application](../mfc/inserting-a-control-into-a-control-container-application.md)  
   
--   [Contenitori di controlli ActiveX: connessione di un controllo ActiveX a una variabile membro](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md)  
+-   [ActiveX Control Containers: Connecting an ActiveX Control to a Member Variable](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md)  
   
--   [Contenitori di controlli ActiveX: gestione di eventi da un controllo ActiveX](../mfc/activex-control-containers-handling-events-from-an-activex-control.md)  
+-   [ActiveX Control Containers: Handling Events from an ActiveX control](../mfc/activex-control-containers-handling-events-from-an-activex-control.md)  
   
--   [Contenitori di controlli ActiveX: visualizzazione e modifica delle proprietà dei controlli](../mfc/activex-control-containers-viewing-and-modifying-control-properties.md)  
+-   [ActiveX Control Containers: Viewing and Modifying Control Properties](../mfc/activex-control-containers-viewing-and-modifying-control-properties.md)  
   
--   [Contenitori di controlli ActiveX: programmazione di controlli ActiveX in un contenitore di controlli ActiveX](../mfc/programming-activex-controls-in-a-activex-control-container.md)  
+-   [ActiveX Control Containers: Programming ActiveX Controls in an ActiveX Control Container](../mfc/programming-activex-controls-in-a-activex-control-container.md)  
   
--   [Contenitori di controlli ActiveX: utilizzo di controlli in un contenitore diverso da una finestra di dialogo](../mfc/activex-control-containers-using-controls-in-a-non-dialog-container.md)  
+-   [ActiveX Control Containers: Using Controls in a Non-Dialog Container](../mfc/activex-control-containers-using-controls-in-a-non-dialog-container.md)  
   
- Per ulteriori informazioni sull'utilizzo dei controlli ActiveX in una finestra di dialogo, vedere gli argomenti dell'[Editor finestre](../mfc/dialog-editor.md).  
+ For more information about using ActiveX controls in a dialog box, see the [Dialog Editor](../windows/dialog-editor.md) topics.  
   
- Per un elenco degli articoli relativi ai dettagli sullo sviluppo dei controlli ActiveX con l'utilizzo di Visual C\+\+ e per le classi dei controlli ActiveX MFC, vedere [Controlli ActiveX MFC](../mfc/mfc-activex-controls.md).  Gli elementi sono raggruppati per categorie funzionali.  
+ For a list of articles that explain the details of developing ActiveX controls using Visual C++ and the MFC ActiveX control classes, see [MFC ActiveX controls](../mfc/mfc-activex-controls.md). The articles are grouped by functional categories.  
   
-## Vedere anche  
- [Controlli ActiveX MFC](../mfc/mfc-activex-controls.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)
+
+

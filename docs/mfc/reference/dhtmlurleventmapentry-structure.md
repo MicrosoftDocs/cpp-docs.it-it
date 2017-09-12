@@ -1,51 +1,69 @@
 ---
-title: "Struttura DHtmlUrlEventMapEntry | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DHtmlUrlEventMapEntry"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DHtmlUrlEventMapEntry (struttura)"
+title: DHtmlUrlEventMapEntry Structure | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- DHtmlUrlEventMapEntry
+dev_langs:
+- C++
+helpviewer_keywords:
+- DHtmlUrlEventMapEntry structure [MFC]
 ms.assetid: 43117c1f-1a51-406c-aa2f-fea647080049
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Struttura DHtmlUrlEventMapEntry
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7191a1fdb998922860701a16353d0f20f12ceca1
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-La struttura di `DHtmlUrlEventMapEntry` fornisce il supporto della mappa eventi più URL.  
+---
+# <a name="dhtmlurleventmapentry-structure"></a>DHtmlUrlEventMapEntry Structure
+The `DHtmlUrlEventMapEntry` structure provides multi-URL event map support.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      struct DHtmlUrlEventMapEntry  
+struct DHtmlUrlEventMapEntry  
 {  
-   LPCTSTR szUrl;  
-   const DHtmlEventMapEntry *pEventMap;  
+LPCTSTR szUrl;  
+const DHtmlEventMapEntry *pEventMap;  
 };  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  `szUrl`  
- URL.  
+ The URL.  
   
  *pEventMap*  
- La mappa eventi associata all'URL.  
+ The event map associated with the URL.  
   
-## Requisiti  
- **Intestazione:** afxdhtml.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdhtml.h  
   
-## Vedere anche  
- [Strutture, stili, callback e mappe messaggi](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
+
+

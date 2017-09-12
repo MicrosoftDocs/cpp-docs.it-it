@@ -1,38 +1,55 @@
 ---
-title: "Collegamento automatico della versione libreria MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "defaultlib"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "collegamenti automatici [C++]"
-  - "libreria predefinita in MFC"
-  - "collegamento [C++]"
-  - "collegamento [C++], automatico della versione della libreria MFC"
-  - "collegamento [C++], di MFC"
-  - "MFC (librerie), collegamento"
-  - "MFC (librerie), versioni"
+title: Automatic Linking of MFC Library Version | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- defaultlib
+dev_langs:
+- C++
+helpviewer_keywords:
+- defaultlib in MFC
+- automatic links [MFC]
+- MFC libraries, linking to
+- linking [MFC], automatic of MFC library version
+- linking [MFC]
+- linking [MFC], of MFC
+- MFC libraries, versions
 ms.assetid: 02af4a20-2034-4fce-b200-c2202c3c8311
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Collegamento automatico della versione libreria MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c256d88f7873f5e29858b3908329f0c9e8fbdb12
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Nelle versioni di MFC precedenti alla versione 3,0 \(prima di Visual C\+\+ versione 2,0\), è necessario specificare manualmente la versione corretta della libreria MFC nell'elenco di input delle librerie dal linker.  Con la versione di MFC 3,0 e successive, non è più necessario specificare manualmente la versione della libreria MFC.  Invece, i file di intestazione MFC determinano automaticamente la versione corretta della libreria MFC, in base a valori definiti con `#define`, ad esempio **\_DEBUG** o **\_UNICODE**.  I file di intestazione MFC aggiungono direttive **\/defaultlib** in base a cui il linker collega una versione specifica della libreria MFC.  
+---
+# <a name="automatic-linking-of-mfc-library-version"></a>Automatic Linking of MFC Library Version
+In versions of MFC before version 3.0 (before Visual C++ version 2.0), you had to manually specify the correct version of the MFC library in the input list of libraries for the linker. With MFC version 3.0 and later, it is no longer necessary to manually specify the version of the MFC library. Instead, the MFC header files automatically determine the correct version of the MFC library, based on values defined with `#define`, such as **_DEBUG** or **_UNICODE**. The MFC header files add **/defaultlib** directives instructing the linker to link in a specific version of the MFC library.  
   
- Ad esempio, il frammento di codice seguente dal file di intestazione di AFX.H indica al linker di collegare la versione NAFXCW.LIB o NAFXCWD.LIB di MFC, in base a se si sta utilizzando la versione di debug di MFC:  
+ For example, the following code fragment from the AFX.H header file instructs the linker to link in either the NAFXCWD.LIB or NAFXCW.LIB version of MFC, depending on whether you are using the debug version of MFC:  
   
  `#ifndef _UNICODE`  
   
@@ -60,7 +77,9 @@ Nelle versioni di MFC precedenti alla versione 3,0 \(prima di Visual C\+\+ versi
   
  `#endif`  
   
- I file di intestazione MFC collegano anche tutte le librerie richieste, incluse le librerie MFC, le librerie Win32, le librerie OLE, le librerie OLE costruite dagli esempi, le librerie ODBC, e così via.  Le librerie Win32 includono Kernel32.Lib, User32.Lib e GDI32.Lib.  
+ MFC header files also link in all required libraries, including MFC libraries, Win32 libraries, OLE libraries, OLE libraries built from samples, ODBC libraries, and so on. The Win32 libraries include Kernel32.Lib, User32.Lib, and GDI32.Lib.  
   
-## Vedere anche  
- [Versioni di librerie MFC](../mfc/mfc-library-versions.md)
+## <a name="see-also"></a>See Also  
+ [MFC Library Versions](../mfc/mfc-library-versions.md)
+
+

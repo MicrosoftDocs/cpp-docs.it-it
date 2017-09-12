@@ -1,48 +1,67 @@
 ---
-title: "Accesso indipendente dai tipi a controlli con creazioni guidate codice | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "creazioni guidate codice"
-  - "DDX (Dialog Data Exchange), accesso ai controlli"
-  - "controlli delle finestre di dialogo, accesso"
-  - "finestre di dialogo, accesso ai controlli"
+title: Type-Safe Access to Controls With Code Wizards | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- DDX (dialog data exchange), access to controls
+- code wizards
+- dialog boxes [MFC], access to controls
+- dialog box controls [MFC], accessing
 ms.assetid: b8874393-ee48-4124-8d78-e3648a7e29b9
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Accesso indipendente dai tipi a controlli con creazioni guidate codice
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 77917663ef027781f7d132028dac21c735ca48dc
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Se si ha familiarità con le funzionalità DDX, è possibile utilizzare la proprietà del controllo in [Aggiunta guidata variabile membro](../ide/add-member-variable-wizard.md) per creare l'accesso indipendente dai tipi.  Questo approccio risulta più semplice rispetto alla creazione di controlli senza creazioni guidate codice.  
+---
+# <a name="type-safe-access-to-controls-with-code-wizards"></a>Type-Safe Access to Controls With Code Wizards
+If you are familiar with DDX features, you can use the Control property in the [Add Member Variable Wizard](../ide/add-member-variable-wizard.md) to create type-safe access. This approach is easier than creating controls without code wizards.  
   
- Se si desidera semplicemente l'accesso al valore di un controllo, DDX lo sono.  Se si desidera rendere più il valore di un controllo, utilizzare la procedura guidata variabile membro aggiungi per aggiungere una variabile membro della classe appropriata alla classe della finestra di dialogo.  Associare questa variabile membro alla proprietà del controllo.  
+ If you simply want access to a control's value, DDX provides it. If you want to do more than access a control's value, use the Add Member Variable Wizard to add a member variable of the appropriate class to your dialog class. Attach this member variable to the Control property.  
   
- Le variabili membro possono includere una proprietà del controllo anziché una proprietà Value.  La proprietà Value si riferisce al tipo di dati restituiti dal controllo, come `CString` o `int`.  La proprietà del controllo abilita l'accesso diretto al controllo tramite un membro dati del cui tipo è una delle classi di controlli in MFC, come `CButton` o `CEdit`.  
+ Member variables can have a Control property instead of a Value property. The Value property refers to the type of data returned from the control, such as `CString` or `int`. The Control property enables direct access to the control through a data member whose type is one of the control classes in MFC, such as `CButton` or `CEdit`.  
   
 > [!NOTE]
->  Per un determinato controllo, è possibile, se lo si desidera, è le variabili membro con la proprietà Value e al massimo una variabile membro con la proprietà del controllo.  È possibile eseguire solo un oggetto MFC esegue il mapping a un controllo in quanto più oggetti associati a un controllo, o qualsiasi altra finestra, condurrebbero a ambiguità nella mappa messaggi.  
+>  For a given control, you can, if you wish, have multiple member variables with the Value property and at most one member variable with the Control property. You can have only one MFC object mapped to a control because multiple objects attached to a control, or any other window, would lead to an ambiguity in the message map.  
   
- È possibile utilizzare questo oggetto per chiamare le funzioni membro per l'oggetto controllo.  Tali chiamate influiscono sul controllo nella finestra di dialogo.  Ad esempio, per un controllo casella di controllo rappresentato da `m_Checkbox`variabile, di tipo `CButton`, è possibile chiamare:  
+ You can use this object to call any member functions for the control object. Such calls affect the control in the dialog box. For example, for a check-box control represented by a variable `m_Checkbox`, of type `CButton`, you could call:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#52](../mfc/codesnippet/CPP/type-safe-access-to-controls-with-code-wizards_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#52](../mfc/codesnippet/cpp/type-safe-access-to-controls-with-code-wizards_1.cpp)]  
   
- Qui la variabile membro `m_Checkbox` ha la stessa funzione da funzione membro `GetMyCheckbox` illustrato in [L'accesso indipendente dai tipi ai controlli privi creazioni guidate codice](../mfc/type-safe-access-to-controls-without-code-wizards.md).  Se la casella di controllo non è una casella di controllo automatica, è ancora necessario un gestore nella classe della finestra di dialogo per il messaggio di notifica del controllo di **BN\_CLICKED** quando si fa clic sul pulsante.  
+ Here the member variable `m_Checkbox` serves the same purpose as the member function `GetMyCheckbox` shown in [Type-Safe Access to Controls Without Code Wizards](../mfc/type-safe-access-to-controls-without-code-wizards.md). If the check box is not an auto check box, you would still need a handler in your dialog class for the **BN_CLICKED** control-notification message when the button is clicked.  
   
- Per ulteriori informazioni sui controlli, vedere [Controlli](../mfc/controls-mfc.md).  
+ For more information about controls, see [Controls](../mfc/controls-mfc.md).  
   
-## Vedere anche  
- [Accesso indipendente dai tipi ai controlli in una finestra di dialogo](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)   
- [Ciclo di vita di una finestra di dialogo](../mfc/life-cycle-of-a-dialog-box.md)   
- [Accesso indipendente dai tipi ai controlli senza creazioni guidate codice](../mfc/type-safe-access-to-controls-without-code-wizards.md)
+## <a name="see-also"></a>See Also  
+ [Type-Safe Access to Controls in a Dialog Box](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)   
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)   
+ [Type-Safe Access to Controls Without Code Wizards](../mfc/type-safe-access-to-controls-without-code-wizards.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCPropertyGridFontProperty | Documenti di Microsoft
+title: CMFCPropertyGridFontProperty Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,9 +17,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCPropertyGridFontProperty::OnClickButton method
-- CMFCPropertyGridFontProperty class
-- CMFCPropertyGridFontProperty::FormatProperty method
+- CMFCPropertyGridFontProperty [MFC], CMFCPropertyGridFontProperty
+- CMFCPropertyGridFontProperty [MFC], GetColor
+- CMFCPropertyGridFontProperty [MFC], GetLogFont
 ms.assetid: 83693f33-bbd3-4fcb-a9ad-fa79fcf2ca24
 caps.latest.revision: 23
 author: mikeblome
@@ -39,55 +39,55 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 05d1db7e7de2ee72244e885d8a083ac3cda20142
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3e9f134969e7ab512100b6fac39a178e66f9070d
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcpropertygridfontproperty-class"></a>Classe CMFCPropertyGridFontProperty
-La `CMFCPropertyGridFileProperty` classe supporta un elemento controllo elenco delle proprietà che verrà visualizzata una finestra di dialogo Selezione tipo di carattere.  
+# <a name="cmfcpropertygridfontproperty-class"></a>CMFCPropertyGridFontProperty Class
+The `CMFCPropertyGridFileProperty` class supports a property list control item that opens a font selection dialog box.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCPropertyGridFontProperty : public CMFCPropertyGridProperty  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Costruttori pubblici  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCPropertyGridFontProperty::CMFCPropertyGridFontProperty](#cmfcpropertygridfontproperty)|Costruisce un oggetto `CMFCPropertyGridFontProperty`.|  
-|`CMFCPropertyGridFontProperty::~CMFCPropertyGridFontProperty`|Distruttore.|  
+|[CMFCPropertyGridFontProperty::CMFCPropertyGridFontProperty](#cmfcpropertygridfontproperty)|Constructs a `CMFCPropertyGridFontProperty` object.|  
+|`CMFCPropertyGridFontProperty::~CMFCPropertyGridFontProperty`|Destructor.|  
   
-### <a name="public-methods"></a>Metodi pubblici  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCPropertyGridFontProperty::FormatProperty`|Formatta la rappresentazione di testo di un valore della proprietà. (Esegue l'override di [CMFCPropertyGridProperty::FormatProperty](../../mfc/reference/cmfcpropertygridproperty-class.md#formatproperty).)|  
-|[CMFCPropertyGridFontProperty::GetColor](#getcolor)|Recupera il colore selezionato dall'utente nella finestra di dialogo tipo di carattere.|  
-|[CMFCPropertyGridFontProperty::GetLogFont](#getlogfont)|Recupera il tipo di carattere selezionato dall'utente nella finestra di dialogo tipo di carattere.|  
-|`CMFCPropertyGridFontProperty::GetThisClass`|Utilizzato dal framework per ottenere un puntatore al [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) oggetto associato a questo tipo di classe.|  
-|`CMFCPropertyGridFontProperty::OnClickButton`|Chiamato dal framework quando l'utente fa clic su un pulsante contenuto in una proprietà. (Esegue l'override di [CMFCPropertyGridProperty::OnClickButton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton).)|  
+|`CMFCPropertyGridFontProperty::FormatProperty`|Formats the text representation of a property value. (Overrides [CMFCPropertyGridProperty::FormatProperty](../../mfc/reference/cmfcpropertygridproperty-class.md#formatproperty).)|  
+|[CMFCPropertyGridFontProperty::GetColor](#getcolor)|Retrieves the font color that the user selects from the font dialog box.|  
+|[CMFCPropertyGridFontProperty::GetLogFont](#getlogfont)|Retrieves the font that the user selects from the font dialog box.|  
+|`CMFCPropertyGridFontProperty::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
+|`CMFCPropertyGridFontProperty::OnClickButton`|Called by the framework when the user clicks a button that is contained in a property. (Overrides [CMFCPropertyGridProperty::OnClickButton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton).)|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Remarks  
   
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)  
   
  [CMFCPropertyGridFontProperty](../../mfc/reference/cmfcpropertygridfontproperty-class.md)  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** afxpropertygridctrl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxpropertygridctrl.h  
   
-##  <a name="cmfcpropertygridfontproperty"></a>CMFCPropertyGridFontProperty::CMFCPropertyGridFontProperty  
- Costruisce un oggetto `CMFCPropertyGridFontProperty`.  
+##  <a name="cmfcpropertygridfontproperty"></a>  CMFCPropertyGridFontProperty::CMFCPropertyGridFontProperty  
+ Constructs a `CMFCPropertyGridFontProperty` object.  
   
 ```  
 CMFCPropertyGridFontProperty(
@@ -99,60 +99,60 @@ CMFCPropertyGridFontProperty(
     COLORREF color = (COLORREF)-1);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `strName`  
- Nome della proprietà.  
+ The name of the property.  
   
  [in] `lf`  
- Una struttura di tipo di carattere logica che specifica gli attributi del tipo di carattere.  
+ A logical font structure that specifies the attributes of the font.  
   
  [in] `dwFontDialogFlags`  
- Stili applicati per la finestra di dialogo tipo di carattere che viene visualizzata quando si sceglie il pulsante di menu a discesa valore di proprietà. Il valore predefinito è la combinazione bit per bit (OR) di CF_EFFECTS e CF_SCREENFONTS. Per ulteriori informazioni, vedere il `Flags` parametro il [struttura CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832).  
+ Styles that are applied to the font dialog box that is displayed when you click the property value drop-down button. The default value is the bitwise combination (OR) of CF_EFFECTS and CF_SCREENFONTS. For more information, see the `Flags` parameter of the [CHOOSEFONT Structure](http://msdn.microsoft.com/library/windows/desktop/ms646832).  
   
  [in] `lpszDescr`  
- Descrizione della proprietà del tipo di carattere. Il valore predefinito è `NULL`.  
+ Description of the font property. The default value is `NULL`.  
   
  [in] `dwData`  
- Dati specifici dell'applicazione, ad esempio un numero intero o un puntatore ad altri dati che sono associati alla proprietà. Il valore predefinito è 0.  
+ Application-specific data, such as an integer or a pointer to other data that is associated with the property. The default value is 0.  
   
  [in] `color`  
- Il colore del tipo di carattere. Il valore predefinito è il colore predefinito.  
+ The color of the font. The default value is the default color.  
   
-### <a name="remarks"></a>Note  
- Oggetto `CMFCPropertyGridFontProperty` oggetto rappresenta una proprietà di tipo di carattere in un controllo griglia delle proprietà del carattere.  
+### <a name="remarks"></a>Remarks  
+ A `CMFCPropertyGridFontProperty` object represents a font property in a property grid font control.  
   
-### <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come costruire un oggetto della `CMFCPropertyGridFontProperty` classe. Questo esempio fa parte di [esempio nuovi controlli](../../visual-cpp-samples.md).  
+### <a name="example"></a>Example  
+ The following example demonstrates how construct an object of the `CMFCPropertyGridFontProperty` class. This example is part of the [New Controls sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[&#26; NVC_MFC_NewControls](../../mfc/reference/codesnippet/cpp/cmfcpropertygridfontproperty-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_NewControls#26](../../mfc/reference/codesnippet/cpp/cmfcpropertygridfontproperty-class_1.cpp)]  
   
-##  <a name="getcolor"></a>CMFCPropertyGridFontProperty::GetColor  
- Recupera il colore selezionato dall'utente nella finestra di dialogo tipo di carattere.  
+##  <a name="getcolor"></a>  CMFCPropertyGridFontProperty::GetColor  
+ Retrieves the font color that the user selects from the font dialog box.  
   
 ```  
 COLORREF GetColor() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Un valore di colore RGB che rappresenta il colore del tipo di carattere selezionato.  
+### <a name="return-value"></a>Return Value  
+ An RGB color value that represents the selected font color.  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getlogfont"></a>CMFCPropertyGridFontProperty::GetLogFont  
- Recupera il tipo di carattere selezionato dall'utente nella finestra di dialogo tipo di carattere.  
+##  <a name="getlogfont"></a>  CMFCPropertyGridFontProperty::GetLogFont  
+ Retrieves the font that the user selects from the font dialog box.  
   
 ```  
 LPLOGFONT GetLogFont();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Un puntatore a un [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struttura che descrive il tipo di carattere selezionato.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) structure that describes the selected font.  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>Vedere anche  
- [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
- [Classi](../../mfc/reference/mfc-classes.md)   
- [Classe CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md)   
- [Classe CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCPropertyGridCtrl Class](../../mfc/reference/cmfcpropertygridctrl-class.md)   
+ [CMFCPropertyGridProperty Class](../../mfc/reference/cmfcpropertygridproperty-class.md)
 

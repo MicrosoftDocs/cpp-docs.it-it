@@ -1,41 +1,60 @@
 ---
-title: "Windows Sockets: socket di datagramma | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "socket di datagrammi [C++]"
-  - "socket [C++], flusso di dati bidirezionale"
-  - "socket [C++], datagramma"
-  - "Windows Sockets [C++], flusso di dati bidirezionale"
-  - "Windows Sockets [C++], datagramma"
+title: 'Windows Sockets: Datagram Sockets | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- sockets [MFC], datagram
+- Windows Sockets [MFC], bi-directional data flow
+- datagram sockets [MFC]
+- Windows Sockets [MFC], datagram
+- sockets [MFC], bi-directional data flow
 ms.assetid: bec16a1c-74c0-4ff9-8c18-c2d87897d264
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Windows Sockets: socket di datagramma
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e48863aae635f8855cec24ebab023d07aeba12a8
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Questo articolo vengono descritti i socket di datagramma, uno dei due tipi di socket di windows disponibili. \(L'altro tipo è [socket di flusso](../mfc/windows-sockets-stream-sockets.md)\).  
+---
+# <a name="windows-sockets-datagram-sockets"></a>Windows Sockets: Datagram Sockets
+This article describes datagram sockets, one of the two Windows Socket types available. (The other type is the [stream socket](../mfc/windows-sockets-stream-sockets.md).)  
   
- I socket di datagramma supportano un flusso di dati bidirezionale che non verrà sicuramente ordinato o per unduplicated.  I Datagrams inoltre non sono garantiti per essere affidabili; può non riuscire una situazione.  I dati di Datagram possono verificarsi tainted e possibilmente duplicato, ma i limiti del record nei dati vengono mantenuti, purché i record sono minori del limite interno della dimensione del ricevitore.  È responsabile dell'ordinamento e dell'affidabilità gestire. \(Affidabilità tende a essere valida le reti \[LAN\] ma in minore quindi su Widi Area Network \[WAN\], ad esempio internet.\)  
+ Datagram sockets support a bidirectional data flow that is not guaranteed to be sequenced or unduplicated. Datagrams also are not guaranteed to be reliable; they can fail to arrive. Datagram data may arrive out of order and possibly duplicated, but record boundaries in the data are preserved, as long as the records are smaller than the receiver's internal size limit. You are responsible for managing sequencing and reliability. (Reliability tends to be good on local-area networks [LAN] but less so on wide-area networks [WAN], such as the Internet.)  
   
- I Datagrams sono "privi di connessione", ovvero, alcuna connessione viene stabilita esplicita; invia un messaggio di datagram a un socket specificato e ricevere messaggi da un socket specificato.  
+ Datagrams are "connectionless", that is, no explicit connection is established; you send a datagram message to a specified socket and you can receive messages from a specified socket.  
   
- Un esempio di un blocco di datagramma è un'applicazione che mantiene i clock di sistema nella rete sincronizzati.  Viene illustrata una funzionalità aggiuntiva sockets di datagramma almeno in alcune impostazioni: messaggi di trasmettere a un numero elevato degli indirizzi di rete.  
+ An example of a datagram socket is an application that keeps system clocks on the network synchronized. This illustrates an additional capability of datagram sockets in at least some settings: broadcasting messages to a large number of network addresses.  
   
- I socket di datagramma sono migliori sockets di flusso per i dati orientati a record.  Per ulteriori informazioni sui socket di datagramma, vedere la specifica di Windows Sockets, disponibile in [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+ Datagram sockets are better than stream sockets for record-oriented data. For more information about datagram sockets, see the Windows Sockets specification, available in the Windows SDK.  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)   
- [Windows Sockets: sfondo](../mfc/windows-sockets-background.md)
+ [Windows Sockets: Background](../mfc/windows-sockets-background.md)
+
+

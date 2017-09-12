@@ -1,5 +1,5 @@
 ---
-title: Classe CD2DBrush | Documenti di Microsoft
+title: CD2DBrush Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,7 +26,18 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CD2DBrush class
+- CD2DBrush [MFC], CD2DBrush
+- CD2DBrush [MFC], Attach
+- CD2DBrush [MFC], Destroy
+- CD2DBrush [MFC], Detach
+- CD2DBrush [MFC], Get
+- CD2DBrush [MFC], GetOpacity
+- CD2DBrush [MFC], GetTransform
+- CD2DBrush [MFC], IsValid
+- CD2DBrush [MFC], SetOpacity
+- CD2DBrush [MFC], SetTransform
+- CD2DBrush [MFC], m_pBrush
+- CD2DBrush [MFC], m_pBrushProperties
 ms.assetid: 0d2c0857-2261-48a8-8ee0-a88cbf08499a
 caps.latest.revision: 17
 author: mikeblome
@@ -46,88 +57,88 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: b9902445fb6e18df20073d132a2117c67e695b25
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a067a0913012c24c0ebd7e2d2ac341b135beb927
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cd2dbrush-class"></a>Classe CD2DBrush
-Un wrapper per ID2D1Brush.  
+# <a name="cd2dbrush-class"></a>CD2DBrush Class
+A wrapper for ID2D1Brush.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CD2DBrush : public CD2DResource;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="protected-constructors"></a>Costruttori protetti  
+### <a name="protected-constructors"></a>Protected Constructors  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DBrush::CD2DBrush](#cd2dbrush)|Costruisce un oggetto CD2DBrush.|  
-|[CD2DBrush:: ~ CD2DBrush](#_dtorcd2dbrush)|Distruttore. Chiamato quando viene eliminato un oggetto brush D2D.|  
+|[CD2DBrush::CD2DBrush](#cd2dbrush)|Constructs a CD2DBrush object.|  
+|[CD2DBrush::~CD2DBrush](#_dtorcd2dbrush)|The destructor. Called when a D2D brush object is being destroyed.|  
   
-### <a name="public-methods"></a>Metodi pubblici  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DBrush::Attach](#attach)|È possibile collegare interfaccia risorse per l'oggetto esistente|  
-|[CD2DBrush:: Destroy](#destroy)|Elimina un oggetto CD2DBrush. (Esegue l'override di [CD2DResource:: Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|  
-|[CD2DBrush::Detach](#detach)|Disconnette l'interfaccia risorse dall'oggetto|  
-|[CD2DBrush::Get](#get)|Restituisce l'interfaccia ID2D1Brush|  
-|[CD2DBrush::GetOpacity](#getopacity)|Ottiene il livello di opacità di questo pennello|  
-|[CD2DBrush::GetTransform](#gettransform)|Ottiene la trasformazione corrente della destinazione di rendering|  
-|[CD2DBrush::IsValid](#isvalid)|Controlla la validità della risorsa (esegue l'override di [CD2DResource:: IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|  
-|[CD2DBrush::SetOpacity](#setopacity)|Imposta il livello di opacità di questo pennello|  
-|[CD2DBrush::setTransform](#settransform)|Applica la trasformazione specificata per la destinazione di rendering, sostituendo la trasformazione esistente. Tutte le operazioni di disegno successive si verificano nello spazio trasformato|  
+|[CD2DBrush::Attach](#attach)|Attaches existing resource interface to the object|  
+|[CD2DBrush::Destroy](#destroy)|Destroys a CD2DBrush object. (Overrides [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|  
+|[CD2DBrush::Detach](#detach)|Detaches resource interface from the object|  
+|[CD2DBrush::Get](#get)|Returns ID2D1Brush interface|  
+|[CD2DBrush::GetOpacity](#getopacity)|Gets the degree of opacity of this brush|  
+|[CD2DBrush::GetTransform](#gettransform)|Gets the current transform of the render target|  
+|[CD2DBrush::IsValid](#isvalid)|Checks resource validity (Overrides [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|  
+|[CD2DBrush::SetOpacity](#setopacity)|Sets the degree of opacity of this brush|  
+|[CD2DBrush::SetTransform](#settransform)|Applies the specified transform to the render target, replacing the existing transformation. All subsequent drawing operations occur in the transformed space|  
   
-### <a name="public-operators"></a>Operatori pubblici  
+### <a name="public-operators"></a>Public Operators  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DBrush::operator ID2D1Brush *](#operator_id2d1brush_star)|Restituisce l'interfaccia ID2D1Brush|  
+|[CD2DBrush::operator ID2D1Brush*](#operator_id2d1brush_star)|Returns ID2D1Brush interface|  
   
-### <a name="protected-data-members"></a>Membri dati protetti  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DBrush::m_pBrush](#m_pbrush)|Archivia un puntatore a un oggetto ID2D1Brush.|  
-|[CD2DBrush::m_pBrushProperties](#m_pbrushproperties)|Proprietà dei pennelli.|  
+|[CD2DBrush::m_pBrush](#m_pbrush)|Stores a pointer to an ID2D1Brush object.|  
+|[CD2DBrush::m_pBrushProperties](#m_pbrushproperties)|Brush properties.|  
   
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CD2DResource](../../mfc/reference/cd2dresource-class.md)  
   
  `CD2DBrush`  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** afxrendertarget. h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxrendertarget.h  
   
-##  <a name="_dtorcd2dbrush"></a>CD2DBrush:: ~ CD2DBrush  
- Distruttore. Chiamato quando viene eliminato un oggetto brush D2D.  
+##  <a name="_dtorcd2dbrush"></a>  CD2DBrush::~CD2DBrush  
+ The destructor. Called when a D2D brush object is being destroyed.  
   
 ```  
 virtual ~CD2DBrush();
 ```  
   
-##  <a name="attach"></a>CD2DBrush::Attach  
- È possibile collegare interfaccia risorse per l'oggetto esistente  
+##  <a name="attach"></a>  CD2DBrush::Attach  
+ Attaches existing resource interface to the object  
   
 ```  
 void Attach(ID2D1Brush* pResource);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pResource`  
- Interfaccia di risorse esistente. Non può essere NULL  
+ Existing resource interface. Cannot be NULL  
   
-##  <a name="cd2dbrush"></a>CD2DBrush::CD2DBrush  
- Costruisce un oggetto CD2DBrush.  
+##  <a name="cd2dbrush"></a>  CD2DBrush::CD2DBrush  
+ Constructs a CD2DBrush object.  
   
 ```  
 CD2DBrush(
@@ -136,120 +147,120 @@ CD2DBrush(
     BOOL bAutoDestroy = TRUE);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pParentTarget`  
- Puntatore alla destinazione di rendering.  
+ A pointer to the render target.  
   
  `pBrushProperties`  
- Puntatore all'opacità e alla trasformazione di un pennello.  
+ A pointer to the opacity and transformation of a brush.  
   
  `bAutoDestroy`  
- Indica che l'oggetto verrà eliminata dal proprietario (pParentTarget).  
+ Indicates that the object will be destroyed by owner (pParentTarget).  
   
-##  <a name="destroy"></a>CD2DBrush:: Destroy  
- Elimina un oggetto CD2DBrush.  
+##  <a name="destroy"></a>  CD2DBrush::Destroy  
+ Destroys a CD2DBrush object.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="detach"></a>CD2DBrush::Detach  
- Disconnette l'interfaccia risorse dall'oggetto  
+##  <a name="detach"></a>  CD2DBrush::Detach  
+ Detaches resource interface from the object  
   
 ```  
 ID2D1Brush* Detach();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Puntatore a interfaccia risorse scollegato.  
+### <a name="return-value"></a>Return Value  
+ Pointer to detached resource interface.  
   
-##  <a name="get"></a>CD2DBrush::Get  
- Restituisce l'interfaccia ID2D1Brush  
+##  <a name="get"></a>  CD2DBrush::Get  
+ Returns ID2D1Brush interface  
   
 ```  
 ID2D1Brush* Get();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Puntatore a un'interfaccia ID2D1Brush o NULL se l'oggetto non è ancora inizializzato.  
+### <a name="return-value"></a>Return Value  
+ Pointer to an ID2D1Brush interface or NULL if object is not initialized yet.  
   
-##  <a name="getopacity"></a>CD2DBrush::GetOpacity  
- Ottiene il livello di opacità di questo pennello  
+##  <a name="getopacity"></a>  CD2DBrush::GetOpacity  
+ Gets the degree of opacity of this brush  
   
 ```  
 FLOAT GetOpacity() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Un valore compreso tra 0 e 1 che indica l'opacità del pennello. Questo valore è un moltiplicatore costante che viene ridimensionata in modo lineare il valore alfa di tutti i pixel riempiti dal pennello. I valori di opacità sono compresi nell'intervallo da 0 a 1 prima che vengano moltiplicati insieme  
+### <a name="return-value"></a>Return Value  
+ A value between zero and 1 that indicates the opacity of the brush. This value is a constant multiplier that linearly scales the alpha value of all pixels filled by the brush. The opacity values are clamped in the range 0 to 1 before they are multiplied together  
   
-##  <a name="gettransform"></a>CD2DBrush::GetTransform  
- Ottiene la trasformazione corrente della destinazione di rendering  
+##  <a name="gettransform"></a>  CD2DBrush::GetTransform  
+ Gets the current transform of the render target  
   
 ```  
 void GetTransform(D2D1_MATRIX_3X2_F* transform) const;  
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `transform`  
- Quando viene restituito, contiene la trasformazione corrente della destinazione di rendering. Questo parametro viene passato non inizializzato  
+ When this returns, contains the current transform of the render target. This parameter is passed uninitialized  
   
-##  <a name="isvalid"></a>CD2DBrush::IsValid  
- Verifica la validità della risorsa  
+##  <a name="isvalid"></a>  CD2DBrush::IsValid  
+ Checks resource validity  
   
 ```  
 virtual BOOL IsValid() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- TRUE se la risorsa è valido. in caso contrario FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE if resource is valid; otherwise FALSE.  
   
-##  <a name="m_pbrush"></a>CD2DBrush::m_pBrush  
- Archivia un puntatore a un oggetto ID2D1Brush.  
+##  <a name="m_pbrush"></a>  CD2DBrush::m_pBrush  
+ Stores a pointer to an ID2D1Brush object.  
   
 ```  
 ID2D1Brush* m_pBrush;  
 ```  
   
-##  <a name="m_pbrushproperties"></a>CD2DBrush::m_pBrushProperties  
- Proprietà dei pennelli.  
+##  <a name="m_pbrushproperties"></a>  CD2DBrush::m_pBrushProperties  
+ Brush properties.  
   
 ```  
 CD2DBrushProperties* m_pBrushProperties;  
 ```  
   
-##  <a name="operator_id2d1brush_star"></a>CD2DBrush::operator ID2D1Brush *  
- Restituisce l'interfaccia ID2D1Brush  
+##  <a name="operator_id2d1brush_star"></a>  CD2DBrush::operator ID2D1Brush*  
+ Returns ID2D1Brush interface  
   
 ```  
 operator ID2D1Brush*();
 ```   
   
-### <a name="return-value"></a>Valore restituito  
- Puntatore a un'interfaccia ID2D1Brush o NULL se l'oggetto non è ancora inizializzato.  
+### <a name="return-value"></a>Return Value  
+ Pointer to an ID2D1Brush interface or NULL if object is not initialized yet.  
   
-##  <a name="setopacity"></a>CD2DBrush::SetOpacity  
- Imposta il livello di opacità di questo pennello  
+##  <a name="setopacity"></a>  CD2DBrush::SetOpacity  
+ Sets the degree of opacity of this brush  
   
 ```  
 void SetOpacity(FLOAT opacity);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `opacity`  
- Un valore compreso tra 0 e 1 che indica l'opacità del pennello. Questo valore è un moltiplicatore costante che viene ridimensionata in modo lineare il valore alfa di tutti i pixel riempiti dal pennello. I valori di opacità sono compresi nell'intervallo da 0 a 1 prima che vengano moltiplicati insieme  
+ A value between zero and 1 that indicates the opacity of the brush. This value is a constant multiplier that linearly scales the alpha value of all pixels filled by the brush. The opacity values are clamped in the range 0 to 1 before they are multiplied together  
   
-##  <a name="settransform"></a>CD2DBrush::setTransform  
- Applica la trasformazione specificata per la destinazione di rendering, sostituendo la trasformazione esistente. Tutte le operazioni di disegno successive si verificano nello spazio trasformato  
+##  <a name="settransform"></a>  CD2DBrush::SetTransform  
+ Applies the specified transform to the render target, replacing the existing transformation. All subsequent drawing operations occur in the transformed space  
   
 ```  
 void SetTransform(const D2D1_MATRIX_3X2_F* transform);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `transform`  
- La trasformazione da applicare alla destinazione di rendering  
+ The transform to apply to the render target  
   
-## <a name="see-also"></a>Vedere anche  
- [Classi](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

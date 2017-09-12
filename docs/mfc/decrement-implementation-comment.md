@@ -1,44 +1,62 @@
 ---
-title: "// Commento all&#39;implementazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "commenti, commenti all'implementazione"
-  - "commenti, MFC"
-  - "commenti all'implementazione in file di origine MFC"
-  - "MFC (file di origine), commento all'implementazione"
+title: -- Implementation Comment | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Implementation comment in MFC source files
+- comments, MFC
+- MFC source files, Implementation comment
+- comments, Implementation comments
 ms.assetid: 4d799c07-8e71-4a6b-90ab-8282d6ff48ce
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# // Commento all&#39;implementazione
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 74c75369879369232c35e114c2b283911a072795
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-La sezione di `// Implementation` è la parte importante di qualsiasi dichiarazione di classe MFC.  
+---
+# <a name="-implementation-comment"></a>// Implementation Comment
+The `// Implementation` section is the most important part of any MFC class declaration.  
   
- Il case di questa sezione tutti i dettagli di implementazione.  Sia le variabili membro che le funzioni membro possono essere visualizzati in questa sezione.  Tutto in questa riga potrebbe subire modifiche nelle versioni future di MFC.  A meno che non sia possibile evitarlo, non deve basarsi sui dettagli nella riga di `// Implementation`.  Inoltre, i membri dichiarati nella riga di implementazione non documentati, anche se una determinata implementazione è discussa nelle note tecniche.  Override di funzioni virtuali nella classe base risiedono in questa sezione, indipendentemente dalla sezione la funzione di classe base è definita in, perché il fatto che una funzione di override l'implementazione della classe base è considerato un dettaglio di implementazione.  In genere, questi membri sono protetti non sempre, ma.  
+ This section houses all implementation details. Both member variables and member functions can appear in this section. Everything below this line could change in a future release of MFC. Unless you cannot avoid it, you should not rely on details below the `// Implementation` line. In addition, members declared below the implementation line are not documented, although some implementation is discussed in technical notes. Overrides of virtual functions in the base class reside in this section, regardless of which section the base class function is defined in, because the fact that a function overrides the base class implementation is considered an implementation detail. Typically, these members are protected, but not always.  
   
- Avviso da `CStdioFile` che vengono elencati sotto [Un esempio di commenti](../mfc/an-example-of-the-comments.md) che i membri dichiarati nel commento di `// Implementation` possono essere dichiarati come **public**, `protected`, o `private`.  È consigliabile utilizzare solo con cautela questi membri, poiché potrebbero cambiare in futuro.  La dichiarazione del gruppo di membri quali **public** può essere necessaria per l'implementazione della libreria di classi funzioni correttamente.  Tuttavia, questo non significa che è possibile utilizzare i membri dichiarati così.  
+ Notice from the `CStdioFile` listing under [An Example of the Comments](../mfc/an-example-of-the-comments.md) that members declared below the `// Implementation` comment may be declared as **public**, `protected`, or `private`. You should only use these members with caution, because they may change in the future. Declaring a group of members as **public** may be necessary for the class library implementation to work correctly. However, this does not mean that you may safely use the members so declared.  
   
 > [!NOTE]
->  È possibile trovare i commenti dei tipi rimanenti sopra o sotto il commento di `// Implementation`.  In entrambi i casi, vengono descritti i tipi di membri dichiarati in esse.  Se si verificano nel commento di `// Implementation`, occorre considerare che i membri possono subire modifiche nelle versioni future di MFC.  
+>  You may find comments of the remaining types either above or below the `// Implementation` comment. In either case, they describe the kinds of members declared below them. If they occur below the `// Implementation` comment, you should assume that the members may change in future versions of MFC.  
   
-## Vedere anche  
- [Utilizzo dei file di origine MFC](../mfc/using-the-mfc-source-files.md)   
- [Esempio dei commenti](../mfc/an-example-of-the-comments.md)   
- [\/\/ Commento sui costruttori](../mfc/decrement-constructors-comment.md)   
- [\/\/ Commento sugli attributi](../mfc/decrement-attributes-comment.md)   
- [\/\/ Commento sulle operazioni](../mfc/decrement-operations-comment.md)   
- [\/\/ Commento sui sottoponibili a override](../mfc/decrement-overridables-comment.md)
+## <a name="see-also"></a>See Also  
+ [Using the MFC Source Files](../mfc/using-the-mfc-source-files.md)   
+ [An Example of the Comments](../mfc/an-example-of-the-comments.md)   
+ [// Constructors Comment](../mfc/decrement-constructors-comment.md)   
+ [// Attributes Comment](../mfc/decrement-attributes-comment.md)   
+ [// Operations Comment](../mfc/decrement-operations-comment.md)   
+ [// Overridables Comment](../mfc/decrement-overridables-comment.md)
+
+

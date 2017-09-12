@@ -1,5 +1,5 @@
 ---
-title: "Funzionalità avanzate, creazione guidata applicazione MFC | Documenti Microsoft"
+title: Advanced Features, MFC Application Wizard | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,62 +33,62 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
-ms.openlocfilehash: 9a291af4641742cd9b771c80a7ea0770fab6de06
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0a476f56ef4119065884a152f475fa86bfb9a090
 ms.contentlocale: it-it
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="advanced-features-mfc-application-wizard"></a>Funzionalità avanzate, Creazione guidata applicazione MFC
-In questo argomento sono elencate opzioni per funzionalità aggiuntive dell'applicazione, ad esempio la Guida, il supporto di stampa e così via. In ogni sezione specificare supporto aggiuntivo per queste funzionalità avanzate.  
+# <a name="advanced-features-mfc-application-wizard"></a>Advanced Features, MFC Application Wizard
+This topic lists options for additional features for your application, such as Help, printing support, and so on. In each section, specify additional support for these advanced features.  
   
- **Guida sensibile al contesto (HTML)**  
- Genera un set di file della Guida per la Guida sensibile al contesto, accessibile premendo F1 e un menu della Guida o facendo clic su un **Guida** pulsante nella finestra di dialogo. Il supporto della Guida richiede il compilatore della Guida. Se non è disponibile, è possibile installarlo eseguendo nuovamente il programma di installazione.  
+ **Context-sensitive help (HTML)**  
+ Generates a set of help files for context-sensitive help, available by using F1 and a Help menu, or by clicking a **Help** button on a dialog box. Help support requires the help compiler. If you do not have the help compiler, you can install it by rerunning Setup.  
   
- Vedere [della Guida HTML: Guida sensibile al contesto per i programmi](../../mfc/html-help-context-sensitive-help-for-your-programs.md) e [file della Guida (HTML)](../../ide/help-files-html-help.md) per ulteriori informazioni.  
+ See [HTML Help: Context-Sensitive Help for Your Programs](../../mfc/html-help-context-sensitive-help-for-your-programs.md) and [Help Files (HTML Help)](../../ide/help-files-html-help.md) for more information.  
   
- **Stampa e anteprima di stampa**  
- Genera il codice per gestire la stampa, stampare il programma di installazione e i comandi di anteprima di stampa chiamando le funzioni membro di [classe CView](../../mfc/reference/cview-class.md) dalla libreria MFC. Tramite la procedura guidata vengono aggiunti i comandi di queste funzioni al menu dell'applicazione. Il supporto di stampa è disponibile solo per le applicazioni che specificano **Supporto architettura documento/visualizzazione** nel [tipo di applicazione, creazione guidata applicazione MFC](../../mfc/reference/application-type-mfc-application-wizard.md) pagina della procedura guidata. Per impostazione predefinita, le applicazioni con architettura documento/visualizzazione dispongono del supporto di stampa.  
+ **Printing and print preview**  
+ Generates the code to handle the print, print setup and print preview commands by calling member functions in the [CView Class](../../mfc/reference/cview-class.md) from the MFC library. The wizard also adds commands for these functions to the application's menu. Printing support is available only for applications that specify **Document/view architecture support** in the [Application Type, MFC Application Wizard](../../mfc/reference/application-type-mfc-application-wizard.md) page of the wizard. By default, document/view applications have printing support.  
   
- **Automazione**  
- Specifica che l'applicazione è in grado di gestire oggetti implementati in un'altra applicazione oppure espone l'applicazione ai client di automazione.  
+ **Automation**  
+ Specifies that the application can handle objects that are implemented in another application, or exposes the application to Automation clients.  
   
- **Controlli ActiveX**  
- Supporta i controlli ActiveX (impostazione predefinita). Se si seleziona questa opzione e successivamente si vuole inserire controlli ActiveX nel progetto, è necessario aggiungere una chiamata a [AfxEnableControlContainer](ole-initialization.md#afxenablecontrolcontainer) dell'applicazione [:: InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) funzione membro.  
+ **ActiveX controls**  
+ Supports ActiveX controls (default). If you do not select this option and later want to insert ActiveX controls into your project, you must add a call to [AfxEnableControlContainer](ole-initialization.md#afxenablecontrolcontainer) in your application's [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) member function.  
   
- **MAPI (API di messaggistica)**  
- Specifica che l'applicazione è in grado di creare, modificare, trasferire e archiviare i messaggi di posta.  
+ **MAPI (Messaging API)**  
+ Specifies that the application can create, manipulate, transfer, and store mail messages.  
   
- **Socket di Windows**  
- Supporta i socket Windows, che è possibile utilizzare per scrivere applicazioni in grado di comunicare su reti TCP/IP.  
+ **Windows sockets**  
+ Supports Windows sockets, which you can use to write applications that communicate over TCP/IP networks.  
   
  **Active Accessibility**  
- Aggiunge il supporto per [IAccessible](http://msdn.microsoft.com/library/windows/desktop/dd318466) a [CWnd](../../mfc/reference/cwnd-class.md)-classi derivate, che è possibile utilizzare per personalizzare l'interfaccia utente per una migliore interazione con i client di accessibilità.  
+ Adds support for [IAccessible](http://msdn.microsoft.com/library/windows/desktop/dd318466) to [CWnd](../../mfc/reference/cwnd-class.md)-derived classes, which you can use to customize the user interface for better interaction with accessibility clients.  
   
- **Manifesto controlli comuni**  
- Abilitato per impostazione predefinita. Genera un manifesto dell'applicazione per abilitare la DLL dei controlli comuni fornita con Microsoft Windows XP e i sistemi operativi più recenti.  
+ **Common Control Manifest**  
+ Enabled by default. Generates an application manifest to enable the Common Control DLL that is included with Microsoft Windows XP and newer operating systems.  
   
- La versione 6 della DLL dei controlli comuni non consente l'aggiornamento automatico della versione precedente dei controlli comuni utilizzata dalle applicazioni esistenti. Per utilizzare la versione 6 della DLL dei controlli comuni, è necessario creare un manifesto dell'applicazione che induca l'applicazione a caricare la DLL. La DLL dei controlli comuni supporta anche i temi di Windows XP.  
+ Version 6 of the Common Control DLL does not automatically update the earlier version of the Common Controls that your existing applications use. To use version 6 of the Common Control DLL, you must create an application manifest that directs your application to load the DLL. This Common Control DLL also supports the Windows XP themes.  
   
- Un manifesto dell'applicazione può anche specificare altre DLL e versioni necessarie all'applicazione. Per ulteriori informazioni sui manifesti dell'applicazione, vedere [applicazioni isolate e assembly Side-by-Side](http://msdn.microsoft.com/library/dd408052) nel [!INCLUDE[winsdkshort](../../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
+ An application manifest can also specify other DLLs and versions that your application needs. For more information about application manifests, see [Isolated Applications and Side-by-Side Assemblies](http://msdn.microsoft.com/library/dd408052) in the Windows SDK.  
   
- **Supporto Gestione riavvio**  
- Aggiunge il supporto per il [Gestione riavvio di Windows](http://msdn.microsoft.com/library/windows/desktop/aa373680\(v=vs.85\).aspx). In questo video viene illustrato come utilizzare il gestore di riavvio da MFC: [come ricerca per categorie: utilizzare il nuovo Gestione riavvio](http://msdn.microsoft.com/vstudio/ee886407).  
+ **Support Restart Manager**  
+ Adds support for the [Windows Restart Manager](http://msdn.microsoft.com/library/windows/desktop/aa373680\(v=vs.85\).aspx). This video shows how to use the Restart Manager from MFC: [How Do I: Use the New Restart Manager](http://msdn.microsoft.com/vstudio/ee886407).  
   
- **Riquadri frame avanzati**  
- |Opzione|Descrizione|  
+ **Advanced frame panes**  
+ |Option|Description|  
 |------------|-----------------|  
-|**Riquadro ancorato di Esplora**|Crea un riquadro ancorato simile a Visual Studio **Esplora** a sinistra della finestra cornice principale.|  
-|**Riquadro ancorato di tipo di output**|Crea un riquadro ancorato simile a Visual Studio **Output** riquadro che si trova sotto la finestra cornice principale.|  
-|**Riquadro ancorato di tipo di proprietà**|Crea un riquadro ancorato simile a Visual Studio **proprietà** riquadro a destra della finestra cornice principale.|  
-|**Riquadro di spostamento**|Crea un riquadro ancorato simile alla barra di navigazione di Outlook a sinistra della finestra cornice principale.|  
-|**Barra del titolo**|Crea una barra del titolo di tipo Office sopra la finestra cornice principale.|  
+|**Explorer docking pane**|Creates a docking pane that resembles the Visual Studio **Solution Explorer** to the left of the main frame window.|  
+|**Output docking frame**|Creates a docking pane that resembles the Visual Studio **Output** pane that is located under the main frame window.|  
+|**Properties docking pane**|Creates a docking pane that resembles the Visual Studio **Properties** pane to the right of the main frame window.|  
+|**Navigation pane**|Creates a docking pane that resembles the Outlook navigation bar and is located to the left of the main frame window.|  
+|**Caption bar**|Creates an Office-style caption bar above the main frame window.|  
   
- **Numero di file nell'elenco dei file recenti**  
- Specifica il numero di file da inserire nell'elenco dei file recenti. Il numero predefinito è 4.  
+ **Number of files on recent file list**  
+ Specifies the number of files to be listed on the most recently used list. The default number is 4.  
   
-## <a name="see-also"></a>Vedere anche  
- [Creazione guidata applicazione MFC](../../mfc/reference/mfc-application-wizard.md)
+## <a name="see-also"></a>See Also  
+ [MFC Application Wizard](../../mfc/reference/mfc-application-wizard.md)
 
 

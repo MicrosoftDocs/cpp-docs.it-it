@@ -1,93 +1,112 @@
 ---
-title: "Finestre cornice | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CFrameWnd (classe), finestre cornice"
-  - "finestre cornice documento"
-  - "finestre cornice [C++]"
-  - "finestre cornice [C++], informazioni sulle finestre cornice"
-  - "MDI [C++], finestre cornice"
-  - "MFC [C++], finestre cornice"
-  - "Single Document Interface (SDI)"
-  - "Single Document Interface (SDI), finestre cornice"
-  - "finestre con separatore, e finestre cornice"
-  - "visualizzazioni [C++], e finestre cornice"
-  - "classi di finestra [C++], cornice"
-  - "finestre [C++], MDI"
+title: Frame Windows | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- document frame windows [MFC]
+- windows [MFC], MDI
+- window classes [MFC], frame
+- single document interface (SDI) [MFC]
+- single document interface (SDI) [MFC], frame windows
+- views [MFC], and frame windows
+- CFrameWnd class [MFC], frame windows
+- frame windows [MFC]
+- frame windows [MFC], about frame widows
+- MFC, frame windows
+- MDI [MFC], frame windows
+- splitter windows [MFC], and frame windows
 ms.assetid: 40677339-8135-4f5e-aba6-3fced3078077
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Finestre cornice
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6e53a48c981fa6e470c33e54ef24bbb9bf500f09
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Quando un'applicazione viene eseguita in windows, l'utente interagisce con documenti visualizzati nelle finestre.  Una finestra cornice di documento ha due componenti principali: il frame e il contenuto che incorniciano.  Una finestra cornice di documento può essere una finestra cornice di [interfaccia a documento singolo](../mfc/sdi-and-mdi.md) \(SDI\) o una finestra figlio di [interfaccia a documenti multipli](../mfc/sdi-and-mdi.md) \(MDI\).  Le finestre gestisce la maggior parte dell'interazione utente con la finestra cornice: spostamento e ridimensionamento la finestra, chiusura e ridurla e di ingrandimento.  Gestire i contenuti nel frame.  
+---
+# <a name="frame-windows"></a>Frame Windows
+When an application runs under Windows, the user interacts with documents displayed in frame windows. A document frame window has two major components: the frame and the contents that it frames. A document frame window can be a [single document interface](../mfc/sdi-and-mdi.md) (SDI) frame window or a [multiple document interface](../mfc/sdi-and-mdi.md) (MDI) child window. Windows manages most of the user's interaction with the frame window: moving and resizing the window, closing it, and minimizing and maximizing it. You manage the contents inside the frame.  
   
-## Le finestre e visualizzazioni  
- Il framework MFC utilizza l'autenticazione windows per contenere le visualizzazioni.  I due componenti \- frame e contenuto \- sono rappresentate e gestite da due classi diverse in MFC.  Una classe della finestra cornice gestisce il frame e una classe di visualizzazione gestisce il contenuto.  La finestra di visualizzazione è un elemento figlio della finestra cornice.  Interazione da disegno e altri con il documento ha luogo nell'area client della visualizzazione, non l'area client della finestra cornice.  La finestra cornice fornisce un frame visibili intorno a una visualizzazione, completa con una barra del titolo e controlli come i menu di controllo, pulsanti della finestra standard per ridurre a icona e di ingrandimento della finestra e dei controlli per ridimensionare la finestra.  "Contenuto" sono costituite dall'area client della finestra, che è occupata da una finestra figlio alla visualizzazione.  Nella figura seguente è illustrata la relazione tra una finestra cornice e una visualizzazione.  
+## <a name="frame-windows-and-views"></a>Frame Windows and Views  
+ The MFC framework uses frame windows to contain views. The two components — frame and contents — are represented and managed by two different classes in MFC. A frame-window class manages the frame, and a view class manages the contents. The view window is a child of the frame window. Drawing and other user interaction with the document take place in the view's client area, not the frame window's client area. The frame window provides a visible frame around a view, complete with a caption bar and standard window controls such as a control menu, buttons to minimize and maximize the window, and controls for resizing the window. The "contents" consist of the window's client area, which is fully occupied by a child window — the view. The following figure shows the relationship between a frame window and a view.  
   
- ![Visualizzazione di una finestra cornice](../mfc/media/vc37fx1.png "vc37FX1")  
-Finestra cornice e visualizzazione  
+ ![Frame window view](../mfc/media/vc37fx1.gif "vc37fx1")  
+Frame Window and View  
   
-## Le finestre e finestre con separatore  
- Un'altra eliminazione comune prevede che una finestra cornice incornici più visualizzazioni, in genere utilizzando [finestra con separatore](../mfc/multiple-document-types-views-and-frame-windows.md).  In una finestra con separatore, l'area client della finestra cornice è occupata da una finestra con separatore, che a sua volta contiene più finestre figlio, denominata riquadri, che rappresentano visualizzazioni.  
+## <a name="frame-windows-and-splitter-windows"></a>Frame Windows and Splitter Windows  
+ Another common arrangement is for the frame window to frame multiple views, usually using a [splitter window](../mfc/multiple-document-types-views-and-frame-windows.md). In a splitter window, the frame window's client area is occupied by a splitter window, which in turn has multiple child windows, called panes, which are views.  
   
-### Scegliere l'argomento su cui visualizzare maggiori informazioni  
- **Argomenti generali della finestra cornice**  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
+ **General Frame Window Topics**  
   
--   [Oggetti Window](../mfc/window-objects.md)  
+-   [Window objects](../mfc/window-objects.md)  
   
--   [Classi della finestra cornice](../mfc/frame-window-classes.md)  
+-   [Frame window classes](../mfc/frame-window-classes.md)  
   
--   [Le classi della finestra cornice hanno creato dalla procedura guidata applicazione](../mfc/frame-window-classes-created-by-the-application-wizard.md)  
+-   [The Frame-Window classes created by the Application Wizard](../mfc/frame-window-classes-created-by-the-application-wizard.md)  
   
--   [Stili finestra cornice](../mfc/frame-window-styles-cpp.md)  
+-   [Frame window styles](../mfc/frame-window-styles-cpp.md)  
   
--   [Le finestre che fanno](../mfc/what-frame-windows-do.md)  
+-   [What frame windows do](../mfc/what-frame-windows-do.md)  
   
- **Argomenti sull'utilizzo delle finestre**  
+ **Topics on Using Frame Windows**  
   
--   [Utilizzo delle finestre](../mfc/using-frame-windows.md)  
+-   [Using frame windows](../mfc/using-frame-windows.md)  
   
--   [Creazione delle finestre di documento](../mfc/creating-document-frame-windows.md)  
+-   [Creating document frame windows](../mfc/creating-document-frame-windows.md)  
   
--   [Eliminazione permanente delle finestre](../mfc/destroying-frame-windows.md)  
+-   [Destroying frame windows](../mfc/destroying-frame-windows.md)  
   
--   [Gestione di finestre figlio MDI](../mfc/managing-mdi-child-windows.md)  
+-   [Managing MDI child windows](../mfc/managing-mdi-child-windows.md)  
   
--   [Gestire la visualizzazione corrente](../mfc/managing-the-current-view.md) in una finestra cornice che contiene più di una visualizzazione  
+-   [Managing the current view](../mfc/managing-the-current-view.md) in a frame window that contains more than one view  
   
--   [Gestione dei menu, le barre di controllo e i tasti di scelta rapida \(altri oggetti che condividono lo spazio della finestra cornice\)](../mfc/managing-menus-control-bars-and-accelerators.md)  
+-   [Managing menus, control bars, and accelerators (other objects that share the frame window's space)](../mfc/managing-menus-control-bars-and-accelerators.md)  
   
- **Argomenti sulle funzionalità speciali della finestra cornice**  
+ **Topics on Special Frame Window Capabilities**  
   
--   [Trascinandone i file](../mfc/dragging-and-dropping-files-in-a-frame-window.md) da Esplora file o dal File Manager in una finestra cornice  
+-   [Dragging and dropping files](../mfc/dragging-and-dropping-files-in-a-frame-window.md) from File Explorer or File Manager into a frame window  
   
--   [Rispondendo allo scambio dinamico dati \(DDE\)](../mfc/responding-to-dynamic-data-exchange-dde.md)  
+-   [Responding to dynamic data exchange (DDE)](../mfc/responding-to-dynamic-data-exchange-dde.md)  
   
--   [Stati di Semimodal: Guida di Windows sensibile al contesto \(che orchestra altre azioni window](../mfc/orchestrating-other-window-actions.md)  
+-   [Semimodal states: Context-sensitive Windows Help (Orchestrating other window actions)](../mfc/orchestrating-other-window-actions.md)  
   
--   [Stati di Semimodal: stampa e anteprima di stampa \(che orchestrano altre azioni window](../mfc/orchestrating-other-window-actions.md)  
+-   [Semimodal states: printing and print preview (Orchestrating other window actions)](../mfc/orchestrating-other-window-actions.md)  
   
- **Argomenti su altri tipi di finestre**  
+ **Topics on Other Kinds of Windows**  
   
--   [Utilizzo delle visualizzazioni](../mfc/using-views.md)  
+-   [Using Views](../mfc/using-views.md)  
   
--   [Finestre di dialogo](../mfc/dialog-boxes.md)  
+-   [Dialog boxes](../mfc/dialog-boxes.md)  
   
--   [Controlli](../mfc/controls-mfc.md)  
+-   [Controls](../mfc/controls-mfc.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [Windows](../mfc/windows.md)
+
+

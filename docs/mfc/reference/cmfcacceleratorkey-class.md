@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCAcceleratorKey | Documenti di Microsoft
+title: CMFCAcceleratorKey Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,7 +17,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCAcceleratorKey class
+- CMFCAcceleratorKey [MFC], CMFCAcceleratorKey
+- CMFCAcceleratorKey [MFC], Format
+- CMFCAcceleratorKey [MFC], SetAccelerator
 ms.assetid: d140fbf7-23db-45ea-a63e-414a5ec7b3d5
 caps.latest.revision: 36
 author: mikeblome
@@ -37,100 +39,100 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 7baa210acfabe8f17e2ab747fd98fe463c2907a2
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d44c90563b9646a37e552e3902159e6567736a86
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcacceleratorkey-class"></a>Classe CMFCAcceleratorKey
-Una classe helper che implementa virtuale mapping delle chiavi e la formattazione.  
+# <a name="cmfcacceleratorkey-class"></a>CMFCAcceleratorKey Class
+A helper class that implements virtual key mapping and formatting.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCAcceleratorKey : public CObject  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Costruttori pubblici  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCAcceleratorKey::CMFCAcceleratorKey](#cmfcacceleratorkey)|Costruisce un oggetto `CMFCAcceleratorKey`.|  
+|[CMFCAcceleratorKey::CMFCAcceleratorKey](#cmfcacceleratorkey)|Constructs a `CMFCAcceleratorKey` object.|  
   
-### <a name="public-methods"></a>Metodi pubblici  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCAcceleratorKey::Format](#format)|Converte la struttura di accelerazione per la rappresentazione visiva.|  
-|[CMFCAcceleratorKey::SetAccelerator](#setaccelerator)|Imposta il tasto di scelta rapida per il `CMFCAcceleratorKey` oggetto.|  
+|[CMFCAcceleratorKey::Format](#format)|Translates the ACCEL structure to its visual representation.|  
+|[CMFCAcceleratorKey::SetAccelerator](#setaccelerator)|Sets the shortcut key for the `CMFCAcceleratorKey` object.|  
   
-## <a name="remarks"></a>Note  
- Tasti di scelta rapida sono anche noti come tasti di scelta rapida. Se si desidera visualizzare i tasti di scelta rapida che viene inserito un utente, il [CMFCAcceleratorKeyAssignCtrl classe](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) mapping dei tasti di scelta rapida, ad esempio Alt + Maiusc + S, in un formato di testo personalizzato, ad esempio "Alt + Maiusc + S". Ogni `CMFCAcceleratorKey` oggetto esegue il mapping di un tasto di scelta rapida singola in un formato di testo.  
+## <a name="remarks"></a>Remarks  
+ Accelerator keys are also known as shortcut keys. If you want to display keyboard shortcuts that a user enters, the [CMFCAcceleratorKeyAssignCtrl Class](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) maps keyboard shortcuts, such as Alt+Shift+S, to a custom text format, such as "Alt + Shift + S". Each `CMFCAcceleratorKey` object maps a single shortcut key to a text format.  
   
- Per ulteriori informazioni su come utilizzare i tasti di scelta rapida e tasti di scelta rapida, vedere [CKeyboardManager classe](../../mfc/reference/ckeyboardmanager-class.md).  
+ For more information about how to use shortcut keys and accelerator tables, see [CKeyboardManager Class](../../mfc/reference/ckeyboardmanager-class.md).  
   
-## <a name="example"></a>Esempio  
- Nell'esempio riportato di seguito viene illustrato come costruire un `CMFCAcceleratorKey` oggetto e come utilizzare il relativo `Format` metodo.  
+## <a name="example"></a>Example  
+ The following example demonstrates how to construct a `CMFCAcceleratorKey` object and how to use its `Format` method.  
   
- [!code-cpp[&#30; NVC_MFC_RibbonApp](../../mfc/reference/codesnippet/cpp/cmfcacceleratorkey-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp#30](../../mfc/reference/codesnippet/cpp/cmfcacceleratorkey-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CMFCAcceleratorKey`   
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** afxacceleratorkey.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxacceleratorkey.h  
   
-##  <a name="cmfcacceleratorkey"></a>CMFCAcceleratorKey::CMFCAcceleratorKey  
- Costruisce un [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) oggetto.  
+##  <a name="cmfcacceleratorkey"></a>  CMFCAcceleratorKey::CMFCAcceleratorKey  
+ Constructs a [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) object.  
   
 ```  
 CMFCAcceleratorKey();  
 CMFCAcceleratorKey(LPACCEL lpAccel);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `lpAccel`  
- Un puntatore a un tasto di scelta rapida.  
+ A pointer to a shortcut key.  
   
-### <a name="remarks"></a>Note  
- Se un tasto di scelta rapida non fornire quando si crea un `CMFCAccleratorKey`, utilizzare il [CMFCAcceleratorKey::SetAccelerator](#setaccelerator) metodo per associare un tasto di scelta rapida con il `CMFCAcceleratorKey` oggetto.  
+### <a name="remarks"></a>Remarks  
+ If you do not provide a shortcut key when you create a `CMFCAccleratorKey`, use the [CMFCAcceleratorKey::SetAccelerator](#setaccelerator) method to associate a shortcut key with your `CMFCAcceleratorKey` object.  
   
-##  <a name="format"></a>CMFCAcceleratorKey::Format  
- Converte la struttura di accelerazione al valore di stringa associato.  
+##  <a name="format"></a>  CMFCAcceleratorKey::Format  
+ Translates the ACCEL structure to its associated string value.  
   
 ```  
 void Format(CString& str) const;  
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [out] `str`  
- Un riferimento a un `CString` oggetto in cui il metodo scrive il tasto di scelta rapida tradotti.  
+ A reference to a `CString` object where the method writes the translated shortcut key.  
   
-### <a name="remarks"></a>Note  
- Questo metodo recupera il formato della stringa del tasto di scelta rapida associato. È possibile impostare il formato della stringa di un [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) oggetto utilizzando il costruttore o il metodo [CMFCAcceleratorKey::SetAccelerator](#setaccelerator).  
+### <a name="remarks"></a>Remarks  
+ This method retrieves the string format of the associated shortcut key. You can set the string format of a [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) object using either the constructor or the method [CMFCAcceleratorKey::SetAccelerator](#setaccelerator).  
   
-##  <a name="setaccelerator"></a>CMFCAcceleratorKey::SetAccelerator  
- Imposta il tasto di scelta rapida per il [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) oggetto.  
+##  <a name="setaccelerator"></a>  CMFCAcceleratorKey::SetAccelerator  
+ Sets the shortcut key for the [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) object.  
   
 ```  
 void SetAccelerator(LPACCEL lpAccel);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `lpAccel`  
- Un puntatore a un tasto di scelta rapida.  
+ A pointer to a shortcut key.  
   
-### <a name="remarks"></a>Note  
- Utilizzare questo metodo per impostare il tasto di scelta rapida per un `CMFCAcceleratorKey` se è stato fornito un tasto di scelta rapida non durante la creazione di `CMFCAcceleratorKey`.  
+### <a name="remarks"></a>Remarks  
+ Use this method to set the shortcut key for a `CMFCAcceleratorKey` if you did not provide a shortcut key when you created the `CMFCAcceleratorKey`.  
   
-## <a name="see-also"></a>Vedere anche  
- [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
- [Classi](../../mfc/reference/mfc-classes.md)   
- [Classe CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CKeyboardManager Class](../../mfc/reference/ckeyboardmanager-class.md)
 

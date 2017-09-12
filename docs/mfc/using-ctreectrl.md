@@ -1,61 +1,80 @@
 ---
-title: "Utilizzo di CTreeCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CTreeCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTreeCtrl (classe), informazioni su CTreeCtrl"
-  - "struttura ad albero (controlli), utilizzo"
+title: Using CTreeCtrl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CTreeCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- CTreeCtrl class [MFC], about CTreeCtrl
+- tree controls [MFC], using
 ms.assetid: 6a262f2c-3540-43e5-b03f-e4b6f9cb0325
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Utilizzo di CTreeCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 80479ada12cf36676de50423730804f418ef6783
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Un controllo struttura ad albero, rappresentato dalla classe [Problemi](../mfc/reference/ctreectrl-class.md), è una finestra che visualizza un elenco di elementi gerarchico, ad esempio le intestazioni in un documento, le voci di un indice, o i file e le directory su un disco.  Ogni elemento è costituito da un'etichetta e di un'immagine indirizzata a bit facoltativa e ogni elemento può avere un elenco di elementi secondari associati.  Facendo clic su un elemento, l'utente può espandere e comprimere l'elenco collegato di elementi secondari.  La struttura ad albero di directory nel riquadro di sinistra di Esplora file è un esempio di un controllo struttura ad albero.  
+---
+# <a name="using-ctreectrl"></a>Using CTreeCtrl
+A tree control, represented by the class [CTreeCtrl](../mfc/reference/ctreectrl-class.md), is a window that displays a hierarchical list of items, such as the headings in a document, the entries in an index, or the files and directories on a disk. Each item consists of a label and an optional bitmapped image, and each item can have a list of subitems associated with it. By clicking an item, the user can expand and collapse the associated list of subitems. The directory tree in the left-hand pane of File Explorer is an example of a tree control.  
   
-## Scegliere l'argomento su cui visualizzare maggiori informazioni  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Problemi e CTreeView](../mfc/ctreectrl-vs-ctreeview.md)  
+-   [CTreeCtrl vs. CTreeView](../mfc/ctreectrl-vs-ctreeview.md)  
   
--   [Utilizzo di controlli di struttura ad albero](../mfc/using-tree-controls.md)  
+-   [Using Tree Controls](../mfc/using-tree-controls.md)  
   
--   [Comunicazione con un controllo struttura ad albero](../mfc/communicating-with-a-tree-control.md)  
+-   [Communicating with a Tree Control](../mfc/communicating-with-a-tree-control.md)  
   
--   [Stili del controllo struttura ad albero](../mfc/tree-control-styles.md)  
+-   [Tree Control Styles](../mfc/tree-control-styles.md)  
   
--   [Elementi padre e figlio del controllo struttura ad albero](../mfc/tree-control-parent-and-child-items.md)  
+-   [Tree Control Parent and Child Items](../mfc/tree-control-parent-and-child-items.md)  
   
--   [Posizione dell'elemento del controllo struttura ad albero](../mfc/tree-control-item-position.md)  
+-   [Tree Control Item Position](../mfc/tree-control-item-position.md)  
   
--   [Etichette dell'elemento del controllo struttura ad albero](../mfc/tree-control-item-labels.md)  
+-   [Tree Control Item Labels](../mfc/tree-control-item-labels.md)  
   
--   [Modifica dell'etichetta del controllo struttura ad albero](../mfc/tree-control-label-editing.md)  
+-   [Tree Control Label Editing](../mfc/tree-control-label-editing.md)  
   
--   [Cenni preliminari sugli stati degli elementi del controllo struttura ad albero](../mfc/tree-control-item-states-overview.md)  
+-   [Tree Control Item States Overview](../mfc/tree-control-item-states-overview.md)  
   
--   [Elenchi di immagini del controllo struttura ad albero](../mfc/tree-control-image-lists.md)  
+-   [Tree Control Image Lists](../mfc/tree-control-image-lists.md)  
   
--   [Selezione delle voci del controllo struttura ad albero](../mfc/tree-control-item-selection.md)  
+-   [Tree Control Item Selection](../mfc/tree-control-item-selection.md)  
   
--   [Operazioni di trascinamento della selezione del controllo struttura ad albero](../mfc/tree-control-drag-and-drop-operations.md)  
+-   [Tree Control Drag-and-Drop Operations](../mfc/tree-control-drag-and-drop-operations.md)  
   
--   [Informazioni sull'elemento del controllo struttura ad albero](../mfc/tree-control-item-information.md)  
+-   [Tree Control Item Information](../mfc/tree-control-item-information.md)  
   
--   [Messaggi di notifica del controllo struttura ad albero](../mfc/tree-control-notification-messages.md)  
+-   [Tree Control Notification Messages](../mfc/tree-control-notification-messages.md)  
   
-## Vedere anche  
- [Controlli](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Controls](../mfc/controls-mfc.md)
+
+

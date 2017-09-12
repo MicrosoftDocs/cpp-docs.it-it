@@ -1,63 +1,82 @@
 ---
-title: "Procedura: personalizzare la barra di accesso rapido | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "barra di accesso rapido, personalizzazione"
+title: 'How to: Customize the Quick Access Toolbar | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- quick access toolbar [MFC], customization
 ms.assetid: 2554099b-0c89-4605-9249-31bf9cbcefe0
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Procedura: personalizzare la barra di accesso rapido
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1b26489b5f24649dabba5034ec8814ab9ea163ce
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-La barra di accesso rapido \(QAT\) è una barra degli strumenti personalizzabile che contiene un insieme di controlli che sono visualizzati accanto al pulsante Applicazione o nelle schede categoria.  Nella figura seguente viene illustrata una barra di accesso rapido tipica.  
+---
+# <a name="how-to-customize-the-quick-access-toolbar"></a>How to: Customize the Quick Access Toolbar
+The Quick Access Toolbar (QAT) is a customizable toolbar that contains a set of commands that are either displayed next to the Application button or under the category tabs. The following illustration shows a typical Quick Access Toolbar.  
   
- ![Barra di accesso rapido con barra multifunzione MFC](../mfc/media/quick_access_toolbar.png "Quick\_Access\_Toolbar")  
+ ![MFC Ribbon Quick Access Toolbar](../mfc/media/quick_access_toolbar.png "quick_access_toolbar")  
   
- Per personalizzare la barra di accesso rapido, aprirla nella finestra **Proprietà**, modificare i relativi controlli e quindi visualizzare in anteprima il controllo della barra multifunzione.  
+ To customize the Quick Access Toolbar, open it in the **Properties** window, modify its commands, and then preview the ribbon control.  
   
-### Per aprire la barra di accesso rapido nella Finestra Proprietà  
+### <a name="to-open-the-quick-access-toolbar-in-the-properties-window"></a>To open the Quick Access Toolbar in the Properties window  
   
-1.  In Visual Studio, nel menu **Visualizza**, fare clic su **Visualizzazione risorse**.  
+1.  In Visual Studio, on the **View** menu, click **Resource View**.  
   
-2.  In **Visualizzazione risorse**, fare doppio clic sulla barra multifunzione risorsa per visualizzarla nell'area di progettazione.  
+2.  In **Resource View**, double-click the ribbon resource to display it on the design surface.  
   
-3.  Nell'area di progettazione, fare clic con il pulsante destro del mouse sul menu della barra di accesso rapido e scegliere **Proprietà**.  
+3.  On design surface, right-click the Quick Access Toolbar menu and then click **Properties**.  
   
-## Proprietà della barra di accesso rapido  
- Nella tabella riportata di seguito vengono definite le proprietà della barra di accesso rapido.  
+## <a name="quick-access-toolbar-properties"></a>Quick Access Toolbar Properties  
+ The following table defines the properties of the Quick Access Toolbar.  
   
-|Proprietà|Definizione|  
-|---------------|-----------------|  
-|Posizione QAT|Specifica la posizione della barra di accesso rapido all'avvio dell'applicazione.  La posizione può essere **Sopra** o **Sotto** il controllo della barra multifunzione.|  
-|Elementi QAT|Specifica i controlli disponibili per la barra di accesso rapido.|  
+|Property|Definition|  
+|--------------|----------------|  
+|QAT Position|Specifies the position of the Quick Access Toolbar when the application starts. The position can be either **Above** or **Below** the ribbon control.|  
+|QAT Items|Specifies the commands that are available for the Quick Access Toolbar.|  
   
-#### Per aggiungere o rimuovere comandi dalla barra di accesso rapido  
+#### <a name="to-add-or-remove-commands-on-the-quick-access-toolbar"></a>To add or remove commands on the Quick Access Toolbar  
   
-1.  Nella finestra **Proprietà** fare clic su **QAT Items**, quindi sul pulsante con i puntini di sospensione **\(...\)**.  
+1.  In the **Properties** window, click **QAT Items**, and then click the ellipsis button **(...)**.  
   
-2.  Nella finestra di dialogo **Editor elementi QAT**, utilizzare i pulsanti **Rimuovi** e **Aggiungi** per modificare l'elenco dei comandi sulla barra di accesso rapido.  
+2.  In the **QAT Items Editor** dialog box, use the **Add** and **Remove** buttons to modify the list of commands on the Quick Access Toolbar.  
   
-3.  Se si desidera che un comando venga visualizzato sia nella barra di accesso rapido che nel menu della barra di accesso rapido, selezionare la casella accanto al comando.  Se si desidera che il comando venga visualizzato solo nel menu, deselezionare la casella degli strumenti.  
+3.  If you want a command to appear on both the Quick Access Toolbar and the Quick Access Toolbar menu, select the box next to the command. If you want the command to appear only on the menu, clear the box.  
   
-## Visualizzare un'anteprima della barra multifunzione  
- I controlli barra di accesso rapido non vengono visualizzati nell'area di progettazione.  Per visualizzarli, è necessario visualizzare un'anteprima della barra multifunzione o eseguire l'applicazione.  
+## <a name="previewing-the-ribbon"></a>Previewing the Ribbon  
+ Quick Access Toolbar commands do not appear on the design surface. To view them, you must either preview the ribbon or run the application.  
   
-#### Per visualizzare in anteprima il controllo della barra multifunzione  
+#### <a name="to-preview-the-ribbon-control"></a>To preview the ribbon control  
   
--   Nella **Barra degli strumenti Editor Ribbon** fai clic sul pulsante **Test Ribbon**.  
+-   On the **Ribbon Editor Toolbar**, click **Test Ribbon**.  
   
-## Vedere anche  
- [Finestra di progettazione della barra multifunzione \(MFC\)](../mfc/ribbon-designer-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md)
+
+

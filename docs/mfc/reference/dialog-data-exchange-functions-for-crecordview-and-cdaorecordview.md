@@ -1,5 +1,5 @@
 ---
-title: Funzioni di scambio di dati di finestra di dialogo per CRecordView e CDaoRecordView | Documenti Microsoft
+title: Dialog Data Exchange Functions for CRecordView and CDaoRecordView | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,12 +22,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- DDX_Field functions
-- ODBC [C++], dialog data exchange (DDX) support
-- DDX (dialog data exchange) [C++], database support
-- DDX (dialog data exchange) [C++], functions
-- databases [C++], dialog data exchange (DDX) support
-- DAO [C++], dialog data exchange (DDX) support
+- DDX_Field functions [MFC]
+- ODBC [MFC], dialog data exchange (DDX) support
+- DDX (dialog data exchange) [MFC], database support
+- DDX (dialog data exchange) [MFC], functions
+- databases [MFC], dialog data exchange (DDX) support
+- DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
 caps.latest.revision: 13
 author: mikeblome
@@ -47,37 +47,37 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
-ms.openlocfilehash: c6256e6a510e3640bfdfd43cace5afbdec72b849
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b9321b9e63e6509fb71dfb09040212fdf974830e
 ms.contentlocale: it-it
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Funzioni DDX (Dialog Data Exchange) per CRecordView e CDaoRecordView
-In questo argomento elenca le funzioni DDX_Field utilizzate per scambiare dati tra un [CRecordset](../../mfc/reference/crecordset-class.md) e [CRecordView](../../mfc/reference/crecordview-class.md) modulo o un [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) e un [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) form.  
+# <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Dialog Data Exchange Functions for CRecordView and CDaoRecordView
+This topic lists the DDX_Field functions used to exchange data between a [CRecordset](../../mfc/reference/crecordset-class.md) and a [CRecordView](../../mfc/reference/crecordview-class.md) form or a [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) and a [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) form.  
   
 > [!NOTE]
->  Funzioni DDX_Field sono come le funzioni DDX dello scambio dei dati con controlli in un form. Tuttavia, a differenza, DDX dello scambio dei dati con i campi dell'oggetto recordset associato della vista anziché con i campi di visualizzazione dei record a se stesso. Per ulteriori informazioni, vedere le classi `CRecordView` e `CDaoRecordView`.  
+>  DDX_Field functions are like DDX functions in that they exchange data with controls in a form. But unlike DDX, they exchange data with the fields of the view's associated recordset object rather than with fields of the record view itself. For more information, see classes `CRecordView` and `CDaoRecordView`.  
   
-### <a name="ddxfield-functions"></a>Funzioni DDX_Field  
+### <a name="ddxfield-functions"></a>DDX_Field Functions  
   
 |||  
 |-|-|  
-|[DDX_FieldCBIndex](#ddx_fieldcbindex)|I trasferimenti di dati integer tra un membro dati di campo del recordset e l'indice della selezione corrente in una casella combinata in un [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md).|  
-|[DDX_FieldCBString](#ddx_fieldcbstring)|I trasferimenti `CString` casella dei dati tra un membro dati di campo del recordset e il controllo di modifica di una casella combinata un `CRecordView` o `CDaoRecordView`. Quando si spostano i dati dal recordset al controllo, questa funzione consente di selezionare l'elemento nella casella combinata che inizia con i caratteri nella stringa specificata.|  
-|[DDX_FieldCBStringExact](#ddx_fieldcbstringexact)|I trasferimenti `CString` casella dei dati tra un membro dati di campo del recordset e il controllo di modifica di una casella combinata un `CRecordView` o `CDaoRecordView`. Quando si spostano i dati dal recordset al controllo, questa funzione consente di selezionare l'elemento nella casella combinata che corrisponde esattamente alla stringa specificata.|  
-|[DDX_FieldCheck](#ddx_fieldcheck)|Trasferisce dati Boolean tra un membro dati di campo del recordset e una casella di controllo in un `CRecordView` o `CDaoRecordView`.|  
-|[DDX_FieldLBIndex](#ddx_fieldlbindex)|I trasferimenti di dati integer tra un membro dati di campo del recordset e l'indice della selezione corrente in una casella di riepilogo in una `CRecordView` o `CDaoRecordView`.|  
-|[DDX_FieldLBString](#ddx_fieldlbstring)|Gestisce il trasferimento di [CString](../../atl-mfc-shared/reference/cstringt-class.md) dati tra un controllo casella di riepilogo e i membri di dati del campo di un oggetto recordset. Quando si spostano i dati dal recordset al controllo, questa funzione consente di selezionare l'elemento nella casella di riepilogo che inizia con i caratteri nella stringa specificata.|  
-|[DDX_FieldLBStringExact](#ddx_fieldlbstringexact)|Gestisce il trasferimento di `CString` dati tra un controllo casella di riepilogo e i membri di dati del campo di un oggetto recordset. Quando si spostano i dati dal recordset al controllo, questa funzione consente di selezionare il primo elemento che corrisponde esattamente alla stringa specificata.|  
-|[DDX_FieldRadio](#ddx_fieldradio)|I trasferimenti di dati integer tra un membro dati di campo del recordset e un gruppo di pulsanti di opzione in un `CRecordView` o `CDaoRecordView`.|  
-|[DDX_FieldScroll](#ddx_fieldscroll)|Imposta o ottiene la posizione di scorrimento di un controllo barra di scorrimento in una `CRecordView` o `CDaoRecordView`. Chiamare dal [DoFieldExchange](../../mfc/reference/cdaorecordset-class.md#dofieldexchange) (funzione).|  
-|[DDX_FieldSlider](#ddx_fieldslider)|Sincronizza la posizione del cursore di un controllo dispositivo di scorrimento in una visualizzazione di record e un `int` membro dati di campo di un oggetto recordset. |
-|[DDX_FieldText](#ddx_fieldtext)|Le versioni di overload sono disponibili per il trasferimento di `int`, **UINT**, **lungo**, `DWORD`, [CString](../../atl-mfc-shared/reference/cstringt-class.md), **float**, **doppie**, **breve**, [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md), e [COleCurrency](../../mfc/reference/colecurrency-class.md) casella dei dati tra un membro dati di campo del recordset e una modifica un `CRecordView` o `CDaoRecordView`.|  
+|[DDX_FieldCBIndex](#ddx_fieldcbindex)|Transfers integer data between a recordset field data member and the index of the current selection in a combo box in a [CRecordView](../../mfc/reference/crecordview-class.md) or [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md).|  
+|[DDX_FieldCBString](#ddx_fieldcbstring)|Transfers `CString` data between a recordset field data member and the edit control of a combo box in a `CRecordView` or `CDaoRecordView`. When moving data from the recordset to the control, this function selects the item in the combo box that begins with the characters in the specified string.|  
+|[DDX_FieldCBStringExact](#ddx_fieldcbstringexact)|Transfers `CString` data between a recordset field data member and the edit control of a combo box in a `CRecordView` or `CDaoRecordView`. When moving data from the recordset to the control, this function selects the item in the combo box that exactly matches the specified string.|  
+|[DDX_FieldCheck](#ddx_fieldcheck)|Transfers Boolean data between a recordset field data member and a check box in a `CRecordView` or `CDaoRecordView`.|  
+|[DDX_FieldLBIndex](#ddx_fieldlbindex)|Transfers integer data between a recordset field data member and the index of the current selection in a list box in a `CRecordView` or `CDaoRecordView`.|  
+|[DDX_FieldLBString](#ddx_fieldlbstring)|Manages the transfer of [CString](../../atl-mfc-shared/reference/cstringt-class.md) data between a list-box control and the field data members of a recordset. When moving data from the recordset to the control, this function selects the item in the list box that begins with the characters in the specified string.|  
+|[DDX_FieldLBStringExact](#ddx_fieldlbstringexact)|Manages the transfer of `CString` data between a list-box control and the field data members of a recordset. When moving data from the recordset to the control, this function selects the first item that exactly matches the specified string.|  
+|[DDX_FieldRadio](#ddx_fieldradio)|Transfers integer data between a recordset field data member and a group of radio buttons in a `CRecordView` or `CDaoRecordView`.|  
+|[DDX_FieldScroll](#ddx_fieldscroll)|Sets or gets the scroll position of a scroll bar control in a `CRecordView` or `CDaoRecordView`. Call from your [DoFieldExchange](../../mfc/reference/cdaorecordset-class.md#dofieldexchange) function.|  
+|[DDX_FieldSlider](#ddx_fieldslider)|Synchronizes the thumb position of a slider control in a record view and an `int` field data member of a recordset. |
+|[DDX_FieldText](#ddx_fieldtext)|Overloaded versions are available for transferring `int`, **UINT**, **long**, `DWORD`, [CString](../../atl-mfc-shared/reference/cstringt-class.md), **float**, **double**, **short**, [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md), and [COleCurrency](../../mfc/reference/colecurrency-class.md) data between a recordset field data member and an edit box in a `CRecordView` or `CDaoRecordView`.|  
   
-##  <a name="ddx_fieldcbindex"></a>DDX_FieldCBIndex  
- Il `DDX_FieldCBIndex` funzione Sincronizza l'indice dell'elemento selezionato nel controllo casella di riepilogo di un controllo casella combinata in una visualizzazione di record e un `int` membro dati di campo di un oggetto recordset associato alla visualizzazione di record.  
+##  <a name="ddx_fieldcbindex"></a>  DDX_FieldCBIndex  
+ The `DDX_FieldCBIndex` function synchronizes the index of the selected item in the list box control of a combo box control in a record view and an `int` field data member of a recordset associated with the record view.  
   
 ```  
 void AFXAPI DDX_FieldCBIndex(
@@ -93,34 +93,34 @@ void AFXAPI DDX_FieldCBIndex(
     CDaoRecordset* pRecordset);  
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) oggetto. Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- L'ID di un controllo nel [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) oggetto.  
+ The ID of a control in the [CRecordView](../../mfc/reference/crecordview-class.md) or [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) object.  
   
- *indice*  
- Un riferimento a un membro di dati del campo associato `CRecordset` o `CDaoRecordset` oggetto.  
+ *index*  
+ A reference to a field data member in the associated `CRecordset` or `CDaoRecordset` object.  
   
  `pRecordset`  
- Un puntatore al [CRecordset](../../mfc/reference/crecordset-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) oggetto con cui i dati vengono scambiati.  
+ A pointer to the [CRecordset](../../mfc/reference/crecordset-class.md) or [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) object with which data is exchanged.  
   
-### <a name="remarks"></a>Note  
- Quando si spostano i dati dal recordset al controllo, la funzione imposta la selezione del controllo in base al valore specificato in *indice*. In un trasferimento dal recordset al controllo, se il campo del recordset è Null, MFC imposta il valore dell'indice 0. In un trasferimento dal controllo del codice al recordset, se il controllo è vuoto o se è selezionato alcun elemento, il campo del recordset è impostato su 0.  
+### <a name="remarks"></a>Remarks  
+ When moving data from the recordset to the control, this function sets the selection in the control based on the value specified in *index*. On a transfer from the recordset to the control, if the recordset field is Null, MFC sets the value of the index to 0. On a transfer from control to recordset, if the control is empty or if no item is selected, the recordset field is set to 0.  
   
- Se si lavora con le classi basate su ODBC, utilizzare la prima versione. Utilizzare la seconda versione, se si lavora con le classi basate su DAO.  
+ Use the first version if you are working with the ODBC-based classes. Use the second version if you are working with the DAO-based classes.  
   
- Per ulteriori informazioni su DDX, vedere [convalida e DDX](../../mfc/dialog-data-exchange-and-validation.md). Per esempi e altre informazioni su DDX per [CRecordView](../../mfc/reference/crecordview-class.md) e [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) campi, vedere l'articolo [visualizzazioni di Record](../../data/record-views-mfc-data-access.md).  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md). For examples and more information about DDX for [CRecordView](../../mfc/reference/crecordview-class.md) and [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) fields, see the article [Record Views](../../data/record-views-mfc-data-access.md).  
   
-### <a name="example"></a>Esempio  
- Vedere [DDX_FieldText](#ddx_fieldtext) per un esempio di DDX_Field generale. L'esempio sarebbe simile per `DDX_FieldCBIndex`.  
+### <a name="example"></a>Example  
+ See [DDX_FieldText](#ddx_fieldtext) for a general DDX_Field example. The example would be similar for `DDX_FieldCBIndex`.  
 
-### <a name="requirements"></a>Requisiti  
- **Intestazione:** afxdao. h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
 
-##  <a name="ddx_fieldcbstring"></a>DDX_FieldCBString  
- Il `DDX_FieldCBString` funzione gestisce il trasferimento di [CString](../../atl-mfc-shared/reference/cstringt-class.md) dati tra il controllo di modifica di un controllo casella combinata in una visualizzazione di record e un `CString` membro dati di campo di un oggetto recordset associato alla visualizzazione di record.  
+##  <a name="ddx_fieldcbstring"></a>  DDX_FieldCBString  
+ The `DDX_FieldCBString` function manages the transfer of [CString](../../atl-mfc-shared/reference/cstringt-class.md) data between the edit control of a combo box control in a record view and a `CString` field data member of a recordset associated with the record view.  
   
 ```  
 void AFXAPI DDX_FieldCBString(
@@ -136,34 +136,34 @@ void AFXAPI DDX_FieldCBString(
     CDaoRecordset* pRecordset);  
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) oggetto. Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- L'ID di un controllo nel [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) oggetto.  
+ The ID of a control in the [CRecordView](../../mfc/reference/crecordview-class.md) or [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) object.  
   
  *value*  
- Un riferimento a un membro di dati del campo associato `CRecordset` o `CDaoRecordset` oggetto.  
+ A reference to a field data member in the associated `CRecordset` or `CDaoRecordset` object.  
   
  `pRecordset`  
- Un puntatore al [CRecordset](../../mfc/reference/crecordset-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) oggetto con cui i dati vengono scambiati.  
+ A pointer to the [CRecordset](../../mfc/reference/crecordset-class.md) or [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) object with which data is exchanged.  
   
-### <a name="remarks"></a>Note  
- Quando si spostano i dati dal recordset al controllo, la funzione imposta la selezione corrente nella casella combinata per la prima riga che inizia con i caratteri nella stringa specificata *valore*. Un trasferimento dal recordset al controllo, se il campo del recordset è Null, viene rimosso qualsiasi selezione dalla casella combinata e il controllo di modifica della casella combinata è vuoto. In un trasferimento dal controllo del codice al recordset, se il controllo è vuoto, il campo recordset è impostato su Null se il campo consente.  
+### <a name="remarks"></a>Remarks  
+ When moving data from the recordset to the control, this function sets the current selection in the combo box to the first row that begins with the characters in the string specified in *value*. On a transfer from the recordset to the control, if the recordset field is Null, any selection is removed from the combo box and the edit control of the combo box is set to empty. On a transfer from control to recordset, if the control is empty, the recordset field is set to Null if the field permits.  
   
- Se si lavora con le classi basate su ODBC, utilizzare la prima versione. Utilizzare la seconda versione, se si lavora con le classi basate su DAO.  
+ Use the first version if you are working with the ODBC-based classes. Use the second version if you are working with the DAO-based classes.  
   
- Per ulteriori informazioni su DDX, vedere [convalida e DDX](../../mfc/dialog-data-exchange-and-validation.md). Per esempi e altre informazioni su DDX per [CRecordView](../../mfc/reference/crecordview-class.md) e [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) campi, vedere l'articolo [visualizzazioni di Record](../../data/record-views-mfc-data-access.md).  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md). For examples and more information about DDX for [CRecordView](../../mfc/reference/crecordview-class.md) and [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) fields, see the article [Record Views](../../data/record-views-mfc-data-access.md).  
   
-### <a name="example"></a>Esempio  
- Vedere [DDX_FieldText](#ddx_fieldtext) per un esempio di DDX_Field generale. L'esempio include una chiamata a `DDX_FieldCBString`.  
+### <a name="example"></a>Example  
+ See [DDX_FieldText](#ddx_fieldtext) for a general DDX_Field example. The example includes a call to `DDX_FieldCBString`.  
   
-### <a name="requirements"></a>Requisiti  
-  **Intestazione** afxdao. h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdao.h  
   
-## <a name="ddx_fieldcbstringexact"></a>DDX_FieldCBStringExact  
- Il `DDX_FieldCBStringExact` funzione gestisce il trasferimento di [CString](../../atl-mfc-shared/reference/cstringt-class.md) dati tra il controllo di modifica di un controllo casella combinata in una visualizzazione di record e un `CString` membro dati di campo di un oggetto recordset associato alla visualizzazione di record.  
+## <a name="ddx_fieldcbstringexact"></a>  DDX_FieldCBStringExact  
+ The `DDX_FieldCBStringExact` function manages the transfer of [CString](../../atl-mfc-shared/reference/cstringt-class.md) data between the edit control of a combo box control in a record view and a `CString` field data member of a recordset associated with the record view.  
   
 ```  
 void AFXAPI DDX_FieldCBStringExact(
@@ -179,34 +179,34 @@ void AFXAPI DDX_FieldCBStringExact(
     CDaoRecordset* pRecordset);  
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) oggetto. Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- L'ID di un controllo nel [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) oggetto.  
+ The ID of a control in the [CRecordView](../../mfc/reference/crecordview-class.md) or [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) object.  
   
  *value*  
- Un riferimento a un membro di dati del campo associato `CRecordset` o `CDaoRecordset` oggetto.  
+ A reference to a field data member in the associated `CRecordset` or `CDaoRecordset` object.  
   
  `pRecordset`  
- Un puntatore al [CRecordset](../../mfc/reference/crecordset-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) oggetto con cui i dati vengono scambiati.  
+ A pointer to the [CRecordset](../../mfc/reference/crecordset-class.md) or [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) object with which data is exchanged.  
   
-### <a name="remarks"></a>Note  
- Quando si spostano i dati dal recordset al controllo, la funzione imposta la selezione corrente nella casella combinata per la prima riga che corrisponde esattamente alla stringa specificata *valore*. In un trasferimento dal recordset al controllo, se il campo del recordset è NULL, viene rimosso qualsiasi selezione dalla casella combinata e la casella di modifica della casella combinata è impostata su empty. In un trasferimento dal controllo del codice al recordset, se il controllo è vuoto, il campo recordset è impostato su NULL.  
+### <a name="remarks"></a>Remarks  
+ When moving data from the recordset to the control, this function sets the current selection in the combo box to the first row that exactly matches the string specified in *value*. On a transfer from the recordset to the control, if the recordset field is NULL, any selection is removed from the combo box and the edit box of the combo box is set to empty. On a transfer from control to recordset, if the control is empty, the recordset field is set to NULL.  
   
- Se si lavora con le classi basate su ODBC, utilizzare la prima versione. Utilizzare la seconda versione, se si lavora con le classi basate su DAO.  
+ Use the first version if you are working with the ODBC-based classes. Use the second version if you are working with the DAO-based classes.  
   
- Per ulteriori informazioni su DDX, vedere [convalida e DDX](../../mfc/dialog-data-exchange-and-validation.md). Per esempi e altre informazioni su DDX per [CRecordView](../../mfc/reference/crecordview-class.md) e [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) campi, vedere l'articolo [visualizzazioni di Record](../../data/record-views-mfc-data-access.md).  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md). For examples and more information about DDX for [CRecordView](../../mfc/reference/crecordview-class.md) and [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) fields, see the article [Record Views](../../data/record-views-mfc-data-access.md).  
   
-### <a name="example"></a>Esempio  
- Vedere [DDX_FieldText](#ddx_fieldtext) per un esempio di DDX_Field generale. Le chiamate a `DDX_FieldCBStringExact` saranno analoghi.  
+### <a name="example"></a>Example  
+ See [DDX_FieldText](#ddx_fieldtext) for a general DDX_Field example. Calls to `DDX_FieldCBStringExact` would be similar.  
   
-### <a name="requirements"></a>Requisiti  
-  **Intestazione** afxdao. h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdao.h  
   
-##  <a name="ddx_fieldcheck"></a>DDX_FieldCheck  
- Il `DDX_FieldCheck` funzione gestisce il trasferimento di `int` dati tra un controllo casella di controllo in una finestra di dialogo visualizzazione form o un oggetto visualizzazione controllo e un `int` il membro dati dell'oggetto visualizzazione controllo, la finestra di dialogo o visualizzazione form.  
+##  <a name="ddx_fieldcheck"></a>  DDX_FieldCheck  
+ The `DDX_FieldCheck` function manages the transfer of `int` data between a check box control in a dialog box, form view, or control view object and an `int` data member of the dialog box, form view, or control view object.  
   
 ```  
 void AFXAPI DDX_FieldCheck(
@@ -222,29 +222,29 @@ void AFXAPI DDX_FieldCheck(
     CDaoRecordset* pRecordset);  
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) oggetto. Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- L'ID di risorsa del controllo casella di controllo associato alla proprietà del controllo.  
+ The resource ID of the check box control associated with the control property.  
   
  *value*  
- Un riferimento a una variabile membro dell'oggetto visualizzazione controllo con cui vengono scambiati i dati, la finestra di dialogo o visualizzazione form.  
+ A reference to a member variable of the dialog box, form view, or control view object with which data is exchanged.  
   
  `pRecordset`  
- Un puntatore al [CRecordset](../../mfc/reference/crecordset-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) oggetto con cui i dati vengono scambiati.  
+ A pointer to the [CRecordset](../../mfc/reference/crecordset-class.md) or [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) object with which data is exchanged.  
   
-### <a name="remarks"></a>Note  
- Quando `DDX_FieldCheck` viene chiamato, *valore* è impostato sullo stato corrente del controllo casella di controllo, o lo stato del controllo è impostato su *valore*, a seconda della direzione del trasferimento.  
+### <a name="remarks"></a>Remarks  
+ When `DDX_FieldCheck` is called, *value* is set to the current state of the check box control, or the control's state is set to *value*, depending on the direction of transfer.  
   
- Per ulteriori informazioni su DDX, vedere [convalida e DDX](../../mfc/dialog-data-exchange-and-validation.md).  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Requisiti  
-  **Intestazione** afxdao. h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdao.h  
   
-##  <a name="ddx_fieldlbindex"></a>DDX_FieldLBIndex  
- Il `DDX_FieldLBIndex` funzione Sincronizza l'indice dell'elemento selezionato in un controllo casella di riepilogo in una visualizzazione di record e un `int` membro dati di campo di un oggetto recordset associato alla visualizzazione di record.  
+##  <a name="ddx_fieldlbindex"></a>  DDX_FieldLBIndex  
+ The `DDX_FieldLBIndex` function synchronizes the index of the selected item in a list box control in a record view and an `int` field data member of a recordset associated with the record view.  
   
 ```  
 void AFXAPI DDX_FieldLBIndex(
@@ -260,34 +260,34 @@ void AFXAPI DDX_FieldLBIndex(
     CDaoRecordset* pRecordset);  
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) oggetto. Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- L'ID di un controllo nel [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) oggetto.  
+ The ID of a control in the [CRecordView](../../mfc/reference/crecordview-class.md) or [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) object.  
   
- *indice*  
- Un riferimento a un membro di dati del campo associato `CRecordset` o `CDaoRecordset` oggetto.  
+ *index*  
+ A reference to a field data member in the associated `CRecordset` or `CDaoRecordset` object.  
   
  `pRecordset`  
- Un puntatore al [CRecordset](../../mfc/reference/crecordset-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) oggetto con cui i dati vengono scambiati.  
+ A pointer to the [CRecordset](../../mfc/reference/crecordset-class.md) or [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) object with which data is exchanged.  
   
-### <a name="remarks"></a>Note  
- Quando si spostano i dati dal recordset al controllo, la funzione imposta la selezione del controllo in base al valore specificato in *indice*. In un trasferimento dal recordset al controllo, se il campo del recordset è Null, MFC imposta il valore dell'indice 0. In un trasferimento dal controllo del codice al recordset, se il controllo è vuoto, il campo recordset è impostato su 0.  
+### <a name="remarks"></a>Remarks  
+ When moving data from the recordset to the control, this function sets the selection in the control based on the value specified in *index*. On a transfer from the recordset to the control, if the recordset field is Null, MFC sets the value of the index to 0. On a transfer from control to recordset, if the control is empty, the recordset field is set to 0.  
   
- Se si lavora con le classi basate su ODBC, utilizzare la prima versione. Utilizzare la seconda versione, se si lavora con le classi basate su DAO.  
+ Use the first version if you are working with the ODBC-based classes. Use the second version if you are working with the DAO-based classes.  
   
- Per ulteriori informazioni su DDX, vedere [convalida e DDX](../../mfc/dialog-data-exchange-and-validation.md). Per esempi e altre informazioni su DDX per [CRecordView](../../mfc/reference/crecordview-class.md) e [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) campi, vedere l'articolo [visualizzazioni di Record](../../data/record-views-mfc-data-access.md).  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md). For examples and more information about DDX for [CRecordView](../../mfc/reference/crecordview-class.md) and [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) fields, see the article [Record Views](../../data/record-views-mfc-data-access.md).  
   
-### <a name="example"></a>Esempio  
- Vedere [DDX_FieldText](#ddx_fieldtext) per un esempio di DDX_Field generale.  
+### <a name="example"></a>Example  
+ See [DDX_FieldText](#ddx_fieldtext) for a general DDX_Field example.  
   
-### <a name="requirements"></a>Requisiti  
-  **Intestazione** afxdao. h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdao.h  
   
-##  <a name="ddx_fieldlbstring"></a>DDX_FieldLBString  
- Il `DDX_FieldLBString` copia la selezione corrente di un controllo casella di riepilogo in una visualizzazione di record per un [CString](../../atl-mfc-shared/reference/cstringt-class.md) membro dati di campo di un oggetto recordset associato alla visualizzazione di record.  
+##  <a name="ddx_fieldlbstring"></a>  DDX_FieldLBString  
+ The `DDX_FieldLBString` copies the current selection of a list box control in a record view to a [CString](../../atl-mfc-shared/reference/cstringt-class.md) field data member of a recordset associated with the record view.  
   
 ```  
 void AFXAPI DDX_FieldLBString(
@@ -303,34 +303,34 @@ void AFXAPI DDX_FieldLBString(
     CDaoRecordset* pRecordset);  
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) oggetto. Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- L'ID di un controllo nel [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) oggetto.  
+ The ID of a control in the [CRecordView](../../mfc/reference/crecordview-class.md) or [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) object.  
   
  *value*  
- Un riferimento a un membro di dati del campo associato `CRecordset` o `CDaoRecordset` oggetto.  
+ A reference to a field data member in the associated `CRecordset` or `CDaoRecordset` object.  
   
  `pRecordset`  
- Un puntatore al [CRecordset](../../mfc/reference/crecordset-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) oggetto con cui i dati vengono scambiati.  
+ A pointer to the [CRecordset](../../mfc/reference/crecordset-class.md) or [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) object with which data is exchanged.  
   
-### <a name="remarks"></a>Note  
- Nella direzione inversa, questa funzione imposta la selezione corrente nella casella di riepilogo per la prima riga che inizia con i caratteri nella stringa specificata da *valore*. In un trasferimento dal recordset al controllo, se il campo del recordset è Null, viene rimosso qualsiasi selezione dalla casella di riepilogo. In un trasferimento dal controllo del codice al recordset, se il controllo è vuoto, il campo recordset è impostato su Null.  
+### <a name="remarks"></a>Remarks  
+ In the reverse direction, this function sets the current selection in the list box to the first row that begins with the characters in the string specified by *value*. On a transfer from the recordset to the control, if the recordset field is Null, any selection is removed from the list box. On a transfer from control to recordset, if the control is empty, the recordset field is set to Null.  
   
- Se si lavora con le classi basate su ODBC, utilizzare la prima versione. Utilizzare la seconda versione, se si lavora con le classi basate su DAO.  
+ Use the first version if you are working with the ODBC-based classes. Use the second version if you are working with the DAO-based classes.  
   
- Per ulteriori informazioni su DDX, vedere [convalida e DDX](../../mfc/dialog-data-exchange-and-validation.md). Per esempi e altre informazioni su DDX per [CRecordView](../../mfc/reference/crecordview-class.md) e [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) campi, vedere l'articolo [visualizzazioni di Record](../../data/record-views-mfc-data-access.md).  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md). For examples and more information about DDX for [CRecordView](../../mfc/reference/crecordview-class.md) and [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) fields, see the article [Record Views](../../data/record-views-mfc-data-access.md).  
   
-### <a name="example"></a>Esempio  
- Vedere [DDX_FieldText](#ddx_fieldtext) per un esempio di DDX_Field generale. Le chiamate a `DDX_FieldLBString` saranno analoghi.  
+### <a name="example"></a>Example  
+ See [DDX_FieldText](#ddx_fieldtext) for a general DDX_Field example. Calls to `DDX_FieldLBString` would be similar.  
   
-### <a name="requirements"></a>Requisiti  
-  **Intestazione** afxdao. h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdao.h  
   
-##  <a name="ddx_fieldlbstringexact"></a>DDX_FieldLBStringExact  
- Il `DDX_FieldLBStringExact` funzione Copia la selezione corrente di un controllo casella di riepilogo in una visualizzazione di record per un [CString](../../atl-mfc-shared/reference/cstringt-class.md) membro dati di campo di un oggetto recordset associato alla visualizzazione di record.  
+##  <a name="ddx_fieldlbstringexact"></a>  DDX_FieldLBStringExact  
+ The `DDX_FieldLBStringExact` function copies the current selection of a list box control in a record view to a [CString](../../atl-mfc-shared/reference/cstringt-class.md) field data member of a recordset associated with the record view.  
   
 ```  
 void AFXAPI DDX_FieldLBStringExact(
@@ -346,34 +346,34 @@ void AFXAPI DDX_FieldLBStringExact(
     CDaoRecordset* pRecordset);  
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) oggetto. Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- L'ID di un controllo nel [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) oggetto.  
+ The ID of a control in the [CRecordView](../../mfc/reference/crecordview-class.md) or [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) object.  
   
  *value*  
- Un riferimento a un membro di dati del campo associato `CRecordset` o `CDaoRecordset` oggetto.  
+ A reference to a field data member in the associated `CRecordset` or `CDaoRecordset` object.  
   
  `pRecordset`  
- Un puntatore al [CRecordset](../../mfc/reference/crecordset-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) oggetto con cui i dati vengono scambiati.  
+ A pointer to the [CRecordset](../../mfc/reference/crecordset-class.md) or [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) object with which data is exchanged.  
   
-### <a name="remarks"></a>Note  
- Nella direzione inversa, questa funzione imposta la selezione corrente nella casella di riepilogo per la prima riga che corrisponde esattamente alla stringa specificata *valore*. In un trasferimento dal recordset al controllo, se il campo del recordset è Null, viene rimosso qualsiasi selezione dalla casella di riepilogo. In un trasferimento dal controllo del codice al recordset, se il controllo è vuoto, il campo recordset è impostato su Null.  
+### <a name="remarks"></a>Remarks  
+ In the reverse direction, this function sets the current selection in the list box to the first row that exactly matches the string specified in *value*. On a transfer from the recordset to the control, if the recordset field is Null, any selection is removed from the list box. On a transfer from control to recordset, if the control is empty, the recordset field is set to Null.  
   
- Se si lavora con le classi basate su ODBC, utilizzare la prima versione. Utilizzare la seconda versione, se si lavora con le classi basate su DAO.  
+ Use the first version if you are working with the ODBC-based classes. Use the second version if you are working with the DAO-based classes.  
   
- Per ulteriori informazioni su DDX, vedere [convalida e DDX](../../mfc/dialog-data-exchange-and-validation.md). Per esempi e altre informazioni su DDX per [CRecordView](../../mfc/reference/crecordview-class.md) e [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) campi, vedere l'articolo [visualizzazioni di Record](../../data/record-views-mfc-data-access.md).  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md). For examples and more information about DDX for [CRecordView](../../mfc/reference/crecordview-class.md) and [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) fields, see the article [Record Views](../../data/record-views-mfc-data-access.md).  
   
-### <a name="example"></a>Esempio  
- Vedere [DDX_FieldText](#ddx_fieldtext) per un esempio di DDX_Field generale. Le chiamate a `DDX_FieldLBStringExact` saranno analoghi.  
+### <a name="example"></a>Example  
+ See [DDX_FieldText](#ddx_fieldtext) for a general DDX_Field example. Calls to `DDX_FieldLBStringExact` would be similar.  
   
-### <a name="requirements"></a>Requisiti  
-  **Intestazione** afxdao. h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdao.h  
   
-##  <a name="ddx_fieldradio"></a>DDX_FieldRadio  
- Il `DDX_FieldRadio` funzione associa in base zero `int` variabile membro di set di record di una visualizzazione di record con il pulsante di opzione attualmente selezionato in un gruppo di pulsanti di opzione nella visualizzazione dei record.  
+##  <a name="ddx_fieldradio"></a>  DDX_FieldRadio  
+ The `DDX_FieldRadio` function associates a zero-based `int` member variable of a record view's recordset with the currently selected radio button in a group of radio buttons in the record view.  
   
 ```  
 void AFXAPI DDX_FieldRadio(
@@ -389,34 +389,34 @@ void AFXAPI DDX_FieldRadio(
     CDaoRecordset* pRecordset);  
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) oggetto. Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- L'ID del primo in un gruppo (con stile **WS_GROUP**) adiacente controlli pulsante di opzione nel [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) oggetto.  
+ The ID of the first in a group (with style **WS_GROUP**) of adjacent radio button controls in the [CRecordView](../../mfc/reference/crecordview-class.md) or [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) object.  
   
  *value*  
- Un riferimento a un membro di dati del campo associato `CRecordset` o `CDaoRecordset` oggetto.  
+ A reference to a field data member in the associated `CRecordset` or `CDaoRecordset` object.  
   
  `pRecordset`  
- Un puntatore al [CRecordset](../../mfc/reference/crecordset-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) oggetto con cui i dati vengono scambiati.  
+ A pointer to the [CRecordset](../../mfc/reference/crecordset-class.md) or [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) object with which data is exchanged.  
   
-### <a name="remarks"></a>Note  
- Durante il trasferimento dal campo del recordset alla visualizzazione, questa funzione consente di attivare il *ennesima* pulsante di opzione (in base zero) e disattiva gli altri pulsanti. Nella direzione inversa, questa funzione imposta il campo del recordset per il numero ordinale del pulsante di opzione che si trova attualmente su (selezionata). In un trasferimento dal recordset al controllo, se il campo del recordset è Null, non viene selezionato alcun pulsante. In un trasferimento dal controllo del codice al recordset, se nessun controllo è selezionato, il campo recordset è impostato su Null se è sufficiente che il campo.  
+### <a name="remarks"></a>Remarks  
+ When transferring from the recordset field to the view, this function turns on the *nth* radio button (zero-based) and turns off the other buttons. In the reverse direction, this function sets the recordset field to the ordinal number of the radio button that is currently on (checked). On a transfer from the recordset to the control, if the recordset field is Null, no button is selected. On a transfer from control to recordset, if no control is selected, the recordset field is set to Null if the field permits that.  
   
- Se si lavora con le classi basate su ODBC, utilizzare la prima versione. Utilizzare la seconda versione, se si lavora con le classi basate su DAO.  
+ Use the first version if you are working with the ODBC-based classes. Use the second version if you are working with the DAO-based classes.  
   
- Per ulteriori informazioni su DDX, vedere [convalida e DDX](../../mfc/dialog-data-exchange-and-validation.md). Per esempi e altre informazioni su DDX per [CRecordView](../../mfc/reference/crecordview-class.md) e [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) campi, vedere l'articolo [visualizzazioni di Record](../../data/record-views-mfc-data-access.md).  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md). For examples and more information about DDX for [CRecordView](../../mfc/reference/crecordview-class.md) and [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) fields, see the article [Record Views](../../data/record-views-mfc-data-access.md).  
   
-### <a name="example"></a>Esempio  
- Vedere [DDX_FieldText](#ddx_fieldtext) per un esempio di DDX_Field generale. Le chiamate a `DDX_FieldRadio` saranno analoghi.  
+### <a name="example"></a>Example  
+ See [DDX_FieldText](#ddx_fieldtext) for a general DDX_Field example. Calls to `DDX_FieldRadio` would be similar.  
   
-### <a name="requirements"></a>Requisiti  
-  **Intestazione** afxdao. h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdao.h  
   
-##  <a name="ddx_fieldscroll"></a>DDX_FieldScroll  
- Il `DDX_FieldScroll` funzione Sincronizza la posizione di scorrimento di un controllo barra di scorrimento in una visualizzazione di record e un `int` membro dati di campo di un oggetto recordset associato con la visualizzazione dei record (o si sceglie di eseguire il mapping a qualsiasi variabile di tipo integer).  
+##  <a name="ddx_fieldscroll"></a>  DDX_FieldScroll  
+ The `DDX_FieldScroll` function synchronizes the scroll position of a scroll bar control in a record view and an `int` field data member of a recordset associated with the record view (or with whatever integer variable you choose to map it to).  
   
 ```  
 void AFXAPI DDX_FieldScroll(
@@ -432,36 +432,36 @@ void AFXAPI DDX_FieldScroll(
     CDaoRecordset* pRecordset);  
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) oggetto. Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  *nIDC\**  
- L'ID del primo in un gruppo (con stile **WS_GROUP**) adiacente controlli pulsante di opzione nel [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) oggetto.  
+ The ID of the first in a group (with style **WS_GROUP**) of adjacent radio button controls in the [CRecordView](../../mfc/reference/crecordview-class.md) or [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) object.  
   
  *value*  
- Un riferimento a un membro di dati del campo associato `CRecordset` o `CDaoRecordset` oggetto.  
+ A reference to a field data member in the associated `CRecordset` or `CDaoRecordset` object.  
   
  `pRecordset`  
- Un puntatore al [CRecordset](../../mfc/reference/crecordset-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) oggetto con cui i dati vengono scambiati.  
+ A pointer to the [CRecordset](../../mfc/reference/crecordset-class.md) or [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) object with which data is exchanged.  
   
-### <a name="remarks"></a>Note  
- Quando si spostano i dati dal recordset al controllo, la funzione imposta la posizione di scorrimento della barra di scorrimento sul valore specificato *valore*. In un trasferimento dal recordset al controllo, se il campo del recordset è Null, il controllo barra di scorrimento è impostato su 0. In un trasferimento dal controllo del codice al recordset, se il controllo è vuoto, il valore del campo recordset è 0.  
+### <a name="remarks"></a>Remarks  
+ When moving data from the recordset to the control, this function sets the scroll position of the scroll bar control to the value specified in *value*. On a transfer from the recordset to the control, if the recordset field is Null, the scroll bar control is set to 0. On a transfer from control to recordset, if the control is empty, the value of the recordset field is 0.  
   
- Se si lavora con le classi basate su ODBC, utilizzare la prima versione. Utilizzare la seconda versione, se si lavora con le classi basate su DAO.  
+ Use the first version if you are working with the ODBC-based classes. Use the second version if you are working with the DAO-based classes.  
   
- Per ulteriori informazioni su DDX, vedere [convalida e DDX](../../mfc/dialog-data-exchange-and-validation.md). Per esempi e altre informazioni su DDX per [CRecordView](../../mfc/reference/crecordview-class.md) e [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) campi, vedere l'articolo [visualizzazioni di Record](../../data/record-views-mfc-data-access.md).  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md). For examples and more information about DDX for [CRecordView](../../mfc/reference/crecordview-class.md) and [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) fields, see the article [Record Views](../../data/record-views-mfc-data-access.md).  
   
-### <a name="example"></a>Esempio  
- Vedere [DDX_FieldText](#ddx_fieldtext) per un esempio di DDX_Field generale. Le chiamate a `DDX_FieldScroll` saranno analoghi.  
+### <a name="example"></a>Example  
+ See [DDX_FieldText](#ddx_fieldtext) for a general DDX_Field example. Calls to `DDX_FieldScroll` would be similar.  
   
-### <a name="requirements"></a>Requisiti  
-  **Intestazione** afxdao. h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdao.h  
 
-  ## <a name="nameddxfieldslidera--ddxfieldslider"></a>nome = "ddx_fieldslider" ></a> DDX_FieldSlider
-Il `DDX_FieldSlider` funzione Sincronizza la posizione del cursore di un controllo dispositivo di scorrimento in una visualizzazione di record e un `int` membro dati di campo di un oggetto recordset associato con la visualizzazione dei record (o si sceglie di eseguire il mapping a qualsiasi variabile di tipo integer).  
+  ## <a name="nameddxfieldslidera--ddxfieldslider"></a>name="ddx_fieldslider"></a>  DDX_FieldSlider
+The `DDX_FieldSlider` function synchronizes the thumb position of a slider control in a record view and an `int` field data member of a recordset associated with the record view (or with whatever integer variable you choose to map it to).  
    
-### <a name="syntax"></a>Sintassi  
+### <a name="syntax"></a>Syntax  
   ```
    void AFXAPI DDX_FieldSlider(  
        CDataExchange* pDX,  
@@ -475,39 +475,39 @@ void AFXAPI DDX_FieldSlider(
      int& value,  
      CDaoRecordset* pRecordset );  
 ```
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- Un puntatore a un [CDataExchange](cdataexchange-class.md) oggetto. Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.  
+ A pointer to a [CDataExchange](cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- L'ID di risorsa del controllo dispositivo di scorrimento.  
+ The resource ID of the slider control.  
   
  *value*  
- Un riferimento al valore da scambiare. Questo parametro contiene o verrà utilizzato per impostare posizione del cursore corrente del controllo dispositivo di scorrimento.  
+ A reference to the value to be exchanged. This parameter holds or will be used to set the slider control's current thumb position.  
   
  `pRecordset`  
- Un puntatore all'oggetto associato `CRecordset` o `CDaoRecordset` oggetto con cui i dati vengono scambiati.  
+ A pointer to the associated `CRecordset` or `CDaoRecordset` object with which data is exchanged.  
    
-### <a name="remarks"></a>Note  
- Quando si spostano i dati dal recordset per il dispositivo di scorrimento, questa funzione imposta la posizione del dispositivo di scorrimento sul valore specificato *valore*. In un trasferimento dal recordset al controllo, se il campo del recordset è Null, la posizione del controllo dispositivo di scorrimento viene impostata su 0. In un trasferimento dal controllo al recordset, se il controllo è vuoto, il valore del campo recordset è 0.  
+### <a name="remarks"></a>Remarks  
+ When moving data from the recordset to the slider, this function sets the position of the slider to the value specified in *value*. On a transfer from the recordset to the control, if the recordset field is Null, the slider control's position is set to 0. On a transfer from the control to the recordset, if the control is empty, the value of the recordset field is 0.  
   
- `DDX_FieldSlider`non scambiare informazioni di intervallo con controlli dispositivo di scorrimento in grado di impostare un intervallo anziché semplicemente una posizione.  
+ `DDX_FieldSlider` does not exchange range information with slider controls capable of setting a range rather than simply a position.  
   
- Se si lavora con le classi basate su ODBC, utilizzare il primo override della funzione. Utilizzare la sostituzione del secondo con le classi basate su DAO.  
+ Use the first override of the function if you are working with the ODBC-based classes. Use the second override with the DAO-based classes.  
   
- Per ulteriori informazioni su DDX, vedere [convalida e DDX](../dialog-data-exchange-and-validation.md). Per esempi e altre informazioni su DDX per `CRecordView` e `CDaoRecordView` campi, vedere [visualizzazioni di Record](../../data/record-views-mfc-data-access.md). Per informazioni sui controlli dispositivo di scorrimento, vedere [CSliderCtrl utilizzando](../using-csliderctrl.md).  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../dialog-data-exchange-and-validation.md). For examples and more information about DDX for `CRecordView` and `CDaoRecordView` fields, see [Record Views](../../data/record-views-mfc-data-access.md). For information about slider controls, see [Using CSliderCtrl](../using-csliderctrl.md).  
    
-### <a name="example"></a>Esempio  
- Vedere [DDX_FieldText](#ddx_fieldtext) per un esempio di DDX_Field generale. Le chiamate a `DDX_FieldSlider` saranno analoghi.  
+### <a name="example"></a>Example  
+ See [DDX_FieldText](#ddx_fieldtext) for a general DDX_Field example. Calls to `DDX_FieldSlider` would be similar.  
    
-### <a name="requirements"></a>Requisiti  
- **Intestazione:** afxdao. h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
    
-### <a name="see-also"></a>Vedere anche  
- [Macro e funzioni globali](mfc-macros-and-globals.md)   
+### <a name="see-also"></a>See Also  
+ [Macros and Globals](mfc-macros-and-globals.md)   
   
-##  <a name="ddx_fieldtext"></a>DDX_FieldText  
- Il `DDX_FieldText` funzione gestisce il trasferimento di `int`, **breve**, **lungo**, `DWORD`, [CString](../../atl-mfc-shared/reference/cstringt-class.md), **float**, **doppie**, **BOOL**, o **BYTE** dati tra un controllo casella di modifica e i membri di dati del campo di un oggetto recordset.  
+##  <a name="ddx_fieldtext"></a>  DDX_FieldText  
+ The `DDX_FieldText` function manages the transfer of `int`, **short**, **long**, `DWORD`, [CString](../../atl-mfc-shared/reference/cstringt-class.md), **float**, **double**, **BOOL**, or **BYTE** data between an edit box control and the field data members of a recordset.  
   
 ```  
 void AFXAPI DDX_FieldText(
@@ -619,35 +619,35 @@ void AFXAPI DDX_FieldText(
     CDaoRecordset* pRecordset);  
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) oggetto. Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- L'ID di un controllo nel [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) oggetto.  
+ The ID of a control in the [CRecordView](../../mfc/reference/crecordview-class.md) or [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) object.  
   
  *value*  
- Un riferimento a un membro di dati del campo associato `CRecordset` o `CDaoRecordset` oggetto. Il tipo di dati del valore dipende da quali versioni di overload `DDX_FieldText` utilizzare.  
+ A reference to a field data member in the associated `CRecordset` or `CDaoRecordset` object. The data type of value depends on which of the overloaded versions of `DDX_FieldText` you use.  
   
  `pRecordset`  
- Un puntatore al [CRecordset](../../mfc/reference/crecordset-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) oggetto con cui i dati vengono scambiati. Abilita l'indicatore di misura `DDX_FieldText` per rilevare e impostare i valori Null.  
+ A pointer to the [CRecordset](../../mfc/reference/crecordset-class.md) or [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) object with which data is exchanged. This pointer enables `DDX_FieldText` to detect and set Null values.  
   
-### <a name="remarks"></a>Note  
- Per [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) oggetti, `DDX_FieldText` gestisce inoltre il trasferimento [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md), e [COleCurrency](../../mfc/reference/colecurrency-class.md) valori. Un controllo casella vuota indica un valore Null. In un trasferimento dal recordset al controllo, se il campo del recordset è Null, la casella di modifica è vuoto. In un trasferimento dal controllo del codice al recordset, se il controllo è vuoto, il campo recordset è impostato su Null.  
+### <a name="remarks"></a>Remarks  
+ For [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objects, `DDX_FieldText` also manages transferring [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md), and [COleCurrency](../../mfc/reference/colecurrency-class.md) values. An empty edit box control indicates a Null value. On a transfer from the recordset to the control, if the recordset field is Null, the edit box is set to empty. On a transfer from control to recordset, if the control is empty, the recordset field is set to Null.  
   
- Utilizzare le versioni con [CRecordset](../../mfc/reference/crecordset-class.md) parametri se si lavora con le classi basate su ODBC. Utilizzare le versioni con [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) parametri se si utilizzano le classi basate su DAO.  
+ Use the versions with [CRecordset](../../mfc/reference/crecordset-class.md) parameters if you are working with the ODBC-based classes. Use the versions with [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) parameters if you are working with the DAO-based classes.  
   
- Per ulteriori informazioni su DDX, vedere [convalida e DDX](../../mfc/dialog-data-exchange-and-validation.md). Per esempi e altre informazioni su DDX per [CRecordView](../../mfc/reference/crecordview-class.md) e [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) campi, vedere l'articolo [visualizzazioni di Record](../../data/record-views-mfc-data-access.md).  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md). For examples and more information about DDX for [CRecordView](../../mfc/reference/crecordview-class.md) and [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) fields, see the article [Record Views](../../data/record-views-mfc-data-access.md).  
   
-### <a name="example"></a>Esempio  
- Le operazioni seguenti `DoDataExchange` funzionare per un [CRecordView](../../mfc/reference/crecordview-class.md) contiene `DDX_FieldText` funzione chiama per tre tipi di dati: `IDC_COURSELIST` è una casella combinata; i due controlli sono le caselle di modifica. Per la programmazione di DAO, il *m_pSet* parametro è un puntatore a un [CRecordset](../../mfc/reference/crecordset-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md).  
+### <a name="example"></a>Example  
+ The following `DoDataExchange` function for a [CRecordView](../../mfc/reference/crecordview-class.md) contains `DDX_FieldText` function calls for three data types: `IDC_COURSELIST` is a combo box; the other two controls are edit boxes. For DAO programming, the *m_pSet* parameter is a pointer to a [CRecordset](../../mfc/reference/crecordset-class.md) or [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md).  
   
- [!code-cpp[NVC_MFCDatabase #43](../../mfc/codesnippet/cpp/dialog-data-exchange-functions-for-crecordview-and-cdaorecordview_1.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#43](../../mfc/codesnippet/cpp/dialog-data-exchange-functions-for-crecordview-and-cdaorecordview_1.cpp)]  
 
   
-### <a name="requirements"></a>Requisiti  
-  **Intestazione** afxdao. h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdao.h  
     
-## <a name="see-also"></a>Vedere anche  
- [Macro e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

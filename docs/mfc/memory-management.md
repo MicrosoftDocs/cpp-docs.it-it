@@ -1,53 +1,72 @@
 ---
-title: "Gestione della memoria | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "memoria"
-  - "allocazione di memoria"
-  - "allocazione di memoria, MFC"
-  - "memoria, gestione"
-  - "MFC, gestione della memoria"
+title: Memory Management | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- memory [MFC]
+- MFC, memory management
+- memory allocation [MFC]
+- memory [MFC], managing
+- memory allocation [MFC], MFC
 ms.assetid: 934ac81b-d630-4232-88e5-ea74f7187987
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Gestione della memoria
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: cf494a6f394c2a8104365112260e1d86cdedadcd
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Questo gruppo di articoli viene illustrato come sfruttare i servizi di utilizzo di libreria Microsoft Foundation classes \(MFC\) correlato a gestione della memoria.  L'allocazione della memoria può essere divisa in due categorie principali: allocazioni e allocazioni heap del frame.  
+---
+# <a name="memory-management"></a>Memory Management
+This group of articles describes how to take advantage of the general-purpose services of the Microsoft Foundation Class Library (MFC) related to memory management. Memory allocation can be divided into two main categories: frame allocations and heap allocations.  
   
- Una differenza principale tra le due tecniche di allocazione è quella all'allocazione del frame in genere si utilizza effettivamente blocco di memoria stesso, mentre all'allocazione heap viene fornito sempre un puntatore al blocco di memoria.  Un'altra differenza principale tra i due schemi consiste nel fatto che gli oggetti del frame automaticamente eliminate, mentre gli oggetti dell'heap devono eliminata esplicitamente dal programmatore.  
+ One main difference between the two allocation techniques is that with frame allocation you typically work with the actual memory block itself, while with heap allocation you are always given a pointer to the memory block. Another major difference between the two schemes is that frame objects are automatically deleted, while heap objects must be explicitly deleted by the programmer.  
   
- Per informazioni non MFC sulla gestione della memoria in programmi per windows, vedere [Gestione della memoria](http://msdn.microsoft.com/library/windows/desktop/aa366779) in [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+ For non-MFC information about memory management in programs for Windows, see [Memory Management](http://msdn.microsoft.com/library/windows/desktop/aa366779) in the Windows SDK.  
   
-## Scegliere l'argomento su cui visualizzare maggiori informazioni  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Pagina l'allocazione](../mfc/memory-management-frame-allocation.md)  
+-   [Frame allocation](../mfc/memory-management-frame-allocation.md)  
   
--   [Allocazione heap](../mfc/memory-management-heap-allocation.md)  
+-   [Heap allocation](../mfc/memory-management-heap-allocation.md)  
   
--   [Allocare memoria per una matrice](../mfc/memory-management-examples.md)  
+-   [Allocating memory for an array](../mfc/memory-management-examples.md)  
   
--   [Rilascio di memoria per una matrice dall'heap](../mfc/memory-management-examples.md)  
+-   [Deallocating memory for an array from the heap](../mfc/memory-management-examples.md)  
   
--   [Allocare memoria per una struttura di dati](../mfc/memory-management-examples.md)  
+-   [Allocating memory for a data structure](../mfc/memory-management-examples.md)  
   
--   [Allocare memoria per un oggetto](../mfc/memory-management-examples.md)  
+-   [Allocating memory for an object](../mfc/memory-management-examples.md)  
   
--   [Blocchi di memoria ridimensionabili](../mfc/memory-management-resizable-memory-blocks.md)  
+-   [Resizable memory blocks](../mfc/memory-management-resizable-memory-blocks.md)  
   
-## Vedere anche  
- [Concetti](../mfc/mfc-concepts.md)   
- [Argomenti MFC generali](../mfc/general-mfc-topics.md)
+## <a name="see-also"></a>See Also  
+ [Concepts](../mfc/mfc-concepts.md)   
+ [General MFC Topics](../mfc/general-mfc-topics.md)
+
+

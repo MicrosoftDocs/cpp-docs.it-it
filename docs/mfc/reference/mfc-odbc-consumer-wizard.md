@@ -1,74 +1,93 @@
 ---
-title: "Creazione guidata consumer ODBC MFC (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.class.mfc.consumer.overview"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Creazione guidata consumer ODBC MFC (C++)"
-  - "procedure guidate [MFC]"
+title: MFC ODBC Consumer Wizard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.codewiz.class.mfc.consumer.overview
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ODBC Consumer Wizard
+- wizards [MFC]
 ms.assetid: f64a890b-a252-4887-88a1-782a7cd4ff3d
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Creazione guidata consumer ODBC MFC (C++)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: adefd54cecc45f662bea3bf2b1deb7ec562773d3
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Inserire qui il riepilogo dei risultati di ricerca.  
+---
+# <a name="mfc-odbc-consumer-wizard"></a>MFC ODBC Consumer Wizard
+Insert "Search Results" summary here.  
   
- È possibile utilizzare questa procedura guidata per impostare una classe recordset ODBC e le associazioni dati necessarie per accedere all'origine dati specificata.  
+ This wizard sets up an ODBC recordset class and the data bindings necessary to access the specified data source.  
   
-## Elenco UIElement  
- **Origine dati**  
- Utilizzando il pulsante **Origine dati** è possibile impostare l'origine dati specificata mediante il driver ODBC specificato.  Per ulteriori informazioni sui file di origine dati, DSN, vedere l'articolo [File Data Sources](https://msdn.microsoft.com/en-us/library/ms715401.aspx) nell'SDK ODBC \(informazioni in lingua inglese\).  Nella finestra di dialogo **Selezione origine dati** sono disponibili due schede:  
+## <a name="uielement-list"></a>UIElement List  
+ **Data Source**  
+ The **Data Source** button lets you set up the specified data source using the specified ODBC driver. For more information about data source files (DSN), see [File Data Sources](https://msdn.microsoft.com/library/ms715401.aspx) in the ODBC SDK. The **Select Data Source** dialog box has two tabs:  
   
--   Scheda **Origine dati su file**: nella casella **Cerca in** è specificata la directory nella quale selezionare i file da utilizzare come origini dati.  Il percorso predefinito è \\Programmi\\File comuni\\ODBC\\Data Sources.  Le origini dati dei file esistenti \(file DSN\) vengono visualizzate nella casella di riepilogo principale.  È possibile impostare prima le origini dati mediante la scheda **DSN su file** con l'[Amministratore origine dati ODBC](https://msdn.microsoft.com/en-us/library/ms714024.aspx) o creare origini dati nuove utilizzando questa finestra di dialogo.  
+-   **File Data Source** tab: The **Look in** box specifies the directory in which to select files to be used as data sources. The default is \Program Files\Common Files\ODBC\Data Sources. The existing file data sources (.dsn files) appear in the main list box. You can either set up the data sources ahead of time using the **File DSN** tab on the [ODBC Data Source Administrator](https://msdn.microsoft.com/library/ms714024.aspx), or create new ones using this dialog box.  
   
-     Per creare una nuova origine dati file da questa finestra di dialogo, fare clic su `Nuovo` per specificare un nome DSN. Verrà visualizzata la finestra di dialogo **Crea nuova origine dati**.  Selezionare un driver appropriato e fare clic su `Avanti`. Scegliere **Sfoglia**, quindi selezionare il nome del file da utilizzare come origine dati. È necessario selezionare "Tutti i file" per visualizzare i file non DSN, ad esempio i file XLS. Scegliere `Avanti`, quindi **Fine**. Se si seleziona un file non DSN, verrà visualizzata una finestra di dialogo specifica del driver, ad esempio una finestra relativa alla configurazione ODBC per Microsoft Excel, che convertirà il file in DSN.  
+     To create a new file data source from this dialog box, click `New` to specify a DSN name; the **Create New Data Source** dialog box appears. In the **Create New Data Source** dialog box, select an appropriate driver and click `Next`; click **Browse**, and select the name of the file to be used as a data source (you have to select "All Files" to view non-DSN files, such as .xls files); click `Next`, and then click **Finish**. (If you selected a non-DSN file, you will get a driver-specific dialog box, such as "ODBC Microsoft Excel Setup," which will convert the file to a DSN.)  
   
     > [!NOTE]
-    >  È anche possibile creare prima una nuova origine dati file mediante l'Amministratore origine dati ODBC.  Fare clic sul pulsante **Start**, scegliere **Impostazioni**, quindi **Pannello di controllo**, **Strumenti di amministrazione**, **Origini dati \(ODBC\)** e infine **Amministratore origine dati ODBC**.  
+    >  You can also create a new file data source beforehand using the ODBC Data Source Administrator. From the **Start** menu, select **Settings**, **Control Panel**, **Administrative Tools**, **Data Sources (ODBC)**, and then **ODBC Data Source Administrator**.  
   
-     Nella casella **Nome DSN** è possibile specificare un nome per l'origine dati file.  È necessario verificare che il nome DSN abbia l'estensione di file appropriata, ad esempio XLS per i file di Excel o MDB per quelli di Access.  
+     The **DSN Name** box allows you to specify a name for the file data source. You must ensure that the DSN name ends with the appropriate file extension, such as .xls for Excel files or .mdb for Access files.  
   
-     Per ulteriori informazioni sui file DSN, vedere l'articolo [File Data Sources](https://msdn.microsoft.com/en-us/library/ms715401.aspx) nell'SDK ODBC \(informazioni in lingua inglese\).  
+     For more information on DSNs, see [File Data Sources](https://msdn.microsoft.com/library/ms715401.aspx) in the ODBC SDK.  
   
--   Scheda **Origine dati computer**: in questa scheda è disponibile l'elenco delle origini dati di sistema e utente.  Le origini dati utente sono specifiche di un utente del computer in uso.  Le origini dati sistema possono essere utilizzate da tutti gli utenti del computer o di un servizio a livello di sistema.  Vedere [Machine Data Sources](https://msdn.microsoft.com/en-us/library/ms710952.aspx) nell'ODBC SDK \(informazioni in lingua inglese\).  
+-   **Machine Data Source** tab: This tab lists system and User DATA sources. User data sources are specific to a user on this machine. System data sources can be used by all users on this machine or on a systemwide service. See [Machine Data Sources](https://msdn.microsoft.com/library/ms710952.aspx) in the ODBC SDK  
   
- Per ulteriori informazioni sulle origini dati ODBC, vedere l'articolo [Data Sources](https://msdn.microsoft.com/en-us/library/ms711688.aspx) nell'SDK ODBC \(informazioni in lingua inglese\).  
+ For more information on ODBC data sources, see [Data Sources](https://msdn.microsoft.com/library/ms711688.aspx) in the ODBC SDK.  
   
- Scegliere **OK** per terminare.  Verrà visualizzata la finestra di dialogo **Seleziona oggetto di database**.  In questa finestra di dialogo selezionare la tabella o la visualizzazione che verrà utilizzata dal consumer.  Per selezionare più visualizzazioni e tabelle, tenere premuto CTRL mentre si fa clic sugli elementi.  
+ Click **OK** to finish. The **Select Database Object** dialog box appears. From this dialog box, select the table or view that the consumer will use. Note that you can select multiple views and tables by holding the control key while clicking on the items.  
   
- **Classe**  
- Nome della classe consumer. Per impostazione predefinita, tale nome è basato sul nome dell'origine dati file o computer selezionata.  
+ **Class**  
+ The name of the consumer class, based by default on the name of the file or machine data source that you selected.  
   
- **File H**  
- Nome del file di intestazione della classe consumer. Per impostazione predefinita, tale nome è basato sul nome dell'origine dati file o computer selezionata.  
+ **.h file**  
+ The name of the consumer class header file, based by default on the name of the file or machine data source that you selected.  
   
- **File CPP**  
- Nome del file di implementazione della classe consumer. Per impostazione predefinita, tale nome è basato sul nome dell'origine dati file o computer selezionata.  
+ **.cpp file**  
+ The name of the consumer class implementation file, based by default on the name of the file or machine data source that you selected.  
   
  **Type**  
- Specifica se il recordset è un dynaset \(impostazione predefinita\) o uno snapshot.  
+ Specifies whether the recordset is a dynaset (default) or a snapshot.  
   
--   **Dynaset**: utilizzare questa opzione per specificare che il recordset è di tipo dynaset.  Un dynaset, ovvero il risultato di una query che fornisce una visualizzazione indicizzata dei dati del database in cui è stata effettuata la ricerca,  memorizza nella cache solo un indice integrale dei dati originali offrendo così prestazioni più elevate rispetto allo snapshot.  L'indice fa direttamente riferimento a ciascun record trovato come risultato di una query e indica se un record è stato rimosso.  È inoltre possibile accedere alle informazioni aggiornate nei record in cui viene effettuata la ricerca.  Questa è l'impostazione predefinita.  
+-   **Dynaset**: Specifies that the recordset is a dynaset. A dynaset is the result of a query that provides an indexed view into the queried database's data. A dynaset caches only an integral index to the original data and thus offers a performance gain over a snapshot. The index points directly to each record found as a result of a query and indicates if a record is removed. You also have access to updated information in the queried records. This is the default.  
   
--   **Snapshot**: utilizzare questa opzione per specificare che il recordset è di tipo snapshot.  Uno snapshot è il risultato di una query e costituisce una visualizzazione di un database in un determinato momento.  Poiché tutti i record trovati come risultato della query vengono memorizzati nella cache, nei record originali non viene visualizzata alcuna modifica.  
+-   **Snapshot**: Specifies that the recordset is a snapshot. A snapshot is the result of a query and is a view into a database at one point in time. All records found as a result of the query are cached, so you do not see any changes to the original records.  
   
- **Associa tutte le colonne**  
- Specifica se vengono associate tutte le colonne della tabella selezionata.  Se si seleziona questa casella \(impostazione predefinita\), vengono associate tutte le colonne. In caso contrario non viene associata alcuna colonna e l'associazione deve essere effettuata manualmente nella classe recordset.  
+ **Bind all columns**  
+ Specifies whether all columns in the selected table are bound. If you select this box (default), all columns are bound; if you do not select this box, no columns are bound, and you must bind them manually in the recordset class.  
   
-## Vedere anche  
- [Consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)   
- [Aggiunta di funzionalità con creazioni guidate codice](../../ide/adding-functionality-with-code-wizards-cpp.md)
+## <a name="see-also"></a>See Also  
+ [MFC ODBC Consume](../../mfc/reference/adding-an-mfc-odbc-consumer.md)   
+ [Adding Functionality with Code Wizards](../../ide/adding-functionality-with-code-wizards-cpp.md)
+
+

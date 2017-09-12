@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCCaptionButton | Documenti di Microsoft
+title: CMFCCaptionButton Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -23,7 +23,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCCaptionButton class
+- CMFCCaptionButton [MFC], CMFCCaptionButton
+- CMFCCaptionButton [MFC], GetHit
+- CMFCCaptionButton [MFC], GetIconID
+- CMFCCaptionButton [MFC], GetRect
+- CMFCCaptionButton [MFC], GetSize
+- CMFCCaptionButton [MFC], IsMiniFrameButton
+- CMFCCaptionButton [MFC], Move
+- CMFCCaptionButton [MFC], OnDraw
+- CMFCCaptionButton [MFC], SetMiniFrameButton
 ms.assetid: c5774b38-c0dd-414a-9ede-3b2f78f233ec
 caps.latest.revision: 28
 author: mikeblome
@@ -43,67 +51,67 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 9d6342f87622c34b671ad5ea443eb78ffd8c3838
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b23d49205c080b9eb38577f97ee0b6e0a1e4f6b3
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfccaptionbutton-class"></a>Classe CMFCCaptionButton
-La `CMFCCaptionButton` classe implementa un pulsante che viene visualizzato nella barra del titolo per un riquadro ancorato o una finestra con mini-cornice. In genere, il framework crea automaticamente pulsanti della barra del titolo.  
+# <a name="cmfccaptionbutton-class"></a>CMFCCaptionButton Class
+The `CMFCCaptionButton` class implements a button that is displayed on the caption bar for a docking pane or a mini-frame window. Typically, the framework creates caption buttons automatically.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCCaptionButton : public CObject  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="constructors"></a>Costruttori  
+### <a name="constructors"></a>Constructors  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCCaptionButton::CMFCCaptionButton](#cmfccaptionbutton)|Costruisce un oggetto CMFCCaptionButton.|  
+|[CMFCCaptionButton::CMFCCaptionButton](#cmfccaptionbutton)|Constructs a CMFCCaptionButton object.|  
   
-### <a name="public-methods"></a>Metodi pubblici  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCCaptionButton::GetHit](#gethit)|Restituisce il comando rappresentato dal pulsante.|  
-|[CMFCCaptionButton::GetIconID](#geticonid)|Restituisce l'ID dell'immagine associata al pulsante.|  
-|[CMFCCaptionButton::GetRect](#getrect)|Restituisce il rettangolo occupato dal pulsante.|  
-|[CMFCCaptionButton::GetSize](#getsize)|Restituisce la larghezza e altezza del pulsante.|  
-|[CMFCCaptionButton::IsMiniFrameButton](#isminiframebutton)|Indica se l'altezza della barra del titolo è impostata alla dimensione minima.|  
-|[CMFCCaptionButton::Move](#move)|Imposta la posizione di disegno di pulsante e lo stato Visualizza finestra.|  
-|[CMFCCaptionButton::OnDraw](#ondraw)|Consente di disegnare sul pulsante della didascalia.|  
-|[CMFCCaptionButton::SetMiniFrameButton](#setminiframebutton)|Imposta la dimensione minima della barra del titolo.|  
+|[CMFCCaptionButton::GetHit](#gethit)|Returns the command represented by the button.|  
+|[CMFCCaptionButton::GetIconID](#geticonid)|Returns the image ID associated with the button.|  
+|[CMFCCaptionButton::GetRect](#getrect)|Returns the rectangle occupied by the button.|  
+|[CMFCCaptionButton::GetSize](#getsize)|Returns the width and height of the button.|  
+|[CMFCCaptionButton::IsMiniFrameButton](#isminiframebutton)|Indicates whether the title bar height is set to mini size.|  
+|[CMFCCaptionButton::Move](#move)|Sets the button draw location and window show state.|  
+|[CMFCCaptionButton::OnDraw](#ondraw)|Draws the caption button.|  
+|[CMFCCaptionButton::SetMiniFrameButton](#setminiframebutton)|Sets the mini size of the title bar.|  
   
-## <a name="remarks"></a>Note  
- È possibile derivare una classe dalla classe [CPaneFrameWnd classe](../../mfc/reference/cpaneframewnd-class.md) e utilizzare il metodo protetto, `AddButton`, per aggiungere pulsanti a una finestra cornice minidump.  
+## <a name="remarks"></a>Remarks  
+ You can derive a class from [CPaneFrameWnd Class](../../mfc/reference/cpaneframewnd-class.md) and use the protected method, `AddButton`, to add caption buttons to a mini frame window.  
   
- CPaneFrameWnd.h definisce gli ID di comando per due tipi di pulsanti:  
+ CPaneFrameWnd.h defines command IDs for two types of caption buttons:  
   
-- `AFX_CAPTION_BTN_PIN`, che consente di visualizzare un pulsante pin quando il riquadro ancorato supporta la modalità Nascondi automaticamente.  
+- `AFX_CAPTION_BTN_PIN`, which displays a pin button when the docking pane supports auto-hide mode.  
   
-- `AFX_CAPTION_BTN_CLOSE`, che consente di visualizzare un **Chiudi** pulsante quando il riquadro può essere chiusa o nascosto.  
+- `AFX_CAPTION_BTN_CLOSE`, which displays a **Close** button when the pane can be closed or hidden.  
   
-## <a name="example"></a>Esempio  
- Nell'esempio riportato di seguito viene illustrato come costruire un `CMFCCaptionButton` dell'oggetto e impostare la dimensione minima della barra del titolo.  
+## <a name="example"></a>Example  
+ The following example demonstrates how to construct a `CMFCCaptionButton` object and set the mini size of the title bar.  
   
- [!code-cpp[NVC_MFC_RibbonApp&#43;](../../mfc/reference/codesnippet/cpp/cmfccaptionbutton-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp#43](../../mfc/reference/codesnippet/cpp/cmfccaptionbutton-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCCaptionButton](../../mfc/reference/cmfccaptionbutton-class.md)  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** afxcaptionbutton.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcaptionbutton.h  
   
-##  <a name="cmfccaptionbutton"></a>CMFCCaptionButton::CMFCCaptionButton  
- Costruisce un oggetto `CMFCCaptionButton`.  
+##  <a name="cmfccaptionbutton"></a>  CMFCCaptionButton::CMFCCaptionButton  
+ Constructs a `CMFCCaptionButton` object.  
   
 ```  
 CMFCCaptionButton();
@@ -114,54 +122,54 @@ CMFCCaptionButton(
     BOOL bLeftAlign = FALSE);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `nHit`  
- Comando associato al pulsante.  
+ The command associated with the button.  
   
  [in] `bLeftAlign`  
- Specifica se il pulsante è allineato a sinistra.  
+ Specifies whether the button is aligned to the left.  
   
- Nella tabella seguente sono elencati i valori possibili per il `nHit` parametro.  
+ The following table lists possible values for the `nHit` parameter.  
   
-|Valore|Comando|  
+|Value|Command|  
 |-----------|-------------|  
-|`AFX_HTCLOSE`|Pulsante Chiudi.|  
-|`HTMINBUTTON`|Pulsante Riduci a icona.|  
-|`HTMAXBUTTON`|Pulsante di ingrandimento.|  
-|`AFX_HTLEFTBUTTON`|Pulsante freccia sinistra.|  
-|`AFX_HTRIGHTBUTTON`|Pulsante freccia destra.|  
-|`AFX_HTMENU`|Pulsante di menu freccia.|  
-|`HTNOWHERE`|Il valore predefinito. non rappresenta alcun comando.|  
+|`AFX_HTCLOSE`|Close button.|  
+|`HTMINBUTTON`|Minimize button.|  
+|`HTMAXBUTTON`|Maximize button.|  
+|`AFX_HTLEFTBUTTON`|Left arrow button.|  
+|`AFX_HTRIGHTBUTTON`|Right arrow button.|  
+|`AFX_HTMENU`|Down arrow menu button.|  
+|`HTNOWHERE`|The default value; represents no command.|  
   
-### <a name="remarks"></a>Note  
- Per impostazione predefinita, i pulsanti non sono associati a un comando.  
+### <a name="remarks"></a>Remarks  
+ By default, caption buttons are not associated with a command.  
   
- Pulsanti sono allineati in base a destra o sinistra.  
+ Caption buttons are aligned either on the right or left.  
   
-##  <a name="gethit"></a>CMFCCaptionButton::GetHit  
- Restituisce il comando rappresentato dal pulsante.  
+##  <a name="gethit"></a>  CMFCCaptionButton::GetHit  
+ Returns the command represented by the button.  
   
 ```  
 UINT GetHit() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Il comando rappresentato dal pulsante.  
+### <a name="return-value"></a>Return Value  
+ The command represented by the button.  
   
- Nella tabella seguente sono elencati i possibili valori restituiti.  
+ The following table lists possible return values.  
   
-|Valore|Comando|  
+|Value|Command|  
 |-----------|-------------|  
-|`AFX_HTCLOSE`|Pulsante Chiudi.|  
-|`HTMINBUTTON`|Pulsante Riduci a icona.|  
-|`HTMAXBUTTON`|Pulsante di ingrandimento.|  
-|`AFX_HTLEFTBUTTON`|Pulsante freccia sinistra.|  
-|`AFX_HTRIGHTBUTTON`|Pulsante freccia destra.|  
-|`AFX_HTMENU`|Pulsante di menu freccia.|  
-|`HTNOWHERE`|Il valore predefinito. non rappresenta alcun comando.|  
+|`AFX_HTCLOSE`|Close button.|  
+|`HTMINBUTTON`|Minimize button.|  
+|`HTMAXBUTTON`|Maximize button.|  
+|`AFX_HTLEFTBUTTON`|Left arrow button.|  
+|`AFX_HTRIGHTBUTTON`|Right arrow button.|  
+|`AFX_HTMENU`|Down arrow menu button.|  
+|`HTNOWHERE`|The default value; represents no command.|  
   
-##  <a name="geticonid"></a>CMFCCaptionButton::GetIconID  
- Restituisce l'ID dell'immagine associata al pulsante.  
+##  <a name="geticonid"></a>  CMFCCaptionButton::GetIconID  
+ Returns the image ID associated with the button.  
   
 ```  
 virtual CMenuImages::IMAGES_IDS GetIconID(
@@ -169,59 +177,59 @@ virtual CMenuImages::IMAGES_IDS GetIconID(
     BOOL bMaximized = FALSE) const;  
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `bHorz`  
- `TRUE`immagine della freccia sinistra o destra ID; `FALSE` per immagine ID su o freccia giù.  
+ `TRUE` for left or right arrow image IDs; `FALSE` for up or down arrow image IDs.  
   
  [in] `bMaximized`  
- `TRUE`per un ID immagine Ingrandisci; `FALSE` per una riduzione a icona immagine ID.  
+ `TRUE` for a maximize image ID; `FALSE` for a minimize image ID.  
   
-### <a name="return-value"></a>Valore restituito  
- L'ID di immagine.  
+### <a name="return-value"></a>Return Value  
+ The image ID.  
   
-### <a name="remarks"></a>Note  
- I parametri di specificare gli ID immagine per riduzione a icona o ingrandire pulsanti.  
+### <a name="remarks"></a>Remarks  
+ The parameters specify image IDs for minimize or maximize caption buttons.  
   
-##  <a name="getrect"></a>CMFCCaptionButton::GetRect  
- Restituisce il rettangolo occupato dal pulsante.  
+##  <a name="getrect"></a>  CMFCCaptionButton::GetRect  
+ Returns the rectangle occupied by the button.  
   
 ```  
 virtual CRect GetRect() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Il rettangolo che rappresenta la posizione del pulsante.  
+### <a name="return-value"></a>Return Value  
+ The rectangle that represents the location of the button.  
   
-### <a name="remarks"></a>Note  
- Se non è possibile visualizzare il pulsante, la dimensione restituita è 0.  
+### <a name="remarks"></a>Remarks  
+ If you cannot see the button, the size returned is 0.  
   
-##  <a name="getsize"></a>CMFCCaptionButton::GetSize  
- Restituisce la larghezza e altezza del pulsante.  
+##  <a name="getsize"></a>  CMFCCaptionButton::GetSize  
+ Returns the width and height of the button.  
   
 ```  
 static CSize GetSize();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Dimensioni esterne del pulsante.  
+### <a name="return-value"></a>Return Value  
+ The outer dimensions of the button.  
   
-### <a name="remarks"></a>Note  
- Le dimensioni restituite includono bordo e il margine di pulsante.  
+### <a name="remarks"></a>Remarks  
+ The size returned includes button margin and border.  
   
-##  <a name="isminiframebutton"></a>CMFCCaptionButton::IsMiniFrameButton  
- Indica se l'altezza della barra del titolo è impostata alla dimensione minima.  
+##  <a name="isminiframebutton"></a>  CMFCCaptionButton::IsMiniFrameButton  
+ Indicates whether the title bar height is set to mini size.  
   
 ```  
 BOOL IsMiniFrameButton() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- `TRUE`Se la didascalia è impostata su mini dimensioni. in caso contrario `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the caption is set to mini size; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="move"></a>CMFCCaptionButton::Move  
- Imposta la posizione di disegno di pulsante e lo stato Visualizza finestra.  
+##  <a name="move"></a>  CMFCCaptionButton::Move  
+ Sets the button draw location and window show state.  
   
 ```  
 void Move(
@@ -229,15 +237,15 @@ void Move(
     BOOL bHide = FALSE);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `ptTo`  
- Nuova posizione.  
+ The new location.  
   
  [in] `bHide`  
- Se si desidera mostrare il pulsante.  
+ Whether to show the button.  
   
-##  <a name="ondraw"></a>CMFCCaptionButton::OnDraw  
- Consente di disegnare sul pulsante della didascalia.  
+##  <a name="ondraw"></a>  CMFCCaptionButton::OnDraw  
+ Draws the caption button.  
   
 ```  
 virtual void OnDraw(
@@ -248,39 +256,39 @@ virtual void OnDraw(
     BOOL bDisabled = FALSE);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Puntatore a un contesto di dispositivo per il pulsante.  
+ Pointer to a device context for the button.  
   
  [in] `bActive`  
- Se si desidera disegnare un'immagine del pulsante attiva.  
+ Whether to draw an active button image.  
   
  [in] `bHorz`  
- Riservato per l'utilizzo in una classe derivata.  
+ Reserved for use in a derived class.  
   
  [in] `bMaximized`  
- Se si desidera disegnare un'immagine del pulsante ingrandita.  
+ Whether to draw a maximized button image.  
   
  [in] `bDisabled`  
- Se si desidera disegnare un'immagine del pulsante abilitato.  
+ Whether to draw an enabled button image.  
   
-### <a name="remarks"></a>Note  
- Il `bMaximized` parametro viene utilizzato quando il pulsante è un ingrandimento o pulsante Riduci a icona.  
+### <a name="remarks"></a>Remarks  
+ The `bMaximized` parameter is used when the button is a maximize or minimize button.  
   
-##  <a name="setminiframebutton"></a>CMFCCaptionButton::SetMiniFrameButton  
- Imposta la dimensione minima della barra del titolo.  
+##  <a name="setminiframebutton"></a>  CMFCCaptionButton::SetMiniFrameButton  
+ Sets the mini size of the title bar.  
   
 ```  
 void SetMiniFramebutton(BOOL bSet = TRUE);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `bSet`  
- `TRUE`per l'altezza della barra del titolo mini; `FALSE` per l'altezza della barra del titolo predefinito.  
+ `TRUE` for mini title bar height; `FALSE` for default title bar height.  
   
-## <a name="see-also"></a>Vedere anche  
- [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
- [Classi](../../mfc/reference/mfc-classes.md)   
- [Classe CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md)   
- [Classe CDockablePane](../../mfc/reference/cdockablepane-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CPaneFrameWnd Class](../../mfc/reference/cpaneframewnd-class.md)   
+ [CDockablePane Class](../../mfc/reference/cdockablepane-class.md)
 

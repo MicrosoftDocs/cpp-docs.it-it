@@ -1,5 +1,5 @@
 ---
-title: Controllo dell&quot;applicazione | Documenti Microsoft
+title: Application Control | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- application control
+- application control [MFC]
 ms.assetid: c1f69f15-e0fe-4515-9f36-d63d31869deb
 caps.latest.revision: 12
 author: mikeblome
@@ -33,167 +33,167 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
-ms.openlocfilehash: 5e48437920f56cdfd119c1d703db585616881833
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6022078118092b17b38a014eace7736328c6af83
 ms.contentlocale: it-it
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="application-control"></a>Controllo Application
-OLE richiede un controllo significativo sulle applicazioni e i relativi oggetti. Il sistema OLE DLL deve essere in grado di avviare e rilasciare automaticamente le applicazioni, coordinare la produzione e la modifica degli oggetti e così via. Le funzioni in questo argomento soddisfano tali requisiti. Oltre a essere chiamata dalla DLL del sistema ol, queste funzioni devono essere chiamate a volte anche applicazioni. 
+# <a name="application-control"></a>Application Control
+OLE requires substantial control over applications and their objects. The OLE system DLLs must be able to launch and release applications automatically, coordinate their production and modification of objects, and so on. The functions in this topic meet those requirements. In addition to being called by the OLE system DLLs, these functions must sometimes be called by applications as well. 
   
-### <a name="application-control"></a>Controllo Application  
+### <a name="application-control"></a>Application Control  
   
 |||  
 |-|-|  
-|[AfxOleCanExitApp](#afxolecanexitapp)|Indica se l'applicazione può terminare.|  
-|[AfxOleGetMessageFilter](#afxolegetmessagefilter)|Recupera il filtro messaggi corrente dell'applicazione.|  
-|[AfxOleGetUserCtrl](#afxolegetuserctrl)|Recupera il flag corrente del controllo utente.|  
-|[AfxOleSetUserCtrl](#afxolesetuserctrl)|Imposta o Cancella il flag di controllo utente.|  
-|[AfxOleLockApp](#afxolelockapp)|Incrementa conteggio globale del framework del numero di oggetti attivi in un'applicazione.|  
-|[AfxOleLockControl](#afxolelockcontrol)| Blocca la class factory del controllo specificato. |
-|[AfxOleUnlockApp](#afxoleunlockapp)|Decrementa il conteggio del framework del numero di oggetti attivi in un'applicazione.| 
-|[AfxOleUnlockControl](#afxoleunlockcontrol)| Sblocca la class factory del controllo specificato. |
-|[AfxOleRegisterServerClass](#afxoleregisterserverclass)|Registra un server nel Registro di sistema OLE.|  
-|[AfxOleSetEditMenu](#afxoleseteditmenu)|Implementa l'interfaccia utente per il *typename* oggetto comando.|  
+|[AfxOleCanExitApp](#afxolecanexitapp)|Indicates whether the application can terminate.|  
+|[AfxOleGetMessageFilter](#afxolegetmessagefilter)|Retrieves the application's current message filter.|  
+|[AfxOleGetUserCtrl](#afxolegetuserctrl)|Retrieves the current user-control flag.|  
+|[AfxOleSetUserCtrl](#afxolesetuserctrl)|Sets or clears the user-control flag.|  
+|[AfxOleLockApp](#afxolelockapp)|Increments the framework's global count of the number of active objects in an application.|  
+|[AfxOleLockControl](#afxolelockcontrol)| Locks the class factory of the specified control. |
+|[AfxOleUnlockApp](#afxoleunlockapp)|Decrements the framework's count of the number of active objects in an application.| 
+|[AfxOleUnlockControl](#afxoleunlockcontrol)| Unlocks the class factory of the specified control. |
+|[AfxOleRegisterServerClass](#afxoleregisterserverclass)|Registers a server in the OLE system registry.|  
+|[AfxOleSetEditMenu](#afxoleseteditmenu)|Implements the user interface for the *typename* Object command.|  
 
   
-##  <a name="afxolecanexitapp"></a>AfxOleCanExitApp  
- Indica se l'applicazione può terminare.  
+##  <a name="afxolecanexitapp"></a>  AfxOleCanExitApp  
+ Indicates whether the application can terminate.  
   
 ```   
 BOOL AFXAPI AfxOleCanExitApp(); 
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se l'applicazione può essere chiusa; in caso contrario, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the application can exit; otherwise 0.  
   
-### <a name="remarks"></a>Note  
- Un'applicazione non deve terminare se sono presenti riferimenti a oggetti in attesa. Le funzioni globali `AfxOleLockApp` e `AfxOleUnlockApp` rispettivamente incrementano e decrementano un contatore di riferimenti agli oggetti dell'applicazione. L'applicazione non deve terminare quando questo contatore è diverso da zero. Se il contatore è diverso da zero, quando l'utente sceglie Chiudi dal menu di sistema o Esci dal menu File la finestra principale dell'applicazione viene nascosta (non eliminata definitivamente). Il framework chiama questa funzione **CFrameWnd:: OnClose**.  
+### <a name="remarks"></a>Remarks  
+ An application should not terminate if there are outstanding references to its objects. The global functions `AfxOleLockApp` and `AfxOleUnlockApp` increment and decrement, respectively, a counter of references to the application's objects. The application should not terminate when this counter is nonzero. If the counter is nonzero, the application's main window is hidden (not destroyed) when the user chooses Close from the system menu or Exit from the File menu. The framework calls this function in **CFrameWnd::OnClose**.  
   
-### <a name="example"></a>Esempio  
- [!code-cpp[NVC_MFCAutomation n. 2](../../mfc/codesnippet/cpp/application-control_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCAutomation#2](../../mfc/codesnippet/cpp/application-control_1.cpp)]  
 
-## <a name="requirements"></a>Requisiti  
- **Intestazione**: afxdisp. h 
+## <a name="requirements"></a>Requirements  
+ **Header**: afxdisp.h 
 
-##  <a name="afxolegetmessagefilter"></a>AfxOleGetMessageFilter  
- Recupera il filtro messaggi corrente dell'applicazione.  
+##  <a name="afxolegetmessagefilter"></a>  AfxOleGetMessageFilter  
+ Retrieves the application's current message filter.  
   
 ```   
 COleMessageFilter* AFXAPI AfxOleGetMessageFilter(); 
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Puntatore al filtro messaggi corrente.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the current message filter.  
   
-### <a name="remarks"></a>Note  
- Chiamare questa funzione per accedere all'oggetto derivato da `COleMessageFilter` corrente, in modo analogo a come si utilizza `AfxGetApp` per accedere all'oggetto applicazione corrente.  
+### <a name="remarks"></a>Remarks  
+ Call this function to access the current `COleMessageFilter`-derived object, just as you would call `AfxGetApp` to access the current application object.  
   
-### <a name="example"></a>Esempio  
- [!code-cpp[NVC_MFCAutomation n. 3](../../mfc/codesnippet/cpp/application-control_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCAutomation#3](../../mfc/codesnippet/cpp/application-control_2.cpp)]  
   
- [!code-cpp[NVC_MFCAutomation #4](../../mfc/codesnippet/cpp/application-control_3.cpp)]  
+ [!code-cpp[NVC_MFCAutomation#4](../../mfc/codesnippet/cpp/application-control_3.cpp)]  
 
-### <a name="requirements"></a>Requisiti  
- **Intestazione**: AFXWIN. h 
+### <a name="requirements"></a>Requirements  
+ **Header**: afxwin.h 
 
-##  <a name="afxolegetuserctrl"></a>AfxOleGetUserCtrl  
- Recupera il flag corrente del controllo utente.  
+##  <a name="afxolegetuserctrl"></a>  AfxOleGetUserCtrl  
+ Retrieves the current user-control flag.  
   
 ```   
 BOOL AFXAPI AfxOleGetUserCtrl(); 
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se l'utente controlla l'applicazione; in caso contrario, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the user is in control of the application; otherwise 0.  
   
-### <a name="remarks"></a>Note  
- L'utente controlla l'applicazione quando apre o crea in modo esplicito un nuovo documento. L'utente controlla inoltre l'applicazione se l'applicazione non è stata avviata dalle DLL del sistema OL, in altre parole se l'utente ha avviato l'applicazione con la shell di sistema.  
+### <a name="remarks"></a>Remarks  
+ The user is in control of the application when the user has explicitly opened or created a new document. The user is also in control if the application was not launched by the OLE system DLLs — in other words, if the user launched the application with the system shell.  
 
-### <a name="requirements"></a>Requisiti  
- **Intestazione**: afxdisp. h
+### <a name="requirements"></a>Requirements  
+ **Header**: afxdisp.h
 
-##  <a name="afxolesetuserctrl"></a>AfxOleSetUserCtrl  
- Imposta o Cancella il flag di controllo utente, è illustrato negli argomenti di riferimento per `AfxOleGetUserCtrl`.  
+##  <a name="afxolesetuserctrl"></a>  AfxOleSetUserCtrl  
+ Sets or clears the user-control flag, which is explained in the reference for `AfxOleGetUserCtrl`.  
   
 ```  
 void AFXAPI AfxOleSetUserCtrl(BOOL bUserCtrl); 
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  *bUserCtrl*  
- Specifica se il flag di controllo utente deve essere impostato o cancellato.  
+ Specifies whether the user-control flag is to be set or cleared.  
   
-### <a name="remarks"></a>Note  
- Il framework chiama questa funzione quando l'utente crea o carica un documento, ma non quando un documento viene caricato o creato tramite un'azione indiretta, ad esempio il caricamento di un oggetto incorporato da un'applicazione contenitore.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this function when the user creates or loads a document, but not when a document is loaded or created through an indirect action such as loading an embedded object from a container application.  
   
- Chiamare questa funzione se altre azioni nell'applicazione devono mettere l'utente nel controllo dell'applicazione.  
+ Call this function if other actions in your application should put the user in control of the application.  
 
-### <a name="requirements"></a>Requisiti  
- **Intestazione**: afxdisp. h
+### <a name="requirements"></a>Requirements  
+ **Header**: afxdisp.h
 
-##  <a name="afxolelockapp"></a>AfxOleLockApp  
- Incrementa conteggio globale del framework del numero di oggetti attivi nell'applicazione.  
+##  <a name="afxolelockapp"></a>  AfxOleLockApp  
+ Increments the framework's global count of the number of active objects in the application.  
   
 ```   
 void AFXAPI AfxOleLockApp(); 
 ```  
   
-### <a name="remarks"></a>Note  
- Il framework mantiene un conteggio del numero di oggetti attivo in un'applicazione. Il `AfxOleLockApp` e `AfxOleUnlockApp` funzioni, rispettivamente, incrementa e decrementa il conteggio.  
+### <a name="remarks"></a>Remarks  
+ The framework keeps a count of the number of objects active in an application. The `AfxOleLockApp` and `AfxOleUnlockApp` functions, respectively, increment and decrement this count.  
   
- Quando l'utente tenta di chiudere un'applicazione che dispone di oggetti attivi, un'applicazione per cui il numero di oggetti attivi è diverso da zero, il framework nasconde l'applicazione dalla vista dell'utente anziché completamente all'arresto. Il `AfxOleCanExitApp` funzione indica se l'applicazione può terminare.  
+ When the user attempts to close an application that has active objects — an application for which the count of active objects is nonzero — the framework hides the application from the user's view instead of completely shutting it down. The `AfxOleCanExitApp` function indicates whether the application can terminate.  
   
- Chiamare `AfxOleLockApp` da qualsiasi oggetto che espone le interfacce OLE, se ne fosse indesiderabile per un oggetto di essere eliminate mentre ancora in uso da un'applicazione client. Chiamare anche `AfxOleUnlockApp` nel distruttore di qualsiasi oggetto che chiama `AfxOleLockApp` nel costruttore. Per impostazione predefinita, `COleDocument` (e le classi derivate) automaticamente bloccare e sbloccare l'applicazione.  
+ Call `AfxOleLockApp` from any object that exposes OLE interfaces, if it would be undesirable for that object to be destroyed while still being used by a client application. Also call `AfxOleUnlockApp` in the destructor of any object that calls `AfxOleLockApp` in the constructor. By default, `COleDocument` (and derived classes) automatically lock and unlock the application.  
   
-### <a name="example"></a>Esempio  
- [!code-cpp[NVC_MFCAutomation n. 5](../../mfc/codesnippet/cpp/application-control_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCAutomation#5](../../mfc/codesnippet/cpp/application-control_4.cpp)]  
 
-### <a name="requirements"></a>Requisiti  
- **Intestazione**: afxdisp. h
+### <a name="requirements"></a>Requirements  
+ **Header**: afxdisp.h
 
-##  <a name="afxoleunlockapp"></a>AfxOleUnlockApp  
- Decrementa il conteggio del framework di oggetti attivi nell'applicazione.  
+##  <a name="afxoleunlockapp"></a>  AfxOleUnlockApp  
+ Decrements the framework's count of active objects in the application.  
   
 ```   
 void AFXAPI AfxOleUnlockApp(); 
 ```  
   
-### <a name="remarks"></a>Note  
- Vedere `AfxOleLockApp` per ulteriori informazioni.  
+### <a name="remarks"></a>Remarks  
+ See `AfxOleLockApp` for further information.  
   
- Quando il numero di oggetti attivi raggiunge lo zero, **AfxOleOnReleaseAllObjects** viene chiamato.  
+ When the number of active objects reaches zero, **AfxOleOnReleaseAllObjects** is called.  
   
-### <a name="example"></a>Esempio  
- Per vedere l'esempio [AfxOleLockApp](#afxolelockapp).  
+### <a name="example"></a>Example  
+ See the example for [AfxOleLockApp](#afxolelockapp).  
 
-### <a name="requirements"></a>Requisiti  
- **Intestazione**: afxdisp. h  
+### <a name="requirements"></a>Requirements  
+ **Header**: afxdisp.h  
 
  ## <a name="afxolelockcontrol"></a>AfxOleLockControl
-Blocca la class factory del controllo specificato in modo che i dati creati dinamicamente associati al controllo rimangano in memoria.  
+Locks the class factory of the specified control so that dynamically created data associated with the control remains in memory.  
    
-### <a name="syntax"></a>Sintassi    
+### <a name="syntax"></a>Syntax    
 ```
 BOOL AFXAPI AfxOleLockControl(  REFCLSID clsid  );  
 BOOL AFXAPI AfxOleLockControl( LPCTSTR lpszProgID );  
 ```
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `clsid`  
- ID univoco della classe del controllo.  
+ The unique class ID of the control.  
   
  `lpszProgID`  
- ID univoco del programma del controllo.  
+ The unique program ID of the control.  
    
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se la class factory del controllo è stata bloccata con successo; in caso contrario, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the class factory of the control was successfully locked; otherwise 0.  
    
-### <a name="remarks"></a>Note  
- Ciò può accelerare notevolmente la visualizzazione dei comandi. Ad esempio, una volta creato un controllo in una finestra di dialogo e bloccato il controllo con `AfxOleLockControl`, non è necessario crearlo e interromperne l'esecuzione ogni volta che la finestra di dialogo viene visualizzata o viene eliminata in modo permanente. Se l'utente apre e chiude una finestra di dialogo ripetutamente, il blocco dei controlli può migliorare significativamente le prestazioni. Quando si è pronti per eliminare il controllo in modo permanente, chiamare `AfxOleUnlockControl`.  
+### <a name="remarks"></a>Remarks  
+ This can significantly speed up display of the controls. For example, once you create a control in a dialog box and lock the control with `AfxOleLockControl`, you do not need to create and kill it again every time the dialog is shown or destroyed. If the user opens and closes a dialog box repeatedly, locking your controls can significantly enhance performance. When you are ready to destroy the control, call `AfxOleUnlockControl`.  
    
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
 ```cpp
 // Starts and locks control's (Microsoft Calendar) class factory. 
 // Control will remain in memory for lifetime of
@@ -202,15 +202,15 @@ BOOL AFXAPI AfxOleLockControl( LPCTSTR lpszProgID );
 AfxOleLockControl(_T("MSCAL.Calendar"));
 ```
    
-### <a name="requirements"></a>Requisiti  
- **Intestazione:**<afxwin.h></afxwin.h>  
+### <a name="requirements"></a>Requirements  
+ **Header:** <afxwin.h>  
    
-### <a name="see-also"></a>Vedere anche  
- [Macro e funzioni globali](mfc-macros-and-globals.md)   
+### <a name="see-also"></a>See Also  
+ [Macros and Globals](mfc-macros-and-globals.md)   
  [AfxOleUnlockControl](#afxoleunlockcontrol)
  
-##  <a name="afxoleregisterserverclass"></a>AfxOleRegisterServerClass  
- Questa funzione consente di registrare il server nel Registro di sistema OLE.  
+##  <a name="afxoleregisterserverclass"></a>  AfxOleRegisterServerClass  
+ This function allows you to register your server in the OLE system registry.  
   
 ```   
 BOOL AFXAPI AfxOleRegisterServerClass(
@@ -223,59 +223,59 @@ BOOL AFXAPI AfxOleRegisterServerClass(
     LPCTSTR* rglpszOverwrite = NULL); 
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `clsid`  
- Riferimento all'ID di classe OLE. del server  
+ Reference to the server's OLE class ID.  
   
  `lpszClassName`  
- Puntatore a una stringa contenente il nome della classe di oggetti del server.  
+ Pointer to a string containing the class name of the server's objects.  
   
  *lpszShortTypeName*  
- Puntatore a una stringa contenente il nome breve del tipo di oggetto del server, ad esempio "Grafico".  
+ Pointer to a string containing the short name of the server's object type, such as "Chart."  
   
  *lpszLongTypeName*  
- Puntatore a una stringa contenente il nome lungo del tipo di oggetto del server, ad esempio "Grafico di Microsoft Excel 5.0".  
+ Pointer to a string containing the long name of the server's object type, such as "Microsoft Excel 5.0 Chart."  
   
  `nAppType`  
- Un valore, derivato dal **OLE_APPTYPE** enumerazione che specifica il tipo di applicazione OLE. I valori possibili sono i seguenti:  
+ A value, taken from the **OLE_APPTYPE** enumeration, specifying the type of OLE application. Possible values are the following:  
   
-- `OAT_INPLACE_SERVER`Server con interfaccia utente di server completo.  
+- `OAT_INPLACE_SERVER` Server has full server user-interface.  
   
-- `OAT_SERVER`Il server supporta solo l'incorporamento.  
+- `OAT_SERVER` Server supports only embedding.  
   
-- `OAT_CONTAINER`Contenitore supporta collegamenti a incorporamenti.  
+- `OAT_CONTAINER` Container supports links to embeddings.  
   
-- `OAT_DISPATCH_OBJECT``IDispatch`-oggetto in grado di supportare.  
+- `OAT_DISPATCH_OBJECT` `IDispatch`-capable object.  
   
  `rglpszRegister`  
- Matrice di puntatori a stringhe che rappresentano le chiavi e valori da aggiungere al Registro di sistema OLE se non vengono trovati alcun valore per le chiavi esistenti.  
+ Array of pointers to strings representing the keys and values to be added to the OLE system registry if no existing values for the keys are found.  
   
  `rglpszOverwrite`  
- Matrice di puntatori a stringhe che rappresentano le chiavi e valori da aggiungere al Registro di sistema OLE se il Registro di sistema contiene i valori esistenti per le chiavi specificate.  
+ Array of pointers to strings representing the keys and values to be added to the OLE system registry if the registry contains existing values for the given keys.  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se la classe del server è registrata. in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the server class is successfully registered; otherwise 0.  
   
-### <a name="remarks"></a>Note  
- La maggior parte delle applicazioni possono utilizzare **COleTemplateServer::Register** per registrare i tipi di documento dell'applicazione. Se il formato del Registro di sistema dell'applicazione non rientra al tipico modello, è possibile utilizzare `AfxOleRegisterServerClass` per un maggiore controllo.  
+### <a name="remarks"></a>Remarks  
+ Most applications can use **COleTemplateServer::Register** to register the application's document types. If your application's system-registry format does not fit the typical pattern, you can use `AfxOleRegisterServerClass` for more control.  
   
- Il Registro di sistema è costituito da un set di chiavi e valori. Il `rglpszRegister` e `rglpszOverwrite` gli argomenti sono matrici di puntatori alle stringhe, ognuna costituita da una chiave e un valore separate da un **NULL** carattere ( `'\0'`). Ognuna di queste stringhe può avere parametri sostituibili i cui percorsi sono contrassegnate con le sequenze di caratteri `%1` tramite `%5`.  
+ The registry consists of a set of keys and values. The `rglpszRegister` and `rglpszOverwrite` arguments are arrays of pointers to strings, each consisting of a key and a value separated by a **NULL** character ( `'\0'`). Each of these strings can have replaceable parameters whose places are marked by the character sequences `%1` through `%5`.  
   
- I simboli vengono compilati come indicato di seguito:  
+ The symbols are filled in as follows:  
   
-|Simbolo|Valore|  
+|Symbol|Value|  
 |------------|-----------|  
-|%1|ID di classe, formattato come stringa|  
-|%2|Nome di classe|  
-|%3|Percorso file eseguibile|  
-|%4|Nome breve del tipo|  
-|%5|Nome di tipo Long|  
+|%1|Class ID, formatted as a string|  
+|%2|Class name|  
+|%3|Path to executable file|  
+|%4|Short type name|  
+|%5|Long type name|  
 
-### <a name="requirements"></a>Requisiti  
- **Intestazione**: afxdisp. h
+### <a name="requirements"></a>Requirements  
+ **Header**: afxdisp.h
 
-##  <a name="afxoleseteditmenu"></a>AfxOleSetEditMenu  
- Implementa l'interfaccia utente per il *typename* oggetto comando.  
+##  <a name="afxoleseteditmenu"></a>  AfxOleSetEditMenu  
+ Implements the user interface for the *typename* Object command.  
   
 ```   
 void AFXAPI AfxOleSetEditMenu(
@@ -287,60 +287,60 @@ void AFXAPI AfxOleSetEditMenu(
     UINT nIDConvert = 0); 
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pClient`  
- Un puntatore all'elemento client OLE.  
+ A pointer to the client OLE item.  
   
  `pMenu`  
- Un puntatore all'oggetto menu da aggiornare.  
+ A pointer to the menu object to be updated.  
   
  *iMenuItem*  
- Indice della voce di menu da aggiornare.  
+ The index of the menu item to be updated.  
   
  `nIDVerbMin`  
- L'ID di comando che corrisponde al verbo primario.  
+ The command ID that corresponds to the primary verb.  
   
  *nIDVerbMax*  
- L'ID di comando che corrisponde all'ultimo verbo.  
+ The command ID that corresponds to the last verb.  
   
  *nIDConvert*  
- ID della voce di menu Converti.  
+ ID for the Convert menu item.  
   
-### <a name="remarks"></a>Note  
- Se il server riconosce solo un verbo primario, la voce di menu diventa "verbo *typename* oggetto" e `nIDVerbMin` comando viene inviato quando l'utente sceglie il comando. Se il server riconosce numerosi verbi, la voce di menu diventa quindi " *typename* oggetto" e viene visualizzato un elenco di tutti i verbi di sottomenu quando l'utente sceglie il comando. Quando l'utente sceglie un verbo dal sottomenu `nIDVerbMin` viene inviato se viene selezionato il primo verbo, `nIDVerbMin` + 1 viene inviato se il secondo verbo viene scelto e così via. Il valore predefinito `COleDocument` implementazione gestisce automaticamente questa funzionalità.  
+### <a name="remarks"></a>Remarks  
+ If the server recognizes only a primary verb, the menu item becomes "verb *typename* Object" and the `nIDVerbMin` command is sent when the user chooses the command. If the server recognizes several verbs, then the menu item becomes " *typename* Object" and a submenu listing all the verbs appears when the user chooses the command. When the user chooses a verb from the submenu, `nIDVerbMin` is sent if the first verb is chosen, `nIDVerbMin` + 1 is sent if the second verb is chosen, and so forth. The default `COleDocument` implementation automatically handles this feature.  
   
- È la seguente istruzione nello script di risorsa di applicazione del client (. File RC):  
+ You must have the following statement in your client's application resource script (.RC) file:  
   
- **#include \<afxolecl.rc >**  
+ **#include \<afxolecl.rc>**  
 
-### <a name="requirements"></a>Requisiti  
- **Intestazione**: AFXOLE. h 
+### <a name="requirements"></a>Requirements  
+ **Header**: afxole.h 
 
-## <a name="see-also"></a>Vedere anche  
- [Macro e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 
-## <a name="afxoleunlockcontrol"></a>AfxOleUnlockControl
-Sblocca la class factory del controllo specificato.  
+## <a name="afxoleunlockcontrol"></a> AfxOleUnlockControl
+Unlocks the class factory of the specified control.  
    
-### <a name="syntax"></a>Sintassi  
+### <a name="syntax"></a>Syntax  
   ```
 BOOL AFXAPI AfxOleUnlockControl( REFCLSID clsid );  
 BOOL AFXAPI AfxOleUnlockControl( LPCTSTR lpszProgID );  
 ```
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `clsid`  
- ID univoco della classe del controllo.  
+ The unique class ID of the control.  
   
  `lpszProgID`  
- ID univoco del programma del controllo.  
+ The unique program ID of the control.  
    
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se la class factory del controllo è stata sbloccata; in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the class factory of the control was successfully unlocked; otherwise 0.  
    
-### <a name="remarks"></a>Note  
- Un controllo è bloccato con `AfxOleLockControl`, in modo che i dati creati dinamicamente associati con il controllo rimangono in memoria. Ciò può accelerare notevolmente la visualizzazione del controllo, poiché il controllo non debba essere creato ed eliminato ogni volta che viene visualizzato. Quando si è pronti per eliminare il controllo in modo permanente, chiamare `AfxOleUnlockControl`.  
+### <a name="remarks"></a>Remarks  
+ A control is locked with `AfxOleLockControl`, so that dynamically created data associated with the control remains in memory. This can significantly speed up display of the control because the control need not be created and destroyed every time it is displayed. When you are ready to destroy the control, call `AfxOleUnlockControl`.  
    
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
  ```cpp
 // Unlock control's (Microsoft Calendar Control) class factory.
 
@@ -348,11 +348,11 @@ AfxOleUnlockControl(_T("MSCAL.Calendar"));
 
 ```
    
-### <a name="requirements"></a>Requisiti  
- **Intestazione:**<afxwin.h></afxwin.h>  
+### <a name="requirements"></a>Requirements  
+ **Header:** <afxwin.h>  
    
-### <a name="see-also"></a>Vedere anche  
- [Macro e funzioni globali](mfc-macros-and-globals.md)  
+### <a name="see-also"></a>See Also  
+ [Macros and Globals](mfc-macros-and-globals.md)  
  [AfxOleLockControl](#afxolelockcontrol)
 
 

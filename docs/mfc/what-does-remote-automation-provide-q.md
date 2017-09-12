@@ -1,34 +1,51 @@
 ---
-title: "Cosa fornisce l&#39;automazione remota? | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Automazione remota, DCOM"
+title: What Does Remote Automation Provide? | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Remote Automation, DCOM
 ms.assetid: 269ad218-e164-40ef-9b87-25fcc8ba21de
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Cosa fornisce l&#39;automazione remota?
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 48da6339cea7c8a39d93641fa5c5a59d0a63e207
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-L'automazione remota consente ai programmi di richiamare le implementazioni `IDispatch` su un computer da un altro.  Supporta inoltre altre interfacce richieste da Automazione, in particolare **IEnumVARIANT** per il supporto di raccolta.  Non consente di distribuire qualsiasi altra interfaccia COM \(eccetto **IUnknown**, naturalmente\) e, come automazione normale, contiene il supporto di marshalling solo per i tipi di dati supportati da Automazione.  
+---
+# <a name="what-does-remote-automation-provide"></a>What Does Remote Automation Provide?
+Remote Automation allows programs to invoke `IDispatch` implementations on one machine from another. It also supports other interfaces required by Automation, specifically **IEnumVARIANT** for collection support. It does not provide the ability to distribute any other COM interface (except **IUnknown**, of course) and, like regular Automation, it contains marshaling support only for those data types supported by Automation.  
   
- Questo set di funzionalità consente a un programma di accedere ai metodi e alle proprietà, incluse quelle che restituiscono raccolte o ulteriori oggetti di automazione, di un oggetto in esecuzione su un nodo di rete accessibile.  Se nel computer client è in esecuzione il software adatto, è possibile che il server chiami nuovamente il client, ancora utilizzando le funzionalità di Automazione \(questo funziona solo per client a 32 bit e 64 bit ed è concettualmente simile agli eventi, sebbene non utilizzi lo stesso meccanismo\).  
+ This set of facilities allows a program to access the methods and properties, including those that return collections or further automation objects, of an object running on an accessible network node. If the client machine is also running the appropriate software, it is possible for the server to call back to the client, again using Automation facilities (this works for 32-bit and 64-bit clients only, and is conceptually similar to events, although it does not use the same mechanism).  
   
- Affinché un'applicazione possa essere utilizzata come server Remoto di Automazione, deve essere implementata come un eseguibile, ovvero come "server locale" anziché come "server inproc".  
+ For an application to be operable as a Remote Automation server, it must be implemented as an executable (that is, as a "local server" rather than as an "inproc server").  
   
-## Vedere anche  
- [In quali casi è adatta l'automazione remota?](../mfc/where-does-remote-automation-fit-in-q.md)   
- [Cronologia di DCOM](../mfc/history-of-dcom.md)
+## <a name="see-also"></a>See Also  
+ [Where Does Remote Automation Fit In](where-does-remote-automation-fit-in-q.md)   
+ [History of DCOM](../mfc/history-of-dcom.md)
+

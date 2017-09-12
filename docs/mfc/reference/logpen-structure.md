@@ -1,5 +1,5 @@
 ---
-title: Struttura LOGPEN | Documenti di Microsoft
+title: LOGPEN Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- LOGPEN structure
+- LOGPEN structure [MFC]
 ms.assetid: a89e8690-6b61-4af5-990c-7c82da24f3b0
 caps.latest.revision: 12
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: f3868d2ac6a7b18cfe43f7da8865aed0a3ecf88d
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d87f885848fd7f77b05475de0ab99e1214e474a7
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="logpen-structure"></a>Struttura LOGPEN
-Il `LOGPEN` struttura definisce il tipo, spessore e il colore di un oggetto pen, un oggetto utilizzato per disegnare linee e bordi. Il [CPen::CreatePenIndirect](../../mfc/reference/cpen-class.md#createpenindirect) funzione Usa il `LOGPEN` struttura.  
+# <a name="logpen-structure"></a>LOGPEN Structure
+The `LOGPEN` structure defines the style, width, and color of a pen, a drawing object used to draw lines and borders. The [CPen::CreatePenIndirect](../../mfc/reference/cpen-class.md#createpenindirect) function uses the `LOGPEN` structure.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct tagLOGPEN {  /* lgpn */  
@@ -53,42 +53,42 @@ typedef struct tagLOGPEN {  /* lgpn */
 } LOGPEN;  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  *lopnStyle*  
- Specifica il tipo di penna. Questo membro può essere uno dei valori seguenti:  
+ Specifies the pen type. This member can be one of the following values:  
   
-- **PS_SOLID** crea una penna a tinta unita.  
+- **PS_SOLID** Creates a solid pen.  
   
-- **PS_DASH** crea una penna tratteggiata. (Valido solo quando la larghezza della penna è 1.)  
+- **PS_DASH** Creates a dashed pen. (Valid only when the pen width is 1.)  
   
-- **PS_DOT** crea un oggetto pen punteggiato. (Valido solo quando la larghezza della penna è 1.)  
+- **PS_DOT** Creates a dotted pen. (Valid only when the pen width is 1.)  
   
-- **PS_DASHDOT** crea un oggetto pen con trattini e punti alternati. (Valido solo quando la larghezza della penna è 1.)  
+- **PS_DASHDOT** Creates a pen with alternating dashes and dots. (Valid only when the pen width is 1.)  
   
-- **PS_DASHDOTDOT** crea un oggetto pen con trattini e punti doppio alternati. (Valido solo quando la larghezza della penna è 1.)  
+- **PS_DASHDOTDOT** Creates a pen with alternating dashes and double dots. (Valid only when the pen width is 1.)  
   
-- **PS_NULL** crea un oggetto pen null.  
+- **PS_NULL** Creates a null pen.  
   
-- **PS_INSIDEFRAME** crea un oggetto pen che disegna una linea all'interno del fotogramma di forme chiuse prodotti da funzioni GDI output che specificano un rettangolo di delimitazione (ad esempio, il **ellisse**, **rettangolo**, `RoundRect`, `Pie`, e `Chord` funzioni membro). Quando questo stile viene utilizzato con GDI output funzioni che non si specifica un rettangolo di delimitazione (ad esempio, il `LineTo` funzione membro), l'area di disegno della penna non è limitata da un frame.  
+- **PS_INSIDEFRAME** Creates a pen that draws a line inside the frame of closed shapes produced by GDI output functions that specify a bounding rectangle (for example, the **Ellipse**, **Rectangle**, `RoundRect`, `Pie`, and `Chord` member functions). When this style is used with GDI output functions that do not specify a bounding rectangle (for example, the `LineTo` member function), the drawing area of the pen is not limited by a frame.  
   
-     Se dispone di un oggetto pen il **PS_INSIDEFRAME** stile e il colore che non corrisponde a un colore nella tabella colori logica, la penna disegnata con un colore retinato. Il **PS_SOLID** stile penna non può essere utilizzato per creare un oggetto pen con un colore retinato. Il **PS_INSIDEFRAME** stile è identico a **PS_SOLID** se la larghezza della penna è minore o uguale a 1.  
+     If a pen has the **PS_INSIDEFRAME** style and a color that does not match a color in the logical color table, the pen is drawn with a dithered color. The **PS_SOLID** pen style cannot be used to create a pen with a dithered color. The **PS_INSIDEFRAME** style is identical to **PS_SOLID** if the pen width is less than or equal to 1.  
   
-     Quando il **PS_INSIDEFRAME** stile viene utilizzato con oggetti GDI prodotti dalle funzioni di diverso da **ellisse**, **rettangolo**, e `RoundRect`, la riga non può essere completamente all'interno del frame specificato.  
+     When the **PS_INSIDEFRAME** style is used with GDI objects produced by functions other than **Ellipse**, **Rectangle**, and `RoundRect`, the line may not be completely inside the specified frame.  
   
  *lopnWidth*  
- Specifica la larghezza della penna, in unità logiche. Se il **lopnWidth** membro è 0, la penna è 1 pixel su dispositivi raster indipendentemente dalla modalità di mapping corrente.  
+ Specifies the pen width, in logical units. If the **lopnWidth** member is 0, the pen is 1 pixel wide on raster devices regardless of the current mapping mode.  
   
  *lopnColor*  
- Specifica il colore della penna.  
+ Specifies the pen color.  
   
-## <a name="remarks"></a>Note  
- Il **y** valore di [punto](../../mfc/reference/point-structure1.md) struttura per il **lopnWidth** membro non viene utilizzato.  
+## <a name="remarks"></a>Remarks  
+ The **y** value in the [POINT](../../mfc/reference/point-structure1.md) structure for the **lopnWidth** member is not used.  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** WinGDI. h  
+## <a name="requirements"></a>Requirements  
+ **Header:** wingdi.h  
   
-## <a name="see-also"></a>Vedere anche  
- [Strutture, stili, callback e mappe messaggi](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CPen::CreatePenIndirect](../../mfc/reference/cpen-class.md#createpenindirect)
 
 

@@ -1,42 +1,61 @@
 ---
-title: "Debug di classi di supporto | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.debug"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "debug [MFC], classi per il debug"
-  - "debug [MFC], perdite di memoria"
-  - "debug dei problemi di memoria, MFC"
-  - "assegnazione della memoria dinamica"
-  - "allocazione di memoria, debug dinamico"
-  - "allocazione di memoria, debug dell'allocazione dinamica"
-  - "perdite di memoria, classi di debug MFC"
+title: Debugging Support Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.debug
+dev_langs:
+- C++
+helpviewer_keywords:
+- debugging memory leaks, MFC
+- memory allocation, debugging dynamic
+- debugging [MFC], classes for debugging
+- memory allocation, debugging dynamic allocation
+- dynamic memory allocation
+- debugging [MFC], memory leaks
+- memory leaks, MFC debug classes
 ms.assetid: d79e084a-8326-4251-8700-4efac07c511e
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Debug di classi di supporto
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e37423fd132b87d667952e67c579a191d3253d6c
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-MFC include le classi seguenti per facilitare il debug dei problemi di allocazione dinamica della memoria.  
+---
+# <a name="debugging-support-classes"></a>Debugging Support Classes
+MFC provides the following classes to help you debug dynamic memory allocation problems.  
   
  [CDumpContext](../mfc/reference/cdumpcontext-class.md)  
- Fornisce una destinazione per i dump diagnostici.  
+ Provides a destination for diagnostic dumps.  
   
  [CMemoryState](../mfc/reference/cmemorystate-structure.md)  
- Strutturare che fornisce gli snapshot dell'utilizzo della memoria.  Utilizzata anche per confrontare gli snapshot precedenti e successivi di memoria.  
+ Structure that provides snapshots of memory use. Also used to compare earlier and later memory snapshots.  
   
-## Vedere anche  
- [Cenni preliminari sulle classi](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

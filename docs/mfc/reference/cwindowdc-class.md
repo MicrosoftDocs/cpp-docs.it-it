@@ -1,5 +1,5 @@
 ---
-title: Classe gli oggetti CWindowDC | Documenti di Microsoft
+title: CWindowDC Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,15 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CWindowDC
-- No header/CWindowDC
-- No header/CWindowDC::CWindowDC
-- No header/CWindowDC::m_hWnd
+- AFXWIN/CWindowDC
+- AFXWIN/CWindowDC::CWindowDC
+- AFXWIN/CWindowDC::m_hWnd
 dev_langs:
 - C++
 helpviewer_keywords:
-- device contexts, window
-- screen output classes
-- CWindowDC class
+- CWindowDC [MFC], CWindowDC
+- CWindowDC [MFC], m_hWnd
 ms.assetid: 876a3641-4cde-471c-b0d1-fe58b32af79c
 caps.latest.revision: 22
 author: mikeblome
@@ -38,85 +37,85 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 8a941e1b6f8a398706498ec5d1ce1bfc9156f115
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6910ab7d9692e9392e660e860973ac721e3154b0
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cwindowdc-class"></a>Gli oggetti CWindowDC (classe)
-Derivata da `CDC`.  
+# <a name="cwindowdc-class"></a>CWindowDC Class
+Derived from `CDC`.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CWindowDC : public CDC  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Costruttori pubblici  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CWindowDC::CWindowDC](#cwindowdc)|Costruisce un oggetto `CWindowDC`.|  
+|[CWindowDC::CWindowDC](#cwindowdc)|Constructs a `CWindowDC` object.|  
   
-### <a name="protected-data-members"></a>Membri dati protetti  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CWindowDC::m_hWnd](#m_hwnd)|Il `HWND` a cui `CWindowDC` è collegato.|  
+|[CWindowDC::m_hWnd](#m_hwnd)|The `HWND` to which this `CWindowDC` is attached.|  
   
-## <a name="remarks"></a>Note  
- Chiama la funzione Windows [GetWindowDC](http://msdn.microsoft.com/library/windows/desktop/dd144947\(v=vs.85\).aspx)in fase di costruzione e [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920\(v=vs.85\).aspx) in fase di eliminazione. Ciò significa che un `CWindowDC` oggetto accede all'intera area dello schermo di un [CWnd](../../mfc/reference/cwnd-class.md) (entrambe aree client e).  
+## <a name="remarks"></a>Remarks  
+ Calls the Windows function [GetWindowDC](http://msdn.microsoft.com/library/windows/desktop/dd144947\(v=vs.85\).aspx)at construction time and [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920\(v=vs.85\).aspx) at destruction time. This means that a `CWindowDC` object accesses the entire screen area of a [CWnd](../../mfc/reference/cwnd-class.md) (both client and nonclient areas).  
   
- Per ulteriori informazioni sull'utilizzo di `CWindowDC`, vedere [contesti di dispositivo](../../mfc/device-contexts.md).  
+ For more information on using `CWindowDC`, see [Device Contexts](../../mfc/device-contexts.md).  
   
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CDC](../../mfc/reference/cdc-class.md)  
   
  `CWindowDC`  
   
-## <a name="requirements"></a>Requisiti  
- Intestazione: AFXWIN. h  
+## <a name="requirements"></a>Requirements  
+ Header: afxwin.h  
   
-##  <a name="cwindowdc"></a>CWindowDC::CWindowDC  
- Costruisce un `CWindowDC` oggetto a cui accede l'intera area dello schermo (client e non client) del `CWnd` oggetto a cui puntava `pWnd`.  
+##  <a name="cwindowdc"></a>  CWindowDC::CWindowDC  
+ Constructs a `CWindowDC` object that accesses the entire screen area (both client and nonclient) of the `CWnd` object pointed to by `pWnd`.  
   
 ```  
 explicit CWindowDC(CWnd* pWnd);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- Finestra di cui l'area client avranno accesso all'oggetto contesto di dispositivo.  
+ The window whose client area the device-context object will access.  
   
-### <a name="remarks"></a>Note  
- Il costruttore chiama la funzione di Windows [GetWindowDC](http://msdn.microsoft.com/library/windows/desktop/dd144947).  
+### <a name="remarks"></a>Remarks  
+ The constructor calls the Windows function [GetWindowDC](http://msdn.microsoft.com/library/windows/desktop/dd144947).  
   
- Un'eccezione (di tipo `CResourceException`) viene generata se Windows `GetWindowDC` chiamata ha esito negativo. Un contesto di dispositivo potrebbe non essere disponibile se Windows è già allocato tutti i relativi contesti di periferica disponibile. L'applicazione è in competizione per le cinque comuni contesti di visualizzazione disponibili in qualsiasi momento in Windows.  
+ An exception (of type `CResourceException`) is thrown if the Windows `GetWindowDC` call fails. A device context may not be available if Windows has already allocated all of its available device contexts. Your application competes for the five common display contexts available at any given time under Windows.  
   
-### <a name="example"></a>Esempio  
- [!code-cpp[NVC_MFCDocView&#188;](../../mfc/codesnippet/cpp/cwindowdc-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#188](../../mfc/codesnippet/cpp/cwindowdc-class_1.cpp)]  
   
-##  <a name="m_hwnd"></a>CWindowDC::m_hWnd  
- Il `HWND` di `CWnd` puntatore viene utilizzato per costruire il `CWindowDC` oggetto.  
+##  <a name="m_hwnd"></a>  CWindowDC::m_hWnd  
+ The `HWND` of the `CWnd` pointer is used to construct the `CWindowDC` object.  
   
 ```  
 HWND m_hWnd;  
 ```  
   
-### <a name="remarks"></a>Note  
- `m_hWnd`è una variabile di tipo protetta `HWND`.  
+### <a name="remarks"></a>Remarks  
+ `m_hWnd` is a protected variable of type `HWND`.  
   
-### <a name="example"></a>Esempio  
-  Vedere l'esempio per [CWindowDC::CWindowDC](#cwindowdc).  
+### <a name="example"></a>Example  
+  See the example for [CWindowDC::CWindowDC](#cwindowdc).  
   
-## <a name="see-also"></a>Vedere anche  
- [CDC (classe)](../../mfc/reference/cdc-class.md)   
- [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
- [CDC (classe)](../../mfc/reference/cdc-class.md)
+## <a name="see-also"></a>See Also  
+ [CDC Class](../../mfc/reference/cdc-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CDC Class](../../mfc/reference/cdc-class.md)
 

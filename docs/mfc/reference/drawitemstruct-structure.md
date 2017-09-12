@@ -1,5 +1,5 @@
 ---
-title: Struttura DRAWITEMSTRUCT | Documenti di Microsoft
+title: DRAWITEMSTRUCT Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- DRAWITEMSTRUCT structure
+- DRAWITEMSTRUCT structure [MFC]
 ms.assetid: ba9ef1d4-aebb-45e9-b956-4b81a02e50f7
 caps.latest.revision: 11
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: bd47b12f6401cb6603855fa153fe268bfe68914c
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 65319e8cf34302a37ba030705ec701698abd54bf
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="drawitemstruct-structure"></a>Struttura DRAWITEMSTRUCT
-La struttura `DRAWITEMSTRUCT` fornisce informazioni necessarie alla finestra proprietaria per determinare come disegnare una voce di menu o un controllo creato dal proprietario.  
+# <a name="drawitemstruct-structure"></a>DRAWITEMSTRUCT Structure
+The `DRAWITEMSTRUCT` structure provides information the owner window must have to determine how to paint an owner-drawn control or menu item.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct tagDRAWITEMSTRUCT {  
@@ -59,69 +59,69 @@ typedef struct tagDRAWITEMSTRUCT {
 } DRAWITEMSTRUCT;  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  `CtlType`  
- Tipo di controllo. I valori per i tipi di controllo sono i seguenti:  
+ The control type. The values for control types are as follows:  
   
-- **ODT_BUTTON** Pulsante creato dal proprietario  
+- **ODT_BUTTON** Owner-drawn button  
   
-- **ODT_COMBOBOX** Casella combinata creata dal proprietario  
+- **ODT_COMBOBOX** Owner-drawn combo box  
   
-- **ODT_LISTBOX** Casella di riepilogo creata dal proprietario  
+- **ODT_LISTBOX** Owner-drawn list box  
   
-- **ODT_MENU** Menu creato dal proprietario  
+- **ODT_MENU** Owner-drawn menu  
   
-- **ODT_LISTVIEW** Controllo di visualizzazione elenco  
+- **ODT_LISTVIEW** List view control  
   
-- **ODT_STATIC** Controllo statico creato dal proprietario  
+- **ODT_STATIC** Owner-drawn static control  
   
-- **ODT_TAB** Controllo Struttura a schede  
+- **ODT_TAB** Tab control  
   
  `CtlID`  
- ID di controllo per una casella combinata, una casella di riepilogo o un pulsante. Questo membro non viene usato per un menu.  
+ The control ID for a combo box, list box, or button. This member is not used for a menu.  
   
  `itemID`  
- L'ID della voce di un menu o l'indice dell'elemento in una casella di riepilogo o in una casella combinata. Per una casella di riepilogo o una casella combinata vuota, questo membro visualizza un valore negativo che consente all'applicazione disegnare solo il rettangolo dello stato attivo in corrispondenza delle coordinate specificate dal membro **rcItem** , anche se non esistono elementi nel controllo. In questo modo l'utente può visualizzare se la casella di riepilogo o la casella combinata è in stato attivo per l'input. L'impostazione dei bit nel membro **itemAction** determina se il rettangolo debba essere disegnato come se la casella di riepilogo o la casella combinata avesse lo stato attivo per l'input.  
+ The menu-item ID for a menu or the index of the item in a list box or combo box. For an empty list box or combo box, this member is a negative value, which allows the application to draw only the focus rectangle at the coordinates specified by the **rcItem** member even though there are no items in the control. The user can thus be shown whether the list box or combo box has the input focus. The setting of the bits in the **itemAction** member determines whether the rectangle is to be drawn as though the list box or combo box has input focus.  
   
  `itemAction`  
- Definisce l'azione di disegno necessaria. Può trattarsi di uno o più dei bit seguenti:  
+ Defines the drawing action required. This will be one or more of the following bits:  
   
-- **ODA_DRAWENTIRE** Questo bit viene impostato quando deve essere disegnato l'intero controllo.  
+- **ODA_DRAWENTIRE** This bit is set when the entire control needs to be drawn.  
   
-- **ODA_FOCUS** Questo bit viene impostato quando il controllo acquisisce o perde lo stato attivo per l'input. Il membro **itemState** deve essere controllato per determinare se il controllo ha lo stato attivo.  
+- **ODA_FOCUS** This bit is set when the control gains or loses input focus. The **itemState** member should be checked to determine whether the control has focus.  
   
-- **ODA_SELECT** Questo bit viene impostato quando viene modificato solo lo stato di selezione. Il membro **itemState** deve essere controllato per determinare il nuovo stato di selezione.  
+- **ODA_SELECT** This bit is set when only the selection status has changed. The **itemState** member should be checked to determine the new selection state.  
   
  *itemState*  
- Specifica lo stato di visualizzazione dell'elemento dopo l'esecuzione dell'operazione di disegno corrente. In altre parole, se una voce di menu deve essere visualizzata in grigio, viene impostato il flag di stato **ODS_GRAYED** . I flag di stato sono i seguenti:  
+ Specifies the visual state of the item after the current drawing action takes place. That is, if a menu item is to be dimmed, the state flag **ODS_GRAYED** will be set. The state flags are as follows:  
   
-- **ODS_CHECKED** Questo bit viene impostato se la voce di menu è da controllare. Questo bit viene usato solo in un menu.  
+- **ODS_CHECKED** This bit is set if the menu item is to be checked. This bit is used only in a menu.  
   
-- **ODS_DISABLED** Questo bit viene impostato se l'elemento deve essere disegnato come disabilitato.  
+- **ODS_DISABLED** This bit is set if the item is to be drawn as disabled.  
   
-- **ODS_FOCUS** Questo bit viene impostato se l'elemento è in stato attivo per l'input.  
+- **ODS_FOCUS** This bit is set if the item has input focus.  
   
-- **ODS_GRAYED** Questo bit viene impostato se l'elemento deve essere visualizzato in grigio. Questo bit viene usato solo in un menu.  
+- **ODS_GRAYED** This bit is set if the item is to be dimmed. This bit is used only in a menu.  
   
-- **ODS_SELECTED** Questo bit viene impostato se lo stato dell'elemento è selezionato.  
+- **ODS_SELECTED** This bit is set if the item's status is selected.  
   
-- **ODS_COMBOBOXEDIT** Il disegno viene eseguito nel campo di selezione (controllo di modifica) di una casella combinata creata dal proprietario.  
+- **ODS_COMBOBOXEDIT** The drawing takes place in the selection field (edit control) of an ownerdrawn combo box.  
   
-- **ODS_DEFAULT** L'elemento è l'elemento predefinito.  
+- **ODS_DEFAULT** The item is the default item.  
   
  `hwndItem`  
- Specifica l'handle della finestra per il controllo di pulsanti, caselle di riepilogo e caselle combinate. Specifica l'handle del menu (`HMENU`) che contiene l'elemento per i menu.  
+ Specifies the window handle of the control for combo boxes, list boxes, and buttons. Specifies the handle of the menu (`HMENU`) that contains the item for menus.  
   
  `hDC`  
- Identifica un contesto di dispositivo. Questo contesto di dispositivo deve essere usato durante l'esecuzione di operazioni di disegno del controllo.  
+ Identifies a device context. This device context must be used when performing drawing operations on the control.  
   
  *rcItem*  
- Rettangolo nel contesto di dispositivo specificato dal membro `hDC` che definisce i limiti del controllo da disegnare. Windows ritaglia automaticamente qualsiasi elemento disegnato dal proprietario nel contesto di dispositivo per pulsanti, caselle di riepilogo e caselle combinate, ma non ritaglia le voci di menu. Quando si disegnano le voci di menu, il proprietario non deve disegnare al di fuori dei limiti del rettangolo definito dal membro **rcItem** .  
+ A rectangle in the device context specified by the `hDC` member that defines the boundaries of the control to be drawn. Windows automatically clips anything the owner draws in the device context for combo boxes, list boxes, and buttons, but it does not clip menu items. When drawing menu items, the owner must not draw outside the boundaries of the rectangle defined by the **rcItem** member.  
   
  `itemData`  
- Per una casella combinata o una casella di riepilogo, questo membro contiene il valore passato alla casella di riepilogo per uno degli elementi seguenti:  
+ For a combo box or list box, this member contains the value that was passed to the list box by one of the following:  
   
-- [CComboBox:: AddString](../../mfc/reference/ccombobox-class.md#addstring)  
+- [CComboBox::AddString](../../mfc/reference/ccombobox-class.md#addstring)  
   
 - [CComboBox::InsertString](../../mfc/reference/ccombobox-class.md#insertstring)  
   
@@ -129,22 +129,22 @@ typedef struct tagDRAWITEMSTRUCT {
   
 - [CListBox::InsertString](../../mfc/reference/clistbox-class.md#insertstring)  
   
- Per un menu, questo membro contiene il valore passato al menu da uno degli elementi seguenti:  
+ For a menu, this member contains the value that was passed to the menu by one of the following:  
   
-- [CMenu:: AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu)  
+- [CMenu::AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu)  
   
-- [CMenu:: InsertMenu](../../mfc/reference/cmenu-class.md#insertmenu)  
+- [CMenu::InsertMenu](../../mfc/reference/cmenu-class.md#insertmenu)  
   
 - [CMenu::ModifyMenu](../../mfc/reference/cmenu-class.md#modifymenu)  
   
-## <a name="remarks"></a>Note  
- La finestra proprietaria della voce di menu o del controllo creato dal proprietario riceve un puntatore alla struttura come parametro `lParam` del messaggio `WM_DRAWITEM` .  
+## <a name="remarks"></a>Remarks  
+ The owner window of the owner-drawn control or menu item receives a pointer to this structure as the `lParam` parameter of the `WM_DRAWITEM` message.  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** winuser.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** winuser.h  
   
-## <a name="see-also"></a>Vedere anche  
- [Strutture, stili, callback e mappe messaggi](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CWnd::OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem)
 
 

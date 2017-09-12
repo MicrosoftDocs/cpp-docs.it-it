@@ -1,36 +1,55 @@
 ---
-title: "Tasti di scelta rapida globali | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tasti di scelta [C++], tasti di scelta"
-  - "CHotKeyCtrl (classe), tasti di scelta rapida globali"
-  - "tasti di scelta rapida globali"
-  - "tasti di scelta rapida [C++], tasti di scelta"
+title: Global Hot Keys | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- keyboard shortcuts [MFC], hot keys
+- CHotKeyCtrl class [MFC], global hot keys
+- access keys [MFC], hot keys
+- global hot keys [MFC]
 ms.assetid: e0b95d14-c571-4c9a-9cd1-e7fc1f0e278d
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Tasti di scelta rapida globali
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f6c5a5f8a3a13b0d75d7d20c8d3ce20c564880fc
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Un tasto di scelta globale viene associato a una finestra specifica di nonchild.  Consente all'utente di attivare la finestra da qualsiasi parte del sistema.  Un'applicazione impostare un tasto di scelta globale per una particolare finestra inviando il messaggio di [WM\_SETHOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646284) a tale finestra.  Ad esempio, se `m_HotKeyCtrl` è l'oggetto di [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md) e `pMainWnd` è un puntatore alla finestra venga attivato quando il tasto di scelta viene raggiunto, è possibile utilizzare il codice seguente per associare il tasto di scelta specificato nel controllo con la finestra indicata da `pMainWnd`.  
+---
+# <a name="global-hot-keys"></a>Global Hot Keys
+A global hot key is associated with a particular nonchild window. It allows the user to activate the window from any part of the system. An application sets a global hot key for a particular window by sending the [WM_SETHOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646284) message to that window. For instance, if `m_HotKeyCtrl` is the [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md) object and `pMainWnd` is a pointer to the window to be activated when the hot key is pressed, you could use the following code to associate the hot key specified in the control with the window pointed to by `pMainWnd`.  
   
- [!code-cpp[NVC_MFCControlLadenDialog#18](../mfc/codesnippet/CPP/global-hot-keys_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#18](../mfc/codesnippet/cpp/global-hot-keys_1.cpp)]  
   
- Ogni volta che si preme un tasto di scelta globale, la finestra specificata riceve un messaggio di [WM\_SYSCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646360) che specifica **SC\_HOTKEY** come tipo di comando.  Questo messaggio viene attivata la finestra che lo riceva.  Poiché questo messaggio non include alcuna informazione su chiave esatta premuto, utilizzando questo metodo non consente la distinzione tra i tasti di scelta diversi che possono essere associati alla stessa finestra.  Il tasto di scelta rimane valido fino all'applicazione che ha inviato le uscite di **WM\_SETHOTKEY**.  
+ Whenever the user presses a global hot key, the window specified receives a [WM_SYSCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646360) message that specifies **SC_HOTKEY** as the type of the command. This message also activates the window that receives it. Because this message does not include any information on the exact key that was pressed, using this method does not allow distinguishing between different hot keys that may be attached to the same window. The hot key remains valid until the application that sent **WM_SETHOTKEY** exits.  
   
-## Vedere anche  
- [Utilizzo di CHotKeyCtrl](../mfc/using-chotkeyctrl.md)   
- [Controlli](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CHotKeyCtrl](../mfc/using-chotkeyctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

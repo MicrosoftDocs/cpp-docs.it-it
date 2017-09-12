@@ -1,5 +1,5 @@
 ---
-title: CFont (Class) | Documenti di Microsoft
+title: CFont Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -21,9 +21,13 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CFont class
-- GDI, font classes
-- fonts, MFC classes
+- CFont [MFC], CFont
+- CFont [MFC], CreateFont
+- CFont [MFC], CreateFontIndirect
+- CFont [MFC], CreatePointFont
+- CFont [MFC], CreatePointFontIndirect
+- CFont [MFC], FromHandle
+- CFont [MFC], GetLogFont
 ms.assetid: 3fad6bfe-d6ce-4ab9-967a-5ce0aa102800
 caps.latest.revision: 23
 author: mikeblome
@@ -43,79 +47,79 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: cc7ecfb850bf24013acdb55075eeb3d64d4994ee
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 22898396daea9daa2f1d06d326a9727364b01302
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cfont-class"></a>CFont (Class)
-Incapsula un tipo di carattere GDI (Graphics Device Interface) di Windows e fornisce funzioni membro per la modifica del tipo di carattere.  
+# <a name="cfont-class"></a>CFont Class
+Encapsulates a Windows graphics device interface (GDI) font and provides member functions for manipulating the font.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CFont : public CGdiObject  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Costruttori pubblici  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CFont::CFont](#cfont)|Costruisce un oggetto `CFont`.|  
+|[CFont::CFont](#cfont)|Constructs a `CFont` object.|  
   
-### <a name="public-methods"></a>Metodi pubblici  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CFont::](#createfont)|Inizializza un `CFont` con le caratteristiche specificate.|  
-|[CFont:: CreateFontIndirect](#createfontindirect)|Inizializza un `CFont` oggetto con le caratteristiche di base in un `LOGFONT` struttura.|  
-|[Cfont](#createpointfont)|Inizializza un `CFont` con l'altezza specificata, espresso in decimi di un punto e tipo di carattere.|  
-|[CFont::CreatePointFontIndirect](#createpointfontindirect)|Uguale a `CreateFontIndirect` ad eccezione del fatto che l'altezza del carattere viene misurata in decimi di un punto anziché unità logiche.|  
-|[CFont::FromHandle](#fromhandle)|Restituisce un puntatore a un `CFont` oggetto quando viene specificato un Windows **HFONT**.|  
-|[CFont::GetLogFont](#getlogfont)|Riempie una `LOGFONT` con informazioni sul tipo di carattere logica collegata la `CFont` oggetto.|  
+|[CFont::CreateFont](#createfont)|Initializes a `CFont` with the specified characteristics.|  
+|[CFont::CreateFontIndirect](#createfontindirect)|Initializes a `CFont` object with the characteristics given in a `LOGFONT` structure.|  
+|[CFont::CreatePointFont](#createpointfont)|Initializes a `CFont` with the specified height, measured in tenths of a point, and typeface.|  
+|[CFont::CreatePointFontIndirect](#createpointfontindirect)|Same as `CreateFontIndirect` except that the font height is measured in tenths of a point rather than logical units.|  
+|[CFont::FromHandle](#fromhandle)|Returns a pointer to a `CFont` object when given a Windows **HFONT**.|  
+|[CFont::GetLogFont](#getlogfont)|Fills a `LOGFONT` with information about the logical font attached to the `CFont` object.|  
   
-### <a name="public-operators"></a>Operatori pubblici  
+### <a name="public-operators"></a>Public Operators  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[HFONT CFont::operator](#operator_hfont)|Restituisce l'handle del tipo di carattere GDI di Windows è collegata la `CFont` oggetto.|  
+|[CFont::operator HFONT](#operator_hfont)|Returns the Windows GDI font handle attached to the `CFont` object.|  
   
-## <a name="remarks"></a>Note  
- Per utilizzare un `CFont` dell'oggetto, creare un `CFont` dell'oggetto e connettersi con un tipo di carattere Windows [CreateFont](#createfont), [CreateFontIndirect](#createfontindirect), [CreatePointFont](#createpointfont), o [CreatePointFontIndirect](#createpointfontindirect)e quindi utilizzare le funzioni membro dell'oggetto per modificare il tipo di carattere.  
+## <a name="remarks"></a>Remarks  
+ To use a `CFont` object, construct a `CFont` object and attach a Windows font to it with [CreateFont](#createfont), [CreateFontIndirect](#createfontindirect), [CreatePointFont](#createpointfont), or [CreatePointFontIndirect](#createpointfontindirect), and then use the object's member functions to manipulate the font.  
   
- Il `CreatePointFont` e `CreatePointFontIndirect` le funzioni sono spesso più facile da usare rispetto al `CreateFont` o `CreateFontIndirect` poiché avviene la conversione per l'altezza del tipo di carattere da un punto di dimensioni in unità logiche automaticamente.  
+ The `CreatePointFont` and `CreatePointFontIndirect` functions are often easier to use than `CreateFont` or `CreateFontIndirect` since they do the conversion for the height of the font from a point size to logical units automatically.  
   
- Per ulteriori informazioni su `CFont`, vedere [oggetti grafici](../../mfc/graphic-objects.md).  
+ For more information on `CFont`, see [Graphic Objects](../../mfc/graphic-objects.md).  
   
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CGdiObject](../../mfc/reference/cgdiobject-class.md)  
   
  `CFont`  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="cfont"></a>CFont::CFont  
- Costruisce un oggetto `CFont`.  
+##  <a name="cfont"></a>  CFont::CFont  
+ Constructs a `CFont` object.  
   
 ```  
 CFont();
 ```  
   
-### <a name="remarks"></a>Note  
- L'oggetto risultante deve essere inizializzato con `CreateFont`, `CreateFontIndirect`, `CreatePointFont`, o `CreatePointFontIndirect` prima che possa essere utilizzato.  
+### <a name="remarks"></a>Remarks  
+ The resulting object must be initialized with `CreateFont`, `CreateFontIndirect`, `CreatePointFont`, or `CreatePointFontIndirect` before it can be used.  
   
-### <a name="example"></a>Esempio  
- [!code-cpp[NVC_MFCDocView&#70;](../../mfc/codesnippet/cpp/cfont-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#70](../../mfc/codesnippet/cpp/cfont-class_1.cpp)]  
   
-##  <a name="createfont"></a>CFont::  
- Inizializza un `CFont` oggetto con le caratteristiche specificate.  
+##  <a name="createfont"></a>  CFont::CreateFont  
+ Initializes a `CFont` object with the specified characteristics.  
   
 ```  
 BOOL CreateFont(
@@ -135,100 +139,100 @@ BOOL CreateFont(
     LPCTSTR lpszFacename);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `nHeight`  
- Specifica l'altezza desiderata (in unità logiche) del tipo di carattere. Vedere il `lfHeight` membro del [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)struttura nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] per una descrizione. Il valore assoluto di `nHeight` non deve superare 16.384 unità dispositivo dopo la conversione. Per tutti i confronti di altezza, il mapper del tipo di carattere cerca il carattere più grande che non superi la dimensione richiesta o il tipo di carattere più piccolo se tutti i tipi di carattere supera le dimensioni richieste.  
+ Specifies the desired height (in logical units) of the font. See the `lfHeight` member of the [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)structure in the Windows SDK for a description. The absolute value of `nHeight` must not exceed 16,384 device units after it is converted. For all height comparisons, the font mapper looks for the largest font that does not exceed the requested size or the smallest font if all the fonts exceed the requested size.  
   
  `nWidth`  
- Specifica lo spessore medio (in unità logiche) di caratteri nel tipo di carattere. Se `nWidth` è 0, le proporzioni del dispositivo verrà confrontata con le proporzioni di digitalizzazione dei tipi di carattere disponibili per trovare la corrispondenza più vicina, determinato dal valore assoluto della differenza.  
+ Specifies the average width (in logical units) of characters in the font. If `nWidth` is 0, the aspect ratio of the device will be matched against the digitization aspect ratio of the available fonts to find the closest match, which is determined by the absolute value of the difference.  
   
  `nEscapement`  
- Specifica l'angolo (in unità di 0,1 gradi) tra l'asse x della superficie di visualizzazione e il vettore di rotazione. Il vettore di rotazione è la riga e le origini dei caratteri e il cognome in una riga. L'angolo viene misurato in senso antiorario dall'asse x. Vedere il `lfEscapement` membro il `LOGFONT` struttura nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] per ulteriori informazioni.  
+ Specifies the angle (in 0.1-degree units) between the escapement vector and the x-axis of the display surface. The escapement vector is the line through the origins of the first and last characters on a line. The angle is measured counterclockwise from the x-axis. See the `lfEscapement` member in the `LOGFONT` structure in the Windows SDK for more information.  
   
  `nOrientation`  
- Specifica l'angolo (in unità di 0,1 gradi) tra la linea di base di un carattere e l'asse x. L'angolo viene misurato in senso antiorario dall'asse x per i sistemi di coordinate in cui sull'asse y è rivolta verso il basso e in senso orario dall'asse x per i sistemi di coordinate in cui è la direzione dell'asse y.  
+ Specifies the angle (in 0.1-degree units) between the baseline of a character and the x-axis. The angle is measured counterclockwise from the x-axis for coordinate systems in which the y-direction is down and clockwise from the x-axis for coordinate systems in which the y-direction is up.  
   
  `nWeight`  
- Specifica lo spessore del carattere (in pixel finale per 1000). Vedere il `lfWeight` membro il `LOGFONT` struttura nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] per ulteriori informazioni. I valori descritti sono approssimati. l'aspetto effettivo dipende il tipo di carattere. Alcuni tipi di carattere è disponibile solo `FW_NORMAL`, `FW_REGULAR`, e `FW_BOLD` pesi. Se `FW_DONTCARE` è specificato, viene utilizzato un peso predefinito.  
+ Specifies the font weight (in inked pixels per 1000). See the `lfWeight` member in the `LOGFONT` structure in the Windows SDK for more information. The described values are approximate; the actual appearance depends on the typeface. Some fonts have only `FW_NORMAL`, `FW_REGULAR`, and `FW_BOLD` weights. If `FW_DONTCARE` is specified, a default weight is used.  
   
  `bItalic`  
- Specifica se il tipo di carattere corsivo.  
+ Specifies whether the font is italic.  
   
  `bUnderline`  
- Specifica se il tipo di carattere è sottolineato.  
+ Specifies whether the font is underlined.  
   
  `cStrikeOut`  
- Specifica se i caratteri nel tipo di carattere sono barrati. Specifica un tipo di carattere barrato, se impostato su un valore diverso da zero.  
+ Specifies whether characters in the font are struck out. Specifies a strikeout font if set to a nonzero value.  
   
  `nCharSet`  
- Specifica setSee carattere del tipo di carattere di `lfCharSet` membro il `LOGFONT` struttura nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] per un elenco di valori.  
+ Specifies the font's character setSee the `lfCharSet` member in the `LOGFONT` structure in the Windows SDK for a list of values.  
   
- Il set di caratteri OEM è dipendente dal sistema.  
+ The OEM character set is system-dependent.  
   
- Tipi di carattere con altri set di caratteri può esistere nel sistema. Un'applicazione che utilizza un tipo di carattere con un set di caratteri sconosciuto non deve tentare di convertire o l'interpretazione di stringhe che devono essere eseguito con tale carattere. Al contrario, le stringhe devono essere passate direttamente al driver di dispositivo di output.  
+ Fonts with other character sets may exist in the system. An application that uses a font with an unknown character set must not attempt to translate or interpret strings that are to be rendered with that font. Instead, the strings should be passed directly to the output device driver.  
   
- Il mapper del tipo di carattere non utilizza il `DEFAULT_CHARSET` valore. Un'applicazione può utilizzare questo valore per consentire il nome e la dimensione del tipo di carattere per descrivere il tipo di carattere logica. Se un tipo di carattere con il nome specificato non esiste, può sostituire un tipo di carattere da qualsiasi set di caratteri di tipo di carattere specificata. Per evitare risultati imprevisti, le applicazioni devono utilizzare il `DEFAULT_CHARSET` valore con cautela.  
+ The font mapper does not use the `DEFAULT_CHARSET` value. An application can use this value to allow the name and size of a font to fully describe the logical font. If a font with the specified name does not exist, a font from any character set can be substituted for the specified font. To avoid unexpected results, applications should use the `DEFAULT_CHARSET` value sparingly.  
   
  `nOutPrecision`  
- Specifica la precisione di output desiderato. La precisione dell'output definisce in quale misura l'output deve corrispondere il tipo di carattere richiesto altezza, larghezza, orientamento, angolo di rotazione e passo. Vedere il `lfOutPrecision` membro il `LOGFONT` struttura nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] per un elenco di valori e altre informazioni.  
+ Specifies the desired output precision. The output precision defines how closely the output must match the requested font's height, width, character orientation, escapement, and pitch. See the `lfOutPrecision` member in the `LOGFONT` structure in the Windows SDK for a list of values and more information.  
   
  `nClipPrecision`  
- Specifica la precisione di visualizzazione desiderato. La precisione del ritaglio definisce come ritagliare i caratteri che sono parzialmente all'esterno dell'area di ritaglio. Vedere il `lfClipPrecision` membro il `LOGFONT` struttura nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] per un elenco di valori.  
+ Specifies the desired clipping precision. The clipping precision defines how to clip characters that are partially outside the clipping region. See the `lfClipPrecision` member in the `LOGFONT` structure in the Windows SDK for a list of values.  
   
- Per utilizzare un tipo di carattere sola lettura, è necessario specificare un'applicazione `CLIP_ENCAPSULATE`.  
+ To use an embedded read-only font, an application must specify `CLIP_ENCAPSULATE`.  
   
- Per ottenere una rotazione coerenza del dispositivo TrueType e tipi di carattere vettoriali, un'applicazione può utilizzare l'operatore OR per combinare il `CLIP_LH_ANGLES` valore con qualsiasi altra `nClipPrecision` valori. Se il `CLIP_LH_ANGLES` bit è impostato, la rotazione per tutti i caratteri varia a seconda che l'orientamento del sistema di coordinate da sinistra o destra. (Per ulteriori informazioni sull'orientamento dei sistemi di coordinate, vedere la descrizione del `nOrientation` parametro.) Se `CLIP_LH_ANGLES` non è impostata, i caratteri dispositivo sempre Ruota in senso antiorario, ma la rotazione di altri tipi di carattere dipende l'orientamento del sistema di coordinate.  
+ To achieve consistent rotation of device, TrueType, and vector fonts, an application can use the OR operator to combine the `CLIP_LH_ANGLES` value with any of the other `nClipPrecision` values. If the `CLIP_LH_ANGLES` bit is set, the rotation for all fonts depends on whether the orientation of the coordinate system is left-handed or right-handed. (For more information about the orientation of coordinate systems, see the description of the `nOrientation` parameter.) If `CLIP_LH_ANGLES` is not set, device fonts always rotate counterclockwise, but the rotation of other fonts is dependent on the orientation of the coordinate system.  
   
  `nQuality`  
- Specifica la qualità di output del tipo di carattere, che definisce come il GDI deve cercare di associare gli attributi di tipo di carattere logica a quelli di un tipo di carattere fisico effettivo. Vedere il `lfQuality` membro il `LOGFONT` struttura nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] per un elenco di valori.  
+ Specifies the font's output quality, which defines how carefully the GDI must attempt to match the logical-font attributes to those of an actual physical font. See the `lfQuality` member in the `LOGFONT` structure in the Windows SDK for a list of values.  
   
  `nPitchAndFamily`  
- Specifica il tono e la famiglia del tipo di carattere. Vedere il `lfPitchAndFamily` membro il `LOGFONT` struttura nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] per un elenco di valori e altre informazioni.  
+ Specifies the pitch and family of the font. See the `lfPitchAndFamily` member in the `LOGFONT` structure in the Windows SDK for a list of values and more information.  
   
  `lpszFacename`  
- Oggetto `CString` o puntatore a una stringa con terminazione null che specifica il nome del tipo di carattere. La lunghezza di questa stringa non deve superare i 30 caratteri. Windows [EnumFontFamilies](http://msdn.microsoft.com/library/windows/desktop/dd162619) funzione può essere utilizzata per enumerare tutti i tipi di carattere attualmente disponibili. Se `lpszFacename` è `NULL`, GDI utilizza un carattere tipografico indipendenti dal dispositivo.  
+ A `CString` or pointer to a null-terminated string that specifies the typeface name of the font. The length of this string must not exceed 30 characters. The Windows [EnumFontFamilies](http://msdn.microsoft.com/library/windows/desktop/dd162619) function can be used to enumerate all currently available fonts. If `lpszFacename` is `NULL`, the GDI uses a device-independent typeface.  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se ha esito positivo; in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Note  
- Successivamente è possibile selezionare il tipo di carattere del tipo di carattere per qualsiasi contesto di dispositivo.  
+### <a name="remarks"></a>Remarks  
+ The font can subsequently be selected as the font for any device context.  
   
- Il `CreateFont` funzione non viene creato un nuovo tipo di carattere GDI di Windows. Semplicemente seleziona la corrispondenza più vicina dai tipi di carattere fisici disponibile per il GDI.  
+ The `CreateFont` function does not create a new Windows GDI font. It merely selects the closest match from the physical fonts available to the GDI.  
   
- Le applicazioni possono utilizzare le impostazioni predefinite per la maggior parte dei parametri durante la creazione di un tipo di carattere logica. I parametri che devono sempre avere valori specifici sono `nHeight` e `lpszFacename`. Se `nHeight` e `lpszFacename` non sono impostate dall'applicazione, il tipo di carattere logica creata è dipendente dal dispositivo.  
+ Applications can use the default settings for most parameters when creating a logical font. The parameters that should always be given specific values are `nHeight` and `lpszFacename`. If `nHeight` and `lpszFacename` are not set by the application, the logical font that is created is device-dependent.  
   
- Una volta terminato con il `CFont` oggetto creato tramite il `CreateFont` funzione, utilizzare `CDC::SelectObject` per selezionare il tipo di carattere nel contesto di dispositivo, quindi eliminare il `CFont` oggetto che non è più necessario.  
+ When you finish with the `CFont` object created by the `CreateFont` function, use `CDC::SelectObject` to select a different font into the device context, then delete the `CFont` object that is no longer needed.  
   
-### <a name="example"></a>Esempio  
- [!code-cpp[NVC_MFCDocView&#71;](../../mfc/codesnippet/cpp/cfont-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#71](../../mfc/codesnippet/cpp/cfont-class_2.cpp)]  
   
-##  <a name="createfontindirect"></a>CFont:: CreateFontIndirect  
- Inizializza un `CFont` oggetto con le caratteristiche di base in un [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)struttura.  
+##  <a name="createfontindirect"></a>  CFont::CreateFontIndirect  
+ Initializes a `CFont` object with the characteristics given in a [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)structure.  
   
 ```  
 BOOL CreateFontIndirect(const LOGFONT* lpLogFont);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `lpLogFont`  
- Punta a un `LOGFONT` struttura che definisce le caratteristiche del tipo di carattere logica.  
+ Points to a `LOGFONT` structure that defines the characteristics of the logical font.  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se ha esito positivo; in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Note  
- Successivamente è possibile selezionare il tipo di carattere come tipo di carattere corrente per qualsiasi dispositivo.  
+### <a name="remarks"></a>Remarks  
+ The font can subsequently be selected as the current font for any device.  
   
- Questo tipo di carattere ha le caratteristiche specificate nella [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struttura. Quando viene selezionato il tipo di carattere utilizzando il [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) funzione membro, il mapper del tipo di carattere GDI crea una corrispondenza tra il tipo di carattere logica con un tipo di carattere fisico esistente. Il mapper del tipo di carattere non riesce a trovare una corrispondenza esatta per il tipo di carattere logica, fornisce un tipo di carattere alternativo le cui caratteristiche corrispondono poiché molte delle caratteristiche richieste possibili.  
+ This font has the characteristics specified in the [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) structure. When the font is selected by using the [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) member function, the GDI font mapper attempts to match the logical font with an existing physical font. If the font mapper fails to find an exact match for the logical font, it provides an alternative font whose characteristics match as many of the requested characteristics as possible.  
   
- Quando non è più necessario il `CFont` oggetto creato tramite il `CreateFontIndirect` funzione, utilizzare `CDC::SelectObject` per selezionare il tipo di carattere nel contesto di dispositivo, quindi eliminare il `CFont` oggetto che non è più necessario.  
+ When you no longer need the `CFont` object created by the `CreateFontIndirect` function, use `CDC::SelectObject` to select a different font into the device context, then delete the `CFont` object that is no longer needed.  
   
-### <a name="example"></a>Esempio  
- [!code-cpp[NVC_MFCDocView&#72;](../../mfc/codesnippet/cpp/cfont-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#72](../../mfc/codesnippet/cpp/cfont-class_3.cpp)]  
   
-##  <a name="createpointfont"></a>Cfont  
- Questa funzione fornisce un modo semplice per creare un tipo di carattere di un tipo di carattere specificato e la dimensione.  
+##  <a name="createpointfont"></a>  CFont::CreatePointFont  
+ This function provides a simple way to create a font of a specified typeface and point size.  
   
 ```  
 BOOL CreatePointFont(
@@ -237,29 +241,29 @@ BOOL CreatePointFont(
     CDC* pDC = NULL);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `nPointSize`  
- Altezza del carattere in decimi di un punto di richiesta. (Ad esempio, passare 120 per richiedere un tipo di carattere a 12 punti).  
+ Requested font height in tenths of a point. (For instance, pass 120 to request a 12-point font.)  
   
  `lpszFaceName`  
- Oggetto `CString` o puntatore a una stringa con terminazione null che specifica il nome del tipo di carattere. La lunghezza di questa stringa non deve superare i 30 caratteri. Windows **EnumFontFamilies** funzione può essere utilizzata per enumerare tutti i tipi di carattere attualmente disponibili. Se `lpszFaceName` è **NULL**, GDI utilizza un carattere tipografico indipendenti dal dispositivo.  
+ A `CString` or pointer to a null-terminated string that specifies the typeface name of the font. The length of this string must not exceed 30 characters. The Windows **EnumFontFamilies** function can be used to enumerate all currently available fonts. If `lpszFaceName` is **NULL**, the GDI uses a device-independent typeface.  
   
  `pDC`  
- Puntatore al [CDC](../../mfc/reference/cdc-class.md) oggetto da utilizzare per convertire l'altezza in `nPointSize` alle unità logiche. Se **NULL**, viene utilizzato un contesto di dispositivo dello schermo per la conversione.  
+ Pointer to the [CDC](../../mfc/reference/cdc-class.md) object to be used to convert the height in `nPointSize` to logical units. If **NULL**, a screen device context is used for the conversion.  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se ha esito positivo, in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful, otherwise 0.  
   
-### <a name="remarks"></a>Note  
- Converte automaticamente l'altezza in `nPointSize` alle unità logiche utilizzando il `CDC` oggetto a cui puntava `pDC`.  
+### <a name="remarks"></a>Remarks  
+ It automatically converts the height in `nPointSize` to logical units using the `CDC` object pointed to by `pDC`.  
   
- Una volta terminato con il `CFont` oggetto creato tramite il `CreatePointFont` funzione, selezionare innanzitutto il tipo di carattere fuori contesto di dispositivo, quindi eliminare il `CFont` oggetto.  
+ When you finish with the `CFont` object created by the `CreatePointFont` function, first select the font out of the device context, then delete the `CFont` object.  
   
-### <a name="example"></a>Esempio  
- [!code-cpp[NVC_MFCDocView&#73;](../../mfc/codesnippet/cpp/cfont-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#73](../../mfc/codesnippet/cpp/cfont-class_4.cpp)]  
   
-##  <a name="createpointfontindirect"></a>CFont::CreatePointFontIndirect  
- Questa funzione equivale a [CreateFontIndirect](#createfontindirect) ad eccezione del fatto che il **lfHeight** membro del `LOGFONT` viene interpretato in decimi di un punto piuttosto che come dispositivo di unità.  
+##  <a name="createpointfontindirect"></a>  CFont::CreatePointFontIndirect  
+ This function is the same as [CreateFontIndirect](#createfontindirect) except that the **lfHeight** member of the `LOGFONT` is interpreted in tenths of a point rather than device units.  
   
 ```  
 BOOL CreatePointFontIndirect(
@@ -267,83 +271,83 @@ BOOL CreatePointFontIndirect(
     CDC* pDC = NULL);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `lpLogFont`  
- Punta a un [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struttura che definisce le caratteristiche del tipo di carattere logica. Il **lfHeight** membro del `LOGFONT` struttura viene misurata in decimi di un punto anziché unità logiche. (Ad esempio, impostare **lfHeight** su 120 per richiedere un tipo di carattere a 12 punti.)  
+ Points to a [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) structure that defines the characteristics of the logical font. The **lfHeight** member of the `LOGFONT` structure is measured in tenths of a point rather than logical units. (For instance, set **lfHeight** to 120 to request a 12-point font.)  
   
  `pDC`  
- Puntatore al [CDC](../../mfc/reference/cdc-class.md) oggetto da utilizzare per convertire l'altezza in **lfHeight** alle unità logiche. Se **NULL**, viene utilizzato un contesto di dispositivo dello schermo per la conversione.  
+ Pointer to the [CDC](../../mfc/reference/cdc-class.md) object to be used to convert the height in **lfHeight** to logical units. If **NULL**, a screen device context is used for the conversion.  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se ha esito positivo, in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful, otherwise 0.  
   
-### <a name="remarks"></a>Note  
- Questa funzione converte automaticamente l'altezza in **lfHeight** alle unità logiche utilizzando il `CDC` oggetto a cui puntava `pDC` prima di passare il `LOGFONT` struttura a Windows.  
+### <a name="remarks"></a>Remarks  
+ This function automatically converts the height in **lfHeight** to logical units using the `CDC` object pointed to by `pDC` before passing the `LOGFONT` structure on to Windows.  
   
- Una volta terminato con il `CFont` oggetto creato tramite il `CreatePointFontIndirect` funzione, selezionare innanzitutto il tipo di carattere fuori contesto di dispositivo, quindi eliminare il `CFont` oggetto.  
+ When you finish with the `CFont` object created by the `CreatePointFontIndirect` function, first select the font out of the device context, then delete the `CFont` object.  
   
-### <a name="example"></a>Esempio  
- [!code-cpp[NVC_MFCDocView&#74;](../../mfc/codesnippet/cpp/cfont-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#74](../../mfc/codesnippet/cpp/cfont-class_5.cpp)]  
   
-##  <a name="fromhandle"></a>CFont::FromHandle  
- Restituisce un puntatore a un `CFont` oggetto quando viene specificato un **HFONT** handle per un oggetto di tipo di carattere GDI di Windows.  
+##  <a name="fromhandle"></a>  CFont::FromHandle  
+ Returns a pointer to a `CFont` object when given an **HFONT** handle to a Windows GDI font object.  
   
 ```  
 static CFont* PASCAL FromHandle(HFONT hFont);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `hFont`  
- Un **HFONT** handle per un tipo di carattere di Windows.  
+ An **HFONT** handle to a Windows font.  
   
-### <a name="return-value"></a>Valore restituito  
- Un puntatore a un `CFont` oggetto in caso di esito positivo; in caso contrario **NULL**.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a `CFont` object if successful; otherwise **NULL**.  
   
-### <a name="remarks"></a>Note  
- Se un `CFont` oggetto non è già connesso all'handle temporaneo `CFont` oggetto viene creato e collegato. Questo temporaneo `CFont` oggetto è valido solo fino a quando la volta successiva che l'applicazione ha il tempo di inattività nel relativo ciclo di eventi, che ora immagine temporanea tutti gli oggetti vengono eliminati. In altre parole, questo è che l'oggetto temporaneo è valido solo durante l'elaborazione di una finestra di messaggio.  
+### <a name="remarks"></a>Remarks  
+ If a `CFont` object is not already attached to the handle, a temporary `CFont` object is created and attached. This temporary `CFont` object is valid only until the next time the application has idle time in its event loop, at which time all temporary graphic objects are deleted. Another way of saying this is that the temporary object is valid only during the processing of one window message.  
   
-### <a name="example"></a>Esempio  
- [!code-cpp[&#75; NVC_MFCDocView](../../mfc/codesnippet/cpp/cfont-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#75](../../mfc/codesnippet/cpp/cfont-class_6.cpp)]  
   
-##  <a name="getlogfont"></a>CFont::GetLogFont  
- Chiamare questa funzione per recuperare una copia di `LOGFONT` struttura `CFont`.  
+##  <a name="getlogfont"></a>  CFont::GetLogFont  
+ Call this function to retrieve a copy of the `LOGFONT` structure for `CFont`.  
   
 ```  
 int GetLogFont(LOGFONT* pLogFont);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  *pLogFont*  
- Puntatore al [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struttura ricevere le informazioni sul tipo di carattere.  
+ Pointer to the [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) structure to receive the font information.  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se la funzione ha esito positivo, in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function succeeds, otherwise 0.  
   
-### <a name="example"></a>Esempio  
- [!code-cpp[NVC_MFCDocView&#76;](../../mfc/codesnippet/cpp/cfont-class_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#76](../../mfc/codesnippet/cpp/cfont-class_7.cpp)]  
   
-##  <a name="operator_hfont"></a>HFONT CFont::operator  
- Utilizzare questo operatore per ottenere l'handle GDI di Windows del tipo di carattere collegato a di `CFont` oggetto.  
+##  <a name="operator_hfont"></a>  CFont::operator HFONT  
+ Use this operator to get the Windows GDI handle of the font attached to the `CFont` object.  
   
 ```  
 operator HFONT() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- L'handle dell'oggetto tipo di carattere GDI Windows collegati a `CFont` se ha esito positivo; in caso contrario **NULL**.  
+### <a name="return-value"></a>Return Value  
+ The handle of the Windows GDI font object attached to `CFont` if successful; otherwise **NULL**.  
   
-### <a name="remarks"></a>Note  
- Poiché questo operatore viene utilizzato automaticamente per le conversioni da `CFont` a [tipi di carattere e testo](http://msdn.microsoft.com/library/windows/desktop/dd144819), è possibile passare `CFont` oggetti alle funzioni che prevedono **HFONT**s.  
+### <a name="remarks"></a>Remarks  
+ Since this operator is automatically used for conversions from `CFont` to [Fonts and Text](http://msdn.microsoft.com/library/windows/desktop/dd144819), you can pass `CFont` objects to functions that expect **HFONT**s.  
   
- Per ulteriori informazioni sull'utilizzo di oggetti grafici, vedere [oggetti grafico](http://msdn.microsoft.com/library/windows/desktop/dd144962) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information about using graphic objects, see [Graphic Objects](http://msdn.microsoft.com/library/windows/desktop/dd144962) in the Windows SDK.  
   
-### <a name="example"></a>Esempio  
- [!code-cpp[&#77; NVC_MFCDocView](../../mfc/codesnippet/cpp/cfont-class_8.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#77](../../mfc/codesnippet/cpp/cfont-class_8.cpp)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Esempio HIERSVR](../../visual-cpp-samples.md)   
- [Classe CGdiObject](../../mfc/reference/cgdiobject-class.md)   
- [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample HIERSVR](../../visual-cpp-samples.md)   
+ [CGdiObject Class](../../mfc/reference/cgdiobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
 

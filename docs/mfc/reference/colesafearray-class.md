@@ -1,11 +1,11 @@
 ---
-title: Classe COleSafeArray | Documenti di Microsoft
+title: COleSafeArray Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -41,10 +41,33 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- COleSafeArray class
-- arrays [C++], safe
-- safe arrays
-- ODBC, safe arrays
+- COleSafeArray [MFC], COleSafeArray
+- COleSafeArray [MFC], AccessData
+- COleSafeArray [MFC], AllocData
+- COleSafeArray [MFC], AllocDescriptor
+- COleSafeArray [MFC], Attach
+- COleSafeArray [MFC], Clear
+- COleSafeArray [MFC], Copy
+- COleSafeArray [MFC], Create
+- COleSafeArray [MFC], CreateOneDim
+- COleSafeArray [MFC], Destroy
+- COleSafeArray [MFC], DestroyData
+- COleSafeArray [MFC], DestroyDescriptor
+- COleSafeArray [MFC], Detach
+- COleSafeArray [MFC], GetByteArray
+- COleSafeArray [MFC], GetDim
+- COleSafeArray [MFC], GetElement
+- COleSafeArray [MFC], GetElemSize
+- COleSafeArray [MFC], GetLBound
+- COleSafeArray [MFC], GetOneDimSize
+- COleSafeArray [MFC], GetUBound
+- COleSafeArray [MFC], Lock
+- COleSafeArray [MFC], PtrOfIndex
+- COleSafeArray [MFC], PutElement
+- COleSafeArray [MFC], Redim
+- COleSafeArray [MFC], ResizeOneDim
+- COleSafeArray [MFC], UnaccessData
+- COleSafeArray [MFC], Unlock
 ms.assetid: f45a5224-5f48-40ec-9ddd-287ef9740150
 caps.latest.revision: 22
 author: mikeblome
@@ -64,151 +87,152 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 3cb6fa49e3adf7e14c34baf7feb64d12e54f2758
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 48ea7a57242a87b93349273be0b1e6fb284c7d18
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="colesafearray-class"></a>Classe COleSafeArray
-Classe per utilizzare matrici di tipo e dimensioni arbitrari.  
+# <a name="colesafearray-class"></a>COleSafeArray Class
+A class for working with arrays of arbitrary type and dimension.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COleSafeArray : public tagVARIANT  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Costruttori pubblici  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleSafeArray::COleSafeArray](#colesafearray)|Costruisce un oggetto `COleSafeArray`.|  
+|[COleSafeArray::COleSafeArray](#colesafearray)|Constructs a `COleSafeArray` object.|  
   
-### <a name="public-methods"></a>Metodi pubblici  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleSafeArray::AccessData](#accessdata)|Recupera un puntatore alla matrice di dati.|  
-|[COleSafeArray::AllocData](#allocdata)|Alloca memoria per la matrice.|  
-|[COleSafeArray::AllocDescriptor](#allocdescriptor)|Alloca memoria per il descrittore di matrice protetta.|  
-|[COleSafeArray::Attach](#attach)|Offre il controllo dell'oggetto esistente **VARIANT** matrice il `COleSafeArray` oggetto.|  
-|[COleSafeArray::Clear](#clear)|Libera tutti i dati sottostanti **VARIANT**.|  
-|[COleSafeArray::Copy](#copy)|Crea una copia di una matrice esistente.|  
-|[COleSafeArray::Create](#create)|Crea una matrice protetta.|  
-|[COleSafeArray::CreateOneDim](#createonedim)|Crea un oggetto unidimensionale `COleSafeArray` oggetto.|  
-|[COleSafeArray::Destroy](#destroy)|Elimina una matrice esistente.|  
-|[COleSafeArray::DestroyData](#destroydata)|Elimina i dati in una matrice protetta.|  
-|[COleSafeArray::DestroyDescriptor](#destroydescriptor)|Elimina un descrittore di una matrice sicura.|  
-|[COleSafeArray::Detach](#detach)|Consente di scollegare il **VARIANT** matrice dal `COleSafeArray` (in modo che i dati non verranno liberati) dell'oggetto.|  
-|[COleSafeArray::GetByteArray](#getbytearray)|Copia il contenuto della matrice protetta in un [CByteArray](../../mfc/reference/cbytearray-class.md).|  
-|[COleSafeArray::GetDim](#getdim)|Restituisce il numero di dimensioni nella matrice.|  
-|[COleSafeArray::GetElement](#getelement)|Recupera un singolo elemento della matrice protetta.|  
-|[COleSafeArray::GetElemSize](#getelemsize)|Restituisce la dimensione, in byte, di un elemento in una matrice protetta.|  
-|[COleSafeArray::GetLBound](#getlbound)|Restituisce il limite inferiore di qualsiasi dimensione di una matrice sicura.|  
-|[COleSafeArray::GetOneDimSize](#getonedimsize)|Restituisce il numero di elementi nell'oggetto unidimensionale `COleSafeArray` oggetto.|  
-|[COleSafeArray::GetUBound](#getubound)|Restituisce il limite superiore per qualsiasi dimensione di una matrice sicura.|  
-|[COleSafeArray::Lock](#lock)|Incrementa il conteggio dei blocchi di una matrice e inserisce un puntatore alla matrice di dati nel descrittore della matrice.|  
-|[COleSafeArray::PtrOfIndex](#ptrofindex)|Restituisce un puntatore all'elemento indicizzato.|  
-|[COleSafeArray::PutElement](#putelement)|Assegna un singolo elemento nella matrice.|  
-|[COleSafeArray::Redim](#redim)|Consente di modificare il limite meno significativo (destra) di una matrice sicura.|  
-|[COleSafeArray::ResizeOneDim](#resizeonedim)|Modifica il numero di elementi in un oggetto unidimensionale `COleSafeArray` oggetto.|  
-|[COleSafeArray::UnaccessData](#unaccessdata)|Decrementa il conteggio di una matrice il blocco e invalida il puntatore recuperato da `AccessData`.|  
-|[COleSafeArray::Unlock](#unlock)|Decrementa il conteggio dei blocchi di una matrice in modo può essere liberata o ridimensionato.|  
+|[COleSafeArray::AccessData](#accessdata)|Retrieves a pointer to the array data.|  
+|[COleSafeArray::AllocData](#allocdata)|Allocates memory for the array.|  
+|[COleSafeArray::AllocDescriptor](#allocdescriptor)|Allocates memory for the safe array descriptor.|  
+|[COleSafeArray::Attach](#attach)|Gives control of the existing **VARIANT** array to the `COleSafeArray` object.|  
+|[COleSafeArray::Clear](#clear)|Frees all data in the underlying **VARIANT**.|  
+|[COleSafeArray::Copy](#copy)|Creates a copy of an existing array.|  
+|[COleSafeArray::Create](#create)|Creates a safe array.|  
+|[COleSafeArray::CreateOneDim](#createonedim)|Creates a one-dimensional `COleSafeArray` object.|  
+|[COleSafeArray::Destroy](#destroy)|Destroys an existing array.|  
+|[COleSafeArray::DestroyData](#destroydata)|Destroys data in a safe array.|  
+|[COleSafeArray::DestroyDescriptor](#destroydescriptor)|Destroys a descriptor of a safe array.|  
+|[COleSafeArray::Detach](#detach)|Detaches the **VARIANT** array from the `COleSafeArray` object (so that the data will not be freed).|  
+|[COleSafeArray::GetByteArray](#getbytearray)|Copies the contents of the safe array into a [CByteArray](../../mfc/reference/cbytearray-class.md).|  
+|[COleSafeArray::GetDim](#getdim)|Returns the number of dimensions in the array.|  
+|[COleSafeArray::GetElement](#getelement)|Retrieves a single element of the safe array.|  
+|[COleSafeArray::GetElemSize](#getelemsize)|Returns the size, in bytes, of one element in a safe array.|  
+|[COleSafeArray::GetLBound](#getlbound)|Returns the lower bound for any dimension of a safe array.|  
+|[COleSafeArray::GetOneDimSize](#getonedimsize)|Returns the number of elements in the one-dimensional `COleSafeArray` object.|  
+|[COleSafeArray::GetUBound](#getubound)|Returns the upper bound for any dimension of a safe array.|  
+|[COleSafeArray::Lock](#lock)|Increments the lock count of an array and places a pointer to the array data in the array descriptor.|  
+|[COleSafeArray::PtrOfIndex](#ptrofindex)|Returns a pointer to the indexed element.|  
+|[COleSafeArray::PutElement](#putelement)|Assigns a single element into the array.|  
+|[COleSafeArray::Redim](#redim)|Changes the least significant (rightmost) bound of a safe array.|  
+|[COleSafeArray::ResizeOneDim](#resizeonedim)|Changes the number of elements in a one-dimensional `COleSafeArray` object.|  
+|[COleSafeArray::UnaccessData](#unaccessdata)|Decrements the lock count of an array and invalidates the pointer retrieved by `AccessData`.|  
+|[COleSafeArray::Unlock](#unlock)|Decrements the lock count of an array so it can be freed or resized.|  
   
-### <a name="public-operators"></a>Operatori pubblici  
+### <a name="public-operators"></a>Public Operators  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleSafeArray::operator LPCVARIANT](#operator_lpcvariant)|Accede sottostante **VARIANT** della struttura di `COleSafeArray` oggetto.|  
-|[COleSafeArray::operator LPVARIANT](#operator_lpvariant)|Accede sottostante **VARIANT** della struttura di `COleSafeArray` oggetto.|  
-|[COleSafeArray::operator =](#operator_eq)|Copia i valori in un `COleSafeArray` oggetto ( **SAFEARRAY**, **VARIANT**, `COleVariant`, o `COleSafeArray` matrice).|  
-|[COleSafeArray::operator = =](#operator_eq_eq)|Confronta due matrici di tipo variante ( **SAFEARRAY**, **variante**, `COleVariant`, o `COleSafeArray` matrici).|  
-|[COleSafeArray::operator&lt;&lt;](#operator_lt_lt)|Restituisce il contenuto di un `COleSafeArray` oggetto al contesto di dump.|  
+|[COleSafeArray::operator LPCVARIANT](#operator_lpcvariant)|Accesses the underlying **VARIANT** structure of the `COleSafeArray` object.|  
+|[COleSafeArray::operator LPVARIANT](#operator_lpvariant)|Accesses the underlying **VARIANT** structure of the `COleSafeArray` object.|  
+|[COleSafeArray::operator =](#operator_eq)|Copies values into a `COleSafeArray` object ( **SAFEARRAY**, **VARIANT**, `COleVariant`, or `COleSafeArray` array).|  
+|[COleSafeArray::operator ==](#operator_eq_eq)|Compares two variant arrays ( **SAFEARRAY**, **VARIANT**, `COleVariant`, or `COleSafeArray` arrays).|  
+|[COleSafeArray::operator &lt;&lt;](#operator_lt_lt)|Outputs the contents of a `COleSafeArray` object to the dump context.|  
   
-## <a name="remarks"></a>Note  
- `COleSafeArray`deriva da OLE **VARIANT** struttura. OLE **SAFEARRAY** sono disponibili tramite le funzioni membro `COleSafeArray`, nonché come set di funzioni membro appositamente progettata per le matrici unidimensionali di byte.  
+## <a name="remarks"></a>Remarks  
+ `COleSafeArray` derives from the OLE **VARIANT** structure. The OLE **SAFEARRAY** member functions are available through `COleSafeArray`, as well as a set of member functions specifically designed for one-dimensional arrays of bytes.  
   
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `tagVARIANT`  
   
  `COleSafeArray`  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** afxdisp.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h  
   
-##  <a name="accessdata"></a>COleSafeArray::AccessData  
- Recupera un puntatore alla matrice di dati.  
+##  <a name="accessdata"></a>  COleSafeArray::AccessData  
+ Retrieves a pointer to the array data.  
   
 ```  
 void AccessData(void** ppvData);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `ppvData`  
- Un puntatore a un puntatore alla matrice di dati.  
+ A pointer to a pointer to the array data.  
   
-### <a name="remarks"></a>Note  
- In caso di errore, la funzione genera un [CMemoryException](../../mfc/reference/cmemoryexception-class.md) o [COleException](../../mfc/reference/coleexception-class.md).  
+### <a name="remarks"></a>Remarks  
+ On error, the function throws a [CMemoryException](../../mfc/reference/cmemoryexception-class.md) or [COleException](../../mfc/reference/coleexception-class.md).  
   
-### <a name="example"></a>Esempio  
- [!code-cpp[&#26; NVC_MFCOleContainer](../../mfc/codesnippet/cpp/colesafearray-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCOleContainer#26](../../mfc/codesnippet/cpp/colesafearray-class_1.cpp)]  
   
-##  <a name="allocdata"></a>COleSafeArray::AllocData  
- Alloca memoria per una matrice protetta.  
+##  <a name="allocdata"></a>  COleSafeArray::AllocData  
+ Allocates memory for a safe array.  
   
 ```  
 void AllocData();
 ```  
   
-### <a name="remarks"></a>Note  
- In caso di errore, la funzione genera un [CMemoryException](../../mfc/reference/cmemoryexception-class.md) o [COleException](../../mfc/reference/coleexception-class.md).  
+### <a name="remarks"></a>Remarks  
+ On error, the function throws a [CMemoryException](../../mfc/reference/cmemoryexception-class.md) or [COleException](../../mfc/reference/coleexception-class.md).  
   
-##  <a name="allocdescriptor"></a>COleSafeArray::AllocDescriptor  
- Alloca memoria per il descrittore della matrice protetta.  
+##  <a name="allocdescriptor"></a>  COleSafeArray::AllocDescriptor  
+ Allocates memory for the descriptor of a safe array.  
   
 ```  
 void AllocDescriptor(DWORD dwDims);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `dwDims`  
- Numero di dimensioni della matrice sicura.  
+ Number of dimensions in the safe array.  
   
-### <a name="remarks"></a>Note  
- In caso di errore, la funzione genera un [CMemoryException](../../mfc/reference/cmemoryexception-class.md) o [COleException](../../mfc/reference/coleexception-class.md).  
+### <a name="remarks"></a>Remarks  
+ On error, the function throws a [CMemoryException](../../mfc/reference/cmemoryexception-class.md) or [COleException](../../mfc/reference/coleexception-class.md).  
   
-##  <a name="attach"></a>COleSafeArray::Attach  
- Offre il controllo dei dati in un oggetto esistente **VARIANT** matrice il `COleSafeArray` oggetto.  
+##  <a name="attach"></a>  COleSafeArray::Attach  
+ Gives control of the data in an existing **VARIANT** array to the `COleSafeArray` object.  
   
 ```  
 void Attach(VARIANT& varSrc);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  *varSrc*  
- Oggetto **VARIANT** oggetto. Il *varSrc* parametro deve avere il [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4)**VT_ARRAY**.  
+ A **VARIANT** object. The *varSrc* parameter must have the [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4)**VT_ARRAY**.  
   
-### <a name="remarks"></a>Note  
- L'origine **VARIANT**del tipo è impostato su `VT_EMPTY`. Questa funzione Cancella i dati corrente, se presente.  
+### <a name="remarks"></a>Remarks  
+ The source **VARIANT**'s type is set to `VT_EMPTY`. This function clears the current array data, if any.  
   
-### <a name="example"></a>Esempio  
-  Vedere l'esempio per [COleSafeArray::AccessData](#accessdata).  
+### <a name="example"></a>Example  
+  See the example for [COleSafeArray::AccessData](#accessdata).  
   
-##  <a name="clear"></a>COleSafeArray::Clear  
- Cancella la matrice sicura.  
+##  <a name="clear"></a>  COleSafeArray::Clear  
+ Clears the safe array.  
   
 ```  
 void Clear();
 ```  
   
-### <a name="remarks"></a>Note  
- La funzione Cancella una matrice protetta impostando il `VARTYPE` dell'oggetto `VT_EMPTY`. Il contenuto corrente viene rilasciato e la matrice viene liberata.  
+### <a name="remarks"></a>Remarks  
+ The function clears a safe array by setting the `VARTYPE` of the object to `VT_EMPTY`. The current contents are released and the array is freed.  
   
-##  <a name="colesafearray"></a>COleSafeArray::COleSafeArray  
- Costruisce un oggetto `COleSafeArray`.  
+##  <a name="colesafearray"></a>  COleSafeArray::COleSafeArray  
+ Constructs a `COleSafeArray` object.  
   
 ```  
 COleSafeArray();
@@ -229,43 +253,43 @@ COleSafeArray(const VARIANT& varSrc);
 COleSafeArray(const COleVariant& varSrc);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `saSrc`  
- Un oggetto esistente `COleSafeArray` oggetto o **SAFEARRAY** da copiare nel nuovo `COleSafeArray` oggetto.  
+ An existing `COleSafeArray` object or **SAFEARRAY** to be copied into the new `COleSafeArray` object.  
   
  `vtSrc`  
- Il **VARTYPE** del nuovo `COleSafeArray` oggetto.  
+ The **VARTYPE** of the new `COleSafeArray` object.  
   
  `psaSrc`  
- Un puntatore a un **SAFEARRAY** da copiare nel nuovo `COleSafeArray` oggetto.  
+ A pointer to a **SAFEARRAY** to be copied into the new `COleSafeArray` object.  
   
  *varSrc*  
- Un oggetto esistente **VARIANT** o `COleVariant` oggetto da copiare nel nuovo `COleSafeArray` oggetto.  
+ An existing **VARIANT** or `COleVariant` object to be copied into the new `COleSafeArray` object.  
   
  `pSrc`  
- Un puntatore a un **VARIANT** oggetto da copiare nel nuovo `COleSafeArray` oggetto.  
+ A pointer to a **VARIANT** object to be copied into the new `COleSafeArray` object.  
   
-### <a name="remarks"></a>Note  
- Tutti questi costruttori di creare nuovi `COleSafeArray` oggetti. Se non esiste alcun parametro, un oggetto vuoto `COleSafeArray` oggetto viene creato ( `VT_EMPTY`). Se il `COleSafeArray` viene copiato da un'altra matrice la cui proprietà [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) è noto in modo implicito (un `COleSafeArray`, `COleVariant`, o **VARIANT**), il **VARTYPE** dell'origine matrice viene mantenuta e non deve essere specificata. Se il `COleSafeArray` viene copiato da un'altra matrice la cui proprietà **VARTYPE** non è noto ( **SAFEARRAY**), il **VARTYPE** devono essere specificati nel `vtSrc` parametro.  
+### <a name="remarks"></a>Remarks  
+ All of these constructors create new `COleSafeArray` objects. If there is no parameter, an empty `COleSafeArray` object is created ( `VT_EMPTY`). If the `COleSafeArray` is copied from another array whose [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) is known implicitly (a `COleSafeArray`, `COleVariant`, or **VARIANT**), the **VARTYPE** of the source array is retained and need not be specified. If the `COleSafeArray` is copied from another array whose **VARTYPE** is not known ( **SAFEARRAY**), the **VARTYPE** must be specified in the `vtSrc` parameter.  
   
- In caso di errore, la funzione genera un [CMemoryException](../../mfc/reference/cmemoryexception-class.md) o [COleException](../../mfc/reference/coleexception-class.md).  
+ On error, the function throws a [CMemoryException](../../mfc/reference/cmemoryexception-class.md) or [COleException](../../mfc/reference/coleexception-class.md).  
   
-##  <a name="copy"></a>COleSafeArray::Copy  
- Crea una copia di una matrice sicura esistente.  
+##  <a name="copy"></a>  COleSafeArray::Copy  
+ Creates a copy of an existing safe array.  
   
 ```  
 void Copy(LPSAFEARRAY* ppsa);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  *ppsa*  
- Puntatore a una posizione in cui restituire il nuovo descrittore della matrice.  
+ Pointer to a location in which to return the new array descriptor.  
   
-### <a name="remarks"></a>Note  
- In caso di errore, la funzione genera un [CMemoryException](../../mfc/reference/cmemoryexception-class.md) o [COleException](../../mfc/reference/coleexception-class.md).  
+### <a name="remarks"></a>Remarks  
+ On error, the function throws a [CMemoryException](../../mfc/reference/cmemoryexception-class.md) or [COleException](../../mfc/reference/coleexception-class.md).  
   
-##  <a name="create"></a>COleSafeArray::Create  
- Alloca e inizializza i dati per la matrice.  
+##  <a name="create"></a>  COleSafeArray::Create  
+ Allocates and initializes the data for the array.  
   
 ```  
 void Create(
@@ -280,27 +304,27 @@ void Create(
     SAFEARRAYBOUND* rgsabounds);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `vtSrc`  
- Il tipo di base della matrice (vale a dire il **VARTYPE** di ogni elemento della matrice). Il **VARTYPE** è limitato a un sottoinsieme dei tipi varianti. Né il **VT_ARRAY** né **VT_BYREF** flag può essere impostato. `VT_EMPTY`e **VT_NULL** non sono tipi di base validi per la matrice. Tutti gli altri tipi sono valide.  
+ The base type of the array (that is, the **VARTYPE** of each element of the array). The **VARTYPE** is restricted to a subset of the variant types. Neither the **VT_ARRAY** nor the **VT_BYREF** flag can be set. `VT_EMPTY` and **VT_NULL** are not valid base types for the array. All other types are legal.  
   
  `dwDims`  
- Numero di dimensioni della matrice. Questo comportamento può essere modificato dopo la matrice viene creata con [Redim](#redim).  
+ Number of dimensions in the array. This can be changed after the array is created with [Redim](#redim).  
   
  *rgElements*  
- Puntatore a una matrice del numero di elementi per ogni dimensione della matrice.  
+ Pointer to an array of the number of elements for each dimension in the array.  
   
  *rgsabounds*  
- Puntatore a un vettore dei limiti (uno per ogni dimensione) da allocare per la matrice.  
+ Pointer to a vector of bounds (one for each dimension) to allocate for the array.  
   
-### <a name="remarks"></a>Note  
- Se necessario, questa funzione cancellerà i dati correnti. In caso di errore, la funzione genera un [CMemoryException](../../mfc/reference/cmemoryexception-class.md).  
+### <a name="remarks"></a>Remarks  
+ This function will clear the current array data if necessary. On error, the function throws a [CMemoryException](../../mfc/reference/cmemoryexception-class.md).  
   
-### <a name="example"></a>Esempio  
- [!code-cpp[NVC_MFCOleContainer&#27;](../../mfc/codesnippet/cpp/colesafearray-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCOleContainer#27](../../mfc/codesnippet/cpp/colesafearray-class_2.cpp)]  
   
-##  <a name="createonedim"></a>COleSafeArray::CreateOneDim  
- Crea un nuovo unidimensionale `COleSafeArray` oggetto.  
+##  <a name="createonedim"></a>  COleSafeArray::CreateOneDim  
+ Creates a new one-dimensional `COleSafeArray` object.  
   
 ```  
 void CreateOneDim(
@@ -310,101 +334,101 @@ void CreateOneDim(
     long nLBound = 0);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `vtSrc`  
- Il tipo di base della matrice (vale a dire il **VARTYPE** di ogni elemento della matrice).  
+ The base type of the array (that is, the **VARTYPE** of each element of the array).  
   
  `dwElements`  
- Numero di elementi nella matrice. Questo comportamento può essere modificato dopo la matrice viene creata con [ResizeOneDim](#resizeonedim).  
+ Number of elements in the array. This can be changed after the array is created with [ResizeOneDim](#resizeonedim).  
   
  `pvSrcData`  
- Puntatore ai dati da copiare nella matrice.  
+ Pointer to the data to copy into the array.  
   
  *nLBound*  
- Il limite inferiore della matrice.  
+ The lower bound of the array.  
   
-### <a name="remarks"></a>Note  
- La funzione alloca e inizializza i dati per l'array, copiando i dati specificati, se il puntatore `pvSrcData` non **NULL**.  
+### <a name="remarks"></a>Remarks  
+ The function allocates and initializes the data for the array, copying the specified data if the pointer `pvSrcData` is not **NULL**.  
   
- In caso di errore, la funzione genera un [CMemoryException](../../mfc/reference/cmemoryexception-class.md).  
+ On error, the function throws a [CMemoryException](../../mfc/reference/cmemoryexception-class.md).  
   
-### <a name="example"></a>Esempio  
- [!code-cpp[28 NVC_MFCOleContainer](../../mfc/codesnippet/cpp/colesafearray-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCOleContainer#28](../../mfc/codesnippet/cpp/colesafearray-class_3.cpp)]  
   
-##  <a name="destroy"></a>COleSafeArray::Destroy  
- Elimina un descrittore della matrice esistente e tutti i dati nella matrice.  
+##  <a name="destroy"></a>  COleSafeArray::Destroy  
+ Destroys an existing array descriptor and all the data in the array.  
   
 ```  
 void Destroy();
 ```  
   
-### <a name="remarks"></a>Note  
- Se gli oggetti vengono archiviati nella matrice, ogni oggetto viene rilasciato. In caso di errore, la funzione genera un [CMemoryException](../../mfc/reference/cmemoryexception-class.md) o [COleException](../../mfc/reference/coleexception-class.md).  
+### <a name="remarks"></a>Remarks  
+ If objects are stored in the array, each object is released. On error, the function throws a [CMemoryException](../../mfc/reference/cmemoryexception-class.md) or [COleException](../../mfc/reference/coleexception-class.md).  
   
-##  <a name="destroydata"></a>COleSafeArray::DestroyData  
- Elimina tutti i dati in una matrice protetta.  
+##  <a name="destroydata"></a>  COleSafeArray::DestroyData  
+ Destroys all the data in a safe array.  
   
 ```  
 void DestroyData();
 ```  
   
-### <a name="remarks"></a>Note  
- Se gli oggetti vengono archiviati nella matrice, ogni oggetto viene rilasciato. In caso di errore, la funzione genera un [CMemoryException](../../mfc/reference/cmemoryexception-class.md) o [COleException](../../mfc/reference/coleexception-class.md).  
+### <a name="remarks"></a>Remarks  
+ If objects are stored in the array, each object is released. On error, the function throws a [CMemoryException](../../mfc/reference/cmemoryexception-class.md) or [COleException](../../mfc/reference/coleexception-class.md).  
   
-##  <a name="destroydescriptor"></a>COleSafeArray::DestroyDescriptor  
- Elimina un descrittore di una matrice sicura.  
+##  <a name="destroydescriptor"></a>  COleSafeArray::DestroyDescriptor  
+ Destroys a descriptor of a safe array.  
   
 ```  
 void DestroyDescriptor();
 ```  
   
-### <a name="remarks"></a>Note  
- In caso di errore, la funzione genera un [CMemoryException](../../mfc/reference/cmemoryexception-class.md) o [COleException](../../mfc/reference/coleexception-class.md).  
+### <a name="remarks"></a>Remarks  
+ On error, the function throws a [CMemoryException](../../mfc/reference/cmemoryexception-class.md) or [COleException](../../mfc/reference/coleexception-class.md).  
   
-##  <a name="detach"></a>COleSafeArray::Detach  
- Consente di scollegare il **VARIANT** dati dal `COleSafeArray` oggetto.  
+##  <a name="detach"></a>  COleSafeArray::Detach  
+ Detaches the **VARIANT** data from the `COleSafeArray` object.  
   
 ```  
 VARIANT Detach();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Sottostante **VARIANT** valore di `COleSafeArray` oggetto.  
+### <a name="return-value"></a>Return Value  
+ The underlying **VARIANT** value in the `COleSafeArray` object.  
   
-### <a name="remarks"></a>Note  
- La funzione rimuove i dati in una matrice protetta impostando il [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) dell'oggetto `VT_EMPTY`. È responsabilità del chiamante liberare la matrice chiamando la funzione di Windows [VariantClear](http://msdn.microsoft.com/en-us/28741d81-8404-4f85-95d3-5c209ec13835).  
+### <a name="remarks"></a>Remarks  
+ The function detaches the data in a safe array by setting the [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) of the object to `VT_EMPTY`. It is the caller's responsibility to free the array by calling the Windows function [VariantClear](http://msdn.microsoft.com/en-us/28741d81-8404-4f85-95d3-5c209ec13835).  
   
- In caso di errore, la funzione genera un [COleException](../../mfc/reference/coleexception-class.md).  
+ On error, the function throws a [COleException](../../mfc/reference/coleexception-class.md).  
   
-### <a name="example"></a>Esempio  
-  Vedere l'esempio per [COleSafeArray::PutElement](#putelement).  
+### <a name="example"></a>Example  
+  See the example for [COleSafeArray::PutElement](#putelement).  
   
-##  <a name="getbytearray"></a>COleSafeArray::GetByteArray  
- Copia il contenuto della matrice protetta in un `CByteArray`.  
+##  <a name="getbytearray"></a>  COleSafeArray::GetByteArray  
+ Copies the contents of the safe array into a `CByteArray`.  
   
 ```  
 void GetByteArray(CByteArray& bytes);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `bytes`  
- Un riferimento a un [CByteArray](../../mfc/reference/cbytearray-class.md) oggetto.  
+ A reference to a [CByteArray](../../mfc/reference/cbytearray-class.md) object.  
   
-##  <a name="getdim"></a>COleSafeArray::GetDim  
- Restituisce il numero di dimensioni di `COleSafeArray` oggetto.  
+##  <a name="getdim"></a>  COleSafeArray::GetDim  
+ Returns the number of dimensions in the `COleSafeArray` object.  
   
 ```  
 DWORD GetDim();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Il numero di dimensioni della matrice sicura.  
+### <a name="return-value"></a>Return Value  
+ The number of dimensions in the safe array.  
   
-### <a name="example"></a>Esempio  
- [!code-cpp[NVC_MFCOleContainer&#27;](../../mfc/codesnippet/cpp/colesafearray-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCOleContainer#27](../../mfc/codesnippet/cpp/colesafearray-class_2.cpp)]  
   
-##  <a name="getelement"></a>COleSafeArray::GetElement  
- Recupera un singolo elemento della matrice protetta.  
+##  <a name="getelement"></a>  COleSafeArray::GetElement  
+ Retrieves a single element of the safe array.  
   
 ```  
 void GetElement(
@@ -412,33 +436,33 @@ void GetElement(
     void* pvData);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `rgIndices`  
- Puntatore a una matrice di indici per ogni dimensione della matrice.  
+ Pointer to an array of indexes for each dimension of the array.  
   
  `pvData`  
- Puntatore alla posizione in cui inserire l'elemento della matrice.  
+ Pointer to the location to place the element of the array.  
   
-### <a name="remarks"></a>Note  
- Questa funzione chiama automaticamente le funzioni di windows `SafeArrayLock` e `SafeArrayUnlock` prima e dopo aver recuperato l'elemento. Se l'elemento dati è una stringa, un oggetto o una variante, la funzione Copia l'elemento in modo corretto. Il parametro `pvData` deve puntare a un grande buffer con dimensioni sufficienti per contenere l'elemento.  
+### <a name="remarks"></a>Remarks  
+ This function automatically calls the windows functions `SafeArrayLock` and `SafeArrayUnlock` before and after retrieving the element. If the data element is a string, object, or variant, the function copies the element in the correct way. The parameter `pvData` should point to a large enough buffer to contain the element.  
   
- In caso di errore, la funzione genera un [CMemoryException](../../mfc/reference/cmemoryexception-class.md) o [COleException](../../mfc/reference/coleexception-class.md).  
+ On error, the function throws a [CMemoryException](../../mfc/reference/cmemoryexception-class.md) or [COleException](../../mfc/reference/coleexception-class.md).  
   
-### <a name="example"></a>Esempio  
- [!code-cpp[NVC_MFCOleContainer&#29;](../../mfc/codesnippet/cpp/colesafearray-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCOleContainer#29](../../mfc/codesnippet/cpp/colesafearray-class_4.cpp)]  
   
-##  <a name="getelemsize"></a>COleSafeArray::GetElemSize  
- Recupera le dimensioni di un elemento in un `COleSafeArray` oggetto.  
+##  <a name="getelemsize"></a>  COleSafeArray::GetElemSize  
+ Retrieves the size of an element in a `COleSafeArray` object.  
   
 ```  
 DWORD GetElemSize();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Le dimensioni in byte, degli elementi della matrice protetta.  
+### <a name="return-value"></a>Return Value  
+ The size, in bytes, of the elements of a safe array.  
   
-##  <a name="getlbound"></a>COleSafeArray::GetLBound  
- Restituisce il limite inferiore di qualsiasi dimensione di un `COleSafeArray` oggetto.  
+##  <a name="getlbound"></a>  COleSafeArray::GetLBound  
+ Returns the lower bound for any dimension of a `COleSafeArray` object.  
   
 ```  
 void GetLBound(
@@ -446,34 +470,34 @@ void GetLBound(
     long* pLBound);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `dwDim`  
- La dimensione della matrice per cui ottenere il limite inferiore.  
+ The array dimension for which to get the lower bound.  
   
  *pLBound*  
- Puntatore alla posizione per restituire il limite inferiore.  
+ Pointer to the location to return the lower bound.  
   
-### <a name="remarks"></a>Note  
- In caso di errore, la funzione genera un [COleException](../../mfc/reference/coleexception-class.md).  
+### <a name="remarks"></a>Remarks  
+ On error, the function throws a [COleException](../../mfc/reference/coleexception-class.md).  
   
-### <a name="example"></a>Esempio  
- [!code-cpp[&#30; NVC_MFCOleContainer](../../mfc/codesnippet/cpp/colesafearray-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCOleContainer#30](../../mfc/codesnippet/cpp/colesafearray-class_5.cpp)]  
   
-##  <a name="getonedimsize"></a>COleSafeArray::GetOneDimSize  
- Restituisce il numero di elementi nell'oggetto unidimensionale `COleSafeArray` oggetto.  
+##  <a name="getonedimsize"></a>  COleSafeArray::GetOneDimSize  
+ Returns the number of elements in the one-dimensional `COleSafeArray` object.  
   
 ```  
 DWORD GetOneDimSize();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Il numero di elementi nella matrice unidimensionale-safe.  
+### <a name="return-value"></a>Return Value  
+ The number of elements in the one-dimensional safe array.  
   
-### <a name="example"></a>Esempio  
-  Vedere l'esempio per [COleSafeArray::CreateOneDim](#createonedim).  
+### <a name="example"></a>Example  
+  See the example for [COleSafeArray::CreateOneDim](#createonedim).  
   
-##  <a name="getubound"></a>COleSafeArray::GetUBound  
- Restituisce il limite superiore per qualsiasi dimensione di una matrice sicura.  
+##  <a name="getubound"></a>  COleSafeArray::GetUBound  
+ Returns the upper bound for any dimension of a safe array.  
   
 ```  
 void GetUBound(
@@ -481,52 +505,52 @@ void GetUBound(
     long* pUBound);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `dwDim`  
- La dimensione della matrice per cui ottenere il limite superiore.  
+ The array dimension for which to get the upper bound.  
   
  *pUBound*  
- Puntatore alla posizione per restituire il limite superiore.  
+ Pointer to the location to return the upper bound.  
   
-### <a name="remarks"></a>Note  
- In caso di errore, la funzione genera un [COleException](../../mfc/reference/coleexception-class.md).  
+### <a name="remarks"></a>Remarks  
+ On error, the function throws a [COleException](../../mfc/reference/coleexception-class.md).  
   
-### <a name="example"></a>Esempio  
- [!code-cpp[NVC_MFCOleContainer&#31;](../../mfc/codesnippet/cpp/colesafearray-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCOleContainer#31](../../mfc/codesnippet/cpp/colesafearray-class_6.cpp)]  
   
-##  <a name="lock"></a>COleSafeArray::Lock  
- Incrementa il conteggio dei blocchi di una matrice e un puntatore alla matrice di dati nel descrittore della matrice sul posto.  
+##  <a name="lock"></a>  COleSafeArray::Lock  
+ Increments the lock count of an array and place a pointer to the array data in the array descriptor.  
   
 ```  
 void Lock();
 ```  
   
-### <a name="remarks"></a>Note  
- In caso di errore, viene generata una [COleException](../../mfc/reference/coleexception-class.md).  
+### <a name="remarks"></a>Remarks  
+ On error, it throws a [COleException](../../mfc/reference/coleexception-class.md).  
   
- È valido fino a quando il puntatore nel descrittore della matrice `Unlock` viene chiamato. Le chiamate a `Lock` possono essere annidate; lo stesso numero di chiamate a `Unlock` sono necessari.  
+ The pointer in the array descriptor is valid until `Unlock` is called. Calls to `Lock` can be nested; an equal number of calls to `Unlock` are required.  
   
- Impossibile eliminare una matrice mentre è bloccato.  
+ An array cannot be deleted while it is locked.  
   
-##  <a name="operator_lpcvariant"></a>COleSafeArray::operator LPCVARIANT  
- Chiamare l'operatore di cast per accedere all'oggetto **VARIANT** per questa struttura `COleSafeArray` oggetto.  
+##  <a name="operator_lpcvariant"></a>  COleSafeArray::operator LPCVARIANT  
+ Call this casting operator to access the underlying **VARIANT** structure for this `COleSafeArray` object.  
   
 ```  
 operator LPCVARIANT() const;  
 ```  
   
-##  <a name="operator_lpvariant"></a>COleSafeArray::operator LPVARIANT  
- Chiamare l'operatore di cast per accedere all'oggetto **VARIANT** per questa struttura `COleSafeArray` oggetto.  
+##  <a name="operator_lpvariant"></a>  COleSafeArray::operator LPVARIANT  
+ Call this casting operator to access the underlying **VARIANT** structure for this `COleSafeArray` object.  
   
 ```  
 operator LPVARIANT();
 ```   
   
-### <a name="remarks"></a>Note  
- Si noti che la modifica il valore di **VARIANT** struttura accede il puntatore restituito da questa funzione verrà modificato il valore di questo `COleSafeArray` oggetto.  
+### <a name="remarks"></a>Remarks  
+ Note that changing the value in the **VARIANT** structure accessed by the pointer returned by this function will change the value of this `COleSafeArray` object.  
   
-##  <a name="operator_eq"></a>COleSafeArray::operator =  
- Questi operatori di assegnazione di overload copiare il valore di origine in questo `COleSafeArray` oggetto.  
+##  <a name="operator_eq"></a>  COleSafeArray::operator =  
+ These overloaded assignment operators copy the source value into this `COleSafeArray` object.  
   
 ```  
 COleSafeArray& operator=(const COleSafeArray& saSrc);  
@@ -535,17 +559,17 @@ COleSafeArray& operator=(const VARIANT& varSrc);
 COleSafeArray& operator=(const COleVariant& varSrc);
 ```  
   
-### <a name="remarks"></a>Note  
- Seguirà una breve descrizione di ogni operatore:  
+### <a name="remarks"></a>Remarks  
+ A brief description of each operator follows:  
   
-- **operatore = (** *saSrc* **)** copia esistente `COleSafeArray` in questo oggetto.  
+- **operator =(** *saSrc* **)** Copies an existing `COleSafeArray` object into this object.  
   
-- **operatore = (** *varSrc***)** copia esistente **VARIANT** o `COleVariant` matrice in questo oggetto.  
+- **operator =(** *varSrc***)** Copies an existing **VARIANT** or `COleVariant` array into this object.  
   
-- **operatore = (** `pSrc` **)** copie di **VARIANT** oggetto matrice a cui accede `pSrc` in questo oggetto.  
+- **operator =(** `pSrc` **)** Copies the **VARIANT** array object accessed by `pSrc` into this object.  
   
-##  <a name="operator_eq_eq"></a>COleSafeArray::operator = =  
- Questo operatore consente di confrontare due matrici ( **SAFEARRAY**, **VARIANT**, `COleVariant`, o `COleSafeArray` matrici) e restituisce zero se sono uguali; in caso contrario, 0.  
+##  <a name="operator_eq_eq"></a>  COleSafeArray::operator ==  
+ This operator compares two arrays ( **SAFEARRAY**, **VARIANT**, `COleVariant`, or `COleSafeArray` arrays) and returns nonzero if they are equal; otherwise 0.  
   
 ```  
 BOOL operator==(const SAFEARRAY& saSrc) const;  BOOL operator==(LPCSAFEARRAY pSrc) const;  
@@ -561,15 +585,16 @@ BOOL operator==(LPCVARIANT pSrc) const;  BOOL operator==(const COleVariant& varS
  The `COleSafeArray` insertion (<<) operator supports diagnostic dumping and storing of a `COleSafeArray` object to an archive.  
   
 ```  
-Operatore CDumpContext / AFXAPI<( CDumpContext& dc, cdumpcontext&=""></( CDumpContext& dc,>  
-    COleSafeArray / saSrc);
+CDumpContext& AFXAPI operator<<( CDumpContext& dc,  
+    COleSafeArray& saSrc);
 ```  
   
 ##  <a name="ptrofindex"></a>  COleSafeArray::PtrOfIndex  
  Returns a pointer to the element specified by the index values.  
   
 ```  
-void PtrOfIndex (long* rgIndices, void** ppvData);
+void PtrOfIndex( long* rgIndices,  
+    void** ppvData);
 ```  
   
 ### Parameters  
@@ -583,7 +608,8 @@ void PtrOfIndex (long* rgIndices, void** ppvData);
  Assigns a single element into the array.  
   
 ```  
-void PutElement (long* rgIndices, void* pvData);
+void PutElement( long* rgIndices,  
+    void* pvData);
 ```  
   
 ### Parameters  
@@ -607,7 +633,7 @@ void PutElement (long* rgIndices, void* pvData);
  Changes the least significant (rightmost) bound of a safe array.  
   
 ```  
-Redim void (SAFEARRAYBOUND * psaboundNew);
+void Redim(SAFEARRAYBOUND* psaboundNew);
 ```  
   
 ### Parameters  
@@ -621,7 +647,7 @@ Redim void (SAFEARRAYBOUND * psaboundNew);
  Changes the number of elements in a one-dimensional `COleSafeArray` object.  
   
 ```  
-void ResizeOneDim (DWORD dwElements);
+void ResizeOneDim(DWORD dwElements);
 ```  
   
 ### Parameters  
@@ -651,7 +677,7 @@ void UnaccessData();
  Decrements the lock count of an array so it can be freed or resized.  
   
 ```  
-void Unlock;
+void Unlock();
 ```  
   
 ### Remarks  

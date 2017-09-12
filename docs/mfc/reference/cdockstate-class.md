@@ -1,5 +1,5 @@
 ---
-title: Classe CDockState | Documenti di Microsoft
+title: CDockState Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,14 +19,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- dock state
-- size
-- docking control bars
-- CDockState class
-- states, dockable control bar
-- position, control bar
-- size, control bar
-- docking tool windows
+- CDockState [MFC], Clear
+- CDockState [MFC], GetVersion
+- CDockState [MFC], LoadState
+- CDockState [MFC], SaveState
+- CDockState [MFC], m_arrBarInfo
 ms.assetid: 09e7c10b-3abd-4cb2-ad36-42420fe6bc36
 caps.latest.revision: 23
 author: mikeblome
@@ -46,116 +43,116 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: fc8beb80cc35c1816fbc305ece2bfbc5df2e7cd0
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8b16523382c1530f0c7c1022e632be0339801cfb
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdockstate-class"></a>Classe CDockState
-Classe `CObject` serializzata che carica, scarica o cancella lo stato di una o più barre di controllo ancorabili nella memoria persistente (un file).  
+# <a name="cdockstate-class"></a>CDockState Class
+A serialized `CObject` class that loads, unloads, or clears the state of one or more docking control bars in persistent memory (a file).  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDockState : public CObject  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>Metodi pubblici  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDockState::Clear](#clear)|Cancella le informazioni sullo stato di ancoraggio.|  
-|[CDockState::GetVersion](#getversion)|Recupera il numero di versione dell'oggetto memorizzato barra di stato.|  
-|[CDockState::LoadState](#loadstate)|Consente di recuperare informazioni dal Registro di sistema sullo stato o. File INI.|  
-|[CDockState::SaveState](#savestate)|Salva le informazioni sullo stato per il Registro di sistema o un file INI.|  
+|[CDockState::Clear](#clear)|Clears the dock state information.|  
+|[CDockState::GetVersion](#getversion)|Retrieves the version number of the stored bar state.|  
+|[CDockState::LoadState](#loadstate)|Retrieves state information from the registry or .INI file.|  
+|[CDockState::SaveState](#savestate)|Saves state information to the registry or INI file.|  
   
-### <a name="public-data-members"></a>Membri dati pubblici  
+### <a name="public-data-members"></a>Public Data Members  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDockState::m_arrBarInfo](#m_arrbarinfo)|Matrice di puntatori a archiviato ancorare informazioni sullo stato con una voce per ogni barra di controllo.|  
+|[CDockState::m_arrBarInfo](#m_arrbarinfo)|Array of pointers to the stored dock state information with one entry for each control bar.|  
   
-## <a name="remarks"></a>Note  
- Lo stato di ancoraggio include le dimensioni e posizione delle barre della e se è ancorata. Recupero archiviato ancorare quando lo stato, `CDockState` controlli della barra della posizione e, se la barra non è visibile con le impostazioni della schermata corrente, `CDockState` della barra della scala posizionare in modo che sia visibile. Lo scopo principale di `CDockState` per contenere l'intero stato di un numero di barre di controllo e per consentire tale stato da salvare e caricare il Registro di sistema, l'applicazione del. File INI, o in formato binario come parte di un `CArchive` contenuto dell'oggetto.  
+## <a name="remarks"></a>Remarks  
+ The dock state includes the size and position of the bar and whether or not it is docked. When retrieving the stored dock state, `CDockState` checks the bar's position and, if the bar is not visible with the current screen settings, `CDockState` scales the bar's position so that it is visible. The main purpose of `CDockState` is to hold the entire state of a number of control bars and to allow that state to be saved and loaded either to the registry, the application's .INI file, or in binary form as part of a `CArchive` object's contents.  
   
- La barra può essere qualsiasi controllo ancorata barra, incluso una barra degli strumenti, barra di stato o la barra di finestra di dialogo. `CDockState`gli oggetti sono scritti e letti da o verso un file mediante un `CArchive` oggetto.  
+ The bar can be any dockable control bar, including a toolbar, status bar, or dialog bar. `CDockState` objects are written and read to or from a file via a `CArchive` object.  
   
- [CFrameWnd::GetDockState](../../mfc/reference/cframewnd-class.md#getdockstate) recupera le informazioni sullo stato di tutti della finestra cornice `CControlBar` oggetti e lo inserisce nel `CDockState` oggetto. È quindi possibile scrivere il contenuto di `CDockState` oggetto di archiviazione con [Serialize](../../mfc/reference/cobject-class.md#serialize) o [CDockState::SaveState](#savestate). Se si desidera ripristinare lo stato delle barre di controllo nella finestra cornice, è possibile caricare lo stato con `Serialize` o [CDockState::LoadState](#loadstate), quindi utilizzare [CFrameWnd::SetDockState](../../mfc/reference/cframewnd-class.md#setdockstate) per applicare lo stato salvato a barre di controllo della finestra cornice.  
+ [CFrameWnd::GetDockState](../../mfc/reference/cframewnd-class.md#getdockstate) retrieves the state information of all the frame window's `CControlBar` objects and puts it into the `CDockState` object. You can then write the contents of the `CDockState` object to storage with [Serialize](../../mfc/reference/cobject-class.md#serialize) or [CDockState::SaveState](#savestate). If you later want to restore the state of the control bars in the frame window, you can load the state with `Serialize` or [CDockState::LoadState](#loadstate), then use [CFrameWnd::SetDockState](../../mfc/reference/cframewnd-class.md#setdockstate) to apply the saved state to the frame window's control bars.  
   
- Per ulteriori informazioni su ancoraggio delle barre di controllo, vedere gli articoli [barre di controllo](../../mfc/control-bars.md), [barre degli strumenti: ancorate e mobili](../../mfc/docking-and-floating-toolbars.md), e [finestre cornice](../../mfc/frame-windows.md).  
+ For more information on docking control bars, see the articles [Control Bars](../../mfc/control-bars.md), [Toolbars: Docking and Floating](../../mfc/docking-and-floating-toolbars.md), and [Frame Windows](../../mfc/frame-windows.md).  
   
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CDockState`  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** afxadv.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxadv.h  
   
-##  <a name="clear"></a>CDockState::Clear  
- Chiamare questa funzione per eliminare tutte le informazioni di ancoraggio archiviate nel `CDockState` oggetto.  
+##  <a name="clear"></a>  CDockState::Clear  
+ Call this function to clear all docking information stored in the `CDockState` object.  
   
 ```  
 void Clear();
 ```  
   
-### <a name="remarks"></a>Note  
- Ciò include non solo se la barra è ancorata o No, ma le dimensioni e posizione della barra ed è visibile o meno.  
+### <a name="remarks"></a>Remarks  
+ This includes not only whether the bar is docked or not, but the bar's size and position and whether or not it is visible.  
   
-##  <a name="getversion"></a>CDockState::GetVersion  
- Chiamare questa funzione per recuperare il numero di versione dell'oggetto memorizzato barra di stato.  
+##  <a name="getversion"></a>  CDockState::GetVersion  
+ Call this function to retrieve the version number of the stored bar state.  
   
 ```  
 DWORD GetVersion();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- 1 se la barra archiviata informazioni sono precedente a quella corrente della barra di stato. 2 se la barra stored informazioni corrisponde al corrente della barra di stato.  
+### <a name="return-value"></a>Return Value  
+ 1 if the stored bar information is older than current bar state; 2 if the stored bar information is the same as the current bar state.  
   
-### <a name="remarks"></a>Note  
- Supporto delle versioni consente una barra rivista aggiungere nuove proprietà persistenti e comunque in grado di individuare e caricare lo stato persistente creato da una versione precedente della barra.  
+### <a name="remarks"></a>Remarks  
+ Version support enables a revised bar to add new persistent properties and still be able to detect and load the persistent state created by an earlier version of the bar.  
   
-##  <a name="loadstate"></a>CDockState::LoadState  
- Chiamare questa funzione per recuperare informazioni sullo stato dal Registro di sistema o. File INI.  
+##  <a name="loadstate"></a>  CDockState::LoadState  
+ Call this function to retrieve state information from the registry or .INI file.  
   
 ```  
 void LoadState(LPCTSTR lpszProfileName);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `lpszProfileName`  
- Punta a una stringa null teminated che specifica il nome di una sezione nel file di inizializzazione o una chiave del Registro di sistema in cui sono archiviate informazioni sullo stato.  
+ Points to a null-teminated string that specifies the name of a section in the initialization file or a key in the Windows registry where state information is stored.  
   
-### <a name="remarks"></a>Note  
- Il nome del profilo è la sezione dell'applicazione. File INI o il Registro di sistema che contiene informazioni sullo stato le barre. È possibile salvare barra informazioni sullo stato di controllo nel Registro di sistema o. File INI con `SaveState`.  
+### <a name="remarks"></a>Remarks  
+ The profile name is the section of the application's .INI file or the registry that contains the bars' state information. You can save control bar state information to the registry or .INI file with `SaveState`.  
   
-##  <a name="m_arrbarinfo"></a>CDockState::m_arrBarInfo  
- Oggetto `CPtrArray` oggetto che rappresenta una matrice di puntatori alle informazioni sulla barra di controllo stored per ogni barra di controllo che ha salvato le informazioni sullo stato di `CDockState` oggetto.  
+##  <a name="m_arrbarinfo"></a>  CDockState::m_arrBarInfo  
+ A `CPtrArray` object that is an array of pointers to the stored control bar information for each control bar that has saved state information in the `CDockState` object.  
   
 ```  
 CPtrArray m_arrBarInfo;  
 ```  
   
-##  <a name="savestate"></a>CDockState::SaveState  
- Chiamare questa funzione per salvare le informazioni sullo stato nel Registro di sistema o. File INI.  
+##  <a name="savestate"></a>  CDockState::SaveState  
+ Call this function to save the state information to the registry or .INI file.  
   
 ```  
 void SaveState(LPCTSTR lpszProfileName);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `lpszProfileName`  
- Punta a una stringa null teminated che specifica il nome di una sezione nel file di inizializzazione o una chiave del Registro di sistema in cui sono archiviate informazioni sullo stato.  
+ Points to a null-teminated string that specifies the name of a section in the initialization file or a key in the Windows registry where state information is stored.  
   
-### <a name="remarks"></a>Note  
- Il nome del profilo è la sezione dell'applicazione. File INI o nel Registro di sistema che contiene informazioni sullo stato della barra di controllo. `SaveState`Salva inoltre le dimensioni dello schermo corrente. È possibile recuperare informazioni sulla barra di controllo dal Registro di sistema o. File INI con `LoadState`.  
+### <a name="remarks"></a>Remarks  
+ The profile name is the section of the application's .INI file or the registry that contains the control bar's state information. `SaveState` also saves the current screen size. You can retrieve control bar information from the registry or .INI file with `LoadState`.  
   
-## <a name="see-also"></a>Vedere anche  
- [CObject (classe)](../../mfc/reference/cobject-class.md)   
- [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 

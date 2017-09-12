@@ -1,48 +1,67 @@
 ---
-title: "Modifica del controllo ToolTip | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CToolTipCtrl (classe), modifica di attributi descrizione comandi"
-  - "descrizioni comandi [C++], attributi"
+title: Manipulating the Tool Tip Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CToolTipCtrl class [MFC], manipulating tool tip attributes
+- tool tips [MFC], attributes
 ms.assetid: 3600afe5-712a-4b56-8456-96e85fe879af
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Modifica del controllo ToolTip
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a6f30981d9bacbd9191c1cc70012131c9064b91f
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-La classe `CToolTipCtrl` fornisce un gruppo di funzioni membro che controllano i vari attributi dell'oggetto `CToolTipCtrl` e della finestra di descrizione comandi.  
+---
+# <a name="manipulating-the-tool-tip-control"></a>Manipulating the Tool Tip Control
+Class `CToolTipCtrl` provides a group of member functions that control the various attributes of the `CToolTipCtrl` object and the tool tip window.  
   
- Il bordo iniziale, il popup e la durata di visualizzazione per le finestre di descrizione comandi possono essere impostati e recuperati con chiamate a [GetDelayTime](../Topic/CToolTipCtrl::GetDelayTime.md) e a [SetDelayTime](../Topic/CToolTipCtrl::SetDelayTime.md).  
+ The initial, pop-up, and reshow durations for the tool tip windows can be set and retrieved with calls to [GetDelayTime](../mfc/reference/ctooltipctrl-class.md#getdelaytime) and [SetDelayTime](../mfc/reference/ctooltipctrl-class.md#setdelaytime).  
   
- Modificare l'aspetto delle finestre di descrizioni comandi con le seguenti funzioni:  
+ Change the appearance of the tool tip windows with the following functions:  
   
--   [GetMargin](../Topic/CToolTipCtrl::GetMargin.md) e [SetMargin](../Topic/CToolTipCtrl::SetMargin.md) Recupera ed imposta la larghezza tra il bordo ed il testo della descrizione comandi.  
+-   [GetMargin](../mfc/reference/ctooltipctrl-class.md#getmargin) and [SetMargin](../mfc/reference/ctooltipctrl-class.md#setmargin) Retrieves and sets the width between the tool tip border and the tool tip text.  
   
--   [GetMaxTipWidth](../Topic/CToolTipCtrl::GetMaxTipWidth.md) e [SetMaxTipWidth](../Topic/CToolTipCtrl::SetMaxTipWidth.md) Recupera ed imposta la larghezza massima della descrizione comandi.  
+-   [GetMaxTipWidth](../mfc/reference/ctooltipctrl-class.md#getmaxtipwidth) and [SetMaxTipWidth](../mfc/reference/ctooltipctrl-class.md#setmaxtipwidth) Retrieves and sets the maximum width of the tool tip window.  
   
--   [GetTipBkColor](../Topic/CToolTipCtrl::GetTipBkColor.md) e [SetTipBkColor](../Topic/CToolTipCtrl::SetTipBkColor.md) Recupera ed imposta il colore di sfondo della finestra di descrizione comandi.  
+-   [GetTipBkColor](../mfc/reference/ctooltipctrl-class.md#gettipbkcolor) and [SetTipBkColor](../mfc/reference/ctooltipctrl-class.md#settipbkcolor) Retrieves and sets the background color of the tool tip window.  
   
--   [GetTipTextColor](../Topic/CToolTipCtrl::GetTipTextColor.md) e [SetTipTextColor](../Topic/CToolTipCtrl::SetTipTextColor.md) Recupera ed imposta il colore del testo della finestra di descrizione comandi.  
+-   [GetTipTextColor](../mfc/reference/ctooltipctrl-class.md#gettiptextcolor) and [SetTipTextColor](../mfc/reference/ctooltipctrl-class.md#settiptextcolor) Retrieves and sets the text color of the tool tip window.  
   
- Affinché il controllo della descrizione comandi sia notificato dei messaggi importanti, come i messaggi **WM\_LBUTTONXXX**, è necessario trasmettere i messaggi al controllo della descrizione comandi.  La soluzione migliore per questa trasmissione è di effettuare una chiamata a [CToolTipCtrl::RelayEvent](../Topic/CToolTipCtrl::RelayEvent.md), nella funzione `PreTranslateMessage` della finestra proprietaria.  Nell'esempio seguente viene illustrato un possibile metodo \(si assuma che il controllo di descrizione comandi sia chiamato `m_ToolTip`\):  
+ In order for the tool tip control to be notified of important messages, such as **WM_LBUTTONXXX** messages, you must relay the messages to your tool tip control. The best method for this relay is to make a call to [CToolTipCtrl::RelayEvent](../mfc/reference/ctooltipctrl-class.md#relayevent), in the `PreTranslateMessage` function of the owner window. The following example illustrates one possible method (assuming the tool tip control is called `m_ToolTip`):  
   
- [!code-cpp[NVC_MFCControlLadenDialog#41](../mfc/codesnippet/CPP/manipulating-the-tool-tip-control_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#41](../mfc/codesnippet/cpp/manipulating-the-tool-tip-control_1.cpp)]  
   
- Per rimuovere immediatamente una finestra di descrizione comandi, chiamare la funzione membro [Pop](../Topic/CToolTipCtrl::Pop.md).  
+ To immediately remove a tool tip window, call the [Pop](../mfc/reference/ctooltipctrl-class.md#pop) member function.  
   
-## Vedere anche  
- [Utilizzo di CToolTipCtrl](../mfc/using-ctooltipctrl.md)   
- [Controlli](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CToolTipCtrl](../mfc/using-ctooltipctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

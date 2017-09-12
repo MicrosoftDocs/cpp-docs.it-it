@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCRibbonMiniToolBar | Documenti di Microsoft
+title: CMFCRibbonMiniToolBar Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,7 +19,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCRibbonMiniToolBar class
+- CMFCRibbonMiniToolBar [MFC], IsContextMenuMode
+- CMFCRibbonMiniToolBar [MFC], IsRibbonMiniToolBar
+- CMFCRibbonMiniToolBar [MFC], SetCommands
+- CMFCRibbonMiniToolBar [MFC], Show
+- CMFCRibbonMiniToolBar [MFC], ShowWithContextMenu
 ms.assetid: 7017e963-aeaf-4fe9-b540-e15a7ed41e94
 caps.latest.revision: 24
 author: mikeblome
@@ -39,49 +43,49 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 7c69880578c0aba88a8463112f4d1e05f6032497
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 60386835a2b309fd6672091202ed052061e27368
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcribbonminitoolbar-class"></a>Classe CMFCRibbonMiniToolBar
-Implementa una barra degli strumenti popup contestuale.  
+# <a name="cmfcribbonminitoolbar-class"></a>CMFCRibbonMiniToolBar Class
+Implements a contextual popup toolbar.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Costruttori pubblici  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCRibbonMiniToolBar::CMFCRibbonMiniToolBar`|Costruttore predefinito.|  
-|`CMFCRibbonMiniToolBar::~CMFCRibbonMiniToolBar`|Distruttore.|  
+|`CMFCRibbonMiniToolBar::CMFCRibbonMiniToolBar`|Default constructor.|  
+|`CMFCRibbonMiniToolBar::~CMFCRibbonMiniToolBar`|Destructor.|  
   
-### <a name="public-methods"></a>Metodi pubblici  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCRibbonMiniToolBar::CreateObject`|Usato dal framework per creare un'istanza dinamica di questo tipo di classe.|  
-|`CMFCRibbonMiniToolBar::GetThisClass`|Utilizzato dal framework per ottenere un puntatore al [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) oggetto associato a questo tipo di classe.|  
+|`CMFCRibbonMiniToolBar::CreateObject`|Used by the framework to create a dynamic instance of this class type.|  
+|`CMFCRibbonMiniToolBar::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
 |[CMFCRibbonMiniToolBar::IsContextMenuMode](#iscontextmenumode)||  
-|[CMFCRibbonMiniToolBar::IsRibbonMiniToolBar](#isribbonminitoolbar)|Esegue l'override di `CMFCPopupMenu::IsRibbonMiniToolBar`.|  
-|[CMFCRibbonMiniToolBar::SetCommands](#setcommands)|Imposta l'elenco di comandi da visualizzare sulla barra degli strumenti.|  
-|[CMFCRibbonMiniToolBar::Show](#show)|Visualizza la barra di formattazione rapida in coordinate dello schermo specificate.|  
-|[CMFCRibbonMiniToolBar::ShowWithContextMenu](#showwithcontextmenu)|Visualizza la barra di formattazione rapida con un menu di scelta rapida.|  
+|[CMFCRibbonMiniToolBar::IsRibbonMiniToolBar](#isribbonminitoolbar)|(Overrides `CMFCPopupMenu::IsRibbonMiniToolBar`.)|  
+|[CMFCRibbonMiniToolBar::SetCommands](#setcommands)|Sets the list of commands to be displayed on the toolbar.|  
+|[CMFCRibbonMiniToolBar::Show](#show)|Displays the mini toolbar at the specified screen coordinates.|  
+|[CMFCRibbonMiniToolBar::ShowWithContextMenu](#showwithcontextmenu)|Displays the mini toolbar together with a context menu.|  
   
-## <a name="remarks"></a>Note  
- La barra di formattazione rapida viene in genere visualizzata dopo che l'utente seleziona un oggetto in un documento. Ad esempio, quando l'utente seleziona un blocco di testo in un programma di elaborazione, l'applicazione visualizza una barra di formattazione rapida che contiene i comandi di formattazione del testo.  
+## <a name="remarks"></a>Remarks  
+ The mini toolbar is typically displayed after the user selects an object in a document. For example, after the user selects a block of text in a word processing program, the application displays a mini toolbar that contains text formatting commands.  
   
- La barra di formattazione rapida diventa trasparente quando il puntatore del mouse è fuori dei limiti della barra di formattazione rapida.  
+ The mini toolbar becomes transparent when the mouse pointer is out of the bounds of the mini toolbar.  
   
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -98,11 +102,11 @@ class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu
   
  [CMFCRibbonMiniToolBar](../../mfc/reference/cmfcribbonminitoolbar-class.md)  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** afxRibbonMiniToolBar.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxRibbonMiniToolBar.h  
   
-##  <a name="setcommands"></a>CMFCRibbonMiniToolBar::SetCommands  
- Imposta l'elenco di comandi da visualizzare sulla barra degli strumenti.  
+##  <a name="setcommands"></a>  CMFCRibbonMiniToolBar::SetCommands  
+ Sets the list of commands to be displayed on the toolbar.  
   
 ```  
 void SetCommands(
@@ -110,23 +114,23 @@ void SetCommands(
     const CList<UINT,UINT>& lstCommands);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pRibbonBar`  
- La barra multifunzione che la barra Cerca i pulsanti da visualizzare.  
+ The ribbon bar that the mini toolbar searches for the buttons to display.  
   
  [in] `lstCommands`  
- L'elenco dei comandi da visualizzare nella barra di formattazione rapida. Tutte le categorie della barra multifunzione vengono eseguita la ricerca per trovare i pulsanti associati.  
+ The list of commands to be displayed on the mini toolbar. All ribbon categories are searched to find the associated buttons.  
   
-### <a name="remarks"></a>Note  
- Utilizzare questa funzione per impostare l'elenco dei comandi da visualizzare nella barra di formattazione rapida.  
+### <a name="remarks"></a>Remarks  
+ Use this function to set the list of commands to be displayed in the mini toolbar.  
   
-### <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il `SetCommands` metodo la `CMFCRibbonMiniToolBar` classe. Questo frammento di codice fa parte di [esempio MS Office 2007 Demo](../../visual-cpp-samples.md).  
+### <a name="example"></a>Example  
+ The following example demonstrates how to use the `SetCommands` method of the `CMFCRibbonMiniToolBar` class. This code snippet is part of the [MS Office 2007 Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[9 NVC_MFC_MSOffice2007Demo](../../mfc/reference/codesnippet/cpp/cmfcribbonminitoolbar-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_MSOffice2007Demo#9](../../mfc/reference/codesnippet/cpp/cmfcribbonminitoolbar-class_1.cpp)]  
   
-##  <a name="show"></a>CMFCRibbonMiniToolBar::Show  
- Visualizza la barra di formattazione rapida in coordinate dello schermo specificate.  
+##  <a name="show"></a>  CMFCRibbonMiniToolBar::Show  
+ Displays the mini toolbar at the specified screen coordinates.  
   
 ```  
 BOOL Show(
@@ -134,18 +138,18 @@ BOOL Show(
     int y);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `x`  
- Specifica la posizione orizzontale della barra di formattazione rapida nelle coordinate dello schermo.  
+ Specifies the horizontal position of the mini toolbar in screen coordinates.  
   
  [in] `y`  
- Specifica la posizione verticale della barra di formattazione rapida nelle coordinate dello schermo.  
+ Specifies the vertical position of the mini toolbar in screen coordinates.  
   
-### <a name="return-value"></a>Valore restituito  
- `TRUE`Se la barra è stata visualizzata correttamente. in caso contrario, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the mini toolbar was displayed successfully; otherwise, `FALSE`.  
   
-##  <a name="showwithcontextmenu"></a>CMFCRibbonMiniToolBar::ShowWithContextMenu  
- Visualizza la barra di formattazione rapida con un menu di scelta rapida.  
+##  <a name="showwithcontextmenu"></a>  CMFCRibbonMiniToolBar::ShowWithContextMenu  
+ Displays the mini toolbar together with a context menu.  
   
 ```  
 BOOL ShowWithContextMenu(
@@ -155,48 +159,48 @@ BOOL ShowWithContextMenu(
     CWnd* pWndOwner);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `x`  
- Specifica la posizione orizzontale del menu di scelta rapida nelle coordinate dello schermo.  
+ Specifies the horizontal position of the context menu in screen coordinates.  
   
  [in] `y`  
- Specifica la posizione verticale del menu di scelta rapida nelle coordinate dello schermo.  
+ Specifies the vertical position of the context menu in screen coordinates.  
   
  [in] `uiMenuResID`  
- Specifica l'ID di risorsa di menu di scelta rapida per la visualizzazione.  
+ Specifies the resource ID of the context menu to display.  
   
  [in] `pWndOwner`  
- Identifica la finestra che riceve messaggi dal menu di scelta rapida.  
+ Identifies the window which receives messages from the context menu.  
   
-### <a name="return-value"></a>Valore restituito  
- `TRUE`Se il menu di scelta rapida è stato visualizzato correttamente. in caso contrario, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the context menu was displayed successfully; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Note  
- Utilizzare questa funzione per visualizzare una barra degli strumenti mini dotato di un menu di scelta rapida. Menu di scelta rapida è posizionato 15 pixel sotto la barra.  
+### <a name="remarks"></a>Remarks  
+ Use this function to display a mini toolbar that has a context menu. The context menu is positioned 15 pixels below the mini toolbar.  
   
-##  <a name="iscontextmenumode"></a>CMFCRibbonMiniToolBar::IsContextMenuMode  
+##  <a name="iscontextmenumode"></a>  CMFCRibbonMiniToolBar::IsContextMenuMode  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
 BOOL IsContextMenuMode() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isribbonminitoolbar"></a>CMFCRibbonMiniToolBar::IsRibbonMiniToolBar  
+##  <a name="isribbonminitoolbar"></a>  CMFCRibbonMiniToolBar::IsRibbonMiniToolBar  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
 virtual BOOL IsRibbonMiniToolBar() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>Vedere anche  
- [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
- [Classi](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)
 

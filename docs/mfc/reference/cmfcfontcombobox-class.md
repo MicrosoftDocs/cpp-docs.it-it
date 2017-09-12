@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCFontComboBox | Documenti di Microsoft
+title: CMFCFontComboBox Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,11 +19,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCFontComboBox::DrawItem method
-- CMFCFontComboBox::PreTranslateMessage method
-- CMFCFontComboBox::MeasureItem method
-- CMFCFontComboBox class
-- CMFCFontComboBox::CompareItem method
+- CMFCFontComboBox [MFC], CMFCFontComboBox
+- CMFCFontComboBox [MFC], GetSelFont
+- CMFCFontComboBox [MFC], SelectFont
+- CMFCFontComboBox [MFC], Setup
+- CMFCFontComboBox [MFC], m_bDrawUsingFont
 ms.assetid: 9a53fb0c-7b45-486d-8187-2a4c723d9fbb
 caps.latest.revision: 29
 author: mikeblome
@@ -43,53 +43,53 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 1252f5ca102637e70cc384afd723464aec4144b4
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dd8301564b5e28a4473184eb257879bc6ae7dd3b
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcfontcombobox-class"></a>Classe CMFCFontComboBox
-La `CMFCFontComboBox` classe crea un controllo casella combinata che contiene un elenco di tipi di carattere.  
+# <a name="cmfcfontcombobox-class"></a>CMFCFontComboBox Class
+The `CMFCFontComboBox` class creates a combo box control that contains a list of fonts.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCFontComboBox : public CComboBox  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Costruttori pubblici  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCFontComboBox::CMFCFontComboBox](#cmfcfontcombobox)|Costruisce un oggetto `CMFCFontComboBox`.|  
-|`CMFCFontComboBox::~CMFCFontComboBox`|Distruttore.|  
+|[CMFCFontComboBox::CMFCFontComboBox](#cmfcfontcombobox)|Constructs a `CMFCFontComboBox` object.|  
+|`CMFCFontComboBox::~CMFCFontComboBox`|Destructor.|  
   
-### <a name="public-methods"></a>Metodi pubblici  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCFontComboBox::CompareItem`|Chiamato dal framework per determinare la posizione relativa di un nuovo elemento nella casella di elenco ordinato del controllo della casella combinata tipo di carattere corrente. (Esegue l'override di [CComboBox::CompareItem](../../mfc/reference/ccombobox-class.md#compareitem).)|  
-|`CMFCFontComboBox::DrawItem`|Chiamato dal framework per disegnare un elemento specificato nel controllo casella combinata tipo di carattere corrente. (Esegue l'override di [CComboBox::DrawItem](../../mfc/reference/ccombobox-class.md#drawitem).)|  
-|[CMFCFontComboBox::GetSelFont](#getselfont)|Recupera le informazioni sul tipo di carattere attualmente selezionato.|  
-|`CMFCFontComboBox::MeasureItem`|Chiamato dal framework per informare delle dimensioni della casella di riepilogo nel controllo casella combinata tipo di carattere corrente. (Esegue l'override di [CComboBox::MeasureItem](../../mfc/reference/ccombobox-class.md#measureitem).)|  
-|`CMFCFontComboBox::PreTranslateMessage`|Converte i messaggi della finestra prima che vengano inviati per il [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funzioni di Windows. (Esegue l'override di [CWnd:: PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
-|[CMFCFontComboBox::SelectFont](#selectfont)|Seleziona il tipo di carattere che corrisponde ai criteri specificati dalla casella combinata tipo di carattere.|  
-|[CMFCFontComboBox::Setup](#setup)|Inizializza l'elenco di elementi nella casella combinata tipo di carattere.|  
+|`CMFCFontComboBox::CompareItem`|Called by the framework to determine the relative position of a new item in the sorted list box of the current font combo box control. (Overrides [CComboBox::CompareItem](../../mfc/reference/ccombobox-class.md#compareitem).)|  
+|`CMFCFontComboBox::DrawItem`|Called by the framework to draw a specified item in the current font combo box control. (Overrides [CComboBox::DrawItem](../../mfc/reference/ccombobox-class.md#drawitem).)|  
+|[CMFCFontComboBox::GetSelFont](#getselfont)|Retrieves information about the currently selected font.|  
+|`CMFCFontComboBox::MeasureItem`|Called by the framework to inform Windows of the dimensions of the list box in the current font combo box control. (Overrides [CComboBox::MeasureItem](../../mfc/reference/ccombobox-class.md#measureitem).)|  
+|`CMFCFontComboBox::PreTranslateMessage`|Translates window messages before they are dispatched to the [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) and [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows functions. (Overrides [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|[CMFCFontComboBox::SelectFont](#selectfont)|Selects the font that matches the specified criteria from the font combo box.|  
+|[CMFCFontComboBox::Setup](#setup)|Initializes the list of items in the font combo box.|  
   
-### <a name="data-members"></a>Membri di dati  
+### <a name="data-members"></a>Data Members  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCFontComboBox::m_bDrawUsingFont](#m_bdrawusingfont)|Indica il tipo di carattere da utilizzare per disegnare le etichette degli elementi nella casella combinata tipo di carattere corrente per il framework.|  
+|[CMFCFontComboBox::m_bDrawUsingFont](#m_bdrawusingfont)|Indicates to the framework which font to use to draw the item labels in the current font combo box.|  
   
-## <a name="remarks"></a>Note  
- Per utilizzare un `CMFCFontComboBox` oggetto in una finestra di dialogo, aggiungere un `CMFCFontComboBox` variabile per la classe di finestra di dialogo. Quindi nel `OnInitDialog` metodo della classe della finestra di dialogo, chiamata di [CMFCFontComboBox::Setup](#setup) metodo per inizializzare l'elenco di elementi nel controllo casella combinata.  
+## <a name="remarks"></a>Remarks  
+ To use a `CMFCFontComboBox` object in a dialog box, add a `CMFCFontComboBox` variable to the dialog box class. Then in the `OnInitDialog` method of the dialog box class, call the [CMFCFontComboBox::Setup](#setup) method to initialize the list of items in the combo box control.  
   
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -100,44 +100,44 @@ class CMFCFontComboBox : public CComboBox
   
  [CMFCFontComboBox](../../mfc/reference/cmfcfontcombobox-class.md)  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** afxfontcombobox.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxfontcombobox.h  
   
-##  <a name="cmfcfontcombobox"></a>CMFCFontComboBox::CMFCFontComboBox  
- Costruisce un oggetto `CMFCFontComboBox`.  
+##  <a name="cmfcfontcombobox"></a>  CMFCFontComboBox::CMFCFontComboBox  
+ Constructs a `CMFCFontComboBox` object.  
   
 ```  
 CMFCFontComboBox();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getselfont"></a>CMFCFontComboBox::GetSelFont  
- Recupera le informazioni sul tipo di carattere attualmente selezionato.  
+##  <a name="getselfont"></a>  CMFCFontComboBox::GetSelFont  
+ Retrieves information about the currently selected font.  
   
 ```  
 CMFCFontInfo* GetSelFont() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Un puntatore a [CMFCFontInfo classe](../../mfc/reference/cmfcfontinfo-class.md) oggetto che descrive un tipo di carattere. Può essere `NULL` se nessun tipo di carattere è selezionata nella casella combinata.  
+### <a name="return-value"></a>Return Value  
+ A pointer to [CMFCFontInfo Class](../../mfc/reference/cmfcfontinfo-class.md) object that describes a font. It can be `NULL` if no font is selected in the combo box.  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="m_bdrawusingfont"></a>CMFCFontComboBox::m_bDrawUsingFont  
- Indica il tipo di carattere da utilizzare per disegnare le etichette degli elementi nella casella combinata tipo di carattere corrente per il framework.  
+##  <a name="m_bdrawusingfont"></a>  CMFCFontComboBox::m_bDrawUsingFont  
+ Indicates to the framework which font to use to draw the item labels in the current font combo box.  
   
 ```  
 static BOOL m_bDrawUsingFont;  
 ```  
   
-### <a name="remarks"></a>Note  
- Impostare il membro `TRUE` per indicare al framework di utilizzare lo stesso carattere per disegnare l'etichetta di ogni elemento. Impostare il membro `FALSE` per indirizzare il framework per disegnare l'etichetta di ogni elemento con il tipo di carattere il cui nome è lo stesso come etichetta. Il valore predefinito di questo membro è `FALSE`.  
+### <a name="remarks"></a>Remarks  
+ Set this member to `TRUE` to direct the framework to use the same font to draw each item label. Set this member to `FALSE` to direct the framework to draw each item label with the font whose name is the same as the label. The default value of this member is `FALSE`.  
   
-##  <a name="selectfont"></a>CMFCFontComboBox::SelectFont  
- Seleziona il tipo di carattere che corrisponde ai criteri specificati dalla casella combinata tipo di carattere.  
+##  <a name="selectfont"></a>  CMFCFontComboBox::SelectFont  
+ Selects the font that matches the specified criteria from the font combo box.  
   
 ```  
 BOOL SelectFont(CMFCFontInfo* pDesc);
@@ -148,30 +148,30 @@ BOOL SelectFont(
     BYTE nCharSet=DEFAULT_CHARSET);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDesc`  
- Punta a un oggetto di descrizione del tipo di carattere.  
+ Points to a font description object.  
   
  [in] `lpszName`  
- Specifica un nome di carattere.  
+ Specifies a font name.  
   
  [in] `nCharSet`  
- Specifica un set di caratteri. Il valore predefinito è DEFAULT_CHARSET. Per ulteriori informazioni, vedere il `lfCharSet` membro del [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struttura.  
+ Specifies a character set. The default value is DEFAULT_CHARSET. For more information, see the `lfCharSet` member of the [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) structure.  
   
-### <a name="return-value"></a>Valore restituito  
- `TRUE`Se un elemento nella casella combinata tipo di carattere corrisponde l'oggetto descrizione tipo di carattere specificata o nome del tipo di carattere e charset; in caso contrario, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if an item in the font combo box matches the specified font description object or font name and charset; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Note  
- Utilizzare questo metodo per selezionare e scorrere fino all'elemento nella casella combinata tipo di carattere che corrisponde al tipo di carattere specificata.  
+### <a name="remarks"></a>Remarks  
+ Use this method to select and scroll to the item in the font combo box that corresponds to the specified font.  
   
-### <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il `SelectFont` metodo la `CMFCFontComboBox` classe. Questo esempio fa parte di [esempio nuovi controlli](../../visual-cpp-samples.md).  
+### <a name="example"></a>Example  
+ The following example demonstrates how to use the `SelectFont` method in the `CMFCFontComboBox` class. This example is part of the [New Controls sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_NewControls&#34;](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_1.h)]  
-[!code-cpp[NVC_MFC_NewControls&#35;](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_NewControls#34](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_1.h)]  
+[!code-cpp[NVC_MFC_NewControls#35](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_2.cpp)]  
   
-##  <a name="setup"></a>CMFCFontComboBox::Setup  
- Inizializza l'elenco di elementi nella casella combinata tipo di carattere.  
+##  <a name="setup"></a>  CMFCFontComboBox::Setup  
+ Initializes the list of items in the font combo box.  
   
 ```  
 BOOL Setup(
@@ -180,31 +180,31 @@ BOOL Setup(
     BYTE nPitchAndFamily=DEFAULT_PITCH);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `nFontType`  
- Specifica il tipo di carattere. Il valore predefinito è la combinazione bit per bit (OR) di DEVICE_FONTTYPE, RASTER_FONTTYPE e TRUETYPE_FONTTYPE.  
+ Specifies the font type. The default value is the bitwise combination (OR) of DEVICE_FONTTYPE, RASTER_FONTTYPE, and TRUETYPE_FONTTYPE.  
   
  [in] `nCharSet`  
- Specifica il set di caratteri di tipo di carattere. Il valore predefinito è DEFAULT_CHARSET.  
+ Specifies the font character set. The default value is DEFAULT_CHARSET.  
   
  [in] `nPitchAndFamily`  
- Specifica il tono di carattere e la famiglia. Il valore predefinito è DEFAULT_PITCH.  
+ Specifies the font pitch and family. The default value is DEFAULT_PITCH.  
   
-### <a name="return-value"></a>Valore restituito  
- `TRUE`Se la casella combinata tipo di carattere è stata inizializzata correttamente. in caso contrario, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the font combo box was initialized successfully; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Note  
- Questo metodo inizializza la casella combinata tipo di carattere enumerando i tipi di carattere attualmente installati che corrispondono ai parametri specificati e l'inserimento di tali nomi di carattere nella casella combinata tipo di carattere.  
+### <a name="remarks"></a>Remarks  
+ This method initializes the font combo box by enumerating the currently installed fonts that match the specified parameters and inserting those font names in the font combo box.  
   
-### <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il `Setup` metodo la `CMFCFontComboBox` classe. Questo esempio fa parte di [esempio nuovi controlli](../../visual-cpp-samples.md).  
+### <a name="example"></a>Example  
+ The following example demonstrates how to use the `Setup` method in the `CMFCFontComboBox` class. This example is part of the [New Controls sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_NewControls&#34;](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_1.h)]  
-[!code-cpp[NVC_MFC_NewControls&#36;](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_3.cpp)]  
+ [!code-cpp[NVC_MFC_NewControls#34](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_1.h)]  
+[!code-cpp[NVC_MFC_NewControls#36](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_3.cpp)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
- [Classi](../../mfc/reference/mfc-classes.md)   
- [Classe CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md)   
- [Classe CMFCFontInfo](../../mfc/reference/cmfcfontinfo-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCToolBarFontComboBox Class](../../mfc/reference/cmfctoolbarfontcombobox-class.md)   
+ [CMFCFontInfo Class](../../mfc/reference/cmfcfontinfo-class.md)
 

@@ -1,36 +1,55 @@
 ---
-title: "Fornire supporto di trascinamento per gli elementi di intestazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CHeaderCtrl (classe), supporto del trascinamento della selezione"
-  - "notifiche HDN_"
-  - "HDS_DRAGDROP (stile)"
-  - "elementi di intestazione in controlli intestazione"
+title: Providing Drag-and-Drop Support for Header Items | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- HDS_DRAGDROP style
+- header items in header controls
+- CHeaderCtrl class [MFC], drag and drop support
+- HDN_ notifications [MFC]
 ms.assetid: 93a152ec-804f-488f-b260-b3a438d0dc0f
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Fornire supporto di trascinamento per gli elementi di intestazione
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c8f65b9cbc240523ba7dd8e615a83e16a0ccab83
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Per fornire il supporto di trascinamento della selezione alle voci di intestazione, specificare lo stile di `HDS_DRAGDROP`.  Trascinare il supporto per le voci di intestazione fornisce all'utente la possibilità di riordinare le voci di intestazione di un controllo intestazione.  Il comportamento predefinito fornisce un'immagine di trascinamento semitrasparente voce di intestazione trascinati e di un indicatore visivo della nuova posizione, se la voce di intestazione non viene rilasciato.  
+---
+# <a name="providing-drag-and-drop-support-for-header-items"></a>Providing Drag-and-Drop Support for Header Items
+To provide drag-and-drop support for header items, specify the `HDS_DRAGDROP` style. Drag-and-drop support for header items gives the user the ability to reorder the header items of a header control. The default behavior provides a semitransparent drag image of the header item being dragged and a visual indicator of the new position, if the header item is dropped.  
   
- Come con funzionalità di trascinamento della selezione normale, è possibile estendere il pulsante ripristina il comportamento di trascinamento della selezione gestendo le notifiche di **HDN\_ENDDRAG** e di **HDN\_BEGINDRAG**.  È inoltre possibile personalizzare l'aspetto dell'immagine di trascinamento eseguire l'override della funzione membro di [CHeaderCtrl::CreateDragImage](../Topic/CHeaderCtrl::CreateDragImage.md).  
+ As with common drag-and-drop functionality, you can extend the default drag-and-drop behavior by handling the **HDN_BEGINDRAG** and **HDN_ENDDRAG** notifications. You can also customize the appearance of the drag image by overriding the [CHeaderCtrl::CreateDragImage](../mfc/reference/cheaderctrl-class.md#createdragimage) member function.  
   
 > [!NOTE]
->  Se viene fornito il supporto trascinamento di un controllo intestazione incorporato in un controllo elenco, vedere la sezione estesa di stile nell'argomento di [Modificare gli stili di controllo list](../mfc/changing-list-control-styles.md).  
+>  If you are providing drag-and-drop support for an embedded header control in a list control, see the Extended Style section in the [Changing List Control Styles](../mfc/changing-list-control-styles.md) topic.  
   
-## Vedere anche  
- [Utilizzo di CHeaderCtrl](../mfc/using-cheaderctrl.md)
+## <a name="see-also"></a>See Also  
+ [Using CHeaderCtrl](../mfc/using-cheaderctrl.md)
+
+

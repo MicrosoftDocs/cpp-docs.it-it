@@ -1,73 +1,90 @@
 ---
-title: "Contenitore documenti attivi | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "contenitori documenti attivi [C++]"
-  - "documenti attivi [C++], contenitori"
-  - "contenitori [C++], documento attivo"
-  - "MFC COM [C++], contenimento dei documenti attivi"
+title: Active Document Containers | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- active documents [MFC], containers
+- active document containers [MFC]
+- containers [MFC], active document
+- MFC COM, active document containment
 ms.assetid: ba20183a-8b4c-440f-9031-e5fcc41d391b
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Contenitore documenti attivi
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9a6d09ae7dc4e81051c8ea78106f8327a1c7103b
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Un contenitore di documenti attivi, ad esempio il raccoglitore Microsoft Office o Internet Explorer, è possibile utilizzare diversi documenti di tipi di applicazione diversi in singolo frame \(anziché forzarvi per creare e utilizzare i frame di applicazione più per ogni tipo di documento\).  
+---
+# <a name="active-document-containers"></a>Active Document Containers
+An active document container, such as Microsoft Office Binder or Internet Explorer, allows you to work with several documents of different application types within a single frame (instead of forcing you to create and use multiple application frames for each document type).  
   
- MFC fornisce un supporto completo per i contenitori di documenti attivi nella classe di `COleDocObjectItem`.  È possibile utilizzare la Creazione guidata applicazione MFC per creare un contenitore di documenti attivi selezionando la casella di controllo **Contenitore documento attivo** nella pagina di **Supporto documenti compositi** la Creazione guidata applicazione MFC.  Per ulteriori informazioni, vedere [Creare un'applicazione contenitore di documenti attivi](../mfc/creating-an-active-document-container-application.md).  
+ MFC provides full support for active document containers in the `COleDocObjectItem` class. You can use the MFC Application Wizard to create an active document container by selecting the **Active document container** check box on the **Compound Document Support** page of the MFC Application Wizard. For more information, see [Creating an Active Document Container Application](../mfc/creating-an-active-document-container-application.md).  
   
- Per ulteriori informazioni sui contenitori di documenti attivi, vedere:  
+ For more information about active document containers, see:  
   
--   [Requisiti del contenitore](#container_requirements)  
+-   [Container Requirements](#container_requirements)  
   
--   [Oggetti sito del documento](#document_site_objects)  
+-   [Document Site Objects](#document_site_objects)  
   
--   [Oggetti visivi del sito](#view_site_objects)  
+-   [View Site Objects](#view_site_objects)  
   
--   [Oggetto frame](#frame_object)  
+-   [Frame Object](#frame_object)  
   
--   [L'unione di menu?](../mfc/help-menu-merging.md)  
+-   [Help Menu Merging](../mfc/help-menu-merging.md)  
   
--   [Stampa a livello di codice](../mfc/programmatic-printing.md)  
+-   [Programmatic Printing](../mfc/programmatic-printing.md)  
   
--   [Destinazioni comando](../mfc/message-handling-and-command-targets.md)  
+-   [Command Targets](../mfc/message-handling-and-command-targets.md)  
   
-##  <a name="container_requirements"></a> Requisiti del contenitore  
- Il supporto del documento attivo in un contenitore di documenti attivi implica più solo le implementazioni: è necessario inoltre la conoscenza di utilizzare le interfacce di un oggetto contenuto.  Lo stesso vale per le estensioni del documento attivo, in cui il contenitore inoltre necessario sapere come utilizzare tali interfacce nei documenti attivi di estensione stessi.  
+##  <a name="container_requirements"></a> Container Requirements  
+ Active document support in an active document container implies more than just interface implementations: it also requires knowledge of using the interfaces of a contained object. The same applies to active document extensions, where the container must also know how to use those extension interfaces on the active documents themselves.  
   
- Un contenitore di documenti attivi che integra i documenti attivi deve:  
+ An active document container that integrates active documents must:  
   
--   Sia in grado di archiviazione dell'oggetto di gestione tramite l'interfaccia di **IPersistStorage** , ovvero, deve fornire un'istanza di `IStorage` in ogni documento attivo.  
+-   Be capable of handling object storage through the **IPersistStorage** interface, that is, it must provide an `IStorage` instance to each active document.  
   
--   Supporta la base che incorpora le funzionalità dei documenti OLE, necessitanti "il sito" di oggetti \(uno per documento o incorporare\) che utilizza **IOleClientSite**  e **IAdviseSink**.  
+-   Support the basic embedding features of OLE documents, necessitating "site" objects (one per document or embedding) that implement **IOleClientSite** and **IAdviseSink**.  
   
--   Supporta l'attivazione sul posto di oggetti incorporati o documenti attivi.  Gli oggetti sito del contenitore devono implementare `IOleInPlaceSite` e l'oggetto frame del contenitore deve fornire **IOleInPlaceFrame**.  
+-   Support in-place activation of embedded objects or active documents. The container's site objects must implement `IOleInPlaceSite` and the container's frame object must provide **IOleInPlaceFrame**.  
   
--   Supporta le estensioni di documenti attivi implementando `IOleDocumentSite` per fornire un meccanismo per il contenitore parlino con documento.  Facoltativamente, il contenitore può implementare interfacce `IOleCommandTarget` e `IContinueCallback` del documento attivo per accettare i controlli semplici quali stampa o salvataggio.  
+-   Support the active documents' extensions by implementing `IOleDocumentSite` to provide the mechanism for the container to talk to the document. Optionally, the container can implement the active document interfaces `IOleCommandTarget` and `IContinueCallback` to pick up simple commands such as printing or saving.  
   
- L'oggetto frame, gli oggetti visualizzazione e un oggetto contenitore è possibile implementare **IOleCommandTarget** per supportare la spedizione dei controlli sicuri, come illustrato in [Destinazioni comando](../mfc/message-handling-and-command-targets.md).  La visualizzazione e gli oggetti contenitore è anche possibile implementare `IPrint` e `IContinueCallback`, per supportare la stampa a livello di codice, come illustrato in [Stampa a livello di codice](../mfc/programmatic-printing.md).  
+ The frame object, the view objects, and the container object can optionally implement **IOleCommandTarget** to support the dispatch of certain commands, as discussed in [Command Targets](../mfc/message-handling-and-command-targets.md). View and container objects can also optionally implement `IPrint` and `IContinueCallback`, to support programmatic printing, as discussed in [Programmatic Printing](../mfc/programmatic-printing.md).  
   
- Nella figura seguente vengono illustrate le relazioni tra concettuali un contenitore e i relativi componenti \(a sinistra\) e il documento attivo e i relativi punti di vista \(a destra\).  Il documento attivo gestisce la memoria e dati e visualizzazioni o facoltativamente stampa di visualizzazione di dati.  Le interfacce in grassetto sono quelle necessarie per la partecipazione del documento attivo; tali grassetto e corsivo sono facoltativi.  Tutte le altre interfacce necessarie.  
+ The following figure shows the conceptual relationships between a container and its components (at left), and the active document and its views (at right). The active document manages storage and data, and the view displays or optionally prints that data. Interfaces in bold are those required for active document participation; those bold and italic are optional. All other interfaces are required.  
   
- ![Interfacce del contenitore documenti attivo](../mfc/media/vc37gj1.png "vc37gj1")  
+ ![Active document container interfaces](../mfc/media/vc37gj1.gif "vc37gj1")  
   
- Un documento che supporta un solo punto di vista può implementare sia i componenti del documento di visualizzazione \(ovvero le interfacce corrispondenti\) in una singola classe concreta.  Inoltre, un sito del contenitore che solo i supporti una visualizzazione alla volta possono combinare il sito del documento e il sito di visualizzazione in un'unica classe concreta del sito.  L'oggetto frame del contenitore, tuttavia, deve rimanere distinto e la parte del documento client solo è inclusa qui per assegnare un'immagine completa dell'architettura; non è influenzata dall'architettura di contenimento del documento attivo.  
+ A document that supports only a single view can implement both the view and document components (that is, their corresponding interfaces) on a single concrete class. In addition, a container site that only supports one view at a time can combine the document site and the view site into a single concrete site class. The container's frame object, however, must remain distinct, and the container's document component is merely included here to give a complete picture of the architecture; it is not affected by the active document containment architecture.  
   
-##  <a name="document_site_objects"></a> Oggetti sito del documento  
- Nell'architettura di contenimento del documento attivo, un sito del documento è analogo a un oggetto client del sito nei documenti OLE con l'aggiunta dell'interfaccia di `IOleDocument` :  
+##  <a name="document_site_objects"></a> Document Site Objects  
+ In the active document containment architecture, a document site is the same as a client site object in OLE Documents with the addition of the `IOleDocument` interface:  
   
  `interface IOleDocumentSite : IUnknown`  
   
@@ -77,17 +94,19 @@ Un contenitore di documenti attivi, ad esempio il raccoglitore Microsoft Office 
   
  `}`  
   
- Il sito del documento è concettualmente il contenitore per uno o più oggetti "sito di visualizzazione".  Ogni oggetto visualizzazione del sito è associato a singoli oggetti visualizzazione del documento gestito dal sito del documento.  Se il contenitore supporta un solo punto di vista del sito del documento, pertanto può implementare il sito del documento e il sito di visualizzazione con una sola classe concreta.  
+ The document site is conceptually the container for one or more "view site" objects. Each view site object is associated with individual view objects of the document managed by the document site. If the container only supports a single view per document site, then it can implement the document site and the view site with a single concrete class.  
   
-##  <a name="view_site_objects"></a> Oggetti visivi del sito  
- L'oggetto di visualizzazione del sito di un contenitore gestisce lo spazio di visualizzazione per una determinata visualizzazione di un documento.  Oltre a supportare l'interfaccia standard di `IOleInPlaceSite`, un sito di visualizzazione implementa anche in genere `IContinueCallback` per il controllo di stampa a livello di codice. Si noti che l'oggetto visualizzato non eseguire una query per `IContinueCallback` mai in modo da essere effettivamente essere implementato su qualsiasi oggetto che il contenitore long.\)  
+##  <a name="view_site_objects"></a> View Site Objects  
+ A container's view site object manages the display space for a particular view of a document. In addition to supporting the standard `IOleInPlaceSite` interface, a view site also generally implements `IContinueCallback` for programmatic printing control. (Note that the view object never queries for `IContinueCallback` so it can actually be implemented on any object the container desires.)  
   
- Un contenitore che supporta più visualizzazioni deve essere in grado di creare oggetti del sito di visualizzazione multipla all'interno del sito del documento.  In questo modo ogni visualizzazione con i servizi separati deactivate e di attivazione direttamente con `IOleInPlaceSite`.  
+ A container that supports multiple views must be able to create multiple view site objects within the document site. This provides each view with separate activation and deactivation services as provided through `IOleInPlaceSite`.  
   
-##  <a name="frame_object"></a> Oggetto frame  
- L'oggetto frame del contenitore, è in genere, lo stesso frame utilizzato per l'attivazione sul posto nei documenti OLE, ovvero, tale che gestisce la negoziazione della barra degli strumenti e di menu.  Un oggetto visualizzazione può accedere a questo oggetto frame con **IOleInPlaceSite::GetWindowContext**, che fornisce inoltre l'accesso all'oggetto contenitore che rappresenta il documento contenitore \(in grado di gestire la negoziazione a livello del riquadro della barra degli strumenti e l'enumerazione contenuto dell'oggetto\).  
+##  <a name="frame_object"></a> Frame Object  
+ The container's frame object is, for the most part, the same frame that is used for in-place activation in OLE Documents, that is, the one that handles menu and toolbar negotiation. A view object has access to this frame object through **IOleInPlaceSite::GetWindowContext**, which also provides access to the container object representing the container document (which can handle pane-level toolbar negotiation and contained object enumeration).  
   
- Un contenitore di documenti attivi può aumentare il frame aggiungendo `IOleCommandTarget`.  Ciò consente ai controlli di ricezione che si verificano nell'interfaccia utente del documento attivo nello stesso modo in cui tale interfaccia può consentire a un contenitore inviare gli stessi controlli \(come **File New**, **Apri**, **Salva come**, **Stampa**; **Modifica copia**, **Incolla**, **Annulla** e altre\) a un documento attivo.  Per ulteriori informazioni, vedere [Destinazioni comando](../mfc/message-handling-and-command-targets.md).  
+ An active document container can augment the frame by adding `IOleCommandTarget`. This allows it to receive commands that originate in the active document's user interface in the same way that this interface can allow a container to send the same commands (such as **File New**, **Open**, **Save As**, **Print**; **Edit Copy**, **Paste**, **Undo**, and others) to an active document. For more information, see [Command Targets](../mfc/message-handling-and-command-targets.md).  
   
-## Vedere anche  
- [Contenimento dei documenti attivi](../mfc/active-document-containment.md)
+## <a name="see-also"></a>See Also  
+ [Active Document Containment](../mfc/active-document-containment.md)
+
+

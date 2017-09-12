@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCToolTipInfo | Documenti di Microsoft
+title: CMFCToolTipInfo Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -27,7 +27,19 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCToolTipInfo class
+- CMFCToolTipInfo [MFC], m_bBalloonTooltip
+- CMFCToolTipInfo [MFC], m_bBoldLabel
+- CMFCToolTipInfo [MFC], m_bDrawDescription
+- CMFCToolTipInfo [MFC], m_bDrawIcon
+- CMFCToolTipInfo [MFC], m_bDrawSeparator
+- CMFCToolTipInfo [MFC], m_bRoundedCorners
+- CMFCToolTipInfo [MFC], m_bVislManagerTheme
+- CMFCToolTipInfo [MFC], m_clrBorder
+- CMFCToolTipInfo [MFC], m_clrFill
+- CMFCToolTipInfo [MFC], m_clrFillGradient
+- CMFCToolTipInfo [MFC], m_clrText
+- CMFCToolTipInfo [MFC], m_nGradientAngle
+- CMFCToolTipInfo [MFC], m_nMaxDescrWidth
 ms.assetid: f9d3d7f8-1f08-4342-a7b2-683860e5d2a5
 caps.latest.revision: 27
 author: mikeblome
@@ -47,202 +59,202 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: ed15ce9f3e1abb48c0a6c4eacdf662cc2ef3f9c9
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1e489fa20aa86f2106c42d288ddd8c4f410ece7b
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfctooltipinfo-class"></a>Classe CMFCToolTipInfo
-Memorizza informazioni sull'aspetto visivo delle descrizioni comandi.  
+# <a name="cmfctooltipinfo-class"></a>CMFCToolTipInfo Class
+Stores information about the visual appearance of tooltips.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCToolTipInfo  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>Metodi pubblici  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCToolTipInfo::operator =](#operator_eq)||  
+|[CMFCToolTipInfo::operator=](#operator_eq)||  
   
-### <a name="data-members"></a>Membri di dati  
+### <a name="data-members"></a>Data Members  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCToolTipInfo::m_bBalloonTooltip](#m_bballoontooltip)|Variabile booleana che indica se la descrizione comandi ha l'aspetto di un fumetto.|  
-|[CMFCToolTipInfo::m_bBoldLabel](#m_bboldlabel)|Una variabile booleana che indica se le etichette della descrizione comandi vengono visualizzate in grassetto.|  
-|[CMFCToolTipInfo::m_bDrawDescription](#m_bdrawdescription)|Variabile booleana che indica se la descrizione comando contiene una descrizione.|  
-|[CMFCToolTipInfo::m_bDrawIcon](#m_bdrawicon)|Variabile booleana che indica se la descrizione comando contiene un'icona.|  
-|[CMFCToolTipInfo::m_bDrawSeparator](#m_bdrawseparator)|Variabile booleana che indica se viene visualizzato un separatore tra l'etichetta e la descrizione della descrizione comando.|  
-|[CMFCToolTipInfo::m_bRoundedCorners](#m_broundedcorners)|Variabile booleana che indica se la descrizione comando ha gli angoli arrotondati.|  
-|[CMFCToolTipInfo::m_bVislManagerTheme](#m_bvislmanagertheme)|Una variabile Boolean che indica se l'aspetto della descrizione comando deve essere controllata da un gestore visualizzazione (vedere [CMFCVisualManager classe](../../mfc/reference/cmfcvisualmanager-class.md)).|  
-|[CMFCToolTipInfo::m_clrBorder](#m_clrborder)|Colore del bordo della descrizione comando.|  
-|[CMFCToolTipInfo::m_clrFill](#m_clrfill)|Colore dello sfondo della descrizione comando.|  
-|[CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient)|Colore del riempimento sfumato nella descrizione comandi.|  
-|[CMFCToolTipInfo::m_clrText](#m_clrtext)|Colore del testo nella descrizione comandi.|  
-|[CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle)|Angolo del riempimento sfumato nella descrizione comandi.|  
-|[CMFCToolTipInfo::m_nMaxDescrWidth](#m_nmaxdescrwidth)|Larghezza massima possibile, in pixel, del testo nella descrizione comandi.|  
+|[CMFCToolTipInfo::m_bBalloonTooltip](#m_bballoontooltip)|A Boolean variable that indicates whether the tooltip has a balloon appearance.|  
+|[CMFCToolTipInfo::m_bBoldLabel](#m_bboldlabel)|A Boolean variable that indicates whether tooltip labels are displayed in a bold font.|  
+|[CMFCToolTipInfo::m_bDrawDescription](#m_bdrawdescription)|A Boolean variable that indicates whether the tooltip contains a description.|  
+|[CMFCToolTipInfo::m_bDrawIcon](#m_bdrawicon)|A Boolean variable that indicates whether the tooltip contains an icon.|  
+|[CMFCToolTipInfo::m_bDrawSeparator](#m_bdrawseparator)|A Boolean variable that indicates whether a separator is displayed between the tooltip label and the tooltip description.|  
+|[CMFCToolTipInfo::m_bRoundedCorners](#m_broundedcorners)|A Boolean variable that indicates whether the tooltip has rounded corners.|  
+|[CMFCToolTipInfo::m_bVislManagerTheme](#m_bvislmanagertheme)|A Boolean variable that indicates whether the appearance of the tooltip should be controlled by a visual manager (see [CMFCVisualManager Class](../../mfc/reference/cmfcvisualmanager-class.md)).|  
+|[CMFCToolTipInfo::m_clrBorder](#m_clrborder)|The color of the tooltip border.|  
+|[CMFCToolTipInfo::m_clrFill](#m_clrfill)|The color of the tooltip background.|  
+|[CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient)|The color of the gradient fill in the tooltip.|  
+|[CMFCToolTipInfo::m_clrText](#m_clrtext)|The text color in the tooltip.|  
+|[CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle)|The angle of the gradient fill in the tooltip.|  
+|[CMFCToolTipInfo::m_nMaxDescrWidth](#m_nmaxdescrwidth)|The maximum possible width, in pixels, of the description in the tooltip.|  
   
-## <a name="remarks"></a>Note  
- Utilizzare [da CMFCToolTipCtrl classe](../../mfc/reference/cmfctooltipctrl-class.md), `CMFCToolTipInfo`, e [CTooltipManager classe](../../mfc/reference/ctooltipmanager-class.md) per implementare le descrizioni comandi personalizzate nell'applicazione. Per un esempio di come utilizzare queste classi di descrizione comandi, vedere il [da CMFCToolTipCtrl classe](../../mfc/reference/cmfctooltipctrl-class.md) argomento.  
+## <a name="remarks"></a>Remarks  
+ Use [CMFCToolTipCtrl Class](../../mfc/reference/cmfctooltipctrl-class.md), `CMFCToolTipInfo`, and [CTooltipManager Class](../../mfc/reference/ctooltipmanager-class.md) together to implement customized tooltips in your application. For an example of how to use these tooltip classes, see the [CMFCToolTipCtrl Class](../../mfc/reference/cmfctooltipctrl-class.md) topic.  
   
-## <a name="example"></a>Esempio  
- L'esempio di codice seguente illustra come impostare i valori delle variabili di membro nella classe `CMFCToolTipInfo`.  
+## <a name="example"></a>Example  
+ The following example demonstrates how to set the values of the various member variables in the `CMFCToolTipInfo` class.  
   
- [!code-cpp[NVC_MFC_RibbonApp&#42;](../../mfc/reference/codesnippet/cpp/cmfctooltipinfo-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp#42](../../mfc/reference/codesnippet/cpp/cmfctooltipinfo-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md)  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** afxtooltipctrl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxtooltipctrl.h  
   
-##  <a name="m_bballoontooltip"></a>CMFCToolTipInfo::m_bBalloonTooltip  
- Specifica lo stile di visualizzazione di tutte le descrizioni comandi.  
+##  <a name="m_bballoontooltip"></a>  CMFCToolTipInfo::m_bBalloonTooltip  
+ Specifies the display style of all tooltips.  
   
 ```  
 BOOL m_bBalloonTooltip;  
 ```  
   
-### <a name="remarks"></a>Note  
- `TRUE`indica che le descrizioni comandi utilizzano lo stile del fumetto, `FALSE` indica che le descrizioni comandi utilizzano lo stile rettangolare.  
+### <a name="remarks"></a>Remarks  
+ `TRUE` indicates that tooltips use the balloon style, `FALSE` indicates that tooltips use the rectangular style.  
   
-##  <a name="m_bboldlabel"></a>CMFCToolTipInfo::m_bBoldLabel  
- Specifica se il tipo di carattere del testo della descrizione comando è in grassetto.  
+##  <a name="m_bboldlabel"></a>  CMFCToolTipInfo::m_bBoldLabel  
+ Specifies whether the font of the tooltip text is bold.  
   
 ```  
 BOOL m_bBoldLabel;  
 ```  
   
-### <a name="remarks"></a>Note  
- Impostare il membro `TRUE` per visualizzare testo della descrizione comando con il tipo di carattere grassetto o `FALSE` per visualizzare le etichette della descrizione comando con tipo di carattere non in grassetto.  
+### <a name="remarks"></a>Remarks  
+ Set this member to `TRUE` to display tooltip text with bold font, or `FALSE` to display tooltip labels with non-bold font.  
   
-##  <a name="m_bdrawdescription"></a>CMFCToolTipInfo::m_bDrawDescription  
- Specifica se ogni descrizione comando Visualizza il testo descrittivo.  
+##  <a name="m_bdrawdescription"></a>  CMFCToolTipInfo::m_bDrawDescription  
+ Specifies whether each tooltip displays description text.  
   
 ```  
 BOOL m_bDrawDescription;  
 ```  
   
-### <a name="remarks"></a>Note  
- Impostare il membro `TRUE` per visualizzare la descrizione o `FALSE` per nascondere la descrizione. È possibile specificare la descrizione in una descrizione comando chiamando [CMFCToolTipCtrl::SetDescription](../../mfc/reference/cmfctooltipctrl-class.md#setdescription)  
+### <a name="remarks"></a>Remarks  
+ Set this member to `TRUE` to display the description, or `FALSE` to hide the description. You can specify the description on a tooltip by calling [CMFCToolTipCtrl::SetDescription](../../mfc/reference/cmfctooltipctrl-class.md#setdescription)  
   
-##  <a name="m_bdrawicon"></a>CMFCToolTipInfo::m_bDrawIcon  
- Specifica se tutte le descrizioni comandi visualizzate le icone.  
+##  <a name="m_bdrawicon"></a>  CMFCToolTipInfo::m_bDrawIcon  
+ Specifies whether all tooltips display icons.  
   
 ```  
 BOOL m_bDrawIcon;  
 ```  
   
-### <a name="remarks"></a>Note  
- Impostare il membro `TRUE` per visualizzare un'icona in ciascuna descrizione comandi, o `FALSE` per visualizzare le descrizioni comandi senza icone.  
+### <a name="remarks"></a>Remarks  
+ Set this member to `TRUE` to display an icon on each tooltip, or `FALSE` to display tooltips without icons.  
   
-##  <a name="m_bdrawseparator"></a>CMFCToolTipInfo::m_bDrawSeparator  
- Specifica se ogni descrizione comando dispone di un separatore tra l'etichetta e la relativa descrizione.  
+##  <a name="m_bdrawseparator"></a>  CMFCToolTipInfo::m_bDrawSeparator  
+ Specifies whether each tooltip has a separator between its label and its description.  
   
 ```  
 BOOL m_bDrawSeparator;  
 ```  
   
-### <a name="remarks"></a>Note  
- Impostare il membro `TRUE` per visualizzare separatore tra descrizione comando etichetta e descrizione, o `FALSE` per visualizzare le descrizioni comandi senza separatori.  
+### <a name="remarks"></a>Remarks  
+ Set this member to `TRUE` to display separator between tooltip label and description, or `FALSE` to display tooltips with no separator.  
   
-##  <a name="m_broundedcorners"></a>CMFCToolTipInfo::m_bRoundedCorners  
- Specifica se tutte le descrizioni comandi hanno angoli arrotondati.  
+##  <a name="m_broundedcorners"></a>  CMFCToolTipInfo::m_bRoundedCorners  
+ Specifies whether all tooltips have rounded corners.  
   
 ```  
 BOOL m_bRoundedCorners;  
 ```  
   
-### <a name="remarks"></a>Note  
- Impostare il membro `TRUE` per visualizzare gli angoli arrotondati sulle descrizioni comandi, o `FALSE` per visualizzare gli angoli rettangolari sulle descrizioni comandi.  
+### <a name="remarks"></a>Remarks  
+ Set this member to `TRUE` to display rounded corners on tooltips, or `FALSE` to display rectangular corners on tooltips.  
   
-##  <a name="m_clrborder"></a>CMFCToolTipInfo::m_clrBorder  
- Specifica il colore dei bordi per tutte le descrizioni comandi.  
+##  <a name="m_clrborder"></a>  CMFCToolTipInfo::m_clrBorder  
+ Specifies the color of the borders on all tooltips.  
   
 ```  
 COLORREF m_clrBorder;  
 ```  
   
-##  <a name="m_clrfill"></a>CMFCToolTipInfo::m_clrFill  
- Specifica il colore di sfondo della descrizione comando.  
+##  <a name="m_clrfill"></a>  CMFCToolTipInfo::m_clrFill  
+ Specifies the color of tooltip backgrounds.  
   
 ```  
 COLORREF m_clrFill;  
 ```  
   
-### <a name="remarks"></a>Note  
- Se [CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient) è -1, il colore di sfondo della descrizione comando è `m_clrFill`. In caso contrario, `m_clrFill` specifica il colore iniziale della sfumatura e `m_clrFillGradient` specifica il colore della fine della sfumatura. [CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle) determina la direzione della sfumatura.  
+### <a name="remarks"></a>Remarks  
+ If [CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient) is -1, the tooltip background color is `m_clrFill`. Otherwise, `m_clrFill` specifies the color of the beginning of the gradient and `m_clrFillGradient` specifies the color of the end of the gradient. [CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle) determines the direction of the gradient.  
   
-##  <a name="m_clrfillgradient"></a>CMFCToolTipInfo::m_clrFillGradient  
- Specifica il colore finale per uno sfondo sfumato per le descrizioni comandi.  
+##  <a name="m_clrfillgradient"></a>  CMFCToolTipInfo::m_clrFillGradient  
+ Specifies the end color for a gradient background for tooltips.  
   
 ```  
 COLORREF m_clrFillGradient;  
 ```  
   
-### <a name="remarks"></a>Note  
- Se `m_clrFillGradient` è -1, non vi è alcuna sfumatura. In caso contrario, il colore iniziale della sfumatura è specificato da [CMFCToolTipInfo::m_clrFill](#m_clrfill) e il colore finale sfumatura è specificato da `m_clrFillGradient`. [CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle) determina la direzione della sfumatura.  
+### <a name="remarks"></a>Remarks  
+ If `m_clrFillGradient` is -1, there is no gradient. Otherwise, the gradient initial color is specified by [CMFCToolTipInfo::m_clrFill](#m_clrfill) and the gradient finish color is specified by `m_clrFillGradient`. [CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle) determines the direction of the gradient.  
   
-##  <a name="m_clrtext"></a>CMFCToolTipInfo::m_clrText  
- Specifica il colore del testo di tutte le descrizioni comandi.  
+##  <a name="m_clrtext"></a>  CMFCToolTipInfo::m_clrText  
+ Specifies text color of all tooltips.  
   
 ```  
 COLORREF m_clrText;  
 ```  
   
-##  <a name="m_ngradientangle"></a>CMFCToolTipInfo::m_nGradientAngle  
- Specifica l'angolo in cui viene disegnata una sfumatura dello sfondo della descrizione comandi.  
+##  <a name="m_ngradientangle"></a>  CMFCToolTipInfo::m_nGradientAngle  
+ Specifies the angle at which a gradient is drawn on the background of tooltips.  
   
 ```  
 int m_nGradientAngle;  
 ```  
   
-### <a name="remarks"></a>Note  
- `m_nGradientAngle`Specifica l'angolo, espresso in gradi, offset di sfumatura dello sfondo della descrizione comandi da orizzontale. Se `m_nGradientAngle` è 0, viene disegnata la sfumatura da sinistra a destra. Se `m_nGradientAngle` è compreso tra 1 e 360, la sfumatura è rotazione in senso orario dal numero di gradi. Se `m_nGradientAngle` è -1, ovvero il valore predefinito, viene disegnata sfumatura dall'alto verso il basso. Questa è la stessa impostazione `m_nGradientAngle` su 90.  
+### <a name="remarks"></a>Remarks  
+ `m_nGradientAngle` specifies the angle, in degrees, that the gradient on the background of tooltips is offset from horizontal. If `m_nGradientAngle` is 0, the gradient is drawn from left to right. If `m_nGradientAngle` is between 1 and 360, the gradient is rotating clockwise by that number of degrees. If `m_nGradientAngle` is -1, which is the default value, the gradient is drawn from top to bottom. This is the same as setting `m_nGradientAngle` to 90.  
   
- [CMFCToolTipInfo::m_clrFill](#m_clrfill) `clrFill` specifica il colore iniziale della sfumatura e [CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient) `clrFillGradient` specifica il colore della fine della sfumatura. Se `m_clrFillGradient` è -1, non vi è alcuna sfumatura.  
+ [CMFCToolTipInfo::m_clrFill](#m_clrfill) `clrFill` specifies the color of the beginning of the gradient and [CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient) `clrFillGradient` specifies the color of the end of the gradient. If `m_clrFillGradient` is -1, there is no gradient.  
   
-##  <a name="m_nmaxdescrwidth"></a>CMFCToolTipInfo::m_nMaxDescrWidth  
- Specifica la larghezza massima della descrizione che visualizzato in ciascuna descrizione comandi. Se la larghezza della descrizione supera il valore specificato, il testo viene eseguito il wrapping.  
+##  <a name="m_nmaxdescrwidth"></a>  CMFCToolTipInfo::m_nMaxDescrWidth  
+ Specifies the maximum width of the description that it displayed in each tooltip. If the description width exceeds the specified value, the text is wrapped.  
   
 ```  
 int m_nMaxDescrWidth;  
 ```  
   
-##  <a name="m_bvislmanagertheme"></a>CMFCToolTipInfo::m_bVislManagerTheme  
- Specifica se il gestore visualizzazione dell'applicazione controlla l'aspetto di tutte le descrizioni comandi.  
+##  <a name="m_bvislmanagertheme"></a>  CMFCToolTipInfo::m_bVislManagerTheme  
+ Specifies whether the visual manager of the application controls the appearance of all tooltips.  
   
 ```  
 BOOL m_bVislManagerTheme;  
 ```  
   
-### <a name="remarks"></a>Note  
- Se `m_bVislManagerTheme` è `TRUE`, ogni descrizione comando richiede un nuovo [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) dal gestore visualizzazione dell'applicazione prima che vengono visualizzati sullo schermo e utilizza i valori in tale oggetto per determinare l'aspetto. Gli altri membri di [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) vengono ignorati.  
+### <a name="remarks"></a>Remarks  
+ If `m_bVislManagerTheme` is `TRUE`, every tooltip requests a new [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) from the visual manager of the application before they appear on the screen, and uses the values in that object to determine their appearance. The other members of your [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) are ignored.  
   
-##  <a name="operator_eq"></a>CMFCToolTipInfo::operator =  
+##  <a name="operator_eq"></a>  CMFCToolTipInfo::operator=  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
 CMFCToolTipInfo& operator=(CMFCToolTipInfo& src);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `src`  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>Vedere anche  
- [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
- [Classi](../../mfc/reference/mfc-classes.md)   
- [Classe CTooltipManager](../../mfc/reference/ctooltipmanager-class.md)   
- [Classe da CMFCToolTipCtrl](../../mfc/reference/cmfctooltipctrl-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CTooltipManager Class](../../mfc/reference/ctooltipmanager-class.md)   
+ [CMFCToolTipCtrl Class](../../mfc/reference/cmfctooltipctrl-class.md)
 

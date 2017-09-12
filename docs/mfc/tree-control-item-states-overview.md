@@ -1,41 +1,60 @@
 ---
-title: "Panoramica degli stati degli elementi del controllo Tree | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTreeCtrl (classe), stati dell'elemento"
-  - "stati, elementi CTreeCtrl"
-  - "struttura ad albero (controlli), panoramica degli stati degli elementi"
+title: Tree Control Item States Overview | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- states, CTreeCtrl items
+- tree controls [MFC], item states overview
+- CTreeCtrl class [MFC], item states
 ms.assetid: 2db11ae0-0d87-499d-8c1f-5e0dbe9e94c8
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Panoramica degli stati degli elementi del controllo Tree
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 88fdf5d34ba35aa0f3e33cab12313c4fa87d5e25
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Ogni elemento in un controllo struttura ad albero \([CTreeCtrl](../mfc/reference/ctreectrl-class.md)\) dispone di uno stato corrente.  Ad esempio, un elemento può essere selezionato, disabilitato, espanso, e così via.  In genere, il controllo struttura ad albero imposta automaticamente lo stato di un elemento per riflettere le azioni dell'utente, come la selezione di un elemento.  Tuttavia, è anche possibile impostare lo stato di un elemento utilizzando la funzione membro [SetItemState](../Topic/CTreeCtrl::SetItemState.md) e recuperare lo stato corrente di un elemento utilizzando la funzione membro [GetItemState](../Topic/CTreeCtrl::GetItemState.md).  Per un elenco completo degli stati degli elementi, vedere [Costanti del controllo di visualizzazione ad albero](http://msdn.microsoft.com/library/windows/desktop/bb759985) in [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+---
+# <a name="tree-control-item-states-overview"></a>Tree Control Item States Overview
+Each item in a tree control ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) has a current state. For example, an item can be selected, disabled, expanded, and so on. For the most part, the tree control automatically sets an item's state to reflect user actions, such as selection of an item. However, you can also set an item's state by using the [SetItemState](../mfc/reference/ctreectrl-class.md#setitemstate) member function and retrieve the current state of an item by using the [GetItemState](../mfc/reference/ctreectrl-class.md#getitemstate) member function. For a complete list of item states, see [Tree-View Control Constants](http://msdn.microsoft.com/library/windows/desktop/bb759985) in the Windows SDK.  
   
- Lo stato corrente di un elemento è specificato dal parametro `nState`.  Un controllo struttura ad albero può modificare lo stato di un elemento per riflettere un'azione dell'utente, come selezionare l'elemento oppure impostare lo stato attivo sull'elemento.  Inoltre, un'applicazione può modificare lo stato di un elemento per disabilitare o nascondere l'elemento o per specificare un'immagine o un'immagine di stato sovrapposte.  
+ An item's current state is specified by the `nState` parameter. A tree control might change an item's state to reflect a user action, such as selecting the item or setting the focus to the item. In addition, an application might change an item's state to disable or hide the item or to specify an overlay image or state image.  
   
- Quando si specifica o si modifica lo stato di un elemento, il parametro `nStateMask` specifica quali bit di stato impostare e il parametro `nState` contiene i nuovi valori per questi bit.  Ad esempio, nell'esempio seguente viene modificato lo stato corrente di un elemento padre \(specificato da `hParentItem`\) in un oggetto `CTreeCtrl` \(`m_treeCtrl`\) a **TVIS\_EXPANDPARTIAL**:  
+ When you specify or change an item's state, the `nStateMask` parameter specifies which state bits to set, and the `nState` parameter contains the new values for those bits. For example, the following example changes the current state of a parent item (specified by `hParentItem`) in a `CTreeCtrl` object (`m_treeCtrl`) to **TVIS_EXPANDPARTIAL**:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#71](../mfc/codesnippet/CPP/tree-control-item-states-overview_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#71](../mfc/codesnippet/cpp/tree-control-item-states-overview_1.cpp)]  
   
- Un altro esempio di modifica dello stato è quello di impostare l'immagine sovrapposta di un elemento.  A tale scopo, `nStateMask` deve includere il valore `TVIS_OVERLAYMASK` e `nState` deve includere l'indice in base uno di un'immagine sovrapposta effettuando il left shift di otto bit utilizzando la macro [INDEXTOOVERLAYMASK](http://msdn.microsoft.com/library/windows/desktop/bb761408).  L'indice può essere 0 per non specificare un'immagine sovrapposta.  L'immagine sovrapposta deve essere aggiunta all'elenco di controllo di struttura ad albero delle immagini sovrapposte da una chiamata precedente alla funzione [CImageList::SetOverlayImage](../Topic/CImageList::SetOverlayImage.md).  La funzione specifica l'indice in base uno dell'immagine da aggiungere; si tratta dell'indice utilizzato con la macro **INDEXTOOVERLAYMASK**.  Un controllo struttura ad albero può contenere fino a quattro immagini sovrapposte.  
+ Another example of changing the state would be to set an item's overlay image. To accomplish this, `nStateMask` must include the `TVIS_OVERLAYMASK` value, and `nState` must include the one-based index of the overlay image shifted left eight bits by using the [INDEXTOOVERLAYMASK](http://msdn.microsoft.com/library/windows/desktop/bb761408) macro. The index can be 0 to specify no overlay image. The overlay image must have been added to the tree control's list of overlay images by a previous call to the [CImageList::SetOverlayImage](../mfc/reference/cimagelist-class.md#setoverlayimage) function. The function specifies the one-based index of the image to add; this is the index used with the **INDEXTOOVERLAYMASK** macro. A tree control can have up to four overlay images.  
   
- Per impostare l'immagine di stato di un elemento, `nStateMask` deve includere il valore `TVIS_STATEIMAGEMASK` e `nState` deve includere l'indice in base uno dell'immagine di stato effettuando il left shift di 12 bit utilizzando la macro [INDEXTOSTATEIMAGEMASK](http://msdn.microsoft.com/library/windows/desktop/bb775597).  L'indice può essere 0 per non specificare un'immagine di stato.  Per ulteriori informazioni sulla sovrapposizione e le immagini di stato, vedere [Elenchi di immagini del controllo struttura ad albero](../mfc/tree-control-image-lists.md).  
+ To set an item's state image, `nStateMask` must include the `TVIS_STATEIMAGEMASK` value, and `nState` must include the one-based index of the state image shifted left 12 bits by using the [INDEXTOSTATEIMAGEMASK](http://msdn.microsoft.com/library/windows/desktop/bb775597) macro. The index can be 0 to specify no state image. For more information about overlay and state images, see [Tree Control Image Lists](../mfc/tree-control-image-lists.md).  
   
-## Vedere anche  
- [Utilizzo di CTreeCtrl](../mfc/using-ctreectrl.md)   
- [Controlli](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTreeCtrl](../mfc/using-ctreectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

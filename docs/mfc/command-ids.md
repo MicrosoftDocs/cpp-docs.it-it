@@ -1,33 +1,52 @@
 ---
-title: "ID comandi | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ID di comando"
-  - "ID di comando, MFC"
+title: Command IDs | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- command IDs, MFC
+- command IDs
 ms.assetid: e0171a2b-45b9-41fa-945d-ec2f7602ded0
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# ID comandi
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7326b913df477a1ecbce7b0d995935e930ca5289
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Un comando viene descritto dettagliatamente dal relativo ID comando da solo \(codificato nel messaggio di **WM\_COMMAND** \).  Questo ID assegnato all'oggetto dell'interfaccia utente che genera il comando.  In genere, gli ID sono denominati per la funzionalità dell'oggetto dell'interfaccia utente assegnati a.  
+---
+# <a name="command-ids"></a>Command IDs
+A command is fully described by its command ID alone (encoded in the **WM_COMMAND** message). This ID is assigned to the user-interface object that generates the command. Typically, IDs are named for the functionality of the user-interface object they are assigned to.  
   
- Ad esempio, una cancella qualsiasi elemento nel menu Modifica potrebbe essere assegnato un ID di **ID\_EDIT\_CLEAR\_ALL**.  La libreria di classi predefinisce alcuni ID, in particolare per i controlli che il framework gestisce stesso, come **ID\_EDIT\_CLEAR\_ALL** o `ID_FILE_OPEN`.  Si creerà altri ID di comando.  
+ For example, a Clear All item in the Edit menu might be assigned an ID such as **ID_EDIT_CLEAR_ALL**. The class library predefines some IDs, particularly for commands that the framework handles itself, such as **ID_EDIT_CLEAR_ALL** or `ID_FILE_OPEN`. You will create other command IDs yourself.  
   
- Quando si crea propri menu l'editor menu di Visual C\+\+, è consigliabile utilizzare la convenzione di denominazione delle librerie di classi come illustrato da `ID_FILE_OPEN`.  [Controlli standard](../mfc/standard-commands.md) vengono illustrati i controlli standard definiti dalla libreria di classi.  
+ When you create your own menus in the Visual C++ menu editor, it is a good idea to follow the class library's naming convention as illustrated by `ID_FILE_OPEN`. [Standard Commands](../mfc/standard-commands.md) explains the standard commands defined by the class library.  
   
-## Vedere anche  
- [Oggetti dell'interfaccia utente e ID comando](../mfc/user-interface-objects-and-command-ids.md)
+## <a name="see-also"></a>See Also  
+ [User-Interface Objects and Command IDs](../mfc/user-interface-objects-and-command-ids.md)
+
+

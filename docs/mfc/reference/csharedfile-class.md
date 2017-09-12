@@ -1,5 +1,5 @@
 ---
-title: Classe CSharedFile | Documenti di Microsoft
+title: CSharedFile Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,9 +17,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- memory files
-- CSharedFile class
-- shared memory files
+- CSharedFile [MFC], CSharedFile
+- CSharedFile [MFC], Detach
+- CSharedFile [MFC], SetHandle
 ms.assetid: 5d000422-9ede-4318-a8c9-f7412b674f39
 caps.latest.revision: 21
 author: mikeblome
@@ -39,51 +39,51 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: f812b2c7b8e3b158068bf3fdab0a327460056251
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 996656224ab793ae0eacf7d5d3ce0b92ec403359
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="csharedfile-class"></a>Classe CSharedFile
-Il [CMemFile](../../mfc/reference/cmemfile-class.md)-classe derivata che supporta file di memoria condivisa.  
+# <a name="csharedfile-class"></a>CSharedFile Class
+The [CMemFile](../../mfc/reference/cmemfile-class.md)-derived class that supports shared memory files.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CSharedFile : public CMemFile  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Costruttori pubblici  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSharedFile::CSharedFile](#csharedfile)|Costruisce un oggetto `CSharedFile`.|  
+|[CSharedFile::CSharedFile](#csharedfile)|Constructs a `CSharedFile` object.|  
   
-### <a name="public-methods"></a>Metodi pubblici  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSharedFile::Detach](#detach)|Chiude il file di memoria condivisa e restituisce l'handle del relativo blocco di memoria.|  
-|[CSharedFile::SetHandle](#sethandle)|Allega il file di memoria condivisa a un blocco di memoria.|  
+|[CSharedFile::Detach](#detach)|Closes the shared memory file and returns the handle of its memory block.|  
+|[CSharedFile::SetHandle](#sethandle)|Attaches the shared memory file to a memory block.|  
   
-## <a name="remarks"></a>Note  
- File di memoria si comportano come i file del disco con la differenza che il file viene archiviato nella RAM piuttosto che sul disco. Un file di memoria è utile per la memorizzazione rapida temporanea o per il trasferimento dei byte non elaborati o oggetti serializzati tra processi indipendenti.  
+## <a name="remarks"></a>Remarks  
+ Memory files behave like disk files except that the file is stored in RAM rather than on disk. A memory file is useful for fast temporary storage or for transferring raw bytes or serialized objects between independent processes.  
   
- File di memoria condivisa differiscono dagli altri file di memoria in memoria che è stata allocata con il [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) funzione di Windows. Il `CSharedFile` classe archivia i dati in un blocco di memoria allocata a livello globale (creato utilizzando **GlobalAlloc**), e questo blocco di memoria può essere condivise tramite DDE, negli Appunti o altri OLE/COM uniform operazioni di trasferimento dati, ad esempio, utilizzando `IDataObject`.  
+ Shared memory files differ from other memory files in that memory for them is allocated with the [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) Windows function. The `CSharedFile` class stores data in a globally allocated memory block (created using **GlobalAlloc**), and this memory block can be shared using DDE, the Clipboard, or other OLE/COM uniform data transfer operations, for example, using `IDataObject`.  
   
- **GlobalAlloc** restituisce un `HGLOBAL` gestire anziché un puntatore alla memoria, ad esempio il puntatore restituito da [malloc](../../c-runtime-library/reference/malloc.md). Il `HGLOBAL` handle è necessario in determinate applicazioni. Ad esempio, di inserire dati negli Appunti è necessario un `HGLOBAL` gestire.  
+ **GlobalAlloc** returns an `HGLOBAL` handle rather than a pointer to memory, such as the pointer returned by [malloc](../../c-runtime-library/reference/malloc.md). The `HGLOBAL` handle is needed in certain applications. For example, to put data on the Clipboard you need an `HGLOBAL` handle.  
   
- Si noti che `CSharedFile` non mappato alla memoria utilizzare file e i dati non possono essere condivisi direttamente tra processi.  
+ Please note that `CSharedFile` does not use memory-mapped files, and the data cannot be directly shared between processes.  
   
- `CSharedFile`gli oggetti automaticamente possono allocare la memoria o è possibile collegare il proprio blocco di memoria di `CSharedFile` oggetto chiamando [CSharedFile::SetHandle](#sethandle). In entrambi i casi, la memoria per aumenta automaticamente il file di memoria viene allocata in `nGrowBytes`-dimensioni incrementi se `nGrowBytes` è diverso da zero.  
+ `CSharedFile` objects can automatically allocate their own memory or you can attach your own memory block to the `CSharedFile` object by calling [CSharedFile::SetHandle](#sethandle). In either case, memory for growing the memory file automatically is allocated in `nGrowBytes`-sized increments if `nGrowBytes` is not zero.  
   
- Per ulteriori informazioni, vedere l'articolo [file in MFC](../../mfc/files-in-mfc.md) e [gestione File](../../c-runtime-library/file-handling.md) nel *riferimenti alla libreria di runtime*.  
+ For more information, see the article [Files in MFC](../../mfc/files-in-mfc.md) and [File Handling](../../c-runtime-library/file-handling.md) in the *Run-Time Library Reference*.  
   
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CFile](../../mfc/reference/cfile-class.md)  
@@ -92,11 +92,11 @@ class CSharedFile : public CMemFile
   
  `CSharedFile`  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** afxadv.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxadv.h  
   
-##  <a name="csharedfile"></a>CSharedFile::CSharedFile  
- Costruisce un `CSharedFile` dell'oggetto e ne alloca memoria.  
+##  <a name="csharedfile"></a>  CSharedFile::CSharedFile  
+ Constructs a `CSharedFile` object and allocates memory for it.  
   
 ```  
 CSharedFile(
@@ -104,28 +104,28 @@ CSharedFile(
     UINT nGrowBytes = 4096);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  *nAllocFlags*  
- Flag che indica come è possibile allocare memoria. Vedere [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) per un elenco di valori di flag validi.  
+ Flags indicating how memory is to be allocated. See [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) for a list of valid flag values.  
   
  `nGrowBytes`  
- L'incremento di allocazione di memoria in byte.  
+ The memory allocation increment in bytes.  
   
-##  <a name="detach"></a>CSharedFile::Detach  
- Chiamare questa funzione per chiudere il file di memoria e scollegarlo dal blocco di memoria.  
+##  <a name="detach"></a>  CSharedFile::Detach  
+ Call this function to close the memory file and detach it from the memory block.  
   
 ```  
 HGLOBAL Detach();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- L'handle del blocco di memoria che contiene il contenuto del file di memoria.  
+### <a name="return-value"></a>Return Value  
+ The handle of the memory block that contains the contents of the memory file.  
   
-### <a name="remarks"></a>Note  
- È possibile riaprirlo chiamando [SetHandle](#sethandle), utilizzando l'handle restituito da **scollegamento**.  
+### <a name="remarks"></a>Remarks  
+ You can reopen it by calling [SetHandle](#sethandle), using the handle returned by **Detach**.  
   
-##  <a name="sethandle"></a>CSharedFile::SetHandle  
- Chiamare questa funzione per collegare un blocco di memoria globale per il `CSharedFile` oggetto.  
+##  <a name="sethandle"></a>  CSharedFile::SetHandle  
+ Call this function to attach a block of global memory to the `CSharedFile` object.  
   
 ```  
 void SetHandle(
@@ -133,18 +133,18 @@ void SetHandle(
     BOOL bAllowGrow = TRUE);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  *hGlobalMemory*  
- Handle per la memoria globale per collegare il `CSharedFile`.  
+ Handle to the global memory to be attached to the `CSharedFile`.  
   
  `bAllowGrow`  
- Specifica se il blocco di memoria consentito.  
+ Specifies whether the memory block is allowed to grow.  
   
-### <a name="remarks"></a>Note  
- Se `bAllowGrow` è diverso da zero, la dimensione del blocco di memoria viene aumentata in base alle esigenze, ad esempio, se un tentativo di tentato di scrivere più byte del file che sono stati allocati per il blocco di memoria.  
+### <a name="remarks"></a>Remarks  
+ If `bAllowGrow` is nonzero, the size of the memory block is increased as necessary, for example, if an attempt is made to write more bytes to the file than were allocated for the memory block.  
   
-## <a name="see-also"></a>Vedere anche  
- [Classe CMemFile](../../mfc/reference/cmemfile-class.md)   
- [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
- [Classe CMemFile](../../mfc/reference/cmemfile-class.md)
+## <a name="see-also"></a>See Also  
+ [CMemFile Class](../../mfc/reference/cmemfile-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CMemFile Class](../../mfc/reference/cmemfile-class.md)
 

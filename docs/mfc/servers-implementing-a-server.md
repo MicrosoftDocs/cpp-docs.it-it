@@ -1,56 +1,75 @@
 ---
-title: "Server: implementazione di un server | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "applicazioni server OLE, implementazione di server OLE"
-  - "server, implementazione"
+title: 'Servers: Implementing a Server | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- servers, implementing
+- OLE server applications [MFC], implementing OLE servers
 ms.assetid: 5bd57e8e-3b23-4f23-9597-496fac2d24b5
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Server: implementazione di un server
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a5a1dd3183d9ee6debc0b82aea7b88e519422701
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-In questo articolo viene illustrato il codice scritto dalla Creazione guidata applicazione MFC per creare un'applicazione server di modifica visiva.  Se non si utilizza la procedura guidata, elenchi di questo articolo le aree in cui è necessario scrivere il codice per implementare un'applicazione server.  
+---
+# <a name="servers-implementing-a-server"></a>Servers: Implementing a Server
+This article explains the code the MFC Application Wizard creates for a visual editing server application. If you are not using the application wizard, this article lists the areas where you must write code to implement a server application.  
   
- Se si utilizza la creazione guidata applicazione MFC per creare una nuova applicazione server, fornisce una quantità significativa di codice specifico del server per l'utente.  Se si aggiunge la funzionalità server di modifica visiva a un'applicazione esistente, è necessario duplicare il codice scritto dalla creazione guidata applicazione e fornisce prima di aggiungere il resto del codice server necessario.  
+ If you are using the application wizard to create a new server application, it provides a significant amount of server-specific code for you. If you are adding visual editing server functionality to an existing application, you must duplicate the code that the application wizard would have provided before adding the rest of the necessary server code.  
   
- Il codice server della procedura guidata applicazione sono inclusi immettere diverse categorie:  
+ The server code that the application wizard provides falls into several categories:  
   
--   Definizione di risorse server:  
+-   Defining server resources:  
   
-    -   La risorsa menu utilizzata quando il server che sta modificando un elemento incorporato in una finestra.  
+    -   The menu resource used when the server is editing an embedded item in its own window.  
   
-    -   Le risorse della barra degli strumenti e del menu utilizzare quando il server è attivo sul posto.  
+    -   The menu and toolbar resources used when the server is active in place.  
   
-     Per ulteriori informazioni su queste risorse, vedere [Menu e risorse: Aggiunta di server](../mfc/menus-and-resources-server-additions.md).  
+     For more information on these resources, see [Menus and Resources: Server Additions](../mfc/menus-and-resources-server-additions.md).  
   
--   Definendo una classe dell'elemento derivata da `COleServerItem`.  Per ulteriori informazioni sugli elementi server, vedere [Server: Elementi server](../mfc/servers-server-items.md).  
+-   Defining an item class derived from `COleServerItem`. For further details on server items, see [Servers: Server Items](../mfc/servers-server-items.md).  
   
--   Modificare la classe base della classe di documento in `COleServerDoc`.  Per ulteriori informazioni, vedere [Server: Implementare i documenti server](../mfc/servers-implementing-server-documents.md).  
+-   Changing the base class of the document class to `COleServerDoc`. For further details, see [Servers: Implementing Server Documents](../mfc/servers-implementing-server-documents.md).  
   
--   Definizione della classe della finestra cornice derivata da `COleIPFrameWnd`.  Per ulteriori informazioni, vedere [Server: Implementare le finestre cornici sul posto](../mfc/servers-implementing-in-place-frame-windows.md).  
+-   Defining a frame-window class derived from `COleIPFrameWnd`. For further details, see [Servers: Implementing In-Place Frame Windows](../mfc/servers-implementing-in-place-frame-windows.md).  
   
--   Creando una voce per l'applicazione server nel database di registrazione e registrare in windows la nuova istanza server con il sistema OLE.  Per informazioni su questo argomento, vedere [Registrazione](../mfc/registration.md).  
+-   Creating an entry for the server application in the Windows registration database and registering the new instance of the server with the OLE system. For information on this topic, see [Registration](../mfc/registration.md).  
   
--   Inizializzazione e avviando l'applicazione server.  Per informazioni su questo argomento, vedere [Registrazione](../mfc/registration.md).  
+-   Initializing and launching the server application. For information on this topic, see [Registration](../mfc/registration.md).  
   
- Per ulteriori informazioni, vedere [COleServerItem](../mfc/reference/coleserveritem-class.md), [COleServerDoc](../mfc/reference/coleserverdoc-class.md) e [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)*in riferimenti alla libreria di classi*.  
+ For more information, see [COleServerItem](../mfc/reference/coleserveritem-class.md), [COleServerDoc](../mfc/reference/coleserverdoc-class.md), and [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md) in the *Class Library Reference*.  
   
-## Vedere anche  
- [Server](../mfc/servers.md)   
- [Contenitori](../mfc/containers.md)   
- [Menu e risorse \(OLE\)](../mfc/menus-and-resources-ole.md)   
- [Registrazione](../mfc/registration.md)
+## <a name="see-also"></a>See Also  
+ [Servers](../mfc/servers.md)   
+ [Containers](../mfc/containers.md)   
+ [Menus and Resources (OLE)](../mfc/menus-and-resources-ole.md)   
+ [Registration](../mfc/registration.md)
+
+

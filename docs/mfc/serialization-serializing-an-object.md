@@ -1,40 +1,59 @@
 ---
-title: "Serializzazione: serializzazione di un oggetto | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "oggetti [C++], serializzazione"
-  - "serializzazione [C++], oggetti"
-  - "serializzazione di oggetti [C++]"
+title: 'Serialization: Serializing an Object | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- serializing objects [MFC]
+- serialization [MFC], objects
+- objects [MFC], serializing
 ms.assetid: 1db772b1-ad55-4fcf-b133-126cca082510
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Serializzazione: serializzazione di un oggetto
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ac3c7c420f5e4ed13618b8a9475083ecf824e742
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-L'articolo [Serializzazione: Creazione di una classe serializzabile](../mfc/serialization-making-a-serializable-class.md) mostra come rendere una classe serializzabile.  Dopo avere creato una classe serializzabile, è possibile serializzare gli oggetti della classe da e per un file mediante un oggetto [CArchive](../mfc/reference/carchive-class.md).  Questo articolo descrive:  
+---
+# <a name="serialization-serializing-an-object"></a>Serialization: Serializing an Object
+The article [Serialization: Making a Serializable Class](../mfc/serialization-making-a-serializable-class.md) shows how to make a class serializable. Once you have a serializable class, you can serialize objects of that class to and from a file via a [CArchive](../mfc/reference/carchive-class.md) object. This article explains:  
   
--   [Definizione di oggetto CArchive](../mfc/what-is-a-carchive-object.md).  
+-   [What a CArchive object is](../mfc/what-is-a-carchive-object.md).  
   
--   [Due modi per creare un oggetto CArchive](../mfc/two-ways-to-create-a-carchive-object.md).  
+-   [Two ways to create a CArchive](../mfc/two-ways-to-create-a-carchive-object.md).  
   
--   [Come utilizzare il CArchive \<\< e gli \>\> operatori](../mfc/using-the-carchive-output-and-input-operators.md).  
+-   [How to use the CArchive <\< and >> operators](../mfc/using-the-carchive-output-and-input-operators.md).  
   
--   [Memorizzazione e caricamento di CObjects tramite un archivio](../mfc/storing-and-loading-cobjects-via-an-archive.md).  
+-   [Storing and loading CObjects via an archive](../mfc/storing-and-loading-cobjects-via-an-archive.md).  
   
- È possibile tralasciare il framework di creazione dell'archivio del documento serializzabile oppure creare esplicitamente e manualmente l'oggetto `CArchive`.  È possibile trasferire i dati tra un file e l'oggetto serializzabile mediante gli operatori \<\< e \>\> per `CArchive` oppure, in alcuni casi, chiamando la funzione `Serialize` di una classe derivata da `CObject`.  
+ You can let the framework create the archive for your serializable document or explicitly create the `CArchive` object yourself. You can transfer data between a file and your serializable object by using the <\< and >> operators for `CArchive` or, in some cases, by calling the `Serialize` function of a `CObject`-derived class.  
   
-## Vedere anche  
- [Serializzazione](../mfc/serialization-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Serialization](../mfc/serialization-in-mfc.md)
+
+

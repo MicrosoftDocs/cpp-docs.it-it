@@ -1,40 +1,59 @@
 ---
-title: "Classi di automazione OLE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.ole"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classi di automazione"
-  - "classi di automazione, classi OLE"
-  - "automazione, classi"
-  - "automazione OLE"
-  - "automazione OLE, classi"
+title: OLE Automation Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.ole
+dev_langs:
+- C++
+helpviewer_keywords:
+- Automation, classes
+- Automation classes [MFC], OLE classes
+- OLE Automation [MFC], classes
+- Automation classes [MFC]
+- OLE Automation [MFC]
 ms.assetid: 96e5372b-ff8a-4da1-933b-4d9bbf4dceb3
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Classi di automazione OLE
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2344c8cc3e9a4f09c7d39c0c0e728077fb29b118
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Queste classi supportano i client di automazione \(applicazioni che controllano altre applicazioni\).  I server di automazione \(applicazioni che possono essere controllati da altre applicazioni\) sono supportati con [mappe di invio](../mfc/reference/dispatch-maps.md).  
+---
+# <a name="ole-automation-classes"></a>OLE Automation Classes
+These classes support automation clients (applications that control other applications). Automation servers (applications that can be controlled by other applications) are supported through [dispatch maps](../mfc/reference/dispatch-maps.md).  
   
  [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md)  
- Utilizzato per chiamare i server di automazione dal client di automazione.  Nell'aggiungere una classe, la classe viene utilizzata per creare classi indipendenti dai tipi per i server di automazione che forniscono una libreria dei tipi.  
+ Used to call automation servers from your automation client. When adding a class, this class is used to create type-safe classes for automation servers that provide a type library.  
   
  [COleDispatchException](../mfc/reference/coledispatchexception-class.md)  
- Un'eccezione derivazione da un errore durante automazione OLE.  Le eccezioni di automazione sono generate dai server di automazione e vengono intercettate dai client di automazione.  
+ An exception resulting from an error during OLE automation. Automation exceptions are thrown by automation servers and caught by automation clients.  
   
-## Vedere anche  
- [Cenni preliminari sulle classi](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

@@ -30,13 +30,14 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
-ms.openlocfilehash: 2918ddc1cf8c0910e5cb16268c0adb40ca4507ce
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 83e4c6681f49b097c412040364d88bf8843ecbc5
 ms.contentlocale: it-it
-ms.lasthandoff: 09/11/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="templates-and-name-resolution"></a>Templates and Name Resolution
+
 In template definitions, there are three types of names.  
   
 -   Locally declared names, including the name of the template itself and any names declared inside the template definition.  
@@ -51,37 +52,37 @@ In template definitions, there are three types of names.
   
 -   The template argument itself:  
   
-    ```  
+    ```cpp
     T  
     ```  
   
 -   A qualified name with a qualification including a dependent type:  
   
-    ```  
+    ```cpp
     T::myType  
     ```  
   
 -   A qualified name if the unqualified part identifies a dependent type:  
   
-    ```  
+    ```cpp
     N::T  
     ```  
   
 -   A const or volatile type for which the base type is a dependent type:  
   
-    ```  
+    ```cpp
     const T  
     ```  
   
 -   A pointer, reference, array, or function pointer type based on a dependent type:  
   
-    ```  
+    ```cpp
     T *, T &, T [10], T (*)()  
     ```  
   
 -   An array whose size is based on a template parameter:  
   
-    ```  
+    ```cpp
     template <int arg> class X {  
     int x[arg] ; // dependent type  
     }  
@@ -89,14 +90,17 @@ In template definitions, there are three types of names.
   
 -   a template type constructed from a template parameter:  
   
-    ```  
+    ```cpp
     T<int>, MyTemplate<T>  
     ```  
   
-## <a name="type-dependence-and-value-dependence"></a>Type Dependence and Value Dependence  
+## <a name="type-dependence-and-value-dependence"></a>Type Dependence and Value Dependence
+
  Names and expressions dependent on a template parameter are categorized as type dependent or value dependent, depending on whether the template parameter is a type parameter or a value parameter. Also, any identifiers declared in a template with a type dependent on the template argument are considered value dependent, as is a integral or enumeration type initialized with a value-dependent expression.  
   
  Type-dependent and value-dependent expressions are expressions that involve variables that are type dependent or value dependent. These expressions can have semantics that differ, depending on the parameters used for the template.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>See Also
+
  [Templates](../cpp/templates-cpp.md)
+

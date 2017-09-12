@@ -34,10 +34,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 42abd4adfe10b032849bfec391874cd249793c32
-ms.openlocfilehash: f6cf9f0626eb2c25faf473d8177b66368280643e
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: bc31d915599160fd9f3932c5c7628f7b5ee2005d
 ms.contentlocale: it-it
-ms.lasthandoff: 08/31/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="mfc-mbcs-dll-add-on"></a>MFC MBCS DLL Add-on

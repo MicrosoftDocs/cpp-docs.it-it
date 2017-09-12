@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCVisualManagerOffice2007 | Documenti di Microsoft
+title: CMFCVisualManagerOffice2007 Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -126,7 +126,118 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCVisualManagerOffice2007 class
+- CMFCVisualManagerOffice2007 [MFC], AlwaysHighlight3DTabs
+- CMFCVisualManagerOffice2007 [MFC], CleanStyle
+- CMFCVisualManagerOffice2007 [MFC], GetCaptionBarTextColor
+- CMFCVisualManagerOffice2007 [MFC], GetHighlightedMenuItemTextColor
+- CMFCVisualManagerOffice2007 [MFC], GetMenuItemTextColor
+- CMFCVisualManagerOffice2007 [MFC], GetNcBtnSize
+- CMFCVisualManagerOffice2007 [MFC], GetRibbonBar
+- CMFCVisualManagerOffice2007 [MFC], GetRibbonHyperlinkTextColor
+- CMFCVisualManagerOffice2007 [MFC], GetRibbonPopupBorderSize
+- CMFCVisualManagerOffice2007 [MFC], GetRibbonQuickAccessToolBarChevronOffset
+- CMFCVisualManagerOffice2007 [MFC], GetRibbonQuickAccessToolBarRightMargin
+- CMFCVisualManagerOffice2007 [MFC], GetRibbonQuickAccessToolBarTextColor
+- CMFCVisualManagerOffice2007 [MFC], GetRibbonStatusBarTextColor
+- CMFCVisualManagerOffice2007 [MFC], GetShowAllMenuItemsHeight
+- CMFCVisualManagerOffice2007 [MFC], GetStatusBarPaneTextColor
+- CMFCVisualManagerOffice2007 [MFC], GetTabFrameColors
+- CMFCVisualManagerOffice2007 [MFC], GetTabHorzMargin
+- CMFCVisualManagerOffice2007 [MFC], GetTabTextColor
+- CMFCVisualManagerOffice2007 [MFC], GetToolbarButtonTextColor
+- CMFCVisualManagerOffice2007 [MFC], GetToolbarDisabledTextColor
+- CMFCVisualManagerOffice2007 [MFC], GetToolTipInfo
+- CMFCVisualManagerOffice2007 [MFC], IsHighlightWholeMenuItem
+- CMFCVisualManagerOffice2007 [MFC], IsLayeredRibbonKeyTip
+- CMFCVisualManagerOffice2007 [MFC], IsOwnerDrawCaption
+- CMFCVisualManagerOffice2007 [MFC], IsOwnerDrawMenuCheck
+- CMFCVisualManagerOffice2007 [MFC], IsRibbonPresent
+- CMFCVisualManagerOffice2007 [MFC], OnDrawBarGripper
+- CMFCVisualManagerOffice2007 [MFC], OnDrawButtonBorder
+- CMFCVisualManagerOffice2007 [MFC], OnDrawButtonSeparator
+- CMFCVisualManagerOffice2007 [MFC], OnDrawCaptionBarInfoArea
+- CMFCVisualManagerOffice2007 [MFC], OnDrawCheckBoxEx
+- CMFCVisualManagerOffice2007 [MFC], OnDrawComboBorder
+- CMFCVisualManagerOffice2007 [MFC], OnDrawComboDropButton
+- CMFCVisualManagerOffice2007 [MFC], OnDrawDefaultRibbonImage
+- CMFCVisualManagerOffice2007 [MFC], OnDrawEditBorder
+- CMFCVisualManagerOffice2007 [MFC], OnDrawFloatingToolbarBorder
+- CMFCVisualManagerOffice2007 [MFC], OnDrawHeaderCtrlBorder
+- CMFCVisualManagerOffice2007 [MFC], OnDrawMenuBorder
+- CMFCVisualManagerOffice2007 [MFC], OnDrawMenuCheck
+- CMFCVisualManagerOffice2007 [MFC], OnDrawMenuItemButton
+- CMFCVisualManagerOffice2007 [MFC], OnDrawMenuLabel
+- CMFCVisualManagerOffice2007 [MFC], OnDrawMenuResizeBar
+- CMFCVisualManagerOffice2007 [MFC], OnDrawMenuScrollButton
+- CMFCVisualManagerOffice2007 [MFC], OnDrawMenuSystemButton
+- CMFCVisualManagerOffice2007 [MFC], OnDrawMiniFrameBorder
+- CMFCVisualManagerOffice2007 [MFC], OnDrawOutlookBarSplitter
+- CMFCVisualManagerOffice2007 [MFC], OnDrawOutlookPageButtonBorder
+- CMFCVisualManagerOffice2007 [MFC], OnDrawPaneCaption
+- CMFCVisualManagerOffice2007 [MFC], OnDrawPopupWindowCaption
+- CMFCVisualManagerOffice2007 [MFC], OnDrawPropertySheetListItem
+- CMFCVisualManagerOffice2007 [MFC], OnDrawRibbonApplicationButton
+- CMFCVisualManagerOffice2007 [MFC], OnDrawRibbonButtonBorder
+- CMFCVisualManagerOffice2007 [MFC], OnDrawRibbonButtonsGroup
+- CMFCVisualManagerOffice2007 [MFC], OnDrawRibbonCaption
+- CMFCVisualManagerOffice2007 [MFC], OnDrawRibbonCaptionButton
+- CMFCVisualManagerOffice2007 [MFC], OnDrawRibbonCategory
+- CMFCVisualManagerOffice2007 [MFC], OnDrawRibbonCategoryCaption
+- CMFCVisualManagerOffice2007 [MFC], OnDrawRibbonCategoryScroll
+- CMFCVisualManagerOffice2007 [MFC], OnDrawRibbonCategoryTab
+- CMFCVisualManagerOffice2007 [MFC], OnDrawRibbonCheckBoxOnList
+- CMFCVisualManagerOffice2007 [MFC], OnDrawRibbonDefaultPaneButton
+- CMFCVisualManagerOffice2007 [MFC], OnDrawRibbonDefaultPaneButtonIndicator
+- CMFCVisualManagerOffice2007 [MFC], OnDrawRibbonGalleryBorder
+- CMFCVisualManagerOffice2007 [MFC], OnDrawRibbonGalleryButton
+- CMFCVisualManagerOffice2007 [MFC], OnDrawRibbonKeyTip
+- CMFCVisualManagerOffice2007 [MFC], OnDrawRibbonMainPanelButtonBorder
+- CMFCVisualManagerOffice2007 [MFC], OnDrawRibbonMainPanelFrame
+- CMFCVisualManagerOffice2007 [MFC], OnDrawRibbonMenuCheckFrame
+- CMFCVisualManagerOffice2007 [MFC], OnDrawRibbonPanel
+- CMFCVisualManagerOffice2007 [MFC], OnDrawRibbonPanelCaption
+- CMFCVisualManagerOffice2007 [MFC], OnDrawRibbonProgressBar
+- CMFCVisualManagerOffice2007 [MFC], OnDrawRibbonRecentFilesFrame
+- CMFCVisualManagerOffice2007 [MFC], OnDrawRibbonSliderChannel
+- CMFCVisualManagerOffice2007 [MFC], OnDrawRibbonSliderThumb
+- CMFCVisualManagerOffice2007 [MFC], OnDrawRibbonSliderZoomButton
+- CMFCVisualManagerOffice2007 [MFC], OnDrawRibbonStatusBarPane
+- CMFCVisualManagerOffice2007 [MFC], OnDrawRibbonTabsFrame
+- CMFCVisualManagerOffice2007 [MFC], OnDrawScrollButtons
+- CMFCVisualManagerOffice2007 [MFC], OnDrawSeparator
+- CMFCVisualManagerOffice2007 [MFC], OnDrawShowAllMenuItems
+- CMFCVisualManagerOffice2007 [MFC], OnDrawStatusBarPaneBorder
+- CMFCVisualManagerOffice2007 [MFC], OnDrawStatusBarSizeBox
+- CMFCVisualManagerOffice2007 [MFC], OnDrawTab
+- CMFCVisualManagerOffice2007 [MFC], OnDrawTabsButtonBorder
+- CMFCVisualManagerOffice2007 [MFC], OnDrawTask
+- CMFCVisualManagerOffice2007 [MFC], OnDrawTasksGroupCaption
+- CMFCVisualManagerOffice2007 [MFC], OnDrawTearOffCaption
+- CMFCVisualManagerOffice2007 [MFC], OnEraseMDIClientArea
+- CMFCVisualManagerOffice2007 [MFC], OnEraseTabsArea
+- CMFCVisualManagerOffice2007 [MFC], OnEraseTabsButton
+- CMFCVisualManagerOffice2007 [MFC], OnEraseTabsFrame
+- CMFCVisualManagerOffice2007 [MFC], OnFillBarBackground
+- CMFCVisualManagerOffice2007 [MFC], OnFillButtonInterior
+- CMFCVisualManagerOffice2007 [MFC], OnFillCaptionBarButton
+- CMFCVisualManagerOffice2007 [MFC], OnFillHighlightedArea
+- CMFCVisualManagerOffice2007 [MFC], OnFillMiniFrameCaption
+- CMFCVisualManagerOffice2007 [MFC], OnFillOutlookBarCaption
+- CMFCVisualManagerOffice2007 [MFC], OnFillOutlookPageButton
+- CMFCVisualManagerOffice2007 [MFC], OnFillPopupWindowBackground
+- CMFCVisualManagerOffice2007 [MFC], OnFillRibbonButton
+- CMFCVisualManagerOffice2007 [MFC], OnFillRibbonEdit
+- CMFCVisualManagerOffice2007 [MFC], OnFillRibbonMainPanelButton
+- CMFCVisualManagerOffice2007 [MFC], OnFillRibbonMenuFrame
+- CMFCVisualManagerOffice2007 [MFC], OnFillRibbonQuickAccessToolBarPopup
+- CMFCVisualManagerOffice2007 [MFC], OnFillTab
+- CMFCVisualManagerOffice2007 [MFC], OnHighlightMenuItem
+- CMFCVisualManagerOffice2007 [MFC], OnHighlightRarelyUsedMenuItems
+- CMFCVisualManagerOffice2007 [MFC], OnNcActivate
+- CMFCVisualManagerOffice2007 [MFC], OnNcPaint
+- CMFCVisualManagerOffice2007 [MFC], OnSetWindowRegion
+- CMFCVisualManagerOffice2007 [MFC], OnUpdateSystemColors
+- CMFCVisualManagerOffice2007 [MFC], SetResourceHandle
 ms.assetid: fb687c74-6d08-4c72-8acf-27f75dda6d6b
 caps.latest.revision: 35
 author: mikeblome
@@ -146,29 +257,29 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 0eeb4105677590daf4e6bc101996bbf06d038764
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7e2d32807753d345e0b13f3f2ef67064b43c6676
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcvisualmanageroffice2007-class"></a>Classe CMFCVisualManagerOffice2007
-`CMFCVisualManagerOffice2007`fornisce un'applicazione un aspetto di Microsoft Office 2007. 
+# <a name="cmfcvisualmanageroffice2007-class"></a>CMFCVisualManagerOffice2007 Class
+`CMFCVisualManagerOffice2007` gives an application a Microsoft Office 2007 appearance. 
 
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCVisualManagerOffice2007 : public CMFCVisualManagerOffice2003  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>Metodi pubblici  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
 |[CMFCVisualManagerOffice2007::AlwaysHighlight3DTabs](#alwayshighlight3dtabs)||  
 |[CMFCVisualManagerOffice2007::CleanStyle](#cleanstyle)||  
@@ -185,7 +296,7 @@ class CMFCVisualManagerOffice2007 : public CMFCVisualManagerOffice2003
 |[CMFCVisualManagerOffice2007::GetRibbonStatusBarTextColor](#getribbonstatusbartextcolor)||  
 |[CMFCVisualManagerOffice2007::GetShowAllMenuItemsHeight](#getshowallmenuitemsheight)||  
 |[CMFCVisualManagerOffice2007::GetStatusBarPaneTextColor](#getstatusbarpanetextcolor)||  
-|`CMFCVisualManagerOffice2007::GetStyle`|Restituisce la combinazione di colori corrente di `CMFCVisualManagerOffice2007` GUI che, a sua volta, riproduce l'interfaccia utente grafica di Microsoft Office 2007.|  
+|`CMFCVisualManagerOffice2007::GetStyle`|Returns the current color scheme of the `CMFCVisualManagerOffice2007` GUI which, in turn, mimics the Microsoft Office 2007 GUI.|  
 |[CMFCVisualManagerOffice2007::GetTabFrameColors](#gettabframecolors)||  
 |[CMFCVisualManagerOffice2007::GetTabHorzMargin](#gettabhorzmargin)||  
 |[CMFCVisualManagerOffice2007::GetTabTextColor](#gettabtextcolor)||  
@@ -283,17 +394,17 @@ class CMFCVisualManagerOffice2007 : public CMFCVisualManagerOffice2003
 |[CMFCVisualManagerOffice2007::OnSetWindowRegion](#onsetwindowregion)||  
 |[CMFCVisualManagerOffice2007::OnUpdateSystemColors](#onupdatesystemcolors)||  
 |[CMFCVisualManagerOffice2007::SetResourceHandle](#setresourcehandle)||  
-|`CMFCVisualManagerOffice2007::SetStyle`|Imposta la combinazione di colori di `CMFCVisualManagerOffice2007` GUI.|  
+|`CMFCVisualManagerOffice2007::SetStyle`|Sets the color scheme of the `CMFCVisualManagerOffice2007` GUI.|  
   
-## <a name="remarks"></a>Note  
- Utilizzare `CMFCVisualManagerOffice2007` per modificare l'aspetto visivo dell'applicazione sono simili a quello di Microsoft Office 2007. Questo gestore visualizzazione richiede si imposta lo stile prima di utilizzarlo. Prima di passare il gestore visualizzazione a `CMFCVisualManager::SetDefaultManager`, è necessario chiamare la funzione statica `CMFCVisualManagerOffice2007::SetStyle`.  
+## <a name="remarks"></a>Remarks  
+ Use `CMFCVisualManagerOffice2007` to change the visual appearance of your application to resemble that of Microsoft Office 2007. This visual manager requires that you set the style before you use it. Before you pass this visual manager to `CMFCVisualManager::SetDefaultManager`, you must call the static function `CMFCVisualManagerOffice2007::SetStyle`.  
   
-## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il gestore visualizzazione di Office 2007. Questo frammento di codice fa parte di [esempio dimostrativo avviso Desktop](../../visual-cpp-samples.md).  
+## <a name="example"></a>Example  
+ The following example demonstrates how to use the visual manager Office 2007. This code snippet is part of the [Desktop Alert Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_DesktopAlertDemo&#7;](../../mfc/reference/codesnippet/cpp/cmfcvisualmanageroffice2007-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_DesktopAlertDemo#7](../../mfc/reference/codesnippet/cpp/cmfcvisualmanageroffice2007-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCBaseVisualManager](../../mfc/reference/cmfcbasevisualmanager-class.md)  
@@ -306,58 +417,58 @@ class CMFCVisualManagerOffice2007 : public CMFCVisualManagerOffice2003
   
  [CMFCVisualManagerOffice2007](../../mfc/reference/cmfcvisualmanageroffice2007-class.md)  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** afxvisualmanageroffice2007.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxvisualmanageroffice2007.h  
   
-##  <a name="alwayshighlight3dtabs"></a>CMFCVisualManagerOffice2007::AlwaysHighlight3DTabs  
+##  <a name="alwayshighlight3dtabs"></a>  CMFCVisualManagerOffice2007::AlwaysHighlight3DTabs  
 
   
 ```  
 virtual BOOL AlwaysHighlight3DTabs() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="cleanstyle"></a>CMFCVisualManagerOffice2007::CleanStyle  
+##  <a name="cleanstyle"></a>  CMFCVisualManagerOffice2007::CleanStyle  
 
   
 ```  
 static void __stdcall CleanStyle();
 ```  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getcaptionbartextcolor"></a>CMFCVisualManagerOffice2007::GetCaptionBarTextColor  
+##  <a name="getcaptionbartextcolor"></a>  CMFCVisualManagerOffice2007::GetCaptionBarTextColor  
 
   
 ```  
 virtual COLORREF GetCaptionBarTextColor(CMFCCaptionBar* pBar);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pBar`  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gethighlightedmenuitemtextcolor"></a>CMFCVisualManagerOffice2007::GetHighlightedMenuItemTextColor  
+##  <a name="gethighlightedmenuitemtextcolor"></a>  CMFCVisualManagerOffice2007::GetHighlightedMenuItemTextColor  
 
   
 ```  
 virtual COLORREF GetHighlightedMenuItemTextColor(CMFCToolBarMenuButton* pButton);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pButton`  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getmenuitemtextcolor"></a>CMFCVisualManagerOffice2007::GetMenuItemTextColor  
+##  <a name="getmenuitemtextcolor"></a>  CMFCVisualManagerOffice2007::GetMenuItemTextColor  
 
   
 ```  
@@ -367,122 +478,122 @@ virtual COLORREF GetMenuItemTextColor(
     BOOL bDisabled);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pButton`  
  [in] `bHighlighted`  
  [in] `bDisabled`  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getncbtnsize"></a>CMFCVisualManagerOffice2007::GetNcBtnSize  
+##  <a name="getncbtnsize"></a>  CMFCVisualManagerOffice2007::GetNcBtnSize  
 
   
 ```  
 virtual CSize GetNcBtnSize(BOOL bSmall) const;  
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `bSmall`  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getribbonbar"></a>CMFCVisualManagerOffice2007::GetRibbonBar  
+##  <a name="getribbonbar"></a>  CMFCVisualManagerOffice2007::GetRibbonBar  
 
   
 ```  
 CMFCRibbonBar* GetRibbonBar(CWnd* pWnd) const;  
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pWnd`  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getribbonhyperlinktextcolor"></a>CMFCVisualManagerOffice2007::GetRibbonHyperlinkTextColor  
+##  <a name="getribbonhyperlinktextcolor"></a>  CMFCVisualManagerOffice2007::GetRibbonHyperlinkTextColor  
 
   
 ```  
 virtual COLORREF GetRibbonHyperlinkTextColor(CMFCRibbonLinkCtrl* pHyperLink);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pHyperLink`  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getribbonpopupbordersize"></a>CMFCVisualManagerOffice2007::GetRibbonPopupBorderSize  
+##  <a name="getribbonpopupbordersize"></a>  CMFCVisualManagerOffice2007::GetRibbonPopupBorderSize  
 
   
 ```  
 virtual int GetRibbonPopupBorderSize(const CMFCRibbonPanelMenu* pPopup) const;  
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pPopup`  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getribbonquickaccesstoolbarchevronoffset"></a>CMFCVisualManagerOffice2007::GetRibbonQuickAccessToolBarChevronOffset  
+##  <a name="getribbonquickaccesstoolbarchevronoffset"></a>  CMFCVisualManagerOffice2007::GetRibbonQuickAccessToolBarChevronOffset  
 
   
 ```  
 virtual int GetRibbonQuickAccessToolBarChevronOffset();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getribbonquickaccesstoolbarrightmargin"></a>CMFCVisualManagerOffice2007::GetRibbonQuickAccessToolBarRightMargin  
+##  <a name="getribbonquickaccesstoolbarrightmargin"></a>  CMFCVisualManagerOffice2007::GetRibbonQuickAccessToolBarRightMargin  
 
   
 ```  
 virtual int GetRibbonQuickAccessToolBarRightMargin();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getribbonquickaccesstoolbartextcolor"></a>CMFCVisualManagerOffice2007::GetRibbonQuickAccessToolBarTextColor  
+##  <a name="getribbonquickaccesstoolbartextcolor"></a>  CMFCVisualManagerOffice2007::GetRibbonQuickAccessToolBarTextColor  
 
   
 ```  
 virtual COLORREF GetRibbonQuickAccessToolBarTextColor(BOOL bDisabled = FALSE);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `bDisabled`  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getribbonstatusbartextcolor"></a>CMFCVisualManagerOffice2007::GetRibbonStatusBarTextColor  
+##  <a name="getribbonstatusbartextcolor"></a>  CMFCVisualManagerOffice2007::GetRibbonStatusBarTextColor  
 
   
 ```  
 virtual COLORREF GetRibbonStatusBarTextColor(CMFCRibbonStatusBar* pStatusBar);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pStatusBar`  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getshowallmenuitemsheight"></a>CMFCVisualManagerOffice2007::GetShowAllMenuItemsHeight  
+##  <a name="getshowallmenuitemsheight"></a>  CMFCVisualManagerOffice2007::GetShowAllMenuItemsHeight  
 
   
 ```  
@@ -491,15 +602,15 @@ virtual int GetShowAllMenuItemsHeight(
     const CSize& sizeDefault);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `sizeDefault`  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getstatusbarpanetextcolor"></a>CMFCVisualManagerOffice2007::GetStatusBarPaneTextColor  
+##  <a name="getstatusbarpanetextcolor"></a>  CMFCVisualManagerOffice2007::GetStatusBarPaneTextColor  
 
   
 ```  
@@ -508,15 +619,15 @@ virtual COLORREF GetStatusBarPaneTextColor(
     CMFCStatusBarPaneInfo* pPane);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pStatusBar`  
  [in] `pPane`  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gettabframecolors"></a>CMFCVisualManagerOffice2007::GetTabFrameColors  
+##  <a name="gettabframecolors"></a>  CMFCVisualManagerOffice2007::GetTabFrameColors  
 
   
 ```  
@@ -532,7 +643,7 @@ virtual void GetTabFrameColors(
     CBrush*& pbrBlack);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pTabWnd`  
  [in] `clrDark`  
  [in] `clrBlack`  
@@ -543,23 +654,23 @@ virtual void GetTabFrameColors(
  [in] `pbrFace`  
  [in] `pbrBlack`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gettabhorzmargin"></a>CMFCVisualManagerOffice2007::GetTabHorzMargin  
+##  <a name="gettabhorzmargin"></a>  CMFCVisualManagerOffice2007::GetTabHorzMargin  
 
   
 ```  
 virtual int GetTabHorzMargin(const CMFCBaseTabCtrl* pTabWnd);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pTabWnd`  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gettabtextcolor"></a>CMFCVisualManagerOffice2007::GetTabTextColor  
+##  <a name="gettabtextcolor"></a>  CMFCVisualManagerOffice2007::GetTabTextColor  
 
   
 ```  
@@ -569,16 +680,16 @@ virtual COLORREF GetTabTextColor(
     BOOL bIsActive);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pTabWnd`  
  [in] `iTab`  
  [in] `bIsActive`  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gettoolbarbuttontextcolor"></a>CMFCVisualManagerOffice2007::GetToolbarButtonTextColor  
+##  <a name="gettoolbarbuttontextcolor"></a>  CMFCVisualManagerOffice2007::GetToolbarButtonTextColor  
 
   
 ```  
@@ -587,26 +698,26 @@ virtual COLORREF GetToolbarButtonTextColor(
     CMFCVisualManager::AFX_BUTTON_STATE state);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pButton`  
  [in] `state`  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gettoolbardisabledtextcolor"></a>CMFCVisualManagerOffice2007::GetToolbarDisabledTextColor  
+##  <a name="gettoolbardisabledtextcolor"></a>  CMFCVisualManagerOffice2007::GetToolbarDisabledTextColor  
 
   
 ```  
 virtual COLORREF GetToolbarDisabledTextColor();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gettooltipinfo"></a>CMFCVisualManagerOffice2007::GetToolTipInfo  
+##  <a name="gettooltipinfo"></a>  CMFCVisualManagerOffice2007::GetToolTipInfo  
 
   
 ```  
@@ -615,73 +726,73 @@ virtual BOOL GetToolTipInfo(
     UINT nType = (UINT)(-1));
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `params`  
  [in] `nType`  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ishighlightwholemenuitem"></a>CMFCVisualManagerOffice2007::IsHighlightWholeMenuItem  
+##  <a name="ishighlightwholemenuitem"></a>  CMFCVisualManagerOffice2007::IsHighlightWholeMenuItem  
 
   
 ```  
 virtual BOOL IsHighlightWholeMenuItem();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="islayeredribbonkeytip"></a>CMFCVisualManagerOffice2007::IsLayeredRibbonKeyTip  
+##  <a name="islayeredribbonkeytip"></a>  CMFCVisualManagerOffice2007::IsLayeredRibbonKeyTip  
 
   
 ```  
 virtual BOOL IsLayeredRibbonKeyTip() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isownerdrawcaption"></a>CMFCVisualManagerOffice2007::IsOwnerDrawCaption  
+##  <a name="isownerdrawcaption"></a>  CMFCVisualManagerOffice2007::IsOwnerDrawCaption  
 
   
 ```  
 virtual BOOL IsOwnerDrawCaption();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isownerdrawmenucheck"></a>CMFCVisualManagerOffice2007::IsOwnerDrawMenuCheck  
+##  <a name="isownerdrawmenucheck"></a>  CMFCVisualManagerOffice2007::IsOwnerDrawMenuCheck  
 
   
 ```  
 virtual BOOL IsOwnerDrawMenuCheck();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isribbonpresent"></a>CMFCVisualManagerOffice2007::IsRibbonPresent  
+##  <a name="isribbonpresent"></a>  CMFCVisualManagerOffice2007::IsRibbonPresent  
 
   
 ```  
 BOOL IsRibbonPresent(CWnd* pWnd) const;  
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pWnd`  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawbargripper"></a>CMFCVisualManagerOffice2007::OnDrawBarGripper  
+##  <a name="ondrawbargripper"></a>  CMFCVisualManagerOffice2007::OnDrawBarGripper  
 
   
 ```  
@@ -692,15 +803,15 @@ virtual void OnDrawBarGripper(
     CBasePane* pBar);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `rectGripper`  
  [in] `bHorz`  
  [in] `pBar`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawbuttonborder"></a>CMFCVisualManagerOffice2007::OnDrawButtonBorder  
+##  <a name="ondrawbuttonborder"></a>  CMFCVisualManagerOffice2007::OnDrawButtonBorder  
 
   
 ```  
@@ -711,15 +822,15 @@ virtual void OnDrawButtonBorder(
     CMFCVisualManager::AFX_BUTTON_STATE state);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pButton`  
  [in] `rect`  
  [in] `state`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawbuttonseparator"></a>CMFCVisualManagerOffice2007::OnDrawButtonSeparator  
+##  <a name="ondrawbuttonseparator"></a>  CMFCVisualManagerOffice2007::OnDrawButtonSeparator  
 
   
 ```  
@@ -731,16 +842,16 @@ virtual void OnDrawButtonSeparator(
     BOOL bHorz);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pButton`  
  [in] `rect`  
  [in] `state`  
  [in] `bHorz`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawcaptionbarinfoarea"></a>CMFCVisualManagerOffice2007::OnDrawCaptionBarInfoArea  
+##  <a name="ondrawcaptionbarinfoarea"></a>  CMFCVisualManagerOffice2007::OnDrawCaptionBarInfoArea  
 
   
 ```  
@@ -750,14 +861,14 @@ virtual void OnDrawCaptionBarInfoArea(
     CRect rect);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pBar`  
  [in] `rect`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawcheckboxex"></a>CMFCVisualManagerOffice2007::OnDrawCheckBoxEx  
+##  <a name="ondrawcheckboxex"></a>  CMFCVisualManagerOffice2007::OnDrawCheckBoxEx  
 
   
 ```  
@@ -770,7 +881,7 @@ virtual void OnDrawCheckBoxEx(
     BOOL bEnabled);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `rect`  
  [in] `nState`  
@@ -778,9 +889,9 @@ virtual void OnDrawCheckBoxEx(
  [in] `bPressed`  
  [in] `bEnabled`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawcomboborder"></a>CMFCVisualManagerOffice2007::OnDrawComboBorder  
+##  <a name="ondrawcomboborder"></a>  CMFCVisualManagerOffice2007::OnDrawComboBorder  
 
   
 ```  
@@ -793,7 +904,7 @@ virtual void OnDrawComboBorder(
     CMFCToolBarComboBoxButton* pButton);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `rect`  
  [in] `bDisabled`  
@@ -801,9 +912,9 @@ virtual void OnDrawComboBorder(
  [in] `bIsHighlighted`  
  [in] `pButton`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawcombodropbutton"></a>CMFCVisualManagerOffice2007::OnDrawComboDropButton  
+##  <a name="ondrawcombodropbutton"></a>  CMFCVisualManagerOffice2007::OnDrawComboDropButton  
 
   
 ```  
@@ -816,7 +927,7 @@ virtual void OnDrawComboDropButton(
     CMFCToolBarComboBoxButton* pButton);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `rect`  
  [in] `bDisabled`  
@@ -824,9 +935,9 @@ virtual void OnDrawComboDropButton(
  [in] `bIsHighlighted`  
  [in] `pButton`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawdefaultribbonimage"></a>CMFCVisualManagerOffice2007::OnDrawDefaultRibbonImage  
+##  <a name="ondrawdefaultribbonimage"></a>  CMFCVisualManagerOffice2007::OnDrawDefaultRibbonImage  
 
   
 ```  
@@ -838,16 +949,16 @@ virtual void OnDrawDefaultRibbonImage(
     BOOL bIsHighlighted = FALSE);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `rectImage`  
  [in] `bIsDisabled`  
  [in] `bIsPressed`  
  [in] `bIsHighlighted`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondraweditborder"></a>CMFCVisualManagerOffice2007::OnDrawEditBorder  
+##  <a name="ondraweditborder"></a>  CMFCVisualManagerOffice2007::OnDrawEditBorder  
 
   
 ```  
@@ -859,16 +970,16 @@ virtual void OnDrawEditBorder(
     CMFCToolBarEditBoxButton* pButton);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `rect`  
  [in] `bDisabled`  
  [in] `bIsHighlighted`  
  [in] `pButton`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawfloatingtoolbarborder"></a>CMFCVisualManagerOffice2007::OnDrawFloatingToolbarBorder  
+##  <a name="ondrawfloatingtoolbarborder"></a>  CMFCVisualManagerOffice2007::OnDrawFloatingToolbarBorder  
 
   
 ```  
@@ -879,15 +990,15 @@ virtual void OnDrawFloatingToolbarBorder(
     CRect rectBorderSize);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pToolBar`  
  [in] `rectBorder`  
  [in] `rectBorderSize`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawheaderctrlborder"></a>CMFCVisualManagerOffice2007::OnDrawHeaderCtrlBorder  
+##  <a name="ondrawheaderctrlborder"></a>  CMFCVisualManagerOffice2007::OnDrawHeaderCtrlBorder  
 
   
 ```  
@@ -899,16 +1010,16 @@ virtual void OnDrawHeaderCtrlBorder(
     BOOL bIsHighlighted);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pCtrl`  
  [in] `pDC`  
  [in] `rect`  
  [in] `bIsPressed`  
  [in] `bIsHighlighted`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawmenuborder"></a>CMFCVisualManagerOffice2007::OnDrawMenuBorder  
+##  <a name="ondrawmenuborder"></a>  CMFCVisualManagerOffice2007::OnDrawMenuBorder  
 
   
 ```  
@@ -918,14 +1029,14 @@ virtual void OnDrawMenuBorder(
     CRect rect);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pMenu`  
  [in] `rect`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawmenucheck"></a>CMFCVisualManagerOffice2007::OnDrawMenuCheck  
+##  <a name="ondrawmenucheck"></a>  CMFCVisualManagerOffice2007::OnDrawMenuCheck  
 
   
 ```  
@@ -937,16 +1048,16 @@ virtual void OnDrawMenuCheck(
     BOOL bIsRadio);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pButton`  
  [in] `rect`  
  [in] `bHighlight`  
  [in] `bIsRadio`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawmenuitembutton"></a>CMFCVisualManagerOffice2007::OnDrawMenuItemButton  
+##  <a name="ondrawmenuitembutton"></a>  CMFCVisualManagerOffice2007::OnDrawMenuItemButton  
 
   
 ```  
@@ -958,16 +1069,16 @@ virtual void OnDrawMenuItemButton(
     BOOL bDisabled);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pButton`  
  [in] `rectButton`  
  [in] `bHighlight`  
  [in] `bDisabled`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawmenulabel"></a>CMFCVisualManagerOffice2007::OnDrawMenuLabel  
+##  <a name="ondrawmenulabel"></a>  CMFCVisualManagerOffice2007::OnDrawMenuLabel  
 
   
 ```  
@@ -976,15 +1087,15 @@ virtual COLORREF OnDrawMenuLabel(
     CRect rect);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `rect`  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawmenuresizebar"></a>CMFCVisualManagerOffice2007::OnDrawMenuResizeBar  
+##  <a name="ondrawmenuresizebar"></a>  CMFCVisualManagerOffice2007::OnDrawMenuResizeBar  
 
   
 ```  
@@ -994,14 +1105,14 @@ virtual void OnDrawMenuResizeBar(
     int nResizeFlags);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `rect`  
  [in] `nResizeFlags`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawmenuscrollbutton"></a>CMFCVisualManagerOffice2007::OnDrawMenuScrollButton  
+##  <a name="ondrawmenuscrollbutton"></a>  CMFCVisualManagerOffice2007::OnDrawMenuScrollButton  
 
   
 ```  
@@ -1014,7 +1125,7 @@ virtual void OnDrawMenuScrollButton(
     BOOL bIsDisabled);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `rect`  
  [in] `bIsScrollDown`  
@@ -1022,9 +1133,9 @@ virtual void OnDrawMenuScrollButton(
  [in] `bIsPressed`  
  [in] `bIsDisabled`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawmenusystembutton"></a>CMFCVisualManagerOffice2007::OnDrawMenuSystemButton  
+##  <a name="ondrawmenusystembutton"></a>  CMFCVisualManagerOffice2007::OnDrawMenuSystemButton  
 
   
 ```  
@@ -1036,16 +1147,16 @@ virtual void OnDrawMenuSystemButton(
     BOOL bHighlight);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `rect`  
  [in] `uiSystemCommand`  
  [in] `nStyle`  
  [in] `bHighlight`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawminiframeborder"></a>CMFCVisualManagerOffice2007::OnDrawMiniFrameBorder  
+##  <a name="ondrawminiframeborder"></a>  CMFCVisualManagerOffice2007::OnDrawMiniFrameBorder  
 
   
 ```  
@@ -1056,15 +1167,15 @@ virtual void OnDrawMiniFrameBorder(
     CRect rectBorderSize);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pFrameWnd`  
  [in] `rectBorder`  
  [in] `rectBorderSize`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawoutlookbarsplitter"></a>CMFCVisualManagerOffice2007::OnDrawOutlookBarSplitter  
+##  <a name="ondrawoutlookbarsplitter"></a>  CMFCVisualManagerOffice2007::OnDrawOutlookBarSplitter  
 
   
 ```  
@@ -1073,13 +1184,13 @@ virtual void OnDrawOutlookBarSplitter(
     CRect rectSplitter);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `rectSplitter`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawoutlookpagebuttonborder"></a>CMFCVisualManagerOffice2007::OnDrawOutlookPageButtonBorder  
+##  <a name="ondrawoutlookpagebuttonborder"></a>  CMFCVisualManagerOffice2007::OnDrawOutlookPageButtonBorder  
 
   
 ```  
@@ -1090,15 +1201,15 @@ virtual void OnDrawOutlookPageButtonBorder(
     BOOL bIsPressed);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `rectBtn`  
  [in] `bIsHighlighted`  
  [in] `bIsPressed`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawpanecaption"></a>CMFCVisualManagerOffice2007::OnDrawPaneCaption  
+##  <a name="ondrawpanecaption"></a>  CMFCVisualManagerOffice2007::OnDrawPaneCaption  
 
   
 ```  
@@ -1110,18 +1221,18 @@ virtual COLORREF OnDrawPaneCaption(
     CRect rectButtons);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pBar`  
  [in] `bActive`  
  [in] `rectCaption`  
  [in] `rectButtons`  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawpopupwindowcaption"></a>CMFCVisualManagerOffice2007::OnDrawPopupWindowCaption  
+##  <a name="ondrawpopupwindowcaption"></a>  CMFCVisualManagerOffice2007::OnDrawPopupWindowCaption  
 
   
 ```  
@@ -1131,16 +1242,16 @@ virtual COLORREF OnDrawPopupWindowCaption(
     CMFCDesktopAlertWnd* pPopupWnd);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `rectCaption`  
  [in] `pPopupWnd`  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawpropertysheetlistitem"></a>CMFCVisualManagerOffice2007::OnDrawPropertySheetListItem  
+##  <a name="ondrawpropertysheetlistitem"></a>  CMFCVisualManagerOffice2007::OnDrawPropertySheetListItem  
 
   
 ```  
@@ -1152,18 +1263,18 @@ virtual COLORREF OnDrawPropertySheetListItem(
     BOOL bIsSelected);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pParent`  
  [in] `rect`  
  [in] `bIsHighlihted`  
  [in] `bIsSelected`  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawribbonapplicationbutton"></a>CMFCVisualManagerOffice2007::OnDrawRibbonApplicationButton  
+##  <a name="ondrawribbonapplicationbutton"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonApplicationButton  
 
   
 ```  
@@ -1172,13 +1283,13 @@ virtual void OnDrawRibbonApplicationButton(
     CMFCRibbonButton* pButton);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pButton`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawribbonbuttonborder"></a>CMFCVisualManagerOffice2007::OnDrawRibbonButtonBorder  
+##  <a name="ondrawribbonbuttonborder"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonButtonBorder  
 
   
 ```  
@@ -1187,13 +1298,13 @@ virtual void OnDrawRibbonButtonBorder(
     CMFCRibbonButton* pButton);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pButton`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawribbonbuttonsgroup"></a>CMFCVisualManagerOffice2007::OnDrawRibbonButtonsGroup  
+##  <a name="ondrawribbonbuttonsgroup"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonButtonsGroup  
 
   
 ```  
@@ -1203,16 +1314,16 @@ virtual COLORREF OnDrawRibbonButtonsGroup(
     CRect rectGroup);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pGroup`  
  [in] `rectGroup`  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawribboncaption"></a>CMFCVisualManagerOffice2007::OnDrawRibbonCaption  
+##  <a name="ondrawribboncaption"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonCaption  
 
   
 ```  
@@ -1223,15 +1334,15 @@ virtual void OnDrawRibbonCaption(
     CRect rectText);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pBar`  
  [in] `rectCaption`  
  [in] `rectText`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawribboncaptionbutton"></a>CMFCVisualManagerOffice2007::OnDrawRibbonCaptionButton  
+##  <a name="ondrawribboncaptionbutton"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonCaptionButton  
 
   
 ```  
@@ -1240,13 +1351,13 @@ virtual void OnDrawRibbonCaptionButton(
     CMFCRibbonCaptionButton* pButton);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pButton`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawribboncategory"></a>CMFCVisualManagerOffice2007::OnDrawRibbonCategory  
+##  <a name="ondrawribboncategory"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonCategory  
 
   
 ```  
@@ -1256,14 +1367,14 @@ virtual void OnDrawRibbonCategory(
     CRect rectCategory);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pCategory`  
  [in] `rectCategory`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawribboncategorycaption"></a>CMFCVisualManagerOffice2007::OnDrawRibbonCategoryCaption  
+##  <a name="ondrawribboncategorycaption"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonCategoryCaption  
 
   
 ```  
@@ -1272,15 +1383,15 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
     CMFCRibbonContextCaption* pContextCaption);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pContextCaption`  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawribboncategoryscroll"></a>CMFCVisualManagerOffice2007::OnDrawRibbonCategoryScroll  
+##  <a name="ondrawribboncategoryscroll"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonCategoryScroll  
 
   
 ```  
@@ -1289,13 +1400,13 @@ virtual void OnDrawRibbonCategoryScroll(
     CRibbonCategoryScroll* pScroll);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pScroll`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawribboncategorytab"></a>CMFCVisualManagerOffice2007::OnDrawRibbonCategoryTab  
+##  <a name="ondrawribboncategorytab"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonCategoryTab  
 
   
 ```  
@@ -1305,16 +1416,16 @@ virtual COLORREF OnDrawRibbonCategoryTab(
     BOOL bIsActive);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pTab`  
  [in] `bIsActive`  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawribboncheckboxonlist"></a>CMFCVisualManagerOffice2007::OnDrawRibbonCheckBoxOnList  
+##  <a name="ondrawribboncheckboxonlist"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonCheckBoxOnList  
 
   
 ```  
@@ -1326,16 +1437,16 @@ virtual void OnDrawRibbonCheckBoxOnList(
     BOOL bHighlighted);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pCheckBox`  
  [in] `rect`  
  [in] `bIsSelected`  
  [in] `bHighlighted`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawribbondefaultpanebutton"></a>CMFCVisualManagerOffice2007::OnDrawRibbonDefaultPaneButton  
+##  <a name="ondrawribbondefaultpanebutton"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonDefaultPaneButton  
 
   
 ```  
@@ -1344,13 +1455,13 @@ virtual void OnDrawRibbonDefaultPaneButton(
     CMFCRibbonButton* pButton);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pButton`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawribbondefaultpanebuttonindicator"></a>CMFCVisualManagerOffice2007::OnDrawRibbonDefaultPaneButtonIndicator  
+##  <a name="ondrawribbondefaultpanebuttonindicator"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonDefaultPaneButtonIndicator  
 
   
 ```  
@@ -1362,16 +1473,16 @@ virtual void OnDrawRibbonDefaultPaneButtonIndicator(
     BOOL bHighlighted);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pButton`  
  [in] `rect`  
  [in] `bIsSelected`  
  [in] `bHighlighted`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawribbongalleryborder"></a>CMFCVisualManagerOffice2007::OnDrawRibbonGalleryBorder  
+##  <a name="ondrawribbongalleryborder"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonGalleryBorder  
 
   
 ```  
@@ -1381,14 +1492,14 @@ virtual void OnDrawRibbonGalleryBorder(
     CRect rectBorder);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pButton`  
  [in] `rectBorder`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawribbongallerybutton"></a>CMFCVisualManagerOffice2007::OnDrawRibbonGalleryButton  
+##  <a name="ondrawribbongallerybutton"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonGalleryButton  
 
   
 ```  
@@ -1397,13 +1508,13 @@ virtual void OnDrawRibbonGalleryButton(
     CMFCRibbonGalleryIcon* pButton);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pButton`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawribbonkeytip"></a>CMFCVisualManagerOffice2007::OnDrawRibbonKeyTip  
+##  <a name="ondrawribbonkeytip"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonKeyTip  
 
   
 ```  
@@ -1414,15 +1525,15 @@ virtual void OnDrawRibbonKeyTip(
     CString str);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pElement`  
  [in] `rect`  
  [in] `str`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawribbonmainpanelbuttonborder"></a>CMFCVisualManagerOffice2007::OnDrawRibbonMainPanelButtonBorder  
+##  <a name="ondrawribbonmainpanelbuttonborder"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonMainPanelButtonBorder  
 
   
 ```  
@@ -1431,13 +1542,13 @@ virtual void OnDrawRibbonMainPanelButtonBorder(
     CMFCRibbonButton* pButton);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pButton`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawribbonmainpanelframe"></a>CMFCVisualManagerOffice2007::OnDrawRibbonMainPanelFrame  
+##  <a name="ondrawribbonmainpanelframe"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonMainPanelFrame  
 
   
 ```  
@@ -1447,14 +1558,14 @@ virtual void OnDrawRibbonMainPanelFrame(
     CRect rect);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pPanel`  
  [in] `rect`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawribbonmenucheckframe"></a>CMFCVisualManagerOffice2007::OnDrawRibbonMenuCheckFrame  
+##  <a name="ondrawribbonmenucheckframe"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonMenuCheckFrame  
 
   
 ```  
@@ -1464,14 +1575,14 @@ virtual void OnDrawRibbonMenuCheckFrame(
     CRect rect);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pButton`  
  [in] `rect`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawribbonpanel"></a>CMFCVisualManagerOffice2007::OnDrawRibbonPanel  
+##  <a name="ondrawribbonpanel"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonPanel  
 
   
 ```  
@@ -1482,17 +1593,17 @@ virtual COLORREF OnDrawRibbonPanel(
     CRect rectCaption);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pPanel`  
  [in] `rectPanel`  
  [in] `rectCaption`  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawribbonpanelcaption"></a>CMFCVisualManagerOffice2007::OnDrawRibbonPanelCaption  
+##  <a name="ondrawribbonpanelcaption"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonPanelCaption  
 
   
 ```  
@@ -1502,14 +1613,14 @@ virtual void OnDrawRibbonPanelCaption(
     CRect rectCaption);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pPanel`  
  [in] `rectCaption`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawribbonprogressbar"></a>CMFCVisualManagerOffice2007::OnDrawRibbonProgressBar  
+##  <a name="ondrawribbonprogressbar"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonProgressBar  
 
   
 ```  
@@ -1521,16 +1632,16 @@ virtual void OnDrawRibbonProgressBar(
     BOOL bInfiniteMode);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pProgress`  
  [in] `rectProgress`  
  [in] `rectChunk`  
  [in] `bInfiniteMode`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawribbonrecentfilesframe"></a>CMFCVisualManagerOffice2007::OnDrawRibbonRecentFilesFrame  
+##  <a name="ondrawribbonrecentfilesframe"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonRecentFilesFrame  
 
   
 ```  
@@ -1540,14 +1651,14 @@ virtual void OnDrawRibbonRecentFilesFrame(
     CRect rect);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pPanel`  
  [in] `rect`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawribbonsliderchannel"></a>CMFCVisualManagerOffice2007::OnDrawRibbonSliderChannel  
+##  <a name="ondrawribbonsliderchannel"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonSliderChannel  
 
   
 ```  
@@ -1557,14 +1668,14 @@ virtual void OnDrawRibbonSliderChannel(
     CRect rect);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pSlider`  
  [in] `rect`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawribbonsliderthumb"></a>CMFCVisualManagerOffice2007::OnDrawRibbonSliderThumb  
+##  <a name="ondrawribbonsliderthumb"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonSliderThumb  
 
   
 ```  
@@ -1577,7 +1688,7 @@ virtual void OnDrawRibbonSliderThumb(
     BOOL bIsDisabled);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pSlider`  
  [in] `rect`  
@@ -1585,9 +1696,9 @@ virtual void OnDrawRibbonSliderThumb(
  [in] `bIsPressed`  
  [in] `bIsDisabled`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawribbonsliderzoombutton"></a>CMFCVisualManagerOffice2007::OnDrawRibbonSliderZoomButton  
+##  <a name="ondrawribbonsliderzoombutton"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonSliderZoomButton  
 
   
 ```  
@@ -1601,7 +1712,7 @@ virtual void OnDrawRibbonSliderZoomButton(
     BOOL bIsDisabled);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pSlider`  
  [in] `rect`  
@@ -1610,9 +1721,9 @@ virtual void OnDrawRibbonSliderZoomButton(
  [in] `bIsPressed`  
  [in] `bIsDisabled`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawribbonstatusbarpane"></a>CMFCVisualManagerOffice2007::OnDrawRibbonStatusBarPane  
+##  <a name="ondrawribbonstatusbarpane"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonStatusBarPane  
 
   
 ```  
@@ -1622,16 +1733,16 @@ virtual COLORREF OnDrawRibbonStatusBarPane(
     CMFCRibbonStatusBarPane* pPane);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pBar`  
  [in] `pPane`  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawribbontabsframe"></a>CMFCVisualManagerOffice2007::OnDrawRibbonTabsFrame  
+##  <a name="ondrawribbontabsframe"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonTabsFrame  
 
   
 ```  
@@ -1641,16 +1752,16 @@ virtual COLORREF OnDrawRibbonTabsFrame(
     CRect rectTab);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pWndRibbonBar`  
  [in] `rectTab`  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawscrollbuttons"></a>CMFCVisualManagerOffice2007::OnDrawScrollButtons  
+##  <a name="ondrawscrollbuttons"></a>  CMFCVisualManagerOffice2007::OnDrawScrollButtons  
 
   
 ```  
@@ -1662,16 +1773,16 @@ virtual void OnDrawScrollButtons(
     BOOL bHilited);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `rect`  
  [in] `nBorderSize`  
  [in] `iImage`  
  [in] `bHilited`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawseparator"></a>CMFCVisualManagerOffice2007::OnDrawSeparator  
+##  <a name="ondrawseparator"></a>  CMFCVisualManagerOffice2007::OnDrawSeparator  
 
   
 ```  
@@ -1682,15 +1793,15 @@ virtual void OnDrawSeparator(
     BOOL bIsHoriz);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pBar`  
  [in] `rect`  
  [in] `bIsHoriz`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawshowallmenuitems"></a>CMFCVisualManagerOffice2007::OnDrawShowAllMenuItems  
+##  <a name="ondrawshowallmenuitems"></a>  CMFCVisualManagerOffice2007::OnDrawShowAllMenuItems  
 
   
 ```  
@@ -1700,14 +1811,14 @@ virtual void OnDrawShowAllMenuItems(
     CMFCVisualManager::AFX_BUTTON_STATE state);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `rect`  
  [in] `state`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawstatusbarpaneborder"></a>CMFCVisualManagerOffice2007::OnDrawStatusBarPaneBorder  
+##  <a name="ondrawstatusbarpaneborder"></a>  CMFCVisualManagerOffice2007::OnDrawStatusBarPaneBorder  
 
   
 ```  
@@ -1719,16 +1830,16 @@ virtual void OnDrawStatusBarPaneBorder(
     UINT nStyle);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pBar`  
  [in] `rectPane`  
  [in] `uiID`  
  [in] `nStyle`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawstatusbarsizebox"></a>CMFCVisualManagerOffice2007::OnDrawStatusBarSizeBox  
+##  <a name="ondrawstatusbarsizebox"></a>  CMFCVisualManagerOffice2007::OnDrawStatusBarSizeBox  
 
   
 ```  
@@ -1738,14 +1849,14 @@ virtual void OnDrawStatusBarSizeBox(
     CRect rectSizeBox);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pStatBar`  
  [in] `rectSizeBox`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawtab"></a>CMFCVisualManagerOffice2007::OnDrawTab  
+##  <a name="ondrawtab"></a>  CMFCVisualManagerOffice2007::OnDrawTab  
 
   
 ```  
@@ -1757,16 +1868,16 @@ virtual void OnDrawTab(
     const CMFCBaseTabCtrl* pTabWnd);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `rectTab`  
  [in] `iTab`  
  [in] `bIsActive`  
  [in] `pTabWnd`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawtabsbuttonborder"></a>CMFCVisualManagerOffice2007::OnDrawTabsButtonBorder  
+##  <a name="ondrawtabsbuttonborder"></a>  CMFCVisualManagerOffice2007::OnDrawTabsButtonBorder  
 
   
 ```  
@@ -1778,16 +1889,16 @@ virtual void OnDrawTabsButtonBorder(
     CMFCBaseTabCtrl* pWndTab);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `rect`  
  [in] `pButton`  
  [in] `uiState`  
  [in] `pWndTab`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawtask"></a>CMFCVisualManagerOffice2007::OnDrawTask  
+##  <a name="ondrawtask"></a>  CMFCVisualManagerOffice2007::OnDrawTask  
 
   
 ```  
@@ -1799,16 +1910,16 @@ virtual void OnDrawTask(
     BOOL bIsSelected = FALSE);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pTask`  
  [in] `pIcons`  
  [in] `bIsHighlighted`  
  [in] `bIsSelected`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawtasksgroupcaption"></a>CMFCVisualManagerOffice2007::OnDrawTasksGroupCaption  
+##  <a name="ondrawtasksgroupcaption"></a>  CMFCVisualManagerOffice2007::OnDrawTasksGroupCaption  
 
   
 ```  
@@ -1820,16 +1931,16 @@ virtual void OnDrawTasksGroupCaption(
     BOOL bCanCollapse = FALSE);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pGroup`  
  [in] `bIsHighlighted`  
  [in] `bIsSelected`  
  [in] `bCanCollapse`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawtearoffcaption"></a>CMFCVisualManagerOffice2007::OnDrawTearOffCaption  
+##  <a name="ondrawtearoffcaption"></a>  CMFCVisualManagerOffice2007::OnDrawTearOffCaption  
 
   
 ```  
@@ -1839,14 +1950,14 @@ virtual void OnDrawTearOffCaption(
     BOOL bIsActive);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `rect`  
  [in] `bIsActive`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onerasemdiclientarea"></a>CMFCVisualManagerOffice2007::OnEraseMDIClientArea  
+##  <a name="onerasemdiclientarea"></a>  CMFCVisualManagerOffice2007::OnEraseMDIClientArea  
 
   
 ```  
@@ -1855,15 +1966,15 @@ virtual BOOL OnEraseMDIClientArea(
     CRect rectClient);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `rectClient`  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onerasetabsarea"></a>CMFCVisualManagerOffice2007::OnEraseTabsArea  
+##  <a name="onerasetabsarea"></a>  CMFCVisualManagerOffice2007::OnEraseTabsArea  
 
   
 ```  
@@ -1873,14 +1984,14 @@ virtual void OnEraseTabsArea(
     const CMFCBaseTabCtrl* pTabWnd);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `rect`  
  [in] `pTabWnd`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onerasetabsbutton"></a>CMFCVisualManagerOffice2007::OnEraseTabsButton  
+##  <a name="onerasetabsbutton"></a>  CMFCVisualManagerOffice2007::OnEraseTabsButton  
 
   
 ```  
@@ -1891,15 +2002,15 @@ virtual void OnEraseTabsButton(
     CMFCBaseTabCtrl* pWndTab);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `rect`  
  [in] `pButton`  
  [in] `pWndTab`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onerasetabsframe"></a>CMFCVisualManagerOffice2007::OnEraseTabsFrame  
+##  <a name="onerasetabsframe"></a>  CMFCVisualManagerOffice2007::OnEraseTabsFrame  
 
   
 ```  
@@ -1909,16 +2020,16 @@ virtual BOOL OnEraseTabsFrame(
     const CMFCBaseTabCtrl* pTabWnd);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `rect`  
  [in] `pTabWnd`  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onfillbarbackground"></a>CMFCVisualManagerOffice2007::OnFillBarBackground  
+##  <a name="onfillbarbackground"></a>  CMFCVisualManagerOffice2007::OnFillBarBackground  
 
   
 ```  
@@ -1930,16 +2041,16 @@ virtual void OnFillBarBackground(
     BOOL bNCArea = FALSE);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pBar`  
  [in] `rectClient`  
  [in] `rectClip`  
  [in] `bNCArea`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onfillbuttoninterior"></a>CMFCVisualManagerOffice2007::OnFillButtonInterior  
+##  <a name="onfillbuttoninterior"></a>  CMFCVisualManagerOffice2007::OnFillButtonInterior  
 
   
 ```  
@@ -1950,15 +2061,15 @@ virtual void OnFillButtonInterior(
     CMFCVisualManager::AFX_BUTTON_STATE state);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pButton`  
  [in] `rect`  
  [in] `state`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onfillcaptionbarbutton"></a>CMFCVisualManagerOffice2007::OnFillCaptionBarButton  
+##  <a name="onfillcaptionbarbutton"></a>  CMFCVisualManagerOffice2007::OnFillCaptionBarButton  
 
   
 ```  
@@ -1973,7 +2084,7 @@ virtual COLORREF OnFillCaptionBarButton(
     BOOL bIsSysButton);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pBar`  
  [in] `rect`  
@@ -1983,11 +2094,11 @@ virtual COLORREF OnFillCaptionBarButton(
  [in] `bHasDropDownArrow`  
  [in] `bIsSysButton`  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onfillhighlightedarea"></a>CMFCVisualManagerOffice2007::OnFillHighlightedArea  
+##  <a name="onfillhighlightedarea"></a>  CMFCVisualManagerOffice2007::OnFillHighlightedArea  
 
   
 ```  
@@ -1998,15 +2109,15 @@ virtual void OnFillHighlightedArea(
     CMFCToolBarButton* pButton);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `rect`  
  [in] `pBrush`  
  [in] `pButton`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onfillminiframecaption"></a>CMFCVisualManagerOffice2007::OnFillMiniFrameCaption  
+##  <a name="onfillminiframecaption"></a>  CMFCVisualManagerOffice2007::OnFillMiniFrameCaption  
 
   
 ```  
@@ -2017,17 +2128,17 @@ virtual COLORREF OnFillMiniFrameCaption(
     BOOL bActive);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `rectCaption`  
  [in] `pFrameWnd`  
  [in] `bActive`  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onfilloutlookbarcaption"></a>CMFCVisualManagerOffice2007::OnFillOutlookBarCaption  
+##  <a name="onfilloutlookbarcaption"></a>  CMFCVisualManagerOffice2007::OnFillOutlookBarCaption  
 
   
 ```  
@@ -2037,14 +2148,14 @@ virtual void OnFillOutlookBarCaption(
     COLORREF& clrText);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `rectCaption`  
  [in] `clrText`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onfilloutlookpagebutton"></a>CMFCVisualManagerOffice2007::OnFillOutlookPageButton  
+##  <a name="onfilloutlookpagebutton"></a>  CMFCVisualManagerOffice2007::OnFillOutlookPageButton  
 
   
 ```  
@@ -2056,16 +2167,16 @@ virtual void OnFillOutlookPageButton(
     COLORREF& clrText);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `rect`  
  [in] `bIsHighlighted`  
  [in] `bIsPressed`  
  [in] `clrText`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onfillpopupwindowbackground"></a>CMFCVisualManagerOffice2007::OnFillPopupWindowBackground  
+##  <a name="onfillpopupwindowbackground"></a>  CMFCVisualManagerOffice2007::OnFillPopupWindowBackground  
 
   
 ```  
@@ -2074,13 +2185,13 @@ virtual void OnFillPopupWindowBackground(
     CRect rect);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `rect`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onfillribbonbutton"></a>CMFCVisualManagerOffice2007::OnFillRibbonButton  
+##  <a name="onfillribbonbutton"></a>  CMFCVisualManagerOffice2007::OnFillRibbonButton  
 
   
 ```  
@@ -2089,15 +2200,15 @@ virtual COLORREF OnFillRibbonButton(
     CMFCRibbonButton* pButton);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pButton`  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onfillribbonedit"></a>CMFCVisualManagerOffice2007::OnFillRibbonEdit  
+##  <a name="onfillribbonedit"></a>  CMFCVisualManagerOffice2007::OnFillRibbonEdit  
 
   
 ```  
@@ -2113,7 +2224,7 @@ virtual void OnFillRibbonEdit(
     COLORREF& clrSelText);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pEdit`  
  [in] `rect`  
@@ -2124,9 +2235,9 @@ virtual void OnFillRibbonEdit(
  [in] `clrSelBackground`  
  [in] `clrSelText`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onfillribbonmainpanelbutton"></a>CMFCVisualManagerOffice2007::OnFillRibbonMainPanelButton  
+##  <a name="onfillribbonmainpanelbutton"></a>  CMFCVisualManagerOffice2007::OnFillRibbonMainPanelButton  
 
   
 ```  
@@ -2135,15 +2246,15 @@ virtual COLORREF OnFillRibbonMainPanelButton(
     CMFCRibbonButton* pButton);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pButton`  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onfillribbonmenuframe"></a>CMFCVisualManagerOffice2007::OnFillRibbonMenuFrame  
+##  <a name="onfillribbonmenuframe"></a>  CMFCVisualManagerOffice2007::OnFillRibbonMenuFrame  
 
   
 ```  
@@ -2153,14 +2264,14 @@ virtual void OnFillRibbonMenuFrame(
     CRect rect);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pPanel`  
  [in] `rect`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onfillribbonquickaccesstoolbarpopup"></a>CMFCVisualManagerOffice2007::OnFillRibbonQuickAccessToolBarPopup  
+##  <a name="onfillribbonquickaccesstoolbarpopup"></a>  CMFCVisualManagerOffice2007::OnFillRibbonQuickAccessToolBarPopup  
 
   
 ```  
@@ -2170,14 +2281,14 @@ virtual void OnFillRibbonQuickAccessToolBarPopup(
     CRect rect);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pMenuBar`  
  [in] `rect`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onfilltab"></a>CMFCVisualManagerOffice2007::OnFillTab  
+##  <a name="onfilltab"></a>  CMFCVisualManagerOffice2007::OnFillTab  
 
   
 ```  
@@ -2190,7 +2301,7 @@ virtual void OnFillTab(
     const CMFCBaseTabCtrl* pTabWnd);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `rectFill`  
  [in] `pbrFill`  
@@ -2198,9 +2309,9 @@ virtual void OnFillTab(
  [in] `bIsActive`  
  [in] `pTabWnd`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onhighlightmenuitem"></a>CMFCVisualManagerOffice2007::OnHighlightMenuItem  
+##  <a name="onhighlightmenuitem"></a>  CMFCVisualManagerOffice2007::OnHighlightMenuItem  
 
   
 ```  
@@ -2211,15 +2322,15 @@ virtual void OnHighlightMenuItem(
     COLORREF& clrText);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `pButton`  
  [in] `rect`  
  [in] `clrText`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onhighlightrarelyusedmenuitems"></a>CMFCVisualManagerOffice2007::OnHighlightRarelyUsedMenuItems  
+##  <a name="onhighlightrarelyusedmenuitems"></a>  CMFCVisualManagerOffice2007::OnHighlightRarelyUsedMenuItems  
 
   
 ```  
@@ -2228,13 +2339,13 @@ virtual void OnHighlightRarelyUsedMenuItems(
     CRect rectRarelyUsed);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `rectRarelyUsed`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onncactivate"></a>CMFCVisualManagerOffice2007::OnNcActivate  
+##  <a name="onncactivate"></a>  CMFCVisualManagerOffice2007::OnNcActivate  
 
   
 ```  
@@ -2243,15 +2354,15 @@ virtual BOOL OnNcActivate(
     BOOL bActive);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pWnd`  
  [in] `bActive`  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onncpaint"></a>CMFCVisualManagerOffice2007::OnNcPaint  
+##  <a name="onncpaint"></a>  CMFCVisualManagerOffice2007::OnNcPaint  
 
   
 ```  
@@ -2261,16 +2372,16 @@ virtual BOOL OnNcPaint(
     CRect rectRedraw);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pWnd`  
  [in] `lstSysButtons`  
  [in] `rectRedraw`  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onsetwindowregion"></a>CMFCVisualManagerOffice2007::OnSetWindowRegion  
+##  <a name="onsetwindowregion"></a>  CMFCVisualManagerOffice2007::OnSetWindowRegion  
 
   
 ```  
@@ -2279,39 +2390,39 @@ virtual BOOL OnSetWindowRegion(
     CSize sizeWindow);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pWnd`  
  [in] `sizeWindow`  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onupdatesystemcolors"></a>CMFCVisualManagerOffice2007::OnUpdateSystemColors  
+##  <a name="onupdatesystemcolors"></a>  CMFCVisualManagerOffice2007::OnUpdateSystemColors  
 
   
 ```  
 virtual void OnUpdateSystemColors();
 ```  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setresourcehandle"></a>CMFCVisualManagerOffice2007::SetResourceHandle  
+##  <a name="setresourcehandle"></a>  CMFCVisualManagerOffice2007::SetResourceHandle  
 
   
 ```  
 static void __stdcall SetResourceHandle(HINSTANCE hinstRes);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `hinstRes`  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>Vedere anche  
- [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
- [Classi](../../mfc/reference/mfc-classes.md)   
- [Classe CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)   
- [Classe CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)   
- [Classe CMFCVisualManagerWindows](../../mfc/reference/cmfcvisualmanagerwindows-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCVisualManager Class](../../mfc/reference/cmfcvisualmanager-class.md)   
+ [CMFCVisualManagerOfficeXP Class](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)   
+ [CMFCVisualManagerWindows Class](../../mfc/reference/cmfcvisualmanagerwindows-class.md)
 

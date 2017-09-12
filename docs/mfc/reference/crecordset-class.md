@@ -1,5 +1,5 @@
 ---
-title: La classe CRecordset | Documenti Microsoft
+title: CRecordset Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -76,10 +76,68 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- database records [C++]
-- CRecordset class
-- ODBC recordsets [C++], CRecordset objects
-- sets of records [C++]
+- CRecordset [MFC], CRecordset
+- CRecordset [MFC], AddNew
+- CRecordset [MFC], CanAppend
+- CRecordset [MFC], CanBookmark
+- CRecordset [MFC], Cancel
+- CRecordset [MFC], CancelUpdate
+- CRecordset [MFC], CanRestart
+- CRecordset [MFC], CanScroll
+- CRecordset [MFC], CanTransact
+- CRecordset [MFC], CanUpdate
+- CRecordset [MFC], CheckRowsetError
+- CRecordset [MFC], Close
+- CRecordset [MFC], Delete
+- CRecordset [MFC], DoBulkFieldExchange
+- CRecordset [MFC], DoFieldExchange
+- CRecordset [MFC], Edit
+- CRecordset [MFC], FlushResultSet
+- CRecordset [MFC], GetBookmark
+- CRecordset [MFC], GetDefaultConnect
+- CRecordset [MFC], GetDefaultSQL
+- CRecordset [MFC], GetFieldValue
+- CRecordset [MFC], GetODBCFieldCount
+- CRecordset [MFC], GetODBCFieldInfo
+- CRecordset [MFC], GetRecordCount
+- CRecordset [MFC], GetRowsetSize
+- CRecordset [MFC], GetRowsFetched
+- CRecordset [MFC], GetRowStatus
+- CRecordset [MFC], GetSQL
+- CRecordset [MFC], GetStatus
+- CRecordset [MFC], GetTableName
+- CRecordset [MFC], IsBOF
+- CRecordset [MFC], IsDeleted
+- CRecordset [MFC], IsEOF
+- CRecordset [MFC], IsFieldDirty
+- CRecordset [MFC], IsFieldNull
+- CRecordset [MFC], IsFieldNullable
+- CRecordset [MFC], IsOpen
+- CRecordset [MFC], Move
+- CRecordset [MFC], MoveFirst
+- CRecordset [MFC], MoveLast
+- CRecordset [MFC], MoveNext
+- CRecordset [MFC], MovePrev
+- CRecordset [MFC], OnSetOptions
+- CRecordset [MFC], OnSetUpdateOptions
+- CRecordset [MFC], Open
+- CRecordset [MFC], RefreshRowset
+- CRecordset [MFC], Requery
+- CRecordset [MFC], SetAbsolutePosition
+- CRecordset [MFC], SetBookmark
+- CRecordset [MFC], SetFieldDirty
+- CRecordset [MFC], SetFieldNull
+- CRecordset [MFC], SetLockingMode
+- CRecordset [MFC], SetParamNull
+- CRecordset [MFC], SetRowsetCursorPosition
+- CRecordset [MFC], SetRowsetSize
+- CRecordset [MFC], Update
+- CRecordset [MFC], m_hstmt
+- CRecordset [MFC], m_nFields
+- CRecordset [MFC], m_nParams
+- CRecordset [MFC], m_pDatabase
+- CRecordset [MFC], m_strFilter
+- CRecordset [MFC], m_strSort
 ms.assetid: dd89a21d-ef39-4aab-891b-1e373d67c855
 caps.latest.revision: 23
 author: mikeblome
@@ -99,524 +157,524 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 9271608528699e93fa7b8315f8ef2fdd5ae1e54d
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e2aad553929522346ae9fde947e0b01a4469a43a
 ms.contentlocale: it-it
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="crecordset-class"></a>Classe CRecordset
-Rappresenta un set di record selezionati da un'origine dati.  
+# <a name="crecordset-class"></a>CRecordset Class
+Represents a set of records selected from a data source.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CRecordset : public CObject  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Costruttori pubblici  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CRecordset::CRecordset](#crecordset)|Costruisce un oggetto `CRecordset`. La classe derivata deve fornire un costruttore che chiama questo.|  
+|[CRecordset::CRecordset](#crecordset)|Constructs a `CRecordset` object. Your derived class must provide a constructor that calls this one.|  
   
-### <a name="public-methods"></a>Metodi pubblici  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CRecordset::AddNew](#addnew)|Prepara per l'aggiunta di un nuovo record. Chiamare `Update` per completare l'aggiunta.|  
-|[CRecordset::CanAppend](#canappend)|Restituisce zero se è possibile aggiungere nuovi record per il recordset tramite il `AddNew` funzione membro.|  
-|[CRecordset:: CanBookmark](#canbookmark)|Restituisce un diverso da zero se il set di record supporta segnalibri.|  
-|[CRecordset::Cancel](#cancel)|Annulla un'operazione asincrona o un processo da un secondo thread.|  
-|[CRecordset::CancelUpdate](#cancelupdate)|Annulla gli aggiornamenti in sospeso a causa di un `AddNew` o `Edit` operazione.|  
-|[CRecordset::CanRestart](#canrestart)|Restituisce se diverso da zero `Requery` può essere chiamato per eseguire nuovamente la query del recordset.|  
-|[CRecordset::CanScroll](#canscroll)|Restituisce un diverso da zero se è possibile scorrere i record.|  
-|[CRecordset::CanTransact](#cantransact)|Restituisce zero se l'origine dati supporta le transazioni.|  
-|[CRecordset::CanUpdate](#canupdate)|Restituisce zero se il recordset può essere aggiornato (è possibile aggiungere, aggiornare o eliminare i record).|  
-|[CRecordset::CheckRowsetError](#checkrowseterror)|Chiamato per gestire gli errori generati durante il recupero di massa di record.|  
-|[CRecordset:: Close](#close)|Chiude l'oggetto recordset e ODBC **HSTMT** associato.|  
-|[CRecordset::Delete](#delete)|Elimina il record corrente dal recordset. È necessario scorrere in modo esplicito a un altro record dopo l'eliminazione.|  
-|[CRecordset::DoBulkFieldExchange](#dobulkfieldexchange)|Chiamata eseguita per lo scambio di massa di righe di dati dall'origine dati al recordset. Implementa bulk exchange di campi di record (RFX di massa).|  
-|[CRecordset::DoFieldExchange](#dofieldexchange)|Chiamata eseguita per lo scambio di dati (in entrambe le direzioni) tra i membri di dati del campo del recordset e il record corrispondente nell'origine dati. Implementa campi di record (RFX).|  
-|[CRecordset::Edit](#edit)|Prepara per le modifiche al record corrente. Chiamare `Update` per completare la modifica.|  
-|[CRecordset::FlushResultSet](#flushresultset)|Restituisce diverso da zero se è presente un altro risultato impostato da recuperare, quando si utilizza una query predefinita.|  
-|[CRecordset::GetBookmark](#getbookmark)|Assegna il valore del segnalibro di un record per l'oggetto parametro.|  
-|[CRecordset:: GetDefaultConnect](#getdefaultconnect)|Chiamato per ottenere la stringa di connessione predefinita.|  
-|[CRecordset::GetDefaultSQL](#getdefaultsql)|Chiamato per ottenere la stringa SQL predefinita da eseguire.|  
-|[CRecordset:: GetFieldValue](#getfieldvalue)|Restituisce il valore di un campo in un recordset.|  
-|[CRecordset::GetODBCFieldCount](#getodbcfieldcount)|Restituisce il numero di campi del recordset.|  
-|[CRecordset::GetODBCFieldInfo](#getodbcfieldinfo)|Restituisce i tipi specifici di informazioni sui campi in un recordset.|  
-|[CRecordset::GetRecordCount](#getrecordcount)|Restituisce il numero di record del recordset.|  
-|[CRecordset::GetRowsetSize](#getrowsetsize)|Restituisce il numero di record da recuperare durante un'operazione di recupero singolo.|  
-|[CRecordset::GetRowsFetched](#getrowsfetched)|Restituisce il numero effettivo di righe recuperate durante un'operazione di recupero.|  
-|[CRecordset::GetRowStatus](#getrowstatus)|Restituisce lo stato della riga dopo un'operazione di recupero.|  
-|[CRecordset::GetSQL](#getsql)|Ottiene la stringa SQL utilizzata per selezionare i record per il recordset.|  
-|[CRecordset::GetStatus](#getstatus)|Ottiene lo stato dell'oggetto recordset: l'indice del record corrente e se è stato ottenuto un conteggio finale dei record.|  
-|[CRecordset::GetTableName](#gettablename)|Ottiene il nome della tabella su cui è basato il recordset.|  
-|[CRecordset::IsBOF](#isbof)|Restituisce un diverso da zero se il recordset è stato posizionato prima del primo record. Non sono presenti record corrente.|  
-|[CRecordset::IsDeleted](#isdeleted)|Restituisce zero se il recordset è posizionato su un record eliminato.|  
-|[CRecordset::IsEOF](#iseof)|Restituisce un diverso da zero se il recordset è stato posizionato dopo l'ultimo record. Non sono presenti record corrente.|  
-|[CRecordset::IsFieldDirty](#isfielddirty)|Restituisce un diverso da zero se il campo specificato nel record corrente è stato modificato.|  
-|[CRecordset::IsFieldNull](#isfieldnull)|Restituisce diverso da zero se il campo specificato nel record corrente è null (non ha valore).|  
-|[CRecordset::IsFieldNullable](#isfieldnullable)|Restituisce zero se il campo specificato nel record corrente può essere impostato su null (nessun valore con).|  
-|[CRecordset::IsOpen](#isopen)|Restituisce se diverso da zero `Open` è stato chiamato in precedenza.|  
-|[CRecordset](#move)|Posiziona il recordset in un numero specificato di record del record corrente in entrambe le direzioni.|  
-|[CRecordset::MoveFirst](#movefirst)|Posiziona il record corrente sul primo record del recordset. Verificare la presenza di `IsBOF` prima.|  
-|[CRecordset::MoveLast](#movelast)|Posiziona il record corrente sull'ultimo record o l'ultimo set di righe. Verificare la presenza di `IsEOF` prima.|  
-|[CRecordset::MoveNext](#movenext)|Posiziona il record corrente del record successivo o nel set di righe successivo. Verificare la presenza di `IsEOF` prima.|  
-|[CRecordset::MovePrev](#moveprev)|Posiziona il record corrente del record precedente o nel set di righe precedenti. Verificare la presenza di `IsBOF` prima.|  
-|[CRecordset::OnSetOptions](#onsetoptions)|Chiamata eseguita per impostare le opzioni (utilizzate nella selezione) per l'istruzione ODBC specificata.|  
-|[CRecordset::OnSetUpdateOptions](#onsetupdateoptions)|Chiamata eseguita per impostare le opzioni (usate su update) per l'istruzione ODBC specificata.|  
-|[CRecordset:: Open](#open)|Apre il recordset recuperando la tabella o eseguendo la query rappresentata dal recordset.|  
-|[CRecordset::RefreshRowset](#refreshrowset)|Aggiorna i dati e lo stato delle righe specificate.|  
-|[CRecordset:: Requery](#requery)|Esegue la query del recordset nuovamente per aggiornare il record selezionato.|  
-|[CRecordset:: SetAbsolutePosition](#setabsoluteposition)|Posiziona il recordset nel record corrispondente al numero di record specificato.|  
-|[CRecordset::SetBookmark](#setbookmark)|Posiziona il recordset del record specificata dal segnalibro.|  
-|[CRecordset::SetFieldDirty](#setfielddirty)|Contrassegna il campo specificato nel record corrente, come è stato modificato.|  
-|[CRecordset::SetFieldNull](#setfieldnull)|Imposta il valore del campo specificato nel record corrente su null (nessun valore con).|  
-|[CRecordset::SetLockingMode](#setlockingmode)|Imposta la modalità di blocco per blocco (predefinito) "ottimistica" o "blocco pessimistico". Determina come i record sono bloccati per gli aggiornamenti.|  
-|[CRecordset::SetParamNull](#setparamnull)|Imposta il parametro specificato su null (nessun valore con).|  
-|[CRecordset::SetRowsetCursorPosition](#setrowsetcursorposition)|Posiziona il cursore sulla riga del set di righe specificata.|  
-|[CRecordset::SetRowsetSize](#setrowsetsize)|Specifica il numero di record da recuperare durante un'operazione di recupero.|  
-|[CRecordset:: Update](#update)|Completa un' `AddNew` o `Edit` operazione salvando i dati nuovi o modificati nell'origine dati.|  
+|[CRecordset::AddNew](#addnew)|Prepares for adding a new record. Call `Update` to complete the addition.|  
+|[CRecordset::CanAppend](#canappend)|Returns nonzero if new records can be added to the recordset via the `AddNew` member function.|  
+|[CRecordset::CanBookmark](#canbookmark)|Returns nonzero if the recordset supports bookmarks.|  
+|[CRecordset::Cancel](#cancel)|Cancels an asynchronous operation or a process from a second thread.|  
+|[CRecordset::CancelUpdate](#cancelupdate)|Cancels any pending updates due to an `AddNew` or `Edit` operation.|  
+|[CRecordset::CanRestart](#canrestart)|Returns nonzero if `Requery` can be called to run the recordset's query again.|  
+|[CRecordset::CanScroll](#canscroll)|Returns nonzero if you can scroll through the records.|  
+|[CRecordset::CanTransact](#cantransact)|Returns nonzero if the data source supports transactions.|  
+|[CRecordset::CanUpdate](#canupdate)|Returns nonzero if the recordset can be updated (you can add, update, or delete records).|  
+|[CRecordset::CheckRowsetError](#checkrowseterror)|Called to handle errors generated during record fetching.|  
+|[CRecordset::Close](#close)|Closes the recordset and the ODBC **HSTMT** associated with it.|  
+|[CRecordset::Delete](#delete)|Deletes the current record from the recordset. You must explicitly scroll to another record after the deletion.|  
+|[CRecordset::DoBulkFieldExchange](#dobulkfieldexchange)|Called to exchange bulk rows of data from the data source to the recordset. Implements bulk record field exchange (Bulk RFX).|  
+|[CRecordset::DoFieldExchange](#dofieldexchange)|Called to exchange data (in both directions) between the field data members of the recordset and the corresponding record on the data source. Implements record field exchange (RFX).|  
+|[CRecordset::Edit](#edit)|Prepares for changes to the current record. Call `Update` to complete the edit.|  
+|[CRecordset::FlushResultSet](#flushresultset)|Returns nonzero if there is another result set to be retrieved, when using a predefined query.|  
+|[CRecordset::GetBookmark](#getbookmark)|Assigns the bookmark value of a record to the parameter object.|  
+|[CRecordset::GetDefaultConnect](#getdefaultconnect)|Called to get the default connection string.|  
+|[CRecordset::GetDefaultSQL](#getdefaultsql)|Called to get the default SQL string to execute.|  
+|[CRecordset::GetFieldValue](#getfieldvalue)|Returns the value of a field in a recordset.|  
+|[CRecordset::GetODBCFieldCount](#getodbcfieldcount)|Returns the number of fields in the recordset.|  
+|[CRecordset::GetODBCFieldInfo](#getodbcfieldinfo)|Returns specific kinds of information about the fields in a recordset.|  
+|[CRecordset::GetRecordCount](#getrecordcount)|Returns the number of records in the recordset.|  
+|[CRecordset::GetRowsetSize](#getrowsetsize)|Returns the number of records you wish to retrieve during a single fetch.|  
+|[CRecordset::GetRowsFetched](#getrowsfetched)|Returns the actual number of rows retrieved during a fetch.|  
+|[CRecordset::GetRowStatus](#getrowstatus)|Returns the status of the row after a fetch.|  
+|[CRecordset::GetSQL](#getsql)|Gets the SQL string used to select records for the recordset.|  
+|[CRecordset::GetStatus](#getstatus)|Gets the status of the recordset: the index of the current record and whether a final count of the records has been obtained.|  
+|[CRecordset::GetTableName](#gettablename)|Gets the name of the table on which the recordset is based.|  
+|[CRecordset::IsBOF](#isbof)|Returns nonzero if the recordset has been positioned before the first record. There is no current record.|  
+|[CRecordset::IsDeleted](#isdeleted)|Returns nonzero if the recordset is positioned on a deleted record.|  
+|[CRecordset::IsEOF](#iseof)|Returns nonzero if the recordset has been positioned after the last record. There is no current record.|  
+|[CRecordset::IsFieldDirty](#isfielddirty)|Returns nonzero if the specified field in the current record has been changed.|  
+|[CRecordset::IsFieldNull](#isfieldnull)|Returns nonzero if the specified field in the current record is null (has no value).|  
+|[CRecordset::IsFieldNullable](#isfieldnullable)|Returns nonzero if the specified field in the current record can be set to null (having no value).|  
+|[CRecordset::IsOpen](#isopen)|Returns nonzero if `Open` has been called previously.|  
+|[CRecordset::Move](#move)|Positions the recordset to a specified number of records from the current record in either direction.|  
+|[CRecordset::MoveFirst](#movefirst)|Positions the current record on the first record in the recordset. Test for `IsBOF` first.|  
+|[CRecordset::MoveLast](#movelast)|Positions the current record on the last record or on the last rowset. Test for `IsEOF` first.|  
+|[CRecordset::MoveNext](#movenext)|Positions the current record on the next record or on the next rowset. Test for `IsEOF` first.|  
+|[CRecordset::MovePrev](#moveprev)|Positions the current record on the previous record or on the previous rowset. Test for `IsBOF` first.|  
+|[CRecordset::OnSetOptions](#onsetoptions)|Called to set options (used on selection) for the specified ODBC statement.|  
+|[CRecordset::OnSetUpdateOptions](#onsetupdateoptions)|Called to set options (used on update) for the specified ODBC statement.|  
+|[CRecordset::Open](#open)|Opens the recordset by retrieving the table or performing the query that the recordset represents.|  
+|[CRecordset::RefreshRowset](#refreshrowset)|Refreshes the data and status of the specified row(s).|  
+|[CRecordset::Requery](#requery)|Runs the recordset's query again to refresh the selected records.|  
+|[CRecordset::SetAbsolutePosition](#setabsoluteposition)|Positions the recordset on the record corresponding to the specified record number.|  
+|[CRecordset::SetBookmark](#setbookmark)|Positions the recordset on the record specified by the bookmark.|  
+|[CRecordset::SetFieldDirty](#setfielddirty)|Marks the specified field in the current record as changed.|  
+|[CRecordset::SetFieldNull](#setfieldnull)|Sets the value of the specified field in the current record to null (having no value).|  
+|[CRecordset::SetLockingMode](#setlockingmode)|Sets the locking mode to "optimistic" locking (the default) or "pessimistic" locking. Determines how records are locked for updates.|  
+|[CRecordset::SetParamNull](#setparamnull)|Sets the specified parameter to null (having no value).|  
+|[CRecordset::SetRowsetCursorPosition](#setrowsetcursorposition)|Positions the cursor on the specified row within the rowset.|  
+|[CRecordset::SetRowsetSize](#setrowsetsize)|Specifies the number of records you wish to retrieve during a fetch.|  
+|[CRecordset::Update](#update)|Completes an `AddNew` or `Edit` operation by saving the new or edited data on the data source.|  
   
-### <a name="public-data-members"></a>Membri dati pubblici  
+### <a name="public-data-members"></a>Public Data Members  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CRecordset:: M_hstmt](#m_hstmt)|Contiene l'handle di istruzione ODBC per il recordset. Digitare `HSTMT`.|  
-|[CRecordset::m_nFields](#m_nfields)|Contiene il numero di membri di dati di campo nel recordset. Digitare `UINT`.|  
-|[CRecordset::m_nParams](#m_nparams)|Contiene il numero di membri di dati di parametro nel recordset. Digitare `UINT`.|  
-|[CRecordset::m_pDatabase](#m_pdatabase)|Contiene un puntatore al `CDatabase` oggetto attraverso il quale il recordset è connesso a un'origine dati.|  
-|[CRecordset:: M_strfilter](#m_strfilter)|Contiene un `CString` che specifica un Structured Query Language (SQL) `WHERE` clausola. Utilizzata come filtro per selezionare solo i record che soddisfano determinati criteri.|  
-|[CRecordset::m_strSort](#m_strsort)|Contiene un `CString` che specifica un database SQL `ORDER BY` clausola. Utilizzata per controllare come vengono ordinati i record.|  
+|[CRecordset::m_hstmt](#m_hstmt)|Contains the ODBC statement handle for the recordset. Type `HSTMT`.|  
+|[CRecordset::m_nFields](#m_nfields)|Contains the number of field data members in the recordset. Type `UINT`.|  
+|[CRecordset::m_nParams](#m_nparams)|Contains the number of parameter data members in the recordset. Type `UINT`.|  
+|[CRecordset::m_pDatabase](#m_pdatabase)|Contains a pointer to the `CDatabase` object through which the recordset is connected to a data source.|  
+|[CRecordset::m_strFilter](#m_strfilter)|Contains a `CString` that specifies a Structured Query Language (SQL) `WHERE` clause. Used as a filter to select only those records that meet certain criteria.|  
+|[CRecordset::m_strSort](#m_strsort)|Contains a `CString` that specifies a SQL `ORDER BY` clause. Used to control how the records are sorted.|  
   
-## <a name="remarks"></a>Note  
- Nota come "Recordset" `CRecordset` gli oggetti vengono utilizzati in genere in due formati: dynaset e snapshot. Dynaset rimane sincronizzato con gli aggiornamenti dei dati apportati da altri utenti. Uno snapshot è una visualizzazione statica dei dati. Ogni modulo rappresenta un set di record stabilita al momento che il recordset è aperto, ma quando si passa a un record in un dynaset, riflette le modifiche apportate successivamente al record, da altri utenti o da altri recordset nell'applicazione.  
+## <a name="remarks"></a>Remarks  
+ Known as "recordsets," `CRecordset` objects are typically used in two forms: dynasets and snapshots. A dynaset stays synchronized with data updates made by other users. A snapshot is a static view of the data. Each form represents a set of records fixed at the time the recordset is opened, but when you scroll to a record in a dynaset, it reflects changes subsequently made to the record, either by other users or by other recordsets in your application.  
   
 > [!NOTE]
->  Se si lavora con le classi di oggetti DAO (Data Access), anziché le classi di Open Database Connectivity (ODBC), utilizzare una classe [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) invece. Per ulteriori informazioni, vedere l'articolo [Panoramica: programmazione di Database](../../data/data-access-programming-mfc-atl.md).  
+>  If you are working with the Data Access Objects (DAO) classes rather than the Open Database Connectivity (ODBC) classes, use class [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) instead. For more information, see the article [Overview: Database Programming](../../data/data-access-programming-mfc-atl.md).  
   
- Per utilizzare il tipo di recordset, è in genere derivare una classe recordset specifiche dell'applicazione da `CRecordset`. Recordset selezionare i record da un'origine dati e sarà quindi possibile:  
+ To work with either kind of recordset, you typically derive an application-specific recordset class from `CRecordset`. Recordsets select records from a data source, and you can then:  
   
--   Scorrere i record.  
+-   Scroll through the records.  
   
--   Aggiornare i record e specificare una modalità di blocco.  
+-   Update the records and specify a locking mode.  
   
--   Filtrare il recordset per vincolare i record vengono selezionati tra quelli disponibili nell'origine dati.  
+-   Filter the recordset to constrain which records it selects from those available on the data source.  
   
--   Ordinare il recordset.  
+-   Sort the recordset.  
   
--   Parametrizzare il recordset per personalizzare la selezione con le informazioni non note fino alla fase di esecuzione.  
+-   Parameterize the recordset to customize its selection with information not known until run time.  
   
- Per utilizzare la classe, aprire un database e creare un oggetto recordset, il costruttore si passa un puntatore per il `CDatabase` oggetto. Chiamare quindi il recordset **aprire** funzione membro, in cui è possibile specificare se l'oggetto è di tipo dynaset o uno snapshot. La chiamata **aprire** consente di selezionare dati dall'origine dati. Dopo l'oggetto recordset è aperto, è possibile utilizzare i membri di dati e funzioni membro per scorrere i record e operano su di essi. Le operazioni disponibili variano a seconda se l'oggetto è un dynaset o snapshot, se è aggiornabile o di sola lettura (ciò dipende la funzionalità dell'origine dati Open Database Connectivity (ODBC)), e se è stato implementato il recupero di massa di righe. Per aggiornare i record che possono sono stati modificati o aggiunti dopo la **aprire** chiamare, chiamare l'oggetto **Requery** funzione membro. Chiamare l'oggetto **Chiudi** membro funzione e dopo aver terminato l'eliminazione dell'oggetto.  
+ To use your class, open a database and construct a recordset object, passing the constructor a pointer to your `CDatabase` object. Then call the recordset's **Open** member function, where you can specify whether the object is a dynaset or a snapshot. Calling **Open** selects data from the data source. After the recordset object is opened, use its member functions and data members to scroll through the records and operate on them. The operations available depend on whether the object is a dynaset or a snapshot, whether it is updatable or read-only (this depends on the capability of the Open Database Connectivity (ODBC) data source), and whether you have implemented bulk row fetching. To refresh records that may have been changed or added since the **Open** call, call the object's **Requery** member function. Call the object's **Close** member function and destroy the object when you finish with it.  
   
- In una classe `CRecordset` di classi, campi di record (RFX) o exchange di massa di campi di record (RFX di massa) viene usato per supportare la lettura e aggiornamento dei campi di record.  
+ In a derived `CRecordset` class, record field exchange (RFX) or bulk record field exchange (Bulk RFX) is used to support reading and updating of record fields.  
   
- Per ulteriori informazioni sullo scambio di campo di record e Recordset, vedere gli articoli [Panoramica: programmazione di Database](../../data/data-access-programming-mfc-atl.md), [Recordset (ODBC)](../../data/odbc/recordset-odbc.md), [Recordset: il recupero di massa di record (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md), e [trasferimento di campi di Record (RFX)](../../data/odbc/record-field-exchange-rfx.md). Per una certa attenzione alla dynaset e snapshot, vedere gli articoli [Dynaset](../../data/odbc/dynaset.md) e [Snapshot](../../data/odbc/snapshot.md).  
+ For more information about recordsets and record field exchange, see the articles [Overview: Database Programming](../../data/data-access-programming-mfc-atl.md), [Recordset (ODBC)](../../data/odbc/recordset-odbc.md), [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md), and [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md). For a focus on dynasets and snapshots, see the articles [Dynaset](../../data/odbc/dynaset.md) and [Snapshot](../../data/odbc/snapshot.md).  
   
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CRecordset`  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** AFXDB. h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdb.h  
   
-##  <a name="addnew"></a>CRecordset::AddNew  
- Prepara per l'aggiunta di un nuovo record alla tabella.  
+##  <a name="addnew"></a>  CRecordset::AddNew  
+ Prepares for adding a new record to the table.  
   
 ```  
 virtual void AddNew();
 ```  
   
-### <a name="remarks"></a>Note  
- È necessario chiamare il [Requery](#requery) funzione membro per visualizzare il record appena aggiunto. I campi del record sono inizialmente Null. (Nella terminologia dei database, Null significa "Nessun valore having" e non è identico **NULL** in C++.) Per completare l'operazione, è necessario chiamare il [aggiornamento](#update) funzione membro. **Aggiornamento** Salva le modifiche apportate all'origine dati.  
+### <a name="remarks"></a>Remarks  
+ You must call the [Requery](#requery) member function to see the newly added record. The record's fields are initially Null. (In database terminology, Null means "having no value" and is not the same as **NULL** in C++.) To complete the operation, you must call the [Update](#update) member function. **Update** saves your changes to the data source.  
   
 > [!NOTE]
->  Se è stato implementato il recupero di massa di righe, non è possibile chiamare `AddNew`. Il risultato sarà un'asserzione non riuscita. Sebbene classe `CRecordset` non fornisce un meccanismo per l'aggiornamento di massa di righe di dati, è possibile scrivere funzioni personalizzate utilizzando la funzione API ODBC **SQLSetPos**. Per ulteriori informazioni sulle righe di massa, vedere l'articolo [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  If you have implemented bulk row fetching, you cannot call `AddNew`. This will result in a failed assertion. Although class `CRecordset` does not provide a mechanism for updating bulk rows of data, you can write your own functions by using the ODBC API function **SQLSetPos**. For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- `AddNew`Prepara un record di nuovo e vuoto utilizzando i membri dati di campo del recordset. Dopo aver chiamato `AddNew`, impostare i valori desiderati nei membri dati di campo del recordset. (Non è necessario chiamare il [modifica](#edit) funzione membro per questo scopo, utilizzare **modifica** solo per i record esistenti.) Quando si chiama successivamente **aggiornamento**, modificati i valori nei membri di dati di campo vengono salvati nell'origine dati.  
+ `AddNew` prepares a new, empty record using the recordset's field data members. After you call `AddNew`, set the values you want in the recordset's field data members. (You do not have to call the [Edit](#edit) member function for this purpose; use **Edit** only for existing records.) When you subsequently call **Update**, changed values in the field data members are saved on the data source.  
   
 > [!CAUTION]
->  Se si passa a un nuovo record prima di chiamare **aggiornamento**, il nuovo record viene perso e non viene fornito alcun messaggio di avviso.  
+>  If you scroll to a new record before you call **Update**, the new record is lost, and no warning is given.  
   
- Se l'origine dati supporta le transazioni, è possibile rendere il `AddNew` chiamare parte di una transazione. Per ulteriori informazioni sulle transazioni, vedere la classe [CDatabase](../../mfc/reference/cdatabase-class.md). Si noti che è necessario chiamare [CDatabase::BeginTrans](../../mfc/reference/cdatabase-class.md#begintrans) prima di chiamare `AddNew`.  
+ If the data source supports transactions, you can make your `AddNew` call part of a transaction. For more information about transactions, see class [CDatabase](../../mfc/reference/cdatabase-class.md). Note that you should call [CDatabase::BeginTrans](../../mfc/reference/cdatabase-class.md#begintrans) before calling `AddNew`.  
   
 > [!NOTE]
->  Per dynaset, nuovi record vengono aggiunti al recordset, come l'ultimo record. Aggiunta di record non vengono aggiunti agli snapshot; è necessario chiamare **Requery** per aggiornare il recordset.  
+>  For dynasets, new records are added to the recordset as the last record. Added records are not added to snapshots; you must call **Requery** to refresh the recordset.  
   
- Non è consentito chiamare `AddNew` per un oggetto recordset i cui **aprire** funzione membro non è stata chiamata. Oggetto `CDBException` viene generata se si chiama `AddNew` per un oggetto recordset che non può essere aggiunto alla fine. È possibile determinare se il recordset è aggiornabile chiamando [CanAppend](#canappend).  
+ It is illegal to call `AddNew` for a recordset whose **Open** member function has not been called. A `CDBException` is thrown if you call `AddNew` for a recordset that cannot be appended to. You can determine whether the recordset is updatable by calling [CanAppend](#canappend).  
   
- Per ulteriori informazioni, vedere gli articoli seguenti: [Recordset: aggiornamento dei record (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md), [Recordset: aggiunta, aggiornamento e l'eliminazione di record (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md), e [transazione (ODBC)](../../data/odbc/transaction-odbc.md).  
+ For more information, see the following articles: [Recordset: How Recordsets Update Records (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md), [Recordset: Adding, Updating, and Deleting Records (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md), and [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-### <a name="example"></a>Esempio  
- Vedere l'articolo [transazione: esecuzione di una transazione in un Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).  
+### <a name="example"></a>Example  
+ See the article [Transaction: Performing a Transaction in a Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).  
   
-##  <a name="canappend"></a>CRecordset::CanAppend  
- Determina se il recordset aperto in precedenza consente di aggiungere nuovi record.  
+##  <a name="canappend"></a>  CRecordset::CanAppend  
+ Determines whether the previously opened recordset allows you to add new records.  
   
 ```  
 BOOL CanAppend() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se il recordset consente l'aggiunta di nuovi record; in caso contrario 0. `CanAppend`verrà restituito 0 se è stato aperto il recordset in sola lettura.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the recordset allows adding new records; otherwise 0. `CanAppend` will return 0 if you opened the recordset as read-only.  
   
-##  <a name="canbookmark"></a>CRecordset:: CanBookmark  
- Determina se il recordset consente di contrassegnare i record di utilizzo dei segnalibri.  
+##  <a name="canbookmark"></a>  CRecordset::CanBookmark  
+ Determines whether the recordset allows you to mark records using bookmarks.  
   
 ```  
 BOOL CanBookmark() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se il set di record supporta segnalibri; in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the recordset supports bookmarks; otherwise 0.  
   
-### <a name="remarks"></a>Note  
- Questa funzione è indipendente di **CRecordset:: useBookmarks** opzione il `dwOptions` parametro del [aprire](#open) funzione membro. `CanBookmark`indica se il driver ODBC specificato e un cursore tipo di supporto segnalibri. **CRecordset:: useBookmarks** indica se i segnalibri saranno disponibili, fornite sono supportate.  
+### <a name="remarks"></a>Remarks  
+ This function is independent of the **CRecordset::useBookmarks** option in the `dwOptions` parameter of the [Open](#open) member function. `CanBookmark` indicates whether the given ODBC driver and cursor type support bookmarks. **CRecordset::useBookmarks** indicates whether bookmarks will be available, provided they are supported.  
   
 > [!NOTE]
->  I segnalibri non sono supportati nei recordset forward-only.  
+>  Bookmarks are not supported on forward-only recordsets.  
   
- Per ulteriori informazioni sui segnalibri e di navigazione del recordset, vedere gli articoli [Recordset: Bookmark e Absolute Position (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) e [Recordset: scorrimento (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).  
+ For more information about bookmarks and recordset navigation, see the articles [Recordset: Bookmarks and Absolute Positions (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) and [Recordset: Scrolling (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).  
   
-##  <a name="cancel"></a>CRecordset::Cancel  
- Richieste che l'origine dati Annulla un'operazione asincrona in corso o un processo da un secondo thread.  
+##  <a name="cancel"></a>  CRecordset::Cancel  
+ Requests that the data source cancel either an asynchronous operation in progress or a process from a second thread.  
   
 ```  
 void Cancel();
 ```  
   
-### <a name="remarks"></a>Note  
- Si noti che le classi ODBC MFC non utilizzano l'elaborazione asincrona; Per eseguire un'operazione asincrona, è necessario chiamare direttamente la funzione API ODBC **SQLSetConnectOption**. Per ulteriori informazioni, vedere l'argomento "Esecuzione asincrona delle funzioni" nel *Guida per programmatori ODBC SDK*.  
+### <a name="remarks"></a>Remarks  
+ Note that the MFC ODBC classes no longer use asynchronous processing; to perform an asychronous operation, you must directly call the ODBC API function **SQLSetConnectOption**. For more information, see the topic "Executing Functions Asynchronously" in the *ODBC SDK Programmer's Guide*.  
   
-##  <a name="cancelupdate"></a>CRecordset::CancelUpdate  
- Consente di annullare eventuali aggiornamenti, causati da in sospeso un [modifica](#edit) o [AddNew](#addnew) operazione prima di [aggiornamento](#update) viene chiamato.  
+##  <a name="cancelupdate"></a>  CRecordset::CancelUpdate  
+ Cancels any pending updates, caused by an [Edit](#edit) or [AddNew](#addnew) operation, before [Update](#update) is called.  
   
 ```  
 void CancelUpdate();
 ```  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  Questa funzione membro non è applicabile per i recordset che utilizza righe di massa, poiché non è possibile chiamare tali recordset **modifica**, `AddNew`, o **aggiornamento**. Per ulteriori informazioni sulle righe di massa, vedere l'articolo [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  This member function is not applicable on recordsets that are using bulk row fetching, since such recordsets cannot call **Edit**, `AddNew`, or **Update**. For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Se il controllo dei campi modificati automatico è abilitato, `CancelUpdate` ripristinerà le variabili membro per i valori che avevano prima **modifica** o `AddNew` è stato chiamato; in caso contrario, le modifiche del valore rimarrà. Per impostazione predefinita, il controllo di campo automatico è abilitato quando il recordset è aperto. Per disabilitarlo, è necessario specificare il **CRecordset:: Nodirtyfieldcheck** nel `dwOptions` parametro del [aprire](#open) funzione membro.  
+ If automatic dirty field checking is enabled, `CancelUpdate` will restore the member variables to the values they had before **Edit** or `AddNew` was called; otherwise, any value changes will remain. By default, automatic field checking is enabled when the recordset is opened. To disable it, you must specify the **CRecordset::noDirtyFieldCheck** in the `dwOptions` parameter of the [Open](#open) member function.  
   
- Per ulteriori informazioni sull'aggiornamento dei dati, vedere l'articolo [Recordset: aggiunta, aggiornamento e l'eliminazione di record (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md).  
+ For more information about updating data, see the article [Recordset: Adding, Updating, and Deleting Records (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md).  
   
-##  <a name="canrestart"></a>CRecordset::CanRestart  
- Determina se il recordset consente il riavvio di query (per aggiornare i relativi record) chiamando il **Requery** funzione membro.  
+##  <a name="canrestart"></a>  CRecordset::CanRestart  
+ Determines whether the recordset allows restarting its query (to refresh its records) by calling the **Requery** member function.  
   
 ```  
 BOOL CanRestart() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se è consentito requery; in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if requery is allowed; otherwise 0.  
   
-##  <a name="canscroll"></a>CRecordset::CanScroll  
- Determina se il recordset consente lo scorrimento.  
+##  <a name="canscroll"></a>  CRecordset::CanScroll  
+ Determines whether the recordset allows scrolling.  
   
 ```  
 BOOL CanScroll() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se il recordset consente lo scorrimento; in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the recordset allows scrolling; otherwise 0.  
   
-### <a name="remarks"></a>Note  
- Per ulteriori informazioni su lo scorrimento, vedere l'articolo [Recordset: scorrimento (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).  
+### <a name="remarks"></a>Remarks  
+ For more information about scrolling, see the article [Recordset: Scrolling (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).  
   
-##  <a name="cantransact"></a>CRecordset::CanTransact  
- Determina se il recordset consente alle transazioni.  
+##  <a name="cantransact"></a>  CRecordset::CanTransact  
+ Determines whether the recordset allows transactions.  
   
 ```  
 BOOL CanTransact() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se il recordset consente transazioni. in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the recordset allows transactions; otherwise 0.  
   
-### <a name="remarks"></a>Note  
- Per ulteriori informazioni, vedere l'articolo [transazione (ODBC)](../../data/odbc/transaction-odbc.md).  
+### <a name="remarks"></a>Remarks  
+ For more information, see the article [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-##  <a name="canupdate"></a>CRecordset::CanUpdate  
- Determina se il recordset può essere aggiornato.  
+##  <a name="canupdate"></a>  CRecordset::CanUpdate  
+ Determines whether the recordset can be updated.  
   
 ```  
 BOOL CanUpdate() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se il recordset può essere aggiornato; in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the recordset can be updated; otherwise 0.  
   
-### <a name="remarks"></a>Note  
- Potrebbe essere un recordset di sola lettura se l'origine dati sottostante è di sola lettura o se è stato specificato **CRecordset** nel `dwOptions` parametro quando il recordset aperto.  
+### <a name="remarks"></a>Remarks  
+ A recordset might be read-only if the underlying data source is read-only or if you specified **CRecordset::readOnly** in the `dwOptions` parameter when you opened the recordset.  
   
-##  <a name="checkrowseterror"></a>CRecordset::CheckRowsetError  
- Chiamato per gestire gli errori generati durante il recupero di massa di record.  
+##  <a name="checkrowseterror"></a>  CRecordset::CheckRowsetError  
+ Called to handle errors generated during record fetching.  
   
 ```  
 virtual void CheckRowsetError(RETCODE nRetCode);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `nRetCode`  
- Codice restituito di una funzione API ODBC. Per informazioni dettagliate, vedere la sezione Osservazioni.  
+ An ODBC API function return code. For details, see Remarks.  
   
-### <a name="remarks"></a>Note  
- Questa funzione membro virtuale gestisce gli errori che si verificano quando vengono recuperati i record, ed è utile durante il recupero di massa di righe. Si consiglia di eseguire l'override `CheckRowsetError` per implementare la propria gestione degli errori.  
+### <a name="remarks"></a>Remarks  
+ This virtual member function handles errors that occur when records are fetched, and is useful during bulk row fetching. You may want to consider overriding `CheckRowsetError` to implement your own error handling.  
   
- `CheckRowsetError`viene chiamato automaticamente in un'operazione di spostamento del cursore, ad esempio **aprire**, **Requery**, o qualsiasi **spostare** operazione. Viene passato il valore restituito della funzione API ODBC **SQLExtendedFetch**. Nella tabella seguente sono elencati i valori possibili per il `nRetCode` parametro.  
+ `CheckRowsetError` is called automatically in a cursor navigation operation, such as **Open**, **Requery**, or any **Move** operation. It is passed the return value of the ODBC API function **SQLExtendedFetch**. The following table lists the possible values for the `nRetCode` parameter.  
   
-|nRetCode|Descrizione|  
+|nRetCode|Description|  
 |--------------|-----------------|  
-|**SQL_SUCCESS**|Funzione è stata completata correttamente. Nessuna informazione aggiuntiva disponibile.|  
-|**SQL_SUCCESS_WITH_INFO**|Funzione è stata completata correttamente, possibilmente con un errore non irreversibile. Informazioni aggiuntive possono essere ottenute chiamando **SQLError**.|  
-|**SQL_NO_DATA_FOUND**|Sono state recuperate tutte le righe dal set di risultati.|  
-|**SQL_ERROR**|Funzione non riuscita. Informazioni aggiuntive possono essere ottenute chiamando **SQLError**.|  
-|**SQL_INVALID_HANDLE**|Funzione non riuscita a causa di un handle di ambiente non valido, un handle di connessione o un handle di istruzione. Ciò indica un errore di programmazione. Nessuna informazione aggiuntiva disponibile da **SQLError**.|  
-|`SQL_STILL_EXECUTING`|Una funzione che è stata avviata in modo asincrono è ancora in esecuzione. Si noti che per impostazione predefinita, MFC non verrà mai passare questo valore su `CheckRowsetError`; MFC continuerà chiamata **SQLExtendedFetch** fino a quando non è più restituisce `SQL_STILL_EXECUTING`.|  
+|**SQL_SUCCESS**|Function completed successfully; no additional information is available.|  
+|**SQL_SUCCESS_WITH_INFO**|Function completed successfully, possibly with a nonfatal error. Additional information can be obtained by calling **SQLError**.|  
+|**SQL_NO_DATA_FOUND**|All rows from the result set have been fetched.|  
+|**SQL_ERROR**|Function failed. Additional information can be obtained by calling **SQLError**.|  
+|**SQL_INVALID_HANDLE**|Function failed due to an invalid environment handle, connection handle, or statement handle. This indicates a programming error. No additional information is available from **SQLError**.|  
+|`SQL_STILL_EXECUTING`|A function that was started asynchronously is still executing. Note that by default, MFC will never pass this value to `CheckRowsetError`; MFC will continue calling **SQLExtendedFetch** until it no longer returns `SQL_STILL_EXECUTING`.|  
   
- Per ulteriori informazioni su **SQLError**, vedere il [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Per ulteriori informazioni sulle righe di massa, vedere l'articolo [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+ For more information about **SQLError**, see the Windows SDK. For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="close"></a>CRecordset:: Close  
- Chiude il recordset.  
+##  <a name="close"></a>  CRecordset::Close  
+ Closes the recordset.  
   
 ```  
 virtual void Close();
 ```  
   
-### <a name="remarks"></a>Note  
- ODBC **HSTMT** e tutta la memoria allocato per il recordset framework vengono deallocati. In genere dopo la chiamata **Chiudi**, si elimina l'oggetto recordset C++ se è stato allocato con **nuova**.  
+### <a name="remarks"></a>Remarks  
+ The ODBC **HSTMT** and all memory the framework allocated for the recordset are deallocated. Usually after calling **Close**, you delete the C++ recordset object if it was allocated with **new**.  
   
- È possibile chiamare **aprire** nuovamente dopo la chiamata **Chiudi**. Ciò consente di riutilizzare l'oggetto recordset. L'alternativa consiste nel chiamare **Requery**.  
+ You can call **Open** again after calling **Close**. This lets you reuse the recordset object. The alternative is to call **Requery**.  
   
-### <a name="example"></a>Esempio  
- [!code-cpp[NVC_MFCDatabase #17](../../mfc/codesnippet/cpp/crecordset-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDatabase#17](../../mfc/codesnippet/cpp/crecordset-class_1.cpp)]  
   
-##  <a name="crecordset"></a>CRecordset::CRecordset  
- Costruisce un oggetto `CRecordset`.  
+##  <a name="crecordset"></a>  CRecordset::CRecordset  
+ Constructs a `CRecordset` object.  
   
 ```  
 CRecordset(CDatabase* pDatabase = NULL);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pDatabase`  
- Contiene un puntatore a un `CDatabase` oggetto o il valore **NULL**. In caso contrario **NULL** e `CDatabase` dell'oggetto **aprire** funzione membro non è stata chiamata per connetterlo all'origine dati, il recordset tenta di aprirlo automaticamente durante il proprio **aprire** chiamare. Se si passa **NULL**, `CDatabase` oggetto viene costruito e connesso mediante le informazioni di origine dati specificata quando è derivata della classe recordset con ClassWizard.  
+ Contains a pointer to a `CDatabase` object or the value **NULL**. If not **NULL** and the `CDatabase` object's **Open** member function has not been called to connect it to the data source, the recordset attempts to open it for you during its own **Open** call. If you pass **NULL**, a `CDatabase` object is constructed and connected for you using the data source information you specified when you derived your recordset class with ClassWizard.  
   
-### <a name="remarks"></a>Note  
- È possibile utilizzare `CRecordset` direttamente o derivare una classe specifica dell'applicazione da `CRecordset`. È possibile utilizzare ClassWizard per derivare le classi di recordset.  
+### <a name="remarks"></a>Remarks  
+ You can either use `CRecordset` directly or derive an application-specific class from `CRecordset`. You can use ClassWizard to derive your recordset classes.  
   
 > [!NOTE]
->  Una classe derivata *deve* fornisce il proprio costruttore. Nel costruttore della classe derivata, chiamare il costruttore `CRecordset::CRecordset`, passando i parametri appropriati lungo.  
+>  A derived class *must* supply its own constructor. In the constructor of your derived class, call the constructor `CRecordset::CRecordset`, passing the appropriate parameters along to it.  
   
- Passare **NULL** al costruttore del recordset per avere un `CDatabase` oggetto creato e collegato automaticamente per l'utente. Si tratta di una sintassi abbreviata utile che non richiede la creazione e connessione un `CDatabase` oggetto prima della creazione del recordset.  
+ Pass **NULL** to your recordset constructor to have a `CDatabase` object constructed and connected for you automatically. This is a useful shorthand that does not require you to construct and connect a `CDatabase` object prior to constructing your recordset.  
   
-### <a name="example"></a>Esempio  
- Per ulteriori informazioni, vedere l'articolo [Recordset: dichiarazione di una classe per una tabella (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md).  
+### <a name="example"></a>Example  
+ For more information, see the article [Recordset: Declaring a Class for a Table (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md).  
   
-##  <a name="delete"></a>CRecordset::Delete  
- Elimina il record corrente.  
+##  <a name="delete"></a>  CRecordset::Delete  
+ Deletes the current record.  
   
 ```  
 virtual void Delete();
 ```  
   
-### <a name="remarks"></a>Note  
- Dopo un'eliminazione ha esito positivo, i membri dati di campo del recordset vengono impostati su un valore Null e, è necessario chiamare in modo esplicito uno del **spostare** funzioni per spostarsi dal record eliminato. Quando si sposta dal record eliminato, non è possibile tornare a esso. Se l'origine dati supporta le transazioni, è possibile rendere il **eliminare** chiamare parte di una transazione. Per ulteriori informazioni, vedere l'articolo [transazione (ODBC)](../../data/odbc/transaction-odbc.md).  
+### <a name="remarks"></a>Remarks  
+ After a successful deletion, the recordset's field data members are set to a Null value, and you must explicitly call one of the **Move** functions in order to move off the deleted record. Once you move off the deleted record, it is not possible to return to it. If the data source supports transactions, you can make the **Delete** call part of a transaction. For more information, see the article [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).  
   
 > [!NOTE]
->  Se è stato implementato il recupero di massa di righe, non è possibile chiamare **eliminare**. Il risultato sarà un'asserzione non riuscita. Sebbene classe `CRecordset` non fornisce un meccanismo per l'aggiornamento di massa di righe di dati, è possibile scrivere funzioni personalizzate utilizzando la funzione API ODBC **SQLSetPos**. Per ulteriori informazioni sulle righe di massa, vedere l'articolo [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  If you have implemented bulk row fetching, you cannot call **Delete**. This will result in a failed assertion. Although class `CRecordset` does not provide a mechanism for updating bulk rows of data, you can write your own functions by using the ODBC API function **SQLSetPos**. For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
 > [!CAUTION]
->  Il recordset deve essere aggiornabile e deve esistere un record valido nel set di record corrente quando si chiama **eliminare**; in caso contrario, si verifica un errore. Ad esempio, se si elimina un record ma non è possibile scorrere a un nuovo record prima di chiamare **eliminare** nuovamente, **eliminare** genera un [CDBException](../../mfc/reference/cdbexception-class.md).  
+>  The recordset must be updatable and there must be a valid record current in the recordset when you call **Delete**; otherwise, an error occurs. For example, if you delete a record but do not scroll to a new record before you call **Delete** again, **Delete** throws a [CDBException](../../mfc/reference/cdbexception-class.md).  
   
- A differenza di [AddNew](#addnew) e [modifica](#edit), una chiamata a **eliminare** non è seguito da una chiamata a [aggiornamento](#update). Se un **eliminare** chiamata ha esito negativo, i dati del campo membri vengono lasciati invariati.  
+ Unlike [AddNew](#addnew) and [Edit](#edit), a call to **Delete** is not followed by a call to [Update](#update). If a **Delete** call fails, the field data members are left unchanged.  
   
-### <a name="example"></a>Esempio  
- Questo esempio viene illustrato un oggetto recordset creato sul frame di una funzione. Nell'esempio si presuppone l'esistenza di `m_dbCust`, una variabile membro di tipo `CDatabase` già connesso all'origine dati.  
+### <a name="example"></a>Example  
+ This example shows a recordset created on the frame of a function. The example assumes the existence of `m_dbCust`, a member variable of type `CDatabase` already connected to the data source.  
   
- [!code-cpp[NVC_MFCDatabase #18](../../mfc/codesnippet/cpp/crecordset-class_2.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#18](../../mfc/codesnippet/cpp/crecordset-class_2.cpp)]  
   
-##  <a name="dobulkfieldexchange"></a>CRecordset::DoBulkFieldExchange  
- Chiamata eseguita per lo scambio di massa di righe di dati dall'origine dati al recordset. Implementa bulk exchange di campi di record (RFX di massa).  
+##  <a name="dobulkfieldexchange"></a>  CRecordset::DoBulkFieldExchange  
+ Called to exchange bulk rows of data from the data source to the recordset. Implements bulk record field exchange (Bulk RFX).  
   
 ```  
 virtual void DoBulkFieldExchange(CFieldExchange* pFX);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pFX`  
- Un puntatore a un [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) oggetto. Il framework già avere imposterà l'oggetto per specificare un contesto per l'operazione di scambio di campo.  
+ A pointer to a [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) object. The framework will already have set up this object to specify a context for the field exchange operation.  
   
-### <a name="remarks"></a>Note  
- Quando viene implementato il recupero di massa di righe, il framework chiama questa funzione membro per trasferire automaticamente i dati dall'origine dati per l'oggetto recordset. `DoBulkFieldExchange`Inoltre, associa i membri di dati del parametro, se disponibili, per i segnaposto dei parametri nella stringa dell'istruzione SQL per la selezione del recordset.  
+### <a name="remarks"></a>Remarks  
+ When bulk row fetching is implemented, the framework calls this member function to automatically transfer data from the data source to your recordset object. `DoBulkFieldExchange` also binds your parameter data members, if any, to parameter placeholders in the SQL statement string for the recordset's selection.  
   
- Se non è implementato il recupero di massa di righe, il framework chiama [DoFieldExchange](#dofieldexchange). Per implementare il recupero di massa di righe, è necessario specificare il `CRecordset::useMultiRowFetch` opzione del `dwOptions` parametro il [aprire](#open) funzione membro.  
+ If bulk row fetching is not implemented, the framework calls [DoFieldExchange](#dofieldexchange). To implement bulk row fetching, you must specify the `CRecordset::useMultiRowFetch` option of the `dwOptions` parameter in the [Open](#open) member function.  
   
 > [!NOTE]
-> `DoBulkFieldExchange`è disponibile solo se si utilizza una classe derivata da `CRecordset`. Se è stato creato un oggetto recordset direttamente da `CRecordset`, è necessario chiamare il [GetFieldValue](#getfieldvalue) funzione membro per recuperare i dati.  
+> `DoBulkFieldExchange` is available only if you are using a class derived from `CRecordset`. If you have created a recordset object directly from `CRecordset`, you must call the [GetFieldValue](#getfieldvalue) member function to retrieve data.  
   
- Scambio di massa di campi di record (RFX di massa) è simile per il trasferimento di campi di record (RFX). Dati vengono trasferiti automaticamente dall'origine dati per l'oggetto recordset. Tuttavia, non è possibile chiamare `AddNew`, **modifica**, **eliminare**, o **aggiornamento** per trasferire le modifiche all'origine dati. Classe `CRecordset` attualmente non fornisce un meccanismo per l'aggiornamento di massa di righe di dati; tuttavia, è possibile scrivere funzioni personalizzate utilizzando la funzione API ODBC **SQLSetPos**.  
+ Bulk record field exchange (Bulk RFX) is similar to record field exchange (RFX). Data is automatically transferred from the data source to the recordset object. However, you cannot call `AddNew`, **Edit**, **Delete**, or **Update** to transfer changes back to the data source. Class `CRecordset` currently does not provide a mechanism for updating bulk rows of data; however, you can write your own functions by using the ODBC API function **SQLSetPos**.  
   
- Si noti che ClassWizard non supporta exchange di campi di record di massa; Pertanto, è necessario eseguire l'override `DoBulkFieldExchange` manualmente, scrivendo chiamate alle funzioni RFX di massa. Per ulteriori informazioni su queste funzioni, vedere l'argomento [funzioni RFX](../../mfc/reference/record-field-exchange-functions.md).  
+ Note that ClassWizard does not support bulk record field exchange; therefore, you must override `DoBulkFieldExchange` manually by writing calls to the Bulk RFX functions. For more information about these functions, see the topic [Record Field Exchange Functions](../../mfc/reference/record-field-exchange-functions.md).  
   
- Per ulteriori informazioni sulle righe di massa, vedere l'articolo [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md). Per informazioni correlate, vedere l'articolo [trasferimento di campi di Record (RFX)](../../data/odbc/record-field-exchange-rfx.md).  
+ For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md). For related information, see the article [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md).  
   
-##  <a name="dofieldexchange"></a>CRecordset::DoFieldExchange  
- Chiamata eseguita per lo scambio di dati (in entrambe le direzioni) tra i membri di dati del campo del recordset e il record corrispondente nell'origine dati. Implementa campi di record (RFX).  
+##  <a name="dofieldexchange"></a>  CRecordset::DoFieldExchange  
+ Called to exchange data (in both directions) between the field data members of the recordset and the corresponding record on the data source. Implements record field exchange (RFX).  
   
 ```  
 virtual void DoFieldExchange(CFieldExchange* pFX);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pFX`  
- Un puntatore a un [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) oggetto. Il framework già avere imposterà l'oggetto per specificare un contesto per l'operazione di scambio di campo.  
+ A pointer to a [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) object. The framework will already have set up this object to specify a context for the field exchange operation.  
   
-### <a name="remarks"></a>Note  
- Quando non è implementato il recupero di massa di righe, il framework chiama questa funzione membro per scambiare automaticamente i dati tra i membri di dati del campo dell'oggetto recordset e le corrispondenti colonne del record corrente nell'origine dati. `DoFieldExchange`Inoltre, associa i membri di dati del parametro, se disponibili, per i segnaposto dei parametri nella stringa dell'istruzione SQL per la selezione del recordset.  
+### <a name="remarks"></a>Remarks  
+ When bulk row fetching is not implemented, the framework calls this member function to automatically exchange data between the field data members of your recordset object and the corresponding columns of the current record on the data source. `DoFieldExchange` also binds your parameter data members, if any, to parameter placeholders in the SQL statement string for the recordset's selection.  
   
- Se viene implementato il recupero di massa di righe, il framework chiama [DoBulkFieldExchange](#dobulkfieldexchange). Per implementare il recupero di massa di righe, è necessario specificare il `CRecordset::useMultiRowFetch` opzione del `dwOptions` parametro il [aprire](#open) funzione membro.  
+ If bulk row fetching is implemented, the framework calls [DoBulkFieldExchange](#dobulkfieldexchange). To implement bulk row fetching, you must specify the `CRecordset::useMultiRowFetch` option of the `dwOptions` parameter in the [Open](#open) member function.  
   
 > [!NOTE]
-> `DoFieldExchange`è disponibile solo se si utilizza una classe derivata da `CRecordset`. Se è stato creato un oggetto recordset direttamente da `CRecordset`, è necessario chiamare il [GetFieldValue](#getfieldvalue) funzione membro per recuperare i dati.  
+> `DoFieldExchange` is available only if you are using a class derived from `CRecordset`. If you have created a recordset object directly from `CRecordset`, you must call the [GetFieldValue](#getfieldvalue) member function to retrieve data.  
   
- Lo scambio di dati di campo, denominato il trasferimento di campi di record (RFX), funziona in entrambe le direzioni: dal record nell'origine dei dati per l'oggetto recordset e dai membri di dati di campo dell'oggetto recordset ai campi del record nell'origine dati.  
+ The exchange of field data, called record field exchange (RFX), works in both directions: from the recordset object's field data members to the fields of the record on the data source, and from the record on the data source to the recordset object.  
   
- La sola azione che è in genere necessario eseguire per implementare `DoFieldExchange` per il recordset derivato classe consiste nel creare la classe con ClassWizard e specificare i tipi di dati e i nomi dei membri di dati di campo. È anche possibile aggiungere codice a ciò che scrive ClassWizard per specificare i membri dati di parametro o per gestire tutte le colonne associate in modo dinamico. Per ulteriori informazioni, vedere l'articolo [Recordset: associazione dinamica di colonne di dati (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).  
+ The only action you must normally take to implement `DoFieldExchange` for your derived recordset class is to create the class with ClassWizard and specify the names and data types of the field data members. You might also add code to what ClassWizard writes to specify parameter data members or to deal with any columns you bind dynamically. For more information, see the article [Recordset: Dynamically Binding Data Columns (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).  
   
- Quando si dichiara la classe derivata recordset con ClassWizard, la procedura guidata scrive un override di `DoFieldExchange` , che è simile all'esempio seguente:  
+ When you declare your derived recordset class with ClassWizard, the wizard writes an override of `DoFieldExchange` for you, which resembles the following example:  
   
- [!code-cpp[NVC_MFCDatabase #19](../../mfc/codesnippet/cpp/crecordset-class_3.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#19](../../mfc/codesnippet/cpp/crecordset-class_3.cpp)]  
   
- Per ulteriori informazioni sulle funzioni RFX, vedere l'argomento [funzioni RFX](../../mfc/reference/record-field-exchange-functions.md).  
+ For more information about the RFX functions, see the topic [Record Field Exchange Functions](../../mfc/reference/record-field-exchange-functions.md).  
   
- Per ulteriori esempi e informazioni dettagliate su `DoFieldExchange`, vedere l'articolo [campi di record: funzionamento di RFX](../../data/odbc/record-field-exchange-how-rfx-works.md). Per informazioni generali su RFX, vedere l'articolo [Record Field Exchange](../../data/odbc/record-field-exchange-rfx.md).  
+ For further examples and details about `DoFieldExchange`, see the article [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md). For general information about RFX, see the article [Record Field Exchange](../../data/odbc/record-field-exchange-rfx.md).  
   
-##  <a name="edit"></a>CRecordset::Edit  
- Consente di apportare modifiche al record corrente.  
+##  <a name="edit"></a>  CRecordset::Edit  
+ Allows changes to the current record.  
   
 ```  
 virtual void Edit();
 ```  
   
-### <a name="remarks"></a>Note  
- Dopo aver chiamato **modifica**, è possibile modificare i membri di dati di campo reimpostando direttamente i relativi valori. L'operazione viene completata quando si chiama successivamente il [aggiornamento](#update) funzione membro per salvare le modifiche nell'origine dati.  
+### <a name="remarks"></a>Remarks  
+ After you call **Edit**, you can change the field data members by directly resetting their values. The operation is completed when you subsequently call the [Update](#update) member function to save your changes on the data source.  
   
 > [!NOTE]
->  Se è stato implementato il recupero di massa di righe, non è possibile chiamare **modifica**. Il risultato sarà un'asserzione non riuscita. Sebbene classe `CRecordset` non fornisce un meccanismo per l'aggiornamento di massa di righe di dati, è possibile scrivere funzioni personalizzate utilizzando la funzione API ODBC **SQLSetPos**. Per ulteriori informazioni sulle righe di massa, vedere l'articolo [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  If you have implemented bulk row fetching, you cannot call **Edit**. This will result in a failed assertion. Although class `CRecordset` does not provide a mechanism for updating bulk rows of data, you can write your own functions by using the ODBC API function **SQLSetPos**. For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- **Modifica** Salva i valori dei membri di dati del recordset. Se si chiama **modifica**, apportare modifiche, quindi chiamare **modifica** nuovamente, vengono ripristinati i valori del record di fossero prima del primo **modifica** chiamare.  
+ **Edit** saves the values of the recordset's data members. If you call **Edit**, make changes, then call **Edit** again, the record's values are restored to what they were before the first **Edit** call.  
   
- In alcuni casi, si desidera aggiornare una colonna, rendendo Null (che non contengono dati). A tale scopo, chiamare [SetFieldNull](#setfieldnull) con un parametro di **TRUE** per contrassegnare il campo Null; in questo modo anche la colonna da aggiornare. Se si desidera un campo per scrivere l'origine dati anche se non è stato modificato il valore, chiamare [SetFieldDirty](#setfielddirty) con un parametro di **TRUE**. Questo procedimento funziona anche se il campo ha valore Null.  
+ In some cases, you may want to update a column by making it Null (containing no data). To do so, call [SetFieldNull](#setfieldnull) with a parameter of **TRUE** to mark the field Null; this also causes the column to be updated. If you want a field to be written to the data source even though its value has not changed, call [SetFieldDirty](#setfielddirty) with a parameter of **TRUE**. This works even if the field had the value Null.  
   
- Se l'origine dati supporta le transazioni, è possibile rendere il **modifica** chiamare parte di una transazione. Si noti che è necessario chiamare [CDatabase::BeginTrans](../../mfc/reference/cdatabase-class.md#begintrans) prima di chiamare **modifica** e dopo aver aperto il recordset. Si noti inoltre che la chiamata [CDatabase:: CommitTrans](../../mfc/reference/cdatabase-class.md#committrans) non è un sostituto per chiamare il metodo **aggiornamento** per completare il **modifica** operazione. Per ulteriori informazioni sulle transazioni, vedere la classe [CDatabase](../../mfc/reference/cdatabase-class.md).  
+ If the data source supports transactions, you can make the **Edit** call part of a transaction. Note that you should call [CDatabase::BeginTrans](../../mfc/reference/cdatabase-class.md#begintrans) before calling **Edit** and after the recordset has been opened. Also note that calling [CDatabase::CommitTrans](../../mfc/reference/cdatabase-class.md#committrans) is not a substitute for calling **Update** to complete the **Edit** operation. For more information about transactions, see class [CDatabase](../../mfc/reference/cdatabase-class.md).  
   
- A seconda della modalità di blocco corrente, il record in corso l'aggiornamento potrebbe essere bloccato da **modifica** finché non si chiama **aggiornamento** o scorrimento a un altro record, o potrebbe essere bloccato solo durante il **modifica** chiamare. È possibile modificare la modalità di blocco con [SetLockingMode](#setlockingmode).  
+ Depending on the current locking mode, the record being updated may be locked by **Edit** until you call **Update** or scroll to another record, or it may be locked only during the **Edit** call. You can change the locking mode with [SetLockingMode](#setlockingmode).  
   
- Il valore precedente del record corrente viene ripristinato se si passa a un nuovo record prima di chiamare **aggiornamento**. Oggetto `CDBException` viene generata se si chiama **modifica** per un oggetto recordset non può essere aggiornato o se non sono presenti record corrente.  
+ The previous value of the current record is restored if you scroll to a new record before calling **Update**. A `CDBException` is thrown if you call **Edit** for a recordset that cannot be updated or if there is no current record.  
   
- Per ulteriori informazioni, vedere gli articoli [transazione (ODBC)](../../data/odbc/transaction-odbc.md) e [Recordset: blocco dei record (ODBC)](../../data/odbc/recordset-locking-records-odbc.md).  
+ For more information, see the articles [Transaction (ODBC)](../../data/odbc/transaction-odbc.md) and [Recordset: Locking Records (ODBC)](../../data/odbc/recordset-locking-records-odbc.md).  
   
-### <a name="example"></a>Esempio  
- [!code-cpp[NVC_MFCDatabase n. 20](../../mfc/codesnippet/cpp/crecordset-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDatabase#20](../../mfc/codesnippet/cpp/crecordset-class_4.cpp)]  
   
-##  <a name="flushresultset"></a>CRecordset::FlushResultSet  
- Recupera il set successivo di risultati di una query predefinita (stored procedure), se sono presenti più set di risultati.  
+##  <a name="flushresultset"></a>  CRecordset::FlushResultSet  
+ Retrieves the next result set of a predefined query (stored procedure), if there are multiple result sets.  
   
 ```  
 BOOL FlushResultSet();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se sono presenti più set di risultati da recuperare; in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if there are more result sets to be retrieved; otherwise 0.  
   
-### <a name="remarks"></a>Note  
- È necessario chiamare `FlushResultSet` solo quando si è finito completamente con il cursore nel set di risultati corrente. Si noti che quando si recupera il risultato successivo impostato chiamando `FlushResultSet`, il cursore non è valido in tale set di risultati, è necessario chiamare il [MoveNext](#movenext) funzione membro dopo la chiamata `FlushResultSet`.  
+### <a name="remarks"></a>Remarks  
+ You should call `FlushResultSet` only when you are completely finished with the cursor on the current result set. Note that when you retrieve the next result set by calling `FlushResultSet`, your cursor is not valid on that result set; you should call the [MoveNext](#movenext) member function after calling `FlushResultSet`.  
   
- Se una query predefinita viene utilizzato un parametro di output o i parametri di input/output, è necessario chiamare `FlushResultSet` fino a quando non viene restituito `FALSE` (il valore 0), per ottenere questi valori di parametro.  
+ If a predefined query uses an output parameter or input/output parameters, you must call `FlushResultSet` until it returns `FALSE` (the value 0), in order to obtain these parameter values.  
   
- `FlushResultSet`chiama la funzione API ODBC `SQLMoreResults`. Se `SQLMoreResults` restituisce `SQL_ERROR` o `SQL_INVALID_HANDLE`, quindi `FlushResultSet` genererà un'eccezione. Per ulteriori informazioni su `SQLMoreResults`, vedere il [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ `FlushResultSet` calls the ODBC API function `SQLMoreResults`. If `SQLMoreResults` returns `SQL_ERROR` or `SQL_INVALID_HANDLE`, then `FlushResultSet` will throw an exception. For more information about `SQLMoreResults`, see the Windows SDK.  
   
- La stored procedure è necessario aver associato i campi se si desidera chiamare `FlushResultSet`.  
+ Your stored procedure needs to have bound fields if you want to call `FlushResultSet`.  
   
-### <a name="example"></a>Esempio  
- Il codice seguente si presuppone che `COutParamRecordset` è un `CRecordset`-oggetto derivato in base a una query con un parametro di input e un parametro di output predefinita e con più set di risultati. Si noti la struttura del [DoFieldExchange](#dofieldexchange) eseguire l'override.  
+### <a name="example"></a>Example  
+ The following code assumes that `COutParamRecordset` is a `CRecordset`-derived object based on a predefined query with an input parameter and an output parameter, and having multiple result sets. Note the structure of the [DoFieldExchange](#dofieldexchange) override.  
   
- [!code-cpp[NVC_MFCDatabase #21](../../mfc/codesnippet/cpp/crecordset-class_5.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#21](../../mfc/codesnippet/cpp/crecordset-class_5.cpp)]  
   
- [!code-cpp[N. 22 NVC_MFCDatabase](../../mfc/codesnippet/cpp/crecordset-class_6.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#22](../../mfc/codesnippet/cpp/crecordset-class_6.cpp)]  
   
-##  <a name="getbookmark"></a>CRecordset::GetBookmark  
- Ottiene il valore di segnalibro per il record corrente.  
+##  <a name="getbookmark"></a>  CRecordset::GetBookmark  
+ Obtains the bookmark value for the current record.  
   
 ```  
 void GetBookmark(CDBVariant& varBookmark);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `varBookmark`  
- Un riferimento a un [CDBVariant](../../mfc/reference/cdbvariant-class.md) oggetto che rappresenta il segnalibro sul record corrente.  
+ A reference to a [CDBVariant](../../mfc/reference/cdbvariant-class.md) object representing the bookmark on the current record.  
   
-### <a name="remarks"></a>Note  
- Per determinare se i segnalibri sono supportati nel recordset, chiamare [CanBookmark](#canbookmark). Per rendere disponibili i segnalibri se sono supportate, è necessario impostare il **CRecordset:: useBookmarks** opzione il `dwOptions` parametro del [aprire](#open) funzione membro.  
-  
-> [!NOTE]
->  Se i segnalibri non supportato o non disponibile, la chiamata `GetBookmark` genererà un'eccezione. I segnalibri non sono supportati nei recordset forward-only.  
-  
- `GetBookmark`Assegna il valore del segnalibro del record corrente da un `CDBVariant` oggetto. Per tornare al record specifico in qualsiasi momento dopo il passaggio a un altro record, chiamare [SetBookmark](#setbookmark) con i corrispondenti `CDBVariant` oggetto.  
+### <a name="remarks"></a>Remarks  
+ To determine if bookmarks are supported on the recordset, call [CanBookmark](#canbookmark). To make bookmarks available if they are supported, you must set the **CRecordset::useBookmarks** option in the `dwOptions` parameter of the [Open](#open) member function.  
   
 > [!NOTE]
->  Dopo alcune operazioni di recordset, i segnalibri potrebbero non essere più validi. Ad esempio, se si chiama `GetBookmark` seguito da **Requery**, potrebbe non essere in grado di restituire al record con `SetBookmark`. Chiamare [CDatabase:: GetBookmarkPersistence](../../mfc/reference/cdatabase-class.md#getbookmarkpersistence) per verificare se è possibile chiamare `SetBookmark`.  
+>  If bookmarks are unsupported or unavailable, calling `GetBookmark` will result in an exception being thrown. Bookmarks are not supported on forward-only recordsets.  
   
- Per ulteriori informazioni sui segnalibri e di navigazione del recordset, vedere gli articoli [Recordset: Bookmark e Absolute Position (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) e [Recordset: scorrimento (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).  
+ `GetBookmark` assigns the value of the bookmark for the current record to a `CDBVariant` object. To return to that record at any time after moving to a different record, call [SetBookmark](#setbookmark) with the corresponding `CDBVariant` object.  
   
-##  <a name="getdefaultconnect"></a>CRecordset:: GetDefaultConnect  
- Chiamato per ottenere la stringa di connessione predefinita.  
+> [!NOTE]
+>  After certain recordset operations, bookmarks may no longer be valid. For example, if you call `GetBookmark` followed by **Requery**, you may not be able to return to the record with `SetBookmark`. Call [CDatabase::GetBookmarkPersistence](../../mfc/reference/cdatabase-class.md#getbookmarkpersistence) to check whether you can safely call `SetBookmark`.  
+  
+ For more information about bookmarks and recordset navigation, see the articles [Recordset: Bookmarks and Absolute Positions (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) and [Recordset: Scrolling (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).  
+  
+##  <a name="getdefaultconnect"></a>  CRecordset::GetDefaultConnect  
+ Called to get the default connection string.  
   
 ```  
 virtual CString GetDefaultConnect();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Oggetto `CString` che contiene la stringa di connessione predefinito.  
+### <a name="return-value"></a>Return Value  
+ A `CString` that contains the default connection string.  
   
-### <a name="remarks"></a>Note  
- Il framework chiama questa funzione membro per ottenere la stringa di connessione predefinita per l'origine dati su cui è basato il recordset. ClassWizard implementa questa funzione per l'utente identificando la stessa origine dati che è utilizzare nella creazione guidata classe per ottenere informazioni su tabelle e colonne. Si verrà probabilmente pratico di fare affidamento su questa connessione predefinita durante lo sviluppo dell'applicazione. Ma la connessione predefinita potrebbe non essere appropriata per gli utenti dell'applicazione. Se è questo il caso, reimplementare questa funzione, eliminando la versione di ClassWizard. Per ulteriori informazioni sulle stringhe di connessione, vedere l'articolo [origine dati (ODBC)](../../data/odbc/data-source-odbc.md).  
+### <a name="remarks"></a>Remarks  
+ The framework calls this member function to get the default connection string for the data source on which the recordset is based. ClassWizard implements this function for you by identifying the same data source you use in ClassWizard to get information about tables and columns. You will probably find it convenient to rely on this default connection while developing your application. But the default connection may not be appropriate for users of your application. If that is the case, you should reimplement this function, discarding ClassWizard's version. For more information about connection strings, see the article [Data Source (ODBC)](../../data/odbc/data-source-odbc.md).  
   
-##  <a name="getdefaultsql"></a>CRecordset::GetDefaultSQL  
- Chiamato per ottenere la stringa SQL predefinita da eseguire.  
+##  <a name="getdefaultsql"></a>  CRecordset::GetDefaultSQL  
+ Called to get the default SQL string to execute.  
   
 ```  
 virtual CString GetDefaultSQL();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Oggetto `CString` che contiene l'istruzione SQL predefinita.  
+### <a name="return-value"></a>Return Value  
+ A `CString` that contains the default SQL statement.  
   
-### <a name="remarks"></a>Note  
- Il framework chiama questa funzione membro per ottenere l'istruzione SQL predefinita su cui è basato il recordset. Potrebbe trattarsi di un nome di tabella o un database SQL **selezionare** istruzione.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this member function to get the default SQL statement on which the recordset is based. This might be a table name or a SQL **SELECT** statement.  
   
- Definire indirettamente l'istruzione SQL predefinita mediante la dichiarazione della classe recordset con ClassWizard e ClassWizard esegue questa attività per l'utente.  
+ You indirectly define the default SQL statement by declaring your recordset class with ClassWizard, and ClassWizard performs this task for you.  
   
- Se la stringa dell'istruzione SQL è necessario per uso personale, chiamare `GetSQL`, che restituisce l'istruzione SQL utilizzata per selezionare i record del recordset quando è stato aperto. È possibile modificare la stringa SQL predefinita nell'override della classe di `GetDefaultSQL`. Ad esempio, è possibile specificare una chiamata a una query predefinita utilizzando un **CHIAMARE** istruzione. (Si noti, tuttavia, se Modifica `GetDefaultSQL`, è necessario modificare `m_nFields` deve corrispondere al numero di colonne nell'origine dati.)  
+ If you need the SQL statement string for your own use, call `GetSQL`, which returns the SQL statement used to select the recordset's records when it was opened. You can edit the default SQL string in your class's override of `GetDefaultSQL`. For example, you could specify a call to a predefined query using a **CALL** statement. (Note, however, that if you edit `GetDefaultSQL`, you also need to modify `m_nFields` to match the number of columns in the data source.)  
   
- Per ulteriori informazioni, vedere l'articolo [Recordset: dichiarazione di una classe per una tabella (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md).  
+ For more information, see the article [Recordset: Declaring a Class for a Table (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md).  
   
 > [!CAUTION]
->  Il nome della tabella sarà vuoto se il framework Impossibile identificare un nome di tabella, se sono stati specificati più nomi di tabella o una **CHIAMARE** istruzione non può essere interpretata. Si noti che quando si utilizza un **CHIAMARE** istruzione, non è necessario inserire uno spazio vuoto tra la parentesi graffa e **CHIAMARE** (parola chiave), né si devono inserire gli spazi vuoti prima della parentesi graffa o prima di **selezionare** parola chiave in un **selezionare** istruzione.  
+>  The table name will be empty if the framework could not identify a table name, if multiple table names were supplied, or if a **CALL** statement could not be interpreted. Note that when using a **CALL** statement, you must not insert whitespace between the curly brace and the **CALL** keyword, nor should you insert whitespace before the curly brace or before the **SELECT** keyword in a **SELECT** statement.  
   
-##  <a name="getfieldvalue"></a>CRecordset:: GetFieldValue  
- Recupera i dati dei campi nel record corrente.  
+##  <a name="getfieldvalue"></a>  CRecordset::GetFieldValue  
+ Retrieves field data in the current record.  
   
 ```  
 void GetFieldValue(
@@ -641,17 +699,17 @@ void GetFieldValue(
     CStringW& strValue);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `lpszName`  
- Il nome di un campo.  
+ The name of a field.  
   
  *varValu*e  
- Un riferimento a un [CDBVariant](../../mfc/reference/cdbvariant-class.md) oggetto in cui verrà archiviato il valore del campo.  
+ A reference to a [CDBVariant](../../mfc/reference/cdbvariant-class.md) object that will store the field's value.  
   
  `nFieldType`  
- Il tipo di dati C ODBC del campo. Utilizzando il valore predefinito, **DEFAULT_FIELD_TYPE**, forza `GetFieldValue` per determinare il tipo di dati C dal tipo di dati SQL, in base alla tabella seguente. In caso contrario, è possibile specificare i dati direttamente digitare o scegliere un tipo di dati compatibile. ad esempio, è possibile archiviare qualsiasi tipo di dati in **SQL_C_CHAR**.  
+ The ODBC C data type of the field. Using the default value, **DEFAULT_FIELD_TYPE**, forces `GetFieldValue` to determine the C data type from the SQL data type, based on the following table. Otherwise, you can specify the data type directly or choose a compatible data type; for example, you can store any data type into **SQL_C_CHAR**.  
   
-|Tipo di dati C|Tipo di dati SQL|  
+|C data type|SQL data type|  
 |-----------------|-------------------|  
 |**SQL_C_BIT**|**SQL_BIT**|  
 |**SQL_C_UTINYINT**|**SQL_TINYINT**|  
@@ -663,51 +721,51 @@ void GetFieldValue(
 |**SQL_C_CHAR**|**SQL_NUMERICSQL_DECIMALSQL_BIGINTSQL_CHARSQL_VARCHARSQL_LONGVARCHAR**|  
 |**SQL_C_BINARY**|**SQL_BINARYSQL_VARBINARYSQL_LONGVARBINARY**|  
   
- Per ulteriori informazioni sui tipi di dati ODBC, vedere gli argomenti "Tipi di dati di SQL" e "Tipi di dati C" nell'appendice D la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information about ODBC data types, see the topics "SQL Data Types" and "C Data Types" in Appendix D of the Windows SDK.  
   
  `nIndex`  
- Indice in base zero del campo.  
+ The zero-based index of the field.  
   
  `strValue`  
- Un riferimento a un [CString](../../atl-mfc-shared/reference/cstringt-class.md) oggetto in cui verrà archiviato il valore del campo convertito in testo, indipendentemente dal tipo di dati del campo.  
+ A reference to a [CString](../../atl-mfc-shared/reference/cstringt-class.md) object that will store the field's value converted to text, regardless of the field's data type.  
   
-### <a name="remarks"></a>Note  
- È possibile cercare un campo in base al nome o in base all'indice. È possibile archiviare il valore del campo in entrambi un `CDBVariant` oggetto o un `CString` oggetto.  
+### <a name="remarks"></a>Remarks  
+ You can look up a field either by name or by index. You can store the field value in either a `CDBVariant` object or a `CString` object.  
   
- Se è stato implementato il recupero di massa di righe, il record corrente viene sempre posizionato sul primo record in un set di righe. Per utilizzare `GetFieldValue` su un record all'interno di un determinato set di righe, è necessario chiamare prima il [SetRowsetCursorPosition](#setrowsetcursorposition) funzione membro per spostare il cursore alla riga desiderata all'interno di tale set di righe. Chiamare quindi `GetFieldValue` per tale riga. Per implementare il recupero di massa di righe, è necessario specificare il `CRecordset::useMultiRowFetch` opzione del `dwOptions` parametro il [aprire](#open) funzione membro.  
+ If you have implemented bulk row fetching, the current record is always positioned on the first record in a rowset. To use `GetFieldValue` on a record within a given rowset, you must first call the [SetRowsetCursorPosition](#setrowsetcursorposition) member function to move the cursor to the desired row within that rowset. Then call `GetFieldValue` for that row. To implement bulk row fetching, you must specify the `CRecordset::useMultiRowFetch` option of the `dwOptions` parameter in the [Open](#open) member function.  
   
- È possibile utilizzare `GetFieldValue` per recuperare i campi in modo dinamico in fase di esecuzione anziché in modo statico associarli in fase di progettazione. Ad esempio, se è stato dichiarato un oggetto recordset direttamente da `CRecordset`, è necessario utilizzare `GetFieldValue` per recuperare i dati di campo; il trasferimento di campi di record (RFX) o exchange di massa di campi di record (RFX di massa), non è implementata.  
-  
-> [!NOTE]
->  Se si dichiara un oggetto recordset senza la derivazione da `CRecordset`, non ha caricato la libreria di cursori ODBC. La libreria di cursori è necessario disporre di un oggetto recordset almeno una colonna associata. Tuttavia, quando si usa `CRecordset` direttamente, nessuna delle colonne sono associata. Le funzioni membro [:: OpenEx](../../mfc/reference/cdatabase-class.md#openex) e [CDatabase:: Open](../../mfc/reference/cdatabase-class.md#open) controllano se verrà caricata la libreria di cursori.  
-  
- `GetFieldValue`chiama la funzione API ODBC **SQLGetData**. Se il driver restituisce il valore **SQL_NO_TOTAL** per la lunghezza effettiva del valore del campo, `GetFieldValue` genera un'eccezione. Per ulteriori informazioni su **SQLGetData**, vedere il [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
-  
-### <a name="example"></a>Esempio  
- Esempio di codice seguente sono illustrate le chiamate a `GetFieldValue` per un oggetto recordset dichiarato direttamente da `CRecordset`.  
-  
- [!code-cpp[N. 23 NVC_MFCDatabase](../../mfc/codesnippet/cpp/crecordset-class_7.cpp)]  
+ You can use `GetFieldValue` to dynamically fetch fields at run time rather than statically binding them at design time. For example, if you have declared a recordset object directly from `CRecordset`, you must use `GetFieldValue` to retrieve the field data; record field exchange (RFX), or bulk record field exchange (Bulk RFX), is not implemented.  
   
 > [!NOTE]
->  A differenza della classe DAO `CDaoRecordset`, `CRecordset` non esiste un `SetFieldValue` funzione membro. Se si crea un oggetto direttamente da `CRecordset`, è in sola lettura.  
+>  If you declare a recordset object without deriving from `CRecordset`, do not have the ODBC Cursor Library loaded. The cursor library requires that the recordset have at least one bound column; however, when you use `CRecordset` directly, none of the columns are bound. The member functions [CDatabase::OpenEx](../../mfc/reference/cdatabase-class.md#openex) and [CDatabase::Open](../../mfc/reference/cdatabase-class.md#open) control whether the cursor library will be loaded.  
   
- Per ulteriori informazioni sulle righe di massa, vedere l'articolo [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+ `GetFieldValue` calls the ODBC API function **SQLGetData**. If your driver outputs the value **SQL_NO_TOTAL** for the actual length of the field value, `GetFieldValue` throws an exception. For more information about **SQLGetData**, see the Windows SDK.  
   
-##  <a name="getodbcfieldcount"></a>CRecordset::GetODBCFieldCount  
- Recupera il numero totale di campi dell'oggetto recordset.  
+### <a name="example"></a>Example  
+ The following sample code illustrates calls to `GetFieldValue` for a recordset object declared directly from `CRecordset`.  
+  
+ [!code-cpp[NVC_MFCDatabase#23](../../mfc/codesnippet/cpp/crecordset-class_7.cpp)]  
+  
+> [!NOTE]
+>  Unlike the DAO class `CDaoRecordset`, `CRecordset` does not have a `SetFieldValue` member function. If you create an object directly from `CRecordset`, it is effectively read-only.  
+  
+ For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+  
+##  <a name="getodbcfieldcount"></a>  CRecordset::GetODBCFieldCount  
+ Retrieves the total number of fields in your recordset object.  
   
 ```  
 short GetODBCFieldCount() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Il numero di campi del recordset.  
+### <a name="return-value"></a>Return Value  
+ The number of fields in the recordset.  
   
-### <a name="remarks"></a>Note  
- Per ulteriori informazioni sulla creazione di recordset, vedere l'articolo [Recordset: creazione e chiusura di recordset (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md).  
+### <a name="remarks"></a>Remarks  
+ For more information about creating recordsets, see the article [Recordset: Creating and Closing Recordsets (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md).  
   
-##  <a name="getodbcfieldinfo"></a>CRecordset::GetODBCFieldInfo  
- Ottiene informazioni sui campi del recordset.  
+##  <a name="getodbcfieldinfo"></a>  CRecordset::GetODBCFieldInfo  
+ Obtains information about the fields in the recordset.  
   
 ```  
 void GetODBCFieldInfo(
@@ -720,118 +778,118 @@ void GetODBCFieldInfo(
     CODBCFieldInfo& fieldinfo);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `lpszName`  
- Il nome di un campo.  
+ The name of a field.  
   
  `fieldinfo`  
- Un riferimento a un `CODBCFieldInfo` struttura.  
+ A reference to a `CODBCFieldInfo` structure.  
   
  `nIndex`  
- Indice in base zero del campo.  
+ The zero-based index of the field.  
   
-### <a name="remarks"></a>Note  
- Una versione della funzione consente di cercare un campo in base al nome. L'altra versione consente di cercare un campo in base all'indice.  
+### <a name="remarks"></a>Remarks  
+ One version of the function lets you look up a field by name. The other version lets you look up a field by index.  
   
- Per una descrizione di informazioni restituite, vedere il [CODBCFieldInfo](../../mfc/reference/codbcfieldinfo-structure.md) struttura.  
+ For a description about the information returned, see the [CODBCFieldInfo](../../mfc/reference/codbcfieldinfo-structure.md) structure.  
   
- Per ulteriori informazioni sulla creazione di recordset, vedere l'articolo [Recordset: creazione e chiusura di recordset (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md).  
+ For more information about creating recordsets, see the article [Recordset: Creating and Closing Recordsets (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md).  
   
-##  <a name="getrecordcount"></a>CRecordset::GetRecordCount  
- Determina le dimensioni dell'oggetto recordset.  
+##  <a name="getrecordcount"></a>  CRecordset::GetRecordCount  
+ Determines the size of the recordset.  
   
 ```  
 long GetRecordCount() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Il numero di record del recordset. 0 se il recordset non contiene record; oppure -1 se non è possibile determinare il numero di record.  
+### <a name="return-value"></a>Return Value  
+ The number of records in the recordset; 0 if the recordset contains no records; or -1 if the record count cannot be determined.  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
 > [!CAUTION]
->  Il numero di record è gestito come un "limite massimo," il numero più alto record ancora considerato come l'utente si sposta tra i record. Il numero totale di record è noto solo dopo che l'utente è stato spostato oltre l'ultimo record. Per motivi di prestazioni, il conteggio non viene aggiornato quando si chiama `MoveLast`. Per contare i record, chiamare `MoveNext` ripetutamente finché `IsEOF` restituisce diverso da zero. Aggiunta di un record tramite **CRecordset:AddNew** e **aggiornamento** aumenta il conteggio; l'eliminazione di un record tramite `CRecordset::Delete` riduce il conteggio.  
+>  The record count is maintained as a "high water mark," the highest-numbered record yet seen as the user moves through the records. The total number of records is only known after the user has moved beyond the last record. For performance reasons, the count is not updated when you call `MoveLast`. To count the records yourself, call `MoveNext` repeatedly until `IsEOF` returns nonzero. Adding a record via **CRecordset:AddNew** and **Update** increases the count; deleting a record via `CRecordset::Delete` decreases the count.  
   
-##  <a name="getrowsetsize"></a>CRecordset::GetRowsetSize  
- Ottiene l'impostazione corrente per il numero di righe da recuperare durante un'operazione di recupero specificato.  
+##  <a name="getrowsetsize"></a>  CRecordset::GetRowsetSize  
+ Obtains the current setting for the number of rows you wish to retrieve during a given fetch.  
   
 ```  
 DWORD GetRowsetSize() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Il numero di righe da recuperare durante un'operazione di recupero specificato.  
+### <a name="return-value"></a>Return Value  
+ The number of rows to retrieve during a given fetch.  
   
-### <a name="remarks"></a>Note  
- Se si utilizza il recupero di massa di righe, le dimensioni del set di righe predefinito quando si apre il recordset sono 25; in caso contrario, è 1.  
+### <a name="remarks"></a>Remarks  
+ If you are using bulk row fetching, the default rowset size when the recordset is opened is 25; otherwise, it is 1.  
   
- Per implementare il recupero di massa di righe, è necessario specificare la `CRecordset::useMultiRowFetch` opzione la `dwOptions` parametro del [aprire](#open) funzione membro. Per modificare l'impostazione per le dimensioni del set di righe, chiamare [SetRowsetSize](#setrowsetsize).  
+ To implement bulk row fetching, you must specify the `CRecordset::useMultiRowFetch` option in the `dwOptions` parameter of the [Open](#open) member function. To change the setting for the rowset size, call [SetRowsetSize](#setrowsetsize).  
   
- Per ulteriori informazioni sulle righe di massa, vedere l'articolo [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+ For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="getrowsfetched"></a>CRecordset::GetRowsFetched  
- Determina il numero di record effettivamente recuperato dopo un'operazione di recupero.  
+##  <a name="getrowsfetched"></a>  CRecordset::GetRowsFetched  
+ Determines how many records were actually retrieved after a fetch.  
   
 ```  
 DWORD GetRowsFetched() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Il numero di righe recuperate dall'origine dati dopo un'operazione di recupero specificato.  
+### <a name="return-value"></a>Return Value  
+ The number of rows retrieved from the data source after a given fetch.  
   
-### <a name="remarks"></a>Note  
- Ciò è utile quando è stato implementato il recupero di massa di righe. La dimensione del set di righe indica in genere il numero di righe da recuperare da un'operazione di recupero; Tuttavia, il numero totale di righe nel recordset interesserà anche il numero di righe verrà recuperato in un set di righe. Ad esempio, se il recordset è 10 record con un'impostazione di dimensioni del set di righe pari a 4, quindi eseguire i cicli di recordset chiamando `MoveNext` comporterà il set di righe finale contenenti solo 2 record.  
+### <a name="remarks"></a>Remarks  
+ This is useful when you have implemented bulk row fetching. The rowset size normally indicates how many rows will be retrieved from a fetch; however, the total number of rows in the recordset also affects how many rows will be retrieved in a rowset. For example, if your recordset has 10 records with a rowset size setting of 4, then looping through the recordset by calling `MoveNext` will result in the final rowset having only 2 records.  
   
- Per implementare il recupero di massa di righe, è necessario specificare la `CRecordset::useMultiRowFetch` opzione la `dwOptions` parametro del [aprire](#open) funzione membro. Per specificare le dimensioni del set di righe, chiamare [SetRowsetSize](#setrowsetsize).  
+ To implement bulk row fetching, you must specify the `CRecordset::useMultiRowFetch` option in the `dwOptions` parameter of the [Open](#open) member function. To specify the rowset size, call [SetRowsetSize](#setrowsetsize).  
   
- Per ulteriori informazioni sulle righe di massa, vedere l'articolo [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+ For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-### <a name="example"></a>Esempio  
- [!code-cpp[N. 24 NVC_MFCDatabase](../../mfc/codesnippet/cpp/crecordset-class_8.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDatabase#24](../../mfc/codesnippet/cpp/crecordset-class_8.cpp)]  
   
-##  <a name="getrowstatus"></a>CRecordset::GetRowStatus  
- Ottiene lo stato di una riga nel set di righe corrente.  
+##  <a name="getrowstatus"></a>  CRecordset::GetRowStatus  
+ Obtains the status for a row in the current rowset.  
   
 ```  
 WORD GetRowStatus(WORD wRow) const;  
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `wRow`  
- Basato su una posizione di una riga nel set di righe corrente. Questo valore può variare da 1 per le dimensioni del set di righe.  
+ The one-based position of a row in the current rowset. This value can range from 1 to the size of the rowset.  
   
-### <a name="return-value"></a>Valore restituito  
- Un valore di stato per la riga. Per informazioni dettagliate, vedere la sezione Osservazioni.  
+### <a name="return-value"></a>Return Value  
+ A status value for the row. For details, see Remarks.  
   
-### <a name="remarks"></a>Note  
- `GetRowStatus`Restituisce un valore che indica una qualsiasi modifica nello stato per la riga dall'ultimo recuperati dall'origine dei dati, o che nessuna riga corrispondente a `wRow` è stata recuperata. Nella tabella seguente sono elencati i valori restituiti possibili.  
+### <a name="remarks"></a>Remarks  
+ `GetRowStatus` returns a value that indicates either any change in status to the row since it was last retrieved from the data source, or that no row corresponding to `wRow` was fetched. The following table lists the possible return values.  
   
-|Valore di stato|Descrizione|  
+|Status value|Description|  
 |------------------|-----------------|  
-|`SQL_ROW_SUCCESS`|La riga è invariata.|  
-|`SQL_ROW_UPDATED`|La riga è stata aggiornata.|  
-|`SQL_ROW_DELETED`|La riga è stata eliminata.|  
-|`SQL_ROW_ADDED`|La riga è stata aggiunta.|  
-|`SQL_ROW_ERROR`|La riga è Impossibile recuperare i a causa di un errore.|  
-|`SQL_ROW_NOROW`|È presente alcuna riga che corrisponde a `wRow`.|  
+|`SQL_ROW_SUCCESS`|The row is unchanged.|  
+|`SQL_ROW_UPDATED`|The row has been updated.|  
+|`SQL_ROW_DELETED`|The row has been deleted.|  
+|`SQL_ROW_ADDED`|The row has been added.|  
+|`SQL_ROW_ERROR`|The row is unretrievable due to an error.|  
+|`SQL_ROW_NOROW`|There is no row that corresponds to `wRow`.|  
   
- Per ulteriori informazioni, vedere la funzione API ODBC **SQLExtendedFetch** nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see the ODBC API function **SQLExtendedFetch** in the Windows SDK.  
   
-##  <a name="getstatus"></a>CRecordset::GetStatus  
- Determina l'indice del record corrente nel recordset e verificato l'ultimo record.  
+##  <a name="getstatus"></a>  CRecordset::GetStatus  
+ Determines the index of the current record in the recordset and whether the last record has been seen.  
   
 ```  
 void GetStatus(CRecordsetStatus& rStatus) const;  
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `rStatus`  
- Un riferimento a un **CRecordsetStatus** oggetto. Per altre informazioni, vedere la sezione Osservazioni.  
+ A reference to a **CRecordsetStatus** object. See the Remarks section for more information.  
   
-### <a name="remarks"></a>Note  
- `CRecordset`tenta di tenere traccia dell'indice, ma in alcuni casi si potrebbe non essere possibile. Vedere [GetRecordCount](#getrecordcount) per una spiegazione.  
+### <a name="remarks"></a>Remarks  
+ `CRecordset` attempts to track the index, but under some circumstances this may not be possible. See [GetRecordCount](#getrecordcount) for an explanation.  
   
- Il **CRecordsetStatus** struttura ha il formato seguente:  
+ The **CRecordsetStatus** structure has the following form:  
   
  `struct CRecordsetStatus`  
   
@@ -843,282 +901,282 @@ void GetStatus(CRecordsetStatus& rStatus) const;
   
  `};`  
   
- I due membri di **CRecordsetStatus** hanno i significati seguenti:  
+ The two members of **CRecordsetStatus** have the following meanings:  
   
-- **m_lCurrentRecord** contiene l'indice in base zero del record corrente del recordset, se noto. Se non è possibile determinare l'indice, questo membro contiene **AFX_CURRENT_RECORD_UNDEFINED** (-2). Se `IsBOF` è **TRUE** vuoto recordset o tentativo di scorrere prima primo record, quindi **m_lCurrentRecord** è impostato su **AFX_CURRENT_RECORD_BOF** (-1). Se su del primo record, quindi è impostata su 0, in secondo luogo registrare 1 e così via.  
+- **m_lCurrentRecord** Contains the zero-based index of the current record in the recordset, if known. If the index cannot be determined, this member contains **AFX_CURRENT_RECORD_UNDEFINED** (-2). If `IsBOF` is **TRUE** (empty recordset or attempt to scroll before first record), then **m_lCurrentRecord** is set to **AFX_CURRENT_RECORD_BOF** (-1). If on the first record, then it is set to 0, second record 1, and so on.  
   
-- **m_bRecordCountFinal** Nonzero se è stato determinato il numero totale di record del recordset. In genere, questo deve essere eseguito a partire dall'inizio del recordset e chiamando `MoveNext` fino a quando non `IsEOF` restituisce diverso da zero. Se questo membro è zero, il record conteggio restituito da `GetRecordCount`, se non -1, è solo un conteggio "limite superiore" dei record.  
+- **m_bRecordCountFinal** Nonzero if the total number of records in the recordset has been determined. Generally this must be accomplished by starting at the beginning of the recordset and calling `MoveNext` until `IsEOF` returns nonzero. If this member is zero, the record count as returned by `GetRecordCount`, if not -1, is only a "high water mark" count of the records.  
   
-##  <a name="getsql"></a>CRecordset::GetSQL  
- Chiamare questa funzione membro per ottenere l'istruzione SQL che è stato utilizzato per selezionare i record del recordset quando è stato aperto.  
+##  <a name="getsql"></a>  CRecordset::GetSQL  
+ Call this member function to get the SQL statement that was used to select the recordset's records when it was opened.  
   
 ```  
 const CString& GetSQL() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Oggetto **const** fanno riferimento a un `CString` che contiene l'istruzione SQL.  
+### <a name="return-value"></a>Return Value  
+ A **const** reference to a `CString` that contains the SQL statement.  
   
-### <a name="remarks"></a>Note  
- In genere si tratterà di un database SQL **selezionare** istruzione. La stringa restituita da `GetSQL` è di sola lettura.  
+### <a name="remarks"></a>Remarks  
+ This will generally be a SQL **SELECT** statement. The string returned by `GetSQL` is read-only.  
   
- La stringa restituita da `GetSQL` è in genere è diverso da qualsiasi stringa passati al recordset nel `lpszSQL` parametro per il **aprire** funzione membro. In questo modo il recordset crea un'istruzione SQL completa in base a cui si è passato a **aprire**, specificato con ClassWizard, ciò che è stato specificato nella **m_strFilter** e `m_strSort` membri dati e i parametri è stato specificato. Per informazioni dettagliate su come il recordset crea l'istruzione SQL, vedere l'articolo [Recordset: selezione dei record (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md).  
+ The string returned by `GetSQL` is typically different from any string you may have passed to the recordset in the `lpszSQL` parameter to the **Open** member function. This is because the recordset constructs a full SQL statement based on what you passed to **Open**, what you specified with ClassWizard, what you may have specified in the **m_strFilter** and `m_strSort` data members, and any parameters you may have specified. For details about how the recordset constructs this SQL statement, see the article [Recordset: How Recordsets Select Records (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md).  
   
 > [!NOTE]
->  Chiamare questa funzione membro solo dopo la chiamata [aprire](#open).  
+>  Call this member function only after calling [Open](#open).  
   
-##  <a name="gettablename"></a>CRecordset::GetTableName  
- Ottiene il nome della tabella di SQL in cui si basa la query del recordset.  
+##  <a name="gettablename"></a>  CRecordset::GetTableName  
+ Gets the name of the SQL table on which the recordset's query is based.  
   
 ```  
 const CString& GetTableName() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Oggetto **const** fanno riferimento a un `CString` che contiene la tabella di nome, se quest'ultimo è in base a una tabella; in caso contrario, una stringa vuota.  
+### <a name="return-value"></a>Return Value  
+ A **const** reference to a `CString` that contains the table name, if the recordset is based on a table; otherwise, an empty string.  
   
-### <a name="remarks"></a>Note  
- `GetTableName`è valido solo se il recordset è basato su una tabella, non un join di più tabelle o una query predefinita (stored procedure). Il nome è di sola lettura.  
+### <a name="remarks"></a>Remarks  
+ `GetTableName` is only valid if the recordset is based on a table, not a join of multiple tables or a predefined query (stored procedure). The name is read-only.  
   
 > [!NOTE]
->  Chiamare questa funzione membro solo dopo la chiamata [aprire](#open).  
+>  Call this member function only after calling [Open](#open).  
   
-##  <a name="isbof"></a>CRecordset::IsBOF  
- Restituisce un diverso da zero se il recordset è stato posizionato prima del primo record. Non sono presenti record corrente.  
+##  <a name="isbof"></a>  CRecordset::IsBOF  
+ Returns nonzero if the recordset has been positioned before the first record. There is no current record.  
   
 ```  
 BOOL IsBOF() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se il recordset non contiene record o se è eseguito lo scorrimento all'indietro prima del primo record; in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the recordset contains no records or if you have scrolled backward before the first record; otherwise 0.  
   
-### <a name="remarks"></a>Note  
- Chiamare questa funzione membro prima che lo scorrimento di record a record sapere se sono già state completate prima del primo record del recordset. È inoltre possibile utilizzare `IsBOF` insieme a `IsEOF` per determinare se il recordset contiene record o è vuoto. Immediatamente dopo la chiamata **aprire**, se il recordset non contiene record, `IsBOF` restituisce diverso da zero. Quando si apre un recordset con almeno un record, il primo record è il record corrente e `IsBOF` restituisce 0.  
+### <a name="remarks"></a>Remarks  
+ Call this member function before you scroll from record to record to learn whether you have gone before the first record of the recordset. You can also use `IsBOF` along with `IsEOF` to determine whether the recordset contains any records or is empty. Immediately after you call **Open**, if the recordset contains no records, `IsBOF` returns nonzero.When you open a recordset that has at least one record, the first record is the current record and `IsBOF` returns 0.  
   
- Se il primo record è il record corrente e si chiama `MovePrev`, `IsBOF` verrà successivamente restituito diverso da zero. Se `IsBOF` restituisce diverso da zero e si chiama `MovePrev`, si verifica un errore. Se `IsBOF` restituisce un valore diverso da zero, il record corrente è definito e qualsiasi operazione che richiede un record corrente verrà generato un errore.  
+ If the first record is the current record and you call `MovePrev`, `IsBOF` will subsequently return nonzero. If `IsBOF` returns nonzero and you call `MovePrev`, an error occurs. If `IsBOF` returns nonzero, the current record is undefined, and any action that requires a current record will result in an error.  
   
-### <a name="example"></a>Esempio  
- Questo esempio viene utilizzato `IsBOF` e `IsEOF` per rilevare i limiti di un oggetto recordset, come il codice scorre il recordset in entrambe le direzioni.  
+### <a name="example"></a>Example  
+ This example uses `IsBOF` and `IsEOF` to detect the limits of a recordset as the code scrolls through the recordset in both directions.  
   
- [!code-cpp[NVC_MFCDatabase #25](../../mfc/codesnippet/cpp/crecordset-class_9.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#25](../../mfc/codesnippet/cpp/crecordset-class_9.cpp)]  
   
-##  <a name="isdeleted"></a>CRecordset::IsDeleted  
- Determina se il record corrente è stato eliminato.  
+##  <a name="isdeleted"></a>  CRecordset::IsDeleted  
+ Determines whether the current record has been deleted.  
   
 ```  
 BOOL IsDeleted() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se il recordset è posizionato su un record eliminato. in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the recordset is positioned on a deleted record; otherwise 0.  
   
-### <a name="remarks"></a>Note  
- Se si passa a un record e `IsDeleted` restituisce **TRUE** (diverso da zero), quindi è necessario scorrere verso un altro record prima di poter eseguire altre operazioni sul recordset.  
+### <a name="remarks"></a>Remarks  
+ If you scroll to a record and `IsDeleted` returns **TRUE** (nonzero), then you must scroll to another record before you can perform any other recordset operations.  
   
- Il risultato di `IsDeleted` dipende da molti fattori, ad esempio il tipo di recordset, se il recordset è aggiornabile, che indica se è specificato il **CRecordset:: Skipdeletedrecords** opzione all'apertura del recordset, se i pacchetti driver eliminare i record e se sono presenti più utenti.  
+ The result of `IsDeleted` depends on many factors, such as your recordset type, whether your recordset is updatable, whether you specified the **CRecordset::skipDeletedRecords** option when you opened the recordset, whether your driver packs deleted records, and whether there are multiple users.  
   
- Per ulteriori informazioni su **CRecordset:: Skipdeletedrecords** e driver di compressione, vedere il [aprire](#open) funzione membro.  
+ For more information about **CRecordset::skipDeletedRecords** and driver packing, see the [Open](#open) member function.  
   
 > [!NOTE]
->  Se è stato implementato il recupero di massa di righe, non è necessario chiamare `IsDeleted`. Chiamare invece il [GetRowStatus](#getrowstatus) funzione membro. Per ulteriori informazioni sulle righe di massa, vedere l'articolo [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  If you have implemented bulk row fetching, you should not call `IsDeleted`. Instead, call the [GetRowStatus](#getrowstatus) member function. For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="iseof"></a>CRecordset::IsEOF  
- Restituisce un diverso da zero se il recordset è stato posizionato dopo l'ultimo record. Non sono presenti record corrente.  
+##  <a name="iseof"></a>  CRecordset::IsEOF  
+ Returns nonzero if the recordset has been positioned after the last record. There is no current record.  
   
 ```  
 BOOL IsEOF() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se il recordset non contiene record o se è eseguito lo scorrimento oltre l'ultimo record; in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the recordset contains no records or if you have scrolled beyond the last record; otherwise 0.  
   
-### <a name="remarks"></a>Note  
- Chiamare questa funzione membro durante lo scorrimento di record al record di informazioni se sono stati superati dell'ultimo record del recordset. È inoltre possibile utilizzare `IsEOF` per determinare se il recordset contiene record o è vuoto. Immediatamente dopo la chiamata **aprire**, se il recordset non contiene record, `IsEOF` restituisce diverso da zero. Quando si apre un recordset con almeno un record, il primo record è il record corrente e `IsEOF` restituisce 0.  
+### <a name="remarks"></a>Remarks  
+ Call this member function as you scroll from record to record to learn whether you have gone beyond the last record of the recordset. You can also use `IsEOF` to determine whether the recordset contains any records or is empty. Immediately after you call **Open**, if the recordset contains no records, `IsEOF` returns nonzero. When you open a recordset that has at least one record, the first record is the current record and `IsEOF` returns 0.  
   
- Se l'ultimo record è il record corrente quando si chiama `MoveNext`, `IsEOF` verrà successivamente restituito diverso da zero. Se `IsEOF` restituisce diverso da zero e si chiama `MoveNext`, si verifica un errore. Se `IsEOF` restituisce un valore diverso da zero, il record corrente è definito e qualsiasi operazione che richiede un record corrente verrà generato un errore.  
+ If the last record is the current record when you call `MoveNext`, `IsEOF` will subsequently return nonzero. If `IsEOF` returns nonzero and you call `MoveNext`, an error occurs. If `IsEOF` returns nonzero, the current record is undefined, and any action that requires a current record will result in an error.  
   
-### <a name="example"></a>Esempio  
- Per vedere l'esempio [IsBOF](#isbof).  
+### <a name="example"></a>Example  
+ See the example for [IsBOF](#isbof).  
   
-##  <a name="isfielddirty"></a>CRecordset::IsFieldDirty  
- Determina se il membro dati di campo specificato è stato modificato dal [modifica](#edit) o [AddNew](#addnew) è stato chiamato.  
+##  <a name="isfielddirty"></a>  CRecordset::IsFieldDirty  
+ Determines whether the specified field data member has been changed since [Edit](#edit) or [AddNew](#addnew) was called.  
   
 ```  
 BOOL IsFieldDirty(void* pv);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pv`  
- Un puntatore a membro di dati di campo cui si desidera controllare, lo stato o **NULL** per determinare se uno dei campi è dirty.  
+ A pointer to the field data member whose status you want to check, or **NULL** to determine if any of the fields are dirty.  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se il membro dati di campo specificato è stato modificato dopo la chiamata `AddNew` o **modifica**; in caso contrario, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the specified field data member has changed since calling `AddNew` or **Edit**; otherwise 0.  
   
-### <a name="remarks"></a>Note  
- In tutti i membri di dati dei campi modificati i dati verranno trasferiti al record nell'origine dati quando il record corrente viene aggiornato da una chiamata al [aggiornamento](#update) funzione membro di `CRecordset` (segue una chiamata a **modifica** o `AddNew`).  
+### <a name="remarks"></a>Remarks  
+ The data in all dirty field data members will be transferred to the record on the data source when the current record is updated by a call to the [Update](#update) member function of `CRecordset` (following a call to **Edit** or `AddNew`).  
   
 > [!NOTE]
->  Questa funzione membro non è applicabile per i recordset che utilizzano il recupero di massa di righe. Se è stato implementato il recupero delle righe di massa, quindi `IsFieldDirty` restituirà sempre **FALSE** e provocherà un'asserzione non riuscita. Per ulteriori informazioni sulle righe di massa, vedere l'articolo [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  This member function is not applicable on recordsets that are using bulk row fetching. If you have implemented bulk row fetching, then `IsFieldDirty` will always return **FALSE** and will result in a failed assertion. For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- La chiamata `IsFieldDirty` reimposterà gli effetti delle precedenti chiamate a [SetFieldDirty](#setfielddirty) poiché lo stato del campo modificato viene rivalutato. Nel `AddNew` case, se il valore del campo corrente è diverso dal valore pseudo null, il campo stato è impostato dirty. Nel **modifica** caso, se il valore del campo è diverso dal valore memorizzato nella cache, il campo stato viene impostato come dirty.  
+ Calling `IsFieldDirty` will reset the effects of preceding calls to [SetFieldDirty](#setfielddirty) since the dirty status of the field is re-evaluated. In the `AddNew` case, if the current field value differs from the pseudo null value, the field status is set dirty. In the **Edit** case, if the field value differs from the cached value, then the field status is set dirty.  
   
- `IsFieldDirty`viene implementata tramite [DoFieldExchange](#dofieldexchange).  
+ `IsFieldDirty` is implemented through [DoFieldExchange](#dofieldexchange).  
   
- Per ulteriori informazioni sui flag modificato, vedere l'articolo [Recordset: selezione dei record (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md).  
+ For more information on the dirty flag, see the article [Recordset: How Recordsets Select Records (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md).  
   
-##  <a name="isfieldnull"></a>CRecordset::IsFieldNull  
- Restituisce diverso da zero se il campo specificato nel record corrente è Null (non ha valore).  
+##  <a name="isfieldnull"></a>  CRecordset::IsFieldNull  
+ Returns nonzero if the specified field in the current record is Null (has no value).  
   
 ```  
 BOOL IsFieldNull(void* pv);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pv`  
- Un puntatore a membro di dati di campo cui si desidera controllare, lo stato o **NULL** per determinare se i campi sono Null.  
+ A pointer to the field data member whose status you want to check, or **NULL** to determine if any of the fields are Null.  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se il membro dati di campo specificato è contrassegnato come Null. in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the specified field data member is flagged as Null; otherwise 0.  
   
-### <a name="remarks"></a>Note  
- Chiamare questa funzione membro per determinare se il membro dati di campo specificato di un recordset è stato contrassegnato come Null. (Nella terminologia dei database, Null significa "Nessun valore having" e non è identico **NULL** in C++.) Se un membro dati di campo è contrassegnato come Null, viene interpretato come una colonna del record corrente per cui è presente alcun valore.  
+### <a name="remarks"></a>Remarks  
+ Call this member function to determine whether the specified field data member of a recordset has been flagged as Null. (In database terminology, Null means "having no value" and is not the same as **NULL** in C++.) If a field data member is flagged as Null, it is interpreted as a column of the current record for which there is no value.  
   
 > [!NOTE]
->  Questa funzione membro non è applicabile per i recordset che utilizzano il recupero di massa di righe. Se è stato implementato il recupero delle righe di massa, quindi `IsFieldNull` restituirà sempre **FALSE** e provocherà un'asserzione non riuscita. Per ulteriori informazioni sulle righe di massa, vedere l'articolo [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  This member function is not applicable on recordsets that are using bulk row fetching. If you have implemented bulk row fetching, then `IsFieldNull` will always return **FALSE** and will result in a failed assertion. For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- `IsFieldNull`viene implementata tramite [DoFieldExchange](#dofieldexchange).  
+ `IsFieldNull` is implemented through [DoFieldExchange](#dofieldexchange).  
   
-##  <a name="isfieldnullable"></a>CRecordset::IsFieldNullable  
- Restituisce zero se il campo specificato nel record corrente può essere impostato su Null (nessun valore con).  
+##  <a name="isfieldnullable"></a>  CRecordset::IsFieldNullable  
+ Returns nonzero if the specified field in the current record can be set to Null (having no value).  
   
 ```  
 BOOL IsFieldNullable(void* pv);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pv`  
- Un puntatore a membro di dati di campo cui si desidera controllare, lo stato o **NULL** per determinare se uno dei campi può essere impostato su un valore Null.  
+ A pointer to the field data member whose status you want to check, or **NULL** to determine if any of the fields can be set to a Null value.  
   
-### <a name="remarks"></a>Note  
- Chiamare questa funzione membro per determinare se il membro dati di campo specificato è "ammette valori null" (può essere impostata su un valore Null. C++ **NULL** non è uguale a Null, ovvero nella terminologia dei database, come "non having alcun valore").  
+### <a name="remarks"></a>Remarks  
+ Call this member function to determine whether the specified field data member is "nullable" (can be set to a Null value; C++ **NULL** is not the same as Null, which, in database terminology, means "having no value").  
   
 > [!NOTE]
->  Se è stato implementato il recupero di massa di righe, non è possibile chiamare `IsFieldNullable`. Chiamare invece il [GetODBCFieldInfo](#getodbcfieldinfo) funzione membro per determinare se un campo può essere impostato su un valore Null. Si noti che è sempre possibile chiamare `GetODBCFieldInfo`, indipendentemente dal fatto è stato implementato il recupero di massa di righe. Per ulteriori informazioni sulle righe di massa, vedere l'articolo [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  If you have implemented bulk row fetching, you cannot call `IsFieldNullable`. Instead, call the [GetODBCFieldInfo](#getodbcfieldinfo) member function to determine whether a field can be set to a Null value. Note that you can always call `GetODBCFieldInfo`, regardless of whether you have implemented bulk row fetching. For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Un campo che non può essere Null deve avere un valore. Se si tenta di impostare un un campo su Null quando si aggiunge o aggiorna un record, l'origine dati rifiuta l'aggiunta o aggiornamento, e [aggiornare](#update) genererà un'eccezione. L'eccezione si verifica quando si chiama **aggiornamento**, non quando si chiama [SetFieldNull](#setfieldnull).  
+ A field that cannot be Null must have a value. If you attempt to set a such a field to Null when adding or updating a record, the data source rejects the addition or update, and [Update](#update) will throw an exception. The exception occurs when you call **Update**, not when you call [SetFieldNull](#setfieldnull).  
   
- Utilizzando **NULL** per il primo argomento della funzione verrà applicata la funzione solo a **outputColumn** campi, non **param** campi. Ad esempio, la chiamata  
+ Using **NULL** for the first argument of the function will apply the function only to **outputColumn** fields, not **param** fields. For instance, the call  
   
- [!code-cpp[N. 26 NVC_MFCDatabase](../../mfc/codesnippet/cpp/crecordset-class_10.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#26](../../mfc/codesnippet/cpp/crecordset-class_10.cpp)]  
   
- imposterà solo **outputColumn** campi **NULL**; **param** campi non saranno interessati.  
+ will set only **outputColumn** fields to **NULL**; **param** fields will be unaffected.  
   
- Per lavorare su **param** campi, è necessario fornire l'indirizzo effettivo della persona **param** si desidera utilizzare, ad esempio:  
+ To work on **param** fields, you must supply the actual address of the individual **param** you want to work on, such as:  
   
- [!code-cpp[N. 27 NVC_MFCDatabase](../../mfc/codesnippet/cpp/crecordset-class_11.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#27](../../mfc/codesnippet/cpp/crecordset-class_11.cpp)]  
   
- Ciò significa che non è possibile impostare tutte **param** campi **NULL**, come è possibile con **outputColumn** campi.  
+ This means you cannot set all **param** fields to **NULL**, as you can with **outputColumn** fields.  
   
- `IsFieldNullable`viene implementata tramite [DoFieldExchange](#dofieldexchange).  
+ `IsFieldNullable` is implemented through [DoFieldExchange](#dofieldexchange).  
   
-##  <a name="isopen"></a>CRecordset::IsOpen  
- Determina se il recordset è già aperto.  
+##  <a name="isopen"></a>  CRecordset::IsOpen  
+ Determines if the recordset is already open.  
   
 ```  
 BOOL IsOpen() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se l'oggetto recordset [aprire](#open) o [Requery](#requery) funzione membro è stato precedentemente chiamata e il recordset non è stata chiusa; in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the recordset object's [Open](#open) or [Requery](#requery) member function has previously been called and the recordset has not been closed; otherwise 0.  
   
-##  <a name="m_hstmt"></a>CRecordset:: M_hstmt  
- Contiene un handle per la struttura dei dati di istruzione ODBC, di tipo **HSTMT**, associato all'oggetto recordset.  
+##  <a name="m_hstmt"></a>  CRecordset::m_hstmt  
+ Contains a handle to the ODBC statement data structure, of type **HSTMT**, associated with the recordset.  
   
-### <a name="remarks"></a>Note  
- Ogni query a un'origine dati ODBC è associato un **HSTMT**.  
-  
-> [!CAUTION]
->  Non utilizzare **m_hstmt** prima [aprire](#open) è stato chiamato.  
-  
- In genere non è necessario accedere il **HSTMT** direttamente, ma potrebbe essere necessario per l'esecuzione diretta delle istruzioni SQL. Il `ExecuteSQL` funzione membro di classe `CDatabase` fornisce un esempio di utilizzo **m_hstmt**.  
-  
-##  <a name="m_nfields"></a>CRecordset::m_nFields  
- Contiene il numero di membri di dati di campo nella classe recordset. vale a dire il numero di colonne selezionate dal recordset dall'origine dati.  
-  
-### <a name="remarks"></a>Note  
- È necessario inizializzare il costruttore della classe recordset `m_nFields` con il numero corretto. Se non è stato implementato il recupero di massa di righe, ClassWizard scrive l'inizializzazione per l'utente quando si tenta di dichiarare la classe del recordset. È possibile anche scrivere la manualmente.  
-  
- Il framework utilizza questo numero per gestire l'interazione tra i membri di dati di campo e le corrispondenti colonne del record corrente nell'origine dati.  
+### <a name="remarks"></a>Remarks  
+ Each query to an ODBC data source is associated with an **HSTMT**.  
   
 > [!CAUTION]
->  Questo numero deve corrispondere al numero di "colonne di output", registrata nel `DoFieldExchange` o `DoBulkFieldExchange` dopo una chiamata a [SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) con il parametro **CFieldExchange::outputColumn**.  
+>  Do not use **m_hstmt** before [Open](#open) has been called.  
   
- È possibile associare le colonne in modo dinamico, come illustrato nell'articolo "Recordset: in modo dinamico le colonne di dati di associazione." Se in tal caso, è necessario aumentare il conteggio in `m_nFields` in modo da riflettere il numero di funzione RFX o RFX di massa chiama il `DoFieldExchange` o `DoBulkFieldExchange` la funzione membro per le colonne associate in modo dinamico.  
+ Normally you do not need to access the **HSTMT** directly, but you might need it for direct execution of SQL statements. The `ExecuteSQL` member function of class `CDatabase` provides an example of using **m_hstmt**.  
   
- Per ulteriori informazioni, vedere gli articoli [Recordset: associazione dinamica di colonne di dati (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md) e [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+##  <a name="m_nfields"></a>  CRecordset::m_nFields  
+ Contains the number of field data members in the recordset class; that is, the number of columns selected by the recordset from the data source.  
   
-### <a name="example"></a>Esempio  
- Vedere l'articolo [campi di record: utilizzo di RFX](../../data/odbc/record-field-exchange-using-rfx.md).  
+### <a name="remarks"></a>Remarks  
+ The constructor for the recordset class must initialize `m_nFields` with the correct number. If you have not implemented bulk row fetching, ClassWizard writes this initialization for you when you use it to declare your recordset class. You can also write it manually.  
   
-##  <a name="m_nparams"></a>CRecordset::m_nParams  
- Contiene il numero di membri di dati di parametro nella classe recordset. vale a dire il numero di parametri passati con la query del recordset.  
-  
-### <a name="remarks"></a>Note  
- Se la classe recordset dispone di alcun membro dati di parametro, è necessario inizializzare il costruttore per la classe `m_nParams` con il numero corretto. Il valore di `m_nParams` valore predefinito è 0. Se si aggiungono membri dati di parametro (che è necessario eseguire manualmente) è necessario aggiungere manualmente un'inizializzazione nel costruttore della classe in modo da riflettere il numero di parametri (che deve essere grande almeno come il numero di ' segnaposto il **m_strFilter** o `m_strSort` stringa).  
-  
- Quando Parametrizza la query del recordset, il framework utilizza questo numero.  
+ The framework uses this number to manage interaction between the field data members and the corresponding columns of the current record on the data source.  
   
 > [!CAUTION]
->  Questo numero deve corrispondere al numero di "parametri" registrato in `DoFieldExchange` o `DoBulkFieldExchange` dopo una chiamata a [SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) con un valore del parametro **CFieldExchange::inputParam**, **CFieldExchange::param**, **CFieldExchange::outputParam**, o **CFieldExchange::inoutParam**.  
+>  This number must correspond to the number of "output columns" registered in `DoFieldExchange` or `DoBulkFieldExchange` after a call to [SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) with the parameter **CFieldExchange::outputColumn**.  
   
-### <a name="example"></a>Esempio  
-  Vedere gli articoli [Recordset: applicazione di parametri a un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) e [campi di record: utilizzo di RFX](../../data/odbc/record-field-exchange-using-rfx.md).  
+ You can bind columns dynamically, as explained in the article "Recordset: Dynamically Binding Data Columns." If you do so, you must increase the count in `m_nFields` to reflect the number of RFX or Bulk RFX function calls in your `DoFieldExchange` or `DoBulkFieldExchange` member function for the dynamically bound columns.  
   
-##  <a name="m_pdatabase"></a>CRecordset::m_pDatabase  
- Contiene un puntatore al `CDatabase` oggetto attraverso il quale il recordset è connesso a un'origine dati.  
+ For more information, see the articles [Recordset: Dynamically Binding Data Columns (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md) and [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-### <a name="remarks"></a>Note  
- Questa variabile viene impostata in due modi. In genere, si passa un puntatore a un già connesso `CDatabase` oggetto quando si costruisce l'oggetto recordset. Se si passa **NULL** invece `CRecordset` crea un `CDatabase` dell'oggetto per l'utente e lo connette. In entrambi i casi `CRecordset` contiene il puntatore nella variabile.  
+### <a name="example"></a>Example  
+ See the article [Record Field Exchange: Using RFX](../../data/odbc/record-field-exchange-using-rfx.md).  
   
- In genere non direttamente occorre utilizzare il puntatore archiviato in **m_pDatabase**. Se si scrive le estensioni personalizzate di `CRecordset`, tuttavia, potrebbe essere necessario utilizzare il puntatore. Ad esempio, potrebbe essere necessario l'indicatore di misura se si genera la propria `CDBException`s. Potrebbe essere necessario se è necessario eseguire un'operazione utilizzando lo stesso `CDatabase` oggetto, ad esempio l'esecuzione di transazioni, l'impostazione dei timeout, o la chiamata di `ExecuteSQL` funzione membro di classe `CDatabase` per eseguire istruzioni SQL direttamente.  
+##  <a name="m_nparams"></a>  CRecordset::m_nParams  
+ Contains the number of parameter data members in the recordset class; that is, the number of parameters passed with the recordset's query.  
   
-##  <a name="m_strfilter"></a>CRecordset:: M_strfilter  
- Dopo la creazione dell'oggetto recordset, ma prima di chiamare il relativo **aprire** membro funzione, utilizzare questo membro dati per archiviare un `CString` contenente un database SQL **in** clausola.  
+### <a name="remarks"></a>Remarks  
+ If your recordset class has any parameter data members, the constructor for the class must initialize `m_nParams` with the correct number. The value of `m_nParams` defaults to 0. If you add parameter data members (which you must do manually) you must also manually add an initialization in the class constructor to reflect the number of parameters (which must be at least as large as the number of '' placeholders in your **m_strFilter** or `m_strSort` string).  
   
-### <a name="remarks"></a>Note  
- Il recordset questa stringa viene utilizzata per vincolare (o filtrare) i record vengono selezionati durante il **aprire** o **Requery** chiamare. Ciò è utile per la selezione di un subset di record, ad esempio "tutti i venditori in base California" ("stato = CA"). La sintassi ODBC SQL per un **dove** clausola  
+ The framework uses this number when it parameterizes the recordset's query.  
+  
+> [!CAUTION]
+>  This number must correspond to the number of "params" registered in `DoFieldExchange` or `DoBulkFieldExchange` after a call to [SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) with a parameter value of **CFieldExchange::inputParam**, **CFieldExchange::param**, **CFieldExchange::outputParam**, or **CFieldExchange::inoutParam**.  
+  
+### <a name="example"></a>Example  
+  See the articles [Recordset: Parameterizing a Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) and [Record Field Exchange: Using RFX](../../data/odbc/record-field-exchange-using-rfx.md).  
+  
+##  <a name="m_pdatabase"></a>  CRecordset::m_pDatabase  
+ Contains a pointer to the `CDatabase` object through which the recordset is connected to a data source.  
+  
+### <a name="remarks"></a>Remarks  
+ This variable is set in two ways. Typically, you pass a pointer to an already connected `CDatabase` object when you construct the recordset object. If you pass **NULL** instead, `CRecordset` creates a `CDatabase` object for you and connects it. In either case, `CRecordset` stores the pointer in this variable.  
+  
+ Normally you will not directly need to use the pointer stored in **m_pDatabase**. If you write your own extensions to `CRecordset`, however, you might need to use the pointer. For example, you might need the pointer if you throw your own `CDBException`s. Or you might need it if you need to do something using the same `CDatabase` object, such as running transactions, setting timeouts, or calling the `ExecuteSQL` member function of class `CDatabase` to execute SQL statements directly.  
+  
+##  <a name="m_strfilter"></a>  CRecordset::m_strFilter  
+ After you construct the recordset object, but before you call its **Open** member function, use this data member to store a `CString` containing a SQL **WHERE** clause.  
+  
+### <a name="remarks"></a>Remarks  
+ The recordset uses this string to constrain (or filter) the records it selects during the **Open** or **Requery** call. This is useful for selecting a subset of records, such as "all salespersons based in California" ("state = CA"). The ODBC SQL syntax for a **WHERE** clause is  
   
  `WHERE search-condition`  
   
- Si noti che non si include il **dove** parola chiave della stringa. Fornisce il framework.  
+ Note that you do not include the **WHERE** keyword in your string. The framework supplies it.  
   
- È anche possibile parametrizzare la stringa di filtro, inserendo ' segnaposto, dichiarazione di un membro dati del parametro nella classe per ogni segnaposto e passaggio di parametri per il recordset in fase di esecuzione. Ciò consente di costruire il filtro in fase di esecuzione. Per ulteriori informazioni, vedere l'articolo [Recordset: applicazione di parametri a un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).  
+ You can also parameterize your filter string by placing '' placeholders in it, declaring a parameter data member in your class for each placeholder, and passing parameters to the recordset at run time. This lets you construct the filter at run time. For more information, see the article [Recordset: Parameterizing a Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).  
   
- Per ulteriori informazioni su SQL **in** clausole, vedere l'articolo [SQL](../../data/odbc/sql.md). Per ulteriori informazioni sulla selezione e filtro dei record, vedere l'articolo [Recordset: applicazione di filtri dei record (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).  
+ For more information about SQL **WHERE** clauses, see the article [SQL](../../data/odbc/sql.md). For more information about selecting and filtering records, see the article [Recordset: Filtering Records (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).  
   
-### <a name="example"></a>Esempio  
- [!code-cpp[N. 30 NVC_MFCDatabase](../../mfc/codesnippet/cpp/crecordset-class_12.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDatabase#30](../../mfc/codesnippet/cpp/crecordset-class_12.cpp)]  
   
-##  <a name="m_strsort"></a>CRecordset::m_strSort  
- Dopo aver creato l'oggetto recordset, ma prima di chiamare il relativo **aprire** membro funzione, utilizzare questo membro dati per archiviare un `CString` contenente un database SQL **ORDER BY** clausola.  
+##  <a name="m_strsort"></a>  CRecordset::m_strSort  
+ After you construct the recordset object, but before you call its **Open** member function, use this data member to store a `CString` containing a SQL **ORDER BY** clause.  
   
-### <a name="remarks"></a>Note  
- Il recordset questa stringa viene utilizzata per ordinare i record vengono selezionati durante il **aprire** o **Requery** chiamare. È possibile utilizzare questa funzionalità per ordinare un recordset in una o più colonne. La sintassi ODBC SQL per un **ORDER BY** clausola  
+### <a name="remarks"></a>Remarks  
+ The recordset uses this string to sort the records it selects during the **Open** or **Requery** call. You can use this feature to sort a recordset on one or more columns. The ODBC SQL syntax for an **ORDER BY** clause is  
   
  `ORDER BY sort-specification [, sort-specification]...`  
   
- in una specifica di ordinamento è un numero intero o un nome di colonna. È anche possibile specificare l'ordine crescente o decrescente (l'ordine è crescente per impostazione predefinita) aggiungendo "ASC" o "DESC" all'elenco delle colonne nella stringa di ordinamento. I record selezionati sono ordinati in base alla prima colonna elencati, quindi dal secondo e così via. Si potrebbe ad esempio, ordinare un recordset "Customers", il cognome e nome. Il numero di colonne che è possibile elencare dipende dall'origine dati. Per altre informazioni, vedere [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ where a sort-specification is an integer or a column name. You can also specify ascending or descending order (the order is ascending by default) by appending "ASC" or "DESC" to the column list in the sort string. The selected records are sorted first by the first column listed, then by the second, and so on. For example, you might order a "Customers" recordset by last name, then first name. The number of columns you can list depends on the data source. For more information, see the Windows SDK.  
   
- Si noti che non si include il **ORDER BY** parola chiave della stringa. Fornisce il framework.  
+ Note that you do not include the **ORDER BY** keyword in your string. The framework supplies it.  
   
- Per ulteriori informazioni sulle clausole SQL, vedere l'articolo [SQL](../../data/odbc/sql.md). Per ulteriori informazioni sull'ordinamento dei record, vedere l'articolo [Recordset: ordinamento dei record (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md).  
+ For more information about SQL clauses, see the article [SQL](../../data/odbc/sql.md). For more information about sorting records, see the article [Recordset: Sorting Records (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md).  
   
-### <a name="example"></a>Esempio  
- [!code-cpp[N. 31 NVC_MFCDatabase](../../mfc/codesnippet/cpp/crecordset-class_13.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDatabase#31](../../mfc/codesnippet/cpp/crecordset-class_13.cpp)]  
   
-##  <a name="move"></a>CRecordset  
- Sposta il puntatore del record corrente all'interno del recordset, in avanti o indietro.  
+##  <a name="move"></a>  CRecordset::Move  
+ Moves the current record pointer within the recordset, either forward or backward.  
   
 ```  
 virtual void Move(
@@ -1126,203 +1184,203 @@ virtual void Move(
     WORD wFetchType = SQL_FETCH_RELATIVE);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `nRows`  
- Il numero di righe da spostare in avanti o indietro. I valori positivi spostano in avanti, verso la fine del recordset. I valori negativi spostano all'indietro, verso l'inizio.  
+ The number of rows to move forward or backward. Positive values move forward, toward the end of the recordset. Negative values move backward, toward the beginning.  
   
  `wFetchType`  
- Determina il set di righe che **spostare** verrà recuperato. Per informazioni dettagliate, vedere la sezione Osservazioni.  
+ Determines the rowset that **Move** will fetch. For details, see Remarks.  
   
-### <a name="remarks"></a>Note  
- Se si passa un valore pari a 0 per `nRows`, **spostare** aggiorna il record corrente. **Spostare** terminerà qualsiasi corrente `AddNew` o **modifica** modalità che verrà ripristinato il valore del record corrente prima di `AddNew` o **modifica** è stato chiamato.  
+### <a name="remarks"></a>Remarks  
+ If you pass a value of 0 for `nRows`, **Move** refreshes the current record; **Move** will end any current `AddNew` or **Edit** mode, and will restore the current record's value before `AddNew` or **Edit** was called.  
   
 > [!NOTE]
->  Quando si sposta all'interno di un recordset, è possibile ignorare i record eliminati. Vedere [CRecordset::IsDeleted](#isdeleted) per ulteriori informazioni. Quando si apre un `CRecordset` con il **skipDeletedRecords** impostata, l'opzione **spostare** effettua un'asserzione se il `nRows` parametro è 0. Questo comportamento impedisce l'aggiornamento di righe eliminate da altre applicazioni client utilizzando gli stessi dati. Vedere il `dwOption` parametro [aprire](#open) per una descrizione di **skipDeletedRecords**.  
+>  When you move through a recordset, you cannot skip deleted records. See [CRecordset::IsDeleted](#isdeleted) for more information. When you open a `CRecordset` with the **skipDeletedRecords** option set, **Move** asserts if the `nRows` parameter is 0. This behavior prevents the refresh of rows that are deleted by other client applications using the same data. See the `dwOption` parameter in [Open](#open) for a description of **skipDeletedRecords**.  
   
- **Spostare** Riposiziona il recordset dal set di righe. In base ai valori per `nRows` e `wFetchType`, **spostare** recupera il set di righe appropriato e quindi imposta il primo record in tale set di righe del record corrente. Se non è stato implementato il recupero di massa di righe, le dimensioni del set di righe sono sempre 1. Quando si recupera un set di righe, **spostare** chiama direttamente il [CheckRowsetError](#checkrowseterror) funzione membro per gestire eventuali errori dovuti al recupero.  
+ **Move** repositions the recordset by rowsets. Based on the values for `nRows` and `wFetchType`, **Move** fetches the appropriate rowset and then makes the first record in that rowset the current record. If you have not implemented bulk row fetching, then the rowset size is always 1. When fetching a rowset, **Move** directly calls the [CheckRowsetError](#checkrowseterror) member function to handle any errors resulting from the fetch.  
   
- A seconda dei valori viene passato, **spostare** equivale a altro `CRecordset` funzioni membro. In particolare, il valore di `wFetchType` può indicare una funzione membro che è più intuitiva e spesso il metodo preferito per spostare il record corrente.  
+ Depending on the values you pass, **Move** is equivalent to other `CRecordset` member functions. In particular, the value of `wFetchType` may indicate a member function that is more intuitive and often the preferred method for moving the current record.  
   
- Nella tabella seguente sono elencati i valori possibili per `wFetchType`, il set di righe che **spostare** verrà recuperato in base a `wFetchType` e `nRows`, qualsiasi funzione membro equivalente corrispondente e `wFetchType`.  
+ The following table lists the possible values for `wFetchType`, the rowset that **Move** will fetch based on `wFetchType` and `nRows`, and any equivalent member function corresponding to `wFetchType`.  
   
-|wFetchType|Set di righe recuperate|Funzione membro equivalente|  
+|wFetchType|Fetched rowset|Equivalent member function|  
 |----------------|--------------------|--------------------------------|  
-|`SQL_FETCH_RELATIVE`(il valore predefinito)|Il set di righe a partire `nRows` le righe della prima riga nel set di righe corrente.||  
-|`SQL_FETCH_NEXT`|Il set di righe successivo. `nRows` viene ignorato.|[Metodo MoveNext](#movenext)|  
-|`SQL_FETCH_PRIOR`|Il set di righe precedenti. `nRows` viene ignorato.|[MovePrev](#moveprev)|  
-|`SQL_FETCH_FIRST`|Il primo set di righe nel recordset. `nRows` viene ignorato.|[Metodo MoveFirst](#movefirst)|  
-|`SQL_FETCH_LAST`|L'ultimo intero set di righe nel recordset. `nRows` viene ignorato.|[MoveLast](#movelast)|  
-|`SQL_FETCH_ABSOLUTE`|Se `nRows` > 0, il set di righe a partire `nRows` righe dall'inizio del recordset. Se `nRows` < 0,="" the="" rowset="" starting=""> `nRows` righe dalla fine del recordset. Se `nRows` = 0, viene restituita una condizione di inizio del file (BOF).|[SetAbsolutePosition](#setabsoluteposition)|  
-|`SQL_FETCH_BOOKMARK`|Il set di righe a partire dalla riga il cui valore segnalibro corrisponde a `nRows`.|[SetBookmark](#setbookmark)|  
+|`SQL_FETCH_RELATIVE` (the default value)|The rowset starting `nRows` row(s) from the first row in the current rowset.||  
+|`SQL_FETCH_NEXT`|The next rowset; `nRows` is ignored.|[MoveNext](#movenext)|  
+|`SQL_FETCH_PRIOR`|The previous rowset; `nRows` is ignored.|[MovePrev](#moveprev)|  
+|`SQL_FETCH_FIRST`|The first rowset in the recordset; `nRows` is ignored.|[MoveFirst](#movefirst)|  
+|`SQL_FETCH_LAST`|The last complete rowset in the recordset; `nRows` is ignored.|[MoveLast](#movelast)|  
+|`SQL_FETCH_ABSOLUTE`|If `nRows` > 0, the rowset starting `nRows` row(s) from the beginning of the recordset. If `nRows` < 0, the rowset starting `nRows` row(s) from the end of the recordset. If `nRows` = 0, then a beginning-of-file (BOF) condition is returned.|[SetAbsolutePosition](#setabsoluteposition)|  
+|`SQL_FETCH_BOOKMARK`|The rowset starting at the row whose bookmark value corresponds to `nRows`.|[SetBookmark](#setbookmark)|  
   
 > [!NOTE]
->  Per i recordset forward-only, **spostare** è valido solo con un valore di `SQL_FETCH_NEXT` per `wFetchType`.  
+>  For foward-only recordsets, **Move** is only valid with a value of `SQL_FETCH_NEXT` for `wFetchType`.  
   
 > [!CAUTION]
->  La chiamata **spostare** genera un'eccezione se il recordset non contiene record. Per determinare se il recordset dispone di alcun record, chiamare [IsBOF](#isbof) e [IsEOF](#iseof).  
+>  Calling **Move** throws an exception if the recordset has no records. To determine whether the recordset has any records, call [IsBOF](#isbof) and [IsEOF](#iseof).  
   
 > [!NOTE]
->  Se è eseguito lo scorrimento oltre l'inizio o fine del recordset ( `IsBOF` o `IsEOF` restituisce diverso da zero), la chiamata un **spostare** funzione probabilmente genererà un `CDBException`. Ad esempio, se `IsEOF` restituisce diverso da zero e `IsBOF` non, quindi `MoveNext` genererà un'eccezione, ma `MovePrev` No.  
+>  If you have scrolled past the beginning or end of the recordset ( `IsBOF` or `IsEOF` returns nonzero), calling a **Move** function will possibly throw a `CDBException`. For example, if `IsEOF` returns nonzero and `IsBOF` does not, then `MoveNext` will throw an exception, but `MovePrev` will not.  
   
 > [!NOTE]
->  Se si chiama **spostare** mentre il record corrente viene aggiornata o aggiunti, gli aggiornamenti vengono persi senza alcun avviso.  
+>  If you call **Move** while the current record is being updated or added, the updates are lost without warning.  
   
- Per ulteriori informazioni sulla navigazione del recordset, vedere gli articoli [Recordset: scorrimento (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) e [Recordset: Bookmark e Absolute Position (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md). Per ulteriori informazioni sulle righe di massa, vedere l'articolo [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md). Per informazioni correlate, vedere la funzione API ODBC **SQLExtendedFetch** nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information about recordset navigation, see the articles [Recordset: Scrolling (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) and [Recordset: Bookmarks and Absolute Positions (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md). For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md). For related information, see the ODBC API function **SQLExtendedFetch** in the Windows SDK.  
   
-### <a name="example"></a>Esempio  
- [!code-cpp[N. 28 NVC_MFCDatabase](../../mfc/codesnippet/cpp/crecordset-class_14.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDatabase#28](../../mfc/codesnippet/cpp/crecordset-class_14.cpp)]  
   
-##  <a name="movefirst"></a>CRecordset::MoveFirst  
- Imposta il primo record nel set di righe prima il record corrente.  
+##  <a name="movefirst"></a>  CRecordset::MoveFirst  
+ Makes the first record in the first rowset the current record.  
   
 ```  
 void MoveFirst();
 ```  
   
-### <a name="remarks"></a>Note  
- Indipendentemente dal fatto che il recupero di massa di righe è stato implementato, questa sarà sempre il primo record del recordset.  
+### <a name="remarks"></a>Remarks  
+ Regardless of whether bulk row fetching has been implemented, this will always be the first record in the recordset.  
   
- Non è necessario chiamare **MoveFirst** subito dopo l'apertura del recordset. In quel momento, il primo record (se presente) viene automaticamente il record corrente.  
-  
-> [!NOTE]
->  Questa funzione membro non è valida per i recordset forward-only.  
+ You do not have to call **MoveFirst** immediately after you open the recordset. At that time, the first record (if any) is automatically the current record.  
   
 > [!NOTE]
->  Quando si sposta all'interno di un recordset, è possibile ignorare i record eliminati. Vedere il [IsDeleted](#isdeleted) funzione membro per i dettagli.  
+>  This member function is not valid for forward-only recordsets.  
+  
+> [!NOTE]
+>  When you move through a recordset, you cannot skip deleted records. See the [IsDeleted](#isdeleted) member function for details.  
   
 > [!CAUTION]
->  Chiamare uno della **spostare** funzioni genera un'eccezione se il recordset non contiene record. Per determinare se il recordset dispone di alcun record, chiamare `IsBOF` e `IsEOF`.  
+>  Calling any of the **Move** functions throws an exception if the recordset has no records. To determine whether the recordset has any records, call `IsBOF` and `IsEOF`.  
   
 > [!NOTE]
->  Se si chiama uno del **spostare** funzioni mentre il record corrente viene aggiornata o aggiunti, gli aggiornamenti vengono persi senza alcun avviso.  
+>  If you call any of the **Move** functions while the current record is being updated or added, the updates are lost without warning.  
   
- Per ulteriori informazioni sulla navigazione del recordset, vedere gli articoli [Recordset: scorrimento (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) e [Recordset: Bookmark e Absolute Position (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md). Per ulteriori informazioni sulle righe di massa, vedere l'articolo [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+ For more information about recordset navigation, see the articles [Recordset: Scrolling (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) and [Recordset: Bookmarks and Absolute Positions (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md). For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-### <a name="example"></a>Esempio  
-  Per vedere l'esempio [IsBOF](#isbof).  
+### <a name="example"></a>Example  
+  See the example for [IsBOF](#isbof).  
   
-##  <a name="movelast"></a>CRecordset::MoveLast  
- Imposta il primo record nel set di righe completo ultimo il record corrente.  
+##  <a name="movelast"></a>  CRecordset::MoveLast  
+ Makes the first record in the last complete rowset the current record.  
   
 ```  
 void MoveLast();
 ```  
   
-### <a name="remarks"></a>Note  
- Se non è stato implementato il recupero di massa di righe, il recordset ha una dimensione del set di righe pari a 1, pertanto `MoveLast` semplicemente passa all'ultimo record del recordset.  
+### <a name="remarks"></a>Remarks  
+ If you have not implemented bulk row fetching, your recordset has a rowset size of 1, so `MoveLast` simply moves to the last record in the recordset.  
   
 > [!NOTE]
->  Questa funzione membro non è valida per i recordset forward-only.  
+>  This member function is not valid for forward-only recordsets.  
   
 > [!NOTE]
->  Quando si sposta all'interno di un recordset, è possibile ignorare i record eliminati. Vedere il [IsDeleted](#isdeleted) funzione membro per i dettagli.  
+>  When you move through a recordset, you cannot skip deleted records. See the [IsDeleted](#isdeleted) member function for details.  
   
 > [!CAUTION]
->  Chiamare uno della **spostare** funzioni genera un'eccezione se il recordset non contiene record. Per determinare se il recordset dispone di alcun record, chiamare `IsBOF` e `IsEOF`.  
+>  Calling any of the **Move** functions throws an exception if the recordset has no records. To determine whether the recordset has any records, call `IsBOF` and `IsEOF`.  
   
 > [!NOTE]
->  Se si chiama uno del **spostare** funzioni mentre il record corrente viene aggiornata o aggiunti, gli aggiornamenti vengono persi senza alcun avviso.  
+>  If you call any of the **Move** functions while the current record is being updated or added, the updates are lost without warning.  
   
- Per ulteriori informazioni sulla navigazione del recordset, vedere gli articoli [Recordset: scorrimento (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) e [Recordset: Bookmark e Absolute Position (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md). Per ulteriori informazioni sulle righe di massa, vedere l'articolo [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+ For more information about recordset navigation, see the articles [Recordset: Scrolling (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) and [Recordset: Bookmarks and Absolute Positions (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md). For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-### <a name="example"></a>Esempio  
-  Per vedere l'esempio [IsBOF](#isbof).  
+### <a name="example"></a>Example  
+  See the example for [IsBOF](#isbof).  
   
-##  <a name="movenext"></a>CRecordset::MoveNext  
- Imposta il primo record nel set di righe successivo il record corrente.  
+##  <a name="movenext"></a>  CRecordset::MoveNext  
+ Makes the first record in the next rowset the current record.  
   
 ```  
 void MoveNext();
 ```  
   
-### <a name="remarks"></a>Note  
- Se non è stato implementato il recupero di massa di righe, il recordset ha una dimensione del set di righe pari a 1, pertanto `MoveNext` viene semplicemente spostata al record successivo.  
+### <a name="remarks"></a>Remarks  
+ If you have not implemented bulk row fetching, your recordset has a rowset size of 1, so `MoveNext` simply moves to the next record.  
   
 > [!NOTE]
->  Quando si sposta all'interno di un recordset, è possibile ignorare i record eliminati. Vedere il [IsDeleted](#isdeleted) funzione membro per i dettagli.  
+>  When you move through a recordset, you cannot skip deleted records. See the [IsDeleted](#isdeleted) member function for details.  
   
 > [!CAUTION]
->  Chiamare uno della **spostare** funzioni genera un'eccezione se il recordset non contiene record. Per determinare se il recordset dispone di alcun record, chiamare `IsBOF` e `IsEOF`.  
+>  Calling any of the **Move** functions throws an exception if the recordset has no records. To determine whether the recordset has any records, call `IsBOF` and `IsEOF`.  
   
 > [!NOTE]
->  È inoltre consigliabile chiamare `IsEOF` prima di chiamare `MoveNext`. Ad esempio, se è eseguito lo scorrimento oltre la fine dell'oggetto recordset, `IsEOF` restituirà diverso da zero; una chiamata successiva a `MoveNext` verrebbe generata un'eccezione.  
+>  It is also recommended that you call `IsEOF` before calling `MoveNext`. For example, if you have scrolled past the end of the recordset, `IsEOF` will return nonzero; a subsequent call to `MoveNext` would throw an exception.  
   
 > [!NOTE]
->  Se si chiama uno del **spostare** funzioni mentre il record corrente viene aggiornata o aggiunti, gli aggiornamenti vengono persi senza alcun avviso.  
+>  If you call any of the **Move** functions while the current record is being updated or added, the updates are lost without warning.  
   
- Per ulteriori informazioni sulla navigazione del recordset, vedere gli articoli [Recordset: scorrimento (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) e [Recordset: Bookmark e Absolute Position (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md). Per ulteriori informazioni sulle righe di massa, vedere l'articolo [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+ For more information about recordset navigation, see the articles [Recordset: Scrolling (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) and [Recordset: Bookmarks and Absolute Positions (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md). For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-### <a name="example"></a>Esempio  
-  Per vedere l'esempio [IsBOF](#isbof).  
+### <a name="example"></a>Example  
+  See the example for [IsBOF](#isbof).  
   
-##  <a name="moveprev"></a>CRecordset::MovePrev  
- Imposta il primo record nel set di righe precedenti il record corrente.  
+##  <a name="moveprev"></a>  CRecordset::MovePrev  
+ Makes the first record in the previous rowset the current record.  
   
 ```  
 void MovePrev();
 ```  
   
-### <a name="remarks"></a>Note  
- Se non è stato implementato il recupero di massa di righe, il recordset ha una dimensione del set di righe pari a 1, pertanto `MovePrev` semplicemente passa al record precedente.  
+### <a name="remarks"></a>Remarks  
+ If you have not implemented bulk row fetching, your recordset has a rowset size of 1, so `MovePrev` simply moves to the previous record.  
   
 > [!NOTE]
->  Questa funzione membro non è valida per i recordset forward-only.  
+>  This member function is not valid for forward-only recordsets.  
   
 > [!NOTE]
->  Quando si sposta all'interno di un recordset, è possibile ignorare i record eliminati. Vedere il [IsDeleted](#isdeleted) funzione membro per i dettagli.  
+>  When you move through a recordset, you cannot skip deleted records. See the [IsDeleted](#isdeleted) member function for details.  
   
 > [!CAUTION]
->  Chiamare uno della **spostare** funzioni genera un'eccezione se il recordset non contiene record. Per determinare se il recordset dispone di alcun record, chiamare `IsBOF` e `IsEOF`.  
+>  Calling any of the **Move** functions throws an exception if the recordset has no records. To determine whether the recordset has any records, call `IsBOF` and `IsEOF`.  
   
 > [!NOTE]
->  È inoltre consigliabile chiamare `IsBOF` prima di chiamare `MovePrev`. Ad esempio, se lo scorrimento è stato eseguito prima dell'inizio dell'oggetto recordset, `IsBOF` restituirà diverso da zero; una chiamata successiva a `MovePrev` verrebbe generata un'eccezione.  
+>  It is also recommended that you call `IsBOF` before calling `MovePrev`. For example, if you have scrolled ahead of the beginning of the recordset, `IsBOF` will return nonzero; a subsequent call to `MovePrev` would throw an exception.  
   
 > [!NOTE]
->  Se si chiama uno del **spostare** funzioni mentre il record corrente viene aggiornata o aggiunti, gli aggiornamenti vengono persi senza alcun avviso.  
+>  If you call any of the **Move** functions while the current record is being updated or added, the updates are lost without warning.  
   
- Per ulteriori informazioni sulla navigazione del recordset, vedere gli articoli [Recordset: scorrimento (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) e [Recordset: Bookmark e Absolute Position (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md). Per ulteriori informazioni sulle righe di massa, vedere l'articolo [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+ For more information about recordset navigation, see the articles [Recordset: Scrolling (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) and [Recordset: Bookmarks and Absolute Positions (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md). For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-### <a name="example"></a>Esempio  
-  Per vedere l'esempio [IsBOF](#isbof).  
+### <a name="example"></a>Example  
+  See the example for [IsBOF](#isbof).  
   
-##  <a name="onsetoptions"></a>CRecordset::OnSetOptions  
- Chiamata eseguita per impostare le opzioni (utilizzate nella selezione) per l'istruzione ODBC specificata.  
+##  <a name="onsetoptions"></a>  CRecordset::OnSetOptions  
+ Called to set options (used on selection) for the specified ODBC statement.  
   
 ```  
 virtual void OnSetOptions(HSTMT hstmt);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `hstmt`  
- Il **HSTMT** dell'istruzione ODBC le cui opzioni devono essere impostate.  
+ The **HSTMT** of the ODBC statement whose options are to be set.  
   
-### <a name="remarks"></a>Note  
- Chiamare `OnSetOptions` per impostare le opzioni (utilizzate nella selezione) per l'istruzione ODBC specificata. Il framework chiama questa funzione membro per impostare le opzioni iniziali per il recordset. `OnSetOptions`Determina il supporto dell'origine dati per i cursori scorrevoli e per la concorrenza dei cursori e imposta le opzioni del recordset di conseguenza. (Mentre `OnSetOptions` viene utilizzato per operazioni di selezione, `OnSetUpdateOptions` viene utilizzato per operazioni di aggiornamento.)  
+### <a name="remarks"></a>Remarks  
+ Call `OnSetOptions` to set options (used on selection) for the specified ODBC statement. The framework calls this member function to set initial options for the recordset. `OnSetOptions` determines the data source's support for scrollable cursors and for cursor concurrency and sets the recordset's options accordingly. (Whereas `OnSetOptions` is used for selection operations, `OnSetUpdateOptions` is used for update operations.)  
   
- Eseguire l'override `OnSetOptions` per impostare le opzioni specifiche del driver o l'origine dati. Ad esempio, se l'origine dati supporta l'apertura per l'accesso esclusivo, è possibile eseguire l'override `OnSetOptions` per sfruttare queste funzionalità.  
+ Override `OnSetOptions` to set options specific to the driver or the data source. For example, if your data source supports opening for exclusive access, you might override `OnSetOptions` to take advantage of that ability.  
   
- Per ulteriori informazioni sui cursori, vedere l'articolo [ODBC](../../data/odbc/odbc-basics.md).  
+ For more information about cursors, see the article [ODBC](../../data/odbc/odbc-basics.md).  
   
-##  <a name="onsetupdateoptions"></a>CRecordset::OnSetUpdateOptions  
- Chiamata eseguita per impostare le opzioni (usate su update) per l'istruzione ODBC specificata.  
+##  <a name="onsetupdateoptions"></a>  CRecordset::OnSetUpdateOptions  
+ Called to set options (used on update) for the specified ODBC statement.  
   
 ```  
 virtual void OnSetUpdateOptions(HSTMT hstmt);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `hstmt`  
- Il **HSTMT** dell'istruzione ODBC le cui opzioni devono essere impostate.  
+ The **HSTMT** of the ODBC statement whose options are to be set.  
   
-### <a name="remarks"></a>Note  
- Chiamare `OnSetUpdateOptions` per impostare le opzioni (usate su update) per l'istruzione ODBC specificata. Dopo la creazione di un oggetto HSTMT per aggiornare i record in un recordset, il framework chiama questa funzione membro. (Mentre `OnSetOptions` viene utilizzato per operazioni di selezione, `OnSetUpdateOptions` viene utilizzato per operazioni di aggiornamento.) `OnSetUpdateOptions` determina il supporto dell'origine dati per i cursori scorrevoli e per la concorrenza dei cursori e imposta le opzioni del recordset di conseguenza.  
+### <a name="remarks"></a>Remarks  
+ Call `OnSetUpdateOptions` to set options (used on update) for the specified ODBC statement. The framework calls this member function after it creates an HSTMT to update records in a recordset. (Whereas `OnSetOptions` is used for selection operations, `OnSetUpdateOptions` is used for update operations.) `OnSetUpdateOptions` determines the data source's support for scrollable cursors and for cursor concurrency and sets the recordset's options accordingly.  
   
- Eseguire l'override `OnSetUpdateOptions` per impostare le opzioni di un'istruzione ODBC prima di tale istruzione viene utilizzata per accedere a un database.  
+ Override `OnSetUpdateOptions` to set options of an ODBC statement before that statement is used to access a database.  
   
- Per ulteriori informazioni sui cursori, vedere l'articolo [ODBC](../../data/odbc/odbc-basics.md).  
+ For more information about cursors, see the article [ODBC](../../data/odbc/odbc-basics.md).  
   
-##  <a name="open"></a>CRecordset:: Open  
- Apre il recordset recuperando la tabella o eseguendo la query rappresentata dal recordset.  
+##  <a name="open"></a>  CRecordset::Open  
+ Opens the recordset by retrieving the table or performing the query that the recordset represents.  
   
 ```  
 virtual BOOL Open(
@@ -1331,106 +1389,106 @@ virtual BOOL Open(
     DWORD dwOptions = none);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `nOpenType`  
- Accettare il valore predefinito, **AFX_DB_USE_DEFAULT_TYPE**, o utilizzare uno dei seguenti valori di **enum OpenType**:  
+ Accept the default value, **AFX_DB_USE_DEFAULT_TYPE**, or use one of the following values from the **enum OpenType**:  
   
-- **CRecordset:: dynaset** un recordset con scorrimento bidirezionale. L'appartenenza e l'ordine dei record vengono determinati quando il recordset è aperto, ma le modifiche apportate da altri utenti ai valori dei dati sono visibili dopo un'operazione di recupero. I dynaset sono noti anche come recordset basati su keyset.  
+- **CRecordset::dynaset** A recordset with bi-directional scrolling. The membership and ordering of the records are determined when the recordset is opened, but changes made by other users to the data values are visible following a fetch operation. Dynasets are also known as keyset-driven recordsets.  
   
-- **CRecordset:: snapshot** recordset statico con scorrimento bidirezionale. L'appartenenza e l'ordine dei record vengono determinati quando il recordset è aperto; i valori dei dati vengono determinati quando vengono recuperati i record. Le modifiche apportate da altri utenti non sono visibili finché il recordset non viene chiuso e riaperto.  
+- **CRecordset::snapshot** A static recordset with bi-directional scrolling. The membership and ordering of the records are determined when the recordset is opened; the data values are determined when the records are fetched. Changes made by other users are not visible until the recordset is closed and then reopened.  
   
-- **CRecordset:: Dynamic** un recordset con scorrimento bidirezionale. Le modifiche apportate da altri utenti all'appartenenza, all'ordine e ai valori dei dati sono visibili dopo un'operazione di recupero. Si noti che molti driver ODBC non supportano questo tipo di recordset.  
+- **CRecordset::dynamic** A recordset with bi-directional scrolling. Changes made by other users to the membership, ordering, and data values are visible following a fetch operation. Note that many ODBC drivers do not support this type of recordset.  
   
-- **CRecordset:: forwardOnly** un recordset di sola lettura con solo scorrimento in avanti.  
+- **CRecordset::forwardOnly** A read-only recordset with only forward scrolling.  
   
-     Per `CRecordset`, il valore predefinito è **CRecordset:: snapshot**. Il meccanismo di valore predefinito consente l'interazione tra le procedure guidate di Visual C++ e `CRecordset` di ODBC e `CDaoRecordset` di DAO le cui impostazione predefinite sono diverse.  
+     For `CRecordset`, the default value is **CRecordset::snapshot**. The default-value mechanism allows the Visual C++ wizards to interact with both ODBC `CRecordset` and DAO `CDaoRecordset`, which have different defaults.  
   
- Per ulteriori informazioni su questi tipi di recordset, vedere l'articolo [Recordset (ODBC)](../../data/odbc/recordset-odbc.md). Per informazioni correlate, vedere l'articolo "Utilizzo dei cursori rettangolari e scorrevoli" in [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information about these recordset types, see the article [Recordset (ODBC)](../../data/odbc/recordset-odbc.md). For related information, see the article "Using Block and Scrollable Cursors" in the Windows SDK.  
   
 > [!CAUTION]
->  Se il tipo richiesto non è supportato, tramite il framework viene generata un'eccezione.  
+>  If the requested type is not supported, the framework throws an exception.  
   
  `lpszSQL`  
- Puntatore di stringa contenente uno degli elementi seguenti:  
+ A string pointer containing one of the following:  
   
--   Oggetto **NULL** puntatore.  
+-   A **NULL** pointer.  
   
--   Nome di una tabella.  
+-   The name of a table.  
   
--   Un database SQL **selezionare** istruzione (facoltativamente con un database SQL **in** o **ORDER BY** clausola).  
+-   A SQL **SELECT** statement (optionally with a SQL **WHERE** or **ORDER BY** clause).  
   
--   Oggetto **CHIAMARE** istruzione che specifica il nome di una query predefinita (stored procedure). Prestare attenzione a non inserire uno spazio vuoto tra la parentesi graffa e **CHIAMARE** (parola chiave).  
+-   A **CALL** statement specifying the name of a predefined query (stored procedure). Be careful that you do not insert whitespace between the curly brace and the **CALL** keyword.  
   
- Per ulteriori informazioni su questa stringa, vedere la tabella e la descrizione del ruolo di ClassWizard nella sezione Osservazioni.  
+ For more information about this string, see the table and the discussion of ClassWizard's role under Remarks.  
   
 > [!NOTE]
->  L'ordine delle colonne del set di risultati deve corrispondere all'ordine di RFX o RFX di massa chiama il [DoFieldExchange](#dofieldexchange) o [DoBulkFieldExchange](#dobulkfieldexchange) funzione di sostituzione.  
+>  The order of the columns in your result set must match the order of the RFX or Bulk RFX function calls in your [DoFieldExchange](#dofieldexchange) or [DoBulkFieldExchange](#dobulkfieldexchange) function override.  
   
  `dwOptions`  
- Maschera di bit tramite cui è possibile specificare una combinazione dei valori elencati di seguito. Alcuni di questi si escludono a vicenda. Il valore predefinito è **Nessuno**.  
+ A bitmask which can specify a combination of the values listed below. Some of these are mutually exclusive. The default value is **none**.  
   
-- **CRecordset:: None** alcun set di opzioni. Il valore di questo parametro e tutti gli altri valori si escludono a vicenda. Per impostazione predefinita, il recordset può essere aggiornato con [modifica](#edit) o [eliminare](#delete) e consente di aggiungere nuovi record con [AddNew](#addnew). L'aggiornabilità dipende dall'origine dati nonché dall'opzione `nOpenType` specificata. L'ottimizzazione per le aggiunte di massa non è disponibile. Il recupero di righe di massa non verrà implementato. I record eliminati non verranno ignorati durante la navigazione del recordset. I segnalibri non sono disponibili. Il controllo automatico dei campi modificati automatico è implementato.  
+- **CRecordset::none** No options set. This parameter value is mutually exclusive with all other values. By default, the recordset can be updated with [Edit](#edit) or [Delete](#delete) and allows appending new records with [AddNew](#addnew). Updatability depends on the data source as well as on the `nOpenType` option you specify. Optimization for bulk additions is not available. Bulk row fetching will not be implemented. Deleted records will not be skipped during recordset navigation. Bookmarks are not available. Automatic dirty field checking is implemented.  
   
-- **CRecordset:: appendOnly** non consentire **modifica** o **eliminare** nel recordset. Consente solo `AddNew`. Questa opzione si escludono a vicenda con **CRecordset**.  
+- **CRecordset::appendOnly** Do not allow **Edit** or **Delete** on the recordset. Allow `AddNew` only. This option is mutually exclusive with **CRecordset::readOnly**.  
   
-- **CRecordset:: readonly** apre il recordset in sola lettura. Questa opzione si escludono a vicenda con **CRecordset:: appendOnly**.  
+- **CRecordset::readOnly** Open the recordset as read-only. This option is mutually exclusive with **CRecordset::appendOnly**.  
   
-- **CRecordset:: optimizeBulkAdd** utilizzare un'istruzione SQL preparata per ottimizzare l'aggiunta di più record in una sola volta. Si applica solo se non si utilizza la funzione API ODBC **SQLSetPos** per aggiornare il recordset. Tramite il primo aggiornamento viene determinato quali campi vengono contrassegnati come modificati. Questa opzione e `CRecordset::useMultiRowFetch` si escludono a vicenda.  
+- **CRecordset::optimizeBulkAdd** Use a prepared SQL statement to optimize adding many records at one time. Applies only if you are not using the ODBC API function **SQLSetPos** to update the recordset. The first update determines which fields are marked dirty. This option is mutually exclusive with `CRecordset::useMultiRowFetch`.  
   
-- `CRecordset::useMultiRowFetch`Implementare il recupero di massa di righe per consentire più righe da recuperare in una singola operazione di recupero. Si tratta di una funzionalità avanzata progettata per migliorare le prestazioni; tuttavia il trasferimento di campi di record di massa non è supportato da ClassWizard. Questa opzione si escludono a vicenda con **CRecordset:: optimizeBulkAdd**. Si noti che se si specifica `CRecordset::useMultiRowFetch`, quindi l'opzione **CRecordset:: Nodirtyfieldcheck** verrà attivata automaticamente (il doppio buffer non sarà disponibile); nei recordset forward-only, l'opzione **CRecordset:: Useextendedfetch** verrà attivata automaticamente. Per ulteriori informazioni sulle righe di massa, vedere l'articolo [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+- `CRecordset::useMultiRowFetch` Implement bulk row fetching to allow multiple rows to be retrieved in a single fetch operation. This is an advanced feature designed to improve performance; however, bulk record field exchange is not supported by ClassWizard. This option is mutually exclusive with **CRecordset::optimizeBulkAdd**. Note that if you specify `CRecordset::useMultiRowFetch`, then the option **CRecordset::noDirtyFieldCheck** will be turned on automatically (double buffering will not be available); on forward-only recordsets, the option **CRecordset::useExtendedFetch** will be turned on automatically. For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-- **CRecordset:: Skipdeletedrecords** ignorare tutti i record eliminati durante la navigazione nel recordset. Ciò comporterà il rallentamento delle prestazioni in alcuni recuperi relativi. Questa opzione non è valida per i recordset forward-only. Se si chiama [spostare](#move) con il `nRows` parametro impostato su 0 e **CRecordset:: Skipdeletedrecords** impostata, l'opzione **spostare** verrà verificata. Si noti che **CRecordset:: Skipdeletedrecords** è simile a *compressione del driver*, vale a dire che le righe eliminate vengono rimosse dal recordset. Tuttavia, se i record vengono compressi dal driver, saranno ignorati solo quelli eliminati dall'utente in questione e non da altri durante l'apertura del recordset. **CRecordset:: Skipdeletedrecords** saranno ignorate le righe eliminate da altri utenti.  
+- **CRecordset::skipDeletedRecords** Skip all deleted records when navigating through the recordset. This will slow performance in certain relative fetches. This option is not valid on forward-only recordsets. If you call [Move](#move) with the `nRows` parameter set to 0, and the **CRecordset::skipDeletedRecords** option set, **Move** will assert. Note that **CRecordset::skipDeletedRecords** is similar to *driver packing*, which means that deleted rows are removed from the recordset. However, if your driver packs records, then it will skip only those records that you delete; it will not skip records deleted by other users while the recordset is open. **CRecordset::skipDeletedRecords** will skip rows deleted by other users.  
   
-- **CRecordset:: useBookmarks** può utilizzare i segnalibri nel recordset, se supportata. Con i segnalibri il recupero dei dati risulta rallentato, ma le prestazioni relative alla navigazione tra i dati migliorano. Non valido per i recordset forward-only. Per ulteriori informazioni, vedere l'articolo [Recordset: Bookmark e Absolute Position (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).  
+- **CRecordset::useBookmarks** May use bookmarks on the recordset, if supported. Bookmarks slow data retrieval but improve performance for data navigation. Not valid on forward-only recordsets. For more information, see the article [Recordset: Bookmarks and Absolute Positions (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).  
   
-- **CRecordset:: Nodirtyfieldcheck** disabilitare il buffering dei campi modificati automatico controllo (double). Ciò consente di migliorare le prestazioni; tuttavia, è necessario contrassegnare manualmente i campi come modificati chiamando le funzioni membro `SetFieldDirty` e `SetFieldNull`. Si noti che il doppio buffer nella classe `CRecordset` è simile a quello nella classe `CDaoRecordset`. Tuttavia, in `CRecordset` non è possibile abilitare il doppio buffer nei singoli campi; infatti l'abilitazione viene eseguita o per tutti i campi o per nessuno. Si noti che se si specifica l'opzione `CRecordset::useMultiRowFetch`, quindi **CRecordset:: Nodirtyfieldcheck** verrà attivato automaticamente; tuttavia, `SetFieldDirty` e `SetFieldNull` non può essere utilizzato per i recordset che implementano il recupero di massa di righe.  
+- **CRecordset::noDirtyFieldCheck** Turn off automatic dirty field checking (double buffering). This will improve performance; however, you must manually mark fields as dirty by calling the `SetFieldDirty` and `SetFieldNull` member functions.Note that double buffering in class `CRecordset` is similar to double buffering in class `CDaoRecordset`. However, in `CRecordset`, you cannot enable double buffering on individual fields; you either enable it for all fields or disable it for all fields. Note that if you specify the option `CRecordset::useMultiRowFetch`, then **CRecordset::noDirtyFieldCheck** will be turned on automatically; however, `SetFieldDirty` and `SetFieldNull` cannot be used on recordsets that implement bulk row fetching.  
   
-- **CRecordset:: Executedirect** si utilizza un'istruzione SQL preparata. Per migliorare le prestazioni, specificare questa opzione se il **Requery** funzione membro non verrà mai chiamata.  
+- **CRecordset::executeDirect** Do not use a prepared SQL statement. For improved performance, specify this option if the **Requery** member function will never be called.  
   
-- **CRecordset:: Useextendedfetch** implementare **SQLExtendedFetch** anziché **SQLFetch**. Questa condizione è progettata per implementare il recupero di righe di massa nei recordset forward-only. Se si specifica l'opzione `CRecordset::useMultiRowFetch` in un recordset forward-only, quindi **CRecordset:: Useextendedfetch** verrà attivata automaticamente.  
+- **CRecordset::useExtendedFetch** Implement **SQLExtendedFetch** instead of **SQLFetch**. This is designed for implementing bulk row fetching on forward-only recordsets. If you specify the option `CRecordset::useMultiRowFetch` on a forward-only recordset, then **CRecordset::useExtendedFetch** will be turned on automatically.  
   
-- **CRecordset:: userAllocMultiRowBuffers** l'utente allocherà i buffer di archiviazione per i dati. Utilizzare questa opzione insieme a `CRecordset::useMultiRowFetch` se si desidera allocare manualmente l'archiviazione; in caso contrario questa operazione sarà eseguita automaticamente dal framework. Per ulteriori informazioni, vedere l'articolo [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md). Si noti che se si specifica **userAllocMultiRowBuffers** senza specificare `CRecordset::useMultiRowFetch` comporterà un'asserzione non riuscita.  
+- **CRecordset::userAllocMultiRowBuffers** The user will allocate storage buffers for the data. Use this option in conjunction with `CRecordset::useMultiRowFetch` if you want to allocate your own storage; otherwise, the framework will automatically allocate the necessary storage. For more information, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md). Note that specifying **CRecordset::userAllocMultiRowBuffers** without specifying `CRecordset::useMultiRowFetch` will result in a failed assertion.  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se la `CRecordset` oggetto è stato aperto correttamente; in caso contrario 0 se [CDatabase:: Open](../../mfc/reference/cdatabase-class.md#open) (se chiamato) viene restituito 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the `CRecordset` object was successfully opened; otherwise 0 if [CDatabase::Open](../../mfc/reference/cdatabase-class.md#open) (if called) returns 0.  
   
-### <a name="remarks"></a>Note  
- È necessario chiamare questa funzione membro per eseguire la query definita dal recordset. Prima di chiamare **aprire**, è necessario costruire l'oggetto recordset.  
+### <a name="remarks"></a>Remarks  
+ You must call this member function to run the query defined by the recordset. Before calling **Open**, you must construct the recordset object.  
   
- Connessione del recordset all'origine dati dipende dalla modalità con cui si crea il recordset prima di chiamare **aprire**. Se si passa un [CDatabase](../../mfc/reference/cdatabase-class.md) oggetto al costruttore del recordset che non è stato connesso all'origine dati, questa funzione membro utilizza [GetDefaultConnect](#getdefaultconnect) per tentare di aprire l'oggetto di database. Se si passa **NULL** al costruttore del recordset, il costruttore crea un `CDatabase` oggetto, e **aprire** tenta di connettere l'oggetto di database. Per informazioni dettagliate sulla chiusura di recordset e la connessione in queste diverse circostanze, vedere [Chiudi](#close).  
+ This recordset's connection to the data source depends on how you construct the recordset before calling **Open**. If you pass a [CDatabase](../../mfc/reference/cdatabase-class.md) object to the recordset constructor that has not been connected to the data source, this member function uses [GetDefaultConnect](#getdefaultconnect) to attempt to open the database object. If you pass **NULL** to the recordset constructor, the constructor constructs a `CDatabase` object for you, and **Open** attempts to connect the database object. For details on closing the recordset and the connection under these varying circumstances, see [Close](#close).  
   
 > [!NOTE]
->  L'accesso a un'origine dati tramite un oggetto `CRecordset` è sempre condiviso. A differenza della classe `CDaoRecordset`, non è possibile utilizzare un oggetto `CRecordset` per aprire un'origine dati con accesso esclusivo.  
+>  Access to a data source through a `CRecordset` object is always shared. Unlike the `CDaoRecordset` class, you cannot use a `CRecordset` object to open a data source with exclusive access.  
   
- Quando si chiama **aprire**, una query, in genere un database SQL **selezionare** istruzione, seleziona i record in base ai criteri indicati nella tabella seguente.  
+ When you call **Open**, a query, usually a SQL **SELECT** statement, selects records based on criteria shown in the following table.  
   
-|Valore del parametro lpszSQL|I record selezionati sono determinati da|Esempio|  
+|Value of the lpszSQL parameter|Records selected are determined by|Example|  
 |------------------------------------|----------------------------------------|-------------|  
-|**NULL**|Stringa restituita da `GetDefaultSQL`.||  
-|Nome tabella SQL|Tutte le colonne dell'elenco tabelle in `DoFieldExchange` o `DoBulkFieldExchange`.|`"Customer"`|  
-|Nome predefinito della query (stored procedure)|Colonne che devono essere restituite dalla query.|`"{call OverDueAccts}"`|  
-|**Selezionare** elenco di colonne **FROM** elenco tabella|Colonne specificate delle tabelle specificate.|`"SELECT CustId, CustName FROM`<br /><br /> `Customer"`|  
+|**NULL**|The string returned by `GetDefaultSQL`.||  
+|SQL table name|All columns of the table-list in `DoFieldExchange` or `DoBulkFieldExchange`.|`"Customer"`|  
+|Predefined query (stored procedure) name|The columns the query is defined to return.|`"{call OverDueAccts}"`|  
+|**SELECT** column-list **FROM** table-list|The specified columns from the specified table(s).|`"SELECT CustId, CustName FROM`<br /><br /> `Customer"`|  
   
 > [!CAUTION]
->  Prestare attenzione a non inserire uno spazio vuoto aggiuntivo nella stringa SQL. Ad esempio, se si inserisce uno spazio vuoto tra la parentesi graffa e **CHIAMARE** (parola chiave), MFC verrà erroneamente la stringa SQL come un nome di tabella e verrà quindi incorporata in un **selezionare** istruzione, genererà un'eccezione. Analogamente, se la query predefinita viene utilizzato un parametro di output, non inserire uno spazio vuoto tra la parentesi graffa e la ' simbolo. Infine, non è necessario inserire uno spazio vuoto prima della parentesi graffa in un **CHIAMARE** istruzione o prima di **selezionare** parola chiave in un **selezionare** istruzione.  
+>  Be careful that you do not insert extra whitespace in your SQL string. For example, if you insert whitespace between the curly brace and the **CALL** keyword, MFC will misinterpret the SQL string as a table name and incorporate it into a **SELECT** statement, which will result in an exception being thrown. Similarly, if your predefined query uses an output parameter, do not insert whitespace between the curly brace and the '' symbol. Finally, you must not insert whitespace before the curly brace in a **CALL** statement or before the **SELECT** keyword in a **SELECT** statment.  
   
- La procedura normale consiste nel passare **NULL** a **aprire**, in questo caso, **aprire** chiamate [GetDefaultSQL](#getdefaultsql). Se si utilizza un oggetto derivato `CRecordset` (classe), **GetDefaultSQL** fornisce i nomi di tabella specificati in ClassWizard. Nel parametro `lpszSQL` è invece possibile specificare altre informazioni.  
+ The usual procedure is to pass **NULL** to **Open**; in this case, **Open** calls [GetDefaultSQL](#getdefaultsql). If you are using a derived `CRecordset` class, **GetDefaultSQL** gives the table name(s) you specified in ClassWizard. You can instead specify other information in the `lpszSQL` parameter.  
   
- Qualsiasi elemento passato, **aprire** costruisce una stringa SQL finale per la query (la stringa può essere SQL **in cui** e **ORDER BY** clausole aggiunto per il `lpszSQL` stringa passata) e quindi esegue la query. È possibile esaminare la stringa costruita chiamando [GetSQL](#getsql) dopo la chiamata **aprire**. Per altre informazioni sul modo in cui un'istruzione SQL del recordset e Seleziona record, vedere l'articolo [Recordset: selezione dei record (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md).  
+ Whatever you pass, **Open** constructs a final SQL string for the query (the string may have SQL **WHERE** and **ORDER BY** clauses appended to the `lpszSQL` string you passed) and then executes the query. You can examine the constructed string by calling [GetSQL](#getsql) after calling **Open**. For additional details about how the recordset constructs a SQL statement and selects records, see the article [Recordset: How Recordsets Select Records (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md).  
   
- I membri dei dati di campo della classe recordset sono associati alle colonne dei dati selezionati. Se vengono restituiti record, il primo di essi diventa il record corrente.  
+ The field data members of your recordset class are bound to the columns of the data selected. If any records are returned, the first record becomes the current record.  
   
- Se si desidera impostare le opzioni per il recordset, ad esempio un filtro o ordinamento, specificare tali dopo la creazione dell'oggetto recordset ma prima di chiamare **aprire**. Se si desidera aggiornare i record del recordset quando quest'ultimo è già aperto, chiamare [Requery](#requery).  
+ If you want to set options for the recordset, such as a filter or sort, specify these after you construct the recordset object but before you call **Open**. If you want to refresh the records in the recordset after the recordset is already open, call [Requery](#requery).  
   
- Per ulteriori informazioni, inclusi ulteriori esempi, vedere gli articoli [Recordset (ODBC)](../../data/odbc/recordset-odbc.md), [Recordset: selezione dei record (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md), e [Recordset: creazione e chiusura di recordset (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md).  
+ For more information, including additional examples, see the articles [Recordset (ODBC)](../../data/odbc/recordset-odbc.md), [Recordset: How Recordsets Select Records (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md), and [Recordset: Creating and Closing Recordsets (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md).  
   
-### <a name="example"></a>Esempio  
- Gli esempi di codice seguenti mostrano diverse forme del **aprire** chiamare.  
+### <a name="example"></a>Example  
+ The following code examples show different forms of the **Open** call.  
   
- [!code-cpp[NVC_MFCDatabase n. 16](../../mfc/codesnippet/cpp/crecordset-class_15.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#16](../../mfc/codesnippet/cpp/crecordset-class_15.cpp)]  
   
-##  <a name="refreshrowset"></a>CRecordset::RefreshRowset  
- Aggiorna i dati e lo stato di una riga nel set di righe corrente.  
+##  <a name="refreshrowset"></a>  CRecordset::RefreshRowset  
+ Updates the data and the status for a row in the current rowset.  
   
 ```  
 void RefreshRowset(
@@ -1438,204 +1496,204 @@ void RefreshRowset(
     WORD wLockType = SQL_LOCK_NO_CHANGE);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `wRow`  
- Basato su una posizione di una riga nel set di righe corrente. Questo valore può essere compreso tra zero e le dimensioni del set di righe.  
+ The one-based position of a row in the current rowset. This value can range from zero to the size of the rowset.  
   
  `wLockType`  
- Un valore che indica come la riga viene bloccato se è stata aggiornata. Per informazioni dettagliate, vedere la sezione Osservazioni.  
+ A value indicating how to lock the row after it has been refreshed. For details, see Remarks.  
   
-### <a name="remarks"></a>Note  
- Se si passa un valore pari a zero per `wRow`, quindi verrà aggiornato ogni riga nel set di righe.  
+### <a name="remarks"></a>Remarks  
+ If you pass a value of zero for `wRow`, then every row in the rowset will be refreshed.  
   
- Per utilizzare `RefreshRowset`, è stato implementato il recupero di massa di righe specificando il **CRecordset::useMulitRowFetch** opzione il [aprire](#open) funzione membro.  
+ To use `RefreshRowset`, you must have implemented bulk row fetching by specifying the **CRecordset::useMulitRowFetch** option in the [Open](#open) member function.  
   
- `RefreshRowset`chiama la funzione API ODBC **SQLSetPos**. Il `wLockType` parametro specifica lo stato del blocco di riga dopo **SQLSetPos** ha eseguito. Nella tabella seguente vengono descritti i valori possibili per `wLockType`.  
+ `RefreshRowset` calls the ODBC API function **SQLSetPos**. The `wLockType` parameter specifies the lock state of the row after **SQLSetPos** has executed. The following table describes the possible values for `wLockType`.  
   
-|wLockType|Descrizione|  
+|wLockType|Description|  
 |---------------|-----------------|  
-|`SQL_LOCK_NO_CHANGE`(il valore predefinito)|Il driver o l'origine dati garantisce che la riga è lo stesso stato bloccato o sbloccato, in cui si trovava prima `RefreshRowset` è stato chiamato.|  
-|`SQL_LOCK_EXCLUSIVE`|L'origine dati o driver Blocca esclusivamente la riga. Non tutte le origini dati supportano questo tipo di blocco.|  
-|`SQL_LOCK_UNLOCK`|L'origine dati o driver Sblocca la riga. Non tutte le origini dati supportano questo tipo di blocco.|  
+|`SQL_LOCK_NO_CHANGE` (the default value)|The driver or data source ensures that the row is in the same locked or unlocked state as it was before `RefreshRowset` was called.|  
+|`SQL_LOCK_EXCLUSIVE`|The driver or data source locks the row exclusively. Not all data sources support this type of lock.|  
+|`SQL_LOCK_UNLOCK`|The driver or data source unlocks the row. Not all data sources support this type of lock.|  
   
- Per ulteriori informazioni su **SQLSetPos**, vedere il [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Per ulteriori informazioni sulle righe di massa, vedere l'articolo [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+ For more information about **SQLSetPos**, see the Windows SDK. For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="requery"></a>CRecordset:: Requery  
- Ricompila (Aggiorna) un recordset.  
+##  <a name="requery"></a>  CRecordset::Requery  
+ Rebuilds (refreshes) a recordset.  
   
 ```  
 virtual BOOL Requery();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se il recordset è stato ricompilato; in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the recordset was successfully rebuilt; otherwise 0.  
   
-### <a name="remarks"></a>Note  
- Se vengono restituiti record, il primo di essi diventa il record corrente.  
+### <a name="remarks"></a>Remarks  
+ If any records are returned, the first record becomes the current record.  
   
- Affinché il recordset in modo da riflettere le aggiunte e le eliminazioni che stanno effettuando o altri utenti all'origine dati, è necessario ricompilare il recordset chiamando **Requery**. Se il recordset è di tipo dynaset, riflette automaticamente gli aggiornamenti che si o ad altri utenti per il record esistenti (ma non le aggiunte). Se il recordset è uno snapshot, è necessario chiamare **Requery** in modo da riflettere le modifiche da altri utenti, nonché le aggiunte e le eliminazioni.  
+ In order for the recordset to reflect the additions and deletions that you or other users are making to the data source, you must rebuild the recordset by calling **Requery**. If the recordset is a dynaset, it automatically reflects updates that you or other users make to its existing records (but not additions). If the recordset is a snapshot, you must call **Requery** to reflect edits by other users as well as additions and deletions.  
   
- Per dynaset o uno snapshot, chiamare **Requery** ogni volta che si desidera ricompilare il recordset con un nuovo filtro, ordinamento o nuovi valori dei parametri. Impostare la nuova proprietà di filtrare o ordinare assegnando nuovi valori **m_strFilter** e `m_strSort` prima di chiamare **Requery**. Imposta nuovi parametri assegnando nuovi valori ai membri di dati di parametro prima di chiamare **Requery**. Se le stringhe di filtro e ordinamento sono cambiate, è possibile riutilizzare la query, che migliora le prestazioni.  
+ For either a dynaset or a snapshot, call **Requery** any time you want to rebuild the recordset using a new filter or sort, or new parameter values. Set the new filter or sort property by assigning new values to **m_strFilter** and `m_strSort` before calling **Requery**. Set new parameters by assigning new values to parameter data members before calling **Requery**. If the filter and sort strings are unchanged, you can reuse the query, which improves performance.  
   
- Se il tentativo di ricompilare il recordset non riesce, viene chiuso il recordset. Prima di chiamare **Requery**, è possibile determinare se il recordset possa essere eseguito chiamando il `CanRestart` funzione membro. `CanRestart`non garantisce che **Requery** avrà esito positivo.  
+ If the attempt to rebuild the recordset fails, the recordset is closed. Before you call **Requery**, you can determine whether the recordset can be requeried by calling the `CanRestart` member function. `CanRestart` does not guarantee that **Requery** will succeed.  
   
 > [!CAUTION]
->  Chiamare **Requery** solo dopo aver chiamato [aprire](#open).  
+>  Call **Requery** only after you have called [Open](#open).  
   
-### <a name="example"></a>Esempio  
- Questo esempio viene ricompilato un recordset per applicare un ordinamento diverso.  
+### <a name="example"></a>Example  
+ This example rebuilds a recordset to apply a different sort order.  
   
- [!code-cpp[N. 29 NVC_MFCDatabase](../../mfc/codesnippet/cpp/crecordset-class_16.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#29](../../mfc/codesnippet/cpp/crecordset-class_16.cpp)]  
   
-##  <a name="setabsoluteposition"></a>CRecordset:: SetAbsolutePosition  
- Posiziona il recordset nel record corrispondente al numero di record specificato.  
+##  <a name="setabsoluteposition"></a>  CRecordset::SetAbsolutePosition  
+ Positions the recordset on the record corresponding to the specified record number.  
   
 ```  
 void SetAbsolutePosition(long nRows);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `nRows`  
- Basato su una posizione ordinale per il record corrente nel recordset.  
+ The one-based ordinal position for the current record in the recordset.  
   
-### <a name="remarks"></a>Note  
- `SetAbsolutePosition`Sposta il puntatore del record corrente in base a questa posizione ordinale.  
-  
-> [!NOTE]
->  Questa funzione membro non è valida nei recordset forward-only.  
-  
- Per ODBC (recordset), un'impostazione posizione assoluta 1 si riferisce al primo record del recordset. il valore 0 si intende la posizione di inizio del file (BOF).  
-  
- È inoltre possibile passare i valori negativi per `SetAbsolutePosition`. In questo caso, la posizione del recordset viene valutata dalla fine del recordset. Ad esempio, `SetAbsolutePosition( -1 )` sposta il puntatore del record corrente all'ultimo record del recordset.  
+### <a name="remarks"></a>Remarks  
+ `SetAbsolutePosition` moves the current record pointer based on this ordinal position.  
   
 > [!NOTE]
->  Posizione assoluta non deve essere utilizzato come numero di record sostitutivo. I segnalibri sono ancora il modo consigliato per mantenere e tornare a una posizione specificata, poiché le modifiche di posizione del record quando vengono eliminati i record precedenti. Inoltre, si non può essere certi che un determinato record avrà la stessa posizione assoluta se il recordset viene ricreato perché non è garantito l'ordine dei singoli record all'interno di un recordset a meno che non viene creato con un'istruzione SQL utilizzando un **ORDER BY** clausola.  
+>  This member function is not valid on forward-only recordsets.  
   
- Per ulteriori informazioni sulla navigazione del recordset e i segnalibri, vedere gli articoli [Recordset: scorrimento (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) e [Recordset: Bookmark e Absolute Position (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).  
+ For ODBC recordsets, an absolute position setting of 1 refers to the first record in the recordset; a setting of 0 refers to the beginning-of-file (BOF) position.  
   
-##  <a name="setbookmark"></a>CRecordset::SetBookmark  
- Posiziona il recordset sul record che contiene il segnalibro specificato.  
+ You can also pass negative values to `SetAbsolutePosition`. In this case the recordset's position is evaluated from the end of the recordset. For example, `SetAbsolutePosition( -1 )` moves the current record pointer to the last record in the recordset.  
+  
+> [!NOTE]
+>  Absolute position is not intended to be used as a surrogate record number. Bookmarks are still the recommended way of retaining and returning to a given position, since a record's position changes when preceding records are deleted. In addition, you cannot be assured that a given record will have the same absolute position if the recordset is re-created again because the order of individual records within a recordset is not guaranteed unless it is created with a SQL statement using an **ORDER BY** clause.  
+  
+ For more information about recordset navigation and bookmarks, see the articles [Recordset: Scrolling (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) and [Recordset: Bookmarks and Absolute Positions (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).  
+  
+##  <a name="setbookmark"></a>  CRecordset::SetBookmark  
+ Positions the recordset on the record containing the specified bookmark.  
   
 ```  
 void SetBookmark(const CDBVariant& varBookmark);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `varBookmark`  
- Un riferimento a un [CDBVariant](../../mfc/reference/cdbvariant-class.md) oggetto contenente il valore del segnalibro per un record specifico.  
+ A reference to a [CDBVariant](../../mfc/reference/cdbvariant-class.md) object containing the bookmark value for a specific record.  
   
-### <a name="remarks"></a>Note  
- Per determinare se i segnalibri sono supportati nel recordset, chiamare [CanBookmark](#canbookmark). Per rendere disponibili i segnalibri se sono supportate, è necessario impostare il **CRecordset:: useBookmarks** opzione il `dwOptions` parametro del [aprire](#open) funzione membro.  
-  
-> [!NOTE]
->  Se i segnalibri non supportato o non disponibile, la chiamata `SetBookmark` genererà un'eccezione. I segnalibri non sono supportati nei recordset forward-only.  
-  
- Per recuperare innanzitutto il segnalibro per il record corrente, chiamare [GetBookmark](#getbookmark), che consente di salvare il valore del segnalibro a un `CDBVariant` oggetto. In un secondo momento, è possibile tornare al record specifico chiamando `SetBookmark` utilizzando il valore salvato segnalibro.  
+### <a name="remarks"></a>Remarks  
+ To determine if bookmarks are supported on the recordset, call [CanBookmark](#canbookmark). To make bookmarks available if they are supported, you must set the **CRecordset::useBookmarks** option in the `dwOptions` parameter of the [Open](#open) member function.  
   
 > [!NOTE]
->  Dopo alcune operazioni di recordset, è necessario controllare la persistenza del segnalibro prima di chiamare `SetBookmark`. Ad esempio, se si recupera un segnalibro con `GetBookmark` e quindi chiamare **Requery**, il segnalibro potrebbe non essere più valido. Chiamare [CDatabase:: GetBookmarkPersistence](../../mfc/reference/cdatabase-class.md#getbookmarkpersistence) per verificare se è possibile chiamare `SetBookmark`.  
+>  If bookmarks are unsupported or unavailable, calling `SetBookmark` will result in an exception being thrown. Bookmarks are not supported on forward-only recordsets.  
   
- Per ulteriori informazioni sui segnalibri e di navigazione del recordset, vedere gli articoli [Recordset: Bookmark e Absolute Position (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) e [Recordset: scorrimento (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).  
+ To first retrieve the bookmark for the current record, call [GetBookmark](#getbookmark), which saves the bookmark value to a `CDBVariant` object. Later, you can return to that record by calling `SetBookmark` using the saved bookmark value.  
   
-##  <a name="setfielddirty"></a>CRecordset::SetFieldDirty  
- Contrassegna un membro dati di campo del recordset, come è stato modificato o come non modificate.  
+> [!NOTE]
+>  After certain recordset operations, you should check the bookmark persistence before calling `SetBookmark`. For example, if you retrieve a bookmark with `GetBookmark` and then call **Requery**, the bookmark may no longer be valid. Call [CDatabase::GetBookmarkPersistence](../../mfc/reference/cdatabase-class.md#getbookmarkpersistence) to check whether you can safely call `SetBookmark`.  
+  
+ For more information about bookmarks and recordset navigation, see the articles [Recordset: Bookmarks and Absolute Positions (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) and [Recordset: Scrolling (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).  
+  
+##  <a name="setfielddirty"></a>  CRecordset::SetFieldDirty  
+ Flags a field data member of the recordset as changed or as unchanged.  
   
 ```  
 void SetFieldDirty(void* pv, BOOL bDirty = TRUE);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pv`  
- Contiene l'indirizzo di un membro dati di campo del recordset o **NULL**. Se **NULL**, vengono contrassegnati tutti i membri di dati di campo nel recordset. (C++ **NULL** non equivale Null nella terminologia dei database, ovvero "non having alcun valore.")  
+ Contains the address of a field data member in the recordset or **NULL**. If **NULL**, all field data members in the recordset are flagged. (C++ **NULL** is not the same as Null in database terminology, which means "having no value.")  
   
  `bDirty`  
- **TRUE** se il membro dati di campo è contrassegnato come "dirty" (modificato). In caso contrario **FALSE** se il membro dati di campo è contrassegnato come "pulire" (non modificato).  
+ **TRUE** if the field data member is to be flagged as "dirty" (changed). Otherwise **FALSE** if the field data member is to be flagged as "clean" (unchanged).  
   
-### <a name="remarks"></a>Note  
- Contrassegnare i campi come invariato assicura il campo non viene aggiornato e minore traffico di SQL.  
+### <a name="remarks"></a>Remarks  
+ Marking fields as unchanged ensures the field is not updated and results in less SQL traffic.  
   
 > [!NOTE]
->  Questa funzione membro non è applicabile per i recordset che utilizzano il recupero di massa di righe. Se è stato implementato il recupero delle righe di massa, quindi `SetFieldDirty` comporterà un'asserzione non riuscita. Per ulteriori informazioni sulle righe di massa, vedere l'articolo [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  This member function is not applicable on recordsets that are using bulk row fetching. If you have implemented bulk row fetching, then `SetFieldDirty` will result in a failed assertion. For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- I segni di framework modificare i membri di dati campo per assicurarsi che verrà scritto il record nell'origine dati mediante il meccanismo di campi di record (RFX) di exchange. La modifica del valore di un campo in genere imposta il campo dirty automaticamente, pertanto è necessario chiamare raramente `SetFieldDirty` personalmente, ma è talvolta potrebbe essere necessario garantire che le colonne verranno essere aggiornate o inserite indipendentemente dal valore è nel membro dati di campo in modo esplicito.  
+ The framework marks changed field data members to ensure they will be written to the record on the data source by the record field exchange (RFX) mechanism. Changing the value of a field generally sets the field dirty automatically, so you will seldom need to call `SetFieldDirty` yourself, but you might sometimes want to ensure that columns will be explicitly updated or inserted regardless of what value is in the field data member.  
   
 > [!CAUTION]
->  Chiamare questa funzione membro solo dopo aver chiamato [modifica](#edit) o [AddNew](#addnew).  
+>  Call this member function only after you have called [Edit](#edit) or [AddNew](#addnew).  
   
- Utilizzando **NULL** per il primo argomento della funzione verrà applicata la funzione solo a **outputColumn** campi, non **param** campi. Ad esempio, la chiamata  
+ Using **NULL** for the first argument of the function will apply the function only to **outputColumn** fields, not **param** fields. For instance, the call  
   
- [!code-cpp[N. 26 NVC_MFCDatabase](../../mfc/codesnippet/cpp/crecordset-class_10.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#26](../../mfc/codesnippet/cpp/crecordset-class_10.cpp)]  
   
- imposterà solo **outputColumn** campi **NULL**; **param** campi non saranno interessati.  
+ will set only **outputColumn** fields to **NULL**; **param** fields will be unaffected.  
   
- Per lavorare su **param** campi, è necessario fornire l'indirizzo effettivo della persona **param** si desidera utilizzare, ad esempio:  
+ To work on **param** fields, you must supply the actual address of the individual **param** you want to work on, such as:  
   
- [!code-cpp[N. 27 NVC_MFCDatabase](../../mfc/codesnippet/cpp/crecordset-class_11.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#27](../../mfc/codesnippet/cpp/crecordset-class_11.cpp)]  
   
- Ciò significa che non è possibile impostare tutte **param** campi **NULL**, come è possibile con **outputColumn** campi.  
+ This means you cannot set all **param** fields to **NULL**, as you can with **outputColumn** fields.  
   
-##  <a name="setfieldnull"></a>CRecordset::SetFieldNull  
- Un membro dati di campo del recordset vengono contrassegnati come Null, in particolare che non ha alcun valore, o non Null.  
+##  <a name="setfieldnull"></a>  CRecordset::SetFieldNull  
+ Flags a field data member of the recordset as Null (specifically having no value) or as non-Null.  
   
 ```  
 void SetFieldNull(void* pv, BOOL bNull = TRUE);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pv`  
- Contiene l'indirizzo di un membro dati di campo del recordset o **NULL**. Se **NULL**, vengono contrassegnati tutti i membri di dati di campo nel recordset. (C++ **NULL** non equivale Null nella terminologia dei database, ovvero "non having alcun valore.")  
+ Contains the address of a field data member in the recordset or **NULL**. If **NULL**, all field data members in the recordset are flagged. (C++ **NULL** is not the same as Null in database terminology, which means "having no value.")  
   
  `bNull`  
- Diverso da zero se il membro dati di campo deve essere contrassegnata come tabella non contenente alcun valore (Null). In caso contrario 0 se il membro dati di campo deve essere contrassegnato come non Null.  
+ Nonzero if the field data member is to be flagged as having no value (Null). Otherwise 0 if the field data member is to be flagged as non-Null.  
   
-### <a name="remarks"></a>Note  
- Quando si aggiunge un nuovo record per un oggetto recordset, tutti i membri di dati di campo sono inizialmente impostati su un valore Null e contrassegnati come "dirty" (modificato). Quando si recupera un record da un'origine dati, le colonne già hanno valori o sono Null.  
+### <a name="remarks"></a>Remarks  
+ When you add a new record to a recordset, all field data members are initially set to a Null value and flagged as "dirty" (changed). When you retrieve a record from a data source, its columns either already have values or are Null.  
   
 > [!NOTE]
->  Non chiamare questa funzione membro per i recordset che utilizzano il recupero di massa di righe. Se è stato implementato il recupero di massa di righe, la chiamata `SetFieldNull` comporta un'asserzione non riuscita. Per ulteriori informazioni sulle righe di massa, vedere l'articolo [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  Do not call this member function on recordsets that are using bulk row fetching. If you have implemented bulk row fetching, calling `SetFieldNull` results in a failed assertion. For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Se si desidera assegnare a un campo del record corrente in quanto non hanno un valore, chiamare in modo specifico `SetFieldNull` con `bNull` impostato su **TRUE** per contrassegnarla come Null. Se si desidera assegnare un valore Null in precedenza è stato contrassegnato un campo, è sufficiente impostare il nuovo valore. Non è necessario rimuovere il flag Null con `SetFieldNull`. Per determinare se il campo può essere Null, chiamare `IsFieldNullable`.  
+ If you specifically wish to designate a field of the current record as not having a value, call `SetFieldNull` with `bNull` set to **TRUE** to flag it as Null. If a field was previously marked Null and you now want to give it a value, simply set its new value. You do not have to remove the Null flag with `SetFieldNull`. To determine whether the field is allowed to be Null, call `IsFieldNullable`.  
   
 > [!CAUTION]
->  Chiamare questa funzione membro solo dopo aver chiamato [modifica](#edit) o [AddNew](#addnew).  
+>  Call this member function only after you have called [Edit](#edit) or [AddNew](#addnew).  
   
- Utilizzando **NULL** per il primo argomento della funzione verrà applicata la funzione solo a **outputColumn** campi, non **param** campi. Ad esempio, la chiamata  
+ Using **NULL** for the first argument of the function will apply the function only to **outputColumn** fields, not **param** fields. For instance, the call  
   
- [!code-cpp[N. 26 NVC_MFCDatabase](../../mfc/codesnippet/cpp/crecordset-class_10.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#26](../../mfc/codesnippet/cpp/crecordset-class_10.cpp)]  
   
- imposterà solo **outputColumn** campi **NULL**; **param** campi non saranno interessati.  
+ will set only **outputColumn** fields to **NULL**; **param** fields will be unaffected.  
   
- Per lavorare su **param** campi, è necessario fornire l'indirizzo effettivo della persona **param** si desidera utilizzare, ad esempio:  
+ To work on **param** fields, you must supply the actual address of the individual **param** you want to work on, such as:  
   
- [!code-cpp[N. 27 NVC_MFCDatabase](../../mfc/codesnippet/cpp/crecordset-class_11.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#27](../../mfc/codesnippet/cpp/crecordset-class_11.cpp)]  
   
- Ciò significa che non è possibile impostare tutte **param** campi **NULL**, come è possibile con **outputColumn** campi.  
+ This means you cannot set all **param** fields to **NULL**, as you can with **outputColumn** fields.  
   
 > [!NOTE]
->  Durante l'impostazione di parametri su Null, una chiamata a `SetFieldNull` prima il recordset è aperto i risultati in un'asserzione. In questo caso, chiamare [SetParamNull](#setparamnull).  
+>  When setting parameters to Null, a call to `SetFieldNull` before the recordset is opened results in an assertion. In this case, call [SetParamNull](#setparamnull).  
   
- `SetFieldNull`viene implementata tramite [DoFieldExchange](#dofieldexchange).  
+ `SetFieldNull` is implemented through [DoFieldExchange](#dofieldexchange).  
   
-##  <a name="setlockingmode"></a>CRecordset::SetLockingMode  
- Imposta la modalità di blocco per blocco (predefinito) "ottimistica" o "blocco pessimistico". Determina come i record sono bloccati per gli aggiornamenti.  
+##  <a name="setlockingmode"></a>  CRecordset::SetLockingMode  
+ Sets the locking mode to "optimistic" locking (the default) or "pessimistic" locking. Determines how records are locked for updates.  
   
 ```  
 void SetLockingMode(UINT nMode);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `nMode`  
- Contiene uno dei seguenti valori dal **enum LockMode**:  
+ Contains one of the following values from the **enum LockMode**:  
   
-- **ottimistica** blocco ottimistico blocca il record viene aggiornato solo durante la chiamata a **aggiornamento**.  
+- **optimistic** Optimistic locking locks the record being updated only during the call to **Update**.  
   
-- **pessimistica** blocco pessimistico blocca il record appena **modifica** viene chiamato e rimarrà bloccato fino a quando il **aggiornamento** completamento della chiamata o si sposta in un nuovo record.  
+- **pessimistic** Pessimistic locking locks the record as soon as **Edit** is called and keeps it locked until the **Update** call completes or you move to a new record.  
   
-### <a name="remarks"></a>Note  
- Chiamare questa funzione membro se è necessario specificare quale delle due strategie di blocco dei record dell'oggetto recordset utilizza per gli aggiornamenti. Per impostazione predefinita, la modalità di blocco di un recordset è **ottimistica**. È possibile modificarlo per una maggiore attenzione **pessimistica** strategia di blocco. Chiamare `SetLockingMode` dopo che costruito e aperto l'oggetto recordset ma prima di chiamare **modifica**.  
+### <a name="remarks"></a>Remarks  
+ Call this member function if you need to specify which of two record-locking strategies the recordset is using for updates. By default, the locking mode of a recordset is **optimistic**. You can change that to a more cautious **pessimistic** locking strategy. Call `SetLockingMode` after you construct and open the recordset object but before you call **Edit**.  
   
-##  <a name="setparamnull"></a>CRecordset::SetParamNull  
- Un parametro di flag come Null, in particolare che non ha alcun valore, o non Null.  
+##  <a name="setparamnull"></a>  CRecordset::SetParamNull  
+ Flags a parameter as Null (specifically having no value) or as non-Null.  
   
 ```  
 void SetParamNull(
@@ -1643,104 +1701,104 @@ void SetParamNull(
     BOOL bNull = TRUE);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Indice in base zero del parametro.  
+ The zero-based index of the parameter.  
   
  `bNull`  
- Se **TRUE** (valore predefinito), il parametro è contrassegnato come Null. In caso contrario, il parametro è contrassegnato come non Null.  
+ If **TRUE** (the default value), the parameter is flagged as Null. Otherwise, the parameter is flagged as non-Null.  
   
-### <a name="remarks"></a>Note  
- A differenza di [SetFieldNull](#setfieldnull), è possibile chiamare `SetParamNull` prima di aver aperto il recordset.  
+### <a name="remarks"></a>Remarks  
+ Unlike [SetFieldNull](#setfieldnull), you can call `SetParamNull` before you have opened the recordset.  
   
- `SetParamNull`viene in genere utilizzato con query predefinite (stored procedure).  
+ `SetParamNull` is typically used with predefined queries (stored procedures).  
   
-##  <a name="setrowsetcursorposition"></a>CRecordset::SetRowsetCursorPosition  
- Sposta il cursore a una riga nel set di righe corrente.  
+##  <a name="setrowsetcursorposition"></a>  CRecordset::SetRowsetCursorPosition  
+ Moves the cursor to a row within the current rowset.  
   
 ```  
 void SetRowsetCursorPosition(WORD wRow, WORD wLockType = SQL_LOCK_NO_CHANGE);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `wRow`  
- Basato su una posizione di una riga nel set di righe corrente. Questo valore può variare da 1 per le dimensioni del set di righe.  
+ The one-based position of a row in the current rowset. This value can range from 1 to the size of the rowset.  
   
  `wLockType`  
- Valore che indica come la riga viene bloccato se è stata aggiornata. Per informazioni dettagliate, vedere la sezione Osservazioni.  
+ Value indicating how to lock the row after it has been refreshed. For details, see Remarks.  
   
-### <a name="remarks"></a>Note  
- Quando si implementa il recupero di massa di righe, vengono recuperati i record dal set di righe, in cui il primo record nel set di righe recuperate è il record corrente. Per rendere il record corrente a un altro record all'interno del set di righe, chiamare `SetRowsetCursorPosition`. Ad esempio, è possibile combinare `SetRowsetCursorPosition` con il [GetFieldValue](#getfieldvalue) funzione membro per recuperare dinamicamente i dati da tutti i record del recordset.  
+### <a name="remarks"></a>Remarks  
+ When implementing bulk row fetching, records are retrieved by rowsets, where the first record in the fetched rowset is the current record. In order to make another record within the rowset the current record, call `SetRowsetCursorPosition`. For example, you can combine `SetRowsetCursorPosition` with the [GetFieldValue](#getfieldvalue) member function to dynamically retrieve the data from any record of your recordset.  
   
- Da utilizzare `SetRowsetCursorPosition`, è stato implementato il recupero di massa di righe specificando il `CRecordset::useMultiRowFetch` opzione del `dwOptions` parametro nella [aprire](#open) funzione membro.  
+ To use `SetRowsetCursorPosition`, you must have implemented bulk row fetching by specifying the `CRecordset::useMultiRowFetch` option of the `dwOptions` parameter in the [Open](#open) member function.  
   
- `SetRowsetCursorPosition`chiama la funzione API ODBC **SQLSetPos**. Il `wLockType` parametro specifica lo stato del blocco di riga dopo **SQLSetPos** ha eseguito. Nella tabella seguente vengono descritti i valori possibili per `wLockType`.  
+ `SetRowsetCursorPosition` calls the ODBC API function **SQLSetPos**. The `wLockType` parameter specifies the lock state of the row after **SQLSetPos** has executed. The following table describes the possible values for `wLockType`.  
   
-|wLockType|Descrizione|  
+|wLockType|Description|  
 |---------------|-----------------|  
-|`SQL_LOCK_NO_CHANGE`(il valore predefinito)|Il driver o l'origine dati garantisce che la riga è lo stesso stato bloccato o sbloccato, in cui si trovava prima `SetRowsetCursorPosition` è stato chiamato.|  
-|`SQL_LOCK_EXCLUSIVE`|L'origine dati o driver Blocca esclusivamente la riga. Non tutte le origini dati supportano questo tipo di blocco.|  
-|`SQL_LOCK_UNLOCK`|L'origine dati o driver Sblocca la riga. Non tutte le origini dati supportano questo tipo di blocco.|  
+|`SQL_LOCK_NO_CHANGE` (the default value)|The driver or data source ensures that the row is in the same locked or unlocked state as it was before `SetRowsetCursorPosition` was called.|  
+|`SQL_LOCK_EXCLUSIVE`|The driver or data source locks the row exclusively. Not all data sources support this type of lock.|  
+|`SQL_LOCK_UNLOCK`|The driver or data source unlocks the row. Not all data sources support this type of lock.|  
   
- Per ulteriori informazioni su **SQLSetPos**, vedere il [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Per ulteriori informazioni sulle righe di massa, vedere l'articolo [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+ For more information about **SQLSetPos**, see the Windows SDK. For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="setrowsetsize"></a>CRecordset::SetRowsetSize  
- Specifica il numero di record da recuperare durante un'operazione di recupero.  
+##  <a name="setrowsetsize"></a>  CRecordset::SetRowsetSize  
+ Specifies the number of records you wish to retrieve during a fetch.  
   
 ```  
 virtual void SetRowsetSize(DWORD dwNewRowsetSize);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  *dwNewRowsetSize*  
- Il numero di righe da recuperare durante un'operazione di recupero specificato.  
+ The number of rows to retrieve during a given fetch.  
   
-### <a name="remarks"></a>Note  
- Questa funzione membro virtuale specifica il numero di righe da recuperare durante un'operazione di recupero singolo quando si utilizzano righe di massa. Per implementare il recupero di massa di righe, è necessario impostare il `CRecordset::useMultiRowFetch` opzione il `dwOptions` parametro del [aprire](#open) funzione membro.  
-  
-> [!NOTE]
->  La chiamata `SetRowsetSize` senza implementare bulk il recupero di righe comporterà un'asserzione non riuscita.  
-  
- Chiamare `SetRowsetSize` prima di chiamare **aprire** impostare inizialmente le dimensioni del set di righe per il recordset. Le dimensioni del set di righe predefinito quando si implementa il recupero di massa di righe sono 25.  
+### <a name="remarks"></a>Remarks  
+ This virtual member function specifies how many rows you wish to retrieve during a single fetch when using bulk row fetching. To implement bulk row fetching, you must set the `CRecordset::useMultiRowFetch` option in the `dwOptions` parameter of the [Open](#open) member function.  
   
 > [!NOTE]
->  Prestare attenzione quando si chiama `SetRowsetSize`. Se si è manualmente allocare spazio di archiviazione per i dati (come specificato da di **userAllocMultiRowBuffers** opzione del parametro dwOptions in **aprire**), controllare se è necessario riassegnare i buffer di archiviazione dopo la chiamata `SetRowsetSize`, ma prima di eseguire qualsiasi operazione di spostamento del cursore.  
+>  Calling `SetRowsetSize` without implementing bulk row fetching will result in a failed assertion.  
   
- Per ottenere l'impostazione corrente per le dimensioni del set di righe, chiamare [GetRowsetSize](#getrowsetsize).  
+ Call `SetRowsetSize` before calling **Open** to initially set the rowset size for the recordset. The default rowset size when implementing bulk row fetching is 25.  
   
- Per ulteriori informazioni sulle righe di massa, vedere l'articolo [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+> [!NOTE]
+>  Use caution when calling `SetRowsetSize`. If you are manually allocating storage for the data (as specified by the **CRecordset::userAllocMultiRowBuffers** option of the dwOptions parameter in **Open**), you should check whether you need to reallocate these storage buffers after you call `SetRowsetSize`, but before you perform any cursor navigation operation.  
   
-##  <a name="update"></a>CRecordset:: Update  
- Completa un' `AddNew` o **modifica** operazione salvando i dati nuovi o modificati nell'origine dati.  
+ To obtain the current setting for the rowset size, call [GetRowsetSize](#getrowsetsize).  
+  
+ For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+  
+##  <a name="update"></a>  CRecordset::Update  
+ Completes an `AddNew` or **Edit** operation by saving the new or edited data on the data source.  
   
 ```  
 virtual BOOL Update();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se è stato aggiornato correttamente un record; in caso contrario 0 se nessuna colonna è stati modificati. Se nessun record sono stati aggiornati o se più di un record è stato aggiornato, viene generata un'eccezione. Viene generata un'eccezione anche per qualsiasi altro errore nell'origine dati.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if one record was successfully updated; otherwise 0 if no columns have changed. If no records were updated, or if more than one record was updated, an exception is thrown. An exception is also thrown for any other failure on the data source.  
   
-### <a name="remarks"></a>Note  
- Chiamare questa funzione membro dopo una chiamata al [AddNew](#addnew) o [modifica](#edit) funzione membro. Questa chiamata è necessario per completare il `AddNew` o **modifica** operazione.  
+### <a name="remarks"></a>Remarks  
+ Call this member function after a call to the [AddNew](#addnew) or [Edit](#edit) member function. This call is required to complete the `AddNew` or **Edit** operation.  
   
 > [!NOTE]
->  Se è stato implementato il recupero di massa di righe, non è possibile chiamare **aggiornamento**. Il risultato sarà un'asserzione non riuscita. Sebbene classe `CRecordset` non fornisce un meccanismo per l'aggiornamento di massa di righe di dati, è possibile scrivere funzioni personalizzate utilizzando la funzione API ODBC **SQLSetPos**. Per ulteriori informazioni sulle righe di massa, vedere l'articolo [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  If you have implemented bulk row fetching, you cannot call **Update**. This will result in a failed assertion. Although class `CRecordset` does not provide a mechanism for updating bulk rows of data, you can write your own functions by using the ODBC API function **SQLSetPos**. For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Entrambi `AddNew` e **modifica** preparare i buffer di modifica in cui sono stati inseriti i dati aggiunti o modificati per il salvataggio all'origine dati. **Aggiornamento** Salva i dati. Vengono aggiornati solo i campi contrassegnati o rilevato come è stato modificato.  
+ Both `AddNew` and **Edit** prepare an edit buffer in which the added or edited data is placed for saving to the data source. **Update** saves the data. Only those fields marked or detected as changed are updated.  
   
- Se l'origine dati supporta le transazioni, è possibile rendere il **aggiornamento** chiamare (e il corrispondente `AddNew` o **modifica** chiamare) fa parte di una transazione. Per ulteriori informazioni sulle transazioni, vedere l'articolo [transazione (ODBC)](../../data/odbc/transaction-odbc.md).  
+ If the data source supports transactions, you can make the **Update** call (and its corresponding `AddNew` or **Edit** call) part of a transaction. For more information about transactions, see the article [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).  
   
 > [!CAUTION]
->  Se si chiama **aggiornamento** senza prima chiamare `AddNew` o **modifica**, **aggiornamento** genera un `CDBException`. Se si chiama `AddNew` o **modifica**, è necessario chiamare **aggiornamento** prima di chiamare un **spostare** operazione o prima di chiudere il recordset o la connessione all'origine dati. In caso contrario, le modifiche vengono perse senza notifica.  
+>  If you call **Update** without first calling either `AddNew` or **Edit**, **Update** throws a `CDBException`. If you call `AddNew` or **Edit**, you must call **Update** before you call a **Move** operation or before you close either the recordset or the data source connection. Otherwise, your changes are lost without notification.  
   
- Per ulteriori informazioni sulla gestione **aggiornamento** errori, vedere l'articolo [Recordset: aggiornamento dei record (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).  
+ For details on handling **Update** failures, see the article [Recordset: How Recordsets Update Records (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).  
   
-### <a name="example"></a>Esempio  
- Vedere l'articolo [transazione: esecuzione di una transazione in un Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).  
+### <a name="example"></a>Example  
+ See the article [Transaction: Performing a Transaction in a Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [CObject (classe)](../../mfc/reference/cobject-class.md)   
- [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
- [CDatabase (classe)](../../mfc/reference/cdatabase-class.md)   
- [Classe CRecordView](../../mfc/reference/crecordview-class.md)
+## <a name="see-also"></a>See Also  
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CDatabase Class](../../mfc/reference/cdatabase-class.md)   
+ [CRecordView Class](../../mfc/reference/crecordview-class.md)
 

@@ -1,5 +1,5 @@
 ---
-title: Classe CKeyboardManager | Documenti di Microsoft
+title: CKeyboardManager Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,7 +26,18 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CKeyboardManager class
+- CKeyboardManager [MFC], CKeyboardManager
+- CKeyboardManager [MFC], CleanUp
+- CKeyboardManager [MFC], FindDefaultAccelerator
+- CKeyboardManager [MFC], IsKeyHandled
+- CKeyboardManager [MFC], IsKeyPrintable
+- CKeyboardManager [MFC], IsShowAllAccelerators
+- CKeyboardManager [MFC], LoadState
+- CKeyboardManager [MFC], ResetAll
+- CKeyboardManager [MFC], SaveState
+- CKeyboardManager [MFC], ShowAllAccelerators
+- CKeyboardManager [MFC], TranslateCharToUpper
+- CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
 caps.latest.revision: 33
 author: mikeblome
@@ -46,90 +57,90 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: bbe12d2bf4af0008233df25e09f09008c402ee7f
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c49d5be8f9e208defeb1752c4288e212bb5dec45
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ckeyboardmanager-class"></a>Classe CKeyboardManager
-Gestisce le tabelle di tasti di scelta rapida per la finestra cornice principale e le finestre cornice figlio.  
+# <a name="ckeyboardmanager-class"></a>CKeyboardManager Class
+Manages shortcut key tables for the main frame window and child frame windows.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CKeyboardManager : public CObject  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Costruttori pubblici  
-  
-|||  
-|-|-|  
-|Nome|Descrizione|  
-|[CKeyboardManager::CKeyboardManager](#ckeyboardmanager)|Costruisce un oggetto `CKeyboardManager`.|  
-  
-### <a name="public-methods"></a>Metodi pubblici  
+### <a name="public-constructors"></a>Public Constructors  
   
 |||  
 |-|-|  
-|Nome|Descrizione|  
-|[CKeyboardManager::CleanUp](#cleanup)|Cancella le tabelle di tasti di scelta rapida.|  
-|[CKeyboardManager::FindDefaultAccelerator](#finddefaultaccelerator)|Recupera il tasto di scelta rapida predefiniti per la finestra di comando specificato.|  
-|[CKeyboardManager::IsKeyHandled](#iskeyhandled)|Determina se una chiave viene gestita dalla tabella di tasti di scelta rapida.|  
-|[CKeyboardManager::IsKeyPrintable](#iskeyprintable)|Indica se un carattere stampabile.|  
-|[CKeyboardManager::IsShowAllAccelerators](#isshowallaccelerators)|Indica se i menu mostrano tutti i tasti di scelta rapida per un comando o solo il tasto di scelta rapida predefiniti.|  
-|[CKeyboardManager::LoadState](#loadstate)|Carica le tabelle di tasti di scelta rapida dal Registro di sistema.|  
-|[CKeyboardManager::ResetAll](#resetall)|Ricarica le tabelle di tasti di scelta rapida dalla risorsa di applicazione.|  
-|[CKeyboardManager::SaveState](#savestate)|Salva il collegamento tabelle chiave del Registro di sistema.|  
-|[CKeyboardManager::ShowAllAccelerators](#showallaccelerators)|Specifica se il framework Visualizza tutti i tasti di scelta rapida per tutti i comandi o una singola combinazione di tasti per ogni comando. Questo metodo non influisce sui comandi che hanno un solo tasto di scelta rapida.|  
-|[CKeyboardManager::TranslateCharToUpper](#translatechartoupper)|Converte un carattere per il proprio registro superiore.|  
-|[CKeyboardManager::UpdateAccelTable](#updateacceltable)|Aggiorna una tabella di tasti di scelta rapida con una nuova tabella di tasti di scelta rapida.|  
+|Name|Description|  
+|[CKeyboardManager::CKeyboardManager](#ckeyboardmanager)|Constructs a `CKeyboardManager` object.|  
   
-## <a name="remarks"></a>Note  
- I membri di questa classe consentono di salvare e caricare le tabelle di tasti di scelta rapida per il Registro di sistema di Windows, utilizzare un modello per aggiornare le tabelle di tasti di scelta rapida e individuare il tasto di scelta rapida predefiniti per un comando in una finestra cornice. Inoltre, il `CKeyboardManager` oggetto consente di controllare la modalità di visualizzazione di tasti di scelta rapida per l'utente.  
+### <a name="public-methods"></a>Public Methods  
   
- Non è necessario creare un `CKeyboardManager` oggetto manualmente. Verrà creato automaticamente dal framework dell'applicazione. Tuttavia, è necessario chiamare [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager) durante il processo di inizializzazione dell'applicazione. Per ottenere un puntatore al gestore della tastiera per l'applicazione, chiamare [CWinAppEx::GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager).  
+|||  
+|-|-|  
+|Name|Description|  
+|[CKeyboardManager::CleanUp](#cleanup)|Clears the shortcut key tables.|  
+|[CKeyboardManager::FindDefaultAccelerator](#finddefaultaccelerator)|Retrieves the default shortcut key for the specified command and window.|  
+|[CKeyboardManager::IsKeyHandled](#iskeyhandled)|Determines whether a key is handled by the accelerator table.|  
+|[CKeyboardManager::IsKeyPrintable](#iskeyprintable)|Indicates whether a character is printable.|  
+|[CKeyboardManager::IsShowAllAccelerators](#isshowallaccelerators)|Indicates whether menus show all shortcut keys for a command or only the default shortcut key.|  
+|[CKeyboardManager::LoadState](#loadstate)|Loads the shortcut key tables from the Windows registry.|  
+|[CKeyboardManager::ResetAll](#resetall)|Reloads the shortcut key tables from the application resource.|  
+|[CKeyboardManager::SaveState](#savestate)|Saves the shortcut key tables to the Windows registry.|  
+|[CKeyboardManager::ShowAllAccelerators](#showallaccelerators)|Specifies whether the framework displays all the shortcut keys for all commands, or a single shortcut key for each command. This method does not affect commands that have only one associated shortcut key.|  
+|[CKeyboardManager::TranslateCharToUpper](#translatechartoupper)|Converts a character to its upper register.|  
+|[CKeyboardManager::UpdateAccelTable](#updateacceltable)|Updates a shortcut key table with a new shortcut key table.|  
   
-## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come recuperare un puntatore a un `CKeyboardManager` dell'oggetto da un `CWinAppEx` classe e come visualizzare tutti i tasti di scelta rapida associati i comandi di menu. Questo frammento di codice fa parte di [esempio pagine personalizzate](../../visual-cpp-samples.md).  
+## <a name="remarks"></a>Remarks  
+ The members of this class enable you to save and load shortcut key tables to the Windows registry, use a template to update the short cut key tables, and find the default shortcut key for a command in a frame window. In addition, the `CKeyboardManager` object lets you control how shortcut keys are displayed to the user.  
   
- [!code-cpp[NVC_MFC_CustomPages n.&5;](../../mfc/reference/codesnippet/cpp/ckeyboardmanager-class_1.cpp)]  
+ You should not create a `CKeyboardManager` object manually. It will be created automatically by the framework of your application. However, you should call [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager) during the initialization process of your application. To get a pointer to the keyboard manager for your application, call [CWinAppEx::GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager).  
   
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
+## <a name="example"></a>Example  
+ The following example demonstrates how to retrieve a pointer to a `CKeyboardManager` object from a `CWinAppEx` class, and how to show all the shortcut keys associated with menu commands. This code snippet is part of the [Custom Pages sample](../../visual-cpp-samples.md).  
+  
+ [!code-cpp[NVC_MFC_CustomPages#5](../../mfc/reference/codesnippet/cpp/ckeyboardmanager-class_1.cpp)]  
+  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md)  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** afxkeyboardmanager.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxkeyboardmanager.h  
   
-##  <a name="ckeyboardmanager"></a>CKeyboardManager::CKeyboardManager  
- Costruisce un oggetto `CKeyboardManager`.  
+##  <a name="ckeyboardmanager"></a>  CKeyboardManager::CKeyboardManager  
+ Constructs a `CKeyboardManager` object.  
   
 ```  
 CKeyboardManager();
 ```  
   
-### <a name="remarks"></a>Note  
- Nella maggior parte dei casi, non è necessario creare un `CKeyboardManager` direttamente. Per impostazione predefinita, il framework crea uno. Per ottenere un puntatore per il `CKeyboardManager`, chiamare [CWinAppEx::GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager). Se si crea uno manualmente, è necessario inizializzarlo con il metodo [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager).  
+### <a name="remarks"></a>Remarks  
+ In most cases, you do not have to create a `CKeyboardManager` directly. By default, the framework creates one for you. To get a pointer to the `CKeyboardManager`, call [CWinAppEx::GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager). If you do create one manually, you must initialize it with the method [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager).  
   
-##  <a name="cleanup"></a>CKeyboardManager::CleanUp  
- Libera la `CKeyboardManager` risorse e Cancella tutti i mapping dei tasti di scelta rapida.  
+##  <a name="cleanup"></a>  CKeyboardManager::CleanUp  
+ Frees the `CKeyboardManager` resources and clears all shortcut key mappings.  
   
 ```  
 static void CleanUp();
 ```  
   
-### <a name="remarks"></a>Note  
- Per ulteriori informazioni sui tasti di scelta rapida, vedere [personalizzazione di tastiera e Mouse](../../mfc/keyboard-and-mouse-customization.md).  
+### <a name="remarks"></a>Remarks  
+ For more information about shortcut keys, see [Keyboard and Mouse Customization](../../mfc/keyboard-and-mouse-customization.md).  
   
- Non è necessario chiamare questa funzione alla chiusura dell'applicazione perché il framework chiama automaticamente durante la chiusura dell'applicazione.  
+ You do not have to call this function when your application exits because the framework calls it automatically during application exit.  
   
-##  <a name="finddefaultaccelerator"></a>CKeyboardManager::FindDefaultAccelerator  
- Recupera il tasto di scelta rapida predefiniti per la finestra di comando specificato.  
+##  <a name="finddefaultaccelerator"></a>  CKeyboardManager::FindDefaultAccelerator  
+ Retrieves the default shortcut key for the specified command and window.  
   
 ```  
 static BOOL FindDefaultAccelerator(
@@ -139,27 +150,27 @@ static BOOL FindDefaultAccelerator(
     BOOL bIsDefaultFrame);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmd`  
- ID di comando.  
+ The command ID.  
   
  [out] `str`  
- Riferimento a un oggetto `CString`.  
+ A reference to a `CString` object.  
   
  [in] `pWndFrame`  
- Un puntatore a una finestra cornice.  
+ A pointer to a frame window.  
   
  [in] `bIsDefaultFrame`  
- Specifica se la finestra cornice è la finestra cornice predefinito.  
+ Specifies whether the frame window is the default frame window.  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se viene trovato lo scelta rapida. in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the shortcut is found; otherwise 0.  
   
-### <a name="remarks"></a>Note  
- Questo metodo cerca il comando specificato da `uiCmd` e recupera il tasto di scelta rapida predefiniti. Quindi il metodo accetta la stringa associata a questo tasto di scelta rapida e scrive il valore per il `str` parametro.  
+### <a name="remarks"></a>Remarks  
+ This method looks up the command specified by `uiCmd` and retrieves the default shortcut key. Then the method takes the string associated with this shortcut key and writes the value to the `str` parameter.  
   
-##  <a name="iskeyhandled"></a>CKeyboardManager::IsKeyHandled  
- Determina se la chiave specificata è gestita mediante il [CKeyboardManager classe](../../mfc/reference/ckeyboardmanager-class.md).  
+##  <a name="iskeyhandled"></a>  CKeyboardManager::IsKeyHandled  
+ Determines whether the specified key is handled by the [CKeyboardManager Class](../../mfc/reference/ckeyboardmanager-class.md).  
   
 ```  
 static BOOL __stdcall IsKeyHandled(
@@ -169,57 +180,57 @@ static BOOL __stdcall IsKeyHandled(
     BOOL bIsDefaultFrame);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Parametro|Descrizione|  
-|[in] `nKey`|Tasto da controllare.|  
-|[in] `fVirt`|Specifica il comportamento del tasto di scelta rapida. Per un elenco di valori possibili, vedere [acceleratore struttura](http://msdn.microsoft.com/library/windows/desktop/ms646340).|  
-|[in] `pWndFrame`|Una finestra cornice. Questo metodo determina se un tasto di scelta rapida è gestito nel frame.|  
-|[in] `bIsDefaultFrame`|Un parametro booleano che indica se `pWndFrame` è la finestra cornice predefinito.|  
+|Parameter|Description|  
+|[in] `nKey`|The key to check.|  
+|[in] `fVirt`|Specifies the behavior of the shortcut key. For a list of possible values, see [ACCEL Structure](http://msdn.microsoft.com/library/windows/desktop/ms646340).|  
+|[in] `pWndFrame`|A frame window. This method determines whether a shortcut key is handled in this frame.|  
+|[in] `bIsDefaultFrame`|A Boolean parameter that indicates whether `pWndFrame` is the default frame window.|  
   
-### <a name="return-value"></a>Valore restituito  
- `TRUE`Se viene gestito il tasto di scelta rapida. `FALSE`Se la chiave non è gestita o `pWndFrame` è `NULL`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the shortcut key is handled. `FALSE` if the key is not handled or if `pWndFrame` is `NULL`.  
   
-### <a name="remarks"></a>Note  
- I parametri di input devono corrispondere alla voce nella relativa tabella sia per `nKey` e `fVirt` per determinare se un tasto di scelta rapida viene gestito in `pWndFrame`.  
+### <a name="remarks"></a>Remarks  
+ The input parameters must match the entry in the accelerator table both for `nKey` and `fVirt` to determine whether a shortcut key is handled in `pWndFrame`.  
   
-##  <a name="iskeyprintable"></a>CKeyboardManager::IsKeyPrintable  
- Indica se un carattere stampabile.  
+##  <a name="iskeyprintable"></a>  CKeyboardManager::IsKeyPrintable  
+ Indicates whether a character is printable.  
   
 ```  
 static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Parametro|Descrizione|  
-|[in] `nChar`|Il carattere che questo metodo controlla.|  
+|Parameter|Description|  
+|[in] `nChar`|The character that this method checks.|  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se il carattere è stampabile, zero se non lo è.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the character is printable, zero if it is not.  
   
-### <a name="remarks"></a>Note  
- Questo metodo non riesce se una chiamata a [GetKeyboardState](http://msdn.microsoft.com/library/windows/desktop/ms646299) ha esito negativo.  
+### <a name="remarks"></a>Remarks  
+ This method fails if a call to [GetKeyboardState](http://msdn.microsoft.com/library/windows/desktop/ms646299) fails.  
   
-##  <a name="isshowallaccelerators"></a>CKeyboardManager::IsShowAllAccelerators  
- Indica se i menu mostrano tutti i tasti di scelta rapida associati i comandi di menu o solo i tasti di scelta rapida predefiniti.  
+##  <a name="isshowallaccelerators"></a>  CKeyboardManager::IsShowAllAccelerators  
+ Indicates whether menus show all the shortcut keys associated with menu commands or only the default shortcut keys.  
   
 ```  
 static BOOL IsShowAllAccelerators();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se l'applicazione sono elencati tutti i tasti di scelta rapida per i comandi di menu; 0 se l'applicazione visualizza solo i tasti di scelta rapida predefiniti.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the application lists all the shortcut keys for menu commands; 0 if the application displays only default shortcut keys.  
   
-### <a name="remarks"></a>Note  
- L'applicazione sono elencati i tasti di scelta rapida per i comandi di menu nella barra dei menu. Utilizzare la funzione [CKeyboardManager::ShowAllAccelerators](#showallaccelerators) per controllare se l'applicazione elenca tutti i tasti di scelta rapida o solo i tasti di scelta rapida predefiniti.  
+### <a name="remarks"></a>Remarks  
+ The application lists the shortcut keys for menu commands in the menu bar. Use the function [CKeyboardManager::ShowAllAccelerators](#showallaccelerators) to control whether the application lists all the shortcut keys or just the default shortcut keys.  
   
-##  <a name="loadstate"></a>CKeyboardManager::LoadState  
- Carica le tabelle di tasti di scelta rapida dal Registro di sistema.  
+##  <a name="loadstate"></a>  CKeyboardManager::LoadState  
+ Loads the shortcut key tables from the Windows registry.  
   
 ```  
 BOOL LoadState(
@@ -227,33 +238,33 @@ BOOL LoadState(
     CFrameWnd* pDefaultFrame = NULL);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `lpszProfileName`  
- Il percorso del Registro di sistema in cui `CKeyboardManager` i dati vengono salvati.  
+ The registry path where `CKeyboardManager` data is saved.  
   
  [in] `pDefaultFrame`  
- Un puntatore a una finestra cornice da utilizzare come finestra predefinita.  
+ A pointer to a frame window to use as the default window.  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se lo stato è stato caricato correttamente o 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the state was loaded successfully or 0 otherwise.  
   
-### <a name="remarks"></a>Note  
- Se il `lpszProfileName` parametro `NULL`, questo metodo controlla il percorso del Registro di sistema predefinito `CKeyboardManager` dati. Viene specificato il percorso del Registro di sistema predefinito per il [CWinAppEx Class](../../mfc/reference/cwinappex-class.md). I dati devono essere scritti in precedenza con il metodo [CKeyboardManager::SaveState](#savestate).  
+### <a name="remarks"></a>Remarks  
+ If the `lpszProfileName` parameter is `NULL`, this method checks the default registry location for `CKeyboardManager` data. The default registry location is specified by the [CWinAppEx Class](../../mfc/reference/cwinappex-class.md). The data must be previously written with the method [CKeyboardManager::SaveState](#savestate).  
   
- Se non si specifica una finestra predefinita, verrà utilizzata la finestra cornice principale dell'applicazione.  
+ If you do not specify a default window, the main frame window of your application will be used.  
   
-##  <a name="resetall"></a>CKeyboardManager::ResetAll  
- Ricarica le tabelle di tasti di scelta rapida dalla risorsa di applicazione.  
+##  <a name="resetall"></a>  CKeyboardManager::ResetAll  
+ Reloads the shortcut key tables from the application resource.  
   
 ```  
 void ResetAll();
 ```  
   
-### <a name="remarks"></a>Note  
- Questa funzione Cancella i collegamenti memorizzati nel `CKeyboardManager` istanza. Quindi ricaricherà lo stato del gestore della tastiera dalla risorsa di applicazione.  
+### <a name="remarks"></a>Remarks  
+ This function clears the shortcuts stored in the `CKeyboardManager` instance. It will then reload the state of the keyboard manager from the application resource.  
   
-##  <a name="savestate"></a>CKeyboardManager::SaveState  
- Salva il collegamento tabelle chiave del Registro di sistema.  
+##  <a name="savestate"></a>  CKeyboardManager::SaveState  
+ Saves the shortcut key tables to the Windows registry.  
   
 ```  
 BOOL SaveState(
@@ -261,23 +272,23 @@ BOOL SaveState(
     CFrameWnd* pDefaultFrame = NULL);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `lpszProfileName`  
- Il percorso del Registro di sistema per il salvataggio di `CKeyboardManager` dello stato.  
+ The registry path for saving the `CKeyboardManager` state.  
   
  [in] `pDefaultFrame`  
- Un puntatore a una finestra cornice che diventa la finestra predefinita.  
+ A pointer to a frame window that becomes the default window.  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se è stato salvato correttamente, lo stato di gestione della tastiera o 0 in caso contrario.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the keyboard manager state was saved successfully, or 0 otherwise.  
   
-### <a name="remarks"></a>Note  
- Se il `lpszProfileName` parametro `NULL`, scriverà questo metodo il `CKeyboardManager` dello stato per il percorso predefinito specificato per il [CWinAppEx Class](../../mfc/reference/cwinappex-class.md). Se si specifica un percorso, è possibile caricare i dati in un secondo momento utilizzando il metodo [CKeyboardManager::LoadState](#loadstate).  
+### <a name="remarks"></a>Remarks  
+ If the `lpszProfileName` parameter is `NULL`, this method will write the `CKeyboardManager` state to the default location specified by the [CWinAppEx Class](../../mfc/reference/cwinappex-class.md). If you specify a location, you can load the data later using the method [CKeyboardManager::LoadState](#loadstate).  
   
- Se non si specifica una finestra predefinita, la finestra cornice principale verrà utilizzata come finestra predefinita.  
+ If you do not specify a default window, the main frame window will be used as the default window.  
   
-##  <a name="showallaccelerators"></a>CKeyboardManager::ShowAllAccelerators  
- Mostra tutti i tasti di scelta rapida associati i comandi di menu.  
+##  <a name="showallaccelerators"></a>  CKeyboardManager::ShowAllAccelerators  
+ Shows all the shortcut keys associated with menu commands.  
   
 ```  
 static void ShowAllAccelerators(
@@ -285,34 +296,34 @@ static void ShowAllAccelerators(
     LPCTSTR lpszDelimiter = _afxDefaultAcceleratorDelimiter);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `bShowAll`  
- Se `true`, verranno visualizzati tutti i tasti di scelta rapida. Se `false`, verrà visualizzato solo il primo tasto di scelta rapida.  
+ If `true`, all the shortcut keys will be displayed. If `false`, only the first shortcut key will be displayed.  
   
  [in] `lpszDelimiter`  
- Stringa da inserire tra i tasti di scelta rapida. Il delimitatore non ha alcun effetto se un tasto di scelta rapida viene visualizzato solo una.  
+ A string to insert between shortcut keys. This delimiter has no effect if only one shortcut key is displayed.  
   
-### <a name="remarks"></a>Note  
- Per impostazione predefinita, se un comando è associato più di un tasto di scelta rapida verrà visualizzato solo il primo tasto di scelta rapida. Questa funzione consente di elencare tutti i tasti di scelta rapida associati a tutti i comandi.  
+### <a name="remarks"></a>Remarks  
+ By default, if a command has more than one shortcut key associated with it, only the first shortcut key will be shown. This function enables you to list all the shortcut keys associated with all commands.  
   
- Verranno elencati i tasti di scelta rapida accanto al comando nella barra dei menu. Se vengono visualizzati tutti i tasti di scelta rapida, la stringa fornita da `lpszDelimiter` per separare i tasti di scelta rapida singoli.  
+ The shortcut keys will be listed next to the command in the menu bar. If all the shortcut keys are displayed, the string provided by `lpszDelimiter` will separate individual shortcut keys.  
   
-##  <a name="translatechartoupper"></a>CKeyboardManager::TranslateCharToUpper  
- Converte un carattere per il proprio registro superiore.  
+##  <a name="translatechartoupper"></a>  CKeyboardManager::TranslateCharToUpper  
+ Converts a character to its upper register.  
   
 ```  
 static UINT TranslateCharToUpper(const UINT nChar);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `nChar`  
- Carattere da convertire.  
+ The character to convert.  
   
-### <a name="return-value"></a>Valore restituito  
- Il carattere che è il registro superiore del parametro di input.  
+### <a name="return-value"></a>Return Value  
+ The character that is the upper register of the input parameter.  
   
-##  <a name="updateacceltable"></a>CKeyboardManager::UpdateAccelTable  
- Aggiorna una tabella di tasti di scelta rapida con una nuova tabella di tasti di scelta rapida.  
+##  <a name="updateacceltable"></a>  CKeyboardManager::UpdateAccelTable  
+ Updates a shortcut key table with a new shortcut key table.  
   
 ```  
 BOOL UpdateAccelTable(
@@ -328,34 +339,34 @@ BOOL UpdateAccelTable(
     CFrameWnd* pDefaultFrame = NULL);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pTemplate`  
- Un puntatore a un modello di documento.  
+ A pointer to a document template.  
   
  [in] `lpAccel`  
- Puntatore al nuovo tasto di scelta rapida.  
+ A pointer to the new shortcut key.  
   
  [in] `nSize`  
- Le dimensioni della nuova tabella di collegamento.  
+ The size of the new shortcut table.  
   
  [in] `pDefaultFrame`  
- Puntatore alla finestra cornice predefinito.  
+ A pointer to the default frame window.  
   
  [in] `hAccelNew`  
- Handle per la nuova tabella di collegamento.  
+ A handle to the new shortcut table.  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se il metodo ha esito positivo; in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the method is successful; otherwise 0.  
   
-### <a name="remarks"></a>Note  
- Utilizzare questa funzione per sostituire la tabella di collegamento esistente con nuovi tasti di scelta rapida per più oggetti della finestra cornice. La funzione riceve un modello di documento come parametro per ottenere l'accesso a tutti gli oggetti di finestra cornice connesso al modello di documento specificato.  
+### <a name="remarks"></a>Remarks  
+ Use this function to replace the existing shortcut table with new shortcut keys for several frame window objects. The function receives a document template as a parameter to obtain access to all frame window objects connected to the given document template.  
   
-## <a name="see-also"></a>Vedere anche  
- [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
- [Classi](../../mfc/reference/mfc-classes.md)   
- [Classe CWinAppEx](../../mfc/reference/cwinappex-class.md)   
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CWinAppEx Class](../../mfc/reference/cwinappex-class.md)   
  [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager)   
- [Personalizzazione di tastiera e Mouse](../../mfc/keyboard-and-mouse-customization.md)
+ [Keyboard and Mouse Customization](../../mfc/keyboard-and-mouse-customization.md)
 
 
 

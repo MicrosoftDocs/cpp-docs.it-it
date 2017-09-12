@@ -1,299 +1,322 @@
 ---
-title: "TN054: chiamata a DAO diretta durante l&#39;utilizzo delle classi DAO MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.dao"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DAO (Data Access Objects), e MFC"
-  - "DAO (Data Access Objects), chiamata diretta"
-  - "DAO (Data Access Objects), sicurezza"
-  - "MFC [C++], DAO e"
-  - "password [C++], chiamata di DAO"
-  - "sicurezza [MFC]"
-  - "sicurezza [MFC], DAO"
-  - "TN054"
+title: 'TN054: Calling DAO Directly While Using MFC DAO Classes | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.dao
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, DAO and
+- passwords [MFC], calling DAO
+- security [MFC], DAO
+- DAO (Data Access Objects), calling directly
+- DAO (Data Access Objects), security
+- security [MFC]
+- TN054
+- DAO (Data Access Objects), and MFC
 ms.assetid: f7de7d85-8d6c-4426-aa05-2e617c0da957
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# TN054: chiamata a DAO diretta durante l&#39;utilizzo delle classi DAO MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 81e36a424bcbfc441d4fb120afd334ca6483555f
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn054-calling-dao-directly-while-using-mfc-dao-classes"></a>TN054: Calling DAO Directly While Using MFC DAO Classes
 > [!NOTE]
->  A partire da Visual C\+\+ .NET, l'ambiente e le procedure guidate di Visual C\+\+ non supportano più DAO, anche se le classi DAO sono incluse e possono essere comunque utilizzate.  Si consiglia di utilizzare [Modelli OLE DB](../data/oledb/ole-db-templates.md) o [ODBC e MFC](../data/odbc/odbc-and-mfc.md) per i nuovi progetti.  di utilizzare DAO solo per la gestione delle applicazioni già esistenti.  
+>  As of Visual C++ .NET, the Visual C++ environment and wizards no longer support DAO (although the DAO classes are included and you can still use them). Microsoft recommends that you use [OLE DB Templates](../data/oledb/ole-db-templates.md) or [ODBC and MFC](../data/odbc/odbc-and-mfc.md) for new projects. You should only use DAO in maintaining existing applications.  
   
- Quando si utilizzano le classi di database DAO di MFC, è possibile che si verifichino casi in cui è necessario utilizzare direttamente le API DAO.  In genere, questo non verrà il caso, ma MFC forniti alcuni meccanismi di supporto per semplificare la lettura delle chiamate dirette di DAO semplici quando si combinano l'utilizzo delle classi MFC con chiamate dirette di DAO.  La esecuzione di chiamate dirette di DAO ai metodi di oggetto MFC gestito di DAO richiedere solo alcune righe di codice.  Se è necessario creare e utilizzare gli oggetti DAO che *non* sono gestiti da MFC, sarà necessario eseguire un poco più lavoro effettivamente chiamando **Rilascio** sull'oggetto.  Questa nota tecnica viene illustrato quando è tuttavia possibile chiamare direttamente le API DAO, quali gli helper MFC possono essere utili e come utilizzare le interfacce OLE di DAO.  Infine, questa nota fornisce alcune funzioni di esempio che illustrano come chiamare direttamente le API DAO per le funzionalità di sicurezza di DAO.  
+ When using the MFC DAO database classes, there may be situations where it is necessary to use DAO directly. Usually, this will not be the case, but MFC has provided some helper mechanisms to facilitate making direct DAO calls simple when combining the use of the MFC classes with direct DAO calls. Making direct DAO calls to the methods of an MFC-managed DAO object should require only a few lines of code. If you need to create and use DAO objects that are *not* managed by MFC, you will have to do a little more work by actually calling **Release** on the object. This technical note explains when you might want to call DAO directly, what the MFC helpers can do to help you, and how to use the DAO OLE interfaces. Finally, this note provides some sample functions showing how to call DAO directly for DAO security features.  
   
-## Quando eseguire chiamate dirette di DAO  
- Le situazioni più comuni per la creazione di chiamate dirette di DAO si verificano quando le raccolte devono essere aggiornate o quando si implementano le funzionalità non è stato eseguito il wrapping in MFC.  La funzionalità più significativa non esposta da MFC è sicurezza.  Se si desidera implementare le funzionalità di sicurezza, sarà necessario utilizzare gli utenti di DAO e il gruppo di oggetti direttamente.  Oltre alla sicurezza, sono disponibili solo alcune altre funzionalità di DAO supportate da MFC.  Questi comprendono funzionalità di replica della clonazione e il database di recordset nonché alcuni miglioramenti recenti a DAO.  
+## <a name="when-to-make-direct-dao-calls"></a>When to Make Direct DAO Calls  
+ The most common situations for making direct DAO calls occur when collections need to be refreshed or when you are implementing features not wrapped by MFC. The most significant feature not exposed by MFC is security. If you want to implement security features, you will need to use the DAO User(s) and Group(s) objects directly. Besides security, there are only a few other DAO features not supported by MFC. These include recordset cloning and database replication features as well as a few late additions to DAO.  
   
-## Una breve panoramica dell'implementazione di MFC e DAO  
- Il wrapping di DAO MFC di rende mediante DAO più semplice la gestione di molti dettagli in modo da non dover per piccole operazioni.  Ciò include l'inizializzazione di OLE, la creazione e la gestione degli oggetti di DAO \(soprattutto gli oggetti Collection\), il controllo degli errori e di creazione di un'interfaccia fortemente tipizzata e più semplice \(nessun **VARIANT** o argomenti di `BSTR` \).  È possibile effettuare chiamate dirette di DAO e tuttavia sfruttare.  Tutto il codice deve effettuare consiste nel chiamare **Rilascio** per tutti gli oggetti creati dalle chiamate dirette di DAO e *non* modificarne uno dei puntatori a interfaccia che MFC può affidarsi a internamente.  Ad esempio, non modificare il membro di **m\_pDAORecordset** di un oggetto su apri `CDaoRecordset` a meno che non si conosca la *tutte le* ramificazioni interne.  È possibile, tuttavia, utilizzare l'interfaccia di **m\_pDAORecordset** per chiamare direttamente le API DAO per ottenere la raccolta dei campi.  In questo caso il membro di **m\_pDAORecordset** non viene modificato.  È necessario chiamare semplicemente **Rilascio** sull'oggetto Collection dei campi al termine dell'oggetto.  
+## <a name="a-brief-overview-of-dao-and-mfcs-implementation"></a>A Brief Overview of DAO and MFC's Implementation  
+ MFC's wrapping of DAO makes using DAO easier by handling many of the details so you do not have to worry about the little things. This includes the initialization of OLE, the creation and management of the DAO objects (especially the collection objects), error checking, and providing a strongly typed, simpler interface (no **VARIANT** or `BSTR` arguments). You can make direct DAO calls and still take advantage of these features. All your code must do is call **Release** for any objects created by direct DAO calls and *not* modify any of the interface pointers that MFC may rely on internally. For example, do not modify the **m_pDAORecordset** member of an open `CDaoRecordset` object unless you understand *all* the internal ramifications. You could, however, use the **m_pDAORecordset** interface to call DAO directly to get the Fields collection. In this case the **m_pDAORecordset** member would not be modified. You simply have to call **Release** on the Fields collection object when you are finished with the object.  
   
-## Descrizione di helper per rendere le chiamate di DAO più semplici  
- Gli helper forniti per eseguire la chiamata a DAO più semplice sono uguali helper utilizzati internamente nelle classi di database DAO MFC.  Questi helper vengono utilizzati per controllare i codici restituiti quando si effettua una chiamata diretta di DAO, registrando l'output di debug, controllo degli errori previsti e generazione di eccezioni appropriate se necessario.  Esistono due funzioni di supporto sottostante e quattro macro che eseguono il mapping a uno di questi due helper.  La migliore spiegazione verrebbe di leggere semplicemente il codice.  Vedere **DAO\_CHECK**, **DAO\_CHECK\_ERROR**, **DAO\_CHECK\_MEM** e **DAO\_TRACE** in AFXDAO.H per visualizzare le macro e vedere **AfxDaoCheck** e **AfxDaoTrace** in DAOCORE.CPP.  
+## <a name="description-of-helpers-to-make-dao-calls-easier"></a>Description of Helpers to Make DAO Calls Easier  
+ The helpers provided to make calling DAO easier are the same helpers that are used internally in the MFC DAO Database classes. These helpers are used to check the return codes when making a direct DAO call, logging debug output, checking for expected errors, and throwing appropriate exceptions if necessary. There are two underlying helper functions and four macros that map to one of these two helpers. The best explanation would be to simply read the code. See **DAO_CHECK**, **DAO_CHECK_ERROR**, **DAO_CHECK_MEM**, and **DAO_TRACE** in AFXDAO.H to see the macros, and see **AfxDaoCheck** and **AfxDaoTrace** in DAOCORE.CPP.  
   
-## Tramite interfacce OLE di DAO  
- Interfacce OLE per ogni oggetto della gerarchia di oggetti di DAO sono definite nel file di intestazione DBDAOINT.H, che si trova in \\ programmi \\ Microsoft Visual Studio .NET 2003. \\ VC7 \\ directory di inclusione.  Queste interfacce fornisce metodi che consentono di modificare l'intera gerarchia di DAO.  
+## <a name="using-the-dao-ole-interfaces"></a>Using the DAO OLE Interfaces  
+ The OLE interfaces for each object in the DAO object hierarchy are defined in the header file DBDAOINT.H, which is found in the \Program Files\Microsoft Visual Studio .NET 2003\VC7\include directory. These interfaces provide methods that allow you to manipulate the entire DAO hierarchy.  
   
- Per molti dei metodi nelle interfacce DAO, sarà necessario modificare un oggetto di `BSTR` \(una stringa con prefisso di lunghezza utilizzata nell'automazione OLE\).  L'oggetto di `BSTR` in genere è incapsulato nel tipo di dati di **VARIANT**.  La classe MFC `COleVariant` stesso eredita dal tipo di dati di **VARIANT**.  A seconda se si compila il progetto per ANSI o Unicode, le interfacce DAO restituiranno ANSI o Unicode `BSTR`S.  Due macro, **V\_BSTR** e **V\_BSTRT**, sono utili per la certezza che l'interfaccia di DAO ottiene `BSTR` al tipo previsto.  
+ For many of the methods in the DAO interfaces, you will need to manipulate a `BSTR` object (a length-prefixed string used in OLE automation). The `BSTR` object typically is encapsulated within the **VARIANT** data type. The MFC class `COleVariant` itself inherits from the **VARIANT** data type. Depending on whether you build your project for ANSI or Unicode, the DAO interfaces will return ANSI or Unicode `BSTR`s. Two macros, **V_BSTR** and **V_BSTRT**, are useful for assuring that the DAO interface gets the `BSTR` of the expected type.  
   
- **V\_BSTR** estrarrà il membro di **bstrVal** di `COleVariant`.  Questa macro in genere utilizzata quando è necessario passare il contenuto di `COleVariant` a un metodo di interfaccia di DAO.  Nel frammento di codice mostra sia le dichiarazioni che effettivamente utilizzato per due metodi di interfaccia di DAO DAOUser che utilizzano la macro di **V\_BSTR** :  
+ **V_BSTR** will extract the **bstrVal** member of a `COleVariant`. This macro is typically used when you need to pass the contents of a `COleVariant` to a method of a DAO interface. The following code fragment shows both the declarations and actual use for two methods of the DAO DAOUser interface that take advantage of the **V_BSTR** macro:  
   
 ```  
 COleVariant varOldName;  
-COleVariant varNewName( _T("NewUser"), VT_BSTRT );  
-  
+COleVariant varNewName(_T("NewUser"), VT_BSTRT);
+
+ 
 // Code to assign pUser to a valid value omitted  
 DAOUser *pUser = NULL;  
-  
+ 
 // These method declarations were taken from DBDAOINT.H  
 // STDMETHOD(get_Name) (THIS_ BSTR FAR* pbstr) PURE;  
 // STDMETHOD(put_Name) (THIS_ BSTR bstr) PURE;  
-  
-DAO_CHECK( pUser->get_Name( &V_BSTR ( &varOldName ) ));  
-DAO_CHECK( pUser->put_Name( V_BSTR ( &varNewName ) ));  
+ 
+DAO_CHECK(pUser->get_Name(&V_BSTR (&varOldName)));
+
+DAO_CHECK(pUser->put_Name(V_BSTR (&varNewName)));
 ```  
   
- Si noti che l'argomento di `VT_BSTRT` specificato nel costruttore di `COleVariant` sopra assicurarsi che sia presente un `BSTR` ANSI in `COleVariant` se si compila una versione ANSI dell'applicazione e un Unicode `BSTR` di versione Unicode dell'applicazione.  Questa operazione DAO prevede.  
+ Note that the `VT_BSTRT` argument specified in the `COleVariant` constructor above ensures that there will be an ANSI `BSTR` in the `COleVariant` if you build an ANSI version of your application and a Unicode `BSTR` for a Unicode version of your application. This is what DAO expects.  
   
- Altre macro, **V\_BSTRT**, estrarrà un ANSI o il membro Unicode **bstrVal** di `COleVariant` a seconda del tipo di compilazione \(ANSI o Unicode.  Il codice seguente viene illustrato come estrarre il valore di `BSTR` da `COleVariant` in `CString`:  
-  
-```  
-COleVariant varName( _T( "MyName" ), VT_BSTRT );  
-CString str = V_BSTRT( &varName );  
-```  
-  
- La macro di **V\_BSTRT**, con altre tecniche per aprire altri tipi archiviati in `COleVariant`, è illustrata nell'esempio di DAOVIEW.  In particolare, questa conversione viene eseguita nel metodo di **CCrack::strVARIANT**.  Questo metodo, laddove possibile converte il valore di `COleVariant` in un'istanza di `CString`.  
-  
-## Esempio semplice di una chiamata diretta a DAO  
- Le situazioni può verificarsi quando è necessario aggiornare gli oggetti Collection sottostanti di DAO.  In genere, questo non deve essere necessario, ma è una procedura semplice se necessario.  Un esempio in cui una raccolta potrebbe richiedere di essere aggiornato quando si lavora in un ambiente multiutente con più utenti che creano nuovi TableDef.  In questo caso la forza di raccolta così diventano non aggiornato.  Per aggiornare la raccolta, occorre semplicemente la chiamata del metodo **Aggiorna** dell'oggetto Collection e del controllo specifici per gli errori:  
+ The other macro, **V_BSTRT**, will extract either an ANSI or Unicode **bstrVal** member of `COleVariant` depending on the type of build (ANSI or Unicode). The following code demonstrates how to extract the `BSTR` value from a `COleVariant` into a `CString`:  
   
 ```  
-DAO_CHECK( pMyDaoDatabase->  
-    m_pDAOTableDefs->Refresh( ) );  
+COleVariant varName(_T("MyName"), VT_BSTRT);
+
+CString str = V_BSTRT(&varName);
 ```  
   
- Si noti che attualmente tutte le interfacce dell'oggetto Collection di DAO sono dettagli di implementazione non documentati delle classi di database DAO MFC.  
+ The **V_BSTRT** macro, along with other techniques to open other types that are stored in `COleVariant`, is demonstrated in the DAOVIEW sample. Specifically, this translation is performed in the **CCrack::strVARIANT** method. This method, where possible, translates the value of a `COleVariant` into an instance of `CString`.  
   
-## Mediante DAO direttamente per le funzionalità di sicurezza di DAO  
- Le classi di database DAO MFC non eseguono il wrapping delle funzionalità di sicurezza di DAO.  È necessario chiamare metodi delle interfacce DAO per utilizzare alcune funzionalità di sicurezza di DAO.  La funzione imposta il database di sistema e quindi modificare la password dell'utente.  Questa funzione chiama altre tre funzioni, che successivamente vengono definite.  
+## <a name="simple-example-of-a-direct-call-to-dao"></a>Simple Example of a Direct Call to DAO  
+ Situations may arise when it is necessary to refresh the underlying DAO collection objects. Normally, this should not be necessary, but it is a simple procedure if it is necessary. An example of when a collection might need to be refreshed is when operating in a multiuser environment with multiple users creating new tabledefs. In this case your tabledefs collection might become stale. To refresh the collection, you simply need to call the **Refresh** method of the particular collection object and check for errors:  
   
 ```  
-void ChangeUserPassword( )  
-{  
-   // Specify path to the Microsoft Access  
-   // system database  
-   CString strSystemDB =   
-     _T( "c:\\Program Files\\MSOffice\\access\\System.mdw" );  
+DAO_CHECK(pMyDaoDatabase->  
+    m_pDAOTableDefs->Refresh());
+```  
   
-   // Set system database before MFC initilizes DAO  
-   // NOTE: An MFC module uses only one instance   
-   // of a DAO database engine object. If you have   
-   // called a DAO object in your application prior   
-   // to calling the function below, you must call   
-   // AfxDaoTerm to destroy the existing database   
-   // engine object. Otherwise, the database engine   
-   // object already in use will be reused, and setting  
-   // a system datbase will have no effect.  
-   //  
-   // If you have used a DAO object prior to calling   
-   // this function it is important that DAO be   
-   // terminated with AfxDaoTerm since an MFC  
-   // module only gets one copy of the database engine   
-   // and that engine will be reused if it hasn't been   
-   // terminated. In other words, if you do not call   
-   // AfxDaoTerm and there is currently a database   
-   // initialized, setting the system database will   
-   // have no affect.  
+ Note that currently all DAO collection object interfaces are undocumented implementation details of the MFC DAO database classes.  
   
-   SetSystemDB( strSystemDB );  
+## <a name="using-dao-directly-for-dao-security-features"></a>Using DAO Directly for DAO Security Features  
+ The MFC DAO database classes do not wrap DAO security features. You must call methods of DAO interfaces to use some DAO security features. The following function sets the system database and then changes the user's password. This function calls three other functions, which are subsequently defined.  
   
-   // User name and password manually added  
-   // by using Microsoft Access  
-   CString strUserName = _T( "NewUser" );  
-   CString strOldPassword = _T( "Password" );  
-   CString strNewPassword = _T( "NewPassword" );  
-  
-   // Set default user so that MFC will be able  
-   // to log in by default using the user name and   
-   // password from the system database  
-   SetDefaultUser( strUserName, strOldPassword );  
-  
-   // Change the password. You should be able to  
-   // call this function from anywhere in your   
-   // MFC application  
-   ChangePassword( strUserName, strOldPassword,   
-                   strNewPassword );  
-  
-   .  
-   .  
-   .  
-  
+```  
+void ChangeUserPassword()  
+{ *// Specify path to the Microsoft Access *// system database  
+    CString strSystemDB = 
+    _T("c:\\Program Files\\MSOffice\\access\\System.mdw");
+
+ *// Set system database before MFC initilizes DAO *// NOTE: An MFC module uses only one instance *// of a DAO database engine object. If you have *// called a DAO object in your application prior *// to calling the function below,
+    you must call *// AfxDaoTerm to destroy the existing database *// engine object. Otherwise,
+    the database engine *// object already in use will be reused,
+    and setting *// a system datbase will have no effect. *// *// If you have used a DAO object prior to calling *// this function it is important that DAO be *// terminated with AfxDaoTerm since an MFC *// module only gets one copy of the database engine *// and that engine will be reused if it hasn't been *// terminated. In other words,
+    if you do not call *// AfxDaoTerm and there is currently a database *// initialized,
+    setting the system database will *// have no affect.  
+ 
+    SetSystemDB(strSystemDB);
+
+ *// User name and password manually added *// by using Microsoft Access  
+    CString strUserName = _T("NewUser");
+
+    CString strOldPassword = _T("Password");
+
+    CString strNewPassword = _T("NewPassword");
+
+ *// Set default user so that MFC will be able *// to log in by default using the user name and *// password from the system database  
+    SetDefaultUser(strUserName,
+    strOldPassword);
+
+ *// Change the password. You should be able to *// call this function from anywhere in your *// MFC application  
+    ChangePassword(strUserName,
+    strOldPassword,   
+    strNewPassword);
+
+ 
+ .  
+ .  
+ .  
+ 
 }  
 ```  
   
- I quattro esempi seguenti viene illustrato come how to:  
+ The next four examples demonstrate how to:  
   
--   Impostare il database DAO system \(file di .MDW\).  
+-   Set the system DAO database (.MDW file).  
   
--   Impostare l'utente e la password predefiniti.  
+-   Set the default user and password.  
   
--   Modificare la password di un utente.  
+-   Change the password of a user.  
   
--   Modificare la password di un file di .MDB.  
+-   Change the password of an .MDB file.  
   
-### Per impostare il database di sistema  
- Di seguito è una funzione di esempio per impostare il database di sistema che verrà utilizzato da un'applicazione.  Questa funzione deve essere chiamata prima delle altre chiamate di DAO sono effettuate.  
+### <a name="setting-the-system-database"></a>Setting the System Database  
+ Below is a sample function to set the system database that will be used by an application. This function must be called before any other DAO calls are made.  
   
 ```  
 // Set the system database that the   
 // DAO database engine will use  
-  
-void SetSystemDB( CString & strSystemMDB )  
+ 
+void SetSystemDB(CString& strSystemMDB)  
 {  
-   COleVariant varSystemDB( strSystemMDB, VT_BSTRT );  
-  
-   // Initialize DAO for MFC  
-   AfxDaoInit( );  
-   DAODBEngine* pDBEngine = AfxDaoGetEngine( );  
-  
-   ASSERT( pDBEngine != NULL );  
-  
-   // Call put_SystemDB method to set the   
-   // system database for DAO engine  
-   DAO_CHECK( pDBEngine->put_SystemDB( varSystemDB.bstrVal ) );  
-}  
+    COleVariant varSystemDB(strSystemMDB, VT_BSTRT);
+
+ *// Initialize DAO for MFC  
+    AfxDaoInit();
+DAODBEngine* pDBEngine = AfxDaoGetEngine();
+
+ 
+    ASSERT(pDBEngine != NULL);
+
+ *// Call put_SystemDB method to set the *// system database for DAO engine  
+    DAO_CHECK(pDBEngine->put_SystemDB(varSystemDB.bstrVal));
+
+} 
 ```  
   
-### L'impostazione dell'utente e la password predefiniti  
- Per l'impostazione dell'utente e la password predefinito per un database di sistema, utilizzare la funzione seguente:  
+### <a name="setting-the-default-user-and-password"></a>Setting the Default User and Password  
+ To set the default user and password for a system database, use the following function:  
   
 ```  
-void SetDefaultUser(CString & strUserName, CString & strPassword)  
+void SetDefaultUser(CString& strUserName,
+    CString& strPassword)  
 {  
-  COleVariant varUserName( strUserName, VT_BSTRT );  
-  COleVariant varPassword( strPassword, VT_BSTRT );  
-  
-  DAODBEngine* pDBEngine = AfxDaoGetEngine( );  
-  ASSERT( pDBEngine != NULL );  
-  
-  // Set default user:  
-  DAO_CHECK( pDBEngine->put_DefaultUser( varUserName.bstrVal ) );  
-  
-  // Set default password:  
-  DAO_CHECK( pDBEngine->put_DefaultPassword( varPassword.bstrVal ) );  
-}  
+    COleVariant varUserName(strUserName,
+    VT_BSTRT);
+
+    COleVariant varPassword(strPassword,
+    VT_BSTRT);
+
+ 
+    DAODBEngine* pDBEngine = AfxDaoGetEngine();
+ASSERT(pDBEngine != NULL);
+
+ *// Set default user:  
+    DAO_CHECK(pDBEngine->put_DefaultUser(varUserName.bstrVal));
+
+ *// Set default password:  
+    DAO_CHECK(pDBEngine->put_DefaultPassword(varPassword.bstrVal));
+
+} 
 ```  
   
-### Modificare la password di un utente  
- Per modificare la password di un utente, utilizzare la funzione seguente:  
+### <a name="changing-a-users-password"></a>Changing a User's Password  
+ To change a user's password, use the following function:  
   
 ```  
-void ChangePassword( CString &strUserName,   
-                     CString &strOldPassword,   
-                     CString &strNewPassword )  
+void ChangePassword(CString &strUserName,   
+    CString &strOldPassword,   
+    CString &strNewPassword)  
+{ *// Create (open) a workspace  
+    CDaoWorkspace wsp;  
+    CString strWspName = _T("Temp Workspace");
+
+ 
+    wsp.Create(strWspName, strUserName,  
+    strOldPassword);
+
+ wsp.Append();
+
+ *// Determine how many objects there are *// in the Users collection  
+    short nUserCount;  
+    short nCurrentUser;  
+    DAOUser *pUser = NULL;  
+    DAOUsers *pUsers = NULL;  
+ *// Side-effect is implicit OLE AddRef() *// on DAOUser object:  
+    DAO_CHECK(wsp.m_pDAOWorkspace->get_Users(&pUsers));
+
+ *// Side-effect is implicit OLE AddRef() *// on DAOUsers object  
+    DAO_CHECK(pUsers->getcount(&nUserCount));
+
+ *// Traverse through the list of users *// and change password for the userid *// used to create/open the workspace  
+    for(nCurrentUser = 0; nCurrentUser <nUserCount;  
+    nCurrentUser++) 
+ {  
+    COleVariant varIndex(nCurrentUser, VT_I2);
+
+    COleVariant varName;  
+ *// Retrieve information for user nCurrentUser  
+    DAO_CHECK(pUsers->get_Item(varIndex, &pUser));
+
+ *// Retrieve name for user nCurrentUser  
+    DAO_CHECK(pUser->get_Name(&V_BSTR(&varName)));
+
+ 
+    CString strTemp = V_BSTRT(&varName);
+
+ *// If there is a match, change the password  
+    if(strTemp == strUserName)  
+ {  
+    COleVariant varOldPwd(strOldPassword,   
+    VT_BSTRT);
+
+ COleVariant  varNewPwd(strNewPassword,   
+    VT_BSTRT);
+
+ 
+    DAO_CHECK(pUser->NewPassword(V_BSTR(&varOldPwd), 
+    V_BSTR(&varNewPwd)));
+
+ 
+    TRACE("\t Password is changed\n");
+
+ }  
+ }  
+ *// Clean up: decrement the usage count *// on the OLE objects  
+    pUser->Release();
+pUsers->Release();
+
+ 
+    wsp.Close();
+
+} 
+```  
+  
+### <a name="changing-the-password-of-an-mdb-file"></a>Changing the Password of an .MDB File  
+ To change the password of an .MDB file, use the following function:  
+  
+```  
+void SetDBPassword(LPCTSTR pDB,
+    LPCTSTR pszOldPassword,
+    LPCTSTR pszNewPassword)  
 {  
-   // Create (open) a workspace  
-   CDaoWorkspace wsp;  
-   CString strWspName = _T( "Temp Workspace" );  
-  
-   wsp.Create( strWspName, strUserName,  
-               strOldPassword );  
-   wsp.Append( );  
-  
-   // Determine how many objects there are  
-   // in the Users collection  
-   short nUserCount;  
-   short nCurrentUser;  
-   DAOUser *pUser  = NULL;  
-   DAOUsers *pUsers = NULL;  
-  
-   // Side-effect is implicit OLE AddRef( )   
-   // on DAOUser object:  
-   DAO_CHECK( wsp.m_pDAOWorkspace->get_Users( &pUsers ) );  
-  
-   // Side-effect is implicit OLE AddRef( )   
-   // on DAOUsers object  
-    DAO_CHECK( pUsers->get_Count( &nUserCount ) );  
-  
-   // Traverse through the list of users   
-   // and change password for the userid  
-   // used to create/open the workspace  
-   for( nCurrentUser = 0; nCurrentUser < nUserCount;  
-        nCurrentUser++ )  
-   {  
-       COleVariant varIndex( nCurrentUser, VT_I2 );  
-       COleVariant varName;  
-  
-       // Retrieve information for user nCurrentUser  
-       DAO_CHECK( pUsers->get_Item( varIndex, &pUser ) );  
-  
-       // Retrieve name for user nCurrentUser  
-       DAO_CHECK( pUser->get_Name( &V_BSTR( &varName ) ) );  
-  
-       CString strTemp = V_BSTRT( &varName );  
-  
-       // If there is a match, change the password  
-       if( strTemp == strUserName )  
-       {  
-           COleVariant varOldPwd( strOldPassword,   
-                                  VT_BSTRT );  
-           COleVariant varNewPwd( strNewPassword,   
-                                  VT_BSTRT );  
-  
-           DAO_CHECK( pUser->NewPassword( V_BSTR( &varOldPwd ),  
-                      V_BSTR( &varNewPwd ) ) );  
-  
-           TRACE( "\t Password is changed\n" );  
-       }  
-   }  
-  
-   // Clean up: decrement the usage count  
-   // on the OLE objects  
-   pUser->Release( );  
-   pUsers->Release( );  
-  
-   wsp.Close( );  
-}  
+    CDaoDatabase db;  
+    CString strConnect(_T(";pwd="));
+
+ *// the database must be opened as exclusive *// to set a password  
+    db.Open(pDB,
+    TRUE,
+    FALSE,   
+    strConnect + pszOldPassword);
+
+ 
+    COleVariant NewPassword(pszNewPassword,
+    VT_BSTRT),  
+    OldPassword(pszOldPassword,
+    VT_BSTRT);
+
+ 
+    DAO_CHECK(db.m_pDAODatabase->NewPassword(V_BSTR(&OldPassword), 
+    V_BSTR(&NewPassword)));
+
+ 
+    db.Close();
+
+} 
 ```  
   
-### Modificare la password di un file di .MDB  
- Per modificare la password di un file di .MDB, utilizzare la funzione seguente:  
-  
-```  
-void SetDBPassword( LPCTSTR pDB, LPCTSTR pszOldPassword, LPCTSTR pszNewPassword )  
-{  
-   CDaoDatabase db;  
-   CString strConnect( _T( ";pwd=" ) );  
-  
-   // the database must be opened as exclusive  
-   // to set a password  
-   db.Open( pDB, TRUE, FALSE,   
-            strConnect + pszOldPassword );  
-  
-   COleVariant NewPassword( pszNewPassword, VT_BSTRT ),  
-               OldPassword( pszOldPassword, VT_BSTRT );  
-  
-   DAO_CHECK( db.m_pDAODatabase->NewPassword( V_BSTR( &OldPassword ),  
-              V_BSTR( &NewPassword ) ) );  
-  
-   db.Close();  
-}  
-```  
-  
-## Vedere anche  
- [Note tecniche per numero](../mfc/technical-notes-by-number.md)   
- [Note tecniche per categoria](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

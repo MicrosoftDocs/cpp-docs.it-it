@@ -1,62 +1,81 @@
 ---
-title: "Controlli ActiveX MFC: utilizzo delle pagine delle propriet&#224; predefinite | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CLSID_CPicturePropPage"
-  - "CLSID_CColorPropPage"
-  - "CLSID_CFontPropPage"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CLSID_CColorPropPage"
-  - "CLSID_CFontPropPage"
-  - "CLSID_CPicturePropPage"
-  - "pagine proprietà predefinite colore"
-  - "tipi di carattere, controlli ActiveX"
-  - "MFC (controlli ActiveX), proprietà (pagine)"
-  - "pagine proprietà predefinite immagine"
-  - "proprietà predefinite, pagine proprietà predefinite"
+title: 'MFC ActiveX Controls: Using Stock Property Pages | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CLSID_CPicturePropPage
+- CLSID_CColorPropPage
+- CLSID_CFontPropPage
+dev_langs:
+- C++
+helpviewer_keywords:
+- picture stock property pages [MFC]
+- CLSID_CFontPropPage [MFC]
+- color stock property pages [MFC]
+- CLSID_CColorPropPage [MFC]
+- fonts [MFC], ActiveX controls
+- stock properties [MFC], stock property pages
+- CLSID_CPicturePropPage [MFC]
+- MFC ActiveX controls [MFC], property pages
 ms.assetid: 22638d86-ff3e-4124-933e-54b7c2a25968
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Controlli ActiveX MFC: utilizzo delle pagine delle propriet&#224; predefinite
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2a0a4b3ad54221500650b6e5c11e62e45805954c
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-In questo articolo vengono discusse le pagine di proprietà predefinite disponibili per i controlli ActiveX e come utilizzarle.  
+---
+# MFC ActiveX Controls: Using Stock Property Pages
+This article discusses the stock property pages available for ActiveX controls and how to use them.  
   
- Per ulteriori informazioni sull'utilizzo delle pagine delle proprietà in un controllo ActiveX, vedere gli articoli seguenti:  
+ For more information on using property pages in an ActiveX control, see the following articles:  
   
--   [Controlli ActiveX MFC: pagine delle proprietà](../mfc/mfc-activex-controls-property-pages.md)  
+-   [MFC ActiveX Controls: Property Pages](../mfc/mfc-activex-controls-property-pages.md)  
   
--   [Controlli ActiveX MFC: aggiunta di un'altra pagina delle proprietà personalizzata](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)  
+-   [MFC ActiveX Controls: Adding Another Custom Property Page](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)  
   
- MFC fornisce tre pagine delle proprietà predefinite da utilizzare con i controlli ActiveX: **CLSID\_CColorPropPage**, **CLSID\_CFontPropPage** e **CLSID\_CPicturePropPage**.  Queste pagine visualizzano un'interfaccia utente per colore predefinito, il tipo di carattere e proprietà d'immagine, rispettivamente.  
+ MFC provides three stock property pages for use with ActiveX controls: **CLSID_CColorPropPage**, **CLSID_CFontPropPage**, and **CLSID_CPicturePropPage**. These pages display a user interface for stock color, font, and picture properties, respectively.  
   
- Per includere queste pagine delle proprietà in un controllo, aggiungere i relativi ID al codice che inizializza la matrice del controllo della pagina delle proprietà ID.  Nell'esempio seguente, questo codice, che si trova nel file di implementazione del controllo \(.CPP\), inizializza la matrice per contenere tutte e tre le pagine delle proprietà predefinite e la pagina delle proprietà predefinita \( denominato `CMyPropPage` in questo esempio\):  
+ To incorporate these property pages into a control, add their IDs to the code that initializes the control's array of property page IDs. In the following example, this code, located in the control implementation file (.CPP), initializes the array to contain all three stock property pages and the default property page (named `CMyPropPage` in this example):  
   
- [!code-cpp[NVC_MFC_AxOpt#21](../mfc/codesnippet/CPP/mfc-activex-controls-using-stock-property-pages_1.cpp)]  
+ [!code-cpp[NVC_MFC_AxOpt#21](../mfc/codesnippet/cpp/mfc-activex-controls-using-stock-property-pages_1.cpp)]  
   
- Si noti che il conteggio delle pagine delle proprietà, nella macro `BEGIN_PROPPAGEIDS`, è 4.  Questo rappresenta il numero di pagine delle proprietà supportate dal controllo ActiveX.  
+ Note that the count of property pages, in the `BEGIN_PROPPAGEIDS` macro, is 4. This represents the number of property pages supported by the ActiveX control.  
   
- Dopo che queste modifiche sono state apportate, ricompilare il progetto.  Il controllo presenta pagine delle proprietà per il tipo di carattere, immagini e le proprietà dei colori.  
+ After these modifications have been made, rebuild your project. Your control now has property pages for the font, picture, and color properties.  
   
 > [!NOTE]
->  Se le pagine delle proprietà delle azioni di controllo non sono accessibili, è possibile che la DLL MFC \(MFCxx.DLL\) non sia stata registrata correttamente con il sistema operativo corrente.  In genere è il risultato dell'installazione di Visual C\+\+ in un sistema operativo differente da quello attualmente in esecuzione.  
+>  If the control stock property pages cannot be accessed, it may be because the MFC DLL (MFCxx.DLL) has not been properly registered with the current operating system. This usually results from installing Visual C++ under an operating system different from the one currently running.  
   
 > [!TIP]
->  Se le pagine delle proprietà predefinite non sono visibili \(vedere nota precedente\), registrare la DLL mediante RegSvr32.exe dalla riga di comando con il percorso completo della DLL.  
+>  If your stock property pages are not visible (see previous Note), register the DLL by running RegSvr32.exe from the command line with the full path name to the DLL.  
   
-## Vedere anche  
- [Controlli ActiveX MFC](../mfc/mfc-activex-controls.md)   
- [Controlli ActiveX MFC: aggiunta di proprietà predefinite](../mfc/mfc-activex-controls-adding-stock-properties.md)
+## See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)   
+ [MFC ActiveX Controls: Adding Stock Properties](../mfc/mfc-activex-controls-adding-stock-properties.md)
+
+

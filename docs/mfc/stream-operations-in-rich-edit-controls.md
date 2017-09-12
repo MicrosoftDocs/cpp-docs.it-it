@@ -1,38 +1,57 @@
 ---
-title: "Operazioni di flusso nei controlli Rich Edit | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CRichEditCtrl (classe), operazioni di flusso"
-  - "CRichEditCtrl (classe), archiviazione di flussi"
-  - "Rich Edit (controlli), operazioni di flusso"
-  - "archiviazione, flusso in CRichEditCtrl"
-  - "operazioni di flusso in CRichEditCtrl"
-  - "archiviazione di flussi e CRichEditCtrl"
+title: Stream Operations in Rich Edit Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CRichEditCtrl class [MFC], stream operations
+- CRichEditCtrl class [MFC], stream storage
+- rich edit controls [MFC], stream operations
+- storage, stream in CRichEditCtrl
+- stream operations in CRichEditCtrl
+- stream storage and CRichEditCtrl
 ms.assetid: 110b4684-1e76-4ca6-9ef0-5bc8b2d93c78
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Operazioni di flusso nei controlli Rich Edit
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6db5dc840d0fdd08f1f04107b53fa69a7ff4fff3
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-È possibile utilizzare i flussi per trasferire i dati dentro o fuori da un controllo Rich Edit \([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)\).  Un flusso è definito da una struttura [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891), che specifica un buffer e una funzione di callback definita dall'applicazione.  
+---
+# <a name="stream-operations-in-rich-edit-controls"></a>Stream Operations in Rich Edit Controls
+You can use streams to transfer data into or out of a rich edit control ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). A stream is defined by an [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) structure, which specifies a buffer and an application-defined callback function.  
   
- Per leggere i dati in un controllo Rich Edit \(ovvero uno stream dei dati in ingresso\), utilizzare la funzione membro [StreamIn](../Topic/CRichEditCtrl::StreamIn.md).  Il controllo chiama ripetutamente la funzione di callback definita dall'applicazione, che trasferisce ogni volta una parte dei dati nel buffer.  
+ To read data into a rich edit control (that is, stream the data in), use the [StreamIn](../mfc/reference/cricheditctrl-class.md#streamin) member function. The control repeatedly calls the application-defined callback function, which transfers a portion of the data into the buffer each time.  
   
- Per salvare il contenuto di un controllo Rich Edit \(ovvero uno stream dei dati in uscita\), è possibile utilizzare la funzione membro [StreamOut](../Topic/CRichEditCtrl::StreamOut.md).  Il controllo scrive ripetutamente al buffer e quindi chiama la funzione di callback definita dall'applicazione.  Per ogni chiamata, la funzione di callback salva il contenuto del buffer.  
+ To save the contents of a rich edit control (that is, stream the data out), you can use the [StreamOut](../mfc/reference/cricheditctrl-class.md#streamout) member function. The control repeatedly writes to the buffer and then calls the application-defined callback function. For each call, the callback function saves the contents of the buffer.  
   
-## Vedere anche  
- [Utilizzo di CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [Controlli](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CRichEditCtrl](../mfc/using-cricheditctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

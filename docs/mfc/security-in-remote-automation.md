@@ -1,40 +1,59 @@
 ---
-title: "Sicurezza nell&#39;automazione remota | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "attivazione di oggetti"
-  - "AllowRemoteActivation"
-  - "oggetti di automazione, opzioni di sicurezza"
-  - "attivazione oggetti"
-  - "Automazione remota, sicurezza"
-  - "sicurezza [MFC]"
-  - "sicurezza [MFC], automazione remota"
+title: Security in Remote Automation | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- AllowRemoteActivation [MFC]
+- Remote Automation [MFC], security
+- activating objects [MFC]
+- security [MFC]
+- Automation objects [MFC], security options
+- object activation [MFC]
+- security [MFC], Remote Automation
 ms.assetid: 276b300d-c0b5-4bd8-8bf5-0270994b9cfa
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Sicurezza nell&#39;automazione remota
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7a6557470993da2a581a32fb29d26443e256c53c
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-L'automazione remota supporta un livello di sicurezza di base per consentire a un writer dell'applicazione server \(o, piuttosto, il suo amministratore\) di specificare come un oggetto specifico possa essere attivato in modalità remota.  Tutti gli oggetti di automazione remota in un sistema specificato possono essere impostati a livello globale per "impedire l'attivazione remota" o per "consentire l'attivazione remota".  Inoltre e più spesso, i singoli oggetti possono fornire queste funzionalità.  L'automazione remota utilizza una chiave in ogni impostazione del registro di sistema di oggetto, **AllowRemoteActivation**, per determinare se un server specificato possa essere attivato in modalità remota.  Se le impostazioni a livello di sistema utilizzano questa modalità, allora ad ogni oggetto nel Registro di sistema può essere assegnata questa chiave e il singolo stato di ognuno può essere impostato su "yes" o "no" in base alle proprie esigenze.  
+---
+# <a name="security-in-remote-automation"></a>Security in Remote Automation
+Remote Automation supports a basic level of security to allow a server application writer (or, rather, its administrator) to specify how a specific object may be activated remotely. All automation objects on a given system may be globally set to "disallow remote activation" or to "allow remote activation". Additionally, and more often, individual objects may be given such capabilities. Remote Automation uses a key in each object's registry settings, **AllowRemoteActivation**, to determine whether a given server may be activated remotely. If the systemwide settings use this mode, then each object in the registry may be assigned this key, and the individual status of each one may be set to "yes" or "no" as appropriate.  
   
- Se il sistema server è in esecuzione su Windows NT o Windows 2000, un tipo alternativo di sicurezza è consentito.  In questo caso, l'automazione remota utilizza l'elenco di controllo di accesso \(ACL\) di NT per specificare che un utente o gruppo o gruppi di utenti possono in modalità remota attivare un server specificato.  
+ If the server system is running Windows NT or Windows 2000, then an alternative form of security is allowed. In this case, Remote Automation uses the NT access control list (ACL) to specify which users or group or groups of users may remotely activate a given server.  
   
- Si noti che le opzioni di sicurezza vengono applicate all'intero oggetto; non è possibile impostare attributi di una specifica interfaccia, o delle singole proprietà o metodi su tale oggetto.  
+ Note that the security options apply to the whole object; it is not possible to set attributes of a specific interface, or of individual properties or methods on that object.  
   
- Le opzioni di sicurezza possono essere impostate mediante l'amministratore di Connessione di Automazione Remota \(RAC\).  
+ All security options may be set through the Remote Automation Connection (RAC) Manager.  
   
-## Vedere anche  
- [Automazione remota](../mfc/remote-automation.md)
+## <a name="see-also"></a>See Also  
+ [Remote Automation](../mfc/remote-automation.md)
+
+

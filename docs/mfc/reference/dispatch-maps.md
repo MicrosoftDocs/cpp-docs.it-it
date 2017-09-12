@@ -1,5 +1,5 @@
 ---
-title: Mappe di invio | Documenti di Microsoft
+title: Dispatch Maps | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,9 +13,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- dispatch maps. macros
-- dispatch maps
-- dispatch map macros
+- dispatch maps [MFC], macros
+- dispatch maps [MFC]
+- dispatch map macros [MFC]
 ms.assetid: bef9d08b-ad35-4c3a-99d8-04150c7c04e2
 caps.latest.revision: 14
 author: mikeblome
@@ -35,86 +35,86 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
-ms.openlocfilehash: 48e5d1fe207089733caa5ed9e8ca30c2de21f95f
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1d3c8ce6d9099df6f5c19ce8e699c13f8739b878
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="dispatch-maps"></a>Mappe di invio
-Automazione OLE fornisce metodi per chiamare i metodi e accedere alle proprietà tra le applicazioni. Il meccanismo fornito dalla libreria Microsoft Foundation Class per l'invio di tali richieste è "mappa di invio," che indica i nomi interni ed esterni di funzioni di oggetti e proprietà, nonché i tipi di dati di alle stesse proprietà e degli argomenti della funzione.  
+# <a name="dispatch-maps"></a>Dispatch Maps
+OLE Automation provides ways to call methods and to access properties across applications. The mechanism supplied by the Microsoft Foundation Class Library for dispatching these requests is the "dispatch map," which designates the internal and external names of object functions and properties, as well as the data types of the properties themselves and of function arguments.  
   
-### <a name="dispatch-maps"></a>Mappe di invio  
+### <a name="dispatch-maps"></a>Dispatch Maps  
   
 |||  
 |-|-|  
-|[DECLARE_DISPATCH_MAP](#declare_dispatch_map)|Dichiara una mappa di invio verrà utilizzata per esporre una classe i metodi e proprietà (deve essere utilizzato nella dichiarazione di classe).|  
-|[BEGIN_DISPATCH_MAP](#begin_dispatch_map)|Inizia la definizione di una mappa di invio.|  
-|[END_DISPATCH_MAP](#end_dispatch_map)|Termina la definizione di una mappa di invio.|  
-|[DISP_FUNCTION](#disp_function)|Utilizzato in una mappa di invio per definire una funzione di automazione OLE.|  
-|[DISP_PROPERTY](#disp_property)|Definisce una proprietà di automazione OLE.|  
-|[DISP_PROPERTY_EX](#disp_property_ex)|Definisce una proprietà di automazione OLE e le funzioni Get e Set di nomi.|  
-|[DISP_PROPERTY_NOTIFY](#disp_property_notify)|Definisce una proprietà di automazione OLE con la notifica.|  
-|[DISP_PROPERTY_PARAM](#disp_property_param)|Definisce una proprietà di automazione OLE che accetta parametri e i nomi delle funzioni Get e Set.|  
-|[DISP_DEFVALUE](#disp_defvalue)|Imposta una proprietà esistente come il valore predefinito di un oggetto.|  
+|[DECLARE_DISPATCH_MAP](#declare_dispatch_map)|Declares that a dispatch map will be used to expose a class's methods and properties (must be used in the class declaration).|  
+|[BEGIN_DISPATCH_MAP](#begin_dispatch_map)|Starts the definition of a dispatch map.|  
+|[END_DISPATCH_MAP](#end_dispatch_map)|Ends the definition of a dispatch map.|  
+|[DISP_FUNCTION](#disp_function)|Used in a dispatch map to define an OLE automation function.|  
+|[DISP_PROPERTY](#disp_property)|Defines an OLE automation property.|  
+|[DISP_PROPERTY_EX](#disp_property_ex)|Defines an OLE automation property and names the Get and Set functions.|  
+|[DISP_PROPERTY_NOTIFY](#disp_property_notify)|Defines an OLE automation property with notification.|  
+|[DISP_PROPERTY_PARAM](#disp_property_param)|Defines an OLE automation property that takes parameters and names the Get and Set functions.|  
+|[DISP_DEFVALUE](#disp_defvalue)|Makes an existing property the default value of an object.|  
   
-##  <a name="declare_dispatch_map"></a>DECLARE_DISPATCH_MAP  
- Se un `CCmdTarget`-classe derivata nel programma supporta l'automazione OLE, che classe deve fornire una mappa di invio per esporre i relativi metodi e proprietà.  
+##  <a name="declare_dispatch_map"></a>  DECLARE_DISPATCH_MAP  
+ If a `CCmdTarget`-derived class in your program supports OLE Automation, that class must provide a dispatch map to expose its methods and properties.  
   
 ```   
 DECLARE_DISPATCH_MAP()  
 ```  
   
-### <a name="remarks"></a>Note  
- Utilizzare il `DECLARE_DISPATCH_MAP` (macro) alla fine della dichiarazione di classe. Quindi, nel. Le funzioni file CPP che definisce il membro della classe, utilizzare il `BEGIN_DISPATCH_MAP` (macro). Quindi includere le voci di macro per ogni classe del esposto metodi e proprietà ( `DISP_FUNCTION`, `DISP_PROPERTY`e così via). Infine, utilizzare il `END_DISPATCH_MAP` (macro).  
+### <a name="remarks"></a>Remarks  
+ Use the `DECLARE_DISPATCH_MAP` macro at the end of your class declaration. Then, in the .CPP file that defines the member functions for the class, use the `BEGIN_DISPATCH_MAP` macro. Then include macro entries for each of your class's exposed methods and properties ( `DISP_FUNCTION`, `DISP_PROPERTY`, and so on). Finally, use the `END_DISPATCH_MAP` macro.  
   
 > [!NOTE]
->  Se si dichiarano membri dopo `DECLARE_DISPATCH_MAP`, è necessario specificare un nuovo tipo di accesso ( **pubblica**, `private`, o `protected`) per loro.  
+>  If you declare any members after `DECLARE_DISPATCH_MAP`, you must specify a new access type ( **public**, `private`, or `protected`) for them.  
   
- Le procedure guidate di creazione guidata applicazione e codice assistere nella creazione di classi di automazione e gestione delle mappe di invio. Per ulteriori informazioni sulle mappe di invio, vedere [server di automazione](../../mfc/automation-servers.md).  
+ The Application Wizard and code wizards assist in creating Automation classes and in maintaining dispatch maps. For more information on dispatch maps, see [Automation Servers](../../mfc/automation-servers.md).  
   
-### <a name="example"></a>Esempio  
- [!code-cpp[NVC_MFCAutomation&#10;](../../mfc/codesnippet/cpp/dispatch-maps_1.h)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCAutomation#10](../../mfc/codesnippet/cpp/dispatch-maps_1.h)]  
 
-### <a name="requirements"></a>Requisiti  
- **Intestazione:** afxwin.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
 
-##  <a name="begin_dispatch_map"></a>BEGIN_DISPATCH_MAP  
- Dichiara la definizione della mappa di invio.  
+##  <a name="begin_dispatch_map"></a>  BEGIN_DISPATCH_MAP  
+ Declares the definition of your dispatch map.  
   
 ```  
 BEGIN_DISPATCH_MAP(theClass, baseClass)   
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- Specifica il nome della classe cui appartiene questa mappa di invio.  
+ Specifies the name of the class that owns this dispatch map.  
   
  `baseClass`  
- Specifica il nome della classe base `theClass`.  
+ Specifies the base class name of `theClass`.  
   
-### <a name="remarks"></a>Note  
- Nel file di implementazione (. cpp) che definisce le funzioni membro per la classe, avviare la mappa di invio con la `BEGIN_DISPATCH_MAP` (macro), aggiungere le voci di macro per ognuna delle funzioni di distribuzione e le proprietà e completare la mappa di invio con la `END_DISPATCH_MAP` (macro).  
+### <a name="remarks"></a>Remarks  
+ In the implementation (.cpp) file that defines the member functions for your class, start the dispatch map with the `BEGIN_DISPATCH_MAP` macro, add macro entries for each of your dispatch functions and properties, and complete the dispatch map with the `END_DISPATCH_MAP` macro.  
 
-### <a name="requirements"></a>Requisiti  
- **Intestazione:** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h  
 
-##  <a name="end_dispatch_map"></a>END_DISPATCH_MAP  
- Termina la definizione della mappa di invio.  
+##  <a name="end_dispatch_map"></a>  END_DISPATCH_MAP  
+ Ends the definition of your dispatch map.  
   
 ```   
 END_DISPATCH_MAP()  
 ```  
   
-### <a name="remarks"></a>Note  
- Deve essere utilizzato in combinazione con `BEGIN_DISPATCH_MAP`.  
+### <a name="remarks"></a>Remarks  
+ It must be used in conjunction with `BEGIN_DISPATCH_MAP`.  
 
-### <a name="requirements"></a>Requisiti  
- **Intestazione:** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h  
 
-##  <a name="disp_function"></a>DISP_FUNCTION  
- Definisce una funzione di automazione OLE in una mappa di invio.  
+##  <a name="disp_function"></a>  DISP_FUNCTION  
+ Defines an OLE automation function in a dispatch map.  
   
 ```   
 DISP_FUNCTION(
@@ -125,26 +125,26 @@ DISP_FUNCTION(
   vtsParams)   
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- Nome della classe.  
+ Name of the class.  
   
  `pszName`  
- Nome esterno della funzione.  
+ External name of the function.  
   
  `pfnMember`  
- Nome della funzione membro.  
+ Name of the member function.  
   
  `vtRetVal`  
- Un valore che specifica il tipo restituito della funzione.  
+ A value specifying the function's return type.  
   
  `vtsParams`  
- Un elenco di uno o più costanti specificando l'elenco dei parametri della funzione separati da spazi.  
+ A space-separated list of one or more constants specifying the function's parameter list.  
   
-### <a name="remarks"></a>Note  
- Il `vtRetVal` argomento è di tipo **VARTYPE**. I seguenti valori possibili per questo argomento vengono prelevati i `VARENUM` enumerazione:  
+### <a name="remarks"></a>Remarks  
+ The `vtRetVal` argument is of type **VARTYPE**. The following possible values for this argument are taken from the `VARENUM` enumeration:  
   
-|Simbolo|Tipo restituito|  
+|Symbol|Return type|  
 |------------|-----------------|  
 |`VT_EMPTY`|`void`|  
 |`VT_I2`|**short**|  
@@ -152,7 +152,7 @@ DISP_FUNCTION(
 |`VT_R4`|**float**|  
 |`VT_R8`|**double**|  
 |`VT_CY`|**CY**|  
-|`VT_DATE`|**DATA**|  
+|`VT_DATE`|**DATE**|  
 |`VT_BSTR`|`BSTR`|  
 |**VT_DISPATCH**|`LPDISPATCH`|  
 |`VT_ERROR`|`SCODE`|  
@@ -160,47 +160,47 @@ DISP_FUNCTION(
 |**VT_VARIANT**|**VARIANT**|  
 |**VT_UNKNOWN**|`LPUNKNOWN`|  
   
- Il `vtsParams` argomento è un elenco di valori separati da spazi di **VTS _** costanti. Uno o più di questi valori separati da spazi (non virgole) specifica l'elenco dei parametri della funzione. Di seguito è riportato un esempio: 
+ The `vtsParams` argument is a space-separated list of values from the **VTS_** constants. One or more of these values separated by spaces (not commas) specifies the function's parameter list. For example, 
   
- [!code-cpp[NVC_MFCAutomation&#14;](../../mfc/codesnippet/cpp/dispatch-maps_2.cpp)]  
+ [!code-cpp[NVC_MFCAutomation#14](../../mfc/codesnippet/cpp/dispatch-maps_2.cpp)]  
   
- Specifica un elenco contenente un valore short integer seguito da un puntatore a un valore short integer.  
+ specifies a list containing a short integer followed by a pointer to a short integer.  
   
- Il **VTS _** di seguito sono costanti e i relativi significati:  
+ The **VTS_** constants and their meanings are as follows:  
   
-|Simbolo|Tipo parametro|  
+|Symbol|Parameter type|  
 |------------|--------------------|  
 |**VTS_I2**|`Short`|  
 |**VTS_I4**|`Long`|  
 |**VTS_R4**|**Float**|  
 |**VTS_R8**|`Double`|  
-|**VTS_CY**|**const CY** o **CY\***|  
-|**VTS_DATE**|**DATA**|  
+|**VTS_CY**|**const CY** or **CY\***|  
+|**VTS_DATE**|**DATE**|  
 |**VTS_BSTR**|`LPCSTR`|  
 |**VTS_DISPATCH**|`LPDISPATCH`|  
 |**VTS_SCODE**|`SCODE`|  
 |**VTS_BOOL**|**BOOL**|  
-|**VTS_VARIANT**|**VARIANTE const\* ** o **VARIANT /**|  
+|**VTS_VARIANT**|**const VARIANT\*** or **VARIANT&**|  
 |**VTS_UNKNOWN**|`LPUNKNOWN`|  
-|**VTS_PI2**|**breve\***|  
-|**VTS_PI4**|**Long\***|  
+|**VTS_PI2**|**short\***|  
+|**VTS_PI4**|**long\***|  
 |**VTS_PR4**|**float\***|  
-|**VTS_PR8**|**Double\***|  
+|**VTS_PR8**|**double\***|  
 |**VTS_PCY**|**CY\***|  
-|**VTS_PDATE**|**DATA\***|  
+|**VTS_PDATE**|**DATE\***|  
 |**VTS_PBSTR**|**BSTR\***|  
 |**VTS_PDISPATCH**|**LPDISPATCH\***|  
 |**VTS_PSCODE**|**SCODE\***|  
 |**VTS_PBOOL**|**BOOL\***|  
 |**VTS_PVARIANT**|**VARIANT\***|  
 |**VTS_PUNKNOWN**|**LPUNKNOWN\***|  
-|**VTS_NONE**|Senza parametri|  
+|**VTS_NONE**|No parameters|  
 
-### <a name="requirements"></a>Requisiti  
- **Intestazione:** afxdisp.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h 
 
-##  <a name="disp_property"></a>DISP_PROPERTY  
- Definisce una proprietà di automazione OLE in una mappa di invio.  
+##  <a name="disp_property"></a>  DISP_PROPERTY  
+ Defines an OLE automation property in a dispatch map.  
   
 ```   
 DISP_PROPERTY(
@@ -210,30 +210,30 @@ DISP_PROPERTY(
   vtPropType)   
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- Nome della classe.  
+ Name of the class.  
   
  `pszName`  
- Nome esterno della proprietà.  
+ External name of the property.  
   
  `memberName`  
- Nome della variabile membro in cui la proprietà viene archiviata.  
+ Name of the member variable in which the property is stored.  
   
  `vtPropType`  
- Un valore che specifica il tipo della proprietà.  
+ A value specifying the property's type.  
   
-### <a name="remarks"></a>Note  
- Il `vtPropType` argomento è di tipo **VARTYPE**. I valori possibili per questo argomento vengono prelevati i `VARENUM` enumerazione:  
+### <a name="remarks"></a>Remarks  
+ The `vtPropType` argument is of type **VARTYPE**. Possible values for this argument are taken from the `VARENUM` enumeration:  
   
-|Simbolo|**Tipo di proprietà**|  
+|Symbol|**Property type**|  
 |------------|-----------------------|  
 |`VT_I2`|**short**|  
 |`VT_I4`|**long**|  
 |`VT_R4`|**float**|  
 |`VT_R8`|**double**|  
 |`VT_CY`|**CY**|  
-|`VT_DATE`|**DATA**|  
+|`VT_DATE`|**DATE**|  
 |`VT_BSTR`|`CString`|  
 |**VT_DISPATCH**|`LPDISPATCH`|  
 |`VT_ERROR`|`SCODE`|  
@@ -241,13 +241,13 @@ DISP_PROPERTY(
 |**VT_VARIANT**|**VARIANT**|  
 |**VT_UNKNOWN**|`LPUNKNOWN`|  
   
- Quando un client esterno modifica la proprietà, il valore della variabile membro specificato da `memberName` cambia; non sono presenti notifiche della modifica.  
+ When an external client changes the property, the value of the member variable specified by `memberName` changes; there is no notification of the change.  
 
-### <a name="requirements"></a>Requisiti  
- **Intestazione:** afxdisp.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h 
 
-##  <a name="disp_property_ex"></a>DISP_PROPERTY_EX  
- Definisce le funzioni utilizzate per ottenere e impostare il valore della proprietà in una mappa di invio di un nome e una proprietà di automazione OLE.  
+##  <a name="disp_property_ex"></a>  DISP_PROPERTY_EX  
+ Defines an OLE automation property and name the functions used to get and set the property's value in a dispatch map.  
   
 ```   
 DISP_PROPERTY_EX(
@@ -258,32 +258,32 @@ DISP_PROPERTY_EX(
   vtPropType)   
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- Nome della classe.  
+ Name of the class.  
   
  `pszName`  
- Nome esterno della proprietà.  
+ External name of the property.  
   
  `memberGet`  
- Nome della funzione membro utilizzata per ottenere la proprietà.  
+ Name of the member function used to get the property.  
   
  `memberSet`  
- Nome della funzione membro utilizzata per impostare la proprietà.  
+ Name of the member function used to set the property.  
   
  `vtPropType`  
- Un valore che specifica il tipo della proprietà.  
+ A value specifying the property's type.  
   
-### <a name="remarks"></a>Note  
- Il `memberGet` e `memberSet` funzioni hanno firme varia a seconda di `vtPropType` argomento. Il `memberGet` funzione non accetta argomenti e restituisce un valore del tipo specificato da `vtPropType`. Il `memberSet` funzione accetta un argomento del tipo specificato da `vtPropType` e non restituisce nulla.  
+### <a name="remarks"></a>Remarks  
+ The `memberGet` and `memberSet` functions have signatures determined by the `vtPropType` argument. The `memberGet` function takes no arguments and returns a value of the type specified by `vtPropType`. The `memberSet` function takes an argument of the type specified by `vtPropType` and returns nothing.  
   
- Il `vtPropType` argomento è di tipo **VARTYPE**. I valori possibili per questo argomento vengono prelevati i `VARENUM` enumerazione. Per un elenco di questi valori, vedere la sezione Osservazioni per la `vtRetVal` parametro [DISP_FUNCTION](#disp_function). Si noti che `VT_EMPTY`, elencati nel `DISP_FUNCTION` note, non è consentito come un tipo di dati di proprietà.  
+ The `vtPropType` argument is of type **VARTYPE**. Possible values for this argument are taken from the `VARENUM` enumeration. For a list of these values, see the Remarks for the `vtRetVal` parameter in [DISP_FUNCTION](#disp_function). Note that `VT_EMPTY`, listed in the `DISP_FUNCTION` remarks, is not permitted as a property data type.  
 
-### <a name="requirements"></a>Requisiti  
- **Intestazione:** afxdisp.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h 
 
-##  <a name="disp_property_notify"></a>DISP_PROPERTY_NOTIFY  
- Definisce una proprietà di automazione OLE con la notifica in una mappa di invio.  
+##  <a name="disp_property_notify"></a>  DISP_PROPERTY_NOTIFY  
+ Defines an OLE automation property with notification in a dispatch map.  
   
 ```   
 DISP_PROPERTY_NOTIFY(
@@ -294,35 +294,35 @@ DISP_PROPERTY_NOTIFY(
   vtPropType)   
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- Nome della classe.  
+ Name of the class.  
   
  `szExternalName`  
- Nome esterno della proprietà.  
+ External name of the property.  
   
  `memberName`  
- Nome della variabile membro in cui la proprietà viene archiviata.  
+ Name of the member variable in which the property is stored.  
   
  `pfnAfterSet`  
- Nome della funzione di notifica per `szExternalName`.  
+ Name of the notification function for `szExternalName`.  
   
  `vtPropType`  
- Un valore che specifica il tipo della proprietà.  
+ A value specifying the property's type.  
   
-### <a name="remarks"></a>Note  
- A differenza delle proprietà definite con `DISP_PROPERTY`, una proprietà definita con `DISP_PROPERTY_NOTIFY` chiamerà automaticamente la funzione specificata da `pfnAfterSet` quando la proprietà viene modificata.  
+### <a name="remarks"></a>Remarks  
+ Unlike properties defined with `DISP_PROPERTY`, a property defined with `DISP_PROPERTY_NOTIFY` will automatically call the function specified by `pfnAfterSet` when the property is changed.  
   
- Il `vtPropType` argomento è di tipo **VARTYPE**. I valori possibili per questo argomento vengono prelevati i `VARENUM` enumerazione:  
+ The `vtPropType` argument is of type **VARTYPE**. Possible values for this argument are taken from the `VARENUM` enumeration:  
   
-|Simbolo|**Tipo di proprietà**|  
+|Symbol|**Property type**|  
 |------------|-----------------------|  
 |`VT_I2`|**short**|  
 |`VT_I4`|**long**|  
 |`VT_R4`|**float**|  
 |`VT_R8`|**double**|  
 |`VT_CY`|**CY**|  
-|`VT_DATE`|**DATA**|  
+|`VT_DATE`|**DATE**|  
 |`VT_BSTR`|`CString`|  
 |**VT_DISPATCH**|`LPDISPATCH`|  
 |`VT_ERROR`|`SCODE`|  
@@ -330,11 +330,11 @@ DISP_PROPERTY_NOTIFY(
 |**VT_VARIANT**|**VARIANT**|  
 |**VT_UNKNOWN**|`LPUNKNOWN`|  
 
-### <a name="requirements"></a>Requisiti  
- **Intestazione:** afxdisp.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h 
 
-##  <a name="disp_property_param"></a>DISP_PROPERTY_PARAM  
- Definisce una proprietà accessibile con separato **ottenere** e `Set` funzioni membro.  
+##  <a name="disp_property_param"></a>  DISP_PROPERTY_PARAM  
+ Defines a property accessed with separate **Get** and `Set` member functions.  
   
 ```   
 DISP_PROPERTY_PARAM(
@@ -346,70 +346,70 @@ DISP_PROPERTY_PARAM(
   vtsParams)   
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- Nome della classe.  
+ Name of the class.  
   
  *pszExternalName*  
- Nome esterno della proprietà.  
+ External name of the property.  
   
  `pfnGet`  
- Nome della funzione membro utilizzata per ottenere la proprietà.  
+ Name of the member function used to get the property.  
   
  `pfnSet`  
- Nome della funzione membro utilizzata per impostare la proprietà.  
+ Name of the member function used to set the property.  
   
  `vtPropType`  
- Un valore che specifica il tipo della proprietà.  
+ A value specifying the property's type.  
   
  `vtsParams`  
- Una stringa di separati da spazi **VTS _** tipi di parametri varianti, uno per ogni parametro.  
+ A string of space-separated **VTS_** variant parameter types, one for each parameter.  
   
-### <a name="remarks"></a>Note  
- A differenza di `DISP_PROPERTY_EX` (macro), questa macro consente di specificare un elenco di parametri per la proprietà. Ciò è utile per l'implementazione di proprietà indicizzate o con parametri.  
+### <a name="remarks"></a>Remarks  
+ Unlike the `DISP_PROPERTY_EX` macro, this macro allows you to specify a parameter list for the property. This is useful for implementing properties that are indexed or parameterized.  
   
-### <a name="example"></a>Esempio  
- Si consideri la seguente dichiarazione di get e membro del set di funzioni che consentono all'utente di richiedere una riga e colonna specifiche durante l'accesso alla proprietà:  
+### <a name="example"></a>Example  
+ Consider the following declaration of get and set member functions that allow the user to request a specific row and column when accessing the property:  
   
- [!code-cpp[9 NVC_MFCActiveXControl](../../mfc/codesnippet/cpp/dispatch-maps_3.h)]  
+ [!code-cpp[NVC_MFCActiveXControl#9](../../mfc/codesnippet/cpp/dispatch-maps_3.h)]  
   
- Questi corrispondono alle seguenti `DISP_PROPERTY_PARAM` macro nella mappa di invio del controllo:  
+ These correspond to the following `DISP_PROPERTY_PARAM` macro in the control dispatch map:  
   
- [!code-cpp[NVC_MFCActiveXControl&#10;](../../mfc/codesnippet/cpp/dispatch-maps_4.cpp)]  
+ [!code-cpp[NVC_MFCActiveXControl#10](../../mfc/codesnippet/cpp/dispatch-maps_4.cpp)]  
   
- Un altro esempio, si consideri il seguente get e membro del set di funzioni:  
+ As another example, consider the following get and set member functions:  
   
- [!code-cpp[NVC_MFCActiveXControl&#11;](../../mfc/codesnippet/cpp/dispatch-maps_5.h)]  
+ [!code-cpp[NVC_MFCActiveXControl#11](../../mfc/codesnippet/cpp/dispatch-maps_5.h)]  
   
- Questi corrispondono alle seguenti `DISP_PROPERTY_PARAM` macro nella mappa di invio del controllo:  
+ These correspond to the following `DISP_PROPERTY_PARAM` macro in the control dispatch map:  
   
- [!code-cpp[NVC_MFCActiveXControl&#12;](../../mfc/codesnippet/cpp/dispatch-maps_6.cpp)]  
+ [!code-cpp[NVC_MFCActiveXControl#12](../../mfc/codesnippet/cpp/dispatch-maps_6.cpp)]  
 
-### <a name="requirements"></a>Requisiti  
- **Intestazione:** afxdisp.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h 
 
-##  <a name="disp_defvalue"></a>DISP_DEFVALUE  
- Imposta una proprietà esistente come il valore predefinito di un oggetto.  
+##  <a name="disp_defvalue"></a>  DISP_DEFVALUE  
+ Makes an existing property the default value of an object.  
   
 ```   
 DISP_DEFVALUE(theClass, pszName)   
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- Nome della classe.  
+ Name of the class.  
   
  `pszName`  
- Nome esterno della proprietà che rappresentata il "valore" dell'oggetto.  
+ External name of the property that represents the "value" of the object.  
   
-### <a name="remarks"></a>Note  
- L'utilizzo di un valore predefinito può rendere più facile la programmazione dell'oggetto di automazione per le applicazioni Visual Basic.  
+### <a name="remarks"></a>Remarks  
+ Using a default value can make programming your automation object simpler for Visual Basic applications.  
   
- Il "valore predefinito" dell'oggetto è la proprietà che viene recuperata o impostata quando un riferimento a un oggetto non specifica una proprietà o una funzione membro.  
+ The "default value" of your object is the property that is retrieved or set when a reference to an object does not specify a property or member function.  
 
-### <a name="requirements"></a>Requisiti  
- **Intestazione:** afxdisp.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h 
 
-## <a name="see-also"></a>Vedere anche  
- [Macro e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

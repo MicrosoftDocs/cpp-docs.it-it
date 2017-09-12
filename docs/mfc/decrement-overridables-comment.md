@@ -1,48 +1,66 @@
 ---
-title: "// Commento sui sottoponibili a override | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "commenti, MFC"
-  - "MFC (file di origine), commenti a sottoponibili a override"
-  - "commenti a sottoponibili a override in file di origine MFC"
-  - "override, commenti a sottoponibili a override in file di origine MFC"
+title: -- Overridables Comment | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Overridables comment in MFC source files
+- MFC source files, Overridables comment
+- overriding, Overridables comment in MFC source files
+- comments, MFC
 ms.assetid: 8968dea5-0d94-451f-bcb2-991580e65ba2
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# // Commento sui sottoponibili a override
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1c0031565dcc66b1db0c1f6ce35a4f7fc490da9f
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-La sezione di `// Overridables` di una dichiarazione di classe MFC contiene le funzioni virtuali che è possibile eseguire l'override in una classe derivata quando è necessario modificare il comportamento della classe base.  In genere vengono denominate iniziare con " ON ", anche se non è strettamente necessario.  Le funzioni di seguito sono progettate per essere sottoposto a override e spesso implementano o forniscono un buon grado di ordinamento "di callback" o "hook." In genere, questi membri sono protetti.  
+---
+# <a name="-overridables-comment"></a>// Overridables Comment
+The `// Overridables` section of an MFC class declaration contains virtual functions that you can override in a derived class when you need to modify the base class behavior. They are usually named starting with "On", although it is not strictly necessary. Functions here are designed to be overridden, and often implement or provide some sort of "callback" or "hook." Typically, these members are protected.  
   
- In MFC stessa, le funzioni virtuali pure vengono sempre inseriti in questa sezione.  Una funzione virtuale pura in C\+\+ è una del form:  
+ In MFC itself, pure virtual functions are always placed in this section. A pure virtual function in C++ is one of the form:  
   
  `virtual void OnDraw( ) = 0;`  
   
- Nell'elenco di esempio da classe `CStdioFile`, in [Un esempio di commenti](../mfc/an-example-of-the-comments.md), l'elenco non include sezione dei overridables.  Classificare **CDocument**, invece, elenchi su 10 funzioni membro sottoponibili a override.  
+ In the sample listing from class `CStdioFile`, in [An Example of the Comments](../mfc/an-example-of-the-comments.md), the list includes no overridables section. Class **CDocument**, on the other hand, lists approximately 10 overridable member functions.  
   
- In alcune classi, è inoltre possibile visualizzare il commento `// Advanced Overridables`.  Queste funzioni vengono che solo i programmatori avanzati devono tentare per eseguire l'override.  Non sarà probabilmente mai eseguire eseguirne l'override.  
+ In some classes, you may also see the comment `// Advanced Overridables`. These are functions that only advanced programmers should attempt to override. You will probably never need to override them.  
   
 > [!NOTE]
->  Le convenzioni riportate in questo articolo vengono eseguiti correttamente, in genere per metodi e proprietà di automazione \(precedentemente nota come automazione OLE\).  I metodi di automazione sono simili alle operazioni di MFC.  Proprietà di automazione sono simili agli attributi di MFC.  Eventi di automazione \(supportati per i controlli ActiveX, precedentemente noto come controlli OLE\) sono simili alle funzioni membro overridable MFC.  
+>  The conventions described in this article also work well, in general, for Automation (formerly known as OLE Automation) methods and properties. Automation methods are similar to MFC operations. Automation properties are similar to MFC attributes. Automation events (supported for ActiveX controls, formerly known as OLE controls) are similar to MFC overridable member functions.  
   
-## Vedere anche  
- [Utilizzo dei file di origine MFC](../mfc/using-the-mfc-source-files.md)   
- [Esempio dei commenti](../mfc/an-example-of-the-comments.md)   
- [\/\/ Commento all'implementazione](../mfc/decrement-implementation-comment.md)   
- [\/\/ Commento sui costruttori](../mfc/decrement-constructors-comment.md)   
- [\/\/ Commento sugli attributi](../mfc/decrement-attributes-comment.md)   
- [\/\/ Commento sulle operazioni](../mfc/decrement-operations-comment.md)
+## <a name="see-also"></a>See Also  
+ [Using the MFC Source Files](../mfc/using-the-mfc-source-files.md)   
+ [An Example of the Comments](../mfc/an-example-of-the-comments.md)   
+ [// Implementation Comment](../mfc/decrement-implementation-comment.md)   
+ [// Constructors Comment](../mfc/decrement-constructors-comment.md)   
+ [// Attributes Comment](../mfc/decrement-attributes-comment.md)   
+ [// Operations Comment](../mfc/decrement-operations-comment.md)
+
+

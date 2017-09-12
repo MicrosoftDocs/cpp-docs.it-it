@@ -1,101 +1,120 @@
 ---
-title: "Procedura dettagliata: creazione di un&#39;applicazione barra multifunzione utilizzando MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "creazione di un'applicazione barra multifunzione (MFC)"
-  - "applicazione barra multifunzione, creazione (MFC)"
+title: 'Walkthrough: Creating a Ribbon Application By Using MFC | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- ribbon application, creating (MFC)
+- creating a ribbon aplication (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
 caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# Procedura dettagliata: creazione di un&#39;applicazione barra multifunzione utilizzando MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dd9aff0bf52100207e2df0504226c991d0f66614
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-In questa procedura dettagliata viene mostrato come usare **Creazione guidata applicazione MFC** per creare un'applicazione che per impostazione predefinita ha una barra multifunzione.  Puoi quindi espandere la barra multifunzione aggiungendo una categoria **Personalizzata** con un pannello **Preferiti** e aggiungendo al pannello alcuni comandi utilizzati frequentemente.  
+---
+# <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Walkthrough: Creating a Ribbon Application By Using MFC
+This walkthrough shows how to use the **MFC Application Wizard** to create an application that has a ribbon by default. You can then expand the ribbon by adding a **Custom** ribbon category that has a **Favorites** ribbon panel, and then adding some frequently used commands to the panel.  
   
-## Prerequisiti  
- In questa procedura dettagliata si presuppone che [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] sia impostato per utilizzare **Impostazioni generali per lo sviluppo**.  Se utilizzi impostazioni diverse, è possibile che alcuni elementi dell'interfaccia utente a cui viene fatto riferimento nelle istruzioni seguenti non vengano visualizzati.  Per informazioni su come modificare le impostazioni, vedi [How to: Reset Your Settings](http://msdn.microsoft.com/it-it/c95c51be-e609-4769-abba-65e6beedec76).  
+## <a name="prerequisites"></a>Prerequisites  
+ This walkthrough assumes that you have set [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] to use **General Development Settings**. If you are using different settings, some of the user interface (UI) elements that are referenced in the following instructions might not be displayed. For information about how to change settings, see [How to: Reset Your Settings](http://msdn.microsoft.com/en-us/c95c51be-e609-4769-abba-65e6beedec76).  
   
-### Per creare un'applicazione MFC con una barra multifunzione  
+### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>To create an MFC application that has a ribbon  
   
-1.  Utilizza **Creazione guidata applicazione MFC** per creare un'applicazione MFC con una barra multifunzione.  Per avviare la procedura guidata, scegli **Nuovo** dal menu **File**, quindi fai clic su **Progetto**.  
+1.  Use the **MFC Application Wizard** to create an MFC application that has a ribbon. To run the wizard, on the **File** menu, point to **New**, and then click **Project**.  
   
-2.  Nella finestra di dialogo **Nuovo progetto**, espandi il nodo **Visual C\+\+** sotto la voce **Modelli installati**, seleziona **MFC** e quindi **Applicazione MFC**.  Digita un nome per il progetto, ad esempio, `MFCRibbonApp`, quindi scegli **OK**.  
+2.  In the **New Project** dialog box, expand the **Visual C++** node under **Installed Templates**, select **MFC**, and then select **MFC Application**. Type a name for the project, for example, `MFCRibbonApp`, and then click **OK**.  
   
-3.  Nella prima pagina della **Creazione guidata applicazione MFC** fai clic su **Avanti**.  
+3.  On the first page of the **MFC Application Wizard**, click **Next**.  
   
-4.  Nella pagina **Tipo di applicazione**, in **Stile di visualizzazione e colori**, seleziona **Office 2007 \(tema blu\)**.  Lascia invariate le altre impostazioni.  Scegliere **Avanti**.  
+4.  On the **Application Type** page, under **Visual style and colors**, select **Office 2007 (Blue theme)**. Leave the other settings as they are. Click **Next**.  
   
-5.  Nella pagina **Supporto documenti compositi** verifica che sia selezionato **Nessuno**, quindi scegli **Avanti**.  
+5.  On the **Compound Document Support** page, make sure that **None** is selected and then click **Next**.  
   
-6.  Nella pagina **Proprietà modello documento**, nella casella **Estensione di file** digita un'estensione di file per i documenti che vengono creati da questa applicazione, ad esempio `mfcrbnapp`.  Scegliere **Avanti**.  
+6.  On the **Document Template Properties** page, in the **File extension** box, type a file name extension for documents that this application creates, for example, `mfcrbnapp`. Click **Next**.  
   
-7.  Nella pagina **Supporto database** verifica che sia selezionato **Nessuno**, quindi scegli **Avanti**.  
+7.  On the **Database Support** page, make sure that **None** is selected and then click **Next**.  
   
-8.  Nella pagina **Funzionalità interfaccia utente** verifica che sia selezionata l'opzione **Usa barra multifunzione**.  Scegliere **Avanti**.  
+8.  On the **User Interface Features** page, make sure that **Use a ribbon** is selected. Click **Next**.  
   
-9. Per impostazione predefinita, **Creazione guidata applicazione MFC** aggiunge il supporto per diversi riquadri ancorati.  Dal momento che questa procedura dettagliata fornisce informazioni unicamente sulla barra multifunzione, puoi rimuovere tali opzioni dall'applicazione.  Nella pagina **Funzionalità avanzate** deseleziona tutte le opzioni.  Scegliere **Avanti**.  
+9. By default, the **MFC Application Wizard** adds support for several docking panes. Because this walkthrough just teaches about the ribbon, you can remove these options from the application. On the **Advanced Features** page, clear all options. Click **Next**.  
   
-10. Nella pagina **Classi generate** scegli **Fine** per creare l'applicazione MFC.  
+10. On the **Generated Classes** page, click **Finish** to create the MFC application.  
   
-11. Per verificare che l'applicazione sia stata creata correttamente, compilala ed eseguila.  Per compilare l'applicazione, scegliere **Compila soluzione** dal menu **Compila**.  Se l'applicazione viene compilata correttamente, eseguila facendo clic su **Avvia debug** dal menu **Debug**.  
+11. To verify that the application was created successfully, build it and run it. To build the application, on the **Build** menu, click **Build Solution**. If the application builds successfully, run it by clicking **Start Debugging** on the **Debug** menu.  
   
-     La procedura guidata crea automaticamente una barra multifunzione con una categoria della barra multifunzione denominata **Pagina iniziale**.  Questa barra multifunzione contiene tre pannelli della barra multifunzione, denominati **Appunti**, **Visualizza** e **Finestra**.  
+     The wizard automatically creates a ribbon that has one ribbon category that is named **Home**. This ribbon contains three ribbon panels, which are named **Clipboard**, **View**, and **Window**.  
   
-### Per aggiungere una categoria e un pannello alla barra multifunzione  
+### <a name="to-add-a-category-and-panel-to-the-ribbon"></a>To add a category and panel to the ribbon  
   
-1.  Per aprire la risorsa della barra multifunzione creata dalla procedura guidata, nel menu **Visualizza** fai clic su **Altre finestre**, quindi scegli **Visualizzazione risorse**.  In **Visualizzazione risorse** fai clic su **Barra multifunzione**, quindi fai doppio clic su **IDR\_RIBBON**.  
+1.  To open the ribbon resource that the wizard created, on the **View** menu, point to **Other Windows** and then click **Resource View**. In **Resource View**, click **Ribbon** and then double-click **IDR_RIBBON**.  
   
-2.  Innanzitutto, aggiungi una categoria personalizzata alla barra multifunzione facendo doppio clic su **Categoria** nella **Casella degli strumenti**.  
+2.  First, add a custom category to the ribbon by double-clicking **Category** in the **Toolbox**.  
   
-     Viene creata una categoria con il titolo **Category1**.  Per impostazione predefinita, la categoria contiene un pannello.  
+     A category that has the caption **Category1** is created. By default, the category contains one panel.  
   
-     Fai clic con il pulsante destro del mouse su **Category1**, quindi scegli **Proprietà**.  Nella finestra **Proprietà** imposta **Titolo** su `Personalizzata`.  
+     Right-click **Category1** and then click **Properties**. In the **Properties** window, change **Caption** to `Custom`.  
   
-     Le proprietà **Large Images** e **Small Images** specificano le bitmap che vengono utilizzate come icone per gli elementi della barra multifunzione in questa categoria.  La creazione di bitmap personalizzate non rientra nell'ambito di questa procedura dettagliata, pertanto riutilizza le bitmap create dalla procedura guidata.  Le bitmap piccole sono 16 x 16 pixel.  Per le immagini piccole, utilizza le bitmap a cui si accede tramite l'ID di risorsa IDB\_FILESMALL.  Le bitmap grandi sono 32 x 32 pixel.  Per le immagini grandi, utilizza le bitmap a cui si accede tramite l'ID di risorsa IDB\_FILELARGE.  
+     The **Large Images** and **Small Images** properties specify the bitmaps that are used as icons for the ribbon elements in this category. Because creating custom bitmaps is beyond the scope of this walkthrough, just reuse the bitmaps that were created by the wizard. Small bitmaps are 16 pixels by 16 pixels. For small images, use the bitmaps that are accessed by the IDB_FILESMALL resource ID. Large bitmaps are 32 pixels by 32 pixels. For large images, use the bitmaps that are accessed by the IDB_FILELARGE resource ID.  
   
     > [!NOTE]
-    >  Sugli schermi HDPI, vengono usate automaticamente le versioni HDPI delle immagini.  
+    >  On high dots per inch (HDPI) displays, the HDPI versions of the images are automatically used.  
   
-3.  Successivamente, personalizza il pannello.  I pannelli vengono utilizzati per raggruppare gli elementi logicamente correlati gli uni agli altri.  Ad esempio, nella scheda **Pagina iniziale** di questa applicazione, i comandi **Taglia**, **Copia** e **Incolla** si trovano nel pannello **Appunti**.  Per personalizzare il pannello, fai clic con il pulsante destro del mouse su **Panel1**, quindi scegli **Proprietà**.  Nella finestra **Proprietà** imposta **Titolo** su `Preferiti`.  
+3.  Next, customize the panel. Panels are used to group items that are logically related to one another. For example, on the **Home** tab of this application, the **Cut**, **Copy**, and **Paste** commands are all located on the **Clipboard** panel. To customize the panel, right-click **Panel1** and then click **Properties**. In the **Properties** window, change **Caption** to `Favorites`.  
   
-     Puoi specificare il valore di **Image Index** per il pannello.  Questo numero specifica l'icona da visualizzare se il pannello della barra multifunzione viene aggiunto alla **Barra di accesso rapido**.  L'icona non viene visualizzata nel pannello della barra multifunzione.  
+     You can specify the **Image Index** for the panel. This number specifies the icon that is displayed if the ribbon panel is added to the **Quick Access Toolbar**. The icon is not displayed on the ribbon panel itself.  
   
-4.  Per verificare che la categoria della barra multifunzione e il pannello siano stati creati correttamente, visualizza in anteprima il controllo della barra multifunzione.  Nella **Barra degli strumenti Editor Ribbon** fai clic sul pulsante **Test Ribbon**.  Sulla barra multifunzione vengono visualizzati una scheda **Personalizzata** e un pannello **Preferiti**.  
+4.  To verify that the ribbon category and panel were created successfully, preview the ribbon control. On the **Ribbon Editor Toolbar**, click the **Test Ribbon** button. A **Custom** tab and **Favorites** panel should be displayed on the ribbon.  
   
-### Per aggiungere elementi ai pannelli della barra multifunzione  
+### <a name="to-add-elements-to-the-ribbon-panels"></a>To add elements to the ribbon panels  
   
-1.  Per aggiungere elementi al pannello creato nella procedura precedente, trascina i controlli dalla sezione **Editor Ribbon** della **Casella degli strumenti** al pannello nella visualizzazione progettazione.  
+1.  To add elements to the panel that you created in the previous procedure, drag controls from the **Ribbon Editor** section of the **Toolbox** to the panel in the design view.  
   
-2.  Innanzitutto, aggiungi un pulsante **Stampa**.  Il pulsante **Stampa** avrà un sottomenu che contiene un comando **Stampa immediata** per stampare utilizzando la stampante predefinita.  Entrambi i comandi sono già definiti per l'applicazione.  Si trovano nel menu dell'applicazione.  
+2.  First, add a **Print** button. The **Print** button will have a submenu that contains a **Quick Print** command that prints by using the default printer. Both of these commands are already defined for this application. They are located on the application menu.  
   
-     Per creare il pulsante **Stampa**, trascina sul pannello uno strumento Button.  
+     To create the **Print** button, drag a Button tool to the panel.  
   
-     Nella finestra **Proprietà**, imposta la proprietà **ID** su **ID\_FILE\_PRINT**, che dovrebbe essere già definito.  Imposta **Titolo** su `Stampa`.  Imposta **Image Index** su `4`.  
+     In the **Properties** window, change the **ID** property to **ID_FILE_PRINT**, which should already be defined. Change **Caption** to `Print`. Change **Image Index** to `4`.  
   
-     Per creare il pulsante **Stampa immediata**, fai clic sulla colonna del valore della proprietà accanto a **Menu Items**, quindi fai clic sui puntini di sospensione \(**...**\).  In **Editor elementi** fai clic sul pulsante senza etichetta **Aggiungi** per creare una voce di menu.  Nella finestra **Proprietà** imposta **Titolo** su `Stampa immediata`, **ID** su `ID_FILE_PRINT_DIRECT` e **Immagine** su `5`.  La proprietà dell'immagine specifica l'icona di Stampa immediata nella risorsa bitmap IDB\_FILESMALL.  
+     To create the **Quick Print** button, click the property value column next to **Menu Items**, and then click the ellipsis (**...**). In the **Items Editor**, click the unlabeled **Add** button to create a menu item. In the **Properties** window, change **Caption** to `Quick Print`, **ID** to `ID_FILE_PRINT_DIRECT`, and **Image** to `5`. The image property specifies the Quick Print icon in the IDB_FILESMALL bitmap resource.  
   
-3.  Per verificare che i pulsanti siano stati aggiunti al pannello della barra multifunzione, compila l'applicazione ed eseguila.  Per compilare l'applicazione, scegliere **Compila soluzione** dal menu **Compila**.  Se l'applicazione viene compilata correttamente, eseguirla scegliendo **Avvia debug** dal menu **Debug**.  Dovrebbero essere visualizzati il pulsante **Stampa** e la casella combinata nel pannello **Preferiti** della scheda **Personalizzata** nella barra multifunzione.  
+3.  To verify that the buttons were added to the ribbon panel, build the application and run it. To build the application, on the **Build** menu, click **Build Solution**. If the application builds successfully, run the application by clicking **Start Debugging** on the **Debug** menu. The **Print** button and the combo box on the **Favorites** panel on the **Custom** tab on the ribbon should be displayed.  
   
-## Passaggi successivi  
- [Procedura: personalizzare la barra di accesso rapido](../mfc/how-to-customize-the-quick-access-toolbar.md)  
+## <a name="next-steps"></a>Next Steps  
+ [How to: Customize the Quick Access Toolbar](../mfc/how-to-customize-the-quick-access-toolbar.md)  
   
- [Procedura: personalizzare il pulsante dell'applicazione](../mfc/how-to-customize-the-application-button.md)  
+ [How to: Customize the Application Button](../mfc/how-to-customize-the-application-button.md)  
   
- Per esempi completi, vedi [Esempi \(MFC Feature Pack\)](../top/visual-cpp-samples.md).  
+ For end-to-end samples, see [Samples (MFC Feature Pack)](../visual-cpp-samples.md).  
   
-## Vedere anche  
- [Procedure dettagliate](../mfc/walkthroughs-mfc.md)   
- [Esempi \(MFC Feature Pack\)](../top/visual-cpp-samples.md)
+## <a name="see-also"></a>See Also  
+ [Walkthroughs](../mfc/walkthroughs-mfc.md)   
+ [Samples (MFC Feature Pack)](../visual-cpp-samples.md)
+
+

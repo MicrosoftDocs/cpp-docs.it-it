@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCPreviewCtrlImpl | Documenti di Microsoft
+title: CMFCPreviewCtrlImpl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,7 +29,21 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCPreviewCtrlImpl class
+- CMFCPreviewCtrlImpl [MFC], CMFCPreviewCtrlImpl
+- CMFCPreviewCtrlImpl [MFC], Create
+- CMFCPreviewCtrlImpl [MFC], Destroy
+- CMFCPreviewCtrlImpl [MFC], Focus
+- CMFCPreviewCtrlImpl [MFC], GetDocument
+- CMFCPreviewCtrlImpl [MFC], Redraw
+- CMFCPreviewCtrlImpl [MFC], SetDocument
+- CMFCPreviewCtrlImpl [MFC], SetHost
+- CMFCPreviewCtrlImpl [MFC], SetPreviewVisuals
+- CMFCPreviewCtrlImpl [MFC], SetRect
+- CMFCPreviewCtrlImpl [MFC], DoPaint
+- CMFCPreviewCtrlImpl [MFC], m_clrBackColor
+- CMFCPreviewCtrlImpl [MFC], m_clrTextColor
+- CMFCPreviewCtrlImpl [MFC], m_font
+- CMFCPreviewCtrlImpl [MFC], m_pDocument
 ms.assetid: 06257fa0-54c9-478d-9d68-c9698c3f93ed
 caps.latest.revision: 28
 author: mikeblome
@@ -49,64 +63,64 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: b3ccd0d6e03f652798b45ac35d36f8bc2f63e048
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7c0e9567fbbc5b750e378af2693a2596c007a05e
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcpreviewctrlimpl-class"></a>Classe CMFCPreviewCtrlImpl
-Questa classe implementa una finestra che viene inserita in una finestra host fornita dalla Shell per l'anteprima avanzata.  
+# <a name="cmfcpreviewctrlimpl-class"></a>CMFCPreviewCtrlImpl Class
+This class implements a window that is placed on a host window provided by the Shell for Rich Preview.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCPreviewCtrlImpl : public CWnd;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Costruttori pubblici  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCPreviewCtrlImpl:: ~ CMFCPreviewCtrlImpl](#dtor)|Distrugge un oggetto di controllo anteprima.|  
-|[CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl](#cmfcpreviewctrlimpl)|Costruisce un oggetto di controllo anteprima.|  
+|[CMFCPreviewCtrlImpl::~CMFCPreviewCtrlImpl](#dtor)|Destructs a preview control object.|  
+|[CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl](#cmfcpreviewctrlimpl)|Constructs a preview control object.|  
   
-### <a name="public-methods"></a>Metodi pubblici  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCPreviewCtrlImpl::Create](#create)|Di overload. Chiamato da un gestore anteprima avanzata per creare la finestra di Windows.|  
-|[CMFCPreviewCtrlImpl::Destroy](#destroy)|Chiamato da un gestore di anteprime Rich quando è necessario eliminare questo controllo.|  
-|[CMFCPreviewCtrlImpl::Focus](#focus)|Imposta lo stato attivo al controllo.|  
-|[CMFCPreviewCtrlImpl::GetDocument](#getdocument)|Restituisce un documento collegato a questo controllo anteprima.|  
-|[CMFCPreviewCtrlImpl::Redraw](#redraw)|Indica il controllo di ridisegnare.|  
-|[CMFCPreviewCtrlImpl::SetDocument](#setdocument)|Chiamato dal gestore di anteprime per creare una relazione tra l'implementazione di documento e il controllo anteprima.|  
-|[CMFCPreviewCtrlImpl::SetHost](#sethost)|Imposta un nuovo elemento padre per questo controllo.|  
-|[CMFCPreviewCtrlImpl::SetPreviewVisuals](#setpreviewvisuals)|Chiamato da un gestore di anteprime Rich quando è necessario impostare gli elementi visivi di un'anteprima dettagliata del contenuto.|  
-|[CMFCPreviewCtrlImpl::SetRect](#setrect)|Imposta un nuovo rettangolo di delimitazione per questo controllo.|  
+|[CMFCPreviewCtrlImpl::Create](#create)|Overloaded. Called by a Rich Preview handler to create the Windows window.|  
+|[CMFCPreviewCtrlImpl::Destroy](#destroy)|Called by a Rich Preview handler when it needs to destroy this control.|  
+|[CMFCPreviewCtrlImpl::Focus](#focus)|Sets input focus to this control.|  
+|[CMFCPreviewCtrlImpl::GetDocument](#getdocument)|Returns a document connected to this preview control.|  
+|[CMFCPreviewCtrlImpl::Redraw](#redraw)|Tells this control to redraw.|  
+|[CMFCPreviewCtrlImpl::SetDocument](#setdocument)|Called by the preview handler to create a relationship between the document implementation and the preview control.|  
+|[CMFCPreviewCtrlImpl::SetHost](#sethost)|Sets a new parent for this control.|  
+|[CMFCPreviewCtrlImpl::SetPreviewVisuals](#setpreviewvisuals)|Called by a Rich Preview handler when it needs to set visuals of rich preview content.|  
+|[CMFCPreviewCtrlImpl::SetRect](#setrect)|Sets a new bounding rectangle for this control.|  
   
-### <a name="protected-methods"></a>Metodi protetti  
+### <a name="protected-methods"></a>Protected Methods  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCPreviewCtrlImpl::DoPaint](#dopaint)|Chiamato dal framework per eseguire il rendering dell'anteprima.|  
+|[CMFCPreviewCtrlImpl::DoPaint](#dopaint)|Called by the framework to render the preview.|  
   
-### <a name="protected-data-members"></a>Membri dati protetti  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCPreviewCtrlImpl::m_clrBackColor](#m_clrbackcolor)|Colore di sfondo della finestra di anteprima.|  
-|[CMFCPreviewCtrlImpl::m_clrTextColor](#m_clrtextcolor)|Colore del testo della finestra di anteprima.|  
-|[CMFCPreviewCtrlImpl::m_font](#m_font)|Tipo di carattere utilizzato per visualizzare il testo nella finestra di anteprima.|  
-|[CMFCPreviewCtrlImpl::m_pDocument](#m_pdocument)|Un puntatore a un documento il cui contenuto viene visualizzato in anteprima nel controllo.|  
+|[CMFCPreviewCtrlImpl::m_clrBackColor](#m_clrbackcolor)|Background color of preview window.|  
+|[CMFCPreviewCtrlImpl::m_clrTextColor](#m_clrtextcolor)|Text color of preview window.|  
+|[CMFCPreviewCtrlImpl::m_font](#m_font)|Font used to display text in the preview window.|  
+|[CMFCPreviewCtrlImpl::m_pDocument](#m_pdocument)|A pointer to a document whose content is previewed in the control.|  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** afxwin.h    
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h    
   
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -115,16 +129,16 @@ class CMFCPreviewCtrlImpl : public CWnd;
   
  [CMFCPreviewCtrlImpl](../../mfc/reference/cmfcpreviewctrlimpl-class.md)
 
-## <a name="cmfcpreviewctrlimpl"></a>CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl
-Costruisce un oggetto di controllo anteprima.
+## <a name="cmfcpreviewctrlimpl"></a> CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl
+Constructs a preview control object.
 
-### <a name="syntax"></a>Sintassi
+### <a name="syntax"></a>Syntax
 CMFCPreviewCtrlImpl();  
 
-## <a name="create"></a>CMFCPreviewCtrlImpl::Create
-Di overload. Chiamato da un gestore anteprima avanzata per creare la finestra di Windows.  
+## <a name="create"></a> CMFCPreviewCtrlImpl::Create
+Overloaded. Called by a Rich Preview handler to create the Windows window.  
   
-### <a name="syntax"></a>Sintassi  
+### <a name="syntax"></a>Syntax  
   
 ```  
 virtual BOOL Create(  
@@ -138,32 +152,32 @@ virtual BOOL Create(
 );  
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `hWndParent`  
- Un handle alla finestra host fornita dalla Shell per l'anteprima avanzata.  
+ A handle to the host window supplied by the Shell for Rich Preview.  
   
  `prc`  
- Specifica la dimensione iniziale e la posizione della finestra.  
+ Specifies the initial size and position of the window.  
   
  `pContext`  
- Un puntatore a un contesto di creazione.  
+ A pointer to a creation context.  
   
-### <a name="return-value"></a>Valore restituito  
- `TRUE`Se la creazione ha esito positivo. in caso contrario `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if creation succeeded; otherwise `FALSE`.  
   
-## <a name="destroy"></a>CMFCPreviewCtrlImpl::Destroy
-Chiamato da un gestore di anteprime Rich quando è necessario eliminare questo controllo.  
+## <a name="destroy"></a> CMFCPreviewCtrlImpl::Destroy
+Called by a Rich Preview handler when it needs to destroy this control.  
   
-### <a name="syntax"></a>Sintassi  
+### <a name="syntax"></a>Syntax  
   
 ```  
 virtual void Destroy();  
 ```  
   
-## <a name="dopaint"></a>CMFCPreviewCtrlImpl::DoPaint  
-Chiamato dal framework per eseguire il rendering dell'anteprima.  
+## <a name="dopaint"></a> CMFCPreviewCtrlImpl::DoPaint  
+Called by the framework to render the preview.  
   
-### <a name="syntax"></a>Sintassi  
+### <a name="syntax"></a>Syntax  
   
 ```  
 virtual void DoPaint(  
@@ -171,76 +185,76 @@ virtual void DoPaint(
 );  
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- Un puntatore a un contesto di dispositivo per il disegno.  
+ A pointer to a device context for painting.  
 
 
-## <a name="focus"></a>CMFCPreviewCtrlImpl::Focus  
-Imposta lo stato attivo al controllo.  
+## <a name="focus"></a> CMFCPreviewCtrlImpl::Focus  
+Sets input focus to this control.  
   
-### <a name="syntax"></a>Sintassi  
+### <a name="syntax"></a>Syntax  
   
 ```  
 virtual void Focus();  
 ```  
-## <a name="getdocument"></a>CMFCPreviewCtrlImpl::GetDocument
-Restituisce un documento collegato a questo controllo anteprima.  
+## <a name="getdocument"></a> CMFCPreviewCtrlImpl::GetDocument
+Returns a document connected to this preview control.  
   
-### <a name="syntax"></a>Sintassi  
+### <a name="syntax"></a>Syntax  
   
 ```  
 ATL::IDocument* GetDocument();  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Un puntatore a un documento, il cui contenuto viene visualizzato in anteprima nel controllo.
+### <a name="return-value"></a>Return Value  
+ A pointer to a document, whose content is previewed in the control.
 
-## <a name="m_clrbackcolor"></a>CMFCPreviewCtrlImpl::m_clrBackColor  
-Colore di sfondo della finestra di anteprima.  
+## <a name="m_clrbackcolor"></a> CMFCPreviewCtrlImpl::m_clrBackColor  
+Background color of the preview window.  
   
-### <a name="syntax"></a>Sintassi  
+### <a name="syntax"></a>Syntax  
   
 ```  
 COLORREF m_clrBackColor;  
 ```  
 
-## <a name="m_clrtextcolor"></a>CMFCPreviewCtrlImpl::m_clrTextColor
-Colore del testo della finestra di anteprima.  
+## <a name="m_clrtextcolor"></a> CMFCPreviewCtrlImpl::m_clrTextColor
+Text color of the preview window.  
   
-### <a name="syntax"></a>Sintassi  
+### <a name="syntax"></a>Syntax  
   
 ```  
 COLORREF m_clrTextColor;  
 ```  
-## <a name="m_font"></a>CMFCPreviewCtrlImpl::m_font tipo di carattere utilizzato per visualizzare il testo nella finestra di anteprima.  
+## <a name="m_font"></a> CMFCPreviewCtrlImpl::m_font  Font used to display text in the preview window.  
   
-### <a name="syntax"></a>Sintassi  
+### <a name="syntax"></a>Syntax  
   
 ```  
 CFont m_font;  
 ```  
-## <a name="m_pdocument"></a>CMFCPreviewCtrlImpl::m_pDocument  
-Un puntatore a un documento il cui contenuto viene visualizzato in anteprima nel controllo.  
+## <a name="m_pdocument"></a> CMFCPreviewCtrlImpl::m_pDocument  
+A pointer to a document whose content is previewed in the control.  
   
-### <a name="syntax"></a>Sintassi  
+### <a name="syntax"></a>Syntax  
   
 ```  
 ATL::IDocument* m_pDocument;  
 ```  
 
-## <a name="redraw"></a>CMFCPreviewCtrlImpl::Redraw  
-Indica il controllo di ridisegnare.  
+## <a name="redraw"></a> CMFCPreviewCtrlImpl::Redraw  
+Tells this control to redraw.  
   
-### <a name="syntax"></a>Sintassi  
+### <a name="syntax"></a>Syntax  
   
 ```  
 virtual void Redraw();  
 ```  
-## <a name="setdocument"></a>CMFCPreviewCtrlImpl::SetDocument 
-Chiamato dal gestore di anteprime per creare una relazione tra l'implementazione di documento e il controllo anteprima.  
+## <a name="setdocument"></a> CMFCPreviewCtrlImpl::SetDocument 
+Called by the preview handler to create a relationship between the document implementation and the preview control.  
   
-### <a name="syntax"></a>Sintassi  
+### <a name="syntax"></a>Syntax  
   
 ```  
 void SetDocument(  
@@ -248,14 +262,14 @@ void SetDocument(
 );  
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pDocument`  
- Puntatore all'implementazione del documento.  
+ A pointer to the document implementation.  
 
-## <a name="sethost"></a>CMFCPreviewCtrlImpl::SetHost  
-Imposta un nuovo elemento padre per questo controllo.  
+## <a name="sethost"></a> CMFCPreviewCtrlImpl::SetHost  
+Sets a new parent for this control.  
   
-### <a name="syntax"></a>Sintassi  
+### <a name="syntax"></a>Syntax  
   
 ```  
 virtual void SetHost(  
@@ -263,14 +277,14 @@ virtual void SetHost(
 );  
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `hWndParent`  
- Handle per la nuova finestra padre.  
+ A handle to the new parent window.  
 
-## <a name="setpreviewvisuals"></a>CMFCPreviewCtrlImpl::SetPreviewVisuals  
-Chiamato da un gestore di anteprime Rich quando è necessario impostare gli elementi visivi di un'anteprima dettagliata del contenuto.  
+## <a name="setpreviewvisuals"></a> CMFCPreviewCtrlImpl::SetPreviewVisuals  
+Called by a Rich Preview handler when it needs to set visuals of rich preview content.  
   
-### <a name="syntax"></a>Sintassi  
+### <a name="syntax"></a>Syntax  
   
 ```  
 virtual void SetPreviewVisuals(  
@@ -280,20 +294,20 @@ virtual void SetPreviewVisuals(
 );  
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `clrBack`  
- Colore di sfondo della finestra di anteprima.  
+ Background color of preview window.  
   
  `clrText`  
- Colore del testo della finestra di anteprima.  
+ Text color of preview window.  
   
  `plf`  
- Tipo di carattere utilizzato per visualizzare il testo nella finestra di anteprima. 
+ Font used to display text in the preview window. 
 
-##  <a name="setrect"></a>CMFCPreviewCtrlImpl::SetRect  
-Imposta un nuovo rettangolo di delimitazione per questo controllo.  
+##  <a name="setrect"></a> CMFCPreviewCtrlImpl::SetRect  
+Sets a new bounding rectangle for this control.  
   
-### <a name="syntax"></a>Sintassi  
+### <a name="syntax"></a>Syntax  
   
 ```  
 virtual void SetRect(  
@@ -302,20 +316,20 @@ virtual void SetRect(
 );  
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `prc`  
- Specifica la nuova dimensione e posizione del controllo anteprima.  
+ Specifies the new size and position of the preview control.  
   
  `bRedraw`  
- Specifica se il controllo deve essere ridisegnato.  
+ Specifies whether the control should be redrawn.  
   
-### <a name="remarks"></a>Note  
- In genere un nuovo rettangolo di delimitazione viene impostato quando il controllo host viene ridimensionato.  
+### <a name="remarks"></a>Remarks  
+ Usually a new bounding rectangle is set when the host control is resized.  
 
-## <a name="dtor"></a>CMFCPreviewCtrlImpl:: ~ CMFCPreviewCtrlImpl  
-Distrugge un oggetto di controllo anteprima.  
+## <a name="dtor"></a> CMFCPreviewCtrlImpl::~CMFCPreviewCtrlImpl  
+Destructs a preview control object.  
   
-### <a name="syntax"></a>Sintassi  
+### <a name="syntax"></a>Syntax  
   
 ```  
 virtual ~CMFCPreviewCtrlImpl();  
