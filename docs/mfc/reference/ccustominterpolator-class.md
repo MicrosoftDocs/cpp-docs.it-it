@@ -1,5 +1,5 @@
 ---
-title: Classe CCustomInterpolator | Documenti di Microsoft
+title: CCustomInterpolator Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,7 +29,21 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CCustomInterpolator class
+- CCustomInterpolator [MFC], CCustomInterpolator
+- CCustomInterpolator [MFC], GetDependencies
+- CCustomInterpolator [MFC], GetDuration
+- CCustomInterpolator [MFC], GetFinalValue
+- CCustomInterpolator [MFC], Init
+- CCustomInterpolator [MFC], InterpolateValue
+- CCustomInterpolator [MFC], InterpolateVelocity
+- CCustomInterpolator [MFC], SetDuration
+- CCustomInterpolator [MFC], SetInitialValueAndVelocity
+- CCustomInterpolator [MFC], m_currentValue
+- CCustomInterpolator [MFC], m_currentVelocity
+- CCustomInterpolator [MFC], m_duration
+- CCustomInterpolator [MFC], m_finalValue
+- CCustomInterpolator [MFC], m_initialValue
+- CCustomInterpolator [MFC], m_initialVelocity
 ms.assetid: 28d85595-989a-40a3-b003-e0e38437a94d
 caps.latest.revision: 17
 author: mikeblome
@@ -49,65 +63,65 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 73410ae17465880f455e5b15026f6cc010803c19
-ms.openlocfilehash: 4d0b38543092dc68c2527f7e1385712164faf996
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8bb8bc0dde41b48416ec89250268c2aa958d50eb
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ccustominterpolator-class"></a>Classe CCustomInterpolator
-Implementa un interpolatore di base.  
+# <a name="ccustominterpolator-class"></a>CCustomInterpolator Class
+Implements a basic interpolator.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CCustomInterpolator;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Costruttori pubblici  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCustomInterpolator::CCustomInterpolator](#ccustominterpolator)|Di overload. Costruisce un oggetto interpolatore personalizzato e inizializza la durata e la velocità ai valori specificati.|  
+|[CCustomInterpolator::CCustomInterpolator](#ccustominterpolator)|Overloaded. Constructs a custom interpolator object and initializes duration and velocity to specified values.|  
   
-### <a name="public-methods"></a>Metodi pubblici  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCustomInterpolator::GetDependencies](#getdependencies)|Ottiene le dipendenze dell'interpolatore.|  
-|[CCustomInterpolator::GetDuration](#getduration)|Ottiene la durata dell'interpolatore.|  
-|[CCustomInterpolator::GetFinalValue](#getfinalvalue)|Ottiene il valore finale a cui punta l'interpolatore.|  
-|[CCustomInterpolator:: Init](#init)|Inizializza la durata e il valore finale.|  
-|[CCustomInterpolator::InterpolateValue](#interpolatevalue)|Esegue l'interpolazione il valore a un offset specificato.|  
-|[CCustomInterpolator::InterpolateVelocity](#interpolatevelocity)|Esegue l'interpolazione la velocità a un offset specificato|  
-|[CCustomInterpolator::SetDuration](#setduration)|Imposta la durata dell'interpolatore.|  
-|[CCustomInterpolator::SetInitialValueAndVelocity](#setinitialvalueandvelocity)|Imposta valore iniziale dell'interpolatore e velocità.|  
+|[CCustomInterpolator::GetDependencies](#getdependencies)|Gets the interpolator's dependencies.|  
+|[CCustomInterpolator::GetDuration](#getduration)|Gets the interpolator's duration.|  
+|[CCustomInterpolator::GetFinalValue](#getfinalvalue)|Gets the final value to which the interpolator leads.|  
+|[CCustomInterpolator::Init](#init)|Initializes duration and final value.|  
+|[CCustomInterpolator::InterpolateValue](#interpolatevalue)|Interpolates the value at a given offset.|  
+|[CCustomInterpolator::InterpolateVelocity](#interpolatevelocity)|Interpolates the velocity at a given offset|  
+|[CCustomInterpolator::SetDuration](#setduration)|Sets the interpolator's duration.|  
+|[CCustomInterpolator::SetInitialValueAndVelocity](#setinitialvalueandvelocity)|Sets the interpolator's initial value and velocity.|  
   
-### <a name="protected-data-members"></a>Membri dati protetti  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCustomInterpolator::m_currentValue](#m_currentvalue)|Il valore interpolato.|  
-|[CCustomInterpolator::m_currentVelocity](#m_currentvelocity)|La velocità interpolata.|  
-|[CCustomInterpolator::m_duration](#m_duration)|La durata della transizione.|  
-|[CCustomInterpolator::m_finalValue](#m_finalvalue)|Il valore finale di una variabile alla fine della transizione.|  
-|[CCustomInterpolator::m_initialValue](#m_initialvalue)|Il valore della variabile all'inizio della transizione.|  
-|[CCustomInterpolator::m_initialVelocity](#m_initialvelocity)|La velocità della variabile all'inizio della transizione.|  
+|[CCustomInterpolator::m_currentValue](#m_currentvalue)|The interpolated value.|  
+|[CCustomInterpolator::m_currentVelocity](#m_currentvelocity)|The interpolated velocity.|  
+|[CCustomInterpolator::m_duration](#m_duration)|The duration of the transition.|  
+|[CCustomInterpolator::m_finalValue](#m_finalvalue)|The final value of a variable at the end of the transition.|  
+|[CCustomInterpolator::m_initialValue](#m_initialvalue)|The value of the variable at the start of the transition.|  
+|[CCustomInterpolator::m_initialVelocity](#m_initialvelocity)|The velocity of the variable at the start of the transition.|  
   
-## <a name="remarks"></a>Note  
- Derivare una classe da CCustomInterpolator ed eseguire l'override di tutti i metodi necessari per implementare un algoritmo di interpolazione personalizzata. Un puntatore a questa classe deve essere passato come parametro a CCustomTransition.  
+## <a name="remarks"></a>Remarks  
+ Derive a class from CCustomInterpolator and override all necessary methods in order to implement a custom interpolation algorithm. A pointer to this class should be passed as a parameter to CCustomTransition.  
   
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `CCustomInterpolator`  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** afxanimationcontroller.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxanimationcontroller.h  
   
-##  <a name="ccustominterpolator"></a>CCustomInterpolator::CCustomInterpolator  
- Costruisce un oggetto interpolatore personalizzato e imposta tutti i valori per impostazione predefinita è 0.  
+##  <a name="ccustominterpolator"></a>  CCustomInterpolator::CCustomInterpolator  
+ Constructs a custom interpolator object and sets all values to default 0.  
   
 ```  
 CCustomInterpolator();
@@ -118,17 +132,17 @@ CCustomInterpolator(
     DOUBLE finalValue);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `duration`  
- La durata della transizione.  
+ The duration of the transition.  
   
  `finalValue`  
   
-### <a name="remarks"></a>Note  
- Utilizzare CCustomInterpolator:: Init per inizializzare la durata e il valore finale in un secondo momento nel codice.  
+### <a name="remarks"></a>Remarks  
+ Use CCustomInterpolator::Init to initialize duration and final value later in the code.  
   
-##  <a name="getdependencies"></a>CCustomInterpolator::GetDependencies  
- Ottiene le dipendenze dell'interpolatore.  
+##  <a name="getdependencies"></a>  CCustomInterpolator::GetDependencies  
+ Gets the interpolator's dependencies.  
   
 ```  
 virtual BOOL GetDependencies(
@@ -137,49 +151,49 @@ virtual BOOL GetDependencies(
     UI_ANIMATION_DEPENDENCIES* durationDependencies);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `initialValueDependencies`  
- Output. Gli aspetti dell'interpolatore che dipendono dal valore iniziale passati a SetInitialValueAndVelocity.  
+ Output. Aspects of the interpolator that depend on the initial value passed to SetInitialValueAndVelocity.  
   
  `initialVelocityDependencies`  
- Output. Gli aspetti dell'interpolatore che dipendono da velocità iniziale passati a SetInitialValueAndVelocity.  
+ Output. Aspects of the interpolator that depend on the initial velocity passed to SetInitialValueAndVelocity.  
   
  `durationDependencies`  
- Output. Gli aspetti dell'interpolatore che dipendono dalla durata passati a SetDuration.  
+ Output. Aspects of the interpolator that depend on the duration passed to SetDuration.  
   
-### <a name="return-value"></a>Valore restituito  
- Base implementazione restituisce sempre TRUE. Restituisce FALSE dall'implementazione sottoposta a override se si desidera avere esito negativo dell'evento.  
+### <a name="return-value"></a>Return Value  
+ Basic implementation always returns TRUE. Return FALSE from overridden implementation if you wish to fail the event.  
   
-##  <a name="getduration"></a>CCustomInterpolator::GetDuration  
- Ottiene la durata dell'interpolatore.  
+##  <a name="getduration"></a>  CCustomInterpolator::GetDuration  
+ Gets the interpolator's duration.  
   
 ```  
 virtual BOOL GetDuration(UI_ANIMATION_SECONDS* duration);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `duration`  
- Output. La durata della transizione, in secondi.  
+ Output. The duration of the transition, in seconds.  
   
-### <a name="return-value"></a>Valore restituito  
- Base implementazione restituisce sempre TRUE. Restituisce FALSE dall'implementazione sottoposta a override se si desidera avere esito negativo dell'evento.  
+### <a name="return-value"></a>Return Value  
+ Basic implementation always returns TRUE. Return FALSE from overridden implementation if you wish to fail the event.  
   
-##  <a name="getfinalvalue"></a>CCustomInterpolator::GetFinalValue  
- Ottiene il valore finale a cui punta l'interpolatore.  
+##  <a name="getfinalvalue"></a>  CCustomInterpolator::GetFinalValue  
+ Gets the final value to which the interpolator leads.  
   
 ```  
 virtual BOOL GetFinalValue(DOUBLE* value);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `value`  
- Output. Il valore finale di una variabile alla fine della transizione.  
+ Output. The final value of a variable at the end of the transition.  
   
-### <a name="return-value"></a>Valore restituito  
- Base implementazione restituisce sempre TRUE. Restituisce FALSE dall'implementazione sottoposta a override se si desidera avere esito negativo dell'evento.  
+### <a name="return-value"></a>Return Value  
+ Basic implementation always returns TRUE. Return FALSE from overridden implementation if you wish to fail the event.  
   
-##  <a name="init"></a>CCustomInterpolator:: Init  
- Inizializza la durata e il valore finale.  
+##  <a name="init"></a>  CCustomInterpolator::Init  
+ Initializes duration and final value.  
   
 ```  
 void Init(
@@ -187,15 +201,15 @@ void Init(
     DOUBLE finalValue);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `duration`  
- La durata della transizione.  
+ The duration of the transition.  
   
  `finalValue`  
- Il valore finale di una variabile alla fine della transizione.  
+ The final value of a variable at the end of the transition.  
   
-##  <a name="interpolatevalue"></a>CCustomInterpolator::InterpolateValue  
- Esegue l'interpolazione il valore a un offset specificato.  
+##  <a name="interpolatevalue"></a>  CCustomInterpolator::InterpolateValue  
+ Interpolates the value at a given offset.  
   
 ```  
 virtual BOOL InterpolateValue(
@@ -203,15 +217,15 @@ virtual BOOL InterpolateValue(
     DOUBLE* value);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `value`  
- Output. Il valore interpolato.  
+ Output. The interpolated value.  
   
-### <a name="return-value"></a>Valore restituito  
- Base implementazione restituisce sempre TRUE. Restituisce FALSE dall'implementazione sottoposta a override se si desidera avere esito negativo dell'evento.  
+### <a name="return-value"></a>Return Value  
+ Basic implementation always returns TRUE. Return FALSE from overridden implementation if you wish to fail the event.  
   
-##  <a name="interpolatevelocity"></a>CCustomInterpolator::InterpolateVelocity  
- Esegue l'interpolazione la velocità a un offset specificato  
+##  <a name="interpolatevelocity"></a>  CCustomInterpolator::InterpolateVelocity  
+ Interpolates the velocity at a given offset  
   
 ```  
 virtual BOOL InterpolateVelocity(
@@ -219,71 +233,71 @@ virtual BOOL InterpolateVelocity(
     DOUBLE* velocity);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `velocity`  
- Output. La velocità della variabile in corrispondenza dell'offset.  
+ Output. The velocity of the variable at the offset.  
   
-### <a name="return-value"></a>Valore restituito  
- Base implementazione restituisce sempre TRUE. Restituisce FALSE dall'implementazione sottoposta a override se si desidera avere esito negativo dell'evento.  
+### <a name="return-value"></a>Return Value  
+ Basic implementation always returns TRUE. Return FALSE from overridden implementation if you wish to fail the event.  
   
-##  <a name="m_currentvalue"></a>CCustomInterpolator::m_currentValue  
- Il valore interpolato.  
+##  <a name="m_currentvalue"></a>  CCustomInterpolator::m_currentValue  
+ The interpolated value.  
   
 ```  
 DOUBLE m_currentValue;  
 ```  
   
-##  <a name="m_currentvelocity"></a>CCustomInterpolator::m_currentVelocity  
- La velocità interpolata.  
+##  <a name="m_currentvelocity"></a>  CCustomInterpolator::m_currentVelocity  
+ The interpolated velocity.  
   
 ```  
 DOUBLE m_currentVelocity;  
 ```  
   
-##  <a name="m_duration"></a>CCustomInterpolator::m_duration  
- La durata della transizione.  
+##  <a name="m_duration"></a>  CCustomInterpolator::m_duration  
+ The duration of the transition.  
   
 ```  
 UI_ANIMATION_SECONDS m_duration;  
 ```  
   
-##  <a name="m_finalvalue"></a>CCustomInterpolator::m_finalValue  
- Il valore finale di una variabile alla fine della transizione.  
+##  <a name="m_finalvalue"></a>  CCustomInterpolator::m_finalValue  
+ The final value of a variable at the end of the transition.  
   
 ```  
 DOUBLE m_finalValue;  
 ```  
   
-##  <a name="m_initialvalue"></a>CCustomInterpolator::m_initialValue  
- Il valore della variabile all'inizio della transizione.  
+##  <a name="m_initialvalue"></a>  CCustomInterpolator::m_initialValue  
+ The value of the variable at the start of the transition.  
   
 ```  
 DOUBLE m_initialValue;  
 ```  
   
-##  <a name="m_initialvelocity"></a>CCustomInterpolator::m_initialVelocity  
- La velocità della variabile all'inizio della transizione.  
+##  <a name="m_initialvelocity"></a>  CCustomInterpolator::m_initialVelocity  
+ The velocity of the variable at the start of the transition.  
   
 ```  
 DOUBLE m_initialVelocity;  
 ```  
   
-##  <a name="setduration"></a>CCustomInterpolator::SetDuration  
- Imposta la durata dell'interpolatore.  
+##  <a name="setduration"></a>  CCustomInterpolator::SetDuration  
+ Sets the interpolator's duration.  
   
 ```  
 virtual BOOL SetDuration(UI_ANIMATION_SECONDS duration);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `duration`  
- La durata della transizione.  
+ The duration of the transition.  
   
-### <a name="return-value"></a>Valore restituito  
- Base implementazione restituisce sempre TRUE. Restituisce FALSE dall'implementazione sottoposta a override se si desidera avere esito negativo dell'evento.  
+### <a name="return-value"></a>Return Value  
+ Basic implementation always returns TRUE. Return FALSE from overridden implementation if you wish to fail the event.  
   
-##  <a name="setinitialvalueandvelocity"></a>CCustomInterpolator::SetInitialValueAndVelocity  
- Imposta valore iniziale dell'interpolatore e velocità.  
+##  <a name="setinitialvalueandvelocity"></a>  CCustomInterpolator::SetInitialValueAndVelocity  
+ Sets the interpolator's initial value and velocity.  
   
 ```  
 virtual BOOL SetInitialValueAndVelocity(
@@ -291,16 +305,16 @@ virtual BOOL SetInitialValueAndVelocity(
     DOUBLE initialVelocity);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `initialValue`  
- Il valore della variabile all'inizio della transizione.  
+ The value of the variable at the start of the transition.  
   
  `initialVelocity`  
- La velocità della variabile all'inizio della transizione.  
+ The velocity of the variable at the start of the transition.  
   
-### <a name="return-value"></a>Valore restituito  
- L'implementazione di base sempre restituisce TRUE. Restituisce FALSE dall'implementazione sottoposta a override se si desidera avere esito negativo dell'evento.  
+### <a name="return-value"></a>Return Value  
+ The basic implementation always returns TRUE. Return FALSE from overridden implementation if you wish to fail the event.  
   
-## <a name="see-also"></a>Vedere anche  
- [Classi](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

@@ -1,5 +1,5 @@
 ---
-title: Classe recursive_directory_iterator | Microsoft Docs
+title: recursive_directory_iterator Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,47 +31,47 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 0d4325fbe8d4f336f4ca1ac6afe4ba5a96a7172d
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 7665a5ab7e8cae85de867eae6f2444126c42ce5a
 ms.contentlocale: it-it
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="recursivedirectoryiterator-class"></a>Classe recursive_directory_iterator
-Descrive un iteratore di input sequenziato attraverso i nomi file in una directory del file system. L'iteratore può anche accedere alle sottodirectory. Per un iteratore X, l'espressione *X restituisce un oggetto della classe directory_entry che esegue il wrapping di un nome file e tutto ciò che si conosce sul relativo stato.  
+# <a name="recursivedirectoryiterator-class"></a>recursive_directory_iterator Class
+describes an input iterator that sequences through the filenames in a directory, possibly descending into subdirectories recursively. For an iterator X, the expression *X evaluates to an object of class directory_entry that wraps the filename and anything known about its status.  
   
- Per altre informazioni ed esempi di codice, vedere [Esplorazione del file system](../standard-library/file-system-navigation.md).  
+ For more information and code examples, see [File System Navigation (C++)](../standard-library/file-system-navigation.md).  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class recursive_directory_iterator;  
 ```  
   
-## <a name="remarks"></a>Note  
- La classe modello archivia:  
+## <a name="remarks"></a>Remarks  
+ The template class stores:  
   
-1.  oggetto di tipo stack<pair\<directory_iterator, path>>, denominato mystack in questo esempio a scopo illustrativo, che rappresenta l'annidamento delle directory da ordinare in sequenza  
+1.  an object of type stack<pair\<directory_iterator, path>>, called mystack here for the purposes of exposition, which represents the nest of directories to be sequenced  
   
-2.  un oggetto di tipo directory_entry, denominato myentry in questo esempio, che rappresenta il nome di file corrente nella sequenza di directory  
+2.  an object of type directory_entry called myentry here, which represents the current filename in the directory sequence  
   
-3.  un oggetto di tipo bool, denominato no_push in questo esempio, che registra se la discesa ricorsiva nelle sottodirectory è disabilitata  
+3.  an object of type bool, called no_push here, which records whether recursive descent into subdirectories is disabled  
   
-4.  un oggetto di tipo directory_options, denominato myoptions in questo esempio, che registra le opzioni stabilite in fase di costruzione  
+4.  an object of type directory_options, called myoptions here, which records the options established at construction  
   
- Un oggetto costruito predefinito di tipo recursive_directory_entry ha un iteratore di fine sequenza in corrispondenza di mystack.top().first e rappresenta l'iteratore di fine sequenza. Ad esempio, data la directory abc con le voci def (una directory), def/ghi e jkl, il codice:  
+ A default constructed object of type recursive_directory_entry has an end-of-sequence iterator at mystack.top().first and represents the end-of-sequence iterator.For example, given the directory abc with entries def (a directory), def/ghi, and jkl, the code:  
   
 ```  
 for (recursive_directory_iterator next(path("abc")), end; next != end; ++next)  
     visit(next->path());
 ```  
   
- chiamerà visit con gli argomenti `path("abc/def/ghi") and path("abc/jkl").`È possibile qualificare la sequenziazione attraverso il sottoalbero della directory, in due modi:  
+ will call visit with the arguments `path("abc/def/ghi") and path("abc/jkl").`You can qualify sequencing through a directory subtree in two ways:  
   
-1.  Un collegamento simbolico alla directory verrà analizzato solo se si costruisce un metodo recursive_directory_iterator con un argomento directory_options il cui valore è directory_options::follow_directory_symlink.  
+1.  A directory symlink will be scanned only if you construct a recursive_directory_iterator with a directory_options argument whose value is directory_options::follow_directory_symlink.  
   
-2.  Se si chiama disable_recursion_pending, una directory successiva rilevata durante un incremento non verrà analizzata in modo ricorsivo.  
+2.  If you call disable_recursion_pending then a subsequent directory encountered during an increment will not be recursively scanned.  
   
 ## <a name="recursivedirectoryiteratordepth"></a>recursive_directory_iterator::depth  
   
@@ -79,7 +79,7 @@ for (recursive_directory_iterator next(path("abc")), end; next != end; ++next)
 int depth() const;
 ```  
   
- Restituisce mystack.size() - 1, quindi vpal è a profondità zero.  
+ Returns mystack.size() - 1, so pval is at depth zero.  
   
 ## <a name="recursivedirectoryiteratordisablerecursionpending"></a>recursive_directory_iterator::disable_recursion_pending  
   
@@ -87,7 +87,7 @@ int depth() const;
 void disable_recursion_pending();
 ```  
   
- La funzione membro archivia true in no_push.  
+ The member function stores true in no_push.  
   
 ## <a name="recursivedirectoryiteratoroperator"></a>recursive_directory_iterator::operator!=  
   
@@ -95,7 +95,7 @@ void disable_recursion_pending();
 bool operator!=(const recursive_directory_iterator& right) const;
 ```  
   
- L'operatore membro restituisce !(*this == right).  
+ The member operator returns !(*this == right).  
   
 ## <a name="recursivedirectoryiteratoroperator"></a>recursive_directory_iterator::operator=  
   
@@ -104,7 +104,7 @@ recursive_directory_iterator& operator=(const recursive_directory_iterator&) = d
 recursive_directory_iterator& operator=(recursive_directory_iterator&&) noexcept = default;  
 ```  
   
- Gli operatori di assegnazione membro impostati come predefiniti si comportano come previsto.  
+ The defaulted member assignment operators behave as expected.  
   
 ## <a name="recursivedirectoryiteratoroperator"></a>recursive_directory_iterator::operator==  
   
@@ -112,7 +112,7 @@ recursive_directory_iterator& operator=(recursive_directory_iterator&&) noexcept
 bool operator==(const recursive_directory_iterator& right) const;
 ```  
   
- L'operatore membro restituisce true solo se entrambi *this e right sono iteratori di fine sequenza o se entrambi non lo sono.  
+ The member operator returns true only if both *this and right are end-of-sequence iterators or both are not end-of-sequence-iterators.  
   
 ## <a name="recursivedirectoryiteratoroperator"></a>recursive_directory_iterator::operator*  
   
@@ -120,7 +120,7 @@ bool operator==(const recursive_directory_iterator& right) const;
 const directory_entry& operator*() const;
 ```  
   
- L'operatore membro restituisce myentry.  
+ The member operator returns myentry.  
   
 ## <a name="recursivedirectoryiteratoroperator-"></a>recursive_directory_iterator::operator->  
   
@@ -128,7 +128,7 @@ const directory_entry& operator*() const;
 const directory_entry * operator->() const;
 ```  
   
- Restituisce &**this.  
+ Returns &**this.  
   
 ## <a name="recursivedirectoryiteratoroperator"></a>recursive_directory_iterator::operator++  
   
@@ -138,7 +138,7 @@ recursive_directory_iterator& operator++();
 recursive_directory_iterator& operator++(int);
 ```  
   
- La prima funzione membro chiama increment() e quindi restituisce *this. La secondo funzione membro esegue una copia dell'oggetto, chiama increment() e quindi restituisce la copia.  
+ The first member function calls increment(), then returns *this. The second member function makes a copy of the object, calls increment(), then returns the copy.  
   
 ## <a name="recursivedirectoryiteratoroptions"></a>recursive_directory_iterator::options  
   
@@ -146,7 +146,7 @@ recursive_directory_iterator& operator++(int);
 directory_options options() const;
 ```  
   
- Restituisce myoptions.  
+ Returns myoptions.  
   
 ## <a name="recursivedirectoryiteratorpop"></a>recursive_directory_iterator::pop  
   
@@ -154,7 +154,7 @@ directory_options options() const;
 void pop();
 ```  
   
- Se depth() == 0 l'oggetto diventa un iteratore di fine sequenza. In caso contrario, la funzione membro termina l'analisi della directory corrente (la più profonda) e riprende dalla profondità inferiore successiva.  
+ If depth() == 0 the object becomes an end-of-sequence iterator. Otherwise, the member function terminates scanning of the current (deepest) directory and resumes at the next lower depth.  
   
 ## <a name="recursivedirectoryiteratorrecursionpending"></a>recursive_directory_iterator::recursion_pending  
   
@@ -162,7 +162,7 @@ void pop();
 bool recursion_pending() const;
 ```  
   
- Restituisce !no_push.  
+ Returns !no_push.  
   
 ## <a name="recursivedirectoryiteratorrecursivedirectoryiterator"></a>recursive_directory_iterator::recursive_directory_iterator  
   
@@ -182,9 +182,9 @@ recursive_directory_iterator(const recursive_directory_iterator&) = default;
 recursive_directory_iterator(recursive_directory_iterator&&) noexcept = default;  
 ```  
   
- Il primo costruttore produce un iteratore di fine sequenza. Il secondo e il terzo costruttore archiviano false in no_push e directory_options::none in myoptions, quindi provano ad aprire e leggere pval come una directory. Se l'operazione riesce, i costruttori inizializzano mystack e myentry per designare il primo nome file non nella directory nella sequenza annidata; in caso contrario, producono un iteratore di fine sequenza.  
+ The first constructor produces an end-of-sequence iterator. The second and third constructors store false in no_push and directory_options::none in myoptions, then attempt to open and read pval as a directory. If successful, they initialize mystack and myentry to designate the first non-directory filename in the nested sequence; otherwise they produce an end-of-sequence iterator.  
   
- Il quarto e quinto costruttore si comportano esattamente come il secondo e terzo, ad eccezione del fatto che archiviano prima opts in myoptions. I costruttori impostati come predefiniti si comportano come previsto.  
+ The fourth and fifth constructors behave the same as the second and third, except that they first store opts in myoptions. The defaulted construtors behave as expected.  
   
 ## <a name="recursivedirectoryiteratorincrement"></a>recursive_directory_iterator::increment  
   
@@ -192,16 +192,16 @@ recursive_directory_iterator(recursive_directory_iterator&&) noexcept = default;
 recursive_directory_iterator& increment(error_code& ec) noexcept;  
 ```  
   
- La funzione prova ad avanzare al nome file successivo nella sequenza annidata. Se l'esito è positivo, archivia questo nome file in myentry; in caso contrario, produce un iteratore di fine sequenza.  
+ The function attempts to advance to the next filename in the nested sequence. If successful, it stores that filename in myentry; otherwise it produces an end-of-sequence iterator.  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<filesystem >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<filesystem>  
   
- **Spazio dei nomi:** std::tr2::sys  
+ **Namespace:** std::tr2::sys  
   
-## <a name="see-also"></a>Vedere anche  
- [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)  (Riferimento file di intestazione)  
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
  [\<filesystem>](../standard-library/filesystem.md)   
- [File System Navigation (C++)](../standard-library/file-system-navigation.md) (Esplorazione del file system (C++))
+ [File System Navigation (C++)](../standard-library/file-system-navigation.md)
 
 

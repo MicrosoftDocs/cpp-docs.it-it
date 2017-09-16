@@ -1,46 +1,65 @@
 ---
-title: "Classi di trasferimento dati e trascinamento della selezione OLE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.ole"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classi ActiveX [C++]"
-  - "trasferimento dati [C++], OLE"
-  - "classe di trasferimento dati [C++]"
-  - "trascinamento della selezione [C++], classi"
-  - "trascinamento della selezione OLE [C++], e classe di trasferimento dati"
+title: OLE Drag-and-Drop and Data Transfer Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.ole
+dev_langs:
+- C++
+helpviewer_keywords:
+- ActiveX classes [MFC]
+- OLE drag and drop [MFC], and data transfer classes
+- drag and drop [MFC], classes
+- data transfer [MFC], OLE
+- data transfer classes [MFC]
 ms.assetid: c8ab2825-ed69-4b88-8ae6-f368b94726b8
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Classi di trasferimento dati e trascinamento della selezione OLE
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 53bcb98592f0fc9dd1af72aec61f5dd30882d9c1
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Queste classi vengono utilizzate nei trasferimenti di dati OLE.  Consentono ai dati da trasferire tra applicazioni tramite gli Appunti o con funzionalità di trascinamento della selezione.  
+---
+# <a name="ole-drag-and-drop-and-data-transfer-classes"></a>OLE Drag-and-Drop and Data Transfer Classes
+These classes are used in OLE data transfers. They allow data to be transferred between applications by using the Clipboard or through drag and drop.  
   
  [COleDropSource](../mfc/reference/coledropsource-class.md)  
- Controlla l'operazione di trascinamento della selezione dall'inizio alla fine.  Questa classe determina quando l'operazione di trascinamento verrà avviata e quando termina.  Anche il feedback del cursore durante l'operazione di trascinamento della selezione.  
+ Controls the drag-and-drop operation from start to finish. This class determines when the drag operation starts and when it ends. It also displays cursor feedback during the drag-and-drop operation.  
   
  [COleDataSource](../mfc/reference/coledatasource-class.md)  
- Utilizzato quando l'applicazione fornisce i dati per un trasferimento dei dati.  `COleDataSource` potrebbe essere visualizzato come oggetto orientato a oggetti degli Appunti.  
+ Used when an application provides data for a data transfer. `COleDataSource` could be viewed as an object-oriented Clipboard object.  
   
  [COleDropTarget](../mfc/reference/coledroptarget-class.md)  
- Rappresenta la destinazione dell'operazione di trascinamento.  Un oggetto di `COleDropTarget` corrisponde a una finestra sullo schermo.  Determina se accettare i dati trascinati nel controllo e implementa l'effettiva operazione di trascinamento.  
+ Represents the target of a drag-and-drop operation. A `COleDropTarget` object corresponds to a window on screen. It determines whether to accept any data dropped onto it and implements the actual drop operation.  
   
  [COleDataObject](../mfc/reference/coledataobject-class.md)  
- Utilizzato come il lato del ricevitore di `COleDataSource`.  gli oggetti di`COleDataObject` forniscono accesso ai dati memorizzati da un oggetto di `COleDataSource`.  
+ Used as the receiver side to `COleDataSource`. `COleDataObject` objects provide access to the data stored by a `COleDataSource` object.  
   
-## Vedere anche  
- [Cenni preliminari sulle classi](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

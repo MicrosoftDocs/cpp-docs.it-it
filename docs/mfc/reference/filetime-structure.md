@@ -1,51 +1,69 @@
 ---
-title: "Struttura FILETIME | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "FILETIME"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "FILETIME (struttura)"
+title: FILETIME Structure | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- FILETIME
+dev_langs:
+- C++
+helpviewer_keywords:
+- FILETIME structure [MFC]
 ms.assetid: e09557e2-b6d7-4dd5-a5b9-6328bca88595
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Struttura FILETIME
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 52f34a50872ad2e66f5fbbb6f211ac81e97f5ee8
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-La struttura di `FILETIME` è un valore a 64 bit che rappresenta il numero di 100 intervalli di nanosecondo dal 1° gennaio 1601.  
+---
+# <a name="filetime-structure"></a>FILETIME Structure
+The `FILETIME` structure is a 64-bit value representing the number of 100-nanosecond intervals since January 1, 1601.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      typedef struct _FILETIME {  
-   DWORD dwLowDateTime;   /* low 32 bits  */  
-   DWORD dwHighDateTime;  /* high 32 bits */  
+typedef struct _FILETIME {  
+    DWORD dwLowDateTime;   /* low 32 bits */  
+    DWORD dwHighDateTime;  /* high 32 bits */  
 } FILETIME, *PFILETIME, *LPFILETIME;  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  *dwLowDateTime*  
- Specifica i bit meno di 32 all'ora del file.  
+ Specifies the low 32 bits of the file time.  
   
  *dwHighDateTime*  
- Specifica i bit di livello 32 dell'ora del file.  
+ Specifies the high 32 bits of the file time.  
   
-## Requisiti  
- **Intestazione:** windef.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** windef.h  
   
-## Vedere anche  
- [Strutture, stili, callback e mappe messaggi](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CTime::CTime](../Topic/CTime::CTime.md)
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CTime::CTime](../../atl-mfc-shared/reference/ctime-class.md#ctime)
+
+

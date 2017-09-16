@@ -1,5 +1,5 @@
 ---
-title: Classe negative_binomial_distribution | Microsoft Docs
+title: negative_binomial_distribution Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- negative_binomial_distribution
 - random/std::negative_binomial_distribution
 - random/std::negative_binomial_distribution::reset
 - random/std::negative_binomial_distribution::k
@@ -27,7 +26,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- negative_binomial_distribution class
+- std::negative_binomial_distribution [C++]
+- std::negative_binomial_distribution [C++], reset
+- std::negative_binomial_distribution [C++], k
+- std::negative_binomial_distribution [C++], p
+- std::negative_binomial_distribution [C++], param
+- std::negative_binomial_distribution [C++], min
+- std::negative_binomial_distribution [C++], max
+- std::negative_binomial_distribution [C++], param_type
+- std::negative_binomial_distribution [C++], param_type
 ms.assetid: 7f5f0967-7fdd-4578-99d4-88f292b4fe9c
 caps.latest.revision: 15
 author: corob-msft
@@ -47,17 +54,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 28d1c6ab187e29198380ceab75cd588b9d69340d
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 21d45442f60f5cb290430fc6842b75747ac66245
 ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="negativebinomialdistribution-class"></a>Classe negative_binomial_distribution
-Genera una distribuzione binomiale negativa.  
+# <a name="negativebinomialdistribution-class"></a>negative_binomial_distribution Class
+Generates a negative binomial distribution.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```
 template<class IntType = int>
@@ -170,7 +177,7 @@ int main()
   
 ```  
   
-Prima esecuzione:  
+First run:  
   
 ```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
@@ -189,7 +196,7 @@ Histogram for 100 samples:
     5 ::  
 ```  
   
-Seconda esecuzione:  
+Second run:  
   
 ```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
@@ -233,38 +240,38 @@ Histogram for 100 samples:
     69 ::::  
 ```  
   
-## <a name="requirements"></a>Requisiti  
-**Intestazione:** \<random>  
+## <a name="requirements"></a>Requirements  
+**Header:** \<random>  
   
-**Spazio dei nomi:** std  
+**Namespace:** std  
   
 ##  <a name="negative_binomial_distribution"></a>  negative_binomial_distribution::negative_binomial_distribution  
-Costruisce la distribuzione.  
+Constructs the distribution.  
   
 ```  
 explicit negative_binomial_distribution(result_type k = 1, double p = 0.5);
 explicit negative_binomial_distribution(const param_type& parm);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
 *k*  
-Parametro di distribuzione `k`.  
+The `k` distribution parameter.  
   
 *p*  
-Parametro di distribuzione `p`.  
+The `p` distribution parameter.  
   
 *parm*  
-Struttura di parametri usata per costruire la distribuzione.  
+The parameter structure used to construct the distribution.  
   
-### <a name="remarks"></a>Note  
-**Precondizione:** `0.0 < k` e `0.0 < p ≤ 1.0`  
+### <a name="remarks"></a>Remarks  
+**Precondition:** `0.0 < k` and `0.0 < p ≤ 1.0`  
   
-Il primo costruttore crea un oggetto il cui valore `p` archiviato include il valore *p* e il cui valore `k` archiviato include il valore *k*.  
+The first constructor constructs an object whose stored `p` value holds the value *p* and whose stored `k` value holds the value *k*.  
   
-Il secondo costruttore crea un oggetto i cui parametri archiviati sono inizializzati da *parm*. È possibile ottenere e impostare i parametri correnti di una distribuzione esistente chiamando la funzione membro `param()`.  
+The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.  
   
 ##  <a name="param_type"></a>  negative_binomial_distribution::param_type  
-Archivia i parametri della distribuzione.  
+Stores the parameters of the distribution.  
   
 struct param_type {  
    typedef negative_binomial_distribution`<`result_type> distribution_type;  
@@ -272,21 +279,21 @@ struct param_type {
 
    bool operator==(const param_type& right) const; bool operator!=(const param_type& right) const; };  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
 *k*  
-Parametro di distribuzione `k`.  
+The `k` distribution parameter.  
   
 *p*  
-Parametro di distribuzione `p`.  
+The `p` distribution parameter.  
   
 *right*  
-Struttura `param_type` usata per il confronto.  
+The `param_type` structure used to compare.  
   
-### <a name="remarks"></a>Note  
-**Precondizione:** `0.0 < k` e `0.0 < p ≤ 1.0`  
+### <a name="remarks"></a>Remarks  
+**Precondition:** `0.0 < k` and `0.0 < p ≤ 1.0`  
   
-Questa struttura può essere passata al costruttore di classe della distribuzione durante la creazione di istanze, alla funzione membro `param()` per impostare i parametri archiviati di una distribuzione esistente e a `operator()` per l'uso in sostituzione dei parametri archiviati.  
+This structure can be passed to the distribution's class constructor at instantiation, to the `param()` member function to set the stored parameters of an existing distribution, and to `operator()` to be used in place of the stored parameters.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 

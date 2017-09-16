@@ -1,15 +1,14 @@
 ---
-title: Classe student_t_distribution | Microsoft Docs
+title: student_t_distribution Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- student_t_distribution
 - random/std::student_t_distribution
 - random/std::student_t_distribution::result_type
 - random/std::student_t_distribution::reset
@@ -22,7 +21,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- student_t_distribution class
+- std::student_t_distribution [C++]
+- std::student_t_distribution [C++], result_type
+- std::student_t_distribution [C++], reset
+- std::student_t_distribution [C++], n
+- std::student_t_distribution [C++], param
+- std::student_t_distribution [C++], min
+- std::student_t_distribution [C++], max
+- std::student_t_distribution [C++], param_type
 ms.assetid: 87b48127-9311-4d07-95df-833ed46bf0b1
 caps.latest.revision: 16
 author: corob-msft
@@ -42,17 +48,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 4075f8852f90ea49f5c9c01f7d82b51766792d7b
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 6a3d8928b8cd0c3a4194840e6a8bea2a7eabfe3c
 ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="studenttdistribution-class"></a>Classe student_t_distribution
-Genera una distribuzione Student-*t*.  
+# <a name="studenttdistribution-class"></a>student_t_distribution Class
+Generates a Student's *t*-distribution.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
 ```  
 template<class RealType = double>
 class student_t_distribution {  
@@ -80,25 +86,25 @@ public:
    result_type max() const;
    };  
 ```  
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
 *RealType*  
- Tipo di risultato a virgola mobile. Per impostazione predefinita, `double`. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).  
+ The floating-point result type, defaults to `double`. For possible types, see [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>Note  
- La classe modello descrive una distribuzione che genera valori di un tipo integrale specificato dall'utente o di tipo `double` se non è specificato alcun valore, distribuiti in base alla distribuzione Student-*t*. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.  
+## <a name="remarks"></a>Remarks  
+ The template class describes a distribution that produces values of a user-specified integral type, or type `double` if none is provided, distributed according to the Student's *t*-Distribution. The following table links to articles about individual members.  
   
 ||||  
 |-|-|-|  
 |[student_t_distribution](#student_t_distribution)|`student_t_distribution::n`|`student_t_distribution::param`|  
 |`student_t_distribution::operator()`||[param_type](#param_type)|  
   
- La funzione di proprietà `n()` restituisce il valore per il parametro di distribuzione archiviato `n`.  
+ The property function `n()` returns the value for the stored distribution parameter `n`.  
   
- Per altre informazioni sulle classi di distribuzione e sui rispettivi membri, vedere [\<random>](../standard-library/random.md).  
+ For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).  
   
- Per informazioni dettagliate sulla distribuzione Student-*t*, vedere l'articolo di Wolfram MathWorld [Students t-Distribution](http://go.microsoft.com/fwlink/LinkId=401094) (Distribuzione Student-t).  
+ For detailed information about the Student's *t*-distribution, see the Wolfram MathWorld article [Students t-Distribution](http://go.microsoft.com/fwlink/LinkId=401094).  
   
-## <a name="example"></a>Esempio  
+## <a name="example"></a>Example  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -173,35 +179,35 @@ Distribution for 10 samples:
     10: 92.7084335614  
 ```  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<random>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<random>  
   
- **Spazio dei nomi:** std  
+ **Namespace:** std  
   
 ##  <a name="student_t_distribution"></a>  student_t_distribution::student_t_distribution  
- Costruisce la distribuzione.  
+ Constructs the distribution.  
   
 ```  
 explicit student_t_distribution(RealType n = 1.0);
 explicit student_t_distribution(const param_type& parm);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
 *n*  
- Parametro di distribuzione `n`.  
+ The `n` distribution parameter.  
   
 *parm*  
- Pacchetto di parametri usato per costruire la distribuzione.  
+ The parameter package used to construct the distribution.  
   
-### <a name="remarks"></a>Note  
- **Precondizione:** `0.0 < n`  
+### <a name="remarks"></a>Remarks  
+ **Precondition:** `0.0 < n`  
   
- Il primo costruttore crea un oggetto il cui valore `n` archiviato include il valore *n*.  
+ The first constructor constructs an object whose stored `n` value holds the value *n*.  
   
- Il secondo costruttore crea un oggetto i cui parametri archiviati sono inizializzati da *parm*. È possibile ottenere e impostare i parametri correnti di una distribuzione esistente chiamando la funzione membro `param()`.  
+ The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.  
   
 ##  <a name="param_type"></a>  student_t_distribution::param_type  
- Archivia tutti i parametri della distribuzione.  
+ Stores all the parameters of the distribution.  
 ```cpp    
 struct param_type {  
    typedef student_t_distribution<result_type> distribution_type;  
@@ -213,19 +219,19 @@ struct param_type {
    };  
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
 *n*  
-Parametro di distribuzione `n`.  
+The `n` distribution parameter.  
   
 *right*  
-Oggetto `param_type` da confrontare con questo oggetto.  
+The `param_type` object to compare to this.  
   
-### <a name="remarks"></a>Note  
- **Precondizione:** `0.0 < n`  
+### <a name="remarks"></a>Remarks  
+ **Precondition:** `0.0 < n`  
   
- Questa struttura può essere passata al costruttore di classe della distribuzione durante la creazione di istanze, alla funzione membro `param()` per impostare i parametri archiviati di una distribuzione esistente e a `operator()` per l'uso in sostituzione dei parametri archiviati.  
+ This structure can be passed to the distribution's class constructor at instantiation, to the `param()` member function to set the stored parameters of an existing distribution, and to `operator()` to be used in place of the stored parameters.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

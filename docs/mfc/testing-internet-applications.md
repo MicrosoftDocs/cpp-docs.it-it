@@ -1,37 +1,56 @@
 ---
-title: "Test delle applicazioni Internet | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "debug [MFC], applicazioni Web"
-  - "debug di applicazioni Web, test di applicazioni"
-  - "test e debug su Internet"
-  - "test, applicazioni Internet"
-  - "applicazioni Web, test"
+title: Testing Internet Applications | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Web applications [MFC], testing
+- debugging Web applications [MFC], testing applications
+- testing [MFC], Internet applications
+- debugging [MFC], Web applications
+- Internet debugging and testing
 ms.assetid: ac4c74e3-d4ad-4e19-8f6c-e270de067f01
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Test delle applicazioni Internet
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1bdf3922311d334eecece5fefbd7573f6dffab26
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Esistono alcune problematiche esclusive di test su internet, soprattutto per le applicazioni in esecuzione su un server Web.  Il test iniziale probabilmente sarà eseguito mediante un client monoutente che si connette a un server di test.  Che sarà utile per eseguire il debug del codice.  
+---
+# <a name="testing-internet-applications"></a>Testing Internet Applications
+There are some unique testing challenges on the Internet, especially for applications running on a Web server. Your initial testing will probably be done using a single-user client connecting to a test server. This will be useful for debugging your code.  
   
- Si consiglia inoltre di test in condizioni reali: con più client connessi alle connessioni ad alta velocità nonché le righe seriali a bassa velocità, incluse le connessioni del modem.  Può essere difficile simulare le condizioni reali, ma è sicuramente opportuno richiedere il tempo di progettazione degli scenari possibili e che li esegue.  Se possibile, è preferibile utilizzare gli strumenti per effettuare la capacità e di stress il test.  Alcune classi di bug, ad esempio bug di intervallo, è difficile individuazione e riprodurre.  
+ You will also want to test under real conditions: with multiple clients connected over high-speed connections as well as low-speed serial lines, including modem connections. It can be difficult to simulate real conditions, but it is certainly worth spending time designing possible scenarios and executing them. If possible, you will also want to use tools to do capacity and stress testing. Certain classes of bugs, such as timing bugs, are difficult to find and to reproduce.  
   
- Una delle problematiche di programmazione per Internet sia la visibilità.  Molti accesso al sito possono rallentare il server.  Si desidera che il server per degradarti correttamente.  Si desidera impedire qualsiasi elemento che può essere distruttivo sul computer di un utente se l'applicazione non riesce, ad esempio danneggiamento dei dati mentre la scrittura nel Registro di sistema o while scrittura nel cookie sul client\).  
+ One of the challenges of Internet programming is its visibility. Many accesses to your site may slow down your server. You want your server to degrade gracefully. You want to prevent anything that could be destructive to a user's computer if your application fails (for example, corruption of data while writing to the registry or while writing cookies on the client).  
   
-## Vedere anche  
- [Attività di programmazione Internet MFC](../mfc/mfc-internet-programming-tasks.md)   
- [Concetti di base della programmazione Internet MFC](../mfc/mfc-internet-programming-basics.md)
+## <a name="see-also"></a>See Also  
+ [MFC Internet Programming Tasks](../mfc/mfc-internet-programming-tasks.md)   
+ [MFC Internet Programming Basics](../mfc/mfc-internet-programming-basics.md)
+
+

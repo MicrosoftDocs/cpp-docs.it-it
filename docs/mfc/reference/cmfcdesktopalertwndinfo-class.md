@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCDesktopAlertWndInfo | Documenti di Microsoft
+title: CMFCDesktopAlertWndInfo Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,7 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCDesktopAlertWndInfo class
+- CMFCDesktopAlertWndInfo [MFC], m_hIcon
+- CMFCDesktopAlertWndInfo [MFC], m_nURLCmdID
+- CMFCDesktopAlertWndInfo [MFC], m_strText
+- CMFCDesktopAlertWndInfo [MFC], m_strURL
 ms.assetid: 5c9bb84e-6c96-4748-8e74-6951b6ae8e84
 caps.latest.revision: 26
 author: mikeblome
@@ -38,123 +41,123 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 7013a7c9b29c6dc9e6324ca0490a667ed79c88f7
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 77f515d3eecdf9466ab81ffb1d23e845ab4a8cdc
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcdesktopalertwndinfo-class"></a>Classe CMFCDesktopAlertWndInfo
-Il `CMFCDesktopAlertWndInfo` classe viene utilizzata con la [CMFCDesktopAlertWnd classe](../../mfc/reference/cmfcdesktopalertwnd-class.md). Specifica i controlli visualizzati se viene visualizzata la finestra di avviso.  
+# <a name="cmfcdesktopalertwndinfo-class"></a>CMFCDesktopAlertWndInfo Class
+The `CMFCDesktopAlertWndInfo` class is used with the [CMFCDesktopAlertWnd Class](../../mfc/reference/cmfcdesktopalertwnd-class.md). It specifies the controls that are displayed if the desktop alert window pops up.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCDesktopAlertWndInfo  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Costruttori pubblici  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCDesktopAlertWndInfo::~CMFCDesktopAlertWndInfo`|Distruttore.|  
+|`CMFCDesktopAlertWndInfo::~CMFCDesktopAlertWndInfo`|Destructor.|  
   
-### <a name="public-methods"></a>Metodi pubblici  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCDesktopAlertWndInfo::operator =](#operator_eq)||  
+|[CMFCDesktopAlertWndInfo::operator=](#operator_eq)||  
   
-### <a name="data-members"></a>Membri di dati  
+### <a name="data-members"></a>Data Members  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCDesktopAlertWndInfo::m_hIcon](#m_hicon)|Handle per l'icona da visualizzare.|  
-|[CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid)|L'ID di comando associato a un collegamento nella finestra di avviso.|  
-|[CMFCDesktopAlertWndInfo::m_strText](#m_strtext)|Il testo visualizzato nella finestra di avviso.|  
-|[CMFCDesktopAlertWndInfo::m_strURL](#m_strurl)|Il collegamento visualizzato nella finestra di avviso.|  
+|[CMFCDesktopAlertWndInfo::m_hIcon](#m_hicon)|A handle to the icon that is displayed.|  
+|[CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid)|The command ID associated with a link on the desktop alert window.|  
+|[CMFCDesktopAlertWndInfo::m_strText](#m_strtext)|The text that is displayed on the desktop alert window.|  
+|[CMFCDesktopAlertWndInfo::m_strURL](#m_strurl)|The link that is displayed on the desktop alert window.|  
   
-## <a name="remarks"></a>Note  
- Il `CMFCDesktopAlertWndInfo` classe viene passata al [CMFCDesktopAlertWnd::Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) per specificare gli elementi che vengono visualizzati nella finestra di dialogo predefinita della finestra di avviso. La finestra di dialogo predefinita può contenere tre elementi:  
+## <a name="remarks"></a>Remarks  
+ The `CMFCDesktopAlertWndInfo` class is passed to the [CMFCDesktopAlertWnd::Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) method to specify the elements that are displayed on the default dialog of the desktop alert window. The default dialog can contain three items:  
   
--   Un'icona, che viene impostata chiamando [CMFCDesktopAlertWndInfo::m_hIcon](#m_hicon).  
+-   An icon, which is set by calling [CMFCDesktopAlertWndInfo::m_hIcon](#m_hicon).  
   
--   Un'etichetta o un messaggio di testo viene impostato chiamando [CMFCDesktopAlertWndInfo::m_strText](#m_strtext).  
+-   A label, or text message, which is set by calling [CMFCDesktopAlertWndInfo::m_strText](#m_strtext).  
   
--   Un collegamento, che viene impostato chiamando [CMFCDesktopAlertWndInfo::m_strURL](#m_strurl). Per impostare il comando che viene eseguito quando si fa clic sul collegamento, chiamare [CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid).  
+-   A link, which is set by calling [CMFCDesktopAlertWndInfo::m_strURL](#m_strurl). To set the command that is executed when the link is clicked, call [CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid).  
   
- Se la finestra di dialogo predefinita non è sufficiente, è possibile creare una finestra di dialogo personalizzata e passarlo al [CMFCDesktopAlertWnd::Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) metodo anziché utilizzare questa classe. Per ulteriori informazioni, vedere [CMFCDesktopAlertDialog classe](../../mfc/reference/cmfcdesktopalertdialog-class.md).  
+ If the default dialog is not sufficient, you can create a custom dialog and pass it to the [CMFCDesktopAlertWnd::Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) method instead of using this class. For more information, see [CMFCDesktopAlertDialog Class](../../mfc/reference/cmfcdesktopalertdialog-class.md).  
   
-## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare diversi membri di `CMFCDesktopAlertWndInfo` (classe). Nell'esempio viene illustrato come impostare l'handle dell'icona che viene visualizzato il testo visualizzato nella finestra di avviso, il collegamento visualizzato nella finestra di avviso e l'ID di comando che è associata a un collegamento nella finestra di avviso. Questo esempio fa parte il [esempio dimostrativo avviso Desktop](../../visual-cpp-samples.md).  
+## <a name="example"></a>Example  
+ The following example demonstrates how to use various members in the `CMFCDesktopAlertWndInfo` class. The example demonstrates how to set the handle to the icon that is displayed, the text that is displayed on the desktop alert window, the link that is displayed on the desktop alert window, and the command ID that is associated with a link on the desktop alert window. This example is part of the [Desktop Alert Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_DesktopAlertDemo n.&3;](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndinfo-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_DesktopAlertDemo#3](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndinfo-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CMFCDesktopAlertWndInfo](../../mfc/reference/cmfcdesktopalertwndinfo-class.md)  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** afxDesktopAlertDialog.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxDesktopAlertDialog.h  
   
-##  <a name="operator_eq"></a>CMFCDesktopAlertWndInfo::operator =  
+##  <a name="operator_eq"></a>  CMFCDesktopAlertWndInfo::operator=  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
 CMFCDesktopAlertWndInfo& operator=(CMFCDesktopAlertWndInfo& src);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `src`  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="m_hicon"></a>CMFCDesktopAlertWndInfo::m_hIcon  
- Handle per l'icona da visualizzare.  
+##  <a name="m_hicon"></a>  CMFCDesktopAlertWndInfo::m_hIcon  
+ A handle to the icon that is displayed.  
   
 ```  
 HICON m_hIcon;  
 ```  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="m_nurlcmdid"></a>CMFCDesktopAlertWndInfo::m_nURLCmdID  
- L'ID di comando associato a un collegamento nella finestra di avviso.  
+##  <a name="m_nurlcmdid"></a>  CMFCDesktopAlertWndInfo::m_nURLCmdID  
+ The command ID associated with a link on the desktop alert window.  
   
 ```  
 UINT m_nURLCmdID;  
 ```  
   
-### <a name="remarks"></a>Note  
- L'ID di comando viene inviato al proprietario della finestra popup quando l'utente fa clic sul collegamento specificato dal [CMFCDesktopAlertWndInfo::m_strURL](#m_strurl).  
+### <a name="remarks"></a>Remarks  
+ The command ID is sent to the owner of the popup window when the user clicks on the link specified by [CMFCDesktopAlertWndInfo::m_strURL](#m_strurl).  
   
-##  <a name="m_strtext"></a>CMFCDesktopAlertWndInfo::m_strText  
- Il testo visualizzato nella finestra di avviso.  
+##  <a name="m_strtext"></a>  CMFCDesktopAlertWndInfo::m_strText  
+ The text that is displayed on the desktop alert window.  
   
 ```  
 CString m_strText;  
 ```  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="m_strurl"></a>CMFCDesktopAlertWndInfo::m_strURL  
- Il collegamento visualizzato nella finestra di avviso.  
+##  <a name="m_strurl"></a>  CMFCDesktopAlertWndInfo::m_strURL  
+ The link that is displayed on the desktop alert window.  
   
 ```  
 CString m_strURL;  
 ```  
   
-### <a name="remarks"></a>Note  
- Quando l'utente fa clic sul collegamento, il comando che ha il [CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid) comando ID sarà inviato al proprietario della finestra popup.  
+### <a name="remarks"></a>Remarks  
+ When the user clicks the link, the command that has the [CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid) command ID will be sent to the owner of the pop-up window.  
   
-## <a name="see-also"></a>Vedere anche  
- [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
- [Classi](../../mfc/reference/mfc-classes.md)   
- [Classe CMFCDesktopAlertWnd](../../mfc/reference/cmfcdesktopalertwnd-class.md)   
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCDesktopAlertWnd Class](../../mfc/reference/cmfcdesktopalertwnd-class.md)   
  [CMFCDesktopAlertWnd::Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create)   
- [Classe CMFCDesktopAlertDialog](../../mfc/reference/cmfcdesktopalertdialog-class.md)
+ [CMFCDesktopAlertDialog Class](../../mfc/reference/cmfcdesktopalertdialog-class.md)
 

@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.<cstdlib>
-- <cstdlib>
-- std::<cstdlib>
+- <cstdlib>", "std::<cstdlib>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,30 +33,30 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: c4846af0f188009cd4d1183e0ac540f781833015
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 9c38ffecc24ee0b67843f4271391f03d62f7da87
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltcstdlibgt"></a>&lt;cstdlib&gt;
-Include l'intestazione della libreria C standard \<stdlib.h> e aggiunge i nomi associati allo spazio dei nomi `std`.  
+Includes the Standard C library header \<stdlib.h> and adds the associated names to the `std` namespace.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <cstdlib>  
   
 ```  
   
-## <a name="remarks"></a>Note  
- L'inclusione di questa intestazione garantisce che i nomi dichiarati usando il collegamento esterno nell'intestazione della libreria C standard vengano dichiarati nello spazio dei nomi `std`.  
+## <a name="remarks"></a>Remarks  
+ Including this header ensures that the names declared using external linkage in the Standard C library header are declared in the `std` namespace.  
   
-## <a name="see-also"></a>Vedere anche  
- [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)  (Riferimento file di intestazione)  
- [C++ Standard Library Overview](../standard-library/cpp-standard-library-overview.md)  (Panoramica sulla libreria standard C++)  
- [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [C++ Standard Library Overview](../standard-library/cpp-standard-library-overview.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

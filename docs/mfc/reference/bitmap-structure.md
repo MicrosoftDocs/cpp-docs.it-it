@@ -1,5 +1,5 @@
 ---
-title: Struttura di BITMAP | Documenti di Microsoft
+title: BITMAP Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- BITMAP structure
+- BITMAP structure [MFC]
 ms.assetid: 05d33b4d-7232-4643-a108-87dda8ff5f22
 caps.latest.revision: 12
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: cd7e63cfe9e7a0f2305ca5c3cd7c2571a080a718
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 22bd4bfe4d2c396e0a7a706218c3d2fec08ab738
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="bitmap-structure"></a>Struttura BITMAP
-Il **BITMAP** struttura definisce l'altezza, larghezza, formato di colore e i valori di bit di una bitmap logica**.**  
+# <a name="bitmap-structure"></a>BITMAP Structure
+The **BITMAP** structure defines the height, width, color format, and bit values of a logical bitmap**.**  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct tagBITMAP {  /* bm */  
@@ -57,32 +57,32 @@ typedef struct tagBITMAP {  /* bm */
 } BITMAP;  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  *bmType*  
- Specifica il tipo di bitmap. Per le bitmap logiche, questo membro deve essere 0.  
+ Specifies the bitmap type. For logical bitmaps, this member must be 0.  
   
  *bmWidth*  
- Specifica la larghezza della bitmap in pixel. La larghezza deve essere maggiore di 0.  
+ Specifies the width of the bitmap in pixels. The width must be greater than 0.  
   
  *bmHeight*  
- Specifica l'altezza della bitmap in righe raster. L'altezza deve essere maggiore di 0.  
+ Specifies the height of the bitmap in raster lines. The height must be greater than 0.  
   
  *bmWidthBytes*  
- Specifica il numero di byte in ogni riga raster. Questo valore deve essere un numero pari poiché l'interfaccia GDI (Graphics Device Interface) presuppone che i valori di bit di una bitmap formino una matrice di valori interi (a&2; byte). In altre parole, **bmWidthBytes** \* 8 deve essere il successivo multiplo di 16 maggiore o uguale al valore ottenuto quando il **bmWidth** membro viene moltiplicato per il **bmBitsPixel** membro.  
+ Specifies the number of bytes in each raster line. This value must be an even number since the graphics device interface (GDI) assumes that the bit values of a bitmap form an array of integer (2-byte) values. In other words, **bmWidthBytes** \* 8 must be the next multiple of 16 greater than or equal to the value obtained when the **bmWidth** member is multiplied by the **bmBitsPixel** member.  
   
  *bmPlanes*  
- Specifica il numero dei piani di colore nella bitmap.  
+ Specifies the number of color planes in the bitmap.  
   
  *bmBitsPixel*  
- Specifica il numero di bit di colore adiacenti su ogni piano necessario per definire un pixel.  
+ Specifies the number of adjacent color bits on each plane needed to define a pixel.  
   
  *bmBits*  
- Punta alla posizione dei valori di bit della bitmap. Il **bmBits** membro deve essere un puntatore di tipo long a una matrice di valori a 1 byte.  
+ Points to the location of the bit values for the bitmap. The **bmBits** member must be a long pointer to an array of 1-byte values.  
   
-## <a name="remarks"></a>Note  
- I formati di bitmap attualmente utilizzati sono monocromatico e a colori. La bitmap monocromatica utilizza un formato a 1 bit, 1 piano. Ogni analisi è un multiplo di 16 bit.  
+## <a name="remarks"></a>Remarks  
+ The currently used bitmap formats are monochrome and color. The monochrome bitmap uses a 1-bit, 1-plane format. Each scan is a multiple of 16 bits.  
   
- Le analisi sono organizzate come indicato di seguito per una bitmap monocromatica di altezza *n*:  
+ Scans are organized as follows for a monochrome bitmap of height *n*:  
   
  `Scan 0`  
   
@@ -98,16 +98,16 @@ typedef struct tagBITMAP {  /* bm */
   
  `Scan n-1`  
   
- Su un dispositivo monocromatico i pixel sono bianchi o neri. Se il bit corrispondente nella bitmap è 1, il pixel è attivato (bianco). Se il bit corrispondente nella bitmap è 0, il pixel è disattivato (nero).  
+ The pixels on a monochrome device are either black or white. If the corresponding bit in the bitmap is 1, the pixel is turned on (white). If the corresponding bit in the bitmap is 0, the pixel is turned off (black).  
   
- Tutti i dispositivi supportano le bitmap con il **RC_BITBLT** bit impostato il **RASTERCAPS** indice del [CDC:: GetDeviceCaps](../../mfc/reference/cdc-class.md#getdevicecaps) funzione membro.  
+ All devices support bitmaps that have the **RC_BITBLT** bit set in the **RASTERCAPS** index of the [CDC::GetDeviceCaps](../../mfc/reference/cdc-class.md#getdevicecaps) member function.  
   
- Ogni dispositivo presenta un formato di colore univoco. Per trasferire una bitmap da un dispositivo a un altro, utilizzare il [GetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879) e [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) funzioni di Windows.  
+ Each device has its own unique color format. In order to transfer a bitmap from one device to another, use the [GetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879) and [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) Windows functions.  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** WinGDI. h  
+## <a name="requirements"></a>Requirements  
+ **Header:** wingdi.h  
   
-## <a name="see-also"></a>Vedere anche  
- [Strutture, stili, callback e mappe messaggi](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect)
 

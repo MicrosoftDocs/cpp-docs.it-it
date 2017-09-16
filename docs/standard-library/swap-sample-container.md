@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.swap
-- std::swap
-- swap
+- std.swap", "std::swap", "swap
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,20 +33,20 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 2caa31718c21b08dd4e008fce9c92e12ab5b93b8
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 670475e898a8082d9614a2a94ec95ede5fa5f9a7
 ms.contentlocale: it-it
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="swap-ltsample-containergt"></a>swap (&lt;sample container&gt;)
 > [!NOTE]
->  Questo argomento è incluso nella documentazione di Visual C++ come esempio non funzionante dei contenitori usati nella libreria standard C++. Per altre informazioni, vedere [Contenitori della libreria standard C++](../standard-library/stl-containers.md).  
+>  This topic is in the Visual C++ documentation as a nonfunctional example of containers used in the C++ Standard Library. For more information, see [C++ Standard Library Containers](../standard-library/stl-containers.md).  
   
  Executes `left.`[swap](../standard-library/container-class-swap.md)`(right)`.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty>  
@@ -57,6 +55,6 @@ void swap(
     Container <Ty>& right);
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [\<sample container>](../standard-library/sample-container.md)
 

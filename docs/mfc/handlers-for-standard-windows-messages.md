@@ -1,51 +1,69 @@
 ---
-title: "Gestori per messaggi Windows standard | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "afx_msg"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "funzioni [C++], gestore"
-  - "funzioni di gestione, messaggi Windows standard"
-  - "gestione dei messaggi [C++], gestori dei messaggi Windows"
-  - "messaggi [C++], Windows"
-  - "messaggi Windows [C++], gestori"
+title: Handlers for Standard Windows Messages | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- afx_msg
+dev_langs:
+- C++
+helpviewer_keywords:
+- Windows messages [MFC], handlers
+- message handling [MFC], Windows message handlers
+- handler functions, standard Windows messages
+- functions [MFC], handler
+- messages [MFC], Windows
 ms.assetid: 19412a8b-2c38-4502-81da-13c823c7e36c
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Gestori per messaggi Windows standard
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9fa19a16623224e92442b00d6ea082d70c8ba040
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-I gestori predefiniti per i messaggi standard di Windows \(**WM\_**\) sono già definiti nella classe `CWnd`.  La libreria di classi basa i nomi per questi gestori sul nome del messaggio.  Ad esempio, il gestore del messaggio `WM_PAINT` viene dichiarato in `CWnd` come:  
+---
+# <a name="handlers-for-standard-windows-messages"></a>Handlers for Standard Windows Messages
+Default handlers for standard Windows messages (**WM_**) are predefined in class `CWnd`. The class library bases names for these handlers on the message name. For example, the handler for the `WM_PAINT` message is declared in `CWnd` as:  
   
  `afx_msg void OnPaint();`  
   
- La parola chiave **afx\_msg** suggerisce l'effetto della parola chiave C\+\+ **virtual** distinguendo i gestori da altre funzioni membro `CWnd`.  Notare, tuttavia, che queste funzioni non sono effettivamente virtuali; vengono invece implementate dalle mappe messaggi.  Le mappe messaggi dipendono unicamente da macro standard del preprocessore, non dalle estensioni del linguaggio C\+\+.  La parola chiave **afx\_msg** risolve in spazio vuoto dopo la pre\-elaborazione.  
+ The **afx_msg** keyword suggests the effect of the C++ **virtual** keyword by distinguishing the handlers from other `CWnd` member functions. Note, however, that these functions are not actually virtual; they are instead implemented through message maps. Message maps depend solely on standard preprocessor macros, not on any extensions to the C++ language. The **afx_msg** keyword resolves to white space after preprocessing.  
   
- Per eseguire l'override di un gestore definito in una classe base, definire semplicemente una funzione con lo stesso prototipo nella classe derivata e fare una voce della mappa messaggi per il gestore.  Il gestore "esegue l'override" di qualsiasi gestore dello stesso nome in una qualsiasi delle classi base della classe.  
+ To override a handler defined in a base class, simply define a function with the same prototype in your derived class and to make a message-map entry for the handler. Your handler "overrides" any handler of the same name in any of your class's base classes.  
   
- In alcuni casi, il gestore deve chiamare il gestore sottoposto a override nella classe base in modo che la classe base e Windows possano operare nel messaggio.  Quando si chiama il gestore della classe base nell'override dipende da condizioni.  Talvolta è necessario chiamare il gestore della classe base all'inizio e altre volte alla fine.  Talvolta è possibile chiamare in modo condizionale il gestore della classe base, se si sceglie di non gestire il messaggio.  Talvolta è necessario chiamare un gestore di classi base, quindi in modo condizionale eseguire il codice del gestore, a seconda del valore o dello stato restituito dal gestore della classe base.  
+ In some cases, your handler should call the overridden handler in the base class so the base class(es) and Windows can operate on the message. Where you call the base-class handler in your override depends on the circumstances. Sometimes you must call the base-class handler first and sometimes last. Sometimes you call the base-class handler conditionally, if you choose not to handle the message yourself. Sometimes you should call the base-class handler, then conditionally execute your own handler code, depending on the value or state returned by the base-class handler.  
   
 > [!CAUTION]
->  Non è sicuro modificare gli argomenti passati ad un gestore se si intende passarli a un gestore di classi base.  Ad esempio, si potrebbe essere tentati di modificare l'argomento `nChar` del gestore `OnChar` \(per convertire in maiuscolo, ad esempio\).  Questo comportamento è abbastanza presente, ma se è necessario ottenere questo risultato, utilizzare la funzione membro **SendMessage** di `CWnd` invece.  
+>  It is not safe to modify the arguments passed into a handler if you intend to pass them to a base-class handler. For example, you might be tempted to modify the `nChar` argument of the `OnChar` handler (to convert to uppercase, for example). This behavior is fairly obscure, but if you need to accomplish this effect, use the `CWnd` member function **SendMessage** instead.  
   
- Come si determina la modalità appropriata per eseguire l'override di un messaggio specificato?  Quando la finestra Proprietà scrive lo scheletro della funzione di gestione per un messaggio specificato \- un gestore `OnCreate` per `WM_CREATE`, ad esempio \- schizza sotto forma di funzione membro consigliata su cui è stato eseguito l'override.  L'esempio seguente consiglia che il gestore chiami prima il gestore della classe base e continui solo a condizione che non restituisca \-1.  
+ How do you determine the proper way to override a given message When the Properties window writes the skeleton of the handler function for a given message — an `OnCreate` handler for `WM_CREATE`, for example — it sketches in the form of the recommended overridden member function. The following example recommends that the handler first call the base-class handler and proceed only on condition that it does not return -1.  
   
- [!code-cpp[NVC_MFCMessageHandling#3](../mfc/codesnippet/CPP/handlers-for-standard-windows-messages_1.cpp)]  
+ [!code-cpp[NVC_MFCMessageHandling#3](../mfc/codesnippet/cpp/handlers-for-standard-windows-messages_1.cpp)]  
   
- Per convenzione, i nomi di questi gestori iniziano con il prefisso "On". Alcuni di questi gestori non accettano argomenti, mentre altri ne accettano diversi.  Alcuni dispongono inoltre di un tipo restituito diverso da `void`.  I gestori predefiniti per tutti i messaggi **WM\_** sono documentati nei *Riferimenti alla libreria MFC* come funzioni membro di classe `CWnd` dei cui nomi iniziano con "On". Le dichiarazioni di funzione membro in `CWnd` sono caratterizzate da **afx\_msg**.  
+ By convention, the names of these handlers begin with the prefix "On." Some of these handlers take no arguments, while others take several. Some also have a return type other than `void`. The default handlers for all **WM_** messages are documented in the *MFC Reference* as member functions of class `CWnd` whose names begin with "On." The member function declarations in `CWnd` are prefixed with **afx_msg**.  
   
-## Vedere anche  
- [Dichiarazioni di funzioni gestore messaggi](../mfc/declaring-message-handler-functions.md)
+## <a name="see-also"></a>See Also  
+ [Declaring Message Handler Functions](../mfc/declaring-message-handler-functions.md)
+

@@ -1,40 +1,59 @@
 ---
-title: "Esempio dei commenti | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "commenti del codice, MFC"
-  - "commenti, MFC"
-  - "esempi [MFC], commenti del codice"
-  - "MFC (file di origine), commento (esempio)"
+title: An Example of the Comments | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC source files, comment example
+- code comments, MFC
+- comments, MFC
+- examples [MFC], code comments
 ms.assetid: eb8ddea2-74de-4d5c-93d6-596f7c5e58a7
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Esempio dei commenti
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e76e853073157dca03fec67a19a5f583c0cbfee7
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Nell'elenco parziale della classe `CChildFrame` utilizza la maggior parte dei commenti standard che MFC utilizza le classi per dividere i membri della classe dalle modalità utilizzate:  
+---
+# <a name="an-example-of-the-comments"></a>An Example of the Comments
+The following partial listing of class `CChildFrame` uses most of the standard comments that MFC employs in its classes to divide class members by the ways they are used:  
   
- [!code-cpp[NVC_MFCListView#5](../mfc/codesnippet/CPP/an-example-of-the-comments_1.h)]  
+ [!code-cpp[NVC_MFCListView#5](../atl/reference/codesnippet/cpp/an-example-of-the-comments_1.h)]  
   
- Questi commenti contrassegnano coerente le sezioni della dichiarazione di classe che contengono tipi simili di membri della classe.  Tenere presente che queste sono le convenzioni di MFC, non stabilire regole.  
+ These comments consistently mark sections of the class declaration that contain similar kinds of class members. Keep in mind that these are MFC conventions, not set rules.  
   
-## Vedere anche  
- [Utilizzo dei file di origine MFC](../mfc/using-the-mfc-source-files.md)   
- [\/\/ Commento all'implementazione](../mfc/decrement-implementation-comment.md)   
- [\/\/ Commento sui costruttori](../mfc/decrement-constructors-comment.md)   
- [\/\/ Commento sugli attributi](../mfc/decrement-attributes-comment.md)   
- [\/\/ Commento sulle operazioni](../mfc/decrement-operations-comment.md)   
- [\/\/ Commento sui sottoponibili a override](../mfc/decrement-overridables-comment.md)
+## <a name="see-also"></a>See Also  
+ [Using the MFC Source Files](../mfc/using-the-mfc-source-files.md)   
+ [// Implementation Comment](../mfc/decrement-implementation-comment.md)   
+ [// Constructors Comment](../mfc/decrement-constructors-comment.md)   
+ [// Attributes Comment](../mfc/decrement-attributes-comment.md)   
+ [// Operations Comment](../mfc/decrement-operations-comment.md)   
+ [// Overridables Comment](../mfc/decrement-overridables-comment.md)
+
+

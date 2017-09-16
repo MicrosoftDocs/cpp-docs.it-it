@@ -1,5 +1,5 @@
 ---
-title: Classe is_trivially_constructible | Microsoft Docs
+title: is_trivially_constructible Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,7 +10,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- is_trivially_constructible
 - type_traits/std::is_trivially_constructible
 dev_langs:
 - C++
@@ -35,38 +34,39 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 4acc8f686d918391966949134a5c2b3c1a0a41a5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: fe756def468770270140ebc7cb6c9a91f2b926b2
+ms.contentlocale: it-it
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="istriviallyconstructible-class"></a>Classe is_trivially_constructible
-Verifica se un tipo è facilmente costruibile quando vengono usati i tipi di argomento specificati.  
+# <a name="istriviallyconstructible-class"></a>is_trivially_constructible Class
+Tests whether a type is trivially constructible when the specified argument types are used.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class T, class... Args>  
 struct is_trivially_constructible;
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  `T`  
- Tipo su cui eseguire una query.  
+ The type to query.  
   
  `Args`  
- Tipi di argomento per cui trovare la corrispondenza in un costruttore di `T`.  
+ The argument types to match in a constructor of `T`.  
   
-## <a name="remarks"></a>Note  
- Un'istanza del predicato di tipo contiene true se il tipo `T` è facilmente costruibile mediante i tipi di argomento in `Args`; in caso contrario, contiene false. Il tipo `T` è facilmente costruibile se la definizione di variabile `T t(std::declval<Args>()...);` è nel formato corretto ed è nota per non chiamare operazioni complesse. `T` e tutti i tipi inclusi in `Args` devono essere tipi completi, `void`, o matrici di valori associati sconosciuti.  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `T` is trivially constructible by using the argument types in `Args`, otherwise it holds false. Type `T` is trivially constructible if the variable definition `T t(std::declval<Args>()...);` is well-formed and is known to call no non-trivial operations. Both `T` and all the types in `Args` must be complete types, `void`, or arrays of unknown bound.  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **Spazio dei nomi:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

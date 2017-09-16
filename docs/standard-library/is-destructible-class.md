@@ -1,5 +1,5 @@
 ---
-title: Classe is_destructible | Microsoft Docs
+title: is_destructible Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,7 +10,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- is_destructible
 - type_traits/std::is_destructible
 dev_langs:
 - C++
@@ -36,35 +35,36 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: fecbfd44ca5b3e9d5d8b5d35637b7d1feb74ca48
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 243d93b7ed17d977baaa04222dd871cd0c892a12
+ms.contentlocale: it-it
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="isdestructible-class"></a>Classe is_destructible
-Verifica se il tipo è destructible.  
+# <a name="isdestructible-class"></a>is_destructible Class
+Tests whether the type is destructible.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class T>  
 struct is_destructible;
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  `T`  
- Tipo su cui eseguire una query.  
+ The type to query.  
   
-## <a name="remarks"></a>Note  
- Un'istanza del predicato di tipo contiene true se il tipo `T` è un tipo destructible; in caso contrario, contiene false. I tipi destructible sono tipi di riferimento, tipi di oggetto e tipi in cui per un tipo `U` equivalente a `remove_all_extents_t<T>` , l'operando non valutato `std::declval<U&>.~U()` risulta ben formato. Gli altri tipi, inclusi i tipi incompleti, `void`e i tipi di funzione, non sono destructible.  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `T` is a destructible type, otherwise it holds false. Destructible types are reference types, object types, and types where for some type `U` equal to `remove_all_extents_t<T>` the unevaluated operand `std::declval<U&>.~U()` is well-formed. Other types, including incomplete types, `void`, and function types, are not destructible types.  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **Spazio dei nomi:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

@@ -1,119 +1,138 @@
 ---
-title: "Finestra di progettazione della barra multifunzione (MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.ribbon.F1"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC (finestra di progettazione della barra multifunzione)"
-  - "finestra di progettazione della barra multifunzione (MFC)"
+title: Ribbon Designer (MFC) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.editors.ribbon.F1
+dev_langs:
+- C++
+helpviewer_keywords:
+- Ribbon Designer (MFC)
+- MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
 caps.latest.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# Finestra di progettazione della barra multifunzione (MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 21372eebe92c9cba42d25f79b9e2ffc32f43f019
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-La finestra di progettazione della barra multifunzione permette di creare e personalizzare barre multifunzione in applicazioni MFC.  Una barra multifunzione è un elemento dell'interfaccia utente che organizza i comandi in gruppi logici.  Questi gruppi sono visualizzati in schede separate in una striscia che occupa tutta la parte superiore della finestra.  La barra multifunzione sostituisce la barra dei menu e le barre degli strumenti.  Una barra multifunzione può migliorare significativamente l'usabilità delle applicazioni.  Per altre informazioni, vedere [Barre multifunzione](http://go.microsoft.com/fwlink/?LinkId=129233).  La figura seguente mostra una barra multifunzione.  
+---
+# <a name="ribbon-designer-mfc"></a>Ribbon Designer (MFC)
+The Ribbon Designer lets you create and customize ribbons in MFC applications. A ribbon is a user interface (UI) element that organizes commands into logical groups. These groups appear on separate tabs in a strip across the top of the window. The ribbon replaces the menu bar and toolbars. A ribbon can significantly improve application usability. For more information, see [Ribbons](http://go.microsoft.com/fwlink/linkid=129233). The following illustration shows a ribbon.  
   
- ![Controllo della risorsa della barra multifunzione MFC](../mfc/media/ribbon_no_callouts.png "Ribbon\_No\_Callouts")  
+ ![MFC Ribbon Resource Control](../mfc/media/ribbon_no_callouts.png "ribbon_no_callouts")  
   
- Per creare barre multifunzione nelle versioni precedenti di Visual Studio, era necessario scrivere codice che usasse le classi Ribbon MFC, come la [CMFCRibbonBar Class](../mfc/reference/cmfcribbonbar-class.md).  In [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)] la finestra di progettazione della barra multifunzione offre un metodo alternativo per creare barre multifunzione. Prima di tutto, creare e personalizzare una barra multifunzione come risorsa.  Caricare quindi la risorsa barra multifunzione dal codice nell'applicazione MFC.  È anche possibile usare risorse barra multifunzione e classi Ribbon MFC insieme.  Ad esempio, è possibile creare una risorsa barra multifunzione e quindi aggiungervi più elementi a livello di codice al runtime.  
+ In earlier versions of Visual Studio, ribbons had to be created by writing code that uses the MFC ribbon classes such as [CMFCRibbonBar Class](../mfc/reference/cmfcribbonbar-class.md). In [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)], the ribbon designer provides an alternative method for building ribbons. First, create and customize a ribbon as a resource. Then load the ribbon resource from code in the MFC application. You can even use ribbon resources and MFC ribbon classes together. For example, you can create a ribbon resource, and then programmatically add more elements to it at runtime by using code.  
   
-## Informazioni sulla finestra di progettazione della barra multifunzione  
- La finestra di progettazione della barra multifunzione crea e archivia la barra multifunzione come risorsa.  Quando si crea una risorsa barra multifunzione, la finestra di progettazione della barra multifunzione esegue tre operazioni:  
+## <a name="understanding-the-ribbon-designer"></a>Understanding the Ribbon Designer  
+ The ribbon designer creates and stores the ribbon as a resource. When you create a ribbon resource, the ribbon designer does these three things:  
   
--   Aggiunge una voce nello script di definizione delle risorse del progetto \(\*.rc\).  Nell'esempio seguente `IDR_RIBBON` è il nome univoco che identifica la risorsa barra multifunzione, `RT_RIBBON_XML` è il tipo di risorsa e `ribbon.mfcribbon-ms` è il nome del file di risorse.  
+-   Adds an entry in the project resource definition script (*.rc). In the following example, `IDR_RIBBON` is the unique name that identifies the ribbon resource, `RT_RIBBON_XML` is the resource type, and `ribbon.mfcribbon-ms` is the name of the resource file.  
   
-    ```  
-    IDR_RIBBON             RT_RIBBON_XML                      "res\\ribbon.mfcribbon-ms"  
-    ```  
+ ```  
+    IDR_RIBBON RT_RIBBON_XML      "res\\ribbon.mfcribbon-ms"  
+ ```  
   
--   Aggiunge le definizioni degli ID comando a resource.h.  
+-   Adds the definitions of Command IDs to resource.h.  
   
-    ```  
-    #define IDR_RIBBON            307  
-    ```  
+ ```  
+ #define IDR_RIBBON            307  
+ ```  
   
--   Crea un file di risorse della barra multifunzione \(\*.mfcribbon\-ms\) che contiene il codice XML che definisce i pulsanti, i controlli e gli attributi della barra multifunzione.  Le modifiche apportate alla barra multifunzione nella finestra di progettazione della barra multifunzione vengono archiviate come XML nel file di risorse.  L'esempio di codice seguente mostra parte del contenuto di un file \*.mfcribbon\-ms.  
+-   Creates a ribbon resource file (*.mfcribbon-ms) that contains the XML code that defines the ribbon's buttons, controls, and attributes. Changes to the ribbon in the ribbon designer are stored in the resource file as XML. The following code example shows part of the contents of a \*.mfcribbon-ms file:  
   
-    ```  
-    <RIBBON_BAR>  
-      <ELEMENT_NAME>RibbonBar</ELEMENT_NAME>  
-      <IMAGE>  
-        <ID>  
-          <NAME>IDB_BUTTONS</NAME>  
-          <VALUE>113</VALUE>  
-        </ID> …  
-    ```  
+ ```  
+ <RIBBON_BAR>  
+ <ELEMENT_NAME>RibbonBar</ELEMENT_NAME>  
+ <IMAGE>  
+ <ID>  
+ <NAME>IDB_BUTTONS</NAME>  
+ <VALUE>113</VALUE>  
+ </ID>   
+ ```  
   
- Per usare la risorsa barra multifunzione nell'applicazione MFC, caricare la risorsa chiamando [CMFCRibbonBar::LoadFromResource](../Topic/CMFCRibbonBar::LoadFromResource.md).  
+ To use the ribbon resource in your MFC application, load the resource by calling [CMFCRibbonBar::LoadFromResource](../mfc/reference/cmfcribbonbar-class.md#loadfromresource).  
   
-## Creazione di una barra multifunzione mediante la finestra di progettazione della barra multifunzione  
- È possibile aggiungere una risorsa barra multifunzione al progetto MFC in due modi diversi:  
+## <a name="creating-a-ribbon-by-using-the-ribbon-designer"></a>Creating a Ribbon By Using the Ribbon Designer  
+ These are the two ways to add a ribbon resource to your MFC project:  
   
--   Creare un'applicazione MFC e configurare la Creazione guidata progetto MFC in modo da creare la barra multifunzione.  Per altre informazioni, vedere [Procedura dettagliata: creazione di un'applicazione barra multifunzione utilizzando MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).  
+-   Create an MFC application and configure the MFC Project Wizard to create the ribbon. For more information, see [Walkthrough: Creating a Ribbon Application By Using MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).  
   
--   In un progetto MFC esistente creare una risorsa barra multifunzione e caricarla.  Per altre informazioni, vedere [Procedura dettagliata: aggiornamento dell'applicazione MFC Scribble \(parte 1\)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).  
+-   In an existing MFC project, create a ribbon resource and load it. For more information, see [Walkthrough: Updating the MFC Scribble Application (Part 1)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).  
   
- Se il progetto contiene già una barra multifunzione codificata manualmente, MFC include funzioni che permettono di convertire la barra multifunzione esistente in una risorsa barra multifunzione.  Per altre informazioni, vedere [Procedura: convertire una barra multifunzione MFC esistente in una risorsa Ribbon](../mfc/how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md).  
+ If your project already has a manually coded ribbon, MFC has functions that you can use to convert the existing ribbon to a ribbon resource. For more information, see [How to: Convert an Existing MFC Ribbon to a Ribbon Resource](../mfc/how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md).  
   
 > [!NOTE]
->  Le barre multifunzione non possono essere create in applicazioni basate su finestra di dialogo.  Per altre informazioni, vedere [Tipo di applicazione, Creazione guidata applicazione MFC](../mfc/reference/application-type-mfc-application-wizard.md).  
+>  Ribbons cannot be created in dialog-based applications. For more information, see [Application Type, MFC Application Wizard](../mfc/reference/application-type-mfc-application-wizard.md).  
   
-## Personalizzazione di barre multifunzione  
- Per aprire una barra multifunzione nella finestra di progettazione della barra multifunzione, fare doppio clic sulla risorsa barra multifunzione in Visualizzazione risorse.  Nella finestra di progettazione è possibile aggiungere, rimuovere e personalizzare gli elementi sulla barra multifunzione, il pulsante dell'applicazione o la barra di accesso rapido.  È anche possibile collegare eventi, ad esempio eventi di selezione di pulsanti ed eventi di menu, a un metodo nell'applicazione.  
+## <a name="customizing-ribbons"></a>Customizing Ribbons  
+ To open a ribbon in the ribbon designer, double-click the ribbon resource in Resource View. In the designer, you can add, remove, and customize elements on the ribbon, the Application button, or the quick access toolbar. You can also link events, for example, button-click events and menu events, to a method in your application.  
   
- La figura seguente mostra i diversi componenti presenti nella finestra di progettazione della barra multifunzione.  
+ The following illustration shows the various components in the ribbon designer.  
   
- ![Finestra di progettazione della barra multifunzione MFC](../mfc/media/ribbon_designer.png "Ribbon\_Designer")  
+ ![MFC Ribbon Designer](../mfc/media/ribbon_designer.png "ribbon_designer")  
   
--   **Casella degli strumenti:** contiene i controlli che possono essere trascinati nell'area di progettazione.  
+- **Toolbox:** Contains controls that can be dragged to the designer surface.  
   
--   **Area di progettazione:** contiene la rappresentazione visiva della risorsa barra multifunzione.  
+- **Designer Surface:** Contains the visual representation of the ribbon resource.  
   
--   **Finestra Proprietà:** elenca gli attributi dell'elemento selezionato sull'area di progettazione.  
+- **Properties window:** Lists the attributes of the item that is selected on the designer surface.  
   
--   **Finestra Visualizzazione risorse:** visualizza le risorse che includono le risorse barra multifunzione nel progetto.  
+- **Resource View window:** Displays the resources that include ribbon resources, in your project.  
   
--   **Barra degli strumenti Editor Ribbon:** contiene i comandi che permettono di visualizzare in anteprima la barra multifunzione e di modificarne il tema visivo.  
+- **Ribbon Editor Toolbar:** Contains commands that let you preview the ribbon and change its visual theme.  
   
- Gli argomenti seguenti descrivono come usare le funzionalità della finestra di progettazione della barra multifunzione:  
+ The following topics describe how to use the features in the ribbon designer:  
   
--   [Procedura: personalizzare il pulsante dell'applicazione](../mfc/how-to-customize-the-application-button.md)  
+- [How to: Customize the Application Button](../mfc/how-to-customize-the-application-button.md)  
   
--   [Procedura: personalizzare la barra di accesso rapido](../mfc/how-to-customize-the-quick-access-toolbar.md)  
+- [How to: Customize the Quick Access Toolbar](../mfc/how-to-customize-the-quick-access-toolbar.md)  
   
--   [Procedura: aggiungere controlli Ribbon e gestori eventi](../mfc/how-to-add-ribbon-controls-and-event-handlers.md)  
+- [How to: Add Ribbon Controls and Event Handlers](../mfc/how-to-add-ribbon-controls-and-event-handlers.md)  
   
--   [Procedura: caricare una risorsa Ribbon da un'applicazione MFC](../mfc/how-to-load-a-ribbon-resource-from-an-mfc-application.md)  
+- [How to: Load a Ribbon Resource from an MFC Application](../mfc/how-to-load-a-ribbon-resource-from-an-mfc-application.md)  
   
-## Definizioni degli elementi della barra multifunzione  
- ![Barra multifunzione MFC](../mfc/media/ribbon.png "Ribbon")  
+## <a name="definitions-of-ribbon-elements"></a>Definitions of Ribbon Elements  
+ ![MFC Ribbon](../mfc/media/ribbon.png "ribbon")  
   
--   **Pulsante dell'applicazione:** pulsante visualizzato nell'angolo in alto a sinistra di una barra multifunzione.  Il pulsante dell'applicazione sostituisce il menu File ed è visibile anche quando la barra multifunzione è ridotta a icona.  Quando si fa clic su questo pulsante, viene visualizzato un menu che contiene un elenco di comandi.  
+- **Application button:** The button that appears on the upper-left corner of a ribbon. The Application button replaces the File menu and is visible even when the ribbon is minimized. When the button is clicked, a menu that has a list of commands is displayed.  
   
--   **Barra di accesso rapido:** piccola barra degli strumenti personalizzabile che visualizza i comandi usati più spesso.  
+- **Quick Access toolbar:** A small, customizable toolbar that displays frequently used commands.  
   
--   **Categoria**: raggruppamento logico che rappresenta il contenuto di una scheda della barra multifunzione.  
+- **Category**: The logical grouping that represents the contents of a ribbon tab.  
   
--   **Pulsante predefinito della categoria:** pulsante visualizzato sulla barra multifunzione quando questa è ridotta a icona.  Quando si fa clic su questo pulsante, la categoria viene visualizzata di nuovo come menu.  
+- **Category Default button:** The button that appears on the ribbon when the ribbon is minimized. When the button is clicked, the category reappears as a menu.  
   
--   **Pannello:** area della barra multifunzione che visualizza un gruppo di controlli correlati.  Ogni categoria della barra multifunzione contiene uno o più pannelli della barra multifunzione.  
+- **Panel:** An area of the ribbon bar that displays a group of related controls. Every ribbon category contains one or more ribbon panels.  
   
--   **Elementi della barra multifunzione:** controlli nei pannelli, ad esempio i pulsanti e le caselle combinate.  Per visualizzare i diversi controlli che può ospitare una barra multifunzione, vedere [Esempio RibbonGadgets: applicazione gadget della barra multifunzione](../top/visual-cpp-samples.md).  
+- **Ribbon elements:** Controls in the panels, for example, buttons and combo boxes. To see the various controls that can be hosted on a ribbon, see [RibbonGadgets Sample: Ribbon Gadgets Application](../visual-cpp-samples.md).  
   
-## Vedere anche  
- [Elementi dell'interfaccia utente](../mfc/user-interface-elements-mfc.md)   
- [Working with Resource Files](../mfc/working-with-resource-files.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)   
+ [Working with Resource Files](../windows/working-with-resource-files.md)
+
+

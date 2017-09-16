@@ -1,50 +1,69 @@
 ---
-title: "Procedura: caricare una risorsa Ribbon da un&#39;applicazione MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "barra multifunzione (risorsa), caricamento"
+title: 'How to: Load a Ribbon Resource from an MFC Application | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- ribbon resource [MFC], loading
 ms.assetid: 1c76bb8f-6345-414a-9f3f-128815ceadc5
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Procedura: caricare una risorsa Ribbon da un&#39;applicazione MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e45f63ccf2af52a6e41b3f46e4a04b43101e99b6
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Per utilizzare la risorsa della barra multifunzione nell'applicazione, modificare l'applicazione per caricare le risorse della barra multifunzione.  
+---
+# <a name="how-to-load-a-ribbon-resource-from-an-mfc-application"></a>How to: Load a Ribbon Resource from an MFC Application
+To use the ribbon resource in your application, modify the application to load the ribbon resource.  
   
-### Per caricare una risorsa barra multifunzione  
+### <a name="to-load-a-ribbon-resource"></a>To load a ribbon resource  
   
-1.  Dichiarare l'oggetto `Ribbon Control` nella classe `CMainFrame`.  
+1.  Declare the `Ribbon Control` object in the `CMainFrame` class.  
   
-    ```  
+ ```  
     CMFCRibbonBar m_wndRibbonBar;   
-    ```  
+ ```  
   
-2.  In `CMainFrame::OnCreate`, creare e inizializzare il controllo della barra multifunzione.  
+2.  In `CMainFrame::OnCreate`, create and initialize the Ribbon Control.  
   
-    ```  
+ ```  
     if (!m_wndRibbonBar.Create (this))  
-    {  
-        return -1;  
-    }  
-  
+ {  
+    return -1;  
+ }  
+ 
     if (!m_wndRibbonBar.LoadFromResource(IDR_RIBBON))  
-    {  
-        return -1;  
-    }  
-    ```  
+ {  
+    return -1;  
+ }  
+ ```  
   
-## Vedere anche  
- [Finestra di progettazione della barra multifunzione \(MFC\)](../mfc/ribbon-designer-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md)
+
+

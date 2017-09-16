@@ -1,5 +1,5 @@
 ---
-title: Struttura LOGBRUSH | Documenti di Microsoft
+title: LOGBRUSH Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- LOGBRUSH structure
+- LOGBRUSH structure [MFC]
 ms.assetid: 1bf96768-52c5-4444-9bb8-d41ba2e27e68
 caps.latest.revision: 11
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: eea7caf6139fd43dd77163271701d170c7a744e2
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: cd4d96a7f7c858f8b3cf2e39bdc98233224a1e7a
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="logbrush-structure"></a>Struttura LOGBRUSH
-Il `LOGBRUSH` struttura definisce lo stile, colore e motivo di un pennello fisico. Viene utilizzato da Windows [CreateBrushIndirect](http://msdn.microsoft.com/library/windows/desktop/dd183487) e [ExtCreatePen](http://msdn.microsoft.com/library/windows/desktop/dd162705) funzioni.  
+# <a name="logbrush-structure"></a>LOGBRUSH Structure
+The `LOGBRUSH` structure defines the style, color, and pattern of a physical brush. It is used by the Windows [CreateBrushIndirect](http://msdn.microsoft.com/library/windows/desktop/dd183487) and [ExtCreatePen](http://msdn.microsoft.com/library/windows/desktop/dd162705) functions.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct tag LOGBRUSH { /* lb */  
@@ -53,56 +53,56 @@ typedef struct tag LOGBRUSH { /* lb */
 } LOGBRUSH;  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  `lbStyle`  
- Specifica lo stile del pennello. Il `lbStyle` membro deve essere uno degli stili seguenti:  
+ Specifies the brush style. The `lbStyle` member must be one of the following styles:  
   
-- **BS_DIBPATTERN** un pennello pattern definito dalla specifica bitmap indipendente dalla periferica (DIB). Se `lbStyle` è **BS_DIBPATTERN**, **lbHatch** membro contiene un handle a DIB compresso.  
+- **BS_DIBPATTERN** A pattern brush defined by a device-independent bitmap (DIB) specification. If `lbStyle` is **BS_DIBPATTERN**, the **lbHatch** member contains a handle to a packed DIB.  
   
-- **BS_DIBPATTERNPT** un pennello pattern definito dalla specifica bitmap indipendente dalla periferica (DIB). Se `lbStyle` è **BS_DIBPATTERNPT**, **lbHatch** membro contiene un puntatore a un DIB compresso.  
+- **BS_DIBPATTERNPT** A pattern brush defined by a device-independent bitmap (DIB) specification. If `lbStyle` is **BS_DIBPATTERNPT**, the **lbHatch** member contains a pointer to a packed DIB.  
   
-- **BS_HATCHED** nati pennello.  
+- **BS_HATCHED** Hatched brush.  
   
-- **BS_HOLLOW** rendere cavo pennello.  
+- **BS_HOLLOW** Hollow brush.  
   
-- **BS_NULL** come **BS_HOLLOW**.  
+- **BS_NULL** Same as **BS_HOLLOW**.  
   
-- **BS_PATTERN** modello pennello definito da una bitmap in memoria.  
+- **BS_PATTERN** Pattern brush defined by a memory bitmap.  
   
-- **BS_SOLID** pennello tinta unita.  
+- **BS_SOLID** Solid brush.  
   
  `lbColor`  
- Specifica il colore in cui è necessario creare il pennello. Se `lbStyle` è il **BS_HOLLOW** o **BS_PATTERN** stile, **lbColor** viene ignorato. Se `lbStyle` è **BS_DIBPATTERN** o **BS_DIBPATTERNBT**, la parola meno significativa di **lbColor** specifica se il **bmiColors** i membri di [BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md) struttura contengono esplicita rosso, verde, blu valori (RGB) o gli indici della tavolozza logica attualmente realizzato. Il **lbColor** membro deve essere uno dei valori seguenti:  
+ Specifies the color in which the brush is to be drawn. If `lbStyle` is the **BS_HOLLOW** or **BS_PATTERN** style, **lbColor** is ignored. If `lbStyle` is **BS_DIBPATTERN** or **BS_DIBPATTERNBT**, the low-order word of **lbColor** specifies whether the **bmiColors** members of the [BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md) structure contain explicit red, green, blue (RGB) values or indices into the currently realized logical palette. The **lbColor** member must be one of the following values:  
   
-- **DIB_PAL_COLORS** la tabella color è costituito da una matrice di indici a 16 bit nella tavolozza logica attualmente realizzata.  
+- **DIB_PAL_COLORS** The color table consists of an array of 16-bit indices into the currently realized logical palette.  
   
-- **DIB_RGB_COLORS** la tabella color contiene valori RGB letterali.  
+- **DIB_RGB_COLORS** The color table contains literal RGB values.  
   
  *lbHatch*  
- Specifica uno stile di tratteggio. Il significato dipende dallo stile pennello definito da `lbStyle`. Se `lbStyle` è **BS_DIBPATTERN**, **lbHatch** membro contiene un handle a DIB compresso. Se `lbStyle` è **BS_DIBPATTERNPT**, **lbHatch** membro contiene un puntatore a un DIB compresso. Se `lbStyle` è **BS_HATCHED**, **lbHatch** membro specifica l'orientamento delle linee utilizzate per creare il tratteggio. Può essere uno dei valori seguenti:  
+ Specifies a hatch style. The meaning depends on the brush style defined by `lbStyle`. If `lbStyle` is **BS_DIBPATTERN**, the **lbHatch** member contains a handle to a packed DIB. If `lbStyle` is **BS_DIBPATTERNPT**, the **lbHatch** member contains a pointer to a packed DIB. If `lbStyle` is **BS_HATCHED**, the **lbHatch** member specifies the orientation of the lines used to create the hatch. It can be one of the following values:  
   
-- `HS_BDIAGONAL`Un tratteggio verso l'alto, da sinistra a destra di 45 gradi  
+- `HS_BDIAGONAL` A 45-degree upward, left-to-right hatch  
   
-- `HS_CROSS`Tratteggio incrociato orizzontale e verticale  
+- `HS_CROSS` Horizontal and vertical crosshatch  
   
-- `HS_DIAGCROSS`Tratteggio incrociato di 45 gradi  
+- `HS_DIAGCROSS` 45-degree crosshatch  
   
-- `HS_FDIAGONAL`Un tratteggio verso il basso, da sinistra a destra di 45 gradi  
+- `HS_FDIAGONAL` A 45-degree downward, left-to-right hatch  
   
-- `HS_HORIZONTAL`Tratteggio orizzontale  
+- `HS_HORIZONTAL` Horizontal hatch  
   
-- `HS_VERTICAL`Tratteggio verticale  
+- `HS_VERTICAL` Vertical hatch  
   
- Se `lbStyle` è **BS_PATTERN**, **lbHatch** è un handle per la mappa di bit che definisce il modello. Se `lbStyle` è **BS_SOLID** o **BS_HOLLOW**, **lbHatch** viene ignorato.  
+ If `lbStyle` is **BS_PATTERN**, **lbHatch** is a handle to the bitmap that defines the pattern. If `lbStyle` is **BS_SOLID** or **BS_HOLLOW**, **lbHatch** is ignored.  
   
-## <a name="remarks"></a>Note  
- Sebbene **lbColor** controlla il colore di primo piano di un pennello tratteggiato, il [CDC::SetBkMode](../../mfc/reference/cdc-class.md#setbkmode) e [CDC::SetBkColor](../../mfc/reference/cdc-class.md#setbkcolor) funzioni controllano il colore di sfondo.  
+## <a name="remarks"></a>Remarks  
+ Although **lbColor** controls the foreground color of a hatch brush, the [CDC::SetBkMode](../../mfc/reference/cdc-class.md#setbkmode) and [CDC::SetBkColor](../../mfc/reference/cdc-class.md#setbkcolor) functions control the background color.  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** WinGDI. h  
+## <a name="requirements"></a>Requirements  
+ **Header:** wingdi.h  
   
-## <a name="see-also"></a>Vedere anche  
- [Strutture, stili, callback e mappe messaggi](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CDC::GetCharABCWidths](../../mfc/reference/cdc-class.md#getcharabcwidths)
 
 

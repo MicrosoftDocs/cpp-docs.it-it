@@ -1,44 +1,63 @@
 ---
-title: "Utilizzo di CHotKeyCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CHotKeyCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CHotKeyCtrl (classe), utilizzo"
-  - "controlli tasto di scelta"
-  - "chiavi, scelte rapide e CHotKeyCtrl"
+title: Using CHotKeyCtrl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CHotKeyCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- keys, hot and CHotKeyCtrl
+- CHotKeyCtrl class [MFC], using
+- hot key controls
 ms.assetid: 9b207117-d848-4224-8888-c3d197bb0c95
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Utilizzo di CHotKeyCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: aad1f489c15d3ff4fe0a9b7e12023247f7828a16
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Un controllo del tasto di scelta, rappresentato dalla classe [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md), è una finestra che visualizza una rappresentazione di testo della combinazione di tasti gli utenti in, come CTRL\+SHIFT\+Q.  Gestisce inoltre una rappresentazione interna di questa chiave sotto forma di codice tasto virtuale e set di flag che rappresentano lo stato dello spostamento.  Il controllo del tasto di scelta non imposta il tasto di scelta a tale scopo spetta al programma. Per un elenco dei codici tasto virtuali standard, vedere Winuser.h.\)  
+---
+# <a name="using-chotkeyctrl"></a>Using CHotKeyCtrl
+A hot key control, represented by class [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md), is a window that displays a text representation of the key combination the user types into it, such as CTRL+SHIFT+Q. It also maintains an internal representation of this key in the form of a virtual key code and a set of flags that represent the shift state. The hot key control does not actually set the hot key — doing that is up to your program. (For a list of standard virtual key codes, see Winuser.h.)  
   
- Utilizzare un controllo del tasto di scelta per ottenere un utente a introdurre per il quale il tasto di scelta da associare a una finestra o un thread.  I comandi dei tasti di scelta sono spesso utilizzati nelle finestre di dialogo, come è possibile visualizzare quando viene chiesto all'utente di assegnare un tasto di scelta.  È responsabilità del programma di recuperare valori che descrivono il tasto di scelta dal controllo del tasto di scelta e di chiamare funzioni appropriate per associare il tasto di scelta a una finestra o un thread.  
+ Use a hot key control to get a user's input for which hot key to associate with a window or thread. Hot key controls are often used in dialog boxes, such as you might display when asking the user to assign a hot key. It is your program's responsibility to retrieve the values describing the hot key from the hot key control and to call the appropriate functions to associate the hot key with a window or thread.  
   
-## Scegliere l'argomento su cui visualizzare maggiori informazioni  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Utilizzo di un controllo dei tasti di scelta](../mfc/using-a-hot-key-control.md)  
+-   [Using a Hot Key Control](../mfc/using-a-hot-key-control.md)  
   
--   [Impostare un tasto di scelta](../mfc/setting-a-hot-key.md)  
+-   [Setting a Hot Key](../mfc/setting-a-hot-key.md)  
   
--   [Tasti di scelta globali](../mfc/global-hot-keys.md)  
+-   [Global Hot Keys](../mfc/global-hot-keys.md)  
   
--   [Tasti di scelta specifici](../mfc/thread-specific-hot-keys.md)  
+-   [Thread-Specific Hot Keys](../mfc/thread-specific-hot-keys.md)  
   
-## Vedere anche  
- [Controlli](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Controls](../mfc/controls-mfc.md)
+
+

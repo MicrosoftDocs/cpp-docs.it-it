@@ -1,72 +1,91 @@
 ---
-title: "Creazione del controllo Tab | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "TCS_EX_REGISTERDROP"
-  - "TCS_EX_FLATSEPARATORS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTabCtrl (classe), creazione"
-  - "controlli delle schede, creazione"
-  - "TCS_EX_FLATSEPARATORS (stile esteso)"
-  - "TCS_EX_REGISTERDROP (stile esteso)"
+title: Creating the Tab Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- TCS_EX_REGISTERDROP
+- TCS_EX_FLATSEPARATORS
+dev_langs:
+- C++
+helpviewer_keywords:
+- TCS_EX_REGISTERDROP extended style [MFC]
+- tab controls [MFC], creating
+- CTabCtrl class [MFC], creating
+- TCS_EX_FLATSEPARATORS extended style
 ms.assetid: 3a9c2d64-f5f4-41ea-84ab-fceb73c3dbdc
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Creazione del controllo Tab
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 45dca159d6102d0a30c5ac82c2d460186f24c002
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-La creazione del tab control dipende dall'uso di un controllo una finestra di dialogo o dalla creazione di una finestra non di dialogo.  
+---
+# <a name="creating-the-tab-control"></a>Creating the Tab Control
+How the tab control is created depends on whether you are using the control in a dialog box or creating it in a nondialog window.  
   
-### Per utilizzare CTabCtrl direttamente in una finestra di dialogo  
+### <a name="to-use-ctabctrl-directly-in-a-dialog-box"></a>To use CTabCtrl directly in a dialog box  
   
-1.  Nell'editor finestre, aggiungere un controllo Struttura a Schede alla risorsa del modello di finestra di dialogo.  Specificare l'id del controllo  
+1.  In the dialog editor, add a Tab Control to your dialog template resource. Specify its control ID.  
   
-2.  Utilizzare [Aggiungere una procedura guidata alla variabile del membro](../ide/adding-a-member-variable-visual-cpp.md) per aggiungere una variabile membro di tipo [CTabCtrl](../mfc/reference/ctabctrl-class.md) con la proprietà del controllo.  È possibile utilizzare questo membro per chiamare le funzioni membro di `CTabCtrl`.  
+2.  Use the [Add Member Variable Wizard](../ide/adding-a-member-variable-visual-cpp.md) to add a member variable of type [CTabCtrl](../mfc/reference/ctabctrl-class.md) with the Control property. You can use this member to call `CTabCtrl` member functions.  
   
-3.  Funzioni di gestione della mappa nella classe della finestra di dialogo per i messaggi di notifica del controllo scheda da gestire.  Per ulteriori informazioni, vedere [Mapping di messaggi a funzioni](../mfc/reference/mapping-messages-to-functions.md).  
+3.  Map handler functions in the dialog class for any tab control notification messages you need to handle. For more information, see [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md).  
   
-4.  In [OnInitDialog](../Topic/CDialog::OnInitDialog.md), impostare gli stili per `CTabCtrl`.  
+4.  In [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog), set the styles for the `CTabCtrl`.  
   
-### Per utilizzare CTabCtrl in una finestra del nondialog  
+### <a name="to-use-ctabctrl-in-a-nondialog-window"></a>To use CTabCtrl in a nondialog window  
   
-1.  Definire il controllo nella visualizzazione o la classe della finestra.  
+1.  Define the control in the view or window class.  
   
-2.  Chiamare la funzione membro [Crea](../Topic/CTabCtrl::Create.md) del controllo, eventualmente [OnInitialUpdate](../Topic/CView::OnInitialUpdate.md), possibilmente fin dalla funzione di gestione [OnCreate](../Topic/CWnd::OnCreate.md) della finestra padre \(in caso di creazione di una sottoclasse del controllo\).  Impostare gli stili per il controllo.  
+2.  Call the control's [Create](../mfc/reference/ctabctrl-class.md#create) member function, possibly in [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate), possibly as early as the parent window's [OnCreate](../mfc/reference/cwnd-class.md#oncreate) handler function (if you're subclassing the control). Set the styles for the control.  
   
- Dopo che l'oggetto `CTabCtrl` è stato creato, è possibile impostare o cancellare i seguenti stili estesi:  
+ After the `CTabCtrl` object has been created, you can set or clear the following extended styles:  
   
--   **TCS\_EX\_FLATSEPARATORS** Il controllo a schede estrarrà i separatori tra gli elementi della scheda.  Questo stile esteso influisce solo sui controlli del tab con gli stili di **TCS\_FLATBUTTONS** e di **TCS\_BUTTONS**.  Per impostazione predefinita, creando il controllo a schede nello stile di **TCS\_FLATBUTTONS** imposta tale stile esteso.  
+-   **TCS_EX_FLATSEPARATORS** The tab control will draw separators between the tab items. This extended style only affects tab controls that have the **TCS_BUTTONS** and **TCS_FLATBUTTONS** styles. By default, creating the tab control with the **TCS_FLATBUTTONS** style sets this extended style.  
   
--   **TCS\_EX\_REGISTERDROP** Il controllo a schede genera messaggi di notifica di **TCN\_GETOBJECT** per richiedere un oggetto di destinazione di rilascio quando un oggetto viene trascinato sugli elementi della scheda del controllo.  
+-   **TCS_EX_REGISTERDROP** The tab control generates **TCN_GETOBJECT** notification messages to request a drop target object when an object is dragged over the tab items in the control.  
   
     > [!NOTE]
-    >  Per ricevere la notifica di **TCN\_GETOBJECT**, è necessario inizializzare le librerie OLE tramite una chiamata a [AfxOleInit](../Topic/AfxOleInit.md).  
+    >  To receive the **TCN_GETOBJECT** notification, you must initialize the OLE libraries with a call to [AfxOleInit](../mfc/reference/ole-initialization.md#afxoleinit).  
   
- Questi stili possono essere recuperati e impostati, dopo che è stato creato il controllo, con le rispettive chiamate alle funzioni membro di [SetExtendedStyle](../Topic/CTabCtrl::SetExtendedStyle.md) e di [GetExtendedStyle](../Topic/CTabCtrl::GetExtendedStyle.md).  
+ These styles can be retrieved and set, after the control has been created, with respective calls to the [GetExtendedStyle](../mfc/reference/ctabctrl-class.md#getextendedstyle) and [SetExtendedStyle](../mfc/reference/ctabctrl-class.md#setextendedstyle) member functions.  
   
- Ad esempio, impostare lo stile di **TCS\_EX\_FLATSEPARATORS** con le seguenti righe di codice:  
+ For instance, set the **TCS_EX_FLATSEPARATORS** style with the following lines of code:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#33](../mfc/codesnippet/CPP/creating-the-tab-control_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#33](../mfc/codesnippet/cpp/creating-the-tab-control_1.cpp)]  
   
- Deselezionare lo stile di **TCS\_EX\_FLATSEPARATORS** da un oggetto di `CTabCtrl` con le seguenti righe di codice:  
+ Clear the **TCS_EX_FLATSEPARATORS** style from a `CTabCtrl` object with the following lines of code:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#34](../mfc/codesnippet/CPP/creating-the-tab-control_2.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#34](../mfc/codesnippet/cpp/creating-the-tab-control_2.cpp)]  
   
- Verranno rimossi i separatori visualizzati tra i pulsanti dell'oggetto di `CTabCtrl`.  
+ This will remove the separators that appear between the buttons of your `CTabCtrl` object.  
   
-## Vedere anche  
- [Utilizzo di CTabCtrl](../mfc/using-ctabctrl.md)   
- [Controlli](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTabCtrl](../mfc/using-ctabctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

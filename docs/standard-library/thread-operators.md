@@ -1,23 +1,40 @@
 ---
-title: Operatori &lt;thread&gt; | Microsoft Docs
+title: '&lt;thread&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- thread/std::operator!=
+- thread/std::operator&gt;
+- thread/std::operator&gt;=
+- thread/std::operator&lt;
+- thread/std::operator&lt;&lt;
+- thread/std::operator&lt;=
+- thread/std::operator==
+dev_langs:
+- C++
 ms.assetid: e6bb6c0f-64f9-4cb2-9ff2-05b88a6ba7ac
 caps.latest.revision: 11
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 04b9f1a76c637f7bca9f230092e51246da0c6075
+helpviewer_keywords:
+- std::operator!= (thread)
+- std::operator&gt; (thread)
+- std::operator&gt;= (thread)
+- std::operator&lt; (thread)
+- std::operator&lt;&lt; (thread)
+- std::operator&lt;= (thread)
+- std::operator== (thread)
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 7db631d96612a3463a543d063092f0c16b4a7dc0
 ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltthreadgt-operators"></a>Operatori &lt;thread&gt;
+# <a name="ltthreadgt-operators"></a>&lt;thread&gt; operators
 ||||  
 |-|-|-|  
 |[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
@@ -25,7 +42,7 @@ ms.lasthandoff: 04/29/2017
 |[operator==](#op_eq_eq)|  
   
 ##  <a name="op_gt_eq"></a>  operator&gt;=  
- Determina se un oggetto `thread::id` è maggiore o uguale a un altro.  
+ Determines whether one `thread::id` object is greater than or equal to another.  
   
 ```cpp  
 bool operator>= (
@@ -33,21 +50,21 @@ bool operator>= (
     thread::id Right) noexcept
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `Left`  
- L'oggetto `thread::id` a sinistra.  
+ The left `thread::id` object.  
   
  `Right`  
- L'oggetto `thread::id` corretto.  
+ The right `thread::id` object.  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
  `!(Left < Right)`  
   
-### <a name="remarks"></a>Note  
- Questa funzione non genera eccezioni.  
+### <a name="remarks"></a>Remarks  
+ This function does not throw any exceptions.  
   
 ##  <a name="op_gt"></a>  operator&gt;  
- Determina se un oggetto `thread::id` è maggiore di un altro.  
+ Determines whether one `thread::id` object is greater than another.  
   
 ```cpp  
 bool operator> (
@@ -55,21 +72,21 @@ bool operator> (
     thread::id Right) noexcept
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `Left`  
- L'oggetto `thread::id` a sinistra.  
+ The left `thread::id` object.  
   
  `Right`  
- L'oggetto `thread::id` corretto.  
+ The right `thread::id` object.  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
  `Right < Left`  
   
-### <a name="remarks"></a>Note  
- Questa funzione non genera eccezioni.  
+### <a name="remarks"></a>Remarks  
+ This function does not throw any exceptions.  
   
 ##  <a name="op_lt_eq"></a>  operator&lt;=  
- Determina se un oggetto `thread::id` è minore o uguale a un altro.  
+ Determines whether one `thread::id` object is less than or equal to another.  
   
 ```cpp  
 bool operator<= (
@@ -77,21 +94,21 @@ bool operator<= (
     thread::id Right) noexcept
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `Left`  
- L'oggetto `thread::id` a sinistra.  
+ The left `thread::id` object.  
   
  `Right`  
- L'oggetto `thread::id` corretto.  
+ The right `thread::id` object.  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
  `!(Right < Left)`  
   
-### <a name="remarks"></a>Note  
- Questa funzione non genera eccezioni.  
+### <a name="remarks"></a>Remarks  
+ This function does not throw any exceptions.  
   
 ##  <a name="op_lt"></a>  operator&lt;  
- Determina se un oggetto `thread::id` è minore di un altro.  
+ Determines whether one `thread::id` object is less than another.  
   
 ```cpp  
 bool operator<(
@@ -99,23 +116,23 @@ bool operator<(
     thread::id Right) noexcept
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `Left`  
- L'oggetto `thread::id` a sinistra.  
+ The left `thread::id` object.  
   
  `Right`  
- L'oggetto `thread::id` corretto.  
+ The right `thread::id` object.  
   
-### <a name="return-value"></a>Valore restituito  
- `true` se `Left` precede `Right` nell'ordinamento totale; in caso contrario, `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if `Left` precedes `Right` in the total ordering; otherwise, `false`.  
   
-### <a name="remarks"></a>Note  
- L'operatore definisce un ordinamento totale per tutti gli oggetti `thread::id`. Questi oggetti possono essere usati come chiavi in contenitori associativi.  
+### <a name="remarks"></a>Remarks  
+ The operator defines a total ordering on all `thread::id` objects. These objects can be used as keys in associative containers.  
   
- Questa funzione non genera eccezioni.  
+ This function does not throw any exceptions.  
   
 ##  <a name="op_neq"></a>  operator!=  
- Confronta due oggetti `thread::id` per stabilirne la disuguaglianza.  
+ Compares two `thread::id` objects for inequality.  
   
 ```cpp  
 bool operator!= (
@@ -123,21 +140,21 @@ bool operator!= (
     thread::id Right) noexcept
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `Left`  
- L'oggetto `thread::id` a sinistra.  
+ The left `thread::id` object.  
   
  `Right`  
- L'oggetto `thread::id` corretto.  
+ The right `thread::id` object.  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
  `!(Left == Right)`  
   
-### <a name="remarks"></a>Note  
- Questa funzione non genera eccezioni.  
+### <a name="remarks"></a>Remarks  
+ This function does not throw any exceptions.  
   
 ##  <a name="op_eq_eq"></a>  operator==  
- Confronta due oggetti `thread::id` per stabilirne l'uguaglianza.  
+ Compares two `thread::id` objects for equality.  
   
 ```cpp  
 bool operator== (
@@ -145,21 +162,21 @@ bool operator== (
     thread::id Right) noexcept
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `Left`  
- L'oggetto `thread::id` a sinistra.  
+ The left `thread::id` object.  
   
  `Right`  
- L'oggetto `thread::id` corretto.  
+ The right `thread::id` object.  
   
-### <a name="return-value"></a>Valore restituito  
- `true` se i due oggetti rappresentano lo stesso thread di esecuzione o se nessuno dei due rappresenta un thread di esecuzione; in caso contrario, `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if the two objects represent the same thread of execution or if neither object represents a thread of execution; otherwise, `false`.  
   
-### <a name="remarks"></a>Note  
- Questa funzione non genera eccezioni.  
+### <a name="remarks"></a>Remarks  
+ This function does not throw any exceptions.  
   
 ##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
- Inserisce una rappresentazione testo di un oggetto `thread::id` in un flusso.  
+ Inserts a text representation of a `thread::id` object into a stream.  
   
 ```cpp  
 template <class Elem, class Tr>
@@ -167,22 +184,22 @@ basic_ostream<Elem, Tr>& operator<<(
     basic_ostream<Elem, Tr>& Ostr, thread::id Id);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `Ostr`  
- Oggetto [basic_ostream](../standard-library/basic-ostream-class.md).  
+ A [basic_ostream](../standard-library/basic-ostream-class.md) object.  
   
  `Id`  
- Oggetto `thread::id`.  
+ A `thread::id` object.  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
  `Ostr`.  
   
-### <a name="remarks"></a>Note  
- Questa funzione inserisce `Id` in `Ostr`.  
+### <a name="remarks"></a>Remarks  
+ This function inserts `Id` into `Ostr`.  
   
- Se due oggetti `thread::id` risultano uguali, le relative rappresentazioni testo inserite sono uguali.  
+ If two `thread::id` objects compare equal, the inserted text representations of those objects are the same.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [\<thread>](../standard-library/thread.md)
 
 

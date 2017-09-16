@@ -1,41 +1,60 @@
 ---
-title: "Creazione di modelli di documento | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "costruttori [C++], modello di documento"
-  - "modelli di documento"
-  - "modelli di documento, creazione"
-  - "MFC, modelli di documento"
-  - "modelli, modelli di documento"
+title: Document Template Creation | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- document templates [MFC]
+- constructors [MFC], document template
+- document templates [MFC], creating
+- MFC, document templates
+- templates [MFC], document templates
 ms.assetid: c87f1821-7cbf-442e-9690-f126ae7fb783
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Creazione di modelli di documento
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d9cb47f09e8beb01fd3a65046711b3538bf4c7bd
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Quando si crea un nuovo documento in risposta a un comando `Nuovo` o **Apri** dal menu **File**, il modello di documento viene inoltre creata una nuova finestra cornice in cui visualizzare il documento.  
+---
+# <a name="document-template-creation"></a>Document Template Creation
+When creating a new document in response to a `New` or **Open** command from the **File** menu, the document template also creates a new frame window through which to view the document.  
   
- Il costruttore modello di documento specifica il tipo di documenti, a finestre che viene visualizzato il modello potrà creare.  Ciò è determinata dagli argomenti passati al costruttore modello di documento.  Il codice seguente viene illustrata la creazione di [CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md) per un'applicazione di esempio:  
+ The document-template constructor specifies what types of documents, windows, and views the template will be able to create. This is determined by the arguments you pass to the document-template constructor. The following code illustrates creation of a [CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md) for a sample application:  
   
- [!code-cpp[NVC_MFCDocView#7](../mfc/codesnippet/CPP/document-template-creation_1.cpp)]  
+ [!code-cpp[NVC_MFCDocView#7](../mfc/codesnippet/cpp/document-template-creation_1.cpp)]  
   
- Il puntatore a un nuovo oggetto di `CMultiDocTemplate` viene utilizzato come argomento a [AddDocTemplate](../Topic/CWinApp::AddDocTemplate.md).  Gli argomenti del costruttore di `CMultiDocTemplate` includono gli ID di risorsa associato ai menu e i tasti di scelta rapida tipo di documento e tre utilizzare la macro di [RUNTIME\_CLASS](../Topic/RUNTIME_CLASS.md).  `RUNTIME_CLASS` restituisce l'oggetto di [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) per la classe C\+\+ denominata come argomento.  I tre oggetti di `CRuntimeClass` passati a fornire che il costruttore modello di documento le informazioni necessari per creare nuovi oggetti di classi vengono specificati durante il processo di creazione del documento.  Nell'esempio viene illustrata la creazione di un modello di documento che crea oggetti di `CScribDoc` con oggetti di `CScribView` allegati.  Le visualizzazioni sono correntemente dalle finestre cornice figlio MDI standard.  
+ The pointer to a new `CMultiDocTemplate` object is used as an argument to [AddDocTemplate](../mfc/reference/cwinapp-class.md#adddoctemplate). Arguments to the `CMultiDocTemplate` constructor include the resource ID associated with the document type's menus and accelerators, and three uses of the [RUNTIME_CLASS](../mfc/reference/run-time-object-model-services.md#runtime_class) macro. `RUNTIME_CLASS` returns the [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) object for the C++ class named as its argument. The three `CRuntimeClass` objects passed to the document-template constructor supply the information needed to create new objects of the specified classes during the document creation process. The example shows creation of a document template that creates `CScribDoc` objects with `CScribView` objects attached. The views are framed by standard MDI child frame windows.  
   
-## Vedere anche  
- [Modelli di documenti e processo di creazione documento\/visualizzazione](../mfc/document-templates-and-the-document-view-creation-process.md)   
- [Creazione di documenti\/visualizzazioni](../mfc/document-view-creation.md)   
- [Relazioni tra oggetti MFC](../mfc/relationships-among-mfc-objects.md)   
- [Creazione di nuovi documenti, finestre e visualizzazioni](../mfc/creating-new-documents-windows-and-views.md)
+## <a name="see-also"></a>See Also  
+ [Document Templates and the Document/View Creation Process](../mfc/document-templates-and-the-document-view-creation-process.md)   
+ [Document/View Creation](../mfc/document-view-creation.md)   
+ [Relationships Among MFC Objects](../mfc/relationships-among-mfc-objects.md)   
+ [Creating New Documents, Windows, and Views](../mfc/creating-new-documents-windows-and-views.md)
+
+

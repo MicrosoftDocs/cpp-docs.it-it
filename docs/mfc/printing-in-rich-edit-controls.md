@@ -1,37 +1,56 @@
 ---
-title: "Stampa in controlli Rich Edit | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CRichEditCtrl (classe), stampa"
-  - "stampa [MFC], CRichEditCtrl"
-  - "Rich Edit (controlli), stampa"
+title: Printing in Rich Edit Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- printing [MFC], CRichEditCtrl
+- rich edit controls [MFC], printing
+- CRichEditCtrl class [MFC], printing
 ms.assetid: dbda0e40-018f-424e-b5d8-7b489aaf27af
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Stampa in controlli Rich Edit
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9924723e2f304ea6d76f5fd767b6515595d88949
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-È possibile impostare un controllo Rich Edit \([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)\) di eseguire il rendering dell'output per un dispositivo specifico, ad esempio una stampante.  È inoltre possibile specificare il dispositivo di output per i formati di controllo Rich Edit il testo.  
+---
+# <a name="printing-in-rich-edit-controls"></a>Printing in Rich Edit Controls
+You can tell a rich edit control ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) to render its output for a specified device, such as a printer. You can also specify the output device for which a rich edit control formats its text.  
   
- Per formattare la parte del contenuto di un controllo Rich Edit per un dispositivo specifico, è possibile utilizzare la funzione membro di [FormatRange](../Topic/CRichEditCtrl::FormatRange.md).  La struttura di [FORMATRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787911) utilizzata con questa funzione specifica l'intervallo di testo per formattare nonché il contesto di dispositivo \(DC\) per il dispositivo di destinazione.  
+ To format part of the contents of a rich edit control for a specific device, you can use the [FormatRange](../mfc/reference/cricheditctrl-class.md#formatrange) member function. The [FORMATRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787911) structure used with this function specifies the range of text to format as well as the device context (DC) for the target device.  
   
- Dopo la formattazione del testo per un dispositivo di output, è possibile inviare l'output al dispositivo utilizzando la funzione membro di [DisplayBand](../Topic/CRichEditCtrl::DisplayBand.md).  Da ripetutamente utilizzando `FormatRange` e di `DisplayBand`, un'applicazione che visualizza il contenuto di un controllo Rich Edit può implementare la fascia. \(Fascia è divisione di output in parti più piccole per scopi di stampa\).  
+ After formatting text for an output device, you can send the output to the device by using the [DisplayBand](../mfc/reference/cricheditctrl-class.md#displayband) member function. By repeatedly using `FormatRange` and `DisplayBand`, an application that prints the contents of a rich edit control can implement banding. (Banding is division of output into smaller parts for printing purposes.)  
   
- È possibile utilizzare la funzione membro di [SetTargetDevice](../Topic/CRichEditCtrl::SetTargetDevice.md) per specificare il dispositivo di destinazione per cui formati di controllo Rich Edit il testo.  Questa funzione è utile per la modifica WYSIWYG \(visualizzati è quello che si ottiene\) di formattazione, in cui un'applicazione inserisce il testo utilizzando la metrica del carattere della stampante predefinita anziché lo schermo.  
+ You can use the [SetTargetDevice](../mfc/reference/cricheditctrl-class.md#settargetdevice) member function to specify the target device for which a rich edit control formats its text. This function is useful for WYSIWYG (what you see is what you get) formatting, in which an application positions text using the default printer's font metrics instead of the screen's.  
   
-## Vedere anche  
- [Utilizzo di CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [Controlli](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CRichEditCtrl](../mfc/using-cricheditctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

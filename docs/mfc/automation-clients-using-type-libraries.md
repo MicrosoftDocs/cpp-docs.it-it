@@ -1,71 +1,90 @@
 ---
-title: "Client di automazione: utilizzo delle librerie dei tipi | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MkTypLib"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "file .odl"
-  - "client di automazione, librerie dei tipi"
-  - "classi [C++], invio"
-  - "client, automazione"
-  - "classe di invio"
-  - "MkTypLib (strumento)"
-  - "ODL (Object Description Language)"
-  - "ODL (file)"
-  - "librerie dei tipi, client di automazione"
+title: 'Automation Clients: Using Type Libraries | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- MkTypLib
+dev_langs:
+- C++
+helpviewer_keywords:
+- clients, Automation
+- dispatch class [MFC]
+- Automation clients, type libraries
+- type libraries, Automation clients
+- ODL (Object Description Language)
+- ODL files
+- classes [MFC], dispatch
+- MkTypLib tool
+- .odl files
 ms.assetid: d405bc47-118d-4786-b371-920d035b2047
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Client di automazione: utilizzo delle librerie dei tipi
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 461e5fbd90f157cd149016d813b679cbc3ca6177
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-I client di automazione devono disporre di informazioni sulle proprietà e i metodi degli oggetti server se i client devono modificare gli oggetti del server.  Le proprietà con tipi di dati; metodi dei valori restituiti e spesso accettano parametri.  Il client richiede informazioni sui tipi di dati di tutte queste da associare in modo statico al tipo di oggetto server.  
+---
+# <a name="automation-clients-using-type-libraries"></a>Automation Clients: Using Type Libraries
+Automation clients must have information about server objects' properties and methods if the clients are to manipulate the servers' objects. Properties have data types; methods often return values and accept parameters. The client requires information about the data types of all of these in order to statically bind to the server object type.  
   
- Queste informazioni sul tipo può essere impostata in diversi modi.  La modalità consigliata consiste nel creare una libreria dei tipi.  
+ This type information can be made known in several ways. The recommended way is to create a type library.  
   
- Per informazioni su [MkTypLib](http://msdn.microsoft.com/library/windows/desktop/aa366797), vedere [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+ For information on [MkTypLib](http://msdn.microsoft.com/library/windows/desktop/aa366797), see the Windows SDK.  
   
- Visual C\+\+ può leggere un file di libreria dei tipi e creare una classe di invio derivata da [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md).  Un oggetto di tale classe dispone di proprietà e operazioni che comportano quelle dell'oggetto server.  L'applicazione chiama questa proprietà e le operazioni oggetto e funzionalità ereditata da `COleDispatchDriver` risolve tali chiamate di sistema OLE, che a sua volta le instradi all'oggetto server.  
+ Visual C++ can read a type-library file and create a dispatch class derived from [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md). An object of that class has properties and operations duplicating those of the server object. Your application calls this object's properties and operations, and functionality inherited from `COleDispatchDriver` routes these calls to the OLE system, which in turn routes them to the server object.  
   
- Visual C\+\+ gestisce automaticamente questo file della libreria dei tipi automaticamente se si intende incorporare l'automazione dopo aver creato il progetto.  Come parte di ogni compilazione, il file .tlb verrà compilato con MkTypLib.  
+ Visual C++ automatically maintains this type-library file for you if you chose to include Automation when the project was created. As part of each build, the .tlb file will be built with MkTypLib.  
   
-### Per creare una classe di invio da un file della libreria dei tipi \(TLB\)  
+### <a name="to-create-a-dispatch-class-from-a-type-library-tlb-file"></a>To create a dispatch class from a type-library (.tlb) file  
   
-1.  In Visualizzazione classi o in Esplora soluzioni, fare clic con il pulsante destro del mouse sul progetto e scegliere **Aggiungi** quindi fare clic **Add Class** dal menu di scelta rapida.  
+1.  In either Class View or Solution Explorer, right-click the project and click **Add** and then click **Add Class** on the shortcut menu.  
   
-2.  Nella finestra di dialogo **Add Class**, selezionare la cartella di **Visual C\+\+\/MFC** nel riquadro sinistro.  Selezionare l'icona di **Classe MFC da libreria di tipi** nel riquadro di destra e scegliere **Apri**.  
+2.  In the **Add Class** dialog box, select the **Visual C++/MFC** folder in the left pane. Select the **MFC Class From TypeLib** icon from the right pane and click **Open**.  
   
-3.  Nella finestra di dialogo **Aggiunta guidata classe da libreria dei tipi**, selezionare una libreria dei tipi dall'elenco a discesa **Librerie di tipo disponibili**.  La casella di **Interfacce** per visualizzare le interfacce disponibili per la libreria dei tipi selezionata.  
-  
-    > [!NOTE]
-    >  È possibile selezionare le interfacce da più librerie dei tipi.  
-  
-     Per selezionare le interfacce, farle doppio clic oppure fare clic sul pulsante di **Aggiungi**.  Al termine di questa operazione, i nomi delle classi send verranno visualizzati nella casella di **Classi generate**.  È possibile modificare i nomi della classe nella casella di `Class`.  
-  
-     La casella di **File** visualizzare il file in cui la classe viene dichiarata. è possibile modificare questo nome file anche\).  È inoltre possibile utilizzare il pulsante sfoglia per selezionare altri file, se si desidera disporre dell'intestazione e le informazioni sull'implementazione scritte nei file esistenti o in una directory diversa dalla directory del progetto.  
+3.  In the **Add Class From Typelib Wizard** dialog box, select a type library from the **Available type libraries** drop-down list. The **Interfaces** box displays the interfaces available for the selected type library.  
   
     > [!NOTE]
-    >  Tutte le classi di invio per le interfacce selezionate verranno inserite nel file specificato di seguito.  Se si desidera che le interfacce per indicare nelle intestazioni separate, è necessario eseguire questa procedura guidata per ogni file di intestazione che si desidera creare.  
+    >  You can select interfaces from more than one type library.  
+  
+     To select interfaces, double-click them or click the **Add** button. When you do so, names for the dispatch classes will appear in the **Generated classes** box. You can edit the class names in the `Class` box.  
+  
+     The **File** box displays the file in which the class will be declared. (you can edit this file name as well). You can also use the browse button to select other files, if you prefer to have the header and implementation information written in existing files or in a directory other than the project directory.  
   
     > [!NOTE]
-    >  Alcune informazioni della libreria dei tipi possono essere memorizzate in file con estensioni di file DLL, di .OCX, o di .OLB.  
+    >  All the dispatch classes for the selected interfaces will be put into the file specified here. If you want the interfaces to be declared in separate headers, you must run this wizard for each header file you want to create.  
   
-4.  Scegliere **Fine**.  
+    > [!NOTE]
+    >  Some type library information may be stored in files with .DLL, .OCX, or .OLB file extensions.  
   
-     La procedura guidata viene quindi scritto il codice per le classi di invio utilizzando la classe e i nomi file specificati.  
+4.  Click **Finish**.  
   
-## Vedere anche  
- [Client di automazione](../mfc/automation-clients.md)
+     The wizard will then write the code for your dispatch classes using the specified class and file names.  
+  
+## <a name="see-also"></a>See Also  
+ [Automation Clients](../mfc/automation-clients.md)
+
+

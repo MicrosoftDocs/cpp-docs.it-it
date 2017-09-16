@@ -1,36 +1,55 @@
 ---
-title: "Impostazioni per il controllo Progress | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CProgressCtrl (classe), impostazioni"
-  - "controlli di stato [C++], impostazioni"
+title: Settings for the Progress Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CProgressCtrl class [MFC], settings
+- progress controls [MFC], settings
 ms.assetid: f4616e91-74fa-4000-ba0d-d3ddc0ee075b
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Impostazioni per il controllo Progress
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 23ef2372cfad73f6af8aa7d363dfb5f8f557aa14
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Le impostazioni di base per il controllo di stato \([CProgressCtrl](../mfc/reference/cprogressctrl-class.md)\) sono intervallo e la posizione corrente.  L'intervallo rappresenta l'intera durata dell'operazione.  La posizione corrente rappresenta lo stato di avanzamento che l'applicazione ha eseguito verso il completamento dell'operazione.  Qualsiasi modifica all'intervallo o al percorso del controllo di stato per ridisegnare.  
+---
+# <a name="settings-for-the-progress-control"></a>Settings for the Progress Control
+The basic settings for the progress control ([CProgressCtrl](../mfc/reference/cprogressctrl-class.md)) are the range and current position. The range represents the entire duration of the operation. The current position represents the progress that your application has made toward completing the operation. Any changes to the range or position cause the progress control to redraw itself.  
   
- Per impostazione predefinita, l'intervallo viene impostato su 0 \- 100 e la posizione iniziale vengono impostati su 0.  Per recuperare le impostazioni correnti dell'intervallo per il controllo di stato, utilizzare la funzione membro di [GetRange](../Topic/CProgressCtrl::GetRange.md).  Per modificare l'intervallo, utilizzare la funzione membro di [SetRange](../Topic/CProgressCtrl::SetRange.md).  
+ By default, the range is set to 0 - 100, and the initial position is set to 0. To retrieve the current range settings for the progress control, use the [GetRange](../mfc/reference/cprogressctrl-class.md#getrange) member function. To change the range, use the [SetRange](../mfc/reference/cprogressctrl-class.md#setrange) member function.  
   
- Per impostare la posizione, utilizzare [SetPos](../Topic/CProgressCtrl::SetPos.md).  Per recuperare la posizione corrente senza specificare un nuovo valore, utilizzare [GetPos](../Topic/CProgressCtrl::GetPos.md).  Ad esempio, potrebbe essere necessario eseguire semplicemente una query sullo stato dell'operazione in corso.  
+ To set the position, use [SetPos](../mfc/reference/cprogressctrl-class.md#setpos). To retrieve the current position without specifying a new value, use [GetPos](../mfc/reference/cprogressctrl-class.md#getpos). For example, you might want to simply query on the status of the current operation.  
   
- Per eseguire la posizione corrente del controllo di stato, utilizzare [StepIt](../Topic/CProgressCtrl::StepIt.md).  Per impostare la quantità di ogni passaggio, utilizzare [SetStep](../Topic/CProgressCtrl::SetStep.md)  
+ To step the current position of the progress control, use [StepIt](../mfc/reference/cprogressctrl-class.md#stepit). To set the amount of each step, use [SetStep](../mfc/reference/cprogressctrl-class.md#setstep)  
   
-## Vedere anche  
- [Utilizzo di CProgressCtrl](../mfc/using-cprogressctrl.md)   
- [Controlli](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CProgressCtrl](../mfc/using-cprogressctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

@@ -1,38 +1,57 @@
 ---
-title: "Posizione degli elementi del controllo Tree | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTreeCtrl (classe), posizione degli elementi"
-  - "posizione degli elementi nei controlli struttura ad albero"
-  - "posizione, elementi CTreeCtrl"
-  - "struttura ad albero (controlli), posizione degli elementi"
+title: Tree Control Item Position | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CTreeCtrl class [MFC], item position
+- item position in tree controls
+- tree controls [MFC], item position
+- position, CTreeCtrl items
 ms.assetid: cd264344-2cf9-4d90-9ea8-c6900b6f60e7
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Posizione degli elementi del controllo Tree
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 27c4c7366f4935464369639d2bd46989912bf617
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Posizione iniziale di un elemento è impostata quando l'elemento viene aggiunto al controllo di struttura ad albero \([Problemi](../mfc/reference/ctreectrl-class.md)\) utilizzando la funzione membro di `InsertItem`.  La chiamata di funzione membro specifica un handle dell'elemento padre e gli handle dell'elemento dopo il quale deve essere aggiunto il nuovo elemento deve essere inserito.  Nel secondo controllo deve identificare un elemento figlio del padre specificato o uno dei valori seguenti: `TVI_FIRST`, `TVI_LAST`, o `TVI_SORT`.  
+---
+# <a name="tree-control-item-position"></a>Tree Control Item Position
+An item's initial position is set when the item is added to the tree control ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) by using the `InsertItem` member function. The member function call specifies the handle of the parent item and the handle of the item after which the new item is to be inserted. The second handle must identify either a child item of the given parent or one of these values: `TVI_FIRST`, `TVI_LAST`, or `TVI_SORT`.  
   
- Quando `TVI_FIRST` o `TVI_LAST` viene specificato, il controllo struttura ad albero posizionata nella parte superiore del nuovo elemento o alla fine dell'elenco specificato dell'elemento padre degli elementi figlio.  Quando `TVI_SORT` viene specificato, il controllo struttura ad albero inserire il nuovo elemento nell'elenco di elementi figlio in ordine alfabetico in base al testo delle etichette dell'elemento.  
+ When `TVI_FIRST` or `TVI_LAST` is specified, the tree control places the new item at the beginning or end of the given parent item's list of child items. When `TVI_SORT` is specified, the tree control inserts the new item into the list of child items in alphabetical order based on the text of the item labels.  
   
- È possibile inserire l'elenco di un elemento padre degli elementi figlio in ordine alfabetico chiamando la funzione membro di [SortChildren](../Topic/CTreeCtrl::SortChildren.md).  Questa funzione include un parametro che specifica se tutti i livelli di elementi figlio che derivano dall'elemento padre specificato vengono ordinati alfabeticamente.  
+ You can put a parent item's list of child items into alphabetical order by calling the [SortChildren](../mfc/reference/ctreectrl-class.md#sortchildren) member function. This function includes a parameter that specifies whether all levels of child items descending from the given parent item are also sorted in alphabetical order.  
   
- La funzione membro di [SortChildrenCB](../Topic/CTreeCtrl::SortChildrenCB.md) consente agli elementi figlio di ordinamento in base ai criteri specificati.  Quando si chiama questa funzione, specificare una funzione di callback definita dall'applicazione che il controllo struttura ad albero può chiamare ogni volta che l'ordine relativo di due elementi figlio deve essere deciso.  La funzione di callback riceve due valori definiti dall'applicazione a 32 bit degli elementi confrontati e un terzo valore a 32 bit specificato quando chiama `SortChildrenCB`.  
+ The [SortChildrenCB](../mfc/reference/ctreectrl-class.md#sortchildrencb) member function allows you to sort child items based on criteria that you define. When you call this function, you specify an application-defined callback function that the tree control can call whenever the relative order of two child items needs to be decided. The callback function receives two 32-bit application-defined values for the items being compared and a third 32-bit value that you specify when calling `SortChildrenCB`.  
   
-## Vedere anche  
- [Utilizzo di CTreeCtrl](../mfc/using-ctreectrl.md)   
- [Controlli](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTreeCtrl](../mfc/using-ctreectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

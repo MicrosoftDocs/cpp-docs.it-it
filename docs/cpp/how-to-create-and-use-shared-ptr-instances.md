@@ -1,72 +1,87 @@
 ---
-title: "Procedura: creare e utilizzare istanze shared_ptr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 'How to: Create and Use shared_ptr Instances | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
 caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# Procedura: creare e utilizzare istanze shared_ptr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 0d5915a9c05e115dd4af9303c08287259066a8dd
+ms.contentlocale: it-it
+ms.lasthandoff: 09/11/2017
 
-Il tipo `shared_ptr` è un puntatore intelligente nella libreria standard di C\+\+ progettata per gli scenari in cui più di un proprietario potrebbe avere la necessità di gestire la durata dell'oggetto in memoria.  Dopo avere inizializzato `shared_ptr`, è possibile copiarlo, passarlo come valore negli argomenti della funzione e assegnarlo alle altre istanze di `shared_ptr`.  Tutte le istanze puntano allo stesso oggetto e condividono l'accesso a un "blocco di controllo" che incrementa e decrementa il contatore delle referenze ogni qualvolta che un nuovo `shared_ptr` viene aggiunto, esce dalla procedura o viene reimpostato.  Quando il contatore delle referenze arriva a zero, il blocco di controllo elimina la risorsa di memoria e sé stesso.  
+---
+# <a name="how-to-create-and-use-sharedptr-instances"></a>How to: Create and Use shared_ptr Instances
+The `shared_ptr` type is a smart pointer in the C++ standard library that is designed for scenarios in which more than one owner might have to manage the lifetime of the object in memory. After you initialize a `shared_ptr` you can copy it, pass it by value in function arguments, and assign it to other `shared_ptr` instances. All the instances point to the same object, and share access to one "control block" that increments and decrements the reference count whenever a new `shared_ptr` is added, goes out of scope, or is reset. When the reference count reaches zero, the control block deletes the memory resource and itself.  
   
- La seguente figura mostra diverse istanze di `shared_ptr` che puntano a una locazione di memoria.  
+ The following illustration shows several `shared_ptr` instances that point to one memory location.  
   
- [![Puntatore condiviso](../cpp/media/shared_ptr.png "shared\_ptr")](assetId:///9785ad08-31d8-411a-86a9-fb9cd9684c27)  
+ [![Shared pointer](../cpp/media/shared_ptr.png "shared_ptr")](assetId:///9785ad08-31d8-411a-86a9-fb9cd9684c27)  
   
-## Esempio  
- Quando possibile, utilizzare la funzione [make\_shared](../Topic/make_shared%20\(%3Cmemory%3E\).md) per creare `shared_ptr` quando la risorsa di memoria viene creata per la prima volta.  `make_shared` è un'eccezione di sicurezza.  Utilizza la stessa chiamata per allocare memoria per un blocco di controllo e la risorsa e quindi riduce l'overhead del costrutto.  Se non si utilizza `make_shared`, è necessario utilizzare una nuova espressione esplicita per creare l'oggetto prima di passarlo al costruttore `shared_ptr`.  Nell'esempio seguente vengono mostrati vari modi per dichiarare e inizializzare `shared_ptr` insieme a un nuovo oggetto.  
+## <a name="example"></a>Example  
+ Whenever possible, use the [make_shared](../standard-library/memory-functions.md#make_shared) function to create a `shared_ptr` when the memory resource is created for the first time. `make_shared` is exception-safe. It uses the same call to allocate the memory for the control block and the resource, and thereby reduces the construction overhead. If you do not use `make_shared`, then you have to use an explicit new expression to create the object before you pass it to the `shared_ptr` constructor. The following example shows various ways to declare and initialize a `shared_ptr` together with a new object.  
   
  [!code-cpp[stl_smart_pointers#1](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_1.cpp)]  
   
-## Esempio  
- Di seguito viene illustrato come dichiarare e inizializzare le istanze di `shared_ptr` che hanno proprietà condivisa di un oggetto che è già stato allocato da un altro `shared_ptr`.  Si supponga che `sp2` sia un `shared_ptr` inizializzato.  
+## <a name="example"></a>Example  
+ The following example shows how to declare and initialize `shared_ptr` instances that take on shared ownership of an object that has already been allocated by another `shared_ptr`. Assume that `sp2` is an initialized `shared_ptr`.  
   
  [!code-cpp[stl_smart_pointers#2](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_2.cpp)]  
   
-## Esempio  
- `shared_ptr` è utile anche nei contenitori della Libreria dei Modelli Standard \(STL\) quando si utilizzano algoritmi per la copia di elementi.  È possibile eseguire il wrapping degli elementi in `shared_ptr`, quindi copiarlo in altri contenitori beninteso che la memoria sottostante è valida fino a quando si ha necessità, e non oltre.  Nell'esempio seguente viene illustrato come utilizzare l'algoritmo `replace_copy_if` su delle istanze `shared_ptr` in un vettore.  
+## <a name="example"></a>Example  
+ `shared_ptr` is also helpful in C++ Standard Library containers when you are using algorithms that copy elements. You can wrap elements in a `shared_ptr`, and then copy it into other containers with the understanding that the underlying memory is valid as long as you need it, and no longer. The following example shows how to use the `replace_copy_if` algorithm on `shared_ptr` instances in a vector.  
   
  [!code-cpp[stl_smart_pointers#4](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_3.cpp)]  
   
-## Esempio  
- È possibile utilizzare `dynamic_pointer_cast`, `static_pointer_cast` e `const_pointer_cast` per eseguire il cast di `shared_ptr`.  Queste funzioni sono simili agli operatori `dynamic_cast`, `static_cast`, `const_cast`.  Di seguito viene illustrato come verificare il tipo derivato di ogni elemento di un vettore di `shared_ptr` delle classi di base e quindi di copiare elementi e visualizzare informazioni su di essi.  
+## <a name="example"></a>Example  
+ You can use `dynamic_pointer_cast`, `static_pointer_cast`, and `const_pointer_cast` to cast a `shared_ptr`. These functions resemble the `dynamic_cast`, `static_cast`, and `const_cast` operators. The following example shows how to test the derived type of each element in a vector of `shared_ptr` of base classes, and then copy the elements and display information about them.  
   
  [!code-cpp[stl_smart_pointers#5](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_4.cpp)]  
   
-## Esempio  
- È possibile passare `shared_ptr` a un'altra funzione nei modi seguenti:  
+## <a name="example"></a>Example  
+ You can pass a `shared_ptr` to another function in the following ways:  
   
--   Passare `shared_ptr` per valore.  Ciò richiama il costruttore della copia, incrementa il conteggio dei riferimenti e rende proprietario il chiamato.  Esiste una piccola quantità di sovraccarico in questa operazione, che può essere significativa in base al numero di oggetti `shared_ptr` che si stanno passando.  Utilizzare questa opzione quando il contratto \(implicito o esplicito\) tra il chiamante e il chiamato richiede che il chiamato sia un proprietario.  
+-   Pass the `shared_ptr` by value. This invokes the copy constructor, increments the reference count, and makes the callee an owner. There is a small amount of overhead in this operation, which may be significant depending on how many `shared_ptr` objects you are passing. Use this option when the code contract (implied or explicit) between the caller and callee requires that the callee be an owner.  
   
--   Passare `shared_ptr` per riferimento o per riferimento const.  In questo caso, il conteggio dei riferimenti non viene incrementato e il chiamato può accedere al puntatore fino a quando il chiamante non esce dal proprio ambito.  In alternativa, il chiamato può decidere di creare un `shared_ptr` basato sulla referenza e pertanto di diventare un proprietario condiviso.  Utilizzare questa opzione quando il chiamante non possiede alcuna informazione del chiamato, o quando è necessario passare `shared_ptr` e si desidera evitare l'operazione di copia per motivi performativi.  
+-   Pass the `shared_ptr` by reference or const reference. In this case, the reference count is not incremented, and the callee can access the pointer as long as the caller does not go out of scope. Or, the callee can decide to create a `shared_ptr` based on the reference, and thereby become a shared owner. Use this option when the caller has no knowledge of the callee, or when you must pass a `shared_ptr` and want to avoid the copy operation for performance reasons.  
   
--   Passare il puntatore sottostante o un riferimento all'oggetto sottostante.  Ciò consente al chiamato di utilizzare l'oggetto, ma non consente di condividere la proprietà o di estendere la durata.  Se il chiamato crea un `shared_ptr` da un puntatore grezzo, il nuovo `shared_ptr` è indipendente dall'originale e non controlla la risorsa sottostante.  Utilizzare questa opzione quando il contratto tra il chiamante e il chiamato specifica chiaramente che il chiamante trattiene la proprietà del ciclo di vita di `shared_ptr`.  
+-   Pass the underlying pointer or a reference to the underlying object. This enables the callee to use the object, but does not enable it to share ownership or extend the lifetime. If the callee creates a `shared_ptr` from the raw pointer, the new `shared_ptr` is independent from the original, and does not control the underlying resource. Use this option when the contract between the caller and callee clearly specifies that the caller retains ownership of the `shared_ptr` lifetime.  
   
--   Quando si decide come passare un `shared_ptr`, determinare se il chiamato deve condividere la proprietà della risorsa sottostante.  "Un proprietario" è un oggetto o una funzione che può mantenere la risorsa sottostante attiva fino a quando ne ha bisogno.  Se il chiamante deve garantire che il chiamato può prolungare il ciclo di vita del puntatore oltre la durata della propria funzione, utilizzare la prima opzione.  Se non è necessario che il chiamato estenda il ciclo di vita, allora passare per riferimento e consentire al chiamato di copiarlo o meno.  
+-   When you are deciding how to pass a `shared_ptr`, determine whether the callee has to share ownership of the underlying resource. An "owner" is an object or function that can keep the underlying resource alive for as long as it needs it. If the caller has to guarantee that the callee can extend the life of the pointer beyond its (the function's) lifetime, use the first option. If you don't care whether the callee extends the lifetime, then pass by reference and let the callee copy it or not.  
   
--   Se è necessario fornire un accesso ad una funzione di supporto al puntatore sottostante, e si è al corrente che la funzione di supporto userà il puntatore e ritornerà prima che ritorni la funzione chiamante, allora tale funzione non dovrà condividere la proprietà del puntatore sottostante.  Deve solamente accedere al puntatore entro il ciclo di vita del `shared_ptr` del chiamante.  In questo caso, è possibile passare `shared_ptr` per riferimento, oppure passare il puntatore non elaborato o un riferimento all'oggetto sottostante.  Passare questo metodo fornisce un piccolo miglioramento delle prestazioni, e può inoltre aiutare ad indicare il proprio intento di programmazione.  
+-   If you have to give a helper function access to the underlying pointer, and you know that the helper function will just use the pointer and return before the calling function returns, then that function does not have to share ownership of the underlying pointer. It just has to access the pointer within the lifetime of the caller's `shared_ptr`. In this case, it is safe to pass the `shared_ptr` by reference, or pass the raw pointer or a reference to the underlying object. Passing this way provides a small performance benefit, and may also help you express your programming intent.  
   
--   Talvolta, ad esempio in un `std:vector<shared_ptr<T>>`, è necessario passare ogni `shared_ptr` ad un corpo di espressione lambda o ad un oggetto funzione denominato.  Se la lambda o la funzione non memorizza il puntatore, allora passa il `shared_ptr` con riferimento per evitare di invocare la copia del costruttore per ogni elemento.  
+-   Sometimes, for example in a `std:vector<shared_ptr<T>>`, you may have to pass each `shared_ptr` to a lambda expression body or named function object. If the lambda or function is not storing the pointer, then pass the `shared_ptr` by reference to avoid invoking the copy constructor for each element.    
   
- [!CODE [stl_smart_pointers#6](../CodeSnippet/VS_Snippets_Cpp/stl_smart_pointers#6)]  
-  
-## Esempio  
- Di seguito viene illustrato come `shared_ptr` esegue l'overload di alcuni operatori di confronto per abilitare i confronti del puntatore sulla memoria che è posseduta da istanze di `shared_ptr`.  
+## <a name="example"></a>Example  
+ The following example shows how `shared_ptr` overloads various comparison operators to enable pointer comparisons on the memory that is owned by the `shared_ptr` instances.  
   
  [!code-cpp[stl_smart_pointers#3](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_6.cpp)]  
   
-## Vedere anche  
- [Puntatori intelligenti](../cpp/smart-pointers-modern-cpp.md)
+## <a name="see-also"></a>See Also  
+ [Smart Pointers](../cpp/smart-pointers-modern-cpp.md)

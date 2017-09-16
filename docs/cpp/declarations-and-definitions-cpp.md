@@ -1,46 +1,62 @@
 ---
-title: "Dichiarazioni e definizioni (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: Declarations and Definitions (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: 678f1424-e12f-45e0-a957-8169e5fef6cb
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Dichiarazioni e definizioni (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: c296d5ec8c169e4f61ff14d998184c7ef36ae862
+ms.contentlocale: it-it
+ms.lasthandoff: 09/11/2017
 
-Le [dichiarazioni](http://msdn.microsoft.com/it-it/2fd0cddb-b64c-4c9f-9aac-9f8e7ef892f4) introducono i nomi in un programma, ad esempio i nomi di variabili, spazi dei nomi, funzioni e classi.  Le dichiarazioni specificano anche le informazioni sul tipo, oltre ad altre caratteristiche dell'oggetto in fase di dichiarazione.  Un nome deve essere dichiarato prima di potere essere usato. In C\+\+ il punto in cui viene dichiarato un nome determina se è visibile al compilatore.  Non è possibile fare riferimento a una funzione o a una classe dichiarata in un punto successivo nell'unità di compilazione. È possibile usare le *dichiarazioni con prototipo* per aggirare questa limitazione.  
+---
+# <a name="declarations-and-definitions-c"></a>Declarations and Definitions (C++)
+Declarations introduce names in a program, for example the names of variables, namespaces, functions and classes. Declarations also specify type information as well as other characteristics of the object that is being declared. A name must be declared before it can be used; in C++ the point at which a name is declared determines whether it is visible to the compiler. You cannot refer to a function or class that is declared at some later point in the compilation unit; you can use *forward declarations* to get around this limitation.  
   
- Le [definizioni](http://msdn.microsoft.com/it-it/f96e2c0d-abb5-4414-9ea1-4d5b4048d50a) specificano il codice o i dati descritti dal nome.  Il compilatore necessita della definizione per allocare spazio di archiviazione per l'elemento che viene dichiarato.  
+ Definitions specify what code or data the name describes. The compiler needs the definition in order to allocate storage space for the thing that is being declared.  
   
-## Dichiarazioni  
- Una dichiarazione introduce uno o più nomi in un programma.  Le dichiarazioni possono ricorrere più volte in un programma.  Di conseguenza, le classi, le strutture, i tipi enumerati e altri tipi definiti dall'utente possono essere dichiarati per ogni unità di compilazione.  Il vincolo per questa dichiarazione multipla è che tutte le dichiarazioni devono essere identiche.  Le dichiarazioni possono anche servire da definizioni, salvo quando la dichiarazione:  
+## <a name="declarations"></a>Declarations  
+ A declaration introduces one or more names into a program. Declarations can occur more than once in a program. Therefore, classes, structures, enumerated types, and other user-defined types can be declared for each compilation unit. The constraint on this multiple declaration is that all declarations must be identical. Declarations also serve as definitions, except when the declaration:  
   
-1.  È un prototipo di funzione \(una dichiarazione di funzione senza il corpo della funzione\).  
+1.  Is a function prototype (a function declaration with no function body).  
   
-2.  Contiene l'identificatore `extern` ma non l'inizializzatore \(oggetti e variabili\) o il corpo della funzione \(funzioni\).  Ciò significa che la definizione non è necessariamente nell'unità di conversione corrente e fornisce il collegamento esterno del nome.  
+2.  Contains the `extern` specifier but no initializer (objects and variables) or function body (functions). This signifies that the definition is not necessarily in the current translation unit and gives the name external linkage.  
   
-3.  È un membro dati statici in una dichiarazione di classe.  
+3.  Is of a static data member inside a class declaration.  
   
-     Poiché i membri dati di classe statici sono specifiche variabili discrete condivise da tutti gli oggetti della classe, devono essere definiti e inizializzati all'esterno della dichiarazione di classe.  Per altre informazioni sulla creazione di classi e membri di classe, vedere [Classi](../cpp/classes-and-structs-cpp.md).  
+     Because static class data members are discrete variables shared by all objects of the class, they must be defined and initialized outside the class declaration. (For more information about classes and class members, see [Classes](../cpp/classes-and-structs-cpp.md).)  
   
-4.  È la dichiarazione del nome di una classe senza una definizione che la segue, ad esempio `class T;`.  
+4.  Is a class name declaration with no following definition, such as `class T;`.  
   
-5.  È un'istruzione `typedef`.  
+5.  Is a `typedef` statement.  
   
- Esempi di dichiarazioni che sono anche le definizioni sono:  
+ Examples of declarations that are also definitions are:  
   
 ```  
 // Declare and define int variables i and j.  
@@ -59,7 +75,7 @@ public:
 };  
 ```  
   
- Alcune dichiarazioni che non sono le definizioni sono:  
+ Some declarations that are not definitions are:  
   
 ```  
   
@@ -67,18 +83,18 @@ extern int i;
 char *strchr( const char *Str, const char Target );  
 ```  
   
- Un nome viene considerato dichiarato immediatamente dopo il proprio dichiaratore e prima del proprio inizializzatore \(quest'ultimo è facoltativo\).  Per altre informazioni, vedere [Punto di dichiarazione](../cpp/point-of-declaration-in-cpp.md).  
+ A name is considered to be declared immediately after its declarator but before its (optional) initializer. For more information, see [Point of Declaration](../cpp/point-of-declaration-in-cpp.md).  
   
- Le dichiarazioni avvengono in un *ambito*.  L'ambito controlla la visibilità del nome dichiarato e la durata dell'oggetto definito, se presente.  Per altre informazioni su come le regole di ambito interagiscono con le dichiarazioni, vedere [Ambito](../cpp/scope-visual-cpp.md).  
+ Declarations occur in a *scope*. The scope controls the visibility of the name declared and the duration of the object defined, if any. For more information about how scope rules interact with declarations, see [Scope](../cpp/scope-visual-cpp.md).  
   
- Una dichiarazione dell'oggetto è anche una definizione, a meno che contenga l'identificatore di classi di archiviazione `extern` descritto in [Identificatori di classi di archiviazione](http://msdn.microsoft.com/it-it/10b3d22d-cb40-450b-994b-08cf9a211b6c).  Una dichiarazione di funzione è anche una definizione, a meno che non sia un prototipo.  Un prototipo è un'intestazione di funzione senza un corpo di funzione di definizione.  La definizione di un oggetto causa l'allocazione delle risorse di archiviazione e le inizializzazioni appropriate per tale oggetto.  
+ An object declaration is also a definition unless it contains the `extern` storage-class specifier described in [Storage classes](storage-classes-cpp.md). A function declaration is also a definition unless it is a prototype. A prototype is a function header without a defining function body. The definition of an object causes allocation of storage and appropriate initializations for that object.  
   
-## Definizioni  
- Una definizione è una specifica univoca di un oggetto, di una variabile, di una funzione, di una classe o di un enumeratore.  Poiché le definizioni devono essere univoche, un programma può contenere una sola definizione per un determinato elemento del programma specificato.  È possibile una corrispondenza molti a uno tra dichiarazioni e definizioni.  Esistono due casi in cui un elemento del programma può essere dichiarato e non definito:  
+## <a name="definitions"></a>Definitions  
+ A definition is a unique specification of an object or variable, function, class, or enumerator. Because definitions must be unique, a program can contain only one definition for a given program element. There can be a many-to-one correspondence between declarations and definitions. There are two cases in which a program element can be declared and not defined:  
   
-1.  Una funzione è dichiarata ma non vi viene mai fatto riferimento tramite una chiamata di funzione o con un'espressione che accetta l'indirizzo della funzione.  
+1.  A function is declared but never referenced with a function call or with an expression that takes the function's address.  
   
-2.  Una classe viene usata solo in un modo in cui non richiede che la relativa definizione sia nota.  Tuttavia, la classe deve essere dichiarata.  Nel codice riportato di seguito è illustrata questa condizione:  
+2.  A class is used only in a way that does not require its definition be known. However, the class must be declared. The following code illustrates such a case:  
   
     ```  
     // definitions.cpp  
@@ -95,6 +111,6 @@ char *strchr( const char *Str, const char Target );
     }  
     ```  
   
-## Vedere anche  
- [Concetti di base](../cpp/basic-concepts-cpp.md)   
- [Punto di dichiarazione](../cpp/point-of-declaration-in-cpp.md)
+## <a name="see-also"></a>See Also  
+ [Basic Concepts](../cpp/basic-concepts-cpp.md)   
+ [Point of Declaration](../cpp/point-of-declaration-in-cpp.md)

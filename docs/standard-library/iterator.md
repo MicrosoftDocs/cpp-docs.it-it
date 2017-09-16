@@ -9,10 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::<iterator>
-- std.<iterator>
-- <iterator>
-- iterator/std::<iterator>
+- std::<iterator>", "<iterator>", "iterator/std::<iterator>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,99 +33,99 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 67ba9e9a670ac187d15fe53729d8cdac475472ce
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: bb21eea4d202ca27196301f127f67188ad6a8fc3
 ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltiteratorgt"></a>&lt;iterator&gt;
-Definisce le primitive degli iteratori, gli iteratori predefiniti e gli iteratori di flusso, nonché diversi modelli di supporto. Gli iteratori predefiniti includono gli adattatori di inversione e di inserimento. Esistono tre classi di adattatori degli iteratori di inserimento: front, back e general. Tali classi forniscono la semantica di inserimento anziché la semantica di sovrascrittura fornita dagli iteratori delle funzioni membro del contenitore.  
+Defines the iterator primitives, predefined iterators and stream iterators, as well as several supporting templates. The predefined iterators include insert and reverse adaptors. There are three classes of insert iterator adaptors: front, back, and general. They provide insert semantics rather than the overwrite semantics that the container member function iterators provide.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <iterator>  
   
 ```  
   
-## <a name="remarks"></a>Note  
- Gli iteratori costituiscono una generalizzazione dei puntatori, che astraggono dai requisiti di tali puntatori in modo da consentire al programma C++ di utilizzare strutture di dati diverse in maniera uniforme. Gli iteratori fungono da intermediari tra i contenitori e gli algoritmi generici. Anziché operare su tipi di dati specifici, gli algoritmi vengono definiti per operare su un intervallo specificato da un tipo di iteratore. L'algoritmo può operare su qualsiasi struttura di dati che soddisfa i requisiti dell'iteratore. Esistono cinque tipi o categorie di iteratori, ciascuno dotato di un proprio set di requisiti e funzionalità risultanti:  
+## <a name="remarks"></a>Remarks  
+ Iterators are a generalization of pointers, abstracting from their requirements in a way that allows a C++ program to work with different data structures in a uniform manner. Iterators act as intermediaries between containers and generic algorithms. Instead of operating on specific data types, algorithms are defined to operate on a range specified by a type of iterator. Any data structure that satisfies the requirements of the iterator may then be operated on by the algorithm. There are five types or categories of iterator, each with its own set of requirements and resulting functionality:  
   
--   Output: spostamento in avanti, può archiviare ma non recuperare i valori forniti da ostream e inserter.  
+-   Output: forward moving, may store but not retrieve values, provided by ostream and inserter.  
   
--   Input: spostamento in avanti, può recuperare ma non archiviare i valori forni da istream.  
+-   Input: forward moving, may retrieve but not store values, provided by istream.  
   
--   In avanti: spostamento in avanti, può archiviare e recuperare i valori.  
+-   Forward: forward moving, may store and retrieve values.  
   
--   Bidirezionale: spostamento in avanti e indietro, può archiviare e recuperare i valori forniti da list, set, multiset, map e multimap.  
+-   Bidirectional: forward and backward moving, may store and retrieve values, provided by list, set, multiset, map, and multimap.  
   
--   Accesso casuale: elementi a cui si accede in qualsiasi ordine, può archiviare e recuperare i valori forniti da vector, deque, string e array.  
+-   Random access: elements accessed in any order, may store and retrieve values, provided by vector, deque, string, and array.  
   
- Gli iteratori che dispongono di un numero maggiore di requisiti e quindi di un accesso più efficiente possono essere utilizzati al posto degli iteratori con un numero inferiore di requisiti. Ad esempio, nel caso in cui venga chiamato un iteratore in avanti, può essere invece utilizzato un iteratore ad accesso casuale.  
+ Iterators that have greater requirements and so more powerful access to elements may be used in place of iterators with fewer requirements. For example, if a forward iterator is called for, then a random-access iterator may used instead.  
   
- Sono state aggiunte estensioni agli iteratori della libreria standard C++ per supportare diverse situazioni relative alla modalità di debug per gli iteratori verificati e non verificati. Per altre informazioni, vedere [Librerie protette: libreria standard](../standard-library/safe-libraries-cpp-standard-library.md).  
+ Visual Studio has added extensions to C++ Standard Library iterators to support a variety of debug mode situations for checked and unchecked iterators. For more information, see [Safe Libraries: C++ Standard Library](../standard-library/safe-libraries-cpp-standard-library.md).  
   
-### <a name="functions"></a>Funzioni  
-  
-|||  
-|-|-|  
-|[advance](../standard-library/iterator-functions.md#advance)|Incrementa un iteratore di un numero specificato di posizioni.|  
-|[back_inserter](../standard-library/iterator-functions.md#back_inserter)|Crea un iteratore in grado di inserire gli elementi nella parte finale di un contenitore specificato.|  
-|[begin](../standard-library/iterator-functions.md#begin)|Recupera un iteratore al primo elemento di un contenitore specificato.|  
-|[cbegin](../standard-library/iterator-functions.md#cbegin)|Recupera un iteratore costante al primo elemento di un contenitore specificato.|  
-|[cend](../standard-library/iterator-functions.md#cend)|Recupera un iteratore costante all'elemento successivo all'ultimo elemento del contenitore specificato.|  
-|[distance](../standard-library/iterator-functions.md#distance)|Determina il numero di incrementi tra le posizioni a cui puntano due iteratori.|  
-|[end](../standard-library/iterator-functions.md#end)|Recupera un iteratore all'elemento successivo all'ultimo elemento nel contenitore specificato.|  
-|[front_inserter](../standard-library/iterator-functions.md#front_inserter)|Crea un iteratore in grado di inserire elementi all'inizio di un contenitore specificato.|  
-|[inserter](../standard-library/iterator-functions.md#inserter)|Adattatore dell'iteratore che aggiunge un nuovo elemento a un contenitore in corrispondenza di un punto di inserimento specificato.|  
-|[make_checked_array_iterator](../standard-library/iterator-functions.md#make_checked_array_iterator)|Crea un oggetto [checked_array_iterator](../standard-library/checked-array-iterator-class.md) che può essere usato da altri algoritmi. **Nota:**  questa funzione è un'estensione Microsoft della libreria standard C++. Il codice implementato mediante questa funzione non può essere trasferito negli ambienti di compilazione standard di C++ che non supportano questa estensione Microsoft.|  
-|[make_move_iterator](../standard-library/iterator-functions.md#make_move_iterator)|Restituisce un iteratore di spostamento contenente l'iteratore fornito come relativo iteratore di base archiviato.|  
-|[make_unchecked_array_iterator](../standard-library/iterator-functions.md#make_unchecked_array_iterator)|Crea un oggetto [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md) che può essere usato da altri algoritmi. **Nota:**  questa funzione è un'estensione Microsoft della libreria standard C++. Il codice implementato mediante questa funzione non può essere trasferito negli ambienti di compilazione standard di C++ che non supportano questa estensione Microsoft.|  
-|[next](../standard-library/iterator-functions.md#next)|Esegue l'iterazione per un numero specificato di volte e restituisce la nuova posizione dell'iteratore.|  
-|[prev](../standard-library/iterator-functions.md#prev)|Esegue l'iterazione in ordine inverso per un numero specificato di volte e restituisce la nuova posizione dell'iteratore.|  
-  
-### <a name="operators"></a>Operatori  
+### <a name="functions"></a>Functions  
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/iterator-operators.md#op_neq)|Verifica se l'oggetto iteratore a sinistra dell'operatore non è uguale all'oggetto iteratore a destra.|  
-|[operator==](../standard-library/iterator-operators.md#op_eq_eq)|Verifica se l'oggetto iteratore a sinistra dell'operatore è uguale all'oggetto iteratore a destra.|  
-|[operator<](../standard-library/iterator-operators.md#op_lt)|Verifica se l'oggetto iteratore a sinistra dell'operatore è minore all'oggetto iteratore a destra.|  
-|[operator\<=](../standard-library/iterator-operators.md#op_gt_eq)|Verifica se l'oggetto iteratore a sinistra dell'operatore è minore o uguale all'oggetto iteratore a destra.|  
-|[operator>](../standard-library/iterator-operators.md#op_gt)|Verifica se l'oggetto iteratore a sinistra dell'operatore è maggiore dell'oggetto iteratore a destra.|  
-|[operator>=](../standard-library/iterator-operators.md#op_gt_eq)|Verifica se l'oggetto iteratore a sinistra dell'operatore è maggiore o uguale all'oggetto iteratore a destra.|  
-|[operator+](../standard-library/iterator-operators.md#op_add)|Aggiunge un offset a un iteratore e restituisce il nuovo `reverse_iterator` che punta all'elemento inserito in corrispondenza della nuova posizione dell'offset.|  
-|[operator-](../standard-library/iterator-operators.md#operator-)|Sottrae un iteratore da un altro e restituisce la differenza.|  
+|[advance](../standard-library/iterator-functions.md#advance)|Increments an iterator by a specified number of positions.|  
+|[back_inserter](../standard-library/iterator-functions.md#back_inserter)|Creates an iterator that can insert elements at the back of a specified container.|  
+|[begin](../standard-library/iterator-functions.md#begin)|Retrieves an iterator to the first element in a specified container.|  
+|[cbegin](../standard-library/iterator-functions.md#cbegin)|Retrieves a constant iterator to the first element in a specified container.|  
+|[cend](../standard-library/iterator-functions.md#cend)|Retrieves a constant iterator to the element that follows the last element in the specified container.|  
+|[distance](../standard-library/iterator-functions.md#distance)|Determines the number of increments between the positions addressed by two iterators.|  
+|[end](../standard-library/iterator-functions.md#end)|Retrieves an iterator to the element that follows the last element in the specified container.|  
+|[front_inserter](../standard-library/iterator-functions.md#front_inserter)|Creates an iterator that can insert elements at the front of a specified container.|  
+|[inserter](../standard-library/iterator-functions.md#inserter)|An iterator adaptor that adds a new element to a container at a specified point of insertion.|  
+|[make_checked_array_iterator](../standard-library/iterator-functions.md#make_checked_array_iterator)|Creates a [checked_array_iterator](../standard-library/checked-array-iterator-class.md) that can be used by other algorithms. **Note:**  This function is a Microsoft extension of the C++ Standard Library. Code implemented by using this function is not portable to C++ Standard build environments that do not support this Microsoft extension.|  
+|[make_move_iterator](../standard-library/iterator-functions.md#make_move_iterator)|Returns a move iterator containing the provided iterator as its stored base iterator.|  
+|[make_unchecked_array_iterator](../standard-library/iterator-functions.md#make_unchecked_array_iterator)|Creates an [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md) that can be used by other algorithms. **Note:**  This function is a Microsoft extension of the C++ Standard Library. Code implemented by using this function is not portable to C++ Standard build environments that do not support this Microsoft extension.|  
+|[next](../standard-library/iterator-functions.md#next)|Iterates a specified number of times and returns the new iterator position.|  
+|[prev](../standard-library/iterator-functions.md#prev)|Iterates in reverse a specified number of times and returns the new iterator position.|  
   
-### <a name="classes"></a>Classi  
+### <a name="operators"></a>Operators  
   
 |||  
 |-|-|  
-|[back_insert_iterator](../standard-library/back-insert-iterator-class.md)|La classe modello descrive un oggetto iteratore di output. Inserisce gli elementi in un contenitore di tipo **Container**, a cui accede tramite l'oggetto **pointer** protetto archiviato denominato container.|  
-|[bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)|Classe che fornisce un tipo restituito per una funzione **iterator_category** che rappresenta un iteratore bidirezionale.|  
-|[checked_array_iterator](../standard-library/checked-array-iterator-class.md)|Classe che accede a una matrice mediante un iteratore verificato ad accesso causale. **Nota:**  questa classe è un'estensione Microsoft della libreria standard C++. Il codice implementato mediante questa funzione non può essere trasferito negli ambienti di compilazione standard di C++ che non supportano questa estensione Microsoft.|  
-|[forward_iterator_tag](../standard-library/forward-iterator-tag-struct.md)|Classe che fornisce un tipo restituito per una funzione **iterator_category** che rappresenta un iteratore in avanti.|  
-|[front_insert_iterator](../standard-library/front-insert-iterator-class.md)|La classe modello descrive un oggetto iteratore di output. Inserisce gli elementi in un contenitore di tipo **Container**, a cui accede tramite l'oggetto **pointer** protetto archiviato denominato container.|  
-|[input_iterator_tag](../standard-library/input-iterator-tag-struct.md)|Classe che fornisce un tipo restituito per una funzione **iterator_category** che rappresenta un iteratore di input.|  
-|[insert_iterator](../standard-library/insert-iterator-class.md)|La classe modello descrive un oggetto iteratore di output. Inserisce gli elementi in un contenitore di tipo **Container**, a cui accede tramite l'oggetto **pointer** protetto archiviato denominato container. Archivia inoltre l'oggetto **iterator** protetto, della classe **Container::iterator**, denominato **iter**.|  
-|[istream_iterator](../standard-library/istream-iterator-class.md)|La classe modello descrive un oggetto iteratore di input. Estrae gli oggetti della classe **Ty** da un flusso di input, a cui accede tramite un oggetto archiviato di tipo pointer a `basic_istream`\<**Elem**, **Tr**>.|  
-|[istreambuf_iterator](../standard-library/istreambuf-iterator-class.md)|La classe modello descrive un oggetto iteratore di input. Inserisce gli elementi della classe **Elem** in un buffer del flusso di output, a cui accede tramite un oggetto archiviato di tipo **pointer** a `basic_streambuf`\<**Elem**, **Tr**>.|  
-|[iterator](../standard-library/iterator-struct.md)|La classe modello viene utilizzata come tipo di base per tutti gli iteratori.|  
-|[iterator_traits](../standard-library/iterator-traits-struct.md)|Classe helper del modello che fornisce tipi critici associati a diversi tipi di iteratori in modo che sia possibile fare riferimento a essi nello stesso modo.|  
-|[move_iterator](../standard-library/move-iterator-class.md)|Un oggetto `move_iterator` consente di archiviare un iteratore ad accesso casuale di tipo `RandomIterator`. Si comporta come un iteratore ad accesso casuale, salvo quando viene dereferenziato. Viene eseguito il cast in modo implicito del risultato di `operator*` a `value_type&&:` per creare un `rvalue reference`.|  
-|[ostream_iterator](../standard-library/ostream-iterator-class.md)|La classe modello descrive un oggetto iteratore di output. Inserisce gli oggetti della classe **Type** in un flusso di output, a cui accede tramite un oggetto archiviato di tipo **pointer** a `basic_ostream`\<**Elem**, **Tr**>.|  
-|[Classe ostreambuf_iterator](../standard-library/ostreambuf-iterator-class.md)|La classe modello descrive un oggetto iteratore di output. Inserisce gli elementi della classe **Elem** in un buffer del flusso di output, a cui accede tramite un oggetto archiviato di tipo pointer a `basic_streambuf`\<**Elem**, **Tr**>.|  
-|[output_iterator_tag](../standard-library/output-iterator-tag-struct.md)|Classe che fornisce un tipo restituito per una funzione **iterator_category** che rappresenta un iteratore di output.|  
-|[random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md)|Classe che fornisce un tipo restituito per una funzione **iterator_category** che rappresenta un iteratore ad accesso casuale.|  
-|[reverse_iterator](../standard-library/reverse-iterator-class.md)|La classe modello descrive un oggetto che si comporta come un iteratore ad accesso casuale solo in senso inverso.|  
-|[unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)|Classe che accede a una matrice mediante un iteratore ad accesso causale non verificato. **Nota:**  questa classe è un'estensione Microsoft della libreria standard C++. Il codice implementato mediante questa funzione non può essere trasferito negli ambienti di compilazione standard di C++ che non supportano questa estensione Microsoft.|  
+|[operator!=](../standard-library/iterator-operators.md#op_neq)|Tests if the iterator object on the left side of the operator is not equal to the iterator object on the right side.|  
+|[operator==](../standard-library/iterator-operators.md#op_eq_eq)|Tests if the iterator object on the left side of the operator is equal to the iterator object on the right side.|  
+|[operator<](../standard-library/iterator-operators.md#op_lt)|Tests if the iterator object on the left side of the operator is less than the iterator object on the right side.|  
+|[operator\<=](../standard-library/iterator-operators.md#op_gt_eq)|Tests if the iterator object on the left side of the operator is less than or equal to the iterator object on the right side.|  
+|[operator>](../standard-library/iterator-operators.md#op_gt)|Tests if the iterator object on the left side of the operator is greater than the iterator object on the right side.|  
+|[operator>=](../standard-library/iterator-operators.md#op_gt_eq)|Tests if the iterator object on the left side of the operator is greater than or equal to the iterator object on the right side.|  
+|[operator+](../standard-library/iterator-operators.md#op_add)|Adds an offset to an iterator and returns the new `reverse_iterator` addressing the inserted element at the new offset position.|  
+|[operator-](../standard-library/iterator-operators.md#operator-)|Subtracts one iterator from another and returns the difference.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)   
- [Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+### <a name="classes"></a>Classes  
+  
+|||  
+|-|-|  
+|[back_insert_iterator](../standard-library/back-insert-iterator-class.md)|The template class describes an output iterator object. It inserts elements into a container of type **Container**, which it accesses through the protected **pointer** object it stores called container.|  
+|[bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)|A class that provides a return type for an **iterator_category** function that represents a bidirectional iterator.|  
+|[checked_array_iterator](../standard-library/checked-array-iterator-class.md)|A class that accesses an array using a random access, checked iterator. **Note:**  This class is a Microsoft extension of the C++ Standard Library. Code implemented by using this function is not portable to C++ Standard build environments that do not support this Microsoft extension.|  
+|[forward_iterator_tag](../standard-library/forward-iterator-tag-struct.md)|A class that provides a return type for an **iterator_category** function that represents a forward iterator.|  
+|[front_insert_iterator](../standard-library/front-insert-iterator-class.md)|The template class describes an output iterator object. It inserts elements into a container of type **Container**, which it accesses through the protected **pointer** object it stores called container.|  
+|[input_iterator_tag](../standard-library/input-iterator-tag-struct.md)|A class that provides a return type for an **iterator_category** function that represents an input iterator.|  
+|[insert_iterator](../standard-library/insert-iterator-class.md)|The template class describes an output iterator object. It inserts elements into a container of type **Container**, which it accesses through the protected **pointer** object it stores called container. It also stores the protected **iterator** object, of class **Container::iterator**, called **iter**.|  
+|[istream_iterator](../standard-library/istream-iterator-class.md)|The template class describes an input iterator object. It extracts objects of class **Ty** from an input stream, which it accesses through an object it stores, of type pointer to `basic_istream`\<**Elem**, **Tr**>.|  
+|[istreambuf_iterator](../standard-library/istreambuf-iterator-class.md)|The template class describes an input iterator object. It inserts elements of class **Elem** into an output stream buffer, which it accesses through an object it stores, of type **pointer** to `basic_streambuf`\<**Elem**, **Tr**>.|  
+|[iterator](../standard-library/iterator-struct.md)|The template class is used as a base type for all iterators.|  
+|[iterator_traits](../standard-library/iterator-traits-struct.md)|A template helper class providing critical types that are associated with different iterator types so that they can be referred to in the same way.|  
+|[move_iterator](../standard-library/move-iterator-class.md)|A `move_iterator` object stores a random-access iterator of type `RandomIterator`. It behaves like a random-access iterator, except when dereferenced. The result of `operator*` is implicitly cast to `value_type&&:` to make an `rvalue reference`.|  
+|[ostream_iterator](../standard-library/ostream-iterator-class.md)|The template class describes an output iterator object. It inserts objects of class **Type** into an output stream, which it accesses through an object it stores, of type **pointer** to `basic_ostream`\<**Elem**, **Tr**>.|  
+|[ostreambuf_iterator Class](../standard-library/ostreambuf-iterator-class.md)|The template class describes an output iterator object. It inserts elements of class **Elem** into an output stream buffer, which it accesses through an object it stores, of type pointer to `basic_streambuf`\<**Elem**, **Tr**>.|  
+|[output_iterator_tag](../standard-library/output-iterator-tag-struct.md)|A class that provides a return type for **iterator_category** function that represents an output iterator.|  
+|[random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md)|A class that provides a return type for **iterator_category** function that represents a random-access iterator.|  
+|[reverse_iterator](../standard-library/reverse-iterator-class.md)|The template class describes an object that behaves like a random-access iterator, only in reverse.|  
+|[unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)|A class that accesses an array using a random access, unchecked iterator. **Note:**  This class is a Microsoft extension of the C++ Standard Library. Code implemented by using this function is not portable to C++ Standard build environments that do not support this Microsoft extension.|  
+  
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

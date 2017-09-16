@@ -1,49 +1,68 @@
 ---
-title: "Messaggi e comandi nel framework | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "programmazione basata sugli eventi"
-  - "eventi (C++), routing dei comandi in MFC"
-  - "eventi (C++), programmazione basata sugli eventi"
-  - "programmazione basata sui messaggi"
+title: Messages and Commands in the Framework | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- events [MFC], command routing in MFC
+- event-driven programming [MFC]
+- events [MFC], event-driven programming
+- message-driven programming [MFC]
 ms.assetid: d799ed8c-6a9f-4f05-be5d-29cb5bc6d185
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Messaggi e comandi nel framework
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 40bdb27fe1812237f7b9ad3439d6abd227fd427b
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Le applicazioni scritte per Microsoft Windows sono "determinato messaggio". In risposta a eventi quali i clic del mouse, le sequenze di tasti, azioni della finestra, e così via, windows invia i messaggi nella finestra appropriata.  I messaggi di windows del processo di applicazioni.NET Framework come qualsiasi altra applicazione di windows.  Ma il framework fornisce inoltre alcuni miglioramenti che semplificano i messaggi di elaborazione più semplici, più gestibili e meglio sono incapsulati.  
+---
+# <a name="messages-and-commands-in-the-framework"></a>Messages and Commands in the Framework
+Applications written for Microsoft Windows are "message driven." In response to events such as mouse clicks, keystrokes, window movements, and so on, Windows sends messages to the proper window. Framework applications process Windows messages like any other application for Windows. But the framework also provides some enhancements that make processing messages easier, more maintainable, and better encapsulated.  
   
- Negli argomenti illustrati i termini chiave utilizzati nella parte restante della famiglia dell'articolo per discutere i messaggi e i comandi:  
+ The following topics introduce the key terms used in the rest of the article family to discuss messages and commands:  
   
--   [Messaggi](../mfc/messages.md)  
+-   [Messages](../mfc/messages.md)  
   
--   [Gestori di messaggi](../mfc/message-handlers.md)  
+-   [Message handlers](../mfc/message-handlers.md)  
   
--   [Categorie del messaggio](../mfc/message-categories.md)  
+-   [Message categories](../mfc/message-categories.md)  
   
--   [Messaggi di windows e messaggi di notifica del controllo](../mfc/message-categories.md)  
+-   [Windows messages and control-notification messages](../mfc/message-categories.md)  
   
--   [Messaggi di comando](../mfc/message-categories.md)  
+-   [Command messages](../mfc/message-categories.md)  
   
--   [Mappe messaggi](../mfc/mapping-messages.md)  
+-   [Message maps](../mfc/mapping-messages.md)  
   
--   [Oggetti dell'interfaccia utente e ID di comando](../mfc/user-interface-objects-and-command-ids.md)  
+-   [User-interface objects and command IDs](../mfc/user-interface-objects-and-command-ids.md)  
   
--   [Destinazioni comando](../mfc/command-targets.md)  
+-   [Command targets](../mfc/command-targets.md)  
   
-## Vedere anche  
- [Gestione e mapping dei messaggi](../mfc/message-handling-and-mapping.md)
+## <a name="see-also"></a>See Also  
+ [Message Handling and Mapping](../mfc/message-handling-and-mapping.md)
+
+

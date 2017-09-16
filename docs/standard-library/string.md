@@ -9,10 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::<string>
-- string/std::<string>
-- std.<string>
-- <string>
+- std::<string>", "string/std::<string>", "<string>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,100 +33,100 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 6cc4af94f5eae06cde244da58c4aa03e561821a7
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 89e99200f1ee6f680c76e748df23cdfe3569ce68
 ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
-Definisce la classe modello `basic_string` del contenitore e diversi modelli di supporto.  
+Defines the container template class `basic_string` and various supporting templates.  
   
- Per altre informazioni su `basic_string`, vedere [Classe basic_string](../standard-library/basic-string-class.md)  
+ For more information about `basic_string`, see [basic_string Class](../standard-library/basic-string-class.md)  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <string>  
 ```  
   
-## <a name="remarks"></a>Note  
- Il linguaggio C++ e la libreria standard C++ supportano due tipi di stringhe:  
+## <a name="remarks"></a>Remarks  
+ The C++ language and the C++ Standard Library support two types of strings:  
   
--   Matrici di caratteri con terminazione Null spesso definite stringhe C.  
+-   Null-terminated character arrays often referred to as C strings.  
   
--   Oggetti della classe modello, di tipo `basic_string`, che gestiscono tutti gli argomenti di modello di tipo `char`.  
+-   Template class objects, of type `basic_string`, that handle all `char`-like template arguments.  
   
-### <a name="typedefs"></a>Typedef  
-  
-|||  
-|-|-|  
-|[string](../standard-library/string-typedefs.md#string)|Tipo che descrive una specializzazione della classe modello `basic_string` con elementi di tipo `char` come `string`.|  
-|[wstring](../standard-library/string-typedefs.md#wstring)|Tipo che descrive una specializzazione della classe modello `basic_string` con elementi di tipo `wchar_t` come `wstring`.|  
-|[u16string](../standard-library/string-typedefs.md#u16string)|Tipo che descrive una specializzazione della classe modello `basic_string` basata su elementi di tipo `char16_t`.|  
-|[u32string](../standard-library/string-typedefs.md#u32string)|Tipo che descrive una specializzazione della classe modello `basic_string` basata su elementi di tipo `char32_t`.|  
-  
-### <a name="operators"></a>Operatori  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[operator+](../standard-library/string-operators.md#op_add)|Concatena due oggetti stringa.|  
-|[operator!=](../standard-library/string-operators.md#op_neq)|Verifica se l'oggetto stringa a sinistra dell'operatore non è uguale all'oggetto stringa a destra.|  
-|[operator==](../standard-library/string-operators.md#op_eq_eq)|Verifica se l'oggetto stringa a sinistra dell'operatore è uguale all'oggetto stringa a destra.|  
-|[operator<](../standard-library/string-operators.md#op_lt)|Verifica se l'oggetto stringa a sinistra dell'operatore è minore dell'oggetto stringa a destra.|  
-|[operator<=](../standard-library/string-operators.md#op_lt_eq)|Verifica se l'oggetto stringa a sinistra dell'operatore è minore o uguale all'oggetto stringa a destra.|  
-|[operator<\<](../standard-library/string-operators.md#op_lt_lt)|Funzione di modello che inserisce una stringa nel flusso di output.|  
-|[operator>](../standard-library/string-operators.md#op_gt)|Verifica se l'oggetto stringa a sinistra dell'operatore è maggiore dell'oggetto stringa a destra.|  
-|[operator>=](../standard-library/string-operators.md#op_gt_eq)|Verifica se l'oggetto stringa a sinistra dell'operatore è maggiore o uguale all'oggetto stringa a destra.|  
-|[operator>>](../standard-library/string-operators.md#op_gt_gt)|Funzione di modello che estrae una stringa dal flusso di input.|  
+|[string](../standard-library/string-typedefs.md#string)|A type that describes a specialization of the template class `basic_string` with elements of type `char` as a `string`.|  
+|[wstring](../standard-library/string-typedefs.md#wstring)|A type that describes a specialization of the template class `basic_string` with elements of type `wchar_t` as a `wstring`.|  
+|[u16string](../standard-library/string-typedefs.md#u16string)|A type that describes a specialization of the template class `basic_string` based on elements of type `char16_t`.|  
+|[u32string](../standard-library/string-typedefs.md#u32string)|A type that describes a specialization of the template class `basic_string` based on elements of type `char32_t`.|  
   
-### <a name="specialized-template-functions"></a>Funzioni di modello specializzate  
+### <a name="operators"></a>Operators  
   
 |||  
 |-|-|  
-|[swap](../standard-library/string-functions.md#swap)|Scambia le matrici di caratteri di due stringhe.|  
-|[stod](../standard-library/string-functions.md#stod)|Converte una sequenza di caratteri in `double.`.|  
-|[stof](../standard-library/string-functions.md#stof)|Converte una sequenza di caratteri in `float`.|  
-|[stoi](../standard-library/string-functions.md#stoi)|Converte una sequenza di caratteri in un Integer.|  
-|[stold](../standard-library/string-functions.md#stold)|Converte una sequenza di caratteri in `long double`.|  
-|[stoll](../standard-library/string-functions.md#stoll)|Converte una sequenza di caratteri in `long long`.|  
-|[stoul](../standard-library/string-functions.md#stoul)|Converte una sequenza di caratteri in un tipo `unsigned long`.|  
-|[stoull](../standard-library/string-functions.md#stoull)|Converte una sequenza di caratteri in un tipo `unsigned long long`.|  
-|[to_string](../standard-library/string-functions.md#to_string)|Converte un valore in un valore `string`.|  
-|[to_wstring](../standard-library/string-functions.md#to_wstring)|Converte un valore in un valore `string` di tipo wide.|  
+|[operator+](../standard-library/string-operators.md#op_add)|Concatenates two string objects.|  
+|[operator!=](../standard-library/string-operators.md#op_neq)|Tests if the string object on the left side of the operator is not equal to the string object on the right side.|  
+|[operator==](../standard-library/string-operators.md#op_eq_eq)|Tests if the string object on the left side of the operator is equal to the string object on the right side.|  
+|[operator<](../standard-library/string-operators.md#op_lt)|Tests if the string object on the left side of the operator is less than to the string object on the right side.|  
+|[operator<=](../standard-library/string-operators.md#op_lt_eq)|Tests if the string object on the left side of the operator is less than or equal to the string object on the right side.|  
+|[operator<\<](../standard-library/string-operators.md#op_lt_lt)|A template function that inserts a string into the output stream.|  
+|[operator>](../standard-library/string-operators.md#op_gt)|Tests if the string object on the left side of the operator is greater than to the string object on the right side.|  
+|[operator>=](../standard-library/string-operators.md#op_gt_eq)|Tests if the string object on the left side of the operator is greater than or equal to the string object on the right side.|  
+|[operator>>](../standard-library/string-operators.md#op_gt_gt)|A template function that extracts a string from the input stream.|  
   
-### <a name="functions"></a>Funzioni  
-  
-|||  
-|-|-|  
-|[Modello getLine](../standard-library/string-functions.md#getline)|Estrarre stringhe dal flusso di input riga per riga.|  
-  
-### <a name="classes"></a>Classi  
+### <a name="specialized-template-functions"></a>Specialized Template Functions  
   
 |||  
 |-|-|  
-|[Classe basic_string](../standard-library/basic-string-class.md)|Classe modello che descrive gli oggetti che possono archiviare una sequenza di oggetti arbitrari di tipo carattere.|  
-|[Struct char_traits](../standard-library/char-traits-struct.md)|Classe modello che descrive gli attributi associati a un carattere di tipo CharType.|  
+|[swap](../standard-library/string-functions.md#swap)|Exchanges the arrays of characters of two strings.|  
+|[stod](../standard-library/string-functions.md#stod)|Converts a character sequence to a `double.`|  
+|[stof](../standard-library/string-functions.md#stof)|Converts a character sequence to a `float`.|  
+|[stoi](../standard-library/string-functions.md#stoi)|Converts a character sequence to an integer.|  
+|[stold](../standard-library/string-functions.md#stold)|Converts a character sequence to a `long double`.|  
+|[stoll](../standard-library/string-functions.md#stoll)|Converts a character sequence to a `long long`.|  
+|[stoul](../standard-library/string-functions.md#stoul)|Converts a character sequence to an `unsigned long`.|  
+|[stoull](../standard-library/string-functions.md#stoull)|Converts a character sequence to an `unsigned long long`.|  
+|[to_string](../standard-library/string-functions.md#to_string)|Converts a value to a `string`.|  
+|[to_wstring](../standard-library/string-functions.md#to_wstring)|Converts a value to a wide `string`.|  
   
-### <a name="specializations"></a>Specializzazioni  
+### <a name="functions"></a>Functions  
   
 |||  
 |-|-|  
-|[Struct char_traits\<char>](../standard-library/char-traits-char-struct.md)|Struct che rappresenta una specializzazione dello struct modello `char_traits`\<CharType> in un elemento di tipo `char`.|  
-|[Struct char_traits<wchar_t>](../standard-library/char-traits-wchar-t-struct.md)|Struct che rappresenta una specializzazione dello struct modello `char_traits`\<CharType> in un elemento di tipo `wchar_t`.|  
-|[Struct char_traits<char16_t>](../standard-library/char-traits-char16-t-struct.md)|Struct che rappresenta una specializzazione dello struct modello `char_traits`\<CharType> in un elemento di tipo `char16_t`.|  
-|[Struct char_traits<char32_t>](../standard-library/char-traits-char32-t-struct.md)|Struct che rappresenta una specializzazione dello struct modello `char_traits`\<CharType> in un elemento di tipo `char32_t`.|  
+|[getline Template](../standard-library/string-functions.md#getline)|Extract strings from the input stream line by line.|  
   
-## <a name="requirements"></a>Requisiti  
+### <a name="classes"></a>Classes  
   
-- **Intestazione:** \<string>  
+|||  
+|-|-|  
+|[basic_string Class](../standard-library/basic-string-class.md)|A template class that describes objects that can store a sequence of arbitrary character-like objects.|  
+|[char_traits Struct](../standard-library/char-traits-struct.md)|A template class that describes attributes associated with a character of type CharType|  
   
-- **Spazio dei nomi:** std  
+### <a name="specializations"></a>Specializations  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)   
- [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+|||  
+|-|-|  
+|[char_traits\<char> Struct](../standard-library/char-traits-char-struct.md)|A struct that is a specialization of the template struct `char_traits`\<CharType> to an element of type `char`.|  
+|[char_traits<wchar_t> Struct](../standard-library/char-traits-wchar-t-struct.md)|A struct that is a specialization of the template struct `char_traits`\<CharType> to an element of type `wchar_t`.|  
+|[char_traits<char16_t> Struct](../standard-library/char-traits-char16-t-struct.md)|A struct that is a specialization of the template struct `char_traits`\<CharType> to an element of type `char16_t`.|  
+|[char_traits<char32_t> Struct](../standard-library/char-traits-char32-t-struct.md)|A struct that is a specialization of the template struct `char_traits`\<CharType> to an element of type `char32_t`.|  
+  
+## <a name="requirements"></a>Requirements  
+  
+- **Header:** \<string>  
+  
+- **Namespace:** std  
+  
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: Classe CGopherConnection | Documenti di Microsoft
+title: CGopherConnection Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,16 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- servers, connecting to
-- Internet server, gopher
-- connecting to servers, gopher servers
-- protocols, gopher
-- services, gopher
-- CGopherConnection class
-- gopher protocol
-- gopher server
-- connecting to servers
-- Internet connections, gopher
+- CGopherConnection [MFC], CGopherConnection
+- CGopherConnection [MFC], CreateLocator
+- CGopherConnection [MFC], GetAttribute
+- CGopherConnection [MFC], OpenFile
 ms.assetid: b5b96aea-ac99-430e-bd84-d1372b43f78f
 caps.latest.revision: 21
 author: mikeblome
@@ -47,62 +41,62 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 6267dd226e87e5bf64faa7225e49d9a99af93e3e
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e1d773d4d6ac7004cd9a7cfafdf2eca998c53c34
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cgopherconnection-class"></a>Classe CGopherConnection
-Gestisce la connessione a un server Internet gopher.  
+# <a name="cgopherconnection-class"></a>CGopherConnection Class
+Manages your connection to a gopher Internet server.  
   
 > [!NOTE]
->  Le classi `CGopherConnection`, `CGopherFile`, `CGopherFileFind`, `CGopherLocator` e i relativi membri sono stati deprecati in quanto non funzionano nella piattaforma Windows XP, ma continuano a funzionare su piattaforme precedenti.  
+>  The classes `CGopherConnection`, `CGopherFile`, `CGopherFileFind`, `CGopherLocator` and their members have been deprecated because they do not work on the Windows XP platform, but they will continue to work on earlier platforms.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CGopherConnection : public CInternetConnection  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Costruttori pubblici  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CGopherConnection::CGopherConnection](#cgopherconnection)|Costruisce un oggetto `CGopherConnection`.|  
+|[CGopherConnection::CGopherConnection](#cgopherconnection)|Constructs a `CGopherConnection` object.|  
   
-### <a name="public-methods"></a>Metodi pubblici  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CGopherConnection:: CreateLocator](#createlocator)|Crea un [oggetto CGopherLocator](../../mfc/reference/cgopherlocator-class.md) oggetto per trovare i file in un server gopher.|  
-|[CGopherConnection::GetAttribute](#getattribute)|Recupera informazioni sugli attributi sull'oggetto gopher.|  
-|[CGopherConnection:: OpenFile](#openfile)|Apre un file gopher.|  
+|[CGopherConnection::CreateLocator](#createlocator)|Creates a [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) object to find files on a gopher server.|  
+|[CGopherConnection::GetAttribute](#getattribute)|Retrieves attribute information about the gopher object.|  
+|[CGopherConnection::OpenFile](#openfile)|Opens a gopher file.|  
   
-## <a name="remarks"></a>Note  
- Il servizio gopher è uno dei tre servizi Internet riconosciuti dalle classi WinInet MFC.  
+## <a name="remarks"></a>Remarks  
+ The gopher service is one of three Internet services recognized by the MFC WinInet classes.  
   
- La classe `CGopherConnection` contiene un costruttore e tre le funzioni membro aggiuntive che gestiscono il servizio gopher: [OpenFile](#openfile), [CreateLocator](#createlocator), e [GetAttribute](#getattribute).  
+ The class `CGopherConnection` contains a constructor and three additional member functions that manage the gopher service: [OpenFile](#openfile), [CreateLocator](#createlocator), and [GetAttribute](#getattribute).  
   
- Per comunicare con un server Internet gopher, è innanzitutto necessario creare un'istanza di [CInternetSession](../../mfc/reference/cinternetsession-class.md)e quindi chiamare [CInternetSession:: GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection), che consente di creare il `CGopherConnection` dell'oggetto e restituisce un puntatore a esso. Non creare mai un `CGopherConnection` direttamente l'oggetto.  
+ To communicate with a gopher Internet server, you must first create an instance of [CInternetSession](../../mfc/reference/cinternetsession-class.md), and then call [CInternetSession::GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection), which creates the `CGopherConnection` object and returns a pointer to it. You never create a `CGopherConnection` object directly.  
   
- Per ulteriori informazioni su come `CGopherConnection` funziona con le altre classi MFC Internet, vedere l'articolo [Internet programmazione con WinInet](../../mfc/win32-internet-extensions-wininet.md). Per ulteriori informazioni sull'utilizzo di altri due supportate servizi Internet, FTP e HTTP vedere le classi [oggetto CHttpConnection](../../mfc/reference/chttpconnection-class.md) e [CFtpConnection](../../mfc/reference/cftpconnection-class.md).  
+ To learn more about how `CGopherConnection` works with the other MFC Internet classes, see the article [Internet Programming with WinInet](../../mfc/win32-internet-extensions-wininet.md). For more information about using the other two supported Internet services, FTP and HTTP see the classes [CHttpConnection](../../mfc/reference/chttpconnection-class.md) and [CFtpConnection](../../mfc/reference/cftpconnection-class.md).  
   
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CInternetConnection](../../mfc/reference/cinternetconnection-class.md)  
   
  `CGopherConnection`  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** afxinet. h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxinet.h  
   
-##  <a name="cgopherconnection"></a>CGopherConnection::CGopherConnection  
- Questa funzione membro viene chiamata per costruire un `CGopherConnection` oggetto.  
+##  <a name="cgopherconnection"></a>  CGopherConnection::CGopherConnection  
+ This member function is called to construct a `CGopherConnection` object.  
   
 ```  
 CGopherConnection(
@@ -121,40 +115,40 @@ CGopherConnection(
     INTERNET_PORT nPort = INTERNET_INVALID_PORT_NUMBER);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pSession`  
- Puntatore all'oggetto correlato [CInternetSession](../../mfc/reference/cinternetsession-class.md) oggetto.  
+ A pointer to the related [CInternetSession](../../mfc/reference/cinternetsession-class.md) object.  
   
  `hConnected`  
- L'handle della sessione corrente di Internet.  
+ The Windows handle of the current Internet session.  
   
  `pstrServer`  
- Un puntatore a una stringa contenente il nome del server FTP.  
+ A pointer to a string containing the FTP server name.  
   
  `dwContext`  
- L'identificatore di contesto per l'operazione. `dwContext`Identifica le informazioni sullo stato dell'operazione restituite da [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback). Il valore predefinito è impostato su 1. Tuttavia, è possibile assegnare in modo esplicito un ID di contesto specifici per l'operazione. L'oggetto e qualsiasi lavoro che svolto da associare con tale ID del contesto.  
+ The context identifier for the operation. `dwContext` identifies the operation's status information returned by [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback). The default is set to 1; however, you can explicitly assign a specific context ID for the operation. The object and any work it does will be associated with that context ID.  
   
  `pstrUserName`  
- Puntatore a una stringa con terminazione null che specifica il nome dell'utente per l'accesso. Se **NULL**, il valore predefinito è anonimo.  
+ Pointer to a null-terminated string that specifies the name of the user to log in. If **NULL**, the default is anonymous.  
   
  `pstrPassword`  
- Un puntatore a una stringa con terminazione null che specifica la password da utilizzare per l'accesso. Se entrambi `pstrPassword` e `pstrUserName` sono **NULL**, la password anonima predefinita è il nome di posta elettronica dell'utente. Se `pstrPassword` è **NULL** (o una stringa vuota), ma `pstrUserName` non **NULL**, viene utilizzata una password vuota. Nella tabella seguente viene descritto il comportamento per le quattro possibili impostazioni di `pstrUserName` e `pstrPassword`:  
+ A pointer to a null-terminated string that specifies the password to use to log in. If both `pstrPassword` and `pstrUserName` are **NULL**, the default anonymous password is the user's email name. If `pstrPassword` is **NULL** (or an empty string) but `pstrUserName` is not **NULL**, a blank password is used. The following table describes the behavior for the four possible settings of `pstrUserName` and `pstrPassword`:  
   
-|`pstrUserName`|`pstrPassword`|Nome utente inviato al server FTP|Password inviati al server FTP|  
+|`pstrUserName`|`pstrPassword`|Username sent to FTP server|Password sent to FTP server|  
 |--------------------|--------------------|---------------------------------|---------------------------------|  
-|**NULL** o ""|**NULL** o ""|"anonymous"|Nome di posta elettronica dell'utente|  
-|Non- **NULL** stringa|**NULL** o ""|`pstrUserName`|" "|  
-|**NULL** non **NULL** stringa|**ERRORE**|**ERRORE**||  
-|Non- **NULL** stringa|Non- **NULL** stringa|`pstrUserName`|`pstrPassword`|  
+|**NULL** or " "|**NULL** or " "|"anonymous"|User's email name|  
+|Non- **NULL** String|**NULL** or " "|`pstrUserName`|" "|  
+|**NULL** Non- **NULL** String|**ERROR**|**ERROR**||  
+|Non- **NULL** String|Non- **NULL** String|`pstrUserName`|`pstrPassword`|  
   
  `nPort`  
- Un numero che identifica la porta TCP/IP da utilizzare nel server.  
+ A number that identifies the TCP/IP port to use on the server.  
   
-### <a name="remarks"></a>Note  
- Non creare mai un `CGopherConnection` direttamente. Invece chiamare [CInternetSession:: GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection), che consente di creare un `CGopherConnection` dell'oggetto e restituisce un puntatore a esso.  
+### <a name="remarks"></a>Remarks  
+ You never create a `CGopherConnection` directly. Rather, call [CInternetSession::GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection), which creates a `CGopherConnection` object and returns a pointer to it.  
   
-##  <a name="createlocator"></a>CGopherConnection:: CreateLocator  
- Chiamare questa funzione membro per creare un localizzatore gopher per individuare o identificare un file in un server gopher.  
+##  <a name="createlocator"></a>  CGopherConnection::CreateLocator  
+ Call this member function to create a gopher locator to find or identify a file on a gopher server.  
   
 ```  
 CGopherLocator CreateLocator(
@@ -173,35 +167,35 @@ static CGopherLocator CreateLocator(
     INTERNET_PORT nPort = INTERNET_INVALID_PORT_NUMBER);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pstrDisplayString`  
- Un puntatore a una stringa contenente il nome del documento gopher o della directory da recuperare. Se il `pstrDisplayString` parametro **NULL**, viene restituita la directory predefinita per il server gopher.  
+ A pointer to a string containing the name of the gopher document or directory to be retrieved. If the `pstrDisplayString` parameter is **NULL**, the default directory for the gopher server is returned.  
   
  `pstrSelectorString`  
- Puntatore alla stringa di selettore da inviare al server gopher per recuperare un elemento. `pstrSelectorString`può essere **NULL**.  
+ A pointer to the selector string to be sent to the gopher server in order to retrieve an item. `pstrSelectorString` can be **NULL**.  
   
  *dwGopherType*  
- Ciò consente di specificare se `pstrSelectorString` fa riferimento a una directory o un documento, e se la richiesta è gopher o gopher +. Visualizzare gli attributi per la struttura [GOPHER_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa384215) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ This specifies whether `pstrSelectorString` refers to a directory or document, and whether the request is gopher or gopher+. See the attributes for the structure [GOPHER_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa384215) in the Windows SDK.  
   
  `pstrLocator`  
- Un puntatore a una stringa che identifica il file da aprire. In genere, questa stringa viene restituita da una chiamata a [CGopherFileFind:: GetLocator](../../mfc/reference/cgopherfilefind-class.md#getlocator).  
+ A pointer to a string identifying the file to open. Generally, this string is returned from a call to [CGopherFileFind::GetLocator](../../mfc/reference/cgopherfilefind-class.md#getlocator).  
   
  *pstrServerName*  
- Un puntatore a una stringa contenente il nome del server gopher.  
+ A pointer to a string containing the gopher server name.  
   
  `nPort`  
- Il numero che identifica la porta di Internet per questa connessione.  
+ The number identifying the Internet port for this connection.  
   
-### <a name="return-value"></a>Valore restituito  
- Oggetto [oggetto CGopherLocator](../../mfc/reference/cgopherlocator-class.md) oggetto.  
+### <a name="return-value"></a>Return Value  
+ A [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) object.  
   
-### <a name="remarks"></a>Note  
- La versione della funzione membro statica è necessario specificare un server, mentre la versione non statico viene utilizzato il nome del server dall'oggetto connessione.  
+### <a name="remarks"></a>Remarks  
+ The static version of the member function requires you to specify a server, while the non-static version uses the server name from the connection object.  
   
- Per recuperare informazioni da un server gopher, un'applicazione deve ottenere prima un localizzatore gopher. L'applicazione deve quindi considerare l'indicatore di posizione come un token opaco (vale a dire l'applicazione può utilizzare l'indicatore di posizione, ma non modificano direttamente o confrontarlo). In genere, l'applicazione utilizza l'indicatore di posizione per le chiamate per il [CGopherFileFind:: FindFile](../../mfc/reference/cgopherfilefind-class.md#findfile) funzione membro per recuperare una parte specifica di informazioni.  
+ In order to retrieve information from a gopher server, an application must first get a gopher locator. The application must then treat the locator as an opaque token (that is, the application can use the locator but not directly manipulate or compare it). Normally, the application uses the locator for calls to the [CGopherFileFind::FindFile](../../mfc/reference/cgopherfilefind-class.md#findfile) member function to retrieve a specific piece of information.  
   
-##  <a name="getattribute"></a>CGopherConnection::GetAttribute  
- Chiamare questa funzione membro per recuperare informazioni sugli attributi specifici relativi a un elemento dal server gopher.  
+##  <a name="getattribute"></a>  CGopherConnection::GetAttribute  
+ Call this member function to retrieve specific attribute information about an item from the gopher server.  
   
 ```  
 BOOL GetAttribute(
@@ -209,21 +203,21 @@ BOOL GetAttribute(
     CString& strResult,);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `refLocator`  
- Un riferimento a un [oggetto CGopherLocator](../../mfc/reference/cgopherlocator-class.md) oggetto.  
+ A reference to a [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) object.  
   
  *strRequestedAttributes*  
- Stringa delimitata da spazi specificando i nomi degli attributi richiesti.  
+ A space-delimited string specifying the names of the requested attributes.  
   
  `strResult`  
- Un riferimento a un [CString](../../atl-mfc-shared/reference/cstringt-class.md) che riceve il tipo di localizzatore.  
+ A reference to a [CString](../../atl-mfc-shared/reference/cstringt-class.md) that receives the locator type.  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, la funzione Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) può essere chiamato per determinare la causa dell'errore.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0. If the call fails, the Win32 function [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) may be called to determine the cause of the error.  
   
-##  <a name="openfile"></a>CGopherConnection:: OpenFile  
- Chiamare questa funzione membro per aprire un file in un server gopher.  
+##  <a name="openfile"></a>  CGopherConnection::OpenFile  
+ Call this member function to open a file on a gopher server.  
   
 ```  
 CGopherFile* OpenFile(
@@ -233,32 +227,32 @@ CGopherFile* OpenFile(
     DWORD_PTR dwContext = 1);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `refLocator`  
- Un riferimento a un [oggetto CGopherLocator](../../mfc/reference/cgopherlocator-class.md) oggetto.  
+ A reference to a [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) object.  
   
  `dwFlags`  
- Qualsiasi combinazione di flag INTERNET_FLAG_ *. Vedere [CInternetSession:: OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) per ulteriori informazioni su INTERNET_FLAG_\* flag.  
+ Any combination of INTERNET_FLAG_* flags. See [CInternetSession::OpenUrl](../../mfc/reference/cinternetsession-class.md#openurl) for further information on INTERNET_FLAG_\* flags.  
   
  `pstrView`  
- Un puntatore a una stringa di visualizzazione di file. Se diverse visualizzazioni del file esistono sul server, questo parametro specifica quali visualizzazione di file da aprire. Se `pstrView` è **NULL**, viene utilizzata la visualizzazione di file predefinita.  
+ A pointer to a file-view string. If several views of the file exist at the server, this parameter specifies which file view to open. If `pstrView` is **NULL**, the default file view is used.  
   
  `dwContext`  
- L'ID del contesto per il file viene aperto. Vedere **osservazioni** per ulteriori informazioni su `dwContext`.  
+ The context ID for the file being opened. See **Remarks** for more information about `dwContext`.  
   
-### <a name="return-value"></a>Valore restituito  
- Un puntatore per il [CGopherFile](../../mfc/reference/cgopherfile-class.md) oggetto da aprire.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the [CGopherFile](../../mfc/reference/cgopherfile-class.md) object to be opened.  
   
-### <a name="remarks"></a>Note  
- Esegue l'override dell'impostazione predefinita `dwContext` per impostare l'identificatore di contesto su un valore di propria scelta. L'identificatore di contesto è associato a questa operazione specifica del `CGopherConnection` oggetto creato dal relativo [CInternetSession](../../mfc/reference/cinternetsession-class.md) oggetto. Viene restituito il valore di [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) per fornire lo stato dell'operazione con cui viene identificato. Vedere l'articolo [prime operazioni in Internet: WinInet](../../mfc/wininet-basics.md) per ulteriori informazioni sull'identificatore di contesto.  
+### <a name="remarks"></a>Remarks  
+ Override the `dwContext` default to set the context identifier to a value of your choosing. The context identifier is associated with this specific operation of the `CGopherConnection` object created by its [CInternetSession](../../mfc/reference/cinternetsession-class.md) object. The value is returned to [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) to provide status on the operation with which it is identified. See the article [Internet First Steps: WinInet](../../mfc/wininet-basics.md) for more information about the context identifier.  
   
-## <a name="see-also"></a>Vedere anche  
- [Classe CInternetConnection](../../mfc/reference/cinternetconnection-class.md)   
- [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
- [Classe CFtpConnection](../../mfc/reference/cftpconnection-class.md)   
- [Oggetto CHttpConnection (classe)](../../mfc/reference/chttpconnection-class.md)   
- [Classe CInternetConnection](../../mfc/reference/cinternetconnection-class.md)   
- [Oggetto CGopherLocator (classe)](../../mfc/reference/cgopherlocator-class.md)   
- [CGopherFile (classe)](../../mfc/reference/cgopherfile-class.md)   
- [CInternetSession (classe)](../../mfc/reference/cinternetsession-class.md)
+## <a name="see-also"></a>See Also  
+ [CInternetConnection Class](../../mfc/reference/cinternetconnection-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CFtpConnection Class](../../mfc/reference/cftpconnection-class.md)   
+ [CHttpConnection Class](../../mfc/reference/chttpconnection-class.md)   
+ [CInternetConnection Class](../../mfc/reference/cinternetconnection-class.md)   
+ [CGopherLocator Class](../../mfc/reference/cgopherlocator-class.md)   
+ [CGopherFile Class](../../mfc/reference/cgopherfile-class.md)   
+ [CInternetSession Class](../../mfc/reference/cinternetsession-class.md)
 

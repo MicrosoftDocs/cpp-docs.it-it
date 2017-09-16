@@ -1,53 +1,72 @@
 ---
-title: "Appunti: utilizzo degli Appunti di Windows | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Appunti [C++], comandi"
-  - "Appunti [C++], API Appunti di Windows"
-  - "comandi degli Appunti"
-  - "comandi degli Appunti, implementazione"
-  - "comandi [C++], implementazione di modifiche"
-  - "funzioni gestore comandi Taglia/Copia e Incolla"
-  - "funzioni di gestione, comandi Taglia/Copia e Incolla"
-  - "Appunti di Windows [C++]"
+title: 'Clipboard: Using the Windows Clipboard | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Clipboard commands
+- Cut/Copy and Paste command handler functions [MFC]
+- handler functions, Cut/Copy and Paste commands
+- Clipboard [MFC], commands
+- commands [MFC], implementing Edit
+- Clipboard commands [MFC], implementing
+- Windows Clipboard [MFC]
+- Clipboard [MFC], Windows Clipboard API
 ms.assetid: 24415b42-9301-4a70-b69a-44c97918319f
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Appunti: utilizzo degli Appunti di Windows
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 12a35751354566d8d260734aea6f19f9f8a8cabb
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-In questo argomento viene descritto come utilizzare lo standard Windows Clipboard API in un'applicazione MFC.  
+---
+# <a name="clipboard-using-the-windows-clipboard"></a>Clipboard: Using the Windows Clipboard
+This topic describes how to use the standard Windows Clipboard API within your MFC application.  
   
- La maggior parte delle applicazioni per Windows supporta le operazioni di taglia o copia di dati negli Appunti di Windows e l'operazione di incolla dati dagli Appunti.  I formati di dati degli Appunti variano tra le applicazioni.  Il framework supporta solo un numero limitato di formati degli Appunti per un numero limitato di classi.  In genere si implementeranno i comandi correlati agli Appunti — Taglia, Copia e Incolla — nel menu Modifica per la vista.  La libreria di classi definisce gli ID di comando per questi comandi: **ID\_EDIT\_CUT**, **ID\_EDIT\_COPY** e **ID\_EDIT\_PASTE**.  Vengono anche definiti i suggerimenti della linea dei messaggi.  
+ Most applications for Windows support cutting or copying data to the Windows Clipboard and pasting data from the Clipboard. The Clipboard data formats vary among applications. The framework supports only a limited number of Clipboard formats for a limited number of classes. You will normally implement the Clipboard-related commands — Cut, Copy, and Paste — on the Edit menu for your view. The class library defines the command IDs for these commands: **ID_EDIT_CUT**, **ID_EDIT_COPY**, and **ID_EDIT_PASTE**. Their message-line prompts are also defined.  
   
- [Messaggi e controlli in Framework](../mfc/messages-and-commands-in-the-framework.md) viene illustrato come gestire i comandi di menu nell'applicazione eseguendo il mapping del comando di menu a una funzione di gestione.  Finché l'applicazione non definisce le funzioni di gestione degli Appunti nel menu Modifica, restano disattivate.  Per scrivere funzioni di gestione per i comandi Taglia e Copia, implementare la selezione nell'applicazione.  Per scrivere una funzione di gestione per il comando Incolla, eseguire una query agli Appunti per verificare se contengono dati in un formato che l'applicazione può accettare.  Ad esempio, per attivare il comando Copia, è possibile scrivere un gestore simile al seguente:  
+ [Messages and Commands in the Framework](../mfc/messages-and-commands-in-the-framework.md) explains how to handle menu commands in your application by mapping the menu command to a handler function. As long as your application does not define handler functions for the Clipboard commands on the Edit menu, they remain disabled. To write handler functions for the Cut and Copy commands, implement selection in your application. To write a handler function for the Paste command, query the Clipboard to see whether it contains data in a format your application can accept. For example, to enable the Copy command, you might write a handler something like the following:  
   
- [!code-cpp[NVC_MFCListView#2](../mfc/codesnippet/CPP/clipboard-using-the-windows-clipboard_1.cpp)]  
+ [!code-cpp[NVC_MFCListView#2](../atl/reference/codesnippet/cpp/clipboard-using-the-windows-clipboard_1.cpp)]  
   
- I comandi Taglia, Copia e Incolla sono significativi solo in determinati contesti.  I comandi Taglia e Copia dovrebbero essere abilitati solo quando viene selezionato un elemento, mentre il comando Incolla solo quando è presente qualcosa negli Appunti.  È possibile fornire questo comportamento definendo le funzioni del gestore aggiornamento che abilitano o disabilitano questi controlli in base al contesto.  Per ulteriori informazioni, vedere [Come aggiornare gli oggetti dell'interfaccia utente](../mfc/how-to-update-user-interface-objects.md).  
+ The Cut, Copy, and Paste commands are only meaningful in certain contexts. The Cut and Copy commands should be enabled only when something is selected, and the Paste command only when something is in the Clipboard. You can provide this behavior by defining update handler functions that enable or disable these commands depending on the context. For more information, see [How to Update User-Interface Objects](../mfc/how-to-update-user-interface-objects.md).  
   
- La libreria MFC fornisce supporto per gli Appunti per modifica di testo con le classi `CEditView` e `CEdit`.  Le classi OLE semplificano inoltre l'implementazione delle operazioni degli Appunti che includono elementi OLE.  Per ulteriori informazioni sulle classi OLE, vedere [Appunti: Utilizzare il meccanismo di Appunti OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md).  
+ The Microsoft Foundation Class Library does provide Clipboard support for text editing with the `CEdit` and `CEditView` classes. The OLE classes also simplify implementing Clipboard operations that involve OLE items. For more information on the OLE classes, see [Clipboard: Using the OLE Clipboard Mechanism](../mfc/clipboard-using-the-ole-clipboard-mechanism.md).  
   
- Implementare altri comandi del menu Modifica, ad esempio Annulla \(**ID\_EDIT\_UNDO**\) e Ripristina \(**ID\_EDIT\_REDO**\), viene lasciato allo sviluppatore.  Se l'applicazione non supporta questi controlli, è possibile eliminarli dal file di risorse utilizzando gli editor di risorse di Visual C\+\+.  
+ Implementing other Edit menu commands, such as Undo (**ID_EDIT_UNDO**) and Redo (**ID_EDIT_REDO**), is also left to you. If your application does not support these commands, you can easily delete them from your resource file using the Visual C++ resource editors.  
   
-## Scegliere l'argomento su cui visualizzare maggiori informazioni  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Copia e Incolla di dati](../mfc/clipboard-copying-and-pasting-data.md)  
+-   [Copying and pasting data](../mfc/clipboard-copying-and-pasting-data.md)  
   
--   [Utilizzare il meccanismo di Appunti OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)  
+-   [Using the OLE Clipboard mechanism](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)  
   
-## Vedere anche  
- [Appunti](../mfc/clipboard.md)
+## <a name="see-also"></a>See Also  
+ [Clipboard](../mfc/clipboard.md)
+
+

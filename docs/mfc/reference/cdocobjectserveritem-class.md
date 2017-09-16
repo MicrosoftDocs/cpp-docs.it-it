@@ -1,5 +1,5 @@
 ---
-title: Classe CDocObjectServerItem | Documenti di Microsoft
+title: CDocObjectServerItem Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,12 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- document object server
-- CDocObjectServerItem class
-- servers [C++], ActiveX documents
-- docobject server
-- servers [C++], doc objects
-- ActiveX documents [C++], document server
+- CDocObjectServerItem [MFC], CDocObjectServerItem
+- CDocObjectServerItem [MFC], GetDocument
+- CDocObjectServerItem [MFC], OnHide
+- CDocObjectServerItem [MFC], OnShow
 ms.assetid: 530f7156-50c8-4806-9328-602c9133f622
 caps.latest.revision: 22
 author: mikeblome
@@ -43,51 +41,51 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 06cf873512fbf43b729d9a70f185582a4e48cafc
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7076a90ba5af3a4d3b15f798bd8e4ba8f74d5d1f
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdocobjectserveritem-class"></a>Classe CDocObjectServerItem
-Implementa i verbi del server OLE in modo specifico per i server DocObject.  
+# <a name="cdocobjectserveritem-class"></a>CDocObjectServerItem Class
+Implements OLE server verbs specifically for DocObject servers.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDocObjectServerItem : public COleServerItem  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="protected-constructors"></a>Costruttori protetti  
+### <a name="protected-constructors"></a>Protected Constructors  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDocObjectServerItem::CDocObjectServerItem](#cdocobjectserveritem)|Costruisce un oggetto `CDocObjectServerItem`.|  
+|[CDocObjectServerItem::CDocObjectServerItem](#cdocobjectserveritem)|Constructs a `CDocObjectServerItem` object.|  
   
-### <a name="public-methods"></a>Metodi pubblici  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDocObjectServerItem::GetDocument](#getdocument)|Recupera un puntatore al documento che contiene l'elemento.|  
+|[CDocObjectServerItem::GetDocument](#getdocument)|Retrieves a pointer to the document that contains the item.|  
   
-### <a name="protected-methods"></a>Metodi protetti  
+### <a name="protected-methods"></a>Protected Methods  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDocObjectServerItem::OnHide](#onhide)|Genera un'eccezione se il framework tenta di nascondere un elemento DocObject.|  
-|[CDocObjectServerItem::OnShow](#onshow)|Chiamato dal framework per rendere elementi sul posto dell'oggetto documento attivo. Se l'elemento non è un DocObject, chiama il metodo [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow).|  
+|[CDocObjectServerItem::OnHide](#onhide)|Throws an exception if the framework tries to hide a DocObject item.|  
+|[CDocObjectServerItem::OnShow](#onshow)|Called by the framework to make the DocObject item in-place active. If the item is not a DocObject, calls [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow).|  
   
-## <a name="remarks"></a>Note  
- `CDocObjectServerItem`definisce le funzioni membro sottoponibili a override: [OnHide](#onhide), [OnOpen](http://msdn.microsoft.com/en-us/7a9b1363-6ad8-4732-9959-4e35c07644fd), e [OnShow](#onshow).  
+## <a name="remarks"></a>Remarks  
+ `CDocObjectServerItem` defines overridable member functions: [OnHide](#onhide), [OnOpen](http://msdn.microsoft.com/en-us/7a9b1363-6ad8-4732-9959-4e35c07644fd), and [OnShow](#onshow).  
   
- Utilizzare `CDocObjectServerItem`, assicurare che il [OnGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem) esegue l'override nel `COleServerDoc`-restituisce una nuova classe derivata `CDocObjectServerItem` oggetto. Se è necessario modificare qualsiasi funzionalità nell'elemento, è possibile creare una nuova istanza della propria `CDocObjectServerItem`-classe derivata.  
+ To use `CDocObjectServerItem`, assure that the [OnGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem) override in your `COleServerDoc`-derived class returns a new `CDocObjectServerItem` object. If you need to change any functionality in your item, you can create a new instance of your own `CDocObjectServerItem`-derived class.  
   
- Per ulteriori informazioni sulla DocObjects, vedere [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md) e [COleCmdUI](../../mfc/reference/colecmdui-class.md) nel *riferimenti alla libreria MFC*. Vedere anche [prime operazioni in Internet: i documenti attivi](../../mfc/active-documents-on-the-internet.md) e [documenti attivi](../../mfc/active-documents-on-the-internet.md).  
+ For further information on DocObjects, see [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md) and [COleCmdUI](../../mfc/reference/colecmdui-class.md) in the *MFC Reference*. Also see [Internet First Steps: Active Documents](../../mfc/active-documents-on-the-internet.md) and [Active Documents](../../mfc/active-documents-on-the-internet.md).  
   
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -98,59 +96,59 @@ class CDocObjectServerItem : public COleServerItem
   
  `CDocObjectServerItem`  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** AfxDocOb. h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdocob.h  
   
-##  <a name="cdocobjectserveritem"></a>CDocObjectServerItem::CDocObjectServerItem  
- Costruisce un oggetto `CDocObjectServerItem`.  
+##  <a name="cdocobjectserveritem"></a>  CDocObjectServerItem::CDocObjectServerItem  
+ Constructs a `CDocObjectServerItem` object.  
   
 ```  
 CDocObjectServerItem(COleServerDoc* pServerDoc, BOOL bAutoDelete);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pServerDoc`  
- Puntatore al documento che conterrà il nuovo elemento DocObject.  
+ A pointer to the document that will contain the new DocObject item.  
   
  `bAutoDelete`  
- Indica se l'oggetto può essere eliminato quando viene rilasciato un collegamento a esso. Impostare l'argomento su **FALSE** se il `CDocObjectServerItem` oggetto è parte integrante dei dati del documento. Impostarlo su **TRUE** se l'oggetto è una struttura secondaria utilizzata per identificare un intervallo di dati del documento che possono essere eliminati dal framework.  
+ Indicates whether the object can be deleted when a link to it is released. Set the argument to **FALSE** if the `CDocObjectServerItem` object is an integral part of your document's data. Set it to **TRUE** if the object is a secondary structure used to identify a range in your document's data that can be deleted by the framework.  
   
-##  <a name="getdocument"></a>CDocObjectServerItem::GetDocument  
- Recupera un puntatore al documento che contiene l'elemento.  
+##  <a name="getdocument"></a>  CDocObjectServerItem::GetDocument  
+ Retrieves a pointer to the document that contains the item.  
   
 ```  
 COleServerDoc* GetDocument() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Un puntatore al documento che contiene l'elemento; **NULL** se l'elemento non è parte di un documento.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the document that contains the item; **NULL** if the item is not part of a document.  
   
-### <a name="remarks"></a>Note  
- Ciò consente l'accesso al documento che è stato passato come argomento di un server di [CDocObjectServerItem](#cdocobjectserveritem) costruttore.  
+### <a name="remarks"></a>Remarks  
+ This allows access to the server document that you passed as an argument to the [CDocObjectServerItem](#cdocobjectserveritem) constructor.  
   
-##  <a name="onhide"></a>CDocObjectServerItem::OnHide  
- Chiamato dal framework per nascondere l'elemento.  
+##  <a name="onhide"></a>  CDocObjectServerItem::OnHide  
+ Called by the framework to hide the item.  
   
 ```  
 virtual void OnHide();
 ```  
   
-### <a name="remarks"></a>Note  
- L'implementazione predefinita genera un'eccezione se l'elemento è DocObject. Non è possibile nascondere un elemento DocObject attivo perché utilizza l'intera vista. È necessario disattivare l'elemento DocObject per nasconderla. Se l'elemento non è un DocObject, l'implementazione predefinita chiama [COleServerItem::OnHide](../../mfc/reference/coleserveritem-class.md#onhide).  
+### <a name="remarks"></a>Remarks  
+ The default implementation throws an exception if the item is a DocObject. You cannot hide an active DocObject item because it takes the whole view. You must deactivate the DocObject item to make it disappear. If the item is not a DocObject, the default implementation calls [COleServerItem::OnHide](../../mfc/reference/coleserveritem-class.md#onhide).  
   
-##  <a name="onshow"></a>CDocObjectServerItem::OnShow  
- Chiamato dal framework per indicare all'applicazione server per rendere elementi sul posto dell'oggetto documento attivo.  
+##  <a name="onshow"></a>  CDocObjectServerItem::OnShow  
+ Called by the framework to instruct the server application to make the DocObject item in-place active.  
   
 ```  
 virtual void OnShow();
 ```  
   
-### <a name="remarks"></a>Note  
- Se l'elemento non è un DocObject, l'implementazione predefinita chiama [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onopen). Eseguire l'override di questa funzione se si desidera eseguire l'elaborazione quando si apre un elemento DocObject speciali.  
+### <a name="remarks"></a>Remarks  
+ If the item is not a DocObject, the default implementation calls [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onopen). Override this function if you want to perform special processing when opening a DocObject item.  
   
-## <a name="see-also"></a>Vedere anche  
- [Classe COleServerItem](../../mfc/reference/coleserveritem-class.md)   
- [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
- [Classe CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md)   
- [Classe COleDocObjectItem](../../mfc/reference/coledocobjectitem-class.md)
+## <a name="see-also"></a>See Also  
+ [COleServerItem Class](../../mfc/reference/coleserveritem-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CDocObjectServer Class](../../mfc/reference/cdocobjectserver-class.md)   
+ [COleDocObjectItem Class](../../mfc/reference/coledocobjectitem-class.md)
 

@@ -1,53 +1,72 @@
 ---
-title: "Eccezioni: generazione di eccezioni da funzioni personalizzate | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "eccezioni, generazione"
-  - "funzioni [C++], generazione di eccezioni"
-  - "generazione di eccezioni, da funzioni"
+title: 'Exceptions: Throwing Exceptions from Your Own Functions | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- throwing exceptions [MFC], from functions
+- functions [MFC], throwing exceptions
+- exceptions [MFC], throwing
 ms.assetid: 492976e8-8804-4234-8e8f-30dffd0501be
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Eccezioni: generazione di eccezioni da funzioni personalizzate
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9a67bebf4f9f71ae86a5c0bcbe3716c96ced6b56
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-È possibile utilizzare esclusivamente il paradigma di gestione delle eccezioni MFC per intercettare eccezioni generate dalle funzioni in MFC o in altre librerie.  Oltre alle eccezioni di intercettazione generate dal codice di libreria, è possibile generare le eccezioni del proprio codice se si sta scrivendo le funzioni che possono verificarsi in casi eccezionali.  
+---
+# <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>Exceptions: Throwing Exceptions from Your Own Functions
+It is possible to use the MFC exception-handling paradigm solely to catch exceptions thrown by functions in MFC or other libraries. In addition to catching exceptions thrown by library code, you can throw exceptions from your own code if you are writing functions that can encounter exceptional conditions.  
   
- Quando viene generata un'eccezione, l'esecuzione della funzione corrente viene interrotta e passa direttamente al blocco di **Catch** del frame più interno di eccezione.  Il meccanismo di eccezione ignora il percorso normale dell'uscita da una funzione.  Pertanto, è necessario assicurarsi di eliminare i blocchi di memoria che si eliminerebbero di uscita normale.  
+ When an exception is thrown, execution of the current function is stopped and jumps directly to the **catch** block of the innermost exception frame. The exception mechanism bypasses the normal exit path from a function. Therefore, you must be sure to delete those memory blocks that would be deleted in a normal exit.  
   
-#### Per generare un'eccezione  
+#### <a name="to-throw-an-exception"></a>To throw an exception  
   
-1.  Utilizzare una delle funzioni di supporto MFC, come `AfxThrowMemoryException`.  Queste funzioni consentono di generare un oggetto eccezione preassegnato del tipo appropriato.  
+1.  Use one of the MFC helper functions, such as `AfxThrowMemoryException`. These functions throw a preallocated exception object of the appropriate type.  
   
-     Nell'esempio seguente, una funzione tenta di allocare due blocchi di memoria e genera un'eccezione se qualsiasi allocazione non riesce:  
+     In the following example, a function tries to allocate two memory blocks and throws an exception if either allocation fails:  
   
-     [!code-cpp[NVC_MFCExceptions#17](../mfc/codesnippet/CPP/exceptions-throwing-exceptions-from-your-own-functions_1.cpp)]  
+     [!code-cpp[NVC_MFCExceptions#17](../mfc/codesnippet/cpp/exceptions-throwing-exceptions-from-your-own-functions_1.cpp)]  
   
-     Se la prima corrispondenza ha esito negativo, è possibile generare semplicemente l'eccezione di memoria.  Se la prima corrispondenza ha esito positivo ma la seconda ha esito negativo, è necessario liberare il primo blocco di allocazione prima di generare un'eccezione.  Se entrambe le allocazioni riescono, è possibile proseguire normalmente e liberare blocchi quando esce dalla funzione.  
+     If the first allocation fails, you can simply throw the memory exception. If the first allocation is successful but the second one fails, you must free the first allocation block before throwing the exception. If both allocations succeed, you can proceed normally and free the blocks when exiting the function.  
   
-     oppure  
+     - or -  
   
-2.  Utilizzare un'eccezione definita dall'utente per indicare lo stato del problema.  È possibile generare un elemento di qualsiasi tipo, anche un'intera classe, come l'eccezione.  
+2.  Use a user-defined exception to indicate a problem condition. You can throw an item of any type, even an entire class, as your exception.  
   
-     Nel seguente esempio si tenta di riprodurre un suono da un dispositivo wave e genera un'eccezione se è presente un errore.  
+     The following example attempts to play a sound through a wave device and throws an exception if there is a failure.  
   
-     [!code-cpp[NVC_MFCExceptions#18](../mfc/codesnippet/CPP/exceptions-throwing-exceptions-from-your-own-functions_2.cpp)]  
+     [!code-cpp[NVC_MFCExceptions#18](../mfc/codesnippet/cpp/exceptions-throwing-exceptions-from-your-own-functions_2.cpp)]  
   
 > [!NOTE]
->  In MFC vengono impostate automaticamente la gestione delle eccezioni si applica solo ai puntatori a oggetti di `CException` \(e agli oggetti di `CException`\- classi derivate.  Il meccanismo delle eccezioni ignorate MFC del punto dell'esempio precedente.  
+>  MFC's default handling of exceptions applies only to pointers to `CException` objects (and objects of `CException`-derived classes). The example above bypasses MFC's exception mechanism.  
   
-## Vedere anche  
- [Gestione delle eccezioni](../mfc/exception-handling-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Exception Handling](../mfc/exception-handling-in-mfc.md)
+
+

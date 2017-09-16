@@ -32,82 +32,82 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
-ms.openlocfilehash: e2ebbb8eb6e6f250376b0ef2b43dae261a642d69
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: cfbf7cf428d205aceaec3d660cb8238680103ece
 ms.contentlocale: it-it
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
-Includere l'intestazione standard \<future> per definire le classi modello e i modelli di supporto che semplificano l'esecuzione di una funzione, possibilmente in un thread separato, e il recupero del relativo risultato. Quest'ultimo è il valore restituito dalla funzione o un'eccezione generata dalla funzione, ma non rilevata nella funzione.  
+Include the standard header \<future> to define template classes and supporting templates that simplify running a function—possibly in a separate thread—and retrieving its result. The result is either the value that is returned by the function or an exception that is emitted by the function but is not caught in the function.  
   
- Questa intestazione usa il runtime di concorrenza (ConcRT) in modo che sia utilizzabile con altri meccanismi ConcRT. Per altre informazioni su ConcRT, vedere [Runtime di concorrenza](../parallel/concrt/concurrency-runtime.md).  
+ This header uses Concurrency Runtime (ConcRT) so that you can use it together with other ConcRT mechanisms. For more information about ConcRT, see [Concurrency Runtime](../parallel/concrt/concurrency-runtime.md).  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 #include <future>  
 ```  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  Nel codice compilato tramite **/clr**, questa intestazione è bloccata.  
+>  In code that is compiled by using **/clr**, this header is blocked.  
   
- Un *provider asincrono* archivia il risultato di una chiamata di funzione. Un *oggetto restituito asincrono* viene usato per recuperare il risultato di una chiamata di funzione. Uno *stato asincrono associato* consente la comunicazione tra un provider asincrono e uno o più oggetti restituiti asincroni.  
+ An *asynchronous provider* stores the result of a function call. An *asynchronous return object* is used to retrieve the result of a function call. An *associated asynchronous state* provides communication between an asynchronous provider and one or more asynchronous return objects.  
   
- Un programma non crea direttamente alcun oggetto di stato asincrono associato. Il programma crea un provider asincrono ogni volta che ne è necessario uno e da questo crea un oggetto restituito asincrono che condivide il proprio stato asincrono associato con il provider. I provider asincroni e gli oggetti restituiti asincroni gestiscono gli oggetti che includono il relativo stato asincrono associato condiviso. Quando l'ultimo oggetto che fa riferimento allo stato asincrono associato lo rilascia, l'oggetto che include tale stato viene eliminato.  
+ A program does not directly create any associated asynchronous state objects. The program creates an asynchronous provider whenever it needs one and from that it creates an asynchronous return object that shares its associated asynchronous state with the provider. Asynchronous providers and asynchronous return objects manage the objects that hold their shared associated asynchronous state. When the last object that references the associated asynchronous state releases it, the object that holds the associated asynchronous state is destroyed.  
   
- Un provider asincrono o un oggetto restituito asincrono privo di uno stato asincrono associato è *vuoto*.  
+ An asynchronous provider or an asynchronous return object that has no associated asynchronous state is *empty*.  
   
- Lo stato asincrono associato è *ready* solo se il relativo provider asincrono ha archiviato un valore restituito o un'eccezione.  
+ An associated asynchronous state is *ready* only if its asynchronous provider has stored a return value or stored an exception.  
   
- La funzione modello `async` e le classi modello `promise` e `packaged_task` sono provider asincroni. Le classi modello `future` e `shared_future` descrivono gli oggetti restituiti asincroni.  
+ The template function `async` and the template classes `promise` and `packaged_task` are asynchronous providers. The template classes `future` and `shared_future` describe asynchronous return objects.  
   
- Ognuna delle classi modello `promise`, `future` e `shared_future` ha una specializzazione per il tipo `void` e una specializzazione parziale per l'archiviazione e il recupero di un valore per riferimento. Queste specializzazioni si differenziano dal modello principale solo nelle firme e nella semantica delle funzioni che archiviano e recuperano il valore restituito.  
+ Each of the template classes `promise`, `future`, and `shared_future` has a specialization for the type `void` and a partial specialization for storing and retrieving a value by reference. These specializations differ from the primary template only in the signatures and semantics of the functions that store and retrieve the returned value.  
   
- Le classi modello `future` e `shared_future` non si bloccano mai nei relativi distruttori, con l'eccezione di un unico caso che viene mantenuto per compatibilità con le versioni precedenti. Infatti, a differenza di quanto avviene con tutti gli altri oggetti future, per un oggetto `future` o l'ultimo oggetto `shared_future` associato a un'attività avviata con `std::async`, il distruttore si blocca se l'attività non è stata completata. In altri termini, si blocca se il thread non ha ancora chiamato `.get()` o `.wait()` e l'attività è ancora in esecuzione. Alla descrizione di `std::async` nella bozza dello standard è stata aggiunta una nota di usabilità che spiega quanto segue: se un oggetto future ottenuto da std::async viene spostato al di fuori dell'ambito locale, l'altro codice che usa l'oggetto future deve tenere presente che il distruttore di tale oggetto può bloccarsi per consentire allo stato condiviso di diventare ready. In tutti gli altri casi, i distruttori `future` e `shared_future` sono necessari ed è garantito che non si blocchino mai.  
+ The template classes `future` and `shared_future` never block in their destructors, except in one case that's preserved for backward compatibility: Unlike all other futures, for a `future`—or the last `shared_future`—that's attached to a task started with `std::async`, the destructor blocks if the task has not completed; that is, it blocks if this thread did not yet call `.get()` or `.wait()` and the task is still running. The following usability note has been added to the description of `std::async` in the draft standard: "[Note: If a future obtained from std::async is moved outside the local scope, other code that uses the future must be aware that the future’s destructor may block for the shared state to become ready.—end note]" In all other cases, `future` and `shared_future` destructors are required and are guaranteed to never block.  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="classes"></a>Classi  
+### <a name="classes"></a>Classes  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[Classe future](../standard-library/future-class.md)|Descrive un oggetto restituito asincrono.|  
-|[Classe future_error](../standard-library/future-error-class.md)|Descrive un oggetto eccezione che può essere generato dai metodi dei tipi che gestiscono gli oggetti `future`.|  
-|[Classe packaged_task](../standard-library/packaged-task-class.md)|Descrive un provider asincrono che è un wrapper di chiamata la cui firma di chiamata è `Ty(ArgTypes...)`. Lo stato asincrono associato include una copia dell'oggetto chiamabile oltre al potenziale risultato.|  
-|[Classe promise](../standard-library/promise-class.md)|Descrive un provider asincrono.|  
-|[Classe shared_future](../standard-library/shared-future-class.md)|Descrive un oggetto restituito asincrono. Diversamente da un oggetto `future`, un provider asincrono può essere associato a un numero qualsiasi di oggetti `shared_future`.|  
+|[future Class](../standard-library/future-class.md)|Describes an asynchronous return object.|  
+|[future_error Class](../standard-library/future-error-class.md)|Describes an exception object that can be thrown by methods of types that manage `future` objects.|  
+|[packaged_task Class](../standard-library/packaged-task-class.md)|Describes an asynchronous provider that is a call wrapper and whose call signature is `Ty(ArgTypes...)`. Its associated asynchronous state holds a copy of its callable object in addition to the potential result.|  
+|[promise Class](../standard-library/promise-class.md)|Describes an asynchronous provider.|  
+|[shared_future Class](../standard-library/shared-future-class.md)|Describes an asynchronous return object. In contrast with a `future` object, an asynchronous provider can be associated with any number of `shared_future` objects.|  
   
-### <a name="structures"></a>Strutture  
+### <a name="structures"></a>Structures  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[Struttura is_error_code_enum](../standard-library/is-error-code-enum-structure.md)|Specializzazione che indica che `future_errc` è adatto per l'archiviazione di un oggetto `error_code`.|  
-|[Struttura uses_allocator](../standard-library/uses-allocator-structure.md)|Specializzazione che restituisce sempre true.|  
+|[is_error_code_enum Structure](../standard-library/is-error-code-enum-structure.md)|Specialization that indicates that `future_errc` is suitable for storing an `error_code`.|  
+|[uses_allocator Structure](../standard-library/uses-allocator-structure.md)|Specialization that always holds true.|  
   
-### <a name="functions"></a>Funzioni  
+### <a name="functions"></a>Functions  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[async](../standard-library/future-functions.md#async)|Rappresenta un provider asincrono.|  
-|[future_category](../standard-library/future-functions.md#future_category)|Restituisce un riferimento all'oggetto `error_category` che caratterizza gli errori associati agli oggetti `future`.|  
-|[make_error_code](../standard-library/future-functions.md#make_error_code)|Crea un oggetto `error_code` che dispone dell'oggetto `error_category` che caratterizza gli errori `future`.|  
-|[make_error_condition](../standard-library/future-functions.md#make_error_condition)|Crea un oggetto `error_condition` che dispone dell'oggetto `error_category` che caratterizza gli errori `future`.|  
-|[swap](../standard-library/future-functions.md#swap)|Scambia lo stato asincrono associato di un oggetto `promise` con quello di un altro oggetto.|  
+|[async](../standard-library/future-functions.md#async)|Represents an asynchronous provider.|  
+|[future_category](../standard-library/future-functions.md#future_category)|Returns a reference to the `error_category` object that characterizes errors that are associated with `future` objects.|  
+|[make_error_code](../standard-library/future-functions.md#make_error_code)|Creates an `error_code` that has the `error_category` object that characterizes `future` errors.|  
+|[make_error_condition](../standard-library/future-functions.md#make_error_condition)|Creates an `error_condition` that has the `error_category` object that characterizes `future` errors.|  
+|[swap](../standard-library/future-functions.md#swap)|Exchanges the associated asynchronous state of one `promise` object with that of another.|  
   
-### <a name="enumerations"></a>Enumerazioni  
+### <a name="enumerations"></a>Enumerations  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[future_errc](../standard-library/future-enums.md#future_errc)|Fornisce i nomi simbolici per tutti gli errori segnalati dalla classe `future_error`.|  
-|[future_status](../standard-library/future-enums.md#future_status)|Fornisce i nomi simbolici per i motivi che una funzione di attesa temporizzata può restituire.|  
-|[avvio veloce](../standard-library/future-enums.md#launch)|Rappresenta un tipo di maschera di bit che descrive le possibili modalità per la funzione modello `async`.|  
+|[future_errc](../standard-library/future-enums.md#future_errc)|Supplies symbolic names for the errors that are reported by the `future_error` class.|  
+|[future_status](../standard-library/future-enums.md#future_status)|Supplies symbolic names for the reasons that a timed wait function can return.|  
+|[launch](../standard-library/future-enums.md#launch)|Represents a bitmask type that describes the possible modes for the template function `async`.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Header Files Reference](../standard-library/cpp-standard-library-header-files.md) (Riferimento file di intestazione)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)
 
 
 

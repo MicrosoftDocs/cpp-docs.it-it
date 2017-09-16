@@ -1,65 +1,84 @@
 ---
-title: "Server: implementazione di finestre cornice sul posto | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "finestre cornice, implementazione"
-  - "finestre cornice, sul posto"
-  - "finestre cornice sul posto"
-  - "applicazioni server OLE, finestre cornice"
-  - "server, finestre cornice sul posto"
+title: 'Servers: Implementing In-Place Frame Windows | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- frame windows [MFC], implementing
+- OLE server applications [MFC], frame windows
+- servers, in-place frame windows
+- frame windows [MFC], in-place
+- in-place frame windows
 ms.assetid: 09bde4d8-15e2-4fba-8d14-9b954d926b92
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Server: implementazione di finestre cornice sul posto
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ec5978a315be40d0db3cd3e52ff09e0bbc2635b2
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-In questo articolo viene illustrata la procedura per implementare le finestre cornici sul posto in un'applicazione server di modifica visiva se non si intende utilizzare la creazione guidata dell'applicazione per creare un'applicazione server.  Anziché utilizzare la procedura descritta in questo articolo, è possibile utilizzare una classe esistente della finestra cornice sul posto sia da un'applicazione generata mediante la creazione guidata dell'applicazione sia da un esempio fornito con Visual C\+\+.  
+---
+# <a name="servers-implementing-in-place-frame-windows"></a>Servers: Implementing In-Place Frame Windows
+This article explains what you must do to implement in-place frame windows in your visual editing server application if you do not use the application wizard to create your server application. In place of following the procedure outlined in this article, you could use an existing in-place frame-window class from either an application wizard-generated application or a sample provided with Visual C++.  
   
-#### Per dichiarare una classe della finestra cornice sul posto  
+#### <a name="to-declare-an-in-place-frame-window-class"></a>To declare an in-place frame-window class  
   
-1.  Derivare una classe della finestra cornice sul posto da `COleIPFrameWnd`.  
+1.  Derive an in-place frame-window class from `COleIPFrameWnd`.  
   
-    -   Utilizzare la macro `DECLARE_DYNCREATE` nel file di intestazione della classe.  
+    -   Use the `DECLARE_DYNCREATE` macro in your class header file.  
   
-    -   Utilizzare la macro `IMPLEMENT_DYNCREATE` nel file \(con estensione cpp\) di implementazione della classe.  In questo modo gli oggetti di questa classe possono essere creati dal framework.  
+    -   Use the `IMPLEMENT_DYNCREATE` macro in your class implementation (.cpp) file. This allows objects of this class to be created by the framework.  
   
-2.  Dichiarare un membro `COleResizeBar` nella classe della finestra cornice.  Ciò è necessario se si vuole supportare il ridimensionamento sul posto nelle applicazioni server.  
+2.  Declare a `COleResizeBar` member in the frame-window class. This is needed if you want to support in-place resizing in server applications.  
   
-     Dichiarare un gestore messaggi `OnCreate` \(mediante la finestra **Proprietà**\) e chiamare **Create** per il membro `COleResizeBar`, se è stato definito.  
+     Declare an `OnCreate` message handler (using the **Properties** window), and call **Create** for your `COleResizeBar` member, if you've defined it.  
   
-3.  Se si dispone di una barra degli strumenti, dichiarare un membro `CToolBar` nella classe della finestra cornice.  
+3.  If you have a toolbar, declare a `CToolBar` member in the frame-window class.  
   
-     Eseguire l'override della funzione membro `OnCreateControlBars` per creare una barra degli strumenti quando il server è attivo sul posto.  Di seguito è riportato un esempio.  
+     Override the `OnCreateControlBars` member function to create a toolbar when the server is active in place. For example:  
   
-     [!code-cpp[NVC_MFCOleServer#1](../mfc/codesnippet/CPP/servers-implementing-in-place-frame-windows_1.cpp)]  
+     [!code-cpp[NVC_MFCOleServer#1](../mfc/codesnippet/cpp/servers-implementing-in-place-frame-windows_1.cpp)]  
   
-     Vedere la discussione di questo codice riportata dopo il passaggio 5.  
+     See the discussion of this code following step 5.  
   
-4.  Includere il file di intestazione per questa classe della finestra cornice sul posto nel file con estensione cpp principale.  
+4.  Include the header file for this in-place frame-window class in your main .cpp file.  
   
-5.  In `InitInstance` per la classe dell'applicazione, chiamare la funzione `SetServerInfo` dell'oggetto modello di documento per specificare le risorse e la finestra cornice sul posto da utilizzare nella modifica aperta e sul posto.  
+5.  In `InitInstance` for your application class, call the `SetServerInfo` function of the document template object to specify the resources and in-place frame window to be used in open and in-place editing.  
   
- La serie di chiamate di funzione nell'istruzione **if** crea la barra degli strumenti dalle risorse fornite dal server.  A questo punto, la barra degli strumenti fa parte della gerarchia della finestra del contenitore.  Poiché questa barra degli strumenti è derivata da `CToolBar`, passerà i messaggi al proprietario, la finestra cornice dell'applicazione del contenitore, a meno che non si modifichi il proprietario.  Per questo motivo la chiamata a `SetOwner` è necessaria.  Questa chiamata modifica la finestra a cui vengono inviati i comandi con la finestra cornice sul posto del server, causando il passaggio dei messaggi al server.  In questo modo il server può reagire alle operazioni sulla barra degli strumenti che fornisce.  
+ The series of function calls in the **if** statement creates the toolbar from the resources the server provided. At this point, the toolbar is part of the container's window hierarchy. Because this toolbar is derived from `CToolBar`, it will pass its messages to its owner, the container application's frame window, unless you change the owner. That is why the call to `SetOwner` is necessary. This call changes the window where commands are sent to be the server's in-place frame window, causing the messages to be passed to the server. This allows the server to react to operations on the toolbar that it provides.  
   
- L'ID del bitmap della barra degli strumenti deve corrispondere a quello delle altre risorse sul posto definite nell'applicazione server.  Vedere [Menu e risorse: aggiunte di server](../mfc/menus-and-resources-server-additions.md) per i dettagli.  
+ The ID for the toolbar bitmap should be the same as the other in-place resources defined in your server application. See [Menus and Resources: Server Additions](../mfc/menus-and-resources-server-additions.md) for details.  
   
- Per ulteriori informazioni, vedere [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md), [COleResizeBar](../mfc/reference/coleresizebar-class.md) e [CDocTemplate::SetServerInfo](../Topic/CDocTemplate::SetServerInfo.md) nei *Riferimenti alla libreria di classi*.  
+ For more information, see [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md), [COleResizeBar](../mfc/reference/coleresizebar-class.md), and [CDocTemplate::SetServerInfo](../mfc/reference/cdoctemplate-class.md#setserverinfo) in the *Class Library Reference*.  
   
-## Vedere anche  
- [Server](../mfc/servers.md)   
- [Server: implementazione di un server](../mfc/servers-implementing-a-server.md)   
- [Server: implementazione di documenti server](../mfc/servers-implementing-server-documents.md)   
- [Server: elementi server](../mfc/servers-server-items.md)
+## <a name="see-also"></a>See Also  
+ [Servers](../mfc/servers.md)   
+ [Servers: Implementing a Server](../mfc/servers-implementing-a-server.md)   
+ [Servers: Implementing Server Documents](../mfc/servers-implementing-server-documents.md)   
+ [Servers: Server Items](../mfc/servers-server-items.md)
+
+

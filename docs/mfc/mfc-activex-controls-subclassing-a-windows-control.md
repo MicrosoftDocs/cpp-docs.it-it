@@ -1,104 +1,123 @@
 ---
-title: "Controlli ActiveX MFC: creazione di una sottoclasse per un controllo Windows | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "precreatewindow"
-  - "IsSubclassed"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DoSuperclassPaint (metodo)"
-  - "IsSubclassed (metodo)"
-  - "MFC (controlli ActiveX), creazione"
-  - "MFC (controlli ActiveX), controlli sottoclassati"
-  - "OnDraw (metodo), controlli ActiveX MFC"
-  - "PreCreateWindow (metodo), override"
-  - "message riflessi, nei controlli ActiveX"
-  - "creazione di sottoclassi"
-  - "sottoclassamento di controlli Windows"
-  - "creazione di sottoclassi, controlli Windows"
+title: 'MFC ActiveX Controls: Subclassing a Windows Control | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- precreatewindow
+- IsSubclassed
+dev_langs:
+- C++
+helpviewer_keywords:
+- OnDraw method, MFC ActiveX controls
+- subclassing
+- DoSuperclassPaint method [MFC]
+- subclassing Windows controls
+- subclassing, Windows controls
+- reflected messages, in ActiveX controls
+- PreCreateWindow method, overriding
+- MFC ActiveX controls [MFC], subclassed controls
+- MFC ActiveX controls [MFC], creating
+- IsSubclassed method [MFC]
 ms.assetid: 3236d4de-401f-49b7-918d-c84559ecc426
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Controlli ActiveX MFC: creazione di una sottoclasse per un controllo Windows
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0cda482bd90df7cad14892024e99bff9350281c4
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-In questo articolo viene descritto il processo per la creazione di una sottoclasse di un controllo Windows comune per creare un controllo ActiveX.  La creazione di una sottoclasse di un controllo Windows esistente è un modo rapido per compilare un controllo ActiveX.  Il nuovo controllo disporrà delle funzionalità dei controlli Windows sottoclassati, come il disegno e la risposta ai clic del mouse.  L'esempio dei controlli ActiveX MFC [BUTTON](../top/visual-cpp-samples.md) è un esempio di creazione di una sottoclasse di un controllo Windows.  
+---
+# <a name="mfc-activex-controls-subclassing-a-windows-control"></a>MFC ActiveX Controls: Subclassing a Windows Control
+This article describes the process for subclassing a common Windows control to create an ActiveX control. Subclassing an existing Windows control is a quick way to develop an ActiveX control. The new control will have the abilities of the subclassed Windows control, such as painting and responding to mouse clicks. The MFC ActiveX controls sample [BUTTON](../visual-cpp-samples.md) is an example of subclassing a Windows control.  
   
- Per creare una sottoclasse di un controllo Windows, completare le seguenti attività:  
+ To subclass a Windows control, complete the following tasks:  
   
--   [Eseguire l'override delle funzioni membro PreCreateWindow e IsSubclassedControl di COleControl](#_core_overriding_issubclassedcontrol_and_precreatewindow)  
+-   [Override the IsSubclassedControl and PreCreateWindow member functions of COleControl](#_core_overriding_issubclassedcontrol_and_precreatewindow)  
   
--   [Modificare la funzione membro OnDraw](#_core_modifying_the_ondraw_member_function)  
+-   [Modify the OnDraw member function](#_core_modifying_the_ondraw_member_function)  
   
--   [Gestire tutti i messaggi del controllo ActiveX \(OCM\) applicati al controllo](#_core_handling_reflected_window_messages)  
+-   [Handle any ActiveX control messages (OCM) reflected to the control](#_core_handling_reflected_window_messages)  
   
     > [!NOTE]
-    >  Gran parte di queste operazioni vengono eseguite automaticamente dalla Creazione guidata controllo ActiveX se si seleziona il controllo da sottoclassare mediante l'elenco a discesa **Seleziona classe finestra padre** nella pagina **Impostazioni controllo**.  
+    >  Much of this work is done for you by the ActiveX Control Wizard if you select control to be subclassed using the **Select Parent Window Class** drop-down list on the **Control Settings** page.  
   
- Vedere l'articolo Knowledge Base Q243454 per ulteriori informazioni sulla creazione di una sottoclasse di un controllo.  
+ See Knowledge Base article Q243454 for more information on subclassing a control.  
   
-##  <a name="_core_overriding_issubclassedcontrol_and_precreatewindow"></a> Eseguire l'override di IsSubclassedControl e PreCreateWindow  
- Per eseguire l'override di `PreCreateWindow` e `IsSubclassedControl`, aggiungere le seguenti righe di codice alla sezione `protected` della dichiarazione della classe del controllo:  
+##  <a name="_core_overriding_issubclassedcontrol_and_precreatewindow"></a> Overriding IsSubclassedControl and PreCreateWindow  
+ To override `PreCreateWindow` and `IsSubclassedControl`, add the following lines of code to the `protected` section of the control class declaration:  
   
- [!code-cpp[NVC_MFC_AxSub#1](../mfc/codesnippet/CPP/mfc-activex-controls-subclassing-a-windows-control_1.h)]  
+ [!code-cpp[NVC_MFC_AxSub#1](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_1.h)]  
   
- Nel file di implementazione del controllo \(.CPP\), aggiungere le seguenti righe di codice per implementare le due funzioni sottoposte a override:  
+ In the control implementation file (.CPP), add the following lines of code to implement the two overridden functions:  
   
- [!code-cpp[NVC_MFC_AxSub#2](../mfc/codesnippet/CPP/mfc-activex-controls-subclassing-a-windows-control_2.cpp)]  
+ [!code-cpp[NVC_MFC_AxSub#2](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_2.cpp)]  
   
- Si noti che, in questo esempio, il pulsante Windows viene specificato in `PreCreateWindow`.  Tuttavia, tutti i controlli Windows standard possono essere sottoclassati.  Per ulteriori informazioni sui controlli Windows standard, vedere [Controlli](../mfc/controls-mfc.md).  
+ Notice that, in this example, the Windows button control is specified in `PreCreateWindow`. However, any standard Windows controls can be subclassed. For more information on standard Windows controls, see [Controls](../mfc/controls-mfc.md).  
   
- Quando si crea una sottoclasse di un controllo Windows, è possibile specificare uno stile particolare per la finestra \(**WS\_**\) o lo stile esteso della finestra \(**WS\_EX\_**\) contrassegnata per essere utilizzato nella creazione della finestra del controllo.  È possibile impostare valori per questi parametri nella funzione membro `PreCreateWindow` modificando **cs.style** e i campi della struttura **cs.dwExStyle**.  Le modifiche apportate a questi campi devono essere apportate mediante un'operazione `OR`, per conservare i flag di impostazione predefinita impostati dalla classe `COleControl`.  Ad esempio, se il controllo è una sottoclasse del pulsante e si desidera che il controllo venga visualizzato come casella di controllo, inserire la seguente riga di codice nell'implementazione di `CSampleCtrl::PreCreateWindow`, prima dell'istruzione return:  
+ When subclassing a Windows control, you may want to specify particular window style (**WS_**) or extended window style (**WS_EX_**) flags to be used in creating the control's window. You can set values for these parameters in the `PreCreateWindow` member function by modifying the **cs.style** and the **cs.dwExStyle** structure fields. Modifications to these fields should be made using an `OR` operation, to preserve the default flags that are set by class `COleControl`. For example, if the control is subclassing the BUTTON control and you want the control to appear as a check box, insert the following line of code into the implementation of `CSampleCtrl::PreCreateWindow`, before the return statement:  
   
- [!code-cpp[NVC_MFC_AxSub#3](../mfc/codesnippet/CPP/mfc-activex-controls-subclassing-a-windows-control_3.cpp)]  
+ [!code-cpp[NVC_MFC_AxSub#3](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_3.cpp)]  
   
- Questo passaggio aggiunge il flag di stile **BS\_CHECKBOX**, mentre lascia il flag dello stile predefinito \(**WS\_CHILD**\) della classe `COleControl` invariato.  
+ This operation adds the **BS_CHECKBOX** style flag, while leaving the default style flag (**WS_CHILD**) of class `COleControl` intact.  
   
-##  <a name="_core_modifying_the_ondraw_member_function"></a> Modificare la funzione membro OnDraw  
- Se si desidera che il controllo sottoclassato mantenga lo stesso aspetto del controllo Windows corrispondente, la funzione membro `OnDraw` per il controllo deve contenere solo una chiamata a una funzione membro `DoSuperclassPaint`, come nel seguente esempio:  
+##  <a name="_core_modifying_the_ondraw_member_function"></a> Modifying the OnDraw Member Function  
+ If you want your subclassed control to keep the same appearance as the corresponding Windows control, the `OnDraw` member function for the control should contain only a call to the `DoSuperclassPaint` member function, as in the following example:  
   
- [!code-cpp[NVC_MFC_AxSub#4](../mfc/codesnippet/CPP/mfc-activex-controls-subclassing-a-windows-control_4.cpp)]  
+ [!code-cpp[NVC_MFC_AxSub#4](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_4.cpp)]  
   
- La funzione membro `DoSuperclassPaint`, implementata da `COleControl`, utilizza la procedura della finestra del controllo Windows per disegnare il controllo nel contesto di dispositivo specificato, all'interno del rettangolo di delimitazione.  In questo modo il controllo viene visualizzato anche quando non è attivo.  
+ The `DoSuperclassPaint` member function, implemented by `COleControl`, uses the window procedure of the Windows control to draw the control in the specified device context, within the bounding rectangle. This makes the control visible even when it is not active.  
   
 > [!NOTE]
->  La funzione membro `DoSuperclassPaint` funziona solo con i tipi di controllo che consentono ad un contesto di dispositivo di essere passato come **wParam** di un messaggio `WM_PAINT`.  Ciò include alcuni controlli Windows standard, ad esempio **SCROLLBAR** e **BUTTON** e tutti i controlli comuni.  Per i controlli che non supportano questo comportamento, è necessario fornire il proprio codice correttamente per visualizzare un controllo inattivo.  
+>  The `DoSuperclassPaint` member function will work only with those control types that allow a device context to be passed as the **wParam** of a `WM_PAINT` message. This includes some of the standard Windows controls, such as **SCROLLBAR** and **BUTTON**, and all the common controls. For controls that do not support this behavior, you will have to provide your own code to properly display an inactive control.  
   
-##  <a name="_core_handling_reflected_window_messages"></a> Gestire i messaggi riprodotti della finestra  
- I controlli Windows in genere inviano determinati messaggi finestra alla loro finestra padre.  Alcuni di questi messaggi, ad esempio **WM\_COMMAND**, forniscono le notifiche di un'azione dell'utente.  Altri, come `WM_CTLCOLOR`, vengono utilizzati per ottenere informazioni dalla finestra padre.  Un controllo ActiveX in genere comunica con la finestra padre in altri modi.  Le notifiche vengono passate generando eventi \(inviando notifiche di eventi\) e le informazioni sul contenitore di controlli vengono ottenute accedendo alle proprietà di ambiente del contenitore.  Poiché queste tecniche di comunicazione esistono, i contenitori di controllo ActiveX non prevedono l'elaborazione di alcuni messaggi finestra inviati dal controllo.  
+##  <a name="_core_handling_reflected_window_messages"></a> Handling Reflected Window Messages  
+ Windows controls typically send certain window messages to their parent window. Some of these messages, such as **WM_COMMAND**, provide notification of an action by the user. Others, such as `WM_CTLCOLOR`, are used to obtain information from the parent window. An ActiveX control usually communicates with the parent window by other means. Notifications are communicated by firing events (sending event notifications), and information about the control container is obtained by accessing the container's ambient properties. Because these communication techniques exist, ActiveX control containers are not expected to process any window messages sent by the control.  
   
- Per impedire al contenitore di ricevere dei messaggi finestra inviati da un controllo Windows sottoclassato, `COleControl` crea una finestra aggiuntiva che serve da controllo padre.  Questa finestra aggiuntiva, denominata "riflettore," viene creata solo per un controllo ActiveX che estende un controllo Windows e dispone della stessa dimensione e posizione della finestra di controllo.  La finestra di ricezione intercetta determinati messaggi della finestra e li invia al controllo.  Il controllo, nella routine della finestra, può quindi elaborare questi messaggi di ricezione intraprendendo le opportune azioni su un controllo ActiveX \(ad esempio, generando un evento\).  Vedere [ID del messaggio della finestra di ricezione](../mfc/reflected-window-message-ids.md) per un elenco di messaggi della finestra intercettati e dei relativi messaggi di ricezione corrispondenti.  
+ To prevent the container from receiving the window messages sent by a subclassed Windows control, `COleControl` creates an extra window to serve as the control's parent. This extra window, called a "reflector," is created only for an ActiveX control that subclasses a Windows control and has the same size and position as the control window. The reflector window intercepts certain window messages and sends them back to the control. The control, in its window procedure, can then process these reflected messages by taking actions appropriate for an ActiveX control (for example, firing an event). See [Reflected Window Message IDs](../mfc/reflected-window-message-ids.md) for a list of intercepted windows messages and their corresponding reflected messages.  
   
- Un contenitore di controlli ActiveX può essere progettato per eseguire la reflection del messaggio stesso, eliminando a `COleControl` la necessità di creare la finestra di ricezione e riducendo il sovraccarico di runtime per un controllo Windows sottoclassato.  `COleControl` determina se il contenitore supporta questa funzionalità verificando una proprietà di ambiente MessageReflect con un valore **TRUE**.  
+ An ActiveX control container may be designed to perform message reflection itself, eliminating the need for `COleControl` to create the reflector window and reducing the run-time overhead for a subclassed Windows control. `COleControl` detects whether the container supports this capability by checking for a MessageReflect ambient property with a value of **TRUE**.  
   
- Per gestire un messaggio della finestra di ricezione, aggiungere una voce alla mappa dei messaggi del controllo ed implementare una funzione di gestione.  Poiché i messaggi riprodotti non fanno parte dello standard dei messaggi definiti da Windows, la Visualizzazione classi non supporta l'aggiunta di tali gestori di messaggi.  Tuttavia, non è difficile aggiungere un gestore manualmente.  
+ To handle a reflected window message, add an entry to the control message map and implement a handler function. Because reflected messages are not part of the standard set of messages defined by Windows, Class View does not support adding such message handlers. However, it is not difficult to add a handler manually.  
   
- Per aggiungere un gestore messaggi per un messaggio della finestra di ricezione manualmente effettuare le operazioni seguenti:  
+ To add a message handler for a reflected window message manually do the following:  
   
--   Nel file .H della classe del controllo, dichiarare una funzione di gestione.  La funzione deve avere un tipo restituito **LRESULT** e due parametri, con tipi **WPARAM** e **LPARAM**, rispettivamente.  Di seguito è riportato un esempio.  
+-   In the control class .H file, declare a handler function. The function should have a return type of **LRESULT** and two parameters, with types **WPARAM** and **LPARAM**, respectively. For example:  
   
-     [!code-cpp[NVC_MFC_AxSub#5](../mfc/codesnippet/CPP/mfc-activex-controls-subclassing-a-windows-control_5.h)]  
-    [!code-cpp[NVC_MFC_AxSub#6](../mfc/codesnippet/CPP/mfc-activex-controls-subclassing-a-windows-control_6.h)]  
+     [!code-cpp[NVC_MFC_AxSub#5](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_5.h)]  
+    [!code-cpp[NVC_MFC_AxSub#6](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_6.h)]  
   
--   Nel file .CPP della classe del controllo, aggiungere una voce `ON_MESSAGE` alla mappa messaggi.  I parametri di questa voce devono essere l'identificatore del messaggio e il nome della funzione di gestione.  Di seguito è riportato un esempio.  
+-   In the control class .CPP file, add an `ON_MESSAGE` entry to the message map. The parameters of this entry should be the message identifier and the name of the handler function. For example:  
   
-     [!code-cpp[NVC_MFC_AxSub#7](../mfc/codesnippet/CPP/mfc-activex-controls-subclassing-a-windows-control_7.cpp)]  
+     [!code-cpp[NVC_MFC_AxSub#7](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_7.cpp)]  
   
--   Sempre nel file .CPP, implementare la funzione membro **OnOcmCommand** per elaborare il messaggio riprodotto.  I parametri **wParam** e **lParam** sono uguali a quelli del messaggio originale della finestra.  
+-   Also in the .CPP file, implement the **OnOcmCommand** member function to process the reflected message. The **wParam** and **lParam** parameters are the same as those of the original window message.  
   
- Per un esempio di come i messaggi riprodotti vengono elaborati, fare riferimento all'esempio dei controlli ActiveX MFC [BUTTON](../top/visual-cpp-samples.md).  Viene illustrato un gestore **OnOcmCommand** che rileva codice della notifica **BN\_CLICKED** e risponde generando \(inviando\) un evento Click.  
+ For an example of how reflected messages are processed, refer to the MFC ActiveX controls sample [BUTTON](../visual-cpp-samples.md). It demonstrates an **OnOcmCommand** handler that detects the **BN_CLICKED** notification code and responds by firing (sending) a Click event.  
   
-## Vedere anche  
- [Controlli ActiveX MFC](../mfc/mfc-activex-controls.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)
+
+

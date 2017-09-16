@@ -1,39 +1,58 @@
 ---
-title: "Gestione della visualizzazione corrente | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "visualizzazione corrente nella finestra cornice"
-  - "disattivazione di visualizzazioni"
-  - "finestre cornice, visualizzazione corrente"
-  - "OnActivateView (metodo)"
-  - "visualizzazioni, attivazione"
-  - "visualizzazioni, metodo OnActivateView"
-  - "visualizzazioni, corrente"
-  - "visualizzazioni, disattivazione"
+title: Managing the Current View | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- views [MFC], and OnActivateView method [MFC]
+- views [MFC], deactivating
+- views [MFC], activating
+- frame windows [MFC], current view
+- OnActivateView method [MFC]
+- views [MFC], current
+- deactivating views [MFC]
+- current view in frame window [MFC]
 ms.assetid: 0a1cc22d-d646-4536-9ad2-3cb6d7092e4a
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Gestione della visualizzazione corrente
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fbdd5ed9ba0935fd224f2b62796ea005593b77b9
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Come parte dell'implementazione predefinita delle finestre cornice, una finestra cornice tiene traccia della visualizzazione attualmente attiva.  Se la finestra cornice contiene più di una visualizzazione, come ad esempio in una finestra con separatore, la visualizzazione corrente è la visualizzazione più recente in uso.  La visualizzazione attiva è indipendente dalla finestra attiva in Windows o dallo stato attivo per l'input corrente.  
+---
+# <a name="managing-the-current-view"></a>Managing the Current View
+As part of the default implementation of frame windows, a frame window keeps track of a currently active view. If the frame window contains more than one view, as for example in a splitter window, the current view is the most recent view in use. The active view is independent of the active window in Windows or the current input focus.  
   
- Quando la visualizzazione attiva viene modificata, il framework notifica la visualizzazione corrente chiamando la funzione membro [OnActivateView](../Topic/CView::OnActivateView.md).  È possibile stabilire se la visualizzazione è stata attivata o disattivata esaminando il parametro `bActivate` di `OnActivateView`.  Per impostazione predefinita, `OnActivateView` imposta lo stato attivo sulla visualizzazione corrente nell'attivazione.  È possibile eseguire l'override di `OnActivateView` per eseguire qualsiasi elaborazione speciale quando la visualizzazione viene disattivata o riattivata.  Ad esempio, è possibile fornire indicazioni visive speciali per distinguere la visualizzazione attiva da altre visualizzazioni inattive.  
+ When the active view changes, the framework notifies the current view by calling its [OnActivateView](../mfc/reference/cview-class.md#onactivateview) member function. You can tell whether the view is being activated or deactivated by examining `OnActivateView`'s `bActivate` parameter. By default, `OnActivateView` sets the focus to the current view on activation. You can override `OnActivateView` to perform any special processing when the view is deactivated or reactivated. For example, you might want to provide special visual cues to distinguish the active view from other, inactive views.  
   
- Una finestra cornice inoltra i comandi alla sua visualizzazione corrente \(attiva\), come illustrato in [Routing dei comandi](../mfc/command-routing.md), come parte del routing dei comandi standard.  
+ A frame window forwards commands to its current (active) view, as described in [Command Routing](../mfc/command-routing.md), as part of the standard command routing.  
   
-## Vedere anche  
- [Utilizzo di finestre cornice](../mfc/using-frame-windows.md)
+## <a name="see-also"></a>See Also  
+ [Using Frame Windows](../mfc/using-frame-windows.md)
+
+

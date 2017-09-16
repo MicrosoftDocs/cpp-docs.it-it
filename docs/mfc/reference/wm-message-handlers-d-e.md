@@ -1,5 +1,5 @@
 ---
-title: 'Gestori messaggi WM _: D - E | Documenti di Microsoft'
+title: 'WM_ Message Handlers: D - E | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,20 +25,20 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- ON_WM_ENTERIDLE
-- ON_WM_DESTROYCLIPBOARD
-- ON_WM_DEADCHAR
-- ON_WM_DEVMODECHANGE
-- ON_WM_ERASEBKGND
-- ON_WM_DESTROY
-- ON_WM_DRAWCLIPBOARD
-- ON_WM_ENDSESSION
-- ON_WM_DRAWITEM
-- ON_WM_ENABLE
-- ON_WM_DROPFILES
-- ON_WM_DELETEITEM
-- ON_WM_DEVICECHANGE
-- WM_ messages
+- ON_WM_ENTERIDLE [MFC]
+- ON_WM_DESTROYCLIPBOARD [MFC]
+- ON_WM_DEADCHAR [MFC]
+- ON_WM_DEVMODECHANGE [MFC]
+- ON_WM_ERASEBKGND [MFC]
+- ON_WM_DESTROY [MFC]
+- ON_WM_DRAWCLIPBOARD [MFC]
+- ON_WM_ENDSESSION [MFC]
+- ON_WM_DRAWITEM [MFC]
+- ON_WM_ENABLE [MFC]
+- ON_WM_DROPFILES [MFC]
+- ON_WM_DELETEITEM [MFC]
+- ON_WM_DEVICECHANGE [MFC]
+- WM_ messages [MFC]
 ms.assetid: 56fb89c8-68a8-4adf-883e-a9f63bf677e9
 caps.latest.revision: 16
 author: mikeblome
@@ -58,40 +58,40 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 0dbd7e3649cddd353077b8364482ad98d55283a1
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c926db9d777f0dfd38a4454ff3c38415274824f8
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="wm-message-handlers-d---e"></a>Gestori di messaggi WM_: D - E
-Le seguenti voci della mappa a sinistra corrispondono ai prototipi di funzione a destra:  
+# <a name="wm-message-handlers-d---e"></a>WM_ Message Handlers: D - E
+The following map entries on the left correspond to the function prototypes on the right:  
   
-|Voce della mappa|Prototipo di funzione|  
+|Map entry|Function prototype|  
 |---------------|------------------------|  
 |ON_WM_DEADCHAR()|afx_msg void [OnDeadChar](../../mfc/reference/cwnd-class.md#ondeadchar)(UINT, UINT, UINT);|  
 |ON_WM_DELETEITEM()|afx_msg void [OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem)(LPDELETEITEMSTRUCT);|  
-|ON_WM_DESTROY()|afx_msg void [OnDestroy](../../mfc/reference/cwnd-class.md#ondestroy)().|  
-|ON_WM_DESTROYCLIPBOARD()|afx_msg void [OnDestroyClipboard](../../mfc/reference/cwnd-class.md#ondestroyclipboard)().|  
+|ON_WM_DESTROY()|afx_msg void [OnDestroy](../../mfc/reference/cwnd-class.md#ondestroy)();|  
+|ON_WM_DESTROYCLIPBOARD()|afx_msg void [OnDestroyClipboard](../../mfc/reference/cwnd-class.md#ondestroyclipboard)();|  
 |ON_WM_DEVICECHANGE()|afx_msg void [OnDeviceChange](../../mfc/reference/cwnd-class.md#ondevicechange)(UINT, DWORD);|  
 |ON_WM_DEVMODECHANGE()|afx_msg void [OnDevModeChange](../../mfc/reference/cwnd-class.md#ondevmodechange)(LPSTR);|  
-|ON_WM_DRAWCLIPBOARD()|afx_msg void [OnDrawClipboard](../../mfc/reference/cwnd-class.md#ondrawclipboard)().|  
+|ON_WM_DRAWCLIPBOARD()|afx_msg void [OnDrawClipboard](../../mfc/reference/cwnd-class.md#ondrawclipboard)();|  
 |ON_WM_DRAWITEM()|afx_msg void [OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem)(LPDRAWITEMSTRUCT);|  
 |ON_WM_DROPFILES()|afx_msg void [OnDropFiles](../../mfc/reference/cwnd-class.md#ondropfiles)(HDROP);|  
 |ON_WM_DWMCOLORIZATIONCOLORCHANGED()|afx_msg void [OnColorizationColorChanged](../../mfc/reference/cwnd-class.md#oncolorizationcolorchanged)(DWORD, BOOL);|  
-|ON_WM_DWMCOMPOSITIONCHANGED()|afx_msg void [OnCompositionChanged](../../mfc/reference/cwnd-class.md#oncompositionchanged)().|  
+|ON_WM_DWMCOMPOSITIONCHANGED()|afx_msg void [OnCompositionChanged](../../mfc/reference/cwnd-class.md#oncompositionchanged)();|  
 |ON_WM_DWMNCRENDERINGCHANGED()|afx_msg void [OnNcRenderingChanged](../../mfc/reference/cwnd-class.md#onncrenderingchanged)(BOOL);|  
 |ON_WM_DWMWINDOWMAXIMIZEDCHANGE()|afx_msg void [OnWindowMaximizedChanged](../../mfc/reference/cwnd-class.md#onwindowmaximizedchanged)(BOOL);|  
 |ON_WM_ENABLE()|afx_msg void [OnEnable](../../mfc/reference/cwnd-class.md#onenable)(BOOL);|  
 |ON_WM_ENDSESSION()|afx_msg void [OnEndSession](../../mfc/reference/cwnd-class.md#onendsession)(BOOL);|  
-|ON_WM_ENTERIDLE()|afx_msg void [OnEnterIdle](../../mfc/reference/cwnd-class.md#onenteridle)(UINT, CWnd *);|  
-|ON_WM_ENTERSIZEMOVE()|afx_msg void [OnEnterSizeMove](../../mfc/reference/cwnd-class.md#onentersizemove)().|  
-|ON_WM_ERASEBKGND()|afx_msg BOOL [OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd)(CDC *);|  
-|ON_WM_EXITSIZEMOVE()|afx_msg void [OnExitSizeMove](../../mfc/reference/cwnd-class.md#onexitsizemove)().|  
+|ON_WM_ENTERIDLE()|afx_msg void [OnEnterIdle](../../mfc/reference/cwnd-class.md#onenteridle)(UINT, CWnd*);|  
+|ON_WM_ENTERSIZEMOVE()|afx_msg void [OnEnterSizeMove](../../mfc/reference/cwnd-class.md#onentersizemove)();|  
+|ON_WM_ERASEBKGND()|afx_msg BOOL [OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd)(CDC*);|  
+|ON_WM_EXITSIZEMOVE()|afx_msg void [OnExitSizeMove](../../mfc/reference/cwnd-class.md#onexitsizemove)();|  
   
-## <a name="see-also"></a>Vedere anche  
- [Mappe messaggi](../../mfc/reference/message-maps-mfc.md)   
- [Gestori per messaggi WM _](../../mfc/reference/handlers-for-wm-messages.md)
+## <a name="see-also"></a>See Also  
+ [Message Maps](../../mfc/reference/message-maps-mfc.md)   
+ [Handlers for WM_ Messages](../../mfc/reference/handlers-for-wm-messages.md)
 
 

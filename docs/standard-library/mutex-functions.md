@@ -1,5 +1,5 @@
 ---
-title: Funzioni e variabili &lt;mutex&gt; | Microsoft Docs
+title: '&lt;mutex&gt; functions and variables | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,28 +15,34 @@ f1_keywords:
 ms.assetid: 78ab3c8b-c7db-4226-ac93-e2e78ff8b964
 caps.latest.revision: 11
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: dd24fb7f1b65f92c57915afa5f9b0412e019059d
+helpviewer_keywords:
+- std::adopt_lock [C++]
+- std::call_once [C++]
+- std::defer_lock [C++]
+- std::lock [C++]
+- std::try_to_lock [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 28ceab348f8daac6f764125a933d6e8e0dd12b84
 ms.contentlocale: it-it
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltmutexgt-functions-and-variables"></a>Funzioni e variabili &lt;mutex&gt;
+# <a name="ltmutexgt-functions-and-variables"></a>&lt;mutex&gt; functions and variables
 ||||  
 |-|-|-|  
 |[adopt_lock](#adopt_lock)|[call_once](#call_once)|[defer_lock](#defer_lock)|  
 |[lock](#lock)|[try_to_lock](#try_to_lock)|  
   
-##  <a name="adopt_lock"></a>  Variabile adopt_lock  
- Rappresenta un oggetto che può essere passato ai costruttori di [lock_guard](../standard-library/lock-guard-class.md) e [unique_lock](../standard-library/unique-lock-class.md) per indicare che l'oggetto mutex, anch'esso passato al costruttore, è bloccato.  
+##  <a name="adopt_lock"></a>  adopt_lock Variable  
+ Represents an object that can be passed to constructors for [lock_guard](../standard-library/lock-guard-class.md) and [unique_lock](../standard-library/unique-lock-class.md) to indicate that the mutex object that is also being passed to the constructor is locked.  
   
 ```cpp  
 const adopt_lock_t adopt_lock;
 ```  
   
 ##  <a name="call_once"></a>  call_once  
- Fornisce un meccanismo per chiamare un oggetto richiamabile esattamente una sola volta l'esecuzione.  
+ Provides a mechanism for calling a specified callable object exactly once during execution.  
   
 ```
 template <class Callable, class... Args>
@@ -44,47 +50,47 @@ void call_once(once_flag& Flag,
     Callable F&&, Args&&... A);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `Flag`  
- Oggetto [once_flag](../standard-library/once-flag-structure.md) che assicura che l'oggetto chiamabile venga chiamato una sola volta.  
+ A [once_flag](../standard-library/once-flag-structure.md) object that ensures that the callable object is only called once.  
   
  `F`  
- Oggetto chiamabile.  
+ A callable object.  
   
  `A`  
- Elenco di argomenti.  
+ An argument list.  
   
-### <a name="remarks"></a>Note  
- Se `Flag` non è valido, la funzione genera un oggetto [system_error](../standard-library/system-error-class.md) con codice di errore `invalid_argument`. In caso contrario, la funzione modello usa il relativo argomento `Flag` per assicurare che `F(A...)` venga chiamato una sola volta con esito positivo, a prescindere dal numero di volte in cui viene chiamata la funzione. Se `F(A...)` viene chiuso generando un'eccezione, la chiamata non è riuscita.  
+### <a name="remarks"></a>Remarks  
+ If `Flag` is not valid, the function throws a [system_error](../standard-library/system-error-class.md) that has an error code of `invalid_argument`. Otherwise, the template function uses its `Flag` argument to ensure that it calls `F(A...)` successfully exactly once, regardless of how many times the template function is called. If `F(A...)` exits by throwing an exception, the call was not successful.  
   
-##  <a name="defer_lock"></a>  Variabile defer_lock  
- Rappresenta un oggetto che può essere passato al costruttore di [unique_lock](../standard-library/unique-lock-class.md). Ciò indica che il costruttore non deve bloccare l'oggetto mutex, anch'esso passato al costruttore.  
+##  <a name="defer_lock"></a>  defer_lock Variable  
+ Represents an object that can be passed to the constructor for [unique_lock](../standard-library/unique-lock-class.md). This indicates that the constructor should not lock the mutex object that's also being passed to it.  
   
 ```cpp  
 const defer_lock_t defer_lock;
 ```  
   
 ##  <a name="lock"></a>  lock  
- Tenta di bloccare tutti gli argomenti senza deadlock.  
+ Attempts to lock all arguments without deadlock.  
   
 ```cpp  
 template <class L1, class L2, class... L3>
 void lock(L1&, L2&, L3&...);
 ```  
   
-### <a name="remarks"></a>Note  
- Gli argomenti della funzione modello devono essere *tipi mutex*, ad eccezione del fatto che le chiamate a `try_lock` possono generare eccezioni.  
+### <a name="remarks"></a>Remarks  
+ The arguments to the template function must be *mutex types*, except that calls to `try_lock` might throw exceptions.  
   
- La funzione blocca tutti gli argomenti senza deadlock eseguendo chiamate a `lock`, `try_lock` e `unlock`. Se una chiamata a `lock` o `try_lock` genera un'eccezione, la funzione chiama `unlock` su uno qualsiasi degli oggetti mutex bloccati prima di generare nuovamente l'eccezione.  
+ The function locks all of its arguments without deadlock by calls to `lock`, `try_lock`, and `unlock`. If a call to `lock` or `try_lock` throws an exception, the function calls `unlock` on any of the mutex objects that were successfully locked before rethrowing the exception.  
   
-##  <a name="try_to_lock"></a>  Variabile try_to_lock  
- Rappresenta un oggetto che può essere passato al costruttore di [unique_lock](../standard-library/unique-lock-class.md) per indicare che il costruttore deve provare a sbloccare l'oggetto `mutex`, anch'esso passato al costruttore senza blocco.  
+##  <a name="try_to_lock"></a>  try_to_lock Variable  
+ Represents an object that can be passed to the constructor for [unique_lock](../standard-library/unique-lock-class.md) to indicate that the constructor should try to unlock the `mutex` that is also being passed to it without blocking.  
   
 ```cpp  
 const try_to_lock_t try_to_lock;
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [\<mutex>](../standard-library/mutex.md)
 
 

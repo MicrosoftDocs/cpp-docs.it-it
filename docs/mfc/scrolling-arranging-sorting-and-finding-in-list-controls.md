@@ -1,38 +1,57 @@
 ---
-title: "Scorrimento, disposizione, ordinamento e ricerca nei controlli List | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CListCtrl (classe), disposizione dell'elenco"
-  - "CListCtrl (classe), ricerca di elementi in"
-  - "CListCtrl (classe), scorrimento"
-  - "CListCtrl (classe), ordinamento"
-  - "elenchi di immagini [C++], disposizione"
-  - "elenchi di immagini [C++], ricerca di elementi"
-  - "elenchi di immagini [C++], scorrimento"
-  - "elenchi di immagini [C++], ordinamento"
+title: Scrolling, Arranging, Sorting, and Finding in List Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- image lists [MFC], sorting
+- image lists [MFC], arranging
+- image lists [MFC], scrolling
+- CListCtrl class [MFC], finding items in
+- image lists [MFC], finding items
+- CListCtrl class [MFC], scrolling
+- CListCtrl class [MFC], sorting
+- CListCtrl class [MFC], arranging the list
 ms.assetid: dcc51e4c-0ca8-4319-bec5-6994cc8ac9e5
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Scorrimento, disposizione, ordinamento e ricerca nei controlli List
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6cbba0b023c86eb7d26c5d406255122914b3993f
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-I controlli elenco \([CListCtrl](../mfc/reference/clistctrl-class.md)\) sono scorrevoli per impostazione predefinita.  Per ulteriori informazioni, vedere [Posizione di scorrimento](http://msdn.microsoft.com/library/windows/desktop/bb774736) in [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] e funzione membro di [Scorrimento](../Topic/CListCtrl::Scroll.md).  
+---
+# <a name="scrolling-arranging-sorting-and-finding-in-list-controls"></a>Scrolling, Arranging, Sorting, and Finding in List Controls
+List controls ([CListCtrl](../mfc/reference/clistctrl-class.md)) are scrollable by default. For more information, see [Scroll Position](http://msdn.microsoft.com/library/windows/desktop/bb774736) in the Windows SDK and the [Scroll](../mfc/reference/clistctrl-class.md#scroll) member function.  
   
- È possibile chiamare le funzioni membro di `CListCtrl` per disporre gli elementi vengono visualizzati nel controllo, ordinare gli elementi e individuare elementi specifici.  Per ulteriori informazioni, vedere [Disposizione, ordinamento e ricerca](http://msdn.microsoft.com/library/windows/desktop/bb774736) in [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] e i membri [Disponi](../Topic/CListCtrl::Arrange.md), [SortItems](../Topic/CListCtrl::SortItems.md) e [FindItem](../Topic/CListCtrl::FindItem.md)di [CListCtrl](../mfc/reference/clistctrl-class.md).  
+ You can call `CListCtrl` member functions to arrange list items in the control, sort items, and find particular items. For more information, see [Arranging, Sorting, and Finding](http://msdn.microsoft.com/library/windows/desktop/bb774736) in the Windows SDK and the [CListCtrl](../mfc/reference/clistctrl-class.md) members [Arrange](../mfc/reference/clistctrl-class.md#arrange), [SortItems](../mfc/reference/clistctrl-class.md#sortitems), and [FindItem](../mfc/reference/clistctrl-class.md#finditem).  
   
-## Vedere anche  
- [Utilizzo di CListCtrl](../mfc/using-clistctrl.md)   
- [Controlli](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CListCtrl](../mfc/using-clistctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

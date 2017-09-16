@@ -1,57 +1,76 @@
 ---
-title: "Appunti: aggiunta di altri formati | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Appunti, formati"
-  - "formati di dati degli Appunti personalizzati"
-  - "formati personalizzati"
-  - "formati personalizzati, memorizzazione negli Appunti"
-  - "formati [C++], Appunti"
-  - "registrazione di formati di dati degli Appunti personalizzati"
+title: 'Clipboard: Adding Other Formats | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- formats [MFC], Clipboard
+- Clipboard, formats
+- custom formats, placing on Clipboard
+- custom formats
+- registering custom Clipboard data formats
+- custom Clipboard data formats
 ms.assetid: aea58159-65ed-4385-aeaa-3d9d5281903b
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Appunti: aggiunta di altri formati
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0df2fcfdc762b7e47ffc051a257b9406ba2cc48a
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-In questo argomento viene illustrato come espandere l'elenco dei formati supportati, in particolare per il supporto di OLE.  L'argomento [Appunti: Copiando e incollando dati](../mfc/clipboard-copying-and-pasting-data.md) descritta l'implementazione minima necessaria per supportare la copia e incolla dagli Appunti.  Se questo può essere implementata, i soli formati inseriti negli Appunti è `CF_METAFILEPICT`, **CF\_EMBEDSOURCE**, **CF\_OBJECTDESCRIPTOR** ed eventualmente `CF_LINKSOURCE`.  La maggior parte delle applicazioni richiedono più formati degli Appunti che questi tre.  
+---
+# <a name="clipboard-adding-other-formats"></a>Clipboard: Adding Other Formats
+This topic explains how to expand the list of supported formats, particularly for OLE support. The topic [Clipboard: Copying and Pasting Data](../mfc/clipboard-copying-and-pasting-data.md) describes the minimum implementation necessary to support copying and pasting from the Clipboard. If this is all you implement, the only formats placed on the Clipboard are `CF_METAFILEPICT`, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**, and possibly `CF_LINKSOURCE`. Most applications will need more formats on the Clipboard than these three.  
   
-##  <a name="_core_registering_custom_formats"></a> Registrare i formati di personalizzato  
- Per creare i propri formati di personalizzato, utilizzare la stessa routine che a durante la registrazione qualsiasi formato degli Appunti personalizzato: passare il nome del formato alla funzione di **RegisterClipboardFormat** e utilizzare il valore restituito come l'identificazione di formato  
+##  <a name="_core_registering_custom_formats"></a> Registering Custom Formats  
+ To create your own custom formats, follow the same procedure you would use when registering any custom Clipboard format: pass the name of the format to the **RegisterClipboardFormat** function and use its return value as the format ID.  
   
-##  <a name="_core_placing_formats_on_the_clipboard"></a> Posizionare i formati negli Appunti  
- Per aggiungere più formati a quelli inseriti negli Appunti, è necessario eseguire l'override della funzione di `OnGetClipboardData` nella classe derivata da `COleClientItem` o da `COleServerItem` \(a seconda che i dati essere copiati vengono nativi\).  In questa funzione, è necessario seguire la procedura riportata di seguito.  
+##  <a name="_core_placing_formats_on_the_clipboard"></a> Placing Formats on the Clipboard  
+ To add more formats to those placed on the Clipboard, you must override the `OnGetClipboardData` function in the class you derived from either `COleClientItem` or `COleServerItem` (depending on whether the data to be copied is native). In this function, you should use the following procedure.  
   
-#### Per posizionare i formati negli Appunti  
+#### <a name="to-place-formats-on-the-clipboard"></a>To place formats on the Clipboard  
   
-1.  Creare un oggetto `COleDataSource`.  
+1.  Create a `COleDataSource` object.  
   
-2.  Passare questa origine dati a una funzione che aggiunge i formati dati nativi nell'elenco di formati supportati chiamando `COleDataSource::CacheGlobalData`.  
+2.  Pass this data source to a function that adds your native data formats to the list of supported formats by calling `COleDataSource::CacheGlobalData`.  
   
-3.  Aggiungere i formati standard chiamando `COleDataSource::CacheGlobalData` per ogni formato standard che si desidera supportare.  
+3.  Add standard formats by calling `COleDataSource::CacheGlobalData` for each standard format you want to support.  
   
- Questa tecnica viene utilizzata nel programma di esempio [HIERSVR](../top/visual-cpp-samples.md) OLE MFC \(esaminare la funzione membro di `OnGetClipboardData` della classe di **CServerItem** \).  L'unica differenza in questo esempio è che il passaggio tre non è implementato in quanto HIERSVR non supporta altri formati standard.  
+ This technique is used in the MFC OLE sample program [HIERSVR](../visual-cpp-samples.md) (examine the `OnGetClipboardData` member function of the **CServerItem** class). The only difference in this sample is that step three is not implemented because HIERSVR supports no other standard formats.  
   
-### Scegliere l'argomento su cui visualizzare maggiori informazioni  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Oggetti dati e origini dati OLE e trasferimento dei dati uniforme](../mfc/data-objects-and-data-sources-ole.md)  
+-   [OLE data objects and data sources and uniform data transfer](../mfc/data-objects-and-data-sources-ole.md)  
   
--   [Funzionalità di trascinamento della selezione OLE](../mfc/drag-and-drop-ole.md)  
+-   [OLE drag and drop](../mfc/drag-and-drop-ole.md)  
   
 -   [OLE](../mfc/ole-background.md)  
   
-## Vedere anche  
- [Appunti: utilizzo del meccanismo degli Appunti OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
+## <a name="see-also"></a>See Also  
+ [Clipboard: Using the OLE Clipboard Mechanism](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
+
+

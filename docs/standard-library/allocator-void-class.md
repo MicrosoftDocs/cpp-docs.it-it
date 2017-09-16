@@ -1,5 +1,5 @@
 ---
-title: Classe allocator&lt;void&gt; | Microsoft Docs
+title: allocator&lt;void&gt; Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: ef8af7f3ea22529eed77e2259add8fcde21fbd57
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 3ebd7d3b528043a8102d0c8ceabf126fb5f69edb
 ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="allocatorltvoidgt-class"></a>Classe allocator&lt;void&gt;
-Specializzazione dell'allocatore della classe di modello per il tipo `void`, che definisce i tipi che hanno un significato in questo contesto.  
+# <a name="allocatorltvoidgt-class"></a>allocator&lt;void&gt; Class
+A specialization of the template class allocator to type `void`, defining the types that make sense in this context.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <>
@@ -65,8 +65,8 @@ class allocator<void> {
 };
 ```  
   
-## <a name="remarks"></a>Note  
- La classe rende esplicitamente specializzata la classe di modello [allocator](../standard-library/allocator-class.md) per il tipo *void.* I costruttori e l'operatore di assegnazione della classe hanno lo stesso comportamento che hanno per la classe di modello, sebbene definisca solo i tipi seguenti:  
+## <a name="remarks"></a>Remarks  
+ The class explicitly specializes template class [allocator](../standard-library/allocator-class.md) for type *void.* Its constructors and assignment operator behave the same as for the template class, but it defines only the following types:  
   
 - [const_pointer](../standard-library/allocator-class.md#const_pointer).  
   
@@ -74,15 +74,15 @@ class allocator<void> {
   
 - [value_type](../standard-library/allocator-class.md#value_type).  
   
-- [rebind](../standard-library/allocator-class.md#rebind), una classe di modello annidata.  
+- [rebind](../standard-library/allocator-class.md#rebind), a nested template class.  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<memory>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<memory>  
   
- **Spazio dei nomi:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Vedere anche  
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md) (Thread safety nella libreria standard C++)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

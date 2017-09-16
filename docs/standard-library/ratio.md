@@ -9,34 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ratio/std::mega
-- ratio/std::peta
-- ratio/std::ratio_greater
-- ratio/std::micro
-- ratio/std::ratio_add
-- ratio/std::ratio_not_equal
-- ratio/std::hecto
-- ratio/std::nano
-- ratio/std::ratio_less_equal
-- ratio/std::ratio_less
-- ratio/std::centi
-- ratio/std::ratio_greater_equal
-- ratio/std::ratio_subtract
-- <ratio>
-- ratio/std::atto
-- ratio/std::tera
-- ratio/std::milli
-- ratio/std::ratio_multiply
-- ratio/std::kilo
-- ratio/std::ratio_divide
-- ratio/std::giga
-- ratio/std::pico
-- ratio/std::femto
-- ratio/std::ratio_equal
-- ratio/std::ratio
-- ratio/std::exa
-- ratio/std::deci
-- ratio/std::deca
+- ratio/std::mega", "ratio/std::peta", "ratio/std::ratio_greater", "ratio/std::micro", "ratio/std::ratio_add", "ratio/std::ratio_not_equal", "ratio/std::hecto", "ratio/std::nano", "ratio/std::ratio_less_equal", "ratio/std::ratio_less", "ratio/std::centi", "ratio/std::ratio_greater_equal", "ratio/std::ratio_subtract", "<ratio>", "ratio/std::atto", "ratio/std::tera", "ratio/std::milli", "ratio/std::ratio_multiply", "ratio/std::kilo", "ratio/std::ratio_divide", "ratio/std::giga", "ratio/std::pico", "ratio/std::femto", "ratio/std::ratio_equal", "ratio/std::ratio", "ratio/std::exa", "ratio/std::deci", "ratio/std::deca
 dev_langs:
 - C++
 ms.assetid: 8543e912-2d84-45ea-b3c0-bd7bfacee405
@@ -59,10 +32,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: MT
-ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
-ms.openlocfilehash: 492599963f479e3a4190c31b99156d4f7695f316
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: fa061920a11bc312a5cf67428a30377e3026535c
 ms.contentlocale: it-it
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltratiogt"></a>&lt;ratio&gt;

@@ -1,80 +1,98 @@
 ---
-title: "Supporto database, Creazione guidata applicazione MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.mfc.exe.database"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Creazione guidata applicazione MFC, supporto database"
+title: Database Support, MFC Application Wizard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.appwiz.mfc.exe.database
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC Application Wizard, database support
 ms.assetid: 9ddf4558-fd41-4ac7-8d9b-c93d9c68ab59
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Supporto database, Creazione guidata applicazione MFC
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1f2a15baeb9e475f93872ed9b53b2cdf035b1920
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Questa schermata contiene opzioni che consentono di specificare il livello di supporto per database del progetto, nonché l'origine dati eventualmente richiesta.  
+---
+# <a name="database-support-mfc-application-wizard"></a>Database Support, MFC Application Wizard
+This page provides options that allow you to specify the level of database support (plus a data source, if necessary) for your project.  
   
- **Supporto database**  
- Imposta il livello di supporto per database del progetto.  
+ **Database support**  
+ Sets the level of database support for your project.  
   
-|Opzione|Descrizione|  
-|-------------|-----------------|  
-|**None**|Nessun supporto di database.  Questa è l'opzione predefinita.|  
-|**Solo file di intestazione**|Fornisce all'applicazione il livello di base del supporto per database.<br /><br /> <ul><li>Se si seleziona il supporto per ODBC in **Tipo di client**, la Creazione guidata applicazione MFC include nel progetto il file di intestazione AFXDB.H.  Aggiunge librerie a collegamento, ma non crea classi specifiche del database.  È possibile creare recordset in un secondo momento e utilizzarli per analizzare e aggiornare i record.</li><li>Se si seleziona il supporto per OLE DB in **Tipo di client**, vengono inclusi i seguenti file di intestazione:<br /><br /> <ul><li>ATLBASE.H</li><li>AFXOLEDB.H</li><li>ATLPLUS.H</li></ul></li></ul>|  
-|**Visualizzazione database senza supporto file**|Include file di intestazione del database, DLL, una visualizzazione record e un recordset. È disponibile solo per applicazioni per le quali è stata selezionata l'opzione **Supporto architettura documenti\/visualizzazioni** nella pagina [Tipo di applicazione](../../mfc/reference/application-type-mfc-application-wizard.md). Questa opzione include il supporto per i documenti, ma non per la serializzazione.  Se si sceglie di includere una visualizzazione di database, è necessario specificare l'origine dei dati.|  
-|**Visualizzazione database con supporto file**|Include file di intestazione del database, DLL, una visualizzazione record e un recordset. È disponibile solo per applicazioni per le quali è stata selezionata l'opzione **Supporto architettura documenti\/visualizzazioni** nella pagina **Tipo di applicazione**. Questa opzione supporta la serializzazione dei documenti, che può ad esempio essere utilizzata per aggiornare un file di profilo utente.  Il funzionamento delle applicazioni di database è in genere basato su record anziché su file e non richiede quindi la serializzazione.  Tuttavia, è possibile utilizzare l'applicazione in modo speciale anche per la serializzazione.  Se si sceglie di includere una visualizzazione di database, è necessario specificare l'origine dei dati.|  
-  
-> [!NOTE]
->  Se in **Supporto database** si seleziona **Visualizzazione database senza supporto file** o **Visualizzazione database con supporto file**, la derivazione della classe di visualizzazione può variare in base alla selezione effettuata in **Tipo di client**.  
-  
--   Se in **Tipo di client** si seleziona **ODBC**, la classe di visualizzazione dell'applicazione deriverà da [CRecordView](../../mfc/reference/crecordview-class.md).  Questa classe è associata a una classe derivata da [CRecordset](../../mfc/reference/crecordset-class.md) creata dalla Creazione guidata applicazione MFC.  Questa opzione fornisce un'applicazione basata su form in cui la visualizzazione record viene utilizzata per visualizzare e aggiornare i record mediante il relativo recordset.  
-  
--   Se in **Tipo di client** si seleziona **OLE DB**, la classe di visualizzazione deriverà da [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md) e sarà associata a una classe derivata da [CTable](../../data/oledb/ctable-class.md) o [CCommand](../../data/oledb/ccommand-class.md).  
-  
- **Tipo di client**  
- Indica se il progetto utilizza classi ODBC o OLE DB.  
-  
-|Opzione|Descrizione|  
-|-------------|-----------------|  
-|**OLE DB**|Quando questa opzione è selezionata, scegliendo **Origine dati** viene richiamata la procedura guidata **Proprietà Data Link** con cui è possibile creare una connessione a un'origine dati OLE DB.|  
-|**ODBC**|Quando questa opzione è selezionata, scegliendo **Origine dati** viene richiamata la procedura guidata **Selezione origine dati** con cui è possibile creare una connessione a un'origine dati ODBC.|  
-  
- **Origine dati**  
- Scegliere **Origine dati** per impostare un'origine dati utilizzando il driver o provider e il database specificati.  Se per l'opzione **Tipo di client** è stato selezionato OLE DB, verrà visualizzata la finestra **Proprietà Data Link**.  Se per l'opzione **Tipo di client** è stato selezionato ODBC, verrà visualizzata la finestra di dialogo **Seleziona origine dati**.  Questa opzione è disponibile solo se si sceglie di includere una visualizzazione di database nell'applicazione.  
-  
-|Opzione|Descrizione|  
-|-------------|-----------------|  
-|**Proprietà Data Link** \(OLE DB\)|Imposta l'origine dati specificata mediante il provider OLE DB indicato.  È necessario specificare il provider OLE DB, la posizione dei dati, l'origine dati e l'ID di accesso. È inoltre possibile definire facoltativamente una password.  Per informazioni dettagliate su questa finestra di dialogo, vedere **Origine dati** in [Creazione guidata consumer OLE DB ATL](../../atl/reference/atl-ole-db-consumer-wizard.md).|  
-|**Seleziona origine dati** \(ODBC\)|Imposta l'origine dati specificata mediante il driver ODBC indicato.  Per scegliere una tabella per l'origine dati è necessario selezionare il nome di un'origine dati.  Tutte le colonne della tabella vengono associate alle variabili membro di una classe derivata da `CRecordset`.  Per informazioni dettagliate su questa finestra di dialogo, vedere **Origine dati** in [Creazione guidata consumer ODBC MFC](../../mfc/reference/mfc-odbc-consumer-wizard.md).|  
+|Option|Description|  
+|------------|-----------------|  
+|**None**|Provides no database support. This is the default option.|  
+|**Header files only**|Provides the basic level of database support for your application. If you select ODBC support under **Client type**, the MFC Application Wizard includes in your project the header file AFXDB.H. It adds link libraries, but it does not create any database-specific classes. You can create recordsets later and use them to examine and update records. If you select OLE DB support under **Client type**, the following header files are included: ATLBASE.H AFXOLEDB.H ATLPLUS.H|  
+|**Database view without file support**|Includes database header files, link libraries, a record view and a recordset. (Available only for applications with the **Document/view architecture support** option selected in the [Application Type](../../mfc/reference/application-type-mfc-application-wizard.md) page.) This option includes document support but no serialization support. If you choose to include a database view, you must specify the source of the data.|  
+|**Database view with file support**|Includes database header files, link libraries, a record view and a recordset. (Available only for applications with the **Document/view architecture support** option selected in the **Application Type** page.) This option supports document serialization, which you can use, for example, to update a user profile file. Database applications typically operate on a per-record basis rather than on a per-file basis and so do not need serialization. However, you may have a special use for serialization. If you choose to include a database view, you must specify the source of the data.|  
   
 > [!NOTE]
->  Nelle versioni precedenti era possibile fare clic sul pulsante **Origine dati** tenendo premuto MAIUSC per visualizzare una finestra Apri file in cui selezionare un file di Data Link \(UDL\).  Questa funzionalità non è più supportata.  
+>  Under **Database Support**, if you select either **Database view without file support** or **Database view with file support**, the view class derivation differs, depending on your **Client type** selection, as follows:  
   
- **Genera classe di database con attributi**  
- Questa opzione è disponibile soltanto per client OLE DB.  Specifica se le classi di database incluse nel progetto generato utilizzano attributi.  
+-   If you select **ODBC** under **Client type**, then the application's view class derives from [CRecordView](../../mfc/reference/crecordview-class.md). This class is associated with a [CRecordset](../../mfc/reference/crecordset-class.md)-derived class, which the MFC Application Wizard also creates for you. This option gives you a form-based application in which the record view is used to view and update records through its recordset.  
   
- **Associa tutte le colonne**  
- Questa opzione è disponibile soltanto per client ODBC.  Specifica se vengono associate tutte le colonne della tabella selezionata.  Se si seleziona questa casella, vengono associate tutte le colonne. In caso contrario non viene associata alcuna colonna e l'associazione deve essere effettuata manualmente nella classe recordset.  
+-   If you select **OLE DB** under **Client type**, then the view class derives from [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md), and it is associated with a [CTable](../../data/oledb/ctable-class.md) or [CCommand](../../data/oledb/ccommand-class.md)-derived class.  
+  
+ **Client type**  
+ Indicates whether your project uses OLE DB or ODBC classes.  
+  
+|Option|Description|  
+|------------|-----------------|  
+|**OLE DB**|When this option is selected, clicking the **Data Source** button invokes the **Data Link Properties** wizard to help you create a connection to an OLE DB data source.|  
+|**ODBC**|When this option is selected, clicking the **Data Source** button invokes the **Select Data Source** wizard to help you create a connection to an ODBC data source.|  
+  
+ **Data Source**  
+ Click the **Data Source** button to set up a data source using the specified driver or provider and database. If you selected OLE DB in the **Client type** option, this button displays the **Data Link Properties** dialog box. If you selected ODBC in the **Client type** option, this button provides the **Select Data Source** dialog box. This option is available only if you choose to include a database view in your application.  
+  
+|Option|Description|  
+|------------|-----------------|  
+|**Data Link Properties** (OLE DB)|Establishes the specified data source using the specified OLE DB provider. You must specify the OLE DB provider, the location of the data, the data source, logon ID, and (optionally) a password. For details on this dialog box, see **Data source** in [ATL OLE DB Consumer Wizard](../../atl/reference/atl-ole-db-consumer-wizard.md).|  
+|**Select Data Source** (ODBC)|Establishes the specified data source using the specified ODBC driver. You must select a data source name to choose a table for the data source. The wizard binds all columns of the table to the member variables of a `CRecordset`-derived class. For details on this dialog box, see **Data source** in [MFC ODBC Consumer Wizard](../../mfc/reference/mfc-odbc-consumer-wizard.md).|  
+  
+> [!NOTE]
+>  In previous releases, Shift-clicking the **Data Source** button opened a File Open dialog to allow you to select a Data Link (.udl) file. This functionality is no longer supported.  
+  
+ **Generate attributed database class**  
+ Available for OLE DB client only. Specifies whether the database classes in the generated project use attributes.  
+  
+ **Bind all columns**  
+ Available for ODBC client only. Specifies whether all columns in the selected table are bound. If you select this box, all columns are bound; if you do not select this box, no columns are bound, and you must bind them manually in the recordset class.  
   
  **Type**  
- Questa opzione è disponibile soltanto per client ODBC.  Specifica se il recordset è di tipo dynaset o snapshot, come descritto nella tabella riportata di seguito.  
+ Available for ODBC client only. Specifies whether the recordset is a dynaset or a snapshot, as described in the following table.  
   
-|Opzione|Descrizione|  
-|-------------|-----------------|  
-|**Dynaset**|Utilizzare questa opzione per specificare che il recordset è di tipo dynaset.  Un dynaset, ovvero il risultato di una query che fornisce una visualizzazione indicizzata dei dati del database in cui è stata effettuata la ricerca,  memorizza nella cache solo un indice integrale dei dati originali offrendo così prestazioni più elevate rispetto allo snapshot.  L'indice fa direttamente riferimento a ciascun record trovato come risultato di una query e indica se un record è stato rimosso.  È inoltre possibile accedere alle informazioni aggiornate nei record in cui viene effettuata la ricerca.|  
-|Snapshot|Utilizzare questa opzione per specificare che il recordset è di tipo snapshot.  Uno snapshot è il risultato di una query e costituisce una visualizzazione di un database in un determinato momento.  Poiché tutti i record trovati come risultato della query vengono memorizzati nella cache, nei record originali non viene visualizzata alcuna modifica.|  
+|Option|Description|  
+|------------|-----------------|  
+|**Dynaset**|Specifies that the recordset is a dynaset. A dynaset is the result of a query that provides an indexed view into the queried database's data. A dynaset caches only an integral index to the original data and thus offers a performance gain over a snapshot. The index points directly to each record found as a result of a query and indicates if a record is removed. You also have access to updated information in the queried records.|  
+|Snapshot|Specifies that the recordset is a snapshot. A snapshot is the result of a query and is a view into a database at one point in time. All records found as a result of the query are cached, so you do not see any changes to the original records.|  
   
-## Vedere anche  
- [Creazione guidata applicazione MFC](../../mfc/reference/mfc-application-wizard.md)
+## <a name="see-also"></a>See Also  
+ [MFC Application Wizard](../../mfc/reference/mfc-application-wizard.md)
+

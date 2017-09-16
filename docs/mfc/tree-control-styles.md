@@ -1,54 +1,73 @@
 ---
-title: "Stili del controllo Tree | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "TVS_SINGLEEXPAND"
-  - "TVS_LINESATROOT"
-  - "TVS_HASBUTTONS"
-  - "TVS_NOTOOLTIPS"
-  - "TVS_HASLINES"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTreeCtrl (classe), stili"
-  - "stili, CTreeCtrl"
-  - "stili, struttura ad albero (controllo)"
-  - "struttura ad albero (controlli), stili"
-  - "TVS_EDITLABELS"
-  - "TVS_HASBUTTONS"
-  - "TVS_HASLINES"
-  - "TVS_LINESATROOT"
-  - "TVS_NOTOOLTIPS"
-  - "TVS_SINGLEEXPAND"
+title: Tree Control Styles | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- TVS_SINGLEEXPAND
+- TVS_LINESATROOT
+- TVS_HASBUTTONS
+- TVS_NOTOOLTIPS
+- TVS_HASLINES
+dev_langs:
+- C++
+helpviewer_keywords:
+- TVS_LINESATROOT [MFC]
+- styles [MFC], CTreeCtrl
+- styles [MFC], tree control
+- TVS_HASLINES
+- TVS_SINGLEEXPAND
+- CTreeCtrl class [MFC], styles
+- TVS_EDITLABELS [MFC]
+- TVS_NOTOOLTIPS [MFC]
+- TVS_HASBUTTONS [MFC]
+- tree controls [MFC], styles
 ms.assetid: f43faebd-a355-479e-888a-bf0673d5e1b4
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Stili del controllo Tree
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 33908c85a1d2df039dbd0d120a98d89a23e0b060
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Gli stili del controllo struttura ad albero \([Problemi](../mfc/reference/ctreectrl-class.md)\) determinano gli aspetti di un controllo struttura ad albero.  Impostare gli stili di iniziale quando si crea il controllo struttura ad albero.  È possibile recuperare e modificare gli stili dopo aver creato il controllo struttura ad albero tramite le funzioni di Windows [SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) e di [GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584), specificare **GWL\_STYLE** per il parametro di `nIndex`.  Per un elenco completo degli stili, vedere [Stili finestra di controllo di visualizzazione ad albero](http://msdn.microsoft.com/library/windows/desktop/bb760013) in [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+---
+# <a name="tree-control-styles"></a>Tree Control Styles
+Tree control ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) styles govern aspects of a tree control's appearance. You set the initial styles when you create the tree control. You can retrieve and change the styles after creating the tree control by using the [GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584) and [SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) Windows functions, specifying **GWL_STYLE** for the `nIndex` parameter. For a complete list of styles, see [Tree View Control Window Styles](http://msdn.microsoft.com/library/windows/desktop/bb760013) in the Windows SDK.  
   
- Lo stile di **TVS\_HASLINES** migliora la rappresentazione grafica della gerarchia di un controllo struttura ad albero trascinando le linee che collegano elementi figlio all'elemento padre corrispondente.  Questo stile non collega gli elementi nella radice della gerarchia.  A tale scopo, è necessario combinare gli stili di **TVS\_LINESATROOT** e di **TVS\_HASLINES**.  
+ The **TVS_HASLINES** style enhances the graphic representation of a tree control's hierarchy by drawing lines that link child items to their corresponding parent item. This style does not link items at the root of the hierarchy. To do so, you need to combine the **TVS_HASLINES** and **TVS_LINESATROOT** styles.  
   
- L'utente può espandere o comprimere l'elenco di un elemento padre degli elementi figlio facendo doppio clic sull'elemento padre.  Un controllo struttura ad albero che presenta lo stile di **TVS\_SINGLEEXPAND** causa l'elemento selezionati per espandersi e l'elemento che venga deselezionata per comprimere.  Se si utilizza il mouse a un singolo clic sull'elemento selezionato e l'elemento verrà chiuso, verrà espanso.  Se l'elemento selezionato singolo viene fatto clic su quando è aperto, sarà compressa.  
+ The user can expand or collapse a parent item's list of child items by double-clicking the parent item. A tree control that has the **TVS_SINGLEEXPAND** style causes the item being selected to expand and the item being unselected to collapse. If the mouse is used to single-click the selected item and that item is closed, it will be expanded. If the selected item is single-clicked when it is open, it will be collapsed.  
   
- Un controllo struttura ad albero che presenta lo stile di **TVS\_HASBUTTONS** aggiunge un lato del pulsante a sinistra di ciascun elemento padre.  L'utente può fare clic per espandere o comprimere gli elementi figlio come alternativa a fare doppio clic sull'elemento padre.  **TVS\_HASBUTTONS** non aggiungere pulsanti a elementi alla radice della gerarchia.  A tale scopo, è necessario combinare **TVS\_HASLINES**, **TVS\_LINESATROOT** e **TVS\_HASBUTTONS**.  
+ A tree control that has the **TVS_HASBUTTONS** style adds a button to the left side of each parent item. The user can click the button to expand or collapse the child items as an alternative to double-clicking the parent item. **TVS_HASBUTTONS** does not add buttons to items at the root of the hierarchy. To do so, you must combine **TVS_HASLINES**, **TVS_LINESATROOT**, and **TVS_HASBUTTONS**.  
   
- Lo stile di **TVS\_EDITLABELS** consente all'utente di modificare le etichette degli elementi del controllo struttura ad albero.  Per ulteriori informazioni sulle etichette di modifica, vedere più avanti [Modifica dell'etichetta del controllo struttura ad albero](../mfc/tree-control-label-editing.md) in questo argomento.  
+ The **TVS_EDITLABELS** style makes it possible for the user to edit the labels of tree control items. For more information about editing labels, see [Tree Control Label Editing](../mfc/tree-control-label-editing.md) later in this topic.  
   
- Lo stile di **TVS\_NOTOOLTIPS** disabilita la funzionalità automatica della descrizione controlli di visualizzazione ad albero.  Questa funzionalità viene automaticamente visualizzata una descrizione comandi, contenente il titolo dell'elemento sotto il cursore del mouse, se l'intero titolo non è attualmente visibile.  
+ The **TVS_NOTOOLTIPS** style disables the automatic tool tip feature of tree view controls. This feature automatically displays a tool tip, containing the title of the item under the mouse cursor, if the entire title is not currently visible.  
   
-## Vedere anche  
- [Utilizzo di CTreeCtrl](../mfc/using-ctreectrl.md)   
- [Controlli](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTreeCtrl](../mfc/using-ctreectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

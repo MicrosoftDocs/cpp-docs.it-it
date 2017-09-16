@@ -1,45 +1,64 @@
 ---
-title: "Gestione del pulsante Applica | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pulsante Applica nella finestra delle proprietà"
-  - "finestre delle proprietà, pulsante Applica"
+title: Handling the Apply Button | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Apply button in property sheet
+- property sheets, Apply button
 ms.assetid: 7e977015-59b8-406f-b545-aad0bfd8d55b
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Gestione del pulsante Applica
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 96feedc375f1430ae99851baf90aca49c7f6a296
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Le finestre delle proprietà è disponibile una funzionalità che le finestre di dialogo standard non fanno: Consentono all'utente applicare le modifiche apportate prima di chiudere la finestra delle proprietà.  Questa operazione viene eseguita utilizzando il pulsante di applicare.  Questo articolo vengono illustrati i metodi che è possibile utilizzare per implementare questa funzionalità correttamente.  
+---
+# <a name="handling-the-apply-button"></a>Handling the Apply Button
+Property sheets have a capability that standard dialog boxes do not: They allow the user to apply changes they have made before closing the property sheet. This is done using the Apply button. This article discusses methods you can use to implement this feature properly.  
   
- Finestre di dialogo modali generalmente applicate le impostazioni a un oggetto esterno quando l'utente fa clic su OK per chiudere la finestra di dialogo.  Lo stesso vale per una finestra delle proprietà: Quando l'utente fa clic su OK, le nuove impostazioni nella finestra delle proprietà hanno effetto.  
+ Modal dialog boxes usually apply the settings to an external object when the user clicks OK to close the dialog box. The same is true for a property sheet: When the user clicks OK, the new settings in the property sheet take effect.  
   
- Tuttavia, è possibile consentire all'utente di salvare le impostazioni senza chiudere la finestra di dialogo delle proprietà.  Si tratta della funzione del pulsante di applicare.  Il pulsante applica per applicare le impostazioni correnti in tutte le pagine delle proprietà all'oggetto esterno, invece di applicare soltanto le impostazioni correnti attualmente alla pagina attiva.  
+ However, you may want to allow the user to save settings without having to close the property sheet dialog box. This is the function of the Apply button. The Apply button applies the current settings in all of the property pages to the external object, as opposed to applying only the current settings of the currently active page.  
   
- Per impostazione predefinita, il pulsante apply è disabilitato sempre.  È necessario scrivere il codice per abilitare il pulsante apply al momento appropriato ed è necessario scrivere il codice per implementare l'effetto Apply, come illustrato di seguito.  
+ By default, the Apply button is always disabled. You must write code to enable the Apply button at the appropriate times, and you must write code to implement the effect of Apply, as explained below.  
   
- Se non si desidera fornire la funzionalità di applicare all'utente, non è necessario rimuovere il pulsante di applicare.  Può lasciarlo disabilitato, come in genere tra applicazioni che utilizzano il supporto standard della finestra delle proprietà disponibili nelle versioni future di Windows.  
+ If you do not wish to offer the Apply functionality to the user, it is not necessary to remove the Apply button. You can leave it disabled, as will be common among applications that use standard property sheet support available in future versions of Windows.  
   
- Per segnalare una pagina come eseguite modificando e abilitare il pulsante apply, chiamata **CPropertyPage::SetModified\( TRUE \)**.  Se le pagine riferimento essere modificato, il pulsante di applicare rimarrà attualmente attivo, indipendentemente dal fatto che ovvero la pagina attiva è stata modificata.  
+ To report a page as being modified and enable the Apply button, call **CPropertyPage::SetModified( TRUE )**. If any of the pages report being modified, the Apply button will remain enabled, regardless of whether the currently active page has been modified.  
   
- È necessario chiamare [CPropertyPage::SetModified](../Topic/CPropertyPage::SetModified.md) ogni volta che l'utente modifica le impostazioni nella pagina.  Un modo per rilevare quando un utente modifica un'impostazione nella pagina è implementare i gestori di notifica delle modifiche per ognuno dei controlli nella pagina delle proprietà, come **EN\_CHANGE** o **BN\_CLICKED**.  
+ You should call [CPropertyPage::SetModified](../mfc/reference/cpropertypage-class.md#setmodified) whenever the user changes any settings in the page. One way to detect when a user changes a setting in the page is to implement change notification handlers for each of the controls in the property page, such as **EN_CHANGE** or **BN_CLICKED**.  
   
- Per implementare l'effetto del pulsante apply, la finestra delle proprietà deve comunicare il proprietario, o un altro oggetto esterno nell'applicazione, applicare le impostazioni correnti nelle pagine delle proprietà.  Contemporaneamente, la finestra delle proprietà deve disabilitare il pulsante dell'applicazione chiamando **CPropertyPage::SetModified\( FALSE \)** per tutte le pagine che venivano applicate le modifiche all'oggetto esterno.  
+ To implement the effect of the Apply button, the property sheet must tell its owner, or some other external object in the application, to apply the current settings in the property pages. At the same time, the property sheet should disable the Apply button by calling **CPropertyPage::SetModified( FALSE )** for all pages that applied their modifications to the external object.  
   
- Per un esempio di questo processo, vedere a MFC l'esempio generale [PROPDLG](../top/visual-cpp-samples.md).  
+ For an example of this process, see the MFC General sample [PROPDLG](../visual-cpp-samples.md).  
   
-## Vedere anche  
- [Finestre delle proprietà](../mfc/property-sheets-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Property Sheets](../mfc/property-sheets-mfc.md)
+
+

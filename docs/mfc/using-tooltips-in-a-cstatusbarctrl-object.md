@@ -1,40 +1,59 @@
 ---
-title: "Utilizzo di descrizioni comandi in un oggetto CStatusBarCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CStatusBarCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CStatusBarCtrl (classe), descrizioni comandi"
-  - "barre di stato, descrizioni comandi"
-  - "descrizioni comandi [C++], utilizzo nelle barre di stato"
+title: Using Tooltips in a CStatusBarCtrl Object | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CStatusBarCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- tool tips [MFC], using in status bars
+- status bars [MFC], tool tips
+- CStatusBarCtrl class [MFC], tool tips
 ms.assetid: a77597a7-43ef-4b8f-87bc-a8ea1dc63dc3
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Utilizzo di descrizioni comandi in un oggetto CStatusBarCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e26867f71fc81bf332a86fe24ed1ef9c53924b2e
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Per attivare le descrizioni comandi della barra di stato controlli, creare l'oggetto di `CStatusBarCtrl` con lo stile di **SBT\_TOOLTIPS**.  
+---
+# <a name="using-tooltips-in-a-cstatusbarctrl-object"></a>Using Tooltips in a CStatusBarCtrl Object
+To enable tooltips for a status bar control, create the `CStatusBarCtrl` object with the **SBT_TOOLTIPS** style.  
   
 > [!NOTE]
->  Se si utilizza un oggetto di `CStatusBar` per implementare la barra di stato, utilizzare la funzione di `CStatusBar::CreateEx`.  Consente di specificare gli stili aggiuntivi per l'oggetto incorporato di **CStatusBarCtrl** .  
+>  If you are using a `CStatusBar` object to implement your status bar, use the `CStatusBar::CreateEx` function. It allows you to specify additional styles for the embedded **CStatusBarCtrl** object.  
   
- Una volta che l'oggetto di `CStatusBarCtrl` è stato creato correttamente, utilizzare [CStatusBarCtrl::SetTipText](../Topic/CStatusBarCtrl::SetTipText.md) e [CStatusBarCtrl::GetTipText](../Topic/CStatusBarCtrl::GetTipText.md) impostare e recuperare il testo del suggerimento per un riquadro specifico.  
+ Once the `CStatusBarCtrl` object has been successfully created, use [CStatusBarCtrl::SetTipText](../mfc/reference/cstatusbarctrl-class.md#settiptext) and [CStatusBarCtrl::GetTipText](../mfc/reference/cstatusbarctrl-class.md#gettiptext) to set and retrieve the tip text for a specific pane.  
   
- Una volta che la descrizione comandi è stata impostata, viene visualizzato solo se la parte non presenta un'icona e testo o, se tutto il testo non può essere visualizzato nella parte.  Le descrizioni comandi non sono supportate in modo semplice.  
+ Once the tool tip has been set, it is displayed only if the part has an icon and no text, or if all of the text cannot be displayed inside the part. Tool tips are not supported in simple mode.  
   
-## Vedere anche  
- [Utilizzo di CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
- [Controlli](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

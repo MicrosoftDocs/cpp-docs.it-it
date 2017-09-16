@@ -1,35 +1,54 @@
 ---
-title: "Pulizia di documenti e visualizzazioni | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "documenti, pulizia"
-  - "documenti, chiusura"
-  - "visualizzazioni, pulizia"
+title: Cleaning Up Documents and Views | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- views [MFC], cleaning up
+- documents [MFC], cleaning up
+- documents [MFC], closing
 ms.assetid: 0c454db2-3644-434d-9e53-8108a7aedfe1
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Pulizia di documenti e visualizzazioni
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 18d02b0ee244d4c12da6c33b6035bc6c237cd349
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Quando un documento è in fase di chiusura, il framework chiama innanzitutto la funzione membro [DeleteContents](../Topic/CDocument::DeleteContents.md).  Se è stata allocata memoria nell'heap durante l'operazione del documento, `DeleteContents` è la posizione migliore per rilasciarla.  
+---
+# <a name="cleaning-up-documents-and-views"></a>Cleaning Up Documents and Views
+When a document is closing, the framework first calls its [DeleteContents](../mfc/reference/cdocument-class.md#deletecontents) member function. If you allocated any memory on the heap during the course of the document's operation, `DeleteContents` is the best place to deallocate it.  
   
 > [!NOTE]
->  Non è necessario rilasciare i dati del documento nel distruttore del documento.  Nel caso di un'applicazione SDI, l'oggetto documento può essere riutilizzato.  
+>  You should not deallocate document data in the document's destructor. In the case of an SDI application, the document object might be reused.  
   
- È possibile eseguire l'override del distruttore di una visualizzazione per liberare la memoria allocata nell'heap.  
+ You can override a view's destructor to deallocate any memory you allocated on the heap.  
   
-## Vedere anche  
- [Inizializzazione e pulizia di documenti e visualizzazioni](../mfc/initializing-and-cleaning-up-documents-and-views.md)
+## <a name="see-also"></a>See Also  
+ [Initializing and Cleaning Up Documents and Views](../mfc/initializing-and-cleaning-up-documents-and-views.md)
+
+

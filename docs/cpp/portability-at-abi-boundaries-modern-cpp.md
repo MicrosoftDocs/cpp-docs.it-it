@@ -1,30 +1,46 @@
 ---
-title: "Portabilit&#224; in base ai limiti ABI (C++ moderno) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Portability At ABI Boundaries (Modern C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: abbd405e-3038-427c-8c24-e00598f0936a
 caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Portabilit&#224; in base ai limiti ABI (C++ moderno)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: caa0a1a7a074adbe74fff8920e852ec9802d7cd2
+ms.contentlocale: it-it
+ms.lasthandoff: 09/11/2017
 
-Tipi sufficiente portabili e di utilizzo convenzioni i limiti binari dell'interfaccia.  Un "tipo" è portabile tipo incorporato c o una struttura che contiene solo i tipi incorporati C.  I tipi di classe possono essere utilizzati solo quando il chiamante e il chiamato aderiscono in layout, nella convenzione di chiamata, e così via. Questa operazione è possibile solo quando entrambi vengono compilati con lo stesso compilatore e le impostazioni del compilatore.  
+---
+# <a name="portability-at-abi-boundaries-modern-c"></a>Portability At ABI Boundaries (Modern C++)
+Use sufficiently portable types and conventions at binary interface boundaries. A “portable type” is a C built-in type or a struct that contains only C built-in types. Class types can only be used when caller and callee agree on layout, calling convention, etc. This is only possible when both are compiled with the same compiler and compiler settings.  
   
-## Come appiattire una classe per la portabilità C  
- Quando i chiamanti possono essere compilati con un altro compilatore\/linguaggio, è "" appiattire un "C" extern API con una convenzione di chiamata specifica:  
+## <a name="how-to-flatten-a-class-for-c-portability"></a>How to flatten a class for C portability  
+ When callers may be compiled with another compiler/language, then “flatten” to an **extern "C"** API with a specific calling convention:  
   
 ```cpp  
 // class widget {  
@@ -32,16 +48,15 @@ Tipi sufficiente portabili e di utilizzo convenzioni i limiti binari dell'interf
 //   ~widget();  
 //   double method( int, gadget& );  
 // };  
-extern “C” {    // functions using explicit “this”  
-  struct widget;   // + opaque type (fwd decl only)  
-  widget* STDCALL widget_create();    // ctor → create new  “this”  
-  void STDCALL widget_destroy( widget* );    // dtor → consume “this”  
-  double STDCALL widget_method( widget*, int, gadget* );    // method → use “this”  
+extern "C" {        // functions using explicit "this"  
+   struct widget;   // opaque type (forward declaration only)  
+   widget* STDCALL widget_create();      // constructor creates new "this"  
+   void STDCALL widget_destroy(widget*); // destructor consumes "this"  
+   double STDCALL widget_method(widget*, int, gadget*); // method uses "this"  
 }  
-  
 ```  
   
-## Vedere anche  
- [C\+\+](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [Riferimenti del linguaggio C\+\+](../cpp/cpp-language-reference.md)   
- [Libreria standard C\+\+](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Welcome Back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
+ [C++ Language Reference](../cpp/cpp-language-reference.md)   
+ [C++ Standard Library](../standard-library/cpp-standard-library-reference.md)

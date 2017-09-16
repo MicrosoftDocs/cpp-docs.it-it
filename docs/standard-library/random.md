@@ -1,7 +1,7 @@
 ---
 title: '&lt;random&gt; | Microsoft Docs'
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 08/24/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -34,10 +34,10 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 ms.translationtype: MT
-ms.sourcegitcommit: 7af20dfb7907e61334163b52d51afdcd193dbf3d
-ms.openlocfilehash: 2ce26e0518f15a880e5a2479258aadbca6b9932c
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 8f3f440023a2ad7339bac7c2f4a1e792ec47f5c7
 ms.contentlocale: it-it
-ms.lasthandoff: 08/25/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;

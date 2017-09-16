@@ -1,5 +1,5 @@
 ---
-title: Classe unordered_set | Microsoft Docs
+title: unordered_set Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- unordered_set
 - unordered_set/std::unordered_set
 - unordered_set/std::unordered_set::allocator_type
 - unordered_set/std::unordered_set::const_iterator
@@ -98,7 +97,91 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- unordered_set class
+- std::unordered_set
+- std::unordered_set::allocator_type
+- std::unordered_set::const_iterator
+- std::unordered_set::const_local_iterator
+- std::unordered_set::const_pointer
+- std::unordered_set::const_reference
+- std::unordered_set::difference_type
+- std::unordered_set::hasher
+- std::unordered_set::iterator
+- std::unordered_set::key_equal
+- std::unordered_set::key_type
+- std::unordered_set::local_iterator
+- std::unordered_set::pointer
+- std::unordered_set::reference
+- std::unordered_set::size_type
+- std::unordered_set::value_type
+- std::unordered_set::begin
+- std::unordered_set::bucket
+- std::unordered_set::bucket_count
+- std::unordered_set::bucket_size
+- std::unordered_set::cbegin
+- std::unordered_set::cend
+- std::unordered_set::clear
+- std::unordered_set::count
+- std::unordered_set::emplace
+- std::unordered_set::emplace_hint
+- std::unordered_set::empty
+- std::unordered_set::end
+- std::unordered_set::equal_range
+- std::unordered_set::erase
+- std::unordered_set::find
+- std::unordered_set::get_allocator
+- std::unordered_set::hash
+- std::unordered_set::insert
+- std::unordered_set::key_eq
+- std::unordered_set::load_factor
+- std::unordered_set::max_bucket_count
+- std::unordered_set::max_load_factor
+- std::unordered_set::max_size
+- std::unordered_set::rehash
+- std::unordered_set::size
+- std::unordered_set::swap
+- std::unordered_set::unordered_set
+- std::unordered_set::operator=
+- std::unordered_set::allocator_type
+- std::unordered_set::const_iterator
+- std::unordered_set::const_local_iterator
+- std::unordered_set::const_pointer
+- std::unordered_set::const_reference
+- std::unordered_set::difference_type
+- std::unordered_set::hasher
+- std::unordered_set::iterator
+- std::unordered_set::key_equal
+- std::unordered_set::key_type
+- std::unordered_set::local_iterator
+- std::unordered_set::pointer
+- std::unordered_set::reference
+- std::unordered_set::size_type
+- std::unordered_set::value_type
+- std::unordered_set::begin
+- std::unordered_set::bucket
+- std::unordered_set::bucket_count
+- std::unordered_set::bucket_size
+- std::unordered_set::cbegin
+- std::unordered_set::cend
+- std::unordered_set::clear
+- std::unordered_set::count
+- std::unordered_set::emplace
+- std::unordered_set::emplace_hint
+- std::unordered_set::empty
+- std::unordered_set::end
+- std::unordered_set::equal_range
+- std::unordered_set::erase
+- std::unordered_set::find
+- std::unordered_set::get_allocator
+- std::unordered_set::hash_function
+- std::unordered_set::insert
+- std::unordered_set::key_eq
+- std::unordered_set::load_factor
+- std::unordered_set::max_bucket_count
+- std::unordered_set::max_load_factor
+- std::unordered_set::max_size
+- std::unordered_set::rehash
+- std::unordered_set::size
+- std::unordered_set::swap
 ms.assetid: ac08084e-05a7-48c0-9ae4-d40c529922dd
 caps.latest.revision: 23
 author: corob-msft
@@ -118,17 +201,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 02540cfa6413f1bb85832fc2720c0d66c3357695
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: b2c5d030eb6b14b517324fdf9a43a56196fe131a
 ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="unorderedset-class"></a>Classe unordered_set
-La classe modello descrive un oggetto che controlla una sequenza di elementi di lunghezza diversa di tipo `const Key`. La sequenza viene ordinata in modo debole da una funzione hash, che esegue il partizionamento della sequenza in un set ordinato di sottosequenze denominate bucket. In ogni bucket una funzione di confronto determina se una coppia di elementi ha un ordinamento equivalente. Ogni elemento viene utilizzato sia come chiave di ordinamento che come valore. La sequenza viene rappresentata in modo da consentire la ricerca, l'inserimento e la rimozione di un elemento arbitrario mediante una serie di operazioni che possono essere indipendenti dal numero di elementi della sequenza (tempo costante), almeno quando tutti i bucket sono più o meno lunghi uguali. Nella peggiore delle ipotesi, quando tutti gli elementi si trovano in un unico bucket, il numero di operazioni è proporzionale al numero di elementi della sequenza (tempo lineare). Inoltre, l'inserimento di un elemento non invalida gli iteratori e la rimozione di un elemento invalida solo gli iteratori che fanno riferimento all'elemento rimosso.  
+# <a name="unorderedset-class"></a>unordered_set Class
+The template class describes an object that controls a varying-length sequence of elements of type `const Key`. The sequence is weakly ordered by a hash function, which partitions the sequence into an ordered set of subsequences called buckets. Within each bucket a comparison function determines whether any pair of elements has equivalent ordering. Each element serves as both a sort key and a value. The sequence is represented in a way that permits lookup, insertion, and removal of an arbitrary element with a number of operations that can be independent of the number of elements in the sequence (constant time), at least when all buckets are of roughly equal length. In the worst case, when all of the elements are in one bucket, the number of operations is proportional to the number of elements in the sequence (linear time). Moreover, inserting an element invalidates no iterators, and removing an element invalidates only those iterators which point at the removed element.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <
@@ -139,98 +222,98 @@ template <
 class unordered_set;  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Parametro|Descrizione|  
-|`Key`|Tipo di chiave.|  
-|`Hash`|Tipo di oggetto della funzione hash.|  
-|`Pred`|Tipo di oggetto della funzione di confronto di uguaglianza.|  
-|`Alloc`|Classe Allocator.|  
+|Parameter|Description|  
+|`Key`|The key type.|  
+|`Hash`|The hash function object type.|  
+|`Pred`|The equality comparison function object type.|  
+|`Alloc`|The allocator class.|  
   
-## <a name="members"></a>Membri  
-  
-|||  
-|-|-|  
-|Definizione dei tipi|Descrizione|  
-|[allocator_type](#allocator_type)|Tipo di un allocatore per gestire l'archiviazione.|  
-|[const_iterator](#const_iterator)|Tipo di un iteratore costante per la sequenza controllata.|  
-|[const_local_iterator](#const_local_iterator)|Tipo di un iteratore di bucket costante per la sequenza controllata.|  
-|[const_pointer](#const_pointer)|Tipo di un puntatore costante a un elemento.|  
-|[const_reference](#const_reference)|Tipo di un riferimento costante a un elemento.|  
-|[difference_type](#difference_type)|Tipo di una distanza Signed tra due elementi.|  
-|[hasher](#hasher)|Tipo della funzione hash.|  
-|[iterator](#iterator)|Tipo di un iteratore per la sequenza controllata.|  
-|[key_equal](#key_equal)|Tipo della funzione di confronto.|  
-|[key_type](#key_type)|Tipo di una chiave di ordinamento.|  
-|[local_iterator](#local_iterator)|Tipo di un iteratore di bucket per la sequenza controllata.|  
-|[pointer](#pointer)|Tipo di un puntatore a un elemento.|  
-|[reference](#reference)|Tipo di un riferimento a un elemento.|  
-|[size_type](#size_type)|Tipo di una distanza Unsigned tra due elementi.|  
-|[value_type](#value_type)|Tipo di un elemento.|  
+## <a name="members"></a>Members  
   
 |||  
 |-|-|  
-|Funzione membro|Descrizione|  
-|[begin](#begin)|Indica l'inizio della sequenza controllata.|  
-|[bucket](#bucket)|Ottiene il numero di bucket relativo a un valore della chiave.|  
-|[valore di bucket_count](#bucket_count)|Ottiene il numero di bucket.|  
-|[bucket_size](#bucket_size)|Ottiene le dimensioni di un bucket.|  
-|[cbegin](#cbegin)|Indica l'inizio della sequenza controllata.|  
-|[cend](#cend)|Designa la fine della sequenza controllata.|  
-|[clear](#clear)|Rimuove tutti gli elementi.|  
-|[count](#count)|Trova il numero di elementi corrispondenti a una chiave specificata.|  
-|[emplace](#emplace)|Aggiunge un elemento costruito sul posto.|  
-|[emplace_hint](#emplace_hint)|Aggiunge un elemento costruito sul posto, con il suggerimento.|  
-|[empty](#empty)|Verifica se sono presenti o meno degli elementi.|  
-|[end](#end)|Designa la fine della sequenza controllata.|  
-|[equal_range](#equal_range)|Trova un intervallo che corrisponde a una chiave specificata.|  
-|[erase](#erase)|Rimuove gli elementi in corrispondenza delle posizioni specificate.|  
-|[find](#find)|Trova un elemento che corrisponde a una chiave specificata.|  
-|[get_allocator](#get_allocator)|Ottiene l'oggetto allocatore archiviato.|  
-|[hash_function](#hash)|Ottiene l'oggetto della funzione hash archiviato.|  
-|[insert](#insert)|Aggiunge elementi.|  
-|[key_eq](#key_eq)|Ottiene l'oggetto archiviato della funzione di confronto.|  
-|[load_factor](#load_factor)|Conta il numero medio di elementi per bucket.|  
-|[max_bucket_count](#max_bucket_count)|Ottiene il numero massimo di bucket.|  
-|[max_load_factor](#max_load_factor)|Ottiene o imposta il numero massimo di elementi per bucket.|  
-|[max_size](#max_size)|Ottiene la dimensione massima della sequenza controllata.|  
-|[rehash](#rehash)|Ricompila la tabella hash.|  
-|[size](#size)|Conta il numero di elementi.|  
-|[swap](#swap)|Scambia il contenuto di due contenitori.|  
-|[unordered_set](#unordered_set)|Costruisce un oggetto contenitore.|  
+|Type Definition|Description|  
+|[allocator_type](#allocator_type)|The type of an allocator for managing storage.|  
+|[const_iterator](#const_iterator)|The type of a constant iterator for the controlled sequence.|  
+|[const_local_iterator](#const_local_iterator)|The type of a constant bucket iterator for the controlled sequence.|  
+|[const_pointer](#const_pointer)|The type of a constant pointer to an element.|  
+|[const_reference](#const_reference)|The type of a constant reference to an element.|  
+|[difference_type](#difference_type)|The type of a signed distance between two elements.|  
+|[hasher](#hasher)|The type of the hash function.|  
+|[iterator](#iterator)|The type of an iterator for the controlled sequence.|  
+|[key_equal](#key_equal)|The type of the comparison function.|  
+|[key_type](#key_type)|The type of an ordering key.|  
+|[local_iterator](#local_iterator)|The type of a bucket iterator for the controlled sequence.|  
+|[pointer](#pointer)|The type of a pointer to an element.|  
+|[reference](#reference)|The type of a reference to an element.|  
+|[size_type](#size_type)|The type of an unsigned distance between two elements.|  
+|[value_type](#value_type)|The type of an element.|  
   
 |||  
 |-|-|  
-|Operatori|Descrizione|  
-|[unordered_set::operator=](#op_eq)|Copia una tabella hash.|  
+|Member Function|Description|  
+|[begin](#begin)|Designates the beginning of the controlled sequence.|  
+|[bucket](#bucket)|Gets the bucket number for a key value.|  
+|[bucket_count](#bucket_count)|Gets the number of buckets.|  
+|[bucket_size](#bucket_size)|Gets the size of a bucket.|  
+|[cbegin](#cbegin)|Designates the beginning of the controlled sequence.|  
+|[cend](#cend)|Designates the end of the controlled sequence.|  
+|[clear](#clear)|Removes all elements.|  
+|[count](#count)|Finds the number of elements matching a specified key.|  
+|[emplace](#emplace)|Adds an element constructed in place.|  
+|[emplace_hint](#emplace_hint)|Adds an element constructed in place, with hint.|  
+|[empty](#empty)|Tests whether no elements are present.|  
+|[end](#end)|Designates the end of the controlled sequence.|  
+|[equal_range](#equal_range)|Finds range that matches a specified key.|  
+|[erase](#erase)|Removes elements at specified positions.|  
+|[find](#find)|Finds an element that matches a specified key.|  
+|[get_allocator](#get_allocator)|Gets the stored allocator object.|  
+|[hash_function](#hash)|Gets the stored hash function object.|  
+|[insert](#insert)|Adds elements.|  
+|[key_eq](#key_eq)|Gets the stored comparison function object.|  
+|[load_factor](#load_factor)|Counts the average elements per bucket.|  
+|[max_bucket_count](#max_bucket_count)|Gets the maximum number of buckets.|  
+|[max_load_factor](#max_load_factor)|Gets or sets the maximum elements per bucket.|  
+|[max_size](#max_size)|Gets the maximum size of the controlled sequence.|  
+|[rehash](#rehash)|Rebuilds the hash table.|  
+|[size](#size)|Counts the number of elements.|  
+|[swap](#swap)|Swaps the contents of two containers.|  
+|[unordered_set](#unordered_set)|Constructs a container object.|  
   
-## <a name="remarks"></a>Note  
- L'oggetto ordina la sequenza da esso controllata chiamando due oggetti archiviati, un oggetto della funzione di confronto di tipo [unordered_set::key_equal](#key_equal) e un oggetto della funzione hash di tipo [unordered_set::hasher](#hasher). È possibile accedere al primo oggetto archiviato chiamando la funzione membro [unordered_set::key_eq](#key_eq)`()` ed è possibile accedere al secondo oggetto archiviato chiamando la funzione membro [unordered_set::hash_function](#hash)`()`. In particolare, per tutti i valori `X` e `Y` di tipo `Key`, la chiamata a `key_eq()(X, Y)` restituisce true solo se i valori dei due argomenti hanno un ordinamento equivalente; la chiamata a `hash_function()(keyval)` produce una distribuzione di valori di tipo `size_t`. A differenza di classe modello[classe unordered_multiset](../standard-library/unordered-multiset-class.md), un oggetto della classe modello `unordered_set` assicura che `key_eq()(X, Y)` è sempre false per qualsiasi due elementi della sequenza controllata. Le chiavi sono univoche.  
+|||  
+|-|-|  
+|Operators|Description|  
+|[unordered_set::operator=](#op_eq)|Copies a hash table.|  
   
- L'oggetto consente inoltre di archiviare un fattore di carico massimo che specifica il numero medio massimo di elementi per bucket desiderato. Se l'inserimento di un elemento comporta il superamento del fattore di carico massimo da parte di [unordered_set::load_factor](#load_factor)`()`, il contenitore aumenta il numero dei bucket e ricompila la tabella hash in base alle necessità.  
+## <a name="remarks"></a>Remarks  
+ The object orders the sequence it controls by calling two stored objects, a comparison function object of type[unordered_set::key_equal](#key_equal) and a hash function object of type[unordered_set::hasher](#hasher). You access the first stored object by calling the member function[unordered_set::key_eq](#key_eq)`()`; and you access the second stored object by calling the member function[unordered_set::hash_function](#hash)`()`. Specifically, for all values `X` and `Y` of type `Key`, the call `key_eq()(X, Y)` returns true only if the two argument values have equivalent ordering; the call `hash_function()(keyval)` yields a distribution of values of type `size_t`. Unlike template class[unordered_multiset Class](../standard-library/unordered-multiset-class.md), an object of template class `unordered_set` ensures that `key_eq()(X, Y)` is always false for any two elements of the controlled sequence. (Keys are unique.)  
   
- L'ordine effettivo degli elementi nella sequenza controllata dipende dalla funzione hash, dalla funzione di confronto, dall'ordine di inserimento, dal fattore di carico massimo e dal numero corrente di bucket. Non è in genere possibile prevedere l'ordine degli elementi nella sequenza selezionata. Si può tuttavia avere sempre la certezza dell'adiacenza dei subset di elementi con un ordinamento equivalente nella sequenza controllata.  
+ The object also stores a maximum load factor, which specifies the maximum desired average number of elements per bucket. If inserting an element causes[unordered_set::load_factor](#load_factor)`()` to exceed the maximum load factor, the container increases the number of buckets and rebuilds the hash table as needed.  
   
- L'oggetto alloca e libera la memoria per la sequenza da esso controllata tramite un oggetto allocatore archiviato di tipo [unordered_set::allocator_type](#allocator_type). Tale oggetto allocatore deve avere la stessa interfaccia esterna di un oggetto della classe modello `allocator`. Si noti che l'oggetto allocatore archiviato non viene copiato dopo l'assegnazione dell'oggetto contenitore.  
+ The actual order of elements in the controlled sequence depends on the hash function, the comparison function, the order of insertion, the maximum load factor, and the current number of buckets. You cannot in general predict the order of elements in the controlled sequence. You can always be assured, however, that any subset of elements that have equivalent ordering are adjacent in the controlled sequence.  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<unordered_set>  
+ The object allocates and frees storage for the sequence it controls through a stored allocator object of type[unordered_set::allocator_type](#allocator_type). Such an allocator object must have the same external interface as an object of template class `allocator`. Note that the stored allocator object is not copied when the container object is assigned.  
   
- **Spazio dei nomi:** std  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<unordered_set>  
+  
+ **Namespace:** std  
   
 ##  <a name="allocator_type"></a>  unordered_set::allocator_type  
- Tipo di un allocatore per gestire l'archiviazione.  
+ The type of an allocator for managing storage.  
   
 ```  
 typedef Alloc allocator_type;  
 ```  
   
-### <a name="remarks"></a>Note  
- Il tipo è un sinonimo del parametro di modello `Alloc`.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter `Alloc`.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_set_allocator_type.cpp  
@@ -257,7 +340,7 @@ al == std::allocator() is true
 ```  
   
 ##  <a name="begin"></a>  unordered_set::begin  
- Designa l'inizio della sequenza controllata o di un bucket.  
+ Designates the beginning of the controlled sequence or a bucket.  
   
 ```  
 iterator begin();
@@ -269,17 +352,17 @@ local_iterator begin(size_type nbucket);
 const_local_iterator begin(size_type nbucket) const;
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Parametro|Descrizione|  
-|`nbucket`|Numero di bucket.|  
+|Parameter|Description|  
+|`nbucket`|The bucket number.|  
   
-### <a name="remarks"></a>Note  
- Le prime due funzioni membro restituiscono un iteratore in avanti che punta al primo elemento della sequenza (o appena oltre la fine di una sequenza vuota). Le ultime due funzioni membro restituiscono un iteratore in avanti che punta al primo elemento del bucket `nbucket` (o appena oltre la fine di un bucket vuoto).  
+### <a name="remarks"></a>Remarks  
+ The first two member functions return a forward iterator that points at the first element of the sequence (or just beyond the end of an empty sequence). The last two member functions return a forward iterator that points at the first element of bucket `nbucket` (or just beyond the end of an empty bucket).  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // unordered_set_begin.cpp  
@@ -336,20 +419,20 @@ int main()
 ```  
   
 ##  <a name="bucket"></a>  unordered_set::bucket  
- Ottiene il numero di bucket relativo a un valore della chiave.  
+ Gets the bucket number for a key value.  
   
 ```  
 size_type bucket(const Key& keyval) const;
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `keyval`  
- Valore della chiave da mappare.  
+ The key value to map.  
   
-### <a name="remarks"></a>Note  
- La funzione membro restituisce il numero di bucket che corrisponde attualmente al valore della chiave `keyval`.  
+### <a name="remarks"></a>Remarks  
+ The member function returns the bucket number currently corresponding to the key value `keyval`.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_set_bucket.cpp  
@@ -388,16 +471,16 @@ bucket_size(7) == 1
 ```  
   
 ##  <a name="bucket_count"></a>  unordered_set::bucket_count  
- Ottiene il numero di bucket.  
+ Gets the number of buckets.  
   
 ```  
 size_type bucket_count() const;
 ```  
   
-### <a name="remarks"></a>Note  
- La funzione membro restituisce il numero corrente di bucket.  
+### <a name="remarks"></a>Remarks  
+ The member function returns the current number of buckets.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_set_bucket_count.cpp  
@@ -471,20 +554,20 @@ max_load_factor() == 0.1
 ```  
   
 ##  <a name="bucket_size"></a>  unordered_set::bucket_size  
- Ottiene le dimensioni di un bucket.  
+ Gets the size of a bucket  
   
 ```  
 size_type bucket_size(size_type nbucket) const;
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `nbucket`  
- Numero di bucket.  
+ The bucket number.  
   
-### <a name="remarks"></a>Note  
- La funzione membro restituisce la dimensione del numero di bucket `nbucket`.  
+### <a name="remarks"></a>Remarks  
+ The member functions returns the size of bucket number `nbucket`.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_set_bucket_size.cpp  
@@ -523,19 +606,19 @@ bucket_size(7) == 1
 ```  
   
 ##  <a name="cbegin"></a>  unordered_set::cbegin  
- Restituisce un iteratore `const` che punta al primo elemento dell'intervallo.  
+ Returns a `const` iterator that addresses the first element in the range.  
   
 ```  
 const_iterator cbegin() const;
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Iteratore di accesso in avanti `const` che punta al primo elemento dell'intervallo o alla posizione oltre la fine di un intervallo vuoto (per un intervallo vuoto, `cbegin() == cend()`).  
+### <a name="return-value"></a>Return Value  
+ A `const` forward-access iterator that points at the first element of the range, or the location just beyond the end of an empty range (for an empty range, `cbegin() == cend()`).  
   
-### <a name="remarks"></a>Note  
- Con il valore restituito di `cbegin`, gli elementi dell'intervallo non possono essere modificati.  
+### <a name="remarks"></a>Remarks  
+ With the return value of `cbegin`, the elements in the range cannot be modified.  
   
- È possibile usare questa funzione membro anziché la funzione membro `begin()` per garantire che il valore restituito sia `const_iterator`. In genere, viene usata insieme alla parola chiave di deduzione di tipo [auto](../cpp/auto-cpp.md), come illustrato nell'esempio seguente. Nell'esempio, si consideri `Container` come un contenitore (non `const`) modificabile di qualsiasi tipo che supporta `begin()` e `cbegin()`.  
+ You can use this member function in place of the `begin()` member function to guarantee that the return value is `const_iterator`. Typically, it's used in conjunction with the[auto](../cpp/auto-cpp.md) type deduction keyword, as shown in the following example. In the example, consider `Container` to be a modifiable (non- `const`) container of any kind that supports `begin()` and `cbegin()`.  
   
 ```cpp  
 auto i1 = Container.begin();
@@ -546,19 +629,19 @@ auto i2 = Container.cbegin();
 ```  
   
 ##  <a name="cend"></a>  unordered_set::cend  
- Restituisce un iteratore `const` che punta alla posizione oltre l'ultimo elemento di un intervallo.  
+ Returns a `const` iterator that addresses the location just beyond the last element in a range.  
   
 ```  
 const_iterator cend() const;
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Iteratore di accesso in avanti `const` che punta oltre la fine dell'intervallo.  
+### <a name="return-value"></a>Return Value  
+ A `const` forward-access iterator that points just beyond the end of the range.  
   
-### <a name="remarks"></a>Note  
- `cend` viene utilizzato per verificare se un iteratore ha superato la fine del relativo intervallo.  
+### <a name="remarks"></a>Remarks  
+ `cend` is used to test whether an iterator has passed the end of its range.  
   
- È possibile usare questa funzione membro anziché la funzione membro `end()` per garantire che il valore restituito sia `const_iterator`. In genere, viene usata insieme alla parola chiave di deduzione di tipo [auto](../cpp/auto-cpp.md), come illustrato nell'esempio seguente. Nell'esempio, si consideri `Container` come un contenitore (non `const`) modificabile di qualsiasi tipo che supporta `end()` e `cend()`.  
+ You can use this member function in place of the `end()` member function to guarantee that the return value is `const_iterator`. Typically, it's used in conjunction with the[auto](../cpp/auto-cpp.md) type deduction keyword, as shown in the following example. In the example, consider `Container` to be a modifiable (non- `const`) container of any kind that supports `end()` and `cend()`.  
   
 ```cpp  
 auto i1 = Container.end();
@@ -568,19 +651,19 @@ auto i2 = Container.cend();
 // i2 isContainer<T>::const_iterator  
 ```  
   
- Non è consigliabile dereferenziare il valore restituito da `cend`.  
+ The value returned by `cend` should not be dereferenced.  
   
 ##  <a name="clear"></a>  unordered_set::clear  
- Rimuove tutti gli elementi.  
+ Removes all elements.  
   
 ```  
 void clear();
 ```  
   
-### <a name="remarks"></a>Note  
- La funzione membro chiama [unordered_set::erase](#erase)`(` [unordered_set::begin](#begin)`(),` [unordered_set::end](#end)`())`.  
+### <a name="remarks"></a>Remarks  
+ The member function calls[unordered_set::erase](#erase)`(` [unordered_set::begin](#begin)`(),` [unordered_set::end](#end)`())`.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_set_clear.cpp  
@@ -633,16 +716,16 @@ empty() == false
 ```  
   
 ##  <a name="const_iterator"></a>  unordered_set::const_iterator  
- Tipo di un iteratore costante per la sequenza controllata.  
+ The type of a constant iterator for the controlled sequence.  
   
 ```  
 typedef T1 const_iterator;  
 ```  
   
-### <a name="remarks"></a>Note  
- Il tipo descrive un oggetto che può essere usato come iteratore costante in avanti per la sequenza controllata. Qui è descritto come sinonimo del tipo definito dall'implementazione `T1`.  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a constant forward iterator for the controlled sequence. It is described here as a synonym for the implementation-defined type `T1`.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_set_const_iterator.cpp  
@@ -673,16 +756,16 @@ int main()
 ```  
   
 ##  <a name="const_local_iterator"></a>  unordered_set::const_local_iterator  
- Tipo di un iteratore di bucket costante per la sequenza controllata.  
+ The type of a constant bucket iterator for the controlled sequence.  
   
 ```  
 typedef T5 const_local_iterator;  
 ```  
   
-### <a name="remarks"></a>Note  
- Il tipo descrive un oggetto che può essere usato come iteratore in avanti costante per un bucket. Qui è descritto come sinonimo del tipo definito dall'implementazione `T5`.  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a constant forward iterator for a bucket. It is described here as a synonym for the implementation-defined type `T5`.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_set_const_local_iterator.cpp  
@@ -718,16 +801,16 @@ int main()
 ```  
   
 ##  <a name="const_pointer"></a>  unordered_set::const_pointer  
- Tipo di un puntatore costante a un elemento.  
+ The type of a constant pointer to an element.  
   
 ```  
 typedef Alloc::const_pointer const_pointer;  
 ```  
   
-### <a name="remarks"></a>Note  
- Il tipo descrive un oggetto che può essere usato come puntatore costante a un elemento della sequenza controllata.  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a constant pointer to an element of the controlled sequence.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_set_const_pointer.cpp  
@@ -761,16 +844,16 @@ int main()
 ```  
   
 ##  <a name="const_reference"></a>  unordered_set::const_reference  
- Tipo di un riferimento costante a un elemento.  
+ The type of a constant reference to an element.  
   
 ```  
 typedef Alloc::const_reference const_reference;  
 ```  
   
-### <a name="remarks"></a>Note  
- Il tipo descrive un oggetto che può essere usato come riferimento costante a un elemento della sequenza controllata.  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a constant reference to an element of the controlled sequence.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_set_const_reference.cpp  
@@ -804,20 +887,20 @@ int main()
 ```  
   
 ##  <a name="count"></a>  unordered_set::count  
- Trova il numero di elementi corrispondenti a una chiave specificata.  
+ Finds the number of elements matching a specified key.  
   
 ```  
 size_type count(const Key& keyval) const;
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `keyval`  
- Valore della chiave da cercare.  
+ Key value to search for.  
   
-### <a name="remarks"></a>Note  
- La funzione membro restituisce il numero di elementi nell'intervallo delimitato da [unordered_set::equal_range](#equal_range)`(keyval)`.  
+### <a name="remarks"></a>Remarks  
+ The member function returns the number of elements in the range delimited by[unordered_set::equal_range](#equal_range)`(keyval)`.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_set_count.cpp  
@@ -855,16 +938,16 @@ count('C') == 0
 ```  
   
 ##  <a name="difference_type"></a>  unordered_set::difference_type  
- Tipo di una distanza Signed tra due elementi.  
+ The type of a signed distance between two elements.  
   
 ```  
 typedef T3 difference_type;  
 ```  
   
-### <a name="remarks"></a>Note  
- Il tipo di valore integer con segno descrive un oggetto che può rappresentare la differenza tra gli indirizzi di due elementi qualsiasi della sequenza controllata. Qui è descritto come sinonimo del tipo definito dall'implementazione `T3`.  
+### <a name="remarks"></a>Remarks  
+ The signed integer type describes an object that can represent the difference between the addresses of any two elements in the controlled sequence. It is described here as a synonym for the implementation-defined type `T3`.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_set_difference_type.cpp  
@@ -909,7 +992,7 @@ begin()-end() == -3
 ```  
   
 ##  <a name="emplace"></a>  unordered_set::emplace  
- Inserisce un elemento costruito sul posto, senza operazioni di copia o spostamento.  
+ Inserts an element constructed in place (no copy or move operations are performed).  
   
 ```  
 template <class... Args>  
@@ -918,27 +1001,27 @@ emplace(
 Args&&... args);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Parametro|Descrizione|  
-|`args`|Argomenti inoltrati per costruire un elemento da inserire nell'oggetto unordered_set a meno che non vi sia già contenuto un elemento il cui valore è ordinato in modo equivalente.|  
+|Parameter|Description|  
+|`args`|The arguments forwarded to construct an element to be inserted into the unordered_set unless it already contains an element whose value is equivalently ordered.|  
   
-### <a name="return-value"></a>Valore restituito  
- Oggetto `pair` il cui componente `bool` restituisce true se è stato effettuato un inserimento e false se in `unordered_set` è già contenuto un elemento la cui chiave ha un valore equivalente nell'ordinamento e il cui componente iteratore restituisce l'indirizzo in cui è stato inserito un nuovo elemento o in cui si trovava già l'elemento.  
+### <a name="return-value"></a>Return Value  
+ A `pair` whose `bool` component returns true if an insertion was made and false if the `unordered_set` already contained an element whose key had an equivalent value in the ordering, and whose iterator component returns the address where a new element was inserted or where the element was already located.  
   
- Per accedere al componente iteratore di una coppia `pr` restituita da questa funzione membro, usare `pr.first` e per deferenziarlo, usare `*(pr.first)`. Per accedere al componente `bool` di una coppia `pr` restituita da questa funzione membro, usare `pr.second`.  
+ To access the iterator component of a pair `pr` returned by this member function, use `pr.first`, and to dereference it, use `*(pr.first)`. To access the `bool` component of a pair `pr` returned by this member function, use `pr.second`.  
   
-### <a name="remarks"></a>Note  
- Questa funzione non invalida alcun iteratore né riferimento.  
+### <a name="remarks"></a>Remarks  
+ No iterators or references are invalidated by this function.  
   
- Durante l'inserimento, se viene generata un'eccezione che non si trova nella funzione hash del contenitore, quest'ultimo non viene modificato. Se l'eccezione viene generata nella funzione hash, il risultato non sarà definito.  
+ During the insertion, if an exception is thrown but does not occur in the container's hash function, the container is not modified. If the exception is thrown in the hash function, the result is undefined.  
   
- Per un esempio di codice, vedere [set::emplace](../standard-library/set-class.md#emplace).  
+ For a code example, see[set::emplace](../standard-library/set-class.md#emplace).  
   
 ##  <a name="emplace_hint"></a>  unordered_set::emplace_hint  
- Inserisce un elemento costruito in locale (senza che vengano eseguite operazioni di copia o di spostamento), con un suggerimento sulla posizione.  
+ Inserts an element constructed in place (no copy or move operations are performed), with a placement hint.  
   
 ```  
 template <class... Args>  
@@ -947,37 +1030,37 @@ const_iteratorwhere,
 Args&&... args);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Parametro|Descrizione|  
-|`args`|Argomenti inoltrati per costruire un elemento da inserire in un oggetto unordered_set a meno che quest'ultimo non contenga già tale elemento o, più in generale, a meno che non contenga già un elemento la cui la chiave sia equivalentemente ordinata.|  
-|`where`|Suggerimento sulla posizione per avviare la ricerca del punto di inserimento corretto.|  
+|Parameter|Description|  
+|`args`|The arguments forwarded to construct an element to be inserted into the unordered_set unless the unordered_set already contains that element or, more generally, unless it already contains an element whose key is equivalently ordered.|  
+|`where`|A hint regarding the place to start searching for the correct point of insertion.|  
   
-### <a name="return-value"></a>Valore restituito  
- Iteratore all'elemento appena inserito.  
+### <a name="return-value"></a>Return Value  
+ An iterator to the newly inserted element.  
   
- Se l'inserimento ha avuto esito negativo perché l'elemento esiste già, restituisce un iteratore all'elemento esistente.  
+ If the insertion failed because the element already exists, returns an iterator to the existing element.  
   
-### <a name="remarks"></a>Note  
- Questa funzione non invalida alcun iteratore né riferimento.  
+### <a name="remarks"></a>Remarks  
+ No iterators or references are invalidated by this function.  
   
- Durante l'inserimento, se viene generata un'eccezione che non si trova nella funzione hash del contenitore, quest'ultimo non viene modificato. Se l'eccezione viene generata nella funzione hash, il risultato non sarà definito.  
+ During the insertion, if an exception is thrown but does not occur in the container's hash function, the container is not modified. If the exception is thrown in the hash function, the result is undefined.  
   
- Per un esempio di codice, vedere [set::emplace_hint](../standard-library/set-class.md#emplace_hint).  
+ For a code example, see[set::emplace_hint](../standard-library/set-class.md#emplace_hint).  
   
 ##  <a name="empty"></a>  unordered_set::empty  
- Verifica se sono presenti o meno degli elementi.  
+ Tests whether no elements are present.  
   
 ```  
 bool empty() const;
 ```  
   
-### <a name="remarks"></a>Note  
- La funzione membro restituisce true per una sequenza controllata vuota.  
+### <a name="remarks"></a>Remarks  
+ The member function returns true for an empty controlled sequence.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_set_empty.cpp  
@@ -1030,7 +1113,7 @@ empty() == false
 ```  
   
 ##  <a name="end"></a>  unordered_set::end  
- Designa la fine della sequenza controllata.  
+ Designates the end of the controlled sequence.  
   
 ```  
 iterator end();  
@@ -1042,17 +1125,17 @@ local_iterator end(size_type nbucket);
 const_local_iterator end(size_type nbucket) const;  
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Parametro|Descrizione|  
-|`nbucket`|Numero di bucket.|  
+|Parameter|Description|  
+|`nbucket`|The bucket number.|  
   
-### <a name="remarks"></a>Note  
- Le prime due funzioni membro restituiscono un iteratore in avanti che punta poco oltre la fine della sequenza. Le ultime due funzioni membro restituiscono un iteratore in avanti che punta poco oltre la fine del bucket `nbucket`.  
+### <a name="remarks"></a>Remarks  
+ The first two member functions return a forward iterator that points just beyond the end of the sequence. The last two member functions return a forward iterator that points just beyond the end of bucket `nbucket`.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_set_end.cpp  
@@ -1098,7 +1181,7 @@ int main()
 ```  
   
 ##  <a name="equal_range"></a>  unordered_set::equal_range  
- Trova un intervallo che corrisponde a una chiave specificata.  
+ Finds range that matches a specified key.  
   
 ```  
 std::pair<iterator, iterator>  
@@ -1108,14 +1191,14 @@ std::pair<const_iterator, const_iterator>
 equal_range(const Key& keyval) const;
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `keyval`  
- Valore della chiave da cercare.  
+ Key value to search for.  
   
-### <a name="remarks"></a>Note  
- La funzione membro restituisce una coppia di iteratori `X` tale`[X.first, X.second)` delimiti solo gli elementi della sequenza controllata che hanno un ordinamento equivalente con `keyval`. Se tali elementi non esistono, entrambi gli iteratori sono `end()`.  
+### <a name="remarks"></a>Remarks  
+ The member function returns a pair of iterators `X` such that`[X.first, X.second)` delimits just those elements of the controlled sequence that have equivalent ordering with `keyval`. If no such elements exist, both iterators are `end()`.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_set_equal_range.cpp  
@@ -1163,7 +1246,7 @@ equal_range('b'): [b]
 ```  
   
 ##  <a name="erase"></a>  unordered_set::erase  
- Rimuove un elemento o un intervallo di elementi in un oggetto unordered_set dalle posizioni specificate oppure rimuove gli elementi che corrispondono a una chiave specificata.  
+ Removes an element or a range of elements in a unordered_set from specified positions or removes elements that match a specified key.  
   
 ```  
 iterator erase(const_iterator Where);
@@ -1173,42 +1256,42 @@ iterator erase(const_iterator First, const_iterator Last);
 size_type erase(const key_type& Key);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `Where`  
- Posizione dell'elemento che deve essere rimosso.  
+ Position of the element to be removed.  
   
  `First`  
- Posizione del primo elemento che deve essere rimosso.  
+ Position of the first element to be removed.  
   
  `Last`  
- Posizione immediatamente successiva all'ultimo elemento che deve essere rimosso.  
+ Position just beyond the last element to be removed.  
   
  `Key`  
- Valore della chiave dell'elemento che deve essere rimosso.  
+ The key value of the elements to be removed.  
   
-### <a name="return-value"></a>Valore restituito  
- Per le prime due funzioni membro, iteratore bidirezionale che definisce il primo elemento rimanente oltre gli eventuali elementi rimossi o elemento che rappresenta la fine dell'oggetto unordered_set se tali elementi non sono presenti.  
+### <a name="return-value"></a>Return Value  
+ For the first two member functions, a bidirectional iterator that designates the first element remaining beyond any elements removed, or an element that is the end of the unordered_set if no such element exists.  
   
- Per la terza funzione membro, restituisce il numero di elementi rimossi dall'oggetto unordered_set.  
+ For the third member function, returns the number of elements that have been removed from the unordered_set.  
   
-### <a name="remarks"></a>Note  
- Per un esempio di codice, vedere [set::erase](../standard-library/set-class.md#erase).  
+### <a name="remarks"></a>Remarks  
+ For a code example, see[set::erase](../standard-library/set-class.md#erase).  
   
 ##  <a name="find"></a>  unordered_set::find  
- Trova un elemento che corrisponde a una chiave specificata.  
+ Finds an element that matches a specified key.  
   
 ```  
 const_iterator find(const Key& keyval) const;
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `keyval`  
- Valore della chiave da cercare.  
+ Key value to search for.  
   
-### <a name="remarks"></a>Note  
- La funzione membro restituisce [unordered_set::equal_range](#equal_range)`(keyval).first`.  
+### <a name="remarks"></a>Remarks  
+ The member function returns[unordered_set::equal_range](#equal_range)`(keyval).first`.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_set_find.cpp  
@@ -1251,16 +1334,16 @@ find('b') == true: [b]
 ```  
   
 ##  <a name="get_allocator"></a>  unordered_set::get_allocator  
- Ottiene l'oggetto allocatore archiviato.  
+ Gets the stored allocator object.  
   
 ```  
 Alloc get_allocator() const;
 ```  
   
-### <a name="remarks"></a>Note  
- La funzione membro restituisce l'oggetto allocatore archiviato.  
+### <a name="remarks"></a>Remarks  
+ The member function returns the stored allocator object.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_set_get_allocator.cpp  
@@ -1287,16 +1370,16 @@ al == std::allocator() is true
 ```  
   
 ##  <a name="hash"></a>  unordered_set::hash_function  
- Ottiene l'oggetto della funzione hash archiviato.  
+ Gets the stored hash function object.  
   
 ```  
 Hash hash_function() const;
 ```  
   
-### <a name="remarks"></a>Note  
- La funzione membro restituisce l'oggetto archiviato della funzione hash.  
+### <a name="remarks"></a>Remarks  
+ The member function returns the stored hash function object.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_set_hash_function.cpp  
@@ -1323,16 +1406,16 @@ hfn('b') == 1647086
 ```  
   
 ##  <a name="hasher"></a>  unordered_set::hasher  
- Tipo della funzione hash.  
+ The type of the hash function.  
   
 ```  
 typedef Hash hasher;  
 ```  
   
-### <a name="remarks"></a>Note  
- Il tipo è un sinonimo del parametro di modello `Hash`.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter `Hash`.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_set_hasher.cpp  
@@ -1359,7 +1442,7 @@ hfn('b') == 1647086
 ```  
   
 ##  <a name="insert"></a>  unordered_set::insert  
- Inserisce un elemento o un intervallo di elementi in un unordered_set.  
+ Inserts an element or a range of elements into an unordered_set.  
   
 ```  
 // (1) single element  
@@ -1384,62 +1467,62 @@ void insert(InputIterator First, InputIterator Last);
 void insert(initializer_list<value_type> IList);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Parametro|Descrizione|  
-|`Val`|Valore di un elemento da inserire in unordered_set a meno che non vi sia già contenuto un elemento la cui chiave è ordinata in modo equivalente.|  
-|`Where`|Posizione in cui iniziare a cercare il punto di inserimento corretto.|  
-|`ValTy`|Parametro modello che specifica il tipo di argomento che è usato da unordered_set per costruire un elemento di[value_type](../standard-library/map-class.md#value_type), esegue l'inoltro perfetto e `Val` come argomento.|  
-|`First`|Posizione del primo elemento da copiare.|  
-|`Last`|Posizione immediatamente dopo l'ultimo elemento da copiare.|  
-|`InputIterator`|Argomento della funzione modello che soddisfa i requisiti di un [iteratore di input](../standard-library/input-iterator-tag-struct.md) che punta agli elementi di un tipo utilizzabili per costruire oggetti [value_type](../standard-library/map-class.md#value_type).|  
-|`IList`|Oggetto [initializer_list](../standard-library/initializer-list.md) da cui copiare gli elementi.|  
+|Parameter|Description|  
+|`Val`|The value of an element to be inserted into the unordered_set unless it already contains an element whose key is equivalently ordered.|  
+|`Where`|The place to start searching for the correct point of insertion.|  
+|`ValTy`|Template parameter that specifies the argument type that the unordered_set can use to construct an element of[value_type](../standard-library/map-class.md#value_type), and perfect-forwards `Val` as an argument.|  
+|`First`|The position of the first element to be copied.|  
+|`Last`|The position just beyond the last element to be copied.|  
+|`InputIterator`|Template function argument that meets the requirements of an[input iterator](../standard-library/input-iterator-tag-struct.md) that points to elements of a type that can be used to construct[value_type](../standard-library/map-class.md#value_type) objects.|  
+|`IList`|The[initializer_list](../standard-library/initializer-list.md) from which to copy the elements.|  
   
-### <a name="return-value"></a>Valore restituito  
- Le funzioni membro a elemento singolo, (1) e (2), restituiscono un[coppia](../standard-library/pair-structure.md) cui `bool` componente è true se è stato eseguito un inserimento e false se unordered_set contiene già un elemento la cui chiave ha un valore equivalente nell'ordinamento. Il componente dell'iteratore della coppia di valori restituita punta all'elemento appena inserito se il componente `bool` è true oppure all'elemento esistente se il componente `bool` è false.  
+### <a name="return-value"></a>Return Value  
+ The single-element member functions, (1) and (2), return a[pair](../standard-library/pair-structure.md) whose `bool` component is true if an insertion was made, and false if the unordered_set already contained an element whose key had an equivalent value in the ordering. The iterator component of the return-value pair points to the newly inserted element if the `bool` component is true, or to the existing element if the `bool` component is false.  
   
- Le funzioni membro a elemento singolo con suggerimento, (3) e (4), restituiscono un iteratore che fa riferimento alla posizione in cui il nuovo elemento è stato inserito in unordered_set o all'elemento già esistente se esiste un elemento con una chiave equivalente.  
+ The single-element-with-hint member functions, (3) and (4), return an iterator that points to the position where the new element was inserted into the unordered_set or, if an element with an equivalent key already exists, to the existing element.  
   
-### <a name="remarks"></a>Note  
- Non ci sono iteratori, puntatori o riferimenti invalidati da questa funzione.  
+### <a name="remarks"></a>Remarks  
+ No iterators, pointers, or references are invalidated by this function.  
   
- Se viene generata un'eccezione durante l'inserimento di un solo elemento, ma l'eccezione non si manifesta nella funzione hash del contenitore, lo stato del contenitore non verrà modificato. Se l'eccezione viene generata nella funzione hash, il risultato non sarà definito. Se viene generata un'eccezione durante l'inserimento di più elementi, il contenitore viene lasciato in uno stato non specificato ma comunque valido.  
+ During the insertion of just one element, if an exception is thrown but does not occur in the container's hash function, the container's state is not modified. If the exception is thrown in the hash function, the result is undefined. During the insertion of multiple elements, if an exception is thrown, the container is left in an unspecified but valid state.  
   
- Per il componente dell'iteratore di accedere a un `pair` `pr` restituito dalle funzioni membro a elemento singolo, utilizzare `pr.first`; per dereferenziare l'iteratore all'interno della coppia restituita, usare`*pr.first`, fornendo un elemento. Per accedere al componente `bool`, usare `pr.second`. Per un esempio, vedere il codice di esempio più avanti in questo articolo.  
+ To access the iterator component of a `pair` `pr` that's returned by the single-element member functions, use `pr.first`; to dereference the iterator within the returned pair, use`*pr.first`, giving you an element. To access the `bool` component, use `pr.second`. For an example, see the sample code later in this article.  
   
- Il[value_type](../standard-library/map-class.md#value_type) di un contenitore è un typedef appartenente al contenitore e, per il set, `unordered_set<V>::value_type` è di tipo `const V`.  
+ The[value_type](../standard-library/map-class.md#value_type) of a container is a typedef that belongs to the container, and, for set, `unordered_set<V>::value_type` is type `const V`.  
   
- La funzione membro di intervallo (5) inserisce la sequenza di valori di elemento in un unordered_set che corrisponde a ogni elemento interessato da un iteratore nell'intervallo `[First, Last)`. Non viene quindi inserito `Last`. La funzione membro di contenitore `end()` fa riferimento alla posizione immediatamente dopo l'ultimo elemento nel contenitore. L'istruzione `s.insert(v.begin(), v.end());`, ad esempio, cerca di inserire tutti gli elementi di `v` in `s`. Solo gli elementi che hanno valori univoci nell'intervallo vengono inseriti; i duplicati vengono ignorati. Per osservare quali elementi vengono rifiutati, usare le versioni con un singolo elemento di `insert`.  
+ The range member function (5) inserts the sequence of element values into an unordered_set that corresponds to each element addressed by an iterator in the range `[First, Last)`; therefore, `Last` does not get inserted. The container member function `end()` refers to the position just after the last element in the container—for example, the statement `s.insert(v.begin(), v.end());` attempts to insert all elements of `v` into `s`. Only elements that have unique values in the range are inserted; duplicates are ignored. To observe which elements are rejected, use the single-element versions of `insert`.  
   
- La funzione membro di elenco di inizializzatori (6) usa un oggetto [initializer_list](../standard-library/initializer-list.md) per copiare gli elementi nell'oggetto unordered_set.  
+ The initializer list member function (6) uses an[initializer_list](../standard-library/initializer-list.md) to copy elements into the unordered_set.  
   
- Per l'inserimento di un elemento costruito sul posto, ovvero non copia o spostamento vengono eseguite operazioni, vedere[set::emplace](../standard-library/set-class.md#emplace) e[set::emplace_hint](../standard-library/set-class.md#emplace_hint).  
+ For insertion of an element constructed in place—that is, no copy or move operations are performed—see[set::emplace](../standard-library/set-class.md#emplace) and[set::emplace_hint](../standard-library/set-class.md#emplace_hint).  
   
- Per un esempio di codice, vedere [set::insert](../standard-library/set-class.md#insert).  
+ For a code example, see[set::insert](../standard-library/set-class.md#insert).  
   
 ##  <a name="iterator"></a>  unordered_set::iterator  
- Tipo che fornisce un [iteratore in avanti](../standard-library/forward-iterator-tag-struct.md) costante in grado di leggere gli elementi in un oggetto unordered_set.  
+ A type that provides a constant[forward iterator](../standard-library/forward-iterator-tag-struct.md) that can read elements in an unordered_set.  
   
 ```  
 typedef implementation-defined iterator;  
 ```  
   
-### <a name="example"></a>Esempio  
-  Vedere l'esempio relativo a [begin](../standard-library/set-class.md#begin) per indicazioni su come dichiarare e usare un **iteratore**.  
+### <a name="example"></a>Example  
+  See the example for[begin](../standard-library/set-class.md#begin) for an example of how to declare and use an**iterator**.  
   
 ##  <a name="key_eq"></a>  unordered_set::key_eq  
- Ottiene l'oggetto archiviato della funzione di confronto.  
+ Gets the stored comparison function object.  
   
 ```  
 Pred key_eq() const;
 ```  
   
-### <a name="remarks"></a>Note  
- La funzione membro restituisce l'oggetto archiviato della funzione di confronto.  
+### <a name="remarks"></a>Remarks  
+ The member function returns the stored comparison function object.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_set_key_eq.cpp  
@@ -1468,16 +1551,16 @@ cmpfn('a', 'b') == false
 ```  
   
 ##  <a name="key_equal"></a>  unordered_set::key_equal  
- Tipo della funzione di confronto.  
+ The type of the comparison function.  
   
 ```  
 typedef Pred key_equal;  
 ```  
   
-### <a name="remarks"></a>Note  
- Il tipo è un sinonimo del parametro di modello `Pred`.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter `Pred`.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_set_key_equal.cpp  
@@ -1506,16 +1589,16 @@ cmpfn('a', 'b') == false
 ```  
   
 ##  <a name="key_type"></a>  unordered_set::key_type  
- Tipo di una chiave di ordinamento.  
+ The type of an ordering key.  
   
 ```  
 typedef Key key_type;  
 ```  
   
-### <a name="remarks"></a>Note  
- Il tipo è un sinonimo del parametro di modello `Key`.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter `Key`.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_set_key_type.cpp  
@@ -1556,16 +1639,16 @@ int main()
 ```  
   
 ##  <a name="load_factor"></a>  unordered_set::load_factor  
- Conta il numero medio di elementi per bucket.  
+ Counts the average elements per bucket.  
   
 ```  
 float load_factor() const;
 ```  
   
-### <a name="remarks"></a>Note  
- La funzione membro restituisce `(float)`[unordered_set::size](#size)`() / (float)`[unordered_set::bucket_count](#bucket_count)`()`, il numero medio di elementi per bucket.  
+### <a name="remarks"></a>Remarks  
+ The member function returns`(float)`[unordered_set::size](#size)`() / (float)`[unordered_set::bucket_count](#bucket_count)`()`, the average number of elements per bucket.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_set_load_factor.cpp  
@@ -1639,16 +1722,16 @@ max_load_factor() == 0.1
 ```  
   
 ##  <a name="local_iterator"></a>  unordered_set::local_iterator  
- Tipo di iteratore di bucket.  
+ The type of a bucket iterator.  
   
 ```  
 typedef T4 local_iterator;  
 ```  
   
-### <a name="remarks"></a>Note  
- Il tipo descrive un oggetto che può essere usato come iteratore in avanti per un bucket. Qui è descritto come sinonimo del tipo definito dall'implementazione `T4`.  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a forward iterator for a bucket. It is described here as a synonym for the implementation-defined type `T4`.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_set_local_iterator.cpp  
@@ -1684,16 +1767,16 @@ int main()
 ```  
   
 ##  <a name="max_bucket_count"></a>  unordered_set::max_bucket_count  
- Ottiene il numero massimo di bucket.  
+ Gets the maximum number of buckets.  
   
 ```  
 size_type max_bucket_count() const;
 ```  
   
-### <a name="remarks"></a>Note  
- La funzione membro restituisce il numero massimo di bucket attualmente consentiti.  
+### <a name="remarks"></a>Remarks  
+ The member function returns the maximum number of buckets currently permitted.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_set_max_bucket_count.cpp  
@@ -1767,7 +1850,7 @@ max_load_factor() == 0.1
 ```  
   
 ##  <a name="max_load_factor"></a>  unordered_set::max_load_factor  
- Ottiene o imposta il numero massimo di elementi per bucket.  
+ Gets or sets the maximum elements per bucket.  
   
 ```  
 float max_load_factor() const;
@@ -1775,14 +1858,14 @@ float max_load_factor() const;
 void max_load_factor(float factor);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `factor`  
- Nuovo fattore di carico massimo.  
+ The new maximum load factor.  
   
-### <a name="remarks"></a>Note  
- La prima funzione membro restituisce il fattore di carico massimo archiviato. La seconda funzione membro sostituisce il fattore di carico massimo archiviato con `factor`.  
+### <a name="remarks"></a>Remarks  
+ The first member function returns the stored maximum load factor. The second member function replaces the stored maximum load factor with `factor`.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_set_max_load_factor.cpp  
@@ -1856,16 +1939,16 @@ max_load_factor() == 0.1
 ```  
   
 ##  <a name="max_size"></a>  unordered_set::max_size  
- Ottiene la dimensione massima della sequenza controllata.  
+ Gets the maximum size of the controlled sequence.  
   
 ```  
 size_type max_size() const;
 ```  
   
-### <a name="remarks"></a>Note  
- La funzione membro restituisce la lunghezza della sequenza più lunga che l'oggetto può controllare.  
+### <a name="remarks"></a>Remarks  
+ The member function returns the length of the longest sequence that the object can control.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_set_max_size.cpp  
@@ -1889,7 +1972,7 @@ max_size() == 4294967295
 ```  
   
 ##  <a name="op_eq"></a>  unordered_set::operator=  
- Copia una tabella hash.  
+ Copies a hash table.  
   
 ```  
 unordered_set& operator=(const unordered_set& right);
@@ -1897,17 +1980,17 @@ unordered_set& operator=(const unordered_set& right);
 unordered_set& operator=(unordered_set&& right);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Parametro|Descrizione|  
-|`right`|Il[unordered_set](../standard-library/unordered-set-class.md) viene copiato il `unordered_set`.|  
+|Parameter|Description|  
+|`right`|The[unordered_set](../standard-library/unordered-set-class.md) being copied into the `unordered_set`.|  
   
-### <a name="remarks"></a>Note  
- Dopo la cancellazione di tutti gli elementi esistenti in un oggetto `unordered_set`, `operator=` copia o sposta il contenuto di `right` nell'oggetto `unordered_set`.  
+### <a name="remarks"></a>Remarks  
+ After erasing any existing elements in an `unordered_set`, `operator=` either copies or moves the contents of `right` into the `unordered_set`.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // unordered_set_operator_as.cpp  
@@ -1945,16 +2028,16 @@ int main( )
 ```  
   
 ##  <a name="pointer"></a>  unordered_set::pointer  
- Tipo di un puntatore a un elemento.  
+ The type of a pointer to an element.  
   
 ```  
 typedef Alloc::pointer pointer;  
 ```  
   
-### <a name="remarks"></a>Note  
- Il tipo descrive un oggetto che può essere usato come puntatore a un elemento della sequenza controllata.  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a pointer to an element of the controlled sequence.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_set_pointer.cpp  
@@ -1989,16 +2072,16 @@ int main()
 ```  
   
 ##  <a name="reference"></a>  unordered_set::reference  
- Tipo di un riferimento a un elemento.  
+ The type of a reference to an element.  
   
 ```  
 typedef Alloc::reference reference;  
 ```  
   
-### <a name="remarks"></a>Note  
- Il tipo descrive un oggetto che può essere usato come riferimento a un elemento della sequenza controllata.  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a reference to an element of the controlled sequence.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_set_reference.cpp  
@@ -2033,20 +2116,20 @@ int main()
 ```  
   
 ##  <a name="rehash"></a>  unordered_set::rehash  
- Ricompila la tabella hash.  
+ Rebuilds the hash table.  
   
 ```  
 void rehash(size_type nbuckets);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `nbuckets`  
- Numero di bucket richiesto.  
+ The requested number of buckets.  
   
-### <a name="remarks"></a>Note  
- La funzione membro modifica il numero di bucket in modo da essere almeno pari a `nbuckets` e ricompila la tabella hash in base alle esigenze.  
+### <a name="remarks"></a>Remarks  
+ The member function alters the number of buckets to be at least `nbuckets` and rebuilds the hash table as needed.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_set_rehash.cpp  
@@ -2107,16 +2190,16 @@ max_load_factor() == 0.1
 ```  
   
 ##  <a name="size"></a>  unordered_set::size  
- Conta il numero di elementi.  
+ Counts the number of elements.  
   
 ```  
 size_type size() const;
 ```  
   
-### <a name="remarks"></a>Note  
- La funzione membro restituisce la lunghezza della sequenza controllata.  
+### <a name="remarks"></a>Remarks  
+ The member function returns the length of the controlled sequence.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_set_size.cpp  
@@ -2170,16 +2253,16 @@ empty() == false
 ```  
   
 ##  <a name="size_type"></a>  unordered_set::size_type  
- Tipo di una distanza Unsigned tra due elementi.  
+ The type of an unsigned distance between two elements.  
   
 ```  
 typedef T2 size_type;  
 ```  
   
-### <a name="remarks"></a>Note  
- Il tipo Unsigned Integer descrive un oggetto che può rappresentare la lunghezza di una sequenza controllata. Qui è descritto come sinonimo del tipo definito dall'implementazione `T2`.  
+### <a name="remarks"></a>Remarks  
+ The unsigned integer type describes an object that can represent the length of any controlled sequence. It is described here as a synonym for the implementation-defined type `T2`.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_set_size_type.cpp  
@@ -2204,20 +2287,20 @@ size == 0
 ```  
   
 ##  <a name="swap"></a>  unordered_set::swap  
- Scambia il contenuto di due contenitori.  
+ Swaps the contents of two containers.  
   
 ```  
 void swap(unordered_set& right);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `right`  
- Contenitore con cui eseguire lo scambio.  
+ The container to swap with.  
   
-### <a name="remarks"></a>Note  
- La funzione membro scambia le sequenze controllate tra `*this` e `right`. Se [unordered_set::get_allocator](#get_allocator)`() == right.get_allocator()`, esegue l'operazione in un tempo costante, genera un'eccezione solo in seguito alla copia dell'oggetto traits archiviato di tipo `Tr`, e non invalida alcun riferimenti, puntatori o gli iteratori che definiscono gli elementi nelle due sequenze controllate. In caso contrario, esegue un numero di assegnazioni di elementi e chiamate al costruttore proporzionale al numero di elementi nelle due sequenze controllate.  
+### <a name="remarks"></a>Remarks  
+ The member function swaps the controlled sequences between `*this` and `right`. If [unordered_set::get_allocator](#get_allocator)`() == right.get_allocator()`, it does so in constant time, it throws an exception only as a result of copying the stored traits object of type `Tr`, and it invalidates no references, pointers, or iterators that designate elements in the two controlled sequences. Otherwise, it performs a number of element assignments and constructor calls proportional to the number of elements in the two controlled sequences.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_set_swap.cpp  
@@ -2270,7 +2353,7 @@ int main()
 ```  
   
 ##  <a name="unordered_set"></a>  unordered_set::unordered_set  
- Costruisce un oggetto contenitore.  
+ Constructs a container object.  
   
 ```  
 unordered_set(const unordered_set& Right);
@@ -2315,43 +2398,43 @@ unordered_set(
     const Allocator& Al = Alloc());
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Parametro|Descrizione|  
-|`InputIterator`|Tipo di iteratore.|  
-|`Al`|Oggetto allocatore da archiviare.|  
-|`Comp`|Oggetto della funzione di confronto da archiviare.|  
-|`Hash`|Oggetto della funzione hash da archiviare.|  
-|`bucket_count`|Numero minimo di bucket.|  
-|`Right`|Contenitore da copiare.|  
-|`IList`|Oggetto initializer_list contenente gli elementi da copiare.|  
+|Parameter|Description|  
+|`InputIterator`|The iterator type.|  
+|`Al`|The allocator object to store.|  
+|`Comp`|The comparison function object to store.|  
+|`Hash`|The hash function object to store.|  
+|`bucket_count`|The minimum number of buckets.|  
+|`Right`|The container to copy.|  
+|`IList`|The initializer_list containing the elements to copy.|  
   
-### <a name="remarks"></a>Note  
- Il primo costruttore specifica una copia della sequenza controllata da `Right`. Il secondo costruttore specifica una sequenza controllata vuota. Il terzo costruttore specifica una copia della sequenza spostando `Right` Dal quarto all'ottavo costruttore usano un initializer_list per specificare gli elementi da copiare. Il nono costruttore inserisce la sequenza di valori degli elementi `[first, last)`.  
+### <a name="remarks"></a>Remarks  
+ The first constructor specifies a copy of the sequence controlled by `Right`. The second constructor specifies an empty controlled sequence. The third constructor specifies a copy of the sequence by moving `Right` The fourth through eighth constructors use an initializer_list to specify the elements to copy. The ninth constructor inserts the sequence of element values`[first, last)`.  
   
- Tutti i costruttori inizializzano inoltre diversi valori archiviati. Per il costruttore di copia, i valori vengono ottenuti da `Right`. In caso contrario:  
+ All constructors also initialize several stored values. For the copy constructor, the values are obtained from `Right`. Otherwise:  
   
- Il numero minimo di bucket è costituito dall'argomento `bucket_count`, se disponibile; in caso contrario è costituito da un valore predefinito descritto qui come il valore `N0` definito a livello di implementazione.  
+ The minimum number of buckets is the argument `bucket_count`, if present; otherwise it is a default value described here as the implementation-defined value `N0`.  
   
- L'oggetto della funzione hash è costituito dall'argomento `Hash`, se disponibile; in caso contrario, è `Hash()`.  
+ The hash function object is the argument `Hash`, if present; otherwise it is `Hash()`.  
   
- L'oggetto della funzione di confronto è costituito dall'argomento `Comp`, se disponibile; in caso contrario, è `Comp()`.  
+ The comparison function object is the argument `Comp`, if present; otherwise it is `Comp()`.  
   
- L'oggetto allocatore è costituito dall'argomento `Al`, se disponibile; in caso contrario, è `Alloc()`.  
+ The allocator object is the argument `Al`, if present; otherwise, it is `Alloc()`.  
   
 ##  <a name="value_type"></a>  unordered_set::value_type  
- Tipo di un elemento.  
+ The type of an element.  
   
 ```  
 typedef Key value_type;  
 ```  
   
-### <a name="remarks"></a>Note  
- Il tipo descrive un elemento nella sequenza controllata.  
+### <a name="remarks"></a>Remarks  
+ The type describes an element of the controlled sequence.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_set_value_type.cpp  
@@ -2391,10 +2474,10 @@ int main()
  [d] [c] [b] [a]  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [<unordered_set>](../standard-library/unordered-set.md)   
- [Contenitori](../cpp/containers-modern-cpp.md)   
- [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+ [Containers](../cpp/containers-modern-cpp.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 

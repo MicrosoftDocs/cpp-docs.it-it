@@ -1,48 +1,67 @@
 ---
-title: "Messaggi di notifica del controllo Tree | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTreeCtrl (classe), notifiche"
-  - "messaggi, notifica"
-  - "notifiche, CTreeCtrl"
-  - "notifiche, struttura ad albero (controlli)"
-  - "struttura ad albero (controlli), messaggi di notifica"
+title: Tree Control Notification Messages | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- notifications [MFC], tree controls
+- messages [MFC], notification
+- CTreeCtrl class [MFC], notifications
+- notifications [MFC], CTreeCtrl
+- tree controls [MFC], notification messages
 ms.assetid: ac7013b4-91dd-4668-bd75-439ca0680ef9
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Messaggi di notifica del controllo Tree
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fa73f84bbbd6e8d4318b038831ccdd5b1721e9c6
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Un controllo struttura ad albero \([Problemi](../mfc/reference/ctreectrl-class.md)\) invia i seguenti messaggi di notifica come messaggi di **WM\_NOTIFY** :  
+---
+# <a name="tree-control-notification-messages"></a>Tree Control Notification Messages
+A tree control ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) sends the following notification messages as **WM_NOTIFY** messages:  
   
-|Messaggio di notifica|Descrizione|  
-|---------------------------|-----------------|  
-|**TVN\_BEGINDRAG**|Segnala l'inizio di un'operazione di trascinamento della selezione|  
-|**TVN\_BEGINLABELEDIT**|Segnala l'inizio della modifica sul posto dell'etichetta|  
-|**TVN\_BEGINRDRAG**|Segnala l'inizio dell'operazione di trascinamento, utilizzando il pulsante destro del mouse|  
-|**TVN\_DELETEITEM**|Segnala l'eliminazione di un elemento specifico|  
-|**TVN\_ENDLABELEDIT**|Segnala la fine della modifica dell'etichetta|  
-|**TVN\_GETDISPINFO**|Richiede le informazioni del controllo struttura ad albero richiede per visualizzare un elemento|  
-|**TVN\_ITEMEXPANDED**|Segnali che l'elenco di un elemento padre degli elementi figlio è stato espanso o compresso stato|  
-|**TVN\_ITEMEXPANDING**|Segnala che l'elenco di un elemento padre degli elementi figlio sta per essere espansa o compressa|  
-|**TVN\_KEYDOWN**|Segnala un evento di tastiera|  
-|**TVN\_SELCHANGED**|Segnala che la selezione è stata modificata da un elemento ad un altro|  
-|**TVN\_SELCHANGING**|Segnala che la selezione sta per essere modificati da un elemento ad un altro|  
-|**TVN\_SETDISPINFO**|Notifica per aggiornare le informazioni per mantenere un elemento|  
+|Notification message|Description|  
+|--------------------------|-----------------|  
+|**TVN_BEGINDRAG**|Signals the start of a drag-and-drop operation|  
+|**TVN_BEGINLABELEDIT**|Signals the start of in-place label editing|  
+|**TVN_BEGINRDRAG**|Signals the start of a drag-and-drop operation, using the right mouse button|  
+|**TVN_DELETEITEM**|Signals the deletion of a specific item|  
+|**TVN_ENDLABELEDIT**|Signals the end of label editing|  
+|**TVN_GETDISPINFO**|Requests information that the tree control requires to display an item|  
+|**TVN_ITEMEXPANDED**|Signals that a parent item's list of child items was expanded or collapsed|  
+|**TVN_ITEMEXPANDING**|Signals that a parent item's list of child items is about to be expanded or collapsed|  
+|**TVN_KEYDOWN**|Signals a keyboard event|  
+|**TVN_SELCHANGED**|Signals that the selection has changed from one item to another|  
+|**TVN_SELCHANGING**|Signals that the selection is about to be changed from one item to another|  
+|**TVN_SETDISPINFO**|Notification to update the information maintained for an item|  
   
-## Vedere anche  
- [Utilizzo di CTreeCtrl](../mfc/using-ctreectrl.md)   
- [Controlli](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTreeCtrl](../mfc/using-ctreectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

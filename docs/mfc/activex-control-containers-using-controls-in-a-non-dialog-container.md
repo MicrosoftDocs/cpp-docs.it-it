@@ -1,74 +1,93 @@
 ---
-title: "Contenitori di controlli ActiveX: utilizzo di controlli in un contenitore diverso da una finestra di dialogo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "contenitori dei controlli ActiveX [C++], inserimento di controlli"
-  - "contenitori dei controlli ActiveX [C++], contenitori diversi da finestre di dialogo"
-  - "ActiveX (controlli) [C++], creazione"
-  - "Create (metodo) [C++], controlli ActiveX"
-  - "CreateControl (metodo)"
+title: 'ActiveX Control Containers: Using Controls in a Non-Dialog Container | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Create method [MFC], ActiveX controls
+- CreateControl method [MFC]
+- ActiveX controls [MFC], creating
+- ActiveX control containers [MFC], non-dialog containers
+- ActiveX control containers [MFC], inserting controls
 ms.assetid: 46f195b0-b8ca-4409-8cca-fbfaf2c9ab9f
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Contenitori di controlli ActiveX: utilizzo di controlli in un contenitore diverso da una finestra di dialogo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9c845604a9dc21334920c5d214d1250349ac25bf
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-In alcune applicazioni, ad esempio un'applicazione SDI o un'applicazione MDI, sarà necessario importare un controllo in una finestra dell'applicazione.  La funzione membro di **Crea** della classe wrapper, immessa da Visual C\+\+, può creare in modo dinamico un'istanza del controllo, senza la necessità di una finestra di dialogo.  
+---
+# <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>ActiveX Control Containers: Using Controls in a Non-Dialog Container
+In some applications, such as an SDI or MDI application, you will want to embed a control in a window of the application. The **Create** member function of the wrapper class, inserted by Visual C++, can create an instance of the control dynamically, without the need for a dialog box.  
   
- La funzione membro di **Crea** dispone dei seguenti parametri:  
+ The **Create** member function has the following parameters:  
   
  `lpszWindowName`  
- Un puntatore al testo da visualizzare nella proprietà text o barra del titolo del controllo \(se presenti\).  
+ A pointer to the text to be displayed in the control's Text or Caption property (if any).  
   
  `dwStyle`  
- Stili di windows.  Per un elenco completo, vedere [CWnd::CreateControl](../Topic/CWnd::CreateControl.md).  
+ Windows styles. For a complete list, see [CWnd::CreateControl](../mfc/reference/cwnd-class.md#createcontrol).  
   
  `rect`  
- Specifica la dimensione e la posizione del controllo.  
+ Specifies the control's size and position.  
   
  `pParentWnd`  
- Specifica la finestra padre del controllo, generalmente `CDialog`.  Non deve essere **NULL**.  
+ Specifies the control's parent window, usually a `CDialog`. It must not be **NULL**.  
   
  `nID`  
- Specifica l'id del controllo e può essere utilizzato da contenitore per fare riferimento al controllo.  
+ Specifies the control ID and can be used by the container to refer to the control.  
   
- Un esempio di utilizzo di questa funzione per creare dinamicamente un controllo ActiveX formano una visualizzazione form di un'applicazione SDI.  È quindi possibile creare un'istanza del controllo nel gestore di `WM_CREATE` dell'applicazione.  
+ One example of using this function to dynamically create an ActiveX control would be in a form view of an SDI application. You could then create an instance of the control in the `WM_CREATE` handler of the application.  
   
- Per questo esempio, `CMyView` è la classe di visualizzazione principale, `CCirc` è la classe wrapper e CIRC.H è l'intestazione \(. H\) file di classe wrapper.  
+ For this example, `CMyView` is the main view class, `CCirc` is the wrapper class, and CIRC.H is the header (.H) file of the wrapper class.  
   
- Implementare questa funzionalità è un processo a quattro passaggio.  
+ Implementing this feature is a four-step process.  
   
-### Per creare dinamicamente un controllo ActiveX in una finestra non finestra di dialogo  
+### <a name="to-dynamically-create-an-activex-control-in-a-non-dialog-window"></a>To dynamically create an ActiveX control in a non-dialog window  
   
-1.  Inserire CIRC.H in CMYVIEW.H, subito prima della definizione della classe di `CMyView` :  
+1.  Insert CIRC.H in CMYVIEW.H, just before the `CMyView` class definition:  
   
-     [!code-cpp[NVC_MFC_AxCont#12](../mfc/codesnippet/CPP/activex-control-containers-using-controls-in-a-non-dialog-container_1.h)]  
+     [!code-cpp[NVC_MFC_AxCont#12](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_1.h)]  
   
-2.  Aggiungere una variabile membro \(di tipo `CCirc`\) alla sezione protected della definizione della classe di `CMyView` trova in CMYVIEW.H:  
+2.  Add a member variable (of type `CCirc`) to the protected section of the `CMyView` class definition located in CMYVIEW.H:  
   
-     [!code-cpp[NVC_MFC_AxCont#13](../mfc/codesnippet/CPP/activex-control-containers-using-controls-in-a-non-dialog-container_2.h)]  
-    [!code-cpp[NVC_MFC_AxCont#14](../mfc/codesnippet/CPP/activex-control-containers-using-controls-in-a-non-dialog-container_3.h)]  
+     [!code-cpp[NVC_MFC_AxCont#13](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_2.h)]  
+    [!code-cpp[NVC_MFC_AxCont#14](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_3.h)]  
   
-3.  Aggiungere un gestore messaggi di `WM_CREATE` class `CMyView`.  
+3.  Add a `WM_CREATE` message handler to class `CMyView`.  
   
-4.  Nella funzione di gestione, `CMyView::OnCreate`, effettua una chiamata alla funzione di `Create` di controllo utilizzando il puntatore di **questo** ad esempio la finestra padre:  
+4.  In the handler function, `CMyView::OnCreate`, make a call to the control's `Create` function using the **this** pointer as the parent window:  
   
-     [!code-cpp[NVC_MFC_AxCont#15](../mfc/codesnippet/CPP/activex-control-containers-using-controls-in-a-non-dialog-container_4.cpp)]  
+     [!code-cpp[NVC_MFC_AxCont#15](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_4.cpp)]  
   
-5.  Ricompilare il progetto.  Un controllo di Circ verrà creato dinamicamente quando la visualizzazione dell'applicazione viene creata.  
+5.  Rebuild the project. A Circ control will be created dynamically whenever the application's view is created.  
   
-## Vedere anche  
- [Contenitori di controlli ActiveX](../mfc/activex-control-containers.md)
+## <a name="see-also"></a>See Also  
+ [ActiveX Control Containers](../mfc/activex-control-containers.md)
+
+

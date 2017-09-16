@@ -1,5 +1,5 @@
 ---
-title: Classe CDrawingManager | Documenti Microsoft
+title: CDrawingManager Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -39,7 +39,31 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CDrawingManager class
+- CDrawingManager [MFC], CDrawingManager
+- CDrawingManager [MFC], CreateBitmap_32
+- CDrawingManager [MFC], DrawAlpha
+- CDrawingManager [MFC], DrawRotated
+- CDrawingManager [MFC], DrawEllipse
+- CDrawingManager [MFC], DrawGradientRing
+- CDrawingManager [MFC], DrawRect
+- CDrawingManager [MFC], DrawShadow
+- CDrawingManager [MFC], Fill4ColorsGradient
+- CDrawingManager [MFC], FillGradient
+- CDrawingManager [MFC], FillGradient2
+- CDrawingManager [MFC], GrayRect
+- CDrawingManager [MFC], HighlightRect
+- CDrawingManager [MFC], HLStoRGB_ONE
+- CDrawingManager [MFC], HLStoRGB_TWO
+- CDrawingManager [MFC], HSVtoRGB
+- CDrawingManager [MFC], HuetoRGB
+- CDrawingManager [MFC], MirrorRect
+- CDrawingManager [MFC], PixelAlpha
+- CDrawingManager [MFC], PrepareShadowMask
+- CDrawingManager [MFC], RGBtoHSL
+- CDrawingManager [MFC], RGBtoHSV
+- CDrawingManager [MFC], SetAlphaPixel
+- CDrawingManager [MFC], SetPixel
+- CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
 caps.latest.revision: 30
 author: mikeblome
@@ -59,84 +83,84 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
-ms.openlocfilehash: e34373651ccd652cccbcab044ab2a8fc60c30401
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a1f9d78d61698baae62e32e8f3a4b189845ca74f
 ms.contentlocale: it-it
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdrawingmanager-class"></a>Classe CDrawingManager
-Il `CDrawingManager` implementa algoritmi di disegnati complessi.  
+# <a name="cdrawingmanager-class"></a>CDrawingManager Class
+The `CDrawingManager` class implements complex drawing algorithms.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDrawingManager : public CObject  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Costruttori pubblici  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDrawingManager::CDrawingManager](#cdrawingmanager)|Costruisce un oggetto `CDrawingManager`.|  
-|`CDrawingManager::~CDrawingManager`|Distruttore.|  
+|[CDrawingManager::CDrawingManager](#cdrawingmanager)|Constructs a `CDrawingManager` object.|  
+|`CDrawingManager::~CDrawingManager`|Destructor.|  
   
-### <a name="public-methods"></a>Metodi pubblici  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDrawingManager::CreateBitmap_32](#createbitmap_32)|Crea una bitmap di 32 bit indipendente dalla periferica (DIB) che è possano scrivere applicazioni direttamente.|  
-|[CDrawingManager::DrawAlpha](#drawalpha)|Consente di visualizzare le bitmap con pixel trasparente o semitrasparente.|  
-|[CDrawingManager::DrawRotated](#drawrotated)|Ruota un'origine contenuto di controller di dominio all'interno del rettangolo specificato da + /-90 gradi|  
-|[CDrawingManager::DrawEllipse](#drawellipse)|Disegna un'ellisse con i colori di riempimento e bordo specificati.|  
-|[CDrawingManager::DrawGradientRing](#drawgradientring)|Disegna un anello e vi inserisce una sfumatura di colore.|  
-|[CDrawingManager::DrawLine, CDrawingManager::DrawLineA](#drawline_cdrawingmanager__drawlinea)|Disegna una linea.|  
-|[CDrawingManager::DrawRect](#drawrect)|Disegna un rettangolo con i colori di riempimento e bordo specificati.|  
-|[CDrawingManager::DrawShadow](#drawshadow)|Disegna un'ombreggiatura per un'area rettangolare.|  
-|[CDrawingManager::Fill4ColorsGradient](#fill4colorsgradient)|Inserisce un'area rettangolare due sfumature di colore.|  
-|[CDrawingManager::FillGradient](#fillgradient)|Riempie l'area rettangolare con una sfumatura di colore specificato.|  
-|[CDrawingManager::FillGradient2](#fillgradient2)|Riempie l'area rettangolare con una sfumatura di colore specificato. Viene specificata anche la direzione della modifica del colore della sfumatura.|  
-|[CDrawingManager::GrayRect](#grayrect)|Riempimento di un rettangolo con un colore grigio specificato.|  
-|[CDrawingManager::HighlightRect](#highlightrect)|Evidenzia un'area rettangolare.|  
-|[CDrawingManager::HLStoRGB_ONE](#hlstorgb_one)|Converte un colore da una rappresentazione HLS in una rappresentazione RGB.|  
-|[CDrawingManager::HLStoRGB_TWO](#hlstorgb_two)|Converte un colore da una rappresentazione HLS in una rappresentazione RGB.|  
-|[CDrawingManager::HSVtoRGB](#hsvtorgb)|Converte un colore da una rappresentazione HSV in una rappresentazione RGB.|  
-|[CDrawingManager::HuetoRGB](#huetorgb)|Metodo helper che converte un valore di tonalità in un componente rosso, verde o blu.|  
-|[CDrawingManager::MirrorRect](#mirrorrect)|Capovolge un'area rettangolare.|  
-|[CDrawingManager::PixelAlpha](#pixelalpha)|Metodo di supporto che determina il colore finale per un pixel semitrasparente.|  
-|[CDrawingManager::PrepareShadowMask](#prepareshadowmask)|Crea una bitmap che può essere utilizzata come un'ombreggiatura.|  
-|[CDrawingManager::RGBtoHSL](#rgbtohsl)|Converte un colore da una rappresentazione RGB in una rappresentazione HSL.|  
-|[CDrawingManager::RGBtoHSV](#rgbtohsv)|Converte un colore da una rappresentazione RGB in una rappresentazione HSV.|  
-|[CDrawingManager::SetAlphaPixel](#setalphapixel)|Metodo helper che colora un pixel semitrasparente in una bitmap.|  
-|[CDrawingManager::SetPixel](#setpixel)|Metodo helper che consente di modificare un singolo pixel in una bitmap specificata.|  
-|[CDrawingManager::SmartMixColors](#smartmixcolors)|Combina due colori in base a un rapporto ponderato.|  
+|[CDrawingManager::CreateBitmap_32](#createbitmap_32)|Creates a 32-bit device-independent bitmap (DIB) that applications can write to directly.|  
+|[CDrawingManager::DrawAlpha](#drawalpha)|Displays bitmaps that have transparent or semitransparent pixels.|  
+|[CDrawingManager::DrawRotated](#drawrotated)|Rotates a source DC content inside the given rectangle by +/- 90 degrees|  
+|[CDrawingManager::DrawEllipse](#drawellipse)|Draws an ellipse with the supplied fill and border colors.|  
+|[CDrawingManager::DrawGradientRing](#drawgradientring)|Draws a ring and fills it with a color gradient.|  
+|[CDrawingManager::DrawLine, CDrawingManager::DrawLineA](#drawline_cdrawingmanager__drawlinea)|Draws a line.|  
+|[CDrawingManager::DrawRect](#drawrect)|Draws a rectangle with the supplied fill and border colors.|  
+|[CDrawingManager::DrawShadow](#drawshadow)|Draws a shadow for a rectangular area.|  
+|[CDrawingManager::Fill4ColorsGradient](#fill4colorsgradient)|Fills a rectangular area with two color gradients.|  
+|[CDrawingManager::FillGradient](#fillgradient)|Fills a rectangular area with a specified color gradient.|  
+|[CDrawingManager::FillGradient2](#fillgradient2)|Fills a rectangular area with a specified color gradient. The direction of the gradient's color change is also specified.|  
+|[CDrawingManager::GrayRect](#grayrect)|Fills a rectangle with a specified gray color.|  
+|[CDrawingManager::HighlightRect](#highlightrect)|Highlights a rectangular area.|  
+|[CDrawingManager::HLStoRGB_ONE](#hlstorgb_one)|Converts a color from a HLS representation to a RGB representation.|  
+|[CDrawingManager::HLStoRGB_TWO](#hlstorgb_two)|Converts a color from a HLS representation to a RGB representation.|  
+|[CDrawingManager::HSVtoRGB](#hsvtorgb)|Converts a color from a HSV representation to a RGB representation.|  
+|[CDrawingManager::HuetoRGB](#huetorgb)|Helper method that converts a hue value to a red, green, or blue component.|  
+|[CDrawingManager::MirrorRect](#mirrorrect)|Flips a rectangular area.|  
+|[CDrawingManager::PixelAlpha](#pixelalpha)|Helper method that determines the final color for a semitransparent pixel.|  
+|[CDrawingManager::PrepareShadowMask](#prepareshadowmask)|Creates a bitmap that can be used as a shadow.|  
+|[CDrawingManager::RGBtoHSL](#rgbtohsl)|Converts a color from a RGB representation to a HSL representation.|  
+|[CDrawingManager::RGBtoHSV](#rgbtohsv)|Converts a color from a RGB representation to a HSV representation.|  
+|[CDrawingManager::SetAlphaPixel](#setalphapixel)|Helper method that colors a partially transparent pixel in a bitmap.|  
+|[CDrawingManager::SetPixel](#setpixel)|Helper method that changes a single pixel in a bitmap to the specified color.|  
+|[CDrawingManager::SmartMixColors](#smartmixcolors)|Combines two colors based on a weighted ratio.|  
   
-## <a name="remarks"></a>Note  
- La `CDrawingManager` classe fornisce funzioni per il disegno delle ombreggiature, sfumature di colore e rettangoli evidenziati. Esegue inoltre la fusione alfa. Per modificare direttamente l'interfaccia utente dell'applicazione, è possibile utilizzare questa classe.  
+## <a name="remarks"></a>Remarks  
+ The `CDrawingManager` class provides functions for drawing shadows, color gradients, and highlighted rectangles. It also performs alpha-blending. You can use this class to directly change your application's UI.  
   
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
  `CDrawingManager`  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** afxdrawmanager.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdrawmanager.h  
   
-##  <a name="cdrawingmanager"></a>CDrawingManager::CDrawingManager  
- Costruisce un [CDrawingManager](../../mfc/reference/cdrawingmanager-class.md) oggetto.  
+##  <a name="cdrawingmanager"></a>  CDrawingManager::CDrawingManager  
+ Constructs a [CDrawingManager](../../mfc/reference/cdrawingmanager-class.md) object.  
   
 ```  
 CDrawingManager(CDC& dc);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `dc`  
- Un riferimento a un contesto di dispositivo. Il `CDrawingManager` utilizza questo contesto per il disegno.  
+ A reference to a device context. The `CDrawingManager` uses this context for drawing.  
   
-##  <a name="createbitmap_32"></a>CDrawingManager::CreateBitmap_32  
- Crea una bitmap di 32 bit indipendente dalla periferica (DIB) che è possano scrivere applicazioni direttamente.  
+##  <a name="createbitmap_32"></a>  CDrawingManager::CreateBitmap_32  
+ Creates a 32-bit device-independent bitmap (DIB) that applications can write to directly.  
   
 ```  
 static HBITMAP __stdcall CreateBitmap_32(
@@ -148,24 +172,24 @@ static HBITMAP __stdcall CreateBitmap_32(
     COLORREF clrTransparent = -1);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Parametro|Descrizione|  
-|[in] `size`|Oggetto [CSize](../../atl-mfc-shared/reference/csize-class.md) parametro che indica le dimensioni dell'immagine bitmap.|  
-|[out] `pBits`|Un puntatore a un puntatore a dati che riceve il percorso dell'immagine del DIB valori di bit.|  
-|`bitmap`|Un handle per la bitmap originale|  
-|`clrTransparent`|Valore RGB specificando un colore trasparente dell'immagine bitmap originale.|  
+|Parameter|Description|  
+|[in] `size`|A [CSize](../../atl-mfc-shared/reference/csize-class.md) parameter that indicates the size of the bitmap.|  
+|[out] `pBits`|A pointer to a data pointer that receives the location of the DIB's bit values.|  
+|`bitmap`|A handle to the original bitmap|  
+|`clrTransparent`|An RGB value specifying transparent color of the original bitmap.|  
   
-### <a name="return-value"></a>Valore restituito  
- Un handle per la bitmap DIB appena creato, se questo metodo dà esito positivo. in caso contrario `NULL`.  
+### <a name="return-value"></a>Return Value  
+ A handle to the newly created DIB bitmap if this method is successful; otherwise `NULL`.  
   
-### <a name="remarks"></a>Note  
- Per ulteriori informazioni su come creare una bitmap DIB, vedere [CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183491).  
+### <a name="remarks"></a>Remarks  
+ For more information about how to create a DIB bitmap, see [CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183491).  
   
-##  <a name="drawalpha"></a>CDrawingManager::DrawAlpha  
- Consente di visualizzare le bitmap con pixel trasparente o semitrasparente.  
+##  <a name="drawalpha"></a>  CDrawingManager::DrawAlpha  
+ Displays bitmaps that have transparent or semitransparent pixels.  
   
 ```  
 void DrawAlpha(
@@ -175,24 +199,24 @@ void DrawAlpha(
     const CRect& rectSrc);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDstDC`  
- Puntatore al contesto di dispositivo per la destinazione.  
+ A pointer to the device context for the destination.  
   
  [in] `rectDst`  
- Il rettangolo di destinazione.  
+ The destination rectangle.  
   
  [in] `pSrcDC`  
- Puntatore al contesto di dispositivo per l'origine.  
+ A pointer to the device context for the source.  
   
  [in] `rectSrc`  
- Il rettangolo di origine.  
+ The source rectangle.  
   
-### <a name="remarks"></a>Note  
- Questo metodo esegue fusione alfa per due bitmap. Per ulteriori informazioni su fusione alfa, vedere [AlphaBlend](http://msdn.microsoft.com/library/windows/desktop/dd183351) in Windows SDK.  
+### <a name="remarks"></a>Remarks  
+ This method performs alpha-blending for two bitmaps. For more information about alpha-blending, see [AlphaBlend](http://msdn.microsoft.com/library/windows/desktop/dd183351) in the Windows SDK.  
   
-##  <a name="drawellipse"></a>CDrawingManager::DrawEllipse  
- Disegna un'ellisse con i colori di riempimento e bordo specificati.  
+##  <a name="drawellipse"></a>  CDrawingManager::DrawEllipse  
+ Draws an ellipse with the supplied fill and border colors.  
   
 ```  
 void DrawEllipse(
@@ -201,21 +225,21 @@ void DrawEllipse(
     COLORREF clrLine);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `rect`  
- Il rettangolo di delimitazione dell'ellisse.  
+ The bounding rectangle for the ellipse.  
   
  [in] `clrFill`  
- Il colore di che questo metodo viene utilizzato per riempire l'ellisse.  
+ The color this method uses to fill the ellipse.  
   
  [in] `clrLine`  
- Il colore di questo metodo utilizza il bordo dell'ellisse.  
+ The color this method uses as the border of the ellipse.  
   
-### <a name="remarks"></a>Note  
- Questo metodo restituisce senza disegnare un'ellisse se dei colori è impostato su -1. Restituisce anche senza disegnare un'ellisse se una dimensione del rettangolo di delimitazione è 0.  
+### <a name="remarks"></a>Remarks  
+ This method returns without drawing an ellipse if either color is set to -1. It also returns without drawing an ellipse if either dimension of the bounding rectangle is 0.  
   
-##  <a name="drawgradientring"></a>CDrawingManager::DrawGradientRing  
- Disegna un anello e vi inserisce una sfumatura di colore.  
+##  <a name="drawgradientring"></a>  CDrawingManager::DrawGradientRing  
+ Draws a ring and fills it with a color gradient.  
   
 ```  
 BOOL DrawGradientRing(
@@ -228,36 +252,36 @@ BOOL DrawGradientRing(
     COLORREF clrFace = (COLORREF)-1);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `rect`  
- Oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) parametro che specifica il limite per l'anello sfumatura.  
+ A [CRect](../../atl-mfc-shared/reference/crect-class.md) parameter that specifies the boundary for the gradient ring.  
   
  [in] `colorStart`  
- Il primo colore della sfumatura.  
+ The first color for the gradient.  
   
  [in] `colorFinish`  
- L'ultimo colore della sfumatura.  
+ The last color for the gradient.  
   
  [in] `colorBorder`  
- Il colore del bordo.  
+ The color of the border.  
   
  [in] `nAngle`  
- Un parametro che specifica l'angolo iniziale di disegno sfumatura. Questo valore deve essere compreso tra 0 e 360.  
+ A parameter that specifies the initial gradient drawing angle. This value should be between 0 and 360.  
   
  [in] `nWidth`  
- La larghezza del bordo per l'anello.  
+ The width of the border for the ring.  
   
  [in] `clrFace`  
- Il colore all'interno dell'anello.  
+ The color of the interior of the ring.  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se ha esito positivo; in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Note  
- Il rettangolo definito dai `rect` deve essere almeno 5 pixel di larghezza e di 5 pixel.  
+### <a name="remarks"></a>Remarks  
+ The rectangle defined by `rect` must be at least 5 pixels wide and 5 pixels high.  
   
-##  <a name="drawline_cdrawingmanager__drawlinea"></a>CDrawingManager::DrawLine, CDrawingManager::DrawLineA  
- Disegna una linea.  
+##  <a name="drawline_cdrawingmanager__drawlinea"></a>  CDrawingManager::DrawLine, CDrawingManager::DrawLineA  
+ Draws a line.  
   
 ```  
 void DrawLine(
@@ -275,22 +299,22 @@ void DrawLineA(
     COLORREF clrLine);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Parametro|Descrizione|  
-|[in] `x1`|Coordinata x l'inizio della riga.|  
-|[in] `y1`|Coordinata y in cui inizia la riga.|  
-|[in] `x2`|Coordinata x in cui termina la riga.|  
-|[in] `y2`|Coordinata y in cui termina la riga.|  
-|[in] `clrLine`|Il colore della linea.|  
+|Parameter|Description|  
+|[in] `x1`|The x coordinate where the line starts.|  
+|[in] `y1`|The y coordinate where the line starts.|  
+|[in] `x2`|The x coordinate where the line ends.|  
+|[in] `y2`|The y coordinate where the line ends.|  
+|[in] `clrLine`|The color of the line.|  
   
-### <a name="remarks"></a>Note  
- Questo metodo ha esito negativo se `clrLine` è uguale a -1.  
+### <a name="remarks"></a>Remarks  
+ This method fails if `clrLine` equals -1.  
   
-##  <a name="drawrect"></a>CDrawingManager::DrawRect  
- Disegna un rettangolo con i colori di riempimento e bordo specificati.  
+##  <a name="drawrect"></a>  CDrawingManager::DrawRect  
+ Draws a rectangle with the supplied fill and border colors.  
   
 ```  
 void DrawRect(
@@ -299,21 +323,21 @@ void DrawRect(
     COLORREF clrLine);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `rect`  
- I limiti del rettangolo.  
+ The boundaries for the rectangle.  
   
  [in] `clrFill`  
- Il colore di che questo metodo viene utilizzato per riempire il rettangolo.  
+ The color this method uses to fill the rectangle.  
   
  [in] `clrLine`  
- Questo metodo viene utilizzato per il bordo del rettangolo di colore.  
+ The color this method uses for the border of the rectangle.  
   
-### <a name="remarks"></a>Note  
- Questo metodo restituisce senza disegnare un rettangolo, se dei colori è impostato su -1. Viene restituito anche se una dimensione del rettangolo è 0.  
+### <a name="remarks"></a>Remarks  
+ This method returns without drawing a rectangle if either color is set to -1. It also returns if either dimension of the rectangle is 0.  
   
-##  <a name="drawshadow"></a>CDrawingManager::DrawShadow  
- Disegna un'ombreggiatura per un'area rettangolare.  
+##  <a name="drawshadow"></a>  CDrawingManager::DrawShadow  
+ Draws a shadow for a rectangular area.  
   
 ```  
 BOOL DrawShadow(
@@ -327,48 +351,48 @@ BOOL DrawShadow(
     BOOL bRightShadow = TRUE);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `rect`  
- Un'area rettangolare nell'applicazione. La gestione di disegno verrà disegnata un'ombreggiatura di sotto di quest'area.  
+ A rectangular area in your application. The drawing manager will draw a shadow underneath this area.  
   
  [in] `nDepth`  
- La larghezza e l'altezza dell'ombreggiatura.  
+ The width and height of the shadow.  
   
  [in] `iMinBrightness`  
- La luminosità minima dell'ombreggiatura.  
+ The minimum brightness of the shadow.  
   
  [in] `iMaxBrightness`  
- La luminosità massima dell'ombreggiatura.  
+ The maximum brightness of the shadow.  
   
  [in] `pBmpSaveBottom`  
- Puntatore a una bitmap che contiene l'immagine per la parte inferiore dell'ombreggiatura.  
+ A pointer to a bitmap that contains the image for the bottom part of the shadow.  
   
  [in] `pBmpSaveRight`  
- Puntatore a una bitmap che contiene l'immagine per l'ombreggiatura che viene disegnata sul lato destro del rettangolo.  
+ A pointer to a bitmap that contains the image for the shadow that is drawn on the right side of the rectangle.  
   
  [in] `clrBase`  
- Colore dell'ombreggiatura.  
+ The color of the shadow.  
   
  [in] `bRightShadow`  
- Un parametro booleano che indica come viene disegnata l'ombreggiatura. Se `bRightShadow` è `TRUE`, `DrawShadow` disegna un'ombreggiatura sul lato destro del rettangolo.  
+ A Boolean parameter that indicates how the shadow is drawn. If `bRightShadow` is `TRUE`, `DrawShadow` draws a shadow on the right side of the rectangle.  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se ha esito positivo; in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Note  
- È possibile fornire due bitmap valida per l'ombreggiatura inferiore e destro utilizzando i parametri `pBmpSaveBottom` e `pBmpSaveRight`. Se queste [CBitmap](../../mfc/reference/cbitmap-class.md) gli oggetti hanno un oggetto GDI associato, `DrawShadow` utilizzerà tali bitmap come le ombre. Se il `CBitmap` non è un oggetto GDI associato, i parametri `DrawShadow` Disegna l'ombreggiatura e collega le bitmap per i parametri. Nelle future chiamate a `DrawShadow`, è possibile fornire queste bitmap per velocizzare il processo di disegno. Per ulteriori informazioni sul `CBitmap` classe e oggetti GDI, vedere [oggetti grafici](../../mfc/graphic-objects.md).  
+### <a name="remarks"></a>Remarks  
+ You can provide two valid bitmaps for the bottom and right shadows by using the parameters `pBmpSaveBottom` and `pBmpSaveRight`. If these [CBitmap](../../mfc/reference/cbitmap-class.md) objects have an attached GDI object, `DrawShadow` will use those bitmaps as the shadows. If the `CBitmap` parameters do not have an attached GDI object, `DrawShadow` draws the shadow and attaches the bitmaps to the parameters. In future calls to `DrawShadow`, you can provide these bitmaps to speed up the drawing process. For more information about the `CBitmap` class and GDI objects, see [Graphic Objects](../../mfc/graphic-objects.md).  
   
- Se uno di questi parametri è `NULL`, `DrawShadow` creerà automaticamente l'ombreggiatura.  
+ If either of these parameters is `NULL`, `DrawShadow` will automatically draw the shadow.  
   
- Se si imposta `bRightShadow` a `FALSE`, l'ombreggiatura verrà disegnato di sotto e a sinistra dell'area rettangolare.  
+ If you set `bRightShadow` to `FALSE`, the shadow will be drawn underneath and to the left of the rectangular area.  
   
-### <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il `DrawShadow` metodo la `CDrawingManager` classe. Questo frammento di codice fa parte di [esempio dimostrativo foglio Prop](../../visual-cpp-samples.md).  
+### <a name="example"></a>Example  
+ The following example demonstrates how to use the `DrawShadow` method of the `CDrawingManager` class. This code snippet is part of the [Prop Sheet Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_PropSheetDemo n. 1](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_PropSheetDemo#1](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_1.cpp)]  
   
-##  <a name="fill4colorsgradient"></a>CDrawingManager::Fill4ColorsGradient  
- Inserisce un'area rettangolare due sfumature di colore.  
+##  <a name="fill4colorsgradient"></a>  CDrawingManager::Fill4ColorsGradient  
+ Fills a rectangular area with two color gradients.  
   
 ```  
 void Fill4ColorsGradient(
@@ -381,35 +405,35 @@ void Fill4ColorsGradient(
     int nPercentage = 50);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `rect`  
- Rettangolo da riempire.  
+ The rectangle to fill.  
   
  [in] `colorStart1`  
- Colore iniziale della sfumatura di colore prima.  
+ The initial color for the first color gradient.  
   
  [in] `colorFinish1`  
- Specifica il colore finale della sfumatura di colore di primo.  
+ The final color for the first color gradient.  
   
  [in] `colorStart2`  
- Colore iniziale della sfumatura di colore secondo.  
+ The initial color for the second color gradient.  
   
  [in] `colorFinish2`  
- Specifica il colore finale della sfumatura di colore secondo.  
+ The final color for the second color gradient.  
   
  [in] `bHorz`  
- Un parametro booleano che indica se `Fill4ColorsGradient` colori di una sfumatura orizzontale o verticale. `TRUE`indica una sfumatura orizzontale.  
+ A Boolean parameter that indicates whether `Fill4ColorsGradient` colors a horizontal or vertical gradient. `TRUE` indicates a horizontal gradient.  
   
  [in] `nPercentage`  
- Intero compreso tra 0 e 100. Questo valore indica la percentuale del rettangolo da riempire con il primo sfumatura di colore.  
+ An integer from 0-100. This value indicates the percentage of the rectangle to fill with the first color gradient.  
   
-### <a name="remarks"></a>Note  
- Quando un rettangolo viene riempito con due sfumature di colore, che sono si trova sopra l'altro o successivo a altro, a seconda del valore di `bHorz`. Ogni colore sfumato viene calcolato in modo indipendente con il metodo [CDrawingManager::FillGradient](#fillgradient).  
+### <a name="remarks"></a>Remarks  
+ When a rectangle is filled with two color gradients, they are either located above each other or next to each other, depending on the value of `bHorz`. Each color gradient is calculated independently with the method [CDrawingManager::FillGradient](#fillgradient).  
   
- Questo metodo genera un errore di asserzione se `nPercentage` è minore di 0 o superiore a 100.  
+ This method generates an assertion failure if `nPercentage` is less than 0 or more than 100.  
   
-##  <a name="fillgradient"></a>CDrawingManager::FillGradient  
- Inserisce un'area rettangolare la sfumatura di colore specificato.  
+##  <a name="fillgradient"></a>  CDrawingManager::FillGradient  
+ Fills a rectangular area with the specified color gradient.  
   
 ```  
 void FillGradient(
@@ -421,32 +445,32 @@ void FillGradient(
     int nEndFlatPercentage = 0);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `rect`  
- L'area rettangolare da riempire.  
+ The rectangular area to fill.  
   
  [in] `colorStart`  
- Il primo colore della sfumatura.  
+ The first color for the gradient.  
   
  [in] `colorFinish`  
- Colore finale della sfumatura.  
+ The final color for the gradient.  
   
  [in] `bHorz`  
- Un parametro booleano che specifica se `FillGradient` deve creare una sfumatura orizzontale o verticale.  
+ A Boolean parameter that specifies whether `FillGradient` should draw a horizontal or vertical gradient.  
   
  [in] `nStartFlatPercentage`  
- La percentuale del rettangolo che `FillGradient` collocherà `colorStart` prima dell'avvio della sfumatura.  
+ The percentage of the rectangle that `FillGradient` fills with `colorStart` before it starts the gradient.  
   
  [in] `nEndFlatPercentage`  
- La percentuale del rettangolo che `FillGradient` collocherà `colorFinish` al termine della sfumatura.  
+ The percentage of the rectangle that `FillGradient` fills with `colorFinish` after it finishes the gradient.  
   
-### <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il `FillGradient` metodo la `CDrawingManager` classe. Questo frammento di codice fa parte di [esempio MS Office 2007 Demo](../../visual-cpp-samples.md).  
+### <a name="example"></a>Example  
+ The following example demonstrates how to use the `FillGradient` method of the `CDrawingManager` class. This code snippet is part of the [MS Office 2007 Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_MSOffice2007Demo #12](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_MSOffice2007Demo#12](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_2.cpp)]  
   
-##  <a name="fillgradient2"></a>CDrawingManager::FillGradient2  
- Riempie l'area rettangolare con una sfumatura di colore specificato.  
+##  <a name="fillgradient2"></a>  CDrawingManager::FillGradient2  
+ Fills a rectangular area with a specified color gradient.  
   
 ```  
 void FillGradient2 (
@@ -456,29 +480,29 @@ void FillGradient2 (
     int nAngle = 0);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `rect`  
- L'area rettangolare da riempire.  
+ The rectangular area to fill.  
   
  [in] `colorStart`  
- Il primo colore della sfumatura.  
+ The first color of the gradient.  
   
  [in] `colorFinish`  
- L'ultimo colore della sfumatura.  
+ The last color of the gradient.  
   
  [in] `nAngle`  
- Numero intero compreso tra 0 e 360. Questo parametro specifica la direzione della sfumatura di colore.  
+ An integer between 0 and 360. This parameter specifies the direction of the color gradient.  
   
-### <a name="remarks"></a>Note  
- Utilizzare `nAngle` per specificare la direzione della sfumatura di colore. Quando si specifica la direzione della sfumatura di colore, è inoltre specificare in cui inizia la sfumatura di colore. Il valore 0 per `nAngle` indica la sfumatura inizia dalla parte superiore del rettangolo. Come `nAngle` aumenta, la posizione iniziale della sfumatura sposta in senso antiorario in base all'angolo.  
+### <a name="remarks"></a>Remarks  
+ Use `nAngle` to specify the direction of the color gradient. When you specify the direction of the color gradient, you also specify where the color gradient starts. A value of 0 for `nAngle` indicates the gradient starts from the top of the rectangle. As `nAngle` increases, the starting location for the gradient moves in a counter-clockwise direction based on the angle.  
   
-### <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il `FillGradient2` metodo la `CDrawingManager` classe. Questo frammento di codice fa parte di [esempio nuovi controlli](../../visual-cpp-samples.md).  
+### <a name="example"></a>Example  
+ The following example demonstrates how to use the `FillGradient2` method of the `CDrawingManager` class. This code snippet is part of the [New Controls sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_NewControls #37](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_3.cpp)]  
+ [!code-cpp[NVC_MFC_NewControls#37](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_3.cpp)]  
   
-##  <a name="grayrect"></a>CDrawingManager::GrayRect  
- Riempimento di un rettangolo con un colore grigio specificato.  
+##  <a name="grayrect"></a>  CDrawingManager::GrayRect  
+ Fills a rectangle with a specified gray color.  
   
 ```  
 BOOL GrayRect(
@@ -488,29 +512,29 @@ BOOL GrayRect(
     COLORREF clrDisabled = (COLORREF)-1);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `rect`  
- L'area rettangolare da riempire.  
+ The rectangular area to fill.  
   
  [in] `nPercentage`  
- La percentuale di grigio desiderato nel rettangolo.  
+ The percentage of gray you want in the rectangle.  
   
  [in] `clrTransparent`  
- Colore trasparente.  
+ The transparent color.  
   
  [in] `clrDisabled`  
- Il colore utilizzato da questo metodo per la saturazione se `nPercentage` è impostato su -1.  
+ The color that this method uses for de-saturation if `nPercentage` is set to -1.  
   
-### <a name="return-value"></a>Valore restituito  
- `TRUE`Se il metodo ha esito positivo. in caso contrario `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the method was successful; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Note  
- Per il parametro `nPercentage`, un valore inferiore indica un colore più scuro.  
+### <a name="remarks"></a>Remarks  
+ For the parameter `nPercentage`, a lower value indicates a darker color.  
   
- Il valore massimo per `nPercentage` è 200. Un valore maggiore di 200 non modifica l'aspetto del rettangolo. Se il valore è -1, questo metodo utilizza `clrDisabled` per limitare la saturazione del rettangolo.  
+ The maximum value for `nPercentage` is 200. A value larger than 200 does not change the appearance of the rectangle. If the value is -1, this method uses `clrDisabled` to limit the saturation of the rectangle.  
   
-##  <a name="highlightrect"></a>CDrawingManager::HighlightRect  
- Evidenzia un'area rettangolare.  
+##  <a name="highlightrect"></a>  CDrawingManager::HighlightRect  
+ Highlights a rectangular area.  
   
 ```  
 BOOL HighlightRect(
@@ -521,32 +545,32 @@ BOOL HighlightRect(
     COLORREF clrBlend = (COLORREF)-1);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `rect`  
- Un'area rettangolare per mettere in evidenza.  
+ A rectangular area to highlight.  
   
  [in] `nPercentage`  
- Una percentuale che indica la modalità transparent deve essere l'evidenziazione.  
+ A percentage that indicates how transparent the highlight should be.  
   
  [in] `clrTransparent`  
- Colore trasparente.  
+ The transparent color.  
   
  [in] `nTolerance`  
- Valore intero compreso tra 0 e 255 che indica la tolleranza di colore.  
+ An integer between 0 and 255 that indicates the color tolerance.  
   
  [in] `clrBlend`  
- Il colore di base per la sfumatura.  
+ The base color for blending.  
   
-### <a name="return-value"></a>Valore restituito  
- `TRUE`Se il metodo ha esito positivo; in caso contrario `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the method is successful; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Note  
- Se `nPercentage` è compreso tra 0 e 99, `HighlightRect` utilizza alfa dell'algoritmo di sfumatura. Per ulteriori informazioni su la fusione alfa, vedere [alfa fusione linee e riempimenti](/dotnet/framework/winforms/advanced/alpha-blending-lines-and-fills). Se `nPercentage` è -1, questo metodo utilizza il livello di evidenziazione predefinito. Se `nPercentage` è 100, questo metodo non esegue alcuna operazione e restituisce `TRUE`.  
+### <a name="remarks"></a>Remarks  
+ If `nPercentage` is between 0 and 99, `HighlightRect` uses the alpha blending algorithm. For more information about alpha blending, see [Alpha Blending Lines and Fills](/dotnet/framework/winforms/advanced/alpha-blending-lines-and-fills). If `nPercentage` is -1, this method uses the default highlight level. If `nPercentage` is 100, this method does nothing and returns `TRUE`.  
   
- Il metodo utilizza il parametro `nTolerance` per determinare se si desidera evidenziare l'area rettangolare. Per evidenziare il rettangolo, la differenza tra il colore di sfondo dell'applicazione e `clrTransparent` deve essere minore di `nTolerance` in ogni componente di colore (rosso, verde e blu).  
+ The method uses the parameter `nTolerance` to determine whether to highlight the rectangular area. To highlight the rectangle, the difference between the background color of your application and `clrTransparent` must be less than `nTolerance` in each color component (red, green, and blue).  
   
-##  <a name="hlstorgb_one"></a>CDrawingManager::HLStoRGB_ONE  
- Converte un colore da una rappresentazione HLS in una rappresentazione RGB.  
+##  <a name="hlstorgb_one"></a>  CDrawingManager::HLStoRGB_ONE  
+ Converts a color from a HLS representation to a RGB representation.  
   
 ```  
 static COLORREF __stdcall HLStoRGB_ONE(
@@ -555,26 +579,26 @@ static COLORREF __stdcall HLStoRGB_ONE(
     double S);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `H`  
- Un numero compreso tra 0 e 1 che rappresenta la tonalità del colore.  
+ A number between 0 and 1 that represents the hue for the color.  
   
  [in] `L`  
- Un numero compreso tra 0 e 1 che indica la luminosità del colore.  
+ A number between 0 and 1 that indicates the luminosity for the color.  
   
  [in] `S`  
- Un numero compreso tra 0 e 1 che indica la saturazione del colore.  
+ A number between 0 and 1 that indicates the saturation for the color.  
   
-### <a name="return-value"></a>Valore restituito  
- La rappresentazione RGB dei colori HLS forniti.  
+### <a name="return-value"></a>Return Value  
+ The RGB representation of the HLS color provided.  
   
-### <a name="remarks"></a>Note  
- Un colore può essere rappresentato come HSV (tonalità, saturazione e valore), HSL (tonalità, saturazione e luminosità) o RGB (rosso, verde e blu). Per ulteriori informazioni sulle diverse rappresentazioni di colore, vedere [colore](http://go.microsoft.com/fwlink/linkid=119126).  
+### <a name="remarks"></a>Remarks  
+ A color can be represented as HSV (hue, saturation, and value), HSL (hue, saturation, and luminosity), or RGB (red, green, and blue). For more information about the different representations of color, see [Color](http://go.microsoft.com/fwlink/linkid=119126).  
   
- Questo metodo e `CDrawingManager::HLStoRGB_TWO` metodo eseguono la stessa operazione, ma vengono richiesti valori diversi per il `H` parametro. In questo metodo, `H` è una percentuale del cerchio. Nel `CDrawingManager::HLStoRGB_TWO` metodo `H` è un valore compreso tra 0 e 360, che rappresentano rosso. Ad esempio, con `HLStoRGB_ONE`, il valore 0.25 per `H` è equivalente a un valore pari a 90 con `HLStoRGB_TWO`.  
+ This method and the `CDrawingManager::HLStoRGB_TWO` method perform the same operation, but require different values for the `H` parameter. In this method, `H` is a percentage of the circle. In the `CDrawingManager::HLStoRGB_TWO` method, `H` is a degree value between 0 and 360, which both represent red. For example, with `HLStoRGB_ONE`, a value of 0.25 for `H` is equivalent to a value of 90 with `HLStoRGB_TWO`.  
   
-##  <a name="hlstorgb_two"></a>CDrawingManager::HLStoRGB_TWO  
- Converte un colore da una rappresentazione HLS in una rappresentazione RGB.  
+##  <a name="hlstorgb_two"></a>  CDrawingManager::HLStoRGB_TWO  
+ Converts a color from a HLS representation to a RGB representation.  
   
 ```  
 static COLORREF __stdcall HLStoRGB_TWO(
@@ -583,26 +607,26 @@ static COLORREF __stdcall HLStoRGB_TWO(
     double S);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `H`  
- Un numero compreso tra 0 e 360 che rappresenta la tonalità del colore.  
+ A number between 0 and 360 that represents the hue for the color.  
   
  [in] `L`  
- Un numero compreso tra 0 e 1 che indica la luminosità del colore.  
+ A number between 0 and 1 that indicates the luminosity for the color.  
   
  [in] `S`  
- Un numero compreso tra 0 e 1 che indica la saturazione del colore.  
+ A number between 0 and 1 that indicates the saturation for the color.  
   
-### <a name="return-value"></a>Valore restituito  
- La rappresentazione RGB dei colori HLS forniti.  
+### <a name="return-value"></a>Return Value  
+ The RGB representation of the HLS color provided.  
   
-### <a name="remarks"></a>Note  
- Un colore può essere rappresentato come HSV (tonalità, saturazione e valore), HSL (tonalità, saturazione e luminosità) o RGB (rosso, verde e blu). Per ulteriori informazioni sulle diverse rappresentazioni di colore, vedere [colore](http://go.microsoft.com/fwlink/linkid=119126).  
+### <a name="remarks"></a>Remarks  
+ A color can be represented as HSV (hue, saturation, and value), HSL (hue, saturation, and luminosity), or RGB (red, green, and blue). For more information about the different representations of color, see [Color](http://go.microsoft.com/fwlink/linkid=119126).  
   
- Questo metodo e [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one) metodo eseguono la stessa operazione, ma vengono richiesti valori diversi per il `H` parametro. In questo metodo, `H` è un valore compreso tra 0 e 360, che rappresentano rosso. Nel [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one) metodo `H` è una percentuale del cerchio. Ad esempio, con `HLStoRGB_ONE`, il valore 0.25 per `H` è equivalente a un valore pari a 90 con `HLStoRGB_TWO`.  
+ This method and the [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one) method perform the same operation, but require different values for the `H` parameter. In this method, `H` is a degree value between 0 and 360, which both represent red. In the [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one) method, `H` is a percentage of the circle. For example, with `HLStoRGB_ONE`, a value of 0.25 for `H` is equivalent to a value of 90 with `HLStoRGB_TWO`.  
   
-##  <a name="hsvtorgb"></a>CDrawingManager::HSVtoRGB  
- Converte un colore da una rappresentazione HSV in una rappresentazione RGB.  
+##  <a name="hsvtorgb"></a>  CDrawingManager::HSVtoRGB  
+ Converts a color from a HSV representation to a RGB representation.  
   
 ```  
 static COLORREF __stdcall HSVtoRGB(
@@ -611,23 +635,23 @@ static COLORREF __stdcall HSVtoRGB(
     double V);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Parametro|Descrizione|  
-|[in] `H`|Un numero compreso tra 0 e 360 che indica la tonalità del colore.|  
-|[in] `S`|Un numero compreso tra 0 e 1 che indica la saturazione del colore.|  
-|[in] `V`|Un numero compreso tra 0 e 1 che indica il valore per il colore.|  
+|Parameter|Description|  
+|[in] `H`|A number between 0 and 360 that indicates the hue for the color.|  
+|[in] `S`|A number between 0 and 1 that indicates the saturation for the color.|  
+|[in] `V`|A number between 0 and 1 that indicates the value for the color.|  
   
-### <a name="return-value"></a>Valore restituito  
- La rappresentazione RGB dei colori HSV forniti.  
+### <a name="return-value"></a>Return Value  
+ The RGB representation of the HSV color provided.  
   
-### <a name="remarks"></a>Note  
- Un colore può essere rappresentato come HSV (tonalità, saturazione e valore), HSL (tonalità, saturazione e luminosità) o RGB (rosso, verde e blu). Per ulteriori informazioni sulle diverse rappresentazioni di colore, vedere [colore](http://go.microsoft.com/fwlink/linkid=119126).  
+### <a name="remarks"></a>Remarks  
+ A color can be represented as HSV (hue, saturation, and value), HSL (hue, saturation, and luminosity), or RGB (red, green, and blue). For more information about the different representations of color, see [Color](http://go.microsoft.com/fwlink/linkid=119126).  
   
-##  <a name="huetorgb"></a>CDrawingManager::HuetoRGB  
- Converte un valore di tonalità di un componente rosso, verde o blu.  
+##  <a name="huetorgb"></a>  CDrawingManager::HuetoRGB  
+ Converts a hue value to a red, green, or blue component.  
   
 ```  
 static double __stdcall HuetoRGB(
@@ -642,32 +666,32 @@ static BYTE __stdcall HueToRGB(
     float rh);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `m1`  
- Vedere la sezione Osservazioni.  
+ See Remarks.  
   
  [in] `m2`  
- Vedere la sezione Osservazioni.  
+ See Remarks.  
   
  [in] `h`  
- Vedere la sezione Osservazioni.  
+ See Remarks.  
   
  [in] `rm1`  
- Vedere la sezione Osservazioni.  
+ See Remarks.  
   
  [in] `rm2`  
- Vedere la sezione Osservazioni.  
+ See Remarks.  
   
  [in] `rh`  
- Vedere la sezione Osservazioni.  
+ See Remarks.  
   
-### <a name="return-value"></a>Valore restituito  
- Il componente rosso, verde o blu singoli relativo alla tonalità fornito.  
+### <a name="return-value"></a>Return Value  
+ The individual red, green, or blue component for the provided hue.  
   
-### <a name="remarks"></a>Note  
- Questo metodo è un metodo helper che il `CDrawingManager` utilizzato per calcolare i singoli componenti rossi, verde e blu di un colore in una rappresentazione HSV o HSL dalla classe. Questo metodo non è progettato per essere chiamato direttamente dal programmatore. I parametri di input sono valori che variano a seconda dell'algoritmo di conversione.  
+### <a name="remarks"></a>Remarks  
+ This method is a helper method that the `CDrawingManager` class uses to compute the individual red, green, and blue components of a color in a HSV or HSL representation. This method is not designed to be called directly by the programmer. The input parameters are values that depend on the conversion algorithm.  
   
- Per convertire un colore HSV o HSL in una rappresentazione RGB, chiamare uno dei metodi seguenti:  
+ To convert a HSV or HSL color to a RGB representation, call one of the following methods:  
   
 - [CDrawingManager::HSVtoRGB](#hsvtorgb)  
   
@@ -675,8 +699,8 @@ static BYTE __stdcall HueToRGB(
   
 - [CDrawingManager::HLStoRGB_TWO](#hlstorgb_two)  
   
-##  <a name="mirrorrect"></a>CDrawingManager::MirrorRect  
- Capovolge un'area rettangolare.  
+##  <a name="mirrorrect"></a>  CDrawingManager::MirrorRect  
+ Flips a rectangular area.  
   
 ```  
 void MirrorRect(
@@ -684,18 +708,18 @@ void MirrorRect(
     BOOL bHorz = TRUE);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `rect`  
- Il rettangolo di delimitazione dell'area da capovolgere.  
+ The bounding rectangle of the area to flip.  
   
  [in] `bHorz`  
- Un parametro booleano che indica se il rettangolo consente di capovolgere orizzontalmente o verticalmente.  
+ A Boolean parameter that indicates whether the rectangle flips horizontally or vertically.  
   
-### <a name="remarks"></a>Note  
- Questo metodo è possibile passare qualsiasi area del contesto del dispositivo di proprietà di `CDrawingManager` classe. Se `bHorz` è impostato su `TRUE`, questo metodo consente di capovolgere l'area orizzontalmente. In caso contrario, capovolge verticalmente l'area.  
+### <a name="remarks"></a>Remarks  
+ This method can flip any area of the device context owned by the `CDrawingManager` class. If `bHorz` is set to `TRUE`, this method flips the area horizontally. Otherwise, it flips the area vertically.  
   
-##  <a name="pixelalpha"></a>CDrawingManager::PixelAlpha  
- Calcola il colore finale per un pixel semitrasparente.  
+##  <a name="pixelalpha"></a>  CDrawingManager::PixelAlpha  
+ Calculates the final color for a semitransparent pixel.  
   
 ```  
 static COLORREF __stdcall PixelAlpha(
@@ -714,35 +738,35 @@ static COLORREF __stdcall PixelAlpha(
     int percent);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `srcPixel`  
- Colore iniziale per il pixel.  
+ The initial color for the pixel.  
   
  [in] `percent`  
- Un numero compreso tra 0 e 100 che rappresenta la percentuale di trasparenza. Un valore pari a 100 indica che il colore iniziale è completamente trasparente.  
+ A number between 0 and 100 that represents the percentage of transparency. A value of 100 indicates that the initial color is completely transparent.  
   
  [in] `percentR`  
- Un numero compreso tra 0 e 100 che rappresenta la percentuale di trasparenza per il componente rosso.  
+ A number between 0 and 100 that represents the percentage of transparency for the red component.  
   
  [in] `percentG`  
- Un numero compreso tra 0 e 100 che rappresenta la percentuale di trasparenza per il componente verde.  
+ A number between 0 and 100 that represents the percentage of transparency for the green component.  
   
  [in] `percentB`  
- Un numero compreso tra 0 e 100 che rappresenta la percentuale di trasparenza per il componente blu.  
+ A number between 0 and 100 that represents the percentage of transparency for the blue component.  
   
  [in] `dstPixel`  
- Il colore di base per il pixel.  
+ The base color for the pixel.  
   
-### <a name="return-value"></a>Valore restituito  
- Colore finale per il pixel semitrasparente.  
+### <a name="return-value"></a>Return Value  
+ The final color for the semitransparent pixel.  
   
-### <a name="remarks"></a>Note  
- Questa è una classe helper per colorare semitrasparente bitmap e non è progettata per essere chiamato direttamente dal programmatore.  
+### <a name="remarks"></a>Remarks  
+ This is a helper class for coloring semitransparent bitmaps and is not designed to be called directly by the programmer.  
   
- Quando si utilizza la versione del metodo che ha `dstPixel`, il colore finale è una combinazione di `dstPixel` e `srcPixel`. Il `srcPixel` è il colore trasparente parzialmente sul colore di base `dstPixel`.  
+ When you use the version of the method that has `dstPixel`, the final color is a combination of `dstPixel` and `srcPixel`. The `srcPixel` color is the partially transparent color over the base color of `dstPixel`.  
   
-##  <a name="prepareshadowmask"></a>CDrawingManager::PrepareShadowMask  
- Crea una bitmap che può essere utilizzata come un'ombreggiatura.  
+##  <a name="prepareshadowmask"></a>  CDrawingManager::PrepareShadowMask  
+ Creates a bitmap that can be used as a shadow.  
   
 ```  
 static HBITMAP __stdcall PrepareShadowMask (
@@ -752,27 +776,27 @@ static HBITMAP __stdcall PrepareShadowMask (
     int iMaxBrightness = 100);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `nDepth`  
- La larghezza e l'altezza dell'ombreggiatura.  
+ The width and height of the shadow.  
   
  [in] `clrBase`  
- Colore dell'ombreggiatura.  
+ The color of the shadow.  
   
  [in] `iMinBrightness`  
- La luminosità minima dell'ombreggiatura.  
+ The minimum brightness of the shadow.  
   
  [in] `iMaxBrightness`  
- La luminosità massima dell'ombreggiatura.  
+ The maximum brightness of the shadow.  
   
-### <a name="return-value"></a>Valore restituito  
- Un handle per la bitmap creata se questo metodo dà esito positivo. in caso contrario `NULL`.  
+### <a name="return-value"></a>Return Value  
+ A handle to the created bitmap if this method is successful; otherwise `NULL`.  
   
-### <a name="remarks"></a>Note  
- Se `nDepth` è impostato su 0, questo metodo viene chiusa e restituisce `NULL`. Se `nDepth` è inferiore a 3, la larghezza e l'altezza dell'ombreggiatura vengono impostati su 3 pixel.  
+### <a name="remarks"></a>Remarks  
+ If `nDepth` is set to 0, this method exits and returns `NULL`. If `nDepth` is less than 3, the width and height of the shadow are set to 3 pixels.  
   
-##  <a name="rgbtohsl"></a>CDrawingManager::RGBtoHSL  
- Converte un colore da una rappresentazione di colore rossa, verde e blu (RGB) in una tonalità, saturazione e rappresentazione luminosità (HSL).  
+##  <a name="rgbtohsl"></a>  CDrawingManager::RGBtoHSL  
+ Converts a color from a red, green, and blue (RGB) representation to a hue, saturation, and lightness (HSL) representation.  
   
 ```  
 static void __stdcall RGBtoHSL(
@@ -782,23 +806,23 @@ static void __stdcall RGBtoHSL(
     double* L);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Parametro|Descrizione|  
-|[in] `rgb`|Il colore in valori RGB.|  
-|[out] `H`|Puntatore a un valore double in cui il metodo memorizza la tonalità del colore.|  
-|[out] `S`|Puntatore a un valore double in cui il metodo memorizza la saturazione del colore.|  
-|[out] `L`|Puntatore a un valore double in cui il metodo memorizza la luminosità del colore.|  
+|Parameter|Description|  
+|[in] `rgb`|The color in RGB values.|  
+|[out] `H`|A pointer to a double where the method stores the hue for the color.|  
+|[out] `S`|A pointer to a double where the method stores the saturation for the color.|  
+|[out] `L`|A pointer to a double where the method stores the lightness for the color.|  
   
-### <a name="remarks"></a>Note  
- Un colore può essere rappresentato come HSV (tonalità, saturazione e valore), HSL (tonalità, saturazione e luminosità) o RGB (rosso, verde e blu). Per ulteriori informazioni sulle diverse rappresentazioni di colore, vedere [colore](http://go.microsoft.com/fwlink/linkid=119126).  
+### <a name="remarks"></a>Remarks  
+ A color can be represented as HSV (hue, saturation, and value), HSL (hue, saturation, and luminosity), or RGB (red, green, and blue). For more information about the different representations of color, see [Color](http://go.microsoft.com/fwlink/linkid=119126).  
   
- Il valore restituito per `H` è rappresentata come frazione tra 0 e 1 in 0 e 1 rappresentano entrambi rosso. I valori restituiti per `S` e `L` sono numeri compresi tra 0 e 1.  
+ The returned value for `H` is represented as a fraction between 0 and 1 where both 0 and 1 represent red. The returned values for `S` and `L` are numbers between 0 and 1.  
   
-##  <a name="rgbtohsv"></a>CDrawingManager::RGBtoHSV  
- Converte un colore da una rappresentazione RGB in una rappresentazione HSV.  
+##  <a name="rgbtohsv"></a>  CDrawingManager::RGBtoHSV  
+ Converts a color from a RGB representation to a HSV representation.  
   
 ```  
 static void __stdcall RGBtoHSV(
@@ -808,26 +832,26 @@ static void __stdcall RGBtoHSV(
     double* V);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `rgb`  
- Il colore da convertire in una rappresentazione RGB.  
+ The color to convert in a RGB representation.  
   
  [out] `H`  
- Puntatore a un valore double in cui questo metodo archivia la tonalità del colore risulta.  
+ A pointer to a double where this method stores the resulting hue for the color.  
   
  [out] `S`  
- Puntatore a un valore double in cui questo metodo archivia la saturazione del colore risulta.  
+ A pointer to a double where this method stores the resulting saturation for the color.  
   
  [out] `V`  
- Puntatore a un valore double in cui questo metodo archivia il valore per il colore risultante.  
+ A pointer to a double where this method stores the resulting value for the color.  
   
-### <a name="remarks"></a>Note  
- Un colore può essere rappresentato come HSV (tonalità, saturazione e valore), HSL (tonalità, saturazione e luminosità) o RGB (rosso, verde e blu). Per ulteriori informazioni sulle diverse rappresentazioni di colore, vedere [colore](http://go.microsoft.com/fwlink/linkid=119126).  
+### <a name="remarks"></a>Remarks  
+ A color can be represented as HSV (hue, saturation, and value), HSL (hue, saturation, and luminosity), or RGB (red, green, and blue). For more information about the different representations of color, see [Color](http://go.microsoft.com/fwlink/linkid=119126).  
   
- Il valore restituito per `H` è un numero compreso tra 0 e 360, in cui sia 0 e 360 indicare rosso. La restituzione di valori per `S` e `V` sono numeri compresi tra 0 e 1.  
+ The returned value for `H` is a number between 0 and 360 where both 0 and 360 indicate red. The return values for `S` and `V` are numbers between 0 and 1.  
   
-##  <a name="setalphapixel"></a>CDrawingManager::SetAlphaPixel  
- Colori di un pixel in una bitmap trasparenti.  
+##  <a name="setalphapixel"></a>  CDrawingManager::SetAlphaPixel  
+ Colors a transparent pixel in a bitmap.  
   
 ```  
 static void __stdcall SetAlphaPixel(
@@ -841,38 +865,38 @@ static void __stdcall SetAlphaPixel(
     BOOL bIsRight = TRUE);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pBits`  
- Puntatore a valori di bit della bitmap.  
+ A pointer to the bit values for the bitmap.  
   
  [in] `rect`  
- Un'area rettangolare nell'applicazione. Il gestore disegno disegna un'ombreggiatura di sotto e a destra di quest'area.  
+ A rectangular area in your application. The drawing manager draws a shadow underneath and to the right of this area.  
   
  [in] `x`  
- Coordinata orizzontale del pixel colore.  
+ The horizontal coordinate of the pixel to color.  
   
  [in] `y`  
- Coordinata verticale di colore pixel.  
+ The vertical coordinate of the pixel to color.  
   
  [in] `percent`  
- La percentuale di trasparenza.  
+ The percentage of transparency.  
   
  [in] `iShadowSize`  
- La larghezza e l'altezza dell'ombreggiatura.  
+ The width and height of the shadow.  
   
  [in] `clrBase`  
- Colore dell'ombreggiatura.  
+ The color of the shadow.  
   
  [in] `bIsRight`  
- Un parametro booleano che indica quale pixel colore. Per altre informazioni, vedere la sezione Osservazioni.  
+ A Boolean parameter that indicates which pixel to color. See the Remarks section for more information.  
   
-### <a name="remarks"></a>Note  
- Questo metodo è un metodo helper che viene utilizzato il [CDrawingManager::DrawShadow](#drawshadow) metodo. È consigliabile che se si desidera tracciare un'ombreggiatura, chiamare `CDrawingManager::DrawShadow` invece.  
+### <a name="remarks"></a>Remarks  
+ This method is a helper method that is used by the [CDrawingManager::DrawShadow](#drawshadow) method. We recommend that if you want to draw a shadow, call `CDrawingManager::DrawShadow` instead.  
   
- Se `bIsRight` è impostato su `TRUE`, viene misurato il pixel colore `x` pixel dal bordo destro di `rect`. Se è `FALSE`, viene misurato il pixel colore `x` pixel dal bordo sinistro di `rect`.  
+ If `bIsRight` is set to `TRUE`, the pixel to color is measured `x` pixels from the right edge of `rect`. If it is `FALSE`, the pixel to color is measured `x` pixels from the left edge of `rect`.  
   
-##  <a name="setpixel"></a>CDrawingManager::SetPixel  
- Consente di modificare un singolo pixel in una bitmap specificata.  
+##  <a name="setpixel"></a>  CDrawingManager::SetPixel  
+ Changes a single pixel in a bitmap to the specified color.  
   
 ```  
 static void __stdcall SetPixel(
@@ -884,20 +908,20 @@ static void __stdcall SetPixel(
     COLORREF color);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Parametro|Descrizione|  
-|[in] `pBits`|Puntatore a valori di bit della bitmap.|  
-|[in] `cx`|La larghezza totale della bitmap.|  
-|[in] `cy`|L'altezza totale della bitmap.|  
-|[in] `x`|La coordinata x del pixel della bitmap da modificare.|  
-|[in] `y`|Coordinata y del pixel della bitmap da modificare.|  
-|[in] `color`|Il nuovo colore per pixel identificato dalle coordinate fornite.|  
+|Parameter|Description|  
+|[in] `pBits`|A pointer to the bit values of the bitmap.|  
+|[in] `cx`|The total width of the bitmap.|  
+|[in] `cy`|The total height of the bitmap.|  
+|[in] `x`|The x-coordinate of the pixel in the bitmap to change.|  
+|[in] `y`|The y-coordinate of the pixel in the bitmap to change.|  
+|[in] `color`|The new color for the pixel identified by the supplied coordinates.|  
   
-##  <a name="smartmixcolors"></a>CDrawingManager::SmartMixColors  
- Combina due colori in base a un rapporto ponderato.  
+##  <a name="smartmixcolors"></a>  CDrawingManager::SmartMixColors  
+ Combines two colors based on a weighted ratio.  
   
 ```  
 static COLORREF __stdcall SmartMixColors(
@@ -908,27 +932,27 @@ static COLORREF __stdcall SmartMixColors(
     int k2 = 1);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Parametro|Descrizione|  
-|[in] `color1`|Il primo colore da combinare.|  
-|[in] `color2`|Il secondo colore da combinare.|  
-|[in] `dblLumRatio`|Il rapporto per luminosità del colore nuovo. `SmartMixColors`Moltiplica la luminosità del colore misto per questo rapporto prima di determinare il colore finale.|  
-|[in] `k1`|Il rapporto ponderato per il primo colore.|  
-|[in] `k2`|Il rapporto ponderato per il secondo colore.|  
+|Parameter|Description|  
+|[in] `color1`|The first color to mix.|  
+|[in] `color2`|The second color to mix.|  
+|[in] `dblLumRatio`|The ratio for the new color's luminosity. `SmartMixColors` multiplies the luminosity of the mixed color by this ratio before determining a final color.|  
+|[in] `k1`|The weighted ratio for the first color.|  
+|[in] `k2`|The weighted ratio for the second color.|  
   
-### <a name="return-value"></a>Valore restituito  
- Oggetto color che rappresenta una combinazione di Media ponderata dei colori specificati.  
+### <a name="return-value"></a>Return Value  
+ A color that represents a weighted mixture of the supplied colors.  
   
-### <a name="remarks"></a>Note  
- Questo metodo genera un errore se il valore `k1` o `k2` è minore di zero. Se entrambi i parametri vengono impostati su 0, il metodo restituisce `RGB(0, 0, 0)`.  
+### <a name="remarks"></a>Remarks  
+ This method fails with an error if either `k1` or `k2` is less than zero. If both of these parameters are set to 0, the method returns `RGB(0, 0, 0)`.  
   
- Viene calcolato il rapporto ponderato con la seguente formula: (color1 * k1 + color2 \* k2) /(k1 + k2). Dopo aver determinata la percentuale media ponderata, il metodo calcola la luminosità del colore misto. Quindi moltiplica la luminosità da `dblLumRatio`. Se il valore è maggiore di 1.0, il metodo imposta la luminosità per la combinazione di colori per il nuovo valore. In caso contrario, la luminosità è impostata su 1.0.  
+ The weighted ratio is calculated with the following formula:                         (color1 * k1 + color2 \* k2)/(k1 + k2). After the weighted ratio is determined, the method calculates the luminosity for the mixed color. It then multiplies the luminosity by `dblLumRatio`. If the value is larger than 1.0, the method sets the luminosity for the mixed color to the new value. Otherwise, the luminosity is set to 1.0.  
   
-##  <a name="drawrotated"></a>CDrawingManager::DrawRotated  
- Consente di ruotare di 90 gradi un'origine contenuto di controller di dominio all'interno del rettangolo specificato.  
+##  <a name="drawrotated"></a>  CDrawingManager::DrawRotated  
+ Rotates a source DC content inside the given rectangle by 90 degrees.  
   
 ```  
 void DrawRotated(
@@ -937,19 +961,19 @@ void DrawRotated(
     BOOL bClockWise);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `rectDest`  
- Rettangolo di destinazione.  
+ Destination rectangle.  
   
  `dcSrc`  
- Il contesto di dispositivo di origine.  
+ The source device context.  
   
  `bClockWise`  
- `TRUE`indica di rotazione + 90 gradi; `FALSE` indica ruotare-90 gradi.  
+ `TRUE` indicates rotate +90 degrees; `FALSE` indicates rotate -90 degrees.  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>Vedere anche  
- [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
- [Classi](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)
 

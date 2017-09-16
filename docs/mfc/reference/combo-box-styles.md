@@ -1,5 +1,5 @@
 ---
-title: Stili casella combinata | Documenti di Microsoft
+title: Combo-Box Styles | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,19 +25,19 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CBS_OWNERDRAWVARIABLE constant
-- CBS_NOINTEGRALHEIGHT constant
-- CBS_SIMPLE constant
-- CBS_AUTOHSCROLL constant
-- CBS_OEMCONVERT constant
-- CBS_DISABLENOSCROLL constant
-- CBS_HASSTRINGS constant
-- CBS_LOWERCASE constant
-- CBS_SORT constant
-- CBS_DROPDOWN constant
-- CBS_OWNERDRAWFIXED constant
-- combo boxes, styles
-- CBS_UPPERCASE constant
+- CBS_OWNERDRAWVARIABLE constant [MFC]
+- CBS_NOINTEGRALHEIGHT constant [MFC]
+- CBS_SIMPLE constant [MFC]
+- CBS_AUTOHSCROLL constant [MFC]
+- CBS_OEMCONVERT constant [MFC]
+- CBS_DISABLENOSCROLL constant [MFC]
+- CBS_HASSTRINGS constant [MFC]
+- CBS_LOWERCASE constant [MFC]
+- CBS_SORT constant [MFC]
+- CBS_DROPDOWN constant [MFC]
+- CBS_OWNERDRAWFIXED constant [MFC]
+- combo boxes [MFC], styles
+- CBS_UPPERCASE constant [MFC]
 - CBS_DROPDOWNLIST constant
 ms.assetid: d21a5023-e6a2-495b-a6bd-010a515cbc63
 caps.latest.revision: 12
@@ -59,45 +59,45 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: 57069f6e6cd0999773ab3872e671a65e1e880bba
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6ca7dba78b9265110977b18549ffb6207ce9b877
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="combo-box-styles"></a>Stili casella combinata
-I seguenti stili casella combinata sono disponibili in MFC.  
+# <a name="combo-box-styles"></a>Combo-Box Styles
+The following combo-box styles are available in MFC.  
   
--   **CBS_AUTOHSCROLL** Attiva lo scorrimento automatico del testo nel controllo di modifica a destra quando l'utente digita un carattere alla fine della riga. Se non si imposta questo stile, è consentito solo il testo che si adatta al limite rettangolare.  
+-   **CBS_AUTOHSCROLL** Automatically scrolls the text in the edit control to the right when the user types a character at the end of the line. If this style is not set, only text that fits within the rectangular boundary is allowed.  
   
--   **CBS_DISABLENOSCROLL** Nella casella di riepilogo è visualizzata una barra di scorrimento verticale disabilitata quando la casella non contiene abbastanza elementi da scorrere. Senza questo stile, la barra di scorrimento viene nascosta quando la casella di riepilogo non contiene sufficienti elementi.  
+-   **CBS_DISABLENOSCROLL** The list box shows a disabled vertical scroll bar when the list box does not contain enough items to scroll. Without this style, the scroll bar is hidden when the list box does not contain enough items.  
   
--   **CBS_DROPDOWN** Simile a **CBS_SIMPLE**, ad eccezione del fatto che la casella di riepilogo non viene visualizzata a meno che l'utente non selezioni un'icona accanto al controllo di modifica.  
+-   **CBS_DROPDOWN** Similar to **CBS_SIMPLE**, except that the list box is not displayed unless the user selects an icon next to the edit control.  
   
--   **CBS_DROPDOWNLIST** Simile a **CBS_DROPDOWN**, ad eccezione del fatto che il controllo di modifica viene sostituito da un elemento di testo statico che consente di visualizzare la selezione corrente nella casella di riepilogo.  
+-   **CBS_DROPDOWNLIST** Similar to **CBS_DROPDOWN**, except that the edit control is replaced by a static-text item that displays the current selection in the list box.  
   
--   **CBS_HASSTRINGS** Casella combinata creata dal proprietario, contenente elementi formati da stringhe. La casella combinata gestisce la memoria e i puntatori per le stringhe in modo che l'applicazione possa usare la funzione membro `GetText` per recuperare il testo di un particolare elemento.  
+-   **CBS_HASSTRINGS** An owner-draw combo box contains items consisting of strings. The combo box maintains the memory and pointers for the strings so the application can use the `GetText` member function to retrieve the text for a particular item.  
   
--   **CBS_LOWERCASE** Converte in minuscolo tutto il testo nel campo di selezione e nell'elenco.  
+-   **CBS_LOWERCASE** Converts to lowercase all text in both the selection field and the list.  
   
--   **CBS_NOINTEGRALHEIGHT** Specifica che la dimensione della casella combinata è esattamente quella specificata dall'applicazione al momento della relativa creazione. In genere, Windows ridimensiona una casella combinata in modo da evitarne la visualizzazione parziale degli elementi.  
+-   **CBS_NOINTEGRALHEIGHT** Specifies that the size of the combo box is exactly the size specified by the application when it created the combo box. Normally, Windows sizes a combo box so that the combo box does not display partial items.  
   
--   **CBS_OEMCONVERT** Il testo immesso nel controllo di modifica della casella combinata viene convertito dal set di caratteri ANSI al set di caratteri OEM e quindi di nuovo ad ANSI. Ciò assicura la corretta conversione dei caratteri quando l'applicazione chiama la funzione di Windows `AnsiToOem` per convertire una stringa ANSI nella casella combinata in caratteri OEM. Questo stile è più utile per le caselle combinate che contengono i nomi file e si applica solo a caselle combinate create con lo stile **CBS_SIMPLE** o **CBS_DROPDOWN** .  
+-   **CBS_OEMCONVERT** Text entered in the combo-box edit control is converted from the ANSI character set to the OEM character set and then back to ANSI. This ensures proper character conversion when the application calls the `AnsiToOem` Windows function to convert an ANSI string in the combo box to OEM characters. This style is most useful for combo boxes that contain filenames and applies only to combo boxes created with the **CBS_SIMPLE** or **CBS_DROPDOWN** styles.  
   
--   **CBS_OWNERDRAWFIXED** Il proprietario della casella di riepilogo è responsabile della creazione del relativo contenuto. Gli elementi nella casella di riepilogo sono tutti della stessa altezza.  
+-   **CBS_OWNERDRAWFIXED** The owner of the list box is responsible for drawing its contents; the items in the list box are all the same height.  
   
--   **CBS_OWNERDRAWVARIABLE** Il proprietario della casella di riepilogo è responsabile della creazione del relativo contenuto. Gli elementi nella casella di riepilogo sono variabili in altezza.  
+-   **CBS_OWNERDRAWVARIABLE** The owner of the list box is responsible for drawing its contents; the items in the list box are variable in height.  
   
--   **CBS_SIMPLE** La casella di riepilogo viene visualizzata sempre. La selezione corrente nella casella di riepilogo viene visualizzata nel controllo di modifica.  
+-   **CBS_SIMPLE** The list box is displayed at all times. The current selection in the list box is displayed in the edit control.  
   
--   **CBS_SORT** Ordina automaticamente le stringhe immesse nella casella di riepilogo.  
+-   **CBS_SORT** Automatically sorts strings entered into the list box.  
   
--   **CBS_UPPERCASE** Converte in maiuscolo tutto il testo nel campo di selezione e nell'elenco.  
+-   **CBS_UPPERCASE** Converts to uppercase all text in both the selection field and the list.  
   
-## <a name="see-also"></a>Vedere anche  
- [Stili utilizzati da MFC](../../mfc/reference/styles-used-by-mfc.md)   
- [CComboBox::Create] (ccombobox class.md #ccombobox__create   
+## <a name="see-also"></a>See Also  
+ [Styles Used by MFC](../../mfc/reference/styles-used-by-mfc.md)   
+ [CComboBox::Create](ccombobox-class.md#ccombobox__create   
 
 
 

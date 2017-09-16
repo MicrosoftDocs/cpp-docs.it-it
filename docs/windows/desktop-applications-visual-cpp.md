@@ -31,10 +31,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 7e1281daaf729de6935774ba34e2387bf82446e8
-ms.openlocfilehash: 670b8972daa340196aaa18bb65fb976b7c317bd1
+ms.sourcegitcommit: 0286098cb87ecfea244269a8e5756829759b82f7
+ms.openlocfilehash: 95f9e3eb6ca6a87e0ede9ea2f59276a09600d63e
 ms.contentlocale: it-it
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="desktop-applications-visual-c"></a>Desktop Applications (Visual C++)
@@ -42,7 +42,7 @@ A *desktop application* in C++ is a native application that can access the full 
   
  **Terminology**  
   
--   A *Win32* application is a Windows desktop application in C++ can make use of native [Windows C APIs and/or COM APIs](https://msdn.microsoft.com/en-us/library/windows/desktop/ff818516\(v=vs.85\).aspx) CRT and Standard Library  APIs, and 3rd party libraries. A Win32 application that runs in a window requires the developer to work explicitly with Windows messages inside a Windows procedure function. Despite the name, a Win32 application can be compiled as a 32-bit (x86) or 64-bit  (x64) binary. In the Visual Studio IDE, the terms x86 and Win32 are synonymous.  
+-   A *Win32* application is a Windows desktop application in C++ that can make use of native [Windows C APIs and/or COM APIs](https://msdn.microsoft.com/en-us/library/windows/desktop/ff818516\(v=vs.85\).aspx) CRT and Standard Library  APIs, and 3rd party libraries. A Win32 application that runs in a window requires the developer to work explicitly with Windows messages inside a Windows procedure function. Despite the name, a Win32 application can be compiled as a 32-bit (x86) or 64-bit  (x64) binary. In the Visual Studio IDE, the terms x86 and Win32 are synonymous.  
   
 -   The [Component Object Model (COM)](https://msdn.microsoft.com/en-us/library/windows/desktop/ms694363\(v=vs.85\).aspx) is a specification that enables programs written in different languages to communicate with one another. Many Windows components are implemented as COM objects and follow standard COM rules for object creation, interface discovery and object destruction.  Using COM objects from C++ desktop applications is relatively straightforward, but writing your own COM object is more advanced. The [Active Template Library (ATL)](../atl/atl-com-desktop-components.md) provides macros and helper functions that simplify COM development.  
   

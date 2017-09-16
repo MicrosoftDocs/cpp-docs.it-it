@@ -1,63 +1,82 @@
 ---
-title: "Windows Sockets: blocco | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "socket in modalità blocco"
-  - "socket [C++], comportamento su piattaforme Windows diverse"
-  - "socket [C++], modalità blocco"
-  - "Windows Sockets [C++], modalità blocco"
-  - "Windows Sockets [C++], piattaforme Windows"
+title: 'Windows Sockets: Blocking | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- sockets [MFC], blocking mode
+- Windows Sockets [MFC], Windows platforms
+- Windows Sockets [MFC], blocking mode
+- sockets [MFC], behavior on different Windows platforms
+- blocking mode sockets
 ms.assetid: 10aca9b1-bfba-41a8-9c55-ea8082181e63
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Windows Sockets: blocco
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6f327f551e238f644962b47c26c60632dd0aaf67
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-In questo articolo e nei due articoli correlati vengono illustrati i diversi problemi nella programmazione Windows Sockets.  Questo articolo descrive il blocco.  Gli altri problemi vengono analizzati negli articoli: [Windows Sockets: ordinamento dei byte](../mfc/windows-sockets-byte-ordering.md) e [Windows Sockets: conversione di stringhe](../mfc/windows-sockets-converting-strings.md).  
+---
+# <a name="windows-sockets-blocking"></a>Windows Sockets: Blocking
+This article and two companion articles explain several issues in Windows Sockets programming. This article covers blocking. The other issues are covered in the articles: [Windows Sockets: Byte Ordering](../mfc/windows-sockets-byte-ordering.md) and [Windows Sockets: Converting Strings](../mfc/windows-sockets-converting-strings.md).  
   
- Se si utilizza o si deriva dalla classe [CAsyncSocket](../mfc/reference/casyncsocket-class.md), sarà necessario gestire questi problemi.  Se si utilizza o si deriva dalla classe [CSocket](../mfc/reference/csocket-class.md), MFC li gestisce automaticamente.  
+ If you use or derive from class [CAsyncSocket](../mfc/reference/casyncsocket-class.md), you will need to manage these issues yourself. If you use or derive from class [CSocket](../mfc/reference/csocket-class.md), MFC manages them for you.  
   
-## Blocco  
- Un socket può essere in "modalità bloccante" o in "modalità non bloccante". Le funzioni dei sockets in modalità bloccante \(o sincrona\) non ritornano finché non possano completare la loro azione.  Si parla in questo caso di blocco perché il socket, la cui funzione è stata chiamata, non può eseguire nessuna operazione \(è bloccato\) finché la chiamata non ritorna.  Una chiamata alla funzione membro **Receive**, ad esempio, potrebbe richiedere un tempo arbitrariamente lungo per il completamento poiché deve attendere l'invio dall'applicazione mittente \(se si utilizza `CSocket`, oppure `CAsyncSocket` con il blocco\).  Se un oggetto `CAsyncSocket` è in modalità non bloccante \(opera in modo asincrono\), la chiamata ritorna immediatamente e il codice di errore corrente, recuperabile con la funzione membro [GetLastError](../Topic/CAsyncSocket::GetLastError.md), è **WSAEWOULDBLOCK**, che indica che la chiamata lo avrebbe bloccato se non fosse ritornato immediatamente a causa della modalità. \(`CSocket` non restituisce mai **WSAEWOULDBLOCK**.  La classe gestisce automaticamente il blocco.\)  
+## <a name="blocking"></a>Blocking  
+ A socket can be in "blocking mode" or "nonblocking mode." The functions of sockets in blocking (or synchronous) mode do not return until they can complete their action. This is called blocking because the socket whose function was called cannot do anything — is blocked — until the call returns. A call to the **Receive** member function, for example, might take an arbitrarily long time to complete as it waits for the sending application to send (this is if you are using `CSocket`, or using `CAsyncSocket` with blocking). If a `CAsyncSocket` object is in nonblocking mode (operating asynchronously), the call returns immediately and the current error code, retrievable with the [GetLastError](../mfc/reference/casyncsocket-class.md#getlasterror) member function, is **WSAEWOULDBLOCK**, indicating that the call would have blocked had it not returned immediately because of the mode. (`CSocket` never returns **WSAEWOULDBLOCK**. The class manages blocking for you.)  
   
- Il comportamento dei socket è diverso nei sistemi operativi a 32 e 64 bit \(quali Windows 95 o Windows 98\) rispetto ai sistemi operativi a 16 bit \(quali Windows 3.1\).  A differenza dei sistemi operativi a 16 bit, i sistemi operativi a 32 e 64 bit utilizzano il multitasking di tipo preemptive e forniscono il multithreading.  Nella versione dei sistemi operativi a 32 e 64 bit, è possibile inserire i socket in thread di lavoro distinti.  Un socket in un thread può bloccarsi senza interferire con le altre attività dell'applicazione e senza impiegare il tempo di calcolo nel blocco.  Per informazioni sulla programmazione multithreading, vedere l'articolo [Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).  
+ The behavior of sockets is different under 32-bit and 64-bit operating systems (such as Windows 95 or Windows 98) than under 16-bit operating systems (such as Windows 3.1). Unlike 16-bit operating systems, the 32-bit and 64-bit operating systems use preemptive multitasking and provide multithreading. Under the 32-bit and 64-bit operating systems, you can put your sockets in separate worker threads. A socket in a thread can block without interfering with other activities in your application and without spending compute time on the blocking. For information on multithreaded programming, see the article [Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).  
   
 > [!NOTE]
->  Nelle applicazioni multithreading, è possibile utilizzare la natura del blocco di `CSocket` per semplificare la progettazione del programma senza influenzare la velocità di risposta dell'interfaccia utente.  Gestendo le interazioni utente nel thread principale e l'elaborazione di `CSocket` in thread differenti, è possibile separare queste operazioni logiche.  In un'applicazione che non è multithreading, queste due attività devono essere combinate e gestite come un singolo thread, che usualmente significa utilizzare `CAsyncSocket` in modo da poter gestire le richieste di comunicazione su richiesta oppure eseguire l'override di `CSocket::OnMessagePending` per gestire le azioni dell'utente durante un'attività sincrona di lunga durata.  
+>  In multithreaded applications, you can use the blocking nature of `CSocket` to simplify your program's design without affecting the responsiveness of the user interface. By handling user interactions in the main thread and `CSocket` processing in alternate threads, you can separate these logical operations. In an application that is not multithreaded, these two activities must be combined and handled as a single thread, which usually means using `CAsyncSocket` so you can handle communications requests on demand, or overriding `CSocket::OnMessagePending` to handle user actions during lengthy synchronous activity.  
   
- Il resto di questa discussione è rivolto ai programmatori che utilizzano sistemi operativi a 16 bit:  
+ The rest of this discussion is for programmers targeting 16-bit operating systems:  
   
- In genere, se si utilizza `CAsyncSocket`, è consigliabile eseguire operazioni asincrone anziché utilizzare operazioni bloccanti.  Nelle operazioni asincrone, dal punto in cui viene ricevuto un codice di errore **WSAEWOULDBLOCK** dopo aver chiamato **Receive**, ad esempio, si attende finché la funzione membro `OnReceive` non viene chiamata per indicare che è possibile leggere nuovamente.  Le chiamate asincrone vengono eseguite chiamando la funzione di notifica di callback appropriata del socket, come [OnReceive](../Topic/CAsyncSocket::OnReceive.md).  
+ Normally, if you are using `CAsyncSocket`, you should avoid using blocking operations and operate asynchronously instead. In asynchronous operations, from the point at which you receive a **WSAEWOULDBLOCK** error code after calling **Receive**, for example, you wait until your `OnReceive` member function is called to notify you that you can read again. Asynchronous calls are made by calling back your socket's appropriate callback notification function, such as [OnReceive](../mfc/reference/casyncsocket-class.md#onreceive).  
   
- In Windows, le chiamate bloccanti sono considerate non corrette.  Per impostazione predefinita, [CAsyncSocket](../mfc/reference/casyncsocket-class.md) supporta le chiamate asincrone ed è necessario gestire il blocco manualmente utilizzando le notifiche di callback.  La classe [CSocket](../mfc/reference/csocket-class.md) è invece sincrona.  Immette i messaggi di Windows e gestisce il blocco automaticamente.  
+ Under Windows, blocking calls are considered bad practice. By default, [CAsyncSocket](../mfc/reference/casyncsocket-class.md) supports asynchronous calls, and you must manage the blocking yourself using callback notifications. Class [CSocket](../mfc/reference/csocket-class.md), on the other hand, is synchronous. It pumps Windows messages and manages blocking for you.  
   
- Per ulteriori informazioni sul blocco, vedere la specifica di Windows Sockets.  Per ulteriori informazioni sulle funzioni "On", vedere [Windows Sockets: notifiche socket](../mfc/windows-sockets-socket-notifications.md) e [Windows Sockets: derivazione dalle classi Socket](../mfc/windows-sockets-deriving-from-socket-classes.md).  
+ For more information about blocking, see the Windows Sockets specification. For more information about "On" functions, see [Windows Sockets: Socket Notifications](../mfc/windows-sockets-socket-notifications.md) and [Windows Sockets: Deriving from Socket Classes](../mfc/windows-sockets-deriving-from-socket-classes.md).  
   
- Per ulteriori informazioni, vedere:  
+ For more information, see:  
   
--   [Windows Sockets: utilizzo della classe CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
+-   [Windows Sockets: Using Class CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
   
--   [Windows Sockets: utilizzo di socket con archivi](../mfc/windows-sockets-using-sockets-with-archives.md)  
+-   [Windows Sockets: Using Sockets with Archives](../mfc/windows-sockets-using-sockets-with-archives.md)  
   
--   [Windows Sockets: sfondo](../mfc/windows-sockets-background.md)  
+-   [Windows Sockets: Background](../mfc/windows-sockets-background.md)  
   
--   [Windows Sockets: socket di flusso](../mfc/windows-sockets-stream-sockets.md)  
+-   [Windows Sockets: Stream Sockets](../mfc/windows-sockets-stream-sockets.md)  
   
--   [Windows Sockets: socket di datagramma](../mfc/windows-sockets-datagram-sockets.md)  
+-   [Windows Sockets: Datagram Sockets](../mfc/windows-sockets-datagram-sockets.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)   
- [CAsyncSocket::OnSend](../Topic/CAsyncSocket::OnSend.md)
+ [CAsyncSocket::OnSend](../mfc/reference/casyncsocket-class.md#onsend)
+
+

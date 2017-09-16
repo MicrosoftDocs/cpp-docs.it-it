@@ -1,5 +1,5 @@
 ---
-title: Struttura CDaoIndexInfo | Documenti di Microsoft
+title: CDaoIndexInfo Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -14,7 +14,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - DAO (Data Access Objects), Indexes collection
-- CDaoIndexInfo structure
+- CDaoIndexInfo structure [MFC]
 ms.assetid: 251d8285-78ce-4716-a0b3-ccc3395fc437
 caps.latest.revision: 13
 author: mikeblome
@@ -34,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 92206d8d8f9b2315fb859e2712a83d32a4c293ad
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ee0d6e1e47f1e171d625781f9c53125e832a915a
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdaoindexinfo-structure"></a>Struttura CDaoIndexInfo
-Il `CDaoIndexInfo` struttura contiene informazioni su un oggetto indice definito per l'accesso oggetti DAO (data).  
+# <a name="cdaoindexinfo-structure"></a>CDaoIndexInfo Structure
+The `CDaoIndexInfo` structure contains information about an index object defined for data access objects (DAO).  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 struct CDaoIndexInfo {  
@@ -64,74 +64,74 @@ struct CDaoIndexInfo {
 };   
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  `m_strName`  
- Identifica in modo univoco l'oggetto campo. Per informazioni dettagliate, vedere l'argomento "Proprietà di nome" nella Guida di DAO.  
+ Uniquely names the field object. For details, see the topic "Name Property" in DAO Help.  
   
  `m_pFieldInfos`  
- Un puntatore a una matrice di [CDaoIndexFieldInfo](../../mfc/reference/cdaoindexfieldinfo-structure.md) gli oggetti che indica quali campi tabledef o recordset sono campi chiave in un indice. Ogni oggetto identifica un campo nell'indice. L'ordine di indice predefinito è crescente. Un oggetto indice può avere uno o più campi che rappresentano le chiavi di indice per ogni record. Questi può essere un ordine crescente, decrescente, o una combinazione.  
+ A pointer to an array of [CDaoIndexFieldInfo](../../mfc/reference/cdaoindexfieldinfo-structure.md) objects indicating which tabledef or recordset fields are key fields in an index. Each object identifies one field in the index. The default index ordering is ascending. An index object can have one or more fields representing index keys for each record. These can be ascending, descending, or a combination.  
   
  `m_nFields`  
- Il numero di campi archiviati in `m_pFieldInfos`.  
+ The number of fields stored in `m_pFieldInfos`.  
   
  *m_bPrimary*  
- Se la proprietà primaria è **TRUE**, l'oggetto indice rappresenta un indice primario. Un indice primario è costituito da uno o più campi che identificano in modo univoco tutti i record in una tabella in un ordine predefinito. Poiché il campo dell'indice deve essere univoco, la proprietà univoca dell'oggetto Index viene inoltre impostata su **TRUE** in DAO. Se l'indice primario è costituito da più di un campo, ogni campo può contenere valori duplicati, ma ogni combinazione di valori di tutti i campi indicizzati deve essere univoco. Un indice primario è costituito da una chiave per la tabella e contiene in genere gli stessi campi della chiave primaria.  
+ If the Primary property is **TRUE**, the index object represents a primary index. A primary index consists of one or more fields that uniquely identify all records in a table in a predefined order. Because the index field must be unique, the Unique property of the Index object is also set to **TRUE** in DAO. If the primary index consists of more than one field, each field can contain duplicate values, but each combination of values from all the indexed fields must be unique. A primary index consists of a key for the table and usually contains the same fields as the primary key.  
   
- Quando si imposta una chiave primaria per una tabella, come l'indice primario per la tabella viene definita automaticamente la chiave primaria. Per ulteriori informazioni, vedere gli argomenti "Proprietà primaria" e "Proprietà Unique" nella Guida di DAO.  
+ When you set a primary key for a table, the primary key is automatically defined as the primary index for the table. For more information, see the topics "Primary Property" and "Unique Property" in DAO Help.  
   
 > [!NOTE]
->  Possono esserci, al massimo un indice primario in una tabella.  
+>  There can be, at most, one primary index on a table.  
   
  *m_bUnique*  
- Indica se un oggetto index rappresenta un indice univoco per una tabella. Se questa proprietà è **TRUE**, l'oggetto indice rappresenta un indice univoco. Un indice univoco costituito da uno o più campi che consentono di disporre in modo logico tutti i record in una tabella in modo univoco e predefinito. Se l'indice è costituito da un campo, i valori in tale campo devono essere univoci per l'intera tabella. Se l'indice è costituito da più di un campo, ogni campo può contenere valori duplicati, ma ogni combinazione di valori di tutti i campi indicizzati deve essere univoco.  
+ Indicates whether an index object represents a unique index for a table. If this property is **TRUE**, the index object represents an index that is unique. A unique index consists of one or more fields that logically arrange all records in a table in a unique, predefined order. If the index consists of one field, values in that field must be unique for the entire table. If the index consists of more than one field, each field can contain duplicate values, but each combination of values from all the indexed fields must be unique.  
   
- Se la proprietà Unique e Primary di un oggetto index è impostata su **TRUE**, l'indice è unique e primary: identifica in modo univoco tutti i record nella tabella in un ordine logico predefinito. Se la proprietà primaria è impostata su **FALSE**, l'indice è un indice secondario. Indici secondari (chiave e non chiave) in modo logico disporre i record in un ordine predefinito senza utilizzato come identificatore per i record nella tabella.  
+ If both the Unique and Primary properties of an index object are set to **TRUE**, the index is unique and primary: It uniquely identifies all records in the table in a predefined, logical order. If the Primary property is set to **FALSE**, the index is a secondary index. Secondary indexes (both key and nonkey) logically arrange records in a predefined order without serving as an identifier for records in the table.  
   
- Per ulteriori informazioni, vedere gli argomenti "Proprietà primaria" e "Proprietà Unique" nella Guida di DAO.  
+ For more information, see the topics "Primary Property" and "Unique Property" in DAO Help.  
   
  *m_bClustered*  
- Indica se un oggetto index rappresenta un indice cluster per una tabella. Se questa proprietà è **TRUE**, l'oggetto indice rappresenta un indice cluster; in caso contrario, non è presente. Un indice cluster è costituito da uno o più chiave campi che, complessivamente, disporre di tutti i record in una tabella in un ordine predefinito. Con un indice cluster, i dati nella tabella letteralmente vengono archiviati nell'ordine specificato dall'indice cluster. Un indice cluster fornisce un accesso efficiente ai record in una tabella. Per ulteriori informazioni, vedere l'argomento "Proprietà cluster" nella Guida di DAO.  
+ Indicates whether an index object represents a clustered index for a table. If this property is **TRUE**, the index object represents a clustered index; otherwise, it does not. A clustered index consists of one or more nonkey fields that, taken together, arrange all records in a table in a predefined order. With a clustered index, the data in the table is literally stored in the order specified by the clustered index. A clustered index provides efficient access to records in a table. For more information, see the topic "Clustered Property" in DAO Help.  
   
 > [!NOTE]
->  La proprietà Clustered viene ignorata per i database che utilizzano il motore di database Microsoft Jet, in quanto il motore di database Jet non supporta gli indici cluster.  
+>  The Clustered property is ignored for databases that use the Microsoft Jet database engine because the Jet database engine does not support clustered indexes.  
   
  *m_bIgnoreNulls*  
- Indica se sono presenti voci di indice di record con valori Null nei relativi campi indice. Se questa proprietà è **TRUE**, i campi con valori Null non sono una voce di indice. Per rendere la ricerca di record usando un campo, è possibile definire un indice per il campo. Se si prevede numerose voci Null voci Null in un campo indicizzato, è possibile impostare la proprietà IgnoreNulls per l'oggetto indice **TRUE** per ridurre la quantità di spazio di archiviazione utilizzato dall'indice. L'impostazione della proprietà IgnoreNulls e l'impostazione della proprietà necessaria determinano se un record con un valore di indice Null presenta una voce di indice, come illustrato nella tabella seguente.  
+ Indicates whether there are index entries for records that have Null values in their index fields. If this property is **TRUE**, fields with Null values do not have an index entry. To make searching for records using a field faster, you can define an index for the field. If you allow Null entries in an indexed field and expect many of the entries to be Null, you can set the IgnoreNulls property for the index object to **TRUE** to reduce the amount of storage space that the index uses. The IgnoreNulls property setting and the Required property setting together determine whether a record with a Null index value has an index entry, as the following table shows.  
   
-|IgnoreNulls|Obbligatorio|Null nel campo di indice|  
+|IgnoreNulls|Required|Null in index field|  
 |-----------------|--------------|-------------------------|  
-|True|False|Valore null consentito. vengono aggiunte voci di indice.|  
-|False|False|Valore null consentito. vengono aggiunte voci di indice.|  
-|True o false.|True|Valore null non è consentito; vengono aggiunte voci di indice.|  
+|True|False|Null value allowed; no index entry added.|  
+|False|False|Null value allowed; index entry added.|  
+|True or False|True|Null value not allowed; no index entry added.|  
   
- Per ulteriori informazioni, vedere l'argomento "Proprietà IgnoreNulls" nella Guida di DAO.  
+ For more information, see the topic "IgnoreNulls Property" in DAO Help.  
   
  `m_bRequired`  
- Indica se un oggetto index DAO richiede un valore diverso da Null. Se questa proprietà è **TRUE**, l'oggetto indice non consente un valore Null. Per ulteriori informazioni, vedere l'argomento "Proprietà Required" nella Guida di DAO.  
+ Indicates whether a DAO index object requires a non-Null value. If this property is **TRUE**, the index object does not allow a Null value. For more information, see the topic "Required Property" in DAO Help.  
   
 > [!TIP]
->  Quando è possibile impostare questa proprietà per un oggetto index DAO o un oggetto field (contenuti da recordset, tabledef o querydef oggetto), impostarlo per l'oggetto campo. La validità dell'impostazione della proprietà per un oggetto del campo viene controllata prima che di un oggetto index.  
+>  When you can set this property for either a DAO index object or a field object (contained by a tabledef, recordset, or querydef object), set it for the field object. The validity of the property setting for a field object is checked before that of an index object.  
   
  *m_bForeign*  
- Indica se un oggetto index rappresenta una chiave esterna in una tabella. Se questa proprietà è **TRUE**, l'indice rappresenta una chiave esterna in una tabella. Una chiave esterna è costituita da uno o più campi di una tabella esterna che identificano in modo univoco una riga in una tabella primaria. Il motore di database Microsoft Jet crea un oggetto di indice per la tabella esterna e imposta la proprietà esterna quando si crea una relazione che impone l'integrità referenziale. Per ulteriori informazioni, vedere l'argomento "Proprietà esterna" nella Guida di DAO.  
+ Indicates whether an index object represents a foreign key in a table. If this property is **TRUE**, the index represents a foreign key in a table. A foreign key consists of one or more fields in a foreign table that uniquely identify a row in a primary table. The Microsoft Jet database engine creates an index object for the foreign table and sets the Foreign property when you create a relationship that enforces referential integrity. For more information, see the topic "Foreign Property" in DAO Help.  
   
  *m_lDistinctCount*  
- Indica il numero di valori univoci per l'oggetto indice inclusi nella tabella associata. Controllare la proprietà DistinctCount per determinare il numero di valori univoci o le chiavi, di un indice. Ogni chiave viene conteggiata una sola volta, anche se potrebbero essere presenti più occorrenze di tale valore se l'indice consente i valori duplicati. Queste informazioni sono utili nelle applicazioni che tentano di ottimizzare l'accesso ai dati tramite la valutazione di informazioni sugli indici. Il numero di valori univoci è noto anche come la cardinalità di un oggetto index. La proprietà DistinctCount non riflette sempre il numero effettivo di chiavi in un determinato momento. Ad esempio, una modifica causata da un rollback della transazione non si rifletteranno immediatamente nella proprietà DistinctCount. Per ulteriori informazioni, vedere l'argomento "Proprietà DistinctCount" nella Guida di DAO.  
+ Indicates the number of unique values for the index object that are included in the associated table. Check the DistinctCount property to determine the number of unique values, or keys, in an index. Any key is counted only once, even though there may be multiple occurrences of that value if the index permits duplicate values. This information is useful in applications that attempt to optimize data access by evaluating index information. The number of unique values is also known as the cardinality of an index object. The DistinctCount property will not always reflect the actual number of keys at a particular time. For example, a change caused by a transaction rollback will not be reflected immediately in the DistinctCount property. For more information, see the topic "DistinctCount Property" in DAO Help.  
   
-## <a name="remarks"></a>Note  
- I riferimenti a primario, secondario e tutti sopra indicano la modalità in cui vengono restituite le informazioni dal `GetIndexInfo` funzione membro in classi [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md#getindexinfo) e [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md#getindexinfo).  
+## <a name="remarks"></a>Remarks  
+ The references to Primary, Secondary, and All above indicate how the information is returned by the `GetIndexInfo` member function in classes [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md#getindexinfo) and [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md#getindexinfo).  
   
- Gli oggetti indice non sono rappresentati da una classe MFC. Al contrario, DAO oggetti MFC sottostanti della classe di oggetti [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) contiene una raccolta di oggetti di indice, denominata raccolta di indici. Queste classi forniscono le funzioni membro per accedere ai singoli elementi di informazioni sugli indici, o è possibile accedere contemporaneamente con un `CDaoIndexInfo` oggetto chiamando il `GetIndexInfo` funzione membro dell'oggetto contenitore.  
+ Index objects are not represented by an MFC class. Instead, DAO objects underlying MFC objects of class [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) or [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) contain a collection of index objects, called the Indexes collection. These classes supply member functions to access individual items of index information, or you can access them all at once with a `CDaoIndexInfo` object by calling the `GetIndexInfo` member function of the containing object.  
   
- `CDaoIndexInfo`include un costruttore e un distruttore per allocare e deallocare le informazioni sui campi di indice in correttamente `m_pFieldInfos`.  
+ `CDaoIndexInfo` has a constructor and a destructor in order to properly allocate and deallocate the index field information in `m_pFieldInfos`.  
   
- Le informazioni recuperate dal `GetIndexInfo` le funzioni membro di un oggetto tabledef vengono archiviate un `CDaoIndexInfo` struttura. Chiamare il `GetIndexInfo` funzione membro dell'oggetto tabledef contenitore in cui raccolta di indici è memorizzato l'oggetto indice. `CDaoIndexInfo`definisce inoltre un `Dump` si basa la funzione membro in modalità debug. È possibile utilizzare `Dump` per scaricare il contenuto di un `CDaoIndexInfo` oggetto.  
+ Information retrieved by the `GetIndexInfo` member function of a tabledef object is stored in a `CDaoIndexInfo` structure. Call the `GetIndexInfo` member function of the containing tabledef object in whose Indexes collection the index object is stored. `CDaoIndexInfo` also defines a `Dump` member function in debug builds. You can use `Dump` to dump the contents of a `CDaoIndexInfo` object.  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** afxdao. h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
   
-## <a name="see-also"></a>Vedere anche  
- [Strutture, stili, callback e mappe messaggi](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CDaoTableDef::GetIndexInfo](../../mfc/reference/cdaotabledef-class.md#getindexinfo)
 
 

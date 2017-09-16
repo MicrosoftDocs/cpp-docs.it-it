@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCTasksPaneTaskGroup | Documenti di Microsoft
+title: CMFCTasksPaneTaskGroup Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -23,7 +23,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCTasksPaneTaskGroup class
+- CMFCTasksPaneTaskGroup [MFC], CMFCTasksPaneTaskGroup
+- CMFCTasksPaneTaskGroup [MFC], SetACCData
+- CMFCTasksPaneTaskGroup [MFC], m_bIsBottom
+- CMFCTasksPaneTaskGroup [MFC], m_bIsCollapsed
+- CMFCTasksPaneTaskGroup [MFC], m_bIsSpecial
+- CMFCTasksPaneTaskGroup [MFC], m_lstTasks
+- CMFCTasksPaneTaskGroup [MFC], m_rect
+- CMFCTasksPaneTaskGroup [MFC], m_rectGroup
+- CMFCTasksPaneTaskGroup [MFC], m_strName
 ms.assetid: 2111640b-a46e-4b27-b033-29e88632b86a
 caps.latest.revision: 33
 author: mikeblome
@@ -43,76 +51,76 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 405a69a0c7d8c4179b36e1beec09fdfa7acd2d7b
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a7c7503acf4deed60ab86eac6c91c64f746c8a09
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfctaskspanetaskgroup-class"></a>Classe CMFCTasksPaneTaskGroup
-Il `CMFCTasksPaneTaskGroup` classe è una classe helper utilizzata per la [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) controllo. Gli oggetti di tipo `CMFCTasksPaneTaskGroup` rappresentano un *gruppo di attività*. Il gruppo di attività è un elenco di elementi visualizzato dal framework in una casella separata dotata di un pulsante di compressione. La casella può avere una didascalia facoltativa (nome del gruppo). Se un gruppo viene compresso, l'elenco di attività non è visibile.  
+# <a name="cmfctaskspanetaskgroup-class"></a>CMFCTasksPaneTaskGroup Class
+The `CMFCTasksPaneTaskGroup` class is a helper class used by the [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) control. Objects of type `CMFCTasksPaneTaskGroup` represent a *task group*. The task group is a list of items that the framework displays in a separate box that has a collapse button. The box can have an optional caption (group name). If a group is collapsed, the list of tasks is not visible.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCTasksPaneTaskGroup : public CObject  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Costruttori pubblici  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCTasksPaneTaskGroup::CMFCTasksPaneTaskGroup](#cmfctaskspanetaskgroup)|Costruisce un oggetto `CMFCTasksPaneTaskGroup`.|  
-|`CMFCTasksPaneTaskGroup::~CMFCTasksPaneTaskGroup`|Distruttore.|  
+|[CMFCTasksPaneTaskGroup::CMFCTasksPaneTaskGroup](#cmfctaskspanetaskgroup)|Constructs a `CMFCTasksPaneTaskGroup` object.|  
+|`CMFCTasksPaneTaskGroup::~CMFCTasksPaneTaskGroup`|Destructor.|  
   
-### <a name="public-methods"></a>Metodi pubblici  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCTasksPaneTaskGroup::SetACCData](#setaccdata)|Determina i dati di accessibilità per il gruppo di attività corrente.|  
+|[CMFCTasksPaneTaskGroup::SetACCData](#setaccdata)|Determines the accessibility data for the current task group.|  
   
-### <a name="data-members"></a>Membri di dati  
+### <a name="data-members"></a>Data Members  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCTasksPaneTaskGroup::m_bIsBottom](#m_bisbottom)|Determina se il gruppo di attività è allineato alla parte inferiore del controllo del riquadro attività.|  
-|[CMFCTasksPaneTaskGroup::m_bIsCollapsed](#m_biscollapsed)|Determina se il gruppo di attività è compressa.|  
-|[CMFCTasksPaneTaskGroup::m_bIsSpecial](#m_bisspecial)|Determina se il gruppo di attività è *speciali.* Il framework Visualizza didascalie speciali con un colore diverso.|  
-|[CMFCTasksPaneTaskGroup::m_lstTasks](#m_lsttasks)|Contiene l'elenco delle attività interna.|  
-|[CMFCTasksPaneTaskGroup::m_rect](#m_rect)|Specifica il rettangolo di delimitazione della didascalia del gruppo.|  
-|[CMFCTasksPaneTaskGroup::m_rectGroup](#m_rectgroup)|Specifica il rettangolo di delimitazione del gruppo.|  
-|[CMFCTasksPaneTaskGroup::m_strName](#m_strname)|Specifica il nome del gruppo.|  
+|[CMFCTasksPaneTaskGroup::m_bIsBottom](#m_bisbottom)|Determines whether the task group is aligned to the bottom of the task pane control.|  
+|[CMFCTasksPaneTaskGroup::m_bIsCollapsed](#m_biscollapsed)|Determines whether the task group is collapsed.|  
+|[CMFCTasksPaneTaskGroup::m_bIsSpecial](#m_bisspecial)|Determines whether the task group is *special.* The framework displays special captions in a different color.|  
+|[CMFCTasksPaneTaskGroup::m_lstTasks](#m_lsttasks)|Contains the internal list of tasks.|  
+|[CMFCTasksPaneTaskGroup::m_rect](#m_rect)|Specifies the bounding rectangle of the group caption.|  
+|[CMFCTasksPaneTaskGroup::m_rectGroup](#m_rectgroup)|Specifies the bounding rectangle of the group.|  
+|[CMFCTasksPaneTaskGroup::m_strName](#m_strname)|Specifies the name of the group.|  
   
-## <a name="remarks"></a>Note  
- Nella figura seguente viene illustrato un gruppo di attività espanso:  
+## <a name="remarks"></a>Remarks  
+ The following illustration shows an expanded task group:  
   
- ![Gruppo di attività espanso](../../mfc/reference/media/nexttaskgrpexpand.png "nexttaskgrpexpand")  
+ ![Task group, expanded](../../mfc/reference/media/nexttaskgrpexpand.png "nexttaskgrpexpand")  
   
- Nella figura seguente viene illustrato un gruppo di attività compresso:  
+ The following illustration shows a collapsed task group:  
   
- ![Gruppo di attività compresso](../../mfc/reference/media/nexttaskgrpcollapse.png "nexttaskgrpcollapse")  
+ ![Collapsed task group](../../mfc/reference/media/nexttaskgrpcollapse.png "nexttaskgrpcollapse")  
   
- Nella figura seguente viene illustrato un gruppo di attività senza didascalia:  
+ The following illustration shows a task group without a caption:  
   
- ![Gruppo di attività senza didascalia](../../mfc/reference/media/nexttaskgrpnocapt.png "nexttaskgrpnocapt")  
+ ![Task group without a caption](../../mfc/reference/media/nexttaskgrpnocapt.png "nexttaskgrpnocapt")  
   
- Nella figura seguente vengono mostrati due gruppi di attività. Il primo gruppo di attività è contrassegnato come speciale impostando il `m_bIsSpecial` flag `TRUE`, mentre il secondo gruppo di attività non è speciale. Si noti come la didascalia per il primo gruppo di attività è più scura del secondo gruppo di attività:  
+ The following illustration shows two task groups. The first task group is marked as special by setting the `m_bIsSpecial` flag to `TRUE`, while the second task group is not special. Note how the caption for the first task group is darker than the second task group:  
   
- ![Gruppo di attività speciale](../../mfc/reference/media/nexttaskgrpspecial.png "nexttaskgrpspecial")  
+ ![Special task group](../../mfc/reference/media/nexttaskgrpspecial.png "nexttaskgrpspecial")  
   
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** afxTasksPane.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxTasksPane.h  
   
-##  <a name="cmfctaskspanetaskgroup"></a>CMFCTasksPaneTaskGroup::CMFCTasksPaneTaskGroup  
- Costruisce un oggetto `CMFCTasksPaneTaskGroup`.  
+##  <a name="cmfctaskspanetaskgroup"></a>  CMFCTasksPaneTaskGroup::CMFCTasksPaneTaskGroup  
+ Constructs a `CMFCTasksPaneTaskGroup` object.  
   
 ```  
 CMFCTasksPaneTaskGroup(
@@ -124,99 +132,99 @@ CMFCTasksPaneTaskGroup(
     HICON hIcon=NULL);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `lpszName`  
- Specifica il nome del gruppo nella didascalia del gruppo.  
+ Specifies the name of the group in the group caption.  
   
  `bIsBottom`  
- Specifica se il gruppo è allineato alla parte inferiore del controllo del riquadro attività.  
+ Specifies whether the group is aligned to the bottom of the task pane control.  
   
  `bIsSpecial`  
- Specifica se il gruppo è designato come *speciali* e di conseguenza, se la didascalia del gruppo viene riempita con un colore diverso.  
+ Specifies whether the group is designated as *special* and thus, whether the group caption is filled with a different color.  
   
  `bIsCollapsed`  
- Specifica se il gruppo viene compresso.  
+ Specifies whether the group is collapsed.  
   
  `pPage`  
- Specifica la pagina delle proprietà cui appartiene questo gruppo di attività.  
+ Specifies the property page that this task group belongs to.  
   
  `hIcon`  
- Specifica l'icona visualizzata nella didascalia del gruppo.  
+ Specifies the icon that displays in the group caption.  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="m_bisbottom"></a>CMFCTasksPaneTaskGroup::m_bIsBottom  
- Determina se il gruppo di attività è allineato alla parte inferiore del controllo del riquadro attività.  
+##  <a name="m_bisbottom"></a>  CMFCTasksPaneTaskGroup::m_bIsBottom  
+ Determines whether the task group is aligned to the bottom of the task pane control.  
   
 ```  
 BOOL m_bIsBottom;  
 ```  
   
-### <a name="remarks"></a>Note  
- Un solo gruppo può essere allineato alla parte inferiore del controllo del riquadro attività. Questo gruppo di attività debba essere aggiunti per ultimi. Per ulteriori informazioni, vedere [CMFCTasksPane::AddGroup](../../mfc/reference/cmfctaskspane-class.md#addgroup).  
+### <a name="remarks"></a>Remarks  
+ Only one group can be aligned to the bottom of the task pane control. This task group must be added last. For more information, see [CMFCTasksPane::AddGroup](../../mfc/reference/cmfctaskspane-class.md#addgroup).  
   
-##  <a name="m_biscollapsed"></a>CMFCTasksPaneTaskGroup::m_bIsCollapsed  
- Determina se il gruppo di attività è compressa.  
+##  <a name="m_biscollapsed"></a>  CMFCTasksPaneTaskGroup::m_bIsCollapsed  
+ Determines whether the task group is collapsed.  
   
 ```  
 BOOL m_bIsCollapsed;  
 ```  
   
-### <a name="remarks"></a>Note  
- È possibile abilitare o disabilitare la capacità di comprimere i gruppi nel riquadro attività chiamando [CMFCTasksPane::EnableGroupCollapse](../../mfc/reference/cmfctaskspane-class.md#enablegroupcollapse).  
+### <a name="remarks"></a>Remarks  
+ You can enable or disable the ability to collapse groups on the task pane by calling [CMFCTasksPane::EnableGroupCollapse](../../mfc/reference/cmfctaskspane-class.md#enablegroupcollapse).  
   
-##  <a name="m_bisspecial"></a>CMFCTasksPaneTaskGroup::m_bIsSpecial  
- Determina se il gruppo di attività è *speciali* e se la didascalia per un gruppo di attività speciali deve essere identificata da un colore diverso.  
+##  <a name="m_bisspecial"></a>  CMFCTasksPaneTaskGroup::m_bIsSpecial  
+ Determines whether the task group is *special* and whether the caption for a special task group should be identified by a different color.  
   
 ```  
 BOOL m_bIsSpecial;  
 ```  
   
-### <a name="remarks"></a>Note  
- Se l'applicazione sta utilizzando il tema di Windows XP e `m_bIsSpecial` è `FALSE`, il framework chiama `DrawThemeBackground` con il `EBP_NORMALGROUPBACKGROUND` flag. Se `m_bIsSpecial` è `TRUE`, il framework chiama `DrawThemeBackground` con il `EBP_SPECIALGROUPBACKGROUND` flag.  
+### <a name="remarks"></a>Remarks  
+ If your application is using the Windows XP visual theme and `m_bIsSpecial` is `FALSE`, the framework calls `DrawThemeBackground` with the `EBP_NORMALGROUPBACKGROUND` flag. If `m_bIsSpecial` is `TRUE`, the framework calls `DrawThemeBackground` with the `EBP_SPECIALGROUPBACKGROUND` flag.  
   
-##  <a name="m_lsttasks"></a>CMFCTasksPaneTaskGroup::m_lstTasks  
- Contiene l'elenco delle attività interna.  
+##  <a name="m_lsttasks"></a>  CMFCTasksPaneTaskGroup::m_lstTasks  
+ Contains the internal list of tasks.  
   
 ```  
 CObList m_lstTasks;  
 ```  
   
-### <a name="remarks"></a>Note  
- Per compilare questo elenco, chiamare [CMFCTasksPane::AddTask](../../mfc/reference/cmfctaskspane-class.md#addtask).  
+### <a name="remarks"></a>Remarks  
+ To fill this list, call [CMFCTasksPane::AddTask](../../mfc/reference/cmfctaskspane-class.md#addtask).  
   
-##  <a name="m_rect"></a>CMFCTasksPaneTaskGroup::m_rect  
- Specifica il rettangolo di delimitazione della didascalia del gruppo.  
+##  <a name="m_rect"></a>  CMFCTasksPaneTaskGroup::m_rect  
+ Specifies the bounding rectangle of the group caption.  
   
 ```  
 CRect m_rect;  
 ```  
   
-### <a name="remarks"></a>Note  
- Questo valore viene calcolato automaticamente dal framework.  
+### <a name="remarks"></a>Remarks  
+ This value is automatically calculated by the framework.  
   
-##  <a name="m_rectgroup"></a>CMFCTasksPaneTaskGroup::m_rectGroup  
- Specifica il rettangolo di delimitazione del gruppo.  
+##  <a name="m_rectgroup"></a>  CMFCTasksPaneTaskGroup::m_rectGroup  
+ Specifies the bounding rectangle of the group.  
   
 ```  
 CRect m_rectGroup;  
 ```  
   
-### <a name="remarks"></a>Note  
- Questo valore viene calcolato automaticamente dal framework.  
+### <a name="remarks"></a>Remarks  
+ This value is calculated automatically by the framework.  
   
-##  <a name="m_strname"></a>CMFCTasksPaneTaskGroup::m_strName  
- Specifica il nome del gruppo.  
+##  <a name="m_strname"></a>  CMFCTasksPaneTaskGroup::m_strName  
+ Specifies the name of the group.  
   
 ```  
 CString m_strName;  
 ```  
   
-### <a name="remarks"></a>Note  
- Se questo valore è vuoto, la didascalia del gruppo non viene visualizzata e il gruppo non può essere compresso.  
+### <a name="remarks"></a>Remarks  
+ If this value is empty, the group caption is not displayed and the group cannot be collapsed.  
   
-##  <a name="setaccdata"></a>CMFCTasksPaneTaskGroup::SetACCData  
- Determina i dati di accessibilità per il gruppo di attività corrente.  
+##  <a name="setaccdata"></a>  CMFCTasksPaneTaskGroup::SetACCData  
+ Determines the accessibility data for the current task group.  
   
 ```  
 virtual BOOL SetACCData(
@@ -224,21 +232,21 @@ virtual BOOL SetACCData(
     CAccessibilityData& data);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pParent`  
- Rappresenta la finestra padre del gruppo di attività corrente.  
+ Represents the parent window of the current task group.  
   
  [out] `data`  
- Un oggetto di tipo `CAccessibilityData` che viene popolato con i dati di accessibilità del gruppo di attività corrente.  
+ An object of type `CAccessibilityData` that is populated with the accessibility data of the current task group.  
   
-### <a name="return-value"></a>Valore restituito  
- `TRUE`Se il `data` parametro è stato correttamente popolato con i dati di accessibilità del gruppo di attività corrente; in caso contrario, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the `data` parameter was successfully populated with the accessibility data of the current task group; otherwise, `FALSE`.  
   
-## <a name="see-also"></a>Vedere anche  
- [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
- [Classi](../../mfc/reference/mfc-classes.md)   
- [Classe CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)   
- [Classe CMFCTasksPaneTask](../../mfc/reference/cmfctaskspanetask-class.md)   
- [Classe CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md)   
- [CObject (classe)](../../mfc/reference/cobject-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCTasksPane Class](../../mfc/reference/cmfctaskspane-class.md)   
+ [CMFCTasksPaneTask Class](../../mfc/reference/cmfctaskspanetask-class.md)   
+ [CMFCOutlookBar Class](../../mfc/reference/cmfcoutlookbar-class.md)   
+ [CObject Class](../../mfc/reference/cobject-class.md)
 

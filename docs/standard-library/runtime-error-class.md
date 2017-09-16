@@ -1,5 +1,5 @@
 ---
-title: Classe runtime_error | Microsoft Docs
+title: runtime_error Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- runtime_error
 - stdexcept/std::runtime_error
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 38434b2a3f50a2056ea9727fb69170bb6a0b8b8d
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 73cc36de9f467b3ddb339ad28007337cd3e2cee2
 ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="runtimeerror-class"></a>Classe runtime_error
-La classe funge da classe di base per tutte le eccezioni generate per segnalare errori presumibilmente rilevabili solo quando il programma viene eseguito.  
+# <a name="runtimeerror-class"></a>runtime_error Class
+The class serves as the base class for all exceptions thrown to report errors presumably detectable only when the program executes.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class runtime_error : public exception {  
@@ -56,10 +55,10 @@ public:
 };  
 ```  
   
-## <a name="remarks"></a>Note  
- Il valore restituito dalla [classe exception](../standard-library/exception-class.md) è una copia di **message**`.`[data](../standard-library/basic-string-class.md#data).  
+## <a name="remarks"></a>Remarks  
+ The value returned by [exception Class](../standard-library/exception-class.md) is a copy of **message**`.`[data](../standard-library/basic-string-class.md#data).  
   
-## <a name="example"></a>Esempio  
+## <a name="example"></a>Example  
   
 ```cpp  
 // runtime_error.cpp  
@@ -87,15 +86,15 @@ Type class std::runtime_error
 *\  
 ```  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<stdexcept>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<stdexcept>  
   
- **Spazio dei nomi:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Vedere anche  
-[Classe exception](../standard-library/exception-class.md)
+## <a name="see-also"></a>See Also  
+[exception Class](../standard-library/exception-class.md)
 
     
- [Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

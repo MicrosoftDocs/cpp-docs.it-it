@@ -1,106 +1,124 @@
 ---
-title: "Controlli ActiveX MFC: aggiunta di propriet&#224; personalizzate | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC (controlli ActiveX), proprietà"
-  - "proprietà [MFC], personalizzati"
+title: 'MFC ActiveX Controls: Adding Custom Properties | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], properties
+- properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Controlli ActiveX MFC: aggiunta di propriet&#224; personalizzate
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: aaac18f6b8137aad6732bb69edb4b587e71aca2f
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Le proprietà personalizzate differiscono dalle proprietà predefinite in quanto le proprietà personalizzate non vengono implementate dalla classe di `COleControl`.  Una proprietà personalizzata viene utilizzata per esporre una condizione o l'aspetto di un controllo ActiveX a un programmatore utilizzando il controllo.  
+---
+# <a name="mfc-activex-controls-adding-custom-properties"></a>MFC ActiveX Controls: Adding Custom Properties
+Custom properties differ from stock properties in that custom properties are not already implemented by the `COleControl` class. A custom property is used to expose a certain state or appearance of an ActiveX control to a programmer using the control.  
   
- In questo articolo viene descritto come aggiungere una proprietà personalizzata al controllo ActiveX mediante l'aggiunta guidata proprietà e vengono illustrate le modifiche con estensione codice.  Gli argomenti trattati includono  
+ This article describes how to add a custom property to the ActiveX control using the Add Property Wizard and explains the resulting code modifications. Topics include:  
   
--   [Utilizzo dell'Aggiunta guidata proprietà per aggiungere una proprietà personalizzata](#_core_using_classwizard_to_add_a_custom_property)  
+-   [Using the Add Property Wizard to add a custom property](#_core_using_classwizard_to_add_a_custom_property)  
   
--   [Modifiche dell'Aggiunta guidata proprietà per le proprietà personalizzate](#_core_classwizard_changes_for_custom_properties)  
+-   [Add Property Wizard changes for custom properties](#_core_classwizard_changes_for_custom_properties)  
   
- Le proprietà personalizzate definite nei quattro tipi di implementazione: La variabile membro, variabile membro con la notifica, ottiene o imposta i metodi e dispone di parametri.  
+ Custom properties come in four varieties of implementation: Member Variable, Member Variable with Notification, Get/Set Methods, and Parameterized.  
   
--   Implementazione di una variabile membro  
+-   Member Variable Implementation  
   
-     Questa implementazione rappresenta lo stato della proprietà come variabile membro della classe del controllo.  Utilizzare l'implementazione di una variabile membro quando non è importante sapere quando tale valore viene modificato.  I tre tipi, questa implementazione crea la quantità minima di codice di supporto per la proprietà.  La macro di voci della mappa di invio per l'implementazione di una variabile membro è [DISP\_PROPERTY](../Topic/DISP_PROPERTY.md).  
+     This implementation represents the property's state as a member variable in the control class. Use the Member Variable implementation when it is not important to know when the property value changes. Of the three types, this implementation creates the least amount of support code for the property. The dispatch map entry macro for member variable implementation is [DISP_PROPERTY](../mfc/reference/dispatch-maps.md#disp_property).  
   
--   Variabile membro con l'implementazione di notifica  
+-   Member Variable with Notification Implementation  
   
-     Questa implementazione è costituito da una variabile membro e una funzione di notifica creati dall'Aggiunta guidata proprietà.  La funzione di notifica verrà chiamata da parte dopo il valore della proprietà.  Utilizzare la variabile membro con l'implementazione di notifica quando è necessario essere notificati dopo che un valore di proprietà è stato modificato.  Questa implementazione richiede più tempo perché richiede una chiamata di funzione.  La macro di voci della mappa di invio per questa implementazione è [DISP\_PROPERTY\_NOTIFY](../Topic/DISP_PROPERTY_NOTIFY.md).  
+     This implementation consists of a member variable and a notification function created by the Add Property Wizard. The notification function is automatically called by the framework after the property value changes. Use the Member Variable with Notification implementation when you need to be notified after a property value has changed. This implementation requires more time because it requires a function call. The dispatch map entry macro for this implementation is [DISP_PROPERTY_NOTIFY](../mfc/reference/dispatch-maps.md#disp_property_notify).  
   
--   Get\/set l'implementazione di metodi  
+-   Get/Set Methods Implementation  
   
-     Questa implementazione è costituito da una coppia delle funzioni membro della classe del controllo.  L'implementazione di metodi set\/get chiama automaticamente la funzione membro get quando viene richiesta del controllo il valore corrente della proprietà e il membro del gruppo vengono eseguiti quando viene richiesta del controllo apportata alla proprietà.  Utilizzare questa implementazione quando è necessario calcolare il valore di una proprietà in fase di esecuzione, convalidare un valore passato dall'utente del controllo prima della modifica dell'effettiva proprietà, o implementare un tipo di proprietà lettura o scrittura.  La macro di voci della mappa di invio per questa implementazione è [DISP\_PROPERTY\_EX](../Topic/DISP_PROPERTY_EX.md).  La sezione seguente, [Utilizzo dell'Aggiunta guidata proprietà per aggiungere una proprietà personalizzata](#_core_using_classwizard_to_add_a_custom_property), utilizzare la proprietà personalizzata di CircleOffset per illustrare questa implementazione.  
+     This implementation consists of a pair of member functions in the control class. The Get/Set Methods implementation automatically calls the Get member function when the control's user requests the current value of the property and the Set member function when the control's user requests that the property be changed. Use this implementation when you need to compute the value of a property during run time, validate a value passed by the control's user before changing the actual property, or implement a read- or write-only property type. The dispatch map entry macro for this implementation is [DISP_PROPERTY_EX](../mfc/reference/dispatch-maps.md#disp_property_ex). The following section, [Using the Add Property Wizard to Add a Custom Property](#_core_using_classwizard_to_add_a_custom_property), uses the CircleOffset custom property to demonstrate this implementation.  
   
--   Implementazione con parametri  
+-   Parameterized Implementation  
   
-     L'implementazione con parametri è supportata dall'Aggiunta guidata proprietà.  Una proprietà con parametri \(talvolta detta matrice di proprietà\) può essere utilizzata per accedere a un set di valori in una singola proprietà del controllo.  La macro di voci della mappa di invio per questa implementazione è `DISP_PROPERTY_PARAM`.  Per ulteriori informazioni sull'implementazione di questo tipo, vedere [Implementare una proprietà con parametri](../mfc/mfc-activex-controls-advanced-topics.md) nei controlli ActiveXarticolo: Argomenti avanzati.  
+     Parameterized implementation is supported by the Add Property Wizard. A parameterized property (sometimes called a property array) can be used to access a set of values through a single property of your control. The dispatch map entry macro for this implementation is `DISP_PROPERTY_PARAM`. For more information on implementing this type, see [Implementing a Parameterized Property](../mfc/mfc-activex-controls-advanced-topics.md) in the article ActiveX Controls: Advanced Topics.  
   
-##  <a name="_core_using_classwizard_to_add_a_custom_property"></a> Utilizzo dell'Aggiunta guidata proprietà per aggiungere una proprietà personalizzata  
- La procedura riportata di seguito viene illustrato come aggiungere una proprietà personalizzata, CircleOffset, che utilizza l'implementazione di metodi set\/get.  La proprietà personalizzata di CircleOffset consente all'utente del controllo stampa l'offset del cerchio dal centro del rettangolo di delimitazione del controllo.  La procedura per l'aggiunta di proprietà personalizzate con un'implementazione diversa da ottiene o imposta i metodi è molto simile.  
+##  <a name="_core_using_classwizard_to_add_a_custom_property"></a> Using the Add Property Wizard to Add a Custom Property  
+ The following procedure demonstrates adding a custom property, CircleOffset, which uses the Get/Set Methods implementation. The CircleOffset custom property allows the control's user to offset the circle from the center of the control's bounding rectangle. The procedure for adding custom properties with an implementation other than Get/Set Methods is very similar.  
   
- Questa procedura può essere utilizzata per aggiungere altre proprietà personalizzate desiderato.  Sostituire il nome della proprietà personalizzata per il nome della proprietà e i parametri di CircleOffset.  
+ This same procedure can also be used to add other custom properties you want. Substitute your custom property name for the CircleOffset property name and parameters.  
   
-#### Per aggiungere una proprietà personalizzata di CircleOffset mediante l'aggiunta guidata proprietà  
+#### <a name="to-add-the-circleoffset-custom-property-using-the-add-property-wizard"></a>To add the CircleOffset custom property using the Add Property Wizard  
   
-1.  Caricare il progetto del controllo.  
+1.  Load your control's project.  
   
-2.  In Visualizzazione classi, espandere il nodo della libreria del controllo.  
+2.  In Class View, expand the library node of your control.  
   
-3.  Fare clic con il pulsante destro del mouse sul nodo dell'interfaccia del controllo \(il secondo nodo il nodo della libreria\) per aprire il menu di scelta rapida.  
+3.  Right-click the interface node for your control (the second node of the library node) to open the shortcut menu.  
   
-4.  Dal menu di scelta rapida, fare clic **Aggiungi** quindi fare clic **Aggiungi proprietà**.  
+4.  From the shortcut menu, click **Add** and then click **Add Property**.  
   
-     Verrà aperto [Aggiunta guidata proprietà](../ide/names-add-property-wizard.md).  
+     This opens the [Add Property Wizard](../ide/names-add-property-wizard.md).  
   
-5.  Nella casella di **Nome proprietà**, digitare `CircleOffset`.  
+5.  In the **Property Name** box, type `CircleOffset`.  
   
-6.  Per **Implementation Type**, fare clic **Metodi Get\/Set**.  
+6.  For **Implementation Type**, click **Get/Set Methods**.  
   
-7.  Nella casella di **Tipo proprietà**, **short**selezionato.  
+7.  In the **Property Type** box, select **short**.  
   
-8.  I nomi al tipo univoci per il get e set funzioni, o accettare i nomi predefiniti.  
+8.  Type unique names for your Get and Set Functions, or accept the default names.  
   
-9. Scegliere **Fine**.  
+9. Click **Finish**.  
   
-##  <a name="_core_classwizard_changes_for_custom_properties"></a> Modifiche dell'Aggiunta guidata proprietà per le proprietà personalizzate  
- Quando si aggiunge una proprietà personalizzata di CircleOffset, l'aggiunta guidata proprietà apportano modifiche all'intestazione precompilata. H\) e i file di implementazione \(.CPP\) della classe del controllo.  
+##  <a name="_core_classwizard_changes_for_custom_properties"></a> Add Property Wizard Changes for Custom Properties  
+ When you add the CircleOffset custom property, the Add Property Wizard makes changes to the header (.H) and the implementation (.CPP) files of the control class.  
   
- Le seguenti righe aggiunte al. Il file H per dichiarare due funzioni ha chiamato `GetCircleOffset` e `SetCircleOffset`:  
+ The following lines are added to the .H file to declare two functions called `GetCircleOffset` and `SetCircleOffset`:  
   
- [!code-cpp[NVC_MFC_AxUI#25](../mfc/codesnippet/CPP/mfc-activex-controls-adding-custom-properties_1.h)]  
+ [!code-cpp[NVC_MFC_AxUI#25](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-properties_1.h)]  
   
- La riga seguente viene aggiunta del file .IDL del controllo:  
+ The following line is added to your control's .IDL file:  
   
- [!code-cpp[NVC_MFC_AxUI#26](../mfc/codesnippet/CPP/mfc-activex-controls-adding-custom-properties_2.idl)]  
+ [!code-cpp[NVC_MFC_AxUI#26](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-properties_2.idl)]  
   
- Questa riga assegnata alla proprietà di CircleOffset un numero ID specifici, ricavato dal percorso del metodo metodi e nell'elenco di proprietà dell'Aggiunta guidata proprietà.  
+ This line assigns the CircleOffset property a specific ID number, taken from the method's position in the methods and properties list of the Add Property Wizard.  
   
- Inoltre, la riga seguente viene aggiunta alla mappa di divisione \(nel file di .CPP della classe del controllo\) per eseguire il mapping della proprietà di CircleOffset alle funzioni di controllo due:  
+ In addition, the following line is added to the dispatch map (in the .CPP file of the control class) to map the CircleOffset property to the control's two handler functions:  
   
- [!code-cpp[NVC_MFC_AxUI#27](../mfc/codesnippet/CPP/mfc-activex-controls-adding-custom-properties_3.cpp)]  
+ [!code-cpp[NVC_MFC_AxUI#27](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-properties_3.cpp)]  
   
- Infine, le implementazioni di `GetCircleOffset` e le funzioni di `SetCircleOffset` vengono aggiunti alla fine del file di .CPP del controllo.  Nella maggior parte dei casi, verrà modificata la funzione Get per restituire il valore della proprietà.  La funzione set generalmente contiene codice che deve essere eseguito before o after la proprietà cambia.  
+ Finally, the implementations of the `GetCircleOffset` and `SetCircleOffset` functions are added to the end of the control's .CPP file. In most cases, you will modify the Get function to return the value of the property. The Set function will usually contain code that should be executed either before or after the property changes.  
   
- [!code-cpp[NVC_MFC_AxUI#28](../mfc/codesnippet/CPP/mfc-activex-controls-adding-custom-properties_4.cpp)]  
+ [!code-cpp[NVC_MFC_AxUI#28](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-properties_4.cpp)]  
   
- Si noti che l'aggiunta guidata proprietà aggiunge automaticamente una chiamata, a [SetModifiedFlag](../Topic/COleControl::SetModifiedFlag.md), al corpo della funzione set.  Chiamando questa funzione contrassegna il controllo come modificato.  Se un controllo è stato modificato, il nuovo stato verrà salvato quando il contenitore viene salvato.  Questa funzione deve essere chiamata ogni volta che una proprietà, salvata come parte dello stato persistente del controllo, il valore di textbox1.text.  
+ Note that the Add Property Wizard automatically adds a call, to [SetModifiedFlag](../mfc/reference/colecontrol-class.md#setmodifiedflag), to the body of the Set function. Calling this function marks the control as modified. If a control has been modified, its new state will be saved when the container is saved. This function should be called whenever a property, saved as part of the control's persistent state, changes value.  
   
-## Vedere anche  
- [Controlli ActiveX MFC](../mfc/mfc-activex-controls.md)   
- [Controlli ActiveX MFC: proprietà](../mfc/mfc-activex-controls-properties.md)   
- [Controlli ActiveX MFC: metodi](../mfc/mfc-activex-controls-methods.md)   
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)   
+ [MFC ActiveX Controls: Properties](../mfc/mfc-activex-controls-properties.md)   
+ [MFC ActiveX Controls: Methods](../mfc/mfc-activex-controls-methods.md)   
  [COleControl Class](../mfc/reference/colecontrol-class.md)
+

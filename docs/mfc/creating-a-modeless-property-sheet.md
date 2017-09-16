@@ -1,42 +1,61 @@
 ---
-title: "Creazione di una finestra delle propriet&#224; non modale | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Create (metodo) [C++], finestre delle proprietà"
-  - "finestre delle proprietà non modali"
-  - "finestre delle proprietà, non modali"
+title: Creating a Modeless Property Sheet | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- modeless property sheets
+- property sheets, modeless
+- Create method [MFC], property sheets
 ms.assetid: eafd8a92-cc67-4a69-a5fb-742c920d1ae8
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Creazione di una finestra delle propriet&#224; non modale
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: eb93a55b9da82f75a1bdaab5818e11ae0e075d5f
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-In genere, le finestre delle proprietà che verranno create modali.  Nell'utilizzo di una finestra delle proprietà modale, è necessario chiudere la finestra delle proprietà prima di utilizzare qualsiasi altra parte dell'applicazione.  Questo articolo descrive i metodi è possibile utilizzare per creare una finestra delle proprietà non modale che consente all'utente di mantenere la finestra delle proprietà aperta quando si utilizza altre parti dell'applicazione.  
+---
+# <a name="creating-a-modeless-property-sheet"></a>Creating a Modeless Property Sheet
+Normally, the property sheets you create will be modal. When using a modal property sheet, the user must close the property sheet before using any other part of the application. This article describes methods you can use to create a modeless property sheet that allows the user to keep the property sheet open while using other parts of the application.  
   
- Per visualizzare una finestra delle proprietà come finestra di dialogo non modale anziché come finestra di dialogo modale, chiamare [CPropertySheet::Create](../Topic/CPropertySheet::Create.md) anziché [DoModal](../Topic/CPropertySheet::DoModal.md).  È necessario implementare anche alcune attività aggiuntive supportare una finestra delle proprietà non modale.  
+ To display a property sheet as a modeless dialog box instead of as a modal dialog box, call [CPropertySheet::Create](../mfc/reference/cpropertysheet-class.md#create) instead of [DoModal](../mfc/reference/cpropertysheet-class.md#domodal). You must also implement some extra tasks to support a modeless property sheet.  
   
- Una delle attività aggiuntive è lo scambio di dati tra la finestra delle proprietà e l'oggetto esterno che viene modificato quando la finestra delle proprietà è aperta.  Generalmente corrisponde di attività per le finestre di dialogo non modale standard.  La parte di questa attività si sta implementando un canale di comunicazione tra la finestra delle proprietà non modale e l'oggetto esterno e le impostazioni delle proprietà vengono applicati.  Questa implementazione è molto più semplice se si deriva una classe da [CPropertySheet](../mfc/reference/cpropertysheet-class.md) per la finestra delle proprietà non modale.  Questo articolo si presume che sia necessario.  
+ One of the additional tasks is exchanging data between the property sheet and the external object it is modifying when the property sheet is open. This is generally the same task as for standard modeless dialog boxes. Part of this task is implementing a channel of communication between the modeless property sheet and the external object to which the property settings apply. This implementation is far easier if you derive a class from [CPropertySheet](../mfc/reference/cpropertysheet-class.md) for your modeless property sheet. This article assumes you have done so.  
   
- Un metodo per la comunicazione tra la finestra delle proprietà non modale e l'oggetto esterno \(la selezione corrente di una visualizzazione, ad esempio è possibile definire un puntatore dalla finestra delle proprietà all'oggetto esterno.  Definire una funzione denominata chostforwinform simile a `SetMyExternalObject`\) in `CPropertySheet`\- classe derivata per modificare il puntatore ogni modifica dello stato attivo da un oggetto esterno a un altro.  Le necessità di funzione di `SetMyExternalObject` di reimpostare le impostazioni per ciascuna pagina delle proprietà riflettano l'oggetto esterno appena selezionato.  A tale scopo, la funzione di `SetMyExternalObject` possa accedere agli oggetti di [CPropertyPage](../mfc/reference/cpropertypage-class.md) appartenenti alla classe di `CPropertySheet`.  
+ One method for communicating between the modeless property sheet and the external object (the current selection in a view, for example) is to define a pointer from the property sheet to the external object. Define a function (called something like `SetMyExternalObject`) in the `CPropertySheet`-derived class to change the pointer whenever the focus changes from one external object to another. The `SetMyExternalObject` function needs to reset the settings for each property page to reflect the newly selected external object. To accomplish this, the `SetMyExternalObject` function must be able to access the [CPropertyPage](../mfc/reference/cpropertypage-class.md) objects belonging to the `CPropertySheet` class.  
   
- Il modo più pratico per fornire l'accesso alle pagine delle proprietà all'interno di una finestra delle proprietà è di importare oggetti in `CPropertySheet`\- oggetto derivato di `CPropertyPage`.  Incorporando `CPropertyPage` oggetti in `CPropertySheet`l'oggetto derivato differisce dalla progettazione tipica per le finestre di dialogo modali, in cui il proprietario della finestra delle proprietà vengono creati oggetti di `CPropertyPage` e li passa alla finestra delle proprietà mediante [CPropertySheet::AddPage](../Topic/CPropertySheet::AddPage.md).  
+ The most convenient way to provide access to property pages within a property sheet is to embed the `CPropertyPage` objects in the `CPropertySheet`-derived object. Embedding `CPropertyPage` objects in the `CPropertySheet`-derived object differs from the typical design for modal dialog boxes, where the owner of the property sheet creates the `CPropertyPage` objects and passes them to the property sheet via [CPropertySheet::AddPage](../mfc/reference/cpropertysheet-class.md#addpage).  
   
- Esistono diverse alternative dell'interfaccia utente per determinare quando le impostazioni delle proprietà non modale devono essere applicate a un oggetto esterno.  Un'alternativa consiste di applicare le impostazioni della pagina delle proprietà current ogni volta che l'utente modifica il valore.  Un'altra alternativa consiste nella creazione di un pulsante di applicare, che consente all'utente accumulate le modifiche nelle pagine delle proprietà prima di salvarle nell'oggetto esterno.  Per informazioni sulle modalità per gestire il pulsante apply, vedere l'articolo [Gestire il pulsante apply](../mfc/handling-the-apply-button.md).  
+ There are many user-interface alternatives for determining when the settings of the modeless property sheet should be applied to an external object. One alternative is to apply the settings of the current property page whenever the user changes any value. Another alternative is to provide an Apply button, which allows the user to accumulate changes in the property pages before committing them to the external object. For information on ways to handle the Apply button, see the article [Handling the Apply Button](../mfc/handling-the-apply-button.md).  
   
-## Vedere anche  
- [Finestre delle proprietà](../mfc/property-sheets-mfc.md)   
- [Scambio di dati](../mfc/exchanging-data.md)   
- [Ciclo di vita di una finestra di dialogo](../mfc/life-cycle-of-a-dialog-box.md)
+## <a name="see-also"></a>See Also  
+ [Property Sheets](../mfc/property-sheets-mfc.md)   
+ [Exchanging Data](../mfc/exchanging-data.md)   
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)
+
+

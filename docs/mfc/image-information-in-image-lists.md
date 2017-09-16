@@ -1,34 +1,53 @@
 ---
-title: "Informazioni sulle immagini negli elenchi di immagini | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CImageList (classe), informazioni su immagini in"
-  - "elenchi di immagini [C++], informazioni su immagini in"
+title: Image Information in Image Lists | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CImageList class [MFC], image information in
+- image lists [MFC], image information in
 ms.assetid: 73c41543-fa91-405d-b15b-0feffa6a72c1
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Informazioni sulle immagini negli elenchi di immagini
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d6cd8df43d56af2aed19f8a1e583cb356ad6dfee
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-[CImageList](../mfc/reference/cimagelist-class.md) include una serie di funzioni per recuperare informazioni da un elenco.  La funzione membro di [GetImageInfo](../Topic/CImageList::GetImageInfo.md) riempie una struttura di `IMAGEINFO` di informazioni su una singola immagine, inclusi gli handle delle bitmap della maschera e di immagine, dal numero dei piani e di bit di colore per pixel e del rettangolo di delimitazione dell'immagine nella bitmap di immagine.  È possibile utilizzare queste informazioni per modificare direttamente le bitmap per l'immagine.  
+---
+# <a name="image-information-in-image-lists"></a>Image Information in Image Lists
+[CImageList](../mfc/reference/cimagelist-class.md) includes a number of functions that retrieve information from an image list. The [GetImageInfo](../mfc/reference/cimagelist-class.md#getimageinfo) member function fills an `IMAGEINFO` structure with information about a single image, including the handles of the image and mask bitmaps, the number of color planes and bits per pixel, and the bounding rectangle of the image within the image bitmap. You can use this information to directly manipulate the bitmaps for the image.  
   
- La funzione membro di [GetImageCount](../Topic/CImageList::GetImageCount.md) recupera il numero di immagini in un elenco.  
+ The [GetImageCount](../mfc/reference/cimagelist-class.md#getimagecount) member function retrieves the number of images in an image list.  
   
- È possibile creare un'icona basata su un'immagine e una maschera in un elenco immagini utilizzando la funzione membro di [ExtractIcon](../Topic/CImageList::ExtractIcon.md).  La funzione restituisce l'handle della nuova icona.  
+ You can create an icon based on an image and mask in an image list by using the [ExtractIcon](../mfc/reference/cimagelist-class.md#extracticon) member function. The function returns the handle of the new icon.  
   
-## Vedere anche  
- [Utilizzo di CImageList](../mfc/using-cimagelist.md)   
- [Controlli](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CImageList](../mfc/using-cimagelist.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

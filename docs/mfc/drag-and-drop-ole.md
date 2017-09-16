@@ -1,52 +1,71 @@
 ---
-title: "Trascinamento (OLE) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "trascinamento della selezione [C++]"
-  - "trascinamento della selezione [C++], informazioni sul trascinamento della selezione OLE"
-  - "supporto del trascinamento della selezione in File Manager"
-  - "OLE (applicazioni), trascinamento della selezione"
-  - "trascinamento della selezione OLE"
-  - "applicazioni server OLE, trascinamento della selezione"
+title: Drag and Drop (OLE) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE server applications [MFC], drag and drop
+- drag and drop [MFC]
+- OLE applications [MFC], drag and drop
+- File Manager drag and drop support [MFC]
+- drag and drop [MFC], about OLE drag and drop
+- OLE drag and drop [MFC]
 ms.assetid: a4595350-ca06-4400-88a1-f0175c76b77b
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Trascinamento (OLE)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b1f25b062583bf498fa18399a84e708db774aecf
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-La funzionalità di trascinamento della selezione OLE è principalmente un collegamento per la copia e incolla dei dati.  Quando si utilizzano gli Appunti per copiare i dati o incolla, una serie di passaggi richiesti.  Si selezionano i dati, fare clic su **Taglia** o **Copia** dal menu di **Modifica**, da passare al file di destinazione, dalla finestra o dall'applicazione, posizionare il cursore nella posizione desiderata e scegliere **Incolla** dal menu di **Modifica**.  
+---
+# <a name="drag-and-drop-ole"></a>Drag and Drop (OLE)
+The drag-and-drop feature of OLE is primarily a shortcut for copying and pasting data. When you use the Clipboard to copy or paste data, a number of steps are required. You select the data, click **Cut** or **Copy** from the **Edit** menu, move to the destination file, window or application, place the cursor in the desired location, and click **Paste** from the **Edit** menu.  
   
- Il trascinamento della selezione OLE è differente dal meccanismo di trascinamento della selezione del File Manager, che può gestire solo i nomi di file ed è specificamente progettato per passare i nomi di file a un'applicazione.  Il trascinamento della selezione OLE è molto più generali.  Consente di trascinare e si rilasciano tutti i dati che possono essere inseriti negli Appunti.  
+ OLE drag and drop is different from the File Manager drag-and-drop mechanism, which can only handle filenames and is designed specifically to pass filenames to applications. OLE drag and drop is much more general. It allows you to drag and drop any data that could also be placed on the Clipboard.  
   
- Quando si utilizza il trascinamento e il calo OLE, rimuovere due passaggi dal processo.  Si selezionano i dati dalla finestra di origine \("l'origine di trascinamento"\), trascinarlo nella destinazione desiderata \("la destinazione di rilascio"\) e rilasciando la si rilascia il pulsante del mouse.  L'operazione elimina la necessità dei menu e risulta più rapida della sequenza copia e incolla.  L'unico requisito è che sia l'origine di trascinamento che la destinazione di rilascio è necessario aprire e almeno parzialmente visibili sullo schermo.  
+ When you use OLE drag and drop, you remove two steps from the process. You select the data from the source window (the "drop source"), drag it to the desired destination (the "drop target"), and drop it by releasing the mouse button. The operation eliminates the need for menus and is quicker than the copy/paste sequence. The only requirement is that both the drop source and drop target must be open and at least partially visible on the screen.  
   
- Mediante trascinamento della selezione OLE, i dati possono essere spostati da un percorso a un altro all'interno di un documento, tra i documenti diverso, o tra le applicazioni.  Può essere implementato in un contenitore o in un'applicazione server e ciascuna applicazione può essere un'origine di trascinamento, una destinazione di rilascio, oppure entrambe.  Se un'applicazione non sia l'origine di trascinamento che supporto della destinazione di rilascio implementati, trascinare e il calo è abilitato tra le finestre figlio, o in una finestra.  Questa funzionalità può rendere l'applicazione più facile da utilizzare.  
+ Using OLE drag and drop, data can be transferred from one location to another within a document, between different documents, or between applications. It can be implemented in either a container or a server application, and any application can be a drop source, a drop target, or both. If an application has both drop-source and drop-target support implemented, drag and drop is enabled between child windows, or within one window. This feature can make your application much easier to use.  
   
- Se si desidera unicamente utilizzare le funzionalità di trascinamento della selezione OLE, vedere [Trascinamento della selezione: Personalizzazione](../mfc/drag-and-drop-customizing.md).  È possibile utilizzare le tecniche descritte nell'articolo per definire le origini di rilascio di applicazioni non OLE.  L'articolo [Trascinamento della selezione: Implementare una destinazione di rilascio](../mfc/drag-and-drop-implementing-a-drop-target.md) viene descritto come implementare il supporto della destinazione di trascinamento sia alle applicazioni di non OLE che OLE.  Verrà inoltre utile esaminare gli esempi [OCLIENT](../top/visual-cpp-samples.md) e [HIERSVR](../top/visual-cpp-samples.md) oLE MFC.  
+ If you only want to use the drag-and-drop capabilities of OLE, see [Drag and Drop: Customizing](../mfc/drag-and-drop-customizing.md). You can use the techniques explained in that article to make non-OLE applications drop sources. The article [Drag and Drop: Implementing a Drop Target](../mfc/drag-and-drop-implementing-a-drop-target.md) describes how to implement drop-target support for both OLE and non-OLE applications. It will also be helpful to examine the MFC OLE samples [OCLIENT](../visual-cpp-samples.md) and [HIERSVR](../visual-cpp-samples.md).  
   
- Se non vengono letti la famiglia di [Oggetti dati e origini dati \(OLE\)](../mfc/data-objects-and-data-sources-ole.md) di notizie, è possibile farlo ora.  Questi articoli illustrati i concetti fondamentali di trasferimento dei dati e di implementarla nelle applicazioni.  
+ If you have not read the [Data Objects and Data Sources (OLE)](../mfc/data-objects-and-data-sources-ole.md) family of articles, you may want to do so now. These articles explain the fundamentals of data transfer, and how to implement it in your applications.  
   
- Per ulteriori informazioni su trascinamento e su elimina, vedere:  
+ For more information about drag and drop, see:  
   
--   [Trascinamento della selezione: Implementazione di origine di trascinamento](../mfc/drag-and-drop-implementing-a-drop-source.md)  
+-   [Drag and Drop: Implementing a Drop Source](../mfc/drag-and-drop-implementing-a-drop-source.md)  
   
--   [Trascinamento della selezione: Implementare una destinazione di rilascio](../mfc/drag-and-drop-implementing-a-drop-target.md)  
+-   [Drag and Drop: Implementing a Drop Target](../mfc/drag-and-drop-implementing-a-drop-target.md)  
   
--   [Trascinamento della selezione: Personalizzazione](../mfc/drag-and-drop-customizing.md)  
+-   [Drag and Drop: Customizing](../mfc/drag-and-drop-customizing.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [OLE](../mfc/ole-in-mfc.md)   
- [Oggetti dati e origini dati \(OLE\)](../mfc/data-objects-and-data-sources-ole.md)
+ [Data Objects and Data Sources (OLE)](../mfc/data-objects-and-data-sources-ole.md)
+
+

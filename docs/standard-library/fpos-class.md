@@ -1,5 +1,5 @@
 ---
-title: Classe fpos | Microsoft Docs
+title: fpos Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - iosfwd/std::fpos
-- fpos
 - ios/std::fpos::seekpos
 - ios/std::fpos::state
 - ios/std::fpos::operator streamoff
 dev_langs:
 - C++
 helpviewer_keywords:
-- fpos class, about fpos class
-- fpos class
+- std::fpos [C++]
+- std::fpos [C++], seekpos
+- std::fpos [C++], state
 ms.assetid: ffd0827c-fa34-47f4-b10e-5cb707fcde47
 caps.latest.revision: 20
 author: corob-msft
@@ -38,65 +38,65 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: dfa9ee908b89c94b2eea95c450f67ca71031cf45
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: f26bd0d0d94f33f9e771f4c3de1547d96a773642
 ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="fpos-class"></a>Classe fpos
-La classe modello descrive un oggetto che può archiviare tutte le informazioni necessarie per ripristinare un indicatore di posizione del file arbitrario all'interno di qualsiasi flusso. Un oggetto di classe fpos\< **St**> di fatto archivia almeno due oggetti membro:  
+# <a name="fpos-class"></a>fpos Class
+The template class describes an object that can store all the information needed to restore an arbitrary file-position indicator within any stream. An object of class fpos\< **St**> effectively stores at least two member objects:  
   
--   Un offset di byte, di tipo [streamoff](../standard-library/ios-typedefs.md#streamoff).  
+-   A byte offset, of type [streamoff](../standard-library/ios-typedefs.md#streamoff).  
   
--   Uno stato di conversione, per l'uso da parte di un oggetto della classe basic_filebuf, di tipo **St**, in genere `mbstate_t`.  
+-   A conversion state, for use by an object of class basic_filebuf, of type **St**, typically `mbstate_t`.  
   
- Può anche archiviare una posizione di file arbitraria per l'uso da parte di un oggetto della classe [basic_filebuf](../standard-library/basic-filebuf-class.md), di tipo `fpos_t`. Per un ambiente con dimensioni del file limitate, tuttavia, a volte è possibile usare indifferentemente `streamoff` e `fpos_t`. Per un ambiente senza flussi con codifica dipendente dallo stato, è effettivamente possibile che `mbstate_t` non sia usato. Di conseguenza, il numero di oggetti membro archiviati può variare.  
+ It can also store an arbitrary file position, for use by an object of class [basic_filebuf](../standard-library/basic-filebuf-class.md), of type `fpos_t`. For an environment with limited file size, however, `streamoff` and `fpos_t` may sometimes be used interchangeably. For an environment with no streams that have a state-dependent encoding, `mbstate_t` may actually be unused. Therefore, the number of member objects stored may vary.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Statetype>  
 class fpos  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  *Statetype*  
- Informazioni di stato.  
+ State information.  
   
-### <a name="constructors"></a>Costruttori  
-  
-|||  
-|-|-|  
-|[fpos](#fpos)|Creare un oggetto che contiene informazioni su una posizione (offset) in un flusso.|  
-  
-### <a name="member-functions"></a>Funzioni membro  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[seekpos](#seekpos)|Usata internamente solo dalla libreria standard C++. Non chiamare questo metodo dal proprio codice.|  
-|[state](#state)|Imposta o restituisce lo stato della conversione.|  
+|[fpos](#fpos)|Create an object that contains information about a position (offset) in a stream.|  
   
-### <a name="operators"></a>Operatori  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[operator!=](#op_neq)|Testa gli indicatori di posizione del file per rilevare la disuguaglianza.|  
-|[operator+](#op_add)|Incrementa un indicatore di posizione del file.|  
-|[operator+=](#op_add_eq)|Incrementa un indicatore di posizione del file.|  
-|[operator-](#operator-)|Decrementa un indicatore di posizione del file.|  
-|[operator-=](#operator-_eq)|Decrementa un indicatore di posizione del file.|  
-|[operator==](#op_eq_eq)|Testa gli indicatori di posizione del file per rilevare l'uguaglianza.|  
-|[operator streamoff](#op_streamoff)|Esegue il cast del tipo `fpos` in oggetto di tipo `streamoff`.|  
+|[seekpos](#seekpos)|Used internally by the C++ Standard Library only. Do not call this method from your code.|  
+|[state](#state)|Sets or returns the conversion state.|  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<ios>  
+### <a name="operators"></a>Operators  
   
- **Spazio dei nomi:** std  
+|||  
+|-|-|  
+|[operator!=](#op_neq)|Tests file-position indicators for inequality.|  
+|[operator+](#op_add)|Increments a file-position indicator.|  
+|[operator+=](#op_add_eq)|Increments a file-position indicator.|  
+|[operator-](#operator-)|Decrements a file-position indicator.|  
+|[operator-=](#operator-_eq)|Decrements a file-position indicator.|  
+|[operator==](#op_eq_eq)|Tests file-position indicators for equality.|  
+|[operator streamoff](#op_streamoff)|Casts object of type `fpos` to object of type `streamoff`.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<ios>  
+  
+ **Namespace:** std  
   
 ##  <a name="fpos"></a>  fpos::fpos  
- Creare un oggetto che contiene informazioni su una posizione (offset) in un flusso.  
+ Create an object that contains information about a position (offset) in a stream.  
   
 ```  
 fpos(streamoff _Off = 0);
@@ -104,39 +104,39 @@ fpos(streamoff _Off = 0);
 fpos(Statetype _State, fpos_t _Filepos);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `_Off`  
- Offset nel flusso.  
+ The offset into the stream.  
   
  `_State`  
- Stato iniziale dell'oggetto `fpos`.  
+ The starting state of the `fpos` object.  
   
  *_Filepos*  
- Offset nel flusso.  
+ The offset into the stream.  
   
-### <a name="remarks"></a>Note  
- Il primo costruttore archivia l'offset `_Off`, relativo all'inizio del file e nello stato di conversione iniziale (se importante). Se `_Off` è -1, l'oggetto risultante rappresenta una posizione nel flusso non valida.  
+### <a name="remarks"></a>Remarks  
+ The first constructor stores the offset `_Off`, relative to the beginning of file and in the initial conversion state (if that matters). If `_Off` is -1, the resulting object represents an invalid stream position.  
   
- Il secondo costruttore archivia un offset pari a zero e l'oggetto `_State`.  
+ The second constructor stores a zero offset and the object `_State`.  
   
 ##  <a name="op_neq"></a>  fpos::operator!=  
- Testa gli indicatori di posizione del file per rilevare la disuguaglianza.  
+ Tests file-position indicators for inequality.  
   
 ```  
 bool operator!=(const fpos<Statetype>& right) const;
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `right`  
- Indicatore di posizione del file rispetto al quale eseguire il confronto.  
+ The file-position indicator against which to compare.  
   
-### <a name="return-value"></a>Valore restituito  
- **true** se gli indicatori di posizione del file non sono uguali; in caso contrario, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the file-position indicators are not equal, otherwise **false**.  
   
-### <a name="remarks"></a>Note  
- La funzione membro restituisce `!(*this == right)`.  
+### <a name="remarks"></a>Remarks  
+ The member function returns `!(*this == right)`.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // fpos_op_neq.cpp  
@@ -189,47 +189,47 @@ int main( )
 ```  
   
 ##  <a name="op_add"></a>  fpos::operator+  
- Incrementa un indicatore di posizione del file.  
+ Increments a file-position indicator.  
   
 ```  
 fpos<Statetype> operator+(streamoff _Off) const;
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `_Off`  
- Offset in base al quale si vuole incrementare l'indicatore di posizione del file.  
+ The offset by which you want to increment the file-position indicator.  
   
-### <a name="return-value"></a>Valore restituito  
- Posizione nel file.  
+### <a name="return-value"></a>Return Value  
+ The position in the file.  
   
-### <a name="remarks"></a>Note  
- La funzione membro restituisce **fpos(\*this) +=** `_Off`.  
+### <a name="remarks"></a>Remarks  
+ The member function returns **fpos(\*this) +=** `_Off`.  
   
-### <a name="example"></a>Esempio  
-  Per un esempio di come usare `operator+`, vedere [operator!=](#op_neq).  
+### <a name="example"></a>Example  
+  See [operator!=](#op_neq) for a sample of using `operator+`.  
   
 ##  <a name="op_add_eq"></a>  fpos::operator+=  
- Incrementa un indicatore di posizione del file.  
+ Increments a file-position indicator.  
   
 ```  
 fpos<Statetype>& operator+=(streamoff _Off);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `_Off`  
- Offset in base al quale si vuole incrementare l'indicatore di posizione del file.  
+ The offset by which you want to increment the file-position indicator.  
   
-### <a name="return-value"></a>Valore restituito  
- Posizione nel file.  
+### <a name="return-value"></a>Return Value  
+ The position in the file.  
   
-### <a name="remarks"></a>Note  
- La funzione membro aggiunge `_Off` all'oggetto membro offset archiviato e quindi restituisce **\*this**. Per il posizionamento all'interno di un file, il risultato in genere è valido solo per i flussi binari che non dispongono di una codifica dipendente dallo stato.  
+### <a name="remarks"></a>Remarks  
+ The member function adds `_Off` to the stored offset member object and then returns **\*this**. For positioning within a file, the result is generally valid only for binary streams that do not have a state-dependent encoding.  
   
-### <a name="example"></a>Esempio  
-  Per un esempio di come usare `operator+=`, vedere [operator!=](#op_neq).  
+### <a name="example"></a>Example  
+  See [operator!=](#op_neq) for a sample of using `operator+=`.  
   
 ##  <a name="fpos__operator-"></a>  fpos::operator-  
- Decrementa un indicatore di posizione del file.  
+ Decrements a file-position indicator.  
   
 ```  
 streamoff operator-(const fpos<Statetype>& right) const;
@@ -237,70 +237,70 @@ streamoff operator-(const fpos<Statetype>& right) const;
 fpos<Statetype> operator-(streamoff _Off) const;
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `right`  
- Posizione del file.  
+ File position.  
   
  `_Off`  
- Offset nel flusso.  
+ Stream offset.  
   
-### <a name="return-value"></a>Valore restituito  
- La prima funzione membro restituisce `(streamoff)*this - (streamoff) right`. La seconda funzione membro restituisce `fpos(*this) -= _Off`.  
+### <a name="return-value"></a>Return Value  
+ The first member function returns `(streamoff)*this - (streamoff) right`. The second member function returns `fpos(*this) -= _Off`.  
   
-### <a name="example"></a>Esempio  
-  Per un esempio di come usare `operator-`, vedere [operator!=](#op_neq).  
+### <a name="example"></a>Example  
+  See [operator!=](#op_neq) for a sample of using `operator-`.  
   
 ##  <a name="fpos__operator-_eq"></a>  fpos::operator-=  
- Decrementa un indicatore di posizione del file.  
+ Decrements a file-position indicator.  
   
 ```  
 fpos<Statetype>& operator-=(streamoff _Off);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `_Off`  
- Offset nel flusso.  
+ Stream offset.  
   
-### <a name="return-value"></a>Valore restituito  
- La funzione membro restituisce `fpos(*this) -= _Off`.  
+### <a name="return-value"></a>Return Value  
+ The member function returns `fpos(*this) -= _Off`.  
   
-### <a name="remarks"></a>Note  
- Per il posizionamento all'interno di un file, il risultato in genere è valido solo per i flussi binari che non dispongono di una codifica dipendente dallo stato.  
+### <a name="remarks"></a>Remarks  
+ For positioning within a file, the result is generally valid only for binary streams that do not have a state-dependent encoding.  
   
-### <a name="example"></a>Esempio  
-  Per un esempio di come usare `operator-=`, vedere [operator!=](#op_neq).  
+### <a name="example"></a>Example  
+  See [operator!=](#op_neq) for a sample of using `operator-=`.  
   
 ##  <a name="op_eq_eq"></a>  fpos::operator==  
- Testa gli indicatori di posizione del file per rilevare l'uguaglianza.  
+ Tests file-position indicators for equality.  
   
 ```  
 bool operator==(const fpos<Statetype>& right) const;
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `right`  
- Indicatore di posizione del file rispetto al quale eseguire il confronto.  
+ The file-position indicator against which to compare.  
   
-### <a name="return-value"></a>Valore restituito  
- **true** se gli indicatori di posizione del file sono uguali; in caso contrario, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the file-position indicators are equal; otherwise **false**.  
   
-### <a name="remarks"></a>Note  
- La funzione membro restituisce `(streamoff)*this == (streamoff)right`.  
+### <a name="remarks"></a>Remarks  
+ The member function returns `(streamoff)*this == (streamoff)right`.  
   
-### <a name="example"></a>Esempio  
-  Per un esempio di come usare `operator+=`, vedere [operator!=](#op_neq).  
+### <a name="example"></a>Example  
+  See [operator!=](#op_neq) for a sample of using `operator+=`.  
   
 ##  <a name="op_streamoff"></a>  fpos::operator streamoff  
- Esegue il cast dell'oggetto di tipo `fpos` in oggetto di tipo `streamoff`.  
+ Cast object of type `fpos` to object of type `streamoff`.  
   
 ```  
 operator streamoff() const;
 ```  
   
-### <a name="remarks"></a>Note  
- La funzione membro restituisce l'oggetto membro offset archiviato e l'eventuale offset aggiuntivo archiviato come parte dell'oggetto membro `fpos_t`.  
+### <a name="remarks"></a>Remarks  
+ The member function returns the stored offset member object and any additional offset stored as part of the `fpos_t` member object.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // fpos_op_streampos.cpp  
@@ -328,14 +328,14 @@ int main( )
 ```  
   
 ##  <a name="seekpos"></a>  fpos::seekpos  
- Questo metodo viene usato internamente solo dalla libreria standard C++. Non chiamare questo metodo dal proprio codice.  
+ This method is used internally by the C++ Standard Library only. Do not call this method from your code.  
   
 ```  
 fpos_t seekpos() const;
 ```  
   
 ##  <a name="state"></a>  fpos::state  
- Imposta o restituisce lo stato della conversione.  
+ Sets or returns the conversion state.  
   
 ```  
 Statetype state() const;
@@ -343,17 +343,17 @@ Statetype state() const;
 void state(Statetype _State);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `_State`  
- Nuovo stato di conversione.  
+ The new conversion state.  
   
-### <a name="return-value"></a>Valore restituito  
- Stato di conversione.  
+### <a name="return-value"></a>Return Value  
+ The conversion state.  
   
-### <a name="remarks"></a>Note  
- La prima funzione membro restituisce il valore archiviato nell'oggetto membro **St**. La seconda funzione membro archivia `_State` nell'oggetto membro **St**.  
+### <a name="remarks"></a>Remarks  
+ The first member function returns the value stored in the **St** member object. The second member function stores `_State` in the **St** member object.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // fpos_state.cpp  
@@ -378,9 +378,9 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Programmazione di iostream](../standard-library/iostream-programming.md)   
- [Convenzioni di iostream](../standard-library/iostreams-conventions.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [iostream Programming](../standard-library/iostream-programming.md)   
+ [iostreams Conventions](../standard-library/iostreams-conventions.md)
 
 

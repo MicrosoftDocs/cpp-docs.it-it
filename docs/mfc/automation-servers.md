@@ -1,64 +1,83 @@
 ---
-title: "Server di automazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "server di automazione"
-  - "COM (componenti), server di automazione"
-  - "mappe di invio, server di automazione"
-  - "server, automazione"
+title: Automation Servers | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Automation servers
+- COM components, Automation servers
+- dispatch maps [MFC]], Automation servers
+- servers, Automation
 ms.assetid: 523fd155-51ce-4f91-b986-b74bdbdd7d92
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Server di automazione
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7e5d43a45b9b09c93319ae447a229075ec04c064
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-L'automazione fa sì che l'applicazione modificare gli oggetti implementati in un'altra applicazione, o esporre oggetti in modo da poter essere modificati.  Un server di automazione è un'applicazione che espone gli oggetti programmabili \(chiamati oggetti ActiveX\) ad altre applicazioni \(chiamate [Client di automazione](../mfc/automation-clients.md)\).  I server di automazione sono talvolta denominati componenti di automazione.  
+---
+# <a name="automation-servers"></a>Automation Servers
+Automation makes it possible for your application to manipulate objects implemented in another application, or to expose objects so they can be manipulated. An Automation server is an application that exposes programmable objects (called Automation objects) to other applications (called [Automation clients](../mfc/automation-clients.md)). Automation servers are sometimes called Automation components.  
   
- Esporre gli oggetti di automazione consente ai client per automatizzare alcune procedure accedendo direttamente agli oggetti e le funzionalità fornite dal server rende disponibile.  Esporre oggetti è utile quando le applicazioni forniscono funzionalità risulta utile per altre applicazioni.  Ad esempio, un elaboratore di testi potrebbe esporre la funzionalità di controllo ortografico in modo utilizzabile da altri programmi.  L'esposizione degli oggetti consente ai fornitori per migliorare le funzionalità delle applicazioni tramite la funzionalità preparata di altre applicazioni.  
+ Exposing Automation objects enables clients to automate certain procedures by directly accessing the objects and functionality the server makes available. Exposing objects this way is beneficial when applications provide functionality that is useful for other applications. For example, a word processor might expose its spell-checking functionality so that other programs can use it. Exposure of objects thus enables vendors to improve their applications' functionality by using the ready-made functionality of other applications.  
   
- Questi oggetti ActiveX presentano proprietà e metodi come come interfaccia esterna.  Le proprietà sono denominate attributi dell'oggetto ActiveX.  Le proprietà sono come membri dati della classe c\+\+.  I metodi sono funzioni che operano a oggetti di automazione.  I metodi sono analoghe alle funzioni membro pubbliche della classe c\+\+.  
+ These Automation objects have properties and methods as their external interface. Properties are named attributes of the Automation object. Properties are like the data members of a C++ class. Methods are functions that work on Automation objects. Methods are like the public member functions of a C++ class.  
   
 > [!NOTE]
->  Anche se le proprietà sono come membri dati C\+\+, non sono accessibili direttamente.  Per fornire l'accesso trasparente, installare una variabile interna nell'oggetto ActiveX con una coppia di ottenere\/funzioni del membro del gruppo di accedervi.  
+>  Although properties are like C++ data members, they are not directly accessible. To provide transparent access, set up an internal variable in the Automation object with a pair of get/set member functions to access them.  
   
- Esponendo la funzionalità dell'applicazione tramite un'interfaccia comune e definita chiaramente, automazione consente di compilare applicazioni in un unico linguaggio di programmazione generale come Microsoft Visual Basic anziché in diversi, macr\-linguaggio specifici.  
+ By exposing application functionality through a common, well-defined interface, Automation makes it possible to build applications in a single general programming language like Microsoft Visual Basic instead of in diverse, application-specific macro languages.  
   
-##  <a name="_core_support_for_automation_servers"></a> Supporto per i server di automazione  
- Visual C\+\+ e il framework MFC forniscono un ampio supporto per i server di automazione.  Gestire gran lunga l'overhead legate alla creazione di server di automazione, pertanto è possibile concentrare l'attenzione su della funzionalità dell'applicazione.  
+##  <a name="_core_support_for_automation_servers"></a> Support for Automation Servers  
+ Visual C++ and the MFC framework provide extensive support for Automation servers. They handle much of the overhead involved in making an Automation server, so you can focus your efforts on the functionality of your application.  
   
- Il meccanismo principale del framework per l'automazione della mappa è send, un set di macro che si espande nelle dichiarazioni e chiama necessario per esporre metodi e proprietà per OLE.  L'aspetto tipici di una mappa di invio l'aspetto seguente:  
+ The framework's principal mechanism for supporting Automation is the dispatch map, a set of macros that expands into the declarations and calls needed to expose methods and properties for OLE. A typical dispatch map looks like this:  
   
- [!code-cpp[NVC_MFCAutomation#1](../mfc/codesnippet/CPP/automation-servers_1.cpp)]  
+ [!code-cpp[NVC_MFCAutomation#1](../mfc/codesnippet/cpp/automation-servers_1.cpp)]  
   
- La Finestra Proprietà e la Visualizzazione classi consentono di gestire le mappe di invio.  Quando si aggiunge un nuovo metodo o proprietà a una classe, Visual C\+\+ aggiunge `DISP_FUNCTION` o una macro corrispondente di `DISP_PROPERTY` con parametri che indicano il nome della classe, i nomi esterni e interni del metodo o la proprietà e i tipi di dati.  
+ The Properties window and Class View assist in maintaining dispatch maps. When you add a new method or property to a class, Visual C++ adds a corresponding `DISP_FUNCTION` or `DISP_PROPERTY` macro with parameters indicating the class name, external and internal names of the method or property, and data types.  
   
- La finestra di dialogo **Add Class** semplifica inoltre la dichiarazione di classi di automazione e la gestione delle relative proprietà e operazioni.  Quando si utilizza la finestra di dialogo aggiungi classe per aggiungere una classe Al progetto, specificare la classe di base.  Se la classe base consente all'automazione, controlli di visualizzata la finestra di dialogo aggiungi classe utilizzate per specificare se la nuova classe deve supportare l'automazione, se è "creabile OLE" ovvero se gli oggetti della classe possono essere creati in una richiesta da un client COM\) e il nome esterno per il client COM utilizzare.  
+ The **Add Class** dialog box also simplifies the declaration of Automation classes and the management of their properties and operations. When you use the Add Class dialog box to add a class to your project, you specify its base class. If the base class allows Automation, the Add Class dialog box displays controls you use to specify whether the new class should support Automation, whether it is "OLE creatable" (that is, whether objects of the class can be created on a request from a COM client), and the external name for the COM client to use.  
   
- La finestra di dialogo **Add Class** crea quindi una dichiarazione di classe, incluse le macro appropriate per le funzionalità che OLE specificato.  Inoltre aggiunge codice di base per l'implementazione delle funzioni membro della classe.  
+ The **Add Class** dialog box then creates a class declaration, including the appropriate macros for the OLE features you have specified. It also adds the skeleton code for implementation of your class's member functions.  
   
- La Creazione guidata applicazione MFC semplifica delle procedure al togliersi l'applicazione server di automazione da zero.  Se si seleziona la casella di controllo **Automazione** dalla pagina di **Funzionalità avanzate**, la Creazione guidata applicazione MFC aggiunto alla funzione di `InitInstance` dell'applicazione le chiamate richieste di registrare gli oggetti di automazione e di eseguire l'applicazione come server di automazione.  
+ The MFC Application Wizard simplifies the steps involved in getting your automation server application off the ground. If you select the **Automation** check box from the **Advanced Features** page, the MFC Application Wizard adds to your application's `InitInstance` function the calls required to register your Automation objects and run your application as an Automation server.  
   
-### Scegliere l'argomento con cui si desidera procedere  
+### <a name="what-do-you-want-to-do"></a>What do you want to do  
   
--   [Informazioni sui client di automazione](../mfc/automation-clients.md)  
+-   [Learn about Automation clients](../mfc/automation-clients.md)  
   
--   [Acquisire ulteriori informazioni su CCmdTarget classe](../mfc/reference/ccmdtarget-class.md)  
+-   [Learn more about class CCmdTarget](../mfc/reference/ccmdtarget-class.md)  
   
--   [Ulteriori informazioni sulla classe COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md)  
+-   [Learn more about class COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md)  
   
-## Vedere anche  
- [automazione](../mfc/automation.md)   
- [Creazione guidata applicazione MFC](../mfc/reference/mfc-application-wizard.md)
+## <a name="see-also"></a>See Also  
+ [Automation](../mfc/automation.md)   
+ [MFC Application Wizard](../mfc/reference/mfc-application-wizard.md)
+
+

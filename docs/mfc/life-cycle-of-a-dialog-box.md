@@ -1,62 +1,81 @@
 ---
-title: "Ciclo di vita di una finestra di dialogo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "finestre di dialogo, ciclo di vita"
-  - "ciclo di vita delle finestre di dialogo"
-  - "MFC (finestre di dialogo), ciclo di vita"
-  - "finestre di dialogo modali, ciclo di vita"
-  - "finestre di dialogo non modali, ciclo di vita"
+title: Life Cycle of a Dialog Box | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- dialog boxes [MFC], life cycle
+- modal dialog boxes [MFC], life cycle
+- modeless dialog boxes [MFC], life cycle
+- MFC dialog boxes [MFC], life cycle
+- life cycle of dialog boxes [MFC]
 ms.assetid: e16fd78e-238d-4f31-8c9d-8564f3953bd9
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Ciclo di vita di una finestra di dialogo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 244bc75dfdb4695184ca66b8810260d407507f54
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Durante il ciclo di vita di una finestra di dialogo, l'utente richiama la finestra di dialogo, in genere in un gestore comando che crea e inizializza l'oggetto della finestra di dialogo, l'utente interagisce con la finestra di dialogo e chiusa la finestra.  
+---
+# <a name="life-cycle-of-a-dialog-box"></a>Life Cycle of a Dialog Box
+During the life cycle of a dialog box, the user invokes the dialog box, typically inside a command handler that creates and initializes the dialog object, the user interacts with the dialog box, and the dialog box closes.  
   
- Per le finestre di dialogo modali, il gestore raccoglie tutti i dati immessi dall'utente una volta chiusa la finestra.  Poiché l'oggetto della finestra di dialogo esiste dopo la relativa finestra di dialogo è chiusa, è possibile utilizzare semplicemente le variabili membro della classe della finestra di dialogo per estrarre i dati.  
+ For modal dialog boxes, your handler gathers any data the user entered once the dialog box closes. Since the dialog object exists after its dialog window has closed, you can simply use the member variables of your dialog class to extract the data.  
   
- Per le finestre di dialogo non modale, è possibile estrarre spesso i dati dall'oggetto finestra di dialogo mentre la finestra di dialogo è ancora visualizzata.  A un certo punto, l'oggetto della finestra di dialogo viene eliminato; quando si verifica dipende dal codice.  
+ For modeless dialog boxes, you may often extract data from the dialog object while the dialog box is still visible. At some point, the dialog object is destroyed; when this happens depends on your code.  
   
-## Scegliere l'argomento su cui visualizzare maggiori informazioni  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Creazione e visualizzazione delle finestre di dialogo](../mfc/creating-and-displaying-dialog-boxes.md)  
+-   [Creating and displaying dialog boxes](../mfc/creating-and-displaying-dialog-boxes.md)  
   
--   [Creare finestre di dialogo modali](../mfc/creating-modal-dialog-boxes.md)  
+-   [Creating modal dialog boxes](../mfc/creating-modal-dialog-boxes.md)  
   
--   [Creare finestre di dialogo non modale](../mfc/creating-modeless-dialog-boxes.md)  
+-   [Creating modeless dialog boxes](../mfc/creating-modeless-dialog-boxes.md)  
   
--   [Utilizzando un modello di finestra di dialogo in memoria](../mfc/using-a-dialog-template-in-memory.md)  
+-   [Using a dialog template in memory](../mfc/using-a-dialog-template-in-memory.md)  
   
--   [Impostare il colore di sfondo della finestra di dialogo](../mfc/setting-the-dialog-box’s-background-color.md)  
+-   [Setting the dialog box's background color](../mfc/setting-the-dialog-boxs-background-color.md)  
   
--   [Inizializzare la finestra di dialogo](../mfc/initializing-the-dialog-box.md)  
+-   [Initializing the dialog box](../mfc/initializing-the-dialog-box.md)  
   
--   [I messaggi di windows management nella finestra di dialogo](../mfc/handling-windows-messages-in-your-dialog-box.md)  
+-   [Handling Windows messages in your dialog box](../mfc/handling-windows-messages-in-your-dialog-box.md)  
   
--   [Recupero di dati dall'oggetto finestra di dialogo](../mfc/retrieving-data-from-the-dialog-object.md)  
+-   [Retrieving data from the dialog object](../mfc/retrieving-data-from-the-dialog-object.md)  
   
--   [Chiudere la finestra di dialogo](../mfc/closing-the-dialog-box.md)  
+-   [Closing the dialog box](../mfc/closing-the-dialog-box.md)  
   
--   [Eliminare la finestra di dialogo](../mfc/destroying-the-dialog-box.md)  
+-   [Destroying the dialog box](../mfc/destroying-the-dialog-box.md)  
   
--   [Scambio di dati della finestra di dialogo \(DDX\) e convalida \(DDV\)](../mfc/dialog-data-exchange-and-validation.md)  
+-   [Dialog data exchange (DDX) and validation (DDV)](../mfc/dialog-data-exchange-and-validation.md)  
   
--   [Finestre di dialogo delle proprietà](../mfc/property-sheets-and-property-pages-mfc.md)  
+-   [Property sheet dialog boxes](../mfc/property-sheets-and-property-pages-mfc.md)  
   
-## Vedere anche  
- [Finestre di dialogo](../mfc/dialog-boxes.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Boxes](../mfc/dialog-boxes.md)
+
+

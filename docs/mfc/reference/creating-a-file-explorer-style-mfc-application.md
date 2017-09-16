@@ -1,64 +1,83 @@
 ---
-title: "Creazione di un&#39;applicazione MFC di tipo Esplora file | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.mfcexplorer.project"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "browser, applicazioni di tipo Esplora risorse"
-  - "applicazioni di tipo Esplora risorse, creazione"
-  - "MFC (applicazioni), di tipo Esplora risorse"
+title: Creating a File Explorer-Style MFC Application | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.appwiz.mfcexplorer.project
+dev_langs:
+- C++
+helpviewer_keywords:
+- browsers [MFC], Explorer-style applications
+- MFC applications [MFC], Windows Explorer-style
+- Explorer-style applications [MFC], creating
 ms.assetid: f843ab5d-2d5d-41ca-88a4-badc0d2f8052
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Creazione di un&#39;applicazione MFC di tipo Esplora file
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1ec48d8090c06c23670e21ef5fbdaa37428d7851
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Molte applicazioni del sistema Windows utilizzano l'interfaccia utente \(UI\) per Esplora file.  Quando si avvia Esplora file, ad esempio, viene visualizzata un'applicazione con una barra di divisione verticale che suddivide l'area client.  La parte sinistra dell'area client offre funzionalità di esplorazione e navigazione, mentre nella parte destra vengono riportati i dettagli relativi alla selezione effettuata nel riquadro di sinistra.  Quando si fa clic su un elemento in questo riquadro, il riquadro di destra viene rigenerato.  In un'applicazione MDI, è possibile utilizzare i comandi del menu **Visualizza** per modificare la quantità di dettagli visualizzati nel riquadro di destra. In un'applicazione SDI o a documenti multipli di primo livello, i dettagli possono essere modificati soltanto mediante i pulsanti della barra degli strumenti.  
+---
+# <a name="creating-a-file-explorer-style-mfc-application"></a>Creating a File Explorer-Style MFC Application
+Many Windows system applications use the user interface (UI) for File Explorer. When you start File Explorer, for example, you see an application with a vertical splitter bar dividing the client area. The left side of the client area provides navigation and browsing features, and the right side of the client area shows details pertinent to the selection in the left pane. When a user clicks an item in the left pane, the application repopulates the right pane. In an MDI application, you can use commands on the **View** menu to change the amount of detail shown in the right pane. (In an SDI or multiple top-level document application, you can change the detail using the toolbar buttons only.)  
   
- Il contenuto dei riquadri dipende dall'applicazione.  In un visualizzatore di file system, il riquadro di sinistra riporta una visualizzazione gerarchica delle directory, dei computer o dei gruppi di computer, mentre in quello di destra vengono visualizzati singoli file, cartelle o computer e i relativi dettagli.  Il contenuto non deve necessariamente essere costituito da file,  ma può corrispondere a messaggi di posta elettronica, report di errori o altri elementi di un database.  
+ The contents of the panes depend on the application. In a file-system browser, the left pane shows a hierarchical view of directories or machines, or machine groups, while the right pane displays folders, individual files, or machines, and details about them. The contents do not necessarily have to be files. They could be e-mail messages, error reports, or other items in a database.  
   
- La procedura guidata crea le classi riportate di seguito.  
+ The wizard creates the following classes for you:  
   
--   La classe **CLeftView** definisce il riquadro di sinistra dell'area client.  Viene sempre derivata da [CTreeView](../../mfc/reference/ctreeview-class.md).  
+-   The **CLeftView** class defines the left pane of the client area. It is always derived from [CTreeView](../../mfc/reference/ctreeview-class.md).  
   
--   La classe C*NomeProg*View definisce il riquadro di destra dell'area client.  Per impostazione predefinita, viene derivata da [CListView](../../mfc/reference/clistview-class.md), ma può corrispondere a un diverso tipo di visualizzazione a seconda della classe specificata nell'elenco **Classe base** della schermata [Classi generate](../../mfc/reference/generated-classes-mfc-application-wizard.md) della procedura guidata.  
+-   The C*ProjName*View class defines the right pane of the client area. By default, it is derived from [CListView](../../mfc/reference/clistview-class.md) but can be another type of view depending on the class you specify from the **Base class** list in the [Generated Classes](../../mfc/reference/generated-classes-mfc-application-wizard.md) page of the wizard.  
   
- L'applicazione generata può essere dotata di un'interfaccia a documento singolo \(SDI\), di un'interfaccia a documenti multipli \(MDI\) oppure di un'architettura a documenti multipli di primo livello.  Ogni finestra cornice creata dall'applicazione viene suddivisa verticalmente mediante [CSplitterWnd](../../mfc/reference/csplitterwnd-class.md).  Il codice di questo tipo di applicazione è simile al codice di una normale applicazione MFC che utilizza una barra di divisione, ad eccezione del fatto che questo tipo di applicazione dispone di visualizzazioni controlli distinte all'interno di ciascun riquadro di divisione.  
+ The generated application can have a single document interface (SDI), a multiple document interface (MDI), or a multiple top-level documents architecture. Each frame window the application creates is vertically split using [CSplitterWnd](../../mfc/reference/csplitterwnd-class.md). Coding this application type is similar to coding a normal MFC application that uses a splitter, except that this type of application has separate control views within each splitter pane.  
   
- Se si utilizza la visualizzazione elenco predefinita nel riquadro di destra, vengono creati i pulsanti della barra degli strumenti che consentono di modificare lo stile della visualizzazione passando alla modalità icone grandi, icone piccole, elenco o dettagli, nonché, nelle applicazioni MDI, opzioni di menu aggiuntive.  
+ If you use the default list view in the right pane, the wizard creates additional menu choices (in MDI applications only) and toolbar buttons to switch the view's style among large icons, small icons, list, and detail modes.  
   
-### Per iniziare creando un file MFC di tipo esplora eseguibile  
+### <a name="to-begin-creating-a-file-explorer-style-mfc-executable"></a>To begin creating a File Explorer-style MFC executable  
   
-1.  Attenersi alla procedura illustrata in [Creazione di un'applicazione MFC](../../mfc/reference/creating-an-mfc-application.md).  
+1.  Follow the directions in [Creating an MFC Application](../../mfc/reference/creating-an-mfc-application.md).  
   
-2.  Nella pagina di [Tipo di applicazione](../../mfc/reference/application-type-mfc-application-wizard.md) la Creazione guidata applicazione MFC, selezionare lo stile di progetto **Esplora file**.  
+2.  In the MFC Application Wizard [Application Type](../../mfc/reference/application-type-mfc-application-wizard.md) page, select the **File Explorer** project style.  
   
-3.  Impostare le opzioni di progetto desiderate nelle altre schermate della procedura guidata.  
+3.  Set any other options you desire on the other pages of the wizard.  
   
-4.  Scegliere **Fine** per generare lo scheletro di applicazione.  
+4.  Click **Finish** to generate the skeleton application.  
   
- Per ulteriori informazioni, vedere:  
+ For more information, see:  
   
--   [Tipi di documenti multipli, visualizzazioni e finestre cornice](../../mfc/multiple-document-types-views-and-frame-windows.md)  
+-   [Multiple Document Types, Views, and Frame Windows](../../mfc/multiple-document-types-views-and-frame-windows.md)  
   
--   [Classi di visualizzazione derivate](../../mfc/derived-view-classes-available-in-mfc.md)  
+-   [Derived View Classes](../../mfc/derived-view-classes-available-in-mfc.md)  
   
--   [Scelte di progettazione delle applicazioni](../../mfc/application-design-choices.md)  
+-   [Application Design Choices](../../mfc/application-design-choices.md)  
   
-## Vedere anche  
- [Creazione guidata applicazione MFC](../../mfc/reference/mfc-application-wizard.md)   
- [Creazione di un'applicazione MFC di tipo browser Web](../../mfc/reference/creating-a-web-browser-style-mfc-application.md)   
- [Creazione di un'applicazione MFC basata su form](../../mfc/reference/creating-a-forms-based-mfc-application.md)
+## <a name="see-also"></a>See Also  
+ [MFC Application Wizard](../../mfc/reference/mfc-application-wizard.md)   
+ [Creating a Web Browser-Style MFC Application](../../mfc/reference/creating-a-web-browser-style-mfc-application.md)   
+ [Creating a Forms-Based MFC Application](../../mfc/reference/creating-a-forms-based-mfc-application.md)
+
+

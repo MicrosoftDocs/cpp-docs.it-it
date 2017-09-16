@@ -1,58 +1,73 @@
 ---
-title: "noexcept (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "noexcept_cpp"
-dev_langs: 
-  - "C++"
+title: noexcept (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- noexcept_cpp
+dev_langs:
+- C++
 ms.assetid: df24edb9-c6a6-4e37-9914-fd5c0c3716a8
 caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# noexcept (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 80e9ac58dcee9ee4e3028b422d0fede23f8a72f3
+ms.contentlocale: it-it
+ms.lasthandoff: 09/11/2017
 
-**C\+\+ 11:** specifica se una funzione può generare eccezioni.  
+---
+# <a name="noexcept-c"></a>noexcept (C++)
+**C++11:** Specifies whether a function might throw exceptions.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
-```vb  
-ReturnType FunctionName(params) noexcept;  
-ReturnType FunctionName(params) noexcept(noexcept(expression);  
-```  
+> *noexcept-expression*:  
+> &nbsp;&nbsp;&nbsp;&nbsp;**noexcept**  
+> &nbsp;&nbsp;&nbsp;&nbsp;**noexcept(** *constant-expression* **)**  
   
-#### Parametri  
- espressione  
- Espressione costante che viene valutata True o False.  La versione non condizionale è equivalente a noexcept\(true\).  
+### <a name="parameters"></a>Parameters  
+ *constant-expression*  
+ A constant expression of type `bool` that represents whether the set of potential exception types is empty. The unconditional version is equivalent to `noexcept(true)`.  
   
-## Note  
- `noexcept` \(e il relativo sinonimo `noecept(true)`\) specifica che la funzione non genererà mai un'eccezione o consentirà la propagazione di un'eccezione da qualsiasi altra funzione che richiama direttamente o indirettamente.  In particolare, `noexcept` significa che è la funzione è `noexcept` solo se anche tutte le funzioni che chiama sono noexcept o const e non ci sono cast dinamici potenzialmente non valutati che richiedono un controllo runtime, espressioni typeid applicate a un'espressione glvalue il cui tipo è una classe polimorfica o generano espressioni.  Tuttavia, il compilatore non necessariamente controlla ogni percorso di codice per le eccezioni che potrebbero essere propagate fino a una funzione `noexcept`.  Se un'eccezione raggiunge una funzione contrassegnata come `noexcept`, [std::terminate](../Topic/terminate%20\(%3Cexception%3E\).md) viene richiamata immediatamente e non è garantito che i distruttori di tutti gli oggetti inclusi nell'ambito verranno richiamati.  
+## <a name="remarks"></a>Remarks  
+ A *noexcept expression* is a kind of *exception specification*, a suffix to a function declaration that represents a set of types that might be matched by an exception handler for any exception that exits a function. Unary conditional operator `noexcept(`*constant_expression*`)` where *constant_expression* yeilds `true`, and its unconditional synonym `noexcept`, specify that the set of potential exception types that can exit a function is empty. That is, the function never throws an exception and never allows an exception to be propagated outside its scope. The operator `noexcept(`*constant_expression*`)` where *constant_expression* yeilds `false`, or the absence of an exception specification (other than for a destructor or deallocation function), indicates that the set of potential exceptions that can exit the function is the set of all types.  
+ 
+ Mark a function as `noexcept` only if all the functions that it calls, either directly or indirectly, are also `noexcept` or `const`. The compiler does not necessarily check every code path for exceptions that might bubble up to a `noexcept` function. If an exception does exit the outer scope of a function marked `noexcept`, [std::terminate](../standard-library/exception-functions.md#terminate) is invoked immediately, and there is no guarantee that destructors of any in-scope objects will be invoked. Use `noexcept` instead of the dynamic exception specifier `throw`, which is deprecated in C++11 and later and not fully implemented in Visual Studio. We recommended you apply `noexcept` to any function that never allows an exception to propagate up the call stack. When a function is declared `noexcept`, it enables the compiler to generate more efficient code in several different contexts.    
   
- Una funzione dichiarata con un identificatore noexcept condizionale che restituisce noexcept\(false\) specifica che consente la propagazione delle eccezioni.  Ad esempio, una funzione che copia il relativo argomento può essere dichiarata noexcept a condizione che l'oggetto da copiare sia un tipo POD \(Plain Old Data, dati non aggiornati\).  Tale funzione potrebbe essere dichiarata come segue:  
+## <a name="example"></a>Example  
+A template function that copies its argument might be declared `noexcept` on the condition that the object being copied is a plain old data type (POD). Such a function could be declared like this:  
   
-```  
+```cpp  
 #include <type_traits>  
   
 template <typename T>  
-T copy_object(T& obj) noexcept(std::is_pod<T>)  
+T copy_object(const T& obj) noexcept(std::is_pod<T>)  
 {  
- //. . .   
+   // ...   
 }  
-  
 ```  
   
- Usare `noexcept` anziché l'identificatore di eccezione `throw`, che è deprecato in C\+\+ 11 e versioni successive.  È consigliabile applicare `noexcept` a una funzione, se si è certi che non consentirà mai un'eccezione di propagarsi fino allo stack di chiamate.  Una funzione dichiarata con `noexcept` consente ai compilatori di generare un codice più efficiente in più contesti diversi.  
-  
-## Vedere anche  
- [Gestione delle eccezioni C\+\+](../cpp/cpp-exception-handling.md)
+## <a name="see-also"></a>See Also  
+ [C++ Exception Handling](../cpp/cpp-exception-handling.md) [Exception Specifications (throw, noexcept)](../cpp/exception-specifications-throw-cpp.md)

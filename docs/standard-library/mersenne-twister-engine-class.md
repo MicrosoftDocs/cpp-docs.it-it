@@ -1,15 +1,14 @@
 ---
-title: Classe mersenne_twister_engine | Microsoft Docs
+title: mersenne_twister_engine Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- mersenne_twister_engine
 - random/std::mersenne_twister_engine
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: bc94cb819bbf71893503f91bb3469a5be771f5cd
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: f847f0eb599f3696c51f26b885c52927020f702d
 ms.contentlocale: it-it
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="mersennetwisterengine-class"></a>Classe mersenne_twister_engine
-Genera una sequenza di numeri integer casuali di alta qualità usando l'algoritmo Mersenne Twister.  
+# <a name="mersennetwisterengine-class"></a>mersenne_twister_engine Class
+Generates a high quality random sequence of integers based on the Mersenne twister algorithm.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class UIntType,   
@@ -54,55 +53,55 @@ template <class UIntType,
 class mersenne_twister_engine;  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  `UIntType`  
- Tipo di risultato Unsigned Integer. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).  
+ The unsigned integer result type. For possible types, see [\<random>](../standard-library/random.md).  
   
  `W`  
- **Dimensione parola**. Dimensione di ogni parola, in bit, della sequenza di stato. **Precondizione:** `2u < W ≤ numeric_limits<UIntType>::digits`  
+ **Word size**. Size of each word, in bits, of the state sequence. **Precondition**: `2u < W ≤ numeric_limits<UIntType>::digits`  
   
  `N`  
- **Dimensione stato**. Numero di elementi (valori) nella sequenza di stato.  
+ **State size**. The number of elements (values) in the state sequence.  
   
  `M`  
- **Dimensione spostamento**. Numero di elementi da ignorare durante ogni twist. **Precondizione:** `0 < M ≤ N`  
+ **Shift size**. The number of elements to skip during each twist. **Precondition**: `0 < M ≤ N`  
   
  `R`  
- **Bit di maschera**. **Precondizione:** `R ≤ W`  
+ **Mask bits**. **Precondition**: `R ≤ W`  
   
  `A`  
- **Maschera XOR**. **Precondizione:** `A ≤ (1u<<W) - 1u`  
+ **XOR mask**. **Precondition**: `A ≤ (1u<<W) - 1u`  
   
  `U`, `S`, `T`, `L`  
- **Parametri di spostamento per la crittografia**. Usati come valori di spostamento durante la crittografia. Precondizione: `U,S,T,L ≤ W`  
+ **Tempering shift parameters**. Used as shift values during scrambling (tempering). Precondition: `U,S,T,L ≤ W`  
   
  `D`, `B`, `C`  
- **Parametri maschera di bit crittografia**. Usati come valori di maschera di bit durante la crittografia. Precondizione: `D,B,C ≤ (1u<<W) - 1u`  
+ **Tempering bit mask parameters**. Used as bit mask values during scrambling (tempering). Precondition: `D,B,C ≤ (1u<<W) - 1u`  
   
  `F`  
- **Moltiplicatore inizializzazione**. Usato per l'inizializzazione della sequenza. Precondizione: `F ≤ (1u<<W) - 1u`  
+ **Initialization multiplier**. Used to help with initialization of the sequence. Precondition: `F ≤ (1u<<W) - 1u`  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 ||||  
 |-|-|-|  
 |`mersenne_twister_engine::mersenne_twister_engine`|`mersenne_twister_engine::min`|`mersenne_twister_engine::discard`|  
 |`mersenne_twister_engine::operator()`|`mersenne_twister_engine::max`|`mersenne_twister_engine::seed`|  
   
- `default_seed` è una costante membro definita come `5489u`, usata come valore di parametro predefinito per `mersenne_twister_engine::seed` e per il costruttore a valore singolo.  
+ `default_seed` is a member constant, defined as `5489u`, used as the default parameter value for `mersenne_twister_engine::seed` and the single value constructor.  
   
- Per altre informazioni sui membri del motore, vedere [\<random>](../standard-library/random.md).  
+ For more information about engine members, see [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>Note  
- Questa classe di modello descrive un motore di numeri casuali che restituisce valori sull'intervallo chiuso [ `0`, `2`<sup>W</sup> - `1`]. Contiene un valore integrale di grandi dimensioni con `W * (N - 1) + R` bit. Estrae `W` bit alla volta da questo valore elevato e quando ha usato tutti i bit, esegue il twist del valore di grandi dimensioni spostando e mescolando i bit in modo da avere un nuovo set di bit dal quale effettuare l'estrazione. Lo stato del motore è costituito dagli ultimi valori a `N``W`-bit usati se `operator()` è stato chiamato almeno `N` volte, altrimenti dai valori a `M``W`-bit che sono stati usati e dagli ultimi `N - M` valori di seeding.  
+## <a name="remarks"></a>Remarks  
+ This template class describes a random number engine, returning values on the closed interval [ `0`, `2`<sup>W</sup> - `1`]. It holds a large integral value with `W * (N - 1) + R` bits. It extracts `W` bits at a time from this large value, and when it has used all the bits it twists the large value by shifting and mixing the bits so that it has a new set of bits to extract from. The engine's state is the last `N` `W`-bit values used if `operator()` has been called at least `N` times, otherwise the `M` `W`-bit values that have been used and the last `N - M` values of the seed.  
   
- Il generatore esegue il twist del valore di grandi dimensioni tramite un registro di spostamento di feedback generalizzato di twist definito dai valori di spostamento `N` e `M`, da un valore di twist `R` e da una maschera XOR `A` condizionale. Inoltre, i bit del registro di spostamento non elaborato sono crittografati in base a una matrice di crittografia dei bit definita dai valori `U`, `D`, `S`, `B`, `T`, `C` e `L`.  
+ The generator twists the large value that it holds by using a twisted generalized feedback shift register defined by shift values `N` and `M`, a twist value `R`, and a conditional XOR-mask `A`. Additionally, the bits of the raw shift register are scrambled (tempered) according to a bit-scrambling matrix defined by values `U`, `D`, `S`, `B`, `T`, `C`, and `L`.  
   
- L'argomento del modello `UIntType` deve essere abbastanza grande da contenere valori fino a `2`<sup>W</sup> - `1`. I valori degli altri argomenti del modello devono soddisfare i requisiti seguenti: `2u < W, 0 < M, M ≤ N, R ≤ W, U ≤ W, S ≤ W, T ≤ W, L ≤ W, W ≤ numeric_limits<UIntType>::digits, A ≤ (1u<<W) - 1u, B ≤ (1u<<W) - 1u, C ≤ (1u<<W) - 1u, D ≤ (1u<<W) - 1u, and F ≤ (1u<<W) - 1u`.  
+ The template argument `UIntType` must be large enough to hold values up to `2`<sup>W</sup> - `1`. The values of the other template arguments must satisfy the following requirements: `2u < W, 0 < M, M ≤ N, R ≤ W, U ≤ W, S ≤ W, T ≤ W, L ≤ W, W ≤ numeric_limits<UIntType>::digits, A ≤ (1u<<W) - 1u, B ≤ (1u<<W) - 1u, C ≤ (1u<<W) - 1u, D ≤ (1u<<W) - 1u, and F ≤ (1u<<W) - 1u`.  
   
- Sebbene sia possibile costruire un generatore direttamente da questo motore, è anche possibile usare uno dei typedef predefiniti seguenti:  
+ Although you can construct a generator from this engine directly, it is recommended you use one of these predefined typedefs:  
   
- `mt19937`: motore Mersenne Twister a 32 bit (Matsumoto e Nishimura, 1998).  
+ `mt19937`: 32-bit Mersenne twister engine (Matsumoto and Nishimura, 1998).  
   
 ```  
 typedef mersenne_twister_engine<unsigned int, 32, 624, 397,   
@@ -113,7 +112,7 @@ typedef mersenne_twister_engine<unsigned int, 32, 624, 397,
     18, 1812433253> mt19937;  
 ```  
   
- `mt19937_64`: motore Mersenne Twister a 64 bit (Matsumoto e Nishimura, 2000).  
+ `mt19937_64`: 64-bit Mersenne twister engine (Matsumoto and Nishimura, 2000).  
   
 ```  
 typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,   
@@ -124,17 +123,17 @@ typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,
     43, 6364136223846793005ULL> mt19937_64;  
 ```  
   
- Per informazioni dettagliate sull'algoritmo Mersenne Twister, vedere l'articolo di Wikipedia [Mersenne Twister](http://go.microsoft.com/fwlink/LinkId=402356).  
+ For detailed information about the Mersenne twister algorithm, see the Wikipedia article [Mersenne twister](http://go.microsoft.com/fwlink/LinkId=402356).  
   
-## <a name="example"></a>Esempio  
- Per un esempio di codice, vedere [\<random>](../standard-library/random.md).  
+## <a name="example"></a>Example  
+ For a code example, see [\<random>](../standard-library/random.md).  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<random>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<random>  
   
- **Spazio dei nomi:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

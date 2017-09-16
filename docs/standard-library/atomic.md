@@ -9,51 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- <atomic>
-- atomic/std::atomic_int_least32_t
-- atomic/std::atomic_ullong
-- atomic/std::atomic_ptrdiff_t
-- atomic/std::atomic_char16_t
-- atomic/std::atomic_schar
-- atomic/std::atomic_ulong
-- atomic/std::atomic_uint_fast32_t
-- atomic/std::atomic_uint8_t
-- atomic/std::atomic_int32_t
-- atomic/std::atomic_uint_fast64_t
-- atomic/std::atomic_uint32_t
-- atomic/std::atomic_int16_t
-- atomic/std::atomic_uintmax_t
-- atomic/std::atomic_intmax_t
-- atomic/std::atomic_long
-- atomic/std::atomic_int
-- atomic/std::atomic_uint_least8_t
-- atomic/std::atomic_size_t
-- atomic/std::atomic_uint_fast16_t
-- atomic/std::atomic_wchar_t
-- atomic/std::atomic_int_fast64_t
-- atomic/std::atomic_uint_fast8_t
-- atomic/std::atomic_int_fast8_t
-- atomic/std::atomic_intptr_t
-- atomic/std::atomic_uint
-- atomic/std::atomic_uint16_t
-- atomic/std::atomic_char32_t
-- atomic/std::atomic_uint64_t
-- atomic/std::atomic_ushort
-- atomic/std::atomic_int_least16_t
-- atomic/std::atomic_char
-- atomic/std::atomic_uint_least32_t
-- atomic/std::atomic_uintptr_t
-- atomic/std::atomic_short
-- atomic/std::atomic_llong
-- atomic/std::atomic_uint_least16_t
-- atomic/std::atomic_int_fast16_t
-- atomic/std::atomic_int_least8_t
-- atomic/std::atomic_int_least64_t
-- atomic/std::atomic_int_fast32_t
-- atomic/std::atomic_uchar
-- atomic/std::atomic_int8_t
-- atomic/std::atomic_int64_t
-- atomic/std::atomic_uint_least64_t
+- <atomic>", "atomic/std::atomic_int_least32_t", "atomic/std::atomic_ullong", "atomic/std::atomic_ptrdiff_t", "atomic/std::atomic_char16_t", "atomic/std::atomic_schar", "atomic/std::atomic_ulong", "atomic/std::atomic_uint_fast32_t", "atomic/std::atomic_uint8_t", "atomic/std::atomic_int32_t", "atomic/std::atomic_uint_fast64_t", "atomic/std::atomic_uint32_t", "atomic/std::atomic_int16_t", "atomic/std::atomic_uintmax_t", "atomic/std::atomic_intmax_t", "atomic/std::atomic_long", "atomic/std::atomic_int", "atomic/std::atomic_uint_least8_t", "atomic/std::atomic_size_t", "atomic/std::atomic_uint_fast16_t", "atomic/std::atomic_wchar_t", "atomic/std::atomic_int_fast64_t", "atomic/std::atomic_uint_fast8_t", "atomic/std::atomic_int_fast8_t", "atomic/std::atomic_intptr_t", "atomic/std::atomic_uint", "atomic/std::atomic_uint16_t", "atomic/std::atomic_char32_t", "atomic/std::atomic_uint64_t", "atomic/std::atomic_ushort", "atomic/std::atomic_int_least16_t", "atomic/std::atomic_char", "atomic/std::atomic_uint_least32_t", "atomic/std::atomic_uintptr_t", "atomic/std::atomic_short", "atomic/std::atomic_llong", "atomic/std::atomic_uint_least16_t", "atomic/std::atomic_int_fast16_t", "atomic/std::atomic_int_least8_t", "atomic/std::atomic_int_least64_t", "atomic/std::atomic_int_fast32_t", "atomic/std::atomic_uchar", "atomic/std::atomic_int8_t", "atomic/std::atomic_int64_t", "atomic/std::atomic_uint_least64_t
 dev_langs:
 - C++
 ms.assetid: e79a6b9f-52ff-48da-9554-654c4e1999f6
@@ -75,54 +31,54 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
-ms.openlocfilehash: 0727a9bab67872237ffe6f747bd0be3f538eb01d
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: a2969119c088a1e5f07a49774b5ea8d6c4b79499
 ms.contentlocale: it-it
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
-Definisce le classi e le classi di modello da usare per creare tipi che supportano operazioni atomiche.  
+Defines classes and template classes to use to create types that support atomic operations.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 #include <atomic>  
 ```  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  Nel codice compilato tramite **/clr**, questa intestazione è bloccata.  
+>  In code that's compiled by using **/clr**, this header is blocked.  
   
- Un'operazione atomica ha due proprietà chiave che consentono di usare più thread per gestire correttamente un oggetto senza usare blocchi mutex.  
+ An atomic operation has two key properties that help you use multiple threads to correctly manipulate an object without using mutex locks.  
   
--   Poiché un'operazione atomica è indivisibile, una seconda operazione atomica sullo stesso oggetto da un altro thread può ottenere lo stato dell'oggetto solo prima o dopo la prima operazione atomica.  
+-   Because an atomic operation is indivisible, a second atomic operation on the same object from a different thread can obtain the state of the object only before or after the first atomic operation.  
   
--   In base al relativo argomento [memory_order](../standard-library/atomic-enums.md#memory_order_enum), un'operazione atomica stabilisce i requisiti di ordinamento per la visibilità degli effetti di altre operazioni atomiche nello stesso thread. Di conseguenza, impedisce le ottimizzazioni del compilatore che violano i requisiti di ordinamento.  
+-   Based on its [memory_order](../standard-library/atomic-enums.md#memory_order_enum) argument, an atomic operation establishes ordering requirements for the visibility of the effects of other atomic operations in the same thread. Consequently, it inhibits compiler optimizations that violate the ordering requirements.  
   
- In alcune piattaforme, potrebbe non essere possibile implementare in modo efficiente operazioni atomiche per alcuni tipi senza usare blocchi `mutex`. Un tipo atomico è *senza blocco* se nessuna operazione atomica su tale tipo usa i blocchi.  
+ On some platforms, it might not be possible to efficiently implement atomic operations for some types without using `mutex` locks. An atomic type is *lock-free* if no atomic operations on that type use locks.  
   
- **C++11**: nei gestori di segnale è possibile eseguire operazioni atomiche su un oggetto `obj` se `obj.is_lock_free()` o `atomic_is_lock_free(x)` sono true.  
+ **C++11**: In signal-handlers you can perform atomic operations on an object `obj` if `obj.is_lock_free()` or `atomic_is_lock_free(x)` are true.  
   
- La classe [atomic_flag](../standard-library/atomic-flag-structure.md) fornisce un tipo atomico minimo che contiene un flag `bool`. Le operazioni sono sempre senza blocco.  
+ The class [atomic_flag](../standard-library/atomic-flag-structure.md) provides a minimal atomic type that holds a `bool` flag. Its operations are always lock-free.  
   
- La classe di modello `atomic<T>` archivia un oggetto del tipo di argomento `T` e fornisce l'accesso atomico a tale valore archiviato. È possibile crearne un'istanza usando qualsiasi tipo che può essere copiato tramite [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) e testato per verificarne l'uguaglianza tramite [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md). In particolare, è possibile usare la classe con tipi definiti dall'utente che soddisfano tali requisiti e, in molti casi, con tipi a virgola mobile.  
+ The template class `atomic<T>` stores an object of its argument type `T` and provides atomic access to that stored value. You can instantiate it by using any type that can be copied by using [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) and tested for equality by using [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md). In particular, you can use it with user-defined types that meet these requirements and, in many cases, with floating-point types.  
   
- Il modello include anche un set di specializzazioni per i tipi integrali e una specializzazione parziale per i puntatori. Queste specializzazioni forniscono operazioni aggiuntive che non sono disponibili tramite il modello principale.  
+ The template also has a set of specializations for integral types and a partial specialization for pointers. These specializations provide additional operations that are not available through the primary template.  
   
-## <a name="pointer-specializations"></a>Specializzazioni dei puntatori  
- Le specializzazioni parziali `atomic<T *>` si applicano a tutti i tipi di puntatore. Forniscono metodi per l'aritmetica dei puntatori.  
+## <a name="pointer-specializations"></a>Pointer Specializations  
+ The `atomic<T *>` partial specializations apply to all pointer types. They provide methods for pointer arithmetic.  
   
-## <a name="integral-specializations"></a>Specializzazioni integrali  
- Le specializzazioni `atomic<integral>` si applicano a tutti i tipi integrali. Queste specializzazioni forniscono operazioni aggiuntive che non sono disponibili tramite il modello principale.  
+## <a name="integral-specializations"></a>Integral Specializations  
+ The `atomic<integral>` specializations apply to all integral types. They provide additional operations that are not available through the primary template.  
   
- Ogni tipo `atomic<integral>` ha una macro corrispondente che è possibile usare in una `if directive` per determinare in fase di compilazione se le operazioni su tale tipo sono senza blocco. Se il valore della macro è zero, le operazioni sul tipo non sono senza blocco. Se il valore è 1, le operazioni potrebbero essere senza blocco ed è necessario un controllo di runtime. Se il valore è 2, le operazioni sono senza blocco. È possibile usare la funzione `atomic_is_lock_free` per determinare in fase di esecuzione se le operazioni sul tipo sono senza blocco.  
+ Each `atomic<integral>` type has a corresponding macro that you can use in an `if directive` to determine at compile time whether operations on that type are lock-free. If the value of the macro is zero, operations on the type are not lock-free. If the value is 1, operations might be lock-free, and a runtime check is required. If the value is 2, operations are lock-free. You can use the function `atomic_is_lock_free` to determine at runtime whether operations on the type are lock-free.  
   
- Per ogni tipo integrale esiste un tipo atomico denominato corrispondente che gestisce un oggetto dello stesso tipo integrale. Ogni tipo `atomic_integral` ha lo stesso set di funzioni membro dell'istanza corrispondente di `atomic<T>` e può essere passato a qualsiasi funzione atomica non membro.  
+ For each of the integral types, there is a corresponding named atomic type that manages an object of that integral type. Each `atomic_integral` type has the same set of member functions as the corresponding instantiation of `atomic<T>` and can be passed to any of the non-member atomic functions.  
   
-|Tipo `atomic_integral`|Tipo integrale|`atomic_is_lock_free` Macro|  
+|`atomic_integral` Type|Integral Type|`atomic_is_lock_free` Macro|  
 |----------------------------|-------------------|---------------------------------|  
 |`atomic_char`|`char`|`ATOMIC_CHAR_LOCK_FREE`|  
 |`atomic_schar`|`signed char`|`ATOMIC_CHAR_LOCK_FREE`|  
@@ -139,9 +95,9 @@ Definisce le classi e le classi di modello da usare per creare tipi che supporta
 |`atomic_llong`|`long long`|`ATOMIC_LLONG_LOCK_FREE`|  
 |`atomic_ullong`|`unsigned long long`|`ATOMIC_LLONG_LOCK_FREE`|  
   
- I nomi di typedef esistono per specializzazioni del modello atomico per alcuni dei tipi definiti nell'intestazione \<inttypes.h>.  
+ Typedef names exist for specializations of the atomic template for some of the types that are defined in the header \<inttypes.h>.  
   
-|Tipo atomico|Nome typedef|  
+|Atomic Type|Typedef Name|  
 |-----------------|------------------|  
 |`atomic_int8_t`|`atomic<int8_t>`|  
 |`atomic_uint8_t`|`atomic<uint8_t>`|  
@@ -174,57 +130,57 @@ Definisce le classi e le classi di modello da usare per creare tipi che supporta
 |`atomic_intmax_t`|`atomic<intmax_t>`|  
 |`atomic_uintmax_t`|`atomic<uintmax_t>`|  
   
-## <a name="structs"></a>Struct  
+## <a name="structs"></a>Structs  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[Struttura atomic](../standard-library/atomic-structure.md)|Descrive un oggetto che esegue operazioni atomiche su un valore archiviato.|  
-|[Struttura atomic_flag](../standard-library/atomic-flag-structure.md)|Descrive un oggetto che imposta e rimuove atomicamente un flag `bool`.|  
+|[atomic Structure](../standard-library/atomic-structure.md)|Describes an object that performs atomic operations on a stored value.|  
+|[atomic_flag Structure](../standard-library/atomic-flag-structure.md)|Describes an object that atomically sets and clears a `bool` flag.|  
   
-## <a name="enums"></a>Enumerazioni  
+## <a name="enums"></a>Enums  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[Enumerazione memory_order](../standard-library/atomic-enums.md#memory_order_enum)|Fornisce nomi simbolici per le operazioni di sincronizzazione sulle posizioni di memoria. Queste operazioni influiscono sul modo in cui gli assegnamenti in un thread diventano visibili in un altro.|  
+|[memory_order Enum](../standard-library/atomic-enums.md#memory_order_enum)|Supplies symbolic names for synchronization operations on memory locations. These operations affect how assignments in one thread become visible in another.|  
   
-## <a name="functions"></a>Funzioni  
- Nell'elenco seguente le funzioni che non terminano con `_explicit` hanno la semantica del `_explicit` corrispondente, ad eccezione del fatto che hanno gli argomenti [memory_order](../standard-library/atomic-enums.md#memory_order_enum) impliciti di `memory_order_seq_cst`.  
+## <a name="functions"></a>Functions  
+ In the following list, the functions that do not end in `_explicit` have the semantics of the corresponding `_explicit`, except that they have the implicit [memory_order](../standard-library/atomic-enums.md#memory_order_enum) arguments of `memory_order_seq_cst`.  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[atomic_compare_exchange_strong](../standard-library/atomic-functions.md#atomic_compare_exchange_strong)|Esegue un'operazione di *confronto e scambio atomico*.|  
-|[atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit)|Esegue un'operazione di *confronto e scambio atomico*.|  
-|[atomic_compare_exchange_weak](../standard-library/atomic-functions.md#atomic_compare_exchange_weak)|Esegue un'operazione di *confronto e scambio atomico debole*.|  
-|[atomic_compare_exchange_weak_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_explicit)|Esegue un'operazione di *confronto e scambio atomico debole*.|  
-|[atomic_exchange](../standard-library/atomic-functions.md#atomic_exchange)|Sostituisce un valore archiviato.|  
-|[atomic_exchange_explicit](../standard-library/atomic-functions.md#atomic_exchange_explicit)|Sostituisce un valore archiviato.|  
-|[atomic_fetch_add](../standard-library/atomic-functions.md#atomic_fetch_add)|Aggiunge un valore specificato a un valore archiviato esistente.|  
-|[atomic_fetch_add_explicit](../standard-library/atomic-functions.md#atomic_fetch_add_explicit)|Aggiunge un valore specificato a un valore archiviato esistente.|  
-|[atomic_fetch_and](../standard-library/atomic-functions.md#atomic_fetch_and)|Esegue un `and` bit per bit in un valore specificato e un valore archiviato esistente.|  
-|[atomic_fetch_and_explicit](../standard-library/atomic-functions.md#atomic_fetch_and_explicit)|Esegue un `and` bit per bit in un valore specificato e un valore archiviato esistente.|  
-|[atomic_fetch_or](../standard-library/atomic-functions.md#atomic_fetch_or)|Esegue un `or` bit per bit in un valore specificato e un valore archiviato esistente.|  
-|[atomic_fetch_or_explicit](../standard-library/atomic-functions.md#atomic_fetch_or_explicit)|Esegue un `or` bit per bit in un valore specificato e un valore archiviato esistente.|  
-|[atomic_fetch_sub](../standard-library/atomic-functions.md#atomic_fetch_sub)|Sottrae un valore specificato da un valore archiviato esistente.|  
-|[atomic_fetch_sub_explicit](../standard-library/atomic-functions.md#atomic_fetch_sub_explicit)|Sottrae un valore specificato da un valore archiviato esistente.|  
-|[atomic_fetch_xor](../standard-library/atomic-functions.md#atomic_fetch_xor)|Esegue un `exclusive or` bit per bit in un valore specificato e un valore archiviato esistente.|  
-|[atomic_fetch_xor_explicit](../standard-library/atomic-functions.md#atomic_fetch_xor_explicit)|Esegue un `exclusive or` bit per bit in un valore specificato e un valore archiviato esistente.|  
-|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|Imposta il flag in un oggetto `atomic_flag` su `false`.|  
-|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|Imposta il flag in un oggetto `atomic_flag` su `false`.|  
-|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|Imposta il flag in un oggetto `atomic_flag` su `true`.|  
-|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|Imposta il flag in un oggetto `atomic_flag` su `true`.|  
-|[atomic_init](../standard-library/atomic-functions.md#atomic_init)|Imposta il valore archiviato in un oggetto `atomic`.|  
-|[atomic_is_lock_free](../standard-library/atomic-functions.md#atomic_is_lock_free)|Specifica se le operazioni atomiche in un oggetto specificato sono senza blocco.|  
-|[atomic_load](../standard-library/atomic-functions.md#atomic_load)|Recupera un valore in modo atomico.|  
-|[atomic_load_explicit](../standard-library/atomic-functions.md#atomic_load_explicit)|Recupera un valore in modo atomico.|  
-|[atomic_signal_fence](../standard-library/atomic-functions.md#atomic_signal_fence)|Agisce come *limite* che stabilisce i requisiti di ordinamento della memoria tra due limiti in un thread di chiamata che ha gestori di segnale eseguiti nello stesso thread.|  
-|[atomic_store](../standard-library/atomic-functions.md#atomic_store)|Archivia un valore in modo atomico.|  
-|[atomic_store_explicit](../standard-library/atomic-functions.md#atomic_store_explicit)|Archivia un valore in modo atomico.|  
-|[atomic_thread_fence](../standard-library/atomic-functions.md#atomic_thread_fence)|Agisce come *limite* che stabilisce i requisiti di ordinamento della memoria relativamente ad altri limiti.|  
-|[kill_dependency](../standard-library/atomic-functions.md#kill_dependency)|Interrompe una possibile catena delle dipendenze.|  
+|[atomic_compare_exchange_strong](../standard-library/atomic-functions.md#atomic_compare_exchange_strong)|Performs an *atomic compare and exchange* operation.|  
+|[atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit)|Performs an *atomic compare and exchange* operation.|  
+|[atomic_compare_exchange_weak](../standard-library/atomic-functions.md#atomic_compare_exchange_weak)|Performs a *weak atomic compare and exchange* operation.|  
+|[atomic_compare_exchange_weak_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_explicit)|Performs a *weak atomic compare and exchange* operation.|  
+|[atomic_exchange](../standard-library/atomic-functions.md#atomic_exchange)|Replaces a stored value.|  
+|[atomic_exchange_explicit](../standard-library/atomic-functions.md#atomic_exchange_explicit)|Replaces a stored value.|  
+|[atomic_fetch_add](../standard-library/atomic-functions.md#atomic_fetch_add)|Adds a specified value to an existing stored value.|  
+|[atomic_fetch_add_explicit](../standard-library/atomic-functions.md#atomic_fetch_add_explicit)|Adds a specified value to an existing stored value.|  
+|[atomic_fetch_and](../standard-library/atomic-functions.md#atomic_fetch_and)|Performs a bitwise `and` on a specified value and an existing stored value.|  
+|[atomic_fetch_and_explicit](../standard-library/atomic-functions.md#atomic_fetch_and_explicit)|Performs a bitwise `and` on a specified value and an existing stored value.|  
+|[atomic_fetch_or](../standard-library/atomic-functions.md#atomic_fetch_or)|Performs a bitwise `or` on a specified value and an existing stored value.|  
+|[atomic_fetch_or_explicit](../standard-library/atomic-functions.md#atomic_fetch_or_explicit)|Performs a bitwise `or` on a specified value and an existing stored value.|  
+|[atomic_fetch_sub](../standard-library/atomic-functions.md#atomic_fetch_sub)|Subtracts a specified value from an existing stored value.|  
+|[atomic_fetch_sub_explicit](../standard-library/atomic-functions.md#atomic_fetch_sub_explicit)|Subtracts a specified value from an existing stored value.|  
+|[atomic_fetch_xor](../standard-library/atomic-functions.md#atomic_fetch_xor)|Performs a bitwise `exclusive or` on a specified value and an existing stored value.|  
+|[atomic_fetch_xor_explicit](../standard-library/atomic-functions.md#atomic_fetch_xor_explicit)|Performs a bitwise `exclusive or` on a specified value and an existing stored value.|  
+|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|Sets the flag in an `atomic_flag` object to `false`.|  
+|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|Sets the flag in an `atomic_flag` object to `false`.|  
+|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|Sets the flag in an `atomic_flag` object to `true`.|  
+|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|Sets the flag in an `atomic_flag` object to `true`.|  
+|[atomic_init](../standard-library/atomic-functions.md#atomic_init)|Sets the stored value in an `atomic` object.|  
+|[atomic_is_lock_free](../standard-library/atomic-functions.md#atomic_is_lock_free)|Specifies whether atomic operations on a specified object are lock-free.|  
+|[atomic_load](../standard-library/atomic-functions.md#atomic_load)|Atomically retrieves a value.|  
+|[atomic_load_explicit](../standard-library/atomic-functions.md#atomic_load_explicit)|Atomically retrieves a value.|  
+|[atomic_signal_fence](../standard-library/atomic-functions.md#atomic_signal_fence)|Acts as a *fence* that establishes memory ordering requirements between fences in a calling thread that has signal handlers executed in the same thread.|  
+|[atomic_store](../standard-library/atomic-functions.md#atomic_store)|Atomically stores a value.|  
+|[atomic_store_explicit](../standard-library/atomic-functions.md#atomic_store_explicit)|Atomically stores a value.|  
+|[atomic_thread_fence](../standard-library/atomic-functions.md#atomic_thread_fence)|Acts as a *fence* that establishes memory ordering requirements with respect to other fences.|  
+|[kill_dependency](../standard-library/atomic-functions.md#kill_dependency)|Breaks a possible dependency chain.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)   
- [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

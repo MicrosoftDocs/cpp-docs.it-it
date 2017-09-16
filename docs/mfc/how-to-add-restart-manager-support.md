@@ -1,58 +1,78 @@
 ---
-title: "Procedura: Aggiungere il supporto di Gestione riavvio | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Gestione riavvio"
-  - "C++, supporto di arresto anomalo applicazioni"
+title: 'How to: Add Restart Manager Support | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Restart manager [MFC]
+- C++, application crash support
 ms.assetid: 7f3f5867-d4bc-4ba8-b3c9-dc1e7be93642
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Procedura: Aggiungere il supporto di Gestione riavvio
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 13369ead9b6aac2e91f03a9e9939153ec1f94caf
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Gestione riavvio è una funzionalità aggiunta a [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] per [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)] che consente di riavviare l'applicazione in caso di chiusure o riavvii imprevisti. Il funzionamento di Gestione riavvio dipende dal tipo di applicazione Se l'applicazione è un editor di documenti, Gestione riavvio consente all'applicazione di salvare automaticamente lo stato e il contenuto di qualsiasi documento aperto e riavvia l'applicazione dopo una chiusura imprevista. Se l'applicazione non è un editor di documenti, Gestione riavvio riavvierà l'applicazione, ma per impostazione predefinita non potrà salvare lo stato dell'applicazione.  
+---
+# <a name="how-to-add-restart-manager-support"></a>How to: Add Restart Manager Support
+The restart manager is a feature added to [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] for [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]. The restart manager adds support for your application if it unexpectedly closes or restarts. The behavior of the restart manager depends on the type of your application. If your application is a document editor, the restart manager enabled your application to automatically save the state and content of any open documents and restarts your application after an unexpected closure. If your application is not a document editor, the restart manager will restart the application, but it cannot save the state of the application by default.  
   
- Dopo il riavvio, se l'applicazione è di tipo Unicode verrà visualizzata una finestra di dialogo delle attività. Se l'applicazione è di tipo ANSI, verrà visualizzata una finestra di messaggio di Windows. In questa fase, l'utente sceglie se ripristinare i documenti automaticamente salvati. Se l'utente non ripristina i documenti automaticamente salvati, Gestione riavvio rimuove i file temporanei.  
+ After restart, the application displays a task dialog box if the application is Unicode. If it is an ANSI application, the application displays a Windows Message box. At this point, the user chooses whether to restore the automatically saved documents. If the user does not restore the automatically saved documents, the restart manager discards the temporary files.  
   
 > [!NOTE]
->  È possibile eseguire l'override del comportamento predefinito di Gestione riavvio per il salvataggio dei dati e il riavvio dell'applicazione.  
+>  You can override the default behavior of the restart manager for saving data and restarting the application.  
   
- Per impostazione predefinita, le applicazioni MFC create con la procedura guidata del progetto in [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] supportano Gestione riavvio quando le applicazioni vengono eseguite in un computer con [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]. Se non si vuole che l'applicazione supporti Gestione riavvio, è possibile disabilitare Gestione riavvio nella creazione guidata nuovo progetto.  
+ By default, MFC applications created by using the project wizard in [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] support the restart manager when the applications are run on a computer that has [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]. If you do not want your application to support the restart manager, you can disable the restart manager in the new project wizard.  
   
-### Per aggiungere il supporto di Gestione riavvio a un'applicazione esistente  
+### <a name="to-add-support-for-the-restart-manager-to-an-existing-application"></a>To Add Support For the Restart Manager to an Existing Application  
   
-1.  Aprire un'applicazione MFC esistente in [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  
+1.  Open an existing MFC application in [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  
   
-2.  Aprire il file sorgente dell'applicazione principale. Per impostazione predefinita si tratta del file con estensione cpp che ha lo stesso nome dell'applicazione. Ad esempio, il file sorgente dell'applicazione principale per MyProject è MyProject.cpp.  
+2.  Open the source file for your main application. By default this is the .cpp file that has the same name as your application. For example, the main application source file for MyProject is MyProject.cpp.  
   
-3.  Trovare il costruttore dell'applicazione principale. Ad esempio, se il progetto è MyProject, il costruttore sarà `CMyProjectApp::CMyProjectApp()`.  
+3.  Find the constructor for your main application. For example, if your project is MyProject, the constructor is `CMyProjectApp::CMyProjectApp()`.  
   
-4.  Aggiungere al costruttore eventi la seguente riga di codice.  
+4.  Add the following line of code to your constructor.  
   
-    ```  
+ ```  
     m_dwRestartManagerSupportFlags = AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS;  
-    ```  
+ ```  
   
-5.  Verificare che il metodo `InitInstance` dell'applicazione chiami il metodo `InitInstance` padre: [CWinApp::InitInstance](../Topic/CWinApp::InitInstance.md) o `CWinAppEx::InitInstance`. Il metodo `InitInstance` è responsabile della verifica del parametro `m_dwRestartManagerSupportFlags`.  
+5.  Make sure the `InitInstance` method of your application calls its parent `InitInstance` method: [CWinApp::InitInstance](../mfc/reference/cwinapp-class.md#initinstance) or `CWinAppEx::InitInstance`. The `InitInstance` method is responsible for checking the `m_dwRestartManagerSupportFlags` parameter.  
   
-6.  Compilare ed eseguire l'applicazione.  
+6.  Compile and run your application.  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [CDataRecoveryHandler Class](../mfc/reference/cdatarecoveryhandler-class.md)   
- [CWinApp::m\_dwRestartManagerSupportFlags](../Topic/CWinApp::m_dwRestartManagerSupportFlags.md)   
+ [CWinApp::m_dwRestartManagerSupportFlags](../mfc/reference/cwinapp-class.md#m_dwrestartmanagersupportflags)   
  [CWinApp Class](../mfc/reference/cwinapp-class.md)   
- [CWinApp::m\_nAutosaveInterval](../Topic/CWinApp::m_nAutosaveInterval.md)   
- [CDocument::OnDocumentEvent](../Topic/CDocument::OnDocumentEvent.md)
+ [CWinApp::m_nAutosaveInterval](../mfc/reference/cwinapp-class.md#m_nautosaveinterval)   
+ [CDocument::OnDocumentEvent](../mfc/reference/cdocument-class.md#ondocumentevent)
+
+

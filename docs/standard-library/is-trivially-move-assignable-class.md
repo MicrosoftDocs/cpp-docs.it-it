@@ -1,5 +1,5 @@
 ---
-title: Classe is_trivially_move_assignable | Microsoft Docs
+title: is_trivially_move_assignable Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_trivially_move_assignable
 - type_traits/std::is_trivially_move_assignable
 dev_langs:
 - C++
@@ -34,48 +33,48 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: b9d94304c6fbbd925ac3b670dc7665402b521dfd
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 781412d18bb786a1c7b03f855f38dfbfc8b34e3f
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="istriviallymoveassignable-class"></a>Classe is_trivially_move_assignable
-Verifica se il tipo ha un operatore di assegnazione di spostamento semplice.  
+# <a name="istriviallymoveassignable-class"></a>is_trivially_move_assignable Class
+Tests whether the type has a trivial move assignment operator.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Ty>
 struct is_trivially_move_assignable;
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- Tipo su cui eseguire una query.  
+ The type to query.  
   
-## <a name="remarks"></a>Note  
- Un'istanza del predicato di tipo contiene true se il tipo `Ty` è una classe che ha un operatore di assegnazione di spostamento semplice; in caso contrario, contiene false.  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `Ty` is a class that has a trivial move assignment operator, otherwise it holds false.  
   
- Un operatore di assegnazione di spostamento per una classe `Ty` è semplice se:  
+ A move assignment operator for a class `Ty` is trivial if:  
   
- viene fornito in modo implicito  
+ it is implicitly provided  
   
- la classe `Ty` non ha funzioni virtuali  
+ the class `Ty` has no virtual functions  
   
- la classe `Ty` non ha basi virtuali  
+ the class `Ty` has no virtual bases  
   
- le classi di tutti i membri dati non statici del tipo di classe hanno operatori di assegnazione di spostamento semplici  
+ the classes of all the non-static data members of class type have trivial move assignment operators  
   
- le classi di tutti i membri dati non statici di tipo matrice della classe hanno operatori di assegnazione di spostamento semplici  
+ the classes of all the non-static data members of type array of class have trivial move assignment operators  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **Spazio dei nomi:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

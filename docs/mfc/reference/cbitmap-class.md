@@ -1,5 +1,5 @@
 ---
-title: CBitmap (classe) | Documenti di Microsoft
+title: CBitmap Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,9 +28,20 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- drawing, tools
-- CBitmap class
-- GDI bitmap
+- CBitmap [MFC], CBitmap
+- CBitmap [MFC], CreateBitmap
+- CBitmap [MFC], CreateBitmapIndirect
+- CBitmap [MFC], CreateCompatibleBitmap
+- CBitmap [MFC], CreateDiscardableBitmap
+- CBitmap [MFC], FromHandle
+- CBitmap [MFC], GetBitmap
+- CBitmap [MFC], GetBitmapBits
+- CBitmap [MFC], GetBitmapDimension
+- CBitmap [MFC], LoadBitmap
+- CBitmap [MFC], LoadMappedBitmap
+- CBitmap [MFC], LoadOEMBitmap
+- CBitmap [MFC], SetBitmapBits
+- CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
 caps.latest.revision: 22
 author: mikeblome
@@ -50,81 +61,81 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: ccfe592bbbae8c0eff22baa6e1baac56754ef6fc
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: af9b8d93d1f15d47836262e141bb0d76b41b5533
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cbitmap-class"></a>CBitmap (classe)
-Incapsula una bitmap GDI (Graphics Device Interface) di Windows e fornisce funzioni membro per la modifica della bitmap.  
+# <a name="cbitmap-class"></a>CBitmap Class
+Encapsulates a Windows graphics device interface (GDI) bitmap and provides member functions to manipulate the bitmap.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CBitmap : public CGdiObject  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Costruttori pubblici  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CBitmap::CBitmap](#cbitmap)|Costruisce un oggetto `CBitmap`.|  
+|[CBitmap::CBitmap](#cbitmap)|Constructs a `CBitmap` object.|  
   
-### <a name="public-methods"></a>Metodi pubblici  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CBitmap::CreateBitmap](#createbitmap)|Inizializza l'oggetto con una bitmap dipendente dalla periferica memoria che ha una larghezza, altezza e schema di bit.|  
-|[CBitmap::CreateBitmapIndirect](#createbitmapindirect)|Inizializza l'oggetto con una bitmap con la larghezza, altezza e schema di bit (se ne è specificata una) fornito un **BITMAP** struttura.|  
-|[CBitmap::CreateCompatibleBitmap](#createcompatiblebitmap)|Inizializza l'oggetto con una bitmap in modo che sia compatibile con un dispositivo specifico.|  
-|[CBitmap::CreateDiscardableBitmap](#creatediscardablebitmap)|Inizializza l'oggetto con una bitmap scaricabile compatibile con un dispositivo specifico.|  
-|[CBitmap::FromHandle](#fromhandle)|Restituisce un puntatore a un `CBitmap` oggetto quando viene specificato un handle a un Windows `HBITMAP` bitmap.|  
-|[CBitmap::GetBitmap](#getbitmap)|Riempie una **BITMAP** struttura con le informazioni sulle bitmap.|  
-|[CBitmap::GetBitmapBits](#getbitmapbits)|Copia i bit della bitmap specificata nel buffer specificato.|  
-|[CBitmap::GetBitmapDimension](#getbitmapdimension)|Restituisce la larghezza e altezza della bitmap. L'altezza e la larghezza vengono considerati sono state impostate in precedenza il [SetBitmapDimension](#setbitmapdimension) funzione membro.|  
-|[LoadBitmap](#loadbitmap)|Inizializza l'oggetto per il caricamento di una risorsa bitmap denominata dal file eseguibile dell'applicazione e associare la bitmap all'oggetto.|  
-|[CBitmap::LoadMappedBitmap](#loadmappedbitmap)|Carica una bitmap e associa i colori a colori di sistema corrente.|  
-|[CBitmap::LoadOEMBitmap](#loadoembitmap)|Inizializza l'oggetto caricando una bitmap di Windows predefinita e associare la bitmap all'oggetto.|  
-|[CBitmap::SetBitmapBits](#setbitmapbits)|Imposta i bit di una bitmap per i valori di bit specificato.|  
-|[CBitmap::SetBitmapDimension](#setbitmapdimension)|Assegna una larghezza e altezza di una bitmap in millimetri 0,1 unità.|  
+|[CBitmap::CreateBitmap](#createbitmap)|Initializes the object with a device-dependent memory bitmap that has a specified width, height, and bit pattern.|  
+|[CBitmap::CreateBitmapIndirect](#createbitmapindirect)|Initializes the object with a bitmap with the width, height, and bit pattern (if one is specified) given in a **BITMAP** structure.|  
+|[CBitmap::CreateCompatibleBitmap](#createcompatiblebitmap)|Initializes the object with a bitmap so that it is compatible with a specified device.|  
+|[CBitmap::CreateDiscardableBitmap](#creatediscardablebitmap)|Initializes the object with a discardable bitmap that is compatible with a specified device.|  
+|[CBitmap::FromHandle](#fromhandle)|Returns a pointer to a `CBitmap` object when given a handle to a Windows `HBITMAP` bitmap.|  
+|[CBitmap::GetBitmap](#getbitmap)|Fills a **BITMAP** structure with information about the bitmap.|  
+|[CBitmap::GetBitmapBits](#getbitmapbits)|Copies the bits of the specified bitmap into the specified buffer.|  
+|[CBitmap::GetBitmapDimension](#getbitmapdimension)|Returns the width and height of the bitmap. The height and width are assumed to have been set previously by the [SetBitmapDimension](#setbitmapdimension) member function.|  
+|[CBitmap::LoadBitmap](#loadbitmap)|Initializes the object by loading a named bitmap resource from the application's executable file and attaching the bitmap to the object.|  
+|[CBitmap::LoadMappedBitmap](#loadmappedbitmap)|Loads a bitmap and maps colors to current system colors.|  
+|[CBitmap::LoadOEMBitmap](#loadoembitmap)|Initializes the object by loading a predefined Windows bitmap and attaching the bitmap to the object.|  
+|[CBitmap::SetBitmapBits](#setbitmapbits)|Sets the bits of a bitmap to the specified bit values.|  
+|[CBitmap::SetBitmapDimension](#setbitmapdimension)|Assigns a width and height to a bitmap in 0.1-millimeter units.|  
   
-### <a name="public-operators"></a>Operatori pubblici  
+### <a name="public-operators"></a>Public Operators  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CBitmap::operator HBITMAP](#operator_hbitmap)|Restituisce l'handle di Windows associata per la `CBitmap` oggetto.|  
+|[CBitmap::operator HBITMAP](#operator_hbitmap)|Returns the Windows handle attached to the `CBitmap` object.|  
   
-## <a name="remarks"></a>Note  
- Per utilizzare un `CBitmap` dell'oggetto, creare l'oggetto, collegare un handle di bitmap con una delle funzioni membro di inizializzazione e quindi chiamare le funzioni membro dell'oggetto.  
+## <a name="remarks"></a>Remarks  
+ To use a `CBitmap` object, construct the object, attach a bitmap handle to it with one of the initialization member functions, and then call the object's member functions.  
   
- Per ulteriori informazioni sull'utilizzo degli oggetti grafici come `CBitmap`, vedere [oggetti grafico](../../mfc/graphic-objects.md).  
+ For more information on using graphic objects like `CBitmap`, see [Graphic Objects](../../mfc/graphic-objects.md).  
   
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CGdiObject](../../mfc/reference/cgdiobject-class.md)  
   
  `CBitmap`  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="cbitmap"></a>CBitmap::CBitmap  
- Costruisce un oggetto `CBitmap`.  
+##  <a name="cbitmap"></a>  CBitmap::CBitmap  
+ Constructs a `CBitmap` object.  
   
 ```  
 CBitmap();
 ```  
   
-### <a name="remarks"></a>Note  
- L'oggetto risultante deve essere inizializzato con una delle funzioni membro di inizializzazione.  
+### <a name="remarks"></a>Remarks  
+ The resulting object must be initialized with one of the initialization member functions.  
   
-##  <a name="createbitmap"></a>CBitmap::CreateBitmap  
- Inizializza una bitmap in memoria dipendente dal dispositivo che presenta la larghezza, l'altezza e lo schema di bit specificati.  
+##  <a name="createbitmap"></a>  CBitmap::CreateBitmap  
+ Initializes a device-dependent memory bitmap that has the specified width, height, and bit pattern.  
   
 ```  
 BOOL CreateBitmap(
@@ -135,57 +146,57 @@ BOOL CreateBitmap(
     const void* lpBits);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `nWidth`  
- Specifica la larghezza della bitmap (in pixel).  
+ Specifies the width (in pixels) of the bitmap.  
   
  `nHeight`  
- Specifica l'altezza della bitmap (in pixel).  
+ Specifies the height (in pixels) of the bitmap.  
   
  `nPlanes`  
- Specifica il numero dei piani di colore nella bitmap.  
+ Specifies the number of color planes in the bitmap.  
   
  `nBitcount`  
- Specifica il numero di bit di colore per pixel visualizzato.  
+ Specifies the number of color bits per display pixel.  
   
  `lpBits`  
- Punta a una matrice di byte che contiene i valori iniziali dei bit della bitmap. Se è **NULL**, la nuova bitmap rimane non inizializzata.  
+ Points to an array of bytes that contains the initial bitmap bit values. If it is **NULL**, the new bitmap is left uninitialized.  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se ha esito positivo; in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Note  
- Per una bitmap a colori, il parametro `nPlanes` o `nBitcount` deve essere impostato su 1. Se entrambi i parametri vengono impostati su 1, `CreateBitmap` crea una bitmap monocromatica.  
+### <a name="remarks"></a>Remarks  
+ For a color bitmap, either the `nPlanes` or `nBitcount` parameter should be set to 1. If both of these parameters are set to 1, `CreateBitmap` creates a monochrome bitmap.  
   
- Sebbene una bitmap non può essere selezionata direttamente per un dispositivo di visualizzazione, può essere selezionato come bitmap corrente per un "contesto di dispositivo memoria" utilizzando [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) e copiati in qualsiasi contesto di dispositivo compatibile con il [CDC::BitBlt](../../mfc/reference/cdc-class.md#bitblt) (funzione).  
+ Although a bitmap cannot be directly selected for a display device, it can be selected as the current bitmap for a "memory device context" by using [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) and copied to any compatible device context by using the [CDC::BitBlt](../../mfc/reference/cdc-class.md#bitblt) function.  
   
- Terminate le operazioni sull'oggetto `CBitmap` creato dalla funzione `CreateBitmap` , selezionare la bitmap dal contesto di memoria, quindi eliminare l'oggetto `CBitmap` .  
+ When you finish with the `CBitmap` object created by the `CreateBitmap` function, first select the bitmap out of the device context, then delete the `CBitmap` object.  
   
- Per altre informazioni, vedere la descrizione del campo **bmBits** nella struttura **BITMAP** . Il [BITMAP](../../mfc/reference/bitmap-structure.md) struttura è descritte nel [CBitmap::CreateBitmapIndirect](#createbitmapindirect) funzione membro.  
+ For more information, see the description of the **bmBits** field in the **BITMAP** structure. The [BITMAP](../../mfc/reference/bitmap-structure.md) structure is described under the [CBitmap::CreateBitmapIndirect](#createbitmapindirect) member function.  
   
-##  <a name="createbitmapindirect"></a>CBitmap::CreateBitmapIndirect  
- Inizializza una bitmap con la larghezza, altezza e schema di bit (se ne è specificata una) specificato nella struttura a cui puntava `lpBitmap`.  
+##  <a name="createbitmapindirect"></a>  CBitmap::CreateBitmapIndirect  
+ Initializes a bitmap that has the width, height, and bit pattern (if one is specified) given in the structure pointed to by `lpBitmap`.  
   
 ```  
 BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `lpBitmap`  
- Punta a un [BITMAP](../../mfc/reference/bitmap-structure.md) struttura che contiene informazioni sulle bitmap.  
+ Points to a [BITMAP](../../mfc/reference/bitmap-structure.md) structure that contains information about the bitmap.  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se ha esito positivo; in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Note  
- Sebbene una bitmap non può essere selezionata direttamente per un dispositivo di visualizzazione, può essere selezionato come bitmap corrente per un contesto di dispositivo di memoria utilizzando [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) e copiati in qualsiasi contesto di dispositivo compatibile con il [CDC::BitBlt](../../mfc/reference/cdc-class.md#bitblt) o [CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt) (funzione). (Il [CDC::PatBlt](../../mfc/reference/cdc-class.md#patblt) funzione è possibile copiare la bitmap per il pennello corrente direttamente al contesto di dispositivo di visualizzazione.)  
+### <a name="remarks"></a>Remarks  
+ Although a bitmap cannot be directly selected for a display device, it can be selected as the current bitmap for a memory device context by using [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) and copied to any compatible device context by using the [CDC::BitBlt](../../mfc/reference/cdc-class.md#bitblt) or [CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt) function. (The [CDC::PatBlt](../../mfc/reference/cdc-class.md#patblt) function can copy the bitmap for the current brush directly to the display device context.)  
   
- Se il **BITMAP** struttura a cui punta il `lpBitmap` parametro è stato compilato utilizzando il `GetObject` funzione, non vengono specificati i bit della bitmap e la bitmap è non inizializzata. Per inizializzare la bitmap, un'applicazione può utilizzare una funzione, ad esempio [CDC::BitBlt](../../mfc/reference/cdc-class.md#bitblt) o [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) per copiare i bit dalla bitmap identificata dal parametro prima di `CGdiObject::GetObject` nella bitmap creati da `CreateBitmapIndirect`.  
+ If the **BITMAP** structure pointed to by the `lpBitmap` parameter has been filled in by using the `GetObject` function, the bits of the bitmap are not specified and the bitmap is uninitialized. To initialize the bitmap, an application can use a function such as [CDC::BitBlt](../../mfc/reference/cdc-class.md#bitblt) or [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) to copy the bits from the bitmap identified by the first parameter of `CGdiObject::GetObject` to the bitmap created by `CreateBitmapIndirect`.  
   
- Una volta terminato con il `CBitmap` oggetto creato con `CreateBitmapIndirect` funzione, selezionare innanzitutto la bitmap all'esterno del contesto di periferica, quindi eliminare il `CBitmap` oggetto.  
+ When you finish with the `CBitmap` object created with `CreateBitmapIndirect` function, first select the bitmap out of the device context, then delete the `CBitmap` object.  
   
-##  <a name="createcompatiblebitmap"></a>CBitmap::CreateCompatibleBitmap  
- Inizializza una bitmap compatibile con il dispositivo specificato dal `pDC`.  
+##  <a name="createcompatiblebitmap"></a>  CBitmap::CreateCompatibleBitmap  
+ Initializes a bitmap that is compatible with the device specified by `pDC`.  
   
 ```  
 BOOL CreateCompatibleBitmap(
@@ -194,32 +205,32 @@ BOOL CreateCompatibleBitmap(
     int nHeight);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- Specifica il contesto di dispositivo.  
+ Specifies the device context.  
   
  `nWidth`  
- Specifica la larghezza della bitmap (in pixel).  
+ Specifies the width (in pixels) of the bitmap.  
   
  `nHeight`  
- Specifica l'altezza della bitmap (in pixel).  
+ Specifies the height (in pixels) of the bitmap.  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se ha esito positivo; in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Note  
- La bitmap ha lo stesso numero di piani di colore o lo stesso formato di bit per pixel del contesto di dispositivo specificato. Può essere selezionato come bitmap corrente per qualsiasi dispositivo di memoria che è compatibile con quello specificato da `pDC`.  
+### <a name="remarks"></a>Remarks  
+ The bitmap has the same number of color planes or the same bits-per-pixel format as the specified device context. It can be selected as the current bitmap for any memory device that is compatible with the one specified by `pDC`.  
   
- Se `pDC` è un contesto di dispositivo di memoria, la bitmap restituita ha lo stesso formato di bitmap attualmente selezionato in tale contesto di dispositivo. Un "contesto di dispositivo memoria" è un blocco di memoria che rappresenta una superficie di visualizzazione. Può essere utilizzato per preparare le immagini in memoria prima di copiarli all'area di visualizzazione effettivo del dispositivo compatibile.  
+ If `pDC` is a memory device context, the bitmap returned has the same format as the currently selected bitmap in that device context. A "memory device context" is a block of memory that represents a display surface. It can be used to prepare images in memory before copying them to the actual display surface of the compatible device.  
   
- Quando viene creato un contesto di dispositivo di memoria, GDI seleziona automaticamente una bitmap monocromatica azionario per esso.  
+ When a memory device context is created, GDI automatically selects a monochrome stock bitmap for it.  
   
- Poiché può avere un contesto di dispositivo di memoria colore colore o Bitmap monocromatica selezionata, il formato della bitmap restituito dal `CreateCompatibleBitmap` funzione non è sempre lo stesso, tuttavia, il formato di una bitmap compatibile per un contesto di dispositivo nonmemory è sempre il formato del dispositivo.  
+ Since a color memory device context can have either color or monochrome bitmaps selected, the format of the bitmap returned by the `CreateCompatibleBitmap` function is not always the same; however, the format of a compatible bitmap for a nonmemory device context is always in the format of the device.  
   
- Una volta terminato con il `CBitmap` oggetto creato con il `CreateCompatibleBitmap` funzione, selezionare innanzitutto la bitmap all'esterno del contesto di periferica, quindi eliminare il `CBitmap` oggetto.  
+ When you finish with the `CBitmap` object created with the `CreateCompatibleBitmap` function, first select the bitmap out of the device context, then delete the `CBitmap` object.  
   
-##  <a name="creatediscardablebitmap"></a>CBitmap::CreateDiscardableBitmap  
- Inizializza una bitmap scaricabile compatibile con il contesto di dispositivo identificato da `pDC`.  
+##  <a name="creatediscardablebitmap"></a>  CBitmap::CreateDiscardableBitmap  
+ Initializes a discardable bitmap that is compatible with the device context identified by `pDC`.  
   
 ```  
 BOOL CreateDiscardableBitmap(
@@ -228,61 +239,61 @@ BOOL CreateDiscardableBitmap(
     int nHeight);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- Specifica un contesto di dispositivo.  
+ Specifies a device context.  
   
  `nWidth`  
- Specifica la larghezza (in bit) della bitmap.  
+ Specifies the width (in bits) of the bitmap.  
   
  `nHeight`  
- Specifica l'altezza (in bit) della bitmap.  
+ Specifies the height (in bits) of the bitmap.  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se ha esito positivo; in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Note  
- La bitmap ha lo stesso numero di piani di colore o lo stesso formato di bit per pixel del contesto di dispositivo specificato. Un'applicazione è possibile selezionare questa bitmap come bitmap corrente per un dispositivo di memoria che è compatibile con quello specificato da `pDC`.  
+### <a name="remarks"></a>Remarks  
+ The bitmap has the same number of color planes or the same bits-per-pixel format as the specified device context. An application can select this bitmap as the current bitmap for a memory device that is compatible with the one specified by `pDC`.  
   
- Windows è possibile annullare una bitmap creata da questa funzione solo se un'applicazione non è stato selezionato in un contesto di visualizzazione. Se Windows elimina la bitmap quando non è selezionato e successivamente l'applicazione tenta di selezionare, il [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) funzione restituirà **NULL**.  
+ Windows can discard a bitmap created by this function only if an application has not selected it into a display context. If Windows discards the bitmap when it is not selected and the application later attempts to select it, the [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) function will return **NULL**.  
   
- Una volta terminato con il `CBitmap` oggetto creato con il `CreateDiscardableBitmap` funzione, selezionare innanzitutto la bitmap all'esterno del contesto di periferica, quindi eliminare il `CBitmap` oggetto.  
+ When you finish with the `CBitmap` object created with the `CreateDiscardableBitmap` function, first select the bitmap out of the device context, then delete the `CBitmap` object.  
   
-##  <a name="fromhandle"></a>CBitmap::FromHandle  
- Restituisce un puntatore a un `CBitmap` oggetto quando viene specificato un handle per una bitmap GDI di Windows.  
+##  <a name="fromhandle"></a>  CBitmap::FromHandle  
+ Returns a pointer to a `CBitmap` object when given a handle to a Windows GDI bitmap.  
   
 ```  
 static CBitmap* PASCAL FromHandle(HBITMAP hBitmap);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `hBitmap`  
- Specifica una bitmap GDI di Windows.  
+ Specifies a Windows GDI bitmap.  
   
-### <a name="return-value"></a>Valore restituito  
- Un puntatore a un `CBitmap` oggetto in caso di esito positivo; in caso contrario **NULL**.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a `CBitmap` object if successful; otherwise **NULL**.  
   
-### <a name="remarks"></a>Note  
- Se un `CBitmap` oggetto non è già connesso all'handle temporaneo `CBitmap` oggetto viene creato e collegato. Questo temporaneo `CBitmap` oggetto è valido solo fino a quando la volta successiva che l'applicazione ha il tempo di inattività nel relativo ciclo di eventi, che ora immagine temporanea tutti gli oggetti vengono eliminati. In altre parole, questo è che l'oggetto temporaneo è valido solo durante l'elaborazione di una finestra di messaggio.  
+### <a name="remarks"></a>Remarks  
+ If a `CBitmap` object is not already attached to the handle, a temporary `CBitmap` object is created and attached. This temporary `CBitmap` object is valid only until the next time the application has idle time in its event loop, at which time all temporary graphic objects are deleted. Another way of saying this is that the temporary object is only valid during the processing of one window message.  
   
-##  <a name="getbitmap"></a>CBitmap::GetBitmap  
- Recupera le proprietà dell'immagine per la bitmap associata.  
+##  <a name="getbitmap"></a>  CBitmap::GetBitmap  
+ Retrieves image properties for the attached bitmap.  
   
 ```  
 int GetBitmap(BITMAP* pBitMap);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pBitMap`  
- Puntatore a un [struttura di BITMAP](../../mfc/reference/bitmap-structure.md) struttura che riceverà le proprietà dell'immagine. Questo parametro non deve essere `NULL`.  
+ Pointer to a [BITMAP Structure](../../mfc/reference/bitmap-structure.md) structure that will receive the image properties. This parameter must not be `NULL`.  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se il metodo ha esito positivo; in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the method was successful; otherwise 0.  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getbitmapbits"></a>CBitmap::GetBitmapBits  
- Copia lo schema di bit della bitmap associata nel buffer specificato.  
+##  <a name="getbitmapbits"></a>  CBitmap::GetBitmapBits  
+ Copies the bit pattern of the attached bitmap into the specified buffer.  
   
 ```  
 DWORD GetBitmapBits(
@@ -290,68 +301,68 @@ DWORD GetBitmapBits(
     LPVOID lpBits) const;  
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `dwCount`  
- Numero di byte da copiare nel buffer.  
+ The number of bytes to copy to the buffer.  
   
  `lpBits`  
- Puntatore al buffer che riceverà la bitmap.  
+ Pointer to the buffer that will receive the bitmap.  
   
-### <a name="return-value"></a>Valore restituito  
- Il numero di byte copiati nel buffer se il metodo ha esito positivo; in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ The number of bytes copied to the buffer if the method was successful; otherwise 0.  
   
-### <a name="remarks"></a>Note  
- Utilizzare [CBitmap::GetBitmap](#getbitmap) per determinare le dimensioni del buffer richiesto.  
+### <a name="remarks"></a>Remarks  
+ Use [CBitmap::GetBitmap](#getbitmap) to determine the required buffer size.  
   
-##  <a name="getbitmapdimension"></a>CBitmap::GetBitmapDimension  
- Restituisce la larghezza e altezza della bitmap.  
+##  <a name="getbitmapdimension"></a>  CBitmap::GetBitmapDimension  
+ Returns the width and height of the bitmap.  
   
 ```  
 CSize GetBitmapDimension() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- La larghezza e altezza della bitmap, misurati in unità 0,1 millimetri. L'altezza è nel **cy** membro del `CSize` oggetto e la larghezza è nel **cx** membro. Se la larghezza della bitmap e l'altezza non sono state impostate tramite `SetBitmapDimension`, il valore restituito è 0.  
+### <a name="return-value"></a>Return Value  
+ The width and height of the bitmap, measured in 0.1-millimeter units. The height is in the **cy** member of the `CSize` object, and the width is in the **cx** member. If the bitmap width and height have not been set by using `SetBitmapDimension`, the return value is 0.  
   
-### <a name="remarks"></a>Note  
- L'altezza e la larghezza vengono considerati sono state impostate in precedenza tramite il [SetBitmapDimension](#setbitmapdimension) funzione membro.  
+### <a name="remarks"></a>Remarks  
+ The height and width are assumed to have been set previously by using the [SetBitmapDimension](#setbitmapdimension) member function.  
   
-##  <a name="loadbitmap"></a>LoadBitmap  
- Carica la risorsa bitmap denominata da `lpszResourceName` o identificata dal numero di ID in `nIDResource` dal file eseguibile dell'applicazione.  
+##  <a name="loadbitmap"></a>  CBitmap::LoadBitmap  
+ Loads the bitmap resource named by `lpszResourceName` or identified by the ID number in `nIDResource` from the application's executable file.  
   
 ```  
 BOOL LoadBitmap(LPCTSTR lpszResourceName);  
 BOOL LoadBitmap(UINT nIDResource);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `lpszResourceName`  
- Punta a una stringa con terminazione null che contiene il nome della risorsa bitmap.  
+ Points to a null-terminated string that contains the name of the bitmap resource.  
   
  `nIDResource`  
- Specifica il numero di ID risorsa della risorsa bitmap.  
+ Specifies the resource ID number of the bitmap resource.  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se ha esito positivo; in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Note  
- Bitmap caricata è collegata la `CBitmap` oggetto.  
+### <a name="remarks"></a>Remarks  
+ The loaded bitmap is attached to the `CBitmap` object.  
   
- Se la bitmap è identificato da `lpszResourceName` non esiste o se la memoria è insufficiente per caricare la bitmap, la funzione restituisce 0.  
+ If the bitmap identified by `lpszResourceName` does not exist or if there is insufficient memory to load the bitmap, the function returns 0.  
   
- È possibile utilizzare il [CGdiObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) funzione eliminare bitmap caricata dal `LoadBitmap` funzione, o `CBitmap` distruttore eliminerà automaticamente l'oggetto.  
+ You can use the [CGdiObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) function to delete bitmap loaded by the `LoadBitmap` function, or the `CBitmap` destructor will delete the object for you.  
   
 > [!CAUTION]
->  Prima di eliminare l'oggetto, assicurarsi che non è selezionato in un contesto di dispositivo.  
+>  Before you delete the object, make sure it is not selected into a device context.  
   
- Le bitmap seguenti sono state aggiunte alle versioni di Windows 3.1 e versioni successive:  
+ The following bitmaps were added to Windows versions 3.1 and later:  
   
  **OBM_UPARRROWIOBM_DNARROWIOBM_RGARROWIOBM_LFARROWI**  
   
- Tali bitmap non presenti nel driver di dispositivo per le versioni di Windows 3.0 e versioni precedenti. Per un elenco completo di bitmap e una visualizzazione dell'aspetto, vedere il [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ These bitmaps are not found in device drivers for Windows versions 3.0 and earlier. For a complete list of bitmaps and a display of their appearance, see the Windows SDK.  
   
-##  <a name="loadmappedbitmap"></a>CBitmap::LoadMappedBitmap  
- Chiamare questa funzione membro per caricare una bitmap ed eseguire il mapping dei colori per i colori di sistema corrente.  
+##  <a name="loadmappedbitmap"></a>  CBitmap::LoadMappedBitmap  
+ Call this member function to load a bitmap and map the colors to the current system colors.  
   
 ```  
 BOOL LoadMappedBitmap(
@@ -361,37 +372,37 @@ BOOL LoadMappedBitmap(
     int nMapSize = 0);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `nIDBitmap`  
- L'ID della risorsa bitmap.  
+ The ID of the bitmap resource.  
   
  `nFlags`  
- Flag per una bitmap. Può essere zero o **CMB_MASKED**.  
+ A flag for a bitmap. Can be zero or **CMB_MASKED**.  
   
  `lpColorMap`  
- Un puntatore a un **COLORMAP** struttura che contiene le informazioni di colore necessarie per eseguire il mapping di bitmap. Se questo parametro è **NULL**, la funzione utilizza la mappa di colori predefinita.  
+ A pointer to a **COLORMAP** structure that contains the color information needed to map the bitmaps. If this parameter is **NULL**, the function uses the default color map.  
   
  *nMapSize*  
- Il numero di mappe di colore a cui puntava `lpColorMap`.  
+ The number of color maps pointed to by `lpColorMap`.  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se ha esito positivo; in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Note  
- Per impostazione predefinita, `LoadMappedBitmap` i colori utilizzati nei glifi pulsante verrà eseguito il mapping.  
+### <a name="remarks"></a>Remarks  
+ By default, `LoadMappedBitmap` will map colors commonly used in button glyphs.  
   
- Per informazioni sulla creazione di una bitmap mappata, vedere la funzione di Windows [CreateMappedBitmap](http://go.microsoft.com/fwlink/linkid=230562) e [COLORMAP](http://msdn.microsoft.com/library/windows/desktop/bb760448) nella struttura di [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For information about creating a mapped bitmap, see the Windows function [CreateMappedBitmap](http://go.microsoft.com/fwlink/linkid=230562) and the [COLORMAP](http://msdn.microsoft.com/library/windows/desktop/bb760448) structure in the Windows SDK.  
   
-##  <a name="loadoembitmap"></a>CBitmap::LoadOEMBitmap  
- Carica una bitmap predefinita utilizzata da Windows.  
+##  <a name="loadoembitmap"></a>  CBitmap::LoadOEMBitmap  
+ Loads a predefined bitmap used by Windows.  
   
 ```  
 BOOL LoadOEMBitmap(UINT nIDBitmap);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `nIDBitmap`  
- Numero di ID della bitmap di Windows predefinite. I valori possibili sono elencati di seguito da WINDOWS. H:  
+ ID number of the predefined Windows bitmap. The possible values are listed below from WINDOWS.H:  
   
 |||  
 |-|-|  
@@ -413,31 +424,31 @@ BOOL LoadOEMBitmap(UINT nIDBitmap);
 |**OBM_OLD_LFARROW**|**OBM_ZOOM**|  
 |**OBM_OLD_REDUCE**|**OBM_ZOOMD**|  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se ha esito positivo; in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Note  
- Bitmap nomi che iniziano con **OBM_OLD** rappresentano bitmap utilizzata dalle versioni di Windows precedente alla 3.0.  
+### <a name="remarks"></a>Remarks  
+ Bitmap names that begin with **OBM_OLD** represent bitmaps used by Windows versions prior to 3.0.  
   
- Si noti che la costante **OEMRESOURCE** deve essere definita prima tra cui WINDOWS. H per usare il **OBM_** costanti.  
+ Note that the constant **OEMRESOURCE** must be defined before including WINDOWS.H in order to use any of the **OBM_** constants.  
   
-##  <a name="operator_hbitmap"></a>CBitmap::operator HBITMAP  
- Utilizzare questo operatore per ottenere l'handle GDI Windows collegato di `CBitmap` oggetto.  
+##  <a name="operator_hbitmap"></a>  CBitmap::operator HBITMAP  
+ Use this operator to get the attached Windows GDI handle of the `CBitmap` object.  
   
 ```  
 operator HBITMAP() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Se ha esito positivo, un handle per l'oggetto GDI Windows rappresentato dal `CBitmap` oggetto; in caso contrario **NULL**.  
+### <a name="return-value"></a>Return Value  
+ If successful, a handle to the Windows GDI object represented by the `CBitmap` object; otherwise **NULL**.  
   
-### <a name="remarks"></a>Note  
- Questo è un operatore di cast, che supporta l'utilizzo diretto di un `HBITMAP` oggetto.  
+### <a name="remarks"></a>Remarks  
+ This operator is a casting operator, which supports direct use of an `HBITMAP` object.  
   
- Per ulteriori informazioni sull'utilizzo di oggetti grafici, vedere [oggetti grafico](http://msdn.microsoft.com/library/windows/desktop/dd144962) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information about using graphic objects, see [Graphic Objects](http://msdn.microsoft.com/library/windows/desktop/dd144962) in the Windows SDK.  
   
-##  <a name="setbitmapbits"></a>CBitmap::SetBitmapBits  
- Imposta i bit di una bitmap per i valori di bit specificati da `lpBits`.  
+##  <a name="setbitmapbits"></a>  CBitmap::SetBitmapBits  
+ Sets the bits of a bitmap to the bit values given by `lpBits`.  
   
 ```  
 DWORD SetBitmapBits(
@@ -445,18 +456,18 @@ DWORD SetBitmapBits(
     const void* lpBits);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `dwCount`  
- Specifica il numero di byte a cui puntata `lpBits`.  
+ Specifies the number of bytes pointed to by `lpBits`.  
   
  `lpBits`  
- Punta al **BYTE** matrice che contiene i valori pixel per copiare il `CBitmap` oggetto. Per la bitmap per poter eseguire correttamente il rendering di immagine, i valori devono essere formattati in modo conforme ai valori di profondità di altezza, larghezza e il colore che sono stati specificati quando è stata creata l'istanza CBitmap. Per ulteriori informazioni, vedere [CBitmap::CreateBitmap](#createbitmap).  
+ Points to the **BYTE** array that contains the pixel values to be copied to the `CBitmap` object. In order for the bitmap to be able to render its image correctly, the values should be formatted to conform to the height, width and color depth values that were specified when the CBitmap instance was created. For more information, see [CBitmap::CreateBitmap](#createbitmap).  
   
-### <a name="return-value"></a>Valore restituito  
- Il numero di byte utilizzati nel impostando i bit della bitmap; 0 se la funzione ha esito negativo.  
+### <a name="return-value"></a>Return Value  
+ The number of bytes used in setting the bitmap bits; 0 if the function fails.  
   
-##  <a name="setbitmapdimension"></a>CBitmap::SetBitmapDimension  
- Assegna una larghezza e altezza di una bitmap in millimetri 0,1 unità.  
+##  <a name="setbitmapdimension"></a>  CBitmap::SetBitmapDimension  
+ Assigns a width and height to a bitmap in 0.1-millimeter units.  
   
 ```  
 CSize SetBitmapDimension(
@@ -464,22 +475,22 @@ CSize SetBitmapDimension(
     int nHeight);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `nWidth`  
- Specifica la larghezza della bitmap (in unità 0,1 millimetri).  
+ Specifies the width of the bitmap (in 0.1-millimeter units).  
   
  `nHeight`  
- Specifica l'altezza della bitmap (in unità 0,1 millimetri).  
+ Specifies the height of the bitmap (in 0.1-millimeter units).  
   
-### <a name="return-value"></a>Valore restituito  
- Le dimensioni di bitmap precedente. Altezza è nel **cy** le variabili membro del `CSize` oggetto e la larghezza è nel **cx** variabile membro.  
+### <a name="return-value"></a>Return Value  
+ The previous bitmap dimensions. Height is in the **cy** member variable of the `CSize` object, and width is in the **cx** member variable.  
   
-### <a name="remarks"></a>Note  
- GDI non utilizza questi valori, ad eccezione di to restituirle quando un'applicazione chiama il [GetBitmapDimension](#getbitmapdimension) funzione membro.  
+### <a name="remarks"></a>Remarks  
+ The GDI does not use these values except to return them when an application calls the [GetBitmapDimension](#getbitmapdimension) member function.  
   
-## <a name="see-also"></a>Vedere anche  
- [Esempio MFC MDI](../../visual-cpp-samples.md)   
- [Classe CGdiObject](../../mfc/reference/cgdiobject-class.md)   
- [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample MDI](../../visual-cpp-samples.md)   
+ [CGdiObject Class](../../mfc/reference/cgdiobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 

@@ -1,36 +1,54 @@
 ---
-title: "Contenitori di controlli ActiveX: inserimento di un controllo in un&#39;applicazione contenitore di controlli | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "contenitori dei controlli ActiveX [C++], inserimento di controlli"
-  - "ActiveX (controlli) [C++], aggiunta ai progetti"
+title: 'ActiveX Control Containers: Inserting a Control into a Control Container Application | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- ActiveX control containers [MFC], inserting controls
+- ActiveX controls [MFC], adding to projects
 ms.assetid: bbb617ff-872f-43d8-b4d6-c49adb16b148
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Contenitori di controlli ActiveX: inserimento di un controllo in un&#39;applicazione contenitore di controlli
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5a457d9a357e488795d9f06dbaff56d5ff5f59e4
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Prima di poter accedere a un controllo ActiveX da un'applicazione contenitore di controlli ActiveX, è necessario aggiungere il controllo ActiveX all'applicazione contenitore utilizzando la finestra di dialogo [Inserire il controllo ActiveX](../mfc/insert-activex-control-dialog-box.md).  
+---
+# <a name="activex-control-containers-inserting-a-control-into-a-control-container-application"></a>ActiveX Control Containers: Inserting a Control into a Control Container Application
+Before you can access an ActiveX control from an ActiveX control container application, you must add the ActiveX control to the container application using the [Insert ActiveX Control](../windows/insert-activex-control-dialog-box.md) dialog box.  
   
- Per aggiungere un controllo ActiveX al progetto del contenitore di controlli ActiveX, vedere [Controlli ActiveX add e di visualizzazione di una finestra di dialogo](../mfc/viewing-and-adding-activex-controls-to-a-dialog-box.md).  
+ To add an ActiveX control to the ActiveX control container project, see [Viewing and Adding ActiveX Controls to a Dialog Box](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md).  
   
- Una volta aggiunte il controllo, è necessario aggiungere una variabile membro \(il tipo di controllo ActiveX alla classe della finestra di dialogo.  Per ulteriori informazioni su questa procedura, vedere [Aggiunta di una variabile membro](../ide/adding-a-member-variable-visual-cpp.md).  
+ Once you add the control, you need to add a member variable (of the ActiveX control type) to the dialog box class. For more information on this procedure, see [Adding a Member Variable](../ide/adding-a-member-variable-visual-cpp.md).  
   
- Dopo aver aggiunto una classe variabile membro, definita come classe wrapper, viene automaticamente creata e aggiunta al progetto.  La classe viene utilizzata come un'interfaccia tra il contenitore di controlli e il controllo incorporato.  
+ Once you have added the member variable a class, referred to as a wrapper class, is automatically generated and added to your project. This class is used as an interface between the control container and the embedded control.  
   
-## Vedere anche  
- [Contenitori di controlli ActiveX](../mfc/activex-control-containers.md)
+## <a name="see-also"></a>See Also  
+ [ActiveX Control Containers](../mfc/activex-control-containers.md)
+
+

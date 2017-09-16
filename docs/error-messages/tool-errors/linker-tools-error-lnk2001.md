@@ -1,7 +1,7 @@
 ---
 title: Linker Tools Error LNK2001 | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 05/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -34,10 +34,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: MT
-ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
-ms.openlocfilehash: b84789e0de5b8da870dbfa7cb636440704cc022e
+ms.sourcegitcommit: 22000a296568c01082c9aef5ceaac8f266bcad5c
+ms.openlocfilehash: 059a42245b4053af8926564cd95294da8700c4eb
 ms.contentlocale: it-it
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="linker-tools-error-lnk2001"></a>Linker Tools Error LNK2001

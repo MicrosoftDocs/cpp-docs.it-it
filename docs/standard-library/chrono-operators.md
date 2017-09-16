@@ -1,5 +1,5 @@
 ---
-title: Operatori &lt;chrono&gt; | Microsoft Docs
+title: '&lt;chrono&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -11,23 +11,23 @@ f1_keywords:
 ms.assetid: c5a19267-4684-40c1-b7a9-cc1012b058f3
 caps.latest.revision: 8
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: a58daf9d43392ffa89872ab0a76e680b63dbb977
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: c7403464027d1e08a926dc6edb67b8cb8a37523a
 ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltchronogt-operators"></a>Operatori &lt;chrono&gt;
+# <a name="ltchronogt-operators"></a>&lt;chrono&gt; operators
 ||||  
 |-|-|-|  
-|[operatore modulo](#op_modulo)|[operator!=](#op_neq)|[operator&gt;](#op_gt)|  
+|[operator modulo](#op_modulo)|[operator!=](#op_neq)|[operator&gt;](#op_gt)|  
 |[operator&gt;=](#op_gt_eq)|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|  
 |[operator*](#op_star)|[operator+](#op_add)|[operator-](#operator-)|  
 |[operator/](#op_div)|[operator==](#op_eq_eq)|  
   
 ##  <a name="operator-"></a>  operator-  
- Operatore di sottrazione o negazione degli oggetti [duration](../standard-library/duration-class.md) e [time_point](../standard-library/time-point-class.md).  
+ Operator for subtraction or negation of [duration](../standard-library/duration-class.md) and [time_point](../standard-library/time-point-class.md) objects.  
   
 ```  
 template <class Rep1, class Period1, class Rep2, class Period2>  
@@ -50,28 +50,28 @@ constexpr typename common_type<Duration1, Duration2>::type
        const time_point<Clock, Duration2>& Right);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `Left`  
- L'oggetto `duration` o `time_point` a sinistra.  
+ The left `duration` or `time_point` object.  
   
  `Right`  
- L'oggetto `duration` o `time_point` a destra.  
+ The right `duration` or `time_point` object.  
   
  `Time`  
- Oggetto `time_point`.  
+ A `time_point` object.  
   
  `Dur`  
- Oggetto `duration`.  
+ A `duration` object.  
   
-### <a name="return-value"></a>Valore restituito  
- La prima funzione restituisce un oggetto `duration`, la cui lunghezza di intervallo corrisponde alla differenza tra gli intervalli dei due argomenti.  
+### <a name="return-value"></a>Return Value  
+ The first function returns a `duration` object whose interval length is the difference between the time intervals of the two arguments.  
   
- La seconda funzione restituisce un oggetto `time_point` che rappresenta un punto nel tempo che viene spostato dalla negazione dell'intervallo di tempo rappresentato da `Dur`, dal punto nel tempo specificato da `Time`.  
+ The second function returns a `time_point` object that represents a point in time that is displaced, by the negation of the time interval that is represented by `Dur`, from the point in time that is specified by `Time`.  
   
- La terza funzione restituisce un oggetto `duration` che rappresenta l'intervallo di tempo tra `Left` e `Right`.  
+ The third function returns a `duration` object that represents the time interval between `Left` and `Right`.  
   
 ##  <a name="op_neq"></a>  operator!=  
- Operatore di disuguaglianza per oggetti [duration](../standard-library/duration-class.md) o [time_point](../standard-library/time-point-class.md).  
+ Inequality operator for [duration](../standard-library/duration-class.md) or [time_point](../standard-library/time-point-class.md) objects.  
   
 ```  
 template <class Rep1, class Period1, class Rep2, class Period2>  
@@ -86,18 +86,18 @@ constexpr bool operator!=(
     const time_point<Clock, Duration2>& Right);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `Left`  
- L'oggetto `duration` o `time_point` a sinistra.  
+ The left `duration` or `time_point` object.  
   
  `Right`  
- L'oggetto `duration` o `time_point` a destra.  
+ The right `duration` or `time_point` object.  
   
-### <a name="return-value"></a>Valore restituito  
- Ogni funzione restituisce `!(Left == Right)`.  
+### <a name="return-value"></a>Return Value  
+ Each function returns `!(Left == Right)`.  
   
 ##  <a name="op_star"></a>  operator*  
- Operatore di moltiplicazione per oggetti [duration](../standard-library/chrono-operators.md#op_star).  
+ Multiplication operator for [duration](../standard-library/chrono-operators.md#op_star) objects.  
   
 ```  
 template <class Rep1, class Period1, class Rep2>  
@@ -115,22 +115,22 @@ constexpr duration<typename common_type<Rep1, Rep2>::type, Period2>
        Period2>& Dur);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `Dur`  
- Oggetto `duration`.  
+ A `duration` object.  
   
  `Mult`  
- Valore integrale.  
+ An integral value.  
   
-### <a name="return-value"></a>Valore restituito  
- Ogni funzione restituisce un oggetto `duration` la cui lunghezza dell'intervallo è costituita da `Mult` moltiplicato per la lunghezza di `Dur`.  
+### <a name="return-value"></a>Return Value  
+ Each function returns a `duration` object whose interval length is `Mult` multiplied by the length of `Dur`.  
   
- A meno che l'oggetto `is_convertible<Rep2, common_type<Rep1, Rep2>>` *resti valido*, la prima funzione non fa parte della risoluzione dell'overload. Per altre informazioni, vedere [<type_traits>](../standard-library/type-traits.md).  
+ Unless `is_convertible<Rep2, common_type<Rep1, Rep2>>`*holds true*, the first function does not participate in overload resolution. For more information, sssee [<type_traits>](../standard-library/type-traits.md).  
   
- A meno che l'oggetto `is_convertible<Rep1, common_type<Rep1, Rep2>>` *resti valido*, la seconda funzione non fa parte della risoluzione dell'overload. Per altre informazioni, vedere [<type_traits>](../standard-library/type-traits.md).  
+ Unless `is_convertible<Rep1, common_type<Rep1, Rep2>>`*holds true*, the second function does not participate in overload resolution. For more information, see [<type_traits>](../standard-library/type-traits.md).  
   
 ##  <a name="op_div"></a>  operator/  
- Operatore di divisione per gli oggetti [duration](../standard-library/chrono-operators.md#op_star).  
+ Division operator for [duration](../standard-library/chrono-operators.md#op_star) objects.  
   
 ```  
 template <class Rep1, class Period1, class Rep2>  
@@ -147,28 +147,28 @@ constexpr typename common_type<Rep1, Rep2>::type
      const duration<Rep2, Period2>& Right);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `Dur`  
- Oggetto `duration`.  
+ A `duration` object.  
   
  `Div`  
- Valore integrale.  
+ An integral value.  
   
  `Left`  
- L'oggetto `duration` a sinistra.  
+ The left `duration` object.  
   
  `Right`  
- L'oggetto `duration` corretto.  
+ The right `duration` object.  
   
-### <a name="return-value"></a>Valore restituito  
- Il primo operatore restituisce un oggetto duration il cui intervallo di lunghezza è la lunghezza di `Dur` divisa per il valore `Div`.  
+### <a name="return-value"></a>Return Value  
+ The first operator returns a duration object whose interval length is the length of `Dur` divided by the value `Div`.  
   
- Il secondo operatore restituisce il rapporto tra la lunghezza dell'intervallo di `Left` e `Right`.  
+ The second operator returns the ratio of the interval lengths of `Left` and `Right`.  
   
- A meno che l'oggetto `is_convertible<Rep2, common_type<Rep1, Rep2>>` *resti valido* e `Rep2` non sia una creazione di istanza di `duration`, il primo operatore non fa parte della risoluzione dell'overload. Per altre informazioni, vedere [<type_traits>](../standard-library/type-traits.md).  
+ Unless `is_convertible<Rep2, common_type<Rep1, Rep2>>`*holds true*, and `Rep2` is not an instantiation of `duration`, the first operator does not participate in overload resolution. For more information, see [<type_traits>](../standard-library/type-traits.md).  
   
 ##  <a name="op_add"></a>  operator+  
- Consente di aggiungere oggetti [duration](../standard-library/duration-class.md) e [time_point](../standard-library/time-point-class.md).  
+ Adds [duration](../standard-library/duration-class.md) and [time_point](../standard-library/time-point-class.md) objects.  
   
 ```  
 template <class Rep1, class Period1, class Rep2, class Period2>  
@@ -192,26 +192,26 @@ time_point<Clock, constexpr typename common_type<duration<Rep1, Period1>, Durati
       const time_point<Clock, Duration2>& Time);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `Left`  
- L'oggetto `duration` o `time_point` a sinistra.  
+ The left `duration` or `time_point` object.  
   
  `Right`  
- L'oggetto `duration` o `time_point` a destra.  
+ The right `duration` or `time_point` object.  
   
  `Time`  
- Oggetto `time_point`.  
+ A `time_point` object.  
   
  `Dur`  
- Oggetto `duration`.  
+ A `duration` object.  
   
-### <a name="return-value"></a>Valore restituito  
- La prima funzione restituisce un oggetto `duration` che dispone di un intervallo di tempo equivalente alla somma degli intervalli di `Left` e `Right`.  
+### <a name="return-value"></a>Return Value  
+ The first function returns a `duration` object that has a time interval that is equal to the sum of the intervals of `Left` and `Right`.  
   
- La seconda e terza funzione restituiscono un oggetto `time_point` che rappresenta un punto nel tempo che viene spostato, dall'intervallo di `Dur`, dal punto nel tempo `Time`.  
+ The second and third functions return a `time_point` object that represents a point in time that is displaced, by the interval `Dur`, from the point in time `Time`.  
   
 ##  <a name="op_lt"></a>  operator&lt;  
- Determina se un oggetto [duration](../standard-library/duration-class.md) o [time_point](../standard-library/time-point-class.md) è minore di un altro oggetto `duration` o `time_point`.  
+ Determines whether one [duration](../standard-library/duration-class.md) or [time_point](../standard-library/time-point-class.md) object is less than another `duration` or `time_point` object.  
   
 ```  
 template <class Rep1, class Period1, class Rep2, class Period2>  
@@ -226,20 +226,20 @@ constexpr bool operator<(
     const time_point<Clock, Duration2>& Right);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `Left`  
- L'oggetto `duration` o `time_point` a sinistra.  
+ The left `duration` or `time_point` object.  
   
  `Right`  
- L'oggetto `duration` o `time_point` a destra.  
+ The right `duration` or `time_point` object.  
   
-### <a name="return-value"></a>Valore restituito  
- La prima funzione restituisce `true` se la lunghezza dell'intervallo di `Left`è minore della lunghezza dell'intervallo di `Right`. In caso contrario, la funzione restituisce `false`.  
+### <a name="return-value"></a>Return Value  
+ The first function returns `true` if the interval length of `Left` is less than the interval length of `Right`. Otherwise, the function returns `false`.  
   
- La seconda funzione restituisce `true` se `Left` precede `Right`. In caso contrario, la funzione restituisce `false`.  
+ The second function returns `true` if `Left` precedes `Right`. Otherwise, the function returns `false`.  
   
 ##  <a name="op_lt_eq"></a>  operator&lt;=  
- Determina se un oggetto [duration](../standard-library/duration-class.md) o [time_point](../standard-library/time-point-class.md) è minore o uguale a un altro oggetto `duration` o `time_point`.  
+ Determines whether one [duration](../standard-library/duration-class.md) or [time_point](../standard-library/time-point-class.md) object is less than or equal to another `duration` or `time_point` object.  
   
 ```  
 template <class Rep1, class Period1, class Rep2, class Period2>  
@@ -253,18 +253,18 @@ constexpr bool operator<=(
     const time_point<Clock, Duration2>& Right);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `Left`  
- L'oggetto `duration` o `time_point` a sinistra.  
+ The left `duration` or `time_point` object.  
   
  `Right`  
- L'oggetto `duration` o `time_point` a destra.  
+ The right `duration` or `time_point` object.  
   
-### <a name="return-value"></a>Valore restituito  
- Ogni funzione restituisce `!(Right < Left)`.  
+### <a name="return-value"></a>Return Value  
+ Each function returns `!(Right < Left)`.  
   
 ##  <a name="op_eq_eq"></a>  operator==  
- Determina se due oggetti `duration` rappresentano gli intervalli di tempo che hanno la stessa lunghezza, o se due oggetti `time_point` rappresentano lo stesso punto nel tempo.  
+ Determines whether two `duration` objects represent time intervals that have the same length, or whether two `time_point` objects represent the same point in time.  
   
 ```  
 template <class Rep1, class Period1, class Rep2, class Period2>  
@@ -278,20 +278,20 @@ constexpr bool operator==(
     const time_point<Clock, Duration2>& Right);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `Left`  
- L'oggetto `duration` o `time_point` a sinistra.  
+ The left `duration` or `time_point` object.  
   
  `Right`  
- L'oggetto `duration` o `time_point` a destra.  
+ The right `duration` or `time_point` object.  
   
-### <a name="return-value"></a>Valore restituito  
- La prima funzione restituisce `true` se `Left` e `Right` rappresentano gli intervalli di tempo che hanno la stessa lunghezza. In caso contrario, la funzione restituisce `false`.  
+### <a name="return-value"></a>Return Value  
+ The first function returns `true` if `Left` and `Right` represent time intervals that have the same length. Otherwise, the function returns `false`.  
   
- La seconda funzione restituisce `true` se `Left` e `Right` rappresentano lo stesso punto nel tempo. In caso contrario, la funzione restituisce `false`.  
+ The second function returns `true` if `Left` and `Right` represent the same point in time. Otherwise, the function returns `false`.  
   
 ##  <a name="op_gt"></a>  operator&gt;  
- Determina se un oggetto [duration](../standard-library/duration-class.md) o [time_point](../standard-library/time-point-class.md) è maggiore di un altro oggetto `duration` o `time_point`.  
+ Determines whether one [duration](../standard-library/duration-class.md) or [time_point](../standard-library/time-point-class.md) object is greater than another `duration` or `time_point` object.  
   
 ```  
 template <class Rep1, class Period1, class Rep2, class Period2>  
@@ -305,18 +305,18 @@ constexpr bool operator>(
     const time_point<Clock, Duration2>& Right);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `Left`  
- L'oggetto `duration` o `time_point` a sinistra.  
+ The left `duration` or `time_point` object.  
   
  `Right`  
- L'oggetto `duration` o `time_point` a destra.  
+ The right `duration` or `time_point` object.  
   
-### <a name="return-value"></a>Valore restituito  
- Ogni funzione restituisce `Right < Left`.  
+### <a name="return-value"></a>Return Value  
+ Each function returns `Right < Left`.  
   
 ##  <a name="op_gt_eq"></a>  operator&gt;=  
- Determina se un oggetto [duration](../standard-library/duration-class.md) o [time_point](../standard-library/time-point-class.md) è maggiore o uguale a un altro oggetto `duration` o `time_point`.  
+ Determines whether one [duration](../standard-library/duration-class.md) or [time_point](../standard-library/time-point-class.md) object is greater than or equal to another `duration` or `time_point` object.  
   
 ```  
 template <class Rep1, class Period1, class Rep2, class Period2>  
@@ -330,18 +330,18 @@ constexpr bool operator>=(
     const time_point<Clock, Duration2>& Right);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `Left`  
- L'oggetto `duration` o `time_point` a sinistra.  
+ The left `duration` or `time_point` object.  
   
  `Right`  
- L'oggetto `duration` o `time_point` a destra.  
+ The right `duration` or `time_point` object.  
   
-### <a name="return-value"></a>Valore restituito  
- Ogni funzione restituisce `!(Left < Right)`.  
+### <a name="return-value"></a>Return Value  
+ Each function returns `!(Left < Right)`.  
   
-##  <a name="op_modulo"></a>  operatore modulo  
- Operatore per le operazioni modulo sugli oggetti [duration](../standard-library/duration-class.md).  
+##  <a name="op_modulo"></a>  operator modulo  
+ Operator for modulo operations on [duration](../standard-library/duration-class.md) objects.  
   
 ```  
 template <class Rep1, class Period1, class Rep2>  
@@ -357,25 +357,25 @@ constexpr typename common_type<duration<Rep1, _Period1>, duration<Rep2, Period2>
      const duration<Rep2, Period2>& Right);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `Dur`  
- Oggetto `duration`.  
+ A `duration` object.  
   
  `Div`  
- Valore integrale.  
+ An integral value.  
   
  `Left`  
- L'oggetto `duration` a sinistra.  
+ The left `duration` object.  
   
  `Right`  
- L'oggetto `duration` corretto.  
+ The right `duration` object.  
   
-### <a name="return-value"></a>Valore restituito  
- La prima funzione restituisce un oggetto `duration` la cui lunghezza dell'intervallo è il modulo `Dur` `Div`.  
+### <a name="return-value"></a>Return Value  
+ The first function returns a `duration` object whose interval length is `Dur` modulo `Div`.  
   
- La seconda funzione restituisce un valore che rappresenta il modulo `Left` `Right`.  
+ The second function returns a value that represents `Left` modulo `Right`.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [\<chrono>](../standard-library/chrono.md)
 
 

@@ -1,15 +1,14 @@
 ---
-title: Struct logical_or | Microsoft Docs
+title: logical_or Struct | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- logical_or
 - xfunctional/std::logical_or
 dev_langs:
 - C++
@@ -36,16 +35,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 4928eb5d79877dd4d1e2c1a1c0f25dbc29e4ec1b
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 3e8c5a109c882669231967ea06a8770e07057da6
+ms.contentlocale: it-it
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="logicalor-struct"></a>Struct logical_or
-Oggetto funzione predefinito che esegue l'operazione di disgiunzione logica ( `operator||`) negli argomenti.  
+# <a name="logicalor-struct"></a>logical_or Struct
+A predefined function object that performs the logical disjunction operation ( `operator||`) on its arguments.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Type = void>
@@ -64,23 +64,23 @@ struct logical_or<void>
  };
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  `Type`, `T`, `U`  
- Qualsiasi tipo che supporta un `operator||` che accetta gli operandi dei tipi specificati o dedotti.  
+ Any type that supports an `operator||` that takes operands of the specified or inferred types.  
   
  `Left`  
- Operando sinistro dell'operazione di disgiunzione logica. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo `Type`. Il modello specializzato esegue un inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto `T`.  
+ The left operand of the logical disjunction operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `T`.  
   
  `Right`  
- Operando destro dell'operazione di disgiunzione logica. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo `Type`. Il modello specializzato esegue un inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto `U`.  
+ The right operand of the logical disjunction operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `U`.  
   
-## <a name="return-value"></a>Valore restituito  
- Risultato di `Left``||``Right`. Il modello specializzato esegue un inoltro perfetto del risultato, con il tipo restituito da `operator||`.  
+## <a name="return-value"></a>Return Value  
+ The result of `Left || Right`. The specialized template does perfect forwarding of the result, which has the type that's returned by `operator||`.  
   
-## <a name="remarks"></a>Note  
- Per i tipi definiti dall'utente, non si verifica alcun corto circuito nella valutazione degli operandi. Entrambi gli argomenti vengono valutati da `operator||`.  
+## <a name="remarks"></a>Remarks  
+ For user-defined types, there is no short-circuiting of operand evaluation. Both arguments are evaluated by `operator||`.  
   
-## <a name="example"></a>Esempio  
+## <a name="example"></a>Example  
   
 ```cpp  
 // functional_logical_or.cpp  
@@ -140,14 +140,14 @@ The deque which is the disjuction of d1 & d2 is:
   
 ```  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<functional>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<functional>  
   
- **Spazio dei nomi:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Vedere anche  
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)  (Sicurezza dei thread nella libreria standard C++)  
- [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

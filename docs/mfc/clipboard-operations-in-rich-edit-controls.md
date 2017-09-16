@@ -1,43 +1,62 @@
 ---
-title: "Operazioni sugli Appunti nei controlli Rich Edit | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Appunti, operazioni in CRichEditCtrl"
-  - "operazioni di copia nei controlli Rich Edit"
-  - "CRichEditCtrl (classe), operazioni relative agli Appunti"
-  - "CRichEditCtrl (classe), operazione incolla"
-  - "operazioni taglia nella classe CRichEditCtrl"
-  - "incollare dati degli Appunti"
-  - "Rich Edit (controlli), operazioni relative agli Appunti"
+title: Clipboard Operations in Rich Edit Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- pasting Clipboard data
+- CRichEditCtrl class [MFC], paste operation
+- cut operation in CRichEditCtrl class [MFC]
+- CRichEditCtrl class [MFC], Clipboard operations
+- copy operations in rich edit controls
+- Clipboard, operations in CRichEditCtrl
+- rich edit controls [MFC], Clipboard operations
 ms.assetid: 15ce66bc-2636-4a35-a2ae-d52285dc1af6
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Operazioni sugli Appunti nei controlli Rich Edit
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 33364225e996cb8f36e9fa37567f6cb6c1b58444
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-L'applicazione può inserire il contenuto degli Appunti in un controllo Rich Edit \([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)\) utilizzando il formato degli Appunti disponibile o un formato degli Appunti specifico.  È anche possibile determinare se un controllo Rich Edit consente di inserire un formato degli Appunti.  
+---
+# <a name="clipboard-operations-in-rich-edit-controls"></a>Clipboard Operations in Rich Edit Controls
+Your application can paste the contents of the Clipboard into a rich edit control ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) using either the best available Clipboard format or a specific Clipboard format. You can also determine whether a rich edit control is capable of pasting a Clipboard format.  
   
- È possibile tagliare o copiare il contenuto della selezione corrente tramite la funzione membro [Taglia](../Topic/CRichEditCtrl::Cut.md) o [Copia](../Topic/CRichEditCtrl::Copy.md).  Analogamente, è possibile inserire il contenuto degli Appunti in un controllo Rich Edit utilizzando la funzione membro [Incolla](../Topic/CRichEditCtrl::Paste.md).  Il controllo inserisce il primo formato disponibile che riconosce, che presumibilmente è il formato più descrittivo.  
+ You can copy or cut the contents of the current selection by using the [Copy](../mfc/reference/cricheditctrl-class.md#copy) or [Cut](../mfc/reference/cricheditctrl-class.md#cut) member function. Similarly, you can paste the contents of the Clipboard into a rich edit control by using the [Paste](../mfc/reference/cricheditctrl-class.md#paste) member function. The control pastes the first available format that it recognizes, which presumably is the most descriptive format.  
   
- Per inserire un formato degli Appunti specifico, è possibile utilizzare la funzione membro [Incolla speciale](../Topic/CRichEditCtrl::PasteSpecial.md).  Questa funzione è utile per le applicazioni con un comando Incolla Speciale che consente all'utente di selezionare il formato degli Appunti.  È possibile utilizzare la funzione membro [CanPaste](../Topic/CRichEditCtrl::CanPaste.md) per determinare se un formato specificato è riconosciuto dal controllo.  
+ To paste a specific Clipboard format, you can use the [PasteSpecial](../mfc/reference/cricheditctrl-class.md#pastespecial) member function. This function is useful for applications with a Paste Special command that enables the user to select the Clipboard format. You can use the [CanPaste](../mfc/reference/cricheditctrl-class.md#canpaste) member function to determine whether a given format is recognized by the control.  
   
- È inoltre possibile utilizzare `CanPaste` per determinare se il formato degli Appunti disponibile viene riconosciuto da un controllo Rich Edit.  Questa funzione è utile nel gestore di `OnInitMenuPopup`.  Un'applicazione può abilitare o ingrigire il comando Incolla a seconda se il controllo può inserire qualsiasi formato disponibile.  
+ You can also use `CanPaste` to determine whether any available Clipboard format is recognized by a rich edit control. This function is useful in the `OnInitMenuPopup` handler. An application might enable or gray its Paste command depending on whether the control can paste any available format.  
   
- I controlli Rich Edit registrano due formati di appunti: il formato rich text format e un formato denominato RichEdit Text and Objects.  Un'applicazione può registrare questi formati utilizzando la funzione [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049), specificando i valori **CF\_RETEXTOBJ** e **CF\_RTF**.  
+ Rich edit controls register two Clipboard formats: rich-text format and a format called RichEdit Text and Objects. An application can register these formats by using the [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) function, specifying the **CF_RTF** and **CF_RETEXTOBJ** values.  
   
-## Vedere anche  
- [Utilizzo di CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [Controlli](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CRichEditCtrl](../mfc/using-cricheditctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

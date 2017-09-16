@@ -1,40 +1,59 @@
 ---
-title: "Selezione corrente in un controllo Rich Edit | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CRichEditCtrl (classe), selezione corrente in"
-  - "selezione corrente in CRichEditCtrls"
-  - "Rich Edit (controlli), selezione corrente in"
-  - "selezione, corrente in CRichEditCtrl"
+title: Current Selection in a Rich Edit Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- current selection in CRichEditCtrls
+- CRichEditCtrl class [MFC], current selection in
+- rich edit controls [MFC], current selection in
+- selection, current in CRichEditCtrl
 ms.assetid: f6b2a2b6-5481-4ad3-9720-6dd772ea6fc8
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Selezione corrente in un controllo Rich Edit
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e0f40011dcdc9e4153341a4b91ffef3a184db53c
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-L'utente può selezionare il testo in un controllo Rich Edit \([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)\) utilizzando il mouse o la tastiera.  La selezione corrente è l'intervallo di caratteri selezionati, o la posizione del punto di inserimento se nessun carattere selezionato.  Un'applicazione può ottenere informazioni sulla selezione corrente, impostare la selezione corrente, determina quando cambia il selezione e mostra o nasconde l'evidenziazione di selezione.  
+---
+# <a name="current-selection-in-a-rich-edit-control"></a>Current Selection in a Rich Edit Control
+The user can select text in a rich edit control ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) by using the mouse or the keyboard. The current selection is the range of selected characters, or the position of the insertion point if no characters are selected. An application can get information about the current selection, set the current selection, determine when the current selection changes, and show or hide the selection highlight.  
   
- Per determinare la selezione corrente in un controllo Rich Edit, utilizzare la funzione membro di [GetSel](../Topic/CRichEditCtrl::GetSel.md).  Per impostare la selezione corrente, utilizzare la funzione membro di [SetSel](../Topic/CRichEditCtrl::SetSel.md).  La struttura di [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) viene utilizzata con queste funzioni per specificare un intervallo di caratteri.  Per recuperare le informazioni sul contenuto della selezione corrente, è possibile utilizzare la funzione membro di [GetSelectionType](../Topic/CRichEditCtrl::GetSelectionType.md).  
+ To determine the current selection in a rich edit control, use the [GetSel](../mfc/reference/cricheditctrl-class.md#getsel) member function. To set the current selection, use the [SetSel](../mfc/reference/cricheditctrl-class.md#setsel) member function. The [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) structure is used with these functions to specify a range of characters. To retrieve information about the contents of the current selection, you can use the [GetSelectionType](../mfc/reference/cricheditctrl-class.md#getselectiontype) member function.  
   
- Per impostazione predefinita, un controllo Rich Edit visualizzare e nascondere l'evidenziazione di selezione quando riceve e perde lo stato attivo.  È possibile visualizzare o nascondere l'evidenziazione di selezione in qualsiasi momento tramite la funzione membro di [HideSelection](../Topic/CRichEditCtrl::HideSelection.md).  Ad esempio, un'applicazione potrebbe fornire una finestra di dialogo ricerca per trovare testo in un controllo Rich Edit.  L'applicazione può selezionare il testo di corrispondenza senza chiudere la finestra di dialogo, nel qual caso deve utilizzare `HideSelection` per evidenziare la selezione.  
+ By default, a rich edit control shows and hides the selection highlight when it gains and loses the focus. You can show or hide the selection highlight at any time by using the [HideSelection](../mfc/reference/cricheditctrl-class.md#hideselection) member function. For example, an application might provide a Search dialog box to find text in a rich edit control. The application might select matching text without closing the dialog box, in which case it must use `HideSelection` to highlight the selection.  
   
- Per ottenere il testo selezionato in un controllo Rich Edit, utilizzare la funzione membro di [GetSelText](../Topic/CRichEditCtrl::GetSelText.md).  Il testo viene copiato nella matrice di caratteri specificata.  È necessario assicurarsi che la matrice è sufficiente per contenere il testo selezionato più di un carattere di terminazione null.  
+ To get the selected text in a rich edit control, use the [GetSelText](../mfc/reference/cricheditctrl-class.md#getseltext) member function. The text is copied to the specified character array. You must ensure that the array is large enough to hold the selected text plus a terminating null character.  
   
- È possibile cercare una stringa in un controllo Rich Edit utilizzando la funzione membro di [FindText](../Topic/CRichEditCtrl::FindText.md) la struttura di [FINDTEXTEX](http://msdn.microsoft.com/library/windows/desktop/bb787909) utilizzata con questa funzione specifica l'intervallo di testo per individuare e la stringa da cercare.  È inoltre possibile specificare tali opzioni come se la ricerca prevede la distinzione tra maiuscole e minuscole.  
+ You can search for a string in a rich edit control by using the [FindText](../mfc/reference/cricheditctrl-class.md#findtext) member function The [FINDTEXTEX](http://msdn.microsoft.com/library/windows/desktop/bb787909) structure used with this function specifies the text range to search and the string to search for. You can also specify such options as whether the search is case-sensitive.  
   
-## Vedere anche  
- [Utilizzo di CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [Controlli](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CRichEditCtrl](../mfc/using-cricheditctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

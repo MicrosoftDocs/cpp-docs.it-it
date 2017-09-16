@@ -1,5 +1,5 @@
 ---
-title: Operatori &lt;sample container&gt; | Microsoft Docs
+title: '&lt;sample container&gt; Operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 dev_langs:
 - C++
-f1_keywords: []
 ms.assetid: 6cd28cdc-8318-4941-a06c-2c32758383fd
 caps.latest.revision: 8
 author: corob-msft
@@ -30,14 +29,14 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 658b8d8aab09907400668f010ddb67dce4644a7d
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: fcbc4a646193118e10d8c905d79ac87a294c9f1a
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltsample-containergt-operators"></a>Operatori &lt;sample container&gt;
-Per altre informazioni sugli operatori in \<sample container>, vedere [\<sample container>](../standard-library/sample-container.md).
+# <a name="ltsample-containergt-operators"></a>&lt;sample container&gt; Operators
+For more information about the operators in \<sample container>, see [\<sample container>](../standard-library/sample-container.md).
 
 

@@ -1,47 +1,65 @@
 ---
-title: "OLE (MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "applicazioni [OLE], interfaccia utente"
-  - "OLE [C++], argomenti dell'interfaccia utente"
-  - "applicazioni OLE [C++], interfaccia utente"
-  - "interfacce utente, OLE"
+title: OLE (MFC) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE [MFC], user-interface topics
+- OLE applications [MFC], user interface
+- user interfaces, OLE
+- applications [OLE], user interface
 ms.assetid: 61cb5d3e-1108-4e9b-b301-a8d8fcc586cb
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# OLE (MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 098e40f6027715e67b361b899bbf13459e7c4979
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Implementare la funzionalità OLE nel programma influisce sull'interfaccia utente in diversi modi:  
+---
+# <a name="ole-mfc"></a>OLE (MFC)
+Implementing OLE functionality in your program affects your user interface in several ways:  
   
--   Modifica visiva \(l'attivazione sul posto\) visualizza l'interfaccia utente di un altro programma in windows del programma e modifica i menu del programma con gli elementi dall'altro programma.  
+-   Visual editing (in-place activation) displays the user interface of another program in your program's windows and modifies your program's menus with items from the other program.  
   
--   Il trascinamento della selezione consente agli oggetti di trascinamento all'interno e tra le finestre e persino tra i programmi.  
+-   Drag and drop allows users to drag objects within and between windows and even between programs.  
   
--   I tracker forniscono segnali visivi allo stato degli oggetti durante la modifica visiva e trascinare e cadono.  
+-   Trackers provide visual cues to the state of objects during visual editing and drag and drop.  
   
- Per ulteriori informazioni, vedere:  
+ For more information, see:  
   
--   [OLE e MFC](../mfc/ole-in-mfc.md)  
+-   [OLE and MFC](../mfc/ole-in-mfc.md)  
   
--   [Modifica visiva \(attivazione\)](../mfc/activation-cpp.md)  
+-   [Visual Editing (Activation)](../mfc/activation-cpp.md)  
   
--   [Trascinamento della selezione](../mfc/drag-and-drop-ole.md)  
+-   [Drag and Drop](../mfc/drag-and-drop-ole.md)  
   
--   [Tracker](../mfc/trackers.md)  
+-   [Trackers](../mfc/trackers.md)  
   
-## Vedere anche  
- [Elementi dell'interfaccia utente](../mfc/user-interface-elements-mfc.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)
+

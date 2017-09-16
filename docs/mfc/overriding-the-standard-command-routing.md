@@ -1,37 +1,56 @@
 ---
-title: "Override del routing dei comandi standard | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "comandi (gestione), routing di comandi"
-  - "comandi (routing), override"
-  - "MFC, comandi (routing)"
-  - "override, routing di comandi standard"
+title: Overriding the Standard Command Routing | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, command routing
+- command routing [MFC], overriding
+- command handling [MFC], routing commands
+- overriding, standard command routing
 ms.assetid: 872b698a-7432-40c4-9008-68721e8effa5
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Override del routing dei comandi standard
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3e3ec91173fb783709d9ca2e32f6faefe2e792bd
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-In rari casi in cui è necessario implementare la modifica del framework standard che vengono risolti, è possibile eseguirne l'override.  Lo scopo è di modificare il routing in una o più classi eseguire l'override `OnCmdMsg` in tali classi.  Eseguire questa operazione:  
+---
+# <a name="overriding-the-standard-command-routing"></a>Overriding the Standard Command Routing
+In rare cases when you must implement some variation of the standard framework routing, you can override it. The idea is to change the routing in one or more classes by overriding `OnCmdMsg` in those classes. Do so:  
   
--   Nella classe che consente di interrompere ordine per passare a un oggetto non predefinito.  
+-   In the class that breaks the order to pass to a nondefault object.  
   
--   Nel nuovo oggetto non predefinito oppure aggiungerlo al comando destinazioni può a sua volta passare ai controlli.  
+-   In the new nondefault object or in command targets it might in turn pass commands to.  
   
- Se si inserisce un nuovo oggetto nel routing, la classe deve essere una classe di destinazione comando.  Nelle versioni eseguire l'override di `OnCmdMsg`, assicurarsi di chiamare la versione che si esegue l'override.  Vedere la funzione membro di [OnCmdMsg](../Topic/CCmdTarget::OnCmdMsg.md) di classe `CCmdTarget`*in riferimenti alla libreria MFC* e versioni in tali classi come `CView` e **CDocument** nel codice sorgente fornito per gli esempi.  
+ If you insert some new object into the routing, its class must be a command-target class. In your overriding versions of `OnCmdMsg`, be sure to call the version that you're overriding. See the [OnCmdMsg](../mfc/reference/ccmdtarget-class.md#oncmdmsg) member function of class `CCmdTarget` in the *MFC Reference* and the versions in such classes as `CView` and **CDocument** in the supplied source code for examples.  
   
-## Vedere anche  
- [Chiamata di un gestore dal framework](../mfc/how-the-framework-calls-a-handler.md)
+## <a name="see-also"></a>See Also  
+ [How the Framework Calls a Handler](../mfc/how-the-framework-calls-a-handler.md)
+
+

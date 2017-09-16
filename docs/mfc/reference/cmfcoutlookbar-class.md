@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCOutlookBar | Documenti di Microsoft
+title: CMFCOutlookBar Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,7 +30,22 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCOutlookBar class
+- CMFCOutlookBar [MFC], AllowDestroyEmptyTabbedPane
+- CMFCOutlookBar [MFC], CanAcceptPane
+- CMFCOutlookBar [MFC], CanSetCaptionTextToTabName
+- CMFCOutlookBar [MFC], Create
+- CMFCOutlookBar [MFC], CreateCustomPage
+- CMFCOutlookBar [MFC], DoesAllowDynInsertBefore
+- CMFCOutlookBar [MFC], FloatTab
+- CMFCOutlookBar [MFC], GetButtonsFont
+- CMFCOutlookBar [MFC], GetTabArea
+- CMFCOutlookBar [MFC], IsMode2003
+- CMFCOutlookBar [MFC], OnAfterAnimation
+- CMFCOutlookBar [MFC], OnBeforeAnimation
+- CMFCOutlookBar [MFC], OnScroll
+- CMFCOutlookBar [MFC], RemoveCustomPage
+- CMFCOutlookBar [MFC], SetButtonsFont
+- CMFCOutlookBar [MFC], SetMode2003
 ms.assetid: 2b335f71-ce99-4efd-b103-e65ba43ffc36
 caps.latest.revision: 34
 author: mikeblome
@@ -51,61 +66,61 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: ff58cf786e4979d64aa2b5d7ad4d1a32b96bec3d
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dd48797fab17f4474d177ed3fce91147b5a12b8b
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcoutlookbar-class"></a>Classe CMFCOutlookBar
-Riquadro a schede che presenta l'aspetto visivo del **Riquadro di navigazione** di Microsoft Outlook 2000 o Outlook 2003. Il `CMFCOutlookBar` oggetto contiene un [CMFCOutlookBarTabCtrl classe](../../mfc/reference/cmfcoutlookbartabctrl-class.md) oggetto e una serie di schede. Le schede possono essere [CMFCOutlookBarPane classe](../../mfc/reference/cmfcoutlookbarpane-class.md) oggetti o `CWnd`-oggetti derivati. All'utente la barra di Outlook viene visualizzata come una serie di pulsanti e un'area di visualizzazione. Quando l'utente fa clic su un pulsante, viene visualizzato il controllo o il riquadro del pulsante corrispondente.  
+# <a name="cmfcoutlookbar-class"></a>CMFCOutlookBar Class
+A tabbed pane with the visual appearance of the **Navigation Pane** in Microsoft Outlook 2000 or Outlook 2003. The `CMFCOutlookBar` object contains a [CMFCOutlookBarTabCtrl Class](../../mfc/reference/cmfcoutlookbartabctrl-class.md) object and a series of tabs. The tabs can be either [CMFCOutlookBarPane Class](../../mfc/reference/cmfcoutlookbarpane-class.md) objects or `CWnd`-derived objects. To the user, the Outlook bar appears as a series of buttons and a display area. When the user clicks a button, the corresponding control or button pane is displayed.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCOutlookBar : public CBaseTabbedPane  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Costruttori pubblici  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCOutlookBar::CMFCOutlookBar`|Costruttore predefinito.|  
-|`CMFCOutlookBar::~CMFCOutlookBar`|Distruttore.|  
+|`CMFCOutlookBar::CMFCOutlookBar`|Default constructor.|  
+|`CMFCOutlookBar::~CMFCOutlookBar`|Destructor.|  
   
-### <a name="public-methods"></a>Metodi pubblici  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCOutlookBar::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)|Specifica se un riquadro a schede vuoto può essere eliminato. (Esegue l'override di [CBaseTabbedPane::AllowDestroyEmptyTabbedPane](../../mfc/reference/cbasetabbedpane-class.md#allowdestroyemptytabbedpane).)|  
-|[CMFCOutlookBar::CanAcceptPane](#canacceptpane)|Determina se un altro riquadro può essere ancorato al riquadro della barra di Outlook. (Esegue l'override di CDockablePane::CanAcceptPane).|  
-|[CMFCOutlookBar::CanSetCaptionTextToTabName](#cansetcaptiontexttotabname)|Determina se la didascalia per il riquadro a schede viene visualizzato lo stesso testo come la scheda attiva. (Esegue l'override di [CBaseTabbedPane::CanSetCaptionTextToTabName](../../mfc/reference/cbasetabbedpane-class.md#cansetcaptiontexttotabname).)|  
-|[CMFCOutlookBar::Create](#create)|Crea il controllo barra di Outlook.|  
-|[CMFCOutlookBar::CreateCustomPage](#createcustompage)|Crea una scheda della barra di Outlook personalizzata.|  
-|`CMFCOutlookBar::CreateObject`|Usato dal framework per creare un'istanza dinamica di questo tipo di classe.|  
-|[CMFCOutlookBar::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|Determina se un utente è possibile ancorare una barra di controllo all'esterno della barra di Outlook.|  
-|[CMFCOutlookBar::FloatTab](#floattab)|Separa un riquadro, ma solo se il riquadro si trova in una scheda rimovibile. (Esegue l'override di [CBaseTabbedPane::FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab).)|  
-|[CMFCOutlookBar::GetButtonsFont](#getbuttonsfont)|Restituisce il tipo di carattere del testo dei pulsanti della barra di Outlook.|  
-|[CMFCOutlookBar::GetTabArea](#gettabarea)|Restituisce le dimensioni e posizione delle aree scheda sulla barra di Outlook. (Esegue l'override di [CBaseTabbedPane::GetTabArea](../../mfc/reference/cbasetabbedpane-class.md#gettabarea).)|  
-|`CMFCOutlookBar::GetThisClass`|Utilizzato dal framework per ottenere un puntatore al [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) oggetto associato a questo tipo di classe.|  
-|[CMFCOutlookBar::IsMode2003](#ismode2003)|Determina se il comportamento della barra di Outlook riproduce che di Microsoft Office Outlook 2003 (vedere la sezione Osservazioni).|  
-|[CMFCOutlookBar::OnAfterAnimation](#onafteranimation)|Chiamato da [CMFCOutlookBarTabCtrl::SetActiveTab](../../mfc/reference/cmfcoutlookbartabctrl-class.md#setactivetab) dopo aver impostata la scheda attiva tramite l'animazione.|  
-|[CMFCOutlookBar::OnBeforeAnimation](#onbeforeanimation)|Chiamato da [CMFCOutlookBarTabCtrl::SetActiveTab](../../mfc/reference/cmfcoutlookbartabctrl-class.md#setactivetab) prima di una scheda che verrà impostata come la scheda attiva tramite l'animazione.|  
-|[CMFCOutlookBar::OnScroll](#onscroll)|Chiamato dal framework se la barra di Outlook è lo scorrimento verso l'alto o verso il basso.|  
-|[CMFCOutlookBar::RemoveCustomPage](#removecustompage)|Rimuove una scheda della barra di Outlook personalizzata.|  
-|[CMFCOutlookBar::SetButtonsFont](#setbuttonsfont)|Imposta il tipo di carattere del testo dei pulsanti della barra di Outlook.|  
-|[CMFCOutlookBar::SetMode2003](#setmode2003)|Specifica se il comportamento della barra di Outlook riproduce che di Outlook 2003 (vedere la sezione Osservazioni).|  
+|[CMFCOutlookBar::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)|Specifies whether an empty tabbed pane can be destroyed. (Overrides [CBaseTabbedPane::AllowDestroyEmptyTabbedPane](../../mfc/reference/cbasetabbedpane-class.md#allowdestroyemptytabbedpane).)|  
+|[CMFCOutlookBar::CanAcceptPane](#canacceptpane)|Determines whether another pane can be docked to the Outlook bar pane. (Overrides CDockablePane::CanAcceptPane.)|  
+|[CMFCOutlookBar::CanSetCaptionTextToTabName](#cansetcaptiontexttotabname)|Determines whether the caption for the tabbed pane displays the same text as the active tab. (Overrides [CBaseTabbedPane::CanSetCaptionTextToTabName](../../mfc/reference/cbasetabbedpane-class.md#cansetcaptiontexttotabname).)|  
+|[CMFCOutlookBar::Create](#create)|Creates the Outlook bar control.|  
+|[CMFCOutlookBar::CreateCustomPage](#createcustompage)|Creates a custom Outlook bar tab.|  
+|`CMFCOutlookBar::CreateObject`|Used by the framework to create a dynamic instance of this class type.|  
+|[CMFCOutlookBar::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|Determines whether a user can dock a control bar at the outer edge of the Outlook bar.|  
+|[CMFCOutlookBar::FloatTab](#floattab)|Floats a pane, but only if the pane currently resides in a detachable tab. (Overrides [CBaseTabbedPane::FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab).)|  
+|[CMFCOutlookBar::GetButtonsFont](#getbuttonsfont)|Returns the font of the text on the buttons of the Outlook bar.|  
+|[CMFCOutlookBar::GetTabArea](#gettabarea)|Returns the size and position of the tab areas on the Outlook bar. (Overrides [CBaseTabbedPane::GetTabArea](../../mfc/reference/cbasetabbedpane-class.md#gettabarea).)|  
+|`CMFCOutlookBar::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
+|[CMFCOutlookBar::IsMode2003](#ismode2003)|Determines whether the behavior of the Outlook bar mimics that of Microsoft Office Outlook 2003 (see Remarks).|  
+|[CMFCOutlookBar::OnAfterAnimation](#onafteranimation)|Called by [CMFCOutlookBarTabCtrl::SetActiveTab](../../mfc/reference/cmfcoutlookbartabctrl-class.md#setactivetab) after the active tab has been set using animation.|  
+|[CMFCOutlookBar::OnBeforeAnimation](#onbeforeanimation)|Called by [CMFCOutlookBarTabCtrl::SetActiveTab](../../mfc/reference/cmfcoutlookbartabctrl-class.md#setactivetab) before a tab page is set as the active tab using animation.|  
+|[CMFCOutlookBar::OnScroll](#onscroll)|Called by the framework if the Outlook bar is scrolling up or down.|  
+|[CMFCOutlookBar::RemoveCustomPage](#removecustompage)|Removes a custom Outlook bar tab.|  
+|[CMFCOutlookBar::SetButtonsFont](#setbuttonsfont)|Sets the font of the text on the buttons of the Outlook bar.|  
+|[CMFCOutlookBar::SetMode2003](#setmode2003)|Specifies whether the behavior of the Outlook bar mimics that of Outlook 2003 (see Remarks).|  
   
-## <a name="remarks"></a>Note  
- Per un esempio di una barra di Outlook, vedere il [esempio OutlookDemo: applicazione di OutlookDemo MFC](../../visual-cpp-samples.md).  
+## <a name="remarks"></a>Remarks  
+ For an example of an Outlook bar, see the [OutlookDemo Sample: MFC OutlookDemo Application](../../visual-cpp-samples.md).  
   
-## <a name="implementing-the-outlook-bar"></a>Implementazione di barra di Outlook  
- Per usare i controlli `CMFCOutlookBar` nell'applicazione, attenersi alla procedura seguente:  
+## <a name="implementing-the-outlook-bar"></a>Implementing the Outlook Bar  
+ To use the `CMFCOutlookBar` control in your application, follow these steps:  
   
-1.  Importare un oggetto `CMFCOutlookBar` nella classe della finestra cornice principale.  
+1.  Embed a `CMFCOutlookBar` object into the main frame window class.  
   
  ```  
     class CMainFrame : public CMDIFrameWnd  
@@ -114,7 +129,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
     CMFCOutlookBarPane m_wndOutlookPane;  
  ... };  
  ```  
-2.  Durante l'elaborazione di `WM_CREATE` messaggio nel frame principale, chiamata di [CMFCOutlookBar::Create](#create) metodo per creare il controllo scheda della barra di Outlook.  
+2.  When processing the `WM_CREATE` message in the main frame, call the [CMFCOutlookBar::Create](#create) method to create the Outlook bar tab control.  
   
  ```  
     m_wndOutlookBar.Create (_T("Shortcuts"),
@@ -127,13 +142,13 @@ class CMFCOutlookBar : public CBaseTabbedPane
     WS_CHILD | WS_VISIBLE | CBRS_LEFT);
 
  ```  
-3.  Ottenere un puntatore all'oggetto sottostante `CMFCOutlookBarTabCtrl` utilizzando [CBaseTabbedPane::GetUnderlyingWindow](../../mfc/reference/cbasetabbedpane-class.md#getunderlyingwindow).  
+3.  Obtain a pointer to the underlying `CMFCOutlookBarTabCtrl` by using [CBaseTabbedPane::GetUnderlyingWindow](../../mfc/reference/cbasetabbedpane-class.md#getunderlyingwindow).  
   
  ```  
     CMFCOutlookBarTabCtrl* pOutlookBar = (CMFCOutlookBarTabCtrl*) m_wndOutlookBar.GetUnderlyingWindow ();
 
  ```  
-4.  Creare un [CMFCOutlookBarPane classe](../../mfc/reference/cmfcoutlookbarpane-class.md) oggetto per ogni scheda che contiene i pulsanti.  
+4.  Create a [CMFCOutlookBarPane Class](../../mfc/reference/cmfcoutlookbarpane-class.md) object for each tab that contains buttons.  
   
  ```  
     m_wndOutlookPane.Create (&m_wndOutlookBar,
@@ -150,26 +165,26 @@ class CMFCOutlookBar : public CBaseTabbedPane
     ID_FILE_OPEN);
 
  ```  
-5.  Chiamare [CMFCOutlookBarTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) aggiungere ogni nuova scheda. Impostare il `bDetachable` parametro `FALSE` per creare una pagina non rimovibile. In alternativa, utilizzare [CMFCOutlookBarTabCtrl::AddControl](../../mfc/reference/cmfcoutlookbartabctrl-class.md#addcontrol) per aggiungere pagine scollegabile.  
+5.  Call [CMFCOutlookBarTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) to add each new tab. Set the `bDetachable` parameter to `FALSE` to make a page non-detachable. Or, use [CMFCOutlookBarTabCtrl::AddControl](../../mfc/reference/cmfcoutlookbartabctrl-class.md#addcontrol) to add detachable pages.  
   
  ```  
     pOutlookBar->AddTab (&m_wndOutlookPane, "General", (UINT) -1,
     TRUE);
 
  ```  
-6.  Per aggiungere un `CWnd`-controllo derivato (ad esempio, [CMFCShellTreeCtrl classe](../../mfc/reference/cmfcshelltreectrl-class.md)) come una scheda, creare il controllo e la chiamata [CMFCOutlookBarTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) per aggiungerlo alla barra di Outlook.  
+6.  To add a `CWnd`-derived control (for example, [CMFCShellTreeCtrl Class](../../mfc/reference/cmfcshelltreectrl-class.md)) as a tab, create the control and call [CMFCOutlookBarTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) to add it to the Outlook bar.  
   
 > [!NOTE]
->  È consigliabile utilizzare ID di controllo univoco per ogni [CMFCOutlookBarPane classe](../../mfc/reference/cmfcoutlookbarpane-class.md) oggetto e per ogni `CWnd`-oggetto derivato.  
+>  You should use unique control IDs for each [CMFCOutlookBarPane Class](../../mfc/reference/cmfcoutlookbarpane-class.md) object and for each `CWnd`-derived object.  
   
- Per aggiungere o eliminare le nuove pagine in fase di esecuzione, utilizzare [CMFCOutlookBar::CreateCustomPage](#createcustompage) e [CMFCOutlookBar::RemoveCustomPage](#removecustompage).  
+ To dynamically add or delete new pages at runtime, use [CMFCOutlookBar::CreateCustomPage](#createcustompage) and [CMFCOutlookBar::RemoveCustomPage](#removecustompage).  
   
-## <a name="outlook-2003-mode"></a>Modalità di Outlook 2003  
- In modalità di Outlook 2003, i pulsanti della scheda sono posizionati nella parte inferiore del riquadro barra di Outlook. Quando non vi sia spazio sufficiente per visualizzare i pulsanti, vengono visualizzati come icone in un'area simile a barra degli strumenti nella parte inferiore del riquadro.  
+## <a name="outlook-2003-mode"></a>Outlook 2003 Mode  
+ In Outlook 2003 mode, the tab buttons are positioned at the bottom of the Outlook bar pane. When there is not sufficient room to display the buttons, they are displayed as icons in a toolbar-like area along the bottom of the pane.  
   
- Utilizzare [CMFCOutlookBar::SetMode2003](#setmode2003) per abilitare la modalità di Outlook 2003. Utilizzare [CMFCOutlookBarTabCtrl::SetToolbarImageList](../../mfc/reference/cmfcoutlookbartabctrl-class.md#settoolbarimagelist) per impostare la mappa di bit che contiene le icone visualizzate nella parte inferiore della barra di Outlook. Le icone nella mappa di bit devono essere ordinate in base all'indice della scheda.  
+ Use [CMFCOutlookBar::SetMode2003](#setmode2003) to enable Outlook 2003 mode. Use [CMFCOutlookBarTabCtrl::SetToolbarImageList](../../mfc/reference/cmfcoutlookbartabctrl-class.md#settoolbarimagelist) to set the bitmap that contains the icons that are displayed on the bottom of the Outlook bar. The icons in the bitmap must be ordered by tab index.  
   
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -186,60 +201,60 @@ class CMFCOutlookBar : public CBaseTabbedPane
   
  [CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md)  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** afxoutlookbar. h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxoutlookbar.h  
   
-##  <a name="allowdestroyemptytabbedpane"></a>CMFCOutlookBar::AllowDestroyEmptyTabbedPane  
- Specifica se un riquadro a schede vuoto può essere eliminato.  
+##  <a name="allowdestroyemptytabbedpane"></a>  CMFCOutlookBar::AllowDestroyEmptyTabbedPane  
+ Specifies whether an empty tabbed pane can be destroyed.  
   
 ```  
 virtual BOOL AllowDestroyEmptyTabbedPane() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- `TRUE`Se un riquadro a schede vuoto può essere eliminato; in caso contrario, `FALSE`. L'implementazione predefinita restituisce sempre `TRUE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if an empty tabbed pane can be destroyed; otherwise, `FALSE`. The default implementation always returns `TRUE`.  
   
-### <a name="remarks"></a>Note  
- Se un riquadro a schede vuoto non può essere eliminato, il framework nasconde invece.  
+### <a name="remarks"></a>Remarks  
+ If an empty tabbed pane cannot be destroyed, the framework hides it instead.  
   
-##  <a name="canacceptpane"></a>CMFCOutlookBar::CanAcceptPane  
- Determina se un altro riquadro può essere ancorato al riquadro della barra di Outlook.  
+##  <a name="canacceptpane"></a>  CMFCOutlookBar::CanAcceptPane  
+ Determines whether another pane can be docked to the Outlook bar pane.  
   
 ```  
 virtual BOOL CanAcceptPane(const CBasePane* pBar) const;  
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pBar`  
- Un puntatore a un altro riquadro ancorata in questo riquadro.  
+ A pointer to another pane that is being docked to this pane.  
   
-### <a name="return-value"></a>Valore restituito  
- `TRUE`Se un altro riquadro può essere ancorato al riquadro della barra di Outlook; in caso contrario `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if another pane can be docked to the Outlook bar pane; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Note  
- Se la barra di Outlook è in modalità di Outlook 2003, ancoraggio non è supportata, pertanto il valore restituito è `FALSE`.  
+### <a name="remarks"></a>Remarks  
+ If the Outlook bar is in Outlook 2003 mode, docking is not supported, so the return value is `FALSE`.  
   
- Se il `pBar` parametro `NULL`, questo metodo restituisce `FALSE`.  
+ If the `pBar` parameter is `NULL`, this method returns `FALSE`.  
   
- In caso contrario, questo metodo si comporta come il metodo di base [CBasePane::CanAcceptPane](../../mfc/reference/cbasepane-class.md#canacceptpane), ad eccezione del fatto che anche se non è abilitata l'ancoraggio, una barra di Outlook comunque possibile attivare un'altra barra di Outlook per essere ancorato su di esso.  
+ Otherwise, this method behaves as the base method [CBasePane::CanAcceptPane](../../mfc/reference/cbasepane-class.md#canacceptpane), except that even if docking is not enabled, an Outlook bar can still enable another Outlook bar to be docked over it.  
   
-##  <a name="cansetcaptiontexttotabname"></a>CMFCOutlookBar::CanSetCaptionTextToTabName  
- Determina se la didascalia per il riquadro a schede viene visualizzato lo stesso testo come la scheda attiva.  
+##  <a name="cansetcaptiontexttotabname"></a>  CMFCOutlookBar::CanSetCaptionTextToTabName  
+ Determines whether the caption for the tabbed pane displays the same text as the active tab.  
   
 ```  
 virtual BOOL CanSetCaptionTextToTabName() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- `TRUE`Se Outlook barra didascalia della finestra viene impostata automaticamente per il testo della scheda attiva; in caso contrario `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the Outlook bar window caption is automatically set to the text of the active tab; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Note  
- Utilizzare [CBaseTabbedPane::EnableSetCaptionTextToTabName](../../mfc/reference/cbasetabbedpane-class.md#enablesetcaptiontexttotabname) per abilitare o disabilitare questa funzionalità.  
+### <a name="remarks"></a>Remarks  
+ Use [CBaseTabbedPane::EnableSetCaptionTextToTabName](../../mfc/reference/cbasetabbedpane-class.md#enablesetcaptiontexttotabname) to enable or disable this functionality.  
   
- In modalità di Outlook 2003, questa impostazione è sempre abilitata.  
+ In Outlook 2003 mode, this setting is always enabled.  
   
-##  <a name="create"></a>CMFCOutlookBar::Create  
- Crea il controllo barra di Outlook.  
+##  <a name="create"></a>  CMFCOutlookBar::Create  
+ Creates the Outlook bar control.  
   
 ```  
 virtual BOOL Create(
@@ -252,44 +267,44 @@ virtual BOOL Create(
     CCreateContext* pContext=NULL);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `lpszCaption`  
- Specifica la didascalia della finestra.  
+ Specifies the window caption.  
   
  [in] `pParentWnd`  
- Specifica un puntatore a una finestra padre. Non deve essere NULL.  
+ Specifies a pointer to a parent window. It must not be NULL.  
   
  [in] `rect`  
- Specifica le dimensioni e posizione in pixel della barra di outlook.  
+ Specifies the outlook bar size and position in pixels.  
   
  [in] `nID`  
- Specifica l'ID di controllo. Deve essere diverso da altri ID utilizzato nell'applicazione di controllo.  
+ Specifies the control ID. Must be distinct from other control IDs used in the application.  
   
  [in] `dwStyle`  
- Specifica lo stile della barra di controllo desiderato. Per i valori possibili, vedere [stili finestra](../../mfc/reference/window-styles.md).  
+ Specifies the desired control bar style. For possible values, see [Window Styles](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
  [in] `dwControlBarStyle`  
- Specifica gli stili definiti libreria speciale.  
+ Specifies the special library-defined styles.  
   
  [in] `pContext`  
- Creare il contesto.  
+ Create context.  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se il metodo ha esito positivo; in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the method is successful; otherwise 0.  
   
-### <a name="remarks"></a>Note  
- Costruire un `CMFCOutlookBar` oggetto in due passaggi. Prima di chiamare il costruttore e quindi chiamare `Create`, che crea il controllo barra di outlook e lo collega a di `CMFCOutlookBar` oggetto.  
+### <a name="remarks"></a>Remarks  
+ You construct a `CMFCOutlookBar` object in two steps. First call the constructor, and then call `Create`, which creates the outlook bar control and attaches it to the `CMFCOutlookBar` object.  
   
- Vedere [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) per l'elenco degli stili definiti libreria disponibili per essere specificato da `dwControlBarStyle`.  
+ See [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) for the list of the available library-defined styles to be specified by `dwControlBarStyle`.  
   
-### <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il `Create` metodo la `CMFCOutlookBar` classe. Questo frammento di codice fa parte di [Outlook più visualizzazioni](../../visual-cpp-samples.md).  
+### <a name="example"></a>Example  
+ The following example demonstrates how to use the `Create` method of the `CMFCOutlookBar` class. This code snippet is part of the [Outlook Multi Views sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_OutlookMultiViews n.&1;](../../mfc/reference/codesnippet/cpp/cmfcoutlookbar-class_1.h)]  
-[!code-cpp[NVC_MFC_OutlookMultiViews n.&2;](../../mfc/reference/codesnippet/cpp/cmfcoutlookbar-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_OutlookMultiViews#1](../../mfc/reference/codesnippet/cpp/cmfcoutlookbar-class_1.h)]  
+[!code-cpp[NVC_MFC_OutlookMultiViews#2](../../mfc/reference/codesnippet/cpp/cmfcoutlookbar-class_2.cpp)]  
   
-##  <a name="createcustompage"></a>CMFCOutlookBar::CreateCustomPage  
- Crea una scheda della barra di Outlook personalizzata.  
+##  <a name="createcustompage"></a>  CMFCOutlookBar::CreateCustomPage  
+ Creates a custom Outlook bar tab.  
   
 ```  
 CMFCOutlookBarPane* CreateCustomPage(
@@ -299,47 +314,47 @@ CMFCOutlookBarPane* CreateCustomPage(
     BOOL bEnableTextLabels=TRUE);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `lpszPageName`  
- L'etichetta della pagina.  
+ The page label.  
   
  [in] `bActivatePage`  
- Se `TRUE`, la pagina diventa attiva al momento della creazione.  
+ If `TRUE`, the page becomes active upon creation.  
   
  [in] `dwEnabledDocking`  
- Una combinazione di flag CBRS_ALIGN_ che specifica i lati di ancoraggio abilitati quando la pagina viene scollegata.  
+ A combination of CBRS_ALIGN_ flags that specifies the enabled docking sides when the page is detached.  
   
  [in] `bEnableTextLabels`  
- Se `TRUE`, le etichette di testo sono abilitate per i pulsanti che si trovano nella pagina.  
+ If `TRUE`, the text labels are enabled for the buttons that reside on the page.  
   
-### <a name="return-value"></a>Valore restituito  
- Un puntatore alla pagina appena creato, o `NULL` se non è riuscita la creazione.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the newly created page, or `NULL` if the creation failed.  
   
-### <a name="remarks"></a>Note  
- Utilizzare questo metodo per consentire agli utenti di creare pagine personalizzate barra di Outlook. È possibile creare fino a 100 pagine per ogni applicazione. Il controllo della pagina ID avviare da 0xF000. La creazione non riesce se il numero totale di pagine personalizzate barra di Outlook è superiore a 100.  
+### <a name="remarks"></a>Remarks  
+ Use this method to enable the users to create custom Outlook bar pages. You can create up to 100 pages per application. The page control IDs start from 0xF000. The creation fails if the total number of custom Outlook bar pages exceeds 100.  
   
- Utilizzare [CMFCOutlookBar::RemoveCustomPage](#removecustompage) eliminare pagine personalizzate.  
+ Use [CMFCOutlookBar::RemoveCustomPage](#removecustompage) to delete custom pages.  
   
-##  <a name="doesallowdyninsertbefore"></a>CMFCOutlookBar::DoesAllowDynInsertBefore  
- Specifica se un utente è possibile ancorare un riquadro all'esterno della barra di Outlook.  
+##  <a name="doesallowdyninsertbefore"></a>  CMFCOutlookBar::DoesAllowDynInsertBefore  
+ Specifies whether a user can dock a pane at the outer edge of the Outlook bar.  
   
 ```  
 DECLARE_MESSAGE_MAP virtual BOOL DoesAllowDynInsertBefore() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- L'implementazione predefinita restituisce `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ The default implementation returns `FALSE`.  
   
-### <a name="remarks"></a>Note  
- Il framework chiama la `DoesAllowDynInsertBefore` metodo per la ricerca di un percorso ancorare un riquadro dinamico. Se la funzione restituisce `FALSE`, il framework non consente l'ancoraggio di qualsiasi riquadro dinamico ai bordi esterni del riquadro.  
+### <a name="remarks"></a>Remarks  
+ The framework calls the `DoesAllowDynInsertBefore` method when it looks for a location to dock a dynamic pane. If the function returns `FALSE`, the framework does not allow the docking of any dynamic pane at the outer edges of the pane.  
   
- In genere, si crea una barra di Outlook come un controllo statico non a virgola mobile. È possibile eseguire l'override di questa funzione in una classe derivata e restituire `TRUE` per modificare questo comportamento.  
+ Usually, you create an Outlook bar as a static non-floating control. You can override this function in a derived class and return `TRUE` to change this behavior.  
   
 > [!NOTE]
->  Poiché riquadri dinamici verificare lo stato dei riquadri statici ancorati quando ancoraggio, si dovrebbero riquadri di ancoraggio dinamici dopo riquadri statici laddove possibile.  
+>  Because dynamic panes check the status of docked static panes when docking, you should dock dynamic panes after static panes whenever possible.  
   
-##  <a name="floattab"></a>CMFCOutlookBar::FloatTab  
- Scorre un riquadro.  
+##  <a name="floattab"></a>  CMFCOutlookBar::FloatTab  
+ Floats a pane.  
   
 ```  
 virtual BOOL FloatTab(
@@ -349,40 +364,40 @@ virtual BOOL FloatTab(
     BOOL bHide);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pBar`  
- Puntatore al riquadro e float.  
+ A pointer to the pane to float.  
   
  [in] `nTabID`  
- Indice in base zero della scheda da float.  
+ The zero-based index of the tab to float.  
   
  [in] `dockMethod`  
- Specifica il metodo da utilizzare per spostare il riquadro.  Per ulteriori informazioni, vedere [CBaseTabbedPane::FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab).  
+ Specifies the method to use to make the pane float.  For more information, see [CBaseTabbedPane::FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab).  
   
  [in] `bHide`  
- `TRUE`Per nascondere il riquadro prima mobile. in caso contrario, `FALSE`. A differenza di quella classe di base di questo metodo, questo parametro non ha un valore predefinito.  
+ `TRUE` to hide the pane before floating; otherwise, `FALSE`. Unlike the base class version of this method, this parameter does not have a default value.  
   
-### <a name="return-value"></a>Valore restituito  
- `TRUE`Se il riquadro mobile; in caso contrario, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane floated; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Note  
- Questo metodo è simile [CBaseTabbedPane::FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab) ad eccezione del fatto che non consente l'ultima scheda rimanente su un controllo barra di Outlook Mobile.  
+### <a name="remarks"></a>Remarks  
+ This method is like [CBaseTabbedPane::FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab) except that it does not enable the last remaining tab on an Outlook bar control to float.  
   
-##  <a name="getbuttonsfont"></a>CMFCOutlookBar::GetButtonsFont  
- Restituisce il tipo di carattere del testo nella pagina schede pulsante della barra di Outlook.  
+##  <a name="getbuttonsfont"></a>  CMFCOutlookBar::GetButtonsFont  
+ Returns the font of the text on the page button tabs of the Outlook bar.  
   
 ```  
 CFont* GetButtonsFont() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Puntatore all'oggetto tipo di carattere utilizzato per visualizzare il testo in Outlook barra schede pulsante della pagina.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the font object that is used to display text on Outlook bar page button tabs.  
   
-### <a name="remarks"></a>Note  
- Utilizzare questa funzione per recuperare il tipo di carattere utilizzato per visualizzare il testo nelle schede pulsante pagina di Outlook. È possibile impostare il tipo di carattere chiamando su [CMFCOutlookBar::SetButtonsFont](#setbuttonsfont).  
+### <a name="remarks"></a>Remarks  
+ Use this function to retrieve the font that is used to display the text on Outlook page button tabs. You can set the font by calling on [CMFCOutlookBar::SetButtonsFont](#setbuttonsfont).  
   
-##  <a name="gettabarea"></a>CMFCOutlookBar::GetTabArea  
- Determina le dimensioni e posizione delle aree scheda sulla barra di Outlook.  
+##  <a name="gettabarea"></a>  CMFCOutlookBar::GetTabArea  
+ Determines the size and position of the tab areas on the Outlook bar.  
   
 ```  
 virtual void GetTabArea(
@@ -390,78 +405,78 @@ virtual void GetTabArea(
     CRect& rectTabAreaBottom) const;  
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [out] `rectTabAreaTop`  
- Quando la funzione restituisce, contiene le dimensioni e posizione (espressa in coordinate client) dell'area della scheda principale.  
+ Contains the size and position (in the client coordinates) of the top tab area when the function returns.  
   
  [out] `rectTabAreaBottom`  
- Quando la funzione restituisce, contiene le dimensioni e posizione (espressa in coordinate client) dell'area della scheda nella parte inferiore.  
+ Contains the size and position (in the client coordinates) of the bottom tab area when the function returns.  
   
-### <a name="remarks"></a>Note  
- Il framework chiama questo metodo per determinare il tipo di ancoraggio nel riquadro di destinazione. Quando il framework determina che l'utente trascina il riquadro ancorato sull'area della scheda del Pannello di destinazione, tenta di aggiungere il primo riquadro come una nuova scheda del Pannello di destinazione. In caso contrario, tenta di ancoraggio del riquadro prima un'appropriata sul lato del riquadro di destinazione. Il framework crea un nuovo contenitore con un dispositivo di scorrimento per contenere il riquadro ancorato aggiuntivo.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method to determine the type of docking to the target pane. When the framework determines that the user drags the pane to be docked over the tab area of the target pane, it tries to add the first pane as a new tab of the target pane. Otherwise, it tries to dock the first pane at an appropriate side of the target pane. The framework creates a new container with a slider to accommodate the additional docked pane.  
   
- L'implementazione predefinita di `GetTabArea` restituisce l'area client intero della barra di Outlook se la barra di Outlook è statica; ovvero, se la barra di Outlook non è float. In caso contrario, restituisce l'area che accettano i pulsanti pagina nella parte superiore e inferiore del controllo barra di Outlook.  
+ The default implementation of `GetTabArea` returns the whole client area of the Outlook bar if the Outlook bar is static; that is, if the Outlook bar cannot float. Otherwise, it returns the area that page buttons take at the top and bottom of the Outlook bar control.  
   
- L'override del metodo nella classe derivata da `CMFCOutlookBar` per modificare questo comportamento.  
+ Override this method in class derived from `CMFCOutlookBar` to change this behavior.  
   
-##  <a name="ismode2003"></a>CMFCOutlookBar::IsMode2003  
- Specifica se il comportamento della barra di Outlook riproduce che di Microsoft Office Outlook 2003.  
+##  <a name="ismode2003"></a>  CMFCOutlookBar::IsMode2003  
+ Specifies whether the behavior of the Outlook bar mimics that of Microsoft Office Outlook 2003.  
   
 ```  
 BOOL IsMode2003() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se la barra di Outlook è in esecuzione in modalità di Microsoft Office 2003. in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the Outlook bar is running in Microsoft Office 2003 mode; otherwise 0.  
   
-### <a name="remarks"></a>Note  
- È possibile attivare questa modalità utilizzando [CMFCOutlookBar::SetMode2003](#setmode2003).  
+### <a name="remarks"></a>Remarks  
+ You can enable this mode by using [CMFCOutlookBar::SetMode2003](#setmode2003).  
   
-##  <a name="onafteranimation"></a>CMFCOutlookBar::OnAfterAnimation  
- Chiamato da [CMFCOutlookBarTabCtrl::SetActiveTab](../../mfc/reference/cmfcoutlookbartabctrl-class.md#setactivetab) dopo aver impostata la scheda attiva tramite l'animazione.  
+##  <a name="onafteranimation"></a>  CMFCOutlookBar::OnAfterAnimation  
+ Called by [CMFCOutlookBarTabCtrl::SetActiveTab](../../mfc/reference/cmfcoutlookbartabctrl-class.md#setactivetab) after the active tab has been set using animation.  
   
 ```  
 virtual void OnAfterAnimation(int nPage);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `nPage`  
- Indice in base zero della scheda che è stata attivata.  
+ The zero-based index of the tab page that has been made active.  
   
-### <a name="remarks"></a>Note  
- L'effetto visivo di impostazione nella scheda attiva dipende se è stata attivata l'animazione. Per ulteriori informazioni, vedere [CMFCOutlookBarTabCtrl::EnableAnimation](../../mfc/reference/cmfcoutlookbartabctrl-class.md#enableanimation).  
+### <a name="remarks"></a>Remarks  
+ The visual effect of setting the active tab depends on whether you have enabled animation. For more information, see [CMFCOutlookBarTabCtrl::EnableAnimation](../../mfc/reference/cmfcoutlookbartabctrl-class.md#enableanimation).  
   
-##  <a name="onbeforeanimation"></a>CMFCOutlookBar::OnBeforeAnimation  
- Chiamato da [CMFCOutlookBarTabCtrl::SetActiveTab](../../mfc/reference/cmfcoutlookbartabctrl-class.md#setactivetab) prima di una scheda che verrà impostata come la scheda attiva tramite l'animazione.  
+##  <a name="onbeforeanimation"></a>  CMFCOutlookBar::OnBeforeAnimation  
+ Called by [CMFCOutlookBarTabCtrl::SetActiveTab](../../mfc/reference/cmfcoutlookbartabctrl-class.md#setactivetab) before a tab page is set as the active tab using animation.  
   
 ```  
 virtual BOOL OnBeforeAnimation(int nPage);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `nPage`  
- Indice in base zero della scheda che sta per essere impostata come attiva.  
+ The zero-based index of the tab page that is about to be set active.  
   
-### <a name="return-value"></a>Valore restituito  
- Restituisce `TRUE` se l'animazione deve essere utilizzato in impostando la nuova scheda attiva o `FALSE` se l'animazione deve essere disabilitato.  
+### <a name="return-value"></a>Return Value  
+ Returns `TRUE` if animation should be used in setting the new active tab, or `FALSE` if animation should be disabled.  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onscroll"></a>CMFCOutlookBar::OnScroll  
- Chiamato dal framework se la barra di Outlook è lo scorrimento verso l'alto o verso il basso.  
+##  <a name="onscroll"></a>  CMFCOutlookBar::OnScroll  
+ Called by the framework if the Outlook bar is scrolling up or down.  
   
 ```  
 virtual void OnScroll(BOOL bDown);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `bDown`  
- `TRUE`Se la barra di Outlook è scorrendo verso il basso, o `FALSE` se scorre backup.  
+ `TRUE` if the Outlook bar is scrolling down, or `FALSE` if it is scrolling up.  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="removecustompage"></a>CMFCOutlookBar::RemoveCustomPage  
- Rimuove una pagina della scheda barra Outlook personalizzata.  
+##  <a name="removecustompage"></a>  CMFCOutlookBar::RemoveCustomPage  
+ Removes a custom Outlook bar tab page.  
   
 ```  
 BOOL RemoveCustomPage(
@@ -469,25 +484,25 @@ BOOL RemoveCustomPage(
     CMFCOutlookBarTabCtrl* pTargetWnd);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `uiPage`  
- Indice in base zero della pagina nella finestra di Outlook padre.  
+ Zero-based index of the page in the parent Outlook window.  
   
  [in] `pTargetWnd`  
- Pointerto la finestra di Outlook padre.  
+ Pointerto the parent Outlook window.  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se la pagina personalizzata è stato rimosso correttamente; in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the custom page has been removed successfully; otherwise 0.  
   
-### <a name="remarks"></a>Note  
- Chiamare questa funzione per eliminare pagine personalizzate. Quando la pagina viene rimossa l'ID di controllo viene restituito al pool di ID disponibili.  
+### <a name="remarks"></a>Remarks  
+ Call this function to delete custom pages. When the page is removed its control ID is returned to the pool of available IDs.  
   
- È necessario fornire un puntatore a [CMFCOutlookBarTabCtrl classe](../../mfc/reference/cmfcoutlookbartabctrl-class.md) dell'oggetto nel quale risiede la pagina deve essere rimosso attualmente. Si noti che un utente può spostare pagine amovibili tra diverse barre di Outlook, ma le informazioni relative a una pagina personalizzata si trovano nell'oggetto barra di Outlook per il quale è stato chiamato [CMFCOutlookBar::CreateCustomPage](#createcustompage).  
+ You must provide a pointer to [CMFCOutlookBarTabCtrl Class](../../mfc/reference/cmfcoutlookbartabctrl-class.md) object in which the page to be removed currently resides. Note that a user can move detachable pages between different Outlook bars, but the information about a custom page resides in the Outlook bar object for which you have called [CMFCOutlookBar::CreateCustomPage](#createcustompage).  
   
- Utilizzare [CBaseTabbedPane::GetUnderlyingWindow](../../mfc/reference/cbasetabbedpane-class.md#getunderlyingwindow) per ottenere un puntatore alla finestra di Outlook.  
+ Use [CBaseTabbedPane::GetUnderlyingWindow](../../mfc/reference/cbasetabbedpane-class.md#getunderlyingwindow) to obtain a pointer to the Outlook window.  
   
-##  <a name="setbuttonsfont"></a>CMFCOutlookBar::SetButtonsFont  
- Imposta il tipo di carattere del testo dei pulsanti della barra di Outlook.  
+##  <a name="setbuttonsfont"></a>  CMFCOutlookBar::SetButtonsFont  
+ Sets the font of the text on the buttons of the Outlook bar.  
   
 ```  
 void SetButtonsFont(
@@ -495,39 +510,39 @@ void SetButtonsFont(
     BOOL bRedraw=TRUE);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pFont`  
- Specifica il nuovo tipo di carattere.  
+ Specifies the new font.  
   
  [in] `bRedraw`  
- Se `TRUE`, la barra di Outlook verrà ridisegnata.  
+ If `TRUE`, the Outlook bar will be redrawn.  
   
-### <a name="remarks"></a>Note  
- Utilizzare questo metodo per impostare un tipo di carattere del testo da visualizzare sui pulsanti di pagina della scheda di outlook.  
+### <a name="remarks"></a>Remarks  
+ Use this method to set a font for the text displayed on outlook tab page buttons.  
   
-##  <a name="setmode2003"></a>CMFCOutlookBar::SetMode2003  
- Specifica se il comportamento della barra di Outlook riproduce quella di Outlook 2003.  
+##  <a name="setmode2003"></a>  CMFCOutlookBar::SetMode2003  
+ Specifies whether the behavior of the Outlook bar mimics that of Outlook 2003.  
   
 ```  
 void SetMode2003(BOOL bMode2003=TRUE);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `bMode2003`  
- Se TRUE, è abilitata la modalità di Office 2003.  
+ If TRUE, Office 2003 mode is enabled.  
   
-### <a name="remarks"></a>Note  
- Utilizzare questa funzione per abilitare o disabilitare la modalità di Office 2003. In questa modalità, la barra di Outlook è una barra degli strumenti aggiuntivo con un pulsante di personalizzazione. Il comportamento della barra di Outlook è conforme al comportamento della barra di Outlook in Microsoft Office 2003.  
+### <a name="remarks"></a>Remarks  
+ Use this function to enable or disable Office 2003 mode. In this mode, the Outlook bar has an additional toolbar with a customization button. The behavior of the Outlook bar conforms to the behavior of the Outlook bar in Microsoft Office 2003.  
   
- Per impostazione predefinita, questa modalità è disabilitata.  
+ By default, this mode is disabled.  
   
 > [!NOTE]
->  Questa funzione deve essere chiamata prima [CMFCOutlookBar::Create](#create).  
+>  This function must be called before [CMFCOutlookBar::Create](#create).  
   
-## <a name="see-also"></a>Vedere anche  
- [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
- [Classi](../../mfc/reference/mfc-classes.md)   
- [Classe CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md)   
- [Classe CMFCOutlookBarTabCtrl](../../mfc/reference/cmfcoutlookbartabctrl-class.md)   
- [Classe CMFCOutlookBarPane](../../mfc/reference/cmfcoutlookbarpane-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CBaseTabbedPane Class](../../mfc/reference/cbasetabbedpane-class.md)   
+ [CMFCOutlookBarTabCtrl Class](../../mfc/reference/cmfcoutlookbartabctrl-class.md)   
+ [CMFCOutlookBarPane Class](../../mfc/reference/cmfcoutlookbarpane-class.md)
 

@@ -1,104 +1,122 @@
 ---
-title: "Creazione guidata classe MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.wizards.classwizard"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Creazione guidata classe MFC"
-  - "procedure guidate (MFC)"
+title: MFC Class Wizard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.wizards.classwizard
+dev_langs:
+- C++
+helpviewer_keywords:
+- wizards (MFC)
+- MFC Class Wizard
 ms.assetid: 8b0dd867-5d07-4214-99be-2a1c1995e6d9
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Creazione guidata classe MFC
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1d163ea30b71096e457595804bad01a6004e609f
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Consente di aggiungere messaggi e gestori di messaggi alle classi del progetto.  È possibile iniziare anche alle altre procedure guidate o aggiungere una classe al progetto.  
+---
+# <a name="mfc-class-wizard"></a>MFC Class Wizard
+Lets you add messages and message handlers to classes in your project. You can also start other wizards or add a class to your project.  
   
- Per aprire la **Creazione guidata classe MFC**, scegliere **Creazione guidata classe** dal menu **Progetto**.  Per aprire la procedura guidata con un tasto di scelta rapida, digitare CTRL\+MAIUSC\+X.  
+ To open the **MFC Class Wizard**, on the **Project** menu, click **Class Wizard**. To open the wizard with a keyboard shortcut, type CTRL+SHIFT+X.  
   
-## Elenco UIElement  
- **Progetto**  
- Nome di un progetto nella soluzione.  
+## <a name="uielement-list"></a>UIElement List  
+ **Project**  
+ The name of a project in your solution.  
   
- È possibile selezionare altri progetti nella soluzione dall'elenco a discesa.  
+ You can select other projects in your solution from the drop-down list box.  
   
- **Nome di classe**  
- Nome di una classe nel progetto.  
+ **Class name**  
+ The name of a class in your project.  
   
- Quando si seleziona una classe nell'elenco **Nome classe**, i dati dalla classe popolano i controlli nella **Creazione guidata classe MFC**.  Quando si modifica il valore di un controllo, sono interessati i dati nella classe selezionata.  
+ When you select a class in the **Class name** list, data from the class populates the controls in the **MFC Class Wizard**. When you change the value of a control, data in the selected class is affected.  
   
- **Aggiunta di classi**  
- Consente di aggiungere una classe da una delle diverse origini.  
+ **Add Class**  
+ Lets you add a class from one of several sources.  
   
- In base a quanto selezionato, **Creazione guidata aggiunta classe MFCAggiunta guidata classe da libreria dei tipi**, **Aggiunta guidata classe da controllo ActiveX** o **Creazione guidata consumer ODBC MFC** viene iniziato.  
+ Depending on your selection, the **MFC Add Class Wizard**, **Add Class From Typelib Wizard**, **Add Class From ActiveX Control Wizard**, or **MFC ODBC Consumer Wizard** is started.  
   
- **Classe base**  
- Viene impostata la classe che viene visualizzato in **Class name**.  
+ **Base class**  
+ The base class of the class that is displayed in **Class name**.  
   
- **Dichiarazione di classe**  
- La classe in cui la classe **Nome classe** viene dichiarata.  
+ **Class declaration**  
+ The class in which the **Class name** class is declared.  
   
- La casella **Dichiarazione classe** viene visualizzata solo se il nome in esso contenuto è diverso dal nome nella **Implementazione classe**.  
+ The **Class declaration** box is displayed only if the name in it differs from the name in **Class implementation**.  
   
- **Risorsa**  
- ID della risorsa in **Nome classe**, se presente.  In caso contrario, la casella **Risorsa** è vuota.  
+ **Resource**  
+ The ID of the resource in **Class name**, if any. Otherwise, the **Resource** box is empty.  
   
- **Implementazione di classe**  
- Il nome del file che contiene l'implementazione della classe in **Nome della classe**.  
+ **Class implementation**  
+ The name of the file that contains the implementation of the class in **Class name**.  
   
- È possibile selezionare un file di implementazione diverso facendo clic sulla freccia.  Nella tabella riportata di seguito vengono elencate le opzioni disponibili.  
+ You can select a different implementation file by clicking the arrow. The following table lists the available options.  
   
-|Opzione|Descrizione|  
-|-------------|-----------------|  
-|**Apri file**|Esce dalla procedura guidata della classe e apre il corrente file di implementazione della classe.|  
-|**Aprire la cartella contenitore**|Apre la cartella che contiene il file di implementazione della classe corrente.|  
-|**Copiare percorso completo negli Appunti**|Copia il percorso del file di implementazione corrente negli Appunti.|  
+|Option|Description|  
+|------------|-----------------|  
+|**Open File**|Exits the class wizard and opens the current class implementation file.|  
+|**Open Containing Folder**|Opens the folder that contains the current class implementation file.|  
+|**Copy Full Path to Clipboard**|Copies the path of the current implementation file to the Clipboard.|  
   
- **Comandi**  
- Consente di aggiungere, eliminare, modificare o cercare un comando e il relativo gestore di messaggi.  
+ **Commands**  
+ Lets you add, delete, edit, or search for a command and its message handler.  
   
- Per aggiungere un gestore, fare clic su **Aggiungi gestore** o fare doppio clic su un elemento nell'elenco **ID oggetto** o nell'elenco **Messaggi**.  Il nome della funzione risultante, l'ID e il messaggio vengono visualizzati nell'elenco **funzioni membro**.  
+ To add a handler, click **Add Handler**, or double-click an item in the **Object IDs** list or **Messages** list. The resulting function name, ID, and message are displayed in the **Member functions** list.  
   
- Per eliminare un gestore, selezionare un elemento nell'elenco **Funzioni membro**, quindi fare clic su **Elimina gestore**.  
+ To delete a handler, select an item in the **Member functions** list and then click **Delete Handler**.  
   
- Per modificare un gestore, fare doppio clic sull'elemento corrispondente nell'elenco **Funzioni membro**.  In alternativa, selezionare una casella elenco e quindi fare clic su **Modifica codice**.  
+ To modify a handler, double-click the corresponding item in the **Member functions** list. Or, select an item in the list box and then click **Edit Code**.  
   
- **Messaggi**  
- Consente di aggiungere, eliminare, modificare o cercare un comando e il relativo gestore di messaggi.  
+ **Messages**  
+ Lets you add, delete, edit, or search for a message and its message handler.  
   
- Per aggiungere un gestore, fare clic su **Aggiungi gestore** o fare doppio clic su un elemento nell'elenco **Messaggi**.  
+ To add a handler, click **Add Handler**, or double-click an item in the **Messages** list.  
   
- Per aggiungere un messaggio personalizzato, fare clic su **Aggiungi messaggio personalizzato** o premere i tasti INVIO, quindi specificare valori nella finestra di dialogo **Aggiungi messaggio personalizzato**.  In quella finestra di dialogo, è possibile selezionare anche **Messaggio registrato** per gestire un nuovo messaggio della finestra di cui è garantita l'univocità in tutto il sistema operativo.  
+ To add a custom message, click **Add Custom Message** or press the Enter key, and then specify values in the **Add Custom Message** dialog box. In that dialog box, you can also select **Registered Message** to handle a window message that is guaranteed to be unique throughout the operating system.  
   
- **Funzioni virtuali**  
- Consente di aggiungere, eliminare, modificare o cercare una funzione virtuale o una funzione virtuale sottoposta a override.  
+ **Virtual Functions**  
+ Lets you add, delete, edit, or search for a virtual function, or an overridden virtual function.  
   
- **Variabili membro**  
- Consente di aggiungere, eliminare, modificare o cercare una variabile membro.  
+ **Member Variables**  
+ Lets you add, delete, edit, or search for a member variable.  
   
- **Metodi**  
- Consente di aggiungere, per eliminare o cercare un metodo e di andare anche alla definizione o dichiarazione di un metodo.  
+ **Methods**  
+ Lets you add, delete, or search for a method, and also go to the definition or declaration of a method.  
   
- Per aggiungere un metodo, fare clic su **Aggiungi metodo**, quindi specificare i valori nella finestra di dialogo **Aggiungi metodo**.  
+ To add a method, click **Add Method**, and then specify values in the **Add Method** dialog box.  
   
- Per eliminare un gestore, selezionare un elemento nell'elenco **Funzioni membro**, quindi fare clic su **Elimina gestore**.  
+ To delete a method, select an item in the **Methods** list and then click **Delete Method**.  
   
- Per visualizzare una dichiarazione, selezionare un elemento nell'elenco **Metodi**, quindi fare clic su **Vai a dichiarazione.**  
+ To display a declaration, select an item in the **Methods** list and then click **Go to Declaration.**  
   
- Per visualizzare una definizione, fare doppio clic su un elemento nell'elenco **Metodi**.  In alternativa, selezionare un elemento nell'elenco **Metodi**, quindi fare clic sul pulsante **Vai a definizione**.  
+ To display a definition, double-click an item in the **Methods** list. Or, select an item in the **Methods** list and then click the **Go to Definition** button.  
   
-## Vedere anche  
- [Aggiunta di una classe](../../ide/adding-a-class-visual-cpp.md)
+## <a name="see-also"></a>See Also  
+ [Adding a Class](../../ide/adding-a-class-visual-cpp.md)
+

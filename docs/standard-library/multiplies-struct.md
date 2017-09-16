@@ -1,15 +1,14 @@
 ---
-title: Struct multiplies | Microsoft Docs
+title: multiplies Struct | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- multiplies
 - xfunctional/std::multiplies
 dev_langs:
 - C++
@@ -36,16 +35,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 10f5a34631f713218873d508e41a793b7851bf7c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 3640372f072571df17d5c9f004ac7f974343e784
+ms.contentlocale: it-it
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="multiplies-struct"></a>Struct multiplies
-Oggetto funzione predefinito che esegue l'operazione di moltiplicazione (`operator*` binario) sugli argomenti.  
+# <a name="multiplies-struct"></a>multiplies Struct
+A predefined function object that performs the multiplication operation (binary `operator*`) on its arguments.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Type = void>
@@ -64,20 +64,20 @@ struct multiplies<void>
  };
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  `Type`, `T`, `U`  
- Tipo che supporta un `operator*` binario che accetta gli operandi dei tipi specificati o dedotti.  
+ A type that supports a binary `operator*` that takes operands of the specified or inferred types.  
   
  `Left`  
- Operando sinistro dell'operatore di moltiplicazione. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo `Type`. Il modello specializzato esegue un inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto `T`.  
+ The left operand of the multiplication operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `T`.  
   
  `Right`  
- Operando destro dell'operatore di moltiplicazione. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo `Type`. Il modello specializzato esegue un inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto `U`.  
+ The right operand of the multiplication operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `U`.  
   
-## <a name="return-value"></a>Valore restituito  
- Risultato di `Left``*``Right`. Il modello specializzato esegue un inoltro perfetto del risultato, con il tipo restituito da `operator*`.  
+## <a name="return-value"></a>Return Value  
+ The result of `Left * Right`. The specialized template does perfect forwarding of the result, which has the type that's returned by `operator*`.  
   
-## <a name="example"></a>Esempio  
+## <a name="example"></a>Example  
   
 ```cpp  
 // functional_multiplies.cpp  
@@ -133,14 +133,14 @@ The element-wise products of vectors V1 & v2
 *\  
 ```  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<functional>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<functional>  
   
- **Spazio dei nomi:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Vedere anche  
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)  (Sicurezza dei thread nella libreria standard C++)  
- [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

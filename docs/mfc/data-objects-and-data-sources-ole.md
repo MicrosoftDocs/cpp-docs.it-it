@@ -1,51 +1,69 @@
 ---
-title: "Oggetti dati e origini dati (OLE) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "oggetti dati [C++], definizione"
-  - "origini dati [C++], definizione"
-  - "trasferimento dati [C++]"
-  - "trasferimento dati [C++], definizione"
-  - "OLE [C++], oggetti dati"
-  - "OLE [C++], origini dati"
-  - "OLE [C++], trasferimento dati"
+title: Data Objects and Data Sources (OLE) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- data objects [MFC], definition
+- data transfer [MFC]
+- OLE [MFC], data transfer
+- data sources [MFC], definition
+- data transfer [MFC], definition
+- OLE [MFC], data objects
+- OLE [MFC], data sources
 ms.assetid: 8f68eed8-0ce8-4489-a4cc-f95554f89090
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Oggetti dati e origini dati (OLE)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7bfc4f325461ed3689ab9ade8b6604291ddfacca
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Quando si esegue un trasferimento dei dati, mediante gli Appunti o trascinamento della selezione, dati a un'origine e una destinazione.  L'applicazione fornisce i dati per la copia e un'altra applicazione la accetta per inserire.  Ogni lato delle necessità di trasferimento di eseguire operazioni diverse agli stessi dati per il trasferimento corretta.  La libreria MFC \(Microsoft Foundation Class \(MFC\) fornisce due classi che rappresentano ogni lato di tale trasferimento:  
+---
+# <a name="data-objects-and-data-sources-ole"></a>Data Objects and Data Sources (OLE)
+When you perform a data transfer, either by using the Clipboard or drag and drop, the data has a source and a destination. One application provides the data for copying and another application accepts it for pasting. Each side of the transfer needs to perform different operations on the same data for the transfer to succeed. The Microsoft Foundation Class (MFC) Library provides two classes that represent each side of this transfer:  
   
--   Le origini dati \(implementato dagli oggetti di `COleDataSource` \) rappresentano il lato oggetto di origine per il trasferimento dei dati.  Vengono create da un'applicazione di origine quando i dati devono essere copiati negli Appunti, o quando i dati vengono forniti per un'operazione di trascinamento della selezione.  
+-   Data sources (as implemented by `COleDataSource` objects) represent the source side of the data transfer. They are created by the source application when data is to be copied to the Clipboard, or when data is provided for a drag-and-drop operation.  
   
--   Gli oggetti dati \(implementato dagli oggetti di `COleDataObject` \) rappresentano il lato di destinazione per il trasferimento dei dati.  Vengono creati quando la applicazione di destinazione con dati trascinati in, o quando viene richiesto di eseguire un'operazione Incolla dagli Appunti.  
+-   Data objects (as implemented by `COleDataObject` objects) represent the destination side of the data transfer. They are created when the destination application has data dropped into it, or when it is asked to perform a paste operation from the Clipboard.  
   
- Gli articoli seguenti illustrano come utilizzare gli oggetti dati e origini dati nelle applicazioni.  Queste informazioni si riferiscono sia al contenitore che le applicazioni server, perché entrambe possono essere chiamati ai dati di copia e incolla.  
+ The following articles explain how to use data objects and data sources in your applications. This information applies to both container and server applications, because both may be called upon to copy and paste data.  
   
--   [Oggetti dati e origini dati: Creazione e distruzione](../mfc/data-objects-and-data-sources-creation-and-destruction.md)  
+-   [Data Objects and Data Sources: Creation and Destruction](../mfc/data-objects-and-data-sources-creation-and-destruction.md)  
   
--   [Oggetti dati e origini dati: Modifica](../mfc/data-objects-and-data-sources-manipulation.md)  
+-   [Data Objects and Data Sources: Manipulation](../mfc/data-objects-and-data-sources-manipulation.md)  
   
-## Argomenti della sezione  
- [Trascinamento della selezione](../mfc/drag-and-drop-ole.md)  
+## <a name="in-this-section"></a>In This Section  
+ [Drag and Drop](../mfc/drag-and-drop-ole.md)  
   
- [Appunti](../mfc/clipboard.md)  
+ [Clipboard](../mfc/clipboard.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [OLE](../mfc/ole-in-mfc.md)   
  [COleDataObject Class](../mfc/reference/coledataobject-class.md)   
  [COleDataSource Class](../mfc/reference/coledatasource-class.md)
+

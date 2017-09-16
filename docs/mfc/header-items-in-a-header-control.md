@@ -1,43 +1,62 @@
 ---
-title: "Elementi di intestazione in un controllo Header | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CHeaderCtrl (classe), voci di intestazione in"
-  - "controlli [MFC], intestazione"
-  - "controlli intestazione, voci di intestazione in"
-  - "elementi di intestazione in controlli intestazione"
+title: Header Items in a Header Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- header controls [MFC], header items in
+- header items in header controls [MFC]
+- CHeaderCtrl class [MFC], header items in
+- controls [MFC], header
 ms.assetid: ac79ef1f-a671-4ab2-93e9-b1aa016a48bf
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Elementi di intestazione in un controllo Header
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 65f579669d62b50686925587001362a3251ca0e4
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-È molto utile controllare l'aspetto e il comportamento delle voci di intestazione che costituiscono un controllo intestazione \([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)\).  Ogni voce di intestazione può contenere una stringa, un'immagine indirizzata a bit, un'immagine da un elenco immagini collegato, o un valore a 32 bit definito dall'applicazione associato.  La stringa, la bitmap, o l'immagine visualizzata nella voce di intestazione.  
+---
+# <a name="header-items-in-a-header-control"></a>Header Items in a Header Control
+You have considerable control over the appearance and behavior of the header items that make up a header control ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)). Each header item can have a string, a bitmapped image, an image from an associated image list, or an application-defined 32-bit value associated with it. The string, bitmap, or image is displayed in the header item.  
   
- È possibile personalizzare l'aspetto e il contenuto di nuovi elementi quando vengono creati utilizzando una chiamata [CHeaderCtrl::InsertItem](../Topic/CHeaderCtrl::InsertItem.md) o modifica un elemento esistente, con una chiamata a [CHeaderCtrl::GetItem](../Topic/CHeaderCtrl::GetItem.md) e a [CHeaderCtrl::SetItem](../Topic/CHeaderCtrl::SetItem.md).  
+ You can customize the appearance and contents of new items when they are created by making a call [CHeaderCtrl::InsertItem](../mfc/reference/cheaderctrl-class.md#insertitem) or by modifying an existing item, with a call to [CHeaderCtrl::GetItem](../mfc/reference/cheaderctrl-class.md#getitem) and [CHeaderCtrl::SetItem](../mfc/reference/cheaderctrl-class.md#setitem).  
   
-## Scegliere l'argomento su cui visualizzare maggiori informazioni  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Personalizzare l'aspetto voce di intestazione](../mfc/customizing-the-header-item-s-appearance.md)  
+-   [Customizing the header item's appearance](../mfc/customizing-the-header-item-s-appearance.md)  
   
--   [Elementi nel controllo intestazione](../mfc/ordering-items-in-the-header-control.md)  
+-   [Ordering items in the header control](../mfc/ordering-items-in-the-header-control.md)  
   
--   [Fornendo supporto trascinamento per le voci di intestazione](../mfc/providing-drag-and-drop-support-for-header-items.md)  
+-   [Providing drag-and-drop support for the header items](../mfc/providing-drag-and-drop-support-for-header-items.md)  
   
--   [Utilizzo di elenchi di immagini con i controlli intestazione](../mfc/using-image-lists-with-header-controls.md)  
+-   [Using image lists with header controls](../mfc/using-image-lists-with-header-controls.md)  
   
-## Vedere anche  
- [Utilizzo di CHeaderCtrl](../mfc/using-cheaderctrl.md)
+## <a name="see-also"></a>See Also  
+ [Using CHeaderCtrl](../mfc/using-cheaderctrl.md)
+
+

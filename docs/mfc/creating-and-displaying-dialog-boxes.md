@@ -1,41 +1,60 @@
 ---
-title: "Creazione e visualizzazione di finestre di dialogo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC (finestre di dialogo), creazione"
-  - "MFC (finestre di dialogo), visualizzazione"
-  - "finestre di dialogo modali, creazione"
-  - "finestre di dialogo non modali, creazione"
-  - "apertura di finestre di dialogo"
+title: Creating and Displaying Dialog Boxes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- modal dialog boxes [MFC], creating
+- opening dialog boxes
+- modeless dialog boxes [MFC], creating
+- MFC dialog boxes [MFC], creating
+- MFC dialog boxes [MFC], displaying
 ms.assetid: 1c5219ee-8b46-44bc-9708-83705d4f248b
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Creazione e visualizzazione di finestre di dialogo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0791b27a8ca62f6db80d759d22fde7d3eafa58a6
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Creare un oggetto finestra di dialogo è un'operazione in due fasi.  Innanzitutto, costruire l'oggetto finestra di dialogo, quindi creare la finestra di dialogo.  Le finestre di dialogo modali e non modali differiscono in parte nel processo utilizzato per crearle e visualizzarle.  Nella tabella seguente elenca come le finestre di dialogo modali e non modali vengono normalmente costruite e visualizzate.  
+---
+# <a name="creating-and-displaying-dialog-boxes"></a>Creating and Displaying Dialog Boxes
+Creating a dialog object is a two-phase operation. First, construct the dialog object, then create the dialog window. Modal and modeless dialog boxes differ somewhat in the process used to create and display them. The following table lists how modal and modeless dialog boxes are normally constructed and displayed.  
   
-### Creazione della finestra di dialogo  
+### <a name="dialog-creation"></a>Dialog Creation  
   
-|Tipo di finestra di dialogo|Modalità di creazione|  
-|---------------------------------|---------------------------|  
-|[Modeless](../mfc/creating-modeless-dialog-boxes.md)|Costruisce `CDialog`, quindi chiamare la funzione membro **Crea**.|  
-|[Modali](../mfc/creating-modal-dialog-boxes.md)|Il costrutto `CDialog`, quindi chiama la funzione membro `DoModal`.|  
+|Dialog type|How to create it|  
+|-----------------|----------------------|  
+|[Modeless](../mfc/creating-modeless-dialog-boxes.md)|Construct `CDialog`, then call **Create** member function.|  
+|[Modal](../mfc/creating-modal-dialog-boxes.md)|Construct `CDialog`, then call `DoModal` member function.|  
   
- È possibile, se lo si desidera, creare la finestra di dialogo da un [modello in memoria della finestra di dialogo](../mfc/using-a-dialog-template-in-memory.md) che avete costruito, piuttosto che da una risorsa modello di finestra di dialogo.  Tuttavia, si tratta di un argomento avanzato.  
+ You can, if you want, create your dialog box from an [in-memory dialog template](../mfc/using-a-dialog-template-in-memory.md) that you have constructed rather than from a dialog template resource. This is an advanced topic, however.  
   
-## Vedere anche  
- [Ciclo di vita di una finestra di dialogo](../mfc/life-cycle-of-a-dialog-box.md)
+## <a name="see-also"></a>See Also  
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)
+
+

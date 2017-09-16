@@ -1,15 +1,14 @@
 ---
-title: Classe ios_base | Microsoft Docs
+title: ios_base Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ios_base
 - xiosbase/std::ios_base
 - ios/std::ios_base::event_callback
 - ios/std::ios_base::fmtflags
@@ -65,7 +64,58 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- ios_base class
+- std::ios_base [C++]
+- std::ios_base [C++], event_callback
+- std::ios_base [C++], fmtflags
+- std::ios_base [C++], iostate
+- std::ios_base [C++], openmode
+- std::ios_base [C++], seekdir
+- std::ios_base [C++], event
+- std::ios_base [C++], adjustfield
+- std::ios_base [C++], app
+- std::ios_base [C++], ate
+- std::ios_base [C++], badbit
+- std::ios_base [C++], basefield
+- std::ios_base [C++], beg
+- std::ios_base [C++], binary
+- std::ios_base [C++], boolalpha
+- std::ios_base [C++], cur
+- std::ios_base [C++], dec
+- std::ios_base [C++], end
+- std::ios_base [C++], eofbit
+- std::ios_base [C++], failbit
+- std::ios_base [C++], fixed
+- std::ios_base [C++], floatfield
+- std::ios_base [C++], goodbit
+- std::ios_base [C++], hex
+- std::ios_base [C++], in
+- std::ios_base [C++], internal
+- std::ios_base [C++], left
+- std::ios_base [C++], oct
+- std::ios_base [C++], out
+- std::ios_base [C++], right
+- std::ios_base [C++], scientific
+- std::ios_base [C++], showbase
+- std::ios_base [C++], showpoint
+- std::ios_base [C++], showpos
+- std::ios_base [C++], skipws
+- std::ios_base [C++], trunc
+- std::ios_base [C++], unitbuf
+- std::ios_base [C++], uppercase
+- std::ios_base [C++], failure
+- std::ios_base [C++], flags
+- std::ios_base [C++], getloc
+- std::ios_base [C++], imbue
+- std::ios_base [C++], Init
+- std::ios_base [C++], iword
+- std::ios_base [C++], precision
+- std::ios_base [C++], pword
+- std::ios_base [C++], register_callback
+- std::ios_base [C++], setf
+- std::ios_base [C++], sync_with_stdio
+- std::ios_base [C++], unsetf
+- std::ios_base [C++], width
+- std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
 caps.latest.revision: 21
 author: corob-msft
@@ -85,199 +135,196 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 0bf5408966a32534556a25010a212900566bdf37
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: a81890a495c79dba3d1785c1c2060b51077cc66c
 ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="iosbase-class"></a>Classe ios_base
-La classe descrive le funzioni membro e di archiviazione comuni ai flussi di input e di output che non dipendono dai parametri di modello. La classe modello [basic_ios](../standard-library/basic-ios-class.md) descrive gli elementi comuni e dipendenti dai parametri modello.  
+# <a name="iosbase-class"></a>ios_base Class
+The class describes the storage and member functions common to both input and output streams that do not depend on the template parameters. (The template class [basic_ios](../standard-library/basic-ios-class.md) describes what is common and is dependent on template parameters.)  
   
- Un oggetto della classe ios_base archivia le informazioni di formattazione che sono costituite da:  
+ An object of class ios_base stores formatting information, which consists of:  
   
--   Flag di formato in un oggetto di tipo [fmtflags](#fmtflags).  
+-   Format flags in an object of type [fmtflags](#fmtflags).  
   
--   Una maschera di eccezione in un oggetto di tipo [iostate](#iostate).  
+-   An exception mask in an object of type [iostate](#iostate).  
   
--   Larghezza del campo in un oggetto di tipo `int`.  
+-   A field width in an object of type `int`.  
   
--   Una precisione di visualizzazione in un oggetto di tipo `int`.  
+-   A display precision in an object of type `int`.  
   
--   Un oggetto di impostazioni locali in un oggetto di tipo **locale**.  
+-   A locale object in an object of type **locale**.  
   
--   Due matrici estendibili con elementi di tipo **long** e puntatore `void`.  
+-   Two extensible arrays, with elements of type **long** and `void` pointer.  
   
- Un oggetto della classe ios_base archivia anche informazioni sullo stato del flusso, in un oggetto di tipo [iostate](#iostate), e uno stack di callback.  
+ An object of class ios_base also stores stream state information, in an object of type [iostate](#iostate), and a callback stack.  
   
-### <a name="constructors"></a>Costruttori  
-  
-|||  
-|-|-|  
-|[ios_base](#ios_base)|Costruisce oggetti `ios_base`.|  
-  
-### <a name="typedefs"></a>Typedef  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[event_callback](#event_callback)|Descrive una funzione passata a [register_call](#register_callback).|  
-|[fmtflags](#fmtflags)|Costanti per specificare l'aspetto dell'output.|  
-|[iostate](#iostate)|Definisce le costanti che descrivono lo stato di un flusso.|  
-|[openmode](#openmode)|Descrive come interagire con un flusso.|  
-|[seekdir](#seekdir)|Specifica il punto iniziale per operazioni di offset.|  
+|[ios_base](#ios_base)|Constructs `ios_base` objects.|  
   
-### <a name="enums"></a>Enumerazioni  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[event](#event)|Specifica i tipi di evento.|  
+|[event_callback](#event_callback)|Describes a function passed to [register_call](#register_callback).|  
+|[fmtflags](#fmtflags)|Constants to specify the appearance of output.|  
+|[iostate](#iostate)|Defines constants describing the state of a stream.|  
+|[openmode](#openmode)|Describes how to interact with a stream.|  
+|[seekdir](#seekdir)|Specifies starting point for offset operations.|  
   
-### <a name="constants"></a>Costanti  
-  
-|||  
-|-|-|  
-|[adjustfield](#fmtflags)|Maschera di bit definita come `internal` &#124; `left` &#124; `right`.|  
-|[app](#openmode)|Specifica la ricerca alla fine di un flusso prima di ogni inserimento.|  
-|[ate](#openmode)|Specifica la ricerca alla fine di un flusso quando il relativo oggetto di controllo viene inizialmente creato.|  
-|[badbit](#iostate)|Registra una perdita di integrità del buffer del flusso.|  
-|[basefield](#fmtflags)|Maschera di bit definita come `dec` &#124; `hex` &#124; `oct`.|  
-|[beg](#seekdir)|Specifica la ricerca relativa all'inizio di una sequenza.|  
-|[binary](#openmode)|Specifica che un file deve essere letto come flusso binario, anziché come flusso di testo.|  
-|[boolalpha](#fmtflags)|Specifica l'inserimento o l'estrazione di oggetti di tipo `bool` come nomi (ad esempio `true` e `false`), anziché come valori numerici.|  
-|[cur](#seekdir)|Specifica la ricerca relativa alla posizione corrente all'interno di una sequenza.|  
-|[dec](#fmtflags)|Specifica l'inserimento o l'estrazione di valori interi in formato decimale.|  
-|[end](#seekdir)|Specifica la ricerca relativa alla fine di una sequenza.|  
-|[eofbit](#iostate)|Registra la fine del file durante l'estrazione da un flusso.|  
-|[failbit](#iostate)|Registra un errore per estrarre un campo valido da un flusso.|  
-|[fixed](#fmtflags)|Specifica l'inserimento di valori a virgola mobile in formato a virgola fissa (senza il campo dell'esponente).|  
-|[floatfield](#fmtflags)|Maschera di bit definita come `fixed` &#124; `scientific`|  
-|[goodbit](#iostate)|Tutti i bit dello stato vengono cancellati.|  
-|[hex](#fmtflags)|Specifica l'inserimento o l'estrazione di valori interi in formato esadecimale.|  
-|[in](#openmode)|Specifica l'estrazione da un flusso.|  
-|[internal](#fmtflags)|Inserendo caratteri di riempimento in un punto interno a un campo numerico generato, riempie la larghezza di un campo.|  
-|[left](#fmtflags)|Specifica la giustificazione a sinistra.|  
-|[oct](#fmtflags)|Specifica l'inserimento o l'estrazione di valori interi in formato ottale.|  
-|[out](#openmode)|Specifica l'inserimento in un flusso.|  
-|[right](#fmtflags)|Specifica la giustificazione a destra.|  
-|[scientific](#fmtflags)|Specifica l'inserimento di valori a virgola mobile in formato a virgola fissa (con un campo dell'esponente).|  
-|[showbase](#fmtflags)|Specifica l'inserimento di un prefisso che consente di visualizzare la base di un campo Integer generato.|  
-|[showpoint](#fmtflags)|Specifica l'inserimento non condizionale di un punto decimale in un campo a virgola mobile generato.|  
-|[showpos](#fmtflags)|Specifica l'inserimento di un segno più in un campo numerico generato non negativo.|  
-|[skipws](#fmtflags)|Specifica di ignorare lo spazio vuoto iniziale prima di determinate estrazioni.|  
-|[trunc](#openmode)|Specifica l'eliminazione di contenuti di un file esistente quando viene creato l'oggetto di controllo.|  
-|[unitbuf](#fmtflags)|Provoca lo scaricamento dell'output dopo ogni inserimento.|  
-|[uppercase](#fmtflags)|Specifica l'inserimento di equivalenti in lettere maiuscole di lettere minuscole in determinati inserimenti.|  
-  
-### <a name="member-functions"></a>Funzioni membro  
+### <a name="enums"></a>Enums  
   
 |||  
 |-|-|  
-|[failure](#failure)|Classe membro che svolge la funzione di classe di base per tutte le eccezioni generate dalla funzione membro [clear](../standard-library/basic-ios-class.md#clear) nella classe modello [basic_ios](../standard-library/basic-ios-class.md).|  
-|[flags](#flags)|Imposta o restituisce le impostazioni dei flag correnti.|  
-|[getloc](#getloc)|Restituisce l'oggetto delle impostazioni locali archiviate.|  
-|[imbue](#imbue)|Modifica le impostazioni locali.|  
-|[Init](#init)|Crea gli oggetti iostream standard al momento della costruzione.|  
-|[iword](#iword)|Assegna un valore da archiviare come un `iword`.|  
-|[precision](#precision)|Specifica il numero di cifre da visualizzare in un numero a virgola mobile.|  
-|[pword](#pword)|Assegna un valore da archiviare come un `pword`.|  
-|[register_callback](#register_callback)|Specifica una funzione di callback.|  
-|[setf](#setf)|Imposta i flag specificati.|  
-|[sync_with_stdio](#sync_with_stdio)|Assicura che le operazioni della libreria di runtime iostream e C vengano eseguite nell'ordine in cui appaiono nel codice sorgente.|  
-|[unsetf](#unsetf)|Provoca la disattivazione dei flag specificati.|  
-|[width](#width)|Imposta la lunghezza del flusso di output.|  
-|[xalloc](#xalloc)|Specifica che una variabile deve far parte del flusso.|  
+|[event](#event)|Specifies event types.|  
   
-### <a name="operators"></a>Operatori  
+### <a name="constants"></a>Constants  
   
 |||  
 |-|-|  
-|[operator=](#op_eq)|L'operatore di assegnazione per gli oggetti `ios_base`.|  
+|[adjustfield](#fmtflags)|A bitmask defined as `internal` &#124; `left` &#124; `right`.|  
+|[app](#openmode)|Specifies seeking to the end of a stream before each insertion.|  
+|[ate](#openmode)|Specifies seeking to the end of a stream when its controlling object is first created.|  
+|[badbit](#iostate)|Records a loss of integrity of the stream buffer.|  
+|[basefield](#fmtflags)|A bitmask defined as `dec` &#124; `hex` &#124; `oct`.|  
+|[beg](#seekdir)|Specifies seeking relative to the beginning of a sequence.|  
+|[binary](#openmode)|Specifies that a file should be read as a binary stream, rather than as a text stream.|  
+|[boolalpha](#fmtflags)|Specifies insertion or extraction of objects of type `bool` as names (such as `true` and `false`) rather than as numeric values.|  
+|[cur](#seekdir)|Specifies seeking relative to the current position within a sequence.|  
+|[dec](#fmtflags)|Specifies insertion or extraction of integer values in decimal format.|  
+|[end](#seekdir)|Specifies seeking relative to the end of a sequence.|  
+|[eofbit](#iostate)|Records end-of-file while extracting from a stream.|  
+|[failbit](#iostate)|Records a failure to extract a valid field from a stream.|  
+|[fixed](#fmtflags)|Specifies insertion of floating-point values in fixed-point format (with no exponent field).|  
+|[floatfield](#fmtflags)|A bitmask defined as `fixed` &#124; `scientific`|  
+|[goodbit](#iostate)|All state bits clear.|  
+|[hex](#fmtflags)|Specifies insertion or extraction of integer values in hexadecimal format.|  
+|[in](#openmode)|Specifies extraction from a stream.|  
+|[internal](#fmtflags)|Pads to a field width by inserting fill characters at a point internal to a generated numeric field.|  
+|[left](#fmtflags)|Specifies left justification.|  
+|[oct](#fmtflags)|Specifies insertion or extraction of integer values in octal format.|  
+|[out](#openmode)|Specifies insertion to a stream.|  
+|[right](#fmtflags)|Specifies right justification.|  
+|[scientific](#fmtflags)|Specifies insertion of floating-point values in scientific format (with an exponent field).|  
+|[showbase](#fmtflags)|Specifies insertion of a prefix that reveals the base of a generated integer field.|  
+|[showpoint](#fmtflags)|Specifies unconditional insertion of a decimal point in a generated floating-point field.|  
+|[showpos](#fmtflags)|Specifies insertion of a plus sign in a nonnegative generated numeric field.|  
+|[skipws](#fmtflags)|Specifies skipping leading white space before certain extractions.|  
+|[trunc](#openmode)|Specifies deleting contents of an existing file when its controlling object is created.|  
+|[unitbuf](#fmtflags)|Causes output to be flushed after each insertion.|  
+|[uppercase](#fmtflags)|Specifies insertion of uppercase equivalents of lowercase letters in certain insertions.|  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<ios>  
+### <a name="member-functions"></a>Member Functions  
   
- **Spazio dei nomi:** std  
+|||  
+|-|-|  
+|[failure](#failure)|The member class serves as the base class for all exceptions thrown by the member function [clear](../standard-library/basic-ios-class.md#clear) in template class [basic_ios](../standard-library/basic-ios-class.md).|  
+|[flags](#flags)|Sets or returns the current flag settings.|  
+|[getloc](#getloc)|Returns the stored locale object.|  
+|[imbue](#imbue)|Changes the locale.|  
+|[Init](#init)|Creates the standard iostream objects when constructed.|  
+|[iword](#iword)|Assigns a value to be stored as an `iword`.|  
+|[precision](#precision)|Specifies the number of digits to display in a floating-point number.|  
+|[pword](#pword)|Assigns a value to be stored as a `pword`.|  
+|[register_callback](#register_callback)|Specifies a callback function.|  
+|[setf](#setf)|Sets the specified flags.|  
+|[sync_with_stdio](#sync_with_stdio)|Ensures that iostream and C run-time library operations occur in the order that they appear in source code.|  
+|[unsetf](#unsetf)|Causes the specified flags to be off.|  
+|[width](#width)|Sets the length of the output stream.|  
+|[xalloc](#xalloc)|Specifies that a variable shall be part of the stream.|  
+  
+### <a name="operators"></a>Operators  
+  
+|||  
+|-|-|  
+|[operator=](#op_eq)|The assignment operator for `ios_base` objects.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<ios>  
+  
+ **Namespace:** std  
   
 ##  <a name="event"></a>  ios_base::event  
- Specifica i tipi di evento.  
+ Specifies event types.  
   
 ```  
-enum event {erase_event,
+enum event {
+    erase_event,
     imbue_event,
     copyfmt_event};  
 ```  
   
-### <a name="remarks"></a>Note  
- Il tipo è costituito da un tipo non enumerato che descrive un oggetto in grado di archiviare l'evento di callback usato come argomento di una funzione registrata con [register_callback](#register_callback). I valori distinti degli eventi sono:  
+### <a name="remarks"></a>Remarks  
+ The type is an enumerated type that describes an object that can store the callback event used as an argument to a function registered with [register_callback](#register_callback). The distinct event values are:  
   
-- **copyfmt_event** per identificare un callback che si verifica in prossimità della fine di una chiamata a [copyfmt](../standard-library/basic-ios-class.md#copyfmt), immediatamente prima che venga copiata la [maschera di eccezione](../standard-library/ios-base-class.md).  
+- **copyfmt_event**, to identify a callback that occurs near the end of a call to [copyfmt](../standard-library/basic-ios-class.md#copyfmt), just before the [exception mask](../standard-library/ios-base-class.md) is copied.  
   
-- **erase_event** per identificare un callback che si verifica all'inizio di una chiamata a [copyfmt](../standard-library/basic-ios-class.md#copyfmt) o all'inizio di una chiamata al distruttore di **\*this**.  
+- **erase_event**, to identify a callback that occurs at the beginning of a call to [copyfmt](../standard-library/basic-ios-class.md#copyfmt), or at the beginning of a call to the destructor for **\*this**.  
   
-- **imbue_event** per identificare un callback che si verifica alla fine di una chiamata a [imbue](#imbue), immediatamente prima che venga restituita la funzione.  
+- **imbue_event**, to identify a callback that occurs at the end of a call to [imbue](#imbue), just before the function returns.  
   
-### <a name="example"></a>Esempio  
-  Vedere [register_callback](#register_callback) per un esempio.  
+### <a name="example"></a>Example  
+  
+  See [register_callback](#register_callback) for an example.  
   
 ##  <a name="event_callback"></a>  ios_base::event_callback  
- Descrive una funzione passata a [register_call](#register_callback).  
+
+ Describes a function passed to [register_call](#register_callback).  
   
 ```  
- 
-typedef void (
-__  
-cdecl *event  
-_  
-callback)(
-    event 
-_E  ,  
-    ios 
-_  
-base& 
-_Base  ,  
+typedef void (__cdecl *event_callback)(
+    event _E,  
+    ios_base& _Base,  
     int _I);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  *_E*  
- [Evento](#event).  
+ The [event](#event).  
   
  `_Base`  
- Flusso in cui è stato chiamato l'evento.  
+ The stream in which the event was called.  
   
  *_I*  
- Numero definito dall'utente.  
+ A user-defined number.  
   
-### <a name="remarks"></a>Note  
- Il tipo descrive un puntatore a una funzione che può essere registrata con [register_callback](#register_callback). Questo tipo di funzione non deve generare un'eccezione.  
+### <a name="remarks"></a>Remarks  
   
-### <a name="example"></a>Esempio  
-  Vedere [register_call](#register_callback) per un esempio d'uso di `event_callback`.  
+ The type describes a pointer to a function that can be registered with [register_callback](#register_callback). This type of function must not throw an exception.  
+  
+### <a name="example"></a>Example  
+  
+  See [register_call](#register_callback) for an example that uses `event_callback`.  
   
 ##  <a name="failure"></a>  ios_base::failure  
- La classe `failure` definisce la classe di base per tutti i tipi di oggetti generati come eccezioni dalle funzioni della libreria `iostreams` per segnalare gli errori rilevati durante le operazioni del buffer del flusso.  
+  
+ The class `failure` defines the base class for the types of all objects thrown as exceptions, by functions in the `iostreams` library, to report errors detected during stream buffer operations.  
   
 ```  
- 
 namespace std {  
-class failure : public system_error {  
-public:  
-explicit failure(
-const string& _Message,  
-const error_code& _Code = io_errc::stream);
+    class failure : public system_error {  
+    public:  
+        explicit failure(
+            const string& _Message,  
+            const error_code& _Code = io_errc::stream);
 
-explicit failure(
-const char* str,  
-const error_code& _Code = io_errc::stream);
-
-};  
+        explicit failure(
+            const char* str,  
+            const error_code& _Code = io_errc::stream);
+    };
+}  
 ```  
   
-### <a name="remarks"></a>Note  
- Il valore restituito da `what``()` è una copia di `_Message`, possibilmente aumentato con un test basato su `_Code`. Se `_Code` non viene specificato, il valore predefinito è `make_error_code``(io_errc::stream)`.  
+### <a name="remarks"></a>Remarks  
+
+ The value returned by `what()` is a copy of `_Message`, possibly augmented with a test based on `_Code`. If `_Code` is not specified, the default value is `make_error_code(io_errc::stream)`.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ios_base_failure.cpp  
@@ -287,20 +334,19 @@ const error_code& _Code = io_errc::stream);
   
 int main ( )  
 {  
-using namespace std;  
-fstream file;  
-file.exceptions(ios::failbit);  
-try  
-{  
-file.open( "rm.txt", ios_base::in );  
-// Opens nonexistent file for reading  
+    using namespace std;  
+    fstream file;  
+    file.exceptions(ios::failbit);  
+    try  
+    {  
+        file.open( "rm.txt", ios_base::in );  
+        // Opens nonexistent file for reading  
+    }  
+    catch( ios_base::failure f )  
+    {  
+        cout << "Caught an exception: " << f.what() << endl;  
+    }  
 }  
-catch( ios_base::failure f )  
-{  
-cout << "Caught an exception: " << f.what() << endl;  
-}  
-}  
-  
 ```  
   
 ```Output  
@@ -308,29 +354,29 @@ Caught an exception: ios_base::failbit set
 ```  
   
 ##  <a name="flags"></a>  ios_base::flags  
- Imposta o restituisce le impostazioni dei flag correnti.  
+  
+ Sets or returns the current flag settings.  
   
 ```  
- 
 fmtflags flags() const;
-
- 
 fmtflags flags(fmtflags fmtfl);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `fmtfl`  
- Nuova impostazione `fmtflags`.  
+ The new `fmtflags` setting.  
   
-### <a name="return-value"></a>Valore restituito  
- Impostazione `fmtflags` precedente o corrente.  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
- Vedere [ios_base::fmtflags](#fmtflags) per un elenco dei flag.  
+ The previous or current `fmtflags` setting.  
   
- La prima funzione membro restituisce i flag di formato archiviati. La seconda funzione membro archivia `fmtfl` nei flag di formato e restituisce il relativo valore archiviato precedente.  
+### <a name="remarks"></a>Remarks  
   
-### <a name="example"></a>Esempio  
+ See [ios_base::fmtflags](#fmtflags) for a list of the flags.  
+  
+ The first member function returns the stored format flags. The second member function stores `fmtfl` in the format flags and returns its previous stored value.  
+  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ios_base_flags.cpp  
@@ -340,26 +386,25 @@ fmtflags flags(fmtflags fmtfl);
   
 int main ( )  
 {  
-using namespace std;  
-cout << cout.flags( ) << endl;  
-cout.flags( ios::dec | ios::boolalpha );  
-cout << cout.flags( );  
-}  
-  
+    using namespace std;  
+    cout << cout.flags( ) << endl;  
+    cout.flags( ios::dec | ios::boolalpha );  
+    cout << cout.flags( );  
+}    
 ```  
   
 ```Output  
-  
 513  
 16896  
-  
 ```  
   
 ##  <a name="fmtflags"></a>  ios_base::fmtflags  
- Costanti per specificare l'aspetto dell'output.  
   
-classe ios_base {  
-   public:  
+ Constants to specify the appearance of output.  
+  
+```
+class ios_base {  
+public:  
    typedef implementation-defined-bitmask-type fmtflags;  
    static const fmtflags boolalpha;  
    static const fmtflags dec;  
@@ -379,66 +424,69 @@ classe ios_base {
    static const fmtflags adjustfield;  
    static const fmtflags basefield;  
    static const fmtflags floatfield;  
-   ...  
-   };  
+   // ...  
+};  
+```  
   
-### <a name="remarks"></a>Note  
- Supporta i manipolatori in [ios](../standard-library/ios.md).  
+### <a name="remarks"></a>Remarks  
   
- Il tipo è un tipo maschera di bit che descrive un oggetto in grado di archiviare flag di formato. I valori flag distinti (elementi) sono:  
+ Supports the manipulators in [ios](../standard-library/ios.md).  
   
-- `dec`, per inserire o estrarre i valori interi in formato decimale.  
+ The type is a bitmask type that describes an object that can store format flags. The distinct flag values (elements) are:  
   
-- `hex`, per inserire o estrarre i valori interi in formato esadecimale.  
+- `dec`, to insert or extract integer values in decimal format.  
   
-- `oct`, per inserire o estrarre i valori interi in formato ottale.  
+- `hex`, to insert or extract integer values in hexadecimal format.  
   
-- `showbase`, per inserire un prefisso che consente di visualizzare la base di un campo Integer generato.  
+- `oct`, to insert or extract integer values in octal format.  
   
-- `internal`, per riempire la larghezza del campo in base alle necessità inserendo caratteri di riempimento in un punto interno di un campo numerico generato. Per informazioni sull'impostazione della larghezza del campo, vedere [setw](../standard-library/iomanip-functions.md#setw).  
+- `showbase`, to insert a prefix that reveals the base of a generated integer field.  
   
-- `left`, per riempire la larghezza del campo in base alle necessità inserendo caratteri di riempimento alla fine di un campo generato (giustificazione a sinistra).  
+- `internal`, to pad to a field width as needed by inserting fill characters at a point internal to a generated numeric field. (For information on setting the field width, see [setw](../standard-library/iomanip-functions.md#setw)).  
   
-- `right`, per riempire la larghezza del campo in base alle necessità inserendo caratteri di riempimento all'inizio di un campo generato (giustificazione a destra).  
+- `left`, to pad to a field width as needed by inserting fill characters at the end of a generated field (left justification).  
   
-- `boolalpha`, per inserire o estrarre oggetti di tipo `bool` come nomi (ad esempio `true` e `false`) anziché come valori numerici.  
+- `right`, to pad to a field width as needed by inserting fill characters at the beginning of a generated field (right justification).  
   
-- `fixed`, per inserire valori a virgola mobile in formato a virgola fissa (senza il campo dell'esponente).  
+- `boolalpha`, to insert or extract objects of type `bool` as names (such as `true` and `false`) rather than as numeric values.  
   
-- `scientific`, per inserire valori a virgola mobile in formato scientifico (con un campo dell'esponente).  
+- `fixed`, to insert floating-point values in fixed-point format (with no exponent field).  
   
-- `showpoint`, per inserire in modo non condizionale un punto decimale in un campo a virgola mobile generato.  
+- `scientific`, to insert floating-point values in scientific format (with an exponent field).  
   
-- `showpos`, per inserire un segno più in un campo numerico generato non negativo.  
+- `showpoint`, to insert a decimal point unconditionally in a generated floating-point field.  
   
-- `skipws`, per ignorare lo spazio vuoto iniziale prima di determinate estrazioni.  
+- `showpos`, to insert a plus sign in a nonnegative generated numeric field.  
   
-- `unitbuf`, per scaricare l'output dopo ogni inserimento.  
+- `skipws`, to skip leading white space before certain extractions.  
   
-- `uppercase`, per inserire gli equivalenti in lettere maiuscole di lettere minuscole in determinati inserimenti.  
+- `unitbuf`, to flush output after each insertion.  
   
- Inoltre, altri valori utili sono:  
+- `uppercase`, to insert uppercase equivalents of lowercase letters in certain insertions.  
   
-- `adjustfield`, una maschera di bit definita come `internal` &#124; `left` &#124; `right`  
+ In addition, several useful values are:  
   
-- `basefield`, definito come `dec` &#124; `hex` &#124; `oct`  
+- `adjustfield`, a bitmask defined as `internal` &#124; `left` &#124; `right`  
   
-- `floatfield`, definito come `fixed` &#124; `scientific`  
+- `basefield`, defined as `dec` &#124; `hex` &#124; `oct`  
   
- Per esempi di funzioni che modificano questi flag di formato, vedere [\<iomanip>](../standard-library/iomanip.md).  
+- `floatfield`, defined as `fixed` &#124; `scientific`  
+  
+ For examples of functions that modify these format flags, see [\<iomanip>](../standard-library/iomanip.md).  
   
 ##  <a name="getloc"></a>  ios_base::getloc  
- Restituisce l'oggetto delle impostazioni locali archiviate.  
+  
+ Returns the stored locale object.  
   
 ```  
- 
 locale getloc() const;
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Oggetto delle impostazioni locali archiviato.  
+### <a name="return-value"></a>Return Value  
   
-### <a name="example"></a>Esempio  
+ The stored locale object.  
+  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ios_base_getlock.cpp  
@@ -447,10 +495,9 @@ locale getloc() const;
   
 int main( )  
 {  
-using namespace std;  
-cout << cout.getloc( ).name( ).c_str( ) << endl;  
+    using namespace std;  
+    cout << cout.getloc( ).name( ).c_str( ) << endl;  
 }  
-  
 ```  
   
 ```Output  
@@ -458,122 +505,138 @@ C
 ```  
   
 ##  <a name="imbue"></a>  ios_base::imbue  
- Modifica le impostazioni locali.  
+
+ Changes the locale.  
   
 ```  
- 
 locale imbue(const locale& _Loc);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `_Loc`  
- Nuove impostazioni locali.  
+ The new locale setting.  
   
-### <a name="return-value"></a>Valore restituito  
- Impostazioni locali precedenti.  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
- La funzione membro archivia `_Loc` nell'oggetto delle impostazioni locali e segnala l'evento di callback e `imbue_event`. Restituisce il valore archiviato precedente.  
+ The previous locale.  
   
-### <a name="example"></a>Esempio  
-  Vedere [basic_ios::imbue](../standard-library/basic-ios-class.md#imbue) per un esempio.  
+### <a name="remarks"></a>Remarks  
+  
+ The member function stores `_Loc` in the locale object and then reports the callback event and `imbue_event`. It returns the previous stored value.  
+  
+### <a name="example"></a>Example  
+  
+  See [basic_ios::imbue](../standard-library/basic-ios-class.md#imbue) for a sample.  
   
 ##  <a name="init"></a>  ios_base::Init  
- Crea gli oggetti iostream standard al momento della costruzione.  
   
+ Creates the standard iostream objects when constructed.  
+  
+```  
 class Init { };  
+```
   
-### <a name="remarks"></a>Note  
- La classe annidata descrive un oggetto la cui costruzione garantisce che gli oggetti iostream standard vengano creati correttamente, anche prima dell'esecuzione di un costruttore per un oggetto arbitrario statico.  
+### <a name="remarks"></a>Remarks  
+  
+ The nested class describes an object whose construction ensures that the standard iostreams objects are properly constructed, even before the execution of a constructor for an arbitrary static object.  
   
 ##  <a name="ios_base"></a>  ios_base::ios_base  
- Crea oggetti ios_base.  
+  
+ Constructs ios_base objects.  
   
 ```  
- 
-ios  
-_  
-base();
+ios_base();
 ```  
   
-### <a name="remarks"></a>Note  
- Il costruttore (protetto) non esegue alcuna operazione. Una chiamata successiva a **basic_ios::**[init](../standard-library/basic-ios-class.md#init) deve inizializzare l'oggetto prima che possa essere eliminato definitivamente. La classe ios_base, quindi, può essere usata in modo sicuro solo come classe di base per la classe modello [basic_ios](../standard-library/basic-ios-class.md).  
+### <a name="remarks"></a>Remarks  
+  
+ The (protected) constructor does nothing. A later call to **basic_ios::**[init](../standard-library/basic-ios-class.md#init) must initialize the object before it can be safely destroyed. Thus, the only safe use for class ios_base is as a base class for template class [basic_ios](../standard-library/basic-ios-class.md).  
   
 ##  <a name="iostate"></a>  ios_base::iostate  
- Tipo di costanti che descrivono lo stato di un flusso.  
   
-classe ios_base {  
-   public:  
+ The type of constants that describe the state of a stream.  
+  
+```  
+class ios_base {  
+public:  
    typedef implementation-defined-bitmask-type iostate;  
    static const iostate badbit;  
    static const iostate eofbit;  
    static const iostate failbit;  
    static const iostate goodbit;  
-   ...  
-   };  
+   // ...  
+};  
+```  
   
-### <a name="remarks"></a>Note  
- Il tipo è costituito da un tipo maschera di bit che descrive un oggetto in grado di archiviare informazioni sullo stato del flusso. I valori flag distinti (elementi) sono:  
+### <a name="remarks"></a>Remarks  
   
-- `badbit`, per registrare una perdita di integrità del buffer del flusso.  
+ The type is a bitmask type that describes an object that can store stream state information. The distinct flag values (elements) are:  
   
-- `eofbit`, per registrare la fine del file durante l'estrazione da un flusso.  
+- `badbit`, to record a loss of integrity of the stream buffer.  
   
-- `failbit`, per registrare un errore per l'estrazione di un campo valido da un flusso.  
+- `eofbit`, to record end-of-file while extracting from a stream.  
   
- Un valore utile è anche `goodbit`, in cui non è impostato nessuno dei bit indicati in precedenza ( `goodbit` è sempre zero).  
+- `failbit`, to record a failure to extract a valid field from a stream.  
+  
+ In addition, a useful value is `goodbit`, where none of the previously mentioned bits are set ( `goodbit` is guaranteed to be zero).  
   
 ##  <a name="iword"></a>  ios_base::iword  
- Assegna un valore da archiviare come un `iword`.  
+  
+ Assigns a value to be stored as an `iword`.  
   
 ```  
- 
 long& iword(int idx);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `idx`  
- Indice del valore da archiviare come `iword`.  
+ The index of the value to store as an `iword`.  
   
-### <a name="remarks"></a>Note  
- La funzione membro restituisce un riferimento all'elemento `idx` della matrice estendibile con elementi di tipo **long**. Tutti gli elementi sono effettivamente presenti e archiviano inizialmente il valore zero. Il riferimento restituito non è valido dopo la chiamata successiva a `iword` per l'oggetto, dopo che l'oggetto viene modificato da una chiamata in **basic_ios::**[copyfmt](../standard-library/basic-ios-class.md#copyfmt) o dopo che l'oggetto viene eliminato.  
+### <a name="remarks"></a>Remarks  
   
- Se `idx` è negativo o se per l'elemento non è disponibile un'archiviazione univoca, la funzione chiama [setstate](../standard-library/basic-ios-class.md#setstate)**(badbit)** e restituisce un riferimento che potrebbe non essere univoco.  
+ The member function returns a reference to element `idx` of the extensible array with elements of type **long**. All elements are effectively present and initially store the value zero. The returned reference is invalid after the next call to `iword` for the object, after the object is altered by a call to **basic_ios::**[copyfmt](../standard-library/basic-ios-class.md#copyfmt), or after the object is destroyed.  
   
- Per ottenere un indice univoco, da usare con tutti gli oggetti di tipo `ios_base`, chiamare [xalloc](#xalloc).  
+ If `idx` is negative or if unique storage is unavailable for the element, the function calls [setstate](../standard-library/basic-ios-class.md#setstate)**(badbit)** and returns a reference that might not be unique.  
   
-### <a name="example"></a>Esempio  
-  Vedere [xalloc](#xalloc) per un esempio di come usare `iword`.  
+ To obtain a unique index, for use across all objects of type `ios_base`, call [xalloc](#xalloc).  
+  
+### <a name="example"></a>Example  
+  
+  See [xalloc](#xalloc) for a sample of how to use `iword`.  
   
 ##  <a name="openmode"></a>  ios_base::openmode  
- Descrive come interagire con un flusso.  
   
-classe ios_base {  
-   public:  
+ Describes how to interact with a stream.  
+  
+```  
+class ios_base {  
+public:  
    typedef implementation-defined-bitmask-type iostate;  
    static const iostate badbit;  
    static const iostate eofbit;  
    static const iostate failbit;  
    static const iostate goodbit;  
-   ...  
-   };  
+   // ...  
+};  
+```  
   
-### <a name="remarks"></a>Note  
- Il tipo è costituito da un `bitmask type` che descrive un oggetto in grado di archiviare la modalità di apertura per vari oggetti iostream. I valori flag distinti (elementi) sono:  
+### <a name="remarks"></a>Remarks  
   
-- **app**, per eseguire la ricerca alla fine di un flusso prima di ogni inserimento.  
+ The type is a `bitmask type` that describes an object that can store the opening mode for several iostreams objects. The distinct flag values (elements) are:  
   
-- **ate**, per eseguire la ricerca alla fine di un flusso quando il relativo oggetto di controllo viene inizialmente creato.  
+- **app**, to seek to the end of a stream before each insertion.  
   
-- **binary**, per leggere un file come flusso binario, anziché come flusso di testo.  
+- **ate**, to seek to the end of a stream when its controlling object is first created.  
   
-- **in**, per consentire l'estrazione da un flusso.  
+- **binary**, to read a file as a binary stream, rather than as a text stream.  
   
-- **out**, per consentire l'inserimento in un flusso.  
+- **in**, to permit extraction from a stream.  
   
-- **trunc**, per eliminare i contenuti di un file esistente quando viene creato l'oggetto di controllo.  
+- **out**, to permit insertion to a stream.  
   
-### <a name="example"></a>Esempio  
+- **trunc**, to delete contents of an existing file when its controlling object is created.  
+  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ios_base_openmode.cpp  
@@ -583,62 +646,58 @@ classe ios_base {
   
 int main ( )  
 {  
-using namespace std;  
-fstream file;  
-file.open( "rm.txt", ios_base::out | ios_base::trunc );  
-  
-file << "testing";  
-}  
-  
+    using namespace std;  
+    fstream file;  
+    file.open( "rm.txt", ios_base::out | ios_base::trunc );  
+    
+    file << "testing";  
+}    
 ```  
   
 ##  <a name="op_eq"></a>  ios_base::operator=  
- L'operatore di assegnazione per oggetti ios_base.  
+
+ The assignment operator for ios_base objects.  
   
 ```  
- 
-ios  
-_  
-base& operator=(const ios  
-_  
-base& 
-    right);
+ios_base& operator=(const ios_base& right);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `right`  
- Oggetto di tipo `ios_base`.  
+ An object of type `ios_base`.  
   
-### <a name="return-value"></a>Valore restituito  
- Oggetto destinatario dell'assegnazione.  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
- L'operatore copia le informazioni di formattazione archiviate e crea così una nuova copia delle matrici estendibili. Restituisce quindi **\*this**. Tenere presente che lo stack di callback non viene copiato.  
+ The object being assigned to.  
   
- Questo operatore viene usato solo dalle classi derivate da `ios_base`.  
+### <a name="remarks"></a>Remarks  
+  
+ The operator copies the stored formatting information, making a new copy of any extensible arrays. It then returns **\*this**. Note that the callback stack is not copied.  
+  
+ This operator is only used by classes derived from `ios_base`.  
   
 ##  <a name="precision"></a>  ios_base::precision  
- Specifica il numero di cifre da visualizzare in un numero a virgola mobile.  
+  
+ Specifies the number of digits to display in a floating-point number.  
   
 ```  
- 
 streamsize precision() const;
-
- 
 streamsize precision(streamsize _Prec);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `_Prec`  
- Numero di cifre significative da visualizzare o numero di cifre dopo il separatore decimale nella notazione fissa.  
+ The number of significant digits to display, or the number of digits after the decimal point in fixed notation.  
   
-### <a name="return-value"></a>Valore restituito  
- La prima funzione membro restituisce la [precisione di visualizzazione](../standard-library/ios-base-class.md) archiviata. La seconda funzione membro archivia `_Prec` nella precisione di visualizzazione e restituisce il relativo valore precedente archiviato.  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Note  
- I numeri a virgola mobile vengono visualizzati nella notazione fissa con la funzione [fixed](../standard-library/ios-functions.md#fixed).  
+ The first member function returns the stored [display precision](../standard-library/ios-base-class.md). The second member function stores `_Prec` in the display precision and returns its previous stored value.  
   
-### <a name="example"></a>Esempio  
+### <a name="remarks"></a>Remarks  
+  
+ Floating-point numbers are displayed in fixed notation with [fixed](../standard-library/ios-functions.md#fixed).  
+  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ios_base_precision.cpp  
@@ -647,74 +706,68 @@ streamsize precision(streamsize _Prec);
   
 int main( )  
 {  
-using namespace std;  
-float i = 31.31234F;  
-  
-cout.precision( 3 );  
-cout << i << endl;          // display three significant digits  
-cout << fixed << i << endl; // display three digits after decimal  
-// point  
+    using namespace std;  
+    float i = 31.31234F;  
+    
+    cout.precision( 3 );  
+    cout << i << endl;          // display three significant digits  
+    cout << fixed << i << endl; // display three digits after decimal  
+                                // point  
 }  
-  
 ```  
   
 ```Output  
-  
 31.3  
 31.312  
-  
 ```  
   
 ##  <a name="pword"></a>  ios_base::pword  
- Assegna un valore da archiviare come un `pword`.  
+  
+ Assigns a value to be stored as a `pword`.  
   
 ```  
- 
 void *& pword(int _Idx);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `_Idx`  
- Indice del valore da archiviare come `pword`.  
+ The index of the value to store as a `pword`.  
   
-### <a name="remarks"></a>Note  
- La funzione membro restituisce un riferimento all'elemento _ *Idx* della matrice estendibile con elementi di tipo puntatore `void`. Tutti gli elementi sono effettivamente presenti e archiviano inizialmente il puntatore Null. Il riferimento restituito non è valido dopo la chiamata successiva a `pword` per l'oggetto, dopo che l'oggetto viene modificato da una chiamata in **basic_ios::**[copyfmt](../standard-library/basic-ios-class.md#copyfmt) o dopo che l'oggetto viene eliminato.  
+### <a name="remarks"></a>Remarks  
   
- Se _ *Idx* è negativo o se per l'elemento non è disponibile un'archiviazione univoca, la funzione chiama [setstate](../standard-library/basic-ios-class.md#setstate)**(badbit)** e restituisce un riferimento che potrebbe non essere univoco.  
+ The member function returns a reference to element _ *Idx* of the extensible array with elements of type `void` pointer. All elements are effectively present and initially store the null pointer. The returned reference is invalid after the next call to `pword` for the object, after the object is altered by a call to **basic_ios::**[copyfmt](../standard-library/basic-ios-class.md#copyfmt), or after the object is destroyed.  
   
- Per ottenere un indice univoco, da usare con tutti gli oggetti di tipo `ios_base`, chiamare [xalloc](#xalloc).  
+ If _ *Idx* is negative, or if unique storage is unavailable for the element, the function calls [setstate](../standard-library/basic-ios-class.md#setstate)**(badbit)** and returns a reference that might not be unique.  
   
-### <a name="example"></a>Esempio  
-  Vedere [xalloc](#xalloc) per un esempio d'uso di `pword`.  
+ To obtain a unique index, for use across all objects of type `ios_base`, call [xalloc](#xalloc).  
+  
+### <a name="example"></a>Example  
+  
+  See [xalloc](#xalloc) for an example of using `pword`.  
   
 ##  <a name="register_callback"></a>  ios_base::register_callback  
- Specifica una funzione di callback.  
+  
+ Specifies a callback function.  
   
 ```  
- 
-void register  
-_  
-callback(
-    event 
-_  
-callback   
-pfn  ,  
-    int idx);
+void register_callback(
+    event_callback pfn, int idx);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pfn`  
- Puntatore alla funzione di callback.  
+ Pointer to the callback function.  
   
  `idx`  
- Numero definito dall'utente.  
+ A user-defined number.  
   
-### <a name="remarks"></a>Note  
- La funzione membro esegue il push della coppia `{``pfn`, `idx``}` nello stack di callback archiviato [callback stack](../standard-library/ios-base-class.md). Quando viene segnalato un evento di callback **ev**, le funzioni vengono chiamate, in ordine inverso del Registro di sistema, dall'espressione ( **\***`pfn`)( **ev**, ``**\*this**, ```idx`).  
+### <a name="remarks"></a>Remarks  
+  
+ The member function pushes the pair `{pfn, idx}` onto the stored callback stack [callback stack](../standard-library/ios-base-class.md). When a callback event **ev** is reported, the functions are called, in reverse order of registry, by the expression `(*pfn)(ev, *this, idx)`.  
  
-### <a name="example"></a>Esempio  
-```  
+### <a name="example"></a>Example  
   
+```cpp  
 // ios_base_register_callback.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -724,70 +777,69 @@ using namespace std;
   
 void callback1( ios_base::event e, ios_base& stream, int arg )  
 {  
-cout << "in callback1" << endl;  
-switch ( e )  
-{  
-case ios_base::erase_event:  
-cout << "an erase event" << endl;  
-break;  
-case ios_base::imbue_event:  
-cout << "an imbue event" << endl;  
-break;  
-case ios_base::copyfmt_event:  
-cout << "an copyfmt event" << endl;  
-break;  
-};  
+    cout << "in callback1" << endl;  
+    switch ( e )  
+    {  
+    case ios_base::erase_event:  
+        cout << "an erase event" << endl;  
+        break;  
+    case ios_base::imbue_event:  
+        cout << "an imbue event" << endl;  
+        break;  
+    case ios_base::copyfmt_event:  
+        cout << "an copyfmt event" << endl;  
+        break;  
+    };  
 }  
   
 void callback2( ios_base::event e, ios_base& stream, int arg )  
 {  
-cout << "in callback2" << endl;  
-switch ( e )  
-{  
-case ios_base::erase_event:  
-cout << "an erase event" << endl;  
-break;  
-case ios_base::imbue_event:  
-cout << "an imbue event" << endl;  
-break;  
-case ios_base::copyfmt_event:  
-cout << "an copyfmt event" << endl;  
-break;  
-};  
+    cout << "in callback2" << endl;  
+    switch ( e )  
+    {  
+    case ios_base::erase_event:  
+        cout << "an erase event" << endl;  
+        break;  
+    case ios_base::imbue_event:  
+        cout << "an imbue event" << endl;  
+        break;  
+    case ios_base::copyfmt_event:  
+        cout << "an copyfmt event" << endl;  
+        break;  
+    };  
 }  
   
 int main( )  
 {  
-// Make sure the imbue will not throw an exception  
-// assert( setlocale( LC_ALL, "german" )!=NULL );  
-  
-cout.register_callback( callback1, 0 );  
-cin.register_callback( callback2, 0 );  
-  
-try  
-{  
-// If no exception because the locale's not found,  
-// generate an imbue_event on callback1  
-cout.imbue(locale("german"));  
+    // Make sure the imbue will not throw an exception  
+    // assert( setlocale( LC_ALL, "german" )!=NULL );  
+    
+    cout.register_callback( callback1, 0 );  
+    cin.register_callback( callback2, 0 );  
+    
+    try  
+    {  
+        // If no exception because the locale's not found,  
+        // generate an imbue_event on callback1  
+        cout.imbue(locale("german"));  
+    }  
+    catch(...)  
+    {  
+        cout << "exception" << endl;  
+    }  
+    
+    // This will  
+    // (1) erase_event on callback1  
+    // (2) copyfmt_event on callback2  
+    cout.copyfmt(cin);  
+    
+    // We get two erase events from callback2 at the end because  
+    // both cin and cout have callback2 registered when cin and cout  
+    // are destroyed at the end of program.  
 }  
-catch(...)  
-{  
-cout << "exception" << endl;  
-}  
-  
-// This will  
-// (1) erase_event on callback1  
-// (2) copyfmt_event on callback2  
-cout.copyfmt(cin);  
-  
-// We get two erase events from callback2 at the end because  
-// both cin and cout have callback2 registered when cin and cout  
-// are destroyed at the end of program.  
-}  
-  
 ```  
-```Output  
   
+```Output  
 in callback1  
 an imbue event  
 in callback1  
@@ -798,38 +850,38 @@ in callback2
 an erase event  
 in callback2  
 an erase event  
-  
 ```  
  
 ##  <a name="seekdir"></a> ios_base::seekdir  
-    Specifies starting point for offset operations.  
-```  
   
+Specifies starting point for offset operations.  
+  
+```  
 namespace std {  
-class ios_base {  
-public:  
-typedef implementation-defined-enumerated-type seekdir;  
-static const seekdir beg;  
-static const seekdir cur;  
-static const seekdir end;  
-...  
-};  
+    class ios_base {  
+    public:  
+        typedef implementation-defined-enumerated-type seekdir;  
+        static const seekdir beg;  
+        static const seekdir cur;  
+        static const seekdir end;  
+        // ...  
+    };  
 }  
-  
 ```  
  
-### <a name="remarks"></a>Note  
-    The type is an enumerated type that describes an object that can store the seek mode used as an argument to the member functions of several iostream classes. The distinct flag values are:  
- 
-- **beg**,   per eseguire la ricerca (modifica della posizione di lettura o scrittura corrente) relativa all'inizio di una sequenza (array,   flusso   o file).  
- 
-- **cur**,   per eseguire la ricerca relativa alla posizione corrente all'interno di una sequenza.  
- 
-- **end**,   per eseguire la ricerca relativa alla fine di una sequenza.  
- 
-### <a name="example"></a>Esempio  
-```  
+### <a name="remarks"></a>Remarks  
   
+The type is an enumerated type that describes an object that can store the seek mode used as an argument to the member functions of several iostream classes. The distinct flag values are:  
+ 
+- **beg**,   to seek (alter the current read or write position) relative to the beginning of a sequence (array,   stream,   or file).  
+ 
+- **cur**,   to seek relative to the current position within a sequence.  
+ 
+- **end**,   to seek relative to the end of a sequence.  
+ 
+### <a name="example"></a>Example  
+  
+```cpp  
 // ios_base_seekdir.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -837,180 +889,169 @@ static const seekdir end;
   
 int main ( )  
 {  
-using namespace std;  
-fstream file;  
-file.open( "rm.txt", ios_base::out | ios_base::trunc );  
-  
-file << "testing";  
-file.seekp( 0, ios_base::beg );  
-file << "a";  
-file.seekp( 0, ios_base::end );  
-file << "a";  
+    using namespace std;  
+    fstream file;  
+    file.open( "rm.txt", ios_base::out | ios_base::trunc );  
+    
+    file << "testing";  
+    file.seekp( 0, ios_base::beg );  
+    file << "a";  
+    file.seekp( 0, ios_base::end );  
+    file << "a";  
 }  
-  
 ```  
- 
+  
 ##  <a name="setf"></a> ios_base::setf  
-    Sets the specified flags.  
-```  
   
+Sets the specified flags.  
+
+```    
 fmtflags setf(  
-fmtflags _Mask  
+    fmtflags _Mask  
 );  
 fmtflags setf(  
-fmtflags _Mask,  
-fmtflags _Unset  
+    fmtflags _Mask,  
+    fmtflags _Unset  
 );  
-  
 ```  
  
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `_Mask`  
-    Flag da attivare.  
+    The flags to turn on.  
  
- *_Unset* 
-    Flag da disattivare.  
+ *_Unset* The flags to turn off.  
  
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
     The previous format flags  
  
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
     The first member function effectively calls [flags](#flags)(_ *Mask* &#124; \_ *Flags*) (set selected bits) and then returns the previous format flags. The second member function effectively calls **flags**(\_ *Mask* **& fmtfl, flags& ~**`_Mask`) (replace selected bits under a mask) and then returns the previous format flags.  
  
-### <a name="example"></a>Esempio  
-```  
+### <a name="example"></a>Example  
   
+```cpp  
 // ios_base_setf.cpp  
 // compile with: /EHsc  
 #include <iostream>  
   
 int main( )  
 {  
-using namespace std;  
-int i = 10;  
-cout << i << endl;  
-  
-cout.unsetf( ios_base::dec );  
-cout.setf( ios_base::hex );  
-cout << i << endl;  
-  
-cout.setf( ios_base::dec );  
-cout << i << endl;  
-cout.setf( ios_base::hex, ios_base::dec );  
-cout << i << endl;  
+    using namespace std;  
+    int i = 10;  
+    cout << i << endl;  
+    
+    cout.unsetf( ios_base::dec );  
+    cout.setf( ios_base::hex );  
+    cout << i << endl;  
+    
+    cout.setf( ios_base::dec );  
+    cout << i << endl;  
+    cout.setf( ios_base::hex, ios_base::dec );  
+    cout << i << endl;  
 }  
-  
 ```  
  
 ##  <a name="sync_with_stdio"></a> ios_base::sync_with_stdio  
-    Ensures that iostream and C run-time library operations occur in the order that they appear in source code.  
-```  
   
-static bool sync  
-_  
-with  
-_  
-stdio(  
-   bool   
-_Sync  
-=true  
+Ensures that iostream and C run-time library operations occur in the order that they appear in source code.  
+  
+```  
+static bool sync_with_stdio(  
+   bool _Sync = true  
 );  
-  
 ```  
  
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `_Sync`  
-    Se tutti i flussi sono sincronizzati con **stdio**.  
+    Whether all streams are in sync with **stdio**.  
  
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
     Previous setting for this function.  
  
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
     The static member function stores a **stdio** sync flag, which is initially **true**. When **true**, this flag ensures that operations on the same file are properly synchronized between the [iostreams](../standard-library/iostreams-conventions.md) functions and those defined in the C++ Standard Library. Otherwise, synchronization may or may not be guaranteed, but performance may be improved. The function stores `_Sync` in the **stdio** sync flag and returns its previous stored value. You can call it reliably only before performing any operations on the standard streams.  
  
 ##  <a name="unsetf"></a> ios_base::unsetf  
-    Causes the specified flags to be off.  
-```  
   
+Causes the specified flags to be off.  
+  
+```  
 void unsetf(  
-   fmtflags   
-_Mask  
+   fmtflags _Mask  
 );  
-  
 ```  
  
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `_Mask`  
-    Flag che si vuole disattivare.  
+    The flags that you want off.  
  
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
     The member function effectively calls [flags](#flags)(`~`*_Mask* **& flags**) (clear selected bits).  
  
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
     See [ios_base::setf](#setf) for a sample of using `unsetf`.  
  
 ##  <a name="width"></a> ios_base::width  
-    Sets the length of the output stream.  
-```  
   
+Sets the length of the output stream.  
+  
+```  
 streamsize width( ) const;  
 streamsize width(  
-   streamsize   
-_Wide  
+   streamsize _Wide  
 );  
-  
 ```  
  
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `_Wide`  
-    Dimensione desiderata del flusso di output.  
+    The desired size of the output stream.  
  
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
+
     The current width setting.  
  
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
+
     The first member function returns the stored field width. The second member function stores `_Wide` in the field width and returns its previous stored value.  
  
-### <a name="example"></a>Esempio  
-```  
+### <a name="example"></a>Example  
   
+```cpp  
 // ios_base_width.cpp  
 // compile with: /EHsc  
 #include <iostream>  
   
 int main( ) {  
-using namespace std;  
-  
-cout.width( 20 );  
-cout << cout.width( ) << endl;  
-cout << cout.width( ) << endl;  
+    using namespace std;  
+    
+    cout.width( 20 );  
+    cout << cout.width( ) << endl;  
+    cout << cout.width( ) << endl;  
 }  
-  
 ```  
-```Output  
   
+```Output  
 20  
 0  
-  
 ```  
  
 ##  <a name="xalloc"></a> ios_base::xalloc  
+  
     Specifies that a variable is part of the stream.  
+  
 ```  
-  
 static int xalloc( );  
-  
 ```  
  
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
     The static member function returns a stored static value, which it increments on each call.  
  
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
     You can use the return value as a unique index argument when calling the member functions [iword](#iword) or [pword](#pword).  
  
-### <a name="example"></a>Esempio  
-```  
+### <a name="example"></a>Example  
   
+```cpp  
 // ios_base_xalloc.cpp  
 // compile with: /EHsc  
 // Lets you store user-defined information.  
@@ -1019,33 +1060,27 @@ static int xalloc( );
   
 int main( )  
 {  
-using namespace std;  
-  
-static const int i = ios_base::xalloc();  
-static const int j = ios_base::xalloc();  
-cout.iword( i ) = 11;  
-cin.iword( i ) = 13;  
-cin.pword( j ) = "testing";  
-cout << cout.iword( i ) << endl;  
-cout << cin.iword( i ) << endl;  
-cout << ( char * )cin.pword( j ) << endl;  
-}  
-  
+    using namespace std;  
+    
+    static const int i = ios_base::xalloc();  
+    static const int j = ios_base::xalloc();  
+    cout.iword( i ) = 11;  
+    cin.iword( i ) = 13;  
+    cin.pword( j ) = "testing";  
+    cout << cout.iword( i ) << endl;  
+    cout << cin.iword( i ) << endl;  
+    cout << ( char * )cin.pword( j ) << endl;  
+}    
 ```  
-```Output  
   
+```Output  
 11  
 13  
 testing  
-  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Programmazione di iostream](../standard-library/iostream-programming.md)   
- [Convenzioni di iostream](../standard-library/iostreams-conventions.md)
-
-
-
-
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [iostream Programming](../standard-library/iostream-programming.md)   
+ [iostreams Conventions](../standard-library/iostreams-conventions.md)
 

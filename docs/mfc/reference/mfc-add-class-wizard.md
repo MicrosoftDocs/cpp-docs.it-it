@@ -1,5 +1,5 @@
 ---
-title: Guidata aggiunta classe MFC | Documenti di Microsoft
+title: MFC Add Class Wizard | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,72 +34,72 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4fafe461008e3545243d693e0d9e34acd57163e0
-ms.openlocfilehash: 08d258c2b8386a4dd0c1d24c6ac6aa10f6c04a63
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c7960628af7aefae7647ec185e461abc3aac5852
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="mfc-add-class-wizard"></a>Creazione guidata aggiunta classe MFC
-Questa procedura guidata di codice per aggiungere una classe a un progetto MFC esistente o aggiungere una classe a un progetto ATL che supporta MFC. È inoltre possibile aggiungere classi MFC ai progetti Win32 che dispongono del supporto MFC. Le funzionalità specificate durante la creazione del progetto determinano le opzioni disponibili nella finestra di dialogo.  
+# <a name="mfc-add-class-wizard"></a>MFC Add Class Wizard
+Use this code wizard to add a class to an existing MFC project, or to add a class to an ATL project that supports MFC. You can also add MFC classes to Win32 projects that have MFC support. The features you specified when you created your project determine the options available in this dialog box.  
   
-## <a name="names"></a>Nomi  
- In questa pagina, specificare il nome della classe, la classe di base e i nomi di file per la nuova classe.  
+## <a name="names"></a>Names  
+ In this page, specify the class name, the base class, and file names for the new class.  
   
- **Nome della classe**  
- Specifica il nome della nuova classe e fornisce la base predefinita per i nomi di ID e i file in questa pagina. Le classi C++ iniziano in genere con "C", ad esempio, "CMyClass" diventa "MyClass", e così via.  
+ **Class name**  
+ Specifies the name of the new class and provides the default basis for the names of IDs and files on this page. C++ classes typically start with "C", so for example, "CMyClass" becomes "MyClass.h", and so on.  
   
- **Classe di base**  
- Specifica il nome della classe di base per la nuova classe. Per impostazione predefinita, la classe base è [CWnd](../../mfc/reference/cwnd-class.md). La classe di base selezionata determina se le altre caselle in questa pagina sono attive.  
+ **Base class**  
+ Specifies the name of the base class for the new class. By default, the base class is [CWnd](../../mfc/reference/cwnd-class.md). The base class you select determines whether other boxes on this page are active.  
   
- Il tipo di classe che è impostato come classe di base determina se la classe ha un ID di finestra di dialogo o un ID risorsa. I tipi generali di classi sono come segue:  
+ The type of class you set as the base class determines whether the class has a dialog ID or a resource ID. The general types of classes are as follows:  
   
--   Le classi quali [CButton](../../mfc/reference/cbutton-class.md), [CWnd](../../mfc/reference/cwnd-class.md), o [CDocument](../../mfc/reference/cdocument-class.md), che non richiedono una finestra di dialogo ID o ID di risorsa. Queste classi non utilizzano un ID di finestra di dialogo o risorsa. Se si seleziona una di queste classi per la classe base, il **ID di finestra di dialogo** casella e **ID risorsa DHTML** casella vengono visualizzati in grigio.  
+-   Classes such as [CButton](../../mfc/reference/cbutton-class.md), [CWnd](../../mfc/reference/cwnd-class.md), or [CDocument](../../mfc/reference/cdocument-class.md), which do not require a dialog ID or resource ID. These classes do not use a dialog or resource ID. If you select one of these classes for your base class, the **Dialog ID** box and the **DHTML resource ID** box are dimmed.  
   
--   Le classi quali [CDialog](../../mfc/reference/cdialog-class.md), [CFormView](../../mfc/reference/cformview-class.md), o [CPropertyPage](../../mfc/reference/cpropertypage-class.md), che richiedono un ID di finestra di dialogo.  
+-   Classes such as [CDialog](../../mfc/reference/cdialog-class.md), [CFormView](../../mfc/reference/cformview-class.md), or [CPropertyPage](../../mfc/reference/cpropertypage-class.md), which require a dialog ID.  
   
--   La classe [CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md), che richiede un ID di finestra di dialogo, un ID risorsa DHTML e un nome di file HTML.  
+-   The class [CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md), which requires a dialog ID, a DHTML resource ID, and an HTML file name.  
   
- Per le classi che richiedono un ID di finestra di dialogo, può risultare più efficiente utilizzare il [editor risorse](../../windows/resource-editors.md) per creare la risorsa finestra di dialogo, assegnare il relativo ID nel [finestra proprietà](/visualstudio/ide/reference/properties-window)e quindi creare una classe associata all'ID di risorsa. Vedere [la creazione di una nuova finestra di dialogo](../../windows/creating-a-new-dialog-box.md) per ulteriori informazioni sulla creazione di una finestra di dialogo standard di Windows.  
+ For classes requiring a dialog ID, you might find it more efficient to use the [Resource editor](../../windows/resource-editors.md) to create the dialog resource, assign its ID in the [Properties window](/visualstudio/ide/reference/properties-window), and then create a class associated with that resource ID. See [Creating a New Dialog Box](../../windows/creating-a-new-dialog-box.md) for more information on creating a standard Windows dialog box.  
   
 > [!NOTE]
->  Se si crea innanzitutto una risorsa finestra di dialogo e derivare la nuova classe da `CDHtmlDialog`, eliminare standard di Windows **OK** e **Annulla** pulsanti visualizzati nella finestra di dialogo predefinita. Nella finestra di dialogo standard di Windows si trova il DHTML form che contiene il proprio **OK** e **Annulla** pulsanti.  
+>  If you create a dialog resource first and derive its new class from `CDHtmlDialog`, delete the standard Windows **OK** and **Cancel** buttons that appear on the default dialog box. The standard Windows dialog box hosts the DHTML form, which contains its own **OK** and **Cancel** buttons.  
   
- Mentre la finestra di dialogo può contenere controlli Windows sia DHTML (controlli), non è consigliabile.  
+ While your dialog box can contain both Windows controls and DHTML controls, it is not recommended.  
   
- **ID finestra di dialogo**  
- Specifica l'ID della finestra di dialogo, se si seleziona `CDialog`, `CFormView`, `CPropertyPage`, o `CDHtmlDialog` come il **classe di Base**.  
+ **Dialog ID**  
+ Specifies the ID of the dialog, if you selected `CDialog`, `CFormView`, `CPropertyPage`, or `CDHtmlDialog` as the **Base class**.  
   
- **file con estensione h**  
- Imposta il nome del file di intestazione per la nuova classe dell'oggetto. Per impostazione predefinita, questo nome è basato sul nome fornito in **nome classe**. Fare clic sul pulsante con puntini di sospensione per salvare il nome del file nel percorso prescelto o per aggiungere la dichiarazione di classe a un file esistente. Se si sceglie un file esistente, il non verrà salvato nella posizione selezionata finché non si sceglie **fine** nella procedura guidata.  
+ **.h file**  
+ Sets the name of the header file for the new object's class. By default, this name is based on the name you provide in **Class name**. Click the ellipsis button to save the file name to the location of your choice, or to append the class declaration to an existing file. If you choose an existing file, the wizard will not save it to the selected location until you click **Finish** in the wizard.  
   
- La procedura guidata non sovrascrive un file. Se si seleziona il nome di un file esistente, quando si fa clic su **fine**, verrà richiesto di indicare se la dichiarazione di classe al contenuto del file. Fare clic su **Sì** per aggiungere il file, fare clic su **n** per tornare alla procedura guidata e specificare un altro nome di file.  
+ The wizard does not overwrite a file. If you select the name of an existing file, when you click **Finish**, the wizard prompts you to indicate whether the class declaration should be appended to the contents of the file. Click **Yes** to append the file; click **No** to return to the wizard and specify another file name.  
   
- **file con estensione cpp**  
- Imposta il nome del file di implementazione per la nuova classe dell'oggetto. Per impostazione predefinita, questo nome è basato sul nome fornito in **nome classe**. Fare clic sul pulsante con puntini di sospensione per salvare il nome del file nel percorso desiderato. Il file non viene salvato nel percorso selezionato fino a quando non si fa clic su **fine** nella procedura guidata.  
+ **.cpp file**  
+ Sets the name of the implementation file for the new object's class. By default, this name is based on the name you provide in **Class name**. Click the ellipsis button to save the file name to the location of your choice. The file is not saved to the selected location until you click **Finish** in the wizard.  
   
- La procedura guidata non sovrascrive un file. Se si seleziona il nome di un file esistente, quando si fa clic su **fine**, verrà richiesto di indicare se è necessario aggiungere l'implementazione della classe in base al contenuto del file. Fare clic su **Sì** per aggiungere il file, fare clic su **n** per tornare alla procedura guidata e specificare un altro nome di file.  
+ The wizard does not overwrite a file. If you select the name of an existing file, when you click **Finish**, the wizard prompts you to indicate whether the class implementation should be appended to the contents of the file. Click **Yes** to append the file; click **No** to return to the wizard and specify another file name.  
   
  **Active accessibility**  
- Abilita il supporto di MFC per Active Accessibility chiamando [EnableActiveAccessibility](../../mfc/reference/cwnd-class.md#enableactiveaccessibility) nel costruttore. Questa opzione è disponibile per le classi derivate da [CWnd](../../mfc/reference/cwnd-class.md).  
+ Enables MFC's support for Active Accessibility by calling [EnableActiveAccessibility](../../mfc/reference/cwnd-class.md#enableactiveaccessibility) in the constructor. This option is available for classes derived from [CWnd](../../mfc/reference/cwnd-class.md).  
   
- **ID risorsa DHTML**  
- Si applica alle classi derivate da `CDHtmlDialog` solo. Specifica l'ID risorsa della finestra di dialogo DHTML. L'ID di risorsa viene visualizzato nella sezione HTML del file RC del progetto, con il nome del file HTML della finestra di dialogo. La risorsa DHTML identificata da questo ID è contenuta nella finestra di dialogo, identificata da **ID di finestra di dialogo**.  
+ **DHTML resource ID**  
+ Applies to classes derived from `CDHtmlDialog` only. Specifies the resource ID of the DHTML dialog box. The resource ID appears in the HTML section of the project's .rc file, along with the HTML dialog box file name. The DHTML resource, identified by this ID, is hosted by the dialog box, identified by **Dialog ID**.  
   
- **. In formato HTM.**  
- Si applica alle classi derivate da `CDHtmlDialog` solo. Imposta il nome del file HTML per la finestra di dialogo DHTML. Per impostazione predefinita, questo nome di file è basato sul nome della classe. Il nome del file viene visualizzato nella sezione HTML del file RC del progetto, insieme all'ID di risorsa. casella finestra di dialogo DHTML  
+ **.HTM file**  
+ Applies to classes derived from `CDHtmlDialog` only. Sets the name of the HTML file for the DHTML dialog box. By default, this file name is based on the class name. The file name appears in the HTML section of the project's .rc file, along with the DHTML dialog box resource ID.  
   
- **Automazione**  
- Imposta il livello di classe di supporto per [automazione](../../mfc/automation.md). Automazione a livello di classe è disponibile per tutte le classi che supportano l'automazione. È inoltre disponibile per i progetti creati con il supporto per l'automazione. Vale a dire un progetto MFC che [supporto ATL](../../atl/reference/mfc-support-in-atl-projects.md), o un progetto MFC per cui è stata selezionata la **automazione** casella di controllo il [funzionalità avanzate](../../mfc/reference/advanced-features-mfc-application-wizard.md) pagina della creazione guidata applicazione MFC.  
+ **Automation**  
+ Sets the class level of support for [Automation](../../mfc/automation.md). Automation at the class level is available for all classes that support Automation. It is also available for projects created with support for Automation. That is, either an MFC project that [supports ATL](../../atl/reference/mfc-support-in-atl-projects.md), or an MFC project for which you selected the **Automation** check box in the [Advanced Features](../../mfc/reference/advanced-features-mfc-application-wizard.md) page of the MFC Application Wizard.  
   
-|Opzione|Descrizione|  
+|Option|Description|  
 |------------|-----------------|  
-|**None**|Indica che la classe non dispone di alcun supporto di automazione.|  
-|**Automazione**|Indica che la classe supporta l'automazione. Se si seleziona questa opzione, la classe appena creata è disponibile come oggetto programmabile dalle applicazioni client di automazione, ad esempio Microsoft Visual Basic e Microsoft Excel. Questa opzione non è disponibile per le classi base elencate dopo questa tabella.|  
-|**Creabile da ID tipo**|Indica che la classe e progetto supportare altre applicazioni di creazione di oggetti di questa classe utilizzando l'automazione. Con questa opzione, i client di automazione possono creare direttamente un oggetto di automazione. L'ID di tipo nella casella di testo viene utilizzato dall'applicazione client per specificare l'oggetto da creare; è a livello di sistema e deve essere univoco. Questa opzione non è disponibile per le classi base elencate dopo questa tabella.|  
+|**None**|Indicates that the class has no Automation support.|  
+|**Automation**|Indicates that the class supports Automation. If you select this option, the newly created class is available as a programmable object by Automation client applications, such as Microsoft Visual Basic and Microsoft Excel. This option is not available for the base classes listed after this table.|  
+|**Creatable by type ID**|Indicates that both the class and project support other applications creating objects of this class using Automation. With this option, automation clients can directly create an Automation object. The type ID in the text box is used by the client application to specify the object to be created; it is systemwide and must be unique. This option is not available for the base classes listed after this table.|  
   
- Supporto di automazione non è disponibile per le classi di base seguenti:  
+ Automation support is not available for the following base classes:  
   
 -   `CAsyncMonitorFile`  
   
@@ -123,15 +123,15 @@ Questa procedura guidata di codice per aggiungere una classe a un progetto MFC e
   
 -   `CSocket`  
   
- **ID tipo**  
- Imposta l'ID del tipo della classe. Il **ID tipo** casella concatena il nome del progetto e il nuovo nome della classe come segue: *ClasseMFC*. Questo ID è modificabile solo se è stato selezionato il **automazione** opzione **creabile da ID tipo**.  
+ **Type ID**  
+ Sets the type ID of the class. The **Type ID** box concatenates the project name and the new class name as follows: *MFCProj.MFCClass*. This ID is changeable only if you selected the **Automation** option **Creatable by type ID**.  
   
- **Genera risorse DocTemplate**  
- Indica che i documenti creati dall'applicazione dispongano di risorse modello di documento. Per attivare questa casella di controllo, il progetto deve supportare l'architettura documento/visualizzazione MFC e la classe base di questa classe deve essere [CFormView](../../mfc/reference/cformview-class.md).  
+ **Generate DocTemplate resources**  
+ Indicates that the documents created by the application have document template resources. To activate this check box, the project must support the MFC document/view architecture, and the base class of this class must be [CFormView](../../mfc/reference/cformview-class.md).  
   
- Vedere [modelli di documento e il processo di creazione documento/visualizzazione](../../mfc/document-templates-and-the-document-view-creation-process.md) per ulteriori informazioni.  
+ See [Document Templates and the Document/View Creation Process](../../mfc/document-templates-and-the-document-view-creation-process.md) for more information.  
   
-## <a name="see-also"></a>Vedere anche  
- [Classe MFC](../../mfc/reference/adding-an-mfc-class.md)   
- [Aggiunta di una classe](../../ide/adding-a-class-visual-cpp.md)
+## <a name="see-also"></a>See Also  
+ [MFC Class](../../mfc/reference/adding-an-mfc-class.md)   
+ [Adding a Class](../../ide/adding-a-class-visual-cpp.md)
 

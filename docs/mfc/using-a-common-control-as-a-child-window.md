@@ -1,43 +1,62 @@
 ---
-title: "Utilizzo di un controllo comune come finestra figlio | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "finestre figlio, controlli comuni come"
-  - "controlli comuni [C++], finestre figlio"
-  - "controlli [MFC], utilizzo come finestre figlio"
-  - "finestre [C++], controlli comuni come"
-  - "controlli comuni di Windows [C++], finestre figlio"
+title: Using a Common Control as a Child Window | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- controls [MFC], using as child windows
+- windows [MFC], common controls as
+- child windows [MFC], common controls as
+- common controls [MFC], child windows
+- Windows common controls [MFC], child windows
 ms.assetid: 608f7d47-7854-4fce-bde9-856c51e76753
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Utilizzo di un controllo comune come finestra figlio
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4062f4131bd6c00678e52f30f617ad41bbc31278
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-I controlli comuni di Windows possono essere utilizzati come finestra figlio di un'altra finestra.  Nella procedura seguente viene illustrato come creare dinamicamente un controllo comune e quindi utilizzare.  
+---
+# <a name="using-a-common-control-as-a-child-window"></a>Using a Common Control as a Child Window
+Any of the Windows common controls can be used as a child window of any other window. The following procedure describes how to create a common control dynamically and then work with it.  
   
-### Per utilizzare un controllo comune come finestra figlio  
+### <a name="to-use-a-common-control-as-a-child-window"></a>To use a common control as a child window  
   
-1.  Definire la classe o nel gestore correlata.  
+1.  Define the control in the related class or handler.  
   
-2.  Utilizzare override del controllo del metodo di [CWnd::Create](../Topic/CWnd::Create.md) per creare il controllo Windows.  
+2.  Use the control's override of the [CWnd::Create](../mfc/reference/cwnd-class.md#create) method to create the Windows control.  
   
-3.  Dopo che è stato creato il controllo \(fin dal gestore di `OnCreate` se è una sottoclasse il controllo\), è possibile modificare il controllo utilizzando le relative funzioni membro.  Vedere le descrizioni dei singoli controlli a [Controlli](../mfc/controls-mfc.md) per informazioni dettagliate sui metodi.  
+3.  After the control has been created (as early as the `OnCreate` handler if you subclass the control), you can manipulate the control using its member functions. See the descriptions of individual controls at [Controls](../mfc/controls-mfc.md) for details on methods.  
   
-4.  Al termine del controllo, utilizzare [CWnd::DestroyWindow](../Topic/CWnd::DestroyWindow.md) eliminare il controllo.  
+4.  When you are finished with the control, use [CWnd::DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow) to destroy the control.  
   
-## Vedere anche  
- [Creazione e utilizzo di controlli](../mfc/making-and-using-controls.md)   
- [Controlli](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Making and Using Controls](../mfc/making-and-using-controls.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

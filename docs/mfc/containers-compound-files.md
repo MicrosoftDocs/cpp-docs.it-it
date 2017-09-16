@@ -1,91 +1,109 @@
 ---
-title: "Contenitori: file composti | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "modalità di accesso per file [C++]"
-  - "documenti compositi"
-  - "file compositi"
-  - "contenitori [C++], file compositi"
-  - "documenti [C++], composito"
-  - "documenti [C++], OLE"
-  - "file [C++], composito"
-  - "contenitori OLE, file compositi"
-  - "OLE (documenti), file compositi"
-  - "prestazioni [C++], file compositi"
-  - "file compositi di struttura file standardizzata"
+title: 'Containers: Compound Files | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- compound files [MFC]
+- compound documents
+- containers [MFC], compound files
+- OLE documents [MFC], compound files
+- performance [MFC], compound files
+- files [MFC], compound
+- standardized file structure compound files
+- documents [MFC], compound
+- documents [MFC], OLE
+- OLE containers [MFC], compound files
+- access modes for files [MFC]
 ms.assetid: 8b83cb3e-76c8-4bbe-ba16-737092b36f49
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Contenitori: file composti
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 96b38a2eddce7e26cf20834e2b7bc32cfb681b59
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-In questo articolo viene componenti e l'implementazione dei file composte e i vantaggi e gli svantaggi di utilizzare i file compositi nelle applicazioni OLE.  
+---
+# <a name="containers-compound-files"></a>Containers: Compound Files
+This article explains the components and implementation of compound files and the advantages and disadvantages of using compound files in your OLE applications.  
   
- I file composte sono parte integrante di OLE.  Vengono utilizzati per facilitare il trasferimento dei dati e la creazione di archivi di documenti OLE.  I file composita è un'implementazione del modello di un'archiviazione strutturata attivo.  Le interfacce coerenti esistono la serializzazione di supporto a un'archiviazione, in un flusso, o a un oggetto file.  I file composte sono supportati nella libreria MFC dalle classi `COleStreamFile` e `COleDocument`.  
+ Compound files are an integral part of OLE. They are used to facilitate data transfer and OLE document storage. Compound files are an implementation of the Active structured storage model. Consistent interfaces exist that support serialization to a storage, a stream, or a file object. Compound files are supported in the Microsoft Foundation Class Library by the classes `COleStreamFile` and `COleDocument`.  
   
 > [!NOTE]
->  Utilizzo di un file composto non implica che le informazioni provengano da un documento OLE o da un documento composto.  I file composte sono solo uno dei modi l'archiviazione dei documenti composti, documenti OLE e altri dati.  
+>  Using a compound file does not imply that the information comes from an OLE document or a compound document. Compound files are just one of the ways to store compound documents, OLE documents, and other data.  
   
-##  <a name="_core_components_of_a_compound_file"></a> Componenti di un file composto  
- L'implementazione OLE dei file composte utilizza tre tipi di oggetto: oggetti flusso, oggetti di archiviazione e oggetti di `ILockBytes`.  Questi oggetti sono simili ai componenti di un file system standard nei modi seguenti:  
+##  <a name="_core_components_of_a_compound_file"></a> Components of a Compound File  
+ The OLE implementation of compound files uses three object types: stream objects, storage objects, and `ILockBytes` objects. These objects are similar to the components of a standard file system in the following ways:  
   
--   Gli oggetti flusso, quali file, dati di qualsiasi tipo.  
+-   Stream objects, like files, store data of any type.  
   
--   Gli oggetti di archiviazione, quali le directory, possono contenere altri archiviazione e oggetti flusso.  
+-   Storage objects, like directories, can contain other storage and stream objects.  
   
--   Gli oggetti di**LockBytes** rappresentano l'interfaccia tra gli oggetti di archiviazione e l'hardware fisico.  Determinano quali i byte vengono scritti qualsiasi dispositivo di archiviazione l'oggetto di **LockBytes** accede, ad esempio un disco rigido o un'area della memoria globale.  Per ulteriori informazioni sugli oggetti di **LockBytes** e sull'interfaccia di `ILockBytes`, fare *riferimento ai programmatori OLE*.  
+-   **LockBytes** objects represent the interface between the storage objects and the physical hardware. They determine how the actual bytes are written to whatever storage device the **LockBytes** object is accessing, such as a hard drive or an area of global memory. For more information about **LockBytes** objects and the `ILockBytes` interface, see the *OLE Programmer's Reference*.  
   
-##  <a name="_core_advantages_and_disadvantages_of_compound_files"></a> Vantaggi e svantaggi dei file compositi  
- I file composte offrono i vantaggi non disponibili con i metodi precedenti di archiviazione dei file.  tra cui:  
+##  <a name="_core_advantages_and_disadvantages_of_compound_files"></a> Advantages and Disadvantages of Compound Files  
+ Compound files provide benefits not available with earlier methods of file storage. They include:  
   
--   Accedere a incrementale del file.  
+-   Incremental file accessing.  
   
--   Modalità di accesso ai file.  
+-   File access modes.  
   
--   Normalizzazione della struttura di file.  
+-   Standardization of file structure.  
   
- Svantaggi dei potenziali file compositi \- grandi e problemi di prestazioni correlati a archiviazione su dischetti \- quando si decide se utilizzarli nell'applicazione.  
+ The potential disadvantages of compound files — large size and performance issues relating to storage on floppy discs — should be considered when deciding whether to use them in your application.  
   
-###  <a name="_core_incremental_access_to_files"></a> Accesso ai file incrementale  
- L'accesso ai file incrementale è un vantaggio automatico di utilizzo dei file compositi.  Poiché un file composito può essere visualizzato come "file system in un file," singoli tipi di oggetto, ad esempio il flusso o archiviazione, è possibile accedervi senza che sia necessario caricare l'intero file.  Ciò può ridurre notevolmente il tempo che un'applicazione deve accedere ai nuovi oggetti per modificare dall'utente.  L'aggiornamento incrementale, in base allo stesso concetto, offre i vantaggi simili.  Anziché salvare l'intero file appena per salvare le modifiche apportate a un oggetto, OLE salva solo il flusso o l'oggetto di archiviazione modificato dall'utente.  
+###  <a name="_core_incremental_access_to_files"></a> Incremental Access to Files  
+ Incremental access to files is an automatic benefit of using compound files. Because a compound file can be viewed as a "file system within a file," individual object types, such as stream or storage, can be accessed without the need to load the entire file. This can dramatically decrease the time an application needs to access new objects for editing by the user. Incremental updating, based on the same concept, offers similar benefits. Instead of saving the entire file just to save the changes made to one object, OLE saves only the stream or storage object edited by the user.  
   
-###  <a name="_core_file_access_modes"></a> Modalità di accesso ai file  
- In grado di determinare quando le modifiche agli oggetti in un file composto vengono associate al disco è un altro vantaggio dell'utilizzo dei file compositi.  La modalità in cui i file vengono aperti, processo o l'intestazione preferences, determina quando le modifiche sono completate.  
+###  <a name="_core_file_access_modes"></a> File Access Modes  
+ Being able to determine when changes to objects in a compound file are committed to disk is another benefit of using compound files. The mode in which files are accessed, either transacted or direct, determines when changes are committed.  
   
--   La modalità transazionale utilizza un'operazione in due fasi di commit per apportare modifiche agli oggetti in un file composto, quindi vengono entrambe le copie meno che le funzionalità nuove del documento disponibili finché l'utente non utilizzare per salvare o annullare le modifiche.  
+-   Transacted mode uses a two-phase commit operation to make changes to objects in a compound file, thereby keeping both the old and the new copies of the document available until the user chooses to either save or undo the changes.  
   
--   La modalità diretta include le modifiche apportate al documento mentre vengono effettuate, senza la possibilità successivamente di annullarle.  
+-   Direct mode incorporates changes to the document as they are made, without the ability to later undo them.  
   
- Per ulteriori informazioni sulle modalità di accesso, fare *riferimento ai programmatori OLE*.  
+ For more information about access modes, see the *OLE Programmer's Reference*.  
   
-###  <a name="_core_standardization"></a> Normalizzazione  
- La struttura standard dei file compositi consente alle applicazioni OLE diversi spostarsi tra i file compositi creati dall'applicazione OLE senza conoscenza dell'applicazione che effettivamente ha creato il file.  
+###  <a name="_core_standardization"></a> Standardization  
+ The standardized structure of compound files allows different OLE applications to browse through compound files created by your OLE application with no knowledge of the application that actually created the file.  
   
-###  <a name="_core_size_and_performance_considerations"></a> Dimensione e considerazioni sulle prestazioni  
- A causa della complessità della struttura di archiviazione composta del file e la possibilità di salvare i dati in modo incrementale, i file utilizzando il formato tendono a essere maggiori di altri file mediante l'archiviazione di file" non strutturata o "piano.  Se l'applicazione carica frequentemente e salvare i file, utilizzando i file compositi può determinare le dimensioni del file di aumentare notevolmente più rapidamente i file di noncompound.  Poiché i file compositi possono ottenere grandi dimensioni, il tempo di accesso per i file è stato memorizzato su e caricare dai dischi floppy può verificarsi problemi, conferendo un accesso più lento nei file.  
+###  <a name="_core_size_and_performance_considerations"></a> Size and Performance Considerations  
+ Because of the complexity of the compound file storage structure and the ability to save data incrementally, files using this format tend to be larger than other files using unstructured or "flat file" storage. If your application frequently loads and saves files, using compound files can cause the file size to increase much more quickly than noncompound files. Because compound files can get large, the access time for files stored on and loaded from floppy disks can also be affected, resulting in slower access to files.  
   
- Un altro problema che influisce sulle prestazioni è frammentazione di composto\- file.  La dimensione di un file composto è determinata dalla differenza tra la prima e gli ultimi aree del disco utilizzato dal file.  Un file frammentato può contenere molte aree di spazio disponibile che non contengono dati, ma viene conteggiato quando si calcola le dimensioni.  Durante un file composito, queste aree vengono create dall'inserimento o eliminazione degli oggetti di archiviazione.  
+ Another issue that affects performance is compound-file fragmentation. The size of a compound file is determined by the difference between the first and last disk sectors used by the file. A fragmented file can contain many areas of free space that do not contain data, but are counted when calculating the size. During the lifetime of a compound file, these areas are created by the insertion or deletion of storage objects.  
   
-##  <a name="_core_using_compound_files_format_for_your_data"></a> Utilizzando il formato di file composto per i dati  
- Dopo aver creare un'applicazione con una classe di documento è derivato da `COleDocument`, assicurarsi che il costruttore del documento principale chiama `EnableCompoundFile`.  Quando la creazione guidata applicazione crea applicazioni del contenitore OLE, questa chiamata viene inserita automaticamente.  
+##  <a name="_core_using_compound_files_format_for_your_data"></a> Using Compound Files Format for Your Data  
+ After successfully creating an application that has a document class derived from `COleDocument`, ensure that your main document constructor calls `EnableCompoundFile`. When the application wizard creates OLE container applications, this call is inserted for you.  
   
- *Nel riferimento del programmatore OLE*, vedere [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034), [IStorage](http://msdn.microsoft.com/library/windows/desktop/aa380015) e [ILockBytes](http://msdn.microsoft.com/library/windows/desktop/aa379238).  
+ In the *OLE Programmer's Reference*, see [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034), [IStorage](http://msdn.microsoft.com/library/windows/desktop/aa380015), and [ILockBytes](http://msdn.microsoft.com/library/windows/desktop/aa379238).  
   
-## Vedere anche  
- [Contenitori](../mfc/containers.md)   
- [Contenitori: problemi dell'interfaccia utente](../mfc/containers-user-interface-issues.md)   
+## <a name="see-also"></a>See Also  
+ [Containers](../mfc/containers.md)   
+ [Containers: User-Interface Issues](../mfc/containers-user-interface-issues.md)   
  [COleStreamFile Class](../mfc/reference/colestreamfile-class.md)   
  [COleDocument Class](../mfc/reference/coledocument-class.md)
+

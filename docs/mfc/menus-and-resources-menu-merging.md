@@ -1,68 +1,85 @@
 ---
-title: "Menu e risorse: unione di menu | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "coordinamento dei layout dei menu"
-  - "menu [C++], applicazioni documento OLE"
-  - "unione della barra degli strumenti e della barra di stato"
-  - "contenitori OLE, menu e risorse"
-  - "barre di stato, applicazioni documento OLE"
-  - "barre degli strumenti [C++], applicazioni documento OLE"
-  - "modifica visiva, risorse e menu di applicazione"
+title: 'Menus and Resources: Menu Merging | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- status bars [MFC], OLE document applications
+- visual editing [MFC], application menus and resources
+- coordinating menu layouts [MFC]
+- OLE containers [MFC], menus and resources
+- toolbars [MFC], OLE document applications
+- merging toolbar and status bar [MFC]
+- menus [MFC], OLE document applications
 ms.assetid: 80b6bb17-d830-4122-83f0-651fc112d4d1
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Menu e risorse: unione di menu
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: eba298c25c4be89d83913ff35f2f4d0af9e9f91d
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Questo articolo vengono illustrate le operazioni necessarie per le applicazioni OLE documento gestione della modifica visiva e l'attivazione sul posto correttamente.  L'attivazione sul posto vengono poste serie problematiche una sfida per le applicazioni server che contenitore \(component\).  L'utente rimane nella stessa finestra cornice \(nel contesto del documento contenitore\) ma in realtà esegue un'altra applicazione \(il server\).  Ciò richiede la coordinazione tra le risorse del contenitore e le applicazioni server.  
+---
+# <a name="menus-and-resources-menu-merging"></a>Menus and Resources: Menu Merging
+This article details the steps necessary for OLE document applications to handle visual editing and in-place activation properly. In-place activation poses a challenge for both container and server (component) applications. The user remains in the same frame window (within the context of the container document) but is actually running another application (the server). This requires coordination between the resources of the container and server applications.  
   
- Gli argomenti trattati in questo articolo sono:  
+ Topics covered in this article include:  
   
--   [Layout del menu](#_core_menu_layouts)  
+- [Menu Layouts](#_core_menu_layouts)  
   
--   [Barre degli strumenti e barre di stato](#_core_toolbars_and_status_bars)  
+- [Toolbars and Status Bars](#_core_toolbars_and_status_bars)  
   
-##  <a name="_core_menu_layouts"></a> Layout del menu  
- Il primo passaggio consiste di coordinare i layout di menu.  Per ulteriori informazioni, vedere la sezione di **Creazione menu** in [Considerazioni sulla programmazione di menu](https://msdn.microsoft.com/en-us/library/ms647557.aspx) in [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+##  <a name="_core_menu_layouts"></a> Menu Layouts  
+ The first step is to coordinate menu layouts. For more information, see the **Menu Creation** section in [Menu Programming Considerations](https://msdn.microsoft.com/library/ms647557.aspx) in the Windows SDK.  
   
- Le applicazioni contenitori devono creare un nuovo menu da utilizzare solo quando gli elementi incorporati vengono attivati sul posto.  Come minimo, questo menu è costituito di seguito, nell'ordine indicato:  
+ Container applications should create a new menu to be used only when embedded items are activated in place. At the minimum, this menu should consist of the following, in the order listed:  
   
-1.  Menu File identico a quello utilizzato quando i file vengono aperti. \(In genere nessun'altra voce di menu è posizionato prima dell'elemento successivo.\)  
+1.  File menu identical to the one used when files are open. (Usually no other menu items are placed before the next item.)  
   
-2.  Separatore due consecutivi.  
+2.  Two consecutive separators.  
   
-3.  Finestra identica a quella utilizzata quando i file vengono aperti \(solo se l'applicazione contenitore in un'applicazione MDI\).  Alcune applicazioni possono disporre gli altri menu, ad esempio un menu di opzioni, appartenenti a questo gruppo, che rimane nel menu quando un elemento incorporato viene attivato sul posto.  
+3.  Window menu identical to the one used when files are open (only if the container application in an MDI application). Some applications may have other menus, such as an Options menu, that belong in this group, which remains on the menu when an embedded item is activated in place.  
   
     > [!NOTE]
-    >  Può contenere altri menu che influiscono sulla visualizzazione del documento contenitore, ad esempio zoom.  Questi menu contenitore viene visualizzato tra i due cifre in questa risorsa menu.  
+    >  There may be other menus that affect the view of the container document, such as Zoom. These container menus appear between the two separators in this menu resource.  
   
- Le applicazioni \(componenti server\) devono inoltre possibile creare un nuovo menu in modo specifico per l'attivazione sul posto.  Deve essere simile al menu utilizzato quando i file vengono aperti, ma senza voci di menu, ad esempio il file e finestra che modificano il documento server invece di dati.  In genere, questo menu è costituito dai seguenti:  
+ Server (component) applications should also create a new menu specifically for in-place activation. It should be like the menu used when files are open, but without menu items, such as File and Window that manipulate the server document instead of the data. Typically, this menu consists of the following:  
   
-1.  Menu Modifica identico a quello utilizzato quando i file vengono aperti.  
+1.  Edit menu identical to the one used when files are open.  
   
-2.  Separatore.  
+2.  Separator.  
   
-3.  Menu modifica dell'oggetto, ad esempio il menu della penna nell'esempio scribble.  
+3.  Object editing menus, such as the Pen menu in the Scribble sample application.  
   
-4.  Separatore.  
+4.  Separator.  
   
-5.  Menu?.  
+5.  Help menu.  
   
- Per un esempio, consultare il layout di un menu sul posto di esempio per un contenitore e un server.  I dettagli di ogni voce di menu sono stati rimossi per eseguire il più chiara di esempio.  Il menu sul posto contenitore ha le voci seguenti:  
+ For an example, look at the layout of some sample in-place menus for a container and a server. The details of each menu item have been removed to make the example clearer. The container's in-place menu has the following entries:  
   
 ```  
 IDR_CONTAINERTYPE_CNTR_IP MENU PRELOAD DISCARDABLE   
@@ -76,7 +93,7 @@ BEGIN
 END  
 ```  
   
- I separatori consecutivi indicano dove la prima parte del menu del server deve essere inserito.  Ora consultare il menu sul posto del server:  
+ The consecutive separators indicate where the first part of the server's menu should go. Now look at the server's in-place menu:  
   
 ```  
 IDR_SERVERTYPE_SRVR_IP MENU PRELOAD DISCARDABLE   
@@ -89,7 +106,7 @@ BEGIN
 END  
 ```  
   
- I divisori di seguito indicano dove il secondo gruppo di voci di menu contenitore deve essere inserito.  La struttura risultante del menu quando un oggetto dal server si trova sul posto attivato nell'aspetto di tale contenitore al seguente:  
+ The separators here indicate where the second group of container menu items should go. The resulting menu structure when an object from this server is activated in place inside this container looks like this:  
   
 ```  
 BEGIN  
@@ -103,19 +120,21 @@ BEGIN
 END  
 ```  
   
- Come si può notare, separatori sono stati sostituiti con i gruppi diversi di menu di ogni applicazione.  
+ As you can see, the separators have been replaced with the different groups of each application's menu.  
   
- Le tabelle dei tasti di scelta rapida associati al menu sul posto devono essere fornite dall'applicazione server.  Il contenitore di incorporerà nelle rispettive tabelle dei tasti di scelta rapida.  
+ Accelerator tables associated with the in-place menu should also be supplied by the server application. The container will incorporate them into its own accelerator tables.  
   
- Quando un elemento incorporato viene attivato sul posto, il framework carica il menu sul posto.  Chiede quindi l'applicazione server per il relativo menu l'attivazione sul posto e la inserisce in cui i separatori vengono.  In questo modo i menu combinati.  Ottenere i menu del contenitore per l'esecuzione sulla posizione della finestra e di file e ottenere i menu del server da eseguire nell'elemento.  
+ When an embedded item is activated in place, the framework loads the in-place menu. It then asks the server application for its menu for in-place activation and inserts it where the separators are. This is how the menus combine. You get menus from the container for operating on the file and window placement, and you get menus from the server for operating on the item.  
   
-##  <a name="_core_toolbars_and_status_bars"></a> Barre degli strumenti e barre di stato  
- Le applicazioni server è necessario creare una nuova barra degli strumenti e archiviare la bitmap in un file separato.  Le applicazioni generate mediante la creazione guidata applicazione archiviano questa bitmap in un file denominato ITOOLBAR.BMP.  La nuova barra degli strumenti sostituisce la barra degli strumenti dell'applicazione contenitore quando l'elemento del server viene attivato il posto e deve contenere gli stessi elementi della barra degli strumenti standard, ma rimuove le icone che rappresentano elementi nelle finestre e dei file.  
+##  <a name="_core_toolbars_and_status_bars"></a> Toolbars and Status Bars  
+ Server applications should create a new toolbar and store its bitmap in a separate file. The application wizard-generated applications store this bitmap in a file called ITOOLBAR.BMP. The new toolbar replaces the container application's toolbar when your server's item is activated in place, and should contain the same items as your normal toolbar, but remove icons representing items on the File and Window menus.  
   
- Questa barra degli strumenti viene caricata nel `COleIPFrameWnd`\- classe derivata, creata automaticamente dalla creazione guidata applicazioni.  La barra di stato viene gestita dall'applicazione contenitore.  Per ulteriori informazioni sull'implementazione delle finestre cornici sul posto, vedere [Server: Implementazione di un server](../mfc/servers-implementing-a-server.md).  
+ This toolbar is loaded in your `COleIPFrameWnd`-derived class, created for you by the application wizard. The status bar is handled by the container application. For more information on the implementation of in-place frame windows, see [Servers: Implementing a Server](../mfc/servers-implementing-a-server.md).  
   
-## Vedere anche  
- [Menu e risorse \(OLE\)](../mfc/menus-and-resources-ole.md)   
- [Attivazione](../mfc/activation-cpp.md)   
- [Server](../mfc/servers.md)   
- [Contenitori](../mfc/containers.md)
+## <a name="see-also"></a>See Also  
+ [Menus and Resources (OLE)](../mfc/menus-and-resources-ole.md)   
+ [Activation](../mfc/activation-cpp.md)   
+ [Servers](../mfc/servers.md)   
+ [Containers](../mfc/containers.md)
+
+

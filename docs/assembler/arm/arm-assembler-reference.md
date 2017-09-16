@@ -1,7 +1,7 @@
 ---
 title: ARM Assembler Reference | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 08/28/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -30,13 +30,14 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 42f71d9a24175d13205ec09ae7bcc90f0eb8a614
-ms.openlocfilehash: a3a472b4dd56848d63ef225bd0b0c083ef0353e2
+ms.sourcegitcommit: 22000a296568c01082c9aef5ceaac8f266bcad5c
+ms.openlocfilehash: 8140568a7ecc7588a546ab1b759e8eaa599e7383
 ms.contentlocale: it-it
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="arm-assembler-reference"></a>ARM Assembler Reference
+
 The articles in this section of the documentation provide reference material for the Microsoft ARM assembler (armasm) and related tools.  
   
 ## <a name="related-articles"></a>Related Articles  
@@ -50,6 +51,7 @@ The articles in this section of the documentation provide reference material for
 |[ARM Compiler armasm User Guide](https://developer.arm.com/search#q=ARM%20Compiler%20armasm%20User%20Guide) on the ARM Developer website.|Choose a recent version to find up-to-date information about the ARM assembly language. **Note:**  The "armasm" assembler that is referred to on the ARM Developer website is not the Microsoft armasm assembler that is included in Visual Studio and is documented in this section.|  
   
 ## <a name="see-also"></a>See Also  
+
  [ARM Intrinsics](../../intrinsics/arm-intrinsics.md)   
  [Compiler Intrinsics](../../intrinsics/compiler-intrinsics.md)
 

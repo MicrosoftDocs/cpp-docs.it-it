@@ -1,50 +1,69 @@
 ---
-title: "Implementazione di aree di lavoro nei controlli List | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controlli elenco, aree di lavoro"
-  - "aree di lavoro nel controllo elenco"
+title: Implementing Working Areas in List Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- list controls [MFC], working areas
+- working areas in list control [MFC]
 ms.assetid: fbbb356b-3359-4348-8603-f1cb114cadde
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Implementazione di aree di lavoro nei controlli List
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a6e1f2eea1f21dfef17389e5534107c0ba15c41e
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Per impostazione predefinita, un controllo elenco sono presenti tutti gli elementi in un modo standard della griglia.  Tuttavia, un altro metodo è supportato, aree di lavoro, che dispone gli elementi di elenco in gruppi rettangolari.  Per un'immagine di un controllo elenco che implementa le aree di lavoro, vedere utilizzo di controlli di visualizzazione elenchi in [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+---
+# <a name="implementing-working-areas-in-list-controls"></a>Implementing Working Areas in List Controls
+By default, a list control arranges all items in a standard grid fashion. However, another method is supported, working areas, that arranges the list items into rectangular groups. For an image of a list control that implements working areas, see Using List-View Controls in the Windows SDK.  
   
 > [!NOTE]
->  Aree di lavoro sono visibili solo quando il controllo elenco è una piccola o in modalità piccola icona.  Tuttavia, tutte le aree di lavoro correnti vengono gestite se la visualizzazione viene passata alla modalità elenco o del rapporto.  
+>  Working areas are visible only when the list control is in icon or small icon mode. However, any current working areas are maintained if the view is switched to the report or list mode.  
   
- Aree di lavoro possono essere utilizzate per visualizzare un bordo vuoto \(a sinistra, in alto e\/o a destra degli elementi\), o di una barra di scorrimento orizzontale a essere visualizzata quando sono in genere non sarebbe una.  Un altro utilizzo comune consiste nella creazione di più aree di lavoro a cui gli elementi possono essere spostati o eliminati.  Con questo metodo, è possibile creare aree in un'unica visualizzazione che hanno significati diversi.  L'utente può quindi classificare gli elementi posizionandoli in un'area diversa.  Un esempio è dato da una visualizzazione di un file system con un'area per i file di lettura\/scrittura \/scritturi e un'altra area per i file di sola lettura.  Se un elemento del file è stato trasferito nell'area di sola lettura, automaticamente diventa di sola lettura.  Lo spostamento di un file dall'area di sola lettura nell'area lettura \/scrittura farebbe in lettura\/scrittura del file.  
+ Working areas can be used to display an empty border (on the left, top and/or right of the items), or cause a horizontal scroll bar to be displayed when there normally wouldn't be one. Another common usage is to create multiple working areas to which items can be moved or dropped. With this method, you could create areas in a single view that have different meanings. The user could then categorize the items by placing them in a different area. An example of this would be a view of a file system that has an area for read/write files and another area for read-only files. If a file item were moved into the read-only area, it would automatically become read-only. Moving a file from the read-only area into the read/write area would make the file read/write.  
   
- `CListCtrl` fornisce numerose funzioni membro per creare e gestire le aree di lavoro nel controllo elenco.  [GetWorkAreas](../Topic/CListCtrl::GetWorkAreas.md) e [SetWorkAreas](../Topic/CListCtrl::SetWorkAreas.md) recuperare e impostare una matrice di oggetti di `CRect` o più strutture di `RECT` \), che archiviano le aree di lavoro attualmente implementate per il controllo elenco.  Inoltre, [GetNumberOfWorkAreas](../Topic/CListCtrl::GetNumberOfWorkAreas.md) recupera il numero corrente delle aree di lavoro per il controllo elenco \(per impostazione predefinita, zero\).  
+ `CListCtrl` provides several member functions for creating and managing working areas in your list control. [GetWorkAreas](../mfc/reference/clistctrl-class.md#getworkareas) and [SetWorkAreas](../mfc/reference/clistctrl-class.md#setworkareas) retrieve and set an array of `CRect` objects (or `RECT` structures), which store the currently implemented working areas for your list control. In addition, [GetNumberOfWorkAreas](../mfc/reference/clistctrl-class.md#getnumberofworkareas) retrieves the current number of working areas for your list control (by default, zero).  
   
-## Elementi e aree di lavoro  
- Quando un'area di lavoro viene creata, gli elementi che fanno parte dell'area di lavoro diventano membri.  Analogamente, se un elemento viene spostato in un'altra area di lavoro, diventa un membro dell'area di lavoro in cui è stata spostata.  Se un elemento non si trova all'interno di qualsiasi area di lavoro, quest'ultimo diventa automaticamente un membro della prima \(indice 0\) area di lavoro.  Se si desidera creare un elemento e selezionare posizionare in un'area di lavoro specifica, è necessario creare l'elemento quindi spostarla nell'area di lavoro desiderata con una chiamata a [SetItemPosition](../Topic/CListCtrl::SetItemPosition.md).  Il secondo esempio seguente viene illustrata questa tecnica.  
+## <a name="items-and-working-areas"></a>Items and Working Areas  
+ When a working area is created, items that lie within the working area become members of it. Similarly, if an item is moved into a working area, it becomes a member of the working area to which it was moved. If an item does not lie within any working area, it automatically becomes a member of the first (index 0) working area. If you want to create an item and have it placed within a specific working area, you will need to create the item and then move it into the desired working area with a call to [SetItemPosition](../mfc/reference/clistctrl-class.md#setitemposition). The second example below demonstrates this technique.  
   
- Nell'esempio seguente viene implementata quattro aree di lavoro \(`rcWorkAreas`\), di dimensioni uguale a un pixel a l 10 bordo intorno a ogni area di lavoro, in un controllo elenco \(`m_WorkAreaListCtrl`\).  
+ The following example implements four working areas (`rcWorkAreas`), of equal size with a 10-pixel-wide border around each working area, in a list control (`m_WorkAreaListCtrl`).  
   
- [!code-cpp[NVC_MFCControlLadenDialog#20](../mfc/codesnippet/CPP/implementing-working-areas-in-list-controls_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#20](../mfc/codesnippet/cpp/implementing-working-areas-in-list-controls_1.cpp)]  
   
- La chiamata a [ApproximateViewRect](../Topic/CListCtrl::ApproximateViewRect.md) è stata effettuata per ottenere una stima della superficie totale necessaria per visualizzare tutti gli elementi in un'area.  La stima quindi viene suddivisa in quattro aree e viene completata con un pixel intero bordo 5.  
+ The call to [ApproximateViewRect](../mfc/reference/clistctrl-class.md#approximateviewrect) was made to get an estimate of the total area required to display all items in one region. This estimate is then divided into four regions and padded with a 5-pixel-wide border.  
   
- L'esempio seguente assegna gli elementi di elenco esistenti a ciascun gruppo \(`rcWorkAreas`\) e aggiorna la visualizzazione controlli \(`m_``WorkAreaListCtrl`\) per completare l'effetto.  
+ The next example assigns the existing list items to each group (`rcWorkAreas`) and refreshes the control view (`m_WorkAreaListCtrl`) to complete the effect.  
   
- [!code-cpp[NVC_MFCControlLadenDialog#21](../mfc/codesnippet/CPP/implementing-working-areas-in-list-controls_2.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#21](../mfc/codesnippet/cpp/implementing-working-areas-in-list-controls_2.cpp)]  
   
-## Vedere anche  
- [Utilizzo di CListCtrl](../mfc/using-clistctrl.md)   
- [Controlli](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CListCtrl](../mfc/using-clistctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

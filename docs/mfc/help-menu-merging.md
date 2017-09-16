@@ -1,32 +1,49 @@
 ---
-title: "Unione di menu della Guida | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "menu, unione"
-  - "unione di menu della Guida"
-  - "Guida, per contenitori documenti attivi"
+title: Help Menu Merging | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- menus [MFC], merging
+- merging Help menus [MFC]
+- Help [MFC], for active document containers
 ms.assetid: 9d615999-79ba-471a-9288-718f0c903d49
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Unione di menu della Guida
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0f2517dbfbc31cb92f5aa4bdf46c45aa19cf1f1d
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Quando un oggetto è attivo in un contenitore, il protocollo di unione dei menu dei documenti OLE fornisce il controllo completo dell'oggetto del menu **?**.  Di conseguenza, gli argomenti della Guida del contenitore non sono disponibili a meno che l'utente disattivare l'oggetto.  L'architettura di contenimento di documenti attivi vengono illustrate le regole per l'unione di menu sul posto attivare sia il contenitore che un documento attivo che è attivo condividere il menu.  Nuove regole rappresentano convenzioni semplicemente aggiuntive sul componente proprietario della parte del menu e il menu condiviso viene costruito.  
+---
+# <a name="help-menu-merging"></a>Help Menu Merging
+When an object is active within a container, the menu merging protocol of OLE Documents gives the object complete control of the **Help** menu. As a result, the container's Help topics are not available unless the user deactivates the object. The active document containment architecture expands on the rules for in-place menu merging to allow both the container and an active document that is active to share the menu. The new rules are simply additional conventions about what component owns what part of the menu and how the shared menu is constructed.  
   
- La nuova convenzione è semplice.  Nei documenti attivi, il menu **?** dispone di due voci di menu di primo livello organizzate come segue:  
+ The new convention is simple. In active documents, the **Help** menu has two top-level menu items organized as follows:  
   
  `Help`  
   
@@ -34,7 +51,7 @@ Quando un oggetto è attivo in un contenitore, il protocollo di unione dei menu 
   
  `Object Help    >`  
   
- Ad esempio, quando una sezione di Word è attiva nel Raccoglitore microsoft Office, il menu **?** verrebbe come segue:  
+ For example, when a Word section is active in the Office Binder, then the **Help** menu would appear as follows:  
   
  `Help`  
   
@@ -42,21 +59,23 @@ Quando un oggetto è attivo in un contenitore, il protocollo di unione dei menu 
   
  `Word Help   >`  
   
- Entrambe le voci di menu vengono menu a cascata in cui tutte le voci di menu aggiuntive specifiche del contenitore e all'oggetto vengono fornite all'utente.  Gli elementi vengono visualizzati qui varierà con il contenitore e gli oggetti in questione.  
+ Both menu items are cascading menus under which any additional menu items specific to the container and the object are provided to the user. What items appear here will vary with the container and objects involved.  
   
- Per costruire questo menu fuso **?**, l'architettura di contenimento del documento attivo modifica la routine documenti OLE normale.  Come i documenti OLE, la barra dei menu unita può avere sei gruppi di menu, ovvero a indicare **File**, **Modifica**, **Contenitore**, `Object`, **Finestra**, **?**, in questo ordine.  In ogni gruppo, potrebbe contenere zero o più menu.  I gruppi **File**, **Contenitore** e **Finestra** appartengono al contenitore e gruppi **Modifica**, **Oggetto** e **?** appartengono all'oggetto.  Quando l'oggetto desidera eseguire l'unione dei menu, viene creata una barra dei menu vuota e li passa al contenitore.  Il contenitore quindi incollare i relativi menu, chiamando **IOleInPlaceFrame::InsertMenus**.  L'oggetto passa anche una struttura che è una matrice di sei valori LUNGHI \(**OLEMENUGROUPWIDTHS**\).  Dopo l'inserimento dei menu, la casella contrassegna il numero di menu ha aggiunto in ognuno dei relativi gruppi e quindi restituisce.  L'oggetto inserisce il proprio menu, prestanti attenzione al conteggio dei menu in ogni gruppo del contenitore.  Infine, l'oggetto passa la barra dei menu unita e la matrice \(che contiene il numero di menu in ogni gruppo OLE\), che restituisce "un handle opaco di descrittore di menu".  Successivamente le sessioni dell'oggetto che gestiscono e la barra dei menu unita al contenitore, tramite **IOleInPlaceFrame::SetMenu**.  Attualmente, il contenitore visualizzare la barra dei menu unita e si passa l'handle per OLE, in modo da OLE può inviare appropriato di messaggi del menu.  
+ To construct this merged **Help** menu, the active document containment architecture modifies the normal OLE Documents procedure. According to OLE Documents, the merged menu bar can have six groups of menus, namely **File**, **Edit**, **Container**, `Object`, **Window**, **Help**, in that order. In each group, there can be zero or more menus. The groups **File**, **Container**, and **Window** belong to the container and the groups **Edit**, **Object,** and **Help** belong to the object. When the object wants to do menu merging, it creates a blank menu bar and passes it to the container. The container then inserts its menus, by calling **IOleInPlaceFrame::InsertMenus**. The object also passes a structure that is an array of six LONG values (**OLEMENUGROUPWIDTHS**). After inserting the menus, the container marks how many menus it added in each one of its groups, and then returns. Then the object inserts its menus, paying attention to the count of menus in each container group. Finally, the object passes the merged menu bar and the array (which contains the count of menus in each group) to OLE, which returns an opaque "menu descriptor" handle. Later the object passes that handle and the merged menu bar to the container, via **IOleInPlaceFrame::SetMenu**. At this time, the container displays the merged menu bar and also passes the handle to OLE, so that OLE can do proper dispatching of menu messages.  
   
- Nella routine modificata del documento attivo, è innanzitutto necessario inizializzare gli elementi **OLEMENUGROUPWIDTHS** su zero prima di passarli al contenitore.  Il contenitore consente di eseguire un inserimento normale di menu con un'eccezione: Il contenitore consente di inserire un menu di **?** come ultimo elemento e memorizza un valore 1 nell'ultima \(sesta\) voce della matrice di **OLEMENUGROUPWIDTHS** ovvero larghezza \[5\], che appartiene al gruppo della guida dell'oggetto\).  Questo menu **?** avrà un solo elemento che è un sottomenu, il menu della sovrapposizione \>di "**Guida contenitore** " come descritto in precedenza.  
+ In the modified active document procedure, the object must first initialize the **OLEMENUGROUPWIDTHS** elements to zero before passing it to the container. Then the container performs a normal menu insertion with one exception: The container inserts a **Help** menu as the last item and stores a value of 1 in the last (sixth) entry of the **OLEMENUGROUPWIDTHS** array (that is, width[5], which belongs to the object's Help group). This **Help** menu will have only one item which is a submenu, the "**Container Help** >" cascade menu as previously described.  
   
- L'oggetto viene quindi eseguito il codice normale di inserimento del menu, ma prima incolla del menu **?** , controlla la sesta voce della matrice di **OLEMENUGROUPWIDTHS**.  Se il valore è 1 e il nome dell'ultimo menu è **?** \(o la stringa localizzata appropriata\), l'oggetto inserisce il relativo menu **?** come sottomenu di menu **?** del contenitore.  
+ The object then executes its normal menu insertion code, except that before inserting its **Help** menu, it checks the sixth entry of the **OLEMENUGROUPWIDTHS** array. If the value is 1 and the name of the last menu is **Help** (or the appropriate localized string), then the object inserts its **Help** menu as submenu of the container's **Help** menu.  
   
- L'oggetto impostare il sesto elemento di **OLEMENUGROUPWIDTHS** su zero e incrementa il quinto elemento da uno.  In questo modo OLE conoscere il menu **?** appartiene al contenitore e i messaggi di menu che corrispondono al menu \(e ai sottomenu\) devono essere indirizzati al contenitore.  Viene quindi responsabilità del contenitore di inoltrare `WM_INITMENUPOPUP`, **WM\_SELECT**, **WM\_COMMAND** e altri messaggi menu\- correlati che appartengono alla parte dell'oggetto del menu **?** .  Questa operazione viene eseguita tramite `WM_INITMENU` per rimuovere un flag che indica al contenitore se l'utente ha spostato in **?** dell'oggetto nel menu.  Il contenitore quindi controlla `WM_MENUSELECT` per la voce in oppure si esce da qualsiasi elemento dal menu **?** che il contenitore non ha aggiunto stesso.  La voce, significa che l'utente ha spostato in un menu oggetto, pertanto il contenitore "imposta il flag il menu? di oggetto" e utilizza lo stato del flag per inoltrare qualsiasi `WM_MENUSELECT`, `WM_INITMENUPOPUP` e messaggi di **WM\_COMMAND**, come minimo, nella finestra dell'oggetto. \(All'uscita, il contenitore rimuove il flag quindi elabora questi stessi messaggi stesso.\) Il contenitore deve utilizzare la finestra restituita dalla funzione di **IOleInPlaceActiveObejct::GetWindow** dell'oggetto come destinazione per questi messaggi.  
+ The object then sets the sixth element of **OLEMENUGROUPWIDTHS** to zero and increments the fifth element by one. This lets OLE know that the **Help** menu belongs to the container and the menu messages corresponding to that menu (and its submenus) should be routed to the container. It is then the container's responsibility to forward `WM_INITMENUPOPUP`, **WM_SELECT**, **WM_COMMAND**, and other menu-related messages that belong to the object's portion of the **Help** menu. This is accomplished by using `WM_INITMENU` to clear a flag that tells the container whether the user has navigated into the object's **Help** menu. The container then watches `WM_MENUSELECT` for entry into or exit from any item on the **Help** menu that the container did not add itself. On entry, it means the user has navigated into an object menu, so the container sets the "in object Help menu" flag and uses the state of that flag to forward any `WM_MENUSELECT`, `WM_INITMENUPOPUP`, and **WM_COMMAND** messages, as a minimum, to the object window. (On exit, the container clears the flag and then processes these same messages itself.) The container should use the window returned from the object's **IOleInPlaceActiveObejct::GetWindow** function as the destination for these messages.  
   
- Se l'oggetto viene rilevato uno zero nel sesto elemento di **OLEMENUGROUPWIDTHS**, continua in base alle regole OLE standard dei documenti.  Questa procedura riguarda i contenitori che partecipano all'unione dei menu **?** nonché quelli che non fanno.  
+ If the object detects a zero in the sixth element of **OLEMENUGROUPWIDTHS**, it proceeds according to the normal OLE Documents rules. This procedure covers containers that do participate in **Help** menu merging as well as those that do not.  
   
- Quando l'oggetto chiama **IOleInPlaceFrame::SetMenu**, prima di visualizzare la barra dei menu unita, il contenitore viene verificato se il menu **?** disponga di un sottomenu aggiuntivo, oltre a cui il contenitore ha inserito.  In tal caso, il contenitore consente al relativo menu **?** la barra dei menu unita.  Se il menu **?** non è presente alcun sottomenu aggiuntivo, il contenitore viene rimosso il relativo menu **?** la barra dei menu unita.  Questa procedura riguarda oggetti che fanno parte di unione dei menu di **?** nonché quelli che non fanno.  
+ When the object calls **IOleInPlaceFrame::SetMenu**, before displaying the merged menu bar, the container checks whether the **Help** menu has an additional submenu, in addition to what the container has inserted. If so, the container leaves its **Help** menu in the merged menu bar. If the **Help** menu does not have an additional submenu, the container will remove its **Help** menu from the merged menu bar. This procedure covers objects that participate in **Help** menu merging as well as those that do not.  
   
- Infine, al momento di disassemblare il menu, l'oggetto viene inserito il menu di **?** oltre a rimuovere gli altri menu immessi.  Quando il contenitore rimuove i relativi menu, verrà rimosso il relativo menu **?** oltre agli altri menu che ha inserito.  
+ Finally, when it is time to disassemble the menu, the object removes the inserted **Help** menu in addition to removing the other inserted menus. When the container removes its menus, it will remove its **Help** menu in addition to the other menus that it has inserted.  
   
-## Vedere anche  
- [Contenitore documenti attivi](../mfc/active-document-containers.md)
+## <a name="see-also"></a>See Also  
+ [Active Document Containers](../mfc/active-document-containers.md)
+
+

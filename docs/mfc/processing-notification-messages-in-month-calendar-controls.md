@@ -1,43 +1,62 @@
 ---
-title: "Elaborazione dei messaggi di notifica nel controlli calendario mensile | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMonthCalCtrl (classe), stati giorni"
-  - "CMonthCalCtrl (classe), notifiche"
-  - "controlli calendario mensile, messaggi di notifica"
-  - "notifiche, per CMonthCalCtrl"
-  - "notifiche, controllo calendario mensile"
+title: Processing Notification Messages in Month Calendar Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMonthCalCtrl class [MFC], notifications
+- CMonthCalCtrl class [MFC], day states
+- month calendar controls [MFC], notification messages
+- notifications [MFC], for CMonthCalCtrl
+- notifications [MFC], month calendar control
 ms.assetid: 607c3e90-0756-493b-9503-ce835a50c7ab
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Elaborazione dei messaggi di notifica nel controlli calendario mensile
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d672052ebd3b98c82d997c0b100e36bcd93731a3
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Mentre gli utenti interagiscono con il controllo calendario mensile \(che seleziona le date e\/o che visualizza un altro mese\), il controllo \(`CMonthCalCtrl`\) invia i messaggi di notifica alla finestra padre, in genere una visualizzazione o un oggetto finestra di dialogo.  Gestire questi messaggi se si desidera eseguire un'operazione nella risposta.  Ad esempio, quando l'utente seleziona un altro mese per visualizzare, immettere un set di date che vengano sottolineate.  
+---
+# <a name="processing-notification-messages-in-month-calendar-controls"></a>Processing Notification Messages in Month Calendar Controls
+As users interact with the month calendar control (selecting dates and/or viewing a different month), the control (`CMonthCalCtrl`) sends notification messages to its parent window, usually a view or dialog object. Handle these messages if you want to do something in response. For example, when the user selects a new month to view, you could provide a set of dates that should be emphasized.  
   
- Utilizzare la Finestra Proprietà per aggiungere gestori della notifica alla classe padre per i messaggi che si desidera implementare.  
+ Use the Properties window to add notification handlers to the parent class for those messages you want to implement.  
   
- Nell'elenco seguente vengono descritte le varie notifiche inviate dal controllo calendario mensile.  
+ The following list describes the various notifications sent by the month calendar control.  
   
--   **MCN\_GETDAYSTATE** richiede informazioni sui giorni devono essere visualizzati in grassetto.  Per informazioni sulla gestione di questa notifica, vedere [Impostare lo stato del giorno di un controllo calendario mensile](../mfc/setting-the-day-state-of-a-month-calendar-control.md).  
+-   **MCN_GETDAYSTATE** Requests information about which days should be displayed in bold. For information on handling this notification, see [Setting the Day State of a Month Calendar Control](../mfc/setting-the-day-state-of-a-month-calendar-control.md).  
   
--   **MCN\_SELCHANGE** notifica dell'elemento padre che la data o l'intervallo seleziona data è stato modificato.  
+-   **MCN_SELCHANGE** Notifies the parent that the selected date or range of the date has changed.  
   
--   **MCN\_SELECT** notifica dell'elemento padre che una selezione della data esplicita è stata eseguita.  
+-   **MCN_SELECT** Notifies the parent that an explicit date selection has been made.  
   
-## Vedere anche  
- [Utilizzo di CMonthCalCtrl](../mfc/using-cmonthcalctrl.md)   
- [Controlli](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CMonthCalCtrl](../mfc/using-cmonthcalctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

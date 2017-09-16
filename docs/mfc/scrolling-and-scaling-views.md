@@ -1,58 +1,77 @@
 ---
-title: "Scorrimento e ridimensionamento di visualizzazioni | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "gestori messaggi"
-  - "gestione dei messaggi, barre di scorrimento nella classe visualizzazione"
-  - "ridimensionamento di visualizzazioni"
-  - "barre di scorrimento, messaggi"
-  - "scorrimento di visualizzazioni"
+title: Scrolling and Scaling Views | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- message handlers [MFC]
+- scaling views [MFC]
+- message handling [MFC], scroll bars in view class [MFC]
+- scroll bars [MFC], messages
+- scrolling views [MFC]
 ms.assetid: f98a3421-c336-407e-97ee-dbb2ffd76fbd
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Scorrimento e ridimensionamento di visualizzazioni
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3ba8ef3c6b1eaa228d136289323209d8bf220023
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Visualizzazioni di MFC supporta lo scorrimento e visualizzazioni che vengono ridimensionate automaticamente alle dimensioni della finestra cornice che li visualizza.  La classe `CScrollView` supporta entrambi i tipi di visualizzazioni.  
+---
+# <a name="scrolling-and-scaling-views"></a>Scrolling and Scaling Views
+MFC supports views that scroll and views that are automatically scaled to the size of the frame window that displays them. Class `CScrollView` supports both kinds of views.  
   
- Per ulteriori informazioni sullo spostamento e la scala, vedere la classe [CScrollView](../mfc/reference/cscrollview-class.md) in *Riferimento MFC*.  Per un esempio di scorrimento, vedere [L'esempio scribble](../top/visual-cpp-samples.md).  
+ For more information about scrolling and scaling, see class [CScrollView](../mfc/reference/cscrollview-class.md) in the *MFC Reference*. For a scrolling example, see the [Scribble sample](../visual-cpp-samples.md).  
   
-## Scegliere l'argomento su cui visualizzare maggiori informazioni  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   Scorrere una visualizzazione  
+-   Scrolling a view  
   
--   Ridimensionare una visualizzazione  
+-   Scaling a view  
   
--   [\<caps:sentence id\="tgt8" sentenceid\="f321fcf7c88bc6e3f892ae0fc9b2f0d8" class\="tgtSentence"\>Coordinate di visualizzazione\<\/caps:sentence\>](http://msdn.microsoft.com/library/windows/desktop/dd145205)  
+-   [View coordinates](http://msdn.microsoft.com/library/windows/desktop/dd145205)  
   
-##  <a name="_core_scrolling_a_view"></a> Scorrere una visualizzazione  
- La dimensione di un documento in genere è superiore alla dimensione il punto di vista consente di visualizzare.  Questo errore può verificarsi perché i dati del documento aumentano o l'utente riduce la finestra che incornicia la visualizzazione.  In tali casi, la visualizzazione deve supportare lo scorrimento.  
+##  <a name="_core_scrolling_a_view"></a> Scrolling a View  
+ Frequently the size of a document is greater than the size its view can display. This may occur because the document's data increases or the user shrinks the window that frames the view. In such cases, the view must support scrolling.  
   
- Qualsiasi visualizzazione può gestire i messaggi della barra di scorrimento nelle relative funzioni membro di `OnVScroll` e di `OnHScroll`.  È possibile implementare la gestione dei messaggi scrollbar in queste funzioni, che tutte le operazioni autonomamente, o la classe di `CScrollView` per gestire lo scorrimento automaticamente.  
+ Any view can handle scroll-bar messages in its `OnHScroll` and `OnVScroll` member functions. You can either implement scroll-bar message handling in these functions, doing all the work yourself, or you can use the `CScrollView` class to handle scrolling for you.  
   
- `CScrollView` esegue le operazioni seguenti:  
+ `CScrollView` does the following:  
   
--   Gestisce la finestra e le dimensioni e la modalità di mapping del riquadro di visualizzazione  
+-   Manages window and viewport sizes and mapping modes  
   
--   Visualizza automaticamente in risposta ai messaggi della barra di scorrimento  
+-   Scrolls automatically in response to scroll-bar messages  
   
- È possibile specificare l'intervallo di scorrimento "per una pagina" \(quando l'utente fa clic su di cilindrica asta scrollbar\) e "una riga" \(quando l'utente fa clic su in una freccia di scorrimento.  Pianificare questi valori per indicare la natura della visualizzazione.  Ad esempio, potrebbe essere necessario scorrere in incrementi di 1 pixel per una visualizzazione grafica ma in incrementi basati sull'altezza riga nei documenti di testo.  
+ You can specify how much to scroll for a "page" (when the user clicks in a scroll-bar shaft) and a "line" (when the user clicks in a scroll arrow). Plan these values to suit the nature of your view. For example, you might want to scroll in 1-pixel increments for a graphics view but in increments based on the line height in text documents.  
   
-##  <a name="_core_scaling_a_view"></a> Ridimensionare una visualizzazione  
- Quando si visualizza automaticamente per adattarsi alle dimensioni della finestra cornice, è possibile utilizzare `CScrollView` per ridimensionare anziché lo scorrimento.  La visualizzazione logica viene allungata o ridotta per adattarsi all'area client della finestra esattamente.  Una visualizzazione ridimensionata non ha barre di scorrimento.  
+##  <a name="_core_scaling_a_view"></a> Scaling a View  
+ When you want the view to automatically fit the size of its frame window, you can use `CScrollView` for scaling instead of scrolling. The logical view is stretched or shrunk to fit the window's client area exactly. A scaled view has no scroll bars.  
   
-## Vedere anche  
- [Utilizzo delle visualizzazioni](../mfc/using-views.md)
+## <a name="see-also"></a>See Also  
+ [Using Views](../mfc/using-views.md)
+
+

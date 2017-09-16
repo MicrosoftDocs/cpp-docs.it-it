@@ -1,5 +1,5 @@
 ---
-title: Bool vector&lt;bool&gt;::reference::operator | Microsoft Docs
+title: vector&lt;bool&gt;::reference::operator bool | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,10 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- operatorbool
-- vector<bool>::reference::operatorbool
-- bool
-- std::vector<bool>::reference::operatorbool
+- operatorbool", "vector<bool>::reference::operatorbool", "bool", "std::vector<bool>::reference::operatorbool
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -37,35 +34,35 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: acc0ecd4edaf1e58977dcbdeb483d497a72bc4c8
-ms.openlocfilehash: f79b54237aa3a3b53000aaa47ef6a8e198ed6725
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: c5f7955f2c3c5d71fad532d9e8c5b409c4026984
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="vectorltboolgtreferenceoperator-bool"></a>Bool vector&lt;bool&gt;::reference::operator
-Fornisce una conversione implicita da `vector<bool>::reference` a `bool`.  
+# <a name="vectorltboolgtreferenceoperator-bool"></a>vector&lt;bool&gt;::reference::operator bool
+Provides an implicit conversion from `vector<bool>::reference` to `bool`.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 operator bool() const;
 ```  
   
-## <a name="return-value"></a>Valore restituito  
- Valore booleano dell'elemento dell'oggetto [vector\<bool>](../standard-library/vector-bool-class.md).  
+## <a name="return-value"></a>Return Value  
+ The Boolean value of the element of the [vector\<bool>](../standard-library/vector-bool-class.md) object.  
   
-## <a name="remarks"></a>Note  
- L'oggetto `vector<bool>` non può essere modificato da questo operatore.  
+## <a name="remarks"></a>Remarks  
+ The `vector<bool>` object cannot be modified by this operator.  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<vector>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<vector>  
   
- **Spazio dei nomi:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Vedere anche  
- [Classe vector\<bool>::reference](../standard-library/vector-bool-reference-class.md)   
- [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [vector\<bool>::reference Class](../standard-library/vector-bool-reference-class.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 

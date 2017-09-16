@@ -1,46 +1,65 @@
 ---
-title: "Creazione della risorsa finestra di dialogo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "risorse finestra di dialogo"
-  - "modelli di finestra di dialogo, creazione della risorsa finestra di dialogo"
-  - "MFC (finestre di dialogo), creazione"
-  - "MFC (finestre di dialogo), risorsa finestra di dialogo"
-  - "risorse [MFC], creazione di finestre di dialogo"
-  - "modelli, creazione"
+title: Creating the Dialog Resource | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- dialog resources
+- MFC dialog boxes [MFC], creating
+- dialog templates [MFC], creating dialog resource
+- templates [MFC], creating
+- resources [MFC], creating dialog boxes
+- MFC dialog boxes [MFC], dialog resource
 ms.assetid: 0b83bd33-14d3-4611-8129-fccdae18053e
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Creazione della risorsa finestra di dialogo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: af33a71f914e5e7545d9719bf2f620f3feb4faa7
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Per progettare la [finestra di dialogo](../mfc/dialog-boxes.md) e per creare la risorsa finestra di dialogo, utilizzare l'[editor finestre](../mfc/dialog-editor.md).  Nell'editor finestre, è possibile:  
+---
+# <a name="creating-the-dialog-resource"></a>Creating the Dialog Resource
+To design the [dialog box](../mfc/dialog-boxes.md) and create the dialog resource, you use the [dialog editor](../windows/dialog-editor.md). In the dialog editor, you can:  
   
--   Regolare le dimensioni e la posizione della finestra di dialogo quando verrà visualizzata.  
+-   Adjust the size and location your dialog box will have when it appears.  
   
--   Trascinare vari tipi di controlli da una tavolozza dei controlli e rilasciarli dove si desidera nella finestra di dialogo.  
+-   Drag various kinds of controls from a controls palette and drop them where you want them in the dialog box.  
   
--   Posizionare i controlli con i pulsanti di allineamento nella barra degli strumenti.  
+-   Position the controls with alignment buttons on the toolbar.  
   
--   Testare la finestra di dialogo simulando l'aspetto e il comportamento che avrà nel programma.  Nella modalità test, è possibile modificare i controlli della finestra di dialogo digitando il testo nelle caselle di testo, facendo clic sui pulsanti, e così via.  
+-   Test your dialog box by simulating the appearance and behavior it will have in your program. In Test mode, you can manipulate the dialog box's controls by typing text in text boxes, clicking pushbuttons, and so on.  
   
- Al termine, la risorsa modello di finestra di dialogo viene archiviata nel file di script di risorsa dell'applicazione.  In seguito è possibile modificarla se necessario.  Per una descrizione completa di come creare e modificare le risorse finestra di dialogo, vedere gli argomenti relativi all'[editor finestre](../mfc/dialog-editor.md).  Questa tecnica viene inoltre utilizzata per creare risorse modello di finestra di dialogo per le classi [CFormView](../mfc/reference/cformview-class.md) e [CRecordView](../mfc/reference/crecordview-class.md).  
+ When you finish, your dialog-template resource is stored in your application's resource script file. You can edit it later if needed. For a full description of how to create and edit dialog resources, see the [dialog editor](../windows/dialog-editor.md) topics. This technique is also used to create the dialog-template resources for [CFormView](../mfc/reference/cformview-class.md) and [CRecordView](../mfc/reference/crecordview-class.md) classes.  
   
- Quando l'aspetto della finestra di dialogo è soddisfacente, creare una classe di finestra di dialogo ed eseguire il mapping dei messaggi, come illustrato in [Creazione di una classe di finestre di dialogo con creazioni guidate codice](../mfc/creating-a-dialog-class-with-code-wizards.md).  
+ When the dialog box's appearance suits you, create a dialog class and map its messages, as discussed in [Creating a Dialog Class with Code Wizards](../mfc/creating-a-dialog-class-with-code-wizards.md).  
   
-## Vedere anche  
- [Finestre di dialogo](../mfc/dialog-boxes.md)   
- [Ciclo di vita di una finestra di dialogo](../mfc/life-cycle-of-a-dialog-box.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Boxes](../mfc/dialog-boxes.md)   
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)
+
+

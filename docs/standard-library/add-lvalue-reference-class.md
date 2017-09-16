@@ -1,5 +1,5 @@
 ---
-title: Classe add_lvalue_reference | Microsoft Docs
+title: add_lvalue_reference Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- add_lvalue_reference
 - type_traits/std::add_lvalue_reference
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: a201572ed85d5bcf15435743ac0f8db8f08ede4b
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: ce215e667d5a36671a3513a3bbba3b7b1ed70665
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="addlvaluereference-class"></a>Classe add_lvalue_reference
-Crea un riferimento al tipo dal tipo.  
+# <a name="addlvaluereference-class"></a>add_lvalue_reference Class
+Makes reference to type from type.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class T>  
@@ -54,14 +53,14 @@ template <class T>
 using add_lvalue_reference_t = typename add_lvalue_reference<T>::type;  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  `T`  
- Tipo da modificare.  
+ The type to modify.  
   
-## <a name="remarks"></a>Note  
- Un’istanza del modificatore del tipo contiene un tipo modificato che è `T` se `T` è un riferimento lvalue; in caso contrario `T&`.  
+## <a name="remarks"></a>Remarks  
+ An instance of the type modifier holds a modified-type that is `T` if `T` is an lvalue reference, otherwise `T&`.  
   
-## <a name="example"></a>Esempio  
+## <a name="example"></a>Example  
   
 ```cpp  
 #include <type_traits>   
@@ -84,12 +83,12 @@ int main()
 add_lvalue_reference_t<int> == int  
 ```  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **Spazio dei nomi:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [Classe remove_reference](../standard-library/remove-reference-class.md)
+ [remove_reference Class](../standard-library/remove-reference-class.md)
 

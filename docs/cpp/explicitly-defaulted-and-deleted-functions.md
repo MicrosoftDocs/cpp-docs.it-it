@@ -1,59 +1,76 @@
 ---
-title: "Funzioni impostate come predefinite ed eliminate in modo esplicito | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: Explicitly Defaulted and Deleted Functions | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: 5a588478-fda2-4b3f-a279-db3967f5e07e
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Funzioni impostate come predefinite ed eliminate in modo esplicito
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 24e7432f8797e1f7835e62c179ef32bca85f7532
+ms.contentlocale: it-it
+ms.lasthandoff: 09/11/2017
 
-In C\+\+11 le funzioni impostate come predefinite e le funzioni eliminate offrono il controllo esplicito sulla eventuale generazione automatica delle funzioni membro speciali.  Le funzioni eliminate forniscono inoltre un semplice linguaggio per impedire il verificarsi di promozioni di tipo problematiche in argomenti di funzioni di tutti i tipi, ad esempio funzioni membro di tipo speciale, funzioni membro normali e funzioni non membro, che causerebbero una chiamata di funzione non desiderata.  
+---
+# <a name="explicitly-defaulted-and-deleted-functions"></a>Explicitly Defaulted and Deleted Functions
+In C++11, defaulted and deleted functions give you explicit control over whether the special member functions are automatically generated. Deleted functions also give you simple language to prevent problematic type promotions from occurring in arguments to functions of all types—special member functions, as well as normal member functions and non-member functions—which would otherwise cause an unwanted function call.  
   
-## Vantaggi delle funzioni impostate come predefinite e delle funzioni eliminate  
- In C\+\+ il compilatore genera automaticamente il costruttore predefinito, il costruttore di copia, l'operatore di assegnazione di copia e il distruttore per un tipo se non viene dichiarato.  Queste funzioni sono note come *funzioni membro speciali* e permettono ai tipi semplici definiti dall'utente in C\+\+ di comportarsi come le strutture in C.  È infatti possibile crearle, copiarle ed eliminarle senza un impegno di codifica aggiuntivo.  In C\+\+11 è stata introdotta la semantica di spostamento nel linguaggio e aggiunge il costruttore di spostamento e l'operatore di assegnazione di spostamento all'elenco delle funzioni membro speciali che il compilatore è in grado di generare automaticamente.  
+## <a name="benefits-of-explicitly-defaulted-and-deleted-functions"></a>Benefits of explicitly defaulted and deleted functions  
+ In C++, the compiler automatically generates the default constructor, copy constructor, copy-assignment operator, and destructor for a type if it does not declare its own. These functions are known as the *special member functions*, and they are what make simple user-defined types in C++ behave like structures do in C. That is, you can create, copy, and destroy them without any additional coding effort. C++11 brings move semantics to the language and adds the move constructor and move-assignment operator to the list of special member functions that the compiler can automatically generate.  
   
- Ciò risulta utile per i tipi semplici, ma i tipi complessi stessi definiscono spesso una o più funzioni membro speciali e questo può impedire la generazione automatica di altre funzioni membro speciali.  In pratica:  
+ This is convenient for simple types, but complex types often define one or more of the special member functions themselves, and this can prevent other special member functions from being automatically generated. In practice:  
   
--   Se un costruttore viene dichiarato in modo esplicito, non viene generato automaticamente alcun costruttore predefinito.  
+-   If any constructor is explicitly declared, then no default constructor is automatically generated.  
   
--   Se un distruttore virtuale viene dichiarato in modo esplicito, non viene generato automaticamente alcun distruttore predefinito.  
+-   If a virtual destructor is explicitly declared, then no default destructor is automatically generated.  
   
--   Se un costruttore di spostamento o un operatore di assegnazione di spostamento viene dichiarato in modo esplicito:  
+-   If a move constructor or move-assignment operator is explicitly declared, then:  
   
-    -   Non viene generato automaticamente alcun costruttore di copia.  
+    -   No copy constructor is automatically generated.  
   
-    -   Non viene generato automaticamente alcun operatore di assegnazione di copia.  
+    -   No copy-assignment operator is automatically generated.  
   
--   Se un costruttore di copia, un operatore di assegnazione di copia, un costruttore di spostamento, un operatore di assegnazione spostamento o un distruttore è dichiarato in modo esplicito:  
+-   If a copy constructor, copy-assignment operator, move constructor, move-assignment operator, or destructor is explicitly declared, then:  
   
-    -   Non viene generato automaticamente alcun costruttore di spostamento.  
+    -   No move constructor is automatically generated.  
   
-    -   Non viene generato automaticamente alcun operatore di assegnazione di spostamento.  
+    -   No move-assignment operator is automatically generated.  
   
 > [!NOTE]
->  Lo standard C\+\+11 specifica inoltre le regole aggiuntive seguenti:  
+>  Additionally, the C++11 standard specifies the following additional rules:  
 >   
->  -   Se un costruttore di copia o distruttore è dichiarato in modo esplicito, la generazione automatica dell'operatore di assegnazione di copia è deprecata.  
-> -   Se un operatore di assegnazione di copia o un distruttore è dichiarato in modo esplicito, la generazione automatica del costruttore di copia è deprecata.  
+>  -   If a copy constructor or destructor is explicitly declared, then automatic generation of the copy-assignment operator is deprecated.  
+> -   If a copy-assignment operator or destructor is explicitly declared, then automatic generation of the copy constructor is deprecated.  
 >   
->  In entrambi i casi, in Visual Studio si continua automaticamente a generare le funzioni necessarie in modo implicito e non viene generato alcun avviso.  
+>  In both cases, Visual Studio continues to automatically generate the necessary functions implicitly, and does not emit a warning.  
   
- Le conseguenze di tali regole possono inoltre comportare la creazione di gerarchie di oggetti.  Ad esempio, se per qualsiasi motivo una classe base non ha un costruttore predefinito richiamabile da una classe di derivazione, ovvero un costruttore `public` o `protected` senza alcun parametro, una classe che derivi da essa non può generare automaticamente il proprio costruttore predefinito.  
+ The consequences of these rules can also leak into object hierarchies. For example, if for any reason a base class fails to have a default constructor that's callable from a deriving class—that is, a `public` or `protected` constructor that takes no parameters—then a class that derives from it cannot automatically generate its own default constructor.  
   
- Queste regole possono complicare l'implementazione di tipi semplici definiti dall'utente e idiomi C\+\+ comuni, ad esempio rendendo non copiabile un tipo definito dall'utente, dichiarando il costruttore di copia e l'operatore di assegnazione di copia in modo privato e senza definirli.  
+ These rules can complicate the implementation of what should be straight-forward, user-defined types and common C++ idioms—for example, making a user-defined type non-copyable by declaring the copy constructor and copy-assignment operator privately and not defining them.  
   
 ```  
 struct noncopyable  
@@ -66,17 +83,17 @@ private:
 };  
 ```  
   
- Prima di C\+\+11 questo frammento di codice ha rappresentato la forma idiomatica dei tipi non copiabili.  Presenta tuttavia alcuni problemi:  
+ Before C++11, this code snippet was the idiomatic form of non-copyable types. However, it has several problems:  
   
--   Il costruttore di copia deve essere dichiarato privatamente per poter essere nascosto, ma la dichiarazione stessa impedisce la generazione automatica del costruttore predefinito.  È necessario definire esplicitamente il costruttore predefinito, se lo si vuole usare, anche se non esegue alcuna operazione.  
+-   The copy constructor has to be declared privately to hide it, but because it’s declared at all, automatic generation of the default constructor is prevented. You have to explicitly define the default constructor if you want one, even if it does nothing.  
   
--   Anche se il costruttore predefinito definito esplicitamente non esegue alcuna operazione, viene considerato non superfluo dal compilatore.  È meno efficiente di un costruttore predefinito generato automaticamente e impedisce a `noncopyable` di essere effettivamente un tipo POD.  
+-   Even if the explicitly-defined default constructor does nothing, it's considered non-trivial by the compiler. It's less efficient than an automatically generated default constructor and prevents `noncopyable` from being a true POD type.  
   
--   Anche se il costruttore di copia e l'operatore di assegnazione di copia sono invisibili al codice esterno, le funzioni membro e gli elementi Friend di `noncopyable` sono comunque in grado di visualizzarli e chiamarli.  Se vengono dichiarati ma non definiti, la chiamata di tali elementi genera un errore del linker.  
+-   Even though the copy constructor and copy-assignment operator are hidden from outside code, the member functions and friends of `noncopyable` can still see and call them. If they are declared but not defined, calling them causes a linker error.  
   
--   Benché questo sia un idioma comunemente accettato, l'intento sarà chiaro solo se si comprendono tutte le regole per la generazione automatica delle funzioni membro speciali.  
+-   Although this is a commonly accepted idiom, the intent is not clear unless you understand all of the rules for automatic generation of the special member functions.  
   
- In C\+\+11 il linguaggio non copiabile può essere implementato in modo più semplice.  
+ In C++11, the non-copyable idiom can be implemented in a way that is more straightforward.  
   
 ```  
 struct noncopyable  
@@ -87,22 +104,22 @@ struct noncopyable
 };  
 ```  
   
- Si noti il modo in cui vengono risolti i problemi relativi all'idioma pre\-C\+\+11:  
+ Notice how the problems with the pre-C++11 idiom are resolved:  
   
--   La generazione del costruttore predefinito viene impedita dichiarando il costruttore di copia, ma è possibile ripristinarlo impostandolo in modo esplicito come predefinito.  
+-   Generation of the default constructor is still prevented by declaring the copy constructor, but you can bring it back by explicitly defaulting it.  
   
--   Le funzioni membro speciali impostate in modo esplicito come predefinite verranno considerate irrilevanti e di conseguenza non esiste una riduzione delle prestazioni. Inoltre a `noncopyable` non viene impedito di essere un tipo POD reale.  
+-   Explicitly defaulted special member functions are still considered trivial, so there is no performance penalty, and `noncopyable` is not prevented from being a true POD type.  
   
--   Il costruttore di copia e l'operatore di assegnazione di copia sono pubblici ma eliminati.  Definire o chiamare una funzione eliminata è un errore in fase di compilazione.  
+-   The copy constructor and copy-assignment operator are public but deleted. It is a compile-time error to define or call a deleted function.  
   
--   Lo scopo è chiaro a chiunque comprenda `=default` e `=delete`.  Non è necessario comprendere le regole per la generazione automatica di funzioni membro speciali.  
+-   The intent is clear to anyone who understands `=default` and `=delete`. You don't have to understand the rules for automatic generation of special member functions.  
   
- Esistono idiomi simili per la creazione di tipi definiti dall'utente non spostabili, che possono essere solo allocati dinamicamente o che non possono essere allocati dinamicamente.  Per ogni idioma sono disponibili implementazioni pre\-C\+\+11 che presentano problemi simili, risolti in modo analogo in C\+\+11 mediante l'implementazione sotto forma di funzioni membro speciali impostate come predefinite ed eliminate.  
+ Similar idioms exist for making user-defined types that are non-movable, that can only be dynamically allocated, or that cannot be dynamically allocated. Each of these idioms have pre-C++11 implementations that suffer similar problems, and that are similarly resolved in C++11 by implementing them in terms of defaulted and deleted special member functions.  
   
-## Funzioni impostate come predefinite in modo esplicito  
- È possibile impostare come predefinita qualsiasi funzione membro speciale, in modo da indicare esplicitamente che la funzione membro speciale usa l'implementazione predefinita, definire la funzione membro speciale con un qualificatore di accesso non pubblico oppure ripristinare una funzione membro speciale la cui generazione automatica è stata impedita da altre circostanze.  
+## <a name="explicitly-defaulted-functions"></a>Explicitly defaulted functions  
+ You can default any of the special member functions—to explicitly state that the special member function uses the default implementation, to define the special member function with a non-public access qualifier, or to reinstate a special member function whose automatic generation was prevented by other circumstances.  
   
- Per impostare come predefinita una funzione membro speciale, dichiararla come illustrato nell'esempio seguente:  
+ You default a special member function by declaring it as in this example:  
   
 ```  
 struct widget  
@@ -115,15 +132,12 @@ struct widget
 inline widget& widget::operator=(const widget&) =default;  
 ```  
   
- Si noti che è possibile impostare come predefinita una funzione membro speciale all'esterno del corpo di una classe, purché sia impostabile come inline.  
+ Notice that you can default a special member function outside the body of a class as long as it’s inlinable.  
   
- A causa dei vantaggi a livello di prestazioni offerti dalle funzioni membro speciali superflue, è consigliabile favorire le funzioni membro speciali generate automaticamente rispetto ai corpi di funzione vuoti quando si vuole ottenere il comportamento predefinito.  È possibile ottenere questo risultato impostando esplicitamente come predefinita la funzione membro speciale o non dichiarandola e non dichiarando le altre funzioni membro speciali che ne impedirebbero la generazione automatica.  
+ Because of the performance benefits of trivial special member functions, we recommend that you prefer automatically generated special member functions over empty function bodies when you want the default behavior. You can do this either by explicitly defaulting the special member function, or by not declaring it (and also not declaring other special member functions that would prevent it from being automatically generated.)  
   
-> [!NOTE]
->  [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] non supporta i costruttori di spostamento o gli operatori di assegnazione di spostamento impostati come valore predefinito, come stabilito dallo standard C\+\+11.  Per altre informazioni, vedere la sezione Funzioni impostate come predefinite e funzioni eliminate di [Supporto delle funzionalità C\+\+11\/14\/17](../cpp/support-for-cpp11-14-17-features-modern-cpp.md).  
-  
-## Funzioni eliminate  
- È possibile eliminare le funzioni membro speciali, oltre alle funzioni membro normali e alle funzioni non membro, per impedirne la definizione o la chiamata.  L'eliminazione di funzioni membro speciali offre un modo più semplice per impedire al compilatore di generare funzioni membro speciali indesiderate.  La funzione deve essere eliminata come viene dichiarata, non può essere eliminata in seguito nel modo in cui può essere dichiarata e successivamente impostata in base alla forma predefinita.  
+## <a name="deleted-functions"></a>Deleted functions  
+ You can delete special member functions as well as normal member functions and non-member functions to prevent them from being defined or called. Deleting of special member functions provides a cleaner way of preventing the compiler from generating special member functions that you don’t want. The function must be deleted as it is declared; it cannot be deleted afterwards in the way that a function can be declared and then later defaulted.  
   
 ```  
 struct widget  
@@ -133,7 +147,7 @@ struct widget
 };  
 ```  
   
- L'eliminazione di una funzione membro normale o di funzioni non membro evita che le promozioni di tipi problematici provochino la chiamata di una funzione non desiderata.  Questo procedimento funziona poiché le funzioni eliminate partecipano comunque alla risoluzione dell'overload e offrono una corrispondenza migliore rispetto alla funzione che può essere chiamata dopo la promozione dei tipi.  La chiamata di funzione viene risolta nella funzione più specifica, ma eliminata e genera un errore del compilatore.  
+ Deleting of normal member function or non-member functions prevents problematic type promotions from causing an unintended function to be called. This works because deleted functions still participate in overload resolution and provide a better match than the function that could be called after the types are promoted. The function call resolves to the more-specific—but deleted—function and causes a compiler error.  
   
 ```  
 // deleted overload prevents call through type promotion of float to double from succeeding.  
@@ -141,7 +155,7 @@ void call_with_true_double_only(float) =delete;
 void call_with_true_double_only(double param) { return; }  
 ```  
   
- Si noti nell'esempio precedente che la chiamata a `call_with_true_double_only` usando un argomento `float` provocherebbe un errore del compilatore, ma la chiamata a `call_with_true_double_only` usando un argomento `int` non lo provocherebbe. Nel caso di `int`, l'argomento verrà promosso da `int` a `double` e richiamerà correttamente la versione `double` della funzione, anche se ciò potrebbe non essere il comportamento voluto.  Per garantire che le chiamate a questa funzione con un argomento di tipo non double causino un errore del compilatore, è possibile dichiarare una versione del modello della funzione eliminata.  
+ Notice in the preceding sample that calling `call_with_true_double_only` by using a `float` argument would cause a compiler error, but calling `call_with_true_double_only` by using an `int` argument would not; in the `int` case, the argument will be promoted from `int` to `double` and successfully call the `double` version of the function, even though that might not be what’s intended. To ensure that any call to this function by using a non-double argument causes a compiler error, you can declare a template version of the function that’s deleted.  
   
 ```  
 template < typename T >  

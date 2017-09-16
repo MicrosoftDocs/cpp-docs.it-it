@@ -1,5 +1,5 @@
 ---
-title: Classe is_member_pointer | Microsoft Docs
+title: is_member_pointer Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_member_pointer
 - type_traits/std::is_member_pointer
 dev_langs:
 - C++
@@ -35,31 +34,31 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 3f6040bd57b98bb79c2e041a8f6f1ce39b90f7eb
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 8f0f45b05e550bf0a44e915871f3d6b7453520df
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ismemberpointer-class"></a>Classe is_member_pointer
-Verifica se il tipo è un puntatore a un membro.  
+# <a name="ismemberpointer-class"></a>is_member_pointer Class
+Tests if type is a pointer to member.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty>  
 struct is_member_pointer;  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- Tipo su cui eseguire una query.  
+ The type to query.  
   
-## <a name="remarks"></a>Note  
- Un'istanza del predicato di tipo contiene true se il tipo `Ty` è un puntatore a una funzione membro o a un oggetto membro oppure un form `cv-qualified` di uno di questi; in caso contrario, contiene false.  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `Ty` is a pointer to member function or a pointer to member object, or a `cv-qualified` form of one of them, otherwise it holds false.  
   
-## <a name="example"></a>Esempio  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__type_traits__is_member_pointer.cpp   
@@ -103,14 +102,14 @@ is_member_pointer<int trivial::*> == true
 is_member_pointer<int (functional::*)()> == true  
 ```  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **Spazio dei nomi:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [Classe is_member_function_pointer](../standard-library/is-member-function-pointer-class.md)   
- [Classe is_member_object_pointer](../standard-library/is-member-object-pointer-class.md)   
- [Classe is_pointer](../standard-library/is-pointer-class.md)
+ [is_member_function_pointer Class](../standard-library/is-member-function-pointer-class.md)   
+ [is_member_object_pointer Class](../standard-library/is-member-object-pointer-class.md)   
+ [is_pointer Class](../standard-library/is-pointer-class.md)
 

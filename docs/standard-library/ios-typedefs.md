@@ -1,5 +1,5 @@
 ---
-title: Typedef &lt;ios&gt; | Microsoft Docs
+title: '&lt;ios&gt; typedefs | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,30 +16,31 @@ f1_keywords:
 ms.assetid: 0b962632-3439-44de-bf26-20c67a7f0ff3
 caps.latest.revision: 13
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: d9f9dd5f13f0f4559455ff8d8cf09bab5350b1f0
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: e75ab5322859bb88941968e9c1a6673fdf025ae2
+ms.contentlocale: it-it
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltiosgt-typedefs"></a>Typedef &lt;ios&gt;
+# <a name="ltiosgt-typedefs"></a>&lt;ios&gt; typedefs
 ||||  
 |-|-|-|  
 |[ios](#ios)|[streamoff](#streamoff)|[streampos](#streampos)|  
 |[streamsize](#streamsize)|[wios](#wios)|[wstreampos](#wstreampos)|  
   
 ##  <a name="ios"></a>  ios  
- Supporta la classe ios dalla libreria iostream precedente.  
+ Supports the ios class from the old iostream library.  
   
 ```  
 typedef basic_ios<char, char_traits<char>> ios;  
 ```  
   
-### <a name="remarks"></a>Note  
- Il tipo è un sinonimo della classe modello [basic_ios](../standard-library/basic-ios-class.md), specializzata per elementi di tipo `char` con tratti di carattere predefiniti.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for template class [basic_ios](../standard-library/basic-ios-class.md), specialized for elements of type `char` with default character traits.  
   
 ##  <a name="streamoff"></a>  streamoff  
- Supporta operazioni interne.  
+ Supports internal operations.  
   
 ```  
 #ifdef _WIN64  
@@ -49,20 +50,20 @@ typedef basic_ios<char, char_traits<char>> ios;
 #endif  
 ```  
   
-### <a name="remarks"></a>Note  
- Il tipo è un intero con segno che descrive un oggetto in grado di archiviare un offset di byte interessato da varie operazioni di posizionamento del flusso. La relativa rappresentazione contiene almeno 32 bit di valore. Non necessariamente è abbastanza ampia da rappresentare una posizione di byte arbitraria all'interno di un flusso. Il valore **streamoff(-1)** indica generalmente un offset errato.  
+### <a name="remarks"></a>Remarks  
+ The type is a signed integer that describes an object that can store a byte offset involved in various stream positioning operations. Its representation has at least 32 value bits. It is not necessarily large enough to represent an arbitrary byte position within a stream. The value **streamoff(-1)** generally indicates an erroneous offset.  
   
 ##  <a name="streampos"></a>  streampos  
- Contiene la posizione corrente del puntatore a un buffer o del puntatore a un file.  
+ Holds the current position of the buffer pointer or file pointer.  
   
 ```  
 typedef fpos<mbstate_t> streampos;  
 ```  
   
-### <a name="remarks"></a>Note  
- Il tipo è un sinonimo di [fpos](../standard-library/fpos-class.md)< `mbstate_t`>.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for [fpos](../standard-library/fpos-class.md)< `mbstate_t`>.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ios_streampos.cpp  
@@ -86,7 +87,7 @@ int main( )
 ```  
   
 ##  <a name="streamsize"></a>  streamsize  
- Denota le dimensioni del flusso.  
+ Denotes the size of the stream.  
   
 ```  
 #ifdef _WIN64  
@@ -96,11 +97,11 @@ int main( )
 #endif  
 ```  
   
-### <a name="remarks"></a>Note  
- Il tipo è un intero con segno che descrive un oggetto in grado di archiviare il numero totale di elementi interessati da varie operazioni di flusso. La relativa rappresentazione contiene almeno 16 bit. Non necessariamente è abbastanza ampia da rappresentare una posizione di byte arbitraria all'interno di un flusso.  
+### <a name="remarks"></a>Remarks  
+ The type is a signed integer that describes an object that can store a count of the number of elements involved in various stream operations. Its representation has at least 16 bits. It is not necessarily large enough to represent an arbitrary byte position within a stream.  
   
-### <a name="example"></a>Esempio  
-  Dopo aver compilato ed eseguito il programma seguente, esaminare il file test.txt per visualizzare l'effetto dell'impostazione `streamsize`.  
+### <a name="example"></a>Example  
+  After compiling and running the following program, look at the file test.txt to see the effect of setting `streamsize`.  
   
 ```  
 // ios_streamsize.cpp  
@@ -119,26 +120,26 @@ int main( )
 ```  
   
 ##  <a name="wios"></a>  wios  
- Supporta la classe wios dalla libreria iostream precedente.  
+ Supports the wios class from the old iostream library.  
   
 ```  
 typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;  
 ```  
   
-### <a name="remarks"></a>Note  
- Il tipo è un sinonimo della classe modello [basic_ios](../standard-library/basic-ios-class.md), specializzata per elementi di tipo `wchar_t` con tratti di carattere predefiniti.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for template class [basic_ios](../standard-library/basic-ios-class.md), specialized for elements of type `wchar_t` with default character traits.  
   
 ##  <a name="wstreampos"></a>  wstreampos  
- Contiene la posizione corrente del puntatore a un buffer o del puntatore a un file.  
+ Holds the current position of the buffer pointer or file pointer.  
   
 ```  
 typedef fpos<mbstate_t> wstreampos;  
 ```  
   
-### <a name="remarks"></a>Note  
- Il tipo è un sinonimo di [fpos](../standard-library/fpos-class.md)< `mbstate_t`>.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for [fpos](../standard-library/fpos-class.md)< `mbstate_t`>.  
   
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ios_wstreampos.cpp  
@@ -160,7 +161,7 @@ int main( )
 7  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [\<ios>](../standard-library/ios.md)
 
 

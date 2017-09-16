@@ -1,67 +1,86 @@
 ---
-title: "Messaggi WM_: T - Z | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ON_WM_TCARD"
-  - "ON_WM_WININICHANGE"
-  - "ON_WM_VSCROLLCLIPBOARD"
-  - "ON_WM_VSCROLL"
-  - "ON_WM_WINDOWPOSCHANGED"
-  - "ON_WM_TIMECHANGE"
-  - "ON_WM_TIMER"
-  - "ON_WM_VKEYTOITEM"
-  - "ON_WM_WINDOWPOSCHANGING"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ON_WM_TCARD"
-  - "ON_WM_TIMECHANGE"
-  - "ON_WM_TIMER"
-  - "ON_WM_VKEYTOITEM"
-  - "ON_WM_VSCROLL"
-  - "ON_WM_VSCROLLCLIPBOARD"
-  - "ON_WM_WINDOWPOSCHANGED"
-  - "ON_WM_WINDOWPOSCHANGING"
-  - "ON_WM_WININICHANGE"
-  - "WM_ (messaggi)"
+title: 'WM_ Messages: T - Z | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ON_WM_TCARD
+- ON_WM_WININICHANGE
+- ON_WM_VSCROLLCLIPBOARD
+- ON_WM_VSCROLL
+- ON_WM_WINDOWPOSCHANGED
+- ON_WM_TIMECHANGE
+- ON_WM_TIMER
+- ON_WM_VKEYTOITEM
+- ON_WM_WINDOWPOSCHANGING
+dev_langs:
+- C++
+helpviewer_keywords:
+- ON_WM_VSCROLLCLIPBOARD [MFC]
+- ON_WM_WININICHANGE [MFC]
+- ON_WM_WINDOWPOSCHANGED [MFC]
+- ON_WM_TCARD [MFC]
+- ON_WM_TIMECHANGE [MFC]
+- ON_WM_TIMER [MFC]
+- WM_ messages [MFC]
+- ON_WM_WINDOWPOSCHANGING [MFC]
+- ON_WM_VKEYTOITEM [MFC]
+- ON_WM_VSCROLL
 ms.assetid: c528bb2e-ddb5-4da6-b652-432a387408b8
 caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# Messaggi WM_: T - Z
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: bc6bde5395ade5019e1ece6868660762097b526e
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Le voci della mappa corrispondono ai prototipi di funzione:  
+---
+# <a name="wm-messages-t---z"></a>WM_ Messages: T - Z
+The following map entries correspond to the function prototypes:  
   
-|Voce di mapping|Prototipo di funzione|  
-|---------------------|---------------------------|  
-|ON\_WM\_TCARD\(\)|afx\_msg [OnTCard](../Topic/CWnd::OnTCard.md)void \(UINT, DWORD\);|  
-|ON\_WM\_TIMECHANGE\(\)|afx\_msg void [OnTimeChange](../Topic/CWnd::OnTimeChange.md)\(\);|  
-|ON\_WM\_TIMER\(\)|afx\_msg [OnTimer](../Topic/CWnd::OnTimer.md)void \(UINT\_PTR\);|  
-|ON\_WM\_UNICHAR\(\)|afx\_msg [OnUniChar](../Topic/CWnd::OnUniChar.md)void \(UINT, UINT, UINT\);|  
-|ON\_WM\_UNINITMENUPOPUP\(\)|afx\_msg [OnUnInitMenuPopup](../Topic/CWnd::OnUnInitMenuPopup.md)void \(CMenu\*, UINT\);|  
-|ON\_WM\_USERCHANGED\(\)|afx\_msg void [OnUserChanged](../Topic/CWnd::OnUserChanged.md)\(\);|  
-|ON\_WM\_VKEYTOITEM\(\)|afx\_msg int [OnVKeyToItem](../Topic/CWnd::OnVKeyToItem.md)\(UINT, CWnd\*, UINT\);|  
-|ON\_WM\_VSCROLL\(\)|afx\_msg [OnVScroll](../Topic/CWnd::OnVScroll.md)void \(UINT, UINT, CWnd\*\);|  
-|ON\_WM\_VSCROLLCLIPBOARD\(\)|afx\_msg [OnVScrollClipboard](../Topic/CWnd::OnVScrollClipboard.md)void \(CWnd\*, UINT, UINT\);|  
-|ON\_WM\_WINDOWPOSCHANGED\(\)|afx\_msg [OnWindowPosChanged](../Topic/CWnd::OnWindowPosChanged.md)void \(WINDOWPOS\*\);|  
-|ON\_WM\_WINDOWPOSCHANGING\(\)|afx\_msg [OnWindowPosChanging](../Topic/CWnd::OnWindowPosChanging.md)void \(WINDOWPOS\*\);|  
-|ON\_WM\_WININICHANGE\(\)|afx\_msg [OnWinIniChange](../Topic/CWnd::OnWinIniChange.md)void \(LPSTR\);|  
-|ON\_WM\_WTSSESSION\_CHANGE\(\)|afx\_msg [OnSessionChange](../Topic/CWnd::OnSessionChange.md)void \(UINT, UINT\);|  
-|ON\_WM\_XBUTTONDBLCLK\(\)|afx\_msg [OnXButtonDblClk](../Topic/CWnd::OnXButtonDblClk.md)void \(UINT, UINT, CPoint\);|  
-|ON\_WM\_XBUTTONDOWN\(\)|afx\_msg [OnXButtonDown](../Topic/CWnd::OnXButtonDown.md)void \(UINT, UINT, CPoint\);|  
-|ON\_WM\_XBUTTONUP\(\)|afx\_msg [OnXButtonUp](../Topic/CWnd::OnXButtonUp.md)void \(UINT, UINT, CPoint\);|  
+|Map entry|Function prototype|  
+|---------------|------------------------|  
+|ON_WM_TCARD()|afx_msg void [OnTCard](../../mfc/reference/cwnd-class.md#ontcard)( UINT, DWORD );|  
+|ON_WM_TIMECHANGE()|afx_msg void [OnTimeChange](../../mfc/reference/cwnd-class.md#ontimechange)( );|  
+|ON_WM_TIMER()|afx_msg void [OnTimer](../../mfc/reference/cwnd-class.md#ontimer)( UINT_PTR );|  
+|ON_WM_UNICHAR()|afx_msg void [OnUniChar](../../mfc/reference/cwnd-class.md#onunichar)( UINT, UINT, UINT );|  
+|ON_WM_UNINITMENUPOPUP()|afx_msg void [OnUnInitMenuPopup](../../mfc/reference/cwnd-class.md#onuninitmenupopup)( CMenu*, UINT );|  
+|ON_WM_USERCHANGED()|afx_msg void [OnUserChanged](../../mfc/reference/cwnd-class.md#onuserchanged)();|  
+|ON_WM_VKEYTOITEM()|afx_msg int [OnVKeyToItem](../../mfc/reference/cwnd-class.md#onvkeytoitem)( UINT, CWnd*, UINT );|  
+|ON_WM_VSCROLL()|afx_msg void [OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll)( UINT, UINT, CWnd* );|  
+|ON_WM_VSCROLLCLIPBOARD()|afx_msg void [OnVScrollClipboard](../../mfc/reference/cwnd-class.md#onvscrollclipboard)( CWnd*, UINT, UINT );|  
+|ON_WM_WINDOWPOSCHANGED()|afx_msg void [OnWindowPosChanged](../../mfc/reference/cwnd-class.md#onwindowposchanged)( WINDOWPOS*);|  
+|ON_WM_WINDOWPOSCHANGING()|afx_msg void [OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging)( WINDOWPOS*);|  
+|ON_WM_WININICHANGE()|afx_msg void [OnWinIniChange](../../mfc/reference/cwnd-class.md#onwininichange)( LPSTR );|  
+|ON_WM_WTSSESSION_CHANGE()|afx_msg void [OnSessionChange](../../mfc/reference/cwnd-class.md#onsessionchange)( UINT, UINT );|  
+|ON_WM_XBUTTONDBLCLK()|afx_msg void [OnXButtonDblClk](../../mfc/reference/cwnd-class.md#onxbuttondblclk)( UINT, UINT, CPoint );|  
+|ON_WM_XBUTTONDOWN()|afx_msg void [OnXButtonDown](../../mfc/reference/cwnd-class.md#onxbuttondown)( UINT, UINT, CPoint );|  
+|ON_WM_XBUTTONUP()|afx_msg void [OnXButtonUp](../../mfc/reference/cwnd-class.md#onxbuttonup)( UINT, UINT, CPoint );|  
   
-## Vedere anche  
- [Mappe messaggi](../../mfc/reference/message-maps-mfc.md)   
- [Gestori per messaggi WM\_](../../mfc/reference/handlers-for-wm-messages.md)
+## <a name="see-also"></a>See Also  
+ [Message Maps](../../mfc/reference/message-maps-mfc.md)   
+ [Handlers for WM_ Messages](../../mfc/reference/handlers-for-wm-messages.md)
+
+

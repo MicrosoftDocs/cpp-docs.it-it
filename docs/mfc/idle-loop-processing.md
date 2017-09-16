@@ -1,67 +1,86 @@
 ---
-title: "Elaborazione di cicli inattivi | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "elaborazione in background"
-  - "elaborazione di cicli inattivi"
-  - "elaborazione durante l'inattiva"
-  - "messaggi, cicli"
-  - "MFC, elaborazione in background"
-  - "MFC, messaggi"
-  - "OnIdle (metodo)"
-  - "PeekMessage (metodo)"
-  - "PeekMessage (metodo), ciclo di messaggio elsewhere than"
-  - "elaborazione"
-  - "elaborazione, sfondo"
-  - "elaborazione, durante il ciclo inattivo"
-  - "threading [MFC], alternative al multithreading"
+title: Idle Loop Processing | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, background processing
+- PeekMessage method [MFC], elsewhere than message loop
+- PeekMessage method [MFC]
+- MFC, messages
+- messages [MFC], loops
+- OnIdle method [MFC]
+- processing [MFC], background
+- idle loop processing [MFC]
+- idle processing [MFC]
+- threading [MFC], alternatives to multithreading
+- processing, during idle loop
+- processing [MFC]
+- background processing [MFC]
 ms.assetid: 5c7c46c1-6107-4304-895f-480983bb1e44
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Elaborazione di cicli inattivi
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fc101bc8964adeb8fff488f4a6ce4dacb35190de
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Molte applicazioni eseguono la lunga elaborazione "background". Talvolta le considerazioni sulle prestazioni prevedono del multithreading per tale lavoro.  I thread includono un ulteriore sovraccarico di sviluppo, pertanto non sono consigliati per semplici attività come il lavoro di tempo di inattività a MFC nella funzione di [OnIdle](../Topic/CWinThread::OnIdle.md).  In questo articolo su elaborazione inattiva.  Per ulteriori informazioni sul multithreading, vedere [Argomenti relativi al multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).  
+---
+# <a name="idle-loop-processing"></a>Idle Loop Processing
+Many applications perform lengthy processing "in the background." Sometimes performance considerations dictate using multithreading for such work. Threads involve extra development overhead, so they are not recommended for simple tasks like the idle-time work that MFC does in the [OnIdle](../mfc/reference/cwinthread-class.md#onidle) function. This article focuses on idle processing. For more information about multithreading, see [Multithreading Topics](../parallel/multithreading-support-for-older-code-visual-cpp.md).  
   
- Alcuni tipi di elaborazione in background in modo appropriato sono eseguiti durante gli intervalli che l'utente non interagisce in caso contrario con l'applicazione.  In un'applicazione sviluppata del sistema operativo Microsoft Windows, un'applicazione può eseguire elaborazioni di tempo di inattività suddividendo un lungo processo in molti piccoli frammenti.  Dopo l'elaborazione ogni frammento, il controllo dell'esecuzione di valori di un'applicazione alle finestre utilizzando un ciclo di [PeekMessage](http://msdn.microsoft.com/library/windows/desktop/ms644943).  
+ Some kinds of background processing are appropriately done during intervals that the user is not otherwise interacting with the application. In an application developed for the Microsoft Windows operating system, an application can perform idle-time processing by splitting a lengthy process into many small fragments. After processing each fragment, the application yields execution control to Windows using a [PeekMessage](http://msdn.microsoft.com/library/windows/desktop/ms644943) loop.  
   
- Questo articolo vengono illustrati due modi per eseguire l'elaborazione inattiva nell'applicazione:  
+ This article explains two ways to do idle processing in your application:  
   
--   Utilizzando **PeekMessage** il ciclo di messaggi principale di MFC.  
+-   Using **PeekMessage** in MFC's main message loop.  
   
--   Incorporando un altro ciclo di **PeekMessage** altrove nell'applicazione.  
+-   Embedding another **PeekMessage** loop somewhere else in the application.  
   
-##  <a name="_core_peekmessage_in_the_mfc_message_loop"></a> PeekMessage il ciclo di messaggi MFC  
- In un'applicazione compilata con MFC, il ciclo di messaggi principale nella classe di `CWinThread` contiene un ciclo di messaggi che chiama [PeekMessage](http://msdn.microsoft.com/library/windows/desktop/ms644943) API Win32.  Questo ciclo inoltre chiama la funzione membro di `OnIdle` di `CWinThread` tra i messaggi.  Un'applicazione può elaborare i messaggi in questo periodo di inattività eseguire l'override di una funzione di `OnIdle`.  
+##  <a name="_core_peekmessage_in_the_mfc_message_loop"></a> PeekMessage in the MFC Message Loop  
+ In an application developed with MFC, the main message loop in the `CWinThread` class contains a message loop that calls the [PeekMessage](http://msdn.microsoft.com/library/windows/desktop/ms644943) Win32 API. This loop also calls the `OnIdle` member function of `CWinThread` between messages. An application can process messages in this idle time by overriding the `OnIdle` function.  
   
 > [!NOTE]
->  **Esegui**, `OnIdle` e certe altre funzioni membro ora sono membri di classe `CWinThread` anziché classe `CWinApp`.  `CWinApp` è derivata da `CWinThread`.  
+>  **Run**, `OnIdle`, and certain other member functions are now members of class `CWinThread` rather than of class `CWinApp`. `CWinApp` is derived from `CWinThread`.  
   
- Per ulteriori informazioni su come eseguire l'elaborazione inattiva, vedere [OnIdle](../Topic/CWinThread::OnIdle.md) nel *Riferimento MFC*.  
+ For more information about performing idle processing, see [OnIdle](../mfc/reference/cwinthread-class.md#onidle) in the *MFC Reference*.  
   
-##  <a name="_core_peekmessage_elsewhere_in_your_application"></a> PeekMessage altrove nell'applicazione  
- Un altro metodo per eseguire l'elaborazione inattiva in un'applicazione include incorporare un ciclo di messaggi in una delle funzioni.  Questo ciclo di messaggi è molto simile al ciclo di messaggi principale di MFC, situato in [CWinThread::Run](../Topic/CWinThread::Run.md).  Ciò significa che tale ciclo in un'applicazione compilata con MFC deve eseguire molte delle stesse funzioni del ciclo di messaggi principale.  Nel codice riportato di seguito viene illustrata la scrittura di cicli di messaggi compatibile con MFC:  
+##  <a name="_core_peekmessage_elsewhere_in_your_application"></a> PeekMessage Elsewhere in Your Application  
+ Another method for performing idle processing in an application involves embedding a message loop in one of your functions. This message loop is very similar to MFC's main message loop, found in [CWinThread::Run](../mfc/reference/cwinthread-class.md#run). That means such a loop in an application developed with MFC must perform many of the same functions as the main message loop. The following code fragment demonstrates writing a message loop that is compatible with MFC:  
   
- [!code-cpp[NVC_MFCDocView#8](../mfc/codesnippet/CPP/idle-loop-processing_1.cpp)]  
+ [!code-cpp[NVC_MFCDocView#8](../mfc/codesnippet/cpp/idle-loop-processing_1.cpp)]  
   
- Questo codice, incorporato in una funzione, viene eseguito un ciclo finché esiste alcuna elaborazione inattiva da eseguire.  All'interno del ciclo, un ciclo annidato chiama ripetutamente **PeekMessage**.  A condizione che tale i risultati della chiamata restituisce un valore diverso da zero, il ciclo chiama `CWinThread::PumpMessage` per eseguire la conversione e inviare normali del messaggio.  Sebbene sia `PumpMessage` non documentato, è possibile esaminare il codice sorgente nel file di ThrdCore.Cpp directory \\atlmfc\\src\\mfc di installazione di Visual C\+\+.  
+ This code, embedded in a function, loops as long as there is idle processing to do. Within that loop, a nested loop repeatedly calls **PeekMessage**. As long as that call returns a nonzero value, the loop calls `CWinThread::PumpMessage` to perform normal message translation and dispatching. Although `PumpMessage` is undocumented, you can examine its source code in the ThrdCore.Cpp file in the \atlmfc\src\mfc directory of your Visual C++ installation.  
   
- Il ciclo interno termina una volta, il ciclo esterno esegue l'elaborazione inattiva con uno o più chiamate a `OnIdle`.  La prima chiamata a scopo di MFC.  È possibile apportare ulteriori chiamate a `OnIdle` per eseguire il proprio lavoro in background.  
+ Once the inner loop ends, the outer loop performs idle processing with one or more calls to `OnIdle`. The first call is for MFC's purposes. You can make additional calls to `OnIdle` to do your own background work.  
   
- Per ulteriori informazioni su come eseguire l'elaborazione inattiva, vedere [OnIdle](../Topic/CWinThread::OnIdle.md) in riferimenti alla libreria MFC.  
+ For more information about performing idle processing, see [OnIdle](../mfc/reference/cwinthread-class.md#onidle) in the MFC Library Reference.  
   
-## Vedere anche  
- [Argomenti MFC generali](../mfc/general-mfc-topics.md)
+## <a name="see-also"></a>See Also  
+ [General MFC Topics](../mfc/general-mfc-topics.md)
+
+

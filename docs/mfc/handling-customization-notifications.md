@@ -1,112 +1,127 @@
 ---
-title: "Gestione delle notifiche di personalizzazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "TBN_CUSTHELP"
-  - "TBN_QUERYINSERT"
-  - "TBNOTIFY"
-  - "NMHDR"
-  - "TBN_TOOLBARCHANGE"
-  - "TBN_ENDDRAG"
-  - "NM_SETFOCUS"
-  - "TBN_RESET"
-  - "NM_RETURN"
-  - "NM_ENDWAIT"
-  - "NM_STARTWAIT"
-  - "TBN_BEGINDRAG"
-  - "NM_OUTOFMEMORY"
-  - "TBN_QUERYDELETE"
-  - "NM_DBLCLK"
-  - "TBN_ENDADJUST"
-  - "NM_KILLFOCUS"
-  - "NM_RCLICK"
-  - "TBN_BEGINADJUST"
-  - "NM_CLICK"
-  - "NM_RDBLCLK::"
-  - "TBN_GETBUTTONINFO"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "TBN_ENDADJUST (notifica)"
-  - "TBNOTIFY (notifica)"
-  - "TBN_BEGINDRAG (notifica)"
-  - "TBN_TOOLBARCHANGE (notifica)"
-  - "NM_CLICK (notifica)"
-  - "NM_RETURN (notifica)"
-  - "NM_RCLICK (notifica)"
-  - "TBN_ENDDRAG (notifica)"
-  - "TBN_BEGINADJUST (notifica)"
-  - "NM_ENDWAIT (notifica)"
-  - "NM_KILLFOCUS (notifica)"
-  - "NM_SETFOCUS (notifica)"
-  - "NM_OUTOFMEMORY (notifica)"
-  - "TBN_QUERYINSERT (notifica)"
-  - "NMHDR"
-  - "NM_STARTWAIT (notifica)"
-  - "CToolBarCtrl (classe), gestione delle notifiche"
-  - "TBN_CUSTHELP (notifica)"
-  - "TBN_RESET (notifica)"
-  - "NM_DBLCLK (notifica)"
-  - "TBN_QUERYDELETE (notifica)"
-  - "NM_RDBLCLK (notifica)"
-  - "TBN_GETBUTTONINFO (notifica)"
+title: Handling Customization Notifications | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- TBN_CUSTHELP
+- TBN_QUERYINSERT
+- TBNOTIFY
+- NMHDR
+- TBN_TOOLBARCHANGE
+- TBN_ENDDRAG
+- NM_SETFOCUS
+- TBN_RESET
+- NM_RETURN
+- NM_ENDWAIT
+- NM_STARTWAIT
+- TBN_BEGINDRAG
+- NM_OUTOFMEMORY
+- TBN_QUERYDELETE
+- NM_DBLCLK
+- TBN_ENDADJUST
+- NM_KILLFOCUS
+- NM_RCLICK
+- TBN_BEGINADJUST
+- NM_CLICK
+dev_langs:
+- C++
+helpviewer_keywords:
+- TBN_ENDADJUST notification [MFC]
+- TBNOTIFY notification [MFC]
+- TBN_BEGINDRAG notification [MFC]
+- TBN_TOOLBARCHANGE notification [MFC]
+- NM_CLICK notification [MFC]
+- NM_RETURN notification [MFC]
+- NM_RCLICK notification [MFC]
+- TBN_ENDDRAG notification [MFC]
+- TBN_BEGINADJUST notification [MFC]
+- NM_ENDWAIT notification [MFC]
+- NM_KILLFOCUS notification [MFC]
+- NM_SETFOCUS notification [MFC]
+- NM_OUTOFMEMORY notification [MFC]
+- TBN_QUERYINSERT notification [MFC]
+- NMHDR [MFC]
+- NM_STARTWAIT notification [MFC]
+- CToolBarCtrl class [MFC], handling notifications
+- TBN_CUSTHELP notification [MFC]
+- TBN_RESET notification [MFC]
+- NM_DBLCLK notification [MFC]
+- TBN_QUERYDELETE notification [MFC]
+- NM_RDBLCLK notification [MFC]
+- TBN_GETBUTTONINFO notification [MFC]
 ms.assetid: 219ea08e-7515-4b98-85cb-47120f08c0a2
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Gestione delle notifiche di personalizzazione
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5e91497af12fb29ed1aa017d5cef9d285018bcb1
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-In una comune barra degli strumenti Windows sono incorporate funzionalità di personalizzazione, inclusa una finestra di dialogo di personalizzazione definita dal sistema, che consentono all'utente di inserire, eliminare o riordinare i pulsanti della barra degli strumenti. L'applicazione determina se le funzionalità di personalizzazione sono disponibili e controlla l'ambito in cui l'utente può personalizzare la barra degli strumenti.  
+---
+# <a name="handling-customization-notifications"></a>Handling Customization Notifications
+A Windows toolbar common control has built-in customization features, including a system-defined customization dialog box, which allow the user to insert, delete, or rearrange toolbar buttons. The application determines whether the customization features are available and controls the extent to which the user can customize the toolbar.  
   
- È possibile rendere queste funzionalità di personalizzazione disponibili all'utente assegnando alla barra degli strumenti lo stile `CCS_ADJUSTABLE`. Le funzionalità di personalizzazione consentono all'utente di trascinare un pulsante in una nuova posizione o di rimuovere un pulsante trascinandolo dalla barra degli strumenti. L'utente può anche fare doppio clic sulla barra degli strumenti per visualizzare la finestra di dialogo **Personalizza barra degli strumenti**, che consente di aggiungere, eliminare e riordinare i pulsanti della barra degli strumenti. L'applicazione può visualizzare la finestra di dialogo con la funzione membro [Personalizza](../Topic/CToolBarCtrl::Customize.md).  
+ You can make these customization features available to the user by giving the toolbar the `CCS_ADJUSTABLE` style. The customization features allow the user to drag a button to a new position or to remove a button by dragging it off the toolbar. In addition, the user can double-click the toolbar to display the **Customize Toolbar** dialog box, which allows the user to add, delete, and rearrange toolbar buttons. The application can display the dialog box by using the [Customize](../mfc/reference/ctoolbarctrl-class.md#customize) member function.  
   
- La barra degli strumenti invia messaggi di notifica alla finestra padre in ogni fase del processo di personalizzazione. Se l'utente tiene premuto il tasto MAIUSC e inizia a trascinare un pulsante, la barra degli strumenti gestisce automaticamente l'operazione di trascinamento. La barra degli strumenti invia il messaggio di notifica **TBN\_QUERYDELETE** alla finestra padre per determinare se il pulsante può essere eliminato. L'operazione di trascinamento termina se la finestra padre restituisce **FALSE**. In caso contrario, la barra degli strumenti acquisisce gli input del mouse e attende che l'utente rilasci il pulsante del mouse.  
+ The toolbar control sends notification messages to the parent window at each step in the customization process. If the user holds the SHIFT key down and begins dragging a button, the toolbar automatically handles the drag operation. The toolbar sends the **TBN_QUERYDELETE** notification message to the parent window to determine whether the button may be deleted. The drag operation ends if the parent window returns **FALSE**. Otherwise, the toolbar captures mouse input and waits for the user to release the mouse button.  
   
- Quando l'utente rilascia il pulsante del mouse, la barra degli strumenti determina la posizione del cursore del mouse. Se il cursore si trova all'esterno della barra degli strumenti, il pulsante viene eliminato. Se il cursore si trova in su altro pulsante della barra degli strumenti, la barra degli strumenti invia il messaggio di notifica **TBN\_QUERYINSERT** alla finestra padre per determinare se un pulsante può essere inserito a sinistra del pulsante specificato. Il pulsante viene inserito se la finestra padre restituisce **TRUE**; in caso contrario, non viene inserito. La barra degli strumenti invia il messaggio di notifica **TBN\_TOOLBARCHANGE** per segnalare la fine dell'operazione di trascinamento.  
+ When the user releases the mouse button, the toolbar control determines the location of the mouse cursor. If the cursor is outside the toolbar, the button is deleted. If the cursor is on another toolbar button, the toolbar sends the **TBN_QUERYINSERT** notification message to the parent window to determine if a button may be inserted to the left of the given button. The button is inserted if the parent window returns **TRUE**; otherwise, it is not. The toolbar sends the **TBN_TOOLBARCHANGE** notification message to signal the end of the drag operation.  
   
- Se l'utente inizia un'operazione di trascinamento senza tenere premuto il tasto MAIUSC, la barra degli strumenti invia il messaggio di notifica **TBN\_BEGINDRAG** alla finestra proprietaria. Un'applicazione che implementa il proprio codice di trascinamento pulsante può usare questo messaggio come un segnale per iniziare un'operazione di trascinamento. La barra degli strumenti invia il messaggio di notifica **TBN\_ENDDRAG** per segnalare la fine dell'operazione di trascinamento.  
+ If the user begins a drag operation without holding down the SHIFT key, the toolbar control sends the **TBN_BEGINDRAG** notification message to the owner window. An application that implements its own button-dragging code can use this message as a signal to begin a drag operation. The toolbar sends the **TBN_ENDDRAG** notification message to signal the end of the drag operation.  
   
- Una barra degli strumenti invia messaggi di notifica quando l'utente personalizza una barra degli strumenti usando la finestra di dialogo **Personalizza barra degli strumenti**. La barra degli strumenti invia il messaggio di notifica **TBN\_BEGINADJUST** dopo che l'utente ha fatto doppio clic sulla barra degli strumenti, ma prima la finestra di dialogo venga creato. Successivamente, la barra degli strumenti inizia a inviare una serie di messaggi di notifica **TBN\_QUERYINSERT** per determinare se la barra degli strumenti consente di inserire i pulsanti. Quando la finestra padre restituisce **TRUE**, la barra degli strumenti interrompe l'invio dei messaggi di notifica **TBN\_QUERYINSERT**. Se la finestra padre non restituisce **TRUE** per nessun pulsante, la barra degli strumenti elimina la finestra di dialogo.  
+ A toolbar control sends notification messages when the user customizes a toolbar by using the **Customize Toolbar** dialog box. The toolbar sends the **TBN_BEGINADJUST** notification message after the user double-clicks the toolbar, but before the dialog box is created. Next, the toolbar begins sending a series of **TBN_QUERYINSERT** notification messages to determine whether the toolbar allows buttons to be inserted. When the parent window returns **TRUE**, the toolbar stops sending **TBN_QUERYINSERT** notification messages. If the parent window does not return **TRUE** for any button, the toolbar destroys the dialog box.  
   
- Successivamente, la barra degli strumenti determina se è possibile eliminare dei pulsanti dalla barra degli strumenti inviando un messaggio di notifica **TBN\_QUERYDELETE** per ciascuno di essi. La finestra padre restituisce **TRUE** per indicare che un pulsante può essere eliminato; in caso contrario, restituisce **FALSE**. La barra degli strumenti aggiunge tutti i relativi pulsanti alla finestra di dialogo e disattiva quelli che non è possibile eliminare.  
+ Next, the toolbar control determines if any buttons may be deleted from the toolbar by sending one **TBN_QUERYDELETE** notification message for each button in the toolbar. The parent window returns **TRUE** to indicate that a button may be deleted; otherwise, it returns **FALSE**. The toolbar adds all toolbar buttons to the dialog box, but grays those that may not be deleted.  
   
- Ogni volta che la barra degli strumenti necessita di informazioni su un pulsante nella finestra di dialogo Personalizza barra degli strumenti, invia il messaggio di notifica **TBN\_GETBUTTONINFO**, specificando l'indice del pulsante su cui si richiedono informazioni e l'indirizzo di una struttura **TBNOTIFY**. La finestra padre deve compilare la struttura con le informazioni pertinenti.  
+ Whenever the toolbar control needs information about a button in the Customize Toolbar dialog box, it sends the **TBN_GETBUTTONINFO** notification message, specifying the index of the button for which it needs information and the address of a **TBNOTIFY** structure. The parent window must fill the structure with the relevant information.  
   
- La finestra di dialogo **Personalizza barra degli strumenti** include un pulsante della Guida in linea e un pulsante Reimposta. Quando l'utente sceglie il pulsante della Guida in linea, la barra degli strumenti invia il messaggio di notifica **TBN\_CUSTHELP**. La finestra padre risponderà visualizzando le informazioni della Guida. La finestra di dialogo invia il messaggio di notifica **TBN\_RESET** quando l'utente seleziona il pulsante Reimposta. Questo messaggio segnala che la barra degli strumenti sta per reinizializzare la finestra di dialogo.  
+ The **Customize Toolbar** dialog box includes a Help button and a Reset button. When the user chooses the Help button, the toolbar control sends the **TBN_CUSTHELP** notification message. The parent window should respond by displaying help information. The dialog box sends the **TBN_RESET** notification message when the user selects the Reset button. This message signals that the toolbar is about to reinitialize the dialog box.  
   
- Questi sono tutti messaggi **WM\_NOTIFY** che possono essere gestiti nella finestra proprietaria aggiungendo le voci della mappa messaggi del form seguente alla mappa messaggi della finestra proprietaria:  
+ These messages are all **WM_NOTIFY** messages, and they can be handled in your owner window by adding message-map entries of the following form to your owner window's message map:  
   
  `ON_NOTIFY( wNotifyCode, idControl, memberFxn )`  
   
  `wNotifyCode`  
- Codice identificatore del messaggio di notifica, ad esempio **TBN\_BEGINADJUST**.  
+ Notification message identifier code, such as **TBN_BEGINADJUST**.  
   
  `idControl`  
- Identificatore del controllo che invia la notifica.  
+ The identifier of the control sending the notification.  
   
  `memberFxn`  
- Funzione membro da chiamare quando si riceve la notifica.  
+ The member function to be called when this notification is received.  
   
- La funzione membro sarebbe dichiarata con il prototipo seguente:  
+ Your member function would be declared with the following prototype:  
   
  `afx_msg void memberFxn( NMHDR * pNotifyStruct, LRESULT * result );`  
   
- Se il gestore dei messaggi di notifica restituisce un valore, è necessario inserirlo in **LRESULT** a cui puntava *result*.  
+ If the notification message handler returns a value, it should put it in the **LRESULT** pointed to by *result*.  
   
- Per ogni messaggio, `pNotifyStruct` punta a una delle due strutture **NMHDR** o **TBNOTIFY**. Queste strutture sono descritte di seguito:  
+ For each message, `pNotifyStruct` points to either an **NMHDR** structure or a **TBNOTIFY** structure. These structures are described below:  
   
- La struttura **NMHDR** contiene i membri seguenti:  
+ The **NMHDR** structure contains the following members:  
   
  `typedef struct tagNMHDR {`  
   
@@ -119,31 +134,31 @@ In una comune barra degli strumenti Windows sono incorporate funzionalità di pe
  `} NMHDR;`  
   
  **hwndFrom**  
- Handle della finestra del controllo che invia la notifica. Per convertire questo handle in un puntatore `CWnd`, usare [CWnd::FromHandle](../Topic/CWnd::FromHandle.md).  
+ Window handle of the control that is sending the notification. To convert this handle to a `CWnd` pointer, use [CWnd::FromHandle](../mfc/reference/cwnd-class.md#fromhandle).  
   
  **idFrom**  
- Identificatore del controllo che invia la notifica.  
+ Identifier of the control sending the notification.  
   
- **codice**  
- Codice di notifica. Questo membro può essere un valore specifico di un tipo di controllo, ad esempio **TBN\_BEGINADJUST** o **TTN\_NEEDTEXT**, oppure può essere uno dei valori di notifica comuni elencati di seguito:  
+ **code**  
+ Notification code. This member can be a value specific to a control type, such as **TBN_BEGINADJUST** or **TTN_NEEDTEXT**, or it can be one of the common notification values listed below:  
   
--   **NM\_CLICK** L'utente ha fatto clic con il pulsante sinistro del mouse sul controllo.  
+-   **NM_CLICK** The user has clicked the left mouse button within the control.  
   
--   **NM\_DBLCLK** L'utente ha fatto doppio clic con il pulsante sinistro del mouse sul controllo.  
+-   **NM_DBLCLK** The user has double-clicked the left mouse button within the control.  
   
--   **NM\_KILLFOCUS** Il controllo ha perso lo stato attivo per l'input.  
+-   **NM_KILLFOCUS** The control has lost the input focus.  
   
--   **NM\_OUTOFMEMORY** Il controllo non ha completato un'operazione perché la memoria non è sufficiente.  
+-   **NM_OUTOFMEMORY** The control could not complete an operation because there is not enough memory available.  
   
--   **NM\_RCLICK** L'utente ha fatto clic con il pulsante destro del mouse sul controllo.  
+-   **NM_RCLICK** The user has clicked the right mouse button within the control.  
   
--   **NM\_RDBLCLK** L'utente ha fatto doppio clic con il pulsante destro del mouse sul controllo.  
+-   **NM_RDBLCLK** The user has double-clicked the right mouse button within the control.  
   
--   **NM\_RETURN** Lo stato attivo per l'input si trova sul controllo e l'utente ha premuto il tasto INVIO.  
+-   **NM_RETURN** The control has the input focus, and the user has pressed the ENTER key.  
   
--   **NM\_SETFOCUS** Il controllo ha ricevuto lo stato attivo per l'input.  
+-   **NM_SETFOCUS** The control has received the input focus.  
   
- La struttura **TBNOTIFY** contiene i membri seguenti:  
+ The **TBNOTIFY** structure contains the following members:  
   
  `typedef struct {`  
   
@@ -159,44 +174,46 @@ In una comune barra degli strumenti Windows sono incorporate funzionalità di pe
   
  `} TBNOTIFY, FAR* LPTBNOTIFY;`  
   
-## Note  
+## <a name="remarks"></a>Remarks  
  **hdr**  
- Informazioni comuni a tutti i messaggi **WM\_NOTIFY**.  
+ Information common to all **WM_NOTIFY** messages.  
   
  **iItem**  
- Indice del pulsante associato alla notifica.  
+ Index of button associated with notification.  
   
  **tbButton**  
- Struttura `TBBUTTON` contenente informazioni sul pulsante della barra degli strumenti associato alla notifica.  
+ `TBBUTTON` structure that contains information about the toolbar button associated with the notification.  
   
  **cchText**  
- Numero di caratteri nel testo dei pulsanti.  
+ Count of characters in button text.  
   
  **lpszText**  
- Puntatore al testo del pulsante.  
+ Pointer to button text.  
   
- Le notifiche che la barra degli strumenti invia sono i seguenti:  
+ The notifications the toolbar sends are as follows:  
   
--   **TBN\_BEGINADJUST** Inviato quando l'utente inizia a personalizzare una barra degli strumenti. Il puntatore punta a una struttura **NMHDR** contenente informazioni sulla notifica. Il gestore non deve necessariamente restituire un valore specifico.  
+-   **TBN_BEGINADJUST** Sent when the user begins customizing a toolbar control. The pointer points to an **NMHDR** structure that contains information about the notification. The handler doesn't need to return any specific value.  
   
--   **TBN\_BEGINDRAG** Inviato quando l'utente inizia a trascinare un pulsante su una barra degli strumenti. Il puntatore punta a una struttura **TBNOTIFY**. Il membro **iItem** contiene l'indice in base zero del pulsante trascinato. Il gestore non deve necessariamente restituire un valore specifico.  
+-   **TBN_BEGINDRAG** Sent when the user begins dragging a button in a toolbar control. The pointer points to a **TBNOTIFY** structure. The **iItem** member contains the zero-based index of the button being dragged. The handler doesn't need to return any specific value.  
   
--   **TBN\_CUSTHELP** Inviato quando l'utente sceglie il pulsante ? nella finestra di dialogo Personalizza barra degli strumenti. Nessun valore restituito. Il puntatore punta a una struttura **NMHDR** contenente informazioni sul messaggio di notifica. Il gestore non deve necessariamente restituire un valore specifico.  
+-   **TBN_CUSTHELP** Sent when the user chooses the Help button in the Customize Toolbar dialog box. No return value. The pointer points to an **NMHDR** structure that contains information about the notification message. The handler doesn't need to return any specific value.  
   
--   **TBN\_ENDADJUST** Inviato quando l'utente termina di personalizzare una barra degli strumenti. Il puntatore punta a una struttura **NMHDR** contenente informazioni sul messaggio di notifica. Il gestore non deve necessariamente restituire un valore specifico.  
+-   **TBN_ENDADJUST** Sent when the user stops customizing a toolbar control. The pointer points to an **NMHDR** structure that contains information about the notification message. The handler doesn't need to return any specific value.  
   
--   **TBN\_ENDDRAG** Inviato quando l'utente termina di trascinare un pulsante su una barra degli strumenti. Il puntatore punta a una struttura **TBNOTIFY**. Il membro **iItem** contiene l'indice in base zero del pulsante trascinato. Il gestore non deve necessariamente restituire un valore specifico.  
+-   **TBN_ENDDRAG** Sent when the user stops dragging a button in a toolbar control. The pointer points to a **TBNOTIFY** structure. The **iItem** member contains the zero-based index of the button being dragged. The handler doesn't need to return any specific value.  
   
--   **TBN\_GETBUTTONINFO** Inviato quando l'utente sta personalizzando una barra degli strumenti. La barra degli strumenti usa questo messaggio di notifica per recuperare le informazioni necessarie per la finestra di dialogo Personalizza barra degli strumenti. Il puntatore punta a una struttura **TBNOTIFY**. Il membro **iItem** specifica l'indice in base zero di un pulsante. I membri **pszText** e **cchText** specificano l'indirizzo e la lunghezza, in caratteri, del testo del pulsante corrente. Un'applicazione dovrebbe popolare la struttura con le informazioni relative al pulsante. Restituisce **TRUE** se le informazioni sul pulsante sono state copiate nella struttura; in caso contrario, restituisce **FALSE**.  
+-   **TBN_GETBUTTONINFO** Sent when the user is customizing a toolbar control. The toolbar uses this notification message to retrieve information needed by the Customize Toolbar dialog box. The pointer points to a **TBNOTIFY** structure. The **iItem** member specifies the zero-based index of a button. The **pszText** and **cchText** members specify the address and length, in characters, of the current button text. An application should fill the structure with information about the button. Return **TRUE** if button information was copied to the structure, or **FALSE** otherwise.  
   
--   **TBN\_QUERYDELETE** Inviato quando l'utente sta personalizzando una barra degli strumenti per determinare se è possibile eliminare un pulsante dalla stessa. Il puntatore punta a una struttura **TBNOTIFY**. Il membro **iItem** contiene l'indice in base zero del pulsante da eliminare. Restituisce **TRUE** per consentire l'eliminazione del pulsante o **FALSE** per impedirne l'eliminazione.  
+-   **TBN_QUERYDELETE** Sent while the user is customizing a toolbar to determine whether a button may be deleted from a toolbar control. The pointer points to a **TBNOTIFY** structure. The **iItem** member contains the zero-based index of the button to be deleted. Return **TRUE** to allow the button to be deleted or **FALSE** to prevent the button from being deleted.  
   
--   **TBN\_QUERYINSERT** Inviato quando l'utente personalizza la barra degli strumenti per determinare se un pulsante può essere inserito a sinistra del pulsante specificato. Il puntatore punta a una struttura **TBNOTIFY**. Il membro **iItem** contiene l'indice in base zero del pulsante da inserire. Restituisce **TRUE** per consentire l'inserimento del pulsante davanti al pulsante specificato o **FALSE** per impedirne l'inserimento.  
+-   **TBN_QUERYINSERT** Sent while the user is customizing a toolbar control to determine whether a button may be inserted to the left of the given button. The pointer points to a **TBNOTIFY** structure. The **iItem** member contains the zero-based index of the button to be inserted. Return **TRUE** to allow a button to be inserted in front of the given button or **FALSE** to prevent the button from being inserted.  
   
--   **TBN\_RESET** Inviato quando l'utente reimposta il contenuto della finestra di dialogo Personalizza barra degli strumenti. Il puntatore punta a una struttura **NMHDR** contenente informazioni sul messaggio di notifica. Il gestore non deve necessariamente restituire un valore specifico.  
+-   **TBN_RESET** Sent when the user resets the content of the Customize Toolbar dialog box. The pointer points to an **NMHDR** structure that contains information about the notification message. The handler doesn't need to return any specific value.  
   
--   **TBN\_TOOLBARCHANGE** Inviato dopo che l'utente ha personalizzato una barra degli strumenti. Il puntatore punta a una struttura **NMHDR** contenente informazioni sul messaggio di notifica. Il gestore non deve necessariamente restituire un valore specifico.  
+-   **TBN_TOOLBARCHANGE** Sent after the user has customized a toolbar control. The pointer points to an **NMHDR** structure that contains information about the notification message. The handler doesn't need to return any specific value.  
   
-## Vedere anche  
- [Utilizzo di CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
- [Controlli](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

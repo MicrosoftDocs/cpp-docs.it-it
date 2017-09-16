@@ -1,5 +1,5 @@
 ---
-title: Classe COleDropTarget | Documenti di Microsoft
+title: COleDropTarget Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -23,10 +23,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- COleDropTarget class
-- drag and drop, drop target
-- drop commands, accepting
-- drop commands
+- COleDropTarget [MFC], COleDropTarget
+- COleDropTarget [MFC], OnDragEnter
+- COleDropTarget [MFC], OnDragLeave
+- COleDropTarget [MFC], OnDragOver
+- COleDropTarget [MFC], OnDragScroll
+- COleDropTarget [MFC], OnDrop
+- COleDropTarget [MFC], OnDropEx
+- COleDropTarget [MFC], Register
+- COleDropTarget [MFC], Revoke
 ms.assetid: a58c9a48-6a93-4357-b078-4594df258311
 caps.latest.revision: 23
 author: mikeblome
@@ -46,72 +51,72 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 0e9429d531d6af86bc571b1f871fbcd4a8fe2532
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5cdf8f39470df66a3a9e6a625774744da6d3fd4a
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="coledroptarget-class"></a>Classe COleDropTarget
-Fornisce il meccanismo di comunicazione tra una finestra e le librerie OLE.  
+# <a name="coledroptarget-class"></a>COleDropTarget Class
+Provides the communication mechanism between a window and the OLE libraries.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COleDropTarget : public CCmdTarget  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Costruttori pubblici  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleDropTarget::COleDropTarget](#coledroptarget)|Costruisce un oggetto `COleDropTarget`.|  
+|[COleDropTarget::COleDropTarget](#coledroptarget)|Constructs a `COleDropTarget` object.|  
   
-### <a name="public-methods"></a>Metodi pubblici  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleDropTarget::OnDragEnter](#ondragenter)|Chiamato quando il cursore nella prima finestra.|  
-|[COleDropTarget::OnDragLeave](#ondragleave)|Chiamato quando il cursore viene trascinato all'esterno di finestra.|  
-|[COleDropTarget::OnDragOver](#ondragover)|Chiamato ripetutamente quando il cursore viene trascinato nella finestra.|  
-|[COleDropTarget::OnDragScroll](#ondragscroll)|Chiamato per determinare se il cursore viene trascinato nell'area di scorrimento della finestra.|  
-|[COleDropTarget::OnDrop](#ondrop)|Chiamato quando viene eliminati dati nella finestra del gestore predefinito.|  
-|[COleDropTarget::OnDropEx](#ondropex)|Chiamato quando viene eliminati dati nella finestra, gestore iniziale.|  
-|[COleDropTarget::Register](#register)|Registra la finestra come destinazione di rilascio valido.|  
-|[COleDropTarget::Revoke](#revoke)|Fa sì che la finestra quale terminare l'operazione da una destinazione di rilascio valido.|  
+|[COleDropTarget::OnDragEnter](#ondragenter)|Called when the cursor first enters the window.|  
+|[COleDropTarget::OnDragLeave](#ondragleave)|Called when the cursor is dragged out of the window.|  
+|[COleDropTarget::OnDragOver](#ondragover)|Called repeatedly when the cursor is dragged over the window.|  
+|[COleDropTarget::OnDragScroll](#ondragscroll)|Called to determine whether the cursor is dragged into the scroll region of the window.|  
+|[COleDropTarget::OnDrop](#ondrop)|Called when data is dropped into the window, default handler.|  
+|[COleDropTarget::OnDropEx](#ondropex)|Called when data is dropped into the window, initial handler.|  
+|[COleDropTarget::Register](#register)|Registers the window as a valid drop target.|  
+|[COleDropTarget::Revoke](#revoke)|Causes the window to cease being a valid drop target.|  
   
-## <a name="remarks"></a>Note  
- Creazione di un oggetto di questa classe consente a una finestra accettare i dati tramite il meccanismo di trascinamento e rilascio OLE.  
+## <a name="remarks"></a>Remarks  
+ Creating an object of this class allows a window to accept data through the OLE drag-and-drop mechanism.  
   
- Per ottenere una finestra per accettare i comandi di menu, è necessario creare prima un oggetto di `COleDropTarget` classe e quindi chiamare il [registrare](#register) funzione con un puntatore all'oggetto desiderato `CWnd` oggetto come unico parametro.  
+ To get a window to accept drop commands, you should first create an object of the `COleDropTarget` class, and then call the [Register](#register) function with a pointer to the desired `CWnd` object as the only parameter.  
   
- Per ulteriori informazioni sulle operazioni di trascinamento e rilascio tramite OLE, vedere l'articolo [trascinamento della selezione (OLE)](../../mfc/drag-and-drop-ole.md).  
+ For more information on drag-and-drop operations using OLE, see the article [Drag and Drop (OLE)](../../mfc/drag-and-drop-ole.md).  
   
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  `COleDropTarget`  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** AFXOLE. h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxole.h  
   
-##  <a name="coledroptarget"></a>COleDropTarget::COleDropTarget  
- Costruisce un oggetto della classe `COleDropTarget`.  
+##  <a name="coledroptarget"></a>  COleDropTarget::COleDropTarget  
+ Constructs an object of class `COleDropTarget`.  
   
 ```  
 COleDropTarget();
 ```  
   
-### <a name="remarks"></a>Note  
- Chiamare [registrare](#register) per associare l'oggetto a una finestra.  
+### <a name="remarks"></a>Remarks  
+ Call [Register](#register) to associate this object with a window.  
   
-##  <a name="ondragenter"></a>COleDropTarget::OnDragEnter  
- Chiamato dal framework quando il cursore viene prima trascinato nella finestra.  
+##  <a name="ondragenter"></a>  COleDropTarget::OnDragEnter  
+ Called by the framework when the cursor is first dragged into the window.  
   
 ```  
 virtual DROPEFFECT OnDragEnter(
@@ -121,55 +126,55 @@ virtual DROPEFFECT OnDragEnter(
     CPoint point);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- Punta alla finestra che passa il cursore.  
+ Points to the window the cursor is entering.  
   
  `pDataObject`  
- Punta all'oggetto dati che contiene i dati che possono essere eliminati.  
+ Points to the data object containing the data that can be dropped.  
   
  `dwKeyState`  
- Contiene lo stato dei tasti di modifica. Si tratta di una combinazione di un numero qualsiasi di quanto segue: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_MBUTTON**, e **MK_RBUTTON**.  
+ Contains the state of the modifier keys. This is a combination of any number of the following: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_MBUTTON**, and **MK_RBUTTON**.  
   
  `point`  
- Contiene il percorso corrente del cursore nelle coordinate client.  
+ Contains the current location of the cursor in client coordinates.  
   
-### <a name="return-value"></a>Valore restituito  
- L'effetto che risulterebbe se tentata un'eliminazione nella posizione specificata da `point`. Può trattarsi di uno o più delle seguenti operazioni:  
+### <a name="return-value"></a>Return Value  
+ The effect that would result if a drop were attempted at the location specified by `point`. It can be one or more of the following:  
   
-- `DROPEFFECT_NONE`Un rilascio non sarebbe consentito.  
+- `DROPEFFECT_NONE` A drop would not be allowed.  
   
-- `DROPEFFECT_COPY`Verrà eseguita un'operazione di copia.  
+- `DROPEFFECT_COPY` A copy operation would be performed.  
   
-- `DROPEFFECT_MOVE`Verrà eseguita un'operazione di spostamento.  
+- `DROPEFFECT_MOVE` A move operation would be performed.  
   
-- `DROPEFFECT_LINK`Potrebbe essere stabilito un collegamento dai dati eliminati i dati originali.  
+- `DROPEFFECT_LINK` A link from the dropped data to the original data would be established.  
   
-- `DROPEFFECT_SCROLL`Un'operazione di trascinamento scorrimento sta per verificarsi o si verifica nel database di destinazione.  
+- `DROPEFFECT_SCROLL` A drag scroll operation is about to occur or is occurring in the target.  
   
-### <a name="remarks"></a>Note  
- Eseguire l'override di questa funzione per consentire operazioni di eliminazione si verificano nella finestra. L'implementazione predefinita chiama [CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter), che restituisce semplicemente `DROPEFFECT_NONE` per impostazione predefinita.  
+### <a name="remarks"></a>Remarks  
+ Override this function to allow drop operations to occur in the window. The default implementation calls [CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter), which simply returns `DROPEFFECT_NONE` by default.  
   
- Per ulteriori informazioni, vedere [IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106) in the Windows SDK.  
   
-##  <a name="ondragleave"></a>COleDropTarget::OnDragLeave  
- Chiamato dal framework quando il cursore lascia la finestra mentre è in corso un'operazione di trascinamento.  
+##  <a name="ondragleave"></a>  COleDropTarget::OnDragLeave  
+ Called by the framework when the cursor leaves the window while a dragging operation is in effect.  
   
 ```  
 virtual void OnDragLeave(CWnd* pWnd);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- Punta alla finestra che si sta spostando il cursore.  
+ Points to the window the cursor is leaving.  
   
-### <a name="remarks"></a>Note  
- Eseguire l'override di questa funzione se si desidera un comportamento speciale quando l'operazione di trascinamento rende la finestra specificata. L'implementazione predefinita di questa funzione chiama [CView::OnDragLeave](../../mfc/reference/cview-class.md#ondragleave).  
+### <a name="remarks"></a>Remarks  
+ Override this function if you want special behavior when the drag operation leaves the specified window. The default implementation of this function calls [CView::OnDragLeave](../../mfc/reference/cview-class.md#ondragleave).  
   
- Per ulteriori informazioni, vedere [IDropTarget::DragLeave](http://msdn.microsoft.com/library/windows/desktop/ms680110) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [IDropTarget::DragLeave](http://msdn.microsoft.com/library/windows/desktop/ms680110) in the Windows SDK.  
   
-##  <a name="ondragover"></a>COleDropTarget::OnDragOver  
- Chiamato dal framework quando il cursore viene trascinato nella finestra.  
+##  <a name="ondragover"></a>  COleDropTarget::OnDragOver  
+ Called by the framework when the cursor is dragged over the window.  
   
 ```  
 virtual DROPEFFECT OnDragOver(
@@ -179,42 +184,42 @@ virtual DROPEFFECT OnDragOver(
     CPoint point);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- Punta alla finestra che il cursore è posizionato.  
+ Points to the window that the cursor is over.  
   
  `pDataObject`  
- Punta all'oggetto dati che contiene i dati da eliminare.  
+ Points to the data object that contains the data to be dropped.  
   
  `dwKeyState`  
- Contiene lo stato dei tasti di modifica. Si tratta di una combinazione di un numero qualsiasi di quanto segue: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_MBUTTON**, e **MK_RBUTTON**.  
+ Contains the state of the modifier keys. This is a combination of any number of the following: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_MBUTTON**, and **MK_RBUTTON**.  
   
  `point`  
- Contiene il percorso corrente del cursore nelle coordinate client.  
+ Contains the current location of the cursor in client coordinates.  
   
-### <a name="return-value"></a>Valore restituito  
- L'effetto che risulterebbe se tentata un'eliminazione nella posizione specificata da `point`. Può trattarsi di uno o più delle seguenti operazioni:  
+### <a name="return-value"></a>Return Value  
+ The effect that would result if a drop were attempted at the location specified by `point`. It can be one or more of the following:  
   
-- `DROPEFFECT_NONE`Un rilascio non sarebbe consentito.  
+- `DROPEFFECT_NONE` A drop would not be allowed.  
   
-- `DROPEFFECT_COPY`Verrà eseguita un'operazione di copia.  
+- `DROPEFFECT_COPY` A copy operation would be performed.  
   
-- `DROPEFFECT_MOVE`Verrà eseguita un'operazione di spostamento.  
+- `DROPEFFECT_MOVE` A move operation would be performed.  
   
-- `DROPEFFECT_LINK`Potrebbe essere stabilito un collegamento dai dati eliminati i dati originali.  
+- `DROPEFFECT_LINK` A link from the dropped data to the original data would be established.  
   
-- `DROPEFFECT_SCROLL`Indica che un'operazione di trascinamento scorrimento sta per verificarsi o si verifica nel database di destinazione.  
+- `DROPEFFECT_SCROLL` Indicates that a drag scroll operation is about to occur or is occurring in the target.  
   
-### <a name="remarks"></a>Note  
- Questa funzione deve essere sottoposto a override per consentire le operazioni di eliminazione si verifichi nella finestra. L'implementazione predefinita di questa funzione chiama [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover), che restituisce `DROPEFFECT_NONE` per impostazione predefinita. Poiché questa funzione viene chiamata frequentemente durante un'operazione di trascinamento e rilascio, viene ottimizzata per quanto possibile.  
+### <a name="remarks"></a>Remarks  
+ This function should be overridden to allow drop operations to occur in the window. The default implementation of this function calls [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover), which returns `DROPEFFECT_NONE` by default. Because this function is called frequently during a drag-and-drop operation, it should be optimized as much as possible.  
   
- Per ulteriori informazioni, vedere [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms680129) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [IDropTarget::DragOver](http://msdn.microsoft.com/library/windows/desktop/ms680129) in the Windows SDK.  
   
-### <a name="example"></a>Esempio  
- [!code-cpp[NVC_MFCOleContainer numero&21;](../../mfc/codesnippet/cpp/coledroptarget-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCOleContainer#21](../../mfc/codesnippet/cpp/coledroptarget-class_1.cpp)]  
   
-##  <a name="ondragscroll"></a>COleDropTarget::OnDragScroll  
- Chiamato dal framework prima di chiamare [OnDragEnter](#ondragenter) o [OnDragOver](#ondragover) per determinare se `point` è l'area di scorrimento.  
+##  <a name="ondragscroll"></a>  COleDropTarget::OnDragScroll  
+ Called by the framework before calling [OnDragEnter](#ondragenter) or [OnDragOver](#ondragover) to determine whether `point` is in the scrolling region.  
   
 ```  
 virtual DROPEFFECT OnDragScroll(
@@ -223,34 +228,34 @@ virtual DROPEFFECT OnDragScroll(
     CPoint point);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- Punta alla finestra che si trova attualmente il cursore.  
+ Points to the window the cursor is currently over.  
   
  `dwKeyState`  
- Contiene lo stato dei tasti di modifica. Si tratta di una combinazione di un numero qualsiasi di quanto segue: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_MBUTTON**, e **MK_RBUTTON**.  
+ Contains the state of the modifier keys. This is a combination of any number of the following: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_MBUTTON**, and **MK_RBUTTON**.  
   
  `point`  
- Contiene la posizione del cursore, in pixel, rispetto allo schermo.  
+ Contains the location of the cursor, in pixels, relative to the screen.  
   
-### <a name="return-value"></a>Valore restituito  
- L'effetto che risulterebbe se tentata un'eliminazione nella posizione specificata da `point`. Può trattarsi di uno o più delle seguenti operazioni:  
+### <a name="return-value"></a>Return Value  
+ The effect that would result if a drop were attempted at the location specified by `point`. It can be one or more of the following:  
   
-- `DROPEFFECT_NONE`Un rilascio non sarebbe consentito.  
+- `DROPEFFECT_NONE` A drop would not be allowed.  
   
-- `DROPEFFECT_COPY`Verrà eseguita un'operazione di copia.  
+- `DROPEFFECT_COPY` A copy operation would be performed.  
   
-- `DROPEFFECT_MOVE`Verrà eseguita un'operazione di spostamento.  
+- `DROPEFFECT_MOVE` A move operation would be performed.  
   
-- `DROPEFFECT_LINK`Potrebbe essere stabilito un collegamento dai dati eliminati i dati originali.  
+- `DROPEFFECT_LINK` A link from the dropped data to the original data would be established.  
   
-- `DROPEFFECT_SCROLL`Indica che un'operazione di trascinamento scorrimento sta per verificarsi o si verifica nel database di destinazione.  
+- `DROPEFFECT_SCROLL` Indicates that a drag scroll operation is about to occur or is occurring in the target.  
   
-### <a name="remarks"></a>Note  
- Eseguire l'override di questa funzione quando si desidera fornire un comportamento speciale per questo evento. L'implementazione predefinita di questa funzione chiama [CView::OnDragScroll](../../mfc/reference/cview-class.md#ondragscroll), che restituisce `DROPEFFECT_NONE` e scorre la finestra quando il cursore viene trascinato nell'area di scorrimento predefinita all'interno del bordo della finestra.  
+### <a name="remarks"></a>Remarks  
+ Override this function when you want to provide special behavior for this event. The default implementation of this function calls [CView::OnDragScroll](../../mfc/reference/cview-class.md#ondragscroll), which returns `DROPEFFECT_NONE` and scrolls the window when the cursor is dragged into the default scroll region inside the border of the window.  
   
-##  <a name="ondrop"></a>COleDropTarget::OnDrop  
- Chiamato dal framework quando un'operazione di trascinamento deve verificarsi.  
+##  <a name="ondrop"></a>  COleDropTarget::OnDrop  
+ Called by the framework when a drop operation is to occur.  
   
 ```  
 virtual BOOL OnDrop(
@@ -260,37 +265,37 @@ virtual BOOL OnDrop(
     CPoint point);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- Punta alla finestra che si trova attualmente il cursore.  
+ Points to the window the cursor is currently over.  
   
  `pDataObject`  
- Punta all'oggetto dati che contiene i dati da eliminare.  
+ Points to the data object that contains the data to be dropped.  
   
  `dropEffect`  
- L'effetto che l'utente ha scelto per l'operazione di trascinamento. Può trattarsi di uno o più delle seguenti operazioni:  
+ The effect that the user chose for the drop operation. It can be one or more of the following:  
   
-- `DROPEFFECT_COPY`Verrà eseguita un'operazione di copia.  
+- `DROPEFFECT_COPY` A copy operation would be performed.  
   
-- `DROPEFFECT_MOVE`Verrà eseguita un'operazione di spostamento.  
+- `DROPEFFECT_MOVE` A move operation would be performed.  
   
-- `DROPEFFECT_LINK`Potrebbe essere stabilito un collegamento dai dati eliminati i dati originali.  
+- `DROPEFFECT_LINK` A link from the dropped data to the original data would be established.  
   
  `point`  
- Contiene la posizione del cursore, in pixel, rispetto allo schermo.  
+ Contains the location of the cursor, in pixels, relative to the screen.  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se l'eliminazione ha esito positivo; in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the drop is successful; otherwise 0.  
   
-### <a name="remarks"></a>Note  
- Il framework chiama prima [OnDropEx](#ondropex). Se il `OnDropEx` funzione non gestisce l'eliminazione, il framework chiama la funzione di questo membro, `OnDrop`. In genere, l'applicazione esegue l'override [OnDropEx](../../mfc/reference/cview-class.md#ondropex) nella classe di visualizzazione per la gestione del pulsante destro del mouse trascinare e rilasciare. In genere, la classe di visualizzazione [OnDrop](../../mfc/reference/cview-class.md#ondrop) viene utilizzata per gestire il semplice trascinamento.  
+### <a name="remarks"></a>Remarks  
+ The framework first calls [OnDropEx](#ondropex). If the `OnDropEx` function does not handle the drop, the framework then calls this member function, `OnDrop`. Typically, the application overrides [OnDropEx](../../mfc/reference/cview-class.md#ondropex) in the view class to handle right mouse-button drag and drop. Typically, the view class [OnDrop](../../mfc/reference/cview-class.md#ondrop) is used to handle simple drag and drop.  
   
- L'implementazione predefinita di `COleDropTarget::OnDrop` chiamate [CView::OnDrop](../../mfc/reference/cview-class.md#ondrop), che restituisce semplicemente **FALSE** per impostazione predefinita.  
+ The default implementation of `COleDropTarget::OnDrop` calls [CView::OnDrop](../../mfc/reference/cview-class.md#ondrop), which simply returns **FALSE** by default.  
   
- Per ulteriori informazioni, vedere [IDropTarget:: DROP](http://msdn.microsoft.com/library/windows/desktop/ms687242) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [IDropTarget::Drop](http://msdn.microsoft.com/library/windows/desktop/ms687242) in the Windows SDK.  
   
-##  <a name="ondropex"></a>COleDropTarget::OnDropEx  
- Chiamato dal framework quando un'operazione di trascinamento deve verificarsi.  
+##  <a name="ondropex"></a>  COleDropTarget::OnDropEx  
+ Called by the framework when a drop operation is to occur.  
   
 ```  
 virtual DROPEFFECT OnDropEx(
@@ -301,79 +306,79 @@ virtual DROPEFFECT OnDropEx(
     CPoint point);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- Punta alla finestra che si trova attualmente il cursore.  
+ Points to the window the cursor is currently over.  
   
  `pDataObject`  
- Punta all'oggetto dati che contiene i dati da eliminare.  
+ Points to the data object that contains the data to be dropped.  
   
  `dropDefault`  
- L'effetto che l'utente ha scelto per l'operazione di eliminazione predefinito in base allo stato di chiave corrente. Può essere `DROPEFFECT_NONE`. Effetti di trascinamento sono descritti nella sezione Osservazioni.  
+ The effect that the user chose for the default drop operation based on the current key state. It can be `DROPEFFECT_NONE`. Drop effects are discussed in the Remarks section.  
   
  `dropList`  
- Un elenco degli effetti di trascinamento che supporta l'origine del trascinamento. I valori di effetto di rilascio possono essere combinati utilizzando l'operatore OR bit per bit ( **|**) operazione. Effetti di trascinamento sono descritti nella sezione Osservazioni.  
+ A list of the drop effects that the drop source supports. Drop effect values can be combined using the bitwise OR ( **&#124;**) operation. Drop effects are discussed in the Remarks section.  
   
  `point`  
- Contiene la posizione del cursore, in pixel, rispetto allo schermo.  
+ Contains the location of the cursor, in pixels, relative to the screen.  
   
-### <a name="return-value"></a>Valore restituito  
- L'effetto che ha causato dal tentativo di eliminazione nella posizione specificata da `point`. Effetti di trascinamento sono descritti nella sezione Osservazioni.  
+### <a name="return-value"></a>Return Value  
+ The drop effect that resulted from the drop attempt at the location specified by `point`. Drop effects are discussed in the Remarks section.  
   
-### <a name="remarks"></a>Note  
- Innanzitutto, il framework chiama questa funzione. Se non viene gestito l'eliminazione, il framework chiama [OnDrop](#ondrop). In genere, si eseguirà l'override [OnDropEx](../../mfc/reference/cview-class.md#ondropex) nella classe di visualizzazione per il supporto del pulsante destro del mouse trascinare e rilasciare. In genere, la classe di visualizzazione [OnDrop](../../mfc/reference/cview-class.md#ondrop) viene utilizzato per gestire il caso di supporto per il semplice trascinamento.  
+### <a name="remarks"></a>Remarks  
+ The framework first calls this function. If it does not handle the drop, the framework then calls [OnDrop](#ondrop). Typically, you will override [OnDropEx](../../mfc/reference/cview-class.md#ondropex) in the view class to support right mouse-button drag and drop. Typically, the view class [OnDrop](../../mfc/reference/cview-class.md#ondrop) is used to handle the case of support for simple drag and drop.  
   
- L'implementazione predefinita di `COleDropTarget::OnDropEx` chiamate [CView::OnDropEx](../../mfc/reference/cview-class.md#ondropex). Per impostazione predefinita, [CView::OnDropEx](../../mfc/reference/cview-class.md#ondropex) restituisce semplicemente un valore fittizio per indicare il [OnDrop](#ondrop) funzione membro deve essere chiamata.  
+ The default implementation of `COleDropTarget::OnDropEx` calls [CView::OnDropEx](../../mfc/reference/cview-class.md#ondropex). By default, [CView::OnDropEx](../../mfc/reference/cview-class.md#ondropex) simply returns a dummy value to indicate the [OnDrop](#ondrop) member function should be called.  
   
- Effetti di trascinamento viene descritta l'azione associata a un'operazione di trascinamento. Vedere il seguente elenco di effetti di trascinamento:  
+ Drop effects describe the action associated with a drop operation. See the following list of drop effects:  
   
-- `DROPEFFECT_NONE`Un rilascio non sarebbe consentito.  
+- `DROPEFFECT_NONE` A drop would not be allowed.  
   
-- `DROPEFFECT_COPY`Verrà eseguita un'operazione di copia.  
+- `DROPEFFECT_COPY` A copy operation would be performed.  
   
-- `DROPEFFECT_MOVE`Verrà eseguita un'operazione di spostamento.  
+- `DROPEFFECT_MOVE` A move operation would be performed.  
   
-- `DROPEFFECT_LINK`Potrebbe essere stabilito un collegamento dai dati eliminati i dati originali.  
+- `DROPEFFECT_LINK` A link from the dropped data to the original data would be established.  
   
-- `DROPEFFECT_SCROLL`Indica che un'operazione di trascinamento scorrimento sta per verificarsi o si verifica nel database di destinazione.  
+- `DROPEFFECT_SCROLL` Indicates that a drag scroll operation is about to occur or is occurring in the target.  
   
- Per ulteriori informazioni, vedere [IDropTarget:: DROP](http://msdn.microsoft.com/library/windows/desktop/ms687242) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [IDropTarget::Drop](http://msdn.microsoft.com/library/windows/desktop/ms687242) in the Windows SDK.  
   
-##  <a name="register"></a>COleDropTarget::Register  
- Chiamare questa funzione per registrare la finestra con le DLL OLE come destinazione di rilascio valido.  
+##  <a name="register"></a>  COleDropTarget::Register  
+ Call this function to register your window with the OLE DLLs as a valid drop target.  
   
 ```  
 BOOL Register(CWnd* pWnd);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- Punta alla finestra che deve essere registrato come destinazione di trascinamento.  
+ Points to the window that is to be registered as a drop target.  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se la registrazione ha esito positivo; in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if registration is successful; otherwise 0.  
   
-### <a name="remarks"></a>Note  
- Questa funzione deve essere chiamata per le operazioni di eliminazione di essere accettati.  
+### <a name="remarks"></a>Remarks  
+ This function must be called for drop operations to be accepted.  
   
- Per ulteriori informazioni, vedere [RegisterDragDrop](http://msdn.microsoft.com/library/windows/desktop/ms678405) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [RegisterDragDrop](http://msdn.microsoft.com/library/windows/desktop/ms678405) in the Windows SDK.  
   
-##  <a name="revoke"></a>COleDropTarget::Revoke  
- Chiamare questa funzione prima di eliminare tutte le finestre che sono stata registrata come destinazione di trascinamento tramite una chiamata a [registrare](#register) per rimuoverlo dall'elenco delle destinazioni di rilascio.  
+##  <a name="revoke"></a>  COleDropTarget::Revoke  
+ Call this function before destroying any window that has been registered as a drop target through a call to [Register](#register) to remove it from the list of drop targets.  
   
 ```  
 virtual void Revoke();
 ```  
   
-### <a name="remarks"></a>Note  
- Questa funzione viene chiamata automaticamente dal [OnDestroy](../../mfc/reference/cwnd-class.md#ondestroy) gestore per la finestra che è stata registrata, pertanto non è in genere necessario chiamare questa funzione in modo esplicito.  
+### <a name="remarks"></a>Remarks  
+ This function is called automatically from the [OnDestroy](../../mfc/reference/cwnd-class.md#ondestroy) handler for the window that was registered, so it is usually not necessary to call this function explicitly.  
   
- Per ulteriori informazioni, vedere [RevokeDragDrop](http://msdn.microsoft.com/library/windows/desktop/ms692643) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [RevokeDragDrop](http://msdn.microsoft.com/library/windows/desktop/ms692643) in the Windows SDK.  
   
-## <a name="see-also"></a>Vedere anche  
- [Esempio HIERSVR](../../visual-cpp-samples.md)   
- [Esempio MFC OCLIENT](../../visual-cpp-samples.md)   
- [CCmdTarget (classe)](../../mfc/reference/ccmdtarget-class.md)   
- [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
- [Classe COleDropSource](../../mfc/reference/coledropsource-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample HIERSVR](../../visual-cpp-samples.md)   
+ [MFC Sample OCLIENT](../../visual-cpp-samples.md)   
+ [CCmdTarget Class](../../mfc/reference/ccmdtarget-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [COleDropSource Class](../../mfc/reference/coledropsource-class.md)
 

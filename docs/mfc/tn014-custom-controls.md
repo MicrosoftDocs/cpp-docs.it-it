@@ -1,141 +1,160 @@
 ---
-title: "TN014: controlli personalizzati | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.controls"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controlli personalizzati [MFC]"
-  - "TN014"
+title: 'TN014: Custom Controls | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.controls
+dev_langs:
+- C++
+helpviewer_keywords:
+- TN014
+- custom controls [MFC]
 ms.assetid: 1917a498-f643-457c-b570-9a0af7dbf7bb
 caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# TN014: controlli personalizzati
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7f3dfe93d435d280a23b1cf6962a87488c024b2b
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Questa nota descrive il supporto MFC per i controlli di disegno automatico e personalizzati.  Vengono inoltre descritte la creazione di una sottoclasse dinamica e viene descritta la relazione tra gli oggetti [CWnd](../mfc/reference/cwnd-class.md) e `HWND`.  
+---
+# <a name="tn014-custom-controls"></a>TN014: Custom Controls
+This note describes the MFC Support for custom and self-drawing controls. It also describes dynamic subclassing, and describes the relationship between [CWnd](../mfc/reference/cwnd-class.md) objects and `HWND`s.  
   
- L'applicazione MFC di esempio CTRLTEST illustra come utilizzare molti controlli personalizzati.  Vedere il codice sorgente per l'esempio generale [CTRLTEST](../top/visual-cpp-samples.md) MFC e la guida online.  
+ The MFC sample application CTRLTEST illustrates how to use many custom controls. See the source code for the MFC General sample [CTRLTEST](../visual-cpp-samples.md) and online help.  
   
-## Controlli per il disegno personalizzato\/Menu  
- Windows fornisce il supporto per i controlli e i menu del disegno personalizzato utilizzando i messaggi di Windows.  La finestra padre del controllo o del menu riceve i messaggi e chiama le funzioni in risposta.  È possibile eseguire l'override di queste funzioni per personalizzare l'aspetto e il comportamento del controllo o del menu per il disegno personalizzato.  
+## <a name="owner-draw-controlsmenus"></a>Owner-Draw Controls/Menus  
+ Windows provides support for owner-draw controls and menus by using Windows messages. The parent window of any control or menu receives these messages and calls functions in response. You can override these functions to customize the visual appearance and behavior of your owner-draw control or menu.  
   
- MFC supporta direttamente il disegno personalizzato con le seguenti funzioni:  
+ MFC directly supports owner-draw with the following functions:  
   
--   [CWnd::OnDrawItem](../Topic/CWnd::OnDrawItem.md)  
+- [CWnd::OnDrawItem](../mfc/reference/cwnd-class.md#ondrawitem)  
   
--   [CWnd::OnMeasureItem](../Topic/CWnd::OnMeasureItem.md)  
+- [CWnd::OnMeasureItem](../mfc/reference/cwnd-class.md#onmeasureitem)  
   
--   [CWnd::OnCompareItem](../Topic/CWnd::OnCompareItem.md)  
+- [CWnd::OnCompareItem](../mfc/reference/cwnd-class.md#oncompareitem)  
   
--   [CWnd::OnDeleteItem](../Topic/CWnd::OnDeleteItem.md)  
+- [CWnd::OnDeleteItem](../mfc/reference/cwnd-class.md#ondeleteitem)  
   
- È possibile eseguire l'override di queste funzioni nella classe derivata `CWnd` per implementare il comportamento di disegno personalizzato.  
+ You can override these functions in your `CWnd` derived class to implement custom draw behavior.  
   
- Questo approccio non porta ad avere codice riutilizzabile.  Se si dispone di due controlli simili in due classi diverse `CWnd`, è necessario implementare il comportamento del controllo personalizzato in due posizioni.  L'architettura supportata da MFC del controllo di disegno automatico risolve il problema.  
+ This approach does not lead to reusable code. If you have two similar controls in two different `CWnd` classes, you must implement the custom control behavior in two locations. The MFC-supported self-drawing control architecture solves this problem.  
   
-## Comandi e menu di disegno automatico  
- MFC fornisce un'implementazione predefinita \(nelle classi [CMenu](../mfc/reference/cmenu-class.md) e `CWnd` \) per i messaggi standard per il disegno personalizzato.  Questa implementazione predefinita decodificherà i parametri per il disegno personalizzato e delegherà i messaggi per il disegno personalizzato ai controlli o al menu.  Si tratta di disegno automatico perché il codice di disegno è nella classe del controllo o del menu, non nella finestra proprietaria.  
+## <a name="self-draw-controls-and-menus"></a>Self-Draw Controls and Menus  
+ MFC provides a default implementation (in the `CWnd` and [CMenu](../mfc/reference/cmenu-class.md) classes) for the standard owner-draw messages. This default implementation will decode the owner-draw parameters and delegate the owner-draw messages to the controls or menu. This is called self-draw because the drawing code is in the class of the control or menu, not in the owner window.  
   
- Tramite i comandi di disegno automatico è possibile compilare le classi di controlli riutilizzabili che utilizzano la semantica di disegno personalizzato per visualizzare il controllo.  Il codice per disegnare il controllo è nella classe di controllo, non nel padre.  Si tratta di un approccio orientato agli oggetti per la programmazione dei controlli personalizzati.  Aggiungere il seguente elenco di funzioni alle classi di disegno automatico:  
+ By using self-draw controls you can build reusable control classes that use owner-draw semantics to display the control. The code for drawing the control is in the control class, not its parent. This is an object-oriented approach to custom control programming. Add the following list of functions to your self-draw classes:  
   
--   Per i pulsanti di disegno automatico:  
+-   For self-draw buttons:  
   
-    ```  
-    CButton:DrawItem(LPDRAWITEMSTRUCT);  
-            // insert code to draw this button  
-    ```  
+ ```  
+    CButton:DrawItem(LPDRAWITEMSTRUCT);
+*// insert code to draw this button  
+ ```  
   
--   Per i menu di disegno automatico:  
+-   For self-draw menus:  
   
-    ```  
-    CMenu:MeasureItem(LPMEASUREITEMSTRUCT);  
-            // insert code to measure the size of an item in this menu  
-    CMenu:DrawItem(LPDRAWITEMSTRUCT);  
-            // insert code to draw an item in this menu  
-    ```  
+ ```  
+    CMenu:MeasureItem(LPMEASUREITEMSTRUCT);
+*// insert code to measure the size of an item in this menu  
+    CMenu:DrawItem(LPDRAWITEMSTRUCT);
+*// insert code to draw an item in this menu  
+ ```  
   
--   Per le caselle di riepilogo di disegno automatico:  
+-   For self-draw list boxes:  
   
-    ```  
-    CListBox:MeasureItem(LPMEASUREITEMSTRUCT);  
-            // insert code to measure the size of an item in this list box  
-    CListBox:DrawItem(LPDRAWITEMSTRUCT);  
-            // insert code to draw an item in this list box  
+ ```  
+    CListBox:MeasureItem(LPMEASUREITEMSTRUCT);
+*// insert code to measure the size of an item in this list box  
+    CListBox:DrawItem(LPDRAWITEMSTRUCT);
+*// insert code to draw an item in this list box  
+ 
+    CListBox:CompareItem(LPCOMPAREITEMSTRUCT);
+*// insert code to compare two items in this list box if LBS_SORT  
+    CListBox:DeleteItem(LPDELETEITEMSTRUCT);
+*// insert code to delete an item from this list box  
+ ```  
   
-    CListBox:CompareItem(LPCOMPAREITEMSTRUCT);  
-            // insert code to compare two items in this list box if LBS_SORT  
-    CListBox:DeleteItem(LPDELETEITEMSTRUCT);  
-            // insert code to delete an item from this list box  
-    ```  
+-   For self-draw combo boxes:  
   
--   Per le caselle combinate di disegno automatico:  
+ ```  
+    CComboBox:MeasureItem(LPMEASUREITEMSTRUCT);
+*// insert code to measure the size of an item in this combo box  
+    CComboBox:DrawItem(LPDRAWITEMSTRUCT);
+*// insert code to draw an item in this combo box  
+ 
+    CComboBox:CompareItem(LPCOMPAREITEMSTRUCT);
+*// insert code to compare two items in this combo box if CBS_SORT  
+    CComboBox:DeleteItem(LPDELETEITEMSTRUCT);
+*// insert code to delete an item from this combo box  
+ ```  
   
-    ```  
-    CComboBox:MeasureItem(LPMEASUREITEMSTRUCT);  
-            // insert code to measure the size of an item in this combo box  
-    CComboBox:DrawItem(LPDRAWITEMSTRUCT);  
-            // insert code to draw an item in this combo box  
+ For details on the owner-draw structures ([DRAWITEMSTRUCT](../mfc/reference/drawitemstruct-structure.md), [MEASUREITEMSTRUCT](../mfc/reference/measureitemstruct-structure.md), [COMPAREITEMSTRUCT](../mfc/reference/compareitemstruct-structure.md), and [DELETEITEMSTRUCT](../mfc/reference/deleteitemstruct-structure.md)) see the MFC documentation for `CWnd::OnDrawItem`, `CWnd::OnMeasureItem`, `CWnd::OnCompareItem`, and `CWnd::OnDeleteItem` respectively.  
   
-    CComboBox:CompareItem(LPCOMPAREITEMSTRUCT);  
-            // insert code to compare two items in this combo box if CBS_SORT  
-    CComboBox:DeleteItem(LPDELETEITEMSTRUCT);  
-            // insert code to delete an item from this combo box  
-    ```  
+## <a name="using-self-draw-controls-and-menus"></a>Using self-draw controls and menus  
+ For self-draw menus, you must override both the `OnMeasureItem` and `OnDrawItem` methods.  
   
- Per informazioni dettagliate sulle strutture di disegno personalizzato \([DRAWITEMSTRUCT](../mfc/reference/drawitemstruct-structure.md), [MEASUREITEMSTRUCT](../mfc/reference/measureitemstruct-structure.md), [COMPAREITEMSTRUCT](../mfc/reference/compareitemstruct-structure.md) e [DELETEITEMSTRUCT](../mfc/reference/deleteitemstruct-structure.md)\) vedere la documentazione MFC per `CWnd::OnDrawItem`, `CWnd::OnMeasureItem`, `CWnd::OnCompareItem` e `CWnd::OnDeleteItem` rispettivamente.  
+ For self-draw list boxes and combo boxes, you must override `OnMeasureItem` and `OnDrawItem`. You must specify the `LBS_OWNERDRAWVARIABLE` style for list boxes or `CBS_OWNERDRAWVARIABLE` style for combo boxes in the dialog template. The `OWNERDRAWFIXED` style will not work with self-draw items because the fixed item height is determined before self-draw controls are attached to the list box. (You can use the methods [CListBox::SetItemHeight](../mfc/reference/clistbox-class.md#setitemheight) and [CComboBox::SetItemHeight](../mfc/reference/ccombobox-class.md#setitemheight) to overcome this limitation.)  
   
-## Utilizzo dei controlli e dei menu di disegno automatico  
- Per i menu di disegno automatico, è necessario eseguire l'override dei metodi `OnDrawItem` e `OnMeasureItem`.  
+ Switching to an `OWNERDRAWVARIABLE` style will force the system to apply the `NOINTEGRALHEIGHT` style to the control. Because the control cannot calculate an integral height with variable sized items, the default style of `INTEGRALHEIGHT` is ignored and the control is always `NOINTEGRALHEIGHT`. If your items are fixed height, you can prevent partial items from being drawn by specifying the control size to be an integer multiplier of the item size.  
   
- Per le caselle di riepilogo e caselle combinate di disegno automatico, è necessario eseguire l'override di `OnMeasureItem` e `OnDrawItem`.  È necessario specificare lo stile `LBS_OWNERDRAWVARIABLE` per le caselle di riepilogo o lo stile `CBS_OWNERDRAWVARIABLE` per le caselle combinate in un modello di finestra di dialogo.  Lo stile `OWNERDRAWFIXED` non funzionerà con gli elementi di disegno automatico poiché l'altezza fissa dell'elemento viene determinata prima che i controlli di disegno automatico siano allegati alla casella di riepilogo. \(È possibile utilizzare i metodi [CListBox::SetItemHeight](../Topic/CListBox::SetItemHeight.md) e [CComboBox::SetItemHeight](../Topic/CComboBox::SetItemHeight.md) per ovviare a questa limitazione.\)  
+ For self-drawing list boxes and combo boxes with the `LBS_SORT` or `CBS_SORT` style, you must override the `OnCompareItem` method.  
   
- La commutazione a uno stile `OWNERDRAWVARIABLE` impone al sistema di applicare lo stile `NOINTEGRALHEIGHT` al controllo.  Poiché il controllo non potrà calcolare un'altezza integrale con gli elementi di dimensioni variabili, lo stile predefinito di `INTEGRALHEIGHT` viene ignorato e il controllo è sempre `NOINTEGRALHEIGHT`.  Se gli elementi hanno l'altezza fissata, è possibile evitare che gli elementi parziali vengano disegnati specificando la dimensione di controllo ad essere un moltiplicatore intero della dimensione dell'elemento.  
+ For self-drawing list boxes and combo boxes, `OnDeleteItem` is not usually overridden. You can override `OnDeleteItem` if you want to perform any special processing. One case where this would be applicable is when additional memory or other resources are stored with each list box or combo box item.  
   
- Per le caselle di riepilogo e caselle combinate di disegno automatico con lo stile `CBS_SORT` o `LBS_SORT`, è necessario eseguire l'override del metodo `OnCompareItem`.  
+## <a name="examples-of-self-drawing-controls-and-menus"></a>Examples of Self-Drawing Controls and Menus  
+ The MFC General sample [CTRLTEST](../visual-cpp-samples.md) provides samples of a self-draw menu and a self-draw list box.  
   
- Per le caselle di riepilogo e caselle combinate di disegno automatico, di `OnDeleteItem` non viene in genere eseguito l'override.  È possibile eseguire l'override di `OnDeleteItem` se si desidera eseguire dell'elaborazione speciale.  Un caso in cui è applicabile è quando la memoria aggiuntiva o altre risorse vengono archiviate con ogni elemento casella di riepilogo o casella combinata.  
+ The most typical example of a self-drawing button is a bitmap button. A bitmap button is a button that shows one, two, or three bitmap images for the different states. An example of this is provided in the MFC class [CBitmapButton](../mfc/reference/cbitmapbutton-class.md).  
   
-## Esempi di controlli e di menu di disegno automatico  
- L'esempio generale [CTRLTEST](../top/visual-cpp-samples.md) MFC fornisce esempi di un menu di disegno automatico e una casella di riepilogo di disegno automatico.  
+## <a name="dynamic-subclassing"></a>Dynamic Subclassing  
+ Occasionally you will want to change the functionality of an object that already exists. The previous examples required you to customize the controls before they were created. Dynamic subclassing enables you to customize a control that has already been created.  
   
- L'esempio più comune di un pulsante di disegno automatico è un pulsante bitmap.  Un pulsante bitmap è un pulsante che mostra una, due o tre immagini bitmap per i diversi stati.  Un esempio è dato nella classe MFC [CBitmapButton](../mfc/reference/cbitmapbutton-class.md).  
+ Subclassing is the Windows term for replacing the [WndProc](http://msdn.microsoft.com/en-us/94ba8ffa-3c36-46d4-ac74-9bd10b1ffd26) of a window with a customized `WndProc` and calling the old `WndProc` for default functionality.  
   
-## Creazione di una sottoclasse dinamica  
- Talvolta è preferibile modificare la funzionalità di un oggetto già esistente.  Negli esempi precedenti è necessario personalizzare i controlli prima che vengano creati.  La creazione di una sottoclasse dinamica consente di personalizzare un controllo che è già stato creato.  
+ This should not be confused with C++ class derivation. For clarification, the C++ terms *base class* and *derived class* are analogous to *superclass* and *subclass* in the Windows object model. C++ derivation with MFC and Windows subclassing are functionally similar, except C++ does not support dynamic subclassing.  
   
- La creazione di una sottoclasse è il termine di Windows per la sostituzione di [WndProc](http://msdn.microsoft.com/it-it/94ba8ffa-3c36-46d4-ac74-9bd10b1ffd26) di una finestra con `WndProc` personalizzato e la chiamata di `WndProc` precedente per funzionalità predefinite.  
+ The `CWnd` class provides the connection between a C++ object (derived from `CWnd`) and a Windows window object (known as an `HWND`).  
   
- Questa operazione non deve essere confusa con la derivazione di classi di C\+\+.  Per chiarimento, i termini C\+\+ *classe base* e *classe derivata* sono analoghi a *superclasse* e *sottoclasse* del modello a oggetti di Windows.  La derivazione di C\+\+ con MFC e la creazione di una sottoclasse di Windows sono simili a livello funzionale, ad eccezione che C\+\+ non supporta la creazione di una sottoclasse dinamica.  
+ There are three common ways these are related:  
   
- La classe `CWnd` fornisce la connessione tra l'oggetto C\+\+ \(derivato da `CWnd`\) e un oggetto finestra di Windows \(noto come `HWND`\).  
+- `CWnd` creates the `HWND`. You can modify the behavior in a derived class by creating a class derived from `CWnd`. The `HWND` is created when your application calls [CWnd::Create](../mfc/reference/cwnd-class.md#create).  
   
- Esistono tre modi comuni in cui questi sono correlati:  
+-   The application attaches a `CWnd` to an existing `HWND`. The behavior of the existing window is not modified. This is a case of delegation and is made possible by calling [CWnd::Attach](../mfc/reference/cwnd-class.md#attach) to alias an existing `HWND` to a `CWnd` object.  
   
--   `CWnd` crea `HWND`.  È possibile modificare il comportamento in una classe derivata creando una classe derivata da `CWnd`.  `HWND` viene creato quando l'applicazione chiama [CWnd::Create](../Topic/CWnd::Create.md).  
+- `CWnd` is attached to an existing `HWND` and you can modify the behavior in a derived class. This is called dynamic subclassing because we are changing the behavior, and therefore the class, of a Windows object at run time.  
   
--   L'applicazione associa un `CWnd` a un `HWND` esistente.  Il comportamento della finestra esistente non viene modificato.  Si tratta di un caso di delega e viene resa possibile chiamando [CWnd::Attach](../Topic/CWnd::Attach.md) per creare l'alias di un `HWND` esistente a un oggetto `CWnd`.  
+ You can achieve dynamic subclassing by using the methods [CWnd::SubclassWindow](../mfc/reference/cwnd-class.md#subclasswindow) and[CWnd::SubclassDlgItem](../mfc/reference/cwnd-class.md#subclassdlgitem).  
   
--   `CWnd` è collegato a un `HWND` esistente ed è possibile modificare il comportamento in una classe derivata.  Si tratta di creazione di una sottoclasse dinamica poiché viene modificato il comportamento e la classe, di un oggetto Windows in fase di esecuzione.  
+ Both routines attach a `CWnd` object to an existing `HWND`. `SubclassWindow` takes the `HWND` directly. `SubclassDlgItem` is a helper function that takes a control ID and the parent window. `SubclassDlgItem` is designed for attaching C++ objects to dialog controls created from a dialog template.  
   
- È possibile ottenere la creazione di una sottoclasse dinamica utilizzando i metodi [CWnd::SubclassWindow](../Topic/CWnd::SubclassWindow.md) e `` [CWnd::SubclassDlgItem](../Topic/CWnd::SubclassDlgItem.md).  
+ See the [CTRLTEST](../visual-cpp-samples.md) example for several examples of when to use `SubclassWindow` and `SubclassDlgItem`.  
   
- Entrambe le routine associano un oggetto `CWnd` a un `HWND` esistente.  `SubclassWindow` passa direttamente `HWND`.  `SubclassDlgItem` è una funzione di supporto che accetta un ID del controllo e la finestra padre.  `SubclassDlgItem` è progettato per connettere gli oggetti C\+\+ ai controlli finestra di dialogo creati da un modello di finestra di dialogo.  
-  
- Vedere l'esempio [CTRLTEST](../top/visual-cpp-samples.md) per alcuni esempi di utilizzo di `SubclassWindow` e `SubclassDlgItem`.  
-  
-## Vedere anche  
- [Note tecniche per numero](../mfc/technical-notes-by-number.md)   
- [Note tecniche per categoria](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

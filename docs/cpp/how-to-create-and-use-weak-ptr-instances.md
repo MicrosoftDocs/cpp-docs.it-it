@@ -1,90 +1,56 @@
 ---
-title: "Procedura: creare e utilizzare istanze weak_ptr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 'How to: Create and Use weak_ptr Instances | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 8dd6909b-b070-4afa-9696-f2fc94579c65
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Procedura: creare e utilizzare istanze weak_ptr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 26202c91c5041f858bd1ac310fb17f004a15ff96
+ms.contentlocale: it-it
+ms.lasthandoff: 09/11/2017
 
-Talvolta un oggetto deve memorizzare un modo per accedere all'oggetto sottostante di un `shared_ptr` senza causare l'incremento del conteggio dei riferimenti.  In genere, questa situazione si verifica in presenza di riferimenti ciclici tra le istanze di `shared_ptr`.  
+---
+# <a name="how-to-create-and-use-weakptr-instances"></a>How to: Create and Use weak_ptr Instances
+Sometimes an object must store a way to access the underlying object of a `shared_ptr` without causing the reference count to be incremented. Typically, this situation occurs when you have cyclic references between `shared_ptr` instances.  
   
- Per progettare al meglio è consigliato evitare il più possibile la proprietà condivisa dei puntatori.  Tuttavia, se è necessario condividere la proprietà di istanze `shared_ptr`, evitare riferimenti ciclici tra queste.  Quando i riferimenti ciclici sono inevitabili o preferibili per una qualche ragione, utilizzare `weak_ptr` per fornire a uno o più proprietari un riferimento debole a un altro `shared_ptr`.  Utilizzando `weak_ptr`, è possibile creare un oggetto `shared_ptr` che si unisce a un set di istanze correlate esistente, ma solo se la risorsa di memoria sottostante è ancora valida.  `weak_ptr` non partecipa al conteggio dei riferimenti, pertanto non può impedire che il conteggio dei riferimenti passi a zero.  Tuttavia, è possibile utilizzare `weak_ptr` per tentare di ottenere una nuova copia di `shared_ptr` con cui è stata inizializzata.  Se la memoria è già stata eliminata, viene generata un'eccezione **bad\_weak\_ptr**.  Se la memoria è ancora valida, il nuovo puntatore condiviso incrementa il conteggio dei riferimenti e garantisce che la memoria sarà valida fino a che la variabile `shared_ptr` rimane nell'ambito.  
+ The best design is to avoid shared ownership of pointers whenever you can. However, if you must have shared ownership of `shared_ptr` instances, avoid cyclic references between them. When cyclic references are unavoidable, or even preferable for some reason, use `weak_ptr` to give one or more of the owners a weak reference to another `shared_ptr`. By using a `weak_ptr`, you can create a `shared_ptr` that joins to an existing set of related instances, but only if the underlying memory resource is still valid. A `weak_ptr` itself does not participate in the reference counting, and therefore, it cannot prevent the reference count from going to zero. However, you can use a `weak_ptr` to try to obtain a new copy of the `shared_ptr` with which it was initialized. If the memory has already been deleted, a **bad_weak_ptr** exception is thrown. If the memory is still valid, the new shared pointer increments the reference count and guarantees that the memory will be valid as long as the `shared_ptr` variable stays in scope.  
   
-## Esempio  
- Nell'esempio di codice seguente è illustrato un caso in cui `weak_ptr` è utilizzato per garantire l'eliminazione di oggetti con dipendenze circolari.  Quando si esamina l'esempio, si supponga che è stato creato solo dopo che le soluzioni alternative sono state valutate.  Gli oggetti `Controller` rappresentano alcuni aspetti del processo di un computer e operano in modo indipendente.  Ogni controller deve essere in grado di eseguire una query sullo stato degli altri controller in qualsiasi momento e contiene un `vector<weak_ptr<Controller>>` privato per espletare questa funzione.  Ogni vettore contiene un riferimento circolare, pertanto vengono utilizzate le istanze `weak_ptr` anziché `shared_ptr`.  
+## <a name="example"></a>Example  
+ The following code example shows a case where `weak_ptr` is used to ensure proper deletion of objects that have circular dependencies. As you examine the example, assume that it was created only after alternative solutions were considered. The `Controller` objects represent some aspect of a machine process, and they operate independently. Each controller must be able to query the status of the other controllers at any time, and each one contains a private `vector<weak_ptr<Controller>>` for this purpose. Each vector contains a circular reference, and therefore, `weak_ptr` instances are used instead of `shared_ptr`.  
   
  [!code-cpp[stl_smart_pointers#222](../cpp/codesnippet/CPP/how-to-create-and-use-weak-ptr-instances_1.cpp)]  
   
-  **Creazione di Controller0**  
-**Creazione di Controller1**  
-**Creazione di Controller2**  
-**Creazione di Controller3**  
-**Creazione di Controller4**  
-**push\_back a v\[0\]: 1**  
-**push\_back to v\[0\]: 2**  
-**push\_back to v\[0\]: 3**  
-**push\_back to v\[0\]: 4**  
-**push\_back to v\[1\]: 0**  
-**push\_back to v\[1\]: 2**  
-**push\_back to v\[1\]: 3**  
-**push\_back to v\[1\]: 4**  
-**push\_back to v\[2\]: 0**  
-**push\_back to v\[2\]: 1**  
-**push\_back to v\[2\]: 3**  
-**push\_back to v\[2\]: 4**  
-**push\_back to v\[3\]: 0**  
-**push\_back to v\[3\]: 1**  
-**push\_back to v\[3\]: 2**  
-**push\_back to v\[3\]: 4**  
-**push\_back to v\[4\]: 0**  
-**push\_back to v\[4\]: 1**  
-**push\_back to v\[4\]: 2**  
-**push\_back to v\[4\]: 3**  
-**use\_count \= 1**  
-**Stato di 1 \= On**  
-**Stato di 2 \= On**  
-**Stato di 3 \= On**  
-**Stato di 4 \= On**  
-**use\_count \= 1**  
-**Stato di 0 \= On**  
-**Stato di 2 \= On**  
-**Stato di 3 \= On**  
-**Stato di 4 \= On**  
-**use\_count \= 1**  
-**Stato di 0 \= On**  
-**Stato di 1 \= On**  
-**Stato di 3 \= On**  
-**Stato di 4 \= On**  
-**use\_count \= 1**  
-**Stato di 0 \= On**  
-**Stato di 1 \= On**  
-**Stato di 2 \= On**  
-**Stato di 4 \= On**  
-**use\_count \= 1**  
-**Stato di 0 \= On**  
-**Stato di 1 \= On**  
-**Stato di 2 \= On**  
-**Stato di 3 \= On**  
-**Eliminazione di Controller0**  
-**Eliminazione di Controller1**  
-**Eliminazione di Controller2**  
-**Eliminazione di Controller3**  
-**Eliminazione di Controller4**  
-**Premere un tasto qualsiasi** Come esperimento, modificare il vettore `others` in `vector<shared_ptr<Controller>>`, quindi nell'output, notare che non viene richiamato alcun distruttore quando viene restituito `TestRun`.  
+```Output  
+Creating Controller0Creating Controller1Creating Controller2Creating Controller3Creating Controller4push_back to v[0]: 1push_back to v[0]: 2push_back to v[0]: 3push_back to v[0]: 4push_back to v[1]: 0push_back to v[1]: 2push_back to v[1]: 3push_back to v[1]: 4push_back to v[2]: 0push_back to v[2]: 1push_back to v[2]: 3push_back to v[2]: 4push_back to v[3]: 0push_back to v[3]: 1push_back to v[3]: 2push_back to v[3]: 4push_back to v[4]: 0push_back to v[4]: 1push_back to v[4]: 2push_back to v[4]: 3use_count = 1Status of 1 = OnStatus of 2 = OnStatus of 3 = OnStatus of 4 = Onuse_count = 1Status of 0 = OnStatus of 2 = OnStatus of 3 = OnStatus of 4 = Onuse_count = 1Status of 0 = OnStatus of 1 = OnStatus of 3 = OnStatus of 4 = Onuse_count = 1Status of 0 = OnStatus of 1 = OnStatus of 2 = OnStatus of 4 = Onuse_count = 1Status of 0 = OnStatus of 1 = OnStatus of 2 = OnStatus of 3 = OnDestroying Controller0Destroying Controller1Destroying Controller2Destroying Controller3Destroying Controller4Press any key  
+```  
   
-## Vedere anche  
- [Puntatori intelligenti](../cpp/smart-pointers-modern-cpp.md)
+ As an experiment, modify the vector `others` to be a `vector<shared_ptr<Controller>>`, and then in the output, notice that no destructors are invoked when `TestRun` returns.  
+  
+## <a name="see-also"></a>See Also  
+ [Smart Pointers](../cpp/smart-pointers-modern-cpp.md)

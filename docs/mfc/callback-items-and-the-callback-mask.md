@@ -1,48 +1,67 @@
 ---
-title: "Elementi di callback e maschera di callback | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "elementi di callback nella classe CListCtrl"
-  - "CListCtrl (classe), elemento di callback e maschera di callback"
+title: Callback Items and the Callback Mask | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- callback items in CListCtrl class [MFC]
+- CListCtrl class [MFC], callback item and callback mask
 ms.assetid: 67c1f76f-6144-453e-9376-6712f89430ae
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Elementi di callback e maschera di callback
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e943e5445620b25437a0f6d70a6703a927d5e636
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Per ognuno dei relativi elementi, un controllo elenco in genere archiviare il testo dell'etichetta, l'indice dell'elenco immagini di icone dell'elemento e un set di flag di bit dello stato dell'elemento.  È possibile definire i singoli elementi come elementi di callback, utili se l'applicazione è già archivia le informazioni per un elemento.  
+---
+# <a name="callback-items-and-the-callback-mask"></a>Callback Items and the Callback Mask
+For each of its items, a list view control typically stores the label text, the image list index of the item's icons, and a set of bit flags for the item's state. You can define individual items as callback items, which are useful if your application already stores some of the information for an item.  
   
- Si definisce un elemento come elemento di callback specificando i valori appropriati per i membri di `iImage` e di `pszText` della struttura di **LV\_ITEM** \(vedere [CListCtrl::GetItem](../Topic/CListCtrl::GetItem.md)\).  Se l'applicazione gestisce il testo dell'elemento secondario o dell'elemento, specificare il valore di **LPSTR\_TEXTCALLBACK** per il membro di `pszText`.  Se l'applicazione tiene traccia dell'icona per l'elemento, specificare il valore di **I\_IMAGECALLBACK** per il membro di `iImage`.  
+ You define an item as a callback item by specifying appropriate values for the `pszText` and `iImage` members of the **LV_ITEM** structure (see [CListCtrl::GetItem](../mfc/reference/clistctrl-class.md#getitem)). If the application maintains the item's or subitem's text, specify the **LPSTR_TEXTCALLBACK** value for the `pszText` member. If the application keeps track of the icon for the item, specify the **I_IMAGECALLBACK** value for the `iImage` member.  
   
- Oltre a definire gli elementi di callback, è inoltre possibile modificare la maschera di callback del controllo.  La maschera è un set di flag di bit che specificano gli stati degli elementi per cui l'applicazione, anziché il controllo, memorizzati i dati correnti.  La maschera di callback viene applicato agli elementi di tutti i controlli, a differenza della designazione di callback dell'elemento, applicato a un elemento specifico.  La maschera di callback è zero per impostazione predefinita, pertanto le barre di avanzamento del controllo tutti gli stati degli elementi.  Per modificare questo comportamento predefinito, inizializzare la maschera a qualsiasi combinazione dei seguenti valori:  
+ In addition to defining callback items, you can also modify the control's callback mask. This mask is a set of bit flags that specify the item states for which the application, rather than the control, stores the current data. The callback mask applies to all of the control's items, unlike the callback item designation, which applies to a specific item. The callback mask is zero by default, meaning that the control tracks all item states. To change this default behavior, initialize the mask to any combination of the following values:  
   
--   `LVIS_CUT` l'elemento è contrassegnato per un'operazione di taglia e incolla.  
+-   `LVIS_CUT` The item is marked for a cut-and-paste operation.  
   
--   `LVIS_DROPHILITED` l'elemento verrà evidenziato come una destinazione di trascinamento.  
+-   `LVIS_DROPHILITED` The item is highlighted as a drag-and-drop target.  
   
--   `LVIS_FOCUSED` gli elementi con stato attivo.  
+-   `LVIS_FOCUSED` The item has the focus.  
   
--   `LVIS_SELECTED` l'elemento è selezionato.  
+-   `LVIS_SELECTED` The item is selected.  
   
--   **LVIS\_OVERLAYMASK** l'applicazione archivia l'indice dell'elenco immagini di un'immagine sovrapposta corrente per ogni elemento.  
+-   **LVIS_OVERLAYMASK** The application stores the image list index of the current overlay image for each item.  
   
--   **LVIS\_STATEIMAGEMASK** l'applicazione archivia l'indice dell'elenco immagini dell'immagine dello stato corrente per ogni elemento.  
+-   **LVIS_STATEIMAGEMASK** The application stores the image list index of the current state image for each item.  
   
- Per ulteriori informazioni sul recupero e sull'impostazione della maschera, vedere [CListCtrl::GetCallbackMask](../Topic/CListCtrl::GetCallbackMask.md) e [CListCtrl::SetCallbackMask](../Topic/CListCtrl::SetCallbackMask.md).  
+ For further information on retrieving and setting this mask, see [CListCtrl::GetCallbackMask](../mfc/reference/clistctrl-class.md#getcallbackmask) and [CListCtrl::SetCallbackMask](../mfc/reference/clistctrl-class.md#setcallbackmask).  
   
-## Vedere anche  
- [Utilizzo di CListCtrl](../mfc/using-clistctrl.md)   
- [Controlli](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CListCtrl](../mfc/using-clistctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

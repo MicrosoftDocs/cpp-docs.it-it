@@ -1,57 +1,76 @@
 ---
-title: "Ricezione di notifiche da controlli comuni | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ON_NOTIFY"
-  - "WM_NOTIFY"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controlli comuni [C++], notifiche"
-  - "controlli [MFC], notifiche"
-  - "notifiche, controlli comuni"
-  - "ON_NOTIFY (macro)"
-  - "OnNotify (metodo)"
-  - "ricezione di notifiche da controlli comuni"
-  - "controlli comuni di Windows [C++], notifiche"
-  - "WM_NOTIFY (messaggio)"
+title: Receiving Notification from Common Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ON_NOTIFY
+- WM_NOTIFY
+dev_langs:
+- C++
+helpviewer_keywords:
+- OnNotify method [MFC]
+- common controls [MFC], notifications
+- ON_NOTIFY macro [MFC]
+- controls [MFC], notifications
+- receiving notifications from common controls
+- notifications [MFC], common controls
+- Windows common controls [MFC], notifications
+- WM_NOTIFY message
 ms.assetid: 50194592-d60d-44d0-8ab3-338a2a2c63e7
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Ricezione di notifiche da controlli comuni
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 96e967904cc4c851de6dc1aef34a4d6204ea9d78
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-I controlli comuni sono finestre figlio che inviano messaggi di notifica alla finestra padre quando gli eventi, come input dall'utente, si verificano nel controllo.  
+---
+# <a name="receiving-notification-from-common-controls"></a>Receiving Notification from Common Controls
+Common controls are child windows that send notification messages to the parent window when events, such as input from the user, occur in the control.  
   
- L'applicazione si basa su questi messaggi di notifica per determinare l'azione che l'utente lo desidera utilizzare.  La maggior parte dei controlli comuni inviano messaggi di notifica come messaggi di **WM\_NOTIFY**.  I controlli Windows inviano la maggior parte dei messaggi di notifica come messaggi di **WM\_COMMAND**.  [CWnd::OnNotify](../Topic/CWnd::OnNotify.md) è il gestore del messaggio di **WM\_NOTIFY**.  Come con `CWnd::OnCommand`, l'implementazione di `OnNotify` invia il messaggio di notifica a `OnCmdMsg` per la gestione delle mappe messaggi.  La voce della mappa messaggi per gestire le notifiche è `ON_NOTIFY`.  Per ulteriori informazioni, vedere [Nota tecnica 61: Messaggi di WM\_NOTIFY e di ON\_NOTIFY](../mfc/tn061-on-notify-and-wm-notify-messages.md).  
+ The application relies on these notification messages to determine what action the user wants it to take. Most common controls send notification messages as **WM_NOTIFY** messages. Windows controls send most notification messages as **WM_COMMAND** messages. [CWnd::OnNotify](../mfc/reference/cwnd-class.md#onnotify) is the handler for the **WM_NOTIFY** message. As with `CWnd::OnCommand`, the implementation of `OnNotify` dispatches the notification message to `OnCmdMsg` for handling in message maps. The message-map entry for handling notifications is `ON_NOTIFY`. For more information, see [Technical Note 61: ON_NOTIFY and WM_NOTIFY Messages](../mfc/tn061-on-notify-and-wm-notify-messages.md).  
   
- In alternativa, una classe derivata può gestire i propri messaggi di notifica mediante "di reflection di messaggio". Per ulteriori informazioni, vedere [Nota tecnica 62: Riflesso di messaggio per i controlli Windows](../mfc/tn062-message-reflection-for-windows-controls.md).  
+ Alternately, a derived class can handle its own notification messages using "message reflection." For more information, see [Technical Note 62: Message Reflection for Windows Controls](../mfc/tn062-message-reflection-for-windows-controls.md).  
   
-## Recuperare la posizione del cursore in un messaggio di notifica  
- Occasionalmente, è utile determinare la posizione corrente del cursore quando determinati messaggi di notifica vengono ricevuti da un controllo comune.  Ad esempio, è opportuno determinare la posizione corrente del cursore quando un controllo comune riceve un messaggio di notifica di **NM\_RCLICK**.  
+## <a name="retrieving-the-cursor-position-in-a-notification-message"></a>Retrieving the Cursor Position in a Notification Message  
+ On occasion, it is useful to determine the current position of the cursor when certain notification messages are received by a common control. For example, it would be helpful to determine the current cursor location when a common control receives a **NM_RCLICK** notification message.  
   
- Esiste un modo semplice per ottenere questo risultato chiamando `CWnd::GetCurrentMessage`.  Tuttavia, questo metodo recupera solo la posizione del cursore quando il messaggio è stato inviato.  Poiché il cursore può essere spostato poiché il messaggio è stato inviato è necessario chiamare **CWnd::GetCursorPos** per ottenere la posizione corrente del cursore.  
+ There is a simple way to accomplish this by calling `CWnd::GetCurrentMessage`. However, this method only retrieves the cursor position at the time the message was sent. Because the cursor may have been moved since the message was sent you must call **CWnd::GetCursorPos** to get the current cursor position.  
   
 > [!NOTE]
->  `CWnd::GetCurrentMessage` deve essere chiamato solo all'interno di un gestore messaggi.  
+>  `CWnd::GetCurrentMessage` should only be called within a message handler.  
   
- Aggiungere il seguente codice al corpo del gestore di messaggio di notifica \(in questo esempio, **NM\_RCLICK**\):  
+ Add the following code to the body of the notification message handler (in this example, **NM_RCLICK**):  
   
- [!code-cpp[NVC_MFCControlLadenDialog#4](../mfc/codesnippet/CPP/receiving-notification-from-common-controls_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#4](../mfc/codesnippet/cpp/receiving-notification-from-common-controls_1.cpp)]  
   
- In questa fase, la posizione del cursore del mouse viene archiviata nell'oggetto di `cursorPos`.  
+ At this point, the mouse cursor location is stored in the `cursorPos` object.  
   
-## Vedere anche  
- [Creazione e utilizzo di controlli](../mfc/making-and-using-controls.md)   
- [Controlli](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Making and Using Controls](../mfc/making-and-using-controls.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

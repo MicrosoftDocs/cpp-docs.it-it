@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCHeaderCtrl | Documenti di Microsoft
+title: CMFCHeaderCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,7 +26,18 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCHeaderCtrl class
+- CMFCHeaderCtrl [MFC], CMFCHeaderCtrl
+- CMFCHeaderCtrl [MFC], EnableMultipleSort
+- CMFCHeaderCtrl [MFC], GetColumnState
+- CMFCHeaderCtrl [MFC], GetSortColumn
+- CMFCHeaderCtrl [MFC], IsAscending
+- CMFCHeaderCtrl [MFC], IsDialogControl
+- CMFCHeaderCtrl [MFC], IsMultipleSort
+- CMFCHeaderCtrl [MFC], RemoveSortColumn
+- CMFCHeaderCtrl [MFC], SetSortColumn
+- CMFCHeaderCtrl [MFC], OnDrawItem
+- CMFCHeaderCtrl [MFC], OnDrawSortArrow
+- CMFCHeaderCtrl [MFC], OnFillBackground
 ms.assetid: 2f5fbf7b-5c75-42db-9216-640b1628f777
 caps.latest.revision: 29
 author: mikeblome
@@ -46,62 +57,62 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: c49ee61b6441e79a0c3c4c1aa133b4bce1578103
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 294d624d9b95bc927a419268e71953a04a27182d
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="cmfcheaderctrl-class"></a>CMFCHeaderCtrl Class
-La `CMFCHeaderCtrl` classe supporta l'ordinamento di più colonne in un controllo intestazione.  
+The `CMFCHeaderCtrl` class supports sorting multiple columns in a header control.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCHeaderCtrl : public CHeaderCtrl  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Costruttori pubblici  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCHeaderCtrl::CMFCHeaderCtrl](#cmfcheaderctrl)|Costruisce un oggetto `CMFCHeaderCtrl`.|  
-|`CMFCHeaderCtrl::~CMFCHeaderCtrl`|Distruttore.|  
+|[CMFCHeaderCtrl::CMFCHeaderCtrl](#cmfcheaderctrl)|Constructs a `CMFCHeaderCtrl` object.|  
+|`CMFCHeaderCtrl::~CMFCHeaderCtrl`|Destructor.|  
   
-### <a name="public-methods"></a>Metodi pubblici  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort)|Abilita o disabilita *ordinamento a più colonne* modalità per il controllo intestazione corrente.|  
-|[CMFCHeaderCtrl::GetColumnState](#getcolumnstate)|Indica se una colonna non è ordinata, o viene ordinata in ordine crescente o decrescente.|  
-|[CMFCHeaderCtrl::GetSortColumn](#getsortcolumn)|Recupera l'indice in base zero della prima colonna di ordinamento nel controllo intestazione.|  
-|`CMFCHeaderCtrl::GetThisClass`|Utilizzato dal framework per ottenere un puntatore al [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) oggetto associato a questo tipo di classe.|  
-|[CMFCHeaderCtrl::IsAscending](#isascending)|Indica se una colonna nel controllo header viene ordinata in ordine crescente.|  
-|[CMFCHeaderCtrl::IsDialogControl](#isdialogcontrol)|Indica se la finestra padre del controllo intestazione corrente è una finestra di dialogo.|  
-|[CMFCHeaderCtrl::IsMultipleSort](#ismultiplesort)|Indica se il controllo intestazione corrente è in *ordinamento a più colonne* modalità.|  
-|[CMFCHeaderCtrl::RemoveSortColumn](#removesortcolumn)|Rimuove la colonna specificata dall'elenco di colonne di ordinamento.|  
-|[CMFCHeaderCtrl::SetSortColumn](#setsortcolumn)|Imposta l'ordinamento della colonna specificata in un controllo intestazione.|  
+|[CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort)|Enables or disables *multiple column sort* mode for the current header control.|  
+|[CMFCHeaderCtrl::GetColumnState](#getcolumnstate)|Indicates whether a column is not sorted, or is sorted in ascending or descending order.|  
+|[CMFCHeaderCtrl::GetSortColumn](#getsortcolumn)|Retrieves the zero-based index of the first sorted column in the header control.|  
+|`CMFCHeaderCtrl::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
+|[CMFCHeaderCtrl::IsAscending](#isascending)|Indicates whether any column in the header control is sorted in ascending order.|  
+|[CMFCHeaderCtrl::IsDialogControl](#isdialogcontrol)|Indicates whether the parent window of the current header control is a dialog box.|  
+|[CMFCHeaderCtrl::IsMultipleSort](#ismultiplesort)|Indicates whether the current header control is in *multiple column sort* mode.|  
+|[CMFCHeaderCtrl::RemoveSortColumn](#removesortcolumn)|Removes the specified column from the list of sort columns.|  
+|[CMFCHeaderCtrl::SetSortColumn](#setsortcolumn)|Sets the sort order of a specified column in a header control.|  
   
-### <a name="protected-methods"></a>Metodi protetti  
+### <a name="protected-methods"></a>Protected Methods  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCHeaderCtrl::OnDrawItem](#ondrawitem)|Chiamato dal framework per creare una colonna del controllo intestazione.|  
-|[CMFCHeaderCtrl::OnDrawSortArrow](#ondrawsortarrow)|Chiamato dal framework per disegnare la freccia di ordinamento.|  
-|[CMFCHeaderCtrl::OnFillBackground](#onfillbackground)|Chiamato dal framework per riempire lo sfondo di una colonna del controllo intestazione.|  
+|[CMFCHeaderCtrl::OnDrawItem](#ondrawitem)|Called by the framework to draw a header control column.|  
+|[CMFCHeaderCtrl::OnDrawSortArrow](#ondrawsortarrow)|Called by the framework to draw the sort arrow.|  
+|[CMFCHeaderCtrl::OnFillBackground](#onfillbackground)|Called by the framework to fill the background of a header control column.|  
   
-## <a name="example"></a>Esempio  
- Nell'esempio riportato di seguito viene illustrato come creare un oggetto di `CMFCHeaderCtrl` (classe) e come abilitare *ordinamento a più colonne* modalità per il controllo intestazione corrente.  
+## <a name="example"></a>Example  
+ The following example demonstrates how to construct an object of the `CMFCHeaderCtrl` class, and how to enable *multiple column sort* mode for the current header control.  
   
- [!code-cpp[NVC_MFC_RibbonApp&#24;](../../mfc/reference/codesnippet/cpp/cmfcheaderctrl-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp#24](../../mfc/reference/codesnippet/cpp/cmfcheaderctrl-class_1.cpp)]  
   
-## <a name="remarks"></a>Note  
- La `CMFCHeaderCtrl` classe disegna una freccia di ordinamento su una colonna del controllo intestazione per indicare che la colonna è ordinata. Utilizzare *ordinamento a più colonne* se un set di colonne nel controllo elenco padre ( [CMFCListCtrl classe](../../mfc/reference/cmfclistctrl-class.md)) può essere ordinato nello stesso momento.  
+## <a name="remarks"></a>Remarks  
+ The `CMFCHeaderCtrl` class draws a sort arrow on a header control column to indicate that the column is sorted. Use *multiple column sort* mode if a set of columns in the parent list control ( [CMFCListCtrl Class](../../mfc/reference/cmfclistctrl-class.md)) can be sorted at the same time.  
   
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -112,20 +123,20 @@ class CMFCHeaderCtrl : public CHeaderCtrl
   
  [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md)  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** afxheaderctrl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxheaderctrl.h  
   
-##  <a name="cmfcheaderctrl"></a>CMFCHeaderCtrl::CMFCHeaderCtrl  
- Costruisce un oggetto `CMFCHeaderCtrl`.  
+##  <a name="cmfcheaderctrl"></a>  CMFCHeaderCtrl::CMFCHeaderCtrl  
+ Constructs a `CMFCHeaderCtrl` object.  
   
 ```  
 CMFCHeaderCtrl::CMFCHeaderCtrl()  
 ```  
   
-### <a name="remarks"></a>Note  
- Questo costruttore inizializza le variabili membro seguenti sui valori specificati.  
+### <a name="remarks"></a>Remarks  
+ This constructor initializes the following member variables to the specified values:  
   
-|Variabile membro|Valore|  
+|Member variable|Value|  
 |---------------------|-----------|  
 |`m_bIsMousePressed`|`FALSE`|  
 |`m_bMultipleSort`|`FALSE`|  
@@ -135,93 +146,93 @@ CMFCHeaderCtrl::CMFCHeaderCtrl()
 |`m_bIsDlgControl`|`FALSE`|  
 |`m_hFont`|`NULL`|  
   
-##  <a name="enablemultiplesort"></a>CMFCHeaderCtrl::EnableMultipleSort  
- Abilita o disabilita *ordinamento a più colonne* modalità per il controllo intestazione corrente.  
+##  <a name="enablemultiplesort"></a>  CMFCHeaderCtrl::EnableMultipleSort  
+ Enables or disables *multiple column sort* mode for the current header control.  
   
 ```  
 void EnableMultipleSort(BOOL bEnable=TRUE);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`Per abilitare la modalità di ordinamento di più colonne; `FALSE` per disabilitare la modalità di ordinamento più colonne e per rimuovere le colonne dall'elenco delle colonne ordinate. Il valore predefinito è `TRUE`.  
+ `TRUE` to enable multiple column sort mode; `FALSE` to disable multiple column sort mode and to remove any columns from the list of sorted columns. The default value is `TRUE`.  
   
-### <a name="remarks"></a>Note  
- Utilizzare questo metodo per abilitare o disabilitare la modalità di ordinamento più colonne. Due o più colonne possono partecipare un ordinamento, se il controllo intestazione è in modalità di ordinamento più colonne.  
+### <a name="remarks"></a>Remarks  
+ Use this method to enable or disable multiple column sort mode. Two or more columns can participate in a sort if the header control is in multiple column sort mode.  
   
-##  <a name="getcolumnstate"></a>CMFCHeaderCtrl::GetColumnState  
- Indica se una colonna è ordinata o viene ordinata in ordine crescente o decrescente.  
+##  <a name="getcolumnstate"></a>  CMFCHeaderCtrl::GetColumnState  
+ Indicates whether a column is unsorted, or is sorted in ascending or descending order.  
   
 ```  
 int GetColumnState(int iColumn) const;  
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `iColumn`  
- Indice in base zero di una colonna.  
+ The zero-based index of a column.  
   
-### <a name="return-value"></a>Valore restituito  
- Un valore che indica lo stato di ordinamento della colonna specificata. Nella tabella seguente sono elencati i valori possibili:  
+### <a name="return-value"></a>Return Value  
+ A value that indicate the sort status of the specified column. The following table lists the possible values:  
   
-|Valore|Descrizione|  
+|Value|Description|  
 |-----------|-----------------|  
-|-1|Ordinati in ordine decrescente.|  
-|0|Non ordinato.|  
-|1|Ordinati in ordine crescente.|  
+|-1|Sorted in descending order.|  
+|0|Not sorted.|  
+|1|Sorted in ascending order.|  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getsortcolumn"></a>CMFCHeaderCtrl::GetSortColumn  
- Recupera l'indice in base zero della prima colonna di ordinamento nel controllo intestazione.  
+##  <a name="getsortcolumn"></a>  CMFCHeaderCtrl::GetSortColumn  
+ Retrieves the zero-based index of the first sorted column in the header control.  
   
 ```  
 int GetSortColumn() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- L'indice di una colonna ordinata o -1 se viene trovata alcuna colonna ordinata.  
+### <a name="return-value"></a>Return Value  
+ The index of a sorted column, or -1 if no sorted column is found.  
   
-### <a name="remarks"></a>Note  
- Se il controllo intestazione è in *ordinamento a più colonne* modalità e compilato l'applicazione in modalità debug, questo metodo dichiara e consiglia di utilizzare il [CMFCHeaderCtrl::GetColumnState](#getcolumnstate) metodo invece. Se il controllo intestazione è in modalità di ordinamento più colonne ed è stato compilato l'applicazione in modalità di vendita al dettaglio, questo metodo restituisce -1.  
+### <a name="remarks"></a>Remarks  
+ If the header control is in *multiple column sort* mode and you compiled the application in debug mode, this method asserts and advises you to use the [CMFCHeaderCtrl::GetColumnState](#getcolumnstate) method instead. If the header control is in multiple column sort mode and you compiled the application in retail mode, this method returns -1.  
   
-##  <a name="isascending"></a>CMFCHeaderCtrl::IsAscending  
- Indica se una colonna nel controllo header viene ordinata in ordine crescente.  
+##  <a name="isascending"></a>  CMFCHeaderCtrl::IsAscending  
+ Indicates whether any column in the header control is sorted in ascending order.  
   
 ```  
 BOOL IsAscending() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- `TRUE`Se una colonna nel controllo header viene ordinata in ordine crescente; in caso contrario, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if any column in the header control is sorted in ascending order; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Note  
- Il valore restituito da questo metodo viene utilizzato per visualizzare la freccia di ordinamento appropriato nella voce di controllo intestazione. Utilizzare il [CMFCHeaderCtrl::SetSortColumn](#setsortcolumn) per impostare l'ordinamento.  
+### <a name="remarks"></a>Remarks  
+ The value that this method returns is used to display the appropriate sort arrow on the header control item. Use the [CMFCHeaderCtrl::SetSortColumn](#setsortcolumn) method to set the sort order.  
   
-##  <a name="isdialogcontrol"></a>CMFCHeaderCtrl::IsDialogControl  
- Indica se la finestra padre del controllo intestazione corrente è una finestra di dialogo.  
+##  <a name="isdialogcontrol"></a>  CMFCHeaderCtrl::IsDialogControl  
+ Indicates whether the parent window of the current header control is a dialog box.  
   
 ```  
 BOOL IsDialogControl() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- `TRUE`Se la finestra padre del controllo intestazione corrente è una finestra di dialogo; in caso contrario, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the parent window of the current header control is a dialog box; otherwise, `FALSE`.  
   
-##  <a name="ismultiplesort"></a>CMFCHeaderCtrl::IsMultipleSort  
- Indica se il controllo intestazione corrente è in *ordinamento a più colonne* modalità.  
+##  <a name="ismultiplesort"></a>  CMFCHeaderCtrl::IsMultipleSort  
+ Indicates whether the current header control is in *multiple column sort* mode.  
   
 ```  
 BOOL IsMultipleSort() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- `TRUE`Se è abilitata la modalità di ordinamento più colonne. in caso contrario, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if multiple column sort mode is enabled; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Note  
- Utilizzare il [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) metodo per abilitare o disabilitare la modalità di ordinamento più colonne. Due o più colonne possono partecipare un ordinamento, se il controllo intestazione è in modalità di ordinamento più colonne.  
+### <a name="remarks"></a>Remarks  
+ Use the [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) method to enable or disable multiple column sort mode. Two or more columns can participate in a sort if the header control is in multiple column sort mode.  
   
-##  <a name="ondrawitem"></a>CMFCHeaderCtrl::OnDrawItem  
- Chiamato dal framework per creare una colonna del controllo intestazione.  
+##  <a name="ondrawitem"></a>  CMFCHeaderCtrl::OnDrawItem  
+ Called by the framework to draw a header control column.  
   
 ```  
 virtual void OnDrawItem(
@@ -232,24 +243,24 @@ virtual void OnDrawItem(
     BOOL bIsHighlighted);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Puntatore a un contesto di dispositivo.  
+ A pointer to a device context.  
   
  [in] `iItem`  
- Indice in base zero dell'elemento da disegnare.  
+ The zero-based index of the item to draw.  
   
  [in] `rect`  
- Il rettangolo di delimitazione dell'elemento da disegnare.  
+ The bounding rectangle of the item to draw.  
   
  [in] `bIsPressed`  
- `TRUE`per disegnare l'elemento nello stato pressed; in caso contrario, `FALSE`.  
+ `TRUE` to draw the item in pressed state; otherwise, `FALSE`.  
   
  [in] `bIsHighlighted`  
- `TRUE`per disegnare l'elemento in stato evidenziato. in caso contrario, `FALSE`.  
+ `TRUE` to draw the item in highlighted state; otherwise, `FALSE`.  
   
-##  <a name="ondrawsortarrow"></a>CMFCHeaderCtrl::OnDrawSortArrow  
- Chiamato dal framework per disegnare la freccia di ordinamento.  
+##  <a name="ondrawsortarrow"></a>  CMFCHeaderCtrl::OnDrawSortArrow  
+ Called by the framework to draw the sort arrow.  
   
 ```  
 virtual void OnDrawSortArrow(
@@ -257,39 +268,39 @@ virtual void OnDrawSortArrow(
     CRect rectArrow);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Puntatore a un contesto di dispositivo.  
+ A pointer to a device context.  
   
  [in] `rectArrow`  
- Il rettangolo di delimitazione della freccia di ordinamento.  
+ The bounding rectangle of the sort arrow.  
   
-##  <a name="onfillbackground"></a>CMFCHeaderCtrl::OnFillBackground  
- Chiamato dal framework per riempire lo sfondo di una colonna del controllo intestazione.  
+##  <a name="onfillbackground"></a>  CMFCHeaderCtrl::OnFillBackground  
+ Called by the framework to fill the background of a header control column.  
   
 ```  
 virtual void OnFillBackground(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Puntatore a un contesto di dispositivo.  
+ A pointer to a device context.  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="removesortcolumn"></a>CMFCHeaderCtrl::RemoveSortColumn  
- Rimuove la colonna specificata dall'elenco di colonne di ordinamento.  
+##  <a name="removesortcolumn"></a>  CMFCHeaderCtrl::RemoveSortColumn  
+ Removes the specified column from the list of sort columns.  
   
 ```  
 void RemoveSortColumn(int iColumn);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `iColumn`  
- Indice in base zero della colonna da rimuovere.  
+ The zero-based index of the column to remove.  
   
-##  <a name="setsortcolumn"></a>CMFCHeaderCtrl::SetSortColumn  
- Imposta l'ordinamento della colonna specificata in un controllo intestazione.  
+##  <a name="setsortcolumn"></a>  CMFCHeaderCtrl::SetSortColumn  
+ Sets the sort order of a specified column in a header control.  
   
 ```  
 void SetSortColumn(
@@ -298,27 +309,27 @@ void SetSortColumn(
     BOOL bAdd=FALSE);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `iColumn`  
- Indice in base zero di una colonna del controllo intestazione. Se questo parametro è minore di zero, questo metodo rimuove tutte le colonne dall'elenco di colonne di ordinamento.  
+ The zero-based index of a header control column. If this parameter is less than zero, this method removes all columns from the list of sort columns.  
   
  [in] `bAscending`  
- Specifica l'ordinamento della colonna che la `iColumn` parametro specifica. `TRUE`Per impostare l'ordine crescente; `FALSE` per impostare l'ordine decrescente. Il valore predefinito è `TRUE`.  
+ Specifies the sort order of the column that the `iColumn` parameter specifies. `TRUE` to set ascending order; `FALSE` to set descending order. The default value is `TRUE`.  
   
  [in] `bAdd`  
- `TRUE`Per impostare l'ordinamento della colonna che la `iColumn` parametro specifica.  
+ `TRUE` to set the sort order of the column that the `iColumn` parameter specifies.  
   
- Se il controllo intestazione corrente è in *ordinamento a più colonne* modalità, questo metodo aggiunge la colonna specificata all'elenco di colonne di ordinamento. Utilizzare [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) per impostare più modalità di ordinamento di colonne.  
+ If the current header control is in *multiple column sort* mode, this method adds the specified column to the list of sort columns. Use [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) to set multiple column sort mode.  
   
- Se non è più modalità di ordinamento di colonne e questo metodo viene compilato in modalità debug, questo metodo asserisce. Se questo metodo viene compilato in modalità retail più modalità di ordinamento di colonna non è impostata, questo metodo prima rimuove tutte le colonne dall'elenco di colonne di ordinamento e quindi aggiunge la colonna specificata all'elenco.  
+ If multiple column sort mode is not set and this method is compiled in debug mode, this method asserts. If multiple column sort mode is not set and this method is compiled in retail mode, this method first removes all columns from the list of sort columns, and then adds the specified column to the list.  
   
- `FALSE`innanzitutto rimuovere tutte le colonne dall'elenco di colonne di ordinamento e quindi aggiungere la colonna specificata all'elenco. Il valore predefinito è `FALSE`.  
+ `FALSE` to first remove all columns from the list of sort columns, and then add the specified column to the list. The default value is `FALSE`.  
   
-### <a name="remarks"></a>Note  
- Utilizzare questo metodo per impostare l'ordinamento di una colonna. Se necessario, questo metodo aggiunge la colonna all'elenco di colonne di ordinamento. Il controllo intestazione utilizza l'ordinamento per disegnare una freccia di ordinamento che punta verso l'alto o verso il basso.  
+### <a name="remarks"></a>Remarks  
+ Use this method to set the sort order of a column. If necessary, this method adds the column to the list of sort columns. The header control uses the sort order to draw a sort arrow that points up or down.  
   
-## <a name="see-also"></a>Vedere anche  
- [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
- [Classi](../../mfc/reference/mfc-classes.md)   
- [Classe CMFCListCtrl](../../mfc/reference/cmfclistctrl-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCListCtrl Class](../../mfc/reference/cmfclistctrl-class.md)
 

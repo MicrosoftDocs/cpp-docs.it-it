@@ -1,56 +1,76 @@
 ---
-title: "Routing dei comandi | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC, routing dei comandi"
-  - "gestione dei comandi, routing dei comandi"
-  - "gestori"
-  - "gestori, comandi"
-  - "comandi (routing)"
+title: Command Routing | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, command routing
+- command handling [MFC], routing commands
+- handlers [MFC]
+- handlers, command [MFC]
+- command routing
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Routing dei comandi
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9b8b2c0deef88405b15d1b04dcd02fa09960bc1d
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Le responsabilità del programmatore nell'uso dei comandi si limitano alla creazione di connessioni mappa messaggi fra i comandi e le loro funzioni di gestione, un'attività per la quale si usa la finestra Proprietà. È anche necessario scrivere la maggior parte dei gestori di comando.  
+---
+# <a name="command-routing"></a>Command Routing
+Your responsibility in working with commands is limited to making message-map connections between commands and their handler functions, a task for which you use the Properties window. You must also write most command handlers.  
   
- I messaggi di Windows in genere sono inviati alla finestra cornice principale, ma i messaggi di comando vengono indirizzati in seguito ad altri oggetti. Il framework indirizza i comandi attraverso una sequenza standard di oggetti destinazione comando, uno dei quali deve disporre di un gestore per il comando. Ogni oggetto destinazione comando controlla la propria mappa messaggi per verificare se può gestire il messaggio in arrivo.  
+ Windows messages are usually sent to the main frame window, but command messages are then routed to other objects. The framework routes commands through a standard sequence of command-target objects, one of which is expected to have a handler for the command. Each command-target object checks its message map to see if it can handle the incoming message.  
   
- Classi di destinazione comando diverse controllano le proprie mappe messaggi in momenti diversi. In genere una classe indirizza il comando a determinati altri oggetti per concedere a questi la prima opportunità di gestire il comando. Se nessuno di questi oggetti gestisce il comando, la classe originale controlla la propria mappa messaggi. Quindi, se non riesce a fornire un gestore, può indirizzare il comando ad altre destinazioni comando. La tabella [Routing standard dei comandi](#_core_standard_command_route) che segue mostra in che modo ciascuna delle classi struttura questa sequenza. L'ordine generale in cui una destinazione comando esegue il routing di un comando è:  
+ Different command-target classes check their own message maps at different times. Typically, a class routes the command to certain other objects to give them first chance at the command. If none of those objects handles the command, the original class checks its own message map. Then, if it can't supply a handler itself, it may route the command to yet more command targets. The table [Standard Command Route](#_core_standard_command_route) below shows how each of the classes structures this sequence. The general order in which a command target routes a command is:  
   
-1.  Al proprio oggetto destinazione comando figlio attivo al momento.  
+1.  To its currently active child command-target object.  
   
-2.  A se stessa.  
+2.  To itself.  
   
-3.  Ad altre destinazioni comando.  
+3.  To other command targets.  
   
- Qual è il costo di questo meccanismo di rounting? Se confrontato a ciò che il gestore fa in risposta a un comando, il costo del routing è basso. Occorre tenere presente che il framework genera comandi solo quando l'utente interagisce con un oggetto dell'interfaccia utente.  
+ How expensive is this routing mechanism Compared to what your handler does in response to a command, the cost of the routing is low. Bear in mind that the framework generates commands only when the user interacts with a user-interface object.  
   
-### Routing standard dei comandi  
+### <a name="_core_standard_command_route"></a> Standard Command Route  
   
-|Quando un oggetto di questo tipo riceve un comando . . .|Concede a se stesso e ad altri oggetti destinazione comando l'opportunità di gestire il comando in questo ordine:|  
-|--------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|  
-|Finestra cornice MDI \(`CMDIFrameWnd`\)|1.  `CMDIChildWnd` attivo<br />2.  Questa finestra cornice<br />3.  Applicazione \(oggetto `CWinApp`\)|  
-|Finestre cornice del documento \(`CFrameWnd`, `CMDIChildWnd`\)|1.  Visualizzazione attiva<br />2.  Questa finestra cornice<br />3.  Applicazione \(oggetto `CWinApp`\)|  
-|Visualizza|1.  Questa visualizzazione<br />2.  Documento collegato alla visualizzazione|  
-|Documento|1.  Documento corrente<br />2.  Modello di documento collegato al documento|  
-|Finestra di dialogo|1.  Questa finestra di dialogo<br />2.  Finestra proprietaria della finestra di dialogo.<br />3.  Applicazione \(oggetto `CWinApp`\)|  
+|When an object of this type receives a command . . .|It gives itself and other command-target objects a chance to handle the command in this order:|  
+|----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|  
+|MDI frame window  (`CMDIFrameWnd`)|1.  Active `CMDIChildWnd`<br />2.  This frame window<br />3.  Application (`CWinApp` object)|  
+|Document frame window  (`CFrameWnd`, `CMDIChildWnd`)|1.  Active view<br />2.  This frame window<br />3.  Application (`CWinApp` object)|  
+|View|1.  This view<br />2.  Document attached to the view|  
+|Document|1.  This document<br />2.  Document template attached to the document|  
+|Dialog box|1.  This dialog box<br />2.  Window that owns the dialog box<br />3.  Application (`CWinApp` object)|  
   
- Nei casi in cui le voci numerate nella seconda colonna della tabella precedente menzionano altri oggetti, come un documento, vedere l'elemento corrispondente nella prima colonna. Ad esempio, quando si legge nella seconda colonna che la visualizzazione inoltra un comando al suo documento, vedere la voce "Documento" nella prima colonna per continuare a seguire il routing.  
+ Where numbered entries in the second column of the preceding table mention other objects, such as a document, see the corresponding item in the first column. For instance, when you read in the second column that the view forwards a command to its document, see the "Document" entry in the first column to follow the routing further.  
   
-## Vedere anche  
- [Chiamata di un gestore dal framework](../mfc/how-the-framework-calls-a-handler.md)
+## <a name="see-also"></a>See Also  
+ [How the Framework Calls a Handler](../mfc/how-the-framework-calls-a-handler.md)
+
+

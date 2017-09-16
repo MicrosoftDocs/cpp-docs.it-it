@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCRibbonSeparator | Documenti di Microsoft
+title: CMFCRibbonSeparator Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,9 +22,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCRibbonSeparator class
-- GetThisClass method
-- CreateObject method
+- CMFCRibbonSeparator [MFC], CMFCRibbonSeparator
+- CMFCRibbonSeparator [MFC], AddToListBox
+- CMFCRibbonSeparator [MFC], CopyFrom
+- CMFCRibbonSeparator [MFC], GetRegularSize
+- CMFCRibbonSeparator [MFC], IsSeparator
+- CMFCRibbonSeparator [MFC], IsTabStop
+- CMFCRibbonSeparator [MFC], OnDraw
+- CMFCRibbonSeparator [MFC], OnDrawOnList
 ms.assetid: bedb1a53-cb07-4c3c-be12-698c5409e7cf
 caps.latest.revision: 21
 author: mikeblome
@@ -44,56 +49,56 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 98a58d43b5e6299f26521d873caec06d4581f7b3
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9dbf1f41e811d44abe8d763d18f2de6634aeec87
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcribbonseparator-class"></a>Classe CMFCRibbonSeparator
-Implementa il separatore della barra multifunzione.  
+# <a name="cmfcribbonseparator-class"></a>CMFCRibbonSeparator Class
+Implements the ribbon separator.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCRibbonSeparator : public CMFCRibbonBaseElement  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Costruttori pubblici  
-  
-|||  
-|-|-|  
-|Nome|Descrizione|  
-|[CMFCRibbonSeparator::CMFCRibbonSeparator](#cmfcribbonseparator)|Costruisce un oggetto `CMFCRibbonSeparator`.|  
-  
-### <a name="public-methods"></a>Metodi pubblici  
+### <a name="public-constructors"></a>Public Constructors  
   
 |||  
 |-|-|  
-|Nome|Descrizione|  
-|[CMFCRibbonSeparator::AddToListBox](#addtolistbox)|Aggiunge un separatore per il **comandi** nell'elenco di **Personalizza** la finestra di dialogo. (Esegue l'override di [CMFCRibbonBaseElement::AddToListBox](../../mfc/reference/cmfcribbonbaseelement-class.md#addtolistbox).)|  
-|`CMFCRibbonSeparator::CreateObject`|Usato dal framework per creare un'istanza dinamica di questo tipo di classe.|  
-|`CMFCRibbonSeparator::GetThisClass`|Utilizzato dal framework per ottenere un puntatore al [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) oggetto associato a questo tipo di classe.|  
+|Name|Description|  
+|[CMFCRibbonSeparator::CMFCRibbonSeparator](#cmfcribbonseparator)|Constructs a `CMFCRibbonSeparator` object.|  
   
-### <a name="protected-methods"></a>Metodi protetti  
+### <a name="public-methods"></a>Public Methods  
   
 |||  
 |-|-|  
-|Nome|Descrizione|  
-|[CMFCRibbonSeparator::CopyFrom](#copyfrom)|Un metodo di copia che imposta il membro di un separatore variabili da un altro oggetto.|  
-|[CMFCRibbonSeparator::GetRegularSize](#getregularsize)|Restituisce la dimensione di un separatore.|  
-|[CMFCRibbonSeparator::IsSeparator](#isseparator)|Indica se questo è un separatore.|  
-|[CMFCRibbonSeparator::IsTabStop](#istabstop)|Indica se si tratta di una tabulazione.|  
-|[CMFCRibbonSeparator::OnDraw](#ondraw)|Chiamato dal sistema per disegnare il separatore della barra multifunzione o barra di accesso rapido.|  
-|[CMFCRibbonSeparator::OnDrawOnList](#ondrawonlist)|Chiamato dal sistema per disegnare il separatore nel **comandi** elenco.|  
+|Name|Description|  
+|[CMFCRibbonSeparator::AddToListBox](#addtolistbox)|Adds a separator to the **Commands** list in the **Customize** dialog box. (Overrides [CMFCRibbonBaseElement::AddToListBox](../../mfc/reference/cmfcribbonbaseelement-class.md#addtolistbox).)|  
+|`CMFCRibbonSeparator::CreateObject`|Used by the framework to create a dynamic instance of this class type.|  
+|`CMFCRibbonSeparator::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
   
-## <a name="remarks"></a>Note  
- Un separatore della barra multifunzione è una riga orizzontale o verticale che logicamente separa sulla barra multifunzione elementi. Un separatore può essere disegnato il controllo della barra multifunzione, il menu principale dell'applicazione, la barra di stato della barra multifunzione e barra di accesso rapido.  
+### <a name="protected-methods"></a>Protected Methods  
   
- Per utilizzare un separatore nell'applicazione, creare il nuovo oggetto e aggiungerlo al menu principale dell'applicazione, come illustrato di seguito:  
+|||  
+|-|-|  
+|Name|Description|  
+|[CMFCRibbonSeparator::CopyFrom](#copyfrom)|A copy method that sets a separator's member variables from another object.|  
+|[CMFCRibbonSeparator::GetRegularSize](#getregularsize)|Returns the size of a separator.|  
+|[CMFCRibbonSeparator::IsSeparator](#isseparator)|Indicates whether this is a separator.|  
+|[CMFCRibbonSeparator::IsTabStop](#istabstop)|Indicates whether this is a tab stop.|  
+|[CMFCRibbonSeparator::OnDraw](#ondraw)|Called by the system to draw the separator on either the ribbon or the Quick Access Toolbar.|  
+|[CMFCRibbonSeparator::OnDrawOnList](#ondrawonlist)|Called by the system to draw the separator on the **Commands** list.|  
+  
+## <a name="remarks"></a>Remarks  
+ A ribbon separator is a vertical or horizontal line that logically separates ribbon elements. A separator can be drawn on the ribbon control, the main application menu, the ribbon status bar, and the Quick Access Toolbar.  
+  
+ To use a separator in your application, construct the new object and add it to the main application menu as shown here:  
   
 ```  
 CMFCRibbonMainPanel* pMainPanel = m_wndRibbonBar.AddMainCategory(_T("Main Menu"),
@@ -103,20 +108,20 @@ CMFCRibbonMainPanel* pMainPanel = m_wndRibbonBar.AddMainCategory(_T("Main Menu")
 ...  
 pMainPanel->Add(new CMFCRibbonSeparator(TRUE));
 ```  
-Chiamare [CMFCRibbonPanel::AddSeparator](../../mfc/reference/cmfcribbonpanel-class.md#addseparator) per aggiungere separatori ai pannelli della barra multifunzione. I separatori vengono allocati e aggiunti internamente dal `AddSeparator` metodo.  
+Call [CMFCRibbonPanel::AddSeparator](../../mfc/reference/cmfcribbonpanel-class.md#addseparator) to add separators to ribbon panels. The separators are allocated and added internally by the `AddSeparator` method.  
   
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
   
  [CMFCRibbonSeparator](../../mfc/reference/cmfcribbonseparator-class.md)  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** afxbaseribbonelement.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxbaseribbonelement.h  
   
-##  <a name="addtolistbox"></a>CMFCRibbonSeparator::AddToListBox  
- Aggiunge un separatore per il **comandi** nell'elenco di **Personalizza** la finestra di dialogo.  
+##  <a name="addtolistbox"></a>  CMFCRibbonSeparator::AddToListBox  
+ Adds a separator to the **Commands** list in the **Customize** dialog box.  
   
 ```  
 virtual int AddToListBox(
@@ -124,96 +129,96 @@ virtual int AddToListBox(
     BOOL bDeep);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pWndListBox`  
- Un puntatore per il **comandi** in cui viene aggiunto il separatore di elenco.  
+ A pointer to the **Commands** list where the separator is added.  
   
  [in] `bDeep`  
- Ignorato.  
+ Ignored.  
   
-### <a name="return-value"></a>Valore restituito  
- Indice in base zero per la stringa nella casella di riepilogo specificata da `pWndListBox`.  
+### <a name="return-value"></a>Return Value  
+ Zero-based index to the string in the list box specified by `pWndListBox`.  
   
-##  <a name="cmfcribbonseparator"></a>CMFCRibbonSeparator::CMFCRibbonSeparator  
- Costruisce un oggetto `CMFCRibbonSeparator`.  
+##  <a name="cmfcribbonseparator"></a>  CMFCRibbonSeparator::CMFCRibbonSeparator  
+ Constructs a `CMFCRibbonSeparator` object.  
   
 ```  
 CMFCRibbonSeparator(BOOL bIsHoriz = FALSE);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `bIsHoriz`  
- Se `TRUE`, il separatore è orizzontale; in caso `FALSE`, il separatore è verticale.  
+ If `TRUE`, the separator is horizontal; if `FALSE`, the separator is vertical.  
   
-### <a name="remarks"></a>Note  
- Nel menu dell'applicazione vengono usati separatori orizzontali. Vengono usati separatori verticali nelle barre degli strumenti.  
+### <a name="remarks"></a>Remarks  
+ Horizontal separators are used in application menus. Vertical separators are used in toolbars.  
   
-### <a name="example"></a>Esempio  
- Nell'esempio riportato di seguito viene illustrato come creare un oggetto della `CMFCRibbonSeparator` classe.  
+### <a name="example"></a>Example  
+ The following example demonstrates how to construct an object of the `CMFCRibbonSeparator` class.  
   
- [!code-cpp[&#19; NVC_MFC_RibbonApp](../../mfc/reference/codesnippet/cpp/cmfcribbonseparator-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp#19](../../mfc/reference/codesnippet/cpp/cmfcribbonseparator-class_1.cpp)]  
   
-##  <a name="copyfrom"></a>CMFCRibbonSeparator::CopyFrom  
- Un metodo di copia che imposta il membro di un separatore variabili da un altro oggetto.  
+##  <a name="copyfrom"></a>  CMFCRibbonSeparator::CopyFrom  
+ A copy method that sets a separator's member variables from another object.  
   
 ```  
 virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `Src`  
- L'elemento della barra multifunzione origine da cui copiare.  
+ The source ribbon element to copy from.  
   
-##  <a name="getregularsize"></a>CMFCRibbonSeparator::GetRegularSize  
- Restituisce la dimensione di un separatore.  
+##  <a name="getregularsize"></a>  CMFCRibbonSeparator::GetRegularSize  
+ Returns the size of a separator.  
   
 ```  
 virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Un puntatore a un contenuto di dispositivo.  
+ A pointer to a device content.  
   
-### <a name="return-value"></a>Valore restituito  
- Le dimensioni del separatore nel contesto di dispositivo specificato.  
+### <a name="return-value"></a>Return Value  
+ The size of the separator on the given device context.  
   
-##  <a name="isseparator"></a>CMFCRibbonSeparator::IsSeparator  
- Indica se questo è un separatore.  
+##  <a name="isseparator"></a>  CMFCRibbonSeparator::IsSeparator  
+ Indicates whether this is a separator.  
   
 ```  
 virtual BOOL IsSeparator() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Sempre `TRUE` per questa classe.  
+### <a name="return-value"></a>Return Value  
+ Always `TRUE` for this class.  
   
-##  <a name="istabstop"></a>CMFCRibbonSeparator::IsTabStop  
- Indica se si tratta di una tabulazione.  
+##  <a name="istabstop"></a>  CMFCRibbonSeparator::IsTabStop  
+ Indicates whether this is a tab stop.  
   
 ```  
 virtual BOOL IsTabStop() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Sempre `FALSE` per questa classe.  
+### <a name="return-value"></a>Return Value  
+ Always `FALSE` for this class.  
   
-### <a name="remarks"></a>Note  
- Un separatore della barra multifunzione non è una tabulazione.  
+### <a name="remarks"></a>Remarks  
+ A ribbon separator is not a tab stop.  
   
-##  <a name="ondraw"></a>CMFCRibbonSeparator::OnDraw  
- Chiamato dal sistema per disegnare il separatore della barra multifunzione o barra di accesso rapido.  
+##  <a name="ondraw"></a>  CMFCRibbonSeparator::OnDraw  
+ Called by the system to draw the separator on either the ribbon or the Quick Access Toolbar.  
   
 ```  
 virtual void OnDraw(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Puntatore a un contesto di dispositivo.  
+ A pointer to a device context.  
   
-##  <a name="ondrawonlist"></a>CMFCRibbonSeparator::OnDrawOnList  
- Chiamato dal sistema per disegnare il separatore nel **comandi** elenco.  
+##  <a name="ondrawonlist"></a>  CMFCRibbonSeparator::OnDrawOnList  
+ Called by the system to draw the separator on the **Commands** list.  
   
 ```  
 virtual void OnDrawOnList(
@@ -225,19 +230,19 @@ virtual void OnDrawOnList(
     BOOL bHighlighted);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Parametro|Descrizione|  
-|[in] `pDC`|Puntatore a un contesto di dispositivo.|  
-|[in] `strText`|Testo visualizzato nell'elenco.|  
-|[in] `nTextOffset`|Spaziatura tra il testo e il lato sinistro del rettangolo di delimitazione.|  
-|[in] `rect`|Specifica il rettangolo di delimitazione.|  
-|[in] `bIsSelected`|Ignorato.|  
-|[in] `bHighlighted`|Ignorato.|  
+|Parameter|Description|  
+|[in] `pDC`|A pointer to a device context.|  
+|[in] `strText`|Text displayed on the list.|  
+|[in] `nTextOffset`|Spacing between the text and the left side of the bounding rectangle.|  
+|[in] `rect`|Specifies the bounding rectangle.|  
+|[in] `bIsSelected`|Ignored.|  
+|[in] `bHighlighted`|Ignored.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
- [Classi](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)
 

@@ -1,78 +1,95 @@
 ---
-title: "TN055: migrazione di applicazioni classi di database ODBC MFC a classi DAO MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.odbc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DAO [C++], migrazione"
-  - "migrazione di applicazioni di database"
-  - "migrazione di applicazioni di database ODBC"
-  - "migrazione [C++], applicazioni di database ODBC"
-  - "ODBC [C++], DAO"
-  - "classi ODBC [C++], classi DAO"
-  - "porting di applicazioni di database a DAO"
-  - "porting di applicazioni di database ODBC a DAO"
-  - "TN055"
+title: 'TN055: Migrating MFC ODBC Database Class Applications to MFC DAO Classes | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.odbc
+dev_langs:
+- C++
+helpviewer_keywords:
+- DAO [MFC], migration
+- TN055
+- migration [MFC], ODBC database applications
+- ODBC classes [MFC], DAO classes
+- migrating ODBC database applications [MFC]
+- porting database applications to DAO
+- ODBC [MFC], DAO
+- porting ODBC database applications to DAO
+- migrating database applications [MFC]
 ms.assetid: 0f858bd1-e168-4e2e-bcd1-8debd82856e4
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# TN055: migrazione di applicazioni classi di database ODBC MFC a classi DAO MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2f7d44a4accb934bfd4aabbc972ce102184973ee
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055: Migrating MFC ODBC Database Class Applications to MFC DAO Classes
 > [!NOTE]
->  A partire da Visual C\+\+ .NET, l'ambiente e le procedure guidate di Visual C\+\+ non supportano più DAO, anche se le classi DAO sono incluse e possono essere comunque utilizzate.  Si consiglia di utilizzare i [Modelli OLE DB](../data/oledb/ole-db-templates.md) oppure [ODBC e MFC](../data/odbc/odbc-and-mfc.md) per i nuovi progetti.  di utilizzare DAO solo per la gestione delle applicazioni già esistenti.  
+>  As of Visual C++ .NET, the Visual C++ environment and wizards no longer support DAO (although the DAO classes are included and you can still use them). Microsoft recommends that you use [OLE DB Templates](../data/oledb/ole-db-templates.md) or [ODBC and MFC](../data/odbc/odbc-and-mfc.md) for new projects. You should only use DAO in maintaining existing applications.  
   
- **Panoramica**  
+ **Overview**  
   
- In molte situazioni potrebbe risultare utile eseguire una migrazione delle applicazioni che utilizzano le classi di database ODBC MFC alle classi di database DAO MFC.  Questa nota tecnica illustrerà in dettaglio la maggior parte delle differenze tra le classi ODBC MFC e DAO MFC.  Conoscendo queste differenze, la migrazione delle applicazioni dalle classi ODBC alle classi MFC non dovrebbe risultare eccessivamente difficile.  
+ In many situations it may be desirable to migrate applications that use MFC's ODBC database classes to MFC's DAO database classes. This technical note will detail most of the differences between the MFC ODBC and DAO classes. With the differences in mind, it should not be overly difficult to migrate applications from the ODBC classes to the MFC classes if desired.  
   
- **Perché eseguire la migrazione da ODBC a DAO?**  
+ **Why Migrate from ODBC to DAO**  
   
- Esistono numerosi motivi per cui si potrebbe desiderare una migrazione delle applicazioni dalle classi di database ODBC alle classi di database DAO, ma la decisione non è necessariamente semplice o ovvia.  È necessario tenere presente che il motore di database Microsoft Jet utilizzato da DAO è in grado di leggere qualsiasi origine dati ODBC per la quale sia disponibile un driver ODBC.  Potrebbe essere più efficiente utilizzare le classi di database ODBC o chiamare direttamente ODBC, ma il motore di database Microsoft Jet è in grado di leggere i dati ODBC.  
+ There are a number of reasons why you might want to migrate applications from the ODBC Database Classes to the DAO Database Classes, but the decision is not necessarily simple or obvious. One thing to keep in mind is that the Microsoft Jet database engine that is used by DAO can read any ODBC data source for which you have an ODBC driver. It may be more efficient to use the ODBC Database Classes or call ODBC directly yourself, but the Microsoft Jet database engine can read ODBC data.  
   
- Alcuni casi semplici facilitano la decisione ODBC\/DAO.  Ad esempio, quando si ha la necessità di accedere ai dati in un formato che può essere letto direttamente dal motore di Microsoft Jet \(formato Access, formato Excel e così via\) la scelta ovvia è quella di usare le classi di database DAO.  
+ Some simple cases that make the ODBC/DAO decision easy. For instance, when you only need access to data in a format that the Microsoft Jet engine can read directly (Access format, Excel format, and so on) the obvious choice is to use the DAO Database Classes.  
   
- I casi più complessi si verificano quando i dati sono già presenti su un server o quando sono presenti in una gamma di server diversi.  In questo caso, la decisione di utilizzare le classi di database ODBC o le classi di database DAO è difficile.  Se si desidera eseguire operazioni come join eterogenei \(join di dati provenienti da diversi server in più formati come SQL Server e Oracle\), allora il motore di database Microsoft Jet eseguirà il join automaticamente senza richiedere l'esecuzione del lavoro necessario nel caso in cui si utilizzino le classi di database ODBC o in caso di chiamate dirette a ODBC.  Se si utilizza un driver ODBC che supporta i cursori del driver, la scelta migliore potrebbe essere quella di utilizzare le classi di database ODBC.  
+ More complex cases arise when your data exists on a server or on a variety of different servers. In this case, the decision to use the ODBC Database classes or the DAO Database classes is a difficult one. If you want to do things like heterogeneous joins (join data from servers in multiple formats like SQL Server and Oracle), then the Microsoft Jet database engine will perform the join for you rather than forcing you to do the work necessary if you used the ODBC Database Classes or called ODBC directly. If you are using an ODBC driver that supports driver cursors, your best choice might be the ODBC Database classes.  
   
- La scelta può essere complicata, pertanto si consiglia di scrivere un codice di esempio per verificare che le prestazioni dei vari metodi soddisfino le proprie esigenze.  Questa nota tecnica presuppone che l'utente abbia deciso di effettuare la migrazione da classi di database ODBC alle classi di database DAO.  
+ The choice can be complicated, so you might want to write some sample code to test the performance of various methods given your special needs. This technical note assumes that you have made the decision to migrate from the ODBC Database Classes to the DAO Database classes.  
   
- **Analogie tra le classi di database ODBC e le classi di database DAO MFC**  
+ **Similarities Between ODBC Database Classes and MFC DAO Database Classes**  
   
- La progettazione originale delle classi ODBC MFC è basata sul modello a oggetti DAO utilizzato in Microsoft Access e in Microsoft Visual Basic.  Questo significa che sono disponibili molte funzionalità comuni per le classi ODBC MFC e DAO MFC, che non verranno elencate tutte in questa sezione.  I modelli di programmazione sono generalmente gli stessi.  
+ The original design of the MFC ODBC classes was based on the DAO object model that has been in use in Microsoft Access and Microsoft Visual Basic. This means that there are many common features of the ODBC and DAO MFC classes, which will not all be listed in this section. In general, the programming models are the same.  
   
- Per evidenziare alcune somiglianze:  
+ To highlight a few similarities:  
   
--   Sia le classi ODBC che DAO presentano oggetti di database che utilizzano il sistema di gestione di database sottostante \(DBMS\).  
+-   Both the ODBC and DAO classes have database objects that manage using the underlying database management system (DBMS).  
   
--   Entrambe dispongono di oggetti recordset che rappresentano un set di risultati restituito dal DBMS.  
+-   Both have recordset objects representing a set of results returned from that DBMS.  
   
--   Il database DAO e gli oggetti recordset dispongono di membri quasi identici alle classi ODBC.  
+-   The DAO database and recordset objects have members nearly identical to the ODBC classes.  
   
--   Con entrambi i set di classi, il codice per recuperare i dati è identico tranne per alcune modifiche ai nomi di oggetti e membri.  Le modifiche saranno necessarie, ma in genere il processo è una semplice ridenominazione quando si passa dalle classi ODBC alle classi DAO.  
+-   With both sets of classes, the code to retrieve data is identical except for some object and member name changes. Changes will be required, but usually the process is a straightforward name change when switching from the ODBC classes to DAO classes.  
   
- Ad esempio, in entrambi i modelli la procedura per recuperare i dati consiste nel creare e aprire un oggetto di database, creare e aprire un oggetto recordset e spostarsi \(muoversi\) attraverso i dati realizzando qualche operazione.  
+ For example, in both models the procedure to retrieve data is to create and open a database object, create and open a recordset object, and navigate (move) though the data performing some operation.  
   
- **Differenze tra le classi ODBC MFC e DAO MFC**  
+ **Differences Between ODBC and DAO MFC Classes**  
   
- Le classi DAO includono più oggetti e un set più ricco di metodi, ma in questa sezione si mostreranno in dettaglio solo le differenze nelle classi e funzionalità simili.  
+ The DAO classes include more objects and a richer set of methods, but this section will only detail the differences in similar classes and functionality.  
   
- Probabilmente la maggior parte delle differenze più ovvie tra le classi consiste nelle modifiche ai nomi per le classi e le funzioni globali simili.  Di seguito vengono elencate le modifiche ai nomi degli oggetti, dei metodi e delle funzioni globali associati alle classi di database:  
+ Probably the most obvious differences between the classes are the name changes for similar classes and global functions. The following list shows the name changes of the objects, methods and global functions associated with the database classes:  
   
-|Classe o funzione|Equivalente nelle classi DAO MFC|  
-|-----------------------|--------------------------------------|  
+|Class or function|Equivalent in MFC DAO classes|  
+|-----------------------|-----------------------------------|  
 |`CDatabase`|`CDaoDatabase`|  
 |`CDatabase::ExecuteSQL`|`CDaoDatabase::Execute`|  
 |`CRecordset`|`CDaoRecordset`|  
@@ -85,36 +102,38 @@ caps.handback.revision: 6
 ||`DFX_Currency`|  
 |`RFX_Single`|`DFX_Single`|  
 |`RFX_Double`|`DFX_Double`|  
-|**RFX\_Date \***|**DFX\_Date** \(`COleDateTime`\-based\)|  
+|**RFX_Date \***|**DFX_Date** (`COleDateTime`-based)|  
 |`RFX_Text`|`DFX_Text`|  
 |`RFX_Binary`|`DFX_Binary`|  
 |`RFX_LongBinary`|`DFX_LongBinary`|  
   
- \*    La funzione `RFX_Date` è basata su `CTime` e su **TIMESTAMP\_STRUCT**.  
+ \*    The `RFX_Date` function is based on `CTime` and **TIMESTAMP_STRUCT**.  
   
- Le modifiche essenziali alle funzionalità che possono influenzare l'applicazione e che richiedono più di una semplice ridenominazione vengono elencate di seguito.  
+ The major changes to functionality which may affect your application and require more than simple name changes are listed below.  
   
--   Le costanti e le macro utilizzate per specificare informazioni quali il tipo aperto del recordset e le opzioni di apertura del recordset sono state modificate.  
+-   The constants and macros used to specify things like recordset open type and recordset open options have been changed.  
   
-     Con le classi ODBC, MFC deve definire queste opzioni tramite macro o tipi enumerati.  
+     With the ODBC classes MFC needed to define these options via macros or enumerated types.  
   
-     Con le classi DAO, DAO fornisce la definizione di queste opzioni in un file di intestazione \(DBDAOINT.H\).  Pertanto il tipo del recordset è un membro enumerato di `CRecordset`, ma con DAO è una costante.  Ad esempio si utilizza **snapshot** quando si specifica il tipo `CRecordset` in ODBC ma **DB\_OPEN\_SNAPSHOT** quando si specifica il tipo `CDaoRecordset`.  
+     With the DAO classes, DAO provides the definition of these options in a header file (DBDAOINT.H). Thus the recordset type is an enumerated member of `CRecordset`, but with DAO it is a constant instead. For example you would use **snapshot** when specifying the type of `CRecordset` in ODBC but **DB_OPEN_SNAPSHOT** when specifying the type of `CDaoRecordset`.  
   
--   Il tipo predefinito del recordset per `CRecordset` è **snapshot** mentre il tipo predefinito del recordset per `CDaoRecordset` è **dynaset** \(vedere la nota riportata di seguito per un problema aggiuntivo sugli snapshot della classe ODBC\).  
+-   The default recordset type for `CRecordset` is **snapshot** while the default recordset type for `CDaoRecordset` is **dynaset** (see the Note below for an additional issue about ODBC class snapshots).  
   
--   La classe ODBC `CRecordset` include un'opzione per creare un recordset di tipo forward\-only.  Nella classe `CDaoRecordset`, forward\-only non è un tipo di recordset, ma una proprietà \(o un opzione\) di determinati tipi di recordset.  
+-   The ODBC `CRecordset` class has an option to create a forward-only recordset type. In the `CDaoRecordset` class, forward-only is not a recordset type, but rather a property (or option) of certain types of recordsets.  
   
--   Un recordset append\-only durante l'apertura di un oggetto `CRecordset` indica che i dati del recordset possono essere letti e aggiunti.  Con l'oggetto `CDaoRecordset`, l'opzione append\-only significa letteralmente che i dati del recordset possono essere solo aggiunti \(e non letti\).  
+-   An append-only recordset when opening a `CRecordset` object meant that the recordset's data could be read and appended. With `CDaoRecordset` object, the append-only option means literally that the recordset's data can only be appended (and not read).  
   
--   Le funzioni membro della transazione delle classi ODBC sono membri di `CDatabase` e operano a livello di database.  Nelle classi DAO, le funzioni membro delle transazioni sono membri di una classe di livello superiore \(`CDaoWorkspace`\) e pertanto possono influire su più oggetti `CDaoDatabase` che condividono la stessa area di lavoro \(spazio di transazione\).  
+-   The ODBC classes' transaction member functions are members of `CDatabase` and act at the database level. In the DAO classes, the transaction member functions are members of a higher level class (`CDaoWorkspace`) and thus may impact multiple `CDaoDatabase` objects sharing the same workspace (transaction space).  
   
--   La classe dell'eccezione è stata modificata.  **CDBExceptions** viene generata nelle classi ODBC e **CDaoExceptions** nelle classi DAO.  
+-   The exception class has been changed. **CDBExceptions** are thrown in the ODBC classes and **CDaoExceptions** in the DAO classes.  
   
--   `RFX_Date` utilizza gli oggetti `CTime` e **TIMESTAMP\_STRUCT** mentre **DFX\_Date** utilizza `COleDateTime`.  `COleDateTime` è pressoché identica a `CTime`, ma è basata su **DATA** di OLE a 8 byte anziché su `time_t` a 4 byte pertanto può contenere un intervallo di dati più grande.  
+-   `RFX_Date` uses `CTime` and **TIMESTAMP_STRUCT** objects while **DFX_Date** uses `COleDateTime`. The `COleDateTime` is nearly identical to `CTime`, but is based on a 8-byte OLE **DATE** rather than a 4-byte `time_t` so it can hold a much bigger range of data.  
   
     > [!NOTE]
-    >  Gli snapshot di DAO \(`CDaoRecordset`\) sono di sola lettura mentre gli snapshot di ODBC \(`CRecordset`\) possono essere aggiornati in base al driver e all'utilizzo della libreria di cursori ODBC.  Se si utilizza la libreria di cursori, gli snapshot `CRecordset` sono aggiornabili.  Se si utilizza uno dei driver di Microsoft dal Desktop Driver Pack 3.0 senza la libreria di cursori ODBC, gli snapshot `CRecordset` sono di sola lettura.  Se si utilizza un altro driver, consultare la documentazione del driver per verificare se gli snapshot \(**STATIC\_CURSORS**\) sono di sola lettura.  
+    >  DAO (`CDaoRecordset`) snapshots are read-only while ODBC (`CRecordset`) snapshots may be updateable depending on the driver and use of the ODBC cursor library. If you are using the cursor library, `CRecordset` snapshots are updateable. If you are using any of the Microsoft drivers from Desktop Driver Pack 3.0 without the ODBC cursor library, the `CRecordset` snapshots are read-only. If you are using another driver, check the driver's documentation to see if snapshots (**STATIC_CURSORS**) are read-only.  
   
-## Vedere anche  
- [Note tecniche per numero](../mfc/technical-notes-by-number.md)   
- [Note tecniche per categoria](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

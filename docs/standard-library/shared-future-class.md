@@ -1,5 +1,5 @@
 ---
-title: Classe shared_future | Microsoft Docs
+title: shared_future Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -37,59 +37,67 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 84b55dc763d4cd254e4aca55c01690ce5abf0152
+helpviewer_keywords:
+- std::shared_future [C++]
+- std::shared_future [C++], shared_future
+- std::shared_future [C++], get
+- std::shared_future [C++], valid
+- std::shared_future [C++], wait
+- std::shared_future [C++], wait_for
+- std::shared_future [C++], wait_until
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 14f427af73abbe511ecdd326240388cc29da16df
 ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="sharedfuture-class"></a>Classe shared_future
-Descrive un *oggetto restituito asincrono*. Diversamente da un oggetto [future](../standard-library/future-class.md), un *provider asincrono* può essere associato a un numero qualsiasi di oggetti `shared_future`.  
+# <a name="sharedfuture-class"></a>shared_future Class
+Describes an *asynchronous return object*. In contrast with a [future](../standard-library/future-class.md) object, an *asynchronous provider* can be associated with any number of `shared_future` objects.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Ty>
 class shared_future;
 ```  
   
-## <a name="remarks"></a>Note  
- Non chiamare alcun metodo diverso da `valid`, `operator=` né il distruttore su un oggetto `shared_future` *vuoto*.  
+## <a name="remarks"></a>Remarks  
+ Do not call any methods other than `valid`, `operator=`, and the destructor on a `shared_future` object that's *empty*.  
   
- Gli oggetti `shared_future` non sono sincronizzati. La chiamata di metodi sullo stesso oggetto da più thread introduce una competizione tra dati con risultati imprevisti.  
+ `shared_future` objects are not synchronized. Calling methods on the same object from multiple threads introduces a data race that has unpredictable results.  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Costruttori pubblici  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[shared_future](#shared_future)|Costruisce un oggetto `shared_future`.|  
+|[shared_future](#shared_future)|Constructs a `shared_future` object.|  
   
-### <a name="public-methods"></a>Metodi pubblici  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[get](#get)|Recupera il risultato archiviato nello *stato asincrono associato*.|  
-|[valido](#valid)|Specifica se l'oggetto non è vuoto.|  
-|[attesa](#wait)|Blocca il thread corrente finché lo stato asincrono associato non è ready.|  
-|[wait_for](#wait_for)|Blocca finché lo stato asincrono associato non è ready o finché non trascorre il periodo di tempo specificato.|  
-|[wait_until](#wait_until)|Blocca finché lo stato asincrono associato non è ready o fino al momento specificato.|  
+|[get](#get)|Retrieves the result that's stored in the *associated asynchronous state*.|  
+|[valid](#valid)|Specifies whether the object is not empty.|  
+|[wait](#wait)|Blocks the current thread until the associated asynchronous state is ready.|  
+|[wait_for](#wait_for)|Blocks until the associated asynchronous state is ready or until the specified time has elapsed.|  
+|[wait_until](#wait_until)|Blocks until the associated asynchronous state is ready or until a specified point in time.|  
   
-### <a name="public-operators"></a>Operatori pubblici  
+### <a name="public-operators"></a>Public Operators  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[shared_future::operator=](#op_eq)|Assegna un nuovo stato asincrono associato.|  
+|[shared_future::operator=](#op_eq)|Assigns a new associated asynchronous state.|  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<futura >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<future>  
   
- **Spazio dei nomi:** std  
+ **Namespace:** std  
   
-##  <a name="get"></a>shared_future:: Get
- Recupera il risultato archiviato nello *stato asincrono associato*.  
+##  <a name="get"></a>  shared_future::get
+ Retrieves the result that's stored in the *associated asynchronous state*.  
   
 ```
 const Ty& get() const;
@@ -99,37 +107,37 @@ Ty& get() const;
 void get() const;
 ```  
   
-### <a name="remarks"></a>Note  
- Se il risultato è un'eccezione, il metodo la genera nuovamente. In caso contrario, viene restituito il risultato.  
+### <a name="remarks"></a>Remarks  
+ If the result is an exception, the method rethrows it. Otherwise, the result is returned.  
   
- Prima di recuperare il risultato, questo metodo blocca il thread corrente finché lo stato asincrono associato non è ready.  
+ Before it retrieves the result, this method blocks the current thread until the associated asynchronous state is ready.  
   
- Per la specializzazione parziale `shared_future<Ty&>`, il valore archiviato è di fatto un riferimento all'oggetto passato al *provider asincrono* come valore restituito.  
+ For the partial specialization `shared_future<Ty&>`, the stored value is effectively a reference to the object that was passed to the *asynchronous provider* as the return value.  
   
- Poiché non esiste alcun valore archiviato per la specializzazione `shared_future<void>`, il metodo restituisce `void`.  
+ Because no stored value exists for the specialization `shared_future<void>`, the method returns `void`.  
   
 ##  <a name="op_eq"></a>  shared_future::operator=  
- Trasferisce uno *stato asincrono associato* da un oggetto specificato.  
+ Transfers an *associated asynchronous state* from a specified object.  
   
 ```
 shared_future& operator=(shared_future&& Right) noexcept;
 shared_future& operator=(const shared_future& Right);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `Right`  
- Oggetto `shared_future`.  
+ A `shared_future` object.  
   
-### <a name="return-value"></a>Valore restituito  
+### <a name="return-value"></a>Return Value  
  `*this`  
   
-### <a name="remarks"></a>Note  
- Per quanto riguarda il primo operatore, dopo l'operazione `Right` non ha più uno stato asincrono associato.  
+### <a name="remarks"></a>Remarks  
+ For the first operator, `Right` no longer has an associated asynchronous state after the operation.  
   
- Per quanto riguarda il secondo metodo, `Right` mantiene lo stato asincrono associato.  
+ For the second method, `Right` maintains its associated asynchronous state.  
   
-##  <a name="shared_future"></a>  Costruttore shared_future::shared_future  
- Costruisce un oggetto `shared_future`.  
+##  <a name="shared_future"></a>  shared_future::shared_future Constructor  
+ Constructs a `shared_future` object.  
   
 ```
 shared_future() noexcept;
@@ -138,39 +146,39 @@ shared_future(shared_future&& Right) noexcept;
 shared_future(const shared_future& Right);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `Right`  
- Oggetto [future](../standard-library/future-class.md) o `shared_future`.  
+ A [future](../standard-library/future-class.md) or `shared_future` object.  
   
-### <a name="remarks"></a>Note  
- Il primo costruttore crea un oggetto `shared_future` che non ha *stato asincrono associato*.  
+### <a name="remarks"></a>Remarks  
+ The first constructor constructs a `shared_future` object that has no *associated asynchronous state*.  
   
- Il secondo e il terzo costruttore creano un oggetto `shared_future` e trasferiscono lo stato asincrono associato da `Right`. `Right` non ha un più uno stato asincrono associato.  
+ The second and third constructors construct a `shared_future` object and transfer the associated asynchronous state from `Right`. `Right` no longer has an associated asynchronous state.  
   
- Il quarto costruttore crea un oggetto `shared_future` con lo stesso stato asincrono associato di `Right`.  
+ The fourth constructor constructs a `shared_future` object that has the same associated asynchronous state as `Right`.  
   
-##  <a name="valid"></a>shared_future:: Valid
- Specifica se l'oggetto ha uno *stato asincrono associato*.  
+##  <a name="valid"></a>  shared_future::valid
+ Specifies whether the object has an *associated asynchronous state*.  
   
 ```
 bool valid() noexcept;
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- `true` se l'oggetto ha uno stato asincrono associato; in caso contrario, `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if the object has an associated asynchronous state; otherwise, `false`.  
   
-##  <a name="wait"></a>shared_future:: Wait
- Blocca il thread corrente finché lo *stato asincrono associato* non è *ready*.  
+##  <a name="wait"></a>  shared_future::wait
+ Blocks the current thread until the *associated asynchronous state* is *ready*.  
   
 ```
 void wait() const;
 ```  
   
-### <a name="remarks"></a>Note  
- Uno stato asincrono associato è ready solo se il provider asincrono ha archiviato un valore restituito o un'eccezione.  
+### <a name="remarks"></a>Remarks  
+ An associated asynchronous state is ready only if its asynchronous provider has stored a return value or stored an exception.  
   
-##  <a name="wait_for"></a>shared_future:: wait_for
- Blocca il thread corrente finché lo stato asincrono associato non è *ready* o finché non è trascorso un periodo di tempo specificato.  
+##  <a name="wait_for"></a>  shared_future::wait_for
+ Blocks the current thread until the associated asynchronous state is *ready* or until a specified time has elapsed.  
   
 ```
 template <class Rep, class Period>
@@ -178,18 +186,18 @@ future_status wait_for(
     const chrono::duration<Rep, Period>& Rel_time) const;
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `Rel_time`  
- Oggetto [chrono::duration](../standard-library/duration-class.md) che specifica un intervallo di tempo massimo per il blocco del thread.  
+ A [chrono::duration](../standard-library/duration-class.md) object that specifies a maximum time interval that the thread blocks.  
   
-### <a name="return-value"></a>Valore restituito  
- Oggetto [future_status](../standard-library/future-enums.md#future_status) che indica il motivo della restituzione.  
+### <a name="return-value"></a>Return Value  
+ A [future_status](../standard-library/future-enums.md#future_status) that indicates the reason for returning.  
   
-### <a name="remarks"></a>Note  
- Uno stato asincrono associato è *ready* solo se il provider asincrono ha archiviato un valore restituito o un'eccezione.  
+### <a name="remarks"></a>Remarks  
+ An associated asynchronous state is *ready* only if its asynchronous provider has stored a return value or stored an exception.  
   
-##  <a name="wait_until"></a>shared_future:: wait_until
- Blocca il thread corrente finché lo stato asincrono associato non è *ready* o fino a un determinato momento.  
+##  <a name="wait_until"></a>  shared_future::wait_until
+ Blocks the current thread until the associated asynchronous state is *ready* or until after a specified time point.  
   
 ```
 template <class Clock, class Duration>
@@ -197,18 +205,18 @@ future_status wait_until(
     const chrono::time_point<Clock, Duration>& Abs_time) const;
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `Abs_time`  
- Oggetto [chrono::time_point](../standard-library/time-point-class.md) che specifica un momento dopo il quale il thread può essere sbloccato.  
+ A [chrono::time_point](../standard-library/time-point-class.md) object that specifies a time after which the thread can unblock.  
   
-### <a name="return-value"></a>Valore restituito  
- Oggetto [future_status](../standard-library/future-enums.md#future_status) che indica il motivo della restituzione.  
+### <a name="return-value"></a>Return Value  
+ A [future_status](../standard-library/future-enums.md#future_status) that indicates the reason for returning.  
   
-### <a name="remarks"></a>Note  
- Uno stato asincrono associato è ready solo se il provider asincrono ha archiviato un valore restituito o un'eccezione.  
+### <a name="remarks"></a>Remarks  
+ An associated asynchronous state is ready only if its asynchronous provider has stored a return value or stored an exception.  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
  [\<future>](../standard-library/future.md)
 
 

@@ -1,48 +1,67 @@
 ---
-title: "Utilizzo di un elenco immagini con un controllo Rebar | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "elenchi di immagini [C++], controlli Rebar"
-  - "Rebar (controlli), elenchi di immagini"
+title: Using an Image List with a Rebar Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- image lists [MFC], rebar controls
+- rebar controls [MFC], image lists
 ms.assetid: 1a5836ac-019a-46aa-8741-b35c3376b839
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Utilizzo di un elenco immagini con un controllo Rebar
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f2f705dcbc58eae33688197066e5e59874ddb761
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Ogni banda del rebar può contenere, tra l'altro, un'immagine da un elenco immagini associato.  La procedura riportata di seguito illustra le operazioni necessarie per la visualizzazione di un'immagine in una banda del rebar.  
+---
+# <a name="using-an-image-list-with-a-rebar-control"></a>Using an Image List with a Rebar Control
+Each rebar band can contain, among other things, an image from an associated image list. The following procedure details the necessary steps for displaying an image in a rebar band.  
   
-### Le immagini in una banda del rebar  
+### <a name="to-display-images-in-a-rebar-band"></a>To display images in a rebar band  
   
-1.  Associare un elenco immagini all'oggetto del controllo Rebar mediante una chiamata a [SetImageList](../Topic/CReBarCtrl::SetImageList.md), passando un puntatore ad un elenco immagini esistente.  
+1.  Attach an image list to your rebar control object by making a call to [SetImageList](../mfc/reference/crebarctrl-class.md#setimagelist), passing a pointer to an existing image list.  
   
-2.  Modificare la struttura di **REBARBANDINFO** per assegnare un'immagine ad una banda del rebar:  
+2.  Modify the **REBARBANDINFO** structure to assign an image to a rebar band:  
   
-    -   Impostare il membro **fMask** a **RBBIM\_IMAGE**, utilizzando l'operatore OR bit per bit per importare in base alle esigenze i flag aggiuntivi.  
+    -   Set the **fMask** member to **RBBIM_IMAGE**, using the bitwise OR operator to include additional flags as necessary.  
   
-    -   Impostare il membro `iImage` all'indice dell'elenco immagini dell'immagine da visualizzare.  
+    -   Set the `iImage` member to the image list index of the image to be displayed.  
   
-3.  Inizializzare tutti i membri di dati restati, ad esempio la dimensione, il testo e un punto di controllo dello finestra figlio contenuta, con le informazioni necessarie.  
+3.  Initialize any remaining data members, such as the size, text, and handle of the contained child window, with the necessary information.  
   
-4.  Inserire la nuova banda \(con l'immagine\) con una chiamata a [CReBarCtrl::InsertBand](../Topic/CReBarCtrl::InsertBand.md), passando la struttura **REBARBANDINFO** .  
+4.  Insert the new band (with the image) with a call to [CReBarCtrl::InsertBand](../mfc/reference/crebarctrl-class.md#insertband), passing the **REBARBANDINFO** structure.  
   
- L'esempio seguente presuppone che un oggetto elenco immagini esistente con due immagini è stato assegnato all'oggetto controllo Rebar \(`m_wndReBar`\).  Una nuova banda del rebar \(definita da `rbi`\), che contiene la prima immagine, viene aggiunta tramite una chiamata a `InsertBand`:  
+ The following example assumes that an existing image list object with two images was attached to the rebar control object (`m_wndReBar`). A new rebar band (defined by `rbi`), containing the first image, is added with a call to `InsertBand`:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#28](../mfc/codesnippet/CPP/using-an-image-list-with-a-rebar-control_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#28](../mfc/codesnippet/cpp/using-an-image-list-with-a-rebar-control_1.cpp)]  
   
-## Vedere anche  
- [Utilizzo di CReBarCtrl](../mfc/using-crebarctrl.md)   
- [Controlli](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CReBarCtrl](../mfc/using-crebarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCToolBarComboBoxButton | Documenti di Microsoft
+title: CMFCToolBarComboBoxButton Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -43,7 +43,35 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCToolBarComboBoxButton class
+- CMFCToolBarComboBoxButton [MFC], CMFCToolBarComboBoxButton
+- CMFCToolBarComboBoxButton [MFC], AddItem
+- CMFCToolBarComboBoxButton [MFC], AddSortedItem
+- CMFCToolBarComboBoxButton [MFC], Compare
+- CMFCToolBarComboBoxButton [MFC], CreateEdit
+- CMFCToolBarComboBoxButton [MFC], DeleteItem
+- CMFCToolBarComboBoxButton [MFC], FindItem
+- CMFCToolBarComboBoxButton [MFC], GetByCmd
+- CMFCToolBarComboBoxButton [MFC], GetComboBox
+- CMFCToolBarComboBoxButton [MFC], GetCount
+- CMFCToolBarComboBoxButton [MFC], GetCountAll
+- CMFCToolBarComboBoxButton [MFC], GetCurSel
+- CMFCToolBarComboBoxButton [MFC], GetCurSelAll
+- CMFCToolBarComboBoxButton [MFC], GetEditCtrl
+- CMFCToolBarComboBoxButton [MFC], GetItem
+- CMFCToolBarComboBoxButton [MFC], GetItemAll
+- CMFCToolBarComboBoxButton [MFC], GetItemData
+- CMFCToolBarComboBoxButton [MFC], GetItemDataAll
+- CMFCToolBarComboBoxButton [MFC], GetItemDataPtrAll
+- CMFCToolBarComboBoxButton [MFC], GetText
+- CMFCToolBarComboBoxButton [MFC], GetTextAll
+- CMFCToolBarComboBoxButton [MFC], IsCenterVert
+- CMFCToolBarComboBoxButton [MFC], IsFlatMode
+- CMFCToolBarComboBoxButton [MFC], RemoveAllItems
+- CMFCToolBarComboBoxButton [MFC], SelectItem
+- CMFCToolBarComboBoxButton [MFC], SelectItemAll
+- CMFCToolBarComboBoxButton [MFC], SetCenterVert
+- CMFCToolBarComboBoxButton [MFC], SetDropDownHeight
+- CMFCToolBarComboBoxButton [MFC], SetFlatMode
 ms.assetid: 32fa39f7-8e4e-4f0a-a31d-7b540d969a6c
 caps.latest.revision: 30
 author: mikeblome
@@ -63,92 +91,92 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 43369e8869f9dd58543016bd74547b24fbe183a5
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f2f3dfd3202c599276cb254035102ac53309245e
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfctoolbarcomboboxbutton-class"></a>Classe CMFCToolBarComboBoxButton
-Un pulsante della barra degli strumenti contenente un controllo casella combinata ( [CComboBox (classe)](../../mfc/reference/ccombobox-class.md)).  
+# <a name="cmfctoolbarcomboboxbutton-class"></a>CMFCToolBarComboBoxButton Class
+A toolbar button that contains a combo box control ( [CComboBox Class](../../mfc/reference/ccombobox-class.md)).  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCToolBarComboBoxButton : public CMFCToolBarButton  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Costruttori pubblici  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCToolBarComboBoxButton::CMFCToolBarComboBoxButton](#cmfctoolbarcomboboxbutton)|Costruisce un oggetto `CMFCToolBarComboBoxButton`.|  
+|[CMFCToolBarComboBoxButton::CMFCToolBarComboBoxButton](#cmfctoolbarcomboboxbutton)|Constructs a `CMFCToolBarComboBoxButton`.|  
   
-### <a name="public-methods"></a>Metodi pubblici  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCToolBarComboBoxButton::AddItem](#additem)|Aggiunge un elemento alla fine dell'elenco della casella combinata.|  
-|[CMFCToolBarComboBoxButton::AddSortedItem](#addsorteditem)|Aggiunge un elemento all'elenco della casella combinata. L'ordine degli elementi nell'elenco è specificato da `Compare`.|  
-|[CMFCToolBarComboBoxButton::Compare](#compare)|Confronta due elementi. Chiamato per ordinare gli elementi che `AddSortedItems` aggiunge all'elenco della casella combinata.|  
-|[CMFCToolBarComboBoxButton::CreateEdit](#createedit)|Crea un nuovo controllo di modifica per il pulsante della casella combinata.|  
-|[CMFCToolBarComboBoxButton::DeleteItem](#deleteitem)|Elimina un elemento dall'elenco della casella combinata.|  
-|[CMFCToolBarComboBoxButton::FindItem](#finditem)|Restituisce l'indice dell'elemento che contiene una stringa specificata.|  
-|[CMFCToolBarComboBoxButton::GetByCmd](#getbycmd)|Restituisce un puntatore al pulsante casella combinata con un ID di comando specificato.|  
-|[CMFCToolBarComboBoxButton::GetComboBox](#getcombobox)|Restituisce un puntatore per il controllo casella combinata che è incorporato nel pulsante casella combinata.|  
-|[CMFCToolBarComboBoxButton::GetCount](#getcount)|Restituisce il numero di elementi nella casella combinata elenco della casella.|  
-|[CMFCToolBarComboBoxButton::GetCountAll](#getcountall)|Trova la casella combinata pulsante della casella con un ID di comando specificato. Restituisce il numero di elementi nella casella combinata elenco della casella del pulsante.|  
-|[CMFCToolBarComboBoxButton::GetCurSel](#getcursel)|Restituisce l'indice dell'elemento selezionato nella casella combinata elenco della casella.|  
-|[CMFCToolBarComboBoxButton::GetCurSelAll](#getcurselall)|Trova la casella combinata pulsante casella che presenta un ID di comando specificato e restituisce l'indice dell'elemento selezionato nella casella combinata elenco della casella del pulsante.|  
-|[CMFCToolBarComboBoxButton::GetEditCtrl](#geteditctrl)|Restituisce un puntatore al controllo di modifica che viene incorporato nel pulsante casella combinata.|  
-|[CMFCToolBarComboBoxButton::GetItem](#getitem)|Restituisce la stringa associata a un indice specificato nella casella combinata elenco della casella.|  
-|[CMFCToolBarComboBoxButton::GetItemAll](#getitemall)|Trova la casella combinata pulsante casella con un ID di comando specificato e restituisce la stringa associata a un indice nell'elenco della casella combinata del pulsante.|  
-|[CMFCToolBarComboBoxButton::GetItemData](#getitemdata)|Restituisce il valore a 32 bit che è associato a un indice specificato nella casella combinata elenco della casella.|  
-|[CMFCToolBarComboBoxButton::GetItemDataAll](#getitemdataall)|Trova la casella combinata pulsante casella che presenta un ID di comando specificato e restituisce il valore a 32 bit che è associato a un indice nell'elenco della casella combinata del pulsante.|  
-|[CMFCToolBarComboBoxButton::GetItemDataPtrAll](#getitemdataptrall)|Trova la casella combinata pulsante della casella con un ID di comando specificato. Recupera il valore a 32 bit che è associato un indice nell'elenco della casella combinata di tale pulsante e restituisce il valore di 32 bit come un puntatore.|  
-|[CMFCToolBarComboBoxButton::GetText](#gettext)|Restituisce il testo dal controllo di modifica della casella combinata.|  
-|[CMFCToolBarComboBoxButton::GetTextAll](#gettextall)|Trova la casella combinata pulsante casella con un ID di comando specificato e restituisce il testo dal controllo di modifica del pulsante.|  
-|[CMFCToolBarComboBoxButton::IsCenterVert](#iscentervert)|Determina se i pulsanti della casella combinata nell'applicazione sono centrati o allineati alla parte superiore della barra degli strumenti.|  
-|[CMFCToolBarComboBoxButton::IsFlatMode](#isflatmode)|Determina se i pulsanti della casella combinata nell'applicazione hanno un aspetto bidimensionale.|  
-|[CMFCToolBarComboBoxButton::RemoveAllItems](#removeallitems)|Rimuove tutti gli elementi dall'elenco e modificare controllo della casella combinata.|  
-|[CMFCToolBarComboBoxButton::SelectItem](#selectitem)|Seleziona un elemento nella casella combinata in base al relativo indice, un valore a 32 bit o una stringa e il controllo casella combinata sulla selezione di notifica.|  
-|[CMFCToolBarComboBoxButton::SelectItemAll](#selectitemall)|Trova la casella combinata pulsante della casella con un ID di comando specificato. Chiamate `SelectItem` per selezionare un elemento nella casella combinata del pulsante in base alla relativa stringa, un indice o un valore a 32 bit.|  
-|[CMFCToolBarComboBoxButton::SetCenterVert](#setcentervert)|Specifica se i pulsanti della casella combinata nell'applicazione sono centrati verticalmente o allineati alla parte superiore della barra degli strumenti.|  
-|[CMFCToolBarComboBoxButton::SetDropDownHeight](#setdropdownheight)|Imposta l'altezza della casella di riepilogo a discesa.|  
-|[CMFCToolBarComboBoxButton::SetFlatMode](#setflatmode)|Specifica se i pulsanti della casella combinata nell'applicazione hanno un aspetto bidimensionale.|  
+|[CMFCToolBarComboBoxButton::AddItem](#additem)|Adds an item to the end of the combo box list.|  
+|[CMFCToolBarComboBoxButton::AddSortedItem](#addsorteditem)|Adds an item to the combo box list. The order of items in the list is specified by `Compare`.|  
+|[CMFCToolBarComboBoxButton::Compare](#compare)|Compares two items. Called to sort items that `AddSortedItems` adds to the combo box list.|  
+|[CMFCToolBarComboBoxButton::CreateEdit](#createedit)|Creates a new edit control for the combo box button.|  
+|[CMFCToolBarComboBoxButton::DeleteItem](#deleteitem)|Deletes an item from the combo box list.|  
+|[CMFCToolBarComboBoxButton::FindItem](#finditem)|Returns the index of the item that contains a specified string.|  
+|[CMFCToolBarComboBoxButton::GetByCmd](#getbycmd)|Returns a pointer to the combo box button with a specified command ID.|  
+|[CMFCToolBarComboBoxButton::GetComboBox](#getcombobox)|Returns a pointer to the combo box control that is embedded in the combo box button.|  
+|[CMFCToolBarComboBoxButton::GetCount](#getcount)|Returns the number of items in the combo box list.|  
+|[CMFCToolBarComboBoxButton::GetCountAll](#getcountall)|Finds the combo box button that has a specified command ID. Returns the number of items in the combo box list of that button.|  
+|[CMFCToolBarComboBoxButton::GetCurSel](#getcursel)|Returns the index of the selected item in the combo box list.|  
+|[CMFCToolBarComboBoxButton::GetCurSelAll](#getcurselall)|Finds the combo box button that has a specified command ID, and returns the index of the selected item in the combo box list of that button.|  
+|[CMFCToolBarComboBoxButton::GetEditCtrl](#geteditctrl)|Returns a pointer to the edit control that is embedded in the combo box button.|  
+|[CMFCToolBarComboBoxButton::GetItem](#getitem)|Returns the string that is associated with a specified index in the combo box list.|  
+|[CMFCToolBarComboBoxButton::GetItemAll](#getitemall)|Finds the combo box button that has a specified command ID, and returns the string that is associated with an index in the combo box list of that button.|  
+|[CMFCToolBarComboBoxButton::GetItemData](#getitemdata)|Returns the 32-bit value that is associated with a specified index in the combo box list.|  
+|[CMFCToolBarComboBoxButton::GetItemDataAll](#getitemdataall)|Finds the combo box button that has a specified command ID, and returns the 32-bit value that is associated with an index in the combo box list of that button.|  
+|[CMFCToolBarComboBoxButton::GetItemDataPtrAll](#getitemdataptrall)|Finds the combo box button that has a specified command ID. Retrieves the 32-bit value that is associated an index in the combo box list of that button, and returns the 32-bit value as a pointer.|  
+|[CMFCToolBarComboBoxButton::GetText](#gettext)|Returns the text from the edit control of the combo box.|  
+|[CMFCToolBarComboBoxButton::GetTextAll](#gettextall)|Finds the combo box button that has a specified command ID, and returns the text from edit control of that button.|  
+|[CMFCToolBarComboBoxButton::IsCenterVert](#iscentervert)|Determines whether combo box buttons in the application are centered or aligned with the top of the toolbar.|  
+|[CMFCToolBarComboBoxButton::IsFlatMode](#isflatmode)|Determines whether combo box buttons in the application have a flat appearance.|  
+|[CMFCToolBarComboBoxButton::RemoveAllItems](#removeallitems)|Removes all items from the list box and edit control of the combo box.|  
+|[CMFCToolBarComboBoxButton::SelectItem](#selectitem)|Selects an item in the combo box according to its index, 32-bit value, or string, and notifies the combo box control about the selection.|  
+|[CMFCToolBarComboBoxButton::SelectItemAll](#selectitemall)|Finds the combo box button that has a specified command ID. Calls `SelectItem` to select an item in the combo box of that button according to its string, index, or 32-bit value.|  
+|[CMFCToolBarComboBoxButton::SetCenterVert](#setcentervert)|Specifies whether combo box buttons in the application are centered vertically or aligned with the top of the toolbar.|  
+|[CMFCToolBarComboBoxButton::SetDropDownHeight](#setdropdownheight)|Sets the height of the drop-down list box.|  
+|[CMFCToolBarComboBoxButton::SetFlatMode](#setflatmode)|Specifies whether combo box buttons in the application have a flat appearance.|  
   
-## <a name="remarks"></a>Note  
- Per aggiungere un pulsante della casella combinata a una barra degli strumenti, attenersi alla procedura seguente:  
+## <a name="remarks"></a>Remarks  
+ To add a combo box button to a toolbar, follow these steps:  
   
- 1. Riservare un ID di risorsa fittizio per il pulsante nella risorsa della barra degli strumenti padre.  
+ 1. Reserve a dummy resource ID for the button in the parent toolbar resource.  
   
- 2. Costruire un `CMFCToolBarComboBoxButton` oggetto.  
+ 2. Construct a `CMFCToolBarComboBoxButton` object.  
   
- 3. Nel gestore di messaggi che elabora il `AFX_WM_RESETTOOLBAR` del messaggio, sostituire il pulsante fittizio con il nuovo pulsante della casella combinata utilizzando [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
+ 3. In the message handler that processes the `AFX_WM_RESETTOOLBAR` message, replace the dummy button with the new combo box button by using [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
   
- Per ulteriori informazioni, vedere [procedura dettagliata: inserimento di controlli in barre degli strumenti](../../mfc/walkthrough-putting-controls-on-toolbars.md). Per un esempio di un pulsante della barra degli strumenti della casella combinata, vedere il progetto di esempio VisualStudioDemo.  
+ For more information, see [Walkthrough: Putting Controls On Toolbars](../../mfc/walkthrough-putting-controls-on-toolbars.md). For an example of a combo box toolbar button, see the example project VisualStudioDemo.  
   
-## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare metodi diversi di `CMFCToolBarComboBoxButton` (classe). Nell'esempio viene illustrato come attivare le caselle di modifica e combinata, impostare la posizione verticale della casella combinata i pulsanti della casella dell'applicazione, impostare l'altezza della casella di riepilogo quando viene eliminato, impostare l'aspetto bidimensionale dei pulsanti della casella combinata nell'applicazione e impostare il testo nella casella di testo del pulsante casella combinata. Questo frammento di codice fa parte di [esempio dimostrativo di Visual Studio](../../visual-cpp-samples.md).  
+## <a name="example"></a>Example  
+ The following example demonstrates how to use various methods in the `CMFCToolBarComboBoxButton` class. The example shows how to enable the edit and combo boxes, set the vertical position of combo box buttons in the application, set the height of the list box when it is dropped down, set the flat style appearance of combo box buttons in the application, and set the text in the edit box of the combo box button. This code snippet is part of the [Visual Studio Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo&#36;](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_1.cpp)]  
-[!code-cpp[NVC_MFC_VisualStudioDemo&#37;](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#36](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_1.cpp)]  
+[!code-cpp[NVC_MFC_VisualStudioDemo#37](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_2.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)  
   
  [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** afxtoolbarcomboboxbutton.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxtoolbarcomboboxbutton.h  
   
-##  <a name="additem"></a>CMFCToolBarComboBoxButton::AddItem  
- Aggiunge un elemento univoco nella casella di riepilogo.  
+##  <a name="additem"></a>  CMFCToolBarComboBoxButton::AddItem  
+ Appends a unique item to the list box.  
   
 ```  
 virtual INT_PTR AddItem(
@@ -156,23 +184,23 @@ virtual INT_PTR AddItem(
     DWORD_PTR dwData=0);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `lpszItem`  
- Il testo dell'elemento da aggiungere alla casella di riepilogo.  
+ The text of the item to add to the list box.  
   
  [in] `dwData`  
- I dati associati all'elemento da aggiungere alla casella di riepilogo.  
+ The data associated with the item to add to the list box.  
   
-### <a name="return-value"></a>Valore restituito  
- L'indice dell'ultimo elemento nella casella di riepilogo.  
+### <a name="return-value"></a>Return Value  
+ The index of the last item in the list box.  
   
-### <a name="remarks"></a>Note  
- Non utilizzare questo metodo quando lo stile elenco viene ordinato.  
+### <a name="remarks"></a>Remarks  
+ Do not use this method when the list box style is sorted.  
   
- Se il testo dell'elemento è già nella casella di riepilogo, i nuovi dati vengono archiviati con l'elemento esistente. La ricerca per l'elemento viene fatta distinzione tra maiuscole e minuscole.  
+ If the item text is already in the list box, the new data is stored with the existing item. The search for the item is case sensitive.  
   
-##  <a name="addsorteditem"></a>CMFCToolBarComboBoxButton::AddSortedItem  
- Aggiunge un elemento alla casella di riepilogo nell'ordine in cui è definito per il [confrontare](#compare) metodo.  
+##  <a name="addsorteditem"></a>  CMFCToolBarComboBoxButton::AddSortedItem  
+ Adds an item to the list box in the order that is defined by the [Compare](#compare) method.  
   
 ```  
 virtual INT_PTR AddSortedItem(
@@ -180,31 +208,31 @@ virtual INT_PTR AddSortedItem(
     DWORD_PTR dwData=0);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `lpszItem`  
- Il testo dell'elemento da aggiungere alla casella di riepilogo.  
+ The text of the item to add to the list box.  
   
  [in] `dwData`  
- I dati associati all'elemento da aggiungere alla casella di riepilogo.  
+ The data associated with the item to add to the list box.  
   
-### <a name="return-value"></a>Valore restituito  
- Indice dell'elemento che è stato aggiunto alla casella di riepilogo.  
+### <a name="return-value"></a>Return Value  
+ Index of the item that was added to the list box.  
   
-### <a name="remarks"></a>Note  
- Utilizzare questa funzione per aggiungere elementi alla casella di riepilogo in un ordine specifico.  
+### <a name="remarks"></a>Remarks  
+ Use this function to add items to the list box in a specific order.  
   
-##  <a name="canbestretched"></a>CMFCToolBarComboBoxButton::CanBeStretched  
- Indica se è possono modificare le dimensioni di pulsante casella combinata.  
+##  <a name="canbestretched"></a>  CMFCToolBarComboBoxButton::CanBeStretched  
+ Indicates whether the combo box button size can change.  
   
 ```  
 virtual BOOL CanBeStretched() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Restituisce `TRUE`.  
+### <a name="return-value"></a>Return Value  
+ Returns `TRUE`.  
   
-##  <a name="cmfctoolbarcomboboxbutton"></a>CMFCToolBarComboBoxButton::CMFCToolBarComboBoxButton  
- Costruisce un [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) oggetto.  
+##  <a name="cmfctoolbarcomboboxbutton"></a>  CMFCToolBarComboBoxButton::CMFCToolBarComboBoxButton  
+ Constructs a [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) object.  
   
 ```  
 CMFCToolBarComboBoxButton(
@@ -214,36 +242,36 @@ CMFCToolBarComboBoxButton(
     int iWidth=0);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `uiID`  
- L'ID di comando del pulsante nuovo.  
+ The command ID of the new button.  
   
  [in] `iImage`  
- Indice dell'immagine dell'immagine associata al pulsante nuovo.  
+ The image index of the image associated with the new button.  
   
  [in] `dwStyle`  
- Stile del pulsante nuovo.  
+ The style of the new button.  
   
  [in] `iWidth`  
- La larghezza, in pixel, del nuovo pulsante.  
+ The width, in pixels, of the new button.  
   
-### <a name="remarks"></a>Note  
- La larghezza predefinita è 150 pixel.  
+### <a name="remarks"></a>Remarks  
+ The default width is 150 pixels.  
   
- Per un elenco di stili dei pulsanti della barra degli strumenti vedere [stili del controllo ToolBar](../../mfc/reference/toolbar-control-styles.md)  
+ For a list of toolbar button styles see [ToolBar Control Styles](../../mfc/reference/toolbar-control-styles.md)  
   
-##  <a name="cleardata"></a>CMFCToolBarComboBoxButton::ClearData  
- Elimina i dati definiti dall'utente.  
+##  <a name="cleardata"></a>  CMFCToolBarComboBoxButton::ClearData  
+ Deletes user-defined data.  
   
 ```  
 virtual void ClearData();
 ```  
   
-### <a name="remarks"></a>Note  
- Per impostazione predefinita questo metodo non esegue alcuna operazione. Eseguire l'override di questo metodo in una classe derivata se si desidera eliminare tutti i dati definiti dall'utente.  
+### <a name="remarks"></a>Remarks  
+ By default this method does nothing. Override this method in a derived class if you want to delete any user-defined data.  
   
-##  <a name="compare"></a>CMFCToolBarComboBoxButton::Compare  
- Confronta due stringhe.  
+##  <a name="compare"></a>  CMFCToolBarComboBoxButton::Compare  
+ Compares two strings.  
   
 ```  
 virtual int Compare(
@@ -251,42 +279,42 @@ virtual int Compare(
     LPCTSTR lpszItem2);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `lpszItem1`  
- Prima stringa da confrontare.  
+ The first string to compare.  
   
  [in] `lpszItem2`  
- Seconda stringa da confrontare.  
+ The second string to compare.  
   
-### <a name="return-value"></a>Valore restituito  
- Un valore che indica la relazione tra maiuscole e minuscole lessicografico tra le stringhe. Nella tabella seguente sono elencati i valori possibili:  
+### <a name="return-value"></a>Return Value  
+ A value that indicates the case-sensitive lexicographic relationship between the strings. The following table lists the possible values:  
   
-|Valore|Descrizione|  
+|Value|Description|  
 |-----------|-----------------|  
-|\<0|La prima stringa è minore del secondo.|  
-|0|Il secondo è uguale a prima stringa.|  
-|>0|La prima stringa è maggiore del secondo.|  
+|\<0|The first string is less than the second.|  
+|0|The first string equals the second.|  
+|>0|The first string is greater than the second.|  
   
-### <a name="remarks"></a>Note  
- Eseguire l'override di questo metodo per modificare l'ordinamento degli elementi nella casella di riepilogo.  
+### <a name="remarks"></a>Remarks  
+ Override this method to change how items are sorted in the list box.  
   
- Il confronto è tra maiuscole e minuscole.  
+ The comparison is case-sensitive.  
   
- Questo metodo viene chiamato solo dalla [AddSortedItem](#addsorteditem) metodo.  
+ This method is called only from the [AddSortedItem](#addsorteditem) method.  
   
-##  <a name="copyfrom"></a>CMFCToolBarComboBoxButton::CopyFrom  
- Copia lo stato dell'oggetto specificato `CMFCToolBarComboBoxButton` all'oggetto corrente.  
+##  <a name="copyfrom"></a>  CMFCToolBarComboBoxButton::CopyFrom  
+ Copies the state of the specified `CMFCToolBarComboBoxButton` to the current object.  
   
 ```  
 virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `src`  
- Oggetto `CMFCToolBarComboBoxButton` di origine.  
+ The source `CMFCToolBarComboBoxButton` object.  
   
-##  <a name="createcombo"></a>CMFCToolBarComboBoxButton::CreateCombo  
- Crea una nuova casella combinata per il pulsante della casella combinata.  
+##  <a name="createcombo"></a>  CMFCToolBarComboBoxButton::CreateCombo  
+ Creates a new combo box for the combo box button.  
   
 ```  
 virtual CComboBox* CreateCombo(
@@ -294,18 +322,18 @@ virtual CComboBox* CreateCombo(
     const CRect& rect);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pWndParent`  
- Puntatore alla finestra padre del pulsante.  
+ A pointer to the parent window of the button.  
   
  [in] `rect`  
- Rettangolo di delimitazione della casella combinata.  
+ Bounding rectangle of the combo box.  
   
-### <a name="return-value"></a>Valore restituito  
- Un puntatore alla nuova casella combinata se il metodo ha esito positivo; in caso contrario, `NULL`.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the new combo box if the method was successful; otherwise, `NULL`.  
   
-##  <a name="createedit"></a>CMFCToolBarComboBoxButton::CreateEdit  
- Crea una nuova casella di modifica per il pulsante della casella combinata.  
+##  <a name="createedit"></a>  CMFCToolBarComboBoxButton::CreateEdit  
+ Creates a new edit box for the combo box button.  
   
 ```  
 virtual CMFCToolBarComboBoxEdit* CreateEdit(
@@ -314,24 +342,24 @@ virtual CMFCToolBarComboBoxEdit* CreateEdit(
     DWORD dwEditStyle);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pWndParent`  
- Puntatore alla finestra padre del pulsante.  
+ A pointer to the parent window of the button.  
   
  [in] `rect`  
- Rettangolo di delimitazione della nuova casella di modifica.  
+ Bounding rectangle of the new edit box.  
   
  [in] `dwEditStyle`  
- Stile del controllo della nuova casella di modifica.  
+ Control style of the new edit box.  
   
-### <a name="return-value"></a>Valore restituito  
- Un puntatore per la nuova casella di modifica se il metodo ha esito positivo; in caso contrario, `NULL`.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the new edit box if the method was successful; otherwise, `NULL`.  
   
-### <a name="remarks"></a>Note  
- Il framework chiama questo metodo quando crea una nuova casella di modifica per un pulsante della casella combinata. Eseguire l'override di questo metodo per modificare la modalità [CMFCToolBarComboBoxEdit](../../mfc/reference/cmfctoolbarcomboboxedit-class.md) viene creato.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when it creates a new edit box for a combo box button. Override this method to change how [CMFCToolBarComboBoxEdit](../../mfc/reference/cmfctoolbarcomboboxedit-class.md) is created.  
   
-##  <a name="deleteitem"></a>CMFCToolBarComboBoxButton::DeleteItem  
- Elimina un elemento specificato dalla casella di riepilogo.  
+##  <a name="deleteitem"></a>  CMFCToolBarComboBoxButton::DeleteItem  
+ Deletes a specified item from the list box.  
   
 ```  
 BOOL DeleteItem(int iIndex);  
@@ -339,77 +367,77 @@ BOOL DeleteItem(DWORD_PTR dwData);
   BOOL DeleteItem(LPCTSTR lpszText);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `iIndex`  
- Indice in base zero dell'elemento da eliminare.  
+ The zero-based index of the item to be deleted.  
   
  [in] `dwData`  
- I dati associati all'elemento da eliminare.  
+ The data associated with the item to be deleted.  
   
  [in] `lpszText`  
- Il testo dell'elemento da eliminare. Se sono presenti più elementi con lo stesso testo, il primo elemento viene eliminato.  
+ The text of the item to be deleted. If there are multiple items with the same text, the first item is deleted.  
   
-### <a name="return-value"></a>Valore restituito  
- `TRUE`Se l'elemento è stato disponibile ed eliminato. in caso contrario, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the item was located and successfully deleted; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="duplicatedata"></a>CMFCToolBarComboBoxButton::DuplicateData  
- Dati definiti dall'utente duplicati.  
+##  <a name="duplicatedata"></a>  CMFCToolBarComboBoxButton::DuplicateData  
+ Duplicates user-defined data.  
   
 ```  
 virtual void DuplicateData();
 ```  
   
-### <a name="remarks"></a>Note  
- Per impostazione predefinita questo metodo non esegue alcuna operazione. Eseguire l'override di questo metodo in una classe derivata se si desidera copiare i dati definiti dall'utente.  
+### <a name="remarks"></a>Remarks  
+ By default this method does nothing. Override this method in a derived class if you want to copy any user-defined data.  
   
-##  <a name="enablewindow"></a>CMFCToolBarComboBoxButton::EnableWindow  
- Abilita o disabilita le caselle di modifica e combinata.  
+##  <a name="enablewindow"></a>  CMFCToolBarComboBoxButton::EnableWindow  
+ Enables or disables the edit and combo boxes.  
   
 ```  
 virtual void EnableWindow(BOOL bEnable = TRUE);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`Per attivare le caselle combinate e modifica. `FALSE` per disabilitare le caselle di modifica e combinata.  
+ `TRUE` to enable the edit and combo boxes; `FALSE` to disable the edit and combo boxes.  
   
-### <a name="remarks"></a>Note  
- Se disabilitato, i controlli non possono diventare attivi e non possono accettare l'input dell'utente.  
+### <a name="remarks"></a>Remarks  
+ When disabled, the controls cannot become active and cannot accept user input.  
   
-##  <a name="exporttomenubutton"></a>CMFCToolBarComboBoxButton::ExportToMenuButton  
- ID di copie di una stringa dalla tabella delle stringhe dell'applicazione al menu specificato utilizzando il comando di pulsante casella combinata.  
+##  <a name="exporttomenubutton"></a>  CMFCToolBarComboBoxButton::ExportToMenuButton  
+ Copies a string from the application string table to the specified menu using the combo box button command ID.  
   
 ```  
 virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;  
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [out] `menuButton`  
- Riferimento a un pulsante di menu.  
+ Reference to a menu button.  
   
-### <a name="return-value"></a>Valore restituito  
- Sempre `TRUE`.  
+### <a name="return-value"></a>Return Value  
+ Always `TRUE`.  
   
-##  <a name="finditem"></a>CMFCToolBarComboBoxButton::FindItem  
- Restituisce l'indice del primo elemento nella casella di riepilogo che contiene una stringa specificata.  
+##  <a name="finditem"></a>  CMFCToolBarComboBoxButton::FindItem  
+ Returns the index of the first item in the list box that contains a specified string.  
   
 ```  
 int FindItem(LPCTSTR lpszText) const;  
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `lpszText`  
- Il testo da cercare nella casella di riepilogo.  
+ The text for which to search in the list box.  
   
-### <a name="return-value"></a>Valore restituito  
- L'indice dell'elemento; o `CB_ERR` se l'elemento non viene trovato.  
+### <a name="return-value"></a>Return Value  
+ The index of the item; or `CB_ERR` if the item is not found.  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getbycmd"></a>CMFCToolBarComboBoxButton::GetByCmd  
- Ottiene un puntatore al pulsante casella combinata con un ID di comando specificato.  
+##  <a name="getbycmd"></a>  CMFCToolBarComboBoxButton::GetByCmd  
+ Gets a pointer to the combo box button that has a specified command ID.  
   
 ```  
 static CMFCToolBarComboBoxButton* GetByCmd(
@@ -417,139 +445,139 @@ static CMFCToolBarComboBoxButton* GetByCmd(
     BOOL bIsFocus=FALSE);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmd`  
- L'ID di comando di un pulsante della casella combinata.  
+ The command ID of a combo box button.  
   
  [in] `bIsFocus`  
- `TRUE`Per eseguire la ricerca solo concentrati sui pulsanti. `FALSE` per cercare tutti i pulsanti.  
+ `TRUE` to search only focused buttons; `FALSE` to search all buttons.  
   
-### <a name="return-value"></a>Valore restituito  
- Un puntatore a un pulsante della casella combinata; o `NULL` se il pulsante non viene trovato.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a combo box button; or `NULL` if the button is not found.  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getcombobox"></a>CMFCToolBarComboBoxButton::GetComboBox  
- Restituisce un puntatore alla casella combinata nella casella combinata pulsante della casella.  
+##  <a name="getcombobox"></a>  CMFCToolBarComboBoxButton::GetComboBox  
+ Returns a pointer to the combo box in the combo box button.  
   
 ```  
 CComboBox* GetComboBox() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Un puntatore per il [CComboBox (classe)](../../mfc/reference/ccombobox-class.md) oggetto se il metodo è stata completata; in caso contrario `NULL`.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the [CComboBox Class](../../mfc/reference/ccombobox-class.md) object if the method was successful; otherwise `NULL`.  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getcontextmenuid"></a>CMFCToolBarComboBoxButton::GetContextMenuID  
- Ottiene l'ID di risorsa di menu di scelta rapida per il pulsante della casella combinata.  
+##  <a name="getcontextmenuid"></a>  CMFCToolBarComboBoxButton::GetContextMenuID  
+ Gets the shortcut menu resource ID for the combo box button.  
   
 ```  
 UINT GetContextMenuID();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- L'ID di risorsa menu di scelta rapida.  
+### <a name="return-value"></a>Return Value  
+ The shortcut menu resource ID.  
   
-##  <a name="getcount"></a>CMFCToolBarComboBoxButton::GetCount  
- Restituisce il numero di elementi nella casella di riepilogo.  
+##  <a name="getcount"></a>  CMFCToolBarComboBoxButton::GetCount  
+ Returns the number of items in the list box.  
   
 ```  
 INT_PTR GetCount() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Il numero di elementi nella casella di riepilogo.  
+### <a name="return-value"></a>Return Value  
+ The number of items in the list box.  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getcountall"></a>CMFCToolBarComboBoxButton::GetCountAll  
- Ottiene il numero di elementi nella casella di riepilogo di un pulsante della casella combinata con un ID di comando specificato.  
+##  <a name="getcountall"></a>  CMFCToolBarComboBoxButton::GetCountAll  
+ Gets the number of items in the list box of a combo box button that has a specified command ID.  
   
 ```  
 static int GetCountAll(UINT uiCmd);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmd`  
- L'ID di comando di un pulsante della casella combinata.  
+ The command ID of a combo box button.  
   
-### <a name="return-value"></a>Valore restituito  
- Il numero di elementi nella casella di riepilogo. in caso contrario, `CB_ERR` se non viene trovato il pulsante della casella combinata.  
+### <a name="return-value"></a>Return Value  
+ The number of items in the list box; otherwise, `CB_ERR` if the combo box button is not found.  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getcursel"></a>CMFCToolBarComboBoxButton::GetCurSel  
- Ottiene l'indice dell'elemento attualmente selezionato nella casella di riepilogo.  
+##  <a name="getcursel"></a>  CMFCToolBarComboBoxButton::GetCurSel  
+ Gets the index of the currently selected item in the list box.  
   
 ```  
 int GetCurSel() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- L'indice dell'elemento attualmente selezionato nella casella di riepilogo. o `CB_ERR` se è selezionato alcun elemento.  
+### <a name="return-value"></a>Return Value  
+ The index of the currently selected item in the list box; or `CB_ERR` if no item is selected.  
   
-### <a name="remarks"></a>Note  
- L'indice di casella di elenco è in base zero.  
+### <a name="remarks"></a>Remarks  
+ The list box index is zero-based.  
   
-##  <a name="getcurselall"></a>CMFCToolBarComboBoxButton::GetCurSelAll  
- Restituisce l'indice dell'elemento attualmente selezionato nella casella di riepilogo di una casella combinata con pulsante della casella con un ID di comando specificato.  
+##  <a name="getcurselall"></a>  CMFCToolBarComboBoxButton::GetCurSelAll  
+ Returns the index of the currently selected item in the list box of a combo box button that has a specified command ID.  
   
 ```  
 static int GetCurSelAll(UINT uiCmd);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmd`  
- L'ID di comando di un pulsante della casella combinata.  
+ The command ID of a combo box button.  
   
-### <a name="return-value"></a>Valore restituito  
- L'indice dell'elemento attualmente selezionato nella casella di riepilogo. in caso contrario, `CB_ERR` se è selezionato alcun elemento o un pulsante della casella combinata non viene trovato.  
+### <a name="return-value"></a>Return Value  
+ The index of the currently selected item in the list box; otherwise, `CB_ERR` if no item is selected or a combo box button is not found.  
   
-### <a name="remarks"></a>Note  
- L'indice di casella di elenco è in base zero.  
+### <a name="remarks"></a>Remarks  
+ The list box index is zero-based.  
   
-##  <a name="geteditctrl"></a>CMFCToolBarComboBoxButton::GetEditCtrl  
- Restituisce un puntatore alla casella di testo nella casella combinata pulsante della casella.  
+##  <a name="geteditctrl"></a>  CMFCToolBarComboBoxButton::GetEditCtrl  
+ Returns a pointer to the edit box in the combo box button.  
   
 ```  
 virtual CEdit* GetEditCtrl();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Un puntatore a una casella di modifica se il metodo ha esito positivo; in caso contrario, `NULL`.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the edit box if the method was successful; otherwise, `NULL`.  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gethwnd"></a>CMFCToolBarComboBoxButton::GetHwnd  
- Restituisce l'handle di finestra per la casella combinata.  
+##  <a name="gethwnd"></a>  CMFCToolBarComboBoxButton::GetHwnd  
+ Returns the window handle for the combo box.  
   
 ```  
 virtual HWND GetHwnd();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- L'handle di finestra o `NULL` se la casella combinata non è associata a un oggetto finestra.  
+### <a name="return-value"></a>Return Value  
+ The window handle, or `NULL` if the combo box is not associated with a window object.  
   
-##  <a name="getitem"></a>CMFCToolBarComboBoxButton::GetItem  
- Restituisce la stringa associata a un elemento in corrispondenza dell'indice specificato nella casella di riepilogo.  
+##  <a name="getitem"></a>  CMFCToolBarComboBoxButton::GetItem  
+ Returns the string associated with an item at a specified index in the list box.  
   
 ```  
 LPCTSTR GetItem(int iIndex=-1) const;  
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `iIndex`  
- Indice in base zero di un elemento nella casella di riepilogo.  
+ Zero-based index of an item in the list box.  
   
-### <a name="return-value"></a>Valore restituito  
- Un puntatore a una stringa che è associato l'elemento. in caso contrario, `NULL` se il parametro di indice non è valido o se il parametro di indice è -1 e non è selezionato alcun elemento nella casella combinata.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the string that is associated with the item; otherwise, `NULL` if the index parameter is invalid, or if the index parameter is -1 and there is no selected item in the combo box.  
   
-### <a name="remarks"></a>Note  
- Un parametro di indice di -1 restituisce la stringa dell'elemento attualmente selezionato.  
+### <a name="remarks"></a>Remarks  
+ An index parameter of -1 returns the string of the item that is currently selected.  
   
-##  <a name="getitemall"></a>CMFCToolBarComboBoxButton::GetItemAll  
- Restituisce la stringa associata a un elemento in corrispondenza dell'indice specificato nella casella di riepilogo di un pulsante della casella combinata con un ID di comando specificato.  
+##  <a name="getitemall"></a>  CMFCToolBarComboBoxButton::GetItemAll  
+ Returns the string associated with an item at a specified index in the list box of a combo box button that has a specified command ID.  
   
 ```  
 static LPCTSTR GetItemAll(
@@ -557,38 +585,38 @@ static LPCTSTR GetItemAll(
     int iIndex=-1);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmd`  
- L'ID di comando di un pulsante della casella combinata.  
+ The command ID of a combo box button.  
   
  [in] `iIndex`  
- Indice in base zero di un elemento nella casella di riepilogo.  
+ The zero-based index of an item in the list box.  
   
-### <a name="return-value"></a>Valore restituito  
- Un puntatore di stringa dell'elemento se il metodo ha esito positivo; in caso contrario, `NULL` se l'indice non è valido, non è un pulsante della casella combinata viene trovato, o se l'indice è -1 e non è selezionato alcun elemento nella casella combinata.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the item's string if the method was successful; otherwise, `NULL` if the index is invalid, a combo box button is not found, or if index is -1 and there is no selected item in the combo box.  
   
-### <a name="remarks"></a>Note  
- Un valore di indice di -1 restituisce la stringa dell'elemento attualmente selezionato.  
+### <a name="remarks"></a>Remarks  
+ An index value of -1 returns the string of the item that is currently selected.  
   
-##  <a name="getitemdata"></a>CMFCToolBarComboBoxButton::GetItemData  
- Restituisce i dati associati a un elemento in corrispondenza di un indice specifico nella casella di riepilogo.  
+##  <a name="getitemdata"></a>  CMFCToolBarComboBoxButton::GetItemData  
+ Returns the data associated with an item at a specific index in the list box.  
   
 ```  
 DWORD_PTR GetItemData(int iIndex=-1) const;  
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `iIndex`  
- Indice in base zero di un elemento nella casella di riepilogo.  
+ The zero-based index of an item in the list box.  
   
-### <a name="return-value"></a>Valore restituito  
- I dati associati all'elemento. oppure 0 se l'elemento non esiste.  
+### <a name="return-value"></a>Return Value  
+ The data associated with the item; or 0 if the item does not exist.  
   
-### <a name="remarks"></a>Note  
- Un parametro di indice di -1 restituisce i dati associati all'elemento attualmente selezionato.  
+### <a name="remarks"></a>Remarks  
+ An index parameter of -1 returns the data associated with the currently selected item.  
   
-##  <a name="getitemdataall"></a>CMFCToolBarComboBoxButton::GetItemDataAll  
- Restituisce i dati associati a un elemento in corrispondenza di un indice specifico nella casella di riepilogo di un pulsante della casella combinata con un ID di comando specifico.  
+##  <a name="getitemdataall"></a>  CMFCToolBarComboBoxButton::GetItemDataAll  
+ Returns the data associated with an item at a specific index in the list box of a combo box button that has a specific command ID.  
   
 ```  
 static DWORD_PTR GetItemDataAll(
@@ -596,21 +624,21 @@ static DWORD_PTR GetItemDataAll(
     int iIndex=-1);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmd`  
- L'ID di comando di un pulsante della casella combinata.  
+ The command ID of a combo box button.  
   
  [in] `iIndex`  
- Indice in base zero di un elemento nella casella di riepilogo.  
+ The zero-based index of an item in the list box.  
   
-### <a name="return-value"></a>Valore restituito  
- I dati associati all'elemento se il metodo ha esito positivo; in caso contrario, 0 se l'indice specificato non è valido o CB_ERR se la casella combinata casella pulsante non viene trovato.  
+### <a name="return-value"></a>Return Value  
+ The data associated with the item if the method was successful; otherwise, 0 if the specified index is not valid, or CB_ERR if the combo box button is not found.  
   
-### <a name="remarks"></a>Note  
- Un parametro di indice di -1 restituisce i dati associati all'elemento attualmente selezionato.  
+### <a name="remarks"></a>Remarks  
+ An index parameter of -1 returns the data associated with the currently selected item.  
   
-##  <a name="getitemdataptrall"></a>CMFCToolBarComboBoxButton::GetItemDataPtrAll  
- Restituisce i dati associati a un elemento in corrispondenza di un indice specifico nella casella di riepilogo di un pulsante della casella combinata con un ID di comando specifico. Questi dati vengono restituiti come un puntatore.  
+##  <a name="getitemdataptrall"></a>  CMFCToolBarComboBoxButton::GetItemDataPtrAll  
+ Returns the data associated with an item at a specific index in the list box of a combo box button that has a specific command ID. This data is returned as a pointer.  
   
 ```  
 static void* GetItemDataPtrAll(
@@ -618,157 +646,157 @@ static void* GetItemDataPtrAll(
     int iIndex=-1);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmd`  
- L'ID di comando del pulsante casella combinata.  
+ The command ID of the combo box button.  
   
  [in] `iIndex`  
- Indice in base zero di un elemento nella casella di riepilogo.  
+ The zero-based index of an item in the list box.  
   
-### <a name="return-value"></a>Valore restituito  
- Un puntatore associato all'elemento se il metodo ha esito positivo; in caso contrario, -1 se si verifica un errore, o `NULL` se non viene trovato il pulsante della casella combinata.  
+### <a name="return-value"></a>Return Value  
+ A pointer associated with the item if the method was successful; otherwise, -1 if an error occurs, or `NULL` if the combo box button is not found.  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getprompt"></a>CMFCToolBarComboBoxButton::GetPrompt  
- Restituisce la stringa di richiesta per la casella combinata pulsante della casella.  
+##  <a name="getprompt"></a>  CMFCToolBarComboBoxButton::GetPrompt  
+ Returns the prompt string for the combo box button.  
   
 ```  
 virtual CString GetPrompt() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- La stringa di richiesta.  
+### <a name="return-value"></a>Return Value  
+ The prompt string.  
   
-### <a name="remarks"></a>Note  
- Questo metodo non è attualmente implementato.  
+### <a name="remarks"></a>Remarks  
+ This method is currently not implemented.  
   
-##  <a name="gettext"></a>CMFCToolBarComboBoxButton::GetText  
- Ottiene il testo nella casella di modifica.  
+##  <a name="gettext"></a>  CMFCToolBarComboBoxButton::GetText  
+ Gets the text in the edit box.  
   
 ```  
 LPCTSTR GetText() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Il testo nella casella di modifica.  
+### <a name="return-value"></a>Return Value  
+ The text in the edit box.  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gettextall"></a>CMFCToolBarComboBoxButton::GetTextAll  
- Ottiene il testo nella casella di modifica di un pulsante della casella combinata con un ID di comando specificato.  
+##  <a name="gettextall"></a>  CMFCToolBarComboBoxButton::GetTextAll  
+ Gets the text in the edit box of a combo box button that has a specified command ID.  
   
 ```  
 static LPCTSTR GetTextAll(UINT uiCmd);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmd`  
- L'ID di comando di un pulsante della casella combinata specifica.  
+ The command ID of a specific combo box button.  
   
-### <a name="return-value"></a>Valore restituito  
- Il testo nella casella di modifica se il metodo ha esito positivo; in caso contrario, `NULL`.  
+### <a name="return-value"></a>Return Value  
+ The text in the edit box if the method was successful; otherwise, `NULL`.  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="hasfocus"></a>CMFCToolBarComboBoxButton::HasFocus  
- Indica se la casella combinata ha attualmente lo stato attivo.  
+##  <a name="hasfocus"></a>  CMFCToolBarComboBoxButton::HasFocus  
+ Indicates whether the combo box currently has the focus.  
   
 ```  
 virtual BOOL HasFocus() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- `TRUE`Se la casella combinata è attualmente attivo; in caso contrario, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the combo box currently has the focus; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Note  
- Questo metodo restituisce anche `TRUE` se qualsiasi finestra figlio della casella combinata è attualmente attivo.  
+### <a name="remarks"></a>Remarks  
+ This method also returns `TRUE` if any child window of the combo box currently has the focus.  
   
-##  <a name="iscentervert"></a>CMFCToolBarComboBoxButton::IsCenterVert  
- Restituisce la posizione verticale dei pulsanti della casella combinata nell'applicazione.  
+##  <a name="iscentervert"></a>  CMFCToolBarComboBoxButton::IsCenterVert  
+ Returns the vertical position of combo box buttons in the application.  
   
 ```  
 static BOOL IsCenterVert();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- `TRUE`Se i pulsanti sono incentrati; `FALSE` se i pulsanti sono allineati nella parte superiore.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the buttons are centered; `FALSE` if the buttons are aligned at the top.  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isflatmode"></a>CMFCToolBarComboBoxButton::IsFlatMode  
- Restituisce l'aspetto bidimensionale dei pulsanti della casella combinata nell'applicazione.  
+##  <a name="isflatmode"></a>  CMFCToolBarComboBoxButton::IsFlatMode  
+ Returns the flat style appearance of combo box buttons in the application.  
   
 ```  
 static BOOL IsFlatMode();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- `TRUE`Se i pulsanti hanno uno stile flat; in caso contrario, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the buttons have a flat style; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Note  
- Lo stile flat predefinito per i pulsanti della casella combinata`FALSE.`  
+### <a name="remarks"></a>Remarks  
+ The default flat style for combo box buttons is `FALSE.`  
   
-##  <a name="isownerof"></a>CMFCToolBarComboBoxButton::IsOwnerOf  
- Indica se l'handle specificato è associato con il pulsante della casella combinata o uno dei relativi figli.  
+##  <a name="isownerof"></a>  CMFCToolBarComboBoxButton::IsOwnerOf  
+ Indicates whether the specified handle is associated with the combo box button, or one of its children.  
   
 ```  
 virtual BOOL IsOwnerOf(HWND hwnd);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `hwnd`  
- Un handle di finestra.  
+ A window handle.  
   
-### <a name="return-value"></a>Valore restituito  
- `TRUE`Se l'handle è associata con il pulsante della casella combinata o uno dei relativi elementi figlio; in caso contrario, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the handle is assocated with the combo box button, or one of its children; otherwise, `FALSE`.  
   
-##  <a name="isribbonbutton"></a>CMFCToolBarComboBoxButton::IsRibbonButton  
- Indica se il pulsante della casella combinata risiede in un pannello della barra multifunzione.  
+##  <a name="isribbonbutton"></a>  CMFCToolBarComboBoxButton::IsRibbonButton  
+ Indicates whether the combo box button resides on a ribbon panel.  
   
 ```  
 BOOL IsRibbonButton() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Sempre `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ Always `FALSE`.  
   
-### <a name="remarks"></a>Note  
- Per impostazione predefinita, questo metodo restituisce sempre `FALSE`, ovvero la casella combinata pulsante casella non viene mai visualizzato in un pannello della barra multifunzione.  
+### <a name="remarks"></a>Remarks  
+ By default, this method always returns `FALSE`, which means the combo box button is never displayed on a ribbon panel.  
   
-##  <a name="iswindowvisible"></a>CMFCToolBarComboBoxButton::IsWindowVisible  
- Restituisce lo stato di visibilità della casella combinata pulsante della casella.  
+##  <a name="iswindowvisible"></a>  CMFCToolBarComboBoxButton::IsWindowVisible  
+ Returns the visibility state of the combo box button.  
   
 ```  
 virtual BOOL IsWindowVisible();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Lo stato di visibilità del pulsante casella combinata.  
+### <a name="return-value"></a>Return Value  
+ The visibility state of the combo box button.  
   
-##  <a name="notifycommand"></a>CMFCToolBarComboBoxButton::NotifyCommand  
- Indica se il pulsante della casella combinata elabora il messaggio.  
+##  <a name="notifycommand"></a>  CMFCToolBarComboBoxButton::NotifyCommand  
+ Indicates whether the combo box button processes the  message.  
   
 ```  
 virtual BOOL NotifyCommand(int iNotifyCode);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `iNotifyCode`  
- Il messaggio di notifica che viene associato al comando.  
+ The notification message that is associated with the command.  
   
-### <a name="return-value"></a>Valore restituito  
- Se il pulsante della casella combinata elabora il messaggio.  
+### <a name="return-value"></a>Return Value  
+ Whether the combo box button processes the  message.  
   
-##  <a name="onaddtocustomizepage"></a>CMFCToolBarComboBoxButton::OnAddToCustomizePage  
- Chiamato dal framework quando si aggiunge il pulsante di **Personalizza** la finestra di dialogo.  
+##  <a name="onaddtocustomizepage"></a>  CMFCToolBarComboBoxButton::OnAddToCustomizePage  
+ Called by the framework when the button is added to the **Customize** dialog box.  
   
 ```  
 virtual void OnAddToCustomizePage();
 ```  
   
-##  <a name="oncalculatesize"></a>CMFCToolBarComboBoxButton::OnCalculateSize  
- Chiamato dal framework per calcolare le dimensioni del pulsante.  
+##  <a name="oncalculatesize"></a>  CMFCToolBarComboBoxButton::OnCalculateSize  
+ Called by the framework to calculate the size of the button.  
   
 ```  
 virtual SIZE OnCalculateSize(
@@ -777,32 +805,32 @@ virtual SIZE OnCalculateSize(
     BOOL bHorz);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Il contesto di dispositivo che consente di visualizzare il pulsante della casella combinata.  
+ The device context that displays the combo box button.  
   
  [in] `sizeDefault`  
- Le dimensioni predefinite del pulsante casella combinata.  
+ The default size of the combo box button.  
   
  [in] `bHorz`  
- Lo stato di ancoraggio della barra degli strumenti padre. `TRUE`Quando la barra degli strumenti è ancorata in senso orizzontale e `FALSE` quando la barra degli strumenti è ancorata in senso verticale.  
+ The dock state of the parent toolbar. `TRUE` when the toolbar is docked horizontally and `FALSE` when the toolbar is docked vertically.  
   
-### <a name="return-value"></a>Valore restituito  
- Oggetto `SIZE` struttura che contiene le dimensioni del pulsante casella combinata, in pixel.  
+### <a name="return-value"></a>Return Value  
+ A `SIZE` structure that contains the dimensions of the combo box button, in pixels.  
   
-##  <a name="onchangeparentwnd"></a>CMFCToolBarComboBoxButton::OnChangeParentWnd  
- Chiamato dal framework quando il pulsante della casella combinata viene inserito in una nuova barra degli strumenti.  
+##  <a name="onchangeparentwnd"></a>  CMFCToolBarComboBoxButton::OnChangeParentWnd  
+ Called by the framework when the combo box button is inserted into a new toolbar.  
   
 ```  
 virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pWndParent`  
- Puntatore alla nuova barra degli strumenti padre.  
+ Pointer to the new parent toolbar.  
   
-##  <a name="onclick"></a>CMFCToolBarComboBoxButton::OnClick  
- Chiamato dal framework quando l'utente fa clic sul pulsante casella combinata.  
+##  <a name="onclick"></a>  CMFCToolBarComboBoxButton::OnClick  
+ Called by the framework when the user clicks the combo box button.  
   
 ```  
 virtual BOOL OnClick(
@@ -810,18 +838,18 @@ virtual BOOL OnClick(
     BOOL bDelay = TRUE);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pWnd`  
- Puntatore alla finestra padre del pulsante casella combinata.  
+ Pointer to the parent window of the combo box button.  
   
  [in] `bDelay`  
- Riservato per l'utilizzo in una classe derivata.  
+ Reserved for use in a derived class.  
   
-### <a name="return-value"></a>Valore restituito  
- `TRUE`Se il metodo gestisce l'evento. in caso contrario, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the method handles the event; otherwise, `FALSE`.  
   
-##  <a name="onctlcolor"></a>CMFCToolBarComboBoxButton::OnCtlColor  
- Chiamato dal framework quando l'utente modifica il colore della barra degli strumenti principale per impostare colore del pulsante casella combinata.  
+##  <a name="onctlcolor"></a>  CMFCToolBarComboBoxButton::OnCtlColor  
+ Called by the framework when the user changes the parent toolbar color to set the combo box button color.  
   
 ```  
 virtual HBRUSH OnCtlColor(
@@ -829,21 +857,21 @@ virtual HBRUSH OnCtlColor(
     UINT nCtlColor);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Il contesto di dispositivo che consente di visualizzare il pulsante della casella combinata.  
+ The device context that displays the combo box button.  
   
  [in] `nCtlColor`  
- Non usato.  
+ Unused.  
   
-### <a name="return-value"></a>Valore restituito  
- Handle per il pennello che il framework utilizza per disegnare lo sfondo del pulsante casella combinata.  
+### <a name="return-value"></a>Return Value  
+ Handle to the brush that the framework uses to paint the background of the combo box button.  
   
-### <a name="remarks"></a>Note  
- Questo metodo imposta inoltre il colore del testo pulsante casella combinata.  
+### <a name="remarks"></a>Remarks  
+ This method also sets the combo box button text color.  
   
-##  <a name="ondraw"></a>CMFCToolBarComboBoxButton::OnDraw  
- Chiamato dal framework per disegnare il pulsante della casella combinata utilizzando gli stili specificati e le opzioni.  
+##  <a name="ondraw"></a>  CMFCToolBarComboBoxButton::OnDraw  
+ Called by the framework to draw the combo box button by using the specified styles and options.  
   
 ```  
 virtual void OnDraw(
@@ -857,33 +885,33 @@ virtual void OnDraw(
     BOOL bGrayDisabledButtons = TRUE);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `Pdc`  
- Il contesto di dispositivo che viene visualizzato il pulsante.  
+ The device context that displays the button.  
   
  [in] `rect`  
- Il rettangolo di delimitazione del pulsante.  
+ The bounding rectangle of the button.  
   
  [in] `pImages`  
- La raccolta di immagini che è associata al pulsante.  
+ The collection of images that is associated with the button.  
   
  [in] `bHorz`  
- Lo stato di ancoraggio della barra degli strumenti padre. `TRUE`Quando la barra degli strumenti è ancorata in senso orizzontale e `FALSE` quando la barra degli strumenti è ancorata in senso verticale.  
+ The dock state of the parent toolbar. `TRUE` when the toolbar is docked horizontally and `FALSE` when the toolbar is docked vertically.  
   
  [in] `bCustomizeMode`  
- Se l'applicazione è in modalità di personalizzazione.  
+ Whether the application is in customization mode.  
   
  [in] `bHighlight`  
- Se si desidera disegnare il pulsante della casella combinata evidenziato.  
+ Whether to draw the combo box button highlighted.  
   
  [in] `bDrawBorder`  
- Se si desidera disegnare il pulsante della casella combinata con un bordo.  
+ Whether to draw the combo box button with a border.  
   
  [in] `bGrayDisabledButtons`  
- `TRUE`Per creare pulsanti disabilitati ombreggiati; `FALSE` utilizzare disabili raccolta immagini.  
+ `TRUE` to draw shaded disabled buttons; `FALSE` to use the disabled images collection.  
   
-##  <a name="ondrawoncustomizelist"></a>CMFCToolBarComboBoxButton::OnDrawOnCustomizeList  
- Chiamato dal framework per disegnare il pulsante casella combinata di **comandi** riquadro del **Personalizza** la finestra di dialogo.  
+##  <a name="ondrawoncustomizelist"></a>  CMFCToolBarComboBoxButton::OnDrawOnCustomizeList  
+ Called by the framework to draw the combo box button in the **Commands** pane of the **Customize** dialog box.  
   
 ```  
 virtual int OnDrawOnCustomizeList(
@@ -892,57 +920,57 @@ virtual int OnDrawOnCustomizeList(
     BOOL bSelected);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Il contesto di dispositivo che consente di visualizzare il pulsante della casella combinata.  
+ The device context that displays the combo box button.  
   
  [in] `rect`  
- Il rettangolo di delimitazione del pulsante casella combinata.  
+ The bounding rectangle of the combo box button.  
   
  [in] `bSelected`  
- `TRUE`Se la casella combinata casella pulsante è selezionato. in caso contrario, `FALSE`.  
+ `TRUE` if the combo box button is selected; otherwise, `FALSE`.  
   
-### <a name="return-value"></a>Valore restituito  
- La larghezza, in pixel, del pulsante casella combinata.  
+### <a name="return-value"></a>Return Value  
+ The width, in pixels, of the combo box button.  
   
-##  <a name="onglobalfontschanged"></a>CMFCToolBarComboBoxButton::OnGlobalFontsChanged  
- Chiamato dal framework per impostare la casella combinata casella pulsante carattere quando cambia il tipo di carattere dell'applicazione.  
+##  <a name="onglobalfontschanged"></a>  CMFCToolBarComboBoxButton::OnGlobalFontsChanged  
+ Called by the framework to set the combo box button font when the application font changes.  
   
 ```  
 virtual void OnGlobalFontsChanged();
 ```  
   
-##  <a name="onmove"></a>CMFCToolBarComboBoxButton::OnMove  
- Chiamato dal framework per modificare la posizione del pulsante casella combinata quando si sposta la barra degli strumenti padre.  
+##  <a name="onmove"></a>  CMFCToolBarComboBoxButton::OnMove  
+ Called by the framework to change the location of the combo box button when the parent toolbar moves.  
   
 ```  
 virtual void OnMove();
 ```  
   
-##  <a name="onshow"></a>CMFCToolBarComboBoxButton::OnShow  
- Chiamato dal framework quando il pulsante della casella combinata è nascosto o visualizzato.  
+##  <a name="onshow"></a>  CMFCToolBarComboBoxButton::OnShow  
+ Called by the framework when the combo box button is hidden or displayed.  
   
 ```  
 virtual void OnShow(BOOL bShow);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `bShow`  
- Se si desidera nascondere o visualizzare il pulsante della casella combinata.  
+ Whether to hide or display the combo box button.  
   
-##  <a name="onsize"></a>CMFCToolBarComboBoxButton::OnSize  
- Chiamato dal framework di modificare le dimensioni del pulsante casella combinata quando la barra degli strumenti padre cambia dimensioni.  
+##  <a name="onsize"></a>  CMFCToolBarComboBoxButton::OnSize  
+ Called by the framework to change the size of the combo box button when the parent toolbar changes size.  
   
 ```  
 virtual void OnSize(int iSize);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `iSize`  
- La nuova larghezza del pulsante casella combinata.  
+ The new width of the combo box button.  
   
-##  <a name="onupdatetooltip"></a>CMFCToolBarComboBoxButton::OnUpdateToolTip  
- Chiamato dal framework quando l'utente modifica la descrizione comando per il pulsante della casella combinata.  
+##  <a name="onupdatetooltip"></a>  CMFCToolBarComboBoxButton::OnUpdateToolTip  
+ Called by the framework when the user changes the tool tip for the combo box button.  
   
 ```  
 virtual BOOL OnUpdateToolTip(
@@ -952,34 +980,34 @@ virtual BOOL OnUpdateToolTip(
     CString& str);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pWndParent`  
- Puntatore alla finestra padre per il pulsante della casella combinata.  
+ Pointer to the parent window for the combo box button.  
   
  [in] `iButtonIndex`  
- ID del pulsante casella combinata.  
+ ID of the combo box button.  
   
  [in] `wndToolTip`  
- La descrizione comando da associare con il pulsante della casella combinata.  
+ The tool tip to associate with the combo box button.  
   
  [in] `str`  
- Il testo della descrizione comando.  
+ The tool tip text.  
   
-### <a name="return-value"></a>Valore restituito  
- `TRUE`Se il metodo gestisce l'evento. in caso contrario, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the method handles the event; otherwise, `FALSE`.  
   
-##  <a name="removeallitems"></a>CMFCToolBarComboBoxButton::RemoveAllItems  
- Elimina tutti gli elementi dalle finestre di elenco e modifica.  
+##  <a name="removeallitems"></a>  CMFCToolBarComboBoxButton::RemoveAllItems  
+ Deletes all items from the list and edit boxes.  
   
 ```  
 void RemoveAllItems();
 ```  
   
-### <a name="remarks"></a>Note  
- Rimuove tutti gli elementi dall'elenco e modificare controllo di una casella combinata.  
+### <a name="remarks"></a>Remarks  
+ Removes all items from the list box and edit control of a combo box.  
   
-##  <a name="selectitem"></a>CMFCToolBarComboBoxButton::SelectItem  
- Seleziona un elemento nella casella di riepilogo.  
+##  <a name="selectitem"></a>  CMFCToolBarComboBoxButton::SelectItem  
+ Selects an item in the list box.  
   
 ```  
 BOOL SelectItem(
@@ -990,26 +1018,26 @@ BOOL SelectItem(DWORD_PTR dwData);
 BOOL SelectItem(LPCTSTR lpszText);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `iIndex`  
- Indice in base zero di un elemento nella casella di riepilogo.  
+ The zero-based index of an item in the list box.  
   
  [in] `bNotify`  
- `TRUE`per notificare il pulsante della casella combinata della selezione. in caso contrario `FALSE`.  
+ `TRUE` to notify the combo box button of the selection; otherwise `FALSE`.  
   
  [in] `dwData`  
- I dati associati a un elemento nella casella di riepilogo.  
+ The data associated with an item in the list box.  
   
  [in] `lpszText`  
- Il testo di un elemento nella casella di riepilogo.  
+ The text of an item in the list box.  
   
-### <a name="return-value"></a>Valore restituito  
- `TRUE`Se il metodo ha esito positivo; in caso contrario `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the method was successful; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="selectitemall"></a>CMFCToolBarComboBoxButton::SelectItemAll  
- Seleziona un elemento nella casella di riepilogo di un pulsante della casella combinata con un ID di comando specificato.  
+##  <a name="selectitemall"></a>  CMFCToolBarComboBoxButton::SelectItemAll  
+ Selects an item in the list box of a combo box button that has a specified command ID.  
   
 ```  
 static BOOL SelectItemAll(
@@ -1027,40 +1055,40 @@ static BOOL SelectItemAll(
     LPCTSTR lpszText);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmd`  
- L'ID di comando del pulsante casella combinata che contiene la casella di riepilogo.  
+ The command ID of the combo box button that contains the list box.  
   
  [in] `iIndex`  
- Indice in base zero dell'elemento nella casella di riepilogo. Il valore-1 rimuove qualsiasi selezione corrente nella casella di riepilogo e deseleziona la casella di modifica.  
+ The zero-based index of the item in the list box. A value of -1 removes any current selection in the list box and clears the edit box.  
   
  [in] `dwData`  
- I dati di un elemento nella casella di riepilogo.  
+ The data of an item in the list box.  
   
  [in] `lpszText`  
- Il testo di un elemento nella casella di riepilogo.  
+ The text of an item in the list box.  
   
-### <a name="return-value"></a>Valore restituito  
- `TRUE`Se il metodo ha esito positivo; in caso contrario `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the method was successful; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="serialize"></a>CMFCToolBarComboBoxButton::Serialize  
- Legge l'oggetto da un archivio o scrive in un archivio.  
+##  <a name="serialize"></a>  CMFCToolBarComboBoxButton::Serialize  
+ Reads this object from an archive or writes it to an archive.  
   
 ```  
 virtual void Serialize(CArchive& ar);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in, out] `ar`  
- Il `CArchive` oggetto da serializzare.  
+ The `CArchive` object to serialize.  
   
-### <a name="remarks"></a>Note  
- Impostazioni di `CArchive` oggetto determinare se questo metodo legge o scrive nell'archivio.  
+### <a name="remarks"></a>Remarks  
+ Settings in the `CArchive` object determine whether this method reads or writes to the archive.  
   
-##  <a name="setaccdata"></a>CMFCToolBarComboBoxButton::SetACCData  
- Popola l'oggetto `CAccessibilityData` oggetto utilizzando i dati di accesso facilitato dal pulsante casella combinata.  
+##  <a name="setaccdata"></a>  CMFCToolBarComboBoxButton::SetACCData  
+ Populates the specified `CAccessibilityData` object by using accessibility data from the combo box button.  
   
 ```  
 virtual BOOL SetACCData(
@@ -1068,101 +1096,101 @@ virtual BOOL SetACCData(
     CAccessibilityData& data);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `pParent`  
- La finestra padre del pulsante casella combinata.  
+ The parent window of the combo box button.  
   
  [out] `data`  
- Oggetto `CAccessibilityData` oggetto che riceve i dati di accesso facilitato dal pulsante casella combinata.  
+ A `CAccessibilityData` object that receives the accessibility data from the combo box button.  
   
-### <a name="return-value"></a>Valore restituito  
- `TRUE`Se il metodo ha esito positivo; in caso contrario `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the method was successful; otherwise `FALSE`.  
   
-##  <a name="setcentervert"></a>CMFCToolBarComboBoxButton::SetCenterVert  
- Imposta la posizione verticale dei pulsanti della casella combinata nell'applicazione.  
+##  <a name="setcentervert"></a>  CMFCToolBarComboBoxButton::SetCenterVert  
+ Sets the vertical position of combo box buttons in the application.  
   
 ```  
 static void SetCenterVert(BOOL bCenterVert=TRUE);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `bCenterVert`  
- `TRUE`Per centrare il pulsante della casella combinata nella barra degli strumenti; `FALSE` per allineare il pulsante della casella combinata nella parte superiore della barra degli strumenti.  
+ `TRUE` to center the combo box button in the toolbar; `FALSE` to align the combo box button to the top of the toolbar.  
   
-### <a name="remarks"></a>Note  
- Per impostazione predefinita, i pulsanti della casella combinata sono allineati nella parte superiore.  
+### <a name="remarks"></a>Remarks  
+ By default, combo box buttons are aligned to the top.  
   
-##  <a name="setcontextmenuid"></a>CMFCToolBarComboBoxButton::SetContextMenuID  
- Imposta l'ID di risorsa di menu di scelta rapida per la casella combinata pulsante della casella.  
+##  <a name="setcontextmenuid"></a>  CMFCToolBarComboBoxButton::SetContextMenuID  
+ Sets the shortcut menu resource ID for the combo box button.  
   
 ```  
 void SetContextMenuID(UINT uiResID);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `uiResID`  
- L'ID di risorsa menu di scelta rapida.  
+ The shortcut menu resource ID.  
   
-##  <a name="setdropdownheight"></a>CMFCToolBarComboBoxButton::SetDropDownHeight  
- Imposta l'altezza della casella di riepilogo quando viene eliminato verso il basso.  
+##  <a name="setdropdownheight"></a>  CMFCToolBarComboBoxButton::SetDropDownHeight  
+ Sets the height of the list box when it is dropped down.  
   
 ```  
 void SetDropDownHeight(int nHeight);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `nHeight`  
- L'altezza, in pixel, della casella di riepilogo.  
+ The height, in pixels, of the list box.  
   
-### <a name="remarks"></a>Note  
- L'altezza predefinita è 150 pixel.  
+### <a name="remarks"></a>Remarks  
+ The default height is 150 pixels.  
   
-##  <a name="setflatmode"></a>CMFCToolBarComboBoxButton::SetFlatMode  
- Imposta l'aspetto bidimensionale dei pulsanti della casella combinata nell'applicazione.  
+##  <a name="setflatmode"></a>  CMFCToolBarComboBoxButton::SetFlatMode  
+ Sets the flat style appearance of combo box buttons in the application.  
   
 ```  
 static void SetFlatMode(BOOL bFlat=TRUE);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `bFlat`  
- `TRUE`Per ottenere un aspetto bidimensionale; in caso contrario `FALSE`.  
+ `TRUE` for a flat style appearance; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Note  
- Lo stile flat predefinito per i pulsanti della casella combinata è `FALSE`.  
+### <a name="remarks"></a>Remarks  
+ The default flat style for combo box buttons is `FALSE`.  
   
-##  <a name="setstyle"></a>CMFCToolBarComboBoxButton::SetStyle  
- Imposta lo stile specificato per la casella combinata pulsante casella e ridisegna il controllo se non è disabilitato.  
+##  <a name="setstyle"></a>  CMFCToolBarComboBoxButton::SetStyle  
+ Sets the specified style for the combo box button and redraws the control if it is not disabled.  
   
 ```  
 virtual void SetStyle(UINT nStyle);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `nStyle`  
- Combinazione bit per bit (OR) di stili della barra degli strumenti.  
+ A bitwise combination (OR) of toolbar styles.  
   
-### <a name="remarks"></a>Note  
- Per un elenco di stili dei pulsanti della barra degli strumenti vedere [stili del controllo ToolBar](../../mfc/reference/toolbar-control-styles.md)  
+### <a name="remarks"></a>Remarks  
+ For a list of toolbar button styles see [ToolBar Control Styles](../../mfc/reference/toolbar-control-styles.md)  
   
-##  <a name="settext"></a>CMFCToolBarComboBoxButton::SetText  
- Imposta il testo nella casella di modifica della casella combinata pulsante della casella.  
+##  <a name="settext"></a>  CMFCToolBarComboBoxButton::SetText  
+ Sets the text in the edit box of the combo box button.  
   
 ```  
 void SetText(LPCTSTR lpszText);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  [in] `lpszText`  
- Puntatore a una stringa contenente il testo per la casella di modifica.  
+ Pointer to a string that that contains the text for the edit box.  
   
-## <a name="see-also"></a>Vedere anche  
- [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
- [Classi](../../mfc/reference/mfc-classes.md)   
- [Classe CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)   
- [CComboBox (classe)](../../mfc/reference/ccombobox-class.md)   
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCToolBarButton Class](../../mfc/reference/cmfctoolbarbutton-class.md)   
+ [CComboBox Class](../../mfc/reference/ccombobox-class.md)   
  [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)   
- [Procedura dettagliata: Inserimento di controlli nelle barre degli strumenti](../../mfc/walkthrough-putting-controls-on-toolbars.md)
+ [Walkthrough: Putting Controls On Toolbars](../../mfc/walkthrough-putting-controls-on-toolbars.md)
 
 
 

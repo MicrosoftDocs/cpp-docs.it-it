@@ -1,70 +1,89 @@
 ---
-title: "Classi del tipo di dati semplice | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.data"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classi di dati [C++]"
-  - "classi scalari [C++]"
-  - "classi del tipo di dati semplice"
+title: Simple Data Type Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.data
+dev_langs:
+- C++
+helpviewer_keywords:
+- scalar classes [MFC]
+- data classes [MFC]
+- simple data type classes [MFC]
 ms.assetid: 0d591d68-0a33-49e9-8a6d-90c90de5c16a
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Classi del tipo di dati semplice
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1a7ef67ee14f2dfc5971ac3a0dcdfa34f5ec2cb2
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Le classi seguenti incapsulano coordinate di disegno, stringhe di caratteri e informazioni di data e ora che consentono un utilizzo conveniente della sintassi di C\+\+.  Questi oggetti vengono utilizzati ampiamente come parametri alle funzioni membro delle classi di Windows nella libreria di classi.  Poiché `CPoint`, `CSize` e `CRect` corrispondono alle strutture **POINT**, **SIZE** e `RECT`, rispettivamente, in [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)], è possibile utilizzare gli oggetti di queste classi C\+\+ ovunque sia possibile utilizzare queste strutture di linguaggio C.  Le classi forniscono interfacce utili attraverso le loro funzioni membro.  `CStringT` fornisce stringhe di caratteri dinamiche molto flessibili.  `CTime`, `COleDateTime`, `CTimeSpan` e **COleTimeSpan** rappresentano valori di data e ora.  Per ulteriori informazioni su queste classi, vedere l'articolo [Data e ora](../atl-mfc-shared/date-and-time.md).  
+---
+# <a name="simple-data-type-classes"></a>Simple Data Type Classes
+The following classes encapsulate drawing coordinates, character strings, and time and date information, allowing convenient use of C++ syntax. These objects are used widely as parameters to the member functions of Windows classes in the class library. Because `CPoint`, `CSize`, and `CRect` correspond to the **POINT**, **SIZE**, and `RECT` structures, respectively, in the Windows SDK, you can use objects of these C++ classes wherever you can use these C-language structures. The classes provide useful interfaces through their member functions. `CStringT` provides very flexible dynamic character strings. `CTime`, `COleDateTime`, `CTimeSpan`, and **COleTimeSpan** represent time and date values. For more information about these classes, see the article [Date and Time](../atl-mfc-shared/date-and-time.md).  
   
- Le classi che iniziano con "**COle**" sono incapsulamenti dei tipi di dati forniti da OLE.  Questi tipi di dati possono essere utilizzati in programmi di Windows indipendentemente dall'utilizzo di altre funzionalità OLE.  
+ The classes that begin with "**COle**" are encapsulations of data types provided by OLE. These data types can be used in Windows programs regardless of whether other OLE features are used.  
   
- [Classe CstringT](../atl-mfc-shared/reference/cstringt-class.md)  
- Contiene stringhe di caratteri.  
+ [CStringT Class](../atl-mfc-shared/reference/cstringt-class.md)  
+ Holds character strings.  
   
  [CTime](../atl-mfc-shared/reference/ctime-class.md)  
- Contiene valori assoluti di data e ora.  
+ Holds absolute time and date values.  
   
  [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)  
- Wrapper per il tipo di automazione **DATA** di OLE.  Rappresenta valori di data e ora.  
+ Wrapper for the OLE automation type **DATE**. Represents date and time values.  
   
  [CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md)  
- Contiene valori relativi di data e ora.  
+ Holds relative time and date values.  
   
  [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md)  
- Contiene valori relativi di `COleDateTime`, come ad esempio la differenza tra due valori `COleDateTime`.  
+ Holds relative `COleDateTime` values, such as the difference between two `COleDateTime` values.  
   
  [CPoint](../atl-mfc-shared/reference/cpoint-class.md)  
- Contiene coppie \(x, y\) di coordinate.  
+ Holds coordinate (x, y) pairs.  
   
  [CSize](../atl-mfc-shared/reference/csize-class.md)  
- Contiene distanze, posizioni relative o valori accoppiati.  
+ Holds distance, relative positions, or paired values.  
   
  [CRect](../atl-mfc-shared/reference/crect-class.md)  
- Contiene le coordinate delle aree rettangolari.  
+ Holds coordinates of rectangular areas.  
   
  [CImageList](../mfc/reference/cimagelist-class.md)  
- Fornisce la funzionalità dell'elenco immagini di Windows.  Gli elenchi di immagini vengono utilizzati con controlli elenco e controlli di struttura ad albero.  Possono essere utilizzati per memorizzare e archiviare un set di immagini bitmap della stessa dimensione.  
+ Provides the functionality of the Windows image list. Image lists are used with list controls and tree controls. They can also be used to store and archive a set of same-sized bitmaps.  
   
  [COleVariant](../mfc/reference/colevariant-class.md)  
- Wrapper per il tipo di automazione **VARIANT** di OLE.  I dati in **VARIANT** possono essere archiviati in numerosi formati.  
+ Wrapper for the OLE automation type **VARIANT**. Data in **VARIANT**s can be stored in many formats.  
   
  [COleCurrency](../mfc/reference/colecurrency-class.md)  
- Wrapper per il tipo di automazione **CURRENCY** di OLE, un tipo aritmetico a virgola fissa, con 15 cifre prima del separatore decimale e 4 cifre dopo.  
+ Wrapper for the OLE automation type **CURRENCY**, a fixed-point arithmetic type, with 15 digits before the decimal point and 4 digits after.  
   
 > [!NOTE]
->  A partire da Visual C\+\+ .NET, `CRect`, `CSize` e `CPoint` sono state modificate per poter essere utilizzate da applicazioni ATL o MFC.  Inoltre, è stata aggiunta `CStringT` per fornire una classe simile a `CString` indipendente da MFC.  Per ulteriori informazioni sulle classi di utilità condivise, vedere [Classi condivise](../atl-mfc-shared/atl-mfc-shared-classes.md).  
+>  Beginning with Visual C++ .NET, `CRect`, `CSize`, and `CPoint` have been modified to be usable in either ATL or MFC applications. In addition, `CStringT` has been added to provide an MFC-independent `CString`-like class. For more information on shared utility classes, see [Shared Classes](../atl-mfc-shared/atl-mfc-shared-classes.md).  
   
-## Vedere anche  
- [Cenni preliminari sulle classi](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

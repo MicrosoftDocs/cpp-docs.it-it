@@ -1,59 +1,78 @@
 ---
-title: "Creazione di programmi che utilizzano l&#39;automazione remota | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Automazione remota, Creazione di programmi"
+title: Creating Programs That Use Remote Automation | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Remote Automation, creating programs
 ms.assetid: 8eb31320-1037-4029-b1f3-fdc9406dbaf1
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Creazione di programmi che utilizzano l&#39;automazione remota
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d91501fc6f3c1bf962c7c2aba923209b8c261c20
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Qualsiasi oggetto ActiveX e ogni controller di automazione, può utilizzare l'automazione remota senza alcuna modifica al codice sorgente, senza la necessità di ricompilazione e senza la necessità di ripetere il collegamento.  Una volta creato un'impostazione che viene eseguito a livello locale \(ovvero nello stesso computer\), è necessario passare da solo alcuni passaggi eseguirlo in modalità remota.  
+---
+# <a name="creating-programs-that-use-remote-automation"></a>Creating Programs That Use Remote Automation
+Any automation object, and any automation controller, is able to use Remote Automation without any change to the source code, without the need for recompilation, and without the need for relinking. Once you have a setup that works locally (that is, on the same machine), you need go through only a few steps to execute it remotely.  
   
-#### Per eseguire l'oggetto di automazione remota  
+#### <a name="to-execute-the-remote-automation-object"></a>To execute the Remote Automation object  
   
-1.  Registrare l'applicazione nel computer client o su computer.  
+1.  Register the application on the client machine or machines.  
   
-2.  Configurare l'accesso client al server remoto di utilizzo.  
+2.  Configure the client access to use remote server.  
   
-3.  Installazione e registrazione dell'applicazione nei computer.  
+3.  Install and register the application on the server machine or machines.  
   
-4.  Configurazione del server per consentire l'attivazione remota.  
+4.  Configure the server to allow remote activation.  
   
-5.  Installare Automation Manager nel server.  
+5.  Install the Automation Manager on the server machine(s).  
   
-6.  Eseguire Automation in server Manager.  
+6.  Run Automation Manager on the server(s).  
   
-7.  Eseguire l'applicazione nei client.  
+7.  Run the application on the client(s).  
   
- Il passaggio 1 consente di rendere più facilmente il caricamento e l'esecuzione dell'applicazione server nel computer client, poiché la maggior parte dei server sono di registrare auto.  Se testaste localmente in anticipo l'installazione, questa fase è ancora completa.  Se l'applicazione server non è auto che registra, è possibile farvi situazione.  In caso contrario, è necessario fornire un file di registrazione che l'utente locale può eseguire per eseguire questa operazione.  Se non è in nessuna di queste operazioni, l'utente o un amministratore dovrà modificare il Registro di sistema manualmente, una routine che non è consigliabile per tutti gli utenti ma più avanzati.  
+ Step 1 is most easily accomplished by loading and executing the server application on the client machine, as most servers are self registering. If you tested the setup locally beforehand, this stage is already complete. If the server application is not self registering, you may want to make it so. Otherwise, you will need to provide a registration file that the local user can run to perform this step. If you do neither of these things, you or an administrator will need to edit the registry manually, a procedure which is not recommended for all but the most advanced users.  
   
- Il passaggio 2 riguarda l'utilizzo di amministrazione \(RAC\) di connessione di automazione remota.  Eseguire l'amministratore di RAC e verificare che nella scheda connessione server è più elevata.  Quindi, trovare la voce per l'oggetto server nel riquadro di **Classi OLE** e fare clic.  Spostare in **Indirizzo di rete** la casella combinata e il nome del server in cui risiede il file eseguibile remoto verrà eseguito.  Ad esempio, è possibile immettere \\\\MyServer di seguito.  Scegliere il protocollo di rete appropriato dall'elenco fornito.  È necessario verificare con l'amministratore di rete per determinare il protocollo è consigliato.  In molti casi, questa verrà TCP\/IP.  Infine, è possibile scegliere un livello di autenticazione.  Nella maggior parte dei casi, questo verrà lasciato come \(nessuno\) o impostazione predefinita.  Ora fare clic con il pulsante destro del mouse sul server nel riquadro di **Classi OLE**.  Ciò produrrà un menu di scelta rapida da cui è possibile selezionare l'operazione locale o remota.  Remoto selezionato.  
+ Step 2 involves the use of the Remote Automation Connection (RAC) Manager. Run RAC Manager and ensure that the server connection tab is uppermost. Next, find the entry for the server object in the **OLE Classes** pane and click on it. Then move to the **Network Address** combo box and enter the name of the server machine on which the remote executable file will be run. For example, you may enter \\\MyServer here. Then choose the appropriate network protocol from the list provided. You may need to check with your network administrator to determine which protocol is recommended. In many cases, this will be TCP/IP. Finally, you may want to choose an authentication level. In most cases, this will be left as (None) or Default. Now right-click the server in the **OLE Classes** pane. This will produce a shortcut menu from which you can select local or remote operation. Select remote.  
   
- Il passaggio 3 include correttamente l'installazione e la registrazione dell'applicazione server nei computer selezionati.  Nuovamente, se l'applicazione è auto che registra, eseguirla anche la registrazione una volta.  
+ Step 3 involves properly installing and registering the server application on the selected server machine or machines. Again, if the application is self registering, executing it once will also register it.  
   
- Il passaggio 4 include configurare il server per consentire l'esecuzione remota.  Eseguire l'amministratore di RAC sul server e verificare che nella scheda di **Client Access** ha lo stato attivo.  Scegliere il modello di attivazione desiderata \(in genere **Consenti creazioni da remoto per chiave**.  Se si seleziona questa opzione, è inoltre necessario fare clic sulla casella di controllo **Consenti attivazione da remoto** per impostare il valore della voce del Registro di sistema a "Y "\).  Se si esegue Windows NT o Windows 2000 e si scelgono e remoti di concedere crea l'opzione \(ACL\), è l'opzione modifica di ACL spingendo il pulsante di **Modifica ACL**.  
+ Step 4 involves configuring the server to allow remote execution. Run RAC Manager on the server machine, and ensure that the **Client Access** tab has the focus. Choose the activation model that you want (typically **Allow Remote Creates by Key**. If you do choose this option, you also need to click the **Allow Remote Activation** check box to set the value of the registry entry to 'Y'). If you are running Windows NT or Windows 2000 and you choose the Allow Remote Creates (ACL) option, you also have the option to edit the ACL by pushing the **Edit ACL** button.  
   
- Per abilitare l'automazione remota al lavoro, quindi è necessario assicurarsi che Automation Manager sia installato e in esecuzione nei computer.  Se non è installato, copiare AUTMGR32.EXE nella directory di sistema di Windows.  Per informazioni sulle operazioni a tale scopo, vedere [Installazione di automazione remota](../mfc/remote-automation-installation.md).  Per avviare l'automazione remota, eseguire Automation Manager.  Viene visualizzata una piccola finestra di stato in cui una serie di messaggi verranno visualizzati.  Una volta che ha avviato, verrà ridotto.  Se si desidera continuare a visualizzare le informazioni sullo stato, fare clic sulla scheda di **Gestore automazione** nella barra delle applicazioni per ripristinare la finestra.  
+ To allow Remote Automation to work, you then need to ensure that the Automation Manager is installed and running on the server machine or machines. If it is not installed, copy AUTMGR32.EXE to the Windows system directory. For information on how to do so, see [Remote Automation Installation](../mfc/remote-automation-installation.md). To start Remote Automation, execute the Automation Manager. It will display a small status window in which a number of messages will be shown. Once it has started, it will minimize itself. If you want to continue to see status information, you can click the **Automation Manager** tab in the task bar to restore the window.  
   
- Il passaggio finale consiste nell'eseguire l'applicazione client nel computer client.  Se la procedura precedente, deve connettersi all'oggetto server ed eseguire esattamente come in locale, anche se un piccolo più lenta.  
+ The final step is to execute the client application on the client machine. If you have followed the steps above, it should connect to the server object and execute precisely as it did locally, albeit a little slower.  
   
- Si noti che l'amministratore di RAC anche consente di passare da automazione remota e DCOM \(DCOM, sulle piattaforme che supportano DCOM\) con un solo clic su un pulsante di opzione.  Se si sceglie DCOM, è possibile impostare varie opzioni di configurazione.  Vedere la documentazione di DCOM per ulteriori dettagli.  
+ Notice that the RAC Manager also allows you to switch between Remote Automation and distributed COM (DCOM, on those platforms that support DCOM) with a single click of a radio button. If you choose DCOM, you can set various other configuration options. See the DCOM documentation for further details.  
   
-## Vedere anche  
- [Automazione remota](../mfc/remote-automation.md)   
- [Esecuzione dell'automazione remota con AUTOCLIK e AUTODRIV](../mfc/running-remote-automation-using-autoclik-and-autodriv.md)
+## <a name="see-also"></a>See Also  
+ [Remote Automation](../mfc/remote-automation.md)   
+ [Running Remote Automation Using AUTOCLIK and AUTODRIV](../mfc/running-remote-automation-using-autoclik-and-autodriv.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: CTabCtrl (classe) | Documenti Microsoft
+title: CTabCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -47,9 +47,39 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- tab controls
-- CTabCtrl class, common controls
-- CTabCtrl class
+- CTabCtrl [MFC], CTabCtrl
+- CTabCtrl [MFC], AdjustRect
+- CTabCtrl [MFC], Create
+- CTabCtrl [MFC], CreateEx
+- CTabCtrl [MFC], DeleteAllItems
+- CTabCtrl [MFC], DeleteItem
+- CTabCtrl [MFC], DeselectAll
+- CTabCtrl [MFC], DrawItem
+- CTabCtrl [MFC], GetCurFocus
+- CTabCtrl [MFC], GetCurSel
+- CTabCtrl [MFC], GetExtendedStyle
+- CTabCtrl [MFC], GetImageList
+- CTabCtrl [MFC], GetItem
+- CTabCtrl [MFC], GetItemCount
+- CTabCtrl [MFC], GetItemRect
+- CTabCtrl [MFC], GetItemState
+- CTabCtrl [MFC], GetRowCount
+- CTabCtrl [MFC], GetToolTips
+- CTabCtrl [MFC], HighlightItem
+- CTabCtrl [MFC], HitTest
+- CTabCtrl [MFC], InsertItem
+- CTabCtrl [MFC], RemoveImage
+- CTabCtrl [MFC], SetCurFocus
+- CTabCtrl [MFC], SetCurSel
+- CTabCtrl [MFC], SetExtendedStyle
+- CTabCtrl [MFC], SetImageList
+- CTabCtrl [MFC], SetItem
+- CTabCtrl [MFC], SetItemExtra
+- CTabCtrl [MFC], SetItemSize
+- CTabCtrl [MFC], SetItemState
+- CTabCtrl [MFC], SetMinTabWidth
+- CTabCtrl [MFC], SetPadding
+- CTabCtrl [MFC], SetToolTips
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
 caps.latest.revision: 21
 author: mikeblome
@@ -69,75 +99,75 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 150b11e4989cd45ba2a8065c86c07510d00c346c
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5714de6c675d433320ce3095205b4c78f9701323
 ms.contentlocale: it-it
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ctabctrl-class"></a>CTabCtrl (classe)
-Fornisce la funzionalità del controllo scheda comune di Windows.  
+# <a name="ctabctrl-class"></a>CTabCtrl Class
+Provides the functionality of the Windows common tab control.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CTabCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Costruttori pubblici  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CTabCtrl::CTabCtrl](#ctabctrl)|Costruisce un oggetto `CTabCtrl`.|  
+|[CTabCtrl::CTabCtrl](#ctabctrl)|Constructs a `CTabCtrl` object.|  
   
-### <a name="public-methods"></a>Metodi pubblici  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CTabCtrl::AdjustRect](#adjustrect)|Calcola l'area di visualizzazione di un controllo struttura a schede un rettangolo di finestra specificato oppure calcola il rettangolo della finestra che corrisponderebbe a un'area di visualizzazione specificato.|  
-|[CTabCtrl::Create](#create)|Crea un controllo struttura a schede e lo collega a un'istanza di un `CTabCtrl` oggetto.|  
-|[CTabCtrl::CreateEx](#createex)|Crea un controllo struttura a schede con gli stili estesi di Windows specificati e lo collega a un'istanza di un `CTabCtrl` oggetto.|  
-|[CTabCtrl::DeleteAllItems](#deleteallitems)|Rimuove tutti gli elementi da un controllo struttura a schede.|  
-|[CTabCtrl::DeleteItem](#deleteitem)|Rimuove un elemento da un controllo struttura a schede.|  
-|[CTabCtrl::DeselectAll](#deselectall)|Reimposta elementi in un controllo struttura a schede, cancellando uno qualsiasi che sono stati premuti.|  
-|[CTabCtrl::DrawItem](#drawitem)|Disegna un elemento di un controllo specificato.|  
-|[CTabCtrl::GetCurFocus](#getcurfocus)|Recupera la scheda con lo stato attivo corrente di un controllo struttura a schede.|  
-|[CTabCtrl::GetCurSel](#getcursel)|Determina la scheda attualmente selezionata in un controllo struttura a schede.|  
-|[CTabCtrl::GetExtendedStyle](#getextendedstyle)|Recupera gli stili estesi che sono attualmente in uso per il controllo scheda.|  
-|[CTabCtrl::GetImageList](#getimagelist)|Recupera l'elenco di immagini associato a un controllo struttura a schede.|  
-|[CTabCtrl::GetItem](#getitem)|Recupera informazioni su una scheda in un controllo struttura a schede.|  
-|[CTabCtrl::GetItemCount](#getitemcount)|Recupera il numero di schede del controllo.|  
-|[CTabCtrl::GetItemRect](#getitemrect)|Recupera il rettangolo di delimitazione per una scheda in un controllo struttura a schede.|  
-|[CTabCtrl::GetItemState](#getitemstate)|Recupera lo stato dell'elemento del controllo scheda indicato.|  
-|[CTabCtrl::GetRowCount](#getrowcount)|Recupera il numero corrente di righe di schede in un controllo struttura a schede.|  
-|[CTabCtrl::GetToolTips](#gettooltips)|Recupera l'handle della finestra del controllo ToolTip associato a un controllo struttura a schede.|  
-|[CTabCtrl::HighlightItem](#highlightitem)|Imposta lo stato di evidenziazione di un elemento di scheda.|  
-|[CTabCtrl::HitTest](#hittest)|Determina quale scheda, se presente, è in una posizione dello schermo specificate.|  
-|[CTabCtrl:: InsertItem](#insertitem)|Inserisce una nuova scheda del controllo struttura a schede.|  
-|[CTabCtrl::RemoveImage](#removeimage)|Rimuove un'immagine dall'elenco di immagini di un controllo struttura a schede.|  
-|[CTabCtrl::SetCurFocus](#setcurfocus)|Imposta lo stato attivo per una scheda specificata in un controllo struttura a schede.|  
-|[CTabCtrl::SetCurSel](#setcursel)|Seleziona una scheda in un controllo struttura a schede.|  
-|[CTabCtrl::SetExtendedStyle](#setextendedstyle)|Imposta gli stili estesi per un controllo struttura a schede.|  
-|[CTabCtrl::SetImageList](#setimagelist)|Assegna un elenco di immagini a un controllo struttura a schede.|  
-|[CTabCtrl::SetItem](#setitem)|Imposta alcuni o tutti gli attributi di una scheda.|  
-|[CTabCtrl::SetItemExtra](#setitemextra)|Imposta il numero di byte per ogni scheda sono riservati per i dati definiti dall'applicazione in un controllo struttura a schede.|  
-|[CTabCtrl::SetItemSize](#setitemsize)|Imposta la larghezza e altezza di un elemento.|  
-|[CTabCtrl::SetItemState](#setitemstate)|Imposta lo stato dell'elemento del controllo scheda indicato.|  
-|[CTabCtrl::SetMinTabWidth](#setmintabwidth)|Imposta la larghezza minima di elementi in un controllo struttura a schede.|  
-|[CTabCtrl::SetPadding](#setpadding)|Imposta la quantità di spazio (riempimento) intorno icona ogni scheda e l'etichetta in un controllo struttura a schede.|  
-|[CTabCtrl::SetToolTips](#settooltips)|Assegna un controllo descrizione comandi a un controllo struttura a schede.|  
+|[CTabCtrl::AdjustRect](#adjustrect)|Calculates a tab control's display area given a window rectangle, or calculates the window rectangle that would correspond to a given display area.|  
+|[CTabCtrl::Create](#create)|Creates a tab control and attaches it to an instance of a `CTabCtrl` object.|  
+|[CTabCtrl::CreateEx](#createex)|Creates a tab control with the specified Windows extended styles and attaches it to an instance of a `CTabCtrl` object.|  
+|[CTabCtrl::DeleteAllItems](#deleteallitems)|Removes all items from a tab control.|  
+|[CTabCtrl::DeleteItem](#deleteitem)|Removes an item from a tab control.|  
+|[CTabCtrl::DeselectAll](#deselectall)|Resets items in a tab control, clearing any that were pressed.|  
+|[CTabCtrl::DrawItem](#drawitem)|Draws a specified item of a tab control.|  
+|[CTabCtrl::GetCurFocus](#getcurfocus)|Retrieves the tab with the current focus of a tab control.|  
+|[CTabCtrl::GetCurSel](#getcursel)|Determines the currently selected tab in a tab control.|  
+|[CTabCtrl::GetExtendedStyle](#getextendedstyle)|Retrieves the extended styles that are currently in use for the tab control.|  
+|[CTabCtrl::GetImageList](#getimagelist)|Retrieves the image list associated with a tab control.|  
+|[CTabCtrl::GetItem](#getitem)|Retrieves information about a tab in a tab control.|  
+|[CTabCtrl::GetItemCount](#getitemcount)|Retrieves the number of tabs in the tab control.|  
+|[CTabCtrl::GetItemRect](#getitemrect)|Retrieves the bounding rectangle for a tab in a tab control.|  
+|[CTabCtrl::GetItemState](#getitemstate)|Retrieves the state of the indicated tab control item.|  
+|[CTabCtrl::GetRowCount](#getrowcount)|Retrieves the current number of rows of tabs in a tab control.|  
+|[CTabCtrl::GetToolTips](#gettooltips)|Retrieves the handle of the tool tip control associated with a tab control.|  
+|[CTabCtrl::HighlightItem](#highlightitem)|Sets the highlight state of a tab item.|  
+|[CTabCtrl::HitTest](#hittest)|Determines which tab, if any, is at a specified screen position.|  
+|[CTabCtrl::InsertItem](#insertitem)|Inserts a new tab in a tab control.|  
+|[CTabCtrl::RemoveImage](#removeimage)|Removes an image from a tab control's image list.|  
+|[CTabCtrl::SetCurFocus](#setcurfocus)|Sets the focus to a specified tab in a tab control.|  
+|[CTabCtrl::SetCurSel](#setcursel)|Selects a tab in a tab control.|  
+|[CTabCtrl::SetExtendedStyle](#setextendedstyle)|Sets the extended styles for a tab control.|  
+|[CTabCtrl::SetImageList](#setimagelist)|Assigns an image list to a tab control.|  
+|[CTabCtrl::SetItem](#setitem)|Sets some or all of a tab's attributes.|  
+|[CTabCtrl::SetItemExtra](#setitemextra)|Sets the number of bytes per tab reserved for application-defined data in a tab control.|  
+|[CTabCtrl::SetItemSize](#setitemsize)|Sets the width and height of an item.|  
+|[CTabCtrl::SetItemState](#setitemstate)|Sets the state of the indicated tab control item.|  
+|[CTabCtrl::SetMinTabWidth](#setmintabwidth)|Sets the minimum width of items in a tab control.|  
+|[CTabCtrl::SetPadding](#setpadding)|Sets the amount of space (padding) around each tab's icon and label in a tab control.|  
+|[CTabCtrl::SetToolTips](#settooltips)|Assigns a tool tip control to a tab control.|  
   
-## <a name="remarks"></a>Note  
- Un "controllo struttura a schede" è analogo ai separatori in un blocco per Appunti o le etichette in un file CAB. L'uso del controllo Struttura a schede consente a un'applicazione di definire più pagine per la stessa area di una finestra o una finestra di dialogo. Ogni pagina è costituita da un set di informazioni o un gruppo di controlli che l'applicazione viene visualizzata quando l'utente seleziona la scheda corrispondente. Un tipo speciale di controllo struttura a schede Visualizza le schede che è simile ai pulsanti. Facendo clic su un pulsante deve immediatamente eseguire un comando invece di visualizzare una pagina.  
+## <a name="remarks"></a>Remarks  
+ A "tab control" is analogous to the dividers in a notebook or the labels in a file cabinet. By using a tab control, an application can define multiple pages for the same area of a window or dialog box. Each page consists of a set of information or a group of controls that the application displays when the user selects the corresponding tab. A special type of tab control displays tabs that look like buttons. Clicking a button should immediately perform a command instead of displaying a page.  
   
- Questo controllo (e pertanto la `CTabCtrl` classe) è disponibile solo per i programmi in esecuzione in Windows 95/98 e Windows NT versione 3.51 e successive.  
+ This control (and therefore the `CTabCtrl` class) is available only to programs running under Windows 95/98 and Windows NT version 3.51 and later.  
   
- Per ulteriori informazioni sull'utilizzo `CTabCtrl`, vedere [controlli](../../mfc/controls-mfc.md) e [CTabCtrl utilizzando](../../mfc/using-ctabctrl.md).  
+ For more information on using `CTabCtrl`, see [Controls](../../mfc/controls-mfc.md) and [Using CTabCtrl](../../mfc/using-ctabctrl.md).  
   
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -146,28 +176,28 @@ class CTabCtrl : public CWnd
   
  `CTabCtrl`  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** afxcmn.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcmn.h  
   
-##  <a name="adjustrect"></a>CTabCtrl::AdjustRect  
- Calcola l'area di visualizzazione di un controllo struttura a schede un rettangolo di finestra specificato oppure calcola il rettangolo della finestra che corrisponderebbe a un'area di visualizzazione specificato.  
+##  <a name="adjustrect"></a>  CTabCtrl::AdjustRect  
+ Calculates a tab control's display area given a window rectangle, or calculates the window rectangle that would correspond to a given display area.  
   
 ```  
 void AdjustRect(BOOL bLarger,   LPRECT lpRect);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `bLarger`  
- Indica l'operazione da eseguire. Se questo parametro è **TRUE**, `lpRect` specifica di un rettangolo di visualizzazione e riceve il rettangolo della finestra. Se questo parametro è **FALSE**, `lpRect` specifica di un rettangolo della finestra e riceve il rettangolo di visualizzazione corrispondente.  
+ Indicates which operation to perform. If this parameter is **TRUE**, `lpRect` specifies a display rectangle and receives the corresponding window rectangle. If this parameter is **FALSE**, `lpRect` specifies a window rectangle and receives the corresponding display rectangle.  
   
  `lpRect`  
- Puntatore a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che specifica il rettangolo specificato e riceve il rettangolo calcolato.  
+ Pointer to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure that specifies the given rectangle and receives the calculated rectangle.  
   
-### <a name="example"></a>Esempio  
- [!code-cpp[NVC_MFC_CTabCtrl n. 1](../../mfc/reference/codesnippet/cpp/ctabctrl-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CTabCtrl#1](../../mfc/reference/codesnippet/cpp/ctabctrl-class_1.cpp)]  
   
-##  <a name="create"></a>CTabCtrl::Create  
- Crea un controllo struttura a schede e lo collega a un'istanza di un `CTabCtrl` oggetto.  
+##  <a name="create"></a>  CTabCtrl::Create  
+ Creates a tab control and attaches it to an instance of a `CTabCtrl` object.  
   
 ```  
 virtual BOOL Create(
@@ -177,44 +207,44 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `dwStyle`  
- Specifica lo stile del controllo scheda. Applicare qualsiasi combinazione di [scheda stili del controllo](http://msdn.microsoft.com/library/windows/desktop/bb760549), descritto nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Vedere **osservazioni** per un elenco degli stili di finestra è inoltre possibile applicare al controllo.  
+ Specifies the tab control's style. Apply any combination of [tab control styles](http://msdn.microsoft.com/library/windows/desktop/bb760549), described in the Windows SDK. See **Remarks** for a list of window styles that you can also apply to the control.  
   
  `rect`  
- Specifica dimensioni e la posizione del controllo scheda. Può essere un [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struttura.  
+ Specifies the tab control's size and position. It can be either a [CRect](../../atl-mfc-shared/reference/crect-class.md) object or a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure.  
   
  `pParentWnd`  
- Specifica la scheda finestra del controllo padre, in genere un `CDialog`. Non deve essere **NULL**.  
+ Specifies the tab control's parent window, usually a `CDialog`. It must not be **NULL**.  
   
  `nID`  
- Specifica l'ID. del controllo scheda  
+ Specifies the tab control's ID.  
   
-### <a name="return-value"></a>Valore restituito  
- **TRUE** se l'inizializzazione dell'oggetto è stata completata; in caso contrario **FALSE**.  
+### <a name="return-value"></a>Return Value  
+ **TRUE** if initialization of the object was successful; otherwise **FALSE**.  
   
-### <a name="remarks"></a>Note  
- Si costruisce un `CTabCtrl` oggetto in due passaggi. In primo luogo, chiamare il costruttore e quindi chiamare **crea**, che crea il controllo scheda e lo collega al `CTabCtrl` oggetto.  
+### <a name="remarks"></a>Remarks  
+ You construct a `CTabCtrl` object in two steps. First, call the constructor, and then call **Create**, which creates the tab control and attaches it to the `CTabCtrl` object.  
   
- Oltre agli stili del controllo scheda, è possibile applicare gli stili di finestra seguenti per un controllo struttura a schede:  
+ In addition to tab control styles, you can apply the following window styles to a tab control:  
   
-- **WS_CHILD** crea una finestra figlio che rappresenta il controllo scheda. Non può essere utilizzato con il `WS_POPUP` stile.  
+- **WS_CHILD** Creates a child window that represents the tab control. Cannot be used with the `WS_POPUP` style.  
   
-- **WS_VISIBLE** crea un controllo struttura a schede che inizialmente è visibile.  
+- **WS_VISIBLE** Creates a tab control that is initially visible.  
   
-- **WS_DISABLED** crea una finestra che inizialmente è disabilitata.  
+- **WS_DISABLED** Creates a window that is initially disabled.  
   
-- **WS_GROUP** specifica il primo controllo di un gruppo di controlli in cui l'utente può spostarsi da un controllo a quella successiva con i tasti di direzione. Tutti i controlli definiti con il **WS_GROUP** dopo il primo controllo appartengono allo stesso gruppo di stile. Il controllo successivo con la **WS_GROUP** stile termina il gruppo di stili e avvia il gruppo successivo (ovvero, un gruppo termina in cui inizia il successivo).  
+- **WS_GROUP** Specifies the first control of a group of controls in which the user can move from one control to the next with the arrow keys. All controls defined with the **WS_GROUP** style after the first control belong to the same group. The next control with the **WS_GROUP** style ends the style group and starts the next group (that is, one group ends where the next begins).  
   
-- **WS_TABSTOP** specifica una di un numero qualsiasi di controlli tramite il quale l'utente può spostarsi con il tasto TAB. Il tasto TAB sposta l'utente al controllo successivo specificato per il **WS_TABSTOP** stile.  
+- **WS_TABSTOP** Specifies one of any number of controls through which the user can move by using the TAB key. The TAB key moves the user to the next control specified by the **WS_TABSTOP** style.  
   
- Per creare un controllo struttura a schede con stili finestra estesi, chiamare [CTabCtrl::CreateEx](#createex) anziché **crea**.  
+ To create a tab control with extended window styles, call [CTabCtrl::CreateEx](#createex) instead of **Create**.  
   
-### <a name="example"></a>Esempio  
- [!code-cpp[NVC_MFC_CTabCtrl n. 2](../../mfc/reference/codesnippet/cpp/ctabctrl-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CTabCtrl#2](../../mfc/reference/codesnippet/cpp/ctabctrl-class_2.cpp)]  
   
-##  <a name="createex"></a>CTabCtrl::CreateEx  
- Crea un controllo (una finestra figlio) e la associa il `CTabCtrl` oggetto.  
+##  <a name="createex"></a>  CTabCtrl::CreateEx  
+ Creates a control (a child window) and associates it with the `CTabCtrl` object.  
   
 ```  
 virtual BOOL CreateEx(
@@ -225,222 +255,222 @@ virtual BOOL CreateEx(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `dwExStyle`  
- Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi di Windows, vedere il `dwExStyle` parametro per [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Specifies the extended style of the control being created. For a list of extended Windows styles, see the `dwExStyle` parameter for [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) in the Windows SDK.  
   
  `dwStyle`  
- Specifica lo stile del controllo scheda. Applicare qualsiasi combinazione di [scheda stili del controllo](http://msdn.microsoft.com/library/windows/desktop/bb760549), descritto nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Vedere **osservazioni** in [crea](#create) per un elenco degli stili di finestra è inoltre possibile applicare al controllo.  
+ Specifies the tab control's style. Apply any combination of [tab control styles](http://msdn.microsoft.com/library/windows/desktop/bb760549), described in the Windows SDK. See **Remarks** in [Create](#create) for a list of window styles that you can also apply to the control.  
   
  `rect`  
- Un riferimento a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che descrive le dimensioni e la posizione della finestra deve essere creata, nelle coordinate del client di `pParentWnd`.  
+ A reference to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure describing the size and position of the window to be created, in client coordinates of `pParentWnd`.  
   
  `pParentWnd`  
- Puntatore alla finestra padre del controllo.  
+ A pointer to the window that is the control's parent.  
   
  `nID`  
- ID di finestra figlio. del controllo  
+ The control's child-window ID.  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se ha esito positivo in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful otherwise 0.  
   
-### <a name="remarks"></a>Note  
- Utilizzare `CreateEx` anziché [crea](#create) per applicare stili estesi di Windows, specificati per il prefisso di stile esteso di Windows **WS_EX _**.  
+### <a name="remarks"></a>Remarks  
+ Use `CreateEx` instead of [Create](#create) to apply extended Windows styles, specified by the Windows extended style preface **WS_EX_**.  
   
- `CreateEx`Crea il controllo con gli stili estesi di Windows specificati da `dwExStyle`. Set di specifiche di un controllo utilizzando stili estesi [SetExtendedStyle](#setextendedstyle). Ad esempio, utilizzare `CreateEx` per impostare questi stili come **WS_EX_CONTEXTHELP**, ma utilizzare `SetExtendedStyle` per impostare questi stili come **TCS_EX_FLATSEPARATORS**. Per ulteriori informazioni, vedere gli stili descritto in [estesi stili del controllo scheda](http://msdn.microsoft.com/library/windows/desktop/bb760546) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ `CreateEx` creates the control with the extended Windows styles specified by `dwExStyle`. Set extended styles specific to a control using [SetExtendedStyle](#setextendedstyle). For example, use `CreateEx` to set such styles as **WS_EX_CONTEXTHELP**, but use `SetExtendedStyle` to set such styles as **TCS_EX_FLATSEPARATORS**. For more information, see the styles described in [Tab Control Extended Styles](http://msdn.microsoft.com/library/windows/desktop/bb760546) in the Windows SDK.  
   
-##  <a name="ctabctrl"></a>CTabCtrl::CTabCtrl  
- Costruisce un oggetto `CTabCtrl`.  
+##  <a name="ctabctrl"></a>  CTabCtrl::CTabCtrl  
+ Constructs a `CTabCtrl` object.  
   
 ```  
 CTabCtrl();
 ```  
   
-##  <a name="deleteallitems"></a>CTabCtrl::DeleteAllItems  
- Rimuove tutti gli elementi da un controllo struttura a schede.  
+##  <a name="deleteallitems"></a>  CTabCtrl::DeleteAllItems  
+ Removes all items from a tab control.  
   
 ```  
 BOOL DeleteAllItems();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se ha esito positivo; in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-##  <a name="deleteitem"></a>CTabCtrl::DeleteItem  
- Rimuove l'elemento specificato da un controllo struttura a schede.  
+##  <a name="deleteitem"></a>  CTabCtrl::DeleteItem  
+ Removes the specified item from a tab control.  
   
 ```  
 BOOL DeleteItem(int nItem);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `nItem`  
- Valore in base zero dell'elemento da eliminare.  
+ Zero-based value of the item to delete.  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se ha esito positivo; in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="example"></a>Esempio  
- [!code-cpp[NVC_MFC_CTabCtrl n. 3](../../mfc/reference/codesnippet/cpp/ctabctrl-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CTabCtrl#3](../../mfc/reference/codesnippet/cpp/ctabctrl-class_3.cpp)]  
   
-##  <a name="deselectall"></a>CTabCtrl::DeselectAll  
- Reimposta elementi in un controllo struttura a schede, cancellando uno qualsiasi che sono stati premuti.  
+##  <a name="deselectall"></a>  CTabCtrl::DeselectAll  
+ Resets items in a tab control, clearing any that were pressed.  
   
 ```  
 void DeselectAll(BOOL fExcludeFocus);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  *fExcludeFocus*  
- Flag che specifica l'ambito della deselezione dell'elemento. Se questo parametro è impostato su **FALSE**, tutti i pulsanti della scheda verranno reimpostati. Se è impostato su **TRUE**, quindi verranno reimpostati tutti gli elementi di scheda ad eccezione di quello attualmente selezionato.  
+ Flag that specifies the scope of the item deselection. If this parameter is set to **FALSE**, all tab buttons will be reset. If it is set to **TRUE**, then all tab items except for the one currently selected will be reset.  
   
-### <a name="remarks"></a>Note  
- Questa funzione membro implementa il comportamento del messaggio Win32, [TCM_DESELECTALL](http://msdn.microsoft.com/library/windows/desktop/bb760579), come descritto nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message, [TCM_DESELECTALL](http://msdn.microsoft.com/library/windows/desktop/bb760579), as described in the Windows SDK.  
   
-##  <a name="drawitem"></a>CTabCtrl::DrawItem  
- Chiamato dal framework quando un aspetto visivo di un controllo scheda proprietario.  
+##  <a name="drawitem"></a>  CTabCtrl::DrawItem  
+ Called by the framework when a visual aspect of an owner-draw tab control changes.  
   
 ```  
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `lpDrawItemStruct`  
- Un puntatore a un [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) struttura che descrive l'elemento da disegnare.  
+ A pointer to a [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) structure describing the item to be painted.  
   
-### <a name="remarks"></a>Note  
- Il **itemAction** membro del `DRAWITEMSTRUCT` struttura definisce l'azione di disegno che deve essere eseguita.  
+### <a name="remarks"></a>Remarks  
+ The **itemAction** member of the `DRAWITEMSTRUCT` structure defines the drawing action that is to be performed.  
   
- Per impostazione predefinita, questa funzione membro non esegue alcuna operazione. Eseguire l'override di questa funzione membro per implementare disegno di un proprietario `CTabCtrl` oggetto.  
+ By default, this member function does nothing. Override this member function to implement drawing for an owner-draw `CTabCtrl` object.  
   
- L'applicazione è necessario ripristinare tutti grafica device interface (GDI) gli oggetti selezionati per il contesto di visualizzazione fornito `lpDrawItemStruct` prima di questo membro funzione termina.  
+ The application should restore all graphics device interface (GDI) objects selected for the display context supplied in `lpDrawItemStruct` before this member function terminates.  
   
-##  <a name="getcurfocus"></a>CTabCtrl::GetCurFocus  
- Recupera l'indice della scheda con lo stato attivo corrente.  
+##  <a name="getcurfocus"></a>  CTabCtrl::GetCurFocus  
+ Retrieves the index of the tab with the current focus.  
   
 ```  
 int GetCurFocus() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Indice in base zero della scheda con lo stato attivo corrente.  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the tab with the current focus.  
   
-##  <a name="getcursel"></a>CTabCtrl::GetCurSel  
- Recupera la scheda attualmente selezionata in un controllo struttura a schede.  
+##  <a name="getcursel"></a>  CTabCtrl::GetCurSel  
+ Retrieves the currently selected tab in a tab control.  
   
 ```  
 int GetCurSel() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Indice in base zero della scheda selezionata se ha esito positivo o - 1 se non è selezionata alcuna scheda.  
+### <a name="return-value"></a>Return Value  
+ Zero-based index of the selected tab if successful or - 1 if no tab is selected.  
   
-##  <a name="getextendedstyle"></a>CTabCtrl::GetExtendedStyle  
- Recupera gli stili estesi che sono attualmente in uso per il controllo scheda.  
+##  <a name="getextendedstyle"></a>  CTabCtrl::GetExtendedStyle  
+ Retrieves the extended styles that are currently in use for the tab control.  
   
 ```  
 DWORD GetExtendedStyle();
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Rappresenta gli stili estesi attualmente in uso per il controllo scheda. Questo valore è una combinazione di [scheda Controllo stili estesi](http://msdn.microsoft.com/library/windows/desktop/bb760546), come descritto nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="return-value"></a>Return Value  
+ Represents the extended styles currently in use for the tab control. This value is a combination of [tab control extended styles](http://msdn.microsoft.com/library/windows/desktop/bb760546), as described in the Windows SDK.  
   
-### <a name="remarks"></a>Note  
- Questa funzione membro implementa il comportamento del messaggio Win32 [TCM_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb760585), come descritto nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [TCM_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb760585), as described in the Windows SDK.  
   
-##  <a name="getimagelist"></a>CTabCtrl::GetImageList  
- Recupera l'elenco di immagini associato a una struttura a schede.  
+##  <a name="getimagelist"></a>  CTabCtrl::GetImageList  
+ Retrieves the image list that's associated with a tab control.  
   
 ```  
 CImageList* GetImageList() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Se ha esito positivo, un puntatore all'elenco di immagini della scheda controllo in caso contrario, **NULL**.  
+### <a name="return-value"></a>Return Value  
+ If successful, a pointer to the image list of the tab control; otherwise, **NULL**.  
   
-##  <a name="getitem"></a>CTabCtrl::GetItem  
- Recupera informazioni su una scheda in un controllo struttura a schede.  
+##  <a name="getitem"></a>  CTabCtrl::GetItem  
+ Retrieves information about a tab in a tab control.  
   
 ```  
 BOOL GetItem(int nItem,   TCITEM* pTabCtrlItem) const;  
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `nItem`  
- Indice in base zero della scheda.  
+ Zero-based index of the tab.  
   
  `pTabCtrlItem`  
- Puntatore a un [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) struttura, utilizzata per specificare le informazioni da recuperare. Viene utilizzato anche per ricevere le informazioni sulla scheda. Questa struttura viene usata con il `InsertItem`, `GetItem`, e `SetItem` funzioni membro.  
+ Pointer to a [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) structure, used to specify the information to retrieve. Also used to receive information about the tab. This structure is used with the `InsertItem`, `GetItem`, and `SetItem` member functions.  
   
-### <a name="return-value"></a>Valore restituito  
- Restituisce **TRUE** se ha esito positivo. **FALSE** in caso contrario.  
+### <a name="return-value"></a>Return Value  
+ Returns **TRUE** if successful; **FALSE** otherwise.  
   
-### <a name="remarks"></a>Note  
- Quando viene inviato il messaggio, il **mask** membro specifica gli attributi da restituire. Se il **mask** membro specifica di `TCIF_TEXT` valore, il **pszText** membro deve contenere l'indirizzo del buffer che riceve il testo dell'elemento e **cchTextMax** membro è necessario specificare le dimensioni del buffer.  
+### <a name="remarks"></a>Remarks  
+ When the message is sent, the **mask** member specifies which attributes to return. If the **mask** member specifies the `TCIF_TEXT` value, the **pszText** member must contain the address of the buffer that receives the item text and the **cchTextMax** member must specify the size of the buffer.  
   
- **maschera**  
- Valore che specifica quali `TCITEM` struttura membri da recuperare o impostare. Questo membro può essere zero o una combinazione dei valori seguenti:  
+ **mask**  
+ Value specifying which `TCITEM` structure members to retrieve or set. This member can be zero or a combination of the following values:  
   
-- `TCIF_TEXT`Il **pszText** membro è valido.  
+- `TCIF_TEXT` The **pszText** member is valid.  
   
-- `TCIF_IMAGE`Il `iImage` membro è valido.  
+- `TCIF_IMAGE` The `iImage` member is valid.  
   
-- `TCIF_PARAM`Il **lParam** membro è valido.  
+- `TCIF_PARAM` The **lParam** member is valid.  
   
-- `TCIF_RTLREADING`Il testo di **pszText** viene visualizzata utilizzando l'ordine di lettura da destra a sinistra nei sistemi ebraico o l'arabo.  
+- `TCIF_RTLREADING` The text of **pszText** is displayed using right-to-left reading order on Hebrew or Arabic systems.  
   
-- `TCIF_STATE`Il **dwState** membro è valido.  
+- `TCIF_STATE` The **dwState** member is valid.  
   
  **pszText**  
- Puntatore a una stringa con terminazione null contenente il testo della scheda, se la struttura contiene informazioni su una scheda. Se la struttura è la ricezione di informazioni, questo membro specifica l'indirizzo del buffer che riceve il testo della scheda.  
+ Pointer to a null-terminated string containing the tab text if the structure contains information about a tab. If the structure is receiving information, this member specifies the address of the buffer that receives the tab text.  
   
  **cchTextMax**  
- Dimensione del buffer a cui puntava **pszText**. Questo membro viene ignorato se la struttura non riceve informazioni.  
+ Size of the buffer pointed to by **pszText**. This member is ignored if the structure is not receiving information.  
   
  `iImage`  
- Indicizzare la scheda del controllo elenco immagini, o - 1 se è presente alcuna immagine per la scheda.  
+ Index into the tab control's image list, or - 1 if there is no image for the tab.  
   
  **lParam**  
- Dati definiti dall'applicazione associati alla scheda. Se sono presenti più di quattro byte di dati definito dall'applicazione per ogni scheda, un'applicazione deve definire una struttura e utilizzare in alternativa il `TCITEM` struttura. Il primo membro della struttura definita dall'applicazione deve essere un [TCITEMHEADER](http://msdn.microsoft.com/library/windows/desktop/bb760556)struttura. Il **TCITEMHEADER** è identica alla struttura di `TCITEM` struttura, ma senza il **lParam** membro. La differenza tra le dimensioni della struttura e le dimensioni del **TCITEMHEADER** struttura deve essere uguale al numero di byte aggiuntive per ogni scheda.  
+ Application-defined data associated with the tab. If there are more than four bytes of application-defined data per tab, an application must define a structure and use it instead of the `TCITEM` structure. The first member of the application-defined structure must be a [TCITEMHEADER](http://msdn.microsoft.com/library/windows/desktop/bb760556)structure. The **TCITEMHEADER** structure is identical to the `TCITEM` structure, but without the **lParam** member. The difference between the size of your structure and the size of the **TCITEMHEADER** structure should equal the number of extra bytes per tab.  
   
-### <a name="example"></a>Esempio  
- [!code-cpp[NVC_MFC_CTabCtrl #4](../../mfc/reference/codesnippet/cpp/ctabctrl-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CTabCtrl#4](../../mfc/reference/codesnippet/cpp/ctabctrl-class_4.cpp)]  
   
-##  <a name="getitemcount"></a>CTabCtrl::GetItemCount  
- Recupera il numero di schede del controllo.  
+##  <a name="getitemcount"></a>  CTabCtrl::GetItemCount  
+ Retrieves the number of tabs in the tab control.  
   
 ```  
 int GetItemCount() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Numero di elementi nel controllo struttura a schede.  
+### <a name="return-value"></a>Return Value  
+ Number of items in the tab control.  
   
-### <a name="example"></a>Esempio  
-  Per vedere l'esempio [CPropertySheet:: GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
+### <a name="example"></a>Example  
+  See the example for [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
   
-##  <a name="getitemrect"></a>CTabCtrl::GetItemRect  
- Recupera il rettangolo di delimitazione per la scheda specificata in un controllo struttura a schede.  
+##  <a name="getitemrect"></a>  CTabCtrl::GetItemRect  
+ Retrieves the bounding rectangle for the specified tab in a tab control.  
   
 ```  
 BOOL GetItemRect(int nItem,   LPRECT lpRect) const;  
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `nItem`  
- Indice in base zero dell'elemento scheda.  
+ Zero-based index of the tab item.  
   
  `lpRect`  
- Puntatore a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che riceve il rettangolo di delimitazione della scheda. Queste coordinate utilizzano modalità di mapping del riquadro di visualizzazione corrente.  
+ Pointer to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure that receives the bounding rectangle of the tab. These coordinates use the viewport's current mapping mode.  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se ha esito positivo; in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="example"></a>Esempio  
-  Per vedere l'esempio [CPropertySheet:: GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
+### <a name="example"></a>Example  
+  See the example for [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
   
-##  <a name="getitemstate"></a>CTabCtrl::GetItemState  
- Recupera lo stato dell'elemento del controllo scheda identificato da `nItem`.  
+##  <a name="getitemstate"></a>  CTabCtrl::GetItemState  
+ Retrieves the state of the tab control item identified by `nItem`.  
   
 ```  
 DWORD GetItemState(
@@ -448,86 +478,86 @@ DWORD GetItemState(
     DWORD dwMask) const;  
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `nItem`  
- Il numero di indice in base zero dell'elemento per cui recuperare le informazioni sullo stato.  
+ The zero-based index number of the item for which to retrieve state information.  
   
  `dwMask`  
- Maschera che specifica quali lo stato dell'elemento flag da restituire. Per un elenco di valori, vedere il membro mask del [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) struttura, come descritto nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Mask specifying which of the item's state flags to return. For a list of values, see the mask member of the [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) structure, as described in the Windows SDK.  
   
-### <a name="return-value"></a>Valore restituito  
- Un riferimento a un `DWORD` valore riceve le informazioni sullo stato. Il valore può essere uno dei seguenti:  
+### <a name="return-value"></a>Return Value  
+ A reference to a `DWORD` value receiving the state information. Can be one of the following values:  
   
-|Valore|Descrizione|  
+|Value|Description|  
 |-----------|-----------------|  
-|**TCIS_BUTTONPRESSED**|L'elemento di scheda di controllo è selezionata.|  
-|**TCIS_HIGHLIGHTED**|L'elemento del controllo scheda è evidenziato e la scheda e testo vengono disegnati utilizzando il colore di evidenziazione corrente. Quando si utilizza il colore di evidenziazione, questo sarà un'interpolazione true, non un colore retinato.|  
+|**TCIS_BUTTONPRESSED**|The tab control item is selected.|  
+|**TCIS_HIGHLIGHTED**|The tab control item is highlighted, and the tab and text are drawn using the current highlight color. When using highlight color, this will be a true interpolation, not a dithered color.|  
   
-### <a name="remarks"></a>Note  
- Stato di un elemento specificato dal **dwState** membro del `TCITEM` struttura.  
+### <a name="remarks"></a>Remarks  
+ An item's state is specified by the **dwState** member of the `TCITEM` structure.  
   
-##  <a name="getrowcount"></a>CTabCtrl::GetRowCount  
- Recupera il numero corrente di righe nel controllo struttura a schede.  
+##  <a name="getrowcount"></a>  CTabCtrl::GetRowCount  
+ Retrieves the current number of rows in a tab control.  
   
 ```  
 int GetRowCount() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Il numero di righe delle schede del controllo.  
+### <a name="return-value"></a>Return Value  
+ The number of rows of tabs in the tab control.  
   
-### <a name="remarks"></a>Note  
- Scheda solo i controlli che dispongono di **TCS_MULTILINE** stile può presentare più righe di schede.  
+### <a name="remarks"></a>Remarks  
+ Only tab controls that have the **TCS_MULTILINE** style can have multiple rows of tabs.  
   
-##  <a name="gettooltips"></a>CTabCtrl::GetToolTips  
- Recupera l'handle della finestra del controllo ToolTip associato a un controllo struttura a schede.  
+##  <a name="gettooltips"></a>  CTabCtrl::GetToolTips  
+ Retrieves the handle of the tool tip control associated with a tab control.  
   
 ```  
 CToolTipCtrl* GetToolTips() const;  
 ```  
   
-### <a name="return-value"></a>Valore restituito  
- Handle del controllo descrizione comandi se ha esito positivo. in caso contrario **NULL**.  
+### <a name="return-value"></a>Return Value  
+ Handle of the tool tip control if successful; otherwise **NULL**.  
   
-### <a name="remarks"></a>Note  
- Un controllo struttura a schede consente di creare un controllo descrizione comando se dispone di **TCS_TOOLTIPS** stile. È inoltre possibile assegnare un controllo descrizione comando per un controllo struttura a schede usando il `SetToolTips` funzione membro.  
+### <a name="remarks"></a>Remarks  
+ A tab control creates a tool tip control if it has the **TCS_TOOLTIPS** style. You can also assign a tool tip control to a tab control by using the `SetToolTips` member function.  
   
-##  <a name="highlightitem"></a>CTabCtrl::HighlightItem  
- Imposta lo stato di evidenziazione di un elemento di scheda.  
+##  <a name="highlightitem"></a>  CTabCtrl::HighlightItem  
+ Sets the highlight state of a tab item.  
   
 ```  
 BOOL HighlightItem(int idItem,   BOOL fHighlight = TRUE);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `idItem`  
- Indice in base zero di un elemento del controllo scheda.  
+ Zero-based index of a tab control item.  
   
  `fHighlight`  
- Valore che specifica lo stato di evidenziazione da impostare. Se questo valore è **TRUE**, la scheda è evidenziata; se **FALSE**, la scheda è impostata sul relativo stato predefinito.  
+ Value specifying the highlight state to be set. If this value is **TRUE**, the tab is highlighted; if **FALSE**, the tab is set to its default state.  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se ha esito positivo; in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise zero.  
   
-### <a name="remarks"></a>Note  
- Questa funzione membro implementa il messaggio Win32 [TCM_HIGHLIGHTITEM](http://msdn.microsoft.com/library/windows/desktop/bb760602), come descritto nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the Win32 message [TCM_HIGHLIGHTITEM](http://msdn.microsoft.com/library/windows/desktop/bb760602), as described in the Windows SDK.  
   
-##  <a name="hittest"></a>CTabCtrl::HitTest  
- Determina quale scheda, se presente, è in corrispondenza della posizione dello schermo specificate.  
+##  <a name="hittest"></a>  CTabCtrl::HitTest  
+ Determines which tab, if any, is at the specified screen position.  
   
 ```  
 int HitTest(TCHITTESTINFO* pHitTestInfo) const;  
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pHitTestInfo`  
- Puntatore a un [TCHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb760553) struttura, come descritto nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)], che specifica la posizione sullo schermo per eseguire il test.  
+ Pointer to a [TCHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb760553) structure, as described in the Windows SDK, which specifies the screen position to test.  
   
-### <a name="return-value"></a>Valore restituito  
- Restituisce l'indice in base zero della scheda o - 1 se non sono in corrispondenza della posizione specificata.  
+### <a name="return-value"></a>Return Value  
+ Returns the zero-based index of the tab or - 1 if no tab is at the specified position.  
   
-##  <a name="insertitem"></a>CTabCtrl:: InsertItem  
- Inserisce una nuova scheda in un controllo struttura a schede esistenti.  
+##  <a name="insertitem"></a>  CTabCtrl::InsertItem  
+ Inserts a new tab in an existing tab control.  
   
 ```  
 LONG InsertItem(
@@ -564,179 +594,179 @@ LONG InsertItem(
     DWORD dwStateMask);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `nItem`  
- Indice in base zero della nuova scheda.  
+ Zero-based index of the new tab.  
   
  `pTabCtrlItem`  
- Puntatore a un [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) struttura che specifica gli attributi della scheda.  
+ Pointer to a [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) structure that specifies the attributes of the tab.  
   
  `lpszItem`  
- Indirizzo di una stringa con terminazione null che contiene il testo della scheda.  
+ Address of a null-terminated string that contains the text of the tab.  
   
  `nImage`  
- Indice in base zero di un'immagine da inserire dall'elenco di immagini.  
+ The zero-based index of an image to insert from an image list.  
   
  `nMask`  
- Specifica quale `TCITEM` struttura attributi da impostare. Può essere zero o una combinazione dei valori seguenti:  
+ Specifies which `TCITEM` structure attributes to set. Can be zero or a combination of the following values:  
   
-- `TCIF_TEXT`Il **pszText** membro è valido.  
+- `TCIF_TEXT` The **pszText** member is valid.  
   
-- `TCIF_IMAGE`Il `iImage` membro è valido.  
+- `TCIF_IMAGE` The `iImage` member is valid.  
   
-- `TCIF_PARAM`Il **lParam** membro è valido.  
+- `TCIF_PARAM` The **lParam** member is valid.  
   
-- `TCIF_RTLREADING`Il testo di **pszText** viene visualizzata utilizzando l'ordine di lettura da destra a sinistra nei sistemi ebraico o l'arabo.  
+- `TCIF_RTLREADING` The text of **pszText** is displayed using right-to-left reading order on Hebrew or Arabic systems.  
   
-- `TCIF_STATE`Il **dwState** membro è valido.  
+- `TCIF_STATE` The **dwState** member is valid.  
   
  `lParam`  
- Dati definiti dall'applicazione associati alla scheda.  
+ Application-defined data associated with the tab.  
   
  `dwState`  
- Specifica i valori per gli Stati dell'elemento. Per ulteriori informazioni, vedere [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Specifies values for the item's states. For more information, see [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) in the Windows SDK.  
   
  *dwStateMask*  
- Specifica gli stati da impostare. Per ulteriori informazioni, vedere [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Specifies which states are to be set. For more information, see [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) in the Windows SDK.  
   
-### <a name="return-value"></a>Valore restituito  
- Indice in base zero della scheda nuovo se ha esito positivo. in caso contrario - 1.  
+### <a name="return-value"></a>Return Value  
+ Zero-based index of the new tab if successful; otherwise - 1.  
   
-### <a name="example"></a>Esempio  
- [!code-cpp[NVC_MFC_CTabCtrl n. 5](../../mfc/reference/codesnippet/cpp/ctabctrl-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CTabCtrl#5](../../mfc/reference/codesnippet/cpp/ctabctrl-class_5.cpp)]  
   
-##  <a name="removeimage"></a>CTabCtrl::RemoveImage  
- Rimuove l'immagine specificata dall'elenco di immagini di un controllo struttura a schede.  
+##  <a name="removeimage"></a>  CTabCtrl::RemoveImage  
+ Removes the specified image from a tab control's image list.  
   
 ```  
 void RemoveImage(int nImage);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `nImage`  
- Indice in base zero dell'immagine da rimuovere.  
+ Zero-based index of the image to remove.  
   
-### <a name="remarks"></a>Note  
- Controllo struttura a schede Aggiorna l'indice dell'immagine di ogni scheda in modo che ogni scheda rimane associato con la stessa immagine.  
+### <a name="remarks"></a>Remarks  
+ The tab control updates each tab's image index so that each tab remains associated with the same image.  
   
-##  <a name="setcurfocus"></a>CTabCtrl::SetCurFocus  
- Imposta lo stato attivo per una scheda specificata in un controllo struttura a schede.  
+##  <a name="setcurfocus"></a>  CTabCtrl::SetCurFocus  
+ Sets the focus to a specified tab in a tab control.  
   
 ```  
 void SetCurFocus(int nItem);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `nItem`  
- Specifica l'indice della scheda che ottiene lo stato attivo.  
+ Specifies the index of the tab that gets the focus.  
   
-### <a name="remarks"></a>Note  
- Questa funzione membro implementa il comportamento del messaggio Win32 [TCM_SETCURFOCUS](http://msdn.microsoft.com/library/windows/desktop/bb760610), come descritto nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [TCM_SETCURFOCUS](http://msdn.microsoft.com/library/windows/desktop/bb760610), as described in the Windows SDK.  
   
-##  <a name="setcursel"></a>CTabCtrl::SetCurSel  
- Seleziona una scheda in un controllo struttura a schede.  
+##  <a name="setcursel"></a>  CTabCtrl::SetCurSel  
+ Selects a tab in a tab control.  
   
 ```  
 int SetCurSel(int nItem);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `nItem`  
- Indice in base zero dell'elemento da selezionare.  
+ The zero-based index of the item to be selected.  
   
-### <a name="return-value"></a>Valore restituito  
- Indice in base zero della scheda selezionata in precedenza se ha esito positivo, in caso contrario - 1.  
+### <a name="return-value"></a>Return Value  
+ Zero-based index of the previously selected tab if successful, otherwise - 1.  
   
-### <a name="remarks"></a>Note  
- Un controllo struttura a schede non invia un **TCN_SELCHANGING** o **TCN_SELCHANGE** messaggio di notifica quando una scheda viene selezionata mediante questa funzione. Queste notifiche vengono inviate tramite **WM_NOTIFY**, quando l'utente fa clic o Usa la tastiera per modificare le schede.  
+### <a name="remarks"></a>Remarks  
+ A tab control does not send a **TCN_SELCHANGING** or **TCN_SELCHANGE** notification message when a tab is selected using this function. These notifications are sent, using **WM_NOTIFY**, when the user clicks or uses the keyboard to change tabs.  
   
-##  <a name="setextendedstyle"></a>CTabCtrl::SetExtendedStyle  
- Imposta gli stili estesi per un controllo struttura a schede.  
+##  <a name="setextendedstyle"></a>  CTabCtrl::SetExtendedStyle  
+ Sets the extended styles for a tab control.  
   
 ```  
 DWORD SetExtendedStyle(DWORD dwNewStyle,   DWORD dwExMask = 0);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `dwNewStyle`  
- Valore che specifica una combinazione della scheda Controllo stili estesi.  
+ Value specifying a combination of tab control extended styles.  
   
  `dwExMask`  
- Oggetto `DWORD` valore che indica gli stili in `dwNewStyle` sono interessate. Solo gli stili estesi in `dwExMask` verranno modificate. Come verranno mantenuti tutti gli altri stili. Se questo parametro è zero, tutti gli stili in `dwNewStyle` saranno interessate.  
+ A `DWORD` value that indicates which styles in `dwNewStyle` are to be affected. Only the extended styles in `dwExMask` will be changed. All other styles will be maintained as is. If this parameter is zero, then all of the styles in `dwNewStyle` will be affected.  
   
-### <a name="return-value"></a>Valore restituito  
- Oggetto `DWORD` valore contenente precedente [scheda Controllo stili estesi](http://msdn.microsoft.com/library/windows/desktop/bb760546), come descritto nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="return-value"></a>Return Value  
+ A `DWORD` value that contains the previous [tab control extended styles](http://msdn.microsoft.com/library/windows/desktop/bb760546), as described in the Windows SDK.  
   
-### <a name="return-value"></a>Valore restituito  
- Questa funzione membro implementa il comportamento del messaggio Win32 [TCM_SETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb760627), come descritto nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="return-value"></a>Return Value  
+ This member function implements the behavior of the Win32 message [TCM_SETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb760627), as described in the Windows SDK.  
   
-##  <a name="setimagelist"></a>CTabCtrl::SetImageList  
- Assegna un elenco di immagini a un controllo struttura a schede.  
+##  <a name="setimagelist"></a>  CTabCtrl::SetImageList  
+ Assigns an image list to a tab control.  
   
 ```  
 CImageList* SetImageList(CImageList* pImageList);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pImageList`  
- Puntatore all'elenco di immagini da assegnare al controllo struttura a schede.  
+ Pointer to the image list to be assigned to the tab control.  
   
-### <a name="return-value"></a>Valore restituito  
- Restituisce un puntatore all'elenco di immagini precedente o **NULL** se è presente alcun elenco di immagine precedente.  
+### <a name="return-value"></a>Return Value  
+ Returns a pointer to the previous image list or **NULL** if there is no previous image list.  
   
-##  <a name="setitem"></a>CTabCtrl::SetItem  
- Imposta alcuni o tutti gli attributi di una scheda.  
+##  <a name="setitem"></a>  CTabCtrl::SetItem  
+ Sets some or all of a tab's attributes.  
   
 ```  
 BOOL SetItem(int nItem,   TCITEM* pTabCtrlItem);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `nItem`  
- Indice in base zero dell'elemento.  
+ Zero-based index of the item.  
   
  `pTabCtrlItem`  
- Puntatore a un [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) struttura che contiene i nuovi attributi di elemento. Il **mask** membro specifica gli attributi da impostare. Se il **mask** membro specifica di `TCIF_TEXT` valore, il **pszText** membro è l'indirizzo di una stringa con terminazione null e **cchTextMax** membro viene ignorato.  
+ Pointer to a [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) structure that contains the new item attributes. The **mask** member specifies which attributes to set. If the **mask** member specifies the `TCIF_TEXT` value, the **pszText** member is the address of a null-terminated string and the **cchTextMax** member is ignored.  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se ha esito positivo; in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="example"></a>Esempio  
-  Per vedere l'esempio [GetItem](#getitem).  
+### <a name="example"></a>Example  
+  See the example for [GetItem](#getitem).  
   
-##  <a name="setitemextra"></a>CTabCtrl::SetItemExtra  
- Imposta il numero di byte per ogni scheda sono riservati per i dati definiti dall'applicazione in un controllo struttura a schede.  
+##  <a name="setitemextra"></a>  CTabCtrl::SetItemExtra  
+ Sets the number of bytes per tab reserved for application-defined data in a tab control.  
   
 ```  
 BOOL SetItemExtra(int nBytes);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `nBytes`  
- Il numero di byte aggiuntivi da impostare.  
+ The number of extra bytes to set.  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se ha esito positivo; in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise zero.  
   
-### <a name="remarks"></a>Note  
- Questa funzione membro implementa il comportamento del messaggio Win32 [TCM_SETITEMEXTRA](http://msdn.microsoft.com/library/windows/desktop/bb760633), come descritto nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [TCM_SETITEMEXTRA](http://msdn.microsoft.com/library/windows/desktop/bb760633), as described in the Windows SDK.  
   
-##  <a name="setitemsize"></a>CTabCtrl::SetItemSize  
- Imposta la larghezza e l'altezza degli elementi di controllo della scheda.  
+##  <a name="setitemsize"></a>  CTabCtrl::SetItemSize  
+ Sets the width and height of the tab control items.  
   
 ```  
 CSize SetItemSize(CSize size);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `size`  
- La nuova larghezza e altezza, in pixel, degli elementi di controllo della scheda.  
+ The new width and height, in pixels, of the tab control items.  
   
-### <a name="return-value"></a>Valore restituito  
- Restituisce la larghezza e l'altezza precedenti degli elementi di controllo della scheda.  
+### <a name="return-value"></a>Return Value  
+ Returns the old width and height of the tab control items.  
   
-##  <a name="setitemstate"></a>CTabCtrl::SetItemState  
- Imposta lo stato dell'elemento del controllo scheda identificato da `nItem`.  
+##  <a name="setitemstate"></a>  CTabCtrl::SetItemState  
+ Sets the state of the tab control item identified by `nItem`.  
   
 ```  
 BOOL SetItemState(
@@ -745,72 +775,72 @@ BOOL SetItemState(
     DWORD dwState);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `nItem`  
- Il numero di indice in base zero dell'elemento per cui impostare le informazioni sullo stato.  
+ The zero-based index number of the item for which to set state information.  
   
  `dwMask`  
- Maschera che specifica quali lo stato dell'elemento flag da impostare. Per un elenco di valori, vedere il membro mask del [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) struttura, come descritto nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Mask specifying which of the item's state flags to set. For a list of values, see the mask member of the [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) structure, as described in the Windows SDK.  
   
  `dwState`  
- Un riferimento a un `DWORD` valore contenente le informazioni sullo stato. Il valore può essere uno dei seguenti:  
+ A reference to a `DWORD` value containing the state information. Can be one of the following values:  
   
-|Valore|Descrizione|  
+|Value|Description|  
 |-----------|-----------------|  
-|**TCIS_BUTTONPRESSED**|L'elemento di scheda di controllo è selezionata.|  
-|**TCIS_HIGHLIGHTED**|L'elemento del controllo scheda è evidenziato e la scheda e testo vengono disegnati utilizzando il colore di evidenziazione corrente. Quando si utilizza il colore di evidenziazione, questo sarà un'interpolazione true, non un colore retinato.|  
+|**TCIS_BUTTONPRESSED**|The tab control item is selected.|  
+|**TCIS_HIGHLIGHTED**|The tab control item is highlighted, and the tab and text are drawn using the current highlight color. When using highlight color, this will be a true interpolation, not a dithered color.|  
   
-### <a name="return-value"></a>Valore restituito  
- Diverso da zero se ha esito positivo; in caso contrario 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-##  <a name="setmintabwidth"></a>CTabCtrl::SetMinTabWidth  
- Imposta la larghezza minima di elementi in un controllo struttura a schede.  
+##  <a name="setmintabwidth"></a>  CTabCtrl::SetMinTabWidth  
+ Sets the minimum width of items in a tab control.  
   
 ```  
 int SetMinTabWidth(int cx);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `cx`  
- Larghezza minima da impostare per un elemento del controllo scheda. Se questo parametro è impostato su -1, il controllo utilizzerà la larghezza della scheda predefinita.  
+ Minimum width to be set for a tab control item. If this parameter is set to -1, the control will use the default tab width.  
   
-### <a name="return-value"></a>Valore restituito  
- La larghezza minima della scheda precedente.  
+### <a name="return-value"></a>Return Value  
+ The previous minimum tab width.  
   
-### <a name="return-value"></a>Valore restituito  
- Questa funzione membro implementa il comportamento del messaggio Win32 [TCM_SETMINTABWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb760637), come descritto nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="return-value"></a>Return Value  
+ This member function implements the behavior of the Win32 message [TCM_SETMINTABWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb760637), as described in the Windows SDK.  
   
-##  <a name="setpadding"></a>CTabCtrl::SetPadding  
- Imposta la quantità di spazio (riempimento) intorno icona ogni scheda e l'etichetta in un controllo struttura a schede.  
+##  <a name="setpadding"></a>  CTabCtrl::SetPadding  
+ Sets the amount of space (padding) around each tab's icon and label in a tab control.  
   
 ```  
 void SetPadding(CSize size);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `size`  
- Imposta la quantità di spazio (riempimento) intorno icona ogni scheda e l'etichetta in un controllo struttura a schede.  
+ Sets the amount of space (padding) around each tab's icon and label in a tab control.  
   
-##  <a name="settooltips"></a>CTabCtrl::SetToolTips  
- Assegna un controllo descrizione comandi a un controllo struttura a schede.  
+##  <a name="settooltips"></a>  CTabCtrl::SetToolTips  
+ Assigns a tool tip control to a tab control.  
   
 ```  
 void SetToolTips(CToolTipCtrl* pWndTip);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pWndTip`  
- Handle del controllo descrizione comando.  
+ Handle of the tool tip control.  
   
-### <a name="remarks"></a>Note  
- È possibile ottenere il controllo descrizione comandi associato a un controllo struttura a schede effettuando una chiamata a `GetToolTips`.  
+### <a name="remarks"></a>Remarks  
+ You can get the tool tip control associated with a tab control by making a call to `GetToolTips`.  
   
-### <a name="example"></a>Esempio  
-  Per vedere l'esempio [CPropertySheet:: GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
+### <a name="example"></a>Example  
+  See the example for [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
   
-## <a name="see-also"></a>Vedere anche  
- [CWnd (classe)](../../mfc/reference/cwnd-class.md)   
- [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
- [CHeaderCtrl (classe)](../../mfc/reference/cheaderctrl-class.md)   
- [Classe CListCtrl](../../mfc/reference/clistctrl-class.md)
+## <a name="see-also"></a>See Also  
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CHeaderCtrl Class](../../mfc/reference/cheaderctrl-class.md)   
+ [CListCtrl Class](../../mfc/reference/clistctrl-class.md)
 

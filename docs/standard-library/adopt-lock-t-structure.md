@@ -1,5 +1,5 @@
 ---
-title: Struttura adopt_lock_t | Microsoft Docs
+title: adopt_lock_t Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,29 +32,29 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 0e334066f459600508b79896b57577e873db4053
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 21eeb5ae9be357fec17629038913b3fed804b61f
 ms.contentlocale: it-it
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="adoptlockt-structure"></a>Struttura adopt_lock_t
-Rappresenta un tipo che viene usato per definire [adopt_lock](../standard-library/mutex-functions.md#adopt_lock).  
+# <a name="adoptlockt-structure"></a>adopt_lock_t Structure
+Represents a type that is used to define an [adopt_lock](../standard-library/mutex-functions.md#adopt_lock).  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 struct adopt_lock_t;
 ```  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<mutex >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<mutex>  
   
- **Spazio dei nomi:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
  [\<mutex>](../standard-library/mutex.md)
 
 

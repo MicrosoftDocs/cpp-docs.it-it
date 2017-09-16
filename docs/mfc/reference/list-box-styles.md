@@ -1,5 +1,5 @@
 ---
-title: Stili casella di riepilogo | Documenti di Microsoft
+title: List-Box Styles | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,22 +28,22 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- LBS_NOSEL constant
-- LBS_NOREDRAW constant
-- LBS_HASSTRINGS constant
-- LBS_OWNERDRAWFIXED constant
-- LBS_WANTKEYBOARDINPUT constant
-- LBS_STANDARD constant
-- LBS_MULTIPLESEL constant
-- LBS_OWNERDRAWVARIABLE constant
-- LBS_DISABLENOSCROLL constant
-- LBS_NODATA constant
-- list boxes, styles
-- LBS_EXTENDEDSEL constant
-- LBS_MULTICOLUMN constant
-- LBS_NOTIFY constant
-- LBS_USETABSTOPS constant
-- LBS_NOINTEGRALHEIGHT constant
+- LBS_NOSEL constant [MFC]
+- LBS_NOREDRAW constant [MFC]
+- LBS_HASSTRINGS constant [MFC]
+- LBS_OWNERDRAWFIXED constant [MFC]
+- LBS_WANTKEYBOARDINPUT constant [MFC]
+- LBS_STANDARD constant [MFC]
+- LBS_MULTIPLESEL constant [MFC]
+- LBS_OWNERDRAWVARIABLE constant [MFC]
+- LBS_DISABLENOSCROLL constant [MFC]
+- LBS_NODATA constant [MFC]
+- list boxes [MFC], styles
+- LBS_EXTENDEDSEL constant [MFC]
+- LBS_MULTICOLUMN constant [MFC]
+- LBS_NOTIFY constant [MFC]
+- LBS_USETABSTOPS constant [MFC]
+- LBS_NOINTEGRALHEIGHT constant [MFC]
 - LBS_SORT constant
 ms.assetid: 3f357b8d-9118-4f41-9e28-02ed92d1e88f
 caps.latest.revision: 12
@@ -64,51 +64,51 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 8e038e5cef50bd15df85c9d7f8b213b54ed03825
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: cad7dce447e41b72116dc8317f7a05649cd34e76
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="list-box-styles"></a>Stili delle caselle di riepilogo
--   **LBS_DISABLENOSCROLL** la casella di riepilogo Mostra un disabilitato barra di scorrimento verticale quando la casella di riepilogo non contiene sufficienti elementi da scorrere. Senza questo stile, la barra di scorrimento viene nascosta quando la casella di riepilogo non contiene sufficienti elementi.  
+# <a name="list-box-styles"></a>List-Box Styles
+-   **LBS_DISABLENOSCROLL** The list box shows a disabled vertical scroll bar when the list box does not contain enough items to scroll. Without this style, the scroll bar is hidden when the list box does not contain enough items.  
   
--   **LBS_EXTENDEDSEL** l'utente può selezionare più elementi utilizzando il tasto MAIUSC e il mouse o le combinazioni di tasti speciali.  
+-   **LBS_EXTENDEDSEL** The user can select multiple items using the SHIFT key and the mouse or special key combinations.  
   
--   **LBS_HASSTRINGS** specifica una casella di riepilogo di disegno personalizzato che contiene elementi costituite da stringhe. La casella di riepilogo mantiene la memoria e i puntatori per le stringhe, pertanto l'applicazione può utilizzare il `GetText` funzione membro per recuperare il testo per un particolare elemento.  
+-   **LBS_HASSTRINGS** Specifies an owner-draw list box that contains items consisting of strings. The list box maintains the memory and pointers for the strings so the application can use the `GetText` member function to retrieve the text for a particular item.  
   
--   **LBS_MULTICOLUMN** specifica una casella di riepilogo a più colonne che è necessario scorrere orizzontalmente. Il `SetColumnWidth` funzione membro imposta la larghezza delle colonne.  
+-   **LBS_MULTICOLUMN** Specifies a multicolumn list box that is scrolled horizontally. The `SetColumnWidth` member function sets the width of the columns.  
   
--   **LBS_MULTIPLESEL** selezione stringa viene attivata ogni volta che l'utente fa clic o fa doppio clic su stringa. È possibile selezionare qualsiasi numero di stringhe.  
+-   **LBS_MULTIPLESEL** String selection is toggled each time the user clicks or double-clicks the string. Any number of strings can be selected.  
   
--   **LBS_NODATA** specifica una casella di riepilogo senza dati. Specificare questo stile quando il conteggio degli elementi nella casella di riepilogo supererà mille. Una casella di riepilogo senza dati deve inoltre disporre di **LBS_OWNERDRAWFIXED** di stile, ma non deve avere il **LBS_SORT** o **LBS_HASSTRINGS** stile.  
+-   **LBS_NODATA** Specifies a no-data list box. Specify this style when the count of items in the list box will exceed one thousand. A no-data list box must also have the **LBS_OWNERDRAWFIXED** style, but must not have the **LBS_SORT** or **LBS_HASSTRINGS** style.  
   
-     Una casella di riepilogo senza dati è simile a una casella di riepilogo disegnato dal proprietario, ad eccezione del fatto che non contiene alcun dato di stringa o una bitmap per un elemento. Comandi per aggiungere, inserire o eliminare un elemento ignorano sempre un dato elemento dati. richieste per trovare una stringa nella casella di riepilogo sempre esito negativo. Il sistema invia il `WM_DRAWITEM` messaggio alla finestra proprietaria quando è necessario disegnare un elemento. Il membro itemID del `DRAWITEMSTRUCT` struttura passata con la `WM_DRAWITEM` messaggio specifica il numero di riga dell'elemento da disegnare. Una casella di riepilogo senza dati non invia un `WM_DELETEITEM` messaggio.  
+     A no-data list box resembles an owner-drawn list box except that it contains no string or bitmap data for an item. Commands to add, insert, or delete an item always ignore any given item data; requests to find a string within the list box always fail. The system sends the `WM_DRAWITEM` message to the owner window when an item must be drawn. The itemID member of the `DRAWITEMSTRUCT` structure passed with the `WM_DRAWITEM` message specifies the line number of the item to be drawn. A no-data list box does not send a `WM_DELETEITEM` message.  
   
--   **LBS_NOINTEGRALHEIGHT** le dimensioni della casella di riepilogo sono esattamente le dimensioni specificate dall'applicazione quando creata la casella di riepilogo. In genere, Windows viene ridimensionata una casella di riepilogo in modo che la casella di riepilogo non visualizzare elementi parziali.  
+-   **LBS_NOINTEGRALHEIGHT** The size of the list box is exactly the size specified by the application when it created the list box. Usually, Windows sizes a list box so that the list box does not display partial items.  
   
--   **LBS_NOREDRAW** visualizzazione elenco non viene aggiornato quando vengono apportate modifiche. Questo stile può essere modificato in qualsiasi momento mediante l'invio di un **WM_SETREDRAW** messaggio.  
+-   **LBS_NOREDRAW** List-box display is not updated when changes are made. This style can be changed at any time by sending a **WM_SETREDRAW** message.  
   
--   **LBS_NOSEL** specifica che la casella di riepilogo contiene gli elementi che possono essere visualizzati ma non è selezionati.  
+-   **LBS_NOSEL** Specifies that the list box contains items that can be viewed but not selected.  
   
--   **LBS_NOTIFY** finestra padre riceve un messaggio di input ogni volta che l'utente fa clic o fa doppio clic su una stringa.  
+-   **LBS_NOTIFY** Parent window receives an input message whenever the user clicks or double-clicks a string.  
   
--   **LBS_OWNERDRAWFIXED** il proprietario della casella di riepilogo è responsabile della creazione del relativo contenuto, gli elementi nella casella di riepilogo sono la stessa altezza.  
+-   **LBS_OWNERDRAWFIXED** The owner of the list box is responsible for drawing its contents; the items in the list box are the same height.  
   
--   **LBS_OWNERDRAWVARIABLE** il proprietario della casella di riepilogo è responsabile della creazione del relativo contenuto, gli elementi nella casella di riepilogo sono variabile in altezza.  
+-   **LBS_OWNERDRAWVARIABLE** The owner of the list box is responsible for drawing its contents; the items in the list box are variable in height.  
   
--   **LBS_SORT** stringhe nella casella di riepilogo vengono ordinate in ordine alfabetico.  
+-   **LBS_SORT** Strings in the list box are sorted alphabetically.  
   
--   **LBS_STANDARD** stringhe nella casella di riepilogo vengono ordinate alfabeticamente e la finestra padre riceve un messaggio di input ogni volta che l'utente fa clic o fa doppio clic su una stringa. La casella di riepilogo contiene tutti i bordi.  
+-   **LBS_STANDARD** Strings in the list box are sorted alphabetically, and the parent window receives an input message whenever the user clicks or double-clicks a string. The list box contains borders on all sides.  
   
--   **LBS_USETABSTOPS** consente una casella di riepilogo riconoscere ed estendere i caratteri di tabulazione quando crea le proprie stringhe. Le posizioni di scheda predefinita sono 32 DLU. (Un'unità di finestra di dialogo è una distanza orizzontale o verticale. Una DLU orizzontale è uguale a un quarto dell'unità di base larghezza della finestra corrente. Le unità di base di finestra di dialogo vengono calcolate in base l'altezza e la larghezza del tipo di carattere di sistema corrente. Il **GetDialogBaseUnits** funzione Windows restituisce la finestra di dialogo corrente unità di base in pixel.) Questo stile non deve essere utilizzato con **LBS_OWNERDRAWFIXED**.  
+-   **LBS_USETABSTOPS** Allows a list box to recognize and expand tab characters when drawing its strings. The default tab positions are 32 dialog units. (A dialog unit is a horizontal or vertical distance. One horizontal dialog unit is equal to one-fourth of the current dialog base width unit. The dialog base units are computed based on the height and width of the current system font. The **GetDialogBaseUnits** Windows function returns the current dialog base units in pixels.) This style should not be used with **LBS_OWNERDRAWFIXED**.  
   
--   **LBS_WANTKEYBOARDINPUT** il proprietario della casella di riepilogo riceve `WM_VKEYTOITEM` o `WM_CHARTOITEM` messaggi ogni volta che l'utente preme un tasto mentre la casella di riepilogo ha lo stato attivo. In questo modo un'applicazione di eseguire un'elaborazione speciale della tastiera di input.  
+-   **LBS_WANTKEYBOARDINPUT** The owner of the list box receives `WM_VKEYTOITEM` or `WM_CHARTOITEM` messages whenever the user presses a key while the list box has input focus. This allows an application to perform special processing on the keyboard input.  
   
-## <a name="see-also"></a>Vedere anche  
- [Stili utilizzati da MFC](../../mfc/reference/styles-used-by-mfc.md)   
+## <a name="see-also"></a>See Also  
+ [Styles Used by MFC](../../mfc/reference/styles-used-by-mfc.md)   
  [CListBox::Create](../../mfc/reference/clistbox-class.md#create)   
- [Stili casella di riepilogo](http://msdn.microsoft.com/library/windows/desktop/bb775149)
+ [List Box Styles](http://msdn.microsoft.com/library/windows/desktop/bb775149)
 
 

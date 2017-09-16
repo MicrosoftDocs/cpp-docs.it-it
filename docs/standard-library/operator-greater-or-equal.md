@@ -9,12 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- operator>=
-- std::>=
-- std.operator>=
-- '>='
-- std.>=
-- std::operator>=
+- operator>=", "std::>=", "std.operator>=", ">=", "std.>=", "std::operator>=
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -40,20 +35,20 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 9be9674c0039eb1ba64107e2ef08859909280ec3
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 1337159a6a1b81f356ebbfdff2d33cba1da7fb92
 ms.contentlocale: it-it
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="operatorgt"></a>operator&gt;=
 > [!NOTE]
->  Questo argomento è incluso nella documentazione di Visual C++ come esempio non funzionale dei contenitori usati nella libreria standard C++. Per altre informazioni, vedere [C++ Standard Library Containers](../standard-library/stl-containers.md) (Contenitori della libreria standard C++).  
+>  This topic is in the Visual C++ documentation as a nonfunctional example of containers used in the C++ Standard Library. For more information, see [C++ Standard Library Containers](../standard-library/stl-containers.md).  
   
- Esegue l'overload di **operator>=** per confrontare due oggetti della classe modello [Container](../standard-library/sample-container-class.md).  
+ Overloads **operator>=** to compare two objects of template class [Container](../standard-library/sample-container-class.md).  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty>  
@@ -62,10 +57,10 @@ bool operator>=(
     const Container <Ty>& right);
 ```  
   
-## <a name="return-value"></a>Valore restituito  
- Restituisce `!(left < right)`.  
+## <a name="return-value"></a>Return Value  
+ Returns `!(left < right)`.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [\<sample container>](../standard-library/sample-container.md)
 
 

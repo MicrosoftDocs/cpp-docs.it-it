@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::<deque>
-- <deque>
-- std.<deque>
+- std::<deque>", "<deque>", "std.<deque>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,50 +33,50 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 5d3ff49236c53f484098cdc075a1d0d5379acb5f
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 869fb9c0ed0f975b508fdd805d9b45c5e4793aa5
 ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltdequegt"></a>&lt;deque&gt;
-Definisce l'oggetto deque della classe modello del contenitore e diversi modelli di supporto.  
+Defines the container template class deque and several supporting templates.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 #include <deque>  
   
 ```  
   
-### <a name="operators"></a>Operatori  
+### <a name="operators"></a>Operators  
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/deque-operators.md#op_neq)|Verifica se l'oggetto deque sul lato sinistro dell'operatore non è uguale all'oggetto deque sul lato destro.|  
-|[operator<](../standard-library/deque-operators.md#op_lt)|Verifica se l'oggetto deque sul lato sinistro dell'operatore è minore dell'oggetto deque sul lato destro.|  
-|[operator\<=](../standard-library/deque-operators.md#op_gt_eq)|Verifica se l'oggetto deque sul lato sinistro dell'operatore è minore o uguale all'oggetto deque sul lato destro.|  
-|[operator==](../standard-library/deque-operators.md#op_eq_eq)|Verifica se l'oggetto deque sul lato sinistro dell'operatore è uguale all'oggetto deque sul lato destro.|  
-|[operator>](../standard-library/deque-operators.md#op_gt)|Verifica se l'oggetto deque sul lato sinistro dell'operatore è maggiore dell'oggetto deque sul lato destro.|  
-|[operator>=](../standard-library/deque-operators.md#op_gt_eq)|Verifica se l'oggetto deque sul lato sinistro dell'operatore è maggiore o uguale all'oggetto deque sul lato destro.|  
+|[operator!=](../standard-library/deque-operators.md#op_neq)|Tests if the deque object on the left side of the operator is not equal to the deque object on the right side.|  
+|[operator<](../standard-library/deque-operators.md#op_lt)|Tests if the deque object on the left side of the operator is less than the deque object on the right side.|  
+|[operator\<=](../standard-library/deque-operators.md#op_gt_eq)|Tests if the deque object on the left side of the operator is less than or equal to the deque object on the right side.|  
+|[operator==](../standard-library/deque-operators.md#op_eq_eq)|Tests if the deque object on the left side of the operator is equal to the deque object on the right side.|  
+|[operator>](../standard-library/deque-operators.md#op_gt)|Tests if the deque object on the left side of the operator is greater than the deque object on the right side.|  
+|[operator>=](../standard-library/deque-operators.md#op_gt_eq)|Tests if the deque object on the left side of the operator is greater than or equal to the deque object on the right side.|  
   
-### <a name="functions"></a>Funzioni  
-  
-|||  
-|-|-|  
-|[swap](../standard-library/deque-functions.md#swap)|Scambia gli elementi di due deque.|  
-  
-### <a name="classes"></a>Classi  
+### <a name="functions"></a>Functions  
   
 |||  
 |-|-|  
-|[Classe deque](../standard-library/deque-class.md)|Una classe modello di contenitori di sequenza che organizzano gli elementi di un determinato tipo in una disposizione lineare e, come i vettori, consentono l'accesso casuale veloce a qualsiasi elemento e l'inserimento e l'eliminazione efficienti sul retro del contenitore.|  
+|[swap](../standard-library/deque-functions.md#swap)|Exchanges the elements of two deques.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)   
- [Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+### <a name="classes"></a>Classes  
+  
+|||  
+|-|-|  
+|[deque Class](../standard-library/deque-class.md)|A template class of sequence containers that arrange elements of a given type in a linear arrangement and, like vectors, allow fast random access to any element and efficient insertion and deletion at the back of the container.|  
+  
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

@@ -1,40 +1,58 @@
 ---
-title: "Tracker | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "applicazioni [OLE], tracker"
-  - "CDC (classe), tracker"
-  - "CRectTracker (classe), implementazione di tracker"
-  - "applicazioni OLE [C++], tracker"
-  - "contenitori OLE, tracker"
-  - "applicazioni server OLE, tracker"
-  - "tracker"
-  - "gestione di elementi OLE"
+title: Trackers | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- trackers [MFC]
+- OLE applications [MFC], trackers
+- applications [OLE], trackers
+- tracking OLE items [MFC]
+- OLE containers [MFC], trackers
+- CDC class [MFC], trackers
+- CRectTracker class [MFC], implementing trackers
+- OLE server applications [MFC], trackers
 ms.assetid: dcd09399-6637-4621-80e5-d12670429787
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Tracker
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f4ea3db56feb48124a56ab71602261ab52fa7559
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-La classe di [CRectTracker](../mfc/reference/crecttracker-class.md) fornisce un'interfaccia utente tra elementi rettangolari nell'applicazione e dell'utente fornendo vari stili di visualizzazione.  Questi stili sono pieni, tratteggiate, o bordo tratteggiato; un modello tratteggiate che comprende l'elemento; e quadratini di ridimensionamento che possono essere posizionati all'esterno o interno di un bordo.  I tracker vengono spesso utilizzati insieme agli elementi OLE, ovvero, oggetti derivati da `COleClientItem`.  Rettangoli tracker di forniscono segnali visivi allo stato corrente dell'elemento.  
+---
+# <a name="trackers"></a>Trackers
+The [CRectTracker](../mfc/reference/crecttracker-class.md) class provides a user interface between rectangular items in your application and your user by providing a variety of display styles. These styles include solid, hatched, or dashed borders; a hatched pattern that covers the item; and resize handles that can be located on the outside or inside of a border. Trackers are often used in conjunction with OLE items, that is, objects derived from `COleClientItem`. The tracker rectangles give visual cues on the current status of the item.  
   
- L'esempio [OCLIENT](../top/visual-cpp-samples.md) OLE MFC viene illustrato un'interfaccia comune utilizzo di tracker e di elementi client OLE dal punto di vista di un'applicazione contenitore.  Per una dimostrazione degli stili diversi e le possibilità di un tracker object, vedere a MFC l'esempio generale [TRACKER](../top/visual-cpp-samples.md).  
+ The MFC OLE sample [OCLIENT](../visual-cpp-samples.md) demonstrates a common interface using trackers and OLE client items from the viewpoint of a container application. For a demonstration of the different styles and abilities of a tracker object, see the MFC general sample [TRACKER](../visual-cpp-samples.md).  
   
- Per ulteriori informazioni sull'implementazione di tracker nell'applicazione OLE, vedere [Tracker: Implementare i tracker nell'applicazione OLE](../mfc/trackers-implementing-trackers-in-your-ole-application.md)  
+ For more information on implementing trackers in your OLE application, see [Trackers: Implementing Trackers in Your OLE Application](../mfc/trackers-implementing-trackers-in-your-ole-application.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [OLE](../mfc/ole-in-mfc.md)   
  [COleClientItem Class](../mfc/reference/coleclientitem-class.md)
+

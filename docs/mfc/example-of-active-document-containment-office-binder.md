@@ -1,41 +1,60 @@
 ---
-title: "Esempio di contenimento di documenti attivi: raccoglitore di Office | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "contenitori documenti attivi [C++], esempi"
-  - "documenti attivi [C++], contenitori"
-  - "contenitori [C++], documento attivo"
-  - "esempi [C++], contenimento dei documenti attivi"
-  - "MFC COM [C++], contenimento dei documenti attivi"
-  - "raccoglitore di Office"
+title: 'Example of Active Document Containment: Office Binder | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- active documents [MFC], containers
+- examples [MFC], active document containment
+- containers [MFC], active document
+- active document containers [MFC], examples
+- Office Binder [MFC]
+- MFC COM, active document containment
 ms.assetid: 70dd8568-e8bc-44ac-bf5e-678767efe8e3
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Esempio di contenimento di documenti attivi: raccoglitore di Office
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 63a7202da76d8b7bf66f0d912b4cc855ccfd12d2
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Il raccoglitore Microsoft Office è un esempio di un contenitore di documenti attivi.  Un Raccoglitore microsoft Office include due riquadri primari, quali i contenitori in genere sì.  Il riquadro sinistro contiene icone che corrispondono ai documenti attivi nel gestore di associazione.  Ogni documento viene chiamato *una sezione* all'interno del gestore di associazione.  Ad esempio, un gestore di associazione può contenere i documenti di Word, i file PowerPoint, fogli di calcolo di Excel, e così via.  
+---
+# <a name="example-of-active-document-containment-office-binder"></a>Example of Active Document Containment: Office Binder
+The Microsoft Office Binder is an example of an active document container. An Office Binder includes two primary panes, as containers typically do. The left pane contains icons that correspond to active documents in the Binder. Each document is called a *section* within the Binder. For example, a Binder can contain Word documents, PowerPoint files, Excel spreadsheets, and so on.  
   
- Fare clic su un'icona nel riquadro sinistro attiva il documento attivo corrispondente.  Il riquadro di destra binder viene visualizzato il contenuto del documento attivo attualmente selezionato.  
+ Clicking an icon in the left pane activates the corresponding active document. The right pane of the Binder then displays the contents of the currently selected active document.  
   
- Se si apre e attivare un documento di Word in un raccoglitore, la barra dei menu e le barre degli strumenti di Word visualizzate all'inizio del frame di visualizzazione e modificarne il contenuto del documento utilizzando qualsiasi comando strumento di Word.  Tuttavia, la barra dei menu è una combinazione delle barre dei menu di Word che il gestore di associazione.  Poiché sia il gestore di associazione che Excel presentano menu **?**, il contenuto dei rispettivi menu viene unito.  I contenitori di documenti attivi come il Raccoglitore Office forniscono automaticamente l'unione dei menu **?** per ulteriori informazioni, vedere [L'unione di menu?](../mfc/help-menu-merging.md).  
+ If you open and activate a Word document in a Binder, the Word menu bar and toolbars appear at the top of the view frame, and you can edit the document's contents using any Word command or tool. However, the menu bar is a combination of both the Binder's and Word's menu bars. Because both Binder and Word have **Help** menus, the contents of the respective menus are merged. Active document containers such as Office Binder automatically provide **Help** menu merging; for more information, see [Help Menu Merging](../mfc/help-menu-merging.md).  
   
- Quando si seleziona un documento attivo di un altro tipo di applicazione, le modifiche all'interfaccia binder per adattarsi a quello del tipo di applicazione del documento attivo.  Ad esempio, se un gestore di associazione contiene un foglio di calcolo di Excel, osserverete che i menu nella modifica del raccoglitore quando si seleziona la sezione del foglio di calcolo di Excel.  
+ When you select an active document of another application type, the Binder's interface changes to accommodate that of the active document's application type. For example, if a Binder contains an Excel spreadsheet, you will observe that the menus in the Binder change when you select the Excel spreadsheet section.  
   
- Esistono, naturalmente, altri possibili tipi di contenitori accanto ai gestori di associazione.  Esplora file utilizza l'interfaccia tipica del doppio\- riquadro in cui il riquadro sinistro utilizza un controllo struttura ad albero per visualizzare un elenco gerarchico delle directory in un'unità o in una rete, mentre il riquadro di destra vengono visualizzati i file contenuti nella directory selezionata.  Un browser internet tipo di contenitore \(ad esempio Microsoft Internet Explorer\), anziché tramite un'interfaccia di doppio\- riquadro, in genere ha un singolo frame e fornisce la navigazione mediante collegamenti ipertestuali.  
+ There are, of course, other possible types of containers beside Binders. File Explorer uses the typical dual-pane interface in which the left pane uses a tree control to display a hierarchical list of directories in a drive or network, while the right pane displays the files contained in the currently selected directory. An Internet browser-type of container (such as Microsoft Internet Explorer), rather than using a dual-pane interface, usually has a single frame and provides navigation using hyperlinks.  
   
-## Vedere anche  
- [Contenimento dei documenti attivi](../mfc/active-document-containment.md)
+## <a name="see-also"></a>See Also  
+ [Active Document Containment](../mfc/active-document-containment.md)
+
+

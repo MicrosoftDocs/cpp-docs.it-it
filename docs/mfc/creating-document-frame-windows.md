@@ -1,48 +1,67 @@
 ---
-title: "Creazione di finestre cornice del documento | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "finestre cornice documento, creazione"
-  - "modelli di documento, e finestre cornice documento"
-  - "finestre cornice [C++], creazione"
-  - "MFC [C++], finestre cornice"
-  - "classe in fase di esecuzione, e creazione di finestre cornice di documento"
-  - "runtime, informazioni sulle classi"
-  - "finestre [C++], creazione"
+title: Creating Document Frame Windows | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- frame windows [MFC], creating
+- document templates [MFC], and document frame windows
+- windows [MFC], creating
+- runtime, class information
+- run-time class [MFC], and document frame window creation
+- document frame windows [MFC], creating
+- MFC, frame windows
 ms.assetid: 8671e239-b76f-4dea-afa8-7024e6e58ff5
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Creazione di finestre cornice del documento
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 29ebf0ad002170a6ab06f06d23abd20d1ed298e1
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-viene illustrato[Documenti\/creazione di visualizzazione](../mfc/document-view-creation.md) come oggetto di [CDocTemplate](../mfc/reference/cdoctemplate-class.md) orchestra creare la finestra cornice, il documento e la visualizzazione e connetterli tutti contemporaneamente.  Tre argomenti di [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) al costruttore di `CDocTemplate` specificano la finestra cornice, vengono registrati e visualizzazione di classi che il modello di documento viene creata in modo dinamico in risposta ai controlli dell'utente come nuovo comando nel menu File o il comando nuova finestra in una finestra MDI.  Il modello di documento archiviare queste informazioni per un utilizzo successivo quando viene creata una finestra cornice per una visualizzazione e un documento.  
+---
+# <a name="creating-document-frame-windows"></a>Creating Document Frame Windows
+[Document/View Creation](../mfc/document-view-creation.md) shows how the [CDocTemplate](../mfc/reference/cdoctemplate-class.md) object orchestrates creating the frame window, document, and view and connecting them all together. Three [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) arguments to the `CDocTemplate` constructor specify the frame window, document, and view classes that the document template creates dynamically in response to user commands such as the New command on the File menu or the New Window command on an MDI Window menu. The document template stores this information for later use when it creates a frame window for a view and document.  
   
- Affinché il meccanismo di [RUNTIME\_CLASS](../Topic/RUNTIME_CLASS.md) funzionino correttamente, le classi derivate della finestra cornice devono essere dichiarate con la macro di [DECLARE\_DYNCREATE](../Topic/DECLARE_DYNCREATE.md).  Ciò avviene perché il framework deve creare finestre le finestre cornice utilizzando il meccanismo dinamico della costruzione di classe `CObject`.  
+ For the [RUNTIME_CLASS](../mfc/reference/run-time-object-model-services.md#runtime_class) mechanism to work correctly, your derived frame-window classes must be declared with the [DECLARE_DYNCREATE](../mfc/reference/run-time-object-model-services.md#declare_dyncreate) macro. This is because the framework needs to create document frame windows using the dynamic construction mechanism of class `CObject`.  
   
- Quando l'utente sceglie un comando che crea un documento, il framework rivolge al modello di documento per creare l'oggetto documento, il punto di vista e la finestra cornice che visualizza la visualizzazione.  Quando si crea la finestra cornice di documento, il modello di documento crea un oggetto della classe appropriata \- classe derivata da [CFrameWnd](../mfc/reference/cframewnd-class.md) per un'applicazione SDI o da [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) di un'applicazione MDI.  Il framework chiama quindi la funzione membro di [LoadFrame](../Topic/CFrameWnd::LoadFrame.md) dell'oggetto finestra cornice per ottenere informazioni sulla creazione delle risorse e creare la finestra di windows.  Il framework associa un handle di finestra all'oggetto finestra cornice.  Viene quindi creata la visualizzazione come finestra figlio della finestra cornice di documento.  
+ When the user chooses a command that creates a document, the framework calls upon the document template to create the document object, its view, and the frame window that will display the view. When it creates the document frame window, the document template creates an object of the appropriate class — a class derived from [CFrameWnd](../mfc/reference/cframewnd-class.md) for an SDI application or from [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) for an MDI application. The framework then calls the frame-window object's [LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) member function to get creation information from resources and to create the Windows window. The framework attaches the window handle to the frame-window object. Then it creates the view as a child window of the document frame window.  
   
- Prestare attenzione nella scelta dell'[quando inizializzare](../mfc/when-to-initialize-cwnd-objects.md) il `CWnd`\- oggetto derivato.  
+ Use caution in deciding [when to initialize](../mfc/when-to-initialize-cwnd-objects.md) your `CWnd`-derived object.  
   
-## Scegliere l'argomento su cui visualizzare maggiori informazioni  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Derivando una classe da CObject \(il meccanismo dinamico di progettazione\)](../mfc/deriving-a-class-from-cobject.md)  
+-   [Deriving a Class from CObject (its dynamic creation mechanism)](../mfc/deriving-a-class-from-cobject.md)  
   
--   [Creazione documento\/visualizzazione \(modelli e creazione della finestra cornice\)](../mfc/document-view-creation.md)  
+-   [Document/View Creation (templates and frame window creation)](../mfc/document-view-creation.md)  
   
--   [Eliminazione permanente delle finestre](../mfc/destroying-frame-windows.md)  
+-   [Destroying frame windows](../mfc/destroying-frame-windows.md)  
   
-## Vedere anche  
- [Utilizzo di finestre cornice](../mfc/using-frame-windows.md)
+## <a name="see-also"></a>See Also  
+ [Using Frame Windows](../mfc/using-frame-windows.md)
+
+

@@ -1,49 +1,68 @@
 ---
-title: "Utilizzo di oggetti finestra | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "finestre figlio, utilizzo"
-  - "oggetti delle finestre, utilizzo"
+title: Working with Window Objects | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- child windows [MFC], working with
+- window objects [MFC], working with
 ms.assetid: f73aa254-90e3-46a9-8e9b-d78b7054a331
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Utilizzo di oggetti finestra
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2b5703795c56f9a5886220844a751397ad04adbb
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Utilizzo delle richieste di windows per tre tipi di attività:  
+---
+# <a name="working-with-window-objects"></a>Working with Window Objects
+Working with windows calls for two kinds of activity:  
   
--   I messaggi di windows management  
+-   Handling Windows messages  
   
--   Disegnare la finestra  
+-   Drawing in the window  
   
- Per gestire i messaggi di windows in qualsiasi finestra, inclusi finestre figlio, vedere [Vedere mapping di messaggi](../mfc/reference/mapping-messages-to-functions.md) associare i messaggi alla classe della finestra di C\+\+.  Scrivere i funzione membro per la gestione dei messaggi nella classe.  
+ To handle Windows messages in any window, including your own child windows, see [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md) to map the messages to your C++ window class. Then write message-handler member functions in your class.  
   
- La maggior parte di disegnare di un'applicazione del framework si trova nella visualizzazione, la cui funzione membro di [OnDraw](../Topic/CView::OnDraw.md) viene chiamata ogni volta che il contenuto della finestra devono essere disegnati.  Se la finestra è un elemento figlio della visualizzazione, è possibile delegare parte del disegno di visualizzare la finestra figlio con una chiamata di `OnDraw` delle funzioni membro della finestra.  
+ Most drawing in a framework application occurs in the view, whose [OnDraw](../mfc/reference/cview-class.md#ondraw) member function is called whenever the window's contents must be drawn. If your window is a child of the view, you might delegate some of the view's drawing to your child window by having `OnDraw` call one of your window's member functions.  
   
- In ogni caso, sarà necessario un contesto di dispositivo per disegnare.  È possibile utilizzare la penna predefinita, il pennello e altri oggetti grafici contenuti nel contesto di dispositivo associato alla finestra.  Oppure modificare questi oggetti per ottenere effetti di disegno necessarie.  Al contesto di dispositivo installato come si desidera, chiamare le funzioni membro di classe [CDC](../mfc/reference/cdc-class.md) \(classe di contesto di dispositivo\) per creare linee, forme e testo; per utilizzare colori; e di utilizzare un sistema di coordinate.  
+ In any case, you will need a device context for drawing. You can use the stock pen, brush, and other graphic objects contained in the device context associated with your window. Or you can modify these objects to get the drawing effects you need. With your device context set up as you like, call member functions of class [CDC](../mfc/reference/cdc-class.md) (device-context class) to draw lines, shapes, and text; to use colors; and to work with a coordinate system.  
   
-## Scegliere l'argomento su cui visualizzare maggiori informazioni  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Gestione dei messaggi e il mapping](../mfc/message-handling-and-mapping.md)  
+-   [Message handling and mapping](../mfc/message-handling-and-mapping.md)  
   
--   [Disegnare una visualizzazione](../mfc/drawing-in-a-view.md)  
+-   [Drawing in a view](../mfc/drawing-in-a-view.md)  
   
--   [Contesti di periferica](../mfc/device-contexts.md)  
+-   [Device contexts](../mfc/device-contexts.md)  
   
--   [Oggetti grafici](../mfc/graphic-objects.md)  
+-   [Graphic objects](../mfc/graphic-objects.md)  
   
-## Vedere anche  
- [Oggetti finestra](../mfc/window-objects.md)
+## <a name="see-also"></a>See Also  
+ [Window Objects](../mfc/window-objects.md)
+
+

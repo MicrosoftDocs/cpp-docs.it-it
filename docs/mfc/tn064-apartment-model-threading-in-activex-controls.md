@@ -1,113 +1,136 @@
 ---
-title: "TN064: threading di modello di apartment nei controlli ActiveX | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.controls.activex"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "threading di modello di apartment"
-  - "contenitori [C++], multithreading"
-  - "contenitore multithread"
-  - "OLE (controlli), supporto contenitore"
-  - "TN064"
+title: 'TN064: Apartment-Model Threading in ActiveX Controls | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.controls.activex
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE controls [MFC], container support
+- containers [MFC], multithreaded
+- TN064 [MFC]
+- multithread container [MFC]
+- apartment model threading [MFC]
 ms.assetid: b2ab4c88-6954-48e2-9a74-01d4a60df073
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# TN064: threading di modello di apartment nei controlli ActiveX
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a1c3fe1e70ffb0747bf519873cab0a784cc1c60b
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn064-apartment-model-threading-in-activex-controls"></a>TN064: Apartment-Model Threading in ActiveX Controls
 > [!NOTE]
->  La seguente nota tecnica non è stata aggiornata da quando è stata inclusa per la prima volta nella documentazione online.  Di conseguenza, alcune procedure e argomenti potrebbero essere non aggiornati o errati.  Per le informazioni più recenti, è consigliabile cercare l'argomento di interesse nell'indice della documentazione online.  
+>  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.  
   
- Questa nota tecnica viene illustrato come abilitare il threading è basata del modello in un controllo ActiveX.  Si noti che il threading del modello è basata è supportato solo in versioni 4,2 di Visual C\+\+ o in avanti.  
+ This technical note explains how to enable apartment-model threading in an ActiveX control. Note that apartment-model threading is only supported in Visual C++ versions 4.2 or later.  
   
-## Qual è la gestione è basata modello?  
- Il modello di apartment è un approccio a supportare gli oggetti incorporati, come controlli ActiveX, in un'applicazione contenitore multithreading.  Anche se l'applicazione può avere più thread, ogni istanza di un oggetto incorporato verrà assegnata a un apartment "," che verrà eseguito su un solo thread.  Ovvero tutte le chiamate in un'istanza di un controllo si verificano nello stesso thread.  
+## <a name="what-is-apartment-model-threading"></a>What Is Apartment-Model Threading  
+ The apartment model is an approach to supporting embedded objects, such as ActiveX controls, within a multithreaded container application. Although the application may have multiple threads, each instance of an embedded object will be assigned to one "apartment," which will execute on only one thread. In other words, all calls into an instance of a control will happen on the same thread.  
   
- Tuttavia, le istanze diverse dello stesso tipo di controllo è possibile assegnare agli apartment diversi.  Quindi, se più istanze di un controllo condividono i dati in comune, ad esempio dati statici o globale\), quindi accedere a tali dati condivisi devono essere protetti da un oggetto di sincronizzazione, ad esempio una sezione critica.  
+ However, different instances of the same type of control may be assigned to different apartments. So, if multiple instances of a control share any data in common (for example, static or global data), then access to this shared data will need to be protected by a synchronization object, such as a critical section.  
   
- Per informazioni dettagliate sul modello di threading apartment, vedere [Processi e thread](http://msdn.microsoft.com/library/windows/desktop/ms684841)*nel riferimento del programmatore OLE*.  
+ For complete details on the apartment threading model, please see [Processes and Threads](http://msdn.microsoft.com/library/windows/desktop/ms684841) in the *OLE Programmer's Reference*.  
   
-## Poiché supporta il threading del modello è basata?  
- I controlli che supportano il threading è basata del modello possono essere utilizzati nelle applicazioni multithreading contenitori che supportano inoltre il modello apartment.  Se non si abilita il threading del modello è basata, si limiterà il potenziale impostato contenitori in cui il controllo può essere utilizzato.  
+## <a name="why-support-apartment-model-threading"></a>Why Support Apartment-Model Threading  
+ Controls that support apartment-model threading can be used in multithreaded container applications that also support the apartment model. If you do not enable apartment-model threading, you will limit the potential set of containers in which your control could be used.  
   
- Abilitare il threading del modello è basata è semplice per la maggior parte dei controlli, in particolare se che presentano poche o nessun dati condivisi.  
+ Enabling apartment-model threading is easy for most controls, particularly if they have little or no shared data.  
   
-## Protezione dei dati condivisi  
- Se il controllo utilizza i dati condivisi, come una variabile membro statico, l'accesso a quello i dati devono essere protette con una sezione critica per impedire più di un thread di modificare i dati contemporaneamente.  Per installare una sezione critica a questo scopo, dichiarare una variabile membro statico della classe `CCriticalSection` nella classe del controllo.  Utilizzare le funzioni membro di **Sblocca** e di `Lock` di questo oggetto sezione critica nel quale accede al codice i dati condivisi.  
+## <a name="protecting-shared-data"></a>Protecting Shared Data  
+ If your control uses shared data, such as a static member variable, access to that data should be protected with a critical section to prevent more than one thread from modifying the data at the same time. To set up a critical section for this purpose, declare a static member variable of class `CCriticalSection` in your control's class. Use the `Lock` and **Unlock** member functions of this critical section object wherever your code accesses the shared data.  
   
- Si consideri, ad esempio, una classe del controllo che deve gestire una stringa che è condivisa da tutte le istanze.  Questa stringa può essere gestita in una variabile membro statico ed essere protetta da una sezione critica.  La dichiarazione della classe del controllo contiene quanto segue:  
+ Consider, for example, a control class that needs to maintain a string that is shared by all instances. This string can be maintained in a static member variable and protected by a critical section. The control's class declaration would contain the following:  
   
 ```  
 class CSampleCtrl : public COleControl  
 {  
-    ...  
+ ...  
     static CString _strShared;  
     static CCriticalSection _critSect;  
 };  
 ```  
   
- L'implementazione della classe include le definizioni di queste variabili:  
+ The implementation for the class would include definitions for these variables:  
   
 ```  
 int CString CSampleCtrl::_strShared;  
 CCriticalSection CSampleCtrl::_critSect;  
 ```  
   
- Per accedere al membro static di `_strShared` può quindi essere protetto dalla sezione critica:  
+ Access to the `_strShared` static member can then be protected by the critical section:  
   
 ```  
 void CSampleCtrl::SomeMethod()  
 {  
-    _critSect.Lock();  
-    if (_strShared.Empty())  
-        _strShared = "<text>";  
-    _critSect.Unlock();  
-    ...  
+    _critSect.Lock();
+if (_strShared.Empty())  
+    _strShared = "<text>";  
+    _critSect.Unlock();
+
+ ...  
 }  
 ```  
   
-## Registrare un controllo Apartment\-Modello\- presente  
- I controlli che supportano il threading del modello è basata forniscano questa funzionalità nel Registro di sistema, aggiungendo il valore denominato "ThreadingModel" con un valore dell'apartment" nella rispettiva voce del Registro di sistema ID della classe dell'*ID della classe*\\ chiave di**InprocServer32**.  Per impedire questa chiave automaticamente a essere registrato per il controllo, passare il flag di `afxRegApartmentThreading` nel sesto parametro a `AfxOleRegisterControlClass`:  
+## <a name="registering-an-apartment-model-aware-control"></a>Registering an Apartment-Model-Aware Control  
+ Controls that support apartment-model threading should indicate this capability in the registry, by adding the named value "ThreadingModel" with a value of "Apartment" in their class ID registry entry under the *class id*\\**InprocServer32** key. To cause this key to be automatically registered for your control, pass the `afxRegApartmentThreading` flag in the sixth parameter to `AfxOleRegisterControlClass`:  
   
 ```  
 BOOL CSampleCtrl::CSampleCtrlFactory::UpdateRegistry(BOOL bRegister)  
 {  
     if (bRegister)  
-        return AfxOleRegisterControlClass(  
-            AfxGetInstanceHandle(),  
-            m_clsid,  
-            m_lpszProgID,  
-            IDS_SAMPLE,  
-            IDB_SAMPLE,  
-            afxRegApartmentThreading,  
-            _dwSampleOleMisc,  
-            _tlid,  
-            _wVerMajor,  
-            _wVerMinor);  
-    else  
-        return AfxOleUnregisterClass(m_clsid, m_lpszProgID);  
+    return AfxOleRegisterControlClass(
+    AfxGetInstanceHandle(), 
+    m_clsid, 
+    m_lpszProgID, 
+    IDS_SAMPLE, 
+    IDB_SAMPLE, 
+    afxRegApartmentThreading, 
+    _dwSampleOleMisc, 
+    _tlid, 
+    _wVerMajor, 
+    _wVerMinor);
+
+ else  
+    return AfxOleUnregisterClass(m_clsid,
+    m_lpszProgID);
+
 }  
 ```  
   
- Se il progetto di controllo è stato generato da ControlWizard versioni in 4,1 di Visual C\+\+ o in avanti, questo flag sarà già presente nel codice.  Non sono presenti modifiche da registrare il modello di threading.  
+ If your control project was generated by ControlWizard in Visual C++ version 4.1 or later, this flag will already be present in your code. No changes are necessary to register the threading model.  
   
- Se il progetto è stato generato da una versione precedente di ControlWizard, il codice esistente avrà un valore boolean il sesto parametro.  Se il parametro esistente è impostato su TRUE, impostarlo su `afxRegInsertable | afxRegApartmentThreading`.  Se il parametro esistente è FALSE, impostarlo su `afxRegApartmentThreading`.  
+ If your project was generated by an earlier version of ControlWizard, your existing code will have a Boolean value as the sixth parameter. If the existing parameter is TRUE, change it to `afxRegInsertable | afxRegApartmentThreading`. If the existing parameter is FALSE, change it to `afxRegApartmentThreading`.  
   
- Se il controllo non segue le regole per la gestione di modello è basata, non è necessario passare `afxRegApartmentThreading` in questo parametro.  
+ If your control does not follow the rules for apartment-model threading, you must not pass `afxRegApartmentThreading` in this parameter.  
   
-## Vedere anche  
- [Note tecniche per numero](../mfc/technical-notes-by-number.md)   
- [Note tecniche per categoria](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

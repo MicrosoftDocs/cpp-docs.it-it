@@ -1,5 +1,5 @@
 ---
-title: Classe CCommonDialog | Documenti di Microsoft
+title: CCommonDialog Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,13 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- dialog boxes [C++], Windows common dialogs
-- common dialog boxes [C++], common dialog classes
-- common dialog classes [C++]
-- MFC dialog boxes, Windows common dialogs
-- Windows common dialogs [C++]
-- CCommonDialog class
-- dialog classes [C++], common
+- CCommonDialog [MFC], CCommonDialog
 ms.assetid: 1f68d65f-a0fd-4778-be22-ebbe51a95f95
 caps.latest.revision: 20
 author: mikeblome
@@ -41,32 +35,32 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 93d4cd4ca794095c225641bc67353b9a53080c3c
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e1175cd18e0c57a6ec65b1fbe655264ba86a7676
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ccommondialog-class"></a>Classe CCommonDialog
-Classe di base per le classi che incapsulano la funzionalità delle finestre di dialogo comuni di Windows.  
+# <a name="ccommondialog-class"></a>CCommonDialog Class
+The base class for classes that encapsulate functionality of the Windows common dialogs.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CCommonDialog : public CDialog  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Costruttori pubblici  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCommonDialog::CCommonDialog](#ccommondialog)|Costruisce un oggetto `CCommonDialog`.|  
+|[CCommonDialog::CCommonDialog](#ccommondialog)|Constructs a `CCommonDialog` object.|  
   
-## <a name="remarks"></a>Note  
- Le classi seguenti incapsulano la funzionalità di finestre di dialogo comuni di Windows:  
+## <a name="remarks"></a>Remarks  
+ The following classes encapsulate the functionality of the Windows common dialogs:  
   
 - [CFileDialog](../../mfc/reference/cfiledialog-class.md)  
   
@@ -80,11 +74,11 @@ class CCommonDialog : public CDialog
   
 - [CPrintDialogEx](../../mfc/reference/cprintdialogex-class.md)  
   
-- [CFindReplaceDialog.](../../mfc/reference/cfindreplacedialog-class.md)  
+- [CFindReplaceDialog](../../mfc/reference/cfindreplacedialog-class.md)  
   
 - [COleDialog](../../mfc/reference/coledialog-class.md)  
   
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -95,31 +89,31 @@ class CCommonDialog : public CDialog
   
  `CCommonDialog`  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** afxdlgs. h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdlgs.h  
   
-##  <a name="ccommondialog"></a>CCommonDialog::CCommonDialog  
- Costruisce un oggetto `CCommonDialog`.  
+##  <a name="ccommondialog"></a>  CCommonDialog::CCommonDialog  
+ Constructs a `CCommonDialog` object.  
   
 ```  
 explicit CCommonDialog(CWnd* pParentWnd);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pParentWnd`  
- Punta all'oggetto finestra padre o proprietaria (di tipo [CWnd](../../mfc/reference/cwnd-class.md)) a cui appartiene l'oggetto finestra di dialogo. In questo caso **NULL**, finestra padre dell'oggetto finestra di dialogo è impostata nella finestra principale dell'applicazione.  
+ Points to the parent or owner window object (of type [CWnd](../../mfc/reference/cwnd-class.md)) to which the dialog object belongs. If it is **NULL**, the dialog object's parent window is set to the main application window.  
   
-### <a name="remarks"></a>Note  
- Vedere [CDialog::CDialog](../../mfc/reference/cdialog-class.md#cdialog) per informazioni complete.  
+### <a name="remarks"></a>Remarks  
+ See [CDialog::CDialog](../../mfc/reference/cdialog-class.md#cdialog) for complete information.  
   
-## <a name="see-also"></a>Vedere anche  
- [CDialog (classe)](../../mfc/reference/cdialog-class.md)   
- [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
- [Classe CFileDialog](../../mfc/reference/cfiledialog-class.md)   
- [Classe CFontDialog](../../mfc/reference/cfontdialog-class.md)   
- [Classe CColorDialog](../../mfc/reference/ccolordialog-class.md)   
- [Classe CPageSetupDialog](../../mfc/reference/cpagesetupdialog-class.md)   
- [Classe CPrintDialog](../../mfc/reference/cprintdialog-class.md)   
- [Classe CFindReplaceDialog.](../../mfc/reference/cfindreplacedialog-class.md)   
- [Classe COleDialog](../../mfc/reference/coledialog-class.md)
+## <a name="see-also"></a>See Also  
+ [CDialog Class](../../mfc/reference/cdialog-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CFileDialog Class](../../mfc/reference/cfiledialog-class.md)   
+ [CFontDialog Class](../../mfc/reference/cfontdialog-class.md)   
+ [CColorDialog Class](../../mfc/reference/ccolordialog-class.md)   
+ [CPageSetupDialog Class](../../mfc/reference/cpagesetupdialog-class.md)   
+ [CPrintDialog Class](../../mfc/reference/cprintdialog-class.md)   
+ [CFindReplaceDialog Class](../../mfc/reference/cfindreplacedialog-class.md)   
+ [COleDialog Class](../../mfc/reference/coledialog-class.md)
 

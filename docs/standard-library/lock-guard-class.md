@@ -1,5 +1,5 @@
 ---
-title: Classe lock_guard | Microsoft Docs
+title: lock_guard Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,48 +33,48 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 047c7ab9db009bceafe47bb0ae53b876adad81b5
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 56bff026e272b14dd6b7a08d23f04f7997e2a570
 ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="lockguard-class"></a>Classe lock_guard
-Rappresenta un modello di cui è possibile creare un’istanza per la creazione di un oggetto il cui distruttore sblocca un tipo `mutex`.  
+# <a name="lockguard-class"></a>lock_guard Class
+Represents a template that can be instantiated to create an object whose destructor unlocks a `mutex`.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Mutex>
 class lock_guard;
 ```  
   
-## <a name="remarks"></a>Note  
- L'argomento del modello `Mutex` deve denominare un *tipo mutex*.  
+## <a name="remarks"></a>Remarks  
+ The template argument `Mutex` must name a *mutex type*.  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="public-typedefs"></a>Typedef pubblici  
+### <a name="public-typedefs"></a>Public Typedefs  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|`lock_guard::mutex_type`|Sinonimo dell'argomento di modello `Mutex`.|  
+|`lock_guard::mutex_type`|Synonym for the template argument `Mutex`.|  
   
-### <a name="public-constructors"></a>Costruttori pubblici  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[lock_guard](#lock_guard)|Costruisce un oggetto `lock_guard`.|  
-|[Distruttore lock_guard::~lock_guard](#dtorlock_guard_destructor)|Sblocca il `mutex` passato al costruttore.|  
+|[lock_guard](#lock_guard)|Constructs a `lock_guard` object.|  
+|[lock_guard::~lock_guard Destructor](#dtorlock_guard_destructor)|Unlocks the `mutex` that was passed to the constructor.|  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<mutex >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<mutex>  
   
- **Spazio dei nomi:** std  
+ **Namespace:** std  
   
-##  <a name="lock_guard"></a>  Costruttore lock_guard::lock_guard  
- Costruisce un oggetto `lock_guard`.  
+##  <a name="lock_guard"></a>  lock_guard::lock_guard Constructor  
+ Constructs a `lock_guard` object.  
   
 ```cpp  
 explicit lock_guard(mutex_type& Mtx);
@@ -82,27 +82,27 @@ explicit lock_guard(mutex_type& Mtx);
 lock_guard(mutex_type& Mtx, adopt_lock_t);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `Mtx`  
- Oggetto di *tipo mutex*.  
+ A *mutex type* object.  
   
-### <a name="remarks"></a>Note  
- Il primo costruttore crea un oggetto di tipo `lock_guard` e blocca `Mtx`. Se `Mtx` non è un mutex ricorsivo, deve essere sboccato al momento delle chiamata al costruttore.  
+### <a name="remarks"></a>Remarks  
+ The first constructor constructs an object of type `lock_guard` and locks `Mtx`. If `Mtx` is not a recursive mutex, it must be unlocked when this constructor is called.  
   
- Il secondo costruttore non blocca `Mtx`. Quando viene chiamato il costruttore, `Mtx` deve essere bloccato. Il costruttore non genera eccezioni.  
+ The second constructor does not lock `Mtx`. `Mtx` must be locked when this constructor is called. The constructor throws no exceptions.  
   
-##  <a name="dtorlock_guard_destructor"></a>  Distruttore lock_guard::~lock_guard  
- Sblocca il `mutex` passato al costruttore.  
+##  <a name="dtorlock_guard_destructor"></a>  lock_guard::~lock_guard Destructor  
+ Unlocks the `mutex` that was passed to the constructor.  
   
 ```
 ~lock_guard() noexcept;
 ```  
   
-### <a name="remarks"></a>Note  
- Se al momento dell'esecuzione del distruttore il `mutex` non esiste, il comportamento è indefinito.  
+### <a name="remarks"></a>Remarks  
+ If the `mutex` does not exist when the destructor runs, the behavior is undefined.  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
  [\<mutex>](../standard-library/mutex.md)
 
 

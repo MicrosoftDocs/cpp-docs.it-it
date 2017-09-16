@@ -1,5 +1,5 @@
 ---
-title: Classe unary_negate | Microsoft Docs
+title: unary_negate Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- unary_negate
 - xfunctional/std::unary_negate
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 314d93badc71760c3b71492991dbe16f11df7686
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: aec04f9e8cd63ed5e5a201bd48d02f5f1500ad6d
 ms.contentlocale: it-it
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="unarynegate-class"></a>Classe unary_negate
-Classe modello che fornisce una funzione membro che nega il valore restituito di una funzione unaria specificata.  
+# <a name="unarynegate-class"></a>unary_negate Class
+A template class providing a member function that negates the return value of a specified unary function.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Predicate>
@@ -57,22 +56,22 @@ public:
 };
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  `Func`  
- La funzione unaria da negare.  
+ The unary function to be negated.  
   
  `left`  
- Operando della funzione unaria da negare.  
+ The operand of the unary function to be negated.  
   
-## <a name="return-value"></a>Valore restituito  
- Negazione della funzione unaria.  
+## <a name="return-value"></a>Return Value  
+ The negation of the unary function.  
   
-## <a name="remarks"></a>Note  
- La classe modello archivia una copia di un oggetto funzione unaria _ *Func.* Definisce la relativa funzione membro `operator()` che restituisce **!**\_ *Func(left).*  
+## <a name="remarks"></a>Remarks  
+ The template class stores a copy of a unary function object _ *Func.* It defines its member function `operator()` as returning **!**\_ *Func(left).*  
   
- Il costruttore di `unary_negate` viene usato raramente in modo diretto. La funzione di supporto [not1](../standard-library/functional-functions.md#not1) costituisce un modo più semplice per dichiarare e usare il predicato adattatore **binary_negator**.  
+ The constructor of `unary_negate` is rarely used directly. The helper function [not1](../standard-library/functional-functions.md#not1) provides an easier way to declare and use the **unary_negator** adaptor predicate.  
   
-## <a name="example"></a>Esempio  
+## <a name="example"></a>Example  
   
 ```cpp  
 // functional_unary_negate.cpp  
@@ -124,14 +123,14 @@ The number of elements in v1 not greater than 10 is: 3.
 */  
 ```  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<functional>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<functional>  
   
- **Spazio dei nomi:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Vedere anche  
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)  (Sicurezza dei thread nella libreria standard C++)  
- [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

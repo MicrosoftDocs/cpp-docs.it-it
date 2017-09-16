@@ -1,57 +1,76 @@
 ---
-title: "TN070: nomi delle classi di finestre MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.classes"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "TN070"
-  - "nomi delle classi di finestra"
+title: 'TN070: MFC Window Class Names | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.classes
+dev_langs:
+- C++
+helpviewer_keywords:
+- window class names [MFC]
+- TN070 [MFC]
 ms.assetid: 90617912-dd58-4a7c-9082-ced71736d7cd
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# TN070: nomi delle classi di finestre MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c9d4b8de69ffca813a03f34fd56cbde3955ddf5b
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn070-mfc-window-class-names"></a>TN070: MFC Window Class Names
 > [!NOTE]
->  La seguente nota tecnica non è stata aggiornata da quando è stata inclusa per la prima volta nella documentazione online.  Di conseguenza, alcune procedure e argomenti potrebbero essere non aggiornati o errati.  Per le informazioni più recenti, è consigliabile cercare l'argomento di interesse nell'indice della documentazione online.  
+>  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.  
   
- Le finestre di MFC utilizzano un nome di classe creati in modo dinamico che riflette le funzionalità della finestra.  MFC genera dinamicamente i nomi delle classi per le finestre, le visualizzazioni e le finestre popup prodotte dall'applicazione.  Le finestre di dialogo e i comandi prodotti da un'applicazione MFC hanno il nome di fornito per la classe di finestra in questione.  
+ MFC windows use a dynamically created class name that reflects the features of the window. MFC generates class names dynamically for frame windows, views, and popup windows produced by the application. Dialog boxes and controls produced by an MFC application have the Windows-supplied name for the class of window in question.  
   
- È possibile sostituire il nome della classe dinamica fornita registrando una propria classe della finestra e utilizzandola nell'override di [PreCreateWindow](../Topic/CWnd::PreCreateWindow.md).  I nomi delle classi MFC forniti corrispondenti hanno uno dei due formati seguenti:  
+ You can replace the dynamically provided class name by registering your own window class and using it in an override of [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow). Their MFC-supplied class names fit one of the two following forms:  
   
 ```  
 Afx:%x:%x  
 Afx:%x:%x:%x:%x:%x  
 ```  
   
- Le cifre esadecimali che sostituiscono i caratteri di `%x` vengono compilate dai dati dalla struttura di [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576).  MFC utilizza questa tecnica che consente di condividere più classi C\+\+ che richiedono le strutture identiche di **WNDCLASS** la stessa classe della finestra registrata.  A differenza della maggior parte delle applicazioni semplici Win32, le applicazioni MFC hanno un solo **WNDPROC**, pertanto è possibile condividere facilmente le strutture di **WNDCLASS** per risparmiare tempo e memoria.  I valori sostituibili per i caratteri di `%x` indicati in precedenza sono le seguenti:  
+ The hex digits that replace the `%x` characters are filled in from data from the [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) structure. MFC uses this technique so that multiple C++ classes requiring identical **WNDCLASS** structures can share the same registered window class. Unlike most simple Win32 applications, MFC applications have only one **WNDPROC**, so you can easily share **WNDCLASS** structures to save time and memory. The replaceable values for the `%x` characters shown above are as follows:  
   
--   **WNDCLASS.hInstance**  
+- **WNDCLASS.hInstance**  
   
--   **WNDCLASS.style**  
+- **WNDCLASS.style**  
   
--   **WNDCLASS.hCursor**  
+- **WNDCLASS.hCursor**  
   
--   **WNDCLASS.hbrBackground**  
+- **WNDCLASS.hbrBackground**  
   
--   **WNDCLASS.hIcon**  
+- **WNDCLASS.hIcon**  
   
- Il primo form \(`Afx:%x:%x`\) viene utilizzato quando **hCursor**, **hbrBackground** e **hIcon** sono qualsiasi **NULL**.  
+ The first form (`Afx:%x:%x`) is used when **hCursor**, **hbrBackground**, and **hIcon** are all **NULL**.  
   
-## Vedere anche  
- [Note tecniche per numero](../mfc/technical-notes-by-number.md)   
- [Note tecniche per categoria](../mfc/technical-notes-by-category.md)   
- [TN020: convenzioni di numerazione e denominazione ID](../mfc/tn020-id-naming-and-numbering-conventions.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)   
+ [TN020: ID Naming and Numbering Conventions](../mfc/tn020-id-naming-and-numbering-conventions.md)
+
+

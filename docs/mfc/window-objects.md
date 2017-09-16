@@ -1,68 +1,87 @@
 ---
-title: "Oggetti finestra | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "finestre cornice [C++], oggetti delle finestre [C++]"
-  - "HWND"
-  - "HWND, oggetti delle finestre"
-  - "messaggi [C++], Windows"
-  - "MFC [C++], finestre"
-  - "oggetti [C++], finestra"
-  - "Visual C++, oggetti delle finestre"
-  - "messaggi finestra [C++]"
-  - "oggetti delle finestre [C++]"
-  - "finestre [C++], oggetti delle finestre [C++]"
-  - "finestra Windows [C++]"
+title: Window Objects | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- objects [MFC], window
+- Windows window [MFC]
+- MFC, windows
+- frame windows [MFC], C++ window objects
+- window objects [MFC]
+- windows [MFC], C++ window objects
+- window messages [MFC]
+- HWND
+- messages [MFC], Windows
+- Visual C++, window objects [MFC]
+- HWND, window objects [MFC]
 ms.assetid: 28b33ce2-af05-4617-9d03-1cb9a02be687
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Oggetti finestra
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f8cfcd860a2bd271a213dc14aa1ad01aa59375f4
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-MFC fornisce la classe [CWnd](../mfc/reference/cwnd-class.md) per fornire l'handle `HWND` di una finestra.  L'oggetto di `CWnd` è oggetto finestra di C\+\+, distinto da `HWND` che rappresenta una finestra di Windows, ma la prima finestra contiene la seconda.  Utilizzare `CWnd` per derivare le proprie classi di finestre figlie, o utilizzare una delle molte classi MFC derivate da `CWnd`.  La classe `CWnd` è la classe base per tutte le finestre, incluse le finestre cornice, le finestre di dialogo, le finestre figlio, i controlli e le barre di controllo come barre degli strumenti.  Una buona comprensione della [relazione tra un oggetto finestra di C\+\+ e un HWND](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md) è fondamentale per programmare in modo efficace con MFC.  
+---
+# <a name="window-objects"></a>Window Objects
+MFC supplies class [CWnd](../mfc/reference/cwnd-class.md) to encapsulate the `HWND` handle of a window. The `CWnd` object is a C++ window object, distinct from the `HWND` that represents a Windows window but containing it. Use `CWnd` to derive your own child window classes, or use one of the many MFC classes derived from `CWnd`. Class `CWnd` is the base class for all windows, including frame windows, dialog boxes, child windows, controls, and control bars such as toolbars. A good understanding of [the relationship between a C++ window object and an HWND](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md) is crucial for effective programming with MFC.  
   
- MFC fornisce alcune funzionalità predefinite e degli strumenti di gestione predefiniti per le finestre, ma è possibile derivare la propria classe da `CWnd` e utilizzare le relative funzioni membro per personalizzare la funzionalità fornita.  È possibile creare finestre figlio costruendo un oggetto `CWnd` e chiamando la funzione membro [Create](../Topic/CWnd::Create.md), dopodiché si possono personalizzare le finestre figlio mediante le funzioni membro di `CWnd`.  È possibile importare gli oggetti derivati da [CView](../mfc/reference/cview-class.md), ad esempio le visualizzazioni form o le visualizzazioni ad albero, in una finestra cornice.  Ed è possibile supportare visualizzazioni multiple dei documenti tramite dei riquadri di divisione, forniti dalla classe [CSplitterWnd](../mfc/reference/csplitterwnd-class.md).  
+ MFC provides some default functionality and management of windows, but you can derive your own class from `CWnd` and use its member functions to customize the provided functionality. You can create child windows by constructing a `CWnd` object and calling its [Create](../mfc/reference/cwnd-class.md#create) member function, then customize the child windows using `CWnd` member functions. You can embed objects derived from [CView](../mfc/reference/cview-class.md), such as form views or tree views, in a frame window. And you can support multiple views of your documents via splitter panes, supplied by class [CSplitterWnd](../mfc/reference/csplitterwnd-class.md).  
   
- Ogni oggetto derivato dalla classe `CWnd` contiene una mappa di messaggi, tramite la quale è possibile eseguire il mapping dei messaggi o gli ID di comando di Windows ai propri gestori.  
+ Each object derived from class `CWnd` contains a message map, through which you can map Windows messages or command IDs to your own handlers.  
   
- La letteratura generale sulla programmazione per Windows è una buona risorsa per imparare a utilizzare le funzioni membro di `CWnd`, che incapsulano le API di `HWND`.  
+ The general literature on programming for Windows is a good resource for learning how to use the `CWnd` member functions, which encapsulate the `HWND` APIs.  
   
-## Funzioni per l'esecuzione in un CWnd  
- `CWnd` e le relative [classi di finestre derivate](../mfc/derived-window-classes.md) forniscono un costruttore, un distruttore e le funzioni membro per inizializzare l'oggetto, creare le strutture sottostanti di Windows e accedere alla `HWND` incapsulata.  `CWnd` fornisce inoltre funzioni membro che incapsulano le API Windows per inviare messaggi, accedere alla finestra di stato, convertire le coordinate, aggiornare, scorrere, accedere agli Appunti e molte altre attività.  La maggior parte delle API di Windows per la gestione delle finestre che accettano un argomento `HWND` vengono incapsulate come funzioni membro di `CWnd`.  I nomi di funzioni e dei relativi parametri vengono mantenuti nella funzione membro di `CWnd`.  Per informazioni dettagliate sulle API di Windows incapsulate da `CWnd`, vedere la classe [CWnd](../mfc/reference/cwnd-class.md).  
+## <a name="functions-for-operating-on-a-cwnd"></a>Functions for Operating On a CWnd  
+ `CWnd` and its [derived window classes](../mfc/derived-window-classes.md) provide constructors, destructors, and member functions to initialize the object, create the underlying Windows structures, and access the encapsulated `HWND`. `CWnd` also provides member functions that encapsulate Windows APIs for sending messages, accessing the window's state, converting coordinates, updating, scrolling, accessing the Clipboard, and many other tasks. Most Windows window-management APIs that take an `HWND` argument are encapsulated as member functions of `CWnd`. The names of the functions and their parameters are preserved in the `CWnd` member function. For details about the Windows APIs encapsulated by `CWnd`, see class [CWnd](../mfc/reference/cwnd-class.md).  
   
-## CWnd e messaggi di Windows  
- Uno degli scopi principali di `CWnd` è fornire un'interfaccia per la gestione dei messaggi di Windows, ad esempio `WM_PAINT` o `WM_MOUSEMOVE`.  Molte delle funzioni membro di `CWnd` sono gestori per messaggi standard \- quelli che cominciano con l'identificatore **afx\_msg** e il prefisso "On", come `OnPaint` e **OnMouseMove**.  [Gestione e mappatura dei messaggi.](../mfc/message-handling-and-mapping.md) illustra in dettaglio i messaggi e la relativa gestione.  Le informazioni dell'argomento sono ugualmente applicabili alle finestre di framework e a quelle create dall'utente per scopi speciali.  
+## <a name="cwnd-and-windows-messages"></a>CWnd and Windows Messages  
+ One of the primary purposes of `CWnd` is to provide an interface for handling Windows messages, such as `WM_PAINT` or `WM_MOUSEMOVE`. Many of the member functions of `CWnd` are handlers for standard messages — those beginning with the identifier **afx_msg** and the prefix "On," such as `OnPaint` and **OnMouseMove**. [Message Handling and Mapping](../mfc/message-handling-and-mapping.md) covers messages and message handling in detail. The information there applies equally to the framework's windows and those that you create yourself for special purposes.  
   
-### Scegliere l'argomento su cui visualizzare maggiori informazioni  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [La relazione tra un oggetto finestra C\+\+ e una HWND](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md)  
+-   [The relationship between a C++ window object and an HWND](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md)  
   
--   [Classi di finestre derivate](../mfc/derived-window-classes.md)  
+-   [Derived window classes](../mfc/derived-window-classes.md)  
   
--   [Creazione di finestre](../mfc/creating-windows.md)  
+-   [Creating windows](../mfc/creating-windows.md)  
   
--   [Distruzione di oggetti finestra](../mfc/destroying-window-objects.md)  
+-   [Destroying window objects](../mfc/destroying-window-objects.md)  
   
--   [Disconnessione di CWnd da HWND](../mfc/detaching-a-cwnd-from-its-hwnd.md)  
+-   [Detaching a CWnd from Its HWND](../mfc/detaching-a-cwnd-from-its-hwnd.md)  
   
--   [Utilizzo di oggetti finestra](../mfc/working-with-window-objects.md)  
+-   [Working with window objects](../mfc/working-with-window-objects.md)  
   
--   [Contesti di dispositivo](../mfc/device-contexts.md): oggetti che garantiscono l'indipendenza al dispositivo di disegno di Windows.  
+-   [Device contexts](../mfc/device-contexts.md): objects that make Windows drawing device independent  
   
--   [Oggetti grafici](../mfc/graphic-objects.md): penne, pennelli, tipi di carattere, bitmap, tavolozze, aree  
+-   [Graphic objects](../mfc/graphic-objects.md): pens, brushes, fonts, bitmaps, palettes, regions  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [Windows](../mfc/windows.md)
+
+

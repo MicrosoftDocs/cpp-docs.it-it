@@ -1,64 +1,83 @@
 ---
-title: "Eccezioni: rilevamento ed eliminazione di eccezioni | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AND_CATCH (macro)"
-  - "blocchi catch, intercettazione ed eliminazione di eccezioni"
-  - "gestione eccezioni, intercettazione ed eliminazione di eccezioni"
-  - "eccezioni, eliminazione"
-  - "esecuzione, restituzione dall'interno di un blocco catch"
-  - "gestione eccezioni try-catch, intercettazione ed eliminazione di eccezioni"
+title: 'Exceptions: Catching and Deleting Exceptions | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- exceptions [MFC], deleting
+- AND_CATCH macro [MFC]
+- try-catch exception handling [MFC], catching and deleting exceptions
+- exception handling [MFC], catching and deleting exceptions
+- catch blocks [MFC], catching and deleting exceptions
+- execution [MFC], returns from within catch block
 ms.assetid: 7c233ff0-89de-4de0-a68a-9e9cdb164311
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Eccezioni: rilevamento ed eliminazione di eccezioni
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 24544b69849dca2425cdd0df6e7919c89f0a1e72
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Le seguenti istruzioni ed esempi viene mostrato come intercettare ed eliminare le eccezioni.  Per ulteriori informazioni su **Prova**, **Catch** e le parole chiave di `throw`, vedere [Gestione delle eccezioni C\+\+](../cpp/cpp-exception-handling.md).  
+---
+# <a name="exceptions-catching-and-deleting-exceptions"></a>Exceptions: Catching and Deleting Exceptions
+The following instructions and examples show you how to catch and delete exceptions. For more information on the **try**, **catch**, and `throw` keywords, see [C++ Exception Handling](../cpp/cpp-exception-handling.md).  
   
- I gestori di eccezioni devono eliminare gli oggetti exception che gestiscono, poiché l'omissione di eliminare l'eccezione causa una perdita di memoria ogni volta che tale codice intercetta un'eccezione.  
+ Your exception handlers must delete exception objects they handle, because failure to delete the exception causes a memory leak whenever that code catches an exception.  
   
- Il blocco di **Catch** deve eliminare un'eccezione quando:  
+ Your **catch** block must delete an exception when:  
   
--   Il blocco di **Catch** genera una nuova eccezione.  
+-   The **catch** block throws a new exception.  
   
-     Naturalmente, non è necessario eliminare eccezione se si genera nuovamente la stessa eccezione:  
+     Of course, you must not delete the exception if you throw the same exception again:  
   
-     [!code-cpp[NVC_MFCExceptions#3](../mfc/codesnippet/CPP/exceptions-catching-and-deleting-exceptions_1.cpp)]  
+     [!code-cpp[NVC_MFCExceptions#3](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_1.cpp)]  
   
--   Restituzione di esecuzione dall'interno del blocco di **Catch**.  
+-   Execution returns from within the **catch** block.  
   
 > [!NOTE]
->  Nell'eliminare `CException`, utilizzare la funzione membro di **Elimina** per eliminare l'eccezione.  Non utilizzare la parola chiave di **eliminazione**, poiché può non riuscire se l'eccezione non si trova sull'heap.  
+>  When deleting a `CException`, use the **Delete** member function to delete the exception. Do not use the **delete** keyword, because it can fail if the exception is not on the heap.  
   
-#### Per individuare ed eliminare le eccezioni  
+#### <a name="to-catch-and-delete-exceptions"></a>To catch and delete exceptions  
   
-1.  Utilizzare la parola chiave di **Prova** per installare un blocco di **Prova**.  Eseguire le istruzioni del programma che potrebbero generare un'eccezione all'interno di un blocco di **Prova**.  
+1.  Use the **try** keyword to set up a **try** block. Execute any program statements that might throw an exception within a **try** block.  
   
-     Utilizzare la parola chiave di **Catch** per installare un blocco di **Catch**.  Codice di gestione delle eccezioni del posto di un blocco di **Catch**.  Il codice nel blocco di **Catch** viene eseguito solo se il codice all'interno del blocco di **Prova** genera un'eccezione di tipo specificato nell'istruzione di **Catch**.  
+     Use the **catch** keyword to set up a **catch** block. Place exception-handling code in a **catch** block. The code in the **catch** block is executed only if the code within the **try** block throws an exception of the type specified in the **catch** statement.  
   
-     Illustrato lo scheletro come **Prova** e i blocchi di **Catch** in genere vengono disposti:  
+     The following skeleton shows how **try** and **catch** blocks are normally arranged:  
   
-     [!code-cpp[NVC_MFCExceptions#4](../mfc/codesnippet/CPP/exceptions-catching-and-deleting-exceptions_2.cpp)]  
+     [!code-cpp[NVC_MFCExceptions#4](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_2.cpp)]  
   
-     Quando viene generata un'eccezione, il controllo passa al primo blocco di **Catch** di cui la dichiarazione dell'eccezione corrisponde al tipo dell'eccezione.  È possibile gestire in modo selettivo i diversi tipi di eccezioni con i blocchi sequenziali di **Catch** elencato di seguito:  
+     When an exception is thrown, control passes to the first **catch** block whose exception-declaration matches the type of the exception. You can selectively handle different types of exceptions with sequential **catch** blocks as listed below:  
   
-     [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/CPP/exceptions-catching-and-deleting-exceptions_3.cpp)]  
+     [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]  
   
- Per ulteriori informazioni, vedere [Eccezioni: Conversione da macro di eccezione MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md).  
+ For more information, see [Exceptions: Converting from MFC Exception Macros](../mfc/exceptions-converting-from-mfc-exception-macros.md).  
   
-## Vedere anche  
- [Gestione delle eccezioni](../mfc/exception-handling-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Exception Handling](../mfc/exception-handling-in-mfc.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: Classe CParabolicTransitionFromAcceleration | Documenti di Microsoft
+title: CParabolicTransitionFromAcceleration Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,7 +19,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CParabolicTransitionFromAcceleration class
+- CParabolicTransitionFromAcceleration [MFC], CParabolicTransitionFromAcceleration
+- CParabolicTransitionFromAcceleration [MFC], Create
+- CParabolicTransitionFromAcceleration [MFC], m_dblAcceleration
+- CParabolicTransitionFromAcceleration [MFC], m_dblFinalValue
+- CParabolicTransitionFromAcceleration [MFC], m_dblFinalVelocity
 ms.assetid: 1e59b86f-358b-4da0-a4fd-8eaf5e85e00f
 caps.latest.revision: 18
 author: mikeblome
@@ -39,59 +43,59 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: f0d3089a01cd244851be3d4bdf0453101a9c8274
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a0426de47f08ea61bba206788a9f95ff6879ccc9
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cparabolictransitionfromacceleration-class"></a>Classe CParabolicTransitionFromAcceleration
-Incapsula una transizione di accelerazione parabolica.  
+# <a name="cparabolictransitionfromacceleration-class"></a>CParabolicTransitionFromAcceleration Class
+Encapsulates a parabolic-acceleration transition.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CParabolicTransitionFromAcceleration : public CBaseTransition;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Costruttori pubblici  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CParabolicTransitionFromAcceleration::CParabolicTransitionFromAcceleration](#cparabolictransitionfromacceleration)|Costruisce una transizione di accelerazione parabolica e la inizializza con i parametri specificati.|  
+|[CParabolicTransitionFromAcceleration::CParabolicTransitionFromAcceleration](#cparabolictransitionfromacceleration)|Constructs a parabolic-acceleration transition and initializes it with specified parameters.|  
   
-### <a name="public-methods"></a>Metodi pubblici  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CParabolicTransitionFromAcceleration::Create](#create)|Chiama la libreria di transizione per creare oggetti COM di transizione incapsulato. (Esegue l'override di [CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create).)|  
+|[CParabolicTransitionFromAcceleration::Create](#create)|Calls the transition library to create encapsulated transition COM object. (Overrides [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
-### <a name="public-data-members"></a>Membri dati pubblici  
+### <a name="public-data-members"></a>Public Data Members  
   
-|Nome|Descrizione|  
+|Name|Description|  
 |----------|-----------------|  
-|[CParabolicTransitionFromAcceleration::m_dblAcceleration](#m_dblacceleration)|Accelerazione della variabile di animazione durante la transizione.|  
-|[CParabolicTransitionFromAcceleration::m_dblFinalValue](#m_dblfinalvalue)|Il valore della variabile di animazione alla fine della transizione.|  
-|[CParabolicTransitionFromAcceleration::m_dblFinalVelocity](#m_dblfinalvelocity)|La velocità della variabile di animazione alla fine della transizione.|  
+|[CParabolicTransitionFromAcceleration::m_dblAcceleration](#m_dblacceleration)|The acceleration of the animation variable during the transition.|  
+|[CParabolicTransitionFromAcceleration::m_dblFinalValue](#m_dblfinalvalue)|The value of the animation variable at the end of the transition.|  
+|[CParabolicTransitionFromAcceleration::m_dblFinalVelocity](#m_dblfinalvelocity)|The velocity of the animation variable at the end of the transition.|  
   
-## <a name="remarks"></a>Note  
- Durante una transizione di accelerazione parabolica, il valore della variabile di animazione viene modificato dal valore iniziale per il valore finale termina con una velocità specificata. È possibile controllare la rapidità con cui la variabile raggiunge il valore finale specificando la frequenza dell'accelerazione. Poiché tutte le transizioni vengono cancellate automaticamente, si consiglia di assegnarle utilizzando l'operatore new. L'oggetto COM IUIAnimationTransition incapsulato viene creato da CAnimationController:: AnimateGroup, fino a quando è NULL. Modifica di variabili membro dopo la creazione dell'oggetto COM non ha alcun effetto.  
+## <a name="remarks"></a>Remarks  
+ During a parabolic-acceleration transition, the value of the animation variable changes from the initial value to the final value ending at a specified velocity. You can control how quickly the variable reaches the final value by specifying the rate of acceleration. Because all transitions are cleared automatically, it's recommended to allocated them using operator new. The encapsulated IUIAnimationTransition COM object is created by CAnimationController::AnimateGroup, until then it's NULL. Changing member variables after creation of this COM object has no effect.  
   
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CBaseTransition](../../mfc/reference/cbasetransition-class.md)  
   
  [CParabolicTransitionFromAcceleration](../../mfc/reference/cparabolictransitionfromacceleration-class.md)  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** afxanimationcontroller.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxanimationcontroller.h  
   
-##  <a name="cparabolictransitionfromacceleration"></a>CParabolicTransitionFromAcceleration::CParabolicTransitionFromAcceleration  
- Costruisce una transizione di accelerazione parabolica e la inizializza con i parametri specificati.  
+##  <a name="cparabolictransitionfromacceleration"></a>  CParabolicTransitionFromAcceleration::CParabolicTransitionFromAcceleration  
+ Constructs a parabolic-acceleration transition and initializes it with specified parameters.  
   
 ```  
 CParabolicTransitionFromAcceleration(
@@ -100,18 +104,18 @@ CParabolicTransitionFromAcceleration(
     DOUBLE dblAcceleration);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `dblFinalValue`  
- Il valore della variabile di animazione alla fine della transizione.  
+ The value of the animation variable at the end of the transition.  
   
  `dblFinalVelocity`  
- La velocità della variabile di animazione alla fine della transizione.  
+ The velocity of the animation variable at the end of the transition.  
   
  `dblAcceleration`  
- Accelerazione della variabile di animazione durante la transizione.  
+ The acceleration of the animation variable during the transition.  
   
-##  <a name="create"></a>CParabolicTransitionFromAcceleration::Create  
- Chiama la libreria di transizione per creare oggetti COM di transizione incapsulato.  
+##  <a name="create"></a>  CParabolicTransitionFromAcceleration::Create  
+ Calls the transition library to create encapsulated transition COM object.  
   
 ```  
 virtual BOOL Create(
@@ -119,34 +123,34 @@ virtual BOOL Create(
     IUIAnimationTransitionFactory* /* not used */);
 ```  
   
-### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parameters  
  `pLibrary`  
- Puntatore alla libreria di transizione è responsabile della creazione di transizioni standard.  
+ A pointer to transition library, which is responsible for creation of standard transitions.  
   
-### <a name="return-value"></a>Valore restituito  
- TRUE se transizione viene creata correttamente. in caso contrario FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE if transition is created successfully; otherwise FALSE.  
   
-##  <a name="m_dblacceleration"></a>CParabolicTransitionFromAcceleration::m_dblAcceleration  
- Accelerazione della variabile di animazione durante la transizione.  
+##  <a name="m_dblacceleration"></a>  CParabolicTransitionFromAcceleration::m_dblAcceleration  
+ The acceleration of the animation variable during the transition.  
   
 ```  
 DOUBLE m_dblAcceleration;  
 ```  
   
-##  <a name="m_dblfinalvalue"></a>CParabolicTransitionFromAcceleration::m_dblFinalValue  
- Il valore della variabile di animazione alla fine della transizione.  
+##  <a name="m_dblfinalvalue"></a>  CParabolicTransitionFromAcceleration::m_dblFinalValue  
+ The value of the animation variable at the end of the transition.  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
-##  <a name="m_dblfinalvelocity"></a>CParabolicTransitionFromAcceleration::m_dblFinalVelocity  
- La velocità della variabile di animazione alla fine della transizione.  
+##  <a name="m_dblfinalvelocity"></a>  CParabolicTransitionFromAcceleration::m_dblFinalVelocity  
+ The velocity of the animation variable at the end of the transition.  
   
 ```  
 DOUBLE m_dblFinalVelocity;  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Classi](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

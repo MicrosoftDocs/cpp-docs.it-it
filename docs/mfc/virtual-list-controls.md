@@ -1,74 +1,93 @@
 ---
-title: "Controlli List virtuali | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cache, dati elemento controllo elenco virtuale"
-  - "controlli elenco, visualizzazione elenco"
-  - "controlli elenco, virtuale"
-  - "controlli elenco virtuali"
+title: Virtual List Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- cache, virtual list control item data
+- list controls [MFC], virtual
+- list controls [MFC], List view
+- virtual list controls
 ms.assetid: 319f841f-e426-423a-8276-d93f965b0b45
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Controlli List virtuali
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4c16450ee3a8529513badb118400a32a705bd0d6
+ms.contentlocale: it-it
+ms.lasthandoff: 09/12/2017
 
-Un controllo elenco virtuale è un controllo di visualizzazione elenco che presenta lo stile **LVS\_OWNERDATA**.  Questo stile consente al controllo di supportare un numero di elementi fino a `DWORD` \(il numero predefinito dell'elemento si estende solo a `int`\).  Tuttavia, il massimo vantaggio offerto da questo stile è la possibilità di disporre solo di elementi di un sottoinsieme di dati in memoria in qualsiasi momento.  In questo modo il controllo elenco virtuale si presterà ad essere utilizzato con grandi database di informazioni, dove i metodi specifici di accesso ai dati sono già presenti sul posto.  
+---
+# <a name="virtual-list-controls"></a>Virtual List Controls
+A virtual list control is a list view control that has the **LVS_OWNERDATA** style. This style enables the control to support an item count up to a `DWORD` (the default item count only extends to an `int`). However, the biggest advantage provided by this style is the ability to only have a subset of data items in memory at any one time. This allows the virtual list view control to lend itself for use with large databases of information, where specific methods of accessing data are already in place.  
   
 > [!NOTE]
->  Oltre a fornire funzionalità di elenco virtuale in `CListCtrl`, MFC fornisce inoltre la stessa funzionalità nella classe [CListView](../mfc/reference/clistview-class.md).  
+>  In addition to providing virtual list functionality in `CListCtrl`, MFC also provides the same functionality in the [CListView](../mfc/reference/clistview-class.md) class.  
   
- Esistono alcuni problemi di compatibilità da tenere presenti quando si sviluppano i controlli elenco virtuali.  Per ulteriori informazioni, vedere la sezione dei problemi di compatibilità dell'argomento dei controlli di visualizzazione elenchi in [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+ There are some compatibility issues you should be aware of when developing virtual list controls. For more information, see the Compatibility Issues section of the List-View Controls topic in the Windows SDK.  
   
-## Gestire la notifica LVN\_GETDISPINFO  
- I controlli elenco virtuali conservano pochissime informazioni dell'elemento.  Fatta eccezione per la selezione dell'elemento e le informazioni sullo stato attivo, tutte le informazioni sull'elemento vengono gestite dal proprietario del controllo.  Le informazioni vengono richieste dal framework tramite un messaggio di notifica **LVN\_GETDISPINFO**.  Per fornire le informazioni necessarie, il proprietario del controllo elenco virtuale \(o il controllo stesso\) dovrà gestire la notifica.  Questa operazione può essere effettuata utilizzando la Finestra Proprietà \(vedere [Mapping di messaggi a funzioni](../mfc/reference/mapping-messages-to-functions.md)\).  Il codice risultante deve essere simile all'esempio seguente \(dove `CMyDialog` è il proprietario dell'oggetto controllo elenco virtuale e la finestra di dialogo gestisce la notifica\):  
+## <a name="handling-the-lvngetdispinfo-notification"></a>Handling the LVN_GETDISPINFO Notification  
+ Virtual list controls maintain very little item information. Except for the item selection and focus information, all item information is managed by the owner of the control. Information is requested by the framework via a **LVN_GETDISPINFO** notification message. To provide the requested information, the owner of the virtual list control (or the control itself) must handle this notification. This can easily be done using the Properties window (see [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md)). The resultant code should look something like the following example (where `CMyDialog` owns the virtual list control object and the dialog is handling the notification):  
   
- [!code-cpp[NVC_MFCControlLadenDialog#23](../mfc/codesnippet/CPP/virtual-list-controls_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#23](../mfc/codesnippet/cpp/virtual-list-controls_1.cpp)]  
   
- Nel gestore del messaggio di notifica **LVN\_GETDISPINFO**, è necessario controllare il tipo di informazioni che vengono richieste.  I valori possibili sono:  
+ In the handler for the **LVN_GETDISPINFO** notification message, you must check to see what type of information is being requested. The possible values are:  
   
--   `LVIF_TEXT` Il membro `pszText` deve essere popolato.  
+-   `LVIF_TEXT` The `pszText` member must be filled in.  
   
--   `LVIF_IMAGE` Il membro `iImage` deve essere popolato.  
+-   `LVIF_IMAGE` The `iImage` member must be filled in.  
   
--   **LVIF\_INDENT** Il membro *iIndent* deve essere popolato.  
+-   **LVIF_INDENT** The *iIndent* member must be filled in.  
   
--   `LVIF_PARAM` Il membro *lParam* deve essere popolato. \(Non disponibile per gli elementi secondari\).  
+-   `LVIF_PARAM` The *lParam* member must be filled in. (Not present for sub-items.)  
   
--   `LVIF_STATE` Il membro *state* deve essere popolato.  
+-   `LVIF_STATE` The *state* member must be filled in.  
   
- È quindi necessario fornire le informazioni necessarie al framework.  
+ You should then supply whatever information is requested back to the framework.  
   
- Nell'esempio seguente \(ricavato dal corpo del gestore di notifica per l'oggetto del controllo elenco\) viene illustrato un metodo possibile per fornire informazioni per i buffer di testo e l'immagine di un elemento:  
+ The following example (taken from the body of the notification handler for the list control object) demonstrates one possible method by supplying information for the text buffers and image of an item:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#24](../mfc/codesnippet/CPP/virtual-list-controls_2.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#24](../mfc/codesnippet/cpp/virtual-list-controls_2.cpp)]  
   
-## Memorizzazione nella cache e controlli elenco virtuali  
- Poiché questo tipo di controllo elenco è destinato a grandi quantità di dati, si consiglia di memorizzare nella cache i dati dell'elemento richiesto per migliorare le prestazioni di recupero.  Il framework fornisce un meccanismo di suggerimento per l'ottimizzazione della cache inviando un messaggio di notifica **LVN\_ODCACHEHINT**.  
+## <a name="caching-and-virtual-list-controls"></a>Caching and Virtual List Controls  
+ Because this type of list control is intended for large data sets, it is recommended that you cache requested item data to improve retrieval performance. The framework provides a cache-hinting mechanism to assist in optimizing the cache by sending an **LVN_ODCACHEHINT** notification message.  
   
- L'esempio seguente aggiorna la cache con l'intervallo passato alla funzione di gestione.  
+ The following example updates the cache with the range passed to the handler function.  
   
- [!code-cpp[NVC_MFCControlLadenDialog#25](../mfc/codesnippet/CPP/virtual-list-controls_3.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#25](../mfc/codesnippet/cpp/virtual-list-controls_3.cpp)]  
   
- Per ulteriori informazioni sulla preparazione e sulla gestione della cache, vedere la sezione gestione della cache dell'argomento dei controlli di visualizzazione elenchi in [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+ For more information on preparing and maintaining a cache, see the Cache Management section of the List-View Controls topic in the Windows SDK.  
   
-## Trovare elementi specifici  
- Il messaggio di notifica **LVN\_ODFINDITEM** viene inviato dal controllo elenco virtuale quando un particolare elemento del controllo elenco deve essere trovato.  Il messaggio di notifica viene inviato quando il controllo elenco riceve l'accesso rapido alla chiave o quando riceve un messaggio **LVM\_FINDITEM**.  Le informazioni presenti vengono inviate sotto la forma della struttura **LVFINDINFO**, il quale è un membro della struttura **NMLVFINDITEM**.  Gestire questo messaggio eseguendo l'override della funzione `OnChildNotify` dell'oggetto controllo elenco e all'interno del corpo del gestore, controllare il messaggio **LVN\_ODFINDITEM**.  Se trovato, eseguire l'azione appropriata.  
+## <a name="finding-specific-items"></a>Finding Specific Items  
+ The **LVN_ODFINDITEM** notification message is sent by the virtual list control when a particular list control item needs to be found. The notification message is sent when the list view control receives quick key access or when it receives an **LVM_FINDITEM** message. Search information is sent in the form of an **LVFINDINFO** structure, which is a member of the **NMLVFINDITEM** structure. Handle this message by overriding the `OnChildNotify` function of your list control object and inside the body of the handler, check for the **LVN_ODFINDITEM** message. If found, perform the appropriate action.  
   
- È necessario essere pronti a cercare un elemento che corrisponde alle informazioni fornite dal controllo visualizzazione elenco.  È necessario restituire il valore dell'elemento in caso di esito positivo, oppure \-1 se non viene rilevato alcun elemento corrispondente.  
+ You should be prepared to search for an item that matches the information given by the list view control. You should return the index of the item if successful, or -1 if no matching item is found.  
   
-## Vedere anche  
- [Utilizzo di CListCtrl](../mfc/using-clistctrl.md)   
- [Controlli](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CListCtrl](../mfc/using-clistctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+
