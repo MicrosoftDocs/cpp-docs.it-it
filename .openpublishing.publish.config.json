@@ -1,8 +1,5 @@
 {
   "build_entry_point": "docs",
-  "need_generate_pdf": false,
-  "need_generate_intellisense": false,
-  "continue_with_document_error": true,
   "docsets_to_publish": [
     {
       "docset_name": "vcppdocs",
@@ -18,12 +15,18 @@
       "template_folder": "_themes"
     }
   ],
-  "notification_subscribers": [],
+  "notification_subscribers": [
+    "CnE_Content_Brno@moravia.com",
+    "CnE_UE_Bugfixing_ENG@moravia.com"
+  ],
   "branches_to_filter": [],
   "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/cpp-docs.it-it",
   "git_repository_branch_open_to_public_contributors": "live",
   "continue_with_document_error": true,
   "skip_source_output_uploading": false,
+  "contribution_branch_mappings": {
+    "master-sxs": "master"
+  },
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
@@ -41,5 +44,8 @@
       }
     }
   ],
-  "need_generate_pdf_url_template": false
+  "branch_target_mapping": {},
+  "need_generate_pdf_url_template": false,
+  "need_generate_pdf": false,
+  "need_generate_intellisense": false
 }
