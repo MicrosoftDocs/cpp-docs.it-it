@@ -1,8 +1,8 @@
 ---
-redirect_url: /cpp/assembler/masm/microsoft-macro-assembler-reference
+redirect_url: /cpp/atl-mfc-shared/atl-mfc-shared-classes
 ms.translationtype: HT
 ms.sourcegitcommit: 26e4b29cc488ddc69872a90a00d66575eaacd1dc
-ms.openlocfilehash: 17148dad09fbddb65f30c0ad06043db9f600963c
+ms.openlocfilehash: 6fcb78f691ad99e1f8c9f6ce6030ee64bf8354ac
 ms.contentlocale: it-it
 ms.lasthandoff: 09/22/2017
 
