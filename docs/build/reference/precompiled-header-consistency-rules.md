@@ -1,34 +1,9 @@
 ---
-title: "Regole di uniformit&#224; per le intestazioni precompilate | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "file di intestazione precompilata, regole di coerenza"
-ms.assetid: 844b1a14-5b0b-4276-a1f5-cc62f13f6dda
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Regole di uniformit&#224; per le intestazioni precompilate
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+redirect_url: /cpp/build/reference/creating-precompiled-header-files#precompiled-header-consistency-rules
+ms.translationtype: MT
+ms.sourcegitcommit: 0fa935667ed1ec0410e8981758dce25b88324718
+ms.openlocfilehash: d6ad8c91a93da21cd5ddd849178529f87a919665
+ms.contentlocale: it-it
+ms.lasthandoff: 09/27/2017
 
-In questa sezione vengono riportati suggerimenti per utilizzare al meglio le intestazioni precompilate:  
-  
--   [Regole di uniformità per l'utilizzo per singolo file delle intestazioni precompilate](../../build/reference/consistency-rules-for-per-file-use-of-precompiled-headers.md)  
-  
--   [Regole di uniformità per \/Yc e \/Yu](../../build/reference/consistency-rules-for-yc-and-yu.md)  
-  
- Poiché i file PCH contengono informazioni sia sull'ambiente del computer che sull'indirizzo di memoria del programma, si consiglia di utilizzare file di questo tipo solo sul computer in cui sono stati creati.  
-  
-## Vedere anche  
- [Creazione di file di intestazione precompilati](../../build/reference/creating-precompiled-header-files.md)
+---
