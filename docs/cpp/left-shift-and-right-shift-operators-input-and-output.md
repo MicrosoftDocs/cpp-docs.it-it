@@ -1,56 +1,69 @@
 ---
-title: "Operatori Left Shift e Right Shift (&gt;&gt; e &lt;&lt;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "<<"
-  - ">>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<< (operatore), oggetti specifici"
-  - ">> (operatore)"
-  - "operatori shift bit per bit"
-  - "left shift (operatori)"
-  - "operatori [C++], spostamento"
-  - "operatori right shift"
-  - "operatori di spostamento"
+title: Operatori Left Shift e Right Shift (&gt; &gt; e &lt; &lt;) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- <<
+- '>>'
+dev_langs:
+- C++
+helpviewer_keywords:
+- << operator, with specific objects
+- left shift operators
+- right shift operators
+- bitwise-shift operators
+- '>> operator'
+- shift operators
+- operators [C++], shift
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
 caps.latest.revision: 18
-caps.handback.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Operatori Left Shift e Right Shift (&gt;&gt; e &lt;&lt;)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: e695a90f871f973780a859fb27a06a2c6b246f3d
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-Gli operatori di spostamento bit per bit sono l'operatore di spostamento a destra \(`>>`\), che sposta i bit di `shift_expression` a destra e l'operatore di spostamento a sinistra \(`<<`\), che sposta i bit di `shift_expression` a sinistra.  <sup>1</sup>  
+---
+# <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Operatori Left Shift e Right Shift (&gt; &gt; e &lt; &lt;)
+Gli operatori shift bit per bit sono l'operatore di spostamento a destra (>>), che sposta i bit di *MAIUSC-expression* a destra e l'operatore di spostamento a sinistra (<<), che sposta i bit di *MAIUSC-expression* a sinistra. <sup>1</sup>  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
-```  
+> *MAIUSC-expression* `<<` *additive-expression*  
+> *MAIUSC-expression* `>>` *additive-expression*  
   
-        shift-expression << additive-expression  
-shift-expression >> additive-expression  
-```  
-  
-## Note  
+## <a name="remarks"></a>Note  
   
 > [!IMPORTANT]
->  Le descrizioni e gli esempi seguenti sono validi per le architetture Windows X86 e x64.  L'implementazione degli operatori di spostamento a sinistra e a destra è sostanzialmente diversa in Windows RT per i dispositivi ARM.  Per altre informazioni vedere la sezione dedicata agli operatori di spostamento del post di blog introduttivo su [ARM](http://blogs.msdn.com/b/vcblog/archive/2012/10/25/hello-arm-exploring-undefined-unspecified-and-implementation-defined-behavior-in-c.aspx).  
+> Le descrizioni e gli esempi seguenti sono validi per le architetture Windows X86 e x64. L'implementazione degli operatori di spostamento a sinistra e a destra è sostanzialmente diversa in Windows RT per i dispositivi ARM. Per ulteriori informazioni, vedere la sezione "Operatori di spostamento" del [ARM](http://blogs.msdn.com/b/vcblog/archive/2012/10/25/hello-arm-exploring-undefined-unspecified-and-implementation-defined-behavior-in-c.aspx) post di blog.  
   
-## Spostamenti a sinistra  
- L'operatore di spostamento a sinistra consente di spostare a sinistra i bit di `shift-expression` del numero di posizioni specificato da `additive-expression`.  Le posizioni dei bit liberate dall'operazione di spostamento vengono riempite con zero.  Uno spostamento a sinistra è uno spostamento logico \(i bit spostati oltre la fine vengono eliminati, incluso il bit di segno\).  Per altre informazioni sui tipi di spostamento bit per bit, vedere [Operazione bit a bit](http://it.wikipedia.org/wiki/Operazione_bit_a_bit).  
+## <a name="left-shifts"></a>Spostamenti a sinistra  
+ L'operatore di spostamento a sinistra determina i bit nel *MAIUSC-expression* per essere spostato a sinistra del numero di posizioni specificato da *additive-expression*. Le posizioni dei bit liberate dall'operazione di spostamento vengono riempite con zero. Uno spostamento a sinistra è uno spostamento logico (i bit spostati oltre la fine vengono eliminati, incluso il bit di segno). Per ulteriori informazioni sui tipi di spostamento bit per bit, vedere [spostamento bit per bit](http://en.wikipedia.org/wiki/Bitwise_shift).  
   
- Nell'esempio seguente vengono illustrate operazioni di spostamento a sinistra tramite numeri senza segno.  Viene mostrato ciò che accade ai bit che rappresentano il valore come bitset.  Per altre informazioni, vedere [Classe bitset](../standard-library/bitset-class.md).  
+ Nell'esempio seguente vengono illustrate operazioni di spostamento a sinistra tramite numeri senza segno. Viene mostrato ciò che accade ai bit che rappresentano il valore come bitset. Per ulteriori informazioni, vedere [classe bitset](../standard-library/bitset-class.md).  
   
 ```cpp  
 #include <iostream>  
@@ -73,7 +86,7 @@ int main() {
   
 ```  
   
- Se si sposta a sinistra un numero con segno coinvolgendo il bit di segno, il risultato sarà indefinito.  Nell'esempio seguente viene illustrato ciò che accade in Visual C\+\+ quando un bit viene spostato a sinistra nella posizione del bit di segno.  
+ Se si sposta a sinistra un numero con segno coinvolgendo il bit di segno, il risultato sarà indefinito. Nell'esempio seguente viene illustrato ciò che accade in Visual C++ quando un bit viene spostato a sinistra nella posizione del bit di segno.  
   
 ```cpp  
 #include <iostream>  
@@ -95,11 +108,11 @@ int main() {
 }  
 ```  
   
-## Spostamenti a destra  
- L'operatore di spostamento a destra consente di spostare a destra lo schema di bit di `shift-expression` del numero di posizioni specificato da `additive-expression`.  Per i numeri senza segno, le posizioni dei bit liberate dall'operazione di spostamento vengono riempite con zero.  Per i numeri con segno, il bit di segno viene usato per riempire le posizioni dei bit liberate.  In altre parole, se il numero è positivo, si usa 0, se il numero è negativo, si usa 1.  
+## <a name="right-shifts"></a>Spostamenti a destra  
+ L'operatore di spostamento a destra determina lo schema di bit in *MAIUSC-expression* per essere spostato a destra del numero di posizioni specificato da *additive-expression*. Per i numeri senza segno, le posizioni dei bit liberate dall'operazione di spostamento vengono riempite con zero. Per i numeri con segno, il bit di segno viene usato per riempire le posizioni dei bit liberate. In altre parole, se il numero è positivo, si usa 0, se il numero è negativo, si usa 1.  
   
 > [!IMPORTANT]
->  Il risultato di uno spostamento a destra di un numero negativo con segno è dipendente dall'implementazione.  Sebbene Visual C\+\+ usi il bit di segno per riempile le posizioni dei bit liberate, non vi è garanzia che anche altre implementazioni facciano lo stesso.  
+> Il risultato di uno spostamento a destra di un numero negativo con segno è dipendente dall'implementazione. Sebbene Visual C++ usi il bit di segno per riempile le posizioni dei bit liberate, non vi è garanzia che anche altre implementazioni facciano lo stesso.  
   
  Nell'esempio seguente vengono illustrate operazioni di spostamento a destra tramite numeri senza segno:  
   
@@ -179,8 +192,8 @@ int main() {
 }  
 ```  
   
-## Spostamenti e promozioni  
- Le espressioni su entrambi i lati di un operatore di spostamento devono essere tipi integrali.  Le promozioni integrali vengono eseguite in base alle regole descritte in [Promozioni a intero](../misc/integral-promotions.md).  Il tipo del risultato corrisponde al tipo dell'elemento `shift-expression` promosso.  
+## <a name="shifts-and-promotions"></a>Spostamenti e promozioni  
+ Le espressioni su entrambi i lati di un operatore di spostamento devono essere tipi integrali. Le promozioni integrali vengono eseguite in base alle regole descritte [conversioni Standard](standard-conversions.md). Il tipo del risultato è identico al tipo di promosso *MAIUSC-expression*.  
   
  Nell'esempio seguente una variabile di tipo `char` viene promossa in un elemento `int`.  
   
@@ -193,16 +206,16 @@ using namespace std;
 int main() {  
     char char1 = 'a';  
   
-    auto promoted1 = char1 << 1;  // 194  
+    auto promoted1 = char1 << 1;   // 194  
     cout << typeid(promoted1).name() << endl;  // int  
   
     auto promoted2 = char1 << 10;  // 99328  
-    cout << typeid(promoted2).name() << endl;   // int  
+    cout << typeid(promoted2).name() << endl;  // int  
 }  
 ```  
   
-## Altre informazioni  
- Il risultato di un'operazione di spostamento è indefinito se `additive-expression` è negativo o se `additive-expression` è maggiore o uguale al numero di bit nell'elemento `shift-expression` promosso.  Non viene eseguita alcuna operazione di spostamento se `additive-expression` è 0.  
+## <a name="additional-details"></a>Altre informazioni  
+ Il risultato di un'operazione di spostamento non è definito se *additive-expression* è negativo o se *additive-expression* è maggiore o uguale al numero di bit in promosso * MAIUSC-expression*. Non viene eseguita alcuna operazione di spostamento se *additive-expression* è 0.  
   
 ```cpp  
 #include <iostream>  
@@ -227,13 +240,13 @@ int main() {
 }  
 ```  
   
-## Note a piè di pagina  
- 1 Di seguito è riportata la descrizione degli operatori di spostamento nella specifica ISO C\+\+ \(INCITS\/ISO\/IEC 14882\-2011\[2012\]\), sezioni 5.8.2 e 5.8.3.  
+## <a name="footnotes"></a>Note a piè di pagina  
+ 1 di seguito è la descrizione degli operatori di spostamento nella specifica C++ 11 ISO (INCITS/ISO/IEC 14882-2011[2012]), sezioni 5.8.2 e 5.8.3.  
   
- Il valore di `E1 << E2` è `E1` spostato a sinistra di `E2` posizioni di bit. I bit vuoti vengono riempiti con zero.  Se `E1` dispone di un tipo unsigned, il valore del risultato sarà `E1 × 2`<sup>E2</sup>, modulo ridotto uno oltre il valore massimo rappresentabile nel tipo di risultato.  In caso contrario, se `E1` dispone di un tipo signed e di un valore non negativo e `E1 × 2`<sup>E2</sup> è rappresentabile nel tipo unsigned corrispondente del tipo di risultato, tale valore, convertito nel tipo di risultato, sarà il valore risultante; in caso contrario, il comportamento sarà indefinito.  
+ Il valore di **E1 << E2** è **E1** spostato a sinistra **E2** posizioni di bit; liberate bit vengono riempite con zero. Se **E1** presenta un tipo senza segno, il valore del risultato è **E1 × 2**<sup>**E2**</sup>, modulo ridotto uno oltre il valore massimo rappresentabile in tipo di risultato. In caso contrario, se **E1** dispone di un tipo con segno e un valore non negativo e **E1 × 2**<sup>**E2** </sup> è rappresentabile nel tipo unsigned corrispondente del tipo di risultato, quindi tale valore, convertito nel tipo di risultato, è il valore risultante. in caso contrario, il comportamento è indefinito.  
   
- Il valore di `E1 >> E2` è `E1` spostato a destra di `E2` posizioni di bit.  Se `E1` dispone di un tipo unsigned o se `E1` dispone di un tipo signed e di un valore non negativo, il valore del risultato sarà parte integrante del quoziente di `E1/2`<sup>E2</sup>.  Se `E1` dispone di un tipo signed e di un valore negativo, il valore risultante sarà definito dall'implementazione.  
+ Il valore di **E1 >> E2** è **E1** spostato a destra **E2** posizioni di bit. Se **E1** dispone di un tipo unsigned o se **E1** dispone di un tipo con segno e un valore non negativo, il valore del risultato è parte integrante del quoziente di **E1/2** <sup> **E2**</sup>. Se **E1** dispone di un tipo con segno e un valore negativo, il valore risultante è definito dall'implementazione.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Espressioni con operatori binari](../cpp/expressions-with-binary-operators.md)   
- [Operatori C\+\+, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+ [Operatori predefiniti C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

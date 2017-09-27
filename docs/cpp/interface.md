@@ -1,33 +1,50 @@
 ---
-title: "__interface | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__interface"
-  - "__interface_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__interface (parola chiave) [C++]"
+title: Interface | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __interface
+- __interface_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- __interface keyword [C++]
 ms.assetid: ca5d400b-d6d8-4ba2-89af-73f67e5ec056
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# __interface
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: e502574b9d55238d6f9aed33949e06db3ec6349d
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="interface"></a>__interface
 **Sezione specifica Microsoft**  
   
- Un'interfaccia di Visual C\+\+ può essere definita come segue:  
+ Un'interfaccia di Visual C++ può essere definita come segue:  
   
 -   Può ereditare da nessuna o più interfacce base.  
   
@@ -41,7 +58,7 @@ caps.handback.revision: 8
   
 -   Non può contenere membri dati; le proprietà sono consentite.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -49,8 +66,8 @@ modifier
  __interface interface-name {interface-definition};  
 ```  
   
-## Note  
- Una [classe](../cpp/class-cpp.md) o un [struct](../cpp/struct-cpp.md) C\+\+ può essere implementato con queste regole, ma `__interface` le applica.  
+## <a name="remarks"></a>Note  
+ C++ [classe](../cpp/class-cpp.md) o [struct](../cpp/struct-cpp.md) potrebbe essere implementato con queste regole, ma `__interface` applicarle tramite.  
   
  Ad esempio, di seguito è riportata una definizione di interfaccia di esempio:  
   
@@ -61,17 +78,17 @@ __interface IMyInterface {
 };  
 ```  
   
- Per informazioni sulle interfacce gestite, vedere [classe di interfaccia](../windows/interface-class-cpp-component-extensions.md).  
+ Per informazioni sulle interfacce gestite, vedere [classe interfaccia](../windows/interface-class-cpp-component-extensions.md).  
   
- Si noti che non è necessario dichiarare in modo esplicito che le funzioni `CommitX` e `get_X` sono virtuali pure.  Una dichiarazione equivalente per la prima funzione sarà:  
+ Si noti che non è necessario dichiarare in modo esplicito che le funzioni `CommitX` e `get_X` sono virtuali pure. Una dichiarazione equivalente per la prima funzione sarà:  
   
 ```  
 virtual HRESULT CommitX() = 0;  
 ```  
   
- `__interface` implica il modificatore [novtable](../cpp/novtable.md) `__declspec`.  
+ `__interface`implica il [novtable](../cpp/novtable.md) `__declspec` modificatore.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come utilizzare le proprietà dichiarate in un'interfaccia.  
   
 ```  
@@ -147,10 +164,13 @@ int main()
 }  
 ```  
   
-  **p\-\>int\_data \= 100**  
-**bstr\_data \= Testing**   
-## Fine sezione specifica Microsoft  
+```Output  
+p->int_data = 100  
+bstr_data = Testing  
+```  
   
-## Vedere anche  
- [Parole chiave C\+\+](../cpp/keywords-cpp.md)   
- [Interface Attributes](../windows/interface-attributes.md)
+**Fine sezione specifica Microsoft**  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Parole chiave](../cpp/keywords-cpp.md)   
+ [Attributi di interfaccia](../windows/interface-attributes.md)

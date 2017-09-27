@@ -1,33 +1,49 @@
 ---
-title: "Operatore AND bit per bit: &amp; | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "bitand"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "& (operatore), bit per bit (operatori)"
-  - "AND (operatore)"
-  - "bit per bit (operatori), AND (operatore)"
+title: 'Operatore AND bit per bit: &amp; | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- bitand
+dev_langs:
+- C++
+helpviewer_keywords:
+- AND operator
+- bitwise operators, AND operator
+- '& operator, bitwise operators'
 ms.assetid: 76f40de3-c417-47b9-8a77-532f3fc990a5
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Operatore AND bit per bit: &amp;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 99ff65f38abf5cfcac135e2cc54e3df6df5f336d
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-## Sintassi  
+---
+# <a name="bitwise-and-operator-amp"></a>Operatore AND bit per bit:&amp;
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -37,17 +53,17 @@ expression
   
 ```  
   
-## Note  
- Le espressioni possono essere altre espressioni And o \(in base alle restrizioni dei tipi menzionate di seguito\) espressioni di uguaglianza, espressioni relazionali, espressioni additive, espressioni moltiplicative, espressioni puntatore a membro, espressioni cast, espressioni unarie, espressioni di suffisso o espressioni primarie.  
+## <a name="remarks"></a>Note  
+ Le espressioni possono essere altre espressioni And o (in base alle restrizioni dei tipi menzionate di seguito) espressioni di uguaglianza, espressioni relazionali, espressioni additive, espressioni moltiplicative, espressioni puntatore a membro, espressioni cast, espressioni unarie, espressioni di suffisso o espressioni primarie.  
   
- L'operatore AND bit per bit \(**&**\) confronta ogni bit del primo operando con il bit corrispondente del secondo operando.  Se entrambi i bit sono 1, il bit del risultato corrispondente viene impostato su 1.  In caso contrario, il bit di risultato corrispondente viene impostato su 0.  
+ L'operatore AND bit per bit (**&**) confronta ogni bit del primo operando con il bit corrispondente del secondo operando. Se entrambi i bit sono 1, il bit del risultato corrispondente viene impostato su 1. In caso contrario, il bit di risultato corrispondente viene impostato su 0.  
   
- Entrambi gli operandi all'operatore AND bit per bit devono essere tipi integrali.  Le conversioni aritmetiche consuete analizzate in [Conversioni aritmetiche](../misc/arithmetic-conversions.md) vengono applicate agli operandi.  
+ Entrambi gli operandi all'operatore AND bit per bit devono essere tipi integrali. Le conversioni aritmetiche consuete analizzate [conversioni Standard](standard-conversions.md), vengono applicate agli operandi.  
   
-## Parola chiave operator per &  
- L'operatore `bitand` è il testo equivalente di **&**.  Esistono due modi per accedere all'operatore `bitand` nei programmi: includere il file di intestazione `iso646.h` o eseguire la compilazione con l'opzione del compilatore [\/Za](../build/reference/za-ze-disable-language-extensions.md) \(disabilita estensioni linguaggio\).  
+## <a name="operator-keyword-for-"></a>Parola chiave operator per &  
+ Il `bitand` operatore è il testo equivalente di ** & **. Esistono due modi per accedere il `bitand` operatore nei programmi: includere il file di intestazione `iso646.h`, o compilare il [/Za](../build/reference/za-ze-disable-language-extensions.md) l'opzione del compilatore (Disabilita estensioni linguaggio).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // expre_Bitwise_AND_Operator.cpp  
@@ -63,8 +79,7 @@ int main() {
 }  
 ```  
   
-## Vedere anche  
- [Operatori bit per bit C\+\+](../misc/cpp-bitwise-operators.md)   
- [Operatori C\+\+](../misc/cpp-operators.md)   
- [Operatori C\+\+, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Operatori predefiniti C++, precedenza e associazione](cpp-built-in-operators-precedence-and-associativity.md)  
+ [Operatori C++ predefiniti, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operatori bit per bit C](../c-language/c-bitwise-operators.md)

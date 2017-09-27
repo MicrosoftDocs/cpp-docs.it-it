@@ -1,51 +1,67 @@
 ---
-title: "Gestione di eccezioni in Visual C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "try-catch (parola chiave) [C++], gestione eccezioni"
+title: Gestione delle eccezioni in Visual C++ | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- try-catch keyword [C++], exception handling
 ms.assetid: a6aa08de-669d-4ce8-9ec3-ec20d1354fcf
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Gestione di eccezioni in Visual C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: b4b2087debb416305ff44966607031c96ead80b9
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-Un'eccezione è una condizione di errore, probabilmente non controllata dal programma, che impedisce al programma di proseguire il proprio percorso di esecuzione normale.  Alcune operazioni, tra cui la creazione di oggetti, i file di input\/output e le chiamate di funzione effettuate da altri moduli, possono dare origine a delle eccezioni anche quando il programma viene eseguito correttamente.  Quando è affidabile, il codice prevede e gestisce le eccezioni.  
+---
+# <a name="exception-handling-in-visual-c"></a>Gestione di eccezioni in Visual C++
+Un'eccezione è una condizione di errore, probabilmente non controllata dal programma, che impedisce al programma di proseguire il proprio percorso di esecuzione normale. Alcune operazioni, tra cui la creazione di oggetti, i file di input/output e le chiamate di funzione effettuate da altri moduli, possono dare origine a delle eccezioni anche quando il programma viene eseguito correttamente. Quando è affidabile, il codice prevede e gestisce le eccezioni.  
   
- Per rilevare errori logici all'interno di un solo programma o modulo, utilizzare le asserzioni, anziché le eccezioni \(vedere [Utilizzo delle asserzioni](../Topic/C-C++%20Assertions.md)\).  
+ Per rilevare errori logici all'interno di un unico programma o un modulo, utilizzare le asserzioni, anziché le eccezioni (vedere [utilizzando asserzioni](/visualstudio/debugger/c-cpp-assertions)).  
   
- Visual C\+\+ supporta tre tipi di gestione delle eccezioni:  
+ Visual C++ supporta tre tipi di gestione delle eccezioni:  
   
--   [Gestione delle eccezioni C\+\+](../cpp/cpp-exception-handling.md)  
+-   [Gestione delle eccezioni C++](../cpp/cpp-exception-handling.md)  
   
-     Per la maggior parte dei programmi C\+\+, si dovrebbe utilizzare la gestione delle eccezioni C\+\+, che è indipendente dai tipi e assicura che i distruttori di oggetti siano richiamati durante la rimozione dello stack.  
+     Per la maggior parte dei programmi C++, si dovrebbe utilizzare la gestione delle eccezioni C++, che è indipendente dai tipi e assicura che i distruttori di oggetti siano richiamati durante la rimozione dello stack.  
   
--   [Gestione strutturata delle eccezioni](../cpp/structured-exception-handling-c-cpp.md)  
+-   [Gestione delle eccezioni strutturata](../cpp/structured-exception-handling-c-cpp.md)  
   
-     Windows fornisce il proprio meccanismo di eccezione, denominato SEH.  Non è consigliato per la programmazione in MFC o in C\+\+.  Usare SEH solo nei programmi C non MFC.  
+     Windows fornisce il proprio meccanismo di eccezione, denominato SEH. Non è consigliato per la programmazione in MFC o in C++. Usare SEH solo nei programmi C non MFC.  
   
 -   [Eccezioni MFC](../mfc/exception-handling-in-mfc.md)  
   
-     A partire dalla versione 3.0, MCF utilizza le eccezioni C\+\+, ma supporta ancora le precedenti macro di gestione delle eccezioni, che sono simili, nella forma, alle eccezioni C\+\+.  Sebbene per la creazione di nuovi programmi non sia consigliato utilizzare tali macro, le stesse sono ancora supportate per garantire la compatibilità con le versioni precedenti.  Nei programmi che già utilizzano le macro, è possibile usare liberamente anche le eccezioni C\+\+.  A partire dalla versione 2.0 di Visual C\+\+, durante la pre\-elaborazione, le macro vengono valutate nelle parole chiave di gestione delle eccezioni definite nell'implementazione di Visual C\+\+ del linguaggio C\+\+.  È possibile lasciare le macro di gestione delle eccezioni esistenti al loro posto, quando si inizia a utilizzare le eccezioni C\+\+.  
+     A partire dalla versione 3.0, MCF utilizza le eccezioni C++, ma supporta ancora le precedenti macro di gestione delle eccezioni, che sono simili, nella forma, alle eccezioni C++. Sebbene per la creazione di nuovi programmi non sia consigliato utilizzare tali macro, le stesse sono ancora supportate per garantire la compatibilità con le versioni precedenti. Nei programmi che già utilizzano le macro, è possibile usare liberamente anche le eccezioni C++. A partire dalla versione 2.0 di Visual C++, durante la pre-elaborazione, le macro vengono valutate nelle parole chiave di gestione delle eccezioni definite nell'implementazione di Visual C++ del linguaggio C++. È possibile lasciare le macro di gestione delle eccezioni esistenti al loro posto, quando si inizia a utilizzare le eccezioni C++.  
   
- Usare l'opzione del compilatore [\/EH](../build/reference/eh-exception-handling-model.md) per specificare il tipo di gestione delle eccezioni da utilizzare in un progetto. Il tipo predefinito corrisponde alla gestione delle eccezioni C\+\+.  Non combinare i meccanismi di gestione degli errori; ad esempio non usare le eccezioni C\+\+ con la gestione strutturata delle eccezioni.  L'uso della gestione delle eccezioni C\+\+ rende il codice più portabile e consente di gestire eccezioni di ogni tipo.  Per altre informazioni sugli svantaggi della gestione strutturata delle eccezioni, vedere [Gestione strutturata delle eccezioni](../cpp/structured-exception-handling-c-cpp.md).  Per consigli su come combinare le macro MFC e le eccezioni C\+\+, vedere [Eccezioni: Utilizzo delle macro MFC e delle eccezioni C\+\+](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md).  
+ Utilizzare il [/EH](../build/reference/eh-exception-handling-model.md) l'opzione del compilatore per specificare il tipo di gestione delle eccezioni per l'utilizzo in un progetto. Gestione delle eccezioni C++ è il valore predefinito. Non combinare i meccanismi di gestione degli errori; ad esempio non usare le eccezioni C++ con la gestione strutturata delle eccezioni. L'uso della gestione delle eccezioni C++ rende il codice più portabile e consente di gestire eccezioni di ogni tipo. Per ulteriori informazioni sugli svantaggi della gestione strutturata delle eccezioni, vedere [Structured Exception Handling](../cpp/structured-exception-handling-c-cpp.md). Per consigli su come combinare le macro MFC ed eccezioni C++, vedere [eccezioni: utilizzo delle macro MFC ed eccezioni C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md).  
   
- Per informazioni sulla gestione delle eccezioni nelle applicazioni CLR, vedere [Exception Handling](../windows/exception-handling-cpp-component-extensions.md).  
+ Per informazioni sulla gestione delle eccezioni nelle applicazioni di CLR, vedere [eccezioni](../windows/exception-handling-cpp-component-extensions.md).  
   
- Per informazioni sulla gestione delle eccezioni nei processori x64, vedere [Gestione delle eccezioni \(x64\)](../build/exception-handling-x64.md).  
+ Per informazioni sulle eccezioni su x64 processori, vedere [eccezioni (x64)](../build/exception-handling-x64.md).  
   
-## Vedere anche  
- [Riferimenti del linguaggio C\+\+](../cpp/cpp-language-reference.md)
+## <a name="see-also"></a>Vedere anche  
+ [Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)

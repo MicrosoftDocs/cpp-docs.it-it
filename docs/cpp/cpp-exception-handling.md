@@ -1,52 +1,68 @@
 ---
-title: "Gestione delle eccezioni C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "gestione delle eccezioni di C++"
-  - "Visual C++, gestione eccezioni"
+title: Gestione delle eccezioni C++ | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- C++ exception handling
+- Visual C++, exception handling
 ms.assetid: 65f80b44-9d0f-4d17-b910-07205a5c5c40
 caps.latest.revision: 14
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Gestione delle eccezioni C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 9e23f99ad4c2b2a1129fa318fe6960e1c08df21d
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-Il linguaggio C\+\+ fornisce supporto predefinito per la generazione e l'intercettazione delle eccezioni.  Durante la programmazione in C\+\+, è quasi sempre necessario usare il supporto predefinito delle eccezioni di C\+\+ come descritto in questa sezione.  
+---
+# <a name="c-exception-handling"></a>Gestione delle eccezioni C++
+Il linguaggio C++ fornisce supporto predefinito per la generazione e l'intercettazione delle eccezioni. Durante la programmazione in C++, è quasi sempre necessario usare il supporto predefinito delle eccezioni di C++ come descritto in questa sezione.  
   
- Per abilitare la gestione delle eccezioni C\+\+ nel codice, usare [\/EHsc](../build/reference/eh-exception-handling-model.md).  
+ Per abilitare la gestione del codice delle eccezioni C++, utilizzare [/EHsc](../build/reference/eh-exception-handling-model.md).  
   
-## Contenuto della sezione  
- Queste indicazioni sulla gestione delle eccezioni C\+\+ includono:  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ Queste indicazioni sulla gestione delle eccezioni C++ includono:  
   
--   [Istruzioni try, catch e throw](../cpp/try-throw-and-catch-statements-cpp.md)  
+-   [Try, catch e throw istruzioni](../cpp/try-throw-and-catch-statements-cpp.md)  
   
--   [Modalità di valutazione dei blocchi catch](../cpp/how-catch-blocks-are-evaluated-cpp.md)  
+-   [Modalità di valutazione dei blocchi Catch](../cpp/how-catch-blocks-are-evaluated-cpp.md)  
   
--   [Eccezioni e rimozione dello stack](../cpp/exceptions-and-stack-unwinding-in-cpp.md)  
+-   [Eccezioni e rimozione dello Stack](../cpp/exceptions-and-stack-unwinding-in-cpp.md)  
   
--   [Specifiche delle eccezioni](../cpp/exception-specifications-throw-cpp.md)  
+-   [Specifiche di eccezione](../cpp/exception-specifications-throw-cpp.md)  
   
 -   [noexcept](../cpp/noexcept-cpp.md)  
   
--   [Eccezioni C\+\+ non gestite](../cpp/unhandled-cpp-exceptions.md)  
+-   [Eccezioni C++ non gestite](../cpp/unhandled-cpp-exceptions.md)  
   
--   [Combinazione di eccezioni C \(strutturate\) e C\+\+](../cpp/mixing-c-structured-and-cpp-exceptions.md)  
+-   [Combinazione di eccezioni C (strutturate) e C++](../cpp/mixing-c-structured-and-cpp-exceptions.md)  
   
-## Supporto per eccezioni MFC precedenti  
- A partire dalla versione 4.0, MFC usa il meccanismo di gestione delle eccezioni C\+\+.  Sebbene sia consigliabile usare la gestione delle eccezioni C\+\+ nel nuovo codice, MFC versione 4.0 e successive mantiene le macro delle versioni precedenti in modo da non causare problemi al vecchio codice.  Le macro e il nuovo meccanismo possono essere usati insieme.  Per informazioni sull'utilizzo combinato delle macro e della gestione delle eccezioni C\+\+ e sulla conversione del vecchio codice per l'utilizzo del nuovo meccanismo, vedere gli articoli [Eccezioni: utilizzo delle macro MFC e delle eccezioni C\+\+](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md) e [Eccezioni: conversione dalle macro delle eccezioni MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md).  Le macro delle eccezioni MFC precedenti, se ancora usate, restituiscono parole chiave delle eccezioni C\+\+.  Vedere [Eccezioni: modifiche alle macro delle eccezioni nella versione 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md).  
+## <a name="support-for-earlier-mfc-exceptions"></a>Supporto per eccezioni MFC precedenti  
+ A partire dalla versione 4.0, MFC usa il meccanismo di gestione delle eccezioni C++. Sebbene sia consigliabile usare la gestione delle eccezioni C++ nel nuovo codice, MFC versione 4.0 e successive mantiene le macro delle versioni precedenti in modo da non causare problemi al vecchio codice. Le macro e il nuovo meccanismo possono essere usati insieme. Per informazioni sull'utilizzo combinato delle macro e gestione delle eccezioni C++ e sulla conversione del vecchio codice per utilizzare il nuovo meccanismo, vedere gli articoli [eccezioni: utilizzo delle macro MFC ed eccezioni C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md) e [eccezioni: conversione da MFC Macro eccezioni](../mfc/exceptions-converting-from-mfc-exception-macros.md). Le macro delle eccezioni MFC precedenti, se ancora usate, restituiscono parole chiave delle eccezioni C++. Vedere [eccezioni: modifiche alle macro eccezioni nella versione 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Gestione delle eccezioni](../cpp/exception-handling-in-visual-cpp.md)

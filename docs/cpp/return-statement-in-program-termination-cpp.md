@@ -1,31 +1,47 @@
 ---
-title: "Istruzione return in chiusura del programma (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tipi di dati [C++], tipi restituiti dalla funzione"
-  - "tipi restituiti dalla funzione, return (istruzione)"
-  - "return (parola chiave) [C++], sintassi"
+title: Istruzione return in chiusura programma (C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- data types [C++], function return types
+- function return types, return statement
+- return keyword [C++], syntax
 ms.assetid: 66d002ab-5625-4b68-8446-71e1b8fcdbd8
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Istruzione return in chiusura del programma (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: f5ba078ef364a046a9e635d8b2632558e426f4b8
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-Dal punto di vista funzionale, la pubblicazione dell'istruzione `return` da **main** è equivalente alla chiamata della funzione **exit**.  Si consideri l'esempio seguente:  
+---
+# <a name="return-statement-in-program-termination-c"></a>Istruzione return in chiusura del programma (C++)
+Emissione un `return` from dell'istruzione **principale** è funzionalmente equivalente alla chiamata di **uscire** (funzione). Si consideri l'esempio seguente:  
   
 ```  
 // return_statement.cpp  
@@ -37,7 +53,7 @@ int main()
 }  
 ```  
   
- Le istruzioni `return` e **exit** nell'esempio precedente sono identiche dal punto di vista funzionale.  Tuttavia, in C\+\+ è necessario che le funzioni contenenti tipi restituiti diversi da `void` restituiscano un valore.  L'istruzione `return` consente di restituire un valore da **main**.  
+ Il **uscire** e `return` istruzioni nell'esempio precedente sono identiche. Tuttavia, in C++ è necessario che le funzioni contenenti tipi restituiti diversi da `void` restituiscano un valore. Il `return` istruzione consente di restituire un valore da **principale**.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Chiusura del programma](../cpp/program-termination.md)

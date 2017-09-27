@@ -1,38 +1,55 @@
 ---
-title: "Operatore __uuidof | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__LIBID_"
-  - "__LIBID_cpp"
-  - "__uuidof"
-  - "__uuidof_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__LIBID_ (parola chiave) [C++]"
-  - "__uuidof (parola chiave) [C++]"
+title: operatore uuidof | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __LIBID_
+- __LIBID_cpp
+- __uuidof
+- __uuidof_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- __uuidof keyword [C++]
+- __LIBID_ keyword [C++]
 ms.assetid: badfe709-809b-4b66-ad48-ee35039d25c6
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Operatore __uuidof
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 172ed545eb2c46db8df12e3e12a2296a5f172a1f
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-**Specifici di Microsoft**  
+---
+# <a name="uuidof-operator"></a>Operatore __uuidof
+**Sezione specifica Microsoft**  
   
  Recupera il GUID collegato all'espressione.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -41,22 +58,22 @@ caps.handback.revision: 9
 )  
 ```  
   
-## Note  
- L'*espressione* può essere un nome di tipo, un puntatore, un reference, o un array di quel tipo, un modello specializzato su questi tipi, o una variabile di questi tipi.  L'argomento è valido finché il compilatore può utilizzarlo per trovare il GUID collegato.  
+## <a name="remarks"></a>Note  
+ Il *espressione* può essere un nome di tipo, puntatore, riferimento o matrice di quel tipo, un modello specializzato su questi tipi, o una variabile di questi tipi. L'argomento è valido finché il compilatore può utilizzarlo per trovare il GUID collegato.  
   
- Un caso speciale di questa funzione intrinseca è quando **0** o **NULL** viene fornito come argomento.  In questo caso, `__uuidof` restituirà un GUID composto da zeri.  
+ Un caso speciale di questa funzione intrinseca è il caso entrambi **0** o **NULL** viene fornito come argomento. In questo caso, `__uuidof` restituirà un GUID composto da zero.  
   
- Utilizzare la parola chiave per estrarre il GUID collegato:  
+ Utilizzare questa parola chiave per estrarre il GUID collegato:  
   
--   Un oggetto dall'attributo esteso [uuid](../cpp/uuid-cpp.md).  
+-   Un oggetto tramite il [uuid](../cpp/uuid-cpp.md) degli attributi estesa.  
   
--   Un blocco di libreria creato con l'attributo [modulo](../windows/module-cpp.md).  
+-   Un blocco di libreria creato con il [modulo](../windows/module-cpp.md) attributo.  
   
 > [!NOTE]
->  In una compilazione con debug, `__uuidof` inizializza sempre dinamicamente un oggetto \(a runtime\).  In una build per la release, `__uuidof` può inizializzare staticamente \(in fase di compilazione\) un oggetto.  
+>  In una compilazione di debug `__uuidof` inizializza sempre dinamicamente un oggetto (in fase di esecuzione). In una build di rilascio `__uuidof` può inizializzare staticamente (in fase di compilazione) un oggetto.  
   
-## Esempio  
- Il codice seguente \(compilato con ole32.lib\) visualizza il uuid di un blocco di libreria creato con l'attributo del modulo:  
+## <a name="example"></a>Esempio  
+ Il codice seguente (compilato con ole32.lib) visualizza l'elemento uuid di un blocco di libreria creato con l'attributo module:  
   
 ```  
 // expre_uuidof.cpp  
@@ -79,15 +96,15 @@ int main() {
 }  
 ```  
   
-## Commenti  
- Nei casi in cui il nome della libreria non sia necessario, è possibile utilizzare \_\_LIBID\_ anziché `__uuidof`.  Ad esempio:  
+## <a name="comments"></a>Commenti  
+ Nei casi in cui il nome della libreria non è più in ambito, è possibile utilizzare __LIBID\_ anziché `__uuidof`. Ad esempio:  
   
 ```  
 StringFromCLSID(__LIBID_, &lpolestr);  
 ```  
   
- **Specifica END Microsoft**  
+ **Fine sezione specifica Microsoft**  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Espressioni con operatori unari](../cpp/expressions-with-unary-operators.md)   
- [Parole chiave C\+\+](../cpp/keywords-cpp.md)
+ [Parole chiave](../cpp/keywords-cpp.md)

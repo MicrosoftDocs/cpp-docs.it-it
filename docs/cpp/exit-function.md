@@ -1,39 +1,56 @@
 ---
-title: "Funzione exit | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Exit"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "exit (funzione)"
+title: Exit (funzione) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- Exit
+dev_langs:
+- C++
+helpviewer_keywords:
+- exit function
 ms.assetid: 26ce439f-81e2-431c-9ff8-a09a96f32127
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Funzione exit
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 240636bf7b6f10421c5d4ebd202a5fb3473a819d
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-La funzione **exit**, dichiarata anche nel file di inclusione standard STDLIB.H, termina un programma C\+\+.  
+---
+# <a name="exit-function"></a>Funzione exit
+Il **uscire** funzione, dichiarata in un file di inclusione standard STDLIB. H, termina un programma C++.  
   
- Il valore fornito come argomento a **exit** viene restituito al sistema operativo come codice restituito o codice di uscita del programma.  Per convenzione, un codice restituito uguale a zero indica che il programma è stato completato correttamente.  
+ Il valore fornito come argomento di **uscire** viene restituito al sistema operativo come codice di codice o di uscita restituito del programma. Per convenzione, un codice restituito uguale a zero indica che il programma è stato completato correttamente.  
   
 > [!NOTE]
 >  È possibile utilizzare costanti `EXIT_FAILURE` e `EXIT_SUCCESS`, definite in STDLIB.H, per indicare l'esito positivo o negativo del programma.  
   
- La chiamata di un'istruzione `return` da parte della funzione **main** equivale alla chiamata della funzione **exit** con il valore restituito come argomento.  
+ Emissione di un `return` from dell'istruzione il **principale** funzione è equivalente alla chiamata al metodo il **uscire** funzione con il valore restituito come argomento.  
   
- Per ulteriori informazioni, vedere [exit](../c-runtime-library/reference/exit-exit-exit.md) in *Riferimenti alla libreria di runtime*.  
+ Per ulteriori informazioni, vedere [uscire](../c-runtime-library/reference/exit-exit-exit.md) nel *riferimenti alla libreria di Run-Time*.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Chiusura del programma](../cpp/program-termination.md)

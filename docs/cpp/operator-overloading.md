@@ -1,59 +1,76 @@
 ---
-title: "Overload degli operatori | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "operator_cpp"
-  - "operator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operatori non ridefinibili"
-  - "operator (parola chiave) [C++]"
-  - "overload di operatori"
-  - "operatori [C++], overload"
-  - "operatori ridefinibili"
+title: Overload dell'operatore | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- operator_cpp
+- operator
+dev_langs:
+- C++
+helpviewer_keywords:
+- redefinable operators
+- non-redefinable operators
+- operator keyword [C++]
+- operators [C++], overloading
+- operator overloading
 ms.assetid: 56ad4c4f-dd0c-45e0-adaa-08fe98cb1f8e
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Overload degli operatori
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 5ac9415ec186760a70394772ffaff011d7c68c95
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-La parola chiave `operator` dichiara una funzione che specifica il significato di `operator-symbol` quando viene applicato a istanze di una classe.  In tal modo è possibile assegnare più significati all'operatore, che diventa quindi operatore di overload.  Il compilatore distingue tra i diversi significati di un operatore esaminando i tipi degli operandi.  
+---
+# <a name="operator-overloading"></a>Overload degli operatori
+La parola chiave `operator` dichiara una funzione che specifica il significato di `operator-symbol` quando viene applicato a istanze di una classe. In tal modo è possibile assegnare più significati all'operatore, che diventa quindi operatore di overload. Il compilatore distingue tra i diversi significati di un operatore esaminando i tipi degli operandi.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
 type operator operator-symbol ( parameter-list )  
 ```  
   
-## Note  
- È possibile ridefinire la funzione della maggior parte degli operatori incorporati globalmente o classe per classe.  Gli operatori di overload vengono implementati come funzioni.  
+## <a name="remarks"></a>Note  
+ È possibile ridefinire la funzione della maggior parte degli operatori incorporati globalmente o classe per classe. Gli operatori di overload vengono implementati come funzioni.  
   
- Il nome di un operatore di overload è `operator``x`, in cui `x` è l'operatore come appare nella tabella seguente.  Ad esempio per eseguire l'overload dell'operatore di addizione, viene definita una funzione denominata `operator+`.  Analogamente, per eseguire l'overload dell'operatore di addizione\/assegnazione `+=`, è necessario definire una funzione denominata `operator+=`.  
+ Il nome di un operatore di overload è `operator x`, dove `x` è l'operatore come appare nella tabella seguente. Ad esempio per eseguire l'overload dell'operatore di addizione, viene definita una funzione denominata `operator+`. Analogamente, per eseguire l'overload dell'operatore di addizione/assegnazione `+=`, è necessario definire una funzione denominata `operator+=`.  
   
-### Operatori ridefinibili  
+### <a name="redefinable-operators"></a>Operatori ridefinibili  
   
 |Operatore|Nome|Tipo|  
-|---------------|----------|----------|  
+|--------------|----------|----------|  
 |`,`|Virgola|Binario|  
 |`!`|NOT logico|Unario|  
 |`!=`|Disuguaglianza|Binario|  
 |`%`|Modulo|Binario|  
 |`%=`|Assegnazione modulo|Binario|  
 |`&`|AND bit per bit|Binario|  
-|`&`|Address\-of|Unario|  
+|`&`|Address-of|Unario|  
 |`&&`|AND logico|Binario|  
 |`&=`|Assegnazione AND bit per bit|Binario|  
 |`( )`|Chiamata di funzione|—|  
@@ -65,12 +82,12 @@ type operator operator-symbol ( parameter-list )
 |`+`|Più unario|Unario|  
 |`++`|Incremento <sup>1</sup>|Unario|  
 |`+=`|Assegnazione di addizione|Binario|  
-|`–`|Sottrazione|Binario|  
-|`–`|Negazione unaria|Unario|  
-|`––`|Decremento <sup>1</sup>|Unario|  
-|`–=`|Assegnazione di sottrazione|Binario|  
-|`–>`|Selezione dei membri|Binario|  
-|`–>*`|Selezione puntatore a membro|Binario|  
+|`-`|Sottrazione|Binario|  
+|`-`|Negazione unaria|Unario|  
+|`--`|Decremento <sup>1</sup>|Unario|  
+|`-=`|Assegnazione di sottrazione|Binario|  
+|`->`|Selezione dei membri|Binario|  
+|`->*`|Selezione puntatore a membro|Binario|  
 |`/`|Divisione|Binario|  
 |`/=`|Assegnazione di divisione|Binario|  
 |`<`|Minore di|Binario|  
@@ -94,9 +111,9 @@ type operator operator-symbol ( parameter-list )
 |`new`|`New`|—|  
 |`conversion operators`|operatori di conversione|Unario|  
   
- 1   Esistono due versioni degli operatori di incremento e decremento unari, ovvero incremento prefisso e incremento suffisso.  
+ 1 incrementano di due versioni dell'operatore unario e gli operatori di decremento presente: incremento prefisso e incremento suffisso.  
   
- Per altre informazioni, vedere [Regole generali per overload di operatori](../cpp/general-rules-for-operator-overloading.md).  Negli argomenti seguenti vengono descritti i vincoli per le diverse categorie di operatori di overload:  
+ Vedere [regole generali per overload di operatori](../cpp/general-rules-for-operator-overloading.md) per ulteriori informazioni. Negli argomenti seguenti vengono descritti i vincoli per le diverse categorie di operatori di overload:  
   
 -   [Operatori unari](../cpp/overloading-unary-operators.md)  
   
@@ -112,11 +129,11 @@ type operator operator-symbol ( parameter-list )
   
 -   [Incremento e decremento](../cpp/increment-and-decrement-operator-overloading-cpp.md).  
   
--   [Conversioni](../cpp/user-defined-type-conversions-cpp.md)  
+-   [Conversioni di tipo definito dall'utente](../cpp/user-defined-type-conversions-cpp.md)  
   
- Gli operatori elencati nella tabella seguente non possono essere sottoposti a overload.  La tabella include i simboli del preprocessore `#` e `##`.  
+ Gli operatori elencati nella tabella seguente non possono essere sottoposti a overload. La tabella include i simboli del preprocessore `#` e `##`.  
   
-### Operatori non ridefinibili  
+### <a name="nonredefinable-operators"></a>Operatori non ridefinibili  
   
 |||  
 |-|-|  
@@ -124,9 +141,9 @@ type operator operator-symbol ( parameter-list )
 |`.`|Selezione dei membri|  
 |`.*`|Selezione puntatore a membro|  
 |`::`|Risoluzione ambito|  
-|`?  :`|Condizionale|  
-|`#`|Preprocessore \- Conversione in stringa|  
-|`##`|Preprocessore \- Concatenamento|  
+|`? :`|Condizionale|  
+|`#`|Preprocessore - Conversione in stringa|  
+|`##`|Preprocessore - Concatenamento|  
   
  Anche se gli operatori di overload vengono in genere chiamati in modo implicito dal compilatore quando vengono rilevati nel codice, possono essere chiamati in modo esplicito in modo analogo a qualsiasi altra funzione di membro o non membro:  
   
@@ -135,7 +152,7 @@ Point pt;
 pt.operator+( 3 );  // Call addition operator to add 3 to pt.  
 ```  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Nell'esempio seguente viene eseguito l'overload dell'operatore `+` per sommare due numeri complessi e restituire il risultato.  
   
 ```  
@@ -167,13 +184,13 @@ int main() {
 }  
 ```  
   
-## Output  
+## <a name="output"></a>Output  
   
 ```  
 6.8, 11.2  
 ```  
   
-## Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 1.  [Regole generali per overload di operatori](../cpp/general-rules-for-operator-overloading.md)  
   
@@ -189,6 +206,6 @@ int main() {
   
 7.  [Accesso ai membri](../cpp/member-access.md)  
   
-## Vedere anche  
- [Operatori C\+\+](../misc/cpp-operators.md)   
- [Parole chiave C\+\+](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>Vedere anche  
+ [Operatori C++ predefiniti, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Parole chiave](../cpp/keywords-cpp.md)

@@ -1,59 +1,77 @@
 ---
-title: "Definizioni di argomenti | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "argc (argomento)"
-  - "argomenti [C++], main (funzione)"
-  - "argv (argomento)"
-  - "envp (argomento)"
-  - "main (funzione), argomenti"
+title: Definizioni di argomenti | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- envp argument
+- main function, arguments
+- arguments [C++], for main function
+- argv argument
+- argc argument
 ms.assetid: 6148cbf3-ebe8-44f2-b277-de4b723991c7
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Definizioni di argomenti
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: d50e32a54cdb10af4adbfb3cfda64b8f1b21b2eb
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="argument-definitions"></a>Definizioni di argomenti
 Gli argomenti nel prototipo  
   
 ```  
   
-int main( int argc[ , char *argv[ ] [, char *envp[ ] ] ] ); int wmain( int argc[ , wchar_t *argv[ ] [, wchar_t *envp[ ] ] ] );  
+int main( int  
+argc[ ,char*argv[] [,char*envp[] ] ] );intwmain(intargc[ ,wchar_t*argv[] [,wchar_t*envp[] ] ] );  
 ```  
   
- consentono di eseguire l'utile analisi della riga di comando di argomenti e, facoltativamente, di accedere alle variabili di ambiente.  Le definizioni degli argomenti sono le seguenti:  
+ consentono di eseguire l'utile analisi della riga di comando di argomenti e, facoltativamente, di accedere alle variabili di ambiente. Le definizioni degli argomenti sono le seguenti:  
   
  `argc`  
- Un intero contenente il numero di argomenti che seguono in `argv`.  Il parametro `argc` è sempre maggiore di o uguale a 1.  
+ Un intero contenente il numero di argomenti che seguono in `argv`. Il parametro `argc` è sempre maggiore di o uguale a 1.  
   
  `argv`  
- Una matrice di stringhe con terminazione null che rappresentano gli argomenti della riga di comando immessi dall'utente del programma.  Per convenzione, `argv`**\[0\]** è il comando con cui il programma viene richiamato, `argv`**\[1\]** è il primo argomento della riga di comando e così via fino a `argv`**\[**`argc`**\]**, che è sempre **NULL**.  Per informazioni sull'eliminazione dell'elaborazione della riga di comando, vedere [Personalizzazione dell'elaborazione della riga di comando](../cpp/customizing-cpp-command-line-processing.md).  
+ Una matrice di stringhe con terminazione null che rappresentano gli argomenti della riga di comando immessi dall'utente del programma. Per convenzione, `argv` **[0]** è il comando con cui viene richiamato il programma, `argv` **[1]** è il primo argomento della riga di comando e così via, fino a `argv` ** [**`argc`**]**, che è sempre **NULL**. Vedere [personalizzazione dell'elaborazione della riga di comando](../cpp/customizing-cpp-command-line-processing.md) per informazioni sull'elaborazione della riga di comando di eliminazione.  
   
- Il primo argomento della riga di comando è sempre `argv`**\[1\]** e l'ultimo è `argv`**\[**`argc` \- 1**\]**.  
+ Il primo argomento della riga di comando è sempre `argv` **[1]** e l'ultimo è `argv` **[** `argc` - 1**]**.  
   
 > [!NOTE]
->  Per convenzione, `argv`**\[0\]** è il comando con cui il programma viene richiamato.  Tuttavia, è possibile generare un processo utilizzando [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197) e, se si utilizza sia il primo che il secondo argomento, \(`lpApplicationName` e `lpCommandLine`\), `argv`**\[0\]** non può essere il nome eseguibile; utilizzare [GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197) per recuperare il nome eseguibile e il relativo percorso completo.  
+>  Per convenzione, `argv`**[0]** è il comando con cui il programma viene chiamato.  Tuttavia, è possibile generare un processo utilizzando [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197) e se si utilizza sia il primo e secondo argomento (`lpApplicationName` e `lpCommandLine`), `argv` **[0]** potrebbe non essere il nome del file eseguibile; Utilizzare [GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197) per recuperare il nome del file eseguibile e il relativo percorso completo.  
   
-## Sezione specifica Microsoft  
+## <a name="microsoft-specific"></a>Sezione specifica Microsoft  
  `envp`  
- La matrice `envp`, che è un'estensione comune in molti sistemi UNIX, viene utilizzata in Microsoft C\+\+.  È una matrice di stringhe che rappresentano le variabili impostate nell'ambiente dell'utente.  Questa matrice viene terminata da una voce **NULL**.  Può essere dichiarata come matrice di puntatori a **char \(char** \*envp\[ \]**\)** o come puntatore a puntatori a **char \(char** \*\* envp**\)**.  Se il programma utilizza **wmain** anziché **main**, utilizzare il tipo di dati `wchar_t` anziché `char`.  Il blocco di ambiente viene passato a **main** e **wmain** è una copia "bloccata" dell'ambiente corrente.  Se successivamente si modifica l'ambiente tramite una chiamata a **putenv** o a `_wputenv`, l'ambiente corrente \(come restituito da `getenv`\/`_wgetenv` e la variabile `_wenviron` \/ `_environ`\) cambia, ma il blocco che fa riferimento a envp rimane invariato.  Per informazioni sull'eliminazione dell'elaborazione dell'ambiente, vedere [Personalizzazione dell'elaborazione della riga di comando](../cpp/customizing-cpp-command-line-processing.md).  Questo argomento è compatibile con ANSI in C, ma non in C\+\+.  
+ La matrice `envp`, che è un'estensione comune in molti sistemi UNIX, viene utilizzata in Microsoft C++. È una matrice di stringhe che rappresentano le variabili impostate nell'ambiente dell'utente. Questa matrice viene terminata da un **NULL** voce. Può essere dichiarata come matrice di puntatori a **char (char** \*envp []**)** o come un puntatore a puntatori a **char (char** \* \* envp**)**. Se il programma utilizza **wmain** anziché **principale**, utilizzare il `wchar_t` del tipo di dati anziché `char`. Il blocco di ambiente passato a **principale** e **wmain** è una copia "bloccata" dell'ambiente corrente. Se successivamente si modifica l'ambiente tramite una chiamata a **putenv** o `_wputenv`, l'ambiente corrente (come restituito da `getenv` / `_wgetenv` e `_environ` /  `_wenviron` variabile) verrà modifica, ma il blocco a cui fa riferimento a envp non cambierà. Vedere [personalizzazione dell'elaborazione della riga di comando](../cpp/customizing-cpp-command-line-processing.md) per informazioni su soppressione elaborazione ambiente. Questo argomento è compatibile con ANSI in C, ma non in C++.  
   
-## Fine sezione specifica Microsoft  
+**Fine sezione specifica Microsoft**  
   
-## Esempio  
- Nell'esempio riportato di seguito viene illustrato come utilizzare gli argomenti `argc`, `argv` e `envp` per **main**:  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come utilizzare il `argc`, `argv`, e `envp` argomenti **principale**:  
   
 ```  
 // argument_definitions.cpp  
@@ -79,5 +97,5 @@ int main( int argc, char *argv[], char *envp[] ) {
 }  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [main: avvio del programma](../cpp/main-program-startup.md)

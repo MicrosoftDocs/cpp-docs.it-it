@@ -1,36 +1,53 @@
 ---
-title: "Collegamenti in nomi con ambito blocco | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ambito blocco [C++]"
-  - "collegamento esterno, regole di collegamento ambito"
-  - "collegamento [C++], regole di collegamento ambito"
-  - "nomi [C++], regole di collegamento ambito"
-  - "ambito [C++], regole di collegamento"
+title: Collegamenti in nomi con ambito blocco | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- scope [C++], linkage rules
+- linkage [C++], scope linkage rules
+- names [C++], scope linkage rules
+- block scope [C++]
+- external linkage, scope linkage rules
 ms.assetid: 73efa91a-f761-47f7-bbd9-9f9e3508e218
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Collegamenti in nomi con ambito blocco
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: de093c90e0da4a906d8aefebfb7048733c1a1f1d
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-Le seguenti regole di collegamento vengono applicate ai nomi con ambito blocco \(nomi locali\):  
+---
+# <a name="linkage-in-names-with-block-scope"></a>Collegamenti in nomi con ambito del blocco
+Le seguenti regole di collegamento vengono applicate ai nomi con ambito del blocco (nomi locali):  
   
--   I nomi dichiarati come `extern` dispongono di collegamento esterno a meno che non siano stati in precedenza dichiarati come **static**.  
+-   I nomi dichiarati come `extern` hanno un collegamento esterno a meno che non sono state dichiarate in precedenza come **statico**.  
   
--   Tutti gli altri nomi con ambito blocco non dispongono di collegamento.  
+-   Tutti gli altri nomi con ambito del blocco non dispongono di collegamento.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Programma e collegamento](../cpp/program-and-linkage-cpp.md)

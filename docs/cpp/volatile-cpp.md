@@ -1,84 +1,100 @@
 ---
-title: "volatile (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "volatile_cpp"
-  - "volatile"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "gestori di interrupt e parola chiave volatile"
-  - "oggetti [C++], volatile"
-  - "volatile (parola chiave) [C++]"
-  - "oggetti volatili"
+title: volatile (C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- volatile_cpp
+- volatile
+dev_langs:
+- C++
+helpviewer_keywords:
+- interrupt handlers and volatile keyword
+- volatile keyword [C++]
+- volatile objects
+- objects [C++], volatile
 ms.assetid: 81db4a85-ed5a-4a2c-9a53-5d07a771d2de
 caps.latest.revision: 43
-caps.handback.revision: 43
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# volatile (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 1bbbceaa8f170ad8c75173d60d38e5dd3df1fbdd
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-Un qualificatore di tipo che è possibile utilizzare per dichiarare che un oggetto può essere modificato nel programma dall'hardware.  
+---
+# <a name="volatile-c"></a>volatile (C++)
+Qualificatore di tipo che è possibile utilizzare per dichiarare che un oggetto può essere modificato nel programma dall'hardware.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
 volatile declarator ;  
 ```  
   
-## Note  
- È possibile utilizzare l'opzione del compilatore [\/volatile](../build/reference/volatile-volatile-keyword-interpretation.md) per modificare il modo in cui il compilatore interpreta questa parola chiave.  
+## <a name="remarks"></a>Note  
+ È possibile utilizzare il [/volatile](../build/reference/volatile-volatile-keyword-interpretation.md) opzione del compilatore per modificare la modalità con cui il compilatore interpreta questa parola chiave.  
   
- Visual Studio interpreta la parola chiave `volatile` in modo diverso a seconda dell'architettura di destinazione.  Per ARM, se nessuna opzione del compilatore **\/volatile** è specificata, il compilatore si comporta come se **\/volatile:iso** fosse specificata.  Per le architetture diverse da ARM, se nessuna opzione **\/volatile** del compilatore è specificata, il compilatore si comporta come se **\/volatile:ms** fosse specificata; pertanto, su architetture diverse da ARM si consiglia vivamente di specificare **\/volatile:iso** e di utilizzare primitive esplicite di sincronizzazione e intrinseche al compilatore quando si ha a che fare con memoria condivisa fra thread.  
+ In Visual Studio la parola chiave `volatile` viene interpretata in modo diverso a seconda dell'architettura di destinazione. Per ARM, se non **/volatile** è specificata l'opzione del compilatore, il compilatore esegue come se **/volatile:iso** sono state specificate. Per le architetture diverse da ARM, se non **/volatile** è specificata l'opzione del compilatore, il compilatore esegue come se **/volatile: MS** sono stati specificati; pertanto, per le architetture diversa da ARM si consiglia è consigliabile che specifica **/volatile:iso**e utilizzare primitive esplicite di sincronizzazione e intrinseche al compilatore quando si utilizzano memoria condivisa tra thread.  
   
- È possibile utilizzare il qualificatore `volatile` per fornire l'accesso alle locazioni di memoria utilizzate dai processi asincroni come i gestori di interrupt.  
+ È possibile utilizzare il qualificatore `volatile` per fornire l'accesso alle posizioni di memoria utilizzate dai processi asincroni come i gestori di interrupt.  
   
- Quando `volatile` viene utilizzata su una variabile che ha la parola chiave [\_\_restrict](../cpp/extension-restrict.md), `volatile` ha la precedenza.  
+ Quando `volatile` viene utilizzato in una variabile che dispone anche di [Restrict](../cpp/extension-restrict.md) (parola chiave), `volatile` ha la precedenza.  
   
- Se un membro `struct` è contrassegnato come `volatile`, `volatile` viene propagato all'intera struttura.  Se una struttura non ha una lunghezza che possa essere copiata sull'architettura corrente con una istruzione, `volatile` può essere completamente persa su tale struttura.  
+ Se un membro `struct` è contrassegnato come `volatile`, la parola chiave `volatile` viene propagata all'intera struttura. Se una struttura non ha una lunghezza che ne consente la copiata sull'architettura corrente tramite un'istruzione, la parola chiave `volatile` può essere completamente persa in tale struttura.  
   
- La parola chiave `volatile` potrebbe non avere effetto su un campo se una delle seguenti condizioni si verificasse:  
+ La parola chiave `volatile` potrebbe non avere alcun effetto su un campo se si verifica una delle condizioni seguenti:  
   
--   La lunghezza del campo volatile supera la dimensione massima che può essere copiata nell'architettura corrente mediante un'istruzione.  
+-   La lunghezza del campo relativo alla parola chiave volatile supera la dimensione massima che ne consente la copia nell'architettura corrente mediante un'istruzione.  
   
--   La lunghezza della `struct` più esterna—oppure se è un membro di una `struct` eventualmente annidata— supera la dimensione massima che può essere copiata nell'architettura corrente mediante una istruzione.  
+-   La lunghezza dell'elemento più esterno con parola chiave `struct` oppure di un membro di un oggetto `struct` eventualmente annidato supera la dimensione massima che ne consente la copia nell'architettura corrente mediante un'istruzione.  
   
- Sebbene il processore non riordini gli accessi alla memoria un\-cacheable, le variabili un\-cacheable devono essere contrassegnate come `volatile` per garantire che il compilatore non riordini gli accessi alla memoria.  
+ Sebbene il processore non riordini gli accessi non memorizzabili nella cache, le variabili non memorizzabili nella cache devono essere contrassegnate come `volatile` per garantire che il compilatore non riordini gli accessi alla memoria.  
   
- Oggetti che vengono dichiarati come `volatile` non sono utilizzati in determinate ottimizzazioni perché i valori possono cambiare in qualsiasi momento.  Il sistema legge sempre il valore corrente di un oggetto volatile se richiesto, anche se un'istruzione precedente ha richiesto un valore dallo stesso oggetto.  Inoltre, il valore dell'oggetto viene scritto immediatamente nell'assegnamento.  
+ Gli oggetti che vengono dichiarati come `volatile` non sono utilizzati in determinate ottimizzazioni perché i valori possono cambiare in qualsiasi momento.  Il sistema legge sempre il valore corrente di un oggetto di tipo volatile, se richiesto, anche se un'istruzione precedente ha richiesto un valore dallo stesso oggetto.  Inoltre, il valore dell'oggetto viene scritto immediatamente nell'assegnazione.  
   
-## Conformità ISO  
- Se si ha dimestichezza con la parola chiave [Volatile c\#](../Topic/volatile%20\(C%23%20Reference\).md), o familiarità con il comportamento `volatile` nelle versioni precedenti di Visual C\+\+, tenere presente che la parola chiave `volatile` dello standard ISO di C\+\+11 è diversa ed è supportata in Visual Studio quando l'opzione del compilatore [\/volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md) è specificata. \(Per ARM, specificata per impostazione predefinita\).  La parola chiave `volatile` nel codice dello standard ISO di C\+\+11 deve essere utilizzata solo per accessi hardware; da non utilizzare per la comunicazione fra thread.  Per la comunicazione fra thread, fare uso di meccanismi come [std::atomic\<T\>](../standard-library/atomic.md) da [Libreria di modelli standard di C\+\+](../standard-library/cpp-standard-library-reference.md).  
+## <a name="iso-compliant"></a>Conformità ISO  
+ Se si ha familiarità con c# parola chiave volatile o familiarità con il comportamento di `volatile` nelle versioni precedenti di Visual C++, tenere presente che C++ 11 Standard ISO `volatile` (parola chiave) è diversa ed è supportato in Visual Studio quando il [/ /volatile: iso](../build/reference/volatile-volatile-keyword-interpretation.md) è specificata l'opzione del compilatore. Per ARM, l'opzione è specificata per impostazione predefinita. La parola chiave `volatile` nel codice dello standard ISO di C++11 deve essere utilizzata solo per accessi hardware e non per la comunicazione tra thread. Per la comunicazione tra thread, utilizzare meccanismi come [std:: Atomic\<T >](../standard-library/atomic.md) dal [della libreria Standard C++](../standard-library/cpp-standard-library-reference.md).  
   
-## Fine della Conformità ISO  
+## <a name="end-of-iso-compliant"></a>Fine della conformità ISO  
   
-## Specifici di Microsoft  
- Quando l'opzione del compilatore **\/volatile:ms** viene usata—per impostazione predefinita quando l'architettura target è diversa da ARM— il compilatore genera codice aggiuntivo per mantenere l'ordine tra i riferimenti agli oggetti volatili oltre a gestire l'ordine a riferimenti ad altri oggetti globali.  In particolare:  
+## <a name="microsoft-specific"></a>Sezione specifica Microsoft  
+ Quando il **/volatile: MS** viene utilizzata l'opzione del compilatore: per impostazione predefinita quando sono destinate le architetture diverse da ARM, il compilatore genera codice aggiuntivo per mantenere l'ordine tra i riferimenti agli oggetti di tipo volatile oltre a gestire ordine a riferimenti ad altri oggetti globali. In particolare:  
   
--   La scrittura verso un oggetto volatile \(anche noto come volatile write\) presenta semantica Release; ovvero, un riferimento a un oggetto globale o statico che si verifica prima di una scrittura verso un oggetto volatile nella sequenza di istruzione si verificherà prima della volatile write nel binario compilato.  
+-   La scrittura in un oggetto di tipo volatile (nota anche come scrittura di tipo volatile) presenta una semantica di rilascio, ovvero un riferimento a un oggetto globale o statico che preceda una scrittura in un oggetto volatile nella sequenza di istruzioni si verificherà prima della scrittura di tipo volatile nel file binario compilato.  
   
--   Una lettura di un oggetto volatile \(anche noto come volatile read\) dispone di semantica Acquire; ovvero, un riferimento a un oggetto globale o statico che si verifica dopo la lettura della memoria volatile nella sequenza d'istruzione verrà generato dopo la volatile read nel binario compilato.  
+-   Una lettura di un oggetto volatile (nota anche come lettura di tipo volatile) presenta una semantica di acquisizione, ovvero, un riferimento a un oggetto globale o statico che segua una lettura della memoria volatile nella sequenza di istruzioni verrà generato dopo la lettura di tipo volatile nel file binario compilato.  
   
- In questo modo gli oggetti volatili possono essere utilizzati per lock e release della memoria in applicazioni multithreading.  
+ In questo modo gli oggetti di tipo volatile possono essere utilizzati per blocchi e rilasci di memoria in applicazioni multithreading.  
   
 > [!NOTE]
->  Quando si basa sulla garanzia avanzata che è resa disponibile quando è usata l'opzione **\/volatile:ms** del compilatore, il codice potrebbe non essere portabile.  
+>  Quando si basa sulla garanzia avanzata disponibile quando il **/volatile: MS** viene utilizzata l'opzione del compilatore, il codice non è portabile.  
   
-## Specifica END Microsoft  
+**Fine sezione specifica Microsoft**  
   
-## Vedere anche  
- [Parole chiave C\+\+](../cpp/keywords-cpp.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Parole chiave](../cpp/keywords-cpp.md)   
  [const](../cpp/const-cpp.md)   
  [Puntatori const e volatile](../cpp/const-and-volatile-pointers.md)

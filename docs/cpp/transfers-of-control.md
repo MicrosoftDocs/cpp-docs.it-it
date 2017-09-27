@@ -1,31 +1,48 @@
 ---
-title: "Trasferimenti del controllo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "flusso di controllo, esecuzione del branching"
-  - "flusso di controllo, trasferimento del controllo"
+title: Trasferimenti del controllo | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- control flow, branching
+- control flow, transferring control
 ms.assetid: aa51e7f2-060f-4106-b0fe-331f04357423
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Trasferimenti del controllo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: a604c95bb21ad0098a3d4563738971791fc94a07
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-È possibile usare l'istruzione `goto` o un'etichetta **case** in un'istruzione `switch` per specificare un programma che esegue il branching dopo un inizializzatore.  Tale codice non è valido, a meno che la dichiarazione che contiene l'inizializzatore non sia in un blocco incluso dal blocco in cui si verifica l'istruzione di salto.  
+---
+# <a name="transfers-of-control"></a>Trasferimenti del controllo
+È possibile utilizzare il `goto` istruzione o un **case** etichetta un `switch` istruzione per specificare un programma che esegue il branching dopo un inizializzatore. Tale codice non è valido, a meno che la dichiarazione che contiene l'inizializzatore non sia in un blocco incluso dal blocco in cui si verifica l'istruzione di salto.  
   
- Nell'esempio seguente viene illustrato un ciclo che dichiara e inizializza gli oggetti `total`, `ch` e `i`.  È presente anche un'istruzione errata `goto` che trasferisce il controllo dopo un inizializzatore.  
+ Nell'esempio seguente viene illustrato un ciclo che dichiara e inizializza gli oggetti `total`, `ch` e `i`. È presente anche un'istruzione errata `goto` che trasferisce il controllo dopo un inizializzatore.  
   
 ```  
 // transfers_of_control.cpp  
@@ -57,9 +74,8 @@ int main()
 }  
 ```  
   
- Nell'esempio precedente, l'istruzione `goto` prova a trasferire il controllo dopo l'inizializzazione di `i`.  Tuttavia, se `i` è stato dichiarato ma non inizializzato, il trasferimento è valido.  
+ Nell'esempio precedente, l'istruzione `goto` prova a trasferire il controllo dopo l'inizializzazione di `i`. Tuttavia, se `i` è stato dichiarato ma non inizializzato, il trasferimento è valido.  
   
- Gli oggetti `total` e `ch`, dichiarati nel blocco usato come *statement* dell'istruzione `while`, vengono eliminati quando si effettua l'uscita dal blocco, mediante l'istruzione `break`.  
+ Gli oggetti `total` e `ch`, dichiarati nel blocco usato come il *istruzione* del `while` istruzione, vengono eliminati definitivamente quando tale blocco viene chiuso utilizzando il `break` istruzione.  
   
-## Vedere anche  
- [\(NOTINBUILD\) Declaration of Automatic Objects](http://msdn.microsoft.com/it-it/81f941e9-c1b1-4d1c-a28d-70b6ee9765db)
+

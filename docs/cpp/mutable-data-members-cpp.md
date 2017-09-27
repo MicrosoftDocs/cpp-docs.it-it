@@ -1,41 +1,57 @@
 ---
-title: "Membri dati modificabili (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "mutable_cpp"
-  - "mutable"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "mutable (parola chiave) [C++]"
+title: Membri dati modificabili (C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- mutable_cpp
+- mutable
+dev_langs:
+- C++
+helpviewer_keywords:
+- mutable keyword [C++]
 ms.assetid: ebe89746-3d36-43a8-8d69-f426af23f551
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Membri dati modificabili (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: b51f53444b7482575398b68c3a2bf52b3de96e55
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-Questa parola chiave può essere applicata solo a membri dati non dichiarati come static e const di una classe.  Se un membro dati viene dichiarato `mutable`, è consentito assegnare un valore a questo membro dati da una funzione membro **const**.  
+---
+# <a name="mutable-data-members-c"></a>Membri dati modificabili (C++)
+Questa parola chiave può essere applicata solo a membri dati non dichiarati come static e const di una classe. Se viene dichiarato un membro dati `mutable`, è consentito assegnare un valore di questo membro dati da un **const** funzione membro.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
 mutable member-variable-declaration;  
 ```  
   
-## Note  
+## <a name="remarks"></a>Note  
  Ad esempio, il codice seguente compila senza errori perché `m_accessCount` è stato dichiarato `mutable` e pertanto può essere modificato da `GetFlag` anche se `GetFlag` è una funzione membro const.  
   
 ```  
@@ -58,5 +74,5 @@ int main()
 }  
 ```  
   
-## Vedere anche  
- [Parole chiave C\+\+](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>Vedere anche  
+ [Parole chiave](../cpp/keywords-cpp.md)

@@ -1,55 +1,71 @@
 ---
-title: "Modalit&#224; di valutazione dei blocchi catch (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "gestione delle eccezioni di C++, gestori catch"
-  - "catch (parola chiave) [C++], tipi di gestori catch"
-  - "gestione eccezioni, intercettazione ed eliminazione di eccezioni"
-  - "try-catch (parola chiave) [C++], tipi intercettabili"
-  - "tipi [C++], gestione eccezioni"
+title: Come i blocchi Catch vengono valutate (C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- try-catch keyword [C++], catchable types
+- catch keyword [C++], types of catch handlers
+- C++ exception handling, catch handlers
+- exception handling, catching and deleting exceptions
+- types [C++], exception handling
 ms.assetid: 202dbf07-8ace-4b3b-b3ae-4b45c275e0b4
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Modalit&#224; di valutazione dei blocchi catch (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 1098529effb3a15d8f6260ed7167c5553b226857
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-C\+\+ consente di generare eccezioni di qualsiasi tipo, sebbene in genere sia consigliabile generare i tipi derivati da std::exception.  Un'eccezione C\+\+ può essere rilevata da un gestore **catch** che specifica lo stesso tipo dell'eccezione generata o da un gestore in grado di rilevare qualsiasi tipo di eccezione.  
+---
+# <a name="how-catch-blocks-are-evaluated-c"></a>Modalità di valutazione dei blocchi catch (C++)
+C++ consente di generare eccezioni di qualsiasi tipo, sebbene in genere sia consigliabile generare i tipi derivati da std::exception. Un'eccezione C++ può essere rilevata da un **catch** gestore che specifica lo stesso tipo dell'eccezione generata o da un gestore che è possibile intercettare qualsiasi tipo di eccezione.  
   
- Se il tipo di eccezione generata è una classe, che dispone inoltre di una o di più classi base, tale eccezione può essere rilevata da gestori che accettano le classi base del tipo dell'eccezione oppure dai riferimenti alle basi del tipo dell'eccezione.  Si noti che quando un'eccezione viene rilevata da un riferimento, viene associata all'oggetto effettivo dell'eccezione generata. In caso contrario, è una copia \(molto simile a un argomento di una funzione\).  
+ Se il tipo di eccezione generata è una classe, che dispone inoltre di una o di più classi base, tale eccezione può essere rilevata da gestori che accettano le classi base del tipo dell'eccezione oppure dai riferimenti alle basi del tipo dell'eccezione. Si noti che quando un'eccezione viene rilevata da un riferimento, viene associata all'oggetto effettivo dell'eccezione generata. In caso contrario, è una copia (molto simile a un argomento di una funzione).  
   
- Quando viene generata, un'eccezione può essere rilevata dai seguenti tipi di gestori **catch**:  
+ Quando viene generata un'eccezione, può essere rilevata dai seguenti tipi di **catch** gestori:  
   
--   Gestore che accetta qualsiasi tipo \(mediante la sintassi costituita dai puntini di sospensione\).  
+-   Gestore che accetta qualsiasi tipo (mediante la sintassi costituita dai puntini di sospensione).  
   
--   Gestore che accetta lo stesso tipo dell'oggetto eccezione. Poiché è una copia, i modificatori **const** e `volatile` vengono ignorati.  
+-   Gestore che accetta lo stesso tipo dell'oggetto eccezione. perché è una copia, **const** e `volatile` modificatori vengono ignorati.  
   
 -   Gestore che accetta un riferimento allo stesso tipo dell'oggetto eccezione.  
   
--   Gestore che accetta un riferimento a un form **const** o `volatile` dello stesso tipo dell'oggetto eccezione.  
+-   Gestore che accetta un riferimento a un **const** o `volatile` modulo dello stesso tipo dell'oggetto eccezione.  
   
--   Gestore che accetta una classe base dello stesso tipo dell'oggetto eccezione. Poiché è una copia, i modificatori **const** e `volatile` vengono ignorati.  Il gestore **catch** per una classe base non deve precedere il gestore **catch** per la classe derivata.  
+-   Gestore che accetta una classe base dello stesso tipo dell'oggetto eccezione. Poiché si tratta di una copia, **const** e `volatile` modificatori vengono ignorati. Il **catch** gestore per una classe di base non deve precedere il **catch** gestore per la classe derivata.  
   
 -   Gestore che accetta un riferimento a una classe base dello stesso tipo dell'oggetto eccezione.  
   
--   Gestore che accetta un riferimento a un form **const** o `volatile` di una classe base dello stesso tipo dell'oggetto eccezione.  
+-   Gestore che accetta un riferimento a un **const** o `volatile` forma di una classe base dello stesso tipo dell'oggetto eccezione.  
   
 -   Gestore che accetta un puntatore a un elemento in cui un oggetto del puntatore generato può essere convertito tramite le regole di conversione standard del puntatore.  
   
- L'ordine in cui i gestori **catch** vengono visualizzate è significativo perché i gestori per un blocco **try** specificato vengono esaminati nell'ordine di visualizzazione.  Ad esempio, l'inserimento del gestore per una classe base prima del gestore per una classe derivata è un errore.  Dopo che viene rilevato un gestore **catch** corrispondente, i gestori successivi non vengono esaminati.  Di conseguenza, un gestore **catch** con i puntini di sospensione deve essere l'ultimo gestore per il relativo blocco **try**.  Ad esempio:  
+ L'ordine in cui **catch** gestori vengono visualizzate è significativo, perché i gestori per un determinato **provare** blocco vengono esaminate nell'ordine di visualizzazione. Ad esempio, l'inserimento del gestore per una classe base prima del gestore per una classe derivata è un errore. Dopo un corrispondente **catch** gestore viene trovato, i gestori successivi non vengono esaminati. Di conseguenza, i puntini di sospensione **catch** gestore deve essere l'ultimo gestore per il relativo **provare** blocco. Ad esempio:  
   
 ```  
 // ...  
@@ -72,7 +88,7 @@ catch( CExcptClass E )
 }  
 ```  
   
- In questo esempio il gestore **catch** con i puntini di sospensione è l'unico gestore che viene esaminato.  
+ In questo esempio, i puntini di sospensione **catch** gestore è l'unico gestore che viene esaminato.  
   
-## Vedere anche  
- [Gestione delle eccezioni C\+\+](../cpp/cpp-exception-handling.md)
+## <a name="see-also"></a>Vedere anche  
+ [Gestione delle eccezioni C++](../cpp/cpp-exception-handling.md)

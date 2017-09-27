@@ -1,44 +1,60 @@
 ---
-title: "Operatore di riferimento indiretto: * | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "* (operatore)"
-  - "operatore di riferimento indiretto"
-  - "operatore di riferimento indiretto, sintassi"
-  - "operatori [C++], riferimento indiretto"
+title: 'Operatore di riferimento indiretto: * | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- '* operator'
+- indirection operator
+- operators [C++], indirection
+- indirection operator, syntax
 ms.assetid: c50309e1-6c02-4184-9fcb-2e13c1f4ac03
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Operatore di riferimento indiretto: *
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 1f9b758e3bfa1a01ed2b2a428758c3e4a982fdae
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-## Sintassi  
+---
+# <a name="indirection-operator-"></a>Operatore di riferimento indiretto: *
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
 * cast-expression  
 ```  
   
-## Note  
- L'operatore di riferimento indiretto unario \(**\***\) dereferenzia un puntatore; ovvero converte un valore del puntatore in l\-value.  L'operando dell'operatore di riferimento indiretto deve essere un puntatore a un tipo.  Il risultato dell'espressione di riferimento indiretto è il tipo da cui il tipo di puntatore è derivato.  L'utilizzo dell'operatore **\*** in questo contesto è diverso dal relativo significato come operatore binario, ovvero la moltiplicazione.  
+## <a name="remarks"></a>Note  
+ L'operatore di riferimento indiretto unario (**\***) dereferenzia un puntatore; ovvero converte un valore di puntatore in un l-value. L'operando dell'operatore di riferimento indiretto deve essere un puntatore a un tipo. Il risultato dell'espressione di riferimento indiretto è il tipo da cui il tipo di puntatore è derivato. L'utilizzo del ** \* ** operatore in questo contesto è diverso dal relativo significato come operatore binario, ovvero la moltiplicazione.  
   
- Se l'operando punta a una funzione, il risultato è un indicatore di funzione.  Se invece punta a un percorso di archiviazione, il risultato è un valore l\-value che definisce il percorso di archiviazione.  
+ Se l'operando punta a una funzione, il risultato è un indicatore di funzione. Se invece punta a un percorso di archiviazione, il risultato è un valore l-value che definisce il percorso di archiviazione.  
   
- L'operatore di riferimento indiretto può essere utilizzato in modo cumulativo per dereferenziare i puntatori ai puntatori.  Ad esempio:  
+ L'operatore di riferimento indiretto può essere utilizzato in modo cumulativo per dereferenziare i puntatori ai puntatori. Ad esempio:  
   
 ```  
 // expre_Indirection_Operator.cpp  
@@ -60,7 +76,7 @@ int main() {
 }  
 ```  
   
- Se il valore del puntatore non è valido, il risultato sarà indefinito.  Nell'elenco seguente sono incluse alcune delle situazioni più comuni che invalidano un valore del puntatore.  
+ Se il valore del puntatore non è valido, il risultato sarà indefinito. Nell'elenco seguente sono incluse alcune delle situazioni più comuni che invalidano un valore del puntatore.  
   
 -   Il puntatore è un puntatore null.  
   
@@ -70,9 +86,8 @@ int main() {
   
 -   Il puntatore specifica un indirizzo non utilizzato dal programma di esecuzione.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Espressioni con operatori unari](../cpp/expressions-with-unary-operators.md)   
- [Operatori C\+\+](../misc/cpp-operators.md)   
- [Operatori C\+\+, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
- [Operatore address\-of: &](../cpp/address-of-operator-amp.md)   
- [Operatori address\-of e di riferimento indiretto](../c-language/indirection-and-address-of-operators.md)
+ [Operatori C++ predefiniti, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Operatore address-of: &](../cpp/address-of-operator-amp.md)   
+ [Operatori address-of e di riferimento indiretto](../c-language/indirection-and-address-of-operators.md)

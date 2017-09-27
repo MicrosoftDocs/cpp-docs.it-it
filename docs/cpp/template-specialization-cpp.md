@@ -1,37 +1,54 @@
 ---
-title: "Specializzazione parziale di modelli di classe (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "specializzazione parziale di modelli di classe"
+title: Specializzazione di modello (C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- partial specialization of class templates
 ms.assetid: f3c67c0b-3875-434a-b8d8-bb47e99cf4f0
 caps.latest.revision: 12
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Specializzazione parziale di modelli di classe (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: f460497071445cff87308fa9bf6e0d43c6f13a3e
+ms.openlocfilehash: 6e6cf3d4ad48a50d6f4cdffa81cd4ca330ed33a9
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-I modelli di classe possono essere parzialmente specializzati e la classe risultante è ancora un modello.  La specializzazione parziale consente al codice del modello di essere personalizzato parzialmente per tipi specifici in situazioni quali:  
+---
+# <a name="template-specialization-c"></a>Specializzazione di modello (C++)
+
+I modelli di classe possono essere parzialmente specializzati e la classe risultante è ancora un modello. La specializzazione parziale consente al codice del modello di essere personalizzato parzialmente per tipi specifici in situazioni quali:  
   
--   Un modello dispone di più tipi e solo alcuni devono essere specializzati.  Il risultato è un modello con parametri sui tipi rimanenti.  
+-   Un modello dispone di più tipi e solo alcuni devono essere specializzati. Il risultato è un modello con parametri sui tipi rimanenti.  
   
--   Un modello dispone di un solo tipo, ma è necessaria una specializzazione per i tipi di puntatore, riferimento, puntatore a membro o puntatore a funzione.  La specializzazione stessa è ancora un modello sul tipo puntato o cui è stato fatto riferimento.  
+-   Un modello dispone di un solo tipo, ma è necessaria una specializzazione per i tipi di puntatore, riferimento, puntatore a membro o puntatore a funzione. La specializzazione stessa è ancora un modello sul tipo puntato o cui è stato fatto riferimento.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-```  
+```cpp
 // partial_specialization_of_class_templates.cpp  
 template <class T> struct PTS {  
    enum {  
@@ -72,13 +89,17 @@ int main() {
 }  
 ```  
   
-  **PTS\<S\>::IsPointer \=\= 0 PTS\<S\>::IsPointerToDataMember \=\= 0**  
-**PTS\<S\*\>::IsPointer \=\= 1 PTS\<S\*\>::IsPointerToDataMember \=\=0**  
-**PTS\<int S::\*\>::IsPointer \=\= 0 PTS\<int S::\*\>::IsPointerToDataMember \=\= 1**   
-## Esempio  
- Se si dispone di una classe di raccolta di modelli che accetta qualsiasi tipo **T**, è possibile creare una specializzazione parziale che accetta qualsiasi tipo di puntatore **T\***.  Nel codice seguente viene illustrato un modello di classe di raccolta `Bag` e una specializzazione parziale per i tipi di puntatore in cui la raccolta dereferenzia i tipi di puntatore prima di copiarli nella matrice.  La raccolta quindi archivia i valori a cui si fa riferimento.  Con il modello originale, solo i puntatori sarebbero stati archiviati nella raccolta, lasciando i dati vulnerabili all'eliminazione o alla modifica.  In questa versione speciale del puntatore della raccolta, viene aggiunto il codice per verificare un puntatore null nel metodo `add`.  
-  
+```Output  
+PTS<S>::IsPointer == 0 PTS<S>::IsPointerToDataMember == 0  
+PTS<S*>::IsPointer == 1 PTS<S*>::IsPointerToDataMember ==0  
+PTS<int S::*>::IsPointer == 0 PTS<int S::*>::IsPointerToDataMember == 1  
 ```  
+  
+## <a name="example"></a>Esempio
+
+ Se si dispone di una classe collection di modello che accetta qualsiasi tipo **T**, è possibile creare una specializzazione parziale che accetta qualsiasi tipo di puntatore **T***. Nel codice seguente viene illustrato un modello di classe di raccolta `Bag` e una specializzazione parziale per i tipi di puntatore in cui la raccolta dereferenzia i tipi di puntatore prima di copiarli nella matrice. La raccolta quindi archivia i valori a cui si fa riferimento. Con il modello originale, solo i puntatori sarebbero stati archiviati nella raccolta, lasciando i dati vulnerabili all'eliminazione o alla modifica. In questa versione speciale del puntatore della raccolta, viene aggiunto il codice per verificare un puntatore null nel metodo `add`.  
+  
+```cpp
 // partial_specialization_of_class_templates2.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -179,14 +200,18 @@ int main() {
 }  
 ```  
   
-  **10 9 8**   
-**a b c**   
-**Puntatore null\!**  
-**3 87 8 100**    
-## Esempio  
- Nell'esempio seguente viene definita una classe di modello che accetta le coppie di uno dei due tipi, quindi definisce una specializzazione parziale di tale classe di modello specializzata in modo che uno dei tipi sia `int`.  La specializzazione definisce un metodo di ordinamento aggiuntivo che implementa un ordinamento a bolle semplice in base all'intero.  
-  
+```Output  
+10 9 8   
+a b c   
+Null pointer!  
+3 87 8 100   
 ```  
+  
+## <a name="example"></a>Esempio
+
+ Nell'esempio seguente viene definita una classe di modello che accetta le coppie di uno dei due tipi, quindi definisce una specializzazione parziale di tale classe di modello specializzata in modo che uno dei tipi sia `int`. La specializzazione definisce un metodo di ordinamento aggiuntivo che implementa un ordinamento a bolle semplice in base all'intero.  
+  
+```cpp
 // partial_specialization_of_class_templates3.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -315,17 +340,19 @@ int main() {
 }  
 ```  
   
-  **{mela, frutto}**  
-**{banana, frutto}**  
-**{cane, animale}**  
-**{100, mela}**  
-**{101, banana}**  
-**{103, cane}**  
-**{89, gatto}**  
-**Elenco ordinato:**  
-**{89, gatto}**  
-**{100, mela}**  
-**{101, banana}**  
-**{103, cane}**   
-## Vedere anche  
- [Specializzazione esplicita di modelli di classe](../Topic/Explicit%20Specialization%20of%20Class%20Templates.md)
+```Output  
+{apple, fruit}  
+{banana, fruit}  
+{dog, animal}  
+{100, apple}  
+{101, banana}  
+{103, dog}  
+{89, cat}  
+  
+Sorted list:  
+{89, cat}  
+{100, apple}  
+{101, banana}  
+{103, dog}  
+```  
+

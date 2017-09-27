@@ -1,55 +1,71 @@
 ---
-title: "Chiamata di funzione (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operatore di chiamata di funzioni ( )"
-  - "chiamate di funzione, funzioni C++"
-  - "chiamate di funzione, operatore"
-  - "overload di funzioni, operatore di chiamata di funzioni"
-  - "funzioni [C++], chiamata"
-  - "overload di operatori, esempi"
-  - "overload di operatori, chiamate di funzione"
-  - "operatori [C++], overload"
+title: Chiamata di funzione (C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- function calls, C++ functions
+- functions [C++], calling
+- operator overloading, function calls
+- function overloading, function-call operator
+- function calls, operator
+- operators [C++], overloading
+- operator overloading, examples
+- function call operator ( )
 ms.assetid: 5094254a-045b-46f7-8653-69bc91e80dce
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Chiamata di funzione (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: e066ab4c154c04c0c1a39b7f8d0164881a0a96cc
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="function-call-c"></a>Chiamata di funzione (C++)
 L'operatore di chiamata di funzione, richiamato mediante l'uso delle parentesi, è un operatore binario.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
 primary-expression ( expression-list )  
 ```  
   
-## Note  
- In questo contesto, `primary-expression` è il primo operando e `expression-list`, probabilmente un elenco di argomenti vuoto, è il secondo operando.  L'operatore di chiamata di funzione viene usato per operazioni che richiedono un certo numero di parametri.  Questo procedimento funziona perché `expression-list` è un elenco e non un singolo operando.  L'operatore di chiamata di funzione deve essere una funzione membro non statica.  
+## <a name="remarks"></a>Note  
+ In questo contesto, `primary-expression` è il primo operando e `expression-list`, probabilmente un elenco di argomenti vuoto, è il secondo operando. L'operatore di chiamata di funzione viene usato per operazioni che richiedono un certo numero di parametri. Questo procedimento funziona perché `expression-list` è un elenco e non un singolo operando. L'operatore di chiamata di funzione deve essere una funzione membro non statica.  
   
- Quando è sottoposto a overload, l'operatore di chiamata di funzione non modifica le modalità di chiamata delle funzioni, ma il modo in cui deve essere interpretato l'operatore quando viene applicato a oggetti di un dato tipo classe.  Ad esempio, il codice seguente sarebbe normalmente privo di significato:  
+ Quando è sottoposto a overload, l'operatore di chiamata di funzione non modifica le modalità di chiamata delle funzioni, ma il modo in cui deve essere interpretato l'operatore quando viene applicato a oggetti di un dato tipo classe. Ad esempio, il codice seguente sarebbe normalmente privo di significato:  
   
 ```  
 Point pt;  
 pt( 3, 2 );  
 ```  
   
- Dato un appropriato operatore di chiamata di funzione sottoposto a overload, tuttavia, è possibile usare questa sintassi per compensare le 3 unità della coordinata `x` e le 2 unità della coordinata `y`.  Questa definizione viene illustrata dal codice seguente:  
+ Dato un appropriato operatore di chiamata di funzione sottoposto a overload, tuttavia, è possibile usare questa sintassi per compensare le 3 unità della coordinata `x` e le 2 unità della coordinata `y`. Questa definizione viene illustrata dal codice seguente:  
   
 ```  
 // function_call.cpp  
@@ -72,7 +88,7 @@ int main()
   
  Si noti che l'operatore di chiamata di funzione viene applicato al nome di un oggetto e non al nome di una funzione.  
   
- È possibile sottoporre a overload l'operatore di chiamata di funzione anche usando un puntatore a una funzione \(e non la funzione medesima\).  
+ È possibile sottoporre a overload l'operatore di chiamata di funzione anche usando un puntatore a una funzione (e non la funzione medesima).  
   
 ```cpp  
 typedef void(*ptf)();  
@@ -92,8 +108,7 @@ int main()
    S s;  
    s();//operates as s.operator ptf()()  
 }  
-  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Overload degli operatori](../cpp/operator-overloading.md)

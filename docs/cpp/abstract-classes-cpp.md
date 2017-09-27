@@ -1,36 +1,52 @@
 ---
-title: "Classi astratte (C ++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classi astratte"
-  - "classi base, classi astratte"
-  - "classi [C++], abstract"
-  - "classi derivate, classi astratte"
+title: Classi (C++) astratte | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- classes [C++], abstract
+- base classes, abstract classes
+- abstract classes
+- derived classes, abstract classes
 ms.assetid: f0c5975b-39de-4d68-9640-6ce57f4632e6
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Classi astratte (C ++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: d8ee7473b77f943c4f9958dabb0baa4998c284f4
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-Le classi astratte fungono da espressioni di concetti generali da cui è possibile derivare classi più specifiche.  Non è possibile creare un oggetto di un tipo di classe astratta; tuttavia, è possibile usare i puntatori e i riferimenti ai tipi di classe astratta.  
+---
+# <a name="abstract-classes-c"></a>Classi astratte (C ++)
+Le classi astratte fungono da espressioni di concetti generali da cui è possibile derivare classi più specifiche. Non è possibile creare un oggetto di un tipo di classe astratta; tuttavia, è possibile usare i puntatori e i riferimenti ai tipi di classe astratta.  
   
- Una classe che contiene almeno una funzione virtuale pura è considerata una classe astratta.  Le classi derivate dalla classe astratta devono implementare la funzione virtuale pura o sono anch'esse classi astratte.  
+ Una classe che contiene almeno una funzione virtuale pura è considerata una classe astratta. Le classi derivate dalla classe astratta devono implementare la funzione virtuale pura o sono anch'esse classi astratte.  
   
- Una funzione virtuale viene dichiarata come "pura" tramite la sintassi di *pure\-specifier*, descritta in [Implementazione del protocollo di classe](http://msdn.microsoft.com/it-it/a319f1b3-05e8-400e-950a-1ca6eb105ab5).  Si consideri l'esempio illustrato in [Funzioni virtuali](../cpp/virtual-functions.md).  Lo scopo della classe `Account` è di fornire la funzionalità generale, ma gli oggetti di tipo `Account` sono troppo generici per essere utili.  Pertanto, `Account` rappresenta una scelta valida per una classe astratta:  
+ Una funzione virtuale viene dichiarata come "pura" utilizzando il *identificatore pure* sintassi (descritto in [implementazione della classe protocollo](http://msdn.microsoft.com/en-us/a319f1b3-05e8-400e-950a-1ca6eb105ab5)). Si consideri l'esempio presentato [funzioni virtuali](../cpp/virtual-functions.md). Lo scopo della classe `Account` è di fornire la funzionalità generale, ma gli oggetti di tipo `Account` sono troppo generici per essere utili. Pertanto, `Account` rappresenta una scelta valida per una classe astratta:  
   
 ```  
 // deriv_AbstractClasses.cpp  
@@ -46,9 +62,9 @@ private:
   
 ```  
   
- L'unica differenza tra questa dichiarazione e la precedente è che `PrintBalance` è dichiarato con l'identificatore pure \(`= 0`\).  
+ L'unica differenza tra questa dichiarazione e la precedente è che `PrintBalance` è dichiarato con l'identificatore pure (`= 0`).  
   
-## Limitazioni alle classi astratte  
+## <a name="restrictions-on-abstract-classes"></a>Limitazioni alle classi astratte  
  Non è possibile usare le classi astratte per:  
   
 -   Variabili o dati dei membri  
@@ -59,13 +75,13 @@ private:
   
 -   Tipi di conversioni esplicite  
   
- Un'altra restrizione è che se il costruttore per una classe astratta chiama direttamente o indirettamente una funzione virtuale pure, il risultato non è definito.  Tuttavia, i costruttori e i distruttori per le classi astratte possono chiamare altre funzioni membro.  
+ Un'altra restrizione è che se il costruttore per una classe astratta chiama direttamente o indirettamente una funzione virtuale pure, il risultato non è definito. Tuttavia, i costruttori e i distruttori per le classi astratte possono chiamare altre funzioni membro.  
   
  Le funzioni virtuali pure possono essere definite per le classi astratte, ma possono essere chiamate direttamente solo usando la sintassi:  
   
- *abstract\-class\-name* `::` *function\-name***\( \)**  
+ *nome di classe astratta* `::` *-nome della funzione***)**  
   
- Questa operazione può essere utile quando si progettano le gerarchie di classe le cui classi base includono i distruttori virtuali pure, poiché i distruttori di classe base sono sempre chiamati nel processo di eliminazione di un oggetto.  Si consideri l'esempio seguente:  
+ Questa operazione può essere utile quando si progettano le gerarchie di classe le cui classi base includono i distruttori virtuali pure, poiché i distruttori di classe base sono sempre chiamati nel processo di eliminazione definitiva di un oggetto. Si consideri l'esempio seguente:  
   
 ```  
 // Declare an abstract base class with a pure virtual destructor.  
@@ -91,10 +107,10 @@ int main() {
 }  
 ```  
   
- Quando l'oggetto a cui si fa riferimento `pDerived` viene eliminato, viene chiamato il distruttore della classe `derived` e quindi quello della classe `base`.  L'implementazione vuota per la funzione virtuale pure assicura che esiste almeno un'implementazione per la funzione.  
+ Quando l'oggetto a cui si fa riferimento `pDerived` viene eliminato, viene chiamato il distruttore della classe `derived` e quindi quello della classe `base`. L'implementazione vuota per la funzione virtuale pure assicura che esiste almeno un'implementazione per la funzione.  
   
 > [!NOTE]
->  Nell'esempio precedente, la funzione virtuale pure `base::~base` viene chiamata in modo implicito da `derived::~derived`.  È inoltre possibile chiamare le funzioni virtuali pure in modo esplicito usando un nome di funzione membro completo.  
+>  Nell'esempio precedente, la funzione virtuale pure `base::~base` viene chiamata in modo implicito da `derived::~derived`. È inoltre possibile chiamare le funzioni virtuali pure in modo esplicito usando un nome di funzione membro completo.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Ereditarietà](../cpp/inheritance-cpp.md)

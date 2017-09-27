@@ -1,41 +1,58 @@
 ---
-title: "Eccezione bad_cast | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "bad_cast"
-  - "bad_cast_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bad_cast (parola chiave) [C++]"
-  - "eccezioni, bad_cast"
+title: Eccezione bad_cast | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- bad_cast
+- bad_cast_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- exceptions, bad_cast
+- bad_cast keyword [C++]
 ms.assetid: 31eae1e7-d8d5-40a0-9fef-64a6a4fc9021
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Eccezione bad_cast
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 70758ca099853f94ad06b8a9f5029203a480a772
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="badcast-exception"></a>Eccezione bad_cast
 Viene generata l'eccezione `bad_cast` dall'operatore `dynamic_cast` come risultato di un cast non riuscito a un tipo di riferimento.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 catch (bad_cast)  
    statement  
 ```  
   
-## Note  
+## <a name="remarks"></a>Note  
  L'interfaccia per `bad_cast` è:  
   
 ```  
@@ -78,7 +95,7 @@ int main() {
 }  
 ```  
   
- L'eccezione viene generata perché l'oggetto di cui si sta eseguendo il cast \(una forma\) non è derivato dal tipo di cast specificato \(cerchio\).  Per evitare l'eccezione, aggiungere tali dichiarazioni a `main`:  
+ L'eccezione viene generata perché l'oggetto di cui si sta eseguendo il cast (una forma) non è derivato dal tipo di cast specificato (cerchio). Per evitare l'eccezione, aggiungere tali dichiarazioni a `main`:  
   
 ```  
 Circle circle_instance;  
@@ -91,7 +108,7 @@ Circle& ref_circle = circle_instance;
 Shape& ref_shape = dynamic_cast<Shape&>(ref_circle);  
 ```  
   
-## Vedere anche  
- [Operatore dynamic\_cast](../cpp/dynamic-cast-operator.md)   
- [Parole chiave C\+\+](../cpp/keywords-cpp.md)   
- [Gestione delle eccezioni C\+\+](../cpp/cpp-exception-handling.md)
+## <a name="see-also"></a>Vedere anche  
+ [Operatore dynamic_cast](../cpp/dynamic-cast-operator.md)   
+ [Parole chiave](../cpp/keywords-cpp.md)   
+ [Gestione delle eccezioni C++](../cpp/cpp-exception-handling.md)

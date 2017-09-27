@@ -1,41 +1,58 @@
 ---
-title: "Eccezione bad_typeid | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "bad_typeid"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bad_typeid (eccezione)"
-  - "eccezioni, bad_typeid"
+title: Eccezione bad_typeid | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- bad_typeid
+dev_langs:
+- C++
+helpviewer_keywords:
+- bad_typeid exception
+- exceptions, bad_typeid
 ms.assetid: 5963ed58-4ede-4597-957d-f7bbd06299c2
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Eccezione bad_typeid
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: ea7dc85862622180038cf520ef92b752b65eba84
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-Viene generata l'eccezione `bad_typeid` dall'[operatore di typeid](../cpp/typeid-operator.md) se l'operando per `typeid` è un puntatore NULL.  
+---
+# <a name="badtypeid-exception"></a>Eccezione bad_typeid
+Il `bad_typeid` eccezione viene generata dal [operatore typeid](../cpp/typeid-operator.md) quando l'operando per `typeid` è un puntatore NULL.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
       catch (bad_typeid)  
-   statement  
+   statement  
 ```  
   
-## Note  
+## <a name="remarks"></a>Note  
  L'interfaccia per `bad_typeid` è:  
   
 ```  
@@ -76,12 +93,12 @@ catch (bad_typeid){
 }  
 ```  
   
-## Output  
+## <a name="output"></a>Output  
   
 ```  
 Object is NULL  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Informazioni sui tipi di runtime](../cpp/run-time-type-information.md)   
- [Parole chiave C\+\+](../cpp/keywords-cpp.md)
+ [Parole chiave](../cpp/keywords-cpp.md)

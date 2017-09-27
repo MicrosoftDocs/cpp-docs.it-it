@@ -1,43 +1,60 @@
 ---
-title: "Analisi di argomenti della riga di comando C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "le virgolette, gli argomenti della riga di comando"
-  - "virgolette doppie"
-  - "riga di comando, l'analisi"
-  - "argomenti della riga di comando, l'analisi"
-  - "codice di avvio, analisi degli argomenti della riga di comando"
+title: Analisi degli argomenti della riga di comando C++ | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- quotation marks, command-line arguments
+- double quotation marks
+- command line, parsing
+- parsing, command-line arguments
+- startup code, parsing command-line arguments
 ms.assetid: e634e733-ac2f-4298-abe2-7e9288c94951
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Analisi di argomenti della riga di comando C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 5d3fbcd6b4e92d6e445d78a1b36efae319e472d7
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="parsing-c-command-line-arguments"></a>Analisi di argomenti della riga di comando C++
 **Sezione specifica Microsoft**  
   
  Il codice di avvio C/C++ di Microsoft utilizza le regole seguenti quando interpreta gli argomenti forniti alla riga di comando del sistema operativo.  
   
 -   Gli argomenti sono delimitati da spazi vuoti, ovvero da uno spazio o da una tabulazione.  
   
--   L'accento circonflesso (^) non è riconosciuto come carattere di escape o delimitatore. Il carattere viene completamente gestito dal parser della riga di comando nel sistema operativo prima di essere passato alla matrice `argv` nel programma.  
+-   L'accento circonflesso (^) non viene riconosciuto come carattere di escape o delimitatore. Il carattere viene completamente gestito dal parser della riga di comando nel sistema operativo prima di essere passato alla matrice `argv` nel programma.  
   
 -   Una stringa racchiusa tra virgolette doppie ("*stringa*") viene interpretato come un argomento singolo, indipendentemente dalla presenza di spazi all'interno. Una stringa tra virgolette può essere incorporata in un argomento.  
   
--   Le virgolette doppie precedute da una barra rovesciata (\\") viene interpretato come un carattere di virgolette doppie (").  
+-   Le virgolette doppie precedute da una barra rovesciata (\\") vengono interpretate come carattere letterale virgolette doppie (").  
   
 -   Le barre rovesciate vengono interpretate letteralmente, a meno che non precedano virgolette doppie.  
   
@@ -72,14 +89,14 @@ int main( int argc,      // Number of strings in array argv
   
 ### <a name="results-of-parsing-command-lines"></a>Risultati dell'analisi delle righe di comando  
   
-|Input della riga di comando|argv[1]|argv [2]|argv [3]|  
+|Input della riga di comando|argv[1]|argv[2]|argv[3]|  
 |-------------------------|---------------|---------------|---------------|  
 |`"abc" d e`|`abc`|`d`|`e`|  
 |`a\\b d"e f"g h`|`a\\b`|`de fg`|`h`|  
 |`a\\\"b c d`|`a\"b`|`c`|`d`|  
 |`a\\\\"b c" d e`|`a\\b c`|`d`|`e`|  
   
-## <a name="end-microsoft-specific"></a>Fine sezione specifica Microsoft  
+**Fine sezione specifica Microsoft**  
   
 ## <a name="see-also"></a>Vedere anche  
- [Main: avvio del programma](../cpp/main-program-startup.md)
+ [main: avvio del programma](../cpp/main-program-startup.md)

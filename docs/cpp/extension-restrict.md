@@ -1,47 +1,63 @@
 ---
-title: "__restrict | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__restrict"
-  - "__restrict_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__restrict (parola chiave) [C++]"
+title: Restrict | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __restrict
+- __restrict_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- __restrict keyword [C++]
 ms.assetid: 2d151b4d-f930-49df-bd16-d8757ec7fa83
 caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# __restrict
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: c0ed875845323d4125a97ca004bb50385f59c53d
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-Come il modificatore **\_\_declspec \( [restrict](../cpp/restrict.md) \)**, la parola chiave `__restrict` indica che per un simbolo non viene usato un alias nell'ambito corrente.  Tra la parola chiave `__restrict` e il modificatore `__declspec ( restrict )` esistono le differenze seguenti:  
+---
+# <a name="restrict"></a>__restrict
+Ad esempio il **declspec ( [limitare](../cpp/restrict.md) )** modificatore, la `__restrict` parola chiave indica che un simbolo non è associato un alias nell'ambito corrente. Tra la parola chiave `__restrict` e il modificatore `__declspec ( restrict )` esistono le differenze seguenti:  
   
 -   La parola chiave `__restrict` è valida solo per variabili, mentre `__declspec ( restrict )` è valido solo per le dichiarazioni e le definizioni di funzione.  
   
--   `__restrict` è analogo a `restrict` nella specifica C99, ma è possibile sare `__restrict` in programmi C\+\+ o C.  
+-   `__restrict` è analogo a `restrict` nella specifica C99, ma è possibile sare `__restrict` in programmi C++ o C.  
   
--   Quando si usa `__restrict`, il compilatore non trasferirà la proprietà noalias di una variabile.  In altre parole, se si assegna una variabile `__restrict` a una variabile non\-`__restrict` variable, il compilatore non consentirà comunque l'uso di un alias per la variabile non\-\_\_restrict.  Questo comportamento è diverso da quello della parola chiave `restrict` della specifica C99.  
+-   Quando si usa `__restrict`, il compilatore non trasferirà la proprietà noalias di una variabile. In altre parole, se si assegna una variabile `__restrict` a una variabile non-`__restrict` variable, il compilatore non consentirà comunque l'uso di un alias per la variabile non-__restrict. Questo comportamento è diverso da quello della parola chiave `restrict` della specifica C99.  
   
  In generale, se si è interessati al comportamento di un'intera funzione, è preferibile usare `__declspec ( restrict )` anziché la parola chiave.  
   
- In Visual Studio 2015 e versioni successive è possibile usare `__restrict` nei riferimenti C\+\+.  
+ In Visual Studio 2015 e versioni successive è possibile usare `__restrict` nei riferimenti C++.  
   
 > [!NOTE]
->  Se usato in una variabile cui è associata la parola chiave [volatile](../cpp/volatile-cpp.md), `volatile` avrà la precedenza.  
+>  Quando viene utilizzata su una variabile che dispone anche di [volatile](../cpp/volatile-cpp.md) (parola chiave), `volatile` avrà la precedenza.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // __restrict_keyword.c  
@@ -65,5 +81,5 @@ union z {
 };  
 ```  
   
-## Vedere anche  
- [Parole chiave C\+\+](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>Vedere anche  
+ [Parole chiave](../cpp/keywords-cpp.md)

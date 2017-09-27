@@ -1,34 +1,51 @@
 ---
-title: "Argomenti predefiniti | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "argomenti [C++], predefiniti"
-  - "argomenti [C++], funzione"
-  - "dichiarazione di funzioni, dichiaratori"
-  - "argomenti predefiniti"
-  - "impostazioni predefinite [C++], argomenti"
-  - "dichiaratori di funzione"
-  - "funzioni [C++], argomenti predefiniti"
+title: Argomenti predefiniti | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- arguments [C++], function
+- function declarators
+- functions [C++], default arguments
+- declaring functions, declarators
+- default arguments
+- arguments [C++], default
+- defaults [C++], arguments
 ms.assetid: d32cf516-05cb-4d4d-b169-92f5649fdfa2
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Argomenti predefiniti
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: b14cd3b6ff1386ab2484b8a424c6ef2ceee1cd85
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-In molti casi, le funzioni presentano argomenti che vengono usati talmente raramente che un valore predefinito basterebbe.  Per risolvere questo problema, la funzionalità argomento predefinito consente di specificare solo quegli argomenti di una funzione che sono significativi in una chiamata specificata.  Per illustrare questo concetto, si consideri l'esempio illustrato in [Overload di funzione](../cpp/function-overloading.md).  
+---
+# <a name="default-arguments"></a>Argomenti predefiniti
+In molti casi, le funzioni presentano argomenti che vengono usati talmente raramente che un valore predefinito basterebbe. Per risolvere questo problema, la funzionalità argomento predefinito consente di specificare solo quegli argomenti di una funzione che sono significativi in una chiamata specificata. Per illustrare questo concetto, si consideri l'esempio presentato [overload di funzioni](../cpp/function-overloading.md).  
   
 ```  
 // Prototype three print functions.  
@@ -47,7 +64,7 @@ int print( double dvalue, int prec=2 );  // Print a double with a
 //  given precision.  
 ```  
   
- L'implementazione della funzione `print` viene modificata leggermente per riflettere il fatto che solo una funzione di quel genere esiste per tipo **double**:  
+ L'implementazione del `print` funzione viene modificata leggermente per riflettere il fatto che solo una funzione di questo tipo esiste per tipo **doppie**:  
   
 ```  
 // default_arguments.cpp  
@@ -90,13 +107,13 @@ print( d, 0 ); // Override default argument to achieve other
   
  Si notino questi punti quando si usano argomenti predefiniti:  
   
--   Gli argomenti predefiniti vengono usati solo nelle chiamate di funzione in cui gli argomenti finali vengono omessi: devono essere gli ultimi argomenti.  Pertanto, il codice seguente non è consentito:  
+-   Gli argomenti predefiniti vengono usati solo nelle chiamate di funzione in cui gli argomenti finali vengono omessi: devono essere gli ultimi argomenti. Pertanto, il codice seguente non è consentito:  
   
     ```  
     int print( double dvalue = 0.0, int prec );  
     ```  
   
--   Un argomento predefinito non può essere ridefinito nelle dichiarazioni successive anche se la ridefinizione è identica all'originale.  Il codice seguente, quindi, provoca un errore:  
+-   Un argomento predefinito non può essere ridefinito nelle dichiarazioni successive anche se la ridefinizione è identica all'originale. Il codice seguente, quindi, provoca un errore:  
   
     ```  
     // Prototype for print function.  
@@ -115,11 +132,11 @@ print( d, 0 ); // Override default argument to achieve other
   
 -   Gli argomenti predefiniti aggiuntivi possono essere aggiunti dalle dichiarazioni successive.  
   
--   Gli argomenti predefiniti possono essere forniti per puntatori a funzioni.  Ad esempio:  
+-   Gli argomenti predefiniti possono essere forniti per puntatori a funzioni. Ad esempio:  
   
     ```  
     int (*pShowIntVal)( int i = 0 );  
     ```  
   
-## Vedere anche  
- [Dichiaratori astratti C\+\+](http://msdn.microsoft.com/it-it/e7e18c18-0cad-4450-942b-d27e1d4dd088)
+## <a name="see-also"></a>Vedere anche  
+ 

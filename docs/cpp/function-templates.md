@@ -1,32 +1,49 @@
 ---
-title: "Modelli di funzioni | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "modelli di funzioni"
-  - "modelli di funzioni, informazioni su modelli di funzioni"
-  - "modelli, funzione"
+title: Modelli di funzione | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- function templates
+- templates, function
+- function templates, about function templates
 ms.assetid: 59b56a4b-0689-4161-9c07-25021562e2a7
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Modelli di funzioni
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: f460497071445cff87308fa9bf6e0d43c6f13a3e
+ms.openlocfilehash: c3a740bb922a9e0e644275b5c7b8d3f4c50304d4
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-I modelli di classe definiscono un gruppo di classi correlate, basate sugli argomenti di tipo passati alla classe mediante la creazione di istanze.  I modelli di funzione sono simili ai modelli di classe ma definiscono un gruppo di funzioni.  Con i modelli di funzione è possibile specificare un set di funzioni basate sullo stesso codice, ma che agiscono su tipi o classi differenti.  Il modello di funzione seguente scambia due elementi:  
+---
+# <a name="function-templates"></a>Modelli di funzioni
+I modelli di classe definiscono un gruppo di classi correlate, basate sugli argomenti tipo passati alla classe mediante la creazione di istanze. I modelli di funzione sono simili ai modelli di classe ma definiscono un gruppo di funzioni. Con i modelli di funzione è possibile specificare un set di funzioni basate sullo stesso codice, ma che agiscono su tipi o classi differenti. Il modello di funzione seguente scambia due elementi:  
   
-```  
+```cpp
 // function_templates1.cpp  
 template< class T > void MySwap( T& a, T& b ) {  
    T c(a);   
@@ -37,13 +54,13 @@ int main() {
 }  
 ```  
   
- Questo codice definisce un gruppo di funzioni che scambiano i valori degli argomenti.  Da questo modello è possibile generare funzioni che scambiano tipi `int` e **long** oltre che i tipi definiti dall'utente.  `MySwap` scambia anche le classi se il costruttore di copia e l'operatore di assegnazione della classe sono definiti correttamente.  
+ Questo codice definisce un gruppo di funzioni che scambiano i valori degli argomenti. Da questo modello, è possibile generare funzioni che scambiano **int** e **lungo** tipi e tipi definiti dall'utente. `MySwap` scambia anche le classi se il costruttore di copia e l'operatore di assegnazione della classe sono definiti correttamente.  
   
- Inoltre, il modello di funzione impedirà di scambiare oggetti di tipi diversi, poiché il compilatore riconosce i tipi dei parametri `b` e `a` in fase di compilazione.  
+ Inoltre, il modello di funzione impedirà di scambiare oggetti di tipi diversi, poiché il compilatore riconosce i tipi dei parametri `a` e `b` in fase di compilazione.  
   
- Sebbene questa funzione possa essere eseguita da una funzione non basata su modelli, utilizzando i puntatori void, la versione del modello è indipendente dai tipi.  Considerare le chiamate seguenti:  
+ Sebbene questa funzione possa essere eseguita da una funzione non basata su modelli, utilizzando i puntatori void, la versione del modello è indipendente dai tipi. Considerare le chiamate seguenti:  
   
-```  
+```cpp
 int j = 10;  
 int k = 18;  
 CString Hello = "Hello, Windows!";  
@@ -51,11 +68,11 @@ MySwap( j, k );          //OK
 MySwap( j, Hello );      //error  
 ```  
   
- La seconda chiamata `MySwap` attiva un errore in fase di compilazione, in quanto il compilatore non può generare una funzione `MySwap` con parametri di tipi differenti.  Se sono stati utilizzati puntatori void, entrambe le chiamate di funzione verranno compilate correttamente, tuttavia la funzione non verrà eseguita nel modo previsto in fase di esecuzione.  
+ La seconda chiamata `MySwap` attiva un errore in fase di compilazione, in quanto il compilatore non può generare una funzione `MySwap` con parametri di tipi differenti. Se sono stati utilizzati puntatori void, entrambe le chiamate di funzione verranno compilate correttamente, tuttavia la funzione non verrà eseguita nel modo previsto in fase di esecuzione.  
   
- La specifica esplicita degli argomenti di modelli per un modello di funzione non è consentita.  Ad esempio:  
+ La specifica esplicita degli argomenti di modelli per un modello di funzione non è consentita. Ad esempio:  
   
-```  
+```cpp
 // function_templates2.cpp  
 template<class T> void f(T) {}  
 int main(int j) {  
@@ -64,10 +81,11 @@ int main(int j) {
 }  
 ```  
   
- Quando un argomento di modello è specificato in modo esplicito, le normali conversioni implicite vengono effettuate per convertire l'argomento della funzione nel tipo dei parametri del modello di funzione corrispondente.  Nell'esempio precedente il compilatore converte \(`char j`\) nel tipo `int`.  
+ Quando un argomento di modello è specificato in modo esplicito, le normali conversioni implicite vengono effettuate per convertire l'argomento della funzione nel tipo dei parametri del modello di funzione corrispondente. Nell'esempio precedente, il compilatore converte `char j` al tipo `int`.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Modelli](../cpp/templates-cpp.md)   
- [Creazione di istanze di modelli di funzione](../cpp/function-template-instantiation.md)   
- [Creazione di un'istanza esplicita](../cpp/explicit-instantiation.md)   
+ [Istanza del modello (funzione)](../cpp/function-template-instantiation.md)   
+ [Creare un'istanza esplicita](../cpp/explicit-instantiation.md)   
  [Specializzazione esplicita di modelli di funzioni](../cpp/explicit-specialization-of-function-templates.md)
+

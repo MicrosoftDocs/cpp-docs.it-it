@@ -1,53 +1,71 @@
 ---
-title: "Operatore sizeof | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "sizeof_cpp"
-  - "sizeof"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "sizeof (operatore)"
+title: Operatore sizeof | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- sizeof_cpp
+- sizeof
+dev_langs:
+- C++
+helpviewer_keywords:
+- sizeof operator
 ms.assetid: 8bc3b6fb-54a1-4eb7-ada0-05f8c5efc532
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Operatore sizeof
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 67b699a93880a89e634ac024699ac79a9ea8d3ba
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="sizeof-operator"></a>Operatore sizeof
 Genera la dimensione dell'operando in base alla dimensione del tipo `char`.  
   
 > [!NOTE]
->  Per informazioni sull'operatore `sizeof ...`, vedere [Ellissi e modelli variadic](../cpp/ellipses-and-variadic-templates.md).  
+>  Per informazioni di `sizeof ...` (operatore), vedere [ellissi e modelli Variadic](../cpp/ellipses-and-variadic-templates.md).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-sizeof unary-expression sizeof  ( type-name )  
+sizeof unary-expression  
+sizeof  ( type-name )  
 ```  
   
-## Note  
- Il risultato dell'operatore `sizeof` è di tipo `size_t`, un tipo integrale definito nel file di inclusione STDDEF.H.  Tale operatore consente di evitare di specificare le dimensioni dei dati dipendenti dal computer nei programmi.  
+## <a name="remarks"></a>Note  
+ Il risultato dell'operatore `sizeof` è di tipo `size_t`, un tipo integrale definito nel file di inclusione STDDEF.H. Tale operatore consente di evitare di specificare le dimensioni dei dati dipendenti dal computer nei programmi.  
   
  L'operando di `sizeof` può essere uno dei seguenti:  
   
--   Un nome di tipo.  Per usare `sizeof` con un nome di tipo, il nome deve essere racchiuso tra parentesi.  
+-   Un nome di tipo. Per usare `sizeof` con un nome di tipo, il nome deve essere racchiuso tra parentesi.  
   
--   Un'espressione.  Se usato con un'espressione, `sizeof` può essere specificato con o senza le parentesi.  L'espressione non viene valutata.  
+-   Un'espressione. Se usato con un'espressione, `sizeof` può essere specificato con o senza le parentesi. L'espressione non viene valutata.  
   
- Quando l'operatore `sizeof` viene applicato a un oggetto di tipo `char`, restituisce 1.  Quando l'operatore `sizeof` viene applicato a una matrice, restituisce il numero totale di byte della matrice, non la dimensione del puntatore rappresentato dall'identificatore della matrice.  Per ottenere la dimensione del puntatore rappresentato dall'identificatore della matrice, passarlo come parametro a una funzione che usa `sizeof`.  Ad esempio:  
+ Quando l'operatore `sizeof` viene applicato a un oggetto di tipo `char`, restituisce 1. Quando l'operatore `sizeof` viene applicato a una matrice, restituisce il numero totale di byte della matrice, non la dimensione del puntatore rappresentato dall'identificatore della matrice. Per ottenere la dimensione del puntatore rappresentato dall'identificatore della matrice, passarlo come parametro a una funzione che usa `sizeof`. Ad esempio:  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 #include <iostream>  
@@ -71,7 +89,7 @@ int main()
 }  
 ```  
   
-## Esempio di output  
+## <a name="sample-output"></a>Esempio di output  
   
 ```  
 The size of a char is: 1  
@@ -79,13 +97,13 @@ The length of Hello, world! is: 14
 The size of the pointer is 4  
 ```  
   
- Quando l'operatore `sizeof` viene applicato a un tipo `class`, `struct` o `union`, il risultato è il numero di byte in un oggetto di tale tipo, più la spaziatura interna aggiunta per allineare i membri ai confini di parola.   Il risultato non corrisponde necessariamente alla dimensione calcolata sommando i requisiti di archiviazione dei singoli membri.  L'opzione del compilatore [\/Zp](../build/reference/zp-struct-member-alignment.md) e il [pacchetto](../preprocessor/pack.md) pragma influiscono sui confini di allineamento per i membri.  
+ Quando l'operatore `sizeof` viene applicato a un tipo `class`, `struct` o `union`, il risultato è il numero di byte in un oggetto di tale tipo, più la spaziatura interna aggiunta per allineare i membri ai confini di parola. Il risultato non corrisponde necessariamente alla dimensione calcolata sommando i requisiti di archiviazione dei singoli membri. Il [/Zp](../build/reference/zp-struct-member-alignment.md) l'opzione del compilatore e [pack](../preprocessor/pack.md) pragma influisce sui limiti di allineamento per i membri.  
   
  L'operatore `sizeof` non restituisce mai 0, neanche per una classe vuota.  
   
  L'operatore `sizeof` non può essere usato con gli operandi seguenti:  
   
--   Funzioni.  `sizeof` può tuttavia essere applicato ai puntatori a funzioni.  
+-   Funzioni. `sizeof` può tuttavia essere applicato ai puntatori a funzioni.  
   
 -   Campi di bit.  
   
@@ -111,6 +129,6 @@ The size of the pointer is 4
 sizeof array / sizeof array[0]  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Espressioni con operatori unari](../cpp/expressions-with-unary-operators.md)   
- [Parole chiave C\+\+](../cpp/keywords-cpp.md)
+ [Parole chiave](../cpp/keywords-cpp.md)

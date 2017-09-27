@@ -1,30 +1,47 @@
 ---
-title: "Utilizzo di atexit | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "atexit"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "atexit (funzione)"
+title: Utilizzo di atexit | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- atexit
+dev_langs:
+- C++
+helpviewer_keywords:
+- atexit function
 ms.assetid: d28fda17-c3d4-4af6-ba44-f44886bbb237
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Utilizzo di atexit
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 4093bf14422fb6598f53d298aa8958a506103fb2
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-Con la funzione [atexit](../c-runtime-library/reference/atexit.md), è possibile specificare una funzione di elaborazione uscita che viene eseguita prima della chiusura del programma.  Nessun oggetto statico globale inizializzato prima della chiamata a `atexit` viene eliminato prima dell'esecuzione della funzione di elaborazione uscita.  
+---
+# <a name="using-atexit"></a>Utilizzo di atexit
+Con il [atexit](../c-runtime-library/reference/atexit.md) funzione, è possibile specificare una funzione di elaborazione uscita che viene eseguita prima della chiusura del programma. Nessun oggetto statico globale inizializzato prima della chiamata a `atexit` viene eliminato prima dell'esecuzione della funzione di elaborazione uscita.  
   
-## Vedere anche  
- [Considerazioni di terminazione aggiuntive](../cpp/additional-termination-considerations.md)
+## <a name="see-also"></a>Vedere anche  
+ [Altre considerazioni di terminazione](../cpp/additional-termination-considerations.md)

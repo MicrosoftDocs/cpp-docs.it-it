@@ -1,49 +1,65 @@
 ---
-title: "Dichiaratore di riferimento lvalue: &amp; | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "&"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "& (operatore), operatore di riferimento"
-  - "operatore di riferimento"
+title: 'Dichiaratore di riferimento lvalue: &amp; | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- '&'
+dev_langs:
+- C++
+helpviewer_keywords:
+- reference operator
+- '& operator, reference operator'
 ms.assetid: edf0513d-3dcc-4663-b276-1269795dda51
 caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Dichiaratore di riferimento lvalue: &amp;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 6aa0c0a18d77f685369681c0d0400ada6f879e9d
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="lvalue-reference-declarator-amp"></a>Dichiaratore di riferimento lvalue:&amp;
 Contiene l'indirizzo di un oggetto, ma sintatticamente si comporta come un oggetto.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
 type-id & cast-expression  
 ```  
   
-## Note  
- È possibile considerare un riferimento lvalue come nome alternativo per un oggetto.  Una dichiarazione di riferimento lvalue è costituita da un elenco facoltativo di identificatori seguiti da un dichiaratore di riferimento.  Un riferimento deve essere inizializzato e non può essere modificato.  
+## <a name="remarks"></a>Note  
+ È possibile considerare un riferimento lvalue come nome alternativo per un oggetto. Una dichiarazione di riferimento lvalue è costituita da un elenco facoltativo di identificatori seguiti da un dichiaratore di riferimento. Un riferimento deve essere inizializzato e non può essere modificato.  
   
- Qualsiasi oggetto il cui l'indirizzo può essere convertito in un dato tipo di puntatore, può anche essere convertito in un tipo di riferimento simile.  Ad esempio, qualsiasi oggetto il cui l'indirizzo può essere convertito in un tipo `char *`, può anche essere convertito in un tipo `char &`.  
+ Qualsiasi oggetto il cui l'indirizzo può essere convertito in un dato tipo di puntatore, può anche essere convertito in un tipo di riferimento simile. Ad esempio, qualsiasi oggetto il cui l'indirizzo può essere convertito in un tipo `char *`, può anche essere convertito in un tipo `char &`.  
   
- Non confondere le dichiarazioni di riferimento con l'uso di [operatore address\-of](../cpp/address-of-operator-amp.md).  Quando l'`&`*identificatore* è preceduto da un tipo, quale `int` o `char`, l'*identificatore* viene dichiarato come un riferimento al tipo.  Quando l'`&`*identificatore* non è preceduto da un tipo, l'utilizzo è quello dell'operatore address\-of.  
+ Non confondere le dichiarazioni di riferimento utilizzando il [operatore address-of](../cpp/address-of-operator-amp.md). Quando il `&` *identificatore* è preceduto da un tipo, ad esempio `int` o `char`, *identificatore* è dichiarato come un riferimento al tipo. Quando `&` *identificatore* non è preceduto da un tipo, l'utilizzo è quello dell'operatore address-of.  
   
-## Esempio  
- Nell'esempio seguente viene illustrato il dichiaratore di riferimento dichiarando un oggetto `Person` e un riferimento a tale oggetto.  Poiché `rFriend` è un riferimento a `myFriend`, l'aggiornamento delle variabili modifica lo stesso oggetto.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato il dichiaratore di riferimento dichiarando un oggetto `Person` e un riferimento a tale oggetto. Poiché `rFriend` è un riferimento a `myFriend`, l'aggiornamento delle variabili modifica lo stesso oggetto.  
   
 ```  
 // reference_declarator.cpp  
@@ -76,9 +92,12 @@ int main()
 }  
 ```  
   
-  **Bill ha 40 anni**   
-## Vedere anche  
+```Output  
+Bill is 40  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
  [Riferimenti](../cpp/references-cpp.md)   
- [Argomenti di funzione di tipo Reference](../cpp/reference-type-function-arguments.md)   
+ [Argomenti della funzione tipo-riferimento](../cpp/reference-type-function-arguments.md)   
  [Funzioni che restituiscono tipi di riferimento](../cpp/reference-type-function-returns.md)   
  [Riferimenti a puntatori](../cpp/references-to-pointers.md)

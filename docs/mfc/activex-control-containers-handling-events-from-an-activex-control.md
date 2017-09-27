@@ -1,76 +1,95 @@
 ---
-title: "Contenitori di controlli ActiveX: gestione di eventi da un controllo ActiveX | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "contenitori dei controlli ActiveX [C++], sink di evento"
-  - "ActiveX (controlli) [C++], eventi"
-  - "BEGIN_EVENTSINK_MAP (macro)"
-  - "END_EVENTSINK_MAP (macro), utilizzo"
-  - "gestori eventi [C++], controlli ActiveX"
-  - "gestione eventi [C++], controlli ActiveX"
-  - "eventi (C++), controlli ActiveX"
-  - "ON_EVENT (macro)"
+title: 'Contenitori di controlli ActiveX: Gestione degli eventi da un controllo ActiveX | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- event handlers [MFC], ActiveX controls
+- ActiveX control containers [MFC], event sinks
+- event handling [MFC], ActiveX controls
+- ON_EVENT macro [MFC]
+- ActiveX controls [MFC], events [MFC]
+- END_EVENTSINK_MAP macro, using
+- events [MFC], ActiveX controls
+- BEGIN_EVENTSINK_MAP macro
 ms.assetid: f9c106db-052f-4e32-82ad-750646aa760b
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Contenitori di controlli ActiveX: gestione di eventi da un controllo ActiveX
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 3903be230f130aeaeb1953faf73a0c8af4c3492f
+ms.openlocfilehash: a8fb283d8b5b8afbf3b06e27495ccc957e0099ad
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-In questo articolo viene illustrato come utilizzare la Finestra Proprietà per configurare i gestori eventi per i controlli ActiveX in un contenitore di controlli ActiveX.  I gestori eventi vengono utilizzati per ricevere le notifiche \(dal controllo\) di determinati eventi e per eseguire un'azione nella risposta.  Questa notifica viene chiamata l'esempio l'attivazione l'evento.  
+---
+# <a name="activex-control-containers-handling-events-from-an-activex-control"></a>Contenitori di controlli ActiveX: gestione di eventi da un controllo ActiveX
+Questo articolo viene illustrato l'utilizzo della finestra proprietà per installare gestori di eventi per i controlli ActiveX in un contenitore di controlli ActiveX. I gestori eventi vengono utilizzati per ricevere le notifiche (dal controllo) di determinati eventi ed eseguire un'azione in risposta. Questa notifica viene chiamata l'evento "generazione".  
   
 > [!NOTE]
->  In questo articolo viene utilizzato un progetto a finestre contenitore di controlli ActiveX denominato Container e un controllo incorporato denominato Circ ad esempio nelle procedure e nel codice.  
+>  Questo articolo viene utilizzata un finestra di dialogo progetto basato su ActiveX controllo contenitore denominato contenitore e un controllo incorporato denominato Circ come esempi di procedure e il codice.  
   
- Utilizzando il pulsante Eventi nella Finestra Proprietà, è possibile creare una mappa di eventi che possono verificarsi nell'applicazione contenitore di controlli ActiveX.  Questa mappa, denominata "una mappa del sink di eventi," viene creato e gestito da Visual C\+\+ quando si aggiungono gestori eventi alla classe del contenitore di controlli.  Ogni gestore eventi, implementato con una voce della mappa eventi, esegue il mapping di un evento specifico a una funzione membro del gestore eventi del contenitore.  Questa funzione del gestore eventi viene chiamata quando l'evento specificato è generato dall'oggetto del controllo ActiveX.  
+ Usando il pulsante eventi nella finestra Proprietà, è possibile creare una mappa di eventi che possono verificarsi nell'applicazione contenitore di controlli ActiveX. Questa mappa, denominata 'evento sink mappa ', viene creata e gestita da Visual C++ quando si aggiungono i gestori eventi alla classe contenitore del controllo. Ogni gestore eventi, implementato con una voce della mappa di evento, esegue il mapping di un evento specifico a una funzione di membro contenitore gestore eventi. Questa funzione del gestore eventi viene chiamata quando viene generato l'evento specificato dall'oggetto controllo ActiveX.  
   
- Per ulteriori informazioni sulle mappe del sink di eventi, vedere [Mappe del sink di eventi](../mfc/reference/event-sink-maps.md)*in riferimenti alla libreria di classi*.  
+ Per ulteriori informazioni sulle mappe sink di evento, vedere [mappe Sink di evento](../mfc/reference/event-sink-maps.md) nel *riferimenti alla libreria di classe*.  
   
-##  <a name="_core_event_handler_modifications_to_the_project"></a> Modifiche del gestore eventi al progetto  
- Quando si utilizza la Finestra Proprietà per aggiungere gestori eventi, una mappa del sink di eventi è dichiarata e definita nel progetto.  Le istruzioni seguenti vengono aggiunte al file del controllo .CPP la prima volta un gestore eventi viene aggiunto.  Questo codice dichiara una mappa del sink di eventi della classe della finestra di dialogo \(in questo caso, `CContainerDlg`\):  
+##  <a name="_core_event_handler_modifications_to_the_project"></a>Modifiche del gestore eventi per il progetto  
+ Quando si utilizza la finestra proprietà per aggiungere gestori eventi, una mappa del sink di evento viene dichiarato e definito nel progetto. Le istruzioni seguenti vengono aggiunti al controllo. File CPP la prima volta che viene aggiunto un gestore eventi. Questo codice dichiara una mappa del sink di evento per la classe di finestra di dialogo (in questo caso, `CContainerDlg`):  
   
- [!code-cpp[NVC_MFC_AxCont#8](../mfc/codesnippet/CPP/activex-control-containers-handling-events-from-an-activex-control_1.cpp)]  
-[!code-cpp[NVC_MFC_AxCont#9](../mfc/codesnippet/CPP/activex-control-containers-handling-events-from-an-activex-control_2.cpp)]  
+ [!code-cpp[NVC_MFC_AxCont#8](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_1.cpp)]  
+[!code-cpp[NVC_MFC_AxCont#9](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_2.cpp)]  
   
- Quando si utilizza la Finestra Proprietà per aggiungere eventi, una voce della mappa eventi \(`ON_EVENT`\) viene aggiunto alla mappa del sink di eventi e una funzione del gestore eventi viene aggiunto al file di implementazione del contenitore \(.CPP\).  
+ Quando si utilizza la finestra proprietà per aggiungere eventi, un evento voce della mappa (`ON_EVENT`) viene aggiunta a mappa del sink di evento e un gestore eventi (funzione) viene aggiunto all'implementazione del contenitore (. File CPP).  
   
- Nell'esempio seguente viene dichiarato un gestore eventi, denominato `OnClickInCircCtrl`, per l'evento di **ClickIn** del controllo di Circ:  
+ Nell'esempio seguente viene dichiarato un gestore eventi, denominato `OnClickInCircCtrl`, per il controllo Circ **ClickIn** evento:  
   
- [!code-cpp[NVC_MFC_AxCont#10](../mfc/codesnippet/CPP/activex-control-containers-handling-events-from-an-activex-control_3.cpp)]  
+ [!code-cpp[NVC_MFC_AxCont#10](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_3.cpp)]  
   
- Inoltre, il modello viene aggiunto al file di implementazione della classe di `CContainerDlg` \(.CPP\) per la funzione membro gestore eventi:  
+ Inoltre, il modello seguente viene aggiunto per il `CContainerDlg` implementazione della classe (. File CPP) per la funzione membro del gestore eventi:  
   
- [!code-cpp[NVC_MFC_AxCont#11](../mfc/codesnippet/CPP/activex-control-containers-handling-events-from-an-activex-control_4.cpp)]  
+ [!code-cpp[NVC_MFC_AxCont#11](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_4.cpp)]  
   
- Per ulteriori informazioni sulle macro del sink di evento, vedere [Mappe del sink di eventi](../mfc/reference/event-sink-maps.md)*in riferimenti alla libreria di classi*.  
+ Per ulteriori informazioni sulle macro sink di evento, vedere [mappe Sink di evento](../mfc/reference/event-sink-maps.md) nel *riferimenti alla libreria di classe*.  
   
-#### Per creare una funzione del gestore eventi  
+#### <a name="to-create-an-event-handler-function"></a>Per creare una funzione del gestore eventi  
   
-1.  In Visualizzazione classi, selezionare la classe della finestra di dialogo contenente il controllo ActiveX.  Per questo esempio, utilizzare `CContainerDlg`.  
+1.  Visualizzazione classi, selezionare la classe di finestra di dialogo che contiene il controllo ActiveX. Per questo esempio, utilizzare `CContainerDlg`.  
   
-2.  Nella finestra Proprietà fare clic sul pulsante **Eventi**.  
+2.  Nella finestra Proprietà fare clic su di **eventi** pulsante.  
   
-3.  Nella Finestra Proprietà, selezionare l'id del controllo ActiveX incorporato.  Per questo esempio, utilizzare `IDC_CIRCCTRL1`.  
+3.  Nella finestra Proprietà selezionare l'ID di controllo del controllo ActiveX incorporato. Per questo esempio, utilizzare `IDC_CIRCCTRL1`.  
   
-     Nella Finestra Proprietà verrà visualizzato un elenco di eventi che possono essere generati dal controllo ActiveX incorporato.  Qualsiasi funzione membro visualizzata in grassetto dispone già di funzioni di gestione assegnate.  
+     La finestra proprietà consente di visualizzare un elenco di eventi che possono essere attivati da controllo ActiveX incorporato. Qualsiasi funzione membro visualizzato in grassetto già dispone di funzioni di gestione assegnate.  
   
-4.  Selezionare l'evento desiderato la classe della finestra di dialogo per gestire.  Per questo esempio, **Clic**selezionato.  
+4.  Selezionare l'evento che si desidera che la classe di finestra di dialogo per gestire. Per questo esempio, selezionare **fare clic su**.  
   
-5.  Nell'elenco a discesa a destra, selezionare **\<Add\> ClickCircctrl1**.  
+5.  Selezionare la casella di riepilogo a destra, ** \<Aggiungi > ClickCircctrl1**.  
   
-6.  Fare doppio clic su nuova funzione di gestione da Visualizzazione classi per passare al codice del gestore eventi nel file di implementazione \(.CPP\) di `CContainerDlg`.  
+6.  Fare doppio clic su nuova funzione di gestione da Visualizzazione classi per passare al codice del gestore di evento nell'implementazione (. I file CPP) di `CContainerDlg`.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Contenitori di controlli ActiveX](../mfc/activex-control-containers.md)
+
+

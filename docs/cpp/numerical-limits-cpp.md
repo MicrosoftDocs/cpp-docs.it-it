@@ -1,29 +1,45 @@
 ---
-title: "Limiti numerici (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "limiti numerici"
+title: Limiti numerici (C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- numerical limits
 ms.assetid: 5ebc9837-e273-4ea6-ac7d-14b3c2c974c7
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Limiti numerici (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 5d717daf2dcc23f44a4b053deb22c471dacb777d
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-I due file di inclusione standard, LIMITS.H e FLOAT.H, definiscono i limiti numerici o i valori minimo e massimo di una variabile che un determinato tipo può contenere.  Questi valori minimo e massimo sono portabili in qualsiasi compilatore C\+\+ che utilizza la stessa rappresentazione dei dati di ANSI C.  Il file di inclusione LIMITS.H definisce i [limiti numerici per i tipi integrali](../cpp/integer-limits.md), mentre FLOAT.H definisce i [limiti numerici per i tipi a virgola mobile](../cpp/floating-limits.md).  
+---
+# <a name="numerical-limits-c"></a>Limiti numerici (C++)
+I due file di inclusione standard, LIMITS.H e FLOAT.H, definiscono i limiti numerici o i valori minimo e massimo di una variabile che un determinato tipo può contenere. Questi valori minimi e massimi sono garantiti come a qualsiasi compilatore C++ che utilizza la stessa rappresentazione di dati di ANSI C. I limiti. File di inclusione H definisce le [limiti numerici per i tipi integrali](../cpp/integer-limits.md)e FLOAT. H definisce le [limiti numerici per i tipi mobile](../cpp/floating-limits.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Concetti di base](../cpp/basic-concepts-cpp.md)

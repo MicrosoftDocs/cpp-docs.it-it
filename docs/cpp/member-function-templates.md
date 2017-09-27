@@ -1,35 +1,54 @@
 ---
-title: "Modelli di funzioni membro | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "modelli di funzioni, funzioni membro"
+title: Modelli di funzioni membro | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- function templates, member functions
 ms.assetid: 83d51835-6a27-40ed-997c-7d90dc9182d8
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Modelli di funzioni membro
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: f460497071445cff87308fa9bf6e0d43c6f13a3e
+ms.openlocfilehash: bba7b35c08fbc171ddbb4c572285c0aed2f58a3b
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-Il termine modello di membro si riferisce sia ai modelli di funzioni membro che ai modelli di classe annidati.  I modelli di funzioni membro sono funzioni modello membri di una classe o di un modello di classe.  Per ulteriori informazioni, vedere [Modelli di classe annidati](../Topic/Nested%20Class%20Templates.md).  
+---
+# <a name="member-function-templates"></a>Modelli di funzioni membro
+
+Il termine modello di membro si riferisce sia ai modelli di funzioni membro che ai modelli di classe annidati. I modelli di funzioni membro sono funzioni modello membri di una classe o di un modello di classe.  
   
- Le funzioni membro possono essere modelli di funzione in vari contesti.  Tutte le funzioni dei modelli di classe sono generiche, ma non vengono definite come modelli di membro o modelli di funzioni membro.  Se queste funzioni membro accettano i propri argomenti di modello, vengono considerate come modelli di funzioni membro.  Per informazioni dettagliate, vedere [Funzioni membro delle classi di modelli](../Topic/Member%20Functions%20of%20Template%20Classes.md).  
+ Le funzioni membro possono essere modelli di funzione in vari contesti. Tutte le funzioni dei modelli di classe sono generiche, ma non vengono definite come modelli di membro o modelli di funzioni membro. Se queste funzioni membro accettano i propri argomenti di modello, vengono considerate come modelli di funzioni membro.  
   
-## Esempio  
+## <a name="example"></a>Esempio
+
  I modelli di funzioni membro delle classi di modelli e non di modelli vengono dichiarati come modelli di funzione con i relativi parametri di modello.  
   
-```  
+```cpp
 // member_function_templates.cpp  
 struct X  
 {  
@@ -44,10 +63,11 @@ int main()
 }  
 ```  
   
-## Esempio  
+## <a name="example"></a>Esempio
+
  Nell'esempio seguente viene illustrato un modello di funzione membro di una classe di modello.  
   
-```  
+```cpp
 // member_function_templates2.cpp  
 template<typename T>  
 class X  
@@ -64,10 +84,11 @@ int main()
 }  
 ```  
   
-## Esempio  
- Inoltre, in Visual Studio .NET 2003 e versioni successive, i modelli di membro possono essere definiti all'esterno di una classe.  
+## <a name="example"></a>Esempio
+
+ Inoltre, in Visual Studio .NET 2003 e versioni successive, è anche possibile definire modelli di membro all'esterno di una classe.  
   
-```  
+```cpp
 // defining_member_templates_outside_class.cpp  
 template<typename T>  
 class X  
@@ -87,14 +108,15 @@ int main()
 }  
 ```  
   
-## Esempio  
+## <a name="example"></a>Esempio
+
  Le classi locali non possono avere modelli di membro.  
   
  Le funzioni modello di membro non possono essere funzioni virtuali e non possono eseguire l'override delle funzioni virtuali da una classe base quando vengono dichiarate con lo stesso nome di una funzione virtuale di una classe base.  
   
- In Visual C\+\+ .NET 2003 è stato introdotto il supporto per le conversioni basate su modelli definite dall'utente.  L'esempio seguente funziona in Visual C\+\+ .NET 2003 come specificato nello standard.  
+ Visual C++ .NET 2003 è stato introdotto il supporto per le conversioni definite dall'utente basati su modelli. L'esempio seguente funziona in Visual C++ .NET 2003 come specificato nello standard.  
   
-```  
+```cpp
 // templated_user_defined_conversions.cpp  
 template <class T>  
 struct S  
@@ -112,5 +134,7 @@ int main()
 }  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche
+
  [Modelli di funzioni](../cpp/function-templates.md)
+

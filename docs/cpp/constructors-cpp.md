@@ -1,76 +1,88 @@
 ---
-title: "Costruttori (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "costruttori [C++]"
-  - "costruttori di istanza"
-  - "oggetti [C++], creazione"
+title: Costruttori (C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- constructors [C++]
+- objects [C++], creating
+- instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
 caps.latest.revision: 17
-caps.handback.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Costruttori (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: ece3414dbc7f4d362fa7dcc6f060e408b50e54e6
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-Un costruttore è un tipo di funzione membro che inizializza un'istanza della relativa classe.  Ha nome uguale a quello della classe e non restituisce alcun valore.  Un costruttore può avere parametri di qualsiasi tipo e una classe può avere qualsiasi numero di costruttori in overload.  I costruttori possono avere qualsiasi tipo di accessibilità, ovvero possono essere pubblici, protetti o privati.  Se non si definisce alcun costruttore, il compilatore genererà un costruttore predefinito che non accetta parametri. È possibile eseguire l'override di questo comportamento dichiarando un costruttore predefinito come eliminato.  
+---
+# <a name="constructors-c"></a>Costruttori (C++)
+Un costruttore è un tipo di funzione membro che inizializza un'istanza della relativa classe. Ha nome uguale a quello della classe e non restituisce alcun valore. Un costruttore può avere parametri di qualsiasi tipo e una classe può avere qualsiasi numero di costruttori in overload. I costruttori possono avere qualsiasi tipo di accessibilità, ovvero possono essere pubblici, protetti o privati. Se non si definisce alcun costruttore, il compilatore genererà un costruttore predefinito che non accetta parametri. È possibile eseguire l'override di questo comportamento dichiarando un costruttore predefinito come eliminato.  
   
-## Contenuto dell'argomento  
+## <a name="in-this-topic"></a>Contenuto dell'argomento  
   
 -   [Ordine di costruzione](#order_of_construction)  
   
--   [Elenchi dei membri](../cpp/constructors-cpp.md#member_lists)  
+-   [Elenchi di membri](#member_lists)  
   
--   [Costruttori espliciti](../cpp/constructors-cpp.md#explicit_constructors)  
+-   [Costruttori espliciti](#explicit_constructors)  
   
--   [Costruttori predefiniti](../cpp/constructors-cpp.md#default_constructors)  
+-   [Costruttori predefiniti](#default_constructors)  
   
--   [Copiare e spostare i costruttori](../cpp/constructors-cpp.md#copy_and_move_constructors)  
+-   [Copiare e spostare i costruttori](#copy_and_move_constructors)  
   
--   [Costruttori eliminati e impostati in modo esplicito come predefiniti](../cpp/constructors-cpp.md#explicitly_defaulted_and_deleted_constructors)  
+-   [Costruttori eliminati e impostati in modo esplicito](#explicitly_defaulted_and_deleted_constructors)  
   
--   [Costruttori nelle classi derivate](../cpp/constructors-cpp.md#constructors_in_derived_classes)  
+-   [Costruttori nelle classi derivate](#constructors_in_derived_classes)  
   
--   [Costruttori di classi con ereditarietà multipla](../cpp/constructors-cpp.md#constructors_for_classes_that_have_multiple_inheritance)  
+-   [Funzioni virtuali nei costruttori](#virtual_functions_in_constructors)  
   
--   [Funzioni virtuali nei costruttori](../cpp/constructors-cpp.md#virtual_functions_in_constructors)  
+-   [Costruttori e classi Composite](#constructors_in_composite_classes)  
   
--   [Costruttori e classi composite](../cpp/constructors-cpp.md#constructors_in_composite_classes)  
+-   [Delega dei costruttori](#delegating_constructors)  
   
--   [Delega dei costruttori](../cpp/constructors-cpp.md#delegating_constructors)  
+-   [Costruttori ereditanti (C++ 11)](#inheriting_constructors)  
   
--   [Costruttori ereditanti (C++11)](../cpp/constructors-cpp.md#inheriting_constructors)  
+-   [Regole per la dichiarazione di costruttori](#rules_for_declaring_constructors)  
   
--   [Regole per la dichiarazione di costruttori](../cpp/constructors-cpp.md#rules_for_declaring_constructors)  
+-   [Richiamare in modo esplicito i costruttori](#explicitly_invoking_constructors)  
   
--   Costruttori predefinito e di copia  
-  
--   [Richiamare i costruttori in modo esplicito](../cpp/constructors-cpp.md#explicitly_invoking_constructors)  
-  
-##  <a name="order_of_construction"></a> Ordine di costruzione  
+##  <a name="order_of_construction"></a>Ordine di costruzione  
  Di seguito è indicato l'ordine in base al quale un costruttore esegue le attività.  
   
 1.  Chiama i costruttori delle classi base e dei membri nell'ordine di dichiarazione.  
   
 2.  Se la classe è derivata dalle classi base virtuali, inizializza i puntatori di base virtuali dell'oggetto.  
   
-3.  Se la classe dispone di funzioni virtuali o le eredita, inizializza i puntatori a funzioni virtuali dell'oggetto.  I puntatori a funzioni virtuali puntano alla tabella delle funzioni virtuali della classe per consentire la corretta associazione delle chiamate di funzioni virtuali al codice.  
+3.  Se la classe dispone di funzioni virtuali o le eredita, inizializza i puntatori a funzioni virtuali dell'oggetto. I puntatori a funzioni virtuali puntano alla tabella delle funzioni virtuali della classe per consentire la corretta associazione delle chiamate di funzioni virtuali al codice.  
   
 4.  Esegue il codice nel corpo della funzione.  
   
- L'esempio seguente illustra l'ordine in cui vengono chiamati i costruttori di classi base e di membri in un costruttore per una classe derivata.  Prima di tutto, viene chiamato il costruttore base, quindi i membri della classe base vengono inizializzati nell'ordine in cui vengono visualizzati nella dichiarazione di classe e infine viene chiamato il costruttore derivato.  
+ L'esempio seguente illustra l'ordine in cui vengono chiamati i costruttori di classi base e di membri in un costruttore per una classe derivata. Prima di tutto, viene chiamato il costruttore base, quindi i membri della classe base vengono inizializzati nell'ordine in cui vengono visualizzati nella dichiarazione di classe e infine viene chiamato il costruttore derivato.  
   
 ```cpp  
 #include <iostream>  
@@ -139,10 +151,10 @@ DerivedContainer constructor.
   
 2.  Gli oggetti classe base e membro vengono eliminati in modo permanente nell'ordine inverso rispetto alla dichiarazione.  
   
-3.  Se il costruttore non è delegante, tutti i membri e gli oggetti di classe base completamente costruiti vengono eliminati in modo permanente.  Tuttavia, poiché l'oggetto stesso non viene costruito completamente, il distruttore non viene eseguito.  
+3.  Se il costruttore non è delegante, tutti i membri e gli oggetti di classe base completamente costruiti vengono eliminati in modo permanente. Tuttavia, poiché l'oggetto stesso non viene costruito completamente, il distruttore non viene eseguito.  
   
-##  <a name="member_lists"></a> Elenchi dei membri  
- Inizializzare i membri delle classi dagli argomenti del costruttore usando un elenco di inizializzatori di membro.  Questo metodo usa l'*inizializzazione diretta*, che risulta più efficiente dell'uso di operatori di assegnazione nel corpo del costruttore.  
+##  <a name="member_lists"></a>Elenchi di membri  
+ Inizializzare i membri delle classi dagli argomenti del costruttore usando un elenco di inizializzatori di membro. Questo metodo Usa *inizializzazione diretta*, che risulta più efficiente rispetto all'utilizzo di operatori di assegnazione nel corpo del costruttore.  
   
 ```cpp  
 class Box {  
@@ -167,8 +179,8 @@ Box b(42, 21, 12);
 cout << "The volume is " << b.Volume();  
 ```  
   
-##  <a name="explicit_constructors"></a> Costruttori espliciti  
- Se una classe ha un costruttore con un singolo parametro o se tutti i parametri tranne uno hanno un valore predefinito, sarà possibile convertire implicitamente il tipo di parametro nel tipo di classe.  Ad esempio, se la classe `Box` ha un costruttore analogo al seguente:  
+##  <a name="explicit_constructors"></a>Costruttori espliciti  
+ Se una classe ha un costruttore con un singolo parametro o se tutti i parametri tranne uno hanno un valore predefinito, sarà possibile convertire implicitamente il tipo di parametro nel tipo di classe. Ad esempio, se la classe `Box` ha un costruttore analogo al seguente:  
   
 ```  
 Box(int size): m_width(size), m_length(size), m_height(size){}  
@@ -197,19 +209,19 @@ private:
   
 ```  
   
- Queste conversioni possono risultare utili in alcuni casi, ma provocano più spesso errori poco evidenti ma gravi nel codice.  Come regola generale, è consigliabile usare la parola chiave `explicit` su un costruttore e su operatori definiti dall'utente per evitare questo tipo di conversione implicita del tipo:  
+ Queste conversioni possono risultare utili in alcuni casi, ma provocano più spesso errori poco evidenti ma gravi nel codice. Come regola generale, è consigliabile usare la parola chiave `explicit` su un costruttore e su operatori definiti dall'utente per evitare questo tipo di conversione implicita del tipo:  
   
 ```  
   
 explicit Box(int size): m_width(size), m_length(size), m_height(size){}  
 ```  
   
- Quando il costruttore è esplicito, questa riga provoca un errore del compilatore: `ShippingOrder so(42, 10.8);`.  Per altre informazioni, vedere [Conversioni](../cpp/user-defined-type-conversions-cpp.md).  
+ Quando il costruttore è esplicito, questa riga provoca un errore del compilatore: `ShippingOrder so(42, 10.8);`.  Per ulteriori informazioni, vedere [conversioni dei tipi definiti dall'utente](../cpp/user-defined-type-conversions-cpp.md).  
   
-##  <a name="default_constructors"></a> Costruttori predefiniti  
- I *costruttori predefiniti* non hanno parametri e seguono regole leggermente diverse:  
+##  <a name="default_constructors"></a>Costruttori predefiniti  
+ *Costruttori predefiniti* non hanno parametri seguono regole leggermente diverse:  
   
- I costruttori predefiniti sono una delle *funzioni membro speciali*. Se non viene dichiarato alcun costruttore in una classe, il compilatore fornisce un costruttore predefinito:  
+ I costruttori predefiniti sono una del *funzioni membro speciali*; se non vengono dichiarati in una classe, il compilatore fornisce un costruttore predefinito:  
   
 ```cpp  
 class Box {  
@@ -233,7 +245,7 @@ myclass mc();     // warning C4930: prototyped function not called (was a variab
 }  
 ```  
   
- Di seguito è riportato un esempio del problema 'Most Vexing Parse'.  Poiché l'espressione di esempio può essere interpretata come dichiarazione di una funzione o come chiamata di un costruttore predefinito e dal momento che i parser C\+\+ favoriscono le dichiarazioni rispetto ad altri elementi, tale espressione viene considerata come una dichiarazione di funzione.  Per altre informazioni, vedere [Most Vexing Parse](http://en.wikipedia.org/wiki/Most_vexing_parse).  
+ Di seguito è riportato un esempio del problema 'Most Vexing Parse'. Poiché l'espressione di esempio può essere interpretata come dichiarazione di una funzione o come chiamata di un costruttore predefinito e dal momento che i parser C++ favoriscono le dichiarazioni rispetto ad altri elementi, tale espressione viene considerata come una dichiarazione di funzione. Per ulteriori informazioni, vedere [Most Vexing Parse](http://en.wikipedia.org/wiki/Most_vexing_parse).  
   
  Se vengono dichiarati costruttori non predefiniti, il compilatore non fornisce un costruttore predefinito:  
   
@@ -258,7 +270,7 @@ int main(){
   
 ```  
   
- Se la classe non dispone di un costruttore predefinito, non è possibile costruire una matrice di oggetti di tale classe usando solo la sintassi tra parentesi quadre.  Ad esempio, nel caso del blocco di codice precedente, non è possibile dichiarare una matrice di Boxes nel modo seguente:  
+ Se la classe non dispone di un costruttore predefinito, non è possibile costruire una matrice di oggetti di tale classe usando solo la sintassi tra parentesi quadre. Ad esempio, nel caso del blocco di codice precedente, non è possibile dichiarare una matrice di Boxes nel modo seguente:  
   
 ```cpp  
 Box boxes[3];    // compiler error C2512: no appropriate default constructor available  
@@ -271,14 +283,14 @@ Box boxes[3];    // compiler error C2512: no appropriate default constructor ava
 Box boxes[3]{ { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };  
 ```  
   
-##  <a name="copy_and_move_constructors"></a> Copiare e spostare i costruttori  
- Un *costruttore di copia* è una funzione membro speciale che accetta come input un riferimento a un oggetto dello stesso tipo e ne crea una copia.  Per altre informazioni, vedere [Costruttori di copia e operatori di assegnazione di copia \(C\+\+\)](../cpp/copy-constructors-and-copy-assignment-operators-cpp.md).  Anche uno spostamento è una funzione membro speciale, che sposta la proprietà di un oggetto esistente in una nuova variabile, senza copiare i dati originali.  Per altre informazioni, vedere [Costruttori di spostamento e operatori di assegnazione di spostamento \(C\+\+\)](http://msdn.microsoft.com/it-it/1442de5f-37a5-42a1-83a6-ec9cfe0414db) e [Costruttori di spostamento e operatori di assegnazione di spostamento \(C\+\+\)](../cpp/move-constructors-and-move-assignment-operators-cpp.md).  
+##  <a name="copy_and_move_constructors"></a>Copiare e spostare i costruttori  
+ Oggetto *costruttore di copia* è una funzione membro speciale che accetta come input un riferimento a un oggetto dello stesso tipo e ne crea una copia. Per ulteriori informazioni, vedere [costruttori di copia e operatori di assegnazione di copia (C++)](../cpp/copy-constructors-and-copy-assignment-operators-cpp.md). Oggetto *costruttore di spostamento* è anche una funzione membro speciale che sposta la proprietà di dati dell'oggetto esistente a una nuova variabile senza copiare i dati originali. Per ulteriori informazioni, vedere [costruttori di spostamento e operatori di assegnazione di spostamento (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md).  
   
-##  <a name="explicitly_defaulted_and_deleted_constructors"></a> Costruttori eliminati e impostati in modo esplicito come predefiniti  
- È possibile impostare in modo esplicito come predefiniti i costruttori di copia, i costruttori predefiniti, i costruttori di spostamento, gli operatori di assegnazione di copia, gli operatori di assegnazione di spostamento e i distruttori.  È possibile eliminare in modo esplicito tutte le funzioni membro speciali.  Per altre informazioni, vedere [Funzioni impostate come predefinite ed eliminate in modo esplicito](../cpp/explicitly-defaulted-and-deleted-functions.md).  
+##  <a name="explicitly_defaulted_and_deleted_constructors"></a>Costruttori eliminati e impostati in modo esplicito  
+ È possibile in modo esplicito *predefinito* costruttori di copia, costruttori predefiniti, costruttori di spostamento, operatori di assegnazione di copiare, spostare gli operatori di assegnazione e i distruttori. È possibile in modo esplicito *eliminare* tutte le funzioni membro speciali. Per ulteriori informazioni, vedere [in modo esplicito impostate come predefinite e funzioni eliminate](../cpp/explicitly-defaulted-and-deleted-functions.md).  
   
-##  <a name="constructors_in_derived_classes"></a> Costruttori nelle classi derivate  
- Un costruttore di classi derivate chiama sempre un costruttore di classi base, in modo da poter usare le classi base completamente costruite prima che vengano completate eventuali operazioni aggiuntive.  I costruttori di classi base vengono chiamati in ordine di derivazione, ad esempio se ClassA è derivata da ClassB, che è a sua volta derivata da ClassC, viene chiamato per primo il costruttore di ClassC, quindi il costruttore di ClassB e infine il costruttore di ClassA.  
+##  <a name="constructors_in_derived_classes"></a>Costruttori nelle classi derivate  
+ Un costruttore di classi derivate chiama sempre un costruttore di classi base, in modo da poter usare le classi base completamente costruite prima che vengano completate eventuali operazioni aggiuntive. I costruttori di classi base vengono chiamati in ordine di derivazione, ad esempio se ClassA è derivata da ClassB, che è a sua volta derivata da ClassC, viene chiamato per primo il costruttore di ClassC, quindi il costruttore di ClassB e infine il costruttore di ClassA.  
   
  Se una classe base non dispone di un costruttore predefinito, è necessario fornire i parametri del costruttore della classe base nel costruttore della classe derivata:  
   
@@ -313,7 +325,7 @@ int main(){
 }   
 ```  
   
-### Costruttori di classi con ereditarietà multipla  
+### <a name="constructors-for-classes-that-have-multiple-inheritance"></a>Costruttori di classi con ereditarietà multipla  
  Se una classe è derivata da più classi base, i costruttori della classe base vengono richiamati nell'ordine in cui sono elencati nella dichiarazione della classe derivata:  
   
 ```cpp  
@@ -360,8 +372,8 @@ BaseClass3 constructor.
 DerivedClass constructor.  
 ```  
   
-##  <a name="virtual_functions_in_constructors"></a> Funzioni virtuali nei costruttori  
- È consigliabile prestare attenzione quando si chiamano le funzioni virtuali nei costruttori.  Poiché il costruttore della classe base viene sempre richiamato prima del costruttore della classe derivata, la funzione chiamata nel costruttore base è la versione della classe base, non quella della classe derivata.  Nell'esempio seguente, la costruzione di una classe `DerivedClass` fa in modo che l'implementazione di `BaseClass` da parte della classe `print_it()` venga eseguita prima che il costruttore della classe `DerivedClass` determini l'esecuzione dell'implementazione di `DerivedClass` da parte della classe `print_it()`:  
+##  <a name="virtual_functions_in_constructors"></a>Funzioni virtuali nei costruttori  
+ È consigliabile prestare attenzione quando si chiamano le funzioni virtuali nei costruttori. Poiché il costruttore della classe base viene sempre richiamato prima del costruttore della classe derivata, la funzione chiamata nel costruttore base è la versione della classe base, non quella della classe derivata. Nell'esempio seguente, la costruzione di una classe `DerivedClass` fa in modo che l'implementazione di `BaseClass` da parte della classe `print_it()` venga eseguita prima che il costruttore della classe `DerivedClass` determini l'esecuzione dell'implementazione di `DerivedClass` da parte della classe `print_it()`:  
   
 ```cpp  
 #include <iostream>  
@@ -400,8 +412,8 @@ BaseClass print_it
 Derived Class print_it  
 ```  
   
-##  <a name="constructors_in_composite_classes"></a> Costruttori e classi composite  
- Le classi contenenti membri di tipo classe sono note come *classi composite*.  Quando viene creato un membro di tipo classe di una classe composita, il costruttore viene chiamato prima del costruttore della classe.  Quando una classe contenuta è priva di un costruttore predefinito, è necessario usare un elenco di inizializzazione nel costruttore della classe composita.  Nell'esempio precedente relativo a `StorageBox`, se si modifica il tipo della variabile membro `m_label` in una nuova classe `Label`, è necessario chiamare il costruttore della classe base e inizializzare la variabile `m_label` nel costruttore `StorageBox`:  
+##  <a name="constructors_in_composite_classes"></a>Costruttori e classi Composite  
+ Le classi che contengono membri di tipo classe sono note come *classi composite*. Quando viene creato un membro di tipo classe di una classe composita, il costruttore viene chiamato prima del costruttore della classe. Quando una classe contenuta è priva di un costruttore predefinito, è necessario usare un elenco di inizializzazione nel costruttore della classe composita. Nell'esempio precedente relativo a `StorageBox`, se si modifica il tipo della variabile membro `m_label` in una nuova classe `Label`, è necessario chiamare il costruttore della classe base e inizializzare la variabile `m_label` nel costruttore `StorageBox`:  
   
 ```cpp  
 class Label {  
@@ -432,8 +444,8 @@ int main(){
 }  
 ```  
   
-##  <a name="delegating_constructors"></a> Delega dei costruttori  
- Un *costruttore delegante* chiama un altro costruttore nella stessa classe per eseguire parte delle operazioni di inizializzazione.  Nell'esempio seguente, la classe derivata dispone di tre costruttori: il secondo costruttore delega al primo e il terzo costruttore delega al secondo:  
+##  <a name="delegating_constructors"></a>Delega dei costruttori  
+ Oggetto *costruttore delegante* chiama un costruttore diverso nella stessa classe per eseguire le attività di inizializzazione. Nell'esempio seguente, la classe derivata dispone di tre costruttori: il secondo costruttore delega al primo e il terzo costruttore delega al secondo:  
   
 ```cpp  
 #include <iostream>  
@@ -474,7 +486,7 @@ ConstructorDestructor constructor with 2 ints.
 ConstructorDestructor constructor with 3 ints.  
 ```  
   
- L'oggetto creato dai costruttori viene completamente inizializzato non appena viene completato un costruttore.  `DerivedContainer(int int1)` ha esito positivo, ma `DerivedContainer(int int1, int int2)` ha esito negativo e viene chiamato il distruttore.  
+ L'oggetto creato dai costruttori viene completamente inizializzato non appena viene completato un costruttore. `DerivedContainer(int int1)` ha esito positivo, ma `DerivedContainer(int int1, int int2)` ha esito negativo e viene chiamato il distruttore.  
   
 ```cpp  
 class ConstructorDestructor {  
@@ -517,9 +529,9 @@ ConstructorDestructor constructor with 2 ints.
 ConstructorDestructor destructor.  
 ```  
   
- Per altre informazioni, vedere [Inizializzazione uniforme e costruttori deleganti](../cpp/uniform-initialization-and-delegating-constructors.md).  
+ Per ulteriori informazioni, vedere [inizializzazione uniforme e costruttori deleganti](../cpp/uniform-initialization-and-delegating-constructors.md).  
   
-##  <a name="inheriting_constructors"></a> Costruttori ereditanti \(C\+\+11\)  
+##  <a name="inheriting_constructors"></a>Costruttori ereditanti (C++ 11)  
  Una classe derivata può ereditare i costruttori da una classe base diretta usando una dichiarazione using, come illustrato nell'esempio seguente:  
   
 ```  
@@ -578,7 +590,7 @@ Press Enter to exit.
   
 ```  
   
- L'istruzione using porta nell'ambito tutti i costruttori dalla classe base, ad eccezione di quelli che hanno una firma identica ai costruttori disponibili nella classe derivata.  In genere, è consigliabile usare i costruttori ereditanti quando la classe derivata non dichiara nuovi membri dati o nuovi costruttori.  
+ L'istruzione using porta nell'ambito tutti i costruttori dalla classe base, ad eccezione di quelli che hanno una firma identica ai costruttori disponibili nella classe derivata. In genere, è consigliabile usare i costruttori ereditanti quando la classe derivata non dichiara nuovi membri dati o nuovi costruttori.  
   
  Un modello di classe può ereditare tutti i costruttori da un argomento di tipo, se tale tipo specifica una classe base:  
   
@@ -593,44 +605,44 @@ class Derived : T {
   
  Una classe di derivazione non può ereditare da più classi base, se tali classi base hanno costruttori con firma identica.  
   
-##  <a name="rules_for_declaring_constructors"></a> Regole per la dichiarazione di costruttori  
- Un costruttore ha lo stesso nome della relativa classe.  È possibile dichiarare un numero qualsiasi di costruttori soggetti alle regole di funzioni in overload.  \(Per altre informazioni, vedere [Overload](../misc/overloading-cpp.md)\).  
+##  <a name="rules_for_declaring_constructors"></a>Regole per la dichiarazione di costruttori  
+ Un costruttore ha lo stesso nome della relativa classe. È possibile dichiarare un numero qualsiasi di costruttori soggetti alle regole di funzioni in overload.  
   
  `argument-declaration-list` può essere vuoto.  
   
- C\+\+ definisce due tipi speciali di costruttori, predefinito e di copia, descritti nella tabella seguente.  
+ C++ definisce due tipi speciali di costruttori, predefinito e di copia, descritti nella tabella seguente.  
   
-### Costruttori predefinito e di copia  
+### <a name="default-and-copy-constructors"></a>Costruttori predefinito e di copia  
   
 |Tipo di costruzione|Argomenti|Scopo|  
-|-------------------------|---------------|-----------|  
+|--------------------------|---------------|-------------|  
 |Costruttore predefinito|Può essere chiamato senza argomenti|Consente di costruire un oggetto predefinito del tipo di classe|  
 |Costruttore di copia|Può accettare un unico argomento di riferimento allo stesso tipo di classe|Consente di copiare gli oggetti del tipo di classe|  
   
- I costruttori predefiniti possono essere chiamati senza argomenti.  È tuttavia possibile dichiarare un costruttore predefinito con un elenco di argomenti, se tutti gli argomenti hanno impostazioni predefinite.  Analogamente, i costruttori di copia devono accettare un unico argomento di riferimento allo stesso tipo di classe.  È possibile fornire altri argomenti, se tutti gli argomenti successivi hanno impostazioni predefinite.  
+ I costruttori predefiniti possono essere chiamati senza argomenti. È tuttavia possibile dichiarare un costruttore predefinito con un elenco di argomenti, se tutti gli argomenti hanno impostazioni predefinite. Analogamente, i costruttori di copia devono accettare un unico argomento di riferimento allo stesso tipo di classe. È possibile fornire altri argomenti, se tutti gli argomenti successivi hanno impostazioni predefinite.  
   
- Se non vengono forniti i costruttori, il compilatore tenta di generare un costruttore predefinito.  Se non viene fornito un costruttore di copia, il compilatore tenta di generarne uno.  Questi costruttori generati dal compilatore vengono considerati funzioni membro pubbliche.  Verrà generato un errore se si specifica un costruttore di copia con un primo argomento che è un oggetto e non un riferimento.  
+ Se non vengono forniti i costruttori, il compilatore tenta di generare un costruttore predefinito. Se non viene fornito un costruttore di copia, il compilatore tenta di generarne uno. Questi costruttori generati dal compilatore vengono considerati funzioni membro pubbliche. Verrà generato un errore se si specifica un costruttore di copia con un primo argomento che è un oggetto e non un riferimento.  
   
- Un costruttore predefinito generato dal compilatore installa l'oggetto \(inizializza vftables e vbtables, come descritto in precedenza\) e chiama i costruttori predefiniti per le classi di base e i membri, ma non esegue altre operazioni.  I costruttori delle classi base e dei membri sono chiamati solo se esistono, sono accessibili e non sono ambigui.  
+ Un costruttore predefinito generato dal compilatore installa l'oggetto (inizializza vftables e vbtables, come descritto in precedenza) e chiama i costruttori predefiniti per le classi di base e i membri, ma non esegue altre operazioni. I costruttori delle classi base e dei membri sono chiamati solo se esistono, sono accessibili e non sono ambigui.  
   
- Un costruttore di copia generato dal compilatore configura un nuovo oggetto ed esegue una copia membro per membro dei contenuti dell'oggetto da copiare.  I costruttori delle classi base o dei membri vengono chiamati solo se esistono; in caso contrario, viene eseguita la copia bit per bit.  
+ Un costruttore di copia generato dal compilatore configura un nuovo oggetto ed esegue una copia membro per membro dei contenuti dell'oggetto da copiare. I costruttori delle classi base o dei membri vengono chiamati solo se esistono; in caso contrario, viene eseguita la copia bit per bit.  
   
- Se tutte le classi base e dei membri di un `type` di classe hanno costruttori di copia che accettano un argomento **const**, il costruttore di copia generato dal compilatore accetta un unico argomento di tipo **const** `type`**&**.  In caso contrario, il costruttore di copia generato dal compilatore accetta un unico argomento di tipo `type`**&**.  
+ Se tutte le classi di base e dei membri di una classe `type` hanno costruttori di copia che accettano un **const** argomento, il costruttore di copia generato dal compilatore accetta un unico argomento di tipo **const** `type` **&**. In caso contrario, il costruttore di copia generato dal compilatore accetta un unico argomento di tipo `type` ** & **.  
   
- È possibile usare un costruttore per inizializzare un oggetto **const** o `volatile`, ma il costruttore stesso non può essere dichiarato come **const** o `volatile`.  L'unica classe di archiviazione ammessa per un costruttore è **inline**; l'uso di qualsiasi altro modificatore di classe di archiviazione, inclusa la parola chiave `__declspec`, con un costruttore genera un errore del compilatore.  
+ È possibile utilizzare un costruttore per inizializzare un **const** o `volatile` oggetto, ma il costruttore stesso non può essere dichiarato come **const** o `volatile`. La classe di archiviazione ammessa solo per un costruttore è **inline**; uso di qualsiasi altro modificatore di classe di archiviazione, inclusi il `__declspec` (parola chiave), con un costruttore genera un errore del compilatore.  
   
- La convenzione di chiamata stdcall viene usata nelle funzioni membro statiche e nelle funzioni globali dichiarate con la parola chiave **\_\_stdcall** e che non usano un elenco di argomenti variabile.  Quando si usa la parola chiave **\_\_stdcall** in una funzione membro non statica, ad esempio un costruttore, il compilatore userà la convenzione di chiamata thiscall.  
+ La convenzione di chiamata stdcall viene usata nelle funzioni membro statiche e funzioni globali dichiarate con la **stdcall** (parola chiave) e che non utilizzano un elenco di argomenti variabile. Quando si utilizza il **stdcall** parola chiave in una funzione membro non statico, ad esempio un costruttore, il compilatore userà la convenzione di chiamata thiscall. "  
   
- I costruttori delle classi base non vengono ereditate dalle classi derivate.  Quando un oggetto di tipo classe derivata viene creato, viene costruito a partire dai componenti della classe base; quindi passa ai componenti della classe derivata.  Il compilatore usa ogni costruttore della classe base poiché quella parte dell'oggetto completo è inizializzata, ad eccezione dei casi di derivazione virtuale, come descritto in [Inizializzazione delle classi base](../misc/initializing-base-classes.md).  
+ I costruttori delle classi base non vengono ereditate dalle classi derivate. Quando un oggetto di tipo classe derivata viene creato, viene costruito a partire dai componenti della classe base; quindi passa ai componenti della classe derivata. Il compilatore Usa ogni costruttore della classe come parte dell'intero oggetto viene inizializzata (tranne che in caso di derivazione virtuale.  
   
-##  <a name="explicitly_invoking_constructors"></a> Richiamare i costruttori in modo esplicito  
- I costruttori possono essere chiamati in modo esplicito in un programma per creare gli oggetti di un tipo specifico.  Ad esempio, per creare due oggetti `Point` che descrivono la fine di una riga, è possibile scrivere il codice seguente:  
+##  <a name="explicitly_invoking_constructors"></a>Richiamare in modo esplicito i costruttori  
+ I costruttori possono essere chiamati in modo esplicito in un programma per creare gli oggetti di un tipo specifico. Ad esempio, per creare due oggetti `Point` che descrivono la fine di una riga, è possibile scrivere il codice seguente:  
   
 ```  
 DrawLine( Point( 13, 22 ), Point( 87, 91 ) );  
 ```  
   
- Vengono creati due oggetti di tipo `Point`, successivamente passati alla funzione `DrawLine` ed eliminati alla fine dell'espressione \(chiamata di funzione\).  
+ Vengono creati due oggetti di tipo `Point`, successivamente passati alla funzione `DrawLine` ed eliminati alla fine dell'espressione (chiamata di funzione).  
   
  Un altro contesto in cui un costruttore viene chiamato in modo esplicito è la fase di inizializzazione:  
   
@@ -640,11 +652,11 @@ Point pt = Point( 7, 11 );
   
  Un oggetto di tipo `Point` viene creato e inizializzato tramite il costruttore che accetta due argomenti di tipo `int`.  
   
- Oggetti creati tramite la chiamata esplicita di costruttori, come nei due esempi precedenti, sono senza nome e con una durata pari a quella dell'espressione in cui vengono creati.  Questa situazione viene discussa più in dettaglio in [Oggetti temporanei](../cpp/temporary-objects.md).  
+ Oggetti creati tramite la chiamata esplicita di costruttori, come nei due esempi precedenti, sono senza nome e con una durata pari a quella dell'espressione in cui vengono creati. Questo argomento viene discusso in maggior dettaglio in [oggetti temporanei](../cpp/temporary-objects.md).  
   
- Generalmente è consigliabile chiamare una funzione membro dall'interno di un costruttore poiché l'oggetto è stato completamente installato \(le tabelle virtuali sono state inizializzate e così via\) prima di eseguire la prima riga di codice utente.  Tuttavia, potrebbe non essere sicuro per una funzione membro chiamare una funzione membro virtuale per una classe base astratta durante la costruzione o l'eliminazione.  
+ Generalmente è consigliabile chiamare una funzione membro dall'interno di un costruttore poiché l'oggetto è stato completamente installato (le tabelle virtuali sono state inizializzate e così via) prima di eseguire la prima riga di codice utente. Tuttavia, potrebbe non essere sicuro per una funzione membro chiamare una funzione membro virtuale per una classe base astratta durante la costruzione o l'eliminazione.  
   
- I costruttori possono chiamare funzioni virtuali  Quando vengono chiamate le funzioni virtuali, la funzione richiamata è quella definita per la classe del costruttore \(oppure ereditata dalle basi\).  L'esempio seguente mostra cosa si verifica quando una funzione virtuale viene chiamata dall'interno di un costruttore:  
+ I costruttori possono chiamare funzioni virtuali Quando vengono chiamate le funzioni virtuali, la funzione richiamata è quella definita per la classe del costruttore (oppure ereditata dalle basi). L'esempio seguente mostra cosa si verifica quando una funzione virtuale viene chiamata dall'interno di un costruttore:  
   
 ```  
 // specl_calling_virtual_functions.cpp  
@@ -695,11 +707,10 @@ int main()
   
  Quando viene eseguito il programma precedente, la dichiarazione `Derived d` comporta la sequenza di eventi seguente:  
   
-1.  Viene chiamato il costruttore per la classe `Derived` \(`Derived::Derived`\).  
+1.  Viene chiamato il costruttore per la classe `Derived` (`Derived::Derived`).  
   
-2.  Prima di inserire il corpo del costruttore della classe `Derived`, viene chiamato il costruttore della classe `Base` \(`Base::Base`\).  
+2.  Prima di inserire il corpo del costruttore della classe `Derived`, viene chiamato il costruttore della classe `Base` (`Base::Base`).  
   
- `Base::Base` chiama la funzione `f`, che è una funzione virtuale.  In genere, `Derived::f` viene chiamato perché l'oggetto `d` è di tipo `Derived`.  Poiché la funzione `Base::Base` è un costruttore, l'oggetto non è ancora del tipo `Derived` e viene chiamato `Base::f`.  
+ `Base::Base` chiama la funzione `f`, che è una funzione virtuale. In genere, `Derived::f` viene chiamato perché l'oggetto `d` è di tipo `Derived`. Poiché la funzione `Base::Base` è un costruttore, l'oggetto non è ancora del tipo `Derived` e viene chiamato `Base::f`.  
   
-## Vedere anche  
- [Funzioni membro speciali](../misc/special-member-functions-cpp.md)
+

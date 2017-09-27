@@ -1,37 +1,53 @@
 ---
-title: "_bstr_t::operator = | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_bstr_t::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "= (operatore), oggetti specifici di Visual C++"
-  - "operatore =, bstr"
-  - "operator=, bstr"
+title: _bstr_t::operator = | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _bstr_t::operator=
+dev_langs:
+- C++
+helpviewer_keywords:
+- operator =, bstr
+- operator=, bstr
+- = operator, with specific Visual C++ objects
 ms.assetid: fb31bb1b-ce29-4388-b5fd-8dac830cf18a
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# _bstr_t::operator =
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 445c18ece9b998d5cfa75a1c9fe5bde3b60b2e52
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="bstrtoperator-"></a>_bstr_t::operator =
 **Sezione specifica Microsoft**  
   
  Assegna un nuovo valore a un oggetto `_bstr_t` esistente.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -49,7 +65,7 @@ _bstr_t& operator=(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  *s1*  
  Oggetto `_bstr_t` da assegnare a un oggetto esistente `_bstr_t`.  
   
@@ -64,8 +80,8 @@ _bstr_t& operator=(
   
  **Fine sezione specifica Microsoft**  
   
-## Esempio  
- Per un esempio dell'utilizzo di `operator=`, vedere [\_bstr\_t::Assign](../cpp/bstr-t-assign.md).  
+## <a name="example"></a>Esempio  
+ Vedere [Connetti](../cpp/bstr-t-assign.md) per un esempio di utilizzo `operator=`.  
   
-## Vedere anche  
- [\_bstr\_t Class](../cpp/bstr-t-class.md)
+## <a name="see-also"></a>Vedere anche  
+ [Classe _bstr_t](../cpp/bstr-t-class.md)

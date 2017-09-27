@@ -1,91 +1,207 @@
 ---
-title: "Istruzione if-else (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "else_cpp"
-  - "else"
-  - "if_cpp"
-  - "if"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "else (parola chiave) [C++]"
-  - "if (parola chiave) [C++]"
-  - "if (parola chiave) [C++], if-else"
+title: Istruzione if-else (C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 07/17/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- else_cpp
+- else
+- if_cpp
+- if
+dev_langs:
+- C++
+helpviewer_keywords:
+- if keyword [C++]
+- else keyword [C++]
+- if keyword [C++], if-else
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
 caps.latest.revision: 13
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Istruzione if-else (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 7f6d2a553e34b5f15e53fa142241af83d8e91255
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-Controlla la creazione di un ramo condizionale.  
+---
+# <a name="if-else-statement-c"></a>Istruzione if-else (C++)
+Controlla la creazione di un ramo condizionale. Istruzioni di *blocco se* vengono eseguiti solo se il *se espressione* restituisce un valore diverso da zero (o `true`). Se il valore di *espressione* è diverso da zero, *statement1* e vengono eseguite le altre istruzioni nel blocco e l'altro blocco, se presente, viene ignorato. Se il valore di *espressione* è zero, quindi il blocco se viene ignorato ed else-blocco, se presente, viene eseguito. Le espressioni che restituiscono diverso da zero sono
+- `true`
+- un puntatore non null,
+- qualsiasi valore aritmetico diverso da zero, o 
+- Digitare un tipo di classe che definisce una conversione non ambigua per un'operazione aritmetica, boolean o puntatore. (Per informazioni sulle conversioni, vedere [conversioni Standard](../cpp/standard-conversions.md).)   
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
-      if ( expression )  
-   statement1  
-[else  
-   statement2]  
+if ( expression )  
+{
+   statement1;
+   ...  
+}
+else  // optional
+{
+   statement2;
+   ...
+} 
+
+// Visual Studio 2017 version 15.3 and later:
+if ( initialization; expression )  
+{
+   statement1;
+   ...  
+}
+else  // optional
+{
+   statement2;
+   ...
+}  
+
+// Visual Studio 2017 version 15.3 and later:
+if constexpr (expression)
+{
+    statement1;
+    ...
+}
+else  // optional
+{
+   statement2;
+   ...
+} 
 ```  
-  
-## Note  
- Se il valore di *un'espressione* è diverso da zero, viene eseguito *statement1*.  Se il facoltativo **else** è presente, viene eseguito *statement2* se il valore *di un'espressione* è zero.  L'*espressione* deve essere di tipo aritmetico o di tipo puntatore, o deve essere di un tipo di classe che definisce una conversione non ambigua verso un tipo aritmetico o puntatore. \(Per ulteriori informazioni sulle conversioni, vedere [Conversioni standard](../cpp/standard-conversions.md).\)  
-  
- In entrambi i formati dell'istruzione **if**, l'*espressione*, che può avere qualsiasi valore eccetto una struttura, viene valutata, inclusi tutti gli effetti collaterali.  Il controllo passa dall'istruzione **if** alla successiva istruzione del programma a meno che una delle *istruzioni*contenga un [break](../cpp/break-statement-cpp.md), [continue](../cpp/continue-statement-cpp.md), o un [goto](../cpp/goto-statement-cpp.md).  
-  
- La clausola **else** di un'istruzione `if...else` viene associata all'istruzione **if** precedente più vicina nello stesso scope che non ha una corrispondente istruzione **else**.  
-  
- Perché l'esempio sia non ambiguo sull'accoppiamento `if...else`, rimuovere il commento dalle parentesi graffe.  
-  
-## Esempio  
-  
+## <a name="example"></a>Esempio  
 ```  
 // if_else_statement.cpp  
-#include <stdio.h>  
+#include <iostream>
+
+using namespace std;
+
+class C
+{
+    public:
+    void do_somthing(){}
+};
+void init(C){}
+bool is_true() { return true; }
+int x = 10;
+
+int main()
+{
+    if (is_true())
+    {
+        cout << "b is true!\n";  // executed
+    }
+    else
+    {
+        cout << "b is false!\n";
+    }
+
+  // no else statement
+    if (x == 10)
+    {
+        x = 0; 
+    }
+    
   
-int main()   
-{  
-   int x = 0;  
-   if (x == 0)  
-   {  
-      printf_s("x is 0!\n");  
-   }  
-   else  
-   {  
-      printf_s("x is not 0!\n"); // this statement will not be executed  
-   }  
-  
-   x = 1;  
-   if (x == 0)  
-   {  
-      printf_s("x is 0!\n"); // this statement will not be executed  
-   }  
-   else  
-   {  
-      printf_s("x is not 0!\n");  
-   }  
-  
-   return 0;  
-}  
+    C* c;
+  init(c);
+    if (c)
+    {
+        c->do_something();
+    }
+    else
+    {
+        cout << "c is null!\n";
+    }
+}
 ```  
+## <a name="if-statement-with-an-initializer"></a>Se l'istruzione con un inizializzatore
+**Visual Studio 2017 15.3 e versioni successive** (disponibile con [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): un **se** istruzione può inoltre contenere un'espressione che dichiara e Inizializza una variabile denominata. Utilizzare questa forma di istruzione if quando la variabile è necessario solo all'interno dell'ambito del blocco di if. 
+
+```cpp
+## Example  
+#include <iostream>
+#include <mutex>
+#include <map>
+#include <string>
+#include <algorithm>
+
+
+using namespace std;
+
+map<int, string> m;
+mutex mx;
+bool shared_flag; // guarded by mx
+void unsafe_operation() {}
+
+int main()
+{
+
+    if (auto it = m.find(10); it != m.end())
+    {
+        cout << it->second;
+        return 0;
+    }
+
+    if (char buf[10]; fgets(buf, 10, stdin))
+    {
+        m[0] += buf;
+    }
+
+    if (lock_guard<mutex> lock(mx); shared_flag)
+    {
+        unsafe_operation();
+        shared_flag = false;
+    }
+
+
+    string s{ "if" };
+    if (auto keywords = { "if", "for", "while" }; any_of(keywords.begin(), keywords.end(), [&s](const char* kw) { return s == kw; }))
+    {
+        cout << "Error! Token must not be a keyword\n";
+    }
+
+}
+```
+
+ In tutti i form del **se** istruzione *espressione*, che possono avere qualsiasi valore salvo una struttura, viene valutata, inclusi tutti gli effetti collaterali. Controllo passa dal **se** istruzione all'istruzione successiva nel programma, a meno che uno del *istruzione*s contiene un [interruzione](../cpp/break-statement-cpp.md), [continuare](../cpp/continue-statement-cpp.md), o [goto](../cpp/goto-statement-cpp.md).  
   
-  **x è 0\!**  
-**x non è 0\!**   
-## Vedere anche  
+ Il **else** clausola di un `if...else` istruzione è associata a più vicina precedente **se** nello stesso ambito che non esiste un corrispondente istruzione **else** istruzione.   
+
+## <a name="constexpr-if-statements"></a>constexpr se le istruzioni
+**Visual Studio 2017 15.3 e versioni successive** (disponibile con [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): nei modelli di funzione, è possibile utilizzare un **constexpr se** istruzione per prendere decisioni di diramazione in fase di compilazione senza dover ricorrere al più overload di funzione. Ad esempio, è possibile scrivere una singola funzione tale parametro handle disimballaggio (non è necessario alcun overload di parametro da zero): 
+
+```cpp
+template <class T, class... Rest>
+void f(T&& t, Rest&&... r)
+{
+// handle t
+   do_something(t);
+
+   // handle r conditionally
+   constexpr if (sizeof...(r)) 
+   {
+      
+      f(r...); 
+   }
+   else
+   {
+       g(r...);
+   }
+}
+```
+
+  
+ 
+## <a name="see-also"></a>Vedere anche  
  [Istruzioni di selezione](../cpp/selection-statements-cpp.md)   
- [Parole chiave C\+\+](../cpp/keywords-cpp.md)   
- [Istruzione switch \(C\+\+\)](../cpp/switch-statement-cpp.md)
+ [Parole chiave](../cpp/keywords-cpp.md)   
+ [Istruzione switch (C++)](../cpp/switch-statement-cpp.md)

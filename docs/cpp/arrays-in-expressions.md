@@ -1,40 +1,57 @@
 ---
-title: "Matrici nelle espressioni | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "matrici [C++], nelle espressioni"
-  - "espressioni [C++], matrici"
+title: Matrici nelle espressioni | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- expressions [C++], arrays in
+- arrays [C++], in expressions
 ms.assetid: 6e5a795b-d6bd-4e39-b313-6a20d47c4d4b
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Matrici nelle espressioni
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: ec97fba837ffae0a03ff8d4fc3d85c4011aa59c6
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-Quando un identificatore di un tipo di matrice appare in un'espressione diversa da `sizeof`, indirizzo di \(**&**\) o come inizializzazione di un riferimento, viene convertito in un puntatore al primo elemento della matrice.  Ad esempio:  
+---
+# <a name="arrays-in-expressions"></a>Matrici nelle espressioni
+Quando un identificatore di un tipo di matrice viene visualizzata in un'espressione diversa da `sizeof`, AddressOf (**&**), o l'inizializzazione di un riferimento, viene convertito in un puntatore al primo elemento della matrice. Ad esempio:  
   
 ```  
 char szError1[] = "Error: Disk drive not ready.";  
 char *psz = szError1;  
 ```  
   
- Il puntatore `psz` fa riferimento al primo elemento della matrice `szError1`.  Tenere presente che, a differenza dei puntatori, le matrici non sono l\-value modificabili.  Pertanto, la seguente assegnazione non è valida:  
+ Il puntatore `psz` fa riferimento al primo elemento della matrice `szError1`. Tenere presente che, a differenza dei puntatori, le matrici non sono l-value modificabili. Pertanto, la seguente assegnazione non è valida:  
   
 ```  
 szError1 = psz;  
 ```  
   
-## Vedere anche  
- [Matrici](../cpp/arrays-cpp.md)
+## <a name="see-also"></a>Vedere anche  
+ [Array](../cpp/arrays-cpp.md)

@@ -1,82 +1,98 @@
 ---
-title: "struct (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "struct"
-  - "struct_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "costruttori struct"
+title: struct (C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- struct
+- struct_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- struct constructors
 ms.assetid: 3c6ba273-e248-4ff1-8c69-d2abcf1263c6
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# struct (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 4918adb779a620afd4a0c1e4ef64ef9892de1ba8
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-La parola chiave `struct` definisce un tipo di struttura e\/o una variabile di un tipo di struttura.  
+---
+# <a name="struct-c"></a>struct (C++)
+La parola chiave `struct` definisce un tipo di struttura e/o una variabile di un tipo di struttura.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-[template-spec] struct [ms-decl-spec] [tag [: base-list ]]  
-{   
-   member-list   
+[template-spec] struct[ms-decl-spec] [tag [: base-list ]]  
+{   
+   member-list   
 } [declarators];  
 [struct] tag declarators;  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `template-spec`  
- Specifiche facoltative del modello.  Per ulteriori informazioni, vedere [Specifiche dei modelli](../Topic/Template%20Specifications.md).  
+ Specifiche facoltative del modello. Per ulteriori informazioni, vedere [specifiche del modello](templates-cpp.md).  
   
  `struct`  
  Parola chiave `struct`.  
   
  `ms-decl-spec`  
- Specifica della classe di archiviazione facoltativa.  Per ulteriori informazioni, fare riferimento alla parola chiave [\_\_declspec](../cpp/declspec.md).  
+ Specifica della classe di archiviazione facoltativa. Per ulteriori informazioni, vedere il [declspec](../cpp/declspec.md) (parola chiave).  
   
  `tag`  
- Nome del tipo assegnato alla struttura.  Il tag diventa una parola riservata nell'ambito della struttura.  Il tag è facoltativo.  Se omesso, viene definita una struttura anonima.  Per ulteriori informazioni, vedere [Tipi di classe anonima](../cpp/anonymous-class-types.md).  
+ Nome del tipo assegnato alla struttura. Il tag diventa una parola riservata nell'ambito della struttura. Il tag è facoltativo. Se omesso, viene definita una struttura anonima. Per ulteriori informazioni, vedere [tipi di classe anonima](../cpp/anonymous-class-types.md).  
   
  `base-list`  
- Elenco facoltativo delle classi o delle strutture da cui questa struttura deriverà i relativi membri.  Per ulteriori informazioni, vedere [Classi base](../cpp/base-classes.md).  Ogni classe base o nome di struttura può essere preceduto da un indicatore di accesso \([Public](../cpp/public-cpp.md), [Private](../cpp/private-cpp.md), [Protected](../cpp/protected-cpp.md)\) e dalla parola chiave [virtual](../cpp/virtual-cpp.md).  Per ulteriori informazioni, vedere la tabella di accesso ai membri in [Controllo accessi ai membri della classe](../misc/controlling-access-to-class-members.md).  
+ Elenco facoltativo delle classi o delle strutture da cui questa struttura deriverà i relativi membri. Vedere [le classi di Base](../cpp/base-classes.md) per ulteriori informazioni. Ogni nome di classe o struttura di base può essere preceduto da un identificatore di accesso ([pubblica](../cpp/public-cpp.md), [privata](../cpp/private-cpp.md), [protetti](../cpp/protected-cpp.md)) e [virtuale](../cpp/virtual-cpp.md) parola chiave. Vedere la tabella di accesso ai membri in [controllo dell'accesso ai membri della classe](member-access-control-cpp.md) per ulteriori informazioni.  
   
  `member-list`  
- Elenco dei membri della struttura.  Per ulteriori informazioni, fare riferimento a [Panoramica dei membri di classe](../cpp/class-member-overview.md).  L'unica differenza qui consiste nel fatto che viene utilizzato `struct` anziché `class`.  
+ Elenco dei membri della struttura. Fare riferimento a [Panoramica membro della classe](../cpp/class-member-overview.md) per ulteriori informazioni. L'unica differenza qui consiste nel fatto che viene utilizzato `struct` anziché `class`.  
   
  `declarators`  
- Elenco dei dichiaratori in cui sono specificati i nomi della classe.  Gli elenchi dei dichiaratori dichiarano una o più istanze del tipo di struttura.  I dichiaratori possono includere gli elenchi degli inizializzatori se tutti i membri dati della classe sono `public`.  Gli elenchi degli inizializzatori sono comuni nelle strutture poiché i membri dati sono `public` per impostazione predefinita.  Per ulteriori informazioni, vedere [Cenni preliminari sui dichiaratori](../cpp/overview-of-declarators.md).  
+ Elenco dei dichiaratori in cui sono specificati i nomi della classe. Gli elenchi dei dichiaratori dichiarano una o più istanze del tipo di struttura. I dichiaratori possono includere gli elenchi degli inizializzatori se tutti i membri dati della classe sono `public`. Gli elenchi degli inizializzatori sono comuni nelle strutture poiché i membri dati sono `public` per impostazione predefinita.  Vedere [Panoramica di dichiaratori](../cpp/overview-of-declarators.md) per ulteriori informazioni.  
   
-## Note  
- Un tipo di struttura è un tipo composto definito dall'utente.  È composto da campi o membri che possono avere tipi diversi.  
+## <a name="remarks"></a>Note  
+ Un tipo di struttura è un tipo composto definito dall'utente. È composto da campi o membri che possono avere tipi diversi.  
   
- In C\+\+, una struttura è la stessa di una classe a parte il fatto che i relativi membri sono `public` per impostazione predefinita.  
+ In C++, una struttura è la stessa di una classe a parte il fatto che i relativi membri sono `public` per impostazione predefinita.  
   
- Per informazioni sulle classi gestite e gli struct, vedere [Classi e struct](../windows/classes-and-structs-cpp-component-extensions.md).\<  
+ Per informazioni sulle classi gestite e gli struct, vedere [classi e struct](../windows/classes-and-structs-cpp-component-extensions.md).  
   
-## Utilizzo di una struttura  
- In C, è necessario utilizzare in modo esplicito la parola chiave `struct` per dichiarare una struttura.  In C\+\+ non è necessario utilizzare la parola chiave `struct` dopo la definizione del tipo.  
+## <a name="using-a-structure"></a>Utilizzo di una struttura  
+ In C, è necessario utilizzare in modo esplicito la parola chiave `struct` per dichiarare una struttura. In C++ non è necessario utilizzare la parola chiave `struct` dopo la definizione del tipo.  
   
  È possibile dichiarare delle variabili quando il tipo di struttura viene definito inserendo uno o più nomi di variabili delimitati da virgole tra la parentesi graffa di chiusura e il punto e virgola.  
   
- Le variabili di struttura possono essere inizializzate.  L'inizializzazione per ogni variabile deve essere racchiusa in parentesi graffe.  
+ Le variabili di struttura possono essere inizializzate. L'inizializzazione per ogni variabile deve essere racchiusa in parentesi graffe.  
   
- Per informazioni correlate, vedere [class](../cpp/class-cpp.md), [union](../cpp/unions.md) e [enum](../cpp/enumerations-cpp.md).  
+ Per informazioni correlate, vedere [classe](../cpp/class-cpp.md), [unione](../cpp/unions.md), e [enum](../cpp/enumerations-cpp.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 #include <iostream>  
@@ -115,5 +131,4 @@ int main() {
 // my_cell.character = 1  
 ```  
   
-## Vedere anche  
- [\(NOTINBUILD\) Defining Class Types](http://msdn.microsoft.com/it-it/e8c65425-0f3a-4dca-afc2-418c3b1e57da)
+
