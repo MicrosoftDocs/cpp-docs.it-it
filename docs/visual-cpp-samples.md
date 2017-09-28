@@ -30,11 +30,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5c6fbfc8699d7d66c40b0458972d8b6ef0dcc705
-ms.openlocfilehash: c5de7e4f11b2e1aa87eab408c5e85e08632a42f2
+ms.translationtype: HT
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: d35603be262e21e2570e21bb72ff2bc40c3d6d76
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="visual-c-samples"></a>Esempi di Visual C++
