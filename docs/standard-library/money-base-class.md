@@ -9,8 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- locale/std::money_base
-- money_base
+- xlocmon/std::money_base
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,11 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 4af0f51a820fc0011285b6c5a690f496e8fd4afe
+ms.translationtype: MT
+ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
+ms.openlocfilehash: b9c41737288a4d323057b42f809dcbf4a3f2ff2c
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/03/2017
 
 ---
 # <a name="moneybase-class"></a>Classe money_base

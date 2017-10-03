@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - codecvt/std::codecvt_utf16
-- codecvt_utf16
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,11 +33,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: 8ee859512a6b4a3050eec6f91d4b3c8449cf918a
+ms.translationtype: MT
+ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
+ms.openlocfilehash: 68b6b058d6962758a3b3e42fcde943699820fa12
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/03/2017
 
 ---
 # <a name="codecvtutf16"></a>codecvt_utf16

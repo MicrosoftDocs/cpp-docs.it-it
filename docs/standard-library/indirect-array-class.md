@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - valarray/std::indirect_array
-- indirect_array
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,11 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 7a5b105b9c812d81dfbbe5905bb593bba1b98ef8
+ms.translationtype: MT
+ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
+ms.openlocfilehash: df1199bd46672b032020d3b463425284f6360298
 ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 10/03/2017
 
 ---
 # <a name="indirectarray-class"></a>Classe indirect_array

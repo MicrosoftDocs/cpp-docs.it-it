@@ -14,11 +14,14 @@ f1_keywords:
 - type_traits/std::integer_sequence
 - type_traits/std::make_integer_sequence
 - type_traits/std::index_sequence_for
-- integer_sequence
 dev_langs:
 - C++
 helpviewer_keywords:
-- integer_sequence
+- std::index_sequence
+- std::make_index_sequence
+- std::integer_sequence
+- std::make_integer_sequence
+- std::index_sequence_for
 ms.assetid: 2cfdddee-819d-478e-bb78-c8a9c2696803
 caps.latest.revision: 9
 author: corob-msft
@@ -38,11 +41,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 533bb3094949d0f339f67fade4e199a6210b2d26
+ms.translationtype: MT
+ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
+ms.openlocfilehash: e2502b627a40b40ee6942a24fdc1b8c0d16ecc31
 ms.contentlocale: it-it
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 10/03/2017
 
 ---
 # <a name="integersequence-class"></a>Classe integer_sequence
