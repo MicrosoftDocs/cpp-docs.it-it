@@ -1,44 +1,61 @@
 ---
-title: "Puntatore this | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "this"
-  - "this_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "funzioni membro non statiche"
-  - "puntatori, a istanza di classe"
-  - "puntatore 'this'"
+title: l'indicatore di misura | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- this
+- this_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- nonstatic member functions
+- pointers, to class instance
+- this pointer
 ms.assetid: 92e3256a-4ad9-4d46-8be1-d77fad90791f
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Puntatore this
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 86ccf50a089b1497bdc166ee9367215dc59b3ca1
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-Il puntatore **this** è un puntatore accessibile solo all'interno delle funzioni membro non statiche di un tipo **class**, `struct` o **union**.  Viene puntato l'oggetto per il quale è chiamata la funzione membro.  Le funzioni membro statiche non hanno puntatori **this**.  
+---
+# <a name="this-pointer"></a>Puntatore this
+Il **questo** puntatore è accessibile solo all'interno di funzioni membro non statico di un **classe**, `struct`, o **unione** tipo. Viene puntato l'oggetto per il quale è chiamata la funzione membro. Funzioni membro statiche non hanno un **questo** puntatore.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
-        this   
+      this   
 this->member-identifier  
 ```  
   
-## Note  
- Il puntatore **this** di un oggetto non fa parte dell'oggetto stesso e non viene rilevato dal risultato di un'istruzione `sizeof` sull'oggetto.  Al contrario, quando una funzione membro non statica viene chiamata per un oggetto, l'indirizzo dell'oggetto viene passato dal compilatore alla funzione come argomento nascosto.  Ad esempio, la seguente chiamata di funzione:  
+## <a name="remarks"></a>Note  
+ Un oggetto **questo** puntatore non è parte dell'oggetto stesso e non viene rilevato nel risultato di un `sizeof` istruzione per l'oggetto. Al contrario, quando una funzione membro non statica viene chiamata per un oggetto, l'indirizzo dell'oggetto viene passato dal compilatore alla funzione come argomento nascosto. Ad esempio, la seguente chiamata di funzione:  
   
 ```  
 myDate.setMonth( 3 );  
@@ -50,7 +67,7 @@ myDate.setMonth( 3 );
 setMonth( &myDate, 3 );  
 ```  
   
- L'indirizzo dell'oggetto è disponibile dall'interno della funzione membro come il puntatore **this**.  La maggior parte degli utilizzi di **this** è implicita.  È possibile, ma non necessario, usare **this** in modo esplicito, quando si fa riferimento ai membri della classe.  Ad esempio:  
+ L'indirizzo dell'oggetto è disponibile all'interno della funzione membro come il **questo** puntatore. La maggior parte degli utilizzi di **questo** sono implicite. È possibile, sebbene non sia necessario, utilizzare in modo esplicito **questo** quando si fa riferimento ai membri della classe. Ad esempio:  
   
 ```  
 void Date::setMonth( int mn )  
@@ -67,7 +84,7 @@ void Date::setMonth( int mn )
 return *this;  
 ```  
   
- Il puntatore **this** viene usato anche per evitare autoriferimenti:  
+ Il **questo** puntatore viene usato anche per evitare autoriferimenti:  
   
 ```  
 if (&Object != this) {  
@@ -75,11 +92,11 @@ if (&Object != this) {
 ```  
   
 > [!NOTE]
->  Poiché il puntatore **this** non è modificabile, le assegnazioni a **this** non sono consentite.  Precedenti implementazioni di C\+\+ consentivano le assegnazioni a **this**.  
+>  Poiché il **questo** puntatore non è modificabile, le assegnazioni da **questo** non sono consentiti. Precedenti implementazioni di C++ consentivano le assegnazioni a **questo**.  
   
- Talvolta il puntatore **this** viene usato direttamente, ad esempio per modificare le strutture di dati autoreferenziali, in cui l'indirizzo dell'oggetto corrente è obbligatorio.  
+ In alcuni casi, il **questo** puntatore viene utilizzato direttamente, ad esempio, per modificare i dati autoreferenziali strutture, dove l'indirizzo dell'oggetto corrente è obbligatorio.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // this_pointer.cpp  
@@ -144,10 +161,13 @@ int main()
 }  
 ```  
   
-  **my buffer**  
-**your buffer**   
-## Tipo di puntatore this  
- Il tipo di puntatore **this** può essere modificato nella dichiarazione della funzione dalle parole chiave **const** e `volatile`.  Per dichiarare una funzione con associati gli attributi di una o più di queste parole chiave, aggiungere le parole chiave dopo l'elenco di argomenti della funzione.  
+```Output  
+my buffer  
+your buffer  
+```  
+  
+## <a name="type-of-the-this-pointer"></a>Tipo di puntatore this  
+ Il **questo** tipo di puntatore può essere modificato nella dichiarazione di funzione per il **const** e `volatile` parole chiave. Per dichiarare una funzione con associati gli attributi di una o più di queste parole chiave, aggiungere le parole chiave dopo l'elenco di argomenti della funzione.  
   
  Si consideri l'esempio seguente:  
   
@@ -162,7 +182,7 @@ int main()
 }  
 ```  
   
- Nel codice precedente viene dichiarata una funzione membro, `X`, in cui il puntatore **this** viene considerato come puntatore **const** a un oggetto **const**.  È possibile usare combinazioni di opzioni *cv\-mod\-list*, ma viene sempre modificato l'oggetto a cui fa riferimento il puntatore **this**, non il puntatore **this** stesso.  Di conseguenza, la dichiarazione seguente dichiara la funzione `X` e il puntatore **this** è un puntatore **const** a un oggetto **const**:  
+ Il codice precedente dichiara una funzione membro, `X`, in cui il **questo** puntatore viene considerato come un **const** puntatore a un **const** oggetto. Combinazioni di *cv-mod-list* opzioni possono essere utilizzate, ma viene sempre modificato l'oggetto a cui puntata **questo**, non il **questo** puntatore stesso. Di conseguenza, la dichiarazione seguente dichiara funzione `X`; **questo** puntatore è un **const** puntatore a un **const** oggetto:  
   
 ```  
 // type_of_this_pointer2.cpp  
@@ -175,29 +195,28 @@ int main()
 }  
 ```  
   
- Il tipo **this** in una funzione membro è descritto dalla sintassi seguente, dove *cv\-qualifier\-list* è determinato dal dichiaratore di funzioni membro e può essere **const** o **volatile** \(o entrambi\) e *class\-type* è il nome della classe:  
+ Il tipo di **questo** in un membro della funzione è descritto dalla sintassi seguente, dove *cv-qualifier-list* è determinato dal dichiaratore di funzioni membro e può essere **const**o **volatile** (o entrambi), e *-tipo di classe* è il nome della classe:  
   
- *\[cv\-qualifier\-list\] class\-type*  **\* const this**  
+ *tipo di classe [cv-qualifier-list]* ** \* const questo  **  
   
- In altre parole, **this** è sempre un puntatore di tipo const e non può essere riassegnato.  I qualificatori **const** o `volatile` usati nella dichiarazione di funzioni membro si applicano all'istanza della classe a cui fa riferimento il puntatore **this** nell'ambito della funzione.  
+ In altre parole, **questo** è sempre un puntatore di tipo const e non può essere riassegnato.  Il **const** o `volatile` qualificatori utilizzati nella dichiarazione di funzione membro vengono applicati all'istanza della classe a cui puntata **questo** nell'ambito di tale funzione.  
   
  Nella tabella seguente vengono descritto in modo più dettagliato il funzionamento di tali modificatori.  
   
-### Semantica dei modificatori this  
+### <a name="semantics-of-this-modifiers"></a>Semantica dei modificatori this  
   
 |Modificatore|Significato|  
-|------------------|-----------------|  
-|**const**|Impossibile modificare i dati dei membri e richiamare funzioni membro non di tipo **const**.|  
+|--------------|-------------|  
+|**const**|Non è possibile modificare i dati di membro; non è possibile richiamare funzioni membro che non sono **const**.|  
 |`volatile`|I dati dei membri vengono caricati dalla memoria tutte le volte in cui si accede alla memoria stessa e determinate ottimizzazioni vengono disabilitate.|  
   
- Il passaggio di un oggetto **const** a una funzione membro non di tipo **const** provoca un errore.  In modo analogo, è un errore anche passare un oggetto `volatile` a una funzione membro non di tipo `volatile`.  
+ È un errore per passare un **const** oggetto a una funzione membro che non è **const**. In modo analogo, è un errore anche passare un oggetto `volatile` a una funzione membro non di tipo `volatile`.  
   
- Le funzioni membro dichiarate come **const** non possono modificare i dati dei membri \(in tali funzioni il puntatore **this** è un puntatore a un oggetto **const**\).  
+ Funzioni membro dichiarate come **const** non è possibile modificare i dati membro, in tali funzioni il **questo** puntatore è un puntatore a un **const** oggetto.  
   
 > [!NOTE]
->  Costruttori e distruttori non possono essere dichiarati come **const** o `volatile`,  ma possono essere richiamati su oggetti di tipo **const** o `volatile`.  
+>  Costruttori e distruttori non possono essere dichiarati come **const** o `volatile`. Possono, tuttavia, essere richiamato su **const** o `volatile` oggetti.  
   
-## Vedere anche  
- [Parole chiave C\+\+](../cpp/keywords-cpp.md)   
- [Tipo di puntatore this](../misc/type-of-this-pointer.md)   
- [Corrispondenza di argomenti e puntatore this](../misc/argument-matching-and-the-this-pointer.md)
+## <a name="see-also"></a>Vedere anche  
+ [Parole chiave](../cpp/keywords-cpp.md)   
+ 

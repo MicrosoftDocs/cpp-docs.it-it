@@ -1,41 +1,58 @@
 ---
-title: "Operatori di cast | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "index-page "
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operatori di cast"
-  - "operatori [C++], cast"
+title: Operatori di cast | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: 'index-page '
+dev_langs:
+- C++
+helpviewer_keywords:
+- operators [C++], casting
+- casting operators
 ms.assetid: 16240348-26bc-4f77-8eab-57253f00ce52
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Operatori di cast
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: a516297b687db349a6bcc867fc94dcd85118a8a5
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-Nel linguaggio C\+\+ sono disponibili numerosi operatori di cast specifici.  Tali operatori consentono di rimuovere parte dell'ambiguità e alcuni problemi relativi agli operatori cast obsoleti del linguaggio C.  Gli operatori sono i seguenti:  
+---
+# <a name="casting-operators"></a>Operatori di cast
+Nel linguaggio C++ sono disponibili numerosi operatori di cast specifici. Tali operatori consentono di rimuovere parte dell'ambiguità e alcuni problemi relativi agli operatori cast obsoleti del linguaggio C. Gli operatori sono i seguenti:  
   
--   [dynamic\_cast](../cpp/dynamic-cast-operator.md) Utilizzato per la conversione di tipi polimorfici.  
+-   [dynamic_cast](../cpp/dynamic-cast-operator.md) utilizzate per la conversione di tipi polimorfici.  
   
--   [static\_cast](../cpp/static-cast-operator.md) Utilizzato per la conversione di tipi non polimorfici.  
+-   [static_cast](../cpp/static-cast-operator.md) utilizzate per la conversione di tipi non polimorfici.  
   
--   [const\_cast](../cpp/const-cast-operator.md) Utilizzato per rimuovere gli attributi `const`, `volatile` e `__unaligned`.  
+-   [const_cast](../cpp/const-cast-operator.md) consente di rimuovere il `const`, `volatile`, e `__unaligned` gli attributi.  
   
--   [reinterpret\_cast](../cpp/reinterpret-cast-operator.md) Utilizzato per la reinterpretazione semplice dei bit.  
+-   [reinterpret_cast](../cpp/reinterpret-cast-operator.md) utilizzato per la reinterpretazione semplice dei bit.  
   
--   [safe\_cast](../windows/safe-cast-cpp-component-extensions.md) Utilizzato per produrre codice MSIL verificabile.  
+-   [safe_cast](../windows/safe-cast-cpp-component-extensions.md) utilizzato per produrre codice MSIL verificabile.  
   
- Utilizzare `const_cast` e `reinterpret_cast` come ultima soluzione, poiché questi operatori possono provocare gli stessi problemi degli operatori cast obsoleti.  Tali operatori sono tuttavia ancora necessari per sostituire completamente gli operatori cast obsoleti.  
+ Utilizzare `const_cast` e `reinterpret_cast` come ultima soluzione, poiché questi operatori possono provocare gli stessi problemi degli operatori cast obsoleti. Tali operatori sono tuttavia ancora necessari per sostituire completamente gli operatori cast obsoleti.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Cast](../cpp/casting.md)

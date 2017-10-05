@@ -1,36 +1,53 @@
 ---
-title: "_com_error::WCode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_com_error.WCode"
-  - "_com_error::WCode"
-  - "WCode"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "WCode (metodo)"
+title: _com_error::WCode | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _com_error.WCode
+- _com_error::WCode
+- WCode
+dev_langs:
+- C++
+helpviewer_keywords:
+- WCode method
 ms.assetid: f3b21852-f8ea-4e43-bff1-11c2d35454c4
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# _com_error::WCode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 15c0d860a5faffc160def725630fbbb1d84d8ed8
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="comerrorwcode"></a>_com_error::WCode
 **Sezione specifica Microsoft**  
   
  Recupera il codice di errore a 16 bit il cui mapping si trova in `HRESULT` incapsulato.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -38,15 +55,15 @@ WORD WCode ( ) const throw( );
   
 ```  
   
-## Valore restituito  
- Se `HRESULT` si trova nell'intervallo tra 0x80040200 e 0x8004FFFF, il metodo **WCode** restituisce `HRESULT` meno 0x80040200; in caso contrario, restituisce zero.  
+## <a name="return-value"></a>Valore restituito  
+ Se il `HRESULT` è compreso nell'intervallo tra 0x80040200 e 0x8004FFFF, il **WCode** metodo restituisce il `HRESULT` meno 0x80040200; in caso contrario, restituisce zero.  
   
-## Note  
- Il metodo **WCode** viene utilizzato per annullare un mapping che si verifica nel codice di supporto COM.  Il wrapper per una proprietà o un metodo **dispinterface** chiama una routine di supporto che assembla gli argomenti e chiama **IDispatch::Invoke**.  Al termine, se un errore `HRESULT` `DISP_E_EXCEPTION` viene restituito, vengono recuperate le informazioni sugli errori dalla struttura **EXCEPINFO** passata a **IDispatch::Invoke**.  Il codice di errore può essere un valore a 16 bit memorizzato nel membro `wCode` della struttura **EXCEPINFO** o un valore a 32 bit completo nel membro **scode** della struttura **EXCEPINFO**.  Se viene restituito un `wCode` a 16 bit, è necessario eseguire prima il mapping di un errore `HRESULT` a 32 bit.  
+## <a name="remarks"></a>Note  
+ Il **WCode** metodo viene utilizzato per annullare un mapping che si verifica nel codice di supporto COM. Il wrapper per un **dispinterface** proprietà o un metodo chiama una routine di supporto che assembla gli argomenti e chiama **IDispatch:: Invoke**. Al termine, se un errore `HRESULT` di `DISP_E_EXCEPTION` viene restituito, le informazioni sull'errore vengono recuperati i **EXCEPINFO** struttura passata al **IDispatch:: Invoke**. Il codice di errore può essere un valore a 16 bit memorizzato nel `wCode` appartenente il **EXCEPINFO** struttura o un valore a 32 bit nel **scode** membro del **EXCEPINFO**struttura. Se viene restituito un `wCode` a 16 bit, è necessario eseguire prima il mapping di un errore `HRESULT` a 32 bit.  
   
  **Fine sezione specifica Microsoft**  
   
-## Vedere anche  
- [\_com\_error::HRESULTToWCode](../cpp/com-error-hresulttowcode.md)   
- [\_com\_error::WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)   
- [Classe \_com\_error](../cpp/com-error-class.md)
+## <a name="see-also"></a>Vedere anche  
+ [_com_error::HRESULTToWCode](../cpp/com-error-hresulttowcode.md)   
+ [_com_error::WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)   
+ [Classe _com_error](../cpp/com-error-class.md)

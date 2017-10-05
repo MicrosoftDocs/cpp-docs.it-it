@@ -1,31 +1,47 @@
 ---
-title: "Istruzioni di spostamento (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "istruzioni di spostamento"
+title: Istruzioni (C++) di spostamento | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- jump statements
 ms.assetid: 7d8ff59c-b1bd-4164-85e9-f508851ed62c
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Istruzioni di spostamento (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: f3b4187928587d564a3c608edefebea2573b976e
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-L'istruzione di salto C\+\+ esegue un immediato trasferimento di controllo locale.  
+---
+# <a name="jump-statements-c"></a>Istruzioni di spostamento (C++)
+L'istruzione di salto C++ esegue un immediato trasferimento di controllo locale.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 break;  
@@ -34,8 +50,8 @@ return [expression];
 goto identifier;  
 ```  
   
-## Note  
- Per una descrizione delle istruzioni di salto C\+\+, vedere gli argomenti seguenti.  
+## <a name="remarks"></a>Note  
+ Per una descrizione delle istruzioni di salto C++, vedere gli argomenti seguenti.  
   
 -   [Istruzione break](../cpp/break-statement-cpp.md)  
   
@@ -45,5 +61,5 @@ goto identifier;
   
 -   [Istruzione goto](../cpp/goto-statement-cpp.md)  
   
-## Vedere anche  
- [Cenni preliminari sulle istruzioni C\+\+](../cpp/overview-of-cpp-statements.md)
+## <a name="see-also"></a>Vedere anche  
+ [Panoramica delle istruzioni C++](../cpp/overview-of-cpp-statements.md)

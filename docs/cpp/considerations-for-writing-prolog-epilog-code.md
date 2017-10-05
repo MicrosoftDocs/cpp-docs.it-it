@@ -1,35 +1,52 @@
 ---
-title: "Considerazioni per la scrittura di codice di prologo/epilogo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__LOCAL_SIZE (costante)"
-  - "codice di epilogo"
-  - "codice di prologo"
-  - "layout di stack frame"
-  - "stack, layout di stack frame"
+title: Considerazioni per la scrittura di codice di prologo epilogo | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- stack frame layout
+- prolog code
+- epilog code
+- __LOCAL_SIZE constant
+- stack, stack frame layout
 ms.assetid: c7814de2-bb5c-4f5f-96d0-bcfd2ad3b182
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Considerazioni per la scrittura di codice di prologo/epilogo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 4dc75755fafb569c06dcb41b77ff54ebc0403b2d
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-## Sezione specifica Microsoft  
- Prima di scrivere le proprie sequenze di codice di prologo ed epilogo, è importante comprendere il layout dello stack frame.  È inoltre utile sapere come utilizzare il simbolo **\_\_LOCAL\_SIZE**.  
+---
+# <a name="considerations-for-writing-prologepilog-code"></a>Considerazioni per la scrittura di codice di prologo e di epilogo
+## <a name="microsoft-specific"></a>Sezione specifica Microsoft  
+ Prima di scrivere le proprie sequenze di codice di prologo ed epilogo, è importante comprendere il layout dello stack frame. È inoltre utile sapere come utilizzare il **LOCAL_SIZE** simbolo.  
   
-##  <a name="_pluslang_c.2b2b_.stack_frame_layout"></a> Layout dello stack frame  
+##  <a name="_pluslang_c.2b2b_.stack_frame_layout"></a>Layout di stack Frame  
  In questo esempio viene illustrato il codice standard di prologo che potrebbe essere visualizzato in una funzione a 32 bit:  
   
 ```  
@@ -39,7 +56,7 @@ sub         esp, localbytes    ; Allocate space for locals
 push        <registers>        ; Save registers  
 ```  
   
- La variabile `localbytes` rappresenta il numero di byte necessari nello stack per le variabili locali e la variabile `<registers>` è un segnaposto che rappresenta l'elenco di registri da salvare nello stack.  Dopo l'inserimento dei registri, è possibile posizionare qualsiasi altro dato appropriati nello stack.  Viene di seguito riportato il codice di epilogo corrispondente.  
+ La variabile `localbytes` rappresenta il numero di byte necessari nello stack per le variabili locali e la variabile `<registers>` è un segnaposto che rappresenta l'elenco di registri da salvare nello stack. Dopo l'inserimento dei registri, è possibile posizionare qualsiasi altro dato appropriati nello stack. Viene di seguito riportato il codice di epilogo corrispondente.  
   
 ```  
 pop         <registers>   ; Restore registers  
@@ -48,19 +65,19 @@ pop         ebp           ; Restore ebp
 ret                       ; Return from function  
 ```  
   
- Lo stack va sempre verso il basso \(dal livello alto a quello basso degli indirizzi di memoria\).  Il puntatore di base \(`ebp`\) punta al valore inserito di `ebp`.  L'area delle variabili locali inizia da `ebp-4`.  Per accedere alle variabili locali, calcolare un offset da `ebp` sottraendo il valore appropriato da `ebp`.  
+ Lo stack va sempre verso il basso (dal livello alto a quello basso degli indirizzi di memoria). Il puntatore di base (`ebp`) punta al valore inserito di `ebp`. L'area delle variabili locali inizia da `ebp-4`. Per accedere alle variabili locali, calcolare un offset da `ebp` sottraendo il valore appropriato da `ebp`.  
   
-##  <a name="_pluslang___local_size"></a> \_\_LOCAL\_SIZE  
- Il compilatore fornisce un simbolo, **\_\_LOCAL\_SIZE**, da utilizzare nel blocco dell'assembler inline del codice di prologo di una funzione.  Questo simbolo viene utilizzato per allocare spazio per le variabili locali sullo stack frame nel codice di prologo personalizzato.  
+##  <a name="_pluslang___local_size"></a>LOCAL_SIZE  
+ Il compilatore fornisce un simbolo, **LOCAL_SIZE**, da utilizzare nel blocco dell'assembler inline del codice di prologo di funzione. Questo simbolo viene utilizzato per allocare spazio per le variabili locali sullo stack frame nel codice di prologo personalizzato.  
   
- Il compilatore determina il valore di **\_\_LOCAL\_SIZE**.  Il relativo valore è il numero totale di byte di tutte le variabili locali definite dall'utente e le variabili temporanee generate dal compilatore.  **\_\_LOCAL\_SIZE** può essere utilizzato solo come operando immediato; non può essere utilizzato in un'espressione.  Non è necessario modificare o ridefinire il valore di questo simbolo.  Ad esempio:  
+ Il compilatore determina il valore di **__LOCAL_SIZE**. Il relativo valore è il numero totale di byte di tutte le variabili locali definite dall'utente e le variabili temporanee generate dal compilatore. **__LOCAL_SIZE** può essere usata solo come operando immediato; non può essere usata in un'espressione. Non è necessario modificare o ridefinire il valore di questo simbolo. Ad esempio:  
   
 ```  
 mov        eax, __LOCAL_SIZE           ;Immediate operand--Okay  
 mov        eax, [ebp - __LOCAL_SIZE]   ;Error  
 ```  
   
- Nell'esempio seguente di una funzione naked che contiene le sequenze di prologo ed epilogo personalizzate viene utilizzato il simbolo **\_\_LOCAL\_SIZE** nella sequenza di prologo:  
+ Nell'esempio seguente di una funzione naked che contiene di prologo ed epilogo personalizzate sequenze viene utilizzata la **LOCAL_SIZE** simbolo nella sequenza di prologo:  
   
 ```  
 // the__local_size_symbol.cpp  
@@ -84,7 +101,7 @@ __declspec ( naked ) int main() {
 }  
 ```  
   
-### Fine sezione specifica Microsoft  
+**Fine sezione specifica Microsoft**  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Chiamate di funzioni naked](../cpp/naked-function-calls.md)

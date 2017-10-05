@@ -1,33 +1,49 @@
 ---
-title: "Espressioni costanti C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "espressioni costanti"
-  - "espressioni costanti, sintassi"
-  - "espressioni [C++], costanti"
+title: Espressioni costanti C++ | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- constant expressions, syntax
+- constant expressions
+- expressions [C++], constant
 ms.assetid: b07245a5-4c21-4589-b503-e6ffd631996f
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Espressioni costanti C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 8333b761aa51de44c8225e5ace97885eaaed56da
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-Un valore *costante* è un valore che non cambia.  C\+\+ fornisce due parole chiave per permettere di indicare che un oggetto non deve essere modificato e per applicare tale intento.  
+---
+# <a name="c-constant-expressions"></a>Espressioni costanti C++
+Oggetto *costante* valore corrisponde a uno che non cambia. C++ fornisce due parole chiave per permettere di indicare che un oggetto non deve essere modificato e per applicare tale intento.  
   
- Il linguaggio C\+\+ richiede espressioni costanti \(espressioni che restituiscono una costante\) per le dichiarazioni di:  
+ Il linguaggio C++ richiede espressioni costanti (espressioni che restituiscono una costante) per le dichiarazioni di:  
   
 -   Limiti di matrice  
   
@@ -47,7 +63,7 @@ Un valore *costante* è un valore che non cambia.  C\+\+ fornisce due parole chi
   
 -   Espressioni `sizeof`  
   
- Le costanti non integrali devono essere convertite \(in modo esplicito o implicito\) in tipi integrali affinché siano valide in un'espressione costante.  Pertanto, il codice seguente è valido:  
+ Le costanti non integrali devono essere convertite (in modo esplicito o implicito) in tipi integrali affinché siano valide in un'espressione costante. Pertanto, il codice seguente è valido:  
   
 ```  
 const double Size = 11.0;  
@@ -58,5 +74,5 @@ char chArray[(int)Size];
   
  L'operatore virgola e gli operatori di assegnazione non possono essere usati nelle espressioni costanti.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Tipi di espressioni](../cpp/types-of-expressions.md)

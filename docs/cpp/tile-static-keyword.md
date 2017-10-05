@@ -1,30 +1,47 @@
 ---
-title: "Parola chiave tile_static | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "tile_static_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tile_static (parola chiave)"
+title: parola chiave tile_static | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- tile_static_CPP
+dev_langs:
+- C++
+helpviewer_keywords:
+- tile_static keyword
 ms.assetid: d78384d4-65d9-45cf-b3df-7e904f489d06
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Parola chiave tile_static
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 499aa37bb082636dd2947fa6f64a5ecc3cdd5e10
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-La parola chiave `tile_static` viene utilizzata per dichiarare una variabile a cui è possibile accedere da tutti i thread in una sezione dei thread.  La durata della variabile inizia quando l'esecuzione raggiunge il punto di dichiarazione e termina quando la funzione kernel restituisce.  Per ulteriori informazioni sull'utilizzo delle sezioni, vedere [Utilizzo di sezioni](../parallel/amp/using-tiles.md).  
+---
+# <a name="tilestatic-keyword"></a>Parola chiave tile_static
+La parola chiave `tile_static` viene utilizzata per dichiarare una variabile a cui è possibile accedere da tutti i thread in una sezione dei thread. La durata della variabile inizia quando l'esecuzione raggiunge il punto di dichiarazione e termina quando la funzione kernel restituisce. Per ulteriori informazioni sull'utilizzo di riquadri, vedere [utilizzando riquadri](../parallel/amp/using-tiles.md).  
   
  La parola chiave `tile_static` presenta le limitazioni riportate di seguito.  
   
@@ -32,17 +49,16 @@ La parola chiave `tile_static` viene utilizzata per dichiarare una variabile a c
   
 -   Non è possibile utilizzarla in variabili che sono puntatore o tipi di riferimento.  
   
--   Una variabile `tile_static` non può disporre di un inizializzatore.  I costruttori e i distruttori predefiniti non vengono invocati automaticamente.  
+-   Una variabile `tile_static` non può disporre di un inizializzatore. I costruttori e i distruttori predefiniti non vengono invocati automaticamente.  
   
 -   Il valore di una variabile non inizializzata `tile_static` non è definito.  
   
 -   Se una variabile `tile_static` viene dichiarata in un grafico delle chiamate che contiene una radice da una chiamata non affiancata a `parallel_for_each`, viene generato un avviso e il comportamento della variabile non è definito.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come una variabile `tile_static` può essere utilizzata per accumulare i dati tra diversi thread in una sezione.  
   
 ```cpp  
-  
 // Sample data:  
 int sampledata[] = {  
     2, 2, 9, 7, 1, 4,  
@@ -154,8 +170,8 @@ for (int i = 0; i < 4; i++) {
   
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Modificatori specifici Microsoft](../cpp/microsoft-specific-modifiers.md)   
- [Cenni preliminari su C\+\+ AMP](../parallel/amp/cpp-amp-overview.md)   
- [Funzione parallel\_for\_each \(C\+\+ AMP\)](../Topic/parallel_for_each%20Function%20\(C++%20AMP\).md)   
+ [Panoramica di C++ AMP](../parallel/amp/cpp-amp-overview.md)   
+ [parallel_for_each (funzione) (C++ AMP)](../parallel/amp/reference/concurrency-namespace-functions-amp.md#parallel_for_each)   
  [Procedura dettagliata: moltiplicazione di matrici](../parallel/amp/walkthrough-matrix-multiplication.md)

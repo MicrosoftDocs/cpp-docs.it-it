@@ -1,34 +1,51 @@
 ---
-title: "Funzioni virtuali | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classi derivate, funzioni virtual"
-  - "funzioni [C++], funzioni virtual"
-  - "funzioni virtual"
+title: Funzioni virtuali | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- functions [C++], virtual functions
+- derived classes, virtual functions
+- virtual functions
 ms.assetid: b3e1ed88-2a90-4af8-960a-16f47deb3452
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Funzioni virtuali
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 9c0607bdc502e8478784c1e9e3a884e0c3d3a537
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-Una funzione virtuale è una funzione membro che si prevede venga ridefinita nelle classi derivate.  Quando si fa riferimento a un oggetto della classe derivata usando un puntatore o un riferimento alla classe base, è possibile chiamare una funzione virtuale per quell'oggetto ed eseguire la versione della classe derivata della funzione.  
+---
+# <a name="virtual-functions"></a>Funzioni virtuali
+Una funzione virtuale è una funzione membro che si prevede venga ridefinita nelle classi derivate. Quando si fa riferimento a un oggetto della classe derivata usando un puntatore o un riferimento alla classe base, è possibile chiamare una funzione virtuale per quell'oggetto ed eseguire la versione della classe derivata della funzione.  
   
  Con le funzioni virtuali viene assicurata la chiamata della funzione corretta per un oggetto, indipendentemente dall'espressione usata per effettuare la chiamata di funzione.  
   
- Si supponga che una classe base contenga una funzione dichiarata come [vituale](../cpp/virtual-cpp.md) e una classe derivata definisca la stessa funzione.  La funzione della classe derivata viene richiamata per gli oggetti della classe derivata, anche se viene chiamata mediante un puntatore o un riferimento alla classe base.  Nell'esempio seguente viene illustrata una classe base che fornisce un'implementazione della funzione `PrintBalance` e delle due classi derivate.  
+ Si supponga che una classe di base contiene una funzione dichiarata come [virtuale](../cpp/virtual-cpp.md) e una classe derivata definisca la stessa funzione. La funzione della classe derivata viene richiamata per gli oggetti della classe derivata, anche se viene chiamata mediante un puntatore o un riferimento alla classe base. Nell'esempio seguente viene illustrata una classe base che fornisce un'implementazione della funzione `PrintBalance` e delle due classi derivate.  
   
 ```  
 // deriv_VirtualFunctions.cpp  
@@ -72,11 +89,11 @@ int main() {
 }  
 ```  
   
- Nel codice precedente le chiamate a `PrintBalance` sono identiche, a eccezione dell'oggetto a cui fa riferimento `pAccount`.  Poiché `PrintBalance` è virtuale, viene chiamata la versione della funzione definita per ogni oggetto.  La funzione `PrintBalance` nelle classi derivate `CheckingAccount` e `SavingsAccount` "esegue l'override" della funzione presente nella classe base `Account`.  
+ Nel codice precedente le chiamate a `PrintBalance` sono identiche, a eccezione dell'oggetto a cui fa riferimento `pAccount`. Poiché `PrintBalance` è virtuale, viene chiamata la versione della funzione definita per ogni oggetto. La funzione `PrintBalance` nelle classi derivate `CheckingAccount` e `SavingsAccount` "esegue l'override" della funzione presente nella classe base `Account`.  
   
  Se una classe dichiarata non fornisce un'implementazione di override della funzione `PrintBalance`, viene usata l'implementazione predefinita della classe base `Account`.  
   
- Le funzioni nelle classi derivate eseguono l'override delle funzioni virtuali nelle classi base solo se il relativo tipo è lo stesso.  Una funzione in una classe derivata non può essere diversa da una funzione virtuale in una classe base solo nel tipo restituito; pure l'elenco di argomenti deve essere diverso.  
+ Le funzioni nelle classi derivate eseguono l'override delle funzioni virtuali nelle classi base solo se il relativo tipo è lo stesso. Una funzione in una classe derivata non può essere diversa da una funzione virtuale in una classe base solo nel tipo restituito; pure l'elenco di argomenti deve essere diverso.  
   
  Nel chiamare una funzione usando i puntatori o riferimenti, vengono applicate le seguenti regole:  
   
@@ -139,7 +156,7 @@ int main() {
 }  
 ```  
   
-### Output  
+### <a name="output"></a>Output  
   
 ```  
 Derived::NameOf  
@@ -148,15 +165,15 @@ Derived::NameOf
 Invoked by Derived  
 ```  
   
- Si noti che la funzione `NameOf` viene chiamata per `Base` sia se viene richiamata tramite un puntatore a `Derived` sia se viene richiamata tramite un puntatore a `Derived`.  La funzione viene chiamata per `Derived` poiché `NameOf` è una funzione virtuale e `pBase` e `pDerived` puntano a un oggetto di tipo `Derived`.  
+ Si noti che la funzione `NameOf` viene chiamata per `Base` sia se viene richiamata tramite un puntatore a `Derived` sia se viene richiamata tramite un puntatore a `Derived`. La funzione viene chiamata per `Derived` poiché `NameOf` è una funzione virtuale e `pBase` e `pDerived` puntano a un oggetto di tipo `Derived`.  
   
- Poiché le funzioni virtuali vengono chiamate per oggetti di tipi di classe, non è possibile dichiarare funzioni globali o statiche come **virtual**.  
+ Poiché le funzioni virtuali vengono chiamate solo per gli oggetti di tipi di classe, è possibile dichiarare funzioni globali o statiche come **virtuale**.  
   
- La parola chiave **virtual** può essere usata per le dichiarazioni di funzioni di override in una classe derivata, ma non è necessaria; le esecuzioni di override di funzioni virtuali sono sempre virtuali.  
+ Il **virtuale** (parola chiave) può essere utilizzato quando la dichiarazione di override di funzioni in una classe derivata, ma non è necessaria; esegue l'override di funzioni virtuali sono sempre virtuale.  
   
- Le funzioni virtuali in una classe base devono essere definite a meno che non vengano dichiarate usando *pure\-specifier*.  Per altre informazioni sulle classi astratte, vedere [Classi astratte](../cpp/abstract-classes-cpp.md).  
+ Funzioni virtuali in una classe di base devono essere definite a meno che non vengono dichiarati usando il *identificatore pure*. (Per ulteriori informazioni sulle funzioni virtuali pure, vedere [classi astratte](../cpp/abstract-classes-cpp.md).)  
   
- Il meccanismo virtuale di chiamata di funzione può essere eliminato in modo esplicito specificando il nome di funzione usando l'operatore di risoluzione dell'ambito \(`::`\).  Si consideri l'esempio precedente relativo alla classe `Account`.  Per chiamare `PrintBalance` nella classe base, usare codice simile al seguente:  
+ Il meccanismo virtuale di chiamata di funzione può essere eliminato in modo esplicito specificando il nome di funzione usando l'operatore di risoluzione dell'ambito (`::`). Si consideri l'esempio precedente relativo alla classe `Account`. Per chiamare `PrintBalance` nella classe base, usare codice simile al seguente:  
   
 ```  
 CheckingAccount *pChecking = new CheckingAccount( 100.00 );  
@@ -170,5 +187,4 @@ pAccount->Account::PrintBalance();   //  Explicit qualification.
   
  Entrambe le chiamate a `PrintBalance` nell'esempio precedente eliminano il meccanismo di chiamata di funzione virtuale.  
   
-## Vedere anche  
- [Accesso a funzioni virtuali](../misc/access-to-virtual-functions.md)
+

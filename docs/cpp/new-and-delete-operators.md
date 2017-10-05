@@ -1,71 +1,86 @@
 ---
-title: "Operatori new e delete | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "delete_cpp"
-  - "new_cpp"
-  - "new"
-  - "delete"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "delete (parola chiave) [C++], sintassi"
-  - "new (parola chiave) [C++], allocazione dinamica di oggetti"
-  - "nothrownew.obj"
+title: nuovo ed eliminare operatori | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- delete_cpp
+- new_cpp
+- new
+- delete
+dev_langs:
+- C++
+helpviewer_keywords:
+- new keyword [C++], dynamic allocation of objects
+- nothrownew.obj
+- delete keyword [C++], syntax
 ms.assetid: fa721b9e-0374-4f04-bb87-032ea775bcc8
 caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Operatori new e delete
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 88f91e113ef47dc44ec0a300a99051cfaed3f08c
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-C\+\+ supporta l'allocazione e la deallocazione dinamica degli oggetti mediante gli operatori [delete](../cpp/new-operator-cpp.md) e [new](../cpp/delete-operator-cpp.md).  Questi operatori allocano memoria per gli oggetti da un pool denominato archivio libero.  L'operatore `new` chiama la funzione speciale [operator new](../misc/operator-new-function.md) e l'operatore `delete` chiama la funzione speciale [operator delete](../misc/operator-delete-function.md).  
+---
+# <a name="new-and-delete-operators"></a>Operatori new e delete
+
+C++ supporta l'allocazione dinamica e la deallocazione di oggetti utilizzando il [nuova](../cpp/new-operator-cpp.md) e [eliminare](../cpp/delete-operator-cpp.md) operatori. Questi operatori allocano memoria per gli oggetti da un pool denominato archivio libero. Il `new` operatore chiama la funzione speciale [operatore new](../cpp/new-operator-cpp.md)e `delete` operatore chiama la funzione speciale [operatore delete](../cpp/delete-operator-cpp.md).  
   
- In [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)].NET 2002, la funzione `new` della libreria C\+\+ standard supporterà il comportamento specificato nello standard C\+\+ di generare un'eccezione std::bad\_alloc se l'allocazione di memoria ha esito negativo.  
+ In Visual C++ .NET 2002, la `new` funzione nella libreria C++ Standard supporterà il comportamento specificato nello standard C++, che consiste nel generare un'eccezione std:: bad_alloc se l'allocazione di memoria ha esito negativo. Se si desidera la versione non generanti di `new`, collegare il programma con nothrownew.obj. Tuttavia, in caso di collegamento a nothrownew.obj, il valore predefinito `operator new` nella libreria Standard C++ non funziona più.  
   
- La funzione `new` della libreria di runtime C inoltre genererà un'eccezione std::bad\_alloc se l'allocazione di memoria ha esito negativo.  
+ Per un elenco dei file della libreria che costituiscono la libreria di Runtime C e la libreria Standard di C++, vedere [funzionalità della libreria CRT](../c-runtime-library/crt-library-features.md).  
   
- Se si desidera che la versione che non genera versione di `new` per la libreria di runtime C, collegare il programma con nothrownew.obj.  Tuttavia, quando si esegue il collegamento a nothrownew.obj, `new` della libreria C\+\+ standard non funzionerà più.  
-  
- Per un elenco di file di libreria che includono la libreria di runtime C e la libreria C\+\+ standard, vedere [Funzionalità libreria CRT](../c-runtime-library/crt-library-features.md).  
-  
-## Operatore new  
+##  <a id="new_operator"></a> L'operatore new  
  Quando un'istruzione come la seguente viene rilevata in un programma, viene convertita in una chiamata alla funzione `operator new`:  
   
-```  
+```cpp  
 char *pch = new char[BUFFER_SIZE];  
 ```  
   
- Se la richiesta è per i byte zero di archiviazione, **operator new** restituisce un puntatore a un oggetto distinto \(ovvero chiamate ripetute a puntatori diversi di ritorno **operator new**\).  Se la memoria disponibile non è sufficiente per la richiesta di allocazione, **operator new** restituisce **NULL** o genera un'eccezione \(vedere [Gli operatori new e delete](../cpp/new-and-delete-operators.md) per altre informazioni\).  
+Se la richiesta è pari a zero byte di spazio di archiviazione, **operatore new** restituisce un puntatore a un oggetto distinto (ovvero chiamate ripetute a **operatore new** restituiscono puntatori diversi). Se la memoria è insufficiente per la richiesta di allocazione, **operatore new** genera un'eccezione std:: bad_alloc oppure restituisce **nullptr** se è stato collegato in non generanti `operator new` supportano.  
   
- È possibile scrivere una routine che tenta di liberare memoria e riprovate l'allocazione; vedere [\_set\_new\_handler](../c-runtime-library/reference/set-new-handler.md) per altre informazioni.  Per altre informazioni sulla combinazione di aggiornamento, vedere il seguente argomento, [Gestire gli stati di memoria insufficiente](../misc/handling-insufficient-memory-conditions.md).  
+È possibile scrivere una routine che tenta di liberare la memoria e riprovate l'allocazione; vedere [set_new_handler](../c-runtime-library/reference/set-new-handler.md) per ulteriori informazioni. Per ulteriori informazioni sullo schema di ripristino, vedere la sezione di memoria insufficiente di gestione di questo argomento.  
+
   
- I due ambiti delle funzioni `operator new` sono descritti nella tabella seguente.  
+I due ambiti delle funzioni `operator new` sono descritti nella tabella seguente.  
   
-### Ambito per le funzioni operator new  
+### <a name="scope-for-operator-new-functions"></a>Ambito per le funzioni operator new  
   
 |Operatore|Ambito|  
-|---------------|------------|  
-|**::operator new**|Globale|  
-|*class\-name* **::operator new**|Classe|  
+|--------------|-----------|  
+|**:: operatore new**|Global|  
+|*Nome classe* **:: operatore new**|Classe|  
   
- Il primo argomento di **operator new** deve essere di tipo **size\_t** \(un tipo definito da STDDEF.H\) e il tipo restituito è sempre **void \***.  
+ Il primo argomento di **operatore new** deve essere di tipo **size_t** (un tipo definito da STDDEF. H) e il tipo restituito è sempre **void \* **.  
   
- La funzione globale **operator new** viene chiamata quando l'operatore **new** viene usato per allocare oggetti di tipi incorporati, gli oggetti di tipo classe che non contengono funzioni **operator new** definite dall'utente e matrici di qualsiasi tipo.  Quando l'operatore **new** viene usato per allocare oggetti di un tipo di classe in cui viene definito **operator new**, viene chiamato **operator new** di tale classe.  
+ Globale **operatore new** funzione viene chiamata quando la **nuova** operatore viene usato per allocare oggetti di tipi predefiniti, definiti dall'utente gli oggetti del tipo di classe che non contengono **operatore new** funzioni e le matrici di qualsiasi tipo. Quando il **nuova** operatore viene usato per allocare oggetti di un tipo di classe in cui un **operatore new** è definito, tale classe **operatore new** viene chiamato.  
   
- Una funzione **operator new** definita per una classe è una funzione membro statico \(che non può, pertanto, essere virtuale\) che nasconde la funzione globale **operator new** degli oggetti di tale tipo di classe.  Si consideri il caso in cui **new** viene usato per allocare e impostare la memoria in un determinato valore:  
+ Un **operatore new** funzione definita per una classe è una funzione membro statico (che non è possibile, pertanto, essere virtuale) che nasconde globale **operatore new** funzione per gli oggetti di quel tipo di classe. Si consideri il caso in cui **nuova** viene utilizzato per allocare e impostare la memoria per un determinato valore:  
   
-```  
+```cpp  
 // spec1_the_operator_new_function1.cpp  
 #include <malloc.h>  
 #include <memory.h>  
@@ -93,17 +108,17 @@ int main()
 }  
 ```  
   
- L'argomento fornito tra parentesi a **new** viene passato a `Blanks::operator new` come argomento `chInit`.  Tuttavia, la funzione globale **operator new** è nascosta, in questo modo il codice seguente genera un errore:  
+ L'argomento fornito tra parentesi a **nuova** viene passato a `Blanks::operator new` come il `chInit` argomento. Tuttavia, globale **operatore new** funzione è nascosta, causando il codice seguente per generare un errore:  
   
-```  
+```cpp  
 Blanks *SomeBlanks = new Blanks;  
 ```  
   
- In Visual C\+\+ 5.0 e nelle versioni precedenti, i tipi nonclass e tutte le matrici \(indipendentemente dal fatto che costituiscono il tipo **class**\) allocati mediante l'operatore **new** usano sempre la funzione globale **operator new**.  
+ In tipi di Visual C++ 5.0 e versioni precedenti, nonclass e tutte le matrici (indipendentemente dal fatto che di **classe** tipo) allocati mediante il **nuova** sempre utilizzare l'operatore globale **operatore new** (funzione).  
   
- A partire da Visual C\+\+ 5.0, il compilatore supporta gli operatori **new** e **delete** della matrice di membro in una dichiarazione di classe.  Ad esempio:  
+ A partire da Visual C++ 5.0, il compilatore supporta la matrice di membro **nuova** e **eliminare** operatori in una dichiarazione di classe. Ad esempio:  
   
-```  
+```cpp  
 // spec1_the_operator_new_function2.cpp  
 class MyClass  
 {  
@@ -124,10 +139,10 @@ int main()
 }  
 ```  
   
-### Gestione della memoria insufficiente  
+### <a name="handling-insufficient-memory"></a>Gestione della memoria insufficiente  
  Il test sull'allocazione di memoria non riuscita può essere realizzato con il codice seguente:  
   
-```  
+```cpp  
 // insufficient_memory_conditions.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -142,27 +157,29 @@ int main() {
 }  
 ```  
   
- Per gestire le richieste di allocazione di memoria non riuscita, è possibile scrivere una routine di recupero personalizzata per gestire tale errore, quindi registrare la funzione chiamando la funzione di runtime [\_set\_new\_handler](../c-runtime-library/reference/set-new-handler.md).  
+ È possibile gestire le richieste di allocazione di memoria non riuscite: scrivere una routine di ripristino personalizzato per gestire questo errore, quindi registrare la funzione chiamando il [set_new_handler](../c-runtime-library/reference/set-new-handler.md) funzione di runtime.  
   
-## Operatore delete  
- La memoria allocata in modo dinamico mediante l'operatore **new** può essere liberata mediante l'operatore **delete**.  L'operatore delete chiama la funzione **operator delete**, la quale libera la memoria reinserendola nel pool di memoria disponibile.  Usando l'operatore **delete** viene inoltre chiamato il distruttore della classe \(se presente\).  
+##  <a id="delete_operator"></a> L'operatore delete  
+ Memoria allocata in modo dinamico mediante il **nuova** operatore può essere liberato mediante il **eliminare** operatore. L'operatore delete chiama la **operatore delete** (funzione), che libera memoria al pool disponibili. Utilizzo di **eliminare** operatore anche fa sì che il distruttore della classe (se presente) da chiamare.  
   
- Sono disponibili funzioni **operator delete** globali e a livello di ambito della classe.  Per una determinata classe è possibile definire una sola funzione **operator delete**. Se definita, questa nasconderà la funzione globale **operator delete**.  La funzione globale **operator delete** viene sempre chiamata per le matrici di qualsiasi tipo.  
+ Vi sono globali e con ambito classe **operatore delete** funzioni. Un solo **operatore delete** funzione può essere definita per una determinata classe, se definito, in quanto viene nascosta globale **operatore delete** (funzione). Globale **operatore delete** funzione viene sempre chiamata per le matrici di qualsiasi tipo.  
   
- La funzione globale **operator delete**, se dichiarata, accetta un unico argomento di tipo **void \***, il quale contiene un puntatore all'oggetto da deallocare.  Il tipo restituito è `void` \(**operator delete** non può restituire un valore\).  Esistono due formati per le funzioni **operator delete** di membri della classe:  
+ Globale **operatore delete** (funzione). Esistono due formati per globale **operatore delete** e membri di classe **operatore delete** funzioni:  
   
-```  
+```cpp  
 void operator delete( void * );  
 void operator delete( void *, size_t );  
 ```  
   
- Per una determinata classe può essere presente solo una delle due varianti precedenti.  Il primo formato funziona come descritto per la funzione `operator delete`globale.  Il secondo formato accetta due argomenti, il primo dei quali è un puntatore al blocco di memoria da deallocare e il secondo è il numero di byte da deallocare.  Il secondo formato è particolarmente utile quando una funzione **operator delete** di una classe base viene usata per eliminare un oggetto di una classe derivata.  
+ Solo uno dei due formati precedenti può essere presente per una determinata classe. La prima forma accetta un singolo argomento di tipo **void \* **, che contiene un puntatore all'oggetto da deallocare. La seconda forma, ovvero dimensioni deallocazione, accetta due argomenti, il primo dei quali è un puntatore al blocco di memoria per deallocare e il secondo dei quali è il numero di byte da deallocare. Il tipo restituito di entrambe le forme è `void` (**operatore delete** non può restituire un valore).  
   
- La funzione **operator delete** è statica, pertanto non può essere virtuale.  La funzione `operator delete` obbedisce al controllo di accesso, come descritto in [Controllo dell'accesso ai membri](../cpp/member-access-control-cpp.md).  
+ Lo scopo del secondo form consiste nel velocizzare la ricerca per la categoria di dimensioni corrette dell'oggetto da eliminare, che spesso non è archiviato in prossimità di allocazione di se stesso e probabilmente rimosso dalla cache; il secondo modulo è particolarmente utile quando un **operatore delete** da una classe base viene utilizzata per eliminare un oggetto di una classe derivata.  
   
- Il seguente esempio mostra le funzioni definite dall'utente **operator new** e **operator delete**, progettate per registrare le allocazioni e le deallocazioni della memoria:  
+ Il **operatore delete** funzione è statica, pertanto non può essere virtuale. Il `operator delete` funzione rispetta il controllo di accesso, come descritto in [controllo di accesso ai membri](../cpp/member-access-control-cpp.md).  
   
-```  
+ Nell'esempio seguente viene definita dall'utente **operatore new** e **operatore delete** funzioni progettate per registrare le allocazioni e deallocazioni di memoria:  
+  
+```cpp  
 // spec1_the_operator_delete_function1.cpp  
 // compile with: /EHsc  
 // arguments: 3  
@@ -211,11 +228,11 @@ int main( int argc, char *argv[] ) {
 }  
 ```  
   
- Il codice precedente può essere usato per rilevare le "perdite di memoria", ovvero della memoria allocata nell'archiviazione disponibile ma che non viene mai liberata.  Per eseguire questo rilevamento, gli operatori **new** e **delete** vengono ridefiniti per contare l'allocazione e la deallocazione di memoria.  
+ Il codice precedente può essere utilizzato per rilevare le "perdite di memoria", ovvero della memoria allocata nell'archiviazione disponibile ma che non viene mai liberata. Per eseguire il rilevamento globale **nuova** e **eliminare** operatori vengono ridefiniti per contare l'allocazione e deallocazione della memoria.  
   
- A partire da Visual C\+\+ 5.0, il compilatore supporta gli operatori **new** e **delete** della matrice di membro in una dichiarazione di classe.  Ad esempio:  
+ A partire da Visual C++ 5.0, il compilatore supporta la matrice di membro **nuova** e **eliminare** operatori in una dichiarazione di classe. Ad esempio:  
   
-```  
+```cpp  
 // spec1_the_operator_delete_function2.cpp  
 // compile with: /c  
 class X  {  
@@ -231,6 +248,5 @@ void f() {
    delete [] pX;  
 }  
 ```  
-  
-## Vedere anche  
- [Funzioni membro speciali](../misc/special-member-functions-cpp.md)
+
+

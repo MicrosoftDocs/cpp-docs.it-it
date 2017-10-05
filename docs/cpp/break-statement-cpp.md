@@ -1,49 +1,65 @@
 ---
-title: "Istruzione break (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "break_cpp"
-  - "break"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "break (parola chiave) [C++]"
+title: Istruzione break (C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- break_cpp
+- break
+dev_langs:
+- C++
+helpviewer_keywords:
+- break keyword [C++]
 ms.assetid: 63739928-8985-4b05-93ce-016322e6da3d
 caps.latest.revision: 13
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Istruzione break (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 2e016ccc90ef53ca5f269a73d3f5b7ed3185f550
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-L'istruzione `break` termina l'esecuzione del ciclo di inclusione più vicino o dell'istruzione condizionale in cui appare.  Il controllo passa all'istruzione che segue la fine dell'istruzione, se presente.  
+---
+# <a name="break-statement-c"></a>Istruzione break (C++)
+L'istruzione `break` termina l'esecuzione del ciclo di inclusione più vicino o dell'istruzione condizionale in cui appare. Il controllo passa all'istruzione che segue la fine dell'istruzione, se presente.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 break;  
 ```  
   
-## Note  
- L'istruzione `break` viene utilizzata con l'istruzione [switch](../cpp/switch-statement-cpp.md) condizionale e con le istruzioni del ciclo [do](../cpp/do-while-statement-cpp.md), [for](../cpp/for-statement-cpp.md) e [while](../cpp/while-statement-cpp.md).  
+## <a name="remarks"></a>Note  
+ Il `break` con condizionale viene utilizzata l'istruzione [passare](../cpp/switch-statement-cpp.md) istruzione e con il [si](../cpp/do-while-statement-cpp.md), [per](../cpp/for-statement-cpp.md), e [mentre](../cpp/while-statement-cpp.md) ciclo istruzioni.  
   
- In un'istruzione `switch` l'istruzione `break` fa sì che il programma esegua l'istruzione successiva all'esterno dell'istruzione `switch`.  Senza un'istruzione `break`, viene eseguita ogni istruzione corrispondente all'etichetta `case` fino alla fine dell'istruzione `switch`, inclusa la clausola `default`.  
+ In un'istruzione `switch` l'istruzione `break` fa sì che il programma esegua l'istruzione successiva all'esterno dell'istruzione `switch`. Senza un'istruzione `break`, viene eseguita ogni istruzione corrispondente all'etichetta `case` fino alla fine dell'istruzione `switch`, inclusa la clausola `default`.  
   
- Nei cicli l'istruzione `break` termina l'esecuzione dell'istruzione `do`, `for`o `while` di inclusione più vicina.  Il controllo passa all'istruzione che segue l'istruzione terminata, se presente.  
+ Nei cicli l'istruzione `break` termina l'esecuzione dell'istruzione `do`, `for`o `while` di inclusione più vicina. Il controllo passa all'istruzione che segue l'istruzione terminata, se presente.  
   
- Nelle istruzioni annidate l'istruzione `break` termina solo l'istruzione `do`, `for`, `switch` o `while` che la include.  È possibile utilizzare un'istruzione `goto` o `return` per trasferire il controllo da strutture maggiormente annidate.  
+ Nelle istruzioni annidate l'istruzione `break` termina solo l'istruzione `do`, `for`, `switch` o `while` che la include. È possibile utilizzare un'istruzione `return` o `goto` per trasferire il controllo da strutture maggiormente annidate.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Nel codice seguente viene illustrato come utilizzare l'istruzione `break` in un ciclo `for`.  
   
 ```cpp  
@@ -72,13 +88,16 @@ int nums []{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 }  
 ```  
   
-  **In ogni caso:**   
-**1**  
-**2**  
-**3** Nel codice seguente viene illustrato come utilizzare `break` in un ciclo `while` e un ciclo `do`.  
+```Output  
+In each case:   
+1  
+2  
+3  
+```  
+  
+ Nel codice seguente viene illustrato come utilizzare `break` in un ciclo `while` e un ciclo `do`.  
   
 ```cpp  
-  
 #include <iostream>  
 using namespace std;  
   
@@ -104,11 +123,12 @@ int main() {
 }  
 ```  
   
-  **In ogni caso:**  
-**0**  
-**1**  
-**2**  
-**3** Nel codice seguente viene illustrato come utilizzare `break` in un'istruzione switch.  È necessario utilizzare `break` in ogni caso se si desidera gestire separatamente ogni caso. Se non si utilizza `break`, l'esecuzione del codice passa al caso successivo.  
+```Output  
+In each case:  
+0123  
+```  
+  
+ Nel codice seguente viene illustrato come utilizzare `break` in un'istruzione switch. È necessario utilizzare `break` in ogni caso se si desidera gestire separatamente ogni caso. Se non si utilizza `break`, l'esecuzione del codice passa al caso successivo.  
   
 ```cpp  
 #include <iostream>  
@@ -155,7 +175,7 @@ int main() {
 }  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Istruzioni di spostamento](../cpp/jump-statements-cpp.md)   
- [Parole chiave C\+\+](../cpp/keywords-cpp.md)   
+ [Parole chiave](../cpp/keywords-cpp.md)   
  [Istruzione continue](../cpp/continue-statement-cpp.md)

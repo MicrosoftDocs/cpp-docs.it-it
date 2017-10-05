@@ -1,36 +1,53 @@
 ---
-title: "_com_error::GUID | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "GUID"
-  - "_com_error.GUID"
-  - "_com_error::GUID"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GUID (metodo)"
+title: _com_error::GUID | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- GUID
+- _com_error.GUID
+- _com_error::GUID
+dev_langs:
+- C++
+helpviewer_keywords:
+- GUID method
 ms.assetid: e84c2c23-d02e-48f8-b776-9bd6937296d2
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# _com_error::GUID
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 6a1d0349344362853215a2c47db166bc4b885187
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="comerrorguid"></a>_com_error::GUID
 **Sezione specifica Microsoft**  
   
- Chiama la funzione **IErrorInfo::GetGUID**.  
+ Chiamate **IErrorInfo:: GetGuid** (funzione).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -38,13 +55,13 @@ GUID GUID( ) const throw( );
   
 ```  
   
-## Valore restituito  
- Restituisce il risultato di **IErrorInfo::GetGUID** per l'oggetto **IErrorInfo** registrato nell'oggetto `_com_error`.  Se nessun oggetto **IErrorInfo** viene registrato, restituisce `GUID_NULL`.  
+## <a name="return-value"></a>Valore restituito  
+ Restituisce il risultato della **IErrorInfo:: GetGuid** per il **IErrorInfo** oggetto registrati all'interno di `_com_error` oggetto. Se non **IErrorInfo** è registrato, restituisce `GUID_NULL`.  
   
-## Note  
- Qualsiasi errore durante la chiamata al metodo **IErrorInfo::GetGUID** viene ignorato.  
+## <a name="remarks"></a>Note  
+ Qualsiasi errore durante la chiamata di **IErrorInfo:: GetGuid** metodo viene ignorato.  
   
  **Fine sezione specifica Microsoft**  
   
-## Vedere anche  
- [Classe \_com\_error](../cpp/com-error-class.md)
+## <a name="see-also"></a>Vedere anche  
+ [Classe _com_error](../cpp/com-error-class.md)

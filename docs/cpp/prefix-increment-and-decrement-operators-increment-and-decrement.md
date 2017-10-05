@@ -1,50 +1,68 @@
 ---
-title: "Operatori di incremento e decremento in forma prefissa: ++ e -- | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "--"
-  - "++"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "-- (operatore), operatori di decremento prefissi"
-  - "++ (operatore), operatori di incremento prefissi"
-  - "decremento (operatori)"
-  - "decremento (operatori), sintassi"
-  - "incremento (operatori), sintassi"
-  - "operatori [C++], decrement"
-  - "operatori [C++], incremento"
+title: 'Operatori di incremento e decremento del prefisso: + + e -| Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- --
+- ++
+dev_langs:
+- C++
+helpviewer_keywords:
+- increment operators, syntax
+- ++ operator, prefix increment operators
+- operators [C++], decrement
+- -- operator, prefix decrement operators
+- operators [C++], increment
+- decrement operators, syntax
+- decrement operators
 ms.assetid: 45ea7fc7-f279-4be9-a216-1d9a0ef9eb7b
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Operatori di incremento e decremento in forma prefissa: ++ e --
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 22844a2bca61b81dc5cf7c2fc4fffa45a2783078
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-## Sintassi  
+---
+# <a name="prefix-increment-and-decrement-operators--and---"></a>Operatori di incremento e decremento in forma prefissa: ++ e --
+## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-++ unary-expression –– unary-expression  
+++ unary-expression  
+-- unary-expression  
 ```  
   
-## Note  
- L'operatore di incremento prefisso \(`++`\) aggiunge uno al relativo operando; questo valore incrementato è il risultato dell'espressione.  L'operando deve essere un l\-value non di tipo **const**.  Il risultato è un l\-value dello stesso tipo dell'operando.  
+## <a name="remarks"></a>Note  
+ L'operatore di incremento prefisso (`++`) aggiunge uno al relativo operando; questo valore incrementato è il risultato dell'espressione. L'operando deve essere un l-value non di tipo **const**. Il risultato è un l-value dello stesso tipo dell'operando.  
   
- L'operatore di decremento prefisso \(**––**\) è analogo all'operatore di incremento prefisso, tranne per il fatto che all'operando viene applicato un decremento di uno e il risultato è il valore decrementato.  
+ L'operatore di decremento prefisso (**--**) è analogo all'operatore di incremento prefisso, ad eccezione del fatto che l'operando viene decrementato di uno e il risultato è il valore decrementato.  
+
+ **Visual Studio 2017 15.3 e versioni successive** (disponibile con [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): l'operando di un operatore di incremento o decremento non può essere di tipo `bool`.
   
- Gli operatori di incremento e di decremento sia in forma prefissa sia in forma suffissa hanno impatto sui relativi operandi.  La differenza principale tra loro è data dall'ordine in cui avviene l'incremento o il decremento nella valutazione di un'espressione.  Per altre informazioni, vedere [Operatori di incremento e decremento suffisso](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md). Nella forma prefissa, l'incremento o il decremento si verifica prima che il valore venga utilizzato nella valutazione dell'espressione, pertanto il valore dell'espressione è diverso dal valore dell'operando.  Nella forma suffissa, l'incremento o il decremento si verifica dopo che il valore viene utilizzato nella valutazione dell'espressione, pertanto il valore dell'espressione è lo stesso dal valore dell'operando.  Ad esempio il seguente programma stampa "`++i = 6`":  
+ Gli operatori di incremento e di decremento sia in forma prefissa sia in forma suffissa hanno impatto sui relativi operandi. La differenza principale tra loro è data dall'ordine in cui avviene l'incremento o il decremento nella valutazione di un'espressione. (Per ulteriori informazioni, vedere [in forma suffissa operatori di incremento e decremento](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md).) Nella forma prefissa, l'incremento o il decremento si verifica prima che il valore venga utilizzato nella valutazione dell'espressione, pertanto il valore dell'espressione è diverso dal valore dell'operando. Nella forma suffissa, l'incremento o il decremento si verifica dopo che il valore viene utilizzato nella valutazione dell'espressione, pertanto il valore dell'espressione è lo stesso dal valore dell'operando. Ad esempio il seguente programma stampa "`++i = 6`":  
   
 ```  
 // expre_Increment_and_Decrement_Operators.cpp  
@@ -59,9 +77,9 @@ int main() {
 }  
 ```  
   
- Un operando di tipo integrale o mobile viene incrementato o decrementato dell'intero 1.  Il tipo del risultato è uguale al tipo di operando.  Un operando di tipo puntatore viene incrementato o decrementato alle dimensioni dell'oggetto che indirizza.  Un puntatore incrementato punta all'oggetto successivo; mentre un puntatore decrementato punta all'oggetto precedente.  
+ Un operando di tipo integrale o mobile viene incrementato o decrementato dell'intero 1. Il tipo del risultato è uguale al tipo di operando. Un operando di tipo puntatore viene incrementato o decrementato alle dimensioni dell'oggetto che indirizza. Un puntatore incrementato punta all'oggetto successivo; mentre un puntatore decrementato punta all'oggetto precedente.  
   
- Dal momento che gli operatori di incremento e decremento hanno effetti collaterali, l'utilizzo di espressioni con operatori di incremento o di incremento in una [macro del preprocessore](../preprocessor/macros-c-cpp.md) può produrre risultati indesiderati.  Si consideri l'esempio seguente:  
+ Poiché gli operatori di incremento e decremento hanno effetti collaterali, utilizzo di espressioni con operatori di decrementano o in un [macro del preprocessore](../preprocessor/macros-c-cpp.md) può produrre risultati indesiderati. Si consideri l'esempio seguente:  
   
 ```  
 // expre_Increment_and_Decrement_Operators2.cpp  
@@ -83,10 +101,9 @@ k = ((++i)<(j))?(j):(++i);
  Se `i` è maggiore o uguale a `j` o minore di `j` di 1, verrà incrementato due volte.  
   
 > [!NOTE]
->  Le funzioni inline C\+\+ sono preferibili rispetto alle macro in molti casi perché eliminano gli effetti collaterali come quelli qui riportati, consentono inoltre al linguaggio di eseguire un controllo del tipo più completo.  
+>  Le funzioni inline C++ sono preferibili rispetto alle macro in molti casi perché eliminano gli effetti collaterali come quelli qui riportati, consentono inoltre al linguaggio di eseguire un controllo del tipo più completo.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Espressioni con operatori unari](../cpp/expressions-with-unary-operators.md)   
- [Operatori C\+\+](../misc/cpp-operators.md)   
- [Operatori C\+\+, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Operatori C++ predefiniti, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operatori di incremento e decremento in forma prefissa](../c-language/prefix-increment-and-decrement-operators.md)

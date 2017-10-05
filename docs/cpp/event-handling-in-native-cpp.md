@@ -1,48 +1,64 @@
 ---
-title: "Gestione di eventi in C++ nativo | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "gestione eventi, Visual C++"
+title: Gestione degli eventi in C++ nativo | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- event handling, Visual C++
 ms.assetid: e4b9219a-15d8-42fb-83c8-6d2e4e087c8d
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Gestione di eventi in C++ nativo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 0ff5032966cb44ff8d14dd6e0a33fb5f8cf56ed7
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-Nella gestione degli eventi in C\+\+ nativo, sono stati configurati un'origine evento e un ricevitore di eventi utilizzando rispettivamente gli attributi [event\_source](../windows/event-source.md) e [event\_receiver](../windows/event-receiver.md), specificando `type`\=`native`.  Questi attributi consentono alle classi, a cui sono applicati, di generare eventi e gestire eventi in un contesto nativo, non COM.  
+---
+# <a name="event-handling-in-native-c"></a>Gestione di eventi in C++ nativo
+In gestione eventi C++ nativa, viene impostato un ricevitore di origine e di evento di eventi utilizzando il [event_source](../windows/event-source.md) e [event_receiver](../windows/event-receiver.md) rispettivamente gli attributi, specificare `type` = `native`. Questi attributi consentono alle classi, a cui sono applicati, di generare eventi e gestire eventi in un contesto nativo, non COM.  
   
-## Dichiarazione di eventi  
- In una classe di origine evento, utilizzare la parola chiave [\_\_event](../cpp/event.md) in una dichiarazione di metodo per dichiarare il metodo come un evento.  Assicurarsi di dichiarare il metodo, ma non di definirlo; così facendo verrà generato un errore del compilatore, poiché il compilatore definisce il metodo in modo implicito quando viene trasformato in un evento.  Gli eventi nativi possono essere metodi con zero o più parametri.  Il tipo restituito può essere void o qualsiasi tipo integrale.  
+## <a name="declaring-events"></a>Dichiarazione di eventi  
+ In una classe di origine evento, utilizzare il [event](../cpp/event.md) parola chiave in una dichiarazione di metodo per dichiarare il metodo come un evento. Assicurarsi di dichiarare il metodo, ma non di definirlo; così facendo verrà generato un errore del compilatore, poiché il compilatore definisce il metodo in modo implicito quando viene trasformato in un evento. Gli eventi nativi possono essere metodi con zero o più parametri. Il tipo restituito può essere void o qualsiasi tipo integrale.  
   
-## Definizione di gestori degli eventi  
- In una classe del ricevitore di eventi, è possibile definire i gestori eventi, ovvero i metodi con firme \(tipi restituiti, convenzioni di chiamata e argomenti\) che corrispondono all'evento che gestiranno.  
+## <a name="defining-event-handlers"></a>Definizione di gestori degli eventi  
+ In una classe del ricevitore di eventi, è possibile definire i gestori eventi, ovvero i metodi con firme (tipi restituiti, convenzioni di chiamata e argomenti) che corrispondono all'evento che gestiranno.  
   
-## Hook dei gestori eventi agli eventi  
- Anche in una classe del ricevitore di eventi, è possibile utilizzare la funzione intrinseca [\_\_hook](../cpp/hook.md) per eseguire l'hook di eventi ai gestori eventi e la funzione [\_\_unhook](../cpp/unhook.md) per rimuovere l'hook tra tali due elementi.  È possibile eseguire l'hook di più eventi a un singolo gestore eventi o di diversi gestori eventi a un singolo evento.  
+## <a name="hooking-event-handlers-to-events"></a>Hook dei gestori eventi agli eventi  
+ Anche in una classe del ricevitore di eventi, utilizzare la funzione intrinseca [hook](../cpp/hook.md) per associare gli eventi con i gestori eventi e [unhook](../cpp/unhook.md) dissociare eventi dai gestori eventi. È possibile eseguire l'hook di più eventi a un singolo gestore eventi o di diversi gestori eventi a un singolo evento.  
   
-## Generazione di eventi  
- Per generare un evento, è sufficiente chiamare il metodo dichiarato come un evento nella classe di origine dell'evento.  Se per l'evento è stato eseguito l'hook ai gestori, questi verranno chiamati.  
+## <a name="firing-events"></a>Generazione di eventi  
+ Per generare un evento, è sufficiente chiamare il metodo dichiarato come un evento nella classe di origine dell'evento. Se per l'evento è stato eseguito l'hook ai gestori, questi verranno chiamati.  
   
-### Il codice evento in C\+\+ nativo  
- Nell'esempio seguente viene illustrato come gestire un'evento in C\+\+ nativo.  Per compilare ed eseguire l'esempio, fare riferimento ai commenti presenti nel codice.  
+### <a name="native-c-event-code"></a>Il codice evento in C++ nativo  
+ Nell'esempio seguente viene illustrato come gestire un'evento in C++ nativo. Per compilare ed eseguire l'esempio, fare riferimento ai commenti presenti nel codice.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-### Codice  
+### <a name="code"></a>Codice  
   
 ```  
 // evh_native.cpp  
@@ -86,12 +102,12 @@ int main() {
 }  
 ```  
   
-### Output  
+### <a name="output"></a>Output  
   
 ```  
 MyHandler2 was called with value 123.  
 MyHandler1 was called with value 123.  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Gestione di eventi](../cpp/event-handling.md)

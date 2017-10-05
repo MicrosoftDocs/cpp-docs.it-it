@@ -1,35 +1,51 @@
 ---
-title: "Puntatori | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "dichiarazioni, puntatori"
-  - "dichiaratori, puntatori"
-  - "puntatori"
-  - "puntatori, dichiarazioni"
+title: Puntatori (C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- declarators, pointers
+- declarations, pointers
+- pointers
+- pointers, declarations
 ms.assetid: 595387c5-8e58-4670-848f-344c7caf985e
 caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Puntatori
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: c164a934f14f7b65c159cf21feb576d0a8bdf36d
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="pointers-c"></a>Puntatori (C++)
 I puntatori vengono dichiarati tramite la seguente sequenza  
   
 ```  
-[storage-class-specifiers] [cv-qualifiers] type-specifiers   
+[storage-class-specifiers] [cv-qualifiers] type-specifiers   
 [ms-modifier] declarator ;  
 ```  
   
@@ -39,17 +55,17 @@ I puntatori vengono dichiarati tramite la seguente sequenza
 * [cv-qualifiers] identifier [= expression]  
 ```  
   
- 1.  Gli identificatori di dichiarazione:  
+ 1. Gli identificatori di dichiarazione:  
   
--   Identificatore della classe di archiviazione facoltativo.  Per ulteriori informazioni, vedere [Identificatori](../cpp/specifiers.md).  
+-   Identificatore della classe di archiviazione facoltativo. Per ulteriori informazioni, vedere [identificatori](../cpp/specifiers.md).  
   
 -   Una parola chiave `const` o `volatile` facoltativa, applicata al tipo di oggetto a cui puntare.  
   
 -   L'identificatore di tipo: il nome di un tipo che rappresenta il tipo di oggetto a cui puntare.  
   
- 2.  Dichiaratore:  
+ 2. Dichiaratore:  
   
--   Un modificatore facoltativo specifico di Microsoft.  Per ulteriori informazioni, vedere il sito Web Microsoft [Modificatori specifici di Microsoft](../cpp/microsoft-specific-modifiers.md).  
+-   Un modificatore facoltativo specifico di Microsoft. Per ulteriori informazioni, vedere [modificatori specifici Microsoft](../cpp/microsoft-specific-modifiers.md).  
   
 -   Operatore `*`.  
   
@@ -71,8 +87,6 @@ I puntatori vengono dichiarati tramite la seguente sequenza
 ```  
 * identifier [ [ constant-expression ] ]  
 ```  
-  
--   Tuttavia, i dichiaratori del puntatore possono essere più complessi.  Per ulteriori informazioni, vedere [Dichiaratori](http://msdn.microsoft.com/it-it/8a7b9b51-92bd-4ac0-b3fe-0c4abe771838).  
   
 -   Più dichiaratori e i relativi inizializzatori possono essere uniti in una sola dichiarazione in un elenco separato da virgola che segue l'identificatore della dichiarazione.  
   
@@ -100,7 +114,7 @@ static int *p = &i, *q = &j;
   
  Nell'esempio precedente i puntatori p e in q puntano entrambi a oggetti di tipo `int` e vengono inizializzati, rispettivamente sugli indirizzi di i e J.  L'identificatore della classe di archiviazione `static` viene applicato a entrambi i puntatori.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // pointer.cpp  
@@ -176,18 +190,21 @@ int main() {
 }  
 ```  
   
-  **0x0012FEC8**  
-**0x0012FEC8 2**  
-**0x0012FEC8 7**  
-**J è 10**  
-**0x00320850 5**  
-**0x00320850 0**  
-**0x00320854 10**  
-**0x00320858 20**  
-**0x0032085C 30**  
-**0x00320860 40**  
-**dog dog**   
-## Esempio  
+```Output  
+0x0012FEC8  
+0x0012FEC8 2  
+0x0012FEC8 7  
+j is 10  
+0x00320850 5  
+0x00320850 0  
+0x00320854 10  
+0x00320858 20  
+0x0032085C 30  
+0x00320860 40  
+dog dog  
+```  
+  
+## <a name="example"></a>Esempio  
  In un altro esempio viene illustrato l'utilizzo dei puntatori nelle strutture di dati; in questo caso, un elenco collegato.  
   
 ```  
@@ -248,18 +265,26 @@ int main() {
 }  
 ```  
   
-  **`a 45 d a 789 d q`a \(add node\)  d \(display list\)  q \(quit\)**  
-**enter a number:**   
-**a \(add node\)  d \(display list\)  q \(quit\)**  
-**node 1 \= 45**  
-**a \(add node\)  d \(display list\)  q \(quit\)**  
-**enter a number:**   
-**a \(add node\)  d \(display list\)  q \(quit\)**  
-**node 1 \= 45**  
-**node 2 \= 789**  
-**a \(add node\)  d \(display list\)  q \(quit\)**   
-## Vedere anche  
- [C\+\+ Abstract Declarators](http://msdn.microsoft.com/it-it/e7e18c18-0cad-4450-942b-d27e1d4dd088)   
- [Aggiunta di tipi di puntatori](../misc/addition-of-pointer-types.md)   
- [Operatore di riferimento indiretto: \*](../cpp/indirection-operator-star.md)   
- [Operatore address\-of: &](../cpp/address-of-operator-amp.md)
+```Output  
+  
+      a  
+45  
+d  
+a  
+789  
+d  
+qa (add node)  d (display list)  q (quit)  
+enter a number:   
+a (add node)  d (display list)  q (quit)  
+node 1 = 45  
+a (add node)  d (display list)  q (quit)  
+enter a number:   
+a (add node)  d (display list)  q (quit)  
+node 1 = 45  
+node 2 = 789  
+a (add node)  d (display list)  q (quit)  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Operatore di riferimento indiretto: *](../cpp/indirection-operator-star.md)   
+ [Operatore address-of: &](../cpp/address-of-operator-amp.md)

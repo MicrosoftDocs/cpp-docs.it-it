@@ -1,31 +1,47 @@
 ---
-title: "Costruttori di spostamento e operatori di assegnazione di spostamento (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "costruttore di spostamento"
+title: Costruttori di spostamento e operatori di assegnazione di spostamento (C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- move constructor
 ms.assetid: e75efe0e-4b74-47a9-96ed-4e83cfc4378d
 caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Costruttori di spostamento e operatori di assegnazione di spostamento (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 07debd120c7757c049d1e3d23dfe1bb065a3cc17
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-In questo argomento viene descritto come scrivere un *costruttore di spostamento* e un operatore di assegnazione di spostamento per una classe C\+\+.  Un costruttore di spostamento consente di implementare la semantica di spostamento. Questo può migliorare significativamente le prestazioni delle applicazioni in uso.  Per altre informazioni sulla semantica di spostamento, vedere [Dichiaratore di riferimento rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
+---
+# <a name="move-constructors-and-move-assignment-operators-c"></a>Costruttori di spostamento e operatori di assegnazione di spostamento (C++)
+In questo argomento viene descritto come scrivere un *costruttore di spostamento* e un operatore di assegnazione di spostamento per una classe C++. Un costruttore di spostamento consente di implementare la semantica di spostamento. Questo può migliorare significativamente le prestazioni delle applicazioni in uso. Per ulteriori informazioni sulla semantica di spostamento, vedere [dichiaratore di riferimento Rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
- Questo argomento si basa sulla seguente classe C\+\+, `MemoryBlock`, che gestisce un buffer di memoria.  
+ Questo argomento si basa sulla seguente classe C++, `MemoryBlock`, che gestisce un buffer di memoria.  
   
 ```cpp  
 // MemoryBlock.h  
@@ -103,9 +119,9 @@ private:
 };  
 ```  
   
- Nelle procedure seguenti viene descritto come scrivere un costruttore di spostamento e un operatore di assegnazione di spostamento per la classe C\+\+ di esempio.  
+ Nelle procedure seguenti viene descritto come scrivere un costruttore di spostamento e un operatore di assegnazione di spostamento per la classe C++ di esempio.  
   
-### Per creare un costruttore di spostamento per una classe C\+\+  
+### <a name="to-create-a-move-constructor-for-a-c-class"></a>Per creare un costruttore di spostamento per una classe C++  
   
 1.  Definire un metodo del costruttore vuoto che accetti come parametro un riferimento rvalue al tipo della classe, come illustrato nel seguente esempio:  
   
@@ -124,14 +140,14 @@ private:
     _length = other._length;  
     ```  
   
-3.  Assegnare i membri dati dell'oggetto di origine ai valori predefiniti.  Ciò impedisce al distruttore di liberare più volte le risorse, ad esempio la memoria:  
+3.  Assegnare i membri dati dell'oggetto di origine ai valori predefiniti. Ciò impedisce al distruttore di liberare più volte le risorse, ad esempio la memoria:  
   
     ```cpp  
     other._data = nullptr;  
     other._length = 0;  
     ```  
   
-### Per creare un operatore di assegnazione di spostamento per una classe C\+\+  
+### <a name="to-create-a-move-assignment-operator-for-a-c-class"></a>Per creare un operatore di assegnazione di spostamento per una classe C++  
   
 1.  Definire un operatore di assegnazione vuoto che accetti un riferimento rvalue al tipo della classe come relativo parametro e che restituisca un riferimento al tipo della classe, come illustrato nel seguente esempio:  
   
@@ -149,7 +165,7 @@ private:
     }  
     ```  
   
-3.  Nell'istruzione condizionale, liberare tutte le risorse \(ad esempio la memoria\) dall'oggetto a cui sono state assegnate.  
+3.  Nell'istruzione condizionale, liberare tutte le risorse (ad esempio la memoria) dall'oggetto a cui sono state assegnate.  
   
      Nell'esempio seguente viene liberato il membro `_data` dall'oggetto a cui è assegnato:  
   
@@ -178,7 +194,7 @@ private:
     return *this;  
     ```  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Nell'esempio seguente vengono mostrati il costruttore di spostamento e l'operatore di assegnazione di spostamento completi per la classe `MemoryBlock`:  
   
 ```cpp  
@@ -226,8 +242,8 @@ MemoryBlock& operator=(MemoryBlock&& other)
 }  
 ```  
   
-## Esempio  
- Nell'esempio seguente viene mostrato come la semantica di spostamento possa migliorare le prestazioni delle applicazioni in uso.  Nell'esempio vengono aggiunti due elementi a un oggetto vettore, quindi viene inserito un nuovo elemento tra i due elementi esistenti.  In [!INCLUDE[cpp_dev10_long](../build/includes/cpp_dev10_long_md.md)] la classe `vector` usa la semantica di spostamento per eseguire in modo efficiente l'operazione di inserimento spostando gli elementi del vettore anziché copiarli.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene mostrato come la semantica di spostamento possa migliorare le prestazioni delle applicazioni in uso. Nell'esempio vengono aggiunti due elementi a un oggetto vettore, quindi viene inserito un nuovo elemento tra i due elementi esistenti. In Visual C++ 2010, la `vector` classe utilizza semantica di spostamento per eseguire l'operazione di inserimento in modo efficiente spostando gli elementi del vettore anziché copiarli.  
   
 ```cpp  
 // rvalue-references-move-semantics.cpp  
@@ -272,7 +288,7 @@ In ~MemoryBlock(). length = 50. Deleting resource.
 In ~MemoryBlock(). length = 75. Deleting resource.  
 ```  
   
- Nelle versioni precedenti a [!INCLUDE[cpp_dev10_long](../build/includes/cpp_dev10_long_md.md)] questo esempio produce l'output seguente:  
+ Prima di Visual C++ 2010, in questo esempio produce il seguente output:  
   
 ```  
 In MemoryBlock(size_t). length = 25.  
@@ -297,12 +313,12 @@ In ~MemoryBlock(). length = 75. Deleting resource.
   
  La versione di questo esempio che usa la semantica di spostamento è più efficiente rispetto alla versione che non usa tale semantica in quanto esegue meno operazioni di copia, allocazione e deallocazione di memoria.  
   
-## Programmazione efficiente  
+## <a name="robust-programming"></a>Programmazione efficiente  
  Per evitare perdite di risorse, liberare sempre le risorse, quali memoria, handle di file e socket, nell'operatore di assegnazione di spostamento.  
   
  Per evitare la distruzione irreversibile delle risorse, gestire in modo corretto l'assegnazione automatica nell'operatore di assegnazione di spostamento.  
   
- Se si assegna sia un costruttore di spostamento che un operatore di assegnazione di spostamento per la classe, è possibile eliminare il codice ridondante scrivendo il costruttore di spostamento in modo che esegua una chiamata all'operatore di assegnazione di spostamento.  Nell'esempio seguente viene illustrata una versione modificata del costruttore di spostamento che chiama l'operatore di assegnazione di spostamento:  
+ Se si assegna sia un costruttore di spostamento che un operatore di assegnazione di spostamento per la classe, è possibile eliminare il codice ridondante scrivendo il costruttore di spostamento in modo che esegua una chiamata all'operatore di assegnazione di spostamento. Nell'esempio seguente viene illustrata una versione modificata del costruttore di spostamento che chiama l'operatore di assegnazione di spostamento:  
   
 ```  
 // Move constructor.  
@@ -314,8 +330,8 @@ MemoryBlock(MemoryBlock&& other)
 }  
 ```  
   
- La funzione [std::move](../Topic/move.md) mantiene la proprietà rvalue del parametro `other`.  
+ Il [std:: Move](../standard-library/utility-functions.md#move) funzione mantiene la proprietà rvalue del `other` parametro.  
   
-## Vedere anche  
- [Dichiaratore di riferimento rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md)   
- [Spostamento di \<utility\>](http://msdn.microsoft.com/it-it/abef7e85-9dd6-4724-85da-d7f7fe95dca9)
+## <a name="see-also"></a>Vedere anche  
+ [Dichiaratore di riferimento rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md)   
+ [\<Utilità > spostare](http://msdn.microsoft.com/en-us/abef7e85-9dd6-4724-85da-d7f7fe95dca9)

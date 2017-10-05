@@ -1,50 +1,67 @@
 ---
-title: "__declspec | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__declspec_cpp"
-  - "__declspec"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__declspec (parola chiave) [C++]"
+title: declspec | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __declspec_cpp
+- __declspec
+dev_langs:
+- C++
+helpviewer_keywords:
+- __declspec keyword [C++]
 ms.assetid: 832db681-e8e1-41ca-b78c-cd9d265cdb87
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# __declspec
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: b29b6243611f1ca59a579869469c803d3735f9df
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-## Sezione specifica Microsoft  
- La sintassi degli attributi estesa per specificare le informazioni relative alla classe di archiviazione utilizza la parola chiave `__declspec`, che specifica che un'istanza di un tipo specificato deve essere archiviata con un attributo della classe di archiviazione specifico di Microsoft elencato di seguito.  Gli esempi degli altri modificatori della classe di archiviazione includono le parole chiave `extern` e `static`.  Tuttavia, queste parole chiave fanno parte della specifica ANSI dei linguaggi C e C\+\+ e, in quanto tali, non vengono analizzate dalla sintassi degli attributi estesa.  La sintassi degli attributi estesa semplifica e standardizza le estensioni specifiche Microsoft in base ai linguaggi C e C\+\+.  
+---
+# <a name="declspec"></a>__declspec
+## <a name="microsoft-specific"></a>Sezione specifica Microsoft  
+ La sintassi degli attributi estesa per specificare le informazioni relative alla classe di archiviazione utilizza la parola chiave `__declspec`, che specifica che un'istanza di un tipo specificato deve essere archiviata con un attributo della classe di archiviazione specifico di Microsoft elencato di seguito. Gli esempi degli altri modificatori della classe di archiviazione includono le parole chiave `static` e `extern`. Tuttavia, queste parole chiave fanno parte della specifica ANSI dei linguaggi C e C++ e, in quanto tali, non vengono analizzate dalla sintassi degli attributi estesa. La sintassi degli attributi estesa semplifica e standardizza le estensioni specifiche Microsoft in base ai linguaggi C e C++.  
   
-## Grammatica  
- *decl\-specifier*:  
- `__declspec (`  *extended\-decl\-modifier\-seq*  `)`  
+## <a name="grammar"></a>Grammatica  
+ *decl-specifier*:  
+ `__declspec (`  *Extended-decl-modifier-seq*  `)`  
   
- *extended\-decl\-modifier\-seq*:  
- *extended\-decl\-modifier* opt  
+ *extended-decl-modifier-seq*:  
+ *extended-decl-modifier*opz  
   
- *extended\-decl\-modifier extended\-decl\-modifier\-seq*  
+ *Extended-decl-modifier extended-decl-modifier-seq*  
   
- *extended\-decl\-modifier*:  
- `align(` *\#* `)`  
+ *extended-decl-modifier*:  
+ `align(` *#* `)`  
   
- `allocate("` *segname* `")`  
+ `allocate("`*segname*`")`  
   
  `appdomain`  
   
- `code_seg("` *segname* `")`  
+ `code_seg("`*segname*`")`  
   
  `deprecated`  
   
@@ -68,7 +85,7 @@ caps.handback.revision: 12
   
  `process`  
   
- `property(`{`get=`*get\_func\_name*&#124;`,put=`*put\_func\_name*}`)`  
+ `property(`{`get=`*get_func_name*&#124;`,put=` *put_func_name*}`)`  
   
  `restrict`  
   
@@ -78,23 +95,23 @@ caps.handback.revision: 12
   
  `thread`  
   
- `uuid("` *ComObjectGUID* `")`  
+ `uuid("`*ComObjectGUID*`")`  
   
- Uno spazio vuoto separa la sequenza dei modificatori di dichiarazione.  Gli esempi vengono visualizzati nelle sezioni successive.  
+ Uno spazio vuoto separa la sequenza dei modificatori di dichiarazione. Gli esempi vengono visualizzati nelle sezioni successive.  
   
- La grammatica dell'attributo estesa supporta i seguenti attributi della classe di archiviazione specifici di Microsoft: [align](../cpp/align-cpp.md), [allocate](../cpp/allocate.md), [appdomain](../cpp/appdomain.md), [code\_seg](../cpp/code-seg-declspec.md), [deprecated](../cpp/deprecated-cpp.md), [dllexport](../cpp/dllexport-dllimport.md), [dllimport](../cpp/dllexport-dllimport.md), [jitintrinsic](../cpp/jitintrinsic.md), [naked](../cpp/naked-cpp.md), [noalias](../cpp/noalias.md), [noinline](../cpp/noinline.md), [noreturn](../cpp/noreturn.md), [nothrow](../cpp/nothrow-cpp.md), [novtable](../cpp/novtable.md), [process](../cpp/process.md), [restrict](../cpp/restrict.md), [safebuffers](../cpp/safebuffers.md), [selectany](../cpp/selectany.md) e [thread](../cpp/thread.md).  Supporta inoltre gli attributi degli oggetti COM: [property](../cpp/property-cpp.md) e [uuid](../cpp/uuid-cpp.md).  
+ Questi attributi di classe di archiviazione specifiche di Microsoft supporta la sintassi degli attributi estesa: [allineare](../cpp/align-cpp.md), [allocare](../cpp/allocate.md), [appdomain](../cpp/appdomain.md), [code_seg](../cpp/code-seg-declspec.md), [deprecato](../cpp/deprecated-cpp.md), [dllexport](../cpp/dllexport-dllimport.md), [dllimport](../cpp/dllexport-dllimport.md), [jitintrinsic](../cpp/jitintrinsic.md), [naked](../cpp/naked-cpp.md), [noalias](../cpp/noalias.md), [noinline](../cpp/noinline.md), [noreturn](../cpp/noreturn.md), [nothrow](../cpp/nothrow-cpp.md), [novtable](../cpp/novtable.md) , [processo](../cpp/process.md), [limitare](../cpp/restrict.md), [safebuffers](../cpp/safebuffers.md), [selectany](../cpp/selectany.md), e [thread](../cpp/thread.md). Supporta inoltre gli attributi dell'oggetto di COM: [proprietà](../cpp/property-cpp.md) e [uuid](../cpp/uuid-cpp.md).  
   
- Gli attributi della classe di archiviazione `code_seg`, `dllexport`, `dllimport`, `naked`, `noalias`, `nothrow`, `property`, `restrict`, `selectany`, `thread` e `uuid` sono proprietà solo della dichiarazione dell'oggetto o della funzione a cui vengono applicati.  L'attributo `thread` influisce solo sui dati e sugli oggetti.  L'attributo `naked` influisce solo sulle funzioni.  Gli attributi `dllimport` e `dllexport` influiscono sulle funzioni, sui dati e sugli oggetti.  Gli attributi `property`, `selectany` e `uuid` influiscono sugli oggetti COM.  
+ Gli attributi della classe di archiviazione `code_seg`, `dllexport`, `dllimport`, `naked`, `noalias`, `nothrow`, `property`, `restrict`, `selectany`, `thread` e `uuid` sono proprietà solo della dichiarazione dell'oggetto o della funzione a cui vengono applicati. L'attributo `thread` influisce solo sui dati e sugli oggetti. L'attributo `naked` influisce solo sulle funzioni. Gli attributi `dllimport` e `dllexport` influiscono sulle funzioni, sui dati e sugli oggetti. Gli attributi `property`, `selectany` e `uuid` influiscono sugli oggetti COM.  
   
- Le parole chiave `__declspec` devono essere inserite all'inizio di una dichiarazione semplice.  Il compilatore ignora, senza avviso, qualsiasi parola chiave `__declspec` inserita dopo \* o & e prima dell'identificatore della variabile in una dichiarazione.  
+ Le parole chiave `__declspec` devono essere inserite all'inizio di una dichiarazione semplice. Il compilatore ignora, senza avviso, qualsiasi parola chiave `__declspec` inserita dopo * o & e prima dell'identificatore della variabile in una dichiarazione.  
   
- Un attributo `__declspec` specificato all'inizio di una dichiarazione del tipo definito dall'utente si applica alla variabile di quel tipo.  Ad esempio:  
+ Un attributo `__declspec` specificato all'inizio di una dichiarazione del tipo definito dall'utente si applica alla variabile di quel tipo. Ad esempio:  
   
 ```  
 __declspec(dllimport) class X {} varX;  
 ```  
   
- In questo caso, l'attributo si applica a `varX`.  Un attributo `__declspec` inserito dopo la parola chiave `struct` o `class` si applica al tipo definito dall'utente.  Ad esempio:  
+ In questo caso, l'attributo si applica a `varX`. Un attributo `__declspec` inserito dopo la parola chiave `class` o `struct` si applica al tipo definito dall'utente. Ad esempio:  
   
 ```  
 class __declspec(dllimport) X {};  
@@ -106,10 +123,11 @@ class __declspec(dllimport) X {};
   
 ```  
   
-decl-specifier-seq declarator-list;  
+decl-specifier-seq  
+declarator-list;  
 ```  
   
- *decl\-specifier\-seq* deve contenere, tra l'altro, un tipo di base \(ad esempio  `int`, `float`, un `typedef` o nome di classe\), una classe di archiviazione \(ad esempio  `static`, `extern`\) o l'estensione `__declspec`.  *init\-declarator\-list* deve contenere, tra l'altro, la parte di dichiarazioni del puntatore.  Ad esempio:  
+ Il *decl-specifier-seq* deve contenere, tra le altre cose, un tipo di base (ad esempio `int`, `float`, `typedef`, o un nome di classe), una classe di archiviazione (ad esempio `static`, `extern`), o il `__declspec`estensione. Il *init-declarator-list* deve contenere, tra le altre cose, la parte del puntatore di dichiarazioni. Ad esempio:  
   
 ```  
 __declspec(selectany) int * pi1 = 0;   //OK, selectany & int both part of decl-specifier  
@@ -117,15 +135,15 @@ int __declspec(selectany) * pi2 = 0;   //OK, selectany & int both part of decl-s
 int * __declspec(selectany) pi3 = 0;   //ERROR, selectany is not part of a declarator  
 ```  
   
- Nel codice seguente, ad esempio, viene dichiarata una variabile locale di thread di tipo Integer e quindi inizializzata con un valore:  
+ Nel codice seguente, ad esempio, viene dichiarata una variabile thread-local di tipo Integer e quindi inizializzata con un valore:  
   
 ```  
 // Example of the __declspec keyword  
 __declspec( thread ) int tls_i = 1;  
 ```  
   
-## Fine sezione specifica Microsoft  
+**Fine sezione specifica Microsoft**  
   
-## Vedere anche  
- [Parole chiave C\+\+](../cpp/keywords-cpp.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Parole chiave](../cpp/keywords-cpp.md)   
  [Attributi di classi di archiviazione estesi C](../c-language/c-extended-storage-class-attributes.md)

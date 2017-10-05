@@ -1,66 +1,83 @@
 ---
-title: "Operatore __alignof | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__alignof"
-  - "alignof"
-  - "alignas"
-  - "__alignof_cpp"
-  - "alignof_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__alignof (parola chiave) [C++]"
-  - "alignas"
-  - "allineamento di strutture"
-  - "alignof"
-  - "tipi [C++], requisiti di allineamento"
+title: operatore alignof | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __alignof
+- alignof
+- alignas
+- __alignof_cpp
+- alignof_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- alignas
+- alignment of structures
+- __alignof keyword [C++]
+- alignof
+- types [C++], alignment requirements
 ms.assetid: acb1eed7-6398-40bd-b0c5-684ceb64afbc
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Operatore __alignof
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 66ec7ff196a4f22aec043d8b76faf0189e05cd0f
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-In C\+\+11 è stato introdotto l'operatore `alignof`, che restituisce l'allineamento, in byte, del tipo specificato.  Per garantire la massima portabilità, è consigliabile usare l'operatore alignof invece dell'operatore \_\_alignof specifico di Microsoft.  
+---
+# <a name="alignof-operator"></a>Operatore __alignof
+In C++11 è stato introdotto l'operatore `alignof`, che restituisce l'allineamento, in byte, del tipo specificato. Per garantire la massima portabilità, è consigliabile usare l'operatore alignof invece dell'operatore __alignof specifico di Microsoft.  
   
  **Sezione specifica Microsoft**  
   
- Viene restituito un valore di tipo **size\_t**, ovvero il requisito di allineamento del tipo.  
+ Restituisce un valore di tipo **size_t** che è il requisito di allineamento del tipo.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
-        __alignof(   
-   type    
+      __alignof(   
+   type    
 )  
 ```  
   
-## Note  
+## <a name="remarks"></a>Note  
  Ad esempio:  
   
 |Espressione|Valore|  
-|-----------------|------------|  
-|**\_\_alignof\( char \)**|1|  
-|**\_\_alignof\( short \)**|2|  
-|**\_\_alignof\( int \)**|4|  
-|**\_\_alignof\( \_\_int64 \)**|8|  
-|**\_\_alignof\( float \)**|4|  
-|**\_\_alignof\( double \)**|8|  
-|**\_\_alignof\( char\* \)**|4|  
+|----------------|-----------|  
+|**alignof (char)**|1|  
+|**alignof (breve)**|2|  
+|**alignof (int)**|4|  
+|**alignof ( \__int64)**|8|  
+|**alignof (float)**|4|  
+|**alignof (double)**|8|  
+|**alignof (char\* )**|4|  
   
- Il valore `__alignof` è uguale al valore di `sizeof` per i tipi di base.  Si consideri, in ogni caso, il seguente esempio:  
+ Il valore `__alignof` è uguale al valore di `sizeof` per i tipi di base. Si consideri, in ogni caso, il seguente esempio:  
   
 ```  
 typedef struct { int a; double b; } S;  
@@ -77,7 +94,7 @@ typedef __declspec(align(32)) struct { int a; } S;
   
  `__alignof(S)` è uguale a `32`.  
   
- Un utilizzo di `__alignof` sarebbe quello di parametro per una delle proprie routine di allocazione della memoria.  Ad esempio, data la seguente struttura definita `S`, si potrebbe chiamare una routine di allocazione della memoria denominata `aligned_malloc` per allocare memoria su un particolare limite di allineamento.  
+ Un utilizzo di `__alignof` sarebbe quello di parametro per una delle proprie routine di allocazione della memoria. Ad esempio, data la seguente struttura definita `S`, si potrebbe chiamare una routine di allocazione della memoria denominata `aligned_malloc` per allocare memoria su un particolare limite di allineamento.  
   
 ```  
 typedef __declspec(align(32)) struct { int a; double b; } S;  
@@ -91,18 +108,18 @@ S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));
   
 -   [align](../cpp/align-cpp.md)  
   
--   [\_\_unaligned](../cpp/unaligned.md)  
+-   [__unaligned](../cpp/unaligned.md)  
   
--   [\/Zp \(Allineamento membri struct\)](../build/reference/zp-struct-member-alignment.md)  
+-   [/Zp (Allineamento membri Struct)](../build/reference/zp-struct-member-alignment.md)  
   
--   [Esempi di allineamento di strutture](../build/examples-of-structure-alignment.md) \(specifico per x64\)  
+-   [Esempi di allineamento della struttura](../build/examples-of-structure-alignment.md) (specifico per x64)  
   
  Per altre informazioni sulle differenze nell'allineamento nel codice per x86 e x64, vedere:  
   
 -   [Conflitti con il compilatore x86](../build/conflicts-with-the-x86-compiler.md)  
   
-## Fine sezione specifica Microsoft  
+**Fine sezione specifica Microsoft**  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Espressioni con operatori unari](../cpp/expressions-with-unary-operators.md)   
- [Parole chiave C\+\+](../cpp/keywords-cpp.md)
+ [Parole chiave](../cpp/keywords-cpp.md)

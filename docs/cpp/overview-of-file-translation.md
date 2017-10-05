@@ -1,39 +1,56 @@
 ---
-title: "Cenni preliminari sulla conversione di file | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "conversione di file [C++], informazioni su conversione di file"
-  - "file [C++], conversione"
-  - "pre-elaborazione fase di conversione"
-  - "programmi [C++], convenzioni lessicali"
-  - "conversione [C++]"
-  - "fasi di conversione"
+title: Cenni preliminari sulla conversione di File | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- file translation [C++], about file translation
+- translation [C++]
+- translation phases
+- files [C++], translation
+- programs [C++], lexical conventions of
+- preprocessing translation phase
 ms.assetid: 5036c7b7-ccff-4e2c-b052-a9ea6c71af87
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Cenni preliminari sulla conversione di file
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 188574c43ca3650599fae58c0da1306ab49b5007
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-I programmi C\+\+, come i programmi C, sono composti da uno o più file.  Ognuno di questi file viene convertito nel seguente ordine concettuale \(l'ordine effettivo segue la regola "as if" \(come se\): ossia la conversione deve essere eseguita come se fossero stati completati questi passaggi\):  
+---
+# <a name="overview-of-file-translation"></a>Cenni preliminari sulla conversione di file
+I programmi C++, come i programmi C, sono composti da uno o più file. Ognuno di questi file viene convertito nel seguente ordine concettuale (l'ordine effettivo segue la regola "as if" (come se): ossia la conversione deve essere eseguita come se fossero stati completati questi passaggi):  
   
-1.  Suddivisione in token lessicale.  Il mapping dei caratteri, l'elaborazione dei trigrammi, lo splicing delle righe e la suddivisione in token vengono eseguiti in questa fase della conversione.  
+1.  Suddivisione in token lessicale. Il mapping dei caratteri, l'elaborazione dei trigrammi, lo splicing delle righe e la suddivisione in token vengono eseguiti in questa fase della conversione.  
   
-2.  Pre\-elaborazione  In questa fase della conversione vengono introdotti i file di origine ausiliari a cui fanno riferimento le direttive `#include`; vengono inoltre gestisce le direttive della "creazione di stringhe" e della "creazione di caratteri", il token viene incollato e la macro espansa \(per ulteriori informazioni, vedere [Direttive per il preprocessore](../preprocessor/preprocessor-directives.md) nel *Riferimento al preprocessore*\).  Il risultato della fase di pre\-elaborazione è una sequenza di token che, insieme, definiscono un'"unità di conversione."  
+2.  Pre-elaborazione Questa fase della conversione vengono nei file di origine ausiliari a cui fa riferimento `#include` direttive, gestisce "Creazione di stringhe" e "charizing" direttive ed esegue token Incolla e la macro espansa (vedere [direttive per il preprocessore](../preprocessor/preprocessor-directives.md) nel *riferimenti al preprocessore* per altre informazioni). Il risultato della fase di pre-elaborazione è una sequenza di token che, insieme, definiscono un'"unità di conversione."  
   
-     Le direttive per il preprocessore iniziano sempre con il simbolo di cancelletto \(**\#**\) ovvero il primo carattere non spazio vuoto nella riga deve essere un simbolo di cancelletto\).  In una determinata riga può essere visualizzata una sola direttiva per il preprocessore.  Ad esempio:  
+     Le direttive del preprocessore iniziano sempre con il segno di numero (**#**) carattere (ovvero, il primo carattere di carattere non spazio vuoto nella riga deve essere un simbolo di cancelletto). In una determinata riga può essere visualizzata una sola direttiva per il preprocessore. Ad esempio:  
   
     ```  
     #include <iostream>  // Include text of iostream in   
@@ -42,19 +59,19 @@ I programmi C\+\+, come i programmi C, sono composti da uno o più file.  Ognuno
                          //  text string).  
     ```  
   
-3.  Generazione di codice.  In questa fase della conversione vengono utilizzati i token generati nella fase di pre\-elaborazione per generare il codice dell'oggetto.  
+3.  Generazione di codice. In questa fase della conversione vengono utilizzati i token generati nella fase di pre-elaborazione per generare il codice dell'oggetto.  
   
      Durante questa fase, viene eseguito il controllo sintattico e semantico del codice sorgente.  
   
- Per ulteriori informazioni, vedere [Fasi di conversione](../preprocessor/phases-of-translation.md) nel *Riferimento al preprocessore*.  
+ Vedere [fasi di conversione](../preprocessor/phases-of-translation.md) nel *riferimenti al preprocessore* per ulteriori informazioni.  
   
- Il preprocessore C\+\+ è un superset rigido del preprocessore ANSI C, ma in alcuni casi il preprocessore C\+\+ è diverso.  Nell'elenco seguente sono riportate alcune differenze tra i preprocessori ANSI C e i preprocessori C\+\+:  
+ Il preprocessore C++ è un superset rigido del preprocessore ANSI C, ma in alcuni casi il preprocessore C++ è diverso. Nell'elenco seguente sono riportate alcune differenze tra i preprocessori ANSI C e i preprocessori C++:  
   
--   I commenti a riga singola sono supportati.  Per ulteriori informazioni, vedere [Commenti](../cpp/comments-cpp.md).  
+-   I commenti a riga singola sono supportati. Vedere [commenti](../cpp/comments-cpp.md) per ulteriori informazioni.  
   
--   Una macro predefinita **\_\_cplusplus**, viene definita solo per C\+\+.  Per ulteriori informazioni, vedere [Macro predefinite](../preprocessor/predefined-macros.md) nel *Riferimento al preprocessore*.  
+-   Una macro predefinita **cplusplus**, viene definito solo per C++. Vedere [macro predefinite](../preprocessor/predefined-macros.md) nel *riferimenti al preprocessore* per ulteriori informazioni.  
   
--   Il preprocessore C non riconosce gli operatori C\+\+: **.\***, **–\>\*** e `::`.  Per ulteriori informazioni sugli operatori, vedere [Operatori](../cpp/cpp-built-in-operators-precedence-and-associativity.md) ed [Espressioni](../cpp/expressions-cpp.md).  
+-   Il preprocessore C non riconosce gli operatori C++: **.\* **, ** -> \* **, e `::`. Vedere [operatori](../cpp/cpp-built-in-operators-precedence-and-associativity.md) e [espressioni](../cpp/expressions-cpp.md), per ulteriori informazioni sugli operatori.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Convenzioni lessicali](../cpp/lexical-conventions.md)

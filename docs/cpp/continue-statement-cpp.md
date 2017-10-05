@@ -1,49 +1,65 @@
 ---
-title: "Istruzioni continue (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "continue"
-  - "continue_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "continue (parola chiave) [C++]"
+title: Istruzioni continue (C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- continue
+- continue_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- continue keyword [C++]
 ms.assetid: 3c94ee57-f732-4c1d-8537-d0ce5382bfd4
 caps.latest.revision: 12
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Istruzioni continue (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 502254adc8b01966182f911af5a0dce8af36c1f3
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-Forza il trasferimento del controllo all'espressione di controllo del ciclo più piccolo [do](../cpp/do-while-statement-cpp.md), [for](../cpp/for-statement-cpp.md) o [while](../cpp/while-statement-cpp.md) di inclusione.  
+---
+# <a name="continue-statement-c"></a>Istruzioni continue (C++)
+Forza il trasferimento del controllo per l'espressione di controllo di inclusione più piccolo [si](../cpp/do-while-statement-cpp.md), [per](../cpp/for-statement-cpp.md), o [mentre](../cpp/while-statement-cpp.md) ciclo.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 continue;  
 ```  
   
-## Note  
- Alcune istruzioni restanti nell'iterazione corrente non vengono eseguite.  L'iterazione successiva del ciclo è determinata nel modo seguente:  
+## <a name="remarks"></a>Note  
+ Alcune istruzioni restanti nell'iterazione corrente non vengono eseguite. L'iterazione successiva del ciclo è determinata nel modo seguente:  
   
--   In un ciclo `while` o `do`, l'iterazione successiva inizia rivalutando l'espressione di controllo dell'istruzione `while` o `do`.  
+-   In un ciclo `do` o `while`, l'iterazione successiva inizia rivalutando l'espressione di controllo dell'istruzione `do` o `while`.  
   
--   In un ciclo `for` \(utilizzando la sintassi `for`\(`init-expr`; `cond-expr`; `loop-expr`\)\), la clausola `loop-expr` viene eseguita.  La clausola `cond-expr` viene rivalutata e, a seconda del risultato, il ciclo termina o si verifica un'altra iterazione.  
+-   In un ciclo `for` (utilizzando la sintassi `for`(`init-expr`; `cond-expr`; `loop-expr`)), la clausola `loop-expr` viene eseguita. La clausola `cond-expr` viene rivalutata e, a seconda del risultato, il ciclo termina o si verifica un'altra iterazione.  
   
  Di seguito viene illustrato come l'istruzione `continue` può essere utilizzata per ignorare le sezioni di codice e avviare l'iterazione successiva di un ciclo.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // continue_statement.cpp  
@@ -63,10 +79,13 @@ int main()
 }  
 ```  
   
-  **prima di continuare**  
-**prima di continuare**  
-**prima di continuare**  
-**dopo il ciclo do**   
-## Vedere anche  
+```Output  
+before the continue  
+before the continue  
+before the continue  
+after the do loop  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
  [Istruzioni di spostamento](../cpp/jump-statements-cpp.md)   
- [Parole chiave C\+\+](../cpp/keywords-cpp.md)
+ [Parole chiave](../cpp/keywords-cpp.md)

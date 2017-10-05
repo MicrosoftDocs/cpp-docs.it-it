@@ -1,59 +1,76 @@
 ---
-title: "__stdcall | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__stdcall_cpp"
-  - "__stdcall"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__stdcall (parola chiave) [C++]"
+title: stdcall | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __stdcall_cpp
+- __stdcall
+dev_langs:
+- C++
+helpviewer_keywords:
+- __stdcall keyword [C++]
 ms.assetid: e212594b-1827-4d07-9527-7d412b300df8
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# __stdcall
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 6c4998d3f53a76246545a6290e735f52206d70ad
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="stdcall"></a>__stdcall
 **Sezione specifica Microsoft**  
   
- La convenzione di chiamata `__stdcall` viene utilizzata per chiamare le funzioni dell'API Win32.  Il chiamato pulisce lo stack, il compilatore di conseguenza rende le funzioni **vararg** `__cdecl`.  Le funzioni che utilizzano questa convenzione di chiamata richiedono un prototipo di funzione.  
+ La convenzione di chiamata `__stdcall` viene utilizzata per chiamare le funzioni dell'API Win32. La chiamata pulisce lo stack, pertanto il compilatore effettua **vararg** funzioni `__cdecl`. Le funzioni che utilizzano questa convenzione di chiamata richiedono un prototipo di funzione.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
 return-type __stdcall function-name[(argument-list)]  
 ```  
   
-## Note  
+## <a name="remarks"></a>Note  
  Nell'elenco seguente viene illustrata l'implementazione di questa convenzione di chiamata.  
   
 |Elemento|Implementazione|  
-|--------------|---------------------|  
+|-------------|--------------------|  
 |Ordine in cui gli argomenti vengono passati|Da destra a sinistra.|  
 |Convenzione per il passaggio degli argomenti|Per valore, a meno che non venga passato un puntatore o un tipo di riferimento.|  
 |Responsabilità di manutenzione dello stack|La funzione chiamata determina l'estrazione dei propri argomenti dallo stack.|  
-|Convenzione della decorazione dei nomi|Un carattere di sottolineatura \(\_\) viene aggiunto come prefisso del nome.  Il nome è seguito dal simbolo @ seguito dal numero di byte \(in decimale\) nell'elenco di argomenti.  Pertanto, la funzione dichiarata come `int func( int a, double b )` è decorata come segue: `_func@12`|  
-|Convenzione della conversione maiuscolo\/minuscolo e viceversa|Nessuno|  
+|Convenzione della decorazione dei nomi|Un carattere di sottolineatura (_) viene aggiunto come prefisso del nome. Il nome è seguito dal simbolo @ seguito dal numero di byte (in decimale) nell'elenco di argomenti. Pertanto, la funzione dichiarata come `int func( int a, double b )` è decorata come segue: `_func@12`|  
+|Convenzione della conversione maiuscolo/minuscolo e viceversa|Nessuno|  
   
- L'opzione del compilatore [\/Gz](../build/reference/gd-gr-gv-gz-calling-convention.md) specifica `__stdcall` per tutte le funzioni non dichiarate in modo esplicito con una convenzione di chiamata diversa.  
+ Il [/Gz](../build/reference/gd-gr-gv-gz-calling-convention.md) specifica l'opzione del compilatore `__stdcall` per tutte le funzioni dichiarate in modo non esplicito con una convenzione di chiamata diversa.  
   
- Le funzioni dichiarate utilizzando il modificatore `__stdcall` restituiscono valori in modo analogo alle funzioni dichiarate utilizzando [\_\_cdecl](../cpp/cdecl.md).  
+ Le funzioni dichiarate utilizzando il `__stdcall` modificatore restituito valori in modo analogo alle funzioni dichiarate utilizzando [cdecl](../cpp/cdecl.md).  
   
  Nei processori ARM e x64, `__stdcall` viene accettata e ignorata dal compilatore; nelle architetture ARM e x64, per convenzione, gli argomenti vengono passati in registri quando possibile, mentre gli argomenti successivi vengono passati nello stack.  
   
- Per le funzioni di classi non statiche, se la funzione viene definita non inline, il modificatore della convenzione di chiamata non deve essere specificato nella definizione non inline.  Questo significa che per i metodi membri non statici della classe la convenzione di chiamata specificata durante la dichiarazione è presunta in corrispondenza della definizione.  Data questa definizione di classe,  
+ Per le funzioni di classi non statiche, se la funzione viene definita non inline, il modificatore della convenzione di chiamata non deve essere specificato nella definizione non inline. Questo significa che per i metodi membri non statici della classe la convenzione di chiamata specificata durante la dichiarazione è presunta in corrispondenza della definizione. Data questa definizione di classe,  
   
 ```cpp  
 struct CMyClass {  
@@ -73,16 +90,16 @@ void CMyClass::mymethod() { return; }
 void __stdcall CMyClass::mymethod() { return; }  
 ```  
   
-## Esempio  
- Nell'esempio seguente l'utilizzo dei risultati di \_\_**stdcall** attiva la gestione di tutti i tipi di funzione `WINAPI` come una chiamata standard:  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente, utilizzare _**stdcall** comporta tutti `WINAPI` tipi di funzione gestita come una chiamata standard:  
   
-```c  
+```cpp  
 // Example of the __stdcall keyword  
 #define WINAPI __stdcall  
 // Example of the __stdcall keyword on function pointer  
 typedef BOOL (__stdcall *funcname_ptr)(void * arg1, const char * arg2, DWORD flags, ...);  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Passaggio di argomenti e convenzioni di denominazione](../cpp/argument-passing-and-naming-conventions.md)   
- [Parole chiave C\+\+](../cpp/keywords-cpp.md)
+ [Parole chiave](../cpp/keywords-cpp.md)

@@ -1,29 +1,45 @@
 ---
-title: "Espressioni (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "index-page "
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "espressioni [C++]"
+title: Espressioni (C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: 'index-page '
+dev_langs:
+- C++
+helpviewer_keywords:
+- expressions [C++]
 ms.assetid: aaa1f250-7185-4113-b682-3f5e995943d1
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Espressioni (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 3348fe95cec36108a05e61dee61cad66da5b51bf
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-In questa sezione vengono descritte le espressioni C\+\+.  Le espressioni sono sequenze di operatori e operandi utilizzate per uno o più dei seguenti scopi:  
+---
+# <a name="expressions-c"></a>Espressioni (C++)
+In questa sezione vengono descritte le espressioni C++. Le espressioni sono sequenze di operatori e operandi utilizzate per uno o più dei seguenti scopi:  
   
 -   Calcolare un valore in base agli operandi.  
   
@@ -31,9 +47,9 @@ In questa sezione vengono descritte le espressioni C\+\+.  Le espressioni sono s
   
 -   Generare "effetti collaterali." Gli effetti collaterali sono tutte le azioni diverse dalla valutazione di un'espressione, ad esempio la modifica del valore di un oggetto.  
   
- In C\+\+, è possibile sottoporre a overload gli operatori e fare assumere loro significati definiti dall'utente.  Non è invece possibile modificare la precedenza degli operatori e il numero di operandi che accettano.  In questa sezione vengono descritte la sintassi e la semantica degli operatori così come forniti dal linguaggio, non vengono trattate, invece, sintassi e semantica degli operatori sottoposti a overload.  Oltre ai [tipi di espressioni](../cpp/types-of-expressions.md) e alla [semantica delle espressioni](../cpp/semantics-of-expressions.md), vengono analizzati i seguenti argomenti:  
+ In C++, è possibile sottoporre a overload gli operatori e fare assumere loro significati definiti dall'utente. Non è invece possibile modificare la precedenza degli operatori e il numero di operandi che accettano. In questa sezione vengono descritte la sintassi e la semantica degli operatori così come forniti dal linguaggio, non vengono trattate, invece, sintassi e semantica degli operatori sottoposti a overload. Oltre a [tipi di espressioni](../cpp/types-of-expressions.md) e [semantica delle espressioni](../cpp/semantics-of-expressions.md), vengono trattati i seguenti argomenti:  
   
--   [Espressioni principali:](../cpp/primary-expressions.md)  
+-   [Espressioni primarie](../cpp/primary-expressions.md)  
   
 -   [Operatore di risoluzione ambito](../cpp/scope-resolution-operator.md)  
   
@@ -47,15 +63,15 @@ In questa sezione vengono descritte le espressioni C\+\+.  Le espressioni sono s
   
 -   [Espressioni costanti](../cpp/cpp-constant-expressions.md)  
   
--   [Espressioni con conversioni del tipo esplicite](http://msdn.microsoft.com/it-it/060ad6b4-9592-4f3e-8509-a20ac84a85ae)  
+-   [Espressioni con conversioni esplicite](http://msdn.microsoft.com/en-us/060ad6b4-9592-4f3e-8509-a20ac84a85ae)  
   
 -   [Operatori di cast](../cpp/casting-operators.md)  
   
--   [Informazioni sui tipi in fase di esecuzione](../cpp/run-time-type-information.md)  
+-   [Informazioni sul tipo in fase di esecuzione](../cpp/run-time-type-information.md)  
   
  Argomenti sugli operatori presenti in altre sezioni:  
   
--   [Tabella degli operatori C\+\+](../misc/cpp-operators.md)  
+-   [Operatori predefiniti C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)  
   
 -   [Operatori di overload](../cpp/operator-overloading.md)  
   
@@ -64,5 +80,5 @@ In questa sezione vengono descritte le espressioni C\+\+.  Le espressioni sono s
     > [!NOTE]
     >  Gli operatori dei tipi incorporati non possono essere sottoposti a overload; il loro comportamento è predefinito.  
   
-## Vedere anche  
- [Riferimenti del linguaggio C\+\+](../cpp/cpp-language-reference.md)
+## <a name="see-also"></a>Vedere anche  
+ [Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)

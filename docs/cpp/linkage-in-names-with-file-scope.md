@@ -1,38 +1,55 @@
 ---
-title: "Collegamenti in nomi con ambito file | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "dichiarazioni [C++], esterno"
-  - "collegamento esterno, regole di collegamento ambito"
-  - "ambito file [C++]"
-  - "collegamento [C++], regole di collegamento ambito"
-  - "nomi [C++], regole di collegamento ambito"
-  - "ambito [C++], regole di collegamento"
-  - "static (modificatore), ambito file"
-  - "ambito file e nomi statici"
-  - "variabili statiche, dichiarazioni esterne"
+title: Collegamenti in nomi con ambito File | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- scope [C++], linkage rules
+- linkage [C++], scope linkage rules
+- names [C++], scope linkage rules
+- static modifier, file scope
+- static names and file scope
+- file scope [C++]
+- declarations [C++], external
+- external linkage, scope linkage rules
+- static variables, external declarations
 ms.assetid: 38d3fa5e-1861-466e-a590-84b86f7b184e
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Collegamenti in nomi con ambito file
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: c4d33071426eac428cc1728aa13b403953a99389
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-Le regole seguenti di collegamento vengono applicate ai nomi \(ad eccezione di `typedef` e dei nomi dell'enumeratore\) con ambito file:  
+---
+# <a name="linkage-in-names-with-file-scope"></a>Collegamenti in nomi con ambito file
+Le regole seguenti di collegamento vengono applicate ai nomi (ad eccezione di `typedef` e dei nomi dell'enumeratore) con ambito file:  
   
--   Se il nome è dichiarato in modo esplicito come **static**, dispone di un collegamento interno e identifica un elemento del programma all'interno della propria unità di conversione.  
+-   Se un nome è dichiarato in modo esplicito come **statico**, dispone di un collegamento interno e identifica un elemento del programma all'interno delle proprie unità di conversione.  
   
 -   I nomi dell'enumeratore e i nomi `typedef` non dispongono di collegamento.  
   
@@ -40,15 +57,15 @@ Le regole seguenti di collegamento vengono applicate ai nomi \(ad eccezione di `
   
  **Sezione specifica Microsoft**  
   
--   Se un nome di funzione con ambito file è dichiarato in modo esplicito come **inline**, dispone di collegamento esterno se viene creata un'istanza o viene fatto riferimento al suo indirizzo.  Pertanto, è possibile che una funzione con ambito file includa un collegamento interno o esterno.  
+-   Se il nome di una funzione con ambito file è dichiarato in modo esplicito come **inline**, dispone di collegamento esterno se ne viene creata un'istanza o il relativo indirizzo viene fatto riferimento. Pertanto, è possibile che una funzione con ambito file includa un collegamento interno o esterno.  
   
  **Fine sezione specifica Microsoft**  
   
  La classe dispone di collegamento interno se:  
   
--   Non usa funzionalità C\+\+ \(ad esempio controllo dell'accesso ai membri, funzioni membro, costruttori, distruttori e così via\).  
+-   Non usa funzionalità C++ (ad esempio controllo dell'accesso ai membri, funzioni membro, costruttori, distruttori e così via).  
   
--   Non è usato nella dichiarazione di un altro nome con collegamento esterno.  Questo vincolo significa che gli oggetti del tipo classe passati alle funzioni con collegamento esterno fanno in modo che la classe disponga di un collegamento esterno.  
+-   Non è usato nella dichiarazione di un altro nome con collegamento esterno. Questo vincolo significa che gli oggetti del tipo classe passati alle funzioni con collegamento esterno fanno in modo che la classe disponga di un collegamento esterno.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Programma e collegamento](../cpp/program-and-linkage-cpp.md)

@@ -1,80 +1,96 @@
 ---
-title: "Operatori di addizione: + e - | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "-"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "- (operatore), operatori di addizione in C++"
-  - "+ (operatore), operatori di addizione"
-  - "operatori di addizione"
-  - "operatori aritmetici [C++], operatori di addizione"
-  - "operatori [C++], addizione"
-  - "sottrazione (operatore), operatori di addizione"
+title: 'Operatori di addizione: + e - | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- '-'
+dev_langs:
+- C++
+helpviewer_keywords:
+- operators [C++], addition
+- subtraction operator, additive operators
+- + operator, additive operators
+- additive operators
+- arithmetic operators [C++], additive operators
+- '- operator, additive operators in C++'
 ms.assetid: d4afafe7-e201-4c69-a649-37f17756e784
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Operatori di addizione: + e -
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: a1017985934cbe871617b76f3e5959121b810602
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-## Sintassi  
+---
+# <a name="additive-operators--and--"></a>Operatori di addizione: + e -
+## <a name="syntax"></a>Sintassi  
   
 ```  
-expression + expression   
-expression – expression  
+expression + expression   
+expression - expression  
 ```  
   
-## Note  
+## <a name="remarks"></a>Note  
  Gli operatori additivi sono:  
   
--   Addizione \(**\+**\)  
+-   Addizione (**+**)  
   
--   Sottrazione \(**–**\)  
+-   Sottrazione (**-**)  
   
  Questi operatori binari hanno un'associatività da sinistra a destra.  
   
- Gli operatori additivi accettano gli operandi di tipi aritmetici o tipi puntatore.  Il risultato dell'operatore di addizione \(**\+**\) è la somma degli operandi.  Il risultato dell'operatore di sottrazione \(**–**\) è la differenza tra gli operandi.  Se uno o entrambi gli operandi sono puntatori, questi devono essere puntatori agli oggetti, non alle funzioni.  Se entrambi gli operandi sono puntatori, i risultati non sono significativi a meno che entrambi siano puntatori agli oggetti nella stessa matrice.  
+ Gli operatori additivi accettano gli operandi di tipi aritmetici o tipi puntatore. Il risultato dell'addizione (**+**) (operatore) è la somma degli operandi. Il risultato della sottrazione (**-**) (operatore) è la differenza tra gli operandi. Se uno o entrambi gli operandi sono puntatori, questi devono essere puntatori agli oggetti, non alle funzioni. Se entrambi gli operandi sono puntatori, i risultati non sono significativi a meno che entrambi siano puntatori agli oggetti nella stessa matrice.  
   
- Gli operatori additivi accettano gli operandi di tipi *arithmetic*, *integral* e *scalar*.  Questi vengono definiti nella tabella seguente.  
+ Operatori additivi accettano gli operandi di *aritmetici*, *integrale*, e *scalare* tipi. Questi vengono definiti nella tabella seguente.  
   
-### Tipi usati con gli operatori additivi  
+### <a name="types-used-with-additive-operators"></a>Tipi usati con gli operatori additivi  
   
 |Tipo|Significato|  
-|----------|-----------------|  
-|*arithmetic*|I tipi integrali e mobili collettivamente sono denominati tipi "aritmetici".|  
-|*integral*|I tipi char e int di tutte le dimensioni \(long e short\) e le enumerazioni sono tipi "integrali".|  
-|*scalar*|Gli operandi scalari sono operandi di tipo aritmetico o di tipo puntatore.|  
+|----------|-------------|  
+|*operazioni aritmetiche*|I tipi integrali e mobili collettivamente sono denominati tipi "aritmetici".|  
+|*integrale*|I tipi char e int di tutte le dimensioni (long e short) e le enumerazioni sono tipi "integrali".|  
+|*scalare*|Gli operandi scalari sono operandi di tipo aritmetico o di tipo puntatore.|  
   
  Le combinazioni valide per questi operatori sono:  
   
- *arithmetic* \+ *arithmetic*  
+ *operazioni aritmetiche* + *aritmetico*  
   
- *scalar* \+ *integral*  
+ *scalare* + *integrale*  
   
- *integral* \+ *scalar*  
+ *integrale* + *scalare*  
   
- *arithmetic* – *arithmetic*  
+ *operazioni aritmetiche* - *aritmetico*  
   
- *scalar* – *scalar*  
+ *scalare* - *scalare*  
   
  Si noti che l'addizione e la sottrazione non sono operazioni equivalenti.  
   
- Se entrambi gli operandi sono di tipo aritmetico, le conversioni descritte in [Conversioni aritmetiche](../misc/arithmetic-conversions.md) si applicano agli operandi e il risultato è di tipo convertito.  
+ Se entrambi gli operandi sono di tipo aritmetico, le conversioni descritte in [conversioni Standard](standard-conversions.md) vengono applicate agli operandi e il risultato è di tipo convertito.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // expre_Additive_Operators.cpp  
@@ -94,8 +110,8 @@ int main() {
 }  
 ```  
   
-## Addizione di puntatori  
- Se uno degli operandi presenti in un'operazione di addizione è un puntatore a una matrice di oggetti, l'altro deve essere di tipo integrale.  Il risultato è un puntatore dello stesso tipo del puntatore originale e che punta un altro elemento della matrice.  Nel frammento di codice seguente è illustrato questo concetto:  
+## <a name="pointer-addition"></a>Addizione di puntatori  
+ Se uno degli operandi presenti in un'operazione di addizione è un puntatore a una matrice di oggetti, l'altro deve essere di tipo integrale. Il risultato è un puntatore dello stesso tipo del puntatore originale e che punta un altro elemento della matrice. Nel frammento di codice seguente è illustrato questo concetto:  
   
 ```  
 short IntArray[10]; // Objects of type short occupy 2 bytes  
@@ -109,20 +125,17 @@ for( int i = 0; i < 10; ++i )
 }  
 ```  
   
- Sebbene il valore integrale 1 venga aggiunto a `pIntArray`, questa operazione non è interpretabile come "aggiungere 1 all'indirizzo"; significa invece "modificare il puntatore affinché punti all'oggetto successivo della matrice" che si trova a 2 byte \(o `sizeof( int )`\) di distanza.  
+ Sebbene il valore integrale 1 venga aggiunto a `pIntArray`, questa operazione non è interpretabile come "aggiungere 1 all'indirizzo"; significa invece "modificare il puntatore affinché punti all'oggetto successivo della matrice" che si trova a 2 byte (o `sizeof( int )`) di distanza.  
   
 > [!NOTE]
->  Il codice del form `pIntArray = pIntArray + 1` si trova raramente nei programmi C\+\+; per eseguire un incremento, sono preferibili i seguenti form: `pIntArray++` o `pIntArray += 1`.  
+>  Il codice del form `pIntArray = pIntArray + 1` si trova raramente nei programmi C++; per eseguire un incremento, sono preferibili i seguenti form: `pIntArray++` o `pIntArray += 1`.  
   
-## Sottrazione di puntatori  
- Se entrambi gli operandi sono puntatori, il risultato di una sottrazione è la differenza \(in elementi di matrice\) tra gli operandi.  L'espressione di sottrazione restituisce un risultato integrale con segno di tipo ptrdiff\_t \(definito nel file di inclusione standard STDDEF.H\).  
+## <a name="pointer-subtraction"></a>Sottrazione di puntatori  
+ Se entrambi gli operandi sono puntatori, il risultato di una sottrazione è la differenza (in elementi di matrice) tra gli operandi. L'espressione di sottrazione restituisce un risultato integrale con segno di tipo ptrdiff_t (definito nel file di inclusione standard STDDEF.H).  
   
- Uno degli operandi può essere di tipo integrale purché sia il secondo operando.  Il risultato della sottrazione è dello stesso tipo del puntatore originale.  Il valore della sottrazione è un puntatore all'elemento *n* \- *i\-esimo* della matrice, dove *n* è l'elemento a cui fa riferimento il puntatore originale e *i* è il valore integrale del secondo operando.  
+ Uno degli operandi può essere di tipo integrale purché sia il secondo operando. Il risultato della sottrazione è dello stesso tipo del puntatore originale. Il valore della sottrazione è un puntatore al (*n* - *si*) elemento di matrice th, in cui * n * è l'elemento a cui fa riferimento il puntatore originale e *si* è il valore integrale del secondo operando.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Espressioni con operatori binari](../cpp/expressions-with-binary-operators.md)   
- [Operatori C\+\+](../misc/cpp-operators.md)   
- [Operatori C\+\+, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
- [Aggiunta di tipi di puntatori](../misc/addition-of-pointer-types.md)   
- [Sottrazione di tipi di puntatori](../misc/subtraction-of-pointer-types.md)   
+ [Operatori C++ predefiniti, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operatori di addizione C](../c-language/c-additive-operators.md)

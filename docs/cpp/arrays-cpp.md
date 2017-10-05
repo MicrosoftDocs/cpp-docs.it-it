@@ -1,31 +1,47 @@
 ---
-title: "Matrici (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "matrici [C++]"
-  - "dichiarazione di matrici, informazioni sulle dichiarazione di matrici"
-  - "multidimensionali (matrici)"
+title: Matrici (C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- declaring arrays, about declaring arrays
+- multidimensional arrays
+- arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
 caps.latest.revision: 12
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Matrici (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: efd124254ece8f863afee13e132eea7945525a0e
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-Una matrice è una raccolta di oggetti simili.  Il caso più semplice di una matrice è un vettore che può essere dichiarato dalla seguente sequenza:  
+---
+# <a name="arrays-c"></a>Matrici (C++)
+Una matrice è una raccolta di oggetti simili. Il caso più semplice di una matrice è un vettore che può essere dichiarato dalla seguente sequenza:  
   
 ```  
   
@@ -36,25 +52,25 @@ decl-specifier identifier [ constant-expression ]
 [ constant-expression ] . . .  
 ```  
   
- 1.  Identificatore di dichiarazione:  
+ 1. Identificatore di dichiarazione:  
   
 -   Identificatore della classe di archiviazione facoltativo.  
   
--   Identificatori **const** e\/o `volatile` opzionali.  
+-   Parametro facoltativo **const** e/o `volatile` identificatori.  
   
 -   Nome del tipo degli elementi della matrice.  
   
- 2.  Dichiaratore:  
+ 2. Dichiaratore:  
   
 -   Identificatore.  
   
--   Espressione costante di tipo integrale racchiusa tra parentesi quadre, **\[\].** Se vengono dichiarate più dimensioni utilizzando altre parentesi, l'espressione costante può essere omessa sul primo set di parentesi.  
+-   Un'espressione costante di tipo integrale racchiusa tra parentesi quadre, **[].** Se vengono dichiarate più dimensioni utilizzando altre parentesi, l'espressione costante può essere omessa sul primo set di parentesi.  
   
 -   Parentesi aggiuntive facoltative che includono espressioni costanti.  
   
- 3.  Inizializzatore facoltativo.  Vedere [Inizializzatori](../cpp/initializers.md).  
+ 3. Inizializzatore facoltativo.  Vedere [inizializzatori](../cpp/initializers.md).  
   
- Il numero di elementi nella matrice è dato dall'espressione costante.  Il primo elemento della matrice è l'elemento zero e l'ultimo elemento è l'elemento \(*n*\-1\), dove *n* è il numero di elementi che la matrice può contenere.  *constant\-expression* deve essere di tipo integrale e deve essere maggiore di 0.  Una matrice di dimensioni zero è valida solo quando è l'ultimo campo in `struct` o in **union** e quando le estensioni Microsoft \(\/Ze\) sono abilitate.  
+ Il numero di elementi nella matrice è dato dall'espressione costante. Il primo elemento nella matrice è l'elemento 0 e l'ultimo elemento è il (*n*-1) elemento, in cui * n * è il numero di elementi della matrice può contenere. Il *espressione costante* deve essere di tipo integrale e deve essere maggiore di 0. Una matrice con dimensione zero è valida solo quando la matrice è l'ultimo campo in un `struct` o **unione** e quando le estensioni Microsoft (/Ze) sono abilitate.  
   
  Nell'esempio seguente viene illustrato come definire una matrice in fase di esecuzione:  
   
@@ -81,7 +97,7 @@ int main() {
   
  Le matrici sono tipi derivati e possono pertanto essere generate da qualsiasi altro tipo derivato o fondamentale tranne che dalle funzioni, dai riferimenti e da `void`.  
   
- Le matrici generate da altre matrici sono matrici multidimensionali.  Queste matrici multidimensionali sono specificate posizionando più espressioni costanti tra parentesi in sequenza.  Ad esempio, considerare la dichiarazione riportata di seguito:  
+ Le matrici generate da altre matrici sono matrici multidimensionali. Queste matrici multidimensionali sono specificate posizionando più espressioni costanti tra parentesi in sequenza. Ad esempio, considerare la dichiarazione riportata di seguito:  
   
 ```  
 int i2[5][7];  
@@ -89,10 +105,10 @@ int i2[5][7];
   
  Specifica una matrice di tipo `int`, disposta concettualmente in una matrice bidimensionale di cinque righe e sette colonne, come illustrato nella seguente immagine:  
   
- ![Layout concettuale di una matrice multidimensionale](../cpp/media/vc38rc1.png "vc38RC1")  
+ ![Layout concettuale di un multiplo &#45; matrice dimensionale](../cpp/media/vc38rc1.gif "vc38RC1")  
 Layout concettuale di matrice multidimensionale  
   
- Nelle dichiarazioni delle matrici a più dimensioni con un elenco di inizializzatori \(come descritto in [Inizializzatori](../cpp/initializers.md)\), l'espressione costante che specifica i limiti della prima dimensione può essere omessa.  Ad esempio:  
+ Nelle dichiarazioni di matrici a più dimensioni contenenti un elenco di inizializzatori (come descritto in [inizializzatori](../cpp/initializers.md)), l'espressione costante che specifica i limiti per la prima dimensione può essere omesso. Ad esempio:  
   
 ```  
 // arrays2.cpp  
@@ -106,11 +122,11 @@ double TransportCosts[][cMarkets] = {
 };  
 ```  
   
- La dichiarazione precedente definisce una matrice costituita da tre righe e da quattro colonne.  Le righe rappresentano le ditte e le colonne rappresentano i mercati di destinazione delle ditte.  I valori sono i costi di trasporto dalle ditte ai mercati.  La prima dimensione della matrice viene lasciata fuori, ma il compilatore la completa esaminando l'inizializzatore.  
+ La dichiarazione precedente definisce una matrice costituita da tre righe e da quattro colonne. Le righe rappresentano le ditte e le colonne rappresentano i mercati di destinazione delle ditte. I valori sono i costi di trasporto dalle ditte ai mercati. La prima dimensione della matrice viene lasciata fuori, ma il compilatore la completa esaminando l'inizializzatore.  
   
  Argomenti contenuti in questa sezione:  
   
--   [Utilizzo delle matrici](../cpp/using-arrays-cpp.md)  
+-   [Uso delle matrici](../cpp/using-arrays-cpp.md)  
   
 -   [Matrici nelle espressioni](../cpp/arrays-in-expressions.md)  
   
@@ -118,9 +134,9 @@ double TransportCosts[][cMarkets] = {
   
 -   [Riferimento indiretto sui tipi di matrice](../cpp/indirection-on-array-types.md)  
   
--   [Ordine delle matrici C\+\+](../cpp/ordering-of-cpp-arrays.md)  
+-   [Ordine delle matrici C++](../cpp/ordering-of-cpp-arrays.md)  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  La tecnica di omettere la specifica dei limiti per la prima dimensione di una matrice multidimensionale può essere utilizzata solo nelle dichiarazioni di funzione come segue:  
   
 ```  
@@ -170,9 +186,12 @@ double FindMinToMkt(int Mkt, double myTransportCosts[][cMkts], int mycFacts) {
 }  
 ```  
   
-  **Il costo minimo per il mercato 3 è: 17,29**   
-## Commenti  
+```Output  
+The minimum cost to Market 3 is: 17.29  
+```  
+  
+## <a name="comments"></a>Commenti  
  La funzione `FindMinToMkt` viene scritta in modo che l'aggiunta di nuove ditte non richieda alcuna modifica al codice, ma solo la ricompilazione.  
   
-## Vedere anche  
- [C\+\+ Abstract Declarators](http://msdn.microsoft.com/it-it/e7e18c18-0cad-4450-942b-d27e1d4dd088)
+## <a name="see-also"></a>Vedere anche  
+ 

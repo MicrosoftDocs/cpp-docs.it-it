@@ -1,44 +1,61 @@
 ---
-title: "Ereditariet&#224; singola | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "single inheritance_cpp"
-  - "single inheritance"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classi base, indirette"
-  - "classi derivate, classe base singola"
-  - "ereditarietà, singola"
-  - "operatori [C++], risoluzione ambito"
-  - "operatore di risoluzione dell'ambito"
-  - "ambito, operatore di risoluzione dell'ambito"
-  - "ereditarietà singola"
+title: "Ereditarietà singola | Documenti Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- single inheritance_cpp
+- single inheritance
+dev_langs:
+- C++
+helpviewer_keywords:
+- single inheritance
+- base classes, indirect
+- scope, scope resolution operator
+- operators [C++], scope resolution
+- scope resolution operator
+- derived classes, single base class
+- inheritance, single
 ms.assetid: 1cb946ed-8b1b-4cf1-bde0-d9cecbfdc622
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Ereditariet&#224; singola
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: b716d383d001b8e0812eaba76322aa3c7b66b8f4
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-Nell'ereditarietà singola, una forma comune di ereditarietà, le classi contengono solo una classe base.  Esaminare la relazione illustrata nella figura seguente.  
+---
+# <a name="single-inheritance"></a>Ereditarietà singola
+Nell'ereditarietà singola, una forma comune di ereditarietà, le classi contengono solo una classe base. Esaminare la relazione illustrata nella figura seguente.  
   
- ![Rappresentazione grafica di un'ereditarietà singola di base](../cpp/media/vc38xj1.png "vc38XJ1")  
+ ![Singola base &#45; grafico dell'ereditarietà](../cpp/media/vc38xj1.gif "vc38XJ1")  
 Grafico semplice dell'ereditarietà singola  
   
- Si noti la progressione da generale a specifico nella figura.  Un altro attributo comune trovato nella progettazione delle gerarchie di classi corrisponde al fatto che la classe derivata ha una relazione "tipo di" con la classe base.  Nella figura, `Book` è un tipo di `PrintedDocument` e `PaperbackBook` è un tipo di `book`.  
+ Si noti la progressione da generale a specifico nella figura. Un altro attributo comune trovato nella progettazione delle gerarchie di classi corrisponde al fatto che la classe derivata ha una relazione "tipo di" con la classe base. Nella figura, `Book` è un tipo di `PrintedDocument` e `PaperbackBook` è un tipo di `book`.  
   
- Un altro elemento di nota nella figura è il seguente: `Book` è sia una classe derivata \(da `PrintedDocument`\) che una classe base \(`PaperbackBook` deriva da `Book`\).  Una dichiarazione di base di una tale gerarchia di classi è illustrata nell'esempio seguente:  
+ Un altro elemento di nota nella figura è il seguente: `Book` è sia una classe derivata (da `PrintedDocument`) che una classe base (`PaperbackBook` deriva da `Book`). Una dichiarazione di base di una tale gerarchia di classi è illustrata nell'esempio seguente:  
   
 ```  
 // deriv_SingleInheritance.cpp  
@@ -52,23 +69,23 @@ class Book : public PrintedDocument {};
 class PaperbackBook : public Book {};  
 ```  
   
- `PrintedDocument` viene considerata una classe base diretta per `Book`, ma una classe base indiretta per `PaperbackBook`.  La differenza consiste nel fatto che una classe base diretta viene visualizzata nell'elenco di base di una dichiarazione di classe, a differenza di una classe base indiretta.  
+ `PrintedDocument` viene considerata una classe base diretta per `Book`, ma una classe base indiretta per `PaperbackBook`. La differenza consiste nel fatto che una classe base diretta viene visualizzata nell'elenco di base di una dichiarazione di classe, a differenza di una classe base indiretta.  
   
- La classe base da cui ogni classe deriva viene dichiarata prima della classe derivata.  Non è sufficiente fornire una dichiarazione di riferimento in avanti per una classe base, ma è necessario fornire una dichiarazione completa.  
+ La classe base da cui ogni classe deriva viene dichiarata prima della classe derivata. Non è sufficiente fornire una dichiarazione di riferimento in avanti per una classe base, ma è necessario fornire una dichiarazione completa.  
   
- Nell'esempio precedente viene usato l'identificatore di accesso **public**.  Il significato di ereditarietà pubblica, protetta e privata viene descritto in [Controllo dell'accesso ai membri.](../cpp/member-access-control-cpp.md)  
+ Nell'esempio precedente, l'identificatore di accesso **pubblica** viene utilizzato. Viene descritto il significato di ereditarietà pubblici, protetti e privati in [controllo di accesso ai membri.](../cpp/member-access-control-cpp.md)  
   
  Una classe può essere usata come classe base per molte classi specifiche, come illustrato nella figura seguente.  
   
- ![Rappresentazione grafica aciclica diretta](../cpp/media/vc38xj2.png "vc38XJ2")  
+ ![Grafico aciclico diretto](../cpp/media/vc38xj2.gif "vc38XJ2")  
 Esempio di grafico aciclico diretto  
   
- Nel diagramma precedente, denominato grafico aciclico diretto, alcune classi sono classi base per più di una classe derivata.  Tuttavia, il contrario non è vero: esiste una sola classe base diretta per qualsiasi classe derivata specificata.  Il grafico nella figura raffigura struttura a ereditarietà singola.  
+ Nel diagramma precedente, denominato grafico aciclico diretto, alcune classi sono classi base per più di una classe derivata. Tuttavia, il contrario non è vero: esiste una sola classe base diretta per qualsiasi classe derivata specificata. Il grafico nella figura raffigura struttura a ereditarietà singola.  
   
 > [!NOTE]
->  I grafici aciclici diretti non sono univoci per l'ereditarietà singola.  Tali grafici vengono inoltre usati per rappresentare grafici di ereditarietà multipla.  Questo argomento viene descritto in [Ereditarietà multipla](http://msdn.microsoft.com/it-it/3b74185e-2beb-4e29-8684-441e51d2a2ca).  
+>  I grafici aciclici diretti non sono univoci per l'ereditarietà singola. Tali grafici vengono inoltre usati per rappresentare grafici di ereditarietà multipla. Questo argomento viene descritto in [ereditarietà multipla](http://msdn.microsoft.com/en-us/3b74185e-2beb-4e29-8684-441e51d2a2ca).  
   
- Nell'ereditarietà la classe derivata contiene i membri della classe base e tutti i nuovi membri aggiunti.  Di conseguenza, una classe derivata può fare riferimento ai membri della classe base, a meno che i membri non vengano ridefiniti nella classe derivata.  L'operatore di risoluzione dell'ambito \(`::`\) può essere usato per fare riferimento a membri delle classi base dirette o indirette quando tali membri sono stati ridefiniti nella classe derivata.  Si consideri l'esempio seguente:  
+ Nell'ereditarietà la classe derivata contiene i membri della classe base e tutti i nuovi membri aggiunti. Di conseguenza, una classe derivata può fare riferimento ai membri della classe base, a meno che i membri non vengano ridefiniti nella classe derivata. L'operatore di risoluzione dell'ambito (`::`) può essere usato per fare riferimento a membri delle classi base dirette o indirette quando tali membri sono stati ridefiniti nella classe derivata. Si consideri l'esempio seguente:  
   
 ```  
 // deriv_SingleInheritance2.cpp  
@@ -101,7 +118,7 @@ Book::Book( char *name, long pagecount ) {
 };  
 ```  
   
- Si noti che il costruttore per `Book`, \(`Book::Book`\), può accedere al membro dati `Name`.  In un programma un oggetto di tipo `Book` può essere creato e usato come segue:  
+ Si noti che il costruttore per `Book`, (`Book::Book`), può accedere al membro dati `Name`. In un programma un oggetto di tipo `Book` può essere creato e usato come segue:  
   
 ```  
 //  Create a new object of type Book. This invokes the  
@@ -114,7 +131,7 @@ Book LibraryBook( "Programming Windows, 2nd Ed", 944 );
 LibraryBook.PrintNameOf();  
 ```  
   
- Come illustrato nell'esempio precedente, il membro di una classe e i dati e le funzioni ereditati vengono usati in modo identico.  Se l'implementazione per la classe `Book` chiama una nuove implementazione della funzione `PrintNameOf`, la funzione che appartiene alla classe `Document` può essere chiamata solo usando l'operatore di risoluzione dell'ambito \(`::`\):  
+ Come illustrato nell'esempio precedente, il membro di una classe e i dati e le funzioni ereditati vengono usati in modo identico. Se l'implementazione per la classe `Book` chiama una nuove implementazione della funzione `PrintNameOf`, la funzione che appartiene alla classe `Document` può essere chiamata solo usando l'operatore di risoluzione dell'ambito (`::`):  
   
 ```  
 // deriv_SingleInheritance3.cpp  
@@ -140,7 +157,7 @@ void Book::PrintNameOf() {
 }  
 ```  
   
- I puntatori e i riferimenti alle classi derivate possono essere convertiti in modo implicito a puntatori e riferimenti alle classi di base se esiste una classe base accessibile e non ambigua.  Nel codice seguente viene illustrato questo concetto tramite puntatori \(lo stesso principio vale per i riferimenti\):  
+ I puntatori e i riferimenti alle classi derivate possono essere convertiti in modo implicito a puntatori e riferimenti alle classi di base se esiste una classe base accessibile e non ambigua. Nel codice seguente viene illustrato questo concetto tramite puntatori (lo stesso principio vale per i riferimenti):  
   
 ```  
 // deriv_SingleInheritance4.cpp  
@@ -159,13 +176,11 @@ int main() {
 }  
 ```  
   
- Nell'esempio precedente vengono creati tipi differenti.  Tuttavia, poiché questi tipi derivati tutti dalla classe `Document`, esiste una conversione implicita a `Document *`.  Di conseguenza, `DocLib` è un elenco eterogeneo, ovvero un elenco in cui non tutti gli oggetti sono dello stesso tipo, contenente tipi diversi di oggetti.  
+ Nell'esempio precedente vengono creati tipi differenti. Tuttavia, poiché questi tipi derivati tutti dalla classe `Document`, esiste una conversione implicita a `Document *`. Di conseguenza, `DocLib` è un elenco eterogeneo, ovvero un elenco in cui non tutti gli oggetti sono dello stesso tipo, contenente tipi diversi di oggetti.  
   
- Poiché la classe `Document` dispone di una funzione `PrintNameOf`, può stampare il nome di ogni libro della biblioteca, anche se può omettere alcune informazioni specifiche del tipo di documento \(numero di pagine di `Book`, numero di byte pagina per `HelpFile` e così via\).  
+ Poiché la classe `Document` dispone di una funzione `PrintNameOf`, può stampare il nome di ogni libro della biblioteca, anche se può omettere alcune informazioni specifiche del tipo di documento (numero di pagine di `Book`, numero di byte pagina per `HelpFile` e così via).  
   
 > [!NOTE]
->  Forzare la classe base a implementare una funzione come `PrintNameOf` non è spesso una la soluzione di progettazione migliore.  In [Funzioni virtuali](../cpp/virtual-functions.md) vengono descritte soluzioni di progettazione alternative.  
+>  Forzare la classe base a implementare una funzione come `PrintNameOf` non è spesso una la soluzione di progettazione migliore. [Funzioni virtuali](../cpp/virtual-functions.md) offre altre alternative di progettazione.  
   
-## Vedere anche  
- [Cenni preliminari sulle classi derivate](../misc/overview-of-derived-classes.md)   
- [\(NOTINBUILD\) Multiple Inheritance](http://msdn.microsoft.com/it-it/3b74185e-2beb-4e29-8684-441e51d2a2ca)
+

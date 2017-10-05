@@ -1,61 +1,78 @@
 ---
-title: "Identificatori | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "identificatori di dichiarazioni"
-  - "dichiarazioni, identificatori"
-  - "identificatori, dichiarazioni"
+title: Identificatori | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- declaration specifiers
+- declarations, specifiers
+- specifiers, in declarations
 ms.assetid: 8b14e844-9880-4571-8779-28c8efe44633
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Identificatori
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: c67ae6ce353ee48635df1b3be6b124344cdd4e91
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-Questo argomento illustra il componente *decl\-specifiers* \(identificatori di dichiarazione\) di una [dichiarazione](../misc/declarations.md).  
+---
+# <a name="specifiers"></a>Identificatori
+Questo argomento viene descritto il *decl-specifiers* componente (identificatori di dichiarazione) di un [dichiarazione](declarations-and-definitions-cpp.md).  
   
  I seguenti segnaposto e le seguenti e parole chiave del linguaggio sono identificatori di dichiarazione:  
   
- *storage\-class\-specifier*  
+ *Storage-class-specifier*  
   
- *type\-specifier*  
+ *Identificatore di tipo*  
   
- *function\-specifier*  
+ *Identificatore di funzione*  
   
- [friend](../cpp/friend-cpp.md)  
+ [Friend](../cpp/friend-cpp.md)  
   
- [typedef](http://msdn.microsoft.com/it-it/cc96cf26-ba93-4179-951e-695d1f5fdcf1)  
+ [typedef](http://msdn.microsoft.com/en-us/cc96cf26-ba93-4179-951e-695d1f5fdcf1)  
   
- [\_\_declspec](../cpp/declspec.md) `(` *extended\-decl\-modifier\-seq* `)`  
+ [declspec](../cpp/declspec.md) `(` *extended-decl-modifier-seq*`)`  
   
-## Note  
- La parte *decl\-specifiers* di una dichiarazione è la sequenza più lunga di *decl\-specifiers* che può essere usata per indicare un nome di tipo, esclusi i modificatori di puntatore o riferimento.  Il resto della dichiarazione è il *dichiaratore*, che include il nome introdotto.  
+## <a name="remarks"></a>Note  
+ Il *decl-specifiers* parte di una dichiarazione è la sequenza più lunga di *decl-specifiers* che può essere usata per indicare un nome di tipo, escluso il puntatore o riferimento modificatori. Il resto della dichiarazione è il *dichiaratore*, che include il nome introdotto.  
   
- La tabella seguente elenca quattro dichiarazioni e quindi illustra separatamente il componente *decl\-specifers* e *declarator* di ogni dichiarazione.  
+ Nella tabella seguente elenca quattro dichiarazioni e quindi Elenca ogni dichiarazione *decl-specifers* e *dichiaratore* componente separatamente.  
   
-|Dichiarazione|*decl\-specifiers*|`declarator`|  
-|-------------------|------------------------|------------------|  
+|Dichiarazione|*decl-specifiers*|`declarator`|  
+|-----------------|------------------------|------------------|  
 |`char *lpszAppName;`|`char`|`*lpszAppName`|  
 |`typedef char * LPSTR;`|`char`|`*LPSTR`|  
 |`const int func1();`|`const int`|`func1`|  
 |`volatile void *pvvObj;`|`volatile void`|`*pvvObj`|  
   
- Poiché `signed`, `unsigned`, `long` e `short` implicano tutti `int`, un mome `typedef` che segue una di queste parole chiave viene considerato un membro di *declarator\-list,*, non di *decl\-specifiers*.  
+ Poiché `signed`, `unsigned`, `long`, e `short` implicano tutti `int`, `typedef` verrà eseguita una di queste parole chiave per essere un membro del seguente nome *declarator-list,* non di *decl-specifiers*.  
   
 > [!NOTE]
->  Poiché un nome può essere ridichiarato, la relativa interpretazione è soggetta alla dichiarazione più recente nell'ambito corrente.  La ridichiarazione può influire sull'interpretazione dei nomi da parte del compilatore, soprattutto sui nomi `typedef`.  
+>  Poiché un nome può essere ridichiarato, la relativa interpretazione è soggetta alla dichiarazione più recente nell'ambito corrente. La ridichiarazione può influire sull'interpretazione dei nomi da parte del compilatore, soprattutto sui nomi `typedef`.  
   
-## Vedere anche  
- [Dichiarazioni](../misc/declarations.md)
+## <a name="see-also"></a>Vedere anche  
+ [Dichiarazioni e definizioni](declarations-and-definitions-cpp.md)

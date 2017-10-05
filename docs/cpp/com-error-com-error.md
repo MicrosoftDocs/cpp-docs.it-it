@@ -1,35 +1,52 @@
 ---
-title: "_com_error::_com_error | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_com_error._com_error"
-  - "_com_error::_com_error"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_com_error (metodo)"
+title: _com_error::_com_error | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _com_error._com_error
+- _com_error::_com_error
+dev_langs:
+- C++
+helpviewer_keywords:
+- _com_error method
 ms.assetid: 0a69e46c-caab-49ef-b091-eee401253ce6
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# _com_error::_com_error
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 81efabf796d8d596326629af999f1932501befb5
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="comerrorcomerror"></a>_com_error::_com_error
 **Sezione specifica Microsoft**  
   
  Costruisce un oggetto `_com_error`.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -43,21 +60,21 @@ _com_error(
 ) throw( );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `hr`  
  Informazioni `HRESULT`.  
   
  `perrinfo`  
- Oggetto **IErrorInfo**.  
+ **IErrorInfo** oggetto.  
   
- **bool fAddRef\=false**  
- Indica al costruttore di chiamare AddRef su un'interfaccia **IErrorInfo** non null.  Ciò consente un conteggio corretto dei riferimenti nel caso comune in cui la proprietà dell'interfaccia venga passata all'oggetto `_com_error`, ad esempio:  
+ **bool fAddRef = false**  
+ Fa sì che il costruttore di chiamare AddRef su un valore non null **IErrorInfo** interfaccia. Ciò consente un conteggio corretto dei riferimenti nel caso comune in cui la proprietà dell'interfaccia venga passata all'oggetto `_com_error`, ad esempio:  
   
 ```  
 throw _com_error(hr, perrinfo);  
 ```  
   
- Se non si desidera che il codice trasferisca la proprietà all'oggetto `_com_error` e se `AddRef` è necessario per compensare **Release** nel distruttore `_com_error`, costruire un oggetto nel modo seguente:  
+ Se non si desidera trasferire la proprietà per il codice di `_com_error` oggetto e `AddRef` è necessario per compensare la **versione** nel `_com_error` distruttore, costruire l'oggetto come indicato di seguito:  
   
 ```  
 _com_error err(hr, perrinfo, true);  
@@ -66,10 +83,10 @@ _com_error err(hr, perrinfo, true);
  `that`  
  Oggetto `_com_error` esistente.  
   
-## Note  
- Il primo costruttore crea un nuovo oggetto, dati un oggetto `HRESULT` e un oggetto facoltativo **IErrorInfo**.  Il secondo crea una copia di un oggetto `_com_error` esistente.  
+## <a name="remarks"></a>Note  
+ Il primo costruttore crea un nuovo oggetto dato un `HRESULT` e facoltativi **IErrorInfo** oggetto. Il secondo crea una copia di un oggetto `_com_error` esistente.  
   
  **Fine sezione specifica Microsoft**  
   
-## Vedere anche  
- [Classe \_com\_error](../cpp/com-error-class.md)
+## <a name="see-also"></a>Vedere anche  
+ [Classe _com_error](../cpp/com-error-class.md)

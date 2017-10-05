@@ -1,40 +1,57 @@
 ---
-title: "Nomi senza alcun collegamento | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "enumeratori [C++], collegamento"
-  - "parametri di funzione [C++]"
-  - "funzioni [C++], parametri"
-  - "nomi [C++], senza collegamento"
-  - "nomi typedef, collegamento"
+title: Nomi senza alcun collegamento | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- functions [C++], parameters
+- typedef names, linkage
+- enumerators [C++], linkage
+- names [C++], with no linkage
+- function parameters [C++]
 ms.assetid: 7174c500-12d2-4572-8c16-63c27c758fb1
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Nomi senza alcun collegamento
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 161698d01e9cc9aeaac8f2b9bdc491343555880d
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="names-with-no-linkage"></a>Nomi senza alcun collegamento
 Gli unici nomi senza collegamento sono:  
   
 -   Parametri di funzione.  
   
--   Nomi con ambito blocco non dichiarati come `extern` o **static**.  
+-   I nomi con ambito blocco non dichiarati come `extern` o **statico**.  
   
 -   Enumeratori.  
   
--   Nomi dichiarati in un'istruzione `typedef`.  Si verifica un'eccezione quando l'istruzione `typedef` viene usata per assegnare un nome per un tipo di classe senza nome.  Il nome può quindi disporre di collegamento esterno se la classe dispone di collegamento esterno.  Nell'esempio seguente viene illustrata una situazione in cui un nome `typedef` dispone di collegamento esterno:  
+-   Nomi dichiarati in un'istruzione `typedef`. Si verifica un'eccezione quando l'istruzione `typedef` viene usata per assegnare un nome per un tipo di classe senza nome. Il nome può quindi disporre di collegamento esterno se la classe dispone di collegamento esterno. Nell'esempio seguente viene illustrata una situazione in cui un nome `typedef` dispone di collegamento esterno:  
   
     ```  
     // names_with_no_linkage.cpp  
@@ -51,9 +68,9 @@ Gli unici nomi senza collegamento sono:
     }  
     ```  
   
-     Il nome `typedef`, `POINT` diventa il nome della classe per la struttura senza nome.  Viene quindi usato per dichiarare una funzione con collegamento esterno.  
+     Il nome `typedef`, `POINT` diventa il nome della classe per la struttura senza nome. Viene quindi usato per dichiarare una funzione con collegamento esterno.  
   
- Poiché i nomi `typedef` non dispongono di collegamento, le relative definizioni possono variare in base alle unità di conversione.  Poiché le compilazioni vengono eseguite in modo discreto, il compilatore non è in gradi di rilevare tali differenze.  Di conseguenza, gli errori di questo tipo non vengono rilevati fino alla fase di collegamento.  Si consideri il caso seguente:  
+ Poiché i nomi `typedef` non dispongono di collegamento, le relative definizioni possono variare in base alle unità di conversione. Poiché le compilazioni vengono eseguite in modo discreto, il compilatore non è in gradi di rilevare tali differenze. Di conseguenza, gli errori di questo tipo non vengono rilevati fino alla fase di collegamento. Si consideri il caso seguente:  
   
 ```  
 // Translation unit 1  
@@ -71,8 +88,8 @@ extern INT myInt;
   
  Il codice precedente genera un errore 'errore non risolto' in fase di collegamento.  
   
-## Esempio  
- Le funzioni C\+\+ possono essere definite solo nell'ambito del file o della classe.  Nell'esempio seguente viene illustrato come definire le funzioni e viene illustrata una definizione di funzione errata:  
+## <a name="example"></a>Esempio  
+ Le funzioni C++ possono essere definite solo nell'ambito del file o della classe. Nell'esempio seguente viene illustrato come definire le funzioni e viene illustrata una definizione di funzione errata:  
   
 ```  
 // function_definitions.cpp  
@@ -111,5 +128,5 @@ void GoodFuncDef( char ch )  // Define GoodFuncDef
 }  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Programma e collegamento](../cpp/program-and-linkage-cpp.md)

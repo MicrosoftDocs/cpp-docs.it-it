@@ -1,51 +1,67 @@
 ---
-title: "Funzioni con elenchi di argomenti variabili (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "elenchi di argomenti [C++], numero variabile di"
-  - "argomenti [C++], numero variabile di"
-  - "dichiaratori, funzioni"
-  - "dichiarazione di funzioni, variabili"
-  - "chiamate di funzione, numero variabile di argomenti"
-  - "elenchi di argomenti variabili"
+title: Funzioni con elenchi di argomenti variabili (C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- arguments [C++], variable number of
+- variable argument lists
+- declarators, functions
+- argument lists [C++], variable number of
+- declaring functions, variables
+- function calls, variable number of arguments
 ms.assetid: 27c2f83a-21dd-44c6-913c-2834cb944703
 caps.latest.revision: 16
-caps.handback.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Funzioni con elenchi di argomenti variabili (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: e7a1f434b9c286bfa625d703023080f55586f0a8
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-Le dichiarazioni di funzione, in cui l'ultimo membro sono i puntini di sospensione \(...\), possono accettare un numero variabile di argomenti.  In questi casi, C\+\+ fornisce il controllo di tipo solo per gli argomenti dichiarati esplicitamente.  È possibile usare elenchi di argomenti variabili quando è necessario rendere una funzione così generale che anche il numero e i tipi di argomenti possono variare.  La famiglia di funzioni è un esempio delle funzioni che usano elenchi di argomenti variabili.`printf`*argument\-declaration\-list*  
+---
+# <a name="functions-with-variable-argument-lists--c"></a>Elenchi di funzioni con argomenti variabili (C++)
+Le dichiarazioni di funzione, in cui l'ultimo membro sono i puntini di sospensione (...), possono accettare un numero variabile di argomenti. In questi casi, C++ fornisce il controllo di tipo solo per gli argomenti dichiarati esplicitamente. È possibile usare elenchi di argomenti variabili quando è necessario rendere una funzione così generale che anche il numero e i tipi di argomenti possono variare. La famiglia di funzioni è un esempio delle funzioni che utilizzano elenchi di argomenti variabili. `printf` *argument-declaration-list*  
   
-## Funzioni con elenchi di argomenti variabili  
+## <a name="functions-with-variable-arguments"></a>Funzioni con elenchi di argomenti variabili  
  Per accedere agli argomenti dopo quelli dichiarati, usare le macro contenute nel file di inclusione standard STDARG.H come descritto più avanti.  
   
  **Sezione specifica Microsoft**  
   
- Microsoft C\+\+ consente di specificare i puntini di sospensione come argomento se i puntini di sospensione sono l'ultimo argomento e sono preceduti da una virgola.  Di conseguenza, la dichiarazione `int Func( int i, ... );` è valida, ma `int Func( int i ... );` non lo è.  
+ Microsoft C++ consente di specificare i puntini di sospensione come argomento se i puntini di sospensione sono l'ultimo argomento e sono preceduti da una virgola. Di conseguenza, la dichiarazione `int Func( int i, ... );` è valida, ma `int Func( int i ... );` non lo è.  
   
  **Fine sezione specifica Microsoft**  
   
- La dichiarazione di una funzione che accetta un numero variabile di argomenti richiede almeno un argomento segnaposto, anche se non viene usato.  Se questo argomento segnaposto non viene fornito, non è possibile accedere agli argomenti restanti.  
+ La dichiarazione di una funzione che accetta un numero variabile di argomenti richiede almeno un argomento segnaposto, anche se non viene usato. Se questo argomento segnaposto non viene fornito, non è possibile accedere agli argomenti restanti.  
   
- Quando gli argomenti di tipo `char` vengono passati come argomenti variabili, vengono convertiti nel tipo `int`.  Analogamente, quando gli argomenti di tipo **float** vengono passati come argomenti variabili, vengono convertiti nel tipo **double**.  Gli argomenti di altri tipi sono soggetti alle consuete promozioni a virgola mobile e integrali.  Vedere [Promozioni integrali](../misc/integral-promotions.md) per altre informazioni.  
+ Quando gli argomenti di tipo `char` vengono passati come argomenti variabili, vengono convertiti nel tipo `int`. Analogamente, quando gli argomenti di tipo **float** vengono passati come argomenti variabili, vengono convertiti nel tipo **double**. Gli argomenti di altri tipi sono soggetti alle consuete promozioni a virgola mobile e integrali. Vedere [conversioni Standard](standard-conversions.md) per ulteriori informazioni.  
   
- Le funzioni che richiedono elenchi di variabili vengono dichiarate usando i puntini di sospensione \(...\) nell'elenco di argomenti.  Usare i tipi e le macro descritti nel file di inclusione STDARG.H per accedere agli argomenti passati da un elenco di variabili.  Per altre informazioni su queste macro, vedere [va\_arg, va\_copy, va\_end, va\_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md).  nella documentazione per la libreria di runtime C.  
+ Le funzioni che richiedono elenchi di variabili vengono dichiarate usando i puntini di sospensione (...) nell'elenco di argomenti. Usare i tipi e le macro descritti nel file di inclusione STDARG.H per accedere agli argomenti passati da un elenco di variabili. Per ulteriori informazioni su queste macro, vedere [va_arg, va_copy, va_end, va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md). nella documentazione per la libreria di runtime C.  
   
- L'esempio seguente illustra il modo in cui le macro possono essere usate insieme al tipo \(dichiarato in STDARG.H\): `va_list` `va_end` `va_arg` `va_start`  
+ Nell'esempio seguente illustra il funzionano di macro con il tipo (dichiarato in STDARG. H): 
   
 ```  
 // variable_argument_lists.cpp  
@@ -123,9 +139,9 @@ void ShowVar( char *szTypes, ... ) {
   
  Nell'esempio precedente vengono illustrati questi concetti importanti:  
   
-1.  È necessario stabilire un marcatore di elenco come una variabile di tipo `va_list` prima che venga eseguito l'accesso a qualsiasi argomento di variabile.  Nell'esempio precedente il marcatore viene denominato `vl`.  
+1.  È necessario stabilire un marcatore di elenco come una variabile di tipo `va_list` prima che venga eseguito l'accesso a qualsiasi argomento di variabile. Nell'esempio precedente il marcatore viene denominato `vl`.  
   
-2.  Ai singoli argomenti si accede usando la macro `va_arg`.  È necessario indicare alla macro `va_arg` il tipo di argomento da recuperare in modo che sia possibile trasferire il numero corretto di byte dallo stack.  Se si specifica un tipo non corretto di dimensione diversa da quella fornita dal programma chiamante a `va_arg`, i risultati sono imprevedibili.  
+2.  Ai singoli argomenti si accede usando la macro `va_arg`. È necessario indicare alla macro `va_arg` il tipo di argomento da recuperare in modo che sia possibile trasferire il numero corretto di byte dallo stack. Se si specifica un tipo non corretto di dimensione diversa da quella fornita dal programma chiamante a `va_arg`, i risultati sono imprevedibili.  
   
 3.  È necessario eseguire esplicitamente il cast del risultato ottenuto al tipo desiderato usando la macro `va_arg`.  
   

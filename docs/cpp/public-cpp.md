@@ -1,31 +1,47 @@
 ---
-title: "public (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "public"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "public (parola chiave) [C++]"
+title: Public (C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- public
+dev_langs:
+- C++
+helpviewer_keywords:
+- public keyword [C++]
 ms.assetid: f3e10a59-39f6-4bcd-827e-3e99f8f89497
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# public (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 7ce4262b3f32f48b61e6f4e273ce74c8334f8f0c
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-## Sintassi  
+---
+# <a name="public-c"></a>public (C++)
+## <a name="syntax"></a>Sintassi  
   
 ```  
 public:  
@@ -33,26 +49,26 @@ public:
 public base-class  
 ```  
   
-## Note  
- Quando precede un elenco di membri della classe, la parola chiave **public** indica che tali membri sono accessibili da qualsiasi funzione.  Quanto detto si applica a tutti i membri dichiarati fino al successivo identificatore di accesso o fino alla fine della classe.  
+## <a name="remarks"></a>Note  
+ Quando precede un elenco dei membri della classe, il **pubblica** parola chiave indica che tali membri sono accessibili da qualsiasi funzione. Quanto detto si applica a tutti i membri dichiarati fino al successivo identificatore di accesso o fino alla fine della classe.  
   
- Quando precede il nome di una classe base, la parola chiave **public** specifica che i membri pubblici e protetti della classe base sono membri pubblici e protetti delle rispettive classi derivate.  
+ Quando precede il nome di una classe base, il **pubblica** la parola chiave specifica che i membri pubblici e protetti della classe di base sono pubblici e protetti, rispettivamente, i membri della classe derivata.  
   
- L'accesso predefinito dei membri in una classe è privato.  L'accesso predefinito dei membri in una struttura o in un'unione è pubblico.  
+ L'accesso predefinito dei membri in una classe è privato. L'accesso predefinito dei membri in una struttura o in un'unione è pubblico.  
   
- L'accesso predefinito di una classe base è privato per le classi e pubblico per le strutture.  Le unioni non possono avere classi base.  
+ L'accesso predefinito di una classe base è privato per le classi e pubblico per le strutture. Le unioni non possono avere classi base.  
   
- Per altre informazioni, vedere [private](../cpp/private-cpp.md), [protected](../cpp/protected-cpp.md), [friend](../cpp/friend-cpp.md) e la tabella di accesso ai membri in [Controllo dell'accesso ai membri della classe](../misc/controlling-access-to-class-members.md).  
+ Per ulteriori informazioni, vedere [privata](../cpp/private-cpp.md), [protetti](../cpp/protected-cpp.md), [friend](../cpp/friend-cpp.md)e la tabella di accesso ai membri in [controllo dell'accesso ai membri della classe](member-access-control-cpp.md) .  
   
-## Specifico di \/clr  
- Nei tipi CLR, le parole chiave dell'identificatore di accesso C\+\+ \(**public**, `private` e `protected`\) possono influire sulla visibilità dei tipi e dei metodi relativamente agli assembly.  Per altre informazioni, vedere [Visibilità di tipi e membri](../misc/type-and-member-visibility.md).  
+## <a name="clr-specific"></a>Specifico di /clr  
+ Nei tipi CLR, parole chiave dell'identificatore di accesso di C++ (**pubblica**, `private`, e `protected`) può influire sulla visibilità dei tipi e metodi relativamente agli assembly. Per ulteriori informazioni, vedere [sul controllo dell'accesso](member-access-control-cpp.md).  
   
 > [!NOTE]
->  Tale comportamento non influisce sui file compilati con [\/LN](../build/reference/ln-create-msil-module.md).  In questo caso, tutte le classi gestite \(sia pubbliche che private\) saranno visibili.  
+>  I file compilati con [/LN](../build/reference/ln-create-msil-module.md) non sono interessati da questo comportamento. In questo caso, tutte le classi gestite (sia pubbliche che private) saranno visibili.  
   
-## Specifico di END \/clr  
+## <a name="end-clr-specific"></a>Specifico di END /clr  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // keyword_public.cpp  
@@ -73,6 +89,6 @@ int main() {
 }  
 ```  
   
-## Vedere anche  
- [Controllo dell'accesso ai membri di classi](../misc/controlling-access-to-class-members.md)   
- [Parole chiave C\+\+](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>Vedere anche  
+ [Controllo dell'accesso ai membri della classe](member-access-control-cpp.md)   
+ [Parole chiave](../cpp/keywords-cpp.md)

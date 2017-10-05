@@ -1,61 +1,78 @@
 ---
-title: "Limiti per tipi Integer | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "limiti per tipi Integer"
-  - "limiti integrali"
-  - "limiti, integer"
-  - "file di intestazione LIMITS.H"
+title: Limiti per tipi integer | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- integral limits
+- limits, integer
+- LIMITS.H header file
+- integer limits
 ms.assetid: 6922bdbf-0f49-443b-bc03-ee182e4cbd57
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Limiti per tipi Integer
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 67240b24df0c741a2441e17ebe9908c05bfca9f3
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="integer-limits"></a>Limiti per tipi Integer
 **Sezione specifica Microsoft**  
   
- I limiti per i tipi Integer sono elencati nella tabella seguente.  Questi limiti sono definiti anche nel file di intestazione standard. LIMITS.H.  
+ I limiti per i tipi Integer sono elencati nella tabella seguente. Questi limiti sono definiti anche nel file di intestazione standard. LIMITS.H.  
   
-### Limiti su costanti Integer  
+### <a name="limits-on-integer-constants"></a>Limiti su costanti Integer  
   
 |Costante|Significato|Valore|  
-|--------------|-----------------|------------|  
-|**CHAR\_BIT**|Numero di bit nella variabile minore che non sia un campo di bit.|8|  
-|**SCHAR\_MIN**|Valore minimo per una variabile di tipo **signed char**.|–128|  
-|**SCHAR\_MAX**|Valore massimo per una variabile di tipo **signed char**.|127|  
-|**UCHAR\_MAX**|Valore massimo per una variabile di tipo `unsigned char`|255 \(0xff\)|  
-|**CHAR\_MIN**|Valore minimo per una variabile di tipo `char`|\- 128; 0 se si utilizza l'opzione \/J|  
-|**CHAR\_MAX**|Valore massimo per una variabile di tipo `char`|127; 255 se si utilizza l'opzione \/J|  
-|**MB\_LEN\_MAX**|Numero massimo di byte in una costante multicarattere.|5|  
-|**SHRT\_MIN**|Valore minimo per una variabile di tipo **short**.|–32768|  
-|**SHRT\_MAX**|Valore massimo per una variabile di tipo **short**.|32767|  
-|**USHRT\_MAX**|Valore massimo per una variabile di tipo **unsigned short**|65535 \(0xffff\)|  
-|**INT\_MIN**|Valore minimo per una variabile di tipo `int`|–2147483648|  
-|**INT\_MAX**|Valore massimo per una variabile di tipo `int`|2147483647|  
-|**UINT\_MAX**|Valore massimo per una variabile di tipo `unsigned int`|4294967295 \(0xffffffff\)|  
-|**LONG\_MIN**|Valore minimo per una variabile di tipo **long**.|–2147483648|  
-|**LONG\_MAX**|Valore massimo per una variabile di tipo **long**.|2147483647|  
-|**ULONG\_MAX**|Valore massimo per una variabile di tipo `unsigned long`|4294967295 \(0xffffffff\)|  
-|**\_I64\_MIN**|Valore minimo per una variabile di tipo `__int64`|\-9223372036854775808|  
-|**\_I64\_MAX**|Valore massimo per una variabile di tipo `__int64`|9223372036854775807|  
-|**\_UI64\_MAX**|Valore massimo per una variabile di tipo **unsigned \_\_int64**|18446744073709551615 \(0xffffffffffffffff\)|  
+|--------------|-------------|-----------|  
+|**CHAR_BIT**|Numero di bit nella variabile minore che non sia un campo di bit.|8|  
+|**SCHAR_MIN**|Valore minimo per una variabile di tipo **char con segno**.|-128|  
+|**SCHAR_MAX**|Valore massimo per una variabile di tipo **char con segno**.|127|  
+|**UCHAR_MAX**|Valore massimo per una variabile di tipo `unsigned char`|255 (0xff)|  
+|**CHAR_MIN**|Valore minimo per una variabile di tipo `char`|-128; 0 se si usa l'opzione /J|  
+|**CHAR_MAX**|Valore massimo per una variabile di tipo `char`|127; 255 se si utilizza l'opzione /J|  
+|**MB_LEN_MAX**|Numero massimo di byte in una costante multicarattere.|5|  
+|**SHRT_MIN**|Valore minimo per una variabile di tipo **short**.|-32768|  
+|**SHRT_MAX**|Valore massimo per una variabile di tipo **short**.|32767|  
+|**USHRT_MAX**|Valore massimo per una variabile di tipo **short senza segno**.|65535 (0xffff)|  
+|**INT_MIN**|Valore minimo per una variabile di tipo `int`|-2147483648|  
+|**INT_MAX**|Valore massimo per una variabile di tipo `int`|2147483647|  
+|**UINT_MAX**|Valore massimo per una variabile di tipo `unsigned int`|4294967295 (0xffffffff)|  
+|**LONG_MIN**|Valore minimo per una variabile di tipo **long**.|-2147483648|  
+|**LONG_MAX**|Valore massimo per una variabile di tipo **long**.|2147483647|  
+|**ULONG_MAX**|Valore massimo per una variabile di tipo `unsigned long`|4294967295 (0xffffffff)|  
+|**_I64_MIN**|Valore minimo per una variabile di tipo `__int64`|-9223372036854775808|  
+|**_I64_MAX**|Valore massimo per una variabile di tipo `__int64`|9223372036854775807|  
+|**_UI64_MAX**|Valore massimo per una variabile di tipo **unsigned int64**|18446744073709551615 (0xffffffffffffffff)|  
   
  Se un valore è superiore al massimo valore rappresentabile con il tipo Integer, il compilatore Microsoft genera un errore.  
   
-## Fine sezione specifica Microsoft  
+**Fine sezione specifica Microsoft**  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Limiti sulle costanti a virgola mobile](../cpp/floating-limits.md)

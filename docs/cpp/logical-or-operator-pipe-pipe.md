@@ -1,34 +1,50 @@
 ---
-title: "Operatore OR logico: || | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "||"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "|| (operatore)"
-  - "OR (operatore logico)"
-  - "operatore OR"
-  - "operatore OR, logici"
+title: 'Logica o un operatore: | | | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- '||'
+dev_langs:
+- C++
+helpviewer_keywords:
+- OR operator, logical
+- '|| operator'
+- OR operator
+- logical OR operator
 ms.assetid: 31837c99-2655-4bf3-8ded-f13b7a9dc533
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Operatore OR logico: ||
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 1784a3f0e7d069f7f7e2976fc7b71ea130d7c34b
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-## Sintassi  
+---
+# <a name="logical-or-operator-"></a>Operatore OR logico: ||
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -38,25 +54,25 @@ logical-or-expression
   
 ```  
   
-## Note  
- L'operatore OR logico \(`||`\) restituisce il valore booleano **true** se uno o entrambi gli operandi è **true** e restituisce **false** in caso contrario.  Gli operandi vengono convertiti in modo implicito nel tipo `bool` prima della valutazione e il risultato è del tipo `bool`.  L'operatore OR logico presenta un'associatività da sinistra a destra.  
+## <a name="remarks"></a>Note  
+ L'operatore logico OR (`||`) restituisce il valore booleano **true** se uno o entrambi gli operandi **true** e restituisce **false** in caso contrario. Gli operandi vengono convertiti in modo implicito nel tipo `bool` prima della valutazione e il risultato è del tipo `bool`. L'operatore OR logico presenta un'associatività da sinistra a destra.  
   
- Gli operandi dell'operatore OR logico non devono essere dello stesso tipo, ma devono essere di tipo integrale o di tipo puntatore.  Gli operandi sono in genere espressioni di uguaglianza o relazionali.  
+ Gli operandi dell'operatore OR logico non devono essere dello stesso tipo, ma devono essere di tipo integrale o di tipo puntatore. Gli operandi sono in genere espressioni di uguaglianza o relazionali.  
   
  Il primo operando viene completamente restituito e tutti gli effetti collaterali vengono completati prima di continuare la restituzione dell'espressione OR logica.  
   
- Il secondo operando viene restituito solo se il primo operando restituisce false \(0\).  In questo modo si evita la valutazione del secondo operando quando l'espressione OR logica è true.  
+ Il secondo operando viene restituito solo se il primo operando restituisce false (0). In questo modo si evita la valutazione del secondo operando quando l'espressione OR logica è true.  
   
 ```  
 printf( "%d" , (x == w || x == y || x == z) );  
 ```  
   
- Nell'esempio precedente, se `x` è uguale a `w`, `y` o a `z`, il secondo argomento della funzione `printf` restituisce true e il valore 1 viene stampato.  In caso contrario, restituisce false e il valore 0 viene formattato.  Appena una delle condizioni restituisce true, la restituzione viene interrotta.  
+ Nell'esempio precedente, se `x` è uguale a `w`, `y` o a `z`, il secondo argomento della funzione `printf` restituisce true e il valore 1 viene stampato. In caso contrario, restituisce false e il valore 0 viene formattato. Appena una delle condizioni restituisce true, la restituzione viene interrotta.  
   
-## Parola chiave operator per &#124;&#124;  
- L'operatore **or** è il testo equivalente di `||`.  Esistono due modi per accedere all'operatore **or** nei programmi: includere il file di intestazione `iso646.h` o compilare l'opzione del compilatore [\/Za](../build/reference/za-ze-disable-language-extensions.md) \(disabilita estensioni linguaggio\).  
+## <a name="operator-keyword-for-124124"></a>Parola chiave operator per &#124; &#124;  
+ Il **o** operatore è il testo equivalente di `||`. Esistono due modi per accedere il **o** operatore nei programmi: includere il file di intestazione `iso646.h`, o compilare il [/Za](../build/reference/za-ze-disable-language-extensions.md) l'opzione del compilatore (Disabilita estensioni linguaggio).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // expre_Logical_OR_Operator.cpp  
@@ -76,8 +92,6 @@ int main() {
 }  
 ```  
   
-## Vedere anche  
- [Operatori logici](../misc/logical-operators.md)   
- [Operatori C\+\+](../misc/cpp-operators.md)   
- [Operatori C\+\+, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+## <a name="see-also"></a>Vedere anche  
+[Operatori C++ predefiniti precedenza e associatività](cpp-built-in-operators-precedence-and-associativity.md) [operatori C++ predefiniti, precedenza e associatività](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operatori logici C](../c-language/c-logical-operators.md)

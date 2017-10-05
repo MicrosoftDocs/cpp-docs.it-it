@@ -1,35 +1,52 @@
 ---
-title: "Collegamenti in nomi con ambito classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "nomi di classe [C++], collegamento"
-  - "ambito classe [C++], collegamento in nomi"
-  - "classi [C++], nomi"
-  - "classi [C++], ambito"
-  - "collegamento esterno, regole di collegamento ambito"
-  - "collegamento [C++], regole di collegamento ambito"
-  - "nomi [C++], regole di collegamento ambito"
-  - "ambito [C++], nomi di classe"
-  - "ambito [C++], regole di collegamento"
+title: Collegamenti in nomi con ambito classe | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- scope [C++], linkage rules
+- linkage [C++], scope linkage rules
+- names [C++], scope linkage rules
+- classes [C++], scope
+- external linkage, scope linkage rules
+- class names [C++], linkage
+- classes [C++], names
+- scope [C++], class names
+- class scope [C++], linkage in names with
 ms.assetid: 45275ff3-6e94-4967-82c8-ba540ef4da28
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Collegamenti in nomi con ambito classe
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 37a0dcca1da0ae56a8144adf862eda89bfb1c4d6
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="linkage-in-names-with-class-scope"></a>Collegamenti in nomi con ambito classe
 Le seguenti regole di collegamento vengono applicate ai nomi con ambito classe:  
   
 -   I membri di classe statici hanno un collegamento esterno.  
@@ -40,9 +57,9 @@ Le seguenti regole di collegamento vengono applicate ai nomi con ambito classe:
   
  **Sezione specifica Microsoft**  
   
--   Le funzioni dichiarate come funzioni `friend` devono disporre di collegamento esterno.  La dichiarazione di una funzione statica come `friend` genera un errore.  
+-   Le funzioni dichiarate come funzioni `friend` devono disporre di collegamento esterno. La dichiarazione di una funzione statica come `friend` genera un errore.  
   
  **Fine sezione specifica Microsoft**  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Programma e collegamento](../cpp/program-and-linkage-cpp.md)

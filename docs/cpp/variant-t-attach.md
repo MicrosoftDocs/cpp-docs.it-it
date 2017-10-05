@@ -1,37 +1,54 @@
 ---
-title: "_variant_t::Attach | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_variant_t::Attach"
-  - "_variant_t.Attach"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Attach (metodo)"
-  - "VARIANT (oggetto)"
-  - "VARIANT (oggetto), attach"
+title: _variant_t::Attach | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _variant_t::Attach
+- _variant_t.Attach
+dev_langs:
+- C++
+helpviewer_keywords:
+- Attach method
+- VARIANT object, attach
+- VARIANT object
 ms.assetid: 2f02bd08-2306-4477-aa88-d2a5dee2b859
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# _variant_t::Attach
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 33e21d3bea71c80b8b60df222682fda560fbce9c
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="varianttattach"></a>_variant_t::Attach
 **Sezione specifica Microsoft**  
   
- Associa un oggetto **VARIANT** all'oggetto `_variant_t`.  
+ Collega un **VARIANT** nell'oggetto di `_variant_t` oggetto.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -40,14 +57,14 @@ caps.handback.revision: 6
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  *varSrc*  
- Oggetto **VARIANT** da associare a questo oggetto `_variant_t`.  
+ Oggetto **VARIANT** da associare a questo oggetto `_variant_t` oggetto.  
   
-## Note  
- Acquisisce la proprietà dell'oggetto **VARIANT** incapsulandolo.  Questa funzione membro rilascia qualsiasi oggetto **VARIANT** incapsulato esistente, quindi copia l'oggetto **VARIANT** fornito e imposta la proprietà **VARTYPE** su `VT_EMPTY` per garantire che le risorse possano essere eliminate solo dal distruttore `_variant_t`.  
+## <a name="remarks"></a>Note  
+ Acquisisce la proprietà del **VARIANT** incapsulandolo. Questa funzione membro rilascia qualsiasi esistente incapsulato **VARIANT**, quindi copia fornito **VARIANT**e imposta relativo **VARTYPE** per `VT_EMPTY` per assicurarsi che il relativo le risorse possono essere rilasciate solo per il `_variant_t` distruttore.  
   
  **Fine sezione specifica Microsoft**  
   
-## Vedere anche  
- [Classe \_variant\_t](../cpp/variant-t-class.md)
+## <a name="see-also"></a>Vedere anche  
+ [Classe _variant_t](../cpp/variant-t-class.md)

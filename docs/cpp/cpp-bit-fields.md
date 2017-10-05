@@ -1,41 +1,57 @@
 ---
-title: "Campi di bit C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "campi di bit"
-  - "campi di bit"
-  - "campi [C++], bit"
+title: Campi di Bit C++ | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- bitfields
+- fields [C++], bit
+- bit fields
 ms.assetid: 6f4b62e3-cc1d-4e5d-bf34-05904104f71a
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Campi di bit C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 71f70995cf1a59153a380f0e22f0321fd59abee0
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-Le classi e le strutture possono contenere membri che occupano uno spazio di archiviazione minore rispetto a un valore di tipo integrale.  Questi membri vengono specificati come campi di bit.  La sintassi per specificare un campo di bit di *member\-declarator* è la seguente:  
+---
+# <a name="c-bit-fields"></a>Campi di bit C++
+Le classi e le strutture possono contenere membri che occupano uno spazio di archiviazione minore rispetto a un valore di tipo integrale. Questi membri vengono specificati come campi di bit. La sintassi per il campo di bit *dichiaratore di membro* seguente:  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
 declarator  : constant-expression  
 ```  
   
-## Note  
- L'elemento `declarator` \(facoltativo\) è il nome con cui il membro accede al programma  e deve essere un valore di tipo integrale \(inclusi i tipi enumerati\).  *constant\-expression* specifica il numero di bit che il membro occupa nella struttura.  I campi di bit anonimi, ovvero membri del campo di bit senza identificatore, possono essere usati per la spaziatura interna.  
+## <a name="remarks"></a>Note  
+ L'elemento `declarator` (facoltativo) è il nome con cui il membro accede al programma e deve essere un valore di tipo integrale (inclusi i tipi enumerati). Il *espressione costante* specifica il numero di bit, il membro occupa nella struttura. I campi di bit anonimi, ovvero membri del campo di bit senza identificatore, possono essere usati per la spaziatura interna.  
   
 > [!NOTE]
 >  Un campo di bit senza nome di larghezza 0 forza l'allineamento del campo di bit successivo al limite seguente `type`, dove `type` è il tipo del membro.  
@@ -55,10 +71,10 @@ struct Date {
   
  Il layout concettuale di memoria di un oggetto di tipo `Date` viene illustrato nella figura seguente.  
   
- ![Layout della memoria di un oggetto data](../cpp/media/vc38uq1.png "vc38UQ1")  
+ ![Layout di memoria di un oggetto data](../cpp/media/vc38uq1.png "vc38UQ1")  
 Layout a memoria fissa dell'oggetto Data  
   
- Si noti che l'elemento `nYear` è lungo 8 bit ed eccederebbe il confine di parola del tipo dichiarato **unsigned short**.  Di conseguenza, viene inizializzato all'inizio di una nuova istanza **unsigned short**.  Non è necessario che tutti i campi di bit si adattino a un oggetto del tipo sottostante e le nuove unità di archiviazione vengono allocate a seconda del numero di bit necessari per la dichiarazione.  
+ Si noti che `nYear` è lungo 8 bit ed eccederebbe il confine di parola del tipo dichiarato, **unsigned short**. Pertanto, viene inizializzato all'inizio di un nuovo **unsigned short**. Non è necessario che tutti i campi di bit si adattino a un oggetto del tipo sottostante e le nuove unità di archiviazione vengono allocate a seconda del numero di bit necessari per la dichiarazione.  
   
  **Sezione specifica Microsoft**  
   
@@ -82,17 +98,17 @@ struct Date {
   
  il layout di memoria è analogo a quello illustrato nella figura seguente.  
   
- ![Layout di un oggetto data con campo di bit a lunghezza 0](../cpp/media/vc38uq2.png "vc38UQ2")  
+ ![Layout dell'oggetto data con zero &#45; il campo di bit di lunghezza](../cpp/media/vc38uq2.png "vc38UQ2")  
 Layout dell'oggetto Data con campo bit a lunghezza 0  
   
- Il tipo sottostante del campo di bit deve essere un valore di tipo integrate, come descritto in [Tipi fondamentali](../cpp/fundamental-types-cpp.md).  
+ Il tipo sottostante di un campo di bit deve essere un tipo integrale, come descritto [tipi fondamentali](../cpp/fundamental-types-cpp.md).  
   
-## Limitazioni sui campi di bit  
+## <a name="restrictions-on-bit-fields"></a>Limitazioni sui campi di bit  
  Nell'elenco seguente vengono descritte le operazioni erronee nei campi di bit:  
   
 1.  Acquisizione dell'indirizzo di un campo di bit.  
   
 2.  Inizializzazione di un riferimento con un campo di bit.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classi e struct](../cpp/classes-and-structs-cpp.md)

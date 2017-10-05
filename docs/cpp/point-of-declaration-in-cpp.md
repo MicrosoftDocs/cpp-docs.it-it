@@ -1,29 +1,45 @@
 ---
-title: "Punto di dichiarazione in C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "punto di dichiarazione"
+title: Punto di dichiarazione in C++ | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- point of declaration
 ms.assetid: 92ea8707-80cb-497c-b479-f907b8401859
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Punto di dichiarazione in C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 77f66182052cc2a031b7f1f8db8018f49b36801d
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-Un nome viene considerato dichiarato immediatamente dopo il proprio dichiaratore e prima del proprio inizializzatore \(quest'ultimo è facoltativo\).  Per altre informazioni sui dichiaratori, vedere [Dichiaratori](http://msdn.microsoft.com/it-it/8a7b9b51-92bd-4ac0-b3fe-0c4abe771838).  
+---
+# <a name="point-of-declaration-in-c"></a>Punto di dichiarazione in C++
+Un nome viene considerato dichiarato immediatamente dopo il proprio dichiaratore e prima del proprio inizializzatore (quest'ultimo è facoltativo). (Per ulteriori informazioni sui dichiaratori, vedere [dichiarazioni e definizioni](declarations-and-definitions-cpp.md).)  
   
  Si consideri l'esempio seguente:  
   
@@ -37,7 +53,7 @@ int main()
 }  
 ```  
   
- Se il momento della dichiarazione fosse *dopo* l'inizializzazione, la variabile locale `dVar` verrebbe inizializzata su 7.0, che corrisponde al valore della variabile globale `dVar`.  Tuttavia, poiché non è questo il caso, `dVar` viene inizializzata su un valore non definito.  
+ Se il punto di dichiarazione fosse *dopo* l'inizializzazione, quindi locale `dVar` verrebbe inizializzata su 7.0, il valore della variabile globale `dVar`. Tuttavia, poiché non è questo il caso, `dVar` viene inizializzata su un valore non definito.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Ambito](../cpp/scope-visual-cpp.md)

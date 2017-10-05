@@ -1,100 +1,117 @@
 ---
-title: "Operatori di assegnazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - ">>="
-  - "xor_eq"
-  - "&="
-  - "<<="
-  - "-="
-  - "and_eq"
-  - "^="
-  - "|="
-  - "/="
-  - "%="
-  - "or_eq"
-  - "+="
-  - "*="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "%= (operatore)"
-  - "&= (operatore)"
-  - "*= (operatore)"
-  - "/= (operatore)"
-  - "^= (operatore)"
-  - "|= (operatore)"
-  - "+= (operatore)"
-  - "<<= (operatore)"
-  - "= (operatore)"
-  - "-= (operatore)"
-  - ">>= (operatore)"
-  - "and_eq (operatore)"
-  - "operatori di assegnazione"
-  - "operatori di assegnazione, C++"
-  - "operatore >>="
-  - "operator>>="
-  - "operatori [C++], assegnazione"
-  - "or_eq (operatore)"
-  - "xor_eq (operatore)"
+title: Operatori di assegnazione | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- '>>='
+- xor_eq
+- '&='
+- <<=
+- -=
+- and_eq
+- ^=
+- '|='
+- /=
+- '%='
+- or_eq
+- +=
+- '*='
+dev_langs:
+- C++
+helpviewer_keywords:
+- or_eq operator
+- '&= operator'
+- operators [C++], assignment
+- assignment operators, C++
+- xor_eq operator
+- += operator
+- and_eq operator
+- '>>= operator'
+- '|= operator'
+- operator>>=
+- '*= operator'
+- '%= operator'
+- ^= operator
+- operator >>=
+- = operator
+- assignment operators
+- -= operator
+- /= operator
+- <<= operator
 ms.assetid: b028cf35-2ff1-4f14-9027-fd53ebec8aa0
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Operatori di assegnazione
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 34ed921ed7eb690372f1635ed845271fa7520a86
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-## Sintassi  
+---
+# <a name="assignment-operators"></a>Operatori di assegnazione
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
-        expression assignment-operator expression   
+      expression assignment-operator expression   
 assignment-operator : one of  
-   =   *=   /=   %=   +=   –=   <<=   >>=   &=   ^=   |=  
+   =   *=   /=   %=   +=   -=   <<=   >>=   &=   ^=   |=  
 ```  
   
-## Note  
- Gli operatori di assegnamento consentono di memorizzare un valore nell'oggetto definito dall'operando sinistro.  Esistono due tipi di operazioni di assegnamento: assegnamento semplice, in cui il valore del secondo operando è memorizzato nell'oggetto specificato dal primo operando, e assegnazione composta, dove un'operazione aritmetica, un'operazione di spostamento o un'operazione bit per bit viene eseguita prima di memorizzare il risultato.  Tutti gli operatori di assegnamento nella tabella seguente, ad eccezione dell'operatore \=, sono operatori di assegnamento composti.  
+## <a name="remarks"></a>Note  
+ Gli operatori di assegnamento consentono di memorizzare un valore nell'oggetto definito dall'operando sinistro. Esistono due tipi di operazioni di assegnamento: assegnamento semplice, in cui il valore del secondo operando è memorizzato nell'oggetto specificato dal primo operando, e assegnazione composta, dove un'operazione aritmetica, un'operazione di spostamento o un'operazione bit per bit viene eseguita prima di memorizzare il risultato. Tutti gli operatori di assegnamento nella tabella seguente, ad eccezione dell'operatore =, sono operatori di assegnamento composti.  
   
-### Operatori di assegnazione  
+### <a name="assignment-operators"></a>Operatori di assegnazione  
   
 |Operatore|Significato|  
-|---------------|-----------------|  
-|**\=**|Memorizza il valore del secondo operando nell'oggetto specificato dal primo operando \(assegnamento semplice\).|  
-|**\*\=**|Moltiplica il valore del primo operando per il valore del secondo operando e memorizza il risultato nell'oggetto specificato dal primo operando.|  
+|--------------|-------------|  
+|**=**|Memorizza il valore del secondo operando nell'oggetto specificato dal primo operando (assegnamento semplice).|  
+|**\*=**|Moltiplica il valore del primo operando per il valore del secondo operando e memorizza il risultato nell'oggetto specificato dal primo operando.|  
 |`/=`|Divide il valore del primo operando per il valore del secondo operando e memorizza il risultato nell'oggetto specificato dal primo operando.|  
 |`%=`|Calcola il modulo del primo operando specificato per il valore del secondo operando e memorizza il risultato nell'oggetto specificato dal primo operando.|  
 |`+=`|Somma il valore del secondo operando al valore del primo operando e memorizza il risultato nell'oggetto specificato dal primo operando.|  
-|**–\=**|Sottrae il valore del secondo operando dal valore del primo operando e memorizza il risultato nell'oggetto specificato dal primo operando.|  
-|**\<\<\=**|Esegue uno spostamento a sinistra del valore del primo operando di un numero di bit specificati dal valore del secondo operando e memorizza il risultato nell'oggetto specificato dal primo operando.|  
-|**\>\>\=**|Esegue uno spostamento a destra del valore del primo operando di un numero di bit specificati dal valore del secondo operando e memorizza il risultato nell'oggetto specificato dal primo operando.|  
-|**&\=**|Ottiene l'AND bit per bit del primo e del secondo operando e memorizza il risultato nell'oggetto specificato dal primo operando.|  
+|**-=**|Sottrae il valore del secondo operando dal valore del primo operando e memorizza il risultato nell'oggetto specificato dal primo operando.|  
+|**<\<=**|Esegue uno spostamento a sinistra del valore del primo operando di un numero di bit specificati dal valore del secondo operando e memorizza il risultato nell'oggetto specificato dal primo operando.|  
+|**>>=**|Esegue uno spostamento a destra del valore del primo operando di un numero di bit specificati dal valore del secondo operando e memorizza il risultato nell'oggetto specificato dal primo operando.|  
+|**&=**|Ottiene l'AND bit per bit del primo e del secondo operando e memorizza il risultato nell'oggetto specificato dal primo operando.|  
 |`^=`|Ottiene l'OR esclusivo bit per bit del primo e del secondo operando e memorizza il risultato nell'oggetto specificato dal primo operando.|  
 |`&#124;=`|Ottiene l'OR inclusivo bit per bit del primo e del secondo operando e memorizza il risultato nell'oggetto specificato dal primo operando.|  
   
- **Parole chiave per operatori**  
+ **Parole chiave per gli operatori**  
   
- Tre degli operatori di assegnamento composti hanno testo equivalente.  Ad esempio:  
+ Tre degli operatori di assegnamento composti hanno testo equivalente. Ad esempio:  
   
 |Operatore|Equivalente|  
-|---------------|-----------------|  
-|**&\=**|`and_eq`|  
+|--------------|----------------|  
+|**&=**|`and_eq`|  
 |`&#124;=`|`or_eq`|  
 |`^=`|`xor_eq`|  
   
- Esistono due modi per accedere a queste parole chiave per operatori nei programmi, ovvero includere il file di intestazione `iso646.h` o eseguire la compilazione con l'opzione del compilatore [\/Za](../build/reference/za-ze-disable-language-extensions.md) \(disabilitazione delle estensioni di linguaggio\).  
+ Esistono due modi per accedere a queste parole chiave per operatori nei programmi: includere il file di intestazione `iso646.h`, o compilare il [/Za](../build/reference/za-ze-disable-language-extensions.md) l'opzione del compilatore (Disabilita estensioni linguaggio).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // expre_Assignment_Operators.cpp  
@@ -118,14 +135,14 @@ int main() {
 }  
 ```  
   
-## Assegnazione singola  
- L'operatore di assegnazione semplice \(\=\) determina il valore del secondo operando per essere archiviato nell'oggetto specificato dal primo operando.  Se entrambi gli oggetti sono di tipi aritmetici, l'operando di destra viene convertito nel tipo di sinistra, prima di archiviare il valore.  
+## <a name="simple-assignment"></a>Assegnazione singola  
+ L'operatore di assegnazione semplice (=) determina il valore del secondo operando per essere archiviato nell'oggetto specificato dal primo operando. Se entrambi gli oggetti sono di tipi aritmetici, l'operando di destra viene convertito nel tipo di sinistra, prima di archiviare il valore.  
   
  Gli oggetti dei tipi const e volatile possono essere assegnati ai valori l dei tipi unicamente volatili o che non sono né const né volatili.  
   
- L'assegnazione a oggetti di tipo di classe \(tipi di struct, unione e classe\) viene eseguita da una funzione denominata operator\=.  Il comportamento predefinito di questa funzione di operatore è di eseguire una copia bit per bit; tuttavia, questo comportamento può essere modificato mediante gli operatori di overload.  \(Vedere [Operatori di overload](../cpp/operator-overloading.md) per altre informazioni\).  
+ L'assegnazione a oggetti di tipo di classe (tipi di struct, unione e classe) viene eseguita da una funzione denominata operator=. Il comportamento predefinito di questa funzione di operatore è di eseguire una copia bit per bit; tuttavia, questo comportamento può essere modificato mediante gli operatori di overload. (Vedere [operatori di overload](../cpp/operator-overloading.md) per ulteriori informazioni.)  
   
- Un oggetto senza alcuna ambiguità di classe derivata da una classe base specificata può essere assegnato a un oggetto della classe base.  Il contrario non è consentito perché è presente una conversione implicita da classe derivata a classe base ma non da classe base a classe derivata.  Ad esempio:  
+ Un oggetto senza alcuna ambiguità di classe derivata da una classe base specificata può essere assegnato a un oggetto della classe base. Il contrario non è consentito perché è presente una conversione implicita da classe derivata a classe base ma non da classe base a classe derivata. Ad esempio:  
   
 ```  
 // expre_SimpleAssignment.cpp  
@@ -156,14 +173,14 @@ int main()
   
  Le assegnazioni ai tipi di riferimento si comportano come se l'assegnazione venisse effettuata all'oggetto cui punta il riferimento.  
   
- Per gli oggetti di tipo classe, l'assegnazione è diversa dall'inizializzazione.  Per illustrare come possono essere diverse l'assegnazione e l'inizializzazione, si consideri il codice  
+ Per gli oggetti di tipo classe, l'assegnazione è diversa dall'inizializzazione. Per illustrare come possono essere diverse l'assegnazione e l'inizializzazione, si consideri il codice  
   
 ```  
 UserType1 A;  
 UserType2 B = A;  
 ```  
   
- Il codice precedente mostra un inizializzatore; chiama il costruttore per `UserType2` che accetta un argomento di tipo `UserType1`.  Dato il codice  
+ Il codice precedente mostra un inizializzatore; chiama il costruttore per `UserType2` che accetta un argomento di tipo `UserType1`. Dato il codice  
   
 ```  
 UserType1 A;  
@@ -180,30 +197,29 @@ B = A;
   
  può avere uno dei seguenti effetti:  
   
--   Chiamare la funzione di operatore\= per `UserType2`, se l'operatore\= viene fornito con un argomento `UserType1`.  
+-   Chiamare la funzione di operatore= per `UserType2`, se l'operatore= viene fornito con un argomento `UserType1`.  
   
 -   Chiamare la funzione esplicita `UserType1::operator UserType2` di conversione, se tale funzione non esiste.  
   
 -   Chiamare un costruttore `UserType2::UserType2`, se tale costruttore esiste, che accetta un argomento `UserType1` e copia il risultato.  
   
-## Assegnazione composta  
- Gli operatori di assegnazione composti, illustrati nella tabella di [Operatori di assegnazione](../cpp/assignment-operators.md), vengono specificati nel formato *e1* `op`\= *e2*, dove *e1* è un l\-value non modificabile del tipo const e *e2* è uno dei seguenti:  
+## <a name="compound-assignment"></a>Assegnazione composta  
+ Gli operatori di assegnazione composta, illustrati nella tabella [operatori di assegnazione](../cpp/assignment-operators.md), vengono specificati nel formato *e1* `op` =  *e2*, dove *e1* è un l-value modificabile non è di tipo const e *e2* è uno dei seguenti:  
   
 -   Un tipo aritmetico  
   
--   Un puntatore, se `op` è \+ o \-  
+-   Un puntatore, se `op` è + o -  
   
- Il formato *e1* `op`\= *e2* si comporta come *e1* *\= e1* `op` *e2*, ma *e1* viene valutato solo una volta.  
+ Il *e1* `op` =  *e2* modulo si comporti come *e1* *= e1* `op` *e2*, ma *e1* viene valutata una sola volta.  
   
- L'assegnazione composta a un tipo enumerato genera un messaggio di errore.  Se l'operando sinistro è di tipo puntatore, l'operando destro deve essere di tipo puntatore o un'espressione costante che restituisce 0.  Se l'operando sinistro è di tipo integrale, l'operando destro non deve essere di tipo puntatore.  
+ L'assegnazione composta a un tipo enumerato genera un messaggio di errore. Se l'operando sinistro è di tipo puntatore, l'operando destro deve essere di tipo puntatore o un'espressione costante che restituisce 0. Se l'operando sinistro è di tipo integrale, l'operando destro non deve essere di tipo puntatore.  
   
-## Risultato degli operatori di assegnazione  
- Gli operatori di assegnazione restituiscono il valore dell'oggetto specificato dall'operando sinistro in seguito all'assegnazione.  Il tipo risultante è il tipo dell'operando sinistro.  Il risultato di un'espressione di assegnazione è sempre un l\-value.  Questi operatori hanno un'associatività da destra a sinistra.  L'operando sinistro deve essere un l\-value modificabile.  
+## <a name="result-of-assignment-operators"></a>Risultato degli operatori di assegnazione  
+ Gli operatori di assegnazione restituiscono il valore dell'oggetto specificato dall'operando sinistro in seguito all'assegnazione. Il tipo risultante è il tipo dell'operando sinistro. Il risultato di un'espressione di assegnazione è sempre un l-value. Questi operatori hanno un'associatività da destra a sinistra. L'operando sinistro deve essere un l-value modificabile.  
   
- In ANSI C, Il risultato di un'espressione di assegnazione non è un l\-value.  Pertanto, l'espressione `(a += b) += c` risulta valida in C\+\+ e non valida in C.  
+ In ANSI C, Il risultato di un'espressione di assegnazione non è un l-value. Pertanto, l'espressione `(a += b) += c` risulta valida in C++ e non valida in C.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Espressioni con operatori binari](../cpp/expressions-with-binary-operators.md)   
- [Operatori C\+\+](../misc/cpp-operators.md)   
- [Operatori C\+\+, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Operatori C++ predefiniti, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operatori di assegnazione C](../c-language/c-assignment-operators.md)

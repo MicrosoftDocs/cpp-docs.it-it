@@ -1,41 +1,57 @@
 ---
-title: "Override espliciti (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classi derivate, funzioni virtual"
-  - "override esplicito di funzioni virtuali"
-  - "override esplicito di funzioni virtuali"
-  - "override, funzioni"
-  - "funzioni virtual, override esplicito"
+title: Override espliciti (C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- virtual functions, explicit overrides
+- overriding, functions
+- derived classes, virtual functions
+- explicit virtual function overrides
+- explicit override of virtual function
 ms.assetid: ee583234-5cda-4e90-b55e-3f9fbf079ced
 caps.latest.revision: 12
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Override espliciti (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 9ee79034ca7c74094753094cce29fc4a11b044ff
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="explicit-overrides-c"></a>Override espliciti (C++)
 **Sezione specifica Microsoft**  
   
- Se la stessa funzione virtuale viene dichiarata in due o più [interfacce](../cpp/interface.md) e se una classe è derivata da tali interfacce, è possibile eseguire l'override esplicito di ogni funzione virtuale.  
+ Se la stessa funzione virtuale viene dichiarata in due o più [interfacce](../cpp/interface.md) e se una classe è derivata da queste interfacce, è possibile ignorare in modo esplicito ogni funzione virtuale.  
   
- Per informazioni sugli override espliciti nel codice gestito utilizzando la nuova sintassi gestita, vedere [Override espliciti](../windows/explicit-overrides-cpp-component-extensions.md).  
+ Per informazioni sugli override espliciti nel codice gestito utilizzando la nuova sintassi gestita, vedere [override espliciti](../windows/explicit-overrides-cpp-component-extensions.md).  
   
  **Fine sezione specifica Microsoft**  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Nell'esempio di codice riportato di seguito viene illustrato come utilizzare gli override espliciti:  
   
 ```  
@@ -113,17 +129,20 @@ int main() {
   
    // Cast to a CMyClass pointer so that the destructor gets called  
       CMyClass *p = dynamic_cast<CMyClass *>(pIMyInt1);  
-      delete p;  
+      delete p;  
 }  
 ```  
   
-  **In CMyClass::IMyInt1::mf1\(\)**  
-**In CMyClass::IMyInt1::mf1\(int\)**  
-**In CMyClass::IMyInt1::mf2\(\)**  
-**In CMyClass::IMyInt1::mf2\(int\)**  
-**In CMyClass::IMyInt2::mf1\(\)**  
-**In CMyClass::IMyInt2::mf1\(int\)**  
-**In CMyClass::IMyInt2::mf2\(\)**  
-**In CMyClass::IMyInt2::mf2\(int\)**   
-## Vedere anche  
+```Output  
+In CMyClass::IMyInt1::mf1()  
+In CMyClass::IMyInt1::mf1(int)  
+In CMyClass::IMyInt1::mf2()  
+In CMyClass::IMyInt1::mf2(int)  
+In CMyClass::IMyInt2::mf1()  
+In CMyClass::IMyInt2::mf1(int)  
+In CMyClass::IMyInt2::mf2()  
+In CMyClass::IMyInt2::mf2(int)  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
  [Ereditarietà](../cpp/inheritance-cpp.md)

@@ -1,55 +1,71 @@
 ---
-title: "selectany | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "selectany_cpp"
-  - "selectany"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__declspec (parola chiave) [C++], selectany"
-  - "selectany __declspec (parola chiave)"
+title: selectany | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- selectany_cpp
+- selectany
+dev_langs:
+- C++
+helpviewer_keywords:
+- __declspec keyword [C++], selectany
+- selectany __declspec keyword
 ms.assetid: 9c353017-5a42-4f50-b741-bd13da1ce84d
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# selectany
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 9c17221e2d0875505d9aa3f1132ea4a4b6d4c489
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="selectany"></a>selectany
 **Sezione specifica Microsoft**  
   
- Viene indicato al compilatore che l'elemento dati globale \(variabile o oggetto\) è una funzione inclusa nel pacchetto \(COMDAT\) a scelta.  
+ Viene indicato al compilatore che l'elemento dati globale (variabile o oggetto) è una funzione inclusa nel pacchetto (COMDAT) a scelta.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 __declspec( selectany ) declarator  
 ```  
   
-## Note  
- In fase di collegamento, se sono visualizzate più definizioni di COMDAT, il linker ne sceglie una e ignora il resto.  Se l'opzione del linker [\/opt:REF](../build/reference/opt-optimizations.md) \(ottimizzazioni\) è selezionata, viene eseguita l'eliminazione COMDAT, in modo da rimuovere tutti gli elementi dati senza riferimenti presenti nell'output del linker.  
+## <a name="remarks"></a>Note  
+ In fase di collegamento, se sono visualizzate più definizioni di COMDAT, il linker ne sceglie una e ignora il resto. Se l'opzione del linker [/OPT: ref](../build/reference/opt-optimizations.md) (ottimizzazioni) è selezionata, quindi eliminazione COMDAT verificherà per rimuovere tutti gli elementi dati senza riferimenti nell'output del linker.  
   
- I costruttori e l'assegnazione attraverso funzione globale o metodi statici presenti nella dichiarazione non creano un riferimento e non impediscono l'eliminazione di \/opt:REF.  Non si dovrebbe contare sugli effetti collaterali di tale codice, quando non esistono altri riferimenti ai dati.  
+ I costruttori e l'assegnazione attraverso funzione globale o metodi statici presenti nella dichiarazione non creano un riferimento e non impediscono l'eliminazione di /opt:REF. Non si dovrebbe contare sugli effetti collaterali di tale codice, quando non esistono altri riferimenti ai dati.  
   
  Per gli oggetti globali, inizializzati in modo dinamico, `selectany` rimuove anche il codice di inizializzazione senza riferimenti dell'oggetto.  
   
- In genere, un elemento dati globale può essere inizializzato solo una volta, in un progetto DLL o EXE.  `selectany` può essere utilizzato per inizializzare i dati globali definiti dalle intestazioni, quando la stessa intestazione è presente in più file di origine.  `selectany` è disponibile sia per i compilatori C\+\+ che per i compilatori C.  
+ In genere, un elemento dati globale può essere inizializzato solo una volta, in un progetto DLL o EXE. `selectany` può essere utilizzato per inizializzare i dati globali definiti dalle intestazioni, quando la stessa intestazione è presente in più file di origine. `selectany` è disponibile sia per i compilatori C++ che per i compilatori C.  
   
 > [!NOTE]
 >  `selectany` può essere applicato solo all'effettiva inizializzazione degli elementi di dati globali che sono visibili esternamente.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  In questo codice viene illustrato come utilizzare l'attributo `selectany`:  
   
 ```  
@@ -82,8 +98,8 @@ int i;
 __declspec(selectany) X x(1);  
 ```  
   
-## Esempio  
- In questo codice viene illustrato come utilizzare l'attributo `selectany` per garantire la riduzione di dati COMDAT quando si utilizza anche l'opzione del linker [\/opt:ICF](../build/reference/opt-optimizations.md).  Si noti che i dati devono essere contrassegnati con `selectany` e devono essere inseriti in una sezione **const** di sola lettura.  È necessario specificare esplicitamente la sezione di sola lettura.  
+## <a name="example"></a>Esempio  
+ Questo codice viene illustrato come utilizzare il `selectany` attributo per garantire una riduzione di dati COMDAT quando si utilizza anche il [/OPT: ICF](../build/reference/opt-optimizations.md) l'opzione del linker. Si noti che i dati devono essere contrassegnati con `selectany` e inserito in un **const** sezione (in sola lettura). È necessario specificare esplicitamente la sezione di sola lettura.  
   
 ```  
 // selectany2.cpp  
@@ -98,6 +114,6 @@ int main() {
   
  **Fine sezione specifica Microsoft**  
   
-## Vedere anche  
- [\_\_declspec](../cpp/declspec.md)   
- [Parole chiave C\+\+](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>Vedere anche  
+ [declspec](../cpp/declspec.md)   
+ [Parole chiave](../cpp/keywords-cpp.md)

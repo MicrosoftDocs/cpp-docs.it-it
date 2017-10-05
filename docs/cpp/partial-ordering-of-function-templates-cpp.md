@@ -1,88 +1,108 @@
 ---
-title: "Ordinamento parziale di modelli di funzione (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ordinamento parziale di modelli di funzione"
+title: Ordinamento parziale dei modelli di funzione (C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- partial ordering of function templates
 ms.assetid: 0c17347d-0e80-47ad-b5ac-046462d9dc73
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Ordinamento parziale di modelli di funzione (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: f460497071445cff87308fa9bf6e0d43c6f13a3e
+ms.openlocfilehash: 252f80416f581ecc2c126bc44ab22c1b63c50130
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-Possono essere disponibili più modelli di funzioni corrispondente all'elenco di argomenti di una chiamata di funzione.  In C\+\+ viene definito un ordinamento parziale dei modelli di funzione per specificare la funzione che deve essere chiamata.  L'ordinamento è parziale perché possono essere presenti alcuni modelli considerati ugualmente specializzati.  
-  
- Il compilatore sceglie la funzione del modello più specializzato disponibile tra le possibili corrispondenze.  Ad esempio, se un modello di funzione accetta un tipo **T** ed è disponibile un altro modello di funzione che accetta **T\***, la versione **T\*** è più specializzata ed è preferibile rispetto alla versione generica **T** ogni volta che l'argomento è un tipo puntatore, anche se entrambe sarebbero corrispondenze consentite.  
-  
- Utilizzare la procedura seguente per determinare se un candidato di modello di funzione è più specializzato:  
-  
-1.  Considerare due modelli di funzione, T1 e T2.  
-  
-2.  Sostituire i parametri in T1 con un tipo univoco ipotetico X.  
-  
-3.  Con l'elenco di parametri in T1, vedere se T2 è un modello valido per tale elenco di parametri.  Ignorare tutte le conversioni implicite.  
-  
-4.  Ripetere la stessa procedura con T1 e T2 all'inverso.  
-  
-5.  Se un modello è un elenco di argomenti di modello valido per l'altro modello, ma non è vero il contrario, tale modello è considerato meno specializzato dell'altro.  Se entrambi i modelli utilizzati nel passaggio precedente costituiscono argomenti validi l'uno per l'altro, verranno considerati ugualmente specializzati e il tentativo di utilizzarli provocherà una chiamata ambigua.  
-  
-6.  Utilizzare le regole seguenti:  
-  
-    1.  Una specializzazione di modello per un tipo specifico è più specializzata di una che accetta un argomento di tipo generico.  
-  
-    2.  Un modello che accetta solo **T\*** è più specializzato di uno che accetta solo **T**, poiché un tipo ipotetico **X\*** è un argomento valido per un argomento di modello **T**, ma **X** non è un argomento valido per un argomento di modello **T\***.  
-  
-    3.  **const T** è più specializzato di **T**, poiché **const X** è un argomento valido per un argomento di modello **T**, ma **X** non è un argomento valido per un argomento di modello **const T**.  
-  
-    4.  **const T\*** è più specializzato di **T\***, poiché **const X\*** è un argomento valido per un argomento di modello **T\***, ma **X\*** non è un argomento valido per un argomento di modello **const T\***.  
-  
-7.  L'esempio seguente funziona in Visual C\+\+ .NET 2003 come specificato nello standard:  
-  
+---
+
+# <a name="partial-ordering-of-function-templates-c"></a>Ordinamento parziale di modelli di funzione (C++)
+
+Possono essere disponibili più modelli di funzioni corrispondente all'elenco di argomenti di una chiamata di funzione. In C++ viene definito un ordinamento parziale dei modelli di funzione per specificare la funzione che deve essere chiamata. L'ordinamento è parziale perché possono essere presenti alcuni modelli considerati ugualmente specializzati.
+
+Il compilatore sceglie la funzione del modello più specializzato disponibile tra le possibili corrispondenze. Ad esempio, se un modello di funzione accetta un tipo __T__e un altro modello di funzione richiede __T\* __ è disponibile, il __T\* __ versione viene definita per essere più specializzata ed è preferibile generica __T__ versione ogni volta che l'argomento è un tipo di puntatore, anche se entrambe sarebbero corrispondenze consentite.
+
+Utilizzare la procedura seguente per determinare se un candidato di modello di funzione è più specializzato:
+
+1. Considerare due modelli di funzione, T1 e T2.
+
+2. Sostituire i parametri in T1 con un tipo univoco ipotetico X.
+
+3. Con l'elenco di parametri in T1, vedere se T2 è un modello valido per tale elenco di parametri. Ignorare tutte le conversioni implicite.
+
+4. Ripetere la stessa procedura con T1 e T2 all'inverso.
+
+5. Se un modello è un elenco di argomenti di modello valido per l'altro modello, ma non è vero il contrario, tale modello è considerato meno specializzato dell'altro. Se entrambi i modelli utilizzando i precedente passaggio modulo argomenti validi per l'altro, verranno considerati ugualmente specializzati e risultati di una chiamata ambigua quando si tenta di usarli.
+
+6. Utilizzare le regole seguenti:
+
+     1. Una specializzazione di modello per un tipo specifico è più specializzata di una che accetta un argomento tipo generico.
+
+     2. Un modello richiede solo __T\* __ è più specializzato di prendere una __T__, perché il tipo di un ipotetico __X\* __ è un argomento valido per un __T__ argomento di modello, ma __X__ non è un argomento valido per un __T\* __ argomento di modello.
+
+     3. __const T__ è più specializzato di __T__perché __const X__ è un argomento valido per un __T__ argomento di modello, ma __X__ non è un argomento valido per un __const T__ argomento di modello.
+
+     4. __const T\* __ è più specializzato di __T\*__perché __const X\* __ è un argomento valido per un __T\* __ argomento di modello, ma __X\* __ non è un argomento valido per un __const T\* __ argomento di modello.
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente funziona come specificato nello standard:
+
+```cpp
+// partial_ordering_of_function_templates.cpp
+// compile with: /EHsc
+#include <iostream>
+
+extern "C" int printf(const char*,...);
+template <class T> void f(T) {
+   printf_s("Less specialized function called\n");
+}
+
+template <class T> void f(T*) {
+   printf_s("More specialized function called\n");
+}
+
+template <class T> void f(const T*) {
+   printf_s("Even more specialized function for const T*\n");
+}
+
+int main() {
+   int i =0;
+   const int j = 0;
+   int *pi = &i;
+   const int *cpi = &j;
+
+   f(i);   // Calls less specialized function.
+   f(pi);  // Calls more specialized function.
+   f(cpi); // Calls even more specialized function.
+   // Without partial ordering, these calls would be ambiguous.
+}
 ```  
-// partial_ordering_of_function_templates.cpp  
-// compile with: /EHsc  
-#include <iostream>  
   
-extern "C" int printf(const char*,...);  
-template <class T> void f(T) {  
-   printf_s("Less specialized function called\n");  
-}  
-  
-template <class T> void f(T*) {  
-   printf_s("More specialized function called\n");  
-}  
-  
-template <class T> void f(const T*) {  
-   printf_s("Even more specialized function for const T*\n");  
-}  
-  
-int main() {  
-   int i =0;  
-   const int j = 0;  
-   int *pi = &i;  
-   const int *cpi = &j;  
-  
-   f(i);   // Calls less specialized function.  
-   f(pi);  // Calls more specialized function.  
-   f(cpi); // Calls even more specialized function.  
-   // Without partial ordering, these calls would be ambiguous.  
-}  
-```  
-  
-### Output  
+### <a name="output"></a>Output  
   
 ```  
 Less specialized function called  
@@ -90,5 +110,7 @@ More specialized function called
 Even more specialized function for const T*  
 ```  
   
-## Vedere anche  
- [Modelli di funzioni](../cpp/function-templates.md)
+## <a name="see-also"></a>Vedere anche
+
+[Modelli di funzioni](../cpp/function-templates.md)
+

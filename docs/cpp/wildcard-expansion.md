@@ -1,40 +1,57 @@
 ---
-title: "Espansione di caratteri jolly | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_setargv"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_setargv (funzione)"
-  - "carattere jolly asterisco"
-  - "riga di comando, elaborazione argomenti"
-  - "riga di comando, caratteri jolly"
-  - "caratteri jolly da riga di comando"
-  - "punto interrogativo, carattere jolly"
+title: Espansione di caratteri jolly | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _setargv
+dev_langs:
+- C++
+helpviewer_keywords:
+- asterisk wildcard
+- _setargv function
+- command line, processing arguments
+- command line, wildcards
+- command-line wildcards
+- question mark, wildcard
 ms.assetid: 1a543398-607b-4404-93d1-45d290bde638
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Espansione di caratteri jolly
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 779a788cae6523a48a82694e55edf3c1da5519d7
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-## Sezione specifica Microsoft  
- È possibile utilizzare caratteri jolly, ovvero il punto interrogativo \(?\) e l'asterisco \(\*\), per specificare gli argomenti del percorso e del nome del file nella riga di comando.  
+---
+# <a name="wildcard-expansion"></a>Espansione di caratteri jolly
+## <a name="microsoft-specific"></a>Sezione specifica Microsoft  
+ È possibile usare caratteri jolly, ovvero il punto interrogativo (?) e l'asterisco (*), per specificare gli argomenti del percorso e del nome del file nella riga di comando.  
   
- Gli argomenti della riga di comando vengono gestiti da una routine denominata **\_setargv** \(o **\_wsetargv** nell'ambiente con caratteri "wide"\), che per impostazione predefinita non consente di espandere i caratteri jolly in stringhe separate nella matrice di stringhe `argv`.  Per ulteriori informazioni sull'abilitazione dell'espansione dei caratteri jolly, vedere [Espansione di argomenti con caratteri jolly](../c-language/expanding-wildcard-arguments.md).  
+ Gli argomenti della riga di comando vengono gestiti da una routine denominata **Setargv** (o **Wsetargv** nell'ambiente a caratteri wide), che per impostazione predefinita non consente di espandere i caratteri jolly in stringhe separate nella `argv`matrice di stringhe. Per ulteriori informazioni sull'abilitazione di espansione di caratteri jolly, vedere [espansione degli argomenti jolly](../c-language/expanding-wildcard-arguments.md).  
   
-## Fine sezione specifica Microsoft  
+**Fine sezione specifica Microsoft**  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [main: avvio del programma](../cpp/main-program-startup.md)

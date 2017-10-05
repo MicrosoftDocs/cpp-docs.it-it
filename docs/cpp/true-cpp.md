@@ -1,43 +1,59 @@
 ---
-title: "true (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "true_cpp"
-  - "true"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "true (parola chiave) [C++]"
+title: true (C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- true_cpp
+- "true"
+dev_langs:
+- C++
+helpviewer_keywords:
+- true keyword [C++]
 ms.assetid: 96be2a70-51c3-4250-9752-874d25a5a11e
 caps.latest.revision: 12
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# true (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: b10cf33ff93a01347ee8c8e7fc56bb5be8058f3a
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
 
-## Sintassi  
+---
+# <a name="true-c"></a>true (C++)
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
-        bool-identifier = true ;  
+      bool-identifier = true ;  
 bool-expression logical-operator true ;  
 ```  
   
-## Note  
- Questa parola chiave è uno dei due valori di una variabile di tipo [bool](../cpp/bool-cpp.md) o di un'espressione condizionale \(un'espressione condizionale è ora un'espressione booleana true\).  Se `i` è di tipo `bool`, l'istruzione `i = true;` assegnare **true** a `i`.  
+## <a name="remarks"></a>Note  
+ Questa parola chiave è uno dei due valori per una variabile di tipo [bool](../cpp/bool-cpp.md) o un'espressione condizionale (un'espressione condizionale è ora un'espressione booleana true). Se `i` è di tipo `bool`, quindi l'istruzione `i = true;` assegna **true** a `i`.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // bool_true.cpp  
@@ -51,7 +67,10 @@ int main()
 }  
 ```  
   
-  **1**  
-**0**   
-## Vedere anche  
- [Parole chiave C\+\+](../cpp/keywords-cpp.md)
+```Output  
+1  
+0  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Parole chiave](../cpp/keywords-cpp.md)
