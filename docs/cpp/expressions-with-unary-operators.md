@@ -12,7 +12,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - expressions [C++], unary operators
-- unary operators, expressions with
+- unary operators [C++], expressions with
 - expressions [C++], operators
 ms.assetid: 1217685b-b85d-4b48-9ff4-d90f56a26c1b
 caps.latest.revision: 8

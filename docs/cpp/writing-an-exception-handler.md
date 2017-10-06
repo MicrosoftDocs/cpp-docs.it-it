@@ -11,8 +11,8 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- structured exception handling, exception handlers
-- exception handling, exception handlers
+- structured exception handling [C++], exception handlers
+- exception handling [C++], exception handlers
 ms.assetid: 71473fee-f773-4a34-bf12-82a3af79579c
 caps.latest.revision: 7
 author: mikeblome

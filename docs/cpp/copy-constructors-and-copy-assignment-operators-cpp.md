@@ -11,9 +11,9 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- = operator, copying objects
-- assignment statements, copying objects
-- assignment operators, for copying objects
+- = operator [C++], copying objects
+- assignment statements [C++], copying objects
+- assignment operators [C++], for copying objects
 - objects [C++], copying
 - initializing objects, by copying objects
 - copying objects

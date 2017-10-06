@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- HelpFile method
+- HelpFile method [C++]
 ms.assetid: d2d3a0a1-6b62-4d52-a818-3cfae545a4af
 caps.latest.revision: 6
 author: mikeblome

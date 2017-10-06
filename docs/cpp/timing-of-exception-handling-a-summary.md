@@ -11,14 +11,14 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- sequence
+- sequence [C++]
 - sequence, of handlers
-- exception handling, timing
+- exception handling [C++], timing
 - SETJMPEX.H
-- termination handlers, timing
+- termination handlers [C++], timing
 - SETJMP.H
-- handlers, order of exception
-- structured exception handling, timing
+- handlers [C++], order of exception
+- structured exception handling [C++], timing
 ms.assetid: 5d1da546-73fd-4673-aa1a-7ac0f776c420
 caps.latest.revision: 6
 author: mikeblome

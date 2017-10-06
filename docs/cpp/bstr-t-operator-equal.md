@@ -13,9 +13,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- operator =, bstr
-- operator=, bstr
-- = operator, with specific Visual C++ objects
+- operator = [C++], bstr
+- operator= [C++], bstr
 ms.assetid: fb31bb1b-ce29-4388-b5fd-8dac830cf18a
 caps.latest.revision: 6
 author: mikeblome

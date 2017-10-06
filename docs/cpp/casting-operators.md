@@ -12,7 +12,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - operators [C++], casting
-- casting operators
+- casting operators [C++]
 ms.assetid: 16240348-26bc-4f77-8eab-57253f00ce52
 caps.latest.revision: 7
 author: mikeblome

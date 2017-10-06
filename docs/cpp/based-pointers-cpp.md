@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
+- __based
 - __based_cpp
 dev_langs:
 - C++

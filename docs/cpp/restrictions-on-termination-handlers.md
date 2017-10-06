@@ -11,7 +11,7 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- termination handlers, limitations
+- termination handlers [C++], limitations
 - restrictions, termination handlers
 - try-catch keyword [C++], termination handlers
 ms.assetid: 8b1cb481-303f-4e79-b409-57a002a9fa9e

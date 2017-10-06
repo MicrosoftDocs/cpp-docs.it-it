@@ -25,7 +25,7 @@ helpviewer_keywords:
 - try-finally keyword [C++]
 - __finally keyword [C++], try-finally statement syntax
 - __leave keyword [C++], try-finally statement
-- structured exception handling, try-finally
+- structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
 caps.latest.revision: 14
 author: mikeblome

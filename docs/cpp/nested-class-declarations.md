@@ -13,9 +13,9 @@ dev_langs:
 helpviewer_keywords:
 - classes [C++], declaring
 - declarations, class
-- nested classes
-- nested classes, declaring
-- declaring classes
+- nested classes [C++]
+- nested classes [C++], declaring
+- declaring classes [C++]
 - declarations, nested classes
 ms.assetid: c02e471d-b7f9-41b8-8ef6-2323f006dbd5
 caps.latest.revision: 9

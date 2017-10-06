@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Detach method
+- Detach method [C++]
 ms.assetid: 0652053e-af37-44e9-a278-2522212ebfed
 caps.latest.revision: 6
 author: mikeblome

@@ -12,9 +12,9 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - classes [C++], abstract
-- base classes, abstract classes
-- abstract classes
-- derived classes, abstract classes
+- base classes [C++], abstract classes [C++]
+- abstract classes [C++]
+- derived classes [C++], abstract classes [C++]
 ms.assetid: f0c5975b-39de-4d68-9640-6ce57f4632e6
 caps.latest.revision: 7
 author: mikeblome

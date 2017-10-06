@@ -12,7 +12,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - arrays [C++], indirection on type
-- indirection operator, array types
+- indirection operator [C++], array types
 ms.assetid: 4adc3840-68d1-4602-9db2-8809d4388279
 caps.latest.revision: 8
 author: mikeblome

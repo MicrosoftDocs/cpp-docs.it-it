@@ -11,7 +11,7 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- _variant_t class, member functions
+- _variant_t class [C++], member functions
 ms.assetid: 3c340097-55c3-4efe-873e-11e8a56f552d
 caps.latest.revision: 7
 author: mikeblome

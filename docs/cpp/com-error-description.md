@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Description method
+- Description method [C++]
 ms.assetid: 88191e24-4ee8-44a6-8c4c-3758e22e0548
 caps.latest.revision: 6
 author: mikeblome

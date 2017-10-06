@@ -14,7 +14,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - reference operator
-- '& operator, reference operator'
+- '& operator [C++], reference operator'
 ms.assetid: edf0513d-3dcc-4663-b276-1269795dda51
 caps.latest.revision: 14
 author: mikeblome

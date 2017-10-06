@@ -11,7 +11,7 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- sequence
+- sequence [C++]
 - sequence, C++ arrays
 - arrays [C++]
 ms.assetid: ec53baa3-b77e-49be-911f-61fa1362943f

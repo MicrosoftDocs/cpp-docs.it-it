@@ -11,7 +11,7 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- exception handling, filters
+- exception handling [C++], filters
 ms.assetid: 47fc832b-a707-4422-b60a-aaefe14189e5
 caps.latest.revision: 9
 author: mikeblome

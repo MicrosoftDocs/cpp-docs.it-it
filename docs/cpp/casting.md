@@ -11,12 +11,12 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- casting
-- coercion
-- virtual functions, in derived classes
+- casting [C++]
+- coercion [C++]
+- virtual functions [C++], in derived classes [C++]
 - static cast operator
 - dynamic cast operator
-- polymorphic classes
+- polymorphic classes [C++]
 - classes [C++], polymorphism
 ms.assetid: 3dbeb06e-2f4b-4693-832d-624bc8ec95de
 caps.latest.revision: 6

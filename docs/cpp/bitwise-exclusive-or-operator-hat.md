@@ -14,9 +14,9 @@ helpviewer_keywords:
 - operators [C++], bitwise
 - exclusive OR operator
 - XOR operator
-- bitwise operators, OR operator
+- bitwise operators [C++], OR operator
 - ^ operator
-- OR operator, bitwise exclusive
+- OR operator [C++], bitwise exclusive
 - operators [C++], logical
 ms.assetid: f9185d85-65d5-4f64-a6d6-679758d52217
 caps.latest.revision: 7

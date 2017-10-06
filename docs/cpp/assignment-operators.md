@@ -28,7 +28,7 @@ helpviewer_keywords:
 - or_eq operator
 - '&= operator'
 - operators [C++], assignment
-- assignment operators, C++
+- assignment operators [C++], C++
 - xor_eq operator
 - += operator
 - and_eq operator
@@ -40,7 +40,7 @@ helpviewer_keywords:
 - ^= operator
 - operator >>=
 - = operator
-- assignment operators
+- assignment operators [C++]
 - -= operator
 - /= operator
 - <<= operator

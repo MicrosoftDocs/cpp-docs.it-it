@@ -11,9 +11,9 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- member-selection operators
+- member-selection operators [C++]
 - operators [C++], binary
-- binary operators
+- binary operators [C++]
 ms.assetid: c0e7fbff-bc87-4708-8333-504ac09ee83e
 caps.latest.revision: 7
 author: mikeblome

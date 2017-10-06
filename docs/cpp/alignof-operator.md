@@ -15,10 +15,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- alignas
+- alignas [C++]
 - alignment of structures
 - __alignof keyword [C++]
-- alignof
+- alignof [C++]
 - types [C++], alignment requirements
 ms.assetid: acb1eed7-6398-40bd-b0c5-684ceb64afbc
 caps.latest.revision: 11

@@ -13,8 +13,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- automatic storage class, auto keyword
-- auto keyword
+- automatic storage class [C++], auto keyword
+- auto keyword [C++]
 ms.assetid: 744a41c0-2510-4140-a1be-96257e722908
 caps.latest.revision: 14
 author: mikeblome

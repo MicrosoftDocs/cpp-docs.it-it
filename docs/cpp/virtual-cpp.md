@@ -14,9 +14,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- virtual base classes, declaring
-- base classes, virtual
-- virtual functions, declaring
+- virtual base classes [C++], declaring
+- base classes [C++], virtual
+- virtual functions [C++], declaring
 - virtual keyword [C++]
 ms.assetid: c2eb987d-6cf3-43b6-aa0c-29a6f561b1ae
 caps.latest.revision: 9

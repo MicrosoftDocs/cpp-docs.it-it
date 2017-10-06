@@ -14,12 +14,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- command line, processing
+- command line [C++], processing
 - command-line processing
 - startup code, customizing command-line processing
 - environment, environment-processing routine
 - _setargv function
-- command line, processing arguments
+- command line [C++], processing arguments
 - suppressing environment processing
 - _setenvp function
 ms.assetid: aae01cbb-892b-48b8-8e1f-34f22421f263

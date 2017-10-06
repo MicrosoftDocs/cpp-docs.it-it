@@ -18,7 +18,7 @@ helpviewer_keywords:
 - '!= operator'
 - equality operator
 - not equal to comparison operator
-- equality operator, syntax
+- equality operator [C++], syntax
 - == operator
 - not_eq operator
 - equal to operator

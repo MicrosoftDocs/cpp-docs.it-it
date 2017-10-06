@@ -12,7 +12,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - operators [C++], binary
-- binary operators
+- binary operators [C++]
 - expressions [C++], binary operators
 ms.assetid: 6dea3df4-a4bd-42c3-9807-4a27c120ac9a
 caps.latest.revision: 7

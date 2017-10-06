@@ -22,10 +22,10 @@ helpviewer_keywords:
 - throw keyword [C++]
 - try-catch keyword [C++]
 - try-catch keyword [C++], exception handling
-- throwing exceptions, throw keyword
+- throwing exceptions [C++], throw keyword
 - try-catch keyword [C++], throw keyword [C++]s
-- throwing exceptions, implementing C++ exception handling
-- throwing exceptions
+- throwing exceptions [C++], implementing C++ exception handling
+- throwing exceptions [C++]
 - throw keyword [C++], throw() vs. throw(...)
 ms.assetid: 15e6a87b-b8a5-4032-a7ef-946c644ba12a
 caps.latest.revision: 24

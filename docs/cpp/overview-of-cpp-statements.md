@@ -11,7 +11,7 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- statements, C++
+- statements [C++]
 ms.assetid: e56996b2-b846-4b99-ac94-ac72fffc5ec7
 caps.latest.revision: 6
 author: mikeblome

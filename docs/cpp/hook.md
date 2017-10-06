@@ -9,12 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- __hook
+- __hook_cpp
 dev_langs:
 - C++
 helpviewer_keywords:
 - __hook keyword [C++]
-- event handlers, connecting events to
+- event handlers [C++], connecting events to
 ms.assetid: f4cabb10-d293-4c0e-a1d2-4745ef9cc22c
 caps.latest.revision: 10
 author: mikeblome

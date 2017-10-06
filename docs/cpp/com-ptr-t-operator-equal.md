@@ -14,9 +14,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- operator =, pointers
-- = operator, with specific Visual C++ objects
-- operator=, pointers
+- operator = [C++], pointers
+- = operator [C++], with specific Visual C++ objects
+- operator= [C++], pointers
 ms.assetid: 46849455-371c-4d0f-bae4-c1f737d2ca4a
 caps.latest.revision: 6
 author: mikeblome

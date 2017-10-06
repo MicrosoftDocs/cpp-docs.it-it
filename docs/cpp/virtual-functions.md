@@ -12,7 +12,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - functions [C++], virtual functions
-- derived classes, virtual functions
+- derived classes [C++], virtual functions
 - virtual functions
 ms.assetid: b3e1ed88-2a90-4af8-960a-16f47deb3452
 caps.latest.revision: 10

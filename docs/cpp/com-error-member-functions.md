@@ -11,7 +11,7 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- _com_error class, member functions
+- _com_error class [C++], member functions
 ms.assetid: 39a73cdb-c12c-4d3b-a314-e3f6580f4d2d
 caps.latest.revision: 7
 author: mikeblome

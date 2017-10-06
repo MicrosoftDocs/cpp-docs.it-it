@@ -14,17 +14,17 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - constructors [C++], and constants
-- conversion functions
-- explicit keyword
+- conversion functions [C++]
+- explicit keyword [C++]
 - type conversion
 - constructors [C++], drawbacks
 - conversion constructors
 - type conversion [C++], explicit conversion
-- coercion
+- coercion [C++]
 - conversions [C++], explicit
 - objects [C++], converting
-- conversion functions, rules for declaring
-- declaring functions, conversion functions
+- conversion functions [C++], rules for declaring
+- declaring functions [C++], conversion functions
 - functions [C++], conversion
 - converting objects
 - constructors [C++], conversion

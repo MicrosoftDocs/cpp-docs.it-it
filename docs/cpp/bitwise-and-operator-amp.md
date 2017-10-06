@@ -10,13 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - bitand
-- '&'
 dev_langs:
 - C++
 helpviewer_keywords:
 - AND operator
-- bitwise operators, AND operator
-- '& operator, bitwise operators'
+- bitwise operators [C++], AND operator
+- '& operator [C++], bitwise operators'
 ms.assetid: 76f40de3-c417-47b9-8a77-532f3fc990a5
 caps.latest.revision: 7
 author: mikeblome

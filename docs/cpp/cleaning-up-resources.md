@@ -11,11 +11,11 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- termination handlers, cleaning up resources
-- exception handling, cleaning up resources
+- termination handlers [C++], cleaning up resources
+- exception handling [C++], cleaning up resources
 - C++ exception handling, termination handlers
 - resources [C++], cleaning up
-- exception handling, cleanup code
+- exception handling [C++], cleanup code
 - try-catch keyword [C++], termination handlers
 ms.assetid: 65753efe-6a27-4750-b90c-50635775c1b6
 caps.latest.revision: 8

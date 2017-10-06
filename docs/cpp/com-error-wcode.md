@@ -10,11 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - _com_error::WCode
-- WCode
 dev_langs:
 - C++
 helpviewer_keywords:
-- WCode method
+- WCode method [C++]
 ms.assetid: f3b21852-f8ea-4e43-bff1-11c2d35454c4
 caps.latest.revision: 6
 author: mikeblome

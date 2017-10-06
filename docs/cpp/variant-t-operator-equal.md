@@ -13,9 +13,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- operator=, variant
-- operator =, variant
-- = operator, with specific Visual C++ objects
+- operator= [C++], variant
+- operator = [C++], variant
+- = operator [C++], with specific Visual C++ objects
 ms.assetid: 77622723-6e49-4dec-9e0f-fa74028f1a3c
 caps.latest.revision: 6
 author: mikeblome

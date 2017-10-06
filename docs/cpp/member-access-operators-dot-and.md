@@ -19,7 +19,7 @@ helpviewer_keywords:
 - dot operator (.)
 - -> operator
 - member access, operators
-- postfix operators
+- postfix operators [C++]
 - . operator
 - member access
 ms.assetid: f8fc3df9-d728-40c5-b384-276927f5f1b3

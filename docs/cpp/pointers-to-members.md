@@ -12,9 +12,9 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - declarations, pointers
-- class members, pointers to
+- class members [C++], pointers to
 - pointers, to members
-- members, pointers to
+- members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
 caps.latest.revision: 9

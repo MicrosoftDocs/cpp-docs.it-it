@@ -14,10 +14,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- unary operators, plus
+- unary operators [C++], plus
 - '- operator'
 - negation operator
-- + operator, unary operators
+- + operator [C++], unary operators
 - + operator
 ms.assetid: 2c58c4f4-0d92-4ae3-9d0c-1a6157875cc1
 caps.latest.revision: 8

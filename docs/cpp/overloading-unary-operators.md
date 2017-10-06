@@ -11,12 +11,12 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- unary operators, plus
-- increment operators, overloaded
-- unary operators, minus
+- unary operators [C++], plus
+- increment operators [C++], overloaded
+- unary operators [C++], minus
 - operators [C++], unary
-- redefinable unary operators
-- unary operators
+- redefinable unary operators [C++]
+- unary operators [C++]
 - pointer dereference operator overloading
 - plus operator
 ms.assetid: 7683ef08-42a4-4283-928f-d3dd4f3ab4c0

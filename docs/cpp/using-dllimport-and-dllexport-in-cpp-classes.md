@@ -11,16 +11,16 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- exporting classes
+- exporting classes [C++]
 - declarations [C++], class
 - exportable classes [C++]
 - classes [C++], declaring
 - classes [C++], exportable and inheritance
-- inheritance [C++], exportable classes
+- inheritance [C++], exportable classes [C++]
 - dllimport attribute [C++], classes
-- declaring classes
+- declaring classes [C++]
 - dllexport attribute [C++]
-- dllexport attribute [C++], classes
+- dllexport attribute [C++], classes [C++]
 ms.assetid: 8d7d1303-b9e9-47ca-96cc-67bf444a08a9
 caps.latest.revision: 8
 author: mikeblome

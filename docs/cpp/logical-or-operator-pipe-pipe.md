@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- OR operator, logical
+- OR operator [C++], logical
 - '|| operator'
 - OR operator
 - logical OR operator

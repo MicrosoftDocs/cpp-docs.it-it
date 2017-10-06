@@ -12,7 +12,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - objects [C++], referencing
-- references
+- references [C++]
 - references, to pointers
 - declarations, references
 - references, declaring

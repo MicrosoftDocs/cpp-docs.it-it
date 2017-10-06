@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords:
 - asterisk wildcard
 - _setargv function
-- command line, processing arguments
-- command line, wildcards
+- command line [C++], processing arguments
+- command line [C++], wildcards
 - command-line wildcards
 - question mark, wildcard
 ms.assetid: 1a543398-607b-4404-93d1-45d290bde638

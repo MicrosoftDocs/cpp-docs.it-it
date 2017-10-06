@@ -15,8 +15,8 @@ helpviewer_keywords:
 - operator precedence
 - precedence, operators
 - operators (C++), associativity
-- multiple operators
-- associativity of operators
+- multiple operators [C++]
+- associativity of operators [C++]
 - operators [C++], precedence
 - evaluation order
 - hierarchy, operator

@@ -12,8 +12,8 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - classes [C++], scope
-- scope
-- function prototypes, scope
+- scope [C++]
+- function prototypes [C++], scope
 - class scope
 - prototype scope
 - functions [C++], scope

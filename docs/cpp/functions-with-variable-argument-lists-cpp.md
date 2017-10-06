@@ -15,7 +15,7 @@ helpviewer_keywords:
 - variable argument lists
 - declarators, functions
 - argument lists [C++], variable number of
-- declaring functions, variables
+- declaring functions [C++], variables
 - function calls, variable number of arguments
 ms.assetid: 27c2f83a-21dd-44c6-913c-2834cb944703
 caps.latest.revision: 16

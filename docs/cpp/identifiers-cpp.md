@@ -15,7 +15,7 @@ helpviewer_keywords:
 - decorated names, about decorated names
 - identifiers, C++
 - white space, in C++ identifiers
-- identifiers
+- identifiers [C++]
 ms.assetid: 03a0dfb1-4530-4cdf-8295-5ea4dca4c1b8
 caps.latest.revision: 11
 author: mikeblome

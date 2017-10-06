@@ -13,9 +13,9 @@ dev_langs:
 helpviewer_keywords:
 - arguments [C++], function
 - functions [C++], paramters
-- function parameters, reference-type
-- function arguments, reference-type
-- passing parameters, reference-type arguments
+- function parameters [C++], reference-type
+- function arguments [C++], reference-type
+- passing parameters [C++], reference-type arguments
 ms.assetid: 0a70e831-9e76-46c0-821d-aeba13d73cc0
 caps.latest.revision: 8
 author: mikeblome

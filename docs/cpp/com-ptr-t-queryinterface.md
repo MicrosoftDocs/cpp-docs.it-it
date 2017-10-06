@@ -14,7 +14,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- QueryInterface method
+- QueryInterface method [C++]
 ms.assetid: d03292f1-6b02-40db-9756-8b0837a97319
 caps.latest.revision: 6
 author: mikeblome

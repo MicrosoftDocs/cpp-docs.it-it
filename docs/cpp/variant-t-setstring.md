@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- SetString method
+- SetString method [C++]
 ms.assetid: 816b08e5-6830-46ca-b3d7-7689308b3be3
 caps.latest.revision: 6
 author: mikeblome

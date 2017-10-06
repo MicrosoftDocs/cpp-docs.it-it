@@ -13,7 +13,7 @@ dev_langs:
 helpviewer_keywords:
 - declarators, pointers
 - declarations, pointers
-- pointers
+- pointers [C++]
 - pointers, declarations
 ms.assetid: 595387c5-8e58-4670-848f-344c7caf985e
 caps.latest.revision: 14

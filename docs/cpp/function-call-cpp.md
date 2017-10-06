@@ -13,12 +13,12 @@ dev_langs:
 helpviewer_keywords:
 - function calls, C++ functions
 - functions [C++], calling
-- operator overloading, function calls
-- function overloading, function-call operator
+- operator overloading [C++], function calls
+- function overloading [C++], function-call operator
 - function calls, operator
 - operators [C++], overloading
-- operator overloading, examples
-- function call operator ( )
+- operator overloading [C++], examples
+- function call operator ()
 ms.assetid: 5094254a-045b-46f7-8653-69bc91e80dce
 caps.latest.revision: 7
 author: mikeblome

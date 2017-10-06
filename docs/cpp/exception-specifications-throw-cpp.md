@@ -11,9 +11,9 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- exceptions, exception specifications
-- throwing exceptions, throw keyword
-- C++ exception handling, throwing exceptions
+- exceptions [C++], exception specifications
+- throwing exceptions [C++], throw keyword
+- C++ exception handling [C++], throwing exceptions
 - throw keyword [C++], throw() vs. throw(...)
 - throw keyword [C++], exception specifications
 ms.assetid: 4d3276df-6f31-4c7f-8cab-b9d2d003a629

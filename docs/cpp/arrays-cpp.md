@@ -11,8 +11,8 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- declaring arrays, about declaring arrays
-- multidimensional arrays
+- declaring arrays [C++], about declaring arrays
+- multidimensional arrays [C++]
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
 caps.latest.revision: 12

@@ -10,10 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - _com_error::Error
+- Error
 dev_langs:
 - C++
 helpviewer_keywords:
-- Error method
+- Error method [C++]
 ms.assetid: b53a15fd-198e-4276-afcd-13439c4807f7
 caps.latest.revision: 6
 author: mikeblome

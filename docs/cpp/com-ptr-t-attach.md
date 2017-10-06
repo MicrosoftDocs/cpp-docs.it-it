@@ -14,7 +14,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - COM interfaces, attach pointer
-- Attach method
+- Attach method [C++]
 ms.assetid: 94c18e0a-06be-4ca7-bdaf-cd54ec0a645e
 caps.latest.revision: 6
 author: mikeblome

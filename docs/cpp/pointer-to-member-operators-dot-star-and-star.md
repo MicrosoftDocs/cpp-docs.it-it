@@ -15,7 +15,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - expressions [C++], pointer
-- pointer-to-member operators
+- pointer-to-member operators [C++]
 - .* operator
 - expressions [C++], operators
 - ->* operator

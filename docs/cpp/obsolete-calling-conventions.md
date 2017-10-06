@@ -15,7 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- WINAPI
+- WINAPI [C++]
 - __syscall keyword [C++]
 - __pascal keyword [C++]
 - __fortran keyword [C++]

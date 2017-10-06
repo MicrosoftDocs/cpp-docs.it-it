@@ -14,7 +14,7 @@ helpviewer_keywords:
 - arguments [C++], function
 - function declarators
 - functions [C++], default arguments
-- declaring functions, declarators
+- declaring functions [C++], declarators
 - default arguments
 - arguments [C++], default
 - defaults [C++], arguments

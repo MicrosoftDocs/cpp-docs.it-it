@@ -12,9 +12,9 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - this pointer, and nonstatic member functions
-- nonstatic member functions
-- inline functions, treating member functions as
-- member functions, definition in class declaration
+- nonstatic member functions [C++]
+- inline functions [C++], treating member functions as
+- member functions [C++], definition in class declaration
 ms.assetid: 9f77a438-500e-40bb-a6c6-544678f3f4c8
 caps.latest.revision: 6
 author: mikeblome

@@ -12,14 +12,14 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - run-time errors, treating as exceptions
-- exception handling, errors as exceptions
-- exceptions, flagging errors as exceptions
+- exception handling [C++], errors as exceptions
+- exceptions [C++], flagging errors as exceptions
 - errors [C++], treating as exceptions
-- exception handling, detecting errors
-- structured exception handling, errors as exceptions
-- exceptions, software
+- exception handling [C++], detecting errors
+- structured exception handling [C++], errors as exceptions
+- exceptions [C++], software
 - RaiseException function
-- software exceptions
+- software exceptions [C++]
 - formats [C++], exception codes
 ms.assetid: be1376c3-c46a-4f52-ad1d-c2362840746a
 caps.latest.revision: 7

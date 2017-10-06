@@ -14,12 +14,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- << operator, with specific objects
-- left shift operators
-- right shift operators
-- bitwise-shift operators
+- << operator [C++], with specific objects
+- left shift operators [C++]
+- right shift operators [C++]
+- bitwise-shift operators [C++]
 - '>> operator'
-- shift operators
+- shift operators [C++]
 - operators [C++], shift
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
 caps.latest.revision: 18

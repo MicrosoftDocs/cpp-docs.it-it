@@ -11,7 +11,7 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- _variant_t class, operators
+- _variant_t class [C++], operators
 ms.assetid: 43ac645c-2499-4726-bda1-8c77677abe1a
 caps.latest.revision: 7
 author: mikeblome

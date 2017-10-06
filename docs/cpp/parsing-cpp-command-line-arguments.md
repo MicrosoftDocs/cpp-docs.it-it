@@ -13,7 +13,7 @@ dev_langs:
 helpviewer_keywords:
 - quotation marks, command-line arguments
 - double quotation marks
-- command line, parsing
+- command line [C++], parsing
 - parsing, command-line arguments
 - startup code, parsing command-line arguments
 ms.assetid: e634e733-ac2f-4298-abe2-7e9288c94951

@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- GUID method
+- GUID method [C++]
 ms.assetid: e84c2c23-d02e-48f8-b776-9bd6937296d2
 caps.latest.revision: 6
 author: mikeblome

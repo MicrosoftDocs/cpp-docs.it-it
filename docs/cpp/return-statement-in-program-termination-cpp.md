@@ -12,7 +12,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - data types [C++], function return types
-- function return types, return statement
+- function return types [C++], return statement
 - return keyword [C++], syntax
 ms.assetid: 66d002ab-5625-4b68-8446-71e1b8fcdbd8
 caps.latest.revision: 6

@@ -14,8 +14,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- += operator, appending strings
-- + operator, _bstr_t objects
+- += operator [C++], appending strings
+- + operator [C++], _bstr_t objects
 ms.assetid: d28316ce-c2c8-4a38-bdb3-44fa4e582c44
 caps.latest.revision: 6
 author: mikeblome

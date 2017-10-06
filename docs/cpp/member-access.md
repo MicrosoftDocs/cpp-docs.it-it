@@ -11,10 +11,10 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- member-selection operators
+- member-selection operators [C++]
 - pointers, smart
 - member access, overloaded operators
-- operator overloading, member access operators
+- operator overloading [C++], member access operators
 - smart pointers, definition
 - smart pointers
 ms.assetid: 8c7b2c43-eb92-4d42-9a8e-61aa37d71333

@@ -11,7 +11,7 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- tokens
+- tokens [C++]
 - parsing, C++ tokens
 - translation units
 - white space, in C++ tokens

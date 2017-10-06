@@ -11,14 +11,14 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- event handling, COM
-- event handling, about event handling
+- event handling [C++], COM
+- event handling [C++], about event handling
 - declaring events
-- event handlers, COM
+- event handlers [C++], COM
 - event handlers
 - COM, events
 - event receivers, in event handling
-- event handling
+- event handling [C++]
 - hooking events
 - event receivers, name and signature matching
 - event sources, in event handling

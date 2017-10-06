@@ -11,11 +11,11 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- event handlers, unhandled exceptions
+- event handlers [C++], unhandled exceptions
 - catch keyword [C++], handler not found
-- exceptions, unhandled
+- exceptions [C++], unhandled
 - C++ exception handling, unhandled exceptions
-- unhandled exceptions
+- unhandled exceptions [C++]
 ms.assetid: 13f09c53-9254-4407-9db9-14e730e047cc
 caps.latest.revision: 7
 author: mikeblome

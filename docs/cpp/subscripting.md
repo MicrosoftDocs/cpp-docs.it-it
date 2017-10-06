@@ -11,11 +11,11 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- subscript operator, overloaded
+- subscript operator [C++], overloaded
 - arrays [C++], subscripting
-- subscripting
+- subscripting [C++]
 - operators [C++], overloading
-- operator overloading, examples
+- operator overloading [C++], examples
 - subscript operator
 ms.assetid: eb151281-6733-401d-9787-39ab6754c62c
 caps.latest.revision: 10

@@ -11,11 +11,11 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- structured exception handling, vs. C++ exception handling
-- structured exception handling, vs. unstructured
-- exceptions, wrapper class
-- C++ exception handling, vs. structured exception handling
-- wrapper classes, C exception
+- structured exception handling [C++], vs. C++ exception handling
+- structured exception handling [C++], vs. unstructured
+- exceptions [C++], wrapper class
+- C++ exception handling [C++], vs. structured exception handling
+- wrapper classes [C++], C exception
 ms.assetid: f21d1944-4810-468e-b02a-9f77da4138c9
 caps.latest.revision: 11
 author: mikeblome

@@ -11,8 +11,8 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- termination handlers, handling exceptions in C++
-- structured exception handling
+- termination handlers [C++], handling exceptions in C++
+- structured exception handling [C++]
 - try-catch keyword [C++], exception handlers
 - C++ exception handling, termination handlers
 - try-catch keyword [C++], termination handlers

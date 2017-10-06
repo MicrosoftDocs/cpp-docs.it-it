@@ -14,7 +14,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Release method
+- Release method [C++]
 ms.assetid: db448b34-0efa-4f02-b701-ad1ca3ae6ca5
 caps.latest.revision: 6
 author: mikeblome

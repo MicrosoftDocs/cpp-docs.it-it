@@ -12,7 +12,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - standard conversions, categories of
-- L-values
+- L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
 caps.latest.revision: 10

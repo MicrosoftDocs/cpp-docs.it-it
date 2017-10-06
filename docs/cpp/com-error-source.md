@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Source method
+- Source method [C++]
 ms.assetid: 55353741-fabc-4b0c-9787-b5a69bb189f2
 caps.latest.revision: 6
 author: mikeblome

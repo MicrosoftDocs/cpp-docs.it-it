@@ -11,7 +11,7 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- _com_error class, operators
+- _com_error class [C++], operators
 ms.assetid: 0c4a1532-59b7-41ea-8aeb-1c486898db4d
 caps.latest.revision: 7
 author: mikeblome

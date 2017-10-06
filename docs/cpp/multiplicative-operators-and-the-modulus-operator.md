@@ -16,9 +16,9 @@ dev_langs:
 helpviewer_keywords:
 - operators [C++], multiplicative
 - arithmetic operators [C++], multiplicative operators
-- modulus operator, C+
+- modulus operator [C++]
 - '* operator'
-- division operator, multiplicative operators
+- division operator [C++], multiplicative operators
 - '% operator'
 - multiplication operator [C++], multiplicative operators
 - multiplicative operators [C++]

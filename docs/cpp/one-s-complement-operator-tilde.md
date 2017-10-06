@@ -17,7 +17,7 @@ helpviewer_keywords:
 - one's complement operator
 - bitwise-complement operator
 - compl operator
-- ~ operator, syntax
+- ~ operator [C++], syntax
 ms.assetid: 4bf81967-34f7-4b4b-aade-fd03d5da0174
 caps.latest.revision: 7
 author: mikeblome

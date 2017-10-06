@@ -16,10 +16,10 @@ dev_langs:
 helpviewer_keywords:
 - '> operator'
 - less than operator
-- relational operators, syntax
+- relational operators [C++], syntax
 - '>= operator'
-- greater than or equal to operators
-- greater than operators
+- greater than or equal to operators [C++]
+- greater than operators [C++]
 - < operator
 - less than or equal to operator
 - <= operator

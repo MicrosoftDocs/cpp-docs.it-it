@@ -11,9 +11,9 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- exceptions, mixed C and C++
+- exceptions [C++], mixed C and C++
 - C++ exception handling, mixed-language
-- structured exception handling, mixed C and C++
+- structured exception handling [C++], mixed C and C++
 - catch keyword [C++], mixed
 - try-catch keyword [C++], mixed-language
 ms.assetid: a149154e-36dd-4d1a-980b-efde2a563a56

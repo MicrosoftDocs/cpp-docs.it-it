@@ -11,7 +11,7 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- naked functions
+- naked functions [C++]
 ms.assetid: ff203858-2dd3-4a76-8a57-d0d06817adef
 caps.latest.revision: 7
 author: mikeblome

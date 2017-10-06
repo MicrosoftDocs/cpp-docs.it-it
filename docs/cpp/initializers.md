@@ -12,7 +12,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - array-element initializers
-- initializing arrays, initializers
+- initializing arrays [C++], initializers
 - arrays [C++], array-element initializers
 - declarators, as initializers
 - initializers, array element

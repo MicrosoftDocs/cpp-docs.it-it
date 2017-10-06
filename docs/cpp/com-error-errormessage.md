@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- ErrorMessage method
+- ErrorMessage method [C++]
 ms.assetid: e47335b6-01af-4975-a841-121597479eb7
 caps.latest.revision: 6
 author: mikeblome

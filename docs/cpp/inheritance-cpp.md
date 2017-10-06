@@ -11,8 +11,8 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- derived classes
-- derived classes, about derived classes
+- derived classes [C++]
+- derived classes [C++], about derived classes
 - classes [C++], derived
 ms.assetid: 3534ca19-d9ed-4a40-be1b-b921ad0e6956
 caps.latest.revision: 7

@@ -12,7 +12,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - operators [C++], assignment
-- assignment operators, overloaded
+- assignment operators [C++], overloaded
 ms.assetid: d87e4f89-f8f5-42c1-9d3c-184bca9d0e15
 caps.latest.revision: 7
 author: mikeblome

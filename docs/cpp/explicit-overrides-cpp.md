@@ -11,9 +11,9 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- virtual functions, explicit overrides
+- virtual functions [C++], explicit overrides
 - overriding, functions
-- derived classes, virtual functions
+- derived classes [C++], virtual functions
 - explicit virtual function overrides
 - explicit override of virtual function
 ms.assetid: ee583234-5cda-4e90-b55e-3f9fbf079ced

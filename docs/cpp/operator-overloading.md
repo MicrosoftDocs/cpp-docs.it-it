@@ -14,8 +14,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- redefinable operators
-- non-redefinable operators
+- redefinable operators [C++]
+- non-redefinable operators [C++]
 - operator keyword [C++]
 - operators [C++], overloading
 - operator overloading

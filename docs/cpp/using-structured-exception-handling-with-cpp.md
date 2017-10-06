@@ -12,7 +12,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - C++ exception handling, mixed with SEH
-- structured exception handling, with C++ exception handling
+- structured exception handling [C++], with C++ exception handling
 ms.assetid: ec34b528-8c26-4429-b24a-6a68553aaa91
 caps.latest.revision: 7
 author: mikeblome

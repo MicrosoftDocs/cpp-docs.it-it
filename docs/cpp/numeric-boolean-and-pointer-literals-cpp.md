@@ -13,7 +13,7 @@ dev_langs:
 helpviewer_keywords:
 - literals, C++
 - constants, literals
-- literals
+- literals [C++]
 ms.assetid: 17c09fc3-3ad7-47e2-8b48-ba8ae994edc8
 caps.latest.revision: 16
 author: mikeblome

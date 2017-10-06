@@ -14,8 +14,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- ChangeType method
-- VARIANT object, ChangeType
+- ChangeType method [C++]
+- VARIANT object [C++], ChangeType
 - VARIANT object
 ms.assetid: 829d2eeb-3338-4a88-9dce-0ca145f47aac
 caps.latest.revision: 6

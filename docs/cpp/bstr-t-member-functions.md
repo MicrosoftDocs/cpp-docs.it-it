@@ -11,7 +11,7 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- _bstr_t class, member functions
+- _bstr_t class [C++], member functions
 ms.assetid: 61f9c6c8-6b8f-46eb-8fc2-038e42563bd2
 caps.latest.revision: 7
 author: mikeblome

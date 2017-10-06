@@ -11,7 +11,7 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- _bstr_t class, operators
+- _bstr_t class [C++], operators
 ms.assetid: 9f76364c-a552-418f-b71b-468f015c5ac9
 caps.latest.revision: 7
 author: mikeblome

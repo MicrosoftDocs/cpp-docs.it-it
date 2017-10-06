@@ -19,7 +19,7 @@ helpviewer_keywords:
 - thiscall keyword [C++]
 - naming conventions [C++], arguments
 - arguments [C++], naming
-- passing arguments, conventions
+- passing arguments [C++], conventions
 - conventions [C++], argument names
 ms.assetid: de468979-eab8-4158-90c5-c198932f93b9
 caps.latest.revision: 9

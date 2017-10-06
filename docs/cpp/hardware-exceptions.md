@@ -11,10 +11,10 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- exceptions, hardware
+- exceptions [C++], hardware
 - errors [C++], low-level
 - errors [C++], hardware
-- hardware exceptions
+- hardware exceptions [C++]
 - low level errors
 ms.assetid: 06ac6f01-a8cf-4426-bb12-1688315ae1cd
 caps.latest.revision: 6

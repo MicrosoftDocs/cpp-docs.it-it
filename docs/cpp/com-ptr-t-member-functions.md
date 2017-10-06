@@ -11,7 +11,7 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- _com_ptr_t class, member functions
+- _com_ptr_t class [C++], member functions
 ms.assetid: 02a54c68-2452-4f8e-84b4-6bf67c51ea99
 caps.latest.revision: 7
 author: mikeblome

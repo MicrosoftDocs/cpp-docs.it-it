@@ -14,9 +14,9 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - operators [C++], subscript
-- postfix operators
+- postfix operators [C++]
 - '[] operator'
-- subscript operator, syntax
+- subscript operator [C++], syntax
 ms.assetid: 69c31494-52da-4dd0-8bbe-6ccbfd50f197
 caps.latest.revision: 9
 author: mikeblome

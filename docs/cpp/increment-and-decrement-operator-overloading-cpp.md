@@ -11,10 +11,10 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- increment operators
-- increment operators, types of
-- decrement operators
-- decrement operators, types of
+- increment operators [C++]
+- increment operators [C++], types of
+- decrement operators [C++]
+- decrement operators [C++], types of
 ms.assetid: 5423c6ce-3999-4a77-92f6-ad540add1b1d
 caps.latest.revision: 7
 author: mikeblome

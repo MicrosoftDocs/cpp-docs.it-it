@@ -14,10 +14,10 @@ helpviewer_keywords:
 - ( ) function call operator
 - function calls, C++ functions
 - () function call operator
-- postfix operators
+- postfix operators [C++]
 - function calls, operator
 - functions [C++], function-call operator
-- function call operator ( )
+- function call operator ()
 ms.assetid: 50c92e59-a4bf-415a-a6ab-d66c679ee80a
 caps.latest.revision: 14
 author: mikeblome

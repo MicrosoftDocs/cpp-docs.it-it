@@ -11,7 +11,7 @@ ms.topic: 'index-page '
 dev_langs:
 - C++
 helpviewer_keywords:
-- statements, C++
+- statements [C++], C++
 ms.assetid: 7028fddf-0d47-469a-a7df-f8576423e066
 caps.latest.revision: 6
 author: mikeblome

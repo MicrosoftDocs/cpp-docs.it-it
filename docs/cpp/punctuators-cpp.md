@@ -25,7 +25,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- punctuators
+- punctuators [C++]
 ms.assetid: 1521564c-a977-488a-9490-068079897592
 caps.latest.revision: 6
 author: mikeblome

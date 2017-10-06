@@ -13,8 +13,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Copy method
-- BSTR object, copy
+- Copy method [C++]
+- BSTR object [C++], copy
 ms.assetid: 00ba7311-e82e-4a79-8106-5329fa2f869a
 caps.latest.revision: 6
 author: mikeblome

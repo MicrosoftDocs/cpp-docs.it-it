@@ -16,18 +16,18 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- operator Interface&
-- '* operator, with specific objects'
-- operator&
-- operator*
-- -> operator, with specific objects
-- '& operator, with specific objects'
-- operator Interface*
-- operator *
+- operator Interface& [C++]
+- '* operator [C++], with specific objects'
+- operator& [C++]
+- operator* [C++]
+- -> operator [C++], with specific objects
+- '& operator [C++], with specific objects'
+- operator Interface* [C++]
+- operator * [C++]
 - operator->
 - operator bool
 - extractors, _com_ptr_t class
-- extractors
+- extractors [C++]
 ms.assetid: 194b9e0e-123c-49ff-a187-0a7fcd68145a
 caps.latest.revision: 6
 author: mikeblome

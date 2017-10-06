@@ -14,8 +14,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- VARIANT object, clear
-- Clear method
+- VARIANT object [C++], clear
+- Clear method [C++]
 - VARIANT object
 ms.assetid: 844d43fa-9628-4643-a877-c1e129838b4e
 caps.latest.revision: 6

@@ -11,9 +11,9 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- members, types of class members
-- members
-- class members, types of
+- members [C++], types of class members
+- members [C++]
+- class members [C++], types of
 - class members
 ms.assetid: 8802cfa9-705d-4f37-acde-245d6838010c
 caps.latest.revision: 9

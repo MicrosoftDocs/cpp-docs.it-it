@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- interrupt handlers and volatile keyword
+- interrupt handlers and volatile keyword [C++]
 - volatile keyword [C++]
 - volatile objects
 - objects [C++], volatile

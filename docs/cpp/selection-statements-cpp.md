@@ -11,7 +11,7 @@ ms.topic: 'index-page '
 dev_langs:
 - C++
 helpviewer_keywords:
-- selection statements, syntax
+- selection statements [C++], syntax
 - selection statements
 ms.assetid: 2ce662fc-5e62-461b-ac31-2c159d8ef33b
 caps.latest.revision: 6

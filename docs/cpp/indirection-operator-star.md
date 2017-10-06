@@ -14,7 +14,7 @@ helpviewer_keywords:
 - '* operator'
 - indirection operator
 - operators [C++], indirection
-- indirection operator, syntax
+- indirection operator [C++], syntax
 ms.assetid: c50309e1-6c02-4184-9fcb-2e13c1f4ac03
 caps.latest.revision: 7
 author: mikeblome

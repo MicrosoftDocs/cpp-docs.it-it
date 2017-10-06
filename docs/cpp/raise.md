@@ -10,6 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - __raise
+- __raise_cpp
 dev_langs:
 - C++
 helpviewer_keywords:

@@ -11,8 +11,8 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- R-values
-- L-values
+- R-values [C++]
+- L-values [C++]
 ms.assetid: a8843344-cccc-40be-b701-b71f7b5cdcaf
 caps.latest.revision: 14
 author: mikeblome
