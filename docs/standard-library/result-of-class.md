@@ -16,7 +16,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- ', '
+- std::result_of
+- std::result_of_t
+- std::result_of::type
 ms.assetid: 5374a096-4b4a-4712-aa97-6852c5cdd6be
 caps.latest.revision: 13
 author: corob-msft

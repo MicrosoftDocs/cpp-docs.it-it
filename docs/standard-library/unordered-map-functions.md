@@ -18,7 +18,7 @@ author: corob-msft
 ms.author: corob
 manager: ghogen
 helpviewer_keywords:
-- ', '
+- std::swap (unordered_map/multimap)
 ms.translationtype: MT
 ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: ae6173e491fe4620734d1204a7d2e109be9367d7

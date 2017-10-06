@@ -15,7 +15,8 @@ helpviewer_keywords:
 - floating-point constants, limits
 - FLOAT.H header file
 - limits, floating-point constants
-- floating-point numbers, floating limits
+- floating-point numbers [C++]
+- floating limits
 ms.assetid: fc718652-1f4c-4ed8-af60-0e769637459c
 caps.latest.revision: 7
 author: mikeblome

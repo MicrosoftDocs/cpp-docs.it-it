@@ -15,33 +15,34 @@ helpviewer_keywords:
 - char keyword [C++]
 - unsigned long
 - __wchar_t keyword [C++]
-- unsigned short int
-- enum keyword
+- unsigned short int [C++]
+- enum keyword [C++]
 - unsigned char keyword [C++]
-- integer data type, data type ranges
+- integer data type [C++], data type ranges
 - int data type
 - data types [C++], ranges
-- unsigned int
+- unsigned int [C++]
 - short data type
 - short int data
 - signed types [C++], data type ranges
 - long long keyword [C++]
 - long double keyword [C++]
-- double data type, data type ranges
-- signed short int
+- double data type [C++], data type ranges
+- signed short int [C++]
 - unsigned short
 - sized integer types
-- signed int
-- signed long int
+- signed int [C++]
+- signed long int [C++]
 - signed char keyword [C++]
 - wchar_t keyword [C++]
 - long keyword [C++]
 - ranges [C++]
 - unsigned types [C++], data type ranges
-- floating-point numbers, data type ranges
+- floating-point numbers [C++]
+- data type ranges
 - ranges [C++], data types
 - long int keyword [C++]
-- unsigned long int
+- unsigned long int [C++]
 ms.assetid: 3691ceca-05fb-4b82-b1ae-5c4618cda91a
 caps.latest.revision: 25
 author: mikeblome
