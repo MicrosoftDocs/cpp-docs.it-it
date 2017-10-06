@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - false_cpp
-- "false"
 dev_langs:
 - C++
 helpviewer_keywords:

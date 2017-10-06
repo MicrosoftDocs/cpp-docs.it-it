@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - mutable_cpp
-- mutable
 dev_langs:
 - C++
 helpviewer_keywords:

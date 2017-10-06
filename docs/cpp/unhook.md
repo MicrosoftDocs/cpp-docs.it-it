@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - __unhook
-- __unhook_cpp
 dev_langs:
 - C++
 helpviewer_keywords:

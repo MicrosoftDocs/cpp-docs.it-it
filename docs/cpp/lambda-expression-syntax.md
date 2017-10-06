@@ -8,8 +8,6 @@ ms.technology:
 - cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- VCF1 Lambda_CPP
 dev_langs:
 - C++
 helpviewer_keywords:

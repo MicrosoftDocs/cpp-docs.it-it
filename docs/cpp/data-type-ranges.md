@@ -8,17 +8,6 @@ ms.technology:
 - cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- unsigned
-- wchar_t
-- char
-- signed
-- short
-- long
-- double
-- float
-- int
-- long_double
 dev_langs:
 - C++
 helpviewer_keywords:

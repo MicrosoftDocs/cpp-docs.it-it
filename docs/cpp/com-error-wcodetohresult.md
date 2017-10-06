@@ -10,8 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - _com_error::WCodeToHRESULT
-- _com_error.WCodeToHRESULT
-- WCodeToHRESULT
 dev_langs:
 - C++
 helpviewer_keywords:

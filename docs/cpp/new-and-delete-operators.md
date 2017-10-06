@@ -10,9 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - delete_cpp
-- new_cpp
 - new
-- delete
 dev_langs:
 - C++
 helpviewer_keywords:

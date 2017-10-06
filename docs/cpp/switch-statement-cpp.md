@@ -9,11 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- default
 - default_cpp
-- switch
 - switch_cpp
-- case
 - case_cpp
 dev_langs:
 - C++

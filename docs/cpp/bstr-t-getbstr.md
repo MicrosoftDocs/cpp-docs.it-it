@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- GetBSTR
 - _bstr_t::GetBSTR
 dev_langs:
 - C++

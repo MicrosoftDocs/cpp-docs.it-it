@@ -9,8 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- GUID
-- _com_error.GUID
 - _com_error::GUID
 dev_langs:
 - C++

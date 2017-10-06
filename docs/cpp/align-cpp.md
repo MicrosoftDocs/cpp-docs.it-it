@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- align
 - align_cpp
 dev_langs:
 - C++
@@ -268,3 +267,4 @@ struct S {
  [declspec](../cpp/declspec.md)   
  [Panoramica delle convenzioni ABI ARM](../build/overview-of-arm-abi-conventions.md)   
  [Panoramica delle convenzioni di chiamata x64](../build/overview-of-x64-calling-conventions.md)
+

@@ -11,14 +11,8 @@ ms.topic: language-reference
 f1_keywords:
 - _com_ptr_t::operator>
 - _com_ptr_t::operator>=
-- _com_ptr_t.operator<=
-- _com_ptr_t.operator!=
 - _com_ptr_t::operator<=
-- _com_ptr_t.operator>
-- _com_ptr_t.operator<
-- _com_ptr_t.operator==
 - _com_ptr_t::operator==
-- _com_ptr_t.operator>=
 - _com_ptr_t::operator!=
 - _com_ptr_t::operator<
 dev_langs:

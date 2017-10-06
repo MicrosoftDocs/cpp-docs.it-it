@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- restrict
 - restrict_cpp
 dev_langs:
 - C++

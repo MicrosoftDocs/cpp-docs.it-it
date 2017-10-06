@@ -9,12 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- do-while_cpp
-- do-while
-- do
-- while_cpp
 - do_cpp
-- while
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -54,10 +49,9 @@ Esegue un *istruzione* ripetutamente finché la condizione di chiusura specifica
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      do  
+do  
    statement  
-   while ( expression ) ;  
+while ( expression ) ;  
 ```  
   
 ## <a name="remarks"></a>Note  

@@ -11,8 +11,6 @@ ms.topic: language-reference
 f1_keywords:
 - __ptr32_cpp
 - __ptr64_cpp
-- __ptr32
-- __ptr64
 dev_langs:
 - C++
 helpviewer_keywords:

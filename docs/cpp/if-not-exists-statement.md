@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- __if_not_exists
 - __if_not_exists_cpp
 dev_langs:
 - C++

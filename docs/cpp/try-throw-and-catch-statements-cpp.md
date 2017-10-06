@@ -10,11 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - catch_cpp
-- throw
 - try_cpp
-- try
 - throw_cpp
-- catch
 dev_langs:
 - C++
 helpviewer_keywords:

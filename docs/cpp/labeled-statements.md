@@ -8,9 +8,6 @@ ms.technology:
 - cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- goto
-- case
 dev_langs:
 - C++
 helpviewer_keywords:

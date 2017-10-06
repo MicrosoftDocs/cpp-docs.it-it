@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - _com_error::operator=
-- _com_error.operator=
 dev_langs:
 - C++
 helpviewer_keywords:

@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- __hook_cpp
 - __hook
 dev_langs:
 - C++

@@ -10,8 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - __uptr_cpp
-- __sptr
-- __uptr
 - __sptr_cpp
 dev_langs:
 - C++

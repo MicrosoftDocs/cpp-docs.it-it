@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- C2338
 - static_assert_cpp
-- static_assert
 dev_langs:
 - C++
 helpviewer_keywords:

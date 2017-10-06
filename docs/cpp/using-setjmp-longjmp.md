@@ -9,8 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- longjmp
-- setjmp
+- longjmp_cpp
+- setjmp_cpp
 dev_langs:
 - C++
 helpviewer_keywords:

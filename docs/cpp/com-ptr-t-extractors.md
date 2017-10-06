@@ -10,15 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - _com_ptr_t::operatorInterface&
-- operatorInterface*
-- operatorInterface&
 - _com_ptr_t::operatorbool
-- _com_ptr_t.operator->
-- _com_ptr_t.operator*
 - _com_ptr_t::operator->
 - _com_ptr_t::operator*
-- _com_ptr_t.operatorInterface&
-- _com_ptr_t.operatorbool
 dev_langs:
 - C++
 helpviewer_keywords:

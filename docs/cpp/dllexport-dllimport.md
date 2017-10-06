@@ -11,8 +11,6 @@ ms.topic: language-reference
 f1_keywords:
 - dllimport_cpp
 - dllexport_cpp
-- dllexport
-- dllimport
 dev_langs:
 - C++
 helpviewer_keywords:

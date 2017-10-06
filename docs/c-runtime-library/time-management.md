@@ -1,5 +1,5 @@
 ---
-title: Gestione dell&quot;ora | Microsoft Docs
+title: Gestione dell'ora | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,16 +22,6 @@ caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
 translation.priority.mt:
 - cs-cz
 - pl-pl

@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- _variant_t.operator=
 - _variant_t::operator=
 dev_langs:
 - C++

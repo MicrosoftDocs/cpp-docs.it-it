@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - volatile_cpp
-- volatile
 dev_langs:
 - C++
 helpviewer_keywords:

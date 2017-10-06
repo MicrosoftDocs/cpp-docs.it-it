@@ -8,9 +8,6 @@ ms.technology:
 - cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- single inheritance_cpp
-- single inheritance
 dev_langs:
 - C++
 helpviewer_keywords:

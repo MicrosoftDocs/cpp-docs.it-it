@@ -1,5 +1,5 @@
 ---
-title: Accesso non corretto a un&quot;unione | Microsoft Docs
+title: Accesso non corretto a un'unione | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,20 +15,6 @@ caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: Human Translation
 ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
 ms.openlocfilehash: 9e3bd236cfc6675f9476a0127977e329af3698af

@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- HelpFile
 - _com_error::HelpFile
-- _com_error.HelpFile
 dev_langs:
 - C++
 helpviewer_keywords:

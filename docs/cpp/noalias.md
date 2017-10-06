@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- noalias
 - noalias_cpp
 dev_langs:
 - C++

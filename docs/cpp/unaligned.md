@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - __unaligned_cpp
-- __unaligned
 dev_langs:
 - C++
 helpviewer_keywords:

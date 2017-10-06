@@ -8,8 +8,6 @@ ms.technology:
 - cpp-language
 ms.tgt_pltfrm: 
 ms.topic: 'index-page '
-f1_keywords:
-- c++
 dev_langs:
 - C++
 helpviewer_keywords:

@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - __stdcall_cpp
-- __stdcall
 dev_langs:
 - C++
 helpviewer_keywords:

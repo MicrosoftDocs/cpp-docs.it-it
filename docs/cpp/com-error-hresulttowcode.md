@@ -9,8 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- HRESULTToWCode
-- _com_error.HRESULTToWCode
 - _com_error::HRESULTToWCode
 dev_langs:
 - C++

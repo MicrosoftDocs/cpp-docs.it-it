@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- public
+- public_cpp
 dev_langs:
 - C++
 helpviewer_keywords:

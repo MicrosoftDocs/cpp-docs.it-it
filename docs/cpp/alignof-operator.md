@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- __alignof
-- alignof
-- alignas
+- alignas_cpp
 - __alignof_cpp
 - alignof_cpp
 dev_langs:

@@ -12,9 +12,6 @@ f1_keywords:
 - __forceinline_cpp
 - __inline_cpp
 - inline_cpp
-- __forceinline
-- __inline
-- inline
 dev_langs:
 - C++
 helpviewer_keywords:

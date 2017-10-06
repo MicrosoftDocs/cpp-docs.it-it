@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- static_cast
 - static_cast_cpp
 dev_langs:
 - C++

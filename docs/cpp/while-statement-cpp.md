@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - while_cpp
-- while
 dev_langs:
 - C++
 helpviewer_keywords:

@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - bool_cpp
-- bool
 - __BOOL_DEFINED
 dev_langs:
 - C++

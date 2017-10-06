@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- _com_error._com_error
 - _com_error::_com_error
 dev_langs:
 - C++

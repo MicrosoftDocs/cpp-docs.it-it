@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - explicit_cpp
-- explicit
 dev_langs:
 - C++
 helpviewer_keywords:

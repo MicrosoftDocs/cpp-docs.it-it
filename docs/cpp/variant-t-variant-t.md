@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - _variant_t::_variant_t
-- _variant_t._variant_t
 dev_langs:
 - C++
 helpviewer_keywords:

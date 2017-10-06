@@ -1,5 +1,5 @@
 ---
-title: Personalizzazione dell&quot;elaborazione dalla riga di comando C | Microsoft Docs
+title: Personalizzazione dell'elaborazione dalla riga di comando C | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,20 +25,6 @@ caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: Human Translation
 ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
 ms.openlocfilehash: fd7217a12616fca234ed1fcd8a3c31f0b46a1ba0

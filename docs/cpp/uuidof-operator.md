@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- __LIBID_
 - __LIBID_cpp
-- __uuidof
 - __uuidof_cpp
 dev_langs:
 - C++

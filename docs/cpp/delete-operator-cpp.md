@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - delete_cpp
-- delete
 dev_langs:
 - C++
 helpviewer_keywords:

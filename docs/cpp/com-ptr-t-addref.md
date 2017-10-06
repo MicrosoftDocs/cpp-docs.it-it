@@ -10,8 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - _com_ptr_t::AddRef
-- _com_ptr_t.AddRef
-- AddRef
 dev_langs:
 - C++
 helpviewer_keywords:
