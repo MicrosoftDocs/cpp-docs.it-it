@@ -13,14 +13,10 @@ caps.latest.revision: 4
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
 ms.openlocfilehash: 26031e1ac6f39d745a772e1becf3f817213a59d8
+ms.contentlocale: it-it
 ms.lasthandoff: 02/24/2017
 
 ---

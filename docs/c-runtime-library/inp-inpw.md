@@ -33,11 +33,6 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
 ms.openlocfilehash: 1f0c640b6a17450f43d772de48b544fdf3b290a5

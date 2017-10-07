@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - '%2C'
-- ','
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,20 +19,6 @@ caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: e5e7af401a0c435931f6952674d97752d2ac7730
@@ -95,3 +80,4 @@ int main () {
  [Espressioni con operatori binari](../cpp/expressions-with-binary-operators.md)   
  [Operatori C++ predefiniti, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operatore di valutazione sequenziale](../c-language/sequential-evaluation-operator.md)
+
