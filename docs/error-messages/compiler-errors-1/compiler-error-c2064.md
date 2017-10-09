@@ -1,34 +1,37 @@
 ---
-title: "Errore del compilatore C2064 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2064"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2064"
+title: Errore del compilatore C2064 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2064
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2064
 ms.assetid: 6cda05da-f437-4f50-9813-ae69538713a3
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Errore del compilatore C2064
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e0c82ae2de90a6e4e6e7e66648d84c2b55a9c2b0
+ms.contentlocale: it-it
+ms.lasthandoff: 10/09/2017
 
+---
+# <a name="compiler-error-c2064"></a>Errore del compilatore C2064
 il termine non restituisce una funzione che accetta N argomenti  
   
- Viene effettuata una chiamata a una funzione tramite un'espressione.  L'espressione non restituisce un puntatore a una funzione che accetta il numero specificato di argomenti.  
+ Viene effettuata una chiamata a una funzione tramite un'espressione. L'espressione non restituisce un puntatore a una funzione che accetta il numero specificato di argomenti.  
   
- In questo esempio, il codice tenta di chiamare non funzioni come funzioni.  L'esempio seguente generato l'errore C2064:  
+ In questo esempio, il codice tenta di chiamare non funzioni come funzioni. L'esempio seguente generato l'errore C2064:  
   
 ```  
 // C2064.cpp  
@@ -40,7 +43,7 @@ void func() {
 }  
 ```  
   
- È necessario chiamare i puntatori a funzioni membro non statiche dal contesto dell'istanza di un oggetto.  L'esempio seguente genera l'errore C2064 e mostra come risolverlo:  
+ È necessario chiamare i puntatori a funzioni membro non statiche dal contesto dell'istanza di un oggetto. L'esempio seguente genera l'errore C2064 e mostra come risolverlo:  
   
 ```  
 // C2064b.cpp  
@@ -60,7 +63,7 @@ int main() {
   
 ```  
   
- All'interno di una classe, i puntatori a funzioni membro devono indicare anche il contesto dell'oggetto chiamante.  L'esempio seguente genera l'errore C2064 e mostra come risolverlo:  
+ All'interno di una classe, i puntatori a funzioni membro devono indicare anche il contesto dell'oggetto chiamante. L'esempio seguente genera l'errore C2064 e mostra come risolverlo:  
   
 ```  
 // C2064d.cpp  

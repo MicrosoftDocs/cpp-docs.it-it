@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2143 | Documenti di Microsoft
+title: Errore del compilatore C2143 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,26 +19,11 @@ caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: faa9361da0091ec86628af19a03eadb133ea43cc
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 31ea645b9dd22fd15bbf4695935482d899a13386
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2143"></a>Errore del compilatore C2143
@@ -46,9 +31,9 @@ Errore di sintassi: manca 'token1' prima di 'token2'
   
  Era previsto un token specifico (ovvero, un elemento di linguaggio diverso da spazi vuoti) ma è stato rilevato un altro token.  
   
- Per informazioni su questo errore quando si verifica quando si utilizza un blocco funzione-try, vedere [articolo della Knowledge Base 241706](http://support.microsoft.com/kb/241706).  
+ Per informazioni su questo errore quando si verifica quando si utilizza un blocco try di funzione, vedere [articolo della Knowledge Base 241706](http://support.microsoft.com/kb/241706).  
   
- Controllare il [riferimenti al linguaggio C++](../../cpp/cpp-language-reference.md) per determinare la posizione di codice errato. Poiché il compilatore potrebbe essere generato l'errore dopo che viene rilevata la riga che causa il problema, controllare diverse righe di codice che hanno preceduto l'errore.  
+ Controllare il [riferimenti al linguaggio C++](../../cpp/cpp-language-reference.md) per determinare la posizione di codice errato. Poiché il compilatore può segnalare l'errore dopo che viene rilevata la riga che causa il problema, controllare diverse righe di codice che hanno preceduto l'errore.  
   
  C2143 può verificarsi in diverse situazioni.  
   
@@ -78,7 +63,7 @@ class MyClass
   
 ```  
   
- C2143 può verificarsi quando **/clr** viene utilizzato e `using` direttiva dispone di un errore di sintassi:  
+ C2143 può verificarsi quando **/clr** viene utilizzato e un `using` direttiva dispone di un errore di sintassi:  
   
 ```cpp  
 // C2143a.cpp  
@@ -101,7 +86,7 @@ int main() {
 }  
 ```  
   
- Il primo carattere diverso da uno spazio vuoto successivo a un'istruzione `if` deve essere una parentesi di apertura. Il compilatore non può tradurre altri elementi:  
+ Il primo carattere diverso da uno spazio vuoto successivo a un'istruzione `if` deve essere una parentesi di apertura. Il compilatore non è possibile tradurre altri elementi:  
   
 ```cpp  
 // C2143c.cpp  
@@ -139,7 +124,7 @@ class + {};   // C2143 + is an invalid tag name
 class ValidName {};   // OK  
 ```  
   
- In alternativa, quando un'etichetta non è collegata ad un'istruzione. Se è necessario inserire un'etichetta di per sé, ad esempio, alla fine di un'istruzione composta, collegarlo a un'istruzione null:  
+ In alternativa, quando un'etichetta non è collegata ad un'istruzione. Se è necessario inserire un'etichetta da solo, ad esempio, alla fine di un'istruzione composta, associarla a un'istruzione null:  
   
 ```cpp  
 // C2143f.cpp  
@@ -153,7 +138,7 @@ void func1() {
 }  
 ```  
   
- L'errore può verificarsi quando viene effettuata una chiamata non qualificata a un tipo nella libreria Standard C++:  
+ L'errore può verificarsi quando viene effettuata una chiamata non qualificata a un tipo nella libreria C++ Standard:  
   
 ```cpp  
 // C2143g.cpp  

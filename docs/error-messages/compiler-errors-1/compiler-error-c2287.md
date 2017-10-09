@@ -1,34 +1,37 @@
 ---
-title: "Errore del compilatore C2287 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2287"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2287"
+title: Errore del compilatore C2287 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2287
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2287
 ms.assetid: 64556299-4e1f-4437-88b7-2464fc0b95bb
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Errore del compilatore C2287
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ed8537c7da77da7e5401448e8a6d579cfb4ebe07
+ms.contentlocale: it-it
+ms.lasthandoff: 10/09/2017
 
-'classe': rappresentazione di ereditarietà. 'rappresentazione1' è meno generica della richiesta 'rappresentazione2'  
+---
+# <a name="compiler-error-c2287"></a>Errore del compilatore C2287
+'class': rappresentazione di ereditarietà: 'representation1' è meno generica obbligatorio 'representation2'  
   
- Una classe è dichiarata con una rappresentazione più semplice di quella necessaria.  
+ Una classe viene dichiarata con una rappresentazione più semplice rispetto a quelle necessarie.  
   
- Il seguente codice di esempio genera l'errore C2287:  
+ L'esempio seguente genera l'errore C2287:  
   
 ```  
 // C2287.cpp  

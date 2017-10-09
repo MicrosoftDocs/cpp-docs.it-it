@@ -19,32 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 152b55fb228d73b03df615fd336e40e984521432
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5735d0394be8114f2e0747e7e0d8dfefc84e580b
 ms.contentlocale: it-it
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2157"></a>Errore del compilatore C2157
 'function': deve essere dichiarato prima dell'utilizzo in un elenco pragma  
   
- Il nome della funzione non è dichiarato prima di cui viene fatto riferimento nell'elenco di funzioni per un [alloc_text](../../preprocessor/alloc-text.md) pragma.  
+ Il nome della funzione non è stato dichiarato prima di essere usato come riferimento nell'elenco delle funzioni per un pragma [alloc_text](../../preprocessor/alloc-text.md) .  
   
  L'esempio seguente genera l'errore C2157:  
   

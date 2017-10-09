@@ -1,31 +1,34 @@
 ---
-title: "Errore del compilatore C2218 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2218"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2218"
+title: Errore del compilatore C2218 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2218
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2218
 ms.assetid: b0f55da4-8edb-4b45-b298-1a091981bd7b
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Errore del compilatore C2218
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 3ca2e431fdfeff3c9dc957bee46f84cfd2c04162
+ms.contentlocale: it-it
+ms.lasthandoff: 10/09/2017
 
-impossibile utilizzare '\_\_vectorcall' con '\/arch:IA32'  
+---
+# <a name="compiler-error-c2218"></a>Errore del compilatore C2218
+impossibile utilizzare '__vectorcall' con '/arch:IA32'  
   
- La convenzione di chiamata `__vectorcall` è supportata solo nel codice nativo su processori x86 e x64 che includono Streaming SIMD Extensions 2 \(SSE2\) e versioni successive.  Per altre informazioni, vedere [\_\_vectorcall](../../cpp/vectorcall.md).  
+ La convenzione di chiamata `__vectorcall` è supportata solo nel codice nativo su processori x86 e x64 che includono Streaming SIMD Extensions 2 (SSE2) e versioni successive. Per ulteriori informazioni, vedere [vectorcall](../../cpp/vectorcall.md).  
   
- Per correggere l'errore, impostare le opzioni del compilatore sui set di istruzioni SSE2, AVX o AVX2 di destinazione.  Per altre informazioni, vedere [\/arch \(x86\)](../../build/reference/arch-x86.md).
+ Per correggere l'errore, impostare le opzioni del compilatore sui set di istruzioni SSE2, AVX o AVX2 di destinazione. Per altre informazioni, vedere [/arch (x86)](../../build/reference/arch-x86.md).

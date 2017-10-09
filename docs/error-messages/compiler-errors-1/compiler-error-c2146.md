@@ -1,41 +1,44 @@
 ---
-title: "Errore del compilatore C2146 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2146"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2146"
+title: Errore del compilatore C2146 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2146
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2146
 ms.assetid: 6bfb7de6-6723-4486-9350-c66ef88d7a64
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# Errore del compilatore C2146
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 92e94ae29c1a7a3fc6adfdc0b3e82f5ce4dfcaf0
+ms.contentlocale: it-it
+ms.lasthandoff: 10/09/2017
 
-errore di sintassi: 'token' mancante prima dell'identificatore 'identificatore'  
+---
+# <a name="compiler-error-c2146"></a>Errore del compilatore C2146
+Errore di sintassi: 'token' prima dell'identificatore 'identifier' mancante  
   
- È stato rilevato `identifier` mentre era previsto `token`.  Possibili cause:  
+ Il compilatore prevedeva `token` e trovare `identifier` invece.  Possibili cause:  
   
-1.  Errore di ortografia o di utilizzo delle maiuscole\/minuscole.  
+1.  Errore di ortografia o lettere maiuscole/minuscole.  
   
-2.  Identificatore del tipo mancante nella dichiarazione dell'identificatore.  
+2.  Identificatore di tipo mancante nella dichiarazione dell'identificatore.  
   
- L'errore può essere causato da un errore di digitazione.  Questo errore è in genere preceduto dall'errore [C2065](../../error-messages/compiler-errors-1/compiler-error-c2065.md).  
+ Questo errore può essere causato da un errore di battitura. Errore [C2065](../../error-messages/compiler-errors-1/compiler-error-c2065.md) precede in genere questo errore.  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore C2146:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C2146.  
   
 ```  
 // C2146.cpp  
@@ -52,10 +55,10 @@ int main() {
 }  
 ```  
   
-## Esempio  
- Questo errore può anche venire generato come risultato delle operazioni di conformità eseguite per Visual Studio .NET 2003: parola chiave `typename` mancante.  
+## <a name="example"></a>Esempio  
+ Questo errore può anche essere generato come risultato delle operazioni di conformità del compilatore eseguite per Visual Studio .NET 2003: mancante `typename` (parola chiave).  
   
- L'esempio riportato di seguito viene compilato in Visual Studio .NET, ma non funziona in Visual Studio .NET 2003:  
+ L'esempio seguente viene compilato in Visual Studio .NET 2002 ma non funziona in Visual Studio .NET 2003:  
   
 ```  
 // C2146b.cpp  
@@ -76,12 +79,12 @@ template <typename T>
 typename X<T>::Y func() { }  
 ```  
   
-## Esempio  
- Questo errore può anche venire generato come risultato delle operazioni di conformità eseguite per Visual Studio .NET 2003: le specializzazioni esplicite non trovano più i parametri di template dal template primario.  
+## <a name="example"></a>Esempio  
+ Si verifica anche questo errore come risultato delle operazioni di conformità del compilatore eseguite per Visual Studio .NET 2003: specializzazioni esplicite non si trovano più parametri di modello dal modello principale.  
   
- L'utilizzo di `T` dal modello principale non è consentito nella specializzazione esplicita.  Affinché il codice sia valido nelle versioni Visual Studio .NET 2003 e Visual Studio .NET di Visual C\+\+, sostituire tutte le istanze del parametro di template nella specializzazione con il tipo specializzato esplicitamente.  
+ L'utilizzo di `T` dal modello principale non è consentito nella specializzazione esplicita. Per il codice sia valido nelle versioni di Visual Studio .NET 2003 e Visual Studio .NET di Visual C++, sostituire tutte le istanze del parametro di modello nella specializzazione con il tipo specializzato in modo esplicito.  
   
- Il seguente esempio viene compilato in Visual Studio .NET ma non funziona in Visual Studio .NET 2003:  
+ L'esempio seguente viene compilato in Visual Studio .NET, ma non funziona in Visual Studio .NET 2003:  
   
 ```  
 // C2146_c.cpp  

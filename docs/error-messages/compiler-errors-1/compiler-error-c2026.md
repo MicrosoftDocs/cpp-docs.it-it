@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2026 | Documenti di Microsoft
+title: Errore del compilatore C2026 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,35 +19,21 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4fafe461008e3545243d693e0d9e34acd57163e0
-ms.openlocfilehash: c429f81c64b7710b7edc2b8540d98e8c790e4062
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 97937579c12730fecfa89c69d9e7cf51229b5c6c
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2026"></a>Errore del compilatore C2026
-la stringa è troppo grande. I caratteri finali verranno troncati  
+caratteri finali troncato stringa troppo grande.  
   
  La stringa è supera al limite di 16380 caratteri a byte singolo.  
   
- Prima di concatenazione delle stringhe adiacenti, una stringa non può essere più 16380 caratteri a byte singolo.  
+ Prima di concatenazione delle stringhe adiacenti, una stringa non può essere più lunga di 16380 caratteri a byte singolo.  
   
- Una stringa Unicode di circa la metà questa lunghezza anche genera questo errore.  
+ Una stringa Unicode di questa lunghezza di circa la metà anche genera l'errore.  
   
  Se si dispone di una stringa definita come indicato di seguito, viene generato C2026:  
   
@@ -69,4 +55,4 @@ imagine a really, really "
 ";  
 ```  
   
- Si consiglia di archiviare i valori letterali stringa eccezionalmente grandi (32 KB o più) in una risorsa personalizzata o un file esterno. Vedere [la creazione di una nuova risorsa personalizzata o dati](../../windows/creating-a-new-custom-or-data-resource.md) per ulteriori informazioni.
+ È consigliabile archiviare i valori letterali stringa eccezionalmente elevate (32 KB o più) in una risorsa personalizzata o un file esterno. Vedere [la creazione di una nuova risorsa personalizzata o dati](../../windows/creating-a-new-custom-or-data-resource.md) per ulteriori informazioni.

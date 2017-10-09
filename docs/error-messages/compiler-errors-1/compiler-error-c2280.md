@@ -19,26 +19,11 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: bec93f1ee238184cbb4eed0d98921fb28e94e222
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: af19f0a0c347ab0f898a3a3d72b8cca5cb07dad8
 ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2280"></a>C2280 di errore del compilatore  
@@ -111,7 +96,7 @@ void f() {
   
 Se una classe dichiara un costruttore di spostamento o l'operatore di assegnazione di spostamento, ma non dichiara in modo esplicito un costruttore di copia, il compilatore in modo implicito dichiara un costruttore di copia e la definisce come `deleted`. Analogamente, se una classe dichiara un costruttore di spostamento o l'operatore di assegnazione di spostamento, ma non dichiara in modo esplicito un operatore di assegnazione di copia, il compilatore in modo implicito dichiara un operatore di assegnazione di copia e definisce come `deleted`. Per risolvere questo problema, è necessario dichiarare in modo esplicito questi membri.  
  
-Quando viene visualizzato l'errore C2280 in relazione un `unique_ptr`, è quasi certamente perché si sta tentando di richiamare il costruttore di copia, ovvero un `deleted` (funzione). Per impostazione predefinita, una `unique_ptr` non può essere copiato. Utilizzare un costruttore di spostamento per trasferire la proprietà invece.  
+Quando viene visualizzato l'errore C2280 in relazione un `unique_ptr`, è quasi certamente perché si sta tentando di richiamare il costruttore di copia, ovvero un `deleted` (funzione). Per impostazione predefinita, un `unique_ptr` non può essere copiato. Utilizzare un costruttore di spostamento per trasferire la proprietà invece.  
 
 ```cpp  
 // C2280_move.cpp

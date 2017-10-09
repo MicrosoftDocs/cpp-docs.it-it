@@ -19,26 +19,11 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 74fdc75470600c29029c52e38ab2073e484dbde6
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0378426777bc7ce831eee9ecb62170baf5e906b9
 ms.contentlocale: it-it
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2099"></a>Errore del compilatore C2099
@@ -57,13 +42,13 @@ j = *p;   // C2099 *p is not a constant
 ```  
   
 ## <a name="example"></a>Esempio  
- L'errore C2099 può verificarsi anche perché il compilatore non è in grado di eseguire la riduzione delle costanti su un'espressione in **/fp: strict** perché le impostazioni di ambiente precisione della virgola mobile (vedere [controlfp_s](../../c-runtime-library/reference/controlfp-s.md) per altre informazioni) può differire dalla compilazione in fase di esecuzione.  
+ L'errore C2099 può verificarsi anche perché il compilatore non riesce a eseguire la riduzione delle costanti su un'espressione in **/fp:strict** . Le impostazioni di ambiente relative alla precisione della virgola mobile, infatti, possono variare dalla fase di compilazione a quella di compilazione. Per altre informazioni, vedere [_controlfp_s](../../c-runtime-library/reference/controlfp-s.md) .  
   
  Se la riduzione di costanti non riesce, il compilatore richiama l'inizializzazione dinamica, non consentita in C.  
   
  Per correggere questo errore, compilare il modulo come file cpp o semplificare l'espressione.  
   
- Per altre informazioni, vedere [/fp (Specifica il comportamento della virgola mobile)](../../build/reference/fp-specify-floating-point-behavior.md).  
+ Per altre informazioni, vedere [/fp (Specify Floating-Point Behavior)](../../build/reference/fp-specify-floating-point-behavior.md).  
   
  L'esempio seguente genera l'errore C2099.  
   

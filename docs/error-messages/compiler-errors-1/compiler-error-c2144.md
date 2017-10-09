@@ -1,41 +1,44 @@
 ---
-title: "Errore del compilatore C2144 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2144"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2144"
+title: Errore del compilatore C2144 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2144
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2144
 ms.assetid: 49f3959b-324f-4c06-9588-c0ecef5dc5b3
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# Errore del compilatore C2144
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0f541465009dcc137b8853351d10ceb9d5db4d05
+ms.contentlocale: it-it
+ms.lasthandoff: 10/09/2017
 
-errore di sintassi: 'tipo' deve essere preceduto da 'token'  
+---
+# <a name="compiler-error-c2144"></a>Errore del compilatore C2144
+Errore di sintassi: 'type' deve essere preceduto da 'token'  
   
- Era previsto `token`, ma è stato rilevato `type`.  
+ Il compilatore prevedeva `token` e trovare `type` invece.  
   
- Questo errore può essere causato dall'omissione di un punto e virgola o di una parentesi destra o graffa di chiusura.  
+ Questo errore può essere causato da una parentesi graffa di chiusura mancanti, parentesi di chiusura o punto e virgola.  
   
- L'errore C2144 può inoltre verificarsi quando si tenta di creare una macro da una parola chiave CLR contenente uno spazio.  
+ C2144 può verificarsi anche quando si tenta di creare una macro da una parola chiave CLR che contiene un carattere di spazio vuoto.  
   
- L'errore può essere visualizzato anche se si tenta di effettuare un inoltro di tipi.  Per ulteriori informazioni, vedere [Type Forwarding \(C\+\+\/CLI\)](../../windows/type-forwarding-cpp-cli.md).  
+ È inoltre possibile visualizzare C2144 se si sta tentando di inoltro del tipo. Vedere [inoltro dei tipi (C + + CLI)](../../windows/type-forwarding-cpp-cli.md) per ulteriori informazioni.  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore C2144:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C2144.  
   
 ```  
 // C2144.cpp  
@@ -48,8 +51,8 @@ REF struct MyStruct0;   // C2144
 REF1 MyStruct1;  
 ```  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore C2144:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C2144.  
   
 ```  
 // C2144_2.cpp  
