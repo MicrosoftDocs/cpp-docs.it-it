@@ -21,11 +21,11 @@ caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: c0c031bfc53bd28c6bd00e4b6e0f136c2bf607b7
+ms.translationtype: HT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f6a524e552728df0cee3e320aa36bf92d687c539
 ms.contentlocale: it-it
-ms.lasthandoff: 05/18/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compatibility"></a>Compatibilità

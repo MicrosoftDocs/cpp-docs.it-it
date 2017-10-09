@@ -1,5 +1,5 @@
 ---
-title: Classe CComApartment | Documenti di Microsoft
+title: Classe CComApartment | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,25 +29,11 @@ caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 050e7483670bd32f633660ba44491c8bb3fc462d
-ms.openlocfilehash: 9359e2ab8c4a84ab66441e3eb8cfd39520fd4e8d
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: beb2052a2dc7a8efbf6820c51dc2ff7a1f227795
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="ccomapartment-class"></a>Classe CComApartment
@@ -75,9 +61,9 @@ class CComApartment
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[CComApartment::Apartment](#apartment)|Contrassegna l'indirizzo iniziale del thread.|  
-|[CComApartment::GetLockCount](#getlockcount)|Restituisce il numero di blocco corrente del thread.|  
+|[CComApartment::GetLockCount](#getlockcount)|Restituisce conteggio dei blocchi del thread corrente.|  
 |[CComApartment::Lock](#lock)|Incrementa il conteggio di blocco del thread.|  
-|[CComApartment::Unlock](#unlock)|Decrementa il conteggio dei blocchi del thread.|  
+|[CComApartment::Unlock](#unlock)|Decrementa conteggio dei blocchi del thread.|  
   
 ### <a name="public-data-members"></a>Membri dati pubblici  
   
@@ -85,10 +71,10 @@ class CComApartment
 |----------|-----------------|  
 |[CComApartment::m_dwThreadID](#m_dwthreadid)|Contiene l'identificatore del thread.|  
 |[CComApartment::m_hThread](#m_hthread)|Contiene l'handle del thread.|  
-|[CComApartment::m_nLockCnt](#m_nlockcnt)|Contiene conteggio dei blocchi correnti del thread.|  
+|[CComApartment::m_nLockCnt](#m_nlockcnt)|Contiene conteggio dei blocchi del thread corrente.|  
   
 ## <a name="remarks"></a>Note  
- `CComApartment`viene utilizzato da [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md) per gestire un appartamento in un modulo EXE pool di thread. `CComApartment`fornisce metodi per l'incremento e decremento del blocco contare su un thread.  
+ `CComApartment`viene utilizzato da [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md) per gestire un apartment di un modulo EXE pool di thread. `CComApartment`fornisce metodi per l'incremento e decremento il blocco numero in un thread.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlbase. h  
@@ -117,7 +103,7 @@ CComApartment();
  Inizializza il `CComApartment` membri dati [m_nLockCnt](#m_nlockcnt) e [m_hThread](#m_hthread).  
   
 ##  <a name="getlockcount"></a>CComApartment::GetLockCount  
- Restituisce il numero di blocco corrente del thread.  
+ Restituisce conteggio dei blocchi del thread corrente.  
   
 ```
 LONG GetLockCount();
@@ -134,7 +120,7 @@ LONG Lock();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Un valore che può essere utile per la diagnostica o test.  
+ Un valore che può essere utile per la diagnostica o di testing.  
   
 ### <a name="remarks"></a>Note  
  Chiamato da [CComAutoThreadModule::Lock](../../atl/reference/ccomautothreadmodule-class.md#lock).  
@@ -156,21 +142,21 @@ HANDLE m_hThread;
 ```  
   
 ##  <a name="m_nlockcnt"></a>CComApartment::m_nLockCnt  
- Contiene conteggio dei blocchi correnti del thread.  
+ Contiene conteggio dei blocchi del thread corrente.  
   
 ```
 LONG m_nLockCnt;
 ```  
   
 ##  <a name="unlock"></a>CComApartment::Unlock  
- Decrementa il conteggio dei blocchi del thread.  
+ Decrementa conteggio dei blocchi del thread.  
   
 ```
 LONG Unlock();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Un valore che può essere utile per la diagnostica o test.  
+ Un valore che può essere utile per la diagnostica o di testing.  
   
 ### <a name="remarks"></a>Note  
  Chiamato da [CComAutoThreadModule::Unlock](../../atl/reference/ccomautothreadmodule-class.md#lock).  

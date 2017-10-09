@@ -1,5 +1,5 @@
 ---
-title: Classe CComFakeCriticalSection | Documenti di Microsoft
+title: Classe CComFakeCriticalSection | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,25 +24,11 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 050e7483670bd32f633660ba44491c8bb3fc462d
-ms.openlocfilehash: 2c1269288e03a8ac9f359dad9acf1a81ddbc84c2
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 6232a3e8b6c392361a1e57681e9ba4dff66d6aa4
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="ccomfakecriticalsection-class"></a>Classe CComFakeCriticalSection
@@ -60,21 +46,21 @@ class CComFakeCriticalSection
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CComFakeCriticalSection::Init](#init)|Non esegue alcuna operazione poiché è presente alcuna sezione critica.|  
-|[CComFakeCriticalSection::Lock](#lock)|Non esegue alcuna operazione poiché è presente alcuna sezione critica.|  
-|[CComFakeCriticalSection::Term](#term)|Non esegue alcuna operazione poiché è presente alcuna sezione critica.|  
-|[CComFakeCriticalSection::Unlock](#unlock)|Non esegue alcuna operazione poiché è presente alcuna sezione critica.|  
+|[CComFakeCriticalSection::Init](#init)|Non esegue alcuna operazione perché è presente alcuna sezione critica.|  
+|[CComFakeCriticalSection::Lock](#lock)|Non esegue alcuna operazione perché è presente alcuna sezione critica.|  
+|[CComFakeCriticalSection::Term](#term)|Non esegue alcuna operazione perché è presente alcuna sezione critica.|  
+|[CComFakeCriticalSection::Unlock](#unlock)|Non esegue alcuna operazione perché è presente alcuna sezione critica.|  
   
 ## <a name="remarks"></a>Note  
- `CComFakeCriticalSection`riflette i metodi disponibili in [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md). Tuttavia, `CComFakeCriticalSection` non fornisce una sezione critica; pertanto, i metodi di non eseguono alcuna operazione.  
+ `CComFakeCriticalSection`rispecchia metodi presenti in [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md). Tuttavia, `CComFakeCriticalSection` non fornisce una sezione critica; pertanto, i metodi non eseguono alcuna operazione.  
   
- In genere, si utilizza `CComFakeCriticalSection` tramite un `typedef` nome, `AutoCriticalSection` o `CriticalSection`. Quando si utilizza [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) o [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md), entrambi gli elementi `typedef` nomi fanno riferimento `CComFakeCriticalSection`. Quando si utilizza [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md), fanno riferimento a [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md) e `CComCriticalSection`, rispettivamente.  
+ In genere, si utilizza `CComFakeCriticalSection` tramite un `typedef` nome, `AutoCriticalSection` o `CriticalSection`. Quando si utilizza [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) o [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md), entrambi questi `typedef` nomi fanno riferimento `CComFakeCriticalSection`. Quando si utilizza [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md), fanno riferimento a [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md) e `CComCriticalSection`, rispettivamente.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** atlcore. h  
+ **Intestazione:** atlcore  
   
 ##  <a name="init"></a>CComFakeCriticalSection::Init  
- Non esegue alcuna operazione poiché è presente alcuna sezione critica.  
+ Non esegue alcuna operazione perché è presente alcuna sezione critica.  
   
 ```
 HRESULT Init() throw();
@@ -84,7 +70,7 @@ HRESULT Init() throw();
  Restituisce S_OK.  
   
 ##  <a name="lock"></a>CComFakeCriticalSection::Lock  
- Non esegue alcuna operazione poiché è presente alcuna sezione critica.  
+ Non esegue alcuna operazione perché è presente alcuna sezione critica.  
   
 ```
 HRESULT Lock() throw();
@@ -94,7 +80,7 @@ HRESULT Lock() throw();
  Restituisce S_OK.  
   
 ##  <a name="term"></a>CComFakeCriticalSection::Term  
- Non esegue alcuna operazione poiché è presente alcuna sezione critica.  
+ Non esegue alcuna operazione perché è presente alcuna sezione critica.  
   
 ```
 HRESULT Term() throw();
@@ -104,7 +90,7 @@ HRESULT Term() throw();
  Restituisce S_OK.  
   
 ##  <a name="unlock"></a>CComFakeCriticalSection::Unlock  
- Non esegue alcuna operazione poiché è presente alcuna sezione critica.  
+ Non esegue alcuna operazione perché è presente alcuna sezione critica.  
   
 ```
 HRESULT Unlock() throw();

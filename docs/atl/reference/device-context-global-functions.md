@@ -1,5 +1,5 @@
 ---
-title: Funzioni globali di contesto di dispositivo | Documenti di Microsoft
+title: Funzioni globali di contesto di dispositivo | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -8,6 +8,8 @@ ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
+f1_keywords:
+- atlwin/ATL::AtlCreateTargetDC
 dev_langs:
 - C++
 ms.assetid: 08ec28f6-daff-4882-9544-e8a4639d05c4
@@ -15,25 +17,11 @@ caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 8c71781519b965717acbcefab6fe6a183686caef
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: d2560043bc97c384846696b76d8e38b459ae4a34
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="device-context-global-functions"></a>Funzioni globali di contesto di dispositivo
@@ -55,10 +43,10 @@ HDC AtlCreateTargetDC(HDC hdc, DVTARGETDEVICE* ptd);
  [in] L'handle di un contesto di dispositivo, esistente o **NULL**.  
   
  `ptd`  
- [in] Un puntatore per il **DVTARGETDEVICE** struttura che contiene informazioni relative al dispositivo di destinazione.  
+ [in] Un puntatore al **DVTARGETDEVICE** struttura contenente informazioni sul dispositivo di destinazione.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce l'handle a un contesto di dispositivo per il dispositivo specificato nella **DVTARGETDEVICE**. Se non è specificato, restituisce l'handle per il dispositivo di visualizzazione predefinito.  
+ Restituisce l'handle per un contesto di dispositivo per il dispositivo specificato nella **DVTARGETDEVICE**. Se non è specificato, restituisce l'handle per il dispositivo di visualizzazione predefinito.  
   
 ### <a name="remarks"></a>Note  
  Se la struttura è **NULL** e *hdc* è **NULL**, crea un contesto di dispositivo per il dispositivo di visualizzazione predefinito.  

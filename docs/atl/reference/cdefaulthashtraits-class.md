@@ -1,5 +1,5 @@
 ---
-title: Classe CDefaultHashTraits | Documenti di Microsoft
+title: Classe CDefaultHashTraits | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -21,25 +21,11 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 5191327e5e60935829750c7d1e04ba89fcddc771
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 932969a5d06a3bd06755ec60d43b3257a4de9785
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="cdefaulthashtraits-class"></a>Classe CDefaultHashTraits
@@ -62,10 +48,10 @@ class CDefaultHashTraits
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CDefaultHashTraits::Hash](#hash)|(Statico) Chiamare questa funzione per calcolare un valore hash per un determinato elemento.|  
+|[CDefaultHashTraits::Hash](#hash)|(Statico) Chiamare questa funzione per calcolare un valore hash per l'elemento specificato.|  
   
 ## <a name="remarks"></a>Note  
- Questa classe contiene una singola funzione statica che restituisce un valore hash per un determinato elemento. Questa classe viene utilizzata per la [CDefaultElementTraits classe](../../atl/reference/cdefaultelementtraits-class.md).  
+ Questa classe contiene una singola funzione statica che restituisce un valore hash per l'elemento specificato. Questa classe viene utilizzata per la [CDefaultElementTraits classe](../../atl/reference/cdefaultelementtraits-class.md).  
   
  Per ulteriori informazioni, vedere [classi Collection ATL](../../atl/atl-collection-classes.md).  
   
@@ -73,7 +59,7 @@ class CDefaultHashTraits
  **Intestazione:** atlcoll. h  
   
 ##  <a name="hash"></a>CDefaultHashTraits::Hash  
- Chiamare questa funzione per calcolare un valore hash per un determinato elemento.  
+ Chiamare questa funzione per calcolare un valore hash per l'elemento specificato.  
   
 ```
 static ULONG Hash(const T& element) throw();
@@ -87,7 +73,7 @@ static ULONG Hash(const T& element) throw();
  Restituisce il valore hash.  
   
 ### <a name="remarks"></a>Note  
- L'algoritmo hash predefinito è molto semplice: il valore restituito è il numero di elementi. Eseguire l'override di questa funzione se è necessario un algoritmo più complesso.  
+ L'algoritmo hash predefinito è molto semplice: il valore restituito è il numero di elementi. Eseguire l'override di questa funzione se è richiesto un algoritmo più complesso.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)

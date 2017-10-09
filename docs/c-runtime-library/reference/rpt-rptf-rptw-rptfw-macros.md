@@ -99,30 +99,15 @@ caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: ca0ae546af28c342db2e452bec432ced0437738a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 43efb76381db85f4f1d601cb6d83dd82074e960a
 ms.contentlocale: it-it
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="rpt-rptf-rptw-rptfw-macros"></a>_RPT, _RPTF, _RPTW, _RPTFW Macros
-Tiene traccia dello stato di un'applicazione mediante la generazione di un report di debug (solo versione di debug). Si noti che *n* specifica il numero di argomenti in `args` e può essere 0, 1, 2, 3, 4 o 5.  
+Tiene traccia dello stato di un'applicazione mediante la generazione di un report di debug (solo versione di debug). Si noti che  *n*  specifica il numero di argomenti in `args` e può essere 0, 1, 2, 3, 4 o 5.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -169,7 +154,7 @@ _RPTFWn(
   
  Le macro `_RPTW` e `_RPTFW` sono versioni a caratteri wide di queste macro. Sono simili a `wprintf` e accettano stringhe di caratteri wide come argomenti.  
   
- Le macro `_RPT` chiamano la funzione [CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) per generare un report di debug con un messaggio utente. Le macro `_RPTW` chiamano la funzione `_CrtDbgReportW` per generare lo stesso report con caratteri wide. Le macro `_RPTF` e `_RPTFW` creano un report di debug con il file di origine e il numero di riga in cui è stata chiamata la macro di report, oltre al messaggio utente. Il messaggio utente viene creato tramite la sostituzione degli argomenti `arg`[*n*] nella stringa `format`, usando le stesse regole definite dalla funzione [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md).  
+ Le macro `_RPT` chiamano la funzione [CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) per generare un report di debug con un messaggio utente. Le macro `_RPTW` chiamano la funzione `_CrtDbgReportW` per generare lo stesso report con caratteri wide. Le macro `_RPTF` e `_RPTFW` creano un report di debug con il file di origine e il numero di riga in cui è stata chiamata la macro di report, oltre al messaggio utente. Viene creato il messaggio utente sostituendo il `arg`[*n*] argomenti al `format` stringa, usando le stesse regole definite per il [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) (funzione).  
   
  `_CrtDbgReport` o `_CrtDbgReportW` genera il report di debug e ne determina la destinazione o destinazioni, in base alle modalità del report e al file definito per `reportType`. Le funzioni [_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportmode.md) e [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportfile.md) vengono usate per definire le destinazioni per ogni tipo di report.  
   

@@ -1,57 +1,65 @@
 ---
-title: "_AtlCreateWndData Structure | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::_AtlCreateWndData"
-  - "ATL._AtlCreateWndData"
-  - "_AtlCreateWndData"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_AtlCreateWndData structure"
-  - "AtlCreateWndData structure"
+title: Struttura _AtlCreateWndData | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::_AtlCreateWndData
+- ATL._AtlCreateWndData
+- _AtlCreateWndData
+dev_langs:
+- C++
+helpviewer_keywords:
+- _AtlCreateWndData structure
+- AtlCreateWndData structure
 ms.assetid: 76ed5382-bfbf-4b8b-8a29-912688dfd2ae
 caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# _AtlCreateWndData Structure
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: a5b0811e88188bb29ef3153f739804cbdac66083
+ms.contentlocale: it-it
+ms.lasthandoff: 10/09/2017
 
-Questa struttura contiene i dati di istanza della classe nel codice di utilizzo di windows in ATL.  
+---
+# <a name="atlcreatewnddata-structure"></a>Struttura _AtlCreateWndData
+Questa struttura contiene dati di istanza di classe nel codice di windowing in ATL.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
+```
+    struct _AtlCreateWndData{
+    void* m_pThis;
+    DWORD m_dwThreadID;
+    _AtlCreateWndData* m_pNext;
+};
 ```  
   
-      struct _AtlCreateWndData{  
-   void* m_pThis;  
-   DWORD m_dwThreadID;  
-   _AtlCreateWndData* m_pNext;  
-};  
-```  
-  
-## Membri  
- **m\_pThis**  
- Il puntatore **this** utilizzato per ottenere l'accesso all'istanza della classe nelle procedure di finestra.  
+## <a name="members"></a>Membri  
+ **m_pThis**  
+ Il **questo** puntatore utilizzato per accedere all'istanza della classe nella routine della finestra.  
   
  `m_dwThreadID`  
- ID thread dell'istanza della classe corrente.  
+ ID del thread dell'istanza della classe corrente.  
   
- **m\_pNext**  
- Puntatore all'`_AtlCreateWndData`.  
+ **m_pNext**  
+ Puntatore al successivo `_AtlCreateWndData` oggetto.  
   
-## Requisiti  
- **Header:** atlbase.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** atlbase. h  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Strutture](../../atl/reference/atl-structures.md)
+
+
+
+
+
+

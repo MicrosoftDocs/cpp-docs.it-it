@@ -1,44 +1,49 @@
 ---
-title: "Aggiunta di un consumer OLE DB ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL OLE DB (consumer)"
-  - "ATL (progetti), aggiunta di consumer OLE DB ATL"
-  - "OLE DB, aggiunta di consumer ATL OLE DB ai progetti"
+title: Aggiunta di un Consumer ATL OLE DB | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- ATL projects, adding ATL OLE DB consumers
+- OLE DB, adding ATL OLE DB consumer to projects
+- ATL OLE DB consumers
 ms.assetid: f940a513-4e42-4148-b521-dd0d7dc89fa2
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Aggiunta di un consumer OLE DB ATL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 41e31e82c97252a2ab5e34a78db5af1fd4e24f98
+ms.contentlocale: it-it
+ms.lasthandoff: 10/09/2017
 
-È possibile utilizzare questa procedura guidata per aggiungere un consumer OLE DB ATL a un progetto.  Il consumer è costituito da una classe di accesso OLE DB e dalle associazioni dati necessarie per accedere a un'origine dati.  È necessario che il progetto sia stato creato come applicazione COM ATL o come applicazione MFC o Win32 con supporto ATL, il quale viene aggiunto automaticamente dalla Creazione guidata consumer OLE DB ATL.  
+---
+# <a name="adding-an-atl-ole-db-consumer"></a>Aggiunta di un Consumer ATL OLE DB
+Utilizzare questa procedura guidata per aggiungere un consumer OLE DB ATL a un progetto. Un consumer OLE DB ATL costituito un OLE DB accesso classe e i dati dalle associazioni necessarie per accedere a un'origine dati. Il progetto è necessario avere creato come un'applicazione ATL COM o come un'applicazione MFC o Win32 che contiene il supporto ATL (quali la creazione guidata Consumer OLE DB ATL aggiunge automaticamente).  
   
- **Note** è possibile aggiungere un consumer OLE DB a un progetto MFC.  In questo caso, la Creazione guidata consumer OLE DB ATL aggiunge il supporto COM necessario per il progetto.  Per poter eseguire questa operazione, è necessario che durante la creazione del progetto MFC sia stata selezionata la casella di controllo **Controlli ActiveX** nella schermata **Funzionalità avanzate** della creazione guidata \(la casella di controllo è selezionata per impostazione predefinita\).  Se si seleziona questa opzione, **CoInitialize** e **CoUninitialize** verranno chiamati automaticamente dall'applicazione.  Se non si seleziona la casella di controllo **Controlli ActiveX** durante la creazione del progetto MFC, sarà necessario chiamare **CoInitialize** e **CoUninitialize** nel codice principale.  
+ **Nota** è possibile aggiungere un consumer OLE DB a un progetto MFC. In caso contrario, la creazione guidata Consumer OLE DB ATL aggiunge il supporto COM necessari al progetto. Si presuppone che al momento della creazione del progetto MFC, è selezionato il **controlli ActiveX** casella di controllo (nel **funzionalità avanzate** pagina della creazione guidata applicazione MFC progetto), che è selezionata per impostazione predefinita. Se si seleziona questa opzione garantisce che l'applicazione chiama **CoInitialize** e **CoUninitialize**. Se non è stata selezionata **controlli ActiveX** al momento della creazione del progetto MFC, è necessario chiamare **CoInitialize** e **CoUninitialize** nel codice principale.  
   
-### Per aggiungere un consumer OLE DB ATL al progetto  
+### <a name="to-add-an-atl-ole-db-consumer-to-your-project"></a>Per aggiungere un consumer OLE DB ATL al progetto  
   
-1.  In Visualizzazione classi fare clic con il pulsante destro del mouse sul progetto.  Scegliere **Aggiungi** dal menu di scelta rapida, quindi **Aggiungi classe**.  
+1.  In visualizzazione classi, fare clic sul progetto. Menu di scelta rapida, fare clic su **Aggiungi** e quindi fare clic su **Aggiungi classe**.  
   
-2.  Nella cartella Visual C\+\+ fare doppio clic sull'icona **Consumer OLE DB ATL** oppure selezionarla e scegliere **Apri**.  
+2.  Nella cartella Visual C++, fare doppio clic su di **Consumer OLE DB ATL** icona oppure selezionarlo e fare clic su **aprire**.  
   
-     Verrà visualizzata la Creazione guidata consumer OLEDB ATL.  
+     Verrà visualizzata la creazione guidata Consumer OLE DB ATL.  
   
-3.  Definire le impostazioni come descritto in [Creazione guidata consumer OLEDB ATL](../../atl/reference/atl-ole-db-consumer-wizard.md).  
+3.  Definire le impostazioni come descritto in [la creazione guidata Consumer OLE DB ATL](../../atl/reference/atl-ole-db-consumer-wizard.md).  
   
-4.  Scegliere **Fine** per uscire dalla procedura guidata.  Il codice del consumer OLE DB appena creato verrà inserito nel progetto.  
+4.  Fare clic su **fine** per chiudere la procedura guidata. Il codice del consumer OLE DB appena creato verrà inserito nel progetto.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Aggiunta di funzionalità con creazioni guidate codice](../../ide/adding-functionality-with-code-wizards-cpp.md)
+
+

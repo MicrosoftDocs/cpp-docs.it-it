@@ -1,5 +1,5 @@
 ---
-title: Struttura _ATL_COM_MODULE70 | Documenti di Microsoft
+title: Struttura _ATL_COM_MODULE70 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,29 +22,15 @@ caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4e393abb2a904a0f5e101efe3d78d0645664397b
-ms.openlocfilehash: 503c2a29cf0e70020b012911c51b056f00562374
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: a269820c5a0965553989bc57d7c239aa95e527ef
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="atlcommodule70-structure"></a>Struttura _ATL_COM_MODULE70
-Utilizzato dal codice correlato a COM in ATL.  
+Utilizzato da codice COM correlato in ATL.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -60,22 +46,22 @@ struct _ATL_COM_MODULE70 {
   
 ## <a name="members"></a>Membri  
  `cbSize`  
- La dimensione della struttura, utilizzata per il controllo delle versioni.  
+ Le dimensioni della struttura, utilizzata per il controllo delle versioni.  
   
  `m_hInstTypeLib`  
- L'istanza di handle per la libreria dei tipi per il modulo.  
+ Handle di istanza alla libreria dei tipi per questo modulo.  
   
  **m_ppAutoObjMapFirst**  
- Indirizzo dell'elemento della matrice che indica l'inizio delle voci della mappa oggetto per il modulo.  
+ Indirizzo dell'elemento della matrice indica l'inizio delle voci della mappa di oggetto per il modulo.  
   
  **m_ppAutoObjMapLast**  
- Indirizzo dell'elemento della matrice che indica la fine delle voci della mappa oggetto per il modulo.  
+ Indirizzo dell'elemento della matrice che indica la fine delle voci della mappa di oggetto per il modulo.  
   
  `m_csObjMap`  
  Sezione critica per serializzare l'accesso per le voci della mappa oggetto. Utilizzato internamente da ATL.  
   
 ## <a name="remarks"></a>Note  
- [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module) è definito come typedef di `_ATL_COM_MODULE70`.  
+ [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module) è definito come un typedef di `_ATL_COM_MODULE70`.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlbase. h  

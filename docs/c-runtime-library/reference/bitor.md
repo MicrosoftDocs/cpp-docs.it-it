@@ -1,46 +1,49 @@
 ---
-title: "bitor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "bitor"
-  - "std.bitor"
-  - "std::bitor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bitor (funzione)"
+title: bitor | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- bitor
+- std.bitor
+- std::bitor
+dev_langs:
+- C++
+helpviewer_keywords:
+- bitor function
 ms.assetid: 3c0a3711-9c74-41f2-b400-2f7797da30d1
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# bitor
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: 7f840179a2087138ce46c1ec2c9ba16acd20bc70
+ms.contentlocale: it-it
+ms.lasthandoff: 10/09/2017
 
+---
+# <a name="bitor"></a>bitor
 Alternativa all'operatore &#124;.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -48,10 +51,10 @@ Alternativa all'operatore &#124;.
   
 ```  
   
-## Note  
+## <a name="remarks"></a>Note  
  La macro restituisce l'operatore &#124;.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // iso646_bitor.cpp  
@@ -72,7 +75,10 @@ int main( )
 }  
 ```  
   
-  **3**  
-**3**   
-## Requisiti  
- **Intestazione:** \<iso646.h\>
+```Output  
+3  
+3  
+```  
+  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<iso646.h>

@@ -1,5 +1,5 @@
 ---
-title: Classe CComSafeArrayBound | Documenti di Microsoft
+title: Classe CComSafeArrayBound | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,25 +26,11 @@ caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 1cc2adef85c902b7ad12b152b35a7ef68e6abacb
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 01198e8de5f2eb1cbe0787bd287820d222875c20
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="ccomsafearraybound-class"></a>Classe CComSafeArrayBound
@@ -73,10 +59,10 @@ class CComSafeArrayBound : public SAFEARRAYBOUND
   
 |||  
 |-|-|  
-|[operatore =](#operator_eq)|Imposta il `CComSafeArrayBound` su un nuovo valore.|  
+|[operator =](#operator_eq)|Imposta il `CComSafeArrayBound` su un nuovo valore.|  
   
 ## <a name="remarks"></a>Note  
- Questa classe è un wrapper per il **SAFEARRAYBOUND** struttura utilizzata da [CComSafeArray](../../atl/reference/ccomsafearray-class.md). Fornisce metodi per l'esecuzione di query e impostare i limiti superiori e inferiori di una singola dimensione di un `CComSafeArray` oggetto e il numero di elementi che contiene. Un oggetto multidimensionale `CComSafeArray` oggetto utilizza una matrice di `CComSafeArrayBound` oggetti, uno per ogni dimensione. Pertanto, quando si utilizzano i metodi, ad esempio [GetCount](#getcount), tenere presente che questo metodo non restituirà il numero totale di elementi in una matrice multidimensionale.  
+ Questa classe è un wrapper per il **SAFEARRAYBOUND** struttura usata da [CComSafeArray](../../atl/reference/ccomsafearray-class.md). Fornisce metodi per l'esecuzione di query e impostare i limiti superiori e inferiori di una singola dimensione di un `CComSafeArray` oggetto e il numero di elementi che contiene. Un oggetto multidimensionale `CComSafeArray` oggetto utilizza una matrice di `CComSafeArrayBound` oggetti, uno per ogni dimensione. Pertanto, quando si utilizzano i metodi, ad esempio [GetCount](#getcount), tenere presente che questo metodo non restituirà il numero totale di elementi in una matrice multidimensionale.  
   
  **Intestazione:** atlsafe.h  
   
@@ -95,10 +81,10 @@ CComSafeArrayBound(ULONG ulCount = 0, LONG lLowerBound = 0) throw();
  Numero di elementi nella matrice.  
   
  `lLowerBound`  
- Il limite inferiore da cui viene assegnato il numero della matrice.  
+ Il limite inferiore da cui la matrice viene numerata.  
   
 ### <a name="remarks"></a>Note  
- Se la matrice è accessibile da un programma Visual C++, è consigliabile che il limite inferiore viene definita come 0. Potrebbe essere preferibile utilizzare un valore limite inferiore diverso se la matrice è utilizzabile con altri linguaggi, ad esempio Visual Basic.  
+ Se la matrice è possibile accedere da un programma Visual C++, è consigliabile che il limite inferiore deve essere definito come 0. Potrebbe essere preferibile utilizzare un valore di limite inferiore diverso se la matrice è utilizzabile con altri linguaggi, ad esempio Visual Basic.  
   
 ##  <a name="getcount"></a>CComSafeArrayBound::GetCount  
  Chiamare questo metodo per restituire il numero di elementi.  
@@ -121,7 +107,7 @@ LONG GetLowerBound() const throw();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il limite inferiore di `CComSafeArrayBound` oggetto.  
+ Restituisce il limite inferiore del `CComSafeArrayBound` oggetto.  
   
 ##  <a name="getupperbound"></a>CComSafeArrayBound::GetUpperBound  
  Chiamare questo metodo per restituire il limite superiore.  
@@ -134,7 +120,7 @@ LONG GetUpperBound() const throw();
  Restituisce il limite superiore di `CComSafeArrayBound` oggetto.  
   
 ### <a name="remarks"></a>Note  
- Il limite superiore dipende dal numero di elementi e il valore limite inferiore. Ad esempio, se il limite inferiore è 0 e il numero di elementi è 10, il limite superiore verrà automaticamente impostato a 9.  
+ Il limite superiore dipende dal numero di elementi e il valore del limite inferiore. Ad esempio, se il limite inferiore è 0 e il numero di elementi è 10, il limite superiore verrà automaticamente impostato a 9.  
   
 ##  <a name="operator_eq"></a>CComSafeArrayBound::operator =  
  Imposta il `CComSafeArrayBound` su un nuovo valore.  
@@ -152,10 +138,10 @@ CComSafeArrayBound& operator= (ULONG ulCount) throw();
  Numero di elementi.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce un puntatore per il `CComSafeArrayBound` oggetto.  
+ Restituisce un puntatore al `CComSafeArrayBound` oggetto.  
   
 ### <a name="remarks"></a>Note  
- Il `CComSafeArrayBound` oggetto può essere assegnato utilizzando un oggetto esistente `CComSafeArrayBound`, oppure specificando il numero di elementi, nel qual caso il limite inferiore è impostato su 0 per impostazione predefinita.  
+ Il `CComSafeArrayBound` oggetto può essere assegnato utilizzando un oggetto esistente `CComSafeArrayBound`, o specificando il numero di elementi, nel qual caso il limite inferiore è impostato su 0 per impostazione predefinita.  
   
 ##  <a name="setcount"></a>CComSafeArrayBound::SetCount  
  Chiamare questo metodo per impostare il numero di elementi.  
@@ -183,12 +169,12 @@ LONG SetLowerBound(LONG lLowerBound) throw();
  Il limite inferiore.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il nuovo limite inferiore di `CComSafeArrayBound` oggetto.  
+ Restituisce il nuovo limite inferiore del `CComSafeArrayBound` oggetto.  
   
 ### <a name="remarks"></a>Note  
- Se la matrice è accessibile da un programma Visual C++, è consigliabile che il limite inferiore viene definita come 0. Potrebbe essere preferibile utilizzare un valore limite inferiore diverso se la matrice è utilizzabile con altri linguaggi, ad esempio Visual Basic.  
+ Se la matrice è possibile accedere da un programma Visual C++, è consigliabile che il limite inferiore deve essere definito come 0. Potrebbe essere preferibile utilizzare un valore di limite inferiore diverso se la matrice è utilizzabile con altri linguaggi, ad esempio Visual Basic.  
   
- Il limite superiore dipende dal numero di elementi e il valore limite inferiore. Ad esempio, se il limite inferiore è 0 e il numero di elementi è 10, il limite superiore verrà automaticamente impostato a 9.  
+ Il limite superiore dipende dal numero di elementi e il valore del limite inferiore. Ad esempio, se il limite inferiore è 0 e il numero di elementi è 10, il limite superiore verrà automaticamente impostato a 9.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)

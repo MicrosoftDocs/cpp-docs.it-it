@@ -27,25 +27,11 @@ caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: ac817cedb4c7ed67e698969b14645f5659aab2ad
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: e9d580a8027e37ce2db5e70b72c4f8cf2a99e516
 ms.contentlocale: it-it
-ms.lasthandoff: 03/31/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="ccomcontainedobject-class"></a>Classe CComContainedObject
@@ -71,7 +57,7 @@ class CComContainedObject : public Base
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CComContainedObject::CComContainedObject](#ccomcontainedobject)|Costruttore. Inizializza il puntatore a membro per l'oggetto proprietario `IUnknown`.|  
+|[CComContainedObject::CComContainedObject](#ccomcontainedobject)|Costruttore. Inizializza il puntatore membro dell'oggetto proprietario `IUnknown`.|  
 |[CComContainedObject:: ~ CComContainedObject](#dtor)|Distruttore.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
