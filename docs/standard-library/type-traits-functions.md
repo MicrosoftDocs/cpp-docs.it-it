@@ -20,10 +20,22 @@ f1_keywords:
 ms.assetid: dce4492f-f3e4-4d5e-bdb4-5875321254ec
 caps.latest.revision: 13
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: f13f6ffe70bf2f9abe640eb0c990f690b08b1f59
-ms.lasthandoff: 02/24/2017
+helpviewer_keywords:
+- std::is_assignable
+- std::is_copy_assignable
+- std::is_copy_constructible
+- std::is_default_constructible
+- std::is_move_assignable
+- std::is_move_constructible
+- std::is_nothrow_move_assignable
+- std::is_trivially_copy_assignable
+- std::is_trivially_move_assignable
+- std::is_trivially_move_constructible
+ms.translationtype: MT
+ms.sourcegitcommit: d5416662aaafdc074df11e172a76de6198025a65
+ms.openlocfilehash: 668ef9fb5f1786c3830d1ad143348c26060218ff
+ms.contentlocale: it-it
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="lttypetraitsgt-functions"></a>Funzioni &lt;type_traits&gt;
