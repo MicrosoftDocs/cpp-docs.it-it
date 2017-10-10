@@ -1,34 +1,37 @@
 ---
-title: "Errore del compilatore C2017 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2017"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2017"
+title: Errore del compilatore C2017 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2017
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2017
 ms.assetid: 1083eed9-9906-4a97-883c-54e52d7e82cd
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Errore del compilatore C2017
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7170fa404cba6cab3a0fcf3eec3e1d02c11271bb
+ms.contentlocale: it-it
+ms.lasthandoff: 10/09/2017
 
-sequenza di escape non valida  
+---
+# <a name="compiler-error-c2017"></a>Errore del compilatore C2017
+sequenza di escape decimale non valida  
   
- Una sequenza di escape, come \\t, è presente al di fuori di una costante carattere o stringa.  
+ Una sequenza di escape, ad esempio \t, viene visualizzata all'esterno di un carattere o una stringa costante.  
   
- Il seguente codice di esempio genera l'errore C2017:  
+ L'esempio seguente genera l'errore C2017:  
   
 ```  
 // C2017.cpp  
@@ -38,9 +41,9 @@ int main() {
 }  
 ```  
   
- L'errore C2017 può verificarsi quando l'operatore stringize viene utilizzato con stringhe contenenti sequenze di escape.  
+ C2017 può verificarsi quando l'operatore stringize viene utilizzato con stringhe che includono le sequenze di escape.  
   
- Il seguente codice di esempio genera l'errore C2017:  
+ L'esempio seguente genera l'errore C2017:  
   
 ```  
 // C2017b.cpp  

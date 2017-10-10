@@ -1,34 +1,37 @@
 ---
-title: "Errore del compilatore C2070 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2070"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2070"
+title: Errore del compilatore C2070 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2070
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2070
 ms.assetid: 4c8dea63-1227-4aba-be26-2462537f86fb
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Errore del compilatore C2070
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0923caf84c3980c4ee1b4eaa832752f34a447cc1
+ms.contentlocale: it-it
+ms.lasthandoff: 10/09/2017
 
-'tipo': operando di sizeof non valido  
+---
+# <a name="compiler-error-c2070"></a>Errore del compilatore C2070
+'type': operando di sizeof non valido  
   
- L'operatore [sizeof](../../cpp/sizeof-operator.md) richiede un'espressione o un nome di tipo.  
+ Il [sizeof](../../cpp/sizeof-operator.md) operatore richiede un'espressione o un tipo di nome.  
   
- Il seguente codice di esempio genera l'errore C2070:  
+ L'esempio seguente genera l'errore C2070:  
   
 ```  
 // C2070.cpp  

@@ -1,34 +1,37 @@
 ---
-title: "Errore del compilatore C2234 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2234"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2234"
+title: Errore del compilatore C2234 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2234
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2234
 ms.assetid: cfa42458-c803-4717-a017-9eca1c0cbfb0
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Errore del compilatore C2234
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b556efc1e73ae04f749441e1888d46cd5499e8ea
+ms.contentlocale: it-it
+ms.lasthandoff: 10/09/2017
 
-'nome': le matrici di riferimenti non sono valide  
+---
+# <a name="compiler-error-c2234"></a>Errore del compilatore C2234
+'name': le matrici di riferimenti non sono validi  
   
- Poiché non sono ammessi i puntatori ai riferimenti, le matrici di riferimenti non sono valide.  
+ Poiché non sono consentiti i puntatori ai riferimenti, matrici di riferimenti non sono possibili.  
   
- Il seguente codice di esempio genera l'errore C2234:  
+ L'esempio seguente genera l'errore C2234:  
   
 ```  
 // C2234.cpp  
