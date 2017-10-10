@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: c08ab7349cf2087599a637fb8bbd06e68b00e332
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7954c0904cd39ff5ab6e6698030aa701b3735e3f
 ms.contentlocale: it-it
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3040"></a>Errore del compilatore C3040
 'var': il tipo di variabile nella clausola 'reduction' incompatibile con l'operatore di riduzione 'operator'  
   
- Una variabile in un [riduzione](../../parallel/openmp/reference/reduction.md) clausola non può essere utilizzata con l'operatore di riduzione.  
+ Una variabile in una clausola [reduction](../../parallel/openmp/reference/reduction.md) non può essere usata con l'operatore di riduzione.  
   
  L'esempio seguente genera l'errore C3040:  
   

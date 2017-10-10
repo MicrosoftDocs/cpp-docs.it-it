@@ -1,40 +1,43 @@
 ---
-title: "Errore del compilatore C2663 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2663"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2663"
+title: Errore del compilatore C2663 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2663
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2663
 ms.assetid: 1e93e368-fd52-42bf-9908-9b6df467c8c9
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Errore del compilatore C2663
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a9efe20b4a80b9ff6f337d32acd35320125008dc
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'funzione': numero overload presentano conversioni non valide per il puntatore 'this'  
+---
+# <a name="compiler-error-c2663"></a>Errore del compilatore C2663
+'function': numero overload non presentano conversioni valide per puntatore 'this'  
   
- Non è stato possibile convertire `this` in alcuna delle versioni in overload della funzione membro.  
+ Il compilatore non è stato possibile convertire `this` a una delle versioni di overload della funzione membro.  
   
- Questo errore può verificarsi quando si richiama una funzione membro non\-`const` su un oggetto `const`.  Possibili soluzioni:  
+ Questo errore può dipendere da richiamare non`const` funzione membro su un `const` oggetto.  Soluzioni possibili:  
   
-1.  Rimuovere `const` dalla dichiarazione dell'oggetto.  
+1.  Rimuovere il `const` dalla dichiarazione dell'oggetto.  
   
-2.  Aggiungere la parola chiave `const` a una delle versioni in overload della funzione membro.  
+2.  Aggiungere `const` a uno degli overload della funzione membro.  
   
- Il seguente codice di esempio genera l'errore C2663:  
+ L'esempio seguente genera l'errore C2663:  
   
 ```  
 // C2663.cpp  

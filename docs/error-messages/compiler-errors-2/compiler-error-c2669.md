@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2669 | Documenti di Microsoft
+title: Errore del compilatore C2669 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,34 +19,20 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 78a55159984f995724b04a49387b6b46fba7caf2
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0cd56be9cba1fcefa269f30579dcace4f3166660
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2669"></a>Errore del compilatore C2669
-funzione membro non consentita in un'unione anonima  
+funzione membro non consentite nelle unioni anonime  
   
-[Unioni anonime](../../cpp/unions.md#anonymous_unions) non può avere funzioni membro.  
+[Unioni anonime](../../cpp/unions.md#anonymous_unions) possono avere funzioni membro.  
   
 ## <a name="example"></a>Esempio  
-Nell'esempio seguente viene generato l'errore C2669:  
+L'esempio seguente genera l'errore C2669:  
   
 ```cpp  
 // C2669.cpp  

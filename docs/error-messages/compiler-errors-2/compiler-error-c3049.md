@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: a5fbd2416488675e76490c6b23728e882080137d
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e2c81bf792be0340cd558ce3ad8efccd64d0d8a7
 ms.contentlocale: it-it
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3049"></a>Errore del compilatore C3049
 'arg': argomento non valido nella clausola 'default' OpenMP  
   
- È stato passato un valore non corretto per un [predefinito](../../parallel/openmp/reference/default-openmp.md) clausola.  
+ Un valore non corretto è stato passato a una clausola [default](../../parallel/openmp/reference/default-openmp.md) .  
   
  L'esempio seguente genera l'errore C3049:  
   

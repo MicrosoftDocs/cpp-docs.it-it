@@ -1,34 +1,37 @@
 ---
-title: "Errore del compilatore C2883 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2883"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2883"
+title: Errore del compilatore C2883 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2883
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2883
 ms.assetid: 5c6d689d-ed42-41ad-b5c0-e9c2e0b8c356
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Errore del compilatore C2883
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 28c2031c3e659099507a8e59758e27f364dd29b9
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'nome': conflitto tra la dichiarazione di funzione e 'identificatore' introdotto dalla dichiarazione using  
+---
+# <a name="compiler-error-c2883"></a>Errore del compilatore C2883
+'name': dichiarazione di funzione è in conflitto con 'identificatore' introdotto dalla dichiarazione using  
   
- Si è tentato di definire una funzione più di una volta.  La prima definizione è ricavata da uno spazio dei nomi con una dichiarazione `using`.  La seconda è una definizione locale.  
+ Si è tentato di definire una funzione a più di una volta. La prima definizione è stata apportata da uno spazio dei nomi con un `using` dichiarazione. La seconda è una definizione locale.  
   
- Il seguente codice di esempio genera l'errore C2883:  
+ L'esempio seguente genera l'errore C2883:  
   
 ```  
 // C2883.cpp  

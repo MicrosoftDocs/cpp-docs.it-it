@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3104 | Documenti di Microsoft
+title: Errore del compilatore C3104 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,38 +19,24 @@ caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 5df018fe26e66ed480ed2464c19c876adfac8dd1
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 837ff564bc3b2795bce6de69caa85e1d1dcf2766
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3104"></a>Errore del compilatore C3104
-argomento non valido per l'attributo  
+argomento di attributo non valido  
   
- È stato specificato un argomento non valido a un attributo.  
+ È stato specificato un argomento a un attributo non valido.  
   
  Vedere [tipi di parametro di attributo](../../windows/attribute-parameter-types-cpp-component-extensions.md) per ulteriori informazioni.  
   
- Questo errore può essere generato come risultato di operazioni eseguite per Visual C++ 2005 conformità: durante il passaggio di matrici gestite agli attributi personalizzati, il tipo della matrice non viene dedotto dall'elenco di inizializzazione aggregata. Il compilatore richiede di specificare il tipo di matrice, nonché l'elenco di inizializzatori.  
+ Questo errore può essere generato come risultato delle operazioni di conformità del compilatore eseguite per Visual C++ 2005: durante il passaggio di matrici gestite agli attributi personalizzati, il tipo della matrice non viene dedotto dall'elenco di inizializzazione aggregata. Il compilatore ora è necessario specificare il tipo di matrice, nonché l'elenco di inizializzatori.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene generato l'errore C3104.  
+ L'esempio seguente genera l'errore C3104.  
   
 ```  
 // C3104a.cpp  
@@ -70,7 +56,7 @@ ref struct AStruct{};
 ```  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene generato l'errore C3104.  
+ L'esempio seguente genera l'errore C3104.  
   
 ```  
 // C3104b.cpp  

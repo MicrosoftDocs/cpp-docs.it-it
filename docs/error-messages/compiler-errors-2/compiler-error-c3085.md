@@ -19,32 +19,17 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: abe87e08241a5bb0115878173d354d33b1773257
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 3d528d56a08cf6333e671ba6db18bbbe7a1be932
 ms.contentlocale: it-it
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3085"></a>Errore del compilatore C3085
 'constructor': un costruttore non può essere 'keyword'  
   
- Un costruttore è stato dichiarato in modo non corretto. Vedere [gli identificatori di Override](../../windows/override-specifiers-cpp-component-extensions.md) per ulteriori informazioni.  
+ Un costruttore è stato dichiarato in modo non corretto. Per altre informazioni, vedere [Override Specifiers](../../windows/override-specifiers-cpp-component-extensions.md) .  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente genera l'errore C3085.  

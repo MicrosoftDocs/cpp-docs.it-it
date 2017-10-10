@@ -1,36 +1,39 @@
 ---
-title: "Errore del compilatore C3071 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3071"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3071"
+title: Errore del compilatore C3071 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3071
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3071
 ms.assetid: 69879e66-a60e-4058-9bbd-d5c5e2d8ee37
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Errore del compilatore C3071
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: fc5cca3bdb0ff10f9f11c89ed3193002ebc884b0
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c3071"></a>Errore del compilatore C3071
 operatore 'operator' applicabile solo a un'istanza di una classe di riferimento o un tipo di valore  
   
- Un operatore CLR non può essere usato in un tipo nativo.  L'operatore può essere usato in una classe di riferimento o in un una struct di riferimento \(un tipo di valore\), ma non in un tipo nativo, ad esempio int, o in un alias per un tipo nativo, ad esempio System::Int32.  Questi tipi non possono essere boxed nel codice C\+\+ in modo da fare riferimento alla variabile nativa e quindi l'operatore non può essere usato.  
+ Un operatore CLR non può essere usato in un tipo nativo. L'operatore può essere usato in una classe di riferimento o in un una struct di riferimento (un tipo di valore), ma non in un tipo nativo, ad esempio int, o in un alias per un tipo nativo, ad esempio System::Int32. Questi tipi non possono essere boxed nel codice C++ in modo da fare riferimento alla variabile nativa e quindi l'operatore non può essere usato.  
   
- Per altre informazioni, vedere [Tracking Reference Operator](../../windows/tracking-reference-operator-cpp-component-extensions.md).  
+ Per ulteriori informazioni, vedere [operatore di riferimento di rilevamento](../../windows/tracking-reference-operator-cpp-component-extensions.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  L'esempio seguente genera l'errore C3071.  
   
 ```  

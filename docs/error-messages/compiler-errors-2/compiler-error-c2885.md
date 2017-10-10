@@ -1,37 +1,40 @@
 ---
-title: "Errore del compilatore C2885 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2885"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2885"
+title: Errore del compilatore C2885 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2885
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2885
 ms.assetid: 7743e5f3-a034-44b4-9ee8-5a6254c27f8c
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# Errore del compilatore C2885
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a19f209d53d7d0b37cddbf559fa3dc02ee50db7e
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'classe::identificatore': dichiarazione using non valida nell'ambito di tipo non classe  
+---
+# <a name="compiler-error-c2885"></a>Errore del compilatore C2885
+'identificatore': dichiarazione using non valida nell'ambito di classe non  
   
- È stata utilizzata una dichiarazione [using](../../cpp/using-declaration.md) in modo non corretto.  
+ È stato utilizzato un [utilizzando](../../cpp/using-declaration.md) dichiarazione in modo non corretto.  
   
-## Esempio  
- Questo errore può essere generato in seguito alle operazioni di conformità eseguite per Visual C\+\+ 2005: non è più consentito utilizzare una dichiarazione `using` per un tipo annidato. È invece necessario qualificare in modo esplicito ogni riferimento al tipo annidato, inserire il tipo in uno spazio dei nomi o creare un typedef.  
+## <a name="example"></a>Esempio  
+ Questo errore può essere generato come risultato delle operazioni di conformità del compilatore eseguite per Visual C++ 2005: non è più valido per un `using` dichiarazione per un tipo annidato, è necessario qualificare in modo esplicito ogni apportate per il tipo annidato, inserire il tipo in un nome di riferimento spazio o creare un typedef.  
   
- Nell'esempio seguente viene generato l'errore C2885:  
+ L'esempio seguente genera l'errore C2885.  
   
 ```  
 // C2885.cpp  
@@ -60,10 +63,10 @@ int main () {
 }  
 ```  
   
-## Esempio  
- Se si utilizza la parola chiave `using` con un membro di classe, in C\+\+ questo membro dovrà essere definito all'interno di un'altra classe, ovvero una classe derivata.  
+## <a name="example"></a>Esempio  
+ Se si utilizza il `using` (parola chiave) con un membro di classe C++ è necessario definire tale membro all'interno di un'altra classe (una classe derivata).  
   
- Nell'esempio seguente viene generato l'errore C2885:  
+ L'esempio seguente genera l'errore C2885.  
   
 ```  
 // C2885_b.cpp  

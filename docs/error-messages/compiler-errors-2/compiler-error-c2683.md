@@ -1,36 +1,39 @@
 ---
-title: "Errore del compilatore C2683 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2683"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2683"
+title: Errore del compilatore C2683 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2683
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2683
 ms.assetid: db605e4f-601b-4d05-92a1-c43ca24de08d
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Errore del compilatore C2683
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b3e79c1a05ac0d1fab713e2dfa97c9da740088bb
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'cast': 'tipo' non è un tipo polimorfico  
+---
+# <a name="compiler-error-c2683"></a>Errore del compilatore C2683
+'cast': 'type' non è un tipo polimorfico  
   
- Non è possibile utilizzare [dynamic\_cast](../../cpp/dynamic-cast-operator.md) per la conversione da una classe non polimorfica, ovvero una classe senza funzioni virtuali.  
+ Non è possibile utilizzare [dynamic_cast](../../cpp/dynamic-cast-operator.md) per la conversione da una classe non è polimorfico (una classe senza funzioni virtuali).  
   
- È possibile utilizzare [static\_cast](../../cpp/static-cast-operator.md) per eseguire le conversioni di tipi non polimorfici.  Tuttavia, `static_cast` non esegue un controllo in fase di esecuzione.  
+ È possibile utilizzare [static_cast](../../cpp/static-cast-operator.md) per eseguire le conversioni di tipi non polimorfici. Tuttavia, `static_cast` non esegue un controllo in fase di esecuzione.  
   
- Il seguente codice di esempio genera l'errore C2683:  
+ L'esempio seguente genera l'errore C2683:  
   
 ```  
 // C2683.cpp  

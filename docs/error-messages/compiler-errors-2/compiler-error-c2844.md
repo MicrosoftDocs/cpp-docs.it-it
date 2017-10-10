@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2844 | Documenti di Microsoft
+title: Errore del compilatore C2844 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,35 +19,21 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: c6bfb80408e058d22977ff068c9a0c21d5353a90
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 45e0a7eb7a8846d90cc8e0743f5484ba1b58208a
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2844"></a>Errore del compilatore C2844
-'membro': non può essere un membro di interfaccia 'interfaccia'  
+'member': non può essere un membro di interfaccia 'interface'  
   
  Un [classe interfaccia](../../windows/interface-class-cpp-component-extensions.md) non può contenere un membro dati, a meno che non sia anche una proprietà.  
   
  Diverso da una proprietà o una funzione membro non è consentita in un'interfaccia. Inoltre, non sono consentiti costruttori, distruttori e operatori.  
   
- Nell'esempio seguente viene generato l'errore C2844:  
+ L'esempio seguente genera l'errore C2844:  
   
 ```  
 // C2844a.cpp  

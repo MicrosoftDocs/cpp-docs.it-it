@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3063 | Documenti di Microsoft
+title: Errore del compilatore C3063 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,34 +19,20 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: ce6a597e0246cee5c62dd6612d48fe4946505e77
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 26d30e56c3e694b39f583b29d8bd378b6dcaee0f
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3063"></a>Errore del compilatore C3063
-' operatore ': tutti gli operandi devono avere lo stesso tipo di enumerazione  
+l'operatore 'operator': tutti gli operandi devono avere lo stesso tipo di enumerazione  
   
 Quando si utilizzano gli operatori sugli enumeratori, entrambi gli operandi devono essere del tipo di enumerazione. Per ulteriori informazioni, vedere [procedura: definire e utilizzare enumerazioni in C + + CLI](../../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md).  
   
 ## <a name="example"></a>Esempio  
-Nell'esempio seguente viene generato l'errore C3063 e viene illustrato come risolvere il problema:  
+L'esempio seguente genera l'errore C3063 e Mostra come risolverlo:  
   
 ```  
 // C3063.cpp  

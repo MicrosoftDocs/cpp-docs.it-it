@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 65c77919d980d574c0dacb27e9fc33f94d80391f
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 59686a585f66092fbf059cc5e84f7da493134b7f
 ms.contentlocale: it-it
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3052"></a>Errore del compilatore C3052
 'var': la variabile non appare in una clausola di condivisione dati in una clausola default(none)  
   
- Se [default (None)](../../parallel/openmp/reference/default-openmp.md) è utilizzato, qualsiasi variabile utilizzata nel blocco strutturato deve essere specificato in modo esplicito come [condivisa](../../parallel/openmp/reference/shared-openmp.md) o [privata](../../parallel/openmp/reference/private-openmp.md).  
+ Se viene usato [default(none)](../../parallel/openmp/reference/default-openmp.md) , qualsiasi variabile usata nel blocco strutturato deve essere specificata in modo esplicito come [shared](../../parallel/openmp/reference/shared-openmp.md) o [private](../../parallel/openmp/reference/private-openmp.md).  
   
  L'esempio seguente genera l'errore C3052:  
   

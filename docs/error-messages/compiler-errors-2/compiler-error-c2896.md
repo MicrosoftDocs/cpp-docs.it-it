@@ -1,34 +1,37 @@
 ---
-title: "Errore del compilatore C2896 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2896"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2896"
+title: Errore del compilatore C2896 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2896
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2896
 ms.assetid: b600407b-cb05-42e3-9069-2aa6960f0eaa
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Errore del compilatore C2896
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b60848dcaa06bb41ec290e3fb91a65fda025a8df
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'funzione1': impossibile utilizzare il modello di funzione 'funzione2' come argomento di funzione  
+---
+# <a name="compiler-error-c2896"></a>Errore del compilatore C2896
+'function1': Impossibile utilizzare il modello di funzione 'function2' come argomento  
   
- Una funzione template non può essere utilizzata come argomento di un'altra funzione template.  
+ Un modello di funzione non può essere un argomento a un altro modello di funzione.  
   
- Il seguente codice di esempio genera l'errore C2896:  
+ L'esempio seguente genera l'errore C2896:  
   
 ```  
 // C2896.cpp  
@@ -40,7 +43,7 @@ int main() {
 }  
 ```  
   
- L'errore C2896 può verificarsi anche quando si utilizzano i generics:  
+ C2896 può verificarsi anche quando si usano i generics:  
   
 ```  
 // C2896b.cpp  

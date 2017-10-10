@@ -1,34 +1,37 @@
 ---
-title: "Errore del compilatore C2974 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2974"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2974"
+title: Errore del compilatore C2974 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2974
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2974
 ms.assetid: 1b444260-f2bf-48d7-ab1e-35573d8c4a0e
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Errore del compilatore C2974
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e24e25816ac646bcf26099abbfa8e681fdd72a6e
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-argomento di tipo non valido per 'numero'. Previsto tipo  
+---
+# <a name="compiler-error-c2974"></a>Errore del compilatore C2974
+tipo non valido l'argomento 'number', tipo previsto  
   
- L'argomento generico o di modello non corrisponde alla dichiarazione generica o di modello.  Un tipo deve trovarsi tra parentesi angolari.  Esaminare la definizione generica o di modello per individuare i tipi corretti.  
+ L'argomento di tipo generico o modello non corrisponde la dichiarazione generica o modello. Un tipo dovrebbe apparire in parentesi angolari. Controllare la definizione di modello o generica per individuare i tipi corretti.  
   
- Il seguente codice di esempio genera l'errore C2974:  
+ L'esempio seguente genera l'errore C2974:  
   
 ```  
 // C2974.cpp  
@@ -49,7 +52,7 @@ int main() {
 }  
 ```  
   
- L'errore C2974 può verificarsi anche quando si utilizzano i generics:  
+ C2974 può verificarsi anche quando si usano i generics:  
   
 ```  
 // C2974b.cpp  

@@ -1,35 +1,38 @@
 ---
-title: "Errore del compilatore C2959 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2959"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2959"
+title: Errore del compilatore C2959 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2959
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2959
 ms.assetid: d66bb2a8-70c3-4209-a358-b0c47f111a50
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Errore del compilatore C2959
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 45f0625bd8f7352d6311fad507b1ee5e71a4da1a
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-una funzione o classe generica non può essere membro di un modello  
+---
+# <a name="compiler-error-c2959"></a>Errore del compilatore C2959
+una classe generica o una funzione non può essere un membro di un modello  
   
- Per ulteriori informazioni, vedere [Windows Runtime and Managed Templates](../../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md) e [Generics](../../windows/generics-cpp-component-extensions.md).  
+ Per ulteriori informazioni, vedere [Windows Runtime e modelli gestiti](../../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md) e [Generics](../../windows/generics-cpp-component-extensions.md).  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore C2959:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C2959.  
   
 ```  
 // C2959.cpp  

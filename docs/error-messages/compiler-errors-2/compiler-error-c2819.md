@@ -1,34 +1,37 @@
 ---
-title: "Errore del compilatore C2819 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2819"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2819"
+title: Errore del compilatore C2819 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2819
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2819
 ms.assetid: fcc7762d-cb82-4bb1-a715-0d82da832edf
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Errore del compilatore C2819
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 770609ed06fd3e123ce02688e3f091018c9f5444
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-il tipo 'tipo' non ha un membro 'operator \-\>' di overload  
+---
+# <a name="compiler-error-c2819"></a>Errore del compilatore C2819
+il tipo 'type' non ha un membro 'operator ->' di overload  
   
- È necessario definire `operator->()` per utilizzare questa operazione del puntatore.  
+ È necessario definire `operator->()` per utilizzare questa operazione di puntatore.  
   
- Il seguente codice di esempio genera l'errore C2819:  
+ L'esempio seguente genera l'errore C2819:  
   
 ```  
 // C2819.cpp  
@@ -58,7 +61,7 @@ void F(D j) {
 }  
 ```  
   
- L'errore C2819 può inoltre verificarsi quando si utilizza [Semantica dello stack C\+\+ per i tipi di riferimento](../../dotnet/cpp-stack-semantics-for-reference-types.md).  Il seguente codice di esempio genera l'errore C2819:  
+ C2819 può verificarsi anche quando si utilizza [semantica dello Stack C++ per i tipi riferimento](../../dotnet/cpp-stack-semantics-for-reference-types.md). L'esempio seguente genera l'errore C2819:  
   
 ```  
 // C2819_b.cpp  
