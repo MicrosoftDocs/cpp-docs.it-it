@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2441 | Documenti di Microsoft
+title: Errore del compilatore C2441 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,40 +19,26 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 1b98c85df0db4e947ceb5722715f5d020e1ecbec
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6868feadda4c0c0f3d65a86c77a403b8965fded5
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2441"></a>Errore del compilatore C2441
 'variabile': un simbolo dichiarato con declspec (Process) deve essere const in /clr: pure modalità  
   
- Il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono deprecate in Visual Studio 2015.  
+ Le opzioni del compilatore **/clr:pure** e **/clr:safe** sono deprecate in Visual Studio 2015.  
   
  Per impostazione predefinita, le variabili sono per dominio applicazione sotto **/clr: pure**. Una variabile contrassegnata `__declspec(process)` in **/clr: pure** è soggetta a errori se modificato in un dominio applicazione e di lettura in un altro.  
   
- Pertanto, il compilatore impone le variabili per processo `const` in **/clr: pure**, operazioni di lettura li solo in tutti i domini applicazione.  
+ Pertanto, il compilatore impone le variabili per processo `const` in **/clr: pure**, apportato li leggere solo in tutti i domini applicazione.  
   
  Per ulteriori informazioni, vedere [processo](../../cpp/process.md) e [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene generato l'errore C2441.  
+ L'esempio seguente genera l'errore C2441.  
   
 ```  
 // C2441.cpp  

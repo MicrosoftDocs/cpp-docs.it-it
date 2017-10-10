@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2393 | Documenti di Microsoft
+title: Errore del compilatore C2393 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,38 +19,24 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 078454c9824a734863796ab5810056147d17879c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a2c4f8d31fb6ddb6eaa9472dc7537edbcdc29054
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2393"></a>Errore del compilatore C2393
-'simbolo': simbolo per ogni dominio di applicazione non possa essere allocata nel segmento 'segmento'  
+'symbol': Impossibile allocare il simbolo per dominio di applicazione nel segmento 'segmento'  
   
- Il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono deprecate in Visual Studio 2015.  
+ Le opzioni del compilatore **/clr:pure** e **/clr:safe** sono deprecate in Visual Studio 2015.  
   
- L'utilizzo di [appdomain](../../cpp/appdomain.md) variabili implica che si esegue la compilazione con **/clr: pure** o **/CLR: safe**, e un'immagine pura o safe non può contenere segmenti di dati.  
+ L'utilizzo di [appdomain](../../cpp/appdomain.md) variabili implica che si esegue la compilazione con **/clr: pure** o **/CLR: safe**, e un'immagine safe o pura non può contenere segmenti di dati.  
   
  Vedere [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) per ulteriori informazioni.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene generato l'errore C2393.  
+ L'esempio seguente genera l'errore C2393.  
   
 ```  
 // C2393.cpp  

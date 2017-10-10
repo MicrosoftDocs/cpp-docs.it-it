@@ -19,26 +19,11 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
-ms.openlocfilehash: 60e5fb2346c92b3005e7cbfe1663d43cc0a12cdc
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8fa8426f89d0d61ff32facb3ab0b15ac5b770e94
 ms.contentlocale: it-it
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2316"></a>Errore del compilatore C2316
@@ -49,7 +34,7 @@ ms.lasthandoff: 05/10/2017
   
 Questo codice è stato accettato da versioni di Visual C++ prima di Visual Studio 2003, ma attualmente causa un errore.  
   
-Le modifiche di conformità in Visual Studio 2015 apportate questo errore si applicano alle istruzioni catch non valido di eccezioni MFC derivate da `CException`. Poiché `CException` dispone di un costruttore di copia privato ereditato, la classe e i relativi derivati sono non copiabile e non possono essere passati per valore, che significa anche che non può essere intercettati dal valore. Genera le istruzioni che intercettate eccezioni MFC da valore in precedenza ha portato a eccezioni non rilevate in fase di esecuzione, ma ora il compilatore identifica correttamente questa situazione e i rapporti errore C2316. Per risolvere questo problema, è consigliabile che utilizzare le macro MFC TRY/CATCH anziché scrivono i propri gestori di eccezioni, ma se non è appropriato per il codice, intercettare eccezioni MFC invece per riferimento.   
+Le modifiche di conformità in Visual Studio 2015 apportate questo errore si applicano alle istruzioni catch errata delle eccezioni MFC derivate da `CException`. Poiché `CException` dispone di un costruttore di copia privato ereditato, la classe e i relativi derivati sono non copiabile e non possono essere passati per valore, che significa anche che non può essere intercettati dal valore. Genera le istruzioni che intercettate eccezioni MFC da valore in precedenza ha portato a eccezioni non rilevate in fase di esecuzione, ma ora il compilatore identifica correttamente questa situazione e i rapporti errore C2316. Per risolvere questo problema, è consigliabile che utilizzare le macro MFC TRY/CATCH anziché scrivono i propri gestori di eccezioni, ma se non è appropriato per il codice, intercettare eccezioni MFC invece per riferimento.   
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente genera l'errore C2316:  

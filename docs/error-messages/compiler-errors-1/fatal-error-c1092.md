@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile C1092 | Documenti di Microsoft
+title: Errore irreversibile C1092 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,35 +19,21 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 6cad5222fb0d97594d5b13b5cf8903eb2934ee88
-ms.openlocfilehash: 6d93fd662b638126e21d5f5f034138c0e6f0e0ad
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: fac0a5218e1faf16d3db459567c36775acd9bb12
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="fatal-error-c1092"></a>Errore irreversibile C1092
 Con Modifica e continuazione non sono supportate le modifiche ai tipi di dati. È richiesta la compilazione  
   
- È stato modificato o aggiunto un tipo di dati dall'ultima compilazione ha esito positivo.  
+ È stato modificato o aggiunto un tipo di dati dall'ultima compilazione riuscita.  
   
--   Modifica e continuazione non supporta le modifiche ai tipi di dati esistenti, comprese le definizioni di classe, struct o enum. È necessario interrompere il debug e compilare l'applicazione.  
+-   Modifica e continuazione non supporta modifiche ai tipi di dati, comprese le definizioni di classe, struct o enum. È necessario arrestare il debug e compilare l'applicazione.  
   
--   Modifica e continuazione non supporta l'aggiunta di nuovi tipi di dati se un file di database di programma, ad esempio vc*x*=&0;. pdb (dove *x* è il numero di versione principale di Visual C++ in uso) è di sola lettura. Per aggiungere tipi di dati, il compilatore deve aprire il file con estensione PDB in modalità scrittura.  
+-   Modifica e continuazione non supporta l'aggiunta di nuovi tipi di dati, se un file di database di programma, ad esempio vc*x*pdb 0 (in cui *x* è il numero di versione principale di Visual C++ in uso) è di sola lettura. Per aggiungere tipi di dati, il compilatore è necessario aprire il file con estensione PDB in modalità scrittura.  
   
 ### <a name="to-remove-this-error-without-ending-the-current-debug-session"></a>Per correggere l'errore senza terminare la sessione di debug corrente  
   
@@ -61,4 +47,4 @@ Con Modifica e continuazione non sono supportate le modifiche ai tipi di dati. �
   
 2.  Scegliere **Compila** dal menu **Compilazione**.  
   
- Per ulteriori informazioni, vedere il [modifiche al codice supportate](/visualstudio/debugger/supported-code-changes-cpp).
+ Per altre informazioni, vedere [Modifiche al codice supportate](/visualstudio/debugger/supported-code-changes-cpp).

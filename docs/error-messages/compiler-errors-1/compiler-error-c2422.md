@@ -1,42 +1,45 @@
 ---
-title: "Errore del compilatore C2422 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2422"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2422"
+title: Errore del compilatore C2422 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2422
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2422
 ms.assetid: ef0ec302-4028-4778-b134-0b8cea4bcad9
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Errore del compilatore C2422
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 65412576c3c1a5e6b8205652d826d0eca6d222e6
+ms.contentlocale: it-it
+ms.lasthandoff: 10/09/2017
 
+---
+# <a name="compiler-error-c2422"></a>Errore del compilatore C2422
 override di segmento non valido in 'operando'  
   
- Un operatore di override di segmento \(due punti\) viene utilizzato in modo errato su un operando da parte del codice assembly inline.  Fra le cause possibili vi sono le seguenti:  
+ Codice assembly inline, in modo non corretto, Usa un operatore di override di segmento (due punti) su un operando.  Fra le cause possibili vi sono le seguenti:  
   
--   Il registro che precede l'operatore non è un registro di segmento.  
+-   Il registro che precede l'operatore non è un registro del segmento.  
   
--   Il registro che precede l'operatore non è l'unico registro di segmento nell'operando.  
+-   Il registro che precede l'operatore non è il Registro di segmento solo dell'operando.  
   
--   L'operatore di override del segmento appare in un operatore di riferimento indiretto \(parentesi\).  
+-   L'operatore di eseguire l'override di segmento viene visualizzato all'interno di un operatore di riferimento indiretto (parentesi quadre).  
   
--   L'espressione che segue l'operatore di override del segmento non è un operando immediato o di memoria.  
+-   L'espressione che segue l'operatore di eseguire l'override di segmento non è un operando immediato o un operando di memoria.  
   
- Il seguente codice di esempio genera l'errore C2422:  
+ L'esempio seguente genera l'errore C2422:  
   
 ```  
 // C2422.cpp  

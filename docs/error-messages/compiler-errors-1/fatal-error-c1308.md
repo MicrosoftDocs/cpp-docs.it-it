@@ -1,36 +1,39 @@
 ---
-title: "Errore irreversibile C1308 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1308"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1308"
+title: Errore irreversibile C1308 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1308
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1308
 ms.assetid: 46177997-069e-433a-8e20-93c846d78ffd
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Errore irreversibile C1308
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f9958ccb3daa537f8789d7485822fd623da8c703
+ms.contentlocale: it-it
+ms.lasthandoff: 10/09/2017
 
-collegamento di assembly non supportato  
+---
+# <a name="fatal-error-c1308"></a>Errore irreversibile C1308
+collegamento di assembly non è supportato.  
   
- Come input del linker, è possibile utilizzare un file .netmodule, ma non un assembly.  Questo errore può essere generato quanto si tenta di collegare un assembly compilato con `/clr:safe`.  
+ Come input del linker, è possibile utilizzare un file con estensione netmodule, ma non un assembly. Questo errore può essere generato quando viene effettuato un tentativo di collegare un assembly compilato con `/clr:safe`.  
   
- Per ulteriori informazioni, vedere [File con estensione netmodule come input del linker](../../build/reference/netmodule-files-as-linker-input.md).  
+ Per altre informazioni, vedere [File con estensione netmodule come input del linker](../../build/reference/netmodule-files-as-linker-input.md).  
   
- Il seguente codice di esempio genera l'errore C1308:  
+ L'esempio seguente genera l'errore C1308:  
   
 ```  
 // C1308.cpp  
@@ -41,7 +44,7 @@ public:
 };  
 ```  
   
- quindi  
+ E poi  
   
 ```  
 // C1308b.cpp  

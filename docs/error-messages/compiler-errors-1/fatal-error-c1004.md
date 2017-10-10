@@ -1,50 +1,53 @@
 ---
-title: "Errore irreversibile C1004 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1004"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1004"
+title: Errore irreversibile C1004 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1004
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1004
 ms.assetid: dbe034b0-6eb0-41b4-a50c-2fccf9e78ad4
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Errore irreversibile C1004
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c6a9e74d7918e1cb2c9190c87f4f1ec75f89237b
+ms.contentlocale: it-it
+ms.lasthandoff: 10/09/2017
 
+---
+# <a name="fatal-error-c1004"></a>Errore irreversibile C1004
 fine file imprevista  
   
- È stata raggiunta la fine del file di origine prima della risoluzione di un costrutto.  È possibile che uno dei seguenti elementi non sia presente nel codice:  
+ È stata raggiunta la fine di un file di origine senza la risoluzione di un costrutto. Il codice potrebbe essere mancante uno degli elementi seguenti:  
   
--   Parentesi graffa di chiusura  
+-   Una parentesi graffa di chiusura  
   
--   Parentesi di chiusura  
+-   Una parentesi di chiusura  
   
--   Marcatore di commento di chiusura \(\*\/\)  
+-   Marcatore di commento di chiusura (* /)  
   
--   Punto e virgola.  
+-   Un punto e virgola  
   
- Per correggere l'errore, controllare che non si verifichino le condizioni riportate di seguito:  
+ Per correggere l'errore, verificare quanto segue:  
   
--   Lo spazio disponibile sull'unità disco predefinita non è sufficiente per i file temporanei, che richiedono circa il doppio dello spazio del file di origine.  
+-   L'unità disco predefinito dispone di spazio sufficiente per i file temporanei, che richiedono circa il doppio dello spazio del file di origine.  
   
--   In una direttiva `#if` che restituisce False manca una direttiva `#endif` di chiusura.  
+-   Un `#if` (direttiva) che restituisce false manca una chiusura `#endif` direttiva.  
   
--   Un file di origine non termina con un ritorno a capo e un avanzamento riga.  
+-   Un file di origine non termina con ritorno a capo e avanzamento riga.  
   
- Il seguente codice di esempio genera l'errore C1004:  
+ L'esempio seguente genera l'errore C1004:  
   
 ```  
 // C1004.cpp  

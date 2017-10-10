@@ -1,34 +1,37 @@
 ---
-title: "Errore del compilatore C2466 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2466"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2466"
+title: Errore del compilatore C2466 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2466
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2466
 ms.assetid: 75b251d1-7d0b-4a86-afca-26adedf74486
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Errore del compilatore C2466
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 3c3ad19ce37aa51bd6b670da6e857d7eccce04ca
+ms.contentlocale: it-it
+ms.lasthandoff: 10/09/2017
 
-impossibile allocare una matrice di dimensione costante 0  
+---
+# <a name="compiler-error-c2466"></a>Errore del compilatore C2466
+Impossibile allocare una matrice di dimensione costante 0  
   
- Una matrice viene allocata o dichiarata con dimensione zero.  L'espressione costante per la dimensione della matrice deve essere un numero intero maggiore di zero.  La dichiarazione di una matrice con dimensione zero è valida solo per un membro di classe, struttura o unione e solo con le estensioni Microsoft \([\/Ze](../../build/reference/za-ze-disable-language-extensions.md)\).  
+ Una matrice viene allocata o dichiarata con dimensione zero. L'espressione costante per la dimensione della matrice deve essere un numero intero maggiore di zero. Una dichiarazione di matrice con dimensione zero è valida solo per una classe, struttura o membro di unione e solo con le estensioni Microsoft ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)).  
   
- Il seguente codice di esempio genera l'errore C2466:  
+ L'esempio seguente genera l'errore C2466:  
   
 ```  
 // C2466.cpp  
