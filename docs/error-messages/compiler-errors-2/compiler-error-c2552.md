@@ -1,34 +1,37 @@
 ---
-title: "Errore del compilatore C2552 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2552"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2552"
+title: Errore del compilatore C2552 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2552
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2552
 ms.assetid: 0e0ab759-788a-4faf-9337-80d4b9e2e8c9
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Errore del compilatore C2552
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0e001837ca3d9ea9e5c5db1770188d030e21d7d9
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c2552"></a>Errore del compilatore C2552
 'identificatore': non aggregati non possono essere inizializzati con un elenco di inizializzatori  
   
  L'identificatore di aggregazione è stato inizializzato in modo non corretto.  
   
- Gli [aggregati](../../c-language/initializing-aggregate-types.md) sono definiti come:  
+ [Funzioni di aggregazione](../../c-language/initializing-aggregate-types.md) sono definite come:  
   
 -   Matrici  
   
@@ -42,7 +45,7 @@ caps.handback.revision: 12
   
     -   Funzioni virtuali  
   
- Inoltre, Visual C\+\+ non consente i tipi di dati in un aggregato che contiene costruttori.  
+ Inoltre, Visual C++ non consente i tipi di dati in un aggregato che contiene costruttori.  
   
  Di seguito sono indicati i motivi per cui può venire generato un avviso C2552 quando si effettua un tentativo di inizializzazione aggregata su un tipo:  
   
@@ -56,7 +59,7 @@ caps.handback.revision: 12
   
 -   Il tipo è una classe di riferimento o un'interfaccia CLR.  
   
--   Il tipo dispone di una matrice con dimensione non fissa \(matrice zero\) dove gli elementi hanno dei distruttori.  
+-   Il tipo dispone di una matrice con dimensione non fissa (matrice zero) dove gli elementi hanno dei distruttori.  
   
  Il seguente codice di esempio genera l'errore C2552:  
   

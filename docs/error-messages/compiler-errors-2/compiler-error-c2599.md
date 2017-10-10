@@ -1,36 +1,39 @@
 ---
-title: "Errore del compilatore C2599 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2599"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2599"
+title: Errore del compilatore C2599 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2599
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2599
 ms.assetid: 88515f36-7589-47e2-862e-0de8b18d6668
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# Errore del compilatore C2599
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e71bf7f08591ed80489b6e83590696cabdb57c03
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'enum': per i tipi enum non sono consentite le dichiarazioni con prototipo  
+---
+# <a name="compiler-error-c2599"></a>Errore del compilatore C2599
+'enum': dichiarazione con prototipo del tipo enum non è consentito.  
   
- La dichiarazione con prototipo di un'enumerazione gestita non è più supportata.  
+ Il compilatore non supporta più la dichiarazione con prototipo di un'enumerazione gestita.  
   
- La dichiarazione con prototipo di un tipo enum non è consentita in [\/Za](../../build/reference/za-ze-disable-language-extensions.md).  
+ Dichiarazione con prototipo di un tipo enum non è consentita in [/Za](../../build/reference/za-ze-disable-language-extensions.md).  
   
- Il seguente codice di esempio genera l'errore C2599:  
+ L'esempio seguente genera l'errore C2599:  
   
 ```  
 // C2599.cpp  

@@ -1,34 +1,37 @@
 ---
-title: "Errore del compilatore C2512 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2512"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2512"
+title: Errore del compilatore C2512 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2512
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2512
 ms.assetid: 15206da9-1164-451a-b869-280e00711aad
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Errore del compilatore C2512
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 63090bc7dac08aa87bcd68e77c076185176a7285
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c2512"></a>Errore del compilatore C2512
 'identifier': non è disponibile alcun costruttore predefinito appropriato  
   
- Nessun costruttore predefinito è disponibile per la classe, struttura o unione specificata.  Il compilatore fornisce un costruttore predefinito solo se non sono disponibili costruttori definiti dall'utente.  
+ Nessun costruttore predefinito è disponibile per la classe, struttura o unione specificata. Il compilatore fornisce un costruttore predefinito solo se non sono disponibili costruttori definiti dall'utente.  
   
- Se si fornisce un costruttore che accetta un parametro non void e si vuole consentire che la classe venga creata senza parametri, ad esempio come gli elementi di una matrice, è necessario fornire anche un costruttore predefinito.  Il costruttore predefinito può essere un costruttore con valori predefiniti per tutti i parametri.  
+ Se si fornisce un costruttore che accetta un parametro non void e si vuole consentire che la classe venga creata senza parametri, ad esempio come gli elementi di una matrice, è necessario fornire anche un costruttore predefinito. Il costruttore predefinito può essere un costruttore con valori predefiniti per tutti i parametri.  
   
  L'esempio seguente genera l'errore C2512 e mostra come risolverlo:  
   
@@ -46,7 +49,7 @@ int main() {
 }  
 ```  
   
- L'esempio seguente mostra un errore C2512 più complesso.  Per correggere l'errore, modificare il codice in modo da definire la classe prima che si faccia riferimento al costruttore:  
+ L'esempio seguente mostra un errore C2512 più complesso. Per correggere l'errore, modificare il codice in modo da definire la classe prima che si faccia riferimento al costruttore:  
   
 ```  
 // C2512b.cpp  
@@ -74,7 +77,7 @@ void T::f() {
 }  
 ```  
   
- C2512 può essere causato anche da una chiamata a un costruttore predefinito, una classe contenente una costante o un membro dati di riferimento.  Questi membri devono essere inizializzati in un elenco di inizializzatori del costruttore, per evitare che il compilatore generi un costruttore predefinito.  
+ C2512 può essere causato anche da una chiamata a un costruttore predefinito, una classe contenente una costante o un membro dati di riferimento. Questi membri devono essere inizializzati in un elenco di inizializzatori del costruttore, per evitare che il compilatore generi un costruttore predefinito.  
   
  L'esempio seguente genera l'errore C2512 e mostra come risolverlo:  
   

@@ -1,43 +1,46 @@
 ---
-title: "Errore del compilatore C2632 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2632"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2632"
+title: Errore del compilatore C2632 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2632
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2632
 ms.assetid: b15a6b1b-42d2-4e1b-8660-e6bfde61052d
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Errore del compilatore C2632
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c1af198d4949da112792c2bbddfac68a80d0daf4
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'tipo1' non può essere seguito da 'tipo2'  
+---
+# <a name="compiler-error-c2632"></a>Errore del compilatore C2632
+'type1' seguito da 'type2' non è valido  
   
- Questo errore può essere causato dalla mancanza di codice tra due identificatori di tipo.  
+ Questo errore può essere causato mancanza di codice tra due identificatori di tipo.  
   
- Il seguente codice di esempio genera l'errore C2632:  
+ L'esempio seguente genera l'errore C2632:  
   
 ```  
 // C2632.cpp  
 int float i;   // C2632  
 ```  
   
- Questo errore viene generato anche come risultato delle operazioni di conformità eseguite per Visual Studio .NET 2003.  `bool` è ora un tipo corretto.  Nelle precedenti versioni `bool` era un typedef e consentiva la creazione di identificatori.  
+ Questo errore può anche essere generato come risultato delle operazioni di conformità del compilatore eseguite per Visual Studio .NET 2003. `bool`è ora un tipo corretto. Nelle versioni precedenti, `bool` era un typedef ed è possibile creare gli identificatori con lo stesso nome.  
   
- Il seguente codice di esempio genera l'errore C2632:  
+ L'esempio seguente genera l'errore C2632:  
   
 ```  
 // C2632_2.cpp  
@@ -45,4 +48,4 @@ int float i;   // C2632
 void f(int bool);   // C2632  
 ```  
   
- Per risolvere il problema in modo che il codice sia valido in entrambe le versioni Visual Studio .NET 2003 e Visual Studio .NET di Visual C\+\+, ridenominare l'identificatore.
+ Per correggere l'errore in modo che il codice è valido nelle versioni di Visual Studio .NET 2003 e Visual Studio .NET di Visual C++, rinominare l'identificatore.

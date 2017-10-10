@@ -1,35 +1,38 @@
 ---
-title: "Errore del compilatore C2761 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2761"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2761"
+title: Errore del compilatore C2761 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2761
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2761
 ms.assetid: 38c79a05-b56d-485b-820f-95e8c0cb926f
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Errore del compilatore C2761
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7670c3fa67579c218024dfd3f1f585ad57cf37e5
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'funzione': ridichiarazione della funzione membro non consentita  
+---
+# <a name="compiler-error-c2761"></a>Errore del compilatore C2761
+'function': ridichiarazione della funzione membro non consentita  
   
- Non è possibile ridichiarare una funzione membro.  La funzione può essere definita, ma non ridichiarata.  
+ Non è possibile ridichiarare una funzione membro. È possibile definirlo, ma non dichiararla.  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore C2761:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C2761.  
   
 ```  
 // C2761.cpp  
@@ -43,8 +46,8 @@ void a::test;  // C2761
   
 ```  
   
-## Esempio  
- Non è possibile definire i membri non static di una classe o di una struttura.  Nell'esempio seguente viene generato l'errore C2761:  
+## <a name="example"></a>Esempio  
+ Non è possibile definire i membri non statici di una classe o struttura.  L'esempio seguente genera l'errore C2761.  
   
 ```  
 // C2761_b.cpp  

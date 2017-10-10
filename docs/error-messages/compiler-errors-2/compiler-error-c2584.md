@@ -1,35 +1,38 @@
 ---
-title: "Errore del compilatore C2584 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2584"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2584"
+title: Errore del compilatore C2584 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2584
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2584
 ms.assetid: 836e2c0a-86c0-4742-b432-beb0191ad20e
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Errore del compilatore C2584
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1ff3567f3f4981ecb86926ad76b0d23627da1fb2
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'Classe': la base diretta 'Base2' non è accessibile. Già base di 'Base1'  
+---
+# <a name="compiler-error-c2584"></a>Errore del compilatore C2584
+'Class': diretta di base 'Base2' non è accessibile. già base di 'Base1'  
   
- Il parametro `Class` deriva già direttamente dal parametro `Base1`.  Anche il parametro `Base2` deriva dal parametro `Base1`.  Il parametro `Class` non può derivare dal parametro `Base2` poiché questo significherebbe ereditare di nuovo \(indirettamente\) dal parametro `Base1`. Questa operazione non è valida poiché il parametro `Base1` è già una classe base diretta.  
+ `Class`già deriva direttamente da `Base1`. `Base2`deriva da `Base1`. `Class`non può derivare da `Base2` perché ciò implica l'eredità (indirettamente) da `Base1` nuovamente, che non è valido perché `Base1` è già una classe base diretta.  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore C2584:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C2584.  
   
 ```  
 // C2584.cpp  

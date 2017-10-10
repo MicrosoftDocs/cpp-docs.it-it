@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2712 | Documenti di Microsoft
+title: Errore del compilatore C2712 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 89b7d0ad3c7e175db1525c2f3fb8407240ce943c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: af8f975960f34307c0e297f58f613eaf92018ef2
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2712"></a>Errore del compilatore C2712
 impossibile utilizzare __try in funzioni che richiedono la rimozione di oggetti  
   
- Errore C2712 può verificarsi se utilizza [/EHsc](../../build/reference/eh-exception-handling-model.md), e dispone di una funzione con la gestione delle eccezioni strutturata anche oggetti che richiedono la rimozione (distruzione).  
+ L'errore C2712 può verificarsi se utilizza [/EHsc](../../build/reference/eh-exception-handling-model.md), e dispone di una funzione con gestione delle eccezioni strutturata anche oggetti che richiedono una rimozione (eliminazione).  
   
  Possibili soluzioni:  
   
@@ -53,12 +39,12 @@ impossibile utilizzare __try in funzioni che richiedono la rimozione di oggetti
   
 -   Compilare senza /EHsc  
   
- Errore C2712 può verificarsi anche se si chiama un metodo dichiarato utilizzando il [event](../../cpp/event.md) (parola chiave). Poiché l'evento può essere utilizzato in un ambiente con multithreading, il compilatore genera codice che impedisce la manipolazione dell'oggetto evento sottostante e quindi racchiude il codice generato in un'istruzione SEH [istruzione try-finally](../../cpp/try-finally-statement.md). Di conseguenza, l'errore C2712 si verificherà se si chiama il metodo dell'evento e si passa per valore un argomento il cui tipo contiene un distruttore. Una soluzione in questo caso consiste nel passare l'argomento come riferimento costante.  
+ L'errore C2712 può verificarsi anche se si chiama un metodo dichiarato usando la [event](../../cpp/event.md) (parola chiave). Poiché l'evento può essere utilizzato in un ambiente con multithreading, il compilatore genera codice che impedisce la manipolazione dell'oggetto evento sottostante e quindi include il codice generato in un'istruzione SEH [istruzione try-finally](../../cpp/try-finally-statement.md). Di conseguenza, l'errore C2712 si verificherà se si chiama il metodo dell'evento e si passa per valore un argomento il cui tipo contiene un distruttore. Una soluzione in questo caso consiste nel passare l'argomento come riferimento costante.  
   
 ## <a name="example"></a>Esempio  
- C2712 può verificarsi anche se si compila con **/clr: pure** e dichiarare una matrice statica dei puntatori a funzioni in un `__try` blocco. Un membro statico richiede al compilatore di utilizzare l'inizializzazione dinamica in **/clr: pure**, che implica la gestione delle eccezioni C++. La gestione delle eccezioni C++ non è però consentita in un blocco `__try`.  
+ Errore C2712 può verificarsi anche se si compila con **/clr: pure** e dichiarare una matrice statica di puntatori a funzioni in un `__try` blocco. Un membro statico richiede al compilatore di usare l'inizializzazione dinamica in **/clr: pure**, che implica la gestione delle eccezioni C++. La gestione delle eccezioni C++ non è però consentita in un blocco `__try`.  
   
- Il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono deprecate in Visual Studio 2015.  
+ Le opzioni del compilatore **/clr:pure** e **/clr:safe** sono deprecate in Visual Studio 2015.  
   
  L'esempio seguente genera l'errore C2712 e mostra come risolverlo.  
   

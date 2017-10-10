@@ -1,36 +1,39 @@
 ---
-title: "Errore del compilatore C2601 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2601"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2601"
+title: Errore del compilatore C2601 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2601
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2601
 ms.assetid: 88275582-5f37-45d7-807d-05f06ba00965
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Errore del compilatore C2601
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: cdffa40b751232525920d1d92affd9e3778d2f61
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'funzione': definizioni di funzioni locali non valide  
+---
+# <a name="compiler-error-c2601"></a>Errore del compilatore C2601
+'function': non sono valide le definizioni di funzione locale  
   
- Il codice tenta di definire una funzione all'interno di un'altra funzione.  
+ Codice tenta di definire una funzione all'interno di una funzione.  
   
- In alternativa, il codice sorgente potrebbe contenere una parentesi graffa supplementare prima della posizione in cui si verifica l'errore C2601.  
+ In alternativa, nel codice sorgente prima della posizione dell'errore C2601 potrebbe essere presente una parentesi graffa supplementare.  
   
- Il seguente codice di esempio genera l'errore C2601:  
+ L'esempio seguente genera l'errore C2601:  
   
 ```  
 // C2601.cpp  

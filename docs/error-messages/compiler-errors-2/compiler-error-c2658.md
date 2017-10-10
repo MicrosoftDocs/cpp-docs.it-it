@@ -1,34 +1,37 @@
 ---
-title: "Errore del compilatore C2658 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2658"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2658"
+title: Errore del compilatore C2658 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2658
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2658
 ms.assetid: 638368e8-7893-4a14-abec-13c768a9543a
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Errore del compilatore C2658
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 252c543b8ba4dfc470bc1641a3d91c3dfc06177d
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'membro': ridefinizione in struct\/union anonima  
+---
+# <a name="compiler-error-c2658"></a>Errore del compilatore C2658
+'member': ridefinizione in struct/union anonima  
   
- Due strutture o unioni anonime contenevano dichiarazioni di membri con lo stesso identificatore, ma con tipi diversi.  Anche in [\/Za](../../build/reference/za-ze-disable-language-extensions.md) questo errore viene generato per membri con lo stesso identificatore e tipo.  
+ Due strutture o unioni anonime contenevano le dichiarazioni dei membri con lo stesso identificatore ma con tipi diversi. In [/Za](../../build/reference/za-ze-disable-language-extensions.md), si otterrà l'errore per i membri con lo stesso identificatore e tipo.  
   
- Il seguente codice di esempio genera l'errore C2658:  
+ L'esempio seguente genera l'errore C2658:  
   
 ```  
 // C2658.cpp  

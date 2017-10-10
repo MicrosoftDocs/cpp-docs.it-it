@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2696 | Documenti di Microsoft
+title: Errore del compilatore C2696 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 08b8a7990efbf981aec342b99bbb558fd9fab8d5
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 70ccaf34a0191f0bd69c95d2cb110f6e6542a6d1
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2696"></a>Errore del compilatore C2696
-Impossibile creare un oggetto temporaneo di un tipo gestito 'type'  
+Non è possibile creare un oggetto temporaneo di un tipo gestito 'type'  
   
-Riferimenti a `const` in un programma non gestito indica al compilatore di chiamare il costruttore e creare un oggetto temporaneo nello stack. Tuttavia, una classe gestita non può mai essere creata nello stack.  
+I riferimenti a `const` in un programma non gestito indica al compilatore di chiamare il costruttore e creare un oggetto temporaneo nello stack. Tuttavia, una classe gestita non può mai essere creata nello stack.  
   
-C2696 è raggiungibile tramite l'opzione del compilatore obsoleta **oldSyntax**.  
+C2696 solo è raggiungibile anche tramite l'opzione del compilatore obsoleta **oldSyntax**.  
 
