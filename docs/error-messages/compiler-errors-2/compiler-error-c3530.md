@@ -1,39 +1,42 @@
 ---
-title: "Errore del compilatore C3530 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3530"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3530"
+title: Errore del compilatore C3530 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3530
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3530
 ms.assetid: 21be81ce-b699-4c74-81bc-80a0c34d2d5a
 caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Errore del compilatore C3530
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0d66e76fc3e44a037f52aa6e217fae848f1338d2
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'auto' non può essere combinato con qualsiasi altro identificatore del tipo  
+---
+# <a name="compiler-error-c3530"></a>Errore del compilatore C3530
+'auto' non può essere combinato con qualsiasi altro identificatore di tipo  
   
- Un identificatore del tipo viene utilizzato con la parola chiave `auto`.  
+ Un identificatore di tipo viene utilizzato con il `auto` (parola chiave).  
   
-### Per correggere l'errore  
+### <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1.  Non utilizzare un identificatore del tipo in una dichiarazione di variabile che utilizza la parola chiave `auto`.  
+1.  Non utilizzare un identificatore di tipo in una dichiarazione di variabile che utilizza il `auto` (parola chiave).  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore C3530 perché la variabile `x` viene dichiarata sia con la parola chiave `auto` sia con il tipo `int`, nonché per il fatto che l'esempio viene compilato con **\/Zc:auto**.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene generato l'errore C3530 perché variabile `x` è dichiarato con entrambi i `auto` parola chiave e tipo `int`, e poiché nell'esempio viene compilato con **/Zc: Auto**.  
   
 ```  
 // C3530.cpp  
@@ -45,5 +48,5 @@ int main()
 }  
 ```  
   
-## Vedere anche  
- [Parola chiave auto](../../cpp/auto-keyword.md)
+## <a name="see-also"></a>Vedere anche  
+ [Auto (parola chiave)](../../cpp/auto-keyword.md)

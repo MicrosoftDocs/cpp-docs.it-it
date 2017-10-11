@@ -1,36 +1,39 @@
 ---
-title: "Errore del compilatore C3171 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3171"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3171"
+title: Errore del compilatore C3171 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3171
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3171
 ms.assetid: 1ce26997-7ef1-4c9f-84da-003ea1a4251e
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Errore del compilatore C3171
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ebd64aa2c80f6e21b1e5c1829d8e165d46207718
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'modulo': impossibile specificare attributi module diversi nello stesso progetto  
+---
+# <a name="compiler-error-c3171"></a>Errore del compilatore C3171
+'module': non è possibile specificare attributi module diversi nello stesso progetto  
   
- Sono stati rilevati attributi [module](../../windows/module-cpp.md) con elenchi di parametri diversi in due file di una compilazione.  È possibile specificare un solo attributo `module` univoco per ogni compilazione.  
+ [modulo](../../windows/module-cpp.md) sono stati trovati attributi con elenchi di parametri diverso in due dei file in una compilazione. Solo uno univoco `module` attributo può essere specificato per ogni compilazione.  
   
- Attributi `module` identici possono essere specificati in più file di codice sorgente.  
+ Identico `module` attributi possono essere specificati in più di un file di codice sorgente.  
   
- Se, ad esempio, vengono rilevati i seguenti attributi `module`:  
+ Ad esempio, se le operazioni seguenti `module` sono stati trovati attributi:  
   
 ```  
 // C3171.cpp  
@@ -38,7 +41,7 @@ caps.handback.revision: 9
 int main() {}  
 ```  
   
- quindi  
+ E quindi,  
   
 ```  
 // C3171b.cpp  
@@ -47,4 +50,4 @@ int main() {}
 [ module(name="MyModule", uuid="373a1a4e-469b-11d3-a6b0-00c04f79ae8f", version="1.1") ];  
 ```  
   
- verrà generato l'errore C3171 \(si noti che i valori di versione sono diversi\).
+ il compilatore genera C3171 (prendere nota dei valori di versione diverso).

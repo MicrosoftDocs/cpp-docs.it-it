@@ -1,34 +1,37 @@
 ---
-title: "Errore del compilatore C3190 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3190"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3190"
+title: Errore del compilatore C3190 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3190
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3190
 ms.assetid: 7c701afa-85a7-4f7a-8881-0662436ac244
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Errore del compilatore C3190
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 29d85c8a58b20c5a3c4492c56a66591e1509f2c4
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'creazione istanza' con gli argomenti di template forniti non è la creazione esplicita di un'istanza di alcuna funzione membro di 'tipo'  
+---
+# <a name="compiler-error-c3190"></a>Errore del compilatore C3190
+"creazione dell'istanza' con gli argomenti di modello specificato non è la creazione di istanze esplicite di alcuna funzione membro di 'type'  
   
- È stato rilevato un tentativo di effettuare una creazione di istanza di funzione esplicita, tuttavia gli argomenti di tipo forniti non corrispondono ad alcuna delle funzioni possibili.  
+ Il compilatore ha rilevato un tentativo di un'istanza di funzione esplicita; Tuttavia, gli argomenti di tipo fornito corrisponde ad alcuna delle funzioni possibili.  
   
- Il seguente codice di esempio genera l'errore C3190:  
+ L'esempio seguente genera l'errore C3190:  
   
 ```  
 // C3190.cpp  

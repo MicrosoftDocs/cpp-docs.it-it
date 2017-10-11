@@ -1,32 +1,35 @@
 ---
-title: "Errore del compilatore C3134 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3134"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3134"
+title: Errore del compilatore C3134 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3134
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3134
 ms.assetid: f887e4d2-7740-49e4-9972-7edceb8fa77b
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Errore del compilatore C3134
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: bd84ae5c02d360af2dffa3c242f4fc02b4bd30b2
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'valore': il valore dell'argomento dell'attributo 'attributo' non ha il tipo valido 'tipo'  
+---
+# <a name="compiler-error-c3134"></a>Errore del compilatore C3134
+'value': valore dell'argomento dell'attributo 'attributo' non dispone di 'type' di tipo valido  
   
- È stato rilevato un errore di sintassi al momento dell'assegnazione di un valore a un attributo.  
+ Quando è stato assegnato un valore a un attributo, è stato rilevato un errore di sintassi.  
   
-## Vedere anche  
- [Attributes by Usage](../../windows/attributes-by-usage.md)
+## <a name="see-also"></a>Vedere anche  
+ [Attributi per utilizzo](../../windows/attributes-by-usage.md)

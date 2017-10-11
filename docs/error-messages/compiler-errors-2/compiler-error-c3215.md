@@ -19,26 +19,11 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 331de627b05a57d630b83bd20a625e368527631e
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e4a649c01762b8a113e928bb63ffe293f86d21c3
 ms.contentlocale: it-it
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3215"></a>Errore del compilatore C3215
@@ -46,7 +31,7 @@ ms.lasthandoff: 04/12/2017
   
  Un vincolo è stato specificato più volte.  
   
- Per ulteriori informazioni sui generics, vedere [Generics](../../windows/generics-cpp-component-extensions.md).  
+ Per altre informazioni sui generics, vedere [Generics](../../windows/generics-cpp-component-extensions.md).  
   
  L'esempio seguente genera l'errore C3215:  
   

@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3150 | Documenti di Microsoft
+title: Errore del compilatore C3150 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: e0531a471bbaf43ad82b2c51ac11dd0a4aeff54c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 283bd2f529f465c227757da2a9ff2cd63bf878ab
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3150"></a>Errore del compilatore C3150
 'element': 'attributo' può essere applicato solo a una classe, interfaccia, matrice o puntatore  
   
-`__gc`può essere utilizzato solo in una classe, interfaccia o matrice.  
+`__gc`può essere utilizzato solo in una classe, interfaccia o una matrice.  
   
- C3150 è raggiungibile tramite l'opzione del compilatore obsoleta **oldSyntax**.  
+ C3150 solo è raggiungibile anche tramite l'opzione del compilatore obsoleta **oldSyntax**.  
 

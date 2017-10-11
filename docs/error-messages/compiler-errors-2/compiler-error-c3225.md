@@ -1,37 +1,40 @@
 ---
-title: "Errore del compilatore C3225 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3225"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3225"
+title: Errore del compilatore C3225 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3225
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3225
 ms.assetid: f5f66973-256e-4298-ac46-c87819cbde34
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Errore del compilatore C3225
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4cf62ba7b0c3b95f22c27172546ccdd253ed9279
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-l'argomento di tipo generico per 'arg' non può essere 'tipo'. Deve essere un tipo di valore o un tipo di handle  
+---
+# <a name="compiler-error-c3225"></a>Errore del compilatore C3225
+argomento di tipo generico per 'arg' non può essere 'type', deve essere un tipo di valore o tipo di handle  
   
- Il tipo dell'argomento di tipo generico non è corretto.  
+ L'argomento di tipo generico non è del tipo corretto.  
   
- Per ulteriori informazioni, vedere [Generics](../../windows/generics-cpp-component-extensions.md).  
+ Per altre informazioni, vedere [Generics](../../windows/generics-cpp-component-extensions.md).  
   
-## Esempio  
- Non è possibile creare un'istanza di un tipo generico con un tipo nativo.  Nell'esempio seguente viene generato l'errore C3225:  
+## <a name="example"></a>Esempio  
+ È possibile creare istanze di un tipo generico con un tipo nativo. L'esempio seguente genera l'errore C3225.  
   
 ```  
 // C3225.cpp  
@@ -49,8 +52,8 @@ int main() {
 }  
 ```  
   
-## Esempio  
- Nell'esempio riportato di seguito viene creato un componente utilizzando C\#.  Il vincolo specifica che è possibile creare un'istanza del tipo generico solo con un tipo di valore.  
+## <a name="example"></a>Esempio  
+ L'esempio seguente crea un componente utilizzando il linguaggio c#. Si noti che il vincolo specifica che è possibile creare istanze del tipo generico solo con un tipo di valore.  
   
 ```  
 // C3225_b.cs  
@@ -59,8 +62,8 @@ int main() {
 public class MyList<T> where T: struct {}  
 ```  
   
-## Esempio  
- In questo esempio viene utilizzato il componente creato con C\# e viene violato il vincolo per cui è possibile creare un'istanza di MyList solo con un tipo di valore diverso da <xref:System.Nullable>.  Nell'esempio seguente viene generato l'errore C3225:  
+## <a name="example"></a>Esempio  
+ In questo esempio utilizza c#-componente creato e viola il vincolo che MyList possono solo essere creata un'istanza con un tipo valore diverso da <xref:System.Nullable>. L'esempio seguente genera l'errore C3225.  
   
 ```  
 // C3225_c.cpp  

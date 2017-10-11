@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3182 | Documenti di Microsoft
+title: Errore del compilatore C3182 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 3dfd76788c55e74625172dedf2ceb5b8bdfaa061
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7af33bd1854525bebd5d0cb423558d6077366431
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3182"></a>Errore del compilatore C3182
-'classe': una dichiarazione di accesso o la dichiarazione using membro non valida all'interno di un oggetto gestito o WinRTtype  
+'class': una dichiarazione di accesso o di dichiarazione using di membro non valida all'interno di un oggetto gestito o WinRTtype  
   
- Oggetto [utilizzando](../../cpp/using-declaration.md) dichiarazione è valida in tutti i tipi di classi gestite.  
+ Oggetto [utilizzando](../../cpp/using-declaration.md) dichiarazione non è valida all'interno di tutti i formati di classi gestite.  
   
  L'esempio seguente genera l'errore C3182 e mostra come risolverlo.  
   

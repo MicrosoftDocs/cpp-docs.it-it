@@ -1,38 +1,41 @@
 ---
-title: "Compiler Error C3498 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3498"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3498"
+title: Errore del compilatore C3498 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3498
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3498
 ms.assetid: 0a5a7817-0872-4119-83bf-980a19113374
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Compiler Error C3498
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0429b9d21829f772596b6d0fd2c51d72b0924e26
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'var': impossibile acquisire una variabile con un tipo gestito o WinRT  
+---
+# <a name="compiler-error-c3498"></a>Errore del compilatore C3498
+'var': non è possibile acquisire una variabile che dispone di un oggetto gestito o WinRTtype  
   
  Non è possibile acquisire una variabile con un tipo gestito o un tipo Windows Runtime in un'espressione lambda.  
   
-### Per correggere l'errore  
+### <a name="to-correct-this-error"></a>Per correggere l'errore  
   
 -   Passare la variabile gestita o Windows Runtime all'elenco di parametri dell'espressione lambda.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  L'esempio seguente genera l'errore C3498 perché una variabile con un tipo gestito viene visualizzata nell'elenco di acquisizione di un'espressione lambda:  
   
 ```  
@@ -48,7 +51,7 @@ int main()
 }  
 ```  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  L'esempio seguente risolve l'errore C3498 passando la variabile gestita `s` all'elenco di parametri dell'espressione lambda:  
   
 ```  
@@ -64,5 +67,5 @@ int main()
 }  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Espressioni lambda](../../cpp/lambda-expressions-in-cpp.md)

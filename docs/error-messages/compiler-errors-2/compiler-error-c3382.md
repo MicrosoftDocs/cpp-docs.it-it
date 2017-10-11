@@ -19,26 +19,11 @@ caps.latest.revision: 3
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 2cb6ac6aa2409defea2d31591b348b2f2aae403b
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 782e5c4cc61294dbdaecbd63ff5c6031d387f843
 ms.contentlocale: it-it
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3382"></a>Errore del compilatore C3382
@@ -48,7 +33,7 @@ ms.lasthandoff: 04/12/2017
   
  Per ulteriori informazioni, vedere,  
   
--   [sizeof Operator](../../cpp/sizeof-operator.md) (Operatore sizeof)  
+-   [Operatore sizeof](../../cpp/sizeof-operator.md)  
   
 -   [/CLR (compilazione common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)  
   

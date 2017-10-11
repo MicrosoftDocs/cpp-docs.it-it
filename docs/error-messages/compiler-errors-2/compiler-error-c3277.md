@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3277 | Documenti di Microsoft
+title: Errore del compilatore C3277 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: b52f33b8d671c839fbeae249a1c2d728543e9cb3
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c5ce51c198c998b96dfa941cb088276b610142f1
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3277"></a>Errore del compilatore C3277
 non è possibile definire un enum non gestito 'enum' in 'tipo' gestito  
   
- Un'enumerazione è stata definita correttamente all'interno di un tipo gestito.  
+ È stata definita un'enumerazione in modo non corretto all'interno di un tipo gestito.  
   
- Nell'esempio seguente viene generato l'errore C3277:  
+ L'esempio seguente genera l'errore C3277:  
   
 ```  
 // C3277a.cpp  

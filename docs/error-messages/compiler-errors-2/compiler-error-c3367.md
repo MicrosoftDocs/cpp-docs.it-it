@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3367 | Documenti di Microsoft
+title: Errore del compilatore C3367 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,26 +19,11 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 8c7d1df695aa54e350902929ee8ea57be2101058
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d1d144399ca42ba321d8f3d11425bf2ff8e65891
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3367"></a>Errore del compilatore C3367
@@ -46,7 +31,7 @@ ms.lasthandoff: 02/24/2017
   
 Quando si chiama un delegato non associato, è necessario passare un'istanza di un oggetto. Una funzione membro statico viene chiamata tramite il nome della classe, quindi è possibile creare solo un'istanza di un delegato non associato con una funzione di membro di istanza.  
   
-Per ulteriori informazioni sui delegati non associati, vedere [procedura: definire e utilizzare delegati (C + c++ /CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md).  
+Per ulteriori informazioni sui delegati non associati, vedere [procedura: definire e utilizzare delegati (C + + CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md).  
   
 ## <a name="example"></a>Esempio  
 L'esempio seguente genera l'errore C3367.  

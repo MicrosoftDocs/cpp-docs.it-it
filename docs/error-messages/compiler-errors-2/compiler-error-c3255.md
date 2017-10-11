@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3255 | Documenti di Microsoft
+title: Errore del compilatore C3255 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 2739be65060cabd5e40fb0156c44aca23f0b7dcc
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 86052e8ffa7e9ba9627a290318dbe6115af3d36c
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3255"></a>Errore del compilatore C3255
-'tipo di valore': Impossibile allocare dinamicamente l'oggetto di tipo valore nell'heap nativo  
+'tipo valore': Impossibile allocare dinamicamente l'oggetto tipo di valore nell'heap nativo  
   
  Le istanze di un tipo di valore (vedere [classi e struct](../../windows/classes-and-structs-cpp-component-extensions.md)) che contengono membri gestiti possono essere create nello stack, ma non nell'heap.  
   
- Nell'esempio seguente viene generato l'errore C3255:  
+ L'esempio seguente genera l'errore C3255:  
   
 ```  
 // C3255.cpp  
