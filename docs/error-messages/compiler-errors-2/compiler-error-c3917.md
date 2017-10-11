@@ -19,25 +19,11 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 5f6719ade94bdbca9659405995fe09bfade57230
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 87ff4bde3b37e630f4d6a4a64f12039cf98ff2be
 ms.contentlocale: it-it
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3917"></a>Errore del compilatore C3917
@@ -45,7 +31,7 @@ ms.lasthandoff: 04/12/2017
   
 Una definizione di proprietà o evento è utilizzata la sintassi di una versione precedente di Visual Studio 2005.  
   
-Per ulteriori informazioni, vedere [proprietà](../../windows/property-cpp-component-extensions.md).  
+Per altre informazioni, vedere [property](../../windows/property-cpp-component-extensions.md).  
   
 ## <a name="example"></a>Esempio  
   

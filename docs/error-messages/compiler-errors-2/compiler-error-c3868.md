@@ -1,35 +1,38 @@
 ---
-title: "Errore del compilatore C3868 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3868"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3868"
+title: Errore del compilatore C3868 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3868
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3868
 ms.assetid: f0e45c2a-2149-4885-a03b-0d230069f03a
 caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Errore del compilatore C3868
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 3fc2ce896658468e1ae53638512d92d925f0362a
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'tipo': i vincoli sul parametro generico 'parametro' differiscono da quelli sulla dichiarazione  
+---
+# <a name="compiler-error-c3868"></a>Errore del compilatore C3868
+'type': i vincoli sul parametro generico 'parameter' diversi da quelli sulla dichiarazione  
   
- Le dichiarazioni devono includere gli stessi vincoli generici.  Per ulteriori informazioni, vedere [Generics](../../windows/generics-cpp-component-extensions.md).  
+ Le dichiarazioni più devono avere gli stessi vincoli generici.  Per altre informazioni, vedere [Generics](../../windows/generics-cpp-component-extensions.md).  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore C3868:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C3868.  
   
 ```  
 // C3868.cpp  

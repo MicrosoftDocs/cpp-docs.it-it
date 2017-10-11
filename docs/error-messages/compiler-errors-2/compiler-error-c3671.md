@@ -1,35 +1,38 @@
 ---
-title: "Errore del compilatore C3671 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3671"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3671"
+title: Errore del compilatore C3671 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3671
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3671
 ms.assetid: d684e4ae-87e2-4424-80bb-6f346652c831
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Errore del compilatore C3671
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b64c8be94bc6eb89fea04d7edee342e0015b8a9b
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'funzione\_1': la funzione non esegue l'override di 'funzione\_2'  
+---
+# <a name="compiler-error-c3671"></a>Errore del compilatore C3671
+'funzione_1': funzione non esegue l'override di 'funzione_2'  
   
- Quando si utilizza la sintassi di override esplicito, viene generato un errore se non si esegue l'override di una funzione.  Per ulteriori informazioni, vedere [Explicit Overrides](../../windows/explicit-overrides-cpp-component-extensions.md).  
+ Quando si utilizza la sintassi di override esplicita, il compilatore genera un errore se una funzione non viene eseguito l'override.  Vedere [override espliciti](../../windows/explicit-overrides-cpp-component-extensions.md) per ulteriori informazioni.  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore C3671:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C3671.  
   
 ```  
 // C3671.cpp  

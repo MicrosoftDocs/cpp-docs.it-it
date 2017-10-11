@@ -1,39 +1,42 @@
 ---
-title: "Avviso del compilatore C4368 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4368"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4368"
+title: Avviso del compilatore C4368 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4368
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4368
 ms.assetid: cb85bcee-fd3d-4aa5-b626-2324f07a4f1b
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Avviso del compilatore C4368
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6fd66d8fb6d30a960c659345910242ec5a1a2e11
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-impossibile definire 'membro' come membro di 'tipo' gestito: tipi misti non supportati  
+---
+# <a name="compiler-warning-c4368"></a>Avviso del compilatore C4368
+Impossibile definire 'membro' come membro di 'type' gestito: tipi misti non supportati  
   
- Non è possibile incorporare un membro dati nativi in un tipo CLR.  
+ È possibile incorporare un membro di dati nativi in un tipo CLR.  
   
- È tuttavia possibile dichiarare un puntatore a un tipo nativo e controllarne la durata nel costruttore, nel distruttore e nel finalizzatore della classe gestita.  Per ulteriori informazioni vedere [Distruttori e finalizzatori](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).  
+ È tuttavia possibile dichiarare un puntatore a un tipo nativo e controllarne la durata nel costruttore, nel distruttore e nel finalizzatore della classe gestita. Per ulteriori informazioni vedere [distruttori e finalizzatori](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).  
   
- Questo avviso viene sempre generato come un errore.  Per disabilitare l'avviso C4368, utilizzare il pragma [warning](../../preprocessor/warning.md).  
+ Questo avviso viene sempre generato come errore. Utilizzare il [avviso](../../preprocessor/warning.md) pragma per disabilitare C4368.  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore C4368:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C4368.  
   
 ```  
 // C4368.cpp  

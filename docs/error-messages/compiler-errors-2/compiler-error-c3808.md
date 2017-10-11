@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3808 | Documenti di Microsoft
+title: Errore del compilatore C3808 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,36 +19,22 @@ caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 989f17e8f59afc6a04ed4101204053fc971c6a62
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4d6a255bebeccc0c63ba621a7c5886fd318ffd5f
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3808"></a>Errore del compilatore C3808
-'tipo': una classe con l'attributo ComImport non può definire il membro 'membro', solo astratta o sono consentite funzioni dllimport  
+'type': una classe con l'attributo ComImport non è possibile definire il membro 'member', solo abstract o dllimport funzioni sono consentite  
   
- Un tipo che deriva da <xref:System.Runtime.InteropServices.ComImportAttribute>non è possibile definire `member`.</xref:System.Runtime.InteropServices.ComImportAttribute>  
+ Un tipo che deriva da <xref:System.Runtime.InteropServices.ComImportAttribute> non è possibile definire `member`.  
   
- Il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono deprecate in Visual Studio 2015.  
+ Le opzioni del compilatore **/clr:pure** e **/clr:safe** sono deprecate in Visual Studio 2015.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene generato l'errore C3808.  
+ L'esempio seguente genera l'errore C3808.  
   
 ```  
 // C3808.cpp  

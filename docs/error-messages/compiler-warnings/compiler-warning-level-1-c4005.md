@@ -1,46 +1,49 @@
 ---
-title: "Avviso del compilatore (livello 1) C4005 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4005"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4005"
+title: Compilatore (livello 1) Avviso C4005 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4005
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4005
 ms.assetid: 7f2dc79a-9fcb-4d5b-be61-120d9cb487ad
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Avviso del compilatore (livello 1) C4005
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 21023cf79a2ec25f94dc68cd3a55f722fa8316d8
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'identificatore': ridefinizione macro  
+---
+# <a name="compiler-warning-level-1-c4005"></a>Compilatore (livello 1) Avviso C4005
+'identifier': ridefinizione (macro)  
   
- L'identificatore della macro è stato definito due volte.  Viene utilizzata la seconda definizione della macro.  
+ Identificatore della macro viene definita due volte. Il compilatore utilizza la seconda definizione di macro.  
   
-### Possibili cause  
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolverlo è possibile verificare le seguenti cause possibili  
   
-1.  Definizione di una macro nella riga di comando e nel codice con una direttiva `#define`.  
+1.  Definizione di una macro nella riga di comando e nel codice con un `#define` direttiva.  
   
 2.  Macro importate dai file di inclusione.  
   
-### Per correggere valutando le seguenti possibili soluzioni  
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Per correggere il problema, provare le seguenti soluzioni possibili  
   
 1.  Rimuovere una delle definizioni.  
   
-2.  Utilizzare una direttiva [\#undef](../../preprocessor/hash-undef-directive-c-cpp.md) prima della seconda definizione.  
+2.  Utilizzare un [#undef](../../preprocessor/hash-undef-directive-c-cpp.md) direttiva prima della seconda definizione.  
   
- Il seguente codice di esempio genera l'errore C4005:  
+ L'esempio seguente genera l'errore C4005:  
   
 ```  
 // C4005.cpp  

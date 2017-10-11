@@ -1,34 +1,37 @@
 ---
-title: "Errore del compilatore C3860 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3860"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3860"
+title: Errore del compilatore C3860 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3860
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3860
 ms.assetid: 1fb5110d-594e-4f1c-8773-888233af1313
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Errore del compilatore C3860
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c7f06878b5d7c364704cd028ae87a5b43bd0d738
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-nell'elenco degli argomenti di tipo situato dopo il nome del tipo di classe i parametri devono essere riportati nell'ordine utilizzato nell'elenco dei parametri di tipo  
+---
+# <a name="compiler-error-c3860"></a>Errore del compilatore C3860
+elenco di argomenti di tipo nome del tipo di classe seguito necessario elencare i parametri nell'ordine utilizzato nell'elenco di parametri di tipo  
   
- Un elenco di argomenti di modello o di tipo generico è stato specificato in modo non corretto.  
+ Un elenco di argomenti di modello o generica è corretto.  
   
- Il seguente codice di esempio genera l'errore C3860:  
+ L'esempio seguente genera l'errore C3860:  
   
 ```  
 // C3860.cpp  
@@ -56,7 +59,7 @@ template <class T2, class T1>
 void A<T2, T1>::f() {}  
 ```  
   
- L'errore C3860 può verificarsi anche quando si utilizzano i generics:  
+ C3860 può verificarsi anche quando si usano i generics:  
   
 ```  
 // C3860c.cpp  

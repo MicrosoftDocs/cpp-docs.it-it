@@ -1,37 +1,40 @@
 ---
-title: "Errore del compilatore C3797 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3797"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3797"
+title: Errore del compilatore C3797 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3797
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3797
 ms.assetid: ab27ff34-8c1d-4297-b004-9e39bd3a4f25
 caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
----
-# Errore del compilatore C3797
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f03b677eac09b7935778590be605897e5eca1524
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'override': la dichiarazione di evento non può avere un identificatore di override \(da posizionare invece con i metodi Add\/Remove\/Raise evento\)  
+---
+# <a name="compiler-error-c3797"></a>Errore del compilatore C3797
+'override': dichiarazione di evento non può avere l'identificatore di override (da posizionare invece con i metodi add/remove/raise di evento)  
   
- Non è possibile eseguire l'override di un evento semplice \(un evento senza metodi di accesso definiti in modo esplicito\) con un altro evento semplice.  L'evento di overriding deve definire il proprio comportamento con le funzioni di accesso.  
+ È possibile eseguire l'override di un evento semplice (un evento senza metodi di accesso definiti in modo esplicito) con un altro evento semplice. L'evento di override deve definire il comportamento con le funzioni di accesso.  
   
- Per ulteriori informazioni, vedere [event](../../windows/event-cpp-component-extensions.md).  
+ Per ulteriori informazioni, vedere [evento](../../windows/event-cpp-component-extensions.md).  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore C3797:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C3797.  
   
 ```  
 // C3797.cpp  

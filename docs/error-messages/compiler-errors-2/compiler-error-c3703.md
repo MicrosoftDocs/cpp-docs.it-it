@@ -1,34 +1,37 @@
 ---
-title: "Errore del compilatore C3703 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3703"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3703"
+title: Errore del compilatore C3703 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3703
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3703
 ms.assetid: 7e3677d9-f2be-4c26-998f-423564e9023c
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Errore del compilatore C3703
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e6ef53628f3a24dd3e6f7f387491fc959d70aa04
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'gestore eventi': un metodo per la gestione degli eventi deve avere la stessa classe di archiviazione dell'origine 'evento'  
+---
+# <a name="compiler-error-c3703"></a>Errore del compilatore C3703
+'gestore dell'evento': un metodo del gestore eventi deve avere la stessa classe di archiviazione come l'origine 'event'  
   
- Un [evento](../../cpp/event-handling.md) ha una classe di archiviazione diversa rispetto al gestore eventi a cui è associato.  Questo errore si verifica, ad esempio, se il gestore eventi è una funzione membro static e l'evento non è statico.  Per correggere questo errore, assegnare all'evento e al gestore eventi la stessa classe di archiviazione.  
+ Un [evento](../../cpp/event-handling.md) ha una classe di archiviazione diverso rispetto a cui è associato il gestore dell'evento. Questo errore si verifica ad esempio, se il gestore dell'evento è una funzione membro statica e l'evento non è statico. Per correggere l'errore, assegnare l'evento e il gestore dell'evento la stessa classe di archiviazione.  
   
- Il seguente codice di esempio genera l'errore C3703:  
+ L'esempio seguente genera l'errore C3703:  
   
 ```  
 // C3703.cpp  

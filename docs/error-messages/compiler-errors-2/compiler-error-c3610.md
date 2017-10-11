@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3610 | Documenti di Microsoft
+title: Errore del compilatore C3610 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 31cef33981bbc2063bf68e433f9d3ba32780363d
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0cacac87535864c6268d0f078566b9ab224e9151
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3610"></a>Errore del compilatore C3610
-'valuetype': tipo di valore deve essere 'boxed' prima di poter chiamare il metodo 'metodo'  
+'valuetype': tipo di valore deve essere 'boxed' prima di poter chiamare il metodo 'method'  
   
  Per impostazione predefinita, un tipo di valore non è nell'heap gestito. Prima di poter chiamare metodi dalle classi di runtime .NET, ad esempio `Object`, è necessario spostare il tipo di valore per l'heap gestito.  
   
- C3610 è raggiungibile tramite l'opzione del compilatore obsoleta **oldSyntax**.  
+ C3610 solo è raggiungibile anche tramite l'opzione del compilatore obsoleta **oldSyntax**.  
 

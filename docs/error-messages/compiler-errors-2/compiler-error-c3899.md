@@ -1,37 +1,40 @@
 ---
-title: "Errore del compilatore C3899 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3899"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3899"
+title: Errore del compilatore C3899 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3899
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3899
 ms.assetid: 14e07e4a-f7a7-4309-baaa-649d69e12e23
 caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Errore del compilatore C3899
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c7d9d32b3063dbecde375159ad90eec5bf128d56
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'var': utilizzo l\-value del membro dati initonly non consentito direttamente in un'area parallela della classe 'classe'  
+---
+# <a name="compiler-error-c3899"></a>Errore del compilatore C3899
+'var': utilizzo l-value del membro dati initonly non è consentito direttamente in un'area parallela della classe 'class'  
   
- Un membro dati [initonly](../../dotnet/initonly-cpp-cli.md) non può essere inizializzato nella parte di un costruttore che si trova in un'area [parallel](../../parallel/openmp/reference/parallel.md),  perché il compilatore esegue una rilocazione interna di tale codice, che quindi non è più parte effettiva del costruttore.  
+ Un [initonly (C + + CLI)](../../dotnet/initonly-cpp-cli.md) membro dati non può essere inizializzato nella parte di un costruttore in un [parallela](../../parallel/openmp/reference/parallel.md) area.  In questo modo il compilatore esegue una rilocazione interna del codice, in modo che, in modo efficace non fa parte del costruttore.  
   
- Per correggere l'errore, inizializzare il membro dati initonly nel costruttore, ma all'esterno dell'area parallela.  
+ Per risolvere, inizializzare il membro dati initonly nel costruttore, ma all'esterno dell'area parallela.  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore C3899:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C3899.  
   
 ```  
 // C3899.cpp  

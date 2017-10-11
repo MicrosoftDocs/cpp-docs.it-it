@@ -1,36 +1,39 @@
 ---
-title: "Errore del compilatore C3893 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3893"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3893"
+title: Errore del compilatore C3893 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3893
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3893
 ms.assetid: 90d52eae-6ef2-4db1-b7ad-92f9e8b140fb
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Errore del compilatore C3893
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 49097d988175e7571c5825b4d54e1dd496fb2ba7
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'var': utilizzo l\-value del membro dati initonly consentito solo in un costruttore di istanza della classe 'nome\_tipo'  
+---
+# <a name="compiler-error-c3893"></a>Errore del compilatore C3893
+'var': utilizzo l-value del membro dati initonly è consentito solo in un costruttore di istanza della classe 'nome_tipo'  
   
- L'indirizzo dei membri dati statici [initonly](../../dotnet/initonly-cpp-cli.md) può essere accettato solo in un costruttore statico.  
+ Statico [initonly](../../dotnet/initonly-cpp-cli.md) membri dati possono avere solo gli indirizzi in un costruttore statico.  
   
- L'indirizzo dei membri dati di istanza \(non statici\) initonly può essere accettato solo in costruttori di istanza \(non statici\).  
+ Membri dati initonly (non statici) di istanza possono avere solo gli indirizzi in costruttori di istanza (non statici).  
   
- Il seguente codice di esempio genera l'errore C3893:  
+ L'esempio seguente genera l'errore C3893:  
   
 ```  
 // C3893.cpp  
